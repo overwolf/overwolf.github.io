@@ -1,10 +1,61 @@
 {
-  "docs": {
-    "Docusaurus": ["doc1"],
-    "First Category": ["doc2"],
-    "Second Category": ["doc3"]
-  },
-  "docs-other": {
-    "First Category": ["doc4", "doc5"]
-  }
+	"start": {
+		"Getting Started": 
+			["start/getting-started", "start/sdk-introduction", {
+                "type": "subcategory",
+                "label": "Creating a Demo App",
+                "ids": ["start/creating-demo-app", "start/creating-secondary-window", "start/communication-between-windows", "start/using-dev-tools"]
+            }],
+			"Test Your App":
+			["start/how-to-test-your-app", "start/technical-checklist", "start/marketing-checklist"],
+			"Submit Your App":
+			["start/app-creation-process", "start/submit-app-proposal", "start/submit-your-app-to-the-store", "start/submit-an-app-update", "start/add-a-knowledge-base-to-app"],
+			"Monetize Your App":
+			["start/monetization-overview", "start/ads-sdk-overview", "start/ads-sdk-getting-started", "start/ads-sdk-options", "start/ads-sdk-interaction", "start/ads-sdk-versions"]
+	},
+    "docs": {
+        
+		"Best Practices":
+			["topics/best-practices-overview", "topics/what-kind-of-apps-works", "topics/app-specific-experience", "topics/first-time-user-experience", "topics/launch-time-performance", "topics/user-flow-error-handling", "topics/window-size", "topics/buttons-layout-usage", "topics/communication-guidelines", "topics/games-settings"],
+		"Case Studies":
+			["topics/case-study-herowatch"],
+		"Using Plugins":
+			["topics/plugins-overview", "topics/how-to-use-plugins-in-your-app", "topics/writing-your-own-plugin", "topics/sample-plugin", "topics/simple-io-plugin", "topics/team-speak-plugin"],
+		"Using Events":
+			["topics/using-events"],
+		"Integrations":
+			["topics/using-3rd-party-apis", "topics/app-analytics", "topics/login-with-fb-google", "topics/events-SDK-for-game-developers", "topics/twitch-events-sdk-for-game-developers"],
+		"Legal":
+			["topics/legal-overview", "topics/legal-app-terms"]
+    },
+    "api": {
+			"API Reference": 
+			["api/overwolf-api-overview", "api/changelog", "api/manifest-json", "api/overwolf-benchmarking", "api/overwolf-extensions", "api/overwolf-io", "api/overwolf-log", "api/overwolf-profile", "api/overwolf-streaming", "api/overwolf-profile", "api/overwolf-tobii", "api/overwolf-utils"],
+            "overwolf.games":
+			["api/overwolf-games", "api/overwolf-games-events", "api/howto-check-events-status-from-app", {
+				"type": "subcategory",
+                "label": "Games Events List",
+				"ids": ["api/games-ids", "api/overwolf-games-events-lol", "api/overwolf-games-events-ancestors-legacy", "api/overwolf-games-events-apex-legends"]
+			}, "api/overwolf-games-launchers", "api/overwolf-games-inputTracking"],
+			"overwolf.logitech":
+			["api/overwolf-logitech", "api/overwolf-logitech-arx", "api/overwolf-logitech-led"],
+			"overwolf.media":
+			["api/overwolf-media", "api/overwolf-media-audio", "api/overwolf-media-replays","api/overwolf-media-videos"],
+			"overwolf.settings":
+			["api/overwolf-settings", "api/overwolf-settings-games"],
+			"overwolf.social":
+			["api/overwolf-social", "api/overwolf-social-youtube", "api/overwolf-social-discord", "api/overwolf-social-gfycat", "api/overwolf-social-twitter"],
+			"overwolf.web":
+			["api/overwolf-web", "api/overwolf-web-webserver"],
+			"overwolf.windows":
+			["api/overwolf-windows", "api/overwolf-windows-mediaPlayerElement"]
+    },
+	"service": {
+        "Games Events Status": 
+			["status/all", "status/lol", "status/csgo", "status/apex", "status/fortnite", "status/rainbow-six-siege", "status/hearthstone"]
+    },
+	"support": {
+        "Support": 
+			["support/contact-us", "support/FAQ", "support/create-ticket"]
+    }
 }
