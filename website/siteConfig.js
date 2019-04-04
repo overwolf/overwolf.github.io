@@ -14,23 +14,23 @@ const users = [
     caption: 'User1',
     // You will need to prepend the image path with your baseUrl
     // if it is not '/', like: '/test-site/img/docusaurus.svg'.
-    image: '/img/docusaurus.svg',
-    infoLink: 'https://www.facebook.com',
+    image: '/img/overwolf-logo_300x240.svg',
+    infoLink: 'https://www.overwolf.com',
     pinned: true,
   },
 ];
 
 const siteConfig = {
-  title: 'Test Site', // Title for your website.
-  tagline: 'A website for testing',
-  url: 'https://overwolf.github.io', // Your website URL
-  baseUrl: '/developers-site/', // Base URL for your project */
+  title: 'Overwolf Developers', // Title for your website.
+  tagline: 'Easily create apps for PC gamers',
+  url: 'https://your-docusaurus-test-site.com', // Your website URL
+  baseUrl: '/', // Base URL for your project */
   // For github.io type URLs, you would set the url and baseUrl like:
   //   url: 'https://facebook.github.io',
   //   baseUrl: '/test-site/',
 
   // Used for publishing and more
-  projectName: 'developers-site',
+  projectName: 'dev-site',
   organizationName: 'overwolf',
   // For top-level user or org sites, the organization is still the same.
   // e.g., for the https://JoelMarcey.github.io site, it would be set like...
@@ -38,23 +38,29 @@ const siteConfig = {
 
   // For no header links in the top nav bar -> headerLinks: [],
   headerLinks: [
-    {doc: 'doc1', label: 'Docs'},
-    {doc: 'doc4', label: 'API'},
-    {page: 'help', label: 'Help'},
-    {blog: true, label: 'Blog'},
+    {doc: 'start/getting-started', label: 'Getting Started'},
+    {doc: 'topics/best-practices-overview', label: 'Docs'},
+    {doc: 'api/overwolf-api-overview', label: 'API'},
+	{doc: 'api/changelog', label: 'Changelog'},
+	{page: 'download', label: 'Download'},
+	{doc: 'status/all', label: 'Service Status'},
+    //{blog: true, label: 'Blog'},
+	{href: 'https://medium.com/overwolf-developers', label: 'Blog' },
+	{doc: 'support/contact-us', label: 'Support'},  //{page: 'help', label: 'Support'}
+	{search: true }
   ],
 
   // If you have users set above, you add it here:
   users,
 
   /* path to images for header/footer */
-  headerIcon: 'img/docusaurus.svg',
-  footerIcon: 'img/docusaurus.svg',
-  favicon: 'img/favicon.png',
+  headerIcon: 'img/ow-logo.svg',
+  footerIcon: 'img/ow-logo.svg',
+  favicon: 'img/ow-favicon.ico',
 
   /* Colors for website */
   colors: {
-    primaryColor: '#2E8555',
+    primaryColor: '#20232a', //2E8555
     secondaryColor: '#205C3B',
   },
 
@@ -73,7 +79,7 @@ const siteConfig = {
   */
 
   // This copyright info is used in /core/Footer.js and blog RSS/Atom feeds.
-  copyright: `Copyright © ${new Date().getFullYear()} Your Name or Your Company Name`,
+  copyright: `Copyright © ${new Date().getFullYear()} Overwolf`,
 
   highlight: {
     // Highlight.js theme to use for syntax highlighting in code blocks.
@@ -81,7 +87,8 @@ const siteConfig = {
   },
 
   // Add custom scripts here that would be placed in <script> tags.
-  scripts: ['https://buttons.github.io/buttons.js'],
+  scripts: ['https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js'],
+  stylesheets: ['https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/default.min.css'],
 
   // On page navigation for the current documentation page.
   onPageNav: 'separate',
@@ -96,7 +103,8 @@ const siteConfig = {
   // enableUpdateBy: true,
 
   // Show documentation's last update time.
-  // enableUpdateTime: true,
+   enableUpdateTime: true,
+   docsSideNavCollapsible: true
 
   // You may provide arbitrary config keys to be used as needed by your
   // template. For example, if you need your repo's URL...
