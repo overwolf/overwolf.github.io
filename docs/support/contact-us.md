@@ -19,4 +19,3 @@ Click [here](https://discord.gg/cjjrZDp) to join our Discord server.
 ## Follow us on twitter
 
 ## Subscribe to our Newsletter
-

@@ -1,12 +1,11 @@
 ---
 id: FAQ
-title: FAQ
-sidebar_label: FAQ
+title: Overwolf FAQ
+sidebar_label: FAQ Index
 ---
 
-###Is the SDK free to use?
-Yes! You can start using the SDK right now.
+## Table of Contents
 
-###Can I monetize my app?
-You can monetize your app through ads with the Overwolf SDK. Our team will assist you in the process when you feel ready.
-
+* General
+  * [When should I learn Overwolf?](FAQ-general#1)
+  * [Why should I learn Overwolf?](FAQ-general#2)

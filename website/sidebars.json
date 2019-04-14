@@ -56,6 +56,12 @@
     },
 	"support": {
         "Support": 
-			["support/contact-us", "support/FAQ", "support/create-ticket"]
+			["support/contact-us", "support/create-ticket", "support/request-feature"],
+		"FAQ":
+			["support/FAQ", "support/FAQ-general"],
+		"Recipes":
+			["support/recipes"]
+			
+			
     }
 }

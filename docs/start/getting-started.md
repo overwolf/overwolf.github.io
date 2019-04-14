@@ -5,3 +5,5 @@ sidebar_label: Getting Started
 ---
 
 Learn how to develop apps in just few steps.
+
+### Motivation, Core concepts, Principles.
