@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://overwolf.github.io/developers-site/blog</id>
-    <title>Overwolf Developers Blog</title>
+    <title>OW Devs Blog</title>
     <updated>2017-10-24T06:00:00Z</updated>
     <generator>Feed for Node.js</generator>
     <link rel="alternate" href="https://overwolf.github.io/developers-site/blog"/>
-    <subtitle>The best place to stay up-to-date with the latest Overwolf Developers news and events.</subtitle>
+    <subtitle>The best place to stay up-to-date with the latest OW Devs news and events.</subtitle>
     <logo>https://overwolf.github.io/developers-site/img/ow-logo.svg</logo>
     <rights>Copyright © 2019 Overwolf</rights>
     <entry>
