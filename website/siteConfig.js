@@ -21,7 +21,8 @@ const users = [
 ];
 
 const siteConfig = {
-  title: 'Overwolf Developers', // Title for your website.
+  title: ' ', // Title for your website.
+  homepage_title: 'Overwolf Developers',
   tagline: 'Easily create apps for PC gamers',
   url: 'https://your-docusaurus-test-site.com', // Your website URL
   baseUrl: '/', // Base URL for your project */
