@@ -21,7 +21,7 @@ const users = [
 ];
 
 const siteConfig = {
-  title: 'Overwolf Developers', // Title for your website.
+  title: 'OW Devs', // Title for your website.
   tagline: 'Easily create apps for PC gamers',
   url: 'https://overwolf.github.io', // Your website URL
   baseUrl: '/developers-site/', // Base URL for your project */
@@ -42,7 +42,7 @@ const siteConfig = {
     {doc: 'topics/best-practices-overview', label: 'Docs'},
     {doc: 'api/overwolf-api-overview', label: 'API'},
 	{doc: 'api/changelog', label: 'Changelog'},
-	{page: 'download', label: 'Download'},
+	{doc: 'download/download-overview', label: 'Download'},
 	{doc: 'status/all', label: 'Service Status'},
     //{blog: true, label: 'Blog'},
 	{href: 'https://medium.com/overwolf-developers', label: 'Blog' },

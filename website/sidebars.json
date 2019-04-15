@@ -63,5 +63,9 @@
 			["support/recipes"]
 			
 			
+    },
+	"download": {
+        "Download": 
+			["download/download-overview"]
     }
 }
