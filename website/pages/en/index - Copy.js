@@ -37,7 +37,7 @@ class HomeSplash extends React.Component {
 
     const ProjectTitle = () => (
       <h2 className="projectTitle">
-        {siteConfig.homepage_title}
+        {siteConfig.title}
         <small>{siteConfig.tagline}</small>
       </h2>
     );
@@ -64,9 +64,9 @@ class HomeSplash extends React.Component {
         <div className="inner">
           <ProjectTitle siteConfig={siteConfig} />
           <PromoSection>
-            <Button href={docUrl('start/getting-started')}>Start</Button>
-            <Button href={docUrl('topics/best-practices-overview')}>Docs</Button>
-            <Button href={docUrl('api/overwolf-api-overview')}>API</Button>
+            <Button href="#try">Try It Out</Button>
+            <Button href={docUrl('doc1.html')}>Example Link</Button>
+            <Button href={docUrl('doc2.html')}>Example Link 2</Button>
           </PromoSection>
         </div>
       </SplashContainer>
@@ -132,10 +132,10 @@ class Index extends React.Component {
       <Block background="light">
         {[
           {
-            content: 'Easily create apps for PC gamers',
+            content: 'Talk about learning how to use this',
             image: `${baseUrl}img/overwolf-logo_300x240.svg`,
             imageAlign: 'right',
-            title: 'Overwolf Developers',
+            title: 'Learn How',
           },
         ]}
       </Block>
@@ -146,23 +146,16 @@ class Index extends React.Component {
         {[
           {
             content: 'This is the content of my feature',
-            /*image: `${baseUrl}img/overwolf-logo_300x240.svg`,*/
+            image: `${baseUrl}img/overwolf-logo_300x240.svg`,
             imageAlign: 'top',
-            title: 'Easily create a desktop app with overlay capabilities',
+            title: 'Feature One',
           },
           {
             content: 'The content of my second feature',
-            /*image: `${baseUrl}img/overwolf-logo_300x240.svg`,*/
+            image: `${baseUrl}img/overwolf-logo_300x240.svg`,
             imageAlign: 'top',
-            title: 'Get access to real-time game events',
+            title: 'Feature Two',
           },
-		  {
-            content: 'This is the content of my third feature',
-            /*image: `${baseUrl}img/overwolf-logo_300x240.svg`,*/
-            imageAlign: 'top',
-            title: 'Monetize your app',
-          },
-		 
         ]}
       </Block>
     );
@@ -198,10 +191,14 @@ class Index extends React.Component {
 
     return (
       <div>
-        <HomeSplash siteConfig={siteConfig} language={language} />		
+        <HomeSplash siteConfig={siteConfig} language={language} />
         <div className="mainContainer">
-       
-		  <Features />
+         <Features />
+         <FeatureCallout />
+         <LearnHow />
+         <TryOut />
+         <Description />
+         <Showcase />
         </div>
       </div>
     );

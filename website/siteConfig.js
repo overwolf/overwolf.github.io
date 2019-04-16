@@ -21,7 +21,8 @@ const users = [
 ];
 
 const siteConfig = {
-  title: 'OW Devs', // Title for your website.
+  title: ' ', // Title for your website.
+  homepage_title: 'Overwolf Developers',
   tagline: 'Easily create apps for PC gamers',
   url: 'https://overwolf.github.io', // Your website URL
   baseUrl: '/developers-site/', // Base URL for your project */
