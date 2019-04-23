@@ -42,13 +42,13 @@ const siteConfig = {
     {doc: 'start/getting-started', label: 'Getting Started'},
     {doc: 'topics/best-practices-overview', label: 'Docs'},
     {doc: 'api/overwolf-api-overview', label: 'API'},
-	{doc: 'api/changelog', label: 'Changelog'},
-	{doc: 'download/download-overview', label: 'Download'},
-	{doc: 'status/all', label: 'Service Status'},
+    {doc: 'status/all', label: 'Status'},
+    {doc: 'download/download-overview', label: 'Download'},
+	  {doc: 'api/changelog', label: 'Changelog'},
     //{blog: true, label: 'Blog'},
-	{href: 'https://medium.com/overwolf-developers', label: 'Blog' },
-	{doc: 'support/contact-us', label: 'Support'},  //{page: 'help', label: 'Support'}
-	{search: true }
+	  {href: 'https://medium.com/overwolf-developers', label: 'Blog' },
+	  {doc: 'support/contact-us', label: 'Support'},  //{page: 'help', label: 'Support'}
+	  {search: true }
   ],
 
   // If you have users set above, you add it here:
