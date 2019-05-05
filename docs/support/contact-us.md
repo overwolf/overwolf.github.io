@@ -19,3 +19,5 @@ Click [here](https://discord.gg/cjjrZDp) to join our Discord server.
 ## Follow us on twitter
 
 ## Subscribe to our Newsletter
+
+## Search the tag #overwolf on [stackoverflow](https://stackoverflow.com/questions/tagged/overwolf)

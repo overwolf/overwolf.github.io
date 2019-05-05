@@ -78,7 +78,7 @@ const siteConfig = {
     ]
   },
   */
-
+  editUrl: 'https://github.com/overwolf/developers-site/tree/master/docs/',
   // This copyright info is used in /core/Footer.js and blog RSS/Atom feeds.
   copyright: `Copyright © ${new Date().getFullYear()} Overwolf`,
 
