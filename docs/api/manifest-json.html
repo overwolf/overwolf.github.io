@@ -1,0 +1,578 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>manifest.json ·  </title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="&lt;script&gt;hljs.initHighlightingOnLoad();&lt;/script&gt;"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="manifest.json ·  "/><meta property="og:type" content="website"/><meta property="og:url" content="https://overwolf.github.io/developers-site/"/><meta property="og:description" content="&lt;script&gt;hljs.initHighlightingOnLoad();&lt;/script&gt;"/><meta property="og:image" content="https://overwolf.github.io/developers-site/img/docusaurus.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://overwolf.github.io/developers-site/img/docusaurus.png"/><link rel="shortcut icon" href="/developers-site/img/ow-favicon.ico"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/default.min.css"/><link rel="stylesheet" href="/css/code-block-buttons.css"/><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js"></script><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script><script type="text/javascript" src="/js/code-block-buttons.js"></script><link rel="stylesheet" href="/developers-site/css/main.css"/><script src="/developers-site/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/developers-site/"><img class="logo" src="/developers-site/img/ow-logo.svg" alt=" "/><h2 class="headerTitleWithLogo"> </h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href="/developers-site/docs/start/getting-started" target="_self">Getting Started</a></li><li class=""><a href="/developers-site/docs/topics/best-practices-overview" target="_self">Docs</a></li><li class="siteNavGroupActive"><a href="/developers-site/docs/api/overwolf-api-overview" target="_self">API</a></li><li class=""><a href="/developers-site/docs/status/all" target="_self">Status</a></li><li class=""><a href="/developers-site/docs/download/download-overview" target="_self">Download</a></li><li class="siteNavGroupActive"><a href="/developers-site/docs/api/changelog" target="_self">Changelog</a></li><li class=""><a href="https://medium.com/overwolf-developers" target="_self">Blog</a></li><li class=""><a href="/developers-site/docs/support/contact-us" target="_self">Support</a></li><li class=""><a target="_self"></a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>API Reference</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">API Reference<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/developers-site/docs/api/overwolf-api-overview">Overview</a></li><li class="navListItem"><a class="navItem" href="/developers-site/docs/api/changelog">Changelog</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/developers-site/docs/api/manifest-json">manifest.json</a></li><li class="navListItem"><a class="navItem" href="/developers-site/docs/api/overwolf-benchmarking">overwolf.benchmarking</a></li><li class="navListItem"><a class="navItem" href="/developers-site/docs/api/overwolf-io">overwolf.io</a></li><li class="navListItem"><a class="navItem" href="/developers-site/docs/api/overwolf-log">overwolf.log</a></li><li class="navListItem"><a class="navItem" href="/developers-site/docs/api/overwolf-streaming">overwolf.streaming</a></li><li class="navListItem"><a class="navItem" href="/developers-site/docs/api/overwolf-profile">overwolf.profile</a></li><li class="navListItem"><a class="navItem" href="/developers-site/docs/api/overwolf-tobii">overwolf.tobii</a></li><li class="navListItem"><a class="navItem" href="/developers-site/docs/api/overwolf-utils">overwolf.utils</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">overwolf.extensions<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/developers-site/docs/api/overwolf-extensions">overwolf.extensions</a></li><li class="navListItem"><a class="navItem" href="/developers-site/docs/api/overwolf-current_extension">overwolf.current_extension</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">overwolf.games<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/developers-site/docs/api/overwolf-games">overwolf.games</a></li><li class="navListItem"><a class="navItem" href="/developers-site/docs/api/overwolf-games-events">overwolf.games.events</a></li><li class="navListItem"><a class="navItem" href="/developers-site/docs/api/howto-check-events-status-from-app">Check Event Status From App</a></li><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Games Events List</h4><ul><li class="navListItem"><a class="navItem" href="/developers-site/docs/api/games-ids">Games IDs</a></li><li class="navListItem"><a class="navItem" href="/developers-site/docs/api/overwolf-games-events-lol">League of Legends Game Events</a></li><li class="navListItem"><a class="navItem" href="/developers-site/docs/api/overwolf-games-events-ancestors-legacy">Ancestors Legacy Game Events</a></li><li class="navListItem"><a class="navItem" href="/developers-site/docs/api/overwolf-games-events-apex-legends">Apex Legends Game Events</a></li></ul></div><li class="navListItem"><a class="navItem" href="/developers-site/docs/api/overwolf-games-launchers">overwolf.games.launchers</a></li><li class="navListItem"><a class="navItem" href="/developers-site/docs/api/overwolf-games-inputTracking">overwolf.games.inputTracking</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">overwolf.logitech<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/developers-site/docs/api/overwolf-logitech">overwolf.logitech</a></li><li class="navListItem"><a class="navItem" href="/developers-site/docs/api/overwolf-logitech-arx">overwolf.logitech.arx</a></li><li class="navListItem"><a class="navItem" href="/developers-site/docs/api/overwolf-logitech-led">overwolf.logitech.led</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">overwolf.media<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/developers-site/docs/api/overwolf-media">overwolf.media</a></li><li class="navListItem"><a class="navItem" href="/developers-site/docs/api/overwolf-media-audio">overwolf.media.audio</a></li><li class="navListItem"><a class="navItem" href="/developers-site/docs/api/overwolf-media-replays">overwolf.media.replays</a></li><li class="navListItem"><a class="navItem" href="/developers-site/docs/api/overwolf-media-videos">overwolf.media.videos</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">overwolf.settings<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/developers-site/docs/api/overwolf-settings">overwolf.settings</a></li><li class="navListItem"><a class="navItem" href="/developers-site/docs/api/overwolf-settings-games">overwolf.settings.games</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">overwolf.social<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/developers-site/docs/api/overwolf-social">overwolf.social</a></li><li class="navListItem"><a class="navItem" href="/developers-site/docs/api/overwolf-social-youtube">overwolf.social.youtube</a></li><li class="navListItem"><a class="navItem" href="/developers-site/docs/api/overwolf-social-discord">overwolf.social.discord</a></li><li class="navListItem"><a class="navItem" href="/developers-site/docs/api/overwolf-social-gfycat">overwolf.social.gfycat</a></li><li class="navListItem"><a class="navItem" href="/developers-site/docs/api/overwolf-social-twitter">overwolf.social.twitter</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">overwolf.web<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/developers-site/docs/api/overwolf-web">overwolf.web</a></li><li class="navListItem"><a class="navItem" href="/developers-site/docs/api/overwolf-web-webserver">overwolf.web.webserver</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">overwolf.windows<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/developers-site/docs/api/overwolf-windows">overwolf.windows</a></li><li class="navListItem"><a class="navItem" href="/developers-site/docs/api/overwolf-windows-mediaPlayerElement">overwolf.windows.mediaPlayerElement</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              const headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                if (event.target.tagName === 'A') {
+                  document.body.classList.remove('tocActive');
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><a class="edit-page-link button" href="https://github.com/overwolf/developers-site/tree/master/docs/api/manifest-json.md" target="_blank" rel="noreferrer noopener">Edit</a><h1 class="postHeaderTitle">manifest.json</h1></header><article><div><span><script>hljs.initHighlightingOnLoad();</script>
+<h2><a class="anchor" aria-hidden="true" id="welcome-to-the-manifestjson-file"></a><a href="#welcome-to-the-manifestjson-file" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Welcome to the manifest.json file</h2>
+<p>This <a href="http://www.json.org/">JSON</a> formatted file is responsible for describing the aspects of your app. This ranges from the name of the app and its author to the size of the window or if it is transparent. This is a mandatory file for all apps and has to exist in the root folder for your app.
+<a href="https://gist.github.com/eransharv/e74024e0b31d5e0525b5289b8b8b6ffc">Here</a> you can see the base version of the manifest.json file.</p>
+<p><details>
+<summary>Here you can see a base version of the manifest.json file</summary></p>
+<pre><code class="hljs css language-json">{
+    <span class="hljs-attr">"manifest_version"</span>: <span class="hljs-number">1</span>,
+    <span class="hljs-attr">"type"</span>: <span class="hljs-string">"WebApp"</span>,
+    <span class="hljs-attr">"meta"</span>: {
+        <span class="hljs-attr">"name"</span>: <span class="hljs-string">"Demo_App"</span>,
+        <span class="hljs-attr">"version"</span>: <span class="hljs-string">"1.0.0"</span>,
+        <span class="hljs-attr">"author"</span>: <span class="hljs-string">"Developer_Name"</span>,
+        <span class="hljs-attr">"icon"</span>: <span class="hljs-string">"IconMouseOver.png"</span>,
+        <span class="hljs-attr">"icon_gray"</span>: <span class="hljs-string">"IconMouseNormal.png"</span>,
+        <span class="hljs-attr">"description"</span>: <span class="hljs-string">"Demo App"</span>
+    },
+    <span class="hljs-attr">"data"</span>: {
+        <span class="hljs-attr">"start_window"</span>: <span class="hljs-string">"MainWindow"</span>,
+        <span class="hljs-attr">"windows"</span>: {
+            <span class="hljs-attr">"MainWindow"</span>: {
+                <span class="hljs-attr">"file"</span>: <span class="hljs-string">"Files/index.html"</span>,
+                <span class="hljs-attr">"transparent"</span>: <span class="hljs-literal">true</span>,
+                <span class="hljs-attr">"resizable"</span>: <span class="hljs-literal">true</span>,
+                <span class="hljs-attr">"size"</span>: {<span class="hljs-attr">"width"</span>: <span class="hljs-number">400</span>, <span class="hljs-attr">"height"</span>: <span class="hljs-number">300</span>},
+                <span class="hljs-attr">"min_size"</span>: {<span class="hljs-attr">"width"</span>: <span class="hljs-number">200</span>, <span class="hljs-attr">"height"</span>: <span class="hljs-number">200</span>},
+                <span class="hljs-attr">"max_size"</span>: {<span class="hljs-attr">"width"</span>: <span class="hljs-number">600</span>, <span class="hljs-attr">"height"</span>: <span class="hljs-number">500</span>}
+            }
+        }
+    }
+}
+</code></pre>
+<p></details></p>
+<h2><a class="anchor" aria-hidden="true" id="field-summary"></a><a href="#field-summary" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Field summary</h2>
+<p>The following code shows the supported manifest fields for Overwolf apps, with links to the section that discusses each field.</p>
+<p><details open>
+<summary>Here you can see a full version of the manifest.json file</summary></p>
+<pre><code class="json">
+{
+    //Mandatory
+    "<a href="#manifest_version">manifest_version</a>": 1,
+    "<a href="#type">type</a>": "WebApp",
+    //Mandatory, The app metadata
+    "<a href="#meta-object">meta</a>": {
+        "<a href="#meta-object">name</a>": "Name of your app",
+        "<a href="#meta-object">dock_button_title</a>": "Short name of your app",
+        "<a href="#meta-object">version</a>": "1.2.3.456",
+        "<a href="#meta-object">minimum-overwolf-version</a>": "128.0.0.1",
+        "<a href="#meta-object">author</a>": "Author name",
+        "<a href="#meta-object">icon</a>": "IconMouseOver.png",
+        "<a href="#meta-object">icon_gray</a>": "IconMouseNormal.png",
+        "<a href="#meta-object">launcher_icon</a>": "icon.ico",
+        "<a href="#meta-object">splash_image</a>": "splash_icon.png",
+        "<a href="#meta-object">description</a>": "A plain text description"
+    },
+    //An array of permissions that the app requires
+    "<a href="#permissions-array">permissions</a>": ["Streaming","Hotkeys","GameInfo"],
+    //Mandatory, a list of additional meta-data on the app
+    "<a href="#data">data</a>": {
+        //An app can declare itself as targeted to one game or more
+        "<a href="#game_targeting">game_targeting</a>": {"type": "dedicated","game_ids": [10906, 7764]},
+        //The name of the window (from the “windows” list) initially loaded when the app starts
+        "<a href="#start_window">start_window</a>": "windowName",
+         //A map from window names to window settings
+        "<a href="#window-data">windows</a>": {
+            "windowName": {
+                //Mandatory. Points to the file to be loaded inside the window
+                "<a href="#window-file">file</a>": "name.html",
+                "<a href="#window-show_in_taskbar">show_in_taskbar</a>": true,
+                "<a href="#window-transparent">transparent</a>": true,
+                "<a href="#windows-resizable">resizable</a>": false,
+                "<a href="#windows-show_minimize">show_minimize</a>": true,
+                "<a href="#windows-clickthrough">clickthrough</a>": false,
+                "<a href="#windows-disable_rightclick">disable_rightclick</a>": false,
+                "<a href="#windows-forcecapture">forcecapture</a>": false,
+                "<a href="#windows-show_only_on_stream">show_only_on_stream</a>": false,
+                "<a href="#windows-ignore_keyboard_events">ignore_keyboard_events</a>": false,
+                "<a href="#windows-in_game_only">in_game_only</a>": false,
+                "<a href="#windows-desktop_only">desktop_only</a>": false,
+                "<a href="#windows-disable_restore_animation">disable_restore_animation</a>": false,
+                "<a href="#windows-grab_keyboard_focus">grab_keyboard_focus</a>": false,
+                "<a href="#windows-size">size</a>": {...},
+                "<a href="#windows-min_size">min_size</a>": {...},
+                "<a href="#windows-max_size">max_size</a>": {...},
+                "<a href="#windows-start_position">start_position</a>": {...},
+                "<a href="#windows-topmost">topmost</a>": false,
+                "<a href="#windows-block_top_window_navigation">block_top_window_navigation</a>": true,
+                "<a href="#windows-keep_window_location">keep_window_location</a>": true,
+                "<a href="#windows-use_os_windowing">use_os_windowing</a>": false,
+                "<a href="#background_optimization">background_optimization</a>": true,
+                "<a href="#windows-mute">mute</a>": true,
+                "<a href="#mute_excluded_hosts">mute_excluded_hosts</a>": ["..."],
+                "<a href="#popup_blocker">popup_blocker</a>": false,
+                "<a href="#show_maximize">show_maximize</a>": true,
+                "<a href="#disable_blur">disable_blur</a>": false,
+                "<a href="#native_window">native_window</a>": false,
+                "<a href="#is_background_page">is_background_page</a>": true,
+                "<a href="#focus_game_takeover">focus_game_takeover</a>": "ReleaseOnLostFocus",
+                "<a href="#allow_local_file_access">allow_local_file_access</a>": true,
+                "<a href="#is_alt_f4_blocked">is_alt_f4_blocked</a>": false,
+                "<a href="#debug_url">debug_url</a>": "http://localhost:3000",
+                "<a href="#optimize_accelerate_rendering">optimize_accelerate_rendering</a>": false //Use directly shared texture rendering in game (only DX11)
+            },
+        },
+        //Toggle printing of ads log to the console
+        "<a href="#enable_top_isolated_sites_console">enable_top_isolated_sites_console</a>": false,
+        //External URLs the web app should be able to access
+        "<a href="#externally_connectable">externally_connectable</a>": { "matches": ["http://*.overwolf.com", "https://*.overwolf.com", "https://*.google-analytics.com"] },
+        //Override the relative protocol with a preferred one
+        "<a href="#protocol_override_domains">protocol_override_domains</a>": {"domain.com": "http","ajax.googleapis.com": "https"},
+        //Causes links in the app to be opened using the user’s default browser ("user") or Overwolf’s browser ("overwolf")
+        "<a href="#force_browser">force_browser</a>": "user"/"overwolf",
+        //Enable OSR|GPU acceleration if supported by this machine
+        "<a href="#enable_osr_acceleration">enable_osr_acceleration</a>": true,
+        //A list of game ids for which game events are required
+        "<a href="#game_events">game_events</a>": [...],
+        //Disable the log file 1000 lines limitation. Don't enable it without Overwolf approval.
+        "<a href="#disable_log_limit">disable_log_limit</a>": false,
+        //Allows the access of custom plugin dlls
+        "<a href="#extra-objects">extra-objects</a>": {"my-plugin":{"file":"plugins/my_plugin.dll","class":"MyPlugin.EntryPoint"}},
+        //shortcut keys that trigger an app action
+        "<a href="#hotkeys">hotkeys</a>":{"save_YourAppName": {"title": "Save Replay for later", "action-type":"custom", "default":"Ctrl+Shift+F9"}},
+        //A list of content scripts to be loaded for specific windows
+        "<a href="#content_scripts">content_scripts</a>": [{ "windows": [ "index" ], "js": [ "myscript.js" ] }s],
+        //A list of events causing the app to launch
+        "<a href="#launch_events">launch_events</a>": [{"event": "GameLaunch", "event_data":{"game_ids": [1136]}, "start_minimized": true}],
+        //A custom user agent for the app to use when creating http requests. Don’t use this property if your app serves ads.
+        "<a href="#user_agent">user_agent</a>": "navigator.userAgent",
+        //Disable opening of the developer tools for the app
+        "<a href="#disable_dt">disable_dt</a>": false,
+        //Additional setting for developers (only when the app is in dev mode)
+        "<a id="developer-manifest" href="#developer-game-settings">developer</a>": {
+                //Enable auto App reloading when detecting local files changes.True by Default
+                "<a href="#developer-game-settings">enable_auto_refresh</a>": true,
+                //Reload delay (in ms) when detecting file changes (for multiple change)default is 1000 (1 second)
+                "<a href="#developer-game-settings">reload_delay</a>": 1000,
+                //Filter files which will be tracked.e.g (*.js;*.html)Default: all files (*.*)
+                "<a href="#developer-game-settings">filter</a>": <span style="font-weight: 400;">"*.json;*.html"</span><span style="font-weight: 400;"> 
+            }
+    }
+}
+</code></pre>
+</details>
+<h2><a class="anchor" aria-hidden="true" id="validate-your-manifestjson"></a><a href="#validate-your-manifestjson" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Validate your manifest.json</h2>
+<p>To help you make sure that your manifest file is correct and complete, validate it against this <a href="https://gist.github.com/eransharv/74ecac312957309a61f80725abd6951c">schema file</a>:</p>
+<ol>
+<li>Go to <a href="http://www.jsonschemavalidator.net/">www.jsonschemavalidator.net</a></li>
+<li>Copy-paste the <a href="https://gist.github.com/eransharv/74ecac312957309a61f80725abd6951c">schema’s</a> and your manifest.json code into the “Schema” and “Input JSON” windows, respectively.</li>
+<li>Check for any errors or missing data.</li>
+</ol>
+<h2><a class="anchor" aria-hidden="true" id="the-top-manifest-objects"></a><a href="#the-top-manifest-objects" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>The top manifest objects</h2>
+<p>There are many features that are enabled through this file. Some are mandatory (marked accordingly), and others are optional. Here is a description of the many features you can activate through the manifest.json</p>
+<table>
+<thead>
+<tr><th>Name</th><th>Type</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td><a id="manifest_version">&quot;manifest_version&quot;</a></td><td>integer</td><td>Mandatory. Targets the manifest version you are working on. Currently there is only one version, therefore this value is always “1”.</td></tr>
+<tr><td><a id="type">&quot;type&quot;</a></td><td>string</td><td>Mandatory. Declares the type of application. Can only be “WebApp”.</td></tr>
+<tr><td><a id="meta">&quot;meta&quot;</a></td><td><a href="#meta-object"><code>meta</code> object</a></td><td>Mandatory. The app metadata.</td></tr>
+<tr><td><a id="permissions">&quot;permissions&quot;</a></td><td><a href="#permissions-array"><code>permissions[]</code></a></td><td>An array of permissions that the app requires.</td></tr>
+<tr><td><a id="data">&quot;data&quot;</a></td><td><a href="#webapp-settings-object"><code>webapp settings</code> object</a></td><td>Mandatory. App data. Changes between different apps types. Currently can only be from type webapp settings.</td></tr>
+</tbody>
+</table>
+<h2><a class="anchor" aria-hidden="true" id="permissions-array"></a><a href="#permissions-array" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Permissions array</h2>
+<p>To use most overwolf.* APIs, your Overwolf app must declare its intent in the permissions field of the manifest.json.
+It's an array of permissions that the app requires:</p>
+<pre><code class="json">"permissions": ["Streaming","Hotkeys","GameInfo"]</pre></code>
+<table>
+<thead>
+<tr><th>Permission</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>&quot;Camera&quot;</td><td>Access the webcam</td></tr>
+<tr><td>&quot;Microphone&quot;</td><td>Access the microphone</td></tr>
+<tr><td>&quot;Logging&quot;</td><td>Access the <a href="overwolf-log">logging system APIs</a></td></tr>
+<tr><td>&quot;Extensions&quot;</td><td>Run or get information about other apps</td></tr>
+<tr><td>&quot;Streaming&quot;</td><td>Enable game streaming</td></tr>
+<tr><td>&quot;DesktopStreaming&quot;</td><td>Enable desktop streaming</td></tr>
+<tr><td>&quot;Profile&quot;</td><td>Access profile information and perform actions such as login and modifications</td></tr>
+<tr><td>&quot;Clipboard&quot;</td><td>Access the clipboard</td></tr>
+<tr><td>&quot;Hotkeys&quot;</td><td>Get hotkeys information for the current app</td></tr>
+<tr><td>&quot;Media&quot;</td><td>Access the media library</td></tr>
+<tr><td>&quot;GameInfo&quot;</td><td>Access current game information</td></tr>
+<tr><td>&quot;GameControl&quot;</td><td>Allows to send key strokes to the game by using <a href="overwolf-utils">overwolf.utils.sendKeyStroke()</a></td></tr>
+<tr><td>&quot;FileSystem&quot;</td><td>Allows accessing files from the local file system. </br><em>Note: This is the only permission we currently enforce</em></td></tr>
+<tr><td>&quot;LogitechLed&quot;</td><td>Allows accessing <a href="overwolf-logitech-led">Logitech LED APIs</a></td></tr>
+<tr><td>&quot;LogitechArx&quot;</td><td>Allows accessing <a href="overwolf-logitech-arx">Logitech Arx APIs</a></td></tr>
+<tr><td>&quot;OwWebview&quot;</td><td></td></tr>
+<tr><td>&quot;VideoCaptureSettings&quot;</td><td>Allows setting video capture settings</td></tr>
+</tbody>
+</table>
+<h2><a class="anchor" aria-hidden="true" id="meta-object"></a><a href="#meta-object" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Meta object</h2>
+<p>The App Metadata.</p>
+<table>
+<thead>
+<tr><th>Name</th><th>Type</th><th>Description</th><th>Since</th></tr>
+</thead>
+<tbody>
+<tr><td>&quot;name&quot;</td><td>string</td><td>Mandatory. Name of your app*</td><td>0.78</td></tr>
+<tr><td>&quot;author&quot;</td><td>string</td><td>Mandatory. Who developed the app*</td><td>0.78</td></tr>
+<tr><td>&quot;version&quot;</td><td>string</td><td>Mandatory. One to four dot-separated integers identifying the version of this app.</br>Needs to be in the format of X.X.X where the X’s are numbers.</br>Here are some examples of valid versions: </br> [&quot;version&quot;: &quot;1&quot;, &quot;version&quot;: &quot;1.0&quot;, &quot;version&quot;: &quot;2.11.3&quot;, &quot;version&quot;: &quot;4.1.2.345&quot;]</td><td>0.78</td></tr>
+<tr><td>&quot;minimum-overwolf-version&quot;</td><td>string</td><td>Mandatory. Minimum version of the Overwolf Client with which the app is compatible. The format is similar to the &quot;version&quot; field.</td><td>0.78</td></tr>
+<tr><td>&quot;description&quot;</td><td>string</td><td>Mandatory. The description of your app on the Appstore tile. Limited to 180 characters.</td><td>0.78</td></tr>
+<tr><td>&quot;dock_button_title&quot;</td><td>string</td><td>Short name of your app. Provide a short title that will fit in the dock button area – 18 chars max</td><td>0.79</td></tr>
+<tr><td>&quot;icon&quot;</td><td>string</td><td>Mandatory. A relative path from the app folder to the icon’s png file. This is the mouse-over (multi-colored) version of the icon that will be displayed on the Overwolf dock. The icon dimensions should be 256×256 pixels. More details on app icons can be found <a href="../start/submit-app-proposal">here</a>.</td><td>0.78</td></tr>
+<tr><td>&quot;window_icon&quot;</td><td>string</td><td>A relative path from the app folder to the icon’s png file. This is the window task bar icon \ window header. The icon’s dimensions must be 256×256 pixels</td><td>0.78</td></tr>
+<tr><td>&quot;icon_gray&quot;</td><td>string</td><td>A relative path from the app folder to the icon’s png file. This is the grayscale version of the icon that will be displayed on the Overwolf dock. The icon dimensions should be 256×256 pixels.</td><td>0.78</td></tr>
+<tr><td>&quot;launcher_icon&quot;</td><td>string</td><td>A relative path from the app folder to the desktop shortcut icon’s ico file.</td><td>0.78</td></tr>
+<tr><td>&quot;name&quot;</td><td>string</td><td>Mandatory. Name of your app*</td><td>0.109</td></tr>
+<tr><td>“splash_image”</td><td>string</td><td>A relative path from the app folder to the splash image icon’s png file. The image size should be 256x256px. If a this image is missing, Overwolf will use the “icon” image as a splash image</td><td>0.116</td></tr>
+</tbody>
+</table>
+<blockquote>
+<p>Note: Each app has a unique id (UID) that is generated out of the “name” and “author” strings. Once an app is published on the Appstore, its UID can’t be changed, so please choose your app and author names wisely before <a href="../start/submit-app-proposal">submitting</a> your app.</p>
+</blockquote>
+<h2><a class="anchor" aria-hidden="true" id="webapp-settings-object"></a><a href="#webapp-settings-object" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>webapp settings object</h2>
+<p>A list of additional settings for the app.</p>
+<table>
+<thead>
+<tr><th>Name</th><th>Type</th><th>Description</th><th>Since</th></tr>
+</thead>
+<tbody>
+<tr><td><a id="game_targeting">&quot;game_targeting&quot;</a></td><td><a href="#gametargeting-object"><code>GameTargeting</code> object</a></td><td>An app can declare itself as targeted to one game or more.</td><td>0.78</td></tr>
+<tr><td><a id="start_window">&quot;start_window&quot;</a></td><td>string</td><td>Mandatory. The name of the window (from the “windows” list) to initially load when the app starts.</td><td>0.78</td></tr>
+<tr><td><a id="window-data">&quot;windows&quot;</a></td><td><a href="#extension-window-data-object"><code>extension_window_data</code> object</a></td><td>Mandatory. A map from window names to window settings.</td><td>0.78</td></tr>
+<tr><td><a id="enable_top_isolated_sites_console">&quot;enable_top_isolated_sites_console&quot;</a></td><td>bool</td><td>Enable/Disable printing of ads log to the console. </br><em>Default value is “false”.</em></td><td>0.115</td></tr>
+<tr><td><a id="externally_connectable">&quot;externally_connectable&quot;</a></td><td><a href="#externallyconnectable-object"><code>ExternallyConnectable</code> object</a></td><td>A definition of external URLs the web app should be able to access.</td><td>0.78</td></tr>
+<tr><td><a id="start_window">&quot;start_window&quot;</a></td><td>string</td><td>Mandatory. The name of the window (from the “windows” list) to initially load when the app starts.</td><td>0.78</td></tr>
+<tr><td><a id="protocol_override_domains">&quot;protocol_override_domains&quot;</a></td><td><a href="#protocoloverridedomains-object"><code>ProtocolOverrideDomains</code> object</a></td><td>Override the relative protocol with a preferred one.</td><td>0.78</td></tr>
+<tr><td><a id="force_browser">&quot;force_browser&quot;</a></td><td>string</td><td>Causes links in the app to be opened using the user’s default browser or Overwolf’s browser. Takes &quot;user&quot; or &quot;overwolf&quot; as a value.</td><td>0.91</td></tr>
+<tr><td><a id="enable_osr_acceleration">&quot;enable_osr_acceleration&quot;</a></td><td>bool</td><td>Enable OSR/GPU acceleration if supported by this machine.</td><td>0.126</td></tr>
+<tr><td><a id="game_events">&quot;game_events&quot;</a></td><td><a href="#game-events-array"><code>game_events[]</code></a></td><td>A list of game ids for which game events are required.</td><td>0.92</td></tr>
+<tr><td><a id="disable_log_limit">&quot;disable_log_limit&quot;</a></td><td>bool</td><td>Disable the log file 1000 lines limitation. </br><em>Note: Do not enable it without Overwolf approval.</em></td><td>0.12</td></tr>
+<tr><td><a id="extra-objects">&quot;extra-objects&quot;</a></td><td><a href="#extra-objects-object"><code>extra-objects</code> object</a></td><td>Allows the access of custom plugin dlls.</td><td>0.81</td></tr>
+<tr><td><a id="hotkeys">&quot;hotkeys&quot;</a></td><td><a href="#hotkeys-object"><code>hotkeys</code> object</a></td><td>shortcut keys that trigger an app action.</td><td>0.78</td></tr>
+<tr><td><a id="content_scripts">&quot;content_scripts&quot;</a></td><td><a href="#content-scripts-array"><code>content_scripts[]</code></a></td><td>A list of content scripts to be loaded for specific windows.</td><td>0.78</td></tr>
+<tr><td><a id="launch_events">&quot;launch_events&quot;</a></td><td><a href="#launch-event-settings-array"><code>launch_event_settings[]</code></a></td><td>A list of events causing the app to launch.</td><td>0.82</td></tr>
+<tr><td><a id="user_agent">&quot;user_agent&quot;</a></td><td>string</td><td>A custom user agent for the app to use when creating http requests. </br><em>Note: using ‘navigator.userAgent’ will not return the custom user agent, but the default one.</em></td><td>0.86</td></tr>
+<tr><td><a id="disable_dt">&quot;disable_dt&quot;</a></td><td>bool</td><td>Disable opening of the developer tools for the app (with Ctrl+shift+I). </br><em>Default value – “false”</em></td><td>0.118</td></tr>
+<tr><td><a id="developer-game-settings">&quot;developer&quot;</a></td><td><a href="#developer-settings-object"><code>developer setting</code></a> object</td><td>Additional setting for developers.</td><td>0.127</td></tr>
+</tbody>
+</table>
+<h2><a class="anchor" aria-hidden="true" id="gametargeting-object"></a><a href="#gametargeting-object" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>GameTargeting object</h2>
+<p>An app can declare itself as targeted to one or more games.</p>
+<table>
+<thead>
+<tr><th>Name</th><th>Type</th><th>Description</th><th>Since</th></tr>
+</thead>
+<tbody>
+<tr><td>type</td><td>string</td><td>“all” – All games (e.g voice communication apps).</br>“dedicated” – Dedicated to a game or more than one game.</br> “none” – No games.</td><td>0.78</td></tr>
+<tr><td>game_ids</td><td><a href="#game-ids-array"><code>game_ids[]</code></a></td><td>The games IDs that your app targets</td><td>0.78</td></tr>
+</tbody>
+</table>
+<p>Example code:</p>
+<pre><code class="hljs css language-json">"game_targeting": {
+    "type": "all" / "none" / "dedicated",
+    "game_ids": [5426, 7764]  // only if type === "dedicated"
+}
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="extension_window_data-object"></a><a href="#extension_window_data-object" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>extension_window_data object</h2>
+<p>A list of settings for the app windows.</p>
+<table>
+<thead>
+<tr><th>Name</th><th>Type</th><th>Description</th><th>Since</th></tr>
+</thead>
+<tbody>
+<tr><td>file</td><td>string</td><td>Mandatory. Points to the file to be loaded inside the window.</td><td>0.78</td></tr>
+<tr><td>show_in_taskbar</td><td>bool</td><td>Define if the window is displayed in the Windows taskbar and alt-tab window selection menu.</td><td>0.78</td></tr>
+<tr><td>transparent</td><td>bool</td><td>Indicates whether the window will be transparent and borderless. If set to false a standard Overwolf window will be created.</td><td>0.78</td></tr>
+<tr><td>override_on_update</td><td>bool</td><td>Indicates whether the window’s locally saved data should be overridden when the window’s size/location/opacity changes after a version update.</td><td>0.119</td></tr>
+<tr><td>resizable</td><td>bool</td><td>Indicates whether the window can be resized.</td><td>0.78</td></tr>
+<tr><td>show_minimize</td><td>bool</td><td>Indicates whether to show the window minimize button. Only relevant when not in transparent mode.</td><td>0.79</td></tr>
+<tr><td>clickthrough</td><td>bool</td><td>Indicates whether the window will not receive clicks in-game, instead, the clicks will be passed on to the game.</td><td>0.80</td></tr>
+<tr><td>disable_rightclick</td><td>bool</td><td>When set to true, disable right clicks entirely for this window.</td><td>0.92</td></tr>
+<tr><td>forcecapture</td><td>bool</td><td>Indicates whether this window should always be included in recordings, overriding any other setting.</td><td>0.78</td></tr>
+<tr><td>show_only_on_stream</td><td>bool</td><td>Indicates whether this window is visible only in streams (not visible to the streamer), overriding any other setting.</td><td>0.78</td></tr>
+<tr><td>ignore_keyboard_events</td><td>bool</td><td>ndicates whether the window will not receive keyboard events. Instead, the keyboard events will be passed on to the game.</td><td>0.83</td></tr>
+<tr><td>in_game_only</td><td>bool</td><td>Indicates whether the window will be visible only in game and not on the desktop.</td><td>0.78</td></tr>
+<tr><td>desktop_only</td><td>bool</td><td>Indicates whether the window will be visible only on the desktop and not while in game. This flag should be used (set to “true”) when “use_os_windowing” or “native_window” flags are set to true. </br><em>Note: using “desktop_only” and “native_window” flags for desktop windows will dramatically improve your app’s performance.</em></td><td>0.89</td></tr>
+<tr><td>disable_restore_animation</td><td>bool</td><td>Indicates whether the window will animate on minimize/restore while in game.</td><td>0.89</td></tr>
+<tr><td>grab_keyboard_focus</td><td>bool</td><td>Indicates whether the window will grab the keyboard focus automatically when it opens, or leave the keyboard focus untouched. </br><em>Relevant only for in-game windows</em></td><td>0.82</td></tr>
+<tr><td>grab_focus_on_desktop</td><td>bool</td><td>Indicates whether the window will grab the focus automatically when it opens, or leave the focus untouched. </br><em>Default value is true</em> </br><em>Relevant only for desktop windows</em></td><td>0.99</td></tr>
+<tr><td>size</td><td>size object</td><td>Defines the size of the window in pixels.</td><td>0.78</td></tr>
+<tr><td>min_size</td><td>size object</td><td>Defines the minimum size of the window in pixels.</td><td>0.78</td></tr>
+<tr><td>max_size</td><td>size object</td><td>Defines the maximum size of the window in pixels.</td><td>0.78</td></tr>
+<tr><td>start_position</td><td>point object</td><td>The default start position of the window in pixels from the top left corner.</td><td>0.78</td></tr>
+<tr><td>topmost</td><td>bool</td><td>Indicates whether the window will be on top of other Overwolf windows. Handle with care as topmost windows can negatively impact user experience.</td><td>0.89</td></tr>
+<tr><td>block_top_window_navigation</td><td>bool</td><td>Refrain from non _blank <a> elements from “taking-over” the entire app’s window</td><td>0.100</td></tr>
+<tr><td>keep_window_location</td><td>bool</td><td>Window location won’t be changed when game focus is changed</td><td>0.101</td></tr>
+<tr><td>use_os_windowing</td><td>bool</td><td>When set to true, allows your window to have a full-screen maximize when calling the overwolf.windows.maximize function, and a real taskbar minimize when calling overwolf.windows.minimize. </br><em>Note: Should only be used with desktop_only windows</em></td><td>0.102</td></tr>
+<tr><td>background_optimization</td><td>bool</td><td>Enables JS engine background optimization. </br><em>Default value is true</em></td><td>0.103</td></tr>
+<tr><td>mute</td><td>bool</td><td>Mute sounds in window.</td><td>0.102</td></tr>
+<tr><td>mute_excluded_hosts</td><td>string[]</td><td>Excludes hosts list so a stream from these hosts origins will not get muted even if the window is on &quot;mute&quot;: true</td><td>0.103</td></tr>
+<tr><td>popup_blocker</td><td>bool</td><td>Prevents new browser windows being opened automatically using script. </br><em>Default value is false</em></td><td>0.103</td></tr>
+<tr><td>show_maximize</td><td>bool</td><td>Enables window maximize button. Relevant only for the standard Overwolf window (&quot;transparent&quot;: false) </br><em>Default value is false</em></td><td>0.106</td></tr>
+<tr><td>disable_blur</td><td>bool</td><td>Causes the app’s window to never “lose focus”, so the window.onblur event is never triggered.  </br><em>Default value is false</em></td><td>0.106</td></tr>
+<tr><td>matches</td><td>string</td><td>Array of web page URL patterns to match with an external server URL. Use star (*) in place of subdomain to allow access to all subdomains.</td><td>0.78</td></tr>
+<tr><td>matches</td><td>string</td><td>Array of web page URL patterns to match with an external server URL. Use star (*) in place of subdomain to allow access to all subdomains.</td><td>0.78</td></tr>
+<tr><td>matches</td><td>string</td><td>Array of web page URL patterns to match with an external server URL. Use star (*) in place of subdomain to allow access to all subdomains.</td><td>0.78</td></tr>
+<tr><td>matches</td><td>string</td><td>Array of web page URL patterns to match with an external server URL. Use star (*) in place of subdomain to allow access to all subdomains.</td><td>0.78</td></tr>
+<tr><td>matches</td><td>string</td><td>Array of web page URL patterns to match with an external server URL. Use star (*) in place of subdomain to allow access to all subdomains.</td><td>0.78</td></tr>
+<tr><td>matches</td><td>string</td><td>Array of web page URL patterns to match with an external server URL. Use star (*) in place of subdomain to allow access to all subdomains.</td><td>0.78</td></tr>
+<tr><td>matches</td><td>string</td><td>Array of web page URL patterns to match with an external server URL. Use star (*) in place of subdomain to allow access to all subdomains.</td><td>0.78</td></tr>
+<tr><td>matches</td><td>string</td><td>Array of web page URL patterns to match with an external server URL. Use star (*) in place of subdomain to allow access to all subdomains.</td><td>0.78</td></tr>
+<tr><td>matches</td><td>string</td><td>Array of web page URL patterns to match with an external server URL. Use star (*) in place of subdomain to allow access to all subdomains.</td><td>0.78</td></tr>
+<tr><td>matches</td><td>string</td><td>Array of web page URL patterns to match with an external server URL. Use star (*) in place of subdomain to allow access to all subdomains.</td><td>0.78</td></tr>
+<tr><td>matches</td><td>string</td><td>Array of web page URL patterns to match with an external server URL. Use star (*) in place of subdomain to allow access to all subdomains.</td><td>0.78</td></tr>
+</tbody>
+</table>
+<h2><a class="anchor" aria-hidden="true" id="externallyconnectable-object"></a><a href="#externallyconnectable-object" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>ExternallyConnectable object</h2>
+<p>A definition of external URLs the web app should be able to access. Read more <a href="http://en.wikipedia.org/wiki/Cross-origin_resource_sharing">here</a>.</p>
+<table>
+<thead>
+<tr><th>Name</th><th>Type</th><th>Description</th><th>Since</th></tr>
+</thead>
+<tbody>
+<tr><td>matches</td><td>string[]</td><td>Array of web page URL patterns to match with an external server URL. Use star (*) in place of subdomain to allow access to all subdomains.</td><td>0.78</td></tr>
+</tbody>
+</table>
+<p>Example code:</p>
+<pre><code class="hljs css language-json">"externally_connectable": {
+    "matches": [
+    "http://*.mysite.com",
+    "https://*.mysecuredsite.com",
+    "my-protocol://"
+    ]
+}
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="protocoloverridedomains-object"></a><a href="#protocoloverridedomains-object" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>ProtocolOverrideDomains object</h2>
+<p>Overwolf apps run under a custom url protocol and domain (overwolf-extension://[app-id]).
+This means that protocol-relative urls (//ajax.googleapis.com…) will try to load from a the overwolf-app protocol.
+Unless you want this to happen, you can use protocol_override_domains to override the relative protocol with a preferred one (e.g. https/http).</p>
+<table>
+<thead>
+<tr><th>Name</th><th>Type</th><th>Description</th><th>Since</th></tr>
+</thead>
+<tbody>
+<tr><td>protocol_override_domains</td><td>string</td><td>web page URL patterns to override.</td><td>0.78</td></tr>
+</tbody>
+</table>
+<p>Example code:</p>
+<pre><code class="hljs css language-json">"protocol_override_domains" : {"ajax.googleapis.com": "https", "domain.com": "http"}
+</code></pre>
+<p>This will swap the overwolf-app protocol with https for ajax.googleapis.com domain requestsand with http for domain.com requests.</p>
+<h2><a class="anchor" aria-hidden="true" id="game_ids-array"></a><a href="#game_ids-array" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>game_ids array</h2>
+<p>A list of game ids for which game events are required.
+The full list of games that Overwolf supports real time event listnening can be found <a href="games-ids">here</a>.</p>
+<table>
+<thead>
+<tr><th>Name</th><th>Type</th><th>Description</th><th>Since</th></tr>
+</thead>
+<tbody>
+<tr><td>game_ids</td><td>int[]</td><td>The games IDs that your app targets.</td><td>0.92</td></tr>
+</tbody>
+</table>
+<p>Example code:</p>
+<pre><code class="hljs css language-json">"game_ids": [7764, 5426, 7314]
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="game_events-array"></a><a href="#game_events-array" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>game_events array</h2>
+<p>A list of game ids for which game events are required.
+The full list of games that Overwolf supports real time event listnening can be found <a href="games-ids">here</a>.</p>
+<table>
+<thead>
+<tr><th>Name</th><th>Type</th><th>Description</th><th>Since</th></tr>
+</thead>
+<tbody>
+<tr><td>game_events</td><td>int[]</td><td>The games IDs that your app targets.</td><td>0.92</td></tr>
+</tbody>
+</table>
+<p>Example code:</p>
+<pre><code class="hljs css language-json">"game_events": [7764, 5426, 7314]
+</code></pre>
+<p>Note: this array is exactly the same as the <a href="#game-ids-array"><code>game_ids[]</code></a>, and we use it only for backwards compatibility.</p>
+<h2><a class="anchor" aria-hidden="true" id="extra-objects-object"></a><a href="#extra-objects-object" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>extra-objects object</h2>
+<p>Allows the access of custom plugin dlls. For more info see <a href="https://github.com/overwolf/overwolf-plugins">https://github.com/overwolf/overwolf-plugins</a>.</p>
+<table>
+<thead>
+<tr><th>Name</th><th>Type</th><th>Description</th><th>Since</th></tr>
+</thead>
+<tbody>
+<tr><td>file</td><td>string</td><td>the relative file path for the custom plugin dll.</td><td>0.81</td></tr>
+<tr><td>class</td><td>string</td><td>the namespace entry point for the custom plugin dll.</td><td>0.81</td></tr>
+</tbody>
+</table>
+<p>Example code:</p>
+<pre><code class="hljs css language-json">"extra-objects":{  
+    "my-plugin":{  
+        "file":"plugins/my_plugin.dll",
+        "class":"MyPlugin.EntryPoint"
+    },
+    "simple-io-plugin":{  
+        "file":"plugins/simple-io-plugin.dll",
+        "class":"overwolf.plugins.SimpleIOPlugin"
+    }
+}
+</code></pre>
+<p>Then, from your app you can use the <a href="overwolf-current_extension"><code>overwolf.current_extension</code></a> API to get an instance:</p>
+<pre><code class="hljs css language-javascript">overwolf.current_extension.getExtraObject(“simple-io-plugin”, <span class="hljs-function"><span class="hljs-keyword">function</span>…)
+</span></code></pre>
+<h2><a class="anchor" aria-hidden="true" id="hotkeys-object"></a><a href="#hotkeys-object" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>hotKeys object</h2>
+<p>HotKeys are shortcut keys that trigger an app action.
+The basic usage is to open/show and minimize/hide your app, but you can trigger more actions like save, refresh or any other custom actions.</p>
+<blockquote>
+<p><em>Note: Hotkeys will only work in-game, and not on desktop</em>.</p>
+</blockquote>
+<p>There are two types of hotkeys:</p>
+<ul>
+<li><p><strong>toggle</strong> – Toggles application visibility (displayed/hidden).<br>
+The advantage of it is that it can activate the app if it closed, so use it If you want the hotkey to launch your app, as it will run and display the app if it isn’t already running.</p></li>
+<li><p><strong>custom</strong> – Defines a custom hotkey to be used by the app. It is up to the app to register the custom hotkeys and handle them.
+custom hotkey will only work when your app is already running. If it closed it won’t open it (do nothing).
+In addition, you will need to use the <a href="overwolf-settings">registerHotKey</a> function to register the hotkey, but the advantage is that you can use this callback function to customize your app windows behavior.</p></li>
+</ul>
+<p>The map between the hotkey feature name and it’s settings:</p>
+<table>
+<thead>
+<tr><th>Name</th><th>Type</th><th>Description</th><th>Since</th></tr>
+</thead>
+<tbody>
+<tr><td>title</td><td>string</td><td>Mandatory. Name of the hotkey as it will appear in the Hotkey tab in the settings. </br><em>Note: the name must be unique in the client machine, so it's better to concatenate your app name to its tail</em></td><td>0.78</td></tr>
+<tr><td>action-type</td><td>enum</td><td>Defines the behavior of the hotkey: </br><strong>[&quot;toggle&quot;, &quot;custom&quot;]</strong></td><td>0.78</td></tr>
+<tr><td>default</td><td>string</td><td>The default key combination.</td><td>0.78</td></tr>
+<tr><td>passthrough</td><td>bool</td><td>Defines the behavior of the hotkey.</td><td>0.78</td></tr>
+</tbody>
+</table>
+<p>Example code:</p>
+<pre><code class="hljs css language-json">"hotkeys": {
+    "show_YourAppName": { 
+        "title": "Show Player",
+        "action-type": "custom",
+        "default": "Shift+F9"
+    },
+    "save_YourAppName": {
+        "title": "Save Replay for later",
+        "action-type": "custom",
+        "default": "Ctrl+Shift+F9"
+    }
+}
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="content_scripts-array"></a><a href="#content_scripts-array" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>content_scripts Array</h2>
+<p>A list of content scripts to be loaded for specific windows.</p>
+<table>
+<thead>
+<tr><th>Name</th><th>Type</th><th>Description</th><th>Since</th></tr>
+</thead>
+<tbody>
+<tr><td>windows</td><td>string</td><td>The list of windows for which to apply this content script.</td><td>0.78</td></tr>
+<tr><td>matches</td><td>string</td><td>The list of urls for which to apply this content script.</td><td>0.78</td></tr>
+<tr><td>css</td><td>string</td><td>The list of css files to be applied in this content script.</td><td>0.78</td></tr>
+<tr><td>js</td><td>string</td><td>The list of js files to be applied in this content script.</td><td>0.78</td></tr>
+</tbody>
+</table>
+<p>In this example, when loading the index window, myscript.js will be loaded and when encountring <a href="https://google.com">https://google.com</a>, mystyles.css and myscript2.js will be loaded:</p>
+<pre><code class="hljs css language-json">"content_scripts": [
+    { "windows": [ "index" ], "js": [ "myscript.js" ] },
+    { "matches": [ "https://google.com/" ], "css": [ "mystyles.css" ], "js": [ "myscript2.js" ] }
+]
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="launch_event_settings-array"></a><a href="#launch_event_settings-array" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>launch_event_settings array</h2>
+<p>A list of events causing the app to launch. It is enough that one of the events will occur to launch the app.</p>
+<table>
+<thead>
+<tr><th>Name</th><th>Type</th><th>Description</th><th>Since</th></tr>
+</thead>
+<tbody>
+<tr><td>event</td><td>enum</td><td>The type name of the event. </br><strong>[&quot;GameLaunch&quot;, &quot;AllGamesLaunch&quot;]</strong></td><td>0.82</td></tr>
+<tr><td>event_data</td><td><a href="#launch-event-object"><code>launch_event</code></a> object</td><td>The list of game class IDs for which the app will launch.</td><td>0.82</td></tr>
+<tr><td>start_minimized</td><td>bool</td><td>The app’s main window will start minimized.</td><td>0.82</td></tr>
+<tr><td>include_launchers</td><td>bool</td><td>The app will be launched when game launcher is detected.</td><td>0.103</td></tr>
+</tbody>
+</table>
+<p>Code Example:</p>
+<pre><code class="hljs css language-json">"launch_events": [{
+    "event": "GameLaunch",
+    "event_data": {
+        "game_ids": [1136],
+        "wait_for_stable_framerate": 30
+    },
+    "start_minimized": true
+}]
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="launch_event-object"></a><a href="#launch_event-object" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>launch_event object</h2>
+<p>Contains a list of game class IDs for which the app will launch.</p>
+<table>
+<thead>
+<tr><th>Name</th><th>Type</th><th>Description</th><th>Since</th></tr>
+</thead>
+<tbody>
+<tr><td>game_ids</td><td>int[]</td><td>The list of game class IDs for which the app will launch.</td><td>0.82</td></tr>
+<tr><td>wait_for_stable_framerate</td><td>int</td><td>The app won’t start until the game’s framerate will stabilize around or above the stated framerate.</td><td>0.82</td></tr>
+</tbody>
+</table>
+<p>Code Example:</p>
+<pre><code class="hljs css language-json"> "event_data": {
+        "game_ids": [1136],
+        "wait_for_stable_framerate": 30
+    }
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="developer-settings-object"></a><a href="#developer-settings-object" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>developer settings object</h2>
+<p>Additional setting for helping apps developers. Mainly to set auto reloading of an app when local files changes.</p>
+<blockquote>
+<p>Note that these settings relevant only if your app is in dev mode (channel=&quot;developers&quot;), and you are loading it as unpacked folder.</p>
+</blockquote>
+<table>
+<thead>
+<tr><th>Name</th><th>Type</th><th>Description</th><th>Since</th></tr>
+</thead>
+<tbody>
+<tr><td>enable_auto_refresh</td><td>bool</td><td>Enable auto App reloading when detecting files changes. </br><em>default is true</em></td><td>0.127</td></tr>
+<tr><td>reload_delay</td><td>int</td><td>Delay in milliseconds. When detecting file changes (for multiple changes).  </br><em>default value is 1000 milliseconds (1 second)</em></td><td>0.127</td></tr>
+<tr><td>filter</td><td>string</td><td>Filter files which will be tracked.e.g (<em>.js;</em>.html. </br><em>default value is “</em>.<em>” -&gt; all files, but you can use several value like “</em>.json;<em>.html”</em></td><td>0.127</td></tr>
+</tbody>
+</table>
+<p>Code Example:</p>
+<pre><code class="hljs css language-json"> "developer": 
+    {
+               
+        "enable_auto_refresh": true,
+        "reload_delay": 1000, 
+        "filter": "*.json;*.html"
+    }
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="eopenlinksinbrowser"></a><a href="#eopenlinksinbrowser" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>eOpenLinksInBrowser</h2>
+<h2><a class="anchor" aria-hidden="true" id="size"></a><a href="#size" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Size</h2>
+<h2><a class="anchor" aria-hidden="true" id="point"></a><a href="#point" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Point</h2>
+<h2><a class="anchor" aria-hidden="true" id="efocusgametakeoverjsontype"></a><a href="#efocusgametakeoverjsontype" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>eFocusGameTakeOverJsonType</h2>
+</span></div></article></div><div class="docLastUpdate"><em>Last updated on 2019-5-5</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/developers-site/docs/api/changelog"><span class="arrow-prev">← </span><span>Changelog</span></a><a class="docs-next button" href="/developers-site/docs/api/overwolf-benchmarking"><span>overwolf.benchmarking</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#welcome-to-the-manifestjson-file">Welcome to the manifest.json file</a></li><li><a href="#field-summary">Field summary</a></li><li><a href="#validate-your-manifestjson">Validate your manifest.json</a></li><li><a href="#the-top-manifest-objects">The top manifest objects</a></li><li><a href="#permissions-array">Permissions array</a></li><li><a href="#meta-object">Meta object</a></li><li><a href="#webapp-settings-object">webapp settings object</a></li><li><a href="#gametargeting-object">GameTargeting object</a></li><li><a href="#extension_window_data-object">extension_window_data object</a></li><li><a href="#externallyconnectable-object">ExternallyConnectable object</a></li><li><a href="#protocoloverridedomains-object">ProtocolOverrideDomains object</a></li><li><a href="#game_ids-array">game_ids array</a></li><li><a href="#game_events-array">game_events array</a></li><li><a href="#extra-objects-object">extra-objects object</a></li><li><a href="#hotkeys-object">hotKeys object</a></li><li><a href="#content_scripts-array">content_scripts Array</a></li><li><a href="#launch_event_settings-array">launch_event_settings array</a></li><li><a href="#launch_event-object">launch_event object</a></li><li><a href="#developer-settings-object">developer settings object</a></li><li><a href="#eopenlinksinbrowser">eOpenLinksInBrowser</a></li><li><a href="#size">Size</a></li><li><a href="#point">Point</a></li><li><a href="#efocusgametakeoverjsontype">eFocusGameTakeOverJsonType</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/developers-site/" class="nav-home"><img src="/developers-site/img/ow-logo.svg" alt=" " width="66" height="58"/></a><div><h5>Docs</h5><a href="/developers-site/docs/en/doc1.html">Getting Started (or other categories)</a><a href="/developers-site/docs/en/doc2.html">Guides (or other categories)</a><a href="/developers-site/docs/en/doc3.html">API Reference (or other categories)</a></div><div><h5>Community</h5><a href="/developers-site/en/users.html">User Showcase</a><a href="http://stackoverflow.com/questions/tagged/" target="_blank" rel="noreferrer noopener">Stack Overflow</a><a href="https://discordapp.com/">Project Chat</a><a href="https://twitter.com/" target="_blank" rel="noreferrer noopener">Twitter</a></div><div><h5>More</h5><a href="/developers-site/blog">Blog</a><a href="https://github.com/">GitHub</a><a class="github-button" data-icon="octicon-star" data-count-href="/facebook/docusaurus/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a></div></section><a href="https://code.facebook.com/projects/" target="_blank" rel="noreferrer noopener" class="fbOpenSource"><img src="/developers-site/img/oss_logo.png" alt="Facebook Open Source" width="170" height="45"/></a><section class="copyright">Copyright © 2019 Overwolf</section></footer></div></body></html>
