@@ -32,7 +32,7 @@
 			"API Reference": 
 			["api/overwolf-api-overview", "api/changelog", "api/manifest-json", "api/overwolf-benchmarking", "api/overwolf-extensions", "api/overwolf-io", "api/overwolf-log", "api/overwolf-profile", "api/overwolf-streaming", "api/overwolf-profile", "api/overwolf-tobii", "api/overwolf-utils"],
 			"overwolf.extensions":
-			["api/overwolf-extensions", "api/overwolf-current_extension"],
+			["api/overwolf-extensions", "api/overwolf-extension-current"],
 			"overwolf.games":
 			["api/overwolf-games", "api/overwolf-games-events", "api/howto-check-events-status-from-app", {
 				"type": "subcategory",

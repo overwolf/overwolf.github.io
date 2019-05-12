@@ -139,7 +139,7 @@ The following code shows the supported manifest fields for Overwolf apps, with l
         //A list of events causing the app to launch
         "<a href="#launch_events">launch_events</a>": [{"event": "GameLaunch", "event_data":{"game_ids": [1136]}, "start_minimized": true}],
         //A custom user agent for the app to use when creating http requests. Don’t use this property if your app serves ads.
-        "<a href="#user_agent">user_agent</a>": "navigator.userAgent",
+        "<a href="#user_agent">user_agent</a>": "...",
         //Disable opening of the developer tools for the app
         "<a href="#disable_dt">disable_dt</a>": false,
         //Additional setting for developers (only when the app is in dev mode)
