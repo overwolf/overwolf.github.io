@@ -21,8 +21,8 @@ This [JSON](http://www.json.org/) formatted file is responsible for describing t
         "name": "Demo_App",
         "version": "1.0.0",
         "author": "Developer_Name",
-        "icon": "IconMouseOver.png",
-        "icon_gray": "IconMouseNormal.png",
+        "icon": "iconMouseOver.png",
+        "icon_gray": "iconMouseNormal.png",
         "description": "Demo App"
     },
     "data": {
@@ -42,6 +42,96 @@ This [JSON](http://www.json.org/) formatted file is responsible for describing t
 ```
 </details>
 
+<details>
+<summary>Here you can see a full version of the manifest.json file, without remarks</summary>
+
+<pre><code class="json">
+{
+    "<a href="#manifest_version">manifest_version</a>": 1,
+    "<a href="#type">type</a>": "WebApp",
+    "<a href="#meta-object">meta</a>": {
+        "<a href="#meta-name">name</a>": "Name of your app",
+        "<a href="#meta-object">author</a>": "Author name",
+        "<a href="#meta-object">version</a>": "1.2.3.456",
+        "<a href="#meta-object">minimum-overwolf-version</a>": "128.0.0.1",
+        "<a href="#meta-object">description</a>": "A plain text description",
+        "<a href="#meta-object">dock_button_title</a>": "Short name of your app",    
+        "<a href="#meta-object">icon</a>": "iconMouseOver.png",
+        "<a href="#meta-object">window_icon</a>": "windowIcon.png",      
+        "<a href="#meta-object">icon_gray</a>": "iconMouseNormal.png",
+        "<a href="#meta-object">launcher_icon</a>": "icon.ico",
+        "<a href="#meta-object">splash_image</a>": "splashIcon.png"
+    },
+    "<a href="#permissions-array">permissions</a>": ["Streaming","Hotkeys","GameInfo"],
+    "<a href="#data">data</a>": {
+        "<a href="#game_targeting">game_targeting</a>": {"type": "dedicated","game_ids": [10906, 7764]},
+        "<a href="#start_window">start_window</a>": "windowName",
+        "<a href="#window-data">windows</a>": {
+            "windowName": {
+                "<a href="#window-file">file</a>": "name.html",
+                "<a href="#window-show_in_taskbar">show_in_taskbar</a>": true,
+                "<a href="#window-transparent">transparent</a>": true,
+                "<a href="#windows-resizable">resizable</a>": false,
+                "<a href="#windows-show_minimize">show_minimize</a>": true,
+                "<a href="#windows-clickthrough">clickthrough</a>": false,
+                "<a href="#windows-disable_rightclick">disable_rightclick</a>": false,
+                "<a href="#windows-forcecapture">forcecapture</a>": false,
+                "<a href="#windows-show_only_on_stream">show_only_on_stream</a>": false,
+                "<a href="#windows-ignore_keyboard_events">ignore_keyboard_events</a>": false,
+                "<a href="#windows-in_game_only">in_game_only</a>": false,
+                "<a href="#windows-desktop_only">desktop_only</a>": false,
+                "<a href="#windows-disable_restore_animation">disable_restore_animation</a>": false,
+                "<a href="#windows-grab_keyboard_focus">grab_keyboard_focus</a>": false,
+                "<a href="#windows-grab_focus_on_desktop">grab_focus_on_desktop</a>": false,                
+                "<a href="#windows-size">size</a>": {...},
+                "<a href="#windows-min_size">min_size</a>": {...},
+                "<a href="#windows-max_size">max_size</a>": {...},
+                "<a href="#windows-start_position">start_position</a>": {...},
+                "<a href="#windows-topmost">topmost</a>": false,
+                "<a href="#windows-block_top_window_navigation">block_top_window_navigation</a>": true,
+                "<a href="#windows-keep_window_location">keep_window_location</a>": true,
+                "<a href="#windows-use_os_windowing">use_os_windowing</a>": false,
+                "<a href="#background_optimization">background_optimization</a>": true,
+                "<a href="#windows-mute">mute</a>": true,
+                "<a href="#mute_excluded_hosts">mute_excluded_hosts</a>": ["..."],
+                "<a href="#popup_blocker">popup_blocker</a>": false,
+                "<a href="#show_maximize">show_maximize</a>": true,
+                "<a href="#disable_blur">disable_blur</a>": false,
+                "<a href="#native_window">native_window</a>": false,
+                "<a href="#is_background_page">is_background_page</a>": true,
+                "<a href="#focus_game_takeover">focus_game_takeover</a>": "ReleaseOnLostFocus",
+                "<a href="#focus_game_takeover_release_hotkey">focus_game_takeover_release_hotkey</a>": "...",
+                "<a href="#enable_top_isolation">enable_top_isolation</a>": true,
+                "<a href="#allow_local_file_access">allow_local_file_access</a>": true,
+                "<a href="#is_alt_f4_blocked">is_alt_f4_blocked</a>": false,
+                "<a href="#dev_tools_window_style">dev_tools_window_style</a>": false,
+                "<a href="#debug_url">debug_url</a>": "http://localhost:3000",
+                "<a href="#optimize_accelerate_rendering">optimize_accelerate_rendering</a>": false 
+            },
+        },
+        "<a href="#enable_top_isolated_sites_console">enable_top_isolated_sites_console</a>": false,
+        "<a href="#externally_connectable">externally_connectable</a>": { "matches": ["http://*.overwolf.com", "https://*.overwolf.com", "https://*.google-analytics.com"] },
+        "<a href="#protocol_override_domains">protocol_override_domains</a>": {"domain.com": "http","ajax.googleapis.com": "https"},
+        "<a href="#force_browser">force_browser</a>": "user"/"overwolf",
+        "<a href="#enable_osr_acceleration">enable_osr_acceleration</a>": true,
+        "<a href="#game_events">game_events</a>": [...],
+        "<a href="#disable_log_limit">disable_log_limit</a>": false,
+        "<a href="#extra-objects">extra-objects</a>": {"my-plugin":{"file":"plugins/my_plugin.dll","class":"MyPlugin.EntryPoint"}},
+        "<a href="#hotkeys">hotkeys</a>":{"save_YourAppName": {"title": "Save Replay for later", "action-type":"custom", "default":"Ctrl+Shift+F9"}},
+        "<a href="#content_scripts">content_scripts</a>": [{ "windows": [ "index" ], "js": [ "myscript.js" ] }s],
+        "<a href="#launch_events">launch_events</a>": [{"event": "GameLaunch", "event_data":{"game_ids": [1136]}, "start_minimized": true}],
+        "<a href="#user_agent">user_agent</a>": "...",
+        "<a href="#disable_dt">disable_dt</a>": false,
+        "<a id="developer-manifest" href="#developer-game-settings">developer</a>": {
+                "<a href="#developer-game-settings">enable_auto_refresh</a>": true,
+                "<a href="#developer-game-settings">reload_delay</a>": 1000,
+                "<a href="#developer-game-settings">filter</a>": <span style="font-weight: 400;">"*.json;*.html"</span><span style="font-weight: 400;"> 
+            }
+    }
+}
+</code></pre>
+</details>
+
 
 ## Field summary
 The following code shows the supported manifest fields for Overwolf apps, with links to the section that discusses each field.
@@ -56,16 +146,17 @@ The following code shows the supported manifest fields for Overwolf apps, with l
     "<a href="#type">type</a>": "WebApp",
     //Mandatory, The app metadata
     "<a href="#meta-object">meta</a>": {
-        "<a href="#meta-object">name</a>": "Name of your app",
-        "<a href="#meta-object">dock_button_title</a>": "Short name of your app",
-        "<a href="#meta-object">version</a>": "1.2.3.456",
-        "<a href="#meta-object">minimum-overwolf-version</a>": "128.0.0.1",
-        "<a href="#meta-object">author</a>": "Author name",
-        "<a href="#meta-object">icon</a>": "IconMouseOver.png",
-        "<a href="#meta-object">icon_gray</a>": "IconMouseNormal.png",
-        "<a href="#meta-object">launcher_icon</a>": "icon.ico",
-        "<a href="#meta-object">splash_image</a>": "splash_icon.png",
-        "<a href="#meta-object">description</a>": "A plain text description"
+        "<a href="#meta-name">name</a>": "Name of your app",
+        "<a href="#meta-author">author</a>": "Author name",
+        "<a href="#meta-version">version</a>": "1.2.3.456",
+        "<a href="#meta-minimum">minimum-overwolf-version</a>": "128.0.0.1",
+        "<a href="#meta-description">description</a>": "A plain text description",
+        "<a href="#meta-dock">dock_button_title</a>": "Short name of your app",    
+        "<a href="#meta-mouse-over">icon</a>": "iconMouseOver.png",
+        "<a href="#meta-window_icon">window_icon</a>": "windowIcon.png",      
+        "<a href="#meta-gray_icon">icon_gray</a>": "iconMouseNormal.png",
+        "<a href="#meta-launcher_icon">launcher_icon</a>": "icon.ico",
+        "<a href="#meta-splash">splash_image</a>": "splashIcon.png"
     },
     //An array of permissions that the app requires
     "<a href="#permissions-array">permissions</a>": ["Streaming","Hotkeys","GameInfo"],
@@ -82,6 +173,7 @@ The following code shows the supported manifest fields for Overwolf apps, with l
                 "<a href="#window-file">file</a>": "name.html",
                 "<a href="#window-show_in_taskbar">show_in_taskbar</a>": true,
                 "<a href="#window-transparent">transparent</a>": true,
+                "<a href="#window-override_on_update">override_on_update</a>": true,
                 "<a href="#windows-resizable">resizable</a>": false,
                 "<a href="#windows-show_minimize">show_minimize</a>": true,
                 "<a href="#windows-clickthrough">clickthrough</a>": false,
@@ -110,8 +202,11 @@ The following code shows the supported manifest fields for Overwolf apps, with l
                 "<a href="#native_window">native_window</a>": false,
                 "<a href="#is_background_page">is_background_page</a>": true,
                 "<a href="#focus_game_takeover">focus_game_takeover</a>": "ReleaseOnLostFocus",
+                "<a href="#focus_game_takeover_release_hotkey">focus_game_takeover_release_hotkey</a>": "...",
+                "<a href="#enable_top_isolation">enable_top_isolation</a>": true,
                 "<a href="#allow_local_file_access">allow_local_file_access</a>": true,
                 "<a href="#is_alt_f4_blocked">is_alt_f4_blocked</a>": false,
+                "<a href="#dev_tools_window_style">dev_tools_window_style</a>": false,
                 "<a href="#debug_url">debug_url</a>": "http://localhost:3000",
                 "<a href="#optimize_accelerate_rendering">optimize_accelerate_rendering</a>": false //Use directly shared texture rendering in game (only DX11)
             },
@@ -165,13 +260,13 @@ To help you make sure that your manifest file is correct and complete, validate 
 ## The top manifest objects
 There are many features that are enabled through this file. Some are mandatory (marked accordingly), and others are optional. Here is a description of the many features you can activate through the manifest.json
 
-| Name               | Type                      | Description                               |   
-| ----------------   |---------------------------| ------------------------------------------|
-| <a id="manifest_version">"manifest_version"</a>  | integer     | Mandatory. Targets the manifest version you are working on. Currently there is only one version, therefore this value is always “1”. |
-| <a id="type">"type"</a>                         | string                                   | Mandatory. Declares the type of application. Can only be “WebApp”.                               |
-| <a id="meta">"meta"</a>                          | [`meta` object](#meta-object)             | Mandatory. The app metadata.                                                                     |
-| <a id="permissions">"permissions"</a>            | [`permissions[]`](#permissions-array) | An array of permissions that the app requires.               |
-| <a id="data">"data"</a>                          | [`webapp settings` object](#webapp-settings-object)             | Mandatory. App data. Changes between different apps types. Currently can only be from type webapp settings.|
+| Name                                           | Type                                      | Description                               |   
+| -----------------------------------------------|-------------------------------------------| ------------------------------------------|
+| <a id="manifest_version">manifest_version</a>  | integer                                   | Mandatory. Targets the manifest version you are working on. Currently there is only one version, therefore this value is always “1”. |
+| <a id="type">type</a>                          | string                                    | Mandatory. Declares the type of application. Can only be “WebApp”.                               |
+| <a id="meta">meta</a>                          | [`meta` object](#meta-object)             | Mandatory. The app metadata.                                                                     |
+| <a id="permissions">permissions</a>            | [`permissions[]`](#permissions-array)     | An array of permissions that the app requires.               |
+| <a id="data">data</a>                          | [`webapp settings` object](#webapp-settings-object)  | Mandatory. App data. Changes between different apps types. Currently can only be from type webapp settings.|
 
 ## Permissions array
 To use most overwolf.* APIs, your Overwolf app must declare its intent in the permissions field of the manifest.json.
@@ -201,22 +296,21 @@ It's an array of permissions that the app requires:
 ## Meta object
 The App Metadata.
 
-| Name                | Type     |  Description                                                                                               | Since |
-|---------------------|----------| -----------------------------------------------------------------------------------------------------------| ----- | 
-| "name"              | string   |  Mandatory. Name of your app*                                                                              | 0.78  |
-| "author"            | string   |  Mandatory. Who developed the app*                                                                         | 0.78  |
-| "version"           | string   |  Mandatory. One to four dot-separated integers identifying the version of this app.</br>Needs to be in the format of X.X.X where the X’s are numbers.</br>Here are some examples of valid versions: </br> ["version": "1", "version": "1.0", "version": "2.11.3", "version": "4.1.2.345"]                                         | 0.78  |
-| "minimum-overwolf-version"     | string   |  Mandatory. Minimum version of the Overwolf Client with which the app is compatible. The format is similar to the "version" field.  | 0.78  |
-| "description"       | string   |  Mandatory. The description of your app on the Appstore tile. Limited to 180 characters.                   | 0.78  |
-| "dock_button_title" | string   |  Short name of your app. Provide a short title that will fit in the dock button area – 18 chars max        | 0.79  |
-| "icon"              | string   |  Mandatory. A relative path from the app folder to the icon’s png file. This is the mouse-over (multi-colored) version of the icon that will be displayed on the Overwolf dock. The icon dimensions should be 256×256 pixels. More details on app icons can be found [here](../start/submit-app-proposal).                         | 0.78  |
-| "window_icon"       | string   |  A relative path from the app folder to the icon’s png file. This is the window task bar icon \ window header. The icon’s dimensions must be 256×256 pixels  | 0.78  |
-| "icon_gray"         | string   |  A relative path from the app folder to the icon’s png file. This is the grayscale version of the icon that will be displayed on the Overwolf dock. The icon dimensions should be 256×256 pixels.                                                                                                                                | 0.78  |
-| "launcher_icon"     | string   |  A relative path from the app folder to the desktop shortcut icon’s ico file.                               | 0.78  |
-| "name"              | string   |  Mandatory. Name of your app*                                                                               | 0.109 |
-| “splash_image”      | string   |  A relative path from the app folder to the splash image icon’s png file. The image size should be 256x256px. If a this image is missing, Overwolf will use the “icon” image as a splash image                                                                                                                                    | 0.116 |
+| Name                                        | Type     |  Description                                                                                               | Since |
+|---------------------------------------------|----------| -----------------------------------------------------------------------------------------------------------| ----- | 
+| <a id="meta-name">name</a>                  | string   |  Mandatory. Name of your app. *See [note](#meta-note).*                                                    | 0.78  |
+| <a id="meta-author">author</a>              | string   |  Mandatory. Who developed the app. *See [note](#meta-note).*                                               | 0.78  |
+| <a id="meta-version">version</a>            | string   |  Mandatory. One to four dot-separated integers identifying the version of this app.</br>Needs to be in the format of X.X.X where the X’s are numbers.</br>Here are some examples of valid versions: </br> ["version": "1", "version": "1.0", "version": "2.11.3", "version": "4.1.2.345"]                                          | 0.78  |
+| <a id="meta-minimum">minimum-overwolf-version</a> | string   |  Mandatory. Minimum version of the Overwolf Client with which the app is compatible. The format is similar to the "version" field.  | 0.78  |
+| <a id="meta-description">description</a>    | string   |  Mandatory. The description of your app on the Appstore tile. Limited to 180 characters.                   | 0.78  |
+| <a id="meta-dock">meta-dock_button_title</a>| string   |  Short name of your app. Provide a short title that will fit in the dock button area – 18 chars max        | 0.79  |
+| <a id="meta-mouse-over">icon</a>            | string   |  Mandatory. A relative path from the app folder to the icon’s png file. This is the mouse-over (multi-colored) version of the icon that will be displayed on the Overwolf dock. The icon dimensions should be 256×256 pixels. More details on app icons can be found [here](../start/submit-app-proposal).                         | 0.78  |
+| <a id="meta-window_icon">window_icon</a>    | string   |  A relative path from the app folder to the icon’s png file. This is the window task bar icon \ window header. The icon’s dimensions must be 256×256 pixels  | 0.78  |
+| <a id="meta-gray_icon">icon_gray</a>        | string   |  A relative path from the app folder to the icon’s png file. This is the grayscale version of the icon that will be displayed on the Overwolf dock. The icon dimensions should be 256×256 pixels.                                                                                                                                   | 0.78  |
+| <a id="meta-launcher_icon">launcher_icon</a>| string   |  A relative path from the app folder to the desktop shortcut icon’s ico file.                               | 0.78  |
+| <a id="meta-splash">splash_image</a>        | string   |  A relative path from the app folder to the splash image icon’s png file. The image size should be 256x256px. If a this image is missing, Overwolf will use the “icon” image as a splash image                                                                                                                                     | 0.116 |
 
-> Note: Each app has a unique id (UID) that is generated out of the “name” and “author” strings. Once an app is published on the Appstore, its UID can’t be changed, so please choose your app and author names wisely before [submitting](../start/submit-app-proposal) your app.
+> <a id="meta-note">Note:</a>Each app has a unique id (UID) that is generated out of the “name” and “author” strings. Once an app is published on the Appstore, its UID can’t be changed, so please choose your app and author names wisely before [submitting](../start/submit-app-proposal) your app.
 
 ## webapp settings object
 A list of additional settings for the app.
@@ -230,8 +324,8 @@ A list of additional settings for the app.
 | <a id="externally_connectable">"externally_connectable"</a>    | [`ExternallyConnectable` object](#externallyconnectable-object)  | A definition of external URLs the web app should be able to access.| 0.78  |
 | <a id="start_window">"start_window"</a>   | string     |  Mandatory. The name of the window (from the “windows” list) to initially load when the app starts.        | 0.78  |
 | <a id="protocol_override_domains">"protocol_override_domains"</a>     | [`ProtocolOverrideDomains` object](#protocoloverridedomains-object)   |  Override the relative protocol with a preferred one.  | 0.78  |
-| <a id="force_browser">"force_browser"</a> | string |  Causes links in the app to be opened using the user’s default browser or Overwolf’s browser. Takes "user" or "overwolf" as a value. |0.91  |
-| <a id="enable_osr_acceleration">"enable_osr_acceleration"</a> | bool |  Enable OSR/GPU acceleration if supported by this machine. |0.126  |
+| <a id="force_browser">"force_browser"</a> | string |  Causes links in the app to be opened using the user’s default browser or Overwolf’s browser.</br>*Possible values: "user" or "overwolf".* |0.91  |
+| <a id="enable_osr_acceleration">"enable_osr_acceleration"</a> | bool |  Enable OSR/GPU acceleration if supported by this machine. </br>*Note: see also the [optimize_accelerate_rendering](#optimize_accelerate_rendering) flag* |0.126  |
 | <a id="game_events">"game_events"</a> | [`game_events[]`](#game-events-array) |  A list of game ids for which game events are required. |0.92  |
 | <a id="disable_log_limit">"disable_log_limit"</a> | bool |  Disable the log file 1000 lines limitation. </br>*Note: Do not enable it without Overwolf approval.*        | 0.12 |
 | <a id="extra-objects">"extra-objects"</a>     | [`extra-objects` object](#extra-objects-object)   |  Allows the access of custom plugin dlls.  | 0.81  |
@@ -262,47 +356,46 @@ A list of settings for the app windows.
 
 | Name                   | Type   |  Description                                                                                                                                   | Since |
 |------------------------|--------| ---------------------------------------------------------------------------------------------------------------------------------------------- |------ |
-| file                   | string |  Mandatory. Points to the file to be loaded inside the window.                                                                                 | 0.78  |
-| show_in_taskbar        | bool   |  Define if the window is displayed in the Windows taskbar and alt-tab window selection menu.                                                   | 0.78  |
-| transparent            | bool   |  Indicates whether the window will be transparent and borderless. If set to false a standard Overwolf window will be created.                  | 0.78  |
-| override_on_update     | bool   |  Indicates whether the window’s locally saved data should be overridden when the window’s size/location/opacity changes after a version update.| 0.119 |
-| resizable              | bool   |  Indicates whether the window can be resized.                                                                                                  | 0.78  |
-| show_minimize          | bool   |  Indicates whether to show the window minimize button. Only relevant when not in transparent mode.                                             | 0.79  |
-| clickthrough           | bool   |  Indicates whether the window will not receive clicks in-game, instead, the clicks will be passed on to the game.                              | 0.80  |
-| disable_rightclick     | bool   |  When set to true, disable right clicks entirely for this window.                                                                              | 0.92  |
-| forcecapture           | bool   |  Indicates whether this window should always be included in recordings, overriding any other setting.                                          | 0.78  |
-| show_only_on_stream    | bool   |  Indicates whether this window is visible only in streams (not visible to the streamer), overriding any other setting.                         | 0.78  |
-| ignore_keyboard_events | bool   |  ndicates whether the window will not receive keyboard events. Instead, the keyboard events will be passed on to the game.                     | 0.83  |
-| in_game_only           | bool   |  Indicates whether the window will be visible only in game and not on the desktop.                                                             | 0.78  |
-| desktop_only           | bool   |  Indicates whether the window will be visible only on the desktop and not while in game. This flag should be used (set to “true”) when “use_os_windowing” or “native_window” flags are set to true. </br>*Note: using “desktop_only” and “native_window” flags for desktop windows will dramatically improve your app’s performance.*                                 | 0.89  |
-| disable_restore_animation | bool |  Indicates whether the window will animate on minimize/restore while in game.                                                                 | 0.89  |
-| grab_keyboard_focus | bool |  Indicates whether the window will grab the keyboard focus automatically when it opens, or leave the keyboard focus untouched. </br>*Relevant only for in-game windows*                   | 0.82  |
-| grab_focus_on_desktop  | bool   |  Indicates whether the window will grab the focus automatically when it opens, or leave the focus untouched. </br>*Default value is true* </br>*Relevant only for desktop windows*| 0.99  |
-| size                   | size object |  Defines the size of the window in pixels.                                                                                                | 0.78  |
-| min_size               | size object |  Defines the minimum size of the window in pixels.                                                                                        | 0.78  |
-| max_size               | size object |  Defines the maximum size of the window in pixels.                                                                                        | 0.78  |
-| start_position         | point object|  The default start position of the window in pixels from the top left corner.                                                             | 0.78  |
-| topmost                | bool        |  Indicates whether the window will be on top of other Overwolf windows. Handle with care as topmost windows can negatively impact user experience. | 0.89  |
-| block_top_window_navigation | bool |  Refrain from non _blank <a> elements from “taking-over” the entire app’s window                                                            | 0.100  |
-| keep_window_location   | bool        |  Window location won’t be changed when game focus is changed                                                                              | 0.101  |
-| use_os_windowing | bool |  When set to true, allows your window to have a full-screen maximize when calling the overwolf.windows.maximize function, and a real taskbar minimize when calling overwolf.windows.minimize. </br>*Note: Should only be used with desktop_only windows*                                                                                              | 0.102  |
-| background_optimization | bool       | Enables JS engine background optimization. </br>*Default value is true*                                                                   | 0.103  |
-| mute                    | bool       | Mute sounds in window.                                                                                                                    | 0.102  |
-| mute_excluded_hosts     | string[]   | Excludes hosts list so a stream from these hosts origins will not get muted even if the window is on "mute": true                         | 0.103  |
-| popup_blocker           | bool       | Prevents new browser windows being opened automatically using script. </br>*Default value is false*                                       | 0.103  |
-| show_maximize           | bool       | Enables window maximize button. Relevant only for the standard Overwolf window ("transparent": false) </br>*Default value is false*       | 0.106  |
-| disable_blur            | bool       | Causes the app’s window to never “lose focus”, so the window.onblur event is never triggered.  </br>*Default value is false*              | 0.106  |
-| matches | string |  Array of web page URL patterns to match with an external server URL. Use star (*) in place of subdomain to allow access to all subdomains.| 0.78  |
-| matches | string |  Array of web page URL patterns to match with an external server URL. Use star (*) in place of subdomain to allow access to all subdomains.| 0.78  |
-| matches | string |  Array of web page URL patterns to match with an external server URL. Use star (*) in place of subdomain to allow access to all subdomains.| 0.78  |
-| matches | string |  Array of web page URL patterns to match with an external server URL. Use star (*) in place of subdomain to allow access to all subdomains.| 0.78  |
-| matches | string |  Array of web page URL patterns to match with an external server URL. Use star (*) in place of subdomain to allow access to all subdomains.| 0.78  |
-| matches | string |  Array of web page URL patterns to match with an external server URL. Use star (*) in place of subdomain to allow access to all subdomains.| 0.78  |
-| matches | string |  Array of web page URL patterns to match with an external server URL. Use star (*) in place of subdomain to allow access to all subdomains.| 0.78  |
-| matches | string |  Array of web page URL patterns to match with an external server URL. Use star (*) in place of subdomain to allow access to all subdomains.| 0.78  |
-| matches | string |  Array of web page URL patterns to match with an external server URL. Use star (*) in place of subdomain to allow access to all subdomains.| 0.78  |
-| matches | string |  Array of web page URL patterns to match with an external server URL. Use star (*) in place of subdomain to allow access to all subdomains.| 0.78  |
-| matches | string |  Array of web page URL patterns to match with an external server URL. Use star (*) in place of subdomain to allow access to all subdomains.| 0.78  |
+| <a id="window-file">file</a> | string |  Mandatory. Points to the file to be loaded inside the window.                                                                                 | 0.78  |
+| <a id="window-show_in_taskbar">show_in_taskbar</a> | bool   |  Define if the window is displayed in the Windows taskbar and alt-tab window selection menu.                                                   | 0.78  |
+| <a id="window-transparent">transparent</a> | bool   |  Indicates whether the window will be transparent and borderless. If set to false a standard Overwolf window will be created.                  | 0.78  |
+| <a id="window-override_on_update">override_on_update</a>| bool |Indicates whether the window’s locally saved data should be overridden when the window’s size/location/opacity changes after a version update.|0.119 |
+| <a id="windows-resizable">resizable</a> | bool   |  Indicates whether the window can be resized.                                                                                                  | 0.78  |
+| <a id="windows-show_minimize">show_minimize</a> | bool   |  Indicates whether to show the window minimize button. Only relevant when not in transparent mode.                                             | 0.79  |
+| <a id="windows-clickthrough">clickthrough</a>  | bool   |  Indicates whether the window will not receive clicks in-game, instead, the clicks will be passed on to the game.                              | 0.80  |
+| <a id="windows-disable_rightclick">disable_rightclick</a> | bool   |  When set to true, disable right clicks entirely for this window.                                                    | 0.92  |
+| <a id="windows-forcecapture">forcecapture</a> | bool   |  Indicates whether this window should always be included in recordings, overriding any other setting.                                          | 0.78  |
+| <a id="windows-show_only_on_stream">show_only_on_stream</a> | bool   |  Indicates whether this window is visible only in streams (not visible to the streamer), overriding any other setting.    | 0.78  |
+| <a id="windows-ignore_keyboard_events">ignore_keyboard_events</a> | bool   |  ndicates whether the window will not receive keyboard events. Instead, the keyboard events will be passed on to the game.  | 0.83  |
+| <a id="windows-in_game_only">in_game_only</a>  | bool   |  Indicates whether the window will be visible only in game and not on the desktop.                                                             | 0.78  |
+| <a id="windows-desktop_only">desktop_only</a> | bool   |  Indicates whether the window will be visible only on the desktop and not while in game. This flag should be used (set to “true”) when “use_os_windowing” or “native_window” flags are set to true. </br>*Note: using “desktop_only” and “native_window” flags for desktop windows will dramatically improve your app’s performance.*                                 | 0.89  |
+| <a id="windows-disable_restore_animation">disable_restore_animation</a> | bool |  Indicates whether the window will animate on minimize/restore while in game.                             | 0.89  |
+| <a id="windows-grab_keyboard_focus">grab_keyboard_focus</a> | bool |  Indicates whether the window will grab the keyboard focus automatically when it opens, or leave the keyboard focus untouched. </br>*Relevant only for in-game windows*                   | 0.82  |
+| <a id="windows-grab_focus_on_desktop">grab_focus_on_desktop</a>  | bool   |  Indicates whether the window will grab the focus automatically when it opens, or leave the focus untouched. </br>*Default value is true* </br>*Relevant only for desktop windows*| 0.99  |
+| <a id="windows-size">size</a>    | [size](#size-object) object |  Defines the size of the window in pixels.                                                                                | 0.78  |
+| <a id="windows-min_size">min_size</a>      | [size](#size-object) object |  Defines the minimum size of the window in pixels.                                                                        | 0.78  |
+| <a id="windows-max_size">max_size</a>      | [size](#size-object) object |  Defines the maximum size of the window in pixels.                                                                        | 0.78  |
+| <a id="windows-start_position">start_position</a>   | [point](#point-object) object|  The default start position of the window in pixels from the top left corner.                       | 0.78  |
+| <a id="windows-topmost">topmost</a>      | bool    |  Indicates whether the window will be on top of other Overwolf windows. Handle with care as topmost windows can negatively impact user experience.   | 0.89  |
+| <a id="windows-block_top_window_navigation">block_top_window_navigation</a> | bool |  Refrain from non _blank <a> elements from “taking-over” the entire app’s window                         | 0.100  |
+| <a id="windows-keep_window_location">keep_window_location</a>   | bool        |  Window location won’t be changed when game focus is changed                                           | 0.101  |
+| <a id="windows-use_os_windowing">use_os_windowing</a> | bool |  When set to true, allows your window to have a full-screen maximize when calling the overwolf.windows.maximize function, and a real taskbar minimize when calling overwolf.windows.minimize. </br>*Note: Should only be used with desktop_only windows*                                                                                              | 0.102  |
+| <a id="background_optimization">background_optimization</a> | bool       | Enables JS engine background optimization. </br>*Default value is true*                                         | 0.103  |
+| <a id="windows-mute">mute</a>                    | bool       | Mute sounds in window.                                                                                                                    | 0.102  |
+| <a id="mute_excluded_hosts">mute_excluded_hosts</a>     | string[]   | Excludes hosts list so a stream from these hosts origins will not get muted even if the window is on "mute": true            | 0.103  |
+| <a id="popup_blocker">popup_blocker</a>           | bool       | Prevents new browser windows being opened automatically using script. </br>*Default value is false*                              | 0.103  |
+| <a id="show_maximize">show_maximize</a>           | bool       | Enables window maximize button. Relevant only for the standard Overwolf window ("transparent": false) </br>*Default value is false*       | 0.106  |
+| <a id="disable_blur">disable_blur</a>         | bool       | Causes the app’s window to never “lose focus”, so the window.onblur event is never triggered.  </br>*Default value is false*              | 0.106  |
+| <a id="native_window">native_window</a>  | bool  | Creates a native CEF desktop only window (which improves performance)</br>*Note: Should only be used with desktop_only windows*. </br>*Default value is false* | 0.107  |
+| <a id="is_background_page">is_background_page</a> | bool       | This flag MUST be used with background/hidden controller windows. </br>*Note: With this flag set to 'true', there's no need to set window related properties such as size, focus,  transparency, etc.*                                                                                                                                                        | 0.107  |
+| <a id="focus_game_takeover">focus_game_takeover</a>  | [`string`](#focus-game-takeover-options) |  Allows you to control the behavior of an app window while in a “mouse-less” game state. </BR>*Possible values: "ReleaseOnHidden" or "ReleaseOnLostFocus".*              | 0.107  |
+| <a id="focus_game_takeover_release_hotkey">focus_game_takeover_release_hotkey</a> | string | Allow Overwolf to display your app’s hotkey combination on the screen when the user switches to “exclusive mode”. </br>*The string value should be the hotkey name from the hotkeys section.*</br>*Relevant only if you set focus_game_takeover=ReleaseOnHidden*  | 0.110  |
+| <a id="enable_top_isolation">enable_top_isolation</a>    | bool       | Enable iframe isolation: runs it in a different process, so if some iframe is misbehaving (e.g. memory leak, etc.) it won’t crash your app and will only crash the iframe process. </br>useful with Overwolf ads that run in an iframe.</br>*Note: Please contact us before adding it to your app. Default value is true*                       | 0.110  |
+| <a id="allow_local_file_access">allow_local_file_access</a> | bool  |  Allows access to local files that are not located in your app’s (extension) folder.</br>*Default value is false*       | 0.109 |
+| <a id="is_alt_f4_blocked">is_alt_f4_blocked</a>   | bool  |  Blocks the user from closing the window by using Alt+F4.</br>You can register to the onAltF4Blocked event to be noticed when a “block” was triggered.| 0.113  |
+| <a id="dev_tools_window_style">dev_tools_window_style</a>  | bool     |  Opens developer tools in dedicated window.                                                | 0.117  |
+| <a id="debug_url">debug_url</a>   | string     |  For local-server debugging (like react apps). You can use this field to set the localhost:port URL.</br>*Notes: You must have a local web server installed on your machine. </br>Valid only when loading unpacked extensions.</br>Valid only with "localhost" / "127.0.0.1"*                                                                                     | 0.127  |
+| <a id="optimize_accelerate_rendering">optimize_accelerate_rendering</a> | bool |  Valid only for transparent windows. Valid only if [enable_osr_acceleration](#enable_osr_acceleration) is on.| 0.127  |
 
 ## ExternallyConnectable object
 A definition of external URLs the web app should be able to access. Read more [here](http://en.wikipedia.org/wiki/Cross-origin_resource_sharing).
@@ -510,13 +603,30 @@ Code Example:
     }
 ```
 
-## eOpenLinksInBrowser
+## size Object
+Defines a size (width and height) in pixels.
 
-## Size
+| Name    | Type | Description                                         | Since |
+|---------| -----|-----------------------------------------------------|------ |
+| width   | int  | Defines the width in pixels. *Optional parameter*   | 0.78  |
+| height  | int  | Defines the height in pixels.  *Optional parameter* | 0.78  |
 
-## Point
-
-## eFocusGameTakeOverJsonType
 
 
+## point Object
+Defines a top-left position in pixels.
+
+| Name  | Type | Description                                                                      | Since |
+|-------| -----|----------------------------------------------------------------------------------|------ |
+| top   | int  | Defines the position in the Y axis from the top in pixels. *Optional parameter*  | 0.78  |
+| left  | int  | Defines the position in the Y axis from the top in pixels.  *Optional parameter* | 0.78  |
+
+## focus_game_takeover options
+In games such as Overwatch and World of Tanks, which have a state without a mouse cursor, the user can’t control the Overwolf app window.
+This flag automatically sets the app window into “exclusive mode” – input don’t pass to the game, and a cursor is available.
+
+You can defines how the “exclusive mode” should be turned off:
+
+* **ReleaseOnHidden** – When the window is hidden, automatically turn off exclusive mode. (if you are using this option, you must set also the [focus_game_takeover_release_hotkey]() flag)
+* **ReleaseOnLostFocus** – If the user clicks outside the window, exclusive mode is turned off.
 
