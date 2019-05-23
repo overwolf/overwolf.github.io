@@ -46,7 +46,8 @@ const siteConfig = {
     {doc: 'download/download-overview', label: 'Download'},
 	  {doc: 'api/changelog', label: 'Changelog'},
     //{blog: true, label: 'Blog'},
-	  {href: 'https://medium.com/overwolf-developers', label: 'Blog' },
+    {href: 'https://medium.com/overwolf-developers', label: 'Blog' },
+    {href: 'https://discuss.developers.overwolf.com/', label: 'Q&A' },
 	  {doc: 'support/contact-us', label: 'Support'},  //{page: 'help', label: 'Support'}
 	  {search: true }
   ],
@@ -105,6 +106,12 @@ const siteConfig = {
 
   // Show documentation's last update time.
    enableUpdateTime: true,
+   enableUpdateBy: true,
+   scrollToTop: true,
+   scrollToTopOptions: {
+    zIndex: 100,
+    backgroundColor: '#20232A',
+  },
    docsSideNavCollapsible: true
 
   // You may provide arbitrary config keys to be used as needed by your

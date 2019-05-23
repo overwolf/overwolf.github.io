@@ -62,7 +62,10 @@
 		"FAQ":
 			["support/FAQ", "support/FAQ-general"],
 		"Recipes":
-			["support/recipes"]
+			["support/recipes"],
+		"Training and Guides":
+			["support/training"]
+			
 			
 			
     },

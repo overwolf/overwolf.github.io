@@ -57,7 +57,6 @@ This [JSON](http://www.json.org/) formatted file is responsible for describing t
         "<a href="#meta-object">description</a>": "A plain text description",
         "<a href="#meta-object">dock_button_title</a>": "Short name of your app",    
         "<a href="#meta-object">icon</a>": "iconMouseOver.png",
-        "<a href="#meta-object">window_icon</a>": "windowIcon.png",      
         "<a href="#meta-object">icon_gray</a>": "iconMouseNormal.png",
         "<a href="#meta-object">launcher_icon</a>": "icon.ico",
         "<a href="#meta-object">splash_image</a>": "splashIcon.png"
@@ -153,7 +152,6 @@ The following code shows the supported manifest fields for Overwolf apps, with l
         "<a href="#meta-description">description</a>": "A plain text description",
         "<a href="#meta-dock">dock_button_title</a>": "Short name of your app",    
         "<a href="#meta-mouse-over">icon</a>": "iconMouseOver.png",
-        "<a href="#meta-window_icon">window_icon</a>": "windowIcon.png",      
         "<a href="#meta-gray_icon">icon_gray</a>": "iconMouseNormal.png",
         "<a href="#meta-launcher_icon">launcher_icon</a>": "icon.ico",
         "<a href="#meta-splash">splash_image</a>": "splashIcon.png"
@@ -304,11 +302,10 @@ The App Metadata.
 | <a id="meta-minimum">minimum-overwolf-version</a> | string   |  Mandatory. Minimum version of the Overwolf Client with which the app is compatible. The format is similar to the "version" field.  | 0.78  |
 | <a id="meta-description">description</a>    | string   |  Mandatory. The description of your app on the Appstore tile. Limited to 180 characters.                   | 0.78  |
 | <a id="meta-dock">meta-dock_button_title</a>| string   |  Short name of your app. Provide a short title that will fit in the dock button area – 18 chars max        | 0.79  |
-| <a id="meta-mouse-over">icon</a>            | string   |  Mandatory. A relative path from the app folder to the icon’s png file. This is the mouse-over (multi-colored) version of the icon that will be displayed on the Overwolf dock. The icon dimensions should be 256×256 pixels. More details on app icons can be found [here](../start/submit-app-proposal).                         | 0.78  |
-| <a id="meta-window_icon">window_icon</a>    | string   |  A relative path from the app folder to the icon’s png file. This is the window task bar icon \ window header. The icon’s dimensions must be 256×256 pixels  | 0.78  |
-| <a id="meta-gray_icon">icon_gray</a>        | string   |  A relative path from the app folder to the icon’s png file. This is the grayscale version of the icon that will be displayed on the Overwolf dock. The icon dimensions should be 256×256 pixels.                                                                                                                                   | 0.78  |
-| <a id="meta-launcher_icon">launcher_icon</a>| string   |  A relative path from the app folder to the desktop shortcut icon’s ico file.                               | 0.78  |
-| <a id="meta-splash">splash_image</a>        | string   |  A relative path from the app folder to the splash image icon’s png file. The image size should be 256x256px. If a this image is missing, Overwolf will use the “icon” image as a splash image                                                                                                                                     | 0.116 |
+| <a id="meta-mouse-over">icon</a>            | string   |  Mandatory. A relative path from the app folder to the icon’s png file. This is the mouse-over (multi-colored) version of the icon that will be displayed on the Overwolf dock. The icon dimensions should be 256×256 pixels, 72 PPI. Overwolf will resize it to 37×37. Please make sure the png is smaller than 30KB.  More details on app icons can be found [here](../start/submit-app-proposal).                         | 0.78  |
+| <a id="meta-gray_icon">icon_gray</a>        | string   |  A relative path from the app folder to the icon’s png file. This grayscale version of the icon is for the default state that will be displayed on the Overwolf dock. The icon dimensions should be 256×256 pixels, 72 PPI. Overwolf will resize it to 37×37. Please make sure the png is smaller than 30KB                  | 0.78  |
+| <a id="meta-launcher_icon">launcher_icon</a>| string   |  A relative path from the app folder to the desktop shortcut icon’s ico file. This is a colored icon for the app’s desktop shortcut. More info [here](http://developers.overwolf.com/your-app/submission-process/desktop-shortcuts/).                             | 0.78  |
+| <a id="meta-splash">splash_image</a>        | string   |  A relative path from the app folder to the splash image icon’s png file. The image size should be 256x256px. If a this image is missing, Overwolf will use the “icon” image as a splash image                                                                                                                                    | 0.116 |
 
 > <a id="meta-note">Note:</a>Each app has a unique id (UID) that is generated out of the “name” and “author” strings. Once an app is published on the Appstore, its UID can’t be changed, so please choose your app and author names wisely before [submitting](../start/submit-app-proposal) your app.
 
@@ -356,9 +353,9 @@ A list of settings for the app windows.
 
 | Name                   | Type   |  Description                                                                                                                                   | Since |
 |------------------------|--------| ---------------------------------------------------------------------------------------------------------------------------------------------- |------ |
-| <a id="window-file">file</a> | string |  Mandatory. Points to the file to be loaded inside the window.                                                                                 | 0.78  |
+| <a id="window-file">file</a> | string |  Mandatory. Points to the HTML file to be loaded inside the window. This can only be a local file. If you wish to host your app in a remote web-site, you’ll have to have a local page that redirects to the remote website. In such cases, you need to make sure that the [block_top_window_navigation](#windows-block_top_window_navigation) property is set to false.                                                                                | 0.78  |
 | <a id="window-show_in_taskbar">show_in_taskbar</a> | bool   |  Define if the window is displayed in the Windows taskbar and alt-tab window selection menu.                                                   | 0.78  |
-| <a id="window-transparent">transparent</a> | bool   |  Indicates whether the window will be transparent and borderless. If set to false a standard Overwolf window will be created.                  | 0.78  |
+| <a id="window-transparent">transparent</a> | bool   |  Indicates whether the window will be transparent and borderless. Any part of your window with transparent background ("background: transparent;") will be a see-through area that blends with the game or desktop. </br>If set to false a standard Overwolf window will be created.                  | 0.78  |
 | <a id="window-override_on_update">override_on_update</a>| bool |Indicates whether the window’s locally saved data should be overridden when the window’s size/location/opacity changes after a version update.|0.119 |
 | <a id="windows-resizable">resizable</a> | bool   |  Indicates whether the window can be resized.                                                                                                  | 0.78  |
 | <a id="windows-show_minimize">show_minimize</a> | bool   |  Indicates whether to show the window minimize button. Only relevant when not in transparent mode.                                             | 0.79  |
@@ -370,9 +367,9 @@ A list of settings for the app windows.
 | <a id="windows-in_game_only">in_game_only</a>  | bool   |  Indicates whether the window will be visible only in game and not on the desktop.                                                             | 0.78  |
 | <a id="windows-desktop_only">desktop_only</a> | bool   |  Indicates whether the window will be visible only on the desktop and not while in game. This flag should be used (set to “true”) when “use_os_windowing” or “native_window” flags are set to true. </br>*Note: using “desktop_only” and “native_window” flags for desktop windows will dramatically improve your app’s performance.*                                 | 0.89  |
 | <a id="windows-disable_restore_animation">disable_restore_animation</a> | bool |  Indicates whether the window will animate on minimize/restore while in game.                             | 0.89  |
-| <a id="windows-grab_keyboard_focus">grab_keyboard_focus</a> | bool |  Indicates whether the window will grab the keyboard focus automatically when it opens, or leave the keyboard focus untouched. </br>*Relevant only for in-game windows*                   | 0.82  |
+| <a id="windows-grab_keyboard_focus">grab_keyboard_focus</a> | bool |  Indicates whether the window will grab/steal the keyboard focus automatically from the game when it opens, or leave the keyboard focus untouched. </br>*Default value is false*  </br>*Relevant only for in-game windows*                   | 0.82  |
 | <a id="windows-grab_focus_on_desktop">grab_focus_on_desktop</a>  | bool   |  Indicates whether the window will grab the focus automatically when it opens, or leave the focus untouched. </br>*Default value is true* </br>*Relevant only for desktop windows*| 0.99  |
-| <a id="windows-size">size</a>    | [size](#size-object) object |  Defines the size of the window in pixels.                                                                                | 0.78  |
+| <a id="windows-size">size</a>    | [size](#size-object) object |  Defines the size of the window in pixels when it is first opened. If your window is not resizable, this will be the constant size of your window. However, if your app is resizable – the app size is saved by Overwolf when closed so that the next time it is opened, it will preserve this size.    | 0.78  |
 | <a id="windows-min_size">min_size</a>      | [size](#size-object) object |  Defines the minimum size of the window in pixels.                                                                        | 0.78  |
 | <a id="windows-max_size">max_size</a>      | [size](#size-object) object |  Defines the maximum size of the window in pixels.                                                                        | 0.78  |
 | <a id="windows-start_position">start_position</a>   | [point](#point-object) object|  The default start position of the window in pixels from the top left corner.                       | 0.78  |
