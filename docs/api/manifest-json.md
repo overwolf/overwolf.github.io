@@ -306,8 +306,9 @@ The App Metadata.
 | <a id="meta-gray_icon">icon_gray</a>        | string   |  A relative path from the app folder to the icon’s png file. This grayscale version of the icon is for the default state that will be displayed on the Overwolf dock. The icon dimensions should be 256×256 pixels, 72 PPI. Overwolf will resize it to 37×37. Please make sure the png is smaller than 30KB                  | 0.78  |
 | <a id="meta-launcher_icon">launcher_icon</a>| string   |  A relative path from the app folder to the desktop shortcut icon’s ico file. This is a colored icon for the app’s desktop shortcut. More info [here](http://developers.overwolf.com/your-app/submission-process/desktop-shortcuts/).                             | 0.78  |
 | <a id="meta-splash">splash_image</a>        | string   |  A relative path from the app folder to the splash image icon’s png file. The image size should be 256x256px. If a this image is missing, Overwolf will use the “icon” image as a splash image                                                                                                                                    | 0.116 |
-
-> <a id="meta-note">Note:</a>Each app has a unique id (UID) that is generated out of the “name” and “author” strings. Once an app is published on the Appstore, its UID can’t be changed, so please choose your app and author names wisely before [submitting](../start/submit-app-proposal) your app.
+:::important Important
+<a id="meta-note"></a>Each app has a unique id (UID) that is generated out of the “name” and “author” strings. Once an app is published on the Appstore, its UID can’t be changed, so please choose your app and author names wisely before [submitting](../start/submit-app-proposal) your app.
+:::
 
 ## webapp settings object
 A list of additional settings for the app.
@@ -486,7 +487,9 @@ overwolf.current_extension.getExtraObject(“simple-io-plugin”, function…)
 HotKeys are shortcut keys that trigger an app action.
 The basic usage is to open/show and minimize/hide your app, but you can trigger more actions like save, refresh or any other custom actions.
 
-> *Note: Hotkeys will only work in-game, and not on desktop*.
+:::note Note
+Hotkeys will only work in-game, and not on desktop
+:::
 
 There are two types of hotkeys:
 * **toggle** – Toggles application visibility (displayed/hidden).   
@@ -580,7 +583,9 @@ Code Example:
 ## developer settings object
 Additional setting for helping apps developers. Mainly to set auto reloading of an app when local files changes.
 
-> Note that these settings relevant only if your app is in dev mode (channel="developers"), and you are loading it as unpacked folder. 
+:::note Note
+these settings relevant only if your app is in dev mode (channel="developers"), and you are loading it as unpacked folder.
+:::
 
 | Name                      | Type   | Description                                                                                                               | Since |
 |---------------------------| ------ |---------------------------------------------------------------------------------------------------------------------------|------ |

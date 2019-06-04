@@ -1,20 +1,3 @@
-/* your custom css */
-
-@media only screen and (min-device-width: 360px) and (max-device-width: 736px) {
-}
-
-@media only screen and (min-width: 1024px) {
-}
-
-@media only screen and (max-width: 1023px) {
-}
-
-@media only screen and (min-width: 1400px) {
-}
-
-@media only screen and (min-width: 1500px) {
-}
-
 /**
  Docusaurus-like styling for `remarkable-admonitions` blocks
  */
@@ -50,58 +33,58 @@
 /** Customization */
 .admonition-warning {
   background-color: rgba(230, 126, 34, 0.1);
-  border-left: 8px solid #E07000;
+  border-left: 8px solid #e67e22;
 }
 
 .admonition-warning h5 {
-  color: #E07000;
+  color: #e67e22;
 }
 
 .admonition-warning .admonition-icon svg {
-  stroke: #E07000;
-  fill: #E07000;
+  stroke: #e67e22;
+  fill: #e67e22;
 }
 
 .admonition-tip {
   background-color: rgba(46, 204, 113, 0.1);
-  border-left: 8px solid #00CC45;
+  border-left: 8px solid #2ecc71;
 }
 
 .admonition-tip h5 {
-  color: #00CC45;
+  color: #2ecc71;
 }
 
 .admonition-tip .admonition-icon svg {
-  stroke: #00CC45;
-  fill: #00CC45;
+  stroke: #2ecc71;
+  fill: #2ecc71;
 }
 
 .admonition-caution {
   background-color: rgba(231, 76, 60, 0.1);
-  border-left: 8px solid #FF3434;
+  border-left: 8px solid #e74c3c;
 }
 
 .admonition-caution h5 {
-  color: #FF3434;
+  color: #e74c3c;
 }
 
 .admonition-caution .admonition-icon svg {
-  stroke: #FF3434;
-  fill: #FF3434;
+  stroke: #e74c3c;
+  fill: #e74c3c;
 }
 
 .admonition-important {
   background-color: rgba(52, 152, 219, 0.1);
-  border-left: 8px solid #0085E5;
+  border-left: 8px solid #3498db;
 }
 
 .admonition-important h5 {
-  color: #0085E5;
+  color: #3498db;
 }
 
 .admonition-important .admonition-icon svg {
-  stroke: #0085E5;
-  fill: #0085E5;
+  stroke: #3498db;
+  fill: #3498db;
 }
 
 .admonition-note {

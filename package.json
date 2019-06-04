@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/overwolf/developers-site/issues"
   },
-  "homepage": "https://github.com/overwolf/developers-site#readme"
+  "homepage": "https://github.com/overwolf/developers-site#readme",
+  "dependencies": {
+    "remarkable-admonitions": "^0.2.1"
+  }
 }
