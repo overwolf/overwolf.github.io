@@ -30,7 +30,7 @@
     },
     "api": {
 			"API Reference": 
-			["api/overwolf-api-overview", "api/changelog", "api/manifest-json", "api/overwolf-benchmarking", "api/overwolf-extensions", "api/overwolf-log", "api/overwolf-profile", "api/overwolf-streaming", "api/overwolf-profile", "api/overwolf-tobii", "api/overwolf-utils"],
+			["api/overwolf-api-overview", "api/changelog", "api/manifest-json", "api/overwolf-benchmarking", "api/overwolf-extensions", "api/overwolf-log", "api/overwolf-profile", "api/overwolf-streaming", "api/overwolf-profile", "api/overwolf-tobii", "api/overwolf-utils", "api/overwolf-os"],
 			"overwolf.io":
 			["api/overwolf-io", "api/overwolf-io-paths"],
 			"overwolf.extensions":
@@ -62,7 +62,7 @@
         "Support": 
 			["support/contact-us", "support/create-ticket", "support/request-feature"],
 		"FAQ":
-			["support/FAQ", "support/FAQ-general"],
+			["support/FAQ"],
 		"Recipes":
 			["support/recipes"],
 		"Training and Guides":

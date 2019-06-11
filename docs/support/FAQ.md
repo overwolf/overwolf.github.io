@@ -1,11 +1,18 @@
 ---
 id: FAQ
-title: Overwolf FAQ
-sidebar_label: FAQ Index
+title: FAQ Frequently asked questions
+sidebar_label: General
 ---
 
 ## Table of Contents
 
-* General
-  * [When should I learn Overwolf?](FAQ-general#1)
-  * [Why should I learn Overwolf?](FAQ-general#2)
+* [When should I learn Overwolf?](#1)
+* [Why should I learn Overwolf?](#2)
+
+<a name='1'>
+## When should I learn Overwolf?
+
+<a name='2'>
+## Why should I learn Overwolf?
+
+

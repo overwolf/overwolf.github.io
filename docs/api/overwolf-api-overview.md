@@ -17,6 +17,7 @@ This class provides access to global components that allow interaction with the 
 * [`overwolf.profile`](#profile)
 * [`overwolf.tobii`](#tobii)
 * [`overwolf.utils`](#utils)
+* [`overwolf.os`](#os)
 * [`overwolf.games`](#games)
 * [`overwolf.games.events`](#events)
 * [`overwolf.logitech`](#logitech)
@@ -83,6 +84,11 @@ Common use cases:
 * Getting the user's system information (OS, monitors, CPU, GPU, input devices and more)
 * Opening a URL in a browser
 * Send keystrokes to the running game
+
+<a name='os'>
+## [overwolf.os](api/overwolf-os.md)
+
+> Use the overwolf.os APIfor Operating System related functionalities.
 
 <a name='games'>
 ## [overwolf.games](api/overwolf-games.md)
