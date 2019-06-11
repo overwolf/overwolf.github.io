@@ -50,7 +50,7 @@
 			"overwolf.social":
 			["api/overwolf-social", "api/overwolf-social-youtube", "api/overwolf-social-discord", "api/overwolf-social-gfycat", "api/overwolf-social-twitter"],
 			"overwolf.web":
-			["api/overwolf-web", "api/overwolf-web-webserver"],
+			["api/overwolf-web", "api/overwolf-web-webserver", "api/overwolf-web-websocket"],
 			"overwolf.windows":
 			["api/overwolf-windows", "api/overwolf-windows-mediaPlayerElement"]
     },

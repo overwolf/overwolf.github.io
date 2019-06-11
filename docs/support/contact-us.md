@@ -17,5 +17,9 @@ Join our Discord community where you can interact with Overwolf staff and other 
 Click [here](https://discord.gg/cjjrZDp) to join our Discord server.
 
 ## Follow us on twitter
+https://twitter.com/OverwolfDevs
+
+## Follow us on facebook
+https://www.facebook.com/OverwolfDevs
 
 ## Subscribe to our Newsletter

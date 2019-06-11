@@ -4,7 +4,7 @@ title: overwolf.io API
 sidebar_label: overwolf.io
 ---
 
-Use the `overwolf.io` API to check if a certain file exists or to write content to a file.  
+Use the `overwolf.io` API to check if  a certain file exists or to write content to a file.  
 For more I/O functionalities, please use our simple I/O plugin.  
 
 ## Methods Reference
