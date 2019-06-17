@@ -15,7 +15,7 @@ For more I/O functionalities, please use our simple I/O plugin.
 * [`copyFile()`](#copyFile)
 
 <a name='fileExists'>
-## `fileExists(filePath, callback)`
+## fileExists(filePath, callback)
 
 > Checks for the existance of the file in the given path.
 
@@ -38,7 +38,7 @@ If the file doesn’t exist, an error status will be returned:
 {"status":"error","reason":"File doesn't exists"}
 ```
 
-### Usage Example
+<h3> Usage Example </h3>
 <!--DOCUSAURUS_CODE_TABS-->
 <!--JavaScript-->
 
@@ -49,7 +49,7 @@ console.log('Hello, world!');
 <!--END_DOCUSAURUS_CODE_TABS-->
 
 <a name='writeFileContents'>
-## `writeFileContents(filePath, content, encoding, triggerUacIfRequired, callback)`
+## writeFileContents(filePath, content, encoding, triggerUacIfRequired, callback)
 
 > Checks for the existance of the file in the given path.
 
@@ -61,7 +61,7 @@ encoding | [eEncoding](#eEncoding) | The encoding to use |
 triggerUacIfRequired | bool | If additional permissions are required, allows the triggering of the Windows UAC dialog |
 callback | function | Returns with the result |   
    
-### Response  
+<h3> Response </h3>
 
 <details>
 
@@ -78,7 +78,7 @@ If the file doesn’t exist, an error status will be returned:
 ```
 </details>
 
-### Usage Example  
+<h3>  Usage Example  </h3>
 <!--DOCUSAURUS_CODE_TABS-->
 <!--JavaScript-->
 
@@ -99,7 +99,7 @@ filePath | string | The path to check for |
 encoding | [eEncoding](#eEncoding) | The encoding to use |
 callback | function | Returns with the result |   
    
-### Response  
+<h3>Response</h3>
 
 <details>
 
@@ -116,7 +116,7 @@ If the file doesn’t exist, an error status will be returned:
 ```
 </details>
 
-### Usage Example  
+<h3>Usage Example  </h3>
 <!--DOCUSAURUS_CODE_TABS-->
 <!--JavaScript-->
 
@@ -127,7 +127,7 @@ console.log('Hello, world!');
 <!--END_DOCUSAURUS_CODE_TABS-->
 
 <a name='copyFile'>
-## `copyFile(src, dst, overrideFile, reserved, callback)`
+## copyFile(src, dst, overrideFile, reserved, callback)
 
 > Copy a file from the local extension directory to a destination in the local machine.
 > Permissions required: FileSystem
@@ -140,7 +140,7 @@ overrideFile | bool | "true" if you want an existing file to be overriden, "fals
 reserved | bool | For future use |
 callback | function | Returns with the result |   
    
-### Response  
+<h3>Response  </h3>
 
 <details>
 
@@ -157,7 +157,7 @@ If the file doesn’t exist, an error status will be returned:
 ```
 </details>
 
-### Usage Example  
+<h3> Usage Example  </h3>
 <!--DOCUSAURUS_CODE_TABS-->
 <!--JavaScript-->
 
