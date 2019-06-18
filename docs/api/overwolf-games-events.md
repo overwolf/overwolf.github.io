@@ -26,23 +26,20 @@ Each supported game has its own set of available features.
 A feature is a collection of related game events (e.g events related to a “match” feature – ‘started’/’ended’/’outcome’, etc.). You can view the features of each supported game in the relevant game page on the side menu, for example, [League of Legends page](overwolf-games-events-lol).
 
 ## Features types
-A feature is further broken down into two entity types:
+:::important
+Each feature is broken down into two entity types: `info updates` and `events`.
 1. `Info Updates` – game information changes that define the game’s current state (e.g. the match is currently taking place)
 2. `Events` – volatile events that happen in the game (e.g. player just got killed)
+:::
 
 So for example, the feature "death" in the game LOL, has a: 
 * **"death" event**, which fired when the player's champion died.</br>
 You can  receive this event by registering to the `overwolf.games.events.onNewEvents` event listner.
-*  **"deaths" info update**, which holds a counter for the player's deaths in the current session. </br>
+*  **"deaths" info update**, which holds a counter for the total player's deaths in the current session. </br>
    You can  receive this event by registering to the `overwolf.games.events.onInfoUpdates2` event listner.</br>
    It is also possible to get the current available information using [`overwolf.games.events.getInfo()`](#getInfo)
 
 Note that a feature can contain a few info updates and events, and not just one info update and one event like the above example.
-
-:::important
-Each feature is a collection of related `info updates` and `events`.
-When an app wants to receive events from the Game Events Provider it needs to set the requested features from the Game Events Provider.
-:::
 
 ## How to register for features
 ### 1. Update the manifest file
