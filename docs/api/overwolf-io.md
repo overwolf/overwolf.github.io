@@ -14,8 +14,13 @@ For more I/O functionalities, please use our simple I/O plugin.
 * [`readFileContents()`](#readFileContents)
 * [`copyFile()`](#copyFile)
 
+## Types Reference
+
+* [`eEncoding()`](#eEncoding)
+
 <a name='fileExists'>
 ## fileExists(filePath, callback)
+#### Version added: 0.93
 
 > Checks for the existance of the file in the given path.
 
@@ -24,113 +29,79 @@ Parameter | Type | Description |
 filePath | string | The path to check for |
 callback | function | Returns with the result |   
    
-<h3>Response</h3>  
+#### Callback argument: Success
 
-####  200: OK
-```js 
-{"status":"success","content":"Hello World!"}
+```json 
+{ "status": "success", "found": true }
 ```
 
-#### 404: Not Found
+#### Callback argument: Failure
 If the file doesn’t exist, an error status will be returned:
 
-```js 
+```json 
 {"status":"error","reason":"File doesn't exists"}
 ```
-
-<h3> Usage Example </h3>
-<!--DOCUSAURUS_CODE_TABS-->
-<!--JavaScript-->
-
-```js
-console.log('Hello, world!');
-```
-
-<!--END_DOCUSAURUS_CODE_TABS-->
 
 <a name='writeFileContents'>
 ## writeFileContents(filePath, content, encoding, triggerUacIfRequired, callback)
+#### Version added: 0.93
+#### Permissions required: FileSystem
 
-> Checks for the existance of the file in the given path.
+> Writes the content to the target file.
 
-Parameter | Type | Description |
------------- | ------------ | ------------ |
-filePath | string | The path to check for |
-content | string | The content to write |
-encoding | [eEncoding](#eEncoding) | The encoding to use |
-triggerUacIfRequired | bool | If additional permissions are required, allows the triggering of the Windows UAC dialog |
-callback | function | Returns with the result |   
+If the file doesn’t exist, it will be created, along with any needed directories along the path. Otherwise, the file’s content will be overwritten.
+
+Parameter            | Type                    | Description                                                                             |
+-------------------- | ----------------------- | --------------------------------------------------------------------------------------- |
+filePath             | string                  | The path to check for                                                                   |
+content              | string                  | The content to write                                                                    |
+encoding             | [eEncoding](#eEncoding) enmum | The encoding to use                                                               |
+triggerUacIfRequired | bool                    | If additional permissions are required, allows the triggering of the Windows UAC dialog |
+callback             | function                | Returns with the result                                                                 |   
    
-<h3> Response </h3>
-
-<details>
-
-####  200: OK
-```js 
-{"status":"success","content":"Hello World!"}
+#### Callback argument: Success
+```json
+{ "status": "success" }
 ```
+#### Callback argument: Failure
 
-#### 404: Not Found
-If the file doesn’t exist, an error status will be returned:
-
-```js 
-{"status":"error","reason":"File doesn't exists"}
-```
-</details>
-
-<h3>  Usage Example  </h3>
-<!--DOCUSAURUS_CODE_TABS-->
-<!--JavaScript-->
-
-```js
-console.log('Hello, world!');
-```
-
-<!--END_DOCUSAURUS_CODE_TABS-->
+```json
+{"status":"error"}
+```   
 
 <a name='readFileContents'>
 ## readFileContents(filePath,encoding, callback)
+#### Version added: 0.93
+#### Permissions required: FileSystem
 
 > Returns a string with the targeted file’s content.
 
 Parameter | Type | Description |
 ------------ | ------------ | ------------ |
-filePath | string | The path to check for |
-encoding | [eEncoding](#eEncoding) | The encoding to use |
+filePath | string | The full path of the targeted file|
+encoding | [eEncoding](#eEncoding) enum | The encoding to use |
 callback | function | Returns with the result |   
    
-<h3>Response</h3>
+#### Callback argument: Success
+returns a string with the targeted file’s content.
 
-<details>
-
-####  200: OK
-```js 
+```json
 {"status":"success","content":"Hello World!"}
 ```
 
-#### 404: Not Found
+#### Callback argument: Failure
 If the file doesn’t exist, an error status will be returned:
 
-```js 
+```json
 {"status":"error","reason":"File doesn't exists"}
 ```
-</details>
-
-<h3>Usage Example  </h3>
-<!--DOCUSAURUS_CODE_TABS-->
-<!--JavaScript-->
-
-```js
-console.log('Hello, world!');
-```
-
-<!--END_DOCUSAURUS_CODE_TABS-->
 
 <a name='copyFile'>
 ## copyFile(src, dst, overrideFile, reserved, callback)
+#### Version added: 0.93
+#### Permissions required: FileSystem
 
 > Copy a file from the local extension directory to a destination in the local machine.
-> Permissions required: FileSystem
 
 Parameter | Type | Description |
 ------------ | ------------ | ------------ |
@@ -139,47 +110,29 @@ dst | string | The destination path (including filename) to copy to |
 overrideFile | bool | "true" if you want an existing file to be overriden, "false" otherwise |
 reserved | bool | For future use |
 callback | function | Returns with the result |   
-   
-<h3>Response  </h3>
 
-<details>
+#### Callback argument: Success
+returns a string with the targeted file’s content.
 
-####  200: OK
-```js 
-{"status":"success","content":"Hello World!"}
+```json
+{"status":"success""}
 ```
 
-#### 404: Not Found
-If the file doesn’t exist, an error status will be returned:
+#### Callback argument: Failure
 
-```js 
-{"status":"error","reason":"File doesn't exists"}
-```
-</details>
+```json
+{"status":"error"}
+```   
 
-<h3> Usage Example  </h3>
-<!--DOCUSAURUS_CODE_TABS-->
-<!--JavaScript-->
+<a name='eEncoding'>
 
-```js
-console.log('Hello, world!');
-```
-
-<!--END_DOCUSAURUS_CODE_TABS-->
-
-## Types
-
-#### eEncoding
+## eEncoding
 File encoding.
 
-Options | 
------------- | 
-UTF8 | 
-UTF8BOM |
-Unicode |
+Options    | 
+-----------| 
+UTF8       | 
+UTF8BOM    |
+Unicode    |
 UnicodeBOM |
-ASCII |
-
-## Events
-
-## Properties
+ASCII      |

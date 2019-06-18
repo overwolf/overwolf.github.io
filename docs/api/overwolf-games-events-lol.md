@@ -1,7 +1,7 @@
 ---
 id:overwolf-games-events-lol
 title: League of Legends Game Events
-sidebar_label: League of Legends Game Events
+sidebar_label: LOL Events
 ---
 
 Please read the [overwolf.games.events](overwolf-games-events) documentation page to learn how to use Overwolf game events.
@@ -228,21 +228,58 @@ level     | level           | the level number of the player                 |  
 
 ### Events
 
-Event        | Event Data                        | Fired When (announcement)     | Notes              | Since Version |
--------------| ----------------------------------| ----------------------------- | ------------------ | --------------|
-welcome_rift | null                              | “Welcome to Summoner’s Rift!” |                    |     0.75      | 
-minions_30_sec | null                              | “Thirty seconds until minions spawn!” |                    |     0.75      | 
-minions_spawn | null                              | “Minions have spawned!” |                    |     0.75      | 
-first_blood | null                              | “First Blood!” |                    |     0.75      | 
-slain | “team”                              | “An enemy has been slain!!” |                    |     0.75      | 
-self_slain | “team”                              | “You have slain an enemy!!” |                    |     0.75      | 
-killing_spree | “team”                              | “Killing Spree!” |                    |     0.75      | 
-rampage | “team”                              | “Rampage!” |                    |     0.75      | 
-unstoppable | “team”                              | “unstoppable” |                    |     0.75      | 
-dominating | “team”                              | “Dominating!” |                    |     0.75      | 
-godlike | “team”                              | “Godlike!” |                    |     0.75      | 
-legendary | “team”                              | “Legendary!” |                    |     0.75      | 
-double_kill | “team”                              | “Double Kill!” |                    |     0.75      | 
-triple_kill | “team”                              | “Triple Kill!” |                    |     0.75      | 
-quadra_kill | “team”                              | “Quadra Kill!” |                    |     0.75      | 
-penta_kill | “team”                              | “Penta Kill!” |                    |     0.75      | 
+Event             | Event Data                           | Fired When (announcement)                   | Notes              | Since Version |
+------------------| -------------------------------------| ------------------------------------------- | ------------------ | --------------|
+welcome_rift      | null                                 | “Welcome to Summoner’s Rift!”               |                    |     0.75      | 
+minions_30_sec    | null                                 | “Thirty seconds until minions spawn!”       |                    |     0.75      | 
+minions_spawn     | null                                 | “Minions have spawned!”                     |                    |     0.75      | 
+first_blood       | null                                 | “First Blood!”                              |                    |     0.75      | 
+defeat            | null                                 | “Defeat!”                                   |                    |     0.75      | 
+victory           | null                                 | “Victory!”                                  |                    |     0.75      | 
+shutdown          | null                                 | “Shut down!”                                |                    |     0.75      | 
+ace               | null                                 | “Aced!”                                     |                    |     0.75      | 
+slain             | “team”                               | “An enemy has been slain!!”                 |                    |     0.75      | 
+self_slain        | “team”                               | “You have slain an enemy!!”                 |                    |     0.75      | 
+killing_spree     | “team”                               | “Killing Spree!”                            |                    |     0.75      | 
+rampage           | “team”                               | “Rampage!”                                  |                    |     0.75      | 
+unstoppable       | “team”                               | “unstoppable”                               |                    |     0.75      | 
+dominating        | “team”                               | “Dominating!”                               |                    |     0.75      | 
+godlike           | “team”                               | “Godlike!”                                  |                    |     0.75      | 
+legendary         | “team”                               | “Legendary!”                                |                    |     0.75      | 
+double_kill       | “team”                               | “Double Kill!”                              |                    |     0.75      | 
+triple_kill       | “team”                               | “Triple Kill!”                              |                    |     0.75      | 
+quadra_kill       | “team”                               | “Quadra Kill!”                              |                    |     0.75      | 
+penta_kill        | “team”                               | “Penta Kill!”                               |                    |     0.75      | 
+turret_destroy    | "team"                               | “Your turret has been destroyed!”           |                    |     0.75      | 
+inhibitor_destroy | “team”                               | “Your inhibitor has been destroyed!”        |                    |     0.75      | 
+inhibitor_respawn | “team”                               | “Your inhibitor is respawning soon!”        |                    |     0.75      | 
+slain             | "enemy"                              | “An ally has been slain!”                   |                    |     0.75      | 
+slain_self        | “enemy”                              | “You have been slain!”                      |                    |     0.75      | 
+killing_spree     | “enemy”                              | “Enemy Killing Spree!”                      |                    |     0.75      | 
+rampage           | “enemy”                              | “Enemy Rampage!”                            |                    |     0.75      | 
+unstoppable       | “enemy”                              | “An enemy is Unstoppable!”                  |                    |     0.75      | 
+dominating        | “enemy”                              | “An enemy is Dominating!”                   |                    |     0.75      | 
+godlike           | “enemy”                              | “An enemy is Godlike!”                      |                    |     0.75      | 
+double_kill       | “enemy”                              | “Enemy Double Kill!”                        |                    |     0.75      | 
+triple_kill       | “enemy”                              | “Enemy Triple Kill!”                        |                    |     0.75      | 
+quadra_kill       | “enemy”                              | “Enemy Quadra Kill!”                        |                    |     0.75      | 
+penta_kill        | “enemy”                              | “Enemy Penta Kill!”                         |                    |     0.75      | 
+inhibitor_destroy | “enemy”                              | “Your team has destroyed an inhibitor!”     |                    |     0.75      | 
+inhibitor_respawn | “enemy”                              | “The enemy’s inhibitor is respawning soon!” |                    |     0.75      | 
+turret_destroy    | “enemy”                              | “Your team has destroyed a turret!”         |                    |     0.75      | 
+executed          | "minion"                             | “Executed!”                                 |                    |     0.75      | 
+executed          | "tower"                              | “Executed!”                                 |                    |     0.75      | 
+
+<a id="counters"></a>
+
+## `counters`
+
+### Info Updates
+key  | Category    | Values                                     | Notes  | Since Version |
+-----| ------------| -------------------------------------------| ------ | ------------- | 
+ping | performance | The change in latency of the local player  |        |    0.128      |
+
+
+
+
+

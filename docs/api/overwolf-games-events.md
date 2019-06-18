@@ -7,7 +7,21 @@ sidebar_label: overwolf.games.events
 ## General
 `overwolf.games.events` allows you to be notified when something interesting happens while playing a certain game (e.g. a hero killed someone, someone killed the gamer’s hero, etc.).</br>Overwolf supports events for multiple games, you can see the list of supported games [here](games-ids). 
 
-## Features 
+## Methods Reference
+
+* [`setRequiredFeatures()`](#setRequiredFeatures)
+* [`getInfo()`](#getInfo)
+
+## Events Reference
+
+* [`onError()`](#onError)
+* [`onInfoUpdates2()`](#onInfoUpdates2)
+* [`onNewEvents()`](#onNewEvents)
+
+## Sample App
+You can [download here](https://github.com/overwolf/lol-events-sample-app) an example of using the `overwolf.games.events` API to be notified whenever an interesting event has happened in League of Legends.
+
+## Features Overview
 Each supported game has its own set of available features.
 A feature is a collection of related game events (e.g events related to a “match” feature – ‘started’/’ended’/’outcome’, etc.). You can view the features of each supported game in the relevant game page on the side menu, for example, [League of Legends page](overwolf-games-events-lol).
 
@@ -26,7 +40,8 @@ You can  receive this event by registering to the `overwolf.games.events.onNewEv
 Note that a feature can contain a few info updates and events, and not just one info update and one event like the above example.
 
 :::important
-A feature is a collection of related `info updates` and `events`.
+Each feature is a collection of related `info updates` and `events`.
+When an app wants to receive events from the Game Events Provider it needs to set the requested features from the Game Events Provider.
 :::
 
 ## How to register for features
@@ -39,39 +54,31 @@ This is how the value would look like if the app is interested in receiving even
 
 ```json
 "data":{     
-      "game_events":[5426, 7764],
+      "game_events":[5426, 7764]
       ... 
    }
 ```
-### 2. Listen to the relevant JS object
-The next step is to add a listener to the relevant JavaScript Event object in your app’s code:
-*  **overwolf.games.events.onInfoUpdates2** - to receive info update changes, listen to this object. (notice the "2" at the end of the event name)</br>
-`overwolf.games.events.onInfoUpdates2.addListener(function(infoUpdateChange) { … })`
-
-* **overwolf.games.events.onNewEvent** - to receive new events, listen to this object.</br>
-`overwolf.games.events.onNewEvents.addListener(function(newEvents) { … })`
-
-### 3. Call  setRequiredFeatures()
-The final step is to call [`overwolf.games.events.setRequiredFeatures`](#setRequiredFeatures).
+### 2. Call  setRequiredFeatures()
+The next step is to call [`overwolf.games.events.setRequiredFeatures`](#setRequiredFeatures).
 Once the app wants to start receiving specific info updates and events, you call this function with an array of feature names that you would like your app to consume.
 
+This is an example when an app requires Rocket League features like the following:
+
+```javascript
+overwolf.games.events.setRequiredFeatures(['stats', 'match'], function(info) {
+    console.log(info);
+});
+```
+
+### 3. Listen to the relevant JS object
+The final step is to add a listener to the relevant JavaScript Event object in your app’s code:
+
+* For listening to game events, use the [`overwolf.games.events.onNewEvent`](#onNewEvents) object.
+* For listening to info updates, use the [`overwolf.games.events.onInfoUpdates2`](#onInfoUpdates2) object.
+
 :::tip
-In order to get the game's info-updates, your app should request the info feature and listen to [`overwolf.games.events.onInfoUpdates2`](#onInfoUpdates2) info updates. However, you might add the listener after the update has already happened so the app will miss the info-update event. For that reason, you should also call [`overwolf.games.events.getInfo()`](#getinfofcallback) to get the current info state.
+In some cases you might add the listener to [`overwolf.games.events.onInfoUpdates2`](#onInfoUpdates2) after the info update has already happened, so the app will miss the info-update event. For that reason, you should also call [`overwolf.games.events.getInfo()`](#getInfo) to get the current info state.
 :::
-
-## Sample App
-You can [download here](https://github.com/overwolf/lol-events-sample-app) an example of using the `overwolf.games.events` API to be notified whenever an interesting event has happened in League of Legends.
-
-## Methods Reference
-
-* [`setRequiredFeatures()`](#setRequiredFeatures)
-* [`getInfo()`](#getInfo)
-
-## Events Reference
-
-* [`onError()`](#onError)
-* [`onInfoUpdates2()`](#onInfoUpdates2)
-* [`onNewEvents()`](#onNewEvents)
 
 <a name='setRequiredFeatures'>
 ## setRequiredFeatures(features, callback)
@@ -97,7 +104,6 @@ In case of success, the callback will contain all the available features for the
    ]
 }
 ```
-
 #### Usage Example
 Example for setting League of Legends required features:
 
@@ -116,10 +122,11 @@ overwolf.games.events.setRequiredFeatures(g_interestedInFeatures, function(info)
       console.log("Could not set required features: " + info.reason);
       return;
     }
+}
 ```
 
 <a name='getInfo'>
-## getInfo(fcallback)
+## getInfo(callback)
 #### Version added: 0.95
 
 > Gets the current game info.
@@ -144,7 +151,7 @@ The current game info: to which features you are registered, and all the availab
          "game_info":{  
             "match_started":"True",
             "matchStarted":"True",
-            "teams":"%5B%7B%22team%22:%22100%22,%22champion%22:%22Rengar%22,%22skinId%22:%220%22,%22clientId%22:%220%22,%22summoner%22:%22itaygl%22%7D%5D",
+            "teams":"%5B%7B%22team%22:%22100%22,%22champion%22:%22Rengar%22",
             "gameMode":"custom",
             "game_mode":"custom",
             "minionKills":"5",
@@ -172,7 +179,7 @@ The current game info: to which features you are registered, and all the availab
 ```
 
 #### Usage Example
-```
+```javascript
 overwolf.games.events.getInfo(function(info) { 
 		console.log(info); 
 	});
@@ -194,12 +201,12 @@ overwolf.games.events.getInfo(function(info) {
 
 ```javascript
 overwolf.games.events.onInfoUpdates2.addListener(function(info) {
-		console.log(info);   
-	});
+      console.log("Info UPDATE: " + JSON.stringify(info));
+});
 ```
 
-#### Response Example:
-```
+#### Event data example:
+```json
 {  
    "info":{  
       "game_info":{  
@@ -220,12 +227,12 @@ overwolf.games.events.onInfoUpdates2.addListener(function(info) {
 
 ```javascript
 overwolf.games.events.onNewEvents.addListener(function(info) {
-		console.log(info);   
+		onsole.log('EVENT FIRED: ' + JSON.stringify(info));  
 	});
 ```
 
-Example response:
-```
+#### Event data example
+```json
 {
   "events": [
     {
