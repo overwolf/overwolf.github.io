@@ -1,0 +1,127 @@
+@font-face {
+	font-family: 'Klavika';
+	src: url("../fonts/klavika/KlavikaWebBasicLight.woff") format("woff");
+	font-weight: 300;
+	font-style: normal
+}
+
+@font-face {
+  font-family: 'Klavika';
+	src: url("../fonts/klavika/KlavikaWebBasicRegular.woff") format("woff");
+	font-weight: 400;
+	font-style: normal
+}
+
+@font-face {
+  font-family: 'Klavika';
+	src: url("../fonts/klavika/KlavikaWebBasicMedium.woff") format("woff");
+	font-weight: 500;
+	font-style: normal
+}
+
+@font-face {
+  font-family: 'Klavika';
+	src: url("../fonts/klavika/KlavikaWebBasicBold.woff") format("woff");
+	font-weight: 700;
+	font-style: normal
+}
+
+body {
+  font-family: Lato;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 23px;
+
+  background: #F4F2FF;
+}
+
+.fixedHeaderContainer header .headerTitleWithLogo {
+  font-family: 'Klavika', sans-serif;
+  font-size: 24px;
+  font-weight: 1;
+  line-height: 29px;
+}
+
+.fixedHeaderContainer {
+  padding: 0.7%;
+  box-shadow: 0 2px 4px -1px rgba(0,0,0,0.25);
+}
+
+.homeContainer {
+  height: 550px;
+  position: relative;
+  left: 0px;
+  top: 0px;
+
+  background: #161326;
+  mix-blend-mode: normal;
+}
+
+.homeSplashFade {
+
+}
+
+.wrapper.homeWrapper {
+  margin: 0px;
+}
+
+
+.inner {
+
+}
+
+
+h1.postHeaderTitle {
+  font-family: 'Klavika';
+  font-size: 36px;
+  font-weight: lighter;
+  line-height: 48px;
+
+  background: #F4F2FF;
+}
+
+h1.projectTitle {
+  position: absolute;
+  width: 374px;
+  height: 121px;
+  left: 464px;
+  top: 124px;
+
+  font-family: 'Klavika';
+  font-size: 50px;
+  font-weight: lighter;
+  line-height: 60px;
+
+  text-align: left;
+
+  color: #F4F2FF;
+}
+
+h6.projectTagline {
+  position: absolute;
+  width: 353px;
+  height: 72px;
+  left: 464px;
+  top: 275px;
+
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 25px;
+
+  text-align: left;
+
+  color: #958FB2;
+}
+
+h6 {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 25px;
+
+  color: #958FB2;
+}

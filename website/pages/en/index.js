@@ -36,10 +36,15 @@ class HomeSplash extends React.Component {
     );
 
     const ProjectTitle = () => (
-      <h2 className="projectTitle">
+      <h1 className="projectTitle">
         {siteConfig.homepage_title}
-        <small>{siteConfig.tagline}</small>
-      </h2>
+      </h1>
+    );
+
+    const ProjectTagline = () => (
+      <h6 className="projectTagline">
+        {siteConfig.tagline}
+      </h6>
     );
 
     const PromoSection = props => (
@@ -60,14 +65,15 @@ class HomeSplash extends React.Component {
 
     return (
       <SplashContainer>
-        <Logo img_src={`${baseUrl}img/robot.png`} />
+        {/* <Logo img_src={`${baseUrl}img/robot.png`} /> */}
         <div className="inner">
           <ProjectTitle siteConfig={siteConfig} />
-          <PromoSection>
+          <ProjectTagline siteConfig={siteConfig} />
+          {/* <PromoSection>
             <Button href={docUrl('start/getting-started')}>Start</Button>
             <Button href={docUrl('topics/best-practices-overview')}>Docs</Button>
             <Button href={docUrl('api/overwolf-api-overview')}>API</Button>
-          </PromoSection>
+          </PromoSection> */}
         </div>
       </SplashContainer>
     );
@@ -201,7 +207,7 @@ class Index extends React.Component {
         <HomeSplash siteConfig={siteConfig} language={language} />		
         <div className="mainContainer">
        
-		  <Features />
+		  {/* <Features /> */}
         </div>
       </div>
     );
