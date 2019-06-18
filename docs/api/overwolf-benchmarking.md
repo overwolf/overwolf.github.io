@@ -11,20 +11,23 @@ The overwolf.benchmarking API is not regularly maintained and some of it’s met
 :::
 
 ## Methods Reference
-* [`requestHardwareInfo()`](#requestHardwareInfo)
-* [`requestProcessInfo()`](#requestProcessInfo)
-* [`requestFpsInfo()`](#requestFpsInfo)
-* [`stopRequesting()`](#stopRequesting)
-* [`requestPermissions()`](#requestPermissions)
+
+* [`requestHardwareInfo()`](#requesthardwareinfointerval-callback)
+* [`requestProcessInfo()`](#requestprocessinfointerval-callback)
+* [`requestFpsInfo()`](#requestfpsinfointerval-callback)
+* [`stopRequesting()`](#stoprequesting)
+* [`requestPermissions()`](#requestpermissionscallback)
 
 ## Events Reference
-* [`onHardwareInfoReady`](#onHardwareInfoReady)
-* [`onProcessInfoReady`](#onProcessInfoReady)
-* [`onFpsInfoReady`](#onFpsInfoReady)
 
-<a name="requestHardwareInfo">
+* [`onHardwareInfoReady`](#onhardwareinfoready)
+* [`onProcessInfoReady`](#onprocessinfoready)
+* [`onFpsInfoReady`](#onfpsinfoready)
+
 ## requestHardwareInfo(interval, callback)
+
 #### Version added: 0.78
+
 > Requests hardware information within a given interval.
 
 Note that this call requires Overwolf to have Administrative permissions. If it does not have it, the callback will return with 'Permissions Required'. You will then have to ask the app user for permissions and according to the user’s choice, call `requestPermissions`. It is then required to call `requestProcessInfo` again.
@@ -34,9 +37,10 @@ Parameter | Type     | Description                                              
 interval  | int      | The desired maximal interval (in milliseconds) in which events will be triggered. Minimum is 500ms |
 callback  | function | Returns with the result                           |   
 
-<a name="requestProcessInfo">
 ## requestProcessInfo(interval, callback)
+
 #### Version added: 0.78
+
 > Requests process information within a given interval. 
 
 See requestPermissions for administrative permissions instructions.
@@ -46,9 +50,10 @@ Parameter | Type     | Description                                              
 interval  | int      | The desired maximal interval (in milliseconds) in which events will be triggered. Minimum is 500ms |
 callback  | function | Returns with the result                           |   
 
-<a name="requestFpsInfo">
 ## requestFpsInfo(interval, callback)
+
 #### Version added: 0.78
+
 > Requests game fps information within a given interval. 
 
 Parameter | Type     | Description                                                                                        |
@@ -56,30 +61,33 @@ Parameter | Type     | Description                                              
 interval  | int      | The desired maximal interval (in milliseconds) in which events will be triggered. Minimum is 500ms |
 callback  | function | Returns with the result                          |   
 
-<a name="stopRequesting">
 ## stopRequesting()
+
 #### Version added: 0.78
+
 > Stops receiving hardware/process events.
 
 Use this when you no longer want to receive events or when you close your app.
 
-<a name="requestPermissions">
 ## requestPermissions(callback)
+
 #### Version added: 0.78
+
 > In case Overwolf requires administrative permissions, and after prompting the user of the app to request more permissions, call this function and then request your desired benchmarking information.
 
 
 Parameter | Type     | Description                                                                                        |
 ----------| ---------| -------------------------------------------------------------------------------------------------- |
-callback  | function | Returns with the result                                                                            |   
+callback  | function | Returns with the result                                                                            |  
 
-<a name="onHardwareInfoReady">
 ## onHardwareInfoReady
+
 #### Version added: 0.78
+
 > Fired when hardware information is ready with a JSON containing the information.
 
-
 #### Event data example: Success
+
 ```json
 "General": {
     "PowerPlan": "Balanced"
@@ -92,13 +100,14 @@ callback  | function | Returns with the result                                  
 ...
 ```
 
-<a name="onProcessInfoReady">
 ## onProcessInfoReady
+
 #### Version added: 0.78
+
 > Fired when process information is ready with a JSON containing the information.
 
-
 #### Event data example: Success
+
 ```json
 {
     "TopCpuUsage": [
@@ -134,13 +143,14 @@ callback  | function | Returns with the result                                  
 }
 ```
 
-<a name="onFpsInfoReady">
 ## onFpsInfoReady
+
 #### Version added: 0.78
+
 > Fired when fps information is ready with a JSON containing the information.
 
-
 #### Event data example: Success
+
 ```json
 { "Fps": 61 }
 ```

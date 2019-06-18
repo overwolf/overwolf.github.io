@@ -8,14 +8,14 @@ Provides logging functions that make use of Overwolf’s internal logging system
 
 ## Methods Reference
 
-* [`verbose()`](#verbose)
-* [`info()`](#info)
-* [`warning()`](#warning)
-* [`error()`](#error)
-* [`critical()`](#critical)
+* [`verbose()`](#verbosemsg)
+* [`info()`](#infomsg)
+* [`warning()`](#warningmsg)
+* [`error()`](#errormsg)
+* [`critical()`](#criticalmsg)
 
-<a name='verbose'>
 ## verbose(msg)
+
 #### Version added: 0.78 
 
 > Writes verbose (debug) level log message to the common log.
@@ -24,9 +24,8 @@ Parameter | Type | Description |
 ------------ | ------------ | ------------ |
 msg	 | string | The message to write to the log file |
 
-
-<a name='info'>
 ## info(msg)
+
 #### Version added: 0.78 
 
 > Writes info level log message to the common log.
@@ -35,8 +34,8 @@ Parameter | Type | Description |
 ------------ | ------------ | ------------ |
 msg	 | string | The message to write to the log file |
 
-<a name='warning'>
 ## warning(msg)
+
 #### Version added: 0.78 
 
 > Writes warning level log message to the common log.
@@ -45,8 +44,8 @@ Parameter | Type | Description |
 ------------ | ------------ | ------------ |
 msg	 | string | The message to write to the log file |
 
-<a name='error'>
 ## error(msg)
+
 #### Version added: 0.78 
 
 > Writes error level log message to the common log.
@@ -55,8 +54,8 @@ Parameter | Type | Description |
 ------------ | ------------ | ------------ |
 msg	 | string | The message to write to the log file |
 
-<a name='critical'>
 ## critical(msg)
+
 #### Version added: 0.78 
 
 > Writes critical level log message to the common log.

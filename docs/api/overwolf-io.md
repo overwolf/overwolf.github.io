@@ -9,17 +9,17 @@ For more I/O functionalities, please use our simple I/O plugin.
 
 ## Methods Reference
 
-* [`fileExists()`](#fileExists)
-* [`writeFileContents()`](#writeFileContents)
-* [`readFileContents()`](#readFileContents)
-* [`copyFile()`](#copyFile)
+* [`fileExists()`](#fileexistsfilepath-callback)
+* [`writeFileContents()`](#writefilecontentsfilepath-content-encoding-triggeruacifrequired-callback)
+* [`readFileContents()`](#readfilecontentsfilepath-encoding-callback)
+* [`copyFile()`](#copyfilesrc-dst-overridefile-reserved-callback)
 
 ## Types Reference
 
-* [`eEncoding()`](#eEncoding)
+* [`eEncoding()`](#eencoding)
 
-<a name='fileExists'>
 ## fileExists(filePath, callback)
+
 #### Version added: 0.93
 
 > Checks for the existance of the file in the given path.
@@ -42,9 +42,10 @@ If the file doesn’t exist, an error status will be returned:
 {"status":"error","reason":"File doesn't exists"}
 ```
 
-<a name='writeFileContents'>
 ## writeFileContents(filePath, content, encoding, triggerUacIfRequired, callback)
+
 #### Version added: 0.93
+
 #### Permissions required: FileSystem
 
 > Writes the content to the target file.
@@ -69,9 +70,10 @@ callback             | function                | Returns with the result        
 {"status":"error"}
 ```   
 
-<a name='readFileContents'>
 ## readFileContents(filePath,encoding, callback)
+
 #### Version added: 0.93
+
 #### Permissions required: FileSystem
 
 > Returns a string with the targeted file’s content.
@@ -83,6 +85,7 @@ encoding | [eEncoding](#eEncoding) enum | The encoding to use |
 callback | function | Returns with the result |   
    
 #### Callback argument: Success
+
 returns a string with the targeted file’s content.
 
 ```json
@@ -90,15 +93,17 @@ returns a string with the targeted file’s content.
 ```
 
 #### Callback argument: Failure
+
 If the file doesn’t exist, an error status will be returned:
 
 ```json
 {"status":"error","reason":"File doesn't exists"}
 ```
 
-<a name='copyFile'>
 ## copyFile(src, dst, overrideFile, reserved, callback)
+
 #### Version added: 0.93
+
 #### Permissions required: FileSystem
 
 > Copy a file from the local extension directory to a destination in the local machine.
@@ -112,6 +117,7 @@ reserved | bool | For future use |
 callback | function | Returns with the result |   
 
 #### Callback argument: Success
+
 returns a string with the targeted file’s content.
 
 ```json
@@ -123,8 +129,6 @@ returns a string with the targeted file’s content.
 ```json
 {"status":"error"}
 ```   
-
-<a name='eEncoding'>
 
 ## eEncoding
 File encoding.
