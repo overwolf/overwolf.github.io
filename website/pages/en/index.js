@@ -17,35 +17,17 @@ function HomeSplash(props) {
   const {siteConfig, language} = props;
 
   return (
-    <div className="index-hero">
-      <div className="index-hero-inner">
-        <h1 className="index-hero-project-tagline">
-          <img
-            alt="Docusaurus with Keytar"
-            className="index-hero-logo"
-            src={`${siteConfig.baseUrl}img/docusaurus_keytar.svg`}
-          />
-          {siteConfig.title} makes it easy to maintain{' '}
-          <span className="index-hero-project-keywords">Open Source</span>{' '}
-          documentation websites.
+    <div className="index-robot">
+      <div className="index-robot-inner">
+        <h1 className="index-robot-project-tagline">
+          Easily create apps for PC gamers
         </h1>
-        <div className="index-ctas">
-          <a
-            className="button index-ctas-get-started-button"
-            href={`${siteConfig.baseUrl}docs/${language}/installation`}>
-            <translate>Get Started</translate>
-          </a>
-          <span className="index-ctas-github-button">
-            <iframe
-              src="https://ghbtns.com/github-btn.html?user=facebook&amp;repo=docusaurus&amp;type=star&amp;count=true&amp;size=large"
-              frameBorder={0}
-              scrolling={0}
-              width={160}
-              height={30}
-              title="GitHub Stars"
-            />
-          </span>
-        </div>
+        <h6 className="index-robot-project-info">
+          Overlay, real-time game events, monetization, auto patching, Anti-Cheat compatibility and all that good stuff
+        </h6>
+        <a href="" className="index-create-app-button">
+          Create app
+        </a>
       </div>
     </div>
   );
@@ -174,12 +156,59 @@ class Index extends React.Component {
     };
 
     return (
-      <div>
-        <HomeSplash siteConfig={siteConfig} language={language} />		
-        <div className="mainContainer">
+      // <div>
+      //   <HomeSplash siteConfig={siteConfig} language={language} />		
+      //   <div className="mainContainer">
        
-		  {/* <Features /> */}
-        </div>
+		  // {/* <Features /> */}
+      //   </div>
+      // </div>
+      <div className="body home blog">
+        <main id="content" className="main-content" role="main">
+          {/* -------------------------------------------------------- */}
+          <section className="easily">
+            <div className="container">
+              <header>Easily create apps for PC gamers</header>
+              <p>Overlay, real-time game events, monetization, auto patching, Anti-Cheat compatibility and all that good stuff</p>
+              <a className="btn" href="/documentation/">Create app</a>
+            </div>
+            {/* <svg class="lightning"><use xlink:href="#lightning"></use></svg> */}
+            <img className="wolf" src="img/BG_lightning.svg" />
+            <img className="wolf" src="img/robot.svg" />
+          </section>
+          {/* -------------------------------------------------------- */}
+          <section class="tiles">
+            <ul class="container">
+              <li>
+                <a href="/documentation/odk-2-0-introduction/creating-your-first-app/">
+                  <img className="icon" src="img/tutorials.svg" />
+                  <header class="subtitle">Tutorials</header>
+                  <p>
+                    Newbie and pro web devs should start here
+                  </p>
+                </a>
+              </li>
+              <li>
+                <a href="/app-creation-best-practices/what-kind-of-app-should-i-develop/">
+                  <img className="icon" src="img/potion.svg" />
+                  <header class="subtitle">Get inspired</header>
+                  <p>
+                    See what others crafted
+                  </p>
+                </a>
+              </li>
+              <li>
+                <a href="/documentation/sdk/overwolf/">				
+                  <img className="icon" src="img/scroll.svg" />                  <header class="subtitle">Read our scrolls</header>
+                  <p>
+                    Documentation, API and stuff you can use
+                  </p>
+                </a>
+              </li>
+            </ul>
+          </section>
+          {/* -------------------------------------------------------- */}
+        </main>
       </div>
     );
   }
