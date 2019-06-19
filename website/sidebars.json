@@ -36,11 +36,17 @@
 			"overwolf.extensions":
 			["api/overwolf-extensions", "api/overwolf-extension-current"],
 			"overwolf.games":
-			["api/overwolf-games", "api/overwolf-games-events", "api/howto-check-events-status-from-app", {
+			["api/overwolf-games", "api/overwolf-games-events", "api/howto-check-events-status-from-app", "api/overwolf-games-launchers", "api/overwolf-games-launchers-events", "api/overwolf-games-inputTracking",
+				{
 				"type": "subcategory",
                 "label": "Games Events List",
-				"ids": ["api/games-ids", "api/overwolf-games-events-lol", "api/overwolf-games-events-ancestors-legacy", "api/overwolf-games-events-apex-legends"]
-			}, "api/overwolf-games-launchers", "api/overwolf-games-inputTracking"],
+				"ids": ["api/games-ids", "api/overwolf-games-events-lol", "api/overwolf-games-events-ancestors-legacy", "api/overwolf-games-events-apex-legends", "api/overwolf-games-events-autochess","api/overwolf-games-events-csgo","api/overwolf-games-events-dota2","api/overwolf-games-events-fortnite","api/overwolf-games-events-pubg","api/overwolf-games-events-splitgate","api/overwolf-games-events-heartstone","api/overwolf-games-events-battlerite","api/overwolf-games-events-rocket-league","api/overwolf-games-events-rainbow-six","api/overwolf-games-events-wot","api/overwolf-games-events-wow","api/overwolf-games-events-smite","api/overwolf-games-events-warface","api/overwolf-games-events-robocraft"]
+			},  {
+				"type": "subcategory",
+				"label": "Games Launchers List",
+				"ids": ["api/launchers-ids","api/overwolf-games-launchers-events-lol"]
+				}
+			],
 			"overwolf.logitech":
 			["api/overwolf-logitech", "api/overwolf-logitech-arx", "api/overwolf-logitech-led"],
 			"overwolf.media":
@@ -66,10 +72,7 @@
 		"Recipes":
 			["support/recipes"],
 		"Training and Guides":
-			["support/training"]
-			
-			
-			
+			["support/training"]	
     },
 	"download": {
         "Download": 

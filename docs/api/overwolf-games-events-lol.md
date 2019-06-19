@@ -1,7 +1,7 @@
 ---
 id:overwolf-games-events-lol
 title: League of Legends Game Events
-sidebar_label: League of Legends Game Events
+sidebar_label: LOL Events
 ---
 
 Please read the [overwolf.games.events](overwolf-games-events) documentation page to learn how to use Overwolf game events.
@@ -11,13 +11,14 @@ Please read the [overwolf.games.events](overwolf-games-events) documentation pag
 :::
 
 ## Sample Apps
+
 * [LOL game events sample app](https://github.com/overwolf/lol-events-sample-app)
 * [Summoner and team info sample app](https://github.com/overwolf/lol-summoner-team-info-sample-app) – this sample app gets “summoner region” and “my team” info before the game starts (while the user in the “champion select” phase) more information about getting data from LoL launcher/client can be found [here](overwolf-games-launchers).
 
 ## Available Features
 
-* [matchState](#matchState)
-* [match_info](#match_info)
+* [matchState](#matchstate)
+* [match_info](#match-info)
 * [death](#death)
 * [respawn](#respawn)
 * [abilities](#abilities)
@@ -25,14 +26,13 @@ Please read the [overwolf.games.events](overwolf-games-events) documentation pag
 * [assist](#assist)
 * [gold](#gold)
 * [minions](#minions)
-* [summoner_info](#summoner_info)
-* [gameMode](#gameMode)
+* [summoner_info](#summoner-info)
+* [gameMode](#gamemode)
 * [teams](#teams)
 * [level](#level)
 * [announcer](#announcer)
 * [counters](#counters)
 
-<a id="matchState"></a>
 ## `matchState`
 
 ### Info Updates
@@ -49,10 +49,9 @@ matchStart   | game_info   | win/lose                  |                       |
 
 Event      | Event Data  | Fired When          | Notes              | Since Version |
 -----------| ------------| ------------------- | ------------------ | --------------|
-matchStart | null        | Match has started   |  Match has started |   0.140       | 
-matchEnd   | null        |  Match is ended	   |  Match is ended    |   0.140       | 
+matchStart | null        | Match has started   |  Match has started |   0.140       |
+matchEnd   | null        |  Match is ended     |  Match is ended    |   0.140       |
 
-<a id="match_info"></a>
 ## `match_info`
 
 ### Info Updates
@@ -61,7 +60,6 @@ key          | Category    | Values                    | Notes                 |
 --------------- | -----------| ------------------------------------------------------------------------------------ | ------------------------------------ | ------------- | 
 pseudo_match_id | match_info | The current session’s ID code. Example:</br> `a4e8fc75-b35e-466f-976c-09f4ee633d95`  |  This is an Overwolf-generated code. Unrelated to Riot Games.  |   0.130 |
 
-<a id="death"></a>
 ## `death`
 
 ### Info Updates
@@ -70,14 +68,12 @@ key          | Category    | Values                            | Notes          
 ------------ | ------------| --------------------------------- | --------------------- | ------------- | 
 deaths       | game_info   | Number of deaths for this session |                       |   0.77        |
 
-
 ### Events
 
 Event | Event Data                        | Fired When                  | Notes              | Since Version |
 ------| ----------------------------------| --------------------------- | ------------------ | --------------|
 death | Number of deaths for this session | The player’s champion died  |  Match has started |     0.77      | 
 
-<a id="respawn"></a>
 ## `respawn`
 
 ### Events
@@ -86,7 +82,6 @@ Event      | Event Data  | Fired When          | Notes              | Since Vers
 -----------| ------------| ------------------------------- | ------------------ | --------------|
 respawn    | null        | The player’s champion respawned |  Match has started |   0.140       | 
 
-<a id="abilities"></a>
 ## `abilities`
 
 ### Events
@@ -96,7 +91,6 @@ Event      | Event Data  | Fired When          | Notes              | Since Vers
 ability    | ability number        | player use an ability	 |  <ul><li>abilityies are numbered between 1-4 “ability”</li><li>event is fired when the player clicked on the ability key (but he may cancel the ability action later)</li></ul>  |   0.140       | 
 usedAbility  | JSON containing: “type” with the ability number between 1-4. Example:</br> `{ type: "4" }` for ult        | player activated the ability	 |  “usedAbility” fired when the player actually activated the ability  |   0.31       | 
 
-<a id="kill"></a>
 ## `kill`
 
 ### Info Updates
@@ -109,14 +103,12 @@ tripleKills | game_info   | Total triple-kills in the match |                   
 quadraKills | game_info   | Total quadra-kills in the match |                       |   0.35        |
 pentaKills  | game_info   | Total penta-kills in the match  |                       |   0.35        |
 
-
 ### Events
 
 Event | Event Data                        | Fired When                  | Notes              | Since Version |
 ------| ----------------------------------| --------------------------- | ------------------ | --------------|
 kill | A JSON containing:</br><ul><li>count: Number of times this kill type happened in the match</li><li>label: kill / double_kill / triple_kill / quadra_kill / penta_kill</li><li>totalKills: The total kills in this match</li></ul> | Killing another champion  |   |     0.7      | 
 
-<a id="assist"></a>
 ## `assist`
 
 ### Events
@@ -125,29 +117,27 @@ Event  | Event Data                                       |               Fired 
 -------| -------------------------------------------------| ----------------------------------------- | --------- | --------------|
 assist | Number of times this event happened in the match | When you assists killing another champion |           |       0.70    |
 
-<a id="gold"></a>
 ## `gold`
 
 ### Info Updates
+
 key    | Category    | Values                          | Notes                 | Since Version |
 -------| ------------| --------------------------------| --------------------- | ------------- | 
 gold   | game_info   | numeric value – amount of gold  |                       |  0.70         |
 
-<a id="minions"></a>
-
 ## `minions`
 
 ### Info Updates
+
 key                | Category    | Values                                         | Notes  | Since Version |
 -------------------| ------------| -----------------------------------------------| ------ | ------------- | 
 minionKills        | game_info   | amount of enemy minions killed by the player   |        |    0.70       |
 neutralMinionKills | game_info   | amount of neutral minions killed by the player |        |    0.70       |
 
-<a id="summoner_info"></a>
-
 ## `summoner_info`
 
 ### Info Updates
+
 key       | Category        | Values                                         | Notes                                                   | Since Version |
 ----------| ----------------| -----------------------------------------------| ------------------------------------------------------- | ------------- | 
 id        | summoner_info   | The user’s Summoner Id                         |   Fired immediately with game start                     |      0.7      |
@@ -159,7 +149,6 @@ division  | summoner_info   | The user’s division in his most played queue   |
 queue     | summoner_info   | The most played match queue                    |                                                         |    0.120      |
 accountId | summoner_info   |The user’s account id                           |                                                         |    0.120      |
 
-<a id="teams"></a>
 ## `teams`
 
 :::warning
@@ -195,6 +184,7 @@ var decoded = decodeURI(info.info[0].value);
 ```
 
 And get:
+
 ```json
 "[{"team":"Order","champion":"Riven","skinId":"7","summoner":"ruizete"},
 {"team":"Order","champion":"Twitch","skinId":"8","summoner":"heaser"},
@@ -214,35 +204,64 @@ And finally, we will parse the string and get a Json array with the teams:
 var teams = JSON.parse(decoded);
 ```
 
-<a id="level"></a>
-
 ## `level`
 
 ### Info Updates
+
 key       | Category        | Values                                         | Notes                                                   | Since Version |
 ----------| ----------------| -----------------------------------------------| ------------------------------------------------------- | ------------- | 
 level     | level           | the level number of the player                 |   Fired immediately with game start                     |      0.19     |
 
-<a id="announcer"></a>
 ## `announcer`
 
 ### Events
 
-Event        | Event Data                        | Fired When (announcement)     | Notes              | Since Version |
--------------| ----------------------------------| ----------------------------- | ------------------ | --------------|
-welcome_rift | null                              | “Welcome to Summoner’s Rift!” |                    |     0.75      | 
-minions_30_sec | null                              | “Thirty seconds until minions spawn!” |                    |     0.75      | 
-minions_spawn | null                              | “Minions have spawned!” |                    |     0.75      | 
-first_blood | null                              | “First Blood!” |                    |     0.75      | 
-slain | “team”                              | “An enemy has been slain!!” |                    |     0.75      | 
-self_slain | “team”                              | “You have slain an enemy!!” |                    |     0.75      | 
-killing_spree | “team”                              | “Killing Spree!” |                    |     0.75      | 
-rampage | “team”                              | “Rampage!” |                    |     0.75      | 
-unstoppable | “team”                              | “unstoppable” |                    |     0.75      | 
-dominating | “team”                              | “Dominating!” |                    |     0.75      | 
-godlike | “team”                              | “Godlike!” |                    |     0.75      | 
-legendary | “team”                              | “Legendary!” |                    |     0.75      | 
-double_kill | “team”                              | “Double Kill!” |                    |     0.75      | 
-triple_kill | “team”                              | “Triple Kill!” |                    |     0.75      | 
-quadra_kill | “team”                              | “Quadra Kill!” |                    |     0.75      | 
-penta_kill | “team”                              | “Penta Kill!” |                    |     0.75      | 
+Event             | Event Data                           | Fired When (announcement)                   | Notes              | Since Version |
+------------------| -------------------------------------| ------------------------------------------- | ------------------ | --------------|
+welcome_rift      | null                                 | “Welcome to Summoner’s Rift!”               |                    |     0.75      | 
+minions_30_sec    | null                                 | “Thirty seconds until minions spawn!”       |                    |     0.75      | 
+minions_spawn     | null                                 | “Minions have spawned!”                     |                    |     0.75      | 
+first_blood       | null                                 | “First Blood!”                              |                    |     0.75      | 
+defeat            | null                                 | “Defeat!”                                   |                    |     0.75      | 
+victory           | null                                 | “Victory!”                                  |                    |     0.75      | 
+shutdown          | null                                 | “Shut down!”                                |                    |     0.75      | 
+ace               | null                                 | “Aced!”                                     |                    |     0.75      | 
+slain             | “team”                               | “An enemy has been slain!!”                 |                    |     0.75      | 
+self_slain        | “team”                               | “You have slain an enemy!!”                 |                    |     0.75      | 
+killing_spree     | “team”                               | “Killing Spree!”                            |                    |     0.75      | 
+rampage           | “team”                               | “Rampage!”                                  |                    |     0.75      | 
+unstoppable       | “team”                               | “unstoppable”                               |                    |     0.75      | 
+dominating        | “team”                               | “Dominating!”                               |                    |     0.75      | 
+godlike           | “team”                               | “Godlike!”                                  |                    |     0.75      | 
+legendary         | “team”                               | “Legendary!”                                |                    |     0.75      | 
+double_kill       | “team”                               | “Double Kill!”                              |                    |     0.75      | 
+triple_kill       | “team”                               | “Triple Kill!”                              |                    |     0.75      | 
+quadra_kill       | “team”                               | “Quadra Kill!”                              |                    |     0.75      | 
+penta_kill        | “team”                               | “Penta Kill!”                               |                    |     0.75      | 
+turret_destroy    | "team"                               | “Your turret has been destroyed!”           |                    |     0.75      | 
+inhibitor_destroy | “team”                               | “Your inhibitor has been destroyed!”        |                    |     0.75      | 
+inhibitor_respawn | “team”                               | “Your inhibitor is respawning soon!”        |                    |     0.75      | 
+slain             | "enemy"                              | “An ally has been slain!”                   |                    |     0.75      | 
+slain_self        | “enemy”                              | “You have been slain!”                      |                    |     0.75      | 
+killing_spree     | “enemy”                              | “Enemy Killing Spree!”                      |                    |     0.75      | 
+rampage           | “enemy”                              | “Enemy Rampage!”                            |                    |     0.75      | 
+unstoppable       | “enemy”                              | “An enemy is Unstoppable!”                  |                    |     0.75      | 
+dominating        | “enemy”                              | “An enemy is Dominating!”                   |                    |     0.75      | 
+godlike           | “enemy”                              | “An enemy is Godlike!”                      |                    |     0.75      | 
+double_kill       | “enemy”                              | “Enemy Double Kill!”                        |                    |     0.75      | 
+triple_kill       | “enemy”                              | “Enemy Triple Kill!”                        |                    |     0.75      | 
+quadra_kill       | “enemy”                              | “Enemy Quadra Kill!”                        |                    |     0.75      | 
+penta_kill        | “enemy”                              | “Enemy Penta Kill!”                         |                    |     0.75      | 
+inhibitor_destroy | “enemy”                              | “Your team has destroyed an inhibitor!”     |                    |     0.75      | 
+inhibitor_respawn | “enemy”                              | “The enemy’s inhibitor is respawning soon!” |                    |     0.75      | 
+turret_destroy    | “enemy”                              | “Your team has destroyed a turret!”         |                    |     0.75      | 
+executed          | "minion"                             | “Executed!”                                 |                    |     0.75      | 
+executed          | "tower"                              | “Executed!”                                 |                    |     0.75      | 
+
+## `counters`
+
+### Info Updates
+
+key  | Category    | Values                                     | Notes  | Since Version |
+-----| ------------| -------------------------------------------| ------ | ------------- | 
+ping | performance | The change in latency of the local player  |        |    0.128      |

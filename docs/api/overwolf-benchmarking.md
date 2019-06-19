@@ -11,81 +11,83 @@ The overwolf.benchmarking API is not regularly maintained and some of it’s met
 :::
 
 ## Methods Reference
-* [`requestHardwareInfo(interval, callback)`](#requestHardwareInfo)
-* [`requestProcessInfo(interval, callback)`](#requestProcessInfo)
-* [`requestFpsInfo(interval, callback)`](#requestFpsInfo)
-* [`stopRequesting()`](#stopRequesting)
-* [`requestPermissions(callback)`](#requestPermissions)
+
+* [`requestHardwareInfo()`](#requesthardwareinfointerval-callback)
+* [`requestProcessInfo()`](#requestprocessinfointerval-callback)
+* [`requestFpsInfo()`](#requestfpsinfointerval-callback)
+* [`stopRequesting()`](#stoprequesting)
+* [`requestPermissions()`](#requestpermissionscallback)
 
 ## Events Reference
-* [`onHardwareInfoReady`](#onHardwareInfoReady)
-* [`onProcessInfoReady`](#onProcessInfoReady)
-* [`onFpsInfoReady`](#onFpsInfoReady)
 
-<a name="requestHardwareInfo">
+* [`onHardwareInfoReady`](#onhardwareinfoready)
+* [`onProcessInfoReady`](#onprocessinfoready)
+* [`onFpsInfoReady`](#onfpsinfoready)
+
 ## requestHardwareInfo(interval, callback)
-> Requests hardware information within a given interval.
 
-Version added: 0.78
+#### Version added: 0.78
+
+> Requests hardware information within a given interval.
 
 Note that this call requires Overwolf to have Administrative permissions. If it does not have it, the callback will return with 'Permissions Required'. You will then have to ask the app user for permissions and according to the user’s choice, call `requestPermissions`. It is then required to call `requestProcessInfo` again.
 
 Parameter | Type     | Description                                                                                        |
 ----------| ---------| -------------------------------------------------------------------------------------------------- |
 interval  | int      | The desired maximal interval (in milliseconds) in which events will be triggered. Minimum is 500ms |
-callback  | function | A callback function which will be called with the status of the request.                           |   
+callback  | function | Returns with the result                           |   
 
-<a name="requestProcessInfo">
 ## requestProcessInfo(interval, callback)
-> Requests process information within a given interval. 
 
-Version added: 0.78
+#### Version added: 0.78
+
+> Requests process information within a given interval. 
 
 See requestPermissions for administrative permissions instructions.
 
 Parameter | Type     | Description                                                                                        |
 ----------| ---------| -------------------------------------------------------------------------------------------------- |
 interval  | int      | The desired maximal interval (in milliseconds) in which events will be triggered. Minimum is 500ms |
-callback  | function | A callback function which will be called with the status of the request.                           |   
+callback  | function | Returns with the result                           |   
 
-<a name="requestFpsInfo">
 ## requestFpsInfo(interval, callback)
-> Requests game fps information within a given interval. 
 
-Version added: 0.78
+#### Version added: 0.78
+
+> Requests game fps information within a given interval. 
 
 Parameter | Type     | Description                                                                                        |
 ----------| ---------| -------------------------------------------------------------------------------------------------- |
 interval  | int      | The desired maximal interval (in milliseconds) in which events will be triggered. Minimum is 500ms |
-callback  | function | A callback function which will be called with the status of the request.                           |   
+callback  | function | Returns with the result                          |   
 
-<a name="stopRequesting">
 ## stopRequesting()
+
+#### Version added: 0.78
+
 > Stops receiving hardware/process events.
 
 Use this when you no longer want to receive events or when you close your app.
 
-Version added: 0.78
-
-<a name="requestPermissions">
 ## requestPermissions(callback)
+
+#### Version added: 0.78
+
 > In case Overwolf requires administrative permissions, and after prompting the user of the app to request more permissions, call this function and then request your desired benchmarking information.
 
-Version added: 0.78
 
 Parameter | Type     | Description                                                                                        |
 ----------| ---------| -------------------------------------------------------------------------------------------------- |
-callback  | function | A callback function which will be called with the status of the request.                           |   
+callback  | function | Returns with the result                                                                            |  
 
-<a name="onHardwareInfoReady">
 ## onHardwareInfoReady
+
+#### Version added: 0.78
+
 > Fired when hardware information is ready with a JSON containing the information.
 
-Version added: 0.78
+#### Event data example: Success
 
-<h3>Response</h3>  
-
-####  200: OK
 ```json
 "General": {
     "PowerPlan": "Balanced"
@@ -96,4 +98,59 @@ Version added: 0.78
                 "Name": "CPU VCore",
                 "Value": 0.968,
 ...
+```
+
+## onProcessInfoReady
+
+#### Version added: 0.78
+
+> Fired when process information is ready with a JSON containing the information.
+
+#### Event data example: Success
+
+```json
+{
+    "TopCpuUsage": [
+        {
+            "PrivateWorkingSet": 17674240,
+            "PrecentProcessorTime": 5.703688196431727,
+            "Id": 6988,
+            "Name": "OverwolfBrowser#3"
+        },
+        {
+            "PrivateWorkingSet": 16150528,
+            "PrecentProcessorTime": 5.703688196431727,
+            "Id": 8216,
+            "Name": "OverwolfBenchmarking"
+        },
+        ...
+    ],
+    "TopMemoryUsage": [
+        {
+            "PrivateWorkingSet": 611196928,
+            "PrecentProcessorTime": 2.851844098215878,
+            "Id": 5484,
+            "Name": "firefox"
+        },
+        {
+            "PrivateWorkingSet": 141586432,
+            "PrecentProcessorTime": 2.851844098215878,
+            "Id": 596,
+            "Name": "Overwolf"
+        },
+        ...
+    ]
+}
+```
+
+## onFpsInfoReady
+
+#### Version added: 0.78
+
+> Fired when fps information is ready with a JSON containing the information.
+
+#### Event data example: Success
+
+```json
+{ "Fps": 61 }
 ```

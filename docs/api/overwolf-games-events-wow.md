@@ -1,0 +1,7 @@
+---
+id:overwolf-games-events-wow
+title: World of Warships Game Events
+sidebar_label: World of Warships Events
+---
+
+#hello
