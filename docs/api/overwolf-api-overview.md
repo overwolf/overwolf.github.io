@@ -49,7 +49,7 @@ Common use cases:
 ## [overwolf.io](api/overwolf-io.md)
 
 > Use the overwolf.io API to check if a certain file exists or to write content to a file.\
-For more I/O functionalities, please use our [simple I/O plugin](). 
+For more I/O functionalities, please use our [simple I/O plugin](../topics/simple-io-plugin).
 
 ## [overwolf.log](api/overwolf-log.md)
 
