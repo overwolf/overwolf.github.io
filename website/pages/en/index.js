@@ -13,71 +13,42 @@ const MarkdownBlock = CompLibrary.MarkdownBlock; /* Used to read markdown */
 const Container = CompLibrary.Container;
 const GridBlock = CompLibrary.GridBlock;
 
-class HomeSplash extends React.Component {
-  render() {
-    const {siteConfig, language = ''} = this.props;
-    const {baseUrl, docsUrl} = siteConfig;
-    const docsPart = `${docsUrl ? `${docsUrl}/` : ''}`;
-    const langPart = `${language ? `${language}/` : ''}`;
-    const docUrl = doc => `${baseUrl}${docsPart}${langPart}${doc}`;
+function HomeSplash(props) {
+  const {siteConfig, language} = props;
 
-    const SplashContainer = props => (
-      <div className="homeContainer">
-        <div className="homeSplashFade">
-          <div className="wrapper homeWrapper">{props.children}</div>
+  return (
+    <div className="index-hero">
+      <div className="index-hero-inner">
+        <h1 className="index-hero-project-tagline">
+          <img
+            alt="Docusaurus with Keytar"
+            className="index-hero-logo"
+            src={`${siteConfig.baseUrl}img/docusaurus_keytar.svg`}
+          />
+          {siteConfig.title} makes it easy to maintain{' '}
+          <span className="index-hero-project-keywords">Open Source</span>{' '}
+          documentation websites.
+        </h1>
+        <div className="index-ctas">
+          <a
+            className="button index-ctas-get-started-button"
+            href={`${siteConfig.baseUrl}docs/${language}/installation`}>
+            <translate>Get Started</translate>
+          </a>
+          <span className="index-ctas-github-button">
+            <iframe
+              src="https://ghbtns.com/github-btn.html?user=facebook&amp;repo=docusaurus&amp;type=star&amp;count=true&amp;size=large"
+              frameBorder={0}
+              scrolling={0}
+              width={160}
+              height={30}
+              title="GitHub Stars"
+            />
+          </span>
         </div>
       </div>
-    );
-
-    const Logo = props => (
-      <div className="projectLogo">
-        <img src={props.img_src} alt="Project Logo" />
-      </div>
-    );
-
-    const ProjectTitle = () => (
-      <h1 className="projectTitle">
-        {siteConfig.homepage_title}
-      </h1>
-    );
-
-    const ProjectTagline = () => (
-      <h6 className="projectTagline">
-        {siteConfig.tagline}
-      </h6>
-    );
-
-    const PromoSection = props => (
-      <div className="section promoSection">
-        <div className="promoRow">
-          <div className="pluginRowBlock">{props.children}</div>
-        </div>
-      </div>
-    );
-
-    const Button = props => (
-      <div className="pluginWrapper buttonWrapper">
-        <a className="button" href={props.href} target={props.target}>
-          {props.children}
-        </a>
-      </div>
-    );
-
-    return (
-      <SplashContainer>
-        {/* <Logo img_src={`${baseUrl}img/robot.png`} /> */}
-        <div className="inner">
-          <ProjectTitle siteConfig={siteConfig} />
-          <ProjectTagline siteConfig={siteConfig} />
-          {/* <PromoSection>
-            <Button href={docUrl('start/getting-started')}>Start</Button>
-            <Button href={docUrl('topics/best-practices-overview')}>Docs</Button>
-            <Button href={docUrl('api/overwolf-api-overview')}>API</Button>
-          </PromoSection> */}
-        </div>
-      </SplashContainer>
-    );
-  }
+    </div>
+  );
 }
 
 class Index extends React.Component {
