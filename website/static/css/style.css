@@ -135,8 +135,8 @@ html {
 body {
 	overflow: hidden;
 	line-height: 1.5;
-	color: #8a9ea1;
-	background: #161326;
+	color: #0D0A1A;
+	background: #ffffff;
 	font-family: 'Lato', sans-serif;
 	font-size: 16px
 }
@@ -144,8 +144,8 @@ body {
 .body {
 	overflow: hidden;
 	line-height: 1.5;
-	color: #8a9ea1;
-	background: #161326;
+	color: #0D0A1A;
+	background: #ffffff;
 	font-family: 'Lato', sans-serif;
 	font-size: 16px
 }
@@ -975,7 +975,7 @@ use {
 .body.home .main-content .subtitle {
 	font-size: 24px;
 	line-height: 28px;
-	color: #00bcd4;
+	color: #0D0A1A;
 	font-family: 'Klavika', sans-serif;
 	font-weight: 300
 }
@@ -994,7 +994,7 @@ use {
 }
 
 .body.home .main-content section.easily {
-	/* background: #0b181a; */
+	background: #161326;
 	position: relative
 }
 
@@ -1016,7 +1016,8 @@ use {
 
 .body.home .main-content section.easily .container p {
 	max-width: 353px;
-	margin-bottom: 40px
+  margin-bottom: 40px;
+  color: #958FB2;
 }
 
 .body.home .main-content section.easily .lightning {
@@ -1030,7 +1031,7 @@ use {
 
 .body.home .main-content section.easily .wolf {
 	position: absolute;
-	left: 42%;
+	left: 53%;
 	bottom: 0;
 	padding-top: 110px;
 	overflow: hidden;
@@ -1039,7 +1040,7 @@ use {
 }
 
 .body.home .main-content section.tiles {
-	background: #192123
+  background: rgba(211, 207, 229, 0.5);
 }
 
 .body.home .main-content section.tiles ul {
@@ -1062,7 +1063,7 @@ use {
 }
 
 .body.home .main-content section.tiles ul li>a:hover {
-	background: #282F30
+	background: rgba(211, 207, 229, 1);
 }
 
 .body.home .main-content section.tiles ul li>a .icon {
