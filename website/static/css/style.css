@@ -29,7 +29,7 @@
 *,
 *:before,
 *:after {
-	box-sizing: border-box;
+	/* box-sizing: border-box; */
 	margin: 0;
 	padding: 0;
 	border: none;
@@ -133,7 +133,7 @@ html {
 }
 
 body {
-	overflow: hidden;
+	/* overflow: hidden; */
 	line-height: 1.5;
 	color: #0D0A1A;
 	background: #ffffff;
@@ -142,7 +142,7 @@ body {
 }
 
 .body {
-	overflow: hidden;
+	/* overflow: hidden; */
 	line-height: 1.5;
 	color: #0D0A1A;
 	background: #ffffff;
@@ -1139,7 +1139,8 @@ use {
 }
 
 .body.home .main-content section.game-dev h1 {
-	margin-bottom: 30px
+  margin-bottom: 30px;
+  margin-top: 0;
 }
 
 .body.home .main-content section.game-dev p {

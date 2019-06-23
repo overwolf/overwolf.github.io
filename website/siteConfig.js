@@ -49,7 +49,7 @@ const siteConfig = {
   users,
 
   /* path to images for header/footer */
-  title: 'Overwolf SDK',
+  title: 'Overwolf',
   headerIcon: 'img/headerIcon.svg',
   footerIcon: 'img/ow-logo.svg',
   favicon: 'img/ow-favicon.ico',
@@ -71,7 +71,15 @@ const siteConfig = {
   },
 
   // Add custom scripts here that would be placed in <script> tags.
-  scripts: ['https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js', 'https://buttons.github.io/buttons.js',  'https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js','/js/code-block-buttons.js'],
+  scripts: [
+    'https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js',
+    'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js',
+    'https://buttons.github.io/buttons.js',
+    'https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js',
+    '/js/code-block-buttons.js',
+    '/developers-site/js/onload.js',
+    '/developers-site/js/activeNavBar.js'
+  ],
   stylesheets: ['https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/default.min.css', '/css/code-block-buttons.css', 'https://fonts.googleapis.com/css?family=Lato%3A400%2C400i%2C700%2C900&ver=4.5.3'],
 
   // On page navigation for the current documentation page.

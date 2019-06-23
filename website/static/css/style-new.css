@@ -9,6 +9,66 @@
 	}
 }
 
+.collapsible .arrow {
+  transform: none;
+}
+
+.navPusher {
+  background: #F4F2FF;
+}
+
+.toc .toggleNav ul li.navListItemActive a {
+  color: #332E4D;
+}
+
+.toc .toggleNav ul li a {
+  color: #797399;
+  padding-left: 25px;
+  font-size: 14px;
+}
+
+.toc .toggleNav .navGroup .navGroupCategoryTitle {
+  border-left: 4px solid transparent;
+  padding: 10px 0px 10px 21px;
+  font-size: 16px;
+}
+
+.toc .toggleNav .navGroup .navGroupSubcategoryTitle {
+  padding-left: 25px;
+  font-size: 14px;
+}
+
+a.edit-page-link {
+  float: none;
+  font-size: 10px;
+  font-weight: normal;
+  margin-left: 15px;
+  margin-top: 3px;
+  text-decoration: none;
+  padding: 8px 32px;
+  font-family: 'Lato';
+  font-size: 16px;
+  font-style: normal;
+  font-weight: normal;
+  text-transform: none;
+  border: 1px solid #797399;
+  box-sizing: border-box;
+  color: #0D0A1A;
+  border-radius: 0px;
+}
+
+a.edit-page-link:hover {
+  background: #797399;
+}
+
+a.active-highlight {
+  color: #161326 !important
+}
+
+.onPageNav a {
+  color: #958FB2;
+}
+
 /* @font-face {
 	font-family: 'Klavika';
 	src: url("../fonts/klavika/KlavikaWebBasicLight.woff") format("woff");
