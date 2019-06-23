@@ -9,14 +9,14 @@
 			"Test Your App":
 			["start/how-to-test-your-app", "start/technical-checklist", "start/marketing-checklist"],
 			"Submit Your App":
-			["start/app-creation-process", "start/submit-app-proposal", "start/submit-your-app-to-the-store", "start/submit-an-app-update", "start/add-a-knowledge-base-to-app"],
+			["start/app-creation-process", "start/submit-app-proposal", "start/submit-your-app-to-the-store", "start/submit-an-app-update", "start/promoting-your-app", "start/add-a-knowledge-base-to-app"],
 			"Monetize Your App":
 			["start/monetization-overview", "start/ads-sdk-overview", "start/ads-sdk-getting-started", "start/ads-sdk-options", "start/ads-sdk-interaction", "start/ads-sdk-versions"]
 	},
     "docs": {
         
 		"Best Practices":
-			["topics/best-practices-overview", "topics/what-kind-of-apps-works", "topics/app-specific-experience", "topics/first-time-user-experience", "topics/launch-time-performance", "topics/user-flow-error-handling", "topics/window-size", "topics/buttons-layout-usage", "topics/communication-guidelines", "topics/games-settings"],
+			["topics/best-practices-overview", "topics/what-kind-of-apps-works", "topics/app-specific-experience", "topics/first-time-user-experience", "topics/launch-time-performance", "topics/user-flow-error-handling", "topics/window-size", "topics/buttons-layout-usage", "topics/communication-guidelines", "topics/user-flow-and-error-handling","topics/games-settings", "topics/hotkeys-best-practices"],
 		"Case Studies":
 			["topics/case-study-herowatch"],
 		"Using Plugins":

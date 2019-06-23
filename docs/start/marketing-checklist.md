@@ -4,5 +4,4 @@ title: Marketing Checklist
 sidebar_label: Marketing Checklist
 ---
 
-
-Info
+http://developers.overwolf.com/your-app/checklists/marketing-checklist/
