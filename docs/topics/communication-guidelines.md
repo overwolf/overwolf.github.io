@@ -4,6 +4,7 @@ title: Communication Guidelines
 sidebar_label: Communication Guidelines
 ---
 
+an example of embedded medium feed:
 
 <div id="medium-widget"></div>
     <script src="https://medium-widget.pixelpoint.io/widget.js"></script>
