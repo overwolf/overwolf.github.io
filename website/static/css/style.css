@@ -793,7 +793,7 @@ use {
 
 .main-content h1 {
 	font-size: 36px;
-	color: #00bcd4
+	color: #0D0A1A
 }
 
 .main-content h2 {
@@ -847,12 +847,12 @@ use {
 }
 
 .main-content a {
-	color: #00bcd4;
+	color: #E6004C;
 	transition: color .2s
 }
 
 .main-content a:hover {
-	color: #00defa
+	color: #FF0055
 }
 
 .main-content pre {
@@ -928,7 +928,8 @@ use {
 
 .main-content img {
 	max-width: 100%;
-	height: auto
+  height: auto;
+  float: right;
 }
 
 .main-content button {
@@ -1086,8 +1087,9 @@ use {
 }
 
 .body.home .main-content section.sdk {
-	background: #282F30;
-	padding: 50px 0
+	background: #F4F2FF;
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
 
 .body.home .main-content section.sdk ul {
@@ -1126,7 +1128,7 @@ use {
 }
 
 .body.home .main-content section.game-dev {
-	background: #192123;
+	background: #E8E6F5;
 	padding: 45px 0
 }
 
@@ -1147,8 +1149,10 @@ use {
 }
 
 .body.home .main-content section.blog {
-	background: #282F30;
-	padding: 65px 0
+	background: #F4F2FF;
+  /* padding: 65px 0 */
+  padding-top: 65px;
+  padding-bottom: 65px;
 }
 
 .body.home .main-content section.blog .container {
