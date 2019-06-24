@@ -31,7 +31,7 @@ callback  | function | Returns with the result                                  
 #### Callback argument: Failure
 
 If the user is not logged-in, the `status` will be `error`, but you’ll still get the rest of the available data (userId, machineId, etc.)
-
+ 
 ```json
 {  
    "status":"error",
