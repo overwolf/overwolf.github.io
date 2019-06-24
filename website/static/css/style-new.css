@@ -9,12 +9,20 @@
 	}
 }
 
+@media only screen and (min-width: 1024px) {
+  .docsNavContainer {
+      height: calc(100vh - 60px);
+      top: 60px;
+  }
+}
+
 .collapsible .arrow {
   transform: none;
 }
 
 .navPusher {
   background: #F4F2FF;
+  /* margin-top: 10px; */
 }
 
 .toc .toggleNav ul li.navListItemActive a {
@@ -69,111 +77,22 @@ a.active-highlight {
   color: #958FB2;
 }
 
-/* @font-face {
-	font-family: 'Klavika';
-	src: url("../fonts/klavika/KlavikaWebBasicLight.woff") format("woff");
-	font-weight: 300;
-	font-style: normal
+.hash-link-icon {
+  display: initial;
 }
 
-@font-face {
-  font-family: 'Klavika';
-	src: url("../fonts/klavika/KlavikaWebBasicRegular.woff") format("woff");
-	font-weight: 400;
-	font-style: normal
+.hljs {
+  background: #D3CFE5;
 }
 
-@font-face {
-  font-family: 'Klavika';
-	src: url("../fonts/klavika/KlavikaWebBasicMedium.woff") format("woff");
-	font-weight: 500;
-	font-style: normal
+.toc {
+  margin-right: 20px;
 }
 
-@font-face {
-  font-family: 'Klavika';
-	src: url("../fonts/klavika/KlavikaWebBasicBold.woff") format("woff");
-	font-weight: 700;
-	font-style: normal
+code {
+  background-color: #D3CFE5;
 }
 
-body {
-  font-family: 'Lato';
-  font-style: normal;
-  font-weight: 300;
-  font-size: 16px;
-  line-height: 23px;
-
-  background: #F4F2FF;
+table th {
+  background: #D3CFE5;
 }
-
-.fixedHeaderContainer header .headerTitleWithLogo {
-  font-family: 'Klavika', sans-serif;
-  font-size: 24px;
-  font-weight: lighter;
-  line-height: 29px;
-}
-
-.index-robot {
-  max-height: 550px;
-  padding: 48px;
-  background: #161326;
-}
-
-.index-robot-inner {
-  margin: 0 auto 128px 24%;
-  max-width: 374px;
-}
-
-.index-robot-project-tagline {
-  font-family: 'Klavika';
-  font-size: 50px;
-  font-weight: lighter;
-  line-height: 60px;
-
-  color: #F4F2FF;
-
-  max-width: inherit;
-}
-
-.index-robot-project-info {
-  font-family: 'Lato';
-  font-style: normal;
-  font-weight: lighter;
-  font-size: 16px;
-  line-height: 25px;
-
-  color: #958FB2;
-
-  max-width: 353px;
-
-  margin-bottom: 40px;
-}
-
-.index-create-app-button {
-  background: #E6004C;
-  color: #F4F2FF;
-  height: 36px;
-  padding: 8px 16px;
-
-  font-family: 'Lato';
-  font-style: normal;
-  font-weight: normal;
-  font-size: 16px;
-  line-height: 20px;
-  align-items: center;
-  text-align: center;
-  transition: background .25s;
-  float: left;
-}
-
-.index-create-app-button:hover {
-  background: #FF0055;
-}
-
-@media only screen and (max-width : 1110px) and (min-width : 1024px) {
-  .fixedHeaderContainer header .headerTitleWithLogo {
-    display: none;
-  }
-}
- */

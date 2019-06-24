@@ -1,0 +1,56 @@
+/* ::-webkit-scrollbar {
+  width: 16px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #B2ADCC;
+  border-radius: 2px;
+}
+
+::-webkit-scrollbar-thumb:horizontal {
+  height: 1px;
+} */
+
+/* ::-webkit-scrollbar-thumb:hover { */
+  /* background-color: #D3CFE5; */
+/* } */
+
+/* ::-webkit-scrollbar-track {
+  background-color: transparent;
+} */
+/* Buttons */
+/* ::-webkit-scrollbar-button:single-button {
+  background-color: transparent;
+  display: inline-block;
+  height: 26px;
+  width: 16px;
+} */
+/* Up */
+/* ::-webkit-scrollbar-button:single-button:vertical:decrement {
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+::-webkit-scrollbar-button:single-button:vertical:decrement:hover {
+  border-color: transparent transparent #B2ADCC transparent;
+} */
+/* Down */
+/* ::-webkit-scrollbar-button:single-button:vertical:increment {
+  border-width: 8px 8px 0 8px;
+  border-color: #B2ADCC transparent transparent transparent;
+}
+
+::-webkit-scrollbar-button:vertical:single-button:increment:hover {
+  border-color: #B2ADCC transparent transparent transparent;
+} */
+
+/* Right */
+/* ::-webkit-scrollbar-button:single-button:horizontal:increment {
+  background-image: url('../img/right.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+::-webkit-scrollbar-button:vertical:single-button:horizontal:hover {
+  border-color: #B2ADCC transparent transparent transparent;
+} */

@@ -1,9 +1,9 @@
 function addSiderbarHighlight() {
-  const selectedListItem = document.getElementsByClassName('navListItemActive')[0];
+  const selectedListItem = $(".navListItemActive");
   if (!selectedListItem) return;
-  const listParent = selectedListItem.closest('ul').parentElement;
-  const categoryTitle = listParent.getElementsByClassName('navGroupCategoryTitle')[0];
-  categoryTitle.style['border-left'] = '4px solid #E5004C';
+  const listParent = selectedListItem.parents('ul').last().parent();
+  const categoryTitle = listParent.children('.navGroupCategoryTitle').last();
+  categoryTitle.css('border-left', '4px solid #E5004C');
 }
 
 function moveEditButton() {
@@ -13,7 +13,18 @@ function moveEditButton() {
   pageNav.appendChild(button);
 }
 
+function initScrollbars() {
+  let options = {
+    className: 'os-theme-block-light',
+
+  }
+  $("body").overlayScrollbars(options);
+  $(".hljs").overlayScrollbars(options);
+  $(".docsNavContainer").overlayScrollbars(options);
+}
+
 window.onload = function () {
+  initScrollbars();
   addSiderbarHighlight();
   moveEditButton();
 };
