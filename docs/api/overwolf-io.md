@@ -16,7 +16,7 @@ For more I/O functionalities, please use our [simple I/O plugin](../topics/simpl
 
 ## Types Reference
 
-* [`eEncoding()`](#eencoding)
+* [`eEncoding`](#eencoding)
 
 ## fileExists(filePath, callback)
 

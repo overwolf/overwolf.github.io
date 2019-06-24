@@ -6,9 +6,17 @@ sidebar_label: overwolf.profile
 
 Use the `overwolf.profile` API to get Overwolf information for the current user of the app (e.g user name, user log-in event, etc.)
 
+## Methods Reference
+
+* [`getCurrentUser()`](#getcurrentusercallback)
+* [`openLoginDialog()`](#openlogindialog)
+
+## Events Reference
+
+* [`onLoginStateChanged`](#onloginstatechanged)
+
 ## getCurrentUser(callback)
-#### Version added: 0.93
-#### Permissions required: FileSystem
+#### Version added: 0.78
 
 > Calls the given callback with the currently logged-in Overwolf user.
 
@@ -44,5 +52,28 @@ If the user is not logged-in, the `status` will be `error`, but you’ll still g
    "parameters":{"no-ftue":null},
    "installParams":null,
    "avatar":""
+}
+```
+## openLoginDialog()
+#### Version added: 0.80
+
+> Opens the login dialog.
+
+## onLoginStateChanged
+#### Version added: 0.78
+
+> Fired when a user logged in or logged out, with the following structure:
+
+#### Event data example: Success
+
+```json
+{
+    status: "success",
+    
+    // can be "Online", "Offline", "Connecting", etc.
+    connectionState: "Online", 
+    
+    // when the status is other than "Offline", will be the currently connected username.
+    username: "..." 
 }
 ```

@@ -39,12 +39,42 @@ sidebar_label: Various External APIs
 
 ## Magic: The Gathering
 
-Magic: The Gathering | [API](http://mtgapi.com/docs)
+* Magic: The Gathering | [API](http://mtgapi.com/docs)
 
 ## Minecraft
 
-Minecraft ID List | [API](http://minecraft-ids.grahamedgecombe.com/api) | [Additional link](http://minecraft-ids.grahamedgecombe.com/)
+* Minecraft ID List | [API](http://minecraft-ids.grahamedgecombe.com/api) | [Additional link](http://minecraft-ids.grahamedgecombe.com/)
+* Buckget | [API](http://bukget.org/)
 
+## Path of Exile
 
+* Path of Exile | [API](http://www.pathofexile.com/developer/docs/api)
 
+## Planetside 2 
 
+* Planetside 2 | [API](http://wiki.planetside-universe.com/ps/API)
+
+## Starcraft 2
+
+* Starcraft 2 Community API | [API](http://blizzard.github.io/api-sc2-docs/)
+* Starcraft 2 Client API | [API](http://us.battle.net/forums/en/sc2/topic/20748195420)
+
+## Star Wars: The Old Republic
+
+* SWTOR Fan API | [API](http://www.swtor.com/community/showthread.php?s=81944b091aa9679fa677a0d706324af1&p=7456215#post7456215)
+
+## Team Fortress 2
+
+* TF2 Backpack | [API](https://backpack.tf/developer)
+
+## The Secret World
+
+* The Secret World | [API](http://chronicless.einhyrning.com/)
+
+## World of Warcraft
+
+* WoW Community API | [API](https://dev.battle.net/)
+
+## World of Warplanes
+
+* Wargaming.net API | [API](http://eu.wargaming.net/developers/)
