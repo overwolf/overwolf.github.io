@@ -13,18 +13,7 @@ function moveEditButton() {
   pageNav.appendChild(button);
 }
 
-function initScrollbars() {
-  let options = {
-    className: 'os-theme-block-light',
-
-  }
-  $("body").overlayScrollbars(options);
-  $(".hljs").overlayScrollbars(options);
-  $(".docsNavContainer").overlayScrollbars(options);
-}
-
 window.onload = function () {
-  initScrollbars();
   addSiderbarHighlight();
   moveEditButton();
 };

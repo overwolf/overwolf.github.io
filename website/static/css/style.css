@@ -2699,15 +2699,15 @@ form.slack-invite .result.success {
 	}
 }
 
-@media (min-width: 900px) {
+@media (min-width: 1024px) {
 	.gep-games-list ul.list li {
-		width: calc(33.333333% - 15px)
+		width: calc(75% - 15px)
 	}
 }
 
 @media (min-width: 1200px) {
 	.gep-games-list ul.list li {
-		width: calc(25% - 15px)
+		width: calc(50% - 15px)
 	}
 }
 
@@ -2715,8 +2715,8 @@ form.slack-invite .result.success {
 	display: block;
 	position: relative;
 	padding: 14px 35px 16px 55px;
-	background: #282F30;
-	box-shadow: 0px 0px 20px #050c0d;
+	background: #D3CFE5;
+	/* box-shadow: 0px 0px 20px #050c0d; */
 	transition: all .15s ease
 }
 
@@ -2726,7 +2726,7 @@ form.slack-invite .result.success {
 }
 
 .gep-games-list ul.list li a:hover {
-	background: #2E3839
+	background: #B2ADCC
 }
 
 .gep-games-list ul.list li a:before {
@@ -2737,7 +2737,7 @@ form.slack-invite .result.success {
 	bottom: 0;
 	right: 30px;
 	width: 1px;
-	background: #0b181a
+	/* background: #0b181a */
 }
 
 .gep-games-list ul.list li a:after {
@@ -2745,7 +2745,7 @@ form.slack-invite .result.success {
 	position: absolute;
 	display: block;
 	top: 50%;
-	right: 10px;
+	right: 20px;
 	margin-top: -5px;
 	width: 10px;
 	height: 10px;
@@ -2775,7 +2775,7 @@ form.slack-invite .result.success {
 .gep-games-list ul.legend {
 	display: flex;
 	justify-content: center;
-	background: #192123;
+	background: transparent;
 	padding: 9px 0
 }
 

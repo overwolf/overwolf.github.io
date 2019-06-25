@@ -1,3 +1,5 @@
+// import RemarkableReactRenderer from 'remarkable-react';
+
 // See https://docusaurus.io/docs/site-config for all the possible
 // site configuration options.
 
@@ -42,7 +44,11 @@ const siteConfig = {
 
   markdownPlugins: [
     // Highlight admonitions.
-    require('remarkable-admonitions')({ icon: 'svg-inline' })
+    require('remarkable-admonitions')({ icon: 'svg-inline' }),
+    // function remarkableReact(md) {
+    //   console.log(JSON.stringify(RemarkableReactRenderer));
+    //   md.renderer = new RemarkableReactRenderer();
+    // }
   ],
 
   // If you have users set above, you add it here:
@@ -76,7 +82,7 @@ const siteConfig = {
     'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js',
     'https://buttons.github.io/buttons.js',
     'https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js',
-    'https://cdnjs.cloudflare.com/ajax/libs/overlayscrollbars/1.7.3/js/OverlayScrollbars.min.js',
+    'https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js',
     '/js/code-block-buttons.js',
     '/developers-site/js/onload.js',
     '/developers-site/js/activeNavBar.js'
@@ -84,7 +90,7 @@ const siteConfig = {
   stylesheets: [
     'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/default.min.css',
     'https://fonts.googleapis.com/css?family=Lato%3A400%2C400i%2C700%2C900&ver=4.5.3',
-    'https://cdnjs.cloudflare.com/ajax/libs/overlayscrollbars/1.7.3/css/OverlayScrollbars.min.css',
+    'https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css',
     '/css/code-block-buttons.css',
   ],
 
