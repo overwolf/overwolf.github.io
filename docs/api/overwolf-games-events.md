@@ -77,16 +77,16 @@ overwolf.games.events.setRequiredFeatures(['stats', 'match'], function(info) {
 });
 ```
 
+:::tip
+In some cases you might add the listener to [`overwolf.games.events.onInfoUpdates2`](#oninfoupdates2) after the info update has already happened, so the app will miss the info-update event. For that reason, you should also call [`overwolf.games.events.getInfo()`](#getinfocallback) to get the current info state.
+:::
+
 ### 3. Listen to the relevant JS object
 
 The final step is to add a listener to the relevant JavaScript Event object in your app’s code:
 
-* For listening to game events, use the [`overwolf.games.events.onNewEvent`](#onNewEvents) object.
-* For listening to info updates, use the [`overwolf.games.events.onInfoUpdates2`](#onInfoUpdates2) object.
-
-:::tip
-In some cases you might add the listener to [`overwolf.games.events.onInfoUpdates2`](#onInfoUpdates2) after the info update has already happened, so the app will miss the info-update event. For that reason, you should also call [`overwolf.games.events.getInfo()`](#getInfo) to get the current info state.
-:::
+* For listening to game events, use the [`overwolf.games.events.onNewEvent`](#onnewevents) object.
+* For listening to info updates, use the [`overwolf.games.events.onInfoUpdates2`](#oninfoupdates2) object.
 
 ## setRequiredFeatures(features, callback)
 

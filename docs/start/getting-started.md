@@ -8,4 +8,4 @@ Learn how to develop apps in just few steps.
 
 ### Motivation, Core concepts, Principles.
 
-![alt-text](https://i.imgur.com/bszAzeV.png)
+![alt-text](assets/gettingStarted.png)
