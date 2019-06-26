@@ -1,7 +1,7 @@
 ---
 id: lol
-title: Game Events Status - LOL
-sidebar_label: LOL
+title: League of Legends Game Events Status
+sidebar_label: League of Legends
 ---
 
 <meta http-equiv="Content-Type" content="text/html charset=utf-8"/>
@@ -15,8 +15,6 @@ sidebar_label: LOL
 <script src="https://cdnjs.cloudflare.com/ajax/libs/remarkable/1.7.1/remarkable.js"></script>
 <!-- importing games metadata -->
 <script src="/developers-site/js/games_metadata.js"></script>
-
-Show Health Status of All the LOL Events.
 
 <div id="gameEventsStatus">
   <script> const GameID = 5426 </script>

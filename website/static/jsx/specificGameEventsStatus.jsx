@@ -99,7 +99,7 @@ class GameEventsStatus extends React.Component {
       case 2:
         css = 'medium';
         break;
-      case 1:
+      case 3:
         css = 'bad';
         break;
     }
