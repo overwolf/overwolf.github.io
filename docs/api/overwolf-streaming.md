@@ -2,7 +2,7 @@
 id: overwolf-streaming
 title: overwolf.streaming API
 sidebar_label: overwolf.streaming
----
+--- 
 
 This namespace contains all the functionality that allows the streaming of video/audio.
 
