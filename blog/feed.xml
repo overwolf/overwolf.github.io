@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <rss version="2.0">
     <channel>
-        <title>  Blog</title>
+        <title>Overwolf Blog</title>
         <link>https://overwolf.github.io/developers-site/blog</link>
-        <description>The best place to stay up-to-date with the latest   news and events.</description>
+        <description>The best place to stay up-to-date with the latest Overwolf news and events.</description>
         <lastBuildDate>Tue, 24 Oct 2017 06:00:00 GMT</lastBuildDate>
         <docs>http://blogs.law.harvard.edu/tech/rss</docs>
         <generator>Feed for Node.js</generator>
         <image>
-            <title>  Blog</title>
-            <url>https://overwolf.github.io/developers-site/img/ow-logo.svg</url>
+            <title>Overwolf Blog</title>
+            <url>https://overwolf.github.io/developers-site/img/headerIcon.svg</url>
             <link>https://overwolf.github.io/developers-site/blog</link>
         </image>
         <copyright>Copyright © 2019 Overwolf</copyright>
