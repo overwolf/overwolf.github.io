@@ -1,208 +1,135 @@
-/**
- * Copyright (c) 2017-present, Facebook, Inc.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- */
-
 const React = require('react');
 
-const CompLibrary = require('../../core/CompLibrary.js');
-
-const MarkdownBlock = CompLibrary.MarkdownBlock; /* Used to read markdown */
-const Container = CompLibrary.Container;
-const GridBlock = CompLibrary.GridBlock;
-
-class HomeSplash extends React.Component {
-  render() {
-    const {siteConfig, language = ''} = this.props;
-    const {baseUrl, docsUrl} = siteConfig;
-    const docsPart = `${docsUrl ? `${docsUrl}/` : ''}`;
-    const langPart = `${language ? `${language}/` : ''}`;
-    const docUrl = doc => `${baseUrl}${docsPart}${langPart}${doc}`;
-
-    const SplashContainer = props => (
-      <div className="homeContainer">
-        <div className="homeSplashFade">
-          <div className="wrapper homeWrapper">{props.children}</div>
-        </div>
+function EasilySection(props) {
+  const {config: siteConfig} = props;
+  const {baseUrl} = siteConfig;
+  return (
+    <section className="easily">
+      <div className="container">
+        <header>Easily create apps for PC gamers</header>
+        <p>Overlay, real-time game events, monetization, auto patching, Anti-Cheat compatibility and all that good stuff</p>
+        <a className="btn" href={`${baseUrl}docs/start/getting-started`}>Create app</a>
       </div>
-    );
+      <img className="wolf" src="img/BG_lightning.svg" />
+      <img className="wolf" src="img/robot.svg" />
+    </section>
+  );
+}
 
-    const Logo = props => (
-      <div className="projectLogo">
-        <img src={props.img_src} alt="Project Logo" />
-      </div>
-    );
+function TilesSection(props) {
+  const {config: siteConfig} = props;
+  return (
+    <section className="tiles">
+      <ul className="container">
+        <Tile config={siteConfig} header="Tutorials" imgSrc="img/tutorials.svg">
+          Newbie and pro web devs should start here
+        </Tile>
+        <Tile config={siteConfig} header="Get inspired" imgSrc="img/potion.svg">
+          See what others crafted
+        </Tile>
+        <Tile config={siteConfig} header="Read our scrolls" imgSrc="img/scroll.svg">
+          Documentation, API and stuff you can use
+        </Tile>
+      </ul>
+    </section>
+  );
+}
 
-    const ProjectTitle = () => (
-      <h2 className="projectTitle">
-        {siteConfig.homepage_title}
-        <small>{siteConfig.tagline}</small>
-      </h2>
-    );
-
-    const PromoSection = props => (
-      <div className="section promoSection">
-        <div className="promoRow">
-          <div className="pluginRowBlock">{props.children}</div>
-        </div>
-      </div>
-    );
-
-    const Button = props => (
-      <div className="pluginWrapper buttonWrapper">
-        <a className="button" href={props.href} target={props.target}>
+function Tile(props) {
+  const {config: siteConfig, header, imgSrc} = props;
+  const {baseUrl} = siteConfig;
+  return (
+    <li>
+      <a href={`${baseUrl}#`}>
+        <img className="icon" src={imgSrc} />
+        <header className="subtitle">{header}</header>
+        <p>
           {props.children}
-        </a>
-      </div>
-    );
+        </p>
+      </a>
+    </li>
+  )
+}
 
-    return (
-      <SplashContainer>
-        <Logo img_src={`${baseUrl}img/robot.png`} />
-        <div className="inner">
-          <ProjectTitle siteConfig={siteConfig} />
-          <PromoSection>
-            <Button href={docUrl('start/getting-started')}>Start</Button>
-            <Button href={docUrl('topics/best-practices-overview')}>Docs</Button>
-            <Button href={docUrl('api/overwolf-api-overview')}>API</Button>
-          </PromoSection>
-        </div>
-      </SplashContainer>
-    );
-  }
+function SdkSection(props) {
+  const {config: siteConfig} = props;
+  const {baseUrl} = siteConfig;
+  return (
+    <section className="sdk">
+      <div className="container">
+        <h1>Learn more about the Overwolf SDK</h1>
+        <ul>
+          <SdkItem config={siteConfig} classNameImg="extra-padding-on-desktop" imgSrc="img/create.svg">
+            <a href={`${baseUrl}#`}>Easily create a desktop app with overlay capabilities</a>, using just HTML and JS. Your own desktop app, desktop icon, auto updates, anti-cheat compatibility and the works... we do it all for you
+          </SdkItem>
+          <SdkItem className="reversed" config={siteConfig} imgSrc="img/events.svg">
+            <a href={`${baseUrl}#`}>Get access to real-time game events</a> for leading games and make your app as if it were integrated directly with the game itself
+          </SdkItem>
+          <SdkItem config={siteConfig} classNameImg="extra-padding-on-desktop" imgSrc="img/monetize.svg">
+            <a href={`${baseUrl}#`}>Monetize your app</a> and make money by showing forgivable ads (= ads on loading screens, when gamers don’t have anything better to do anyway). It’s easier than implementing AdSense, not affected by ad blockers, not obtrusive and our team will optimize the experience with you
+          </SdkItem>
+        </ul>
+      </div>
+    </section>
+  )
+}
+
+function SdkItem(props) {
+  const { imgSrc, className, classNameImg } = props;
+  return (
+    <li className={className}>
+      <p>
+        {props.children}
+      </p>
+      <div className={`sdk-graphic ${classNameImg}`}>
+        <img src={imgSrc} />
+      </div>
+    </li>
+  );
+}
+
+function GameDevSection(props) {
+  const {config: siteConfig} = props;
+  const {baseUrl} = siteConfig;
+  return (
+    <section className="game-dev">
+      <div className="container">
+        <h1>Game developer?</h1>
+        <p>
+          Community is power and a driver for retention.<br/>
+          Give your community tools to create valuable in-game content for your game with the Overwolf SDK
+        </p>
+        <a className="btn" href={`${baseUrl}#`}>Learn more</a>
+      </div>
+    </section>
+  );
+}
+
+function BlogSection(props) {
+  return (
+    <section className="blog">
+      <div className="container">
+        <header className="subtitle">The latest from our blog</header>
+        <div id="medium-widget"></div>
+        <script src="https://medium-widget.pixelpoint.io/widget.js"></script>
+        <script src="js/blog.js"></script>
+      </div>
+    </section>
+  );
 }
 
 class Index extends React.Component {
   render() {
-    const {config: siteConfig, language = ''} = this.props;
-    const {baseUrl} = siteConfig;
-
-    const Block = props => (
-      <Container
-        padding={['bottom', 'top']}
-        id={props.id}
-        background={props.background}>
-        <GridBlock
-          align="center"
-          contents={props.children}
-          layout={props.layout}
-        />
-      </Container>
-    );
-
-    const FeatureCallout = () => (
-      <div
-        className="productShowcaseSection paddingBottom"
-        style={{textAlign: 'center'}}>
-        <h2>Feature Callout</h2>
-        <MarkdownBlock>These are features of this project</MarkdownBlock>
-      </div>
-    );
-
-    const TryOut = () => (
-      <Block id="try">
-        {[
-          {
-            content: 'Talk about trying this out',
-            image: `${baseUrl}img/overwolf-logo_300x240.svg`,
-            imageAlign: 'left',
-            title: 'Try it Out',
-          },
-        ]}
-      </Block>
-    );
-
-    const Description = () => (
-      <Block background="dark">
-        {[
-          {
-            content:
-              'This is another description of how this project is useful',
-            image: `${baseUrl}img/overwolf-logo_300x240.svg`,
-            imageAlign: 'right',
-            title: 'Description',
-          },
-        ]}
-      </Block>
-    );
-
-    const LearnHow = () => (
-      <Block background="light">
-        {[
-          {
-            content: 'Easily create apps for PC gamers',
-            image: `${baseUrl}img/overwolf-logo_300x240.svg`,
-            imageAlign: 'right',
-            title: 'Overwolf Developers',
-          },
-        ]}
-      </Block>
-    );
-
-    const Features = () => (
-      <Block layout="fourColumn">
-        {[
-          {
-            content: 'This is the content of my feature',
-            /*image: `${baseUrl}img/overwolf-logo_300x240.svg`,*/
-            imageAlign: 'top',
-            title: 'Easily create a desktop app with overlay capabilities',
-          },
-          {
-            content: 'The content of my second feature',
-            /*image: `${baseUrl}img/overwolf-logo_300x240.svg`,*/
-            imageAlign: 'top',
-            title: 'Get access to real-time game events',
-          },
-		  {
-            content: 'This is the content of my third feature',
-            /*image: `${baseUrl}img/overwolf-logo_300x240.svg`,*/
-            imageAlign: 'top',
-            title: 'Monetize your app',
-          },
-		 
-        ]}
-      </Block>
-    );
-
-    const Showcase = () => {
-      if ((siteConfig.users || []).length === 0) {
-        return null;
-      }
-
-      const showcase = siteConfig.users
-        .filter(user => user.pinned)
-        .map(user => (
-          <a href={user.infoLink} key={user.infoLink}>
-            <img src={user.image} alt={user.caption} title={user.caption} />
-          </a>
-        ));
-
-      const pageUrl = page => baseUrl + (language ? `${language}/` : '') + page;
-
-      return (
-        <div className="productShowcaseSection paddingBottom">
-          <h2>Who is Using This?</h2>
-          <p>This project is used by all these people</p>
-          <div className="logos">{showcase}</div>
-          <div className="more-users">
-            <a className="button" href={pageUrl('users.html')}>
-              More {siteConfig.title} Users
-            </a>
-          </div>
-        </div>
-      );
-    };
-
+    const {config: siteConfig} = this.props;
     return (
-      <div>
-        <HomeSplash siteConfig={siteConfig} language={language} />		
-        <div className="mainContainer">
-       
-		  <Features />
-        </div>
+      <div className="body home blog">
+        <main id="content" className="main-content" role="main">
+          <EasilySection config={siteConfig}></EasilySection>
+          <TilesSection config={siteConfig}></TilesSection>
+          <SdkSection config={siteConfig}></SdkSection>
+          <GameDevSection config={siteConfig}></GameDevSection>
+          <BlogSection></BlogSection>
+        </main>
       </div>
     );
   }

@@ -1,9 +1,4 @@
-/**
- * Copyright (c) 2017-present, Facebook, Inc.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- */
+// import RemarkableReactRenderer from 'remarkable-react';
 
 // See https://docusaurus.io/docs/site-config for all the possible
 // site configuration options.
@@ -21,21 +16,16 @@ const users = [
 ];
 
 const siteConfig = {
+  wrapPagesHTML: true,
   title: ' ', // Title for your website.
-  homepage_title: 'Overwolf Developers',
-  tagline: 'Easily create apps for PC gamers',
+  homepage_title: 'Easily create apps for PC gamers',
+  tagline: 'Overlay, real-time game events, monetization, auto patching, Anti-Cheat compatibility and all that good stuff',
   url: 'https://overwolf.github.io', // Your website URL
   baseUrl: '/developers-site/', // Base URL for your project */
-  // For github.io type URLs, you would set the url and baseUrl like:
-  //   url: 'https://facebook.github.io',
-  //   baseUrl: '/test-site/',
 
   // Used for publishing and more
   projectName: 'developers-site',
   organizationName: 'overwolf',
-  // For top-level user or org sites, the organization is still the same.
-  // e.g., for the https://JoelMarcey.github.io site, it would be set like...
-  //   organizationName: 'JoelMarcey'
 
   // For no header links in the top nav bar -> headerLinks: [],
   headerLinks: [
@@ -54,37 +44,30 @@ const siteConfig = {
 
   markdownPlugins: [
     // Highlight admonitions.
-    require('remarkable-admonitions')({ icon: 'svg-inline' })
+    require('remarkable-admonitions')({ icon: 'svg-inline' }),
+    // function remarkableReact(md) {
+    //   console.log(JSON.stringify(RemarkableReactRenderer));
+    //   md.renderer = new RemarkableReactRenderer();
+    // }
   ],
 
   // If you have users set above, you add it here:
   users,
 
   /* path to images for header/footer */
-  headerIcon: 'img/ow-logo.svg',
+  title: 'Overwolf',
+  headerIcon: 'img/headerIcon.svg',
   footerIcon: 'img/ow-logo.svg',
   favicon: 'img/ow-favicon.ico',
 
   /* Colors for website */
   colors: {
-    primaryColor: '#20232a', //2E8555
-    secondaryColor: '#205C3B',
+    primaryColor: '#201C33', //2E8555
+    secondaryColor: '#201C33',
   },
 
-  /* Custom fonts for website */
-  /*
-  fonts: {
-    myFont: [
-      "Times New Roman",
-      "Serif"
-    ],
-    myOtherFont: [
-      "-apple-system",
-      "system-ui"
-    ]
-  },
-  */
   editUrl: 'https://github.com/overwolf/developers-site/tree/master/docs/',
+
   // This copyright info is used in /core/Footer.js and blog RSS/Atom feeds.
   copyright: `Copyright © ${new Date().getFullYear()} Overwolf`,
 
@@ -94,8 +77,22 @@ const siteConfig = {
   },
 
   // Add custom scripts here that would be placed in <script> tags.
-  scripts: ['https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js', 'https://buttons.github.io/buttons.js',  'https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js','/js/code-block-buttons.js'],
-  stylesheets: ['https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/default.min.css', '/css/code-block-buttons.css'],
+  scripts: [
+    'https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js',
+    'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js',
+    'https://buttons.github.io/buttons.js',
+    'https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js',
+    'https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js',
+    '/js/code-block-buttons.js',
+    '/developers-site/js/onload.js',
+    '/developers-site/js/activeNavBar.js'
+  ],
+  stylesheets: [
+    'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/default.min.css',
+    'https://fonts.googleapis.com/css?family=Lato%3A400%2C400i%2C700%2C900&ver=4.5.3',
+    'https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css',
+    '/css/code-block-buttons.css',
+  ],
 
   // On page navigation for the current documentation page.
   onPageNav: 'separate',
@@ -117,7 +114,15 @@ const siteConfig = {
     zIndex: 100,
     backgroundColor: '#20232A',
   },
-   docsSideNavCollapsible: true
+   docsSideNavCollapsible: true,
+
+   algolia: {
+     apiKey: 'fe54eceb2ea7e0780cc7030fcd4020d4',
+     indexName: 'overwolf',
+     algoliaOptions: {} // https://www.algolia.com/doc/api-reference/api-parameters/
+   }
+   // algolia stylings: https://community.algolia.com/docsearch/styling.html
+   // algolia config: https://github.com/algolia/docsearch-configs/blob/master/configs/overwolf.json
 
   // You may provide arbitrary config keys to be used as needed by your
   // template. For example, if you need your repo's URL...
