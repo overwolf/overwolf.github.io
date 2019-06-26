@@ -105,3 +105,7 @@ table th {
   height: 30px;
   fill: currentColor;
 }
+
+.medium-widget {
+  padding: 0;
+}

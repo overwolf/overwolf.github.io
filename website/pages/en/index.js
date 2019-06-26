@@ -105,7 +105,11 @@ class Index extends React.Component {
           <section className="blog">
             <div className="container">
               <header className="subtitle">The latest from our blog</header>
-              <ul><li><span className="date">Jun 02, 2019</span><a href="https://medium.com/p/aeefc437736b" target="_blank"><span>7 Customer Support Tactics That Win Users Over</span></a></li><li><span className="date">May 26, 2019</span><a href="https://medium.com/p/64961ad1ee1b" target="_blank"><span>Winner Announcement: PUBG Dev Challenge</span></a></li><li><span className="date">May 02, 2019</span><a href="https://medium.com/p/3a6b4dc28539" target="_blank"><span>Unlock the True Potential of Your Community with UGC</span></a></li></ul>		</div>
+              <div id="medium-widget"></div>
+              <script src="https://medium-widget.pixelpoint.io/widget.js"></script>
+              <script src="js/blog.js"></script>
+              {/* <ul><li><span className="date">Jun 02, 2019</span><a href="https://medium.com/p/aeefc437736b" target="_blank"><span>7 Customer Support Tactics That Win Users Over</span></a></li><li><span className="date">May 26, 2019</span><a href="https://medium.com/p/64961ad1ee1b" target="_blank"><span>Winner Announcement: PUBG Dev Challenge</span></a></li><li><span className="date">May 02, 2019</span><a href="https://medium.com/p/3a6b4dc28539" target="_blank"><span>Unlock the True Potential of Your Community with UGC</span></a></li></ul> */}
+            </div>
           </section>
           {/* -------------------------------------------------------- */}
         </main>
