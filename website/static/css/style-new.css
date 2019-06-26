@@ -92,3 +92,16 @@ code {
 table th {
   background: #D3CFE5;
 }
+
+.gep-game .search-game .search-submit img {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  width: 30px;
+  height: 30px;
+  fill: currentColor;
+}

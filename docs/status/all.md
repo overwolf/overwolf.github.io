@@ -19,4 +19,5 @@ sidebar_label: All Games Events Status
 Show Health Status of All the Games
 
 <div id="gameEventsStatus">
-<script type="text/jsx" src="/developers-site/jsx/react.jsx"></script>
+  <script type="text/jsx" src="/developers-site/jsx/gameEventsStatus.jsx"></script>
+</div>

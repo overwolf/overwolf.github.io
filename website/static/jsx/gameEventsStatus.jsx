@@ -26,7 +26,7 @@ class GameEventsStatus extends React.Component {
   }
 
   componentDidMount() {
-    fetch('https://game-events-status.overwolf.com/all_prod.json', { })
+    fetch('https://game-events-status.overwolf.com/all_prod.json')
       .then(response => response.json())
       .then(response => {
         const games = [];

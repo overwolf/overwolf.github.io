@@ -2827,7 +2827,8 @@ form.slack-invite .result.success {
 	padding-top: 10px;
 	line-height: 46px;
 	font-size: 36px;
-	color: #00BCD4
+  color: #0D0A1A;
+  font-weight: 400;
 }
 
 .gep-game .game-title img {
@@ -2868,7 +2869,7 @@ form.slack-invite .result.success {
 	margin: 0 10px 20px;
 	height: 40px;
 	color: #8a9ea1;
-	background: #192123
+	background: #D3CFE5
 }
 
 .gep-game .search-game .search-input {
@@ -2878,12 +2879,12 @@ form.slack-invite .result.success {
 	padding-left: 45px;
 	height: 40px;
 	font-weight: 300;
-	transition: all .15s ease
+  transition: all .15s ease;
 }
 
 .gep-game .search-game:hover .search-input,
 .gep-game .search-game .search-input:focus {
-	background: #282F30
+	background: #B2ADCC
 }
 
 .gep-game .search-game .search-submit {
@@ -2939,7 +2940,7 @@ form.slack-invite .result.success {
 .gep-game .game-data h4 {
 	margin: 0;
 	padding: 20px 0 15px 20px;
-	background: #192123;
+	background: #D3CFE5;
 	font-weight: 400;
 	font-size: 18px
 }
@@ -2948,7 +2949,7 @@ form.slack-invite .result.success {
 	display: flex;
 	flex-direction: column;
 	padding: 0;
-	background: #192123
+	background: #D3CFE5
 }
 
 .gep-game .game-data li {
@@ -2956,7 +2957,7 @@ form.slack-invite .result.success {
 	position: relative;
 	margin: 0;
 	width: 100%;
-	border-top: 1px solid #000;
+	border-top: 1px solid #F4F2FF;
 	padding: 11px 0 12px 45px;
 	line-height: 18px;
 	font-size: 14px;
