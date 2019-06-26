@@ -5,7 +5,7 @@ sidebar_label: overwolf.io
 ---
 
 Use the `overwolf.io` API to check if  a certain file exists or to write content to a file.  
-For more I/O functionalities, please use our simple I/O plugin.  
+For more I/O functionalities, please use our [simple I/O plugin](../topics/simple-io-plugin).  
 
 ## Methods Reference
 
@@ -16,7 +16,7 @@ For more I/O functionalities, please use our simple I/O plugin.
 
 ## Types Reference
 
-* [`eEncoding()`](#eencoding)
+* [`eEncoding`](#eencoding)
 
 ## fileExists(filePath, callback)
 
@@ -56,7 +56,7 @@ Parameter            | Type                    | Description                    
 -------------------- | ----------------------- | --------------------------------------------------------------------------------------- |
 filePath             | string                  | The path to check for                                                                   |
 content              | string                  | The content to write                                                                    |
-encoding             | [eEncoding](#eEncoding) enmum | The encoding to use                                                               |
+encoding             | [eEncoding](#eencoding) enum | The encoding to use                                                               |
 triggerUacIfRequired | bool                    | If additional permissions are required, allows the triggering of the Windows UAC dialog |
 callback             | function                | Returns with the result                                                                 |   
    
@@ -81,8 +81,8 @@ callback             | function                | Returns with the result        
 Parameter | Type | Description |
 ------------ | ------------ | ------------ |
 filePath | string | The full path of the targeted file|
-encoding | [eEncoding](#eEncoding) enum | The encoding to use |
-callback | function | Returns with the result |   
+encoding | [eEncoding](#eencoding) enum | The encoding to use |
+callback | function | Returns with the result |
    
 #### Callback argument: Success
 

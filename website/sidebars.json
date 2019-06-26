@@ -9,14 +9,14 @@
 			"Test Your App":
 			["start/how-to-test-your-app", "start/technical-checklist", "start/marketing-checklist"],
 			"Submit Your App":
-			["start/app-creation-process", "start/submit-app-proposal", "start/submit-your-app-to-the-store", "start/submit-an-app-update", "start/add-a-knowledge-base-to-app"],
+			["start/app-creation-process", "start/submit-app-proposal", "start/submit-your-app-to-the-store", "start/submit-an-app-update", "start/custom-installer-for-your-app", "start/promoting-your-app", "start/add-a-knowledge-base-to-app"],
 			"Monetize Your App":
 			["start/monetization-overview", "start/ads-sdk-overview", "start/ads-sdk-getting-started", "start/ads-sdk-options", "start/ads-sdk-interaction", "start/ads-sdk-versions"]
 	},
     "docs": {
         
 		"Best Practices":
-			["topics/best-practices-overview", "topics/what-kind-of-apps-works", "topics/app-specific-experience", "topics/first-time-user-experience", "topics/launch-time-performance", "topics/user-flow-error-handling", "topics/window-size", "topics/buttons-layout-usage", "topics/communication-guidelines", "topics/games-settings"],
+			["topics/best-practices-overview", "topics/what-kind-of-apps-works", "topics/app-specific-experience", "topics/first-time-user-experience", "topics/launch-time-performance", "topics/user-flow-error-handling", "topics/window-size", "topics/buttons-layout-usage", "topics/communication-guidelines", "topics/user-flow-and-error-handling","topics/games-settings", "topics/hotkeys-best-practices"],
 		"Case Studies":
 			["topics/case-study-herowatch"],
 		"Using Plugins":
@@ -40,7 +40,7 @@
 				{
 				"type": "subcategory",
                 "label": "Games Events List",
-				"ids": ["api/games-ids", "api/overwolf-games-events-lol", "api/overwolf-games-events-ancestors-legacy", "api/overwolf-games-events-apex-legends", "api/overwolf-games-events-autochess","api/overwolf-games-events-csgo","api/overwolf-games-events-dota2","api/overwolf-games-events-fortnite","api/overwolf-games-events-pubg","api/overwolf-games-events-splitgate","api/overwolf-games-events-heartstone","api/overwolf-games-events-battlerite","api/overwolf-games-events-rocket-league","api/overwolf-games-events-rainbow-six","api/overwolf-games-events-wot","api/overwolf-games-events-wow","api/overwolf-games-events-smite","api/overwolf-games-events-warface","api/overwolf-games-events-robocraft"]
+				"ids": ["api/games-ids", "api/overwolf-games-events-lol", "api/overwolf-games-events-ancestors-legacy", "api/overwolf-games-events-apex-legends", "api/overwolf-games-events-autochess","api/overwolf-games-events-csgo","api/overwolf-games-events-dota2","api/overwolf-games-events-fortnite","api/overwolf-games-events-pubg","api/overwolf-games-events-splitgate","api/overwolf-games-events-heartstone","api/overwolf-games-events-battlerite","api/overwolf-games-events-rocket-league","api/overwolf-games-events-rainbow-six","api/overwolf-games-events-wot","api/overwolf-games-events-wow","api/overwolf-games-events-smite","api/overwolf-games-events-warface","api/overwolf-games-events-robocraft","api/games-external-apis"]
 			},  {
 				"type": "subcategory",
 				"label": "Games Launchers List",
@@ -62,8 +62,8 @@
     },
 	"service": {
         "Games Events Status": 
-			["status/all", "status/lol", "status/csgo", "status/apex", "status/fortnite", "status/rainbow-six-siege", "status/hearthstone"]
-    },
+			["status/all", "status/lol", "status/csgo", "status/apex", "status/fortnite", "status/rainbow-six-siege", "status/hearthstone","status/auto-chess","status/pubg","status/dota2","status/rocket-league","status/world-of-tanks","status/splitgate","status/overwatch"]
+		},
 	"support": {
         "Support": 
 			["support/contact-us", "support/create-ticket", "support/request-feature"],

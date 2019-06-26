@@ -5,4 +5,4 @@ sidebar_label:  How to Test Your App
 ---
 
 
-info
+http://developers.overwolf.com/your-app/how-to-test-your-app/

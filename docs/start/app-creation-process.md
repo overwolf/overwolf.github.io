@@ -4,5 +4,4 @@ title: App Creation Process
 sidebar_label: App Creation Process
 ---
 
-
-info
+![alt-text](https://i.imgur.com/ZbEsVbZ.png)

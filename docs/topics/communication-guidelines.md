@@ -4,7 +4,9 @@ title: Communication Guidelines
 sidebar_label: Communication Guidelines
 ---
 
+## The latest from our blog
 
-You created your app and you want gamers to know about it and get them to use it. As part of that, you will probably work on marketing and on creating the identity of your brand online.
+<div id="medium-widget"></div>
+    <script src="https://medium-widget.pixelpoint.io/widget.js"></script>
+    <script>MediumWidget.Init({renderTo: '#medium-widget', params: {"resource":"https://medium.com/overwolf-developers","postsPerLine":3,"limit":3,"picture":"none","fields":["description","publishAt"],"ratio":"landscape"}})</script>
 
-To make sure that your users don’t get confused, you will need to explain the users that they are going to experience Overwolf as part of the process.

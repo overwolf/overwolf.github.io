@@ -12,3 +12,6 @@ If you are an app developer who wishes to show ads in your app, please contact O
 
 ### Getting help and reporting bugs
 If you have encountered problems with this library, please let us know by contacting developers@overwolf.com, or talk directly to us through the Developers Slack.
+
+## also add this document content: 
+http://developers.overwolf.com/monetize-your-app/overwolf-ads-sdk/getting-started/
