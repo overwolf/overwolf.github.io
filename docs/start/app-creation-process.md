@@ -12,7 +12,7 @@ We believe that in order to create a truly valuable and quality application, a m
 
 To help you get the best out of your idea and make your development process smooth and easy, we will accompany you at every step in the process, from assisting with your initial concept to launching the finished product. We know that creating a great app takes a lot of time and effort. Let us help you turn your idea into a great app.
 
-### Get inspired
+## Get inspired
 
 Have a great idea? Want to change how gamers play their favorite games? Need a little inspiration to get started? Take a look at our [app showcase!](../topics/what-kind-of-apps-works) It’s the perfect place to check out some awesome Overwolf apps, and it’s a great way to gain insight into what kinds of apps you should develop.
 

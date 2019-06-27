@@ -1,7 +1,7 @@
 {
 	"start": {
 		"Getting Started": 
-			["start/getting-started", "start/sdk-introduction", {
+			["start/getting-started", "start/app-creation-process", "start/sdk-introduction", {
                 "type": "subcategory",
                 "label": "Creating a Demo App",
                 "ids": ["start/creating-demo-app", "start/creating-secondary-window", "start/communication-between-windows", "start/using-dev-tools"]
@@ -9,7 +9,7 @@
 			"Test Your App":
 			["start/how-to-test-your-app", "start/technical-checklist", "start/marketing-checklist"],
 			"Submit Your App":
-			["start/app-creation-process", "start/submit-app-proposal", "start/submit-your-app-to-the-store", "start/submit-an-app-update", "start/custom-installer-for-your-app", "start/promoting-your-app", "start/add-a-knowledge-base-to-app"],
+			["start/submit-app-proposal", "start/submit-your-app-to-the-store", "start/submit-an-app-update", "start/custom-installer-for-your-app", "start/promoting-your-app", "start/add-a-knowledge-base-to-app"],
 			"Monetize Your App":
 			["start/monetization-overview", "start/ads-sdk-overview", "start/ads-sdk-getting-started", "start/ads-sdk-options", "start/ads-sdk-interaction", "start/ads-sdk-versions"]
 	},

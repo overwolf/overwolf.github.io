@@ -133,7 +133,7 @@ overwolf.streaming.onStreamingWarning.addListener(function(result) {
 });
 ```
 
-### 4.Register to onStreamingSourceImageChanged
+### 4. Register to onStreamingSourceImageChanged
 
  Optionally register to `onStreamingSourceImageChanged`, to get an event when the user switched between capturing his desktop and the game.
 
