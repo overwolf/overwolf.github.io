@@ -32,7 +32,7 @@ You can call the object properties to get the requested path:
 * startMenu
 * localAppData
 
-#### Usage Example:
+#### Usage Example
 
 ```javascript
 string commonAppDataFolder = overwolf.io.paths.commonAppData;
