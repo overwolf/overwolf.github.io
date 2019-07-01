@@ -16,7 +16,7 @@ sidebar_label: All Games Events Status
 <!-- importing games metadata -->
 <script src="/developers-site/js/games_metadata.js"></script>
 
-Show Health Status of All the Games
+Pick any game to see its full events list.
 
 <div id="gameEventsStatus">
   <script type="text/jsx" src="/developers-site/jsx/gameEventsStatus.jsx"></script>

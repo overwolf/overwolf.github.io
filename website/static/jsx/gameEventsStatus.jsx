@@ -72,8 +72,6 @@ class GameEventsStatus extends React.Component {
 
     return (
       <article className="hentry">
-        <h1 className="entry-title">Game events status</h1>
-        <p>Pick any game to see its full events list</p>
         <div className="gep-games-list">
           <GamesList>
             {list}
