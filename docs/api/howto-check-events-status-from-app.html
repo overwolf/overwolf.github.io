@@ -1,5 +1,5 @@
-<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Check The Events Status From Your App · Overwolf</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="&lt;p&gt;Show how to check the games events status from your app code, using our API.&lt;/p&gt;
-"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Check The Events Status From Your App · Overwolf"/><meta property="og:type" content="website"/><meta property="og:url" content="https://overwolf.github.io/developers-site/"/><meta property="og:description" content="&lt;p&gt;Show how to check the games events status from your app code, using our API.&lt;/p&gt;
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Check The Events Status From Your App · Overwolf</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="&lt;p&gt;As recommended in the user flow and error handling page, errors and warnings need to be communicated to your users.&lt;/p&gt;
+"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Check The Events Status From Your App · Overwolf"/><meta property="og:type" content="website"/><meta property="og:url" content="https://overwolf.github.io/developers-site/"/><meta property="og:description" content="&lt;p&gt;As recommended in the user flow and error handling page, errors and warnings need to be communicated to your users.&lt;/p&gt;
 "/><meta property="og:image" content="https://overwolf.github.io/developers-site/img/docusaurus.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://overwolf.github.io/developers-site/img/docusaurus.png"/><link rel="shortcut icon" href="/developers-site/img/ow-favicon.ico"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/default.min.css"/><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato%3A400%2C400i%2C700%2C900&amp;ver=4.5.3"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css"/><link rel="stylesheet" href="/css/code-block-buttons.css"/><script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js"></script><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script><script type="text/javascript" src="/js/code-block-buttons.js"></script><script type="text/javascript" src="/developers-site/js/onload.js"></script><script type="text/javascript" src="/developers-site/js/activeNavBar.js"></script><script src="https://unpkg.com/vanilla-back-to-top@7.1.14/dist/vanilla-back-to-top.min.js"></script><script>
         document.addEventListener('DOMContentLoaded', function() {
           addBackToTop(
@@ -62,8 +62,93 @@
                 };
               }
             });
-        </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><a class="edit-page-link button" href="https://github.com/overwolf/developers-site/tree/master/docs/api/howto-check-events-status-from-app.md" target="_blank" rel="noreferrer noopener">Edit</a><h1 class="postHeaderTitle">Check The Events Status From Your App</h1></header><article><div><span><p>Show how to check the games events status from your app code, using our API.</p>
-</span></div></article></div><div class="docLastUpdate"><em>Last updated on 2019-6-18 by eransharv</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/developers-site/docs/api/overwolf-games-events"><span class="arrow-prev">← </span><span>overwolf.games.events</span></a><a class="docs-next button" href="/developers-site/docs/api/overwolf-games-launchers"><span>overwolf.games.launchers</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"></nav></div><footer class="site-footer"><div class="container"><ul><li>Legal</li><li><a href="/terms/developer-terms/">Developer&#x27;s terms</a></li><li><a href="/terms/app-terms/">App terms</a></li><li><a href="http://www.overwolf.com/legal/" target="_blank">Overwolf terms</a></li><li><a href="http://www.overwolf.com/legal/#Privacy-policy" target="_blank">Overwolf Privacy policy</a></li></ul><ul><li>Support</li><li><a href="https://discordapp.com/invite/cjjrZDp" target="_blank">Discord</a></li><li><a href="http://developers.overwolf.com/get-help/slack/">Slack</a></li><li><a href="https://www.facebook.com/OverwolfDevs" target="_blank">Facebook</a></li><li><a href="https://twitter.com/OverwolfDevs" target="_blank">Twitter</a></li></ul><ul><li><a href="/documentation/">Documentation</a></li><li><a href="/documentation/sdk/overwolf/">API</a></li><li><a href="/documentation/sdk/overwolf/plugins/">Plugins</a></li></ul><ul><li>Information</li><li><a href="/changelog/">What&#x27;s new</a></li><li><a href="http://www.overwolf.com/careers/">Careers</a></li><li><a href="https://play.overwolf.com/fund/" target="_blank">Fund</a></li></ul></div></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+        </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><a class="edit-page-link button" href="https://github.com/overwolf/developers-site/tree/master/docs/api/howto-check-events-status-from-app.md" target="_blank" rel="noreferrer noopener">Edit</a><h1 class="postHeaderTitle">Check The Events Status From Your App</h1></header><article><div><span><p>As recommended in the user flow and error handling page, errors and warnings need to be communicated to your users.
+A simple and accurate message regarding the state of the app will contribute to better user experience and saves time and bad user reviews.</p>
+<h2><a class="anchor" aria-hidden="true" id="possible-events-health-statuses"></a><a href="#possible-events-health-statuses" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Possible events health statuses</h2>
+<p>Each game that supports Overwolf events (full list here) can be in 4 health states:</p>
+<table>
+<thead>
+<tr><th>Status code</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>0</td><td>unsupported</td></tr>
+<tr><td>1</td><td>green (Good to go)</td></tr>
+<tr><td>2</td><td>yellow (Some game events may be unavailable)</td></tr>
+<tr><td>3</td><td>red (Game events are currently unavailable)</td></tr>
+</tbody>
+</table>
+<p>Same for specific event health state: possible state values are green, yellow or red.</p>
+
+    <div class="admonition admonition-important">
+      <div class="admonition-heading">
+        <h5><div class="admonition-icon"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="16" viewBox="0 0 14 16"><path fill-rule="evenodd" d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"/></svg></div> important</h5>
+      </div>
+      <div class="admonition-content">
+    <p>statuses are being updated automatically so there might be a small delay (10~ min) between the real-time status to our server status.</p>
+</div></div><h2><a class="anchor" aria-hidden="true" id="get-the-status-for-all-games"></a><a href="#get-the-status-for-all-games" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>get the status for all games</h2>
+<p>If your app using Overwolf events, we highly recommend checking at least the general status with the above endpoint. If it’s Yellow or Red, you should drill down as needed, to query a specific event state – as your app may not function correctly and you should communicate it to your users.</p>
+<p>To get the general event’s health status of ALL the games you can query this endpoint, that returns a JSON with the supported games and their general health status:</p>
+<pre><code class="hljs css language-json">https://game-events-status.overwolf.com/gamestatus_prod.json
+</code></pre>
+<h4><a class="anchor" aria-hidden="true" id="data-example-success"></a><a href="#data-example-success" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Data Example: Success</h4>
+<pre><code class="hljs css language-json">[
+    {<span class="hljs-attr">"game_id"</span>:<span class="hljs-number">10878</span>,<span class="hljs-attr">"state"</span>:<span class="hljs-number">0</span>},
+    {<span class="hljs-attr">"game_id"</span>:<span class="hljs-number">7764</span>,<span class="hljs-attr">"state"</span>:<span class="hljs-number">1</span>},
+    {<span class="hljs-attr">"game_id"</span>:<span class="hljs-number">7314</span>,<span class="hljs-attr">"state"</span>:<span class="hljs-number">1</span>},
+    {<span class="hljs-attr">"game_id"</span>:<span class="hljs-number">21216</span>,<span class="hljs-attr">"state"</span>:<span class="hljs-number">1</span>},
+    {<span class="hljs-attr">"game_id"</span>:<span class="hljs-number">10844</span>,<span class="hljs-attr">"state"</span>:<span class="hljs-number">3</span>,<span class="hljs-attr">"maintenance_msg"</span>:<span class="hljs-string">"Events are disabled"</span>,<span class="hljs-attr">"disabled"</span>:<span class="hljs-literal">true</span>},
+    {<span class="hljs-attr">"game_id"</span>:<span class="hljs-number">10906</span>,<span class="hljs-attr">"state"</span>:<span class="hljs-number">1</span>},
+    {<span class="hljs-attr">"game_id"</span>:<span class="hljs-number">10798</span>,<span class="hljs-attr">"state"</span>:<span class="hljs-number">1</span>},
+    {<span class="hljs-attr">"game_id"</span>:<span class="hljs-number">6365</span>,<span class="hljs-attr">"state"</span>:<span class="hljs-number">1</span>}
+]
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="get-the-status-for-specific-game"></a><a href="#get-the-status-for-specific-game" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>get the status for specific game</h2>
+<p>If your app using Overwolf game events, we highly recommend to check the health status of these events and communicate it to your app users as needed.</p>
+<p>To get the event’s health status for a specific game, you can query this endpoint, that returns a JSON with all the events statuses for a particular game:</p>
+<pre><code class="hljs css language-json">developers.overwolf.com/game-events/[your Game ID]_prod.json
+</code></pre>
+<p>Note that you should add your Game ID to this endpoint.<br>
+For example, to get the LOL (Game ID 5426) event’s health status, you should call:</p>
+<pre><code class="hljs css language-json">https://developers.overwolf.com/game-events/5426_prod.json
+</code></pre>
+<h4><a class="anchor" aria-hidden="true" id="data-example-success-1"></a><a href="#data-example-success-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Data Example: Success</h4>
+<pre><code class="hljs css language-json">{
+    <span class="hljs-attr">"game_id"</span>: <span class="hljs-number">5426</span>,
+    <span class="hljs-attr">"state"</span>: <span class="hljs-number">1</span>,
+    <span class="hljs-attr">"features"</span>: [{
+            <span class="hljs-attr">"name"</span>: <span class="hljs-string">"abilities"</span>,
+            <span class="hljs-attr">"state"</span>: <span class="hljs-number">1</span>,
+            <span class="hljs-attr">"keys"</span>: [{
+                <span class="hljs-attr">"name"</span>: <span class="hljs-string">"ability"</span>,
+                <span class="hljs-attr">"type"</span>: <span class="hljs-number">0</span>,
+                <span class="hljs-attr">"state"</span>: <span class="hljs-number">1</span>
+            }, {
+                <span class="hljs-attr">"name"</span>: <span class="hljs-string">"usedAbility"</span>,
+                <span class="hljs-attr">"type"</span>: <span class="hljs-number">0</span>,
+                <span class="hljs-attr">"state"</span>: <span class="hljs-number">1</span>
+            }]
+        }
+    },
+    {
+        <span class="hljs-attr">"name"</span>: <span class="hljs-string">"assist"</span>,
+        <span class="hljs-attr">"state"</span>: <span class="hljs-number">1</span>,
+        <span class="hljs-attr">"keys"</span>: [{
+            <span class="hljs-attr">"name"</span>: <span class="hljs-string">"assist"</span>,
+            <span class="hljs-attr">"type"</span>: <span class="hljs-number">0</span>,
+            <span class="hljs-attr">"state"</span>: <span class="hljs-number">1</span>
+        }]
+    }
+    <span class="hljs-string">"name"</span>: <span class="hljs-string">"teams"</span>,
+    <span class="hljs-string">"state"</span>: <span class="hljs-number">1</span>,
+    <span class="hljs-string">"keys"</span>: [{
+        <span class="hljs-attr">"name"</span>: <span class="hljs-string">"teams"</span>,
+        <span class="hljs-attr">"type"</span>: <span class="hljs-number">1</span>,
+        <span class="hljs-attr">"state"</span>: <span class="hljs-number">1</span>,
+        <span class="hljs-attr">"category"</span>: <span class="hljs-string">"game_info"</span>
+    }]
+}
+</code></pre>
+</span></div></article></div><div class="docLastUpdate"><em>Last updated on 2019-7-1 by eransharv</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/developers-site/docs/api/overwolf-games-events"><span class="arrow-prev">← </span><span>overwolf.games.events</span></a><a class="docs-next button" href="/developers-site/docs/api/overwolf-games-launchers"><span>overwolf.games.launchers</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#possible-events-health-statuses">Possible events health statuses</a></li><li><a href="#get-the-status-for-all-games">get the status for all games</a></li><li><a href="#get-the-status-for-specific-game">get the status for specific game</a></li></ul></nav></div><footer class="site-footer"><div class="container"><ul><li>Legal</li><li><a href="/terms/developer-terms/">Developer&#x27;s terms</a></li><li><a href="/terms/app-terms/">App terms</a></li><li><a href="http://www.overwolf.com/legal/" target="_blank">Overwolf terms</a></li><li><a href="http://www.overwolf.com/legal/#Privacy-policy" target="_blank">Overwolf Privacy policy</a></li></ul><ul><li>Support</li><li><a href="https://discordapp.com/invite/cjjrZDp" target="_blank">Discord</a></li><li><a href="http://developers.overwolf.com/get-help/slack/">Slack</a></li><li><a href="https://www.facebook.com/OverwolfDevs" target="_blank">Facebook</a></li><li><a href="https://twitter.com/OverwolfDevs" target="_blank">Twitter</a></li></ul><ul><li><a href="/documentation/">Documentation</a></li><li><a href="/documentation/sdk/overwolf/">API</a></li><li><a href="/documentation/sdk/overwolf/plugins/">Plugins</a></li></ul><ul><li>Information</li><li><a href="/changelog/">What&#x27;s new</a></li><li><a href="http://www.overwolf.com/careers/">Careers</a></li><li><a href="https://play.overwolf.com/fund/" target="_blank">Fund</a></li></ul></div></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
                 document.addEventListener('keyup', function(e) {
                   if (e.target !== document.body) {
                     return;
