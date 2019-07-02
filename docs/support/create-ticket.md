@@ -6,4 +6,6 @@ sidebar_label: Report a Bug
 
 ## Create new bug or Issue
 
-To report a bug or an issue, please visit our Discuss site: https://discuss.developers.overwolf.com.
+To report a bug or an issue, please visit our Discuss site: 
+
+https://discuss.developers.overwolf.com.

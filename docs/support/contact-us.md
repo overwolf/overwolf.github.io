@@ -6,7 +6,7 @@ sidebar_label: Contact Us
 
 ## Send Us an email
 
-For any of your needs, we’ll be happy to hear you out via email: [mailto:developers@overwolf.com](developers@overwolf.com)
+For any of your needs, we’ll be happy to hear you out via email: [developers@overwolf.com](mailto:developers@overwolf.com).
 
 ## Join our Slack
 Join our Dev Community on Slack.
@@ -23,3 +23,4 @@ https://twitter.com/OverwolfDevs
 https://www.facebook.com/OverwolfDevs
 
 ## Subscribe to our Newsletter
+[Subscribe here.](https://overwolf.us15.list-manage.com/subscribe/post?u=5542885c5f38ae9a4108ab154&id=0d0c0f9d6b)

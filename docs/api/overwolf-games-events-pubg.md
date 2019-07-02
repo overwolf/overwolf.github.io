@@ -21,6 +21,7 @@ Please read the [overwolf.games.events](overwolf-games-events) documentation pag
 * [killer](#killer)
 * [match](#match)
 * [rank](#rank)
+* [counters](#counters)
 * [location](#location)
 * [me](#me)
 * [team](#team)
@@ -88,16 +89,25 @@ key          | Category    | Values                            | Notes          
 me       | match_info   | The player’s rank at the end of the match |                       |   90.0        |
 total_teams       | match_info   | The total number of players |                       |   90.0        |
 
+## `counters`
+
+### Info Updates
+
+key    | Category    | Values                                    | Notes                                   | Since Version |
+-------| ------------| ----------------------------------------- | --------------------------------------- | ------------- |
+ping   | performance | The local player’s latency                | Example: `{"name":"ping","data":"66"}`  |   133.0       |
+
 ## `location`
 
 ### Info Updates
 
-key        | Category    | Values                                                        | Notes                                 | Since Version |
----------- | ------------| ------------------------------------------------------------- | ------------------------------------  | ------------- |
-location   | game_info   | The player’s current grid location (x,y,z).                   | See example [below](#location-notes)  |   0.116       |
-safe_zone  | game_info   | The location of the white circle and its radius               | See example [below](#zones-notes)     |   0.133       |
-safe_zone  | game_info   | The location of the blue circle and its radius                | See example [below](#zones-notes)     |   0.133       |
-red_zone   | game_info   | The location of the red  circle and its radius                | See example [below](#zones-notes)     |   0.133       |
+key                 | Category  | Values                                                     | Notes                                           | Since Version |
+------------------- | ----------| ---------------------------------------------------------- | ----------------------------------------------  | ------------- |
+location            | game_info | The player’s current grid location (x,y,z).                | See example [below](#location-notes)            |   0.116       |
+safe_zone           | game_info | The location of the white circle and its radius            | See example [below](#zones-notes)               |   0.133       |
+blue_zone           | game_info | The location of the blue circle and its radius             | See example [below](#zones-notes)               |   0.133       |
+red_zone            | game_info | The location of the red  circle and its radius             | See example [below](#zones-notes)               |   0.133       |
+time_to_next_circle | game_info | The time left (in seconds) until a new safe zone is formed | See example [below](#time-to-next-circle-notes) |   0.133       |
 
 #### `location` notes
 
@@ -117,9 +127,14 @@ Example:
 * `x` & `y` are the center of the circle.
 * `radius` is the circle’s radius.
 
-Example:
+Examples:
 
 `{"info":{"game_info":{"safe_zone":"{\"x\":6727,\"y\":2556,\"radius\":1507}"}},"feature":"location"}`
+`{"info":{"game_info":{"blue_zone":"{\"x\":6727,\"y\":2556,\"radius\":1507}"}},"feature":"location"}`
+
+#### `time_to_next_circle` notes
+
+`{"name":"time_to_next_circle","data":"{\"phase\" : \"3\",\"time\" : \"438\"}"}`
 
 ## `me`
 

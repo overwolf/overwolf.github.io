@@ -10,6 +10,8 @@ Please read the [overwolf.games.events](overwolf-games-events) documentation pag
 5426
 :::
 
+Note that you can consume also the LOL game launcher events. read more info [here](overwolf-games-launchers-events-lol).
+
 ## Sample Apps
 
 * [LOL game events sample app](https://github.com/overwolf/lol-events-sample-app)
