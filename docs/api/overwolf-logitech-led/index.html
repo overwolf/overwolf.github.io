@@ -65,25 +65,25 @@
         </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><a class="edit-page-link button" href="https://github.com/overwolf/developers-site/tree/master/docs/api/overwolf-logitech-led.md" target="_blank" rel="noreferrer noopener">Edit</a><h1 class="postHeaderTitle">overwolf.logitech.led API</h1></header><article><div><span><p>Provides API for Logitech Arx Control.</p>
 <h2><a class="anchor" aria-hidden="true" id="methods-reference"></a><a href="#methods-reference" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Methods Reference</h2>
 <ul>
-<li><a href="#"><code>init()</code></a></li>
-<li><a href="#"><code>setTargetDevice()</code></a></li>
-<li><a href="#"><code>saveCurrentLighting()</code></a></li>
-<li><a href="#"><code>setLighting()</code></a></li>
-<li><a href="#"><code>restoreLighting()</code></a></li>
-<li><a href="#"><code>flashLighting()</code></a></li>
-<li><a href="#"><code>pulseLighting()</code></a></li>
-<li><a href="#"><code>stopEffects()</code></a></li>
-<li><a href="#"><code>setLightingFromBitmap()</code></a></li>
-<li><a href="#"><code>setLightingFromBitmap()</code></a></li>
-<li><a href="#"><code>setLightingForKeyWithScanCode()</code></a></li>
-<li><a href="#"><code>setLightingForKeyWithHidCode()</code></a></li>
-<li><a href="#"><code>setLightingForKeyWithQuartzCode()</code></a></li>
-<li><a href="#"><code>setLightingForKeyWithKeyName()</code></a></li>
-<li><a href="#"><code>saveLightingForKey()</code></a></li>
-<li><a href="#"><code>restoreLightingForKey()</code></a></li>
-<li><a href="#"><code>flashSingleKey()</code></a></li>
-<li><a href="#"><code>pulseSingleKey()</code></a></li>
-<li><a href="#"><code>stopEffectsOnKey()</code></a></li>
+<li><a href="#initcallback"><code>init()</code></a></li>
+<li><a href="#settargetdevicetargetdevices-callback"><code>setTargetDevice()</code></a></li>
+<li><a href="#savecurrentlightingcallback"><code>saveCurrentLighting()</code></a></li>
+<li><a href="#setlightingredpercentage-greenpercentage-bluepercentage-callback"><code>setLighting()</code></a></li>
+<li><a href="#restorelightingcallback"><code>restoreLighting()</code></a></li>
+<li><a href="#flashlightingredpercentage-greenpercentage-bluepercentage-millisecondsduration-millisecondsinterval-callback"><code>flashLighting()</code></a></li>
+<li><a href="#pulselightingredpercentage-greenpercentage-bluepercentage-millisecondsduration-millisecondsinterval-callback"><code>pulseLighting()</code></a></li>
+<li><a href="#stopeffectscallback"><code>stopEffects()</code></a></li>
+<li><a href="#setlightingfrombitmapbitmapurl-callback"><code>setLightingFromBitmap()</code></a></li>
+<li><a href="#setlightingfrombitmapbitmap-callback"><code>setLightingFromBitmap()</code></a></li>
+<li><a href="#setlightingforkeywithscancodekeycode-redpercentage-greenpercentage-bluepercentage-callback"><code>setLightingForKeyWithScanCode()</code></a></li>
+<li><a href="#setlightingforkeywithhidcodekeycode-redpercentage-greenpercentage-bluepercentage-callback"><code>setLightingForKeyWithHidCode()</code></a></li>
+<li><a href="#setlightingforkeywithquartzcodekeycode-redpercentage-greenpercentage-bluepercentage-callback"><code>setLightingForKeyWithQuartzCode()</code></a></li>
+<li><a href="#setlightingforkeywithkeynamekeyname-redpercentage-greenpercentage-bluepercentage-callback"><code>setLightingForKeyWithKeyName()</code></a></li>
+<li><a href="#savelightingforkeykeyname-callback"><code>saveLightingForKey()</code></a></li>
+<li><a href="#restorelightingforkeykeyname-callback"><code>restoreLightingForKey()</code></a></li>
+<li><a href="#flashsinglekeykeyname-redpercentage-greenpercentage-bluepercentage-millisecondsduration-millisecondsinterval-callback"><code>flashSingleKey()</code></a></li>
+<li><a href="#pulsesinglekeykeyname-startredpercentage-startgreenpercentage-startbluepercentage-finishredpercentage-finishgreenpercentage-finishbluepercentage-millisecondsduration-isinfinite-callback"><code>pulseSingleKey()</code></a></li>
+<li><a href="#stopeffectsonkeykeyname-callback"><code>stopEffectsOnKey()</code></a></li>
 <li><a href="#shutdown"><code>shutdown()</code></a></li>
 </ul>
 <h2><a class="anchor" aria-hidden="true" id="events-reference"></a><a href="#events-reference" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Events Reference</h2>
@@ -93,37 +93,319 @@
 <h2><a class="anchor" aria-hidden="true" id="types-reference"></a><a href="#types-reference" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Types Reference</h2>
 <ul>
 <li><a href="#overwolflogitechledlogitechleddata-object"><code>overwolf.logitech.led.LogitechLedData</code></a> Object</li>
-<li><a href="#overwolflogitechledlogitecharxdata-object"><code>overwolf.logitech.led.LogitechArxData Object</code></a> Object</li>
-<li><a href="#LogitechDeviceLightingType"><code>overwolf.logitech.led.enums.LogitechDeviceLightingType</code></a> enum</li>
-<li><a href="##overwolflogitechledenumskeyboardnames-enum"><code>overwolf.logitech.led.enums.KeyboardNames</code></a> enum</li>
+<li><a href="#overwolflogitechledlogitecharxdata-object"><code>overwolf.logitech.led.LogitechArxData</code></a> Object</li>
+<li><a href="#overwolflogitechledenumslogitechdevicelightingtype-enum"><code>overwolf.logitech.led.enums.LogitechDeviceLightingType</code></a> enum</li>
+<li><a href="#overwolflogitechledenumskeyboardnames-enum"><code>overwolf.logitech.led.enums.KeyboardNames</code></a> enum</li>
 </ul>
-<h2><a class="anchor" aria-hidden="true" id="initidentifier-friendlyname-callback"></a><a href="#initidentifier-friendlyname-callback" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>init(identifier, friendlyName, callback)</h2>
+<h2><a class="anchor" aria-hidden="true" id="initcallback"></a><a href="#initcallback" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>init(callback)</h2>
 <h4><a class="anchor" aria-hidden="true" id="version-added-093"></a><a href="#version-added-093" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Version added: 0.93</h4>
 <blockquote>
-<p>Initializes the Arx API.</p>
+<p>Initializes the LED API.</p>
 </blockquote>
 <table>
 <thead>
 <tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
 </thead>
 <tbody>
-<tr><td>identifier</td><td>string</td><td>An id for the app that will be discovered by LGS</td></tr>
-<tr><td>friendlyName</td><td>string</td><td>A friendly display name</td></tr>
+<tr><td>callback</td><td>function</td><td>A callback with the result of the request</td></tr>
+</tbody>
+</table>
+<h2><a class="anchor" aria-hidden="true" id="settargetdevicetargetdevices-callback"></a><a href="#settargetdevicetargetdevices-callback" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>setTargetDevice(targetDevices, callback)</h2>
+<h4><a class="anchor" aria-hidden="true" id="version-added-093-1"></a><a href="#version-added-093-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Version added: 0.93</h4>
+<blockquote>
+<p>Sets the target devices to use.</p>
+</blockquote>
+<table>
+<thead>
+<tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>targetDevices</td><td><a href="#overwolflogitechledenumslogitechdevicelightingtype-enum">overwolf.logitech.led.enums.LogitechDeviceLightingType</a> array</td><td></td></tr>
+<tr><td>callback</td><td>function</td><td>A callback with the result of the request</td></tr>
+</tbody>
+</table>
+<h2><a class="anchor" aria-hidden="true" id="savecurrentlightingcallback"></a><a href="#savecurrentlightingcallback" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>saveCurrentLighting(callback)</h2>
+<h4><a class="anchor" aria-hidden="true" id="version-added-093-2"></a><a href="#version-added-093-2" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Version added: 0.93</h4>
+<blockquote>
+<p>Saves the current lighting.</p>
+</blockquote>
+<table>
+<thead>
+<tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>callback</td><td>function</td><td>A callback with the result of the request</td></tr>
+</tbody>
+</table>
+<h2><a class="anchor" aria-hidden="true" id="setlightingredpercentage-greenpercentage-bluepercentage-callback"></a><a href="#setlightingredpercentage-greenpercentage-bluepercentage-callback" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>setLighting(redPercentage, greenPercentage, bluePercentage, callback)</h2>
+<h4><a class="anchor" aria-hidden="true" id="version-added-093-3"></a><a href="#version-added-093-3" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Version added: 0.93</h4>
+<blockquote>
+<p>Sets the lighting for the entire device.</p>
+</blockquote>
+<table>
+<thead>
+<tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>redPercentage</td><td>int</td><td>Red percentage (0 – 100)</td></tr>
+<tr><td>greenPercentage</td><td>int</td><td>Green percentage (0 – 100)</td></tr>
+<tr><td>bluePercentage</td><td>int</td><td>Blue percentage (0 – 100)</td></tr>
+<tr><td>callback</td><td>function</td><td>A callback with the result of the request</td></tr>
+</tbody>
+</table>
+<h2><a class="anchor" aria-hidden="true" id="restorelightingcallback"></a><a href="#restorelightingcallback" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>restoreLighting(callback)</h2>
+<h4><a class="anchor" aria-hidden="true" id="version-added-093-4"></a><a href="#version-added-093-4" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Version added: 0.93</h4>
+<blockquote>
+<p>Restores the lightning to the last previously saved state.</p>
+</blockquote>
+<table>
+<thead>
+<tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>callback</td><td>function</td><td>A callback with the result of the request</td></tr>
+</tbody>
+</table>
+<h2><a class="anchor" aria-hidden="true" id="flashlightingredpercentage-greenpercentage-bluepercentage-millisecondsduration-millisecondsinterval-callback"></a><a href="#flashlightingredpercentage-greenpercentage-bluepercentage-millisecondsduration-millisecondsinterval-callback" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>flashLighting(redPercentage, greenPercentage, bluePercentage, milliSecondsDuration, milliSecondsInterval, callback)</h2>
+<h4><a class="anchor" aria-hidden="true" id="version-added-093-5"></a><a href="#version-added-093-5" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Version added: 0.93</h4>
+<blockquote>
+<p>Flashes the lighting on the device.</p>
+</blockquote>
+<table>
+<thead>
+<tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>redPercentage</td><td>int</td><td>Red percentage (0 – 100)</td></tr>
+<tr><td>greenPercentage</td><td>int</td><td>Green percentage (0 – 100)</td></tr>
+<tr><td>bluePercentage</td><td>int</td><td>Blue percentage (0 – 100)</td></tr>
+<tr><td>milliSecondsDuration</td><td>int</td><td>The duration to flash in milliseconds</td></tr>
+<tr><td>milliSecondsInterval</td><td>int</td><td>The interval for flashes in milliseconds</td></tr>
+<tr><td>callback</td><td>function</td><td>A callback with the result of the request</td></tr>
+</tbody>
+</table>
+<h2><a class="anchor" aria-hidden="true" id="pulselightingredpercentage-greenpercentage-bluepercentage-millisecondsduration-millisecondsinterval-callback"></a><a href="#pulselightingredpercentage-greenpercentage-bluepercentage-millisecondsduration-millisecondsinterval-callback" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>pulseLighting(redPercentage, greenPercentage, bluePercentage, milliSecondsDuration, milliSecondsInterval, callback)</h2>
+<h4><a class="anchor" aria-hidden="true" id="version-added-093-6"></a><a href="#version-added-093-6" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Version added: 0.93</h4>
+<blockquote>
+<p>Pulses the lighting on the device.</p>
+</blockquote>
+<table>
+<thead>
+<tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>redPercentage</td><td>int</td><td>Red percentage (0 – 100)</td></tr>
+<tr><td>greenPercentage</td><td>int</td><td>Green percentage (0 – 100)</td></tr>
+<tr><td>bluePercentage</td><td>int</td><td>Blue percentage (0 – 100)</td></tr>
+<tr><td>milliSecondsDuration</td><td>int</td><td>The duration to flash in milliseconds</td></tr>
+<tr><td>milliSecondsInterval</td><td>int</td><td>The interval for flashes in milliseconds</td></tr>
+<tr><td>callback</td><td>function</td><td>A callback with the result of the request</td></tr>
+</tbody>
+</table>
+<h2><a class="anchor" aria-hidden="true" id="stopeffectscallback"></a><a href="#stopeffectscallback" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>stopEffects(callback)</h2>
+<h4><a class="anchor" aria-hidden="true" id="version-added-093-7"></a><a href="#version-added-093-7" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Version added: 0.93</h4>
+<blockquote>
+<p>Stops ongoing pulse/flash effects.</p>
+</blockquote>
+<table>
+<thead>
+<tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>callback</td><td>function</td><td>A callback with the result of the request</td></tr>
+</tbody>
+</table>
+<h2><a class="anchor" aria-hidden="true" id="setlightingfrombitmapbitmapurl-callback"></a><a href="#setlightingfrombitmapbitmapurl-callback" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>setLightingFromBitmap(bitmapUrl, callback)</h2>
+<h4><a class="anchor" aria-hidden="true" id="version-added-093-8"></a><a href="#version-added-093-8" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Version added: 0.93</h4>
+<blockquote>
+<p>Sets the lighting from an overwolf-extension:// or overwolf-media:// url. The file must be 21×6.</p>
+</blockquote>
+<table>
+<thead>
+<tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>bitmapUrl</td><td>string</td><td>The Overwolf url to add</td></tr>
+<tr><td>callback</td><td>function</td><td>A callback with the result of the request</td></tr>
+</tbody>
+</table>
+<h2><a class="anchor" aria-hidden="true" id="setlightingfrombitmapbitmap-callback"></a><a href="#setlightingfrombitmapbitmap-callback" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>setLightingFromBitmap(bitmap, callback)</h2>
+<h4><a class="anchor" aria-hidden="true" id="version-added-093-9"></a><a href="#version-added-093-9" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Version added: 0.93</h4>
+<blockquote>
+<p>Sets the lighting from a bitmap byte array.</p>
+</blockquote>
+<table>
+<thead>
+<tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>bitmap</td><td>Byte[]</td><td>A byte array representing a 21×6 bitmap</td></tr>
+<tr><td>callback</td><td>function</td><td>A callback with the result of the request</td></tr>
+</tbody>
+</table>
+<h2><a class="anchor" aria-hidden="true" id="setlightingforkeywithscancodekeycode-redpercentage-greenpercentage-bluepercentage-callback"></a><a href="#setlightingforkeywithscancodekeycode-redpercentage-greenpercentage-bluepercentage-callback" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>setLightingForKeyWithScanCode(keyCode, redPercentage, greenPercentage, bluePercentage, callback)</h2>
+<h4><a class="anchor" aria-hidden="true" id="version-added-093-10"></a><a href="#version-added-093-10" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Version added: 0.93</h4>
+<blockquote>
+<p>Sets the lighting for a specific key by scan code.</p>
+</blockquote>
+<table>
+<thead>
+<tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>keyCode</td><td>int</td><td>The key scan code</td></tr>
+<tr><td>redPercentage</td><td>int</td><td>Red percentage (0 – 100)</td></tr>
+<tr><td>greenPercentage</td><td>int</td><td>Green percentage (0 – 100)</td></tr>
+<tr><td>bluePercentage</td><td>int</td><td>Blue percentage (0 – 100)</td></tr>
+<tr><td>callback</td><td>function</td><td>A callback with the result of the request</td></tr>
+</tbody>
+</table>
+<h2><a class="anchor" aria-hidden="true" id="setlightingforkeywithhidcodekeycode-redpercentage-greenpercentage-bluepercentage-callback"></a><a href="#setlightingforkeywithhidcodekeycode-redpercentage-greenpercentage-bluepercentage-callback" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>setLightingForKeyWithHidCode(keyCode, redPercentage, greenPercentage, bluePercentage , callback)</h2>
+<h4><a class="anchor" aria-hidden="true" id="version-added-093-11"></a><a href="#version-added-093-11" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Version added: 0.93</h4>
+<blockquote>
+<p>Sets the lighting for a specific key by HID code.</p>
+</blockquote>
+<table>
+<thead>
+<tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>keyCode</td><td>int</td><td>The key HID code</td></tr>
+<tr><td>redPercentage</td><td>int</td><td>Red percentage (0 – 100)</td></tr>
+<tr><td>greenPercentage</td><td>int</td><td>Green percentage (0 – 100)</td></tr>
+<tr><td>bluePercentage</td><td>int</td><td>Blue percentage (0 – 100)</td></tr>
+<tr><td>callback</td><td>function</td><td>A callback with the result of the request</td></tr>
+</tbody>
+</table>
+<h2><a class="anchor" aria-hidden="true" id="setlightingforkeywithquartzcodekeycode-redpercentage-greenpercentage-bluepercentage-callback"></a><a href="#setlightingforkeywithquartzcodekeycode-redpercentage-greenpercentage-bluepercentage-callback" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>setLightingForKeyWithQuartzCode(keyCode, redPercentage, greenPercentage, bluePercentage, callback)</h2>
+<h4><a class="anchor" aria-hidden="true" id="version-added-093-12"></a><a href="#version-added-093-12" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Version added: 0.93</h4>
+<blockquote>
+<p>Sets the lighting for a specific key by HID code.</p>
+</blockquote>
+<table>
+<thead>
+<tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>keyCode</td><td>int</td><td>The key quartz  code</td></tr>
+<tr><td>redPercentage</td><td>int</td><td>Red percentage (0 – 100)</td></tr>
+<tr><td>greenPercentage</td><td>int</td><td>Green percentage (0 – 100)</td></tr>
+<tr><td>bluePercentage</td><td>int</td><td>Blue percentage (0 – 100)</td></tr>
+<tr><td>callback</td><td>function</td><td>A callback with the result of the request</td></tr>
+</tbody>
+</table>
+<h2><a class="anchor" aria-hidden="true" id="setlightingforkeywithkeynamekeyname-redpercentage-greenpercentage-bluepercentage-callback"></a><a href="#setlightingforkeywithkeynamekeyname-redpercentage-greenpercentage-bluepercentage-callback" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>setLightingForKeyWithKeyName(keyName, redPercentage, greenPercentage, bluePercentage, callback)</h2>
+<h4><a class="anchor" aria-hidden="true" id="version-added-093-13"></a><a href="#version-added-093-13" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Version added: 0.93</h4>
+<blockquote>
+<p>Sets the lighting for a specific key by key name.</p>
+</blockquote>
+<table>
+<thead>
+<tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>keyName</td><td><a href="#overwolflogitechledenumskeyboardnames-enum">overwolf.logitech.led.enums.KeyboardNames</a> enum</td><td>The key name</td></tr>
+<tr><td>redPercentage</td><td>int</td><td>Red percentage (0 – 100)</td></tr>
+<tr><td>greenPercentage</td><td>int</td><td>Green percentage (0 – 100)</td></tr>
+<tr><td>bluePercentage</td><td>int</td><td>Blue percentage (0 – 100)</td></tr>
+<tr><td>callback</td><td>function</td><td>A callback with the result of the request</td></tr>
+</tbody>
+</table>
+<h2><a class="anchor" aria-hidden="true" id="savelightingforkeykeyname-callback"></a><a href="#savelightingforkeykeyname-callback" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>saveLightingForKey(keyName, callback)</h2>
+<h4><a class="anchor" aria-hidden="true" id="version-added-093-14"></a><a href="#version-added-093-14" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Version added: 0.93</h4>
+<blockquote>
+<p>Saves the current lighting of a specific key.</p>
+</blockquote>
+<table>
+<thead>
+<tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>keyName</td><td><a href="#overwolflogitechledenumskeyboardnames-enum">overwolf.logitech.led.enums.KeyboardNames</a> enum</td><td>The key name</td></tr>
+<tr><td>callback</td><td>function</td><td>A callback with the result of the request</td></tr>
+</tbody>
+</table>
+<h2><a class="anchor" aria-hidden="true" id="restorelightingforkeykeyname-callback"></a><a href="#restorelightingforkeykeyname-callback" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>restoreLightingForKey(keyName, callback)</h2>
+<h4><a class="anchor" aria-hidden="true" id="version-added-093-15"></a><a href="#version-added-093-15" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Version added: 0.93</h4>
+<blockquote>
+<p>Restores a previously saved lighting for a specific key.</p>
+</blockquote>
+<table>
+<thead>
+<tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>keyName</td><td><a href="#overwolflogitechledenumskeyboardnames-enum">overwolf.logitech.led.enums.KeyboardNames</a> enum</td><td>The key name</td></tr>
+<tr><td>callback</td><td>function</td><td>A callback with the result of the request</td></tr>
+</tbody>
+</table>
+<h2><a class="anchor" aria-hidden="true" id="flashsinglekeykeyname-redpercentage-greenpercentage-bluepercentage-millisecondsduration-millisecondsinterval-callback"></a><a href="#flashsinglekeykeyname-redpercentage-greenpercentage-bluepercentage-millisecondsduration-millisecondsinterval-callback" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>flashSingleKey(keyName, redPercentage, greenPercentage, bluePercentage, milliSecondsDuration, milliSecondsInterval, callback)</h2>
+<h4><a class="anchor" aria-hidden="true" id="version-added-093-16"></a><a href="#version-added-093-16" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Version added: 0.93</h4>
+<blockquote>
+<p>Flashes a single key.</p>
+</blockquote>
+<table>
+<thead>
+<tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>keyName</td><td><a href="#overwolflogitechledenumskeyboardnames-enum">overwolf.logitech.led.enums.KeyboardNames</a> enum</td><td>The key name</td></tr>
+<tr><td>redPercentage</td><td>int</td><td>Red percentage (0 – 100)</td></tr>
+<tr><td>greenPercentage</td><td>int</td><td>Green percentage (0 – 100)</td></tr>
+<tr><td>bluePercentage</td><td>int</td><td>Blue percentage (0 – 100)</td></tr>
+<tr><td>milliSecondsDuration</td><td>int</td><td>The duration to flash in milliseconds</td></tr>
+<tr><td>milliSecondsInterval</td><td>int</td><td>The interval for flashes in milliseconds</td></tr>
+<tr><td>callback</td><td>function</td><td>A callback with the result of the request</td></tr>
+</tbody>
+</table>
+<h2><a class="anchor" aria-hidden="true" id="pulsesinglekeykeyname-startredpercentage-startgreenpercentage-startbluepercentage-finishredpercentage-finishgreenpercentage-finishbluepercentage-millisecondsduration-isinfinite-callback"></a><a href="#pulsesinglekeykeyname-startredpercentage-startgreenpercentage-startbluepercentage-finishredpercentage-finishgreenpercentage-finishbluepercentage-millisecondsduration-isinfinite-callback" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>pulseSingleKey(keyName, startRedPercentage, startGreenPercentage, startBluePercentage, finishRedPercentage, finishGreenPercentage, finishBluePercentage, milliSecondsDuration, isInfinite, callback)</h2>
+<h4><a class="anchor" aria-hidden="true" id="version-added-093-17"></a><a href="#version-added-093-17" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Version added: 0.93</h4>
+<blockquote>
+<p>Pulses a single key.</p>
+</blockquote>
+<table>
+<thead>
+<tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>keyName</td><td><a href="#overwolflogitechledenumskeyboardnames-enum">overwolf.logitech.led.enums.KeyboardNames</a> enum</td><td>The key name</td></tr>
+<tr><td>startRedPercentage</td><td>int</td><td>Red start percentage (0 – 100)</td></tr>
+<tr><td>startGreenPercentage</td><td>int</td><td>Green start percentage (0 – 100)</td></tr>
+<tr><td>startBluePercentage</td><td>int</td><td>Blue start percentage (0 – 100)</td></tr>
+<tr><td>finishRedPercentage</td><td>int</td><td>Red finish percentage (0 – 100)</td></tr>
+<tr><td>finishGreenPercentage</td><td>int</td><td>Green finish percentage (0 – 100)</td></tr>
+<tr><td>finishBluePercentage</td><td>int</td><td>Blue finish percentage (0 – 100)</td></tr>
+<tr><td>milliSecondsDuration</td><td>int</td><td>The duration to flash in milliseconds</td></tr>
+<tr><td>milliSecondsInterval</td><td>int</td><td>The interval for flashes in milliseconds</td></tr>
+<tr><td>callback</td><td>function</td><td>A callback with the result of the request</td></tr>
+</tbody>
+</table>
+<h2><a class="anchor" aria-hidden="true" id="stopeffectsonkeykeyname-callback"></a><a href="#stopeffectsonkeykeyname-callback" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>stopEffectsOnKey(keyName, callback)</h2>
+<h4><a class="anchor" aria-hidden="true" id="version-added-093-18"></a><a href="#version-added-093-18" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Version added: 0.93</h4>
+<blockquote>
+<p>Stops ongoing pulse/flash effects on a specific key.</p>
+</blockquote>
+<table>
+<thead>
+<tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>keyName</td><td><a href="#overwolflogitechledenumskeyboardnames-enum">overwolf.logitech.led.enums.KeyboardNames</a> enum</td><td>The key name</td></tr>
 <tr><td>callback</td><td>function</td><td>A callback with the result of the request</td></tr>
 </tbody>
 </table>
 <h2><a class="anchor" aria-hidden="true" id="shutdown"></a><a href="#shutdown" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>shutdown()</h2>
-<h4><a class="anchor" aria-hidden="true" id="version-added-093-1"></a><a href="#version-added-093-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Version added: 0.93</h4>
+<h4><a class="anchor" aria-hidden="true" id="version-added-093-19"></a><a href="#version-added-093-19" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Version added: 0.93</h4>
 <blockquote>
 <p>Shuts down the API.</p>
 </blockquote>
 <h2><a class="anchor" aria-hidden="true" id="onerror"></a><a href="#onerror" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>onError</h2>
-<h4><a class="anchor" aria-hidden="true" id="version-added-093-2"></a><a href="#version-added-093-2" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Version added: 0.93</h4>
+<h4><a class="anchor" aria-hidden="true" id="version-added-093-20"></a><a href="#version-added-093-20" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Version added: 0.93</h4>
 <blockquote>
 <p>Triggered when an error occurs, sent with an error code.</p>
 </blockquote>
 <h2><a class="anchor" aria-hidden="true" id="overwolflogitechledlogitechleddata-object"></a><a href="#overwolflogitechledlogitechleddata-object" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>overwolf.logitech.led.LogitechLedData Object</h2>
-<h4><a class="anchor" aria-hidden="true" id="version-added-093-3"></a><a href="#version-added-093-3" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Version added: 0.93</h4>
+<h4><a class="anchor" aria-hidden="true" id="version-added-093-21"></a><a href="#version-added-093-21" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Version added: 0.93</h4>
 <blockquote>
 <p>Describes an Arx event.</p>
 </blockquote>
@@ -133,13 +415,13 @@
 </thead>
 <tbody>
 <tr><td>required_devices</td><td><a href="overwolf-logitech#logitech-device-object">LogitechDevice</a> Objet</td><td>A list of required devices</td></tr>
-<tr><td>required_devices_details</td><td>string</td><td>Read only. The list of required devices with additional details.</td></tr>
+<tr><td>required_devices_details</td><td>string</td><td>Read only. The list of required devices with additional details</td></tr>
 <tr><td>required_lighting_types</td><td><a href="#overwolflogitechledenumslogitechdevicelightingtype-enum">LogitechDeviceLightingType</a> enum</td><td>A list of required lighting types</td></tr>
 <tr><td>required_lighting_details</td><td>string</td><td>The value string on the event</td></tr>
 </tbody>
 </table>
 <h2><a class="anchor" aria-hidden="true" id="overwolflogitechledlogitecharxdata-object"></a><a href="#overwolflogitechledlogitecharxdata-object" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>overwolf.logitech.led.LogitechArxData Object</h2>
-<h4><a class="anchor" aria-hidden="true" id="version-added-093-4"></a><a href="#version-added-093-4" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Version added: 0.93</h4>
+<h4><a class="anchor" aria-hidden="true" id="version-added-093-22"></a><a href="#version-added-093-22" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Version added: 0.93</h4>
 <blockquote>
 <p>Describes the Arx API data.</p>
 </blockquote>
@@ -152,7 +434,7 @@
 </tbody>
 </table>
 <h2><a class="anchor" aria-hidden="true" id="overwolflogitechledenumslogitechdevicelightingtype-enum"></a><a href="#overwolflogitechledenumslogitechdevicelightingtype-enum" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>overwolf.logitech.led.enums.LogitechDeviceLightingType enum</h2>
-<h4><a class="anchor" aria-hidden="true" id="version-added-093-5"></a><a href="#version-added-093-5" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Version added: 0.93</h4>
+<h4><a class="anchor" aria-hidden="true" id="version-added-093-23"></a><a href="#version-added-093-23" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Version added: 0.93</h4>
 <blockquote>
 <p>A list of Logitech devices lighting types.</p>
 </blockquote>
@@ -168,7 +450,7 @@
 </tbody>
 </table>
 <h2><a class="anchor" aria-hidden="true" id="overwolflogitechledenumskeyboardnames-enum"></a><a href="#overwolflogitechledenumskeyboardnames-enum" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>overwolf.logitech.led.enums.KeyboardNames enum</h2>
-<h4><a class="anchor" aria-hidden="true" id="version-added-093-6"></a><a href="#version-added-093-6" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Version added: 0.93</h4>
+<h4><a class="anchor" aria-hidden="true" id="version-added-093-24"></a><a href="#version-added-093-24" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Version added: 0.93</h4>
 <blockquote>
 <p>The names of the keys.</p>
 </blockquote>
@@ -290,7 +572,7 @@
 <tr><td>NUM_PERIOD</td><td></td></tr>
 </tbody>
 </table>
-</span></div></article></div><div class="docLastUpdate"><em>Last updated on 2019-7-2 by eransharv</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/developers-site/docs/api/overwolf-logitech-arx"><span class="arrow-prev">← </span><span>overwolf.logitech.arx</span></a><a class="docs-next button" href="/developers-site/docs/api/overwolf-media"><span>overwolf.media</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#methods-reference">Methods Reference</a></li><li><a href="#events-reference">Events Reference</a></li><li><a href="#types-reference">Types Reference</a></li><li><a href="#initidentifier-friendlyname-callback">init(identifier, friendlyName, callback)</a></li><li><a href="#shutdown">shutdown()</a></li><li><a href="#onerror">onError</a></li><li><a href="#overwolflogitechledlogitechleddata-object">overwolf.logitech.led.LogitechLedData Object</a></li><li><a href="#overwolflogitechledlogitecharxdata-object">overwolf.logitech.led.LogitechArxData Object</a></li><li><a href="#overwolflogitechledenumslogitechdevicelightingtype-enum">overwolf.logitech.led.enums.LogitechDeviceLightingType enum</a></li><li><a href="#overwolflogitechledenumskeyboardnames-enum">overwolf.logitech.led.enums.KeyboardNames enum</a></li></ul></nav></div><footer class="site-footer"><div class="container"><ul><li>Legal</li><li><a href="/terms/developer-terms/">Developer&#x27;s terms</a></li><li><a href="/terms/app-terms/">App terms</a></li><li><a href="http://www.overwolf.com/legal/" target="_blank">Overwolf terms</a></li><li><a href="http://www.overwolf.com/legal/#Privacy-policy" target="_blank">Overwolf Privacy policy</a></li></ul><ul><li>Support</li><li><a href="https://discordapp.com/invite/cjjrZDp" target="_blank">Discord</a></li><li><a href="http://developers.overwolf.com/get-help/slack/">Slack</a></li><li><a href="https://www.facebook.com/OverwolfDevs" target="_blank">Facebook</a></li><li><a href="https://twitter.com/OverwolfDevs" target="_blank">Twitter</a></li></ul><ul><li><a href="/documentation/">Documentation</a></li><li><a href="/documentation/sdk/overwolf/">API</a></li><li><a href="/documentation/sdk/overwolf/plugins/">Plugins</a></li></ul><ul><li>Information</li><li><a href="/changelog/">What&#x27;s new</a></li><li><a href="http://www.overwolf.com/careers/">Careers</a></li><li><a href="https://play.overwolf.com/fund/" target="_blank">Fund</a></li></ul></div></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+</span></div></article></div><div class="docLastUpdate"><em>Last updated on 2019-7-3 by eransharv</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/developers-site/docs/api/overwolf-logitech-arx"><span class="arrow-prev">← </span><span>overwolf.logitech.arx</span></a><a class="docs-next button" href="/developers-site/docs/api/overwolf-media"><span>overwolf.media</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#methods-reference">Methods Reference</a></li><li><a href="#events-reference">Events Reference</a></li><li><a href="#types-reference">Types Reference</a></li><li><a href="#initcallback">init(callback)</a></li><li><a href="#settargetdevicetargetdevices-callback">setTargetDevice(targetDevices, callback)</a></li><li><a href="#savecurrentlightingcallback">saveCurrentLighting(callback)</a></li><li><a href="#setlightingredpercentage-greenpercentage-bluepercentage-callback">setLighting(redPercentage, greenPercentage, bluePercentage, callback)</a></li><li><a href="#restorelightingcallback">restoreLighting(callback)</a></li><li><a href="#flashlightingredpercentage-greenpercentage-bluepercentage-millisecondsduration-millisecondsinterval-callback">flashLighting(redPercentage, greenPercentage, bluePercentage, milliSecondsDuration, milliSecondsInterval, callback)</a></li><li><a href="#pulselightingredpercentage-greenpercentage-bluepercentage-millisecondsduration-millisecondsinterval-callback">pulseLighting(redPercentage, greenPercentage, bluePercentage, milliSecondsDuration, milliSecondsInterval, callback)</a></li><li><a href="#stopeffectscallback">stopEffects(callback)</a></li><li><a href="#setlightingfrombitmapbitmapurl-callback">setLightingFromBitmap(bitmapUrl, callback)</a></li><li><a href="#setlightingfrombitmapbitmap-callback">setLightingFromBitmap(bitmap, callback)</a></li><li><a href="#setlightingforkeywithscancodekeycode-redpercentage-greenpercentage-bluepercentage-callback">setLightingForKeyWithScanCode(keyCode, redPercentage, greenPercentage, bluePercentage, callback)</a></li><li><a href="#setlightingforkeywithhidcodekeycode-redpercentage-greenpercentage-bluepercentage-callback">setLightingForKeyWithHidCode(keyCode, redPercentage, greenPercentage, bluePercentage , callback)</a></li><li><a href="#setlightingforkeywithquartzcodekeycode-redpercentage-greenpercentage-bluepercentage-callback">setLightingForKeyWithQuartzCode(keyCode, redPercentage, greenPercentage, bluePercentage, callback)</a></li><li><a href="#setlightingforkeywithkeynamekeyname-redpercentage-greenpercentage-bluepercentage-callback">setLightingForKeyWithKeyName(keyName, redPercentage, greenPercentage, bluePercentage, callback)</a></li><li><a href="#savelightingforkeykeyname-callback">saveLightingForKey(keyName, callback)</a></li><li><a href="#restorelightingforkeykeyname-callback">restoreLightingForKey(keyName, callback)</a></li><li><a href="#flashsinglekeykeyname-redpercentage-greenpercentage-bluepercentage-millisecondsduration-millisecondsinterval-callback">flashSingleKey(keyName, redPercentage, greenPercentage, bluePercentage, milliSecondsDuration, milliSecondsInterval, callback)</a></li><li><a href="#pulsesinglekeykeyname-startredpercentage-startgreenpercentage-startbluepercentage-finishredpercentage-finishgreenpercentage-finishbluepercentage-millisecondsduration-isinfinite-callback">pulseSingleKey(keyName, startRedPercentage, startGreenPercentage, startBluePercentage, finishRedPercentage, finishGreenPercentage, finishBluePercentage, milliSecondsDuration, isInfinite, callback)</a></li><li><a href="#stopeffectsonkeykeyname-callback">stopEffectsOnKey(keyName, callback)</a></li><li><a href="#shutdown">shutdown()</a></li><li><a href="#onerror">onError</a></li><li><a href="#overwolflogitechledlogitechleddata-object">overwolf.logitech.led.LogitechLedData Object</a></li><li><a href="#overwolflogitechledlogitecharxdata-object">overwolf.logitech.led.LogitechArxData Object</a></li><li><a href="#overwolflogitechledenumslogitechdevicelightingtype-enum">overwolf.logitech.led.enums.LogitechDeviceLightingType enum</a></li><li><a href="#overwolflogitechledenumskeyboardnames-enum">overwolf.logitech.led.enums.KeyboardNames enum</a></li></ul></nav></div><footer class="site-footer"><div class="container"><ul><li>Legal</li><li><a href="/terms/developer-terms/">Developer&#x27;s terms</a></li><li><a href="/terms/app-terms/">App terms</a></li><li><a href="http://www.overwolf.com/legal/" target="_blank">Overwolf terms</a></li><li><a href="http://www.overwolf.com/legal/#Privacy-policy" target="_blank">Overwolf Privacy policy</a></li></ul><ul><li>Support</li><li><a href="https://discordapp.com/invite/cjjrZDp" target="_blank">Discord</a></li><li><a href="http://developers.overwolf.com/get-help/slack/">Slack</a></li><li><a href="https://www.facebook.com/OverwolfDevs" target="_blank">Facebook</a></li><li><a href="https://twitter.com/OverwolfDevs" target="_blank">Twitter</a></li></ul><ul><li><a href="/documentation/">Documentation</a></li><li><a href="/documentation/sdk/overwolf/">API</a></li><li><a href="/documentation/sdk/overwolf/plugins/">Plugins</a></li></ul><ul><li>Information</li><li><a href="/changelog/">What&#x27;s new</a></li><li><a href="http://www.overwolf.com/careers/">Careers</a></li><li><a href="https://play.overwolf.com/fund/" target="_blank">Fund</a></li></ul></div></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
                 document.addEventListener('keyup', function(e) {
                   if (e.target !== document.body) {
                     return;
