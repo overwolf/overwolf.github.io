@@ -6,7 +6,7 @@ sidebar_label: Changelog
 
 All notable changes to this project will be documented in this file.
 
-### [0.131](https://github.com/vuejs/vue-cli/compare/v3.5.4...v3.5.5) (June 2019)
+## 0.131 (June 2019)
 
 ### API Features
 

@@ -40,8 +40,8 @@ callback  | function              | Called with the current device information  
 Parameter            | Type                                         | Description                                     |
 -------------------- | ---------------------------------------------| ----------------------------------------------- |
 minimal_lgs_version  | version Object (string wrapper)              | The minimal LGS version to require for this app |
-arx                  | overwolf.logitech.led.LogitechArxData Object | The Arx API data                                |
-led                  | overwolf.logitech.led.LogitechLedData Object | The LED API data                                |
+arx                  | [overwolf.logitech.led.LogitechArxData](overwolf-logitech-led#overwolflogitechledlogitecharxdata-object) Object | The Arx API data  |
+led                  | [overwolf.logitech.led.LogitechLedData](overwolf-logitech-led#overwolflogitechledlogitechleddata-object) Object | The LED API data  |
 
 ## Logitech Device Object
 #### Version added: 0.93
