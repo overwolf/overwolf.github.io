@@ -8,28 +8,28 @@ Use the `overwolf.media` API to capture a screenshot or create a GIF of the curr
 
 ## Methods Reference
 
-* [`takeScreenshot()`](#takescreenshotcallback)
-* [`takeScreenshot()`](#takescreenshottargetfolder-callback)
-* [`takeWindowsScreenshotByHandle()`](#takewindowsscreenshotbyhandlewindowhandle-postmediaevent-callback)
-* [`takeWindowsScreenshotByHandle()`](#takewindowsscreenshotbyhandlewindowhandle-postmediaevent-targetfolder-callback)
-* [`takeWindowsScreenshotByName()`](#takewindowsscreenshotbynamewindowname-postmediaevent-callback)
-* [`takeWindowsScreenshotByName()`](#takewindowsscreenshotbynamewindowname-postmediaevent-targetfolder-callback)
-* [`getScreenshotUrl()`](#getscreenshoturlscreenshotparams-callback)
-* [`shareImage()`](#shareimageimage-description-callback)
-* [`postMediaEvent()`](#postmediaeventmediatype-jsoninfo-callback)
-* [`deleteOldGifs()`](#deleteoldgifskeepnewestxgbs-callback)
-* [`getGifsSize()`](#getgifssizecallback)
-* [`getAppVideoCaptureFolderSize()`](#getappvideocapturefoldersizecallback)
-* [`getAppScreenCaptureFolderSize()`](#getappscreencapturefoldersizecallback)
-* `startGifBuffer()` - Obsolete
-* `stopGifBuffer()` - Obsolete
-* `generateGif()` - Obsolete
+* [`overwolf.media.takeScreenshot()`](#takescreenshotcallback)
+* [`overwolf.media.takeScreenshot()`](#takescreenshottargetfolder-callback)
+* [`overwolf.media.takeWindowsScreenshotByHandle()`](#takewindowsscreenshotbyhandlewindowhandle-postmediaevent-callback)
+* [`overwolf.media.takeWindowsScreenshotByHandle()`](#takewindowsscreenshotbyhandlewindowhandle-postmediaevent-targetfolder-callback)
+* [`overwolf.media.takeWindowsScreenshotByName()`](#takewindowsscreenshotbynamewindowname-postmediaevent-callback)
+* [`overwolf.media.takeWindowsScreenshotByName()`](#takewindowsscreenshotbynamewindowname-postmediaevent-targetfolder-callback)
+* [`overwolf.media.getScreenshotUrl()`](#getscreenshoturlscreenshotparams-callback)
+* [`overwolf.media.shareImage()`](#shareimageimage-description-callback)
+* [`overwolf.media.postMediaEvent()`](#postmediaeventmediatype-jsoninfo-callback)
+* [`overwolf.media.deleteOldGifs()`](#deleteoldgifskeepnewestxgbs-callback)
+* [`overwolf.media.getGifsSize()`](#getgifssizecallback)
+* [`overwolf.media.getAppVideoCaptureFolderSize()`](#getappvideocapturefoldersizecallback)
+* [`overwolf.media.getAppScreenCaptureFolderSize()`](#getappscreencapturefoldersizecallback)
+* `overwolf.media.startGifBuffer()` - Obsolete
+* `overwolf.media.stopGifBuffer()` - Obsolete
+* `overwolf.media.generateGif()` - Obsolete
 
 ## Events Reference
 
-* [`onMediaEvent`](#onmediaevent)
-* [`onScreenshotTaken`](#onscreenshottaken)
-* [`onSconGifGenerationErrorreenshotTaken`](#ongifgenerationerror)
+* [`overwolf.media.onMediaEvent`](#onmediaevent)
+* [`overwolf.media.onScreenshotTaken`](#onscreenshottaken)
+* [`overwolf.media.onSconGifGenerationErrorreenshotTaken`](#ongifgenerationerror)
 
 ## Types Reference
 
