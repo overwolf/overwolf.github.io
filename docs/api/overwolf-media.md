@@ -8,8 +8,7 @@ Use the `overwolf.media` API to capture a screenshot or create a GIF of the curr
 
 ## Methods Reference
 
-* [`takeScreenshot()`](#takescreenshotcallback)
-<h3 style="display:none">overwolf.media.takeScreenshot</h3>
+* [`overwolf.media.takeScreenshot()`](#takescreenshotcallback)
 * [`overwolf.media.takeScreenshot()`](#takescreenshottargetfolder-callback)
 * [`overwolf.media.takeWindowsScreenshotByHandle()`](#takewindowsscreenshotbyhandlewindowhandle-postmediaevent-callback)
 * [`overwolf.media.takeWindowsScreenshotByHandle()`](#takewindowsscreenshotbyhandlewindowhandle-postmediaevent-targetfolder-callback)

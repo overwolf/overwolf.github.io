@@ -77,7 +77,7 @@ matchOutcome | victory / defeat</br>`{"name":"matchOutcome","data":"defeat"}` | 
 
 key          | Category    | Values                    | Notes                 | Since Version |
 --------------- | -----------| ------------------------------------------------------------------------------------ | ------------------------------------ | ------------- | 
-roster_XX | players | This feature provides info for the currently active players (10 players). See [notes](#roster-xx-notes) below |  This is an Overwolf-generated code. |   123.0 |
+roster_XX | players | This feature provides info for the currently active players (10 players). See [notes](#roster_xx-notes) below |  This is an Overwolf-generated code. |   123.0 |
 team | player | The player’s current team – Orange/Blue  |   |   123.0 |
 health | player | The player’s current health – (100-0)</br>`{"player":{"health":"70"}}` |   |   123.0 |
 score | player | The player’s current score</br>`{"player":{"score":"335"}}` |   |   123.0 |

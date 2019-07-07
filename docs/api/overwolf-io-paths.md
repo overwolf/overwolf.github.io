@@ -32,8 +32,14 @@ You can call the object properties to get the requested path:
 * startMenu
 * localAppData
 
-#### Usage Example
+## Usage Example
+
+To get the full path of the current extension (OW app), you can call `overwolf.io.paths.localAppData` and concatenate your extension id and your app version to it:
 
 ```javascript
-string commonAppDataFolder = overwolf.io.paths.commonAppData;
+Overwolf.io.paths.localAppData + "/overwolf/extensions/[your extension id]/[version]"
 ```
+Where version can be [retrieved from the app manifest](overwolf-extension-current#getmanifestcallback).
+
+_note that this will not work if the extension is loaded as unpacked while developing._
+
