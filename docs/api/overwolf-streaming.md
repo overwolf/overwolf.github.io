@@ -878,6 +878,25 @@ Stream settings container.
 | provider  | [overwolf.streaming.enums.StreamingProvider](#overwolfstreamingenumsstreamingprovider-enum) enum | The stream provider name                 | 0.78  |
 | settings  | [StreamParams](#streamparams-object) object                                | The stream provider settings             | 0.78  |
 
+#### Object data example
+
+```json
+"settings": {
+	"video": { "buffer_length": 20000 },
+	"audio": {
+	    "mic": {
+	        "volume": 100,
+		"enabled": true
+	    },
+	    "game": {
+	        "volume": 75,
+		"enabled": true
+	    }
+         },
+	    "peripherals": { "capture_mouse_cursor": "both" }
+	 }
+}
+```
 
 ## overwolf.streaming.enums.StreamingProvider enum
 
