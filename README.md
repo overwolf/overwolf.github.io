@@ -8,8 +8,31 @@ To add code blocks that contain links, please put this line one the top of the p
 And define your code block using this tags:
 `<pre><code class="js">`
 
-## Search configuration:
+### Search configuration:
 
 * To customize the look and feel by following the DocSearch documentation see https://community.algolia.com/docsearch/styling.html) 
 * To check your configuration in our GitHub repository see https://github.com/algolia/docsearch-configs/blob/master/configs/overwolf.json). Please open a pull request if want to leverage your configuration.
 
+### Supported admonition types:
+
+Supported admonition types are: caution, note, important, tip, warning.
+
+:::note This is my custom title  
+A note.  
+:::
+
+:::caution This is my custom title  
+A caution.  
+:::
+
+:::important te This is my custom title  
+An important.  
+:::
+
+:::tip This is my custom title  
+A tip.  
+:::
+
+:::warning This is my custom title  
+A warning.  
+:::
