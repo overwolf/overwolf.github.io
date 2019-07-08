@@ -24,7 +24,7 @@ const siteConfig = {
   baseUrl: '/', // Base URL for your project */
 
   // Used for publishing and more
-  projectName: 'developers-site',
+  projectName: 'overwolf.github.io',
   organizationName: 'overwolf',
 
   // For no header links in the top nav bar -> headerLinks: [],
