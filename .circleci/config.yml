@@ -5,7 +5,7 @@ aliases:
  - &filter-only-source
    branches:
      only:
-       - master
+       - source
 
 version: 2
 jobs:
