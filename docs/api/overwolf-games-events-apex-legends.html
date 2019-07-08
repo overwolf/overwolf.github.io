@@ -1,0 +1,348 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Apex Legends Game Events · Overwolf</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="&lt;p&gt;Please read the &lt;a href=&quot;overwolf-games-events&quot;&gt;overwolf.games.events&lt;/a&gt; documentation page to learn how to use Overwolf game events.&lt;/p&gt;
+"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Apex Legends Game Events · Overwolf"/><meta property="og:type" content="website"/><meta property="og:url" content="https://overwolf.github.io/"/><meta property="og:description" content="&lt;p&gt;Please read the &lt;a href=&quot;overwolf-games-events&quot;&gt;overwolf.games.events&lt;/a&gt; documentation page to learn how to use Overwolf game events.&lt;/p&gt;
+"/><meta property="og:image" content="https://overwolf.github.io/img/docusaurus.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://overwolf.github.io/img/docusaurus.png"/><link rel="shortcut icon" href="/img/ow-favicon.ico"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/default.min.css"/><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato%3A400%2C400i%2C700%2C900&amp;ver=4.5.3"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css"/><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css"/><link rel="stylesheet" href="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css"/><link rel="stylesheet" href="/css/code-block-buttons.css"/><script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js"></script><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script><script type="text/javascript" src="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script><script type="text/javascript" src="/js/code-block-buttons.js"></script><script type="text/javascript" src="/developers-site/js/onload.js"></script><script type="text/javascript" src="/developers-site/js/activeNavBar.js"></script><script type="text/javascript" src="/developers-site/js/slicker.js"></script><script src="https://unpkg.com/vanilla-back-to-top@7.1.14/dist/vanilla-back-to-top.min.js"></script><script>
+        document.addEventListener('DOMContentLoaded', function() {
+          addBackToTop(
+            {"zIndex":100,"backgroundColor":"#20232A"}
+          )
+        });
+        </script><script src="/js/scrollSpy.js"></script><link rel="stylesheet" href="/css/main.css"/><script src="/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/"><img class="logo" src="/img/headerIcon.svg" alt="Overwolf"/><h2 class="headerTitleWithLogo">Overwolf</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href="/docs/start/getting-started" target="_self">Getting Started</a></li><li class=""><a href="/docs/topics/best-practices-overview" target="_self">Docs</a></li><li class="siteNavGroupActive"><a href="/docs/api/overwolf-api-overview" target="_self">API</a></li><li class=""><a href="/docs/status/all" target="_self">Status</a></li><li class=""><a href="/docs/download/download-overview" target="_self">Download</a></li><li class="siteNavGroupActive"><a href="/docs/api/changelog" target="_self">Changelog</a></li><li class=""><a href="https://medium.com/overwolf-developers" target="_self">Blog</a></li><li class=""><a href="https://discuss.developers.overwolf.com/" target="_self">Q&amp;A</a></li><li class=""><a href="/docs/support/contact-us" target="_self">Support</a></li><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>Games Events List</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">API Reference<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/api/overwolf-api-overview">Overview</a></li><li class="navListItem"><a class="navItem" href="/docs/api/changelog">Changelog</a></li><li class="navListItem"><a class="navItem" href="/docs/api/manifest-json">manifest.json</a></li><li class="navListItem"><a class="navItem" href="/docs/api/overwolf-benchmarking">overwolf.benchmarking</a></li><li class="navListItem"><a class="navItem" href="/docs/api/overwolf-log">overwolf.log</a></li><li class="navListItem"><a class="navItem" href="/docs/api/overwolf-streaming">overwolf.streaming</a></li><li class="navListItem"><a class="navItem" href="/docs/api/overwolf-profile">overwolf.profile</a></li><li class="navListItem"><a class="navItem" href="/docs/api/overwolf-tobii">overwolf.tobii</a></li><li class="navListItem"><a class="navItem" href="/docs/api/overwolf-utils">overwolf.utils</a></li><li class="navListItem"><a class="navItem" href="/docs/api/overwolf-os">overwolf.os</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">overwolf.io<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/api/overwolf-io">overwolf.io</a></li><li class="navListItem"><a class="navItem" href="/docs/api/overwolf-io-paths">overwolf.io.paths</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">overwolf.extensions<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/api/overwolf-extensions">overwolf.extensions</a></li><li class="navListItem"><a class="navItem" href="/docs/api/overwolf-extension-current">overwolf.extension.current</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">overwolf.games<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/api/overwolf-games">overwolf.games</a></li><li class="navListItem"><a class="navItem" href="/docs/api/overwolf-games-events">overwolf.games.events</a></li><li class="navListItem"><a class="navItem" href="/docs/api/howto-check-events-status-from-app">Check Event Status From App</a></li><li class="navListItem"><a class="navItem" href="/docs/api/overwolf-games-inputTracking">overwolf.games.inputTracking</a></li><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Games Events List</h4><ul><li class="navListItem"><a class="navItem" href="/docs/api/games-ids">Games IDs</a></li><li class="navListItem"><a class="navItem" href="/docs/api/overwolf-games-events-lol">LOL Events</a></li><li class="navListItem"><a class="navItem" href="/docs/api/overwolf-games-events-ancestors-legacy">Ancestors Legacy Events</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/docs/api/overwolf-games-events-apex-legends">Apex Legends Events</a></li><li class="navListItem"><a class="navItem" href="/docs/api/overwolf-games-events-autochess">Auto Chess Events</a></li><li class="navListItem"><a class="navItem" href="/docs/api/overwolf-games-events-csgo">CS:GO Events</a></li><li class="navListItem"><a class="navItem" href="/docs/api/overwolf-games-events-dota2">Dota 2 Events</a></li><li class="navListItem"><a class="navItem" href="/docs/api/overwolf-games-events-fortnite">Fortnite Events</a></li><li class="navListItem"><a class="navItem" href="/docs/api/overwolf-games-events-pubg">PUBG Game Events</a></li><li class="navListItem"><a class="navItem" href="/docs/api/overwolf-games-events-splitgate">Splitgate Events</a></li><li class="navListItem"><a class="navItem" href="/docs/api/overwolf-games-events-heartstone">Heartstone Events</a></li><li class="navListItem"><a class="navItem" href="/docs/api/overwolf-games-events-battlerite">Battlerite Game Events</a></li><li class="navListItem"><a class="navItem" href="/docs/api/overwolf-games-events-rocket-league">Rocket League Events</a></li><li class="navListItem"><a class="navItem" href="/docs/api/overwolf-games-events-rainbow-six">Rainbow Six Siege Game Events</a></li><li class="navListItem"><a class="navItem" href="/docs/api/overwolf-games-events-wot">World of Tanks Events</a></li><li class="navListItem"><a class="navItem" href="/docs/api/overwolf-games-events-wow">World of Warships Events</a></li><li class="navListItem"><a class="navItem" href="/docs/api/overwolf-games-events-smite">SMITE Events</a></li><li class="navListItem"><a class="navItem" href="/docs/api/overwolf-games-events-warface">Warface Events</a></li><li class="navListItem"><a class="navItem" href="/docs/api/overwolf-games-events-robocraft">Robocraft Events</a></li><li class="navListItem"><a class="navItem" href="/docs/api/games-external-apis">Various External APIs</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Games Launchers List</h4><ul><li class="navListItem"><a class="navItem" href="/docs/api/overwolf-games-launchers">overwolf.games.launchers</a></li><li class="navListItem"><a class="navItem" href="/docs/api/overwolf-games-launchers-events">overwolf.games.launchers.events</a></li><li class="navListItem"><a class="navItem" href="/docs/api/launchers-ids">Launchers IDs</a></li><li class="navListItem"><a class="navItem" href="/docs/api/overwolf-games-launchers-events-lol">LOL Launcher Events</a></li></ul></div></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">overwolf.logitech<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/api/overwolf-logitech">overwolf.logitech</a></li><li class="navListItem"><a class="navItem" href="/docs/api/overwolf-logitech-arx">overwolf.logitech.arx</a></li><li class="navListItem"><a class="navItem" href="/docs/api/overwolf-logitech-led">overwolf.logitech.led</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">overwolf.media<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/api/overwolf-media">overwolf.media</a></li><li class="navListItem"><a class="navItem" href="/docs/api/overwolf-media-audio">overwolf.media.audio</a></li><li class="navListItem"><a class="navItem" href="/docs/api/overwolf-media-replays">overwolf.media.replays</a></li><li class="navListItem"><a class="navItem" href="/docs/api/overwolf-media-videos">overwolf.media.videos</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">overwolf.settings<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/api/overwolf-settings">overwolf.settings</a></li><li class="navListItem"><a class="navItem" href="/docs/api/overwolf-settings-games">overwolf.settings.games</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">overwolf.social<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/api/overwolf-social">overwolf.social</a></li><li class="navListItem"><a class="navItem" href="/docs/api/overwolf-social-youtube">overwolf.social.youtube</a></li><li class="navListItem"><a class="navItem" href="/docs/api/overwolf-social-discord">overwolf.social.discord</a></li><li class="navListItem"><a class="navItem" href="/docs/api/overwolf-social-gfycat">overwolf.social.gfycat</a></li><li class="navListItem"><a class="navItem" href="/docs/api/overwolf-social-twitter">overwolf.social.twitter</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">overwolf.web<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/api/overwolf-web">overwolf.web</a></li><li class="navListItem"><a class="navItem" href="/docs/api/overwolf-web-webserver">overwolf.web.webserver</a></li><li class="navListItem"><a class="navItem" href="/docs/api/overwolf-web-websocket">overwolf.web.websocket</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">overwolf.windows<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/api/overwolf-windows">overwolf.windows</a></li><li class="navListItem"><a class="navItem" href="/docs/api/overwolf-windows-mediaPlayerElement">overwolf.windows.mediaPlayerElement</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><a class="edit-page-link button" href="https://github.com/overwolf/developers-site/tree/master/docs/api/overwolf-games-events-apex-legends.md" target="_blank" rel="noreferrer noopener">Edit</a><h1 class="postHeaderTitle">Apex Legends Game Events</h1></header><article><div><span><p>Please read the <a href="overwolf-games-events">overwolf.games.events</a> documentation page to learn how to use Overwolf game events.</p>
+
+    <div class="admonition admonition-important">
+      <div class="admonition-heading">
+        <h5><div class="admonition-icon"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="16" viewBox="0 0 14 16"><path fill-rule="evenodd" d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"/></svg></div>  Game ID</h5>
+      </div>
+      <div class="admonition-content">
+    <p>21566</p>
+</div></div><h2><a class="anchor" aria-hidden="true" id="sample-apps"></a><a href="#sample-apps" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Sample Apps</h2>
+<ul>
+<li><a href="https://github.com/overwolf/apex-events-sample-app">APEX game events sample app</a></li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="available-features"></a><a href="#available-features" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Available Features</h2>
+<ul>
+<li><a href="#me">me</a></li>
+<li><a href="#team">team</a></li>
+<li><a href="#kill">kill</a></li>
+<li><a href="#damage">damage</a></li>
+<li><a href="#death">death</a></li>
+<li><a href="#revive">revive</a></li>
+<li><a href="#match-state">match_state</a></li>
+<li><a href="#match-info">match_info</a></li>
+<li><a href="#inventory">inventory</a></li>
+<li><a href="#location">location</a></li>
+<li><a href="#match-summary">match_summary</a></li>
+<li><a href="#roster">roster</a></li>
+<li><a href="#victory">victory</a></li>
+<li><a href="#kill-feed">kill_feed</a></li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="me"></a><a href="#me" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>me</code></h2>
+<h3><a class="anchor" aria-hidden="true" id="info-updates"></a><a href="#info-updates" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Info Updates</h3>
+<table>
+<thead>
+<tr><th>key</th><th>Category</th><th>Values</th><th>Notes</th><th>Since Version</th></tr>
+</thead>
+<tbody>
+<tr><td>me</td><td>game_info</td><td>Local Player Name</td><td></td><td>0. 128</td></tr>
+<tr><td>ultimate_cooldown</td><td>me</td><td>Ultimate ability cooldown</td><td></td><td>0. 128</td></tr>
+</tbody>
+</table>
+<h2><a class="anchor" aria-hidden="true" id="match_info"></a><a href="#match_info" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>match_info</code></h2>
+<h3><a class="anchor" aria-hidden="true" id="info-updates-1"></a><a href="#info-updates-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Info Updates</h3>
+<table>
+<thead>
+<tr><th>key</th><th>Category</th><th>Values</th><th>Notes</th><th>Since Version</th></tr>
+</thead>
+<tbody>
+<tr><td>pseudo_match_id</td><td>match_info</td><td>The current session’s ID code.</br></br>Example:</br></br> <code>0c0ea3df-97ea-4d3a-b1f6-f8e34042251f</code></td><td>This is an Overwolf-generated code. Unrelated to Respawn.</td><td>0.130</td></tr>
+</tbody>
+</table>
+<h2><a class="anchor" aria-hidden="true" id="match_state"></a><a href="#match_state" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>match_state</code></h2>
+<h3><a class="anchor" aria-hidden="true" id="info-updates-2"></a><a href="#info-updates-2" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Info Updates</h3>
+<table>
+<thead>
+<tr><th>key</th><th>Category</th><th>Values</th><th>Notes</th><th>Since Version</th></tr>
+</thead>
+<tbody>
+<tr><td>match_state</td><td>game_info</td><td>active/inactive</td><td></td><td>0. 128</td></tr>
+</tbody>
+</table>
+<h3><a class="anchor" aria-hidden="true" id="events"></a><a href="#events" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Events</h3>
+<table>
+<thead>
+<tr><th>Event</th><th>Event Data</th><th>Fired When</th><th>Notes</th><th>Since Version</th></tr>
+</thead>
+<tbody>
+<tr><td>match_Start</td><td>null</td><td>Match started</td><td></td><td>0.128</td></tr>
+<tr><td>match_End</td><td>null</td><td>Match ended</td><td></td><td>0.128</td></tr>
+</tbody>
+</table>
+<h2><a class="anchor" aria-hidden="true" id="team"></a><a href="#team" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>team</code></h2>
+<h3><a class="anchor" aria-hidden="true" id="info-updates-3"></a><a href="#info-updates-3" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Info Updates</h3>
+<table>
+<thead>
+<tr><th>key</th><th>Category</th><th>Values</th><th>Notes</th><th>Since Version</th></tr>
+</thead>
+<tbody>
+<tr><td>teammate_X</td><td>match_info</td><td>This feature provides the list of your squad members.</td><td></td><td>0. 128</td></tr>
+<tr><td>legendSelect_X</td><td>match_info</td><td>The name of the legend &amp; order of selection for every member in the team, including who is the jump-master.</td><td></td><td>0. 128</td></tr>
+</tbody>
+</table>
+<h4><a class="anchor" aria-hidden="true" id="teammate_x-notes"></a><a href="#teammate_x-notes" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>teammate_X</code> notes:</h4>
+<p>Each member from your squad that joins the game will be reported in the following way:</p>
+<p><code>{&quot;info&quot;:{&quot;match_info&quot;:{&quot;teammate_0&quot;:&quot;{\&quot;name\&quot;:\&quot;Sh4rgaas\&quot;,\&quot;state\&quot;:\&quot;alive\&quot;}&quot;}},&quot;feature&quot;:&quot;team&quot;}</code></p>
+<p>As  youcan see, this object includes:</p>
+<ul>
+<li><code>player</code> – Player name</li>
+<li><code>state</code> – alive/death/knockedout</li>
+</ul>
+<h4><a class="anchor" aria-hidden="true" id="legendselect_x-notes"></a><a href="#legendselect_x-notes" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>legendSelect_X</code> notes:</h4>
+<p>Every member in the team, including who is the jump-master will be reported in the following way:</p>
+<p><code>{&quot;feature&quot;:&quot;team&quot;,&quot;category&quot;:&quot;match_info&quot;,&quot;key&quot;:&quot;legendSelect_2&quot;,&quot;value&quot;:&quot;{\&quot;playerName\&quot;:\&quot;Sh4rgaas\&quot;,\&quot;legendName\&quot;:\&quot;#character_octane_NAME\&quot;,\&quot;selectionOrder\&quot;:\&quot;2\&quot;,\&quot;lead\&quot;:true}&quot;}</code></p>
+<p>As you can see, this object includes:</p>
+<ul>
+<li>selection border</li>
+<li>legend name</li>
+<li>jumpmaster - Bool</li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="roster"></a><a href="#roster" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>roster</code></h2>
+<h3><a class="anchor" aria-hidden="true" id="info-updates-4"></a><a href="#info-updates-4" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Info Updates</h3>
+<table>
+<thead>
+<tr><th>key</th><th>Category</th><th>Values</th><th>Notes</th><th>Since Version</th></tr>
+</thead>
+<tbody>
+<tr><td>roster_XX</td><td>match_info</td><td>This feature provides the entire list of players (~60 players).</td><td></td><td>0. 128</td></tr>
+</tbody>
+</table>
+<h4><a class="anchor" aria-hidden="true" id="roster_xx-notes"></a><a href="#roster_xx-notes" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>roster_XX</code> notes:</h4>
+<p>Each player that joins the game will be reported in the following way:</p>
+<p><code>{&quot;info&quot;:{&quot;match_info&quot;:{&quot;roster_3&quot;:&quot;{\&quot;name\&quot;:\&quot;RunLikePistorius\&quot;,\&quot;isTeammate\&quot;:false}&quot;}},&quot;feature&quot;:&quot;roster&quot;}</code></p>
+<p>As you can see, this object includes:</p>
+<ul>
+<li><code>name</code> - Player name</li>
+<li><code>isTeammate</code> (Bool) - Player is/not a squad member</li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="location"></a><a href="#location" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>location</code></h2>
+<h3><a class="anchor" aria-hidden="true" id="info-updates-5"></a><a href="#info-updates-5" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Info Updates</h3>
+<table>
+<thead>
+<tr><th>key</th><th>Category</th><th>Values</th><th>Notes</th><th>Since Version</th></tr>
+</thead>
+<tbody>
+<tr><td>location</td><td>game_info</td><td>See example below</td><td></td><td>0.130</td></tr>
+</tbody>
+</table>
+<h4><a class="anchor" aria-hidden="true" id="location-notes"></a><a href="#location-notes" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>location</code> notes:</h4>
+<ul>
+<li>Map Center is (0,0,z)</li>
+<li>King's Canyon appears to be 1x1km</li>
+<li>The location is updated up to 2 updates in 1 second.</li>
+<li>Location accuracy is 1 meter.</li>
+</ul>
+<h4><a class="anchor" aria-hidden="true" id="event-data-example"></a><a href="#event-data-example" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Event data example:</h4>
+<p><code>{&quot;info&quot;:{&quot;match_info&quot;:{&quot;location&quot;:&quot;{\&quot;x\&quot;:\&quot;93\&quot;,\&quot;y\&quot;:\&quot;305\&quot;,\&quot;z\&quot;:\&quot;49\&quot;}&quot;}},&quot;feature&quot;:&quot;location&quot;}</code></p>
+<h2><a class="anchor" aria-hidden="true" id="victory"></a><a href="#victory" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>victory</code></h2>
+<h3><a class="anchor" aria-hidden="true" id="info-updates-6"></a><a href="#info-updates-6" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Info Updates</h3>
+<table>
+<thead>
+<tr><th>key</th><th>Category</th><th>Values</th><th>Notes</th><th>Since Version</th></tr>
+</thead>
+<tbody>
+<tr><td>victory</td><td>match_info</td><td>active/inactive</td><td>This info update notifies at the end of the match and provides “true” for winning and “false” for losing.</td><td>0.128</td></tr>
+</tbody>
+</table>
+<h2><a class="anchor" aria-hidden="true" id="match_summary"></a><a href="#match_summary" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>match_summary</code></h2>
+<h3><a class="anchor" aria-hidden="true" id="info-updates-7"></a><a href="#info-updates-7" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Info Updates</h3>
+<table>
+<thead>
+<tr><th>key</th><th>Category</th><th>Values</th><th>Notes</th><th>Since Version</th></tr>
+</thead>
+<tbody>
+<tr><td>match_summary</td><td>match_info</td><td></td><td></td><td>0.130</td></tr>
+</tbody>
+</table>
+<h4><a class="anchor" aria-hidden="true" id="match_summary-notes"></a><a href="#match_summary-notes" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>match_summary</code> notes:</h4>
+<p>The following info is provided:</p>
+<ul>
+<li>The final position the squad has reached (rank 1-20).</li>
+<li>Total number of teams</li>
+<li>Number of squad kills (total squad eliminated).</li>
+</ul>
+<h4><a class="anchor" aria-hidden="true" id="event-data-example-1"></a><a href="#event-data-example-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Event data example:</h4>
+<p><code>{&quot;feature&quot;:&quot;match_summary&quot;,&quot;category&quot;:&quot;match_info&quot;,&quot;key&quot;:&quot;match_summary&quot;,&quot;value&quot;:&quot;{\&quot;rank\&quot;:\&quot;12\&quot;,\&quot;teams\&quot;:\&quot;20\&quot;,\&quot;squadKills\&quot;:\&quot;5\&quot;}&quot;}</code></p>
+<h2><a class="anchor" aria-hidden="true" id="damage"></a><a href="#damage" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>damage</code></h2>
+<h3><a class="anchor" aria-hidden="true" id="info-updates-8"></a><a href="#info-updates-8" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Info Updates</h3>
+<table>
+<thead>
+<tr><th>key</th><th>Category</th><th>Values</th><th>Notes</th><th>Since Version</th></tr>
+</thead>
+<tbody>
+<tr><td>totalDamageDealt</td><td>me</td><td>The total amount of damage inflicted in 1 match of Apex. See example below.</td><td></td><td>0.130</td></tr>
+</tbody>
+</table>
+<h4><a class="anchor" aria-hidden="true" id="totaldamagedealt-notes"></a><a href="#totaldamagedealt-notes" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>totalDamageDealt</code> Notes:</h4>
+<p>Important to note that the game does not count damage that is inflicted on Armor. Only after the armor was broken. Our damage includes damage on armor aswell, so it will always be higher than game-damage.</p>
+<h4><a class="anchor" aria-hidden="true" id="event-data-example-2"></a><a href="#event-data-example-2" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Event data example:</h4>
+<p><code>{&quot;feature&quot;:&quot;damage&quot;,&quot;category&quot;:&quot;me&quot;,&quot;key&quot;:&quot;totalDamageDealt&quot;,&quot;value&quot;:668}</code></p>
+<h3><a class="anchor" aria-hidden="true" id="events-1"></a><a href="#events-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Events</h3>
+<table>
+<thead>
+<tr><th>Event</th><th>Event Data</th><th>Fired When (announcement)</th><th>Notes</th><th>Since Version</th></tr>
+</thead>
+<tbody>
+<tr><td>damage</td><td>See example below</td><td>When information is presented on the game’s UI (top right corner).</td><td></td><td>0.130</td></tr>
+</tbody>
+</table>
+<h4><a class="anchor" aria-hidden="true" id="damage-notes"></a><a href="#damage-notes" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>damage</code> Notes:</h4>
+<p>The following properties are provided:</p>
+<ul>
+<li>targetName</li>
+<li>damageAmount</li>
+<li>armor</li>
+<li>headshot</li>
+<li>grenade</li>
+</ul>
+<h4><a class="anchor" aria-hidden="true" id="event-data-example-3"></a><a href="#event-data-example-3" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Event data example:</h4>
+<p><code>{&quot;name&quot;:&quot;damage&quot;,&quot;data&quot;:&quot;{\r\n \&quot;targetName\&quot;: \&quot;masiqu22\&quot;,\r\n \&quot;damageAmount\&quot;: \&quot;13.000000\&quot;,\r\n \&quot;armor\&quot;: \&quot;true\&quot;,\r\n \&quot;headshot\&quot;: \&quot;false\&quot;\r\n}&quot;}</code></p>
+<h2><a class="anchor" aria-hidden="true" id="inventory"></a><a href="#inventory" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>inventory</code></h2>
+<h3><a class="anchor" aria-hidden="true" id="info-updates-9"></a><a href="#info-updates-9" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Info Updates</h3>
+<table>
+<thead>
+<tr><th>key</th><th>Category</th><th>Values</th><th>Notes</th><th>Since Version</th></tr>
+</thead>
+<tbody>
+<tr><td>inventory_XX</td><td>me</td><td>The items that are picked up into the inventory slots of the local player (Tab).</br>Example:</br><code>{&quot;feature&quot;:&quot;inventory&quot;,&quot;category&quot;:&quot;me&quot;,&quot;key&quot;:&quot;inventory_0&quot;,&quot;value&quot;:&quot;{\&quot;name\&quot;:\&quot;Shotgun Shells\&quot;,\&quot;amount\&quot;:\&quot;36\&quot;}&quot;}</code></td><td></td><td>0.130</td></tr>
+<tr><td>weapons</td><td>me</td><td>The weapons that are currently used by the local player (only 2 slots are available – 0 &amp; 1).</br>Example:</br><code>{&quot;category&quot;:&quot;game_info&quot;,&quot;key&quot;:&quot;weapons&quot;,&quot;value&quot;:&quot;{\&quot;weapon_0\&quot;:\&quot;mp_weapon_shotgun_pistol\&quot;,\&quot;weapon_1\&quot;:\&quot;mp_weapon_doubletake\&quot;,\&quot;active_0\&quot;:\&quot;mp_weapon_doubletake\&quot;}&quot;,&quot;valueLength&quot;:107}</code></td><td></td><td>0.130</td></tr>
+<tr><td>inUse</td><td>me</td><td>Any item that is <u>currently used</u> by the local player.</br>Example:</br><code>{&quot;feature&quot;:&quot;inventory&quot;,&quot;category&quot;:&quot;me&quot;,&quot;key&quot;:&quot;inUse&quot;,&quot;value&quot;:&quot;{\&quot;inUse\&quot;:\&quot;Triple Take\&quot;}&quot;}</code></td><td></td><td>0.130</td></tr>
+</tbody>
+</table>
+<h2><a class="anchor" aria-hidden="true" id="kill"></a><a href="#kill" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>kill</code></h2>
+<h3><a class="anchor" aria-hidden="true" id="events-2"></a><a href="#events-2" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Events</h3>
+<table>
+<thead>
+<tr><th>Event</th><th>Event Data</th><th>Fired When</th><th>Notes</th><th>Since Version</th></tr>
+</thead>
+<tbody>
+<tr><td>kill</td><td>victimName</td><td>The local player killed another player</td><td></td><td>0.130</td></tr>
+<tr><td>knockdown</td><td>victimName</td><td>The local player knocked out another player</td><td></td><td>0.130</td></tr>
+<tr><td>assist</td><td>victimName</td><td>The local player participated in a team member’s kill.</br></br>Provided values:</br>1. victimName</br>2. type - knockdown / elimination</br></br>Example:</br></br><code>{&quot;name&quot;:&quot;assist&quot;,&quot;data&quot;:&quot;{\r\n \&quot;victimName\&quot;: \&quot;VioletAlbicocca\&quot;,\r\n \&quot;type\&quot;: \&quot;knockdown\&quot;\r\n}&quot;}</code></td><td></td><td>0.130</td></tr>
+</tbody>
+</table>
+<h2><a class="anchor" aria-hidden="true" id="revive"></a><a href="#revive" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>revive</code></h2>
+<h3><a class="anchor" aria-hidden="true" id="events-3"></a><a href="#events-3" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Events</h3>
+<table>
+<thead>
+<tr><th>Event</th><th>Event Data</th><th>Fired When</th><th>Notes</th><th>Since Version</th></tr>
+</thead>
+<tbody>
+<tr><td>healed_from_ko</td><td>null</td><td>Local player was revived from knocked out state.</td><td></td><td>0.128</td></tr>
+<tr><td>respawn</td><td>null</td><td>Local player was returned at the game beacon.</td><td></td><td>0.128</td></tr>
+</tbody>
+</table>
+<h2><a class="anchor" aria-hidden="true" id="death"></a><a href="#death" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>death</code></h2>
+<h3><a class="anchor" aria-hidden="true" id="events-4"></a><a href="#events-4" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Events</h3>
+<table>
+<thead>
+<tr><th>Event</th><th>Event Data</th><th>Fired When</th><th>Notes</th><th>Since Version</th></tr>
+</thead>
+<tbody>
+<tr><td>knocked_out</td><td>null</td><td>The local player’s health drops to zero.</td><td></td><td>0.128</td></tr>
+<tr><td>death</td><td>null (in the future we will provide the killer name).</td><td>The local player died during knocked out state.</td><td>There is another health bar during knocked out</br>state, it’s orange, above the player name.</td><td>0.128</td></tr>
+</tbody>
+</table>
+<h2><a class="anchor" aria-hidden="true" id="kill_feed"></a><a href="#kill_feed" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>kill_feed</code></h2>
+<h3><a class="anchor" aria-hidden="true" id="events-5"></a><a href="#events-5" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Events</h3>
+<table>
+<thead>
+<tr><th>Event</th><th>Event Data</th><th>Fired When</th><th>Notes</th><th>Since Version</th></tr>
+</thead>
+<tbody>
+<tr><td>kill_feed</td><td>See example below</td><td>When information is presented on the game’s UI (top right corner).</td><td></td><td>0.130</td></tr>
+</tbody>
+</table>
+<h4><a class="anchor" aria-hidden="true" id="kill_feed-notes"></a><a href="#kill_feed-notes" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>kill_feed</code> notes:</h4>
+<p>The following properties are provided:</p>
+<ul>
+<li>attackerName</li>
+<li>victimName</li>
+<li>weaponName</li>
+<li>action</li>
+</ul>
+<h4><a class="anchor" aria-hidden="true" id="event-data-example-4"></a><a href="#event-data-example-4" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Event data example:</h4>
+<p><code>{&quot;attackerName&quot;:&quot;NerdGhela&quot;,&quot;victimName&quot;:&quot;DJerryKhan&quot;,&quot;weaponName&quot;:&quot;energy_ar&quot;,&quot;action&quot;:&quot;knockdown&quot;}</code></p>
+</span></div></article></div><div class="docLastUpdate"><em>Last updated on 2019-6-18 by eransharv</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/api/overwolf-games-events-ancestors-legacy"><span class="arrow-prev">← </span><span>Ancestors Legacy Events</span></a><a class="docs-next button" href="/docs/api/overwolf-games-events-autochess"><span>Auto Chess Events</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#sample-apps">Sample Apps</a></li><li><a href="#available-features">Available Features</a></li><li><a href="#me"><code>me</code></a><ul class="toc-headings"><li><a href="#info-updates">Info Updates</a></li></ul></li><li><a href="#match_info"><code>match_info</code></a><ul class="toc-headings"><li><a href="#info-updates-1">Info Updates</a></li></ul></li><li><a href="#match_state"><code>match_state</code></a><ul class="toc-headings"><li><a href="#info-updates-2">Info Updates</a></li><li><a href="#events">Events</a></li></ul></li><li><a href="#team"><code>team</code></a><ul class="toc-headings"><li><a href="#info-updates-3">Info Updates</a></li></ul></li><li><a href="#roster"><code>roster</code></a><ul class="toc-headings"><li><a href="#info-updates-4">Info Updates</a></li></ul></li><li><a href="#location"><code>location</code></a><ul class="toc-headings"><li><a href="#info-updates-5">Info Updates</a></li></ul></li><li><a href="#victory"><code>victory</code></a><ul class="toc-headings"><li><a href="#info-updates-6">Info Updates</a></li></ul></li><li><a href="#match_summary"><code>match_summary</code></a><ul class="toc-headings"><li><a href="#info-updates-7">Info Updates</a></li></ul></li><li><a href="#damage"><code>damage</code></a><ul class="toc-headings"><li><a href="#info-updates-8">Info Updates</a></li><li><a href="#events-1">Events</a></li></ul></li><li><a href="#inventory"><code>inventory</code></a><ul class="toc-headings"><li><a href="#info-updates-9">Info Updates</a></li></ul></li><li><a href="#kill"><code>kill</code></a><ul class="toc-headings"><li><a href="#events-2">Events</a></li></ul></li><li><a href="#revive"><code>revive</code></a><ul class="toc-headings"><li><a href="#events-3">Events</a></li></ul></li><li><a href="#death"><code>death</code></a><ul class="toc-headings"><li><a href="#events-4">Events</a></li></ul></li><li><a href="#kill_feed"><code>kill_feed</code></a><ul class="toc-headings"><li><a href="#events-5">Events</a></li></ul></li></ul></nav></div><footer class="site-footer"><div class="container"><ul><li>Legal</li><li><a href="/terms/developer-terms/">Developer&#x27;s terms</a></li><li><a href="/terms/app-terms/">App terms</a></li><li><a href="http://www.overwolf.com/legal/" target="_blank">Overwolf terms</a></li><li><a href="http://www.overwolf.com/legal/#Privacy-policy" target="_blank">Overwolf Privacy policy</a></li></ul><ul><li>Support</li><li><a href="https://discordapp.com/invite/cjjrZDp" target="_blank">Discord</a></li><li><a href="http://developers.overwolf.com/get-help/slack/">Slack</a></li><li><a href="https://www.facebook.com/OverwolfDevs" target="_blank">Facebook</a></li><li><a href="https://twitter.com/OverwolfDevs" target="_blank">Twitter</a></li></ul><ul><li><a href="/documentation/">Documentation</a></li><li><a href="/documentation/sdk/overwolf/">API</a></li><li><a href="/documentation/sdk/overwolf/plugins/">Plugins</a></li></ul><ul><li>Information</li><li><a href="/changelog/">What&#x27;s new</a></li><li><a href="http://www.overwolf.com/careers/">Careers</a></li><li><a href="https://play.overwolf.com/fund/" target="_blank">Fund</a></li></ul></div></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+                document.addEventListener('keyup', function(e) {
+                  if (e.target !== document.body) {
+                    return;
+                  }
+                  // keyCode for '/' (slash)
+                  if (e.keyCode === 191) {
+                    const search = document.getElementById('search_input_react');
+                    search && search.focus();
+                  }
+                });
+              </script><script>
+              var search = docsearch({
+                
+                apiKey: 'fe54eceb2ea7e0780cc7030fcd4020d4',
+                indexName: 'overwolf',
+                inputSelector: '#search_input_react',
+                algoliaOptions: {}
+              });
+            </script></body></html>

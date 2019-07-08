@@ -1,0 +1,450 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>overwolf.media.replays API · Overwolf</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="&lt;p&gt;Use the overwolf.media.replays API to capture a &lt;strong&gt;short&lt;/strong&gt; video replay of the currently running game.&lt;/p&gt;
+"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="overwolf.media.replays API · Overwolf"/><meta property="og:type" content="website"/><meta property="og:url" content="https://overwolf.github.io/"/><meta property="og:description" content="&lt;p&gt;Use the overwolf.media.replays API to capture a &lt;strong&gt;short&lt;/strong&gt; video replay of the currently running game.&lt;/p&gt;
+"/><meta property="og:image" content="https://overwolf.github.io/img/docusaurus.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://overwolf.github.io/img/docusaurus.png"/><link rel="shortcut icon" href="/img/ow-favicon.ico"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/default.min.css"/><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato%3A400%2C400i%2C700%2C900&amp;ver=4.5.3"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css"/><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css"/><link rel="stylesheet" href="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css"/><link rel="stylesheet" href="/css/code-block-buttons.css"/><script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js"></script><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script><script type="text/javascript" src="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script><script type="text/javascript" src="/js/code-block-buttons.js"></script><script type="text/javascript" src="/developers-site/js/onload.js"></script><script type="text/javascript" src="/developers-site/js/activeNavBar.js"></script><script type="text/javascript" src="/developers-site/js/slicker.js"></script><script src="https://unpkg.com/vanilla-back-to-top@7.1.14/dist/vanilla-back-to-top.min.js"></script><script>
+        document.addEventListener('DOMContentLoaded', function() {
+          addBackToTop(
+            {"zIndex":100,"backgroundColor":"#20232A"}
+          )
+        });
+        </script><script src="/js/scrollSpy.js"></script><link rel="stylesheet" href="/css/main.css"/><script src="/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/"><img class="logo" src="/img/headerIcon.svg" alt="Overwolf"/><h2 class="headerTitleWithLogo">Overwolf</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href="/docs/start/getting-started" target="_self">Getting Started</a></li><li class=""><a href="/docs/topics/best-practices-overview" target="_self">Docs</a></li><li class="siteNavGroupActive"><a href="/docs/api/overwolf-api-overview" target="_self">API</a></li><li class=""><a href="/docs/status/all" target="_self">Status</a></li><li class=""><a href="/docs/download/download-overview" target="_self">Download</a></li><li class="siteNavGroupActive"><a href="/docs/api/changelog" target="_self">Changelog</a></li><li class=""><a href="https://medium.com/overwolf-developers" target="_self">Blog</a></li><li class=""><a href="https://discuss.developers.overwolf.com/" target="_self">Q&amp;A</a></li><li class=""><a href="/docs/support/contact-us" target="_self">Support</a></li><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>overwolf.media</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">API Reference<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/api/overwolf-api-overview">Overview</a></li><li class="navListItem"><a class="navItem" href="/docs/api/changelog">Changelog</a></li><li class="navListItem"><a class="navItem" href="/docs/api/manifest-json">manifest.json</a></li><li class="navListItem"><a class="navItem" href="/docs/api/overwolf-benchmarking">overwolf.benchmarking</a></li><li class="navListItem"><a class="navItem" href="/docs/api/overwolf-log">overwolf.log</a></li><li class="navListItem"><a class="navItem" href="/docs/api/overwolf-streaming">overwolf.streaming</a></li><li class="navListItem"><a class="navItem" href="/docs/api/overwolf-profile">overwolf.profile</a></li><li class="navListItem"><a class="navItem" href="/docs/api/overwolf-tobii">overwolf.tobii</a></li><li class="navListItem"><a class="navItem" href="/docs/api/overwolf-utils">overwolf.utils</a></li><li class="navListItem"><a class="navItem" href="/docs/api/overwolf-os">overwolf.os</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">overwolf.io<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/api/overwolf-io">overwolf.io</a></li><li class="navListItem"><a class="navItem" href="/docs/api/overwolf-io-paths">overwolf.io.paths</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">overwolf.extensions<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/api/overwolf-extensions">overwolf.extensions</a></li><li class="navListItem"><a class="navItem" href="/docs/api/overwolf-extension-current">overwolf.extension.current</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">overwolf.games<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/api/overwolf-games">overwolf.games</a></li><li class="navListItem"><a class="navItem" href="/docs/api/overwolf-games-events">overwolf.games.events</a></li><li class="navListItem"><a class="navItem" href="/docs/api/howto-check-events-status-from-app">Check Event Status From App</a></li><li class="navListItem"><a class="navItem" href="/docs/api/overwolf-games-inputTracking">overwolf.games.inputTracking</a></li><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Games Events List</h4><ul><li class="navListItem"><a class="navItem" href="/docs/api/games-ids">Games IDs</a></li><li class="navListItem"><a class="navItem" href="/docs/api/overwolf-games-events-lol">LOL Events</a></li><li class="navListItem"><a class="navItem" href="/docs/api/overwolf-games-events-ancestors-legacy">Ancestors Legacy Events</a></li><li class="navListItem"><a class="navItem" href="/docs/api/overwolf-games-events-apex-legends">Apex Legends Events</a></li><li class="navListItem"><a class="navItem" href="/docs/api/overwolf-games-events-autochess">Auto Chess Events</a></li><li class="navListItem"><a class="navItem" href="/docs/api/overwolf-games-events-csgo">CS:GO Events</a></li><li class="navListItem"><a class="navItem" href="/docs/api/overwolf-games-events-dota2">Dota 2 Events</a></li><li class="navListItem"><a class="navItem" href="/docs/api/overwolf-games-events-fortnite">Fortnite Events</a></li><li class="navListItem"><a class="navItem" href="/docs/api/overwolf-games-events-pubg">PUBG Game Events</a></li><li class="navListItem"><a class="navItem" href="/docs/api/overwolf-games-events-splitgate">Splitgate Events</a></li><li class="navListItem"><a class="navItem" href="/docs/api/overwolf-games-events-heartstone">Heartstone Events</a></li><li class="navListItem"><a class="navItem" href="/docs/api/overwolf-games-events-battlerite">Battlerite Game Events</a></li><li class="navListItem"><a class="navItem" href="/docs/api/overwolf-games-events-rocket-league">Rocket League Events</a></li><li class="navListItem"><a class="navItem" href="/docs/api/overwolf-games-events-rainbow-six">Rainbow Six Siege Game Events</a></li><li class="navListItem"><a class="navItem" href="/docs/api/overwolf-games-events-wot">World of Tanks Events</a></li><li class="navListItem"><a class="navItem" href="/docs/api/overwolf-games-events-wow">World of Warships Events</a></li><li class="navListItem"><a class="navItem" href="/docs/api/overwolf-games-events-smite">SMITE Events</a></li><li class="navListItem"><a class="navItem" href="/docs/api/overwolf-games-events-warface">Warface Events</a></li><li class="navListItem"><a class="navItem" href="/docs/api/overwolf-games-events-robocraft">Robocraft Events</a></li><li class="navListItem"><a class="navItem" href="/docs/api/games-external-apis">Various External APIs</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Games Launchers List</h4><ul><li class="navListItem"><a class="navItem" href="/docs/api/overwolf-games-launchers">overwolf.games.launchers</a></li><li class="navListItem"><a class="navItem" href="/docs/api/overwolf-games-launchers-events">overwolf.games.launchers.events</a></li><li class="navListItem"><a class="navItem" href="/docs/api/launchers-ids">Launchers IDs</a></li><li class="navListItem"><a class="navItem" href="/docs/api/overwolf-games-launchers-events-lol">LOL Launcher Events</a></li></ul></div></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">overwolf.logitech<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/api/overwolf-logitech">overwolf.logitech</a></li><li class="navListItem"><a class="navItem" href="/docs/api/overwolf-logitech-arx">overwolf.logitech.arx</a></li><li class="navListItem"><a class="navItem" href="/docs/api/overwolf-logitech-led">overwolf.logitech.led</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">overwolf.media<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/api/overwolf-media">overwolf.media</a></li><li class="navListItem"><a class="navItem" href="/docs/api/overwolf-media-audio">overwolf.media.audio</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/docs/api/overwolf-media-replays">overwolf.media.replays</a></li><li class="navListItem"><a class="navItem" href="/docs/api/overwolf-media-videos">overwolf.media.videos</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">overwolf.settings<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/api/overwolf-settings">overwolf.settings</a></li><li class="navListItem"><a class="navItem" href="/docs/api/overwolf-settings-games">overwolf.settings.games</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">overwolf.social<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/api/overwolf-social">overwolf.social</a></li><li class="navListItem"><a class="navItem" href="/docs/api/overwolf-social-youtube">overwolf.social.youtube</a></li><li class="navListItem"><a class="navItem" href="/docs/api/overwolf-social-discord">overwolf.social.discord</a></li><li class="navListItem"><a class="navItem" href="/docs/api/overwolf-social-gfycat">overwolf.social.gfycat</a></li><li class="navListItem"><a class="navItem" href="/docs/api/overwolf-social-twitter">overwolf.social.twitter</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">overwolf.web<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/api/overwolf-web">overwolf.web</a></li><li class="navListItem"><a class="navItem" href="/docs/api/overwolf-web-webserver">overwolf.web.webserver</a></li><li class="navListItem"><a class="navItem" href="/docs/api/overwolf-web-websocket">overwolf.web.websocket</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">overwolf.windows<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/api/overwolf-windows">overwolf.windows</a></li><li class="navListItem"><a class="navItem" href="/docs/api/overwolf-windows-mediaPlayerElement">overwolf.windows.mediaPlayerElement</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><a class="edit-page-link button" href="https://github.com/overwolf/developers-site/tree/master/docs/api/overwolf-media-replays.md" target="_blank" rel="noreferrer noopener">Edit</a><h1 class="postHeaderTitle">overwolf.media.replays API</h1></header><article><div><span><p>Use the overwolf.media.replays API to capture a <strong>short</strong> video replay of the currently running game.</p>
+<h2><a class="anchor" aria-hidden="true" id="methods-reference"></a><a href="#methods-reference" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Methods Reference</h2>
+<ul>
+<li><a href="#turnonsettings-highlights-callback"><code>overwolf.media.replays.turnOn()</code></a></li>
+<li><a href="#turnoffcallback"><code>overwolf.media.replays.turnOff()</code></a></li>
+<li><a href="#getstatereplaytype-callback"><code>overwolf.media.replays.getState()</code></a></li>
+<li><a href="#getstatecallback"><code>overwolf.media.replays.getState()</code></a></li>
+<li><a href="#capturereplaytype-pastduration-futureduration-capturefinishedcallback-callback"><code>overwolf.media.replays.capture()</code></a></li>
+<li><a href="#capturepastduration-futureduration-capturefinishedcallback-callback"><code>overwolf.media.replays.capture()</code></a></li>
+<li><a href="#startcapturereplaytype-pastduration-callback"><code>overwolf.media.replays.startCapture()</code></a></li>
+<li><a href="#startcapturepastduration-callback"><code>overwolf.media.replays.startCapture()</code></a></li>
+<li><a href="#stopcapturereplaytype-replayid-callback"><code>overwolf.media.replays.stopCapture()</code></a></li>
+<li><a href="#stopcapturereplayid-callback"><code>overwolf.media.replays.stopCapture()</code></a></li>
+<li><a href="#updatetobiisettingparam-callback"><code>overwolf.media.replays.updateTobiiSetting()</code></a></li>
+<li><a href="#gethighlightsgameid-callback"><code>overwolf.media.replays.getHighlights()</code></a></li>
+<li><a href="#"><code>overwolf.media.replays.turnOff()</code></a> - Obsolete.</li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="events-reference"></a><a href="#events-reference" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Events Reference</h2>
+<ul>
+<li><a href="#oncaptureerror"><code>overwolf.media.replays.onCaptureError</code></a></li>
+<li><a href="#oncapturestopped"><code>overwolf.media.replays.onCaptureStopped</code></a></li>
+<li><a href="#oncapurewarning"><code>overwolf.media.replays.onCapureWarning</code></a></li>
+<li><a href="#onreplayservicesstarted"><code>overwolf.media.replays.onReplayServicesStarted</code></a></li>
+<li><a href="#onhighlightscaptured"><code>overwolf.media.replays.onHighlightsCaptured</code></a></li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="types-reference"></a><a href="#types-reference" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Types Reference</h2>
+<ul>
+<li><a href="#replayhighlightssetting-object"><code>overwolf.media.replays.ReplayHighlightsSetting</code></a> Object</li>
+<li><a href="#replaytype-enum"><code>overwolf.media.replays.enums.ReplayType</code></a> enum</li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="turnonsettings-highlights-callback"></a><a href="#turnonsettings-highlights-callback" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>turnOn(settings, highlights, callback)</h2>
+<h4><a class="anchor" aria-hidden="true" id="version-added-0130"></a><a href="#version-added-0130" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Version added: 0.130</h4>
+<blockquote>
+<p>Turns on background replay capturing. Without calling it first, you will not be able to create video replays.</p>
+</blockquote>
+<p>Using this method you can quickly get the game highlights videos without the overhead of using both OW events and streaming API’s.</p>
+<p>There’s no need to know/understand each supported game’s mechanics, game flow, edge cases, timings, etc. Just request for any supported game highlight and OW will provide you with a video file that includes this event.</p>
+<table>
+<thead>
+<tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>settings</td><td><a href="overwolf-streaming#streamsettings-object">StreamSettings</a> object</td><td>The video capture settings</td></tr>
+<tr><td>highlights</td><td><a href="#replayhighlightssetting-object">ReplayHighlightsSetting</a> object</td><td>The highlights capture settings</td></tr>
+<tr><td>callback</td><td>function</td><td>A callback function which will be called with the status of the request</td></tr>
+</tbody>
+</table>
+<h4><a class="anchor" aria-hidden="true" id="callback-argument-success"></a><a href="#callback-argument-success" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Callback argument: Success</h4>
+<p>A callback function which will be called with the status of the request</p>
+<pre><code class="hljs css language-json">{ <span class="hljs-attr">"status"</span>: <span class="hljs-string">"success"</span> }
+</code></pre>
+<h4><a class="anchor" aria-hidden="true" id="few-important-notes"></a><a href="#few-important-notes" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Few important notes</h4>
+<ul>
+<li><p>Turning on replay capturing will consume system resources, so use it wisely. <code>buffer_length</code> property in the <a href="overwolf-streaming#streamsettings-object">StreamSettings</a> object defines the amount of time in milliseconds to have captured in the memory at all times.</p></li>
+<li><p><code>turnOn()</code> will fail if highlights are requested but not supported for the current game. (to get the list of supported highlights call <a href="#">gethighlights()</a>)</p></li>
+<li><p>The below call will override your current OW client settings only if video setting is not null or values are different than zero.</p></li>
+<li><p>For each OW app that uses this feature, a new video folder will be created. So in theory, a few OW installed apps can capture the same highlight, from the same game (if all these apps set to capture this highlight from this game of course).</p></li>
+</ul>
+<h4><a class="anchor" aria-hidden="true" id="usage-example"></a><a href="#usage-example" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Usage Example</h4>
+<pre><code class="hljs css language-javascript">overwolf.media.replays.turnOn({
+      <span class="hljs-string">"settings"</span>: settings,
+      <span class="hljs-string">"highlights"</span>: {
+        <span class="hljs-string">"enable"</span> : <span class="hljs-literal">true</span>,
+        <span class="hljs-string">"requiredHighlights"</span> : [<span class="hljs-string">"death"</span>,<span class="hljs-string">"assist"</span>,<span class="hljs-string">"victory"</span>] <span class="hljs-comment">//an interesting evenst that happened in game</span>
+      }
+    }, callback);
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="turnoffcallback"></a><a href="#turnoffcallback" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>turnOff(callback)</h2>
+<h4><a class="anchor" aria-hidden="true" id="version-added-0117"></a><a href="#version-added-0117" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Version added: 0.117</h4>
+<blockquote>
+<p>Turns off background replay capturing. Call this as soon as you’re no longer interested in capturing, in order to free up resources.</p>
+</blockquote>
+<table>
+<thead>
+<tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>callback</td><td>function</td><td>A callback function which will be called with the status of the request</td></tr>
+</tbody>
+</table>
+<h4><a class="anchor" aria-hidden="true" id="callback-argument-success-1"></a><a href="#callback-argument-success-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Callback argument: Success</h4>
+<p>A callback function which will be called with the status of the request</p>
+<pre><code class="hljs css language-json">{ <span class="hljs-attr">"status"</span>: <span class="hljs-string">"success"</span> }
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="getstatereplaytype-callback"></a><a href="#getstatereplaytype-callback" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>getState(replayType, callback)</h2>
+<h4><a class="anchor" aria-hidden="true" id="version-added-078"></a><a href="#version-added-078" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Version added: 0.78</h4>
+<blockquote>
+<p>Returns whether replay capturing is turned on or off.</p>
+</blockquote>
+<table>
+<thead>
+<tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>replayType</td><td><a href="#replaytype-enum">ReplayType</a> enum</td><td>The type of replay to get state for</td></tr>
+<tr><td>callback</td><td>function</td><td>A callback function which will be called with the status of the request</td></tr>
+</tbody>
+</table>
+<h4><a class="anchor" aria-hidden="true" id="callback-argument-success-2"></a><a href="#callback-argument-success-2" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Callback argument: Success</h4>
+<p>A callback function which will be called with the status of the request</p>
+<pre><code class="hljs css language-json">{
+    <span class="hljs-attr">"status"</span>: <span class="hljs-string">"success"</span>,
+    <span class="hljs-attr">"isOn"</span>: <span class="hljs-literal">true</span>
+}
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="getstatecallback"></a><a href="#getstatecallback" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>getState(callback)</h2>
+<h4><a class="anchor" aria-hidden="true" id="version-added-0117-1"></a><a href="#version-added-0117-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Version added: 0.117</h4>
+<blockquote>
+<p>Returns whether replay capturing is turned on or off.</p>
+</blockquote>
+<table>
+<thead>
+<tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>callback</td><td>function</td><td>A callback function which will be called with the status of the request</td></tr>
+</tbody>
+</table>
+<h2><a class="anchor" aria-hidden="true" id="capturereplaytype-pastduration-futureduration-capturefinishedcallback-callback"></a><a href="#capturereplaytype-pastduration-futureduration-capturefinishedcallback-callback" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>capture(replayType, pastDuration, futureDuration, captureFinishedCallback, callback)</h2>
+<h4><a class="anchor" aria-hidden="true" id="version-added-078-1"></a><a href="#version-added-078-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Version added: 0.78</h4>
+<blockquote>
+<p>Starts capturing a replay to a file.</p>
+</blockquote>
+<ul>
+<li>A replay id will be returned in the callback which is needed to finish capturing the replay.</li>
+<li>You can only call this method if replay mode is on and no other replay is currently being captured to a file.</li>
+</ul>
+<table>
+<thead>
+<tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>replayType</td><td><a href="#replaytype-enum">ReplayType</a> enum</td><td>The type of replay to capture</td></tr>
+<tr><td>pastDuration</td><td>int</td><td>The video lengh, in milliseconds to include prior to the time of this call</td></tr>
+<tr><td>futureDuration</td><td>int</td><td>The video lengh, in milliseconds to include after the time of this call. To ignore it, simply give it a non-positive value</td></tr>
+<tr><td>captureFinishedCallback</td><td>function</td><td>A callback function which will be called when capturing is finished, at the end of the future duration supplied to this call</td></tr>
+<tr><td>callback</td><td>function</td><td>A callback function which will be called with the status of the request</td></tr>
+</tbody>
+</table>
+<h4><a class="anchor" aria-hidden="true" id="callback-argument-success-3"></a><a href="#callback-argument-success-3" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Callback argument: Success</h4>
+<p>A callback function which will be called with the status of the request</p>
+<pre><code class="hljs css language-json">{
+    <span class="hljs-attr">"status"</span>: <span class="hljs-string">"success"</span>,
+    <span class="hljs-attr">"url"</span>: <span class="hljs-string">"overwolf://media/replays/App+Name/Dota+2+06-28-2016+17-55-59-435.mp4"</span>,
+    <span class="hljs-attr">"path"</span>: <span class="hljs-string">"E:/Video/Overwolf/App Name/Dota 2 06-28-2016 17-55-59-435.mp4"</span>,
+    <span class="hljs-attr">"duration"</span>: <span class="hljs-number">10512</span>,
+    <span class="hljs-attr">"start_time"</span>: <span class="hljs-number">1467125753892</span>,
+    <span class="hljs-attr">"thumbnail_url"</span>: <span class="hljs-string">"overwolf://media/thumbnails/App+Name/Dota+2+06-28-2016+17-55-59-435.mp4"</span>
+}
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="capturepastduration-futureduration-capturefinishedcallback-callback"></a><a href="#capturepastduration-futureduration-capturefinishedcallback-callback" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>capture(pastDuration, futureDuration, captureFinishedCallback, callback)</h2>
+<h4><a class="anchor" aria-hidden="true" id="version-added-078-2"></a><a href="#version-added-078-2" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Version added: 0.78</h4>
+<blockquote>
+<p>Starts capturing a replay to a file.</p>
+</blockquote>
+<ul>
+<li>A replay id will be returned in the callback which is needed to finish capturing the replay.</li>
+<li>You can only call this method if replay mode is on and no other replay is currently being captured to a file.</li>
+</ul>
+<table>
+<thead>
+<tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>pastDuration</td><td>int</td><td>The video lengh, in milliseconds to include prior to the time of this call</td></tr>
+<tr><td>futureDuration</td><td>int</td><td>The video lengh, in milliseconds to include after the time of this call. To ignore it, simply give it a non-positive value</td></tr>
+<tr><td>captureFinishedCallback</td><td>function</td><td>A callback function which will be called when capturing is finished, at the end of the future duration supplied to this call</td></tr>
+<tr><td>callback</td><td>function</td><td>A callback function which will be called with the status of the request</td></tr>
+</tbody>
+</table>
+<h2><a class="anchor" aria-hidden="true" id="startcapturereplaytype-pastduration-callback"></a><a href="#startcapturereplaytype-pastduration-callback" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>startCapture(replayType, pastDuration, callback)</h2>
+<h4><a class="anchor" aria-hidden="true" id="version-added-078-3"></a><a href="#version-added-078-3" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Version added: 0.78</h4>
+<blockquote>
+<p>Starts capturing a replay to a file.</p>
+</blockquote>
+<ul>
+<li>A replay id will be returned in the callback which is needed to finish capturing the replay.</li>
+<li>You can only call this method if replay mode is on and no other replay is currently being captured to a file.</li>
+</ul>
+<table>
+<thead>
+<tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>replayType</td><td><a href="#replaytype-enum">ReplayType</a> enum</td><td>The type of replay to capture</td></tr>
+<tr><td>pastDuration</td><td>int</td><td>The video lengh, in milliseconds to include prior to the time of this call</td></tr>
+<tr><td>captureFinishedCallback</td><td>function</td><td>A callback function which will be called when capturing is finished, at the end of the future duration supplied to this call</td></tr>
+<tr><td>callback</td><td>function</td><td>A callback function which will be called with the status of the request</td></tr>
+</tbody>
+</table>
+<h4><a class="anchor" aria-hidden="true" id="callback-argument-success-4"></a><a href="#callback-argument-success-4" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Callback argument: Success</h4>
+<p>A callback function which will be called with the status of the request</p>
+<pre><code class="hljs css language-json">{
+    <span class="hljs-attr">"status"</span>: <span class="hljs-string">"success"</span>,
+    <span class="hljs-attr">"url"</span>: <span class="hljs-string">"overwolf://media/replays/App+Name/Dota+2+06-28-2016+17-59-37-620.mp4"</span>,
+    <span class="hljs-attr">"path"</span>: <span class="hljs-string">"E://Video/Overwolf/App Name/Dota 2 06-28-2016 17-59-37-620.mp4"</span>
+}
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="startcapturepastduration-callback"></a><a href="#startcapturepastduration-callback" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>startCapture(pastDuration, callback)</h2>
+<h4><a class="anchor" aria-hidden="true" id="version-added-078-4"></a><a href="#version-added-078-4" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Version added: 0.78</h4>
+<blockquote>
+<p>Starts capturing a replay to a file.</p>
+</blockquote>
+<ul>
+<li>A replay id will be returned in the callback which is needed to finish capturing the replay.</li>
+<li>You can only call this method if replay mode is on and no other replay is currently being captured to a file.</li>
+</ul>
+<table>
+<thead>
+<tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>replayType</td><td><a href="#replaytype-enum">ReplayType</a> enum</td><td>The type of replay to capture</td></tr>
+<tr><td>captureFinishedCallback</td><td>function</td><td>A callback function which will be called when capturing is finished, at the end of the future duration supplied to this call</td></tr>
+<tr><td>callback</td><td>function</td><td>A callback function which will be called with the status of the request</td></tr>
+</tbody>
+</table>
+<h2><a class="anchor" aria-hidden="true" id="stopcapturereplaytype-replayid-callback"></a><a href="#stopcapturereplaytype-replayid-callback" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>stopCapture(ReplayType, replayId, callback)</h2>
+<h4><a class="anchor" aria-hidden="true" id="version-added-078-5"></a><a href="#version-added-078-5" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Version added: 0.78</h4>
+<blockquote>
+<p>Finishes capturing a replay and returns a url to the created video file.</p>
+</blockquote>
+<ul>
+<li>You can only call this method if replay mode is on and using a valid id of a replay being captured to a file (“url” property).</li>
+</ul>
+<table>
+<thead>
+<tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>replayType</td><td><a href="#replaytype-enum">ReplayType</a> enum</td><td>The type of replay to capture</td></tr>
+<tr><td>replayId</td><td>string</td><td>The id of the replay you want to stop capturing</td></tr>
+<tr><td>callback</td><td>function</td><td>A callback function which will be called with the status of the request</td></tr>
+</tbody>
+</table>
+<h4><a class="anchor" aria-hidden="true" id="callback-argument-success-5"></a><a href="#callback-argument-success-5" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Callback argument: Success</h4>
+<p>A callback function which will be called with the status of the request</p>
+<pre><code class="hljs css language-json">{
+    <span class="hljs-attr">"status"</span>: <span class="hljs-string">"success"</span>,
+    <span class="hljs-attr">"url"</span>: <span class="hljs-string">"overwolf://media/replays/App+Name/Dota+2+06-28-2016+17-59-37-620.mp4"</span>,
+    <span class="hljs-attr">"path"</span>: <span class="hljs-string">"E://Video/Overwolf/App Name/Dota 2 06-28-2016 17-59-37-620.mp4"</span>,
+    <span class="hljs-attr">"duration"</span>: <span class="hljs-number">84556</span>,
+    <span class="hljs-attr">"start_time"</span>: <span class="hljs-number">1467125971875</span>,
+    <span class="hljs-attr">"thumbnail_url"</span>: <span class="hljs-string">"overwolf://media/thumbnails/App+Name/Dota+2+06-28-2016+17-59-37-620.mp4"</span>
+}
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="stopcapturereplayid-callback"></a><a href="#stopcapturereplayid-callback" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>stopCapture(replayId, callback)</h2>
+<h4><a class="anchor" aria-hidden="true" id="version-added-0117-2"></a><a href="#version-added-0117-2" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Version added: 0.117</h4>
+<blockquote>
+<p>Finishes capturing a replay and returns a url to the created video file.</p>
+</blockquote>
+<ul>
+<li>ou can only call this method if replay mode is on and using a valid id of a replay being captured to a file.</li>
+</ul>
+<table>
+<thead>
+<tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>replayId</td><td>string</td><td>The id of the replay you want to stop capturing</td></tr>
+<tr><td>callback</td><td>function</td><td>A callback function which will be called with the status of the request</td></tr>
+</tbody>
+</table>
+<h2><a class="anchor" aria-hidden="true" id="updatetobiisettingparam-callback"></a><a href="#updatetobiisettingparam-callback" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>updateTobiiSetting(param, callback)</h2>
+<h4><a class="anchor" aria-hidden="true" id="version-added-0110"></a><a href="#version-added-0110" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Version added: 0.110</h4>
+<blockquote>
+<p>Update Tobii streaming layer.</p>
+</blockquote>
+<ul>
+<li>ou can only call this method if replay mode is on and using a valid id of a replay being captured to a file.</li>
+</ul>
+<table>
+<thead>
+<tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>param</td><td><a href="overwolf-tobii#tobiilayerparams-object">TobiiLayerParams</a></td><td>The Tobii layer visibility param</td></tr>
+<tr><td>callback</td><td>function</td><td>A callback function which will be called with the status of the request</td></tr>
+</tbody>
+</table>
+<h4><a class="anchor" aria-hidden="true" id="callback-argument-success-6"></a><a href="#callback-argument-success-6" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Callback argument: Success</h4>
+<p>A function that will be called with a JSON containing the status and the stream id if successful:</p>
+<pre><code class="hljs css language-json">{<span class="hljs-attr">"status"</span>: <span class="hljs-string">"success"</span>,<span class="hljs-attr">"stream_id"</span>: <span class="hljs-number">1</span>}
+</code></pre>
+<h4><a class="anchor" aria-hidden="true" id="callback-argument-failure"></a><a href="#callback-argument-failure" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Callback argument: Failure</h4>
+<p>A callback function which  an error message:</p>
+<pre><code class="hljs css language-json">{<span class="hljs-attr">"status"</span>: <span class="hljs-string">"error"</span>, <span class="hljs-attr">"something went wrong..."</span>}
+</code></pre>
+<h4><a class="anchor" aria-hidden="true" id="usage-example-1"></a><a href="#usage-example-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Usage Example</h4>
+<pre><code class="hljs css language-javascript">overwolf.media.replays.updateTobiiSetting({
+    <span class="hljs-attr">visible</span>: <span class="hljs-literal">true</span>,
+    <span class="hljs-attr">effect</span>: overwolf.streaming.enums.eTobiiEffectType.Bubble},
+    <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">res</span>) </span>{
+       <span class="hljs-keyword">if</span> (res.status == <span class="hljs-string">'success'</span>) { }
+    });
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="gethighlightsgameid-callback"></a><a href="#gethighlightsgameid-callback" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>getHighlights(gameId, callback)</h2>
+<h4><a class="anchor" aria-hidden="true" id="version-added-0130-1"></a><a href="#version-added-0130-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Version added: 0.130</h4>
+<blockquote>
+<p>Get supported auto highlights features for a game.</p>
+</blockquote>
+<ul>
+<li>ou can only call this method if replay mode is on and using a valid id of a replay being captured to a file.</li>
+</ul>
+<table>
+<thead>
+<tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>gameId</td><td>int</td><td>The id of the game you want to capture it highlights</td></tr>
+<tr><td>callback</td><td>function</td><td>A callback function which provides a list of the generated video highlights URL’s for this session and relevant metadata for each highlight</td></tr>
+</tbody>
+</table>
+<h2><a class="anchor" aria-hidden="true" id="oncaptureerror"></a><a href="#oncaptureerror" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>onCaptureError</h2>
+<h4><a class="anchor" aria-hidden="true" id="version-added-078-6"></a><a href="#version-added-078-6" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Version added: 0.78</h4>
+<blockquote>
+<p>Fired when an errror has occured with the capturing.</p>
+</blockquote>
+<h2><a class="anchor" aria-hidden="true" id="oncapturestopped"></a><a href="#oncapturestopped" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>onCaptureStopped</h2>
+<h4><a class="anchor" aria-hidden="true" id="version-added-0117-3"></a><a href="#version-added-0117-3" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Version added: 0.117</h4>
+<blockquote>
+<p>Fired when replay service is stopped.</p>
+</blockquote>
+<h2><a class="anchor" aria-hidden="true" id="oncapurewarning"></a><a href="#oncapurewarning" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>onCapureWarning</h2>
+<h4><a class="anchor" aria-hidden="true" id="version-added-0117-4"></a><a href="#version-added-0117-4" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Version added: 0.117</h4>
+<blockquote>
+<p>Fired on capture service warning.</p>
+</blockquote>
+<h2><a class="anchor" aria-hidden="true" id="onreplayservicesstarted"></a><a href="#onreplayservicesstarted" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>onReplayServicesStarted</h2>
+<h4><a class="anchor" aria-hidden="true" id="version-added-0117-5"></a><a href="#version-added-0117-5" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Version added: 0.117</h4>
+<blockquote>
+<p>Fired when an replay service was started (on any app)</p>
+</blockquote>
+<h2><a class="anchor" aria-hidden="true" id="onhighlightscaptured"></a><a href="#onhighlightscaptured" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>onHighlightsCaptured</h2>
+<h4><a class="anchor" aria-hidden="true" id="version-added-0130-2"></a><a href="#version-added-0130-2" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Version added: 0.130</h4>
+<blockquote>
+<p>Fired when a new Replay highlight recorded (when highlightsSetting is enabled).</p>
+</blockquote>
+<h2><a class="anchor" aria-hidden="true" id="replayhighlightssetting-object"></a><a href="#replayhighlightssetting-object" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>ReplayHighlightsSetting Object</h2>
+<h4><a class="anchor" aria-hidden="true" id="version-added-078-7"></a><a href="#version-added-078-7" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Version added: 0.78</h4>
+<blockquote>
+<p>Container for the Auto highlights configuration.</p>
+</blockquote>
+<table>
+<thead>
+<tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>enable</td><td>bool</td><td>Enable auto Highlights recording</td></tr>
+<tr><td>requiredHighlights</td><td>string</td><td>An array of requested highlights. use [&quot;*&quot;] to register all features. You can get the list of the supported highlights using the method <a href="#">gethighlights()</a>)</td></tr>
+</tbody>
+</table>
+<h2><a class="anchor" aria-hidden="true" id="replaytype-enum"></a><a href="#replaytype-enum" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>ReplayType enum</h2>
+<h4><a class="anchor" aria-hidden="true" id="version-added-078-8"></a><a href="#version-added-078-8" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Version added: 0.78</h4>
+<blockquote>
+<p>The replay type to use.</p>
+</blockquote>
+<table>
+<thead>
+<tr><th>Option</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>Video</td><td></td></tr>
+<tr><td>gif</td><td></td></tr>
+</tbody>
+</table>
+</span></div></article></div><div class="docLastUpdate"><em>Last updated on 2019-7-7 by eransharv</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/api/overwolf-media-audio"><span class="arrow-prev">← </span><span>overwolf.media.audio</span></a><a class="docs-next button" href="/docs/api/overwolf-media-videos"><span>overwolf.media.videos</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#methods-reference">Methods Reference</a></li><li><a href="#events-reference">Events Reference</a></li><li><a href="#types-reference">Types Reference</a></li><li><a href="#turnonsettings-highlights-callback">turnOn(settings, highlights, callback)</a></li><li><a href="#turnoffcallback">turnOff(callback)</a></li><li><a href="#getstatereplaytype-callback">getState(replayType, callback)</a></li><li><a href="#getstatecallback">getState(callback)</a></li><li><a href="#capturereplaytype-pastduration-futureduration-capturefinishedcallback-callback">capture(replayType, pastDuration, futureDuration, captureFinishedCallback, callback)</a></li><li><a href="#capturepastduration-futureduration-capturefinishedcallback-callback">capture(pastDuration, futureDuration, captureFinishedCallback, callback)</a></li><li><a href="#startcapturereplaytype-pastduration-callback">startCapture(replayType, pastDuration, callback)</a></li><li><a href="#startcapturepastduration-callback">startCapture(pastDuration, callback)</a></li><li><a href="#stopcapturereplaytype-replayid-callback">stopCapture(ReplayType, replayId, callback)</a></li><li><a href="#stopcapturereplayid-callback">stopCapture(replayId, callback)</a></li><li><a href="#updatetobiisettingparam-callback">updateTobiiSetting(param, callback)</a></li><li><a href="#gethighlightsgameid-callback">getHighlights(gameId, callback)</a></li><li><a href="#oncaptureerror">onCaptureError</a></li><li><a href="#oncapturestopped">onCaptureStopped</a></li><li><a href="#oncapurewarning">onCapureWarning</a></li><li><a href="#onreplayservicesstarted">onReplayServicesStarted</a></li><li><a href="#onhighlightscaptured">onHighlightsCaptured</a></li><li><a href="#replayhighlightssetting-object">ReplayHighlightsSetting Object</a></li><li><a href="#replaytype-enum">ReplayType enum</a></li></ul></nav></div><footer class="site-footer"><div class="container"><ul><li>Legal</li><li><a href="/terms/developer-terms/">Developer&#x27;s terms</a></li><li><a href="/terms/app-terms/">App terms</a></li><li><a href="http://www.overwolf.com/legal/" target="_blank">Overwolf terms</a></li><li><a href="http://www.overwolf.com/legal/#Privacy-policy" target="_blank">Overwolf Privacy policy</a></li></ul><ul><li>Support</li><li><a href="https://discordapp.com/invite/cjjrZDp" target="_blank">Discord</a></li><li><a href="http://developers.overwolf.com/get-help/slack/">Slack</a></li><li><a href="https://www.facebook.com/OverwolfDevs" target="_blank">Facebook</a></li><li><a href="https://twitter.com/OverwolfDevs" target="_blank">Twitter</a></li></ul><ul><li><a href="/documentation/">Documentation</a></li><li><a href="/documentation/sdk/overwolf/">API</a></li><li><a href="/documentation/sdk/overwolf/plugins/">Plugins</a></li></ul><ul><li>Information</li><li><a href="/changelog/">What&#x27;s new</a></li><li><a href="http://www.overwolf.com/careers/">Careers</a></li><li><a href="https://play.overwolf.com/fund/" target="_blank">Fund</a></li></ul></div></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+                document.addEventListener('keyup', function(e) {
+                  if (e.target !== document.body) {
+                    return;
+                  }
+                  // keyCode for '/' (slash)
+                  if (e.keyCode === 191) {
+                    const search = document.getElementById('search_input_react');
+                    search && search.focus();
+                  }
+                });
+              </script><script>
+              var search = docsearch({
+                
+                apiKey: 'fe54eceb2ea7e0780cc7030fcd4020d4',
+                indexName: 'overwolf',
+                inputSelector: '#search_input_react',
+                algoliaOptions: {}
+              });
+            </script></body></html>

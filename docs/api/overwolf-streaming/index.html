@@ -1,0 +1,1172 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>overwolf.streaming API · Overwolf</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="&lt;p&gt;This namespace contains all the functionality that allows the streaming of video/audio.&lt;/p&gt;
+"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="overwolf.streaming API · Overwolf"/><meta property="og:type" content="website"/><meta property="og:url" content="https://overwolf.github.io/"/><meta property="og:description" content="&lt;p&gt;This namespace contains all the functionality that allows the streaming of video/audio.&lt;/p&gt;
+"/><meta property="og:image" content="https://overwolf.github.io/img/docusaurus.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://overwolf.github.io/img/docusaurus.png"/><link rel="shortcut icon" href="/img/ow-favicon.ico"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/default.min.css"/><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato%3A400%2C400i%2C700%2C900&amp;ver=4.5.3"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css"/><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css"/><link rel="stylesheet" href="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css"/><link rel="stylesheet" href="/css/code-block-buttons.css"/><script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js"></script><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script><script type="text/javascript" src="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script><script type="text/javascript" src="/js/code-block-buttons.js"></script><script type="text/javascript" src="/developers-site/js/onload.js"></script><script type="text/javascript" src="/developers-site/js/activeNavBar.js"></script><script type="text/javascript" src="/developers-site/js/slicker.js"></script><script src="https://unpkg.com/vanilla-back-to-top@7.1.14/dist/vanilla-back-to-top.min.js"></script><script>
+        document.addEventListener('DOMContentLoaded', function() {
+          addBackToTop(
+            {"zIndex":100,"backgroundColor":"#20232A"}
+          )
+        });
+        </script><script src="/js/scrollSpy.js"></script><link rel="stylesheet" href="/css/main.css"/><script src="/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/"><img class="logo" src="/img/headerIcon.svg" alt="Overwolf"/><h2 class="headerTitleWithLogo">Overwolf</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href="/docs/start/getting-started" target="_self">Getting Started</a></li><li class=""><a href="/docs/topics/best-practices-overview" target="_self">Docs</a></li><li class="siteNavGroupActive"><a href="/docs/api/overwolf-api-overview" target="_self">API</a></li><li class=""><a href="/docs/status/all" target="_self">Status</a></li><li class=""><a href="/docs/download/download-overview" target="_self">Download</a></li><li class="siteNavGroupActive"><a href="/docs/api/changelog" target="_self">Changelog</a></li><li class=""><a href="https://medium.com/overwolf-developers" target="_self">Blog</a></li><li class=""><a href="https://discuss.developers.overwolf.com/" target="_self">Q&amp;A</a></li><li class=""><a href="/docs/support/contact-us" target="_self">Support</a></li><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>API Reference</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">API Reference<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/api/overwolf-api-overview">Overview</a></li><li class="navListItem"><a class="navItem" href="/docs/api/changelog">Changelog</a></li><li class="navListItem"><a class="navItem" href="/docs/api/manifest-json">manifest.json</a></li><li class="navListItem"><a class="navItem" href="/docs/api/overwolf-benchmarking">overwolf.benchmarking</a></li><li class="navListItem"><a class="navItem" href="/docs/api/overwolf-log">overwolf.log</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/docs/api/overwolf-streaming">overwolf.streaming</a></li><li class="navListItem"><a class="navItem" href="/docs/api/overwolf-profile">overwolf.profile</a></li><li class="navListItem"><a class="navItem" href="/docs/api/overwolf-tobii">overwolf.tobii</a></li><li class="navListItem"><a class="navItem" href="/docs/api/overwolf-utils">overwolf.utils</a></li><li class="navListItem"><a class="navItem" href="/docs/api/overwolf-os">overwolf.os</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">overwolf.io<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/api/overwolf-io">overwolf.io</a></li><li class="navListItem"><a class="navItem" href="/docs/api/overwolf-io-paths">overwolf.io.paths</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">overwolf.extensions<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/api/overwolf-extensions">overwolf.extensions</a></li><li class="navListItem"><a class="navItem" href="/docs/api/overwolf-extension-current">overwolf.extension.current</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">overwolf.games<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/api/overwolf-games">overwolf.games</a></li><li class="navListItem"><a class="navItem" href="/docs/api/overwolf-games-events">overwolf.games.events</a></li><li class="navListItem"><a class="navItem" href="/docs/api/howto-check-events-status-from-app">Check Event Status From App</a></li><li class="navListItem"><a class="navItem" href="/docs/api/overwolf-games-inputTracking">overwolf.games.inputTracking</a></li><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Games Events List</h4><ul><li class="navListItem"><a class="navItem" href="/docs/api/games-ids">Games IDs</a></li><li class="navListItem"><a class="navItem" href="/docs/api/overwolf-games-events-lol">LOL Events</a></li><li class="navListItem"><a class="navItem" href="/docs/api/overwolf-games-events-ancestors-legacy">Ancestors Legacy Events</a></li><li class="navListItem"><a class="navItem" href="/docs/api/overwolf-games-events-apex-legends">Apex Legends Events</a></li><li class="navListItem"><a class="navItem" href="/docs/api/overwolf-games-events-autochess">Auto Chess Events</a></li><li class="navListItem"><a class="navItem" href="/docs/api/overwolf-games-events-csgo">CS:GO Events</a></li><li class="navListItem"><a class="navItem" href="/docs/api/overwolf-games-events-dota2">Dota 2 Events</a></li><li class="navListItem"><a class="navItem" href="/docs/api/overwolf-games-events-fortnite">Fortnite Events</a></li><li class="navListItem"><a class="navItem" href="/docs/api/overwolf-games-events-pubg">PUBG Game Events</a></li><li class="navListItem"><a class="navItem" href="/docs/api/overwolf-games-events-splitgate">Splitgate Events</a></li><li class="navListItem"><a class="navItem" href="/docs/api/overwolf-games-events-heartstone">Heartstone Events</a></li><li class="navListItem"><a class="navItem" href="/docs/api/overwolf-games-events-battlerite">Battlerite Game Events</a></li><li class="navListItem"><a class="navItem" href="/docs/api/overwolf-games-events-rocket-league">Rocket League Events</a></li><li class="navListItem"><a class="navItem" href="/docs/api/overwolf-games-events-rainbow-six">Rainbow Six Siege Game Events</a></li><li class="navListItem"><a class="navItem" href="/docs/api/overwolf-games-events-wot">World of Tanks Events</a></li><li class="navListItem"><a class="navItem" href="/docs/api/overwolf-games-events-wow">World of Warships Events</a></li><li class="navListItem"><a class="navItem" href="/docs/api/overwolf-games-events-smite">SMITE Events</a></li><li class="navListItem"><a class="navItem" href="/docs/api/overwolf-games-events-warface">Warface Events</a></li><li class="navListItem"><a class="navItem" href="/docs/api/overwolf-games-events-robocraft">Robocraft Events</a></li><li class="navListItem"><a class="navItem" href="/docs/api/games-external-apis">Various External APIs</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Games Launchers List</h4><ul><li class="navListItem"><a class="navItem" href="/docs/api/overwolf-games-launchers">overwolf.games.launchers</a></li><li class="navListItem"><a class="navItem" href="/docs/api/overwolf-games-launchers-events">overwolf.games.launchers.events</a></li><li class="navListItem"><a class="navItem" href="/docs/api/launchers-ids">Launchers IDs</a></li><li class="navListItem"><a class="navItem" href="/docs/api/overwolf-games-launchers-events-lol">LOL Launcher Events</a></li></ul></div></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">overwolf.logitech<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/api/overwolf-logitech">overwolf.logitech</a></li><li class="navListItem"><a class="navItem" href="/docs/api/overwolf-logitech-arx">overwolf.logitech.arx</a></li><li class="navListItem"><a class="navItem" href="/docs/api/overwolf-logitech-led">overwolf.logitech.led</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">overwolf.media<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/api/overwolf-media">overwolf.media</a></li><li class="navListItem"><a class="navItem" href="/docs/api/overwolf-media-audio">overwolf.media.audio</a></li><li class="navListItem"><a class="navItem" href="/docs/api/overwolf-media-replays">overwolf.media.replays</a></li><li class="navListItem"><a class="navItem" href="/docs/api/overwolf-media-videos">overwolf.media.videos</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">overwolf.settings<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/api/overwolf-settings">overwolf.settings</a></li><li class="navListItem"><a class="navItem" href="/docs/api/overwolf-settings-games">overwolf.settings.games</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">overwolf.social<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/api/overwolf-social">overwolf.social</a></li><li class="navListItem"><a class="navItem" href="/docs/api/overwolf-social-youtube">overwolf.social.youtube</a></li><li class="navListItem"><a class="navItem" href="/docs/api/overwolf-social-discord">overwolf.social.discord</a></li><li class="navListItem"><a class="navItem" href="/docs/api/overwolf-social-gfycat">overwolf.social.gfycat</a></li><li class="navListItem"><a class="navItem" href="/docs/api/overwolf-social-twitter">overwolf.social.twitter</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">overwolf.web<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/api/overwolf-web">overwolf.web</a></li><li class="navListItem"><a class="navItem" href="/docs/api/overwolf-web-webserver">overwolf.web.webserver</a></li><li class="navListItem"><a class="navItem" href="/docs/api/overwolf-web-websocket">overwolf.web.websocket</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">overwolf.windows<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/api/overwolf-windows">overwolf.windows</a></li><li class="navListItem"><a class="navItem" href="/docs/api/overwolf-windows-mediaPlayerElement">overwolf.windows.mediaPlayerElement</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><a class="edit-page-link button" href="https://github.com/overwolf/developers-site/tree/master/docs/api/overwolf-streaming.md" target="_blank" rel="noreferrer noopener">Edit</a><h1 class="postHeaderTitle">overwolf.streaming API</h1></header><article><div><span><p>This namespace contains all the functionality that allows the streaming of video/audio.</p>
+<p>The term streaming might be a bit misleading – we regard saving a video to the local drive as streaming, as well as streaming the video to a streaming service such as Twitch.tv.</p>
+<h2><a class="anchor" aria-hidden="true" id="methods-reference"></a><a href="#methods-reference" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Methods Reference</h2>
+<ul>
+<li><a href="#startsettings-callback"><code>start()</code></a></li>
+<li><a href="#stopstreamid-callback"><code>stop()</code></a></li>
+<li><a href="#changevolumestreamid-audiooptions-callback"><code>changeVolume()</code></a></li>
+<li><a href="#setwatermarksettingssettings-callback"><code>setWatermarkSettings()</code></a></li>
+<li><a href="#getwatermarksettingscallback"><code>getWatermarkSettings()</code></a></li>
+<li><a href="#getwindowstreamingmodewindowid-callback"><code>getWindowStreamingMode()</code></a></li>
+<li><a href="#setwindowstreamingmodewindowid-streamingmode-callback"><code>setWindowStreamingMode()</code></a></li>
+<li><a href="#setwindowobsstreamingmodewindowid-obsstreamingmode-callback"><code>setWindowObsStreamingMode()</code></a></li>
+<li><a href="#setbrbimagestreamid-image-backgroundcolor-callback"><code>setBRBImage()</code></a></li>
+<li><a href="#getstreamencoderscallback"><code>getStreamEncoders()</code></a></li>
+<li><a href="#getaudiodevicescallback"><code>getAudioDevices()</code></a></li>
+<li><a href="#updatestreamingdesktopoptionsstreamid-newoptions-mousecursorstreamingmethod-callback"><code>updateStreamingDesktopOptions()</code></a></li>
+<li><a href="#updatetobiisettingstreamid-param-callback"><code>updateTobiiSetting()</code></a></li>
+<li><a href="#getrunningrecorderscallback"><code>getRunningRecorders()</code></a></li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="events-reference"></a><a href="#events-reference" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Events Reference</h2>
+<ul>
+<li><a href="#onstreamingsourceimagechanged"><code>onStreamingSourceImageChanged</code></a></li>
+<li><a href="#onstopstreaming"><code>onStopStreaming</code></a></li>
+<li><a href="#onstartstreaming"><code>onStartStreaming</code></a></li>
+<li><a href="#onstreamingerror"><code>onStreamingError</code></a></li>
+<li><a href="#onstreamingwarning"><code>onStreamingWarning</code></a></li>
+<li><a href="#onvideofilesplited"><code>onVideoFileSplited</code></a></li>
+<li><a href="#onrecordingenginestatechanged"><code>onRecordingEngineStateChanged</code></a></li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="types-reference"></a><a href="#types-reference" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Types Reference</h2>
+<ul>
+<li><a href="#streamsettings-object"><code>StreamSettings</code></a></li>
+<li><a href="#overwolfstreamingenumsstreamingprovider-enum"><code>overwolf.streaming.enums.StreamingProvider</code></a></li>
+<li><a href="#streamparams-object"><code>StreamParams</code></a></li>
+<li><a href="#streaminfo-object"><code>StreamInfo</code></a></li>
+<li><a href="#streamauthparams-object"><code>StreamAuthParams</code></a></li>
+<li><a href="#streamvideooptions-object"><code>StreamVideoOptions</code></a></li>
+<li><a href="#streamingvideoencodersettings-object"><code>StreamingVideoEncoderSettings</code></a></li>
+<li><a href="#overwolfstreamingenumsstreamencoder-enum"><code>overwolf.streaming.enums.StreamEncoder</code></a></li>
+<li><a href="#streamingvideoencodernvidia-nvencsettings-object"><code>StreamingVideoEncoderNVIDIA_NVENCSettings</code></a></li>
+<li><a href="#overwolfstreamingenumsstreamencoderpreset-nvidia-enum"><code>overwolf.streaming.enums.StreamEncoderPreset_NVIDIA</code></a></li>
+<li><a href="#overwolfstreamingenumsstreamencoderratecontrol-nvidia-enum"><code>overwolf.streaming.enums.StreamEncoderRateControl_NVIDIA</code></a></li>
+<li><a href="#streamingvideoencoderintelsettings-object"><code>StreamingVideoEncoderIntelSettings</code></a></li>
+<li><a href="#streamingvideoencoderx264settings-object"><code>StreamingVideoEncoderx264Setting</code></a></li>
+<li><a href="#overwolfstreamingenumsstreamencoderpreset-x264-enum"><code>overwolf.streaming.enums.StreamEncoderPreset_x264</code></a></li>
+<li><a href="#overwolfstreamingenumsstreamencoderratecontrol-x264-enum"><code>overwolf.streaming.enums.StreamEncoderRateControl_x264</code></a></li>
+<li><a href="#streamingvideoencoderamd-amfsettings-object"><code>StreamingVideoEncoderAMD_AMFSettings</code></a></li>
+<li><a href="#overwolfstreamingenumsstreamencoderpreset-amd-amf-enum"><code>overwolf.streaming.enums.StreamEncoderPreset_AMD_AMF</code></a></li>
+<li><a href="#overwolfstreamingenumsstreamencoderratecontrol-amd-amf-enum"><code>overwolf.streaming.enums.StreamEncoderRateControl_AMD_AMF</code></a></li>
+<li><a href="#streamdesktopcaptureoptions-object"><code>StreamDesktopCaptureOptions</code></a></li>
+<li><a href="#changevolumestreamid-audiooptions-callback"><code>StreamAudioOptions</code></a></li>
+<li><a href="#streamdevicevolume-object"><code>StreamDeviceVolume</code></a></li>
+<li><a href="#streamperipheralscaptureoptions-object"><code>StreamPeripheralsCaptureOptions</code></a></li>
+<li><a href="#streamperipheralscaptureoptions-object"><code>StreamPeripheralsCaptureOptions</code></a></li>
+<li><a href="#overwolfstreamingenumsstreammousecursor-enum"><code>overwolf.streaming.enums.StreamMouseCursor</code></a></li>
+<li><a href="#streamingestserver-object"><code>StreamIngestServer</code></a></li>
+<li><a href="#replaytype-enum"><code>ReplayType</code></a></li>
+<li><a href="#watermarksettings-object"><code>WatermarkSettings</code></a></li>
+<li><a href="#watermarksettings-object"><code>WatermarkSettings</code></a></li>
+<li><a href="#overwolfstreamingenumsstreamingmode-enum"><code>overwolf.streaming.enums.StreamingMode</code></a></li>
+<li><a href="#overwolfstreamingenumsobsstreamingmode-enum"><code>overwolf.streaming.enums.ObsStreamingMode</code></a></li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="the-basic-usage-flow-should-be"></a><a href="#the-basic-usage-flow-should-be" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>The basic usage flow should be:</h2>
+<h3><a class="anchor" aria-hidden="true" id="1-register-to-the-onstopstreaming"></a><a href="#1-register-to-the-onstopstreaming" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>1. Register to the onStopStreaming</h3>
+<p>Register to the <code>onStopStreaming</code> event to know when the streaming stopped:</p>
+<pre><code class="hljs css language-js">overwolf.streaming.onStopStreaming.addListener(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">result</span>) </span>{
+  <span class="hljs-comment">//result.stream_id</span>
+  <span class="hljs-comment">//result.url (relevant to video only)</span>
+});
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="2-register-to-the-onstreamingerror"></a><a href="#2-register-to-the-onstreamingerror" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>2. Register to the onStreamingError</h3>
+<p>Register to the <code>onStreamingError</code> event, to know if a streaming error occurred which will also stop the streaming session:</p>
+<pre><code class="hljs css language-js">overwolf.streaming.onStreamingError.addListener(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">result</span>) </span>{
+  <span class="hljs-comment">//result.stream_id</span>
+  <span class="hljs-comment">/*
+    result.error = (one of):
+      "Unknown"
+      "Unauthorized"
+      "Invalid_Server"
+      "No_Internet"
+      "Invalid_Video_Settings"
+      "No_Playback_Device"
+      "Not_InGame"
+      "Internet_Congested"
+      "Twitch_Dll_Load_Error"
+      "Twitch_Init_Error"
+      "MEDIA_PLAYER_DLL_ERROR"
+      "No_Encoder"
+      "Out_Of_Disk_Space"
+
+      "CAPTURE_DEVICE_ERROR"
+      "CAPTURE_DEVICE_NO_FRAMES"
+      "GAME_UNSUPPORTED_FORMAT_ERROR"
+      "KRAKEN_DEVICE"
+      "PLAYBACK_DEVICE_FORMAT"
+      "INPUT_DEVICE_FORMAT"
+      "NVIDIA_UPDATE_DRIVER"
+      "NVIDIA_ENCODER"
+      "CPU_OVERLOADED"
+      "FILE_OUTPUT_ERROR"
+      "SWITCHABLE_GRAPHICS_SHT_UNSUPPORTED"
+      "NO_CAPTURE_DEVICE"  
+  */</span>
+});
+</code></pre>
+<p>NOTE: we only started with the UPPERCASE convention later on.</p>
+<h3><a class="anchor" aria-hidden="true" id="3-register-to-the-onstreamingwarning"></a><a href="#3-register-to-the-onstreamingwarning" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>3. Register to the onStreamingWarning</h3>
+<p>Register to the <code>onStreamingWarning</code> event to know when a warning occurred:</p>
+<pre><code class="hljs css language-js">overwolf.streaming.onStreamingWarning.addListener(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">result</span>) </span>{
+  <span class="hljs-comment">//result.stream_id</span>
+  <span class="hljs-comment">//result.error = "HIGH_CPU_USAGE" // there will probably be frames lost</span>
+});
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="4-register-to-onstreamingsourceimagechanged"></a><a href="#4-register-to-onstreamingsourceimagechanged" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>4. Register to onStreamingSourceImageChanged</h3>
+<p>Optionally register to <code>onStreamingSourceImageChanged</code>, to get an event when the user switched between capturing his desktop and the game.</p>
+<h3><a class="anchor" aria-hidden="true" id="5-call-overwolfstreaminggetstreamencoders"></a><a href="#5-call-overwolfstreaminggetstreamencoders" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>5. Call overwolf.streaming.getStreamEncoders</h3>
+<p>Call <code>overwolf.streaming.getStreamEncoders</code> and <code>overwolf.streaming.getAudioDevices</code>.
+This will give a list of all possible encoders and audio devices – you can then use this list to let the user select his preferred encoder/device.
+In terms of encoder priorities – we recommend: NVIDIA &gt; AMD &gt; INTEL &gt; x264.
+As long as the “enabled” field = true, you can offer the user to use the encoder.</p>
+<h3><a class="anchor" aria-hidden="true" id="6-call-overwolfstreamingstart"></a><a href="#6-call-overwolfstreamingstart" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>6. Call overwolf.streaming.start</h3>
+<p>Create a JSON object with all of the streaming details (See example on the top of the page) and call <code>overwolf.streaming.start</code>.</p>
+<ul>
+<li>For video recording you don’t need the <code>ingest_server</code>, <code>stream_info</code> and <code>auth</code> objects.</li>
+<li>For video recording we recommend using a <code>max_kbps</code> value of higher than 8000.</li>
+<li>For streaming we recommend using a <code>max_kbps</code> smaller than 3000.</li>
+<li>Once start succeeded, you’ll get a callback with <code>result.status == &quot;success&quot;</code> and a <code>stream_id</code> that can be used to stop the streaming session or change the volume of the stream.</li>
+</ul>
+<h3><a class="anchor" aria-hidden="true" id="7-allow-the-user-to-change-volume"></a><a href="#7-allow-the-user-to-change-volume" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>7. Allow the user to change volume</h3>
+<p>Allow the user to change volume with <code>overwolf.streaming.changeVolume</code> while streaming.</p>
+<h3><a class="anchor" aria-hidden="true" id="8-call-overwolfstreamingstop"></a><a href="#8-call-overwolfstreamingstop" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>8. Call overwolf.streaming.stop</h3>
+<p>Call <code>overwolf.streaming.stop</code> to stop the streaming session.</p>
+<h3><a class="anchor" aria-hidden="true" id="extras"></a><a href="#extras" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Extras</h3>
+<ul>
+<li>Use <code>setBRBImage</code> when streaming to Twitch.tv when <code>capture_desktop</code> is not enabled, this will allow you to customize the Be-Right-Back image the viewers will see.</li>
+<li>Use <code>setWindowStreamingMode</code> for video recording and streaming – this method works on a per-overwolf-window basis – for each window you can decide if it is to be shown in the stream or not – regardless of whether the streamer is viewing it or not.</li>
+<li>Use <code>setWindowObsStreamingMode</code> when you aren’t streaming with Overwolf but want to leverage Overwolf’s APIs and stream with OBS.</li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="startsettings-callback"></a><a href="#startsettings-callback" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>start(settings, callback)</h2>
+<h4><a class="anchor" aria-hidden="true" id="version-added-078"></a><a href="#version-added-078" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Version added: 0.78</h4>
+<blockquote>
+<p>Start a new stream.</p>
+</blockquote>
+<table>
+<thead>
+<tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>settings</td><td><a href="#streamsettings-object">StreamSettings</a> object</td><td>The stream settings</td></tr>
+<tr><td>callback</td><td>function</td><td>Returns with the result</td></tr>
+</tbody>
+</table>
+<h4><a class="anchor" aria-hidden="true" id="callback-argument-success"></a><a href="#callback-argument-success" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Callback argument: Success</h4>
+<p>A callback function which will be called with the status of the request</p>
+<pre><code class="hljs css language-json">{ <span class="hljs-attr">"status"</span>: <span class="hljs-string">"success"</span>, <span class="hljs-attr">"stream_id"</span>: <span class="hljs-number">1</span> }
+</code></pre>
+<h4><a class="anchor" aria-hidden="true" id="callback-argument-failure"></a><a href="#callback-argument-failure" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Callback argument: Failure</h4>
+<p>A callback function which will be called with the status of the request</p>
+<pre><code class="hljs css language-json">{ <span class="hljs-attr">"status"</span>: <span class="hljs-string">"error"</span>, <span class="hljs-attr">"error"</span>: <span class="hljs-string">"something went wrong..."</span> }
+</code></pre>
+<h4><a class="anchor" aria-hidden="true" id="usage-example"></a><a href="#usage-example" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Usage Example</h4>
+<pre><code class="hljs css language-javascript">overwolf.streaming.start(
+    {
+      <span class="hljs-string">"provider"</span>: overwolf.streaming.enums.StreamingProvider.Twitch,
+      <span class="hljs-string">"settings"</span>: {
+        <span class="hljs-string">"stream_info"</span>: {
+          <span class="hljs-string">"url"</span>: <span class="hljs-string">"http://www.twitch.tv/{twitch_user_name}"</span>,
+          <span class="hljs-string">"title"</span>: <span class="hljs-string">"title"</span>
+        },
+        <span class="hljs-string">"auth"</span>: {
+          <span class="hljs-string">"client_id"</span>: <span class="hljs-string">"{twitch_client_id}"</span>,
+          <span class="hljs-string">"token"</span>: storage.get(<span class="hljs-string">'login-token'</span>)
+        },
+        <span class="hljs-string">"audio"</span>: {
+          <span class="hljs-string">"mic"</span>: {
+            <span class="hljs-string">"volume"</span>: <span class="hljs-number">100</span>,
+            <span class="hljs-string">"enabled"</span>: <span class="hljs-literal">true</span>
+          },
+          <span class="hljs-string">"game"</span>: {
+            <span class="hljs-string">"volume"</span>: <span class="hljs-number">75</span>,
+            <span class="hljs-string">"enabled"</span>: <span class="hljs-literal">true</span>
+          }
+        },
+        <span class="hljs-string">"video"</span>: {
+          <span class="hljs-string">"auto_calc_kbps"</span>: <span class="hljs-literal">false</span>,
+          <span class="hljs-string">"fps"</span>: <span class="hljs-number">30</span>,
+          <span class="hljs-string">"width"</span>: <span class="hljs-number">1920</span>,
+          <span class="hljs-string">"height"</span>: <span class="hljs-number">1080</span>,
+          <span class="hljs-string">"max_kbps"</span>: <span class="hljs-number">1500</span>,
+          <span class="hljs-string">"notify_dropped_frames_ratio"</span>: <span class="hljs-number">0.5</span>,
+          <span class="hljs-string">"test_drop_frames_interval"</span>: <span class="hljs-number">5000</span>,
+          <span class="hljs-string">"encoder"</span>: {
+            <span class="hljs-string">"name"</span>: overwolf.streaming.enums.StreamEncoder.X264,
+            <span class="hljs-string">"config"</span>: {
+              <span class="hljs-string">"preset"</span>: overwolf.streaming.enums.StreamEncoderPreset_x264.ULTRAFAST,
+              <span class="hljs-string">"rate_control"</span>: overwolf.streaming.enums.StreamEncoderRateControl_x264.RC_CBR,
+              <span class="hljs-string">"keyframe_interval"</span>: <span class="hljs-number">2</span>
+            }
+          }
+        },
+        <span class="hljs-string">"ingest_server"</span>: {
+          <span class="hljs-string">"name"</span>: <span class="hljs-string">"US West: San Francisco, CA"</span>,
+          <span class="hljs-string">"template_url"</span>: <span class="hljs-string">"rtmp://live.twitch.tv/app/{stream_key}"</span>
+        },
+        <span class="hljs-string">"peripherals"</span>: {
+          <span class="hljs-string">"capture_mouse_cursor"</span>: <span class="hljs-string">"both"</span>
+        }
+      }
+    },
+    <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">result</span>) </span>{
+        <span class="hljs-keyword">if</span> (result.status == <span class="hljs-string">"success"</span>)
+        {
+            <span class="hljs-built_in">console</span>.debug(result.stream_id);
+        }
+    }
+);
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="stopstreamid-callback"></a><a href="#stopstreamid-callback" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>stop(streamId, callback)</h2>
+<h4><a class="anchor" aria-hidden="true" id="version-added-078-1"></a><a href="#version-added-078-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Version added: 0.78</h4>
+<blockquote>
+<p>Stops the given stream.</p>
+</blockquote>
+<table>
+<thead>
+<tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>streamId</td><td>int</td><td>The id of the stream to stop</td></tr>
+<tr><td>callback</td><td>function</td><td>Returns with the result</td></tr>
+</tbody>
+</table>
+<h4><a class="anchor" aria-hidden="true" id="callback-argument-success-1"></a><a href="#callback-argument-success-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Callback argument: Success</h4>
+<p>A callback function which will be called with the status of the request, and the  stream id if successful</p>
+<pre><code class="hljs css language-json">{ <span class="hljs-attr">"status"</span>: <span class="hljs-string">"success"</span>, <span class="hljs-attr">"stream_id"</span>: <span class="hljs-number">1</span> }
+</code></pre>
+<h4><a class="anchor" aria-hidden="true" id="callback-argument-failure-1"></a><a href="#callback-argument-failure-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Callback argument: Failure</h4>
+<p>A callback function which will be called with the status of the request</p>
+<pre><code class="hljs css language-json">{ <span class="hljs-attr">"status"</span>: <span class="hljs-string">"error"</span>, <span class="hljs-attr">"error"</span>: <span class="hljs-string">"something went wrong..."</span> }
+</code></pre>
+<h4><a class="anchor" aria-hidden="true" id="usage-example-1"></a><a href="#usage-example-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Usage Example</h4>
+<pre><code class="hljs css language-javascript">
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="changevolumestreamid-audiooptions-callback"></a><a href="#changevolumestreamid-audiooptions-callback" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>changeVolume(streamId, audioOptions, callback)</h2>
+<h4><a class="anchor" aria-hidden="true" id="version-added-078-2"></a><a href="#version-added-078-2" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Version added: 0.78</h4>
+<blockquote>
+<p>Changes the volume of the stream.</p>
+</blockquote>
+<table>
+<thead>
+<tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>streamId</td><td>int</td><td>The id of the stream on which the volume is changed</td></tr>
+<tr><td>audioOptions</td><td><a href="#streamaudiooptions-object">StreamAudioOptions</a> Object</td><td>The new volumes encapsulated in an object</td></tr>
+<tr><td>audioOptions</td><td>function</td><td>Returns with the result</td></tr>
+</tbody>
+</table>
+<h4><a class="anchor" aria-hidden="true" id="callback-argument-success-2"></a><a href="#callback-argument-success-2" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Callback argument: Success</h4>
+<p>A callback function which will be called with the status of the request</p>
+<pre><code class="hljs css language-json">{ <span class="hljs-attr">"status"</span>: <span class="hljs-string">"success"</span> }
+</code></pre>
+<h4><a class="anchor" aria-hidden="true" id="callback-argument-failure-2"></a><a href="#callback-argument-failure-2" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Callback argument: Failure</h4>
+<p>A callback function which will be called with the status of the request</p>
+<pre><code class="hljs css language-json">{ <span class="hljs-attr">"status"</span>: <span class="hljs-string">"error"</span> }
+</code></pre>
+<h4><a class="anchor" aria-hidden="true" id="usage-example-2"></a><a href="#usage-example-2" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Usage Example</h4>
+<pre><code class="hljs css language-javascript">
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="setwatermarksettingssettings-callback"></a><a href="#setwatermarksettingssettings-callback" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>setWatermarkSettings(settings, callback)</h2>
+<h4><a class="anchor" aria-hidden="true" id="version-added-078-3"></a><a href="#version-added-078-3" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Version added: 0.78</h4>
+<blockquote>
+<p>Sets the watermark settings.</p>
+</blockquote>
+<table>
+<thead>
+<tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>settings</td><td><a href="#watermarksettings-object">WatermarkSettings</a> Object</td><td>The new watermark settings</td></tr>
+<tr><td>callback</td><td>function</td><td>Returns with the result</td></tr>
+</tbody>
+</table>
+<h4><a class="anchor" aria-hidden="true" id="callback-argument-success-3"></a><a href="#callback-argument-success-3" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Callback argument: Success</h4>
+<p>A callback function which will be called with the status of the request when done setting the new watermark settings.</p>
+<pre><code class="hljs css language-json">{ <span class="hljs-attr">"status"</span>: <span class="hljs-string">"success"</span> }
+</code></pre>
+<h4><a class="anchor" aria-hidden="true" id="callback-argument-failure-3"></a><a href="#callback-argument-failure-3" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Callback argument: Failure</h4>
+<p>A callback function which will be called with the status of the request</p>
+<pre><code class="hljs css language-json">{ <span class="hljs-attr">"status"</span>: <span class="hljs-string">"error"</span> }
+</code></pre>
+<h4><a class="anchor" aria-hidden="true" id="usage-example-3"></a><a href="#usage-example-3" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Usage Example</h4>
+<pre><code class="hljs css language-javascript">overwolf.streaming.setWatermarkSettings(
+    { <span class="hljs-attr">showWatermark</span> : <span class="hljs-literal">true</span> },
+    <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">result</span>) </span>{
+        <span class="hljs-built_in">console</span>.log (<span class="hljs-string">"watermark settings changed."</span>);
+    }
+);
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="getwatermarksettingscallback"></a><a href="#getwatermarksettingscallback" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>getWatermarkSettings(callback)</h2>
+<h4><a class="anchor" aria-hidden="true" id="version-added-078-4"></a><a href="#version-added-078-4" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Version added: 0.78</h4>
+<blockquote>
+<p>Gets the watermark settings.</p>
+</blockquote>
+<table>
+<thead>
+<tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>settings</td><td><a href="#watermarksettings-object">WatermarkSettings</a> Object</td><td>The new watermark settings</td></tr>
+<tr><td>callback</td><td>function</td><td>Returns with the result</td></tr>
+</tbody>
+</table>
+<h4><a class="anchor" aria-hidden="true" id="callback-argument-success-4"></a><a href="#callback-argument-success-4" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Callback argument: Success</h4>
+<p>A function that will be called with a JSON containing the status and the watermark settings if successful</p>
+<pre><code class="hljs css language-json">{ "status": "success" , showWatermark: true }
+</code></pre>
+<h4><a class="anchor" aria-hidden="true" id="callback-argument-failure-4"></a><a href="#callback-argument-failure-4" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Callback argument: Failure</h4>
+<p>A callback function which will be called with the status of the request</p>
+<pre><code class="hljs css language-json">{ <span class="hljs-attr">"status"</span>: <span class="hljs-string">"error"</span> }
+</code></pre>
+<h4><a class="anchor" aria-hidden="true" id="usage-example-4"></a><a href="#usage-example-4" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Usage Example</h4>
+<pre><code class="hljs css language-javascript">
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="getwindowstreamingmodewindowid-callback"></a><a href="#getwindowstreamingmodewindowid-callback" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>getWindowStreamingMode(windowId, callback)</h2>
+<h4><a class="anchor" aria-hidden="true" id="version-added-078-5"></a><a href="#version-added-078-5" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Version added: 0.78</h4>
+<blockquote>
+<p>Call the given callback function with the window’s streaming mode as a parameter.</p>
+</blockquote>
+<table>
+<thead>
+<tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>windowId</td><td>string</td><td>The id of the window for which to get the streaming mode</td></tr>
+<tr><td>callback</td><td>function</td><td>Returns with the result</td></tr>
+</tbody>
+</table>
+<h4><a class="anchor" aria-hidden="true" id="callback-argument-success-5"></a><a href="#callback-argument-success-5" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Callback argument: Success</h4>
+<p>A callback function which will be called with the status of the request and the window’s streaming mode as a parameter</p>
+<pre><code class="hljs css language-json">{ "status": "success", streaming_mode: "WhenVisible" }
+</code></pre>
+<h4><a class="anchor" aria-hidden="true" id="callback-argument-failure-5"></a><a href="#callback-argument-failure-5" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Callback argument: Failure</h4>
+<p>A callback function which will be called with the status of the request</p>
+<pre><code class="hljs css language-json">{ <span class="hljs-attr">"status"</span>: <span class="hljs-string">"error"</span> }
+</code></pre>
+<h4><a class="anchor" aria-hidden="true" id="usage-example-5"></a><a href="#usage-example-5" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Usage Example</h4>
+<pre><code class="hljs css language-javascript">
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="setwindowstreamingmodewindowid-streamingmode-callback"></a><a href="#setwindowstreamingmodewindowid-streamingmode-callback" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>setWindowStreamingMode(windowId, streamingMode, callback)</h2>
+<h4><a class="anchor" aria-hidden="true" id="version-added-078-6"></a><a href="#version-added-078-6" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Version added: 0.78</h4>
+<blockquote>
+<p>Call the given callback function with the window’s streaming mode as a parameter.</p>
+</blockquote>
+<table>
+<thead>
+<tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>windowId</td><td>string</td><td>The id of the window for which to set the streaming mode</td></tr>
+<tr><td>streamingMode</td><td><a href="#overwolfstreamingenumsstreamingmode-enum">overwolf.streaming.enums.StreamingMode</a> enum</td><td>The desired streaming mode</td></tr>
+<tr><td>callback</td><td>function</td><td>Returns with the result  (Optional)</td></tr>
+</tbody>
+</table>
+<h4><a class="anchor" aria-hidden="true" id="callback-argument-success-6"></a><a href="#callback-argument-success-6" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Callback argument: Success</h4>
+<p>A callback function which will be called with the status of the request, after streaming mode was set</p>
+<pre><code class="hljs css language-json">{ <span class="hljs-attr">"status"</span>: <span class="hljs-string">"success"</span> }
+</code></pre>
+<h4><a class="anchor" aria-hidden="true" id="callback-argument-failure-6"></a><a href="#callback-argument-failure-6" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Callback argument: Failure</h4>
+<p>A callback function which will be called with the status of the request</p>
+<pre><code class="hljs css language-json">{ <span class="hljs-attr">"status"</span>: <span class="hljs-string">"error"</span> }
+</code></pre>
+<h4><a class="anchor" aria-hidden="true" id="usage-example-6"></a><a href="#usage-example-6" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Usage Example</h4>
+<pre><code class="hljs css language-javascript">
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="setwindowobsstreamingmodewindowid-obsstreamingmode-callback"></a><a href="#setwindowobsstreamingmodewindowid-obsstreamingmode-callback" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>setWindowObsStreamingMode(windowId, obsStreamingMode, callback)</h2>
+<h4><a class="anchor" aria-hidden="true" id="version-added-078-7"></a><a href="#version-added-078-7" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Version added: 0.78</h4>
+<blockquote>
+<p>Sets the streaming mode for the window when using OBS.</p>
+</blockquote>
+<table>
+<thead>
+<tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>windowId</td><td>string</td><td>The id of the window for which to set the streaming mode</td></tr>
+<tr><td>streamingMode</td><td><a href="#overwolfstreamingenumsobsstreamingmode-enum"> overwolf.streaming.enums.ObsStreamingMode</a> enum</td><td>The desired OBS streaming mode</td></tr>
+<tr><td>callback</td><td>function</td><td>Returns with the result  (Optional)</td></tr>
+</tbody>
+</table>
+<h4><a class="anchor" aria-hidden="true" id="callback-argument-success-7"></a><a href="#callback-argument-success-7" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Callback argument: Success</h4>
+<p>A callback function which will be called with the status of the request, after streaming mode was set</p>
+<pre><code class="hljs css language-json">{ <span class="hljs-attr">"status"</span>: <span class="hljs-string">"success"</span> }
+</code></pre>
+<h4><a class="anchor" aria-hidden="true" id="callback-argument-failure-7"></a><a href="#callback-argument-failure-7" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Callback argument: Failure</h4>
+<p>A callback function which will be called with the status of the request</p>
+<pre><code class="hljs css language-json">{ <span class="hljs-attr">"status"</span>: <span class="hljs-string">"error"</span> }
+</code></pre>
+<h4><a class="anchor" aria-hidden="true" id="usage-example-7"></a><a href="#usage-example-7" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Usage Example</h4>
+<pre><code class="hljs css language-javascript">
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="setbrbimagestreamid-image-backgroundcolor-callback"></a><a href="#setbrbimagestreamid-image-backgroundcolor-callback" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>setBRBImage(streamId, image, backgroundColor, callback)</h2>
+<h4><a class="anchor" aria-hidden="true" id="version-added-078-8"></a><a href="#version-added-078-8" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Version added: 0.78</h4>
+<blockquote>
+<p>Set a stream’s Be Right Back image.</p>
+</blockquote>
+<table>
+<thead>
+<tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>streamId</td><td>int</td><td>The id of the stream for which to set the Be Right Back image</td></tr>
+<tr><td>image</td><td>Object</td><td>The image to set, as an IMG object or a URL</td></tr>
+<tr><td>backgroundColor</td><td>string</td><td>The color to paint the last game frame with before overlaying the image</td></tr>
+<tr><td>callback</td><td>function</td><td>Returns with the result  (Optional)</td></tr>
+</tbody>
+</table>
+<h4><a class="anchor" aria-hidden="true" id="callback-argument-success-8"></a><a href="#callback-argument-success-8" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Callback argument: Success</h4>
+<p>A callback function which will be called with the status of the request</p>
+<pre><code class="hljs css language-json">{ <span class="hljs-attr">"status"</span>: <span class="hljs-string">"success"</span> }
+</code></pre>
+<h4><a class="anchor" aria-hidden="true" id="callback-argument-failure-8"></a><a href="#callback-argument-failure-8" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Callback argument: Failure</h4>
+<p>A callback function which will be called with the status of the request</p>
+<pre><code class="hljs css language-json">{ <span class="hljs-attr">"status"</span>: <span class="hljs-string">"error"</span> }
+</code></pre>
+<h4><a class="anchor" aria-hidden="true" id="usage-example-8"></a><a href="#usage-example-8" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Usage Example</h4>
+<pre><code class="hljs css language-javascript">
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="getstreamencoderscallback"></a><a href="#getstreamencoderscallback" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>getStreamEncoders(callback)</h2>
+<h4><a class="anchor" aria-hidden="true" id="version-added-083"></a><a href="#version-added-083" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Version added: 0.83</h4>
+<blockquote>
+<p>Returns an array of supported streaming encoders, with extra metadata for each one.</p>
+</blockquote>
+<table>
+<thead>
+<tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>callback</td><td>function</td><td>A callback function to call with the array of encoders and their metadata</td></tr>
+</tbody>
+</table>
+<h4><a class="anchor" aria-hidden="true" id="callback-argument-success-9"></a><a href="#callback-argument-success-9" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Callback argument: Success</h4>
+<p>A callback function which will be called with the status of the request</p>
+<pre><code class="hljs css language-json">{
+    <span class="hljs-attr">"status"</span>: <span class="hljs-string">"success"</span>,
+    <span class="hljs-attr">"encoders"</span>: [
+        {
+            <span class="hljs-attr">"name"</span> : <span class="hljs-string">"INTEL"</span>,
+            <span class="hljs-attr">"display_name"</span> : <span class="hljs-string">"Intel® Quick Sync (uses iGPU)"</span>,
+            <span class="hljs-attr">"enabled"</span> : <span class="hljs-literal">true</span>,
+            <span class="hljs-attr">"presets"</span> : [<span class="hljs-string">"LOW"</span>, <span class="hljs-string">"MEDIUM"</span>, <span class="hljs-string">"HIGH"</span>]
+        },
+        ...
+    ]
+}
+</code></pre>
+<h4><a class="anchor" aria-hidden="true" id="callback-argument-failure-9"></a><a href="#callback-argument-failure-9" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Callback argument: Failure</h4>
+<p>A callback function which will be called with the status of the request</p>
+<pre><code class="hljs css language-json">{ <span class="hljs-attr">"status"</span>: <span class="hljs-string">"error"</span> }
+</code></pre>
+<h4><a class="anchor" aria-hidden="true" id="usage-example-9"></a><a href="#usage-example-9" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Usage Example</h4>
+<pre><code class="hljs css language-javascript">
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="getaudiodevicescallback"></a><a href="#getaudiodevicescallback" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>getAudioDevices(callback)</h2>
+<h4><a class="anchor" aria-hidden="true" id="version-added-078-9"></a><a href="#version-added-078-9" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Version added: 0.78</h4>
+<blockquote>
+<p>Returns an array of all audio devices that can be used.</p>
+</blockquote>
+<table>
+<thead>
+<tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>callback</td><td>function</td><td>A callback function to call with the array of audio devices and their metadata</td></tr>
+</tbody>
+</table>
+<h4><a class="anchor" aria-hidden="true" id="callback-argument-success-10"></a><a href="#callback-argument-success-10" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Callback argument: Success</h4>
+<p>A callback function which will be called with the status of the request</p>
+<pre><code class="hljs css language-json">{
+    <span class="hljs-attr">"status"</span>: <span class="hljs-string">"success"</span>,
+    <span class="hljs-attr">"devices"</span>: [
+        {
+            <span class="hljs-attr">"display_name"</span> : <span class="hljs-string">"Speakers (USB Ear-Microphone)"</span>,
+            <span class="hljs-attr">"display_id"</span> : <span class="hljs-string">"{0.0.0.00000000}.{ec2a6c4b-f750-4045-bb93-d745ecc76937}"</span>,
+            <span class="hljs-attr">"device_state"</span> : <span class="hljs-string">"Active"</span>,
+            <span class="hljs-attr">"can_record"</span> : <span class="hljs-literal">false</span>,
+            <span class="hljs-attr">"can_playback"</span> : <span class="hljs-literal">true</span>
+        },
+        ...
+    ],
+    <span class="hljs-attr">"default_recording_device_id"</span>: <span class="hljs-string">"{0.0.0.00000000}.{ec2a6c4b-f750-4045-bb93-d745ecc76937}"</span>,
+    <span class="hljs-attr">"default_playback_device_id"</span>: <span class="hljs-string">"{0.0.1.00000000}.{39da502b-2b96-4b76-83ae-9841f0b46570}"</span>
+}
+</code></pre>
+<h4><a class="anchor" aria-hidden="true" id="callback-argument-failure-10"></a><a href="#callback-argument-failure-10" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Callback argument: Failure</h4>
+<p>A callback function which will be called with the status of the request</p>
+<pre><code class="hljs css language-json">{ <span class="hljs-attr">"status"</span>: <span class="hljs-string">"error"</span> }
+</code></pre>
+<h4><a class="anchor" aria-hidden="true" id="usage-example-10"></a><a href="#usage-example-10" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Usage Example</h4>
+<pre><code class="hljs css language-javascript">
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="updatestreamingdesktopoptionsstreamid-newoptions-mousecursorstreamingmethod-callback"></a><a href="#updatestreamingdesktopoptionsstreamid-newoptions-mousecursorstreamingmethod-callback" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>updateStreamingDesktopOptions(streamId, newOptions, mouseCursorStreamingMethod, callback)</h2>
+<h4><a class="anchor" aria-hidden="true" id="version-added-078-10"></a><a href="#version-added-078-10" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Version added: 0.78</h4>
+<blockquote>
+<p>Update stream desktop capture options.</p>
+</blockquote>
+<table>
+<thead>
+<tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>streamId</td><td>int</td><td>The id of the stream</td></tr>
+<tr><td>newOptions</td><td><a href="#streamdesktopcaptureoptions-object">StreamDesktopCaptureOptions</a> Object</td><td>The updated desktop capture streaming options</td></tr>
+<tr><td>mouseCursorStreamingMethod</td><td><a href="#overwolfstreamingenumsstreammousecursor-enum">overwolf.streaming.enums.StreamMouseCursor</a> enum</td><td>The updated value of the mouse cursor streaming method</td></tr>
+<tr><td>callback</td><td>function</td><td>A callback function to call with success or failure indicationa</td></tr>
+</tbody>
+</table>
+<h4><a class="anchor" aria-hidden="true" id="callback-argument-success-11"></a><a href="#callback-argument-success-11" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Callback argument: Success</h4>
+<p>A callback function which will be called with the status of the request</p>
+<pre><code class="hljs css language-json">{ <span class="hljs-attr">"status"</span>: <span class="hljs-string">"success"</span> }
+</code></pre>
+<h4><a class="anchor" aria-hidden="true" id="callback-argument-failure-11"></a><a href="#callback-argument-failure-11" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Callback argument: Failure</h4>
+<p>A callback function which will be called with the status of the request</p>
+<pre><code class="hljs css language-json">{ <span class="hljs-attr">"status"</span>: <span class="hljs-string">"error"</span> }
+</code></pre>
+<h4><a class="anchor" aria-hidden="true" id="usage-example-11"></a><a href="#usage-example-11" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Usage Example</h4>
+<pre><code class="hljs css language-javascript">
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="updatetobiisettingstreamid-param-callback"></a><a href="#updatetobiisettingstreamid-param-callback" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>updateTobiiSetting(streamId, param, callback)</h2>
+<h4><a class="anchor" aria-hidden="true" id="version-added-097"></a><a href="#version-added-097" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Version added: 0.97</h4>
+<blockquote>
+<p>Update Tobii streaming layer.</p>
+</blockquote>
+<table>
+<thead>
+<tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>streamId</td><td>int</td><td>The id of the stream</td></tr>
+<tr><td>param</td><td>TobiiLayerParams</td><td>The Tobii layer visibility param</td></tr>
+<tr><td>callback</td><td>function</td><td>A callback function to call with success or failure indicationa</td></tr>
+</tbody>
+</table>
+<h4><a class="anchor" aria-hidden="true" id="callback-argument-success-12"></a><a href="#callback-argument-success-12" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Callback argument: Success</h4>
+<p>A callback function which will be called with the status of the request</p>
+<pre><code class="hljs css language-json">{ <span class="hljs-attr">"status"</span>: <span class="hljs-string">"success"</span> }
+</code></pre>
+<h4><a class="anchor" aria-hidden="true" id="callback-argument-failure-12"></a><a href="#callback-argument-failure-12" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Callback argument: Failure</h4>
+<p>A callback function which will be called with the status of the request</p>
+<pre><code class="hljs css language-json">{ <span class="hljs-attr">"status"</span>: <span class="hljs-string">"error"</span> }
+</code></pre>
+<h4><a class="anchor" aria-hidden="true" id="usage-example-12"></a><a href="#usage-example-12" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Usage Example</h4>
+<pre><code class="hljs css language-javascript">
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="getrunningrecorderscallback"></a><a href="#getrunningrecorderscallback" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>getRunningRecorders(callback)</h2>
+<h4><a class="anchor" aria-hidden="true" id="version-added-0127"></a><a href="#version-added-0127" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Version added: 0.127</h4>
+<blockquote>
+<p>Returns a list of all running recording services (in a case that the app is using our capturing features).</p>
+</blockquote>
+<table>
+<thead>
+<tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>callback</td><td>function</td><td>A callback function to call with the array of recorders and their extensions ids</td></tr>
+</tbody>
+</table>
+<h4><a class="anchor" aria-hidden="true" id="callback-argument-success-13"></a><a href="#callback-argument-success-13" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Callback argument: Success</h4>
+<p>A callback function which will be called with the status of the request</p>
+<pre><code class="hljs css language-json">//example value:
+{
+  "0": {
+    "extensions": [
+      "nafihghfcpikebhfhdhljejkcifgbdahdhngepfb",
+      "hffhbjnafafjnehejohpkfhjdenpifhihebpkhni"
+    ]
+  }
+}
+</code></pre>
+<h4><a class="anchor" aria-hidden="true" id="callback-argument-failure-13"></a><a href="#callback-argument-failure-13" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Callback argument: Failure</h4>
+<p>A callback function which will be called with the status of the request</p>
+<pre><code class="hljs css language-json">{ <span class="hljs-attr">"status"</span>: <span class="hljs-string">"error"</span> }
+</code></pre>
+<h4><a class="anchor" aria-hidden="true" id="usage-example-13"></a><a href="#usage-example-13" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Usage Example</h4>
+<pre><code class="hljs css language-javascript">
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="onstreamingsourceimagechanged"></a><a href="#onstreamingsourceimagechanged" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>onStreamingSourceImageChanged</h2>
+<h4><a class="anchor" aria-hidden="true" id="version-added-078-11"></a><a href="#version-added-078-11" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Version added: 0.78</h4>
+<blockquote>
+<p>Fired when the stream started streaming a new image source (desktop, game).</p>
+</blockquote>
+<h4><a class="anchor" aria-hidden="true" id="usage-example-14"></a><a href="#usage-example-14" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Usage Example</h4>
+<pre><code class="hljs css language-javascript">
+</code></pre>
+<h4><a class="anchor" aria-hidden="true" id="event-data-example"></a><a href="#event-data-example" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Event Data Example</h4>
+<pre><code class="hljs css language-json">
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="onstopstreaming"></a><a href="#onstopstreaming" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>onStopStreaming</h2>
+<h4><a class="anchor" aria-hidden="true" id="version-added-078-12"></a><a href="#version-added-078-12" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Version added: 0.78</h4>
+<blockquote>
+<p>Fired when the stream has stopped.</p>
+</blockquote>
+<h4><a class="anchor" aria-hidden="true" id="usage-example-15"></a><a href="#usage-example-15" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Usage Example</h4>
+<pre><code class="hljs css language-javascript">
+</code></pre>
+<h4><a class="anchor" aria-hidden="true" id="event-data-example-1"></a><a href="#event-data-example-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Event Data Example</h4>
+<pre><code class="hljs css language-json">
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="onstartstreaming"></a><a href="#onstartstreaming" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>onStartStreaming</h2>
+<h4><a class="anchor" aria-hidden="true" id="version-added-0106"></a><a href="#version-added-0106" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Version added: 0.106</h4>
+<blockquote>
+<p>Fired when the stream has started.</p>
+</blockquote>
+<h4><a class="anchor" aria-hidden="true" id="usage-example-16"></a><a href="#usage-example-16" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Usage Example</h4>
+<pre><code class="hljs css language-javascript">
+</code></pre>
+<h4><a class="anchor" aria-hidden="true" id="event-data-example-2"></a><a href="#event-data-example-2" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Event Data Example</h4>
+<pre><code class="hljs css language-json">
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="onstreamingerror"></a><a href="#onstreamingerror" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>onStreamingError</h2>
+<h4><a class="anchor" aria-hidden="true" id="version-added-078-13"></a><a href="#version-added-078-13" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Version added: 0.78</h4>
+<blockquote>
+<p>Fired upon an error with the stream.</p>
+</blockquote>
+<h4><a class="anchor" aria-hidden="true" id="possible-error-codes"></a><a href="#possible-error-codes" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Possible Error Codes</h4>
+<ul>
+<li>Unknown</li>
+<li>Unauthorized</li>
+<li>Invalid_Server</li>
+<li>No_Internet</li>
+<li>Invalid_Video_Settings</li>
+<li>No_Playback_Device</li>
+<li>Not_InGame</li>
+<li>Internet_Congested</li>
+<li>Game_Quit_Mid_Stream</li>
+<li>Twitch_Dll_Load_Error</li>
+<li>Twitch_Init_Error</li>
+<li>No_Encoder</li>
+<li>Out_Of_Disk_Space</li>
+<li>Update_Driver</li>
+</ul>
+<h4><a class="anchor" aria-hidden="true" id="usage-example-17"></a><a href="#usage-example-17" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Usage Example</h4>
+<pre><code class="hljs css language-javascript">
+</code></pre>
+<h4><a class="anchor" aria-hidden="true" id="event-data-example-3"></a><a href="#event-data-example-3" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Event Data Example</h4>
+<pre><code class="hljs css language-json">{
+    <span class="hljs-attr">"status"</span>: <span class="hljs-string">"error"</span>,
+    <span class="hljs-attr">"stream_id"</span>: <span class="hljs-number">1</span>,
+    <span class="hljs-attr">"error"</span>: <span class="hljs-string">"Internet_Congested"</span>
+}
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="onstreamingwarning"></a><a href="#onstreamingwarning" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>onStreamingWarning</h2>
+<h4><a class="anchor" aria-hidden="true" id="version-added-078-14"></a><a href="#version-added-078-14" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Version added: 0.78</h4>
+<blockquote>
+<p>Fired upon a warning with the stream.</p>
+</blockquote>
+<h4><a class="anchor" aria-hidden="true" id="usage-example-18"></a><a href="#usage-example-18" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Usage Example</h4>
+<pre><code class="hljs css language-javascript">
+</code></pre>
+<h4><a class="anchor" aria-hidden="true" id="event-data-example-4"></a><a href="#event-data-example-4" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Event Data Example</h4>
+<pre><code class="hljs css language-json">
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="onvideofilesplited"></a><a href="#onvideofilesplited" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>onVideoFileSplited</h2>
+<h4><a class="anchor" aria-hidden="true" id="version-added-0103"></a><a href="#version-added-0103" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Version added: 0.103</h4>
+<blockquote>
+<p>Fired upon video file splited.</p>
+</blockquote>
+<h4><a class="anchor" aria-hidden="true" id="usage-example-19"></a><a href="#usage-example-19" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Usage Example</h4>
+<pre><code class="hljs css language-javascript">
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="onrecordingenginestatechanged"></a><a href="#onrecordingenginestatechanged" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>onRecordingEngineStateChanged</h2>
+<h4><a class="anchor" aria-hidden="true" id="version-added-0127-1"></a><a href="#version-added-0127-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Version added: 0.127</h4>
+<blockquote>
+<p>Fired when a replay stated\stopped by any app.</p>
+</blockquote>
+<h4><a class="anchor" aria-hidden="true" id="usage-example-20"></a><a href="#usage-example-20" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Usage Example</h4>
+<pre><code class="hljs css language-javascript">
+</code></pre>
+<h4><a class="anchor" aria-hidden="true" id="event-data-example-5"></a><a href="#event-data-example-5" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Event Data Example</h4>
+<pre><code class="hljs css language-json">
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="streamsettings-object"></a><a href="#streamsettings-object" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>StreamSettings Object</h2>
+<h4><a class="anchor" aria-hidden="true" id="version-added-078-15"></a><a href="#version-added-078-15" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Version added: 0.78</h4>
+<p>Stream settings container.</p>
+<table>
+<thead>
+<tr><th>Name</th><th>Type</th><th>Description</th><th>Since</th></tr>
+</thead>
+<tbody>
+<tr><td>provider</td><td><a href="#overwolfstreamingenumsstreamingprovider-enum">overwolf.streaming.enums.StreamingProvider</a> enum</td><td>The stream provider name</td><td>0.78</td></tr>
+<tr><td>settings</td><td><a href="#streamparams-object">StreamParams</a> object</td><td>The stream provider settings</td><td>0.78</td></tr>
+</tbody>
+</table>
+<h4><a class="anchor" aria-hidden="true" id="object-data-example"></a><a href="#object-data-example" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Object data example</h4>
+<pre><code class="hljs css language-json">"settings": {
+    "video": { "buffer_length": 20000 },
+    "audio": {
+        "mic": {
+            "volume": 100,
+        "enabled": true
+        },
+        "game": {
+            "volume": 75,
+        "enabled": true
+        }
+         },
+        "peripherals": { "capture_mouse_cursor": "both" }
+     }
+}
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="overwolfstreamingenumsstreamingprovider-enum"></a><a href="#overwolfstreamingenumsstreamingprovider-enum" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>overwolf.streaming.enums.StreamingProvider enum</h2>
+<h4><a class="anchor" aria-hidden="true" id="version-added-078-16"></a><a href="#version-added-078-16" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Version added: 0.78</h4>
+<table>
+<thead>
+<tr><th>Options</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>Unknown</td><td>The stream provider name</td></tr>
+<tr><td>Twitch</td><td>Stream to Twitch</td></tr>
+<tr><td>VideoRecorder</td><td></td></tr>
+<tr><td>RTMP</td><td>Stream to YouTube, Facebook, smashcast.tv, etc.</td></tr>
+</tbody>
+</table>
+<h2><a class="anchor" aria-hidden="true" id="streamparams-object"></a><a href="#streamparams-object" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>StreamParams Object</h2>
+<h4><a class="anchor" aria-hidden="true" id="version-added-078-17"></a><a href="#version-added-078-17" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Version added: 0.78</h4>
+<p>Represents the settings required to start a stream.</p>
+<table>
+<thead>
+<tr><th>Name</th><th>Type</th><th>Description</th><th>Since</th></tr>
+</thead>
+<tbody>
+<tr><td>stream_info</td><td><a href="#streaminfo-object">StreamInfo</a> object</td><td>The basic stream information</td><td>0.78</td></tr>
+<tr><td>auth</td><td><a href="#streamauthparams-object">StreamAuthParams</a> object</td><td>Stream authorization data</td><td>0.78</td></tr>
+<tr><td>video</td><td><a href="#streamvideooptions-object">StreamVideoOptions</a> Object</td><td>Stream video options</td><td>0.78</td></tr>
+<tr><td>audio</td><td><a href="#streamaudiooptions-object">StreamAudioOptions</a> Object</td><td>Stream audio options</td><td>0.78</td></tr>
+<tr><td>peripherals</td><td><a href="#streamperipheralscaptureoptions-object">StreamPeripheralsCaptureOptions</a> Object</td><td>Defines how peripherals (i.e. mouse cursor) are streamed. </br><strong>Permissions required: DesktopStreaming</strong></td><td>0.78</td></tr>
+<tr><td>ingest_server</td><td><a href="##streamingestserver-object">StreamIngestServer</a> Object</td><td>Information on the server that is being streamed to</td><td>0.78</td></tr>
+<tr><td>replay_type</td><td><a href="#replaytype-enum">ReplayType</a> enum</td><td>The replay type to use</td><td>0.78</td></tr>
+<tr><td>gif_as_video</td><td>bool</td><td>Create gif as video (Gif Replay Type only)</td><td>0.78</td></tr>
+<tr><td>max_quota_gb</td><td>double</td><td>Max media folder size in GB</td><td>0.78</td></tr>
+</tbody>
+</table>
+<h2><a class="anchor" aria-hidden="true" id="streaminfo-object"></a><a href="#streaminfo-object" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>StreamInfo Object</h2>
+<h4><a class="anchor" aria-hidden="true" id="version-added-078-18"></a><a href="#version-added-078-18" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Version added: 0.78</h4>
+<p>The basic stream information.</p>
+<table>
+<thead>
+<tr><th>Name</th><th>Type</th><th>Description</th><th>Since</th></tr>
+</thead>
+<tbody>
+<tr><td>url</td><td>string</td><td>The URL where the stream can be watched</td><td>0.78</td></tr>
+<tr><td>title</td><td>string</td><td>The stream title</td><td>0.78</td></tr>
+</tbody>
+</table>
+<h2><a class="anchor" aria-hidden="true" id="streamauthparams-object"></a><a href="#streamauthparams-object" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>StreamAuthParams Object</h2>
+<h4><a class="anchor" aria-hidden="true" id="version-added-078-19"></a><a href="#version-added-078-19" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Version added: 0.78</h4>
+<p>Stream authorization data.</p>
+<table>
+<thead>
+<tr><th>Name</th><th>Type</th><th>Description</th><th>Since</th></tr>
+</thead>
+<tbody>
+<tr><td>client_id</td><td>string</td><td>The client id part of the authorization data. This part is usually constant for each application.</td><td>0.78</td></tr>
+<tr><td>token</td><td>string</td><td>The token part of the authorization data. This part if usually user-specific, and received after login.</td><td>0.78</td></tr>
+</tbody>
+</table>
+<h2><a class="anchor" aria-hidden="true" id="streamvideooptions-object"></a><a href="#streamvideooptions-object" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>StreamVideoOptions Object</h2>
+<h4><a class="anchor" aria-hidden="true" id="version-added-078-20"></a><a href="#version-added-078-20" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Version added: 0.78</h4>
+<p>Stream video options.</p>
+<table>
+<thead>
+<tr><th>Name</th><th>Type</th><th>Description</th><th>Since</th></tr>
+</thead>
+<tbody>
+<tr><td>auto_detect</td><td>bool</td><td>Defines if to try to automatically detect the best settings for streaming</td><td>0.83</td></tr>
+<tr><td>auto_calc_kbps</td><td>bool</td><td>Defines if to try to automatically calculate the kbps. If set to true, then the max_kbps field is ignored</td><td>0.83</td></tr>
+<tr><td>fps</td><td>int</td><td>Defines the Frames Per Second for the stream</td><td>0.78</td></tr>
+<tr><td>width</td><td>int</td><td>Defines the stream width in pixels</td><td>0.78</td></tr>
+<tr><td>height</td><td>int</td><td>Defines the stream height in pixels</td><td>0.78</td></tr>
+<tr><td>max_kbps</td><td>int</td><td>Defines the maximum KB per second of the stream</td><td>0.78</td></tr>
+<tr><td>buffer_length</td><td>int</td><td>Defines the length of the buffer to be recorded in millisenconds (max 40 seconds)</td><td>0.83</td></tr>
+<tr><td>encoder</td><td><a href="#streamingvideoencodersettings-object">StreamingVideoEncoderSettings</a> Object</td><td>Defines the video encoder settings to use</td><td>0.83</td></tr>
+<tr><td>capture_desktop</td><td><a href="#streamdesktopcaptureoptions-object">StreamDesktopCaptureOptions</a> Object</td><td>Defines the desktop streaming options.</br>Permissions required: DesktopStreaming</td><td>0.83</td></tr>
+<tr><td>frame_interval</td><td>int</td><td>Interval between frames when creating gifs</td><td>0.83</td></tr>
+<tr><td>test_drop_frames_interval</td><td>uint</td><td>The interval, in milliseconds, in which to test for dropped frames</td><td>0.92</td></tr>
+<tr><td>notify_dropped_frames_ratio</td><td>double</td><td>The ratio of dropped to non-dropped frames for which to issue a notification</td><td>0.92</td></tr>
+<tr><td>max_file_size_bytes</td><td>uint</td><td>Defines file maximum size. when video reach {max_file_size_bytes}, the recorder will flush the video file and stat a new video file. onFileSpilt event will be fired</td><td>0.103</td></tr>
+<tr><td>sub_folder_name</td><td>string</td><td>Defines Sub folder for video file path destination (See note below this table)</td><td>0.103</td></tr>
+<tr><td>override_overwolf_setting</td><td>bool</td><td>Do not use Overwolf capture setting. In case True you must provider all video setting (encoder..)</td><td>0.103</td></tr>
+<tr><td>tobii</td><td>int</td><td><a href="overwolf-tobii">TobiiLayerParams</a></td><td>0.97</td></tr>
+</tbody>
+</table>
+<h5><a class="anchor" aria-hidden="true" id="sub_folder_name-note"></a><a href="#sub_folder_name-note" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>sub_folder_name</code> note:</h5>
+<ul>
+<li>Defines Sub folder for video file path destination (Optional):<br>
+<code>OverwolfVideoFolder\\AppName\\|sub_folder_name\\|file_name|</code></li>
+<li>In case [folder_name] is empty:<br>
+<code>OverwolfVideoFolder\\AppName\\|sub_folder_name|</code></li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="streamingvideoencodersettings-object"></a><a href="#streamingvideoencodersettings-object" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>StreamingVideoEncoderSettings Object</h2>
+<h4><a class="anchor" aria-hidden="true" id="version-added-078-21"></a><a href="#version-added-078-21" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Version added: 0.78</h4>
+<p>Stream video options.</p>
+<table>
+<thead>
+<tr><th>Name</th><th>Type</th><th>Description</th><th>Since</th></tr>
+</thead>
+<tbody>
+<tr><td>name</td><td><a href="#overwolfstreamingenumsstreamencoder-enum">overwolf.streaming.enums.StreamEncoder</a> enum</td><td>Defines which video encoder to use. Default: X264</td><td>0.83</td></tr>
+<tr><td>config</td><td>one of the <a href="#see-also">settings objects below</a></td><td>Defines the settings of the specific encoder</td><td>0.83</td></tr>
+</tbody>
+</table>
+<h4><a class="anchor" aria-hidden="true" id="see-also"></a><a href="#see-also" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>See also:</h4>
+<ul>
+<li><a href="#streamingvideoencodernvidia-nvencsettings-object">StreamingVideoEncoderNVIDIA_NVENCSettings</a></li>
+<li><a href="#streamingvideoencoderintelsettings-object">StreamingVideoEncoderIntelSettings</a></li>
+<li><a href="#streamingvideoencoderx264settings-object">StreamingVideoEncoderx264Settings</a></li>
+<li><a href="#streamingvideoencodernvidia-nvencsettings-object">StreamingVideoEncoderAMD_AMFSettings</a></li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="overwolfstreamingenumsstreamencoder-enum"></a><a href="#overwolfstreamingenumsstreamencoder-enum" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>overwolf.streaming.enums.StreamEncoder enum</h2>
+<h4><a class="anchor" aria-hidden="true" id="version-added-078-22"></a><a href="#version-added-078-22" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Version added: 0.78</h4>
+<table>
+<thead>
+<tr><th>Options</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>INTEL</td><td>Use the Intel Quick Sync encoder. Only available on supporting devices</td></tr>
+<tr><td>X264</td><td>Use the x264 encoder. This is the default encoder</td></tr>
+<tr><td>NVIDIA_NVENC</td><td>Uses the nVidia encoder</td></tr>
+<tr><td>AMD_AMF</td><td>Uses the AMD AMF encoder</td></tr>
+</tbody>
+</table>
+<h2><a class="anchor" aria-hidden="true" id="streamingvideoencodernvidia_nvencsettings-object"></a><a href="#streamingvideoencodernvidia_nvencsettings-object" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>StreamingVideoEncoderNVIDIA_NVENCSettings Object</h2>
+<h4><a class="anchor" aria-hidden="true" id="version-added-083-1"></a><a href="#version-added-083-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Version added: 0.83</h4>
+<p>Defines the configuration for the NVIDIA NVENC encoder.</p>
+<table>
+<thead>
+<tr><th>Name</th><th>Type</th><th>Description</th><th>Since</th></tr>
+</thead>
+<tbody>
+<tr><td>preset</td><td><a href="#overwolfstreamingenumsstreamencoderpreset-nvidia-enum">overwolf.streaming.enums.StreamEncoderPreset_NVIDIA</a> enum</td><td>Defines which preset the encoder should use</td><td>0.83</td></tr>
+<tr><td>rate_control</td><td><a href="#overwolfstreamingenumsstreamencoderratecontrol-nvidia-enum">overwolf.streaming.enums.StreamEncoderRateControl_NVIDIA</a> enum</td><td>Defines the rate control mode the encoder should use</td><td>0.83</td></tr>
+<tr><td>keyframe_interval</td><td>int</td><td>Defines the time, in seconds, after which to send a keyframe</td><td>0.83</td></tr>
+</tbody>
+</table>
+<h2><a class="anchor" aria-hidden="true" id="overwolfstreamingenumsstreamencoderpreset_nvidia-enum"></a><a href="#overwolfstreamingenumsstreamencoderpreset_nvidia-enum" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>overwolf.streaming.enums.StreamEncoderPreset_NVIDIA enum</h2>
+<h4><a class="anchor" aria-hidden="true" id="version-added-083-2"></a><a href="#version-added-083-2" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Version added: 0.83</h4>
+<table>
+<thead>
+<tr><th>Options</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>AUTOMATIC</td><td></td></tr>
+<tr><td>DEFAULT</td><td></td></tr>
+<tr><td>HIGH_QUALITY</td><td></td></tr>
+<tr><td>HIGH_PERFORMANCE</td><td></td></tr>
+<tr><td>BLURAY_DISK</td><td></td></tr>
+<tr><td>LOW_LATENCY</td><td></td></tr>
+<tr><td>HIGH_PERFORMANCE_LOW_LATENCY</td><td></td></tr>
+<tr><td>HIGH_QUALITY_LOW_LATENCY</td><td></td></tr>
+<tr><td>LOSSLESS</td><td></td></tr>
+<tr><td>HIGH_PERFORMANCE_LOSSLESS</td><td></td></tr>
+</tbody>
+</table>
+<h2><a class="anchor" aria-hidden="true" id="overwolfstreamingenumsstreamencoderratecontrol_nvidia-enum"></a><a href="#overwolfstreamingenumsstreamencoderratecontrol_nvidia-enum" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>overwolf.streaming.enums.StreamEncoderRateControl_NVIDIA enum</h2>
+<h4><a class="anchor" aria-hidden="true" id="version-added-083-3"></a><a href="#version-added-083-3" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Version added: 0.83</h4>
+<table>
+<thead>
+<tr><th>Options</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>RC_CBR</td><td></td></tr>
+<tr><td>RC_CQP</td><td></td></tr>
+<tr><td>RC_VBR</td><td></td></tr>
+<tr><td>RC_VBR_MINQP</td><td></td></tr>
+<tr><td>RC_2_PASS_QUALITY</td><td></td></tr>
+</tbody>
+</table>
+<h2><a class="anchor" aria-hidden="true" id="streamingvideoencoderintelsettings-object"></a><a href="#streamingvideoencoderintelsettings-object" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>StreamingVideoEncoderIntelSettings Object</h2>
+<h4><a class="anchor" aria-hidden="true" id="version-added-083-4"></a><a href="#version-added-083-4" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Version added: 0.83</h4>
+<p>TBA</p>
+<h2><a class="anchor" aria-hidden="true" id="streamingvideoencoderx264settings-object"></a><a href="#streamingvideoencoderx264settings-object" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>StreamingVideoEncoderx264Settings Object</h2>
+<h4><a class="anchor" aria-hidden="true" id="version-added-083-5"></a><a href="#version-added-083-5" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Version added: 0.83</h4>
+<p>Defines the configuration for an x264 encoder.</p>
+<table>
+<thead>
+<tr><th>Name</th><th>Type</th><th>Description</th><th>Since</th></tr>
+</thead>
+<tbody>
+<tr><td>preset</td><td><a href="#overwolfstreamingenumsstreamencoderpreset-x264-enum">overwolf.streaming.enums.StreamEncoderPreset_x264</a> enum</td><td>Defines which preset the encoder should use</td><td>0.83</td></tr>
+<tr><td>rate_control</td><td><a href="#overwolfstreamingenumsstreamencoderratecontrol-x264-enum">overwolf.streaming.enums.StreamEncoderRateControl_x264</a> enum</td><td>Defines the rate control mode the encoder should use</td><td>0.83</td></tr>
+<tr><td>keyframe_interval</td><td>int</td><td>Defines the time, in seconds, after which to send a keyframe</td><td>0.83</td></tr>
+</tbody>
+</table>
+<h2><a class="anchor" aria-hidden="true" id="overwolfstreamingenumsstreamencoderpreset_x264-enum"></a><a href="#overwolfstreamingenumsstreamencoderpreset_x264-enum" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>overwolf.streaming.enums.StreamEncoderPreset_x264 enum</h2>
+<h4><a class="anchor" aria-hidden="true" id="version-added-083-6"></a><a href="#version-added-083-6" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Version added: 0.83</h4>
+<table>
+<thead>
+<tr><th>Options</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>ULTRAFAST</td><td></td></tr>
+<tr><td>SUPERFAST</td><td></td></tr>
+<tr><td>VERYFAST</td><td></td></tr>
+<tr><td>FASTER</td><td></td></tr>
+<tr><td>FAST</td><td></td></tr>
+<tr><td>MEDIUM</td><td></td></tr>
+<tr><td>SLOW</td><td></td></tr>
+<tr><td>SLOWER</td><td></td></tr>
+<tr><td>VERYSLOW</td><td></td></tr>
+<tr><td>PLACEBO</td><td></td></tr>
+</tbody>
+</table>
+<h2><a class="anchor" aria-hidden="true" id="overwolfstreamingenumsstreamencoderratecontrol_x264-enum"></a><a href="#overwolfstreamingenumsstreamencoderratecontrol_x264-enum" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>overwolf.streaming.enums.StreamEncoderRateControl_x264 enum</h2>
+<h4><a class="anchor" aria-hidden="true" id="version-added-083-7"></a><a href="#version-added-083-7" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Version added: 0.83</h4>
+<table>
+<thead>
+<tr><th>Options</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>RC_CBR</td><td></td></tr>
+<tr><td>RC_CQP</td><td></td></tr>
+<tr><td>RC_VBR</td><td></td></tr>
+<tr><td>RC_VBR_MINQP</td><td></td></tr>
+<tr><td>RC_2_PASS_QUALITY</td><td></td></tr>
+</tbody>
+</table>
+<h2><a class="anchor" aria-hidden="true" id="streamingvideoencoderamd_amfsettings-object"></a><a href="#streamingvideoencoderamd_amfsettings-object" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>StreamingVideoEncoderAMD_AMFSettings Object</h2>
+<h4><a class="anchor" aria-hidden="true" id="version-added-084"></a><a href="#version-added-084" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Version added: 0.84</h4>
+<p>Defines the configuration for an x264 encoder.</p>
+<table>
+<thead>
+<tr><th>Name</th><th>Type</th><th>Description</th><th>Since</th></tr>
+</thead>
+<tbody>
+<tr><td>preset</td><td><a href="#overwolfstreamingenumsstreamencoderpreset-amd-amf-enum">overwolf.streaming.enums.StreamEncoderPreset_AMD_AMF</a> enum</td><td>Defines which preset the encoder should use</td><td>0.84</td></tr>
+<tr><td>rate_control</td><td><a href="#overwolfstreamingenumsstreamencoderratecontrol-amd-amf-enum">overwolf.streaming.enums.StreamEncoderRateControl_AMD_AMF</a> enum</td><td>Defines the rate control mode the encoder should use</td><td>0.84</td></tr>
+<tr><td>keyframe_interval</td><td>int</td><td>Defines the time, in seconds, after which to send a keyframe</td><td>0.83</td></tr>
+</tbody>
+</table>
+<h2><a class="anchor" aria-hidden="true" id="overwolfstreamingenumsstreamencoderpreset_amd_amf-enum"></a><a href="#overwolfstreamingenumsstreamencoderpreset_amd_amf-enum" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>overwolf.streaming.enums.StreamEncoderPreset_AMD_AMF enum</h2>
+<h4><a class="anchor" aria-hidden="true" id="version-added-084-1"></a><a href="#version-added-084-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Version added: 0.84</h4>
+<table>
+<thead>
+<tr><th>Options</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>AUTOMATIC</td><td></td></tr>
+<tr><td>BALANCED</td><td></td></tr>
+<tr><td>SPEED</td><td></td></tr>
+<tr><td>QUALITY</td><td></td></tr>
+<tr><td>ULTRA_LOW_LATENCY</td><td></td></tr>
+<tr><td>LOW_LATENCY</td><td></td></tr>
+</tbody>
+</table>
+<h2><a class="anchor" aria-hidden="true" id="overwolfstreamingenumsstreamencoderratecontrol_amd_amf-enum"></a><a href="#overwolfstreamingenumsstreamencoderratecontrol_amd_amf-enum" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>overwolf.streaming.enums.StreamEncoderRateControl_AMD_AMF enum</h2>
+<h4><a class="anchor" aria-hidden="true" id="version-added-084-2"></a><a href="#version-added-084-2" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Version added: 0.84</h4>
+<table>
+<thead>
+<tr><th>Options</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>RC_CBR</td><td></td></tr>
+<tr><td>RC_CQP</td><td></td></tr>
+<tr><td>RC_VBR</td><td></td></tr>
+<tr><td>RC_VBR_MINQP</td><td></td></tr>
+</tbody>
+</table>
+<h2><a class="anchor" aria-hidden="true" id="streamdesktopcaptureoptions-object"></a><a href="#streamdesktopcaptureoptions-object" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>StreamDesktopCaptureOptions Object</h2>
+<h4><a class="anchor" aria-hidden="true" id="version-added-078-23"></a><a href="#version-added-078-23" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Version added: 0.78</h4>
+<p>Defines the configuration for an x264 encoder.</p>
+<table>
+<thead>
+<tr><th>Name</th><th>Type</th><th>Description</th><th>Since</th></tr>
+</thead>
+<tbody>
+<tr><td>enable</td><td>bool</td><td>Defines if to capture the desktop while game is not running or not in focus</td><td>0.78</td></tr>
+<tr><td>monitor_id</td><td>uint</td><td>Defines which monitor to stream when streaming desktop</td><td>0.78</td></tr>
+<tr><td>force_capture</td><td>bool</td><td>Defines if to force desktop streaming even when a game is in foreground</td><td>0.78</td></tr>
+</tbody>
+</table>
+<h2><a class="anchor" aria-hidden="true" id="streamaudiooptions-object"></a><a href="#streamaudiooptions-object" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>StreamAudioOptions Object</h2>
+<h4><a class="anchor" aria-hidden="true" id="version-added-083-8"></a><a href="#version-added-083-8" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Version added: 0.83</h4>
+<p>Defines the configuration for an x264 encoder.</p>
+<table>
+<thead>
+<tr><th>Name</th><th>Type</th><th>Description</th><th>Since</th></tr>
+</thead>
+<tbody>
+<tr><td>mic</td><td><a href="#streamdevicevolume-object">StreamDeviceVolume</a></td><td>Defines the microphone volume as applied to the stream</td><td>0.83</td></tr>
+<tr><td>mic_volume</td><td>int</td><td>Defines the microphone volume as applied to the stream in a range of 0 to 100</td><td>0.83</td></tr>
+<tr><td>game</td><td><a href="#streamdevicevolume-object">StreamDeviceVolume</a></td><td>Defines the game volume as applied to the stream</td><td>0.83</td></tr>
+<tr><td>game_volume</td><td>int</td><td>Defines the game volume as applied to the stream in a range of 0 to 100</td><td>0.83</td></tr>
+</tbody>
+</table>
+<h2><a class="anchor" aria-hidden="true" id="streamdevicevolume-object"></a><a href="#streamdevicevolume-object" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>StreamDeviceVolume Object</h2>
+<h4><a class="anchor" aria-hidden="true" id="version-added-078-24"></a><a href="#version-added-078-24" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Version added: 0.78</h4>
+<p>Defines a device volume and enablement settings.</p>
+<table>
+<thead>
+<tr><th>Name</th><th>Type</th><th>Description</th><th>Since</th></tr>
+</thead>
+<tbody>
+<tr><td>enable</td><td>bool</td><td>Defines if the device is enabled</td><td>0.78</td></tr>
+<tr><td>volume</td><td>int</td><td>Defines the device volume in the range of 0 to 100</td><td>0.78</td></tr>
+<tr><td>device_id</td><td>string</td><td>Defines the device ID to use</td><td>0.78</td></tr>
+</tbody>
+</table>
+<h2><a class="anchor" aria-hidden="true" id="streamperipheralscaptureoptions-object"></a><a href="#streamperipheralscaptureoptions-object" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>StreamPeripheralsCaptureOptions Object</h2>
+<h4><a class="anchor" aria-hidden="true" id="version-added-083-9"></a><a href="#version-added-083-9" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Version added: 0.83</h4>
+<p>Stream capture options for peripheral devices.</p>
+<table>
+<thead>
+<tr><th>Name</th><th>Type</th><th>Description</th><th>Since</th></tr>
+</thead>
+<tbody>
+<tr><td>capture_mouse_cursor</td><td><a href="#overwolfstreamingenumsstreammousecursor-enum">overwolf.streaming.enums.StreamMouseCursor</a> enum</td><td>Defines when to capture the mouse cursor while streaming is on</td><td>0.83</td></tr>
+</tbody>
+</table>
+<h2><a class="anchor" aria-hidden="true" id="overwolfstreamingenumsstreammousecursor-enum"></a><a href="#overwolfstreamingenumsstreammousecursor-enum" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>overwolf.streaming.enums.StreamMouseCursor enum</h2>
+<h4><a class="anchor" aria-hidden="true" id="version-added-083-10"></a><a href="#version-added-083-10" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Version added: 0.83</h4>
+<table>
+<thead>
+<tr><th>Options</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>both</td><td>Always capture the mouse cursor</td></tr>
+<tr><td>gameOnly</td><td>Capture the mouse cursor only when a game is focued</td></tr>
+<tr><td>desktopOnly</td><td>Capture the mouse cursor only when on the desktop</td></tr>
+</tbody>
+</table>
+<h2><a class="anchor" aria-hidden="true" id="streamingestserver-object"></a><a href="#streamingestserver-object" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>StreamIngestServer Object</h2>
+<h4><a class="anchor" aria-hidden="true" id="version-added-078-25"></a><a href="#version-added-078-25" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Version added: 0.78</h4>
+<p>Information on the server that is being streamed to.</p>
+<table>
+<thead>
+<tr><th>Name</th><th>Type</th><th>Description</th><th>Since</th></tr>
+</thead>
+<tbody>
+<tr><td>name</td><td>string</td><td>The server name that is being streamed to</td><td>0.78</td></tr>
+<tr><td>template_url</td><td>string</td><td>The server’s url template. Use the token {stream_key} to specify the stream key in the url</td><td>0.78</td></tr>
+</tbody>
+</table>
+<h2><a class="anchor" aria-hidden="true" id="replaytype-enum"></a><a href="#replaytype-enum" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>ReplayType enum</h2>
+<p>The replay type to use.</p>
+<h4><a class="anchor" aria-hidden="true" id="version-added-083-11"></a><a href="#version-added-083-11" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Version added: 0.83</h4>
+<table>
+<thead>
+<tr><th>Options</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>video</td><td></td></tr>
+<tr><td>gif</td><td></td></tr>
+</tbody>
+</table>
+<h2><a class="anchor" aria-hidden="true" id="watermarksettings-object"></a><a href="#watermarksettings-object" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>WatermarkSettings Object</h2>
+<h4><a class="anchor" aria-hidden="true" id="version-added-078-26"></a><a href="#version-added-078-26" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Version added: 0.78</h4>
+<p>The basic stream information.</p>
+<table>
+<thead>
+<tr><th>Name</th><th>Type</th><th>Description</th><th>Since</th></tr>
+</thead>
+<tbody>
+<tr><td>showWatermark</td><td>bool</td><td>Determines whether or not to display the Overwolf watermark on the stream</td><td>0.78</td></tr>
+</tbody>
+</table>
+<h2><a class="anchor" aria-hidden="true" id="overwolfstreamingenumsstreamingmode-enum"></a><a href="#overwolfstreamingenumsstreamingmode-enum" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>overwolf.streaming.enums.StreamingMode enum</h2>
+<h4><a class="anchor" aria-hidden="true" id="version-added-078-27"></a><a href="#version-added-078-27" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Version added: 0.78</h4>
+<table>
+<thead>
+<tr><th>Options</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>WhenVisible</td><td>Stream the window when it is visible. This is the default behavior. The viewers will see what you see</td></tr>
+<tr><td>Always</td><td>Always stream the window, even when it is hidden or minimized. The viewers will continue to see it while you don’t</td></tr>
+<tr><td>Never</td><td>Never stream the window. The viewers will not see the window even if you do see it.</td></tr>
+</tbody>
+</table>
+<h2><a class="anchor" aria-hidden="true" id="overwolfstreamingenumsobsstreamingmode-enum"></a><a href="#overwolfstreamingenumsobsstreamingmode-enum" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>overwolf.streaming.enums.ObsStreamingMode enum</h2>
+<h4><a class="anchor" aria-hidden="true" id="version-added-078-28"></a><a href="#version-added-078-28" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Version added: 0.78</h4>
+<table>
+<thead>
+<tr><th>Options</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>OBSNoAwareness</td><td>The default Overwolf window style</td></tr>
+<tr><td>OBSAwareness</td><td>Allows to capture the window using Overwolf OBS plugin and will not be visible ingame or by Overwolf capturing apps (will still be visible in desktop)</td></tr>
+<tr><td>OBSAwarenessHideFromDeskTop</td><td>Same as OBSAwareness but also not visible in desktop (hidden)</td></tr>
+</tbody>
+</table>
+</span></div></article></div><div class="docLastUpdate"><em>Last updated on 2019-7-7 by eransharv</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/api/overwolf-profile"><span class="arrow-prev">← </span><span>overwolf.profile</span></a><a class="docs-next button" href="/docs/api/overwolf-profile"><span>overwolf.profile</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#methods-reference">Methods Reference</a></li><li><a href="#events-reference">Events Reference</a></li><li><a href="#types-reference">Types Reference</a></li><li><a href="#the-basic-usage-flow-should-be">The basic usage flow should be:</a><ul class="toc-headings"><li><a href="#1-register-to-the-onstopstreaming">1. Register to the onStopStreaming</a></li><li><a href="#2-register-to-the-onstreamingerror">2. Register to the onStreamingError</a></li><li><a href="#3-register-to-the-onstreamingwarning">3. Register to the onStreamingWarning</a></li><li><a href="#4-register-to-onstreamingsourceimagechanged">4. Register to onStreamingSourceImageChanged</a></li><li><a href="#5-call-overwolfstreaminggetstreamencoders">5. Call overwolf.streaming.getStreamEncoders</a></li><li><a href="#6-call-overwolfstreamingstart">6. Call overwolf.streaming.start</a></li><li><a href="#7-allow-the-user-to-change-volume">7. Allow the user to change volume</a></li><li><a href="#8-call-overwolfstreamingstop">8. Call overwolf.streaming.stop</a></li><li><a href="#extras">Extras</a></li></ul></li><li><a href="#startsettings-callback">start(settings, callback)</a></li><li><a href="#stopstreamid-callback">stop(streamId, callback)</a></li><li><a href="#changevolumestreamid-audiooptions-callback">changeVolume(streamId, audioOptions, callback)</a></li><li><a href="#setwatermarksettingssettings-callback">setWatermarkSettings(settings, callback)</a></li><li><a href="#getwatermarksettingscallback">getWatermarkSettings(callback)</a></li><li><a href="#getwindowstreamingmodewindowid-callback">getWindowStreamingMode(windowId, callback)</a></li><li><a href="#setwindowstreamingmodewindowid-streamingmode-callback">setWindowStreamingMode(windowId, streamingMode, callback)</a></li><li><a href="#setwindowobsstreamingmodewindowid-obsstreamingmode-callback">setWindowObsStreamingMode(windowId, obsStreamingMode, callback)</a></li><li><a href="#setbrbimagestreamid-image-backgroundcolor-callback">setBRBImage(streamId, image, backgroundColor, callback)</a></li><li><a href="#getstreamencoderscallback">getStreamEncoders(callback)</a></li><li><a href="#getaudiodevicescallback">getAudioDevices(callback)</a></li><li><a href="#updatestreamingdesktopoptionsstreamid-newoptions-mousecursorstreamingmethod-callback">updateStreamingDesktopOptions(streamId, newOptions, mouseCursorStreamingMethod, callback)</a></li><li><a href="#updatetobiisettingstreamid-param-callback">updateTobiiSetting(streamId, param, callback)</a></li><li><a href="#getrunningrecorderscallback">getRunningRecorders(callback)</a></li><li><a href="#onstreamingsourceimagechanged">onStreamingSourceImageChanged</a></li><li><a href="#onstopstreaming">onStopStreaming</a></li><li><a href="#onstartstreaming">onStartStreaming</a></li><li><a href="#onstreamingerror">onStreamingError</a></li><li><a href="#onstreamingwarning">onStreamingWarning</a></li><li><a href="#onvideofilesplited">onVideoFileSplited</a></li><li><a href="#onrecordingenginestatechanged">onRecordingEngineStateChanged</a></li><li><a href="#streamsettings-object">StreamSettings Object</a></li><li><a href="#overwolfstreamingenumsstreamingprovider-enum">overwolf.streaming.enums.StreamingProvider enum</a></li><li><a href="#streamparams-object">StreamParams Object</a></li><li><a href="#streaminfo-object">StreamInfo Object</a></li><li><a href="#streamauthparams-object">StreamAuthParams Object</a></li><li><a href="#streamvideooptions-object">StreamVideoOptions Object</a></li><li><a href="#streamingvideoencodersettings-object">StreamingVideoEncoderSettings Object</a></li><li><a href="#overwolfstreamingenumsstreamencoder-enum">overwolf.streaming.enums.StreamEncoder enum</a></li><li><a href="#streamingvideoencodernvidia_nvencsettings-object">StreamingVideoEncoderNVIDIA_NVENCSettings Object</a></li><li><a href="#overwolfstreamingenumsstreamencoderpreset_nvidia-enum">overwolf.streaming.enums.StreamEncoderPreset_NVIDIA enum</a></li><li><a href="#overwolfstreamingenumsstreamencoderratecontrol_nvidia-enum">overwolf.streaming.enums.StreamEncoderRateControl_NVIDIA enum</a></li><li><a href="#streamingvideoencoderintelsettings-object">StreamingVideoEncoderIntelSettings Object</a></li><li><a href="#streamingvideoencoderx264settings-object">StreamingVideoEncoderx264Settings Object</a></li><li><a href="#overwolfstreamingenumsstreamencoderpreset_x264-enum">overwolf.streaming.enums.StreamEncoderPreset_x264 enum</a></li><li><a href="#overwolfstreamingenumsstreamencoderratecontrol_x264-enum">overwolf.streaming.enums.StreamEncoderRateControl_x264 enum</a></li><li><a href="#streamingvideoencoderamd_amfsettings-object">StreamingVideoEncoderAMD_AMFSettings Object</a></li><li><a href="#overwolfstreamingenumsstreamencoderpreset_amd_amf-enum">overwolf.streaming.enums.StreamEncoderPreset_AMD_AMF enum</a></li><li><a href="#overwolfstreamingenumsstreamencoderratecontrol_amd_amf-enum">overwolf.streaming.enums.StreamEncoderRateControl_AMD_AMF enum</a></li><li><a href="#streamdesktopcaptureoptions-object">StreamDesktopCaptureOptions Object</a></li><li><a href="#streamaudiooptions-object">StreamAudioOptions Object</a></li><li><a href="#streamdevicevolume-object">StreamDeviceVolume Object</a></li><li><a href="#streamperipheralscaptureoptions-object">StreamPeripheralsCaptureOptions Object</a></li><li><a href="#overwolfstreamingenumsstreammousecursor-enum">overwolf.streaming.enums.StreamMouseCursor enum</a></li><li><a href="#streamingestserver-object">StreamIngestServer Object</a></li><li><a href="#replaytype-enum">ReplayType enum</a></li><li><a href="#watermarksettings-object">WatermarkSettings Object</a></li><li><a href="#overwolfstreamingenumsstreamingmode-enum">overwolf.streaming.enums.StreamingMode enum</a></li><li><a href="#overwolfstreamingenumsobsstreamingmode-enum">overwolf.streaming.enums.ObsStreamingMode enum</a></li></ul></nav></div><footer class="site-footer"><div class="container"><ul><li>Legal</li><li><a href="/terms/developer-terms/">Developer&#x27;s terms</a></li><li><a href="/terms/app-terms/">App terms</a></li><li><a href="http://www.overwolf.com/legal/" target="_blank">Overwolf terms</a></li><li><a href="http://www.overwolf.com/legal/#Privacy-policy" target="_blank">Overwolf Privacy policy</a></li></ul><ul><li>Support</li><li><a href="https://discordapp.com/invite/cjjrZDp" target="_blank">Discord</a></li><li><a href="http://developers.overwolf.com/get-help/slack/">Slack</a></li><li><a href="https://www.facebook.com/OverwolfDevs" target="_blank">Facebook</a></li><li><a href="https://twitter.com/OverwolfDevs" target="_blank">Twitter</a></li></ul><ul><li><a href="/documentation/">Documentation</a></li><li><a href="/documentation/sdk/overwolf/">API</a></li><li><a href="/documentation/sdk/overwolf/plugins/">Plugins</a></li></ul><ul><li>Information</li><li><a href="/changelog/">What&#x27;s new</a></li><li><a href="http://www.overwolf.com/careers/">Careers</a></li><li><a href="https://play.overwolf.com/fund/" target="_blank">Fund</a></li></ul></div></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+                document.addEventListener('keyup', function(e) {
+                  if (e.target !== document.body) {
+                    return;
+                  }
+                  // keyCode for '/' (slash)
+                  if (e.keyCode === 191) {
+                    const search = document.getElementById('search_input_react');
+                    search && search.focus();
+                  }
+                });
+              </script><script>
+              var search = docsearch({
+                
+                apiKey: 'fe54eceb2ea7e0780cc7030fcd4020d4',
+                indexName: 'overwolf',
+                inputSelector: '#search_input_react',
+                algoliaOptions: {}
+              });
+            </script></body></html>

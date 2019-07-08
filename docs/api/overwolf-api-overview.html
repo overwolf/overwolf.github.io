@@ -1,0 +1,230 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Overwolf API Overview · Overwolf</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="&lt;p&gt;The main entry point for all of Overwolf&#x27;s APIs.\&lt;/p&gt;
+"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Overwolf API Overview · Overwolf"/><meta property="og:type" content="website"/><meta property="og:url" content="https://overwolf.github.io/"/><meta property="og:description" content="&lt;p&gt;The main entry point for all of Overwolf&#x27;s APIs.\&lt;/p&gt;
+"/><meta property="og:image" content="https://overwolf.github.io/img/docusaurus.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://overwolf.github.io/img/docusaurus.png"/><link rel="shortcut icon" href="/img/ow-favicon.ico"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/default.min.css"/><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato%3A400%2C400i%2C700%2C900&amp;ver=4.5.3"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css"/><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css"/><link rel="stylesheet" href="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css"/><link rel="stylesheet" href="/css/code-block-buttons.css"/><script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js"></script><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script><script type="text/javascript" src="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script><script type="text/javascript" src="/js/code-block-buttons.js"></script><script type="text/javascript" src="/developers-site/js/onload.js"></script><script type="text/javascript" src="/developers-site/js/activeNavBar.js"></script><script type="text/javascript" src="/developers-site/js/slicker.js"></script><script src="https://unpkg.com/vanilla-back-to-top@7.1.14/dist/vanilla-back-to-top.min.js"></script><script>
+        document.addEventListener('DOMContentLoaded', function() {
+          addBackToTop(
+            {"zIndex":100,"backgroundColor":"#20232A"}
+          )
+        });
+        </script><script src="/js/scrollSpy.js"></script><link rel="stylesheet" href="/css/main.css"/><script src="/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/"><img class="logo" src="/img/headerIcon.svg" alt="Overwolf"/><h2 class="headerTitleWithLogo">Overwolf</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href="/docs/start/getting-started" target="_self">Getting Started</a></li><li class=""><a href="/docs/topics/best-practices-overview" target="_self">Docs</a></li><li class="siteNavGroupActive siteNavItemActive"><a href="/docs/api/overwolf-api-overview" target="_self">API</a></li><li class=""><a href="/docs/status/all" target="_self">Status</a></li><li class=""><a href="/docs/download/download-overview" target="_self">Download</a></li><li class="siteNavGroupActive"><a href="/docs/api/changelog" target="_self">Changelog</a></li><li class=""><a href="https://medium.com/overwolf-developers" target="_self">Blog</a></li><li class=""><a href="https://discuss.developers.overwolf.com/" target="_self">Q&amp;A</a></li><li class=""><a href="/docs/support/contact-us" target="_self">Support</a></li><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>API Reference</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">API Reference<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem navListItemActive"><a class="navItem" href="/docs/api/overwolf-api-overview">Overview</a></li><li class="navListItem"><a class="navItem" href="/docs/api/changelog">Changelog</a></li><li class="navListItem"><a class="navItem" href="/docs/api/manifest-json">manifest.json</a></li><li class="navListItem"><a class="navItem" href="/docs/api/overwolf-benchmarking">overwolf.benchmarking</a></li><li class="navListItem"><a class="navItem" href="/docs/api/overwolf-log">overwolf.log</a></li><li class="navListItem"><a class="navItem" href="/docs/api/overwolf-streaming">overwolf.streaming</a></li><li class="navListItem"><a class="navItem" href="/docs/api/overwolf-profile">overwolf.profile</a></li><li class="navListItem"><a class="navItem" href="/docs/api/overwolf-tobii">overwolf.tobii</a></li><li class="navListItem"><a class="navItem" href="/docs/api/overwolf-utils">overwolf.utils</a></li><li class="navListItem"><a class="navItem" href="/docs/api/overwolf-os">overwolf.os</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">overwolf.io<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/api/overwolf-io">overwolf.io</a></li><li class="navListItem"><a class="navItem" href="/docs/api/overwolf-io-paths">overwolf.io.paths</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">overwolf.extensions<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/api/overwolf-extensions">overwolf.extensions</a></li><li class="navListItem"><a class="navItem" href="/docs/api/overwolf-extension-current">overwolf.extension.current</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">overwolf.games<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/api/overwolf-games">overwolf.games</a></li><li class="navListItem"><a class="navItem" href="/docs/api/overwolf-games-events">overwolf.games.events</a></li><li class="navListItem"><a class="navItem" href="/docs/api/howto-check-events-status-from-app">Check Event Status From App</a></li><li class="navListItem"><a class="navItem" href="/docs/api/overwolf-games-inputTracking">overwolf.games.inputTracking</a></li><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Games Events List</h4><ul><li class="navListItem"><a class="navItem" href="/docs/api/games-ids">Games IDs</a></li><li class="navListItem"><a class="navItem" href="/docs/api/overwolf-games-events-lol">LOL Events</a></li><li class="navListItem"><a class="navItem" href="/docs/api/overwolf-games-events-ancestors-legacy">Ancestors Legacy Events</a></li><li class="navListItem"><a class="navItem" href="/docs/api/overwolf-games-events-apex-legends">Apex Legends Events</a></li><li class="navListItem"><a class="navItem" href="/docs/api/overwolf-games-events-autochess">Auto Chess Events</a></li><li class="navListItem"><a class="navItem" href="/docs/api/overwolf-games-events-csgo">CS:GO Events</a></li><li class="navListItem"><a class="navItem" href="/docs/api/overwolf-games-events-dota2">Dota 2 Events</a></li><li class="navListItem"><a class="navItem" href="/docs/api/overwolf-games-events-fortnite">Fortnite Events</a></li><li class="navListItem"><a class="navItem" href="/docs/api/overwolf-games-events-pubg">PUBG Game Events</a></li><li class="navListItem"><a class="navItem" href="/docs/api/overwolf-games-events-splitgate">Splitgate Events</a></li><li class="navListItem"><a class="navItem" href="/docs/api/overwolf-games-events-heartstone">Heartstone Events</a></li><li class="navListItem"><a class="navItem" href="/docs/api/overwolf-games-events-battlerite">Battlerite Game Events</a></li><li class="navListItem"><a class="navItem" href="/docs/api/overwolf-games-events-rocket-league">Rocket League Events</a></li><li class="navListItem"><a class="navItem" href="/docs/api/overwolf-games-events-rainbow-six">Rainbow Six Siege Game Events</a></li><li class="navListItem"><a class="navItem" href="/docs/api/overwolf-games-events-wot">World of Tanks Events</a></li><li class="navListItem"><a class="navItem" href="/docs/api/overwolf-games-events-wow">World of Warships Events</a></li><li class="navListItem"><a class="navItem" href="/docs/api/overwolf-games-events-smite">SMITE Events</a></li><li class="navListItem"><a class="navItem" href="/docs/api/overwolf-games-events-warface">Warface Events</a></li><li class="navListItem"><a class="navItem" href="/docs/api/overwolf-games-events-robocraft">Robocraft Events</a></li><li class="navListItem"><a class="navItem" href="/docs/api/games-external-apis">Various External APIs</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Games Launchers List</h4><ul><li class="navListItem"><a class="navItem" href="/docs/api/overwolf-games-launchers">overwolf.games.launchers</a></li><li class="navListItem"><a class="navItem" href="/docs/api/overwolf-games-launchers-events">overwolf.games.launchers.events</a></li><li class="navListItem"><a class="navItem" href="/docs/api/launchers-ids">Launchers IDs</a></li><li class="navListItem"><a class="navItem" href="/docs/api/overwolf-games-launchers-events-lol">LOL Launcher Events</a></li></ul></div></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">overwolf.logitech<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/api/overwolf-logitech">overwolf.logitech</a></li><li class="navListItem"><a class="navItem" href="/docs/api/overwolf-logitech-arx">overwolf.logitech.arx</a></li><li class="navListItem"><a class="navItem" href="/docs/api/overwolf-logitech-led">overwolf.logitech.led</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">overwolf.media<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/api/overwolf-media">overwolf.media</a></li><li class="navListItem"><a class="navItem" href="/docs/api/overwolf-media-audio">overwolf.media.audio</a></li><li class="navListItem"><a class="navItem" href="/docs/api/overwolf-media-replays">overwolf.media.replays</a></li><li class="navListItem"><a class="navItem" href="/docs/api/overwolf-media-videos">overwolf.media.videos</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">overwolf.settings<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/api/overwolf-settings">overwolf.settings</a></li><li class="navListItem"><a class="navItem" href="/docs/api/overwolf-settings-games">overwolf.settings.games</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">overwolf.social<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/api/overwolf-social">overwolf.social</a></li><li class="navListItem"><a class="navItem" href="/docs/api/overwolf-social-youtube">overwolf.social.youtube</a></li><li class="navListItem"><a class="navItem" href="/docs/api/overwolf-social-discord">overwolf.social.discord</a></li><li class="navListItem"><a class="navItem" href="/docs/api/overwolf-social-gfycat">overwolf.social.gfycat</a></li><li class="navListItem"><a class="navItem" href="/docs/api/overwolf-social-twitter">overwolf.social.twitter</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">overwolf.web<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/api/overwolf-web">overwolf.web</a></li><li class="navListItem"><a class="navItem" href="/docs/api/overwolf-web-webserver">overwolf.web.webserver</a></li><li class="navListItem"><a class="navItem" href="/docs/api/overwolf-web-websocket">overwolf.web.websocket</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">overwolf.windows<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/api/overwolf-windows">overwolf.windows</a></li><li class="navListItem"><a class="navItem" href="/docs/api/overwolf-windows-mediaPlayerElement">overwolf.windows.mediaPlayerElement</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><a class="edit-page-link button" href="https://github.com/overwolf/developers-site/tree/master/docs/api/overwolf-api-overview.md" target="_blank" rel="noreferrer noopener">Edit</a><h1 class="postHeaderTitle">Overwolf API Overview</h1></header><article><div><span><p>The main entry point for all of Overwolf's APIs.<br>
+This class provides access to global components that allow interaction with the various Overwolf features.</p>
+<h2><a class="anchor" aria-hidden="true" id="api-s-reference"></a><a href="#api-s-reference" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>API's Reference</h2>
+<ul>
+<li><a href="#overwolfbenchmarking-developers-site-docs-api-overwolf-benchmarking"><code>overwolf.benchmarking</code></a></li>
+<li><a href="#overwolfextensions-developers-site-docs-api-overwolf-extensions"><code>overwolf.extensions</code></a></li>
+<li><a href="#overwolfio-developers-site-docs-api-overwolf-io"><code>overwolf.io</code></a></li>
+<li><a href="#overwolflog-developers-site-docs-api-overwolf-log"><code>overwolf.log</code></a></li>
+<li><a href="#overwolfstreaming-developers-site-docs-api-overwolf-streaming"><code>overwolf.streaming</code></a></li>
+<li><a href="#overwolfprofile-developers-site-docs-api-overwolf-profile"><code>overwolf.profile</code></a></li>
+<li><a href="#overwolftobii-developers-site-docs-api-overwolf-tobii"><code>overwolf.tobii</code></a></li>
+<li><a href="#overwolfutils-developers-site-docs-api-overwolf-utils"><code>overwolf.utils</code></a></li>
+<li><a href="#overwolfos-developers-site-docs-api-overwolf-os"><code>overwolf.os</code></a></li>
+<li><a href="#overwolfgames-developers-site-docs-api-overwolf-games"><code>overwolf.games</code></a></li>
+<li><a href="#overwolfgamesevents-developers-site-docs-api-overwolf-games-events"><code>overwolf.games.events</code></a></li>
+<li><a href="#overwolflogitech-developers-site-docs-api-overwolf-logitech"><code>overwolf.logitech</code></a></li>
+<li><a href="#overwolfmedia-developers-site-docs-api-overwolf-media"><code>overwolf.media</code></a></li>
+<li><a href="#settings-developers-site-docs-api-overwolf-settings"><code>overwolf.settings</code></a></li>
+<li><a href="#overwolfsocial-developers-site-docs-api-overwolf-social"><code>overwolf.social</code></a></li>
+<li><a href="#overwolfweb-developers-site-docs-api-overwolf-web"><code>overwolf.web</code></a></li>
+<li><a href="#overwolfwindows-developers-site-docs-api-overwolf-windows"><code>overwolf.windows</code></a></li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="overwolfbenchmarking-docs-api-overwolf-benchmarking"></a><a href="#overwolfbenchmarking-docs-api-overwolf-benchmarking" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><a href="/docs/api/overwolf-benchmarking">overwolf.benchmarking</a></h2>
+<blockquote>
+<p>Use the overwolf.benchmarking API to query system stats and benchmarks.</p>
+</blockquote>
+<p>Common use cases:</p>
+<ul>
+<li>Get hardware information</li>
+<li>Get FPS information</li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="overwolfextensions-docs-api-overwolf-extensions"></a><a href="#overwolfextensions-docs-api-overwolf-extensions" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><a href="/docs/api/overwolf-extensions">overwolf.extensions</a></h2>
+<blockquote>
+<p>Use the overwolf.extensions API to control and retrieve details on a specific Overwolf app (extension).</p>
+</blockquote>
+<p>Common use cases:</p>
+<ul>
+<li>Launch another app</li>
+<li>Get the running state of an Overwolf app</li>
+<li>Get the manifest.json data of an app</li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="overwolfio-docs-api-overwolf-io"></a><a href="#overwolfio-docs-api-overwolf-io" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><a href="/docs/api/overwolf-io">overwolf.io</a></h2>
+<blockquote>
+<p>Use the overwolf.io API to check if a certain file exists or to write content to a file.<br>
+For more I/O functionalities, please use our <a href="../topics/simple-io-plugin">simple I/O plugin</a>.</p>
+</blockquote>
+<h2><a class="anchor" aria-hidden="true" id="overwolflog-docs-api-overwolf-log"></a><a href="#overwolflog-docs-api-overwolf-log" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><a href="/docs/api/overwolf-log">overwolf.log</a></h2>
+<blockquote>
+<p>Use the overwolf.log API to write different messages (info, warning, error, critical, etc.) to the common log.</p>
+</blockquote>
+<h2><a class="anchor" aria-hidden="true" id="overwolfstreaming-docs-api-overwolf-streaming"></a><a href="#overwolfstreaming-docs-api-overwolf-streaming" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><a href="/docs/api/overwolf-streaming">overwolf.streaming</a></h2>
+<p>Permissions required: Streaming</p>
+<blockquote>
+<p>Use the overwolf.streaming API to capture a video of the current game, or stream the current game to <a href="https://www.twitch.tv/">Twitch.tv</a></p>
+</blockquote>
+<h2><a class="anchor" aria-hidden="true" id="overwolfprofile-docs-api-overwolf-profile"></a><a href="#overwolfprofile-docs-api-overwolf-profile" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><a href="/docs/api/overwolf-profile">overwolf.profile</a></h2>
+<p>Permissions required: profile</p>
+<blockquote>
+<p>Use the overwolf.profile API to get Overwolf information for the current user of the app (e.g user name, user log-in event, etc.).\</p>
+</blockquote>
+<h2><a class="anchor" aria-hidden="true" id="overwolftobii-docs-api-overwolf-tobii"></a><a href="#overwolftobii-docs-api-overwolf-tobii" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><a href="/docs/api/overwolf-tobii">overwolf.tobii</a></h2>
+<blockquote>
+<p>Provides an API to Overwolf Tobii.</p>
+</blockquote>
+<h2><a class="anchor" aria-hidden="true" id="overwolfutils-docs-api-overwolf-utils"></a><a href="#overwolfutils-docs-api-overwolf-utils" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><a href="/docs/api/overwolf-utils">overwolf.utils</a></h2>
+<blockquote>
+<p>Use the overwolf.utils API to get the user's system information, send keystrokes to the game, open URL in default browser and more.</p>
+</blockquote>
+<p>Common use cases:</p>
+<ul>
+<li>Getting a string that is currently placed on the clipboard</li>
+<li>Getting the user's system information (OS, monitors, CPU, GPU, input devices and more)</li>
+<li>Opening a URL in a browser</li>
+<li>Send keystrokes to the running game</li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="overwolfos-docs-api-overwolf-os"></a><a href="#overwolfos-docs-api-overwolf-os" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><a href="/docs/api/overwolf-os">overwolf.os</a></h2>
+<blockquote>
+<p>Use the overwolf.os APIfor Operating System related functionalities.</p>
+</blockquote>
+<h2><a class="anchor" aria-hidden="true" id="overwolfgames-docs-api-overwolf-games"></a><a href="#overwolfgames-docs-api-overwolf-games" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><a href="/docs/api/overwolf-games">overwolf.games</a></h2>
+<blockquote>
+<p>Use the overwolf.games API to query system stats and benchmarks.</p>
+</blockquote>
+<p>Common use cases:</p>
+<ul>
+<li>Get hardware information</li>
+<li>Get FPS information</li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="overwolfgamesevents-docs-api-overwolf-games-events"></a><a href="#overwolfgamesevents-docs-api-overwolf-games-events" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><a href="/docs/api/overwolf-games-events">overwolf.games.events</a></h2>
+<blockquote>
+<p>Use the overwolf.games.events API to be notified when something interesting happens while playing a certain games:</p>
+</blockquote>
+<p>(e.g. a hero killed someone, someone killed the gamer's hero, etc.)</p>
+<h2><a class="anchor" aria-hidden="true" id="overwolflogitech-docs-api-overwolf-logitech"></a><a href="#overwolflogitech-docs-api-overwolf-logitech" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><a href="/docs/api/overwolf-logitech">overwolf.logitech</a></h2>
+<blockquote>
+<p>Provides interface for Logitech hardware such as Logitech ARX and Logitech LED keyboards.</p>
+</blockquote>
+<p>Common use cases:</p>
+<ul>
+<li>Light the user's LED keyboard when an interesting event has happened in the game (by using the overwolf.game.events API)</li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="overwolfmedia-docs-api-overwolf-media"></a><a href="#overwolfmedia-docs-api-overwolf-media" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><a href="/docs/api/overwolf-media">overwolf.media</a></h2>
+<p>Permissions required: Media</p>
+<blockquote>
+<p>Use the overwolf.media API to capture a screenshot or create a GIF of the currently running game.</p>
+</blockquote>
+<ul>
+<li>Use the <a href="/docs/api/overwolf-media-audio">overwolf.media.audio</a> API to play an audio file.</li>
+<li>Use the <a href="/docs/api/overwolf-media-replays">overwolf.media.replays</a> API to capture a short video replay of the currently running game.</li>
+<li>Use the <a href="/docs/api/overwolf-media-videos">overwolf.media.videos</a> API to create video composition, delete video files, and get details of video files that were created by the app.</li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="overwolfsettings-docs-api-overwolf-settings"></a><a href="#overwolfsettings-docs-api-overwolf-settings" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><a href="/docs/api/overwolf-settings">overwolf.settings</a></h2>
+<blockquote>
+<p>Use the overwolf.settings API to view and modify one of the following Overwolf settings properties:</p>
+</blockquote>
+<ul>
+<li>Hotkeys - register a function for a given hotkey, or retrieve an existing hotkey key combination</li>
+<li>Retrieve the current Overwolf user language</li>
+<li>Video (i.e., folder location, capture settings, FPS settings, etc.)</li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="overwolfsocial-docs-api-overwolf-social"></a><a href="#overwolfsocial-docs-api-overwolf-social" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><a href="/docs/api/overwolf-social">overwolf.social</a></h2>
+<blockquote>
+<p>Provides access to the different social providers we support.</p>
+</blockquote>
+<ul>
+<li><a href="/docs/api/overwolf-social-youtube">overwolf.social.youtube</a> Provides access to the YouTube social provider.</li>
+<li><a href="/docs/api/overwolf-social-discord">overwolf.social.dicord</a> Provides access to the Dicord social provider.</li>
+<li><a href="/docs/api/overwolf-social-gfycat">overwolf.social.gfycat</a> Provides access to the Gfycat social provider.</li>
+<li><a href="/docs/api/overwolf-social-twitter">overwolf.social.twitter</a> Provides access to the Twitter social provider.</li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="overwolfweb-docs-api-overwolf-web"></a><a href="#overwolfweb-docs-api-overwolf-web" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><a href="/docs/api/overwolf-web">overwolf.web</a></h2>
+<blockquote>
+<p>Use the overwolf.web API to open a local HTTP web-server.</p>
+</blockquote>
+<h2><a class="anchor" aria-hidden="true" id="overwolfwindows-docs-api-overwolf-windows"></a><a href="#overwolfwindows-docs-api-overwolf-windows" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><a href="/docs/api/overwolf-windows">overwolf.windows</a></h2>
+<blockquote>
+<p>Use the overwolf.windows API to to create, modify or interact with your app's windows.</p>
+</blockquote>
+<p>Common use cases:</p>
+<ul>
+<li>Open a new app window.</li>
+<li>Change window location or size</li>
+<li>Getting information about a specific app window - window id, name, width, height, location and more.</li>
+<li>Minimize or maximize a window</li>
+<li>Communicate between windows</li>
+</ul>
+</span></div></article></div><div class="docLastUpdate"><em>Last updated on 2019-6-19 by eransharv</em></div><div class="docs-prevnext"><a class="docs-next button" href="/docs/api/changelog"><span>Changelog</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#api-s-reference">API's Reference</a></li><li><a href="#overwolfbenchmarking-docs-api-overwolf-benchmarking"><a href="/docs/api/overwolf-benchmarking">overwolf.benchmarking</a></a></li><li><a href="#overwolfextensions-docs-api-overwolf-extensions"><a href="/docs/api/overwolf-extensions">overwolf.extensions</a></a></li><li><a href="#overwolfio-docs-api-overwolf-io"><a href="/docs/api/overwolf-io">overwolf.io</a></a></li><li><a href="#overwolflog-docs-api-overwolf-log"><a href="/docs/api/overwolf-log">overwolf.log</a></a></li><li><a href="#overwolfstreaming-docs-api-overwolf-streaming"><a href="/docs/api/overwolf-streaming">overwolf.streaming</a></a></li><li><a href="#overwolfprofile-docs-api-overwolf-profile"><a href="/docs/api/overwolf-profile">overwolf.profile</a></a></li><li><a href="#overwolftobii-docs-api-overwolf-tobii"><a href="/docs/api/overwolf-tobii">overwolf.tobii</a></a></li><li><a href="#overwolfutils-docs-api-overwolf-utils"><a href="/docs/api/overwolf-utils">overwolf.utils</a></a></li><li><a href="#overwolfos-docs-api-overwolf-os"><a href="/docs/api/overwolf-os">overwolf.os</a></a></li><li><a href="#overwolfgames-docs-api-overwolf-games"><a href="/docs/api/overwolf-games">overwolf.games</a></a></li><li><a href="#overwolfgamesevents-docs-api-overwolf-games-events"><a href="/docs/api/overwolf-games-events">overwolf.games.events</a></a></li><li><a href="#overwolflogitech-docs-api-overwolf-logitech"><a href="/docs/api/overwolf-logitech">overwolf.logitech</a></a></li><li><a href="#overwolfmedia-docs-api-overwolf-media"><a href="/docs/api/overwolf-media">overwolf.media</a></a></li><li><a href="#overwolfsettings-docs-api-overwolf-settings"><a href="/docs/api/overwolf-settings">overwolf.settings</a></a></li><li><a href="#overwolfsocial-docs-api-overwolf-social"><a href="/docs/api/overwolf-social">overwolf.social</a></a></li><li><a href="#overwolfweb-docs-api-overwolf-web"><a href="/docs/api/overwolf-web">overwolf.web</a></a></li><li><a href="#overwolfwindows-docs-api-overwolf-windows"><a href="/docs/api/overwolf-windows">overwolf.windows</a></a></li></ul></nav></div><footer class="site-footer"><div class="container"><ul><li>Legal</li><li><a href="/terms/developer-terms/">Developer&#x27;s terms</a></li><li><a href="/terms/app-terms/">App terms</a></li><li><a href="http://www.overwolf.com/legal/" target="_blank">Overwolf terms</a></li><li><a href="http://www.overwolf.com/legal/#Privacy-policy" target="_blank">Overwolf Privacy policy</a></li></ul><ul><li>Support</li><li><a href="https://discordapp.com/invite/cjjrZDp" target="_blank">Discord</a></li><li><a href="http://developers.overwolf.com/get-help/slack/">Slack</a></li><li><a href="https://www.facebook.com/OverwolfDevs" target="_blank">Facebook</a></li><li><a href="https://twitter.com/OverwolfDevs" target="_blank">Twitter</a></li></ul><ul><li><a href="/documentation/">Documentation</a></li><li><a href="/documentation/sdk/overwolf/">API</a></li><li><a href="/documentation/sdk/overwolf/plugins/">Plugins</a></li></ul><ul><li>Information</li><li><a href="/changelog/">What&#x27;s new</a></li><li><a href="http://www.overwolf.com/careers/">Careers</a></li><li><a href="https://play.overwolf.com/fund/" target="_blank">Fund</a></li></ul></div></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+                document.addEventListener('keyup', function(e) {
+                  if (e.target !== document.body) {
+                    return;
+                  }
+                  // keyCode for '/' (slash)
+                  if (e.keyCode === 191) {
+                    const search = document.getElementById('search_input_react');
+                    search && search.focus();
+                  }
+                });
+              </script><script>
+              var search = docsearch({
+                
+                apiKey: 'fe54eceb2ea7e0780cc7030fcd4020d4',
+                indexName: 'overwolf',
+                inputSelector: '#search_input_react',
+                algoliaOptions: {}
+              });
+            </script></body></html>
