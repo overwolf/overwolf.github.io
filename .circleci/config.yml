@@ -22,7 +22,7 @@ jobs:
             git config --global user.email "fullmetalboy@users.noreply.github.com"
             git config --global user.name "fullmetalboy"
             echo "machine github.com login fullmetalboy password $GITHUB_TOKEN" > ~/.netrc
-            cd website && yarn install && GIT_USER=fullmetalboy CURRENT_BRANCH=source USE_SSH=true yarn run publish-gh-pages
+            cd website && yarn install && GIT_USER=fullmetalboy CURRENT_BRANCH=source yarn run publish-gh-pages
 
 workflows:
   version: 2
