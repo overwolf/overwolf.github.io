@@ -8,17 +8,16 @@ Use the `overwolf.media.videos` API to create video composition, delete video fi
 
 ## Methods Reference
 
-* [`overwolf.media.videos.createVideoComposition()`](#)
-* [`overwolf.media.videos.createVideoCompositionFiles()`](#)
-* [`overwolf.media.videos.createVideoCompositionFiles()`](#)
-* [`overwolf.media.videos.getVideos()`](#)
-* [`overwolf.media.videos.getVideosSize()`](#)
-* [`overwolf.media.videos.deleteOldVideos()`](#)
-* [`overwolf.media.videos.deleteVideo()`](#)
+* [`overwolf.media.videos.createVideoComposition()`](#createvideocompositionsourcevideourl-segments-callback)
+* [`overwolf.media.videos.createVideoCompositionFiles()`](#createvideocompositionfiles-outputfile-callback)
+* [`overwolf.media.videos.getVideos()`](#getvideoscallback)
+* [`overwolf.media.videos.getVideosSize()`](#getvideossizecallback)
+* [`overwolf.media.videos.deleteOldVideos()`](#deleteoldvideoskeepnewestxgbs-callback)
+* [`overwolf.media.videos.deleteVideo()`](#deletevideovideourl-callback)
 
 ## Types Reference
 
-* [`VideoCompositionSegment`](#) Object
+* [`VideoCompositionSegment`](#videocompositionsegment-object) Object
 
 ## createVideoComposition(sourceVideoUrl, segments, callback)
 #### Version added: 0.78
@@ -26,11 +25,11 @@ Use the `overwolf.media.videos` API to create video composition, delete video fi
 > Creates a compilation video out of a source video and a list of segments. Listen to the event to determine when the compilation video is ready.
 
 
-Parameter      | Type                                | Description                                                                                             |
--------------- | ------------------------------------| ------------------------------------------------------------------------------------------------------- |
-sourceVideoUrl | string                              | The url of the source video in an `overwolf://media` form                                                 |
-segments	   | [VideoCompositionSegment[]](#)      | A JSON containing a list of segments. See [notes below](#segments-notes)                                |
-callback	   | function                            | A callback function which will be called with the status of the request and the url to the target video |
+Parameter      | Type                                                              | Description                                                                                             |
+-------------- | ------------------------------------------------------------------| ------------------------------------------------------------------------------------------------------- |
+sourceVideoUrl | string                                                            | The url of the source video in an `overwolf://media` form                                               |
+segments	   | [VideoCompositionSegment[]](#videocompositionsegment-object)      | A JSON containing a list of segments. See [notes below](#segments-notes)                                |
+callback	   | function                                                          | A callback function which will be called with the status of the request and the url to the target video |
 
 #### `segments` notes
 
@@ -94,3 +93,14 @@ Parameter      | Type                                | Description              
 -------------- | ------------------------------------| ------------------------------------------------------------------------------------------------------- |
 videoUrl	   | string                              | The Overwolf URL of the video to delete                                                                 |
 callback	   | function                            |A callback function which will be called with the status of the request                                  |
+
+## VideoCompositionSegment Object
+#### Version added: 0.78
+
+> A helper structure to describe video segments.
+
+Parameter | Type | Description                          |
+--------- | -----| ------------------------------------ |
+startTime | int  | Segment start time (in milliseconds) |
+endTime   | int  | Segment end time (in milliseconds)   |
+
