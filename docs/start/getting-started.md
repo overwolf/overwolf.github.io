@@ -23,6 +23,7 @@ As fellow gamers, we know how pop-ups and overlays can ruin a critical moment, s
 ### Our Commitment to game developers and publishers
 
 ![alt-text](https://i.imgur.com/bszAzeV.png)
+
 <div class="box">
   <a data-fancybox="gallery" data-caption="LoLwiz" href="https://www.youtube.com/watch?v=nJhuNtDPbxo">
     LoLwiz
@@ -43,4 +44,5 @@ As fellow gamers, we know how pop-ups and overlays can ruin a critical moment, s
     </span>
   </a>
 </div>
+
 The game comes first, always. No matter what - you call the shots. We are proud to be working hand in hand with the best game developers on the planet (e.g., Riot, Epic Games or Blizzard). We love your games, we’re your fans. If you have any feedback for us or the apps on Overwolf, we’ll always listen and take your guidance. Just email us at developers@overwolf.com.

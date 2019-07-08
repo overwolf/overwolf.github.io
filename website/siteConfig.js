@@ -66,7 +66,7 @@ const siteConfig = {
     secondaryColor: '#201C33',
   },
 
-  editUrl: 'https://github.com/overwolf/developers-site/tree/source/docs/',
+  editUrl: 'https://github.com/overwolf/overwolf.github.io/tree/source/docs/',
 
   // This copyright info is used in /core/Footer.js and blog RSS/Atom feeds.
   copyright: `Copyright © ${new Date().getFullYear()} Overwolf`,
@@ -86,9 +86,9 @@ const siteConfig = {
     'https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js',
     'http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js',
     '/js/code-block-buttons.js',
-    '/developers-site/js/onload.js',
-    '/developers-site/js/activeNavBar.js',
-    '/developers-site/js/slicker.js'
+    '/js/onload.js',
+    '/js/activeNavBar.js',
+    '/js/slicker.js'
   ],
   stylesheets: [
     'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/default.min.css',
