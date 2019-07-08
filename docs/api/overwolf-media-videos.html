@@ -79,7 +79,6 @@
 </ul>
 <h2><a class="anchor" aria-hidden="true" id="createvideocompositionsourcevideourl-segments-callback"></a><a href="#createvideocompositionsourcevideourl-segments-callback" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>createVideoComposition(sourceVideoUrl, segments, callback)</h2>
 <h4><a class="anchor" aria-hidden="true" id="version-added-078"></a><a href="#version-added-078" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Version added: 0.78</h4>
-<h4><a class="anchor" aria-hidden="true" id="permissions-required-filesystem"></a><a href="#permissions-required-filesystem" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Permissions required: FileSystem</h4>
 <blockquote>
 <p>Creates a compilation video out of a source video and a list of segments. Listen to the event to determine when the compilation video is ready.</p>
 </blockquote>
@@ -88,11 +87,91 @@
 <tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
 </thead>
 <tbody>
-<tr><td>sourceVideoUrl</td><td>string</td><td>The url of the source video in an <a href="overwolf://media">overwolf://media</a> form</td></tr>
-<tr><td>segments</td><td><a href="#">VideoCompositionSegment</a> array</td><td>A JSON containing a list of segments. See example below</td></tr>
+<tr><td>sourceVideoUrl</td><td>string</td><td>The url of the source video in an <code>overwolf://media</code> form</td></tr>
+<tr><td>segments</td><td><a href="#">VideoCompositionSegment[]</a></td><td>A JSON containing a list of segments. See <a href="#segments-notes">notes below</a></td></tr>
+<tr><td>callback</td><td>function</td><td>A callback function which will be called with the status of the request and the url to the target video</td></tr>
 </tbody>
 </table>
-</span></div></article></div><div class="docLastUpdate"><em>Last updated on 2019-7-8 by eransharv</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/api/overwolf-media-replays"><span class="arrow-prev">← </span><span>overwolf.media.replays</span></a><a class="docs-next button" href="/docs/api/overwolf-settings"><span>overwolf.settings</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#methods-reference">Methods Reference</a></li><li><a href="#types-reference">Types Reference</a></li><li><a href="#createvideocompositionsourcevideourl-segments-callback">createVideoComposition(sourceVideoUrl, segments, callback)</a></li></ul></nav></div><footer class="site-footer"><div class="container"><ul><li>Legal</li><li><a href="/terms/developer-terms/">Developer&#x27;s terms</a></li><li><a href="/terms/app-terms/">App terms</a></li><li><a href="http://www.overwolf.com/legal/" target="_blank">Overwolf terms</a></li><li><a href="http://www.overwolf.com/legal/#Privacy-policy" target="_blank">Overwolf Privacy policy</a></li></ul><ul><li>Support</li><li><a href="https://discordapp.com/invite/cjjrZDp" target="_blank">Discord</a></li><li><a href="http://developers.overwolf.com/get-help/slack/">Slack</a></li><li><a href="https://www.facebook.com/OverwolfDevs" target="_blank">Facebook</a></li><li><a href="https://twitter.com/OverwolfDevs" target="_blank">Twitter</a></li></ul><ul><li><a href="/documentation/">Documentation</a></li><li><a href="/documentation/sdk/overwolf/">API</a></li><li><a href="/documentation/sdk/overwolf/plugins/">Plugins</a></li></ul><ul><li>Information</li><li><a href="/changelog/">What&#x27;s new</a></li><li><a href="http://www.overwolf.com/careers/">Careers</a></li><li><a href="https://play.overwolf.com/fund/" target="_blank">Fund</a></li></ul></div></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+<h4><a class="anchor" aria-hidden="true" id="segments-notes"></a><a href="#segments-notes" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>segments</code> notes</h4>
+<p>The JSON containing a list of segments, each segment has a start time and an end time in milliseconds. The segments must be sorted in acsending order. Example:</p>
+<pre><code class="hljs css language-json">{
+    <span class="hljs-attr">"segments"</span>: [
+        { <span class="hljs-attr">"startTime"</span>: <span class="hljs-number">2000</span>, <span class="hljs-attr">"endTime"</span>: <span class="hljs-number">4000</span> },
+        { <span class="hljs-attr">"startTime"</span>: <span class="hljs-number">8000</span>, <span class="hljs-attr">"endTime"</span>: <span class="hljs-number">10000</span> },
+        { <span class="hljs-attr">"startTime"</span>: <span class="hljs-number">14000</span>, <span class="hljs-attr">"endTime"</span>: <span class="hljs-number">18000</span> }
+    ]
+}
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="createvideocompositionfiles-outputfile-callback"></a><a href="#createvideocompositionfiles-outputfile-callback" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>createVideoComposition(files, outputFile, callback)</h2>
+<h4><a class="anchor" aria-hidden="true" id="version-added-0112"></a><a href="#version-added-0112" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Version added: 0.112</h4>
+<blockquote>
+<p>Creates a compilation video out of a list of video files.</p>
+</blockquote>
+<table>
+<thead>
+<tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>files</td><td>string[]</td><td>List of video files (the url of each video is  in the form of <code>overwolf://media or file://</code>)</td></tr>
+<tr><td>outputFile</td><td>string</td><td>The name of the output video file</td></tr>
+<tr><td>callback</td><td>function</td><td>A callback function which will be called with the status of the request and the url of the output video</td></tr>
+</tbody>
+</table>
+<h2><a class="anchor" aria-hidden="true" id="getvideoscallback"></a><a href="#getvideoscallback" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>getVideos(callback)</h2>
+<h4><a class="anchor" aria-hidden="true" id="version-added-089"></a><a href="#version-added-089" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Version added: 0.89</h4>
+<blockquote>
+<p>Gets a list of all of the videos created by this app.</p>
+</blockquote>
+<table>
+<thead>
+<tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>callback</td><td>function</td><td>A callback function which will be called with the status of the request</td></tr>
+</tbody>
+</table>
+<h2><a class="anchor" aria-hidden="true" id="getvideossizecallback"></a><a href="#getvideossizecallback" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>getVideosSize(callback)</h2>
+<h4><a class="anchor" aria-hidden="true" id="version-added-091"></a><a href="#version-added-091" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Version added: 0.91</h4>
+<blockquote>
+<p>Returns the total size of the video files created by this app in gigabytes.</p>
+</blockquote>
+<table>
+<thead>
+<tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>callback</td><td>function</td><td>A callback with the videos size</td></tr>
+</tbody>
+</table>
+<h2><a class="anchor" aria-hidden="true" id="deleteoldvideoskeepnewestxgbs-callback"></a><a href="#deleteoldvideoskeepnewestxgbs-callback" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>deleteOldVideos(keepNewestXGbs, callback)</h2>
+<h4><a class="anchor" aria-hidden="true" id="version-added-089-1"></a><a href="#version-added-089-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Version added: 0.89</h4>
+<blockquote>
+<p>Deletes all videos created by this app with an option to keep the newest X GBs (use with care).</p>
+</blockquote>
+<table>
+<thead>
+<tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>keepNewestXGbs</td><td>int</td><td>Keep the newest X GBs of videos. Pass 0 to delete all videos</td></tr>
+<tr><td>callback</td><td>function</td><td>A callback function which will be called with the status of the request</td></tr>
+</tbody>
+</table>
+<h2><a class="anchor" aria-hidden="true" id="deletevideovideourl-callback"></a><a href="#deletevideovideourl-callback" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>deleteVideo(videoUrl, callback)</h2>
+<h4><a class="anchor" aria-hidden="true" id="version-added-089-2"></a><a href="#version-added-089-2" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Version added: 0.89</h4>
+<blockquote>
+<p>Deletes a specific video created by this app.</p>
+</blockquote>
+<table>
+<thead>
+<tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>videoUrl</td><td>string</td><td>The Overwolf URL of the video to delete</td></tr>
+<tr><td>callback</td><td>function</td><td>A callback function which will be called with the status of the request</td></tr>
+</tbody>
+</table>
+</span></div></article></div><div class="docLastUpdate"><em>Last updated on 2019-7-8 by eransharv</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/api/overwolf-media-replays"><span class="arrow-prev">← </span><span>overwolf.media.replays</span></a><a class="docs-next button" href="/docs/api/overwolf-settings"><span>overwolf.settings</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#methods-reference">Methods Reference</a></li><li><a href="#types-reference">Types Reference</a></li><li><a href="#createvideocompositionsourcevideourl-segments-callback">createVideoComposition(sourceVideoUrl, segments, callback)</a></li><li><a href="#createvideocompositionfiles-outputfile-callback">createVideoComposition(files, outputFile, callback)</a></li><li><a href="#getvideoscallback">getVideos(callback)</a></li><li><a href="#getvideossizecallback">getVideosSize(callback)</a></li><li><a href="#deleteoldvideoskeepnewestxgbs-callback">deleteOldVideos(keepNewestXGbs, callback)</a></li><li><a href="#deletevideovideourl-callback">deleteVideo(videoUrl, callback)</a></li></ul></nav></div><footer class="site-footer"><div class="container"><ul><li>Legal</li><li><a href="/terms/developer-terms/">Developer&#x27;s terms</a></li><li><a href="/terms/app-terms/">App terms</a></li><li><a href="http://www.overwolf.com/legal/" target="_blank">Overwolf terms</a></li><li><a href="http://www.overwolf.com/legal/#Privacy-policy" target="_blank">Overwolf Privacy policy</a></li></ul><ul><li>Support</li><li><a href="https://discordapp.com/invite/cjjrZDp" target="_blank">Discord</a></li><li><a href="http://developers.overwolf.com/get-help/slack/">Slack</a></li><li><a href="https://www.facebook.com/OverwolfDevs" target="_blank">Facebook</a></li><li><a href="https://twitter.com/OverwolfDevs" target="_blank">Twitter</a></li></ul><ul><li><a href="/documentation/">Documentation</a></li><li><a href="/documentation/sdk/overwolf/">API</a></li><li><a href="/documentation/sdk/overwolf/plugins/">Plugins</a></li></ul><ul><li>Information</li><li><a href="/changelog/">What&#x27;s new</a></li><li><a href="http://www.overwolf.com/careers/">Careers</a></li><li><a href="https://play.overwolf.com/fund/" target="_blank">Fund</a></li></ul></div></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
                 document.addEventListener('keyup', function(e) {
                   if (e.target !== document.body) {
                     return;
