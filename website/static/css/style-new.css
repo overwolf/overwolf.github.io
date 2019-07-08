@@ -109,3 +109,9 @@ table th {
 .medium-widget {
   padding: 0;
 }
+
+.box {
+  max-width:800px;
+  text-align: center;
+  color: red;
+}

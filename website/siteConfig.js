@@ -21,10 +21,10 @@ const siteConfig = {
   homepage_title: 'Easily create apps for PC gamers',
   tagline: 'Overlay, real-time game events, monetization, auto patching, Anti-Cheat compatibility and all that good stuff',
   url: 'https://overwolf.github.io', // Your website URL
-  baseUrl: '/developers-site/', // Base URL for your project */
+  baseUrl: '/', // Base URL for your project */
 
   // Used for publishing and more
-  projectName: 'developers-site',
+  projectName: 'overwolf.github.io',
   organizationName: 'overwolf',
 
   // For no header links in the top nav bar -> headerLinks: [],
@@ -83,14 +83,20 @@ const siteConfig = {
     'https://buttons.github.io/buttons.js',
     'https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js',
     'https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js',
+    'https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js',
+    'http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js',
     '/js/code-block-buttons.js',
     '/developers-site/js/onload.js',
-    '/developers-site/js/activeNavBar.js'
+    '/developers-site/js/activeNavBar.js',
+    '/developers-site/js/slicker.js'
   ],
   stylesheets: [
     'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/default.min.css',
     'https://fonts.googleapis.com/css?family=Lato%3A400%2C400i%2C700%2C900&ver=4.5.3',
     'https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css',
+    'https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css',
+    'http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css',
+    'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css',
     '/css/code-block-buttons.css',
   ],
 
