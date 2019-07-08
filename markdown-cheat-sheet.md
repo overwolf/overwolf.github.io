@@ -1,5 +1,7 @@
 This is intended as a quick reference and showcase.
 
+based on: https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#headers
+
 ### Table of Contents
 * Headers
 * Emphasis
