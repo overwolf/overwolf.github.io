@@ -66,7 +66,7 @@ const siteConfig = {
     secondaryColor: '#201C33',
   },
 
-  editUrl: 'https://github.com/overwolf/developers-site/tree/master/docs/',
+  editUrl: 'https://github.com/overwolf/developers-site/tree/source/docs/',
 
   // This copyright info is used in /core/Footer.js and blog RSS/Atom feeds.
   copyright: `Copyright © ${new Date().getFullYear()} Overwolf`,
