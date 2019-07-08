@@ -10,133 +10,11 @@ sidebar_label: manifest.json
 This [JSON](http://www.json.org/) formatted file is responsible for describing the aspects of your app. This ranges from the name of the app and its author to the size of the window or if it is transparent. This is a mandatory file for all apps and has to exist in the root folder for your app.
 [Here](https://gist.github.com/eransharv/e74024e0b31d5e0525b5289b8b8b6ffc) you can see the base version of the manifest.json file.
 
-<details>
-<summary>Here you can see a base version of the manifest.json file</summary>
+## manifest.json with fields summary
 
-```json
-{
-    "manifest_version": 1,
-    "type": "WebApp",
-    "meta": {
-        "name": "Demo_App",
-        "version": "1.0.0",
-        "author": "Developer_Name",
-        "icon": "iconMouseOver.png",
-        "icon_gray": "iconMouseNormal.png",
-        "description": "Demo App"
-    },
-    "data": {
-        "start_window": "MainWindow",
-        "windows": {
-            "MainWindow": {
-                "file": "Files/index.html",
-                "transparent": true,
-                "resizable": true,
-                "size": {"width": 400, "height": 300},
-                "min_size": {"width": 200, "height": 200},
-                "max_size": {"width": 600, "height": 500}
-            }
-        }
-    }
-}
-```
-</details>
-
-<details>
-<summary>Here you can see a full version of the manifest.json file, without remarks</summary>
-
-<pre><code class="json">
-{
-    "<a href="#manifest_version">manifest_version</a>": 1,
-    "<a href="#type">type</a>": "WebApp",
-    "<a href="#meta-object">meta</a>": {
-        "<a href="#meta-name">name</a>": "Name of your app",
-        "<a href="#meta-object">author</a>": "Author name",
-        "<a href="#meta-object">version</a>": "1.2.3.456",
-        "<a href="#meta-object">minimum-overwolf-version</a>": "128.0.0.1",
-        "<a href="#meta-object">description</a>": "A plain text description",
-        "<a href="#meta-object">dock_button_title</a>": "Short name of your app",    
-        "<a href="#meta-object">icon</a>": "iconMouseOver.png",
-        "<a href="#meta-object">icon_gray</a>": "iconMouseNormal.png",
-        "<a href="#meta-object">launcher_icon</a>": "icon.ico",
-        "<a href="#meta-object">splash_image</a>": "splashIcon.png"
-    },
-    "<a href="#permissions-array">permissions</a>": ["Streaming","Hotkeys","GameInfo"],
-    "<a href="#data">data</a>": {
-        "<a href="#game_targeting">game_targeting</a>": {"type": "dedicated","game_ids": [10906, 7764]},
-        "<a href="#start_window">start_window</a>": "windowName",
-        "<a href="#window-data">windows</a>": {
-            "windowName": {
-                "<a href="#window-file">file</a>": "name.html",
-                "<a href="#window-show_in_taskbar">show_in_taskbar</a>": true,
-                "<a href="#window-transparent">transparent</a>": true,
-                "<a href="#windows-resizable">resizable</a>": false,
-                "<a href="#windows-show_minimize">show_minimize</a>": true,
-                "<a href="#windows-clickthrough">clickthrough</a>": false,
-                "<a href="#windows-disable_rightclick">disable_rightclick</a>": false,
-                "<a href="#windows-forcecapture">forcecapture</a>": false,
-                "<a href="#windows-show_only_on_stream">show_only_on_stream</a>": false,
-                "<a href="#windows-ignore_keyboard_events">ignore_keyboard_events</a>": false,
-                "<a href="#windows-in_game_only">in_game_only</a>": false,
-                "<a href="#windows-desktop_only">desktop_only</a>": false,
-                "<a href="#windows-disable_restore_animation">disable_restore_animation</a>": false,
-                "<a href="#windows-grab_keyboard_focus">grab_keyboard_focus</a>": false,
-                "<a href="#windows-grab_focus_on_desktop">grab_focus_on_desktop</a>": false,                
-                "<a href="#windows-size">size</a>": {...},
-                "<a href="#windows-min_size">min_size</a>": {...},
-                "<a href="#windows-max_size">max_size</a>": {...},
-                "<a href="#windows-start_position">start_position</a>": {...},
-                "<a href="#windows-topmost">topmost</a>": false,
-                "<a href="#windows-block_top_window_navigation">block_top_window_navigation</a>": true,
-                "<a href="#windows-keep_window_location">keep_window_location</a>": true,
-                "<a href="#windows-use_os_windowing">use_os_windowing</a>": false,
-                "<a href="#background_optimization">background_optimization</a>": true,
-                "<a href="#windows-mute">mute</a>": true,
-                "<a href="#mute_excluded_hosts">mute_excluded_hosts</a>": ["..."],
-                "<a href="#popup_blocker">popup_blocker</a>": false,
-                "<a href="#show_maximize">show_maximize</a>": true,
-                "<a href="#disable_blur">disable_blur</a>": false,
-                "<a href="#native_window">native_window</a>": false,
-                "<a href="#is_background_page">is_background_page</a>": true,
-                "<a href="#focus_game_takeover">focus_game_takeover</a>": "ReleaseOnLostFocus",
-                "<a href="#focus_game_takeover_release_hotkey">focus_game_takeover_release_hotkey</a>": "...",
-                "<a href="#enable_top_isolation">enable_top_isolation</a>": true,
-                "<a href="#allow_local_file_access">allow_local_file_access</a>": true,
-                "<a href="#is_alt_f4_blocked">is_alt_f4_blocked</a>": false,
-                "<a href="#dev_tools_window_style">dev_tools_window_style</a>": false,
-                "<a href="#debug_url">debug_url</a>": "http://localhost:3000",
-                "<a href="#optimize_accelerate_rendering">optimize_accelerate_rendering</a>": false 
-            },
-        },
-        "<a href="#enable_top_isolated_sites_console">enable_top_isolated_sites_console</a>": false,
-        "<a href="#externally_connectable">externally_connectable</a>": { "matches": ["http://*.overwolf.com", "https://*.overwolf.com", "https://*.google-analytics.com"] },
-        "<a href="#protocol_override_domains">protocol_override_domains</a>": {"domain.com": "http","ajax.googleapis.com": "https"},
-        "<a href="#force_browser">force_browser</a>": "user"/"overwolf",
-        "<a href="#enable_osr_acceleration">enable_osr_acceleration</a>": true,
-        "<a href="#game_events">game_events</a>": [...],
-        "<a href="#disable_log_limit">disable_log_limit</a>": false,
-        "<a href="#extra-objects">extra-objects</a>": {"my-plugin":{"file":"plugins/my_plugin.dll","class":"MyPlugin.EntryPoint"}},
-        "<a href="#hotkeys">hotkeys</a>":{"save_YourAppName": {"title": "Save Replay for later", "action-type":"custom", "default":"Ctrl+Shift+F9"}},
-        "<a href="#content_scripts">content_scripts</a>": [{ "windows": [ "index" ], "js": [ "myscript.js" ] }s],
-        "<a href="#launch_events">launch_events</a>": [{"event": "GameLaunch", "event_data":{"game_ids": [1136]}, "start_minimized": true}],
-        "<a href="#user_agent">user_agent</a>": "...",
-        "<a href="#disable_dt">disable_dt</a>": false,
-        "<a id="developer-manifest" href="#developer-game-settings">developer</a>": {
-                "<a href="#developer-game-settings">enable_auto_refresh</a>": true,
-                "<a href="#developer-game-settings">reload_delay</a>": 1000,
-                "<a href="#developer-game-settings">filter</a>": <span style="font-weight: 400;">"*.json;*.html"</span><span style="font-weight: 400;"> 
-            }
-    }
-}
-</code></pre>
-</details>
-
-
-## Field summary
 The following code shows the supported manifest fields for Overwolf apps, with links to the section that discusses each field.
 
-<details open>
-<summary>Here you can see a full version of the manifest.json file</summary>
+Note that not all the flags are mandatory. We added all the available flags for documentation purpose.
 
 <pre><code class="json">
 {
@@ -242,6 +120,96 @@ The following code shows the supported manifest fields for Overwolf apps, with l
                 //Reload delay (in ms) when detecting file changes (for multiple change)default is 1000 (1 second)
                 "<a href="#developer-game-settings">reload_delay</a>": 1000,
                 //Filter files which will be tracked.e.g (*.js;*.html)Default: all files (*.*)
+                "<a href="#developer-game-settings">filter</a>": <span style="font-weight: 400;">"*.json;*.html"</span><span style="font-weight: 400;"> 
+            }
+    }
+}
+</code></pre>
+
+## manifest.json without fields summary
+
+<details>
+<summary>Here you can see the same manifest.json file, but without remarks</summary>
+
+<pre><code class="json">
+{
+    "<a href="#manifest_version">manifest_version</a>": 1,
+    "<a href="#type">type</a>": "WebApp",
+    "<a href="#meta-object">meta</a>": {
+        "<a href="#meta-name">name</a>": "Name of your app",
+        "<a href="#meta-object">author</a>": "Author name",
+        "<a href="#meta-object">version</a>": "1.2.3.456",
+        "<a href="#meta-object">minimum-overwolf-version</a>": "128.0.0.1",
+        "<a href="#meta-object">description</a>": "A plain text description",
+        "<a href="#meta-object">dock_button_title</a>": "Short name of your app",    
+        "<a href="#meta-object">icon</a>": "iconMouseOver.png",
+        "<a href="#meta-object">icon_gray</a>": "iconMouseNormal.png",
+        "<a href="#meta-object">launcher_icon</a>": "icon.ico",
+        "<a href="#meta-object">splash_image</a>": "splashIcon.png"
+    },
+    "<a href="#permissions-array">permissions</a>": ["Streaming","Hotkeys","GameInfo"],
+    "<a href="#data">data</a>": {
+        "<a href="#game_targeting">game_targeting</a>": {"type": "dedicated","game_ids": [10906, 7764]},
+        "<a href="#start_window">start_window</a>": "windowName",
+        "<a href="#window-data">windows</a>": {
+            "windowName": {
+                "<a href="#window-file">file</a>": "name.html",
+                "<a href="#window-show_in_taskbar">show_in_taskbar</a>": true,
+                "<a href="#window-transparent">transparent</a>": true,
+                "<a href="#windows-resizable">resizable</a>": false,
+                "<a href="#windows-show_minimize">show_minimize</a>": true,
+                "<a href="#windows-clickthrough">clickthrough</a>": false,
+                "<a href="#windows-disable_rightclick">disable_rightclick</a>": false,
+                "<a href="#windows-forcecapture">forcecapture</a>": false,
+                "<a href="#windows-show_only_on_stream">show_only_on_stream</a>": false,
+                "<a href="#windows-ignore_keyboard_events">ignore_keyboard_events</a>": false,
+                "<a href="#windows-in_game_only">in_game_only</a>": false,
+                "<a href="#windows-desktop_only">desktop_only</a>": false,
+                "<a href="#windows-disable_restore_animation">disable_restore_animation</a>": false,
+                "<a href="#windows-grab_keyboard_focus">grab_keyboard_focus</a>": false,
+                "<a href="#windows-grab_focus_on_desktop">grab_focus_on_desktop</a>": false,                
+                "<a href="#windows-size">size</a>": {...},
+                "<a href="#windows-min_size">min_size</a>": {...},
+                "<a href="#windows-max_size">max_size</a>": {...},
+                "<a href="#windows-start_position">start_position</a>": {...},
+                "<a href="#windows-topmost">topmost</a>": false,
+                "<a href="#windows-block_top_window_navigation">block_top_window_navigation</a>": true,
+                "<a href="#windows-keep_window_location">keep_window_location</a>": true,
+                "<a href="#windows-use_os_windowing">use_os_windowing</a>": false,
+                "<a href="#background_optimization">background_optimization</a>": true,
+                "<a href="#windows-mute">mute</a>": true,
+                "<a href="#mute_excluded_hosts">mute_excluded_hosts</a>": ["..."],
+                "<a href="#popup_blocker">popup_blocker</a>": false,
+                "<a href="#show_maximize">show_maximize</a>": true,
+                "<a href="#disable_blur">disable_blur</a>": false,
+                "<a href="#native_window">native_window</a>": false,
+                "<a href="#is_background_page">is_background_page</a>": true,
+                "<a href="#focus_game_takeover">focus_game_takeover</a>": "ReleaseOnLostFocus",
+                "<a href="#focus_game_takeover_release_hotkey">focus_game_takeover_release_hotkey</a>": "...",
+                "<a href="#enable_top_isolation">enable_top_isolation</a>": true,
+                "<a href="#allow_local_file_access">allow_local_file_access</a>": true,
+                "<a href="#is_alt_f4_blocked">is_alt_f4_blocked</a>": false,
+                "<a href="#dev_tools_window_style">dev_tools_window_style</a>": false,
+                "<a href="#debug_url">debug_url</a>": "http://localhost:3000",
+                "<a href="#optimize_accelerate_rendering">optimize_accelerate_rendering</a>": false 
+            },
+        },
+        "<a href="#enable_top_isolated_sites_console">enable_top_isolated_sites_console</a>": false,
+        "<a href="#externally_connectable">externally_connectable</a>": { "matches": ["http://*.overwolf.com", "https://*.overwolf.com", "https://*.google-analytics.com"] },
+        "<a href="#protocol_override_domains">protocol_override_domains</a>": {"domain.com": "http","ajax.googleapis.com": "https"},
+        "<a href="#force_browser">force_browser</a>": "user"/"overwolf",
+        "<a href="#enable_osr_acceleration">enable_osr_acceleration</a>": true,
+        "<a href="#game_events">game_events</a>": [...],
+        "<a href="#disable_log_limit">disable_log_limit</a>": false,
+        "<a href="#extra-objects">extra-objects</a>": {"my-plugin":{"file":"plugins/my_plugin.dll","class":"MyPlugin.EntryPoint"}},
+        "<a href="#hotkeys">hotkeys</a>":{"save_YourAppName": {"title": "Save Replay for later", "action-type":"custom", "default":"Ctrl+Shift+F9"}},
+        "<a href="#content_scripts">content_scripts</a>": [{ "windows": [ "index" ], "js": [ "myscript.js" ] }s],
+        "<a href="#launch_events">launch_events</a>": [{"event": "GameLaunch", "event_data":{"game_ids": [1136]}, "start_minimized": true}],
+        "<a href="#user_agent">user_agent</a>": "...",
+        "<a href="#disable_dt">disable_dt</a>": false,
+        "<a id="developer-manifest" href="#developer-game-settings">developer</a>": {
+                "<a href="#developer-game-settings">enable_auto_refresh</a>": true,
+                "<a href="#developer-game-settings">reload_delay</a>": 1000,
                 "<a href="#developer-game-settings">filter</a>": <span style="font-weight: 400;">"*.json;*.html"</span><span style="font-weight: 400;"> 
             }
     }

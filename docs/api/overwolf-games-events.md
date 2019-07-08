@@ -49,6 +49,8 @@ Note that a feature can contain a few info updates and events, and not just one 
 
 ## How to register for features
 
+In order to make sure the data you have is full and consistend please follow these steps in the following order:
+
 ### 1. Update the manifest file
 
 The first step is to declare which game the app wants to register features for.</br>
@@ -64,9 +66,16 @@ This is how the value would look like if the app is interested in receiving even
    }
 ```
 
-### 2. Call  setRequiredFeatures()
+### 2. Listen to the relevant JS object
 
-The next step is to call [`overwolf.games.events.setRequiredFeatures`](#setRequiredFeatures).
+The next step is to add a listener to the relevant JavaScript Event object in your app’s code:
+
+* For listening to game events, use the [`overwolf.games.events.onNewEvent`](#onnewevents) object.
+* For listening to info updates, use the [`overwolf.games.events.onInfoUpdates2`](#oninfoupdates2) object.
+
+### 3. Call  setRequiredFeatures()
+
+The final step is to call [`overwolf.games.events.setRequiredFeatures`](#setrequiredfeaturesfeatures-callback).
 Once the app wants to start receiving specific info updates and events, you call this function with an array of feature names that you would like your app to consume.
 
 This is an example when an app requires Rocket League features like the following:
@@ -77,16 +86,13 @@ overwolf.games.events.setRequiredFeatures(['stats', 'match'], function(info) {
 });
 ```
 
-### 3. Listen to the relevant JS object
+### 4. Call getInfo()
 
-The final step is to add a listener to the relevant JavaScript Event object in your app’s code:
+call [getInfo()](#getinfocallback) to receive all the info updates that happened before `setRequiredFeatures` succeeded.
 
-* For listening to game events, use the [`overwolf.games.events.onNewEvent`](#onNewEvents) object.
-* For listening to info updates, use the [`overwolf.games.events.onInfoUpdates2`](#onInfoUpdates2) object.
+In some cases you might add the listener to `oninfoupdates2` or to `onNewEvent` AFTER the info update has already happened, so the app will miss the info-update event. 
 
-:::tip
-In some cases you might add the listener to [`overwolf.games.events.onInfoUpdates2`](#onInfoUpdates2) after the info update has already happened, so the app will miss the info-update event. For that reason, you should also call [`overwolf.games.events.getInfo()`](#getInfo) to get the current info state.
-:::
+For that reason, you should also call [`overwolf.games.events.getInfo()`](#getinfocallback) to get the current info state.
 
 ## setRequiredFeatures(features, callback)
 
@@ -133,6 +139,39 @@ overwolf.games.events.setRequiredFeatures(g_interestedInFeatures, function(info)
       return;
     }
 }
+```
+
+:::important
+it's important to wait for `success` status, to make sure that the required features will be registered and trigger the events
+:::
+
+Example for setting required features with wait till success
+
+```js
+  async setRequiredFeatures() {
+    let tries = 1;
+    let result;
+
+    while ( tries <= MAX_RETRIES ) {
+      result = await new Promise(resolve => {
+        overwolf.games.events.setRequiredFeatures(FEATURES_ARRAY, resolve);
+      })
+
+      if ( result.status === 'success' ) {
+        // make sure our required features were registered
+        return (result.supportedFeatures.length > 0); 
+      }
+
+      // wait 3 sec before retry
+      await new Promise(resolve => {
+        setTimeout(resolve, 3000);
+      });
+      tries++;
+    }
+
+    console.warn('setRequiredFeatures(): failure after '+ tries +' tries'+ JSON.stringify(result, null, 2));
+    return false;
+  }
 ```
 
 ## getInfo(callback)
@@ -217,7 +256,7 @@ overwolf.games.events.onInfoUpdates2.addListener(function(info) {
 });
 ```
 
-#### Event data example:
+#### Event data example
 
 ```json
 {  
@@ -229,6 +268,10 @@ overwolf.games.events.onInfoUpdates2.addListener(function(info) {
    "feature":"minions"
 }
 ```
+
+:::tip
+As best practice it is recommended to first remove the event listener before adding it to prevent accidental multiple listeners.
+:::
 
 ## onNewEvents
 
@@ -256,3 +299,7 @@ overwolf.games.events.onNewEvents.addListener(function(info) {
   ]
 }
 ```
+
+:::tip
+As best practice it is recommended to first remove the event listener before adding it to prevent accidental multiple listeners.
+:::

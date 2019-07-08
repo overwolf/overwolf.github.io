@@ -227,6 +227,7 @@ callback      | function | Called with the array of game IDs                    
     "gameChanged": false
 }
 ```
+
 ## onGameLaunched
 
 > Fired when a game is launched.

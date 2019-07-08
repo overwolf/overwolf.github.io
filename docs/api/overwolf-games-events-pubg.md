@@ -21,6 +21,7 @@ Please read the [overwolf.games.events](overwolf-games-events) documentation pag
 * [killer](#killer)
 * [match](#match)
 * [rank](#rank)
+* [counters](#counters)
 * [location](#location)
 * [me](#me)
 * [team](#team)
@@ -88,13 +89,52 @@ key          | Category    | Values                            | Notes          
 me       | match_info   | The player’s rank at the end of the match |                       |   90.0        |
 total_teams       | match_info   | The total number of players |                       |   90.0        |
 
+## `counters`
+
+### Info Updates
+
+key    | Category    | Values                                    | Notes                                   | Since Version |
+-------| ------------| ----------------------------------------- | --------------------------------------- | ------------- |
+ping   | performance | The local player’s latency                | Example: `{"name":"ping","data":"66"}`  |   133.0       |
+
 ## `location`
 
 ### Info Updates
 
-key          | Category    | Values                            | Notes                 | Since Version |
------------- | ------------| --------------------------------- | --------------------- | ------------- |
-location       | game_info   | The player’s current grid location (x,y,z)</br>F.ex:</br><ul><li>Top-left is (0,0,z)</li><li>Large map (Miramar, Erangel, etc.) size is 8000×8000 (8 sq. KM)</li><li>Medium map (Vikendi) size is 6000×6000 (6 sq. KM)</li><li>Small map (Sanhok) size is 4000×4000 (4 sq. KM)</li><li>The location is being updated every two seconds while the player is in the airplane</li><li>The location is being updated every second while the user is not in the airplane (freefly or on the ground)</br>`{"location":"{ \"x\" : 2300, \"y\" : 5740, \"z\" : 1520 }"}` |                       |    0.116.2        |
+key                 | Category  | Values                                                     | Notes                                           | Since Version |
+------------------- | ----------| ---------------------------------------------------------- | ----------------------------------------------  | ------------- |
+location            | game_info | The player’s current grid location (x,y,z).                | See example [below](#location-notes)            |   0.116       |
+safe_zone           | game_info | The location of the white circle and its radius            | See example [below](#zones-notes)               |   0.133       |
+blue_zone           | game_info | The location of the blue circle and its radius             | See example [below](#zones-notes)               |   0.133       |
+red_zone            | game_info | The location of the red  circle and its radius             | See example [below](#zones-notes)               |   0.133       |
+time_to_next_circle | game_info | The time left (in seconds) until a new safe zone is formed | See example [below](#time-to-next-circle-notes) |   0.133       |
+
+#### `location` notes
+
+* Top-left is (0,0,z)
+* Large map (Miramar, Erangel, etc.) size is 8000×8000 (8 sq. KM)
+* Medium map (Vikendi) size is 6000×6000 (6 sq. KM)
+* Small map (Sanhok) size is 4000×4000 (4 sq. KM)
+* The location is being updated every two seconds while the player is in the airplane
+* The location is being updated every second while the user is not in the airplane (freefly or on the ground)
+
+Example:
+
+`{"location":"{ \"x\" : 2300, \"y\" : 5740, \"z\" : 1520 }"}`
+
+#### `zones` notes
+
+* `x` & `y` are the center of the circle.
+* `radius` is the circle’s radius.
+
+Examples:
+
+`{"info":{"game_info":{"safe_zone":"{\"x\":6727,\"y\":2556,\"radius\":1507}"}},"feature":"location"}`
+`{"info":{"game_info":{"blue_zone":"{\"x\":6727,\"y\":2556,\"radius\":1507}"}},"feature":"location"}`
+
+#### `time_to_next_circle` notes
+
+`{"name":"time_to_next_circle","data":"{\"phase\" : \"3\",\"time\" : \"438\"}"}`
 
 ## `me`
 
