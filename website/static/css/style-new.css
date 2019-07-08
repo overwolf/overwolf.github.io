@@ -14,6 +14,16 @@
       height: calc(100vh - 60px);
       top: 60px;
   }
+
+  .navigationSlider .slidingNav ul li a {
+    color: #B2ADCC;
+  }
+
+  .navigationSlider .slidingNav ul li a:hover,
+  .navigationSlider .slidingNav ul li.siteNavItemActive a,
+  .navigationSlider .slidingNav ul li.siteNavGroupActive a {
+    color: #F4F2FF;
+  }
 }
 
 .collapsible .arrow {
@@ -110,8 +120,84 @@ table th {
   padding: 0;
 }
 
+.navigationSlider .slidingNav ul li a {
+  color: #B2ADCC;
+}
+
 .box {
   max-width:800px;
   text-align: center;
   color: red;
+}
+
+input::-webkit-input-placeholder {
+  color: #797399;
+}
+
+input::-moz-placeholder {
+  color: #797399;
+}
+
+input::placeholder {
+  color: #797399;
+}
+
+input#search_input_react {
+  color: #797399;
+}
+
+input#search_input_react:focus,
+input#search_input_react:active {
+  color: #D3CFE5;
+}
+
+.navSearchWrapper::before {
+  border-color: #958FB2;
+  border-width: 2px;
+  width: 9px;
+  height: 9px;
+}
+
+.navSearchWrapper::after {
+  background: #958FB2;
+  height: 8px;
+  width: 2px;
+}
+
+.navSearchWrapper:hover::before {
+  border-color: #D3CFE5;
+}
+
+.navSearchWrapper:hover::after {
+  background: #D3CFE5;
+}
+
+.navSearchWrapper:focus-within::before {
+  border-color: #D3CFE5;
+}
+
+.navSearchWrapper:focus-within::after {
+  background: #D3CFE5;
+}
+
+#blogHeader {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 132%;
+  color: #797399;
+}
+
+.medium-widget-article__title {
+  color: #484266 !important
+}
+
+.medium-widget-article__description {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 20px !important;
+  color: #797399 !important;
 }

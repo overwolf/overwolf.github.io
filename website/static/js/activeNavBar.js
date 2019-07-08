@@ -23,7 +23,7 @@ function getClosestHeader() {
 	top = window.scrollY,
 	$last = $links.first();
 
-	if (top < 300) {
+	if (top < 100) {
 		return $last;
 	}
 

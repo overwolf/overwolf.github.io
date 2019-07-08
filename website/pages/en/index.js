@@ -18,16 +18,17 @@ function EasilySection(props) {
 
 function TilesSection(props) {
   const {config: siteConfig} = props;
+  const {baseUrl} = siteConfig;
   return (
     <section className="tiles">
       <ul className="container">
-        <Tile config={siteConfig} header="Tutorials" imgSrc="img/tutorials.svg">
+        <Tile config={siteConfig} href={`${baseUrl}docs/start/app-creation-process`} header="Tutorials" imgSrc="img/tutorials.svg">
           Newbie and pro web devs should start here
         </Tile>
-        <Tile config={siteConfig} header="Get inspired" imgSrc="img/potion.svg">
+        <Tile config={siteConfig} href={`${baseUrl}docs/topics/what-kind-of-apps-works`} header="Get inspired" imgSrc="img/potion.svg">
           See what others crafted
         </Tile>
-        <Tile config={siteConfig} header="Read our scrolls" imgSrc="img/scroll.svg">
+        <Tile config={siteConfig} href={`${baseUrl}docs/topics/best-practices-overview`} header="Read our scrolls" imgSrc="img/scroll.svg">
           Documentation, API and stuff you can use
         </Tile>
       </ul>
@@ -36,11 +37,10 @@ function TilesSection(props) {
 }
 
 function Tile(props) {
-  const {config: siteConfig, header, imgSrc} = props;
-  const {baseUrl} = siteConfig;
+  const {config: siteConfig, header, imgSrc, href} = props;
   return (
     <li>
-      <a href={`${baseUrl}#`}>
+      <a href={href}>
         <img className="icon" src={imgSrc} />
         <header className="subtitle">{header}</header>
         <p>
@@ -109,7 +109,7 @@ function BlogSection(props) {
   return (
     <section className="blog">
       <div className="container">
-        <header className="subtitle">The latest from our blog</header>
+        <header className="subtitle" id="blogHeader">The latest from our blog</header>
         <div id="medium-widget"></div>
         <script src="https://medium-widget.pixelpoint.io/widget.js"></script>
         <script src="js/blog.js"></script>

@@ -14,9 +14,9 @@ sidebar_label: Apex Legends
 <!-- importing the remarkable plugin -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/remarkable/1.7.1/remarkable.js"></script>
 <!-- importing games metadata -->
-<script src="/developers-site/js/games_metadata.js"></script>
+<script src="/js/games_metadata.js"></script>
 
 <div id="gameEventsStatus">
   <script> const GameID = 21566 </script>
-  <script type="text/jsx" src="/developers-site/jsx/specificGameEventsStatus.jsx"></script>
+  <script type="text/jsx" src="/jsx/specificGameEventsStatus.jsx"></script>
 </div>

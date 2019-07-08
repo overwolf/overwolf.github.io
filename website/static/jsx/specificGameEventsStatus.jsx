@@ -33,7 +33,7 @@ function SearchBar(props) {
     <form role="search" method="get" className="search-game" action="#" autoComplete="off" onSubmit={(e) => {e.preventDefault()}}>
       <input type="search" name="search" className="search-input" placeholder="Search for game events, e.g. “kill”" />
       <button type="submit" className="search-submit" title="Search">
-        <img src="/developers-site/img/search.svg" />
+        <img src="/img/search.svg" />
       </button>
     </form>
   );

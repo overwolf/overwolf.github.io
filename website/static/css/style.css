@@ -180,6 +180,15 @@ h2 {
 	font-weight: 300
 }
 
+article h2 {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 29px;
+  color: #161326;
+}
+
 ::-moz-focus-inner {
 	padding: 0;
 	border: 0

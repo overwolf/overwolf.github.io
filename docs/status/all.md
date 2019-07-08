@@ -14,7 +14,7 @@ sidebar_label: All Games Events Status
 <!-- importing the remarkable plugin -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/remarkable/1.7.1/remarkable.js"></script>
 <!-- importing games metadata -->
-<script src="/developers-site/js/games_metadata.js"></script>
+<script src="/js/games_metadata.js"></script>
 
 Pick any game to see its full events list.
 
@@ -22,5 +22,5 @@ We highly recommended  to communicae errors and warnings to your app users.
 You can do that easily using the Overwolf API. [Read all the info here](../api/howto-check-events-status-from-app).
 
 <div id="gameEventsStatus">
-  <script type="text/jsx" src="/developers-site/jsx/gameEventsStatus.jsx"></script>
+  <script type="text/jsx" src="/jsx/gameEventsStatus.jsx"></script>
 </div>
