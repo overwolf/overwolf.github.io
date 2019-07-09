@@ -22,9 +22,7 @@ As fellow gamers, we know how pop-ups and overlays can ruin a critical moment, s
 ### Motivation, Core concepts, Principles.
 ### Our Commitment to game developers and publishers
 
-![alt-text](https://i.imgur.com/bszAzeV.png)
-
-<div class="box">
+<div class="box" data-slick='{"slidesToShow": 2}'>
   <a data-fancybox="gallery" data-caption="LoLwiz" href="https://www.youtube.com/watch?v=nJhuNtDPbxo">
     LoLwiz
     <span class="thumb">

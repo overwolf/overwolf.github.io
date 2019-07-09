@@ -1,5 +1,7 @@
 $(document).ready(function(){
   $('.box').slick({
-    dots: true
+    centerMode: true, 
+    dots: true,
+    speed: 500
   });
 });
