@@ -85,12 +85,14 @@ const siteConfig = {
     'https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js',
     'https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js',
     'https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js',
+    'https://cdnjs.cloudflare.com/ajax/libs/overlayscrollbars/1.8.0/js/jquery.overlayScrollbars.min.js',
     '/js/code-block-buttons.js',
     '/js/onload.js',
     '/js/activeNavBar.js',
     '/js/slicker.js',
     '/js/replaceArrow.js',
-    '/js/appendUpdate.js'
+    '/js/appendUpdate.js',
+    '/js/overlayScrollbars.js'
   ],
   stylesheets: [
     'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/default.min.css',
@@ -99,6 +101,7 @@ const siteConfig = {
     'https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css',
     'https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css',
     'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css',
+    'https://cdnjs.cloudflare.com/ajax/libs/overlayscrollbars/1.8.0/css/OverlayScrollbars.min.css',
     '/css/code-block-buttons.css',
   ],
 

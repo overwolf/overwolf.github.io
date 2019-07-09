@@ -142,6 +142,7 @@ class GameEventsStatus extends React.Component {
         <div className="entry-content">
           <div className="gep-game">
             <GameTitle className={stateCss} name={name} imgSrc={imgSrc}></GameTitle>
+            <SearchBar></SearchBar>
             <Lists events={events} updates={updates}></Lists>
           </div>
         </div>
