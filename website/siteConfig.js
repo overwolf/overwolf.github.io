@@ -88,7 +88,9 @@ const siteConfig = {
     '/js/code-block-buttons.js',
     '/js/onload.js',
     '/js/activeNavBar.js',
-    '/js/slicker.js'
+    '/js/slicker.js',
+    '/js/replaceArrow.js',
+    '/js/appendUpdate.js'
   ],
   stylesheets: [
     'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/default.min.css',
