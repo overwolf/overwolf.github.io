@@ -201,3 +201,44 @@ input#search_input_react:active {
   line-height: 20px !important;
   color: #797399 !important;
 }
+
+.navGroupSubcategoryTitle {
+  cursor: pointer;
+}
+
+.docs-prevnext .button {
+  border: none;
+  transition: opacity 0.3s;
+  color: #332E4D;
+  opacity: 0.7;
+}
+
+.docs-prevnext .button:hover {
+  background: none;
+  color: #332E4D;
+  opacity: 1;
+}
+
+.docs-prevnext {
+  border-top: 1px solid #797399;
+  padding-top: 20px;
+}
+
+i {
+  border: solid #332E4D;
+  border-width: 0 1px 1px 0;
+  display: inline-block;
+  padding: 4.3px;
+}
+
+.right {
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  margin-left: 10px;
+}
+
+.left {
+  transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+  margin-right: 10px;
+}

@@ -17,8 +17,8 @@ To help you get the best out of your idea and make your development process smoo
 Have a great idea? Want to change how gamers play their favorite games? Need a little inspiration to get started? Take a look at our [app showcase!](../topics/what-kind-of-apps-works) It’s the perfect place to check out some awesome Overwolf apps, and it’s a great way to gain insight into what kinds of apps you should develop.
 
 ## How does it work?
-
-![alt-text](assets/app-creation-process.png)
+<br/>
+![alt-text](assets/app-creation-process.svg)
 
 ### 1. Submit a proposal
 
