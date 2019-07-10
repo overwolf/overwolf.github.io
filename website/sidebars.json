@@ -16,7 +16,7 @@
     "docs": {
         
 		"Best Practices":
-			["topics/best-practices-overview", "topics/what-kind-of-apps-works", "topics/app-specific-experience", "topics/first-time-user-experience", "topics/launch-time-performance", "topics/user-flow-error-handling", "topics/window-size", "topics/buttons-layout-usage", "topics/communication-guidelines", "topics/user-flow-and-error-handling","topics/games-settings", "topics/hotkeys-best-practices"],
+			["topics/best-practices-overview", "topics/using-overwolf-windows", "topics/what-kind-of-apps-works", "topics/app-specific-experience", "topics/first-time-user-experience", "topics/launch-time-performance", "topics/user-flow-error-handling", "topics/window-size", "topics/buttons-layout-usage", "topics/communication-guidelines", "topics/user-flow-and-error-handling","topics/games-settings", "topics/hotkeys-best-practices"],
 		"Case Studies":
 			["topics/case-study-herowatch"],
 		"Using Plugins":

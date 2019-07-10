@@ -5,6 +5,7 @@ sidebar_label: Getting Started
 ---
 
 Learn how to develop apps in just few steps.
+
 ## Motivation, Core concepts and Principles
 
 ### The Overwolf mission
@@ -19,28 +20,6 @@ As on open platform, Overwolf presents a unique opportunity for independent deve
 
 As fellow gamers, we know how pop-ups and overlays can ruin a critical moment, so we’ll never mess with or interrupt your game. We engineer the sh*t out of our client to ensure it doesn’t hog resources. We constantly perfect Overwolf to help us be at the top of our game, in every game.
 
-### Motivation, Core concepts, Principles.
 ### Our Commitment to game developers and publishers
-
-<div class="box" data-slick='{"slidesToShow": 2}'>
-  <a data-fancybox="gallery" data-caption="LoLwiz" href="https://www.youtube.com/watch?v=nJhuNtDPbxo">
-    LoLwiz
-    <span class="thumb">
-      <img src="https://img.youtube.com/vi/nJhuNtDPbxo/maxresdefault.jpg" alt="DotaPlus">
-    </span>
-  </a>
-  <a data-fancybox="gallery" data-caption="PUBG Tracker" href="https://www.youtube.com/watch?v=xiG_cCI9s-E">
-    PUBG Tracker
-    <span class="thumb">
-      <img src="http://img.youtube.com/vi/xiG_cCI9s-E/maxresdefault.jpg" alt="DotaPlus">
-    </span>
-  </a>
-  <a data-fancybox="gallery" data-caption="DotaPlus" href="https://www.youtube.com/watch?v=dDSmntPc_SY">
-    DotaPlus
-    <span class="thumb">
-      <img src="https://img.youtube.com/vi/dDSmntPc_SY/maxresdefault.jpg" alt="DotaPlus">
-    </span>
-  </a>
-</div>
 
 The game comes first, always. No matter what - you call the shots. We are proud to be working hand in hand with the best game developers on the planet (e.g., Riot, Epic Games or Blizzard). We love your games, we’re your fans. If you have any feedback for us or the apps on Overwolf, we’ll always listen and take your guidance. Just email us at developers@overwolf.com.

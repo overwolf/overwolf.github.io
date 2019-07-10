@@ -32,7 +32,7 @@ Use the `overwolf.windows.mediaPlayerElement` API to allows adding a media playe
 * [`overwolf.windows.mediaPlayerElement.onPlaybackPaused()`](#onplaybackpaused)
 * [`overwolf.windows.mediaPlayerElement.onPlaybackStopped()`](#onplaybackstopped)
 * [`overwolf.windows.mediaPlayerElement.onPlaybackEnded()`](#onplaybackended)
-* [`overwolf.windows.mediaPlayerElement.onPlaybackError()`](#)onplaybackerror
+* [`overwolf.windows.mediaPlayerElement.onPlaybackError()`](#onplaybackerror)
 
 ## Types Reference
 
