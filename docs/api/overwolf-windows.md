@@ -7,7 +7,7 @@ sidebar_label: overwolf.windows
 Use the `overwolf.windows` API to create, interact and modify your app’s windows.
 
 :::important
-Please read our best practices guide on [how to use Overwolf windows](../topics/using-overwolf-windows) to learn how to use windows properly in your app.
+Please make sure to read our guide on [how to use Overwolf windows](../topics/using-overwolf-windows), to learn everything about Overwolf app windows, and how to use them properly and efficiently in your app.
 :::
 
 ## Methods Reference
