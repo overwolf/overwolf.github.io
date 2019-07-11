@@ -11,9 +11,16 @@ And define your code block using this tags:
 `<pre><code class="js">`
 
 ### Add an image
+
+Using a markdown:
 <pre>
 ![alt-text](assets/app-creation-process.svg)
 </pre>
+
+Or using HTML if you want to customize the sizes:
+
+\<img src="../assets/app-creation-process.svg" alt="process" width="800"/>
+
 
 ### Search configuration:
 
