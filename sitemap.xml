@@ -136,6 +136,5 @@
 <url> <loc>https://overwolf.github.io/docs/topics/using-events</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://overwolf.github.io/docs/topics/using-events" /> </url>
 <url> <loc>https://overwolf.github.io/docs/topics/using-overwolf-windows</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://overwolf.github.io/docs/topics/using-overwolf-windows" /> </url>
 <url> <loc>https://overwolf.github.io/docs/topics/what-kind-of-apps-works</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://overwolf.github.io/docs/topics/what-kind-of-apps-works" /> </url>
-<url> <loc>https://overwolf.github.io/docs/topics/window-size</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://overwolf.github.io/docs/topics/window-size" /> </url>
 <url> <loc>https://overwolf.github.io/docs/topics/writing-your-own-plugin</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://overwolf.github.io/docs/topics/writing-your-own-plugin" /> </url>
 </urlset>
