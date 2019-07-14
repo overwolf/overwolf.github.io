@@ -13,7 +13,6 @@ Please read the [overwolf.games.events](overwolf-games-events) documentation pag
 ## Sample Apps
 * [APEX game events sample app](https://github.com/overwolf/apex-events-sample-app)
 
-
 ## Available Features
 
 * [me](#me)
@@ -22,7 +21,7 @@ Please read the [overwolf.games.events](overwolf-games-events) documentation pag
 * [damage](#damage)
 * [death](#death)
 * [revive](#revive)
-* [match_state](#match-state)
+* [match_state](#match_state)
 * [match_info](#match-info)
 * [inventory](#inventory)
 * [location](#location)

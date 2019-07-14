@@ -123,17 +123,16 @@ A non-Transparent Window or **standard** Overwolf window, is a window that has b
 An example from the manifest.json file:
 
 ```json
- "windows": {
-            "windowName": {
-                "file": "name.html",
-                "transparent": true,
-                "show_maximize": true
-            }
- }
+"windows": {
+    "windowName": {
+      "file": "name.html",
+      "transparent": true,
+      "show_maximize": true
+     }
+}
 ```
 
 Below you can see an example from the [sample app](#sample-app), for a standard Overwolf window.
-
 
 ### Transparent window
 
