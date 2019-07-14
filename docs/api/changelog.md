@@ -17,7 +17,7 @@ All notable changes to this project will be documented in this file.
   Tries to download an update for the calling extension.
 
 * [overwolf.extensions.onExtensionUpdateStateChanged](overwolf-extensions#onextensionupdatestatechanged) - new event.  
-  Notift when the app were updated.
+  Notify when the app were updated.
   
 * [overwolf.windows.setMinSize()](overwolf-windows#setminsizewindowid-width-height-callback) - new method.  
   Overrides the window's defined minimum size.
