@@ -192,7 +192,21 @@ map    | match_info   | The current map name</br>`{"map":"Erangel_Main"}`   | [m
 ### Info Updates
 key       | Category        | Values                                         | Notes                                                   | Since Version |
 ----------| ----------------| -----------------------------------------------| ------------------------------------------------------- | ------------- |
-roster_XX        | match_info   | This feature provides the entire list of players (~99 players).</br>Each player that joins the game (during the “airfield” phase) </br>will be reported in the following way:</br>`{"feature":"roster","category":"match_info","key":`</br>`"roster_0","value":"{\"player\":\"Dr4ex\",\"kills\"`</br>`:\"0\",\"out\":false}"}`</br>As you can see, this object includes:<ul><li><b>player</b> – Player name</li><li><b>kills</b> – Number of kills. This field is being updated once </br>the player leaves the game ( = died or quit the match)</li><li><b>out</b> – “false” when the player is “alive”, “true” when the player </br>left the game (died or quit the match)</li>When a player “leaves” the match, the following info-update will be reported:</br>`{"feature":"roster","category":"match_info",`</br>`"key":"roster_0","value":"{\"player\":\"Dr4ex\"`</br>`\"kills\":\"0\",\"out\":true}"}`  |    | 119.1   |
+roster_XX        | match_info   | This feature provides the entire list of players </br>(~99 players). See [notes below](#roster_xx-notes)  |    | 119.1   |
+
+#### `roster_XX` notes
+
+This feature provides the entire list of players (~99 players).
+Each player that joins the game (during the “airfield” phase) will be reported in the following way:
+
+`{"feature":"roster","category":"match_info","key":"roster_0","value":"{\"player\":\"Dr4ex\",\"kills\":\"0\",\"out\":false}"}`
+
+As you can see, this object includes:
+* **player** – Player name
+* **kills** – Number of kills. This field is being updated once the player leaves the game ( = quit the match).
+* **out** - false” when the player is “alive”, “true” when the player left the game (died or quit the match).  
+  When a player “leaves” the match, the following info-update will be reported:  
+  `{"feature":"roster","category":"match_info","key":"roster_0","value":"{\"player\":\"Dr4ex\"\"kills\":\"0\",\"out\":true}"}` 
 
 ## `revived`
 

@@ -10,7 +10,21 @@ All notable changes to this project will be documented in this file.
 
 ### API Features
 
+* [overwolf.os.getRegionInfo()](overwolf-os#getregioninfocallback) - new method.  
+  Returns regional information about the user.
 
+* [overwolf.extensions.updateExtension()](overwolf-extensions#updateextensioncallback) - new method.  
+  Tries to download an update for the calling extension.
+
+* [overwolf.extensions.onExtensionUpdateStateChanged](overwolf-extensions#onextensionupdatestatechanged) - new event.  
+  Notift when the app were updated.
+  
+* [overwolf.windows.setMinSize()](overwolf-windows#setminsizewindowid-width-height-callback) - new method.  
+  Overrides the window's defined minimum size.
+
+### Documentation
+
+* PUBG [matchEnd](overwolf-games-events-pubg#matchend-notes) event - added a new note.
 
 ## 0.131 (June 2019)
 
@@ -27,11 +41,3 @@ All notable changes to this project will be documented in this file.
 * [Fortnite game events](overwolf-games-events-fortnite)
   * New info update:
     * shield
-
-### Bug Fixes
-
-* mention ts peer dep change ([9bb74bc](https://github.com/vuejs/vue-cli/commit/9bb74bc))
-
-### Documentation
-
-* mention ts peer dep change ([9bb74bc](https://github.com/vuejs/vue-cli/commit/9bb74bc))

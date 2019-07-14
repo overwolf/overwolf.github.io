@@ -32,10 +32,12 @@ You can use the following helpful URL’s to retrieve an extension file content 
 * [`getRunningState()`](#getrunningstateid-callback)
 * [`getManifest()`](#getrunningstateid-callback)
 * [`relaunch()`](#relaunch)
+* [`updateExtension()`](#updateextensioncallback)
 
 ## Events Reference
 
 * [`onAppLaunchTriggered`](#onapplaunchtriggered)
+* [`onExtensionUpdateStateChanged`](#onextensionupdatestatechanged)
 
 ## launch(uid , parameter)
 #### Version added: 0.78
@@ -215,10 +217,24 @@ A callback function which will be called with the status of the request
 
 > Relaunch the current app.
 
+## updateExtension(callback)
+#### Version added: 0.132
+
+> Tries to download an update for the calling extension.
+
+Parameter | Type                  | Description                                                                           |
+--------- | ----------------------| ------------------------------------------------------------------------------------- |
+callback  | function              | The result of the request                                                             |
+
 ## onAppLaunchTriggered
 #### Version added: 0.92
 
 > Fires when the current app is launched while already running. This is useful in the case where the app has custom logic for clicking its dock button while it is already running.
+
+## onExtensionUpdateStateChanged
+#### Version added: 0.132
+
+> Fires after the current app was updated succesfully.
 
 ### The origin string
 

@@ -132,9 +132,8 @@ An example from the manifest.json file:
  }
 ```
 
-Here you can see an example from the [sample app](#sample-app), for a standard Overwolf window:
+Below you can see an example from the [sample app](#sample-app), for a standard Overwolf window.
 
-<img src="../assets/standard-window.png" alt="drawing" width="500"/>
 
 ### Transparent window
 
@@ -144,21 +143,29 @@ The term transparent might be a bit misleading, we consider the non-standard Ove
 
 In order to create this window type, the `transparent` property in the manifest.json should be set to ‘true’.
 
-Here you can see an example from the sample app, for a "transparent" Overwolf window:
-
-<img src="../assets/standard-window.png" alt="drawing" width="500"/>
-
-And you can see a real live examples for transparent windows, from our apps store:
+Here you can see an examples for standard and transparent windows from our sample app, and other windows from a real live apps on our apps store:
 
 <div class="box" data-slick='{"slidesToShow": 1}'>
+<a data-fancybox="gallery" data-caption="sample app" href="../assets/standard-window.png">
+ "standard" window that is being used in our sample app. 
+    <span class="thumb">
+      <img src="../assets/standard-window.png" alt="standard window">
+    </span>
+  </a>
+<a data-fancybox="gallery" data-caption="sample app" href="../assets/transparent-window.png">
+ "transparent" window that is being used in our sample app. 
+    <span class="thumb">
+      <img src="../assets/transparent-window.png" alt="transparent window">
+    </span>
+  </a>
   <a data-fancybox="gallery" data-caption="1366×775 Window size" href="../assets/transparent-overwolf-window-2.jpg">
-An example for a “transparent” window that is being used in the Spawning Tool Build Advisor. 
+“transparent” window that is being used in the Spawning Tool Build Advisor. 
     <span class="thumb">
       <img src="../assets/transparent-overwolf-window-2.jpg" alt="1366×775 Window size">
     </span>
   </a>
   <a data-fancybox="gallery" data-caption="1680×980 Window size" href="../assets/transparent-overwolf-window-3.jpg">
-An example for a “transparent” window being used in the Legendary Builds app
+“transparent” window being used in the Legendary Builds app
     <span class="thumb">
       <img src="../assets/transparent-overwolf-window-3.jpg" alt="1680×980 Window size">
     </span>
@@ -183,27 +190,29 @@ You can also do the following when handling with windows sizes:
   * Get the user's desktop resolution (for out of game windows) using [`overwolf.utils.getMonitorsList()`](../api/overwolf-utils#getmonitorslistcallback).
 * Allow the user to choose the right window size from the app’s settings.
 
-Examples for apps that let the user choose his preferred app window size:
-
-<img src="../assets/size-example-user-custom.jpg" alt="drawing" width="800"/>
-
-Examples for common and optimal app window sizes:
+Some Examples for apps that let the user choose his preferred app window size and for common and optimal app window sizes:
 
 <div class="box" data-slick='{"slidesToShow": 1}'>
+<a data-fancybox="gallery" data-caption="custom window size" href="../assets/size-example-user-custom.jpg">
+    Examples for app that let the user choose his preferred app window size:
+    <span class="thumb">
+      <img src="../assets/size-example-user-custom.jpg" alt="custom window size">
+    </span>
+  </a>
   <a data-fancybox="gallery" data-caption="1280×775 Window size" href="../assets/size-example-screen-1.jpg">
-    1280×775 Window size
+    Examples for common and optimal app window sizes: 1280×775
     <span class="thumb">
       <img src="../assets/size-example-screen-1.jpg" alt="1280×775 Window size">
     </span>
   </a>
   <a data-fancybox="gallery" data-caption="1366×775 Window size" href="../assets/size-example-screen-2.jpg">
-1366×775 Window size
+    Examples for common and optimal app window sizes: 1366×775
     <span class="thumb">
       <img src="../assets/size-example-screen-2.jpg" alt="1366×775 Window size">
     </span>
   </a>
   <a data-fancybox="gallery" data-caption="1680×980 Window size" href="../assets/size-example-screen-3.jpg">
-1680×980 Window size
+    Examples for common and optimal app window sizes: 1680×980
     <span class="thumb">
       <img src="../assets/size-example-screen-3.jpg" alt="1680×980 Window size">
     </span>

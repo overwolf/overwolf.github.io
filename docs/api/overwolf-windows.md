@@ -51,6 +51,7 @@ Please make sure to read our guide on [how to use Overwolf windows](../topics/us
 * [`overwolf.windows.setPosition()`](#setpositionwindowid-properties-callback)
 * [`overwolf.windows.displayMessageBox()`](#displaymessageboxmessageparams-callback)
 * [`overwolf.windows.isAccelreatedOSR()`](#isaccelreatedosrcallback)
+* [`overwolf.windows.setMinSize()`](#setminsizewindowid-width-height-callback)
 
 ## Events Reference
 
@@ -750,6 +751,18 @@ A callback function which will be called with the status of the request
 ```json
 { "status": "error", "error": "something went wrong..." }
 ```
+
+## setMinSize(windowId, width, height, callback)
+#### Version added: 0.132
+
+> Overrides the window's defined minimum size.
+
+Parameter              | Type                                              | Description                                                               |
+-----------------------| --------------------------------------------------| --------------------------------------------------------------------------|
+windowId		           | string                                            | The id of the window                                                      |
+width		               | int                                               | The new minimum width                                                     |
+height		             | int                                               | The new minimum height                                                    |
+callback               | function                                          | Called with the result of the request                                     |
 
 ## onMainWindowRestored
 #### Version added: 0.85
