@@ -150,7 +150,7 @@ Here you can see an example from the sample app, for a "transparent" Overwolf wi
 
 And you can see a real live examples for transparent windows, from our apps store:
 
-<div class="box" data-slick='{"slidesToShow": 2}'>
+<div class="box" data-slick='{"slidesToShow": 1}'>
   <a data-fancybox="gallery" data-caption="1366×775 Window size" href="../assets/transparent-overwolf-window-2.jpg">
 An example for a “transparent” window that is being used in the Spawning Tool Build Advisor. 
     <span class="thumb">
@@ -189,7 +189,7 @@ Examples for apps that let the user choose his preferred app window size:
 
 Examples for common and optimal app window sizes:
 
-<div class="box" data-slick='{"slidesToShow": 3}'>
+<div class="box" data-slick='{"slidesToShow": 1}'>
   <a data-fancybox="gallery" data-caption="1280×775 Window size" href="../assets/size-example-screen-1.jpg">
     1280×775 Window size
     <span class="thumb">

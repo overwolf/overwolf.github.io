@@ -6,6 +6,12 @@ sidebar_label: Changelog
 
 All notable changes to this project will be documented in this file.
 
+## 0.132 (July 2019)
+
+### API Features
+
+
+
 ## 0.131 (June 2019)
 
 ### API Features

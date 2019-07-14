@@ -77,8 +77,12 @@ pseudo_match_id | match_info | The current session’s ID code.</br>Example:</br
 Event      | Event Data  | Fired When          | Notes              | Since Version |
 -----------| ------------| ------------------- | ------------------ | --------------|
 matchStart | null        | Match started |   |   90.0       | 
-matchEnd | null        | Match ended |   |   90.0       | 
+matchEnd | null        | Match ended. See [notes](#matchend-notes) below |   |   90.0       | 
 matchSummary | null        | The match summary screen (with the user’s rank) is shown</br>`{"name":"matchSummary","data":""}` |   |   120.0      |
+
+#### `matchEnd` notes
+
+The  matchEnd event fired when your player is killed, and when you exit to the lobby. (which means that if you get killed and than you exit to the lobby, you will see two calls for this event).
 
 ## `rank`
 
