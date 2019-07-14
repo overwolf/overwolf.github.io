@@ -3,6 +3,7 @@ $(document).ready(function(){
     centerMode: true, 
     dots: true,
     speed: 500,
-    adaptiveHeight: true
+    adaptiveHeight: true,
+    slidesToShow: 1
   });
 });

@@ -145,13 +145,13 @@ In order to create this window type, the `transparent` property in the manifest.
 Here you can see an examples for standard and transparent windows from our sample app, and other windows from a real live apps on our apps store:
 
 <div class="box" data-slick='{"slidesToShow": 1}'>
-<a data-fancybox="gallery" data-caption="sample app" href="../assets/standard-window.png">
+<a data-fancybox="gallery" data-caption="standard window sample app" href="../assets/standard-window.png">
  "standard" window that is being used in our sample app. 
     <span class="thumb">
       <img src="../assets/standard-window.png" alt="standard window">
     </span>
   </a>
-<a data-fancybox="gallery" data-caption="sample app" href="../assets/transparent-window.png">
+<a data-fancybox="gallery" data-caption="transparent window sample app" href="../assets/transparent-window.png">
  "transparent" window that is being used in our sample app. 
     <span class="thumb">
       <img src="../assets/transparent-window.png" alt="transparent window">
@@ -191,7 +191,7 @@ You can also do the following when handling with windows sizes:
 
 Some Examples for apps that let the user choose his preferred app window size and for common and optimal app window sizes:
 
-<div class="box" data-slick='{"slidesToShow": 1}'>
+<div class="box">
 <a data-fancybox="gallery" data-caption="custom window size" href="../assets/size-example-user-custom.jpg">
     Examples for app that let the user choose his preferred app window size:
     <span class="thumb">
