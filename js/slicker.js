@@ -2,6 +2,7 @@ $(document).ready(function(){
   $('.box').slick({
     centerMode: true, 
     dots: true,
-    speed: 500
+    speed: 500,
+    adaptiveHeight: true
   });
 });
