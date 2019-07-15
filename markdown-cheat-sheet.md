@@ -6,6 +6,7 @@ This is intended as a quick reference and showcase.
 * [Lists](#lists)
 * [Links](#links)
 * [Images](#images)
+* [Image Gallery](#image-galley)
 * [Blockquotes](#blockquotes)
 * [Backslash Escape](#backslash-escape)
 * [Code Blocks](#code-blocks)
@@ -64,7 +65,7 @@ Strikethrough uses two tildes. ~~Scratch this.~~
 
 ### Links
 
-URLs and URLs in angle brackets will automatically get turned into links: http://www.example.com or <http://www.example.com>.
+URLs and URLs in angle brackets will automatically get turned into links: http://www.example.com. 
 
 <pre lang="no-highlight">
 <code>
@@ -90,6 +91,28 @@ Inline-style: (hover to see the title text):
 Or use HTML if you want to customize the size or other styles:
 
 `<img src="../assets/app-creation-process.svg" alt="process" width="800"/>`
+
+### Image Gallery
+
+You can create an image gallery. When you click on an image it will popup in a light box.
+Each image can be linked to YouTube video or larger image.
+
+```html
+<div class="box" data-slick='{"slidesToShow": 2}'>
+  <a data-fancybox="gallery" data-caption="LoLwiz" href="https://www.youtube.com/watch?v=nJhuNtDPbxo">
+    LoLwiz
+    <span class="thumb">
+      <img src="https://img.youtube.com/vi/nJhuNtDPbxo/maxresdefault.jpg" alt="DotaPlus">
+    </span>
+  </a>
+  <a data-fancybox="gallery" data-caption="PUBG Tracker" href="https://www.youtube.com/watch?v=xiG_cCI9s-E">
+    PUBG Tracker
+    <span class="thumb">
+      <img src="http://img.youtube.com/vi/xiG_cCI9s-E/maxresdefault.jpg" alt="DotaPlus">
+    </span>
+  </a>
+</div>
+```
 
 
 ### Blockquotes
