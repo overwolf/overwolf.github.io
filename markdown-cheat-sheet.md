@@ -130,19 +130,19 @@ Supported admonition types are: caution, note, important, tip, warning.
 A note.
 :::
 
-:::caution This is my custom title
+:::caution
 A caution.
 :::
 
-:::important te This is my custom title
+:::important
 An important.
 :::
 
-:::tip This is my custom title
+:::tip
 A tip.
 :::
 
-:::warning This is my custom title
+:::warning
 A warning.
 </code>
 </pre>
