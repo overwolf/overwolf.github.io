@@ -71,7 +71,10 @@ URLs and URLs in angle brackets will automatically get turned into links: http:/
 
 [I'm an inline-style link](https://www.google.com)
 
-[I'm a relative reference to a repository file](/docs/topics/legal-developers-terms)
+[I'm a relative reference to a repository file](../docs/topics/legal-developers-terms)
+
+[I'm a relative reference to a repository file in the same folder](overwolf-io#types-reference)
+
 </code>
 </pre>
 
