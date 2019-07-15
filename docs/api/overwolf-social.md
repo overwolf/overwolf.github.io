@@ -8,7 +8,7 @@ Provides information about the currently disabled services.
 
 ## Methods Reference
 
-* [`overwolf.social.getDisabledServices()`](#getdisabledservicescallback)
+* [overwolf.social.getDisabledServices()](#getdisabledservicescallback)
 
 ## getDisabledServices(callback)
 #### Version added: 0.126
@@ -23,8 +23,16 @@ callback  | function                   | returns a list of disabled services    
 
 #### Callback argument: Success
 
-A callback function which will be called with the status of the request and a list of disabled services.
+A callback function which will be called with the status of the request.
 
 ```json
 {"status":"success","disabled_services":["youtube"]}
  ```
+
+ #### Callback argument: Failure
+
+A callback function which will be called with the status of the request.
+
+```json
+{ "status": "error", "reason": [description] } 
+```

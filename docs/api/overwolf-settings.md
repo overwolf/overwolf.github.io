@@ -341,6 +341,10 @@ callback           | function           |  A callback function which will be cal
 
 > Fired when a hotkey is modified. Apps will only be notified of hotkey changes that relate to them.
 
+:::tip
+Listen to this event if you want to get notified when the user changed your app hotkeys from the OW settings page.
+:::
+
 #### Event Data Example: Success
 
 ```json

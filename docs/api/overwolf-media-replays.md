@@ -40,7 +40,9 @@ Use the overwolf.media.replays API to capture a **short** video replay of the cu
 
 > Turns on background replay capturing. Without calling it first, you will not be able to create video replays.
 
+:::note
 Using this method you can quickly get the game highlights videos without the overhead of using both OW events and streaming API’s.  
+:::
 
 There’s no need to know/understand each supported game’s mechanics, game flow, edge cases, timings, etc. Just request for any supported game highlight and OW will provide you with a video file that includes this event.
 
@@ -297,7 +299,7 @@ overwolf.media.replays.updateTobiiSetting({
 
 > Get supported auto highlights features for a game.
 
-* ou can only call this method if replay mode is on and using a valid id of a replay being captured to a file.
+* You can only call this method if replay mode is on and using a valid id of a replay being captured to a file.
 
 Parameter   | Type     | Description                                                                                                                                |
 ------------| ---------| ------------------------------------------------------------------------------------------------------------------------------------------ |

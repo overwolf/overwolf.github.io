@@ -71,7 +71,7 @@ key          | Category    | Values                                             
 teammate_X   | match_info  | This feature provides the list of your squad members.                                                       |         |  0. 128       |
 legendSelect_X| match_info | The name of the legend & order of selection for every member in the team, including who is the jump-master. |         |  0. 128       |
 
-#### `teammate_X` notes:
+#### `teammate_X` notes
 
 Each member from your squad that joins the game will be reported in the following way: 
 
@@ -82,7 +82,7 @@ As  youcan see, this object includes:
 * `player` – Player name
 * `state` – alive/death/knockedout
 
-#### `legendSelect_X` notes:
+#### `legendSelect_X` notes
 
 Every member in the team, including who is the jump-master will be reported in the following way:
 
@@ -102,7 +102,7 @@ key          | Category  | Values                                               
 ------------ | ----------| -------------------------------------------------------------- | ----------- | ------------- | 
 roster_XX  | match_info  | This feature provides the entire list of players (~60 players).|             |  0. 128       |
 
-#### `roster_XX` notes:
+#### `roster_XX` notes
 
 Each player that joins the game will be reported in the following way:
 
@@ -121,14 +121,14 @@ key       | Category   | Values             | Notes       | Since Version |
 ----------| -----------| ------------------ | ----------- | ------------- | 
 location  | game_info  | See example below  |             |  0.130        |
 
-#### `location` notes:
+#### `location` notes
 
 * Map Center is (0,0,z)
 * King's Canyon appears to be 1x1km
 * The location is updated up to 2 updates in 1 second.
 * Location accuracy is 1 meter.
 
-#### Event data example:
+#### Event data example
 
 `{"info":{"match_info":{"location":"{\"x\":\"93\",\"y\":\"305\",\"z\":\"49\"}"}},"feature":"location"}`
 
@@ -148,14 +148,14 @@ key         | Category    | Values  | Notes     | Since Version |
 ----------- | ------------| --------| --------- | ------------- | 
 match_summary| match_info |         |           |   0.130       |
 
-#### `match_summary` notes:
+#### `match_summary` notes
 
 The following info is provided:
 * The final position the squad has reached (rank 1-20).
 * Total number of teams
 * Number of squad kills (total squad eliminated).
 
-#### Event data example:
+#### Event data example
 
 `{"feature":"match_summary","category":"match_info","key":"match_summary","value":"{\"rank\":\"12\",\"teams\":\"20\",\"squadKills\":\"5\"}"}`
 
@@ -167,11 +167,11 @@ key              | Category   | Values                                          
 ---------------- | -----------| -------------------------------------------------------------------------- | ------- | ------------- | 
 totalDamageDealt | me         | The total amount of damage inflicted in 1 match of Apex. See example below.|         |  0.130        |
 
-#### `totalDamageDealt` Notes:
+#### `totalDamageDealt` notes
 
 Important to note that the game does not count damage that is inflicted on Armor. Only after the armor was broken. Our damage includes damage on armor aswell, so it will always be higher than game-damage.
 
-#### Event data example:
+#### Event data example
 
 `{"feature":"damage","category":"me","key":"totalDamageDealt","value":668}`
 
@@ -181,7 +181,7 @@ Event  | Event Data        | Fired When (announcement)                          
 -------| ------------------| -------------------------------------------------------------------| ---------- | --------------|
 damage | See example below | When information is presented on the game’s UI (top right corner). |            |    0.130      |
 
-#### `damage` Notes:
+#### `damage` notes
 
 The following properties are provided:
 
@@ -191,7 +191,7 @@ The following properties are provided:
 * headshot
 * grenade
 
-#### Event data example:
+#### Event data example
 
 `{"name":"damage","data":"{\r\n \"targetName\": \"masiqu22\",\r\n \"damageAmount\": \"13.000000\",\r\n \"armor\": \"true\",\r\n \"headshot\": \"false\"\r\n}"}`
 
@@ -241,7 +241,7 @@ Event     | Event Data        | Fired When                                      
 ----------| ------------------| ------------------------------------------------------------------ | ------------------ | --------------|
 kill_feed | See example below | When information is presented on the game’s UI (top right corner). |                    |     0.130     | 
 
-#### `kill_feed` notes:
+#### `kill_feed` notes
 
 The following properties are provided:
 
@@ -250,6 +250,6 @@ The following properties are provided:
 * weaponName
 * action
 
-#### Event data example:
+#### Event data example
 
 `{"attackerName":"NerdGhela","victimName":"DJerryKhan","weaponName":"energy_ar","action":"knockdown"}`
