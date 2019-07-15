@@ -1,20 +1,17 @@
 This is intended as a quick reference and showcase.
 
-based on: https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#headers
-
 ### Table of Contents
-* Headers
-* Emphasis
-* Lists
-* Links
-* Images
-* Code and Syntax Highlighting
-* Tables
-* Blockquotes
-* Inline HTML
-* Horizontal Rule
-* Line Breaks
-* YouTube Videos
+* [Headers](#headers)
+* [Emphasis](#emphasis)
+* [Lists](#lists)
+* [Links](#links)
+* [Images](#images)
+* [Blockquotes](#blockquotes)
+* [Backslash Escape](#backslash-escape)
+* [Code Blocks](#code-blocks)
+* [Tables](#tables)
+* [Inline HTML](#inline-html)
+* [Line Breaks](#line-breaks)
 
 ### Headers
 
@@ -26,141 +23,166 @@ based on: https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#heade
 #### H4
 ##### H5
 ###### H6
-
-Alternatively, for H1 and H2, an underline-ish style:
-
-Alt-H1
-======
-
-Alt-H2
-------
 </code>
 </pre>
-
-# H1
-## H2
-### H3
-#### H4
-##### H5
-###### H6
-Alternatively, for H1 and H2, an underline-ish style:
-
-Alt-H1
-======
-
-Alt-H2
-------
 
 ### Emphasis
 
 <pre lang="no-highlight">
 <code>
-Emphasis, aka italics, with *asterisks* or _underscores_.
-
-Strong emphasis, aka bold, with **asterisks** or __underscores__.
-
-Combined emphasis with **asterisks and _underscores_**.
+*This text will be italic*
+_This will also be italic_
+**This text will be bold**
+__This will also be bold__
+*You **can** combine them*
 
 Strikethrough uses two tildes. ~~Scratch this.~~
 </code>
 </pre>
 
 ### Lists
-(In this example, leading and trailing spaces are shown with with dots: ⋅)
 
 <pre lang="no-highlight">
 <code>
-1. First ordered list item
-2. Another item
-⋅⋅* Unordered sub-list. 
-1. Actual numbers don't matter, just that it's a number
-⋅⋅1. Ordered sub-list
-4. And another item.
 
-⋅⋅⋅You can have properly indented paragraphs within list items. Notice the blank line above, and the leading spaces (at least one, but we'll use three here to also align the raw Markdown).
+#### Unordered
 
-⋅⋅⋅To have a line break without a paragraph, you will need to use two trailing spaces.⋅⋅
-⋅⋅⋅Note that this line is separate, but within the same paragraph.⋅⋅
-⋅⋅⋅(This is contrary to the typical GFM line break behaviour, where trailing spaces are not required.)
+* Item 1
+* Item 2
+* Item 2a
+* Item 2b
+
+#### Ordered
+
+1. Item 1
+2. Item 2
+3. Item 3
+* Item 3a
+* Item 3b
 </code>
 </pre>
 
 ### Links
 
-There are two ways to create links.
+URLs and URLs in angle brackets will automatically get turned into links: http://www.example.com or <http://www.example.com>.
 
 <pre lang="no-highlight">
 <code>
+
 [I'm an inline-style link](https://www.google.com)
 
-[I'm an inline-style link with title](https://www.google.com "Google's Homepage")
-
-[I'm a reference-style link][Arbitrary case-insensitive reference text]
-
-[I'm a relative reference to a repository file](../blob/master/LICENSE)
-
-[You can use numbers for reference-style link definitions][1]
-
-Or leave it empty and use the [link text itself].
-
-URLs and URLs in angle brackets will automatically get turned into links. 
-http://www.example.com or <http://www.example.com> and sometimes 
-example.com (but not on Github, for example).
+[I'm a relative reference to a repository file](/docs/topics/legal-developers-terms)
 </code>
 </pre>
 
-
 ### Images
-Here's our logo (hover to see the title text):
 
-Inline-style: 
-![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")
+Inline-style: (hover to see the title text):
 
-Reference-style: 
-![alt text][logo]
+<pre lang="no-highlight">
+<code>
+![alt-text](assets/app-creation-process.svg)
 
-[logo]: https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 2"
-Here's our logo (hover to see the title text):
+Or use HTML if you want to customize the size or other styles:
 
-Inline-style: alt text
+<img src="../assets/app-creation-process.svg" alt="process" width="800"/>
 
-Reference-style: alt text
+</code>
+</pre>
 
-### Code and Syntax Highlighting
+### Blockquotes
 
-Code blocks are part of the Markdown spec, but syntax highlighting isn't. However, many renderers -- like Github's and Markdown Here -- support syntax highlighting. Which languages are supported and how those language names should be written will vary from renderer to renderer. Markdown Here supports highlighting for dozens of languages (and not-really-languages, like diffs and HTTP headers); to see the complete list, and how to write the language names, see the highlight.js demo page.
+<pre lang="no-highlight">
+<code>
 
-Inline `code` has `back-ticks around` it.
-Inline code has back-ticks around it.
+Regular blockquotew:
 
-Blocks of code are either fenced by lines with three back-ticks ```, or are indented with four spaces. I recommend only using the fenced code blocks -- they're easier and only they support syntax highlighting.
+>
 
-```javascript
+Supported admonition types are: caution, note, important, tip, warning.
+
+:::note This is my custom title
+A note.
+:::
+
+:::caution This is my custom title
+A caution.
+:::
+
+:::important te This is my custom title
+An important.
+:::
+
+:::tip This is my custom title
+A tip.
+:::
+
+:::warning This is my custom title
+A warning.
+:::
+</code>
+</pre>
+
+## Backslash Escape
+
+Markdown allows you to use backslash escapes to generate literal characters which would otherwise have special meaning in Markdown’s formating syntax.
+
+<pre lang="no-highlight">
+<code>
+\*literal asteriks\*
+
+Markdown provides backslash escapes for the following characters:
+
+\ backslash
+` backtick
+* asterisk
+_ underscore
+{} [] braces
+() parentheses
+# hash mark
++ plus sign
+- minus sign (hyphen)
+. dot
+! exclamation mark
+</code>
+</pre>
+
+### Code Blocks
+
+Inline code has back-ticks around it. Example:
+
+<pre lang="no-highlight"><code>
+`getAround()`
+</code></pre>
+
+And code blocks like that:
+
+<pre lang="no-highlight"><code>
+```js
 var s = "JavaScript syntax highlighting";
 alert(s);
 ```
- 
-```python
-s = "Python syntax highlighting"
-print s
+Or:
+
+```json
+ { "icon": "IconMouseOver.png" }
 ```
- 
-```
-No language indicated, so no syntax highlighting. 
-But let's throw in a <b>tag</b>.
-```
-var s = "JavaScript syntax highlighting";
-alert(s);
-s = "Python syntax highlighting"
-print s
-No language indicated, so no syntax highlighting in Markdown Here (varies on Github). 
-But let's throw in a <b>tag</b>.
+</code></pre>
+
+To add code blocks that contain links, please put this line one the top of the page, right after the sidebar_label section:
+
+`<script>hljs.initHighlightingOnLoad();</script>`
+
+And define your code block using this tags:
+
+`<pre lang="no-highlight"><code>`
 
 ### Tables
 
-Tables aren't part of the core Markdown spec, but they are part of GFM and Markdown Here supports them. They are an easy way of adding tables to your email -- a task that would otherwise require copy-pasting from another application.
+You can create tables by assembling a list of words and dividing them with hyphens - (for the first row), and then separating each column with a pipe | :
 
-Colons can be used to align columns.
+<pre lang="no-highlight">
+<code>
 
 | Tables        | Are           | Cool  |
 | ------------- |:-------------:| -----:|
@@ -168,40 +190,15 @@ Colons can be used to align columns.
 | col 2 is      | centered      |   $12 |
 | zebra stripes | are neat      |    $1 |
 
-There must be at least 3 dashes separating each header cell.
-The outer pipes (|) are optional, and you don't need to make the 
-raw Markdown line up prettily. You can also use inline Markdown.
+</code>
+</pre>
 
-Markdown | Less | Pretty
---- | --- | ---
-*Still* | `renders` | **nicely**
-1 | 2 | 3
-Colons can be used to align columns.
+### Inline HTML
 
-Tables	Are	Cool
-col 3 is	right-aligned	$1600
-col 2 is	centered	$12
-zebra stripes	are neat	$1
-There must be at least 3 dashes separating each header cell. The outer pipes (|) are optional, and you don't need to make the raw Markdown line up prettily. You can also use inline Markdown.
-
-Markdown	Less	Pretty
-Still	renders	nicely
-1	2	3
-Blockquotes
-> Blockquotes are very handy in email to emulate reply text.
-> This line is part of the same quote.
-
-Quote break.
-
-> This is a very long line that will still be quoted properly when it wraps. Oh boy let's keep writing to make sure this is long enough to actually wrap for everyone. Oh, you can *put* **Markdown** into a blockquote. 
-Blockquotes are very handy in email to emulate reply text. This line is part of the same quote.
-
-Quote break.
-
-This is a very long line that will still be quoted properly when it wraps. Oh boy let's keep writing to make sure this is long enough to actually wrap for everyone. Oh, you can put Markdown into a blockquote.
-
-Inline HTML
 You can also use raw HTML in your Markdown, and it'll mostly work pretty well.
+
+<pre lang="no-highlight">
+<code>
 
 <dl>
   <dt>Definition list</dt>
@@ -210,60 +207,10 @@ You can also use raw HTML in your Markdown, and it'll mostly work pretty well.
   <dt>Markdown in HTML</dt>
   <dd>Does *not* work **very** well. Use HTML <em>tags</em>.</dd>
 </dl>
-Definition list
-Is something people use sometimes.
-Markdown in HTML
-Does *not* work **very** well. Use HTML tags.
-Horizontal Rule
-Three or more...
-
----
-
-Hyphens
-
-***
-
-Asterisks
-
-___
-
-Underscores
-Three or more...
-
-Hyphens
-
-Asterisks
-
-Underscores
+</code>
+</pre>
 
 ### Line Breaks
 
-My basic recommendation for learning how line breaks work is to experiment and discover -- hit <Enter> once (i.e., insert one newline), then hit it twice (i.e., insert two newlines), see what happens. You'll soon learn to get what you want. "Markdown Toggle" is your friend.
+My basic recommendation for learning how line breaks work is to experiment and discover -- hit <Enter> once (i.e., insert one newline), then hit it twice (i.e., insert two newlines), see what happens.
 
-Here are some things to try out:
-
-Here's a line for us to start with.
-
-This line is separated from the one above by two newlines, so it will be a *separate paragraph*.
-
-This line is also a separate paragraph, but...
-This line is only separated by a single newline, so it's a separate line in the *same paragraph*.
-Here's a line for us to start with.
-
-This line is separated from the one above by two newlines, so it will be a separate paragraph.
-
-This line is also begins a separate paragraph, but...
-This line is only separated by a single newline, so it's a separate line in the same paragraph.
-
-(Technical note: Markdown Here uses GFM line breaks, so there's no need to use MD's two-space line breaks.)
-
-YouTube Videos
-They can't be added directly but you can add an image with a link to the video like this:
-
-<a href="http://www.youtube.com/watch?feature=player_embedded&v=YOUTUBE_VIDEO_ID_HERE
-" target="_blank"><img src="http://img.youtube.com/vi/YOUTUBE_VIDEO_ID_HERE/0.jpg" 
-alt="IMAGE ALT TEXT HERE" width="240" height="180" border="10" /></a>
-Or, in pure Markdown, but losing the image sizing and border:
-
-[![IMAGE ALT TEXT HERE](http://img.youtube.com/vi/YOUTUBE_VIDEO_ID_HERE/0.jpg)](http://www.youtube.com/watch?v=YOUTUBE_VIDEO_ID_HERE)
-Referencing a bug by #bugID in your git commit links it to the slip. For example #1.
