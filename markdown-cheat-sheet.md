@@ -82,16 +82,15 @@ URLs and URLs in angle brackets will automatically get turned into links: http:/
 
 Inline-style: (hover to see the title text):
 
-<pre lang="no-highlight">
-<code>
+<pre lang="no-highlight"><code>
+
 ![alt-text](assets/app-creation-process.svg)
+</code></pre>
 
 Or use HTML if you want to customize the size or other styles:
 
-<img src="../assets/app-creation-process.svg" alt="process" width="800"/>
+`<img src="../assets/app-creation-process.svg" alt="process" width="800"/>`
 
-</code>
-</pre>
 
 ### Blockquotes
 
@@ -122,7 +121,6 @@ A tip.
 
 :::warning This is my custom title
 A warning.
-:::
 </code>
 </pre>
 
@@ -199,19 +197,6 @@ You can create tables by assembling a list of words and dividing them with hyphe
 ### Inline HTML
 
 You can also use raw HTML in your Markdown, and it'll mostly work pretty well.
-
-<pre lang="no-highlight">
-<code>
-
-<dl>
-  <dt>Definition list</dt>
-  <dd>Is something people use sometimes.</dd>
-
-  <dt>Markdown in HTML</dt>
-  <dd>Does *not* work **very** well. Use HTML <em>tags</em>.</dd>
-</dl>
-</code>
-</pre>
 
 ### Line Breaks
 
