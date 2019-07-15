@@ -4,7 +4,7 @@ title: Overwolf API Overview
 sidebar_label: Overview
 ---
 
-The main entry point for all of Overwolf's APIs.\
+The main entry point for all of Overwolf's APIs.
 This class provides access to global components that allow interaction with the various Overwolf features.
 
 ## API's Reference
