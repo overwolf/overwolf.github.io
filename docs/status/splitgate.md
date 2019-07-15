@@ -1,8 +1,10 @@
 ---
 id: splitgate
-title: Splitgate Legends Game Events Status
+title: Splitgate Game Events Status
 sidebar_label: Splitgate
 ---
+
+Splitgate: Arena Warfare
 
 <meta http-equiv="Content-Type" content="text/html charset=utf-8"/>
 <!-- importing React -->

@@ -26,7 +26,7 @@
 		"Integrations":
 			["topics/using-3rd-party-apis", "topics/app-analytics", "topics/login-with-fb-google", "topics/events-SDK-for-game-developers", "topics/twitch-events-sdk-for-game-developers"],
 		"Legal":
-			["topics/legal-overview", "topics/legal-app-terms"]
+			["topics/legal-overview", "topics/legal-app-terms", "topics/legal-developers-terms"]
     },
     "api": {
 			"API Reference": 
