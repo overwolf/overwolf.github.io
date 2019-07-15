@@ -6,7 +6,7 @@ This is intended as a quick reference and showcase.
 * [Lists](#lists)
 * [Links](#links)
 * [Images](#images)
-* [Image Gallery](#image-galley)
+* [Image Gallery](#image-gallery)
 * [Blockquotes](#blockquotes)
 * [Backslash Escape](#backslash-escape)
 * [Code Blocks](#code-blocks)
