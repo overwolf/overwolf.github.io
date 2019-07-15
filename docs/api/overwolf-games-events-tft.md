@@ -114,22 +114,63 @@ Data example:
 
 #### *opponent* notes
 
+Data example:
+
 `{"info":{"match_info":{"opponent":"{\"name\":\"Eksuspuroshion\"}"}},"feature":"match_info"}`
 
 #### *game_mode* notes
+
+Data example:
 
 `{"info":{"match_info":{"game_mode":"tft"}},"feature":"match_info"}`
 
 ### Events
 
-Event | Event Data                        | Fired When                  | Notes              | Since Version |
-------| ----------------------------------| --------------------------- | ------------------ | --------------|
-round_start | "PVE"/"PVP"/"carousel" | One round passes and another begins.</br></br>Example:</br></br>`{"events":[{"name":"round_start","data":""}]}` | Based on [round_type](#round_type-notes) |     0.133     |
-round_end | null | At the round's end.</br></br>Example:</br></br>`{"events":[{"name":"round_end","data":""}]}` | Based on [round_outcome](#round_outcome-notes) |     0.133     |
-battle_start | "PVP"/"PVE" | The start of the battle vs an opponent or AI.</br></br>Example:</br></br>`{"events":[{"name":"battle_start","data":"PVE"}]}`  |   |     0.133     |
-battle_end | null | The end of the battle vs an opponent or AI.</br></br>Example:</br></br>`{"events":[{"name":"battle_end","data":""}]}`  |   |     0.133     |
-match_start | null | Beginning of the TFT match.</br></br>Example:</br></br>`{"events":[{"name":"match_start","data":""}]}` |   |     0.133     |
-match_end | null | Ending of the TFT match.</br></br>Example:</br></br>`{"events":[{"name":"match_end","data":""}]}` |   |     0.133     |
+Event       | Event Data                        | Fired When                                                             | Notes              | Since Version |
+------------| ----------------------------------| ---------------------------------------------------------------------- | ------------------ | --------------|
+round_start | "PVE"/"PVP"/"carousel"            | One round passes and another begins. See [notes](#round_start-notes)   |                    |     0.133     |
+round_end   | null                              | At the round's end. See [notes](#round_end-notes)                      |                    |     0.133     |
+battle_start| "PVP"/"PVE"                       | The start of the battle vs an opponent or AI.  See [notes](#battle_start-notes) |           |     0.133     |
+battle_end  | null                              | The end of the battle vs an opponent or AI. See [notes](#battle_end-notes)  |               |     0.133     |
+match_start | null                              | Beginning of the TFT match. See [notes](#match_start-notes)            |                    |     0.133     |
+match_end   | null                              | Ending of the TFT match. See [notes](#match_end-notes)                 |                    |     0.133     |
+
+#### *round_start* notes
+
+Data example:
+
+`{"events":[{"name":"round_start","data":""}]}`
+
+#### *round_end* notes
+
+Data example:
+
+`{"events":[{"name":"round_end","data":""}]}`
+
+#### *battle_start* notes
+
+Data example:
+
+`{"events":[{"name":"battle_start","data":"PVE"}]}`
+
+#### *battle_end* notes
+
+Data example:
+
+`{"events":[{"name":"battle_end","data":""}]}`
+
+#### *match_start* notes
+
+Data example:
+
+`{"events":[{"name":"match_start","data":""}]}`
+
+#### *match_end* notes
+
+Data example:
+
+`{"events":[{"name":"match_end","data":""}]}`
+
 
 ## `roster`
 
