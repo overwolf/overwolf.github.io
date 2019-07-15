@@ -22,6 +22,9 @@ All notable changes to this project will be documented in this file.
 * [overwolf.windows.setMinSize()](overwolf-windows#setminsizewindowid-width-height-callback) - new method.  
   Overrides the window's defined minimum size.
 
+* [Teamfight Tactics Game Events](overwolf-games-events-tft) - TFT game events are now available.  
+This game-mode is officially supported and more events will be added soon.
+
 ### Documentation
 
 * PUBG [matchEnd](overwolf-games-events-pubg#matchend-notes) event - added a new note.
