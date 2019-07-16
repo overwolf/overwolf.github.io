@@ -1,5 +1,5 @@
 .mainContainer a[href] {
-  color: #E6004C;
+  /* color: #E6004C; */
   text-decoration-line: underline;
 	transition: color .2s
 }
