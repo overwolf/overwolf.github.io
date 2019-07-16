@@ -273,9 +273,19 @@ if you want to get the origin (what triggered the app launch) before/without reg
 
 > Called for global uncaught exceptions in a frame.
 
-callback args:
+#### Event Data example
 
-0 - exception.Message
-1- function name \ "unknown"
-2- ScriptName \ "unknown"
-3 (new) - excpetion erxtra data (json) {
+ The callback args return with all the available exception data:
+
+```json
+{
+"StartPosition": 4431,
+"EndPosition": 4432,
+"StartColumn": 4431,
+"EndColumn": 4432,
+"LineNumber": 1,
+"Message": "Uncaught TypeError: Cannot read property 'length' of undefined",
+"ScriptResourceName": "https://totalmedia2.ynet.co.il/gpt/gpt_script_ynet.js",
+"SourceLine": "if(0!=dcLoadAds){var data_version={}"
+}
+```

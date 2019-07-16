@@ -8,11 +8,11 @@ Provides logging functions that make use of Overwolf’s internal logging system
 
 ## Methods Reference
 
-* [`verbose()`](#verbosemsg)
-* [`info()`](#infomsg)
-* [`warning()`](#warningmsg)
-* [`error()`](#errormsg)
-* [`critical()`](#criticalmsg)
+* [overwolf.log.verbose()](#verbosemsg)
+* [overwolf.log.info()](#infomsg)
+* [overwolf.log.warning()](#warningmsg)
+* [overwolf.log.error()](#errormsg)
+* [overwolf.log.critical()](#criticalmsg)
 
 ## verbose(msg)
 

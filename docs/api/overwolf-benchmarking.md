@@ -12,17 +12,17 @@ The overwolf.benchmarking API is not regularly maintained and some of it’s met
 
 ## Methods Reference
 
-* [`requestHardwareInfo()`](#requesthardwareinfointerval-callback)
-* [`requestProcessInfo()`](#requestprocessinfointerval-callback)
-* [`requestFpsInfo()`](#requestfpsinfointerval-callback)
-* [`stopRequesting()`](#stoprequesting)
-* [`requestPermissions()`](#requestpermissionscallback)
+* [overwolf.benchmarking.requestHardwareInfo()](#requesthardwareinfointerval-callback)
+* [overwolf.benchmarking.requestProcessInfo()](#requestprocessinfointerval-callback)
+* [overwolf.benchmarking.requestFpsInfo()](#requestfpsinfointerval-callback)
+* [overwolf.benchmarking.stopRequesting()](#stoprequesting)
+* [overwolf.benchmarking.requestPermissions()](#requestpermissionscallback)
 
 ## Events Reference
 
-* [`onHardwareInfoReady`](#onhardwareinfoready)
-* [`onProcessInfoReady`](#onprocessinfoready)
-* [`onFpsInfoReady`](#onfpsinfoready)
+* [overwolf.benchmarking.onHardwareInfoReady](#onhardwareinfoready)
+* [overwolf.benchmarking.onProcessInfoReady](#onprocessinfoready)
+* [overwolf.benchmarking.onFpsInfoReady](#onfpsinfoready)
 
 ## requestHardwareInfo(interval, callback)
 

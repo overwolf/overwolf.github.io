@@ -10,63 +10,63 @@ The term streaming might be a bit misleading – we regard saving a video to the
 
 ## Methods Reference
 
-* [`start()`](#startsettings-callback)
-* [`stop()`](#stopstreamid-callback)
-* [`changeVolume()`](#changevolumestreamid-audiooptions-callback)
-* [`setWatermarkSettings()`](#setwatermarksettingssettings-callback)
-* [`getWatermarkSettings()`](#getwatermarksettingscallback)
-* [`getWindowStreamingMode()`](#getwindowstreamingmodewindowid-callback)
-* [`setWindowStreamingMode()`](#setwindowstreamingmodewindowid-streamingmode-callback)
-* [`setWindowObsStreamingMode()`](#setwindowobsstreamingmodewindowid-obsstreamingmode-callback)
-* [`setBRBImage()`](#setbrbimagestreamid-image-backgroundcolor-callback)
-* [`getStreamEncoders()`](#getstreamencoderscallback)
-* [`getAudioDevices()`](#getaudiodevicescallback)
-* [`updateStreamingDesktopOptions()`](#updatestreamingdesktopoptionsstreamid-newoptions-mousecursorstreamingmethod-callback)
-* [`updateTobiiSetting()`](#updatetobiisettingstreamid-param-callback)
-* [`getRunningRecorders()`](#getrunningrecorderscallback)
+* [overwolf.streaming.start()](#startsettings-callback)
+* [overwolf.streaming.stop()](#stopstreamid-callback)
+* [overwolf.streaming.changeVolume()](#changevolumestreamid-audiooptions-callback)
+* [overwolf.streaming.setWatermarkSettings()](#setwatermarksettingssettings-callback)
+* [overwolf.streaming.getWatermarkSettings()](#getwatermarksettingscallback)
+* [overwolf.streaming.getWindowStreamingMode()](#getwindowstreamingmodewindowid-callback)
+* [overwolf.streaming.setWindowStreamingMode()](#setwindowstreamingmodewindowid-streamingmode-callback)
+* [overwolf.streaming.setWindowObsStreamingMode()](#setwindowobsstreamingmodewindowid-obsstreamingmode-callback)
+* [overwolf.streaming.setBRBImage()](#setbrbimagestreamid-image-backgroundcolor-callback)
+* [overwolf.streaming.getStreamEncoders()](#getstreamencoderscallback)
+* [overwolf.streaming.getAudioDevices()](#getaudiodevicescallback)
+* [overwolf.streaming.updateStreamingDesktopOptions()](#updatestreamingdesktopoptionsstreamid-newoptions-mousecursorstreamingmethod-callback)
+* [overwolf.streaming.updateTobiiSetting()](#updatetobiisettingstreamid-param-callback)
+* [overwolf.streaming.getRunningRecorders()](#getrunningrecorderscallback)
 
 ## Events Reference
 
-* [`onStreamingSourceImageChanged`](#onstreamingsourceimagechanged)
-* [`onStopStreaming`](#onstopstreaming)
-* [`onStartStreaming`](#onstartstreaming)
-* [`onStreamingError`](#onstreamingerror)
-* [`onStreamingWarning`](#onstreamingwarning)
-* [`onVideoFileSplited`](#onvideofilesplited)
-* [`onRecordingEngineStateChanged`](#onrecordingenginestatechanged)
+* [overwolf.streaming.onStreamingSourceImageChanged](#onstreamingsourceimagechanged)
+* [overwolf.streaming.onStopStreaming](#onstopstreaming)
+* [overwolf.streaming.onStartStreaming](#onstartstreaming)
+* [overwolf.streaming.onStreamingError](#onstreamingerror)
+* [overwolf.streaming.onStreamingWarning](#onstreamingwarning)
+* [overwolf.streaming.onVideoFileSplited](#onvideofilesplited)
+* [overwolf.streaming.onRecordingEngineStateChanged](#onrecordingenginestatechanged)
 
 ## Types Reference
 
-* [`StreamSettings`](#streamsettings-object)
-* [`overwolf.streaming.enums.StreamingProvider`](#overwolfstreamingenumsstreamingprovider-enum)
-* [`StreamParams`](#streamparams-object)
-* [`StreamInfo`](#streaminfo-object)
-* [`StreamAuthParams`](#streamauthparams-object)
-* [`StreamVideoOptions`](#streamvideooptions-object)
-* [`StreamingVideoEncoderSettings`](#streamingvideoencodersettings-object)
-* [`overwolf.streaming.enums.StreamEncoder`](#overwolfstreamingenumsstreamencoder-enum)
-* [`StreamingVideoEncoderNVIDIA_NVENCSettings`](#streamingvideoencodernvidia-nvencsettings-object)
-* [`overwolf.streaming.enums.StreamEncoderPreset_NVIDIA`](#overwolfstreamingenumsstreamencoderpreset-nvidia-enum)
-* [`overwolf.streaming.enums.StreamEncoderRateControl_NVIDIA`](#overwolfstreamingenumsstreamencoderratecontrol-nvidia-enum)
-* [`StreamingVideoEncoderIntelSettings`](#streamingvideoencoderintelsettings-object)
-* [`StreamingVideoEncoderx264Setting`](#streamingvideoencoderx264settings-object)
-* [`overwolf.streaming.enums.StreamEncoderPreset_x264`](#overwolfstreamingenumsstreamencoderpreset-x264-enum)
-* [`overwolf.streaming.enums.StreamEncoderRateControl_x264`](#overwolfstreamingenumsstreamencoderratecontrol-x264-enum)
-* [`StreamingVideoEncoderAMD_AMFSettings`](#streamingvideoencoderamd-amfsettings-object)
-* [`overwolf.streaming.enums.StreamEncoderPreset_AMD_AMF`](#overwolfstreamingenumsstreamencoderpreset-amd-amf-enum)
-* [`overwolf.streaming.enums.StreamEncoderRateControl_AMD_AMF`](#overwolfstreamingenumsstreamencoderratecontrol-amd-amf-enum)
-* [`StreamDesktopCaptureOptions`](#streamdesktopcaptureoptions-object)
-* [`StreamAudioOptions`](#changevolumestreamid-audiooptions-callback)
-* [`StreamDeviceVolume`](#streamdevicevolume-object)
-* [`StreamPeripheralsCaptureOptions`](#streamperipheralscaptureoptions-object)
-* [`StreamPeripheralsCaptureOptions`](#streamperipheralscaptureoptions-object)
-* [`overwolf.streaming.enums.StreamMouseCursor`](#overwolfstreamingenumsstreammousecursor-enum)
-* [`StreamIngestServer`](#streamingestserver-object)
-* [`ReplayType`](#replaytype-enum)
-* [`WatermarkSettings`](#watermarksettings-object)
-* [`WatermarkSettings`](#watermarksettings-object)
-* [`overwolf.streaming.enums.StreamingMode`](#overwolfstreamingenumsstreamingmode-enum)
-* [`overwolf.streaming.enums.ObsStreamingMode`](#overwolfstreamingenumsobsstreamingmode-enum)
+* [overwolf.streaming.StreamSettings](#streamsettings-object) Object
+* [overwolf.streaming.enums.StreamingProvider](#overwolfstreamingenumsstreamingprovider-enum)
+* [overwolf.streaming.StreamParams](#streamparams-object) Object
+* [overwolf.streaming.StreamInfo](#streaminfo-object) Object
+* [overwolf.streaming.StreamAuthParams](#streamauthparams-object) Object
+* [overwolf.streaming.StreamVideoOptions](#streamvideooptions-object) Object
+* [overwolf.streaming.StreamingVideoEncoderSettings](#streamingvideoencodersettings-object) Object
+* [overwolf.streaming.enums.StreamEncoder](#overwolfstreamingenumsstreamencoder-enum)
+* [overwolf.streaming.StreamingVideoEncoderNVIDIA_NVENCSettings](#streamingvideoencodernvidia-nvencsettings-object) Object
+* [overwolf.streaming.enums.StreamEncoderPreset_NVIDIA](#overwolfstreamingenumsstreamencoderpreset-nvidia-enum)
+* [overwolf.streaming.enums.StreamEncoderRateControl_NVIDIA](#overwolfstreamingenumsstreamencoderratecontrol-nvidia-enum)
+* [overwolf.streaming.StreamingVideoEncoderIntelSettings](#streamingvideoencoderintelsettings-object) Object
+* [overwolf.streaming.StreamingVideoEncoderx264Setting](#streamingvideoencoderx264settings-object) Object
+* [overwolf.streaming.enums.StreamEncoderPreset_x264](#overwolfstreamingenumsstreamencoderpreset-x264-enum)
+* [overwolf.streaming.enums.StreamEncoderRateControl_x264](#overwolfstreamingenumsstreamencoderratecontrol-x264-enum)
+* [overwolf.streaming.StreamingVideoEncoderAMD_AMFSettings](#streamingvideoencoderamd-amfsettings-object) Object
+* [overwolf.streaming.enums.StreamEncoderPreset_AMD_AMF](#overwolfstreamingenumsstreamencoderpreset-amd-amf-enum)
+* [overwolf.streaming.enums.StreamEncoderRateControl_AMD_AMF](#overwolfstreamingenumsstreamencoderratecontrol-amd-amf-enum)
+* [overwolf.streaming.StreamDesktopCaptureOptions](#streamdesktopcaptureoptions-object) Object
+* [overwolf.streaming.StreamAudioOptions](#changevolumestreamid-audiooptions-callback)
+* [overwolf.streaming.StreamDeviceVolume](#streamdevicevolume-object) Object
+* [overwolf.streaming.StreamPeripheralsCaptureOptions](#streamperipheralscaptureoptions-object) Object
+* [overwolf.streaming.StreamPeripheralsCaptureOptions](#streamperipheralscaptureoptions-object) Object
+* [overwolf.streaming.enums.StreamMouseCursor](#overwolfstreamingenumsstreammousecursor-enum)
+* [overwolf.streaming.StreamIngestServer](#streamingestserver-object) Object
+* [overwolf.streaming.ReplayType](#replaytype-enum)
+* [overwolf.streaming.WatermarkSettings](#watermarksettings-object) Object
+* [overwolf.streaming.WatermarkSettings](#watermarksettings-object) Object
+* [overwolf.streaming.enums.StreamingMode](#overwolfstreamingenumsstreamingmode-enum)
+* [overwolf.streaming.enums.ObsStreamingMode](#overwolfstreamingenumsobsstreamingmode-enum)
 
 ## The basic usage flow should be:
 
