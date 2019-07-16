@@ -100,21 +100,3 @@
   stroke: #f1c40f;
   fill: #f1c40f;
 }
-
-/* brute-force make all blocks look the same */
-.admonition {
-  background-color: #D3CFE5 !important;
-  border-left: 4px solid #E6004C !important;
-  color: #484266 !important;
-}
-
-.admonition h5 {
-  color: #484266 !important;
-}
-
-.admonition-icon svg {
-  stroke: #484266 !important;
-  fill: #484266 !important;
-}
-
-/* ----------------------------------------- */

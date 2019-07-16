@@ -226,6 +226,7 @@ input#search_input_react:active {
   transition: opacity 0.3s;
   color: #332E4D;
   opacity: 0.7;
+  text-transform: none;
 }
 
 .docs-prevnext .button:hover {
@@ -260,7 +261,7 @@ i.arrow {
 
 blockquote {
   background-color: #D3CFE5;
-  border-left: 4px solid #E6004C;
+  border-left: 2px solid #FF3434;
   padding: 15px 30px 15px 15px;
   color: #484266;
 }

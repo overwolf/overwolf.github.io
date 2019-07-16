@@ -49,8 +49,8 @@
 
 /** Customization */
 .admonition-warning {
-  background-color: rgba(230, 126, 34, 0.1);
-  border-left: 8px solid #E07000;
+  background-color: #FF8383;
+  border-left: 2px solid #FF3434;
 }
 
 .admonition-warning h5 {
@@ -63,8 +63,8 @@
 }
 
 .admonition-tip {
-  background-color: rgba(46, 204, 113, 0.1);
-  border-left: 8px solid #00CC45;
+  background-color: #D3CFE5;
+  border-left: 2px solid #00CC45;
 }
 
 .admonition-tip h5 {
@@ -77,8 +77,8 @@
 }
 
 .admonition-caution {
-  background-color: rgba(231, 76, 60, 0.1);
-  border-left: 8px solid #FF3434;
+  background-color: #D3CFE5;
+  border-left: 2px solid #E07000;
 }
 
 .admonition-caution h5 {
@@ -91,8 +91,8 @@
 }
 
 .admonition-important {
-  background-color: rgba(52, 152, 219, 0.1);
-  border-left: 8px solid #0085E5;
+  background-color: #D3CFE5;
+  border-left: 2px solid #E6004C;
 }
 
 .admonition-important h5 {
@@ -105,8 +105,8 @@
 }
 
 .admonition-note {
-  background-color: rgba(241, 196, 15, 0.1);
-  border-left: 8px solid #f1c40f;
+  background-color: #D3CFE5;
+  border-left: 2px solid #797399;
 }
 
 .admonition-note h5 {
@@ -117,3 +117,21 @@
   stroke: #f1c40f;
   fill: #f1c40f;
 }
+
+/* brute-force make all blocks look the same */
+.admonition {
+  /* background-color: #D3CFE5 !important; */
+  /* border-left: 4px solid #E6004C !important; */
+  color: #484266 !important;
+}
+
+.admonition h5 {
+  color: #484266 !important;
+}
+
+.admonition-icon svg {
+  stroke: #484266 !important;
+  fill: #484266 !important;
+}
+
+/* ----------------------------------------- */
