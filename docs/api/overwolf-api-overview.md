@@ -135,6 +135,7 @@ Permissions required: Media
 * [overwolf.social.dicord](api/overwolf-social-discord.md) Provides access to the Dicord social provider.
 * [overwolf.social.gfycat](api/overwolf-social-gfycat.md) Provides access to the Gfycat social provider.
 * [overwolf.social.twitter](api/overwolf-social-twitter.md) Provides access to the Twitter social provider.
+* [overwolf.social.reddit](api/overwolf-social-reddit.md) Provides access to the Reddit social provider.
 
 ## [overwolf.web](api/overwolf-web.md)
 

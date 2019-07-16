@@ -27,6 +27,7 @@ Note that not all the flags are mandatory. We added all the available flags for 
         "<a href="#meta-author">author</a>": "Author name",
         "<a href="#meta-version">version</a>": "1.2.3.456",
         "<a href="#meta-minimum">minimum-overwolf-version</a>": "128.0.0.1",
+        "<a href="#meta-minimum-gep">minimum-gep-version</a>": "128.0.0.1",
         "<a href="#meta-description">description</a>": "A plain text description",
         "<a href="#meta-dock">dock_button_title</a>": "Short name of your app",    
         "<a href="#meta-mouse-over">icon</a>": "iconMouseOver.png",
@@ -140,6 +141,7 @@ Note that not all the flags are mandatory. We added all the available flags for 
         "<a href="#meta-object">author</a>": "Author name",
         "<a href="#meta-object">version</a>": "1.2.3.456",
         "<a href="#meta-object">minimum-overwolf-version</a>": "128.0.0.1",
+        "<a href="#meta-object">minimum-gep-version</a>": "128.0.0.1",
         "<a href="#meta-object">description</a>": "A plain text description",
         "<a href="#meta-object">dock_button_title</a>": "Short name of your app",    
         "<a href="#meta-object">icon</a>": "iconMouseOver.png",
@@ -230,9 +232,9 @@ There are many features that are enabled through this file. Some are mandatory (
 | -----------------------------------------------|-------------------------------------------| ------------------------------------------|
 | <a name="manifest_version">manifest_version</a>  | integer                                   | Mandatory. Targets the manifest version you are working on. Currently there is only one version, therefore this value is always “1”. |
 | <a id="type">type</a>                          | string                                    | Mandatory. Declares the type of application. Can only be “WebApp”.                               |
-| <a id="meta">meta</a>                          | [`meta` object](#meta-object)             | Mandatory. The app metadata.                                                                     |
-| <a id="permissions">permissions</a>            | [`permissions[]`](#permissions-array)     | An array of permissions that the app requires.               |
-| <a id="data">data</a>                          | [`webapp settings` object](#webapp-settings-object)  | Mandatory. App data. Changes between different apps types. Currently can only be from type webapp settings.|
+| <a id="meta">meta</a>                          | [meta](#meta-object) Object             | Mandatory. The app metadata.                                                                     |
+| <a id="permissions">permissions</a>            | [permissions[]](#permissions-array)     | An array of permissions that the app requires.               |
+| <a id="data">data</a>                          | [webapp settings](#webapp-settings-object) Object  | Mandatory. App data. Changes between different apps types. Currently can only be from type webapp settings.|
 
 ## Permissions array
 To use most overwolf.* APIs, your Overwolf app must declare its intent in the permissions field of the manifest.json.
@@ -268,6 +270,7 @@ The App Metadata.
 | <a id="meta-author">author</a>              | string   |  Mandatory. Who developed the app. *See [note](#meta-note).*                                               | 0.78  |
 | <a id="meta-version">version</a>            | string   |  Mandatory. One to four dot-separated integers identifying the version of this app.</br>Needs to be in the format of X.X.X where the X’s are numbers.</br>Here are some examples of valid versions: </br> ["version": "1", "version": "1.0", "version": "2.11.3", "version": "4.1.2.345"]                                          | 0.78  |
 | <a id="meta-minimum">minimum-overwolf-version</a> | string   |  Mandatory. Minimum version of the Overwolf Client with which the app is compatible. The format is similar to the "version" field.  | 0.78  |
+| <a id="meta-minimum-gep">minimum-gep-version</a> | string   |  Mandatory. Minimum version of the Overwolf Game Events Provider with which the app is compatible. The format is similar to the "version" field.  | 0.78  |
 | <a id="meta-description">description</a>    | string   |  Mandatory. The description of your app on the Appstore tile. Limited to 180 characters.                   | 0.78  |
 | <a id="meta-dock">meta-dock_button_title</a>| string   |  Short name of your app. Provide a short title that will fit in the dock button area – 18 chars max        | 0.79  |
 | <a id="meta-mouse-over">icon</a>            | string   |  Mandatory. A relative path from the app folder to the icon’s png file. This is the mouse-over (multi-colored) version of the icon that will be displayed on the Overwolf dock. The icon dimensions should be 256×256 pixels, 72 PPI. Overwolf will resize it to 37×37. Please make sure the png is smaller than 30KB.  More details on app icons can be found [here](../start/submit-app-proposal).                         | 0.78  |
@@ -283,24 +286,24 @@ A list of additional settings for the app.
 
 | Name                              | Type     |  Description                                                                                               | Since |
 |-----------------------------------|--------------------------------------------| -------------------------------------------------------------------------| ----- | 
-| <a id="game_targeting">"game_targeting"</a>              | [`GameTargeting` object](#gametargeting-object)   |  An app can declare itself as targeted to one game or more.                  | 0.78  |
+| <a id="game_targeting">"game_targeting"</a>              | [GameTargeting](#gametargeting-object) Object   |  An app can declare itself as targeted to one game or more.                  | 0.78  |
 | <a id="start_window">"start_window"</a>   | string     |  Mandatory. The name of the window (from the “windows” list) to initially load when the app starts.        | 0.78  |
-| <a id="window-data">"windows"</a>              | [`extension_window_data` object](#extension-window-data-object)   |  Mandatory. A map from window names to window settings.                  | 0.78  |
+| <a id="window-data">"windows"</a>              | [extension_window_data](#extension-window-data-object) Object   |  Mandatory. A map from window names to window settings.                  | 0.78  |
 | <a id="enable_top_isolated_sites_console">"enable_top_isolated_sites_console"</a> | bool           |  Enable/Disable printing of ads log to the console. </br>*Default value is “false”.*   |0.115  |
-| <a id="externally_connectable">"externally_connectable"</a>    | [`ExternallyConnectable` object](#externallyconnectable-object)  | A definition of external URLs the web app should be able to access.| 0.78  |
+| <a id="externally_connectable">"externally_connectable"</a>    | [ExternallyConnectable](#externallyconnectable-object) Object  | A definition of external URLs the web app should be able to access.| 0.78  |
 | <a id="start_window">"start_window"</a>   | string     |  Mandatory. The name of the window (from the “windows” list) to initially load when the app starts.        | 0.78  |
-| <a id="protocol_override_domains">"protocol_override_domains"</a>     | [`ProtocolOverrideDomains` object](#protocoloverridedomains-object)   |  Override the relative protocol with a preferred one.  | 0.78  |
+| <a id="protocol_override_domains">"protocol_override_domains"</a>     | [ProtocolOverrideDomains](#protocoloverridedomains-object) Object   |  Override the relative protocol with a preferred one.  | 0.78  |
 | <a id="force_browser">"force_browser"</a> | string |  Causes links in the app to be opened using the user’s default browser or Overwolf’s browser.</br>*Possible values: "user" or "overwolf".* |0.91  |
 | <a id="enable_osr_acceleration">"enable_osr_acceleration"</a> | bool |  Enable OSR/GPU acceleration if supported by this machine. </br>*Note: see also the [optimize_accelerate_rendering](#optimize_accelerate_rendering) flag* |0.126  |
-| <a id="game_events">"game_events"</a> | [`game_events[]`](#game-events-array) |  A list of game ids for which game events are required. |0.92  |
+| <a id="game_events">"game_events"</a> | [game_events[]](#game-events-array) |  A list of game ids for which game events are required. |0.92  |
 | <a id="disable_log_limit">"disable_log_limit"</a> | bool |  Disable the log file 1000 lines limitation. </br>*Note: Do not enable it without Overwolf approval.*        | 0.12 |
-| <a id="extra-objects">"extra-objects"</a>     | [`extra-objects` object](#extra-objects-object)   |  Allows the access of custom plugin dlls.  | 0.81  |
-| <a id="hotkeys">"hotkeys"</a>     | [`hotkeys` object](#hotkeys-object)   |  shortcut keys that trigger an app action.  | 0.78  |
-| <a id="content_scripts">"content_scripts"</a> | [`content_scripts[]`](#content-scripts-array) |  A list of content scripts to be loaded for specific windows. |0.78  |
-| <a id="launch_events">"launch_events"</a> | [`launch_event_settings[]`](#launch-event-settings-array) |  A list of events causing the app to launch. |0.82  |
+| <a id="extra-objects">"extra-objects"</a>     | [extra-objects](#extra-objects-object) Object  |  Allows the access of custom plugin dlls.  | 0.81  |
+| <a id="hotkeys">"hotkeys"</a>     | [hotkeys](#hotkeys-object) Object   |  shortcut keys that trigger an app action.  | 0.78  |
+| <a id="content_scripts">"content_scripts"</a> | [content_scripts[]](#content-scripts-array) |  A list of content scripts to be loaded for specific windows. |0.78  |
+| <a id="launch_events">"launch_events"</a> | [launch_event_settings[]](#launch-event-settings-array) |  A list of events causing the app to launch. |0.82  |
 | <a id="user_agent">"user_agent"</a> | string |  A custom user agent for the app to use when creating http requests. </br>*Note: using ‘navigator.userAgent’ will not return the custom user agent, but the default one.* |0.86  |
 | <a id="disable_dt">"disable_dt"</a> | bool |  Disable opening of the developer tools for the app (with Ctrl+shift+I). </br>*Default value – “false”* |0.118  |
-| <a id="developer-game-settings">"developer"</a> | [`developer setting`](#developer-settings-object) object|  Additional setting for developers. |0.127  |
+| <a id="developer-game-settings">"developer"</a> | [developer setting](#developer-settings-object) object|  Additional setting for developers. |0.127  |
 
 ## GameTargeting object
 An app can declare itself as targeted to one or more games.
@@ -308,7 +311,7 @@ An app can declare itself as targeted to one or more games.
 | Name     | Type                            |  Description                                                                                                                            | Since |
 |----------|---------------------------------| --------------------------------------------------------------------------------------------------------------------------------------- |------ |
 | type     | string                          |  “all” – All games (e.g voice communication apps).</br>“dedicated” – Dedicated to a game or more than one game.</br> “none” – No games. | 0.78  |
-| game_ids | [`game_ids[]`](#game-ids-array) |    The games IDs that your app targets                                                                                                  | 0.78  |
+| game_ids | [game_ids[]](#game-ids-array) |    The games IDs that your app targets                                                                                                  | 0.78  |
 
 Example code:
 ```json
@@ -354,7 +357,7 @@ A list of settings for the app windows.
 | <a id="disable_blur">disable_blur</a>         | bool       | Causes the app’s window to never “lose focus”, so the window.onblur event is never triggered.  </br>*Default value is false*              | 0.106  |
 | <a id="native_window">native_window</a>  | bool  | Creates a native CEF desktop only window (which improves performance)</br>*Note: Should only be used with desktop_only windows*. </br>*Default value is false* | 0.107  |
 | <a id="is_background_page">is_background_page</a> | bool       | This flag MUST be used with background/hidden controller windows. </br>*Note: With this flag set to 'true', there's no need to set window related properties such as size, focus,  transparency, etc.*                                                                                                                                                        | 0.107  |
-| <a id="focus_game_takeover">focus_game_takeover</a>  | [`string`](#focus_game_takeover-options) |  Allows you to control the behavior of an app window while in a “mouse-less” game state. </BR>*Possible values: "ReleaseOnHidden" or "ReleaseOnLostFocus".*              | 0.107  |
+| <a id="focus_game_takeover">focus_game_takeover</a>  | [string](#focus_game_takeover-options) |  Allows you to control the behavior of an app window while in a “mouse-less” game state. </BR>*Possible values: "ReleaseOnHidden" or "ReleaseOnLostFocus".*              | 0.107  |
 | <a id="focus_game_takeover_release_hotkey">focus_game_takeover_release_hotkey</a> | string | Allow Overwolf to display your app’s hotkey combination on the screen when the user switches to “exclusive mode”. </br>*The string value should be the hotkey name from the hotkeys section.*</br>*Relevant only if you set focus_game_takeover=ReleaseOnHidden*  | 0.110  |
 | <a id="enable_top_isolation">enable_top_isolation</a>    | bool       | Enable iframe isolation: runs it in a different process, so if some iframe is misbehaving (e.g. memory leak, etc.) it won’t crash your app and will only crash the iframe process. </br>useful with Overwolf ads that run in an iframe.</br>*Note: Please contact us before adding it to your app. Default value is true*                       | 0.110  |
 | <a id="allow_local_file_access">allow_local_file_access</a> | bool  |  Allows access to local files that are not located in your app’s (extension) folder.</br>*Default value is false*       | 0.109 |
@@ -422,7 +425,7 @@ Example code:
 "game_events": [7764, 5426, 7314]
 ```
 
-Note: this array is exactly the same as the [`game_ids[]`](#game-ids-array), and we use it only for backwards compatibility.
+Note: this array is exactly the same as the [game_ids[]](#game-ids-array), and we use it only for backwards compatibility.
 
 ## extra-objects object
 Allows the access of custom plugin dlls. For more info see https://github.com/overwolf/overwolf-plugins.
@@ -446,7 +449,7 @@ Example code:
     }
 }
 ```
-Then, from your app you can use the [`overwolf.current_extension`](overwolf-current_extension) API to get an instance:
+Then, from your app you can use the [overwolf.current_extension](overwolf-current_extension) API to get an instance:
 
 ```javascript
 overwolf.current_extension.getExtraObject(“simple-io-plugin”, function…)
@@ -516,7 +519,7 @@ A list of events causing the app to launch. It is enough that one of the events 
 | Name    | Type   | Description                                                 | Since |
 |---------| -------|-------------------------------------------------------------|------ |
 | event | enum | The type name of the event. </br>**["GameLaunch", "AllGamesLaunch"]**| 0.82  |
-| event_data |  [`launch_event`](#launch-event-object) object | The list of game class IDs for which the app will launch.    | 0.82  |
+| event_data |  [launch_event](#launch-event-object) object | The list of game class IDs for which the app will launch.    | 0.82  |
 | start_minimized     | bool | The app’s main window will start minimized. | 0.82  |
 | include_launchers      | bool | The app will be launched when game launcher is detected.  | 0.103  |
 

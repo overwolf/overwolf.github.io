@@ -38,6 +38,8 @@ You can use the following helpful URL’s to retrieve an extension file content 
 
 * [`onAppLaunchTriggered`](#onapplaunchtriggered)
 * [`onExtensionUpdateStateChanged`](#onextensionupdatestatechanged)
+* [`onUncaughtException`](#onuncaughtexception)
+
 
 ## launch(uid , parameter)
 #### Version added: 0.78
@@ -222,6 +224,8 @@ A callback function which will be called with the status of the request
 
 > Tries to download an update for the calling extension.
 
+This functions allows apps to check and perform an update without having to wait for Overwolf to do so.
+
 Parameter | Type                  | Description                                                                           |
 --------- | ----------------------| ------------------------------------------------------------------------------------- |
 callback  | function              | The result of the request                                                             |
@@ -234,7 +238,7 @@ callback  | function              | The result of the request                   
 ## onExtensionUpdateStateChanged
 #### Version added: 0.132
 
-> Fires after the current app was updated succesfully.
+> Fires after the current app was updated successfully.
 
 ### The origin string
 
@@ -263,3 +267,15 @@ after-install    | auto-launched after installation                             
 :::tip
 if you want to get the origin (what triggered the app launch) before/without register the events, you can run the `window.location.href` command.
 :::
+
+## onUncaughtException
+#### Version added: 0.133
+
+> Called for global uncaught exceptions in a frame.
+
+callback args:
+
+0 - exception.Message
+1- function name \ "unknown"
+2- ScriptName \ "unknown"
+3 (new) - excpetion erxtra data (json) {

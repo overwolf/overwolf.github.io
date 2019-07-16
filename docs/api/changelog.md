@@ -6,6 +6,13 @@ sidebar_label: Changelog
 
 All notable changes to this project will be documented in this file.
 
+## 0.133 (July 2019)
+
+### API Features
+
+* [minimum-gep-version](manifest-json#meta-minimum-gep) - New manifest flag.
+  Allow extensions to set a minimum GEP version in manifest (similar to minimum-overwolf-version).
+
 ## 0.132 (July 2019)
 
 ### API Features
