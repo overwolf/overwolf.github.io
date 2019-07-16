@@ -144,27 +144,27 @@ In order to create this window type, the `transparent` property in the manifest.
 
 Here you can see an examples for standard and transparent windows from our sample app, and other windows from a real live apps on our apps store:
 
-<div class="box" data-slick='{"slidesToShow": 1}'>
-<a data-fancybox="gallery" data-caption="standard window sample app" href="../assets/standard-window.png">
- "standard" window that is being used in our sample app. 
+<div class="box" data-slick='{"variableWidth": true}'>
+  <a data-fancybox="gallery1" data-caption="standard window sample app" href="../assets/standard-window.png">
+  "standard" window that is being used in our sample app. 
     <span class="thumb">
       <img src="../assets/standard-window.png" alt="standard window">
     </span>
   </a>
-<a data-fancybox="gallery" data-caption="transparent window sample app" href="../assets/transparent-window.png">
- "transparent" window that is being used in our sample app. 
+  <a data-fancybox="gallery1" data-caption="transparent window sample app" href="../assets/transparent-window.png">
+  "transparent" window that is being used in our sample app. 
     <span class="thumb">
       <img src="../assets/transparent-window.png" alt="transparent window">
     </span>
   </a>
-  <a data-fancybox="gallery" data-caption="1366×775 Window size" href="../assets/transparent-overwolf-window-2.jpg">
-“transparent” window that is being used in the Spawning Tool Build Advisor. 
+  <a data-fancybox="gallery1" data-caption="1366×775 Window size" href="../assets/transparent-overwolf-window-2.jpg">
+  “transparent” window that is being used in the Spawning Tool Build Advisor. 
     <span class="thumb">
       <img src="../assets/transparent-overwolf-window-2.jpg" alt="1366×775 Window size">
     </span>
   </a>
-  <a data-fancybox="gallery" data-caption="1680×980 Window size" href="../assets/transparent-overwolf-window-3.jpg">
-“transparent” window being used in the Legendary Builds app
+  <a data-fancybox="gallery1" data-caption="1680×980 Window size" href="../assets/transparent-overwolf-window-3.jpg">
+  “transparent” window being used in the Legendary Builds app
     <span class="thumb">
       <img src="../assets/transparent-overwolf-window-3.jpg" alt="1680×980 Window size">
     </span>
