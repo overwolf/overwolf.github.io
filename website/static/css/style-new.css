@@ -292,6 +292,8 @@ blockquote {
 
 .slick-slider a {
   color: #797399;
+  font-size: 14px;
+  font-family: 'Lato';
   line-height: 40px;
 }
 
