@@ -60,7 +60,7 @@ nav.toc {
 
 .toc .toggleNav .navGroup .navGroupCategoryTitle {
   border-left: 4px solid transparent;
-  padding: 10px 0px 10px 21px;
+  padding: 5px 0px 5px 21px;
   font-size: 16px;
 }
 
@@ -226,6 +226,7 @@ input#search_input_react:active {
   transition: opacity 0.3s;
   color: #332E4D;
   opacity: 0.7;
+  text-transform: none;
 }
 
 .docs-prevnext .button:hover {
@@ -260,7 +261,43 @@ i.arrow {
 
 blockquote {
   background-color: #D3CFE5;
-  border-left: 4px solid #E6004C;
+  border-left: 2px solid #FF3434;
   padding: 15px 30px 15px 15px;
   color: #484266;
+}
+
+/* Make space between images */
+.slick-slide {
+  margin-right: 10px;
+}
+
+/* Color for slick gallery prev/next arrows */
+.slick-prev:before, .slick-next:before {
+  color: #958FB2 !important;
+}
+
+/* Color for active dot in slick gallery */
+.slick-dots li.slick-active button:before {
+  color: #958FB2 !important;
+}
+
+/* Color for inactive dots in slick gallery */
+.slick-dots li button:before {
+  color: #B2ADCC !important;
+}
+
+/* Bottom margin for slick gallery */
+.slick-dotted.slick-slider {
+  margin-bottom: 60px;
+}
+
+.slick-slider a {
+  color: #797399;
+  font-size: 14px;
+  font-family: 'Lato';
+  line-height: 40px;
+}
+
+.slick-slider a:hover {
+  color: #332E4D !important;
 }

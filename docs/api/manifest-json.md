@@ -3,7 +3,6 @@ id: manifest-json
 title: manifest.json
 sidebar_label: manifest.json
 ---
-<script>hljs.initHighlightingOnLoad();</script>
 
 ## Welcome to the manifest.json file
 
