@@ -125,6 +125,7 @@ Data example:
 Data example:
 
 `{"info":{"match_info":{"game_mode":"tft"}},"feature":"match_info"}`
+`{"info":{"match_info":{"game_mode":"lol"}},"feature":"match_info"}`
 
 ### Events
 
@@ -184,7 +185,7 @@ player_status  | roster      | A full list of the players currently in the match
 
 #### *player_status* notes
 
-Each player provides the following data:
+Each player object includes the following data:
 
 * summoner name
 * slot
