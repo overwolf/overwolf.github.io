@@ -264,3 +264,37 @@ blockquote {
   padding: 15px 30px 15px 15px;
   color: #484266;
 }
+
+/* Make space between images */
+.slick-slide {
+  margin-right: 10px;
+}
+
+/* Color for slick gallery prev/next arrows */
+.slick-prev:before, .slick-next:before {
+  color: #958FB2 !important;
+}
+
+/* Color for active dot in slick gallery */
+.slick-dots li.slick-active button:before {
+  color: #958FB2 !important;
+}
+
+/* Color for inactive dots in slick gallery */
+.slick-dots li button:before {
+  color: #B2ADCC !important;
+}
+
+/* Bottom margin for slick gallery */
+.slick-dotted.slick-slider {
+  margin-bottom: 60px;
+}
+
+.slick-slider a {
+  color: #797399;
+  line-height: 40px;
+}
+
+.slick-slider a:hover {
+  color: #332E4D !important;
+}
