@@ -92,7 +92,8 @@ const siteConfig = {
     '/js/slicker.js',
     '/js/replaceArrow.js',
     '/js/appendUpdate.js',
-    '/js/overlayScrollbars.js'
+    '/js/overlayScrollbars.js',
+    '/js/highlight.js'
   ],
   stylesheets: [
     'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/default.min.css',
