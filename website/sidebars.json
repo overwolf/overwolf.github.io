@@ -31,8 +31,13 @@
     "api": {
 			"API Reference": 
 			["api/overwolf-api-overview", "api/changelog", "api/manifest-json", "api/overwolf-benchmarking", "api/overwolf-extensions", "api/overwolf-log", "api/overwolf-profile", "api/overwolf-streaming", "api/overwolf-profile", "api/overwolf-tobii", "api/overwolf-utils", "api/overwolf-os"],
-			"overwolf.io":
-			["api/overwolf-io", "api/overwolf-io-paths"],
+			"overwolf.benchmarking": ["api/overwolf-benchmarking"],
+			"overwolf.log":	["api/overwolf-log"],
+			"overwolf.streaming": ["api/overwolf-streaming"],
+			"overwolf.profile":	["api/overwolf-profile"],
+			"overwolf.tobii": ["api/overwolf-tobii"],
+			"overwolf.utils": ["api/overwolf-utils"],
+			"overwolf.os": ["api/overwolf-os"],
 			"overwolf.extensions":
 			["api/overwolf-extensions", "api/overwolf-extension-current"],
 			"overwolf.games":
