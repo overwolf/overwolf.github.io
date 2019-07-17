@@ -9,7 +9,7 @@ sidebar_label: Contact Us
 For any of your needs, we’ll be happy to hear you out via email: [developers@overwolf.com](mailto:developers@overwolf.com).
 
 ## Join our Slack
-Please sent us an email if you would like to join our Dev Community on Slack: [developers@overwolf.com](mailto:developers@overwolf.com).
+Please send us an email if you would like to join our Dev Community on Slack: [developers@overwolf.com](mailto:developers@overwolf.com).
 
 ## Join our Discord
 Join our Discord community where you can interact with Overwolf staff and other Overwolf app developers in real-time.
