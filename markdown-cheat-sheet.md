@@ -81,7 +81,14 @@ URLs and URLs in angle brackets will automatically get turned into links: http:/
 
 ### Images
 
-Inline-style: (hover to see the title text):
+If you want to display images in the site you can do it in two ways:
+
+1. upload files directly to the repo using the "upload files" button.
+   make sure to upload it to the `overwolf.github.io/docs/assets` folder.
+   
+2. Upload files to online services like https://imgur.com.
+
+add images Inline-style: (hover to see the title text):
 
 <pre lang="no-highlight"><code>
 
