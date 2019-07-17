@@ -72,7 +72,7 @@ The term streaming might be a bit misleading – we regard saving a video to the
 
 ### 1. Register to the onStopStreaming
 
-Register to the `onStopStreaming` event to know when the streaming stopped:
+Register to the [onStopStreaming](#onstopstreaming) event to know when the streaming stopped:
 
 ```js
 overwolf.streaming.onStopStreaming.addListener(function(result) {
@@ -83,7 +83,7 @@ overwolf.streaming.onStopStreaming.addListener(function(result) {
 
 ### 2. Register to the onStreamingError
 
-Register to the `onStreamingError` event, to know if a streaming error occurred which will also stop the streaming session:
+Register to the [onStreamingError](#onstreamingerror) event, to know if a streaming error occurred which will also stop the streaming session:
 
 ```js
 overwolf.streaming.onStreamingError.addListener(function(result) {
@@ -124,7 +124,7 @@ NOTE: we only started with the UPPERCASE convention later on.
 
 ### 3. Register to the onStreamingWarning
 
- Register to the `onStreamingWarning` event to know when a warning occurred:
+ Register to the [onStreamingWarning](#onstreamingwarning) event to know when a warning occurred:
 
 ```js
 overwolf.streaming.onStreamingWarning.addListener(function(result) {
@@ -135,18 +135,18 @@ overwolf.streaming.onStreamingWarning.addListener(function(result) {
 
 ### 4. Register to onStreamingSourceImageChanged
 
- Optionally register to `onStreamingSourceImageChanged`, to get an event when the user switched between capturing his desktop and the game.
+ Optionally register to [onStreamingSourceImageChanged](#onstreamingsourceimagechanged), to get an event when the user switched between capturing his desktop and the game.
 
 ### 5. Call overwolf.streaming.getStreamEncoders
 
-Call `overwolf.streaming.getStreamEncoders` and `overwolf.streaming.getAudioDevices`.
+Call [getStreamEncoders()](#getstreamencoderscallback) and [getAudioDevices()](#getaudiodevicescallback).
 This will give a list of all possible encoders and audio devices – you can then use this list to let the user select his preferred encoder/device.
 In terms of encoder priorities – we recommend: NVIDIA > AMD > INTEL > x264.
-As long as the “enabled” field = true, you can offer the user to use the encoder.
+As long as the "enabled" field = true, you can offer the user to use the encoder.
 
 ### 6. Call overwolf.streaming.start
 
-Create a JSON object with all of the streaming details (See example on the top of the page) and call `overwolf.streaming.start`.
+Create a JSON object with all of the streaming details (See example on the top of the page) and call [start()](#startsettings-callback).
 
 * For video recording you don’t need the `ingest_server`, `stream_info` and `auth` objects.
 * For video recording we recommend using a `max_kbps` value of higher than 8000.
@@ -155,17 +155,17 @@ Create a JSON object with all of the streaming details (See example on the top o
 
 ### 7. Allow the user to change volume
 
-Allow the user to change volume with `overwolf.streaming.changeVolume` while streaming.
+Allow the user to change volume with [changeVolume()](#changevolumestreamid-audiooptions-callback) while streaming.
 
 ### 8. Call overwolf.streaming.stop
 
-Call `overwolf.streaming.stop` to stop the streaming session.
+Call [stop()](#stopstreamid-callback) to stop the streaming session.
 
 ### Extras
 
-* Use `setBRBImage` when streaming to Twitch.tv when `capture_desktop` is not enabled, this will allow you to customize the Be-Right-Back image the viewers will see.
-* Use `setWindowStreamingMode` for video recording and streaming – this method works on a per-overwolf-window basis – for each window you can decide if it is to be shown in the stream or not – regardless of whether the streamer is viewing it or not.
-* Use `setWindowObsStreamingMode` when you aren’t streaming with Overwolf but want to leverage Overwolf’s APIs and stream with OBS.
+* Use [setBRBImage()](#setbrbimagestreamid-image-backgroundcolor-callback) when streaming to Twitch.tv when `capture_desktop` is not enabled, this will allow you to customize the Be-Right-Back image the viewers will see.
+* Use [setWindowStreamingMode](#setwindowstreamingmodewindowid-streamingmode-callback) for video recording and streaming – this method works on a per-overwolf-window basis – for each window you can decide if it is to be shown in the stream or not – regardless of whether the streamer is viewing it or not.
+* Use [setWindowObsStreamingMode](#setwindowobsstreamingmodewindowid-obsstreamingmode-callback) when you aren’t streaming with Overwolf but want to leverage Overwolf’s APIs and stream with OBS.
 
 ## start(settings, callback)
 
@@ -281,12 +281,6 @@ A callback function which will be called with the status of the request
 { "status": "error", "error": "something went wrong..." }
 ```
 
-#### Usage Example
-
-```javascript
-
-```
-
 ## changeVolume(streamId, audioOptions, callback)
 
 #### Version added: 0.78
@@ -313,12 +307,6 @@ A callback function which will be called with the status of the request
 
 ```json
 { "status": "error" }
-```
-
-#### Usage Example
-
-```javascript
-
 ```
 
 ## setWatermarkSettings(settings, callback)
@@ -386,12 +374,6 @@ A callback function which will be called with the status of the request
 { "status": "error" }
 ```
 
-#### Usage Example
-
-```javascript
-
-```
-
 ## getWindowStreamingMode(windowId, callback)
 
 #### Version added: 0.78
@@ -417,12 +399,6 @@ A callback function which will be called with the status of the request
 
 ```json
 { "status": "error" }
-```
-
-#### Usage Example
-
-```javascript
-
 ```
 
 ## setWindowStreamingMode(windowId, streamingMode, callback)
@@ -453,12 +429,6 @@ A callback function which will be called with the status of the request
 { "status": "error" }
 ```
 
-#### Usage Example
-
-```javascript
-
-```
-
 ## setWindowObsStreamingMode(windowId, obsStreamingMode, callback)
 
 #### Version added: 0.78
@@ -485,12 +455,6 @@ A callback function which will be called with the status of the request
 
 ```json
 { "status": "error" }
-```
-
-#### Usage Example
-
-```javascript
-
 ```
 
 ## setBRBImage(streamId, image, backgroundColor, callback)
@@ -520,12 +484,6 @@ A callback function which will be called with the status of the request
 
 ```json
 { "status": "error" }
-```
-
-#### Usage Example
-
-```javascript
-
 ```
 
 ## getStreamEncoders(callback)
@@ -563,12 +521,6 @@ A callback function which will be called with the status of the request
 
 ```json
 { "status": "error" }
-```
-
-#### Usage Example
-
-```javascript
-
 ```
 
 ## getAudioDevices(callback)
@@ -611,12 +563,6 @@ A callback function which will be called with the status of the request
 { "status": "error" }
 ```
 
-#### Usage Example
-
-```javascript
-
-```
-
 ## updateStreamingDesktopOptions(streamId, newOptions, mouseCursorStreamingMethod, callback)
 
 #### Version added: 0.78
@@ -646,12 +592,6 @@ A callback function which will be called with the status of the request
 { "status": "error" }
 ```
 
-#### Usage Example
-
-```javascript
-
-```
-
 ## updateTobiiSetting(streamId, param, callback)
 
 #### Version added: 0.97
@@ -678,12 +618,6 @@ A callback function which will be called with the status of the request
 
 ```json
 { "status": "error" }
-```
-
-#### Usage Example
-
-```javascript
-
 ```
 
 ## getRunningRecorders(callback)
@@ -720,29 +654,11 @@ A callback function which will be called with the status of the request
 { "status": "error" }
 ```
 
-#### Usage Example
-
-```javascript
-
-```
-
 ## onStreamingSourceImageChanged
 
 #### Version added: 0.78
 
 > Fired when the stream started streaming a new image source (desktop, game).
-
-#### Usage Example
-
-```javascript
-
-```
-
-#### Event Data Example
-
-```json
-
-```
 
 ## onStopStreaming
 
@@ -750,35 +666,11 @@ A callback function which will be called with the status of the request
 
 > Fired when the stream has stopped.
 
-#### Usage Example
-
-```javascript
-
-```
-
-#### Event Data Example
-
-```json
-
-```
-
 ## onStartStreaming
 
 #### Version added: 0.106
 
 > Fired when the stream has started.
-
-#### Usage Example
-
-```javascript
-
-```
-
-#### Event Data Example
-
-```json
-
-```
 
 ## onStreamingError
 
@@ -803,12 +695,6 @@ A callback function which will be called with the status of the request
 * Out_Of_Disk_Space
 * Update_Driver
 
-#### Usage Example
-
-```javascript
-
-```
-
 #### Event Data Example
 
 ```json
@@ -825,47 +711,17 @@ A callback function which will be called with the status of the request
 
 > Fired upon a warning with the stream.
 
-#### Usage Example
-
-```javascript
-
-```
-
-#### Event Data Example
-
-```json
-
-```
-
 ## onVideoFileSplited
 
 #### Version added: 0.103
 
 > Fired upon video file splited.
 
-#### Usage Example
-
-```javascript
-
-```
-
 ## onRecordingEngineStateChanged
 
 #### Version added: 0.127
 
 > Fired when a replay stated\\stopped by any app.
-
-#### Usage Example
-
-```javascript
-
-```
-
-#### Event Data Example
-
-```json
-
-```
 
 ## StreamSettings Object
 
