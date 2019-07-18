@@ -8,18 +8,18 @@ Use the `overwolf.os` API for Operating System related functionalities.
 
 ## Methods Reference
 
-* [`overwolf.os.setMenu()`](#setmenumenu-callback)
-* [`overwolf.os.getRegionInfo()`](#getregioninfocallback)
+* [overwolf.os.setMenu()](#setmenumenu-callback)
+* [overwolf.os.getRegionInfo()](#getregioninfocallback)
 
 ## Events Reference
 
-* [`overwolf.os.onMenuItemClicked`](#onmenuitemclicked)
-* [`overwolf.os.onTrayIconClicked`](#ontrayiconclicked)
-* [`overwolf.os.onTrayIconDoubleClicked`](#ontrayicondoubleclicked)
+* [overwolf.os.onMenuItemClicked](#onmenuitemclicked)
+* [overwolf.os.onTrayIconClicked](#ontrayiconclicked)
+* [overwolf.os.onTrayIconDoubleClicked](#ontrayicondoubleclicked)
 
 ## Types Reference
 
-* [`ExtensionTrayMenu`](#extensiontraymenu-object) Object
+* [ExtensionTrayMenu](#extensiontraymenu-object) Object
 
 ## setMenu(menu, callback)
 #### Version added: 0.131

@@ -8,28 +8,28 @@ Provides API for Logitech Arx Control.
 
 ## Methods Reference
 
-* [`init()`](#initidentifier-friendlyname-callback)
-* [`publishApp()`](#publishappindexfilename-callback)
-* [`addFileAs()`](#addfileasfileurl-filename-mimetype-callback)
-* [`addContentAs()`](#addcontentasbase64content-filename-callback)
-* [`addContentAs()`](#addcontentascontent-filename-mimetype-callback)
-* [`addUtf8StringAs()`](#addutf8stringasstringcontent-filename-mimetype-callback)
-* [`addImageFromBitmap()`](#addimagefrombitmapbitmap-width-height-filename-callback)
-* [`setIndex()`](#setindexfilename-callback)
-* [`setTagPropertyById()`](#settagpropertybyidtagid-prop-newvalue-callback)
-* [`setTagsPropertyByClass()`](#settagspropertybyclasstagsclass-prop-newvalue-callback)
-* [`setTagContentById()`](#settagcontentbyidtagid-newcontent-callback)
-* [`setTagsContentByClass()`](#settagscontentbyclasstagsclass-newcontent-callback)
-* [`shutdown()`](#shutdown)
+* [overwolf.logitech.arx.init()](#initidentifier-friendlyname-callback)
+* [overwolf.logitech.arx.publishApp()](#publishappindexfilename-callback)
+* [overwolf.logitech.arx.addFileAs()](#addfileasfileurl-filename-mimetype-callback)
+* [overwolf.logitech.arx.addContentAs()](#addcontentasbase64content-filename-callback)
+* [overwolf.logitech.arx.addContentAs()](#addcontentascontent-filename-mimetype-callback)
+* [overwolf.logitech.arx.addUtf8StringAs()](#addutf8stringasstringcontent-filename-mimetype-callback)
+* [overwolf.logitech.arx.addImageFromBitmap()](#addimagefrombitmapbitmap-width-height-filename-callback)
+* [overwolf.logitech.arx.setIndex()](#setindexfilename-callback)
+* [overwolf.logitech.arx.setTagPropertyById()](#settagpropertybyidtagid-prop-newvalue-callback)
+* [overwolf.logitech.arx.setTagsPropertyByClass()](#settagspropertybyclasstagsclass-prop-newvalue-callback)
+* [overwolf.logitech.arx.setTagContentById()](#settagcontentbyidtagid-newcontent-callback)
+* [overwolf.logitech.arx.setTagsContentByClass()](#settagscontentbyclasstagsclass-newcontent-callback)
+* [overwolf.logitech.arx.shutdown()](#shutdown)
 
 ## Events Reference
 
-* [`onEvent`](#onevent)
-* [`onError`](#onerror)
+* [overwolf.logitech.arx.onEvent](#onevent)
+* [overwolf.logitech.arx.onError](#onerror)
 
 ## Types Reference
 
-* [`Logitech.Arx.Event.Data`](#logitecharxeventdata-object) Object.
+* [Logitech.Arx.Event.Data](#logitecharxeventdata-object) Object.
 
 ## init(identifier, friendlyName, callback)
 #### Version added: 0.93

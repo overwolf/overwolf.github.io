@@ -13,16 +13,16 @@ Our web sockets by-pass cert checks for localhost WSS servers like LCU (league o
 
 ## Methods Reference
 
-* [`overwolf.web.websocket.connect()`](#connectcallback)
-* [`overwolf.web.websocket.send()`](#sendmessage-callback)
-* [`overwolf.web.websocket.close()`](#close)
+* [overwolf.web.websocket.connect()](#connectcallback)
+* [overwolf.web.websocket.send()](#sendmessage-callback)
+* [overwolf.web.websocket.close()](#close)
 
 ## Events Reference
 
-* [`overwolf.web.websocket.onMessage`](#onmessage)
-* [`overwolf.web.websocket.onError`](#onerror)
-* [`overwolf.web.websocket.onOpen`](#onopen)
-* [`overwolf.web.websocket.onClosed`](#onclosed)
+* [overwolf.web.websocket.onMessage](#onmessage)
+* [overwolf.web.websocket.onError](#onerror)
+* [overwolf.web.websocket.onOpen](#onopen)
+* [overwolf.web.websocket.onClosed](#onclosed)
 
 ## connect(callback)
 #### Version added: 0.129

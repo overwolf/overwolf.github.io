@@ -27,31 +27,31 @@ You can also use the following helpful URLs to open the Overwolf settings and ho
 
 ## Methods Reference
 
-* [`overwolf.settings.getHotKey()`](#gethotkeyfeatureid-callback)
-* [`overwolf.settings.registerHotKey()`](#registerhotkeyactionid-callback)
-* [`overwolf.settings.getCurrentOverwolfLanguage()`](#getcurrentoverwolflanguagecallback)
-* [`overwolf.settings.getOverwolfVideosFolder()`](#getoverwolfvideosfoldercallback)
-* [`overwolf.settings.setOverwolfVideosFolder()`](#setoverwolfvideosfolderpath-callback)
-* [`overwolf.settings.getOverwolfScreenshotsFolder()`](#getoverwolfscreenshotsfoldercallback)
-* [`overwolf.settings.setOverwolfScreenshotsFolder()`](#setoverwolfscreenshotsfolderpath-callback)
-* [`overwolf.settings.getVideoCaptureSettings()`](##getvideocapturesettingscallback)
-* [`overwolf.settings.setVideoCaptureSettings()`](#setvideocapturesettingsresolutionsettings-fps-callback)
-* [`overwolf.settings.getAudioCaptureSettings()`](##getaudiocapturesettingscallback)
-* [`overwolf.settings.setAudioCaptureSettings()`](#setaudiocapturesettingsenablesound-enablemicrophone-callback)
-* [`overwolf.settings.getFpsSettings()`](#getfpssettingscallback)
-* [`overwolf.settings.setFpsSettings()`](#setfpssettingssettings-callback)
+* [overwolf.settings.getHotKey()](#gethotkeyfeatureid-callback)
+* [overwolf.settings.registerHotKey()](#registerhotkeyactionid-callback)
+* [overwolf.settings.getCurrentOverwolfLanguage()](#getcurrentoverwolflanguagecallback)
+* [overwolf.settings.getOverwolfVideosFolder()](#getoverwolfvideosfoldercallback)
+* [overwolf.settings.setOverwolfVideosFolder()](#setoverwolfvideosfolderpath-callback)
+* [overwolf.settings.getOverwolfScreenshotsFolder()](#getoverwolfscreenshotsfoldercallback)
+* [overwolf.settings.setOverwolfScreenshotsFolder()](#setoverwolfscreenshotsfolderpath-callback)
+* [overwolf.settings.getVideoCaptureSettings()](#getvideocapturesettingscallback)
+* [overwolf.settings.setVideoCaptureSettings()](#setvideocapturesettingsresolutionsettings-fps-callback)
+* [overwolf.settings.getAudioCaptureSettings()](#getaudiocapturesettingscallback)
+* [overwolf.settings.setAudioCaptureSettings()](#setaudiocapturesettingsenablesound-enablemicrophone-callback)
+* [overwolf.settings.getFpsSettings()](#getfpssettingscallback)
+* [overwolf.settings.setFpsSettings()](#setfpssettingssettings-callback)
 
 ## Events Reference
 
-* [`overwolf.settings.onFpsSettingsChanged`](#onfpssettingschanged)
-* [`overwolf.settings.OnVideoCaptureSettingsChanged`](#onvideocapturesettingschanged)
-* [`overwolf.settings.OnAudioCaptureSettingsChanged`](#onaudiocapturesettingschanged)
-* [`overwolf.settings.OnHotKeyChanged`](#onhotkeychanged)
+* [overwolf.settings.onFpsSettingsChanged](#onfpssettingschanged)
+* [overwolf.settings.OnVideoCaptureSettingsChanged](#onvideocapturesettingschanged)
+* [overwolf.settings.OnAudioCaptureSettingsChanged](#onaudiocapturesettingschanged)
+* [overwolf.settings.OnHotKeyChanged](#onhotkeychanged)
 
 ## Types Reference
 
-* [`overwolf.settings.enums.ResolutionSettings`](#resolutionsettings-enum) enum
-* [`FpsSettings`](#fpssettings-object) Object
+* [overwolf.settings.enums.ResolutionSettings](#resolutionsettings-enum) enum
+* [FpsSettings](#fpssettings-object) Object
 
 ## getHotKey(featureId, callback)
 #### Version added: 0.78

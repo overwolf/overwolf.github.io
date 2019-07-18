@@ -8,22 +8,22 @@ Provides information about the currently running game.
 
 ## Methods Reference
 
-* [`getRunningGameInfo()`](#getrunninggameinfocallback)
-* [`getGameInfo()`](#getgameinfogameclassid-callback)
-* [`getGameDBInfo()`](#getgamedbinfogameclassid-callback)
-* [`getRecentlyPlayedGames()`](#getrecentlyplayedgamesmaxnumofgames-callback)
+* [overwolf.games.getRunningGameInfo()](#getrunninggameinfocallback)
+* [overwolf.games.getGameInfo()](#getgameinfogameclassid-callback)
+* [overwolf.games.getGameDBInfo()](#getgamedbinfogameclassid-callback)
+* [overwolf.games.getRecentlyPlayedGames()](#getrecentlyplayedgamesmaxnumofgames-callback)
 
 ## Events Reference
 
-* [`onGameInfoUpdated`](#ongameinfoupdated)
-* [`onGameLaunched`](#ongamelaunched)
-* [`onMajorFrameRateChange`](#onmajorframeratechange)
-* [`onGameRendererDetected`](#ongamerendererdetected)
+* [overwolf.games.onGameInfoUpdated](#ongameinfoupdated)
+* [overwolf.games.onGameLaunched](#ongamelaunched)
+* [overwolf.games.onMajorFrameRateChange](#onmajorframeratechange)
+* [overwolf.games.onGameRendererDetected](#ongamerendererdetected)
 
 ## Types Reference
 
-* [`GameInfo`](#gameinfo-object)
-* [`GameInfoChangeData`](#gameinfochangedata-object)
+* [GameInfo](#gameinfo-object)
+* [GameInfoChangeData](#gameinfochangedata-object)
 
 ## getRunningGameInfo(callback)
 

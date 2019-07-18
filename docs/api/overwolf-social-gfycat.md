@@ -35,9 +35,9 @@ There is no callback for this method and the only way to know if the user signed
 ## performLogout(callback)
 #### Version added: 0.125
 
-    > Performs a "strong" sign out of Gfycat, so that even if the user performs a login via the Overwolf Settings / Accounts page, he will be considered signed out.
+> Performs a "strong" sign out of Gfycat, so that even if the user performs a login via the Overwolf Settings / Accounts page, he will be considered signed out.
 
-    Parameter | Type                   | Description                                                             |
+Parameter | Type                       | Description                                                             |
 --------- | ---------------------------| ----------------------------------------------------------------------- |
 callback  | function                   | Will contain the status of the request                                  |
 

@@ -8,18 +8,18 @@ Returns an object with launchers status related events and functions.
 
 ## Methods Reference
 
-* [`getRunningLaunchersInfo()`](#getrunninglaunchersinfocallback)
+* [overwolf.games.launchers.getRunningLaunchersInfo()](#getrunninglaunchersinfocallback)
 
 ## Events Reference
 
-* [`onUpdated`](#onupdated)
-* [`onLaunched`](#onlaunched)
-* [`onTerminated`](#onterminated)
+* [overwolf.games.launchers.onUpdated](#onupdated)
+* [overwolf.games.launchers.onLaunched](#onlaunched)
+* [overwolf.games.launchers.onTerminated](#onterminated)
 
 ## Types Reference
 
-* [`ILauncherInfo`](#ilauncherinfo-object) Object
-* [`ILauncherInfoChangeData`](#ilauncherinfochangedata-object) Object
+* [overwolf.games.launchers.ILauncherInfo](#ilauncherinfo-object) Object
+* [overwolf.games.launchers.ILauncherInfoChangeData](#ilauncherinfochangedata-object) Object
 
 ## getRunningLaunchersInfo(callback)
 #### Version added: 0.103

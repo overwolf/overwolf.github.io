@@ -9,13 +9,13 @@ This API returns an object with launchers related events and info-updates.
 
 ## Methods Reference
 
-* [`setRequiredFeatures()`](#setrequiredfeatureslauncherclassid-features-callback)
-* [`getInfo()`](#getinfolauncherclassid-callback)
+* [overwolf.games.launchers.events.setRequiredFeatures()](#setrequiredfeatureslauncherclassid-features-callback)
+* [overwolf.games.launchers.events.getInfo()](#getinfolauncherclassid-callback)
 
 ## Events Reference
 
-* [`onInfoUpdates`](#oninfoupdates)
-* [`onNewEvents`](#onnewevents)
+* [overwolf.games.launchers.events.onInfoUpdates](#oninfoupdates)
+* [overwolf.games.launchers.events.onNewEvents](#onnewevents)
 
 ## How to register for features
 

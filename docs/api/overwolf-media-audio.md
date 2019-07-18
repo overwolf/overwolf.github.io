@@ -8,20 +8,20 @@ A set of functions for playback of audio files. Currently supports MP3 and WAV f
 
 ## Methods Reference
 
-* [`overwolf.media.audio.create()`](#createurl-callback)
-* [`overwolf.media.audio.play()`](#playid-callback)
-* [`overwolf.media.audio.stop()`](#stopcallback)
-* [`overwolf.media.audio.stopById()`](#stopbyidid-callback)
-* [`overwolf.media.audio.pause()`](#pausecallback)
-* [`overwolf.media.audio.pauseById()`](#pausebyidid-callback)
-* [`overwolf.media.audio.resume()`](#resumecallback)
-* [`overwolf.media.audio.resumeById()`](#resumebyidid-callback)
-* [`overwolf.media.audio.setVolume()`](#setvolumevolume-callback)
-* [`overwolf.media.audio.setVolumeById()`](#setvolumebyidid-volume-callback)
+* [overwolf.media.audio.create()](#createurl-callback)
+* [overwolf.media.audio.play()](#playid-callback)
+* [overwolf.media.audio.stop()](#stopcallback)
+* [overwolf.media.audio.stopById()](#stopbyidid-callback)
+* [overwolf.media.audio.pause()](#pausecallback)
+* [overwolf.media.audio.pauseById()](#pausebyidid-callback)
+* [overwolf.media.audio.resume()](#resumecallback)
+* [overwolf.media.audio.resumeById()](#resumebyidid-callback)
+* [overwolf.media.audio.setVolume()](#setvolumevolume-callback)
+* [overwolf.media.audio.setVolumeById()](#setvolumebyidid-volume-callback)
 
 ## Events Reference
 
-* [`overwolf.media.audio.onPlayStateChanged()`](#onplaystatechanged)
+* [overwolf.media.audio.onPlayStateChanged()](#onplaystatechanged)
 
 ## create(url, callback)
 #### Version added: 0.84

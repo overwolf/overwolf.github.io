@@ -6,8 +6,8 @@ sidebar_label: overwolf.tobii
 
 ## Types Reference
 
-* [`TobiiLayerParams`](#tobiilayerparams-object) Object
-* [`eTobiiEffectType`](#etobiieffecttype-enum) enum
+* [overwolf.tobii.TobiiLayerParams](#tobiilayerparams-object) Object
+* [overwolf.tobii.eTobiiEffectType](#etobiieffecttype-enum) enum
 
 ## TobiiLayerParams object
 

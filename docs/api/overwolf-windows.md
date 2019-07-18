@@ -12,66 +12,65 @@ Please make sure to read our guide on [how to use Overwolf windows](../topics/us
 
 ## Methods Reference
 
-* [`overwolf.windows.getMainWindow()`](#getmainwindow)
-* [`overwolf.windows.getCurrentWindow()`](#getcurrentwindowcallback)
-* [`overwolf.windows.obtainDeclaredWindow()`](#obtaindeclaredwindowwindowname-callback)
-* [`overwolf.windows.obtainDeclaredWindow()`](#obtaindeclaredwindowwindowname-overridesetting-callback)
-* [`overwolf.windows.dragMove()`](#dragmovewindowid-callback)
-* [`overwolf.windows.dragResize()`](#dragresizewindowid-edge)
-* [`overwolf.windows.dragResize()`](#dragresizewindowid-edge-contentrect)
-* [`overwolf.windows.dragResize()`](#dragresizewindowid-edge-rect-callback)
-* [`overwolf.windows.changeSize()`](#changesizewindowid-width-height-callback)
-* [`overwolf.windows.changePosition()`](#changepositionwindowid-left-top-callback)
-* [`overwolf.windows.close()`](#closewindowid-callback)
-* [`overwolf.windows.minimize()`](#minimizewindowid-callback)
-* [`overwolf.windows.maximize()`](#maximizewindowid-callback)
-* [`overwolf.windows.restore()`](#restorewindowid-callback)
-* [`overwolf.windows.restore()`](#restorewindowname-callback)
-* [`overwolf.windows.hide()`](#hidewindowid-callback)
-* [`overwolf.windows.getWindowState()`](#getwindowstatewindowid-callback)
-* [`overwolf.windows.getWindowsStates()`](#getwindowsstatescallback)
-* [`overwolf.windows.openOptionsPage()`](#openoptionspagecallback)
-* [`overwolf.windows.setDesktopOnly()`](#setdesktoponlywindowid-shouldbedesktoponly-callback)
-* [`overwolf.windows.setRestoreAnimationsEnabled()`](#setrestoreanimationsenabledwindowid-shouldenableanimations-callback)
-* [`overwolf.windows.setTopmost()`](#settopmostwindowid-shouldbetopmost-callback)
-* [`overwolf.windows.sendToBack()`](#sendtobackwindowid-callback)
-* [`overwolf.windows.sendMessage()`](#sendmessagewindowid-messageid-messagecontent-callback)
-* [`overwolf.windows.setWindowStyle()`](#setwindowstylewindowid-style-callback)
-* [`overwolf.windows.removeWindowStyle()`](#removewindowstylewindowid-style-callback)
-* [`overwolf.windows.getOpenWindows()`](#getopenwindowscallback)
-* [`overwolf.windows.setMute()`](#setmutemute-callback)
-* [`overwolf.windows.muteAll()`](#muteallcallback)
-* [`overwolf.windows.isMuted()`](#ismutedcallback)
-* [`overwolf.windows.isWindowVisibleToUser()`](#iswindowvisibletousercallback)
-* [`overwolf.windows.bringToFront()`](#bringtofrontwindowid-callback)
-* [`overwolf.windows.bringToFront()`](#bringtofrontcallback)
-* [`overwolf.windows.bringToFront()`](#bringtofrontgrabfocus-callback)
-* [`overwolf.windows.bringToFront()`](#bringtofrontwindowid-grabfocus-callback)
-* [`overwolf.windows.setPosition()`](#setpositionproperties-callback)
-* [`overwolf.windows.setPosition()`](#setpositionwindowid-properties-callback)
-* [`overwolf.windows.displayMessageBox()`](#displaymessageboxmessageparams-callback)
-* [`overwolf.windows.isAccelreatedOSR()`](#isaccelreatedosrcallback)
-* [`overwolf.windows.setMinSize()`](#setminsizewindowid-width-height-callback)
+* [overwolf.windows.getMainWindow()](#getmainwindow)
+* [overwolf.windows.getCurrentWindow()](#getcurrentwindowcallback)
+* [overwolf.windows.obtainDeclaredWindow()](#obtaindeclaredwindowwindowname-callback)
+* [overwolf.windows.obtainDeclaredWindow()](#obtaindeclaredwindowwindowname-overridesetting-callback)
+* [overwolf.windows.dragMove()](#dragmovewindowid-callback)
+* [overwolf.windows.dragResize()](#dragresizewindowid-edge)
+* [overwolf.windows.dragResize()](#dragresizewindowid-edge-contentrect)
+* [overwolf.windows.dragResize()](#dragresizewindowid-edge-rect-callback)
+* [overwolf.windows.changeSize()](#changesizewindowid-width-height-callback)
+* [overwolf.windows.changePosition()](#changepositionwindowid-left-top-callback)
+* [overwolf.windows.close()](#closewindowid-callback)
+* [overwolf.windows.minimize()](#minimizewindowid-callback)
+* [overwolf.windows.maximize()](#maximizewindowid-callback)
+* [overwolf.windows.restore()](#restorewindowid-callback)
+* [overwolf.windows.restore()](#restorewindowname-callback)
+* [overwolf.windows.hide()](#hidewindowid-callback)
+* [overwolf.windows.getWindowState()](#getwindowstatewindowid-callback)
+* [overwolf.windows.getWindowsStates()](#getwindowsstatescallback)
+* [overwolf.windows.openOptionsPage()](#openoptionspagecallback)
+* [overwolf.windows.setDesktopOnly()](#setdesktoponlywindowid-shouldbedesktoponly-callback)
+* [overwolf.windows.setRestoreAnimationsEnabled()](#setrestoreanimationsenabledwindowid-shouldenableanimations-callback)
+* [overwolf.windows.setTopmost()](#settopmostwindowid-shouldbetopmost-callback)
+* [overwolf.windows.sendToBack()](#sendtobackwindowid-callback)
+* [overwolf.windows.sendMessage()](#sendmessagewindowid-messageid-messagecontent-callback)
+* [overwolf.windows.setWindowStyle()](#setwindowstylewindowid-style-callback)
+* [overwolf.windows.removeWindowStyle()](#removewindowstylewindowid-style-callback)
+* [overwolf.windows.getOpenWindows()](#getopenwindowscallback)
+* [overwolf.windows.setMute()](#setmutemute-callback)
+* [overwolf.windows.muteAll()](#muteallcallback)
+* [overwolf.windows.isMuted()](#ismutedcallback)
+* [overwolf.windows.isWindowVisibleToUser()](#iswindowvisibletousercallback)
+* [overwolf.windows.bringToFront()](#bringtofrontwindowid-callback)
+* [overwolf.windows.bringToFront()](#bringtofrontcallback)
+* [overwolf.windows.bringToFront()](#bringtofrontgrabfocus-callback)
+* [overwolf.windows.bringToFront()](#bringtofrontwindowid-grabfocus-callback)
+* [overwolf.windows.setPosition()](#setpositionproperties-callback)
+* [overwolf.windows.setPosition()](#setpositionwindowid-properties-callback)
+* [overwolf.windows.displayMessageBox()](#displaymessageboxmessageparams-callback)
+* [overwolf.windows.isAccelreatedOSR()](#isaccelreatedosrcallback)
+* [overwolf.windows.setMinSize()](#setminsizewindowid-width-height-callback)
 
 ## Events Reference
 
-* [`overwolf.windows.onMainWindowRestored()`](#onmainwindowrestored)
-* [`overwolf.windows.onStateChanged()`](#onstatechanged)
-* [`overwolf.windows.onMessageReceived()`](#onmessagereceived)
-* [`overwolf.windows.onAltF4Blocked()`](#onaltf4blocked)
+* [overwolf.windows.onMainWindowRestored()](#onmainwindowrestored)
+* [overwolf.windows.onStateChanged()](#onstatechanged)
+* [overwolf.windows.onMessageReceived()](#onmessagereceived)
+* [overwolf.windows.onAltF4Blocked()](#onaltf4blocked)
 
 ## Types Reference
 
-* [`overwolf.windows.ODKWindow`](#odkwindow-object) Object
-* [`overwolf.windows.WindowProperties`](#windowproperties-object) Object
-* [`overwolf.windows.RelativeTo`](#relativeto-object) Object
-* [`overwolf.windows.SetWindowPositionProperties`](#setwindowpositionproperties-object) Object
-* [`overwolf.windows.MessageBoxParams`](#messageboxparams-object) Object
-* [`overwolf.windows.ODKRect`](#odkrect-object) Object
-* [`overwolf.windows.enums.MessagePromptIcon`](#messageprompticon-enum) Enum
-* [`overwolf.windows.enums.WindowDragEdge`](#windowdragedge-enum) Enum
-* [`overwolf.windows.enums.WindowStyle`](#windowstyle-enum) Enum
-
+* [overwolf.windows.ODKWindow](#odkwindow-object) Object
+* [overwolf.windows.WindowProperties](#windowproperties-object) Object
+* [overwolf.windows.RelativeTo](#relativeto-object) Object
+* [overwolf.windows.SetWindowPositionProperties](#setwindowpositionproperties-object) Object
+* [overwolf.windows.MessageBoxParams](#messageboxparams-object) Object
+* [overwolf.windows.ODKRect](#odkrect-object) Object
+* [overwolf.windows.enums.MessagePromptIcon](#messageprompticon-enum) Enum
+* [overwolf.windows.enums.WindowDragEdge](#windowdragedge-enum) Enum
+* [overwolf.windows.enums.WindowStyle](#windowstyle-enum) Enum
 
 ## getMainWindow()
 #### Version added: 0.113

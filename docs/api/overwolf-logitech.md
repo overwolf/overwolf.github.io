@@ -6,13 +6,13 @@ sidebar_label: overwolf.logitech
 
 ## Methods Reference
 
-* [`getVersion()`](#getversioncallback)
-* [`getDevices()`](#getdvicescallback)
+* [overwolf.logitech.getVersion()](#getversioncallback)
+* [overwolf.logitech.getDevices()](#getdvicescallback)
 
 ## Types Reference
 
-* [`overwolf.logitech.LogitechData`](#overwolflogitechlogitechdata-object) Object
-* [`Logitech Device`](#logitech-device-object) Object
+* [overwolf.logitech.overwolf.logitech.LogitechData](#overwolflogitechlogitechdata-object) Object
+* [overwolf.logitech.Logitech Device](#logitech-device-object) Object
 
 ## getVersion(callback)
 #### Version added: 0.93
@@ -40,8 +40,8 @@ callback  | function              | Called with the current device information  
 Parameter            | Type                                         | Description                                     |
 -------------------- | ---------------------------------------------| ----------------------------------------------- |
 minimal_lgs_version  | version Object (string wrapper)              | The minimal LGS version to require for this app |
-arx                  | [overwolf.logitech.led.LogitechArxData](overwolf-logitech-led#overwolflogitechledlogitecharxdata-object) Object | The Arx API data  |
-led                  | [overwolf.logitech.led.LogitechLedData](overwolf-logitech-led#overwolflogitechledlogitechleddata-object) Object | The LED API data  |
+arx                  | [LogitechArxData](overwolf-logitech-led#overwolflogitechledlogitecharxdata-object) Object | The Arx API data  |
+led                  | [LogitechLedData](overwolf-logitech-led#overwolflogitechledlogitechleddata-object) Object | The LED API data  |
 
 ## Logitech Device Object
 #### Version added: 0.93

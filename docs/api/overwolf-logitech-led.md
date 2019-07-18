@@ -8,37 +8,37 @@ Provides API for Logitech Arx Control.
 
 ## Methods Reference
 
-* [`init()`](#initcallback)
-* [`setTargetDevice()`](#settargetdevicetargetdevices-callback)
-* [`saveCurrentLighting()`](#savecurrentlightingcallback)
-* [`setLighting()`](#setlightingredpercentage-greenpercentage-bluepercentage-callback)
-* [`restoreLighting()`](#restorelightingcallback)
-* [`flashLighting()`](#flashlightingredpercentage-greenpercentage-bluepercentage-millisecondsduration-millisecondsinterval-callback)
-* [`pulseLighting()`](#pulselightingredpercentage-greenpercentage-bluepercentage-millisecondsduration-millisecondsinterval-callback)
-* [`stopEffects()`](#stopeffectscallback)
-* [`setLightingFromBitmap()`](#setlightingfrombitmapbitmapurl-callback)
-* [`setLightingFromBitmap()`](#setlightingfrombitmapbitmap-callback)
-* [`setLightingForKeyWithScanCode()`](#setlightingforkeywithscancodekeycode-redpercentage-greenpercentage-bluepercentage-callback)
-* [`setLightingForKeyWithHidCode()`](#setlightingforkeywithhidcodekeycode-redpercentage-greenpercentage-bluepercentage-callback)
-* [`setLightingForKeyWithQuartzCode()`](#setlightingforkeywithquartzcodekeycode-redpercentage-greenpercentage-bluepercentage-callback)
-* [`setLightingForKeyWithKeyName()`](#setlightingforkeywithkeynamekeyname-redpercentage-greenpercentage-bluepercentage-callback)
-* [`saveLightingForKey()`](#savelightingforkeykeyname-callback)
-* [`restoreLightingForKey()`](#restorelightingforkeykeyname-callback)
-* [`flashSingleKey()`](#flashsinglekeykeyname-redpercentage-greenpercentage-bluepercentage-millisecondsduration-millisecondsinterval-callback)
-* [`pulseSingleKey()`](#pulsesinglekeykeyname-startredpercentage-startgreenpercentage-startbluepercentage-finishredpercentage-finishgreenpercentage-finishbluepercentage-millisecondsduration-isinfinite-callback)
-* [`stopEffectsOnKey()`](#stopeffectsonkeykeyname-callback)
-* [`shutdown()`](#shutdown)
+* [overwolf.logitech.led.init()](#initcallback)
+* [overwolf.logitech.led.setTargetDevice()](#settargetdevicetargetdevices-callback)
+* [overwolf.logitech.led.saveCurrentLighting()](#savecurrentlightingcallback)
+* [overwolf.logitech.led.setLighting()](#setlightingredpercentage-greenpercentage-bluepercentage-callback)
+* [overwolf.logitech.led.restoreLighting()](#restorelightingcallback)
+* [overwolf.logitech.led.flashLighting()](#flashlightingredpercentage-greenpercentage-bluepercentage-millisecondsduration-millisecondsinterval-callback)
+* [overwolf.logitech.led.pulseLighting()](#pulselightingredpercentage-greenpercentage-bluepercentage-millisecondsduration-millisecondsinterval-callback)
+* [overwolf.logitech.led.stopEffects()](#stopeffectscallback)
+* [overwolf.logitech.led.setLightingFromBitmap()](#setlightingfrombitmapbitmapurl-callback)
+* [overwolf.logitech.led.setLightingFromBitmap()](#setlightingfrombitmapbitmap-callback)
+* [overwolf.logitech.led.setLightingForKeyWithScanCode()](#setlightingforkeywithscancodekeycode-redpercentage-greenpercentage-bluepercentage-callback)
+* [overwolf.logitech.led.setLightingForKeyWithHidCode()](#setlightingforkeywithhidcodekeycode-redpercentage-greenpercentage-bluepercentage-callback)
+* [overwolf.logitech.led.setLightingForKeyWithQuartzCode()](#setlightingforkeywithquartzcodekeycode-redpercentage-greenpercentage-bluepercentage-callback)
+* [overwolf.logitech.led.setLightingForKeyWithKeyName()](#setlightingforkeywithkeynamekeyname-redpercentage-greenpercentage-bluepercentage-callback)
+* [overwolf.logitech.led.saveLightingForKey()](#savelightingforkeykeyname-callback)
+* [overwolf.logitech.led.restoreLightingForKey()](#restorelightingforkeykeyname-callback)
+* [overwolf.logitech.led.flashSingleKey()](#flashsinglekeykeyname-redpercentage-greenpercentage-bluepercentage-millisecondsduration-millisecondsinterval-callback)
+* [overwolf.logitech.led.pulseSingleKey()](#pulsesinglekeykeyname-startredpercentage-startgreenpercentage-startbluepercentage-finishredpercentage-finishgreenpercentage-finishbluepercentage-millisecondsduration-isinfinite-callback)
+* [overwolf.logitech.led.stopEffectsOnKey()](#stopeffectsonkeykeyname-callback)
+* [overwolf.logitech.led.shutdown()](#shutdown)
 
 ## Events Reference
 
-* [`onError`](#onerror)
+* [overwolf.logitech.led.onError`](#onerror)
 
 ## Types Reference
 
-* [`overwolf.logitech.led.LogitechLedData`](#overwolflogitechledlogitechleddata-object) Object
-* [`overwolf.logitech.led.LogitechArxData`](#overwolflogitechledlogitecharxdata-object) Object
-* [`overwolf.logitech.led.enums.LogitechDeviceLightingType`](#overwolflogitechledenumslogitechdevicelightingtype-enum) enum
-* [`overwolf.logitech.led.enums.KeyboardNames`](#overwolflogitechledenumskeyboardnames-enum) enum
+* [overwolf.logitech.led.LogitechLedData](#overwolflogitechledlogitechleddata-object) Object
+* [overwolf.logitech.led.LogitechArxData](#overwolflogitechledlogitecharxdata-object) Object
+* [overwolf.logitech.led.enums.LogitechDeviceLightingType](#overwolflogitechledenumslogitechdevicelightingtype-enum) enum
+* [overwolf.logitech.led.enums.KeyboardNames](#overwolflogitechledenumskeyboardnames-enum) enum
 
 ## init(callback)
 #### Version added: 0.93
@@ -56,7 +56,7 @@ callback     | function | A callback with the result of the request            |
 
 Parameter    | Type     | Description                                          |
 ------------ | ---------| ---------------------------------------------------- |
-targetDevices| [overwolf.logitech.led.enums.LogitechDeviceLightingType](#overwolflogitechledenumslogitechdevicelightingtype-enum) array |            |
+targetDevices| [LogitechDeviceLightingType](#overwolflogitechledenumslogitechdevicelightingtype-enum) array |            |
 callback     | function | A callback with the result of the request            |
 
 ## saveCurrentLighting(callback)
@@ -192,7 +192,7 @@ callback              | function | A callback with the result of the request    
 
 Parameter             | Type     | Description                                          |
 --------------------  | ---------| ---------------------------------------------------- |
-keyName	              | [overwolf.logitech.led.enums.KeyboardNames](#overwolflogitechledenumskeyboardnames-enum) enum      | The key name       |
+keyName	              | [KeyboardNames](#overwolflogitechledenumskeyboardnames-enum) enum      | The key name       |
 redPercentage         | int      | Red percentage (0 – 100)                             |
 greenPercentage       | int      | Green percentage (0 – 100)                           |
 bluePercentage        | int      | Blue percentage (0 – 100)                            |
@@ -205,7 +205,7 @@ callback              | function | A callback with the result of the request    
 
 Parameter             | Type     | Description                                          |
 --------------------  | ---------| ---------------------------------------------------- |
-keyName	              | [overwolf.logitech.led.enums.KeyboardNames](#overwolflogitechledenumskeyboardnames-enum) enum | The key name    |
+keyName	              | [KeyboardNames](#overwolflogitechledenumskeyboardnames-enum) enum | The key name    |
 callback              | function | A callback with the result of the request            |
 
 ## restoreLightingForKey(keyName, callback)
@@ -215,7 +215,7 @@ callback              | function | A callback with the result of the request    
 
 Parameter             | Type     | Description                                          |
 --------------------  | ---------| ---------------------------------------------------- |
-keyName	              | [overwolf.logitech.led.enums.KeyboardNames](#overwolflogitechledenumskeyboardnames-enum) enum | The key name    |
+keyName	              | [KeyboardNames](#overwolflogitechledenumskeyboardnames-enum) enum | The key name    |
 callback              | function | A callback with the result of the request            |
 
 ## flashSingleKey(keyName, redPercentage, greenPercentage, bluePercentage, milliSecondsDuration, milliSecondsInterval, callback)
@@ -225,7 +225,7 @@ callback              | function | A callback with the result of the request    
 
 Parameter             | Type     | Description                                          |
 --------------------  | ---------| ---------------------------------------------------- |
-keyName	              | [overwolf.logitech.led.enums.KeyboardNames](#overwolflogitechledenumskeyboardnames-enum) enum      | The key name       |
+keyName	              | [KeyboardNames](#overwolflogitechledenumskeyboardnames-enum) enum      | The key name       |
 redPercentage         | int      | Red percentage (0 – 100)                             |
 greenPercentage       | int      | Green percentage (0 – 100)                           |
 bluePercentage        | int      | Blue percentage (0 – 100)                            |
@@ -240,7 +240,7 @@ callback              | function | A callback with the result of the request    
 
 Parameter            | Type                                                                                           | Description                              |
 -------------------- | -----------------------------------------------------------------------------------------------| -----------------------------------------|
-keyName	             | [overwolf.logitech.led.enums.KeyboardNames](#overwolflogitechledenumskeyboardnames-enum) enum  | The key name                             |
+keyName	             | [KeyboardNames](#overwolflogitechledenumskeyboardnames-enum) enum  | The key name                             |
 startRedPercentage	 | int                                                                                            | Red start percentage (0 – 100)           |
 startGreenPercentage | int                                                                                            | Green start percentage (0 – 100)         |
 startBluePercentage	 | int                                                                                            | Blue start percentage (0 – 100)          |
@@ -258,7 +258,7 @@ callback             | function                                                 
 
 Parameter             | Type                                                                                             | Description                              |
 --------------------  | ----------------------------------------------------------------------------------------------| ------------------------------------------- |
-keyName	              | [overwolf.logitech.led.enums.KeyboardNames](#overwolflogitechledenumskeyboardnames-enum) enum | The key name                                |
+keyName	              | [KeyboardNames](#overwolflogitechledenumskeyboardnames-enum) enum | The key name                                |
 callback              | function                                                                                       | A callback with the result of the request  |
 
 ## shutdown()

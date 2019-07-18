@@ -10,14 +10,14 @@ sidebar_label: overwolf.games.events
 
 ## Methods Reference
 
-* [`setRequiredFeatures()`](#setrequiredfeaturesfeatures-callback)
-* [`getInfo()`](#getinfocallback)
+* [overwolf.games.events.setRequiredFeatures()](#setrequiredfeaturesfeatures-callback)
+* [overwolf.games.events.getInfo()](#getinfocallback)
 
 ## Events Reference
 
-* [`onError()`](#onerror)
-* [`onInfoUpdates2()`](#oninfoupdates2)
-* [`onNewEvents()`](#onnewevents)
+* [overwolf.games.events.onError()](#onerror)
+* [overwolf.games.events.onInfoUpdates2()](#oninfoupdates2)
+* [overwolf.games.events.onNewEvents()](#onnewevents)
 
 ## Sample App
 

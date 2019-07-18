@@ -23,22 +23,22 @@ You can use the following helpful URL’s to retrieve an extension file content 
 
 ## Methods Reference
 
-* [`launch()`](#launchuid-parameter)
-* [`getService()`](#getserviceid-callback)
-* [`setInfo()`](#setinfoinfo)
-* [`getInfo()`](#getinfoid-callback)
-* [`registerInfo()`](#registerinfoid-eventscallback-callback)
-* [`unregisterInfo()`](#unregisterinfoid-callback)
-* [`getRunningState()`](#getrunningstateid-callback)
-* [`getManifest()`](#getrunningstateid-callback)
-* [`relaunch()`](#relaunch)
-* [`updateExtension()`](#updateextensioncallback)
+* [overwolf.extensions.launch()](#launchuid-parameter)
+* [overwolf.extensions.getService()](#getserviceid-callback)
+* [overwolf.extensions.setInfo()](#setinfoinfo)
+* [overwolf.extensions.getInfo()](#getinfoid-callback)
+* [overwolf.extensions.registerInfo()](#registerinfoid-eventscallback-callback)
+* [overwolf.extensions.unregisterInfo()](#unregisterinfoid-callback)
+* [overwolf.extensions.getRunningState()](#getrunningstateid-callback)
+* [overwolf.extensions.getManifest()](#getrunningstateid-callback)
+* [overwolf.extensions.relaunch()](#relaunch)
+* [overwolf.extensions.updateExtension()](#updateextensioncallback)
 
 ## Events Reference
 
-* [`onAppLaunchTriggered`](#onapplaunchtriggered)
-* [`onExtensionUpdateStateChanged`](#onextensionupdatestatechanged)
-* [`onUncaughtException`](#onuncaughtexception)
+* [overwolf.extensions.onAppLaunchTriggered](#onapplaunchtriggered)
+* [overwolf.extensions.onExtensionUpdateStateChanged](#onextensionupdatestatechanged)
+* [overwolf.extensions.onUncaughtException](#onuncaughtexception)
 
 
 ## launch(uid , parameter)

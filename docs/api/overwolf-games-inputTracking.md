@@ -8,16 +8,16 @@ Provides keyboard and mouse activity information while in game.
 
 ## Methods Reference
 
-* [`getActivityInformation()`](#getactivityinformationcallback)
-* [`getMatchActivityInformation()`](#getmatchactivityinformationcallback)
-* [`getMousePosition()`](#getmousepositioncallback)
+* [overwolf.games.inputTracking.getActivityInformation()](#getactivityinformationcallback)
+* [overwolf.games.inputTracking.getMatchActivityInformation()](#getmatchactivityinformationcallback)
+* [overwolf.games.inputTracking.getMousePosition()](#getmousepositioncallback)
 
 ## Events Reference
 
-* [`onKeyUp`](#onkeyup)
-* [`onKeyDown`](#onkeydown)
-* [`onMouseUp`](#onmouseup)
-* [`onMouseDown`](#onmousedown)
+* [overwolf.games.inputTracking.onKeyUp](#onkeyup)
+* [overwolf.games.inputTracking.onKeyDown](#onkeydown)
+* [overwolf.games.inputTracking.onMouseUp](#onmouseup)
+* [overwolf.games.inputTracking.onMouseDown](#onmousedown)
 
 ## getActivityInformation(callback)
 #### Version added: 0.92

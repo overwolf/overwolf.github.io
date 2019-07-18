@@ -8,16 +8,16 @@ Use the `overwolf.media.videos` API to create video composition, delete video fi
 
 ## Methods Reference
 
-* [`overwolf.media.videos.createVideoComposition()`](#createvideocompositionsourcevideourl-segments-callback)
-* [`overwolf.media.videos.createVideoCompositionFiles()`](#createvideocompositionfiles-outputfile-callback)
-* [`overwolf.media.videos.getVideos()`](#getvideoscallback)
-* [`overwolf.media.videos.getVideosSize()`](#getvideossizecallback)
-* [`overwolf.media.videos.deleteOldVideos()`](#deleteoldvideoskeepnewestxgbs-callback)
-* [`overwolf.media.videos.deleteVideo()`](#deletevideovideourl-callback)
+* [overwolf.media.videos.createVideoComposition()](#createvideocompositionsourcevideourl-segments-callback)
+* [overwolf.media.videos.createVideoCompositionFiles()](#createvideocompositionfiles-outputfile-callback)
+* [overwolf.media.videos.getVideos()](#getvideoscallback)
+* [overwolf.media.videos.getVideosSize()](#getvideossizecallback)
+* [overwolf.media.videos.deleteOldVideos()](#deleteoldvideoskeepnewestxgbs-callback)
+* [overwolf.media.videos.deleteVideo()](#deletevideovideourl-callback)
 
 ## Types Reference
 
-* [`VideoCompositionSegment`](#videocompositionsegment-object) Object
+* [VideoCompositionSegment](#videocompositionsegment-object) Object
 
 ## createVideoComposition(sourceVideoUrl, segments, callback)
 #### Version added: 0.78

@@ -8,31 +8,31 @@ Use the `overwolf.windows.mediaPlayerElement` API to allows adding a media playe
 
 ## Methods Reference
 
-* [`overwolf.windows.mediaPlayerElement.create()`](#createx-y-width-height-callback)
-* [`overwolf.windows.mediaPlayerElement.removeAllPlayers()`](#removeallplayers)
-* [`overwolf.windows.mediaPlayerElement.setBounds()`](#setboundsid-x-y-width-height-callback)
-* [`overwolf.windows.mediaPlayerElement.setVideo()`](#setvideoid-videourl-callback)
-* [`overwolf.windows.mediaPlayerElement.play()`](#playid-callback)
-* [`overwolf.windows.mediaPlayerElement.pause()`](#pauseid-callback)
-* [`overwolf.windows.mediaPlayerElement.resume()`](#resumeid-callback)
-* [`overwolf.windows.mediaPlayerElement.setVolume()`](#setvolumeid-volume-callback)
-* [`overwolf.windows.mediaPlayerElement.stop()`](#stopid-callback)
-* [`overwolf.windows.mediaPlayerElement.seek()`](#seekid-seconds-callback)
-* [`overwolf.windows.mediaPlayerElement.getProgress()`](#getprogressid-callback)
-* [`overwolf.windows.mediaPlayerElement.setPlaybackSpeed()`](#setplaybackspeedid-speedratio-callback)
-* [`overwolf.windows.mediaPlayerElement.toFront()`](#tofrontid-callback)
-* [`overwolf.windows.mediaPlayerElement.toBack()`](#tobackid-callback)
-* [`overwolf.windows.mediaPlayerElement.setStretchMode()`](#setstretchmodeid-stretchmode-callback)
-* [`overwolf.windows.mediaPlayerElement.setTobiiLayer()`](#settobiilayerid-param-callback)
-* [`overwolf.windows.mediaPlayerElement.TobiiLayerParams()`](#tobiilayerparamsparam-callback)
+* [overwolf.windows.mediaPlayerElement.create()](#createx-y-width-height-callback)
+* [overwolf.windows.mediaPlayerElement.removeAllPlayers()](#removeallplayers)
+* [overwolf.windows.mediaPlayerElement.setBounds()](#setboundsid-x-y-width-height-callback)
+* [overwolf.windows.mediaPlayerElement.setVideo()](#setvideoid-videourl-callback)
+* [overwolf.windows.mediaPlayerElement.play()](#playid-callback)
+* [overwolf.windows.mediaPlayerElement.pause()](#pauseid-callback)
+* [overwolf.windows.mediaPlayerElement.resume()](#resumeid-callback)
+* [overwolf.windows.mediaPlayerElement.setVolume()](#setvolumeid-volume-callback)
+* [overwolf.windows.mediaPlayerElement.stop()](#stopid-callback)
+* [overwolf.windows.mediaPlayerElement.seek()](#seekid-seconds-callback)
+* [overwolf.windows.mediaPlayerElement.getProgress()](#getprogressid-callback)
+* [overwolf.windows.mediaPlayerElement.setPlaybackSpeed()](#setplaybackspeedid-speedratio-callback)
+* [overwolf.windows.mediaPlayerElement.toFront()](#tofrontid-callback)
+* [overwolf.windows.mediaPlayerElement.toBack()](#tobackid-callback)
+* [overwolf.windows.mediaPlayerElement.setStretchMode()](#setstretchmodeid-stretchmode-callback)
+* [overwolf.windows.mediaPlayerElement.setTobiiLayer()](#settobiilayerid-param-callback)
+* [overwolf.windows.mediaPlayerElement.TobiiLayerParams()](#tobiilayerparamsparam-callback)
 
 ## Events Reference
 
-* [`overwolf.windows.mediaPlayerElement.onPlaybackStarted()`](#onplaybackstarted)
-* [`overwolf.windows.mediaPlayerElement.onPlaybackPaused()`](#onplaybackpaused)
-* [`overwolf.windows.mediaPlayerElement.onPlaybackStopped()`](#onplaybackstopped)
-* [`overwolf.windows.mediaPlayerElement.onPlaybackEnded()`](#onplaybackended)
-* [`overwolf.windows.mediaPlayerElement.onPlaybackError()`](#onplaybackerror)
+* [overwolf.windows.mediaPlayerElement.onPlaybackStarted()](#onplaybackstarted)
+* [overwolf.windows.mediaPlayerElement.onPlaybackPaused()](#onplaybackpaused)
+* [overwolf.windows.mediaPlayerElement.onPlaybackStopped()](#onplaybackstopped)
+* [overwolf.windows.mediaPlayerElement.onPlaybackEnded()](#onplaybackended)
+* [overwolf.windows.mediaPlayerElement.onPlaybackError()](#onplaybackerror)
 
 ## Types Reference
 

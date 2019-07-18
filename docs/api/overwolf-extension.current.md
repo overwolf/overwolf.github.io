@@ -8,8 +8,8 @@ A set of functions providing more information and utilities regarding the curren
 
 ## Methods Reference
 
-* [`getExtraObject()`](#getextraobjectname-callback)
-* [`getManifest()`](#getmanifestcallback)
+* [overwolf.extension.current.getExtraObject()](#getextraobjectname-callback)
+* [overwolf.extension.current.getManifest()](#getmanifestcallback)
 
 ## getExtraObject(name, callback)
 #### Version added: 0.80

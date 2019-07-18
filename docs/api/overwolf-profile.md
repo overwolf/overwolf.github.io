@@ -8,12 +8,12 @@ Use the `overwolf.profile` API to get Overwolf information for the current user 
 
 ## Methods Reference
 
-* [`getCurrentUser()`](#getcurrentusercallback)
-* [`openLoginDialog()`](#openlogindialog)
+* [overwolf.profile.getCurrentUser()](#getcurrentusercallback)
+* [overwolf.profile.openLoginDialog()](#openlogindialog)
 
 ## Events Reference
 
-* [`onLoginStateChanged`](#onloginstatechanged)
+* [overwolf.profile.onLoginStateChanged](#onloginstatechanged)
 
 ## getCurrentUser(callback)
 #### Version added: 0.78

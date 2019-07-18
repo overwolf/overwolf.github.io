@@ -8,32 +8,32 @@ Use the overwolf.media.replays API to capture a **short** video replay of the cu
 
 ## Methods Reference
 
-* [`overwolf.media.replays.turnOn()`](#turnonsettings-highlights-callback)
-* [`overwolf.media.replays.turnOff()`](#turnoffcallback)
-* [`overwolf.media.replays.getState()`](#getstatereplaytype-callback)
-* [`overwolf.media.replays.getState()`](#getstatecallback)
-* [`overwolf.media.replays.capture()`](#capturereplaytype-pastduration-futureduration-capturefinishedcallback-callback)
-* [`overwolf.media.replays.capture()`](#capturepastduration-futureduration-capturefinishedcallback-callback)
-* [`overwolf.media.replays.startCapture()`](#startcapturereplaytype-pastduration-callback)
-* [`overwolf.media.replays.startCapture()`](#startcapturepastduration-callback)
-* [`overwolf.media.replays.stopCapture()`](#stopcapturereplaytype-replayid-callback)
-* [`overwolf.media.replays.stopCapture()`](#stopcapturereplayid-callback)
-* [`overwolf.media.replays.updateTobiiSetting()`](#updatetobiisettingparam-callback)
-* [`overwolf.media.replays.getHighlights()`](#gethighlightsgameid-callback)
-* [`overwolf.media.replays.turnOff()`](#) - Obsolete.
+* [overwolf.media.replays.turnOn()](#turnonsettings-highlights-callback)
+* [overwolf.media.replays.turnOff()](#turnoffcallback)
+* [overwolf.media.replays.getState()](#getstatereplaytype-callback)
+* [overwolf.media.replays.getState()](#getstatecallback)
+* [overwolf.media.replays.capture()](#capturereplaytype-pastduration-futureduration-capturefinishedcallback-callback)
+* [overwolf.media.replays.capture()](#capturepastduration-futureduration-capturefinishedcallback-callback)
+* [overwolf.media.replays.startCapture()](#startcapturereplaytype-pastduration-callback)
+* [overwolf.media.replays.startCapture()](#startcapturepastduration-callback)
+* [overwolf.media.replays.stopCapture()](#stopcapturereplaytype-replayid-callback)
+* [overwolf.media.replays.stopCapture()](#stopcapturereplayid-callback)
+* [overwolf.media.replays.updateTobiiSetting()](#updatetobiisettingparam-callback)
+* [overwolf.media.replays.getHighlights()](#gethighlightsgameid-callback)
+* overwolf.media.replays.turnOff() - Obsolete.
 
 ## Events Reference
 
-* [`overwolf.media.replays.onCaptureError`](#oncaptureerror)
-* [`overwolf.media.replays.onCaptureStopped`](#oncapturestopped)
-* [`overwolf.media.replays.onCapureWarning`](#oncapurewarning)
-* [`overwolf.media.replays.onReplayServicesStarted`](#onreplayservicesstarted)
-* [`overwolf.media.replays.onHighlightsCaptured`](#onhighlightscaptured)
+* [overwolf.media.replays.onCaptureError](#oncaptureerror)
+* [overwolf.media.replays.onCaptureStopped](#oncapturestopped)
+* [overwolf.media.replays.onCapureWarning](#oncapurewarning)
+* [overwolf.media.replays.onReplayServicesStarted](#onreplayservicesstarted)
+* [overwolf.media.replays.onHighlightsCaptured](#onhighlightscaptured)
 
 ## Types Reference
 
-* [`overwolf.media.replays.ReplayHighlightsSetting`](#replayhighlightssetting-object) Object
-* [`overwolf.media.replays.enums.ReplayType`](#replaytype-enum) enum
+* [overwolf.media.replays.ReplayHighlightsSetting](#replayhighlightssetting-object) Object
+* [overwolf.media.replays.enums.ReplayType](#replaytype-enum) enum
 
 ## turnOn(settings, highlights, callback)
 #### Version added: 0.130

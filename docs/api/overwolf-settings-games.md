@@ -20,13 +20,13 @@ You can also use the following helpful URLs to open the relevant Overwolf game s
 
 ## Methods Reference
 
-* [`overwolf.settings.games.getOverlayEnabled()`](#getoverlayenabledgameclassid-callback)
-* [`overwolf.settings.games.getAutoLaunchEnabled()`](#getautolaunchenabledgameclassid-callback)
+* [overwolf.settings.games.getOverlayEnabled()](#getoverlayenabledgameclassid-callback)
+* [overwolf.settings.games.getAutoLaunchEnabled()](#getautolaunchenabledgameclassid-callback)
 
 ## Events Reference
 
-* [`overwolf.settings.games.onOverlayEnablementChanged`](#onoverlayenablementchanged)
-* [`overwolf.settings.games.onAutoLaunchEnablementChanged`](#onautolaunchenablementchanged)
+* [overwolf.settings.games.onOverlayEnablementChanged](#onoverlayenablementchanged)
+* [overwolf.settings.games.onAutoLaunchEnablementChanged](#onautolaunchenablementchanged)
 
 ## getOverlayEnabled(gameClassId, callback)
 #### Version added: 0.112

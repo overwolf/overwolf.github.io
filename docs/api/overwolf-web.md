@@ -8,15 +8,15 @@ Use the `overwolf.web` API to open a local HTTP web-server and a WebSocket.
 
 ## Methods Reference
 
-* [`overwolf.web.createServer()`](#createserverport-callback)
-* [`overwolf.web.sendHttpRequest()`](#sendhttprequesturl-method-headers-data-callback)
-* [`overwolf.web.createWebSocket()`](#createwebsocketconnectionparams-callback)
+* [overwolf.web.createServer()](#createserverport-callback)
+* [overwolf.web.sendHttpRequest()](#sendhttprequesturl-method-headers-data-callback)
+* [overwolf.web.createWebSocket()](#createwebsocketconnectionparams-callback)
 
 ## Types Reference
 
-* [`overwolf.web.WebSockcetConnectionParams`](#websockcetconnectionparams-object) Object
-* [`overwolf.web.enums.HttpRequestMethods`](#httprequestmethods-enum) enum
-* [`overwolf.web.FetchHeader`](#fetchheader-object) Object
+* [overwolf.web.WebSockcetConnectionParams](#websockcetconnectionparams-object) Object
+* [overwolf.web.enums.HttpRequestMethods](#httprequestmethods-enum) enum
+* [overwolf.web.FetchHeader](#fetchheader-object) Object
 
 ## createServer(port, callback)
 #### Version added: 0.93

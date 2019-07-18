@@ -8,12 +8,12 @@ An instance of a web server.
 
 ## Methods Reference
 
-* [`overwolf.web.webserver.listen()`](#listencallback)
-* [`overwolf.web.webserver.close()`](#close)
+* [overwolf.web.webserver.listen()](#listencallback)
+* [overwolf.web.webserver.close()](#close)
 
 ## Events Reference
 
-* [`overwolf.web.webserver.onRequest`](#onrequest)
+* [overwolf.web.webserver.onRequest](#onrequest)
 
 ## listen(callback)
 #### Version added: 0.93

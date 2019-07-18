@@ -45,18 +45,18 @@ The term streaming might be a bit misleading – we regard saving a video to the
 * [overwolf.streaming.StreamVideoOptions](#streamvideooptions-object) Object
 * [overwolf.streaming.StreamingVideoEncoderSettings](#streamingvideoencodersettings-object) Object
 * [overwolf.streaming.enums.StreamEncoder](#overwolfstreamingenumsstreamencoder-enum)
-* [overwolf.streaming.StreamingVideoEncoderNVIDIA_NVENCSettings](#streamingvideoencodernvidia-nvencsettings-object) Object
-* [overwolf.streaming.enums.StreamEncoderPreset_NVIDIA](#overwolfstreamingenumsstreamencoderpreset-nvidia-enum)
+* [overwolf.streaming.StreamingVideoEncoderNVIDIA_NVENCSettings](#streamingvideoencodernvidia_nvencsettings-object) Object
+* [overwolf.streaming.enums.StreamEncoderPreset_NVIDIA](#overwolfstreamingenumsstreamencoderpreset_nvidia-enum)
 * [overwolf.streaming.enums.StreamEncoderRateControl_NVIDIA](#overwolfstreamingenumsstreamencoderratecontrol-nvidia-enum)
 * [overwolf.streaming.StreamingVideoEncoderIntelSettings](#streamingvideoencoderintelsettings-object) Object
 * [overwolf.streaming.StreamingVideoEncoderx264Setting](#streamingvideoencoderx264settings-object) Object
-* [overwolf.streaming.enums.StreamEncoderPreset_x264](#overwolfstreamingenumsstreamencoderpreset-x264-enum)
-* [overwolf.streaming.enums.StreamEncoderRateControl_x264](#overwolfstreamingenumsstreamencoderratecontrol-x264-enum)
-* [overwolf.streaming.StreamingVideoEncoderAMD_AMFSettings](#streamingvideoencoderamd-amfsettings-object) Object
-* [overwolf.streaming.enums.StreamEncoderPreset_AMD_AMF](#overwolfstreamingenumsstreamencoderpreset-amd-amf-enum)
-* [overwolf.streaming.enums.StreamEncoderRateControl_AMD_AMF](#overwolfstreamingenumsstreamencoderratecontrol-amd-amf-enum)
+* [overwolf.streaming.enums.StreamEncoderPreset_x264](#overwolfstreamingenumsstreamencoderpreset_x264-enum)
+* [overwolf.streaming.enums.StreamEncoderRateControl_x264](#overwolfstreamingenumsstreamencoderratecontrol_x264-enum)
+* [overwolf.streaming.StreamingVideoEncoderAMD_AMFSettings](#streamingvideoencoderamd_amfsettings-object) Object
+* [overwolf.streaming.enums.StreamEncoderPreset_AMD_AMF](#overwolfstreamingenumsstreamencoderpreset_amd_amf-enum)
+* [overwolf.streaming.enums.StreamEncoderRateControl_AMD_AMF](#overwolfstreamingenumsstreamencoderratecontrol_amd_amf-enum)
 * [overwolf.streaming.StreamDesktopCaptureOptions](#streamdesktopcaptureoptions-object) Object
-* [overwolf.streaming.StreamAudioOptions](#changevolumestreamid-audiooptions-callback)
+* [overwolf.streaming.StreamAudioOptions](#streamaudiooptions-object)
 * [overwolf.streaming.StreamDeviceVolume](#streamdevicevolume-object) Object
 * [overwolf.streaming.StreamPeripheralsCaptureOptions](#streamperipheralscaptureoptions-object) Object
 * [overwolf.streaming.StreamPeripheralsCaptureOptions](#streamperipheralscaptureoptions-object) Object
@@ -850,10 +850,10 @@ Stream video options.
 
 #### See also:
 
-* [StreamingVideoEncoderNVIDIA_NVENCSettings](#streamingvideoencodernvidia-nvencsettings-object)
+* [StreamingVideoEncoderNVIDIA_NVENCSettings](#streamingvideoencodernvidia_nvencsettings-object)
 * [StreamingVideoEncoderIntelSettings](#streamingvideoencoderintelsettings-object)
 * [StreamingVideoEncoderx264Settings](#streamingvideoencoderx264settings-object)
-* [StreamingVideoEncoderAMD_AMFSettings](#streamingvideoencodernvidia-nvencsettings-object)
+* [StreamingVideoEncoderAMD_AMFSettings](#streamingvideoencodernvidia_nvencsettings-object)
 
 ## overwolf.streaming.enums.StreamEncoder enum
 
@@ -874,8 +874,8 @@ Defines the configuration for the NVIDIA NVENC encoder.
 
 | Name              | Type                                                       | Description                                                   | Since |
 |-------------------| -----------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------| ----- |
-| preset            |  [overwolf.streaming.enums.StreamEncoderPreset_NVIDIA](#overwolfstreamingenumsstreamencoderpreset-nvidia-enum) enum  |  Defines which preset the encoder should use                    | 0.83  |
-| rate_control      |  [overwolf.streaming.enums.StreamEncoderRateControl_NVIDIA](#overwolfstreamingenumsstreamencoderratecontrol-nvidia-enum) enum  |  Defines the rate control mode the encoder should use | 0.83  |
+| preset            |  [overwolf.streaming.enums.StreamEncoderPreset_NVIDIA](#overwolfstreamingenumsstreamencoderpreset_nvidia-enum) enum  |  Defines which preset the encoder should use                    | 0.83  |
+| rate_control      |  [overwolf.streaming.enums.StreamEncoderRateControl_NVIDIA](#overwolfstreamingenumsstreamencoderratecontrol_nvidia-enum) enum  |  Defines the rate control mode the encoder should use | 0.83  |
 | keyframe_interval |  int                                                                                                |  Defines the time, in seconds, after which to send a keyframe | 0.83  |
 
 ## overwolf.streaming.enums.StreamEncoderPreset_NVIDIA enum
@@ -921,8 +921,8 @@ Defines the configuration for an x264 encoder.
 
 | Name              | Type                                                       | Description                                                   | Since |
 |-------------------| -----------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------| ----- |
-| preset            |  [overwolf.streaming.enums.StreamEncoderPreset_x264](#overwolfstreamingenumsstreamencoderpreset-x264-enum) enum  |  Defines which preset the encoder should use                    | 0.83  |
-| rate_control      |  [overwolf.streaming.enums.StreamEncoderRateControl_x264](#overwolfstreamingenumsstreamencoderratecontrol-x264-enum) enum  |  Defines the rate control mode the encoder should use | 0.83  |
+| preset            |  [overwolf.streaming.enums.StreamEncoderPreset_x264](#overwolfstreamingenumsstreamencoderratecontrol_x264-enum-enum) enum  |  Defines which preset the encoder should use                    | 0.83  |
+| rate_control      |  [overwolf.streaming.enums.StreamEncoderRateControl_x264](#overwolfstreamingenumsstreamencoderratecontrol_x264-enum) enum  |  Defines the rate control mode the encoder should use | 0.83  |
 | keyframe_interval |  int                                                                                                |  Defines the time, in seconds, after which to send a keyframe | 0.83  |
 
 ## overwolf.streaming.enums.StreamEncoderPreset_x264 enum
@@ -962,8 +962,8 @@ Defines the configuration for an x264 encoder.
 
 | Name              | Type                                                       | Description                                                   | Since |
 |-------------------| -----------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------| ----- |
-| preset            |  [overwolf.streaming.enums.StreamEncoderPreset_AMD_AMF](#overwolfstreamingenumsstreamencoderpreset-amd-amf-enum) enum  |  Defines which preset the encoder should use                    | 0.84  |
-| rate_control      |  [overwolf.streaming.enums.StreamEncoderRateControl_AMD_AMF](#overwolfstreamingenumsstreamencoderratecontrol-amd-amf-enum) enum  |  Defines the rate control mode the encoder should use | 0.84  |
+| preset            |  [overwolf.streaming.enums.StreamEncoderPreset_AMD_AMF](#overwolfstreamingenumsstreamencoderpreset_amd_amf-enum) enum  |  Defines which preset the encoder should use                    | 0.84  |
+| rate_control      |  [overwolf.streaming.enums.StreamEncoderRateControl_AMD_AMF](#overwolfstreamingenumsstreamencoderratecontrol_amd_amf-enum) enum  |  Defines the rate control mode the encoder should use | 0.84  |
 | keyframe_interval |  int                                                                                                |  Defines the time, in seconds, after which to send a keyframe | 0.83  |
 
 ## overwolf.streaming.enums.StreamEncoderPreset_AMD_AMF enum

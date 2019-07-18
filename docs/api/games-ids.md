@@ -17,7 +17,7 @@ The full list of the supported games with their Game ID’s is always updated, a
 
 3. Under each game, you can find it’s ID.
 
-If you didn’t find the game you need, contact us through [Slack](http://developers.overwolf.com/slack/) or by email to developers@overwolf.com.
+If you didn’t find the game you need, contact us through [Slack](../support/contact-us#join-our-slack) or by email to developers@overwolf.com.
 
 ## Game launchers ID's
 
