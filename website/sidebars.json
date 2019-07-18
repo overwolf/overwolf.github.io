@@ -40,6 +40,8 @@
 			"overwolf.os": ["api/overwolf-os"],
 			"overwolf.extensions":
 			["api/overwolf-extensions", "api/overwolf-extension-current"],
+			"overwolf.egs":
+			["api/overwolf-egs"],
 			"overwolf.games":
 			["api/overwolf-games", "api/overwolf-games-events", "api/howto-check-events-status-from-app", "api/overwolf-games-inputTracking",
 				{
