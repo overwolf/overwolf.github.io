@@ -89,6 +89,7 @@ const siteConfig = {
     'https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js',
     'https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js',
     'https://cdnjs.cloudflare.com/ajax/libs/overlayscrollbars/1.8.0/js/jquery.overlayScrollbars.min.js',
+    'https://d10lpsik1i8c69.cloudfront.net/w.js',
     '/js/code-block-buttons.js',
     '/js/onload.js',
     '/js/activeNavBar.js',
