@@ -30,7 +30,7 @@ The following ad formats are currently available:
 * Video – available in 400×300 and 300×250 (we recommend 400×300)
 * Display banners – 300×250 and 728×90
 
-<div class="box" data-slick='{"slidesToShow": 2}'>
+<div class="box" data-slick='{"slidesToShow": 1}'>
   <a data-fancybox="gallery" data-caption="Legendary Builds" href="../assets/LB-400x300.png">
     Legendary Builds - 400x300 video ad
     <span class="thumb">
@@ -59,7 +59,7 @@ We also scan our traffic with 3rd party anti-fraud tools to monitor our quality 
 
 ### Dos and Don’ts
 **Ad Location**
-####
+
 * If your app has more than one menu/view, make sure the ad location is fixed and does not change when flicking through those menus.
 * Make sure that the ad is in a visible location and not hidden. In order to not be flagged as fraud, the ad should only be called when the ad unit is visible.
 * Video ads need high completion rates. Any window showing videos ads should have a good average open time. Ads should appear within windows that offer Significant value (most ads are between 15-30 sec).
@@ -72,7 +72,6 @@ Video Players comes in different sizes. Our recommendation is to use the 400×30
 
 ### Demographics
 
-####
 * Advertising budgets are more significant in Tier 1 countries: US, UK, CA, AU, DE, FR.
 * If most of the users will origin in Tier 1 countries, it’s likely that your CPMs will be higher.
 * We do monetize ads in lower tiers, but our recommendation is to focus your marketing efforts on Tier 1 countries.
