@@ -106,10 +106,10 @@ Each image can be linked to YouTube video or larger image.
 
 ```html
 <div class="box" data-slick='{"slidesToShow": 2}'>
-  <a data-fancybox="gallery" data-caption="LoLwiz" href="https://www.youtube.com/watch?v=nJhuNtDPbxo">
+  <a data-fancybox="gallery" data-caption="LoLwiz" href="../assets/transparent-window.png">
     LoLwiz
     <span class="thumb">
-      <img src="https://img.youtube.com/vi/nJhuNtDPbxo/maxresdefault.jpg" alt="DotaPlus">
+      <img src="../assets/transparent-window.png" alt="DotaPlus">
     </span>
   </a>
   <a data-fancybox="gallery" data-caption="PUBG Tracker" href="https://www.youtube.com/watch?v=xiG_cCI9s-E">
