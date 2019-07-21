@@ -4,7 +4,7 @@
 			["start/getting-started", "start/app-creation-process", "start/sdk-introduction", {
                 "type": "subcategory",
                 "label": "Creating a Demo App",
-                "ids": ["start/creating-demo-app", "start/creating-secondary-window", "start/communication-between-windows", "start/using-dev-tools"]
+                "ids": ["start/creating-demo-app", "start/creating-secondary-window", "start/using-dev-tools"]
             }],
 			"Test Your App":
 			["start/how-to-test-your-app", "start/technical-checklist", "start/marketing-checklist"],
