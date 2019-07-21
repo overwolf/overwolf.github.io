@@ -15,4 +15,10 @@ You can find our markdown cheet-sheet [here](markdown-cheat-sheet.md).
 
 You can find all the details [here](create-local-dev-env.md).
 
+### Docs template
+
+You can use these docs template as a baseline for new pages:
+
+* [API page tempalte](docs-templates\api-page-template.md)
+* [Game Events page template](docs-templates\game-events-page-tempalte.md)
 
