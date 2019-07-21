@@ -6,6 +6,10 @@ sidebar_label: Hotkeys Best Practices
 
 ## a guide on how to use hotkeys
 
+Add explanation on what are hotkeys, how to use them (define in manifest, register, etc.)
+
+## Hotkeys tips and tricks
+
 1. If you are using `focus_game_takeover: ReleaseOnHidden` flag, don't forget to use also the `focus_game_takeover_release_hotkey` flag.  
 
 2. if you are using a transparent background window, note that a toggle hotkey will not work as expected - the hotkey will start/show the OW app, but will not hide it.
