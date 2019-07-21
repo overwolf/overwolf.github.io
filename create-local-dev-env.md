@@ -22,6 +22,15 @@ All the programs are free to use:
 
 ### Day to day workflow
 
+#### Community members:
+
+1. Open VS Code.
+2. get the latest version from remote.
+3. Work on your files. Do changes.
+4. At EOD, `commit` changes (to local repo), and create Pull Request to the `source` branch.
+
+#### If you have write permissions to the repo: (OW employees)
+
 1. Open VS Code.
 2. Click on the `sync` button. That will sync the local repo with the remote. (push and pull).
 3. Work on your files. Do changes.

@@ -24,5 +24,5 @@ You can use these docs template as a baseline for new pages:
 
 Don't forget that in in order to add new page to the site, you have to:
 1. Include a page ID on the top of the page.
-2. Add a new entry to the `website\siteConfig.js` file.
+2. Add a new entry to the `website\sidebars.json` file.
 
