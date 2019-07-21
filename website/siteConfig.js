@@ -66,6 +66,9 @@ const siteConfig = {
     secondaryColor: '#201C33',
   },
 
+//  Google Analytics tracking ID to track page views:
+  gaTrackingId: "UA-144253676-1" ,
+
   editUrl: 'https://github.com/overwolf/overwolf.github.io/tree/source/docs/',
 
   // This copyright info is used in /core/Footer.js and blog RSS/Atom feeds.
