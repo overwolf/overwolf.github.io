@@ -83,4 +83,144 @@ round_start | <ul><li>num_of_rounds – total number of rounds in current match<
 
 Event       | Event Data   | Fired When    | Notes              | Since Version |
 ------------| -------------| --------------| ------------------ | --------------|
-match_start| None|A new match has started| |  0.7  |
+match_start |     None     |A new match has started|            |       0.7     |
+
+## `match_end`
+
+### Events
+
+Event       | Event Data   | Fired When    | Notes              | Since Version |
+------------| -------------| --------------| ------------------ | --------------|
+match_end   |     None     |Match was ended|                    |       0.7     |
+
+## `team_round_win`
+
+### Events
+
+Event       | Event Data   | Fired When    | Notes              | Since Version |
+------------| -------------| --------------| ------------------ | --------------|
+team_round_win|     None     |<ul><li>winningTeam – the team that won the round (CT/T)</li><li>bomb – bomb status (exploded/defused/planted)|   |       0.7     |
+  
+## `bomb_planted`
+
+### Events
+
+Event       | Event Data   | Fired When    | Notes              | Since Version |
+------------| -------------| --------------| ------------------ | --------------|
+bomb_planted|     None     |A bomb has been planted (by any player)|            |       0.7     |
+
+## `bomb_change`
+
+### Events
+
+Event       | Event Data   | Fired When    | Notes              | Since Version |
+------------| -------------| --------------| ------------------ | --------------|
+bomb_change |Bomb state (planted / exploded / defused)|Bomb state was changed|  |       0.7     |
+
+## `reloading`
+
+### Events
+
+Event       | Event Data   | Fired When    | Notes              | Since Version |
+------------| -------------| --------------| ------------------ | --------------|
+reloading |<ul><li>weapon_name</li><li>weapon_current_ammo</li><li>weapon_max_ammo</li><li>weapon_type| Player reloads his weapon | | 0.7
+  
+## `fired`
+
+### Events
+
+Event       | Event Data   | Fired When    | Notes              | Since Version |
+------------| -------------| --------------| ------------------ | --------------|
+fired       |<ul><li>weapon_name</li><li>weapon_current_ammo</li><li>weapon_max_ammo</li><li>weapon_type|  | “fired” is not available on “Arms Race” and “Demolition” modes |  0.7  |
+  
+## `weapon_change`
+
+### Events
+
+Event       | Event Data   | Fired When    | Notes              | Since Version |
+------------| -------------| --------------| ------------------ | --------------|
+weapon_change| <ul><li>weapon_name</li><li>weapon_type |Player switches weapons| See [notes](#weapon_change-note) |  0.7  |
+
+#### *weapon_change* note
+
+* <b>weapon_type:</b>
+`“Knife”, “Pistol”, “Shotgun”, “Machine Gun”, “Submachine Gun”, “Rifle”, “SniperRifle”, “Grenade”, “C4”`
+* <b>weapon_name:</b>
+`“weapon_knife”, “weapon_knife_t”, “weapon_hkp2000”, “weapon_usp_silencer”, “weapon_glock”, “weapon_elite”,  “weapon_p250”, “weapon_fiveseven”, “weapon_cz75a”,“weapon_tec9”, “weapon_deagle”, “weapon_revolver”, “weapon_nova”, “weapon_xm1014”, “weapon_mag7”,“weapon_sawedoff”, “weapon_m249”, “weapon_negev”,  “weapon_mp9”, “weapon_mac10”, “weapon_mp7”,  “weapon_ump45”, “weapon_p90”, “weapon_bizon”,“weapon_famas”, “weapon_galilar”, “weapon_m4a1”,  “weapon_m4a1_silencer”, “weapon_ak47”,“weapon_ssg08”, “weapon_aug”, “weapon_sg556”, “weapon_awp”, “weapon_scar20”, “weapon_g3sg1”,“weapon_incgrenade”, “weapon_decoy”, “weapon_flashbang”, “weapon_hegrenade”, “weapon_smokegrenade”, “weapon_c4”`
+
+## `weapon_acquired`
+
+### Events
+
+Event       | Event Data   | Fired When    | Notes              | Since Version |
+------------| -------------| --------------| ------------------ | --------------|
+weapon_acquired| <ul><li>weapon_name</li><li>weapon_type |Player acquires new weapon (either buy or picks up)|  |  0.7  |
+
+## `player_activity_change`
+
+### Events
+
+Event       | Event Data   | Fired When    | Notes              | Since Version |
+------------| -------------| --------------| ------------------ | --------------|
+player_activity_change | <ul><li>playing</li><li>menu |<ul><li>The player started playing</li><li>The player entered the game’s menu | |  0.7  |
+
+## `team_set`
+
+### Events
+
+Event       | Event Data   | Fired When    | Notes              | Since Version |
+------------| -------------| --------------| ------------------ | --------------|
+team_set    |<ul><li>CT</li><li>T|The player selected a team|   |       0.7     |
+
+<b>Info Updates</b></br>
+In order to get CS:GO info-updates, your app should request the `info` feature and listen to `overwolf.games.events.onInfoUpdates2` info updates. However, you might add the listener after the update has already happened so the app will miss the info-update event. For that reason, you should also call `overwolf.games.events.getInfo()` to get the current info state.
+
+Let’s see an example of how to obtain the map name in CS:GO:
+
+First we will set the required features and set up the listener:
+
+`overwolf.games.events.setRequiredFeatures(['info', 'death', 'kill', 'headshot'], function(info) {
+	if (info.status == "success") {
+		setListener();
+		getInfo();
+	} else {
+		// we should retry to set the required features in case 
+		// the game events provider is still initializing
+	}
+});`
+
+`function setListener() {
+	overwolf.games.events.onInfoUpdates2.addListener(function(info) {
+		console.log(info);   
+	});
+}`
+
+`function getInfo() {
+	overwolf.games.events.getInfo(function(info) { 
+		console.log(info); 
+	});
+}`
+
+When the map info will be updated the `onInfoUpdate2` listener will print to the console:
+
+`{"info":{"round":{"map":"de_dust2"}},"feature":"info"}`
+
+After calling `getInfo()` the console will print (if the map info has already been updated):
+
+`{"status":"status","res":{"player":{"totalKills":"0","totalDeaths":"0","totalMvps":"0","score":"0","team":"T","steamid":""},"round":{"map":"de_dust2","phase":"live","numOfRound":"0"}}}`
+
+## `match_info`
+
+### Info Updates
+
+key               | Category    | Values                    | Notes                 | Since Version |
+----------------- | ------------| ------------------------- | --------------------- | ------------- |
+pseudo_match_id | match_info  |	The current session’s ID code. See [notes](#pseudo_match_id-note)	| |  130.0  |
+
+#### *pseudo_match_id* note
+
+This is an Overwolf-generated code, unrelated to Steam.	
+
+Data Example:
+
+`0c0ea3df-97ea-4d3a-b1f6-f8e34042251f`
