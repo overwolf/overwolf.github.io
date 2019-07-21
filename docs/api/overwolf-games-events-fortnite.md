@@ -36,15 +36,15 @@ Please read the [overwolf.games.events](overwolf-games-events) documentation pag
 
 key               | Category    | Values                    | Notes                 | Since Version |
 ----------------- | ------------| ------------------------- | --------------------- | ------------- |
-kills             | match_info  | Total number of kills in the match |              |  110.1        |
+kills             | match_info  | Total number of kills in the match |              |  0.110        |
 
 ### Events
 
 Event       | Event Data   | Fired When    | Notes              | Since Version |
 ------------| -------------| --------------| ------------------ | --------------|
-kill        | null         | The local player killed another player | |  110.1  |
-knockout    | null     | The local player knockedout another player |  | 110.1  |
-hit         | isHeadshot – bool(“true” when the hit is a “headshot”)| The local player hits an enemy with a weapon (hits with a pickaxe are not counted) See [notes](#hit-note) |                    |     110.1     |
+kill        | null         | The local player killed another player | |  0.0.110  |
+knockout    | null     | The local player knockedout another player |  | 0.0.110  |
+hit         | isHeadshot – bool(“true” when the hit is a “headshot”)| The local player hits an enemy with a weapon (hits with a pickaxe are not counted) See [notes](#hit-note) |                    |     0.0.110     |
 
 #### *hit* note
 
@@ -58,7 +58,7 @@ Data Example:
 
 Event       | Event Data   | Fired When    | Notes              | Since Version |
 ------------| -------------| --------------| ------------------ | --------------|
-killed      | The name of the killed player. See [notes](#killed-note)| The local player killed another player | |  117.1  |
+killed      | The name of the killed player. See [notes](#killed-note)| The local player killed another player | |  0.117  |
 
 #### *killed* note
 
@@ -72,7 +72,7 @@ Data Example:
 
 Event       | Event Data   | Fired When    | Notes              | Since Version |
 ------------| -------------| --------------| ------------------ | --------------|
-killer      | The name of the killer. See [notes](#killer-note) | The local player was killed | |  117.1  |
+killer      | The name of the killer. See [notes](#killer-note) | The local player was killed | |  0.117  |
 
 #### *killer* note
 
@@ -86,16 +86,22 @@ Data Example:
 
 Event       | Event Data   | Fired When    | Notes              | Since Version |
 ------------| -------------| --------------| ------------------ | --------------|
-revived      | null | The local player was revived |                  |  110.1  |
+revived      | null | The local player was revived |                  |  0.110  |
 
 ## `death`
 
 ### Events
 
-Event       | Event Data   | Fired When    | Notes              | Since Version |
-------------| -------------| --------------| ------------------ | --------------|
-death      | null | The local player died |                  |  110.1  |
-knockedout | The name of the player who knocked you out. See [notes](#knockedout-note) | The local player is knocked-out |  |  118.1  |
+Event      | Event Data                                                              | Fired When                      | Notes              | Since Version |
+-----------| ------------------------------------------------------------------------| --------------------------------| ------------------ | --------------|
+death      | null                                                                    | The local player died           |                    |  0.110        |
+knockedout | The name of the player who knocked you out. See [note](#knockedout-note)| The local player is knocked-out |                    |  118.1        |
+
+#### `knockedout` note
+
+Data example:
+
+`{"events":[{"name":"knockedout","data":"itaygl"}]}`
 
 ## `match`
 
@@ -103,14 +109,14 @@ knockedout | The name of the player who knocked you out. See [notes](#knockedout
 
 key               | Category    | Values                    | Notes                 | Since Version |
 ----------------- | ------------| ------------------------- | --------------------- | ------------- |
-mode              | match_info  | Possible Values:<ul><li>"solo"</li><li>"duo"</li><li>"squad"</li><li>"Playlist_Playground"</li>`{"mode":"duo"}`|              |  110.1        |
+mode              | match_info  | Possible Values:<ul><li>"solo"</li><li>"duo"</li><li>"squad"</li><li>"Playlist_Playground"</li>`{"mode":"duo"}`|              |  0.110        |
 
 ### Events
 
 Event       | Event Data   | Fired When    | Notes              | Since Version |
 ------------| -------------| --------------| ------------------ | --------------|
-matchStart  | null         | Match started |                    |  110.1  |
-matchEnd    | null         | Match ended   |                    |  110.1  |
+matchStart  | null         | Match started |                    |  0.110  |
+matchEnd    | null         | Match ended   |                    |  0.110  |
 
 ## `match_info`
 
@@ -134,9 +140,9 @@ Example data:
 
 key          | Category    | Values                    | Notes                 | Since Version |
 ------------ | ------------| ------------------------- | --------------------- | ------------- |
-rank         | match_info  |The player’s rank at the end of the match|         |   110.1       |
-total_teams  | match_info  |The total number of active teams|                  |   110.1       |
-total_players| match_info  |The total number of active players|                |   110.1       |
+rank         | match_info  |The player’s rank at the end of the match|         |   0.110       |
+total_teams  | match_info  |The total number of active teams|                  |   0.110       |
+total_players| match_info  |The total number of active players|                |   0.110       |
 
 #### *total_teams* note
 
@@ -152,10 +158,10 @@ This is a dynamic variable that is being updated every time a player joins or le
 
 key          | Category    | Values                    | Notes                 | Since Version |
 ------------ | ------------| ------------------------- | --------------------- | ------------- |
-name         | me          |   The player’s nickname. See [notes](#name-notes) |    |   110.1       |
-health       | me  |The player’s current health % (100-0). See [notes](#health-notes)| |   110.1       |
-accuracy     | me  |The current local player’s accuracy (hits/total shots). See [notes](#accuracy-note)|   |   110.1       |
-shield       | me  |The amount of shield the local player currently has. See [notes](#shield-notes)|         |   110.1       |
+name         | me          |   The player’s nickname. See [notes](#name-notes) |    |   0.110       |
+health       | me  |The player’s current health % (100-0). See [notes](#health-notes)| |   0.110       |
+accuracy     | me  |The current local player’s accuracy (hits/total shots). See [notes](#accuracy-note)|   |   0.110       |
+shield       | me  |The amount of shield the local player currently has. See [notes](#shield-notes)|         |   0.110       |
 
 #### *name* note
 
@@ -187,7 +193,7 @@ Data Example:
 
 key          | Category    | Values                    | Notes                 | Since Version |
 ------------ | ------------| ------------------------- | --------------------- | ------------- |
-phase        | game_info   |The game’s current state, can be one of the following:<ul><li>'lobby'</li><li>‘loading_screen’</li><li>‘airfield’</li><li>‘aircraft’</li><li>‘freefly’ |    |   110.1       |
+phase        | game_info   |The game’s current state, can be one of the following:<ul><li>'lobby'</li><li>‘loading_screen’</li><li>‘airfield’</li><li>‘aircraft’</li><li>‘freefly’ |    |   0.110       |
   
 ## `location`
 
@@ -209,7 +215,7 @@ Data Example:
 
 key          | Category    | Values                    | Notes                 | Since Version |
 ------------ | ------------| ------------------------- | --------------------- | ------------- |
-nicknames    | match_info  | The names of the players in the user’s team. See [notes](#team-note) |    |   117.1       |
+nicknames    | match_info  | The names of the players in the user’s team. See [notes](#team-note) |    |   0.170       |
 
 #### *team* note
 
@@ -243,8 +249,18 @@ Each item in the inventory contains the following properties:
 
 Data Example:
 
-`"inventory":{..."item_0":"{\"name\":\"WID_Harvest_Pickaxe_NeonCat\",\"count\":\"1\",\"ammo\":\"0\",\"rarity\":\"3\"}","item_3":"{\"name\":\"StoneItemData\",\"count\":\"2\",\"ammo\":\"0\",\"rarity\":\"0\"}","item_7":"{\"name\":\"AthenaAmmoDataShells\
-",\"count\":\"4\",\"ammo\":\"0\",\"rarity\":\"0\"}","item_11":"{\"name\":\"Athena_Balloons_Consumable\",\"count\":\"7\",\"ammo\":\"0\",\"rarity\":\"3\"}","item_15":null,"item_14":null,"item_13":"{\"name\":\"WID_Assault_AutoHigh_Athena_SR_Ore_T03\",\"count\":\"1\",\"ammo\":\"30\",\"rarity\":\"4\"}",...         },`
+```json
+"inventory":
+{
+    "item_0":"{\"name\":\"WID_Harvest_Pickaxe_NeonCat\",\"count\":\"1\",\"ammo\":\"0\",\"rarity\":\"3\"}",
+    "item_3":"{\"name\":\"StoneItemData\",\"count\":\"2\",\"ammo\":\"0\",\"rarity\":\"0\"}",
+    "item_7":"{\"name\":\"AthenaAmmoDataShells\",\"count\":\"4\",\"ammo\":\"0\",\"rarity\":\"0\"}",
+    "item_11":"{\"name\":\"Athena_Balloons_Consumable\",\"count\":\"7\",\"ammo\":\"0\",\"rarity\":\"3\"}",3
+    "item_15":null,
+    "item_14":null,
+    "item_13":"{\"name\":\"WID_Assault_AutoHigh_Athena_SR_Ore_T03\",\"count\":\"1\",\"ammo\":\"30\",\"rarity\":\"4\"}"
+}
+```
 
 #### *selected_slot* note
 
