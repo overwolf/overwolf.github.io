@@ -20,7 +20,7 @@ You can find all the details [here](create-local-dev-env.md).
 You can use these docs template as a baseline for new pages:
 
 * [API page tempalte](/docs-templates/api-page-template.md)
-* [Game Events page template](/docs-templates/game-events-page-tempalte.md)
+* [Game Events page template](/docs-templates/game-events-page-template.md)
 
 Don't forget that in in order to add new page to the site, you have to:
 1. Include a page ID on the top of the page.
