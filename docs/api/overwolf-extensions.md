@@ -235,11 +235,6 @@ callback  | function              | The result of the request                   
 
 > Fires when the current app is launched while already running. This is useful in the case where the app has custom logic for clicking its dock button while it is already running.
 
-## onExtensionUpdateStateChanged
-#### Version added: 0.132
-
-> Fires after the current app was updated successfully.
-
 ### The origin string
 
 The event returns an `origin` string which returns what triggered the app launch:
@@ -267,6 +262,11 @@ after-install    | auto-launched after installation                             
 :::tip
 if you want to get the origin (what triggered the app launch) before/without register the events, you can run the `window.location.href` command.
 :::
+
+## onExtensionUpdateStateChanged
+#### Version added: 0.132
+
+> Fires after the current app was updated successfully.
 
 ## onUncaughtException
 #### Version added: 0.133
