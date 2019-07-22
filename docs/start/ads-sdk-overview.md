@@ -4,19 +4,25 @@ title: Overwolf Ads SDK
 sidebar_label:  Overwolf Ads SDK
 ---
 
-
 The Overwolf ads SDK is a small JavaScript library that allows developers to integrate ads into their Overwolf applications. These ads are managed and hosted by Overwolf.
 
 The Ads SDK is intended to be used by developers who wish to show ads in their apps and have discussed doing so with Overwolf. Please do not use this library without prior consent from Overwolf. 
 If you are an app developer who wishes to show ads in your app, please contact Overwolf at developers@overwolf.com
 
-### Getting help and reporting bugs
+#### Getting help and reporting bugs
+
 If you have encountered problems with this library, please let us know by contacting developers@overwolf.com, or talk directly to us through the Developers Slack.
+
+:::important
+Ads will be served to your app only after Overwolf enables it, so please contact us at developers@overwolf.com when your app is ready to show ads.
+:::
 
 ## Getting Started
 
 The most simple and basic usage of this library can be done by adding a few lines of code into your app window’s HTML file:
-``` <div id="ad-div"></div>
+
+```html
+<div id="ad-div"></div>
 <script src="http://content.overwolf.com/libs/ads/latest/owads.min.js" async onload="onOwAdReady()"></script>
 <script>function onOwAdReady(){new OwAd(document.getElementById("ad-div"))}</script>
 ```
@@ -36,14 +42,11 @@ The most simple and basic usage of this library can be done by adding a few line
 ## Changes to your app’s manifest.json
 
 * The Overwolf Ads Libs uses some Overwolf APIs to improve ad targeting for users. Therefore you should add the following permissions to your app’s manifest.json file:
-```
-"permissions": [
-         "Extensions",
-         "Streaming",
-         "Profile",
-         "GameInfo"
-     ]
+
+```json
+"permissions": ["Extensions", "Streaming", "Profile", "GameInfo"]
  ```
+
  * In order to get impression tracking to work well, you would also need to enable a work-around that allows requests to Google’s syndication servers. This is done by setting `"protocol_override_domains" : {"googlesyndication" : "http"}`, under the manifest.json "data" property:
  
  ```
@@ -57,10 +60,6 @@ The most simple and basic usage of this library can be done by adding a few line
 * [`"popup_blocker":true`](http://developers.overwolf.com/documentation/sdk/overwolf/manifest-json/#popup_blocker) – Prevents new browser windows from being opened automatically using script.
 * [`"mute":true`](http://developers.overwolf.com/documentation/sdk/overwolf/manifest-json/#windows-mute) - Mute sounds in window.
 
-:::important General Note
-Ads will be served to your app only after Overwolf enables it, so please contact us at developers@overwolf.com when your app is ready to show ads.
-:::
-
 ## Important guidelines for ad integration
 
 Unfortunately the advertising industry is still mostly designed to work with normal web pages, and not single page apps like Overwolf apps. This means that we are often very limited with how we can interact or display ads. 
@@ -68,3 +67,4 @@ Unfortunately the advertising industry is still mostly designed to work with nor
 More importantly, most advertisers will have code that is designed to prevent frauds and make sure the ads are truly visible to the users. That is why it is very important that your ad container will ALWAYS be visible on the page. 
 
 Once you have instantiated a new OwAd object on a container, do not modify the container’s dimensions, z-index, visibility, opacity or display style properties. Doing so may result in ads not being displayed at all for your users, or being flagged as fraudulent by some advertisers.
+
