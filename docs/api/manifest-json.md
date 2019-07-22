@@ -32,7 +32,8 @@ Note that not all the flags are mandatory. We added all the available flags for 
         "<a href="#meta-mouse-over">icon</a>": "iconMouseOver.png",
         "<a href="#meta-gray_icon">icon_gray</a>": "iconMouseNormal.png",
         "<a href="#meta-launcher_icon">launcher_icon</a>": "icon.ico",
-        "<a href="#meta-splash">splash_image</a>": "splashIcon.png"
+        "<a href="#meta-splash">splash_image</a>": "splashIcon.png",
+        "<a href="#meta-window-icon">window_icon</a>": "windowIcon.png"
     },
     //An array of permissions that the app requires
     "<a href="#permissions-array">permissions</a>": ["Streaming","Hotkeys","GameInfo"],
@@ -146,7 +147,8 @@ Note that not all the flags are mandatory. We added all the available flags for 
         "<a href="#meta-object">icon</a>": "iconMouseOver.png",
         "<a href="#meta-object">icon_gray</a>": "iconMouseNormal.png",
         "<a href="#meta-object">launcher_icon</a>": "icon.ico",
-        "<a href="#meta-object">splash_image</a>": "splashIcon.png"
+        "<a href="#meta-object">splash_image</a>": "splashIcon.png",
+        "<a href="#meta-window-icon">window_icon</a>": "windowIcon.png"
     },
     "<a href="#permissions-array">permissions</a>": ["Streaming","Hotkeys","GameInfo"],
     "<a href="#data">data</a>": {
@@ -276,7 +278,9 @@ The App Metadata.
 | <a id="meta-gray_icon">icon_gray</a>        | string   |  A relative path from the app folder to the icon’s png file. This grayscale version of the icon is for the default state that will be displayed on the Overwolf dock. The icon dimensions should be 256×256 pixels, 72 PPI. Overwolf will resize it to 37×37. Please make sure the png is smaller than 30KB                  | 0.78  |
 | <a id="meta-launcher_icon">launcher_icon</a>| string   |  A relative path from the app folder to the desktop shortcut icon’s ico file. This is a colored icon for the app’s desktop shortcut. More info [here](../start/submit-your-app-to-the-store).                             | 0.78  |
 | <a id="meta-splash">splash_image</a>        | string   |  A relative path from the app folder to the splash image icon’s png file. The image size should be 256x256px. If a this image is missing, Overwolf will use the “icon” image as a splash image                                                                                                                                    | 0.116 |
-:::important Important
+| <a id="meta-window-icon">window_icon</a>        | string   |  A relative path from the app folder to the icon’s png file. Mandatory. This is the window task bar icon \\ window header. The icon dimensions should be 256x256 pixels.                                                                                                                                    | 0.116 |
+
+:::important
 <a id="meta-note"></a>Each app has a unique id (UID) that is generated out of the “name” and “author” strings. Once an app is published on the Appstore, its UID can’t be changed, so please choose your app and author names wisely before [submitting](../start/submit-app-proposal) your app.
 :::
 
