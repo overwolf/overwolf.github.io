@@ -15,9 +15,9 @@ new OwAd(document.getElementById("ad-div"), {size: {width: 400, height:300})
 
 The following configuration options are supported:
 
-| Option        | Type                                | Default                  
-| ------------- |:-------------:                      | :--------------           
-| Size          | JSON Object / Array of JSON Objects | `{width: 400, height:300}`
+| Option                    | Type                                | Default                     | 
+| ------------------------- |:-----------------------------------:| :---------------------------|           
+| [Size](#size-description) | JSON Object / Array of JSON Objects | `{width: 400, height:300}`  |
 
 ### *Size* description
 
