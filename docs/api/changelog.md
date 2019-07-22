@@ -13,18 +13,18 @@ All notable changes to this project will be documented in this file.
 * [minimum-gep-version](manifest-json#meta-minimum-gep) - New manifest flag.
   Allow extensions to set a minimum GEP version in manifest (similar to minimum-overwolf-version).
 
+* [overwolf.extensions.updateExtension()](overwolf-extensions#updateextensioncallback) - new method.  
+  Tries to download an update for the calling extension.
+
+* [overwolf.extensions.onExtensionUpdateStateChanged](overwolf-extensions#onextensionupdatestatechanged) - new event.  
+  Notify when the app were updated.
+
 ## 0.132 (July 2019)
 
 ### API Features
 
 * [overwolf.os.getRegionInfo()](overwolf-os#getregioninfocallback) - new method.  
   Returns regional information about the user.
-
-* [overwolf.extensions.updateExtension()](overwolf-extensions#updateextensioncallback) - new method.  
-  Tries to download an update for the calling extension.
-
-* [overwolf.extensions.onExtensionUpdateStateChanged](overwolf-extensions#onextensionupdatestatechanged) - new event.  
-  Notify when the app were updated.
   
 * [overwolf.windows.setMinSize()](overwolf-windows#setminsizewindowid-width-height-callback) - new method.  
   Overrides the window's defined minimum size.
