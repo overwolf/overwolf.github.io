@@ -1,21 +1,20 @@
 ---
 id: ads-sdk-overview
-title: Overwolf Ads SDK
-sidebar_label:  Overwolf Ads SDK
+title: Overwolf Ads SDK Overview
+sidebar_label: Ads SDK Overview
 ---
 
 The Overwolf ads SDK is a small JavaScript library that allows developers to integrate ads into their Overwolf applications. These ads are managed and hosted by Overwolf.
 
-The Ads SDK is intended to be used by developers who wish to show ads in their apps and have discussed doing so with Overwolf. Please do not use this library without prior consent from Overwolf. 
-If you are an app developer who wishes to show ads in your app, please contact Overwolf at developers@overwolf.com
-
-#### Getting help and reporting bugs
-
-If you have encountered problems with this library, please let us know by contacting developers@overwolf.com, or talk directly to us through the Developers Slack.
+The Ads SDK is intended to be used by developers who wish to show ads in their apps and have discussed doing so with Overwolf. If you are an app developer who wishes to show ads in your app, please contact us.
 
 :::important
 Ads will be served to your app only after Overwolf enables it, so please contact us at developers@overwolf.com when your app is ready to show ads.
 :::
+
+#### Getting help and reporting bugs
+
+If you have encountered problems with this library, please let us know by contacting developers@overwolf.com, or talk directly to us through the Developers Slack.
 
 ## Getting Started
 
@@ -41,24 +40,30 @@ The most simple and basic usage of this library can be done by adding a few line
 
 ## Changes to your app’s manifest.json
 
-* The Overwolf Ads Libs uses some Overwolf APIs to improve ad targeting for users. Therefore you should add the following permissions to your app’s manifest.json file:
+### Set permissions
+
+The Overwolf Ads Libs uses some Overwolf APIs to improve ad targeting for users. Therefore you should add the following permissions to your app’s manifest.json file:
 
 ```json
 "permissions": ["Extensions", "Streaming", "Profile", "GameInfo"]
  ```
+### Enable Google’s syndication
 
- * In order to get impression tracking to work well, you would also need to enable a work-around that allows requests to Google’s syndication servers. This is done by setting `"protocol_override_domains" : {"googlesyndication" : "http"}`, under the manifest.json "data" property:
+In order to get impression tracking to work well, you would also need to enable a work-around that allows requests to Google’s syndication servers. This is done by setting `"protocol_override_domains" : {"googlesyndication" : "http"}`, under the manifest.json "data" property:
  
- ```
+```json
  "data": {    
     "protocol_override_domains" : {"googlesyndication" : "http"}
     }
  ```
- 
-*   The following App Window Data flags should be set to `true`:
-* [`"block_top_window_navigation":true`](http://developers.overwolf.com/documentation/sdk/overwolf/manifest-json/#windows-block_top_window_navigation) -  refrain from non `_blank <a>` ads from “taking-over” the entire app’s window.
-* [`"popup_blocker":true`](http://developers.overwolf.com/documentation/sdk/overwolf/manifest-json/#popup_blocker) – Prevents new browser windows from being opened automatically using script.
-* [`"mute":true`](http://developers.overwolf.com/documentation/sdk/overwolf/manifest-json/#windows-mute) - Mute sounds in window.
+
+### Set manifest flags
+
+The following App Window Data flags should be set to `true`:
+
+* [block_top_window_navigation](../api/manifest-json#windows-block_top_window_navigation) -  refrain from non `_blank <a>` ads from "taking-over" the entire app’s window.
+* [popup_blocker](../api/manifest-json#popup_blocker) – Prevents new browser windows from being opened automatically using script.
+* [mute](../api/manifest-json#windows-mute) - Mute sounds in window.
 
 ## Important guidelines for ad integration
 
