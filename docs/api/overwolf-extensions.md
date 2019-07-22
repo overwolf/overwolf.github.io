@@ -33,6 +33,7 @@ You can use the following helpful URL’s to retrieve an extension file content 
 * [overwolf.extensions.getManifest()](#getrunningstateid-callback)
 * [overwolf.extensions.relaunch()](#relaunch)
 * [overwolf.extensions.updateExtension()](#updateextensioncallback)
+* [overwolf.extensions.updateExtensions()](#updateextensionscallback)
 
 ## Events Reference
 
@@ -220,9 +221,20 @@ A callback function which will be called with the status of the request
 > Relaunch the current app.
 
 ## updateExtension(callback)
-#### Version added: 0.132
+#### Version added: 0.133
 
 > Tries to download an update for the calling extension.
+
+This functions allows apps to check and perform an update without having to wait for Overwolf to do so.
+
+Parameter | Type                  | Description                                                                           |
+--------- | ----------------------| ------------------------------------------------------------------------------------- |
+callback  | function              | The result of the request                                                             |
+
+## updateExtensions(callback)
+#### Version added: 0.133
+
+> Tries to download an update for all the installed extensions.
 
 This functions allows apps to check and perform an update without having to wait for Overwolf to do so.
 
@@ -234,11 +246,6 @@ callback  | function              | The result of the request                   
 #### Version added: 0.92
 
 > Fires when the current app is launched while already running. This is useful in the case where the app has custom logic for clicking its dock button while it is already running.
-
-## onExtensionUpdateStateChanged
-#### Version added: 0.132
-
-> Fires after the current app was updated successfully.
 
 ### The origin string
 
@@ -267,6 +274,11 @@ after-install    | auto-launched after installation                             
 :::tip
 if you want to get the origin (what triggered the app launch) before/without register the events, you can run the `window.location.href` command.
 :::
+
+## onExtensionUpdateStateChanged
+#### Version added: 0.132
+
+> Fires after the current app was updated successfully.
 
 ## onUncaughtException
 #### Version added: 0.133
