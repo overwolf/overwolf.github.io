@@ -151,6 +151,8 @@ A tip.
 
 :::warning
 A warning.
+:::
+
 </code>
 </pre>
 
