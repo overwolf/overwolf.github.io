@@ -69,43 +69,85 @@
               }
             });
         </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><a class="edit-page-link button" href="https://github.com/overwolf/overwolf.github.io/tree/source/docs/start/creating-demo-app.md" target="_blank" rel="noreferrer noopener">Edit</a><h1 class="postHeaderTitle">Creating the Main App Window</h1></header><article><div><span><p>To help you get a feel of Overwolf's API, here's an explanation on how to create a simple app that displays the name of the game you are currently playing.</p>
-<p>We`ll describe two different methods, one with the demo app as a base, and another working from scratch.
-It is best to review each method, so you can better understand the development process.</p>
-<p>For both methods, you should download the latest <a href="https://download.overwolf.com/install/Download?Name=Game+Summary&amp;ExtensionId=flkgdpkkjcoapbgmgpidhepajgkhckpgpibmlclb&amp;Channel=developers">Developers version of Overwolf</a>.</p>
+<p>We'll describe two different methods:</p>
+<ul>
+<li><p>Working <a href="#create-demo-app-from-scrarch">from scratch</a> and create a fundamental one window app.
+This app not follows our best practices and not even inject the window in-game.<br>
+It just for a quick demo about the essential components of an Overwolf app.</p></li>
+<li><p>Download our <a href="#download-sample-app">sample app</a> and use it as a base for your app.<br>
+This example is using our sample app, that uses all the recommended best practices like background controller, in-game window, etc.</p></li>
+</ul>
+<p><strong>Note</strong> that For both methods, you should download the latest <a href="https://download.overwolf.com/install/Download?Name=Game+Summary&amp;ExtensionId=flkgdpkkjcoapbgmgpidhepajgkhckpgpibmlclb&amp;Channel=developers">Developers version of Overwolf</a> Client.</p>
 <h2><a class="anchor" aria-hidden="true" id="create-demo-app-from-scrarch"></a><a href="#create-demo-app-from-scrarch" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>create demo app from scrarch</h2>
-<p>Learn how to develop apps in just few steps.</p>
+<p>In this example we will learn how to develop a very basic Overwolf app in just few steps.
+The source code and files that used in this example can be found in the <a href="https://github.com/overwolf/basic-demo-app">app's repository</a>.</p>
 <ol>
 <li><p>Create a folder, name it whatever you like.</p></li>
 <li><p>Create a file named &quot;manifest.json&quot; in that folder.</p></li>
-<li><p>Copy and paste the code from the <a href="../api/manifest-json">Manifest.json</a> section. If you scroll down to the technical explanation about the manifest.json, you can read about additional features that you can use to make your app even more awesome.</p></li>
-<li><p>Provide an icon for your app, and place it into the folder you created. Remember to reference it in the &quot;icon&quot; field of the manifest.json.</p></li>
+<li><p>Copy and paste the below manifest code snippet into the &quot;manifest.json&quot; file.
+You can read in the <a href="../api/manifest-json">Manifest.json</a> section about additional features that you can use to make your app even more awesome.</p></li>
 </ol>
-<pre><code class="hljs css language-js"><span class="hljs-string">"meta"</span>:{
-        <span class="hljs-string">"name"</span>:<span class="hljs-string">"Demo_App"</span>,
-        <span class="hljs-string">"version"</span>:<span class="hljs-string">"1.0.0"</span>,
-        <span class="hljs-string">"minimum-overwolf-version"</span>:<span class="hljs-string">"0.77.10"</span>,
-        <span class="hljs-string">"author"</span>:<span class="hljs-string">"Developer_Name"</span>,
-        <span class="hljs-string">"icon"</span>:<span class="hljs-string">"IconMouseOver.png"</span>,
-        <span class="hljs-string">"icon_gray"</span>:<span class="hljs-string">"IconMouseNormal.png"</span>,
-        <span class="hljs-string">"description"</span>:<span class="hljs-string">"Demo App"</span>
-},
-</code></pre>
-<ol start="5">
-<li>Create an <code>index.html</code> file in that folder. You can create a sub-folder, and place any of the resources your app needs in there.  Refer to this file in the &quot;file&quot; field of the manifest.json.</li>
-</ol>
-<pre><code class="hljs css language-js"><span class="hljs-string">"MainWindow"</span>:{
-        <span class="hljs-string">"file"</span>:<span class="hljs-string">"Files/index.html"</span>,
-        <span class="hljs-string">"transparent"</span>:<span class="hljs-string">"true"</span>,
-        <span class="hljs-string">"resizable"</span>:<span class="hljs-string">"true"</span>,
-        <span class="hljs-string">"size"</span>:{ <span class="hljs-string">"width"</span>:<span class="hljs-string">"400"</span>, <span class="hljs-string">"height"</span>:<span class="hljs-string">"300"</span> },
-        <span class="hljs-string">"min_size"</span>:{ <span class="hljs-string">"width"</span>:<span class="hljs-string">"200"</span>, <span class="hljs-string">"height"</span>:<span class="hljs-string">"200"</span> },
-        <span class="hljs-string">"max_size"</span>:{ <span class="hljs-string">"width"</span>:<span class="hljs-string">"600"</span>, <span class="hljs-string">"height"</span>:<span class="hljs-string">"800"</span> }
+<pre><code class="hljs css language-json">{
+    <span class="hljs-attr">"manifest_version"</span>:<span class="hljs-number">1</span>,
+    <span class="hljs-attr">"type"</span>:<span class="hljs-string">"WebApp"</span>,
+    <span class="hljs-attr">"meta"</span>:{
+        <span class="hljs-attr">"name"</span>:<span class="hljs-string">"Demo App"</span>,
+        <span class="hljs-attr">"version"</span>:<span class="hljs-string">"1.0.0"</span>,
+        <span class="hljs-attr">"minimum-overwolf-version"</span>:<span class="hljs-string">"0.77.10"</span>,
+        <span class="hljs-attr">"author"</span>:<span class="hljs-string">"Developer Name"</span>,
+        <span class="hljs-attr">"icon"</span>:<span class="hljs-string">"IconMouseOver.png"</span>,
+        <span class="hljs-attr">"icon_gray"</span>:<span class="hljs-string">"IconMouseNormal.png"</span>,
+        <span class="hljs-attr">"description"</span>:<span class="hljs-string">"Demo App"</span>
+    },
+    <span class="hljs-attr">"data"</span>: {
+        <span class="hljs-attr">"start_window"</span>:<span class="hljs-string">"MainWindow"</span>,
+        <span class="hljs-attr">"windows"</span>:{
+            <span class="hljs-attr">"MainWindow"</span>:{
+                    <span class="hljs-attr">"file"</span>:<span class="hljs-string">"index.html"</span>,
+                    <span class="hljs-attr">"transparent"</span>: <span class="hljs-literal">false</span>,
+                    <span class="hljs-attr">"resizable"</span>: <span class="hljs-literal">true</span>,
+                    <span class="hljs-attr">"use_os_windowing"</span>: <span class="hljs-literal">true</span>,
+                    <span class="hljs-attr">"size"</span>: {
+                        <span class="hljs-attr">"width"</span>:<span class="hljs-number">700</span>,
+                        <span class="hljs-attr">"height"</span>:<span class="hljs-number">400</span>
+                        },
+                    <span class="hljs-attr">"min_size"</span>: {
+                        <span class="hljs-attr">"width"</span>:<span class="hljs-number">400</span>,
+                        <span class="hljs-attr">"height"</span>:<span class="hljs-number">400</span>
+                    }
+                }
+        }
+    }
 }
 </code></pre>
+<ol start="4">
+<li><p>Provide an icons for your app, and place them into the folder you created. Remember to reference it in the &quot;icon&quot; field of the manifest.json.
+For this example you can download the two icons from the <a href="https://github.com/overwolf/basic-demo-app">app's repository</a>.</p></li>
+<li><p>Create an <code>index.html</code> file in the main folder and paste the below snippet:</p></li>
+</ol>
+<pre><code class="hljs css language-html"><span class="hljs-meta">&lt;!DOCTYPE html&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">html</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>Basic sample app<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>This is a native desktop window that cannot be injectd into the game.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+
+<span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span>
+</code></pre>
+<ol start="6">
+<li>Pack all the files and icons in the folder as an Overwolf app installer A.K.A <a href="https://discuss.developers.overwolf.com/t/what-is-an-opk-package/23">&quot;OPK&quot; packge</a>:<br>
+just zip everything, name the package whatever you like. After it's done, rename the <code>ZIP</code> extension to <code>OPK</code> extension.</li>
+</ol>
+<p><strong>Now you have a working Overwolf app installer!</strong>  <br>
+You can double click on it, and it will be installed into the Overwolf dock.</p>
+<p>After clicking on it, the app window should be displayed:</p>
+<p><img src="/docs/assets/basic-sample-app.png" alt="alt-text"></p>
 <p>From here, you can use the standard web development techniques to create, debug, and finish your application (doesn’t matter which way you used to create your app).</p>
+<p>The source code and files that used in this example can be found in the <a href="https://github.com/overwolf/basic-demo-app">app's repository</a>.</p>
 <h2><a class="anchor" aria-hidden="true" id="download-sample-app"></a><a href="#download-sample-app" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>download sample app</h2>
 <p>To use the sample app as a base, please follow these steps:</p>
-<p><a href="">This repository</a> contains the Overwolf sample app, that targeted for Fortnite. Why Fortnite? because it's popular and free. Anyway, you can easily customize this sample to fit any other supported game.</p>
+<p><a href="https://github.com/overwolf/sample-app">This repository</a> contains the Overwolf sample app, that targeted for Fortnite. Why Fortnite? because it's popular and free. Anyway, you can easily customize this sample to fit any other supported game.</p>
 <p>The apps demonstrate our best practices like background controller, custom hotkey, ad display and much more. You can read all the details in the repo readme.</p>
 </span></div></article></div><div class="docLastUpdate"><em>Last updated on 2019-7-23 by eransharv</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/start/sdk-introduction"><span class="arrow-prev">← </span><span>SDK Inroduction</span></a><a class="docs-next button" href="/docs/start/creating-secondary-window"><span>Creating a Secondary Window</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#create-demo-app-from-scrarch">create demo app from scrarch</a></li><li><a href="#download-sample-app">download sample app</a></li></ul></nav></div><footer class="site-footer"><div class="container"><ul><li>Legal</li><li><a href="/docs/topics/legal-overview">Terms overview</a></li><li><a href="/docs/topics/legal-developers-terms">Developer&#x27;s terms</a></li><li><a href="/docs/topics/legal-app-terms">App terms</a></li><li><a href="http://www.overwolf.com/legal/" target="_blank">Overwolf terms</a></li><li><a href="http://www.overwolf.com/legal/#Privacy-policy" target="_blank">Overwolf Privacy policy</a></li></ul><ul><li>Support</li><li><a href=" https://discuss.developers.overwolf.com/" target="_blank">Questions and Answers</a></li><li><a href="https://discordapp.com/invite/cjjrZDp" target="_blank">Discord</a></li><li><a href="/docs/support/contact-us#join-our-slack">Slack</a></li><li><a href="https://www.facebook.com/OverwolfDevs" target="_blank">Facebook</a></li><li><a href="https://twitter.com/OverwolfDevs" target="_blank">Twitter</a></li></ul><ul><li>Documentation</li><li><a href="/docs/api/changelog">Changelog</a></li><li><a href="/docs/api/overwolf-api-overview">API</a></li><li><a href="/docs/start/app-creation-process">App Creation Process</a></li><li><a href="/docs/topics/best-practices-overview">Best Practices</a></li><li><a href="/docs/status/all">Game Events status</a></li></ul><ul><li>Information</li><li><a href="http://www.overwolf.com/careers/">Careers</a></li><li><a href="https://play.overwolf.com/fund/" target="_blank">Fund</a></li><li><a href="https://medium.com/overwolf-developers" target="_blank">Developers Blog</a></li><li><a href="https://www.overwolf.com/appstore" target="_blank">Overwolf Appstore</a></li></ul></div></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
                 document.addEventListener('keyup', function(e) {
