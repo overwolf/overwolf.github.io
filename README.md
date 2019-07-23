@@ -2,6 +2,8 @@
 This is the repo of the Overwolf Developers website - API Documentation, guides, etc.
 This is intended as a quick reference and showcase.
 
+**NOTE that  It will be about 2 minutes before a content change takes effect**
+
 ### Search configuration:
 
 * To customize the look and feel by following the DocSearch documentation see https://community.algolia.com/docsearch/styling.html) 
