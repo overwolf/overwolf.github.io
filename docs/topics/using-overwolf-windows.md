@@ -37,17 +37,21 @@ Here is an example of a window declaration:
 
 ### Essential window properties
 
-* `start_window` - Your app will always have a "main" window, the main window is the first window to be shown when your app is launched, and it MUST exist in order for the other windows to exist – if you close your main window (or if the user closes it) all other windows will be closed (and, in fact, your entire app is turned off).
+* [`start_window`](../api/manifest-json#start_window) - Your app will always have a "main" window, the main window is the first window to be shown when your app is launched, and it MUST exist in order for the other windows to exist – if you close your main window (or if the user closes it) all other windows will be closed (and, in fact, your entire app is turned off).
 
-* `file` – The most basic property of your window. This is the HTML file to be loaded into your window when it is opened. This can only be a local file. If you wish to host your app in a remote web-site, you’ll have to have a local page that redirects to the remote website (in such cases, you need to make sure that the **block_top_window_navigation** property is set to false).
+* [`file`](../api/manifest-json#window-file) – The most basic property of your window. This is the HTML file to be loaded into your window when it is opened. This can only be a local file. If you wish to host your app in a remote web-site, you’ll have to have a local page that redirects to the remote website (in such cases, you need to make sure that the **block_top_window_navigation** property is set to false).
 
-* `transparent` – When set to true, your window has no window borders or background. Any part of your window that has a transparent background ("background: transparent;") will be a see-through area that blends with the game or desktop. If this is false, your window will have the common Overwolf window borders and background (white).
+* [`transparent`](../api/manifest-json#window-transparent) – When set to true, your window has no window borders or background. Any part of your window that has a transparent background ("background: transparent;") will be a see-through area that blends with the game or desktop. If this is false, your window will have the common Overwolf window borders and background (white).
 
-* `grab_keyboard_focus` – The default value is false. Indicates whether the window will grab the keyboard focus when it is opened. Some windows can be opened automatically (e.g. based on a game event or a notification) or even by hotkey – you might not want to "steal" the keyboard focus from the game in such cases.
+* [`grab_keyboard_focus`](../api/manifest-json#windows-grab_keyboard_focus) – The default value is false. Indicates whether the window will grab the keyboard focus when it is opened. Some windows can be opened automatically (e.g. based on a game event or a notification) or even by hotkey – you might not want to "steal" the keyboard focus from the game in such cases.
 **grab_focus_on_desktop** is the complementary property when outside of the game (however, unlike grab_keyboard_focus, the default value is true).
 
-* `size` – Allows you to set the default size of the window when it is first opened. If your window is not resizable, this will be the constant size of your window.
-However, if your app is resizable – the app size is saved by Overwolf when closed so that the next time it is opened, it will preserve this size.
+* [`size`](../api/manifest-json#windows-size) – Allows you to set the default size of the window when it is first opened. If your window is not resizable, this will be the constant size of your window.
+However, if your app is resizable – the app size is saved by Overwolf when closed so that the next time it is opened, **it will preserve this size** (even if you uninstall/re-install your app).  
+See the [windows sizes](#windows-sizes) tips.
+
+* [`min_size`](../api/manifest-json#windows-min_size) and [`max_size`](../api/manifest-json#windows-max_size) - Defines the minimum/maximum size of the window in pixels.
+
 
 ## Accessing your declared windows
 
@@ -184,11 +188,26 @@ While the most common window dimension would be 1366×768, the best optimal size
 
 You can also do the following when handling with windows sizes:
 
-* Get the user's resolution from Overwolf’s API  to determine the appropriate window size:
-  * Get the game's resolution (for in-game windows) using [`overwolf.games.onGameInfoUpdated()`](../api/overwolf-games#ongameinfoupdated).
-  * Get the user's desktop resolution (for out of game windows) using [`overwolf.utils.getMonitorsList()`](../api/overwolf-utils#getmonitorslistcallback).
-* Allow the user to choose the right window size from the app’s settings.
+### Get the user's resolution
 
+Get the user's resolution from Overwolf’s API  to determine the appropriate window size:
+
+  * Get the game's resolution (for in-game windows) using [overwolf.games.onGameInfoUpdated()](../api/overwolf-games#ongameinfoupdated).
+
+  * Get the user's desktop resolution (for out of game windows) using [overwolf.utils.getMonitorsList()](../api/overwolf-utils#getmonitorslistcallback).
+
+### Set the default size
+
+As [size](../api/manifest-json#windows-size) flag only applies the first time you open the windows, you can set [min_size](../api/manifest-json#windows-min_size) and [max_size](../api/manifest-json#windows-max_size) to the same value, to enforce your app window to always load on the same size.
+In addition, if you want to dynamically set your window size according to the user's desktop resolution and DPI, you can use [setMinSize()](../api/overwolf-windows#setminsizewindowid-width-height-callback).
+
+### Set the default position
+
+As [start_position](../api/manifest-json#windows-start_position) flag only applies the first time you open the windows, you can use [changePosition()](../api/overwolf-windows#changepositionwindowid-left-top-callback) if you want to change the position of the window dynamically. For example, after you calculate the user's resolution and you want to position your window in the center of the screen.
+
+### Allow resolution chooser
+
+Allow the user to choose the right window size from the app’s settings.  
 Some Examples for apps that let the user choose his preferred app window size and for common and optimal app window sizes:
 
 <div class="box">
@@ -260,14 +279,14 @@ Keep it small – when Overwolf renders transparent windows – it does it’s b
 
 ### Use block_top_window_navigation
 
-Unless you know otherwise, always set: `block_top_window_navigation` to true in the manifest.
+Unless you know otherwise, always set: [block_top_window_navigation](../api/manifest-json#windows-block_top_window_navigation) to true in the manifest.
 This will make sure that no bugs or accidental calls like: window.top.href = … take control of your entire app.
 The only reason this isn’t set by default, is for backwards compatibility (e.g. apps that want to host themselves on a remote server).
 
 ### Use background controller
 
 Consider using your main window as a hidden/background window (that the user doesn’t see) – it then can act as a controller/service that runs in the background and controls or communicate with other visible windows of the app. It is a MUST for apps that auto-launch when the game starts or just want to popup notifications.
-This kind of "hidden" window should have the `is_background_page` flag set to true in the app’s manifest.json file:
+This kind of "hidden" window should have the [is_background_page](../api/manifest-json#is_background_page) flag set to true in the app’s manifest.json file:
 
 ```json
 "index" : {
@@ -286,4 +305,4 @@ If your app includes a window that will only be visible on desktop (and not in-g
 "native_window":true
 ```
 
-This will dramatically improve your app performance. 
+This will dramatically improve your app performance.

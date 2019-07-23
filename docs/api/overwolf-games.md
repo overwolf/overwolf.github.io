@@ -58,6 +58,12 @@ callback  | function | Called with the currently running or active [GameInfo](#g
 }
 ```
 
+#### Usage Example
+
+```javascript
+overwolf.games.getRunningGameInfo(function(){console.log(JSON.stringify(arguments))})
+```
+
 ## getGameInfo(gameClassId,callback)
 
 #### Version added: 0.93 

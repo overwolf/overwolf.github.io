@@ -6,8 +6,6 @@ sidebar_label: Getting Started
 
 ## Motivation, Core concepts and Principles
 
-Learn how to develop apps in just few steps.
-
 ### The Overwolf mission
 
 We’re gamers. Our mission is to create value for every gamer in every game. This is why we’ve built an Appstore with apps to help gamers play smarter and have fun. As we’ve grown, our ability to fulfill this vision has grown by empowering independent third party creators, developers and partners, to use our platform and create apps for the games they love.

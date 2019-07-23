@@ -13,6 +13,8 @@ For both methods, you should download the latest [Developers version of Overwolf
 
 ## create demo app from scrarch
 
+Learn how to develop apps in just few steps.
+
 1. Create a folder, name it whatever you like.
 
 2. Create a file named "manifest.json" in that folder.

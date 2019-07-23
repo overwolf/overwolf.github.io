@@ -29,3 +29,13 @@ callback  | function   | A function called with the extra object, if found, and 
 Parameter | Type       | Description                                       |
 --------- | -----------| ------------------------------------------------- |
 callback  | function   | A function called with the manifest data          |
+
+#### Usage Example
+
+Get the app version from the manifest and print it to the console.
+
+```javascript
+overwolf.extensions.current.getManifest(function(app){console.log(app.meta.version)})
+```
+
+

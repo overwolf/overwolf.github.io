@@ -1,7 +1,7 @@
 ---
 id: communication-guidelines
-title: Communication Guidelines
-sidebar_label: Communication Guidelines
+title: Marketing Communication Guidelines
+sidebar_label: Marketing Communication
 ---
 
-## Communication Guidelines
+## Marketing Communication Guidelines
