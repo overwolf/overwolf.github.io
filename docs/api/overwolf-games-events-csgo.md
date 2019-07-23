@@ -143,10 +143,14 @@ weapon_change| <ul><li>weapon_name</li><li>weapon_type |Player switches weapons|
 
 #### *weapon_change* note
 
-* <b>weapon_type:</b>
-`“Knife”, “Pistol”, “Shotgun”, “Machine Gun”, “Submachine Gun”, “Rifle”, “SniperRifle”, “Grenade”, “C4”`
-* <b>weapon_name:</b>
-`“weapon_knife”, “weapon_knife_t”, “weapon_hkp2000”, “weapon_usp_silencer”, “weapon_glock”, “weapon_elite”,  “weapon_p250”, “weapon_fiveseven”, “weapon_cz75a”,“weapon_tec9”, “weapon_deagle”, “weapon_revolver”, “weapon_nova”, “weapon_xm1014”, “weapon_mag7”,“weapon_sawedoff”, “weapon_m249”, “weapon_negev”,  “weapon_mp9”, “weapon_mac10”, “weapon_mp7”,  “weapon_ump45”, “weapon_p90”, “weapon_bizon”,“weapon_famas”, “weapon_galilar”, “weapon_m4a1”,  “weapon_m4a1_silencer”, “weapon_ak47”,“weapon_ssg08”, “weapon_aug”, “weapon_sg556”, “weapon_awp”, “weapon_scar20”, “weapon_g3sg1”,“weapon_incgrenade”, “weapon_decoy”, “weapon_flashbang”, “weapon_hegrenade”, “weapon_smokegrenade”, “weapon_c4”`
+* **weapon_type:**
+```json
+“Knife”, “Pistol”, “Shotgun”, “Machine Gun”, “Submachine Gun”, “Rifle”, “SniperRifle”, “Grenade”, “C4”
+```
+* **weapon_name:**
+```json
+“weapon_knife”, “weapon_knife_t”, “weapon_hkp2000”, “weapon_usp_silencer”, “weapon_glock”, “weapon_elite”,  “weapon_p250”, “weapon_fiveseven”, “weapon_cz75a”,“weapon_tec9”, “weapon_deagle”, “weapon_revolver”, “weapon_nova”, “weapon_xm1014”, “weapon_mag7”,“weapon_sawedoff”, “weapon_m249”, “weapon_negev”,  “weapon_mp9”, “weapon_mac10”, “weapon_mp7”,  “weapon_ump45”, “weapon_p90”, “weapon_bizon”,“weapon_famas”, “weapon_galilar”, “weapon_m4a1”,  “weapon_m4a1_silencer”, “weapon_ak47”,“weapon_ssg08”, “weapon_aug”, “weapon_sg556”, “weapon_awp”, “weapon_scar20”, “weapon_g3sg1”,“weapon_incgrenade”, “weapon_decoy”, “weapon_flashbang”, “weapon_hegrenade”, “weapon_smokegrenade”, “weapon_c4”
+```
 
 ## `weapon_acquired`
 
@@ -172,42 +176,6 @@ Event       | Event Data   | Fired When    | Notes              | Since Version 
 ------------| -------------| --------------| ------------------ | --------------|
 team_set    |<ul><li>CT</li><li>T|The player selected a team|   |       0.7     |
 
-<b>Info Updates</b></br>
-In order to get CS:GO info-updates, your app should request the `info` feature and listen to `overwolf.games.events.onInfoUpdates2` info updates. However, you might add the listener after the update has already happened so the app will miss the info-update event. For that reason, you should also call `overwolf.games.events.getInfo()` to get the current info state.
-
-Let’s see an example of how to obtain the map name in CS:GO:
-
-First we will set the required features and set up the listener:
-
-`overwolf.games.events.setRequiredFeatures(['info', 'death', 'kill', 'headshot'], function(info) {
-	if (info.status == "success") {
-		setListener();
-		getInfo();
-	} else {
-		// we should retry to set the required features in case 
-		// the game events provider is still initializing
-	}
-});`
-
-`function setListener() {
-	overwolf.games.events.onInfoUpdates2.addListener(function(info) {
-		console.log(info);   
-	});
-}`
-
-`function getInfo() {
-	overwolf.games.events.getInfo(function(info) { 
-		console.log(info); 
-	});
-}`
-
-When the map info will be updated the `onInfoUpdate2` listener will print to the console:
-
-`{"info":{"round":{"map":"de_dust2"}},"feature":"info"}`
-
-After calling `getInfo()` the console will print (if the map info has already been updated):
-
-`{"status":"status","res":{"player":{"totalKills":"0","totalDeaths":"0","totalMvps":"0","score":"0","team":"T","steamid":""},"round":{"map":"de_dust2","phase":"live","numOfRound":"0"}}}`
 
 ## `match_info`
 
@@ -262,7 +230,10 @@ Data Example:
 
 #### *match* note
 
-Each player contains:<ul><li>steamId</li><li>team
+Each player contains:
+
+* steamId
+* team
 
 Data Example:
 
