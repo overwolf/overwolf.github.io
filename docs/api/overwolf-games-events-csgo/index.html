@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>CS:GO Game Events · Overwolf</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="#hello"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="CS:GO Game Events · Overwolf"/><meta property="og:type" content="website"/><meta property="og:url" content="https://overwolf.github.io/"/><meta property="og:description" content="#hello"/><meta property="og:image" content="https://overwolf.github.io/img/ow_share.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://overwolf.github.io/img/ow_share.png"/><link rel="shortcut icon" href="/img/ow-favicon.ico"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script>
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>CS:GO Game Events · Overwolf</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="Please read the [overwolf.games.events](overwolf-games-events) documentation page to learn how to use Overwolf game events."/><meta name="docsearch:language" content="en"/><meta property="og:title" content="CS:GO Game Events · Overwolf"/><meta property="og:type" content="website"/><meta property="og:url" content="https://overwolf.github.io/"/><meta property="og:description" content="Please read the [overwolf.games.events](overwolf-games-events) documentation page to learn how to use Overwolf game events."/><meta property="og:image" content="https://overwolf.github.io/img/ow_share.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://overwolf.github.io/img/ow_share.png"/><link rel="shortcut icon" href="/img/ow-favicon.ico"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script>
               (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
               (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
               m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
@@ -68,8 +68,273 @@
                 };
               }
             });
-        </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><a class="edit-page-link button" href="https://github.com/overwolf/overwolf.github.io/tree/source/docs/api/overwolf-games-events-csgo.md" target="_blank" rel="noreferrer noopener">Edit</a><h1 class="postHeaderTitle">CS:GO Game Events</h1></header><article><div><span><p>#hello</p>
-</span></div></article></div><div class="docLastUpdate"><em>Last updated on 2019-6-18 by eransharv</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/api/overwolf-games-events-autochess"><span class="arrow-prev">← </span><span>Auto Chess Events</span></a><a class="docs-next button" href="/docs/api/overwolf-games-events-dota2"><span>Dota 2 Events</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"></nav></div><footer class="site-footer"><div class="container"><ul><li>Legal</li><li><a href="/docs/topics/legal-overview">Terms overview</a></li><li><a href="/docs/topics/legal-developers-terms">Developer&#x27;s terms</a></li><li><a href="/docs/topics/legal-app-terms">App terms</a></li><li><a href="http://www.overwolf.com/legal/" target="_blank">Overwolf terms</a></li><li><a href="http://www.overwolf.com/legal/#Privacy-policy" target="_blank">Overwolf Privacy policy</a></li></ul><ul><li>Support</li><li><a href=" https://discuss.developers.overwolf.com/" target="_blank">Questions and Answers</a></li><li><a href="https://discordapp.com/invite/cjjrZDp" target="_blank">Discord</a></li><li><a href="/docs/support/contact-us#join-our-slack">Slack</a></li><li><a href="https://www.facebook.com/OverwolfDevs" target="_blank">Facebook</a></li><li><a href="https://twitter.com/OverwolfDevs" target="_blank">Twitter</a></li></ul><ul><li>Documentation</li><li><a href="/docs/api/changelog">Changelog</a></li><li><a href="/docs/api/overwolf-api-overview">API</a></li><li><a href="/docs/start/app-creation-process">App Creation Process</a></li><li><a href="/docs/topics/best-practices-overview">Best Practices</a></li><li><a href="/docs/status/all">Game Events status</a></li></ul><ul><li>Information</li><li><a href="http://www.overwolf.com/careers/">Careers</a></li><li><a href="https://play.overwolf.com/fund/" target="_blank">Fund</a></li><li><a href="https://medium.com/overwolf-developers" target="_blank">Developers Blog</a></li><li><a href="https://www.overwolf.com/appstore" target="_blank">Overwolf Appstore</a></li></ul></div></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+        </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><a class="edit-page-link button" href="https://github.com/overwolf/overwolf.github.io/tree/source/docs/api/overwolf-games-events-csgo.md" target="_blank" rel="noreferrer noopener">Edit</a><h1 class="postHeaderTitle">CS:GO Game Events</h1></header><article><div><span><p>Please read the <a href="overwolf-games-events">overwolf.games.events</a> documentation page to learn how to use Overwolf game events.</p>
+
+    <div class="admonition admonition-important">
+      <div class="admonition-heading">
+        <h5><div class="admonition-icon"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="16" viewBox="0 0 14 16"><path fill-rule="evenodd" d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"/></svg></div>  Game ID</h5>
+      </div>
+      <div class="admonition-content">
+    <p>7764</p>
+</div></div><h2><a class="anchor" aria-hidden="true" id="sample-apps"></a><a href="#sample-apps" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Sample Apps</h2>
+<ul>
+<li><a href="https://github.com/overwolf/events-consumer">CS:GO game events sample app</a></li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="available-features"></a><a href="#available-features" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Available Features</h2>
+<ul>
+<li><a href="#match_info">match_info</a></li>
+<li><a href="#kill">kill</a></li>
+<li><a href="#death">death</a></li>
+<li><a href="#assist">assist</a></li>
+<li><a href="#headshot">headshot</a></li>
+<li><a href="#round_start">round_start</a></li>
+<li><a href="#match_start">match_start</a></li>
+<li><a href="#match_info">match_info</a></li>
+<li><a href="#match_end">match_end</a></li>
+<li><a href="#team_round_win">team_round_win</a></li>
+<li><a href="#bomb_planted">bomb_planted</a></li>
+<li><a href="#bomb_change">bomb_change</a></li>
+<li><a href="#reloading">reloading</a></li>
+<li><a href="#fired">fired</a></li>
+<li><a href="#weapon_change">weapon_change</a></li>
+<li><a href="#weapon_acquired">weapon_acquired</a></li>
+<li><a href="#info">info</a></li>
+<li><a href="#roster">roster</a></li>
+<li><a href="#player_activity_change">player_activity_change</a></li>
+<li><a href="#team_set">team_set</a></li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="kill"></a><a href="#kill" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>kill</code></h2>
+<h3><a class="anchor" aria-hidden="true" id="events"></a><a href="#events" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Events</h3>
+<table>
+<thead>
+<tr><th>Event</th><th>Event Data</th><th>Fired When</th><th>Notes</th><th>Since Version</th></tr>
+</thead>
+<tbody>
+<tr><td>kill</td><td>totalKills – total kills for player in match</td><td>Player has killed an enemy</td><td></td><td>0.7</td></tr>
+</tbody>
+</table>
+<h2><a class="anchor" aria-hidden="true" id="death"></a><a href="#death" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>death</code></h2>
+<h3><a class="anchor" aria-hidden="true" id="events-1"></a><a href="#events-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Events</h3>
+<table>
+<thead>
+<tr><th>Event</th><th>Event Data</th><th>Fired When</th><th>Notes</th><th>Since Version</th></tr>
+</thead>
+<tbody>
+<tr><td>death</td><td>totalDeaths – total deaths of player in match</td><td>Player has died</td><td></td><td>0.7</td></tr>
+</tbody>
+</table>
+<h2><a class="anchor" aria-hidden="true" id="assist"></a><a href="#assist" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>assist</code></h2>
+<h3><a class="anchor" aria-hidden="true" id="events-2"></a><a href="#events-2" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Events</h3>
+<table>
+<thead>
+<tr><th>Event</th><th>Event Data</th><th>Fired When</th><th>Notes</th><th>Since Version</th></tr>
+</thead>
+<tbody>
+<tr><td>assist</td><td>totalAssists – total assists for user it match</td><td>Player has assisted in killing an enemy</td><td></td><td>0.7</td></tr>
+</tbody>
+</table>
+<h2><a class="anchor" aria-hidden="true" id="headshot"></a><a href="#headshot" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>headshot</code></h2>
+<h3><a class="anchor" aria-hidden="true" id="events-3"></a><a href="#events-3" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Events</h3>
+<table>
+<thead>
+<tr><th>Event</th><th>Event Data</th><th>Fired When</th><th>Notes</th><th>Since Version</th></tr>
+</thead>
+<tbody>
+<tr><td>headshot</td><td>headshotsInRound – total headshots for user in <b>current round</b></td><td>Player has gained a killed with a headshot</td><td>Fired alongside kill event</td><td>0.7</td></tr>
+</tbody>
+</table>
+<h2><a class="anchor" aria-hidden="true" id="round_start"></a><a href="#round_start" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>round_start</code></h2>
+<h3><a class="anchor" aria-hidden="true" id="events-4"></a><a href="#events-4" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Events</h3>
+<table>
+<thead>
+<tr><th>Event</th><th>Event Data</th><th>Fired When</th><th>Notes</th><th>Since Version</th></tr>
+</thead>
+<tbody>
+<tr><td>round_start</td><td><ul><li>num_of_rounds – total number of rounds in current match</li><li>player_team – CT/T</li></td><td>A new round has began</td><td></td><td>0.7</td></tr>
+</tbody>
+</table>
+<h2><a class="anchor" aria-hidden="true" id="match_start"></a><a href="#match_start" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>match_start</code></h2>
+<h3><a class="anchor" aria-hidden="true" id="events-5"></a><a href="#events-5" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Events</h3>
+<table>
+<thead>
+<tr><th>Event</th><th>Event Data</th><th>Fired When</th><th>Notes</th><th>Since Version</th></tr>
+</thead>
+<tbody>
+<tr><td>match_start</td><td>None</td><td>A new match has started</td><td></td><td>0.7</td></tr>
+</tbody>
+</table>
+<h2><a class="anchor" aria-hidden="true" id="match_end"></a><a href="#match_end" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>match_end</code></h2>
+<h3><a class="anchor" aria-hidden="true" id="events-6"></a><a href="#events-6" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Events</h3>
+<table>
+<thead>
+<tr><th>Event</th><th>Event Data</th><th>Fired When</th><th>Notes</th><th>Since Version</th></tr>
+</thead>
+<tbody>
+<tr><td>match_end</td><td>None</td><td>Match was ended</td><td></td><td>0.7</td></tr>
+</tbody>
+</table>
+<h2><a class="anchor" aria-hidden="true" id="team_round_win"></a><a href="#team_round_win" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>team_round_win</code></h2>
+<h3><a class="anchor" aria-hidden="true" id="events-7"></a><a href="#events-7" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Events</h3>
+<table>
+<thead>
+<tr><th>Event</th><th>Event Data</th><th>Fired When</th><th>Notes</th><th>Since Version</th></tr>
+</thead>
+<tbody>
+<tr><td>team_round_win</td><td>None</td><td><ul><li>winningTeam – the team that won the round (CT/T)</li><li>bomb – bomb status (exploded/defused/planted)</td><td></td><td>0.7</td></tr>
+</tbody>
+</table>
+<h2><a class="anchor" aria-hidden="true" id="bomb_planted"></a><a href="#bomb_planted" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>bomb_planted</code></h2>
+<h3><a class="anchor" aria-hidden="true" id="events-8"></a><a href="#events-8" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Events</h3>
+<table>
+<thead>
+<tr><th>Event</th><th>Event Data</th><th>Fired When</th><th>Notes</th><th>Since Version</th></tr>
+</thead>
+<tbody>
+<tr><td>bomb_planted</td><td>None</td><td>A bomb has been planted (by any player)</td><td></td><td>0.7</td></tr>
+</tbody>
+</table>
+<h2><a class="anchor" aria-hidden="true" id="bomb_change"></a><a href="#bomb_change" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>bomb_change</code></h2>
+<h3><a class="anchor" aria-hidden="true" id="events-9"></a><a href="#events-9" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Events</h3>
+<table>
+<thead>
+<tr><th>Event</th><th>Event Data</th><th>Fired When</th><th>Notes</th><th>Since Version</th></tr>
+</thead>
+<tbody>
+<tr><td>bomb_change</td><td>Bomb state (planted / exploded / defused)</td><td>Bomb state was changed</td><td></td><td>0.7</td></tr>
+</tbody>
+</table>
+<h2><a class="anchor" aria-hidden="true" id="reloading"></a><a href="#reloading" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>reloading</code></h2>
+<h3><a class="anchor" aria-hidden="true" id="events-10"></a><a href="#events-10" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Events</h3>
+<table>
+<thead>
+<tr><th>Event</th><th>Event Data</th><th>Fired When</th><th>Notes</th><th>Since Version</th></tr>
+</thead>
+<tbody>
+<tr><td>reloading</td><td><ul><li>weapon_name</li><li>weapon_current_ammo</li><li>weapon_max_ammo</li><li>weapon_type</td><td>Player reloads his weapon</td><td></td><td>0.7</td></tr>
+</tbody>
+</table>
+<h2><a class="anchor" aria-hidden="true" id="fired"></a><a href="#fired" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>fired</code></h2>
+<h3><a class="anchor" aria-hidden="true" id="events-11"></a><a href="#events-11" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Events</h3>
+<table>
+<thead>
+<tr><th>Event</th><th>Event Data</th><th>Fired When</th><th>Notes</th><th>Since Version</th></tr>
+</thead>
+<tbody>
+<tr><td>fired</td><td><ul><li>weapon_name</li><li>weapon_current_ammo</li><li>weapon_max_ammo</li><li>weapon_type</td><td></td><td>“fired” is not available on “Arms Race” and “Demolition” modes</td><td>0.7</td></tr>
+</tbody>
+</table>
+<h2><a class="anchor" aria-hidden="true" id="weapon_change"></a><a href="#weapon_change" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>weapon_change</code></h2>
+<h3><a class="anchor" aria-hidden="true" id="events-12"></a><a href="#events-12" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Events</h3>
+<table>
+<thead>
+<tr><th>Event</th><th>Event Data</th><th>Fired When</th><th>Notes</th><th>Since Version</th></tr>
+</thead>
+<tbody>
+<tr><td>weapon_change</td><td><ul><li>weapon_name</li><li>weapon_type</td><td>Player switches weapons</td><td>See <a href="#weapon_change-note">notes</a></td><td>0.7</td></tr>
+</tbody>
+</table>
+<h4><a class="anchor" aria-hidden="true" id="weapon_change-note"></a><a href="#weapon_change-note" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><em>weapon_change</em> note</h4>
+<ul>
+<li><b>weapon_type:</b>
+<code>“Knife”, “Pistol”, “Shotgun”, “Machine Gun”, “Submachine Gun”, “Rifle”, “SniperRifle”, “Grenade”, “C4”</code></li>
+<li><b>weapon_name:</b>
+<code>“weapon_knife”, “weapon_knife_t”, “weapon_hkp2000”, “weapon_usp_silencer”, “weapon_glock”, “weapon_elite”, “weapon_p250”, “weapon_fiveseven”, “weapon_cz75a”,“weapon_tec9”, “weapon_deagle”, “weapon_revolver”, “weapon_nova”, “weapon_xm1014”, “weapon_mag7”,“weapon_sawedoff”, “weapon_m249”, “weapon_negev”, “weapon_mp9”, “weapon_mac10”, “weapon_mp7”, “weapon_ump45”, “weapon_p90”, “weapon_bizon”,“weapon_famas”, “weapon_galilar”, “weapon_m4a1”, “weapon_m4a1_silencer”, “weapon_ak47”,“weapon_ssg08”, “weapon_aug”, “weapon_sg556”, “weapon_awp”, “weapon_scar20”, “weapon_g3sg1”,“weapon_incgrenade”, “weapon_decoy”, “weapon_flashbang”, “weapon_hegrenade”, “weapon_smokegrenade”, “weapon_c4”</code></li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="weapon_acquired"></a><a href="#weapon_acquired" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>weapon_acquired</code></h2>
+<h3><a class="anchor" aria-hidden="true" id="events-13"></a><a href="#events-13" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Events</h3>
+<table>
+<thead>
+<tr><th>Event</th><th>Event Data</th><th>Fired When</th><th>Notes</th><th>Since Version</th></tr>
+</thead>
+<tbody>
+<tr><td>weapon_acquired</td><td><ul><li>weapon_name</li><li>weapon_type</td><td>Player acquires new weapon (either buy or picks up)</td><td></td><td>0.7</td></tr>
+</tbody>
+</table>
+<h2><a class="anchor" aria-hidden="true" id="player_activity_change"></a><a href="#player_activity_change" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>player_activity_change</code></h2>
+<h3><a class="anchor" aria-hidden="true" id="events-14"></a><a href="#events-14" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Events</h3>
+<table>
+<thead>
+<tr><th>Event</th><th>Event Data</th><th>Fired When</th><th>Notes</th><th>Since Version</th></tr>
+</thead>
+<tbody>
+<tr><td>player_activity_change</td><td><ul><li>playing</li><li>menu</td><td><ul><li>The player started playing</li><li>The player entered the game’s menu</td><td></td><td>0.7</td></tr>
+</tbody>
+</table>
+<h2><a class="anchor" aria-hidden="true" id="team_set"></a><a href="#team_set" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>team_set</code></h2>
+<h3><a class="anchor" aria-hidden="true" id="events-15"></a><a href="#events-15" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Events</h3>
+<table>
+<thead>
+<tr><th>Event</th><th>Event Data</th><th>Fired When</th><th>Notes</th><th>Since Version</th></tr>
+</thead>
+<tbody>
+<tr><td>team_set</td><td><ul><li>CT</li><li>T</td><td>The player selected a team</td><td></td><td>0.7</td></tr>
+</tbody>
+</table>
+<p><b>Info Updates</b></br>
+In order to get CS:GO info-updates, your app should request the <code>info</code> feature and listen to <code>overwolf.games.events.onInfoUpdates2</code> info updates. However, you might add the listener after the update has already happened so the app will miss the info-update event. For that reason, you should also call <code>overwolf.games.events.getInfo()</code> to get the current info state.</p>
+<p>Let’s see an example of how to obtain the map name in CS:GO:</p>
+<p>First we will set the required features and set up the listener:</p>
+<p><code>overwolf.games.events.setRequiredFeatures(['info', 'death', 'kill', 'headshot'], function(info) { if (info.status == &quot;success&quot;) { setListener(); getInfo(); } else { // we should retry to set the required features in case // the game events provider is still initializing } });</code></p>
+<p><code>function setListener() { overwolf.games.events.onInfoUpdates2.addListener(function(info) { console.log(info); }); }</code></p>
+<p><code>function getInfo() { overwolf.games.events.getInfo(function(info) { console.log(info); }); }</code></p>
+<p>When the map info will be updated the <code>onInfoUpdate2</code> listener will print to the console:</p>
+<p><code>{&quot;info&quot;:{&quot;round&quot;:{&quot;map&quot;:&quot;de_dust2&quot;}},&quot;feature&quot;:&quot;info&quot;}</code></p>
+<p>After calling <code>getInfo()</code> the console will print (if the map info has already been updated):</p>
+<p><code>{&quot;status&quot;:&quot;status&quot;,&quot;res&quot;:{&quot;player&quot;:{&quot;totalKills&quot;:&quot;0&quot;,&quot;totalDeaths&quot;:&quot;0&quot;,&quot;totalMvps&quot;:&quot;0&quot;,&quot;score&quot;:&quot;0&quot;,&quot;team&quot;:&quot;T&quot;,&quot;steamid&quot;:&quot;&quot;},&quot;round&quot;:{&quot;map&quot;:&quot;de_dust2&quot;,&quot;phase&quot;:&quot;live&quot;,&quot;numOfRound&quot;:&quot;0&quot;}}}</code></p>
+<h2><a class="anchor" aria-hidden="true" id="match_info"></a><a href="#match_info" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>match_info</code></h2>
+<h3><a class="anchor" aria-hidden="true" id="info-updates"></a><a href="#info-updates" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Info Updates</h3>
+<table>
+<thead>
+<tr><th>key</th><th>Category</th><th>Values</th><th>Notes</th><th>Since Version</th></tr>
+</thead>
+<tbody>
+<tr><td>pseudo_match_id</td><td>match_info</td><td>The current session’s ID code. See <a href="#pseudo_match_id-note">notes</a></td><td></td><td>130.0</td></tr>
+</tbody>
+</table>
+<h4><a class="anchor" aria-hidden="true" id="pseudo_match_id-note"></a><a href="#pseudo_match_id-note" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><em>pseudo_match_id</em> note</h4>
+<p>This is an Overwolf-generated code, unrelated to Steam.</p>
+<p>Data Example:</p>
+<p><code>0c0ea3df-97ea-4d3a-b1f6-f8e34042251f</code></p>
+<h2><a class="anchor" aria-hidden="true" id="info"></a><a href="#info" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>info</code></h2>
+<h3><a class="anchor" aria-hidden="true" id="info-updates-1"></a><a href="#info-updates-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Info Updates</h3>
+<table>
+<thead>
+<tr><th>key</th><th>Category</th><th>Values</th><th>Notes</th><th>Since Version</th></tr>
+</thead>
+<tbody>
+<tr><td>totalKills</td><td>player</td><td>Total kills in a match</td><td></td><td>7.0</td></tr>
+<tr><td>totalDeaths</td><td>player</td><td>Total deaths in a match</td><td></td><td>7.0</td></tr>
+<tr><td>totalMvps</td><td>player</td><td>Total MVP’s</td><td></td><td>7.0</td></tr>
+<tr><td>score</td><td>player</td><td>Score in a match</td><td></td><td>7.0</td></tr>
+<tr><td>team</td><td>player</td><td>T / CT</td><td></td><td>7.0</td></tr>
+<tr><td>steamid</td><td>player</td><td>The player’s steam id</td><td></td><td>7.0</td></tr>
+<tr><td>map</td><td>round</td><td>Map name</td><td></td><td>7.0</td></tr>
+<tr><td>mode</td><td>round</td><td>Map mode (for example: “casual”)</td><td></td><td>7.0</td></tr>
+<tr><td>numOfRound</td><td>round</td><td>Round number in the match (starting 0)</td><td></td><td>7.0</td></tr>
+<tr><td>phase</td><td>round</td><td>Match phase<ul><li>warmup</li><li>live</li><li>freezetime</li><li>over</td><td></td><td>7.0</td></tr>
+<tr><td>scene</td><td>scene</td><td><ul><li>MainMenu</li><li>LoadingScreen</li><li>Game</li><li>MenuInGame(ESC)</td><td></td><td>7.0</td></tr>
+</tbody>
+</table>
+<h2><a class="anchor" aria-hidden="true" id="roster"></a><a href="#roster" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>roster</code></h2>
+<h3><a class="anchor" aria-hidden="true" id="info-updates-2"></a><a href="#info-updates-2" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Info Updates</h3>
+<table>
+<thead>
+<tr><th>key</th><th>Category</th><th>Values</th><th>Notes</th><th>Since Version</th></tr>
+</thead>
+<tbody>
+<tr><td>lobby</td><td>roster</td><td>JSON containing array of lobby_players objects. See <a href="#lobby-note">notes</a></td><td></td><td>77.8</td></tr>
+<tr><td>match</td><td>roster</td><td>JSON containing array of player objects. See <a href="#match-note">notes</a></td><td></td><td>77.8</td></tr>
+</tbody>
+</table>
+<h4><a class="anchor" aria-hidden="true" id="lobby-note"></a><a href="#lobby-note" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><em>lobby</em> note</h4>
+<p>Each player contains:<ul><li>steamId</p>
+<p>Data Example:</p>
+<p><code>{&quot;feature&quot;:&quot;roster&quot;,&quot;category&quot;:&quot;roster&quot;,&quot;key&quot;:&quot;lobby&quot;,&quot;value&quot;:&quot;{\&quot;lobby_players\&quot; : [{\&quot;steamId\&quot; : \&quot;76561198269560618\&quot;}]}&quot;}</code></p>
+<h4><a class="anchor" aria-hidden="true" id="match-note"></a><a href="#match-note" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><em>match</em> note</h4>
+<p>Each player contains:<ul><li>steamId</li><li>team</p>
+<p>Data Example:</p>
+<p><code>{&quot;feature&quot;:&quot;roster&quot;,&quot;category&quot;:&quot;roster&quot;,&quot;key&quot;:&quot;match&quot;,&quot;value&quot;:&quot;{\&quot;players\&quot; : [{\&quot;steamId\&quot; : \&quot;76561198364007097\&quot;,\&quot;team\&quot; : \&quot;Counter-Terrorists\&quot;},...,{\&quot;steamId\&quot; : \&quot;76561198389957131\&quot;,\&quot;team\&quot; : \&quot;Counter-Terrorists\&quot;}]}&quot;}</code></p>
+</span></div></article></div><div class="docLastUpdate"><em>Last updated on 2019-7-23 by Sh4rgaas</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/api/overwolf-games-events-autochess"><span class="arrow-prev">← </span><span>Auto Chess Events</span></a><a class="docs-next button" href="/docs/api/overwolf-games-events-dota2"><span>Dota 2 Events</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#sample-apps">Sample Apps</a></li><li><a href="#available-features">Available Features</a></li><li><a href="#kill"><code>kill</code></a><ul class="toc-headings"><li><a href="#events">Events</a></li></ul></li><li><a href="#death"><code>death</code></a><ul class="toc-headings"><li><a href="#events-1">Events</a></li></ul></li><li><a href="#assist"><code>assist</code></a><ul class="toc-headings"><li><a href="#events-2">Events</a></li></ul></li><li><a href="#headshot"><code>headshot</code></a><ul class="toc-headings"><li><a href="#events-3">Events</a></li></ul></li><li><a href="#round_start"><code>round_start</code></a><ul class="toc-headings"><li><a href="#events-4">Events</a></li></ul></li><li><a href="#match_start"><code>match_start</code></a><ul class="toc-headings"><li><a href="#events-5">Events</a></li></ul></li><li><a href="#match_end"><code>match_end</code></a><ul class="toc-headings"><li><a href="#events-6">Events</a></li></ul></li><li><a href="#team_round_win"><code>team_round_win</code></a><ul class="toc-headings"><li><a href="#events-7">Events</a></li></ul></li><li><a href="#bomb_planted"><code>bomb_planted</code></a><ul class="toc-headings"><li><a href="#events-8">Events</a></li></ul></li><li><a href="#bomb_change"><code>bomb_change</code></a><ul class="toc-headings"><li><a href="#events-9">Events</a></li></ul></li><li><a href="#reloading"><code>reloading</code></a><ul class="toc-headings"><li><a href="#events-10">Events</a></li></ul></li><li><a href="#fired"><code>fired</code></a><ul class="toc-headings"><li><a href="#events-11">Events</a></li></ul></li><li><a href="#weapon_change"><code>weapon_change</code></a><ul class="toc-headings"><li><a href="#events-12">Events</a></li></ul></li><li><a href="#weapon_acquired"><code>weapon_acquired</code></a><ul class="toc-headings"><li><a href="#events-13">Events</a></li></ul></li><li><a href="#player_activity_change"><code>player_activity_change</code></a><ul class="toc-headings"><li><a href="#events-14">Events</a></li></ul></li><li><a href="#team_set"><code>team_set</code></a><ul class="toc-headings"><li><a href="#events-15">Events</a></li></ul></li><li><a href="#match_info"><code>match_info</code></a><ul class="toc-headings"><li><a href="#info-updates">Info Updates</a></li></ul></li><li><a href="#info"><code>info</code></a><ul class="toc-headings"><li><a href="#info-updates-1">Info Updates</a></li></ul></li><li><a href="#roster"><code>roster</code></a><ul class="toc-headings"><li><a href="#info-updates-2">Info Updates</a></li></ul></li></ul></nav></div><footer class="site-footer"><div class="container"><ul><li>Legal</li><li><a href="/docs/topics/legal-overview">Terms overview</a></li><li><a href="/docs/topics/legal-developers-terms">Developer&#x27;s terms</a></li><li><a href="/docs/topics/legal-app-terms">App terms</a></li><li><a href="http://www.overwolf.com/legal/" target="_blank">Overwolf terms</a></li><li><a href="http://www.overwolf.com/legal/#Privacy-policy" target="_blank">Overwolf Privacy policy</a></li></ul><ul><li>Support</li><li><a href=" https://discuss.developers.overwolf.com/" target="_blank">Questions and Answers</a></li><li><a href="https://discordapp.com/invite/cjjrZDp" target="_blank">Discord</a></li><li><a href="/docs/support/contact-us#join-our-slack">Slack</a></li><li><a href="https://www.facebook.com/OverwolfDevs" target="_blank">Facebook</a></li><li><a href="https://twitter.com/OverwolfDevs" target="_blank">Twitter</a></li></ul><ul><li>Documentation</li><li><a href="/docs/api/changelog">Changelog</a></li><li><a href="/docs/api/overwolf-api-overview">API</a></li><li><a href="/docs/start/app-creation-process">App Creation Process</a></li><li><a href="/docs/topics/best-practices-overview">Best Practices</a></li><li><a href="/docs/status/all">Game Events status</a></li></ul><ul><li>Information</li><li><a href="http://www.overwolf.com/careers/">Careers</a></li><li><a href="https://play.overwolf.com/fund/" target="_blank">Fund</a></li><li><a href="https://medium.com/overwolf-developers" target="_blank">Developers Blog</a></li><li><a href="https://www.overwolf.com/appstore" target="_blank">Overwolf Appstore</a></li></ul></div></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
                 document.addEventListener('keyup', function(e) {
                   if (e.target !== document.body) {
                     return;
