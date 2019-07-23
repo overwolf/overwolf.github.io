@@ -179,7 +179,8 @@ Let’s see an example of how to obtain the map name in CS:GO:
 
 First we will set the required features and set up the listener:
 
-`overwolf.games.events.setRequiredFeatures(['info', 'death', 'kill', 'headshot'], function(info) {
+```json
+overwolf.games.events.setRequiredFeatures(['info', 'death', 'kill', 'headshot'], function(info) {
 	if (info.status == "success") {
 		setListener();
 		getInfo();
@@ -199,7 +200,8 @@ First we will set the required features and set up the listener:
 	overwolf.games.events.getInfo(function(info) { 
 		console.log(info); 
 	});
-}`
+}
+```
 
 When the map info will be updated the `onInfoUpdate2` listener will print to the console:
 
