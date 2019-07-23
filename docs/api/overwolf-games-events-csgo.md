@@ -224,3 +224,46 @@ This is an Overwolf-generated code, unrelated to Steam.
 Data Example:
 
 `0c0ea3df-97ea-4d3a-b1f6-f8e34042251f`
+
+## `info`
+
+### Info Updates
+
+key               | Category    | Values                    | Notes                 | Since Version |
+----------------- | ------------| ------------------------- | --------------------- | ------------- |
+totalKills | player  |	Total kills in a match	            |                       |     7.0       |
+totalDeaths | player  |	Total deaths in a match		    |                       |     7.0       |
+totalMvps | player  |	Total MVP’s	 	            |                       |     7.0       |
+score | player  |	Score in a match	            |                       |     7.0       |
+team | player  |	T / CT	                            |                       |     7.0       |
+steamid | player  |	The player’s steam id	            |                       |     7.0       |
+map | round            |	Map name	            |                       |     7.0       |
+mode | round  |	Map mode (for example: “casual”)            |                       |     7.0       |
+numOfRound | round  |	Round number in the match (starting 0)|                     |     7.0       |
+phase | round  |Match phase<ul><li>warmup</li><li>live</li><li>freezetime</li><li>over|    |     7.0       |
+scene | scene  |<ul><li>MainMenu</li><li>LoadingScreen</li><li>Game</li><li>MenuInGame(ESC)|  |     7.0       |
+
+## `roster`
+
+### Info Updates
+
+key               | Category    | Values                    | Notes                 | Since Version |
+----------------- | ------------| ------------------------- | --------------------- | ------------- |
+lobby | roster  |JSON containing array of lobby_players objects. See [notes](#lobby-note)|  |     77.8       |
+match | roster  |JSON containing array of player objects. See [notes](#match-note)|  |     77.8       |
+
+#### *lobby* note
+
+Each player contains:<ul><li>steamId
+
+Data Example:
+
+`{"feature":"roster","category":"roster","key":"lobby","value":"{\"lobby_players\" : [{\"steamId\" : \"76561198269560618\"}]}"}`
+
+#### *match* note
+
+Each player contains:<ul><li>steamId</li><li>team
+
+Data Example:
+
+`{"feature":"roster","category":"roster","key":"match","value":"{\"players\" : [{\"steamId\" : \"76561198364007097\",\"team\" : \"Counter-Terrorists\"},...,{\"steamId\" : \"76561198389957131\",\"team\" : \"Counter-Terrorists\"}]}"}`
