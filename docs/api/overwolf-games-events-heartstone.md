@@ -1,7 +1,7 @@
 ---
-id:overwolf-games-events-hearthstone
+id:overwolf-games-events-heartstone
 title: Hearthstone Game Events
-sidebar_label: Hearthstone Events
+sidebar_label: Heartstone Events
 ---
 
 Please read the [overwolf.games.events](overwolf-games-events) documentation page to learn how to use Overwolf game events.
