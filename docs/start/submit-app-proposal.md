@@ -25,15 +25,15 @@ To help you prepare a kick-ass proposal, here’s what we recommend you do first
 
 Whether you’re new to Overwolf developers or a returning developer, it’s imperative you go over our documentation. We’re constantly updating our documentation with current features, so this is the best way for you to remain up-to-date on all of our tools and features you can harness.
 
-## Prepare Your Proposal
+### Prepare Your Proposal
 
 Submitting your app idea for review is easy. We’re not looking for a complete set of technical documents at this point. Instead, we’re looking for a clear, concise description of what the app is and how it will work. We also want to see a mockup of your User Interface. This proposal (and the app itself) must be in English, although you may freely support more languages in the completed app.
 
-## Legal
+### Legal
 
 Before submitting your app proposal, please read the [developer](https://overwolf.github.io/docs/topics/legal-developers-terms) & [app](https://overwolf.github.io/docs/topics/legal-app-terms) terms.
 
-<iframe src="https://forms.monday.com/forms/embed/9c8c6385757e9f7b378182bf402f5c13" width="650" height="500" style="border: 0; box-shadow: 5px 5px 56px 0px rgba(0,0,0,0.25);"> </iframe>
+<iframe src="https://forms.monday.com/forms/embed/9c8c6385757e9f7b378182bf402f5c13" width="650" height="2000" style="border: 0; box-shadow: 5px 5px 56px 0px rgba(0,0,0,0.25);"> </iframe>
 
 ## What's next?
 
