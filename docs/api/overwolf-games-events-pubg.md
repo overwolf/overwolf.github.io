@@ -111,7 +111,12 @@ location            | game_info | The player’s current grid location (x,y,z). 
 safe_zone           | game_info | The location of the white circle and its radius            | See example [below](#zones-notes)               |   0.133       |
 blue_zone           | game_info | The location of the blue circle and its radius             | See example [below](#zones-notes)               |   0.133       |
 red_zone            | game_info | The location of the red  circle and its radius             | See example [below](#zones-notes)               |   0.133       |
-time_to_next_circle | game_info | The time left (in seconds) until a new safe zone is formed | See example [below](#time-to-next-circle-notes) |   0.133       |
+
+### Events
+
+Event      | Event Data  | Fired When          | Notes              | Since Version |
+-----------| ------------| ------------------- | ------------------ | --------------|
+time_to_next_circle | Amount of seconds left to next safe zone | From the moment the first safe zone is formed. | See example [below](#time-to-next-circle-notes)  |   0.133       | 
 
 #### `location` notes
 
