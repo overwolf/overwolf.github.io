@@ -297,7 +297,7 @@ A list of additional settings for the app.
 | <a id="start_window">"start_window"</a>   | string     |  Mandatory. The name of the window (from the “windows” list) to initially load when the app starts.        | 0.78  |
 | <a id="protocol_override_domains">"protocol_override_domains"</a>     | [ProtocolOverrideDomains](#protocoloverridedomains-object) Object   |  Override the relative protocol with a preferred one.  | 0.78  |
 | <a id="force_browser">"force_browser"</a> | string |  Causes links in the app to be opened using the user’s default browser or Overwolf’s browser.</br>*Possible values: "user" or "overwolf".* |0.91  |
-| <a id="enable_osr_acceleration">"enable_osr_acceleration"</a> | bool |  Enable OSR/GPU acceleration if supported by this machine. </br>*Note: see also the [optimize_accelerate_rendering](#optimize_accelerate_rendering) flag* |0.126  |
+| <a id="enable_osr_acceleration">"enable_osr_acceleration"</a> | bool |  Enable OSR/GPU acceleration if supported by this machine. </br>*Note: this flag is still in Beta. It may not function as expected in some machines.</br>*Note: see also the [optimize_accelerate_rendering](#optimize_accelerate_rendering) flag* |0.126  |
 | <a id="game_events">"game_events"</a> | [game_events[]](#game-events-array) |  A list of game ids for which game events are required. |0.92  |
 | <a id="disable_log_limit">"disable_log_limit"</a> | bool |  Disable the log file 1000 lines limitation. </br>*Note: Do not enable it without Overwolf approval.*        | 0.12 |
 | <a id="extra-objects">"extra-objects"</a>     | [extra-objects](#extra-objects-object) Object  |  Allows the access of custom plugin dlls.  | 0.81  |
