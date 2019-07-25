@@ -16,7 +16,8 @@ You can find our markdown cheet-sheet [here](markdown-cheat-sheet.md).
 
 ### Create local dev environment
 
-You can find all the details [here](create-local-dev-env.md).
+Basically you can do all the Docusaurus content edits directly from the GitHub web interface.
+But if you want to install a local version of the site, you can find all the details [here](create-local-dev-env.md).
 
 ### Edit an existing page
 
