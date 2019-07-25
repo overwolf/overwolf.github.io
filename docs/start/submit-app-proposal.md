@@ -32,7 +32,7 @@ Submitting your app idea for review is easy. We’re not looking for a complete 
 
 Before submitting your app proposal, please read the [developer](https://overwolf.github.io/docs/topics/legal-developers-terms) & [app](https://overwolf.github.io/docs/topics/legal-app-terms) terms.
 
-<iframe src="https://forms.monday.com/forms/embed/9c8c6385757e9f7b378182bf402f5c13" width="650" height="1700"> </iframe>
+<iframe src="https://forms.monday.com/forms/embed/9c8c6385757e9f7b378182bf402f5c13" width="100%" height="1700"> </iframe>
 
 ## What's next?
 
