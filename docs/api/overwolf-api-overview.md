@@ -84,16 +84,16 @@ Common use cases:
 
 ## [overwolf.os](api/overwolf-os.md)
 
-> Use the overwolf.os APIfor Operating System related functionalities.
+> Use the overwolf.os API for Operating System related functionalities.
 
 ## [overwolf.games](api/overwolf-games.md)
 
-> Use the overwolf.games API to query system stats and benchmarks.
+> Use the overwolf.games API to receive basic game information.
 
 Common use cases:
 
-* Get hardware information
-* Get FPS information
+* Your app wants to know whether an Overwolf supported game was launched or closed.
+* Getting the current running game's information (title, Overwolf game id, screen resolution and more)
 
 ## [overwolf.games.events](api/overwolf-games-events.md)
 
