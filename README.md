@@ -17,14 +17,33 @@ You can find our markdown cheet-sheet [here](markdown-cheat-sheet.md).
 
 You can find all the details [here](create-local-dev-env.md).
 
-### Docs template
+### Edit an existing page
 
-You can use these docs template as a baseline for new pages:
+On every page there is an "Edit" button on the right side of the page.
 
-* [API page tempalte](/docs-templates/api-page-template.md)
-* [Game Events page template](/docs-templates/game-events-page-template.md)
+You can click on it, edit the page, and suggest the change as a pull request. The Overwolf team will review it, and merge it after confirmation.
 
-Don't forget that in in order to add new page to the site, you have to:
-1. Include a page ID on the top of the page.
-2. Add a new entry to the `website\sidebars.json` file.
+### Add a new page
+
+In order to add a new page, you should:
+
+1. Create a new file with a `md` (markdown) extension.  
+  Make sure to add it in the right section/folder (api, support, getting-started etc).
+  
+2. Add a page ID block on the top of your page.
+  An example:
+  
+  ```
+  ---
+  id: dev-console-update //unique identifier, the page URL. no spaces
+  title: this is the main page header
+  sidebar_label:  this is the menu title
+  ---
+  ```
+3. Add the new page ID as a new entry in the `website\sidebars.json` file.  
+  make sure to add it in the right location.
+  You can use these docs template as a baseline for new pages:
+  * [API page tempalte](/docs-templates/api-page-template.md)
+  * [Game Events page template](/docs-templates/game-events-page-template.md)
+
 
