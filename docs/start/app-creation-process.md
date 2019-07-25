@@ -22,7 +22,7 @@ Have a great idea? Want to change how gamers play their favorite games? Need a l
 
 ### 1. Submit a proposal
 
-We want to hear your awesome app idea. It’s as easy as submitting an app proposal. We’ll take a look at what you have in mind, and offer our take on it before you dive into development. If it’s a good fit, we’ll provide you with everything you need to get your app into our Appstore.
+We want to hear your awesome app idea. It’s as easy as [submitting an app proposal](submit-app-proposal). We’ll take a look at what you have in mind, and offer our take on it before you dive into development. If it’s a good fit, we’ll provide you with everything you need to get your app into our Appstore.
 
 ### 2. Develop your app
 
@@ -31,10 +31,10 @@ Now the real fun begins! It’s time for you to go full-steam ahead and start de
 
 ### 3. Publish
 
-Once we have approved your app, you will officially become a part of the Overwolf pack! We’ll publish your app to the Overwolf Appstore, and it will have its own public link. This is when you can start sharing your app with the world, and start spreading the word about it.
+Once we have approved your app, you will officially become a part of the Overwolf pack! We’ll [publish your app](submit-your-app-to-the-store) to the Overwolf Appstore, and it will have its own public link. This is when you can start sharing your app with the world, and start spreading the word about it.
 
 ## Updates and Maintenance
 
-Getting your app in the Appstore isn’t the end of the road. Once your app is live, you’ll want to drive more users to check it out. It’s vital to fix bugs and sometimes even add new features to your app, to keep it up to date and in demand.
+Getting your app in the Appstore isn’t the end of the road. Once your app is live, you’ll want to drive more users to check it out. It’s vital to fix bugs and sometimes even add new features to your app, to keep it [up to date](submit-an-app-update) and in demand.
 
 We can’t wait to see the awesome, innovative and game-changing apps you have in mind. Good luck!
