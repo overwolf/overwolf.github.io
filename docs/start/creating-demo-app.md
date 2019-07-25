@@ -8,11 +8,11 @@ To help you get a feel of Overwolf's API, here's an explanation on how to create
 
 We'll describe two different methods:
 
-* Working [from scratch](#create-demo-app-from-scrarch) and create a fundamental one window app.
-  This app not follows our best practices and not even inject the window in-game.  
+* Working [from scratch](#create-demo-app-from-scrarch) and create a fundamental one window app.  
+  **Note that this app not follows our best practices** and not even inject the window in-game.  
   It just for a quick demo about the essential components of an Overwolf app.
 
-* Download our [sample app](#download-sample-app) and use it as a base for your app.  
+* Download our [official sample app](#download-sample-app) and use it as a base for your app.  
   This example is using our sample app, that uses all the recommended best practices like background controller, in-game window, etc.
 
 **Note** that For both methods, you should download the latest [Developers version of Overwolf](https://download.overwolf.com/install/Download?Name=Game+Summary&ExtensionId=flkgdpkkjcoapbgmgpidhepajgkhckpgpibmlclb&Channel=developers) Client.
