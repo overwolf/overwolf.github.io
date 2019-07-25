@@ -87,7 +87,7 @@ You can read in the [Manifest.json](../api/manifest-json) section about addition
 **Now you have a working Overwolf app installer!**  
 You can double click on it, and it will be installed into the Overwolf dock.  
 
-After clicking on it, the app window should be displayed:
+After launch the app from the Overwolf dock, the app window should be displayed:
 
 ![alt-text](assets/basic-sample-app.png)
 

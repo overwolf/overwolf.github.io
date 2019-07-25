@@ -10,7 +10,9 @@ Please read the [overwolf.games.events](overwolf-games-events) documentation pag
 21404
 :::
 
-<b>*Tracker Network offers a battle tested API for Splitgate: Arena Warfare, which you can use while looking to build your own app on the Overwolf platform. Their server API is the easiest way to improve the quality of your app: https://tracker.gg/developers/docs/titles/splitgate</b>
+:::tip
+Tracker Network offers a [battle tested API for Splitgate: Arena Warfare](https://tracker.gg/developers/docs/titles/splitgate), which you can use while looking to build your own app on the Overwolf platform. Their server API is the easiest way to improve the quality of your app.
+:::
 
 ## Sample Apps
 
@@ -33,9 +35,9 @@ Please read the [overwolf.games.events](overwolf-games-events) documentation pag
 
 ### Info Updates
 
-key               | Category    | Values                    | Notes                 | Since Version |
------------------ | ------------| ------------------------- | --------------------- | ------------- |
-scene             | game_info   |	The current game scene.	  |See [notes](#scene-note)|    123.0      |
+key               | Category    | Values                    | Notes                  | Since Version |
+----------------- | ------------| ------------------------- | ---------------------- | ------------- |
+scene             | game_info   | The current game scene    |See [notes](#scene-note)|    0.123      |
 
 #### *scene* note
 
@@ -51,11 +53,11 @@ Possible values:
 
 key               | Category    | Values                    | Notes                 | Since Version |
 ----------------- | ------------| ------------------------- | --------------------- | ------------- |
-mapName           | match_info   |	The current map name.	  |See [notes](#mapName-note)|    123.0      |
-mode              | match_info   |	The current match mode.	  |See [notes](#mode-note)|    123.0      |
-state             | match_info   |	The current match state (active / inactive) |See [notes](#state-note)|    123.0      |
-timer             | match_info   |	The current match timer value (in seconds).  |See [notes](#timer-note)|    123.0      |
-score             | match_info   |	The current score  |See [notes](#score-note)|    123.0      |
+mapName           | match_info   |	The current map name.	  |See [notes](#mapName-note)|    0.123      |
+mode              | match_info   |	The current match mode.	  |See [notes](#mode-note)|    0.123      |
+state             | match_info   |	The current match state (active / inactive) |See [notes](#state-note)|    0.123      |
+timer             | match_info   |	The current match timer value (in seconds).  |See [notes](#timer-note)|    0.123      |
+score             | match_info   |	The current score  |See [notes](#score-note)|    0.123      |
 type              | match_info   |	The current match type. |See [notes](#type-note)|    130.0      |
 
 #### *mapName* note
@@ -114,10 +116,10 @@ Possible values: “Unranked”, “Ranked”, “Custom”
 
 key               | Category    | Values                    | Notes                 | Since Version |
 ----------------- | ------------| ------------------------- | --------------------- | ------------- |
-id                | player_info   |	The local player id	  |See [notes](#id-note)|    123.0      |
-name              | player_info   |	The local player name	  |See [notes](#name-note)|    123.0      |
-health            | player_info   |	The local player health (0-100)	  |See [notes](#health-note)|    123.0      |
-team              | player_info   |	The local player team (alpha/bravo)  |See [notes](#team-note)|    123.0      |
+id                | player_info   |	The local player id	  |See [notes](#id-note)|    0.123      |
+name              | player_info   |	The local player name	  |See [notes](#name-note)|    0.123      |
+health            | player_info   |	The local player health (0-100)	  |See [notes](#health-note)|    0.123      |
+team              | player_info   |	The local player team (alpha/bravo)  |See [notes](#team-note)|    0.123      |
 
 #### *id* note
 
@@ -149,7 +151,7 @@ Data Example:
 
 key               | Category    | Values                    | Notes                 | Since Version |
 ----------------- | ------------| ------------------------- | --------------------- | ------------- |
-location          | game_info   |	The current location of the local player (x,y,z) |See [notes](#location-note)|    123.0      |
+location          | game_info   |	The current location of the local player (x,y,z) |See [notes](#location-note)|    0.123      |
 
 #### *location* note
 
@@ -163,9 +165,9 @@ Data Example:
 
 Event       | Event Data   | Fired When    | Notes              | Since Version |
 ------------| -------------| --------------| ------------------ | --------------|
-matchOutcome| won/lost     |Player has died|See [notes](#matchOutcome-note)|     123.0     |
-matchStart  | null         |Player has died|See [notes](#matchStart-note)|     123.0     |
-matchEnd    | null         |Player has died|See [notes](#matchEnd-note)|     123.0     |
+matchOutcome| won/lost     |Player has died|See [notes](#matchOutcome-note)|     0.123     |
+matchStart  | null         |Player has died|See [notes](#matchStart-note)|     0.123     |
+matchEnd    | null         |Player has died|See [notes](#matchEnd-note)|     0.123     |
 
 #### *matchOutcome* note
 
@@ -191,7 +193,7 @@ Data Example:
 
 Event       | Event Data   | Fired When    | Notes              | Since Version |
 ------------| -------------| --------------| ------------------ | --------------|
-killFeed    |<ul><li>killer name</li><li>weapon</li><li>victim name</li>|Player has died|See [notes](#killFeed-note)|     123.0     |
+killFeed    |<ul><li>killer name</li><li>weapon</li><li>victim name</li>|Player has died|See [notes](#killFeed-note)|     0.123     |
 
 #### *killFeed* note
 
@@ -205,8 +207,8 @@ Data Example:
 
 Event       | Event Data   | Fired When    | Notes              | Since Version |
 ------------| -------------| --------------| ------------------ | --------------|
-disconnected| null         |The local player disconnects from the game.|           |     123.0     |
-reconnected | null         |The local player reconnects to the game.|          |     123.0     |
+disconnected| null         |The local player disconnects from the game.|           |     0.123     |
+reconnected | null         |The local player reconnects to the game.|          |     0.123     |
 
 ## `kill`
 
@@ -214,12 +216,12 @@ reconnected | null         |The local player reconnects to the game.|          |
 
 Event       | Event Data   | Fired When    | Notes              | Since Version |
 ------------| -------------| --------------| ------------------ | --------------|
-kill        |  Kill type   | The local player killed an enemy|See [notes](#kill-note)|     123.0     |
-victim      | Victim name  | The local player killed an enemy|See [notes](#victim-note)|     123.0     |
-headshot    | null         |The local player killed an enemy with a headshot|          |     123.0     |
-meleeKill   | null         |The local player killed an enemy with melee|          |     123.0     |
-portalKill  | null         |The local player killed an enemy with a portal|          |     123.0     |
-killThroughPortal | null   |The local player killed an enemy through a portal.|          |     123.0     |
+kill        |  Kill type   | The local player killed an enemy|See [notes](#kill-note)|     0.123     |
+victim      | Victim name  | The local player killed an enemy|See [notes](#victim-note)|     0.123     |
+headshot    | null         |The local player killed an enemy with a headshot|          |     0.123     |
+meleeKill   | null         |The local player killed an enemy with melee|          |     0.123     |
+portalKill  | null         |The local player killed an enemy with a portal|          |     0.123     |
+killThroughPortal | null   |The local player killed an enemy through a portal.|          |     0.123     |
 teabag      | null         |The local player tea-bagged an enemy.|          |     130.0     |
 
 #### *kill* note
@@ -247,8 +249,8 @@ Data Example:
 
 Event       | Event Data   | Fired When    | Notes              | Since Version |
 ------------| -------------| --------------| ------------------ | --------------|
-death        |  null   |  The local player was killed|See [notes](#death-note)|     123.0     |
-killer        |  Killer name   |  The local player was killed|See [notes](#killer-note)|     123.0     |
+death        |  null   |  The local player was killed|See [notes](#death-note)|     0.123     |
+killer        |  Killer name   |  The local player was killed|See [notes](#killer-note)|     0.123     |
 
 #### *death* note
 
@@ -268,6 +270,6 @@ Data Example:
 
 Event       | Event Data   | Fired When    | Notes              | Since Version |
 ------------| -------------| --------------| ------------------ | --------------|
-portalCreated|  null   |  The local player created a porta |    |     123.0     |
-portalClosed |  null   |  The local player closed a portal |    |     123.0     |
-portalUsed   |  null   |  The local player went through a portal|  |     123.0     |
+portalCreated|  null   |  The local player created a porta |    |     0.123     |
+portalClosed |  null   |  The local player closed a portal |    |     0.123     |
+portalUsed   |  null   |  The local player went through a portal|  |     0.123     |
