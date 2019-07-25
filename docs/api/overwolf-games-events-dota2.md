@@ -56,4 +56,45 @@ Please read the [overwolf.games.events](overwolf-games-events) documentation pag
 
 Event       | Event Data   | Fired When    | Notes              | Since Version |
 ------------| -------------| --------------| ------------------ | --------------|
-kill        | null         | The local player killed another player| |  77.3  |
+game_state_changed |<ul><li>game_state</li><li>match_state</li><li>match_id</li><li>player_steam_id</li>|               |See [notes](#game_state_changed-note)|     77.3      |
+
+#### *game_state_changed* note
+
+* <b>game_state</b> – One of ‘playing’, ‘idle’ or ‘spectating’. Idle is when there isn’t a game being played or spectated. 
+* <b>match_state</b> – The internal match state. See ‘match_state_changed’ event for more info. 
+* <b>match_id</b> (not available for ‘idle’): The id of the match. 
+* <b>player_steam_id</b> (not available for ‘idle’): The Steam id of the local player.
+
+Fired when:
+
+The user starts playing, spectating or stops playing (no game available to play or spectate). Note that simply bringing the menu is not enough to trigger the ‘idle’ event – the active game (played or spectated) must be closed.
+
+## `match_state_changed`
+
+### Events
+
+Event       | Event Data   | Fired When    | Notes              | Since Version |
+------------| -------------| --------------| ------------------ | --------------|
+match_state_changed  | Check notes |          |See [notes](#match_state_changed-note)|     77.3      |
+
+#### *match_state_changed* note
+
+Event Data:
+
+match_state – One of the following:
+* DOTA_GAMERULES_STATE_WAIT_FOR_PLAYERS_TO_LOAD
+* DOTA_GAMERULES_STATE_HERO_SELECTION
+* DOTA_GAMERULES_STATE_PRE_GAME
+* DOTA_GAMERULES_STATE_GAME_IN_PROGRESS
+* DOTA_GAMERULES_STATE_POST_GAME
+
+Fired when:
+
+The internal game match state has changed.
+* DOTA_GAMERULES_STATE_WAIT_FOR_PLAYERS_TO_LOAD – Shown with the pre-game “Waiting for loaders” screen.
+* DOTA_GAMERULES_STATE_HERO_SELECTION – Shown with the hero selection screen.
+* DOTA_GAMERULES_STATE_PRE_GAME – Shown when the game begins, before the battle horn is heard.
+* DOTA_GAMERULES_STATE_GAME_IN_PROGRESS – Shown with the start game battle horn.
+* DOTA_GAMERULES_STATE_POST_GAME – Shown with the in-game post-game screen.
+
+## `match_detected`
