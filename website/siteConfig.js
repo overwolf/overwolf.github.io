@@ -97,7 +97,8 @@ const siteConfig = {
     '/js/replaceArrow.js',
     '/js/appendUpdate.js',
     '/js/overlayScrollbars.js',
-    '/js/highlight.js'
+    '/js/highlight.js',
+    '/js/luckyorange.js'
   ],
   stylesheets: [
     'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/default.min.css',
