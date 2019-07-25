@@ -84,7 +84,7 @@ Common use cases:
 
 ## [overwolf.os](api/overwolf-os.md)
 
-> Use the overwolf.os APIfor Operating System related functionalities.
+> Use the overwolf.os API for Operating System related functionalities.
 
 ## [overwolf.games](api/overwolf-games.md)
 
