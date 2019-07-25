@@ -6,8 +6,9 @@ This is intended as a quick reference and showcase.
 
 ### Search configuration:
 
-* To customize the look and feel by following the DocSearch documentation see https://community.algolia.com/docsearch/styling.html) 
-* To check your configuration in our GitHub repository see https://github.com/algolia/docsearch-configs/blob/master/configs/overwolf.json). Please open a pull request if want to leverage your configuration.
+* Your search onfiguration can be configured through the [DocSearch file](https://github.com/algolia/docsearch-configs/blob/master/configs/overwolf.json) in the Algolia GitHub repository.  
+  Please open a pull request if you want to leverage our Docusaurus search configuration.
+* To customize the look and feel of the search box follow the [DocSearch documentation](https://community.algolia.com/docsearch/styling.html).
 
 ### Markdown cheet-sheet
 
@@ -40,7 +41,7 @@ In order to add a new page, you should:
   sidebar_label:  this is the menu title
   ---
   ```
-3. Add the new page ID as a new entry in the `website\sidebars.json` file.  
+3. Add the new page ID as a new entry in the [website\sidebars.json](website/sidebars.json) file.  
   make sure to add it in the right location.
   You can use these docs template as a baseline for new pages:
   * [API page tempalte](/docs-templates/api-page-template.md)
