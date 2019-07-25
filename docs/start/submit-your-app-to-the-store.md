@@ -91,7 +91,7 @@ a json file containing the Appstore information of your app
 “category_description” possible values: “for games”, “chat”, “entertainment”, “social”, “utilities”, “voip” 
 :::
 
-### AWS benefits
+## AWS benefits
 Once your app has been published, you will be eligible for some epic Amazon Web Services benefits:
 * $10,000 in AWS Promotional Credit valid for 2 Years
 * 1 year of AWS Business Support (up to $5,000)
