@@ -16,7 +16,7 @@ Tracker Network offers a [battle tested API for Splitgate: Arena Warfare](https:
 
 ## Sample Apps
 
-* [Splitgate game events sample app](https://github.com/overwolf/splitgate-sample-app)
+* [Splitgate game events sample app](https://github.com/overwolf/events-sample-apps)
 
 ## Available Features
 

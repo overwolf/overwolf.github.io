@@ -12,7 +12,7 @@ Please read the [overwolf.games.events](overwolf-games-events) documentation pag
 
 ## Sample Apps
 
-* [CS:GO game events sample app](https://github.com/overwolf/events-consumer)
+* [CS:GO game events sample app](https://github.com/overwolf/events-sample-apps)
 
 ## Available Features
 

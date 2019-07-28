@@ -11,7 +11,7 @@ Please read the [overwolf.games.events](overwolf-games-events) documentation pag
 :::
 
 ## Sample Apps
-* [R6:Siege game events sample app](https://github.com/overwolf/rainbow-six-sample-app)
+* [R6:Siege game events sample app](https://github.com/overwolf/events-sample-apps)
 
 ## Available Features
 

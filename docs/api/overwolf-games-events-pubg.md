@@ -11,7 +11,7 @@ Please read the [overwolf.games.events](overwolf-games-events) documentation pag
 :::
 
 ## Sample Apps
-* [PUBG game events sample app](https://github.com/overwolf/pubg-sample-app)
+* [PUBG game events sample app](https://github.com/overwolf/events-sample-apps)
 
 ## Available Features
 

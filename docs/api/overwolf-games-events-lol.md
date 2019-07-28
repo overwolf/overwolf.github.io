@@ -14,7 +14,7 @@ Note that you can consume also the LOL game launcher events. read more info [her
 
 ## Sample Apps
 
-* [LOL game events sample app](https://github.com/overwolf/lol-events-sample-app)
+* [LOL game events sample app](https://github.com/overwolf/events-sample-apps)
 * [Summoner and team info sample app](https://github.com/overwolf/lol-summoner-team-info-sample-app) – this sample app gets “summoner region” and “my team” info before the game starts (while the user in the “champion select” phase) more information about getting data from LoL launcher/client can be found [here](overwolf-games-launchers).
 
 ## Available Features
