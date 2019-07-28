@@ -120,6 +120,25 @@ id                | player_info   |	The local player id	  |See [notes](#id-note)
 name              | player_info   |	The local player name	  |See [notes](#name-note)|    0.123      |
 health            | player_info   |	The local player health (0-100)	  |See [notes](#health-note)|    0.123      |
 team              | player_info   |	The local player team (alpha/bravo)  |See [notes](#team-note)|    0.123      |
+kills              | player_info   |	The local player kills	  |See [notes](#kills-note)|    0.130      |
+deaths              | player_info   |	The local player deaths	  |See [notes](#deaths-note)|    0.130      |
+assists              | player_info   |	The local player assists	  |See [notes](#assists-note)|    0.130      |
+doubleKills              | player_info   |	The local player double kills	  |See [notes](#doubleKills-note)|    0.130      |
+tripleKills              | player_info   |	The local player triple kills	  |See [notes](#tripleKills-note)|    0.130      |
+quadKills              | player_info   |	The local player quadra kills	  |See [notes](#quadKills-note)|    0.130      |
+quintKills              | player_info   |	The local player quintuple kills	  |See [notes](#quintKills-note)|    0.130      |
+sexKills              | player_info   |	The local player sextuple kills	  |See [notes](#sexKills-note)|    0.130      |
+killstreak1              | player_info   |	The local player killstreak	  |See [notes](#killstreak1-note)|    0.130      |
+killstreak2              | player_info   |	The local player killstreak	  |See [notes](#killstreak2-note)|    0.130      |
+killstreak3              | player_info   |	The local player killstreak	  |See [notes](#killstreak3-note)|    0.130      |
+killstreak4              | player_info   |	The local player killstreak	  |See [notes](#killstreak4-note)|    0.130      |
+killstreak5              | player_info   |	The local player killstreak	  |See [notes](#killstreak5-note)|    0.130      |
+killstreak6              | player_info   |	The local player killstreak	  |See [notes](#killstreak6-note)|    0.130      |
+headshotKills              | player_info   |	The local player killed with headshot	  |See [notes](#headshotKills-note)|    0.130      |
+meleeKills              | player_info   |	The local player killed with a melee	  |See [notes](#meleeKills-note)|    0.130      |
+portalKills              | player_info   |	The local player portal killed	  |See [notes](#portalKills-note)|    0.130      |
+killsThroughPortal              | player_info   |	The local player killed through a portal	  |See [notes](#killsThroughPortal-note)|    0.130      |
+teabags              | player_info   |	The local player tea-bagged	  |See [notes](#teabags-note)|    0.130      |
 
 #### *id* note
 
@@ -144,6 +163,120 @@ Data Example:
 Data Example:
 
 `{"player_info":{"team":"alpha"}}`
+
+#### *kills* note
+
+Data Example:
+
+`{"kills", 4 },`
+
+#### *deaths* note
+
+Data Example:
+
+` {"deaths", 4 },`
+
+#### *assists* note
+
+Data Example:
+
+`{"assists", 4 },`
+
+#### *doubleKills* note
+
+Data Example:
+
+`{"doubleKills", 4 },`
+
+#### *tripleKills* note
+
+Data Example:
+
+`{"tripleKills", 4 },`
+
+#### *quadKills* note
+
+Data Example:
+
+`{"quadKills", 4 },`
+
+#### *quintKills* note
+
+Data Example:
+
+`{"quintKills", 4 },`
+
+#### *sexKills* note
+
+Data Example:
+
+`{"sexKills", 4 },`
+
+#### *killstreak1* note
+
+Data Example:
+
+`{"killstreak1", 4 },`
+
+#### *killstreak2* note
+
+Data Example:
+
+`{"killstreak2", 4 },`
+
+#### *killstreak3* note
+
+Data Example:
+
+`{"killstreak3", 4 },`
+
+#### *killstreak4* note
+
+Data Example:
+
+`{"killstreak4", 4 },`
+
+#### *killstreak5* note
+
+Data Example:
+
+`{"killstreak5", 4 },`
+
+#### *killstreak6* note
+
+Data Example:
+
+`{"killstreak6", 4 },`
+
+#### *headshotKills* note
+
+Data Example:
+
+`{"headshotKills", 4 },`
+
+#### *meleeKills* note
+
+Data Example:
+
+`{"meleeKills", 4 },`
+
+#### *portalKills* note
+
+Data Example:
+
+`{"portalKills", 4 },`
+
+#### *killsThroughPortal* note
+
+Data Example:
+
+`{"killsThroughPortal", 4},`
+
+#### *teabags* note
+
+Data Example:
+
+`{"teabags", 4 }`
 
 ## `location`
 
@@ -242,6 +375,20 @@ Data Example:
 Data Example:
 
 `{"name":"victim","data":"flying_low"}`
+
+## `assist`
+
+### Events
+
+Event       | Event Data   | Fired When    | Notes              | Since Version |
+------------| -------------| --------------| ------------------ | --------------|
+assist        |  Kill type   | The local player assisted in killing an enemy|See [notes](#assist-note)|     130.0     |
+
+#### *assists*
+
+Data Example:
+
+`{"name":"assist","data":""}
 
 ## `death`
 
