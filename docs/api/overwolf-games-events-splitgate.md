@@ -30,6 +30,7 @@ Tracker Network offers a [battle tested API for Splitgate: Arena Warfare](https:
 * [kill](#kill)
 * [death](#death)
 * [portal](#portal)
+* [assist](#assist)
 
 ## `game_info`
 
