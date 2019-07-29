@@ -73,161 +73,136 @@
 would like to update it.<br>
 Some tests may change depends on the app, as it is our goal to create specific tests per app in order increase productivity.</p>
 <p>In this page we share what are the tests we run for your app so you will be able to improve your app according to it. Please don’t hesitate asking us question over Slack or by email: <a href="mailto:developers@overwolf.com">developers@overwolf.com</a></p>
-<h3><a class="anchor" aria-hidden="true" id="manifest"></a><a href="#manifest" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Manifest</h3>
-<ul>
-<li><p>Consistent <a href="https://overwolf.github.io/docs/api/manifest-json#meta-name">Author and App names</a> between updates</p>
+<h2><a class="anchor" aria-hidden="true" id="manifest"></a><a href="#manifest" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Manifest</h2>
+<h3><a class="anchor" aria-hidden="true" id="consistent-uid"></a><a href="#consistent-uid" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Consistent UID</h3>
+<p>Make sure that the <a href="../api/manifest-json#meta-name">author and app name</a> are the same in every version.<br>
+Changes in those parameters will change the UID of your app, so make sure that they will consistent in every app update.</p>
+<h3><a class="anchor" aria-hidden="true" id="validate-manifest"></a><a href="#validate-manifest" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Validate manifest</h3>
+<p>Make sure to validate your manifest.json syntax:</p>
 <ol>
-<li>Make sure that the author and app name are the same in every version (Changes in those parameters will change the UID of your app)</li>
-</ol></li>
-<li><p>Validate manifest.json syntax</p>
-<ol>
-<li>Copy all of the content of the app’s manifest.json and paste it in <a href="https://jsonlint.com/">jsonlint.com</a></li>
-<li>Press the “validate” button in the jsonlint.com website (Result is “valid json”)</li>
-<li>Make sure you have no errors</li>
-</ol></li>
-<li><p><a href="https://overwolf.github.io/docs/api/manifest-json#meta-minimum">Overwolf Minimal Version</a></p>
-<ol>
-<li>Examine Overwolf Minimal Version and compare it to the previous Overwolf Minimal version (Overwolf minimal version shouldn’t change between app versions, unless your app needs to use a new Overwolf property, API, etc.)</li>
-</ol></li>
-<li><p>Verify correct Advertisement flags</p>
-<ol>
-<li><code>&quot;block_top_window_navigation&quot;:true</code> – Means that when user clicks on an ad, it will always open in a new window</li>
-<li><code>&quot;popup_blocker&quot;:true</code> – This flag prevents ads that will try to create a popup for the user without the user’s consent</li>
-<li><code>&quot;mute&quot;:true – Mute</code> sounds in window</li>
-</ol></li>
-</ul>
-<ul>
-<li><p>Verify <code>launcher_icon</code> property existence</p>
-<ol>
-<li>Make sure <code>&quot;launcher_icon&quot;: &quot;icon.ico&quot;</code> appears in the “meta” object, (<code>icon.ico</code> can have any name as long as the icon exists in the app opk file)</li>
-<li>Check that the <code>icon.ico</code> file exists in your app folder/opk and its size is smaller than 150KB</li>
-<li>Make sure that you have the following resolutions: <code>16x16,32x32,48x48,256x256</code></li>
-</ol></li>
-<li><p>Verify game_targeting flag existecne</p></li>
-<li><p>Verify correct_launch events</p></li>
-</ul>
-<h3><a class="anchor" aria-hidden="true" id="windows"></a><a href="#windows" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Windows</h3>
-<ul>
-<li><p>Resolutions</p>
-<ol>
-<li>Before testing, DPI should be 100%, window resolution should be 1920 x 1080</li>
-<li>Now change your screen resolution to the following and make sure that the app window stays within the borders of the screen:</li>
+<li>Copy all of the content of the app’s manifest.json and paste it in <a href="https://jsonlint.com/">jsonlint.com</a>.</li>
+<li>Press the &quot;validate&quot; button in the jsonlint.com website (Result is &quot;valid json&quot;).</li>
+<li>Make sure you have no errors.</li>
 </ol>
+<h4><a class="anchor" aria-hidden="true" id="overwolf-minimal-version"></a><a href="#overwolf-minimal-version" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Overwolf minimal version</h4>
+<p>Examine <a href="../api/manifest-json#meta-minimum">Overwolf minimal version</a> and compare it to the previous Overwolf Minimal version (Overwolf minimal version shouldn’t change between app versions, unless your app needs to use a new Overwolf property, API, etc.)</p>
+<h4><a class="anchor" aria-hidden="true" id="verify-correct-advertisement-flags"></a><a href="#verify-correct-advertisement-flags" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Verify correct Advertisement flags</h4>
+<ol>
+<li><code>&quot;block_top_window_navigation&quot;:true</code> – Means that when user clicks on an ad, it will always open in a new window.</li>
+<li><code>&quot;popup_blocker&quot;:true</code> – This flag prevents ads that will try to create a popup for the user without the user’s consent.</li>
+<li><code>&quot;mute&quot;:true – Mute</code> sounds in window.</li>
+</ol>
+<h4><a class="anchor" aria-hidden="true" id="verify-launcher_icon-property-existence"></a><a href="#verify-launcher_icon-property-existence" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Verify 'launcher_icon' property existence</h4>
+<ol>
+<li>Make sure <code>&quot;launcher_icon&quot;: &quot;icon.ico&quot;</code> appears in the “meta” object, (<code>icon.ico</code> can have any name as long as the icon exists in the app opk file).</li>
+<li>Check that the <code>icon.ico</code> file exists in your app folder/opk and its size is smaller than 150KB.</li>
+<li>Make sure that you have the following resolutions: <code>16x16, 32x32,48x48, 256x256</code>.</li>
+</ol>
+<h4><a class="anchor" aria-hidden="true" id="verify-game_targeting-flag-existecne"></a><a href="#verify-game_targeting-flag-existecne" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Verify game_targeting flag existecne</h4>
+<h4><a class="anchor" aria-hidden="true" id="verify-correct_launch-events"></a><a href="#verify-correct_launch-events" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Verify correct_launch events</h4>
+<h2><a class="anchor" aria-hidden="true" id="windows"></a><a href="#windows" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Windows</h2>
+<h3><a class="anchor" aria-hidden="true" id="resolutions"></a><a href="#resolutions" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Resolutions</h3>
+<ol>
+<li><p>Before testing, DPI should be 100%, window resolution should be 1920 x 1080.</p></li>
+<li><p>Now change your screen resolution to the following and make sure that the app window stays within the borders of the screen:</p>
 <ul>
 <li>1366 x 720 – 100 DPI</li>
 <li>1366 x 768 – 100 DPI</li>
 <li>1920 X 1080 – 125 DPI</li>
 <li>3840 X 2160 – 150 DPI</li>
 </ul></li>
-<li><p>Window states</p></li>
-<li><p>The following test should show you how your app behaves in-game in different window states:</p></li>
-<li><p>Launch the game your app supports and test the app in full-screen (game window), make sure everything is in place</p></li>
-<li><p>Then change to windowed mode and make sure that everything is still in place</p></li>
-<li><p>Window behavior when “losing focus”</p></li>
-<li><p>Overwolf only draws the overlay on a game (showing the app windows) when the game is in focus, this means that we want to make sure that once the game loses focus no Overwolf app windows pop up. In the following test, you should launch the game your app supports and make sure that the app launches correctly. Then, you should Alt + Tab out of the game and make sure that your app window will not show on desktop. When you go back to the game, the app should work as it should</p></li>
-</ul>
-<h3><a class="anchor" aria-hidden="true" id="overlay"></a><a href="#overlay" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Overlay</h3>
-<ul>
-<li>In-Game Behavior</li>
-</ul>
-<ol>
-<li>Preconditions: The user is now running the game your app supports</li>
 </ol>
-<ul>
-<li>Open the app window with hotkey (App is displayed in Overlay)</li>
-<li>Test general app functionality in-game (App will properly function)</li>
+<h3><a class="anchor" aria-hidden="true" id="window-states"></a><a href="#window-states" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Window states</h3>
+<p>The following test should show you how your app behaves in-game in different window states:</p>
+<ol>
+<li>Launch the game your app supports and test the app in full-screen (game window), make sure everything is in place.</li>
+<li>Then change to windowed mode and make sure that everything is still in place.</li>
+</ol>
+<h4><a class="anchor" aria-hidden="true" id="window-behavior-when-losing-focus"></a><a href="#window-behavior-when-losing-focus" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Window behavior when &quot;losing focus&quot;</h4>
+<p>Overwolf only draws the overlay on a game (showing the app windows) when the game is in focus, this means that we want to make sure that once the game loses focus no Overwolf app windows pop up.</p>
+<p>In the following test, you should launch the game your app supports and make sure that the app launches correctly. Then, you should Alt + Tab out of the game and make sure that your app window will not show on desktop.</p>
+<p>When you go back to the game, the app should work as it should</p>
+<h2><a class="anchor" aria-hidden="true" id="overlay"></a><a href="#overlay" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Overlay</h2>
+<h3><a class="anchor" aria-hidden="true" id="in-game-behavior"></a><a href="#in-game-behavior" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>In-Game Behavior</h3>
+<p>Preconditions: The user is now running the game your app supports.</p>
+<ol>
+<li>Open the app window with hotkey (App is displayed in Overlay).</li>
+<li>Test general app functionality in-game (App will properly function).</li>
 <li>Click on locations in the app that will affect the game if also pressed on in the same location. (Mouse clicks should not go through)</li>
-</ul>
-<h3><a class="anchor" aria-hidden="true" id="hotkeys"></a><a href="#hotkeys" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Hotkeys</h3>
-<ul>
-<li><p>General Hotkeys functionality</p>
-<ol>
-<li>Use Hotkey to launch App (App will launch)</li>
-<li>Use Hotkey again to close / minimize App (App closes / minimizes)</li>
-<li>Change hotkey and use it again (Hotkey will change in Overwolf settings)</li>
-<li>Use changed Hotkey to launch App (App will launch)</li>
-<li>Use changed Hotkey again to close / minimize the app (app closes / minimizes)</li>
-<li>Allow users to change the hotkeys combination from inside your app’s settings panel by automatically directing the user the the Overwolf settings page as suggested in our best practices (Hotkeys part). More information about hotkeys can be found in the manifest.json and overwolf.settings API pages – Make sure that when it’s done, the new hotkey is updated automatically in your app without the need to re-open the app.</li>
-<li>Launch the app using the dock icon.</li>
-</ol></li>
-<li><p>App was installed mid-game
-1.Preconditions: Uninstall your app to verify the following test</p>
-<ul>
-<li>While in-game, open the Overwolf Appstore and install app or install via opk (App installs)</li>
-<li>Use hotkey launch app (App launches)</li>
-<li>Use hotkey again to close / minimize the app (App closes / minimizes)</li>
-<li>Change hotkey and use it again (App launches)</li>
-<li>Used changed hotkey again (App closes)</li>
-</ul></li>
-<li><p>Whenever a user changes the apps hotkey – make sure that the app changes both functionality and UI</p></li>
-</ul>
-<h3><a class="anchor" aria-hidden="true" id="desktop"></a><a href="#desktop" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Desktop</h3>
-<ul>
-<li>Desktop app Behaviour</li>
-</ul>
-<ol>
-<li>Launch App while in desktop (App launches within 30 milliseconds or less – It’s okay to immediately show the app’s window and then a loader)</li>
-<li>Test general app desktop functionality</li>
-<li>Launching from desktop icon when Overwolf is closed</li>
-<li>Verify all windows are close upon exit</li>
 </ol>
-<h3><a class="anchor" aria-hidden="true" id="game-specific-apps"></a><a href="#game-specific-apps" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Game specific apps</h3>
-<ul>
-<li>If your app should run on a specific game only, make sure it runs on that game</li>
-</ul>
-<h3><a class="anchor" aria-hidden="true" id="performance"></a><a href="#performance" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Performance</h3>
-<ul>
-<li><p>Memory &amp; CPU Usage</p>
+<h2><a class="anchor" aria-hidden="true" id="hotkeys"></a><a href="#hotkeys" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Hotkeys</h2>
+<h3><a class="anchor" aria-hidden="true" id="general-functionality"></a><a href="#general-functionality" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>General functionality</h3>
 <ol>
-<li>Preconditions: Open Overwolf task manager &amp; Windows task manager</li>
+<li><p>Use Hotkey to launch App (App will launch).</p></li>
+<li><p>Use Hotkey again to close / minimize App (App closes / minimizes).</p></li>
+<li><p>Change hotkey and use it again (Hotkey will change in Overwolf settings).</p></li>
+<li><p>Use changed Hotkey to launch App (App will launch).</p></li>
+<li><p>Use changed Hotkey again to close / minimize the app (app closes / minimizes).</p></li>
+<li><p>Allow users to change the hotkeys combination from inside your app’s settings panel by automatically directing the user the the Overwolf settings page as suggested in our best practices (Hotkeys part).  More information about hotkeys can be found in the manifest.json and overwolf.settings API pages – Make sure that when it’s done, the new hotkey is updated automatically in your app without the need to re-open the app.</p></li>
+<li><p>Launch the app using the dock icon.</p></li>
 </ol>
-<ul>
-<li>Use the apps basic functionality (App does not lag or become unresponsive)</li>
-<li>Examine the Overwolf task manager (App memory does not increase without decreasing – no memory leaks)</li>
-<li>Enter Windows Task manager and enter the performance tab (CPU / Memory / Network usage will not spike when using the app)</li>
-</ul></li>
-<li><p>Dock icon size</p></li>
-</ul>
+<h3><a class="anchor" aria-hidden="true" id="app-was-installed-mid-game"></a><a href="#app-was-installed-mid-game" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>App was installed mid-game</h3>
+<p>Preconditions: Uninstall your app to verify the following test.</p>
 <ol>
-<li>Dock icons (colored &amp; grayed) should be .png, 256×256 and each smaller than 30KB.</li>
+<li><p>While in-game, open the Overwolf Appstore and install app or install via opk (App installs).</p></li>
+<li><p>Use hotkey launch app (App launches).</p></li>
+<li><p>Use hotkey again to close / minimize the app (App closes / minimizes).</p></li>
+<li><p>Change hotkey and use it again (App launches).</p></li>
+<li><p>Used changed hotkey again (App closes).</p></li>
+<li><p>Whenever a user changes the apps hotkey – make sure that the app changes both functionality and UI.</p></li>
 </ol>
-<ul>
-<li>Internet access</li>
-</ul>
+<h2><a class="anchor" aria-hidden="true" id="desktop"></a><a href="#desktop" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Desktop</h2>
+<h3><a class="anchor" aria-hidden="true" id="desktop-app-behaviour"></a><a href="#desktop-app-behaviour" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Desktop app Behaviour</h3>
 <ol>
-<li>Make sure that when you are disconnected from the internet, the app still launches normally.</li>
-<li>Make sure that the app presents “check your internet connection” or a similar window, when internet access is not available.</li>
-<li>If the app requires internet to function then it would be presented in a window with the app</li>
-<li>Regarding how to detect whether your app is offline or not: you can applicatively check it from your JS code in various ways.<br>
-The most straightforward way is to use the <a href="https://stackoverflow.com/questions/16035577/check-if-there-is-an-internet-connection">navigator.onLine property</a> ,but we recommend to implement more reliable approaches, <a href="https://zen-and-art-of-programming.blogspot.com/2014/04/html-5-offline-application-development.html">like this</a> for example.</li>
+<li><p>Launch App while in desktop (App launches within 30 milliseconds or less – It’s okay to immediately show the app’s window and then a loader).</p></li>
+<li><p>Test general app desktop functionality.</p></li>
+<li><p>Launching from desktop icon when Overwolf is closed.</p></li>
+<li><p>Verify all windows are close upon exit.</p></li>
 </ol>
-<h3><a class="anchor" aria-hidden="true" id="ads"></a><a href="#ads" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Ads</h3>
+<h2><a class="anchor" aria-hidden="true" id="game-specific-apps"></a><a href="#game-specific-apps" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Game specific apps</h2>
+<p>If your app should run on a specific game only, make sure it runs on that game.</p>
+<h2><a class="anchor" aria-hidden="true" id="performance"></a><a href="#performance" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Performance</h2>
+<h3><a class="anchor" aria-hidden="true" id="memory-cpu-usage"></a><a href="#memory-cpu-usage" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Memory &amp; CPU Usage</h3>
+<p>Preconditions: Open Overwolf task manager &amp; Windows task manager.</p>
 <ul>
-<li><p>Ads visibility</p>
-<ol>
-<li>Launch app</li>
-<li>Search for app windows with ads (App windows with ads have their ads appear)</li>
-<li>Click the ad (Ad opens in a new Overwolf browser window and NOT in the same window the ad was in)
-4 .Click on the ad 5 times (Ad opens in a new Overwolf browser 5 times, without crashing Overwolf or hurting performance)</li>
-</ol></li>
-<li><p>Ads click functionality</p>
-<ol>
-<li>Open app (App opens)</li>
-<li>Click on any app element that is hiding ads (Ads will not open, app element will function as expected.)</li>
-</ol></li>
-<li><p>Ads are not hidden</p>
-<ol>
-<li>Open the developer tools by clicking crtl + i, and look at the console. No ad process should be visible if no ads are sown on screen</li>
-</ol></li>
-<li><p>Ads windows closed between app windows</p>
-<ol>
-<li>Open <code>http://localhost:54284/</code> in browser</li>
-<li>Launch your app, where ads are presented</li>
-<li>Close the app (hotkey and minimize, when possible)</li>
-<li>No ads process should be shown in the localhost</li>
-</ol></li>
+<li>Use the apps basic functionality (App does not lag or become unresponsive).</li>
+<li>Examine the Overwolf task manager (App memory does not increase without decreasing – no memory leaks).</li>
+<li>Enter Windows Task manager and enter the performance tab (CPU / Memory / Network usage will not spike when using the app).</li>
 </ul>
-</span></div></article></div><div class="docLastUpdate"><em>Last updated on 2019-7-29 by Lior Haim</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/start/submit-app-proposal"><span class="arrow-prev">← </span><span>Submitting an App Proposal</span></a><a class="docs-next button" href="/docs/start/technical-checklist"><span>Technical Checklist</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#overview">Overview</a><ul class="toc-headings"><li><a href="#manifest">Manifest</a></li><li><a href="#windows">Windows</a></li><li><a href="#overlay">Overlay</a></li><li><a href="#hotkeys">Hotkeys</a></li><li><a href="#desktop">Desktop</a></li><li><a href="#game-specific-apps">Game specific apps</a></li><li><a href="#performance">Performance</a></li><li><a href="#ads">Ads</a></li></ul></li></ul></nav></div><footer class="site-footer"><div class="container"><ul><li>Legal</li><li><a href="/docs/topics/legal-overview">Terms overview</a></li><li><a href="/docs/topics/legal-developers-terms">Developer&#x27;s terms</a></li><li><a href="/docs/topics/legal-app-terms">App terms</a></li><li><a href="http://www.overwolf.com/legal/" target="_blank">Overwolf terms</a></li><li><a href="http://www.overwolf.com/legal/#Privacy-policy" target="_blank">Overwolf Privacy policy</a></li></ul><ul><li>Support</li><li><a href=" https://discuss.developers.overwolf.com/" target="_blank">Questions and Answers</a></li><li><a href="https://discordapp.com/invite/cjjrZDp" target="_blank">Discord</a></li><li><a href="/docs/support/contact-us#join-our-slack">Slack</a></li><li><a href="https://www.facebook.com/OverwolfDevs" target="_blank">Facebook</a></li><li><a href="https://twitter.com/OverwolfDevs" target="_blank">Twitter</a></li></ul><ul><li>Documentation</li><li><a href="/docs/api/changelog">Changelog</a></li><li><a href="/docs/api/overwolf-api-overview">API</a></li><li><a href="/docs/start/app-creation-process">App Creation Process</a></li><li><a href="/docs/topics/best-practices-overview">Best Practices</a></li><li><a href="/docs/status/all">Game Events status</a></li></ul><ul><li>Information</li><li><a href="http://www.overwolf.com/careers/">Careers</a></li><li><a href="https://play.overwolf.com/fund/" target="_blank">Fund</a></li><li><a href="https://medium.com/overwolf-developers" target="_blank">Developers Blog</a></li><li><a href="https://www.overwolf.com/appstore" target="_blank">Overwolf Appstore</a></li></ul></div></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+<h3><a class="anchor" aria-hidden="true" id="dock-icon-size"></a><a href="#dock-icon-size" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Dock icon size</h3>
+<p>Dock icons (colored &amp; grayed) should be .png, 256×256 and each smaller than 30KB.</p>
+<h3><a class="anchor" aria-hidden="true" id="internet-access"></a><a href="#internet-access" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Internet access</h3>
+<ol>
+<li><p>Make sure that when you are disconnected from the internet, the app still launches normally.</p></li>
+<li><p>Make sure that the app presents “check your internet connection” or a similar window, when internet access is not available.</p></li>
+<li><p>If the app requires internet to function then it would be presented in a window with the app.</p></li>
+<li><p>Regarding how to detect whether your app is offline or not: you can applicatively check it from your JS code in various ways.<br>
+The most straightforward way is to use the <a href="https://stackoverflow.com/questions/16035577/check-if-there-is-an-internet-connection">navigator.onLine property</a> ,but we recommend to implement more reliable approaches, <a href="https://zen-and-art-of-programming.blogspot.com/2014/04/html-5-offline-application-development.html">like this</a> for example.</p></li>
+</ol>
+<h2><a class="anchor" aria-hidden="true" id="ads"></a><a href="#ads" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Ads</h2>
+<h3><a class="anchor" aria-hidden="true" id="ads-visibility"></a><a href="#ads-visibility" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Ads visibility</h3>
+<ol>
+<li><p>Launch app.</p></li>
+<li><p>Search for app windows with ads (App windows with ads have their ads appear).</p></li>
+<li><p>Click the ad (Ad opens in a new Overwolf browser window and NOT in the same window the ad was in).</p></li>
+<li><p>Click on the ad 5 times (Ad opens in a new Overwolf browser 5 times, without crashing Overwolf or hurting performance).</p></li>
+</ol>
+<h3><a class="anchor" aria-hidden="true" id="ads-click-functionality"></a><a href="#ads-click-functionality" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Ads click functionality</h3>
+<ol>
+<li>Open app (App opens).</li>
+<li>Click on any app element that is hiding ads (Ads will not open, app element will function as expected).</li>
+</ol>
+<h3><a class="anchor" aria-hidden="true" id="ads-are-not-hidden"></a><a href="#ads-are-not-hidden" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Ads are not hidden</h3>
+<p>Open the developer tools by clicking crtl + i, and look at the console. No ad process should be visible if no ads are sown on screen</p>
+<h3><a class="anchor" aria-hidden="true" id="ads-remove-and-refresh"></a><a href="#ads-remove-and-refresh" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Ads remove and refresh</h3>
+<p>Ads should be closed when your app window is minimized app windows.</p>
+<ol>
+<li><p>Open <code>http://localhost:54284/</code> in browser.</p></li>
+<li><p>Launch your app, where ads are presented.</p></li>
+<li><p>Close the app (hotkey and minimize, when possible).</p></li>
+<li><p>No ads process should be shown in the localhost.</p></li>
+</ol>
+</span></div></article></div><div class="docLastUpdate"><em>Last updated on 2019-7-29 by eransharv</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/start/submit-app-proposal"><span class="arrow-prev">← </span><span>Submitting an App Proposal</span></a><a class="docs-next button" href="/docs/start/technical-checklist"><span>Technical Checklist</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#overview">Overview</a></li><li><a href="#manifest">Manifest</a><ul class="toc-headings"><li><a href="#consistent-uid">Consistent UID</a></li><li><a href="#validate-manifest">Validate manifest</a></li></ul></li><li><a href="#windows">Windows</a><ul class="toc-headings"><li><a href="#resolutions">Resolutions</a></li><li><a href="#window-states">Window states</a></li></ul></li><li><a href="#overlay">Overlay</a><ul class="toc-headings"><li><a href="#in-game-behavior">In-Game Behavior</a></li></ul></li><li><a href="#hotkeys">Hotkeys</a><ul class="toc-headings"><li><a href="#general-functionality">General functionality</a></li><li><a href="#app-was-installed-mid-game">App was installed mid-game</a></li></ul></li><li><a href="#desktop">Desktop</a><ul class="toc-headings"><li><a href="#desktop-app-behaviour">Desktop app Behaviour</a></li></ul></li><li><a href="#game-specific-apps">Game specific apps</a></li><li><a href="#performance">Performance</a><ul class="toc-headings"><li><a href="#memory-cpu-usage">Memory &amp; CPU Usage</a></li><li><a href="#dock-icon-size">Dock icon size</a></li><li><a href="#internet-access">Internet access</a></li></ul></li><li><a href="#ads">Ads</a><ul class="toc-headings"><li><a href="#ads-visibility">Ads visibility</a></li><li><a href="#ads-click-functionality">Ads click functionality</a></li><li><a href="#ads-are-not-hidden">Ads are not hidden</a></li><li><a href="#ads-remove-and-refresh">Ads remove and refresh</a></li></ul></li></ul></nav></div><footer class="site-footer"><div class="container"><ul><li>Legal</li><li><a href="/docs/topics/legal-overview">Terms overview</a></li><li><a href="/docs/topics/legal-developers-terms">Developer&#x27;s terms</a></li><li><a href="/docs/topics/legal-app-terms">App terms</a></li><li><a href="http://www.overwolf.com/legal/" target="_blank">Overwolf terms</a></li><li><a href="http://www.overwolf.com/legal/#Privacy-policy" target="_blank">Overwolf Privacy policy</a></li></ul><ul><li>Support</li><li><a href=" https://discuss.developers.overwolf.com/" target="_blank">Questions and Answers</a></li><li><a href="https://discordapp.com/invite/cjjrZDp" target="_blank">Discord</a></li><li><a href="/docs/support/contact-us#join-our-slack">Slack</a></li><li><a href="https://www.facebook.com/OverwolfDevs" target="_blank">Facebook</a></li><li><a href="https://twitter.com/OverwolfDevs" target="_blank">Twitter</a></li></ul><ul><li>Documentation</li><li><a href="/docs/api/changelog">Changelog</a></li><li><a href="/docs/api/overwolf-api-overview">API</a></li><li><a href="/docs/start/app-creation-process">App Creation Process</a></li><li><a href="/docs/topics/best-practices-overview">Best Practices</a></li><li><a href="/docs/status/all">Game Events status</a></li></ul><ul><li>Information</li><li><a href="http://www.overwolf.com/careers/">Careers</a></li><li><a href="https://play.overwolf.com/fund/" target="_blank">Fund</a></li><li><a href="https://medium.com/overwolf-developers" target="_blank">Developers Blog</a></li><li><a href="https://www.overwolf.com/appstore" target="_blank">Overwolf Appstore</a></li></ul></div></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
                 document.addEventListener('keyup', function(e) {
                   if (e.target !== document.body) {
                     return;
