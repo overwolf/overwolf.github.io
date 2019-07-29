@@ -30,6 +30,7 @@ Tracker Network offers a [battle tested API for Splitgate: Arena Warfare](https:
 * [kill](#kill)
 * [death](#death)
 * [portal](#portal)
+* [assist](#assist)
 
 ## `game_info`
 
@@ -388,7 +389,7 @@ assist        |  Kill type   | The local player assisted in killing an enemy|See
 
 Data Example:
 
-`{"name":"assist","data":""}
+`{"name":"assist","data":""}`
 
 ## `death`
 
