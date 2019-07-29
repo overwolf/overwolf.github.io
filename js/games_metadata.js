@@ -103,5 +103,12 @@ const GamesMetadata = {
     iconUrl: "http://developers.overwolf.com/wp-content/themes/owdev/images/games/apex.png",
     iconLargeUrl: "http://developers.overwolf.com/wp-content/themes/owdev/images/games/large/apex.png",
     name: "Apex Legends"
-  }
+  },
+  // 21570: {
+  //   id: 21570,
+  //   path: "",
+  //   iconUrl: "",
+  //   iconLargeUrl: "",
+  //   name: "Teamfight Tactics"
+  // }
 }
