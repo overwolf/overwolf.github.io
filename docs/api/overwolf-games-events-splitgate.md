@@ -389,7 +389,7 @@ assist        |  Kill type   | The local player assisted in killing an enemy|See
 
 Data Example:
 
-`{"name":"assist","data":""}
+`{"name":"assist","data":""}`
 
 ## `death`
 
