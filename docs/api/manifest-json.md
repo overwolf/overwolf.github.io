@@ -231,7 +231,7 @@ There are many features that are enabled through this file. Some are mandatory (
 
 | Name                                           | Type                                      | Description                               |   
 | -----------------------------------------------|-------------------------------------------| ------------------------------------------|
-| <a name="manifest_version">manifest_version</a>  | integer                                   | Mandatory. Targets the manifest version you are working on. Currently there is only one version, therefore this value is always “1”. |
+| <a name="manifest_version" a class="anchor" aria-hidden="true"></a>manifest_version  | integer                                   | Mandatory. Targets the manifest version you are working on. Currently there is only one version, therefore this value is always “1”. |
 | <a id="type">type</a>                          | string                                    | Mandatory. Declares the type of application. Can only be “WebApp”.                               |
 | <a id="meta">meta</a>                          | [meta](#meta-object) Object             | Mandatory. The app metadata.                                                                     |
 | <a id="permissions">permissions</a>            | [permissions[]](#permissions-array)     | An array of permissions that the app requires.               |
