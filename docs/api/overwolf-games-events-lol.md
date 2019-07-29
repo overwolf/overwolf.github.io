@@ -20,7 +20,7 @@ Note that you can consume also the LOL game launcher events. read more info [her
 ## Available Features
 
 * [matchState](#matchstate)
-* [match_info](#match-info)
+* [match_info](#match_info)
 * [death](#death)
 * [respawn](#respawn)
 * [abilities](#abilities)
@@ -61,6 +61,13 @@ matchEnd   | null        |  Match is ended     |  Match is ended    |   0.140   
 key          | Category    | Values                    | Notes                 | Since Version |
 --------------- | -----------| ------------------------------------------------------------------------------------ | ------------------------------------ | ------------- | 
 pseudo_match_id | match_info | The current session’s ID code. Example:</br> `a4e8fc75-b35e-466f-976c-09f4ee633d95`  |  This is an Overwolf-generated code. Unrelated to Riot Games.  |   0.130 |
+game_mode | match_info | Whether the current game mode is TFT or default LoL. See [notes](#game_mode-notes) |                 |   0.133       |
+#### *game_mode* notes
+
+Data example:
+
+`{"info":{"match_info":{"game_mode":"tft"}},"feature":"match_info"}`
+`{"info":{"match_info":{"game_mode":"lol"}},"feature":"match_info"}`
 
 ## `death`
 
