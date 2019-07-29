@@ -1,6 +1,5 @@
-.site-footer a, .site-footer a:active, .site-footer a:focus, .site-footer a:hover {
-  color: #958fb2;
-  text-decoration: none;
+.site-footer a:active, .site-footer a:focus {
+  color: #958fb2 !important;
 }
 
 .mainContainer a[href] {
