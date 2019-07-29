@@ -1,3 +1,8 @@
+.site-footer a, .site-footer a:active, .site-footer a:focus, .site-footer a:hover {
+  color: #958fb2;
+  text-decoration: none;
+}
+
 .mainContainer a[href] {
   /* color: #E6004C; */
   text-decoration-line: underline;
