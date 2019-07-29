@@ -34,6 +34,8 @@ class GameEventsStatus extends React.Component {
           // Ignore state 0 (unsupported)
           if (game.state == 0) continue;
 
+          if (!GamesMetadata[game.game_id]) continue;
+
           GamesMetadata[game.game_id].state = game.state;
           games.push(GamesMetadata[game.game_id]);
         }
