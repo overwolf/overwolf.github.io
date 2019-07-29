@@ -142,7 +142,7 @@ body {
 }
 
 .body {
-	/* overflow: hidden; */
+	overflow: hidden;
 	line-height: 1.5;
 	color: #0D0A1A;
 	background: #ffffff;
@@ -1253,7 +1253,7 @@ use {
 		width: 88%
 	}
 	.body.home .main-content section.easily .container {
-		padding: 130px 0 50px
+		padding: 120px 0 50px
 	}
 	.body.home .main-content section.easily .lightning {
 		width: 328px;
