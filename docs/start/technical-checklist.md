@@ -38,8 +38,6 @@ As a bonus, once you complete the full list of recommendations, you could get up
 
 * Avoid the use of transparency in your window design that is not 100% (the need to calculate pixel values may cause a performance hit).
 
-* Add a Support widget ([Read more here]()).
-
 * Add Knowledgebase articles ([Read more here](add-a-knowledge-base-to-app)).
 
 * Add "Contact us" form ([Read more here](../topics/best-practices-overview)).
