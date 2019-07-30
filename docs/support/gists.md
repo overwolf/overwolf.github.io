@@ -11,4 +11,4 @@ You can upload new gists and browse other gists that uploaded by the Overwolf de
 we confirm every Pull Request and sometimes review and test it, but make sure to test it as well before you use it in production enviroment.
 :::
 
-Our GitHub [Community gists]() reposiotry.
+Our GitHub [Community gists](https://github.com/overwolf/community-gists) reposiotry.
