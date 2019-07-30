@@ -4,7 +4,16 @@ This is intended as a quick reference and showcase.
 
 **NOTE that  It will be about 2 minutes before a content change takes effect**
 
-### Search configuration:
+## Reference
+
+* [Search box configuration](#search-configuration)
+* [Markdown cheet-sheet](#markdown-cheet-sheet)
+* [Create local dev environmen](#ceate-local-dev-environment)
+* [Edit an existing page](#edit-an-existing-page)
+* [Add a new page](#add-a-new-page)
+* [Add a new game events status page](#add-a-new-game-events-status-page)
+
+### Search configuration
 
 * Your search onfiguration can be configured through the [DocSearch file](https://github.com/algolia/docsearch-configs/blob/master/configs/overwolf.json) in the Algolia GitHub repository.  
   Please open a pull request if you want to leverage our Docusaurus search configuration.
@@ -48,4 +57,14 @@ In order to add a new page, you should:
   * [API page tempalte](/docs-templates/api-page-template.md)
   * [Game Events page template](/docs-templates/game-events-page-template.md)
 
+### Add a new game events status page
 
+In order to list a game in the [game events status page](/docs/status/all), you should follow these steps:
+
+1. Create new MD file in this folder. For example: `\docs\status\teamfight-tactics.md`.  
+   The template should be like the other files in that folder. Don't forget to change the GameID.
+   
+2. Add the new page to the site menu: `website\sidebars.json`.  
+   You should place it under `Service\Games Events Status` section. 
+   
+3. Open the file `website\static\js\games_metadata.js` and add a record for the new file that you just created.
