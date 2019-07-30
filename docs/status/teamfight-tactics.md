@@ -17,6 +17,6 @@ sidebar_label: Teamfight Tactics
 <script src="/js/games_metadata.js"></script>
 
 <div id="gameEventsStatus">
-  <script> const GameID = 5426 </script>
+  <script> const GameID = 21570 </script>
   <script type="text/jsx" src="/jsx/specificGameEventsStatus.jsx"></script>
 </div>
