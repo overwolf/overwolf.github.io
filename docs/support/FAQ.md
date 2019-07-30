@@ -1,9 +1,8 @@
 ---
 id: FAQ
-title: FAQ Frequently asked questions
+title: Frequently asked questions
 sidebar_label: General
 ---
 
-Soon..
-
+## TBA
 

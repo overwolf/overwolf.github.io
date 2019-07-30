@@ -78,8 +78,8 @@
 			["support/contact-us", "support/create-ticket", "support/request-feature"],
 		"FAQ":
 			["support/FAQ"],
-		"Recipes":
-			["support/recipes"],
+		"Code Snippets":
+			["support/gists"],
 		"Training and Guides":
 			["support/training"]	
     },
