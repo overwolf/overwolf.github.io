@@ -84,7 +84,7 @@ class GameEventsStatus extends React.Component {
   loadSearchScript() {
     const script = document.createElement("script");
 
-    script.src = "https://developers.overwolf.com/wp-content/themes/owdev/js/game-events-status.js";
+    script.src = "/js/game-events-status.js";
     script.async = true;
 
     document.body.appendChild(script);
