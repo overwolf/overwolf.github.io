@@ -6,12 +6,12 @@ This is intended as a quick reference and showcase.
 
 ## Reference
 
-* Search box configuration
-* Markdown cheet-sheet
-* Create local dev environmen
-* Edit an existing page
-* Add a new page
-* Add a new game events status page
+* [Search box configuration](search-configuration)
+* [Markdown cheet-sheet](markdown-cheet-sheet)
+* [Create local dev environmen](ceate-local-dev-environment)
+* [Edit an existing page](edit-an-existing-page)
+* [Add a new page](add-a-new-page)
+* [Add a new game events status page](add-a-new-game-events-status-page)
 
 ### Search configuration
 
