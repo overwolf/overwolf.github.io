@@ -179,6 +179,33 @@ Here you can see an examples for standard and transparent windows from our sampl
 
 Here you can **download a [sample app](https://github.com/overwolf/app-window-sample)** that shows you how a “transparent” window should be created.
 
+## Windows resolution
+
+In order to position the window in certain location (in-game or on the desktop), or in order to change the size of the window relativly,  you'll first need to get the current user’s screen resolution.
+
+### Detect the resolution
+
+There are two types of resolutions:  
+
+"desktop/monitor resolution" (the resolution of the user’s OS) and "game resolution" (the resolution that the user set in the game's settings).
+
+* Desktop resolution can be detected by using [overwolf.utils.getMonitorsList()](../api/overwolf-utils#getmonitorslistcallback).
+
+* Game resolution can be detected by using [overwolf.games.getRunningGameInfo()](../api/overwolf-games#getrunninggameinfocallback).
+
+### Logical resolution
+
+Note that the [GameInfo](/api/overwolf-games#gameinfo-object) Object that returns from the getRunningGameInfo() function, has in addition to the expected `width` and `height` fields, also `logicalWidth` and `logicalHeight`. These fields returns the game reported (logical) pixel height/width.  
+If your screen is set to scale factor (for example 200% DPI), you mostly prefer to work with the logical sizes, as the regular sizes will wound up being X2.
+
+### Detect resolution change
+
+In order to detect if a user changed his resolution:
+
+* In-game resolution change – Register to the [overwolf.games.onGameInfoUpdated()](../api/overwolf-games#ongameinfoupdated) event to get the updated game resolution.
+
+* Desktop (out-of-game) resolution change – There's no way to detect a change with the desktop resolution, you’ll have to check for this info each time your app starts (by using [getMonitorsList()](../api/overwolf-utils#getmonitorslistcallback)).
+
 ## Windows sizes
 
 The right planning is crucial before you start with the development process of your app.  
@@ -188,26 +215,15 @@ While the most common window dimension would be 1366×768, the best optimal size
 
 You can also do the following when handling with windows sizes:
 
-### Get the user's resolution
-
-Get the user's resolution from Overwolf’s API  to determine the appropriate window size:
-
-  * Get the game's resolution (for in-game windows) using [overwolf.games.onGameInfoUpdated()](../api/overwolf-games#ongameinfoupdated).
-
-  * Get the user's desktop resolution (for out of game windows) using [overwolf.utils.getMonitorsList()](../api/overwolf-utils#getmonitorslistcallback).
-
 ### Set the default size
 
-As [size](../api/manifest-json#windows-size) flag only applies the first time you open the windows, you can set [min_size](../api/manifest-json#windows-min_size) and [max_size](../api/manifest-json#windows-max_size) to the same value, to enforce your app window to always load on the same size.
-In addition, if you want to dynamically set your window size according to the user's desktop resolution and DPI, you can use [setMinSize()](../api/overwolf-windows#setminsizewindowid-width-height-callback).
+As [size](../api/manifest-json#windows-size) flag only applies the first time you open the windows, you can set [min_size](../api/manifest-json#windows-min_size) and [max_size](../api/manifest-json#windows-max_size) to the same value, to enforce your app window to always load on the same size.  
 
-### Set the default position
-
-As [start_position](../api/manifest-json#windows-start_position) flag only applies the first time you open the windows, you can use [changePosition()](../api/overwolf-windows#changepositionwindowid-left-top-callback) if you want to change the position of the window dynamically. For example, after you calculate the user's resolution and you want to position your window in the center of the screen.
+In addition, if you want to dynamically set your window size according to the [user's desktop resolution](#detect-the-resolution) and DPI, you can use [setMinSize()](../api/overwolf-windows#setminsizewindowid-width-height-callback).
 
 ### Allow resolution chooser
 
-Allow the user to choose the right window size from the app’s settings.  
+Allow the user to choose the right window size from the app's settings.  
 Some Examples for apps that let the user choose his preferred app window size and for common and optimal app window sizes:
 
 <div class="box">
@@ -236,6 +252,22 @@ Some Examples for apps that let the user choose his preferred app window size an
     </span>
   </a>
 </div>
+
+## Windows position
+
+### Set the default position
+
+As [start_position](../api/manifest-json#windows-start_position) flag only applies the first time you open the windows, you can use [changePosition()](../api/overwolf-windows#changepositionwindowid-left-top-callback) if you want to change the position of the window dynamically. For example, after you [calculate the user's resolution](#detect-the-resolution) and you want to position your window in the center of the screen.
+
+### Change window position
+
+In order to position your window in a certain location, you'll first need to [get the current user's screen resolution](#detect-the-resolution).  
+
+There are two types of resolutions – "desktop/monitor resolution" (the resolution of the user's OS) and "game resolution" (the resolution that the user set in the game's settings).
+
+* To position a "desktop" window of your app, get the user desktop resolution by using [getMonitorsList()](../api/overwolf-utils#getmonitorslistcallback) and calculate the required location.
+
+* To position an "in-game" window of your app, get the  the game’s resolution by using [getRunningGameInfo()](../api/overwolf-games#getrunninggameinfocallback) and calculate the required location.
 
 ## General Tips for using windows
 
