@@ -46,7 +46,7 @@ INSERT IMAGE HERE
 A folder containing the lot of your app’s code. Make sure your manifest pathing is correct. 
 
 
-### “store” folder:
+### “store” folder
 
 1. Tile.jpg  
 The Appstore tile for your app (258×198 – 72 PPI). The image must be in JPG format.
