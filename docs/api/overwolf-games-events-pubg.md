@@ -175,6 +175,13 @@ jump | null        | Local player jumps (space) |   |  0.128       |
 key         | Category    | Values                          | Notes                 | Since Version |
 ----------- | ------------| --------------------------------| --------------------- | ------------- |
 nicknames       | match_info   | The names of players in the player’s team</br>`{"nicknames":"{\"team_members\" : [{\"player\" : \"yy899189\"}`</br>`,{\"player\" : \"itayG\"},{\"player\" : \"fucis\"},{\"player\"`</br>`:\"gedyan\"}]}"}},"feature":"team"}`        |                       |   0.90        |
+team_location| match_info  | The X,Y,Z location of your team members. |See [notes](#team_location-notes)|     134.0     |
+
+#### *team_location* note
+
+Data Example:
+
+`{"info":{"game_info":{"team_location":"[{\"player\":\"Stilee\",\"location\":{\"x\":\"4185\",\"y\":\"1309\",\"z\":\"1500\"}},{\"player\":\"hajjjekc\",\"location\":{\"x\":\"4185\",\"y\":\"1309\",\"z\":\"1500\"}},{\"player\":\"itayG\",\"location\":{\"x\":\"4185\",\"y\":\"1309\",\"z\":\"1500\"}},{\"player\":\"ARNKC\",\"location\":{\"x\":\"4185\",\"y\":\"1309\",\"z\":\"1500\"}}]"}},"feature":"location"}`
 
 ## `phase`
 
