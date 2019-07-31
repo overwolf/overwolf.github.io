@@ -654,6 +654,9 @@ callback               | function                              | Called with the
 
 > Brings this window to the front.
 
+Note: Using this method while you are playing a game in a fullscreen mode, will cause the game to auto-minimize (as the calling app window gets the front focus).
+
+
 Parameter              | Type                                  | Description                                                               |
 -----------------------| --------------------------------------| --------------------------------------------------------------------------|
 callback               | function                              | Called with the result of the request                                     |
@@ -662,6 +665,8 @@ callback               | function                              | Called with the
 #### Version added: 0.124
 
 > Brings this window to the front.
+
+Note: Using this method while you are playing a game in a fullscreen mode, will cause the game to auto-minimize (as the calling app window gets the front focus).
 
 Parameter              | Type                                  | Description                                                               |
 -----------------------| --------------------------------------| --------------------------------------------------------------------------|
@@ -672,6 +677,8 @@ callback               | function                              | Called with the
 #### Version added: 0.124
 
 > Brings a window to the front.
+
+Note: Using this method while you are playing a game in a fullscreen mode, will cause the game to auto-minimize (as the calling app window gets the front focus).
 
 Parameter              | Type                                  | Description                                                               |
 -----------------------| --------------------------------------| --------------------------------------------------------------------------|
