@@ -71,9 +71,9 @@
         </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><a class="edit-page-link button" href="https://github.com/overwolf/overwolf.github.io/tree/source/docs/start/submit-your-app-to-the-store.md" target="_blank" rel="noreferrer noopener">Edit</a><h1 class="postHeaderTitle">Submitting Your App to the Appstore</h1></header><article><div><span><p>So you’ve finished the development of your app and you want to submit it to the in-game Appstore. Congratulations!
 In this page you will get all the information you need about submitting your app.</p>
 <h2><a class="anchor" aria-hidden="true" id="support-page"></a><a href="#support-page" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Support page</h2>
-<p>Before your new app goes live, you <strong>must</strong> create a support page for it. More details about an Overwolf app support page can found here.</p>
+<p>Before your new app goes live, you <strong>must</strong> create a support page for it. More details about an Overwolf app support page can found <a href="add-a-knowledge-base-to-app">here</a>.</p>
 <h2><a class="anchor" aria-hidden="true" id="how-to-submit-an-in-game-app"></a><a href="#how-to-submit-an-in-game-app" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>How to Submit an In-Game App</h2>
-<p>Make sure to run your json files through a <a href="https://overwolf.github.io/docs/start/submit-your-app-to-the-store">json validator</a> before submitting your app.</p>
+<p>Make sure to <a href="../api/manifest-json#validate-your-manifestjson">validate your manifest</a> file before submitting your app.</p>
 <p><strong>Make sure you have the following items zipped inside a folder and send it to us:</strong></p>
 <h3><a class="anchor" aria-hidden="true" id="app-folder"></a><a href="#app-folder" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>&quot;app&quot; folder</h3>
 <ol>
@@ -94,16 +94,14 @@ Note – Please make sure the png is smaller than 30KB</li>
 <li><strong>launcher_icon.ico</strong></li>
 </ol>
 <ul>
-<li>Add the <a href="https://overwolf.github.io/docs/api/manifest-json#meta-launcher_icon">&quot;launcher_icon&quot;</a> property to the manifest.json file</li>
-<li>Add the icon asset to your app’s folder</li>
-<li>The launcher icon should look like the app’s dock icon to prevent any confusion</li>
-<li>The launcher icon is a 256×256 transparent .png converted into a .ico file with the following resolutions: 16×16, 32×32, 48×48, 256×256</li>
-<li>The launcher icon should weight less than 150Kb</li>
+<li><p>Add the <a href="https://overwolf.github.io/docs/api/manifest-json#meta-launcher_icon">&quot;launcher_icon&quot;</a> property to the manifest.json file.</p></li>
+<li><p>Add the icon asset to your app’s folder.</p></li>
+<li><p>The launcher icon should look like the app’s dock icon to prevent any confusion.</p></li>
+<li><p>The launcher icon is a 256×256 transparent .png converted into a .ico file with the following resolutions: 16×16, 32×32, 48×48, 256×256.</p></li>
+<li><p>The launcher icon should weight less than 150Kb.</p></li>
 </ul>
-<ol start="5">
-<li>“Files” folder<br>
-A folder containing the lot of your app’s code. Make sure your manifest pathing is correct.</li>
-</ol>
+<h3><a class="anchor" aria-hidden="true" id="files-folder"></a><a href="#files-folder" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>“Files” folder</h3>
+<p>A folder containing the lot of your app’s code. Make sure your manifest pathing is correct.</p>
 <h3><a class="anchor" aria-hidden="true" id="store-folder"></a><a href="#store-folder" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>“store” folder</h3>
 <ol>
 <li>Tile.jpg<br>
@@ -126,42 +124,35 @@ You need to supply at least one screenshot of your app which will be shown in th
 <ol start="4">
 <li>description.txt<br>
 An <strong>HTML</strong> text file containing the long Appstore description of your app (appears when clicking on a store tile), up-to 2000 characters. The description can be edited using basic html: <strong>h3 for headers</strong> (main header will be automatically larger), <strong>br for line breaks</strong> (don’t use br before and after h3), and <strong>links to web pages (a href)</strong>
-The description on the store tile is set through the app’s <a href="https://overwolf.github.io/docs/api/manifest-json">manifest.json</a></li>
+The description on the store tile is set through the app's <a href="https://overwolf.github.io/docs/api/manifest-json">manifest.json</a></li>
 </ol>
 <p>INSERT IMAGE</p>
 <ol start="5">
 <li>Store.json
 a json file containing the Appstore information of your app</li>
 </ol>
-<pre><code class="hljs">{
-  <span class="hljs-comment">"category_description"</span>: <span class="hljs-comment">"This is the Appstore category that the app will appear in.
-   Currently only one category per app is possible.
-   possible values: "</span>for games<span class="hljs-comment">", "</span>chat<span class="hljs-comment">", "</span>entertainment<span class="hljs-comment">", "</span>social<span class="hljs-comment">", "</span>utilities<span class="hljs-comment">", "</span>voip<span class="hljs-comment">" "</span>,
-  <span class="hljs-comment">"video"</span>: {
-    <span class="hljs-comment">"id"</span>: <span class="hljs-comment">"(This is optional) The id of the app's video on YouTube,
-               appears after the 'watch?v=' part of the YouTube link, e.g. '5k70GQxHsOU'"</span>,
-               <span class="hljs-comment">"service"</span>: <span class="hljs-comment">"youtube"</span> },
-  <span class="hljs-comment">"tags"</span>: [<span class="hljs-comment">"Search tags for your app, limited to five (5) tags. Be sure the tags are relevant"</span>, <span class="hljs-comment">"Make sure the tags are comma separated and in quotes"</span>],
-  <span class="hljs-comment">"title"</span>: <span class="hljs-comment">"App name"</span>
+<pre><code class="hljs css language-json">{
+  "category_description": "This is the Appstore category that the app will appear in."
+   //Currently only one category per app is possible.
+   //Possible values: "for games", "chat", "entertainment", "social", "utilities", "voip"
+  "video": {
+    "id": "(This is optional) The id of the app's video on YouTube, appears after the 'watch?v=' part of the YouTube link, e.g. '5k70GQxHsOU'",
+    "service": "youtube"
+  },
+  "tags": ["Search tags for your app, limited to five (5) tags. Be sure the tags are relevant", "Make sure the tags are comma separated and in quotes"],
+  "title": "App name"
 }
 </code></pre>
-
-    <div class="admonition admonition-Note">
-      <div class="admonition-heading">
-        <h5><div class="admonition-icon"></div> Note</h5>
-      </div>
-      <div class="admonition-content">
-    <p>“category_description” possible values: “for games”, “chat”, “entertainment”, “social”, “utilities”, “voip”</p>
-</div></div><h2><a class="anchor" aria-hidden="true" id="aws-benefits"></a><a href="#aws-benefits" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>AWS benefits</h2>
+<h2><a class="anchor" aria-hidden="true" id="aws-benefits"></a><a href="#aws-benefits" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>AWS benefits</h2>
 <p>Once your app has been published, you will be eligible for some epic Amazon Web Services benefits:</p>
 <ul>
-<li>$10,000 in AWS Promotional Credit valid for 2 Years</li>
-<li>1 year of AWS Business Support (up to $5,000)</li>
-<li>Access to the AWS Technical and Business Essentials web-based (or instructor-led) training ($600 value per course)</li>
-<li>80 credits for Self-Paced Labs ($80 value)</li>
+<li><p>$10,000 in AWS Promotional Credit valid for 2 Years.</p></li>
+<li><p>1 year of AWS Business Support (up to $5,000).</p></li>
+<li><p>Access to the AWS Technical and Business Essentials web-based (or instructor-led) training ($600 value per course).</p></li>
+<li><p>80 credits for Self-Paced Labs ($80 value).</p></li>
 </ul>
 <p>To apply, please send us an email (<a href="mailto:developers@overwolf.com">developers@overwolf.com</a>) and we will send you all the details!</p>
-</span></div></article></div><div class="docLastUpdate"><em>Last updated on 2019-7-30 by Lior Haim</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/start/marketing-checklist"><span class="arrow-prev">← </span><span>Marketing Checklist</span></a><a class="docs-next button" href="/docs/start/custom-installer-for-your-app"><span>Custom Installer</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#support-page">Support page</a></li><li><a href="#how-to-submit-an-in-game-app">How to Submit an In-Game App</a><ul class="toc-headings"><li><a href="#app-folder">&quot;app&quot; folder</a></li><li><a href="#store-folder">“store” folder</a></li></ul></li><li><a href="#aws-benefits">AWS benefits</a></li></ul></nav></div><footer class="site-footer"><div class="container"><ul><li>Legal</li><li><a href="/docs/topics/legal-overview">Terms overview</a></li><li><a href="/docs/topics/legal-developers-terms">Developer&#x27;s terms</a></li><li><a href="/docs/topics/legal-app-terms">App terms</a></li><li><a href="http://www.overwolf.com/legal/" target="_blank">Overwolf terms</a></li><li><a href="http://www.overwolf.com/legal/#Privacy-policy" target="_blank">Overwolf Privacy policy</a></li></ul><ul><li>Support</li><li><a href=" https://discuss.developers.overwolf.com/" target="_blank">Questions and Answers</a></li><li><a href="https://discordapp.com/invite/cjjrZDp" target="_blank">Discord</a></li><li><a href="/docs/support/contact-us#join-our-slack">Slack</a></li><li><a href="https://www.facebook.com/OverwolfDevs" target="_blank">Facebook</a></li><li><a href="https://twitter.com/OverwolfDevs" target="_blank">Twitter</a></li></ul><ul><li>Documentation</li><li><a href="/docs/api/changelog">Changelog</a></li><li><a href="/docs/api/overwolf-api-overview">API</a></li><li><a href="/docs/start/app-creation-process">App Creation Process</a></li><li><a href="/docs/topics/best-practices-overview">Best Practices</a></li><li><a href="/docs/status/all">Game Events status</a></li></ul><ul><li>Information</li><li><a href="http://www.overwolf.com/careers/">Careers</a></li><li><a href="https://play.overwolf.com/fund/" target="_blank">Fund</a></li><li><a href="https://medium.com/overwolf-developers" target="_blank">Developers Blog</a></li><li><a href="https://www.overwolf.com/appstore" target="_blank">Overwolf Appstore</a></li></ul></div></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+</span></div></article></div><div class="docLastUpdate"><em>Last updated on 2019-8-1 by eransharv</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/start/marketing-checklist"><span class="arrow-prev">← </span><span>Marketing Checklist</span></a><a class="docs-next button" href="/docs/start/custom-installer-for-your-app"><span>Custom Installer</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#support-page">Support page</a></li><li><a href="#how-to-submit-an-in-game-app">How to Submit an In-Game App</a><ul class="toc-headings"><li><a href="#app-folder">&quot;app&quot; folder</a></li><li><a href="#files-folder">“Files” folder</a></li><li><a href="#store-folder">“store” folder</a></li></ul></li><li><a href="#aws-benefits">AWS benefits</a></li></ul></nav></div><footer class="site-footer"><div class="container"><ul><li>Legal</li><li><a href="/docs/topics/legal-overview">Terms overview</a></li><li><a href="/docs/topics/legal-developers-terms">Developer&#x27;s terms</a></li><li><a href="/docs/topics/legal-app-terms">App terms</a></li><li><a href="http://www.overwolf.com/legal/" target="_blank">Overwolf terms</a></li><li><a href="http://www.overwolf.com/legal/#Privacy-policy" target="_blank">Overwolf Privacy policy</a></li></ul><ul><li>Support</li><li><a href=" https://discuss.developers.overwolf.com/" target="_blank">Questions and Answers</a></li><li><a href="https://discordapp.com/invite/cjjrZDp" target="_blank">Discord</a></li><li><a href="/docs/support/contact-us#join-our-slack">Slack</a></li><li><a href="https://www.facebook.com/OverwolfDevs" target="_blank">Facebook</a></li><li><a href="https://twitter.com/OverwolfDevs" target="_blank">Twitter</a></li></ul><ul><li>Documentation</li><li><a href="/docs/api/changelog">Changelog</a></li><li><a href="/docs/api/overwolf-api-overview">API</a></li><li><a href="/docs/start/app-creation-process">App Creation Process</a></li><li><a href="/docs/topics/best-practices-overview">Best Practices</a></li><li><a href="/docs/status/all">Game Events status</a></li></ul><ul><li>Information</li><li><a href="http://www.overwolf.com/careers/">Careers</a></li><li><a href="https://play.overwolf.com/fund/" target="_blank">Fund</a></li><li><a href="https://medium.com/overwolf-developers" target="_blank">Developers Blog</a></li><li><a href="https://www.overwolf.com/appstore" target="_blank">Overwolf Appstore</a></li></ul></div></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
                 document.addEventListener('keyup', function(e) {
                   if (e.target !== document.body) {
                     return;
