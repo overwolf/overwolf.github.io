@@ -65,19 +65,16 @@ Strikethrough uses two tildes. ~~Scratch this.~~
 
 ### Links
 
-URLs and URLs in angle brackets will automatically get turned into links: http://www.example.com. 
+URLs and URLs in angle brackets will automatically get turned into links.
+There are diferent types of links:
 
-<pre lang="no-highlight">
-<code>
+1. External links. Use absolute URL: `[external](http://google.com)`.
 
-[I'm an inline-style link](https://www.google.com)
+2. Anchor in the same page: `[link text](#validate-your-manifestjson)`
 
-[I'm a relative reference to a repository file](../docs/topics/legal-developers-terms)
+3. Link to a page in the same section/folder: `[link text](page-name#validate-your-manifestjson)`
 
-[I'm a relative reference to a repository file in the same folder](overwolf-io#types-reference)
-
-</code>
-</pre>
+4. Link to a page in different section/folder: `[link text](../api/page-name#validate-your-manifestjson)`
 
 ### Images
 
