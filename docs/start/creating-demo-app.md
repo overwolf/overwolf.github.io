@@ -1,26 +1,28 @@
 ---
 id: creating-demo-app
-title: Creating the Main App Window
-sidebar_label: Creating the Main App Window
+title: Creating a basic one window app
+sidebar_label: Build a basic app
 ---
 
-To help you get a feel of Overwolf's API, here's an explanation on how to create a simple app that displays the name of the game you are currently playing.
+To help you get a feel of Overwolf's apps, here's an explanation on how to create a simple app that displays the most basic Overwolf app window.
 
-We'll describe two different methods:
+In this example, we will work from scratch, and manually build a fundamental one window app. This window does not listen to game events and not even injected into any game. It just a swift demonstration on how to build a window, and how to pack it as an Overwolf app that can be launched from the Overwold dock.
 
-* Working [from scratch](#create-demo-app-from-scrarch) and create a fundamental one window app.  
-  **Note that this app not follows our best practices** and not even inject the window in-game.  
-  It just for a quick demo about the essential components of an Overwolf app.
+::: important
+To learn how a real world Overwolf apps should look like, continue later to the [sample app guide](sample-app-overview).
+:::
 
-* Download our [official sample app](#download-sample-app) and use it as a base for your app.  
-  This example is using our sample app, that uses all the recommended best practices like background controller, in-game window, etc.
+## Download the overwolf Client
 
-**Note** that For both methods, you should download the latest [Developers version of Overwolf](https://download.overwolf.com/install/Download?Name=Game+Summary&ExtensionId=flkgdpkkjcoapbgmgpidhepajgkhckpgpibmlclb&Channel=developers) Client.
+To run or build Overwolf apps, you first need to download the Overwolf client of course.
+Here you can find the latest [Developers version of Overwolf](https://download.overwolf.com/install/Download?Name=Game+Summary&ExtensionId=flkgdpkkjcoapbgmgpidhepajgkhckpgpibmlclb&Channel=developers) Client.
 
-## create demo app from scrarch
+## Create a demo app from scratch
 
 In this example we will learn how to develop a very basic Overwolf app in just few steps.
 The source code and files that used in this example can be found in the [app's repository](https://github.com/overwolf/basic-demo-app).
+
+Follow these steps:
 
 1. Create a folder, name it whatever you like.
 
@@ -95,10 +97,6 @@ From here, you can use the standard web development techniques to create, debug,
 
 The source code and files that used in this example can be found in the [app's repository](https://github.com/overwolf/basic-demo-app).
 
-## download sample app
+## Real world Sample app
 
-To use the sample app as a base, please follow these steps:
-
-[This repository](https://github.com/overwolf/sample-app) contains the Overwolf sample app, that targeted for Fortnite. Why Fortnite? because it's popular and free. Anyway, you can easily customize this sample to fit any other supported game.
-
-The apps demonstrate our best practices like background controller, custom hotkey, ad display and much more. You can read all the details in the repo readme.
+As mentioned, the above app is working, but.. do nothing. To learn how to build an app that implements our best practices with all the typical features like events listening, background controller, notifications, in-game windows, ad display and more - please follow our official [sameple app guide](sample-app-overview).
