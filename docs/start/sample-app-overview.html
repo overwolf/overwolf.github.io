@@ -1,0 +1,120 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Overwolf sample app · Overwolf</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="Learn the basics concepts on how to build Overwolf apps that listen to real time game events and displaying content overlay the game. If you are new to the concept of an Overwolf app, this is a great place to get started, and you can use it as a base for your app."/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Overwolf sample app · Overwolf"/><meta property="og:type" content="website"/><meta property="og:url" content="https://overwolf.github.io/"/><meta property="og:description" content="Learn the basics concepts on how to build Overwolf apps that listen to real time game events and displaying content overlay the game. If you are new to the concept of an Overwolf app, this is a great place to get started, and you can use it as a base for your app."/><meta property="og:image" content="https://overwolf.github.io/img/ow_share.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://overwolf.github.io/img/ow_share.png"/><link rel="shortcut icon" href="/img/ow-favicon.ico"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script>
+              (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+              (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+              m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+              })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+              ga('create', 'UA-144253676-1', 'auto');
+              ga('send', 'pageview');
+            </script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/default.min.css"/><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato%3A400%2C400i%2C700%2C900&amp;ver=4.5.3"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css"/><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css"/><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/overlayscrollbars/1.8.0/css/OverlayScrollbars.min.css"/><link rel="stylesheet" href="/css/code-block-buttons.css"/><script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js"></script><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/overlayscrollbars/1.8.0/js/jquery.overlayScrollbars.min.js"></script><script type="text/javascript" src="https://d10lpsik1i8c69.cloudfront.net/w.js"></script><script type="text/javascript" src="/js/code-block-buttons.js"></script><script type="text/javascript" src="/js/onload.js"></script><script type="text/javascript" src="/js/activeNavBar.js"></script><script type="text/javascript" src="/js/slicker.js"></script><script type="text/javascript" src="/js/replaceArrow.js"></script><script type="text/javascript" src="/js/appendUpdate.js"></script><script type="text/javascript" src="/js/overlayScrollbars.js"></script><script type="text/javascript" src="/js/highlight.js"></script><script type="text/javascript" src="/js/luckyorange.js"></script><script src="https://unpkg.com/vanilla-back-to-top@7.1.14/dist/vanilla-back-to-top.min.js"></script><script>
+        document.addEventListener('DOMContentLoaded', function() {
+          addBackToTop(
+            {"zIndex":100,"backgroundColor":"#20232A"}
+          )
+        });
+        </script><script src="/js/scrollSpy.js"></script><link rel="stylesheet" href="/css/main.css"/><script src="/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/"><img class="logo" src="/img/headerIcon.svg" alt="Overwolf"/><h2 class="headerTitleWithLogo">Overwolf</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class="siteNavGroupActive"><a href="/docs/start/getting-started" target="_self">Getting Started</a></li><li class=""><a href="/docs/topics/best-practices-overview" target="_self">Docs</a></li><li class=""><a href="/docs/api/overwolf-api-overview" target="_self">API</a></li><li class=""><a href="/docs/status/all" target="_self">Status</a></li><li class=""><a href="/docs/download/download-overview" target="_self">Download</a></li><li class=""><a href="/docs/api/changelog" target="_self">Changelog</a></li><li class=""><a href="https://medium.com/overwolf-developers" target="_self">Blog</a></li><li class=""><a href="https://discuss.developers.overwolf.com/" target="_self">Q&amp;A</a></li><li class=""><a href="/docs/support/contact-us" target="_self">Support</a></li><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>Sample app</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Getting Started<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/start/getting-started">Getting Started</a></li><li class="navListItem"><a class="navItem" href="/docs/start/app-creation-process">App Creation Process</a></li><li class="navListItem"><a class="navItem" href="/docs/start/sdk-introduction">SDK Inroduction</a></li><li class="navListItem"><a class="navItem" href="/docs/start/creating-demo-app">Build a basic app</a></li><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Sample app</h4><ul><li class="navListItem navListItemActive"><a class="navItem" href="/docs/start/sample-app-overview">Overview</a></li><li class="navListItem"><a class="navItem" href="/docs/start/sample-app-components">Components</a></li><li class="navListItem"><a class="navItem" href="/docs/start/sample-app-architecture">architecture</a></li></ul></div><li class="navListItem"><a class="navItem" href="/docs/start/using-dev-tools">Using OW Developers Tools</a></li><li class="navListItem"><a class="navItem" href="/docs/start/submit-app-proposal">Submitting an App Proposal</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Test Your App<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/start/how-to-test-your-app">How to Test Your App</a></li><li class="navListItem"><a class="navItem" href="/docs/start/technical-checklist">Technical Checklist</a></li><li class="navListItem"><a class="navItem" href="/docs/start/marketing-checklist">Marketing Checklist</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Submit Your App<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/start/submit-your-app-to-the-store">Submitting Your app to the Appstore</a></li><li class="navListItem"><a class="navItem" href="/docs/start/custom-installer-for-your-app">Custom Installer</a></li><li class="navListItem"><a class="navItem" href="/docs/start/promoting-your-app">Promoting your app</a></li><li class="navListItem"><a class="navItem" href="/docs/start/add-a-knowledge-base-to-app">Your App Knowledge Base</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Monetize Your App<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/start/monetization-overview">Monetization Overview</a></li><li class="navListItem"><a class="navItem" href="/docs/start/ads-sdk-overview">Ads SDK Overview</a></li><li class="navListItem"><a class="navItem" href="/docs/start/ads-sdk-options">Setting Options For The Ad</a></li><li class="navListItem"><a class="navItem" href="/docs/start/ads-sdk-interaction">Interacting with an ad</a></li><li class="navListItem"><a class="navItem" href="/docs/start/ads-sdk-versions">Ads SDK Library Versions</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Maintain Your App<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/start/submit-an-app-update">Submit an App Update</a></li><li class="navListItem"><a class="navItem" href="/docs/start/update-your-app-status">Update your app status</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><a class="edit-page-link button" href="https://github.com/overwolf/overwolf.github.io/tree/source/docs/start/sample-app-overview.md" target="_blank" rel="noreferrer noopener">Edit</a><h1 class="postHeaderTitle">Overwolf sample app</h1></header><article><div><span><p>Learn the basics concepts on how to build Overwolf apps that listen to real time game events and displaying content overlay the game. If you are new to the concept of an Overwolf app, this is a great place to get started, and you can use it as a base for your app.</p>
+<p>In practice, what the app is doing is auto-launch when the user loads Fortnite and listen to all the real time game events. Once the match started, it prints all the events data into an in-game window overlay.</p>
+<h2><a class="anchor" aria-hidden="true" id="overview"></a><a href="#overview" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Overview</h2>
+<p>The app is targeted to <a href="https://www.epicgames.com/fortnite/en-US/download">Fortnite</a> (loads when Fortnite starts, listen to Fortnite events), but you can easily customize it to fit other games. We choose Fortnite as it's free to download and use.</p>
+<p>The basic points and flows that that the sameple app demonstrate:</p>
+<ul>
+<li><p>Automatically launch when the game starts.</p></li>
+<li><p>Register to the overwolf.games.events API in order to receive real time events from the game.</p></li>
+<li><p>Identify specific events and acts as defined.</p></li>
+<li><p>Define a custom hotkey to be used in-game.</p></li>
+<li><p>Communication between the app windows according to our best practices.</p></li>
+<li><p>Background controller that manage the communication.</p></li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="how-to-load-the-app"></a><a href="#how-to-load-the-app" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>How to load the app</h2>
+<p><a href="https://github.com/overwolf/sample-app">This repository</a> contains the Overwolf sample app.</p>
+<ol>
+<li><p>Download the app to your machine (as a ZIP package), and Unzip it whenever you want.</p></li>
+<li><p>Under Overwolf's settings, choose <em>Support</em> tab and then <em>Development options</em>.</p></li>
+<li><p>Click the <em>Load unpacked</em> button and choose the &quot;native&quot; folder of this repository.</p></li>
+</ol>
+
+    <div class="admonition admonition-important">
+      <div class="admonition-heading">
+        <h5><div class="admonition-icon"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="16" viewBox="0 0 14 16"><path fill-rule="evenodd" d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"/></svg></div> important</h5>
+      </div>
+      <div class="admonition-content">
+    <p>Editing the author or app name in the manifest will prevent loading the app as unpacked app.</p>
+</div></div><h2><a class="anchor" aria-hidden="true" id="screenshots"></a><a href="#screenshots" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Screenshots</h2>
+<p>This is how to main window of the app is looks like: an in-game window that injected to the game screen and dislayed overlay.  The window displays the game events, info updates and a sample Ad for monitization.</p>
+<p><img src="/docs/assets/sample-app/in-gmae-window.png" alt="alt-text"></p>
+</span></div></article></div><div class="docLastUpdate"><em>Last updated on 2019-8-3 by eransharv</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/start/creating-demo-app"><span class="arrow-prev">← </span><span>Build a basic app</span></a><a class="docs-next button" href="/docs/start/sample-app-components"><span>Components</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#overview">Overview</a></li><li><a href="#how-to-load-the-app">How to load the app</a></li><li><a href="#screenshots">Screenshots</a></li></ul></nav></div><footer class="site-footer"><div class="container"><ul><li>Legal</li><li><a href="/docs/topics/legal-overview">Terms overview</a></li><li><a href="/docs/topics/legal-developers-terms">Developer&#x27;s terms</a></li><li><a href="/docs/topics/legal-app-terms">App terms</a></li><li><a href="http://www.overwolf.com/legal/" target="_blank">Overwolf terms</a></li><li><a href="http://www.overwolf.com/legal/#Privacy-policy" target="_blank">Overwolf Privacy policy</a></li></ul><ul><li>Support</li><li><a href=" https://discuss.developers.overwolf.com/" target="_blank">Questions and Answers</a></li><li><a href="https://discordapp.com/invite/cjjrZDp" target="_blank">Discord</a></li><li><a href="/docs/support/contact-us#join-our-slack">Slack</a></li><li><a href="https://www.facebook.com/OverwolfDevs" target="_blank">Facebook</a></li><li><a href="https://twitter.com/OverwolfDevs" target="_blank">Twitter</a></li></ul><ul><li>Documentation</li><li><a href="/docs/api/changelog">Changelog</a></li><li><a href="/docs/api/overwolf-api-overview">API</a></li><li><a href="/docs/start/app-creation-process">App Creation Process</a></li><li><a href="/docs/topics/best-practices-overview">Best Practices</a></li><li><a href="/docs/status/all">Game Events status</a></li></ul><ul><li>Information</li><li><a href="http://www.overwolf.com/careers/">Careers</a></li><li><a href="https://play.overwolf.com/fund/" target="_blank">Fund</a></li><li><a href="https://medium.com/overwolf-developers" target="_blank">Developers Blog</a></li><li><a href="https://www.overwolf.com/appstore" target="_blank">Overwolf Appstore</a></li></ul></div></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+                document.addEventListener('keyup', function(e) {
+                  if (e.target !== document.body) {
+                    return;
+                  }
+                  // keyCode for '/' (slash)
+                  if (e.keyCode === 191) {
+                    const search = document.getElementById('search_input_react');
+                    search && search.focus();
+                  }
+                });
+              </script><script>
+              var search = docsearch({
+                
+                apiKey: 'fe54eceb2ea7e0780cc7030fcd4020d4',
+                indexName: 'overwolf',
+                inputSelector: '#search_input_react',
+                algoliaOptions: {}
+              });
+            </script></body></html>
