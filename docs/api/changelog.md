@@ -6,6 +6,15 @@ sidebar_label: Changelog
 
 All notable changes to this project will be documented in this file.
 
+## Version 134 (August 2019)
+
+* [CS: GO game events](https://overwolf.github.io/docs/api/overwolf-games-events-csgo#docsNav)
+  * New info update
+    * replay
+* [PUBG game events](https://overwolf.github.io/docs/api/overwolf-games-events-pubg#docsNav)
+  * New info update
+    * team_location
+
 ## 0.133 (July 2019)
 
 ### API Features
