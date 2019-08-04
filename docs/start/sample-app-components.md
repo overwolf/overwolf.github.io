@@ -36,4 +36,4 @@ Exernal scripts that should be saved locally.
 
 ### "windows" folder
 
-The HTML files, each wino 
+each app window is built from an HTML file. This folder contains these files. 
