@@ -18,6 +18,9 @@ Please read the [overwolf.games.events](overwolf-games-events) documentation pag
 * [scene_state](#scene_state)
 * [collection](#collection)
 * [decks](#decks)
+* [match](#match)
+* [match-info](#match-info)
+
 
 ## `collection`
 
@@ -178,3 +181,41 @@ Event       | Event Data   | Fired When    | Notes              | Since Version 
 ------------| -------------| --------------| ------------------ | --------------|
 match_start| mode</br>`{"name":"match_start","data":"standard"}` | match starts	|  | 123.0  |
 match_end  | null	 | match ends|  | 123.0  |
+
+## `match`
+
+### Info Updates
+
+key               | Category    | Values                    | Notes                 | Since Version |
+----------------- | ------------| ------------------------- | --------------------- | ------------- |
+match_type        | match_info  | The type of the current match. |See [notes](#match_type-note)|   134.0 |
+
+#### *match_type* note
+
+Data Example:
+
+`{"info":{"match_info":{"match_type":"GT_CASUAL"}},"feature":"match"}`
+
+### Events
+
+Event       | Event Data   | Fired When    | Notes              | Since Version |
+------------| -------------| --------------| ------------------ | --------------|
+match_start| mode</br>`{"name":"match_start","data":"standard"}` | match starts	|  | 134.0  |
+match_end   | null         | match ends   	|                   |     134.0     |
+match_outcome| "WON" / "LOST" | match concludes	|               |     134.0     |
+
+## `match_info`
+
+### Info Updates
+
+key               | Category    | Values                    | Notes                 | Since Version |
+----------------- | ------------| ------------------------- | --------------------- | ------------- |
+pseudo_match_id   | match_info  | The ID of the current match. |See [notes](#pseudo_match_id-note)|   134.0 |
+
+#### *pseudo_match_id* note
+
+This is an Overwolf-generated code, unrelated to Blizzard.
+
+Data Example:
+
+`{"info":{"match_info":{"pseudo_match_id":"5a7e3729-993c-414d-8e3f-592faeef81e7"}},"feature":"match_info"}`
