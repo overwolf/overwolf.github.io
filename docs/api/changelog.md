@@ -8,6 +8,14 @@ All notable changes to this project will be documented in this file.
 
 ## Version 134 (August 2019)
 
+* [Hearhstone game events](https://overwolf.github.io/docs/api/overwolf-games-events-heartstone#docsNav)
+  * New info updates/events:
+    * match_type
+    * match_start/end
+    * match_outcome
+* [Rainbow Six: Siege game events](https://overwolf.github.io/docs/api/overwolf-games-events-rainbow-six#docsNav)
+  * New info update:
+    * game_mode
 * [CS: GO game events](https://overwolf.github.io/docs/api/overwolf-games-events-csgo#docsNav)
   * New info update
     * replay
