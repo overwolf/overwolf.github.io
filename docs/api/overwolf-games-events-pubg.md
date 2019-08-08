@@ -121,9 +121,9 @@ time_to_next_circle | Amount of seconds left to next safe zone | From the moment
 #### `location` notes
 
 * Top-left is (0,0,z)
-* Large map (Miramar, Erangel, etc.) size is 8000×8000 (8 sq. KM)
-* Medium map (Vikendi) size is 6000×6000 (6 sq. KM)
-* Small map (Sanhok) size is 4000×4000 (4 sq. KM)
+* Large map (Miramar, Erangel, etc.) size is 8160×8160 (8 sq. KM)
+* Medium map (Vikendi) size is 6120×6120 (6 sq. KM)
+* Small map (Sanhok) size is 4080×4080 (4 sq. KM)
 * The location is being updated every two seconds while the player is in the airplane
 * The location is being updated every second while the user is not in the airplane (freefly or on the ground)
 
