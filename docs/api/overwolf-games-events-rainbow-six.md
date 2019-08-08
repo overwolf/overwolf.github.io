@@ -52,6 +52,13 @@ Example:
 key          | Category    | Values                    | Notes                 | Since Version |
 --------------- | -----------| ------------------------------------------------------------------------------------ | ------------------------------------ | ------------- | 
 pseudo_match_id | match_info | The current session’s ID code. Example:</br> `0c0ea3df-97ea-4d3a-b1f6-f8e34042251f`  |  This is an Overwolf-generated code. |   130.0.15 |
+game_mode | match_info   | The current type of game mode. |See [notes](#game_mode-notes) below |   134.0  |
+
+#### *game_mode* note
+
+Data Example:
+
+`{"info":{"match_info":{"game_mode":"MATCHMAKING_PVP"}},"feature":"match_info"}`
 
 ## `match`
 
