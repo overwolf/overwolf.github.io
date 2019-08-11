@@ -16,3 +16,6 @@ Add explanation on what are hotkeys, how to use them (define in manifest, regist
    In order to hide it, you will have to call the registerHotkey(), from your background window - exactly like custom hotkey. You don't need to change the hotkey type to "custom". Everything should work now.
    
 3. to get notified when the user changed your app hotkey from the OW setting, you shoud register to the [overwolf.settings.OnHotKeyChanged](../api/overwolf-settings#onhotkeychanged) event.
+
+4. You can use left/right arrows for hotkeys. To do so,  you should use the code `Left` or `Right` in the manifest.json.
+
