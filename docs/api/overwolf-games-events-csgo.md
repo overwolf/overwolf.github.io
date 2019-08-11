@@ -37,6 +37,7 @@ Please read the [overwolf.games.events](overwolf-games-events) documentation pag
 * [player_activity_change](#player_activity_change)
 * [team_set](#team_set)
 * [replay](#replay)
+* [counters](#counters)
 
 ## `kill`
 
@@ -277,3 +278,11 @@ Data Example:
 
 `{"category":"game_info","key":"replays_list","value":"{\"replays\" : [{\"link\" : \"steam://rungame/730/76561202255233023/+csgo_download_match%20CSGO-dVoC5-kwY8k-LCb3J-wCiMw-CrahQ\",\"order\" : \"0\"},{\"link\" : \"steam://rungame/730/76561202255233023/+csgo_download_match%20CSGO-myDzD-AOTzm-wYZzH-bCmrA-JebRF\",\"order\" : \"1\"}]}","valueLength":261}
 16:06:54.359 InfoDBContainer.js:69 [InfoDBContainer] UPDATING INFO (decoded): {"feature":"replay","category":"replay","key":"replay_list","value":"[\"steam://rungame/730/76561202255233023/+csgo_download_match CSGO-dVoC5-kwY8k-LCb3J-wCiMw-CrahQ\",\"steam://rungame/730/76561202255233023/+csgo_download_match CSGO-myDzD-AOTzm-wYZzH-bCmrA-JebRF\"]"}`
+
+## `counters`
+
+### Info Updates
+
+key               | Category    | Values                    | Notes                 | Since Version |
+----------------- | ------------| ------------------------- | --------------------- | ------------- |
+ping              | performance | Latency to server         |                       |               |
