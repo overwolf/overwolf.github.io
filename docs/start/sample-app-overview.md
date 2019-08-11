@@ -42,6 +42,6 @@ Editing the author or app name in the manifest will prevent loading the app as u
 
 ## Screenshots
 
-This is how to main window of the app is looks like: an in-game window that injected to the game screen and dislayed overlay.  The window displays the game events, info updates and a sample Ad for monitization.
+This is how to main window of the app is looks like: an in-game window that injected to the game screen and dislayed overlay.  The window displays the game events, info updates and a sample Ad for monetization.
 
 ![alt-text](assets/sample-app/in-gmae-window.png)
