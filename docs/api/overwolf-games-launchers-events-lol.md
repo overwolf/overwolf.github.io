@@ -10,6 +10,11 @@ Please read the [overwolf.games.launchers.events](overwolf-games-launchers-event
 10902
 :::
 
+:::tip
+if the  game launcher wasn't closed by the user, it is possible to access the game launcher methods while being in-game.
+:::
+
+
 ## Sample Apps
 * [LOL game launcher sample app](https://github.com/overwolf/lol-launcher-sample-app)
 
