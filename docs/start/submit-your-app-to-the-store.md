@@ -26,13 +26,13 @@ Your app's [manifest.json](https://overwolf.github.io/docs/api/manifest-json#doc
 A **gray-scale** icon for the round app button – default state (256×256 – 72 PPI, Overwolf will resize it to 37×37).
 Note – Please make sure the png is smaller than 30KB
 
-INSERT IMAGE HERE
+<img src="../assets/submit-your-app-to-the-store/SubIconMouseNormal.png" alt="IconMouseNormal" width="100"/>
 
 3. **IconMouseOver.png**  
 A colored icon for the round app button – mouse-over state (256×256 – 72 PPI, Overwolf will resize it to 37×37).
 Note – Please make sure the png is smaller than 30KB
 
-INSERT IMAGE HERE
+<img src="../assets/submit-your-app-to-the-store/SubIconMouseOver.png" alt="IconMouseOver" width="100"/>
 
 4. **launcher_icon.ico**   
 
@@ -55,7 +55,7 @@ A folder containing the lot of your app’s code. Make sure your manifest pathin
 1. Tile.jpg  
 The Appstore tile for your app (258×198 – 72 PPI). The image must be in JPG format.
 
-INSERT ASSETS
+<img src="../assets/submit-your-app-to-the-store/tile.jpg" alt="Tile" width="350"/>
 
 2. Icon.png  
 The icon representing your app on the Appstore.
@@ -63,18 +63,18 @@ The actual icon size should be 55×55
 The image must be in PNG format
 The image should work well on both light and dark backgrounds.
 
-INSERT ASSETS
+<img src="../assets/submit-your-app-to-the-store/SubIcon.png" alt="Icon" width="100"/>
 
 3. ScreenshotX.jpg  
 You need to supply at least one screenshot of your app which will be shown in the app’s page in the Appstore. Providing a few attractive screenshots images increases your app’s chances of getting noticed. In each image file name, X is replaced by a number(1-5). Notice this needs to be a JPG. The screenshot should be 656x410px, so be sure that all your elements are visible at that size. You can have a maximum of 5 screenshots for each app, 4 screenshots if you include a video (covered in the store.json below)
 
-INSERT IMAGE
+<img src="../assets/submit-your-app-to-the-store/SubScreenshot1.png" alt="Screenshot" width="900"/>
 
 4. description.txt  
 An **HTML** text file containing the long Appstore description of your app (appears when clicking on a store tile), up-to 2000 characters. The description can be edited using basic html: **h3 for headers** (main header will be automatically larger), **br for line breaks** (don’t use br before and after h3), and **links to web pages (a href)**
 The description on the store tile is set through the app's [manifest.json](https://overwolf.github.io/docs/api/manifest-json)
 
-INSERT IMAGE
+<img src="../assets/submit-your-app-to-the-store/Subdescription.png" alt="Description" width="900"/>
 
 5. Store.json 
 a json file containing the Appstore information of your app
