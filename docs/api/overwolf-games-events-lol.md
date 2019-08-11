@@ -45,7 +45,6 @@ matchStarted | game_info   | true/false (string)       |                       |
 matchOutcome | game_info   | win/lose                  |                       |   0.140       |
 matchId      | game_info   | The current match id      |  `matchId:3828196424` |   0.120       |
 queueId      | game_info   | The current match queue id|  `queueId:440`        |   0.120       |
-matchStart   | game_info   | win/lose                  |                       |   0.140       |
 
 ### Events
 
@@ -66,7 +65,7 @@ game_mode | match_info | Whether the current game mode is TFT or default LoL. Se
 
 Data example:
 
-`{"info":{"match_info":{"game_mode":"tft"}},"feature":"match_info"}`
+`{"info":{"match_info":{"game_mode":"tft"}},"feature":"match_info"}`  
 `{"info":{"match_info":{"game_mode":"lol"}},"feature":"match_info"}`
 
 ## `death`
