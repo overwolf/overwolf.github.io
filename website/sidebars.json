@@ -1,13 +1,13 @@
 {
 	"start": {
 		"Getting Started": 
-			["start/getting-started", "start/app-creation-process", "start/sdk-introduction", "start/creating-demo-app", 
+			["start/getting-started", "start/app-creation-process", "start/submit-app-proposal", "start/sdk-introduction", "start/creating-demo-app", 
 			{
                 "type": "subcategory",
                 "label": "Sample app",
                 "ids": ["start/sample-app-overview", "start/sample-app-components", "start/sample-app-architecture"]
             },
-			"start/using-dev-tools", "start/submit-app-proposal"],
+			"start/using-dev-tools"],
 			"Test Your App":
 			["start/how-to-test-your-app", "start/technical-checklist", "start/marketing-checklist"],
 			"Submit Your App":
