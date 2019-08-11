@@ -100,8 +100,7 @@ Using this method, you can use a shared “communication-bus” variable, that a
 
 Note that we highly recommend not to use [overwolf.windows.getOpenWindows()](../api/overwolf-windows#getopenwindowscallback) for windows communication.
 
-* Download a sample app that examples [simple communication between windows](https://github.com/overwolf/windows-communication-sample-app).
-* Download the PUBG sample app that demonstrates [more advanced communication between windows](https://github.com/overwolf/pubg-dev-challenge-samples/tree/master/ow-native-sample).
+* Download [our sample app](../start/sample-app-overview) that demonstrates all the basic design principals.
 
 ### using direct messages
 
@@ -177,7 +176,7 @@ Here you can see an examples for standard and transparent windows from our sampl
 
 ### Sample app
 
-Here you can **download a [sample app](https://github.com/overwolf/app-window-sample)** that shows you how a “transparent” window should be created.
+Here you can **download our [sample app](../start/sample-app-overview)** that shows you how a “transparent” window should be created.
 
 ## Windows resolution
 
