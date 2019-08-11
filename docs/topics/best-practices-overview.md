@@ -11,7 +11,7 @@ This page contains our best practices for developing and implementing your Overw
 
 
 ### FTUE
-Please remember that a user that just installed your app, never used it before and probably needs assistance/guidance in order to understand the app’s features and easily starting using it properly. A successful FTUE greatly increases the chances of retaining your users.
+* Please remember that a user that just installed your app, never used it before and probably needs assistance/guidance in order to understand the app’s features and easily starting using it properly. A successful FTUE greatly increases the chances of retaining your users.
 
 * As a first step, you can show a guidance page which explains the main features of the app and what the user should do next (e.g sign-in to Twitch, provide LoL summoner name and region, etc.). A more advanced FTUE will guide the user through the app’s features/elements by providing a step-by-step tutorial/guidance.
 * You can see examples for that by looking on the following Fortnite live stats and Game Summary FTUE:
@@ -132,7 +132,7 @@ IMAGE HERE
 * Your app will be downloaded by thousands of users, and will be updated (downloaded again) from time to time, that means lots of network traffic and local storage being used. Please make sure your app is as light as possible by deleting unnecessary files, compressing and resizing image or audio assets being used and even downloading really large files from the cloud instead of adding them to your app’s folder.
 * We recommend using Websiteplanet Image compressor and TinyPNG to reduce images size.
 
-## Testing
+### Testing
 * Test your app on a regular basis. Game developers and Overwolf constantly improve, change and add new features. By regularly testing your app, you will find out whether one of these changes breaks it.
 * You can use our Overwolf Developers channel to test your app on the future Overwolf version to be released, please let us know if you see anything that is not functioning as usual or breaks.
 * Test your app on various screen sizes, make sure your app’s window doesn’t take over small laptop screens and blocks the user from seeing the game’s action.
