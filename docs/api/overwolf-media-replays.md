@@ -19,7 +19,7 @@ Use the overwolf.media.replays API to capture a **short** video replay of the cu
 * [overwolf.media.replays.stopCapture()](#stopcapturereplaytype-replayid-callback)
 * [overwolf.media.replays.stopCapture()](#stopcapturereplayid-callback)
 * [overwolf.media.replays.updateTobiiSetting()](#updatetobiisettingparam-callback)
-* [overwolf.media.replays.getHighlights()](#gethighlightsgameid-callback)
+* [overwolf.media.replays.getHighlightsFeatures()](#gethighlightsfeaturesgameid-callback)
 * overwolf.media.replays.turnOff() - Obsolete.
 
 ## Events Reference
@@ -64,7 +64,7 @@ A callback function which will be called with the status of the request
 
 * Turning on replay capturing will consume system resources, so use it wisely. `buffer_length` property in the [StreamSettings](overwolf-streaming#streamsettings-object) object defines the amount of time in milliseconds to have captured in the memory at all times.
 
-* `turnOn()` will fail if highlights are requested but not supported for the current game. (to get the list of supported highlights call [gethighlights()](#))
+* `turnOn()` will fail if highlights are requested but not supported for the current game. (to get the list of supported highlights call [getHighlightsFeatures()](#gethighlightsfeaturesgameid-callback))
 * The below call will override your current OW client settings only if video setting is not null or values are different than zero.
 * For each OW app that uses this feature, a new video folder will be created. So in theory, a few OW installed apps can capture the same highlight, from the same game (if all these apps set to capture this highlight from this game of course). 
 
@@ -294,7 +294,7 @@ overwolf.media.replays.updateTobiiSetting({
     });
 ```
 
-## getHighlights(gameId, callback)
+## getHighlightsFeatures(gameId, callback)
 #### Version added: 0.130
 
 > Get supported auto highlights features for a game.
@@ -344,7 +344,7 @@ callback    | function |A callback function which provides a list of the generat
 Parameter | Type | Description                   |
 --------- | -----| ----------------------------- |
 enable      | bool  | Enable auto Highlights recording |
-requiredHighlights   | string  | An array of requested highlights. use ["*"] to register all features. You can get the list of the supported highlights using the method [gethighlights()](#))   |
+requiredHighlights   | string  | An array of requested highlights. use ["*"] to register all features. You can get the list of the supported highlights using the method [getHighlightsFeatures()](#gethighlightsfeaturesgameid-callback))   |
 
 
 ## ReplayType enum
