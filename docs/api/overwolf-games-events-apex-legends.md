@@ -27,7 +27,7 @@ Please read the [overwolf.games.events](overwolf-games-events) documentation pag
 * [location](#location)
 * [match_summary](#match-summary)
 * [roster](#roster)
-* [victory](#victory)
+* [rank](#rank)
 * [kill_feed](#kill-feed)
 
 ## `me`
@@ -59,8 +59,8 @@ match_state  | game_info   | active/inactive           |                       |
 
 Event       | Event Data   | Fired When    | Notes              | Since Version |
 ------------| -------------| --------------| ------------------ | --------------|
-match_Start | null         | Match started |                    |     0.128     | 
-match_End   | null         | Match ended   |                    |     0.128     | 
+match_start | null         | Match started |                    |     0.128     | 
+match_end   | null         | Match ended   |                    |     0.128     | 
 
 ## `team`
 
@@ -70,6 +70,7 @@ key          | Category    | Values                                             
 ------------ | ------------| ----------------------------------------------------------------------------------------------------------- | ------- | ------------- | 
 teammate_X   | match_info  | This feature provides the list of your squad members.                                                       |         |  0. 128       |
 legendSelect_X| match_info | The name of the legend & order of selection for every member in the team, including who is the jump-master. |         |  0. 128       |
+team_info| match_info | The current status of the local player’s team (```"active"``` or ```"eliminated"```). |         |  0. 128       |
 
 #### `teammate_X` notes
 
@@ -132,13 +133,13 @@ location  | game_info  | See example below  |             |  0.130        |
 
 `{"info":{"match_info":{"location":"{\"x\":\"93\",\"y\":\"305\",\"z\":\"49\"}"}},"feature":"location"}`
 
-## `victory`
+## `rank`
 
 ### Info Updates
 
 key          | Category    | Values                    | Notes                 | Since Version |
 ------------ | ------------| ------------------------- | --------------------- | ------------- | 
-victory  | match_info   | active/inactive           |  This info update notifies at the end of the match and provides “true” for winning and “false” for losing.                     |  0.128   |
+victory  | match_info   | true/false           |  This info update notifies at the end of the match and provides “true” for winning and “false” for losing.                     |  0.128   |
 
 ## `match_summary`
 
@@ -179,7 +180,7 @@ Important to note that the game does not count damage that is inflicted on Armor
 
 Event  | Event Data        | Fired When (announcement)                                          | Notes      | Since Version |
 -------| ------------------| -------------------------------------------------------------------| ---------- | --------------|
-damage | See example below | When information is presented on the game’s UI (top right corner). |            |    0.130      |
+damage | See example below | When the local player deals damage to another player. |            |    0.130      |
 
 #### `damage` notes
 
