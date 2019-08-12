@@ -1,7 +1,7 @@
 ---
 id: using-dev-tools
 title: Using Overwolf`s Developers Tools
-sidebar_label: Using OW Developers Tools
+sidebar_label: Using our dev tools
 ---
 
 The Overwolf developer tools are a set of web authoring and debugging tools.  
