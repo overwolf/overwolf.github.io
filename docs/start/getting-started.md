@@ -4,20 +4,22 @@ title: Getting Started
 sidebar_label: Getting Started
 ---
 
-## Motivation, Core concepts and Principles
+## What’s Overwolf
 
-### The Overwolf mission
+Overwolf’s mission is making game experiences even more awesome, we do that by empowering independent developers to create PC game apps with full in-game event integration.
 
-We’re gamers. Our mission is to create value for every gamer in every game. This is why we’ve built an Appstore with apps to help gamers play smarter and have fun. As we’ve grown, our ability to fulfill this vision has grown by empowering independent third party creators, developers and partners, to use our platform and create apps for the games they love.
+We’re a team of passionate gamers developing an SDK that empowers you as a developer to turn a dream concept into reality and integrate with top games in a fast, scalable and legal way. 
 
-### The Overwolf dev platform
+Our platform is created for you, and we’ve come up with multiple ways to reduce noise and free you up to build your app beyond our SDK - marketing services, design support, QA and more. In the past year, we’ve also been funding app development projects directly via our joint fund with Intel. If you have a great app concept and you want to turn your passion into a profession - [apply here!](https://www.overwolf.com/fund/home)
 
-As on open platform, Overwolf presents a unique opportunity for independent developers - for the first time in history a passionate creator or developer can play a game they enjoy, spot a gap or think up a cool feature the original devs left out, and make their idea a reality within mere weeks or months. If you are a developer and you want to learn more about creating apps on Overwolf, check out this site, and apply for our [fund](https://www.overwolf.com/fund/home)!
+## What’s on this website?
 
-### Our Commitment to gamers
+While we are here to answer any questions and support your success, our new developer website has everything you need to start working on your app right away.
 
-As fellow gamers, we know how pop-ups and overlays can ruin a critical moment, so we’ll never mess with or interrupt your game. We engineer the sh*t out of our client to ensure it doesn’t hog resources. We constantly perfect Overwolf to help us be at the top of our game, in every game.
+The left-hand side menu has detailed instructions for every stage of the project, from submitting a concept all the way to optimizing your app after release. You may also find our [full documentation](../topics/best-practices-overview) as well as a [detailed break-down of APIs](../api/overwolf-api-overview) in the top menu.
 
-## Our Commitment to game developers and publishers
+## Commitment to feedback
 
-The game comes first, always. No matter what - you call the shots. We are proud to be working hand in hand with the best game developers on the planet (e.g., Riot, Epic Games or Blizzard). We love your games, we’re your fans. If you have any feedback for us or the apps on Overwolf, we’ll always listen and take your guidance. Just email us at developers@overwolf.com.    
+This entire website is open for suggestions and edits by you and is constantly being improved. If you haven’t found any answer you are looking for, please share your search by suggesting new entries covering.
+
+We believe we’re always stronger together, and that open information-sharing benefits everyone involved - please share your experience with others and contribute to the website!
