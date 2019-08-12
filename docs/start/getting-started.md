@@ -18,6 +18,6 @@ As on open platform, Overwolf presents a unique opportunity for independent deve
 
 As fellow gamers, we know how pop-ups and overlays can ruin a critical moment, so we’ll never mess with or interrupt your game. We engineer the sh*t out of our client to ensure it doesn’t hog resources. We constantly perfect Overwolf to help us be at the top of our game, in every game.
 
-### Our Commitment to game developers and publishers
+## Our Commitment to game developers and publishers
 
-The game comes first, always. No matter what - you call the shots. We are proud to be working hand in hand with the best game developers on the planet (e.g., Riot, Epic Games or Blizzard). We love your games, we’re your fans. If you have any feedback for us or the apps on Overwolf, we’ll always listen and take your guidance. Just email us at developers@overwolf.com.
+The game comes first, always. No matter what - you call the shots. We are proud to be working hand in hand with the best game developers on the planet (e.g., Riot, Epic Games or Blizzard). We love your games, we’re your fans. If you have any feedback for us or the apps on Overwolf, we’ll always listen and take your guidance. Just email us at developers@overwolf.com.    
