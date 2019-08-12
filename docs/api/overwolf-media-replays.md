@@ -127,7 +127,7 @@ Parameter | Type                  | Description                                 
 callback  | function              | A callback function which will be called with the status of the request |
 
 
-## capture(replayType, pastDuration, futureDuration, captureFinishedCallback, callback)
+## capture(pastDuration, futureDuration, captureFinishedCallback, callback)
 #### Version added: 0.78
 
 > Starts capturing a replay to a file. 
@@ -137,11 +137,11 @@ callback  | function              | A callback function which will be called wit
 
 Parameter               | Type                  | Description                                                                                                      |
 ----------------------- | ----------------------| ---------------------------------------------------------------------------------------------------------------- |
-replayType              | [ReplayType](#replaytype-enum) enum  | The type of replay to capture                                                                     |
 pastDuration	        | int                                  | The video lengh, in milliseconds to include prior to the time of this call                        |
 futureDuration          | int        | The video lengh, in milliseconds to include after the time of this call. To ignore it, simply give it a non-positive value  |
 captureFinishedCallback	| function   |A callback function which will be called when capturing is finished, at the end of the future duration supplied to this call |
 callback                | function                             | A callback function which will be called with the status of the request                           |
+
 
 #### Callback argument: Success
 
