@@ -208,6 +208,13 @@ autochess_preparation_end| null  |Preparation phase ends|       |     129.0     
 
 ## `match_info`
 
+### Info Updates
+
+key          | Category    | Values                    | Notes                 | Since Version |
+--------------- | -----------| ------------------------------------------------------------------------------------ | ------------------------------------ | ------------- | 
+pseudo_match_id | match_info | The current session’s ID code. Example:</br> `a4e8fc75-b35e-466f-976c-09f4ee633d95`  |  This is an Overwolf-generated code. Unrelated to Valve.  |   0.130 |
+game_mode | match_info | Whether the current game mode is Dota2 or Autochess. |                 |   0.133       |
+
 ### Events
 
 Event       | Event Data   | Fired When    | Notes              | Since Version |
