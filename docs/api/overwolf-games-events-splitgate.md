@@ -299,9 +299,9 @@ Data Example:
 
 Event       | Event Data   | Fired When    | Notes              | Since Version |
 ------------| -------------| --------------| ------------------ | --------------|
-matchOutcome| won/lost     |Player has died|See [notes](#matchOutcome-note)|     0.123     |
-matchStart  | null         |Player has died|See [notes](#matchStart-note)|     0.123     |
-matchEnd    | null         |Player has died|See [notes](#matchEnd-note)|     0.123     |
+matchOutcome| won/lost     |Player has died|See [notes](#matchoutcome-note)|     0.123     |
+matchStart  | null         |Player has died|See [notes](#matchstart-note)|     0.123     |
+matchEnd    | null         |Player has died|See [notes](#matchend-note)|     0.123     |
 
 #### *matchOutcome* note
 
@@ -383,7 +383,7 @@ Data Example:
 
 Event       | Event Data   | Fired When    | Notes              | Since Version |
 ------------| -------------| --------------| ------------------ | --------------|
-assist        |  Kill type   | The local player assisted in killing an enemy|See [notes](#assist-note)|     130.0     |
+assist        |  Kill type   | The local player assisted in killing an enemy|See [notes](#assists)|     130.0     |
 
 #### *assists*
 
