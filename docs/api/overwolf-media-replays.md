@@ -8,7 +8,7 @@ Use the overwolf.media.replays API to capture a **short** video replay of the cu
 
 ## Methods Reference
 
-* [overwolf.media.replays.turnOn()](#turnonsettings-highlights-callback)
+* [overwolf.media.replays.turnOn()](#turnonsettings-callback)
 * [overwolf.media.replays.turnOff()](#turnoffcallback)
 * [overwolf.media.replays.getState()](#getstatereplaytype-callback)
 * [overwolf.media.replays.getState()](#getstatecallback)
@@ -35,7 +35,7 @@ Use the overwolf.media.replays API to capture a **short** video replay of the cu
 * [overwolf.media.replays.ReplayHighlightsSetting](#replayhighlightssetting-object) Object
 * [overwolf.media.replays.enums.ReplayType](#replaytype-enum) enum
 
-## turnOn(settings, highlights, callback)
+## turnOn(settings, callback)
 #### Version added: 0.130
 
 > Turns on background replay capturing. Without calling it first, you will not be able to create video replays.
@@ -49,7 +49,6 @@ There’s no need to know/understand each supported game’s mechanics, game flo
 Parameter | Type                  | Description                                                                                                           |
 --------- | ------------------------------------------------------------------- | ----------------------------------------------------------------------- |
 settings  | [StreamSettings](overwolf-streaming#streamsettings-object) object   | The video capture settings                                              |
-highlights| [ReplayHighlightsSetting](#replayhighlightssetting-object) object                                 | The highlights capture settings                                         |
 callback  | function                                                            | A callback function which will be called with the status of the request |
 
 #### Callback argument: Success
