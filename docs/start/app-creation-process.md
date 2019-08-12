@@ -6,35 +6,35 @@ sidebar_label: App Creation Process
 
 ## Overview
 
-Overwolf is continuously searching for great apps to add to our Appstore. If you are a pro developer, and you have an idea for an app that will provide great value for gamers, you’ve come to the right place!
+If you are a pro developer, and you have an idea for an app that will provide great value for gamers, you’ve come to the right place!
 
-We believe that in order to create a truly valuable and quality application, a meeting of the minds is required. You provide the great app ideas and solid design, and we provide the resources and insight needed to connect that app with the Overwolf community. By collaborating during the design process, we can provide you with the feedback, insight and expertise needed to create a truly excellent gaming app.
+We believe that in order to create a truly valuable application, a meeting of the minds is required. You have a great app idea, and we provide the resources and insights needed to set you up for success and build your community. By collaborating during your creation process, we can support you much better and provide the feedback and expertise needed to create an awesome gaming app.
 
-To help you get the best out of your idea and make your development process smooth and easy, we will accompany you at every step in the process, from assisting with your initial concept to launching the finished product. We know that creating a great app takes a lot of time and effort. Let us help you turn your idea into a great app.
+This website and our staff are here to support you through every step of the process - from polishing your initial concept to launching the finished product with a well built marketing campaign. We know that creating a great product takes a time and effort - let us save you some so you can focus on your concept itself.
 
 ## Get inspired
 
-Have a great idea? Want to change how gamers play their favorite games? Need a little inspiration to get started? Take a look at our [app showcase!](../topics/what-kind-of-apps-works) It’s the perfect place to check out some awesome Overwolf apps, and it’s a great way to gain insight into what kinds of apps you should develop.
+Want to change how gamers play their favorite games? Have a cool idea for one of the games you love? Need a little inspiration to get started? Take a look at our [app showcase!](../topics/what-kind-of-apps-works) It’s the perfect place to check out awesome Overwolf apps, learn about their journey and get a clear direction for what you would like to build.
 
 ## How does it work?
 <br/>
 ![alt-text](assets/app-creation-process.svg)
 
-### 1. Submit a proposal
+### 1. Pitch Your Concept
 
-We want to hear your awesome app idea. It’s as easy as [submitting an app proposal](submit-app-proposal). We’ll take a look at what you have in mind, and offer our take on it before you dive into development. If it’s a good fit, we’ll provide you with everything you need to get your app into our Appstore.
+Once you're ready, talk to us about your app - starting is as easy as [submitting an app proposal](submit-app-proposal). We’ll take a look and share our feedback, thoughts and recommendations before you dive into development. If we're aligned and happy with the concept - we’ll provide you with everything you need to get your app out into our Appstore.
 
-### 2. Develop your app
+### 2. Build It - They Will Come
 
-Let’s get started! We looked at your idea and we think it’ll be a great fit for the Overwolf Appstore. Hurray!
-Now the real fun begins! It’s time for you to go full-steam ahead and start developing your app. Once approved, you can kickstart your development. Our product team will be available for you to consult with, and also provide you with essential feedback about your app’s functionality and/or visibility. It is important to implement and address this feedback in order to proceed to the next step.
+Concept approved? Let's go! Now it's time to start developing your app, and the real fun begins! 
+Development can be challenging, but our product team is available for you to consult with in every step of the way. We will provide feedback for each feature and screen of your app, assist in getting extra resources or tools you might need, and make sure that other teams are aligned and ready to boost your app's success on release. 
 
 ### 3. Publish
 
-Once we have approved your app, you will officially become a part of the Overwolf pack! We’ll [publish your app](submit-your-app-to-the-store) to the Overwolf Appstore, and it will have its own public link. This is when you can start sharing your app with the world, and start spreading the word about it.
+After development is complete and you are happy with your app, you will officially become a part of the Overwolf pack! We’ll [publish your app](submit-your-app-to-the-store) to the Overwolf Appstore, promote it online, and do our best to communicate its value to gamers everywhere. This is when you can start sharing your app with the world and engage some gamers!
 
 ## Updates and Maintenance
 
-Getting your app in the Appstore isn’t the end of the road. Once your app is live, you’ll want to drive more users to check it out. It’s vital to fix bugs and sometimes even add new features to your app, to keep it [up to date](submit-an-app-update) and in demand.
+Getting your app in the Appstore isn’t the end of the road. Once your app is live, you’ll want to drive more users to check it out. It’s vital to fix bugs and sometimes add new features to your app, to keep it [up to date](submit-an-app-update) and in demand.
 
 We can’t wait to see the awesome, innovative and game-changing apps you have in mind. Good luck!
