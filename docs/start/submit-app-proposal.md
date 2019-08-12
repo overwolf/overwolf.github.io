@@ -1,10 +1,10 @@
 ---
 id: submit-app-proposal
-title: Submitting an App Proposal
-sidebar_label: Submitting an App Proposal
+title: Pitching Your Concept
+sidebar_label: Pitching Your Concept
 ---
 
-## Overview
+## Submitting an App Proposal
 
 So, you have a great idea for an Overwolf application. What's next?
 
