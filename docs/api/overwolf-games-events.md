@@ -73,7 +73,7 @@ The next step is to add a listener to the relevant JavaScript Event object in yo
 * For listening to game events, use the [`overwolf.games.events.onNewEvent`](#onnewevents) object.
 * For listening to info updates, use the [`overwolf.games.events.onInfoUpdates2`](#oninfoupdates2) object.
 
-### 3. Call `setRequiredFeatures()`
+### 3. Call setRequiredFeatures()
 
 The final step is to call [`overwolf.games.events.setRequiredFeatures`](#setrequiredfeaturesfeatures-callback).
 Once the app wants to start receiving specific info updates and events, you call this function with an array of feature names that you would like your app to consume.
@@ -86,7 +86,7 @@ overwolf.games.events.setRequiredFeatures(['stats', 'match'], function(info) {
 });
 ```
 
-### 4. Call `getInfo()`
+### 4. Call getInfo()
 
 call [getInfo()](#getinfocallback) to receive all the info updates that happened before `setRequiredFeatures` succeeded.
 
@@ -94,7 +94,7 @@ In some cases you might add the listener to `oninfoupdates2` or to `onNewEvent` 
 
 For that reason, you should also call [`overwolf.games.events.getInfo()`](#getinfocallback) to get the current info state.
 
-## `setRequiredFeatures(features, callback)`
+## setRequiredFeatures(features, callback)
 
 #### Version added: 0.93
 
@@ -174,7 +174,7 @@ Example for setting required features with wait till success
   }
 ```
 
-## `getInfo(callback)`
+## getInfo(callback)
 
 #### Version added: 0.95
 
