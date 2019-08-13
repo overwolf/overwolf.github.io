@@ -44,4 +44,4 @@ Great job! We think it’ll be a great fit for the Overwolf Appstore. Now the re
 
 * Rejected app proposals:
 
-Assuming your concept wasn't fleshed enough initially, we might suggest trying for a different concept. As it is, this app won't fit our App Store because X Y Z, but we appreciate the solid proposal and are looking forward to seeing more ideas from you soon! You won’t be able to submit this app again, but we encourage you to let us know if you have another idea that might be a better fit.
+Assuming your concept wasn't fleshed enough initially, we might suggest trying for a different concept. As it is, this app won't fit our Appstore because X Y Z, but we appreciate the solid proposal and are looking forward to seeing more ideas from you soon! You won’t be able to submit this app again, but we encourage you to let us know if you have another idea that might be a better fit.
