@@ -16,7 +16,20 @@ This page contains our best practices for developing and implementing your Overw
 * As a first step, you can show a guidance page which explains the main features of the app and what the user should do next (e.g sign-in to Twitch, provide LoL summoner name and region, etc.). A more advanced FTUE will guide the user through the app’s features/elements by providing a step-by-step tutorial/guidance.
 * You can see examples for that by looking on the following Fortnite live stats and Game Summary FTUE:
 
-VIDEOS HERE
+<div class="box" data-slick='{"slidesToShow": 2}'>
+  <a data-fancybox="gallery" data-caption="FortniteLiveStats" href="https://youtu.be/Su7CTcMlnqw">
+    Fortnite Live Stats
+    <span class="thumb">
+      <img src="https://youtu.be/Su7CTcMlnqw" alt="Fortnite Live Stats">
+    </span>
+  </a>
+  <a data-fancybox="gallery" data-caption="FortniteLiveStats" href="https://youtu.be/Su7CTcMlnqw">
+    Fortnite Live Stats
+    <span class="thumb">
+      <img src="https://youtu.be/Su7CTcMlnqw" alt="Fortnite Live Stats">
+    </span>
+  </a>
+</div>
 
 ### App support page
 * One of the most important parts that must be available before your new app goes live, is your app’s support page. The support page should include the following sections:
