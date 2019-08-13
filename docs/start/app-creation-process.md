@@ -14,7 +14,7 @@ This website and our staff are here to support you through every step of the pro
 
 ## Get inspired
 
-Want to change how gamers play their favorite games? Have a cool idea for one of the games you love? Need a little inspiration to get started? Take a look at our [app showcase!](../topics/what-kind-of-apps-works) It’s the perfect place to check out awesome Overwolf apps, learn about their journey and get a clear direction for what you would like to build.
+Want to change how gamers play their favorite games? Have a cool idea for one of the games you love? Need a little inspiration to get started? Take a look at our [app showcase!](https://www.overwolf.com/appstore) It’s the perfect place to check out awesome Overwolf apps, learn about their journey and get a clear direction for what you would like to build.
 
 ## How does it work?
 <br/>
