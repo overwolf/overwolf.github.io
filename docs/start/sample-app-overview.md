@@ -1,40 +1,40 @@
 ---
 id: sample-app-overview
 title: Overwolf sample app
-sidebar_label: Overview
+sidebar_label: The Basics
 ---
 
-Learn the basics concepts on how to build Overwolf apps that listen to real time game events and displaying content overlay the game. If you are new to the concept of an Overwolf app, this is a great place to get started, and you can use it as a base for your app.
+In this article, we'll use an example in order to learn how to build Overwolf apps that respond to real time game events and display content in an overlay while playing. If you are new to the concept of Overwolf apps, this is a great place to get started, and you can use it as a base for your own project.
 
-In practice, what the app is doing is auto-launch when the user loads Fortnite and listen to all the real time game events. Once the match started, it prints all the events data into an in-game window overlay.
+The sample app's functionality is pretty straight-forward: It auto-launch when the user launches Fortnite, just like any other Fortnite app, and reads all real time game events as you play. To demonstrate overlay features, the sample app prints all in-game event data collected into an overlay based component.
 
-## Overview
+## Sample App Functionality
 
-The app is targeted to [Fortnite](https://www.epicgames.com/fortnite/en-US/download) (loads when Fortnite starts, listen to Fortnite events), but you can easily customize it to fit other games. We choose Fortnite as it's free to download and use.
+For demonstration purposes, the sample app is configured for [Fortnite](https://www.epicgames.com/fortnite/en-US/download), it loads when Fortnite starts and reads Fortnite in-game events. You can easily customize this sample to fit other games.
 
-The basic points and flows that that the sameple app demonstrate:
+Basic functions our sample app demonstrates:
 
-* Automatically launch when the game starts.
+* Automatically launches when the game is loaded.
 
-* Register to the overwolf.games.events API in order to receive real time events from the game.
+* After registering to the overwolf.games.events API, the app can receive real time events from the game.
 
-* Identify specific events and acts as defined.
+* Identify specific events and respond as defined.
 
 * Define a custom hotkey to be used in-game.
 
-* Communication between the app windows according to our best practices.
+* Interactions between app windows.
 
-* Background controller that manage the communication.
+* Background controller that manages data transfers.
 
 ## How to load the app
 
 [This repository](https://github.com/overwolf/sample-app) contains the Overwolf sample app.
 
-1. Download the app to your machine (as a ZIP package), and Unzip it whenever you want.
+1. Download the app to your machine as a ZIP archive, Unzip it.
 
-2. Under Overwolf's settings, choose *Support* tab and then *Development options*.
+2. Under Overwolf's settings, choose the *Support* tab and then go into *Development options*.
 
-3. Click the *Load unpacked* button and choose the "native" folder of this repository.
+3. Click the *Load unpacked* button and choose the folder where you placed the sample app's repository.
 
 ::: important
 Editing the author or app name in the manifest will prevent loading the app as unpacked app.
@@ -42,6 +42,6 @@ Editing the author or app name in the manifest will prevent loading the app as u
 
 ## Screenshots
 
-This is how to main window of the app is looks like: an in-game window that injected to the game screen and dislayed overlay.  The window displays the game events, info updates and a sample Ad for monetization.
+This is how the sample app's main window looks like: an injected in-game window overlayed on your game screen.  The window displays game events, data collected as well as a sample advertisement for monetization.
 
 ![alt-text](assets/sample-app/in-gmae-window.png)
