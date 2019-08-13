@@ -4,36 +4,36 @@ title: Sample app components
 sidebar_label: Components
 ---
 
-You can [download](https://github.com/overwolf/sample-app/tree/master/native) the latest Overwolf Developers version. 
+You can download the latest version [here](https://github.com/overwolf/sample-app/tree/master/native). 
 
-## Main app components
+## Sample app components
 
-The app main folder consists couple of main parts:
+You will find several files and folders in the sample app archive:
 
 ### manifest.json
 
-The [manifest](/api/manifest-json) file is responsible for describing the aspects of your app. This is a mandatory file for all apps and has to exist in the root folder for your app.
+The [manifest](/api/manifest-json) file is responsible for describing the different aspects of your app. This is a mandatory file for all apps and has to be present in the root folder for your app to function.
 
-### Icons files
+### App icons
 
-Mandatory files for the Overwold dock icon, task bar and more.
+Mandatory files showing up in the Overwolf dock and other locations.
 
-### "css" folder
+### "CSS" folder
 
-CSS files for designing the app's window.
+CSS files used in the visual design of the app's window.
 
 ### "img" folder
 
-Assets that used by the app.
+More non specific assets that used by the app.
 
 ### "scripts" folder
 
-Use this folder for scripts, constants and servics.
+Scripts, constants and services you are using.
 
-### "lib" foldr
+### "lib" folder
 
-Exernal scripts that should be saved locally.
+External scripts that need to be saved locally.
 
 ### "windows" folder
 
-each app window is built from an HTML file. This folder contains these files. 
+Each app window is based on an HTML file. This folder contains these files for each of your pages
