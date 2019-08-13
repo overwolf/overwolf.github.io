@@ -53,6 +53,8 @@ Event  | Event Data        | Fired When   | Notes      | Since Version |
 -------| ------------------| -------------| ---------- | --------------|
 match_start| null          | Match starts |See [notes](#match_start-note)|    0.134      |
 match_end  | victory/defeat| Match ends   |See [notes](#match_end-note)|    0.134      |
+talent_available  | null | Skill point is available for use.  |See [notes](#talent_available-note)|    0.134      |
+gates_opened  | null | When preparation-countdown has ended and the match begins.  |See [notes](#gates_opened-note)|    0.134      |
 
 #### *pseudo_match_id* note:
 
@@ -89,6 +91,18 @@ Data Example:
 Data Example:
 
 `{"events":[{"name":"match_end","data":"victory"}]}`
+
+#### *talent_available* note:
+
+Data Example:
+
+`{"events":[{"name":"talent_available","data":""}]}`
+
+#### *gates_opened* note:
+
+Data Example:
+
+`{"events":[{"name":"gates_opened","data":""}]}`
 
 ## `game_info`
 
