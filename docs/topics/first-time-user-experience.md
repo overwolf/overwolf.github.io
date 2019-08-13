@@ -4,6 +4,7 @@ title: First Time User Experience
 sidebar_label: First Time User Experience
 ---
 
+## First Time User experience
 
 With the Overwolf SDK you can create a whole new experience for your users in order to maximize user experience and retention.
 Compared to traditional websites, the content in your app is accessible in-game. But there is a lot more into it. As a software client, you have the ability to show windows on desktop.
@@ -20,11 +21,32 @@ In this example we’ll show you the [Legendary Builds app](https://www.overwolf
 There are two possibilities for the user to encounter the app for the first time:
 * **Out of game** (on desktop) – The user launches the app from the Overwolf dock after it was installed.
 
-IMAGE HERE
+<div class="box" data-slick='{"slidesToShow": 1'>
+  <a data-fancybox="gallery" data-caption="Legendary Builds" href="../assets/Firsttimeuserexperience/Champ-select.png">
+    Legendary Builds
+    <span class="thumb">
+      <img src="../assets/Firsttimeuserexperience/Champ-select.png" alt="Legendary Builds">
+    </span>
+  </a>
+</div>
+
 
 * **In-game** – The app automatically launches when a LoL match starts.
 
-IMAGE HERE
+<div class="box" data-slick='{"slidesToShow": 2}'>
+  <a data-fancybox="gallery" data-caption="Legendary Builds" href="../assets/Firsttimeuserexperience/Builds-are-ready.png">
+    Legendary Builds
+    <span class="thumb">
+      <img src="../assets/Firsttimeuserexperience/Builds-are-ready.png" alt="Legendary Builds">
+    </span>
+  </a>
+  <a data-fancybox="gallery" data-caption="Legendary Builds" href="../assets/Firsttimeuserexperience/lbingame113.png">
+    Legendary Builds
+    <span class="thumb">
+      <img src="../assets/Firsttimeuserexperience/lbingame113.png" alt="egendary Builds">
+    </span>
+  </a>
+</div>
 
 The app’s UX designer should address all possibilities for first encounters – in game, on desktop, the transition and more. Each scenario can and should be designed to provide the first impression you want.
 
@@ -35,7 +57,16 @@ The Home screen is what the user will probably see every time he opens the app, 
 
 Example for a “home” screen in the [LoLwiz](https://www.overwolf.com/app/LoLwiz) app:
 
-IMAGE HERE
+<div class="box" data-slick='{"slidesToShow": 1'>
+  <a data-fancybox="gallery" data-caption="Lolwiz" href="../assets/Firsttimeuserexperience/lolwiz-home.jpg">
+    Lolwiz
+    <span class="thumb">
+      <img src="../assets/Firsttimeuserexperience/lolwiz-home.jpg" alt="Lolwiz">
+    </span>
+  </a>
+</div>
+
+
 
 ### Desktop mode
 
@@ -58,11 +89,25 @@ Please keep in mind that each app is different and should consider carefully the
 
 Some apps can, and should, offer value when opened on desktop while the game is not played yet. Legendary Builds is an example for an app that offers the player to check pro-players’ builds before launching the game. This allows preparations in advance and therefore increases the value of the app, and provides desktop value altogether
 
-IMAGE HERE
+<div class="box" data-slick='{"slidesToShow": 1'>
+  <a data-fancybox="gallery" data-caption="Legendary Builds" href="../assets/Firsttimeuserexperience/Champ-select.png">
+    Legendary Builds
+    <span class="thumb">
+      <img src="../assets/Firsttimeuserexperience/Champ-select.png" alt="Legendary Builds">
+    </span>
+  </a>
+</div>
 
 Another example is [Killer Voices](https://www.overwolf.com/app/overwolf-killer_voices), an app that allows the user to select different voice packs for different games. In fact, this kind of setting is NOT something a player should do in game, but rather on Desktop.
 
-IMAGE HERE
+<div class="box" data-slick='{"slidesToShow": 1'>
+  <a data-fancybox="gallery" data-caption="Killer Voices" href="../assets/Firsttimeuserexperience/Killervoices123.png">
+    Killer Voices
+    <span class="thumb">
+      <img src="../assets/Firsttimeuserexperience/Killervoices123.png" alt="Killer Voices">
+    </span>
+  </a>
+</div>
 
 ### Tutorial
 
