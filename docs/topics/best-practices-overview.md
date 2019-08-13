@@ -39,7 +39,6 @@ This page contains our best practices for developing and implementing your Overw
 * Don’t forget to provide a link to the support page in a prominent location in your app
 * You can see an example for an app support page [here](http://support.overwolf.com/article-categories/legendary-builds/)
 
-IMAGE HERE
 
 ### Discord server
 * We recommend you to have an invite link to your app’s discord server within the app. 
@@ -51,36 +50,72 @@ IMAGE HERE
 ### Monetization
 * You can easily start making money by adding video or display banners ads to your app. To learn more, check out our [Ads SDK.](../start/ads-sdk-overview)
 * Forgivable ads – Think how, when and where you want your users to see the ads being served through your app, you don’t want to ruin their gaming experience. Please make sure you follow our [Ads Policy.](../start/monetization-overview#ads-policy)
-* An example for a 400×300 video in the Fortnite tracker app:
+* An example for a 400×300 video in the Spawning Tool app:
 
-IMAGE HERE
+<div class="box" data-slick='{"slidesToShow": 1}'>
+  <a data-fancybox="gallery" data-caption="Spawning Tool" href="../assets/best-practices-overview/SC2-400x300-ad-1.png">
+    Spawning Tool
+    <span class="thumb">
+      <img src="../assets/best-practices-overview/SC2-400x300-ad-1.png" alt="Spawning Tool">
+    </span>
+  </a>
+</div>
 
 ### Tooltips
 * Don’t forget to add tooltips to non-trivial buttons or displayed data, as they greatly increase the cohesiveness of your app. Make sure to make your tooltips short and to the point.
 * An example for a tooltip in the Legendary Builds app:
-IMAGE HERE
+
+<div class="box" data-slick='{"slidesToShow": 1}'>
+  <a data-fancybox="gallery" data-caption="Legendary Builds" href="../assets/best-practices-overview/LB-tooltips.png">
+    Legendary Builds
+    <span class="thumb">
+      <img src="../assets/best-practices-overview/LB-tooltips.png" alt="Legendary Builds">
+    </span>
+  </a>
+</div>
 
 ### Talk to us
 * Getting feedback from users is essential for the app’s success. Add the option for users to share feedback regarding the app. 
 * Based on the Facecheck team experience with this feature, adding this will bring good reviews and bad reviews. you can use both to improve your app.
 * Example for this:
 
-IMAGE HERE
+<div class="box" data-slick='{"slidesToShow": 1}'>
+  <a data-fancybox="gallery" data-caption="Facecheck" href="../assets/best-practices-overview/Facecheck-ttu.png">
+    Facecheck
+    <span class="thumb">
+      <img src="../assets/best-practices-overview/Facecheck-ttu.png" alt="Facecheck">
+    </span>
+  </a>
+</div>
+
 
 ### In and Out of game behavior
 * Decide how your app will be used in and out of game, most apps behave differently in those two states. Remember that most users will use your app for the first time right after they downloaded it from the Appstore (out of game), so make sure they’ll see a welcoming, simple and easy-to-understand screen.
 * Example for in and out of game behavior in the Legendary Builds app:
    * Out of game mode (desktop) – the user manually selects a champion to see its builds:
    
- IMAGE HERE
-   
+<div class="box" data-slick='{"slidesToShow": 1}'>
+  <a data-fancybox="gallery" data-caption="Legendary Builds" href="../assets/best-practices-overview/Champ-select.png">
+    Legendary Builds
+    <span class="thumb">
+      <img src="../assets/best-practices-overview/Champ-select.png" alt="Legendary Builds">
+    </span>
+  </a>
+</div>
+
    
    * In-game mode – The app automatically detects the player’s champion and shows its builds:
  
  
-   
-  
- IMAGE HERE
+<div class="box" data-slick='{"slidesToShow": 1}'>
+  <a data-fancybox="gallery" data-caption="Legendary Builds" href="../assets/best-practices-overview/lbingame113.png">
+    Legendary Builds
+    <span class="thumb">
+      <img src="../assets/best-practices-overview/lbingame113.png" alt="Legendary Builds">
+    </span>
+  </a>
+</div>
+
  
 ### Hotkeys
 * When in game, users don’t always have the time to click on your app’s icon in the Overwolf dock, so make sure to provide them convenient hotkeys to show/hide your app during the game.
@@ -93,13 +128,31 @@ IMAGE HERE
 ### Your app look
 * If your app is designated to be used in a specific game, try to create a UI that will be integrated with the game’s look and feel.
 * Here you can see an example of [Spawning Tool](https://www.overwolf.com/app/overwolf-spawning_tool_build_advisor) – an app for Starcraft. As you can see, the app was designed to have a Starcraft-like look.
-IMAGE HERE
+
+<div class="box" data-slick='{"slidesToShow": 1}'>
+  <a data-fancybox="gallery" data-caption="Spawning Tool" href="../assets/best-practices-overview/SpawningScreenshot3.jpg">
+    Spawning Tool
+    <span class="thumb">
+      <img src="../assets/best-practices-overview/SpawningScreenshot3.jpg" alt="Spawning Tool">
+    </span>
+  </a>
+</div>
+
+
 
 ### Listen
 * Ask your users for feedback, hear what they say and try to take their insights and create a better and more successful app experience for them. One way for getting users’ feedback is by opening feedback pages on Twitter and Reddit. These pages should be accessible via links shown in the app’s main or settings windows.
 * Here you can see an example for feedback section in the Legendary Builds app window:
 
-IMAGE HERE
+<div class="box" data-slick='{"slidesToShow": 1}'>
+  <a data-fancybox="gallery" data-caption="Legendary Builds" href="../assets/best-practices-overview/Overwolf_2018-04-26_09-37-29.png">
+    Legendary Builds
+    <span class="thumb">
+      <img src="../assets/best-practices-overview/Overwolf_2018-04-26_09-37-29.png" alt="Legendary Builds">
+    </span>
+  </a>
+</div>
+
 
 ### Plan ahead
 * Think about the long run, will your app function well under the load of many concurrent users? Will your database support your app’s future elements/features? Try to find any future bottlenecks that might impact users experience.
@@ -117,14 +170,29 @@ IMAGE HERE
   
 * Example of error messages in LoLwiz and Legendary Builds:
 
-IMAGE HERE
+<div class="box" data-slick='{"slidesToShow": 1}'>
+  <a data-fancybox="gallery" data-caption="Legendary Builds" href="../assets/best-practices-overview/Error-windows.jpg">
+    Legendary Builds & Lolwiz
+    <span class="thumb">
+      <img src="../assets/best-practices-overview/Error-windows.jpg" alt="Legendary Builds">
+    </span>
+  </a>
+</div>
+
 
 
 ### Ad container placeholder
 * Place your apps logo underneath the ad layer, so when there are no ads, the container will display something to the user.
 * Example:
+<div class="box" data-slick='{"slidesToShow": 1}'>
+  <a data-fancybox="gallery" data-caption="Ad container placeholder" href="../assets/best-practices-overview/hero_watch_main_screen.png">
+    Ad container placeholder
+    <span class="thumb">
+      <img src="../assets/best-practices-overview/hero_watch_main_screen.png" alt="Ad container placeholder">
+    </span>
+  </a>
+</div>
 
-IMAGE HERE
 
 ### Analytics
 * Please use an analytics service for your app, more information about app analytics can be found [here](../app-analytics)
