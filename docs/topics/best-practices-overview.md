@@ -20,13 +20,13 @@ This page contains our best practices for developing and implementing your Overw
   <a data-fancybox="gallery" data-caption="FortniteLiveStats" href="https://www.youtube.com/watch?v=Su7CTcMlnqw">
     Fortnite Live Stats
     <span class="thumb">
-      <img src="https://www.youtube.com/watch?v=Su7CTcMlnqw" alt="Fortnite Live Stats">
+      <img src="https://img.youtube.com/vi/Su7CTcMlnqw/hqdefault.jpg" alt="Fortnite Live Stats">
     </span>
   </a>
   <a data-fancybox="gallery" data-caption="GameSummary" href="https://www.youtube.com/watch?v=RHWs1erUXew">
     GameSummary
     <span class="thumb">
-      <img src="https://www.youtube.com/watch?v=RHWs1erUXew" alt="GameSummary">
+      <img src="https://img.youtube.com/vi/RHWs1erUXew/hqdefault.jpg"" alt="GameSummary">
     </span>
   </a>
 </div>
