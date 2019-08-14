@@ -5,8 +5,8 @@ sidebar_label:  Monetization Overview
 ---
 
 
-So you’ve created a great Overwolf app that many gamers love and use everyday. Now what?
-Now you can start making money out of your amazing coding skills!
+So you’ve created a great Overwolf app, that many gamers love and use everyday. Now what?
+Now you can start making money with your amazing coding skills!
 
 ## How it works
 
@@ -63,17 +63,17 @@ We also scan our traffic with 3rd party anti-fraud tools to monitor our quality 
 * If your app has more than one menu/view, make sure the ad location is fixed and does not change when flicking through those menus.
 * Make sure that the ad is in a visible location and not hidden. In order to not be flagged as fraud, the ad should only be called when the ad unit is visible.
 * Video ads need high completion rates. Any window showing videos ads should have a good average open time. Ads should appear within windows that offer Significant value (most ads are between 15-30 sec).
-* Advertisers look to engage with the user and use their advertising budgets smartly to get maximum value. One of the KPI’s that is popular in the advertising industry is completion rate which represents the number of users that watched 100% of the video ad from the total impressions made. High Completion rate is above 70%.
+* Advertisers look to engage with the user and use their advertising budgets smartly to get maximum value. One of the KPI’s that is popular in the advertising industry is completion rate, which represents the number of users that watched 100% of the video ad from the total impressions made. High Completion rate is above 70%.
 * It’s all about timing – User experience is extremely important. While developing the app, put yourself in the user’s shoes. As the app developer, you are most likely to know when the best timing is to present an ad. Most games have “Dead” moments where nothing happens (Client Loading, Match Loading, After Game ends) so the ad won’t interrupt the user.
 
 ### Ad size
 
-Video Players comes in different sizes. Our recommendation is to use the 400×300 size which should have higher fill as well as higher CPM..
+Video Players come in different sizes. Our recommendation is to use the 400×300 size, which should have higher fill rates, as well as higher CPM.
 
 ### Demographics
 
 * Advertising budgets are more significant in Tier 1 countries: US, UK, CA, AU, DE, FR.
-* If most of the users will origin in Tier 1 countries, it’s likely that your CPMs will be higher.
+* If most of your app's users originate from Tier 1 countries, it’s likely that your CPM and yield will be higher.
 * We do monetize ads in lower tiers, but our recommendation is to focus your marketing efforts on Tier 1 countries.
 
 
