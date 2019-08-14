@@ -4,5 +4,4 @@ title: HeroWatch
 sidebar_label: HeroWatch
 ---
 
-
-Game Settings Case Study
+### TBD

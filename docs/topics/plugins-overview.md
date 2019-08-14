@@ -13,4 +13,4 @@ The Overwolf plugin system allows your app to:
 2. Leverage your existing C#/C/C++ code and expose it to your app.
 This is, somewhat, similar to [Native Node.js Modules](https://blog.risingstack.com/writing-native-node-js-modules/). (We currently do not support Node.js modules – however, in the future we might support it)
 
-We have created a few simple plugins that might answer your extra needs as an app developer or give you a good starting point for developing your own plugin, you can find them in the [Overwolf GitHub repository](#https://github.com/overwolf/overwolf-plugins).
+We have created a few simple plugins that might answer your extra needs as an app developer or give you a good starting point for developing your own plugin, you can find them in the [Overwolf GitHub repository](https://github.com/overwolf/overwolf-plugins).
