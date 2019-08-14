@@ -16,8 +16,6 @@ Read more about the functions/properties/events of the simple-io-plugin [here.](
 
 The latest DLL can be found [here](https://github.com/overwolf/overwolf-plugins/tree/master/dist) (Don’t forget to Unblock it after downloading).
 
-:::
-When you download a DLL file from a browser, Windows marks it as unsafe. Please make sure to check the “Unblock” box in the DLL’s file properties.
-:::
+:::When you download a DLL file from a browser, Windows marks it as unsafe. Please make sure to check the “Unblock” box in the DLL’s file properties. :::
 
 ![Unblock dll](../assets/unblock_dll.jpg)
