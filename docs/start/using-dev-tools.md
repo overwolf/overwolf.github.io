@@ -45,7 +45,7 @@ The Network panel displays information about every network-related operation on 
 
 ### Sources
 
-This menu enabled breakpoint-based debugging for JavaScript. Breakpoints can be configured to only be triggered when specific or general conditions are met.
+This menu enables breakpoint-based debugging for JavaScript. Breakpoints can be configured to only be triggered when specific or general conditions are met.
 **Tip** – Make minified code easily readable by using the “pretty print” button ({ })
 
 ![alt-text](assets/dev-tools-4.jpg)
