@@ -15,8 +15,7 @@ Common use cases:
 
 More information about the TeamSpeak plugin can be found [here.](https://github.com/overwolf/teamspeak-overwolf) 
 
-:::
-When you download a DLL file from a browser, Windows marks it as unsafe. Please make sure to check the “Unblock” box in the DLL’s file properties.
+:::When you download a DLL file from a browser, Windows marks it as unsafe. Please make sure to check the “Unblock” box in the DLL’s file properties.
 :::
 
 ![Unblock dll](../assets/unblock_dll.jpg)
