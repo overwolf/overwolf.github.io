@@ -20,9 +20,7 @@
     "docs": {
         
 		"Best Practices":
-			["topics/best-practices-overview", "topics/using-overwolf-windows", "topics/app-specific-experience", "topics/first-time-user-experience", "topics/launch-time-performance", "topics/user-flow-error-handling", "topics/buttons-layout-usage", "topics/communication-guidelines", "topics/user-flow-and-error-handling","topics/games-settings", "topics/hotkeys-best-practices", "topics/data-persistence"],
-		"Case Studies":
-			["topics/case-study-herowatch"],
+			["topics/best-practices-overview", "topics/using-overwolf-windows", "topics/app-specific-experience", "topics/first-time-user-experience", "topics/launch-time-performance", "topics/user-flow-error-handling", "topics/communication-guidelines", "topics/user-flow-and-error-handling","topics/games-settings", "topics/hotkeys-best-practices", "topics/data-persistence"],
 		"Using Plugins":
 			["topics/plugins-overview", "topics/how-to-use-plugins-in-your-app", "topics/writing-your-own-plugin", "topics/sample-plugin", "topics/simple-io-plugin", "topics/team-speak-plugin"],
 		"Using Events":
