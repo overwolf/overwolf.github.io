@@ -23,6 +23,7 @@ It is very useful for:
 
 ## Unblock Dll's
 
-When you download a DLL file from a browser, Windows marks it as unsafe. Please make sure to check the "Unblock" box in the DLL’s file properties:
+When you download a DLL file from a browser, Windows marks it as unsafe.  
+Please make sure to check the "Unblock" box in the DLL’s file properties:
 
 ![Unblock dll](../assets/unblock_dll.jpg)
