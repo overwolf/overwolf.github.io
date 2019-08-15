@@ -90,6 +90,7 @@ a.edit-page-link {
   box-sizing: border-box;
   color: #0D0A1A;
   border-radius: 0px;
+  display: none;
 }
 
 a.edit-page-link:hover {

@@ -34,16 +34,16 @@ The parts you will be able to edit freely are marked in red in the image below â
 We hope this gets you as excited as it does us, and cannot wait to see what youâ€™re going to design for your apps!
 
 <div class="box" data-slick='{"slidesToShow": 2}'>
-  <a data-fancybox="gallery" data-caption="Facecheck" href="../assets/custom-installer/Image 3.png">
+  <a data-fancybox="gallery" data-caption="Facecheck" href="../assets/custom-installer/image 3.png">
     Facecheck
     <span class="thumb">
-      <img src="../assets/custom-installer/Image 3.png" alt="Facecheck">
+      <img src="../assets/custom-installer/image 3.png" alt="Facecheck">
     </span>
   </a>
-  <a data-fancybox="gallery" data-caption="Facecheck Installer" href="../assets/custom-installer/Image 4.png">
+  <a data-fancybox="gallery" data-caption="Facecheck Installer" href="../assets/custom-installer/image 4.png">
     Facecheck Installer
     <span class="thumb">
-      <img src="../assets/custom-installer/Image 4.png" alt="Facecheck Installer">
+      <img src="../assets/custom-installer/image 4.png" alt="Facecheck Installer">
     </span>
   </a>
 </div>
