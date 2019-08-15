@@ -11,6 +11,7 @@ function moveEditButton() {
   if (!button) return;
   const pageNav = document.getElementsByClassName('onPageNav')[0];
   pageNav.appendChild(button);
+  button.style.display = "inline-block";
 }
 
 window.onload = function () {
