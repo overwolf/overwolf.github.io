@@ -34,7 +34,7 @@ battletag    | me          | Battletag of local player | See [notes](#battletag-
 
 Data Example:
 
-`{“feature”:”me”,”category”:”me”,”key”:battletag”,”Shargaas#2430”}`
+`{"feature":"me", "category":"me", "key":"battletag", "value":"Shargaas#2430"}`
 
 ## `match_info`
 
