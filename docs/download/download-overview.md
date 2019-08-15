@@ -25,6 +25,6 @@ The difference between the developer version and the public version is defined b
 
 ## Demo App
 
-Read our [step by step guide](../start/creating-demo-app) to develop this Overwolf demo app.
+Read our [getting started guide](../start/sample-app-overview) to develop the Overwolf demo app.
 
-* Download the Overwolf Sample_App
+* Download the [Overwolf Sample App](https://github.com/overwolf/sample-app).
