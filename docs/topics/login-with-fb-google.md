@@ -5,4 +5,4 @@ sidebar_label: App Login with Facebook or Google
 ---
 
 
-Mopre Info about how to implement it.
+Mopre Info about how to implement it will be added soon.
