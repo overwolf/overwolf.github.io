@@ -4,4 +4,4 @@ title: Training and Guides
 sidebar_label: Training and guides
 ---
 
-## TBA
+This content will be added soon.
