@@ -4,46 +4,46 @@ title: Marketing Checklist
 sidebar_label: Marketing Checklist
 ---
 
-Your app is live on the Overwolf Appstore! Now what? If you followed the [technical checklist](technical-checklist) it is a good time to take a look at the marketing checklist to ensure a smooth launch and that long-term growth goals for your app are met.
+So, your app is live on the Overwolf Appstore, and you've already gone through the [technical checklist](technical-checklist). Now is a great time to review your marketing efforts with this checklist to ensure a smooth launch and better chance of achieving your app's long-term growth goals.
 
-We don’t want to dictate exactly how you should promote your app. You know your users best, and what works for someone else may not work for you. With that in mind, here are some ideas for how to promote your app, based on best practices and lessons that we’ve learned. Use these ideas (or don’t) as it suits your audience.
+There is no one 'correct' way to market and promote apps. You know your users best, and promotions that worked for one app doesn't necessarily apply for a different audience of gamers. With that in mind, here are some ideas for promoting your app effectively based on best practices and lessons that we’ve learned. Use those ideas that fit your app and audience.
 
-We divided the checklist to three levels, so you can take your time and follow it step by step.
-Once you complete the full list of recommendations, you could get up to a 3% improvement in your rev-share.
+The checklist has three tiers, please take your time and follow it step by step when you are able.
+Since we're all here to benefit users with great apps, completing the checklist of recommendations fully will increase your share of the revenues by up to 3%.
 
-The Overwolf team is here for you and we’ll be happy to evaluate your strategy and goals and assist in any way we can.
+The Overwolf team is here for you and we’re happy to evaluate your strategy and assist in any way we can.
 
 :::note
-If you have a refer a friend program, an in-app store, or prizes requirement, we can help you with RP purchase. Please contact your Developer Success Manager for more details.
+If you have a refer-a-friend program, an in-app store, or prizes you want to hand out, we can help you with RP purchase. Please contact your Developer Success Manager for more details.
 :::
 
 ## Pup (+ 1%)
 
-* Add the "Get it on Overwolf" badge on your website, where applicable. [Read more](../topics/communication-guidelines).
+* Add the "Get it on Overwolf" button to your website, where applicable. [Read more](../topics/communication-guidelines).
 
-* Add the "Get it on Overwolf" badge to all your marketing assets (social media, influencers, other marketing campaigns).
+* Add the "Get it on Overwolf" badge to relevant marketing assets (social media, influencers, other marketing campaigns).
 
-* Add an Overwolf logo next to your Facebook, Discord and Twitter logos, that will lead to your app page on Overwolf.
+* Add an Overwolf linked logo next to your own on Facebook, Discord and Twitter.
 
-* Guide users to download your app as part of your onboarding flow on your website.
+* Guide users to download your app as part of your website onboarding flow.
 
-* Reach 3K Monthly Active Users.
+* Reach 3,000 Monthly Active Users.
 
 ## Hunter (+ 1%)
 
-* Get to 20K Monthly Active Users.
+* Reach 20,000 Monthly Active Users.
 
-* Bonus: Create a tutorial video for your app (we can help!).
+* Create a tutorial video for your app (we can help!).
 
 ## Alpha (+ 1%)
 
-* Get to 50K Monthly Active Users
+* Reach 50,000 Monthly Active Users.
 
-* One time bonus (ask us and we’ll give you budget for it!): where applicable, develop a Twitch Extensions with a similar value to your app.
+* Develop a Twitch extension with similar features and value like your app - Talk to us and we will fund your extra work on this!
 
 ## Examples
 
-Here you can see a few live examples from the Overwolf app store:
+Check out a few live examples from apps we liked:
 
 <div class="box" data-slick='{"slidesToShow": 1}'>
   <a data-fancybox="gallery" data-caption="StreamAware’s page on twitter contains a description, download link and a cover image with the Overwolf badge" href="../assets/marketing-checklist/1.jpg"> 
