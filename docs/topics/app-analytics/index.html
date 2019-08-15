@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>App Analytics · Overwolf</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="## Overview"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="App Analytics · Overwolf"/><meta property="og:type" content="website"/><meta property="og:url" content="https://overwolf.github.io/"/><meta property="og:description" content="## Overview"/><meta property="og:image" content="https://overwolf.github.io/img/ow_share.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://overwolf.github.io/img/ow_share.png"/><link rel="shortcut icon" href="/img/ow-favicon.ico"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script>
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>App Analytics · Overwolf</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="Getting statistics out of your app might prove to be one of the most valuable resources you will encounter.  "/><meta name="docsearch:language" content="en"/><meta property="og:title" content="App Analytics · Overwolf"/><meta property="og:type" content="website"/><meta property="og:url" content="https://overwolf.github.io/"/><meta property="og:description" content="Getting statistics out of your app might prove to be one of the most valuable resources you will encounter.  "/><meta property="og:image" content="https://overwolf.github.io/img/ow_share.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://overwolf.github.io/img/ow_share.png"/><link rel="shortcut icon" href="/img/ow-favicon.ico"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script>
               (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
               (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
               m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
@@ -68,61 +68,72 @@
                 };
               }
             });
-        </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><a class="edit-page-link button" href="https://github.com/overwolf/overwolf.github.io/tree/source/docs/topics/app-analytics.md" target="_blank" rel="noreferrer noopener">Edit</a><h1 class="postHeaderTitle">App Analytics</h1></header><article><div><span><h2><a class="anchor" aria-hidden="true" id="overview"></a><a href="#overview" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Overview</h2>
-<p>Getting statistics out of your app might prove to be one of the most valuable resources you will encounter. Statistics will support your product decision making by providing real user usage data, including showing how users actually interact with your product, where do they drop off, what product abilities are completely ignored and so on.</p>
+        </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><a class="edit-page-link button" href="https://github.com/overwolf/overwolf.github.io/tree/source/docs/topics/app-analytics.md" target="_blank" rel="noreferrer noopener">Edit</a><h1 class="postHeaderTitle">App Analytics</h1></header><article><div><span><p>Getting statistics out of your app might prove to be one of the most valuable resources you will encounter.<br>
+Statistics will support your product decision making by providing real user usage data, including showing how users actually interact with your product, where do they drop off, what product abilities are completely ignored and so on.</p>
 <p>We recommend using a web analytics service to collect and analyze app data, measure user engagement and improve monetization.</p>
-<p>Our preference is the industry standard <a href="https://marketingplatform.google.com/about/analytics/features/">Google Analytics.</a>
-We highly encourage you to take the time to implement any chosen analytics service thoroughly.</p>
-<h2><a class="anchor" aria-hidden="true" id="google-analytics-basic-implementation"></a><a href="#google-analytics-basic-implementation" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Google Analytics – Basic Implementation</h2>
-<h2><a class="anchor" aria-hidden="true" id="update-your-manifestjson"></a><a href="#update-your-manifestjson" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Update your manifest.json</h2>
-<p>`
-{
-...</p>
-<p>&quot;data&quot;:{<br>
-&quot;externally_connectable&quot;:{<br>
-&quot;matches&quot;:[<br>
-&quot;https://*<a href="http://.google-analytics.com">.google-analytics.com</a>&quot;,
-&quot;<a href="http://www.google-analytics.com">http://www.google-analytics.com</a>&quot;
-]
+<p>Our preference is the industry standard <a href="https://marketingplatform.google.com/about/analytics/features/">Google Analytics</a>.</p>
+<p>We highly encourage you to take the time to implement any chosen analytics service thoroughly.</p>
+<h2><a class="anchor" aria-hidden="true" id="google-analytics-basic-implementation"></a><a href="#google-analytics-basic-implementation" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Google Analytics: Basic Implementation</h2>
+<h3><a class="anchor" aria-hidden="true" id="update-your-manifestjson"></a><a href="#update-your-manifestjson" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Update your manifest.json</h3>
+<pre><code class="hljs css language-json">{
+<span class="hljs-attr">"data"</span>:{  
+   <span class="hljs-attr">"externally_connectable"</span>:{  
+      <span class="hljs-attr">"matches"</span>:[  
+         <span class="hljs-string">"https://*.google-analytics.com"</span>,
+         <span class="hljs-string">"http://www.google-analytics.com"</span>
+      ]
+   }
 }
-...
-}
-`</p>
-<h2><a class="anchor" aria-hidden="true" id="create-a-new-ga-account-and-a-new-property"></a><a href="#create-a-new-ga-account-and-a-new-property" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Create a new GA account and a new property</h2>
-<p>Select “Website” as your tracked object, enter any website name, website URL and select your preferred reporting time zone.</p>
-<p><img src="../assets/app-analytics/GA1.jpg" alt="process" width="900"/></p>
-<h2><a class="anchor" aria-hidden="true" id="update-your-index-page"></a><a href="#update-your-index-page" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Update your index page</h2>
-<p>Let’s assume here that you want to track events in your index page. In your index page e.g. at /index.html, add a reference to the tracking javascript in a separate file:</p>
-<p>`</p>
-<!DOCTYPE html>
-<p><html></p>
-<p><head></p>
-<p>...</p>
-  <script src="js/index.js"></script>
-<p>...</p>
-<p></head></p>
-<body>
-<p>...</p>
-</body>
-<p></html>
-`</p>
-<h2><a class="anchor" aria-hidden="true" id="update-your-tracking-code"></a><a href="#update-your-tracking-code" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Update your tracking code</h2>
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="create-a-new-ga-account-and-a-new-property"></a><a href="#create-a-new-ga-account-and-a-new-property" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Create a new GA account and a new property</h3>
+<p>Select &quot;Website&quot; as your tracked object, enter any website name, website URL and select your preferred reporting time zone.</p>
+<div class="box" data-slick='{"slidesToShow": 1}'>
+  <a data-fancybox="gallery" data-caption="Create a new property" href="../assets/app-analytics/GA1.jpg">
+     Create a new property
+    <span class="thumb">
+      <img src="../assets/app-analytics/GA1.jpg" alt="process">
+    </span>
+  </a>
+</div>
+<h3><a class="anchor" aria-hidden="true" id="update-your-index-page"></a><a href="#update-your-index-page" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Update your index page</h3>
+<p>Let's assume here that you want to track events in your index page. In your index page e.g. at /index.html, add a reference to the tracking javascript in a separate file:</p>
+<pre><code class="hljs css language-html"><span class="hljs-meta">&lt;!DOCTYPE html&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">html</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span>
+  ...
+  <span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"js/index.js"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+  ...
+<span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
+  ...
+<span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span>
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="update-your-tracking-code"></a><a href="#update-your-tracking-code" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Update your tracking code</h3>
 <p>Add the tracking JavaScript e.g. at js/index.js with the Universal Analytics code. Note the “https” at the start of the script address.</p>
-<p>`
-// Standard Google Universal Analytics code</p>
-<p>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){</p>
-<p>(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),</p>
-<p>m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)</p>
-<p>})(window,document,'script','<a href="https://www.google-analytics.com/analytics.js','ga'">https://www.google-analytics.com/analytics.js','ga'</a>); // Note: https protocol here</p>
-<p>ga('create', 'UA-XXXXX-YY', 'auto');</p>
-<p>ga('set', 'checkProtocolTask', function(){}); // Removes failing protocol check. @see: <a href="http://stackoverflow.com/a/22152353/1958200">http://stackoverflow.com/a/22152353/1958200</a></p>
-<p>ga('require', 'displayfeatures');</p>
-<p>ga('send', 'pageview', '/index.html');
-`</p>
+<pre><code class="hljs css language-js"><span class="hljs-comment">// Standard Google Universal Analytics code</span>
+(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">i,s,o,g,r,a,m</span>)</span>{i[<span class="hljs-string">'GoogleAnalyticsObject'</span>]=r;i[r]=i[r]||<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)
+   </span>{
+      (i[r].q=i[r].q||[]).push(<span class="hljs-built_in">arguments</span>)
+   },
+   i[r].l=<span class="hljs-number">1</span>*<span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>();a=s.createElement(o),
+   m=s.getElementsByTagName(o)[<span class="hljs-number">0</span>];a.async=<span class="hljs-number">1</span>;a.src=g;m.parentNode.insertBefore(a,m)
+   <span class="hljs-comment">// Note: https protocol here</span>
+})(<span class="hljs-built_in">window</span>,<span class="hljs-built_in">document</span>,<span class="hljs-string">'script'</span>,<span class="hljs-string">'https://www.google-analytics.com/analytics.js'</span>,<span class="hljs-string">'ga'</span>);
+
+ga(<span class="hljs-string">'create'</span>, <span class="hljs-string">'UA-XXXXX-YY'</span>, <span class="hljs-string">'auto'</span>);
+
+<span class="hljs-comment">// Removes failing protocol check. @see: http://stackoverflow.com/a/22152353/1958200</span>
+ga(<span class="hljs-string">'set'</span>, <span class="hljs-string">'checkProtocolTask'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{}); 
+ga(<span class="hljs-string">'require'</span>, <span class="hljs-string">'displayfeatures'</span>);
+ga(<span class="hljs-string">'send'</span>, <span class="hljs-string">'pageview'</span>, <span class="hljs-string">'/index.html'</span>);
+</code></pre>
 <p>If that all went well, you should soon see page tracking in Google Analytics, like so:</p>
-<p><img src="../assets/app-analytics/GA-sample.jpg" alt="process" width="900"/></p>
+<pre><code class="hljs css language-html"><span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"../assets/app-analytics/GA-sample.jpg"</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">"process"</span> <span class="hljs-attr">width</span>=<span class="hljs-string">"900"</span>/&gt;</span>
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="more-info"></a><a href="#more-info" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>More info</h2>
 <p>More information on best practices and hands on guides for implementing google analytics can be found <a href="https://analytics.google.com/analytics/academy/">here.</a></p>
-</span></div></article></div><div class="docLastUpdate"><em>Last updated on 2019-8-14 by Lior Haim</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/topics/using-3rd-party-apis"><span class="arrow-prev">← </span><span>External APIs in your App</span></a><a class="docs-next button" href="/docs/topics/login-with-fb-google"><span>App Login with Facebook or Google</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#overview">Overview</a></li><li><a href="#google-analytics-basic-implementation">Google Analytics – Basic Implementation</a></li><li><a href="#update-your-manifestjson">Update your manifest.json</a></li><li><a href="#create-a-new-ga-account-and-a-new-property">Create a new GA account and a new property</a></li><li><a href="#update-your-index-page">Update your index page</a></li><li><a href="#update-your-tracking-code">Update your tracking code</a></li></ul></nav></div><footer class="site-footer"><div class="container"><ul><li>Legal</li><li><a href="/docs/topics/legal-overview">Terms overview</a></li><li><a href="/docs/topics/legal-developers-terms">Developer&#x27;s terms</a></li><li><a href="/docs/topics/legal-app-terms">App terms</a></li><li><a href="http://www.overwolf.com/legal/" target="_blank">Overwolf terms</a></li><li><a href="http://www.overwolf.com/legal/#Privacy-policy" target="_blank">Overwolf Privacy policy</a></li></ul><ul><li>Support</li><li><a href=" https://discuss.developers.overwolf.com/" target="_blank">Questions and Answers</a></li><li><a href="https://discordapp.com/invite/cjjrZDp" target="_blank">Discord</a></li><li><a href="/docs/support/contact-us#join-our-slack">Slack</a></li><li><a href="https://www.facebook.com/OverwolfDevs" target="_blank">Facebook</a></li><li><a href="https://twitter.com/OverwolfDevs" target="_blank">Twitter</a></li></ul><ul><li>Documentation</li><li><a href="/docs/api/changelog">Changelog</a></li><li><a href="/docs/api/overwolf-api-overview">API</a></li><li><a href="/docs/start/app-creation-process">App Creation Process</a></li><li><a href="/docs/topics/best-practices-overview">Best Practices</a></li><li><a href="/docs/status/all">Game Events status</a></li></ul><ul><li>Information</li><li><a href="http://www.overwolf.com/careers/">Careers</a></li><li><a href="https://play.overwolf.com/fund/" target="_blank">Fund</a></li><li><a href="https://medium.com/overwolf-developers" target="_blank">Developers Blog</a></li><li><a href="https://www.overwolf.com/appstore" target="_blank">Overwolf Appstore</a></li></ul></div></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+</span></div></article></div><div class="docLastUpdate"><em>Last updated on 2019-8-15 by eransharv</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/topics/using-3rd-party-apis"><span class="arrow-prev">← </span><span>External APIs in your App</span></a><a class="docs-next button" href="/docs/topics/login-with-fb-google"><span>App Login with Facebook or Google</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#google-analytics-basic-implementation">Google Analytics: Basic Implementation</a><ul class="toc-headings"><li><a href="#update-your-manifestjson">Update your manifest.json</a></li><li><a href="#create-a-new-ga-account-and-a-new-property">Create a new GA account and a new property</a></li><li><a href="#update-your-index-page">Update your index page</a></li><li><a href="#update-your-tracking-code">Update your tracking code</a></li></ul></li><li><a href="#more-info">More info</a></li></ul></nav></div><footer class="site-footer"><div class="container"><ul><li>Legal</li><li><a href="/docs/topics/legal-overview">Terms overview</a></li><li><a href="/docs/topics/legal-developers-terms">Developer&#x27;s terms</a></li><li><a href="/docs/topics/legal-app-terms">App terms</a></li><li><a href="http://www.overwolf.com/legal/" target="_blank">Overwolf terms</a></li><li><a href="http://www.overwolf.com/legal/#Privacy-policy" target="_blank">Overwolf Privacy policy</a></li></ul><ul><li>Support</li><li><a href=" https://discuss.developers.overwolf.com/" target="_blank">Questions and Answers</a></li><li><a href="https://discordapp.com/invite/cjjrZDp" target="_blank">Discord</a></li><li><a href="/docs/support/contact-us#join-our-slack">Slack</a></li><li><a href="https://www.facebook.com/OverwolfDevs" target="_blank">Facebook</a></li><li><a href="https://twitter.com/OverwolfDevs" target="_blank">Twitter</a></li></ul><ul><li>Documentation</li><li><a href="/docs/api/changelog">Changelog</a></li><li><a href="/docs/api/overwolf-api-overview">API</a></li><li><a href="/docs/start/app-creation-process">App Creation Process</a></li><li><a href="/docs/topics/best-practices-overview">Best Practices</a></li><li><a href="/docs/status/all">Game Events status</a></li></ul><ul><li>Information</li><li><a href="http://www.overwolf.com/careers/">Careers</a></li><li><a href="https://play.overwolf.com/fund/" target="_blank">Fund</a></li><li><a href="https://medium.com/overwolf-developers" target="_blank">Developers Blog</a></li><li><a href="https://www.overwolf.com/appstore" target="_blank">Overwolf Appstore</a></li></ul></div></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
                 document.addEventListener('keyup', function(e) {
                   if (e.target !== document.body) {
                     return;
