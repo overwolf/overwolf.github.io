@@ -51,10 +51,10 @@ match_state  | match_info  | If a match is in progress - true/false. | See [note
 
 Event  | Event Data        | Fired When   | Notes      | Since Version |
 -------| ------------------| -------------| ---------- | --------------|
-match_start| null          | Match starts |See [notes](#match_start-note)|    0.134      |
-match_end  | victory/defeat| Match ends   |See [notes](#match_end-note)|    0.134      |
-talent_available  | null | Skill point is available for use.  |See [notes](#talent_available-note)|    0.134      |
-gates_opened  | null | When preparation-countdown has ended and the match begins.  |See [notes](#gates_opened-note)|    0.134      |
+match_start| null          | Match starts |See [notes](#match_start-note)|    134.0      |
+match_end  | victory/defeat| Match ends   |See [notes](#match_end-note)|    134.0      |
+talent_available  | null | Skill point is available for use.  |See [notes](#talent_available-note)|    134.0      |
+gates_opened  | null | When preparation-countdown has ended and the match begins.  |See [notes](#gates_opened-note)|    134.0      |
 
 #### *pseudo_match_id* note:
 
@@ -157,10 +157,10 @@ Data Example:
 
 Event  | Event Data        | Fired When   | Notes      | Since Version |
 -------| ------------------| -------------| ---------- | --------------|
-kill   | null              | Local player kills an opponent. |See [notes](#kill-note)|    0.134      |
-assist | null              | Local player takes part in the killing of an oponnent. |See [notes](#assist-note)|    0.134      |
-minion_kill| null          | Local player kills a minion. |See [notes](#minion_kill-note)|    0.134      |
-takedown| null             | Local player kills an opponent. |See [notes](#takedown-note)|    0.134      |
+kill   | null              | Local player kills an opponent. |See [notes](#kill-note)|    134.0      |
+assist | null              | Local player takes part in the killing of an oponnent. |See [notes](#assist-note)|    134.0      |
+minion_kill| null          | Local player kills a minion. |See [notes](#minion_kill-note)|    134.0      |
+takedown| null             | Local player kills an opponent. |See [notes](#takedown-note)|    134.0      |
 
 
 #### *kill* note:
@@ -193,7 +193,7 @@ Data Example:
 
 Event  | Event Data        | Fired When   | Notes      | Since Version |
 -------| ------------------| -------------| ---------- | --------------|
-death  | null              | Local player dies. |See [notes](#death-note)|    0.134      |
+death  | null              | Local player dies. |See [notes](#death-note)|    134.0      |
 
 #### *death* note:
 
