@@ -5,27 +5,27 @@ sidebar_label: Technical Checklist
 ---
 
 :::note
-By following this technical checklist, you will ensure a solid user experience in your app.  
-As a bonus, once you complete the full list of recommendations, you could get up to a 7% improvement in your rev-share.
+Following this technical checklist improves user experience for your app.  
+Seeing as gamer experience is our top priority, making your app the best it can be will be rewarded! Completing the full list of technical recommendations can increase your share of your apps revenues by up to 7%.
 :::
 
 ## Pup (+ 1% to rev-share)
 
-* Use your Main (index) window as a hidden controller that opens other windows.
+* Your Main (index) window is used as a hidden controller that opens other windows.
 
-* Window management is done according to best practices ([Read more here](../topics/using-overwolf-windows)).
+* Window management is done according to our best practices ([Read more here](../topics/using-overwolf-windows)).
 
-* Avoid the use of full screen windows.
+* No full screen windows are used.
 
-* 30ms to open every window ([Read more here](../topics/launch-time-performance)).
+* All windows launch in up to 30ms ([Read more here](../topics/launch-time-performance)).
 
-* App assets sizes are smallest as possible (Use [TinyJPG](https://tinyjpg.com/) & [TinyPNG](https://tinypng.com/)).
+* App assets are as small as possible (Use [TinyJPG](https://tinyjpg.com/) & [TinyPNG](https://tinypng.com/)).
 
-* Develop error notification for network downtime, API issues, servers errors ([Read more here](../topics/user-flow-and-error-handling)).
+* Your app should have error notifications for network downtime, API issues and server errors. ([Read more here](../topics/user-flow-and-error-handling)).
 
-* Add and maintain changelog.
+* Create and maintain a changelog.
 
-* Add a dedicated page which explains to the user why your app is bundled with Overwolf. Make sure you mention:  
+* Create a dedicated page which explains to gamers why your app is bundled with Overwolf. Make sure you mention:  
 
   * Overlay capabilities.
   * Real-time game events.
@@ -34,26 +34,26 @@ As a bonus, once you complete the full list of recommendations, you could get up
 
 ## Hunter (+ 1% to rev-share)
 
-* Add desktop mode to your app ([Read more here](../topics/app-specific-experience)).
+* Create a desktop mode for your app ([Read more here](../topics/app-specific-experience)).
 
-* Avoid the use of transparency in your window design that is not 100% (the need to calculate pixel values may cause a performance hit).
+* Avoid the use of non-100% transparency in your window design, calculating pixel values may cause a performance drop.
 
-* Add Knowledgebase articles ([Read more here](add-a-knowledge-base-to-app)).
+* Write Knowledgebase articles ([Read more here](add-a-knowledge-base-to-app)).
 
-* Add "Contact us" form ([Read more here](../topics/best-practices-overview)).
+* Add a contact form ([Read more here](../topics/best-practices-overview)).
 
 ## Alpha (+ 1% to rev-share)
 
-* Develop a FTUE ([Read more here](../topics/first-time-user-experience)).
+* Develop and implement a First Time User Experience (FTUE), ([Read more here](../topics/first-time-user-experience)).
 
-* App detects and notifies the user if it needs to be updated ([Read more here](submit-an-app-update)).
+* Your App will detect and notify users if it needs to be updated. ([Read more here](submit-an-app-update)).
 
-* Follow local/server assets best practices ([Read more here](../topics/launch-time-performance)).
+* Follow local/server assets best practices. ([Read more here](../topics/launch-time-performance)).
 
-* Use your Reddit/Facebook/Twitter pages for technical updates (new version is available, Servers are down, servers are up, etc.).
+* Use your Reddit/Facebook/Twitter for technical updates such as a new version announcement, servers down/up notification, etc.
 
-* Develop in-game "Mini mode" (where applicable).
+* Develop an in-game "Mini mode", a condensed, compact view for key features of your app.  
 
 ## Supreme (+ 4%)
 
-* Develop a Game Summary Shelf with high user value around stats. The game summary will become an integral part of your app, and will be used as a promotion tool for your app for users who don’t have it installed. Your Game Summary Shelf needs to support being a part of your app and being an independent unit. ([Read more here](../api/overwolf-egs)).
+* Develop a Game Summary Tab with high user value around your collected stats. Doing so will make game summary an integral part of your app, and will be used as a promotional tool for users who don’t have your app installed yet. ([Learn more about Game Summary Tabs here](../api/overwolf-egs)).
