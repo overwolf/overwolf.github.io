@@ -194,7 +194,7 @@ Data Example:
 Data Example:
 
 ```json
-{"events":[{"name":"assist", "data":""}]}`
+{"events":[{"name":"assist", "data":""}]}
 ```
 
 #### *minion_kill* note:
