@@ -34,7 +34,9 @@ battletag    | me          | Battletag of local player | See [notes](#battletag-
 
 Data Example:
 
-`{"feature":"me", "category":"me", "key":"battletag", "value":"Shargaas#2430"}`
+```json
+{"feature":"me", "category":"me", "key":"battletag", "value":"Shargaas#2430"}
+```
 
 ## `match_info`
 
@@ -60,49 +62,65 @@ gates_opened  | null | When preparation-countdown has ended and the match begins
 
 Data Example:
 
-`{"info":{"match_info":{"pseudo_match_id":"055accd3-5948-4444-903a-12400d484d4b"}},"feature":"match_info"}`
+```json
+{"info":{"match_info":{"pseudo_match_id":"055accd3-5948-4444-903a-12400d484d4b"}}, "feature":"match_info"}
+```
 
 #### *teams_level* note:
 
 Data Example:
 
-`{"info":{"match_info":{"teams_level":"{\"order\" : \"1\", \"chaos\" : \"1\"}"}},"feature":"match_info"}`
+```json
+{"info":{"match_info":{"teams_level":"{"order":"1", "chaos":"1"}"}}, "feature":"match_info"}
+```
 
 #### *score* note:
 
 Data Example:
 
-`{"info":{"match_info":{"score":"{\"order\" : \"8\", \"chaos\" : \"19\"}"}},"feature":"match_info"}`
+```json
+{"info":{"match_info":{"score":"{"order":"8", "chaos":"19"}}}, "feature":"match_info"}
+```
 
 #### *match_state* note:
 
 Data Example:
 
-`{"info":{"match_info":{"match_state":"{\"in_progress\":true}"}},"feature":"match_info"}`
+```json
+{"info":{"match_info":{"match_state":{"in_progress":true}}}, "feature":"match_info"}
+```
 
 ##### *match_start* note:
 
 Data Example:
 
-`{"events":[{"name":"match_start","data":""}]}`
+```json
+{"events":[{"name":"match_start", "data":""}]}
+```
 
 ##### *match_end* note:
 
 Data Example:
 
-`{"events":[{"name":"match_end","data":"victory"}]}`
+```json
+{"events":[{"name":"match_end", "data":"victory"}]}
+```
 
 #### *talent_available* note:
 
 Data Example:
 
-`{"events":[{"name":"talent_available","data":""}]}`
+```json
+{"events":[{"name":"talent_available", "data":""}]}
+```
 
 #### *gates_opened* note:
 
 Data Example:
 
-`{"events":[{"name":"gates_opened","data":""}]}`
+```json
+{"events":[{"name":"gates_opened", "data":""}]}
+```
 
 ## `game_info`
 
@@ -117,11 +135,11 @@ scene        | game_info   | The current menu state    | See [notes](#scene-note
 Data Examples:
 
 ```json
-{"info":{"game_info":{"scene":"hero_select"}},"feature":"game_info"}
-{"info":{"game_info":{"scene":"unranked_preparing"}},"feature":"game_info"}
-{"info":{"game_info":{"scene":"collection"}},"feature":"game_info"}
-{"info":{"game_info":{"scene":"home"}},"feature":"game_info"}
-{"info":{"game_info":{"scene":"unranked_preparing"}},"feature":"game_info"}
+{"info":{"game_info":{"scene":"hero_select"}}, "feature":"game_info"}
+{"info":{"game_info":{"scene":"unranked_preparing"}}, "feature":"game_info"}
+{"info":{"game_info":{"scene":"collection"}}, "feature":"game_info"}
+{"info":{"game_info":{"scene":"home"}}, "feature":"game_info"}
+{"info":{"game_info":{"scene":"unranked_preparing"}}, "feature":"game_info"}
 ```
 
 ## `roster`
@@ -137,18 +155,10 @@ roster       | game_info   | The full players roster   | See [notes](#roster-not
 Data Example:
 
 ```json
-{"info":{"roster":{"roster":"{\"BabaYaga\":{\"player_name\" : \"BabaYaga\", \"battletag\" : \"BabaYaga\", \"hero_name\" : 
-\"Nazeebo\", \"local\" : \"0\", \"team\" : \"chaos\"},\"Bliss\":{\"player_name\" : \"Bliss\", \"battletag\" : \"Bliss\", 
-\"hero_name\" : \"Raynor\", \"local\" : \"0\", \"team\" : \"chaos\"},\"DocWho\":{\"player_name\" : \"DocWho\", \"battletag\
-" : \"DocWho\", \"hero_name\" : \"Chromie\", \"local\" : \"0\", \"team\" : \"order\"},\"Matsunaga\":{\"player_name\" : \"Matsunaga\"
-, \"battletag\" : \"Matsunaga\", \"hero_name\" : \"Malthael\", \"local\" : \"0\", \"team\" : \"order\"},\"Signz\":{\"player_name\"
- : \"Signz\", \"battletag\" : \"Signz\", \"hero_name\" : \"Qhira\", \"local\" : \"0\", \"team\" : \"chaos\"},\"alice\":
-{\"player_name\" : \"alice\", \"battletag\" : \"alice#2742\", \"hero_name\" : \"Butcher\", \"local\" : \"1\", \"team\" : \"chaos\"}
-,\"alkaGOLIK\":{\"player_name\" : \"alkaGOLIK\", \"battletag\" : \"alkaGOLIK\", \"hero_name\" : \"Sylvanas\", \"local\" : \"0\", 
-\"team\" : \"order\"},\"joasku\":{\"player_name\" : \"joasku\", \"battletag\" : \"joasku\", \"hero_name\" : \"Stukov\", \"local\" 
-: \"0\", \"team\" : \"chaos\"},\"skrzat\":{\"player_name\" : \"skrzat\", \"battletag\" : \"skrzat\", \"hero_name\" : \"Kharazim\", 
-\"local\" : \"0\", \"team\" : \"order\"},\"vikpa\":{\"player_name\" : \"vikpa\", \"battletag\" : \"vikpa\", \"hero_name\" : 
-\"Tychus\", \"local\" : \"0\", \"team\" : \"order\"}}"}},"feature":"roster"}
+{"info":{"roster":"{"BabaYaga":{"player_name":"BabaYaga", "battletag":"BabaYaga", "hero_name":
+"Nazeebo", "local":"0", "team":"chaos"}, "Bliss":{"player_name":"Bliss", "battletag":"Bliss", 
+"hero_name":"Raynor", "local":"0", "team":"chaos"}, "DocWho":{"player_name":"DocWho", "battletag":"DocWho", "hero_name":"Chromie",  "local":"0", "team":"order"}, "Matsunaga":{"player_name":"Matsunaga", "battletag":"Matsunaga", "hero_name":"Malthael", "local":"0", "team":"order"}, "Signz":{"player_name":"Signz", "battletag":"Signz", "hero_name":"Qhira", "local":"0", "team":"chaos"}, "alice":
+{"player_name":"alice", "battletag":"alice#2742", "hero_name":"Butcher", "local":"1", "team":"chaos"}, "alkaGOLIK":{"player_name":"alkaGOLIK", "battletag":"alkaGOLIK", "hero_name":"Sylvanas", "local":"0", "team":"order"}, "joasku":{"player_name":"joasku", "battletag":"joasku", "hero_name":"Stukov", "local":"0", "team":"chaos"}, "skrzat":{"player_name":"skrzat", "battletag":"skrzat", "hero_name":"Kharazim", "local":"0", "team":"order"}, "vikpa":{"player_name":"vikpa", "battletag":"vikpa", "hero_name":"Tychus", "local":"0", "team":"order"}}}, "feature":"roster"}
 ```
 
 ## `kill`
@@ -167,25 +177,33 @@ takedown| null             | Local player kills an opponent. |See [notes](#taked
 
 Data Example:
 
-`{"events":[{"name":"kill","data":""}]}`
+```json
+{"events":[{"name":"kill", "data":""}]}
+```
 
 #### *assist* note:
 
 Data Example:
 
-`{"events":[{"name":"assist","data":""}]}`
+```json
+{"events":[{"name":"assist", "data":""}]}`
+```
 
 #### *minion_kill* note:
 
 Data Example:
 
-`{"events":[{"name":"minion_kill","data":""}]}`
+```json
+{"events":[{"name":"minion_kill", "data":""}]}
+```
 
 #### *takedown* note:
 
 Data Example:
 
-`{"events":[{"name":"takedown","data":""}]}`
+```json
+{"events":[{"name":"takedown" ,"data":""}]}
+```
 
 ## `death`
 
@@ -199,4 +217,6 @@ death  | null              | Local player dies. |See [notes](#death-note)|    13
 
 Data Example:
 
-`{"events":[{"name":"death","data":""}]}`
+```json
+{"events":[{"name":"death", "data":""}]}
+```
