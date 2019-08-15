@@ -71,7 +71,7 @@ Data Example:
 Data Example:
 
 ```json
-{"info":{"match_info":{"teams_level":"{"order":"1", "chaos":"1"}"}}, "feature":"match_info"}
+{"info":{"match_info":{"teams_level":{"order":"1", "chaos":"1"}}}, "feature":"match_info"}
 ```
 
 #### *score* note:
@@ -79,7 +79,7 @@ Data Example:
 Data Example:
 
 ```json
-{"info":{"match_info":{"score":"{"order":"8", "chaos":"19"}}}, "feature":"match_info"}
+{"info":{"match_info":{"score":{"order":"8", "chaos":"19"}}}, "feature":"match_info"}
 ```
 
 #### *match_state* note:
@@ -155,10 +155,18 @@ roster       | game_info   | The full players roster   | See [notes](#roster-not
 Data Example:
 
 ```json
-{"info":{"roster":"{"BabaYaga":{"player_name":"BabaYaga", "battletag":"BabaYaga", "hero_name":
-"Nazeebo", "local":"0", "team":"chaos"}, "Bliss":{"player_name":"Bliss", "battletag":"Bliss", 
-"hero_name":"Raynor", "local":"0", "team":"chaos"}, "DocWho":{"player_name":"DocWho", "battletag":"DocWho", "hero_name":"Chromie",  "local":"0", "team":"order"}, "Matsunaga":{"player_name":"Matsunaga", "battletag":"Matsunaga", "hero_name":"Malthael", "local":"0", "team":"order"}, "Signz":{"player_name":"Signz", "battletag":"Signz", "hero_name":"Qhira", "local":"0", "team":"chaos"}, "alice":
-{"player_name":"alice", "battletag":"alice#2742", "hero_name":"Butcher", "local":"1", "team":"chaos"}, "alkaGOLIK":{"player_name":"alkaGOLIK", "battletag":"alkaGOLIK", "hero_name":"Sylvanas", "local":"0", "team":"order"}, "joasku":{"player_name":"joasku", "battletag":"joasku", "hero_name":"Stukov", "local":"0", "team":"chaos"}, "skrzat":{"player_name":"skrzat", "battletag":"skrzat", "hero_name":"Kharazim", "local":"0", "team":"order"}, "vikpa":{"player_name":"vikpa", "battletag":"vikpa", "hero_name":"Tychus", "local":"0", "team":"order"}}}, "feature":"roster"}
+{"info":{"roster":{
+  "BabaYaga":{"player_name":"BabaYaga", "battletag":"BabaYaga", "hero_name":"Nazeebo", "local":"0", "team":"chaos"},
+  "Bliss":{"player_name":"Bliss", "battletag":"Bliss", "hero_name":"Raynor", "local":"0", "team":"chaos"},
+  "DocWho":{"player_name":"DocWho", "battletag":"DocWho", "hero_name":"Chromie",  "local":"0", "team":"order"},
+  "Matsunaga":{"player_name":"Matsunaga", "battletag":"Matsunaga", "hero_name":"Malthael", "local":"0", "team":"order"},
+  "Signz":{"player_name":"Signz", "battletag":"Signz", "hero_name":"Qhira", "local":"0", "team":"chaos"},
+  "alice":{"player_name":"alice", "battletag":"alice#2742", "hero_name":"Butcher", "local":"1", "team":"chaos"},
+  "alkaGOLIK":{"player_name":"alkaGOLIK", "battletag":"alkaGOLIK", "hero_name":"Sylvanas", "local":"0", "team":"order"},
+  "joasku":{"player_name":"joasku", "battletag":"joasku", "hero_name":"Stukov", "local":"0", "team":"chaos"},
+  "skrzat":{"player_name":"skrzat", "battletag":"skrzat", "hero_name":"Kharazim", "local":"0", "team":"order"},
+  "vikpa":{"player_name":"vikpa", "battletag":"vikpa", "hero_name":"Tychus", "local":"0", "team":"order"}
+}},"feature":"roster"}
 ```
 
 ## `kill`
