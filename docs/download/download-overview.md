@@ -9,7 +9,7 @@ View the [changelog](../api/changelog) of this project and find out what is new.
 If you are a developer, it doesn't mean that you have to work with the Developers version: the developer version just contains new features that are still in beta.
 
 :::important
-To develop apps, load and run unpack extensions (apps that are not in the app store yet), you have to [whitelist](../start/sdk-introduction#whitelist-you-as-a-developer) yourself before developing OW apps.
+To develop , load or run unpack extensions (apps that are not in the app store yet), you have to [whitelist](../start/sdk-introduction#whitelist-you-as-a-developer) yourself before developing OW apps.
 :::
 
 ## Developers Version
