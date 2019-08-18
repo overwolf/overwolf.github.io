@@ -14,9 +14,9 @@ Our platform is created for you, and we’ve come up with multiple ways to reduc
 
 ## What’s on this website?
 
-While we are here to answer any questions and support your success, our new developer website has everything you need to start working on your app right away.
+While we are here to answer any questions and support your success, our developer website has everything you need to start working on your app right away.
 
-The left-hand side menu has detailed instructions for every stage of the project, from submitting a concept all the way to optimizing your app after release. You may also find our [full documentation](../topics/best-practices-overview) as well as a [detailed break-down of APIs](../api/overwolf-api-overview) in the top menu.
+The left-hand side menu has detailed instructions for every stage of the project, from [submitting a concept](submit-app-proposal) all the way to optimizing your app after release. You may also find our [full documentation](../topics/best-practices-overview) as well as a [detailed break-down of APIs](../api/overwolf-api-overview) in the top menu.
 
 ## Commitment to feedback
 

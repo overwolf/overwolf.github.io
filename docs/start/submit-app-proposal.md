@@ -18,7 +18,7 @@ To help you prepare a kick-ass proposal, here’s what we recommend you do first
 
 * **Review what’s already out there.**
 
-[Look over the apps in our Appstore](overwolf.com/appstore), especially the ones most similar to your proposed idea. Think of what your app can do better, or what it can offer that other apps don’t.
+[Look over the apps in our Appstore](https://www.overwolf.com/appstore), especially the ones most similar to your proposed idea. Think of what your app can do better, or what it can offer that other apps don’t.
 
 * **Review our documentation**
 

@@ -16,9 +16,11 @@ An Overwolf app has three main parts:
 
 1. HTML / javascript source files.
 2. A manifest file (manifest.json), containing the properties of the app.
-3. Visuals and images associated with the app (buttons for example).
+3. Visuals and images associated with the app (icons and buttons for example).
 
+:::important
 Note that **only JS frameworks are supported** (vue.js, angular.js, react, backbone.js, etc.) but not full-blown desktop application solutions such as NW.js, electron.js, AppJS, etc.
+:::
 
 ### Safety & Security
 
@@ -38,7 +40,7 @@ For example, getting in-game events that happen during play (kill, death,etc.), 
 
 ### Overwolf Plugins
 
-You can add even more features to your app by using one of our plugins, like the [simple I/O plugin](../topics/simple-io-plugin) for reading files from the local disk, or even creating your own plugin:
+You can add even more features to your app by using one of our [plugins](../topics/plugins-overview), like the [simple I/O plugin](../topics/simple-io-plugin) for reading files from the local disk, or even creating your own plugin: 
 
 You can leverage existing C/C++/C# code, wrap it inside an Overwolf Plugin DLL file and interact with it via your Overwolf app.
 
