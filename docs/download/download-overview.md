@@ -12,12 +12,15 @@ The difference between the developer version and the public version is defined b
 (e.g C:\ProgramData\Overwolf\Setup\SetupInfo.ini).
 
 :::important
- Note that you will have to whitelist yourself before developing OW apps
+ Note that you will have to [whitelist](../start/sdk-introduction#whitelist-you-as-a-developer) yourself before developing OW apps
 :::
 
 ## Developers Version
 
 * Download the [Latest Overwolf Developers Version](https://download.overwolf.com/install/Download?Name=Game+Summary&ExtensionId=flkgdpkkjcoapbgmgpidhepajgkhckpgpibmlclb&Channel=developers).
+
+* If you are a developer, it doesn't mean that you have to work with the Developer version. The only difference between this version and the Public version is that the developer's version includes some new features that are still in beta.
+
 
 ## Public Version
 

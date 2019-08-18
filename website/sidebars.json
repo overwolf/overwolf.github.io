@@ -1,7 +1,7 @@
 {
 	"start": {
 		"Getting Started": 
-			["start/getting-started", "start/app-creation-process", "start/submit-app-proposal", "start/sdk-introduction", "start/creating-demo-app", 
+			["start/getting-started", "start/app-creation-process", "start/submit-app-proposal", "start/sdk-introduction", 
 			{
                 "type": "subcategory",
                 "label": "Sample app",

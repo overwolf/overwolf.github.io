@@ -45,9 +45,9 @@ A colored icon for the same button mentioned above when it is selected or mouse-
 
 * The launcher icon should weigh less than 150Kb.
 
-### The “Files” folder
-A folder containing your app’s code. Make sure your manifest pathing is correct. 
+### The “Files” folder  should contain
 
+A folder containing your app’s code. Make sure your manifest pathing is correct. 
 
 ### The “store” folder should contain
 
