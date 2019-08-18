@@ -86,3 +86,19 @@ The queueID of the currently chosen game mode. Example:
 
 * You can find here a [list of possible queue ids](https://developer.riotgames.com/game-constants.html). 
 * 1090 is the queueID of TFT mode.
+
+## `end_game`
+
+### Info Updates
+
+key   | Category    | Values                    | Notes                 | Since Version |
+------| ------------| ------------------------- | --------------------- | ------------- |
+EndOfGame | end_game_tft| See [notes](#EndOfGame-note) |                |   134.0       |
+
+#### *EndOfGame* note
+
+Data Example:
+
+```json
+{"launcherClassId":10902,"feature":"game_flow","info":{"game_flow":{"phase":"EndOfGame"}}}
+```
