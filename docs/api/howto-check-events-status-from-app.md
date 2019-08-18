@@ -56,14 +56,14 @@ If your app using Overwolf game events, we highly recommend to check the health 
 To get the event’s health status for a specific game, you can query this endpoint, that returns a JSON with all the events statuses for a particular game:
 
 ```json
-developers.overwolf.com/game-events/[your Game ID]_prod.json
+https://game-events-status.overwolf.com/[your Game ID]_prod.json
 ```
 
 Note that you should add your Game ID to this endpoint.  
 For example, to get the LOL (Game ID 5426) event’s health status, you should call:
 
 ```json
-https://developers.overwolf.com/game-events/5426_prod.json
+https://game-events-status.overwolf.com/5426_prod.json
 ```
 
 #### Data Example: Success
