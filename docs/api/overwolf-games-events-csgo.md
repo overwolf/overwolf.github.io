@@ -238,7 +238,7 @@ Data Example:
     "feature":"roster",
     "category":"roster",
     "key":"lobby",
-    "value":"{\"lobby_players\" : [{\"steamId\" : \"76561198269560618\"}]}"}
+    "value":"{"lobby_players\" : [{"steamId\":"76561198269560618"}]}"}
 ```
 
 #### *match* note
@@ -255,8 +255,8 @@ Data Example:
     "feature":"roster",
     "category":"roster",
     "key":"match",
-    "value":"{\"players\" : [
-            {\"steamId\" : \"76561198364007097\",\"team\" : \"Counter-Terrorists\"},{\"steamId\" : \"76561198389957131\",\"team\" : \"Counter-Terrorists\"}
+    "value":"{"players" : [
+            {"steamId":"76561198364007097","team":"Counter-Terrorists"},{"steamId":"76561198389957131","team": "Counter-Terrorists"}
     ]}"}
 ```
 
@@ -276,8 +276,8 @@ A list containing the URL address of all available replays that are currently st
 
 Data Example:
 
-`{"category":"game_info","key":"replays_list","value":"{\"replays\" : [{\"link\" : \"steam://rungame/730/76561202255233023/+csgo_download_match%20CSGO-dVoC5-kwY8k-LCb3J-wCiMw-CrahQ\",\"order\" : \"0\"},{\"link\" : \"steam://rungame/730/76561202255233023/+csgo_download_match%20CSGO-myDzD-AOTzm-wYZzH-bCmrA-JebRF\",\"order\" : \"1\"}]}","valueLength":261}
-16:06:54.359 InfoDBContainer.js:69 [InfoDBContainer] UPDATING INFO (decoded): {"feature":"replay","category":"replay","key":"replay_list","value":"[\"steam://rungame/730/76561202255233023/+csgo_download_match CSGO-dVoC5-kwY8k-LCb3J-wCiMw-CrahQ\",\"steam://rungame/730/76561202255233023/+csgo_download_match CSGO-myDzD-AOTzm-wYZzH-bCmrA-JebRF\"]"}`
+`{"category":"game_info","key":"replays_list","value":"{"replays":[{"link": "steam://rungame/730/76561202255233023/+csgo_download_match%20CSGO-dVoC5-kwY8k-LCb3J-wCiMw-CrahQ","order":"0"},{"link": "steam://rungame/730/76561202255233023/+csgo_download_match%20CSGO-myDzD-AOTzm-wYZzH-bCmrA-JebRF","order":"1"}]}","valueLength":261}
+16:06:54.359 InfoDBContainer.js:69 [InfoDBContainer] UPDATING INFO (decoded): {"feature":"replay","category":"replay","key":"replay_list","value":"["steam://rungame/730/76561202255233023/+csgo_download_match CSGO-dVoC5-kwY8k-LCb3J-wCiMw-CrahQ","steam://rungame/730/76561202255233023/+csgo_download_match CSGO-myDzD-AOTzm-wYZzH-bCmrA-JebRF"]"}`
 
 ## `counters`
 
