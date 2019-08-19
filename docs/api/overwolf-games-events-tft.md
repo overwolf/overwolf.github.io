@@ -21,6 +21,10 @@ Please read the [overwolf.games.events](overwolf-games-events) documentation pag
 * [me](#me)
 * [match_info](#match_info)
 * [roster](#roster)
+* [store](#store)
+* [board](#board)
+* [bench](#bench)
+* [carousel](#carousel)
 
 ## `me`
 
@@ -28,11 +32,11 @@ Please read the [overwolf.games.events](overwolf-games-events) documentation pag
 
 key                 | Category      | Values                                                   | Notes                                               | Since Version |
 ------------------- |---------------| -------------------------------------------------------- | --------------------------------------------------- | ------------- |
-summoner_name       | me            | Name of local player. See [notes](#summoner_name-notes) |                                                      |   0.133       |
-xp                  | me            | Current player level, current xp points, and total xp points to next level. See [notes](#xp-notes)  |          |   0.133       |
-health              | me            | The amount of health points of the player.See [notes](#health-notes) |                                         |   0.133       |
-rank                | me            | The current standing of the player. See [notes](#rank-notes)       |                                           |   0.133       |
-gold                | me             | The local player's amount of gold in hand.  See [notes](#gold-notes) |                                        |   0.133       |
+summoner_name       | me            | Name of local player.  |  See [notes](#summoner_name-note) |   0.133       |
+xp                  | me            | Current player level, current xp points, and total xp points to next level.   | See [notes](#xp-note) |   0.133       |
+health              | me            | The amount of health points of the player. |  See [notes](#health-notes) |   0.133       |
+rank                | me            | The current standing of the player.        |   See [notes](#rank-notes)  |   0.133       |
+gold                | me             | The local player's amount of gold in hand.   | See [notes](#gold-notes) |   0.133       |
 
 #### *summoner_name* notes
 
@@ -72,13 +76,13 @@ Data example:
 
 key             | Category   | Values                                                                 | Notes                 | Since Version |
 --------------- | -----------| -----------------------------------------------------------------------| ----------------------| ------------- |
-pseudo_match_id | match_info | The current session’s ID code. See [notes](#pseudo_match_id-notes)     |                       |   0.133       |
-battle_state | match_info | Boolean. Whether a battle is in progress. See [notes](#battle_state-notes)|                       |   0.133       |
-match_state | match_info | Boolean. Whether a match is in progress. See [notes](#match_state-notes)   |                       |   0.133       |
-round_type | match_info | Round is PvE/PvP, or Carousel (Also stage number). See [notes](#round_type-notes) |                 |   0.133       |
-round_outcome | match_info | The outcome of the previous round. See [notes](#round_outcome-notes)     |                       |   0.133       |
-opponent | match_info | The name of the opponents. See [notes](#opponent-notes)                       |                       |   0.133       |
-game_mode | match_info | Whether the current game mode is TFT or default LoL. See [notes](#game_mode-notes) |                 |   0.133       |
+pseudo_match_id | match_info | The current session’s ID code.      |See [notes](#pseudo_match_id-note)|   0.133       |
+battle_state | match_info | Boolean. Whether a battle is in progress. |See [notes](#battle_state-note)|   0.133       |
+match_state | match_info | Boolean. Whether a match is in progress.    |See [notes](#match_state-note)|   0.133       |
+round_type | match_info | Round is PvE/PvP, or Carousel (Also stage number).  |See [notes](#round_type-note)|   0.133       |
+round_outcome | match_info | The outcome of the previous round.      |See [notes](#round_outcome-note)|   0.133       |
+opponent | match_info | The name of the opponents.                        |See [notes](#opponent-note)|   0.133       |
+game_mode | match_info | Whether the current game mode is TFT or default LoL.  |See [notes](#game_mode-note)|   0.133       |
 
 #### *pseudo_match_id* notes
 
@@ -131,12 +135,12 @@ Data example:
 
 Event       | Event Data                        | Fired When                                                             | Notes              | Since Version |
 ------------| ----------------------------------| ---------------------------------------------------------------------- | ------------------ | --------------|
-round_start | "PVE"/"PVP"/"carousel"            | One round passes and another begins. See [notes](#round_start-notes)   |                    |     0.133     |
-round_end   | null                              | At the round's end. See [notes](#round_end-notes)                      |                    |     0.133     |
-battle_start| "PVP"/"PVE"                       | The start of the battle vs an opponent or AI.  See [notes](#battle_start-notes) |           |     0.133     |
-battle_end  | null                              | The end of the battle vs an opponent or AI. See [notes](#battle_end-notes)  |               |     0.133     |
-match_start | null                              | Beginning of the TFT match. See [notes](#match_start-notes)            |                    |     0.133     |
-match_end   | null                              | Ending of the TFT match. See [notes](#match_end-notes)                 |                    |     0.133     |
+round_start | "PVE"/"PVP"/"carousel"            | One round passes and another begins.    |See [notes](#round_start-note)|     0.133     |
+round_end   | null                              | At the round's end.                       |See [notes](#round_end-note)|     0.133     |
+battle_start| "PVP"/"PVE"                       | The start of the battle vs an opponent or AI.   |See [notes](#battle_start-note)|     0.133     |
+battle_end  | null                              | The end of the battle vs an opponent or AI.   |See [notes](#battle_end-note)|     0.133     |
+match_start | null                              | Beginning of the TFT match.             |See [notes](#match_start-note)|     0.133     |
+match_end   | null                              | Ending of the TFT match.        |See [notes](#match_end-note)|     0.133     |
 
 #### *round_start* notes
 
@@ -181,7 +185,7 @@ Data example:
 
 key            | Category    | Values                                                                               | Notes    | Since Version |
 -------------- | ------------| -------------------------------------------------------------------------------------| -------- | ------------- |
-player_status  | roster      | A full list of the players currently in the match. [See notes](#player_status-notes) |          |   0.133       |
+player_status  | roster      | A full list of the players currently in the match.  |[See notes](#player_status-note)|   0.133       |
 
 #### *player_status* notes
 
@@ -265,3 +269,235 @@ Data example:
 }
 ```
 
+## `store`
+
+### Info Updates
+
+key            | Category    | Values                           | Notes                    | Since Version |
+-------------- | ------------| ---------------------------------|--------------------------|---------------|
+shop_pieces    |    store    | Available champion for purchase. | [See notes](#shop_pieces-note) |  0.134  |
+
+#### *shop_pieces* note
+
+Once you purchase a champion, there will be a new update which indicates "Sold" for a purchased slot.
+
+Data Example:
+
+```json
+{  
+   "info":{  
+      "store":{  
+         "shop_pieces":"{
+         "slot_1":{  
+            "name":"TFT_Blitzcrank"
+         },
+         "slot_2":{  
+            "name":"TFT_Garen"
+         },
+         "slot_3":{  
+            "name":"TFT_Nidalee"
+         },
+         "slot_4":{  
+            "name":"TFT_Mordekaiser"
+         },
+         "slot_5":{  
+            "name":"TFT_Ahri"
+         }
+      }      "}},"feature":"store"
+   }
+
+{  
+   "info":{  
+      "store":{  
+         "shop_pieces":"{
+         "slot_1":{  
+            "name":"TFT_Blitzcrank"
+         },
+         "slot_2":{  
+            "name":"Sold"
+         },
+         "slot_3":{  
+            "name":"TFT_Nidalee"
+         },
+         "slot_4":{  
+            "name":"TFT_Mordekaiser"
+         },
+         "slot_5":{  
+            "name":"TFT_Ahri"
+         }
+      }      "}},"feature":"store"
+   }
+
+```
+
+## `board`
+
+### Info Updates
+
+key            | Category    | Values                           | Notes                    | Since Version |
+-------------- | ------------| ---------------------------------|--------------------------|---------------|
+board_pieces   |    board    | The exact position of each chess-piece on the board. | [See notes](#board_pieces-note) |  0.134  |
+
+#### *board_pieces* note
+
+Data Example:
+
+```json
+{  
+   "info":{  
+      "board":{  
+         "board_pieces":"{
+         "cell_10":{  
+            "name":"TFT_Vayne",
+            "level":"0",
+            "item_1":"0",
+            "item_2":"0",
+            "item_3":"0"
+         },
+         "cell_11":{  
+            "name":"TFT_Camille",
+            "level":"0",
+            "item_1":"0",
+            "item_2":"0",
+            "item_3":"0"
+         },
+         "cell_16":{  
+            "name":"TFT_Fiora",
+            "level":"0",
+            "item_1":"0",
+            "item_2":"0",
+            "item_3":"0"
+         },
+         "cell_17":{  
+            "name":"TFT_Garen",
+            "level":"0",
+            "item_1":"0",
+            "item_2":"0",
+            "item_3":"0"
+         }
+      }      "}},"feature":"board"
+   }
+```
+
+<b>Currently "level" and "item" are NOT available/accurate</b>
+
+## `bench`
+
+### Info Updates
+
+key            | Category    | Values                           | Notes                    | Since Version |
+-------------- | ------------| ---------------------------------|--------------------------|---------------|
+bench_pieces   |    bench    | The exact position of each chess-piece on the bench. | [See notes](#bench_pieces-note) |  0.134  |
+
+#### *bench_pieces* note
+
+Data Example:
+
+```json
+{  
+   "info":{  
+      "bench":{  
+         "bench_pieces":"{
+         "slot_1":{  
+            "name":"TFT_Lucian",
+            "level":"0",
+            "item_1":"0",
+            "item_2":"0",
+            "item_3":"0"
+         },
+         "slot_2":{  
+            "name":"TFT_Camille",
+            "level":"0",
+            "item_1":"0",
+            "item_2":"0",
+            "item_3":"0"
+         },
+         "slot_3":{  
+            "name":"TFT_Camille",
+            "level":"0",
+            "item_1":"0",
+            "item_2":"0",
+            "item_3":"0"
+         },
+         "slot_4":{  
+            "name":"TFT_Vayne",
+            "level":"0",
+            "item_1":"0",
+            "item_2":"0",
+            "item_3":\"0"
+         },
+         "slot_9":{  
+            "name":"TFT_Nidalee",
+            "level":"0",
+            "item_1":"0",
+            "item_2":"0",
+            "item_3":"0"
+         }
+      }      "}},"feature":"bench"
+   }
+```
+
+<b>Currently "level" and "item" are NOT available/accurate</b>
+
+## `carousel`
+
+### Info Updates
+
+key            | Category    | Values                           | Notes                    | Since Version |
+-------------- | ------------| ---------------------------------|--------------------------|---------------|
+carousel_pieces   |   carousel  | Names of available champions in the carousel. | [See notes](#carousel_pieces-note) |  0.134  |
+
+#### *carousel_pieces* note
+
+Data Example:
+
+```json
+{  
+   "info":{  
+      "carousel":{  
+         "carousel_pieces":"{
+         "slot_1":{  
+            "name":"TFT_Morgana",
+            "item_1":"0"
+         },
+         "slot_2":{  
+            "name":"TFT_Lissandra",
+            "item_1":"0"
+         },
+         "slot_3":{  
+            "name":"TFT_Rengar",
+            "item_1":"0"
+         },
+         "slot_4":{  
+            "name":"TFT_Veigar",
+            "item_1":"0"
+         },
+         "slot_5":{  
+            "name":"TFT_Gangplank",
+            "item_1":"0"
+         },
+         "slot_6":{  
+            "name":"TFT_Zed",
+            "item_1":"0"
+         },
+         "slot_7":{  
+            "name":"TFT_Brand",
+            "item_1":"0"
+         },
+         "slot_8":{  
+            "name":"TFT_Graves",
+            "item_1":"0"
+         },
+         "slot_9":{  
+            "name":"TFT_Gnar",
+            "item_1":"0"
+         },
+         "slot_10":{  
+            "name":"TFT_Chogath",
+            "item_1":"0"
+         }
+      }      "}},"feature":"carousel"
+   }
+```
+
+<b>Currently "level" and "item" are NOT available/accurate</b>
