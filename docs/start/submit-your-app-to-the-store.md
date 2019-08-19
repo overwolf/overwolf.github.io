@@ -5,13 +5,13 @@ sidebar_label: App Submission Basics
 ---
 
 
-So you’re done developing your app and it's time to submit it for review and later on - to go live on the in-game Appstore. First thing's first - Congratulations!
+So, you’re done developing your app and it's time to submit it for review to go live on the in-game Appstore. First thing's first - Congratulations!
 
 In this page we'll detail how you can submit your app and set yourself up for approval.
 
 ## Support page
 
-Before your new app can go live, you **must** create a customer support page for it. More details about building support pages for your app can found [here](add-a-knowledge-base-to-app).
+Before your new app can go live, you **must** create a customer support page for it. We've put together advice and instructions on building support pages for your app [here](add-a-knowledge-base-to-app).
 
 ## How to Submit an App
 
