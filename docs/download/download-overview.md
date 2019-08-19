@@ -10,7 +10,7 @@ If you are a developer, it doesn't mean that you have to work with the Developer
 
 :::important
 To develop , load or run unpack extensions (apps that are not in the app store yet), you have to [whitelist](../start/sdk-introduction#whitelist-you-as-a-developer) yourself before developing OW apps.
-:::
+::: 
 
 ## Developers Version
 
