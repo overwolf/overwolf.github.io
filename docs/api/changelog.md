@@ -8,6 +8,9 @@ All notable changes to this project will be documented in this file.
 
 ## Version 134 (August 2019)
 
+* [League of Legends Launcher Events](https://overwolf.github.io/docs/api/overwolf-games-launchers-events-lol#docsNav)
+  * New info update:
+    * end_game
 * [Hearhstone game events](https://overwolf.github.io/docs/api/overwolf-games-events-heartstone#docsNav)
   * New info updates/events:
     * match_type
