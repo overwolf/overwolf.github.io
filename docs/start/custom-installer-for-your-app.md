@@ -4,7 +4,7 @@ title: Custom Installer
 sidebar_label:  Custom Installer
 ---
 
-### Customizing Your App Installer
+## Customizing Your App Installer
 Installers used to be uniform, identical for all apps. Following your feedback, we’re unlocking them for your design and personalization. Each app can now get its own welcome and “installation summary” screens, so that your installation experience is in tune and feels like a part of your app.
 
 <div class="box" data-slick='{"slidesToShow": 2}'>
@@ -24,7 +24,7 @@ Installers used to be uniform, identical for all apps. Following your feedback, 
 
 This feature is a step in our quest to give you the best solutions for engaging with gamers. You can even create your own tray icon with the new windows.os API!
 
-### Upcoming features
+## Upcoming features
 We're planning to expand on this functionality, and enable full installer customization including texts and custom visuals! We expect this next level of customization to become available around September this year. Stay tuned for updates here and through newsletters!
 
 For those who want to start planning your custom installer, see the image below - the parts marked in red are the ones you will be able to change. Think about using the space to showcase features, present your team or partners, or announce activities your users should know about - these messages will be under your control to be changed on the fly. 
