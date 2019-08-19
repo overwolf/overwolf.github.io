@@ -41,13 +41,13 @@ players      | roster      |A string holding a JSON array of player objects.|See
 Data Example:
 
 ```json
-"{\"steamId\":\"76561198296251542\",\"name\":\"A.S.Lexx\",\"pickConfirmed\"
-:true,\"hero\":\"wisp\",\"team\":11},
-{\"steamId\":\"76561198045142971\",\"name\":\"Klide\",\"pickConfirmed\"
-:true,\"hero\":\"wisp\",\"team\":9},
+"{"steamId":"76561198296251542","name":"A.S.Lexx","pickConfirmed"
+:true,"hero":"wisp","team":11},
+{"steamId":"76561198045142971","name":"Klide","pickConfirmed"
+:true,"hero":"wisp","team":9},
 ...
-{\"steamId\":\"76561198013211988\",\"name\":\"PORQUEOUTAI\",\"pickConfirmed\
-":true,\"hero\":\"wisp\",\"team\":12}"
+{"steamId":"76561198013211988","name":"PORQUEOUTAI","pickConfirmed
+":true,"hero":"wisp","team":12}"
 ```
 Player object structure:
 ```json
@@ -94,8 +94,8 @@ cell_x| match_info  |The chess pieces that are currently on the first row, below
 Data Example:
 
 ```json
-{"info":{"match_info":{"cell_1":"{\"name\":\"mars\",\"level\":\"1\"}"}},"feature":"bench"}
-{"info":{"match_info":{"cell_2":"{\"name\":\"tuskarr\",\"level\":\"1\"}"}},"feature":"bench"}
+{"info":{"match_info":{"cell_1":"{"name":"mars","level":"1"}"}},"feature":"bench"}
+{"info":{"match_info":{"cell_2":"{"name":"tuskarr","level":"1"}"}},"feature":"bench"}
 ```
 
 Note: This information is for each bench slot (slots  1-8).
@@ -117,7 +117,9 @@ The provided info for each cell is:
 
 Data Example:
 
-`{"info":{"match_info":{"cell_3_3":"{\"name\":\"beastmaster\",\"level\":\"2\"}"}},"feature":"board"}`
+```json
+{"info":{"match_info":{"cell_3_3":"{"name":"beastmaster","level":"2"}"}},"feature":"board"}
+```
 
 Notes:
 
@@ -139,7 +141,9 @@ roundNumber  | match_info  |The numeric indication of the current round.|See [no
 
 Data Example:
 
-`{"info":{"match_info":{"roundNumber":"4"}},"feature":"roundNumber"}`
+```json
+{"info":{"match_info":{"roundNumber":"4"}},"feature":"roundNumber"}
+```
 
 ## `roundOutcome`
 
@@ -160,13 +164,17 @@ roundOutcome|victory/defeat|Winning or losing the round|                    |   
 
 Data Example:
 
-`{"info":{"match_info":{"totalWon":"2"}},"feature":"roundOutcome"}`
+```json
+{"info":{"match_info":{"totalWon":"2"}},"feature":"roundOutcome"}
+```
 
 #### *totalLost* note
 
 Data Example:
 
-`{"info":{"match_info":{"totalLost":"2"}},"feature":"roundOutcome"}`
+```json
+{"info":{"match_info":{"totalLost":"2"}},"feature":"roundOutcome"}
+```
 
 ## `autochess_loading`
 
