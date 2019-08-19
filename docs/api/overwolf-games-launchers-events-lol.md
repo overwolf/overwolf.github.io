@@ -24,6 +24,7 @@ if the  game launcher wasn't closed by the user, it is possible to access the ga
 * [summoner_info](#summoner-info)
 * [champ_select](#champ-select)
 * [lobby_info](#lobby-info)
+* [end_game](#end_game)
 
 ## `game_flow`
 
