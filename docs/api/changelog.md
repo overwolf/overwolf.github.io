@@ -6,6 +6,12 @@ sidebar_label: Changelog
 
 All notable changes to this project will be documented in this file.
 
+## Version 135 (August 2019)
+
+* [CS: GO events](https://overwolf.github.io/docs/api/overwolf-games-events-csgo#docsNav)
+  * New info update:
+    * server_info
+
 ## Version 134 (August 2019)
 
 * [Teamfight Tactics Events](https://overwolf.github.io/docs/api/overwolf-games-events-tft#docsNav)
