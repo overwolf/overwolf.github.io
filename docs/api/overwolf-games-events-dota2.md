@@ -174,7 +174,7 @@ Event Data:
 
 * <b>ward_purchase_cooldown</b> – The cooldown, in seconds, until wards are available for purchase again. 
 
-## `match_ended `
+## `match_ended`
 
 ### Events
 
@@ -182,7 +182,7 @@ Event       | Event Data   | Fired When    | Notes              | Since Version 
 ------------| -------------| --------------| ------------------ | --------------|
 match_ended   | winner – radiant/dire  |When the game ends (an ancient is destroyed).  |       |     77.3      |
 
-## `kill `
+## `kill`
 
 ### Events
 
@@ -198,7 +198,7 @@ Event Data:
 * <b>kill_streak</b> – The current number of kills without dying to an enemy champion (denying oneself does not reset this counter).
 * <b>label</b> – the type of kill (kill/double_kill/triple_kill/ultra_kill/rampage)
 
-## `assist `
+## `assist`
 
 ### Events
 
@@ -238,7 +238,7 @@ Event       | Event Data   | Fired When    | Notes              | Since Version 
 ------------| -------------| --------------| ------------------ | --------------|
 xpm |xpm – The current XPM. |Whenever the XPM changes. |          |     77.3      |
 
-## `gpm `
+## `gpm`
 
 ### Events
 
@@ -496,10 +496,10 @@ draft           | roster      | A string holding a JSON array of bans objects.|S
 Data Example:
 
 ```json
-"[{\"steamId\":\"90071996842377219\",\"name\":\"Alfred Bot\",\"team\":2,\"hero\":43},
-{\"steamId\":\"90071996842377217\",\"name\":\"Benjamin Bot\",\"team\":0,\"hero\":0},
+"[{"steamId":"90071996842377219","name":"Alfred Bot","team":2,"hero":43},
+{"steamId":"90071996842377217","name":"Benjamin Bot","team":0,"hero":0},
 ...
-{\"steamId\":\"90071996842377216\",\"name\":\"Monty Bot\",\"team\":2,\"hero\":47}]"
+{"steamId":"90071996842377216","name":"Monty Bot","team":2,"hero":47}]"
 ```
 
 Player object structure:
@@ -525,7 +525,7 @@ Notes:
 
 Data Example:
 
-`"[ {\"heroId\": 90 , \"team\" : 2} , ... , {...} ]"`
+`"[ {"heroId": 90 , "team" : 2} , ... , {...} ]"`
 
 Bans object structure:
 
@@ -548,7 +548,9 @@ Notes:
 
 Data Example:
 
-`"[{"heroId": 56 , "team" : 3},{"heroId": 69 , "team" : 2},{"heroId": 101 , "team" : 2},{"heroId": 28 , "team" : 3}]"`
+```json
+"[{"heroId": 56 , "team" : 3},{"heroId": 69 , "team" : 2},{"heroId": 101 , "team" : 2},{"heroId": 28 , "team" : 3}]"
+```
 
 Draft object structure:
 
@@ -580,10 +582,10 @@ party   | party  |A string holding a JSON array of player objects.|See [notes](#
 Data Example:
 
 ```json
-"[{\"steamId\":steamId 1,\"isLeader\":true,\"isCoach\":false},
-{\"steamId\":steamId 2,\"isLeader\":false,\"isCoach\":false},
+"[{"steamId":steamId 1,"isLeader":true,"isCoach":false},
+{"steamId":steamId 2,"isLeader":false,"isCoach":false},
  ... ,
-{\"steamId\":steamId N,\"isLeader\":true,\"isCoach\":true}
+{"steamId":steamId N,"isLeader":true,"isCoach":true}
 ]"
 ```
 
@@ -619,4 +621,6 @@ plugin_error   | error  |This info update fires when the plugin is not initializ
 
 Data Example:
 
-`{"feature":"error","category":"error","key":"plugin_error","value":"failed_initializing_monitor"}`
+```json
+{"feature":"error","category":"error","key":"plugin_error","value":"failed_initializing_monitor"}
+```
