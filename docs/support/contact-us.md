@@ -4,7 +4,7 @@ title: Contact Us
 sidebar_label: Contact Us
 ---
 
-## Send Us an email
+## Send us an email
 
 For any of your needs, we’ll be happy to hear you out via email: [developers@overwolf.com](mailto:developers@overwolf.com).
 
