@@ -44,7 +44,7 @@ key          | Category    | Values                    | Notes                 |
 matchStarted | game_info   | true/false (string)       |                       |   0.140       |
 matchOutcome | game_info   | win/lose                  |                       |   0.140       |
 matchId      | game_info   | The current match id      |  `matchId:3828196424` |   0.120       |
-queueId      | game_info   | The current match queue id|  `queueId:440`        |   0.120       |
+queueId      | game_info   | The current match [queue id](https://developer.riotgames.com/game-constants.html)|  `queueId:440`        |   0.120       |
 
 ### Events
 
