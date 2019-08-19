@@ -76,7 +76,9 @@ team_info| match_info | The current status of the local player’s team (```"act
 
 Each member from your squad that joins the game will be reported in the following way: 
 
-`{"info":{"match_info":{"teammate_0":"{\"name\":\"Sh4rgaas\",\"state\":\"alive\"}"}},"feature":"team"}`
+```json
+{"info":{"match_info":{"teammate_0":"{"name":"Sh4rgaas","state":"alive"}"}},"feature":"team"}
+```
 
 As  youcan see, this object includes:
 
@@ -87,7 +89,9 @@ As  youcan see, this object includes:
 
 Every member in the team, including who is the jump-master will be reported in the following way:
 
-`{"feature":"team","category":"match_info","key":"legendSelect_2","value":"{\"playerName\":\"Sh4rgaas\",\"legendName\":\"#character_octane_NAME\",\"selectionOrder\":\"2\",\"lead\":true}"}`
+```json
+{"feature":"team","category":"match_info","key":"legendSelect_2","value":"{"playerName":"Sh4rgaas","legendName":"#character_octane_NAME","selectionOrder":"2","lead":true}"}
+```
 
 As you can see, this object includes:
 
@@ -107,7 +111,9 @@ roster_XX  | match_info  | This feature provides the entire list of players (~60
 
 Each player that joins the game will be reported in the following way:
 
-`{"info":{"match_info":{"roster_3":"{\"name\":\"RunLikePistorius\",\"isTeammate\":false}"}},"feature":"roster"}`
+```json
+{"info":{"match_info":{"roster_3":"{"name":"RunLikePistorius","isTeammate":false}"}},"feature":"roster"}
+```
 
 As you can see, this object includes:
 
@@ -131,7 +137,9 @@ location  | game_info  | See example below  |             |  0.130        |
 
 #### Event data example
 
-`{"info":{"match_info":{"location":"{\"x\":\"93\",\"y\":\"305\",\"z\":\"49\"}"}},"feature":"location"}`
+```json
+{"info":{"match_info":{"location":"{"x":"93","y":"305","z":"49"}"}},"feature":"location"}
+```
 
 ## `rank`
 
@@ -158,7 +166,9 @@ The following info is provided:
 
 #### Event data example
 
-`{"feature":"match_summary","category":"match_info","key":"match_summary","value":"{\"rank\":\"12\",\"teams\":\"20\",\"squadKills\":\"5\"}"}`
+```json
+{"feature":"match_summary","category":"match_info","key":"match_summary","value":"{"rank":"12","teams":"20","squadKills":"5"}"}
+```
 
 ## `damage`
 
@@ -174,7 +184,9 @@ Important to note that the game does not count damage that is inflicted on Armor
 
 #### Event data example
 
-`{"feature":"damage","category":"me","key":"totalDamageDealt","value":668}`
+```json
+{"feature":"damage","category":"me","key":"totalDamageDealt","value":668}
+```
 
 ### Events
 
@@ -194,7 +206,9 @@ The following properties are provided:
 
 #### Event data example
 
-`{"name":"damage","data":"{\r\n \"targetName\": \"masiqu22\",\r\n \"damageAmount\": \"13.000000\",\r\n \"armor\": \"true\",\r\n \"headshot\": \"false\"\r\n}"}`
+```json
+{"name":"damage","data":"{rn"targetName":"masiqu22",rn"damageAmount":"13.000000",rn"armor":"true",rn "headshot":"false"rn}"}
+```
 
 ## `inventory`
 
@@ -202,9 +216,9 @@ The following properties are provided:
 
 key                | Category    | Values                                         | Notes  | Since Version |
 -------------------| ------------| -----------------------------------------------| ------ | ------------- | 
-inventory_XX        | me   | The items that are picked up into the inventory slots of the local player (Tab).</br>Example:</br>`{"feature":"inventory","category":"me","key":"inventory_0","value":"{\"name\":\"Shotgun Shells\",\"amount\":\"36\"}"}`   |        |    0.130      |
-weapons | me   | The weapons that are currently used by the local player (only 2 slots are available – 0 & 1).</br>Example:</br>`{"category":"game_info","key":"weapons","value":"{\"weapon_0\":\"mp_weapon_shotgun_pistol\",\"weapon_1\":\"mp_weapon_doubletake\",\"active_0\":\"mp_weapon_doubletake\"}","valueLength":107}` |        |    0.130      |
-inUse | me   | Any item that is <u>currently used</u> by the local player.</br>Example:</br>`{"feature":"inventory","category":"me","key":"inUse","value":"{\"inUse\":\"Triple Take\"}"}` |        |    0.130      |
+inventory_XX        | me   | The items that are picked up into the inventory slots of the local player (Tab).</br>Example:</br>`{"feature":"inventory","category":"me","key":"inventory_0","value":"{"name":"Shotgun Shells","amount":"36"}"}`   |        |    0.130      |
+weapons | me   | The weapons that are currently used by the local player (only 2 slots are available – 0 & 1).</br>Example:</br>`{"category":"game_info","key":"weapons","value":"{"weapon_0":"mp_weapon_shotgun_pistol","weapon_1":"mp_weapon_doubletake","active_0":"mp_weapon_doubletake"}","valueLength":107}` |        |    0.130      |
+inUse | me   | Any item that is <u>currently used</u> by the local player.</br>Example:</br>`{"feature":"inventory","category":"me","key":"inUse","value":"{"inUse":"Triple Take"}"}` |        |    0.130      |
 
 ## `kill`
 
@@ -214,7 +228,7 @@ Event        | Event Data                        | Fired When   | Notes         
 -------------| ----------------------------------| ----------------------------- | ------------------ | --------------|
 kill | victimName                              | The local player killed another player |                    |     0.130      | 
 knockdown | victimName                              | The local player knocked out another player |                    |     0.130      | 
-assist | victimName                              | The local player participated in a team member’s kill.</br></br>Provided values:</br>1. victimName</br>2. type - knockdown / elimination</br></br>Example:</br></br>`{"name":"assist","data":"{\r\n  \"victimName\": \"VioletAlbicocca\",\r\n  \"type\": \"knockdown\"\r\n}"}` |                    |     0.130      | 
+assist | victimName                              | The local player participated in a team member’s kill.</br></br>Provided values:</br>1. victimName</br>2. type - knockdown / elimination</br></br>Example:</br></br>`{"name":"assist","data":"{rn"victimName": "VioletAlbicocca",rn"type":"knockdown"rn}"}` |                    |     0.130      | 
 
 ## `revive`
 
