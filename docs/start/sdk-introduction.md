@@ -4,36 +4,34 @@ title: Overwolf SDK Introduction
 sidebar_label: SDK Introduction
 ---
 
-Overwolf has an SDK that unlocks new kinds of in-game app development.
-
-The documents listed in the left-hand side navigation bar have all the information you need to create apps using Overwolf’s diverse [APIs](../api/overwolf-api-overview).
+Overwolf's SDK unlocks entirely new kinds of in-game app development, and the documents listed in the left-hand side navigation bar have all the information you need to create apps using Overwolf’s diverse [APIs](../api/overwolf-api-overview). To get you started, here are some important basics:
 
 ## Whitelist you as a developer
 
-Only whitelisted Overwolf developers allows to load or install apps not directly from the Overwolf store. If you are not whitelisted you will not be able to run or install such an apps.
+Only whitelisted Overwolf developer accounts can load or install apps not available on the Overwolf store, including unreleased beta versions. If you are not whitelisted you will not be able to run or install such an apps, so start by reaching out and getting whitelisted.
 
 ## Overwolf app architecture
 
-An Overwolf app has three main parts:
+An Overwolf app is composed of three main parts:
 
 1. A manifest file (manifest.json), containing the properties of the app. More info [here](#manifest-file).
 2. HTML / javascript source files. More info [here](#html-js-source-files).
-3. Visuals and images associated with the app (icons and buttons for example). More info [here](#assets).
+3. Visuals and images associated with the app, such as icons and buttons. More info [here](#assets).
 
-:::important
-Note that **only JS frameworks are supported** (vue.js, angular.js, react, backbone.js, etc.) but not full-blown desktop application solutions such as NW.js, electron.js, AppJS, etc.
+:::Important
+**Only JS frameworks are supported**, for example vue.js, angular.js, react, backbone.js, and similar ones. However, full-blown desktop application solutions such as NW.js, electron.js, AppJS and similar ones are not.
 :::
 
-Note that To build Overwolf apps, you first need to download the Overwolf client.
+To build Overwolf apps, you first need to download the Overwolf client.
 You can find the latest version [Here](https://download.overwolf.com/install/Download?Name=Game+Summary&ExtensionId=flkgdpkkjcoapbgmgpidhepajgkhckpgpibmlclb&Channel=developers).
 
 ### Manifest file
 
-The manifest file is responsible for describing the different aspects of your app. This is a mandatory file for all apps and has to be present in the root folder for your app to function.
+This mandatory file describes the different aspects of your app, it has to be present in the root folder for your app to function.
 
-You can read the [Manifest.json](../api/manifest-json) section to learn about additional features you can use to make your app even more awesome.
+You can read more in the [Manifest.json](../api/manifest-json) section and learn about additional features you can use to make your app even more awesome.
 
-An example of the most basic manifest file:
+An example of a basic manifest file:
 
 ```json
 {
@@ -72,11 +70,9 @@ An example of the most basic manifest file:
 ```
 
 
-### HTML/JS Source files
+### HTML/JS source files
 
-You can see that in the above manifest the app contains a single window. The source file of this window is set to the file `index.html`.
-
-A simple example of an HTML  window source file can be something like:
+In the sample manifest above, the app contains a single window. The source file of this window is `index.html`. Here's a sample HTML  window source file that could be referred to in the manifest:
 
 ```html
 <!DOCTYPE html>
@@ -92,44 +88,43 @@ A simple example of an HTML  window source file can be something like:
 
 ### Assets
 
-You can use images and regular assets like in any other web app, but there are few mandatory assets that every Overwolf app should set - the app's icons.
-You can see that in the above manifest all the mandatory icons has been set: [icon](../api/manifest-json#meta-mouse-over), [icon_gray](../api/manifest-json#meta-gray_icon) and [launcher_icon](../api/manifest-json#meta-launcher_icon).
+You can use images and assets like in any other web app. The only mandatory assets that every Overwolf app needs are icons. For example, in the sample manifest above all mandatory icons have been configured: [icon](../api/manifest-json#meta-mouse-over), [icon_gray](../api/manifest-json#meta-gray_icon) and [launcher_icon](../api/manifest-json#meta-launcher_icon).
 
-### OPK packge
+### OPK package
 
-After you finish to develop your app, you need to pack everything (manifest, source files, assets) into a single Overwolf app installer, called an `OPK` packge.
+After you finish building your app, you need to pack everything including the manifest, source files and assets into a single Overwolf app installer, called an `OPK` package.
 
-An OPK package is actually a ZIP package, with an OPK extension instead of ZIP:  To create it, just ZIP all your files, and change the extension from ZIP to OPK.  
+An OPK package is actually a ZIP package:  To create it, just ZIP all your files together, then manually change the file extension from ZIP to OPK.  
 
-You can double click to install an OPK package.
+Double clicking an OPK will install the package.
 
-Note, that only [whitelisted](#whitelist-you-as-a-developer) developers can install OPK that not downloaded from the store.
+We remind you that only [whitelisted](#whitelist-you-as-a-developer) developers can install OPKs that were not downloaded from the store.
 
 ## Safety & Security
 
-We work hard to ensure developers don’t mess around. A few measures help us with that:
+Protecting our community of gamers is a top priority, and we work hard to ensure developers don’t mess around. A few measures help us with that:
 
-1. Each app goes through a review process.
-2. Each app is hosted in its own web browser, and each web browser runs in a separate process.
+1. Each app goes through a full review process.
+2. Each app is hosted separately in its own web browser, and each web browser runs as a separate process.
 3. Each app is being run from a different virtual directory.
 
 These measures support security, separation and encapsulation: An app does not have access to the user’s local files, an app can’t interfere with other apps and if an app crashes or breaks, it doesn’t affect the rest of the system.
 
 ## API
 
-You can do some great stuff with web technologies, we know that. To help you take your app up a notch, Overwolf provides a JavaScript API which opens up enable different functions that relate to the game played by the user.
+You can build some awesome things with web technologies. Our way to make apps even better is using in-game real time information and events to fuel app functions. With our JavaScript API you can unlock features that read and interact with in-game events.
 
-For example, getting in-game events that happen during play (kill, death,etc.),  taking a screenshot of the game, getting the current game name, changing the window size, location, transparency and more.. We are constantly developing new tools and features that you can use to build your dream app.
+To get some ideas for in-game events you can use - from basics like kills, deaths, victories and similar key events, through taking a screenshot or recording a video of the game, changing window size, analyzing in-game stats to display tips and more.. We are constantly developing new tools and features that you can use to build your dream app, if there's a feature you cannot find, suggest it!
 
 ## Overwolf Plugins
 
-You can add even more features to your app by using one of our [plugins](../topics/plugins-overview), like the [simple I/O plugin](../topics/simple-io-plugin) for reading files from the local disk, or even creating your own plugin: 
+You can add even more features to your app by using one of our [plugins](../topics/plugins-overview), like the [simple I/O plugin](../topics/simple-io-plugin) for reading files from the local disk. You can even create your own plugin: 
 
-You can leverage existing C/C++/C# code, wrap it inside an Overwolf Plugin DLL file and interact with it via your Overwolf app.
+Use existing C/C++/C# code, wrap it inside an Overwolf Plugin DLL file and interact with it in your Overwolf app.
 
 For more details, you can review the [Overwolf Plugins](../topics/plugins-overview) section.
 
 ## Real world sample app
 
-To learn how to build an app that actually pulls in-game events, pops notifications, displays in-game overlays and more - please continue to study our official [sample app showcasing](sample-app-overview) what you can do and how.
+To learn how to build an app that actually pulls in-game events, pops notifications, displays in-game overlays and more - please continue our official [sample app showcasing](sample-app-overview).
 
