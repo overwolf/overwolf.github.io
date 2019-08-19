@@ -8,6 +8,12 @@ All notable changes to this project will be documented in this file.
 
 ## Version 134 (August 2019)
 
+* [Teamfight Tactics Events](https://overwolf.github.io/docs/api/overwolf-games-events-tft#docsNav)
+  * New info updates:
+    * store
+    * board
+    * bench
+    * carousel
 * [League of Legends Launcher Events](https://overwolf.github.io/docs/api/overwolf-games-launchers-events-lol#docsNav)
   * New info update:
     * end_game
