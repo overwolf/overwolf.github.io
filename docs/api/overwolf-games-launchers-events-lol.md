@@ -93,12 +93,12 @@ The queueID of the currently chosen game mode. Example:
 
 key   | Category    | Values                    | Notes                 | Since Version |
 ------| ------------| ------------------------- | --------------------- | ------------- |
-EndOfGame | end_game_tft| See [notes](#EndOfGame-note) |                |   134.0       |
+tft_end_game_stats | end_game_tft| See [notes](#tft_end_game_stats-note) |                |   134.0       |
 
 #### *EndOfGame* note
 
 Data Example:
 
 ```json
-{"launcherClassId":10902,"feature":"game_flow","info":{"game_flow":{"phase":"EndOfGame"}}}
+{"launcherClassId":10902,"feature":"game_flow","info":{"game_flow":{"phase":"tft_end_game_stats"}}}
 ```
