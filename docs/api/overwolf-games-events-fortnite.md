@@ -50,7 +50,9 @@ hit         | isHeadshot – bool(“true” when the hit is a “headshot”)| 
 
 Data Example:
 
-`{"name":"hit","data":"{"isHeadshot": true}"}`
+```json
+{"name":"hit","data":"{"isHeadshot": true}"}
+```
 
 ## `killed`
 
@@ -64,7 +66,9 @@ killed      | The name of the killed player. See [notes](#killed-note)| The loca
 
 Data Example:
 
-`{"name":"killed","data":"itaygl"}`
+```json
+{"name":"killed","data":"itaygl"}
+```
 
 ## `killer`
 
@@ -78,7 +82,9 @@ killer      | The name of the killer. See [notes](#killer-note) | The local play
 
 Data Example:
 
-`{"name":"killer","data":"itaygl"}`
+```json
+{"name":"killer","data":"itaygl"}
+```
 
 ## `revived`
 
@@ -101,7 +107,9 @@ knockedout | The name of the player who knocked you out. See [note](#knockedout-
 
 Data example:
 
-`{"events":[{"name":"knockedout","data":"itaygl"}]}`
+```json
+{"events":[{"name":"knockedout","data":"itaygl"}]}
+```
 
 ## `match`
 
@@ -132,7 +140,9 @@ Note that this is an Overwolf-generated code. Unrelated to Epic Games.
 
 Example data:
 
-`0c0ea3df-97ea-4d3a-b1f6-f8e34042251f`
+```json
+0c0ea3df-97ea-4d3a-b1f6-f8e34042251f
+```
 
 ## `rank`
 
@@ -167,25 +177,33 @@ shield       | me  |The amount of shield the local player currently has. See [no
 
 Data Example:
 
-`{"name":"itayG"}`
+```json
+{"name":"itayG"}
+```
 
 #### *health* note
 
 Data Example:
 
-`{"health":"37"}`
+```json
+{"health":"37"}
+```
 
 #### *accuracy* note
 
 Data Example:
 
-`{"accuracy":"0.333333"}`
+```json
+{"accuracy":"0.333333"}
+```
 
 #### *shield* note
 
 Data Example:
 
-`{"info":{"me":{"shield":"50"}},"feature":"me"}`
+```json
+{"info":{"me":{"shield":"50"}},"feature":"me"}
+```
 
 ## `phase`
 
@@ -207,7 +225,9 @@ location     | game_info   |The player’s current grid location, represented by
 
 Data Example:
 
+```json
 {"x" : 621, "y" : 2469, "z" : 50}
+```
 
 ## `team`
 
@@ -221,7 +241,9 @@ nicknames    | match_info  | The names of the players in the user’s team. See 
 
 Data Example:
 
-`{"feature":"team","category":"match_info","key":"nicknames","value":"{\"team_members\":[{\"player\":\"Itaygl\"},{\"player\":\"ErW_iN\"},{\"player\":\"einhorn28\"},{\"player\":\"Jacqulees\"}]}"}`
+```json
+{"feature":"team","category":"match_info","key":"nicknames","value":"{"team_members":[{"player":"Itaygl"},{"player":"ErW_iN"},{"player":"einhorn28"},{"player":"Jacqulees"}]}"}
+```
 
 ## `items`
 
@@ -252,13 +274,13 @@ Data Example:
 ```json
 "inventory":
 {
-    "item_0":"{\"name\":\"WID_Harvest_Pickaxe_NeonCat\",\"count\":\"1\",\"ammo\":\"0\",\"rarity\":\"3\"}",
-    "item_3":"{\"name\":\"StoneItemData\",\"count\":\"2\",\"ammo\":\"0\",\"rarity\":\"0\"}",
-    "item_7":"{\"name\":\"AthenaAmmoDataShells\",\"count\":\"4\",\"ammo\":\"0\",\"rarity\":\"0\"}",
-    "item_11":"{\"name\":\"Athena_Balloons_Consumable\",\"count\":\"7\",\"ammo\":\"0\",\"rarity\":\"3\"}",3
+    "item_0":"{"name":"WID_Harvest_Pickaxe_NeonCat","count":"1","ammo":"0","rarity":"3"}",
+    "item_3":"{"name":"StoneItemData","count":"2","ammo":"0","rarity":"0"}",
+    "item_7":"{"name":"AthenaAmmoDataShells","count":"4","ammo":"0","rarity":"0"}",
+    "item_11":"{"name":"Athena_Balloons_Consumable","count":"7","ammo":"0","rarity":"3"}",3
     "item_15":null,
     "item_14":null,
-    "item_13":"{\"name\":\"WID_Assault_AutoHigh_Athena_SR_Ore_T03\",\"count\":\"1\",\"ammo\":\"30\",\"rarity\":\"4\"}"
+    "item_13":"{"name":"WID_Assault_AutoHigh_Athena_SR_Ore_T03","count":"1","ammo":"30","rarity":"4"}"
 }
 ```
 
@@ -270,14 +292,18 @@ This info-update includes the  following properties:
 
 Data Example:
 
-`{"info":{"selected_slot":{"selected_slot":"{\"isPrimary\":true,\"slot\":\"1\"}"}},"feature":"items"}`
+```json
+{"info":{"selected_slot":{"selected_slot":"{"isPrimary":true,"slot":"1"}"}},"feature":"items"}
+```
 
 #### *quickbar_X* note
 
 Data Example:
 
-`{"info":{"quickbar":{"quickbar_1":"{\"name\":\"WID_Shotgun_SemiAuto_Athena_UC_Ore_T03\"}"}},
-"feature":"items"}`
+```json
+{"info":{"quickbar":{"quickbar_1":"{"name":"WID_Shotgun_SemiAuto_Athena_UC_Ore_T03"}"}},
+"feature":"items"}
+```
 
 #### *selected_material* note
 
@@ -288,7 +314,9 @@ Possible values are:
 
 Data Example:
 
-`{"info":{"selected_material":{"selected_material":"1"}},"feature":"items"}`
+```json
+{"info":{"selected_material":{"selected_material":"1"}},"feature":"items"}
+```
 
 ## `coutners`
 
