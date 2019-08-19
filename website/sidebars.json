@@ -32,18 +32,12 @@
     },
     "api": {
 			"API Reference": 
-			["api/overwolf-api-overview", "api/changelog", "api/manifest-json", "api/overwolf-benchmarking", "api/overwolf-extensions", "api/overwolf-log", "api/overwolf-profile", "api/overwolf-streaming", "api/overwolf-profile", "api/overwolf-tobii", "api/overwolf-utils", "api/overwolf-os"],
+			["api/overwolf-api-overview", "api/changelog", "api/manifest-json"],
 			"overwolf.benchmarking": ["api/overwolf-benchmarking"],
-			"overwolf.log":	["api/overwolf-log"],
-			"overwolf.streaming": ["api/overwolf-streaming"],
-			"overwolf.profile":	["api/overwolf-profile"],
-			"overwolf.tobii": ["api/overwolf-tobii"],
-			"overwolf.utils": ["api/overwolf-utils"],
-			"overwolf.os": ["api/overwolf-os"],
-			"overwolf.extensions":
-			["api/overwolf-extensions", "api/overwolf-extension-current"],
 			"overwolf.egs":
 			["api/overwolf-egs"],
+			"overwolf.extensions":
+			["api/overwolf-extensions", "api/overwolf-extension-current"],
 			"overwolf.games":
 			["api/overwolf-games", "api/overwolf-games-events", "api/howto-check-events-status-from-app", "api/overwolf-games-inputTracking",
 				{
@@ -56,14 +50,21 @@
 				"ids": ["api/overwolf-games-launchers", "api/overwolf-games-launchers-events", "api/launchers-ids","api/overwolf-games-launchers-events-lol"]
 				}
 			],
+			"overwolf.io": ["api/overwolf-io"],
+			"overwolf.log":	["api/overwolf-log"],
 			"overwolf.logitech":
 			["api/overwolf-logitech", "api/overwolf-logitech-arx", "api/overwolf-logitech-led"],
 			"overwolf.media":
 			["api/overwolf-media", "api/overwolf-media-audio", "api/overwolf-media-replays","api/overwolf-media-videos"],
+			"overwolf.os": ["api/overwolf-os"],
+			"overwolf.profile":	["api/overwolf-profile"],
 			"overwolf.settings":
 			["api/overwolf-settings", "api/overwolf-settings-games"],
 			"overwolf.social":
 			["api/overwolf-social", "api/overwolf-social-reddit", "api/overwolf-social-youtube", "api/overwolf-social-discord", "api/overwolf-social-gfycat", "api/overwolf-social-twitter"],
+			"overwolf.streaming": ["api/overwolf-streaming"],
+			"overwolf.tobii": ["api/overwolf-tobii"],
+			"overwolf.utils": ["api/overwolf-utils"],
 			"overwolf.web":
 			["api/overwolf-web", "api/overwolf-web-webserver", "api/overwolf-web-websocket"],
 			"overwolf.windows":

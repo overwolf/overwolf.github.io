@@ -10,20 +10,21 @@ This class provides access to global components that allow interaction with the 
 ## API's Reference
 
 * [overwolf.benchmarking](#overwolfbenchmarking-docs-api-overwolf-benchmarking)
+* [overwolf.egs](#overwolfegs-docs-api-overwolf-egs)
 * [overwolf.extensions](#overwolfextensions-docs-api-overwolf-extensions)
-* [overwolf.io](#overwolfio-docs-api-overwolf-io)
-* [overwolf.log](#overwolflog-docs-api-overwolf-log)
-* [overwolf.streaming](#overwolfstreaming-docs-api-overwolf-streaming)
-* [overwolf.profile](#overwolfprofile-docs-api-overwolf-profile)
-* [overwolf.tobii](#overwolftobii-docs-api-overwolf-tobii)
-* [overwolf.utils](#overwolfutils-docs-api-overwolf-utils)
-* [overwolf.os](#overwolfos-docs-api-overwolf-os)
 * [overwolf.games](#overwolfgames-docs-api-overwolf-games)
 * [overwolf.games.events](#overwolfgamesevents-docs-api-overwolf-games-events)
+* [overwolf.io](#overwolfio-docs-api-overwolf-io)
+* [overwolf.log](#overwolflog-docs-api-overwolf-log)
 * [overwolf.logitech](#overwolflogitech-docs-api-overwolf-logitech)
 * [overwolf.media](#overwolfmedia-docs-api-overwolf-media)
+* [overwolf.os](#overwolfos-docs-api-overwolf-os)
+* [overwolf.profile](#overwolfprofile-docs-api-overwolf-profile)
 * [overwolf.settings](#overwolfsettings-docs-api-overwolf-settings)
 * [overwolf.social](#overwolfsocial-docs-api-overwolf-social)
+* [overwolf.streaming](#overwolfstreaming-docs-api-overwolf-streaming)
+* [overwolf.tobii](#overwolftobii-docs-api-overwolf-tobii)
+* [overwolf.utils](#overwolfutils-docs-api-overwolf-utils)
 * [overwolf.web](#overwolfweb-docs-api-overwolf-web)
 * [overwolf.windows](#overwolfwindows-docs-api-overwolf-windows)
 
@@ -36,6 +37,10 @@ Common use cases:
 * Get hardware information
 * Get FPS information
 
+## [overwolf.egs](api/overwolf-egs.md)
+
+> Use the overwolf.egs API if your app wishes to show it’s own summary information about the last game session in the EGS (end game summary screen).
+
 ## [overwolf.extensions](api/overwolf-extensions.md)
 
 > Use the overwolf.extensions API to control and retrieve details on a specific Overwolf app (extension).
@@ -45,46 +50,6 @@ Common use cases:
 * Launch another app
 * Get the running state of an Overwolf app
 * Get the manifest.json data of an app
-
-## [overwolf.io](api/overwolf-io.md)
-
-> Use the overwolf.io API to check if a certain file exists or to write content to a file.\
-For more I/O functionalities, please use our [simple I/O plugin](../topics/simple-io-plugin).
-
-## [overwolf.log](api/overwolf-log.md)
-
-> Use the overwolf.log API to write different messages (info, warning, error, critical, etc.) to the common log.
-
-## [overwolf.streaming](api/overwolf-streaming.md)
-
-Permissions required: Streaming
-
-> Use the overwolf.streaming API to capture a video of the current game, or stream the current game to [Twitch.tv](https://www.twitch.tv/)
-
-## [overwolf.profile](api/overwolf-profile.md)
-
-Permissions required: profile
-
-> Use the overwolf.profile API to get Overwolf information for the current user of the app (e.g user name, user log-in event, etc.).\
-
-## [overwolf.tobii](api/overwolf-tobii.md)
-
-> Provides an API to Overwolf Tobii.
-
-## [overwolf.utils](api/overwolf-utils.md)
-
-> Use the overwolf.utils API to get the user's system information, send keystrokes to the game, open URL in default browser and more.
-
-Common use cases:
-
-* Getting a string that is currently placed on the clipboard
-* Getting the user's system information (OS, monitors, CPU, GPU, input devices and more)
-* Opening a URL in a browser
-* Send keystrokes to the running game
-
-## [overwolf.os](api/overwolf-os.md)
-
-> Use the overwolf.os API for Operating System related functionalities.
 
 ## [overwolf.games](api/overwolf-games.md)
 
@@ -100,6 +65,15 @@ Common use cases:
 > Use the overwolf.games.events API to be notified when something interesting happens while playing a certain games:
 
  (e.g. a hero killed someone, someone killed the gamer's hero, etc.)
+
+## [overwolf.io](api/overwolf-io.md)
+
+> Use the overwolf.io API to check if a certain file exists or to write content to a file.\
+For more I/O functionalities, please use our [simple I/O plugin](../topics/simple-io-plugin).
+
+## [overwolf.log](api/overwolf-log.md)
+
+> Use the overwolf.log API to write different messages (info, warning, error, critical, etc.) to the common log.
 
 ## [overwolf.logitech](api/overwolf-logitech.md)
 
@@ -119,6 +93,18 @@ Permissions required: Media
 * Use the [overwolf.media.replays](api/overwolf-media-replays.md) API to capture a short video replay of the currently running game.
 * Use the [overwolf.media.videos](api/overwolf-media-videos.md) API to create video composition, delete video files, and get details of video files that were created by the app.
 
+## [overwolf.os](api/overwolf-os.md)
+
+> Use the overwolf.os API for Operating System related functionalities.
+
+
+## [overwolf.profile](api/overwolf-profile.md)
+
+Permissions required: profile
+
+> Use the overwolf.profile API to get Overwolf information for the current user of the app (e.g user name, user log-in event, etc.).\
+
+
 ## [overwolf.settings](api/overwolf-settings.md)
 
 > Use the overwolf.settings API to view and modify one of the following Overwolf settings properties:
@@ -136,6 +122,29 @@ Permissions required: Media
 * [overwolf.social.gfycat](api/overwolf-social-gfycat.md) Provides access to the Gfycat social provider.
 * [overwolf.social.twitter](api/overwolf-social-twitter.md) Provides access to the Twitter social provider.
 * [overwolf.social.reddit](api/overwolf-social-reddit.md) Provides access to the Reddit social provider.
+
+
+## [overwolf.streaming](api/overwolf-streaming.md)
+
+Permissions required: Streaming
+
+> Use the overwolf.streaming API to capture a video of the current game, or stream the current game to [Twitch.tv](https://www.twitch.tv/)
+
+## [overwolf.tobii](api/overwolf-tobii.md)
+
+> Provides an API to Overwolf Tobii.
+
+## [overwolf.utils](api/overwolf-utils.md)
+
+> Use the overwolf.utils API to get the user's system information, send keystrokes to the game, open URL in default browser and more.
+
+Common use cases:
+
+* Getting a string that is currently placed on the clipboard
+* Getting the user's system information (OS, monitors, CPU, GPU, input devices and more)
+* Opening a URL in a browser
+* Send keystrokes to the running game
+
 
 ## [overwolf.web](api/overwolf-web.md)
 
