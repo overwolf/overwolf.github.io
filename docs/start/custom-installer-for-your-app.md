@@ -25,7 +25,7 @@ Installers used to be uniform, identical for all apps. Following your feedback, 
 This feature is a step in our quest to give you the best solutions for engaging with gamers. You can even create your own tray icon with the new windows.os API!
 
 ## Upcoming features
-We're planning to expand on this functionality, and enable full installer customization including texts and custom visuals! We expect this next level of customization to become available around September this year. Stay tuned for updates here and through newsletters!
+We're planning to expand on this functionality, and enable full installer customization including texts and custom visuals! We expect this next level of customization to become available in the upcoming months. Stay tuned for updates here and through newsletters!
 
 For those who want to start planning your custom installer, see the image below - the parts marked in red are the ones you will be able to change. Think about using the space to showcase features, present your team or partners, or announce activities your users should know about - these messages will be under your control to be changed on the fly. 
 
