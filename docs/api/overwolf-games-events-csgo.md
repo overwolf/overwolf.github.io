@@ -189,6 +189,7 @@ team_set    |<ul><li>CT</li><li>T|The player selected a team|   |      0.70     
 key               | Category    | Values                    | Notes                 | Since Version |
 ----------------- | ------------| ------------------------- | --------------------- | ------------- |
 pseudo_match_id | match_info  |	The current session’s ID code. See [notes](#pseudo_match_id-note)	| | 0.130  |
+server_info | match_info  |	The current session’s server ID. See [notes](#server_info-note)	| | 0.135  |
 
 #### *pseudo_match_id* note
 
@@ -196,7 +197,17 @@ This is an Overwolf-generated code, unrelated to Steam.
 
 Data Example:
 
-`0c0ea3df-97ea-4d3a-b1f6-f8e34042251f`
+```json
+0c0ea3df-97ea-4d3a-b1f6-f8e34042251f
+```
+
+#### *server_info* note
+
+Data Example:
+
+```json
+{"match_info":{"server_info":"{"name":"RU | ALTAI AWP [!ws,!knife,!gloves,!viptest] 128tick","ip":"212.22.93.74:27040"}"}}
+```
 
 ## `info`
 

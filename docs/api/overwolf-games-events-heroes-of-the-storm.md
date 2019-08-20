@@ -71,7 +71,7 @@ Data Example:
 Data Example:
 
 ```json
-{"info":{"match_info":{"teams_level":{"order":"1", "chaos":"1"}}}, "feature":"match_info"}
+{"info":{"match_info":{"teams_level":{"order":1, "chaos":1}}}, "feature":"match_info"}
 ```
 
 #### *score* note:
@@ -79,7 +79,7 @@ Data Example:
 Data Example:
 
 ```json
-{"info":{"match_info":{"score":{"order":"8", "chaos":"19"}}}, "feature":"match_info"}
+{"info":{"match_info":{"score":{"order":8, "chaos":19}}}, "feature":"match_info"}
 ```
 
 #### *match_state* note:
@@ -155,18 +155,77 @@ roster       | game_info   | The full players roster   | See [notes](#roster-not
 Data Example:
 
 ```json
-{"info":{"roster":{
-  "BabaYaga":{"player_name":"BabaYaga", "battletag":"BabaYaga", "hero_name":"Nazeebo", "local":"0", "team":"chaos"},
-  "Bliss":{"player_name":"Bliss", "battletag":"Bliss", "hero_name":"Raynor", "local":"0", "team":"chaos"},
-  "DocWho":{"player_name":"DocWho", "battletag":"DocWho", "hero_name":"Chromie",  "local":"0", "team":"order"},
-  "Matsunaga":{"player_name":"Matsunaga", "battletag":"Matsunaga", "hero_name":"Malthael", "local":"0", "team":"order"},
-  "Signz":{"player_name":"Signz", "battletag":"Signz", "hero_name":"Qhira", "local":"0", "team":"chaos"},
-  "alice":{"player_name":"alice", "battletag":"alice#2742", "hero_name":"Butcher", "local":"1", "team":"chaos"},
-  "alkaGOLIK":{"player_name":"alkaGOLIK", "battletag":"alkaGOLIK", "hero_name":"Sylvanas", "local":"0", "team":"order"},
-  "joasku":{"player_name":"joasku", "battletag":"joasku", "hero_name":"Stukov", "local":"0", "team":"chaos"},
-  "skrzat":{"player_name":"skrzat", "battletag":"skrzat", "hero_name":"Kharazim", "local":"0", "team":"order"},
-  "vikpa":{"player_name":"vikpa", "battletag":"vikpa", "hero_name":"Tychus", "local":"0", "team":"order"}
-}},"feature":"roster"}
+"roster":"{
+"Player 10":{  
+   "player_name":"Player 10",
+   "battletag":"Player 10",
+   "hero_name":"Kerrigan",
+   "local":false,
+   "team":"chaos"
+},
+"Player 2":{  
+   "player_name":"Player 2",
+   "battletag":"Player 2",
+   "hero_name":"Malfurion",
+   "local":false,
+   "team":"order"
+},
+"Player 3":{  
+   "player_name":"Player 3",
+   "battletag":"Player 3",
+   "hero_name":"Anub'arak",
+   "local":false,
+   "team":"order"
+},
+"Player 4":{  
+   "player_name":"Player 4",
+   "battletag":"Player 4",
+   "hero_name":"Valla",
+   "local":false,
+   "team":"order"
+},
+"Player 5":{  
+   "player_name":"Player 5",
+   "battletag":"Player 5",
+   "hero_name":"Malthael",
+   "local":false,
+   "team":"order"
+},
+"Player 6":{  
+   "player_name":"Player 6",
+   "battletag":"Player 6",
+   "hero_name":"Rehgar",
+   "local":false,
+   "team":"chaos"
+},
+"Player 7":{  
+   "player_name":"Player 7",
+   "battletag":"Player 7",
+   "hero_name":"Muradin",
+   "local":false,
+   "team":"chaos"
+},
+"Player 8":{  
+   "player_name":"Player 8",
+   "battletag":"Player 8",
+   "hero_name":"Tychus",
+   "local":false,
+   "team":"chaos"
+},
+"Player 9":{  
+   "player_name":"Player 9",
+   "battletag":"Player 9",
+   "hero_name":"Imperius",
+   "local":false,
+   "team":"chaos"
+},
+"alice":{  
+   "player_name":"alice",
+   "battletag":"alice#2742",
+   "hero_name":"Butcher",
+   "local":true,
+   "team":"order"
+}
 ```
 
 ## `kill`

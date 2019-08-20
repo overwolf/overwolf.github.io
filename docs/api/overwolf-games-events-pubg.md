@@ -36,9 +36,9 @@ Please read the [overwolf.games.events](overwolf-games-events) documentation pag
 key          | Category    | Values                    | Notes                 | Since Version |
 ------------ | ------------| ------------------------- | --------------------- | ------------- |
 kills | match_info   | Total number of kills in the match  |                       |   0.90       |
-headshots | match_info   | Total number of headshots in the match |                       |  0.127       |
-total_damage_dealt      | match_info   | Total damage dealt in the current match |   |  0.127       |
-max_kill_distance      | match_info   | Max kill distance in CM|          |  0.127       |
+headshots | match_info | Total number of headshots in the match |                       |  0.127       |
+total_damage_dealt   | match_info   | Total damage dealt in the current match |   |  0.127       |
+max_kill_distance   | match_info   | Max kill distance in CM|          |  0.127       |
 
 #### `kills` notes:
 
@@ -129,7 +129,9 @@ time_to_next_circle | Amount of seconds left to next safe zone | From the moment
 
 Example:
 
-`{"location":"{ \"x\" : 2300, \"y\" : 5740, \"z\" : 1520 }"}`
+```json
+{"location":"{"x":2300,"y":5740,"z":1520}"}
+```
 
 #### `zones` notes
 
@@ -138,12 +140,18 @@ Example:
 
 Examples:
 
-`{"info":{"game_info":{"safe_zone":"{\"x\":6727,\"y\":2556,\"radius\":1507}"}},"feature":"location"}`
-`{"info":{"game_info":{"blue_zone":"{\"x\":6727,\"y\":2556,\"radius\":1507}"}},"feature":"location"}`
+```json
+{"info":{"game_info":{"safe_zone":"{"x":6727,"y":2556,"radius":1507}"}},"feature":"location"}
+```
+```json
+{"info":{"game_info":{"blue_zone":"{"x":6727,"y":2556,"radius":1507}"}},"feature":"location"}
+```
 
 #### `time_to_next_circle` notes
 
-`{"name":"time_to_next_circle","data":"{\"phase\" : \"3\",\"time\" : \"438\"}"}`
+```json
+{"name":"time_to_next_circle","data":"{"phase":"3","time":"438"}"}
+```
 
 ## `me`
 
@@ -158,15 +166,15 @@ aiming       | me   | The player’s different type of aim-focus usage.<ul><li>�
 view       | me   | The player’s perspective (Third Person/First Person).<ul><li>‘TPP’</li><li>‘FPP’</li> |                       |  0.128        |
 freeView       | me   | When the local player uses ‘ALT’ feature to look around.<ul><li>Bool - ‘True‘/‘False‘</li> |                       |  0.128        |
 movement       | me   | The player’s type of movement speed.<ul><li>‘normal’</li><li>‘fast’</li><li>‘stealth’</li> |                       |  0.128        |
-inventory_XX       | inventory   | Info about the inventory of the local player. Each “inventory_XX” object </br>represents one item and is being cleared once this item is dropped/replaced </br>by the player.</br>This info-update provides:<ul><li>name (string) – name of the item</li><li>count (int) – number of items</li>`{"feature":"me","category":"inventory","key":"inventory_1",`</br>`"value":"{\"name\" :\"Item_Attach_Weapon_Muzzle_FlashHider`</br>`_Medium_C_2\",\"count\" : \"1\"}"}` |                       |    130.0.9        |
-equipped_XX       | inventory   | Info about “equipable” items. Each “equipped_XX” object represents </br>one item and is being cleared once this item is dropped/replaced </br>by the player.</br>This info-update provides:<ul><li>name (string) – the name of the item</li><li>count (int) – number of items</li>`{"feature":"me","category":"inventory","key":"equipped_1",`</br>`"value":"{\"name\" : \"Item_Weapon_vz61Skorpion_C_1\"\`</br>`"count\" : \"1\"}"}` |                       |    130.0.9        |
+inventory_XX       | inventory   | Info about the inventory of the local player. Each “inventory_XX” object </br>represents one item and is being cleared once this item is dropped/replaced </br>by the player.</br>This info-update provides:<ul><li>name (string) – name of the item</li><li>count (int) – number of items</li>`{"feature":"me","category":"inventory","key":"inventory_1",`</br>`"value":"{"name" :"Item_Attach_Weapon_Muzzle_FlashHider`</br>`_Medium_C_2","count":"1"}"}` |                       |    130.0.9        |
+equipped_XX       | inventory   | Info about “equipable” items. Each “equipped_XX” object represents </br>one item and is being cleared once this item is dropped/replaced </br>by the player.</br>This info-update provides:<ul><li>name (string) – the name of the item</li><li>count (int) – number of items</li>`{"feature":"me","category":"inventory","key":"equipped_1",`</br>`"value":"{"name": "Item_Weapon_vz61Skorpion_C_1"`</br>`"count":"1"}"}` |                       |    130.0.9        |
 weaponState       | inventory   | Info about the weapon and its state.</br>This info-update provides:<ul><li>name (string) – the name of the weapon used by the local player</li><li>equipped (bool) – in hand (true) or holstered (false)</li><li>count (int) – number of items |                       |    130.0.9        |
 
 ### Events
 
 Event      | Event Data  | Fired When          | Notes              | Since Version |
 -----------| ------------| ------------------------------- | ------------------ | --------------|
-jump | null        | Local player jumps (space) |   |  0.128       |
+jump | null        | Local player jumps (space) |                   |  0.128       |
 
 ## `team`
 
@@ -174,14 +182,20 @@ jump | null        | Local player jumps (space) |   |  0.128       |
 
 key         | Category    | Values                          | Notes                 | Since Version |
 ----------- | ------------| --------------------------------| --------------------- | ------------- |
-nicknames       | match_info   | The names of players in the player’s team</br>`{"nicknames":"{\"team_members\" : [{\"player\" : \"yy899189\"}`</br>`,{\"player\" : \"itayG\"},{\"player\" : \"fucis\"},{\"player\"`</br>`:\"gedyan\"}]}"}},"feature":"team"}`        |                       |   0.90        |
+nicknames       | match_info   | The names of players in the player’s team</br>`{"nicknames":"{"team_members":[{"player": "yy899189"}`</br>`,{"player":"itayG"},{"player":"fucis"},{"player"`</br>`:"gedyan"}]}"}},"feature":"team"}`        |                       |   0.90        |
 team_location| match_info  | The X,Y,Z location of your team members. |See [notes](#team_location-notes)|     134.0     |
 
 #### *team_location* note
 
 Data Example:
 
-`{"info":{"game_info":{"team_location":"[{\"player\":\"Stilee\",\"location\":{\"x\":\"4185\",\"y\":\"1309\",\"z\":\"1500\"}},{\"player\":\"hajjjekc\",\"location\":{\"x\":\"4185\",\"y\":\"1309\",\"z\":\"1500\"}},{\"player\":\"itayG\",\"location\":{\"x\":\"4185\",\"y\":\"1309\",\"z\":\"1500\"}},{\"player\":\"ARNKC\",\"location\":{\"x\":\"4185\",\"y\":\"1309\",\"z\":\"1500\"}}]"}},"feature":"location"}`
+```json
+{"info":{"game_info":{"team_location":"[
+{"player":"Stilee","location":{"x":"4185","y":"1309","z":"1500"}},
+{"player":"hajjjekc","location":{"x":"4185","y":"1309","z":"1500"}},
+{"player":"itayG","location":{"x":"4185","y":"1309","z":"1500"}},
+{"player":"ARNKC","location":{"x":"4185","y":"1309","z":"1500"}}]"}},"feature":"location"}
+```
 
 ## `phase`
 
@@ -211,14 +225,16 @@ roster_XX        | match_info   | This feature provides the entire list of playe
 This feature provides the entire list of players (~99 players).
 Each player that joins the game (during the “airfield” phase) will be reported in the following way:
 
-`{"feature":"roster","category":"match_info","key":"roster_0","value":"{\"player\":\"Dr4ex\",\"kills\":\"0\",\"out\":false}"}`
+```json
+{"feature":"roster","category":"match_info","key":"roster_0","value":"{"player":"Dr4ex","kills":"0","out":false}"}
+```
 
 As you can see, this object includes:
 * **player** – Player name
 * **kills** – Number of kills. This field is being updated once the player leaves the game ( = quit the match).
 * **out** - false” when the player is “alive”, “true” when the player left the game (died or quit the match).  
   When a player “leaves” the match, the following info-update will be reported:  
-  `{"feature":"roster","category":"match_info","key":"roster_0","value":"{\"player\":\"Dr4ex\"\"kills\":\"0\",\"out\":true}"}` 
+  `{"feature":"roster","category":"match_info","key":"roster_0","value":"{"player":"Dr4ex""kills":"0","out":true}"}` 
 
 ## `revived`
 
@@ -235,14 +251,13 @@ revived | null        | The local player was revived |   |   0.90    |
 
 Event      | Event Data  | Fired When          | Notes              | Since Version |
 -----------| ------------| ------------------------------- | ------------------ | --------------|
-death | null | The local player dies |   |   0.90    |
+death      | null | The local player dies |                        |   0.90    |
 knockedout | null | The local player is knocked-out |   |   0.90    |
 damageTaken | null | The local player receives damage. | Not including damage </br>taken when outside the zone. |0.128 |
 
 ## `killer`
 
 ### Events
-
 
 Event      | Event Data  | Fired When          | Notes              | Since Version |
 -----------| ------------| ------------------------------- | ------------------ | --------------|
