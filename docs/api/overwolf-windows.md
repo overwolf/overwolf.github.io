@@ -291,8 +291,10 @@ callback (Optional) | function   | Called after the window is closed            
 
 Parameter           | Type       | Description                                                                                    |
 --------------------| -----------| -----------------------------------------------------------------------------------------------|
-windowId	        | string     | The id or name of the window to minimize                                                       |
+windowId	        | string     | The id or name of the window to minimize                                                         |
 callback (Optional) | function   | Called after the window is minimized                                                           |
+
+**Note** that this function will not work if the manifest [resizable flag](https://overwolf.github.io/docs/api/manifest-json#windows-resizable) is set to `false`.
 
 #### Callback argument: Success
 
@@ -310,8 +312,10 @@ callback (Optional) | function   | Called after the window is minimized         
 
 Parameter           | Type       | Description                                                                                    |
 --------------------| -----------| -----------------------------------------------------------------------------------------------|
-windowId	        | string     | The id or name of the window to maximize                                                       |
+windowId	        | string     | The id or name of the window to maximize                                                         |
 callback (Optional) | function   | Called after the window is maximized                                                           |
+
+**Note** that this function will not work if the manifest [resizable flag](https://overwolf.github.io/docs/api/manifest-json#windows-resizable) is set to `false`.
 
 #### Callback argument: Success
 
