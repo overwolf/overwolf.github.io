@@ -8,7 +8,7 @@ Overwolf's SDK unlocks entirely new kinds of in-game app development, and the do
 
 ## Whitelist you as a developer
 
-Only whitelisted Overwolf developer accounts can load or install apps not available on the Overwolf store, including unreleased beta versions. If you are not whitelisted you will not be able to run or install such an apps, so start by reaching out and getting whitelisted.
+Only whitelisted Overwolf developer accounts can load or install apps that not available on the Overwolf store, including unreleased beta versions. If you are not whitelisted you will not be able to run or install such an apps, so start by [reaching out](mailto:developers@overwolf.com) and getting whitelisted.
 
 ## Overwolf app architecture
 
@@ -18,9 +18,11 @@ An Overwolf app is composed of three main parts:
 2. HTML / javascript source files. More info [here](#html-js-source-files).
 3. Visuals and images associated with the app, such as icons and buttons. More info [here](#assets).
 
-:::Important
-**Only JS frameworks are supported**, for example vue.js, angular.js, react, backbone.js, and similar ones. However, full-blown desktop application solutions such as NW.js, electron.js, AppJS and similar ones are not.
+:::important Only JS frameworks are supported
+For example vue.js, angular.js, react, backbone.js, and similar ones.  
+However, full-blown desktop application solutions such as electron.js, AppJS and similar ones are not.
 :::
+
 
 To build Overwolf apps, you first need to download the Overwolf client.
 You can find the latest version [Here](https://download.overwolf.com/install/Download?Name=Game+Summary&ExtensionId=flkgdpkkjcoapbgmgpidhepajgkhckpgpibmlclb&Channel=developers).
@@ -112,7 +114,7 @@ These measures support security, separation and encapsulation: An app does not h
 
 ## API
 
-You can build some awesome things with web technologies. Our way to make apps even better is using in-game real time information and events to fuel app functions. With our JavaScript API you can unlock features that read and interact with in-game events.
+You can build some awesome things with web technologies. Our way to make apps even better is using in-game real time information and events to fuel app functions. With [our JavaScript API](../api/overwolf-api-overview) you can unlock features that read and interact with in-game events.
 
 To get some ideas for in-game events you can use - from basics like kills, deaths, victories and similar key events, through taking a screenshot or recording a video of the game, changing window size, analyzing in-game stats to display tips and more.. We are constantly developing new tools and features that you can use to build your dream app, if there's a feature you cannot find, suggest it!
 
