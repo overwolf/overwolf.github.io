@@ -6,13 +6,13 @@ sidebar_label: Changelog
 
 All notable changes to this project will be documented in this file.
 
-## Version 135 (August 2019)
+## Version 0.135 (August 2019)
 
 * [CS: GO events](https://overwolf.github.io/docs/api/overwolf-games-events-csgo#docsNav)
   * New info update:
     * server_info
 
-## Version 134 (August 2019)
+## Version 0.134 (August 2019)
 
 * [Teamfight Tactics Events](https://overwolf.github.io/docs/api/overwolf-games-events-tft#docsNav)
   * New info updates:
@@ -38,7 +38,7 @@ All notable changes to this project will be documented in this file.
   * New info update
     * team_location
 
-## 133 (July 2019)
+## 0.133 (July 2019)
 
 ### API Features
 
@@ -51,7 +51,7 @@ All notable changes to this project will be documented in this file.
 * [overwolf.extensions.onExtensionUpdateStateChanged](overwolf-extensions#onextensionupdatestatechanged) - new event.  
   Notify when the app were updated.
 
-## 132 (July 2019)
+## 0.132 (July 2019)
 
 ### API Features
 
@@ -68,7 +68,7 @@ This game-mode is officially supported and more events will be added soon.
 
 * PUBG [matchEnd](overwolf-games-events-pubg#matchend-notes) event - added a new note.
 
-## 131 (June 2019)
+## 0.131 (June 2019)
 
 ### API Features
 
