@@ -6,13 +6,6 @@ const GamesMetadata = {
     iconLargeUrl: "/docs/assets/games-logos/large/battlerite.png",
     name: "Battlerite"
   },
-  10746: {
-    id: 10746,
-    path: "#",
-    iconUrl: "/docs/assets/games-logos/wows.png",
-    iconLargeUrl: "/docs/assets/games-logos/large/wows.png",
-    name: "World of Warships"
-  },
   6365: {
     id: 6365,
     path: "/docs/status/world-of-tanks",
@@ -103,5 +96,19 @@ const GamesMetadata = {
     iconUrl: "/docs/assets/games-logos/tft.png",
     iconLargeUrl: "/docs/assets/games-logos/large/tft.png",
      name: "Teamfight Tactics"
+  },
+  10746: {
+    id: 10746,
+    path: "/docs/status/world-of-warships",
+    iconUrl: "/docs/assets/games-logos/wow.png",
+    iconLargeUrl: "/docs/assets/games-logos/large/wow.png",
+     name: "World of Warships"
+  },
+  10624: {
+    id: 10624,
+    path: "/docs/status/heroes-of-the-storm",
+    iconUrl: "/docs/assets/games-logos/hots.png",
+    iconLargeUrl: "/docs/assets/games-logos/large/hots.png",
+    name: "Heroes of the Storm"
   }
 }
