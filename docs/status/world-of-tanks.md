@@ -17,6 +17,6 @@ sidebar_label: World of Tanks
 <script src="/js/games_metadata.js"></script>
 
 <div id="gameEventsStatus">
-  <script> const GameID = 6365; const DocsLink = "/api/overwolf-games-events-wot";</script>
+  <script> const GameID = 6365; const DocsLink = "../api/overwolf-games-events-wot";</script>
   <script type="text/jsx" src="/jsx/specificGameEventsStatus.jsx"></script>
 </div>

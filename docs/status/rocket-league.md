@@ -17,6 +17,6 @@ sidebar_label: Rocket League
 <script src="/js/games_metadata.js"></script>
 
 <div id="gameEventsStatus">
-  <script> const GameID = 10798; const DocsLink = "/api/overwolf-games-events-rocket-league";</script>
+  <script> const GameID = 10798; const DocsLink = "../api/overwolf-games-events-rocket-league";</script>
   <script type="text/jsx" src="/jsx/specificGameEventsStatus.jsx"></script>
 </div>
