@@ -215,18 +215,25 @@ Data Example:
 
 Data Example:
 
-```json
-{"info":{"match_info":{"game_mode":"Offline Deathmatch Dust II"}},"feature":"match_info"}
-```
 VS BOTS
 ```json
-{"info":{"match_info":{"game_mode":"Community Casual surf_ski_2_GO_sw"}},"feature":"match_info"}
+{"match_info":{"game_mode":"Offline Deathmatch Dust II"}}
 ```
+
 Community Servers
 ```json
-{"info":{"match_info":{"game_mode":"Casual Dust II"}},"feature":"match_info"}
+{"match_info":{"game_mode":"Community Casual surf_ski_2_GO_sw"}}
 ```
+
 Casual/Regular match
+```json
+{"match_info":{"game_mode":"Casual Dust II"}}
+```
+
+Spectating
+```json
+{"match_info":{"game_mode":"Watching Casual Dust II"}}
+```
 
 ## `info`
 
