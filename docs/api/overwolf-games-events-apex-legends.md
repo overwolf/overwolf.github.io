@@ -4,32 +4,11 @@ title: Apex Legends Game Events
 sidebar_label: Apex Legends Events
 ---
 
-<meta http-equiv="Content-Type" content="text/html charset=utf-8"/>
-<!-- importing React -->
-<script src="https://unpkg.com/react@15/dist/react.js"></script>
-<!-- importing React-Dom -->
-<script src="https://unpkg.com/react-dom@15/dist/react-dom.js"></script>
-<!-- importing babel for jsx -->
-<script src=" https://unpkg.com/babel-standalone@6/babel.min.js"></script>
-<!-- importing the remarkable plugin -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/remarkable/1.7.1/remarkable.js"></script>
-<!-- importing games metadata -->
-<script src="/js/games_metadata.js"></script>
-
-
 Please read the [overwolf.games.events](overwolf-games-events) documentation page to learn how to use Overwolf game events.
 
 :::important Game ID
 21566
 :::
-
-<details>
-<summary>Game events status</summary>
-<div id="gameEventsStatus">
-  <script> const GameID = 21566; const DocsLink = "/api/overwolf-games-events-autochess";</script>
-  <script type="text/jsx" src="/jsx/specificGameEventsStatus.jsx"></script>
-</div>
-</details>
 
 ## Sample Apps
 * [APEX game events sample app](https://github.com/overwolf/events-sample-apps)
