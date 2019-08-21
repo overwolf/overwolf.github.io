@@ -11,6 +11,7 @@ All notable changes to this project will be documented in this file.
 * [CS: GO events](https://overwolf.github.io/docs/api/overwolf-games-events-csgo#docsNav)
   * New info update:
     * server_info
+    * game_mode
 
 ## Version 0.134 (August 2019)
 
