@@ -4,37 +4,30 @@ title: Submitting a new version of your app
 sidebar_label:  Submit an App Update
 ---
 
-## Overview
+Your app is available on the Overwolf Appstore and it's time to release new features you've been working on. That’s awesome! In this article we'll go over the process of submitting updates for your app in a few simple steps.
 
-Your app is available on the Overwolf Appstore but you keep working to improve it. That’s awesome! You can send us a new version of the app whenever it’s ready.
+## Submitting a new version
 
-## Submit a new version
+To get the update cycle started, send the new version, including a detailed change log, to [developers@overwolf.com](mailto:developers@overwolf.com). You can also contact the Overwolf team directly through our Slack with the required information.  
 
-Feel free to send the new version (including a detailed change log) to [developers@overwolf.com](mailto:developers@overwolf.com). You can also contact the Overwolf team through the Overwolf Developers Slack with the required information.  
+Please keep your update documentation and files in the same format as your original submission, rather than sending fragmented files.
+Once the version has been changed, update the [build version](../api/manifest-json#meta-object) in the manifest. If nothing has been changed in your app's store assets, the app folder will do just fine.
 
-Please make sure to keep it in the same format as your first submitted app, rather than sending fragmented files.
-Also make sure to update the [app version](../api/manifest-json#meta-object) in the manifest. If nothing changed in your store assets, there’s no need to submit it (the app folder will do just fine).
+## Going Live
 
-## The process
+After receiving the new version, it will be added to our approval pipeline and we'll get to reviewing it in up to 96 hours. Assuming the review process goes well and no issues were spotted, you can expect your approved update to go live 4-8 hours after completing our review. 
 
-After we received the new version, it will be added to our approval pipeline and It can take up to 96 hours before your app will be updated.
+#### Forced user updates
 
-## Approved tests
+Apps are automatically updated by users every few hours, or when they restart Overwolf. 
+If there's a good reason to "force" an early or immediate update, you can:
 
-We’ll upload your app to the Appstore and let you know! It can usually take between 4 to 8 hours before your users will get updated once the version is live.
+* Use [updateExtension()](../api/overwolf-extensions#updateextensioncallback) to check the app and perform an update.
 
-#### Forcing users to update your app
-
-Your app will be updated for your users after a few hours or as soon as they restart Overwolf. 
-
-If you want to "force" them to update your app earlier, you can:
-
-* Use the [updateExtension()](../api/overwolf-extensions#updateextensioncallback) to check and perform an update.
-
-* Check for the user's current app version by using the [getManifest()](../api/overwolf-extension-current#getmanifestcallback) method (the current app version is under the manifest’s "meta" property) and compare it to the latest one (stored on your server). If the user has an old version of your app, you can ask him to restart Overwolf.
+* You can see the user's current version by using the [getManifest()](../api/overwolf-extension-current#getmanifestcallback) method - find the current app version under the manifest’s "meta" property. If their current version and your server stored version are not identical, you can prompt them to restart Overwolf.
 
 ## Rejected tests
 
-We want to make sure that your app is running smoothly on the Overwolf platform. We’ll send you a list of issues and feedback. Once you have a fixed version, be sure to send it over once again and we’ll test and approve it.
+We want to make sure that your app is running smoothly and that your update works just as well as your original app. If we spot any issues, we’ll send you a list of them along with feedback. Once you have fixed the issues we spot, you can send the update again as a new process to be reviewed.
 
 **Note**: A detailed change log will help our team to identify the changes better and will make the testing process faster.
