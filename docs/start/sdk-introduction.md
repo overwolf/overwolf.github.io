@@ -4,34 +4,34 @@ title: Overwolf SDK Introduction
 sidebar_label: SDK Introduction
 ---
 
-Overwolf's SDK unlocks entirely new kinds of in-game app development, and the documents listed in the left-hand side navigation bar have all the information you need to create apps using Overwolf’s diverse [APIs](../api/overwolf-api-overview). To get you started, here are some important basics:
+Overwolf's SDK unlocks in-game app development, and the documents listed in the left-hand side navigation bar have all the information you need to create apps using Overwolf’s diverse [APIs](../api/overwolf-api-overview). To get you started, here are some important basics:
 
-## Whitelist you as a developer
+## Whitelist as a developer
 
-Only whitelisted Overwolf developer accounts can load or install apps that not available on the Overwolf store, including unreleased beta versions. If you are not whitelisted you will not be able to run or install such an apps, so start by [reaching out](mailto:developers@overwolf.com) and getting whitelisted.
+Only whitelisted Overwolf developer accounts can load or install apps that not available on the Overwolf store, including unreleased beta versions. If you are not whitelisted you will not be able to run or install such apps, which means testing your work in progress will be hard. Therefore, start by [reaching out](mailto:developers@overwolf.com) and getting whitelisted.
 
-## Overwolf app architecture
+## App architecture
 
-An Overwolf app is composed of three main parts:
+An Overwolf app's code has three main parts:
 
-1. A manifest file (manifest.json), containing the properties of the app. More info [here](#manifest-file).
+1. A manifest file (manifest.json), detailing the properties of the app. More info [here](#manifest-file).
 2. HTML / javascript source files. More info [here](#html-js-source-files).
-3. Visuals and images associated with the app, such as icons and buttons. More info [here](#assets).
+3. Visuals and images such as icons and buttons. More info [here](#assets).
 
 :::important Only JS frameworks are supported
-For example vue.js, angular.js, react, backbone.js, and similar ones.  
-However, full-blown desktop application solutions such as electron.js, AppJS and similar ones are not.
+For example vue.js, angular.js, react, backbone.js and similar ones.  
+However, full-blown desktop application solutions such as electron.js, AppJS and similar ones are not supported.
 :::
 
 
-To build Overwolf apps, you first need to download the Overwolf client.
-You can find the latest version [Here](https://download.overwolf.com/install/Download?Name=Game+Summary&ExtensionId=flkgdpkkjcoapbgmgpidhepajgkhckpgpibmlclb&Channel=developers).
+To build Overwolf apps, you need to download the Overwolf client.
+You can find the latest developer client version [Here](https://download.overwolf.com/install/Download?Name=Game+Summary&ExtensionId=flkgdpkkjcoapbgmgpidhepajgkhckpgpibmlclb&Channel=developers).
 
 ### Manifest file
 
-This mandatory file describes the different aspects of your app, it has to be present in the root folder for your app to function.
+This mandatory file describes the different aspects of your app, it has to be present in your app's root folder for it to function.
 
-You can read more in the [Manifest.json](../api/manifest-json) section and learn about additional features you can use to make your app even more awesome.
+You can read more in the [Manifest.json](../api/manifest-json) section and learn what more you can do to make your app even more awesome.
 
 An example of a basic manifest file:
 
@@ -96,9 +96,7 @@ You can use images and assets like in any other web app. The only mandatory asse
 
 After you finish building your app, you need to pack everything including the manifest, source files and assets into a single Overwolf app installer, called an `OPK` package.
 
-An OPK package is actually a ZIP package:  To create it, just ZIP all your files together, then manually change the file extension from ZIP to OPK.  
-
-Double clicking an OPK will install the package.
+An OPK package is actually a ZIP package:  To create it, just ZIP all your files together, then manually change the file extension from ZIP to OPK. Double clicking an OPK will install the package.
 
 We remind you that only [whitelisted](#whitelist-you-as-a-developer) developers can install OPKs that were not downloaded from the store.
 
