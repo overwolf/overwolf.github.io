@@ -1,20 +1,18 @@
 ---
 id: ads-sdk-overview
-title: Overwolf Ads SDK Overview
-sidebar_label: Ads SDK Overview
+title: Overwolf Advertising SDK
+sidebar_label: Ad SDK Overview
 ---
 
-The Overwolf ads SDK is a small JavaScript library that allows developers to integrate ads into their Overwolf applications. These ads are managed and hosted by Overwolf.
-
-The Ads SDK is intended to be used by developers who wish to show ads in their apps and have discussed doing so with Overwolf. If you are an app developer who wishes to show ads in your app, please contact us.
+The Overwolf advertising SDK is a JavaScript library that allows developers to integrate ads into their Overwolf applications. Ads are managed, filtered and hosted by Overwolf. The Advertising SDK is how you as a developer can show ads in your apps and monetize your traffic, but it's important to do it right - please contact us and we'll help integrate forgivable ads that do not hurt user experience.
 
 :::important
-Ads will be served to your app only after Overwolf enables it, so please contact us at developers@overwolf.com when your app is ready to show ads.
+Ads will be served to your app only after Overwolf enables them for you, contact us at developers@overwolf.com when your app is ready to show ads.
 :::
 
 #### Getting help and reporting bugs
 
-If you have encountered problems with this library, please let us know by contacting developers@overwolf.com, or talk directly to us through the Developers Slack.
+If you have encountered problems with the advertising SDK, please let us know by contacting developers@overwolf.com, or just message us directly over the [Developers Slack](http://overwolfdevs.slack.com).
 
 ## Getting Started
 
@@ -30,26 +28,26 @@ The most simple and basic usage of this library can be done by adding a few line
 
 1. Adds a div to your page with the id `ad-div`
 2. Loads the Overwolf ads SDK library from Overwolf’s CDN
-3. When the script is loaded properly, creating a new OwAd instance that will tell the script to fetch an ad. The HTML element passed on to this constructor will then be used to display the ad itself
+3. When the script is loaded, creates a new OwAd instance that will tell the script to fetch an ad. The HTML element passed on to this constructor will then be used to display the ad itself.
 
 #### Notes regarding the snippet above
 
-* As you can see, the script tag is added with an `async` attribute. This means that the script is loaded asynchronously and will not interfere with your app or slow down it’s loading time. The downside for this is that the script may take time to load and be ready, and may not be immediately available after being included. To overcome this, we are using the `onload` attribute and providing it with the name of a function to be called when the script has finished loading. In the above example it is called `onOwAdReady`.
+* As you can see, the script tag is added with an `async` attribute. This means that the script is loaded asynchronously and will not interfere with your app functions nor slow down it’s loading time. The downside for this is that the script may take time to load and be ready, and may not be immediately available. To overcome this, we are using the `onload` attribute and providing it with the name of a function to be called when the script has finished loading. In the above example it is called `onOwAdReady`.
 
-*   When calling a new `OwAd()` we provide it with a DOM element. In this example we are getting the instance of the element by calling `document.getElementById`. However, you may use any other way to get the DOM element. You may use `document.querySelector`,  jQuery or any other framework you wish. It will work as long as the provided element is an HTML element, and is available at the DOM. If the element does not have an ID, it will automatically be assigned with one.
+*   When calling a new `OwAd()` we provide it with a DOM element. In this example we are getting the instance of the element by calling `document.getElementById`. However, you may use any other way to get the DOM element. You may use `document.querySelector`,  jQuery or any other framework you wish. It will work as long as the provided element is an HTML element available at the DOM. If the element does not have an ID, it will automatically be assigned one.
 
 ## Changes to your app’s manifest.json
 
 ### Set permissions
 
-The Overwolf Ads Libs uses some Overwolf APIs to improve ad targeting for users. Therefore you should add the following permissions to your app’s manifest.json file:
+The Overwolf Advertising library uses Overwolf APIs to improve ad targeting for users. Therefore you should add the following permissions to your app’s manifest.json file:
 
 ```json
 "permissions": ["Extensions", "Streaming", "Profile", "GameInfo"]
  ```
 ### Enable Google’s syndication
 
-In order to get impression tracking to work well, you would also need to enable a work-around that allows requests to Google’s syndication servers. This is done by setting `"protocol_override_domains" : {"googlesyndication" : "http"}`, under the manifest.json "data" property:
+In order to get impression tracking to work, you will also need to enable a work-around that allows requests to Google’s syndication servers. This is done by setting `"protocol_override_domains" : {"googlesyndication" : "http"}`, under the manifest.json "data" property:
  
 ```json
  "data": {    
@@ -61,15 +59,17 @@ In order to get impression tracking to work well, you would also need to enable 
 
 The following App Window Data flags should be set to `true`:
 
-* [block_top_window_navigation](../api/manifest-json#windows-block_top_window_navigation) -  refrain from non `_blank <a>` ads from "taking-over" the entire app’s window.
-* [popup_blocker](../api/manifest-json#popup_blocker) – Prevents new browser windows from being opened automatically using script.
+* [block_top_window_navigation](../api/manifest-json#windows-block_top_window_navigation) -  Stop non `_blank <a>` ads from "taking-over" the entire app’s window.
+* [popup_blocker](../api/manifest-json#popup_blocker) – Prevents new browser windows from being opened automatically using scripts.
 * [mute](../api/manifest-json#windows-mute) - Mute sounds in window.
 
-## Important guidelines for ad integration
+## Guidelines for ad integration
 
-Unfortunately the advertising industry is still mostly designed to work with normal web pages, and not single page apps like Overwolf apps. This means that we are often very limited with how we can interact or display ads. 
+Unfortunately the advertising industry is still mostly designed to work with normal web pages, and not single page apps like your Overwolf app. This means that we are often limited in how we can interact or display ads. 
 
-More importantly, most advertisers will have code that is designed to prevent frauds and make sure the ads are truly visible to the users. That is why it is very important that your ad container will ALWAYS be visible on the page. 
+For example, app behavior is at risk of flagging fraud protection solutions our advertising partners use. To prevent this from happening make sure:
 
-Once you have instantiated a new OwAd object on a container, do not modify the container’s dimensions, z-index, visibility, opacity or display style properties. Doing so may result in ads not being displayed at all for your users, or being flagged as fraudulent by some advertisers.
+1) Your ad container is ALWAYS visible in the app screen. Invisible or hidden ad containers increase your risk. 
+2) Once a new OwAd object is configured, do not modify it's properties including dimensions, visibility, opacity, display style, z-index or anything else. Changing containers can cause ads to stop displaying properly or even being flagged for fraud. 
 
+If you encounter any issues or need advice in setting up effective, compliant ad experiences - talk to us!
