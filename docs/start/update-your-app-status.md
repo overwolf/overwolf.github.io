@@ -1,38 +1,37 @@
 ---
 id: update-your-app-status
-title: Update your app status
-sidebar_label:  Update your app status
+title: Changing App Status
+sidebar_label:  Set app status
 ---
 
-This page describes how to update your app status info through the Overwolf developers console, and later how to consume the app status from your app.
+Overwolf uses a three-state system to describe how well an app is currently working. This page describes how to update your app state through the Overwolf developers console.
 
-## Set your app status
+## Setting your app status
 
-The first step is to update your app status info in the dev console:
+Using the dev console, you can set your app's state following these steps:
 
-1. [Login](https://devconsole.overwolf.com) to the dev console, click `applications` from the left bar, and choose your app from the apps list.  
-The list displays only apps that own by you.
+1. [Login](https://devconsole.overwolf.com) to the dev console, select `applications` in the left-hand side bar, and choose your app from the list.
 
-2. After you choose your app, browse to the `App status` tab and choose the right status:
+2. After choosing your app, browse to the `App status` tab and set the right status:
 
 ![alt-text](assets/dev-console-app-status-1.png)
 
-### Possible app statuses
+### Possible app states
 
-There are three pre-defines statuses: Green, Yellow, Red.  
-When you fetch the status later from the API call, each on of the state will get a numeric value:
+There are three pre-defines states we call Green, Yellow and Red.  
+When you fetch the status later using an API call, each of the states will get a numeric value:
 
-* Green - Good to go. `{"state":1}`
-* Yellow - Some features may be unavailable. `{"state":2}`
-* Red - The main functionality of the app is currently unavailable (unusable). `{"state":3}`
+* Green - Good to go! `{"state":1}`
+* Yellow - Some features unavailable. `{"state":2}`
+* Red - Critical issues, main app functionality is currently unavailable. `{"state":3}`
 
-For each status you can also set a description text that will be available from the API as well.
+For each state you can also set a text that will be available from the API as well describing the state.
 
 ## Get your app status
 
 The second step is to fetch your app status from the dev console:
 
-To query the Overwolf dev console and fetch the app status, you should call the dev console API URL with your extension (app) ID:
+To query the Overwolf dev console, you should call the console API URL with your extension (app) ID:
 
 `https://console-api.overwolf.com/v1/apps/[extensionId]/status`
 
