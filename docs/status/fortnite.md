@@ -18,6 +18,6 @@ sidebar_label: Fortnite
 
 <div id="gameEventsStatus">
   <!-- GameID - this page's game ID, very important -->
-  <script> const GameID = 21216 </script>
+  <script> const GameID = 21216; const DocsLink = "../api/overwolf-games-events-fortnite";</script>
   <script type="text/jsx" src="/jsx/specificGameEventsStatus.jsx"></script>
 </div>

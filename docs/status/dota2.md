@@ -17,6 +17,6 @@ sidebar_label: Dota 2
 <script src="/js/games_metadata.js"></script>
 
 <div id="gameEventsStatus">
-  <script> const GameID = 7314 </script>
+  <script> const GameID = 7314; const DocsLink = "../api/overwolf-games-events-dota2";</script>
   <script type="text/jsx" src="/jsx/specificGameEventsStatus.jsx"></script>
 </div>

@@ -1,6 +1,6 @@
 ---
 id: lol
-title: League of Legends Game Events Status
+title: LOL Game Events Status
 sidebar_label: League of Legends
 ---
 
@@ -17,6 +17,6 @@ sidebar_label: League of Legends
 <script src="/js/games_metadata.js"></script>
 
 <div id="gameEventsStatus">
-  <script> const GameID = 5426 </script>
+  <script> const GameID = 5426; const DocsLink = "../api/overwolf-games-events-lol"; </script>
   <script type="text/jsx" src="/jsx/specificGameEventsStatus.jsx"></script>
 </div>

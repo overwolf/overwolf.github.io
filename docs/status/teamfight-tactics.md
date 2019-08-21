@@ -1,6 +1,6 @@
 ---
 id: teamfight-tactics
-title: League of Legends Teamfight Tactics Game Events Status
+title: TFT  Game Events Status
 sidebar_label: Teamfight Tactics
 ---
 
@@ -17,6 +17,6 @@ sidebar_label: Teamfight Tactics
 <script src="/js/games_metadata.js"></script>
 
 <div id="gameEventsStatus">
-  <script> const GameID = 21570 </script>
+  <script> const GameID = 21570; const DocsLink = "../api/overwolf-games-events-tft"; </script>
   <script type="text/jsx" src="/jsx/specificGameEventsStatus.jsx"></script>
 </div>

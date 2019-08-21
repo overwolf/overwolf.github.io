@@ -18,6 +18,6 @@ sidebar_label: Rainbow 6 Siege
 
 <div id="gameEventsStatus">
   <!-- GameID - this page's game ID, very important -->
-  <script> const GameID = 10826 </script>
+  <script> const GameID = 10826; const DocsLink = "/api/overwolf-games-events-rainbow-six";</script>
   <script type="text/jsx" src="/jsx/specificGameEventsStatus.jsx"></script>
 </div>

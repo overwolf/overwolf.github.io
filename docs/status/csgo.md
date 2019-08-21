@@ -18,6 +18,6 @@ sidebar_label: CS:GO
 
 <div id="gameEventsStatus">
   <!-- GameID - this page's game ID, very important -->
-  <script> const GameID = 7764 </script>
+  <script> const GameID = 7764; const DocsLink = "../api/overwolf-games-events-csgo";</script>
   <script type="text/jsx" src="/jsx/specificGameEventsStatus.jsx"></script>
 </div>

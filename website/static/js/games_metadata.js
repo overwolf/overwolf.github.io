@@ -48,13 +48,6 @@ const GamesMetadata = {
     iconLargeUrl: "/docs/assets/games-logos/large/pubg.png",
     name: "PUBG"
   },
-  10844: {
-    id: 10844,
-    path: "/docs/status/overwatch",
-    iconUrl: "/docs/assets/games-logos/overwatch.png",
-    iconLargeUrl: "/docs/assets/games-logos/large/overwatch.png",
-    name: "Overwatch"
-  },
   5426: {
     id: 5426,
     path: "/docs/status/lol",

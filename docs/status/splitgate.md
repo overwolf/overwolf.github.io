@@ -19,6 +19,6 @@ Splitgate: Arena Warfare
 <script src="/js/games_metadata.js"></script>
 
 <div id="gameEventsStatus">
-  <script> const GameID = 21404 </script>
+  <script> const GameID = 21404; const DocsLink = "../api/overwolf-games-events-splitgate";</script>
   <script type="text/jsx" src="/jsx/specificGameEventsStatus.jsx"></script>
 </div>

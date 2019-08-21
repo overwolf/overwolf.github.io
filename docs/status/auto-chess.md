@@ -17,6 +17,6 @@ sidebar_label: Auto-Chess
 <script src="/js/games_metadata.js"></script>
 
 <div id="gameEventsStatus">
-  <script> const GameID = 21568 </script>
+  <script> const GameID = 21568; const DocsLink = "../api/overwolf-games-events-autochess"; </script>
   <script type="text/jsx" src="/jsx/specificGameEventsStatus.jsx"></script>
 </div>
