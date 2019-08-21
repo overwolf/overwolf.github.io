@@ -1,103 +1,97 @@
 ---
 id: add-a-knowledge-base-to-app
 title: Add a Knowledge Base to your App
-sidebar_label:  Your App Knowledge Base
+sidebar_label:  App Knowledge Base
 ---
 
-## Overview
+## What is a knowledge base?
 
-Knowledge base is what we call your public library. If users want to know anything about your app, they can open it up and read all about it.
+A Knowledge base is what we call your public library and documentation. If users want to know anything about your app, they should be able to find it in the knowledge base and educate themselves.
 
-### Basic rules
+### Basics
 
-* Always write the article on the wordpress editor, and do not copy & paste from another program. If you prefer to write it elsewhere, make sure to clear all text formatting before pasting it into the wordpess editor.
+* Always write knowledge base articles using the wordpress editor, and avoid copying & pasting from another program. If you prefer to write elsewhere, make sure to clear all text formatting before pasting it into the Wordpress editor - copying your text into windows notepad and then from there to Wordpress should work.
 
-* Keep your article clean, organized, clear, and follow a consistent structure.
+* Keep your article short, clear and to the point to help your users find what they are looking for.
 
-* Pay attention to grammar (We can help you with that).
+* Pay attention to language and grammar rules - ask us for help in editing if you want to make sure!
 
 ### Best practices
 
-* Please remember that users that just installed your app, never used it before and probably need assistance/guidance in order to understand the app’s features and easily start using it properly. A successful FTUE (First Time User Experience) greatly increases the chances of retaining your users. You can read more about it [here](https://medium.com/overwolf-developers/apps-ftue-best-practices-670dd4fb2b10).
+* First time users that just installed your app have never used it before and probably need guidance in making the most out of your app’s features. A well made FTUE (First Time User Experience) greatly increases the chances of retaining your users, read more about first time user experience [here](https://medium.com/overwolf-developers/apps-ftue-best-practices-670dd4fb2b10).
 
-* The articles (What is, FAQ, Troubleshooting) should have all the available information on the app that the user might need.
+* While each app has different information to share, all apps can benefit from a knowledgebase that includes a FAQ and troubleshooting articles. Try to include all the information the user might need.
 
-* Screenshots & GIFs for the articles are strongly recommended.
+* Implementing screenshots & GIFs into articles is strongly recommended and improves user experience.
 
-* When adding screenshots to your article, make sure the image is clean, taken with either a black or white background and only shows what needs to be seen by the user.
+* Keep things tight - visual materials you place in articles should only show exactly what you are referring to. Make sure images are clean and have either a black or white background to improve knowledge base look'n'feel.
 
-* If you mark or highlight anything in your screenshots, please do it in an aesthetic way (symmetric rectangles, circles, arrows).
+* If you mark anything in your screenshots, please do it in an aesthetic way - symmetric rectangles, circles, arrows often work.
 
-* Try to keep all the images in the article in a consistent size. Make sure the images are not too big for the article but also not too small so the text is still readable.
+* Try to keep images in your articles consistent in size. Images shouldn't be too big to fit in the window but also not too small to read text comfortably.
 
-* These articles can be accessed from the ‘?’ icon in your app’s main screen.
+* Knowledge base articles are linked directly to your app's main screen via the ‘?’ icon.
 
-* In addition, feel free to add more articles, such as Changelog, Requirements, etc.
+* You are welcome and encouraged to add more articles to your knowledge base. For example, an updated Changelog is great for users.
 
 ### Writing guidelines
 
-* Header – A short, "enthusiastic" description on your app. Size = Heading 3.
+* Header – A short, engaging description of your app. Font size should be Heading 3.
 
-* Headlines – To keep your article organized, you will probably have a few headlines. Keep them in size = Heading 4 and formatted bold.
+* Headlines – Organize your article using headlines breaking each page into different topics. Use font size Heading 4 and format text as bold.
 
-* Text content – All the texts should be written in size=Normal and not be formatted either bold or italic, unless there is a need to emphasize something specific.
+* All texts should be written in normal font size and not be formatted either bold or italic, unless there is a need to emphasize a specific point.
 
-A good example for an organized knowledge base is "[CSGO Scout](http://support.overwolf.com/article-categories/csgo-scout/)".
+Check out CSGO Scout's knowledge base to get an idea of how it should look like "[here](http://support.overwolf.com/article-categories/csgo-scout/)".
 
 ### Mandatory articles
 
-The two mandatory articles that an app should have are:
+Each app should have two mandatory articles:
 
-#### What is
+#### What does it do?
 
-This article explains the general use of the app. Legendary Builds does this by splitting the app to two separate segments:
-First part is focused on the out of the game experience. On this part, the articles goes step by step, screen by screen (of the app) and explains every feature that is shown on screen.
-The second part is focused on the In-game experience it will guide the user step by step.
+This article explains the functionality and usage of your app. For example, Legendary Builds does this by splitting the app to two separate segments, the first focused on out-of-game experience, detailing functionality with screen by screen visuals and explaining every feature showing on the screen.
 
-A good example for this kind of article:
+The second part is focused on in-game experience and guides the user in making the most out of the app while playing.
 
-[What is CSGO Scout](http://support.overwolf.com/knowledge-base/what-is-csgo-scout/) – General explanation about the app.
+For reference, check out this 'what does it do' article by the creators of CSGO Scout [here](http://support.overwolf.com/knowledge-base/what-is-csgo-scout/).
 
 #### Frequently asked questions (FAQ)
 
-This article answers questions that users might have. If you have been contacted by users with questions that you think are repetitive or are important, this is the place to answer them!
+The second mandatory article is your app's Frequently Asked Questions section, or FAQ. This is where you keep answers to common questions asked by your users. Even if not asked directly, you can also use the FAQ to cover questions you think might come up.
 
-A good example for this kind of article:
-
-[CSGO Scout](http://support.overwolf.com/knowledge-base/csgo-scout-faq/)
+Take a look at this good FAQ example made by [CSGO Scout](http://support.overwolf.com/knowledge-base/csgo-scout-faq/)
 
 #### Troubleshooting
 
-This article should contain common issues that exist in the app, and how to fix them. Like the FAQ, you might have encountered some issues that users had. This is the place to show users how to fix them.
+Another article we found useful for gamers in a technical one focused on issues the app has and how to fix them. Just like in the FAQ, you should figure out what issues matter most to your userbase. You might have encountered some issues reported repeatedly or otherwise spotted an issue that you would like to help your users solve. 
 
-A good example for this kind of article:
+A good example for this kind of article, the [Legendary Builds – Troubleshooting](http://support.overwolf.com/knowledge-base/troubleshooting-2/) article.
 
-[Legendary Builds – Troubleshooting](http://support.overwolf.com/knowledge-base/troubleshooting-2/) – Common issues that the app might have, and how to fix them
+## Submitting an article
 
-## How to submit an article
+To release a new article:
 
-Please follow this guide here:
+1. Ask your Overwolf contact person to create a knowledge base website account for you via Slack or Email.
 
-1. First thing you need is an account in the knowledge base site, ask your Overwolf contact to create one for you (via Slack or email).
-
-2. You will receive an email with your username and password.
+2. You will receive a username and a password for the knowledge base site.
 
 3. Login to the [Overwolf knowledge base site](http://support-admin.overwolf.com/).
 
-4. Click on "Knowledge Base" on the side menu.
+4. Click on "Knowledge Base" using the sidebar menu.
 
 ![alt-text](assets/knowledge-base/1.jpg)
 
-Enter your article relevant information and content.
+Fill in your article's information and content.
 
 ![alt-text](assets/knowledge-base/2.jpg)
 
-Follow the numbers on the image above:
+Referring to the above image, you should:
 
-1. Enter your article title
-2. Add your article content
-3. Choose the right category
-4. Don’t forget to add the MetaData (This will help our users find this page easier)
-5. Then click on “Publish”\ “Submit for review”
-The Overwolf support team will review and publish it
-Overview
+1. Enter your article's title
+2. Add your article's content
+3. Choose the right category for your article
+4. Don’t forget to add MetaData information (This will help our users find this page easier)
+5. Click on “Publish” / “Submit for review”
+
+The Overwolf support team will review your new article and publish it following this review. 
