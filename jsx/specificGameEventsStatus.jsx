@@ -19,14 +19,17 @@ function GameListItem(props) {
 }
 
 function GameTitle(props) {
-  const { className, imgSrc, name } = props;
+  const { className, imgSrc, name, href} = props;
   return (
+    <a href={`${href}`}>
     <h3 className={`game-title ${className}`}>
       <img src={imgSrc} />
       {name}
     </h3>
+    </a>
   );
 }
+
 
 function SearchBar(props) {
   return (
@@ -68,6 +71,7 @@ class GameEventsStatus extends React.Component {
       status: {},
       gamesMetadata: GamesMetadata,
       id: GameID,
+      apiLink: DocsLink, 
     };
   }
 
@@ -137,12 +141,13 @@ class GameEventsStatus extends React.Component {
     const stateCss = this.stateToCss(this.state.status.state);
     const imgSrc = this.state.gamesMetadata[this.state.id].iconLargeUrl;
     const name = this.state.gamesMetadata[this.state.id].name;
+
     return (
       <article className="hentry">
         <div className="entry-content">
           <div className="gep-game">
-            <GameTitle className={stateCss} name={name} imgSrc={imgSrc}></GameTitle>
-            <SearchBar></SearchBar>
+            <GameTitle className={stateCss} name={name} imgSrc={imgSrc} href={this.state.apiLink}></GameTitle>
+            <SearchBar href={name}></SearchBar>
             <Lists events={events} updates={updates}></Lists>
           </div>
         </div>
