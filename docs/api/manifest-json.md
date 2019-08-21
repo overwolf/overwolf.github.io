@@ -594,10 +594,10 @@ Defines a size (width and height) in pixels.
 ## point Object
 Defines a top-left position in pixels.
 
-| Name  | Type | Description                                                                      | Since |
-|-------| -----|----------------------------------------------------------------------------------|------ |
-| top   | int  | Defines the position in the Y axis from the top in pixels. *Optional parameter*  | 0.78  |
-| left  | int  | Defines the position in the Y axis from the top in pixels.  *Optional parameter* | 0.78  |
+| Name  | Type | Description                                                                       | Since |
+|-------| -----|-----------------------------------------------------------------------------------|------ |
+| top   | int  | Defines the position in the Y axis from the top in pixels. *Optional parameter*   | 0.78  |
+| left  | int  | Defines the position in the X axis from the left in pixels.  *Optional parameter* | 0.78  |
 
 ## focus_game_takeover options
 In games such as Overwatch and World of Tanks, which have a state without a mouse cursor, the user can’t control the Overwolf app window.

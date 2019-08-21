@@ -1,22 +1,22 @@
 ---
 id: ads-sdk-interaction
-title: Interacting with an ad
-sidebar_label: Interacting with an ad
+title: Managing ads
+sidebar_label: Managing Ads
 ---
 
 ## Functions
-Calling new `OwAd()` will return a javascript object which you can later use to control and interact with the displayed ad. The object has the following functions you can call to achieve the interaction:
+Calling a new `OwAd()` will return a javascript object which you can use to control the displayed ad. This object has the following functions you can call on demand:
 
 | Function        | Description                                                                                                            |
 | :-------------: |------------------------------------------------------------------------------------------------------------------------|
-| refreshAd       | Refresh ad and load a new one <br> Please note that this will cause the ad to scroll into view (if not visible)       |
-| removeAd        | Removes the current ad from the DOM                                                                                    |
+| refreshAd       | Refreshes ad and loads a new one <br> Note that this will cause the ad to scroll into view if not already visible       |
+| removeAd        | Removes current ad from the DOM                                                                                    |
      
 #### Important note
 
-In order to prevent cases in which ads are called but not shown, please make sure you use the `removeAd()` function where applicable. Please also note:
+In order to prevent ads being called but not shown, please make sure you use the `removeAd()` function where necessary. Also note:
 
-* When the window is minimized, don’t delete or destroy the `owAd` instance object, instead call the `removeAd()` method.
+* When the window is minimized, do not delete or destroy the `owAd` instance object, instead call the `removeAd()` method.
 * When the window is restored, call the same `owAd` instance’s `refreshAd()` method.
 
 #### Sample code for handling ads with minimized/restored window
@@ -45,20 +45,20 @@ overwolf.windows.onStateChanged.addListener(onWindowStateChanged);
 
 ## Events
 
-You can use the Overwolf ad object (the one created by calling `new OwAd()`) to listen to events related to the displayed ad. Registering for an event can be done by calling the function `addEventListener` on the ad object. Like many other libs, the first param sent to `addEventListener` is the name of the event, and the second is a handler function for the event.
+You can use Overwolf ad objects created by calling `new OwAd()`) to listen to events related to the displayed ad. Registering an event can be done by calling the function `addEventListener` on the ad object. Like other libraries, the first parameter sent to `addEventListener` is the name of the event, and the second is a handler function for the event.
 
 The following events are supported:
 
 | **Event Name**      | **Fired When**           
 | -------------       | -------------
-| player_loaded	      | Ad video player was successfully loaded on the page*
+| player_loaded	      | Ad video player successfully loaded on page*
 | display_ad_loaded   | Display ad was served instead of a video ad    
 | play                | Ad started playing *
 |impression	          | Video “impression” – Depends on the advertiser, the impression event gets triggered after 0-6 seconds *
-|complete             | Video ad was played until its end *
+|complete             | Video ad played fully until completed *
 |error                | Error occurred while trying to load ad *
 
 \* Only relevant for video ads
 
 ## Showing multiple ads 
-If for some reason you wish to show more than one ad on your app, you can easily do so by creating multiple instances of `OwAd`. Just make sure you pass a different container element for each instance
+If you wish to show more than one ad on your app, you can easily do so by creating multiple instances of `OwAd`. Just make sure you pass a different container element for each instance.

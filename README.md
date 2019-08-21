@@ -61,10 +61,11 @@ In order to add a new page, you should:
 
 In order to list a game in the [game events status page](/docs/status/all), you should follow these steps:
 
-1. Create new MD file in this folder. For example: `\docs\status\teamfight-tactics.md`.  
+1. Create new MD file in the "status" section. For example: `\docs\status\teamfight-tactics.md`.  
    The template should be like the other files in that folder. Don't forget to change the GameID.
    
 2. Add the new page to the site menu: `website\sidebars.json`.  
    You should place it under `Service\Games Events Status` section. 
    
 3. Open the file `website\static\js\games_metadata.js` and add a record for the new file that you just created.
+  (make sure to add the icons assets in two sizes: 60X60 and 30X30)
