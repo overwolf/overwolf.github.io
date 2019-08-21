@@ -72,7 +72,7 @@
     },
 	"service": {
         "Games Events Status": 
-			["status/all", "status/lol", "status/csgo", "status/apex", "status/fortnite", "status/rainbow-six-siege", "status/hearthstone","status/auto-chess","status/pubg","status/dota2","status/rocket-league","status/world-of-tanks","status/splitgate", "status/teamfight-tactics"]
+			["status/all", "status/lol", "status/csgo", "status/apex", "status/fortnite", "status/rainbow-six-siege", "status/hearthstone","status/auto-chess","status/pubg","status/dota2","status/rocket-league","status/world-of-tanks","status/world-of-warships","status/heroes-of-the-storm","status/splitgate", "status/teamfight-tactics"]
 		},
 	"support": {
         "Support": 
