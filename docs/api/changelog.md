@@ -38,7 +38,7 @@ All notable changes to this project will be documented in this file.
   * New info update
     * team_location
 
-## 0.133 (July 2019)
+## 133 (July 2019)
 
 ### API Features
 
@@ -51,7 +51,7 @@ All notable changes to this project will be documented in this file.
 * [overwolf.extensions.onExtensionUpdateStateChanged](overwolf-extensions#onextensionupdatestatechanged) - new event.  
   Notify when the app were updated.
 
-## 0.132 (July 2019)
+## 132 (July 2019)
 
 ### API Features
 
@@ -68,7 +68,7 @@ This game-mode is officially supported and more events will be added soon.
 
 * PUBG [matchEnd](overwolf-games-events-pubg#matchend-notes) event - added a new note.
 
-## 0.131 (June 2019)
+## 131 (June 2019)
 
 ### API Features
 
