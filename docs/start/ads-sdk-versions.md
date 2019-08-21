@@ -1,10 +1,10 @@
 ---
 id: ads-sdk-versions
 title: Library versions
-sidebar_label: Ads SDK Library Versions
+sidebar_label: Current Ad SDK
 ---
 
-From time to time, we may update the library with bug fixes and newer features.
+From time to time, we may update the relevant library with bug fixes and new features.
 
-Please make the request to `http://content.overwolf.com/libs/ads/latest/owads.min.js`, which will ALWAYS get the latest version.
+Please make requests to `http://content.overwolf.com/libs/ads/latest/owads.min.js`, which will ALWAYS get you the latest version.
 
