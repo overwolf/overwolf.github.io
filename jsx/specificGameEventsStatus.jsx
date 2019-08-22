@@ -21,7 +21,7 @@ function GameListItem(props) {
 function GameTitle(props) {
   const { className, imgSrc, name, href} = props;
   return (
-    <a href={`${href}`}>
+    <a href={`${href}`} title={`go to the ${name} API documentation page`}>
     <h3 className={`game-title ${className}`}>
       <img src={imgSrc} />
       {name}
