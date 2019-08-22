@@ -27,7 +27,7 @@ Note that Hotkeys will only work in-game (not on desktop).
 
 5. it is not possible to reassign hotkeys directly from a user's app. It can only be done through the Overwolf client settings page.  
    All you can do is link directly to the hotkey there with `href="overwolf://settings/hotkeys#hotkey_name_in_manifest`.  
-   An alternative is to use [overwolf.games.inputTracking](http://developers.overwolf.com/documentation/sdk/overwolf/games/inputtracking/) to set up additional hotkeys that the user can change from within the app.
+   An alternative is to use [overwolf.games.inputTracking](../api/overwolf-games-inputTracking) to set up additional hotkeys that the user can change from within the app.
 
 
 

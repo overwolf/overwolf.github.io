@@ -190,6 +190,8 @@ key               | Category    | Values                    | Notes             
 ----------------- | ------------| ------------------------- | --------------------- | ------------- |
 pseudo_match_id | match_info  |	The current session’s ID code. See [notes](#pseudo_match_id-note)	| | 0.130  |
 server_info | match_info  |	The current session’s server ID. See [notes](#server_info-note)	| | 0.135  |
+game_mode | match_info  |	The current game mode that is played. See [notes](#game_mode-note)	| | 0.135  |
+
 
 #### *pseudo_match_id* note
 
@@ -207,6 +209,30 @@ Data Example:
 
 ```json
 {"match_info":{"server_info":"{"name":"RU | ALTAI AWP [!ws,!knife,!gloves,!viptest] 128tick","ip":"212.22.93.74:27040"}"}}
+```
+
+#### *game_mode* note
+
+Data Example:
+
+VS BOTS
+```json
+{"match_info":{"game_mode":"Offline Deathmatch Dust II"}}
+```
+
+Community Servers
+```json
+{"match_info":{"game_mode":"Community Casual surf_ski_2_GO_sw"}}
+```
+
+Casual/Regular match
+```json
+{"match_info":{"game_mode":"Casual Dust II"}}
+```
+
+Spectating
+```json
+{"match_info":{"game_mode":"Watching Casual Dust II"}}
 ```
 
 ## `info`

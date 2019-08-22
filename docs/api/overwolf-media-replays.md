@@ -48,7 +48,7 @@ There’s no need to know/understand each supported game’s mechanics, game flo
 
 Parameter | Type                  | Description                                                                                                           |
 --------- | ------------------------------------------------------------------- | ----------------------------------------------------------------------- |
-settings  | [StreamSettings](overwolf-streaming#streamsettings-object) object   | The video capture settings                                              |
+settings  | [ReplayHighlightsSetting](#replayhighlightssetting-object) object   | The video capture settings                                              |
 callback  | function                                                            | A callback function which will be called with the status of the request |
 
 #### Callback argument: Success
@@ -60,8 +60,6 @@ A callback function which will be called with the status of the request
 ```
 
 #### Few important notes
-
-* Turning on replay capturing will consume system resources, so use it wisely. `buffer_length` property in the [StreamSettings](overwolf-streaming#streamsettings-object) object defines the amount of time in milliseconds to have captured in the memory at all times.
 
 * `turnOn()` will fail if highlights are requested but not supported for the current game. (to get the list of supported highlights call [getHighlightsFeatures()](#gethighlightsfeaturesgameid-callback))
 * The below call will override your current OW client settings only if video setting is not null or values are different than zero.
