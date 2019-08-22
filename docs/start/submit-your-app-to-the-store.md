@@ -11,7 +11,7 @@ In this page we'll detail how you can submit your app and set yourself up for ap
 
 ## Support page
 
-Before your new app can go live, you **must** create a customer support page for it. We've put together advice and instructions on building support pages for your app [here](add-a-knowledge-base-to-app).
+Before your new app can go live, we recommend create a customer support page for it. We've put together advice and instructions on building support pages for your app [here](add-a-knowledge-base-to-app).
 
 ## How to Submit an App
 
