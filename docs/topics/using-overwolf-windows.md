@@ -195,7 +195,7 @@ There are two types of resolutions:
 ### Logical resolution
 
 Note that the [GameInfo](/api/overwolf-games#gameinfo-object) Object that returns from the getRunningGameInfo() function, has in addition to the expected `width` and `height` fields, also `logicalWidth` and `logicalHeight`. These fields returns the game reported (logical) pixel height/width.  
-If your screen is set to scale factor (for example 200% DPI), you mostly prefer to work with the logical sizes, as the regular sizes will wound up being X2.
+If your screen is set to scale factor (for example 200% DPI), you mostly prefer to work with the logical sizes, as the regular sizes will wound up being X2, while the logical is not DPI aware.
 
 ### Detect resolution change
 
