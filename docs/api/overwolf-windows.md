@@ -315,7 +315,11 @@ Parameter           | Type       | Description                                  
 windowId	        | string     | The id or name of the window to maximize                                                         |
 callback (Optional) | function   | Called after the window is maximized                                                           |
 
-**Note** that this function will not work if the manifest [resizable flag](https://overwolf.github.io/docs/api/manifest-json#windows-resizable) is set to `false`.
+#### Notes
+
+* This function will not work if the manifest [resizable flag](https://overwolf.github.io/docs/api/manifest-json#windows-resizable) is set to `false`.
+
+* If you would like to "unmaximize" the window after calling "maximize()", you can call [window.restore()](#restorewindowid-callback), to restore the window to the previous size/position. 
 
 #### Callback argument: Success
 
