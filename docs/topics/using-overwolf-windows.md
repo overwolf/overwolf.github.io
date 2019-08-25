@@ -100,6 +100,7 @@ Using this method, you can use a shared “communication-bus” variable, that a
 
 Note that we highly recommend not to use [overwolf.windows.getOpenWindows()](../api/overwolf-windows#getopenwindowscallback) for windows communication.
 
+* Read more about the [background controller](#use-background-controller) concept. 
 * Download [our sample app](../start/sample-app-overview) that demonstrates all the basic design principals.
 
 ### using direct messages
