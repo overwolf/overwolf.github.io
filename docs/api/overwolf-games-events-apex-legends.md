@@ -126,7 +126,7 @@ As you can see, this object includes:
 
 key       | Category   | Values             | Notes       | Since Version |
 ----------| -----------| ------------------ | ----------- | ------------- | 
-location  | game_info  | See example below  |             |  0.130        |
+location  | match_info | See example below  |             |  0.130        |
 
 #### `location` notes
 
