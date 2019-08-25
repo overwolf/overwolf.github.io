@@ -71,7 +71,7 @@ A callback function which will be called with the status of the request
 overwolf.media.replays.turnOn({
       "settings": settings,
       "highlights": {
-        "enable" : true,
+        "enable" : true, //set false if you want to record the highligths manually
         "requiredHighlights" : ["death","assist","victory"] //an interesting evenst that happened in game
       }
     }, callback);
