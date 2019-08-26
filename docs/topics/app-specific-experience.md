@@ -1,58 +1,57 @@
 ---
 id: app-specific-experience
 title: App specific experience
-sidebar_label: App specific experience
+sidebar_label: User journey and experience
 ---
 
 
-With the Overwolf SDK you can create a whole new experience for your users in order to maximize user experience and retention.
+The Overwolf SDK enables you to create a new experience, providing the best possible user experience and therefore increasing retention.
 
-Compared to traditional websites, the content in your app is accessible in-game. But there is a lot more into it. As a software client, you have the ability to show windows on desktop.
+Unlike traditional websites, apps bring content in-game, and that content can communicate with in-game events unlike anything that happens in an ordinary browser. Moreover, as a software client, you have the ability to show windows on desktop too, not just in-game.
 
-In the following page we are going to show you what is the experience that is waiting for your users from the moment they see your website, to the point they are using your app in-game. For the examples here, we’ll be using the app [LoLwiz](https://www.overwolf.com/app/LoLwiz) – A stats app for League of Legends. In the following steps, you will see how the Overwolf experience is tailored in a way that connects the user to your brand.
+In this article we're going to show you the places where users encounter your app as well as what they can expect in terms of experience, from the moment they see your website and all the way to using your app in-game. For reference and to demonstrate some concepts, we’ll be using [LoLwiz](https://www.overwolf.com/app/LoLwiz) – A League of Legends app providing in-game stats and other features.
 
 ## Landing page
 
-Whether it is a special landing page you’ve created or your own website, it is important to let the user understand what you are offering, with the ability to download your app.
+Whether it is a new landing page you’ve created for your app or your own website, it's important to help users instantly understand what your product does and how they benefit by using it. The landing page should also have an instant download button so that users satisfied with your introduction can jump right in.
 
-You can read the [Marketing Communication Guidelines](communication-guidelines) for more information.
+You can read our [Marketing Communication Guidelines](communication-guidelines) for more information.
 
-## Installer
+## Installer Experience
 
-Once the user downloaded the app and started the installation process, your app’s tile will appear in the installer. It will tell the user that the app (LoLwiz in that case) is now installing. The same step will also happen if the user downloaded the app from the [Overwolf Appstore](https://www.overwolf.com/) on the web.
+Once users download your app and start the installation process, they will start an installer experience that can be customized and branded for your app. The installer is a way to make a user comfortable and informed until he can start using the app - starting by telling users the app (LoLwiz in the sample) is being installed and tracking progress. The installer experience will start both directly and when the user downloads the app from the [Overwolf Appstore](https://www.overwolf.com/) on the web.
 
 ![alt-text](assets/app-specific-experience/lolwiz-installer-1.jpg)
 
 
-## Desktop Icon and splash screen
+## Desktop icon and splash screen
 
-When the user finished the installation process, the user will get the desktop icon of your app. When clicking on it, the user will be able to see that LoLwiz is now launching.
+After installation is complete, the user's desktop will have a new icon added for your app. When clicking it, your app will launch immediately in Desktop mode.
 
-Read more about [desktop icons](../start/submit-your-app-to-the-store)
+Read more about [desktop icons](../start/submit-your-app-to-the-store).
 
 ![alt-text](assets/app-specific-experience/desktop-icon-and-splash-screen.jpg)
 
 ## Welcome screen
 
-It is important to create a welcome screen for your app. Once the user clicked on the desktop icon of your app or clicked on the app’s icon on the Overwolf dock, the welcome screen will appear. It is the best place to start your onboarding experience, with a clear call for action. In the case of LoLwiz, the welcome screen will tell the user the following: "Start a match and LoLwiz will automatically appear in-game".
+It's important to create an engaging welcome screen for your app. Once users clicked on the desktop icon or the app’s icon in the Overwolf dock, the welcome screen should appear. It's the best place to start your onboarding experience and provide a clear call for action. In the case of LoLwiz, the welcome screen prompts users: "Start a match and LoLwiz will automatically appear in-game!". Setting expectations and leading them to use the app.
 
-We have more insights for you about the importance of [onboarding experience](https://medium.com/overwolf-developers/apps-ftue-best-practices-670dd4fb2b10) in your app.
+For further reading, we put together more insights about the importance of [onboarding experiences](https://medium.com/overwolf-developers/apps-ftue-best-practices-670dd4fb2b10).
 
 ![alt-text](assets/app-specific-experience/lolwiz-home.jpg)
 
 
-## Your in-game experience
+## The in-game experience
 
-By using the Overwolf [real-time game events](../api/overwolf-games-events) to trigger valuable features of your app, you are able to connect with your users in-game.
-In the following example you can see that LoLwiz is showing a loading window of the app while the League of Legends match is loading. Once loading is done, the window will remind the user what is the hotkey in order to proceed to the content, which in this case, is statistics on the players in the match.
+Using Overwolf's [real-time game events](../api/overwolf-games-events) API empowers your app to interact with in-game events and connect to users on their own terms. In the following example you can see that LoLwiz chose to show a loading screen while the League of Legends match is loading. Once loading is done, the app window reminds the user about the hotkey they can use to activate the app and reach it's content, which in this case, is stats of players in the match.
 
-Using ads you can [monetize]() your app with Overwolf.
+Using ads you can [monetize](../start/monetization-overview) your app window with Overwolf, make sure to comply with our forgivable ads policy so user experience is never negatively impacted.
 
 ![alt-text](assets/app-specific-experience/lolwiz-stats.jpg)
 
 
 ## Post game
 
-To complete the experience, apps like Trophy Hunter will show a summary of the match which includes trophies the user earned in the app while playing League of Legends and other statistics. You can also create a shelf inside the Game Summary window of Overwolf. Feel free to contact us at developers@overwolf.com for more information, or by contacting one of the Overwolf team members on our Slack community.
+To complete the user's journey, apps like Trophy Hunter will show a summary of the match including statistics and trophies the user earned while playing League of Legends. You can also create a Game Summary tab to follow up with your users after they are done playing. Feel free to contact us at developers@overwolf.com for more information, or reach out to any of our team members on [Slack](https://overwolfdevs.slack.com).
 
 ![alt-text](assets/app-specific-experience/trophy-hunter-post-game.jpg)
