@@ -21,13 +21,11 @@ function GameListItem(props) {
 function GameTitle(props) {
   const { className, imgSrc, name, href} = props;
   return (
-
-<a href={`${href}`} title={`go to the ${name} API documentation page`}>
-    <h3 className={`game-title ${className}`}>
-      <img src={imgSrc} />
-      {name}
-    </h3>
-    </a>
+      <h3 className={`game-title ${className}`}>
+        <img src={imgSrc} />
+        {name}
+        <a href={`${href}`} title="full API docs">go to the API docs page</a>
+      </h3>
   );
 }
 
@@ -72,7 +70,7 @@ class GameEventsStatus extends React.Component {
       status: {},
       gamesMetadata: GamesMetadata,
       id: GameID,
-      apiLink: DocsLink, 
+      apiLink: DocsLink,
     };
   }
 
@@ -142,7 +140,7 @@ class GameEventsStatus extends React.Component {
     const stateCss = this.stateToCss(this.state.status.state);
     const imgSrc = this.state.gamesMetadata[this.state.id].iconLargeUrl;
     const name = this.state.gamesMetadata[this.state.id].name;
-
+ 
     return (
       <article className="hentry">
         <div className="entry-content">
@@ -153,7 +151,9 @@ class GameEventsStatus extends React.Component {
           </div>
         </div>
       </article>
-    );
+    ); 
+
+    
   }
 }
 
