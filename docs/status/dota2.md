@@ -1,6 +1,6 @@
 ---
 id: dota2
-title: Dota 2 Game Events Status
+title: Game events status
 sidebar_label: Dota 2
 ---
 

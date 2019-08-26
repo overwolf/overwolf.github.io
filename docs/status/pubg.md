@@ -1,6 +1,6 @@
 ---
 id: pubg
-title: PUBG Game Events Status
+title: Game events status
 sidebar_label: PUBG
 ---
 

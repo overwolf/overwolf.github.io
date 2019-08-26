@@ -1,6 +1,6 @@
 ---
 id: fortnite
-title: Fortnite Game Events Status
+title: Game events status
 sidebar_label: Fortnite
 ---
 

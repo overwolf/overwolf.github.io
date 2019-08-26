@@ -19,7 +19,7 @@ sidebar_label: All Games Events Status
 Pick any game to see its full events list.
 
 It is highly recommended to communicate errors and warnings to your app users.  
-You can easily do that by using the Overwolf API. [Read all the info here](../api/howto-check-events-status-from-app).
+You can easily do that by using the Overwolf API. [Read all the info here](../topics/howto-check-events-status-from-app).
 
 <div id="gameEventsStatus">
   <script type="text/jsx" src="/jsx/gameEventsStatus.jsx"></script>

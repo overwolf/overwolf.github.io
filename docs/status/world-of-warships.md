@@ -1,6 +1,6 @@
 ---
 id: world-of-warships
-title: WOW Game Events Status
+title: Game events status
 sidebar_label: World of Warships
 ---
 

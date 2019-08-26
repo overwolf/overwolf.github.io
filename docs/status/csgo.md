@@ -1,6 +1,6 @@
 ---
 id: csgo
-title: CS:GO Game Events Status
+title: Game events status
 sidebar_label: CS:GO
 ---
 

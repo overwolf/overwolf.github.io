@@ -1,6 +1,6 @@
 ---
 id: lol
-title: LOL Game Events Status
+title: Game events status
 sidebar_label: League of Legends
 ---
 

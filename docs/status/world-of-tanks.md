@@ -1,6 +1,6 @@
 ---
 id: world-of-tanks
-title: WOT Game Events Status
+title: Game events status
 sidebar_label: World of Tanks
 ---
 

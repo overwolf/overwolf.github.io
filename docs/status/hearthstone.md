@@ -1,6 +1,6 @@
 ---
 id: hearthstone
-title: Hearthstone Game Events Status
+title: Game events status
 sidebar_label: Hearthstone
 ---
 

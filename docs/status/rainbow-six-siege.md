@@ -1,6 +1,6 @@
 ---
 id: rainbow-six-siege
-title: Rainbow 6 Siege Game Events Status
+title: Game events status
 sidebar_label: Rainbow 6 Siege
 ---
 

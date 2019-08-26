@@ -1,6 +1,6 @@
 ---
 id: rocket-league
-title: Rocket League Game Events Status
+title: Game events status
 sidebar_label: Rocket League
 ---
 

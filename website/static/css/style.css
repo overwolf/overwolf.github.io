@@ -2835,7 +2835,7 @@ form.slack-invite .result.success {
 	padding-left: 110px;
 	padding-top: 10px;
 	line-height: 46px;
-	font-size: 36px;
+	font-size: 34px;
   color: #0D0A1A;
   font-weight: 400;
 }
@@ -2847,6 +2847,12 @@ form.slack-invite .result.success {
 	top: 0;
 	width: 60px;
 	height: 60px
+}
+
+.gep-game .game-title a {
+	display: block;
+	font-size: 16px;
+	margin-left: 15px;
 }
 
 .gep-game .game-title:before {

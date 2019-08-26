@@ -1,6 +1,6 @@
 ---
 id: heroes-of-the-storm
-title:HOTS Game Events Status
+title: Game events status
 sidebar_label: Heroes of the Storm
 ---
 

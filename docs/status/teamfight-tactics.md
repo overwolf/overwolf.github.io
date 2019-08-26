@@ -1,6 +1,6 @@
 ---
 id: teamfight-tactics
-title: TFT  Game Events Status
+title: Game events status
 sidebar_label: Teamfight Tactics
 ---
 

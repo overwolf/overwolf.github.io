@@ -1,6 +1,6 @@
 ---
 id: apex
-title: Apex Game Events Status
+title: Game events status
 sidebar_label: Apex Legends
 ---
 
@@ -17,6 +17,6 @@ sidebar_label: Apex Legends
 <script src="/js/games_metadata.js"></script>
 
 <div id="gameEventsStatus">
-  <script> const GameID = 21566; const DocsLink = "../api/overwolf-games-events-apex-legends"; </script>
+  <script> const GameID = 21566; const DocsLink = "../api/overwolf-games-events-apex-legends";</script>
   <script type="text/jsx" src="/jsx/specificGameEventsStatus.jsx"></script>
 </div>

@@ -28,7 +28,7 @@ statuses are being updated automatically so there might be a small delay (10~ mi
 
 If your app using Overwolf events, we highly recommend checking at least the general status with the above endpoint. If it’s Yellow or Red, you should drill down as needed, to query a specific event state – as your app may not function correctly and you should communicate it to your users.
 
-To get the general event’s health status of ALL the games you can query this endpoint, that returns a JSON with the supported games and their general health status:
+To get the general event’s [health status of ALL](../status/all) the games you can query this endpoint, that returns a JSON with the supported games and their general health status:
 
 ```json
 https://game-events-status.overwolf.com/gamestatus_prod.json
