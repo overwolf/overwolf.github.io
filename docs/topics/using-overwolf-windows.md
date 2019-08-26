@@ -4,20 +4,18 @@ title: Using Overwolf Windows
 sidebar_label: Using Overwolf Windows
 ---
 
-## Overwolf Windows Overview
+## Overview
 
-The starting point of working with Overwolf windows is declaring your app’s windows in the [manifest.json](../api/manifest-json) file.
+Every Overwolf app uses Overwolf windows, whether in-game or while on desktop. When you get to work on your own app, the first step is declaring your app’s windows in it's [manifest.json](../api/manifest-json) file. You will NOT be able to create an Overwolf window without declaring it in the manifest (window.open is not an Overwolf window).  
 
-You can NOT create an Overwolf window without declaring it in your manifest.json (window.open is not an Overwolf window).  
+The idea here is to declare a **window class** with it's properties and later you can create an **instance** of that class.
+It's not currently possible to create multiple instances of a window class - having many windows is discouraged because it might make your app more complicated than required or hurt user experience.
 
-The idea behind declaring the window in the manifest is that you are actually declaring a **window class** with properties and later creating an **instance** of that class.
-Currently, you can **NOT create multiple instances** of a window class. (having many windows is discouraged – because it might make your app more complicated than required).
+## Declaring windows in manifest.json
 
-## Declaring windows in the manifest.json
+Declare your window objects by giving the object a name under the data.windows section and adding [properties](manifest-json#extension_window_data-object) that you want the window to inherit when created. Properties can include size, starting position, transparency and others.
 
-Under the section: data.windows – you declare your window objects by giving the object a name (which will be the way you create the windows from your code) and adding different [properties](manifest-json#extension_window_data-object) that you want the window to inherit when created (transparency, size, starting position, etc.).
-
-Here is an example of a window declaration:
+Here is an example window declaration:
 
 ```json
  "data": {
@@ -37,92 +35,89 @@ Here is an example of a window declaration:
 
 ### Essential window properties
 
-* [`start_window`](../api/manifest-json#start_window) - Your app will always have a "main" window, the main window is the first window to be shown when your app is launched, and it MUST exist in order for the other windows to exist – if you close your main window (or if the user closes it) all other windows will be closed (and, in fact, your entire app is turned off).
+* [`start_window`](../api/manifest-json#start_window) - Every app always has a default window, a main window which is the first to be shown when your app is launched. A Start Window MUST exist in order for the other windows to exist – if you close your main window (or if the user closes it) all other app windows will be closed as well, factually closing your app.
 
-* [`file`](../api/manifest-json#window-file) – The most basic property of your window. This is the HTML file to be loaded into your window when it is opened. This can only be a local file. If you wish to host your app in a remote web-site, you’ll have to have a local page that redirects to the remote website (in such cases, you need to make sure that the **block_top_window_navigation** property is set to false).
+* [`file`](../api/manifest-json#window-file) – This is the core HTML file which will be loaded into your window when it's opened. This can only be a local file. If you wish to host your app on a remote web-site, you’ll have to build a local page that redirects to that website (If you do so, make sure that the **block_top_window_navigation** property is set to **false**).
 
-* [`transparent`](../api/manifest-json#window-transparent) – When set to true, your window has no window borders or background. Any part of your window that has a transparent background ("background: transparent;") will be a see-through area that blends with the game or desktop. If this is false, your window will have the common Overwolf window borders and background (white).
+* [`transparent`](../api/manifest-json#window-transparent) – When this property is set to true, your window will have no borders or background. Any part of your window that has a transparent background ("background: transparent;") will become a see-through area that blends with the game or desktop behind it. If this property is set to false, your window will have the common Overwolf window borders and white background.
 
-* [`grab_keyboard_focus`](../api/manifest-json#windows-grab_keyboard_focus) – The default value is false. Indicates whether the window will grab the keyboard focus when it is opened. Some windows can be opened automatically (e.g. based on a game event or a notification) or even by hotkey – you might not want to "steal" the keyboard focus from the game in such cases.
-**grab_focus_on_desktop** is the complementary property when outside of the game (however, unlike grab_keyboard_focus, the default value is true).
+* [`grab_keyboard_focus`](../api/manifest-json#windows-grab_keyboard_focus) – This property is set to false by default, but if set to true, this property means opening your window will automatically take the user's keyboard focus and any keystrokes will be made in the app window rather than the current game the user's seeing. Since some windows open surprisingly or automatically, for example based on a game event or a hotkey pressed, you want to keep this false in most cases and avoid 'stealing' user keyboard focus away. **grab_focus_on_desktop** is the complementary property which describes out-of-game behavior, this is set to True by default because the user is not playing when launching the app in desktop mode.
 
-* [`size`](../api/manifest-json#windows-size) – Allows you to set the default size of the window when it is first opened. If your window is not resizable, this will be the constant size of your window.
-However, if your app is resizable – the app size is saved by Overwolf when closed so that the next time it is opened, **it will preserve this size** (even if you uninstall/re-install your app).  
-See the [windows sizes](#windows-sizes) tips.
+* [`size`](../api/manifest-json#windows-size) – Allows you to set the size of your app window when it is first opened. If your window is not resizable, this will be its permanent size. However, if your app is resizable – app size is saved by Overwolf when closed so that the next time it is opened, **it will open with the same size as it was closed with by the user**, this will persist even if the app is uninstalled and reinstalled. More [window size tips](#windows-sizes).
 
-* [`min_size`](../api/manifest-json#windows-min_size) and [`max_size`](../api/manifest-json#windows-max_size) - Defines the minimum/maximum size of the window in pixels.
+* [`min_size`](../api/manifest-json#windows-min_size) and [`max_size`](../api/manifest-json#windows-max_size) - These properties define the smallest and largest your app window can be in pixels.
 
 
 ## Accessing your declared windows
 
-There are two types of window identifiers: `name` and `id`.
+There are two ways we identify windows: the `name` and `id` properties.
 
-### Access by window.name
+### Using window.name
 
-When accessing a window by it’s name – you need to pass the name value as it appears in your manifest.json window declaration.
+When accessing a window by name, you need to use the name value exactly as it appears in your manifest.json window declaration.
 
-> A window name is always a value set/declared by the developer of the app.
+> A window name is always a value declared by the developer of the app.
 
-### Access by window.id
+### Using window.id
 
-When accessing a window by it’s id (which means you already have an instance of your window) – you need to retrieve this id from one of the two overwolf.windows functions: 
+Accessing a window by id is possible when you already have an instance of your window declared – you can retrieve this id using one of two overwolf.windows functions: 
 
 * [overwolf.windows.obtainDeclaredWindow()](../api/overwolf-windows#obtaindeclaredwindowwindowname-callback)
 * [overwolf.windows.getCurrentWindow()](../api/overwolf-windows#getcurrentwindowcallback)
 
-> A window id is always a value set by the Overwolf API. This value is subject to change in future Overwolf versions – so do not use hardcoded values.
+> A window id is set by the Overwolf API. This value is subject to change in future Overwolf versions – so you should avoid using hardcoded values.
 
-Because we currently do not support creating multiple instances of a window class – most functions that accept a window id also accept the window’s name.
+Currently we do not support generating multiple instances of the same window class, most functions that use window id will accept window name just the same.
 
-## How to open a new window
+## How to create a new window
 
 ### Call obtainDeclaredWindow()
 
-First, you must call [overwolf.windows.obtainDeclaredWindow()](../api/overwolf-windows#obtaindeclaredwindowwindowname-callback) passing it the window’s name (as declared in your manifest.json) – this, in turn, will create an instance of your window (currently a single instance) and return basic window information (id, name, width, height etc…).
+First, you must call [overwolf.windows.obtainDeclaredWindow()](../api/overwolf-windows#obtaindeclaredwindowwindowname-callback) using the window’s name as declared in your manifest.json. This will create a single instance of your window and return basic window information including id, name, width, height and other base properties.
 
 ### Call restore()
 
-Second, you need to call [overwolf.windows.restore()](../api/overwolf-windows#restorewindowid-callback) passing it either the window name or id (the id is retrieved from obtainDeclaredWindow).
+Afterwards, you need to call [overwolf.windows.restore()](../api/overwolf-windows#restorewindowid-callback) using either the window's name or id retrieved from obtainDeclaredWindow.
 
 :::warning
-you can not skip obtainDeclaredWindow() and call restore() on the window’s name – it will just NOT work (It will work only if the window is already instantiated and minimized, and you want to restore it).
+Skipping obtainDeclaredWindow() and calling restore() with the window’s name will **not work** unless the window is already instantiated and minimized (in which case it will be restored).
 :::
 
-## Communication between windows
+## Communicating between windows
 
-We’ve had a long history of methods used to communicate between Overwolf windows: localStorage events, cookies, etc…
+Over the years we had multiple methods used to communicate between Overwolf windows: localStorage events, cookies and more:
 
-### using background controller
+### Using a background controller
 
-We believe the best method for communicating between windows of the same app is by using [`overwolf.windows.getMainWindow()`](../api/overwolf-windows#getmainwindow). This function allows you to get direct access to your main index page (which should be a controller/background page) and it’s HTML Window object (and thus any JS function or DOM element).  
+In our experience the best method for communicating between windows of the same app is using [`overwolf.windows.getMainWindow()`](../api/overwolf-windows#getmainwindow). This function allows you to get direct access to your main index page and it’s HTML Window object - including any JS function or DOM element.   
 
-Using this method, you can use a shared “communication-bus” variable, that allows communication between the different app windows.  
+Using this method, you can use a shared “communication-bus” variable that allows different windows to communicate.  
 
-Note that we highly recommend not to use [overwolf.windows.getOpenWindows()](../api/overwolf-windows#getopenwindowscallback) for windows communication.
+We strongly recommend not to use [overwolf.windows.getOpenWindows()](../api/overwolf-windows#getopenwindowscallback) for windows communication.
 
-* Read more about the [background controller](#use-background-controller) concept. 
-* Download [our sample app](../start/sample-app-overview) that demonstrates all the basic design principals.
+* Read more about [background controllers](#use-background-controller). 
+* Download [our sample app](../start/sample-app-overview) which demonstrates all basic design principals.
 
-### using direct messages
+### Using direct messages
 
-Another option for communication between windows is the method [`overwolf.windows.sendMessage()`](../api/overwolf-windows#sendmessagewindowid-messageid-messagecontent-callback).   allows for sending messages directly to a window. The window receiving the message needs to listen on the [`overwolf.windows.onMessageReceived event`](../api/overwolf-windows#onmessagereceived).
+Another option for communication between windows is the method [`overwolf.windows.sendMessage()`](../api/overwolf-windows#sendmessagewindowid-messageid-messagecontent-callback). This method allows to send messages directly to a window. The window receiving the message needs to listen on the [`overwolf.windows.onMessageReceived event`](../api/overwolf-windows#onmessagereceived).
 
 :::warning
-Using sendMessage is not our suggested choice since it might not work on some occasions (for example, when sending extremely big messages) .
+Using sendMessage is not our best practice since it might not work on some occasions, for example, when sending extremely long messages .
 :::
 
-## Communication channel with an iframe inside an Overwolf window
+## Communication channels using an iframe inside an Overwolf window
 
 ## Windows Types
 
-There are two main types of Overwolf app windows:Transparent vs. Non-Transparent Windows.
+Behavior is different depending on window type, and we're going to go over two main types of Overwolf app windows: Transparent vs. Non-Transparent Windows.
 
 ###  Non-Transparent Window
 
-A non-Transparent Window or **standard** Overwolf window, is a window that has borders, window control buttons, opacity slider and a white background.
+A non-Transparent Window is the **standard** Overwolf window. A window with borders, control buttons, opacity slider and a white background.
 
- * In order to create this window you should set the [`transparent`](../api/manifest-json#window-transparent) window property in the manifest.json to 'false'.
- * In order to enable the maximize button, you need to set the [`show_maximize`](api/manifest-json#show_maximize) property to 'true'.
+ * In order to create this window you should set the [`transparent`](../api/manifest-json#window-transparent) property in your manifest.json to 'false'.
+ * In order to enable a maximize button, you need to set the [`show_maximize`](api/manifest-json#show_maximize) property to 'true'.
 
 An example from the manifest.json file:
 
@@ -136,17 +131,17 @@ An example from the manifest.json file:
 }
 ```
 
-Below you can see an example from the [sample app](#sample-app), for a standard Overwolf window.
+Below you can see an example from the [sample app](#sample-app).
 
 ### Transparent window
 
 :::important
-The term transparent might be a bit misleading, we consider the non-standard Overwolf window as a “transparent” window. This window has no borders, window control buttons or background – you should create those elements by yourself in your HTML/CSS.
+The term transparent might be a bit misleadin, . This window has no borders, window control buttons or default background – create those elements by yourself in your HTML/CSS.
 :::
 
 In order to create this window type, the `transparent` property in the manifest.json should be set to ‘true’.
 
-Here you can see an examples for standard and transparent windows from our sample app, and other windows from a real live apps on our apps store:
+Here you can see examples for standard and transparent windows from the sample app, and other windows from live apps on our appstore:
 
 <div class="box" data-slick='{"variableWidth": true}'>
   <a data-fancybox="gallery1" data-caption="standard window sample app" href="../assets/standard-window.png">
@@ -177,17 +172,17 @@ Here you can see an examples for standard and transparent windows from our sampl
 
 ### Sample app
 
-Here you can **download our [sample app](../start/sample-app-overview)** that shows you how a “transparent” window should be created.
+You should **download our [sample app](../start/sample-app-overview)**, it covers transparent/non-transparent window creation and much more.
 
-## Windows resolution
+## Window resolution
 
-In order to position the window in certain location (in-game or on the desktop), or in order to change the size of the window relativly,  you'll first need to get the current user’s screen resolution.
+Setting window resolution and position whether it's in-game or in desktop requires you to first get the user's current screen resolution. 
 
-### Detect the resolution
+### Detecting screen resolution
 
-There are two types of resolutions:  
+Users have two relevant resolutions to consider:  
 
-"desktop/monitor resolution" (the resolution of the user’s OS) and "game resolution" (the resolution that the user set in the game's settings).
+"Screen resolution", which is the operating system's default desktop resolution, and "game resolution" which is the resolution in which they play their game and can be different from the desktop setting.
 
 * Desktop resolution can be detected by using [overwolf.utils.getMonitorsList()](../api/overwolf-utils#getmonitorslistcallback).
 
@@ -195,36 +190,34 @@ There are two types of resolutions:
 
 ### Logical resolution
 
-Note that the [GameInfo](/api/overwolf-games#gameinfo-object) Object that returns from the getRunningGameInfo() function, has in addition to the expected `width` and `height` fields, also `logicalWidth` and `logicalHeight`. These fields returns the game reported (logical) pixel height/width.  
-If your screen is set to scale factor (for example 200% DPI), you mostly prefer to work with the logical sizes, as the regular sizes will wound up being X2, while the logical is not DPI aware.
+The [GameInfo](/api/overwolf-games#gameinfo-object) object sent by the getRunningGameInfo() function has, in addition to the expected `width` and `height` fields, two more properties called `logicalWidth` and `logicalHeight`. These fields return the game's reported logical pixel dimensions.  
+If your screen is scaled by a DPI factor, you should work with logical sizes, as the regular sizes will wound up being scaled in proportion, while the logical is not DPI aware.
 
-### Detect resolution change
+### Detecting resolution changes
 
-In order to detect if a user changed his resolution:
+In order to detect whether a user has changed their resolution:
 
-* In-game resolution change – Register to the [overwolf.games.onGameInfoUpdated()](../api/overwolf-games#ongameinfoupdated) event to get the updated game resolution.
+* In-game resolution change – Register to the [overwolf.games.onGameInfoUpdated()](../api/overwolf-games#ongameinfoupdated) event to get updated in-game resolution.
 
-* Desktop (out-of-game) resolution change – There's no way to detect a change with the desktop resolution, you’ll have to check for this info each time your app starts (by using [getMonitorsList()](../api/overwolf-utils#getmonitorslistcallback)).
+* Desktop /out-of-game resolution change – There's no way to detect a change in desktop resolution, you’ll have to check each time your app launches by using [getMonitorsList()](../api/overwolf-utils#getmonitorslistcallback).
 
-## Windows sizes
+## Window sizes
 
-The right planning is crucial before you start with the development process of your app.  
-While Overwolf is handling the high variety of user’s specs and screen resolutions for you, it is still important to pick the optimal size for your app’s windows.  
+Correct planning is critical for your app's development process. While Overwolf is handling the huge variety of user specs and screen resolutions, it's still important to pick the optimal size for your app’s windows.  
 
-While the most common window dimension would be 1366×768, the best optimal size would be 1200×700, in order to support all screen resolutions.
+While the most commonly used window size would be 1366×768, the optimal size would be 1200×700, which better supports a wider variety of resolutions.
 
-You can also do the following when handling with windows sizes:
+You can also do the following when handling window sizes:
 
-### Set the default size
+### Set default window size
 
-As [size](../api/manifest-json#windows-size) flag only applies the first time you open the windows, you can set [min_size](../api/manifest-json#windows-min_size) and [max_size](../api/manifest-json#windows-max_size) to the same value, to enforce your app window to always load on the same size.  
+As the [size](../api/manifest-json#windows-size) flag only applies during the first time you open the window, you can set [min_size](../api/manifest-json#windows-min_size) and [max_size](../api/manifest-json#windows-max_size) to the same values and force your app window to always load with identical dimensions.  
 
 In addition, if you want to dynamically set your window size according to the [user's desktop resolution](#detect-the-resolution) and DPI, you can use [setMinSize()](../api/overwolf-windows#setminsizewindowid-width-height-callback).
 
-### Allow resolution chooser
+### Enable user resolution choices
 
-Allow the user to choose the right window size from the app's settings.  
-Some Examples for apps that let the user choose his preferred app window size and for common and optimal app window sizes:
+You can allow users to choose their preferred window size in the app's settings. Some Examples for common and optimal window sizes, as well as apps that let the user choose their preferred app window size:
 
 <div class="box">
 <a data-fancybox="gallery" data-caption="custom window size" href="../assets/size-example-user-custom.jpg">
@@ -253,29 +246,27 @@ Some Examples for apps that let the user choose his preferred app window size an
   </a>
 </div>
 
-## Windows position
+## Window position
 
-### Set the default position
+### Set a default position
 
-As [start_position](../api/manifest-json#windows-start_position) flag only applies the first time you open the windows, you can use [changePosition()](../api/overwolf-windows#changepositionwindowid-left-top-callback) if you want to change the position of the window dynamically. For example, after you [calculate the user's resolution](#detect-the-resolution) and you want to position your window in the center of the screen.
+As the [start_position](../api/manifest-json#windows-start_position) flag only applies the first time you open a windows, you can use [changePosition()](../api/overwolf-windows#changepositionwindowid-left-top-callback) if you want to change the position of the window dynamically. For example, if you'd like to place the window in the middle of the screen after you [calculate the user's resolution](#detect-the-resolution).
 
 ### Change window position
 
-In order to position your window in a certain location, you'll first need to [get the current user's screen resolution](#detect-the-resolution).  
+In order to position your window in a specific location, you'll first need to [get the current user's screen resolution](#detect-the-resolution). As explained above, there are two types of resolutions – "Screen resolution" (the resolution of the user's OS) and "game resolution" which is the actual in-game resolution used.
 
-There are two types of resolutions – "desktop/monitor resolution" (the resolution of the user's OS) and "game resolution" (the resolution that the user set in the game's settings).
+* To reposition a desktop window of your app, get the user desktop resolution by using [getMonitorsList()](../api/overwolf-utils#getmonitorslistcallback) and calculate the required location in pixels.
 
-* To position a "desktop" window of your app, get the user desktop resolution by using [getMonitorsList()](../api/overwolf-utils#getmonitorslistcallback) and calculate the required location.
+* To reposition an in-game window of your app, get the in-game resolution by using [getRunningGameInfo()](../api/overwolf-games#getrunninggameinfocallback) and calculate the required location in pixels.
 
-* To position an "in-game" window of your app, get the  the game’s resolution by using [getRunningGameInfo()](../api/overwolf-games#getrunninggameinfocallback) and calculate the required location.
+## General tips for using windows
 
-## General Tips for using windows
-
-We collected some various best practices on how to use the Overwolf windows more efficiently: 
+In this segment we'll share some best practices and tips born of experience on using Overwolf windows:
 
 ### Call getCurrentWindow() once
 
-A window should call [overwolf.windows.getCurrentWindow()](../api/overwolf-windows#getcurrentwindowcallback) once during startup and then store the results in a variable for all later access. It can save a lot of code like:
+A window should call [overwolf.windows.getCurrentWindow()](../api/overwolf-windows#getcurrentwindowcallback) once during startup and then store the results in a variable for later use. Also makes your code more elegant:
 
 ```js
 overwolf.windows.getCurrentWindow(function(result) {
@@ -285,40 +276,41 @@ overwolf.windows.getCurrentWindow(function(result) {
 });
 ```
 
-### Don't use full-screen transparent window
+### Avoid full-screen transparent windows
 
-Overwolf apps are supposed to act like native desktop applications and not a website – therefore, don’t be tempted to create a full-screen transparent window with draggable HTML elements (e.g. `<div>`) as windows.
+Overwolf apps are supposed to act like native desktop applications and not as websites – therefore, don’t be tempted to create full-screen transparent windows with draggable HTML elements (e.g. `<div>`) as windows.
 Doing so will:
 
-  * Create a laggy experience.
+  * Create a low-performance, laggy experience.
 
-  * Use a lot more CPU than required + can hurt the game’s performance.
+  * Use a lot more CPU than required for your features.
 
-  * Doesn’t support dual screens (i.e. dragging an element to the second screen).
+  * Will not support dual screens or companion laptop screens, including dragging an element to the second screen.
 
-  * Risk of having the entire game covered with a broken html page.
+  * Cause a risk of a broken HTML page covering the entire game screen.
 
-  * Risk of grabbing the game’s focus without the gamer understanding why.
+  * Cause a risk of grabbing focus without the gamer wanting it or understanding why.
 
-### Your app is not a website
+### Your app is not a website!
 
-Overwolf apps are supposed to act like native desktop applications (part 2): Unlike a website, where it is “okay” to allow the user to select text from the page or perform a mouse-wheel movement on the page – in a desktop application, this doesn’t look/feel natural and might even break your app’s design.
-Treat your app as an application, not as a website.
+Overwolf apps are supposed to act like native desktop applications, not websites. Avoid enabling mousewheel scrolls or text selection in your app's windows, these are website features which would look and feel weird in an application setting. Whenever in doubt in terms of design or user experience, compare your app to desktop applications and not to websites. 
 
 ### Keep your windows small
 
-Keep it small – when Overwolf renders transparent windows – it does it’s best to do it efficiently, however, large windows do have a performance cost. If possible, don’t use large windows (It’s hard to define what a large window’s dimensions are, but we hope you get the point).
+App windows should provide their value in the leanest, more accurate fashion possible. When Overwolf renders transparent windows it does it’s best to do it efficiently, however, large windows do have performance costs. Therefore, avoid using large windows and try to get your app's design to be focused, to the point and as small as you can effectively make it.
 
 ### Use block_top_window_navigation
 
-Unless you know otherwise, always set: [block_top_window_navigation](../api/manifest-json#windows-block_top_window_navigation) to true in the manifest.
-This will make sure that no bugs or accidental calls like: window.top.href = … take control of your entire app.
-The only reason this isn’t set by default, is for backwards compatibility (e.g. apps that want to host themselves on a remote server).
+Unless you have good reasons to do otherwise, always set the [block_top_window_navigation](../api/manifest-json#windows-block_top_window_navigation) flag to true in your manifest.json file.
 
-### Use background controller
+This will ensure that no bugs or accidental calls like window.top.href take control of your entire app.
+The only reason this isn’t set to true by default is for backwards compatibility for apps that are hosted on remote servers.
 
-Consider using your main window as a hidden/background window (that the user doesn’t see) – it then can act as a controller/service that runs in the background and controls or communicate with other visible windows of the app. It is a MUST for apps that auto-launch when the game starts or just want to popup notifications.
-This kind of "hidden" window should have the [is_background_page](../api/manifest-json#is_background_page) flag set to true in the app’s manifest.json file:
+### Use a background controller
+
+Consider using your main window as a hidden controller window that the user doesn’t see – it can act as a service that runs in the background and communicates with other visible windows of the app. For apps that auto-launch when the game starts or wish to implement pop-up notifications, this is a must-have.
+
+This "hidden" window should have the [is_background_page](../api/manifest-json#is_background_page) flag set to true in the app’s manifest.json file:
 
 ```json
 "index" : {
@@ -328,13 +320,13 @@ This kind of "hidden" window should have the [is_background_page](../api/manifes
 }
 ```
 
-### Use native desktop window
+### Use native desktop windows
 
-If your app includes a window that will only be visible on desktop (and not in-game), you should add the following flags to the window data section in the app’s manifest.json file:
+If your app includes a window that will only be visible on desktop but not while playing, you should add the following flags to that window's data in the app’s manifest.json file:
 
 ```json
 "desktop_only": true,
 "native_window":true
 ```
 
-This will dramatically improve your app performance.
+These steps will dramatically improve your app performance and help design an efficient, elegant product.
