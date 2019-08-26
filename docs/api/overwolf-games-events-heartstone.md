@@ -21,6 +21,11 @@ Please read the [overwolf.games.events](overwolf-games-events) documentation pag
 * [match](#match)
 * [match-info](#match-info)
 
+## Game events status
+
+It is highly recommended to communicate errors and warnings to your app users. 
+
+Check [here](../status/all) the game events status. OR -  easily check the game events status from your app, [using our API](../topics/howto-check-events-status-from-app).
 
 ## `collection`
 
