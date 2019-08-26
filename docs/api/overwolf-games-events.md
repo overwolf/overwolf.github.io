@@ -43,7 +43,7 @@ So for example, the feature "death" in the game LOL, has a:
 You can  receive this event by registering to the `overwolf.games.events.onNewEvents` event listner
 * **"deaths" info update**, which holds a counter for the total player's deaths in the current session. </br>
    You can  receive this event by registering to the `overwolf.games.events.onInfoUpdates2` event listner.</br>
-   It is also possible to get the current available information using [`overwolf.games.events.getInfo()`](#getInfo)
+   It is also possible to get the current available information using [`overwolf.games.events.getInfo()`](#getinfocallback)
 
 Note that a feature can contain a few info updates and events, and not just one info update and one event like the above example.
 

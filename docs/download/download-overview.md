@@ -21,8 +21,8 @@ To develop, load or run unpacked or unreleased apps, you have to [whitelist](../
 
 * Download the [Latest Overwolf Public Version](https://download.overwolf.com/install/Download?Name=Game+Summary&ExtensionId=flkgdpkkjcoapbgmgpidhepajgkhckpgpibmlclb&Channel=website).
 
-## Demo App
+## Sample App
 
-Read our [getting started guide](../start/sample-app-overview) and review our demo app to understand the basics.
+Read our [getting started guide](../start/sample-app-overview) and review our sample app to understand the basics.
 
 * Download the [Overwolf Sample App](https://github.com/overwolf/sample-app).
