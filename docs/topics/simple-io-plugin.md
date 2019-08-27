@@ -1,29 +1,28 @@
 ---
 id: simple-io-plugin
 title: The Overwolf Simple IO Plugin
-sidebar_label: Simple IO Plugin
+sidebar_label: Simple I/O Plugin
 ---
 
 
-A very useful plugin that we've developed is the **Simple IO Plugin**. This plugin allows your app to perform different filesystem I/O operations.
+A very useful plugin that we've developed ourselves is the **Simple IO Plugin**. This plugin allows your app to perform different filesystem I/O operations not available otherwise.
 
-On the [GitHub repository](https://github.com/overwolf/overwolf-plugins/tree/master/simple-io-plugin) of the plugin you can [read  more](https://github.com/overwolf/overwolf-plugins/blob/master/simple-io-plugin/README.md) about the functions/properties/events of the simple-io-plugin.
+You can [read  more](https://github.com/overwolf/overwolf-plugins/blob/master/simple-io-plugin/README.md) about the functions of the simple-io-plugin in the [Simple I/O GitHub repository](https://github.com/overwolf/overwolf-plugins/tree/master/simple-io-plugin).
 
-## Common uses for the plugin
+## Common uses for Simple I/O
 
-It is very useful for:
+This plugin enables you to:
 
-1. Reading a game’s log file(s) and even “streaming” the log file, line-by-line, to your app.
-2. Creating your own persistent file on the local disk.
+1. Read a game’s log file or files and even “stream” the log file, line-by-line, to your app.
+2. Create your own persistent log file on the local hard drive.
 
 ## Download
 
-* You can download the plugin from our [GitHub rtepository](https://github.com/overwolf/overwolf-plugins/tree/master/simple-io-plugin).
-* The latest DLL can be found [here](https://github.com/overwolf/overwolf-plugins/tree/master/dist) (Don’t forget to Unblock it after downloading).
+* You can get the plugin from our [GitHub repository](https://github.com/overwolf/overwolf-plugins/tree/master/simple-io-plugin).
+* The latest DLL can be found [here](https://github.com/overwolf/overwolf-plugins/tree/master/dist), don’t forget to Unblock it after downloading.
 
 ## Unblock Dll's
 
-When you download a DLL file from a browser, Windows marks it as unsafe.  
-Please make sure to check the "Unblock" box in the DLL’s file properties:
+When you download foreign DLL files using a browser, Windows automatically marks it as unsafe. You can mark the file as safe by checking the 'Unblock' box found in the file's properties.
 
 ![Unblock dll](../assets/unblock_dll.jpg)
