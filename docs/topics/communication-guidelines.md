@@ -1,40 +1,33 @@
 ---
 id: communication-guidelines
 title: Marketing Communication Guidelines
-sidebar_label: Marketing Communication
+sidebar_label: Marketing Communications
 ---
 
-You created your app and you want gamers to know about it and get them to use it. As part of that, you will probably work on marketing and on creating the identity of your brand online.
+Your app is live and you want gamers to get to know it and use it more. While we cover promotions in depth [here](../start/promoting-your-app), this article is going to take a closer look at communications and some easy ways to engage positively with your users. A strong brand with clearly communicated messages prevents confusing on behalf of your users, making it easy to relate and explain the app's value to others. For example, clearly messaging that your app runs on Overwolf is important to prevent users from churning out or being negative towards your Overwolf installation flow.
 
-To make sure that your users don’t get confused, you will need to explain the users that they are going to experience Overwolf as part of the process.
+## Communication Goals
 
-## Goals
+##
+1. Communicate to improve user experience. 
+2. Communicate to be transparent and clear with our audience.
+3. Communicate to inform users about value they can gain or explanations to software behaviors they encounter.
 
-Best user experience.
-Transparency and clear messaging for your users.
-Prevent user surprises. users need to understand what they are installing and why.
+## "Get it on Overwolf"
 
-## What is "Get it on Overwolf"
-
-To achieve the perfect communication, you should use the following “Get it on Overwolf” badge on your social media pages and websites. We suggest not to use “Powered by Overwolf” because this implies that Overwolf is some sort of engine that sits under the hood, whereas in reality it’s a consumer product that your users will interact with.
+As an example of good visual messaging making it clear for the users that they'll have to install something from us, you should implement the 'Get it on Overwolf' badge in your landing page, social media channels and other public settings. Mentioning the Overwolf appstore when referring or promoting your app is generally a good practice. 
 
 The right badge to use:
 
 ![alt-text](assets/overwolf-appstore-badge.png)
 
-## Why
+Note that you should always link this and other badges to your app's page in the Overwolf appstore, never a direct download. 
 
-The potential user is looking at your website and sees your brand. 
-When he clicks on your “Download now”, he will see the Overwolf installer.
-If you won’t explain what Overwolf is before the user clicks on the download link, you may lose this potential user because he doesn’t understand what he is going to download.
+## Messaging logic example
 
-As a developer, being in-line with these communication guidelines will benefit you on the long run, as users will understand what they are getting when they download your product. Being part of the Overwolf platform and telling that to your users will help them to understand the app’s user experience and how to control it.
+Potential users are looking at your website and see your app's brand. When they click the download button, however, an Overwolf installer launches. If there's no messaging around this gap, the user might churn off because it feels like the wrong product was downloaded.
 
-To sum up:
-Do not use direct download link on your website, the hyperlink of the download button should direct the user to your app’s page on the Overwolf Appstore.
-Use the language “Get it on Overwolf” and not “Download Now”.
-On social media, mention that your product is available on the Overwolf Appstore
-Any marketing assets of your app should mention Overwolf.
+As a developer, clear communications will benefit you plenty down the road, as users will understand what they are getting when they download your product. Being part of the Overwolf platform and telling that to your users will help them understand the app’s user experience.
 
 ## Examples
 
