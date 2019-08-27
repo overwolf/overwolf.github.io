@@ -3,11 +3,10 @@ id: sample-plugin
 title: Overwolf Sample Plugin
 sidebar_label: Sample Plugin
 ---
-# Overwolf sample plugin
 
-This is an unpacked {Overwolf app}(https://github.com/overwolf/overwolf-plugin-sample/tree/master/sampleapp) that utilizes the Overwolf {Plugin Sample}(https://github.com/overwolf/overwolf-plugin-sample)
+This is an unpacked [Overwolf sample app](https://github.com/overwolf/overwolf-plugin-sample/tree/master/sampleapp) that utilizes the Overwolf [Sample Plugin](https://github.com/overwolf/overwolf-plugin-sample)
 
-* The DLL file is placed inside of the app’s directory – so if you recompile it, you’ll need to place the new DLL file inside the folder (overriding the existing dll file). Please review the manifest.json file to view how to reference the Plugin file.
-* The DLL should be compiled using x64 platform.
+* The DLL file is placed inside of the app’s directory – so if you recompile it, you’ll need to replace the old DLL with the new one inside the folder. Please review the manifest.json file to view how to reference the Plugin file.
+* All DLLs should be compiled for the x64 platform.
 
-Please, don’t hesitate to ask us questions in our {developers Q&A.}(https://discuss.developers.overwolf.com/)
+Don’t hesitate to ask us questions in our [developers Q&A site](https://discuss.developers.overwolf.com/).
