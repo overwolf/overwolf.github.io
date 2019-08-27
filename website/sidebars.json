@@ -1,13 +1,9 @@
 {
 	"start": {
 		"Getting Started": 
-			["start/getting-started", "start/app-creation-process", "start/submit-app-proposal", "start/sdk-introduction", 
-			{
-                "type": "subcategory",
-                "label": "Sample app",
-                "ids": ["start/sample-app-overview", "start/sample-app-components", "start/sample-app-architecture"]
-            },
-			"start/using-dev-tools"],
+			["start/getting-started", "start/app-creation-process", "start/submit-app-proposal", "start/sdk-introduction","start/using-dev-tools"],
+			"Sample App":
+			["start/sample-app-overview", "start/sample-app-components", "start/sample-app-architecture"],
 			"Test Your App":
 			["start/how-to-test-your-app", "start/technical-checklist", "start/marketing-checklist"],
 			"Submit Your App":
@@ -33,8 +29,8 @@
     "api": {
 			"API Reference": 
 			["api/overwolf-api-overview", "api/changelog", "api/manifest-json"],
-			"Games Events List": ["api/games-ids", "api/overwolf-games-events-lol", "api/overwolf-games-events-tft", "api/overwolf-games-events-apex-legends", "api/overwolf-games-events-autochess","api/overwolf-games-events-csgo","api/overwolf-games-events-dota2","api/overwolf-games-events-fortnite","api/overwolf-games-events-pubg","api/overwolf-games-events-splitgate","api/overwolf-games-events-heartstone","api/overwolf-games-events-hots","api/overwolf-games-events-rocket-league","api/overwolf-games-events-rainbow-six","api/overwolf-games-events-wot","api/overwolf-games-events-wow","api/games-external-apis"],
-			"Games Launchers List": ["api/launchers-ids","api/overwolf-games-launchers-events-lol"],
+			"Available Game Events": ["api/games-ids", "api/overwolf-games-events-lol", "api/overwolf-games-events-tft", "api/overwolf-games-events-apex-legends", "api/overwolf-games-events-autochess","api/overwolf-games-events-csgo","api/overwolf-games-events-dota2","api/overwolf-games-events-fortnite","api/overwolf-games-events-pubg","api/overwolf-games-events-splitgate","api/overwolf-games-events-heartstone","api/overwolf-games-events-hots","api/overwolf-games-events-rocket-league","api/overwolf-games-events-rainbow-six","api/overwolf-games-events-wot","api/overwolf-games-events-wow","api/games-external-apis"],
+			"Launcher IDs": ["api/launchers-ids","api/overwolf-games-launchers-events-lol"],
 			"overwolf.benchmarking": ["api/overwolf-benchmarking"],
 			"overwolf.egs":
 			["api/overwolf-egs"],
