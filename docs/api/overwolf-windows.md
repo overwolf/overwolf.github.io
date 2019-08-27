@@ -77,7 +77,7 @@ Please make sure to read our guide on [how to use Overwolf windows](../topics/us
 
 > Returns a window object of the index page.
 
-This function allows you to get direct access to your main index page (which should be a controller/background page) and it’s HTML Window object (and thus any JS function or DOM element). Read more in the ["Communication between windows"](#) section.
+This function allows you to get direct access to your main index page (which should be a controller/background page) and it’s HTML Window object (and thus any JS function or DOM element). Read more in the ["Communication between windows"](../topics/using-overwolf-windows#communicating-between-windows) section.
 
 ## getCurrentWindow(callback)
 #### Version added: 0.78
