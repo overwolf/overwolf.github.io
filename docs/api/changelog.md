@@ -6,15 +6,11 @@ sidebar_label: Changelog
 
 All notable changes to this project will be documented in this file.
 
-## Version 0.135 (August 2019)
-
-* [CS: GO events](https://overwolf.github.io/docs/api/overwolf-games-events-csgo#docsNav)
-  * New info update:
-    * server_info
-    * game_mode
-
 ## Version 0.134 (August 2019)
 
+* New API: [overwolf.profile.subscription](overwolf-profile.subscription).  
+  Provides functions and events to help with user profile subscription management.
+  
 * [Teamfight Tactics Events](https://overwolf.github.io/docs/api/overwolf-games-events-tft#docsNav)
   * New info updates:
     * store
@@ -35,13 +31,13 @@ All notable changes to this project will be documented in this file.
 * [CS: GO game events](https://overwolf.github.io/docs/api/overwolf-games-events-csgo#docsNav)
   * New info update
     * replay
+    * server_info
+    * game_mode
 * [PUBG game events](https://overwolf.github.io/docs/api/overwolf-games-events-pubg#docsNav)
   * New info update
     * team_location
 
 ## Version 0.133 (July 2019)
-
-### API Features
 
 * [minimum-gep-version](manifest-json#meta-minimum-gep) - New manifest flag.
   Allow extensions to set a minimum GEP version in manifest (similar to minimum-overwolf-version).
@@ -54,8 +50,6 @@ All notable changes to this project will be documented in this file.
 
 ## Version 0.132 (July 2019)
 
-### API Features
-
 * [overwolf.os.getRegionInfo()](overwolf-os#getregioninfocallback) - new method.  
   Returns regional information about the user.
   
@@ -65,13 +59,7 @@ All notable changes to this project will be documented in this file.
 * [Teamfight Tactics Game Events](overwolf-games-events-tft) - TFT game events are now available.  
 This game-mode is officially supported and more events will be added soon.
 
-### Documentation
-
-* PUBG [matchEnd](overwolf-games-events-pubg#matchend-notes) event - added a new note.
-
 ## Version 0.131 (June 2019)
-
-### API Features
 
 * [LoL Launcher events](overwolf-games-launchers-events-lol)
   * New info update:
