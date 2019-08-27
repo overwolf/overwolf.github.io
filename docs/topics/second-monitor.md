@@ -21,7 +21,7 @@ For the secondary windows that will always run on the secondary screen you shoul
 
 2. Set the `desktop_only` flag to true -  https://overwolf.github.io/docs/api/manifest-json#windows-desktop_only
 
-3. Not a must, but we recommend to - set `native_winodw` flag to true - https://overwolf.github.io/docs/api/manifest-json#native_window
+3. Not a must, but we recommend to - set `native_window` flag to true - https://overwolf.github.io/docs/api/manifest-json#native_window
 
 4. Identify which screen is the secondary and display the secondary screen on that window -  https://overwolf.github.io/docs/api/overwolf-utils#getmonitorslistcallback
 (If you know the resolution of each screen, you can do the calculation where you should display your window)
