@@ -24,7 +24,7 @@ function GameTitle(props) {
       <h3 className={`game-title ${className}`}>
         <img src={imgSrc} />
         {name}
-        <a href={`${href}`} title="full API docs">go to the API docs page</a>
+        <a href={`${href}`} title="full API docs">Go to the API docs page</a>
       </h3>
   );
 }
