@@ -4,17 +4,15 @@ title: The Overwolf TeamSpeak Plugin
 sidebar_label: TeamSpeak Plugin
 ---
 
-The Overwolf **TeamSpeak Plugin** allows your app to perform different TeamSpeak server/channel/client related operations.
+The Overwolf **TeamSpeak Plugin** allows your app to perform TeamSpeak server, channel and client related operations. You can read the full list of functions and events available in the TeamSpeak Plugin in its [GitHub repository](https://github.com/overwolf/teamspeak-overwolf) .
 
-On the [GitHub repository](https://github.com/overwolf/teamspeak-overwolf) of the plugin you can read  more about the functions/properties/events of the TeamSpeak plugin.
+## Common uses for the TeamSpeak plugin
 
-## Common uses for the plugin
+TeamSpeak is a way for gamers to communicate using text and voice as they play. With this plugin you can, among other things:
 
-It is very useful for:
-
-* Initialize TeamSpeak connection.
-* Connect TS client to a Server.
-* Create a new channel.
+* Initialize a TeamSpeak server connection.
+* Connect to a Server and navigate channels.
+* Create new channels.
 * Mute client.
 
 ## Downloads
@@ -22,9 +20,8 @@ It is very useful for:
 * You can download the plugin from our [GitHub rtepository](https://github.com/overwolf/teamspeak-overwolf).
 * A sample Overwolf app using the TeamSpeak plugin can be found [here](https://github.com/overwolf/teamspeak-overwolf/tree/master/sampleApp).
 
-## Unblock Dll's
+## Unblock DLL's
 
-When you download a DLL file from a browser, Windows marks it as unsafe.  
-Please make sure to check the "Unblock" box in the DLL’s file properties:
+When you download DLL files from a browser, Windows automatically marks it as unsafe. Please check the "Unblock" box in the DLL’s file properties to remedy this:
 
 ![Unblock dll](../assets/unblock_dll.jpg)
