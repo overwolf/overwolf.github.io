@@ -226,6 +226,11 @@ To help you make sure that your manifest file is correct and complete, validate 
 2. Copy-paste the [schema’s](https://gist.github.com/eransharv/74ecac312957309a61f80725abd6951c) and your manifest.json code into the “Schema” and “Input JSON” windows, respectively.
 3. Check for any errors or missing data.
 
+## Access the manifest from your app
+
+You can read the manifest JSON from you app code, using the [overwolf.extenstions.getManifest()](overwolf-extensions#getmanifestid-callback) function.
+
+
 ## The top manifest objects
 There are many features that are enabled through this file. Some are mandatory (marked accordingly), and others are optional. Here is a description of the many features you can activate through the manifest.json
 
