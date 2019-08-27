@@ -3,9 +3,6 @@ id: second-monitor
 title: Second Monitor Utilization
 sidebar_label: Second Monitor Utilization
 ---
-
-## Second Screen Monitor Utilization 
-
 Many of our users currently have a second screen, providing a great opportunity to extend your app value onto a second screen! Creating a second window is as simple as creating a normal window pushed into a second screen location, which communicates with GEP and has a transparent background window.
 
 * The second screen should launch automatically but be easy to close. 
