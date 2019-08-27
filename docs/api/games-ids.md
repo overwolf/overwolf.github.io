@@ -47,7 +47,7 @@ If you didn’t find the game you need, contact us through [Slack](../support/co
 | 18  | Paladins                                                 |  10872        |
 | 19  | Grand Theft Auto: San Andreas Multiplayer                |  1340         |
 | 20  | Unturned                                                 |  10470        |
-| 21  | H1Z1: King of the Kill                                   |  14748        |
+| 21  | Apex Legends                                             |  21566        |
 | 22  | Euro Truck Simulator 2                                   |  8584         |
 | 23  | ARMA 3                                                   |  9208         |
 | 24  | PAYDAY 2                                                 |  9694         |
