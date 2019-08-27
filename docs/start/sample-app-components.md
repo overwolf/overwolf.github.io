@@ -8,13 +8,19 @@ You can download the latest version [here](https://github.com/overwolf/sample-ap
 
 You will find several files and folders in the sample app repository:
 
-<div class="box" data-slick='{"slidesToShow":1}'>
-  <a data-fancybox="gallery" data-caption="LoLwiz" href="../assets/sample-app/main-dir.png">
-    <span class="thumb">
-      <img src="../assets/sample-app/main-dir.png" alt="DotaPlus">
-    </span>
-  </a>
-</div>
+<pre>
+  +---- css
+  +---- img
+  +---- lib
+  +---- scripts
+  +---- windows
+  +---- Tile.jpg
+  +---- IconMouseNormal.png
+  +---- IconMouseOver.png
+  +---- desktop-icon.ico
+  +---- manifest.json
+</pre>
+
 
 ## manifest.json
 
