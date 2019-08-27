@@ -4,22 +4,18 @@ title: First Time User Experience
 sidebar_label: First Time User Experience
 ---
 
-## First Time User experience
+## Overview
 
-With the Overwolf SDK you can create a whole new experience for your users in order to maximize user experience and retention.
-Compared to traditional websites, the content in your app is accessible in-game. But there is a lot more into it. As a software client, you have the ability to show windows on desktop.
+The Overwolf SDK enables you to create app windows both in-game and out of it, so you can craft an ongoing experience that provides value, increases retention and improves user experience. Your user's journey begins not when he starts playing, but right after he installs and first opens your app - this first encounter with your product should behave differently and introduce your app to the user in an engaging way. 
 
-**So… what is a FTUE anyway? What makes it great?**
+**What makes for a great FTUE?**
 
-FTUE is defined as “the first encounter of a user with the product”. 
-The encounter may last just a few seconds (as happens in mobile apps or landing pages), or can take hours or even days until completed (as in getting to know complicated systems).
-In our case, we usually refer to the FTUE as the first launch and first session of a user with your app. Those can be separated in time and context.
+FTUE or First Time User Experience is defined as what happens during the first activation or meeting of the user with your app. This special flow may last just a few seconds like in many mobile apps or landing pages, or can take hours or even days until completed like with more complex technical and business products. In our case, we usually refer to FTUE as the first launch and first session of a user with your app. Note that these two can be separated in time and context.
 
 **Example:**
 
-In this example we’ll show you the [Legendary Builds app](https://www.overwolf.com/app/Colorfulstan-Legendary_Builds) (builds recommendations application for League of Legends players)
-There are two possibilities for the user to encounter the app for the first time:
-* **Out of game** (on desktop) – The user launches the app from the Overwolf dock after it was installed.
+In this example we’ll show you the [Legendary Builds app](https://www.overwolf.com/app/Colorfulstan-Legendary_Builds), an app providing build recommendations for League of Legends players. There are two ways the users' first engagement with the app can go:
+* **Out of game** (on desktop) – The user opens the app by clicking in the Overwolf dock or the desktop icon after it was installed.
 
 <div class="box" data-slick='{"slidesToShow": 1'>
   <a data-fancybox="gallery" data-caption="Legendary Builds" href="../assets/Firsttimeuserexperience/Champ-select.png">
@@ -31,7 +27,7 @@ There are two possibilities for the user to encounter the app for the first time
 </div>
 
 
-* **In-game** – The app automatically launches when a LoL match starts.
+* **In-game** – The app launches automatically when a LoL match starts.
 
 <div class="box" data-slick='{"slidesToShow": 2}'>
   <a data-fancybox="gallery" data-caption="Legendary Builds" href="../assets/Firsttimeuserexperience/Builds-are-ready.png">
@@ -48,14 +44,14 @@ There are two possibilities for the user to encounter the app for the first time
   </a>
 </div>
 
-The app’s UX designer should address all possibilities for first encounters – in game, on desktop, the transition and more. Each scenario can and should be designed to provide the first impression you want.
+The app's UX and design should cover all possibilities for first encounters – in game, on desktop, and any other contact points that need to be prepared for first time users. Each scenario can and should be designed to provide the best first impression and communicate with users in the way you want them to.
 
 ### Home Screen
 
-We recommend apps to invest time and efforts in designing the app’s “home” screen.
-The Home screen is what the user will probably see every time he opens the app, especially on desktop or after first launch.
+App creators should invest time and effort in designing the app’s home or main screen.
+The Home screen is what the user will see almost every time he opens the app, especially on desktop (after completing the FTUE).
 
-Example for a “home” screen in the [LoLwiz](https://www.overwolf.com/app/LoLwiz) app:
+Example for a home screen in the [LoLwiz](https://www.overwolf.com/app/LoLwiz) app:
 
 <div class="box" data-slick='{"slidesToShow": 1'>
   <a data-fancybox="gallery" data-caption="Lolwiz" href="../assets/Firsttimeuserexperience/lolwiz-home.jpg">
@@ -68,26 +64,26 @@ Example for a “home” screen in the [LoLwiz](https://www.overwolf.com/app/LoL
 
 
 
-### Desktop mode
+### Desktop Usage
 
-On desktop mode, the user is more patient and has more time to investigate your app, so you should give him what he wants and needs before he enters a game with it, such as:
+When starting to use the app while not in-game, in desktop mode, the user has more time and patience to investigate your app, so you should cover everything they might need or want to know before the game starts:
 
-* Show app’s status – working, known issues, down for maintenance etc.
-* User stats, status, record or data as a recap
-* Last match results or history of activity
-* “Beta” version label
-* Allow preparation of the app, if it is required for proper operation (such as mandatory registration) or highly important settings needed to be adjusted
-* Tutorial
-* Links to popular information such as video tutorial, FAQs, documentation
-* Link to Settings screen
-* Show version number (can also be inside Settings)
-* Registration/login, if required
+* App status – Is it working? Any known issues? Down for maintenance? User should know.
+* User stats, profile or recent match recap.
+* Last match results or match history.
+* “Beta” version label if required.
+* Any functional requirements of the app to properly operate, such as mandatory registration or settings that must be manually chosen.
+* A tutorial onboarding users to your app and teaching the basics.
+* Links to relevant information such as video tutorial, FAQs or documentation.
+* Link to your app's settings screen.
+* Show the app's current version number, this can be inside a settings tab.
+* Log-in interface if required.
 
-Please keep in mind that each app is different and should consider carefully the desktop value.
+Please keep in mind that each app is different and should figure out the best way to provide user value on desktop.
 
 **Examples:**
 
-Some apps can, and should, offer value when opened on desktop while the game is not played yet. Legendary Builds is an example for an app that offers the player to check pro-players’ builds before launching the game. This allows preparations in advance and therefore increases the value of the app, and provides desktop value altogether
+Some apps can offer value even while the game is not running yet. Legendary Builds is an example for an app that lets players check pro player builds before launching the game. Since they can prepare in advance and enter the game ready to fight, there's value here even while in desktop mode.
 
 <div class="box" data-slick='{"slidesToShow": 1'>
   <a data-fancybox="gallery" data-caption="Legendary Builds" href="../assets/Firsttimeuserexperience/Champ-select.png">
@@ -98,7 +94,7 @@ Some apps can, and should, offer value when opened on desktop while the game is 
   </a>
 </div>
 
-Another example is [Killer Voices](https://www.overwolf.com/app/overwolf-killer_voices), an app that allows the user to select different voice packs for different games. In fact, this kind of setting is NOT something a player should do in game, but rather on Desktop.
+Another example is [Killer Voices](https://www.overwolf.com/app/overwolf-killer_voices), an app that allows the user to select different voice and announcer packs for different games. This app has features that are MEANT for desktop usage rather than in-game, since selecting your favorite voice pack should happen before ever starting the game.
 
 <div class="box" data-slick='{"slidesToShow": 1'>
   <a data-fancybox="gallery" data-caption="Killer Voices" href="../assets/Firsttimeuserexperience/Killervoices123.png">
@@ -111,12 +107,11 @@ Another example is [Killer Voices](https://www.overwolf.com/app/overwolf-killer_
 
 ### Tutorial
 
-A good tutorial will help you understand the main functionalities of the app and how to use it, in the least amount of time and efforts.
-A great tutorial would be transparent to the user, and embedded in the flow of usage.
+Users can use instructions and an easy onboarding experience, and a good tutorial can go a long way towards that goal. A good tutorial will teach all app basics and showcase how to get value, while requiring as little of the user's time and attention as possible. A great tutorial will not even be noticed, embedded in the flow of usage seamlessly.
 
-Pointers for a great tutorial for an Overwolf app:
-* Never interfere with the game itself. When game starts – respect it!
-* Focus on how to get the main value at first, and leave the rest for later.
-* Texts and arrows are just “ok”… not more than that. Strive to let the user PERFORM the actions instead of telling him or showing him.
-* Keep it as short as possible.
-* Most apps do (or should do) one good thing. If you can’t explain it in a sentence, you either offer too much without focus or just have to redesign the tutorial.
+Tips to keep in mind while crafting your app's tutorial:
+* Never interfere with the game itself. When the game starts – respect it!
+* Focus on pointing out the main source of value as fast as you can, leave the rest for later.
+* Texts, images and arrows are OK, but not more than that. If you want to do better, try to let the user PERFORM the actions instead of telling or showing them.
+* Keep your tutorial as short as possible.
+* Most apps do at least one thing really well. If you can’t point it out and explain it in a single sentence, you either lack focus or your tutorial needs more work and thought.
