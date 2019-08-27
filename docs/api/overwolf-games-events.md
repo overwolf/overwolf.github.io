@@ -8,6 +8,10 @@ sidebar_label: overwolf.games.events
 
 `overwolf.games.events` allows you to be notified when something interesting happens while playing a certain game (e.g. a hero killed someone, someone killed the gamer’s hero, etc.).</br>Overwolf supports events for multiple games, you can see the list of supported games [here](games-ids).
 
+:::note
+The full list of the supported games with their Game ID’s is always updated, and can be found [here](games-ids).
+:::
+
 ## Methods Reference
 
 * [overwolf.games.events.setRequiredFeatures()](#setrequiredfeaturesfeatures-callback)
