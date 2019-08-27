@@ -1,27 +1,27 @@
 ---
 id: launch-time-performance
-title: Launch Time Performance
-sidebar_label: Launch Time Performance
+title: App Launch Performance
+sidebar_label: App Launch Performance
 ---
 
 
-Overwolf users expect your app to be responsive and fast to load. An app with a slow startup time doesn't meet this expectation, and can be disappointing to them. All apps are built differently, so it makes sense that some apps take a bit more time to open their main window; nevertheless, you should try to optimize the startup times as much as you can.
+When Overwolf users launch an app, they expect it to load quickly and be responsive immediately when launched. Bad launch performance or a an app that takes a while to start working can disappoint or annoy users, not meeting their standards. Naturally, different apps have different requirements, and some apps to take a couple of seconds to load - however, you should do your very best to make your app light and efficient so loading and launch times are as short as possible.
 
-#### Things to pay attention to
+#### Tips for a better launch experience
 
-* App assets (images, fonts, etc.) that are needed for the app’s “home” or “notification” windows (windows that the user sees when the app is launched for the first time) should be stored locally (in the .opk file) for faster loading times.
+* Locally store assets used by your app's Home and Notification windows, which are the ones seen by the user on launch. These images, fonts or other assets should be a part of the base .opk file for faster loading times.
 
-* Use long-term caching to avoid having to re-fetch resources that haven’t changed (e.g. LoL Champions and items images).
+* Use long-term caching for resources that do not change often, so your user won't have to redownload materials. For example, League of Legends champion portraits and item visuals can be stored long-term. 
 
-* Compress your app’s JavaScript. Comments and whitespace are not needed for JavaScript execution, removing them will reduce file size and speed up script execution times.
+* Compress your app’s JavaScript. For example, comments and whitespace are not needed for code execution, and removing them will reduce file size and speed up script execution times.
 
-* Compress images with [JPEGMini](http://www.jpegmini.com/) or [TinyPNG](https://tinypng.com/).
+* Compress images to the smallest size possible with [JPEGMini](http://www.jpegmini.com/) or [TinyPNG](https://tinypng.com/).
 
-* Removing non-critical JavaScript from your app can reduce transmission times, CPU-intensive parsing and compiling and potential memory overhead.
+* Remove non-critical JavaScript from your app to reduce transmission times, CPU-intensive compiling and potential memory overhead.
 
-* During runtime, long-running JavaScript can block the main-thread causing pages that are unresponsive. Chunking up work into smaller pieces can minimize responsiveness issues.
+* During runtime, prefer smaller, short running scripts to minimize responsiveness issues. Long-running JavaScript can block the main thread causing pages to become unresponsive.
 
-The best practice is to load any window under 30ms once the user clicked to open the app from the Overwolf dock or used to hotkey in-game. A loader can be used once the app has been launched.
+Our goal is to load any window in under 30ms from the moment the user clicked to open the app from the Overwolf dock or used to hotkey in-game. A loader can be used once the app has been launched.
 
 
 <div class="box" data-slick='{"slidesToShow": 2}'>
