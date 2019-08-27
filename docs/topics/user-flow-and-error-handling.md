@@ -1,19 +1,20 @@
 ---
 id: user-flow-and-error-handling
-title: User flow and error handling
-sidebar_label: User flow and error handling
+title: User journey and error handling
+sidebar_label: User journey and error handling
 ---
 
-## Goals
+## User Journey Basics
 
-1. Your users need to understand what is the value of your app and how to control it
-2. Each step in your app needs to be clear to the user
-3. Error handling is super important. If you manage errors right, less users will complain or be confused
+1. The journey you build for users should make them understand your app's value as well as how to actually get it.
+2. Each step and possible action in your app needs to be communicated clearly to your users.
+3. Software issues are inevitable, and error messages are super important to help users address the issue or, at least, avoid confusion.
 
-### Desktop mode
+### Desktop journey
 
-Can be used in different ways, the most important one is to explain the flow of the app. If your app is meant to be used in-game only, you should explain that to improve the user experience.
-Also, you may use the desktop as the main hub for your app. Do you want to share news? Show how your users can interact with you on social media? There are many options to explore.
+The desktop window is a great place to provide information and lead the user onwards - since most apps and features are meant for in-game usage, users launching the desktop app are more attentive and patient. In this window you can explain your app's basics, clearly state what it does and where (for example, 'go in-game to launch this app'). 
+
+The desktop window can be home to plenty more. Sharing news, asking for feedback, showcasing a cool video and more - it's all possible in your desktop hub. 
 
 <div class="box" data-slick='{"slidesToShow": 3}'>
   <a data-fancybox="gallery" data-caption="CS:GO stats" href="../assets/User-flow-and-error-handling/csgo-stats-desktop-mode.jpg">
@@ -37,9 +38,9 @@ Also, you may use the desktop as the main hub for your app. Do you want to share
 </div>
 
 
-### Loading screen
+### Loading screens
 
-A proper loading screen for the app will assist you in the monetization process, and explaining the user that the app is syncing data.
+Good loading screens for your app assist in monetization and provide a great opportunity to communicate with the user in a non-interruptive way. You should include a short reasoning for the loading screen itself (for example, 'fetching player information'), but can also include visuals, materials or texts. 
 
 <div class="box" data-slick='{"slidesToShow": 2}'>
   <a data-fancybox="gallery" data-caption="Streamaware" href="../assets/User-flow-and-error-handling/streamaware-loading-data.jpg">
@@ -56,9 +57,9 @@ A proper loading screen for the app will assist you in the monetization process,
   </a>
 </div>
 
-### Data is ready
+### App data is ready
 
-When the app is good to go, let the user know how to use it. It’s super important to make sure that the user understands how to control your app (A button-like design for the hotkey is recommended to make it as clear as possible).
+When your app is ready to work as intended, let the user know and explain how they should use it initially. It’s super important to make sure that users understand the basics and are able to use your app as intended with hotkeys and/or mouse clicks.
 
 <div class="box" data-slick='{"slidesToShow": 2}'>
   <a data-fancybox="gallery" data-caption="Koreanbuilds" href="../assets/User-flow-and-error-handling/koreanbuilds-loading-stats.jpg">
@@ -77,14 +78,14 @@ When the app is good to go, let the user know how to use it. It’s super import
 
 ### Error handling
 
-You are having a downtime? Server upgrade? Something is wrong? It needs to be communicated to your users. A simple and accurate message regarding the state of the app, even a generic message that will point your users to the right contact details will save you a lot of time and bad user reviews.
+Having a downtime? Server being upgraded? Something else is wrong? Your users have to know. A simple and accurate error message announcing the state of the app can go a long way and save you time, energy and bad reviews. We recommend figuring out the most common issues and implementing error messages whenever possible. 
 
-**Suggested errors to display:**
+**Examples of error messages:**
 
-* “Due to last game patch, Overwolf needs to fix the API for live match data. App will be up and running shortly!”
-* “[app name] is not able to show stats. Game-mode is not supported.”
-* “We’re experiencing issues and app is currently unavailable.”
-* “Some stats may be unavailable. Check your Facebook and Twitter for updates”
+* “Due to a recent game patch, Overwolf app API has stopped working - we'll fix it shortly!”
+* “[app name] is not able to show stats because the chosen game mode is not supported.”
+* “We’re experiencing issues and this app is currently unavailable.”
+* “Some stats may be unavailable. Check <appname's> Facebook and Twitter for updates”
 
 <div class="box" data-slick='{"slidesToShow": 3}'>
   <a data-fancybox="gallery" data-caption="Herowatch" href="../assets/User-flow-and-error-handling/error-herowatch2.jpg">
