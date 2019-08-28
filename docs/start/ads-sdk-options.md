@@ -8,7 +8,7 @@ sidebar_label:  Configuring Your Ads
 There are ways to further configure ads after setting up a container. For one, providing a JSON object as the second parameter when calling the `OwAd` constructor works:
 
 ```js
-new OwAd(document.getElementById("ad-div"), {size: {width: 400, height:300})
+new OwAd(document.getElementById("ad-div"), {size: {width: 400, height: 300}})
 ```
 
 ### configuration options
