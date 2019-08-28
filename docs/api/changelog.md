@@ -36,6 +36,7 @@ All notable changes to this project will be documented in this file.
 * [PUBG game events](https://overwolf.github.io/docs/api/overwolf-games-events-pubg#docsNav)
   * New info update
     * team_location
+    * health
 
 ## Version 0.133 (July 2019)
 
