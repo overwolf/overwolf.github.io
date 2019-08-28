@@ -55,10 +55,10 @@ Please make sure to read our guide on [how to use Overwolf windows](../topics/us
 
 ## Events Reference
 
-* [overwolf.windows.onMainWindowRestored()](#onmainwindowrestored)
-* [overwolf.windows.onStateChanged()](#onstatechanged)
-* [overwolf.windows.onMessageReceived()](#onmessagereceived)
-* [overwolf.windows.onAltF4Blocked()](#onaltf4blocked)
+* [overwolf.windows.onMainWindowRestored](#onmainwindowrestored)
+* [overwolf.windows.onStateChanged](#onstatechanged)
+* [overwolf.windows.onMessageReceived](#onmessagereceived)
+* [overwolf.windows.onAltF4Blocked](#onaltf4blocked)
 
 ## Types Reference
 
