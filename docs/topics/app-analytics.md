@@ -84,9 +84,8 @@ ga('send', 'pageview', '/index.html');
 
 If that all went well, you should see page tracking appear in Google Analytics, like so:
 
-```html
 <img src="https://overwolf.github.io/docs//assets/app-analytics/GA-sample.jpg" alt="process" width="900"/>
-```
+
 
 ## More info
 
