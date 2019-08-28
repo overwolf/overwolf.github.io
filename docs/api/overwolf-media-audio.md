@@ -21,7 +21,7 @@ A set of functions for playback of audio files. Currently supports MP3 and WAV f
 
 ## Events Reference
 
-* [overwolf.media.audio.onPlayStateChanged()](#onplaystatechanged)
+* [overwolf.media.audio.onPlayStateChanged](#onplaystatechanged)
 
 ## create(url, callback)
 #### Version added: 0.84
