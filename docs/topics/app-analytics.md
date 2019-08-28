@@ -1,21 +1,20 @@
 ---
 id: app-analytics
-title: App Analytics
-sidebar_label:  App Analytics
+title: Using Analytics in your App
+sidebar_label:  Integrating App Analytics
 ---
 
-Getting statistics out of your app might prove to be one of the most valuable resources you will encounter.  
-Statistics will support your product decision making by providing real user usage data, including showing how users actually interact with your product, where do they drop off, what product abilities are completely ignored and so on.
+One of the most effective ways to improve your app and learn more about your users is implementing solid analytics that provide you with usage statistics. Stats support your product decision making by providing real-world user usage data, including showing how users actually interact with each part of your product. Analytics also underline where users drop off and lose interest, what product abilities are completely ignored and much more.
 
-We recommend using a web analytics service to collect and analyze app data, measure user engagement and improve monetization.
+We recommend using a web analytics service to collect app data, measure user engagement and improve monetization. Our preference is the industry standard [Google Analytics](https://marketingplatform.google.com/about/analytics/features/).
 
-Our preference is the industry standard [Google Analytics](https://marketingplatform.google.com/about/analytics/features/).
-
-We highly encourage you to take the time to implement any chosen analytics service thoroughly.
+Please take the time you need to implement any chosen analytics service thoroughly and test it to make sure it's working as intended.
 
 ## Google Analytics: Basic Implementation
 
 ### Update your manifest.json
+
+Open up the external connections necessary for communicating with the Google service:
 
 ```json
 {
@@ -29,9 +28,9 @@ We highly encourage you to take the time to implement any chosen analytics servi
 }
 ```
 
-### Create a new GA account and a new property
+### Create a Google Analytics account and generate a new property
 
-Select "Website" as your tracked object, enter any website name, website URL and select your preferred reporting time zone.
+Select "Website" as your tracked object, enter your website name, website URL and select your preferred reporting time zone.
 
 <div class="box" data-slick='{"slidesToShow": 1}'>
   <a data-fancybox="gallery" data-caption="Create a new property" href="../assets/app-analytics/GA1.jpg">
@@ -42,9 +41,9 @@ Select "Website" as your tracked object, enter any website name, website URL and
   </a>
 </div>
 
-### Update your index page
+### Update your pages
 
-Let's assume here that you want to track events in your index page. In your index page e.g. at /index.html, add a reference to the tracking javascript in a separate file:
+Let's assume that you want to track events in your index page. In your /index.html, add a reference to the tracking script in a separate file:
 
 ```html
 <!DOCTYPE html>
@@ -62,7 +61,7 @@ Let's assume here that you want to track events in your index page. In your inde
 
 ### Update your tracking code
 
-Add the tracking JavaScript e.g. at js/index.js with the Universal Analytics code. Note the “https” at the start of the script address.
+Add the tracking JavaScript, for example at js/index.js, with the Universal Analytics code. Note the “https” at the start of the script address.
 
 ```js
 // Standard Google Universal Analytics code
@@ -83,12 +82,12 @@ ga('require', 'displayfeatures');
 ga('send', 'pageview', '/index.html');
 ```
 
-If that all went well, you should soon see page tracking in Google Analytics, like so:
+If that all went well, you should see page tracking appear in Google Analytics, like so:
 
 ```html
-<img src="../assets/app-analytics/GA-sample.jpg" alt="process" width="900"/>
+<img src="https://overwolf.github.io/docs//assets/app-analytics/GA-sample.jpg" alt="process" width="900"/>
 ```
 
 ## More info
 
-More information on best practices and hands on guides for implementing google analytics can be found [here.](https://analytics.google.com/analytics/academy/)
+Find more information on best practices and more guides for implementing google analytics [here.](https://analytics.google.com/analytics/academy/)
