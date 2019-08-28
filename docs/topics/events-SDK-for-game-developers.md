@@ -1,38 +1,37 @@
 ---
 id: events-SDK-for-game-developers
 title: Events SDK for Game Developers
-sidebar_label: Events SDK for Game Devs
+sidebar_label: Event SDK for Game Devs
 ---
 
 ## Introduction
 
-The Overwolf events SDK allows game developers to expose relevant real time data and events for developers of Overwolf apps. 
-This will allow app developers, for example, to build an app that creates a video compilation of kill shots in a shooter.
+The Overwolf event SDK empowers game developers to mark and communicate in-game events and real time game data, making potential Overwolf apps much more valuable. For example, implementing the SDK properly can allow app developers to build an app that creates a video compilation of kill shots in a FPS or a highlight reel of team kills in a MOBA.
 
 ### How does it work?
 
-As the game developer, your goal is to identify interesting events and embed them in your code. Every time such an event happens (e.g. a match has started, the player earned gold, an achievement had been won etc.), you are required to update a line of code that will be sent through Overwolf to the Overwolf apps.
+You know your game better than anyone - choose the events that you think are worth relating to such as kills, deaths, match start, match end, achievement reached, gold earned, or any other important in-game trigger. After implementing these lines of code for each relevant event, every time they occur a call will be sent through Overwolf to Overwolf apps supporting your game.
 
 This solution is:
 
-1. Easy – all you need is to define the interesting event and expose it Overwolf with a simple function
-2. Dynamic – you have complete flexibility on the types of events you expose
-3. Safe – The solution will work regardless if Overwolf operates in the background or not, in one directional communication. Further, it runs on a different thread so it will not affect game performance
+1. Easy – all you need is to define the events you want used and send notifications over to Overwolf with a simple function.
+2. Dynamic – you have complete flexibility on the types of events you expose, and can implement new ones quickly.
+3. Safe – The solution will still work as a one-way communication even if Overwolf is not running in the background. Further, game events run on a different thread so game performance will not be hurt.
 
 ### Structure
 
-The Overwolf event SDK is a configurable real-time database divided into two main sections:
+The Overwolf event SDK is a configurable real-time database split into two main sections:
 
-1. Info categories – Information that is usually updated once per match. This will include the player’s ID, the members of his team, the player’s level and more.
-2. Events – This section includes real-time database of events (e.g. double kill, head-shot, current gold), which are very frequently updated, and frequently expire.
+1. Information categories – Data that is usually updated once per match. This will include the player’s ID, the members of his team, the player’s level and other data points that remain static throughout the game.
+2. Events – This section includes a real-time database of events (e.g. double kill, head-shot, current gold). Events update frequently and expire just as frequently, and they are focused on what's happening in a given match.
 
-### How to start?
+### Implementation
 
-Download the SDK from [this link](https://github.com/overwolf/game-events-sdk)
+Download the SDK from [this link](https://github.com/overwolf/game-events-sdk).
 
-1. Include the 32/64 dll with your game
-2. Review the tester
-3. Start updating your code with the interesting events
-4. If you need a list of recommended events, please send us an email
+1. Include the 32/64 DLL with your game.
+2. Review the tester.
+3. Start updating your code with the interesting events.
+4. If you want ideas or a list of recommended events based on our experience, please send us an email.
 
-In case of any questions, always feel free to reach out to us directly at developers@overwolf.com
+For that or any other questions, feel free to reach out directly at developers@overwolf.com 
