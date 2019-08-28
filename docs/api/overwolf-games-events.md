@@ -19,9 +19,9 @@ The full list of the supported games with their Game ID’s is always updated, a
 
 ## Events Reference
 
-* [overwolf.games.events.onError()](#onerror)
-* [overwolf.games.events.onInfoUpdates2()](#oninfoupdates2)
-* [overwolf.games.events.onNewEvents()](#onnewevents)
+* [overwolf.games.events.onError](#onerror)
+* [overwolf.games.events.onInfoUpdates2](#oninfoupdates2)
+* [overwolf.games.events.onNewEvents](#onnewevents)
 
 ## Sample App
 
