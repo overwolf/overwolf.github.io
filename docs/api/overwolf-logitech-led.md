@@ -31,7 +31,7 @@ Provides API for Logitech Arx Control.
 
 ## Events Reference
 
-* [overwolf.logitech.led.onError`](#onerror)
+* [overwolf.logitech.led.onError](#onerror)
 
 ## Types Reference
 
