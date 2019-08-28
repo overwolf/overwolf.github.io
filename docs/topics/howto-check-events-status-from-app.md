@@ -1,34 +1,33 @@
 ---
 id: howto-check-events-status-from-app
-title: Check The Events Status From Your App
-sidebar_label: Check Event Status From App
+title: Veritfying Events for Your App
+sidebar_label: Verifying Event Status
 ---
 
-As recommended in the user flow and error handling page, errors and warnings need to be communicated to your users.
-A simple and accurate message regarding the state of the app will contribute to better user experience and saves time and bad user reviews.
+As we discussed in the Error Handling page, it's important to properly communicate issues with your app to users in the right way. A simple and accurate message describing the state of the app will make for a better user experience and prevents bad user reviews.
 
-## Possible events health statuses
+## Event Health Levels
 
-Each game that supports Overwolf events (full list here) can be in 4 health states:
+We measure app health and status using four levels of health:
 
 Status code | Description                                   |
 ----------- | ----------------------------------------------|
 0           |  unsupported                                  |
 1           |  green (Good to go)                           |
-2           |  yellow (Some game events may be unavailable) |
-3           |  red (Game events are currently unavailable)  |
+2           |  yellow (Partial functionality, some game events may be unavailable) |
+3           |  red (Game events are unavailable)  |
 
-Same for specific event health state: possible state values are green, yellow or red.
+Specific event health states are respectively green, yellow or red following the same scheme.
 
 :::important
-statuses are being updated automatically so there might be a small delay (10~ min) between the real-time status to our server status.
+App States are being updated automatically so there might be a small delay (10~ min) between server state and the actual real-time status.
 :::
 
-## get the status for all games
+## Review event status for all games
 
-If your app using Overwolf events, we highly recommend checking at least the general status with the above endpoint. If it’s Yellow or Red, you should drill down as needed, to query a specific event state – as your app may not function correctly and you should communicate it to your users.
+It's important to check the general status of events with all apps that use them. If it returns Yellow or Red state, you should research the issue and query the specific event and game that's showing issues. If your app does not function correctly you should communicate it to your users as soon as possible.
 
-To get the general event’s [health status of ALL](../status/all) the games you can query this endpoint, that returns a JSON with the supported games and their general health status:
+To get an events [health status for ALL games](../status/all) you can query this endpoint, which will return a JSON with the supported games and each of their event health states:
 
 ```json
 https://game-events-status.overwolf.com/gamestatus_prod.json
@@ -49,18 +48,17 @@ https://game-events-status.overwolf.com/gamestatus_prod.json
 ]
 ```
 
-## get the status for specific game
+## Review event status for a specific game
 
-If your app using Overwolf game events, we highly recommend to check the health status of these events and communicate it to your app users as needed.
+If you suspect an issue or regularly use Overwolf events in your app, we highly recommend you verify each event's health and communicate any issues to your users.
 
-To get the event’s health status for a specific game, you can query this endpoint, that returns a JSON with all the events statuses for a particular game:
+To get an event’s health status for a specific game, you can query this endpoint, which will return a JSON with event states for a particular game:
 
 ```json
 https://game-events-status.overwolf.com/[your Game ID]_prod.json
 ```
 
-Note that you should add your Game ID to this endpoint.  
-For example, to get the LOL (Game ID 5426) event’s health status, you should call:
+Note that you should add your Game ID to this endpoint. For example, to check event health in LOL (Game ID 5426) you should call:
 
 ```json
 https://game-events-status.overwolf.com/5426_prod.json
