@@ -610,6 +610,6 @@ This flag automatically sets the app window into “exclusive mode” – input 
 
 You can defines how the “exclusive mode” should be turned off:
 
-* **ReleaseOnHidden** – When the window is hidden, automatically turn off exclusive mode. (if you are using this option, you must set also the [focus_game_takeover_release_hotkey]() flag)
+* **ReleaseOnHidden** – When the window is hidden, automatically turn off exclusive mode. (if you are using this option, you must set also the [focus_game_takeover_release_hotkey](manifest-json#focus_game_takeover_release_hotkey) flag)
 * **ReleaseOnLostFocus** – If the user clicks outside the window, exclusive mode is turned off.
 
