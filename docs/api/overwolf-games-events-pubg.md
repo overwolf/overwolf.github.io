@@ -175,12 +175,21 @@ movement       | me   | The player’s type of movement speed.<ul><li>‘normal�
 inventory_XX       | inventory   | Info about the inventory of the local player. Each “inventory_XX” object </br>represents one item and is being cleared once this item is dropped/replaced </br>by the player.</br>This info-update provides:<ul><li>name (string) – name of the item</li><li>count (int) – number of items</li>`{"feature":"me","category":"inventory","key":"inventory_1",`</br>`"value":"{"name" :"Item_Attach_Weapon_Muzzle_FlashHider`</br>`_Medium_C_2","count":"1"}"}` |                       |    130.0.9        |
 equipped_XX       | inventory   | Info about “equipable” items. Each “equipped_XX” object represents </br>one item and is being cleared once this item is dropped/replaced </br>by the player.</br>This info-update provides:<ul><li>name (string) – the name of the item</li><li>count (int) – number of items</li>`{"feature":"me","category":"inventory","key":"equipped_1",`</br>`"value":"{"name": "Item_Weapon_vz61Skorpion_C_1"`</br>`"count":"1"}"}` |                       |    130.0.9        |
 weaponState       | inventory   | Info about the weapon and its state.</br>This info-update provides:<ul><li>name (string) – the name of the weapon used by the local player</li><li>equipped (bool) – in hand (true) or holstered (false)</li><li>count (int) – number of items |                       |    130.0.9        |
+health  | me   | The player’s current health |See [notes](#health-notes)|   135.0        |
 
 ### Events
 
 Event      | Event Data  | Fired When          | Notes              | Since Version |
 -----------| ------------| ------------------------------- | ------------------ | --------------|
 jump | null        | Local player jumps (space) |                   |  0.128       |
+
+#### *health* note:
+
+Data Example:
+
+```json
+{"health":"{"health":100,"ko_health":100}"}
+```
 
 ## `team`
 
