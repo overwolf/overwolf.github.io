@@ -12,7 +12,7 @@ Twitch enables developers to build extensions, interactive web apps that run in 
 
 Overwolf’s Twitch Game Events allows a Twitch extension to receive game events that occur in a specific broadcaster's streaming session for supported games. 
 
-The streamer must run Overwolf’s Twitch Game Events app while playing and log-in to Twitch from the app. The app will relay in-game events to an Overwolf’s PubSub server, creating a “room” identified by the streamer’s twitch id. These are the same events received from Overwolf’s Game Events Provider (overwolf.games.events). For more information about Game Events visit: http://developers.overwolf.com/documentation/sdk/overwolf/games/events/ .
+The streamer must run Overwolf’s Twitch Game Events app while playing and log-in to Twitch from the app. The app will relay in-game events to an Overwolf’s PubSub server, creating a “room” identified by the streamer’s twitch id. These are the same events received from Overwolf’s Game Events Provider (overwolf.games.events). For more information about Game Events visit [here](../api/overwolf-games-events).
 
 Use Twitch's Backend solution (EBS) to connect to the PubSub server and subscribe to the same generated “room” in order to receive the events related to the streamer's game.
 
@@ -54,7 +54,7 @@ The PubSub server has 2 special endpoints that can be used to retrieve game stat
 
 ` GET /info/:streamer_id `
 
-This will return a summary of events/updates which happened in the streamer’s game. This corresponds to the getInfo() method for Game Events: https://overwolf.github.io/docs/api/overwolf-games-events#getinfocallback
+This will return a summary of events/updates which happened in the streamer’s game. This corresponds to the [getInfo()](https://overwolf.github.io/docs/api/overwolf-games-events#getinfocallback) method for Game Events.
 
 #### Get Streamer Connected
 
