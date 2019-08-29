@@ -4,9 +4,7 @@ title: Twitch Extensions and Game Events
 sidebar_label: Twitch Extensions
 ---
 
-**[Sample code](https://github.com/overwolf/twitch-game-events-ebs-sample)**
-
-### Overview
+## Overview
 
 Twitch enables developers to build extensions, interactive web apps that run in the broadcaster’s channel and provide added value. The extension’s front-end runs in an iframe, and extensions can communicate with a Backend Service (EBS). To learn more about Twitch extensions visit https://dev.twitch.tv/docs/extensions/ .
 
@@ -16,47 +14,52 @@ The streamer must run Overwolf’s Twitch Game Events app while playing and log-
 
 Use Twitch's Backend solution (EBS) to connect to the PubSub server and subscribe to the same generated “room” in order to receive the events related to the streamer's game.
 
-### Preconditions
+## Sample App
+
+* [Sample code for Twitch extensions](https://github.com/overwolf/twitch-game-events-ebs-sample) game events backend services.
+
+## Preconditions
 
 * The streamer must run the Twitch game events app while in game and log in to Twitch from the app.
 * In order to connect to the Overwolf’s events PubSub, extension developers must obtain a client id and choose a secret that will be used for authentication for the PubSub.
 
-### Connecting to the events PubSub
+## Connecting to the PubSub
 
-The PubSub address is https://twitchge.overwolf.com .
+The PubSub address is https://twitchge.overwolf.com.
 
-#### Authenticating
+## Authenticating
 
-` POST /auth/backend `
+`POST /auth/backend`
 
 Providing the credentials obtained from Overwolf:
 
-`
+```
 {
- broadcaster: OUR_STREAMER_ID,
+ broadcaster: OUR_STREAMER_ID, //the Twitch channel ID that you get from the Twitch API
  client_key: CLIENT_KEY,
  client_secret: CLIENT_SECRET
 }
-`
+```
+
 If authentication is successful the response will contain a JSON with a token property. This token should be used to connect to the PubSub socket and as a token for authorization from other game event Pubsub endpoints.
 
-### Special Endpoints
+## Special Endpoints
 
-The PubSub server has 2 special endpoints that can be used to retrieve game state information. These endpoints must be called with Authorization: Bearer token header providing the token obtained from the /auth/backend call.
+The PubSub server has 3 special endpoints that can be used to retrieve game state information. These endpoints must be called with Authorization: Bearer token header providing the token obtained from the /auth/backend call.
 
-##### Get Streamer Game
+### Get Streamer Game
 
- ` GET /info/:streamer_id/game `
+`GET /info/:streamer_id/game`
  
- This will return the streamer's currently played game id.
+This will return the streamer's currently played game id.
 
-#### Get Game Info
+### Get Game Info
 
-` GET /info/:streamer_id `
+`GET /info/:streamer_id`
 
 This will return a summary of events/updates which happened in the streamer’s game. This corresponds to the [getInfo()](https://overwolf.github.io/docs/api/overwolf-games-events#getinfocallback) method for Game Events.
 
-#### Get Streamer Connected
+### Get Streamer Connected
 
 ` GET /info/:streamer_id/connected `
 
@@ -64,10 +67,17 @@ This checks whether the streamer is logged in and connected to the Twitch Game E
 
 ` { "connected": true/false } `
 
-### Notes
-* Call `GET /info/{streamerId}` when the EBS connects to Overwolf’s Pubsub and when a `publish` event with `["sessionStart"]` data is received. There are two scenarios in which your EBS connects to the Overwolf’s Twitch Extensions PubSub server: Before the streamer starts playing, or after. If your EBS connected after the streamer started playing, there is probably already information about the game currently being played. You should call the streamer info endpoint to retrieve the current information and listen to the PubSub socket for new game events and updates. 
+## Notes
 
-If your EBS connected before the streamer started playing, events will be sent via the PubSub socket events. However, the streamer’s Game Events App may start when there is already some information accumulated by Overwolf’s Game Events Provider. In that case the streamer’s app will post the available information and it will be available for the EBS via the streamer info endpoint. This information will not be sent over the PubSub socket and instead a “publish” event with [“sessionStart”] payload will be sent. This will mark to the EBS that a new information set is available for retrieval.
+* Call `GET /info/{streamerId}` when the EBS connects to Overwolf’s Pubsub and when a `publish` event with `["sessionStart"]` data is received.
+
+  There are two scenarios in which your EBS connects to the Overwolf’s Twitch Extensions PubSub server: Before the streamer starts playing, or after.
+
+  If your EBS connected after the streamer started playing, there is probably already information about the game currently being played. You should call the streamer info endpoint to retrieve the current information and listen to the PubSub socket for new game events and updates.
+
+  If your EBS connected before the streamer started playing, events will be sent via the PubSub socket events. However, the streamer’s Game Events App may start when there is already some information accumulated by Overwolf’s Game Events Provider. In that case the streamer’s app will post the available information and it will be available for the EBS via the streamer info endpoint. 
+  
+  This information will not be sent over the PubSub socket and instead a “publish” event with [“sessionStart”] payload will be sent. This will mark to the EBS that a new information set is available for retrieval.
 
 * When the information includes `{ UPDATING: true }`, it means that the info for the broadcaster is being written with new data and you should probably retry the call. You should retry until you have a non-UPDATING state, but avoid spamming - use exponentially longer wait times between attempts or limit the number of calls per second.
 
