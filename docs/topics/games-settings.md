@@ -66,4 +66,4 @@ Whenever permissions or overlay settings are changed, Overwolf informs users thr
   *Apps cannot change settings through API by themselves. The user has to act and change these settings.
 
    
-![Herowatch](assets/herowatch-case-study.jpg)
+[![Herowatch](assets/herowatch-case-study.jpg)](https://medium.com/overwolf-developers/new-games-settings-herowatch-case-study-4aff3ab99060)
