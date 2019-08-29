@@ -53,7 +53,7 @@ nav.toc {
 }
 
 .toc .toggleNav ul li.navListItemActive a {
-  color: #332E4D;
+  color: rgba(229, 0, 76, 1);
 }
 
 .toc .toggleNav ul li a {
