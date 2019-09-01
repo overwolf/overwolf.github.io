@@ -333,7 +333,7 @@ callback (Optional) | function   | Called after the window is maximized         
 ## restore(windowId, callback)
 #### Version added: 0.78
 
-> Restores a minimized/hidden window.
+> Restores a minimized/maximized/hidden window.
 
 Parameter           | Type       | Description                                                                                    |
 --------------------| -----------| -----------------------------------------------------------------------------------------------|
@@ -348,11 +348,12 @@ callback (Optional) | function   | Called after the window is restored          
   "window_id": "Window_Extension_mhlpbbigoglahfnkpekoamfknlnaneebgodenaam"
 }
 ```
+Note: When restoring a minimized/maximized window, it restores the window to the previous size/position.
 
 ## restore(windowName, callback)
 #### Version added: 0.78
 
-> Restores a minimized/hidden window.
+> Restores a minimized/maximize/hidden window.
 
 Parameter           | Type       | Description                                                                                    |
 --------------------| -----------| -----------------------------------------------------------------------------------------------|
@@ -367,7 +368,7 @@ callback (Optional) | function   | Called after the window is restored          
   "window_id": "Window_Extension_mhlpbbigoglahfnkpekoamfknlnaneebgodenaam"
 }
 ```
-
+Note: When restoring a minimized/maximized window, it restores the window to the previous size/position.
 
 ## hide(windowId, callback)
 #### Version added: 0.108
