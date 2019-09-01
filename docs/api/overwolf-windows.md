@@ -915,7 +915,9 @@ height      | int     |                |
 
 Option            | Description                                                                                 |
 ----------------- | --------------------------------------------------------------------------------------------|
-InputPassThrough  |  Mouse and keyboard input will pass through the window to the game (no input blocking)      |
+InputPassThrough  |  Mouse and keyboard input will pass through the window to the game (no input blocking).     |
+
+Note: To set this property from the manifest, you can use the [clickthrough](manifest-json#windows-clickthrough) flag. 
 
 
 ## MessagePromptIcon enum
