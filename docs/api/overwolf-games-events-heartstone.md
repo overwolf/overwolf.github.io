@@ -154,6 +154,8 @@ key               | Category    | Values                    | Notes             
 localPlayer | playersInfo   |  See [notes](#localPlayer-note) |     |   123.0 |
 opponent | playersInfo   |  See [notes](#opponent-note) |     |   123.0 |
 
+Please note: the information is only sent when it changed since last time the event was emitted. It is **not** sent systematically at the beginning of each match, so if you want to use the information for each match, you should cache it.
+
 #### *localPlayer* note
 
 * "<b>name</b>" – name of local player
