@@ -36,16 +36,6 @@ As mentioned above, any premium-only features need to be tested and polished bef
 
 Read the full API docs for the subscriptions API [here](../api/overwolf-profile.subscription).
 
-
-## Subscription implementation
-
-To be added:
-
-* Toggling ads off when subscribed
-* How to get the subscription state per user
-* Another thing that needs to be done
-* Some more technical details
-
 ## We're here to help
 
 Our developer success team is ready to help in implementing your first subscription program! If you’re not certain about features you want to add, how to implement them or anything else around subscriptions and premium users - don’t hesitate to [reach out via Slack, email or Discord](../support/contact-us).
