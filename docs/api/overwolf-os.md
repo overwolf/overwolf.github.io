@@ -9,7 +9,7 @@ Use the `overwolf.os` API for Operating System related functionalities.
 ## Methods Reference
 
 * [overwolf.os.tray.setMenu()](#setmenumenu-callback)
-* [overwolf.os.tray.getRegionInfo()](#getregioninfocallback)
+* [overwolf.os.getRegionInfo()](#getregioninfocallback)
 
 ## Events Reference
 
