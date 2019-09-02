@@ -14,7 +14,7 @@ Subscriptions don’t only provide you with a stable source of income, it brings
 
 ## Subscription Basics
 
-To sub to an app, all a user has to do is go to that app’s page in the Appstore and click the ‘Subscribe’ button. That’ll send them to a quick checkout flow on Paypal and return them once a subscription is successfully completed. 
+To sub to an app, all a user has to do is go to that app’s page in the Appstore and click the ‘Subscribe’ button, or if the developer chose to implement it use the in-app subscribe button. That’ll send them to a quick checkout flow on Paypal and return them once a subscription is successfully completed. 
 
 Subbed apps appear in a new settings page where users can easily monitor or cancel their subscriptions as wanted. Cancellation takes place at the end of the current subscription period. 
 
@@ -35,16 +35,6 @@ As mentioned above, any premium-only features need to be tested and polished bef
 ## The overwolf.profile.subscription API
 
 Read the full API docs for the subscriptions API [here](../api/overwolf-profile.subscription).
-
-
-## Subscription implementation
-
-To be added:
-
-* Toggling ads off when subscribed
-* How to get the subscription state per user
-* Another thing that needs to be done
-* Some more technical details
 
 ## We're here to help
 
