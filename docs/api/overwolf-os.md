@@ -8,14 +8,14 @@ Use the `overwolf.os` API for Operating System related functionalities.
 
 ## Methods Reference
 
-* [overwolf.os.setMenu()](#setmenumenu-callback)
-* [overwolf.os.getRegionInfo()](#getregioninfocallback)
+* [overwolf.os.tray.setMenu()](#setmenumenu-callback)
+* [overwolf.os.tray.getRegionInfo()](#getregioninfocallback)
 
 ## Events Reference
 
-* [overwolf.os.onMenuItemClicked](#onmenuitemclicked)
-* [overwolf.os.onTrayIconClicked](#ontrayiconclicked)
-* [overwolf.os.onTrayIconDoubleClicked](#ontrayicondoubleclicked)
+* [overwolf.os.tray.onMenuItemClicked](#onmenuitemclicked)
+* [overwolf.os.tray.onTrayIconClicked](#ontrayiconclicked)
+* [overwolf.os.tray.onTrayIconDoubleClicked](#ontrayicondoubleclicked)
 
 ## Types Reference
 
