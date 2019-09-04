@@ -6,14 +6,13 @@ sidebar_label: manifest.json
 
 ## Welcome to the manifest.json file
 
-This [JSON](http://www.json.org/) formatted file is responsible for describing the aspects of your app. This ranges from the name of the app and its author to the size of the window or if it is transparent. This is a mandatory file for all apps and has to exist in the root folder for your app.
-[Here](https://gist.github.com/eransharv/e74024e0b31d5e0525b5289b8b8b6ffc) you can see the base version of the manifest.json file.
+This [JSON](http://www.json.org/) formatted file is responsible for describing aspects of your app. This includes your app's name, window size, tranparency settings and more basic settings for how your app operates. This is a mandatory file which has to exist in the root folder for your app.
+[Here](https://gist.github.com/eransharv/e74024e0b31d5e0525b5289b8b8b6ffc) you can see a basic version of the manifest.json file.
 
 ## manifest.json with fields summary
 
-The following code shows the supported manifest fields for Overwolf apps, with links to the section that discusses each field.
-
-Note that not all the flags are mandatory. We added all the available flags for documentation purpose.
+The following code shows supported manifest fields for Overwolf apps, with links to the section that discusses each field.
+Note that not all flags are mandatory - we included all available flags for documentation purposes.
 
 <pre><code class="json">
 {
@@ -130,7 +129,7 @@ Note that not all the flags are mandatory. We added all the available flags for 
 ## manifest.json without fields summary
 
 <details>
-<summary>Here you can see the same manifest.json file, but without remarks</summary>
+<summary>Here you can see the same manifest.json file, but without comments</summary>
 
 <pre><code class="json">
 {
@@ -228,11 +227,11 @@ To help you make sure that your manifest file is correct and complete, validate 
 
 ## Access the manifest from your app
 
-You can read the manifest JSON from you app code, using the [overwolf.extenstions.getManifest()](overwolf-extensions#getmanifestid-callback) function.
+You can read the manifest JSON from your app's code using the [overwolf.extenstions.getManifest()](overwolf-extensions#getmanifestid-callback) function.
 
 
-## The top manifest objects
-There are many features that are enabled through this file. Some are mandatory (marked accordingly), and others are optional. Here is a description of the many features you can activate through the manifest.json
+## Top manifest objects
+There are many features enabled through this file. Some are mandatory (marked accordingly), others optional. Below is a description of features you can activate through the manifest.json :
 
 | Name                                                                                    | Type                         | Description                               |   
 | ----------------------------------------------------------------------------------------|------------------------------| ------------------------------------------|
@@ -243,22 +242,21 @@ There are many features that are enabled through this file. Some are mandatory (
 | <a class="anchor" aria-hidden="true" id="data"></a>data                                 | [webapp settings](#webapp-settings-object) Object  | Mandatory. App data. Changes between different apps types. Currently can only be from type webapp settings |
 
 ## Permissions array
-To use most overwolf.* APIs, your Overwolf app must declare its intent in the permissions field of the manifest.json.
-It's an array of permissions that the app requires:  
+To use most overwolf.* APIs, your Overwolf app must declare relevant permissions in the relevant manifest.json field. It's an array of permissions that the app requires:  
 <pre><code class="json">"permissions": ["Streaming","Hotkeys","GameInfo"]</pre></code>
 
 | Permission             | Description                                                                                                       |
 | ---------------------  |-------------------------------------------------------------------------------------------------------------------| 
-| "Camera"               | Access the webcam                                                                                                 | 
-| "Microphone"           | Access the microphone                                                                                             | 
-| "Logging"              | Access the [logging system APIs](overwolf-log)                                                                    | 
+| "Camera"               | Access webcam                                                                                                 | 
+| "Microphone"           | Access microphone                                                                                             | 
+| "Logging"              | Access [logging system APIs](overwolf-log)                                                                    | 
 | "Extensions"           | Run or get information about other apps                                                                           | 
 | "Streaming"            | Enable game streaming                                                                                             | 
 | "DesktopStreaming"     | Enable desktop streaming                                                                                          | 
 | "Profile"              | Access profile information and perform actions such as login and modifications                                    | 
-| "Clipboard"            | Access the clipboard                                                                                              | 
-| "Hotkeys"              | Get hotkeys information for the current app                                                                       | 
-| "Media"                | Access the media library                                                                                          | 
+| "Clipboard"            | Access clipboard                                                                                              | 
+| "Hotkeys"              | Get hotkey information for the current app                                                                       | 
+| "Media"                | Access media library                                                                                          | 
 | "GameInfo"             | Access current game information                                                                                   | 
 | "GameControl"          | Allows to send key strokes to the game by using [overwolf.utils.sendKeyStroke()](overwolf-utils)                  | 
 | "FileSystem"           | Allows accessing files from the local file system. </br>*Note: This is the only permission we currently enforce*  | 
@@ -268,16 +266,16 @@ It's an array of permissions that the app requires:
 | "VideoCaptureSettings" | Allows setting video capture settings                                                                             | 
 
 ## Meta object
-The App Metadata.
+Includes app metadata:
 
 | Name                                        | Type     |  Description                                                                                               | Since |
 |---------------------------------------------|----------| -----------------------------------------------------------------------------------------------------------| ----- | 
 | <a class="anchor" aria-hidden="true" id="meta-name"></a>name                  | string   |  Mandatory. Name of your app. *See [note](#meta-note).*                                                    | 0.78  |
-| <a class="anchor" aria-hidden="true" id="meta-author"></a>author              | string   |  Mandatory. Who developed the app. *See [note](#meta-note).*                                               | 0.78  |
-| <a class="anchor" aria-hidden="true" id="meta-version"></a>version            | string   |  Mandatory. One to four dot-separated integers identifying the version of this app.</br>Needs to be in the format of X.X.X where the X’s are numbers.</br>Here are some examples of valid versions: </br> ["version": "1", "version": "1.0", "version": "2.11.3", "version": "4.1.2.345"]                                          | 0.78  |
+| <a class="anchor" aria-hidden="true" id="meta-author"></a>author              | string   |  Mandatory. The app's developer. *See [note](#meta-note).*                                               | 0.78  |
+| <a class="anchor" aria-hidden="true" id="meta-version"></a>version            | string   |  Mandatory. Up to four dot-separated integers identifying the current app version.</br>Needs to be in the format of X.X.X where the X’s are numbers.</br>Here are some examples of valid versions: </br> ["version": "1", "version": "1.0", "version": "2.11.3", "version": "4.1.2.345"]                                          | 0.78  |
 | <a class="anchor" aria-hidden="true" id="meta-minimum"></a>minimum-overwolf-version | string   |  Mandatory. Minimum version of the Overwolf Client with which the app is compatible. The format is similar to the "version" field.  | 0.78  |
 | <a class="anchor" aria-hidden="true" id="meta-minimum-gep"></a>minimum-gep-version | string   |  Mandatory. Minimum version of the Overwolf Game Events Provider with which the app is compatible. The format is similar to the "version" field.  | 0.78  |
-| <a class="anchor" aria-hidden="true" id="meta-description"></a>description    | string   |  Mandatory. The description of your app on the Appstore tile. Limited to 180 characters.                   | 0.78  |
+| <a class="anchor" aria-hidden="true" id="meta-description"></a>description    | string   |  Mandatory. Your app's description in the Appstore tile. Limited to 180 characters.                   | 0.78  |
 | <a class="anchor" aria-hidden="true" id="meta-dock"></a>dock_button_title | string   |  Short name of your app. Provide a short title that will fit in the dock button area – 18 chars max        | 0.79  |
 | <a class="anchor" aria-hidden="true" id="meta-mouse-over"></a>icon            | string   |  Mandatory. A relative path from the app folder to the icon’s png file. This is the mouse-over (multi-colored) version of the icon that will be displayed on the Overwolf dock. The icon dimensions should be 256×256 pixels, 72 PPI. Overwolf will resize it to 37×37. Please make sure the png is smaller than 30KB.  More details on app icons can be found [here](../start/submit-app-proposal).                         | 0.78  |
 | <a class="anchor" aria-hidden="true" id="meta-gray_icon"></a>icon_gray        | string   |  A relative path from the app folder to the icon’s png file. This grayscale version of the icon is for the default state that will be displayed on the Overwolf dock. The icon dimensions should be 256×256 pixels, 72 PPI. Overwolf will resize it to 37×37. Please make sure the png is smaller than 30KB                  | 0.78  |
@@ -289,24 +287,23 @@ The App Metadata.
 <a class="anchor" aria-hidden="true" id="meta-note"></a>Each app has a unique id (UID) that is generated out of the “name” and “author” strings. Once an app is published on the Appstore, its UID can’t be changed, so please choose your app and author names wisely before [submitting](../start/submit-app-proposal) your app.
 :::
 
-## webapp settings object
+## Webapp settings object
 A list of additional settings for the app.
 
 | Name                              | Type     |  Description                                                                                               | Since |
 |-----------------------------------|--------------------------------------------| -------------------------------------------------------------------------| ----- | 
-| <a class="anchor" aria-hidden="true" id="game_targeting"></a>game_targeting              | [GameTargeting](#gametargeting-object) Object   |  An app can declare itself as targeted to one game or more.                  | 0.78  |
+| <a class="anchor" aria-hidden="true" id="game_targeting"></a>game_targeting              | [GameTargeting](#gametargeting-object) Object   |  An app can declare itself as targeted for one game or more.                  | 0.78  |
 | <a class="anchor" aria-hidden="true" id="start_window"></a>start_window   | string     |  Mandatory. The name of the window (from the “windows” list) to initially load when the app starts.        | 0.78  |
 | <a class="anchor" aria-hidden="true" id="window-data"></a>windows              | [extension_window_data](#extension-window-data-object) Object   |  Mandatory. A map from window names to window settings.                  | 0.78  |
 | <a class="anchor" aria-hidden="true" id="enable_top_isolated_sites_console"></a>enable_top_isolated_sites_console | bool           |  Enable/Disable printing of ads log to the console. </br>*Default value is “false”.*   |0.115  |
 | <a class="anchor" aria-hidden="true" id="externally_connectable"></a>externally_connectable    | [ExternallyConnectable](#externallyconnectable-object) Object  | A definition of external URLs the web app should be able to access.| 0.78  |
-| <a class="anchor" aria-hidden="true" id="start_window"></a>start_window   | string     |  Mandatory. The name of the window (from the “windows” list) to initially load when the app starts.        | 0.78  |
-| <a class="anchor" aria-hidden="true" id="protocol_override_domains"></a>protocol_override_domains     | [ProtocolOverrideDomains](#protocoloverridedomains-object) Object   |  Override the relative protocol with a preferred one.  | 0.78  |
-| <a class="anchor" aria-hidden="true" id="force_browser"></a>force_browser | string |  Causes links in the app to be opened using the user’s default browser or Overwolf’s browser.</br>*Possible values: "user" or "overwolf".* |0.91  |
+| <a class="anchor" aria-hidden="true" id="protocol_override_domains"></a>protocol_override_domains     | [ProtocolOverrideDomains](#protocoloverridedomains-object) Object   |  Overrides the relative protocol with a preferred one.  | 0.78  |
+| <a class="anchor" aria-hidden="true" id="force_browser"></a>force_browser | string |  Choose whether links in the app will be opened using the user’s default browser or Overwolf’s browser.</br>*Possible values: "user" or "overwolf".* |0.91  |
 | <a class="anchor" aria-hidden="true" id="enable_osr_acceleration"></a>enable_osr_acceleration | bool |  Enable OSR/GPU acceleration if supported by this machine. </br>*Note: this flag is still in Beta. It may not function as expected in some machines.</br>*Note: see also the [optimize_accelerate_rendering](#optimize_accelerate_rendering) flag* |0.126  |
 | <a class="anchor" aria-hidden="true" id="game_events"></a>game_events | [game_events[]](#game-events-array) |  A list of game ids for which game events are required. |0.92  |
-| <a class="anchor" aria-hidden="true" id="disable_log_limit"></a>disable_log_limit | bool |  Disable the log file 1000 lines limitation. </br>*Note: Do not enable it without Overwolf approval.*        | 0.12 |
-| <a class="anchor" aria-hidden="true" id="extra-objects"></a>extra-objects     | [extra-objects](#extra-objects-object) Object  |  Allows the access of custom plugin dlls.  | 0.81  |
-| <a class="anchor" aria-hidden="true" id="hotkeys"></a>hotkeys     | [hotkeys](#hotkeys-object) Object   |  shortcut keys that trigger an app action.  | 0.78  |
+| <a class="anchor" aria-hidden="true" id="disable_log_limit"></a>disable_log_limit | bool |  Disable the log file's 1000-line limitation. </br>*Note: Do not enable it without Overwolf's approval.*        | 0.12 |
+| <a class="anchor" aria-hidden="true" id="extra-objects"></a>extra-objects     | [extra-objects](#extra-objects-object) Object  |  Allows access to custom plugin dlls.  | 0.81  |
+| <a class="anchor" aria-hidden="true" id="hotkeys"></a>hotkeys     | [hotkeys](#hotkeys-object) Object   |  Shortcut keys that trigger an app action.  | 0.78  |
 | <a class="anchor" aria-hidden="true" id="content_scripts"></a>content_scripts | [content_scripts[]](#content-scripts-array) |  A list of content scripts to be loaded for specific windows. |0.78  |
 | <a class="anchor" aria-hidden="true" id="launch_events"></a>launch_events | [launch_event_settings[]](#launch-event-settings-array) |  A list of events causing the app to launch. |0.82  |
 | <a class="anchor" aria-hidden="true" id="user_agent"></a>user_agent | string |  A custom user agent for the app to use when creating http requests. </br>*Note: using ‘navigator.userAgent’ will not return the custom user agent, but the default one.* |0.86  |
@@ -318,8 +315,8 @@ An app can declare itself as targeted to one or more games.
 
 | Name     | Type   |  Description   | Since |
 |----------|---------------------------------|  ------------------------------------------------------------------- |------ |
-| type     | string |  "all" – All games (e.g voice communication apps).</br>"dedicated" – Dedicated to a game or more than one game.</br> "none" – No games. | 0.78  |
-| game_ids | [game_ids[]](#game-ids-array) |    The games IDs that your app targets                                                                                                  | 0.78  |
+| type     | string |  "all" – All games (e.g voice communication apps).</br>"dedicated" – Dedicated to a game or several games.</br> "none" – No games. | 0.78  |
+| game_ids | [game_ids[]](#game-ids-array) |    The game IDs that your app targets                                                                                                  | 0.78  |
 
 Example code:
 
@@ -335,9 +332,9 @@ A list of settings for the app windows.
 
 | Name                   | Type   |  Description                                                                                                                                   | Since |
 |------------------------|--------| --------------------------------------------------------------------------------------------------------------- |------ |
-| <a class="anchor" aria-hidden="true" id="window-file"></a>file | string |  Mandatory. Points to the HTML file to be loaded inside the window. This can only be a local file. If you wish to host your app in a remote web-site, you’ll have to have a local page that redirects to the remote website. In such cases, you need to make sure that the [block_top_window_navigation](#windows-block_top_window_navigation) property is set to false.                                                                                | 0.78  |
+| <a class="anchor" aria-hidden="true" id="window-file"></a>file | string |  Mandatory. Points to a local HTML file to be loaded inside the window. If you wish to host your app in a remote web-site, you’ll have to have a local page that redirects to that remote website. In such cases, you need to make sure that the [block_top_window_navigation](#windows-block_top_window_navigation) property is set to false.                                                                                | 0.78  |
 | <a class="anchor" aria-hidden="true" id="window-show_in_taskbar"></a>show_in_taskbar | bool   |  Define if the window is displayed in the Windows taskbar and alt-tab window selection menu.                                                   | 0.78  |
-| <a class="anchor" aria-hidden="true" id="window-transparent"></a>transparent | bool   |  Indicates whether the window will be transparent and borderless. Any part of your window with transparent background ("background: transparent;") will be a see-through area that blends with the game or desktop. </br>If set to false a standard Overwolf window will be created.                  | 0.78  |
+| <a class="anchor" aria-hidden="true" id="window-transparent"></a>transparent | bool   |  Indicates whether the window will be transparent and borderless. Any part of your window with transparent background ("background: transparent;") will become a see-through area that blends with the game or desktop. </br>If set to false a standard Overwolf window will be created.                  | 0.78  |
 | <a class="anchor" aria-hidden="true" id="window-override_on_update"></a>override_on_update| bool |Indicates whether the window’s locally saved data should be overridden when the window’s size/location/opacity changes after a version update.|0.119 |
 | <a class="anchor" aria-hidden="true" id="windows-resizable"></a>resizable | bool   |  Indicates whether the window can be resized.                                                                                                  | 0.78  |
 | <a class="anchor" aria-hidden="true" id="windows-show_minimize"></a>show_minimize | bool   |  Indicates whether to show the window minimize button. Only relevant when not in transparent mode.                                             | 0.79  |
@@ -345,22 +342,22 @@ A list of settings for the app windows.
 | <a class="anchor" aria-hidden="true" id="windows-disable_rightclick"></a>disable_rightclick | bool   |  When set to true, disable right clicks entirely for this window.                                                    | 0.92  |
 | <a class="anchor" aria-hidden="true" id="windows-forcecapture"></a>forcecapture | bool   |  Indicates whether this window should always be included in recordings, overriding any other setting.                                          | 0.78  |
 | <a class="anchor" aria-hidden="true" id="windows-show_only_on_stream"></a>show_only_on_stream | bool   |  Indicates whether this window is visible only in streams (not visible to the streamer), overriding any other setting.    | 0.78  |
-| <a class="anchor" aria-hidden="true" id="windows-ignore_keyboard_events"></a>ignore_keyboard_events | bool   |  ndicates whether the window will not receive keyboard events. Instead, the keyboard events will be passed on to the game.  | 0.83  |
-| <a class="anchor" aria-hidden="true" id="windows-in_game_only"></a>in_game_only  | bool   |  Indicates whether the window will be visible only in game and not on the desktop.                                                             | 0.78  |
-| <a class="anchor" aria-hidden="true" id="windows-desktop_only"></a>desktop_only | bool   |  Indicates whether the window will be visible only on the desktop and not while in game. This flag should be used (set to “true”) when “use_os_windowing” or “native_window” flags are set to true. </br>*Note: using “desktop_only” and “native_window” flags for desktop windows will dramatically improve your app’s performance.*                                 | 0.89  |
+| <a class="anchor" aria-hidden="true" id="windows-ignore_keyboard_events"></a>ignore_keyboard_events | bool   |  Indicates whether the window will receive keyboard events or pass them on to the game.  | 0.83  |
+| <a class="anchor" aria-hidden="true" id="windows-in_game_only"></a>in_game_only  | bool   |  Marks the window as available in-game only (Not accessible on Desktop).                                                             | 0.78  |
+| <a class="anchor" aria-hidden="true" id="windows-desktop_only"></a>desktop_only | bool   |  Markets the window as available on desktop only, and not in-game. This flag should be used (set to “true”) when “use_os_windowing” or “native_window” flags are set to true. </br>*Note: using “desktop_only” and “native_window” flags for desktop windows will dramatically improve your app’s performance.*                                 | 0.89  |
 | <a class="anchor" aria-hidden="true" id="windows-disable_restore_animation"></a>disable_restore_animation | bool |  Indicates whether the window will animate on minimize/restore while in game.                             | 0.89  |
-| <a class="anchor" aria-hidden="true" id="windows-grab_keyboard_focus"></a>grab_keyboard_focus | bool |  Indicates whether the window will grab/steal the keyboard focus automatically from the game when it opens, or leave the keyboard focus untouched. </br>*Default value is false*  </br>*Relevant only for in-game windows*                   | 0.82  |
-| <a class="anchor" aria-hidden="true" id="windows-grab_focus_on_desktop"></a>grab_focus_on_desktop  | bool   |  Indicates whether the window will grab the focus automatically when it opens, or leave the focus untouched. </br>*Default value is true* </br>*Relevant only for desktop windows*| 0.99  |
-| <a class="anchor" aria-hidden="true" id="windows-size"></a>size    | [size](#size-object) object |  Defines the size of the window in pixels when it is first opened. If your window is not resizable, this will be the constant size of your window. However, if your app is resizable – the app size is saved by Overwolf when closed so that the next time it is opened, it will preserve this size. See our [window sizes tips](../topics/using-overwolf-windows#window-sizes)    | 0.78  |
+| <a class="anchor" aria-hidden="true" id="windows-grab_keyboard_focus"></a>grab_keyboard_focus | bool |  Indicates whether the in-game window will 'steal' the keyboard focus automatically from the game when it opens, or leave the keyboard focus untouched. </br>*Default value is false* | 0.82  |
+| <a class="anchor" aria-hidden="true" id="windows-grab_focus_on_desktop"></a>grab_focus_on_desktop  | bool   |  Indicates whether the desktop window will grab the focus automatically when it opens, or leave the focus untouched. </br>*Default value is true* | 0.99  |
+| <a class="anchor" aria-hidden="true" id="windows-size"></a>size    | [size](#size-object) object |  Defines the size of the window in pixels when it is first opened. If your window is not resizable, this will be the constant size of your window. However, if your app is resizable – the app size is saved by Overwolf when closed so that the next time it is opened, it will preserve it. See our [window sizes tips](../topics/using-overwolf-windows#window-sizes)    | 0.78  |
 | <a class="anchor" aria-hidden="true" id="windows-min_size"></a>min_size      | [size](#size-object) object |  Defines the minimum size of the window in pixels. See our [window sizes tips](../topics/using-overwolf-windows#window-sizes)                                                                         | 0.78  |
 | <a class="anchor" aria-hidden="true" id="windows-max_size"></a>max_size      | [size](#size-object) object |  Defines the maximum size of the window in pixels. See our [window sizes tips](../topics/using-overwolf-windows#window-sizes)                                                                        | 0.78  |
-| <a class="anchor" aria-hidden="true" id="windows-start_position"></a>start_position   | [point](#point-object) object|  The default start position of the window in pixels from the top left corner.                       | 0.78  |
+| <a class="anchor" aria-hidden="true" id="windows-start_position"></a>start_position   | [point](#point-object) object|  The default starting position of the window counted in pixels from the top left corner of the screen.                       | 0.78  |
 | <a class="anchor" aria-hidden="true" id="windows-topmost"></a>topmost     | bool    |  Indicates whether the window will be on top of other Overwolf windows. Handle with care as topmost windows can negatively impact user experience.   | 0.89  |
 | <a class="anchor" aria-hidden="true" id="windows-block_top_window_navigation"></a>block_top_window_navigation | bool |  Refrain from non _blank <a> elements from “taking-over” the entire app’s window                         | 0.100  |
 | <a class="anchor" aria-hidden="true" id="windows-keep_window_location"></a>keep_window_location   | bool        |  Window location won’t be changed when game focus is changed                                           | 0.101  |
 | <a class="anchor" aria-hidden="true" id="windows-use_os_windowing"></a>use_os_windowing | bool |  When set to true, allows your window to have a full-screen maximize when calling the overwolf.windows.maximize function, and a real taskbar minimize when calling overwolf.windows.minimize. </br>*Note: Should only be used with desktop_only windows*                                                                                              | 0.102  |
 | <a class="anchor" aria-hidden="true" id="background_optimization"></a>background_optimization | bool       | Enables JS engine background optimization. </br>*Default value is true*                                         | 0.103  |
-| <a class="anchor" aria-hidden="true" id="windows-mute">mute</a>                    | bool       | Mute sounds in window.                                                                                                                    | 0.102  |
+| <a class="anchor" aria-hidden="true" id="windows-mute">mute</a>                    | bool       | Mutes sounds in window                                                                                                                    | 0.102  |
 | <a class="anchor" aria-hidden="true" id="mute_excluded_hosts"></a>mute_excluded_hosts     | string[]   | Excludes hosts list so a stream from these hosts origins will not get muted even if the window is on "mute": true            | 0.103  |
 | <a class="anchor" aria-hidden="true" id="popup_blocker"></a>popup_blocker           | bool       | Prevents new browser windows being opened automatically using script. </br>*Default value is false*                              | 0.103  |
 | <a class="anchor" aria-hidden="true" id="show_maximize"></a>show_maximize           | bool       | Enables window maximize button. Relevant only for the standard Overwolf window ("transparent": false) </br>*Default value is false*       | 0.106  |
@@ -465,20 +462,16 @@ Then, from your app you can use the [overwolf.current_extension](overwolf-curren
 overwolf.current_extension.getExtraObject(“simple-io-plugin”, function…)
 ```
 ## hotKeys object
-HotKeys are shortcut keys that trigger an app action.
-The basic usage is to open/show and minimize/hide your app, but you can trigger more actions like save, refresh or any other custom actions.
+HotKeys are shortcut keystrokes that trigger app actions. The most common, basic usage is to show and hide your app in-game, but you can trigger more actions like saving, refreshing or any other custom actions.
 
 :::note Note
-Hotkeys will only work in-game, and not on desktop
+Hotkeys will only work in-game, and never on desktop
 :::
 
 There are two types of hotkeys:
-* **toggle** – Toggles application visibility (displayed/hidden).   
-The advantage of it is that it can activate the app if it closed, so use it If you want the hotkey to launch your app, as it will run and display the app if it isn’t already running.   
+* **toggle** – Toggles application visibility by showing or hiding it. The advantage of it is that it can activate the app if it's closed, so use it if you want the hotkey to launch your app.   
 
-* **custom** – Defines a custom hotkey to be used by the app. It is up to the app to register the custom hotkeys and handle them. 
-custom hotkey will only work when your app is already running. If it closed it won’t open it (do nothing). 
-In addition, you will need to use the [registerHotKey](overwolf-settings) function to register the hotkey, but the advantage is that you can use this callback function to customize your app windows behavior.  
+* **custom** – Defines a custom hotkey to be used by the app. It is up to the app to register custom hotkeys and handle them. Custom hotkeys will only work when your app is already running. Unlike Toggle hotkeys, using a custom hotkey with the app closed will do nothing. In addition, you will need to use the [registerHotKey](overwolf-settings) function to register the hotkey, but the advantage is that you can use this callback function to customize your app window behavior.  
 
 The map between the hotkey feature name and it’s settings:
 
@@ -512,9 +505,9 @@ A list of content scripts to be loaded for specific windows.
 | Name    | Type   | Description                                                 | Since |
 |---------| -------|-------------------------------------------------------------|------ |
 | windows | string | The list of windows for which to apply this content script. | 0.78  |
-| matches | string | The list of urls for which to apply this content script.    | 0.78  |
-| css     | string | The list of css files to be applied in this content script. | 0.78  |
-| js      | string | The list of js files to be applied in this content script.  | 0.78  |
+| matches | string | The list of URLs for which to apply this content script.    | 0.78  |
+| css     | string | The list of CSS files to be applied in this content script. | 0.78  |
+| js      | string | The list of JS files to be applied in this content script.  | 0.78  |
 
 In this example, when loading the index window, myscript.js will be loaded and when encountring https://google.com, mystyles.css and myscript2.js will be loaded:
 ```json
@@ -524,7 +517,7 @@ In this example, when loading the index window, myscript.js will be loaded and w
 ]
 ```
 ## launch_event_settings array
-A list of events causing the app to launch. It is enough that one of the events will occur to launch the app.
+A list of events causing the app to launch. It's enough that one of the events occurs to launch the app.
 
 | Name    | Type   | Description                                                 | Since |
 |---------| -------|-------------------------------------------------------------|------ |
@@ -565,7 +558,7 @@ Code Example:
 Additional setting for helping apps developers. Mainly to set auto reloading of an app when local files changes.
 
 :::note Note
-these settings relevant only if your app is in dev mode (channel="developers"), and you are loading it as unpacked folder.
+These settings are relevant only if your app is in dev mode (channel="developers"), or if you are loading it as an unpacked folder.
 :::
 
 | Name                      | Type   | Description                                                                                                               | Since |
