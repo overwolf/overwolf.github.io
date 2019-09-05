@@ -378,13 +378,18 @@ A definition of external URLs the web app should be able to access. Read more [h
 
 | Name    | Type     |  Description                                                                                                                               | Since |
 |---------|----------| ------------------------------------------------------------------------------------------------------------------------------------------ |------ |
-| matches | string[] |  Array of web page URL patterns to match with an external server URL. Use star (*) in place of subdomain to allow access to all subdomains.| 0.78  |
+| matches | string[] |  Array of web page URL patterns to match with an external server URL | 0.78  |
+
+Notes:
+
+* Use star (*) in place of subdomain to allow access to all subdomains
+* Make sure that the end of URL is WITHOUT any slash/backslash
 
 Example code:
 ```json
 "externally_connectable": {
     "matches": [
-    "http://*.mysite.com",
+    "http://*.mysite.com", //make sure that the end of URL is WITHOUT any slash/backslash
     "https://*.mysecuredsite.com",
     "my-protocol://"
     ]
