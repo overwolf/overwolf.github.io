@@ -528,10 +528,16 @@ Read more in the ["Communication between windows"](#) section.
 
 Parameter              | Type       | Description                                                                                    |
 -----------------------| -----------| -----------------------------------------------------------------------------------------------|
-windowId	           | string     | The id or name of the window to send the message to                                            |
-messageId		       | string     | A message id                                                                                   |
+windowId	             | string     | The id or name of the window to send the message to                                            |
+messageId		           | string     | A message id                                                                                   |
 messageContent	       | Object     | The content of the message                                                                     |
 callback               | function   | A callback function which will be called with the status of the request                        |
+
+#### Usage example
+
+```js
+overwolf.windows.sendMessage('secondWindow', '1', 'hello second window', ()=>{console.log('Message sent to window "secondWindow"')})
+```
 
 #### Callback argument: Success
 
@@ -813,6 +819,16 @@ callback               | function                                          | Cal
   "id": "1",
   "content": "hello"
 }
+```
+
+#### Usage example
+
+```js
+overwolf.windows.onMessageReceived.addListener((message)=>{
+    if(message.id ===  '1'){
+      console.log('Message received', message.content)
+  }
+})
 ```
 
 ## onAltF4Blocked
