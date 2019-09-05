@@ -4,24 +4,23 @@ title: Games IDs
 sidebar_label: Games IDs
 ---
 
-Each supported game (games that can display Overwolf apps overlayed) has a unique Game ID.  
-The Game Ids used in your app’s manifest.json [game_events](manifest-json#game-events-array) property.  
-More information about game events can be found [here](overwolf-games-events).
+Each supported game able to display Overwolf apps in overlay has a unique Game ID. Game Ids are used in your app’s manifest.json [game_events](manifest-json#game-events-array) property.  
+More information about game events per ID can be found [here](overwolf-games-events).
 
-## Full list of Game ID's
-The full list of the supported games with their Game ID’s is always updated, and you can find it in your local Overwolf app data folder (first you must install Overwolf of course):
+## Full list of Game IDs
+The supported games list is always updated, and you can find it in your local Overwolf app data folder (after installing Overwolf of course).
 
-1. Browse to your `%localappdata%` fodler and open the `overwolf` folder.
+1. Browse to your `%localappdata%` folder and open the `overwolf` folder.
 
-2. Open the Game List XML file (named with number postfix like gamelistXXX.xml. Higher number means newer version), and search your game by name.
+2. Open the Game List XML file (named with a number postfix, for example gamelistXXX.xml, higher number means newer version), and search your game by name.
 
-3. Under each game, you can find it’s ID.
+3. Under each game, you can find it’s game ID.
 
-If you didn’t find the game you need, contact us through [Slack](../support/contact-us#join-our-slack) or by email to developers@overwolf.com.
+If you didn’t find the game you need, contact us through [Slack](../support/contact-us#join-our-slack) or by emailing developers@overwolf.com.
 
-## Game launchers ID's
+## Game launcher IDs
 
-(e.g LoL launcher/client) can be found [here](launchers-ids).
+IDs for Launchers such as the League of Legends launcher can be found [here](launchers-ids).
 
 ## Top 30 Game IDs
 
