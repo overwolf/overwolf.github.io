@@ -10,7 +10,7 @@ The full list of supported games can be found [here](../status/all).
 When the app identifies that one of the supported game is running, it pulls automatically from the Overwolf servers, the full list of features, events and info updates, for this particular games. Than, you can simulate "fake" events and info updates with any data that you like.
 
 ::: important
-The app can work on Overwolf client version 0.135 and above.
+The app can work on Overwolf client version 0.135 and above. In order to download it, please [contact us](../support/contact-us).
 :::
 
 ## "no active game" mode
