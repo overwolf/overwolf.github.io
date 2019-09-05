@@ -4,6 +4,8 @@ title: Using the Game Events simulator App
 sidebar_label: Game Events simulator
 ---
 
+## Overview
+
 This app can simulate events and info updates for all the Overwolf game-events-enalbed games: Fortnite, LOL, CS:GO, etc.  
 The full list of supported games can be found [here](../status/all).
 
@@ -12,6 +14,12 @@ When the app identifies that one of the supported game is running, it pulls auto
 ::: important
 The app can work on Overwolf client version 0.135 and above. In order to download it, please [contact us](../support/contact-us).
 :::
+
+## Roadmap
+
+Currently there is no validation on the data that you can send. Which means, that if your app is expecting to get from Overwolf a specific event data (like "true" or an integer), you need to make sure to send the data in the exact format.
+
+On a future version, we will add for each event a sample data, so you can easily determine which format should be sent.
 
 ## "no active game" mode
 
@@ -40,10 +48,6 @@ Note that some features contains only events or only info updates.
 ## 3. Set the data to send
 
 Once a feature / info update was selected, you can set in the text box the exact value to send as the event data. Once the data is ready, just hit the "Trigger" button.
-
-Note that currently there is no validation on the data that you can send. Which means, that if your app is expecting to get from Overwolf a specific event data (like "true" or an integer), you need to make sure to send the data in the exact format.
-
-On a future version, we will add for each event a sample data, so you can easily determine which format should be sent.
 
 ![alt-text](assets/events-simulator/3.png)
 
