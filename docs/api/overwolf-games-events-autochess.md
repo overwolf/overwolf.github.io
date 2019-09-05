@@ -32,7 +32,7 @@ Please read the [overwolf.games.events](overwolf-games-events) documentation pag
 
 It is highly recommended to communicate errors and warnings to your app users. 
 
-Check [here](../status/all) the game events status. OR -  easily check the game events status from your app, [using our API](../topics/howto-check-events-status-from-app).
+Check game event status [here](../status/all) or easily check through your app [using our API](../topics/howto-check-events-status-from-app).
 
 ## `roster`
 
@@ -66,10 +66,10 @@ Player object structure:
 ```
 Notes:
 
-* steamID – ID of player
-* name – Name of player
-* team – Each player receives team number for themselves (chess board number)
-* hero – Every player is wisp and/or empty.
+* steamID – Player ID 
+* name – Player Name
+* team – An assigned 'team' number which is actually a board number 
+* hero – For example wisp and/or empty.
 
 ## `shop`
 
@@ -77,7 +77,7 @@ Notes:
 
 key          | Category    | Values                    | Notes                 | Since Version |
 ------------ | ------------| ------------------------- | --------------------- | ------------- | 
-slot_x| match_info  |The chess pieces that are available for purchase currently in the shop.|See [notes](#slot_x-note)|     131.0     |
+slot_x| match_info  |A list of currently available chess pieces for purchase in-game (showing up in the shop).|See [notes](#slot_x-note)|     131.0     |
 
 #### *slot_x* note
 
@@ -85,7 +85,7 @@ Data Example:
 
 `{"info":{"match_info":{"slot_1":"mars"}},"feature":"shop"}`
 
-Note: This information is for each available slot (slots 1-5).
+Chess piece information is for each available slot out of the 5 available shop slots.
 
 ## `bench`
 
@@ -93,7 +93,7 @@ Note: This information is for each available slot (slots 1-5).
 
 key          | Category    | Values                    | Notes                 | Since Version |
 ------------ | ------------| ------------------------- | --------------------- | ------------- | 
-cell_x| match_info  |The chess pieces that are currently on the first row, below the board.|See [notes](#cell_x-note)|     131.0     |
+cell_x| match_info  |A list of chess pieces currently waiting in your inventory, the row of cells below the game board.|See [notes](#cell_x-note)|     131.0     |
 
 #### *cell_x* note
 
@@ -104,7 +104,7 @@ Data Example:
 {"info":{"match_info":{"cell_2":"{"name":"tuskarr","level":"1"}"}},"feature":"bench"}
 ```
 
-Note: This information is for each bench slot (slots  1-8).
+This information is for each bench slot out of the available 8 slots.
 
 ## `board`
 
@@ -112,7 +112,7 @@ Note: This information is for each bench slot (slots  1-8).
 
 key          | Category    | Values                    | Notes                 | Since Version |
 ------------ | ------------| ------------------------- | --------------------- | ------------- | 
-cell_x_y| match_info  |Provides the content of a contained cell in the bottom half of the board.|See [notes](#cell_x_y-note)|  131.0   |
+cell_x_y| match_info  |Retruns the contents of a cell in the bottom half of the board.|See [notes](#cell_x_y-note)|  131.0   |
 
 #### *cell_x_y* note
 
@@ -141,7 +141,7 @@ Next cell to the right is “cell_1_2” etc.
 
 key          | Category    | Values                    | Notes                 | Since Version |
 ------------ | ------------| ------------------------- | --------------------- | ------------- | 
-roundNumber  | match_info  |The numeric indication of the current round.|See [notes](#roundNumber-note)|  131.0   |
+roundNumber  | match_info  |The numeric designation of the current round.|See [notes](#roundNumber-note)|  131.0   |
 
 #### *roundNumber* note
 
@@ -157,8 +157,8 @@ Data Example:
 
 key          | Category    | Values                    | Notes                 | Since Version |
 ------------ | ------------| ------------------------- | --------------------- | ------------- | 
-totalWon     | match_info  |The total amount of rounds won.|See [notes](#totalWon-note)|  131.0   |
-totalLost    | match_info  |The total amount of rounds lost.|See [notes](#totalLost-note)|  131.0   |
+totalWon     | match_info  |The total number of rounds won.|See [notes](#totalWon-note)|  131.0   |
+totalLost    | match_info  |The total number of rounds lost.|See [notes](#totalLost-note)|  131.0   |
 
 ### Events
 
@@ -226,7 +226,7 @@ autochess_preparation_end| null  |Preparation phase ends|       |     129.0     
 
 key          | Category    | Values                    | Notes                 | Since Version |
 --------------- | -----------| ------------------------------------------------------------------------------------ | ------------------------------------ | ------------- | 
-pseudo_match_id | match_info | The current session’s ID code. Example:</br> `a4e8fc75-b35e-466f-976c-09f4ee633d95`  |  This is an Overwolf-generated code. Unrelated to Valve.  |   0.130 |
+pseudo_match_id | match_info | The current session’s ID code. Example:</br> `a4e8fc75-b35e-466f-976c-09f4ee633d95`  |  This is an Overwolf-generated code, unrelated to Valve.  |   0.130 |
 game_mode | match_info | Whether the current game mode is Dota2 or Autochess. |                 |   0.133       |
 
 ### Events
