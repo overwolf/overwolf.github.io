@@ -304,6 +304,21 @@ Parameter   | Type     | Description                                            
 gameId		| int      | The id of the game you want to capture it highlights                                                                                       |
 callback    | function |A callback function which provides a list of the generated video highlights URL’s for this session and relevant metadata for each highlight |
 
+#### Usage example
+
+```js
+//get available Fortnite highlights
+
+overwolf.media.replays.getHighlightsFeatures(21216, JSON.stringify(console.log))
+```
+
+#### Callback argument: Success
+
+
+```json
+{"status":"success","features":["kill","knockout","death","knockedout","victoryRoyale"]}
+```
+
 ## onCaptureError
 
 #### Version added: 0.78
