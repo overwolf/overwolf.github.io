@@ -6,6 +6,8 @@ sidebar_label: overwolf.media
 
 Use the `overwolf.media` API to capture a screenshot or create a GIF of the currently running game.
 
+**Permissions required: Media**
+
 ## Methods Reference
 
 * [overwolf.media.takeScreenshot()](#takescreenshotcallback)

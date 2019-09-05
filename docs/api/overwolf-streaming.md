@@ -8,6 +8,8 @@ This namespace contains all the functionality that allows the streaming of video
 
 The term streaming might be a bit misleading – we regard saving a video to the local drive as streaming, as well as streaming the video to a streaming service such as Twitch.tv.
 
+**Permissions required: Streaming**
+
 ## Methods Reference
 
 * [overwolf.streaming.start()](#startsettings-callback)

@@ -6,7 +6,9 @@ sidebar_label: overwolf.profile.subscription
 
 The `overwolf.profile.subscription` API provides functions and events to help with user profile subscription management.
 
-**Read all the info about app subscriptions [here](../start/app-subscriptions).**
+* **Permissions required: profile**
+
+* **Read all the info about app subscriptions [here](../start/app-subscriptions).**
 
 ## Methods Reference
 

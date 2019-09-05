@@ -19,6 +19,7 @@ Overwolf APIs are global components that allow interaction with various Overwolf
 * [overwolf.media](#overwolfmedia-docs-api-overwolf-media)
 * [overwolf.os](#overwolfos-docs-api-overwolf-os)
 * [overwolf.profile](#overwolfprofile-docs-api-overwolf-profile)
+* [overwolf.profile.subscription](#overwolfprofilesubscription-docs-api-overwolf-profilesubscription)
 * [overwolf.settings](#overwolfsettings-docs-api-overwolf-settings)
 * [overwolf.social](#overwolfsocial-docs-api-overwolf-social)
 * [overwolf.streaming](#overwolfstreaming-docs-api-overwolf-streaming)
@@ -81,8 +82,6 @@ Common use cases:
 
 ## [overwolf.media](api/overwolf-media.md)
 
-Permissions required: Media
-
 > Use the overwolf.media API to capture a screenshot or create a GIF of the game currently played.
 
 * Use the [overwolf.media.audio](api/overwolf-media-audio.md) API to play an audio file.
@@ -96,9 +95,11 @@ Permissions required: Media
 
 ## [overwolf.profile](api/overwolf-profile.md)
 
-Permissions required: profile
-
 > Use the overwolf.profile API to get Overwolf account information for the current user, this includes user name, log-in events and more.
+
+## [overwolf.profile.subscription](api/overwolf-profile.subscription.md)
+
+> Provides functions and events to help with user profile subscription management.
 
 
 ## [overwolf.settings](api/overwolf-settings.md)
@@ -119,10 +120,7 @@ Permissions required: profile
 * [overwolf.social.twitter](api/overwolf-social-twitter.md) Provides access to the Twitter social provider.
 * [overwolf.social.reddit](api/overwolf-social-reddit.md) Provides access to the Reddit social provider.
 
-
 ## [overwolf.streaming](api/overwolf-streaming.md)
-
-Permissions required: Streaming
 
 > Use the overwolf.streaming API to capture a video of the current game, or stream the current game directly to [Twitch.tv](https://www.twitch.tv/)
 
