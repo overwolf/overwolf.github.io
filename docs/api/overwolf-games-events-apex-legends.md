@@ -36,7 +36,7 @@ It is highly recommended to communicate errors and warnings to your app users.
 
 Check [here](../status/all) the game events status. OR -  easily check the game events status from your app, [using our API](../topics/howto-check-events-status-from-app).
 
-## me
+## `me`
 
 ### Info Updates
 
@@ -45,7 +45,7 @@ key          | Category    | Values                    | Notes                 |
 me           | game_info   | Local Player Name         |                       |  128.0       |
 ultimate_cooldown | me     | Ultimate ability cooldown |                       |  128.0       |
 
-## match_info
+## `match_info`
 
 ### Info Updates
 
@@ -53,7 +53,7 @@ key          | Category    | Values                    | Notes                 |
 --------------- | -----------| ------------------------------------------------------------------------------------ | ------------------------------------ | ------------- | 
 pseudo_match_id | match_info | The current session’s ID code.</br></br>Example:</br></br> `0c0ea3df-97ea-4d3a-b1f6-f8e34042251f`  |  This is an Overwolf-generated code. Unrelated to Respawn.  |   0.130|
 
-## match_state
+## `match_state`
 
 ### Info Updates
 
@@ -68,7 +68,7 @@ Event       | Event Data   | Fired When    | Notes              | Since GEP Ver.
 match_start | null         | Match started |                    |     128.0     | 
 match_end   | null         | Match ended   |                    |     128.0     | 
 
-## team
+## `team`
 
 ### Info Updates
 
@@ -105,7 +105,7 @@ As you can see, this object includes:
 * legend name
 * jumpmaster - Bool
 
-## roster
+## `roster`
 
 ### Info Updates
 
@@ -126,7 +126,7 @@ As you can see, this object includes:
 * `name` - Player name
 * `isTeammate` (Bool) - Player is/not a squad member
 
-## location
+## `location`
 
 ### Info Updates
 
@@ -147,7 +147,7 @@ location  | match_info | See example below  |             |  130.0        |
 {"info":{"match_info":{"location":"{"x":"93","y":"305","z":"49"}"}},"feature":"location"}
 ```
 
-## rank
+## `rank`
 
 ### Info Updates
 
@@ -155,7 +155,7 @@ key          | Category    | Values                    | Notes                 |
 ------------ | ------------| ------------------------- | --------------------- | ------------- | 
 victory  | match_info   | true/false           |  This info update notifies at the end of the match and provides “true” for winning and “false” for losing.                     |  128.0   |
 
-## match_summary
+## `match_summary`
 
 ### Info Updates
 
@@ -176,7 +176,7 @@ The following info is provided:
 {"feature":"match_summary","category":"match_info","key":"match_summary","value":"{"rank":"12","teams":"20","squadKills":"5"}"}
 ```
 
-## damage
+## `damage`
 
 ### Info Updates
 
@@ -216,7 +216,7 @@ The following properties are provided:
 {"name":"damage","data":"{rn"targetName":"masiqu22",rn"damageAmount":"13.000000",rn"armor":"true",rn "headshot":"false"rn}"}
 ```
 
-## inventory
+## `inventory`
 
 ### Info Updates
 
@@ -226,7 +226,7 @@ inventory_XX        | me   | The items that are picked up into the inventory slo
 weapons | me   | The weapons that are currently used by the local player (only 2 slots are available – 0 & 1).</br>Example:</br>`{"category":"game_info","key":"weapons","value":"{"weapon_0":"mp_weapon_shotgun_pistol","weapon_1":"mp_weapon_doubletake","active_0":"mp_weapon_doubletake"}","valueLength":107}` |        |    0.130      |
 inUse | me   | Any item that is <u>currently used</u> by the local player.</br>Example:</br>`{"feature":"inventory","category":"me","key":"inUse","value":"{"inUse":"Triple Take"}"}` |        |    0.130      |
 
-## kill
+## `kill`
 
 ### Events
 
@@ -236,7 +236,7 @@ kill | victimName                              | The local player killed another
 knockdown | victimName                              | The local player knocked out another player |                    |    130.0      | 
 assist | victimName                              | The local player participated in a team member’s kill.</br></br>Provided values:</br>1. victimName</br>2. type - knockdown / elimination</br></br>Example:</br></br>`{"name":"assist","data":"{rn"victimName": "VioletAlbicocca",rn"type":"knockdown"rn}"}` |                    |    130.0      | 
 
-## revive
+## `revive`
 
 ### Events
 
@@ -245,7 +245,7 @@ Event        | Event Data                        | Fired When   | Notes         
 healed_from_ko | null                              | Local player was revived from knocked out state. |                    |     128.0     | 
 respawn | null                              | Local player was returned at the game beacon. |                    |     128.0      | 
 
-## death
+## `death`
 
 ### Events
 
@@ -254,7 +254,7 @@ Event        | Event Data                        | Fired When   | Notes         
 knocked_out | null                              | The local player’s health drops to zero.	 |                    |     128.0      | 
 death | null (in the future we will provide the killer name). | The local player died during knocked out state. | There is another health bar during knocked out</br>state, it’s orange, above the player name. |     128.0      | 
 
-## kill_feed
+## `kill_feed`
 
 ### Events
 
