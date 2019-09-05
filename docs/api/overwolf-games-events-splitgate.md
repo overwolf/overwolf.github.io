@@ -69,7 +69,7 @@ type              | match_info   |	The current match type. |See [notes](#type-no
 
 #### *mapName* note
 
-Available maps: Olympus, Outpost, Helix, Silo, Pantheon, Highwind, Atlantis, Stadium
+Available maps: Olympus, Outpost, Helix, Silo, Pantheon, Highwind, Atlantis, Stadium, Abyss
 
 Data Example:
 
