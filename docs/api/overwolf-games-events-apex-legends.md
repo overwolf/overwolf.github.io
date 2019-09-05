@@ -30,13 +30,13 @@ Please read the [overwolf.games.events](overwolf-games-events) documentation pag
 * [rank](#rank)
 * [kill_feed](#kill-feed)
 
-## Game events status
+## Game event status
 
-It is highly recommended to communicate errors and warnings to your app users. 
+It is highly recommended to communicate errors and warnings to app users. 
 
-Check [here](../status/all) the game events status. OR -  easily check the game events status from your app, [using our API](../topics/howto-check-events-status-from-app).
+Check the current game event status [here](../status/all). Alternately, you can easily check that status from your app itself, [using our API](../topics/howto-check-events-status-from-app).
 
-## `me`
+## me
 
 ### Info Updates
 
@@ -45,15 +45,15 @@ key          | Category    | Values                    | Notes                 |
 me           | game_info   | Local Player Name         |                       |  128.0       |
 ultimate_cooldown | me     | Ultimate ability cooldown |                       |  128.0       |
 
-## `match_info`
+## match_info
 
 ### Info Updates
 
 key          | Category    | Values                    | Notes                 | Since GEP Ver. |
 --------------- | -----------| ------------------------------------------------------------------------------------ | ------------------------------------ | ------------- | 
-pseudo_match_id | match_info | The current session’s ID code.</br></br>Example:</br></br> `0c0ea3df-97ea-4d3a-b1f6-f8e34042251f`  |  This is an Overwolf-generated code. Unrelated to Respawn.  |   0.130|
+pseudo_match_id | match_info | The current session’s ID code.</br></br>Example:</br></br> `0c0ea3df-97ea-4d3a-b1f6-f8e34042251f`  |  This is an Overwolf-generated code, unrelated to Respawn.  |   0.130|
 
-## `match_state`
+## match_state
 
 ### Info Updates
 
@@ -68,19 +68,19 @@ Event       | Event Data   | Fired When    | Notes              | Since GEP Ver.
 match_start | null         | Match started |                    |     128.0     | 
 match_end   | null         | Match ended   |                    |     128.0     | 
 
-## `team`
+## team
 
 ### Info Updates
 
 key          | Category    | Values                                                                                                      | Notes   | Since GEP Ver. |
 ------------ | ------------| ----------------------------------------------------------------------------------------------------------- | ------- | ------------- | 
 teammate_X   | match_info  | This feature provides the list of your squad members.                                                       |         |  128.0       |
-legendSelect_X| match_info | The name of the legend & order of selection for every member in the team, including who is the jump-master. |         |  128.0       |
+legendSelect_X| match_info | The name of the legend & order of selection for every member in the team, including noting who the jump-master is. |         |  128.0       |
 team_info| match_info | The current status of the local player’s team (```"active"``` or ```"eliminated"```). |         |  128.0       |
 
 #### `teammate_X` notes
 
-Each member from your squad that joins the game will be reported in the following way: 
+Each squad member joining the game will be reported in the following way: 
 
 ```json
 {"info":{"match_info":{"teammate_0":"{"name":"Sh4rgaas","state":"alive"}"}},"feature":"team"}
@@ -89,11 +89,11 @@ Each member from your squad that joins the game will be reported in the followin
 As  youcan see, this object includes:
 
 * `player` – Player name
-* `state` – alive/death/knockedout
+* `state` – alive/death/knocked out
 
 #### `legendSelect_X` notes
 
-Every member in the team, including who is the jump-master will be reported in the following way:
+Every team member, including the jump-master will be reported in the following way:
 
 ```json
 {"feature":"team","category":"match_info","key":"legendSelect_2","value":"{"playerName":"Sh4rgaas","legendName":"#character_octane_NAME","selectionOrder":"2","lead":true}"}
@@ -101,21 +101,21 @@ Every member in the team, including who is the jump-master will be reported in t
 
 As you can see, this object includes:
 
-* selection border
-* legend name
-* jumpmaster - Bool
+* Selection order
+* Legend name
+* Jumpmaster - Bool True/False
 
-## `roster`
+## roster
 
 ### Info Updates
 
 key          | Category  | Values                                                         | Notes       | Since GEP Ver. |
 ------------ | ----------| -------------------------------------------------------------- | ----------- | ------------- | 
-roster_XX  | match_info  | This feature provides the entire list of players (~60 players).|             |  128.0       |
+roster_XX  | match_info  | Provides the entire list of players in a match (~60 players).|             |  128.0       |
 
 #### `roster_XX` notes
 
-Each player that joins the game will be reported in the following way:
+Each player joining the game will be reported in the following way:
 
 ```json
 {"info":{"match_info":{"roster_3":"{"name":"RunLikePistorius","isTeammate":false}"}},"feature":"roster"}
@@ -124,9 +124,9 @@ Each player that joins the game will be reported in the following way:
 As you can see, this object includes:
 
 * `name` - Player name
-* `isTeammate` (Bool) - Player is/not a squad member
+* `isTeammate` (Bool) - Player is/isn't a squad member
 
-## `location`
+## location
 
 ### Info Updates
 
@@ -138,8 +138,8 @@ location  | match_info | See example below  |             |  130.0        |
 
 * Map Center is (0,0,z)
 * King's Canyon appears to be 1x1km
-* The location is updated up to 2 updates in 1 second.
-* Location accuracy is 1 meter.
+* Location is polled up to two times in 1 second
+* Location is accurate to a 1 meter resolution, do not use fractions of meters
 
 #### Event data example
 
@@ -147,15 +147,15 @@ location  | match_info | See example below  |             |  130.0        |
 {"info":{"match_info":{"location":"{"x":"93","y":"305","z":"49"}"}},"feature":"location"}
 ```
 
-## `rank`
+## rank
 
 ### Info Updates
 
 key          | Category    | Values                    | Notes                 | Since GEP Ver. |
 ------------ | ------------| ------------------------- | --------------------- | ------------- | 
-victory  | match_info   | true/false           |  This info update notifies at the end of the match and provides “true” for winning and “false” for losing.                     |  128.0   |
+victory  | match_info   | true/false           |  At the end of the match provides “true” for winning and “false” for losing.                     |  128.0   |
 
-## `match_summary`
+## match_summary
 
 ### Info Updates
 
@@ -165,10 +165,10 @@ match_summary| match_info |         |           |   130.0      |
 
 #### `match_summary` notes
 
-The following info is provided:
-* The final position the squad has reached (rank 1-20).
-* Total number of teams
-* Number of squad kills (total squad eliminated).
+After a match, this will return:
+* The final position the squad has reached (ranked 1-20)
+* Total number of teams in the match
+* Total number of kills made by the squad
 
 #### Event data example
 
@@ -176,17 +176,17 @@ The following info is provided:
 {"feature":"match_summary","category":"match_info","key":"match_summary","value":"{"rank":"12","teams":"20","squadKills":"5"}"}
 ```
 
-## `damage`
+## damage
 
 ### Info Updates
 
 key              | Category   | Values                                                                     | Notes   | Since GEP Ver. |
 ---------------- | -----------| -------------------------------------------------------------------------- | ------- | ------------- | 
-totalDamageDealt | me         | The total amount of damage inflicted in 1 match of Apex. See example below.|         |  130.0        |
+totalDamageDealt | me         | The total amount of damage inflicted in a match of Apex. See example below.|         |  130.0        |
 
 #### `totalDamageDealt` notes
 
-Important to note that the game does not count damage that is inflicted on Armor. Only after the armor was broken. Our damage includes damage on armor aswell, so it will always be higher than game-damage.
+Note that the game does not count damage that is inflicted on Armor, only Health damage after the armor was broken. However, our damage report includes damage done to armor, so it will always be higher than the in-game damage.
 
 #### Event data example
 
@@ -216,45 +216,45 @@ The following properties are provided:
 {"name":"damage","data":"{rn"targetName":"masiqu22",rn"damageAmount":"13.000000",rn"armor":"true",rn "headshot":"false"rn}"}
 ```
 
-## `inventory`
+## inventory
 
 ### Info Updates
 
 key                | Category    | Values                                         | Notes  | Since GEP Ver. |
 -------------------| ------------| -----------------------------------------------| ------ | ------------- | 
-inventory_XX        | me   | The items that are picked up into the inventory slots of the local player (Tab).</br>Example:</br>`{"feature":"inventory","category":"me","key":"inventory_0","value":"{"name":"Shotgun Shells","amount":"36"}"}`   |        |    130.0      |
-weapons | me   | The weapons that are currently used by the local player (only 2 slots are available – 0 & 1).</br>Example:</br>`{"category":"game_info","key":"weapons","value":"{"weapon_0":"mp_weapon_shotgun_pistol","weapon_1":"mp_weapon_doubletake","active_0":"mp_weapon_doubletake"}","valueLength":107}` |        |    0.130      |
-inUse | me   | Any item that is <u>currently used</u> by the local player.</br>Example:</br>`{"feature":"inventory","category":"me","key":"inUse","value":"{"inUse":"Triple Take"}"}` |        |    0.130      |
+inventory_XX        | me   | Lists the items picked up into the local player's inventory (Tab).</br>Example:</br>`{"feature":"inventory","category":"me","key":"inventory_0","value":"{"name":"Shotgun Shells","amount":"36"}"}`   |        |    130.0      |
+weapons | me   | Weapons currently used by the local player - there are two slots available marked 0 and 1.</br>Example:</br>`{"category":"game_info","key":"weapons","value":"{"weapon_0":"mp_weapon_shotgun_pistol","weapon_1":"mp_weapon_doubletake","active_0":"mp_weapon_doubletake"}","valueLength":107}` |        |    0.130      |
+inUse | me   | Items <b>currently used</b> by the local player.</br>Example:</br>`{"feature":"inventory","category":"me","key":"inUse","value":"{"inUse":"Triple Take"}"}` |        |    0.130      |
 
-## `kill`
+## kill
 
 ### Events
 
 Event        | Event Data                        | Fired When   | Notes              | Since GEP Ver. |
 -------------| ----------------------------------| ----------------------------- | ------------------ | --------------|
-kill | victimName                              | The local player killed another player |                    |     130.0      | 
-knockdown | victimName                              | The local player knocked out another player |                    |    130.0      | 
-assist | victimName                              | The local player participated in a team member’s kill.</br></br>Provided values:</br>1. victimName</br>2. type - knockdown / elimination</br></br>Example:</br></br>`{"name":"assist","data":"{rn"victimName": "VioletAlbicocca",rn"type":"knockdown"rn}"}` |                    |    130.0      | 
+kill | victimName                              | Local player killed another player |                    |     130.0      | 
+knockdown | victimName                              | Local player knocked out another player |                    |    130.0      | 
+assist | victimName                              | Local player participated in a team member’s kill.</br></br>Provided values:</br>1. victimName</br>2. type - knockdown / elimination</br></br>Example:</br></br>`{"name":"assist","data":"{rn"victimName": "VioletAlbicocca",rn"type":"knockdown"rn}"}` |                    |    130.0      | 
 
-## `revive`
+## revive
 
 ### Events
 
 Event        | Event Data                        | Fired When   | Notes              | Since GEP Ver. |
 -------------| ----------------------------------| ----------------------------- | ------------------ | --------------|
 healed_from_ko | null                              | Local player was revived from knocked out state. |                    |     128.0     | 
-respawn | null                              | Local player was returned at the game beacon. |                    |     128.0      | 
+respawn | null                              | Local player was returned to the game at a beacon. |                    |     128.0      | 
 
-## `death`
+## death
 
 ### Events
 
 Event        | Event Data                        | Fired When   | Notes              | Since GEP Ver. |
 -------------| ----------------------------------| ----------------------------- | ------------------ | --------------|
-knocked_out | null                              | The local player’s health drops to zero.	 |                    |     128.0      | 
-death | null (in the future we will provide the killer name). | The local player died during knocked out state. | There is another health bar during knocked out</br>state, it’s orange, above the player name. |     128.0      | 
+knocked_out | null                              | Local player’s health drops to zero.	 |                    |     128.0      | 
+death | null (in the future we will provide the killer name). | Local player died during knocked out state. | There is another health bar during knocked out</br>state, it’s orange, above the player name. |     128.0      | 
 
-## `kill_feed`
+## kill_feed
 
 ### Events
 
