@@ -45,6 +45,13 @@ Once you choose a feature, the list of events and info updates for this feature 
 
 After a feature was selected, you can set an exact value to send to the app as event data. Once the data is ready, just hit the "Trigger" button.
 
+::: note how to send data
+* Strings: encapsulate the text in double quotes (example: "my string")
+* Numbers: simply type the number (example: 123)
+* Boolean: true / false
+* Objects: stringify them and send them as strings (see strings)
+:::
+
 ![alt-text](assets/events-simulator/3.png)
 
 ## 4. Trigger the event
