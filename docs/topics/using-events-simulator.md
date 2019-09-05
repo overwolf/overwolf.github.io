@@ -6,10 +6,9 @@ sidebar_label: Game Events simulator
 
 ## Overview
 
-This app can simulate events and info updates for all the Overwolf game-events-enalbed games: Fortnite, LOL, CS:GO, etc.  
-The full list of supported games can be found [here](../status/all).
+This app can simulate events and updates for all Overwolf game-events-enabled games: Fortnite, LOL, CS:GO, and the rest of the list. The full list of supported games can be found [here](../status/all).
 
-When the app identifies that one of the supported game is running, it pulls automatically from the Overwolf servers, the full list of features, events and info updates, for this particular games. Than, you can simulate "fake" events and info updates with any data that you like.
+When the app identifies that one of the supported game is running, it automatically pulls the full list of features and events for that game from the Overwolf servers. Then you can simulate "fake" events and info updates of any sort you want to test.
 
 ::: important
 The app can work on Overwolf client version 0.135 and above. In order to download it, please [contact us](../support/contact-us).
@@ -17,44 +16,39 @@ The app can work on Overwolf client version 0.135 and above. In order to downloa
 
 ## Roadmap
 
-Currently there is no validation on the data that you can send. Which means, that if your app is expecting to get from Overwolf a specific event data (like "true" or an integer), you need to make sure to send the data in the exact format.
+Our next major step planned for the sample app is including data validation features in it. Currently the app doesn't check the data being sent to it, so if you send an integer instead of a True/False flag for an integer field it will just not work. For now, please make sure you send data in the correct format and of the correct type per function.
 
-On a future version, we will add for each event a sample data, so you can easily determine which format should be sent.
+Down the road, we will add samples for each event type so you can validate more easily.
 
 ## "no active game" mode
 
-When you start the app with no active geme running, you will see the following screen.
-As you can see, no active game is detected, and you can't really do nothing till you will run one of the supported games.
+When you start the app with no active game running, you will see the following screen. As you can see, no active game is detected, and you can't really do anything till you run one of the supported games.
 
 ![alt-text](assets/events-simulator/non-active.png)
 
-## 1. Choose the game feature
+## 1. Choose game feature
 
 The app automatically pulls the list of available features for this game.
 
-You should choose the requested feature.  Please follow our API documentation for each game, to get a list of supported features, events and info updates.
+You should choose the requested feature. Please review our API documentation to get a list of supported features, events and info updates each game can get.
 
 ![alt-text](assets/events-simulator/1.png)
 
 
-## 2. Choose the event to simulate
+## 2. Choose the event to trigger
 
-Once you choose a feature, the list of events and info updates for this feature is pulled from the server.
-
-Note that some features contains only events or only info updates.  
+Once you choose a feature, the list of events and info updates for this feature is pulled from the server. Note that some features contains only events or only info updates.  
 
 ![alt-text](assets/events-simulator/2.png)
 
-## 3. Set the data to send
+## 3. Send data to the app
 
-Once a feature / info update was selected, you can set in the text box the exact value to send as the event data. Once the data is ready, just hit the "Trigger" button.
+After a feature was selected, you can set an exact value to send to the app as event data. Once the data is ready, just hit the "Trigger" button.
 
 ![alt-text](assets/events-simulator/3.png)
 
 ## 4. Trigger the event
 
-Once you hit the "Trigger" button, you can see in the dev tools console that the event was triggered.
-
-On this stage, if YOUR app is listenning to the triggered event / info update, it should catch it as well.
+Once you hit the "Trigger" button, you can see the event was triggered in the dev console. In this stage, if YOUR app is listenning to the triggered event / info update, it should respond to it as well.
 
 ![alt-text](assets/events-simulator/console.png)
