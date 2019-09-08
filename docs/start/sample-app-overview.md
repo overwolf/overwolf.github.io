@@ -37,7 +37,8 @@ Basic functions our sample app demonstrates:
 3. Click the *Load unpacked* button and choose the folder where you placed the sample app's repository.
 
 ::: important
-Editing the author or app name in the manifest will prevent loading the app as unpacked app.
+Each app has a unique id (UID) that is generated out of the "name" and "author" strings. Once an app is published on the Appstore, its UID can’t be changed.
+Same for the sample app, so make sure not to edit the author or app name in the manifest. It will prevent loading the app as unpacked app. 
 :::
 
 ## Screenshots
