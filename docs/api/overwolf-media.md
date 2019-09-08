@@ -338,7 +338,7 @@ Parameter | Type     | Description                                              
 x         | double   | The x offset. Positive value is considered absolute (0 – WIDTH) and negative is considered relative (-1.0 – 0)   |
 y         | double   | The y offset. Positive value is considered absolute (0 – HEIGHT) and negative is considered relative (-1.0 – 0)  |
 width     | double   | The target width                                                                                                 |
-width     | double   | The target width                                                                                                 |
+height     | double   | The target height                                                                                                 |
 
 ## eMediaType enum
 #### Version added: 0.78
