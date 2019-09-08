@@ -132,13 +132,13 @@
 </table>
 <h4><a class="anchor" aria-hidden="true" id="game_state_changed-note"></a><a href="#game_state_changed-note" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><em>game_state_changed</em> note</h4>
 <ul>
-<li><b>game_state</b> – One of ‘playing’, ‘idle’ or ‘spectating’. Idle is when there isn’t a game being played or spectated.</li>
+<li><b>game_state</b> – Can be ‘playing’, ‘idle’ or ‘spectating’. Idle is when there isn’t a game being played or spectated.</li>
 <li><b>match_state</b> – The internal match state. See ‘match_state_changed’ event for more info.</li>
 <li><b>match_id</b> (not available for ‘idle’): The id of the match.</li>
-<li><b>player_steam_id</b> (not available for ‘idle’): The Steam id of the local player.</li>
+<li><b>player_steam_id</b> (not available for ‘idle’): Steam id of the local player.</li>
 </ul>
 <p>Fired when:</p>
-<p>The user starts playing, spectating or stops playing (no game available to play or spectate). Note that simply bringing the menu is not enough to trigger the ‘idle’ event – the active game (played or spectated) must be closed.</p>
+<p>The user starts playing, begins spectating or stops playing. Note that simply bringing up the menu is not enough to trigger the ‘idle’ event – an active game (played or spectated) must be closed.</p>
 <h2><a class="anchor" aria-hidden="true" id="match_state_changed"></a><a href="#match_state_changed" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>match_state_changed</code></h2>
 <h3><a class="anchor" aria-hidden="true" id="events-1"></a><a href="#events-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Events</h3>
 <table>
@@ -162,11 +162,11 @@
 <p>Fired when:</p>
 <p>The internal game match state has changed.</p>
 <ul>
-<li>DOTA_GAMERULES_STATE_WAIT_FOR_PLAYERS_TO_LOAD – Shown with the pre-game “Waiting for loaders” screen.</li>
-<li>DOTA_GAMERULES_STATE_HERO_SELECTION – Shown with the hero selection screen.</li>
+<li>DOTA_GAMERULES_STATE_WAIT_FOR_PLAYERS_TO_LOAD – Shown during the pre-game “Waiting for loaders” screen.</li>
+<li>DOTA_GAMERULES_STATE_HERO_SELECTION – Shown during the hero selection screen.</li>
 <li>DOTA_GAMERULES_STATE_PRE_GAME – Shown when the game begins, before the battle horn is heard.</li>
-<li>DOTA_GAMERULES_STATE_GAME_IN_PROGRESS – Shown with the start game battle horn.</li>
-<li>DOTA_GAMERULES_STATE_POST_GAME – Shown with the in-game post-game screen.</li>
+<li>DOTA_GAMERULES_STATE_GAME_IN_PROGRESS – Shown when the horn sounds to open the match.</li>
+<li>DOTA_GAMERULES_STATE_POST_GAME – Shown during the post-game screen.</li>
 </ul>
 <h2><a class="anchor" aria-hidden="true" id="match_detected"></a><a href="#match_detected" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>match_detected</code></h2>
 <h3><a class="anchor" aria-hidden="true" id="events-2"></a><a href="#events-2" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Events</h3>
@@ -179,20 +179,20 @@
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="match_detected-note"></a><a href="#match_detected-note" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><em>match_detected</em> note</h4>
-<p><b>This feature is not available at the present moment</b></p>
+<p><b>This feature is not available at the moment</b></p>
 <p>Event Data:</p>
 <ul>
 <li><b>gameMode</b> – One of the supported game modes.</li>
-<li><b>playersInfo</b> – An array of 10 player infos with the following fields:
+<li><b>playersInfo</b> – An array of 10 players' information with the following fields:
 <ul>
 <li><b>faction</b> – Radiant/Dire</li>
-<li><b>isLocalPlayer</b> – True if this is the info for the local player, false otherwise.</li>
+<li><b>isLocalPlayer</b> – True if this is the local player's information, false otherwise.</li>
 <li><b>playerIndex</b> – The index of this player (0 – 9, left to right).</li>
-<li><b>steamId</b> – The Steam Id of the player.</li>
+<li><b>steamId</b> – Steam Id of the player.</li>
 </ul></li>
 </ul>
 <p>Fired when:</p>
-<p>As soon as 10 players accepted a match (just after the ‘Accept Match’ prompt).
+<p>As soon as 10 players have accepted a match, right after the 'accept' button is clicked by all.
 Supported game modes:</p>
 <ul>
 <li>AllPick</li>
@@ -247,7 +247,7 @@ Supported game modes:</p>
 <h4><a class="anchor" aria-hidden="true" id="ward_purchase_cooldown_changed-note"></a><a href="#ward_purchase_cooldown_changed-note" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><em>ward_purchase_cooldown_changed</em> note</h4>
 <p>Event Data:</p>
 <ul>
-<li><b>ward_purchase_cooldown</b> – The cooldown, in seconds, until wards are available for purchase again.</li>
+<li><b>ward_purchase_cooldown</b> – The remaining store cooldown in seconds before a ward is available for purchase again.</li>
 </ul>
 <h2><a class="anchor" aria-hidden="true" id="match_ended"></a><a href="#match_ended" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>match_ended</code></h2>
 <h3><a class="anchor" aria-hidden="true" id="events-6"></a><a href="#events-6" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Events</h3>
@@ -256,7 +256,7 @@ Supported game modes:</p>
 <tr><th>Event</th><th>Event Data</th><th>Fired When</th><th>Notes</th><th>Since Version</th></tr>
 </thead>
 <tbody>
-<tr><td>match_ended</td><td>winner – radiant/dire</td><td>When the game ends (an ancient is destroyed).</td><td></td><td>77.3</td></tr>
+<tr><td>match_ended</td><td>winner – radiant/dire</td><td>When an ancient is destroyed and the game ends.</td><td></td><td>77.3</td></tr>
 </tbody>
 </table>
 <h2><a class="anchor" aria-hidden="true" id="kill"></a><a href="#kill" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>kill</code></h2>
@@ -266,14 +266,14 @@ Supported game modes:</p>
 <tr><th>Event</th><th>Event Data</th><th>Fired When</th><th>Notes</th><th>Since Version</th></tr>
 </thead>
 <tbody>
-<tr><td>kill</td><td>Check notes</td><td>Whenever the player kills an enemy champion.</td><td>See <a href="#kill-note">notes</a></td><td>77.3</td></tr>
+<tr><td>kill</td><td>Check notes</td><td>Whenever the player kills an enemy hero.</td><td>See <a href="#kill-note">notes</a></td><td>77.3</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="kill-note"></a><a href="#kill-note" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><em>kill</em> note</h4>
 <p>Event Data:</p>
 <ul>
-<li><b>kills</b> – The total number of kiils the player has.</li>
-<li><b>kill_streak</b> – The current number of kills without dying to an enemy champion (denying oneself does not reset this counter).</li>
+<li><b>kills</b> – The total number of kills the player has.</li>
+<li><b>kill_streak</b> – The current number of hero kills without dying, denying oneself to neutral creeps does not reset this counter.</li>
 <li><b>label</b> – the type of kill (kill/double_kill/triple_kill/ultra_kill/rampage)</li>
 </ul>
 <h2><a class="anchor" aria-hidden="true" id="assist"></a><a href="#assist" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>assist</code></h2>
@@ -311,7 +311,7 @@ Supported game modes:</p>
 <ul>
 <li><b>last_hits</b> – The total amount of last hits (not denies) the player has.</li>
 <li><b>denies</b> – The total amount of denies the player has.</li>
-<li><b>type</b> – last_hist/deny.</li>
+<li><b>type</b> – last_hits/deny.</li>
 </ul>
 <h2><a class="anchor" aria-hidden="true" id="xpm"></a><a href="#xpm" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>xpm</code></h2>
 <h3><a class="anchor" aria-hidden="true" id="events-11"></a><a href="#events-11" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Events</h3>
@@ -320,7 +320,7 @@ Supported game modes:</p>
 <tr><th>Event</th><th>Event Data</th><th>Fired When</th><th>Notes</th><th>Since Version</th></tr>
 </thead>
 <tbody>
-<tr><td>xpm</td><td>xpm – The current XPM.</td><td>Whenever the XPM changes.</td><td></td><td>77.3</td></tr>
+<tr><td>xpm</td><td>xpm – The current Experience Per Minute value.</td><td>Whenever the XPM changes.</td><td></td><td>77.3</td></tr>
 </tbody>
 </table>
 <h2><a class="anchor" aria-hidden="true" id="gpm"></a><a href="#gpm" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>gpm</code></h2>
@@ -330,7 +330,7 @@ Supported game modes:</p>
 <tr><th>Event</th><th>Event Data</th><th>Fired When</th><th>Notes</th><th>Since Version</th></tr>
 </thead>
 <tbody>
-<tr><td>gpm</td><td>gpm – The current GPM.</td><td>Whenever the GPM changes.</td><td></td><td>77.3</td></tr>
+<tr><td>gpm</td><td>gpm – The current Gold Per Minute value.</td><td>Whenever the GPM changes.</td><td></td><td>77.3</td></tr>
 </tbody>
 </table>
 <h2><a class="anchor" aria-hidden="true" id="gold"></a><a href="#gold" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>gold</code></h2>
@@ -340,14 +340,14 @@ Supported game modes:</p>
 <tr><th>Event</th><th>Event Data</th><th>Fired When</th><th>Notes</th><th>Since Version</th></tr>
 </thead>
 <tbody>
-<tr><td>gold</td><td>Check notes</td><td>Whenever the gold changes.</td><td>See <a href="#gold-notes">notes</a></td><td>77.3</td></tr>
+<tr><td>gold</td><td>Check notes</td><td>Whenever gold changes.</td><td>See <a href="#gold-notes">notes</a></td><td>77.3</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="gold-note"></a><a href="#gold-note" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><em>gold</em> note</h4>
 <ul>
-<li><b>gold</b> – The current gold.</li>
-<li><b>gold_reliable</b> – The reliable gold part.</li>
-<li><b>gold_unreliable</b> – The unreliable gold part.</li>
+<li><b>gold</b> – Total current gold.</li>
+<li><b>gold_reliable</b> – Reliable gold part.</li>
+<li><b>gold_unreliable</b> – Unreliable gold part.</li>
 </ul>
 <h2><a class="anchor" aria-hidden="true" id="hero_leveled_up"></a><a href="#hero_leveled_up" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>hero_leveled_up</code></h2>
 <h3><a class="anchor" aria-hidden="true" id="events-14"></a><a href="#events-14" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Events</h3>
@@ -366,7 +366,7 @@ Supported game modes:</p>
 <tr><th>Event</th><th>Event Data</th><th>Fired When</th><th>Notes</th><th>Since Version</th></tr>
 </thead>
 <tbody>
-<tr><td>hero_respawned</td><td>N/A</td><td>Whenever the player respawns. This is also applicable for buying back.</td><td></td><td>77.3</td></tr>
+<tr><td>hero_respawned</td><td>N/A</td><td>Whenever the player respawns. This is also true when buying back.</td><td></td><td>77.3</td></tr>
 </tbody>
 </table>
 <h2><a class="anchor" aria-hidden="true" id="hero_buyback_info_changed"></a><a href="#hero_buyback_info_changed" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>hero_buyback_info_changed</code></h2>
@@ -382,11 +382,11 @@ Supported game modes:</p>
 <h4><a class="anchor" aria-hidden="true" id="hero_buyback_info_changed-note"></a><a href="#hero_buyback_info_changed-note" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><em>hero_buyback_info_changed</em> note</h4>
 <p>Event Data:</p>
 <ul>
-<li><b>buyback_cost</b> – The gold cost to buyback</li>
-<li><b>buyback_cooldown</b> – The cooldown remaining for buyback to become available.</li>
+<li><b>buyback_cost</b> – Gold cost to buyback</li>
+<li><b>buyback_cooldown</b> – Cooldown remaining for buyback to become available</li>
 </ul>
 <p>Fired when:</p>
-<p>Every 4 seconds and every level up, since the buyback cost is affected by game time and player level. It will also be called every second when buyback is on cooldown.</p>
+<p>Every 4 seconds and every level-up, since buyback cost is affected by game time and player level. It will also be called every second when buyback is on cooldown.</p>
 <h2><a class="anchor" aria-hidden="true" id="hero_boughtback"></a><a href="#hero_boughtback" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>hero_boughtback</code></h2>
 <h3><a class="anchor" aria-hidden="true" id="events-17"></a><a href="#events-17" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Events</h3>
 <table>
@@ -410,10 +410,10 @@ Supported game modes:</p>
 <h4><a class="anchor" aria-hidden="true" id="hero_health_mana_info-note"></a><a href="#hero_health_mana_info-note" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><em>hero_health_mana_info</em> note</h4>
 <p>Event Data:</p>
 <ul>
-<li><b>health</b> – The current health.</li>
-<li><b>max_health</b> – The current maximal health.</li>
-<li><b>mana</b> – The current mana.</li>
-<li><b>max_mana</b> – The current maximal mana.</li>
+<li><b>health</b> – Current health.</li>
+<li><b>max_health</b> – Current maximum health.</li>
+<li><b>mana</b> – Current mana.</li>
+<li><b>max_mana</b> – Current maximum mana.</li>
 </ul>
 <h2><a class="anchor" aria-hidden="true" id="hero_status_effect_changed"></a><a href="#hero_status_effect_changed" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>hero_status_effect_changed</code></h2>
 <h3><a class="anchor" aria-hidden="true" id="events-19"></a><a href="#events-19" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Events</h3>
@@ -465,7 +465,7 @@ Supported game modes:</p>
 <li>can_cast – True unless  the ability is not skilled, there’s not enough mana to cast it, the player is silenced, or is on cooldown.</li>
 <li>passive – True if the ability is passive.</li>
 <li>ability_active – Unknown, TBD.</li>
-<li>cooldown – The remaining cooldown until the ability is ready to cast.</li>
+<li>cooldown – Remaining cooldown until the ability is ready to cast.</li>
 <li>ultimate – True if the ability is an ultimate ability.</li>
 </ul>
 <h2><a class="anchor" aria-hidden="true" id="hero_ability_used"></a><a href="#hero_ability_used" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>hero_ability_used</code></h2>
@@ -513,9 +513,9 @@ Supported game modes:</p>
 <ul>
 <li><b>slot</b> – The index of the item slot (0 – 5, top row from the left to bottom row from the right)</li>
 <li><b>location</b> – hero/stash</li>
-<li><b>name</b> – The name of the item.</li>
-<li><b>passive</b> – True if the item is passive.</li>
-<li><b>can_cast</b> – True unless there’s not enough mana to use the item, the player is muted, or when the item is on cooldown. (only when * passive = false)</li>
+<li><b>name</b> – The name of the item</li>
+<li><b>passive</b> – True if the item is passive</li>
+<li><b>can_cast</b> – True unless there’s not enough mana to use the item, the player is muted, or when the item is on cooldown. (only when passive = false)</li>
 <li><b>cooldown</b> – The remaining cooldown until the item is ready to be used. (only when passive = false)</li>
 <li><b>charges</b> – The remaining charges of the item (only when passive = false and where item can be charged)</li>
 </ul>
@@ -537,8 +537,8 @@ Supported game modes:</p>
 <li><b>name</b> – The name of the item.</li>
 <li><b>passive</b> – True if the item is passive.</li>
 <li><b>can_cast</b> – True unless there’s not enough mana to use the item, the player is muted, or when the item is on cooldown. (only when passive = false)</li>
-<li><b>cooldown</b> – The remaining cooldown until the item is ready to be used. (only when passive = false)</li>
-<li><b>charges</b> – The remaining charges of the item (only when passive = false and where item can be charged)</li>
+<li><b>cooldown</b> – Remaining cooldown until the item is ready to be used again (only when passive = false)</li>
+<li><b>charges</b> – Remaining charges of the item (only when passive = false and where item can be charged)</li>
 </ul>
 <p>Fired when:</p>
 <p>Whenever the item name in some hero/stash slot changes. This would mean that swapping items will trigger 2 events, one for each item.</p>
@@ -549,7 +549,7 @@ Supported game modes:</p>
 <tr><th>Event</th><th>Event Data</th><th>Fired When</th><th>Notes</th><th>Since Version</th></tr>
 </thead>
 <tbody>
-<tr><td>hero_item_used</td><td>Same as ‘hero_item_changed’</td><td>Whenever an item is used – Essentially this means when the item goes on cooldown.</td><td></td><td>77.3</td></tr>
+<tr><td>hero_item_used</td><td>Same as ‘hero_item_changed’</td><td>Whenever an item is used – Essentially this is when the item goes on cooldown.</td><td></td><td>77.3</td></tr>
 </tbody>
 </table>
 <h2><a class="anchor" aria-hidden="true" id="hero_item_consumed"></a><a href="#hero_item_consumed" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>hero_item_consumed</code></h2>
@@ -559,7 +559,7 @@ Supported game modes:</p>
 <tr><th>Event</th><th>Event Data</th><th>Fired When</th><th>Notes</th><th>Since Version</th></tr>
 </thead>
 <tbody>
-<tr><td>hero_item_consumed</td><td>Same as ‘hero_item_changed’</td><td>Whenever an item’s charges decrease.</td><td></td><td>77.3</td></tr>
+<tr><td>hero_item_consumed</td><td>Same as ‘hero_item_changed’</td><td>Whenever an item’s charges decreases.</td><td></td><td>77.3</td></tr>
 </tbody>
 </table>
 <h2><a class="anchor" aria-hidden="true" id="hero_item_charged"></a><a href="#hero_item_charged" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>hero_item_charged</code></h2>
@@ -569,7 +569,7 @@ Supported game modes:</p>
 <tr><th>Event</th><th>Event Data</th><th>Fired When</th><th>Notes</th><th>Since Version</th></tr>
 </thead>
 <tbody>
-<tr><td>hero_item_charged</td><td>Same as ‘hero_item_changed’</td><td>Whenever an item’s charges increase.</td><td></td><td>77.3</td></tr>
+<tr><td>hero_item_charged</td><td>Same as ‘hero_item_changed’</td><td>Whenever an item’s charges increases.</td><td></td><td>77.3</td></tr>
 </tbody>
 </table>
 <h2><a class="anchor" aria-hidden="true" id="match_info"></a><a href="#match_info" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>match_info</code></h2>
@@ -712,7 +712,7 @@ Supported game modes:</p>
 <p>Data Example:</p>
 <pre><code class="hljs css language-json">{<span class="hljs-attr">"feature"</span>:<span class="hljs-string">"error"</span>,<span class="hljs-attr">"category"</span>:<span class="hljs-string">"error"</span>,<span class="hljs-attr">"key"</span>:<span class="hljs-string">"plugin_error"</span>,<span class="hljs-attr">"value"</span>:<span class="hljs-string">"failed_initializing_monitor"</span>}
 </code></pre>
-</span></div></article></div><div class="docLastUpdate"><em>Last updated on 2019-8-26 by eransharv</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/api/overwolf-games-events-csgo"><span class="arrow-prev">← </span><span>CS:GO Events</span></a><a class="docs-next button" href="/docs/api/overwolf-games-events-fortnite"><span>Fortnite Events</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#sample-apps">Sample Apps</a></li><li><a href="#available-features">Available Features</a></li><li><a href="#game-events-status">Game events status</a></li><li><a href="#game_state_changed"><code>game_state_changed</code></a><ul class="toc-headings"><li><a href="#events">Events</a></li></ul></li><li><a href="#match_state_changed"><code>match_state_changed</code></a><ul class="toc-headings"><li><a href="#events-1">Events</a></li></ul></li><li><a href="#match_detected"><code>match_detected</code></a><ul class="toc-headings"><li><a href="#events-2">Events</a></li></ul></li><li><a href="#daytime_changed"><code>daytime_changed</code></a><ul class="toc-headings"><li><a href="#events-3">Events</a></li></ul></li><li><a href="#clock_time_changed"><code>clock_time_changed</code></a><ul class="toc-headings"><li><a href="#events-4">Events</a></li></ul></li><li><a href="#ward_purchase_cooldown_changed"><code>ward_purchase_cooldown_changed</code></a><ul class="toc-headings"><li><a href="#events-5">Events</a></li></ul></li><li><a href="#match_ended"><code>match_ended</code></a><ul class="toc-headings"><li><a href="#events-6">Events</a></li></ul></li><li><a href="#kill"><code>kill</code></a><ul class="toc-headings"><li><a href="#events-7">Events</a></li></ul></li><li><a href="#assist"><code>assist</code></a><ul class="toc-headings"><li><a href="#events-8">Events</a></li></ul></li><li><a href="#death"><code>death</code></a><ul class="toc-headings"><li><a href="#events-9">Events</a></li></ul></li><li><a href="#cs"><code>cs</code></a><ul class="toc-headings"><li><a href="#events-10">Events</a></li></ul></li><li><a href="#xpm"><code>xpm</code></a><ul class="toc-headings"><li><a href="#events-11">Events</a></li></ul></li><li><a href="#gpm"><code>gpm</code></a><ul class="toc-headings"><li><a href="#events-12">Events</a></li></ul></li><li><a href="#gold"><code>gold</code></a><ul class="toc-headings"><li><a href="#events-13">Events</a></li></ul></li><li><a href="#hero_leveled_up"><code>hero_leveled_up</code></a><ul class="toc-headings"><li><a href="#events-14">Events</a></li></ul></li><li><a href="#hero_respawned"><code>hero_respawned</code></a><ul class="toc-headings"><li><a href="#events-15">Events</a></li></ul></li><li><a href="#hero_buyback_info_changed"><code>hero_buyback_info_changed</code></a><ul class="toc-headings"><li><a href="#events-16">Events</a></li></ul></li><li><a href="#hero_boughtback"><code>hero_boughtback</code></a><ul class="toc-headings"><li><a href="#events-17">Events</a></li></ul></li><li><a href="#hero_health_mana_info"><code>hero_health_mana_info</code></a><ul class="toc-headings"><li><a href="#events-18">Events</a></li></ul></li><li><a href="#hero_status_effect_changed"><code>hero_status_effect_changed</code></a><ul class="toc-headings"><li><a href="#events-19">Events</a></li></ul></li><li><a href="#hero_attributes_skilled"><code>hero_attributes_skilled</code></a><ul class="toc-headings"><li><a href="#events-20">Events</a></li></ul></li><li><a href="#hero_ability_skilled"><code>hero_ability_skilled</code></a><ul class="toc-headings"><li><a href="#events-21">Events</a></li></ul></li><li><a href="#hero_ability_used"><code>hero_ability_used</code></a><ul class="toc-headings"><li><a href="#events-22">Events</a></li></ul></li><li><a href="#hero_ability_cooldown_changed"><code>hero_ability_cooldown_changed</code></a><ul class="toc-headings"><li><a href="#events-23">Events</a></li></ul></li><li><a href="#hero_ability_changed"><code>hero_ability_changed</code></a><ul class="toc-headings"><li><a href="#events-24">Events</a></li></ul></li><li><a href="#hero_item_cooldown_changed"><code>hero_item_cooldown_changed</code></a><ul class="toc-headings"><li><a href="#events-25">Events</a></li></ul></li><li><a href="#hero_item_changed"><code>hero_item_changed</code></a><ul class="toc-headings"><li><a href="#events-26">Events</a></li></ul></li><li><a href="#hero_item_used"><code>hero_item_used</code></a><ul class="toc-headings"><li><a href="#events-27">Events</a></li></ul></li><li><a href="#hero_item_consumed"><code>hero_item_consumed</code></a><ul class="toc-headings"><li><a href="#events-28">Events</a></li></ul></li><li><a href="#hero_item_charged"><code>hero_item_charged</code></a><ul class="toc-headings"><li><a href="#events-29">Events</a></li></ul></li><li><a href="#match_info"><code>match_info</code></a><ul class="toc-headings"><li><a href="#info-updates">Info Updates</a></li></ul></li><li><a href="#roster"><code>roster</code></a><ul class="toc-headings"><li><a href="#events-30">Events</a></li></ul></li><li><a href="#party"><code>party</code></a><ul class="toc-headings"><li><a href="#info-updates-1">Info Updates</a></li></ul></li><li><a href="#error"><code>error</code></a><ul class="toc-headings"><li><a href="#info-updates-2">Info Updates</a></li></ul></li></ul></nav></div><footer class="site-footer"><div class="container"><ul><li>Legal</li><li><a href="/docs/topics/legal-overview">Terms overview</a></li><li><a href="/docs/topics/legal-developers-terms">Developer&#x27;s terms</a></li><li><a href="/docs/topics/legal-app-terms">App terms</a></li><li><a href="http://www.overwolf.com/legal/" target="_blank">Overwolf terms</a></li><li><a href="http://www.overwolf.com/legal/#Privacy-policy" target="_blank">Overwolf Privacy policy</a></li></ul><ul><li>Support</li><li><a href=" https://discuss.developers.overwolf.com/" target="_blank">Questions and Answers</a></li><li><a href="https://discordapp.com/invite/cjjrZDp" target="_blank">Discord</a></li><li><a href="/docs/support/contact-us#join-our-slack">Slack</a></li><li><a href="https://www.facebook.com/OverwolfDevs" target="_blank">Facebook</a></li><li><a href="https://twitter.com/OverwolfDevs" target="_blank">Twitter</a></li></ul><ul><li>Documentation</li><li><a href="/docs/api/changelog">Changelog</a></li><li><a href="/docs/api/overwolf-api-overview">API</a></li><li><a href="/docs/start/app-creation-process">App Creation Process</a></li><li><a href="/docs/topics/best-practices-overview">Best Practices</a></li><li><a href="/docs/status/all">Game Events status</a></li></ul><ul><li>Information</li><li><a href="http://www.overwolf.com/careers/">Careers</a></li><li><a href="https://play.overwolf.com/fund/" target="_blank">Fund</a></li><li><a href="https://medium.com/overwolf-developers" target="_blank">Developers Blog</a></li><li><a href="https://www.overwolf.com/appstore" target="_blank">Overwolf Appstore</a></li></ul></div></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+</span></div></article></div><div class="docLastUpdate"><em>Last updated on 2019-9-8 by Shoomanjin</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/api/overwolf-games-events-csgo"><span class="arrow-prev">← </span><span>CS:GO Events</span></a><a class="docs-next button" href="/docs/api/overwolf-games-events-fortnite"><span>Fortnite Events</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#sample-apps">Sample Apps</a></li><li><a href="#available-features">Available Features</a></li><li><a href="#game-events-status">Game events status</a></li><li><a href="#game_state_changed"><code>game_state_changed</code></a><ul class="toc-headings"><li><a href="#events">Events</a></li></ul></li><li><a href="#match_state_changed"><code>match_state_changed</code></a><ul class="toc-headings"><li><a href="#events-1">Events</a></li></ul></li><li><a href="#match_detected"><code>match_detected</code></a><ul class="toc-headings"><li><a href="#events-2">Events</a></li></ul></li><li><a href="#daytime_changed"><code>daytime_changed</code></a><ul class="toc-headings"><li><a href="#events-3">Events</a></li></ul></li><li><a href="#clock_time_changed"><code>clock_time_changed</code></a><ul class="toc-headings"><li><a href="#events-4">Events</a></li></ul></li><li><a href="#ward_purchase_cooldown_changed"><code>ward_purchase_cooldown_changed</code></a><ul class="toc-headings"><li><a href="#events-5">Events</a></li></ul></li><li><a href="#match_ended"><code>match_ended</code></a><ul class="toc-headings"><li><a href="#events-6">Events</a></li></ul></li><li><a href="#kill"><code>kill</code></a><ul class="toc-headings"><li><a href="#events-7">Events</a></li></ul></li><li><a href="#assist"><code>assist</code></a><ul class="toc-headings"><li><a href="#events-8">Events</a></li></ul></li><li><a href="#death"><code>death</code></a><ul class="toc-headings"><li><a href="#events-9">Events</a></li></ul></li><li><a href="#cs"><code>cs</code></a><ul class="toc-headings"><li><a href="#events-10">Events</a></li></ul></li><li><a href="#xpm"><code>xpm</code></a><ul class="toc-headings"><li><a href="#events-11">Events</a></li></ul></li><li><a href="#gpm"><code>gpm</code></a><ul class="toc-headings"><li><a href="#events-12">Events</a></li></ul></li><li><a href="#gold"><code>gold</code></a><ul class="toc-headings"><li><a href="#events-13">Events</a></li></ul></li><li><a href="#hero_leveled_up"><code>hero_leveled_up</code></a><ul class="toc-headings"><li><a href="#events-14">Events</a></li></ul></li><li><a href="#hero_respawned"><code>hero_respawned</code></a><ul class="toc-headings"><li><a href="#events-15">Events</a></li></ul></li><li><a href="#hero_buyback_info_changed"><code>hero_buyback_info_changed</code></a><ul class="toc-headings"><li><a href="#events-16">Events</a></li></ul></li><li><a href="#hero_boughtback"><code>hero_boughtback</code></a><ul class="toc-headings"><li><a href="#events-17">Events</a></li></ul></li><li><a href="#hero_health_mana_info"><code>hero_health_mana_info</code></a><ul class="toc-headings"><li><a href="#events-18">Events</a></li></ul></li><li><a href="#hero_status_effect_changed"><code>hero_status_effect_changed</code></a><ul class="toc-headings"><li><a href="#events-19">Events</a></li></ul></li><li><a href="#hero_attributes_skilled"><code>hero_attributes_skilled</code></a><ul class="toc-headings"><li><a href="#events-20">Events</a></li></ul></li><li><a href="#hero_ability_skilled"><code>hero_ability_skilled</code></a><ul class="toc-headings"><li><a href="#events-21">Events</a></li></ul></li><li><a href="#hero_ability_used"><code>hero_ability_used</code></a><ul class="toc-headings"><li><a href="#events-22">Events</a></li></ul></li><li><a href="#hero_ability_cooldown_changed"><code>hero_ability_cooldown_changed</code></a><ul class="toc-headings"><li><a href="#events-23">Events</a></li></ul></li><li><a href="#hero_ability_changed"><code>hero_ability_changed</code></a><ul class="toc-headings"><li><a href="#events-24">Events</a></li></ul></li><li><a href="#hero_item_cooldown_changed"><code>hero_item_cooldown_changed</code></a><ul class="toc-headings"><li><a href="#events-25">Events</a></li></ul></li><li><a href="#hero_item_changed"><code>hero_item_changed</code></a><ul class="toc-headings"><li><a href="#events-26">Events</a></li></ul></li><li><a href="#hero_item_used"><code>hero_item_used</code></a><ul class="toc-headings"><li><a href="#events-27">Events</a></li></ul></li><li><a href="#hero_item_consumed"><code>hero_item_consumed</code></a><ul class="toc-headings"><li><a href="#events-28">Events</a></li></ul></li><li><a href="#hero_item_charged"><code>hero_item_charged</code></a><ul class="toc-headings"><li><a href="#events-29">Events</a></li></ul></li><li><a href="#match_info"><code>match_info</code></a><ul class="toc-headings"><li><a href="#info-updates">Info Updates</a></li></ul></li><li><a href="#roster"><code>roster</code></a><ul class="toc-headings"><li><a href="#events-30">Events</a></li></ul></li><li><a href="#party"><code>party</code></a><ul class="toc-headings"><li><a href="#info-updates-1">Info Updates</a></li></ul></li><li><a href="#error"><code>error</code></a><ul class="toc-headings"><li><a href="#info-updates-2">Info Updates</a></li></ul></li></ul></nav></div><footer class="site-footer"><div class="container"><ul><li>Legal</li><li><a href="/docs/topics/legal-overview">Terms overview</a></li><li><a href="/docs/topics/legal-developers-terms">Developer&#x27;s terms</a></li><li><a href="/docs/topics/legal-app-terms">App terms</a></li><li><a href="http://www.overwolf.com/legal/" target="_blank">Overwolf terms</a></li><li><a href="http://www.overwolf.com/legal/#Privacy-policy" target="_blank">Overwolf Privacy policy</a></li></ul><ul><li>Support</li><li><a href=" https://discuss.developers.overwolf.com/" target="_blank">Questions and Answers</a></li><li><a href="https://discordapp.com/invite/cjjrZDp" target="_blank">Discord</a></li><li><a href="/docs/support/contact-us#join-our-slack">Slack</a></li><li><a href="https://www.facebook.com/OverwolfDevs" target="_blank">Facebook</a></li><li><a href="https://twitter.com/OverwolfDevs" target="_blank">Twitter</a></li></ul><ul><li>Documentation</li><li><a href="/docs/api/changelog">Changelog</a></li><li><a href="/docs/api/overwolf-api-overview">API</a></li><li><a href="/docs/start/app-creation-process">App Creation Process</a></li><li><a href="/docs/topics/best-practices-overview">Best Practices</a></li><li><a href="/docs/status/all">Game Events status</a></li></ul><ul><li>Information</li><li><a href="http://www.overwolf.com/careers/">Careers</a></li><li><a href="https://play.overwolf.com/fund/" target="_blank">Fund</a></li><li><a href="https://medium.com/overwolf-developers" target="_blank">Developers Blog</a></li><li><a href="https://www.overwolf.com/appstore" target="_blank">Overwolf Appstore</a></li></ul></div></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
                 document.addEventListener('keyup', function(e) {
                   if (e.target !== document.body) {
                     return;
