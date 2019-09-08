@@ -97,7 +97,7 @@ The  matchEnd event fired when your player is killed, and when you exit to the l
 key          | Category    | Values                            | Notes                 | Since Version |
 ------------ | ------------| --------------------------------- | --------------------- | ------------- |
 me       | match_info   | The player’s rank at the end of the match |                       |   0.90        |
-total_teams       | match_info   | The total number of players |                       |   0.90        |
+total       | match_info   | The total number of players |                       |   0.90        |
 
 ## `counters`
 
