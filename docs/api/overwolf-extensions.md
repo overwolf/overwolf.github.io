@@ -24,7 +24,6 @@ You can use the following helpful URL’s to retrieve an extension file content 
 ## Methods Reference
 
 * [overwolf.extensions.launch()](#launchuid-parameter)
-* [overwolf.extensions.getService()](#getserviceid-callback)
 * [overwolf.extensions.setInfo()](#setinfoinfo)
 * [overwolf.extensions.getInfo()](#getinfoid-callback)
 * [overwolf.extensions.registerInfo()](#registerinfoid-eventscallback-callback)
@@ -52,10 +51,8 @@ Parameter | Type                  | Description                                 
 uid       | string                | The extension unique id                                                               |
 parameter | Object (optional)     | A parameter to pass to the extension. The extension may or may not use this parameter |
 
-## getService(id, callback)
-#### Version added: 0.78
 
-> Retrieve a service object (which will usually provide external APIs) by an id.
+Retrieve a service object (which will usually provide external APIs) by an id.
 
 Parameter | Type                  | Description                                                                              |
 --------- | ----------------------| ---------------------------------------------------------------------------------------- |
