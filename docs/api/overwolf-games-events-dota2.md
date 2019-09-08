@@ -66,14 +66,14 @@ game_state_changed |<ul><li>game_state</li><li>match_state</li><li>match_id</li>
 
 #### *game_state_changed* note
 
-* <b>game_state</b> – One of ‘playing’, ‘idle’ or ‘spectating’. Idle is when there isn’t a game being played or spectated. 
+* <b>game_state</b> – Can be ‘playing’, ‘idle’ or ‘spectating’. Idle is when there isn’t a game being played or spectated. 
 * <b>match_state</b> – The internal match state. See ‘match_state_changed’ event for more info. 
 * <b>match_id</b> (not available for ‘idle’): The id of the match. 
-* <b>player_steam_id</b> (not available for ‘idle’): The Steam id of the local player.
+* <b>player_steam_id</b> (not available for ‘idle’): Steam id of the local player.
 
 Fired when:
 
-The user starts playing, spectating or stops playing (no game available to play or spectate). Note that simply bringing the menu is not enough to trigger the ‘idle’ event – the active game (played or spectated) must be closed.
+The user starts playing, begins spectating or stops playing. Note that simply bringing up the menu is not enough to trigger the ‘idle’ event – an active game (played or spectated) must be closed.
 
 ## `match_state_changed`
 
@@ -97,11 +97,11 @@ match_state – One of the following:
 Fired when:
 
 The internal game match state has changed.
-* DOTA_GAMERULES_STATE_WAIT_FOR_PLAYERS_TO_LOAD – Shown with the pre-game “Waiting for loaders” screen.
-* DOTA_GAMERULES_STATE_HERO_SELECTION – Shown with the hero selection screen.
+* DOTA_GAMERULES_STATE_WAIT_FOR_PLAYERS_TO_LOAD – Shown during the pre-game “Waiting for loaders” screen.
+* DOTA_GAMERULES_STATE_HERO_SELECTION – Shown during the hero selection screen.
 * DOTA_GAMERULES_STATE_PRE_GAME – Shown when the game begins, before the battle horn is heard.
-* DOTA_GAMERULES_STATE_GAME_IN_PROGRESS – Shown with the start game battle horn.
-* DOTA_GAMERULES_STATE_POST_GAME – Shown with the in-game post-game screen.
+* DOTA_GAMERULES_STATE_GAME_IN_PROGRESS – Shown when the horn sounds to open the match.
+* DOTA_GAMERULES_STATE_POST_GAME – Shown during the post-game screen.
 
 ## `match_detected`
 
@@ -113,20 +113,20 @@ match_detected  | Check notes |          |See [notes](#match_detected-note)|    
 
 #### *match_detected* note
 
-<b>This feature is not available at the present moment</b>
+<b>This feature is not available at the moment</b>
 
 Event Data:
 
 * <b>gameMode</b> – One of the supported game modes. 
-* <b>playersInfo</b> – An array of 10 player infos with the following fields: 
+* <b>playersInfo</b> – An array of 10 players' information with the following fields: 
   * <b>faction</b> – Radiant/Dire
-  * <b>isLocalPlayer</b> – True if this is the info for the local player, false otherwise.
+  * <b>isLocalPlayer</b> – True if this is the local player's information, false otherwise.
   * <b>playerIndex</b> – The index of this player (0 – 9, left to right).
-  * <b>steamId</b> – The Steam Id of the player.
+  * <b>steamId</b> – Steam Id of the player.
 
 Fired when:
 
-As soon as 10 players accepted a match (just after the ‘Accept Match’ prompt). 
+As soon as 10 players have accepted a match, right after the 'accept' button is clicked by all. 
 Supported game modes:
 * AllPick
 * AllPickRanked
@@ -178,7 +178,7 @@ ward_purchase_cooldown_changed   | Check notes |Fired every second where wards a
 
 Event Data:
 
-* <b>ward_purchase_cooldown</b> – The cooldown, in seconds, until wards are available for purchase again. 
+* <b>ward_purchase_cooldown</b> – The remaining store cooldown in seconds before a ward is available for purchase again. 
 
 ## `match_ended`
 
@@ -186,7 +186,7 @@ Event Data:
 
 Event       | Event Data   | Fired When    | Notes              | Since Version |
 ------------| -------------| --------------| ------------------ | --------------|
-match_ended   | winner – radiant/dire  |When the game ends (an ancient is destroyed).  |       |     77.3      |
+match_ended   | winner – radiant/dire  |When an ancient is destroyed and the game ends.  |       |     77.3      |
 
 ## `kill`
 
@@ -194,14 +194,14 @@ match_ended   | winner – radiant/dire  |When the game ends (an ancient is dest
 
 Event       | Event Data   | Fired When    | Notes              | Since Version |
 ------------| -------------| --------------| ------------------ | --------------|
-kill    | Check notes |Whenever the player kills an enemy champion. 	|See [notes](#kill-note)|     77.3      |
+kill    | Check notes |Whenever the player kills an enemy hero. 	|See [notes](#kill-note)|     77.3      |
 
 #### *kill* note
 
 Event Data:
 
-* <b>kills</b> – The total number of kiils the player has.
-* <b>kill_streak</b> – The current number of kills without dying to an enemy champion (denying oneself does not reset this counter).
+* <b>kills</b> – The total number of kills the player has.
+* <b>kill_streak</b> – The current number of hero kills without dying, denying oneself to neutral creeps does not reset this counter.
 * <b>label</b> – the type of kill (kill/double_kill/triple_kill/ultra_kill/rampage)
 
 ## `assist`
@@ -234,7 +234,7 @@ Event Data:
 
 * <b>last_hits</b> – The total amount of last hits (not denies) the player has.
 * <b>denies</b> – The total amount of denies the player has.
-* <b>type</b> – last_hist/deny.
+* <b>type</b> – last_hits/deny.
 
 ## `xpm `
 
@@ -242,7 +242,7 @@ Event Data:
 
 Event       | Event Data   | Fired When    | Notes              | Since Version |
 ------------| -------------| --------------| ------------------ | --------------|
-xpm |xpm – The current XPM. |Whenever the XPM changes. |          |     77.3      |
+xpm |xpm – The current Experience Per Minute value. |Whenever the XPM changes. |          |     77.3      |
 
 ## `gpm`
 
@@ -250,7 +250,7 @@ xpm |xpm – The current XPM. |Whenever the XPM changes. |          |     77.3  
 
 Event       | Event Data   | Fired When    | Notes              | Since Version |
 ------------| -------------| --------------| ------------------ | --------------|
-gpm | gpm – The current GPM. |Whenever the GPM changes. |        |     77.3      |
+gpm | gpm – The current Gold Per Minute value. |Whenever the GPM changes. |        |     77.3      |
 
 ## `gold`
 
@@ -258,13 +258,13 @@ gpm | gpm – The current GPM. |Whenever the GPM changes. |        |     77.3   
 
 Event       | Event Data   | Fired When    | Notes              | Since Version |
 ------------| -------------| --------------| ------------------ | --------------|
-gold | Check notes |Whenever the gold changes. 	|See [notes](#gold-notes)|     77.3      |
+gold | Check notes |Whenever gold changes. 	|See [notes](#gold-notes)|     77.3      |
 
 #### *gold* note
 
-* <b>gold</b> – The current gold.
-* <b>gold_reliable</b> – The reliable gold part.
-* <b>gold_unreliable</b> – The unreliable gold part.
+* <b>gold</b> – Total current gold.
+* <b>gold_reliable</b> – Reliable gold part.
+* <b>gold_unreliable</b> – Unreliable gold part.
 
 ## `hero_leveled_up `
 
@@ -280,7 +280,7 @@ hero_leveled_up | hero_level – The current hero level. |Whenever the player le
 
 Event       | Event Data   | Fired When    | Notes              | Since Version |
 ------------| -------------| --------------| ------------------ | --------------|
-hero_respawned | N/A	 |Whenever the player respawns. This is also applicable for buying back. |          |     77.3      |
+hero_respawned | N/A	 |Whenever the player respawns. This is also true when buying back. |          |     77.3      |
 
 ## `hero_buyback_info_changed`
 
@@ -294,12 +294,12 @@ hero_buyback_info_changed | Check notes |        |See [notes](#hero_buyback_info
 
 Event Data:
 
-* <b>buyback_cost</b> – The gold cost to buyback
-* <b>buyback_cooldown</b> – The cooldown remaining for buyback to become available.
+* <b>buyback_cost</b> – Gold cost to buyback
+* <b>buyback_cooldown</b> – Cooldown remaining for buyback to become available
 
 Fired when:
 
-Every 4 seconds and every level up, since the buyback cost is affected by game time and player level. It will also be called every second when buyback is on cooldown.
+Every 4 seconds and every level-up, since buyback cost is affected by game time and player level. It will also be called every second when buyback is on cooldown.
 
 ## `hero_boughtback`
 
@@ -321,10 +321,10 @@ hero_health_mana_info | Check notes |Whenever either of the players mana, health
 
 Event Data:
 
-* <b>health</b> – The current health.
-* <b>max_health</b> – The current maximal health.
-* <b>mana</b> – The current mana.
-* <b>max_mana</b> – The current maximal mana.
+* <b>health</b> – Current health.
+* <b>max_health</b> – Current maximum health.
+* <b>mana</b> – Current mana.
+* <b>max_mana</b> – Current maximum mana.
 
 ## `hero_status_effect_changed`
 
@@ -371,7 +371,7 @@ hero_ability_skilled | Check notes |Whenever the player skills up an ability.|Se
 * can_cast – True unless  the ability is not skilled, there’s not enough mana to cast it, the player is silenced, or is on cooldown.
 * passive – True if the ability is passive.
 * ability_active – Unknown, TBD.
-* cooldown – The remaining cooldown until the ability is ready to cast.
+* cooldown – Remaining cooldown until the ability is ready to cast.
 * ultimate – True if the ability is an ultimate ability.
 
 ## `hero_ability_used`
@@ -412,9 +412,9 @@ Event Data:
 
 * <b>slot</b> – The index of the item slot (0 – 5, top row from the left to bottom row from the right)
 * <b>location</b> – hero/stash
-* <b>name</b> – The name of the item.
-* <b>passive</b> – True if the item is passive.
-* <b>can_cast</b> – True unless there’s not enough mana to use the item, the player is muted, or when the item is on cooldown. (only when * passive = false)
+* <b>name</b> – The name of the item
+* <b>passive</b> – True if the item is passive
+* <b>can_cast</b> – True unless there’s not enough mana to use the item, the player is muted, or when the item is on cooldown. (only when passive = false)
 * <b>cooldown</b> – The remaining cooldown until the item is ready to be used. (only when passive = false)
 * <b>charges</b> – The remaining charges of the item (only when passive = false and where item can be charged)
 
@@ -435,8 +435,8 @@ Event Data:
 * <b>name</b> – The name of the item.
 * <b>passive</b> – True if the item is passive.
 * <b>can_cast</b> – True unless there’s not enough mana to use the item, the player is muted, or when the item is on cooldown. (only when passive = false)
-* <b>cooldown</b> – The remaining cooldown until the item is ready to be used. (only when passive = false)
-* <b>charges</b> – The remaining charges of the item (only when passive = false and where item can be charged)
+* <b>cooldown</b> – Remaining cooldown until the item is ready to be used again (only when passive = false)
+* <b>charges</b> – Remaining charges of the item (only when passive = false and where item can be charged)
 
 Fired when:
 
@@ -448,7 +448,7 @@ Whenever the item name in some hero/stash slot changes. This would mean that swa
 
 Event       | Event Data   | Fired When    | Notes              | Since Version |
 ------------| -------------| --------------| ------------------ | --------------|
-hero_item_used |Same as ‘hero_item_changed’	|Whenever an item is used – Essentially this means when the item goes on cooldown. |       |     77.3      |
+hero_item_used |Same as ‘hero_item_changed’	|Whenever an item is used – Essentially this is when the item goes on cooldown. |       |     77.3      |
 
 ## `hero_item_consumed`
 
@@ -456,7 +456,7 @@ hero_item_used |Same as ‘hero_item_changed’	|Whenever an item is used – Es
 
 Event       | Event Data   | Fired When    | Notes              | Since Version |
 ------------| -------------| --------------| ------------------ | --------------|
-hero_item_consumed |Same as ‘hero_item_changed’	|Whenever an item’s charges decrease. |       |     77.3      |
+hero_item_consumed |Same as ‘hero_item_changed’	|Whenever an item’s charges decreases. |       |     77.3      |
 
 ## `hero_item_charged`
 
@@ -464,7 +464,7 @@ hero_item_consumed |Same as ‘hero_item_changed’	|Whenever an item’s charge
 
 Event       | Event Data   | Fired When    | Notes              | Since Version |
 ------------| -------------| --------------| ------------------ | --------------|
-hero_item_charged |Same as ‘hero_item_changed’	|Whenever an item’s charges increase.|       |     77.3      |
+hero_item_charged |Same as ‘hero_item_changed’	|Whenever an item’s charges increases.|       |     77.3      |
 
 ## `match_info`
 

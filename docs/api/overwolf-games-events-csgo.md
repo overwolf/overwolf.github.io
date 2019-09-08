@@ -59,7 +59,7 @@ kill        | totalKills – total kills for player in match |Player has killed 
 
 Event       | Event Data   | Fired When    | Notes              | Since Version |
 ------------| -------------| --------------| ------------------ | --------------|
-death        | totalDeaths – total deaths of player in match |Player has died| | 0.70  |
+death        | totalDeaths – total deaths of the player in a match |Player has died| | 0.70  |
 
 ## `assist`
 
@@ -75,7 +75,7 @@ assist        | 	totalAssists – total assists for user it match |Player has as
 
 Event       | Event Data   | Fired When    | Notes              | Since Version |
 ------------| -------------| --------------| ------------------ | --------------|
-headshot    | headshotsInRound – total headshots for user in <b>current round</b> |Player has gained a killed with a headshot| Fired alongside kill event	 | 0.70  |
+headshot    | headshotsInRound – total headshots for user in the <b>current round</b> |Player has gained a killed with a headshot| Fired alongside kill event	 | 0.70  |
 
 ## `round_start`
 
@@ -99,7 +99,7 @@ match_start |     None     |A new match has started|            |      0.70     
 
 Event       | Event Data   | Fired When    | Notes              | Since Version |
 ------------| -------------| --------------| ------------------ | --------------|
-match_end   |     None     |Match was ended|                    |      0.70     |
+match_end   |     None     |Match has ended|                    |      0.70     |
 
 ## `team_round_win`
 
@@ -169,7 +169,7 @@ weapon_change| <ul><li>weapon_name</li><li>weapon_type |Player switches weapons|
 
 Event       | Event Data   | Fired When    | Notes              | Since Version |
 ------------| -------------| --------------| ------------------ | --------------|
-weapon_acquired| <ul><li>weapon_name</li><li>weapon_type |Player acquires new weapon (either buy or picks up)|  | 0.70  |
+weapon_acquired| <ul><li>weapon_name</li><li>weapon_type |Player acquired a new weapon (either purchased or picked up)|  | 0.70  |
 
 ## `player_activity_change`
 
@@ -249,7 +249,7 @@ key               | Category    | Values                    | Notes             
 ----------------- | ------------| ------------------------- | --------------------- | ------------- |
 totalKills | player  |	Total kills in a match	            |                       |    0.70       |
 totalDeaths | player  |	Total deaths in a match		    |                       |    0.70       |
-totalMvps | player  |	Total MVP’s	 	            |                       |     0.70       |
+totalMvps | player  |	Total MVP awards	 	            |                       |     0.70       |
 score | player  |	Score in a match	            |                       |     0.70       |
 team | player  |	T / CT	                            |                       |     0.70       |
 steamid | player  |	The player’s steam id	            |                       |     0.70       |
