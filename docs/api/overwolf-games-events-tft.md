@@ -89,6 +89,7 @@ round_type | match_info | Round is PvE/PvP, or Carousel (Also stage number).  |S
 round_outcome | match_info | The outcome of the previous round.      |See [notes](#round_outcome-note)|   0.133       |
 opponent | match_info | The name of the opponents.                        |See [notes](#opponent-note)|   0.133       |
 game_mode | match_info | Whether the current game mode is TFT or default LoL.  |See [notes](#game_mode-note)|   0.133       |
+local_player_damage | match_info | The amount of damage caused by your champions. |See [notes](#local_player_damage-note)|   0.136       |
 
 #### *pseudo_match_id* notes
 
@@ -96,13 +97,17 @@ This is an Overwolf-generated code. Unrelated to Riot Games.
 
 Data example:
 
-`a4e8fc75-b35e-466f-976c-09f4ee633d95`
+```json
+a4e8fc75-b35e-466f-976c-09f4ee633d95
+```
 
 #### *battle_state* notes
 
 Data example:
 
-`{"info":{"match_info":{"battle_state":"{"in_progress":true}"}},"feature":"match_info"}`
+```json
+{"info":{"match_info":{"battle_state":"{"in_progress":true}"}},"feature":"match_info"}
+```
 
 #### *match_state* notes
 
@@ -110,32 +115,54 @@ Returns 'True' when match starts. Returns 'False' once local player dies/wins th
 
 Data example:
 
-`{"info":{"match_info":{"match_state":"``{"in_progress":true}"}},"feature":"match_info"}{"info":{"match_info":{"match_state":"{"in_progress":false}"}},"feature":"match_info"}`
+```json
+{"info":{"match_info":{"match_state":"``{"in_progress":true}"}},"feature":"match_info"}{"info":{"match_info":{"match_state":"{"in_progress":false}"}},"feature":"match_info"}
+```
 
 #### *round_type* notes
 
 Data example:
 
-`{"info":{"match_info":{"round_type":"{"stage":"1-1","name":"Carousel","type":null}"}},"feature":"match_info"}{"info":{"match_info":{"round_type":"{"stage":"1-2","name":"PVE","type":"Minions_1"}"}},"feature":"match_info"}{"info":{"match_info":{"round_type":"{"stage":"2-1","name":"PVP","type":null}"}},"feature":"match_info"}`
+```json
+{"info":{"match_info":{"round_type":"{"stage":"1-1","name":"Carousel","type":null}"}},"feature":"match_info"}{"info":{"match_info":{"round_type":"{"stage":"1-2","name":"PVE","type":"Minions_1"}"}},"feature":"match_info"}{"info":{"match_info":{"round_type":"{"stage":"2-1","name":"PVP","type":null}"}},"feature":"match_info"}
+```
 
 #### *round_outcome* notes
 
 Data example:
 
-`{"info":{"match_info":{"round_outcome":"{"Duzalth":{"outcome":"victory"},"Sacrada":{"outcome":"defeat"},"Broxaskh":{"outcome":"defeat"},"PoSeiDonProX1":{"outcome":"victory"},"Lil Jafi":{"outcome":"victory"}}"}},"feature":"match_info"}`
+```json
+{"info":{"match_info":{"round_outcome":"{"Duzalth":{"outcome":"victory"},"Sacrada":{"outcome":"defeat"},"Broxaskh":{"outcome":"defeat"},"PoSeiDonProX1":{"outcome":"victory"},"Lil Jafi":{"outcome":"victory"}}"}},"feature":"match_info"}
+```
 
 #### *opponent* notes
 
 Data example:
 
-`{"info":{"match_info":{"opponent":"{\"name\":\"Eksuspuroshion\"}"}},"feature":"match_info"}`
+```json
+{"info":{"match_info":{"opponent":"{\"name\":\"Eksuspuroshion\"}"}},"feature":"match_info"}
+```
 
 #### *game_mode* notes
 
 Data example:
 
-`{"info":{"match_info":{"game_mode":"tft"}},"feature":"match_info"}`
-`{"info":{"match_info":{"game_mode":"lol"}},"feature":"match_info"}`
+```json
+{"info":{"match_info":{"game_mode":"tft"}},"feature":"match_info"}
+```
+```json
+{"info":{"match_info":{"game_mode":"lol"}},"feature":"match_info"}
+```
+
+#### *local_player_damage* notes
+
+This also includes the star-level of the champion (1, 2 and 3 stars) and indicated as "level 1, 2 or 3".
+
+Data Example:
+
+```json
+{"local_player_damage":"{"unit_0":{"name":"TFT_Brand","damage":8161,"level":2},"unit_1":{"name":"TFT_Shyvana", "damage":2725,"level":2},"unit_2":{"name":"TFT_Gnar","damage":2271,"level":2},"unit_3":{"name":"TFT_Nidalee","damage":1033,"level":2},"unit_4":{"name":"TFT_Swain", "damage":907, "level":1},"unit_5":{"name":"TFT_Elise","damage":577,"level":2},"unit_6":{"name":"TFT_Sejuani", "damage":565,"level":2},"unit_7":{"name":"TFT_Jayce","damage":102,"level":1}}"}}
+```
 
 ### Events
 
