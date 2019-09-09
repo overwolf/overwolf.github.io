@@ -31,7 +31,7 @@ Use the `overwolf.media` API to capture a screenshot or create a GIF of the curr
 
 * [overwolf.media.onMediaEvent](#onmediaevent)
 * [overwolf.media.onScreenshotTaken](#onscreenshottaken)
-* [overwolf.media.onSconGifGenerationErrorreenshotTaken](#ongifgenerationerror)
+* [overwolf.media.onSconGifGenerationError](#ongifgenerationerror)
 
 ## Types Reference
 
