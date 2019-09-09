@@ -6,6 +6,12 @@ sidebar_label: Changelog
 
 Follow this entry for ongoing updates and changes to the project or tools:
 
+## Version 0.136 (September 2019)
+
+* [Teamfight Tactics Events](https://overwolf.github.io/docs/api/overwolf-games-events-tft#docsNav)
+  * New info update:
+    * local_player_damage
+
 ## Version 0.134 (August 2019)
 
 * New API: [overwolf.profile.subscription](overwolf-profile.subscription).  
