@@ -125,7 +125,7 @@ Parameter | Type                  | Description                                 
 callback  | function              | A callback function which will be called with the status of the request |
 
 
-## capture(pastDuration, futureDuration, captureFinishedCallback, callback)
+## capture(replayType, pastDuration, futureDuration, captureFinishedCallback, callback)
 #### Version added: 0.78
 
 > Starts capturing a replay to a file. 
