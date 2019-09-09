@@ -161,7 +161,7 @@ This also includes the star-level of the champion (1, 2 and 3 stars) and indicat
 Data Example:
 
 ```json
-{"local_player_damage":"{"unit_0":{"name":"TFT_Brand","damage":"8161","level":"2"},"unit_1":{"name":"TFT_Shyvana", "damage":"2725","level":"2"},"unit_2":{"name":"TFT_Gnar","damage":"2271","level":"2"},"unit_3":{"name":"TFT_Nidalee","damage":"1033","level":"2"},"unit_4":{"name":"TFT_Swain", "damage":"907", "level":"1"},"unit_5":{"name":"TFT_Elise","damage":"577","level":"2"},"unit_6":{"name":"TFT_Sejuani", "damage":"565","level":"2"},"unit_7":{"name":"TFT_Jayce","damage":"102","level":"1"}}"}}
+{"local_player_damage":"{"unit_0":{"name":"TFT_Brand","damage":8161,"level":2},"unit_1":{"name":"TFT_Shyvana", "damage":2725,"level":2},"unit_2":{"name":"TFT_Gnar","damage":2271,"level":2},"unit_3":{"name":"TFT_Nidalee","damage":1033,"level":2},"unit_4":{"name":"TFT_Swain", "damage":907, "level":1},"unit_5":{"name":"TFT_Elise","damage":577,"level":2},"unit_6":{"name":"TFT_Sejuani", "damage":565,"level":2},"unit_7":{"name":"TFT_Jayce","damage":102,"level":1}}"}}
 ```
 
 ### Events
