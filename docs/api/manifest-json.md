@@ -220,10 +220,10 @@ Note that not all flags are mandatory - we included all available flags for docu
 </details>
 
 ## Validate your manifest.json
-To help you make sure that your manifest file is correct and complete, validate it against this [schema file](https://gist.github.com/eransharv/74ecac312957309a61f80725abd6951c):
-1. Go to [www.jsonschemavalidator.net](http://www.jsonschemavalidator.net/)
-2. Copy-paste the [schema’s](https://gist.github.com/eransharv/74ecac312957309a61f80725abd6951c) and your manifest.json code into the “Schema” and “Input JSON” windows, respectively.
-3. Check for any errors or missing data.
+To help you make sure that your manifest file is correct and complete, validate it against our schema file.
+
+Please read all the info in our [schema validation best practice](../topics/validate-your-manifest).
+
 
 ## Access the manifest from your app
 

@@ -1,7 +1,7 @@
 ---
 id: app-specific-experience
 title: App specific experience
-sidebar_label: User journey and experience
+sidebar_label: App specific experience
 ---
 
 
