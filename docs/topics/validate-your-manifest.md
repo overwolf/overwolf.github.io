@@ -4,7 +4,7 @@ title: Validate your manifest.json
 sidebar_label: Validate your manifest
 ---
 
-To help you make sure that your manifest file is correct and complete, validate it against oue schema file.
+To help you make sure that your manifest file is correct and complete, validate it against our schema file.
 
 You can find the most updated schema in our <a href="https://github.com/overwolf/community-gists/blob/master/overwolf-manifest-schema.json" target="_blank">GitHub repository</a> (and you are welcome to suggest changes/updates).
 
@@ -16,11 +16,11 @@ You can find the most updated schema in our <a href="https://github.com/overwolf
 
 ## Automated schema validation
 
-To better follow a modern practices of CI and CD, we strongly recommend you to automate the validation process using your prefered tools.
+To better follow the modern practices of CI and CD, we strongly recommend you to automate the validation process using your preferred tools.
 
-We demonstrate here how to do that using one of the popular npm schema validation packages, called <a href="https://www.npmjs.com/package/ajv-cli" target="_blank">ajv-cli</a>.  In addition, **the exmaples here are tested in the terminal of Visual Studio Code**.
+We demonstrate here how to do that using one of the popular npm schema validation packages, called <a href="https://www.npmjs.com/package/ajv-cli" target="_blank">ajv-cli</a>.  Also, **the examples here are tested in the terminal of Visual Studio Code**.
 
-the steps which developers should take in order to validate their manifest.json automatically:
+The steps which developers should take to validate their manifest.json automatically:
  
   
 ### 1. Install the npm package
@@ -48,4 +48,3 @@ Validate your manifest.json against the local schema file that you just download
 <pre><code>
 >  ajv validate -s overwolf-manifest-schema.json -d manifest.json
 </code></pre>
-
