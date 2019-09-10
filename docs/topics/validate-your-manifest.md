@@ -49,12 +49,3 @@ Validate your manifest.json against the local schema file that you just download
 >  ajv validate -s overwolf-manifest-schema.json -d manifest.json
 </code></pre>
 
-
-Of course, this could actually just be a single command, so there's no need to save the current manifest.schema.json at all. 
-That way people can always use the latest schema whenever they validate:
-  
-Single line command:
-
-<pre><code>
->  ajv validate -s <(curl -s "https://raw.githubusercontent.com/overwolf/community-gists/master/overwolf-manifest-schema.json") -d manifest.json
-</code></pre>
