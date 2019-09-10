@@ -4,6 +4,8 @@ title: Auto Chess Game Events
 sidebar_label: Auto Chess Events
 ---
 
+## This game-mod is not supported by Overwolf at this time.
+
 Please read the [overwolf.games.events](overwolf-games-events) documentation page to learn how to use Overwolf game events.
 
 :::important Game ID
