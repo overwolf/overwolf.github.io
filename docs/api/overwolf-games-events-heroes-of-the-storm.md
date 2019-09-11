@@ -32,7 +32,7 @@ Check [here](../status/all) the game events status. OR -  easily check the game 
 
 ### Info Updates
 
-key          | Category    | Values                    | Notes                 | Since Version |
+key          | Category    | Values                    | Notes                 | Since GEP Ver. |
 ------------ | ------------| ------------------------- | --------------------- | ------------- | 
 battletag    | me          | Battletag of local player | See [notes](#battletag-note)|    134.0|
 
@@ -48,7 +48,7 @@ Data Example:
 
 ### Info Updates
 
-key          | Category    | Values                    | Notes                 | Since Version |
+key          | Category    | Values                    | Notes                 | Since GEP Ver. |
 ------------ | ------------| ------------------------- | --------------------- | ------------- | 
 pseudo_match_id| match_info| The current session’s ID code. | See [notes](#pseudo_match_id-note)|  134.0  |
 teams_level  | match_info  | The current level of both teams| See [notes](#teams_level-note)|  134.0  |
@@ -57,7 +57,7 @@ match_state  | match_info  | If a match is in progress - true/false. | See [note
 
 ### Events
 
-Event  | Event Data        | Fired When   | Notes      | Since Version |
+Event  | Event Data        | Fired When   | Notes      | Since GEP Ver. |
 -------| ------------------| -------------| ---------- | --------------|
 match_start| null          | Match starts |See [notes](#match_start-note)|    134.0      |
 match_end  | victory/defeat| Match ends   |See [notes](#match_end-note)|    134.0      |
@@ -132,7 +132,7 @@ Data Example:
 
 ### Info Updates
 
-key          | Category    | Values                    | Notes                 | Since Version |
+key          | Category    | Values                    | Notes                 | Since GEP Ver. |
 ------------ | ------------| ------------------------- | --------------------- | ------------- | 
 scene        | game_info   | The current menu state    | See [notes](#scene-note)|    134.0    |
 
@@ -152,7 +152,7 @@ Data Examples:
 
 ### Info Updates
 
-key          | Category    | Values                    | Notes                 | Since Version |
+key          | Category    | Values                    | Notes                 | Since GEP Ver. |
 ------------ | ------------| ------------------------- | --------------------- | ------------- | 
 roster       | game_info   | The full players roster   | See [notes](#roster-note)|    134.0    |
 
@@ -238,7 +238,7 @@ Data Example:
 
 ### Events
 
-Event  | Event Data        | Fired When   | Notes      | Since Version |
+Event  | Event Data        | Fired When   | Notes      | Since GEP Ver. |
 -------| ------------------| -------------| ---------- | --------------|
 kill   | null              | Local player kills an opponent. |See [notes](#kill-note)|    134.0      |
 assist | null              | Local player takes part in the killing of an oponnent. |See [notes](#assist-note)|    134.0      |
@@ -282,7 +282,7 @@ Data Example:
 
 ### Events
 
-Event  | Event Data        | Fired When   | Notes      | Since Version |
+Event  | Event Data        | Fired When   | Notes      | Since GEP Ver. |
 -------| ------------------| -------------| ---------- | --------------|
 death  | null              | Local player dies. |See [notes](#death-note)|    134.0      |
 

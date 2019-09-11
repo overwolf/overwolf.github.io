@@ -33,7 +33,7 @@ Check [here](../status/all) the game events status. OR -  easily check the game 
 
 ### Events
 
-Event       | Event Data   | Fired When    | Notes              | Since Version |
+Event       | Event Data   | Fired When    | Notes              | Since GEP Ver. |
 ------------| -------------| --------------| ------------------ | --------------|
 goal        | Check notes  | A goal has been scored |See [notes](#goal-note)|     14.0      | 
 death       | null         | You died      |Currently not supported|     86.0      | 
@@ -78,7 +78,7 @@ Need to do a decodeURI() on the value and the JSON.parse() on the result
 
 ### Events
 
-Event       | Event Data   | Fired When    | Notes              | Since Version |
+Event       | Event Data   | Fired When    | Notes              | Since GEP Ver. |
 ------------| -------------| --------------| ------------------ | --------------|
 teamGoal    | null         |When the local player’s team has scored a goal.|    |   131.0   | 
 
@@ -86,7 +86,7 @@ teamGoal    | null         |When the local player’s team has scored a goal.|  
 
 ### Events
 
-Event       | Event Data   | Fired When    | Notes              | Since Version |
+Event       | Event Data   | Fired When    | Notes              | Since GEP Ver. |
 ------------| -------------| --------------| ------------------ | --------------|
 opposingTeamGoal| null     |When the opposing team has scored a goal.|    |   131.0   | 
 
@@ -94,7 +94,7 @@ opposingTeamGoal| null     |When the opposing team has scored a goal.|    |   13
 
 ### Info Updates
 
-key          | Category    | Values                    | Notes                 | Since Version |
+key          | Category    | Values                    | Notes                 | Since GEP Ver. |
 ------------ | ------------| ------------------------- | --------------------- | ------------- | 
 started      | matchState  | true / false              |                       |    14.0       |
 ended        | matchState  | true / false              |                       |    86.0       |
@@ -129,7 +129,7 @@ Data Example:
 
 ### Events
 
-Event       | Event Data   | Fired When    | Notes              | Since Version |
+Event       | Event Data   | Fired When    | Notes              | Since GEP Ver. |
 ------------| -------------| --------------| ------------------ | --------------|
 matchStart  | null         | match starts  |                    |      14.0     | 
 matchEnd    | null         | match ends    |                    |      14.0     | 
@@ -140,7 +140,7 @@ defeat      | null     |team_score (1 / 2)(1 – Victory, 2 - defeat)|    |   86
 
 ### Info Updates
 
-key          | Category    | Values                    | Notes                 | Since Version |
+key          | Category    | Values                    | Notes                 | Since GEP Ver. |
 ------------ | ------------| ------------------------- | --------------------- | ------------- | 
 pseudo_match_id| match_info| The current session’s ID code. |See [notes](#pseudo_match_id-note)|    130.0   |
 
@@ -154,7 +154,7 @@ Data Example:
 
 ### Info Updates
 
-key          | Category    | Values                    | Notes                 | Since Version |
+key          | Category    | Values                    | Notes                 | Since GEP Ver. |
 ------------ | ------------| ------------------------- | --------------------- | ------------- | 
 player0 / player1 … palyerN(N = number of players in the match)| playersInfo| Check notes |See [notes](#player-note)|    14.0   |
 team1 / team2| teamsInfo | Check notes |See [notes](#teamsInfo-note)|    24.0   |
@@ -184,7 +184,7 @@ Each id corresponds to an id under the playersInfo category.
 
 ### Events
 
-Event       | Event Data   | Fired When    | Notes              | Since Version |
+Event       | Event Data   | Fired When    | Notes              | Since GEP Ver. |
 ------------| -------------| --------------| ------------------ | --------------|
 rosterChange|Array containing the players info|A player leaves/ enters a match|         |      14.0     | 
 playerJoined| Check notes |A player joins the match|See [notes](#playerJoined-note)|      24.0     | 
@@ -216,7 +216,7 @@ Event Data:
 
 ### Info Updates
 
-key          | Category    | Values                    | Notes                 | Since Version |
+key          | Category    | Values                    | Notes                 | Since GEP Ver. |
 ------------ | ------------| ------------------------- | --------------------- | ------------- | 
 steamId      | me          | The player’s steam id     |                       |    14.0       |
 name         | me          | The player’s name         |                       |    14.0       |
