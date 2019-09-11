@@ -141,6 +141,7 @@ scene        | game_info   | The current menu state    | See [notes](#scene-note
 Data Examples:
 
 ```json
+{"info":{"game_info":{"scene":"loading_screen"}},"feature":"game_info"}
 {"info":{"game_info":{"scene":"hero_select"}}, "feature":"game_info"}
 {"info":{"game_info":{"scene":"unranked_preparing"}}, "feature":"game_info"}
 {"info":{"game_info":{"scene":"collection"}}, "feature":"game_info"}
@@ -158,80 +159,105 @@ roster       | game_info   | The full players roster   | See [notes](#roster-not
 
 #### *roster* note:
 
+Provided data:
+
+* player_level
+* battletag
+* if local = true/false
+* team - chaos/order
+* hero_name
+
 Data Example:
 
 ```json
-"roster":"{
-"Player 10":{  
-   "player_name":"Player 10",
-   "battletag":"Player 10",
-   "hero_name":"Kerrigan",
-   "local":false,
-   "team":"chaos"
-},
-"Player 2":{  
-   "player_name":"Player 2",
-   "battletag":"Player 2",
-   "hero_name":"Malfurion",
-   "local":false,
-   "team":"order"
-},
-"Player 3":{  
-   "player_name":"Player 3",
-   "battletag":"Player 3",
-   "hero_name":"Anub'arak",
-   "local":false,
-   "team":"order"
-},
-"Player 4":{  
-   "player_name":"Player 4",
-   "battletag":"Player 4",
-   "hero_name":"Valla",
-   "local":false,
-   "team":"order"
-},
-"Player 5":{  
-   "player_name":"Player 5",
-   "battletag":"Player 5",
-   "hero_name":"Malthael",
-   "local":false,
-   "team":"order"
-},
-"Player 6":{  
-   "player_name":"Player 6",
-   "battletag":"Player 6",
-   "hero_name":"Rehgar",
-   "local":false,
-   "team":"chaos"
-},
-"Player 7":{  
-   "player_name":"Player 7",
-   "battletag":"Player 7",
-   "hero_name":"Muradin",
-   "local":false,
-   "team":"chaos"
-},
-"Player 8":{  
-   "player_name":"Player 8",
-   "battletag":"Player 8",
-   "hero_name":"Tychus",
-   "local":false,
-   "team":"chaos"
-},
-"Player 9":{  
-   "player_name":"Player 9",
-   "battletag":"Player 9",
-   "hero_name":"Imperius",
-   "local":false,
-   "team":"chaos"
-},
-"alice":{  
-   "player_name":"alice",
-   "battletag":"alice#2742",
-   "hero_name":"Butcher",
-   "local":true,
-   "team":"order"
-}
+{ 
+   "info":{ 
+      "roster":{ 
+         "roster":"{"Cerese":{ 
+            "player_name":"Cerese",
+            "battletag":"Cerese#2249",
+            "player_level":"811",
+            "hero_name":"Ana",
+            "local":false,
+            "team":"order"
+         },
+         "DREADr":{ 
+            "player_name":"DREADr",
+            "battletag":"DREADr#2716",
+            "player_level":"1001",
+            "hero_name":"Falstad",
+            "local":false,
+            "team":"chaos"
+         },
+         "Devastator":{ 
+            "player_name":"Devastator",
+            "battletag":"Devastator#22538",
+            "player_level":"454",
+            "hero_name":"Valla",
+            "local":false,
+            "team":"order"
+         },
+         "Hostik":{ 
+            "player_name":"Hostik",
+            "battletag":"Hostik#2133",
+            "player_level":"975",
+            "hero_name":"Abathur",
+            "local":false,
+            "team":"order"
+         },
+         "Kafei":{ 
+            "player_name":"Kafei",
+            "battletag":"Kafei#2771",
+            "player_level":"250",
+            "hero_name":"Nova",
+            "local":false,
+            "team":"order"
+         },
+         "Monomax":{ 
+            "player_name":"Monomax",
+            "battletag":"Monomax#2130",
+            "player_level":"813",
+            "hero_name":"Artanis",
+            "local":false,
+            "team":"chaos"
+         },
+         "SouthernUral":{ 
+            "player_name":"SouthernUral",
+            "battletag":"SouthernUral#2738",
+            "player_level":"1379",
+            "hero_name":"Rehgar",
+            "local":false,
+            "team":"chaos"
+         },
+         "ladyboner":{ 
+            "player_name":"ladyboner",
+            "battletag":"ladyboner#2168",
+            "player_level":"519",
+            "hero_name":"Zarya",
+            "local":false,
+            "team":"chaos"
+         },
+         "moustacho":{ 
+            "player_name":"moustacho",
+            "battletag":"moustacho#21261",
+            "player_level":"264",
+            "hero_name":"Imperius",
+            "local":false,
+            "team":"order"
+         },
+         "?????????":{ 
+            "player_name":"?????????",
+            "battletag":"?????????#2698",
+            "player_level":"40",
+            "hero_name":"Butcher",
+            "local":true,
+            "team":"chaos"
+         }
+      }      "
+    }
+  },
+  "      feature":"roster"
+   }
 ```
 
 ## `kill`
