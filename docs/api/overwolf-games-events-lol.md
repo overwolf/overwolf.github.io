@@ -28,7 +28,7 @@ Note that you can consume also the LOL game launcher events. read more info [her
 * [assist](#assist)
 * [gold](#gold)
 * [minions](#minions)
-* [summoner_info](#summoner-info)
+* [summoner_info](#summoner_info)
 * [gameMode](#gamemode)
 * [teams](#teams)
 * [level](#level)

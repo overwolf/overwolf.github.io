@@ -19,7 +19,7 @@ Please read the [overwolf.games.events](overwolf-games-events) documentation pag
 * [collection](#collection)
 * [decks](#decks)
 * [match](#match)
-* [match-info](#match-info)
+* [match-info](#match_info)
 
 ## Game events status
 

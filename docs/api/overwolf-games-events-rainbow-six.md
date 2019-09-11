@@ -15,9 +15,9 @@ Please read the [overwolf.games.events](overwolf-games-events) documentation pag
 
 ## Available Features
 
-* [game_info](#game-info)
+* [game_info](#game_info)
 * [match](#match)
-* [match_info](#match-info)
+* [match_info](#match_info)
 * [roster](#roster)
 * [kill](#kill)
 * [death](#death)
