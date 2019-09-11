@@ -60,7 +60,7 @@ Check [here](../status/all) the game events status. OR -  easily check the game 
 
 ### Events
 
-Event       | Event Data   | Fired When    | Notes              | Since Version |
+Event       | Event Data   | Fired When    | Notes              | Since GEP Ver. |
 ------------| -------------| --------------| ------------------ | --------------|
 game_state_changed |<ul><li>game_state</li><li>match_state</li><li>match_id</li><li>player_steam_id</li>|               |See [notes](#game_state_changed-note)|     77.3      |
 
@@ -79,7 +79,7 @@ The user starts playing, begins spectating or stops playing. Note that simply br
 
 ### Events
 
-Event       | Event Data   | Fired When    | Notes              | Since Version |
+Event       | Event Data   | Fired When    | Notes              | Since GEP Ver. |
 ------------| -------------| --------------| ------------------ | --------------|
 match_state_changed  | Check notes |          |See [notes](#match_state_changed-note)|     77.3      |
 
@@ -107,7 +107,7 @@ The internal game match state has changed.
 
 ### Events
 
-Event       | Event Data   | Fired When    | Notes              | Since Version |
+Event       | Event Data   | Fired When    | Notes              | Since GEP Ver. |
 ------------| -------------| --------------| ------------------ | --------------|
 match_detected  | Check notes |          |See [notes](#match_detected-note)|     77.3      |
 
@@ -142,7 +142,7 @@ Supported game modes:
 
 ### Events
 
-Event       | Event Data   | Fired When    | Notes              | Since Version |
+Event       | Event Data   | Fired When    | Notes              | Since GEP Ver. |
 ------------| -------------| --------------| ------------------ | --------------|
 daytime_changed   | Check notes |          |See [notes](#daytime_changed-note)|     77.3      |
 
@@ -162,7 +162,7 @@ Fired when the game transitions between day time and night time.
 
 ### Events
 
-Event       | Event Data   | Fired When    | Notes              | Since Version |
+Event       | Event Data   | Fired When    | Notes              | Since GEP Ver. |
 ------------| -------------| --------------| ------------------ | --------------|
 clock_time_changed    | Same as ‘map_daytime_changed’. 	 |Fired every second|   |     77.3      |
 
@@ -170,7 +170,7 @@ clock_time_changed    | Same as ‘map_daytime_changed’. 	 |Fired every second
 
 ### Events
 
-Event       | Event Data   | Fired When    | Notes              | Since Version |
+Event       | Event Data   | Fired When    | Notes              | Since GEP Ver. |
 ------------| -------------| --------------| ------------------ | --------------|
 ward_purchase_cooldown_changed   | Check notes |Fired every second where wards are on cooldown. |See [notes](#ward_purchase_cooldown_changed-note)|     77.3      |
 
@@ -184,7 +184,7 @@ Event Data:
 
 ### Events
 
-Event       | Event Data   | Fired When    | Notes              | Since Version |
+Event       | Event Data   | Fired When    | Notes              | Since GEP Ver. |
 ------------| -------------| --------------| ------------------ | --------------|
 match_ended   | winner – radiant/dire  |When an ancient is destroyed and the game ends.  |       |     77.3      |
 
@@ -192,7 +192,7 @@ match_ended   | winner – radiant/dire  |When an ancient is destroyed and the g
 
 ### Events
 
-Event       | Event Data   | Fired When    | Notes              | Since Version |
+Event       | Event Data   | Fired When    | Notes              | Since GEP Ver. |
 ------------| -------------| --------------| ------------------ | --------------|
 kill    | Check notes |Whenever the player kills an enemy hero. 	|See [notes](#kill-note)|     77.3      |
 
@@ -208,7 +208,7 @@ Event Data:
 
 ### Events
 
-Event       | Event Data   | Fired When    | Notes              | Since Version |
+Event       | Event Data   | Fired When    | Notes              | Since GEP Ver. |
 ------------| -------------| --------------| ------------------ | --------------|
 assist    |assists – The total number of assists the player has. |Whenever the player assists in a kill of an enemy champion.|      |     77.3      |
 
@@ -216,7 +216,7 @@ assist    |assists – The total number of assists the player has. |Whenever the
 
 ### Events
 
-Event       | Event Data   | Fired When    | Notes              | Since Version |
+Event       | Event Data   | Fired When    | Notes              | Since GEP Ver. |
 ------------| -------------| --------------| ------------------ | --------------|
 death    |deaths – The total number of deaths the player has. |Whenever the player dies. |           |     77.3      |
 
@@ -224,7 +224,7 @@ death    |deaths – The total number of deaths the player has. |Whenever the pl
 
 ### Events
 
-Event       | Event Data   | Fired When    | Notes              | Since Version |
+Event       | Event Data   | Fired When    | Notes              | Since GEP Ver. |
 ------------| -------------| --------------| ------------------ | --------------|
 cs  | Check notes |Whenever the player last hits/denies non-champion units that grant creep score. |See [notes](#cs-notes)|     77.3      |
 
@@ -240,7 +240,7 @@ Event Data:
 
 ### Events
 
-Event       | Event Data   | Fired When    | Notes              | Since Version |
+Event       | Event Data   | Fired When    | Notes              | Since GEP Ver. |
 ------------| -------------| --------------| ------------------ | --------------|
 xpm |xpm – The current Experience Per Minute value. |Whenever the XPM changes. |          |     77.3      |
 
@@ -248,7 +248,7 @@ xpm |xpm – The current Experience Per Minute value. |Whenever the XPM changes.
 
 ### Events
 
-Event       | Event Data   | Fired When    | Notes              | Since Version |
+Event       | Event Data   | Fired When    | Notes              | Since GEP Ver. |
 ------------| -------------| --------------| ------------------ | --------------|
 gpm | gpm – The current Gold Per Minute value. |Whenever the GPM changes. |        |     77.3      |
 
@@ -256,7 +256,7 @@ gpm | gpm – The current Gold Per Minute value. |Whenever the GPM changes. |   
 
 ### Events
 
-Event       | Event Data   | Fired When    | Notes              | Since Version |
+Event       | Event Data   | Fired When    | Notes              | Since GEP Ver. |
 ------------| -------------| --------------| ------------------ | --------------|
 gold | Check notes |Whenever gold changes. 	|See [notes](#gold-notes)|     77.3      |
 
@@ -270,7 +270,7 @@ gold | Check notes |Whenever gold changes. 	|See [notes](#gold-notes)|     77.3 
 
 ### Events
 
-Event       | Event Data   | Fired When    | Notes              | Since Version |
+Event       | Event Data   | Fired When    | Notes              | Since GEP Ver. |
 ------------| -------------| --------------| ------------------ | --------------|
 hero_leveled_up | hero_level – The current hero level. |Whenever the player levels up. |          |     77.3      |
 
@@ -278,7 +278,7 @@ hero_leveled_up | hero_level – The current hero level. |Whenever the player le
 
 ### Events
 
-Event       | Event Data   | Fired When    | Notes              | Since Version |
+Event       | Event Data   | Fired When    | Notes              | Since GEP Ver. |
 ------------| -------------| --------------| ------------------ | --------------|
 hero_respawned | N/A	 |Whenever the player respawns. This is also true when buying back. |          |     77.3      |
 
@@ -286,7 +286,7 @@ hero_respawned | N/A	 |Whenever the player respawns. This is also true when buyi
 
 ### Events
 
-Event       | Event Data   | Fired When    | Notes              | Since Version |
+Event       | Event Data   | Fired When    | Notes              | Since GEP Ver. |
 ------------| -------------| --------------| ------------------ | --------------|
 hero_buyback_info_changed | Check notes |        |See [notes](#hero_buyback_info_changed-notes)|     77.3      |
 
@@ -305,7 +305,7 @@ Every 4 seconds and every level-up, since buyback cost is affected by game time 
 
 ### Events
 
-Event       | Event Data   | Fired When    | Notes              | Since Version |
+Event       | Event Data   | Fired When    | Notes              | Since GEP Ver. |
 ------------| -------------| --------------| ------------------ | --------------|
 hero_boughtback |<b>buyback_cooldown</b> – The cooldown remaining for buyback to become available.|Whenever the player buys back.|    |     77.3      |
 
@@ -313,7 +313,7 @@ hero_boughtback |<b>buyback_cooldown</b> – The cooldown remaining for buyback 
 
 ### Events
 
-Event       | Event Data   | Fired When    | Notes              | Since Version |
+Event       | Event Data   | Fired When    | Notes              | Since GEP Ver. |
 ------------| -------------| --------------| ------------------ | --------------|
 hero_health_mana_info | Check notes |Whenever either of the players mana, health, max mana or max health changes.|See [notes](#hero_health_mana_info-notes)|     77.3      |
 
@@ -330,7 +330,7 @@ Event Data:
 
 ### Events
 
-Event       | Event Data   | Fired When    | Notes              | Since Version |
+Event       | Event Data   | Fired When    | Notes              | Since GEP Ver. |
 ------------| -------------| --------------| ------------------ | --------------|
 hero_status_effect_changed | Check notes |Whenever any of these effects changes.	|See [notes](#hero_status_effect_changed-notes)|     77.3      |
 
@@ -351,7 +351,7 @@ Event Data:
 
 ### Events
 
-Event       | Event Data   | Fired When    | Notes              | Since Version |
+Event       | Event Data   | Fired When    | Notes              | Since GEP Ver. |
 ------------| -------------| --------------| ------------------ | --------------|
 hero_attributes_skilled |<b>attributes_level</b> – The current level of the player’s attributes.|Whenever the player skills up his attributes.|          |     77.3      |
 
@@ -359,7 +359,7 @@ hero_attributes_skilled |<b>attributes_level</b> – The current level of the pl
 
 ### Events
 
-Event       | Event Data   | Fired When    | Notes              | Since Version |
+Event       | Event Data   | Fired When    | Notes              | Since GEP Ver. |
 ------------| -------------| --------------| ------------------ | --------------|
 hero_ability_skilled | Check notes |Whenever the player skills up an ability.|See [notes](#hero_ability_skilled-notes)|     77.3      |
 
@@ -378,7 +378,7 @@ hero_ability_skilled | Check notes |Whenever the player skills up an ability.|Se
 
 ### Events
 
-Event       | Event Data   | Fired When    | Notes              | Since Version |
+Event       | Event Data   | Fired When    | Notes              | Since GEP Ver. |
 ------------| -------------| --------------| ------------------ | --------------|
 hero_ability_used |Same as ‘hero_ability_skilled’|Whenever the player uses an ability.|       |     77.3      |
 
@@ -386,7 +386,7 @@ hero_ability_used |Same as ‘hero_ability_skilled’|Whenever the player uses a
 
 ### Events
 
-Event       | Event Data   | Fired When    | Notes              | Since Version |
+Event       | Event Data   | Fired When    | Notes              | Since GEP Ver. |
 ------------| -------------| --------------| ------------------ | --------------|
 hero_ability_cooldown_changed |Same as ‘hero_ability_skilled’|Whenever an ability’s remaining cooldown is changed.	|       |     77.3      |
 
@@ -394,7 +394,7 @@ hero_ability_cooldown_changed |Same as ‘hero_ability_skilled’|Whenever an ab
 
 ### Events
 
-Event       | Event Data   | Fired When    | Notes              | Since Version |
+Event       | Event Data   | Fired When    | Notes              | Since GEP Ver. |
 ------------| -------------| --------------| ------------------ | --------------|
 hero_ability_changed |Same as ‘hero_ability_skilled’|Whenever an ability’s name changes.|       |     77.3      |
 
@@ -402,7 +402,7 @@ hero_ability_changed |Same as ‘hero_ability_skilled’|Whenever an ability’s
 
 ### Events
 
-Event       | Event Data   | Fired When    | Notes              | Since Version |
+Event       | Event Data   | Fired When    | Notes              | Since GEP Ver. |
 ------------| -------------| --------------| ------------------ | --------------|
 hero_item_cooldown_changed |Check notes|Whenever an item’s remaining cooldown is changed.|See [notes](#hero_item_cooldown_changed-notes)|     77.3      |
 
@@ -422,7 +422,7 @@ Event Data:
 
 ### Events
 
-Event       | Event Data   | Fired When    | Notes              | Since Version |
+Event       | Event Data   | Fired When    | Notes              | Since GEP Ver. |
 ------------| -------------| --------------| ------------------ | --------------|
 hero_item_changed |Check notes|          |See [notes](#hero_item_changed-notes)|     77.3      |
 
@@ -446,7 +446,7 @@ Whenever the item name in some hero/stash slot changes. This would mean that swa
 
 ### Events
 
-Event       | Event Data   | Fired When    | Notes              | Since Version |
+Event       | Event Data   | Fired When    | Notes              | Since GEP Ver. |
 ------------| -------------| --------------| ------------------ | --------------|
 hero_item_used |Same as ‘hero_item_changed’	|Whenever an item is used – Essentially this is when the item goes on cooldown. |       |     77.3      |
 
@@ -454,7 +454,7 @@ hero_item_used |Same as ‘hero_item_changed’	|Whenever an item is used – Es
 
 ### Events
 
-Event       | Event Data   | Fired When    | Notes              | Since Version |
+Event       | Event Data   | Fired When    | Notes              | Since GEP Ver. |
 ------------| -------------| --------------| ------------------ | --------------|
 hero_item_consumed |Same as ‘hero_item_changed’	|Whenever an item’s charges decreases. |       |     77.3      |
 
@@ -462,7 +462,7 @@ hero_item_consumed |Same as ‘hero_item_changed’	|Whenever an item’s charge
 
 ### Events
 
-Event       | Event Data   | Fired When    | Notes              | Since Version |
+Event       | Event Data   | Fired When    | Notes              | Since GEP Ver. |
 ------------| -------------| --------------| ------------------ | --------------|
 hero_item_charged |Same as ‘hero_item_changed’	|Whenever an item’s charges increases.|       |     77.3      |
 
@@ -470,7 +470,7 @@ hero_item_charged |Same as ‘hero_item_changed’	|Whenever an item’s charges
 
 ### Info Updates
 
-key               | Category    | Values                    | Notes                 | Since Version |
+key               | Category    | Values                    | Notes                 | Since GEP Ver. |
 ----------------- | ------------| ------------------------- | --------------------- | ------------- |
 pseudo_match_id   | match_info  | The current session’s ID code.|See [notes](#pseudo_match_id-note)|  130.0   |
 game_mode   | match_info  | Dota2/Auto-chess. |See [notes](#game_mode-note)|  130.0   |
@@ -491,7 +491,7 @@ Data Example:
 
 ### Events
 
-key               | Category    | Values                    | Notes                 | Since Version |
+key               | Category    | Values                    | Notes                 | Since GEP Ver. |
 ----------------- | ------------| ------------------------- | --------------------- | ------------- |
 players           | roster      | 	A string holding a JSON array of player objects.|See [notes](#players-note)|  77.3 |
 bans           | roster      | 	A string holding a JSON array of bans objects.|See [notes](#bans-note)| 114.1 |
@@ -579,7 +579,7 @@ Notes:
 
 ### Info Updates
 
-key               | Category    | Values                    | Notes                 | Since Version |
+key               | Category    | Values                    | Notes                 | Since GEP Ver. |
 ----------------- | ------------| ------------------------- | --------------------- | ------------- |
 party   | party  |A string holding a JSON array of player objects.|See [notes](#party-note)|  130.0   |
 
@@ -619,7 +619,7 @@ Important note:
 
 ### Info Updates
 
-key               | Category    | Values                    | Notes                 | Since Version |
+key               | Category    | Values                    | Notes                 | Since GEP Ver. |
 ----------------- | ------------| ------------------------- | --------------------- | ------------- |
 plugin_error   | error  |This info update fires when the plugin is not initializing for some reason.|See [notes](#plugin_error-note)|  133.8   |
 

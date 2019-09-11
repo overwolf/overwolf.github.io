@@ -49,105 +49,105 @@ Check [here](../status/all) the game events status. OR -  easily check the game 
 
 ### Events
 
-Event       | Event Data   | Fired When    | Notes              | Since Version |
+Event       | Event Data   | Fired When    | Notes              | Since GEP Ver. |
 ------------| -------------| --------------| ------------------ | --------------|
-kill        | totalKills – total kills for player in match |Player has killed an enemy| | 0.70  |
+kill        | totalKills – total kills for player in match |Player has killed an enemy| | 70.0  |
 
 ## `death`
 
 ### Events
 
-Event       | Event Data   | Fired When    | Notes              | Since Version |
+Event       | Event Data   | Fired When    | Notes              | Since GEP Ver. |
 ------------| -------------| --------------| ------------------ | --------------|
-death        | totalDeaths – total deaths of the player in a match |Player has died| | 0.70  |
+death        | totalDeaths – total deaths of the player in a match |Player has died| | 70.0  |
 
 ## `assist`
 
 ### Events
 
-Event       | Event Data   | Fired When    | Notes              | Since Version |
+Event       | Event Data   | Fired When    | Notes              | Since GEP Ver. |
 ------------| -------------| --------------| ------------------ | --------------|
-assist        | 	totalAssists – total assists for user it match |Player has assisted in killing an enemy| | 0.70  |
+assist        | 	totalAssists – total assists for user it match |Player has assisted in killing an enemy| | 70.0  |
 
 ## `headshot`
 
 ### Events
 
-Event       | Event Data   | Fired When    | Notes              | Since Version |
+Event       | Event Data   | Fired When    | Notes              | Since GEP Ver. |
 ------------| -------------| --------------| ------------------ | --------------|
-headshot    | headshotsInRound – total headshots for user in the <b>current round</b> |Player has gained a killed with a headshot| Fired alongside kill event	 | 0.70  |
+headshot    | headshotsInRound – total headshots for user in the <b>current round</b> |Player has gained a killed with a headshot| Fired alongside kill event	 | 70.0  |
 
 ## `round_start`
 
 ### Events
 
-Event       | Event Data   | Fired When    | Notes              | Since Version |
+Event       | Event Data   | Fired When    | Notes              | Since GEP Ver. |
 ------------| -------------| --------------| ------------------ | --------------|
-round_start | <ul><li>num_of_rounds – total number of rounds in current match</li><li>player_team – CT/T</li> | A new round has began | |     0.70      |
+round_start | <ul><li>num_of_rounds – total number of rounds in current match</li><li>player_team – CT/T</li> | A new round has began | |     70.0      |
 
 ## `match_start`
 
 ### Events
 
-Event       | Event Data   | Fired When    | Notes              | Since Version |
+Event       | Event Data   | Fired When    | Notes              | Since GEP Ver. |
 ------------| -------------| --------------| ------------------ | --------------|
-match_start |     None     |A new match has started|            |      0.70     |
+match_start |     None     |A new match has started|            |      70.0     |
 
 ## `match_end`
 
 ### Events
 
-Event       | Event Data   | Fired When    | Notes              | Since Version |
+Event       | Event Data   | Fired When    | Notes              | Since GEP Ver. |
 ------------| -------------| --------------| ------------------ | --------------|
-match_end   |     None     |Match has ended|                    |      0.70     |
+match_end   |     None     |Match has ended|                    |      70.0     |
 
 ## `team_round_win`
 
 ### Events
 
-Event       | Event Data   | Fired When    | Notes              | Since Version |
+Event       | Event Data   | Fired When    | Notes              | Since GEP Ver. |
 ------------| -------------| --------------| ------------------ | --------------|
-team_round_win|     None     |<ul><li>winningTeam – the team that won the round (CT/T)</li><li>bomb – bomb status (exploded/defused/planted)|   |      0.70     |
+team_round_win|     None     |<ul><li>winningTeam – the team that won the round (CT/T)</li><li>bomb – bomb status (exploded/defused/planted)|   |      70.0     |
   
 ## `bomb_planted`
 
 ### Events
 
-Event       | Event Data   | Fired When    | Notes              | Since Version |
+Event       | Event Data   | Fired When    | Notes              | Since GEP Ver. |
 ------------| -------------| --------------| ------------------ | --------------|
-bomb_planted|     None     |A bomb has been planted (by any player)|            |      0.70     |
+bomb_planted|     None     |A bomb has been planted (by any player)|            |      70.0     |
 
 ## `bomb_change`
 
 ### Events
 
-Event       | Event Data   | Fired When    | Notes              | Since Version |
+Event       | Event Data   | Fired When    | Notes              | Since GEP Ver. |
 ------------| -------------| --------------| ------------------ | --------------|
-bomb_change |Bomb state (planted / exploded / defused)|Bomb state was changed|  |      0.70     |
+bomb_change |Bomb state (planted / exploded / defused)|Bomb state was changed|  |      70.0     |
 
 ## `reloading`
 
 ### Events
 
-Event       | Event Data   | Fired When    | Notes              | Since Version |
+Event       | Event Data   | Fired When    | Notes              | Since GEP Ver. |
 ------------| -------------| --------------| ------------------ | --------------|
-reloading |<ul><li>weapon_name</li><li>weapon_current_ammo</li><li>weapon_max_ammo</li><li>weapon_type| Player reloads his weapon | |0.70
+reloading |<ul><li>weapon_name</li><li>weapon_current_ammo</li><li>weapon_max_ammo</li><li>weapon_type| Player reloads his weapon | |70.0
   
 ## `fired`
 
 ### Events
 
-Event       | Event Data   | Fired When    | Notes              | Since Version |
+Event       | Event Data   | Fired When    | Notes              | Since GEP Ver. |
 ------------| -------------| --------------| ------------------ | --------------|
-fired       |<ul><li>weapon_name</li><li>weapon_current_ammo</li><li>weapon_max_ammo</li><li>weapon_type|  | "fired" is not available on "Arms Race" and "Demolition" modes | 0.70  |
+fired       |<ul><li>weapon_name</li><li>weapon_current_ammo</li><li>weapon_max_ammo</li><li>weapon_type|  | "fired" is not available on "Arms Race" and "Demolition" modes | 70.0  |
   
 ## `weapon_change`
 
 ### Events
 
-Event       | Event Data   | Fired When    | Notes              | Since Version |
+Event       | Event Data   | Fired When    | Notes              | Since GEP Ver. |
 ------------| -------------| --------------| ------------------ | --------------|
-weapon_change| <ul><li>weapon_name</li><li>weapon_type |Player switches weapons| See [notes](#weapon_change-note) | 0.70  |
+weapon_change| <ul><li>weapon_name</li><li>weapon_type |Player switches weapons| See [notes](#weapon_change-note) | 70.0  |
 
 #### *weapon_change* note
 
@@ -167,36 +167,36 @@ weapon_change| <ul><li>weapon_name</li><li>weapon_type |Player switches weapons|
 
 ### Events
 
-Event       | Event Data   | Fired When    | Notes              | Since Version |
+Event       | Event Data   | Fired When    | Notes              | Since GEP Ver. |
 ------------| -------------| --------------| ------------------ | --------------|
-weapon_acquired| <ul><li>weapon_name</li><li>weapon_type |Player acquired a new weapon (either purchased or picked up)|  | 0.70  |
+weapon_acquired| <ul><li>weapon_name</li><li>weapon_type |Player acquired a new weapon (either purchased or picked up)|  | 70.0  |
 
 ## `player_activity_change`
 
 ### Events
 
-Event       | Event Data   | Fired When    | Notes              | Since Version |
+Event       | Event Data   | Fired When    | Notes              | Since GEP Ver. |
 ------------| -------------| --------------| ------------------ | --------------|
-player_activity_change | <ul><li>playing</li><li>menu |<ul><li>The player started playing</li><li>The player entered the game’s menu | | 0.70  |
+player_activity_change | <ul><li>playing</li><li>menu |<ul><li>The player started playing</li><li>The player entered the game’s menu | | 70.0  |
 
 ## `team_set`
 
 ### Events
 
-Event       | Event Data   | Fired When    | Notes              | Since Version |
+Event       | Event Data   | Fired When    | Notes              | Since GEP Ver. |
 ------------| -------------| --------------| ------------------ | --------------|
-team_set    |<ul><li>CT</li><li>T|The player selected a team|   |      0.70     |
+team_set    |<ul><li>CT</li><li>T|The player selected a team|   |      70.0     |
 
 
 ## `match_info`
 
 ### Info Updates
 
-key               | Category    | Values                    | Notes                 | Since Version |
+key               | Category    | Values                    | Notes                 | Since GEP Ver. |
 ----------------- | ------------| ------------------------- | --------------------- | ------------- |
-pseudo_match_id | match_info  |	The current session’s ID code. See [notes](#pseudo_match_id-note)	| | 0.130  |
-server_info | match_info  |	The current session’s server ID. See [notes](#server_info-note)	| | 0.135  |
-game_mode | match_info  |	The current game mode that is played. See [notes](#game_mode-note)	| | 0.135  |
+pseudo_match_id | match_info  |	The current session’s ID code. See [notes](#pseudo_match_id-note)	| | 130.0  |
+server_info | match_info  |	The current session’s server ID. See [notes](#server_info-note)	| | 135.0  |
+game_mode | match_info  |	The current game mode that is played. See [notes](#game_mode-note)	| | 135.0  |
 
 
 #### *pseudo_match_id* note
@@ -245,28 +245,28 @@ Spectating
 
 ### Info Updates
 
-key               | Category    | Values                    | Notes                 | Since Version |
+key               | Category    | Values                    | Notes                 | Since GEP Ver. |
 ----------------- | ------------| ------------------------- | --------------------- | ------------- |
-totalKills | player  |	Total kills in a match	            |                       |    0.70       |
-totalDeaths | player  |	Total deaths in a match		    |                       |    0.70       |
-totalMvps | player  |	Total MVP awards	 	            |                       |     0.70       |
-score | player  |	Score in a match	            |                       |     0.70       |
-team | player  |	T / CT	                            |                       |     0.70       |
-steamid | player  |	The player’s steam id	            |                       |     0.70       |
-map | round            |	Map name	            |                       |     0.70       |
-mode | round  |	Map mode (for example: "casual")            |                       |     0.70       |
-numOfRound | round  |	Round number in the match (starting 0)|                     |     0.70       |
-phase | round  |Match phase<ul><li>warmup</li><li>live</li><li>freezetime</li><li>over|    |     0.70       |
-scene | scene  |<ul><li>MainMenu</li><li>LoadingScreen</li><li>Game</li><li>MenuInGame(ESC)|  |     0.70       |
+totalKills | player  |	Total kills in a match	            |                       |    70.0       |
+totalDeaths | player  |	Total deaths in a match		    |                       |    70.0       |
+totalMvps | player  |	Total MVP awards	 	            |                       |     70.0       |
+score | player  |	Score in a match	            |                       |     70.0       |
+team | player  |	T / CT	                            |                       |     70.0       |
+steamid | player  |	The player’s steam id	            |                       |     70.0       |
+map | round            |	Map name	            |                       |     70.0       |
+mode | round  |	Map mode (for example: "casual")            |                       |     70.0       |
+numOfRound | round  |	Round number in the match (starting 0)|                     |     70.0       |
+phase | round  |Match phase<ul><li>warmup</li><li>live</li><li>freezetime</li><li>over|    |     70.0       |
+scene | scene  |<ul><li>MainMenu</li><li>LoadingScreen</li><li>Game</li><li>MenuInGame(ESC)|  |     70.0       |
 
 ## `roster`
 
 ### Info Updates
 
-key               | Category    | Values                    | Notes                 | Since Version |
+key               | Category    | Values                    | Notes                 | Since GEP Ver. |
 ----------------- | ------------| ------------------------- | --------------------- | ------------- |
-lobby | roster  |JSON containing array of lobby_players objects. See [notes](#lobby-note)|  |     0.77       |
-match | roster  |JSON containing array of player objects. See [notes](#match-note)|  |     0.77       |
+lobby | roster  |JSON containing array of lobby_players objects. See [notes](#lobby-note)|  |     77.0       |
+match | roster  |JSON containing array of player objects. See [notes](#match-note)|  |     77.0       |
 
 #### *lobby* note
 
@@ -307,7 +307,7 @@ Data Example:
 
 ### Info Updates
 
-key               | Category    | Values                    | Notes                 | Since Version |
+key               | Category    | Values                    | Notes                 | Since GEP Ver. |
 ----------------- | ------------| ------------------------- | --------------------- | ------------- |
 replay_list       | replay      | See [notes](#replay-note) |                       |     134.0     |
 
@@ -326,6 +326,6 @@ Data Example:
 
 ### Info Updates
 
-key               | Category    | Values                    | Notes                 | Since Version |
+key               | Category    | Values                    | Notes                 | Since GEP Ver. |
 ----------------- | ------------| ------------------------- | --------------------- | ------------- |
 ping              | performance | Latency to server         |                       |               |

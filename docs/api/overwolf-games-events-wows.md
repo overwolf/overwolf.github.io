@@ -32,7 +32,7 @@ Check [here](../status/all) the game events status. OR -  easily check the game 
 
 ### Info Updates
 
-key          | Category    | Values                    | Notes                 | Since Version |
+key          | Category    | Values                    | Notes                 | Since GEP Ver. |
 ------------ | ------------| ------------------------- | --------------------- | ------------- |
 game_start_timestamp | match_info   | Time of when the game process started running  |See [notes](#game_start_timestamp-note)|   119.1   |
 scene | match_info   | See [notes](#scene-note) |                       |   119.1   |
@@ -58,7 +58,7 @@ Possible Values:
 
 ### Info Updates
 
-key          | Category    | Values                    | Notes                 | Since Version |
+key          | Category    | Values                    | Notes                 | Since GEP Ver. |
 ------------ | ------------| ------------------------- | --------------------- | ------------- |
 realm | account_info   |                            | See [notes](#realm-note) |     119.1     |
 id | account_info   | The local player’s Wargaming account id |                |     119.1     |
@@ -77,7 +77,7 @@ Possible Values:
 
 ### Info Updates
 
-key          | Category    | Values                    | Notes                 | Since Version |
+key          | Category    | Values                    | Notes                 | Since GEP Ver. |
 ------------ | ------------| ------------------------- | --------------------- | ------------- |
 pseudo_match_id| match_info   |The current session’s ID code.| See [notes](#pseudo_match_id-note) |     119.1     |
 
@@ -91,7 +91,7 @@ Data Example:
 
 ### Info Updates
 
-key          | Category    | Values                    | Notes                 | Since Version |
+key          | Category    | Values                    | Notes                 | Since GEP Ver. |
 ------------ | ------------| ------------------------- | --------------------- | ------------- |
 mapName| match     |Map name – string| See [notes](#mapName-note) |     119.1     |
 players| roster    |Array of “player” objects| See [notes](#players-note) |     119.1     |
@@ -183,7 +183,7 @@ Data Example:
 
 ### Events
 
-Event      | Event Data  | Fired When          | Notes              | Since Version |
+Event      | Event Data  | Fired When          | Notes              | Since GEP Ver. |
 -----------| ------------| ------------------- | ------------------ | --------------|
 matchStart | null        |  Match starts       |                    |   119.1       | 
 matchEnd   | null        | Match ends          |                    |   119.1       | 
@@ -193,7 +193,7 @@ matchOutcome | "victory" / "lost" |  Match ends |                   |   119.1   
 
 ### Events
 
-Event      | Event Data  | Fired When          | Notes              | Since Version |
+Event      | Event Data  | Fired When          | Notes              | Since GEP Ver. |
 -----------| ------------| ------------------- | ------------------ | --------------|
 kill |Ship id of the “victim” ship – int|A ship was destroyed by the local user|        |   121.0       | 
 damage   |<ul><li>amount – amount of damage done</li><li>shipId – int</li>|A ship was damaged by the local user|     |   121.0   | 
@@ -203,7 +203,7 @@ ribbon |  ribbon – string | Ribbon was awarded |                    |   119.1 
 
 ### Events
 
-Event      | Event Data  | Fired When          | Notes              | Since Version |
+Event      | Event Data  | Fired When          | Notes              | Since GEP Ver. |
 -----------| ------------| ------------------- | ------------------ | --------------|
 death      |Ship id of the “killer” ship – int|  Match starts       |            |   119.1       | 
 hit        |<ul><li>damage – amount -int</li><li>ship name – string</li>| The player’s ship was damaged|     |   119.1       | 

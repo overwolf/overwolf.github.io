@@ -42,9 +42,9 @@ Check [here](../status/all) the game events status. OR -  easily check the game 
 
 ### Info Updates
 
-key               | Category    | Values                    | Notes                  | Since Version |
+key               | Category    | Values                    | Notes                  | Since GEP Ver. |
 ----------------- | ------------| ------------------------- | ---------------------- | ------------- |
-scene             | game_info   | The current game scene    |See [notes](#scene-note)|    0.123      |
+scene             | game_info   | The current game scene    |See [notes](#scene-note)|    123.0      |
 
 #### *scene* note
 
@@ -58,13 +58,13 @@ Possible values:
 
 ### Info Updates
 
-key               | Category    | Values                    | Notes                 | Since Version |
+key               | Category    | Values                    | Notes                 | Since GEP Ver. |
 ----------------- | ------------| ------------------------- | --------------------- | ------------- |
-mapName           | match_info   |	The current map name.	  |See [notes](#mapName-note)|    0.123      |
-mode              | match_info   |	The current match mode.	  |See [notes](#mode-note)|    0.123      |
-state             | match_info   |	The current match state (active / inactive) |See [notes](#state-note)|    0.123      |
-timer             | match_info   |	The current match timer value (in seconds).  |See [notes](#timer-note)|    0.123      |
-score             | match_info   |	The current score  |See [notes](#score-note)|    0.123      |
+mapName           | match_info   |	The current map name.	  |See [notes](#mapName-note)|    123.0      |
+mode              | match_info   |	The current match mode.	  |See [notes](#mode-note)|    123.0      |
+state             | match_info   |	The current match state (active / inactive) |See [notes](#state-note)|    123.0      |
+timer             | match_info   |	The current match timer value (in seconds).  |See [notes](#timer-note)|    123.0      |
+score             | match_info   |	The current score  |See [notes](#score-note)|    123.0      |
 type              | match_info   |	The current match type. |See [notes](#type-note)|    130.0      |
 
 #### *mapName* note
@@ -121,31 +121,31 @@ Possible values: “Unranked”, “Ranked”, “Custom”
 
 ### Info Updates
 
-key               | Category    | Values                    | Notes                 | Since Version |
+key               | Category    | Values                    | Notes                 | Since GEP Ver. |
 ----------------- | ------------| ------------------------- | --------------------- | ------------- |
-id                | player_info   |	The local player id	  |See [notes](#id-note)|    0.123      |
-name              | player_info   |	The local player name	  |See [notes](#name-note)|    0.123      |
-health            | player_info   |	The local player health (0-100)	  |See [notes](#health-note)|    0.123      |
-team              | player_info   |	The local player team (alpha/bravo)  |See [notes](#team-note)|    0.123      |
-kills              | player_info   |	The local player kills	  |See [notes](#kills-note)|    0.130      |
-deaths              | player_info   |	The local player deaths	  |See [notes](#deaths-note)|    0.130      |
-assists              | player_info   |	The local player assists	  |See [notes](#assists-note)|    0.130      |
-doubleKills              | player_info   |	The local player double kills	  |See [notes](#doubleKills-note)|    0.130      |
-tripleKills              | player_info   |	The local player triple kills	  |See [notes](#tripleKills-note)|    0.130      |
-quadKills              | player_info   |	The local player quadra kills	  |See [notes](#quadKills-note)|    0.130      |
-quintKills              | player_info   |	The local player quintuple kills	  |See [notes](#quintKills-note)|    0.130      |
-sexKills              | player_info   |	The local player sextuple kills	  |See [notes](#sexKills-note)|    0.130      |
-killstreak1              | player_info   |	The local player killstreak	  |See [notes](#killstreak1-note)|    0.130      |
-killstreak2              | player_info   |	The local player killstreak	  |See [notes](#killstreak2-note)|    0.130      |
-killstreak3              | player_info   |	The local player killstreak	  |See [notes](#killstreak3-note)|    0.130      |
-killstreak4              | player_info   |	The local player killstreak	  |See [notes](#killstreak4-note)|    0.130      |
-killstreak5              | player_info   |	The local player killstreak	  |See [notes](#killstreak5-note)|    0.130      |
-killstreak6              | player_info   |	The local player killstreak	  |See [notes](#killstreak6-note)|    0.130      |
-headshotKills              | player_info   |	The local player killed with headshot	  |See [notes](#headshotKills-note)|    0.130      |
-meleeKills              | player_info   |	The local player killed with a melee	  |See [notes](#meleeKills-note)|    0.130      |
-portalKills              | player_info   |	The local player portal killed	  |See [notes](#portalKills-note)|    0.130      |
-killsThroughPortal              | player_info   |	The local player killed through a portal	  |See [notes](#killsThroughPortal-note)|    0.130      |
-teabags              | player_info   |	The local player tea-bagged	  |See [notes](#teabags-note)|    0.130      |
+id                | player_info   |	The local player id	  |See [notes](#id-note)|    123.0      |
+name              | player_info   |	The local player name	  |See [notes](#name-note)|    123.0      |
+health            | player_info   |	The local player health (0-100)	  |See [notes](#health-note)|    123.0      |
+team              | player_info   |	The local player team (alpha/bravo)  |See [notes](#team-note)|    123.0      |
+kills              | player_info   |	The local player kills	  |See [notes](#kills-note)|    130.0      |
+deaths              | player_info   |	The local player deaths	  |See [notes](#deaths-note)|    130.0      |
+assists              | player_info   |	The local player assists	  |See [notes](#assists-note)|    130.0      |
+doubleKills              | player_info   |	The local player double kills	  |See [notes](#doubleKills-note)|    130.0      |
+tripleKills              | player_info   |	The local player triple kills	  |See [notes](#tripleKills-note)|    130.0      |
+quadKills              | player_info   |	The local player quadra kills	  |See [notes](#quadKills-note)|    130.0      |
+quintKills              | player_info   |	The local player quintuple kills	  |See [notes](#quintKills-note)|    130.0      |
+sexKills              | player_info   |	The local player sextuple kills	  |See [notes](#sexKills-note)|    130.0      |
+killstreak1              | player_info   |	The local player killstreak	  |See [notes](#killstreak1-note)|    130.0      |
+killstreak2              | player_info   |	The local player killstreak	  |See [notes](#killstreak2-note)|    130.0      |
+killstreak3              | player_info   |	The local player killstreak	  |See [notes](#killstreak3-note)|    130.0      |
+killstreak4              | player_info   |	The local player killstreak	  |See [notes](#killstreak4-note)|    130.0      |
+killstreak5              | player_info   |	The local player killstreak	  |See [notes](#killstreak5-note)|    130.0      |
+killstreak6              | player_info   |	The local player killstreak	  |See [notes](#killstreak6-note)|    130.0      |
+headshotKills              | player_info   |	The local player killed with headshot	  |See [notes](#headshotKills-note)|    130.0      |
+meleeKills              | player_info   |	The local player killed with a melee	  |See [notes](#meleeKills-note)|    130.0      |
+portalKills              | player_info   |	The local player portal killed	  |See [notes](#portalKills-note)|    130.0      |
+killsThroughPortal              | player_info   |	The local player killed through a portal	  |See [notes](#killsThroughPortal-note)|    130.0      |
+teabags              | player_info   |	The local player tea-bagged	  |See [notes](#teabags-note)|    130.0      |
 
 #### *id* note
 
@@ -289,9 +289,9 @@ Data Example:
 
 ### Info Updates
 
-key               | Category    | Values                    | Notes                 | Since Version |
+key               | Category    | Values                    | Notes                 | Since GEP Ver. |
 ----------------- | ------------| ------------------------- | --------------------- | ------------- |
-location          | game_info   |	The current location of the local player (x,y,z) |See [notes](#location-note)|    0.123      |
+location          | game_info   |	The current location of the local player (x,y,z) |See [notes](#location-note)|    123.0      |
 
 #### *location* note
 
@@ -303,11 +303,11 @@ Data Example:
 
 ### Events
 
-Event       | Event Data   | Fired When    | Notes              | Since Version |
+Event       | Event Data   | Fired When    | Notes              | Since GEP Ver. |
 ------------| -------------| --------------| ------------------ | --------------|
-matchOutcome| won/lost     |Player has died|See [notes](#matchoutcome-note)|     0.123     |
-matchStart  | null         |Player has died|See [notes](#matchstart-note)|     0.123     |
-matchEnd    | null         |Player has died|See [notes](#matchend-note)|     0.123     |
+matchOutcome| won/lost     |Player has died|See [notes](#matchoutcome-note)|     123.0     |
+matchStart  | null         |Player has died|See [notes](#matchstart-note)|     123.0     |
+matchEnd    | null         |Player has died|See [notes](#matchend-note)|     123.0     |
 
 #### *matchOutcome* note
 
@@ -331,9 +331,9 @@ Data Example:
 
 ### Events
 
-Event       | Event Data   | Fired When    | Notes              | Since Version |
+Event       | Event Data   | Fired When    | Notes              | Since GEP Ver. |
 ------------| -------------| --------------| ------------------ | --------------|
-killFeed    |<ul><li>killer name</li><li>weapon</li><li>victim name</li>|Player has died|See [notes](#killFeed-note)|     0.123     |
+killFeed    |<ul><li>killer name</li><li>weapon</li><li>victim name</li>|Player has died|See [notes](#killFeed-note)|     123.0     |
 
 #### *killFeed* note
 
@@ -345,23 +345,23 @@ Data Example:
 
 ### Events
 
-Event       | Event Data   | Fired When    | Notes              | Since Version |
+Event       | Event Data   | Fired When    | Notes              | Since GEP Ver. |
 ------------| -------------| --------------| ------------------ | --------------|
-disconnected| null         |The local player disconnects from the game.|           |     0.123     |
-reconnected | null         |The local player reconnects to the game.|          |     0.123     |
+disconnected| null         |The local player disconnects from the game.|           |     123.0     |
+reconnected | null         |The local player reconnects to the game.|          |     123.0     |
 
 ## `kill`
 
 ### Events
 
-Event       | Event Data   | Fired When    | Notes              | Since Version |
+Event       | Event Data   | Fired When    | Notes              | Since GEP Ver. |
 ------------| -------------| --------------| ------------------ | --------------|
-kill        |  Kill type   | The local player killed an enemy|See [notes](#kill-note)|     0.123     |
-victim      | Victim name  | The local player killed an enemy|See [notes](#victim-note)|     0.123     |
-headshot    | null         |The local player killed an enemy with a headshot|          |     0.123     |
-meleeKill   | null         |The local player killed an enemy with melee|          |     0.123     |
-portalKill  | null         |The local player killed an enemy with a portal|          |     0.123     |
-killThroughPortal | null   |The local player killed an enemy through a portal.|          |     0.123     |
+kill        |  Kill type   | The local player killed an enemy|See [notes](#kill-note)|     123.0     |
+victim      | Victim name  | The local player killed an enemy|See [notes](#victim-note)|     123.0     |
+headshot    | null         |The local player killed an enemy with a headshot|          |     123.0     |
+meleeKill   | null         |The local player killed an enemy with melee|          |     123.0     |
+portalKill  | null         |The local player killed an enemy with a portal|          |     123.0     |
+killThroughPortal | null   |The local player killed an enemy through a portal.|          |     123.0     |
 teabag      | null         |The local player tea-bagged an enemy.|          |     130.0     |
 
 #### *kill* note
@@ -387,7 +387,7 @@ Data Example:
 
 ### Events
 
-Event       | Event Data   | Fired When    | Notes              | Since Version |
+Event       | Event Data   | Fired When    | Notes              | Since GEP Ver. |
 ------------| -------------| --------------| ------------------ | --------------|
 assist        |  Kill type   | The local player assisted in killing an enemy|See [notes](#assists)|     130.0     |
 
@@ -401,10 +401,10 @@ Data Example:
 
 ### Events
 
-Event       | Event Data   | Fired When    | Notes              | Since Version |
+Event       | Event Data   | Fired When    | Notes              | Since GEP Ver. |
 ------------| -------------| --------------| ------------------ | --------------|
-death        |  null   |  The local player was killed|See [notes](#death-note)|     0.123     |
-killer        |  Killer name   |  The local player was killed|See [notes](#killer-note)|     0.123     |
+death        |  null   |  The local player was killed|See [notes](#death-note)|     123.0     |
+killer        |  Killer name   |  The local player was killed|See [notes](#killer-note)|     123.0     |
 
 #### *death* note
 
@@ -422,8 +422,8 @@ Data Example:
 
 ### Events
 
-Event       | Event Data   | Fired When    | Notes              | Since Version |
+Event       | Event Data   | Fired When    | Notes              | Since GEP Ver. |
 ------------| -------------| --------------| ------------------ | --------------|
-portalCreated|  null   |  The local player created a porta |    |     0.123     |
-portalClosed |  null   |  The local player closed a portal |    |     0.123     |
-portalUsed   |  null   |  The local player went through a portal|  |     0.123     |
+portalCreated|  null   |  The local player created a porta |    |     123.0     |
+portalClosed |  null   |  The local player closed a portal |    |     123.0     |
+portalUsed   |  null   |  The local player went through a portal|  |     123.0     |

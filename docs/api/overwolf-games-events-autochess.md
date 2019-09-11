@@ -40,7 +40,7 @@ Check game event status [here](../status/all) or easily check through your app [
 
 ### Info Updates
 
-key          | Category    | Values                    | Notes                 | Since Version |
+key          | Category    | Values                    | Notes                 | Since GEP Ver. |
 ------------ | ------------| ------------------------- | --------------------- | ------------- | 
 players      | roster      |A string holding a JSON array of player objects.|See [notes](#players-note)|     129.0     |
 
@@ -77,7 +77,7 @@ Notes:
 
 ### Info Updates
 
-key          | Category    | Values                    | Notes                 | Since Version |
+key          | Category    | Values                    | Notes                 | Since GEP Ver. |
 ------------ | ------------| ------------------------- | --------------------- | ------------- | 
 slot_x| match_info  |A list of currently available chess pieces for purchase in-game (showing up in the shop).|See [notes](#slot_x-note)|     131.0     |
 
@@ -93,7 +93,7 @@ Chess piece information is for each available slot out of the 5 available shop s
 
 ### Info Updates
 
-key          | Category    | Values                    | Notes                 | Since Version |
+key          | Category    | Values                    | Notes                 | Since GEP Ver. |
 ------------ | ------------| ------------------------- | --------------------- | ------------- | 
 cell_x| match_info  |A list of chess pieces currently waiting in your inventory, the row of cells below the game board.|See [notes](#cell_x-note)|     131.0     |
 
@@ -112,7 +112,7 @@ This information is for each bench slot out of the available 8 slots.
 
 ### Info Updates
 
-key          | Category    | Values                    | Notes                 | Since Version |
+key          | Category    | Values                    | Notes                 | Since GEP Ver. |
 ------------ | ------------| ------------------------- | --------------------- | ------------- | 
 cell_x_y| match_info  |Retruns the contents of a cell in the bottom half of the board.|See [notes](#cell_x_y-note)|  131.0   |
 
@@ -141,7 +141,7 @@ Next cell to the right is “cell_1_2” etc.
 
 ### Info Updates
 
-key          | Category    | Values                    | Notes                 | Since Version |
+key          | Category    | Values                    | Notes                 | Since GEP Ver. |
 ------------ | ------------| ------------------------- | --------------------- | ------------- | 
 roundNumber  | match_info  |The numeric designation of the current round.|See [notes](#roundNumber-note)|  131.0   |
 
@@ -157,14 +157,14 @@ Data Example:
 
 ### Info Updates
 
-key          | Category    | Values                    | Notes                 | Since Version |
+key          | Category    | Values                    | Notes                 | Since GEP Ver. |
 ------------ | ------------| ------------------------- | --------------------- | ------------- | 
 totalWon     | match_info  |The total number of rounds won.|See [notes](#totalWon-note)|  131.0   |
 totalLost    | match_info  |The total number of rounds lost.|See [notes](#totalLost-note)|  131.0   |
 
 ### Events
 
-Event       | Event Data   | Fired When    | Notes              | Since Version |
+Event       | Event Data   | Fired When    | Notes              | Since GEP Ver. |
 ------------| -------------| --------------| ------------------ | --------------|
 roundOutcome|victory/defeat|Winning or losing the round|                    |     131.0     | 
 
@@ -188,7 +188,7 @@ Data Example:
 
 ### Events
 
-Event       | Event Data   | Fired When    | Notes              | Since Version |
+Event       | Event Data   | Fired When    | Notes              | Since GEP Ver. |
 ------------| -------------| --------------| ------------------ | --------------|
 autochess_loading| null    |Loading screen shows up|            |     129.0     | 
 
@@ -196,7 +196,7 @@ autochess_loading| null    |Loading screen shows up|            |     129.0     
 
 ### Events
 
-Event       | Event Data   | Fired When    | Notes              | Since Version |
+Event       | Event Data   | Fired When    | Notes              | Since GEP Ver. |
 ------------| -------------| --------------| ------------------ | --------------|
 autochess_match_start| null| match starts  |                    |     129.0     | 
 
@@ -204,7 +204,7 @@ autochess_match_start| null| match starts  |                    |     129.0     
 
 ### Events
 
-Event       | Event Data   | Fired When    | Notes              | Since Version |
+Event       | Event Data   | Fired When    | Notes              | Since GEP Ver. |
 ------------| -------------| --------------| ------------------ | --------------|
 autochess_match_end| null| match ends	     |                    |     129.0     | 
 
@@ -212,13 +212,13 @@ autochess_match_end| null| match ends	     |                    |     129.0     
 
 ### Events
 
-Event       | Event Data   | Fired When    | Notes              | Since Version |
+Event       | Event Data   | Fired When    | Notes              | Since GEP Ver. |
 ------------| -------------| --------------| ------------------ | --------------|
 autochess_preparation_start| null  |Preparation phase starts|   |     129.0     | 
 
 ## `autochess_preparation_end`
 
-Event       | Event Data   | Fired When    | Notes              | Since Version |
+Event       | Event Data   | Fired When    | Notes              | Since GEP Ver. |
 ------------| -------------| --------------| ------------------ | --------------|
 autochess_preparation_end| null  |Preparation phase ends|       |     129.0     | 
 
@@ -226,13 +226,13 @@ autochess_preparation_end| null  |Preparation phase ends|       |     129.0     
 
 ### Info Updates
 
-key          | Category    | Values                    | Notes                 | Since Version |
+key          | Category    | Values                    | Notes                 | Since GEP Ver. |
 --------------- | -----------| ------------------------------------------------------------------------------------ | ------------------------------------ | ------------- | 
 pseudo_match_id | match_info | The current session’s ID code. Example:</br> `a4e8fc75-b35e-466f-976c-09f4ee633d95`  |  This is an Overwolf-generated code, unrelated to Valve.  |   0.130 |
 game_mode | match_info | Whether the current game mode is Dota2 or Autochess. |                 |   0.133       |
 
 ### Events
 
-Event       | Event Data   | Fired When    | Notes              | Since Version |
+Event       | Event Data   | Fired When    | Notes              | Since GEP Ver. |
 ------------| -------------| --------------| ------------------ | --------------|
 matchOutcome|victory/defeat|Winning or losing the match|        |     131.0     | 

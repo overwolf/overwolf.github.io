@@ -32,7 +32,7 @@ Check [here](../status/all) the game events status. OR -  easily check the game 
 
 ### Info Updates
 
-key          | Category    | Values                    | Notes                 | Since Version |
+key          | Category    | Values                    | Notes                 | Since GEP Ver. |
 ------------ | ------------| ------------------------- | --------------------- | ------------- | 
 phase | game_info   | The current game scene/phase. See [notes](#phase-notes) below |                       |   123.0  |
 
@@ -55,9 +55,9 @@ Example:
 
 ### Info Updates
 
-key          | Category    | Values                    | Notes                 | Since Version |
+key          | Category    | Values                    | Notes                 | Since GEP Ver. |
 --------------- | -----------| ------------------------------------------------------------------------------------ | ------------------------------------ | ------------- | 
-pseudo_match_id | match_info | The current session’s ID code. Example:</br> `0c0ea3df-97ea-4d3a-b1f6-f8e34042251f`  |  This is an Overwolf-generated code. |   130.0.15 |
+pseudo_match_id | match_info | The current session’s ID code. Example:</br> `0c0ea3df-97ea-4d3a-b1f6-f8e34042251f`  |  This is an Overwolf-generated code. |   130.0 |
 game_mode | match_info   | The current type of game mode. |See [notes](#game_mode-notes) below |   134.0  |
 
 #### *game_mode* note
@@ -70,14 +70,14 @@ Data Example:
 
 ### Info Updates
 
-key          | Category    | Values                            | Notes                 | Since Version |
+key          | Category    | Values                            | Notes                 | Since GEP Ver. |
 ------------ | ------------| --------------------------------- | --------------------- | ------------- | 
 number       | round   | The number of the current round</br>Example:</br>`{"round":{"number":"3"}}` |                       |   123.0 |
 score       | match   | Match score</br>Example:</br>`{"match":{"score":"{\"blue\":\"2\",\"orange\":\"1\"}"}}` |                       |   123.0  |
 
 ### Events
 
-Event | Event Data                        | Fired When                  | Notes              | Since Version |
+Event | Event Data                        | Fired When                  | Notes              | Since GEP Ver. |
 ------| ----------------------------------| --------------------------- | ------------------ | --------------|
 roundStart | null | The player’s champion died  |  round starts |     123.0      |
 roundEnd | null | The player’s champion died  | round ends |     123.0      |
@@ -88,7 +88,7 @@ matchOutcome | victory / defeat</br>`{"name":"matchOutcome","data":"defeat"}` | 
 
 ### Info Updates
 
-key          | Category    | Values                    | Notes                 | Since Version |
+key          | Category    | Values                    | Notes                 | Since GEP Ver. |
 --------------- | -----------| ------------------------------------------------------------------------------------ | ------------------------------------ | ------------- | 
 roster_XX | players | This feature provides info for the currently active players (10 players). See [notes](#roster_xx-notes) below |  This is an Overwolf-generated code. |   123.0 |
 team | player | The player’s current team – Orange/Blue  |   |   123.0 |
@@ -119,7 +119,7 @@ In case the player has left the match, a new “roster_XX” object will be assi
 
 ### Events
 
-Event  | Event Data                                       |               Fired When                  | Notes     | Since Version |
+Event  | Event Data                                       |               Fired When                  | Notes     | Since GEP Ver. |
 -------| -------------------------------------------------| ----------------------------------------- | --------- | --------------|
 kill | null | The local player killed an enemy |                  |   123.0     |
 headshot | null | The local player killed an enemy with a headshot |   |   123.0     |
@@ -129,7 +129,7 @@ headshot | null | The local player killed an enemy with a headshot |   |   123.0
 
 ### Events
 
-Event  | Event Data                                       |               Fired When                  | Notes     | Since Version |
+Event  | Event Data                                       |               Fired When                  | Notes     | Since GEP Ver. |
 -------| -------------------------------------------------| ----------------------------------------- | --------- | --------------|
 knockedout | null | The local player’s hp reaches 20. |                  |   123.0     |
 death | null |  The local player dies |                  |   123.0     |

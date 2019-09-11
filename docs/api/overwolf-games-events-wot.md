@@ -30,7 +30,7 @@ Check [here](../status/all) the game events status. OR -  easily check the game 
 
 ### Events
 
-Event      | Event Data  | Fired When          | Notes              | Since Version |
+Event      | Event Data  | Fired When          | Notes              | Since GEP Ver. |
 -----------| ------------| ------------------- | ------------------ | --------------|
 kill       |See [notes](#kill-note)| A tank was destroyed |         |     47.0      | 
 one_shot_kill|See [notes](#one_shot_kill-note)| The player’s tank destroyed another tank in a single shot (without any assistance from other players)  |       |     47.0      | 
@@ -81,7 +81,7 @@ False if the event refers to an ally unit
 
 ### Events
 
-Event      | Event Data  | Fired When          | Notes              | Since Version |
+Event      | Event Data  | Fired When          | Notes              | Since GEP Ver. |
 -----------| ------------| ------------------- | ------------------ | --------------|
 death      |See [notes](#death-note)| The player’s tank was destroyed |         |     47.0      | 
 hit	       |See [notes](#hit-note)| The player’s tank was damaged |         |     47.0      | 
@@ -106,7 +106,7 @@ JSON containing:
 
 ### Info Updates
 
-key          | Category    | Values                            | Notes                 | Since Version |
+key          | Category    | Values                            | Notes                 | Since GEP Ver. |
 ------------ | ------------| --------------------------------- | --------------------- | ------------- |
 game_start_timestamp| game_info   |Date string of the time the game was launched|               |      47.0     |
 game_state   | game_info   |battle/hangar/wot_starting/replay|               |      47.0     |
@@ -122,7 +122,7 @@ Data Example:
 
 ## `match_info`
 
-key          | Category    | Values                            | Notes                 | Since Version |
+key          | Category    | Values                            | Notes                 | Since GEP Ver. |
 ------------ | ------------| --------------------------------- | --------------------- | ------------- |
 pseudo_match_id| match_info   |The current session’s ID code.|See [notes](#pseudo_match_id-note)|      47.0     |
 

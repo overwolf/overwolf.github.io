@@ -31,7 +31,7 @@ Check [here](../status/all) the game events status. OR -  easily check the game 
 
 ### Info Updates
 
-key               | Category    | Values                    | Notes                 | Since Version |
+key               | Category    | Values                    | Notes                 | Since GEP Ver. |
 ----------------- | ------------| ------------------------- | --------------------- | ------------- |
 collection        | game_info   | The current cards collection of the local player. See [notes](#collection-note) |     |   117.1 |
 
@@ -68,7 +68,7 @@ Example for cards "collection":
 
 ### Info Updates
 
-key               | Category    | Values                    | Notes                 | Since Version |
+key               | Category    | Values                    | Notes                 | Since GEP Ver. |
 ----------------- | ------------| ------------------------- | --------------------- | ------------- |
 scene_state | game_info   |  The current game scene. See [notes](#scene_state-note) |     |   117.1 |
 
@@ -94,7 +94,7 @@ Can be one of the following:
 
 ### Info Updates
 
-key               | Category    | Values                    | Notes                 | Since Version |
+key               | Category    | Values                    | Notes                 | Since GEP Ver. |
 ----------------- | ------------| ------------------------- | --------------------- | ------------- |
 deck_id           | decks       |  The “decks” feature provides data about the currently “visible” decks. | See [notes](#deck_id-note)    |   119.1 |
 selected_deck     | selected_deck | The selected deck.  |  See [notes](#selected_deck-note)   |   119.1 |
@@ -149,7 +149,7 @@ Example for a “selected deck” structure:
 
 ### Info Updates
 
-key               | Category    | Values                    | Notes                 | Since Version |
+key               | Category    | Values                    | Notes                 | Since GEP Ver. |
 ----------------- | ------------| ------------------------- | --------------------- | ------------- |
 localPlayer | playersInfo   |  See [notes](#localPlayer-note) |     |   123.0 |
 opponent | playersInfo   |  See [notes](#opponent-note) |     |   123.0 |
@@ -182,7 +182,7 @@ opponent | playersInfo   |  See [notes](#opponent-note) |     |   123.0 |
 
 ### Events
 
-Event       | Event Data   | Fired When    | Notes              | Since Version |
+Event       | Event Data   | Fired When    | Notes              | Since GEP Ver. |
 ------------| -------------| --------------| ------------------ | --------------|
 match_start| mode</br>`{"name":"match_start","data":"standard"}` | match starts	|  | 123.0  |
 match_end  | null	 | match ends|  | 123.0  |
@@ -191,7 +191,7 @@ match_end  | null	 | match ends|  | 123.0  |
 
 ### Info Updates
 
-key               | Category    | Values                    | Notes                 | Since Version |
+key               | Category    | Values                    | Notes                 | Since GEP Ver. |
 ----------------- | ------------| ------------------------- | --------------------- | ------------- |
 match_type        | match_info  | The type of the current match. |See [notes](#match_type-note)|   134.0 |
 
@@ -203,7 +203,7 @@ Data Example:
 
 ### Events
 
-Event       | Event Data   | Fired When    | Notes              | Since Version |
+Event       | Event Data   | Fired When    | Notes              | Since GEP Ver. |
 ------------| -------------| --------------| ------------------ | --------------|
 match_start| mode</br>`{"name":"match_start","data":"standard"}` | match starts	|  | 134.0  |
 match_end   | null         | match ends   	|                   |     134.0     |
@@ -213,7 +213,7 @@ match_outcome| "WON" / "LOST" | match concludes	|               |     134.0     
 
 ### Info Updates
 
-key               | Category    | Values                    | Notes                 | Since Version |
+key               | Category    | Values                    | Notes                 | Since GEP Ver. |
 ----------------- | ------------| ------------------------- | --------------------- | ------------- |
 pseudo_match_id   | match_info  | The ID of the current match. |See [notes](#pseudo_match_id-note)|   134.0 |
 
