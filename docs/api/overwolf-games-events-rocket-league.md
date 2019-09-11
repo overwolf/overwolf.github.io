@@ -21,7 +21,7 @@ Please read the [overwolf.games.events](overwolf-games-events) documentation pag
 * [match](#match)
 * [roster](#roster)
 * [me](#me)
-* [match_info](#match-info)
+* [match_info](#match_info)
 
 ## Game events status
 
