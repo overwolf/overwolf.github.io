@@ -266,6 +266,7 @@ kill_feed | See example below | When information is presented on the game’s UI
 
 The following properties are provided:
 
+* local_player_name
 * attackerName
 * victimName
 * weaponName
@@ -273,4 +274,6 @@ The following properties are provided:
 
 #### Event data example
 
-`{"attackerName":"NerdGhela","victimName":"DJerryKhan","weaponName":"energy_ar","action":"knockdown"}`
+```json
+{"events":[{"name":"kill_feed","data":"{"local_player_name":"Shargaas","attackerName":"shayan3200", "victimName":"i999n","weaponName":"alternator","action":"knockdown"}"}]}
+```
