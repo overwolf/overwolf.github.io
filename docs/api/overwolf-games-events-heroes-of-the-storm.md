@@ -141,6 +141,7 @@ scene        | game_info   | The current menu state    | See [notes](#scene-note
 Data Examples:
 
 ```json
+{"info":{"game_info":{"scene":"loading_screen"}},"feature":"game_info"}
 {"info":{"game_info":{"scene":"hero_select"}}, "feature":"game_info"}
 {"info":{"game_info":{"scene":"unranked_preparing"}}, "feature":"game_info"}
 {"info":{"game_info":{"scene":"collection"}}, "feature":"game_info"}
