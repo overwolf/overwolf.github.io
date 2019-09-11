@@ -175,7 +175,8 @@
 </table>
 <h4><a class="anchor" aria-hidden="true" id="scene-note"></a><a href="#scene-note" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><em>scene</em> note:</h4>
 <p>Data Examples:</p>
-<pre><code class="hljs css language-json">{<span class="hljs-attr">"info"</span>:{<span class="hljs-attr">"game_info"</span>:{<span class="hljs-attr">"scene"</span>:<span class="hljs-string">"hero_select"</span>}}, <span class="hljs-attr">"feature"</span>:<span class="hljs-string">"game_info"</span>}
+<pre><code class="hljs css language-json">{<span class="hljs-attr">"info"</span>:{<span class="hljs-attr">"game_info"</span>:{<span class="hljs-attr">"scene"</span>:<span class="hljs-string">"loading_screen"</span>}},<span class="hljs-attr">"feature"</span>:<span class="hljs-string">"game_info"</span>}
+{<span class="hljs-attr">"info"</span>:{<span class="hljs-attr">"game_info"</span>:{<span class="hljs-attr">"scene"</span>:<span class="hljs-string">"hero_select"</span>}}, <span class="hljs-attr">"feature"</span>:<span class="hljs-string">"game_info"</span>}
 {<span class="hljs-attr">"info"</span>:{<span class="hljs-attr">"game_info"</span>:{<span class="hljs-attr">"scene"</span>:<span class="hljs-string">"unranked_preparing"</span>}}, <span class="hljs-attr">"feature"</span>:<span class="hljs-string">"game_info"</span>}
 {<span class="hljs-attr">"info"</span>:{<span class="hljs-attr">"game_info"</span>:{<span class="hljs-attr">"scene"</span>:<span class="hljs-string">"collection"</span>}}, <span class="hljs-attr">"feature"</span>:<span class="hljs-string">"game_info"</span>}
 {<span class="hljs-attr">"info"</span>:{<span class="hljs-attr">"game_info"</span>:{<span class="hljs-attr">"scene"</span>:<span class="hljs-string">"home"</span>}}, <span class="hljs-attr">"feature"</span>:<span class="hljs-string">"game_info"</span>}
@@ -192,78 +193,103 @@
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="roster-note"></a><a href="#roster-note" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><em>roster</em> note:</h4>
+<p>Provided data:</p>
+<ul>
+<li>player_level</li>
+<li>battletag</li>
+<li>if local = true/false</li>
+<li>team - chaos/order</li>
+<li>hero_name</li>
+</ul>
 <p>Data Example:</p>
-<pre><code class="hljs css language-json">"roster":"{
-"Player 10":{  
-   "player_name":"Player 10",
-   "battletag":"Player 10",
-   "hero_name":"Kerrigan",
-   "local":false,
-   "team":"chaos"
-},
-"Player 2":{  
-   "player_name":"Player 2",
-   "battletag":"Player 2",
-   "hero_name":"Malfurion",
-   "local":false,
-   "team":"order"
-},
-"Player 3":{  
-   "player_name":"Player 3",
-   "battletag":"Player 3",
-   "hero_name":"Anub'arak",
-   "local":false,
-   "team":"order"
-},
-"Player 4":{  
-   "player_name":"Player 4",
-   "battletag":"Player 4",
-   "hero_name":"Valla",
-   "local":false,
-   "team":"order"
-},
-"Player 5":{  
-   "player_name":"Player 5",
-   "battletag":"Player 5",
-   "hero_name":"Malthael",
-   "local":false,
-   "team":"order"
-},
-"Player 6":{  
-   "player_name":"Player 6",
-   "battletag":"Player 6",
-   "hero_name":"Rehgar",
-   "local":false,
-   "team":"chaos"
-},
-"Player 7":{  
-   "player_name":"Player 7",
-   "battletag":"Player 7",
-   "hero_name":"Muradin",
-   "local":false,
-   "team":"chaos"
-},
-"Player 8":{  
-   "player_name":"Player 8",
-   "battletag":"Player 8",
-   "hero_name":"Tychus",
-   "local":false,
-   "team":"chaos"
-},
-"Player 9":{  
-   "player_name":"Player 9",
-   "battletag":"Player 9",
-   "hero_name":"Imperius",
-   "local":false,
-   "team":"chaos"
-},
-"alice":{  
-   "player_name":"alice",
-   "battletag":"alice#2742",
-   "hero_name":"Butcher",
-   "local":true,
-   "team":"order"
-}
+<pre><code class="hljs css language-json">{ 
+   "info":{ 
+      "roster":{ 
+         "roster":"{"Cerese":{ 
+            "player_name":"Cerese",
+            "battletag":"Cerese#2249",
+            "player_level":"811",
+            "hero_name":"Ana",
+            "local":false,
+            "team":"order"
+         },
+         "DREADr":{ 
+            "player_name":"DREADr",
+            "battletag":"DREADr#2716",
+            "player_level":"1001",
+            "hero_name":"Falstad",
+            "local":false,
+            "team":"chaos"
+         },
+         "Devastator":{ 
+            "player_name":"Devastator",
+            "battletag":"Devastator#22538",
+            "player_level":"454",
+            "hero_name":"Valla",
+            "local":false,
+            "team":"order"
+         },
+         "Hostik":{ 
+            "player_name":"Hostik",
+            "battletag":"Hostik#2133",
+            "player_level":"975",
+            "hero_name":"Abathur",
+            "local":false,
+            "team":"order"
+         },
+         "Kafei":{ 
+            "player_name":"Kafei",
+            "battletag":"Kafei#2771",
+            "player_level":"250",
+            "hero_name":"Nova",
+            "local":false,
+            "team":"order"
+         },
+         "Monomax":{ 
+            "player_name":"Monomax",
+            "battletag":"Monomax#2130",
+            "player_level":"813",
+            "hero_name":"Artanis",
+            "local":false,
+            "team":"chaos"
+         },
+         "SouthernUral":{ 
+            "player_name":"SouthernUral",
+            "battletag":"SouthernUral#2738",
+            "player_level":"1379",
+            "hero_name":"Rehgar",
+            "local":false,
+            "team":"chaos"
+         },
+         "ladyboner":{ 
+            "player_name":"ladyboner",
+            "battletag":"ladyboner#2168",
+            "player_level":"519",
+            "hero_name":"Zarya",
+            "local":false,
+            "team":"chaos"
+         },
+         "moustacho":{ 
+            "player_name":"moustacho",
+            "battletag":"moustacho#21261",
+            "player_level":"264",
+            "hero_name":"Imperius",
+            "local":false,
+            "team":"order"
+         },
+         "?????????":{ 
+            "player_name":"?????????",
+            "battletag":"?????????#2698",
+            "player_level":"40",
+            "hero_name":"Butcher",
+            "local":true,
+            "team":"chaos"
+         }
+      }      "
+    }
+  },
+  "      feature":"roster"
+   }
 </code></pre>
 <h2><a class="anchor" aria-hidden="true" id="kill"></a><a href="#kill" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>kill</code></h2>
 <h3><a class="anchor" aria-hidden="true" id="events-1"></a><a href="#events-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Events</h3>
@@ -308,7 +334,7 @@
 <p>Data Example:</p>
 <pre><code class="hljs css language-json">{<span class="hljs-attr">"events"</span>:[{<span class="hljs-attr">"name"</span>:<span class="hljs-string">"death"</span>, <span class="hljs-attr">"data"</span>:<span class="hljs-string">""</span>}]}
 </code></pre>
-</span></div></article></div><div class="docLastUpdate"><em>Last updated on 2019-8-26 by eransharv</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/api/overwolf-games-events-heartstone"><span class="arrow-prev">← </span><span>Heartstone Events</span></a><a class="docs-next button" href="/docs/api/overwolf-games-events-lol"><span>LOL Events</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#sample-apps">Sample Apps</a></li><li><a href="#available-features">Available Features</a></li><li><a href="#game-events-status">Game events status</a></li><li><a href="#me"><code>me</code></a><ul class="toc-headings"><li><a href="#info-updates">Info Updates</a></li></ul></li><li><a href="#match_info"><code>match_info</code></a><ul class="toc-headings"><li><a href="#info-updates-1">Info Updates</a></li><li><a href="#events">Events</a></li></ul></li><li><a href="#game_info"><code>game_info</code></a><ul class="toc-headings"><li><a href="#info-updates-2">Info Updates</a></li></ul></li><li><a href="#roster"><code>roster</code></a><ul class="toc-headings"><li><a href="#info-updates-3">Info Updates</a></li></ul></li><li><a href="#kill"><code>kill</code></a><ul class="toc-headings"><li><a href="#events-1">Events</a></li></ul></li><li><a href="#death"><code>death</code></a><ul class="toc-headings"><li><a href="#events-2">Events</a></li></ul></li></ul></nav></div><footer class="site-footer"><div class="container"><ul><li>Legal</li><li><a href="/docs/topics/legal-overview">Terms overview</a></li><li><a href="/docs/topics/legal-developers-terms">Developer&#x27;s terms</a></li><li><a href="/docs/topics/legal-app-terms">App terms</a></li><li><a href="http://www.overwolf.com/legal/" target="_blank">Overwolf terms</a></li><li><a href="http://www.overwolf.com/legal/#Privacy-policy" target="_blank">Overwolf Privacy policy</a></li></ul><ul><li>Support</li><li><a href=" https://discuss.developers.overwolf.com/" target="_blank">Questions and Answers</a></li><li><a href="https://discordapp.com/invite/cjjrZDp" target="_blank">Discord</a></li><li><a href="/docs/support/contact-us#join-our-slack">Slack</a></li><li><a href="https://www.facebook.com/OverwolfDevs" target="_blank">Facebook</a></li><li><a href="https://twitter.com/OverwolfDevs" target="_blank">Twitter</a></li></ul><ul><li>Documentation</li><li><a href="/docs/api/changelog">Changelog</a></li><li><a href="/docs/api/overwolf-api-overview">API</a></li><li><a href="/docs/start/app-creation-process">App Creation Process</a></li><li><a href="/docs/topics/best-practices-overview">Best Practices</a></li><li><a href="/docs/status/all">Game Events status</a></li></ul><ul><li>Information</li><li><a href="http://www.overwolf.com/careers/">Careers</a></li><li><a href="https://play.overwolf.com/fund/" target="_blank">Fund</a></li><li><a href="https://medium.com/overwolf-developers" target="_blank">Developers Blog</a></li><li><a href="https://www.overwolf.com/appstore" target="_blank">Overwolf Appstore</a></li></ul></div></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+</span></div></article></div><div class="docLastUpdate"><em>Last updated on 2019-9-11 by Sh4rgaas</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/api/overwolf-games-events-heartstone"><span class="arrow-prev">← </span><span>Heartstone Events</span></a><a class="docs-next button" href="/docs/api/overwolf-games-events-lol"><span>LOL Events</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#sample-apps">Sample Apps</a></li><li><a href="#available-features">Available Features</a></li><li><a href="#game-events-status">Game events status</a></li><li><a href="#me"><code>me</code></a><ul class="toc-headings"><li><a href="#info-updates">Info Updates</a></li></ul></li><li><a href="#match_info"><code>match_info</code></a><ul class="toc-headings"><li><a href="#info-updates-1">Info Updates</a></li><li><a href="#events">Events</a></li></ul></li><li><a href="#game_info"><code>game_info</code></a><ul class="toc-headings"><li><a href="#info-updates-2">Info Updates</a></li></ul></li><li><a href="#roster"><code>roster</code></a><ul class="toc-headings"><li><a href="#info-updates-3">Info Updates</a></li></ul></li><li><a href="#kill"><code>kill</code></a><ul class="toc-headings"><li><a href="#events-1">Events</a></li></ul></li><li><a href="#death"><code>death</code></a><ul class="toc-headings"><li><a href="#events-2">Events</a></li></ul></li></ul></nav></div><footer class="site-footer"><div class="container"><ul><li>Legal</li><li><a href="/docs/topics/legal-overview">Terms overview</a></li><li><a href="/docs/topics/legal-developers-terms">Developer&#x27;s terms</a></li><li><a href="/docs/topics/legal-app-terms">App terms</a></li><li><a href="http://www.overwolf.com/legal/" target="_blank">Overwolf terms</a></li><li><a href="http://www.overwolf.com/legal/#Privacy-policy" target="_blank">Overwolf Privacy policy</a></li></ul><ul><li>Support</li><li><a href=" https://discuss.developers.overwolf.com/" target="_blank">Questions and Answers</a></li><li><a href="https://discordapp.com/invite/cjjrZDp" target="_blank">Discord</a></li><li><a href="/docs/support/contact-us#join-our-slack">Slack</a></li><li><a href="https://www.facebook.com/OverwolfDevs" target="_blank">Facebook</a></li><li><a href="https://twitter.com/OverwolfDevs" target="_blank">Twitter</a></li></ul><ul><li>Documentation</li><li><a href="/docs/api/changelog">Changelog</a></li><li><a href="/docs/api/overwolf-api-overview">API</a></li><li><a href="/docs/start/app-creation-process">App Creation Process</a></li><li><a href="/docs/topics/best-practices-overview">Best Practices</a></li><li><a href="/docs/status/all">Game Events status</a></li></ul><ul><li>Information</li><li><a href="http://www.overwolf.com/careers/">Careers</a></li><li><a href="https://play.overwolf.com/fund/" target="_blank">Fund</a></li><li><a href="https://medium.com/overwolf-developers" target="_blank">Developers Blog</a></li><li><a href="https://www.overwolf.com/appstore" target="_blank">Overwolf Appstore</a></li></ul></div></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
                 document.addEventListener('keyup', function(e) {
                   if (e.target !== document.body) {
                     return;
