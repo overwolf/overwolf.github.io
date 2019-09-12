@@ -8,7 +8,7 @@ Use the overwolf.media.replays API to capture a **short** video replay of the cu
 
 ## Methods Reference
 
-* [overwolf.media.replays.turnOn()](#turnonsettings-callback)
+* [overwolf.media.replays.turnOn()](#turnonparameters-callback)
 * [overwolf.media.replays.turnOff()](#turnoffcallback)
 * [overwolf.media.replays.getState()](#getstatereplaytype-callback)
 * [overwolf.media.replays.getState()](#getstatecallback)
@@ -35,7 +35,7 @@ Use the overwolf.media.replays API to capture a **short** video replay of the cu
 * [overwolf.media.replays.ReplayHighlightsSetting](#replayhighlightssetting-object) Object
 * [overwolf.media.replays.enums.ReplayType](#replaytype-enum) enum
 
-## turnOn(settings, callback)
+## turnOn(parameters, callback)
 #### Version added: 0.130
 
 > Turns on background replay capturing. Without calling it first, you will not be able to create video replays.
@@ -46,10 +46,10 @@ Using this method you can quickly get the game highlights videos without the ove
 
 There’s no need to know/understand each supported game’s mechanics, game flow, edge cases, timings, etc. Just request for any supported game highlight and OW will provide you with a video file that includes this event.
 
-Parameter | Type                  | Description                                                                                                           |
---------- | ------------------------------------------------------------------- | ----------------------------------------------------------------------- |
-settings  | [ReplayHighlightsSetting](#replayhighlightssetting-object) object   | The video capture settings                                              |
-callback  | function                                                            | A callback function which will be called with the status of the request |
+Parameter   | Type                                           | Description                                                             |
+----------- | ---------------------------------------------- | ----------------------------------------------------------------------- |
+parameters  | [ReplaySetting](#replaysetting-object) object  |  Container for the capture configuration                                              |
+callback    | function                                       | A callback function which will be called with the status of the request |
 
 #### Callback argument: Success
 
@@ -68,13 +68,28 @@ A callback function which will be called with the status of the request
 #### Usage Example
 
 ```javascript
+ let settings = {
+    "video": {
+        "sub_folder_name": folderName,
+        "buffer_length": bufferLength,
+        "tobii": {
+        "visible": tobiiService.getTobiiIsOn(), //false
+        "effect": tobiiService.getEffectSetting() //inverted,
+        },
+        "override_overwolf_setting" : false,  //<=== Set to true
+        "fps" :30,
+        "width" :1920,
+        "height" : 1080
+    }
+};
+
 overwolf.media.replays.turnOn({
-      "settings": settings,
-      "highlights": {
+    "streamSetting": settings,
+    "highlights": {
         "enable" : true, //set false if you want to record the highligths manually
         "requiredHighlights" : ["death","assist","victory"] //an interesting evenst that happened in game
-      }
-    }, callback);
+    }
+}, callback);
 ```
 
 ## turnOff(callback)
@@ -358,6 +373,16 @@ Parameter | Type | Description                   |
 --------- | -----| ----------------------------- |
 enable      | bool  | Enable auto Highlights recording |
 requiredHighlights   | string  | An array of requested highlights. use ["*"] to register all features. You can get the list of the supported highlights using the method [getHighlightsFeatures()](#gethighlightsfeaturesgameid-callback))   |
+
+## ReplaySetting Object
+#### Version added: 0.133
+
+> Container for the capture configuration.
+
+Parameter | Type                                                               | Description                                  |
+--------- | -------------------------------------------------------------------| -------------------------------------------- |
+highlights| [ReplayHighlightsSetting](#replayhighlightssetting-object) Object  | **Optional**. Enable auto Highlights recording |
+settings  | [StreamParams](overwolf-streaming#streamparams-object) Object      | Mandatory. the settings required to start a stream      |
 
 
 ## ReplayType enum
