@@ -76,7 +76,7 @@ To release a new article:
 
 2. You will receive a username and a password for the knowledge base site.
 
-3. Login to the [Overwolf knowledge base site](http://support-admin.overwolf.com/).
+3. Login to the [Overwolf knowledge base site](http://support-admin.overwolf.com/wp-login.php).
 
 4. Click on "Knowledge Base" using the sidebar menu.
 
