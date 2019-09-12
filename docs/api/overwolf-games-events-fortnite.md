@@ -32,9 +32,7 @@ Please read the [overwolf.games.events](overwolf-games-events) documentation pag
 
 ## Game events status
 
-It is highly recommended to communicate errors and warnings to your app users. 
-
-Check [here](../status/all) the game events status. OR -  easily check the game events status from your app, [using our API](../topics/howto-check-events-status-from-app).
+It is highly recommended to communicate errors and warnings to app users. Check game event status [here](../status/all). You can also easily check game events status from your app, [using our API](../topics/howto-check-events-status-from-app).
 
 ## `kill`
 
@@ -49,7 +47,7 @@ kills             | match_info  | Total number of kills in the match |          
 Event       | Event Data   | Fired When    | Notes              | Since GEP Ver. |
 ------------| -------------| --------------| ------------------ | --------------|
 kill        | null         | The local player killed another player | |  110.0.0  |
-knockout    | null     | The local player knockedout another player |  | 110.0.0  |
+knockout    | null     | The local player knocked out another player |  | 110.0.0  |
 hit         | isHeadshot – bool(“true” when the hit is a “headshot”)| The local player hits an enemy with a weapon (hits with a pickaxe are not counted) See [notes](#hit-note) |                    |     110.0.0     |
 
 #### *hit* note
@@ -82,7 +80,7 @@ Data Example:
 
 Event       | Event Data   | Fired When    | Notes              | Since GEP Ver. |
 ------------| -------------| --------------| ------------------ | --------------|
-killer      | The name of the killer. See [notes](#killer-note) | The local player was killed | |  117.0  |
+killer      | Name of the killer. See [notes](#killer-note) | The local player was killed | |  117.0  |
 
 #### *killer* note
 
@@ -142,7 +140,7 @@ pseudo_match_id   | match_info  |The current match’s ID code. See [notes](#pse
 
 #### *pseudo_match_id* note
 
-Note that this is an Overwolf-generated code. Unrelated to Epic Games.
+Note that this is an Overwolf-generated code, not an Epic Games designation.
 
 Example data:
 
@@ -157,16 +155,16 @@ Example data:
 key          | Category    | Values                    | Notes                 | Since GEP Ver. |
 ------------ | ------------| ------------------------- | --------------------- | ------------- |
 rank         | match_info  |The player’s rank at the end of the match|         |   110.0       |
-total_teams  | match_info  |The total number of active teams|                  |   110.0       |
-total_players| match_info  |The total number of active players|                |   110.0       |
+total_teams  | match_info  |Total number of active teams|                  |   110.0       |
+total_players| match_info  |Total number of active players|                |   110.0       |
 
 #### *total_teams* note
 
-This is a dynamic variable that is being updated every time team joins or leaves (all of the team members died) the game
+This is a dynamic variable that is being updated every time a team joins, leaves or dies during the game
 
 #### *total_players* note
 
-This is a dynamic variable that is being updated every time a player joins or leaves (die) the game
+This is a dynamic variable that is being updated every time a player joins, leaves or dies during the game
 
 ## `me`
 
@@ -176,7 +174,7 @@ key          | Category    | Values                    | Notes                 |
 ------------ | ------------| ------------------------- | --------------------- | ------------- |
 name         | me          |   The player’s nickname. See [notes](#name-notes) |    |   110.0       |
 health       | me  |The player’s current health % (100-0). See [notes](#health-notes)| |   110.0       |
-accuracy     | me  |The current local player’s accuracy (hits/total shots). See [notes](#accuracy-note)|   |   110.0       |
+accuracy     | me  |The local player’s current accuracy (hits/total shots). See [notes](#accuracy-note)|   |   110.0       |
 shield       | me  |The amount of shield the local player currently has. See [notes](#shield-notes)|         |   110.0       |
 
 #### *name* note
@@ -225,7 +223,7 @@ phase        | game_info   |The game’s current state, can be one of the follow
 
 key          | Category    | Values                    | Notes                 | Since GEP Ver. |
 ------------ | ------------| ------------------------- | --------------------- | ------------- |
-location     | game_info   |The player’s current grid location, represented by (x,y,z).<ul><li>Top left corner of the map is (0,0,z)</li><li>Bottom right corner of the map is (2500,2500,z). See [notes](#location-note)|    |   114.1       |
+location     | game_info   |Player’s current grid location, represented by (x,y,z).<ul><li>Top left corner of the map is (0,0,z)</li><li>Bottom right corner of the map is (2500,2500,z). See [notes](#location-note)|    |   114.1       |
   
 #### *location* note
 
@@ -241,7 +239,7 @@ Data Example:
 
 key          | Category    | Values                    | Notes                 | Since GEP Ver. |
 ------------ | ------------| ------------------------- | --------------------- | ------------- |
-nicknames    | match_info  | The names of the players in the user’s team. See [notes](#team-note) |    |   170.0       |
+nicknames    | match_info  | Names of the players in the user’s team. See [notes](#team-note) |    |   170.0       |
 
 #### *team* note
 
@@ -257,17 +255,17 @@ Data Example:
 
 key          | Category    | Values                    | Notes                 | Since GEP Ver. |
 ------------ | ------------| ------------------------- | --------------------- | ------------- |
-item_X       | inventory   | The current inventory of the local player. See [notes](#item_X-note) |    |   119.2       |
-selected_slot|selected_slot| The currently selected slot in the quickbar. See [notes](#selected_slot-note) |    |   119.2       |
-quickbar_X   | quickbar    | The display names of the items in the primary quickbar. (list of possible display names can be found [here](https://www.stormshield.one/items?utf8=%E2%9C%93&items_grid%5Bkind%5D=br_weapon&items_grid%5Bpatch_added%5D=&items_grid%5Bhash_code%5D=&commit=Search)) See [notes](#quickbar_X-note) |    |   119.2       |
+item_X       | inventory   |Current inventory of the local player. See [notes](#item_X-note) |    |   119.2       |
+selected_slot|selected_slot|Currently selected slot in the quickbar. See [notes](#selected_slot-note) |    |   119.2       |
+quickbar_X   | quickbar    |Display names of the items in the primary quickbar. (list of possible display names can be found [here](https://www.stormshield.one/items?utf8=%E2%9C%93&items_grid%5Bkind%5D=br_weapon&items_grid%5Bpatch_added%5D=&items_grid%5Bhash_code%5D=&commit=Search)) See [notes](#quickbar_X-note) |    |   119.2       |
 selected_material| selected_material  | The currently selected building material. See [notes](#selected_material-note) |    |   119.2 |
 
 #### *item_X* note
 
-Each item in the inventory contains the following properties:
+Each item in the inventory has the following properties:
 * name – display name of the item (list of possible display names can be found [here](https://www.stormshield.one/items?utf8=%E2%9C%93&items_grid%5Bkind%5D=br_weapon&items_grid%5Bpatch_added%5D=&items_grid%5Bhash_code%5D=&commit=Search))
 * count – number of units
-* ammo – amount loaded ammo (when relevant)
+* ammo – amount of loaded ammo (when relevant)
 * rarity – rarity of the item [0-4]
   * 0 – none
   * 1 – green
@@ -330,4 +328,4 @@ Data Example:
 
 key               | Category    | Values                    | Notes                 | Since GEP Ver. |
 ----------------- | ------------| ------------------------- | --------------------- | ------------- |
-ping             | performance  |The latency changes of the local player in the current match.	| This feature is currently disabled.|  128.0       |
+ping             | performance  |Latency changes of the local player in the current match.	| This feature is currently disabled.|  128.0       |
