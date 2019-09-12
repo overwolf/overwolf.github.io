@@ -76,7 +76,7 @@ A callback function which will be called with the status of the request
         "visible": tobiiService.getTobiiIsOn(), //false
         "effect": tobiiService.getEffectSetting() //inverted,
         },
-        "override_overwolf_setting" : false,  //<=== Set to true
+        "override_overwolf_setting" : false, 
         "fps" :30,
         "width" :1920,
         "height" : 1080
