@@ -10,12 +10,12 @@ Please read the [overwolf.games.events](overwolf-games-events) documentation pag
 5426
 :::
 
-Note that you can consume also the LOL game launcher events. read more info [here](overwolf-games-launchers-events-lol).
+Note that you can also use the LOL game launcher events. Read more [here](overwolf-games-launchers-events-lol).
 
 ## Sample Apps
 
 * [LOL game events sample app](https://github.com/overwolf/events-sample-apps)
-* [Summoner and team info sample app](https://github.com/overwolf/lol-summoner-team-info-sample-app) – this sample app gets “summoner region” and “my team” info before the game starts (while the user in the “champion select” phase) more information about getting data from LoL launcher/client can be found [here](overwolf-games-launchers).
+* [Summoner and team info sample app](https://github.com/overwolf/lol-summoner-team-info-sample-app) – this sample app gets “summoner region” and “my team” info during the champion selection phase, before the game begins. More information about getting data from LoL launcher/client can be found [here](overwolf-games-launchers).
 
 ## Available Features
 
@@ -37,9 +37,7 @@ Note that you can consume also the LOL game launcher events. read more info [her
 
 ## Game events status
 
-It is highly recommended to communicate errors and warnings to your app users. 
-
-Check [here](../status/all) the game events status. OR -  easily check the game events status from your app, [using our API](../topics/howto-check-events-status-from-app).
+It's highly recommended to communicate errors and warnings to your app users. Check current game event status [here](../status/all) or  easily check game event status from your app [using our API](../topics/howto-check-events-status-from-app).
 
 ## `matchState`
 
@@ -49,15 +47,15 @@ key          | Category    | Values                    | Notes                 |
 ------------ | ------------| ------------------------- | --------------------- | ------------- | 
 matchStarted | game_info   | true/false (string)       |                       |   140.0       |
 matchOutcome | game_info   | win/lose                  |                       |   140       |
-matchId      | game_info   | The current match id      |  `matchId:3828196424` |   120.0       |
-queueId      | game_info   | The current match [queue id](https://developer.riotgames.com/game-constants.html)|  `queueId:440`        |   120.0       |
+matchId      | game_info   | Current match id      |  `matchId:3828196424` |   120.0       |
+queueId      | game_info   | Current match [queue id](https://developer.riotgames.com/game-constants.html)|  `queueId:440`        |   120.0       |
 
 ### Events
 
 Event      | Event Data  | Fired When          | Notes              | Since GEP Ver. |
 -----------| ------------| ------------------- | ------------------ | --------------|
 matchStart | null        | Match has started   |  Match has started |   140.0       |
-matchEnd   | null        |  Match is ended     |  Match is ended    |   140.0       |
+matchEnd   | null        |  Match has ended     |  Match is ended    |   140.0       |
 
 ## `match_info`
 
@@ -65,7 +63,7 @@ matchEnd   | null        |  Match is ended     |  Match is ended    |   140.0   
 
 key          | Category    | Values                    | Notes                 | Since GEP Ver. |
 --------------- | -----------| ------------------------------------------------------------------------------------ | ------------------------------------ | ------------- | 
-pseudo_match_id | match_info | The current session’s ID code. Example:</br> `a4e8fc75-b35e-466f-976c-09f4ee633d95`  |  This is an Overwolf-generated code. Unrelated to Riot Games.  |   0.130 |
+pseudo_match_id | match_info | Current session’s ID code. Example:</br> `a4e8fc75-b35e-466f-976c-09f4ee633d95`  |  This is an Overwolf-generated code unrelated to Riot Games.  |   0.130 |
 game_mode | match_info | Whether the current game mode is TFT or default LoL. See [notes](#game_mode-notes) |                 |   133.0       |
 #### *game_mode* notes
 
@@ -102,7 +100,7 @@ respawn    | null        | The player’s champion respawned |  Match has starte
 
 Event      | Event Data  | Fired When          | Notes              | Since GEP Ver. |
 -----------| ------------| ------------------------------- | ------------------ | --------------|
-ability    | ability number        | player use an ability	 |  <ul><li>abilityies are numbered between 1-4 “ability”</li><li>event is fired when the player clicked on the ability key (but he may cancel the ability action later)</li></ul>  |   140.0       | 
+ability    | ability number        | player has selected an ability	 |  <ul><li>abilities are numbered from 1-4 “ability”</li><li>event is fired when the player clicked an ability key (but he may cancel the ability action later)</li></ul>  |   140.0       | 
 usedAbility  | JSON containing: “type” with the ability number between 1-4. Example:</br> `{ type: "4" }` for ult        | player activated the ability	 |  “usedAbility” fired when the player actually activated the ability  |   0.31       | 
 
 ## `kill`
@@ -121,7 +119,7 @@ pentaKills  | game_info   | Total penta-kills in the match  |                   
 
 Event | Event Data                        | Fired When                  | Notes              | Since GEP Ver. |
 ------| ----------------------------------| --------------------------- | ------------------ | --------------|
-kill | A JSON containing:</br><ul><li>count: Number of times this kill type happened in the match</li><li>label: kill / double_kill / triple_kill / quadra_kill / penta_kill</li><li>totalKills: The total kills in this match</li></ul> | Killing another champion  |   |     70.0      | 
+kill | A JSON containing:</br><ul><li>count: Number of times this kill type happened in the match</li><li>label: kill / double_kill / triple_kill / quadra_kill / penta_kill</li><li>totalKills: Total kills in this match</li></ul> | Killing another champion  |   |     70.0      | 
 
 ## `assist`
 
@@ -129,7 +127,7 @@ kill | A JSON containing:</br><ul><li>count: Number of times this kill type happ
 
 Event  | Event Data                                       |               Fired When                  | Notes     | Since GEP Ver. |
 -------| -------------------------------------------------| ----------------------------------------- | --------- | --------------|
-assist | Number of times this event happened in the match | When you assists killing another champion |           |       70.00    |
+assist | Number of times this event happened in the match | When you assist killing another champion |           |       70.00    |
 
 ## `gold`
 
@@ -154,19 +152,19 @@ neutralMinionKills | game_info   | amount of neutral minions killed by the playe
 
 key       | Category        | Values                                         | Notes                                                   | Since GEP Ver. |
 ----------| ----------------| -----------------------------------------------| ------------------------------------------------------- | ------------- | 
-id        | summoner_info   | The user’s Summoner Id                         |   Fired immediately with game start                     |      70.0      |
-region    | summoner_info   | The user’s region (EUE, EUW, etc.)             |   Important note: Push runes/items feature is not allowed (by Riot) on Korea region, so in case your app provides such a feature, make sure to disable it for KR users.                                                                |    70.0        |
-champion  | summoner_info   | the name of the selected champion              |  All champion names (provided by the Overwolf Game Events Provider) match the champion-key from the Riot API, except for `Fiddlesticks`.</br><ul><li>Game Events Provider value: “FiddleSticks”</li><li>Riot API value: “Fiddlesticks”</li></ul>  |    70.0 |
-level     | summoner_info   | The user’s summoner level                      |                                                         |    70.0        |
-tier      | summoner_info   | The user’s tier in his most played queue       |                                                         |    120.0      |
-division  | summoner_info   | The user’s division in his most played queue   |                                                         |    120.0      |
-queue     | summoner_info   | The most played match queue                    |                                                         |    120.0      |
-accountId | summoner_info   |The user’s account id                           |                                                         |    120.0      |
+id        | summoner_info   | User’s Summoner Id                         |   Fired immediately with game start                     |      70.0      |
+region    | summoner_info   | User’s region (EUE, EUW, etc.)             |   Important note: Push runes/items feature is not allowed (by Riot) on Korea region, so in case your app provides such a feature, make sure to disable it for KR users.                                                                |    70.0        |
+champion  | summoner_info   | Name of the selected champion              |  All champion names (provided by the Overwolf Game Events Provider) match the champion-key from the Riot API, except for `Fiddlesticks`.</br><ul><li>Game Events Provider value: “FiddleSticks”</li><li>Riot API value: “Fiddlesticks”</li></ul>  |    70.0 |
+level     | summoner_info   | User’s summoner level                      |                                                         |    70.0        |
+tier      | summoner_info   | User’s tier in his most played queue       |                                                         |    120.0      |
+division  | summoner_info   | User’s division in his most played queue   |                                                         |    120.0      |
+queue     | summoner_info   | Most played match queue                    |                                                         |    120.0      |
+accountId | summoner_info   | User’s account id                           |                                                         |    120.0      |
 
 ## `teams`
 
 :::warning
- `teams` info-update might be provided a bit late in some game modes (a few seconds before the loading screen ends), this is a known issue and we’re working on a fix.
+ `teams` info-update might be provided a bit late in some game modes, as late as a few seconds before the loading screen ends. This is a known issue and we’re working on a fix.
 :::
 
 ### Info Updates
@@ -212,7 +210,7 @@ And get:
 {"team":"Chaos","champion":"Kayn","skinId":"0","summoner":"erikolo878"}]"}
 ```
 
-And finally, we will parse the string and get a Json array with the teams:
+And finally, we parse the string and get a Json array with the teams:
 
 ```javascript
 var teams = JSON.parse(decoded);
@@ -224,7 +222,7 @@ var teams = JSON.parse(decoded);
 
 key       | Category        | Values                                         | Notes                                                   | Since GEP Ver. |
 ----------| ----------------| -----------------------------------------------| ------------------------------------------------------- | ------------- | 
-level     | level           | the level number of the player                 |   Fired immediately with game start                     |      0.19     |
+level     | level           | Current level of the player's champion                 |   Fired immediately when game starts, updates whenever the champion levels up                     |      0.19     |
 
 ## `announcer`
 
@@ -244,7 +242,7 @@ slain             | “team”                               | “An enemy has b
 self_slain        | “team”                               | “You have slain an enemy!!”                 |                    |     75.0      | 
 killing_spree     | “team”                               | “Killing Spree!”                            |                    |     75.0      | 
 rampage           | “team”                               | “Rampage!”                                  |                    |     75.0      | 
-unstoppable       | “team”                               | “unstoppable”                               |                    |     75.0      | 
+unstoppable       | “team”                               | “Unstoppable”                               |                    |     75.0      | 
 dominating        | “team”                               | “Dominating!”                               |                    |     75.0      | 
 godlike           | “team”                               | “Godlike!”                                  |                    |     75.0      | 
 legendary         | “team”                               | “Legendary!”                                |                    |     75.0      | 
@@ -278,4 +276,4 @@ executed          | "tower"                              | “Executed!”      
 
 key  | Category    | Values                                     | Notes  | Since GEP Ver. |
 -----| ------------| -------------------------------------------| ------ | ------------- | 
-ping | performance | The change in latency of the local player  |        |    128.0      |
+ping | performance | The change in latency values of the local player  |        |    128.0      |
