@@ -24,9 +24,7 @@ Please read the [overwolf.games.events](overwolf-games-events) documentation pag
 
 ## Game events status
 
-It is highly recommended to communicate errors and warnings to your app users. 
-
-Check [here](../status/all) the game events status. OR -  easily check the game events status from your app, [using our API](../topics/howto-check-events-status-from-app).
+It's highly recommended to communicate errors and warnings to your app users. Check game event status [here](../status/all) or easily check game event status from your app [using our API](../topics/howto-check-events-status-from-app).
 
 ## `me`
 
@@ -50,10 +48,10 @@ Data Example:
 
 key          | Category    | Values                    | Notes                 | Since GEP Ver. |
 ------------ | ------------| ------------------------- | --------------------- | ------------- | 
-pseudo_match_id| match_info| The current session’s ID code. | See [notes](#pseudo_match_id-note)|  134.0  |
-teams_level  | match_info  | The current level of both teams| See [notes](#teams_level-note)|  134.0  |
-score        | match_info  | The current kill-score of both teams. | See [notes](#score-note)|  134.0  |
-match_state  | match_info  | If a match is in progress - true/false. | See [notes](#match_state-note)|  134.0  |
+pseudo_match_id| match_info| Current session’s ID code. | See [notes](#pseudo_match_id-note)|  134.0  |
+teams_level  | match_info  | Current level of both teams| See [notes](#teams_level-note)|  134.0  |
+score        | match_info  | Current kill-score of both teams. | See [notes](#score-note)|  134.0  |
+match_state  | match_info  | Is a match in progress - true/false. | See [notes](#match_state-note)|  134.0  |
 
 ### Events
 
@@ -61,8 +59,8 @@ Event  | Event Data        | Fired When   | Notes      | Since GEP Ver. |
 -------| ------------------| -------------| ---------- | --------------|
 match_start| null          | Match starts |See [notes](#match_start-note)|    134.0      |
 match_end  | victory/defeat| Match ends   |See [notes](#match_end-note)|    134.0      |
-talent_available  | null | Skill point is available for use.  |See [notes](#talent_available-note)|    134.0      |
-gates_opened  | null | When preparation-countdown has ended and the match begins.  |See [notes](#gates_opened-note)|    134.0      |
+talent_available  | null | A skill point is available for use.  |See [notes](#talent_available-note)|    134.0      |
+gates_opened  | null | When pregame preparation countdown has ended and the match begins.  |See [notes](#gates_opened-note)|    134.0      |
 
 #### *pseudo_match_id* note:
 
@@ -134,7 +132,7 @@ Data Example:
 
 key          | Category    | Values                    | Notes                 | Since GEP Ver. |
 ------------ | ------------| ------------------------- | --------------------- | ------------- | 
-scene        | game_info   | The current menu state    | See [notes](#scene-note)|    134.0    |
+scene        | game_info   | Current menu state    | See [notes](#scene-note)|    134.0    |
 
 #### *scene* note:
 
@@ -155,7 +153,7 @@ Data Examples:
 
 key          | Category    | Values                    | Notes                 | Since GEP Ver. |
 ------------ | ------------| ------------------------- | --------------------- | ------------- | 
-roster       | game_info   | The full players roster   | See [notes](#roster-note)|    134.0    |
+roster       | game_info   | Full player roster   | See [notes](#roster-note)|    134.0    |
 
 #### *roster* note:
 
@@ -267,7 +265,7 @@ Data Example:
 Event  | Event Data        | Fired When   | Notes      | Since GEP Ver. |
 -------| ------------------| -------------| ---------- | --------------|
 kill   | null              | Local player kills an opponent. |See [notes](#kill-note)|    134.0      |
-assist | null              | Local player takes part in the killing of an oponnent. |See [notes](#assist-note)|    134.0      |
+assist | null              | Local player takes part in the killing of an opponent. |See [notes](#assist-note)|    134.0      |
 minion_kill| null          | Local player kills a minion. |See [notes](#minion_kill-note)|    134.0      |
 takedown| null             | Local player kills an opponent. |See [notes](#takedown-note)|    134.0      |
 
