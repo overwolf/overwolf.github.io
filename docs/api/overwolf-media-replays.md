@@ -68,7 +68,7 @@ A callback function which will be called with the status of the request
 #### Usage Example
 
 ```javascript
- let settings = {
+ let streamSetting = {
     "video": {
         "sub_folder_name": folderName,
         "buffer_length": bufferLength,
@@ -84,7 +84,7 @@ A callback function which will be called with the status of the request
 };
 
 overwolf.media.replays.turnOn({
-    "streamSetting": settings,
+    "settings": streamSetting,
     "highlights": {
         "enable" : true, //set false if you want to record the highligths manually
         "requiredHighlights" : ["death","assist","victory"] //an interesting evenst that happened in game
