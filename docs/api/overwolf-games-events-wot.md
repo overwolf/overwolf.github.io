@@ -22,9 +22,7 @@ Please read the [overwolf.games.events](overwolf-games-events) documentation pag
 
 ## Game events status
 
-It is highly recommended to communicate errors and warnings to your app users. 
-
-Check [here](../status/all) the game events status. OR -  easily check the game events status from your app, [using our API](../topics/howto-check-events-status-from-app).
+It's highly recommended to communicate errors and warnings to your app users. Check game event status [here](../status/all) or easily check game events straight from your app [using our API](../topics/howto-check-events-status-from-app).
 
 ## `kill`
 
@@ -33,9 +31,9 @@ Check [here](../status/all) the game events status. OR -  easily check the game 
 Event      | Event Data  | Fired When          | Notes              | Since GEP Ver. |
 -----------| ------------| ------------------- | ------------------ | --------------|
 kill       |See [notes](#kill-note)| A tank was destroyed |         |     47.0      | 
-one_shot_kill|See [notes](#one_shot_kill-note)| The player’s tank destroyed another tank in a single shot (without any assistance from other players)  |       |     47.0      | 
-damage     |See [notes](#damage-note)| The player’s tank damaged  another tank |       |     47.0      | 
-assist     |See [notes](#assist-note)| The player’s tank assisted destroying another tank |       |     47.0      | 
+one_shot_kill|See [notes](#one_shot_kill-note)| The player’s tank destroyed another tank with a single shot and no ally assistance  |       |     47.0      | 
+damage     |See [notes](#damage-note)| The player’s tank damaged another tank |       |     47.0      | 
+assist     |See [notes](#assist-note)| The player’s tank assisted in destroying another tank |       |     47.0      | 
 
 #### *kill* note
 
