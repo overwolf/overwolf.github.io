@@ -28,9 +28,7 @@ Please read the [overwolf.games.events](overwolf-games-events) documentation pag
 
 ## Game events status
 
-It is highly recommended to communicate errors and warnings to your app users. 
-
-Check [here](../status/all) the game events status. OR -  easily check the game events status from your app, [using our API](../topics/howto-check-events-status-from-app).
+It's highly recommended to communicate errors and warnings to your app users. Check game event status [here](../status/all) or easily check event status directly from your app [using our API](../topics/howto-check-events-status-from-app).
 
 ## `me`
 
@@ -38,11 +36,11 @@ Check [here](../status/all) the game events status. OR -  easily check the game 
 
 key                 | Category      | Values                                                   | Notes                                               | Since GEP Ver. |
 ------------------- |---------------| -------------------------------------------------------- | --------------------------------------------------- | ------------- |
-summoner_name       | me            | Name of local player.  |  See [notes](#summoner_name-note) |   133.0       |
-xp                  | me            | Current player level, current xp points, and total xp points to next level.   | See [notes](#xp-note) |   133.0       |
-health              | me            | The amount of health points of the player. |  See [notes](#health-notes) |   133.0       |
-rank                | me            | The current standing of the player.        |   See [notes](#rank-notes)  |   133.0       |
-gold                | me             | The local player's amount of gold in hand.   | See [notes](#gold-notes) |   133.0       |
+summoner_name       | me            | Summoner name of the local player.  |  See [notes](#summoner_name-note) |   133.0       |
+xp                  | me            | Current player level, current xp points, and total xp points left to reach the next level  | See [notes](#xp-note) |   133.0       |
+health              | me            | Current amount of health points of the player |  See [notes](#health-notes) |   133.0       |
+rank                | me            | Current standing of the player        |   See [notes](#rank-notes)  |   133.0       |
+gold                | me             | Local player's amount of gold in hand   | See [notes](#gold-notes) |   133.0       |
 
 #### *summoner_name* notes
 
@@ -82,18 +80,18 @@ Data example:
 
 key             | Category   | Values                                                                 | Notes                 | Since GEP Ver. |
 --------------- | -----------| -----------------------------------------------------------------------| ----------------------| ------------- |
-pseudo_match_id | match_info | The current session’s ID code.      |See [notes](#pseudo_match_id-note)|   133.0       |
-battle_state | match_info | Boolean. Whether a battle is in progress. |See [notes](#battle_state-note)|   133.0       |
-match_state | match_info | Boolean. Whether a match is in progress.    |See [notes](#match_state-note)|   133.0       |
-round_type | match_info | Round is PvE/PvP, or Carousel (Also stage number).  |See [notes](#round_type-note)|   133.0       |
-round_outcome | match_info | The outcome of the previous round.      |See [notes](#round_outcome-note)|   133.0       |
-opponent | match_info | The name of the opponents.                        |See [notes](#opponent-note)|   133.0       |
-game_mode | match_info | Whether the current game mode is TFT or default LoL.  |See [notes](#game_mode-note)|   133.0       |
-local_player_damage | match_info | The amount of damage caused by your champions. |See [notes](#local_player_damage-note)|   0.136       |
+pseudo_match_id | match_info | Current session’s ID code      |See [notes](#pseudo_match_id-note)|   133.0       |
+battle_state | match_info | Boolean. Whether a battle is in progress |See [notes](#battle_state-note)|   133.0       |
+match_state | match_info | Boolean. Whether a match is in progress    |See [notes](#match_state-note)|   133.0       |
+round_type | match_info | Round is PvE, PvP or Carousel (Also stage number)  |See [notes](#round_type-note)|   133.0       |
+round_outcome | match_info | Outcome of the previous round      |See [notes](#round_outcome-note)|   133.0       |
+opponent | match_info | Names of your opponents                        |See [notes](#opponent-note)|   133.0       |
+game_mode | match_info | Whether the current game mode is TFT or default LoL  |See [notes](#game_mode-note)|   133.0       |
+local_player_damage | match_info | Amount of damage caused by your champions |See [notes](#local_player_damage-note)|   0.136       |
 
 #### *pseudo_match_id* notes
 
-This is an Overwolf-generated code. Unrelated to Riot Games.
+This is an internal Overwolf-generated code, not related to Riot Games.
 
 Data example:
 
@@ -111,7 +109,7 @@ Data example:
 
 #### *match_state* notes
 
-Returns 'True' when match starts. Returns 'False' once local player dies/wins the match.
+Returns 'True' when match starts. Returns 'False' once local player dies or wins the match.
 
 Data example:
 
@@ -156,7 +154,7 @@ Data example:
 
 #### *local_player_damage* notes
 
-This also includes the star-level of the champion (1, 2 and 3 stars) and indicated as "level 1, 2 or 3".
+This also includes the star-level of each champion (1, 2 and 3 stars), indicated as "level 1, 2 or 3".
 
 Data Example:
 
@@ -168,12 +166,12 @@ Data Example:
 
 Event       | Event Data                        | Fired When                                                             | Notes              | Since GEP Ver. |
 ------------| ----------------------------------| ---------------------------------------------------------------------- | ------------------ | --------------|
-round_start | "PVE"/"PVP"/"carousel"            | One round passes and another begins.    |See [notes](#round_start-note)|     133.0     |
-round_end   | null                              | At the round's end.                       |See [notes](#round_end-note)|     133.0     |
-battle_start| "PVP"/"PVE"                       | The start of the battle vs an opponent or AI.   |See [notes](#battle_start-note)|     133.0     |
-battle_end  | null                              | The end of the battle vs an opponent or AI.   |See [notes](#battle_end-note)|     133.0     |
-match_start | null                              | Beginning of the TFT match.             |See [notes](#match_start-note)|     133.0     |
-match_end   | null                              | Ending of the TFT match.        |See [notes](#match_end-note)|     133.0     |
+round_start | "PVE"/"PVP"/"carousel"            | One round ends and another begins    |See [notes](#round_start-note)|     133.0     |
+round_end   | null                              | At the round's end                       |See [notes](#round_end-note)|     133.0     |
+battle_start| "PVP"/"PVE"                       | Start of the battle vs an opponent or AI   |See [notes](#battle_start-note)|     133.0     |
+battle_end  | null                              | End of the battle vs an opponent or AI   |See [notes](#battle_end-note)|     133.0     |
+match_start | null                              | Beginning of a TFT match            |See [notes](#match_start-note)|     133.0     |
+match_end   | null                              | Ending of a TFT match       |See [notes](#match_end-note)|     133.0     |
 
 #### *round_start* notes
 
@@ -218,7 +216,7 @@ Data example:
 
 key            | Category    | Values                                                                               | Notes    | Since GEP Ver. |
 -------------- | ------------| -------------------------------------------------------------------------------------| -------- | ------------- |
-player_status  | roster      | A full list of the players currently in the match.  |[See notes](#player_status-note)|   133.0       |
+player_status  | roster      | Full list of the players currently in the match.  |[See notes](#player_status-note)|   133.0       |
 
 #### *player_status* notes
 
@@ -308,7 +306,7 @@ Data example:
 
 key            | Category    | Values                           | Notes                    | Since GEP Ver. |
 -------------- | ------------| ---------------------------------|--------------------------|---------------|
-shop_pieces    |    store    | Available champion for purchase. | [See notes](#shop_pieces-note) |  134.0  |
+shop_pieces    |    store    | Available champion for purchase | [See notes](#shop_pieces-note) |  134.0  |
 
 #### *shop_pieces* note
 
@@ -369,7 +367,7 @@ Data Example:
 
 key            | Category    | Values                           | Notes                    | Since GEP Ver. |
 -------------- | ------------| ---------------------------------|--------------------------|---------------|
-board_pieces   |    board    | The exact position of each chess-piece on the board. | [See notes](#board_pieces-note) |  134.0  |
+board_pieces   |    board    | Exact position of each chess-piece on the grid | [See notes](#board_pieces-note) |  134.0  |
 
 #### *board_pieces* note
 
@@ -420,7 +418,7 @@ Data Example:
 
 key            | Category    | Values                           | Notes                    | Since GEP Ver. |
 -------------- | ------------| ---------------------------------|--------------------------|---------------|
-bench_pieces   |    bench    | The exact position of each chess-piece on the bench. | [See notes](#bench_pieces-note) |  134.0  |
+bench_pieces   |    bench    | Exact position of each chess-piece on the bench (inventory) | [See notes](#bench_pieces-note) |  134.0  |
 
 #### *bench_pieces* note
 
@@ -478,7 +476,7 @@ Data Example:
 
 key            | Category    | Values                           | Notes                    | Since GEP Ver. |
 -------------- | ------------| ---------------------------------|--------------------------|---------------|
-carousel_pieces   |   carousel  | Names of available champions in the carousel. | [See notes](#carousel_pieces-note) |  134.0  |
+carousel_pieces   |   carousel  | Names of available champions in the carousel | [See notes](#carousel_pieces-note) |  134.0  |
 
 #### *carousel_pieces* note
 
