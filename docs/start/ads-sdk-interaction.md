@@ -14,7 +14,6 @@ Calling a new `OwAd()` will return a javascript object which you can use to cont
 
 ::: important
 removeAd() will be called on minimizing and refreshAd() will be called on restoring.
-Implemented by onStateChanged event.
 :::
 
 In order to prevent ads being called but not shown, please make sure you use the `removeAd()` function where necessary. Also note:
