@@ -24,9 +24,7 @@ Please read the [overwolf.games.events](overwolf-games-events) documentation pag
 
 ## Game events status
 
-It is highly recommended to communicate errors and warnings to your app users. 
-
-Check [here](../status/all) the game events status. OR -  easily check the game events status from your app, [using our API](../topics/howto-check-events-status-from-app).
+It's highly recommended to communicate errors and warnings to your app users. Check game event status [here](../status/all) or easily check event status straight from your app [using our API](../topics/howto-check-events-status-from-app).
 
 ## `game_info`
 
@@ -61,8 +59,8 @@ Possible Values:
 key          | Category    | Values                    | Notes                 | Since GEP Ver. |
 ------------ | ------------| ------------------------- | --------------------- | ------------- |
 realm | account_info   |                            | See [notes](#realm-note) |     119.1     |
-id | account_info   | The local player’s Wargaming account id |                |     119.1     |
-playerName | account_info   | The local player’s Wargaming name |              |     119.1     |
+id | account_info   | Local player’s Wargaming account id |                |     119.1     |
+playerName | account_info   | Local player’s Wargaming name |              |     119.1     |
 
 #### *realm* note
 
@@ -79,7 +77,7 @@ Possible Values:
 
 key          | Category    | Values                    | Notes                 | Since GEP Ver. |
 ------------ | ------------| ------------------------- | --------------------- | ------------- |
-pseudo_match_id| match_info   |The current session’s ID code.| See [notes](#pseudo_match_id-note) |     119.1     |
+pseudo_match_id| match_info   |Current session’s ID code| See [notes](#pseudo_match_id-note) |     119.1     |
 
 #### *pseudo_match_id* note
 
@@ -97,10 +95,10 @@ mapName| match     |Map name – string| See [notes](#mapName-note) |     119.1 
 players| roster    |Array of “player” objects| See [notes](#players-note) |     119.1     |
 health| ship      |The current “health” of the user’s ship – int| See [notes](#health-note) |     119.1     |
 name| ship      | The ship’s name – string| See [notes](#name-note) |     119.1     |
-level| ship      |The level of the player’s ship| See [notes](#level-note) |     122.1     |
+level| ship      |Level of the player’s ship| See [notes](#level-note) |     122.1     |
 burning| ship      |Whether the ship is burning or not (true / false)| See [notes](#burning-note) |     122.1     |
 flooding| ship      |Whether the ship is flooding or not| See [notes](#flooding-note) |     122.1     |
-nation| ship      |The current nation of the player’s ship| See [notes](#nation-note) |     122.1     |
+nation| ship      |Current ship's nation| See [notes](#nation-note) |     122.1     |
 state| match     |Check notes| See [notes](#state-note) |     119.1     |
 
 #### *mapName* note
@@ -185,7 +183,7 @@ Data Example:
 
 Event      | Event Data  | Fired When          | Notes              | Since GEP Ver. |
 -----------| ------------| ------------------- | ------------------ | --------------|
-matchStart | null        |  Match starts       |                    |   119.1       | 
+matchStart | null        | Match starts       |                    |   119.1       | 
 matchEnd   | null        | Match ends          |                    |   119.1       | 
 matchOutcome | "victory" / "lost" |  Match ends |                   |   119.1       | 
 
@@ -205,5 +203,5 @@ ribbon |  ribbon – string | Ribbon was awarded |                    |   119.1 
 
 Event      | Event Data  | Fired When          | Notes              | Since GEP Ver. |
 -----------| ------------| ------------------- | ------------------ | --------------|
-death      |Ship id of the “killer” ship – int|  Match starts       |            |   119.1       | 
-hit        |<ul><li>damage – amount -int</li><li>ship name – string</li>| The player’s ship was damaged|     |   119.1       | 
+death      |Ship id of the “killer” ship – int|  Player's ship was destroyed       |            |   119.1       | 
+hit        |<ul><li>damage – amount -int</li><li>ship name – string</li>| Player’s ship was damaged|     |   119.1       | 
