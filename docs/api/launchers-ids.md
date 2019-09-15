@@ -4,9 +4,9 @@ title: Launchers IDs
 sidebar_label: Launchers IDs
 ---
 
-Launcher IDs can be used in order to auto launch your app when a game launcher starts (currently available only for [League of Legends](overwolf-games-launchers-events-lol)).
+Launcher IDs can be used to auto-launch your app when a game launcher starts (this is currently available only for [League of Legends](overwolf-games-launchers-events-lol)).
 
-All you have to do is add the Launcher Id to the [launch_events](manifest-json#launch_events) option in your app’s manifest.json file.
+To do so, add the Launcher Id to the [launch_events](manifest-json#launch_events) option in your app’s manifest.json file.
 
 Example:
 
@@ -22,9 +22,7 @@ Example:
 ]
 ```
 
- In this example, the app will be auto-launched when the League of Legends client starts. 
- 
- (In this specific example the app’s main window will be minimized, you can change this by using  `start_minimized` false).
+In this example, the app will be auto-launched when the League of Legends client starts. In this code example the app’s main window will be minimized, you can change this by using  `start_minimized` false).
 
  ## Available Launchers IDs
 
