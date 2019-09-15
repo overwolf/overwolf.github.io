@@ -11,7 +11,7 @@ Please read the [overwolf.games.launchers.events](overwolf-games-launchers-event
 :::
 
 :::tip
-if the  game launcher wasn't closed by the user, it is possible to access the game launcher methods while being in-game.
+if the  game launcher wasn't closed by the user, it is possible to access game launcher methods while being in-game.
 :::
 
 
@@ -32,7 +32,7 @@ if the  game launcher wasn't closed by the user, it is possible to access the ga
 
 key   | Category    | Values                    | Notes                 | Since Version |
 ------| ------------| ------------------------- | --------------------- | ------------- |
-phase | game_flow   | The current phase in game |                       |   125.0       |
+phase | game_flow   | Current phase in the game |                       |   125.0       |
 
 ## `summoner_info`
 
@@ -40,17 +40,17 @@ phase | game_flow   | The current phase in game |                       |   125.
 
 key             | Category       | Values                                        | Notes                 | Since Version |
 ----------------| ---------------| --------------------------------------------- | --------------------- | ------------- |
-account_id      | summoner_info  | the local player’s account id                 |                       |   125.0       |
-display_name    | summoner_info  | the local player’s display name               |                       |   125.0       |
-internal_name   | summoner_info  | the local player’s internal name              |                       |   125.0       |
-profile_icon_id | summoner_info  | the local player’s icon id	                 |                       |   125.0       |
-summoner_id     | summoner_info  | the local player’s summoner id                |                       |   125.0       |
-summoner_level	| summoner_info  |the local player’s summoner level              |                       |   125.0       |
-region          | summoner_info  | Tthe local player’s server (EU/NA etc)        |                       |   125.0       |
-locale          | summoner_info  | the local player’s language on his lol client |                       |   125.0       |
-web_language    | summoner_info  | the local player’s type of language           |                       |   125.0       |
-web_region      | summoner_info  | the local player’s web region                 |                       |   125.0       |
-platform_id     | summoner_info  | the local player’s platform id                |                       |   125.0       |
+account_id      | summoner_info  | Local player’s account id                 |                       |   125.0       |
+display_name    | summoner_info  | Local player’s display name               |                       |   125.0       |
+internal_name   | summoner_info  | Local player’s internal name              |                       |   125.0       |
+profile_icon_id | summoner_info  | Local player’s icon id	                 |                       |   125.0       |
+summoner_id     | summoner_info  | Local player’s summoner id                |                       |   125.0       |
+summoner_level	| summoner_info  | Local player’s summoner level              |                       |   125.0       |
+region          | summoner_info  | Local player’s server (EU/NA etc)        |                       |   125.0       |
+locale          | summoner_info  | Local player’s selected LoL client language |                       |   125.0       |
+web_language    | summoner_info  | Local player’s type of language           |                       |   125.0       |
+web_region      | summoner_info  | Local player’s web region                 |                       |   125.0       |
+platform_id     | summoner_info  | Local player’s platform id                |                       |   125.0       |
 
 ## `champ_select`
 
@@ -58,18 +58,18 @@ platform_id     | summoner_info  | the local player’s platform id             
 
 key      | Category       | Values                                                                                                 | Notes                 | Since Version |
 ---------| ---------------| ------------------------------------------------------------------------------------------------------ | --------------------- | ------------- |
-raw      | info           | All relevant information regarding Champ-selection pre-start of the game. See [notes below](#raw-notes)|                       |   125.0       |
+raw      | info           | All relevant information regarding Champion selection pre-start of the game. See [notes below](#raw-notes)|                       |   125.0       |
 
 #### `raw` notes
 
-There is a great deal of information that is provided. Few Example:
+There is a great deal of information provided. Few Example:
 
 * Assigned Position
 * Skin ID
 * Champion ID
 * Summoner Name
 
-And many more.
+And much more.
 
 ## `lobby_info`
 
@@ -86,7 +86,7 @@ The queueID of the currently chosen game mode. Example:
 `{"feature":"lobby_info","category":"lobby_info","key":"queueId","value":1090}`
 
 * You can find here a [list of possible queue ids](https://developer.riotgames.com/game-constants.html). 
-* 1090 is the queueID of TFT mode.
+* 1090 is the queueID of TFT matches.
 
 ## `end_game`
 
