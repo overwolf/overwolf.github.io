@@ -11,8 +11,11 @@ Calling a new `OwAd()` will return a javascript object which you can use to cont
 | :-------------: |------------------------------------------------------------------------------------------------------------------------|
 | refreshAd       | Refreshes ad and loads a new one <br> Note that this will cause the ad to scroll into view if not already visible       |
 | removeAd        | Removes current ad from the DOM                                                                                    |
-     
-#### Important note
+
+::: important
+removeAd() will be called on minimizing and refreshAd() will be called on restoring.
+Implemented by onStateChanged event.
+:::
 
 In order to prevent ads being called but not shown, please make sure you use the `removeAd()` function where necessary. Also note:
 
