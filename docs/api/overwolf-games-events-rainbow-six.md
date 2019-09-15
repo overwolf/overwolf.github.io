@@ -77,10 +77,10 @@ score       | match   | Match score</br>Example:</br>`{"match":{"score":"{\"blue
 
 Event | Event Data                        | Fired When                  | Notes              | Since GEP Ver. |
 ------| ----------------------------------| --------------------------- | ------------------ | --------------|
-roundStart | null | Player’s champion died  |  round starts |     123.0      |
-roundEnd | null | Player’s champion died  | round ends |     123.0      |
-roundOutcome | victory / defeat</br>`{"name":"roundOutcome","data":"victory"}` |  round starts  |  Match has started |     123.0      | 
-matchOutcome | victory / defeat</br>`{"name":"matchOutcome","data":"defeat"}` |  round ends  |  Match has started |     123.0     | 
+roundStart | null                         | Round starts.               |                    |     123.0      |
+roundEnd | null                           | Round ends.                 |                    |     123.0      |
+roundOutcome | victory / defeat</br>`{"name":"roundOutcome","data":"victory"}` | Round concluded. |            |     123.0      | 
+matchOutcome | victory / defeat</br>`{"name":"matchOutcome","data":"defeat"}` | Match concluded. |           |     123.0     | 
 
 ## `roster`
 
