@@ -90,8 +90,7 @@
 <li><a href="#death">death</a></li>
 </ul>
 <h2><a class="anchor" aria-hidden="true" id="game-events-status"></a><a href="#game-events-status" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Game events status</h2>
-<p>It is highly recommended to communicate errors and warnings to your app users.</p>
-<p>Check <a href="../status/all">here</a> the game events status. OR -  easily check the game events status from your app, <a href="../topics/howto-check-events-status-from-app">using our API</a>.</p>
+<p>It's highly recommended to communicate errors and warnings to your app users. Check game event status <a href="../status/all">here</a> or easily check game event status directly from your app <a href="../topics/howto-check-events-status-from-app">using our API</a>.</p>
 <h2><a class="anchor" aria-hidden="true" id="game_info"></a><a href="#game_info" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>game_info</code></h2>
 <h3><a class="anchor" aria-hidden="true" id="info-updates"></a><a href="#info-updates" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Info Updates</h3>
 <table>
@@ -121,7 +120,7 @@
 <tr><th>key</th><th>Category</th><th>Values</th><th>Notes</th><th>Since GEP Ver.</th></tr>
 </thead>
 <tbody>
-<tr><td>pseudo_match_id</td><td>match_info</td><td>The current session’s ID code. Example:</br> <code>0c0ea3df-97ea-4d3a-b1f6-f8e34042251f</code></td><td>This is an Overwolf-generated code.</td><td>130.0</td></tr>
+<tr><td>pseudo_match_id</td><td>match_info</td><td>The current session’s ID code. Example:</br> <code>0c0ea3df-97ea-4d3a-b1f6-f8e34042251f</code></td><td>This is an internal Overwolf-generated code.</td><td>130.0</td></tr>
 <tr><td>game_mode</td><td>match_info</td><td>The current type of game mode.</td><td>See <a href="#game_mode-notes">notes</a> below</td><td>134.0</td></tr>
 </tbody>
 </table>
@@ -135,7 +134,7 @@
 <tr><th>key</th><th>Category</th><th>Values</th><th>Notes</th><th>Since GEP Ver.</th></tr>
 </thead>
 <tbody>
-<tr><td>number</td><td>round</td><td>The number of the current round</br>Example:</br><code>{&quot;round&quot;:{&quot;number&quot;:&quot;3&quot;}}</code></td><td></td><td>123.0</td></tr>
+<tr><td>number</td><td>round</td><td>Current round number</br>Example:</br><code>{&quot;round&quot;:{&quot;number&quot;:&quot;3&quot;}}</code></td><td></td><td>123.0</td></tr>
 <tr><td>score</td><td>match</td><td>Match score</br>Example:</br><code>{&quot;match&quot;:{&quot;score&quot;:&quot;{\&quot;blue\&quot;:\&quot;2\&quot;,\&quot;orange\&quot;:\&quot;1\&quot;}&quot;}}</code></td><td></td><td>123.0</td></tr>
 </tbody>
 </table>
@@ -145,8 +144,8 @@
 <tr><th>Event</th><th>Event Data</th><th>Fired When</th><th>Notes</th><th>Since GEP Ver.</th></tr>
 </thead>
 <tbody>
-<tr><td>roundStart</td><td>null</td><td>The player’s champion died</td><td>round starts</td><td>123.0</td></tr>
-<tr><td>roundEnd</td><td>null</td><td>The player’s champion died</td><td>round ends</td><td>123.0</td></tr>
+<tr><td>roundStart</td><td>null</td><td>Player’s champion died</td><td>round starts</td><td>123.0</td></tr>
+<tr><td>roundEnd</td><td>null</td><td>Player’s champion died</td><td>round ends</td><td>123.0</td></tr>
 <tr><td>roundOutcome</td><td>victory / defeat</br><code>{&quot;name&quot;:&quot;roundOutcome&quot;,&quot;data&quot;:&quot;victory&quot;}</code></td><td>round starts</td><td>Match has started</td><td>123.0</td></tr>
 <tr><td>matchOutcome</td><td>victory / defeat</br><code>{&quot;name&quot;:&quot;matchOutcome&quot;,&quot;data&quot;:&quot;defeat&quot;}</code></td><td>round ends</td><td>Match has started</td><td>123.0</td></tr>
 </tbody>
@@ -158,16 +157,16 @@
 <tr><th>key</th><th>Category</th><th>Values</th><th>Notes</th><th>Since GEP Ver.</th></tr>
 </thead>
 <tbody>
-<tr><td>roster_XX</td><td>players</td><td>This feature provides info for the currently active players (10 players). See <a href="#roster_xx-notes">notes</a> below</td><td>This is an Overwolf-generated code.</td><td>123.0</td></tr>
-<tr><td>team</td><td>player</td><td>The player’s current team – Orange/Blue</td><td></td><td>123.0</td></tr>
-<tr><td>health</td><td>player</td><td>The player’s current health – (100-0)</br><code>{&quot;player&quot;:{&quot;health&quot;:&quot;70&quot;}}</code></td><td></td><td>123.0</td></tr>
-<tr><td>score</td><td>player</td><td>The player’s current score</br><code>{&quot;player&quot;:{&quot;score&quot;:&quot;335&quot;}}</code></td><td></td><td>123.0</td></tr>
-<tr><td>kills</td><td>player</td><td>Total number of kills done by the player</br><code>{&quot;player&quot;:{&quot;kills&quot;:&quot;0&quot;}}</code></td><td></td><td>123.0</td></tr>
-<tr><td>deaths</td><td>player</td><td>Total number of the local player’s deaths</br><code>{&quot;player&quot;:{&quot;deaths&quot;:&quot;1&quot;}}</code></td><td></td><td>123.0</td></tr>
+<tr><td>roster_XX</td><td>players</td><td>Provides info for the currently active players (10 players). See <a href="#roster_xx-notes">notes</a> below</td><td>This is an internal Overwolf-generated code.</td><td>123.0</td></tr>
+<tr><td>team</td><td>player</td><td>Player’s current team – Orange/Blue</td><td></td><td>123.0</td></tr>
+<tr><td>health</td><td>player</td><td>Player’s current health – (0-100)</br><code>{&quot;player&quot;:{&quot;health&quot;:&quot;70&quot;}}</code></td><td></td><td>123.0</td></tr>
+<tr><td>score</td><td>player</td><td>Player’s current score</br><code>{&quot;player&quot;:{&quot;score&quot;:&quot;335&quot;}}</code></td><td></td><td>123.0</td></tr>
+<tr><td>kills</td><td>player</td><td>Total number of kills by the player</br><code>{&quot;player&quot;:{&quot;kills&quot;:&quot;0&quot;}}</code></td><td></td><td>123.0</td></tr>
+<tr><td>deaths</td><td>player</td><td>Total number of player's deaths</br><code>{&quot;player&quot;:{&quot;deaths&quot;:&quot;1&quot;}}</code></td><td></td><td>123.0</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="roster_xx-notes"></a><a href="#roster_xx-notes" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>roster_XX</code> notes</h4>
-<p>Each player that joins the game will be reported in the following way:</p>
+<p>Each player joining the game will be reported in the following way:</p>
 <p><code>{&quot;roster_0&quot;:&quot;{\&quot;name\&quot;:\&quot;overwolfqa\&quot;,\&quot;team\&quot;:\&quot;Orange\&quot;,\&quot;is_local\&quot;:true}&quot;}</code></p>
 <p>As you can see, this object includes:</p>
 <ul>
@@ -175,9 +174,9 @@
 <li>team - Blue/Orange</li>
 <li>is_local - local player or not (Boolean)</li>
 </ul>
-<p>When one of the players dies or leaves the match the relevant “roster_ XX” object will be updated to:</p>
+<p>When one of the players dies or leaves the match, the relevant “roster_ XX” object will be updated to:</p>
 <p><code>{&quot;players&quot;:{&quot;roster_3&quot;:null}}</code></p>
-<p>In case the player has left the match, a new “roster_XX” object will be assigned to the new player that replaced him.</p>
+<p>If a new player replaces a leaver, a new “roster_XX” object will be assigned to the new player who joined.</p>
 <h2><a class="anchor" aria-hidden="true" id="kill"></a><a href="#kill" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>kill</code></h2>
 <h3><a class="anchor" aria-hidden="true" id="events-1"></a><a href="#events-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Events</h3>
 <table>
@@ -185,8 +184,8 @@
 <tr><th>Event</th><th>Event Data</th><th>Fired When</th><th>Notes</th><th>Since GEP Ver.</th></tr>
 </thead>
 <tbody>
-<tr><td>kill</td><td>null</td><td>The local player killed an enemy</td><td></td><td>123.0</td></tr>
-<tr><td>headshot</td><td>null</td><td>The local player killed an enemy with a headshot</td><td></td><td>123.0</td></tr>
+<tr><td>kill</td><td>null</td><td>Local player killed an enemy</td><td></td><td>123.0</td></tr>
+<tr><td>headshot</td><td>null</td><td>Local player killed an enemy with a headshot</td><td></td><td>123.0</td></tr>
 </tbody>
 </table>
 <h2><a class="anchor" aria-hidden="true" id="death"></a><a href="#death" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>death</code></h2>
@@ -196,12 +195,12 @@
 <tr><th>Event</th><th>Event Data</th><th>Fired When</th><th>Notes</th><th>Since GEP Ver.</th></tr>
 </thead>
 <tbody>
-<tr><td>knockedout</td><td>null</td><td>The local player’s hp reaches 20.</td><td></td><td>123.0</td></tr>
-<tr><td>death</td><td>null</td><td>The local player dies</td><td></td><td>123.0</td></tr>
-<tr><td>killer</td><td>killer name</br><code>{&quot;name&quot;:&quot;killer&quot;,&quot;data&quot;:&quot;Pickyuser18857&quot;}</code></td><td>The local player was killed by an enemy</td><td></td><td>123.0</td></tr>
+<tr><td>knockedout</td><td>null</td><td>Local player’s hp reaches 20.</td><td></td><td>123.0</td></tr>
+<tr><td>death</td><td>null</td><td>Local player dies</td><td></td><td>123.0</td></tr>
+<tr><td>killer</td><td>Killer name</br><code>{&quot;name&quot;:&quot;killer&quot;,&quot;data&quot;:&quot;Pickyuser18857&quot;}</code></td><td>The local player was killed by an enemy</td><td></td><td>123.0</td></tr>
 </tbody>
 </table>
-</span></div></article></div><div class="docLastUpdate"><em>Last updated on 2019-9-11 by eransharv</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/api/overwolf-games-events-pubg"><span class="arrow-prev">← </span><span>PUBG Game Events</span></a><a class="docs-next button" href="/docs/api/overwolf-games-events-rocket-league"><span>Rocket League Events</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#sample-apps">Sample Apps</a></li><li><a href="#available-features">Available Features</a></li><li><a href="#game-events-status">Game events status</a></li><li><a href="#game_info"><code>game_info</code></a><ul class="toc-headings"><li><a href="#info-updates">Info Updates</a></li></ul></li><li><a href="#match_info"><code>match_info</code></a><ul class="toc-headings"><li><a href="#info-updates-1">Info Updates</a></li></ul></li><li><a href="#match"><code>match</code></a><ul class="toc-headings"><li><a href="#info-updates-2">Info Updates</a></li><li><a href="#events">Events</a></li></ul></li><li><a href="#roster"><code>roster</code></a><ul class="toc-headings"><li><a href="#info-updates-3">Info Updates</a></li></ul></li><li><a href="#kill"><code>kill</code></a><ul class="toc-headings"><li><a href="#events-1">Events</a></li></ul></li><li><a href="#death"><code>death</code></a><ul class="toc-headings"><li><a href="#events-2">Events</a></li></ul></li></ul></nav></div><footer class="site-footer"><div class="container"><ul><li>Legal</li><li><a href="/docs/topics/legal-overview">Terms overview</a></li><li><a href="/docs/topics/legal-developers-terms">Developer&#x27;s terms</a></li><li><a href="/docs/topics/legal-app-terms">App terms</a></li><li><a href="http://www.overwolf.com/legal/" target="_blank">Overwolf terms</a></li><li><a href="http://www.overwolf.com/legal/#Privacy-policy" target="_blank">Overwolf Privacy policy</a></li></ul><ul><li>Support</li><li><a href=" https://discuss.developers.overwolf.com/" target="_blank">Questions and Answers</a></li><li><a href="https://discordapp.com/invite/cjjrZDp" target="_blank">Discord</a></li><li><a href="/docs/support/contact-us#join-our-slack">Slack</a></li><li><a href="https://www.facebook.com/OverwolfDevs" target="_blank">Facebook</a></li><li><a href="https://twitter.com/OverwolfDevs" target="_blank">Twitter</a></li></ul><ul><li>Documentation</li><li><a href="/docs/api/changelog">Changelog</a></li><li><a href="/docs/api/overwolf-api-overview">API</a></li><li><a href="/docs/start/app-creation-process">App Creation Process</a></li><li><a href="/docs/topics/best-practices-overview">Best Practices</a></li><li><a href="/docs/status/all">Game Events status</a></li></ul><ul><li>Information</li><li><a href="http://www.overwolf.com/careers/">Careers</a></li><li><a href="https://play.overwolf.com/fund/" target="_blank">Fund</a></li><li><a href="https://medium.com/overwolf-developers" target="_blank">Developers Blog</a></li><li><a href="https://www.overwolf.com/appstore" target="_blank">Overwolf Appstore</a></li></ul></div></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+</span></div></article></div><div class="docLastUpdate"><em>Last updated on 2019-9-15 by Shoomanjin</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/api/overwolf-games-events-pubg"><span class="arrow-prev">← </span><span>PUBG Game Events</span></a><a class="docs-next button" href="/docs/api/overwolf-games-events-rocket-league"><span>Rocket League Events</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#sample-apps">Sample Apps</a></li><li><a href="#available-features">Available Features</a></li><li><a href="#game-events-status">Game events status</a></li><li><a href="#game_info"><code>game_info</code></a><ul class="toc-headings"><li><a href="#info-updates">Info Updates</a></li></ul></li><li><a href="#match_info"><code>match_info</code></a><ul class="toc-headings"><li><a href="#info-updates-1">Info Updates</a></li></ul></li><li><a href="#match"><code>match</code></a><ul class="toc-headings"><li><a href="#info-updates-2">Info Updates</a></li><li><a href="#events">Events</a></li></ul></li><li><a href="#roster"><code>roster</code></a><ul class="toc-headings"><li><a href="#info-updates-3">Info Updates</a></li></ul></li><li><a href="#kill"><code>kill</code></a><ul class="toc-headings"><li><a href="#events-1">Events</a></li></ul></li><li><a href="#death"><code>death</code></a><ul class="toc-headings"><li><a href="#events-2">Events</a></li></ul></li></ul></nav></div><footer class="site-footer"><div class="container"><ul><li>Legal</li><li><a href="/docs/topics/legal-overview">Terms overview</a></li><li><a href="/docs/topics/legal-developers-terms">Developer&#x27;s terms</a></li><li><a href="/docs/topics/legal-app-terms">App terms</a></li><li><a href="http://www.overwolf.com/legal/" target="_blank">Overwolf terms</a></li><li><a href="http://www.overwolf.com/legal/#Privacy-policy" target="_blank">Overwolf Privacy policy</a></li></ul><ul><li>Support</li><li><a href=" https://discuss.developers.overwolf.com/" target="_blank">Questions and Answers</a></li><li><a href="https://discordapp.com/invite/cjjrZDp" target="_blank">Discord</a></li><li><a href="/docs/support/contact-us#join-our-slack">Slack</a></li><li><a href="https://www.facebook.com/OverwolfDevs" target="_blank">Facebook</a></li><li><a href="https://twitter.com/OverwolfDevs" target="_blank">Twitter</a></li></ul><ul><li>Documentation</li><li><a href="/docs/api/changelog">Changelog</a></li><li><a href="/docs/api/overwolf-api-overview">API</a></li><li><a href="/docs/start/app-creation-process">App Creation Process</a></li><li><a href="/docs/topics/best-practices-overview">Best Practices</a></li><li><a href="/docs/status/all">Game Events status</a></li></ul><ul><li>Information</li><li><a href="http://www.overwolf.com/careers/">Careers</a></li><li><a href="https://play.overwolf.com/fund/" target="_blank">Fund</a></li><li><a href="https://medium.com/overwolf-developers" target="_blank">Developers Blog</a></li><li><a href="https://www.overwolf.com/appstore" target="_blank">Overwolf Appstore</a></li></ul></div></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
                 document.addEventListener('keyup', function(e) {
                   if (e.target !== document.body) {
                     return;
