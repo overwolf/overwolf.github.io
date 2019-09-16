@@ -36,6 +36,7 @@ callback  | function                                                | Returns wi
 A container object for a menu.
 
 ```json
+
 {
 	"menu_items": [{
 			"label": "View main window",
@@ -68,7 +69,24 @@ A container object for a menu.
 * "id" must be set for items without "sub_items".
 * Separators don't need ids.
 * "Enabled" is set to true by default.
+* [launcher_icon](manifest-json#meta-launcher_icon) must be set in the manifest.
 
+
+#### Usage Example
+
+```js
+const trayMenu = {
+    "menu_items": [{
+            "label": "View main window",
+            "id": "view_window"
+        }
+    ]
+}
+
+overwolf.os.tray.setMenu(trayMenu, (res) => {
+	console.log("setMenu -> res", res) 
+});
+```
 
 ## onMenuItemClicked
 #### Version added: 0.131
