@@ -4,8 +4,7 @@ title: overwolf.io API
 sidebar_label: overwolf.io
 ---
 
-Use the `overwolf.io` API to check if  a certain file exists or to write content to a file.  
-For more I/O functionalities, please use our [simple I/O plugin](../topics/simple-io-plugin).  
+Use the `overwolf.io` API to check whether a certain file exists, as well as when writing contnet into files. For more I/O functionalities, please use our [simple I/O plugin](../topics/simple-io-plugin).  
 
 ## Methods Reference
 
@@ -26,7 +25,7 @@ For more I/O functionalities, please use our [simple I/O plugin](../topics/simpl
 
 Parameter | Type | Description |
 ------------ | ------------ | ------------ |
-filePath | string | The path to check for |
+filePath | string | Path to check for |
 callback | function | Returns with the result |   
    
 #### Callback argument: Success
@@ -48,15 +47,15 @@ If the file doesn’t exist, an error status will be returned:
 
 #### Permissions required: FileSystem
 
-> Writes the content to the target file.
+> Writes content into the target file.
 
 If the file doesn’t exist, it will be created, along with any needed directories along the path. Otherwise, the file’s content will be overwritten.
 
 Parameter            | Type                    | Description                                                                             |
 -------------------- | ----------------------- | --------------------------------------------------------------------------------------- |
-filePath             | string                  | The path to check for                                                                   |
-content              | string                  | The content to write                                                                    |
-encoding             | [eEncoding](#eencoding) enum | The encoding to use                                                               |
+filePath             | string                  | Path to check for                                                                   |
+content              | string                  | Content to write                                                                    |
+encoding             | [eEncoding](#eencoding) enum | Encoding to use                                                               |
 triggerUacIfRequired | bool                    | If additional permissions are required, allows the triggering of the Windows UAC dialog |
 callback             | function                | Returns with the result                                                                 |   
    
@@ -80,13 +79,13 @@ callback             | function                | Returns with the result        
 
 Parameter | Type | Description |
 ------------ | ------------ | ------------ |
-filePath | string | The full path of the targeted file|
-encoding | [eEncoding](#eencoding) enum | The encoding to use |
+filePath | string | Full path of the targeted file|
+encoding | [eEncoding](#eencoding) enum | Encoding to use |
 callback | function | Returns with the result |
    
 #### Callback argument: Success
 
-returns a string with the targeted file’s content.
+Returns a string with the targeted file’s content.
 
 ```json
 {"status":"success","content":"Hello World!"}
@@ -110,15 +109,15 @@ If the file doesn’t exist, an error status will be returned:
 
 Parameter | Type | Description |
 ------------ | ------------ | ------------ |
-src | string | A relative (to the root of your extension's folder) file path or a full overwolf-extension:// URI to the source file to be copied |
-dst | string | The destination path (including filename) to copy to |
-overrideFile | bool | "true" if you want an existing file to be overriden, "false" otherwise |
+src | string | A relative file path from your extension's root folder, or a full overwolf-extension:// URI to the source file |
+dst | string | Destination path to copy to including file name |
+overrideFile | bool | "true" if you want an existing file to be overwritten, "false" otherwise |
 reserved | bool | For future use |
 callback | function | Returns with the result |   
 
 #### Callback argument: Success
 
-returns a string with the targeted file’s content.
+Returns a string with the targeted file’s content.
 
 ```json
 {"status":"success""}
