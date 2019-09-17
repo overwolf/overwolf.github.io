@@ -18,8 +18,8 @@ A set of functions providing more information and utilities regarding the curren
 
 Parameter | Type       | Description                                                                                    |
 --------- | -----------| ---------------------------------------------------------------------------------------------- |
-name	  | string     | The name of the object as appears in the manifest                                              |
-callback  | function   | A function called with the extra object, if found, and a status indicating success or failure  |
+name	  | string     | Name of the object as appears in the manifest                                              |
+callback  | function   | A function called with the extra object if found, and a status indicating success or failure  |
 
 ## getManifest(callback)
 #### Version added: 0.80
@@ -32,7 +32,7 @@ callback  | function   | A function called with the manifest data          |
 
 #### Usage Example
 
-Get the app version from the manifest and print it to the console.
+Get app version from the manifest and print it to the console.
 
 ```javascript
 overwolf.extensions.current.getManifest(function(app){console.log(app.meta.version)})
