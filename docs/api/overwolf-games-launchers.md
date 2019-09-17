@@ -4,7 +4,7 @@ title: overwolf.games.launchers API
 sidebar_label: overwolf.games.launchers
 ---
 
-Returns an object with launchers status related events and functions.
+Returns an object with events and functions related to game launcher status.
 
 ## Methods Reference
 
@@ -24,7 +24,7 @@ Returns an object with launchers status related events and functions.
 ## getRunningLaunchersInfo(callback)
 #### Version added: 0.103
 
-> Returns an object with information about the currently running launchers.
+> Returns an object with information about currently running launchers.
 
 Parameter | Type                  | Description                                          |
 --------- | ----------------------| ---------------------------------------------------- |
@@ -58,12 +58,12 @@ callback  | function              | Called with the currently running detected l
 ## onUpdated
 #### Version added: 0.103
 
-> Fired when the launcher info is updated. Passes an [`ILauncherInfo`](#ilauncherinfo-object) object.
+> Fired when launcher info is updated. Passes an [`ILauncherInfo`](#ilauncherinfo-object) object.
 
 ## onLaunched
 #### Version added: 0.103
 
-> Fired when a launcher was launched.
+> Fired when a launcher has launched.
 
 ## onTerminated
 #### Version added: 0.103
@@ -77,8 +77,8 @@ callback  | function              | Called with the currently running detected l
 
 Parameter  | Type                                           | Description                   |
 ---------- | -----------------------------------------------| ----------------------------- |
-info       | [ILauncherInfo](#ilauncherinfo-object) Object  | The launcher info data        |
-changeType | LauncherInfoChangeType                         | The new game info data        |
+info       | [ILauncherInfo](#ilauncherinfo-object) Object  | Launcher info data        |
+changeType | LauncherInfoChangeType                         | New game info data        |
 
 ## ILauncherInfo Object
 #### Version added: 0.103
@@ -87,12 +87,12 @@ changeType | LauncherInfoChangeType                         | The new game info 
 
 Parameter   | Type                                | Description                                                      |
 ----------- | ------------------------------------| ---------------------------------------------------------------- |
-title       | string                              | Returns the title of the represented launcher                    |
-id          | int                                 | Returns the instance id of the represented launcher              |
-classId     | int                                 | Returns the class id of the represented launcher                 |
-isInFocus   | bool                                | Returns whether the launcher represented is currently in focus   |
+title       | string                              | Returns the title of the launcher                    |
+id          | int                                 | Returns the instance id of the launcher              |
+classId     | int                                 | Returns the class id of the launcher                 |
+isInFocus   | bool                                | Returns whether the launcher is currently in focus   |
 position    | [ODKRect](overwolf-windows) Object  | Returns the launcher’s window position                           |
 handle      | uint                                | Returns the launcher’s main window handle                        |
 commandLine | string                              | Returns the launcher’s process command-line                      |
 processId   | uint                                | Returns the launcher’s process id                                |
-path        | string                              | Returns the process path of the represented launcher             |
+path        | string                              | Returns the process path of the launcher             |
