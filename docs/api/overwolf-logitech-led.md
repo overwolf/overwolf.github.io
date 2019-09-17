@@ -47,7 +47,7 @@ Provides API for Logitech Arx Control.
 
 Parameter    | Type     | Description                                          |
 ------------ | ---------| ---------------------------------------------------- |
-callback     | function | A callback with the result of the request            |
+callback     | function | Callback with the result of the request            |
 
 ## setTargetDevice(targetDevices, callback)
 #### Version added: 0.93
@@ -57,16 +57,16 @@ callback     | function | A callback with the result of the request            |
 Parameter    | Type     | Description                                          |
 ------------ | ---------| ---------------------------------------------------- |
 targetDevices| [LogitechDeviceLightingType](#overwolflogitechledenumslogitechdevicelightingtype-enum) array |            |
-callback     | function | A callback with the result of the request            |
+callback     | function | Callback with the result of the request            |
 
 ## saveCurrentLighting(callback)
 #### Version added: 0.93
 
-> Saves the current lighting.
+> Saves the current lighting scheme.
 
 Parameter    | Type     | Description                                          |
 ------------ | ---------| ---------------------------------------------------- |
-callback     | function | A callback with the result of the request            |
+callback     | function | Callback with the result of the request            |
 
 ## setLighting(redPercentage, greenPercentage, bluePercentage, callback)
 #### Version added: 0.93
@@ -87,21 +87,21 @@ callback        | function | A callback with the result of the request          
 
 Parameter    | Type     | Description                                          |
 ------------ | ---------| ---------------------------------------------------- |
-callback     | function | A callback with the result of the request            |
+callback     | function | Callback with the result of the request            |
 
 ## flashLighting(redPercentage, greenPercentage, bluePercentage, milliSecondsDuration, milliSecondsInterval, callback)
 #### Version added: 0.93
 
-> Flashes the lighting on the device.
+> Flashes lighting sources on the device.
 
 Parameter             | Type     | Description                                          |
 --------------------  | ---------| ---------------------------------------------------- |
 redPercentage         | int      | Red percentage (0 – 100)                             |
 greenPercentage       | int      | Green percentage (0 – 100)                           |
 bluePercentage        | int      | Blue percentage (0 – 100)                            |
-milliSecondsDuration  | int      | The duration to flash in milliseconds                |
-milliSecondsInterval  | int      | The interval for flashes in milliseconds             |
-callback              | function | A callback with the result of the request            |
+milliSecondsDuration  | int      | Duration to flash in milliseconds                |
+milliSecondsInterval  | int      | Interval for flashes in milliseconds             |
+callback              | function | Callback with the result of the request            |
 
 ## pulseLighting(redPercentage, greenPercentage, bluePercentage, milliSecondsDuration, milliSecondsInterval, callback)
 #### Version added: 0.93
@@ -113,9 +113,9 @@ Parameter             | Type     | Description                                  
 redPercentage         | int      | Red percentage (0 – 100)                             |
 greenPercentage       | int      | Green percentage (0 – 100)                           |
 bluePercentage        | int      | Blue percentage (0 – 100)                            |
-milliSecondsDuration  | int      | The duration to flash in milliseconds                |
-milliSecondsInterval  | int      | The interval for flashes in milliseconds             |
-callback              | function | A callback with the result of the request            |
+milliSecondsDuration  | int      | Duration to flash in milliseconds                |
+milliSecondsInterval  | int      | Interval for flashes in milliseconds             |
+callback              | function | Callback with the result of the request            |
 
 ## stopEffects(callback)
 #### Version added: 0.93
@@ -124,7 +124,7 @@ callback              | function | A callback with the result of the request    
 
 Parameter    | Type     | Description                                          |
 ------------ | ---------| ---------------------------------------------------- |
-callback     | function | A callback with the result of the request            |
+callback     | function | Callback with the result of the request            |
 
 ## setLightingFromBitmap(bitmapUrl, callback)
 #### Version added: 0.93
@@ -133,8 +133,8 @@ callback     | function | A callback with the result of the request            |
 
 Parameter    | Type     | Description                                          |
 ------------ | ---------| ---------------------------------------------------- |
-bitmapUrl	 | string   | The Overwolf url to add                              |
-callback     | function | A callback with the result of the request            |
+bitmapUrl	 | string   | Overwolf url to add                              |
+callback     | function | Callback with the result of the request            |
 
 ## setLightingFromBitmap(bitmap, callback)
 #### Version added: 0.93
@@ -144,7 +144,7 @@ callback     | function | A callback with the result of the request            |
 Parameter    | Type     | Description                                          |
 ------------ | ---------| ---------------------------------------------------- |
 bitmap		 | Byte[]   | A byte array representing a 21×6 bitmap              |
-callback     | function | A callback with the result of the request            |
+callback     | function | Callback with the result of the request            |
 
 ## setLightingForKeyWithScanCode(keyCode, redPercentage, greenPercentage, bluePercentage, callback)
 #### Version added: 0.93
@@ -153,11 +153,11 @@ callback     | function | A callback with the result of the request            |
 
 Parameter             | Type     | Description                                          |
 --------------------  | ---------| ---------------------------------------------------- |
-keyCode	              | int      | The key scan code                                    |
+keyCode	              | int      | Key scan code                                    |
 redPercentage         | int      | Red percentage (0 – 100)                             |
 greenPercentage       | int      | Green percentage (0 – 100)                           |
 bluePercentage        | int      | Blue percentage (0 – 100)                            |
-callback              | function | A callback with the result of the request            |
+callback              | function | Callback with the result of the request            |
 
 ## setLightingForKeyWithHidCode(keyCode, redPercentage, greenPercentage, bluePercentage , callback)
 #### Version added: 0.93
@@ -166,11 +166,11 @@ callback              | function | A callback with the result of the request    
 
 Parameter             | Type     | Description                                          |
 --------------------  | ---------| ---------------------------------------------------- |
-keyCode	              | int      | The key HID code                                     |
+keyCode	              | int      | Key HID code                                     |
 redPercentage         | int      | Red percentage (0 – 100)                             |
 greenPercentage       | int      | Green percentage (0 – 100)                           |
 bluePercentage        | int      | Blue percentage (0 – 100)                            |
-callback              | function | A callback with the result of the request            |
+callback              | function | Callback with the result of the request            |
 
 ## setLightingForKeyWithQuartzCode(keyCode, redPercentage, greenPercentage, bluePercentage, callback)
 #### Version added: 0.93
@@ -179,11 +179,11 @@ callback              | function | A callback with the result of the request    
 
 Parameter             | Type     | Description                                          |
 --------------------  | ---------| ---------------------------------------------------- |
-keyCode	              | int      | The key quartz  code                                 |
+keyCode	              | int      | Key quartz code                                 |
 redPercentage         | int      | Red percentage (0 – 100)                             |
 greenPercentage       | int      | Green percentage (0 – 100)                           |
 bluePercentage        | int      | Blue percentage (0 – 100)                            |
-callback              | function | A callback with the result of the request            |
+callback              | function | Callback with the result of the request            |
 
 ## setLightingForKeyWithKeyName(keyName, redPercentage, greenPercentage, bluePercentage, callback)
 #### Version added: 0.93
@@ -192,11 +192,11 @@ callback              | function | A callback with the result of the request    
 
 Parameter             | Type     | Description                                          |
 --------------------  | ---------| ---------------------------------------------------- |
-keyName	              | [KeyboardNames](#overwolflogitechledenumskeyboardnames-enum) enum      | The key name       |
+keyName	              | [KeyboardNames](#overwolflogitechledenumskeyboardnames-enum) enum      | Key name       |
 redPercentage         | int      | Red percentage (0 – 100)                             |
 greenPercentage       | int      | Green percentage (0 – 100)                           |
 bluePercentage        | int      | Blue percentage (0 – 100)                            |
-callback              | function | A callback with the result of the request            |
+callback              | function | Callback with the result of the request            |
 
 ## saveLightingForKey(keyName, callback)
 #### Version added: 0.93
@@ -205,8 +205,8 @@ callback              | function | A callback with the result of the request    
 
 Parameter             | Type     | Description                                          |
 --------------------  | ---------| ---------------------------------------------------- |
-keyName	              | [KeyboardNames](#overwolflogitechledenumskeyboardnames-enum) enum | The key name    |
-callback              | function | A callback with the result of the request            |
+keyName	              | [KeyboardNames](#overwolflogitechledenumskeyboardnames-enum) enum | Key name    |
+callback              | function | Callback with the result of the request            |
 
 ## restoreLightingForKey(keyName, callback)
 #### Version added: 0.93
@@ -215,8 +215,8 @@ callback              | function | A callback with the result of the request    
 
 Parameter             | Type     | Description                                          |
 --------------------  | ---------| ---------------------------------------------------- |
-keyName	              | [KeyboardNames](#overwolflogitechledenumskeyboardnames-enum) enum | The key name    |
-callback              | function | A callback with the result of the request            |
+keyName	              | [KeyboardNames](#overwolflogitechledenumskeyboardnames-enum) enum | Key name    |
+callback              | function | Callback with the result of the request            |
 
 ## flashSingleKey(keyName, redPercentage, greenPercentage, bluePercentage, milliSecondsDuration, milliSecondsInterval, callback)
 #### Version added: 0.93
@@ -225,13 +225,13 @@ callback              | function | A callback with the result of the request    
 
 Parameter             | Type     | Description                                          |
 --------------------  | ---------| ---------------------------------------------------- |
-keyName	              | [KeyboardNames](#overwolflogitechledenumskeyboardnames-enum) enum      | The key name       |
+keyName	              | [KeyboardNames](#overwolflogitechledenumskeyboardnames-enum) enum      | Key name       |
 redPercentage         | int      | Red percentage (0 – 100)                             |
 greenPercentage       | int      | Green percentage (0 – 100)                           |
 bluePercentage        | int      | Blue percentage (0 – 100)                            |
-milliSecondsDuration  | int      | The duration to flash in milliseconds                |
-milliSecondsInterval  | int      | The interval for flashes in milliseconds             |
-callback              | function | A callback with the result of the request            |
+milliSecondsDuration  | int      | Duration to flash in milliseconds                |
+milliSecondsInterval  | int      | Interval for flashes in milliseconds             |
+callback              | function | Callback with the result of the request            |
 
 ## pulseSingleKey(keyName, startRedPercentage, startGreenPercentage, startBluePercentage, finishRedPercentage, finishGreenPercentage, finishBluePercentage, milliSecondsDuration, isInfinite, callback)
 #### Version added: 0.93
@@ -240,16 +240,16 @@ callback              | function | A callback with the result of the request    
 
 Parameter            | Type                                                                                           | Description                              |
 -------------------- | -----------------------------------------------------------------------------------------------| -----------------------------------------|
-keyName	             | [KeyboardNames](#overwolflogitechledenumskeyboardnames-enum) enum  | The key name                             |
+keyName	             | [KeyboardNames](#overwolflogitechledenumskeyboardnames-enum) enum  | Key name                             |
 startRedPercentage	 | int                                                                                            | Red start percentage (0 – 100)           |
 startGreenPercentage | int                                                                                            | Green start percentage (0 – 100)         |
 startBluePercentage	 | int                                                                                            | Blue start percentage (0 – 100)          |
 finishRedPercentage	 | int                                                                                            | Red finish percentage (0 – 100)          |
 finishGreenPercentage| int                                                                                            | Green finish percentage (0 – 100)        |
 finishBluePercentage | int                                                                                            | Blue finish percentage (0 – 100)         |
-milliSecondsDuration | int                                                                                            | The duration to flash in milliseconds    |
-milliSecondsInterval | int                                                                                            | The interval for flashes in milliseconds |
-callback             | function                                                                                       | A callback with the result of the request|
+milliSecondsDuration | int                                                                                            | Duration to flash in milliseconds    |
+milliSecondsInterval | int                                                                                            | Interval for flashes in milliseconds |
+callback             | function                                                                                       | Callback with the result of the request|
 
 ## stopEffectsOnKey(keyName, callback)
 #### Version added: 0.93
@@ -258,8 +258,8 @@ callback             | function                                                 
 
 Parameter             | Type                                                                                             | Description                              |
 --------------------  | ----------------------------------------------------------------------------------------------| ------------------------------------------- |
-keyName	              | [KeyboardNames](#overwolflogitechledenumskeyboardnames-enum) enum | The key name                                |
-callback              | function                                                                                       | A callback with the result of the request  |
+keyName	              | [KeyboardNames](#overwolflogitechledenumskeyboardnames-enum) enum | Key name                                |
+callback              | function                                                                                       | Callback with the result of the request  |
 
 ## shutdown()
 #### Version added: 0.93
@@ -279,10 +279,10 @@ callback              | function                                                
 
 Parameter                | Type                                                             | Description                   |
 ------------------------ | -----------------------------------------------------------------| ----------------------------- |
-required_devices         | [LogitechDevice](overwolf-logitech#logitech-device-object) Objet | A list of required devices    |
-required_devices_details | string                                                           | Read only. The list of required devices with additional details   |
-required_lighting_types  | [LogitechDeviceLightingType](#overwolflogitechledenumslogitechdevicelightingtype-enum) enum    | A list of required lighting types  |
-required_lighting_details| string                                                           | The value string on the event |
+required_devices         | [LogitechDevice](overwolf-logitech#logitech-device-object) Objet | List of required devices    |
+required_devices_details | string                                                           | Read only. List of required devices with additional details   |
+required_lighting_types  | [LogitechDeviceLightingType](#overwolflogitechledenumslogitechdevicelightingtype-enum) enum    | List of required lighting types  |
+required_lighting_details| string                                                           | Value string on the event |
 
 
 ## overwolf.logitech.led.LogitechArxData Object
@@ -292,7 +292,7 @@ required_lighting_details| string                                               
 
 Parameter   | Type   | Description                                            |
 ------------| -------| ------------------------------------------------------ |
-app_folder  | string | An optional folder to use when publishing a website    |
+app_folder  | string | Optional folder to use when publishing a website    |
 
 ## overwolf.logitech.led.enums.LogitechDeviceLightingType enum
 #### Version added: 0.93
