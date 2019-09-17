@@ -6,10 +6,10 @@ sidebar_label: overwolf.games.events
 
 ## General
 
-`overwolf.games.events` allows you to be notified when something interesting happens while playing a certain game (e.g. a hero killed someone, someone killed the gamer’s hero, etc.).</br>Overwolf supports events for multiple games, you can see the list of supported games [here](games-ids).
+`overwolf.games.events` allows you to get notified when something interesting happens while playing a certain game. There are many possible events including kills, deaths, victories, damage caused, gold spent and many others.</br>Overwolf supports events for multiple games, you can see the list of supported games [here](games-ids).
 
 :::note
-The full list of the supported games with their Game ID’s is always updated, and can be found [here](games-ids).
+The full list of supported games with their Game ID’s is always up to date and can be found [here](games-ids).
 :::
 
 ## Methods Reference
@@ -25,41 +25,41 @@ The full list of the supported games with their Game ID’s is always updated, a
 
 ## Sample App
 
-You can [download here](https://github.com/overwolf/lol-events-sample-app) an example of using the `overwolf.games.events` API to be notified whenever an interesting event has happened in League of Legends.
+You can find a usage example of the `overwolf.games.events` API [here](https://github.com/overwolf/lol-events-sample-app), this one set to notify whenever an interesting event has happened in League of Legends.
 
 ## Features Overview
 
 Each supported game has its own set of available features.
-A feature is a collection of related game events (e.g events related to a “match” feature – ‘started’/’ended’/’outcome’, etc.). You can view the features of each supported game in the relevant game page on the side menu, for example, [League of Legends page](overwolf-games-events-lol).
+A feature is a category of related game events, for example 'Match Start', 'Match End', 'Match Outcome' are all events belonging to the Match feature. You can view each supported game's features in the relevant game page on the sidebar menu, for example, [the League of Legends page](overwolf-games-events-lol).
 
-## Features types
+## Feature types
 
 :::important
 Each feature is broken down into two entity types: `info updates` and `events`.
 
-1. `Info Updates` – game information changes that define the game’s current state (e.g. the match is currently taking place)
-2. `Events` – volatile events that happen in the game (e.g. player just got killed)
+1. `Info Updates` – game information changes that define the game’s current status (e.g. the match is currently taking place)
+2. `Events` – specific events that happen in the game (e.g. player just got killed)
 :::
 
-So for example, the feature "death" in the game LOL, has a:
+For example, the "Death" feature in LOL has a:
 
 * **"death" event**, which fired when the player's champion died.</br>
-You can  receive this event by registering to the `overwolf.games.events.onNewEvents` event listner
+You can receive this event by registering to the `overwolf.games.events.onNewEvents` event listener.
 * **"deaths" info update**, which holds a counter for the total player's deaths in the current session. </br>
-   You can  receive this event by registering to the `overwolf.games.events.onInfoUpdates2` event listner.</br>
-   It is also possible to get the current available information using [`overwolf.games.events.getInfo()`](#getinfocallback)
+   You can receive this event by registering to the `overwolf.games.events.onInfoUpdates2` event listener.</br>
+   It is also possible to get the currently available information using [`overwolf.games.events.getInfo()`](#getinfocallback)
 
-Note that a feature can contain a few info updates and events, and not just one info update and one event like the above example.
+Note that a feature can contain multiple info updates and events.
 
 ## How to register for features
 
-In order to make sure the data you have is full and consistent, please follow these steps in the following order:
+In order to make sure the data you have is full and consistent, please follow these steps in order:
 
 ### 1. Update the manifest file
 
-The first step is to declare which game the app wants to register features for.</br>
-The declaration is done by adding the game’s class id under the `game_events` section in the [manifest.json](manifest-json).</br>
-This property is an array of [game class ids](games-ids) that the app wants to register for (it can register to multiple games).
+The first step is to declare the game for which your app wants to register features.</br>
+The declaration is done by adding the game’s class id under the `game_events` section in your [manifest.json](manifest-json).</br>
+This property is an array of [game class ids](games-ids) that the app wants to register for (a single app can register for multiple games).
 
 This is how the value would look like if the app is interested in receiving events for LOL and CS:GO:
 
@@ -74,15 +74,14 @@ This is how the value would look like if the app is interested in receiving even
 
 The next step is to add a listener to the relevant JavaScript Event object in your app’s code:
 
-* For listening to game events, use the [`overwolf.games.events.onNewEvent`](#onnewevents) object.
-* For listening to info updates, use the [`overwolf.games.events.onInfoUpdates2`](#oninfoupdates2) object.
+* To track game events, use the [`overwolf.games.events.onNewEvent`](#onnewevents) object.
+* To track info updates, use the [`overwolf.games.events.onInfoUpdates2`](#oninfoupdates2) object.
 
 ### 3. Call setRequiredFeatures()
 
-The final step is to call [`overwolf.games.events.setRequiredFeatures`](#setrequiredfeaturesfeatures-callback).
-Once the app wants to start receiving specific info updates and events, you call this function with an array of feature names that you would like your app to consume.
+The final step is to call [`overwolf.games.events.setRequiredFeatures`](#setrequiredfeaturesfeatures-callback). Once the app wants to start receiving specific info updates and events, you call this function with an array of feature names that you would like your app to consume.
 
-This is an example when an app requires Rocket League features like the following:
+This is an example when an app requires Rocket League features:
 
 ```javascript
 overwolf.games.events.setRequiredFeatures(['stats', 'match'], function(info) {
@@ -92,11 +91,9 @@ overwolf.games.events.setRequiredFeatures(['stats', 'match'], function(info) {
 
 ### 4. Call getInfo()
 
-call [getInfo()](#getinfocallback) to receive all the info updates that happened before `setRequiredFeatures` succeeded.
+Call [getInfo()](#getinfocallback) to receive all info updates that happened before `setRequiredFeatures` succeeded. In some cases you might add the listener to `oninfoupdates2` or to `onNewEvent` AFTER the info update has already happened, so the app will miss the info-update event. 
 
-In some cases you might add the listener to `oninfoupdates2` or to `onNewEvent` AFTER the info update has already happened, so the app will miss the info-update event. 
-
-For that reason, you should also call [`overwolf.games.events.getInfo()`](#getinfocallback) to get the current info state.
+For that reason, you should also call [`overwolf.games.events.getInfo()`](#getinfocallback) to get current info state.
 
 ## setRequiredFeatures(features, callback)
 
@@ -106,11 +103,11 @@ For that reason, you should also call [`overwolf.games.events.getInfo()`](#getin
 
 Parameter | Type     | Description |
 --------- | ---------| ------------ |
-features  | string[] | A string array of features to utilize |
-callback  | function | A callback function which will be called with the status of the request |
+features  | string[] | String array of features to utilize |
+callback  | function | Callback function which will be called with the status of the request |
 
 #### Callback argument
-In case of success, the callback will contain all the available features for the registered games that we declated in the manifest.
+If successful, the callback will contain all available features for the registered games declared in the manifest.
 
 ```json
 {  
@@ -146,10 +143,10 @@ overwolf.games.events.setRequiredFeatures(g_interestedInFeatures, function(info)
 ```
 
 :::important
-it's important to wait for `success` status, to make sure that the required features will be registered and trigger the events
+it's important to wait for the `success` status to make sure that the required features will be registered and trigger events properly.
 :::
 
-Example for setting required features with wait till success
+Example for setting required features with wait till success:
 
 ```js
   async setRequiredFeatures() {
@@ -186,11 +183,11 @@ Example for setting required features with wait till success
 
 Parameter | Type     | Description |
 --------- | ---------| ------------ |
-callback  | function | A callback function which will be called with the status of the request |
+callback  | function | Callback function which will be called with the status of the request |
 
 #### Callback argument
 
-The current game info: to which features you are registered, and all the available info for the current game session. 
+The current game's info, registered features, and all available info for the current game session. 
 
 ```json
 {  
@@ -244,7 +241,7 @@ overwolf.games.events.getInfo(function(info) {
 
 #### Version added: 0.78
 
-> Fired when there was an error in the game events system.
+> Fired when an error occured in the Game Event system.
 
 ## onInfoUpdates2
 
@@ -274,7 +271,7 @@ overwolf.games.events.onInfoUpdates2.addListener(function(info) {
 ```
 
 :::tip
-As best practice it is recommended to first remove the event listener before adding it to prevent accidental multiple listeners.
+Our best practice is removing event listeners and then adding the listener back to prevent accidental multiple listeners.
 :::
 
 ## onNewEvents
@@ -305,5 +302,5 @@ overwolf.games.events.onNewEvents.addListener(function(info) {
 ```
 
 :::tip
-As best practice it is recommended to first remove the event listener before adding it to prevent accidental multiple listeners.
+Our best practice is removing event listeners and then adding the listener back to prevent accidental multiple listeners.
 :::
