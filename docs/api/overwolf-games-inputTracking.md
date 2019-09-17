@@ -4,7 +4,7 @@ title: overwolf.games.inputTracking API
 sidebar_label: overwolf.games.inputTracking
 ---
 
-Provides keyboard and mouse activity information while in game.
+Provides keyboard and mouse activity information while the user is in-game.
 
 ## Methods Reference
 
@@ -22,15 +22,15 @@ Provides keyboard and mouse activity information while in game.
 ## getActivityInformation(callback)
 #### Version added: 0.92
 
-> Returns the input activity information.
+> Returns input activity information.
 
 Parameter | Type                  | Description                              |
 --------- | ----------------------| ---------------------------------------- |
-callback  | function              | A callback with the activity information |
+callback  | function              | Callback with input activity information |
 
 #### Callback argument: Success
 
-The information includes presses for keyboard/mouse, total session time, idle time and actions-per-minute. This information resets between game executions.
+The information includes key presses and clicks for keyboard/mouse, total session time, idle time and overall actions-per-minute. This information resets between game executions.
 
 ```json
 {
@@ -58,16 +58,16 @@ The information includes presses for keyboard/mouse, total session time, idle ti
 ## getMatchActivityInformation(callback)
 #### Version added: 0.92
 
-> Returns the input activity information (similar to [getActivityInformation()](#getactivityinformationcallback)), however, when this is supported, it will return data only for the latest match of the current game.
+> Returns input activity information (similar to [getActivityInformation()](#getactivityinformationcallback)), however, when this is supported, it will return data only for the latest match of the current game.
 
-In order to get the activity information:
+In order to get the information:
 
-* The latest match must last more than 5 minutes.
-* The user must click more than 30 times on the keyboard or mouse.
+* The latest match must have lasted for more than 5 minutes.
+* The user must have clicked more than 30 times on either keyboard or mouse.
 
 Parameter | Type                  | Description                              |
 --------- | ----------------------| ---------------------------------------- |
-callback  | function              | A callback with the activity information |
+callback  | function              | Callback with the activity information |
 
 #### Callback argument: Success
 
@@ -110,13 +110,13 @@ callback  | function              | A callback with the activity information |
 ## getMousePosition(callback)
 #### Version added: 0.93
 
-> Returns the input last mouse position in game.
+> Returns the last mouse position in game.
 
-The data includes the mouse position and a boolean stating whether the keypress was on a game or on an Overwolf widget (onGame).
+The data includes the mouse position and a boolean stating whether the click was in the game or on an Overwolf widget (onGame).
 
 Parameter | Type                  | Description                              |
 --------- | ----------------------| ---------------------------------------- |
-callback  | function              | A callback with the activity information |
+callback  | function              | Callback with the activity information |
 
 #### Callback argument: Success
 
@@ -140,7 +140,7 @@ callback  | function              | A callback with the activity information |
 
 > Fired when a keyboard key has been released.
 
-The event information includes the virtual key code (key) and a boolean stating whether the keypress was on a game or on an Overwolf widget (onGame).
+The event information includes the virtual key code (key) and a boolean stating whether the keypress was in the game or on an Overwolf widget (onGame).
 
 #### Event Data Example: Success
 
@@ -172,7 +172,7 @@ The event information includes the virtual key code (key) and a boolean stating 
 
 > Fired when a mouse key has been released.
 
-The event information includes whether the left or white mouse button was clicked (button), x and y coordinates (x, y) and a boolean stating whether the keypress was on a game or on an Overwolf widget (onGame).
+The event information includes whether the left or white mouse button was clicked (button), x and y coordinates (x, y) and a boolean stating whether the keypress was in the game or on an Overwolf widget (onGame).
 
 #### Event Data Example: Success
 
@@ -189,7 +189,7 @@ The event information includes whether the left or white mouse button was clicke
 
 #### Version added: 0.78
 
-> Fired a mouse key has been pressed.
+> Fired when a mouse key has been pressed.
 
 #### Event Data Example: Success
 
