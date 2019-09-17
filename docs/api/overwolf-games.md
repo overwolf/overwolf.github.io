@@ -29,7 +29,7 @@ Provides information about the currently running game.
 
 #### Version added: 0.78 
 
-> Returns an object with information about the currently running game (or active games, if more than one), or null if no game is running.
+> Returns an object with information about the currently running game or games, if more than one is running, or null if no game is running.
 
 Parameter | Type     | Description                                                              |
 ----------| -------- | ------------------------------------------------------------------------ |
@@ -68,13 +68,13 @@ overwolf.games.getRunningGameInfo(function(){console.log(JSON.stringify(argument
 
 #### Version added: 0.93 
 
-> Returns information about a game with a given game id.
+> Returns information about a game with a given game ID.
 
 **Note**: Game info will be returned only if the game is installed on the local machine.
 
 Parameter   | Type     | Description                                                              |
 ------------| -------- | ------------------------------------------------------------------------ |
-gameClassId | int      |The class id of the game                                                  |
+gameClassId | int      | Class id of the game                                                  |
 callback    | function | Called with the info about the game                                      |
 
 #### Callback argument: Success
@@ -112,7 +112,7 @@ callback    | function | Called with the info about the game                    
 
 #### Version added: 0.112 
 
-> Returns information about a game with a given game id.
+> Returns information about a game with a given game ID.
 
 :::note
 This method is similar to [getGameInfo()](#getgameinfogameclassid-callback) except that it can return two different results:
@@ -180,11 +180,11 @@ callback    | function | Called with the info about the game                    
 
 #### Version added: 0.122 
 
-> Returns an array of the maxNumOfGames most recently played game IDs. An empty array will be returned if none have been recorded.
+> Returns an array of the most recently played game IDs. An empty array will be returned if none have been recorded.
 
 Parameter     | Type     | Description                                                                       |
 --------------| -------- | --------------------------------------------------------------------------------- |
-maxNumOfGames | int      | The maximum number of games to receive. Currently we support max number of 3 game |
+maxNumOfGames | int      | Maximum number of games to receive. Currently we support a maximum of 3 games |
 callback      | function | Called with the array of game IDs                                                 |
 
 #### Callback argument: Success
@@ -202,7 +202,7 @@ callback      | function | Called with the array of game IDs                    
 
 ## onGameInfoUpdated
 
-> Fired when the game info is updated, including game name, game running, game terminated, game changing focus, etc. Passes a [GameInfoChangeData](#gameinfochangedata-object) object.
+> Fired when game info is updated, including game name, game running, game terminated, game changing focus, etc. Passes a [GameInfoChangeData](#gameinfochangedata-object) object.
 
 #### Event data example:
 
@@ -264,7 +264,7 @@ callback      | function | Called with the array of game IDs                    
 
 ## onMajorFrameRateChange
 
-> Fired when the rendering frame rate of the currently injected game changes dramatically.
+> Fired when the rendering frame-rate of the currently injected game changes dramatically.
 
 #### Event data example:
 
@@ -295,15 +295,15 @@ Contains information about a game.
 
 | Name               | Type     | Description                                                                                         | Since |
 |--------------------| ---------|-----------------------------------------------------------------------------------------------------|------ |
-| isInFocus          | bool     | Returns whether the game represented is currently in focus.                                         | 0.78  |
-| isRunning          | bool     | Returns whether the game represented is currently running.                                          | 0.78  |
-| allowsVideoCapture | bool     | Returns whether the game represented allows video to be captured.                                   | 0.78  |
-| title              | string   | Returns the title of the represented game.                                                          | 0.78  |
-| id                 | int      | Returns the id of the represented game.                                                             | 0.78  |
-| width              | int      | Returns the pixel width of the represented game window.                                             | 0.78  |
-| height             | int      | Returns the pixel height of the represented game window.                                            | 0.78  |
-| logicalWidth       | int      | Returns the game reported (logical) pixel width of the represented game window.                     | 0.78  |
-| logicalHeight      | int      | Returns the game reported (logical) pixel height of the represented game window.                    | 0.78  |
+| isInFocus          | bool     | Returns whether the game is currently in focus.                                         | 0.78  |
+| isRunning          | bool     | Returns whether the game is currently running.                                          | 0.78  |
+| allowsVideoCapture | bool     | Returns whether the game allows video to be captured.                                   | 0.78  |
+| title              | string   | Returns the title of the game.                                                          | 0.78  |
+| id                 | int      | Returns the id of the game.                                                             | 0.78  |
+| width              | int      | Returns the pixel width of the game window.                                             | 0.78  |
+| height             | int      | Returns the pixel height of the game window.                                            | 0.78  |
+| logicalWidth       | int      | Returns the game reported (logical) pixel width of the game window.                     | 0.78  |
+| logicalHeight      | int      | Returns the game reported (logical) pixel height of the game window.                    | 0.78  |
 | renderers          | string[] | Returns an array of the rendering technology names supported by the running game.                   | 0.78  |
 | detectedRenderer   | string   | Returns the rendering technology detected by the running game.                                      | 0.78  |
 | commandLine        | string   | Returns the game process commandline.                                                               | 0.78  |
