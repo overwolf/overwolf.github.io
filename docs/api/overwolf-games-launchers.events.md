@@ -4,8 +4,7 @@ title: overwolf.games.launchers.events API
 sidebar_label: overwolf.games.launchers.events
 ---
 
-This API returns an object with launchers related events and info-updates.  
-(Currently supported only with League of Legends Launcher/Client).
+This API returns an object with launcher related events and info-updates (Currently supported only for the League of Legends Launcher).
 
 ## Methods Reference
 
@@ -19,11 +18,11 @@ This API returns an object with launchers related events and info-updates.
 
 ## How to register for features
 
-The Launcher Events Provider keeps an info DB with various information about the launcher state.
+The Launcher Events Provider keeps an info DB with information about the launcher state.
 
-Updates about this information can be received as events by registering an event listener using [`overwolf.games.launchers.events.onInfoUpdates()`](#oninfoupdates).  
+Updates for these entries can be received as events by registering an event listener using [`overwolf.games.launchers.events.onInfoUpdates()`](#oninfoupdates).  
 
-It is also possible to get the current available information using [`overwolf.games.launchers.events.getInfo()`](#getinfolauncherclassid-callback).
+It is also possible to get the currently available information using [`overwolf.games.launchers.events.getInfo()`](#getinfolauncherclassid-callback).
 
 ## setRequiredFeatures(launcherClassId, features, callback)
 #### Version added: 0.126
@@ -32,8 +31,8 @@ It is also possible to get the current available information using [`overwolf.ga
 
 Parameter        | Type     | Description                            |
 ---------------- | ---------| -------------------------------------- |
-launcherClassId  | int      | The launcher Id of interest            |
-features         | string   | A string array of features to utilize  |
+launcherClassId  | int      | Launcher ID of interest            |
+features         | string   | String array of features to utilize  |
 callback         | function | Returns with the result                |
 
 #### Callback argument: Success
@@ -47,7 +46,7 @@ A callback function which will be called with the status of the request
 ## getInfo(launcherClassId, callback)
 #### Version added: 0.126
 
-> Gets the current state of information for a given launcher id.
+> Gets the current information for a given launcher id.
 
 Parameter        | Type     | Description                            |
 ---------------- | ---------| -------------------------------------- |
@@ -87,4 +86,4 @@ A callback function which will be called with the status of the request
 
 #### Version added: 0.78
 
-> Fired when there are new game events with a JSON object of the events information.
+> Fired when there are new game events with a JSON object of the events.
