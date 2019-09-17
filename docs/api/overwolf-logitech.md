@@ -17,7 +17,7 @@ sidebar_label: overwolf.logitech
 ## getVersion(callback)
 #### Version added: 0.93
 
-> Gets the current version of the LGS.
+> Gets the current version of the Logitech Gaming Software.
 
 Parameter | Type                  | Description                                        |
 --------- | ----------------------| -------------------------------------------------- |
@@ -35,11 +35,11 @@ callback  | function              | Called with the current device information  
 ## overwolf.logitech.LogitechData Object
 #### Version added: 0.93
 
-> Container for the Logitech data.
+> Container for Logitech data.
 
 Parameter            | Type                                         | Description                                     |
 -------------------- | ---------------------------------------------| ----------------------------------------------- |
-minimal_lgs_version  | version Object (string wrapper)              | The minimal LGS version to require for this app |
+minimal_lgs_version  | version Object (string wrapper)              | Minimal LGS version required for this app |
 arx                  | [LogitechArxData](overwolf-logitech-led#overwolflogitechledlogitecharxdata-object) Object | The Arx API data  |
 led                  | [LogitechLedData](overwolf-logitech-led#overwolflogitechledlogitechleddata-object) Object | The LED API data  |
 
