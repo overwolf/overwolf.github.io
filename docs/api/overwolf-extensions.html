@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>overwolf.extensions API · Overwolf</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="Use the `overwolf.extensios` API to control and retrieve details of an Overwolf app (extension) or listen and respond to events in the app’s lifecycle."/><meta name="docsearch:language" content="en"/><meta property="og:title" content="overwolf.extensions API · Overwolf"/><meta property="og:type" content="website"/><meta property="og:url" content="https://overwolf.github.io/"/><meta property="og:description" content="Use the `overwolf.extensios` API to control and retrieve details of an Overwolf app (extension) or listen and respond to events in the app’s lifecycle."/><meta property="og:image" content="https://overwolf.github.io/img/ow_share.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://overwolf.github.io/img/ow_share.png"/><link rel="shortcut icon" href="/img/ow-favicon.ico"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script>
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>overwolf.extensions API · Overwolf</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="Use the `overwolf.extensions` API to control and retrieve details of an Overwolf app or listen/respond to events in the app’s lifecycle."/><meta name="docsearch:language" content="en"/><meta property="og:title" content="overwolf.extensions API · Overwolf"/><meta property="og:type" content="website"/><meta property="og:url" content="https://overwolf.github.io/"/><meta property="og:description" content="Use the `overwolf.extensions` API to control and retrieve details of an Overwolf app or listen/respond to events in the app’s lifecycle."/><meta property="og:image" content="https://overwolf.github.io/img/ow_share.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://overwolf.github.io/img/ow_share.png"/><link rel="shortcut icon" href="/img/ow-favicon.ico"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script>
               (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
               (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
               m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
@@ -68,18 +68,16 @@
                 };
               }
             });
-        </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><a class="edit-page-link button" href="https://github.com/overwolf/overwolf.github.io/tree/source/docs/api/overwolf-extensions.md" target="_blank" rel="noreferrer noopener">Edit</a><h1 class="postHeaderTitle">overwolf.extensions API</h1></header><article><div><span><p>Use the <code>overwolf.extensios</code> API to control and retrieve details of an Overwolf app (extension) or listen and respond to events in the app’s lifecycle.</p>
-<h2><a class="anchor" aria-hidden="true" id="special-ow-urls"></a><a href="#special-ow-urls" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Special OW URL's</h2>
-<p>You can use the following helpful URL’s to retrieve an extension file content or icons:</p>
+        </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><a class="edit-page-link button" href="https://github.com/overwolf/overwolf.github.io/tree/source/docs/api/overwolf-extensions.md" target="_blank" rel="noreferrer noopener">Edit</a><h1 class="postHeaderTitle">overwolf.extensions API</h1></header><article><div><span><p>Use the <code>overwolf.extensions</code> API to control and retrieve details of an Overwolf app or listen/respond to events in the app’s lifecycle.</p>
+<h2><a class="anchor" aria-hidden="true" id="special-overwolf-urls"></a><a href="#special-overwolf-urls" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Special Overwolf URLs</h2>
+<p>You can use the following helpful URLs to retrieve an extension file content or icons:</p>
 <ul>
 <li><p><code>overwolf://extension-resources/&lt;extension uid&gt;/icon</code>  <br>
-A URL that will serve as a source for IMG tag or or a DIV background.<br>
-This will present the icon of the stated extension.</p></li>
+A URL that can be used as a source for an IMG tag or a DIV background. This path will display the icon of the stated extension.</p></li>
 <li><p><code>overwolf://extension-resources/&lt;extension uid&gt;/icon_gray</code>  <br>
-A URL that will serve as a source for IMG tag or or a DIV background.<br>
-This will present the gray icon of the stated extension.</p></li>
+A URL that can be used as a source for an IMG tag or a DIV background. This will present the gray icon of the stated extension.</p></li>
 <li><p><code>overwolf-extension://&lt;extension uid&gt;/&lt;path to extension file&gt;</code>  <br>
-Returns the content of a file in an extension.</p></li>
+Returns the content of a file in an app's library.</p></li>
 </ul>
 <h2><a class="anchor" aria-hidden="true" id="methods-reference"></a><a href="#methods-reference" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Methods Reference</h2>
 <ul>
@@ -103,24 +101,24 @@ Returns the content of a file in an extension.</p></li>
 <h2><a class="anchor" aria-hidden="true" id="launchuid-parameter"></a><a href="#launchuid-parameter" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>launch(uid , parameter)</h2>
 <h4><a class="anchor" aria-hidden="true" id="version-added-078"></a><a href="#version-added-078" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Version added: 0.78</h4>
 <blockquote>
-<p>Launch an extension by its unique id.</p>
+<p>Launch an extension by unique id.</p>
 </blockquote>
 <table>
 <thead>
 <tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
 </thead>
 <tbody>
-<tr><td>uid</td><td>string</td><td>The extension unique id</td></tr>
+<tr><td>uid</td><td>string</td><td>Extension unique id</td></tr>
 <tr><td>parameter</td><td>Object (optional)</td><td>A parameter to pass to the extension. The extension may or may not use this parameter</td></tr>
 </tbody>
 </table>
-<p>Retrieve a service object (which will usually provide external APIs) by an id.</p>
+<p>Retrieve a service object by ID, which will usually provide external APIs.</p>
 <table>
 <thead>
 <tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
 </thead>
 <tbody>
-<tr><td>id</td><td>string</td><td>The service id</td></tr>
+<tr><td>id</td><td>string</td><td>Service id</td></tr>
 <tr><td>callback</td><td>function</td><td>A function called with the service, if found, and a status indicating success or failure</td></tr>
 </tbody>
 </table>
@@ -147,37 +145,37 @@ Returns the content of a file in an extension.</p></li>
 <tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
 </thead>
 <tbody>
-<tr><td>id</td><td>string</td><td>The id of the extension to get info for</td></tr>
+<tr><td>id</td><td>string</td><td>ID of the extension to get info for</td></tr>
 <tr><td>callback</td><td>function</td><td>Called with the info</td></tr>
 </tbody>
 </table>
 <h2><a class="anchor" aria-hidden="true" id="registerinfoid-eventscallback-callback"></a><a href="#registerinfoid-eventscallback-callback" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>registerInfo(id, eventsCallback, callback)</h2>
 <h4><a class="anchor" aria-hidden="true" id="version-added-091-2"></a><a href="#version-added-091-2" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Version added: 0.91</h4>
 <blockquote>
-<p>Requests info updates for extension. Will also be called when the extension launches/closes.</p>
+<p>Requests info updates for an extension. Will also be called when the extension launches or closes.</p>
 </blockquote>
 <table>
 <thead>
 <tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
 </thead>
 <tbody>
-<tr><td>id</td><td>string</td><td>The id of the extension to get updates for</td></tr>
+<tr><td>id</td><td>string</td><td>ID of the extension to get updates for</td></tr>
 <tr><td>eventsCallback</td><td>function</td><td>A callback to receive info updates</td></tr>
-<tr><td>callback</td><td>function</td><td>The status of the request</td></tr>
+<tr><td>callback</td><td>function</td><td>Status of the request</td></tr>
 </tbody>
 </table>
 <h2><a class="anchor" aria-hidden="true" id="unregisterinfoid-callback"></a><a href="#unregisterinfoid-callback" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>unregisterInfo(id, callback)</h2>
 <h4><a class="anchor" aria-hidden="true" id="version-added-091-3"></a><a href="#version-added-091-3" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Version added: 0.91</h4>
 <blockquote>
-<p>Stop requesting info for extension.</p>
+<p>Stop requesting info for an extension.</p>
 </blockquote>
 <table>
 <thead>
 <tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
 </thead>
 <tbody>
-<tr><td>id</td><td>string</td><td>The id of the extension to stop getting updates for</td></tr>
-<tr><td>callback</td><td>function</td><td>The status of the request</td></tr>
+<tr><td>id</td><td>string</td><td>ID of the extension to stop getting updates for</td></tr>
+<tr><td>callback</td><td>function</td><td>Status of the request</td></tr>
 </tbody>
 </table>
 <h2><a class="anchor" aria-hidden="true" id="getmanifestid-callback"></a><a href="#getmanifestid-callback" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>getManifest(id, callback)</h2>
@@ -190,7 +188,7 @@ Returns the content of a file in an extension.</p></li>
 <tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
 </thead>
 <tbody>
-<tr><td>id</td><td>string</td><td>The id of the extension to get the manifest for</td></tr>
+<tr><td>id</td><td>string</td><td>ID of the extension to get the manifest for</td></tr>
 <tr><td>callback</td><td>function</td><td>A function called with the manifest data</td></tr>
 </tbody>
 </table>
@@ -208,8 +206,8 @@ Returns the content of a file in an extension.</p></li>
 <tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
 </thead>
 <tbody>
-<tr><td>id</td><td>string</td><td>The id of the extension to get updates for</td></tr>
-<tr><td>callback</td><td>function</td><td>The status of the request</td></tr>
+<tr><td>id</td><td>string</td><td>ID of the extension to get updates for</td></tr>
+<tr><td>callback</td><td>function</td><td>Status of the request</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="callback-argument-success-1"></a><a href="#callback-argument-success-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Callback argument: Success</h4>
@@ -303,19 +301,19 @@ Returns the content of a file in an extension.</p></li>
 <blockquote>
 <p>Tries to download an update for the calling extension.</p>
 </blockquote>
-<p>This functions allows apps to check and perform an update without having to wait for Overwolf to do so.</p>
+<p>This function allows apps to check and perform an update without having to wait for Overwolf to do so automatically.</p>
 <table>
 <thead>
 <tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
 </thead>
 <tbody>
-<tr><td>callback</td><td>function</td><td>The result of the request</td></tr>
+<tr><td>callback</td><td>function</td><td>Result of the request</td></tr>
 </tbody>
 </table>
 <h2><a class="anchor" aria-hidden="true" id="updateextensionscallback"></a><a href="#updateextensionscallback" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>updateExtensions(callback)</h2>
 <h4><a class="anchor" aria-hidden="true" id="version-added-0133-1"></a><a href="#version-added-0133-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Version added: 0.133</h4>
 <blockquote>
-<p>Tries to download an update for all the installed extensions.</p>
+<p>Tries to download an update for all installed extensions.</p>
 </blockquote>
 <p>This functions allows apps to check and perform an update without having to wait for Overwolf to do so.</p>
 <table>
@@ -323,7 +321,7 @@ Returns the content of a file in an extension.</p></li>
 <tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
 </thead>
 <tbody>
-<tr><td>callback</td><td>function</td><td>The result of the request</td></tr>
+<tr><td>callback</td><td>function</td><td>Result of the request</td></tr>
 </tbody>
 </table>
 <h2><a class="anchor" aria-hidden="true" id="onapplaunchtriggered"></a><a href="#onapplaunchtriggered" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>onAppLaunchTriggered</h2>
@@ -336,21 +334,21 @@ Returns the content of a file in an extension.</p></li>
 <pre><code class="hljs css language-json">overwolf-extension://hffhbjnafafjnehejohpkfhjdenpifhihebpkhni/index.html?source=gamelaunchevent
 </code></pre>
 <h3><a class="anchor" aria-hidden="true" id="the-source-param"></a><a href="#the-source-param" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>The source param</h3>
-<p>Possible values for the <code>source</code> param:</p>
+<p>Possible values for the <code>source</code> parameter:</p>
 <table>
 <thead>
 <tr><th>Parameter</th><th>Type</th></tr>
 </thead>
 <tbody>
-<tr><td>dock</td><td>launched from the Overwolf dock</td></tr>
-<tr><td>gamelaunchevent</td><td>auto-launched with a game</td></tr>
-<tr><td>hotkey</td><td>launched in-game with its hotkey</td></tr>
-<tr><td>storeapi</td><td>launched from the store</td></tr>
-<tr><td>odk</td><td>launched with the overwolf.extensions.launch API</td></tr>
-<tr><td>commandline</td><td>launched from the command line using overwolf.exe -launchapp [extension id]</td></tr>
-<tr><td>tray</td><td>launched from the tray</td></tr>
-<tr><td>startup</td><td>launched upon startup (like remote configurations)</td></tr>
-<tr><td>after-install</td><td>auto-launched after installation</td></tr>
+<tr><td>dock</td><td>Launched from the Overwolf dock</td></tr>
+<tr><td>gamelaunchevent</td><td>Auto-launched with a game</td></tr>
+<tr><td>hotkey</td><td>Launched in-game with its hotkey</td></tr>
+<tr><td>storeapi</td><td>Launched from the store</td></tr>
+<tr><td>odk</td><td>Launched with the overwolf.extensions.launch API</td></tr>
+<tr><td>commandline</td><td>Launched from the command line using overwolf.exe -launchapp [extension id]</td></tr>
+<tr><td>tray</td><td>Launched from the tray</td></tr>
+<tr><td>startup</td><td>Launched upon startup (like remote configurations)</td></tr>
+<tr><td>after-install</td><td>Auto-launched after installation</td></tr>
 </tbody>
 </table>
 
@@ -359,7 +357,7 @@ Returns the content of a file in an extension.</p></li>
         <h5><div class="admonition-icon"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="16" viewBox="0 0 12 16"><path fill-rule="evenodd" d="M6.5 0C3.48 0 1 2.19 1 5c0 .92.55 2.25 1 3 1.34 2.25 1.78 2.78 2 4v1h5v-1c.22-1.22.66-1.75 2-4 .45-.75 1-2.08 1-3 0-2.81-2.48-5-5.5-5zm3.64 7.48c-.25.44-.47.8-.67 1.11-.86 1.41-1.25 2.06-1.45 3.23-.02.05-.02.11-.02.17H5c0-.06 0-.13-.02-.17-.2-1.17-.59-1.83-1.45-3.23-.2-.31-.42-.67-.67-1.11C2.44 6.78 2 5.65 2 5c0-2.2 2.02-4 4.5-4 1.22 0 2.36.42 3.22 1.19C10.55 2.94 11 3.94 11 5c0 .66-.44 1.78-.86 2.48zM4 14h5c-.23 1.14-1.3 2-2.5 2s-2.27-.86-2.5-2z"/></svg></div> tip</h5>
       </div>
       <div class="admonition-content">
-    <p>if you want to get the origin (what triggered the app launch) before/without register the events, you can run the <code>window.location.href</code> command.</p>
+    <p>if you want to get the origin information before/without registering the events, you can run the <code>window.location.href</code> command.</p>
 </div></div><h2><a class="anchor" aria-hidden="true" id="onextensionupdatestatechanged"></a><a href="#onextensionupdatestatechanged" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>onExtensionUpdateStateChanged</h2>
 <h4><a class="anchor" aria-hidden="true" id="version-added-0132"></a><a href="#version-added-0132" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Version added: 0.132</h4>
 <blockquote>
@@ -383,7 +381,7 @@ Returns the content of a file in an extension.</p></li>
 <span class="hljs-attr">"SourceLine"</span>: <span class="hljs-string">"if(0!=dcLoadAds){var data_version={}"</span>
 }
 </code></pre>
-</span></div></article></div><div class="docLastUpdate"><em>Last updated on 2019-9-8 by eransharv</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/api/overwolf-egs"><span class="arrow-prev">← </span><span>overwolf.egs</span></a><a class="docs-next button" href="/docs/api/overwolf-extension-current"><span>overwolf.extension.current</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#special-ow-urls">Special OW URL's</a></li><li><a href="#methods-reference">Methods Reference</a></li><li><a href="#events-reference">Events Reference</a></li><li><a href="#launchuid-parameter">launch(uid , parameter)</a></li><li><a href="#setinfoinfo">setInfo(info)</a></li><li><a href="#getinfoid-callback">getInfo(id, callback)</a></li><li><a href="#registerinfoid-eventscallback-callback">registerInfo(id, eventsCallback, callback)</a></li><li><a href="#unregisterinfoid-callback">unregisterInfo(id, callback)</a></li><li><a href="#getmanifestid-callback">getManifest(id, callback)</a></li><li><a href="#getrunningstateid-callback">getRunningState(id, callback)</a></li><li><a href="#relaunch">relaunch()</a></li><li><a href="#updateextensioncallback">updateExtension(callback)</a></li><li><a href="#updateextensionscallback">updateExtensions(callback)</a></li><li><a href="#onapplaunchtriggered">onAppLaunchTriggered</a><ul class="toc-headings"><li><a href="#the-origin-string">The origin string</a></li><li><a href="#the-source-param">The source param</a></li></ul></li><li><a href="#onextensionupdatestatechanged">onExtensionUpdateStateChanged</a></li><li><a href="#onuncaughtexception">onUncaughtException</a></li></ul></nav></div><footer class="site-footer"><div class="container"><ul><li>Legal</li><li><a href="/docs/topics/legal-overview">Terms overview</a></li><li><a href="/docs/topics/legal-developers-terms">Developer&#x27;s terms</a></li><li><a href="/docs/topics/legal-app-terms">App terms</a></li><li><a href="http://www.overwolf.com/legal/" target="_blank">Overwolf terms</a></li><li><a href="http://www.overwolf.com/legal/#Privacy-policy" target="_blank">Overwolf Privacy policy</a></li></ul><ul><li>Support</li><li><a href=" https://discuss.developers.overwolf.com/" target="_blank">Questions and Answers</a></li><li><a href="https://discordapp.com/invite/cjjrZDp" target="_blank">Discord</a></li><li><a href="/docs/support/contact-us#join-our-slack">Slack</a></li><li><a href="https://www.facebook.com/OverwolfDevs" target="_blank">Facebook</a></li><li><a href="https://twitter.com/OverwolfDevs" target="_blank">Twitter</a></li></ul><ul><li>Documentation</li><li><a href="/docs/api/changelog">Changelog</a></li><li><a href="/docs/api/overwolf-api-overview">API</a></li><li><a href="/docs/start/app-creation-process">App Creation Process</a></li><li><a href="/docs/topics/best-practices-overview">Best Practices</a></li><li><a href="/docs/status/all">Game Events status</a></li></ul><ul><li>Information</li><li><a href="http://www.overwolf.com/careers/">Careers</a></li><li><a href="https://play.overwolf.com/fund/" target="_blank">Fund</a></li><li><a href="https://medium.com/overwolf-developers" target="_blank">Developers Blog</a></li><li><a href="https://www.overwolf.com/appstore" target="_blank">Overwolf Appstore</a></li></ul></div></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+</span></div></article></div><div class="docLastUpdate"><em>Last updated on 2019-9-17 by Shoomanjin</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/api/overwolf-egs"><span class="arrow-prev">← </span><span>overwolf.egs</span></a><a class="docs-next button" href="/docs/api/overwolf-extension-current"><span>overwolf.extension.current</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#special-overwolf-urls">Special Overwolf URLs</a></li><li><a href="#methods-reference">Methods Reference</a></li><li><a href="#events-reference">Events Reference</a></li><li><a href="#launchuid-parameter">launch(uid , parameter)</a></li><li><a href="#setinfoinfo">setInfo(info)</a></li><li><a href="#getinfoid-callback">getInfo(id, callback)</a></li><li><a href="#registerinfoid-eventscallback-callback">registerInfo(id, eventsCallback, callback)</a></li><li><a href="#unregisterinfoid-callback">unregisterInfo(id, callback)</a></li><li><a href="#getmanifestid-callback">getManifest(id, callback)</a></li><li><a href="#getrunningstateid-callback">getRunningState(id, callback)</a></li><li><a href="#relaunch">relaunch()</a></li><li><a href="#updateextensioncallback">updateExtension(callback)</a></li><li><a href="#updateextensionscallback">updateExtensions(callback)</a></li><li><a href="#onapplaunchtriggered">onAppLaunchTriggered</a><ul class="toc-headings"><li><a href="#the-origin-string">The origin string</a></li><li><a href="#the-source-param">The source param</a></li></ul></li><li><a href="#onextensionupdatestatechanged">onExtensionUpdateStateChanged</a></li><li><a href="#onuncaughtexception">onUncaughtException</a></li></ul></nav></div><footer class="site-footer"><div class="container"><ul><li>Legal</li><li><a href="/docs/topics/legal-overview">Terms overview</a></li><li><a href="/docs/topics/legal-developers-terms">Developer&#x27;s terms</a></li><li><a href="/docs/topics/legal-app-terms">App terms</a></li><li><a href="http://www.overwolf.com/legal/" target="_blank">Overwolf terms</a></li><li><a href="http://www.overwolf.com/legal/#Privacy-policy" target="_blank">Overwolf Privacy policy</a></li></ul><ul><li>Support</li><li><a href=" https://discuss.developers.overwolf.com/" target="_blank">Questions and Answers</a></li><li><a href="https://discordapp.com/invite/cjjrZDp" target="_blank">Discord</a></li><li><a href="/docs/support/contact-us#join-our-slack">Slack</a></li><li><a href="https://www.facebook.com/OverwolfDevs" target="_blank">Facebook</a></li><li><a href="https://twitter.com/OverwolfDevs" target="_blank">Twitter</a></li></ul><ul><li>Documentation</li><li><a href="/docs/api/changelog">Changelog</a></li><li><a href="/docs/api/overwolf-api-overview">API</a></li><li><a href="/docs/start/app-creation-process">App Creation Process</a></li><li><a href="/docs/topics/best-practices-overview">Best Practices</a></li><li><a href="/docs/status/all">Game Events status</a></li></ul><ul><li>Information</li><li><a href="http://www.overwolf.com/careers/">Careers</a></li><li><a href="https://play.overwolf.com/fund/" target="_blank">Fund</a></li><li><a href="https://medium.com/overwolf-developers" target="_blank">Developers Blog</a></li><li><a href="https://www.overwolf.com/appstore" target="_blank">Overwolf Appstore</a></li></ul></div></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
                 document.addEventListener('keyup', function(e) {
                   if (e.target !== document.body) {
                     return;
