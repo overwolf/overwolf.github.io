@@ -4,22 +4,20 @@ title: overwolf.extensions API
 sidebar_label: overwolf.extensions
 ---
 
-Use the `overwolf.extensios` API to control and retrieve details of an Overwolf app (extension) or listen and respond to events in the app’s lifecycle.
+Use the `overwolf.extensions` API to control and retrieve details of an Overwolf app or listen/respond to events in the app’s lifecycle.
 
-## Special OW URL's
+## Special Overwolf URLs
 
-You can use the following helpful URL’s to retrieve an extension file content or icons:
+You can use the following helpful URLs to retrieve an extension file content or icons:
 
 * `overwolf://extension-resources/<extension uid>/icon`  
-  A URL that will serve as a source for IMG tag or or a DIV background.   
-  This will present the icon of the stated extension.
+  A URL that can be used as a source for an IMG tag or a DIV background. This path will display the icon of the stated extension.
 
 * `overwolf://extension-resources/<extension uid>/icon_gray`  
-  A URL that will serve as a source for IMG tag or or a DIV background.   
-  This will present the gray icon of the stated extension.
+  A URL that can be used as a source for an IMG tag or a DIV background. This will present the gray icon of the stated extension.
 
 * `overwolf-extension://<extension uid>/<path to extension file>`  
-  Returns the content of a file in an extension.
+  Returns the content of a file in an app's library.
 
 ## Methods Reference
 
@@ -44,19 +42,19 @@ You can use the following helpful URL’s to retrieve an extension file content 
 ## launch(uid , parameter)
 #### Version added: 0.78
 
-> Launch an extension by its unique id.
+> Launch an extension by unique id.
 
 Parameter | Type                  | Description                                                                           |
 --------- | ----------------------| ------------------------------------------------------------------------------------- |
-uid       | string                | The extension unique id                                                               |
+uid       | string                | Extension unique id                                                               |
 parameter | Object (optional)     | A parameter to pass to the extension. The extension may or may not use this parameter |
 
 
-Retrieve a service object (which will usually provide external APIs) by an id.
+Retrieve a service object by ID, which will usually provide external APIs.
 
 Parameter | Type                  | Description                                                                              |
 --------- | ----------------------| ---------------------------------------------------------------------------------------- |
-id        | string                | The service id                                                                           |
+id        | string                | Service id                                                                           |
 callback  | function              | A function called with the service, if found, and a status indicating success or failure |
 
 ## setInfo(info)
@@ -75,29 +73,29 @@ info      | Object                | An object to post                           
 
 Parameter | Type                  | Description                                                                              |
 --------- | ----------------------| ---------------------------------------------------------------------------------------- |
-id        | string                | The id of the extension to get info for                                                  |
+id        | string                | ID of the extension to get info for                                                  |
 callback  | function              | Called with the info                                                                     |
 
 ## registerInfo(id, eventsCallback, callback)
 #### Version added: 0.91
 
-> Requests info updates for extension. Will also be called when the extension launches/closes.
+> Requests info updates for an extension. Will also be called when the extension launches or closes.
 
 Parameter      | Type        | Description                                                                           |
 -------------- | ------------| ------------------------------------------------------------------------------------- |
-id             | string      | The id of the extension to get updates for                                            |
+id             | string      | ID of the extension to get updates for                                            |
 eventsCallback | function    | A callback to receive info updates                                                    |
-callback	   | function    | The status of the request                                                             |
+callback	   | function    | Status of the request                                                             |
 
 ## unregisterInfo(id, callback)
 #### Version added: 0.91
 
-> Stop requesting info for extension.
+> Stop requesting info for an extension.
 
 Parameter | Type                  | Description                                                                              |
 --------- | ----------------------| ---------------------------------------------------------------------------------------- |
-id        | string                | The id of the extension to stop getting updates for                                      |
-callback  | function              |The status of the request                                                                 | 
+id        | string                | ID of the extension to stop getting updates for                                      |
+callback  | function              | Status of the request                                                                 | 
 
 ## getManifest(id, callback)
 #### Version added: 0.91
@@ -106,7 +104,7 @@ callback  | function              |The status of the request                    
 
 Parameter | Type                  | Description                                                                              |
 --------- | ----------------------| ---------------------------------------------------------------------------------------- |
-id        | string                | The id of the extension to get the manifest for                                          |
+id        | string                | ID of the extension to get the manifest for                                          |
 callback  | function              | A function called with the manifest data                                                 | 
 
 #### Callback argument: Success
@@ -124,8 +122,8 @@ A callback function which will be called with the status of the request
 
 Parameter | Type                  | Description                                                                              |
 --------- | ----------------------| ---------------------------------------------------------------------------------------- |
-id        | string                | The id of the extension to get updates for                                               |
-callback  | function              | The status of the request                                                                | 
+id        | string                | ID of the extension to get updates for                                               |
+callback  | function              | Status of the request                                                                | 
 
 #### Callback argument: Success
 
@@ -222,22 +220,22 @@ A callback function which will be called with the status of the request
 
 > Tries to download an update for the calling extension.
 
-This functions allows apps to check and perform an update without having to wait for Overwolf to do so.
+This function allows apps to check and perform an update without having to wait for Overwolf to do so automatically.
 
 Parameter | Type                  | Description                                                                           |
 --------- | ----------------------| ------------------------------------------------------------------------------------- |
-callback  | function              | The result of the request                                                             |
+callback  | function              | Result of the request                                                             |
 
 ## updateExtensions(callback)
 #### Version added: 0.133
 
-> Tries to download an update for all the installed extensions.
+> Tries to download an update for all installed extensions.
 
 This functions allows apps to check and perform an update without having to wait for Overwolf to do so.
 
 Parameter | Type                  | Description                                                                           |
 --------- | ----------------------| ------------------------------------------------------------------------------------- |
-callback  | function              | The result of the request                                                             |
+callback  | function              | Result of the request                                                             |
 
 ## onAppLaunchTriggered
 #### Version added: 0.92
@@ -254,22 +252,22 @@ overwolf-extension://hffhbjnafafjnehejohpkfhjdenpifhihebpkhni/index.html?source=
 
 ### The source param
 
-Possible values for the `source` param:
+Possible values for the `source` parameter:
 
 Parameter        | Type                                                                         |
 ---------------- | -----------------------------------------------------------------------------|
-dock             | launched from the Overwolf dock                                              |
-gamelaunchevent  | auto-launched with a game                                                    |
-hotkey           | launched in-game with its hotkey                                             |
-storeapi         | launched from the store                                                      |
-odk              | launched with the overwolf.extensions.launch API                             |
-commandline      | launched from the command line using overwolf.exe -launchapp [extension id]  |
-tray             | launched from the tray                                                       |
-startup          | launched upon startup (like remote configurations)                           |
-after-install    | auto-launched after installation                                             |
+dock             | Launched from the Overwolf dock                                              |
+gamelaunchevent  | Auto-launched with a game                                                    |
+hotkey           | Launched in-game with its hotkey                                             |
+storeapi         | Launched from the store                                                      |
+odk              | Launched with the overwolf.extensions.launch API                             |
+commandline      | Launched from the command line using overwolf.exe -launchapp [extension id]  |
+tray             | Launched from the tray                                                       |
+startup          | Launched upon startup (like remote configurations)                           |
+after-install    | Auto-launched after installation                                             |
 
 :::tip
-if you want to get the origin (what triggered the app launch) before/without register the events, you can run the `window.location.href` command.
+if you want to get the origin information before/without registering the events, you can run the `window.location.href` command.
 :::
 
 ## onExtensionUpdateStateChanged
