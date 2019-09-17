@@ -4,7 +4,7 @@ title: overwolf.log API
 sidebar_label: overwolf.log
 ---
 
-Provides logging functions that make use of Overwolf’s internal logging system for seamless logging.
+Provides logging functions that make use of Overwolf’s internal logging system.
 
 ## Methods Reference
 
@@ -18,11 +18,11 @@ Provides logging functions that make use of Overwolf’s internal logging system
 
 #### Version added: 0.78 
 
-> Writes verbose (debug) level log message to the common log.
+> Writes verbose, debug level log message to the common log.
 
 Parameter | Type | Description |
 ------------ | ------------ | ------------ |
-msg	 | string | The message to write to the log file |
+msg	 | string | Message to write to the log file |
 
 ## info(msg)
 
@@ -32,7 +32,7 @@ msg	 | string | The message to write to the log file |
 
 Parameter | Type | Description |
 ------------ | ------------ | ------------ |
-msg	 | string | The message to write to the log file |
+msg	 | string | Message to write to the log file |
 
 ## warning(msg)
 
@@ -42,7 +42,7 @@ msg	 | string | The message to write to the log file |
 
 Parameter | Type | Description |
 ------------ | ------------ | ------------ |
-msg	 | string | The message to write to the log file |
+msg	 | string | Message to write to the log file |
 
 ## error(msg)
 
@@ -52,7 +52,7 @@ msg	 | string | The message to write to the log file |
 
 Parameter | Type | Description |
 ------------ | ------------ | ------------ |
-msg	 | string | The message to write to the log file |
+msg	 | string | Message to write to the log file |
 
 ## critical(msg)
 
@@ -62,4 +62,4 @@ msg	 | string | The message to write to the log file |
 
 Parameter | Type | Description |
 ------------ | ------------ | ------------ |
-msg	 | string | The message to write to the log file |
+msg	 | string | Message to write to the log file |
