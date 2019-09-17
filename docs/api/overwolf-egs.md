@@ -6,11 +6,10 @@ sidebar_label: overwolf.egs
 
 ## EGS Overview
 
-The end game summary screen (EGS) shows a summary of information about the last game session – such as Actions-Per-Minute and Media highlights.
-An app that wishes to show it’s own summary information about the last game session can do this as well in the form of a “shelf” inside the EGS window.
+The end game summary screen (EGS) provides a summary of information about the last game session – including statistics such as Actions-Per-Minute as well as video highlights of key plays. You can choose to show different and unique EGS information by creating a 'shelf' inside the EGS window. 
 
 :::important
-This feature should be enabled from the Overwolf servers side. Please contact us if you want to use this feature: developers@overwolf.com.
+This feature should be enabled from Overwolf's server side. Please contact us if you want to use this feature: developers@overwolf.com.
 :::
 
 ## Supported games
@@ -19,17 +18,17 @@ League of Legends, CS:GO, Dota2, Hearthstone, Fortnite, PUBG, Rocket League, Spl
 
 ## Sample App
 
-Please take a look at our [EGS shelf sample app](https://github.com/overwolf/egs-shelf) to get a quick start on developing your shelf.
+Please take a look at our [EGS shelf sample app](https://github.com/overwolf/egs-shelf) to quickly understand how developing your shelf works.
 
 ## How to integrate your app with EGS
 
 Steps to integrate your app with the end game summary window:
 
-### 1. Declare your app shelf.
+### 1. Declare your app shelf
 
-To declare your app as having an EGS shelf, you need an html page that will implement the UI and logic of the shelf. This HTML is placed inside your opk.
+To enable your app's EGS shelf, you need an html page that will implement the UI and logic of the shelf. This HTML is placed inside your opk.
 
-In the manifest of your app – you should declare the following under the `data.windows.egs_shelf_window` section:
+You also need to declare the following in your app's manifest's `data.windows.egs_shelf_window` section:
 
 ```json
 {
@@ -48,17 +47,15 @@ In the manifest of your app – you should declare the following under the `data
   }
 ```
 
-### 2. Check if your shelf is relevant.
+### 2. Check if your shelf is relevant
 
-Use the overwolf.egs namespace to request (if relevant) to display your shelf in the EGS. The idea is to only ask for the display of your shelf when you have enough information about the game session to display something interesting to the end user. 
+Use the overwolf.egs namespace to request that your custom shelf will show in the EGS, but only show when relevant. The idea is to only display your shelf when you have enough information to display something interesting to the end user. For example, if your shelf shows the amount of Kills the user has made during the game, yet the user hasn’t killed anyone in a particular match – you might not want to show your shelf at all.
 
-For example, if your app shows the amount of Kills the user has made during the game, yet the user hasn’t killed anyone – you might not want to show your shelf at all.
+### 3. Create the shelf
 
-### 3. Create the shelf.
+The flow for displaying a shelf once you have enough data and want to show your shelf in the EGS:
 
-he flow for displaying a shelf – once you have enough data and want to show your shelf in the EGS:
-
-call:
+Call:
 
 ```js
 overwolf.egs.isEnabled(function(result) {
@@ -67,8 +64,7 @@ overwolf.egs.isEnabled(function(result) {
   });
 ```
 
-to see if the EGS is available for this game – it might not be supported for the game or might have been disabled by the end user.
-If enabled – call:
+EGS does not fully support all games. To verify whether EGS is available for this game if enabled – call:
 
 ```js
 overwolf.egs.requestToDisplay(function(result) {
@@ -77,13 +73,13 @@ overwolf.egs.requestToDisplay(function(result) {
   });
 ```
 
-This will let the EGS know that your app is interested in opening a shelf in the EGS when the game session is over.
+This will let EGS know that your app is interested in opening a shelf in the EGS when the game session is over.
 
-### 4. Display the shelf.
+### 4. Display the shelf
 
-Once the EGS is opened – it will start loading the shelf HTML page in “hidden” mode and wait for it to be ready for display.
+Once EGS is open, it will start loading your shelf's HTML page in “hidden” mode and wait for it to be ready for display.
 
-From within the shelf’s HTML page context – use the: 
+From within the shelf’s HTML page context, use: 
 
 `overwolf.egs.setStatus(status, function(result) { ...` 
 
@@ -99,24 +95,24 @@ result.reason == [undefined | "EndGameScreen is disabled" | "You must first call
 ```
 
 When `overwolf.egs.enums.ShelfStatus.Ready` is set – the HTML will appear to the user.
-If `overwolf.egs.enums.ShelfStatus.Error` an error message with a Retry button will be shown to the user.
+If `overwolf.egs.enums.ShelfStatus.Error` is returned, an error message with a Retry button will be shown to the user.
 
 ## Other notes
 
 There are two events you may listen to:
 
 * `overwolf.egs.onEgsEnablementChanged.addListener(function(result) { result.isEnabled == [true | false] });`
-  Will indicate when the EGS is enabled/disabled – you can wait on this event if a call to `overwolf.egs.isEnabled` returns false.
+  Will indicate when the EGS is enabled/disabled – you can wait for this event if a call to `overwolf.egs.isEnabled` returns false.
 
 * `overwolf.egs.onRetryRequested.addListener(function() { });`
   Will be triggered if the `ShelfStatus.Error` status is set by your app and then the user clicked on retry.  
   In this case – the app is responsible for reloading it’s data and then setting a `ShelfStatus.Ready` status.
 
-* The shelf window will ALWAYS be transparent – Overwolf will override any manifest setting in this regard.
+* Shelf windows will ALWAYS be transparent – Overwolf will override any manifest setting in this regard.
 
-* The shelf window will NEVER be visible in the task manager – Overwolf will override any manifest setting in this regard.
+* Shelf windows will NEVER be visible in the task manager – Overwolf will override any manifest setting in this regard.
 
-* The shelf window may be opened with/without the app being opened – this means you’ll need to use localStorage to keep track of information between sessions.
+* Shelf windows may be opened with or without the app being opened – this means you’ll need to use localStorage to keep track of information between sessions.
 
 
 ## Methods Reference
@@ -142,7 +138,7 @@ There are two events you may listen to:
 ## isEnabled(callback)
 #### Version added: 0.94
 
-> Returns whether Overwolf’s EGS is up and running.
+> Returns whether Overwolf’s EGS is running.
 
 Parameter | Type                       | Description                                                             |
 --------- | ---------------------------| ----------------------------------------------------------------------- |
@@ -160,12 +156,12 @@ callback  | function                   | The result of the request              
 ## setStatus(status, callback)
 #### Version added: 0.94
 
-> Set’s the status of the shelf. This call is only valid after a successful call to [requestToDisplay()](#requesttodisplaycallback).
+> Sets the status of the shelf. This call is only valid after a successful call to [requestToDisplay()](#requesttodisplaycallback).
 
 Parameter | Type                                                | Description                                                             |
 --------- | ----------------------------------------------------| ----------------------------------------------------------------------- |
-status	  | [ShelfStatus](#overwolfegsenumsshelfstatus) enum    | The status to update                                                    |
-callback  | function                                            | The result of the request                                               |
+status	  | [ShelfStatus](#overwolfegsenumsshelfstatus) enum    | Status to update                                                    |
+callback  | function                                            | Result of the request                                               |
 
 ## setHeight(height, callback)
 #### Version added: 0.103
@@ -174,14 +170,14 @@ callback  | function                                            | The result of 
 
 #### Notes
 
-* it is up to the Game Summary Screen to accept (or not) the new requested size.
-* The width can not be changed by the app
-* The shelf should be responsive to the size of the containing window and not to try to change its size according to the call of this function.
+* It's up to the Game Summary Screen to accept or decline the new requested size.
+* Width can not be changed by the app.
+* The shelf should be responsive to the size of the containing window and not try to change its size according to the call of this function.
 
 Parameter | Type                                                | Description                                                             |
 --------- | ----------------------------------------------------| ----------------------------------------------------------------------- |
-height	  | int                                                 | The requested height                                                    |
-callback  | function                                            | The result of the request                                               |
+height	  | int                                                 | Requested height                                                    |
+callback  | function                                            | Result of the request                                               |
 
 ## getSessionInfo(callback)
 #### Version added: 0.110
@@ -190,7 +186,7 @@ callback  | function                                            | The result of 
 
 Parameter | Type                                                | Description                                                             |
 --------- | ----------------------------------------------------| ----------------------------------------------------------------------- |
-callback  | function                                            | The result of the request                                               |
+callback  | function                                            | Result of the request                                               |
 
 ## getSelectedMatch(callback)
 #### Version added: 0.110
@@ -199,7 +195,7 @@ callback  | function                                            | The result of 
 
 Parameter | Type                                                | Description                                                             |
 --------- | ----------------------------------------------------| ----------------------------------------------------------------------- |
-callback  | function                                            | The result of the request                                               |
+callback  | function                                            | Result of the request                                               |
 
 ## onEgsEnablementChanged
 #### Version added: 0.94
@@ -214,12 +210,12 @@ callback  | function                                            | The result of 
 ## onMatchSelectionChanged
 #### Version added: 0.94
 
-> Fired when EGS selected match \ session changed
+> Fired when EGS selected match \ session changed.
 
 ## onSessionInfoChanged
 #### Version added: 0.94
 
-> Fired when EGS session info changed (new match started)
+> Fired when EGS session info changed (new match started).
 
 ## overwolf.egs.enums.ShelfStatus
 #### Version added: 0.94
