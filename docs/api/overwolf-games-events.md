@@ -284,7 +284,7 @@ Our best practice is removing event listeners and then adding the listener back 
 
 ```javascript
 overwolf.games.events.onNewEvents.addListener(function(info) {
-   onsole.log('EVENT FIRED: ' + JSON.stringify(info));  
+   console.log('EVENT FIRED: ' + JSON.stringify(info));  
 });
 ```
 
