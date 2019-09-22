@@ -215,10 +215,12 @@ Data example:
 ### Info Updates
 
 key            | Category    | Values                                                                               | Notes    | Since GEP Ver. |
--------------- | ------------| -------------------------------------------------------------------------------------| -------- | ------------- |
+-------------- | ------------| -------------------------------------------------------------------------------------| -------- | ----- |
 player_status  | roster      | Full list of the players currently in the match.  |[See notes](#player_status-note)|   133.0       |
 
-#### *player_status* notes
+#### *roster/player_status* notes
+
+The full roster of players will first appear during the loading screen.
 
 Each player object includes the following data:
 
@@ -227,6 +229,8 @@ Each player object includes the following data:
 * health
 * xp level
 * rank 
+
+Aside from summoner name which is received during the loading screen, the rest of the data mentioned above will be delivered once the actual game has begun.
 
 Data example:
 
