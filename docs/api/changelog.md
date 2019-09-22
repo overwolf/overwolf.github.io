@@ -6,46 +6,41 @@ sidebar_label: Changelog
 
 Follow this entry for ongoing updates and changes to the project or tools:
 
-## Version 0.136 (September 2019)
+## Version 0.135 (September 2019)
 
-* [Teamfight Tactics Events](overwolf-games-events-tft#docsNav)
-  * New info update:
-    * local_player_damage
-
-## Version 0.135 
-
-* This version included only bug fixes without new features.
+* Soon
 
 ## Version 0.134 (August 2019)
 
 * New API: [overwolf.profile.subscription](overwolf-profile.subscription).  
   Provides functions and events to help with user subscription management.
-  
-* [Teamfight Tactics Events](https://overwolf.github.io/docs/api/overwolf-games-events-tft#docsNav)
+
+* [Teamfight Tactics Events](overwolf-games-events-tft#docsNav)
   * New updates:
     * store
     * board
     * bench
     * carousel
+    * local_player_damage
     
-* [League of Legends Launcher Events](https://overwolf.github.io/docs/api/overwolf-games-launchers-events-lol#docsNav)
+* [League of Legends Launcher Events](overwolf-games-launchers-events-lol#docsNav)
   * New update:
     * end_game
     
-* [Hearhstone game events](https://overwolf.github.io/docs/api/overwolf-games-events-heartstone#docsNav)
+* [Hearhstone game events](overwolf-games-events-heartstone#docsNav)
   * New events:
     * match_type
     * match_start/end
     * match_outcome
-* [Rainbow Six: Siege game events](https://overwolf.github.io/docs/api/overwolf-games-events-rainbow-six#docsNav)
+* [Rainbow Six: Siege game events](overwolf-games-events-rainbow-six#docsNav)
   * New update:
     * game_mode
-* [CS: GO game events](https://overwolf.github.io/docs/api/overwolf-games-events-csgo#docsNav)
+* [CS: GO game events](overwolf-games-events-csgo#docsNav)
   * New update:
     * replay
     * server_info
     * game_mode
-* [PUBG game events](https://overwolf.github.io/docs/api/overwolf-games-events-pubg#docsNav)
+* [PUBG game events](overwolf-games-events-pubg#docsNav)
   * New update
     * team_location
     * health
