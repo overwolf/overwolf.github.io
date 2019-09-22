@@ -12,6 +12,10 @@ Follow this entry for ongoing updates and changes to the project or tools:
   * New info update:
     * local_player_damage
 
+## Version 0.135 
+
+* This version included only bug fixes without new features.
+
 ## Version 0.134 (August 2019)
 
 * New API: [overwolf.profile.subscription](overwolf-profile.subscription).  

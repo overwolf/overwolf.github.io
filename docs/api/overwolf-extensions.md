@@ -224,7 +224,9 @@ This function allows apps to check and perform an update without having to wait 
 
 Parameter | Type                  | Description                                                                           |
 --------- | ----------------------| ------------------------------------------------------------------------------------- |
-callback  | function              | Result of the request                                                             |
+callback  | function              | Result of the request                                                                 |
+
+Note: there is a failsafe mechanism where this API will only work if a user action that active it is detected. This means no app should ever update while it’s being used in-game unless the user explicitly wanted it.
 
 ## updateExtensions(callback)
 #### Version added: 0.133
@@ -236,6 +238,8 @@ This functions allows apps to check and perform an update without having to wait
 Parameter | Type                  | Description                                                                           |
 --------- | ----------------------| ------------------------------------------------------------------------------------- |
 callback  | function              | Result of the request                                                             |
+
+Note: there is a failsafe mechanism where this API will only work if a user action that active it is detected. This means no app should ever update while it’s being used in-game unless the user explicitly wanted it.
 
 ## onAppLaunchTriggered
 #### Version added: 0.92
