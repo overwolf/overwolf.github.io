@@ -97,7 +97,7 @@ Common use cases:
 
 > Use the overwolf.profile API to get Overwolf account information for the current user, this includes user name, log-in events and more.
 
-## [overwolf.profile.subscription](api/overwolf-profile.subscription.md)
+## [overwolf.profile.subscriptions](api/overwolf-profile.subscriptions.md)
 
 > Provides functions and events to help with user profile subscription management.
 

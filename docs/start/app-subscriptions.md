@@ -34,7 +34,7 @@ As mentioned above, any premium-only features need to be tested and polished bef
 
 ## The overwolf.profile.subscription API
 
-Read the full API docs for the subscriptions API [here](../api/overwolf-profile.subscription).
+Read the full API docs for the subscriptions API [here](../api/overwolf-profile.subscriptions).
 
 ## We're here to help
 
