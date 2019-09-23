@@ -4,7 +4,7 @@ title: overwolf.profile.subscription API
 sidebar_label: overwolf.profile.subscription
 ---
 
-The `overwolf.profile.subscription` API provides functions and events to help with user profile subscription management.
+The `overwolf.profile.subscriptions` API provides functions and events to help with user profile subscription management.
 
 * **Permissions required: profile**
 
@@ -12,11 +12,11 @@ The `overwolf.profile.subscription` API provides functions and events to help wi
 
 ## Methods Reference
 
-* [overwolf.profile.subscription.getActivePlans()](#getactiveplanscallback)
+* [overwolf.profile.subscriptions.getActivePlans()](#getactiveplanscallback)
 
 ## Events Reference
 
-* [overwolf.profile.subscription.onSubscriptionChanged](#onsubscriptionchanged)
+* [overwolf.profile.subscriptions.onSubscriptionChanged](#onsubscriptionchanged)
 
 ## getActivePlans(callback)
 #### Version added: 0.134
