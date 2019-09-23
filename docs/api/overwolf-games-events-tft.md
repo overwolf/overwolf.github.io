@@ -371,50 +371,36 @@ Data Example:
 
 key            | Category    | Values                           | Notes                    | Since GEP Ver. |
 -------------- | ------------| ---------------------------------|--------------------------|---------------|
-board_pieces   |    board    | Exact position of each chess-piece on the grid | [See notes](#board_pieces-note) |  134.0  |
+board_pieces   |    board    | Exact position of each chess-piece on the grid, including their current level and the items they currently possess. | [See notes](#board_pieces-note) |  134.0  |
 
 #### *board_pieces* note
 
 Data Example:
 
 ```json
-{  
-   "info":{  
-      "board":{  
-         "board_pieces":"{
-         "cell_10":{  
-            "name":"TFT_Vayne",
-            "level":"0",
-            "item_1":"0",
-            "item_2":"0",
-            "item_3":"0"
+{ 
+   "info":{ 
+      "board":{ 
+         "board_pieces":"{"         cell_9":{ 
+            "name":"TFT_Tristana",
+            "level":"1",
+            "item_1":"TFT_Item_GuinsoosRageblade",
+            "item_2":"",
+            "item_3":""
          },
-         "cell_11":{  
-            "name":"TFT_Camille",
-            "level":"0",
-            "item_1":"0",
-            "item_2":"0",
-            "item_3":"0"
-         },
-         "cell_16":{  
-            "name":"TFT_Fiora",
-            "level":"0",
-            "item_1":"0",
-            "item_2":"0",
-            "item_3":"0"
-         },
-         "cell_17":{  
-            "name":"TFT_Garen",
-            "level":"0",
-            "item_1":"0",
-            "item_2":"0",
-            "item_3":"0"
+         "cell_16":{ 
+            "name":"TFT_KhaZix",
+            "level":"1",
+            "item_1":"",
+            "item_2":"",
+            "item_3":""
          }
-      }      "}},"feature":"board"
+      }      "
+      }
+   },
+   "      feature":"board"
    }
 ```
-
-<b>Currently "level" and "item" are NOT available/accurate</b>
 
 ## `bench`
 
@@ -422,57 +408,71 @@ Data Example:
 
 key            | Category    | Values                           | Notes                    | Since GEP Ver. |
 -------------- | ------------| ---------------------------------|--------------------------|---------------|
-bench_pieces   |    bench    | Exact position of each chess-piece on the bench (inventory) | [See notes](#bench_pieces-note) |  134.0  |
+bench_pieces   |    bench    | Exact position of each chess-piece on the bench including their current level and items they possess. (inventory) | [See notes](#bench_pieces-note) |  134.0  |
 
 #### *bench_pieces* note
 
 Data Example:
 
 ```json
-{  
-   "info":{  
-      "bench":{  
-         "bench_pieces":"{
-         "slot_1":{  
-            "name":"TFT_Lucian",
-            "level":"0",
-            "item_1":"0",
-            "item_2":"0",
-            "item_3":"0"
+{ 
+   "info":{ 
+      "bench":{ 
+         "bench_pieces":"{"         slot_1":{ 
+            "name":"TFT_Garen",
+            "level":"1",
+            "item_1":"",
+            "item_2":"",
+            "item_3":""
          },
-         "slot_2":{  
-            "name":"TFT_Camille",
-            "level":"0",
-            "item_1":"0",
-            "item_2":"0",
-            "item_3":"0"
+         "slot_2":{ 
+            "name":"TFT_Darius",
+            "level":"2",
+            "item_1":"",
+            "item_2":"",
+            "item_3":""
          },
-         "slot_3":{  
-            "name":"TFT_Camille",
-            "level":"0",
-            "item_1":"0",
-            "item_2":"0",
-            "item_3":"0"
+         "slot_3":{ 
+            "name":"TFT_Leona",
+            "level":"1",
+            "item_1":"",
+            "item_2":"",
+            "item_3":""
          },
-         "slot_4":{  
-            "name":"TFT_Vayne",
-            "level":"0",
-            "item_1":"0",
-            "item_2":"0",
-            "item_3":\"0"
+         "slot_4":{ 
+            "name":"TFT_Sejuani",
+            "level":"1",
+            "item_1":"",
+            "item_2":"",
+            "item_3":""
          },
-         "slot_9":{  
-            "name":"TFT_Nidalee",
-            "level":"0",
-            "item_1":"0",
-            "item_2":"0",
-            "item_3":"0"
+         "slot_5":{ 
+            "name":"TFT_Leona",
+            "level":"1",
+            "item_1":"",
+            "item_2":"",
+            "item_3":""
+         },
+         "slot_6":{ 
+            "name":"TFT_Kayle",
+            "level":"1",
+            "item_1":"TFT_Item_RapidFirecannon",
+            "item_2":"",
+            "item_3":""
+         },
+         "slot_9":{ 
+            "name":"TFT_MissFortune",
+            "level":"1",
+            "item_1":"",
+            "item_2":"",
+            "item_3":""
          }
-      }      "}},"feature":"bench"
+      }      "
+      }
+   },
+   "      feature":"bench"
    }
 ```
-
-<b>Currently "level" and "item" are NOT available/accurate</b>
 
 ## `carousel`
 
