@@ -20,7 +20,7 @@
 		"Using Plugins":
 			["topics/plugins-overview", "topics/how-to-use-plugins-in-your-app", "topics/writing-your-own-plugin", "topics/sample-plugin", "topics/simple-io-plugin", "topics/team-speak-plugin"],
 		"Using Events":
-			["topics/using-events", "topics/howto-check-events-status-from-app"],
+			["topics/using-events", "topics/using-events-simulator", "topics/howto-check-events-status-from-app"],
 		"Integrations":
 			["topics/app-analytics", "topics/login-with-fb-google", "topics/events-SDK-for-game-developers", "topics/twitch-events-sdk-for-game-developers"],
 		"Legal":
