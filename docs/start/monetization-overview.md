@@ -26,7 +26,7 @@ You can easily add image or video based ads to your app, and we'll do the rest i
 
 ####
 * Video ads are available in 400×300 and 300×250 sizes, we strongly recommend 400×300.
-* Display banners are available in 300×250 and 728×90 sizes.
+* Display banners are available in 300×250, 728x90, 300x600 and 160x600 sizes.
 
 <div class="box" data-slick='{"slidesToShow": 1}'>
   <a data-fancybox="gallery" data-caption="Legendary Builds" href="../assets/LB-400x300.png">
