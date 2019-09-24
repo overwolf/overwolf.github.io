@@ -8,7 +8,9 @@ Follow this entry for ongoing updates and changes to the project or tools:
 
 ## Version 0.135 (September 2019)
 
-* Soon
+* [CS: GO game events](overwolf-games-events-csgo#docsNav)
+  * New update:
+    * phase
 
 ## Version 0.134 (August 2019)
 
