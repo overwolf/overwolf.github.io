@@ -85,7 +85,10 @@ Skipping obtainDeclaredWindow() and calling restore() with the window’s name w
 
 ## Communicating between windows
 
-Over the years we had multiple methods used to communicate between Overwolf windows: localStorage events, cookies and more:
+Over the years we had multiple methods used to communicate between Overwolf windows: localStorage events, cookies and more.
+But due the fact that windows of the same app share the same process, the communications between windows can be done with direct pointers to the window/DOM, without any overhead. Naturally, this also means that the calls are synchronous.
+
+Recommended ways to communicate between app windows:
 
 ### Using a background controller
 
