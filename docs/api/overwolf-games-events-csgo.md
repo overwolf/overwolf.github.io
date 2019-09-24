@@ -197,6 +197,7 @@ key               | Category    | Values                    | Notes             
 pseudo_match_id | match_info  |	The current session’s ID code. See [notes](#pseudo_match_id-note)	| | 130.0  |
 server_info | match_info  |	The current session’s server ID. See [notes](#server_info-note)	| | 135.0  |
 game_mode | match_info  |	The current game mode that is played. See [notes](#game_mode-note)	| | 135.0  |
+phase | match_info  |	The current state of the match. See [notes](#phase-note)	| | 137.0  |
 
 
 #### *pseudo_match_id* note
@@ -239,6 +240,25 @@ Casual/Regular match
 Spectating
 ```json
 {"match_info":{"game_mode":"Watching Casual Dust II"}}
+```
+
+#### *phase* note
+
+Possible Values:
+
+* NotInGame (currently unavailable)
+* Loading
+* InGame
+* InGameTerroristTeamPlay
+* InGameCounterTerroristTeamPlay
+* PauseExchangeTeam
+* MatchResult
+* UNKNOWN
+
+Data Example:
+
+```
+{"feature":"match_info","category":"match_info","key":"phase","value":"MatchResult"}
 ```
 
 ## `info`
