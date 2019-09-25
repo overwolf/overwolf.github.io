@@ -30,7 +30,7 @@ Please read the [overwolf.games.events](overwolf-games-events) documentation pag
 
 It's highly recommended to communicate errors and warnings to your app users. Check game event status [here](../status/all) or easily check event status directly from your app [using our API](../topics/howto-check-events-status-from-app).
 
-:::important Game ID
+:::important
 Because LOL and TFT share the same GameID, you should use `21570` as a unique GameID for TFT, when you are checking the game events status for this game. For all the other services, you should still use the GameID that mentioned on the top of this page.
 :::
 
