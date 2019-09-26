@@ -14,6 +14,7 @@ Most creators promote their apps within their game communities and relevant soci
 To initiate a promotion all you have to do is reach out to us, send a current build of your app, explain why it is time to promote and what kind of promotion you had in mind.
 We can look into social media promotions, Youtube campaigns, Facebook campaigns, influencer marketing, performance campaigns or anything else that will serve your product’s growth - our team will figure out the best way forward based on your preferences and input.
 
+Overwolf will evaluate your request for the following couple of weeks. We’ll be looking at data as the main point, then we’ll review the user experience. If we feel that the app is in the right place for marketing, we’ll contact you so we can start working together. If we think that the app needs more time in the oven, we will be happy to work with you and suggest how we think that app could be improved in terms of UX and data. We mainly look at 2nd week retention metrics.
 
 ## Default Promotion Model (Starting October 1st 2019)
 
