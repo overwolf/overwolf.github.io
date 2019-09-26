@@ -100,7 +100,7 @@ Screenshots must be in JPG format, sized 656X410 pixels. Please choose screensho
 <img src="../assets/submit-your-app-to-the-store/SubScreenshot1.png" alt="Screenshot" width="900"/>
 
 ### 4. description.txt  
-An **HTML** text file containing the full Appstore description of your app, this description will appear when users click on your app's store tile. This description can be edited using basic HTML including H3, BR, A HREF and several other functions. The maximum length for an appstore description is 2000 characters including spaces.
+An **HTML** text file containing the full Appstore description of your app, this description will appear when users click on your app's store tile. This description can be edited using basic HTML including H3, BR, A HREF and several other functions. The maximum length for an appstore description is 2000 characters including spaces. Please notice that the description **must** contain an header tag.
 The store tile description is included in the app's [manifest.json](https://overwolf.github.io/docs/api/manifest-json)
 
 <img src="../assets/submit-your-app-to-the-store/Subdescription.png" alt="Description" width="900"/>
