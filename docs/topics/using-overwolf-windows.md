@@ -214,7 +214,9 @@ You can also do the following when handling window sizes:
 
 ### Set default window size
 
-As the [size](../api/manifest-json#windows-size) flag only applies during the first time you open the window, you can set [min_size](../api/manifest-json#windows-min_size) and [max_size](../api/manifest-json#windows-max_size) to the same values and force your app window to always load with identical dimensions.  
+As the [size](../api/manifest-json#windows-size) flag only applies during the first time you open the window, you can force create the new window using the default size/posity 
+
+you can set [min_size](../api/manifest-json#windows-min_size) and [max_size](../api/manifest-json#windows-max_size) to the same values and force your app window to always load with identical dimensions, or you can set the [`useDefaultSizeAndLocation`](../api/overwolf-windows#obtaindeclaredwindowwindowname-usedefaultsizeandlocation-callback) to true, when calling the 
 
 In addition, if you want to dynamically set your window size according to the [user's desktop resolution](#detect-the-resolution) and DPI, you can use [setMinSize()](../api/overwolf-windows#setminsizewindowid-width-height-callback).
 
