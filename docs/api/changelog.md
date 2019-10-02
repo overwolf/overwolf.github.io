@@ -6,6 +6,12 @@ sidebar_label: Changelog
 
 Follow this entry for ongoing updates and changes to the project or tools:
 
+## Version 0.136 (October 2019)
+
+* Added new override setting to overwolf.windows.obtainDeclaredWindow() - [useDefaultSizeAndLocation](overwolf-windows#obtaindeclaredwindowwindowname-usedefaultsizeandlocation-callback).
+  When this flag is set to true, the window will be created using the default (manifest) size and location, rather than the saved setting.
+
+
 ## Version 0.135 (September 2019)
 
 * [CS: GO game events](overwolf-games-events-csgo#docsNav)

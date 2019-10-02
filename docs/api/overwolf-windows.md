@@ -16,6 +16,7 @@ Please make sure to read our guide on [how to use Overwolf windows](../topics/us
 * [overwolf.windows.getCurrentWindow()](#getcurrentwindowcallback)
 * [overwolf.windows.obtainDeclaredWindow()](#obtaindeclaredwindowwindowname-callback)
 * [overwolf.windows.obtainDeclaredWindow()](#obtaindeclaredwindowwindowname-overridesetting-callback)
+* [overwolf.windows.obtainDeclaredWindow()](#obtaindeclaredwindowwindowname-usedefaultsizeandlocation-callback)
 * [overwolf.windows.dragMove()](#dragmovewindowid-callback)
 * [overwolf.windows.dragResize()](#dragresizewindowid-edge)
 * [overwolf.windows.dragResize()](#dragresizewindowid-edge-contentrect)
@@ -155,6 +156,30 @@ windowName      | string                                              | The name
 overrideSetting	| [WindowProperties](#windowproperties-object) Object | Override manifest settings                                                             |
 callback        | function                                            | A callback function which will be called with the current window object as a parameter |
 
+## obtainDeclaredWindow(windowName, useDefaultSizeAndLocation, callback)
+#### Version added: 0.78
+
+> Creates an instance of your window (the window’s name has to be declared in the manifest.json) or returns a window by the window name.
+
+Parameter                 | Type                                                | Description                                                                            |
+------------------------- | ----------------------------------------------------| -------------------------------------------------------------------------------------- |
+windowName                | string                                              | The name of the window that was declared in the data.windows section in the manifest   |
+useDefaultSizeAndLocation	| bool                                                | Enable the manifest size and position settings (default is false). See note [here](#usedefaultsizeandlocation-note)       |
+callback                  | function                                            | A callback function which will be called with the current window object as a parameter |
+
+#### `useDefaultSizeAndLocation` note
+
+The default behaviour of OW is to "remember" the last size and position of a window, before it closes.
+When this flag is set to true, the window will be created using the default (manifest) size and location, rather than the saved setting (if one exists).
+
+If there is no "start_position" property (size and position) for a window in the manifest, it will default to 0,0.
+
+### Usage example
+
+```js
+overwolf.windows.obtainDeclaredWindow("desktop", { useDefaultSizeAndLocation: true }, console.log);
+```
+
 #### Callback argument: Success
 
 A callback function which will be called with the status of the request and a [ODKWindow](#odkwindow-object) Object.
@@ -185,7 +210,7 @@ A callback function which will be called with the status of the request and a [O
 
 Parameter            | Type        | Description                                           |
 -------------------- | ------------| ------------------------------------------------------|
-windowId	         | string      | The id or name of the window to drag                  |
+windowId	           | string      | The id or name of the window to drag                  |
 callback (Optional)  | function    | A callback which is called when the drag is completed |
 
 #### Callback argument: Success
@@ -215,9 +240,9 @@ edge                 | [WindowDragEdge](#windowdragedge-enum) Enum  | The edge o
 
 Parameter            | Type                                         | Description                                                                    |
 -------------------- | ---------------------------------------------| -------------------------------------------------------------------------------|
-windowId	         | string                                       | The id or name of the window to resize                                         |
+windowId	           | string                                         | The id or name of the window to resize                                       |
 edge                 | [WindowDragEdge](#windowdragedge-enum) Enum  | The edge or corner from which to resize the window                             |
-contentRect	         | [ODKRect](#odkrect-object) Object  | The real content of the window (for the ingame drawing resizing white area)              |
+contentRect	         | [ODKRect](#odkrect-object) Object            | The real content of the window (for the ingame drawing resizing white area)    |
 
 ## dragResize(windowId, edge, rect, callback)
 #### Version added: 0.100
@@ -226,9 +251,9 @@ contentRect	         | [ODKRect](#odkrect-object) Object  | The real content of 
 
 Parameter            | Type                                         | Description                                                                    |
 -------------------- | ---------------------------------------------| -------------------------------------------------------------------------------|
-windowId	         | string                                       | The id or name of the window to resize                                         |
+windowId	           | string                                       | The id or name of the window to resize                                         |
 edge                 | [WindowDragEdge](#windowdragedge-enum) Enum  | The edge or corner from which to resize the window                             |
-rect    	         | [ODKRect](#odkrect-object) Object            | The real content of the window (for the ingame drawing resizing white area)    |
+rect    	           | [ODKRect](#odkrect-object) Object            | The real content of the window (for the ingame drawing resizing white area)    |
 callback             | function                                     | Will be called when the resizing process is completed                          |
 
 ## changeSize(windowId, width, height, callback)
@@ -238,9 +263,9 @@ callback             | function                                     | Will be ca
 
 Parameter           | Type       | Description                                                                                  |
 --------------------| -----------| ---------------------------------------------------------------------------------------------|
-windowId	        | string     | The id or name of the window to resize                                                       |
-width	            | int        | The edge or corner from which to resize the window                                           |
-height	    	    | int        | The real content of the window (for the ingame drawing resizing white area)                  |
+windowId	          | string     | The id or name of the window to resize                                                       |
+width	              | int        | The edge or corner from which to resize the window                                           |
+height	    	      | int        | The real content of the window (for the ingame drawing resizing white area)                  |
 callback (Optional) | function   | A callback which is called when the size change is completed with the status of the request  |
 
 #### Callback argument: Success
@@ -256,9 +281,9 @@ callback (Optional) | function   | A callback which is called when the size chan
 
 Parameter           | Type       | Description                                                                                    |
 --------------------| -----------| -----------------------------------------------------------------------------------------------|
-windowId	        | string     |The id or name of the window for which to change the position                                   |
-left		        | int        | The new window position on the X axis in pixels from the left                                  |
-top		    	    | int        | The new window position on the Y axis in pixels from the top                                   |
+windowId	          | string     |The id or name of the window for which to change the position                                   |
+left		            | int        | The new window position on the X axis in pixels from the left                                  |
+top		    	        | int        | The new window position on the Y axis in pixels from the top                                   |
 callback (Optional) | function   |A callback which is called when the position change is completed with the status of the request |
 
 #### Callback argument: Success
@@ -274,7 +299,7 @@ callback (Optional) | function   |A callback which is called when the position c
 
 Parameter           | Type       | Description                                                                                    |
 --------------------| -----------| -----------------------------------------------------------------------------------------------|
-windowId	        | string     |The id or name of the window for which to change the position                                   |
+windowId	          | string     |The id or name of the window for which to change the position                                   |
 callback (Optional) | function   | Called after the window is closed                                                              |
 
 ```json
@@ -291,7 +316,7 @@ callback (Optional) | function   | Called after the window is closed            
 
 Parameter           | Type       | Description                                                                                    |
 --------------------| -----------| -----------------------------------------------------------------------------------------------|
-windowId	        | string     | The id or name of the window to minimize                                                         |
+windowId	          | string     | The id or name of the window to minimize                                                       |
 callback (Optional) | function   | Called after the window is minimized                                                           |
 
 **Note** that this function will not work if the manifest [resizable flag](https://overwolf.github.io/docs/api/manifest-json#windows-resizable) is set to `false`.
@@ -312,7 +337,7 @@ callback (Optional) | function   | Called after the window is minimized         
 
 Parameter           | Type       | Description                                                                                    |
 --------------------| -----------| -----------------------------------------------------------------------------------------------|
-windowId	        | string     | The id or name of the window to maximize                                                         |
+windowId	          | string     | The id or name of the window to maximize                                                         |
 callback (Optional) | function   | Called after the window is maximized                                                           |
 
 #### Notes
@@ -337,7 +362,7 @@ callback (Optional) | function   | Called after the window is maximized         
 
 Parameter           | Type       | Description                                                                                    |
 --------------------| -----------| -----------------------------------------------------------------------------------------------|
-windowId	        | string     | The id of the window to restore                                                                |
+windowId	          | string     | The id of the window to restore                                                                |
 callback (Optional) | function   | Called after the window is restored                                                            |
 
 #### Callback argument: Success
@@ -387,7 +412,7 @@ callback            | function   |Called after the window was hidden            
 
 Parameter           | Type       | Description                                                                                    |
 --------------------| -----------| -----------------------------------------------------------------------------------------------|
-windowId	        | string     | The id or name of the window to restore                                                        |
+windowId	          | string     | The id or name of the window to restore                                                        |
 callback            | function   | Called with the window state                                                                   |
 
 #### Callback argument: Success
