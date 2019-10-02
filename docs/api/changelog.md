@@ -17,6 +17,9 @@ Follow this entry for ongoing updates and changes to the project or tools:
 * [CS: GO game events](overwolf-games-events-csgo#docsNav)
   * New update:
     * phase
+* Add new properties to the [GameInfo](overwolf-games#gameinfo-object) object:
+  * monitorHandle - Returns the current monitor handle. Using this property you can check if your app runs on the main or secondary screen.
+  * windowHandle - Returns the current app window handle.
 
 ## Version 0.134 (August 2019)
 
