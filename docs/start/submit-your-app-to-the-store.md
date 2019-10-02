@@ -41,7 +41,7 @@ myZip
 
 ## The "App" folder should contain
 
-### 1. Manifest.json file
+### 1. manifest.json file
 
 Your app's [manifest.json](https://overwolf.github.io/docs/api/manifest-json#docsNav) file.
 
@@ -104,7 +104,7 @@ The store tile description is included in the app's [manifest.json](https://over
 
 <img src="../assets/submit-your-app-to-the-store/Subdescription.png" alt="Description" width="900"/>
 
-### 5. Store.json 
+### 5. store.json 
 A json file containing the Appstore information of your app. You can configure appstore tags, categories and attached videos in this file. 
 
 ```json
