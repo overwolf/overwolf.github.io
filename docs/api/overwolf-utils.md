@@ -95,8 +95,6 @@ A callback function which will be called with the status of the request
 }
 ```
 
-Note: You can use the monitor ID
-
 ## sendKeyStroke(keyString)
 #### Version added: 0.83
 #### Permissions required: GameControl

@@ -31,6 +31,7 @@ You can use the following helpful URLs to retrieve an extension file content or 
 * [overwolf.extensions.relaunch()](#relaunch)
 * [overwolf.extensions.updateExtension()](#updateextensioncallback)
 * [overwolf.extensions.updateExtensions()](#updateextensionscallback)
+* [overwolf.extensions.checkForExtensionUpdate()](#checkforextensionupdatecallback)
 
 ## Events Reference
 
@@ -233,13 +234,26 @@ Note: there is a failsafe mechanism where this API will only work if a user acti
 
 > Tries to download an update for all installed extensions.
 
-This functions allows apps to check and perform an update without having to wait for Overwolf to do so.
+This function allow the app to check and perform an update without having to wait for Overwolf to do so.
 
 Parameter | Type                  | Description                                                                           |
 --------- | ----------------------| ------------------------------------------------------------------------------------- |
 callback  | function              | Result of the request                                                             |
 
 Note: there is a failsafe mechanism where this API will only work if a user action that active it is detected. This means no app should ever update while it’s being used in-game unless the user explicitly wanted it.
+
+## checkForExtensionUpdate(callback)
+#### Version added: 0.135
+
+> Checks if an update is available for the calling extension.
+
+This function allows the current app to check if there is an extension update, without having to wait for Overwolf to do so.
+Calling this function will not automatically update the extension, just checks if an update exists
+
+Parameter | Type                  | Description                                                                           |
+--------- | ----------------------| ------------------------------------------------------------------------------------- |
+callback  | function              | Result of the request                                                                 |
+
 
 ## onAppLaunchTriggered
 #### Version added: 0.92
