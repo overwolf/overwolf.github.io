@@ -248,12 +248,17 @@ Note: there is a failsafe mechanism where this API will only work if a user acti
 > Checks if an update is available for the calling extension.
 
 This function allows the current app to check if there is an extension update, without having to wait for Overwolf to do so.
-Calling this function will not automatically update the extension, just checks if an update exists
+Calling this function will not automatically update the extension, just checks if an update exists.
 
 Parameter | Type                  | Description                                                                           |
 --------- | ----------------------| ------------------------------------------------------------------------------------- |
 callback  | function              | Result of the request                                                                 |
 
+#### Data example
+
+```json
+{state: "UpToDate", updateVersion: null, success: true, error: null}
+```
 
 ## onAppLaunchTriggered
 #### Version added: 0.92
