@@ -295,18 +295,20 @@ Contains information about a game.
 
 | Name               | Type     | Description                                                                                         | Since |
 |--------------------| ---------|-----------------------------------------------------------------------------------------------------|------ |
-| isInFocus          | bool     | Returns whether the game is currently in focus.                                         | 0.78  |
-| isRunning          | bool     | Returns whether the game is currently running.                                          | 0.78  |
-| allowsVideoCapture | bool     | Returns whether the game allows video to be captured.                                   | 0.78  |
-| title              | string   | Returns the title of the game.                                                          | 0.78  |
-| id                 | int      | Returns the id of the game.                                                             | 0.78  |
-| width              | int      | Returns the pixel width of the game window.                                             | 0.78  |
-| height             | int      | Returns the pixel height of the game window.                                            | 0.78  |
-| logicalWidth       | int      | Returns the game reported (logical) pixel width of the game window.                     | 0.78  |
-| logicalHeight      | int      | Returns the game reported (logical) pixel height of the game window.                    | 0.78  |
+| isInFocus          | bool     | Returns whether the game is currently in focus.                                                     | 0.78  |
+| isRunning          | bool     | Returns whether the game is currently running.                                                      | 0.78  |
+| allowsVideoCapture | bool     | Returns whether the game allows video to be captured.                                               | 0.78  |
+| title              | string   | Returns the title of the game.                                                                      | 0.78  |
+| id                 | int      | Returns the id of the game.                                                                         | 0.78  |
+| width              | int      | Returns the pixel width of the game window.                                                         | 0.78  |
+| height             | int      | Returns the pixel height of the game window.                                                        | 0.78  |
+| logicalWidth       | int      | Returns the game reported (logical) pixel width of the game window.                                 | 0.78  |
+| logicalHeight      | int      | Returns the game reported (logical) pixel height of the game window.                                | 0.78  |
 | renderers          | string[] | Returns an array of the rendering technology names supported by the running game.                   | 0.78  |
 | detectedRenderer   | string   | Returns the rendering technology detected by the running game.                                      | 0.78  |
 | commandLine        | string   | Returns the game process commandline.                                                               | 0.78  |
+| monitorHandle      | object   | Returns the current monitor handle.                                                               | 0.135 |
+| windowHandle       | object   | Returns the current app window handle.                                                              | 0.135 |
 
 ## GameInfoChangeData object
 
