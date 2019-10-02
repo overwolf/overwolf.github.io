@@ -14,16 +14,16 @@ Please read the [overwolf.games.launchers.events](overwolf-games-launchers-event
 if the  game launcher wasn't closed by the user, it is possible to access game launcher methods while being in-game.
 :::
 
-
 ## Sample Apps
+
 * [LOL game launcher sample app](https://github.com/overwolf/lol-launcher-sample-app)
 
 ## Available Features
 
-* [game_flow](#game-flow)
-* [summoner_info](#summoner-info)
-* [champ_select](#champ-select)
-* [lobby_info](#lobby-info)
+* [game_flow](#game_flow)
+* [summoner_info](#summoner_info)
+* [champ_select](#champ_select)
+* [lobby_info](#lobby_info)
 * [end_game](#end_game)
 
 ## `game_flow`
