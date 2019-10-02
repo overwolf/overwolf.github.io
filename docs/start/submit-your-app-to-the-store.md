@@ -21,22 +21,21 @@ Please take the time to [validate your manifest](../api/manifest-json#validate-y
 
 <pre>
 myZip
-  +---- App
+  +---- app
          +---- manifest.json
          +---- IconMouseNormal.png
          +---- IconMouseOver.png
          +---- launcher_icon.ico
          +---- Files
                 +---- index.html
-                +---- desktop-icon.ico
                 +---- css
                 +---- assets
-  +---- Store
+  +---- store
          +---- Tile.jpg
          +---- Icon.png
          +---- ScreenshotX.jpg
          +----  description.txt
-         +----  Store.json
+         +----  store.json
 
 </pre>
 
