@@ -256,6 +256,14 @@ callback  | function              | Result of the request                       
 
 #### Data example
 
+Possible values for the stats are "UpdateAvailable" or "UpToDate". 
+
+Examples:
+
+```json
+{state: "UpdateAvailable", updateVersion: "4.11.2", success: true, error: null}
+```
+
 ```json
 {state: "UpToDate", updateVersion: null, success: true, error: null}
 ```
