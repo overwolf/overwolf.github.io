@@ -10,15 +10,23 @@ Overwolf supports per-app custom installer pages.
 To use this feature, third party developers need to create HTML pages to be displayed during the installation process. This document will specify the steps needed to create a custom installation experience.
 
 
-<div class="box" data-slick='{"slidesToShow": 2}'>
+<div class="box" data-slick='{"slidesToShow": 1}'>
   <a data-fancybox="gallery" data-caption="Facecheck" href="../assets/custom-installer/Image 1.png">
-    Facecheck
     <span class="thumb">
       <img src="../assets/custom-installer/Image 1.png" alt="Facecheck">
     </span>
   </a>
+  <a data-fancybox="gallery" data-caption="Facecheck" href="../assets/custom-installer/image 3.png">
+    <span class="thumb">
+      <img src="../assets/custom-installer/image 3.png" alt="Facecheck">
+    </span>
+  </a>
+  <a data-fancybox="gallery" data-caption="Facecheck Installer" href="../assets/custom-installer/image 4.png">
+    <span class="thumb">
+      <img src="../assets/custom-installer/image 4.png" alt="Facecheck Installer">
+    </span>
+  </a>
   <a data-fancybox="gallery" data-caption="Facecheck Installer" href="../assets/custom-installer/Image 2.png">
-    Facecheck Installer
     <span class="thumb">
       <img src="../assets/custom-installer/Image 2.png" alt="Facecheck Installer">
     </span>
@@ -128,24 +136,6 @@ Use Jenkins to build `Overwolf-Installer-Setup-with-app` with your app’s param
 
 Make sure to enable the `CUSTOM_PROMO_PAGES` flag.
 
-
 ## 4. Download and install
 
-download your app from the <a href="https://www.overwolf.com/appstore"  target="_blank">Overwolf Store</a>. The installer should display the custom content.
-
-
-
-<div class="box" data-slick='{"slidesToShow": 2}'>
-  <a data-fancybox="gallery" data-caption="Facecheck" href="../assets/custom-installer/image 3.png">
-    Facecheck
-    <span class="thumb">
-      <img src="../assets/custom-installer/image 3.png" alt="Facecheck">
-    </span>
-  </a>
-  <a data-fancybox="gallery" data-caption="Facecheck Installer" href="../assets/custom-installer/image 4.png">
-    Facecheck Installer
-    <span class="thumb">
-      <img src="../assets/custom-installer/image 4.png" alt="Facecheck Installer">
-    </span>
-  </a>
-</div>
+Download your app from the <a href="https://www.overwolf.com/appstore"  target="_blank">Overwolf Store</a>. The installer should display the custom content.
