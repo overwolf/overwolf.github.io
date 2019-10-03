@@ -16,15 +16,19 @@ Many gamers have a second screen which is usually unused while they play and foc
 
 * If you don’t know the exact resolution of the second screen, use 1920X1080 which is the most common one. 
 
-When building the second screen window, follow these rules:
+#### When building the second screen window, follow these rules:
 
-1. Set the `windows-keep_window_location` flag to true -  https://overwolf.github.io/docs/api/manifest-json#windows-keep_window_location
+1. Set the [`windows-keep_window_location`](../api/manifest-json#windows-keep_window_location) flag to true.
 
-2. Set the `desktop_only` flag to true -  https://overwolf.github.io/docs/api/manifest-json#windows-desktop_only
+2. Set the [`desktop_only`](../api/manifest-json#windows-desktop_only) flag to true.
 
-3. We recommend you set `native_window` flag to true - https://overwolf.github.io/docs/api/manifest-json#native_window
+3. We recommend you set [`native_window`](/api/manifest-json#native_window) flag to true.
 
-4. Identify which screen is the secondary one and display the secondary screen on that window -  https://overwolf.github.io/docs/api/overwolf-utils#getmonitorslistcallback
-(If you know the resolution of each screen, you can do the calculation for exactly where you should display your window.)
+4. Identify which screen is the secondary one and display the secondary window on that screen.  
+  Use the [getMonitorsList()](../api/overwolf-utils#getmonitorslistcallback) function for that.  
+  If you know the resolution of each screen, you can do the calculation for exactly where you should display your window.
+
+5. Note that the [GameInfo](../api/overwolf-games#gameinfo-object) object contains a monitorHandle and a windowHandle. Take advantage of that if needed.  
+  Usage example: identify that the user moved the game window to the secondary screen.
  
-5. Use the transparent background window to share data and have your app windows communicate.
+6. Use the transparent background window to share data and have your app windows communicate.
