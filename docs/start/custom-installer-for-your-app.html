@@ -69,7 +69,8 @@
               }
             });
         </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><a class="edit-page-link button" href="https://github.com/overwolf/overwolf.github.io/tree/source/docs/start/custom-installer-for-your-app.md" target="_blank" rel="noreferrer noopener">Edit</a><h1 class="postHeaderTitle">Custom Installer</h1></header><article><div><span><h2><a class="anchor" aria-hidden="true" id="customizing-your-app-installer"></a><a href="#customizing-your-app-installer" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Customizing Your App Installer</h2>
-<p>Installers used to be uniform, identical for all apps. Following your feedback, we’re unlocking them for your design and personalization. Each app can now get its own welcome and “installation summary” screens, so that your installation experience is in tune and feels like a part of your app.</p>
+<p>Overwolf supports per-app custom installer pages.
+To use this feature, third party developers need to create HTML pages to be displayed during the installation process. This document will specify the steps needed to create a custom installation experience.</p>
 <div class="box" data-slick='{"slidesToShow": 2}'>
   <a data-fancybox="gallery" data-caption="Facecheck" href="../assets/custom-installer/Image 1.png">
     Facecheck
@@ -84,11 +85,96 @@
     </span>
   </a>
 </div>
-<p>This feature is a step in our quest to give you the best solutions for engaging with gamers. You can even create your own tray icon with the new <a href="../api/overwolf-os">windows.os</a> API!</p>
-<h2><a class="anchor" aria-hidden="true" id="upcoming-features"></a><a href="#upcoming-features" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Upcoming features</h2>
-<p>We're planning to expand on this functionality, and enable full installer customization including texts and custom visuals! We expect this next level of customization to become available in the upcoming months. Stay tuned for updates here and through newsletters!</p>
-<p>For those who want to start planning your custom installer, see the image below - the parts marked in red are the ones you will be able to change. Think about using the space to showcase features, present your team or partners, or announce activities your users should know about - these messages will be under your control to be changed on the fly.</p>
-<p>We hope this excites you as it does us, and cannot wait to see the awesome designs you'll come up with!</p>
+<h2><a class="anchor" aria-hidden="true" id="1-create-html-file"></a><a href="#1-create-html-file" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>1. Create HTML file</h2>
+<ul>
+<li>Create the HTML page you wish to display during the installation and name it &quot;index.html&quot;.</li>
+<li>There are 2 distinct phases to the installation process: downloading and installing.</li>
+<li>For each phase, different content can be displayed.</li>
+</ul>
+<p>The following can be used as a template:</p>
+<h3><a class="anchor" aria-hidden="true" id="indexhtml"></a><a href="#indexhtml" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>index.html</h3>
+<pre><code class="hljs css language-html"><span class="hljs-meta">&lt;!DOCTYPE html&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">html</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"script.js"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"down"</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"background-color: red; width:100px; height: 40px; display: none;"</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"stall"</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"background-color: green; width:200px; height: 40px; display: none;"</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="vbscript">
+        <span class="hljs-keyword">let</span> language = CustomInstallerUtils.getLanguage();
+        <span class="hljs-keyword">let</span> installerState = CustomInstallerUtils.getInstallerState();
+
+        switch (installerState) {
+            <span class="hljs-keyword">case</span> <span class="hljs-comment">'downloading':</span>
+                <span class="hljs-keyword">let</span> downElement = document.getElementById(<span class="hljs-comment">'down');</span>
+                downElement.innerHTML = <span class="hljs-comment">'downloading, language is ' + language;</span>
+                downElement.style.display = <span class="hljs-comment">'block';</span>
+                break;
+            <span class="hljs-keyword">case</span> <span class="hljs-comment">'installing':</span>
+                <span class="hljs-keyword">let</span> stallElement = document.getElementById(<span class="hljs-comment">'stall');</span>
+                stallElement.innerHTML = ‘Installing, language <span class="hljs-keyword">is</span> <span class="hljs-comment">' + language;</span>
+                stallElement.style.display = <span class="hljs-comment">'block';</span>
+                break;
+        }
+        CustomInstallerUtils.notifyReady();
+    </span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
+
+<span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span>
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="scriptjs"></a><a href="#scriptjs" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>script.js</h3>
+<pre><code class="hljs css language-js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">getUrlParameterByName</span>(<span class="hljs-params">name</span>) </span>{
+    <span class="hljs-keyword">var</span> regex, results;
+    name = name.replace(<span class="hljs-regexp">/[\[]/</span>, <span class="hljs-string">"\\["</span>).replace(<span class="hljs-regexp">/[\]]/</span>, <span class="hljs-string">"\\]"</span>);
+    regex = <span class="hljs-keyword">new</span> <span class="hljs-built_in">RegExp</span>(<span class="hljs-string">"[\\?&amp;]"</span> + name + <span class="hljs-string">"=([^&amp;#]*)"</span>);
+    results = regex.exec(location.search);
+    <span class="hljs-keyword">return</span> results === <span class="hljs-literal">null</span> ? <span class="hljs-string">""</span> : <span class="hljs-built_in">decodeURIComponent</span>(results[<span class="hljs-number">1</span>].replace(<span class="hljs-regexp">/\+/g</span>, <span class="hljs-string">" "</span>));
+}
+<span class="hljs-built_in">window</span>.CustomInstallerUtils = {
+    <span class="hljs-comment">/**
+     * This function will notify the installer that the page is ready
+     */</span>
+    notifyReady: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+        parent.postMessage({
+            <span class="hljs-attr">isLoaded</span>: <span class="hljs-literal">true</span>
+        }, <span class="hljs-string">"*"</span>);
+    },
+    <span class="hljs-comment">/**
+     * Returns the state/phase of the installer
+     * Possible values:
+     * 'downloading'
+     * 'installing'
+     */</span>
+    getInstallerState: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+        <span class="hljs-keyword">return</span> getUrlParameterByName(<span class="hljs-string">'state'</span>);
+    },
+    <span class="hljs-comment">/**
+     * Will get the selected language
+     * Possible values:
+     * en - English
+     * pt - Portuguese
+     * de - Deutsch
+     * ko - Korean
+     */</span>
+    getLanguage: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+        <span class="hljs-keyword">return</span> getUrlParameterByName(<span class="hljs-string">'lang'</span>)
+    }
+}
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="2-upload-files-to-s3-server"></a><a href="#2-upload-files-to-s3-server" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>2.  Upload files to S3 server</h2>
+<p><em>This step is done by Overwolf.</em></p>
+<p>Upload the files to the following path on Overwolf’s S3 server: <code>/owcachedcontent/Installer/promo/&lt;app_uid&gt;/</code>.</p>
+<h2><a class="anchor" aria-hidden="true" id="3-build-the-installer-with-jenkins"></a><a href="#3-build-the-installer-with-jenkins" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>3. Build the installer with Jenkins</h2>
+<p><em>This step is done by Overwolf.</em></p>
+<p>Use Jenkins to build <code>Overwolf-Installer-Setup-with-app</code> with your app’s parameters.</p>
+<p>Make sure to enable the <code>CUSTOM_PROMO_PAGES</code> flag.</p>
+<h2><a class="anchor" aria-hidden="true" id="4-download-and-install"></a><a href="#4-download-and-install" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>4. Download and install</h2>
+<p>download your app from the <a href="https://www.overwolf.com/appstore"  target="_blank">Overwolf Store</a>. The installer should display the custom content.</p>
 <div class="box" data-slick='{"slidesToShow": 2}'>
   <a data-fancybox="gallery" data-caption="Facecheck" href="../assets/custom-installer/image 3.png">
     Facecheck
@@ -103,7 +189,7 @@
     </span>
   </a>
 </div>
-</span></div></article></div><div class="docLastUpdate"><em>Last updated on 2019-8-29 by eran</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/start/submit-your-app-to-the-store"><span class="arrow-prev">← </span><span>App Submission Basics</span></a><a class="docs-next button" href="/docs/start/promoting-your-app"><span>Promoting your app</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#customizing-your-app-installer">Customizing Your App Installer</a></li><li><a href="#upcoming-features">Upcoming features</a></li></ul></nav></div><footer class="site-footer"><div class="container"><ul><li>Legal</li><li><a href="/docs/topics/legal-overview">Terms overview</a></li><li><a href="/docs/topics/legal-developers-terms">Developer&#x27;s terms</a></li><li><a href="/docs/topics/legal-app-terms">App terms</a></li><li><a href="http://www.overwolf.com/legal/" target="_blank">Overwolf terms</a></li><li><a href="http://www.overwolf.com/legal/#Privacy-policy" target="_blank">Overwolf Privacy policy</a></li></ul><ul><li>Support</li><li><a href=" https://discuss.developers.overwolf.com/" target="_blank">Questions and Answers</a></li><li><a href="https://discordapp.com/invite/cjjrZDp" target="_blank">Discord</a></li><li><a href="/docs/support/contact-us#join-our-slack">Slack</a></li><li><a href="https://www.facebook.com/OverwolfDevs" target="_blank">Facebook</a></li><li><a href="https://twitter.com/OverwolfDevs" target="_blank">Twitter</a></li></ul><ul><li>Documentation</li><li><a href="/docs/api/changelog">Changelog</a></li><li><a href="/docs/api/overwolf-api-overview">API</a></li><li><a href="/docs/start/app-creation-process">App Creation Process</a></li><li><a href="/docs/topics/best-practices-overview">Best Practices</a></li><li><a href="/docs/status/all">Game Events status</a></li></ul><ul><li>Information</li><li><a href="http://www.overwolf.com/careers/">Careers</a></li><li><a href="https://play.overwolf.com/fund/" target="_blank">Fund</a></li><li><a href="https://medium.com/overwolf-developers" target="_blank">Developers Blog</a></li><li><a href="https://www.overwolf.com/appstore" target="_blank">Overwolf Appstore</a></li></ul></div></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+</span></div></article></div><div class="docLastUpdate"><em>Last updated on 2019-10-3 by eransharv</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/start/submit-your-app-to-the-store"><span class="arrow-prev">← </span><span>App Submission Basics</span></a><a class="docs-next button" href="/docs/start/promoting-your-app"><span>Promoting your app</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#customizing-your-app-installer">Customizing Your App Installer</a></li><li><a href="#1-create-html-file">1. Create HTML file</a><ul class="toc-headings"><li><a href="#indexhtml">index.html</a></li><li><a href="#scriptjs">script.js</a></li></ul></li><li><a href="#2-upload-files-to-s3-server">2.  Upload files to S3 server</a></li><li><a href="#3-build-the-installer-with-jenkins">3. Build the installer with Jenkins</a></li><li><a href="#4-download-and-install">4. Download and install</a></li></ul></nav></div><footer class="site-footer"><div class="container"><ul><li>Legal</li><li><a href="/docs/topics/legal-overview">Terms overview</a></li><li><a href="/docs/topics/legal-developers-terms">Developer&#x27;s terms</a></li><li><a href="/docs/topics/legal-app-terms">App terms</a></li><li><a href="http://www.overwolf.com/legal/" target="_blank">Overwolf terms</a></li><li><a href="http://www.overwolf.com/legal/#Privacy-policy" target="_blank">Overwolf Privacy policy</a></li></ul><ul><li>Support</li><li><a href=" https://discuss.developers.overwolf.com/" target="_blank">Questions and Answers</a></li><li><a href="https://discordapp.com/invite/cjjrZDp" target="_blank">Discord</a></li><li><a href="/docs/support/contact-us#join-our-slack">Slack</a></li><li><a href="https://www.facebook.com/OverwolfDevs" target="_blank">Facebook</a></li><li><a href="https://twitter.com/OverwolfDevs" target="_blank">Twitter</a></li></ul><ul><li>Documentation</li><li><a href="/docs/api/changelog">Changelog</a></li><li><a href="/docs/api/overwolf-api-overview">API</a></li><li><a href="/docs/start/app-creation-process">App Creation Process</a></li><li><a href="/docs/topics/best-practices-overview">Best Practices</a></li><li><a href="/docs/status/all">Game Events status</a></li></ul><ul><li>Information</li><li><a href="http://www.overwolf.com/careers/">Careers</a></li><li><a href="https://play.overwolf.com/fund/" target="_blank">Fund</a></li><li><a href="https://medium.com/overwolf-developers" target="_blank">Developers Blog</a></li><li><a href="https://www.overwolf.com/appstore" target="_blank">Overwolf Appstore</a></li></ul></div></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
                 document.addEventListener('keyup', function(e) {
                   if (e.target !== document.body) {
                     return;
