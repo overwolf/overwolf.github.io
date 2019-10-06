@@ -25,7 +25,7 @@ The full list of supported games with their Game ID’s is always up to date and
 
 ## Sample App
 
-You can find a usage example of the `overwolf.games.events` API [here](https://github.com/overwolf/lol-events-sample-app), this one set to notify whenever an interesting event has happened in League of Legends.
+You can find a usage example of the `overwolf.games.events` API [here](https://github.com/overwolf/events-sample-apps/tree/master/lol-events-sample-app), this one set to notify whenever an interesting event has happened in League of Legends.
 
 ## Features Overview
 
