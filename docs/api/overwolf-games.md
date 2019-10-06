@@ -307,8 +307,36 @@ Contains information about a game.
 | renderers          | string[] | Returns an array of the rendering technology names supported by the running game.                   | 0.78  |
 | detectedRenderer   | string   | Returns the rendering technology detected by the running game.                                      | 0.78  |
 | commandLine        | string   | Returns the game process commandline.                                                               | 0.78  |
-| monitorHandle      | object   | Returns the current monitor handle.                                                               | 0.135 |
+| monitorHandle      | object   | Returns the current monitor handle.                                                                 | 0.135 |
 | windowHandle       | object   | Returns the current app window handle.                                                              | 0.135 |
+
+#### Example data
+
+```json
+{ 
+   "isInFocus":false,
+   "isRunning":true,
+   "allowsVideoCapture":true,
+   "title":"Guild Wars",
+   "displayName":"",
+   "shortTitle":"",
+   "id":11361,
+   "classId":1136,
+   "width":1920,
+   "height":1080,
+   "logicalWidth":1920,
+   "logicalHeight":1080,
+   "renderers":["D3D9"],
+   "detectedRenderer":"D3D9",
+   "executionPath":"D:/Games/Guild Wars/Gw.exe",
+   "sessionId":"96879a3f7545472194ae86eb5a8fd64a",
+   "commandLine":"\"D:/Games/Guild Wars/Gw.exe\"",
+   "type":0,
+   "typeAsString":"Game",
+   "windowHandle":{"value":592562},
+   "monitorHandle":{"value":329731}
+}
+```
 
 ## GameInfoChangeData object
 
