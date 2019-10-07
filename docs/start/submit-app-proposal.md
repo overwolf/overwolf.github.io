@@ -28,6 +28,9 @@ Whether you’re new to Overwolf or a returning developer, it’s imperative you
 
 Submitting your app concept for review is easy, and we’re not looking for a complete set of technical documents at this point. Instead, the goal at this stage is creating a clear, concise description of what the app is and how it will work for gamers. We also want to see a mockup of your planned User Interface. This proposal (and the app itself) must be in English, although you may freely support more languages in the final app.
 
+### Twitch Extension 
+If you are planning on creating a Twitch Extension please fill out the "Overwolf app proposal".  
+
 ### Legal
 
 Before submitting your proposal, please read the [developer](https://overwolf.github.io/docs/topics/legal-developers-terms) & [app](https://overwolf.github.io/docs/topics/legal-app-terms) terms of service.
