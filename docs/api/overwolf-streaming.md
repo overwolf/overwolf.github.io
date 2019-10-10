@@ -64,7 +64,6 @@ The term streaming might be a bit misleading – we regard saving a video to the
 * [overwolf.streaming.StreamPeripheralsCaptureOptions](#streamperipheralscaptureoptions-object) Object
 * [overwolf.streaming.enums.StreamMouseCursor](#overwolfstreamingenumsstreammousecursor-enum)
 * [overwolf.streaming.StreamIngestServer](#streamingestserver-object) Object
-* [overwolf.streaming.ReplayType](#replaytype-enum)
 * [overwolf.streaming.WatermarkSettings](#watermarksettings-object) Object
 * [overwolf.streaming.WatermarkSettings](#watermarksettings-object) Object
 * [overwolf.streaming.enums.StreamingMode](#overwolfstreamingenumsstreamingmode-enum)
@@ -571,12 +570,12 @@ A callback function which will be called with the status of the request
 
 > Update stream desktop capture options.
 
-Parameter                  | Type                                                                                              | Description                                                     |
----------------------------| --------------------------------------------------------------------------------------------------| ----------------------------------------------------------------|
-streamId	               | int                                                                                               | The id of the stream                                            |
-newOptions	               | [StreamDesktopCaptureOptions](#streamdesktopcaptureoptions-object) Object                         | The updated desktop capture streaming options                   |
-mouseCursorStreamingMethod | [overwolf.streaming.enums.StreamMouseCursor](#overwolfstreamingenumsstreammousecursor-enum) enum  | The updated value of the mouse cursor streaming method          |
-callback                   | function                                                                                          | A callback function to call with success or failure indicationa |
+Parameter                  | Type                                                                                              | Description                   |
+---------------------------| --------------------------------------------------------------------------------------------------| ------------------------------|
+streamId	                 | int                                                                                               | The id of the stream                   |
+newOptions	               | [StreamDesktopCaptureOptions](#streamdesktopcaptureoptions-object) Object                         | The updated desktop capture streaming options                    |
+mouseCursorStreamingMethod | [overwolf.streaming.enums.StreamMouseCursor](#overwolfstreamingenumsstreammousecursor-enum) enum  | The updated value of the mouse cursor streaming method           |
+callback                   | function                                                                                          | A callback function to call with success or failure indicationa     |
 
 #### Callback argument: Success
 
@@ -731,10 +730,10 @@ A callback function which will be called with the status of the request
 
 Stream settings container.
 
-| Name      | Type                                                                | Description                              | Since |
-|-----------| --------------------------------------------------------------------|------------------------------------------|------ |
+| Name      | Type                                                                                             | Description                              | Since |
+|-----------| -------------------------------------------------------------------------------------------------|------------------------------------------|------ |
 | provider  | [overwolf.streaming.enums.StreamingProvider](#overwolfstreamingenumsstreamingprovider-enum) enum | The stream provider name                 | 0.78  |
-| settings  | [StreamParams](#streamparams-object) object                                | The stream provider settings             | 0.78  |
+| settings  | [StreamParams](#streamparams-object) object                                                      | The stream provider settings             | 0.78  |
 
 #### Object data example
 
@@ -773,17 +772,17 @@ Stream settings container.
 
 Represents the settings required to start a stream.
 
-| Name      | Type                                                                | Description                              | Since |
-|-----------| --------------------------------------------------------------------|------------------------------------------|------ |
-| stream_info  | [StreamInfo](#streaminfo-object) object | The basic stream information          | 0.78  |
-| auth  | [StreamAuthParams](#streamauthparams-object) object     | Stream authorization data             | 0.78  |
-| video  | [StreamVideoOptions](#streamvideooptions-object) Object       | Stream video options             | 0.78  |
-| audio  | [StreamAudioOptions](#streamaudiooptions-object) Object  | Stream audio options             | 0.78  |
-| peripherals  | [StreamPeripheralsCaptureOptions](#streamperipheralscaptureoptions-object) Object | Defines how peripherals (i.e. mouse cursor) are streamed. </br>**Permissions required: DesktopStreaming** | 0.78  |
-| ingest_server  | [StreamIngestServer](##streamingestserver-object) Object   | Information on the server that is being streamed to       | 0.78  |
-| replay_type  | [ReplayType](#replaytype-enum) enum           | The replay type to use       | 0.78  |
-| gif_as_video  | bool               | Create gif as video (Gif Replay Type only)     | 0.78  |
-| max_quota_gb  | double               | Max media folder size in GB     | 0.78  |
+| Name         | Type                                                                              | Description                              | Since |
+|--------------| ----------------------------------------------------------------------------------|------------------------------------------|------ |
+| stream_info  | [StreamInfo](#streaminfo-object) object                                           | The basic stream information             | 0.78  |
+| auth         | [StreamAuthParams](#streamauthparams-object) object                               | Stream authorization data                | 0.78  |
+| video        | [StreamVideoOptions](#streamvideooptions-object) Object                           | Stream video options                     | 0.78  |
+| audio        | [StreamAudioOptions](#streamaudiooptions-object) Object                           | Stream audio options                     | 0.78  |
+| peripherals  | [StreamPeripheralsCaptureOptions](#streamperipheralscaptureoptions-object) Object | Defines how peripherals (i.e. mouse cursor) are streamed.</br>**Permissions required: DesktopStreaming**                                                                                                 | 0.78  |
+| ingest_server| [StreamIngestServer](##streamingestserver-object) Object                          | Information on the server that is being streamed to | 0.78  |
+| replay_type  | [ReplayType](overwolf-media-replays#replaytype-enum) enum                         | The replay type to use                   | 0.78  |
+| gif_as_video | bool                                                                              | Create gif as video (Gif Replay Type only) | 0.78  |
+| max_quota_gb | double                                                                            | Max media folder size in GB              | 0.78  |
 
 ## StreamInfo Object
 
@@ -1060,16 +1059,6 @@ Information on the server that is being streamed to.
 | name         | string | The server name that is being streamed to                                                  | 0.78  |
 | template_url | string | The server’s url template. Use the token {stream_key} to specify the stream key in the url | 0.78  |
 
-## ReplayType enum
-
-The replay type to use.
-
-#### Version added: 0.83
-
-| Options | Description     |
-|---------| ----------------|
-| video   |                 |
-| gif     |                 |
 
 ## WatermarkSettings Object
 
