@@ -222,22 +222,27 @@ Data Example:
 
 Data Example:
 
-VS BOTS
+Competitive mode on "Dust II" map
+```json
+{"match_info":{"game_mode":"Competitive Dust II"}}
+```
+
+VS BOTS on "Dust II" map
 ```json
 {"match_info":{"game_mode":"Offline Deathmatch Dust II"}}
 ```
 
-Community Servers
+Community Server, "Causal" mode and server name
 ```json
 {"match_info":{"game_mode":"Community Casual surf_ski_2_GO_sw"}}
 ```
 
-Casual/Regular match
+"Casual" mode on "Dust II" map
 ```json
 {"match_info":{"game_mode":"Casual Dust II"}}
 ```
 
-Spectating
+Spectating "Casual" mode on "Dust II" map
 ```json
 {"match_info":{"game_mode":"Watching Casual Dust II"}}
 ```
