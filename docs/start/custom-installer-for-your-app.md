@@ -38,6 +38,7 @@ To use this feature, third party developers need to create HTML pages to be disp
 
 * Create the HTML page you wish to display during the installation and name it "index.html".
 * There are 2 distinct phases to the installation process: downloading and installing.
+* The maximum element size is 640px x 288px.
 * For each phase, different content can be displayed.
 
 The following can be used as a template:
