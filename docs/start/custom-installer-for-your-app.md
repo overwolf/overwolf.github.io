@@ -54,9 +54,9 @@ The following can be used as a template:
 </head>
 
 <body>
-    <div id="down" style="background-color: red; width:100px; height: 40px; display: none;">
+    <div id="down" style="background-color: red; width:640px; height: 288px; display: none;">
     </div>
-    <div id="stall" style="background-color: green; width:200px; height: 40px; display: none;">
+    <div id="stall" style="background-color: green; width:640px; height: 288px; display: none;">
     </div>
     <script>
         let language = CustomInstallerUtils.getLanguage();
