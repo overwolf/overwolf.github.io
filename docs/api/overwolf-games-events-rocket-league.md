@@ -25,7 +25,7 @@ Please read the [overwolf.games.events](overwolf-games-events) documentation pag
 
 ## Game events status
 
-It's highly recommended to communicate errors and warnings to your app users. Check game event status [here](../status/all) or easily check event status directly from your app [using our API](../topics/howto-check-events-status-from-app).
+It's recommended to communicate errors and warnings to your users. You can check game event status [here](../status/all) or easily verify event status directly from your app [using our API](../topics/howto-check-events-status-from-app).
 
 ## `stats`
 
@@ -41,22 +41,22 @@ score       | Check notes  | Score of a player has changed|See [notes](#score-no
 
 Event Data:
 
-* <b>steamId</b> – Steam id of the player that scored the goal
-* <b>score</b> – Score of the player that scored the goal
+* <b>steamId</b> – Steam id of the player scoring the goal
+* <b>score</b> – Score of the player scoring the goal
 * <b>goals</b> – Goal count of the player
 * <b>deaths</b> – Death count of the player
-* <b>name</b> –  Name of the player that scored the goal
+* <b>name</b> –  Name of the player scoring the goal
 * <b>team</b> – Team number of the scoring player (1 or 2)
 
 Comments:
 
-Encoded stringified JSON containing the properties. Need to do a decodeURI() on the value and the JSON.parse() on the result
+Encoded stringified JSON containing the properties. Need to do a decodeURI() on the value and then JSON.parse() on the result
 
 #### *score* note
 
 Event Data:
 
-* <b>steamId</b> – Steam id of the player
+* <b>steamId</b> – Steam ID of the player
 * <b>score</b> – Score of the player
 * <b>goals</b> – Goal count of the player
 * <b>deaths</b> – Death count of the player
@@ -96,9 +96,9 @@ started      | matchState  | true / false              |                       |
 ended        | matchState  | true / false              |                       |    86.0       |
 matchType    | matchInfo   | Current match type            |See [notes](#matchType-note)|    86.0  |
 ranked       | matchInfo   | True if the match is ranked, false otherwise "True/False" |     |  86.0  |
-maxPlayers   | matchInfo   | Maximum number of players allowed in this match.|See [notes](#maxPlayers-note)|    86.0       |
+maxPlayers   | matchInfo   | Maximum number of players allowed in this match |See [notes](#maxPlayers-note)|    86.0       |
 gameMode (Not Available)| matchInfo   | Game mode of the match |See [notes](#gameMode-note)|    86.0       |
-gameState    | matchInfo   | Current state of the game.|See [notes](#gameState-note)|    86.0       |
+gameState    | matchInfo   | Current state of the game|See [notes](#gameState-note)|    86.0       |
 gameType     | matchInfo   | Current game type           |                       |    86.0       |
 
 #### *matchType* note
@@ -159,8 +159,8 @@ team1_score / team2_score| teamsScore|team1 / team2 score – integer|See [notes
 #### *player* note
 
 * Encoded stringified JSON containing the properties:
-  * steamId – Steam id of the player that died
-  * score – Score of the player that died
+  * steamId – Steam ID of the player who died
+  * score – Score of the player who died
   * goals – Goal count of the player
   * deaths – Death count of the player
   * name –  Name of the player that died
@@ -168,19 +168,19 @@ team1_score / team2_score| teamsScore|team1 / team2 score – integer|See [notes
 
 Comment:
 
-Encoded stringified JSON containing the properties. Need to do a decodeURI() on the value and the JSON.parse() on the result
+Encoded stringified JSON containing the properties. Need to do a decodeURI() on the value and then JSON.parse() on the result.
 
 #### *teamsInfo* note
 
 Value:
 
-Encoded stringified array of strings indicating the players ids for each team. Each id corresponds to an id under the playersInfo category.
+Encoded stringified array of strings indicating the players IDs for each team. Each ID corresponds to an ID under the playersInfo category.
 
 ### Events
 
 Event       | Event Data   | Fired When    | Notes              | Since GEP Ver. |
 ------------| -------------| --------------| ------------------ | --------------|
-rosterChange| Array containing players' info|A player leaves or joins the match|         |      14.0     | 
+rosterChange| Array containing players' information|A player leaves or joins the match|         |      14.0     | 
 playerJoined| Check notes |A player joins the match|See [notes](#playerJoined-note)|      24.0     | 
 playerLeft  | Check notes |A player leaves the match|See [notes](#playerLeft-note)|      24.0     | 
 
@@ -188,7 +188,7 @@ playerLeft  | Check notes |A player leaves the match|See [notes](#playerLeft-not
 
 Event Data:
 
-* <b>steamId</b> – Steam id of the player
+* <b>steamId</b> – Steam ID of the player
 * <b>score</b> – Score of the player
 * <b>goals</b> – Goal count of the player
 * <b>deaths</b> – Death count of the player
@@ -199,7 +199,7 @@ Event Data:
 
 Event Data:
 
-* <b>steamId</b> – Steam id of the player
+* <b>steamId</b> – Steam ID of the player
 * <b>score</b> – Score of the player
 * <b>goals</b> – Goal count of the player
 * <b>deaths</b> – Death count of the player
@@ -212,9 +212,9 @@ Event Data:
 
 key          | Category    | Values                    | Notes                 | Since GEP Ver. |
 ------------ | ------------| ------------------------- | --------------------- | ------------- | 
-steamId      | me          | Player’s steam id     |                       |    14.0       |
+steamId      | me          | Player’s Steam ID     |                       |    14.0       |
 name         | me          | Player’s name         |                       |    14.0       |
-goals        | me          | Player’s goals count  |                       |    14.0       |
+goals        | me          | Player’s goal count  |                       |    14.0       |
 score        | me          | Player’s score        |                       |    14.0       |
 deaths       | me          | Player’s death count  |                       |    14.0       |
 team         | me          | Player’s team number  |                       |    14.0       |
