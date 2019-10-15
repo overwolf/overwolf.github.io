@@ -11,7 +11,7 @@ Please read the [overwolf.games.events](overwolf-games-events) documentation pag
 :::
 
 :::tip
-Tracker Network offers a [battle tested API for Splitgate: Arena Warfare](https://tracker.gg/developers/docs/titles/splitgate), which you can use while building your own app on the Overwolf platform. Their server API is the easiest way to improve the quality of your app.
+The Tracker Network offers a [battle tested API for Splitgate: Arena Warfare](https://tracker.gg/developers/docs/titles/splitgate), which you can use while building your own app. Their server API is the easiest way to improve the quality of your app.
 :::
 
 ## Sample Apps
@@ -34,7 +34,7 @@ Tracker Network offers a [battle tested API for Splitgate: Arena Warfare](https:
 
 ## Game events status
 
-It's highly recommended to communicate errors and warnings to your app users. Check game event status [here](../status/all) or easily check event status straight from your app [using our API](../topics/howto-check-events-status-from-app).
+It's highly recommended to communicate errors and warnings to your users. Check game event status [here](../status/all) or easily check event status straight from your app [using our API](../topics/howto-check-events-status-from-app).
 
 ## `game_info`
 
@@ -58,12 +58,12 @@ Possible values:
 
 key               | Category    | Values                    | Notes                 | Since GEP Ver. |
 ----------------- | ------------| ------------------------- | --------------------- | ------------- |
-mapName           | match_info   |	Current map name.	  |See [notes](#mapName-note)|    123.0      |
-mode              | match_info   |	Current match mode.	  |See [notes](#mode-note)|    123.0      |
+mapName           | match_info   |	Current map name	  |See [notes](#mapName-note)|    123.0      |
+mode              | match_info   |	Current match mode	  |See [notes](#mode-note)|    123.0      |
 state             | match_info   |	Current match state (active / inactive) |See [notes](#state-note)|    123.0      |
-timer             | match_info   |	Current match timer value (in seconds).  |See [notes](#timer-note)|    123.0      |
+timer             | match_info   |	Current match timer (in seconds).  |See [notes](#timer-note)|    123.0      |
 score             | match_info   |	Current score  |See [notes](#score-note)|    123.0      |
-type              | match_info   |	Current match type. |See [notes](#type-note)|    130.0      |
+type              | match_info   |	Current match type |See [notes](#type-note)|    130.0      |
 
 #### *mapName* note
 
@@ -101,7 +101,7 @@ Data Example:
 
 #### *timer* note
 
-Date Example:
+Data Example:
 
 `{"match_info":{"timer":"476"}}`
 
@@ -121,7 +121,7 @@ Possible values: “Unranked”, “Ranked”, “Custom”
 
 key               | Category    | Values                    | Notes                 | Since GEP Ver. |
 ----------------- | ------------| ------------------------- | --------------------- | ------------- |
-id                | player_info   |	Local player's id	  |See [notes](#id-note)|    123.0      |
+id                | player_info   |	Local player's ID	  |See [notes](#id-note)|    123.0      |
 name              | player_info   |	Local player's name	  |See [notes](#name-note)|    123.0      |
 health            | player_info   |	Local player's health (0-100)	  |See [notes](#health-note)|    123.0      |
 team              | player_info   |	Local player's team (alpha/bravo)  |See [notes](#team-note)|    123.0      |
@@ -139,8 +139,8 @@ killstreak3              | player_info   |	Local player's killstreak	  |See [not
 killstreak4              | player_info   |	Local player's killstreak	  |See [notes](#killstreak4-note)|    130.0      |
 killstreak5              | player_info   |	Local player's killstreak	  |See [notes](#killstreak5-note)|    130.0      |
 killstreak6              | player_info   |	Local player's killstreak	  |See [notes](#killstreak6-note)|    130.0      |
-headshotKills              | player_info   |	Local player killed with headshot	  |See [notes](#headshotKills-note)|    130.0      |
-meleeKills              | player_info   |	Local player killed with a melee	  |See [notes](#meleeKills-note)|    130.0      |
+headshotKills              | player_info   |	Local player killed with a headshot	  |See [notes](#headshotKills-note)|    130.0      |
+meleeKills              | player_info   |	Local player killed by a melee attack	  |See [notes](#meleeKills-note)|    130.0      |
 portalKills              | player_info   |	Local player killed using portal	  |See [notes](#portalKills-note)|    130.0      |
 killsThroughPortal              | player_info   |	Local player killed through a portal	  |See [notes](#killsThroughPortal-note)|    130.0      |
 teabags              | player_info   |	Local player tea-bagged	enemy  |See [notes](#teabags-note)|    130.0      |
@@ -331,7 +331,7 @@ Data Example:
 
 Event       | Event Data   | Fired When    | Notes              | Since GEP Ver. |
 ------------| -------------| --------------| ------------------ | --------------|
-killFeed    |<ul><li>killer name</li><li>weapon</li><li>victim name</li>|Player has died|See [notes](#killFeed-note)|     123.0     |
+killFeed    |<ul><li>Killer name</li><li>Weapon</li><li>Victim name</li>|Player has died|See [notes](#killFeed-note)|     123.0     |
 
 #### *killFeed* note
 
@@ -359,12 +359,12 @@ victim      | Victim name  | Local player has killed an enemy|See [notes](#victi
 headshot    | null         | Local player has killed an enemy with a headshot|          |     123.0     |
 meleeKill   | null         | Local player has killed an enemy with melee|          |     123.0     |
 portalKill  | null         | Local player has killed an enemy with a portal|          |     123.0     |
-killThroughPortal | null   | Local player has killed an enemy through a portal.|          |     123.0     |
-teabag      | null         | Local player tea-bagged an enemy.|          |     130.0     |
+killThroughPortal | null   | Local player has killed an enemy through a portal|          |     123.0     |
+teabag      | null         | Local player tea-bagged an enemy|          |     130.0     |
 
 #### *kill* note
 
-* empty string for regular kill
+* Empty string for regular kill
 * Double Kill
 * Triple Kill
 * Killeidoscope!
