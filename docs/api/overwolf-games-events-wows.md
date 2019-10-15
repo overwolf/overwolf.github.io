@@ -24,7 +24,7 @@ Please read the [overwolf.games.events](overwolf-games-events) documentation pag
 
 ## Game events status
 
-It's highly recommended to communicate errors and warnings to your app users. Check game event status [here](../status/all) or easily check event status straight from your app [using our API](../topics/howto-check-events-status-from-app).
+It's highly recommended to communicate errors to your users. Check game event status [here](../status/all) or easily verify event status straight from your app [using our API](../topics/howto-check-events-status-from-app).
 
 ## `game_info`
 
@@ -32,7 +32,7 @@ It's highly recommended to communicate errors and warnings to your app users. Ch
 
 key          | Category    | Values                    | Notes                 | Since GEP Ver. |
 ------------ | ------------| ------------------------- | --------------------- | ------------- |
-game_start_timestamp | match_info   | Time of when the game process started running  |See [notes](#game_start_timestamp-note)|   119.1   |
+game_start_timestamp | match_info   | Time when the game process started running  |See [notes](#game_start_timestamp-note)|   119.1   |
 scene | match_info   | See [notes](#scene-note) |                       |   119.1   |
 
 #### *game_start_timestamp* note
@@ -45,12 +45,12 @@ Data Example:
 
 Possible Values:
 
-* initializing
-* dock
-* battle
-* loading_screen
-* post_battle
-* result_screen
+* Initializing
+* Dock
+* Battle
+* Loading_screen
+* Post_battle
+* Result_screen
 
 ## `account_info`
 
@@ -59,17 +59,17 @@ Possible Values:
 key          | Category    | Values                    | Notes                 | Since GEP Ver. |
 ------------ | ------------| ------------------------- | --------------------- | ------------- |
 realm | account_info   |                            | See [notes](#realm-note) |     119.1     |
-id | account_info   | Local player’s Wargaming account id |                |     119.1     |
+id | account_info   | Local player’s Wargaming account ID |                |     119.1     |
 playerName | account_info   | Local player’s Wargaming name |              |     119.1     |
 
 #### *realm* note
 
 Possible Values:
 
-* ru
-* eu
-* na
-* asia
+* RU
+* EU
+* NA
+* Asia
 
 ## `match_info`
 
@@ -94,7 +94,7 @@ key          | Category    | Values                    | Notes                 |
 mapName| match     |Map name – string| See [notes](#mapName-note) |     119.1     |
 players| roster    |Array of “player” objects| See [notes](#players-note) |     119.1     |
 health| ship      |The current “health” of the user’s ship – int| See [notes](#health-note) |     119.1     |
-name| ship      | The ship’s name – string| See [notes](#name-note) |     119.1     |
+name| ship      | Ship’s name – string| See [notes](#name-note) |     119.1     |
 level| ship      |Level of the player’s ship| See [notes](#level-note) |     122.1     |
 burning| ship      |Whether the ship is burning or not (true / false)| See [notes](#burning-note) |     122.1     |
 flooding| ship      |Whether the ship is flooding or not| See [notes](#flooding-note) |     122.1     |
@@ -172,8 +172,8 @@ Data Example:
 
 Possible values:
 
-* <b>running</b> – match is active
-* <b>empty string</b> – match is not active
+* <b>Running</b> – match is active
+* <b>Empty string</b> – match is not active
 
 Data Example:
 
@@ -193,7 +193,7 @@ matchOutcome | "victory" / "lost" |  Match ends |                   |   119.1   
 
 Event      | Event Data  | Fired When          | Notes              | Since GEP Ver. |
 -----------| ------------| ------------------- | ------------------ | --------------|
-kill |Ship id of the “victim” ship – int|A ship was destroyed by the local user|        |   121.0       | 
+kill |Ship ID of the “victim” ship – int|A ship was destroyed by the local user|        |   121.0       | 
 damage   |<ul><li>amount – amount of damage done</li><li>shipId – int</li>|A ship was damaged by the local user|     |   121.0   | 
 ribbon |  ribbon – string | Ribbon was awarded |                    |   119.1       | 
 
@@ -203,5 +203,5 @@ ribbon |  ribbon – string | Ribbon was awarded |                    |   119.1 
 
 Event      | Event Data  | Fired When          | Notes              | Since GEP Ver. |
 -----------| ------------| ------------------- | ------------------ | --------------|
-death      |Ship id of the “killer” ship – int|  Player's ship was destroyed       |            |   119.1       | 
+death      |Ship ID of the “killer” ship – int|  Player's ship was destroyed       |            |   119.1       | 
 hit        |<ul><li>damage – amount -int</li><li>ship name – string</li>| Player’s ship was damaged|     |   119.1       | 
