@@ -27,7 +27,7 @@ Oct 13, 2019
 `Fortnite Scheduled Maintenance`
 
 **Resolved** - This incident has been resolved.  
-Oct 15, 01:40 UTC
+Oct 13, 01:40 UTC
 
 **Monitoring** - Fortnite service maintenance.  
 Oct 13, 01:13 UTC
