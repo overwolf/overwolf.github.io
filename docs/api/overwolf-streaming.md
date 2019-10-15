@@ -743,11 +743,11 @@ Stream settings container.
 	"audio": {
 	    "mic": {
 	        "volume": 100,
-		"enabled": true
+		"enable": true
 	    },
 	    "game": {
 	        "volume": 75,
-		"enabled": true
+		"enable": true
 	    }
          },
 	    "peripherals": { "capture_mouse_cursor": "both" }
