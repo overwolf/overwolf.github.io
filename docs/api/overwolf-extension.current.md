@@ -4,7 +4,7 @@ title: overwolf.extension.current API
 sidebar_label: overwolf.extension.current
 ---
 
-A set of functions providing more information and utilities regarding the current extension.
+A set of functions providing more information and utilities for the current extension.
 
 ## Methods Reference
 
@@ -18,7 +18,7 @@ A set of functions providing more information and utilities regarding the curren
 
 Parameter | Type       | Description                                                                                    |
 --------- | -----------| ---------------------------------------------------------------------------------------------- |
-name	  | string     | Name of the object as appears in the manifest                                              |
+name	  | string     | Name of the object as it appears in the manifest                                              |
 callback  | function   | A function called with the extra object if found, and a status indicating success or failure  |
 
 ## getManifest(callback)
