@@ -4,7 +4,7 @@ title: overwolf.extensions API
 sidebar_label: overwolf.extensions
 ---
 
-Use the `overwolf.extensions` API to control and retrieve details of an Overwolf app or listen/respond to events in the app’s lifecycle.
+Use the `overwolf.extensions` API to change or retrieve the information of an Overwolf app or respond to events in the app’s lifecycle.
 
 ## Special Overwolf URLs
 
@@ -43,20 +43,20 @@ You can use the following helpful URLs to retrieve an extension file content or 
 ## launch(uid , parameter)
 #### Version added: 0.78
 
-> Launch an extension by unique id.
+> Launch an extension by unique ID.
 
 Parameter | Type                  | Description                                                                           |
 --------- | ----------------------| ------------------------------------------------------------------------------------- |
-uid       | string                | Extension unique id                                                               |
-parameter | Object (optional)     | A parameter to pass to the extension. The extension may or may not use this parameter |
+uid       | string                | Extension unique ID                                                               |
+parameter | Object (optional)     | A parameter passed to the extension. The extension may or may not use this parameter |
 
 
 Retrieve a service object by ID, which will usually provide external APIs.
 
 Parameter | Type                  | Description                                                                              |
 --------- | ----------------------| ---------------------------------------------------------------------------------------- |
-id        | string                | Service id                                                                           |
-callback  | function              | A function called with the service, if found, and a status indicating success or failure |
+id        | string                | Service ID                                                                           |
+callback  | function              | A function called with the service, if found, and a flag indicating success or failure |
 
 ## setInfo(info)
 #### Version added: 0.91
@@ -70,7 +70,7 @@ info      | Object                | An object to post                           
 ## getInfo(id, callback)
 #### Version added: 0.91
 
-> Gets an extension’s info string.
+> Returns an extension’s info string.
 
 Parameter | Type                  | Description                                                                              |
 --------- | ----------------------| ---------------------------------------------------------------------------------------- |
@@ -219,7 +219,7 @@ A callback function which will be called with the status of the request
 ## updateExtension(callback)
 #### Version added: 0.133
 
-> Tries to download an update for the calling extension.
+> Attempts to download an update for the calling extension.
 
 This function allows apps to check and perform an update without having to wait for Overwolf to do so automatically.
 
@@ -232,7 +232,7 @@ Note: there is a failsafe mechanism where this API will only work if a user acti
 ## updateExtensions(callback)
 #### Version added: 0.133
 
-> Tries to download an update for all installed extensions.
+> Attempts to download an update for all installed extensions.
 
 This function allow the app to check and perform an update without having to wait for Overwolf to do so.
 
@@ -288,8 +288,8 @@ Possible values for the `source` parameter:
 Parameter        | Type                                                                         |
 ---------------- | -----------------------------------------------------------------------------|
 dock             | Launched from the Overwolf dock                                              |
-gamelaunchevent  | Auto-launched with a game                                                    |
-hotkey           | Launched in-game with its hotkey                                             |
+gamelaunchevent  | Auto-launched along with a game                                                    |
+hotkey           | Launched in-game with a hotkey                                             |
 storeapi         | Launched from the store                                                      |
 odk              | Launched with the overwolf.extensions.launch API                             |
 commandline      | Launched from the command line using overwolf.exe -launchapp [extension id]  |
@@ -298,13 +298,13 @@ startup          | Launched upon startup (like remote configurations)           
 after-install    | Auto-launched after installation                                             |
 
 :::tip
-if you want to get the origin information before/without registering the events, you can run the `window.location.href` command.
+if you want to get origin information without registering events, you can run the `window.location.href` command.
 :::
 
 ## onExtensionUpdateStateChanged
 #### Version added: 0.132
 
-> Fires after the current app was updated successfully.
+> Fires after the current app was successfully updated.
 
 ## onUncaughtException
 #### Version added: 0.133
