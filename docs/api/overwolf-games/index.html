@@ -91,14 +91,14 @@
 <h2><a class="anchor" aria-hidden="true" id="getrunninggameinfocallback"></a><a href="#getrunninggameinfocallback" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>getRunningGameInfo(callback)</h2>
 <h4><a class="anchor" aria-hidden="true" id="version-added-078"></a><a href="#version-added-078" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Version added: 0.78</h4>
 <blockquote>
-<p>Returns an object with information about the currently running game or games, if more than one is running, or null if no game is running.</p>
+<p>Returns an object with information about the currently running game or games, if more than one is running, or returns null if no game is running.</p>
 </blockquote>
 <table>
 <thead>
 <tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
 </thead>
 <tbody>
-<tr><td>callback</td><td>function</td><td>Called with the currently running or active <a href="#gameinfo-object">GameInfo</a></td></tr>
+<tr><td>callback</td><td>function</td><td>Called with the currently running <a href="#gameinfo-object">GameInfo</a></td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="callback-argument-success"></a><a href="#callback-argument-success" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Callback argument: Success</h4>
@@ -135,8 +135,8 @@
 <tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
 </thead>
 <tbody>
-<tr><td>gameClassId</td><td>int</td><td>Class id of the game</td></tr>
-<tr><td>callback</td><td>function</td><td>Called with the info about the game</td></tr>
+<tr><td>gameClassId</td><td>int</td><td>Class ID of the game</td></tr>
+<tr><td>callback</td><td>function</td><td>Returns info about the game</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="callback-argument-success-1"></a><a href="#callback-argument-success-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Callback argument: Success</h4>
@@ -188,7 +188,7 @@
 <tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
 </thead>
 <tbody>
-<tr><td>gameClassId</td><td>int</td><td>The class id of the game</td></tr>
+<tr><td>gameClassId</td><td>int</td><td>The class ID of the game</td></tr>
 <tr><td>callback</td><td>function</td><td>Called with the info about the game</td></tr>
 </tbody>
 </table>
@@ -345,20 +345,20 @@
 <tr><th>Name</th><th>Type</th><th>Description</th><th>Since</th></tr>
 </thead>
 <tbody>
-<tr><td>isInFocus</td><td>bool</td><td>Returns whether the game is currently in focus.</td><td>0.78</td></tr>
-<tr><td>isRunning</td><td>bool</td><td>Returns whether the game is currently running.</td><td>0.78</td></tr>
-<tr><td>allowsVideoCapture</td><td>bool</td><td>Returns whether the game allows video to be captured.</td><td>0.78</td></tr>
-<tr><td>title</td><td>string</td><td>Returns the title of the game.</td><td>0.78</td></tr>
-<tr><td>id</td><td>int</td><td>Returns the id of the game.</td><td>0.78</td></tr>
-<tr><td>width</td><td>int</td><td>Returns the pixel width of the game window.</td><td>0.78</td></tr>
-<tr><td>height</td><td>int</td><td>Returns the pixel height of the game window.</td><td>0.78</td></tr>
-<tr><td>logicalWidth</td><td>int</td><td>Returns the game reported (logical) pixel width of the game window.</td><td>0.78</td></tr>
-<tr><td>logicalHeight</td><td>int</td><td>Returns the game reported (logical) pixel height of the game window.</td><td>0.78</td></tr>
-<tr><td>renderers</td><td>string[]</td><td>Returns an array of the rendering technology names supported by the running game.</td><td>0.78</td></tr>
-<tr><td>detectedRenderer</td><td>string</td><td>Returns the rendering technology detected by the running game.</td><td>0.78</td></tr>
-<tr><td>commandLine</td><td>string</td><td>Returns the game process commandline.</td><td>0.78</td></tr>
-<tr><td>monitorHandle</td><td>object</td><td>Returns the current monitor handle.</td><td>0.135</td></tr>
-<tr><td>windowHandle</td><td>object</td><td>Returns the current app window handle.</td><td>0.135</td></tr>
+<tr><td>isInFocus</td><td>bool</td><td>Returns whether the game is currently in focus</td><td>0.78</td></tr>
+<tr><td>isRunning</td><td>bool</td><td>Returns whether the game is currently running</td><td>0.78</td></tr>
+<tr><td>allowsVideoCapture</td><td>bool</td><td>Returns whether the game allows video to be captured</td><td>0.78</td></tr>
+<tr><td>title</td><td>string</td><td>Returns the title of the game</td><td>0.78</td></tr>
+<tr><td>id</td><td>int</td><td>Returns the ID of the game</td><td>0.78</td></tr>
+<tr><td>width</td><td>int</td><td>Returns the pixel width of the game window</td><td>0.78</td></tr>
+<tr><td>height</td><td>int</td><td>Returns the pixel height of the game window</td><td>0.78</td></tr>
+<tr><td>logicalWidth</td><td>int</td><td>Returns the game-reported (logical) pixel width of the game window</td><td>0.78</td></tr>
+<tr><td>logicalHeight</td><td>int</td><td>Returns the game-reported (logical) pixel height of the game window</td><td>0.78</td></tr>
+<tr><td>renderers</td><td>string[]</td><td>Returns an array of the rendering technology names supported by the running game</td><td>0.78</td></tr>
+<tr><td>detectedRenderer</td><td>string</td><td>Returns the rendering technology detected by the running game</td><td>0.78</td></tr>
+<tr><td>commandLine</td><td>string</td><td>Returns the game process commandline</td><td>0.78</td></tr>
+<tr><td>monitorHandle</td><td>object</td><td>Returns the current monitor handle</td><td>0.135</td></tr>
+<tr><td>windowHandle</td><td>object</td><td>Returns the current app window handle</td><td>0.135</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="example-data"></a><a href="#example-data" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Example data</h4>
@@ -388,20 +388,20 @@
 </code></pre>
 <h2><a class="anchor" aria-hidden="true" id="gameinfochangedata-object"></a><a href="#gameinfochangedata-object" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>GameInfoChangeData object</h2>
 <h4><a class="anchor" aria-hidden="true" id="version-added-078-2"></a><a href="#version-added-078-2" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Version added: 0.78</h4>
-<p>An object containing the game info object in addition to a set of flags indicating the change from the last time that data was updated.</p>
+<p>An object containing the game info object in addition to a set of flags indicating the changes from the last time that data was updated.</p>
 <table>
 <thead>
 <tr><th>Name</th><th>Type</th><th>Description</th><th>Since</th></tr>
 </thead>
 <tbody>
-<tr><td>gameInfo</td><td><a href="#gameinfo-object">GameInfo</a> object</td><td>The new game info data.</td><td>0.78</td></tr>
-<tr><td>resolutionChanged</td><td>bool</td><td>Indicates if there was a change in resolution (i.e. the width or height properties were changed).</td><td>0.78</td></tr>
-<tr><td>focusChanged</td><td>bool</td><td>Indicates if there was a change in the game focus status.</td><td>0.78</td></tr>
-<tr><td>runningChanged</td><td>bool</td><td>Indicates if there was a change in the game running status.</td><td>0.78</td></tr>
-<tr><td>gameChanged</td><td>bool</td><td>Indicates if the gameInfo property represents a different game than before.</td><td>0.78</td></tr>
+<tr><td>gameInfo</td><td><a href="#gameinfo-object">GameInfo</a> object</td><td>The new game info data</td><td>0.78</td></tr>
+<tr><td>resolutionChanged</td><td>bool</td><td>Indicates if there was a change in resolution (i.e. the width or height properties were changed)</td><td>0.78</td></tr>
+<tr><td>focusChanged</td><td>bool</td><td>Indicates if there was a change in the game focus status</td><td>0.78</td></tr>
+<tr><td>runningChanged</td><td>bool</td><td>Indicates if there was a change in the game running status</td><td>0.78</td></tr>
+<tr><td>gameChanged</td><td>bool</td><td>Indicates if the gameInfo property represents a different game than before</td><td>0.78</td></tr>
 </tbody>
 </table>
-</span></div></article></div><div class="docLastUpdate"><em>Last updated on 2019-10-6 by eransharv</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/api/overwolf-extension-current"><span class="arrow-prev">← </span><span>overwolf.extension.current</span></a><a class="docs-next button" href="/docs/api/overwolf-games-events"><span>overwolf.games.events</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#methods-reference">Methods Reference</a></li><li><a href="#events-reference">Events Reference</a></li><li><a href="#types-reference">Types Reference</a></li><li><a href="#getrunninggameinfocallback">getRunningGameInfo(callback)</a></li><li><a href="#getgameinfogameclassid-callback">getGameInfo(gameClassId,callback)</a></li><li><a href="#getgamedbinfogameclassid-callback">getGameDBInfo(gameClassId,callback)</a></li><li><a href="#getrecentlyplayedgamesmaxnumofgames-callback">getRecentlyPlayedGames(maxNumOfGames, callback)</a></li><li><a href="#ongameinfoupdated">onGameInfoUpdated</a></li><li><a href="#ongamelaunched">onGameLaunched</a></li><li><a href="#onmajorframeratechange">onMajorFrameRateChange</a></li><li><a href="#ongamerendererdetected">onGameRendererDetected</a></li><li><a href="#gameinfo-object">GameInfo object</a></li><li><a href="#gameinfochangedata-object">GameInfoChangeData object</a></li></ul></nav></div><footer class="site-footer"><div class="container"><ul><li>Legal</li><li><a href="/docs/topics/legal-overview">Terms overview</a></li><li><a href="/docs/topics/legal-developers-terms">Developer&#x27;s terms</a></li><li><a href="/docs/topics/legal-app-terms">App terms</a></li><li><a href="http://www.overwolf.com/legal/" target="_blank">Overwolf terms</a></li><li><a href="http://www.overwolf.com/legal/#Privacy-policy" target="_blank">Overwolf Privacy policy</a></li></ul><ul><li>Support</li><li><a href=" https://discuss.developers.overwolf.com/" target="_blank">Questions and Answers</a></li><li><a href="https://discordapp.com/invite/cjjrZDp" target="_blank">Discord</a></li><li><a href="/docs/support/contact-us#join-our-slack">Slack</a></li><li><a href="https://www.facebook.com/OverwolfDevs" target="_blank">Facebook</a></li><li><a href="https://twitter.com/OverwolfDevs" target="_blank">Twitter</a></li></ul><ul><li>Documentation</li><li><a href="/docs/api/changelog">Changelog</a></li><li><a href="/docs/api/overwolf-api-overview">API</a></li><li><a href="/docs/start/app-creation-process">App Creation Process</a></li><li><a href="/docs/topics/best-practices-overview">Best Practices</a></li><li><a href="/docs/status/all">Game Events status</a></li></ul><ul><li>Information</li><li><a href="http://www.overwolf.com/careers/">Careers</a></li><li><a href="https://play.overwolf.com/fund/" target="_blank">Fund</a></li><li><a href="https://medium.com/overwolf-developers" target="_blank">Developers Blog</a></li><li><a href="https://www.overwolf.com/appstore" target="_blank">Overwolf Appstore</a></li></ul></div></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+</span></div></article></div><div class="docLastUpdate"><em>Last updated on 2019-10-16 by Shoomanjin</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/api/overwolf-extension-current"><span class="arrow-prev">← </span><span>overwolf.extension.current</span></a><a class="docs-next button" href="/docs/api/overwolf-games-events"><span>overwolf.games.events</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#methods-reference">Methods Reference</a></li><li><a href="#events-reference">Events Reference</a></li><li><a href="#types-reference">Types Reference</a></li><li><a href="#getrunninggameinfocallback">getRunningGameInfo(callback)</a></li><li><a href="#getgameinfogameclassid-callback">getGameInfo(gameClassId,callback)</a></li><li><a href="#getgamedbinfogameclassid-callback">getGameDBInfo(gameClassId,callback)</a></li><li><a href="#getrecentlyplayedgamesmaxnumofgames-callback">getRecentlyPlayedGames(maxNumOfGames, callback)</a></li><li><a href="#ongameinfoupdated">onGameInfoUpdated</a></li><li><a href="#ongamelaunched">onGameLaunched</a></li><li><a href="#onmajorframeratechange">onMajorFrameRateChange</a></li><li><a href="#ongamerendererdetected">onGameRendererDetected</a></li><li><a href="#gameinfo-object">GameInfo object</a></li><li><a href="#gameinfochangedata-object">GameInfoChangeData object</a></li></ul></nav></div><footer class="site-footer"><div class="container"><ul><li>Legal</li><li><a href="/docs/topics/legal-overview">Terms overview</a></li><li><a href="/docs/topics/legal-developers-terms">Developer&#x27;s terms</a></li><li><a href="/docs/topics/legal-app-terms">App terms</a></li><li><a href="http://www.overwolf.com/legal/" target="_blank">Overwolf terms</a></li><li><a href="http://www.overwolf.com/legal/#Privacy-policy" target="_blank">Overwolf Privacy policy</a></li></ul><ul><li>Support</li><li><a href=" https://discuss.developers.overwolf.com/" target="_blank">Questions and Answers</a></li><li><a href="https://discordapp.com/invite/cjjrZDp" target="_blank">Discord</a></li><li><a href="/docs/support/contact-us#join-our-slack">Slack</a></li><li><a href="https://www.facebook.com/OverwolfDevs" target="_blank">Facebook</a></li><li><a href="https://twitter.com/OverwolfDevs" target="_blank">Twitter</a></li></ul><ul><li>Documentation</li><li><a href="/docs/api/changelog">Changelog</a></li><li><a href="/docs/api/overwolf-api-overview">API</a></li><li><a href="/docs/start/app-creation-process">App Creation Process</a></li><li><a href="/docs/topics/best-practices-overview">Best Practices</a></li><li><a href="/docs/status/all">Game Events status</a></li></ul><ul><li>Information</li><li><a href="http://www.overwolf.com/careers/">Careers</a></li><li><a href="https://play.overwolf.com/fund/" target="_blank">Fund</a></li><li><a href="https://medium.com/overwolf-developers" target="_blank">Developers Blog</a></li><li><a href="https://www.overwolf.com/appstore" target="_blank">Overwolf Appstore</a></li></ul></div></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
                 document.addEventListener('keyup', function(e) {
                   if (e.target !== document.body) {
                     return;
