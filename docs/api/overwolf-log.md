@@ -18,7 +18,7 @@ Provides logging functions that make use of Overwolf’s internal logging system
 
 #### Version added: 0.78 
 
-> Writes verbose, debug level log message to the common log.
+> Writes a verbose, debug level log message to the common log.
 
 Parameter | Type | Description |
 ------------ | ------------ | ------------ |
