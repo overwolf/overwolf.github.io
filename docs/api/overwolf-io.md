@@ -4,7 +4,7 @@ title: overwolf.io API
 sidebar_label: overwolf.io
 ---
 
-Use the `overwolf.io` API to check whether a certain file exists, as well as when writing contnet into files. For more I/O functionalities, please use our [simple I/O plugin](../topics/simple-io-plugin).  
+Use the `overwolf.io` API to check whether a certain file exists, as well as to write content into files. For more I/O functionalities, please use our [simple I/O plugin](../topics/simple-io-plugin).  
 
 ## Methods Reference
 
@@ -21,7 +21,7 @@ Use the `overwolf.io` API to check whether a certain file exists, as well as whe
 
 #### Version added: 0.93
 
-> Checks for the existance of the file in the given path.
+> Checks for the existance of a file in the given path.
 
 Parameter | Type | Description |
 ------------ | ------------ | ------------ |
@@ -56,7 +56,7 @@ Parameter            | Type                    | Description                    
 filePath             | string                  | Path to check for                                                                   |
 content              | string                  | Content to write                                                                    |
 encoding             | [eEncoding](#eencoding) enum | Encoding to use                                                               |
-triggerUacIfRequired | bool                    | If additional permissions are required, allows the triggering of the Windows UAC dialog |
+triggerUacIfRequired | bool                    | If additional permissions are required, triggers the Windows UAC dialog |
 callback             | function                | Returns with the result                                                                 |   
    
 #### Callback argument: Success
