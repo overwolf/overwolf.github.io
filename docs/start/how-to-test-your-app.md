@@ -158,6 +158,8 @@ Dock icons should be .png format files, sized 256×256 pixels and weighing under
 
 ## Ads
 
+Note: to test the ads, you can activate the test ad with `localStorage.owAdsForceAdUnit = "Ad_test" `.
+
 ### Testing Ad visibility
 
 1. Launch your app.
