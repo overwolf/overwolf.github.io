@@ -52,3 +52,9 @@ But the real action will take place in the in-game window - Once you launch Fort
 ![alt-text](assets/sample-app/in-game-window.png)
 
 This is the injected in-game window overlayed on your game screen.  The window displays game events, data collected as well as a sample advertisement for monetization.
+
+When you hit the close button, the app warn you if you want to close it or just minimize it:
+
+![alt-text](assets/sample-app/notification-window.png)
+
+The sample app contains other reusable code like settings button, FAQ button, hotkeys and other best practices that we implemented and you you can use in your apps.
