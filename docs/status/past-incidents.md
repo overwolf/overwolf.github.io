@@ -7,7 +7,6 @@ sidebar_label: Past Incidents
 Note that the services interruptions log is currently updated only once a day and not in real time.  
 To get real time alerts please join [our dev slack](../support/contact-us#join-our-slack) and subscribe to the #announcments channel.
 
- 
 Oct 15, 2019
 ------------
 
