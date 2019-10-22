@@ -15,9 +15,9 @@ Before your new app can go live, we recommend create a customer support page for
 
 ## How to Submit an App
 
-Please take the time to [validate your manifest](../api/manifest-json#validate-your-manifestjson) before submitting your app for review.
-
-**Make sure you have all of the following items zipped in this structure when you send it to us:**
+* Please take the time to [validate your manifest](../api/manifest-json#validate-your-manifestjson) before submitting your app for review.
+* Compress all of the images/assets to reduce the final app size. You can use https://tinypng.com/ free service to compress the images.
+* **Make sure you have all of the following items zipped in this structure when you send it to us:**
 
 <pre>
 myZip
