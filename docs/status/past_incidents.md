@@ -13,7 +13,7 @@ Oct 15, 2019
 
 `Fortnite API failure`
 
-**Partly Resolved** - game events are available again (except "ping". Also, "matchEnd" event won't be triggered once the local user starts the next match without going through the lobby ("ready up" button)).
+**Partly Resolved** - game events are available again (except "ping". Also, "matchEnd" event won't be triggered once the local user starts the next match without going through the lobby ("ready up" button)).  
 Oct 19, 12:13 AM GMT+3
 
 **Update** - Still working on a fix.  

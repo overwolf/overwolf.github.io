@@ -158,6 +158,14 @@ Dock icons should be .png format files, sized 256×256 pixels and weighing under
 
 ## Ads
 
+In order to get a 400x300 video test ad enabled on your app, please follow these steps:
+
+1. Open app
+2. Paste `localStorage.owAdsForceAdUnit = "Ad_test"` into the console
+3. Press F5 to refresh window
+4. Open http://localhost:54284
+5. Open app
+
 ### Testing Ad visibility
 
 1. Launch your app.
