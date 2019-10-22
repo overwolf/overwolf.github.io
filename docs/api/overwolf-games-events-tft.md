@@ -28,10 +28,10 @@ Please read the [overwolf.games.events](overwolf-games-events) documentation pag
 
 ## Game events status
 
-It's highly recommended to communicate errors and warnings to your app users. Check game event status [here](../status/all) or easily check event status directly from your app [using our API](../topics/howto-check-events-status-from-app).
+It's highly recommended to communicate errors to your users. Check game event status [here](../status/all) or easily verify event status directly from your app [using our API](../topics/howto-check-events-status-from-app).
 
 :::important
-Because LOL and TFT share the same GameID, for checking the TFT game events status please use 21570 as a unique GameID for TFT.
+Because LOL and TFT share the same GameID, when checking TFTs game event status please use 21570 as the unique GameID for TFT.
 :::
 
 ## `me`
@@ -40,11 +40,11 @@ Because LOL and TFT share the same GameID, for checking the TFT game events stat
 
 key                 | Category      | Values                                                   | Notes                                               | Since GEP Ver. |
 ------------------- |---------------| -------------------------------------------------------- | --------------------------------------------------- | ------------- |
-summoner_name       | me            | Summoner name of the local player.  |  See [notes](#summoner_name-note) |   133.0       |
-xp                  | me            | Current player level, current xp points, and total xp points left to reach the next level  | See [notes](#xp-note) |   133.0       |
+summoner_name       | me            | Summoner name of the local player  |  See [notes](#summoner_name-note) |   133.0       |
+xp                  | me            | Current player level, xp points, and xp points left to reach the next level  | See [notes](#xp-note) |   133.0       |
 health              | me            | Current amount of health points of the player |  See [notes](#health-notes) |   133.0       |
 rank                | me            | Current standing of the player        |   See [notes](#rank-notes)  |   133.0       |
-gold                | me             | Local player's amount of gold in hand   | See [notes](#gold-notes) |   133.0       |
+gold                | me             | Player's spare gold in hand   | See [notes](#gold-notes) |   133.0       |
 
 #### *summoner_name* notes
 
@@ -87,7 +87,7 @@ key             | Category   | Values                                           
 pseudo_match_id | match_info | Current session’s ID code      |See [notes](#pseudo_match_id-note)|   133.0       |
 battle_state | match_info | Boolean. Whether a battle is in progress |See [notes](#battle_state-note)|   133.0       |
 match_state | match_info | Boolean. Whether a match is in progress    |See [notes](#match_state-note)|   133.0       |
-round_type | match_info | Round is PvE, PvP or Carousel (Also stage number)  |See [notes](#round_type-note)|   133.0       |
+round_type | match_info | Round is PvE, PvP or Carousel, as well as stage number  |See [notes](#round_type-note)|   133.0       |
 round_outcome | match_info | Outcome of the previous round      |See [notes](#round_outcome-note)|   133.0       |
 opponent | match_info | Names of your opponents                        |See [notes](#opponent-note)|   133.0       |
 game_mode | match_info | Whether the current game mode is TFT or default LoL  |See [notes](#game_mode-note)|   133.0       |
@@ -158,7 +158,7 @@ Data example:
 
 #### *local_player_damage* notes
 
-This also includes the star-level of each champion (1, 2 and 3 stars), indicated as "level 1, 2 or 3".
+This also includes the star level of each champion (1, 2 and 3 stars), indicated as "level 1, 2 or 3".
 
 Data Example:
 
@@ -220,7 +220,7 @@ Data example:
 
 key            | Category    | Values                                                                               | Notes    | Since GEP Ver. |
 -------------- | ------------| -------------------------------------------------------------------------------------| -------- | ----- |
-player_status  | roster      | Full list of the players currently in the match.  |[See notes](#player_status-note)|   133.0       |
+player_status  | roster      | Full list of players currently in the match  |[See notes](#player_status-note)|   133.0       |
 
 #### *roster/player_status* notes
 
@@ -314,7 +314,7 @@ Data example:
 
 key            | Category    | Values                           | Notes                    | Since GEP Ver. |
 -------------- | ------------| ---------------------------------|--------------------------|---------------|
-shop_pieces    |    store    | Available champion for purchase | [See notes](#shop_pieces-note) |  134.0  |
+shop_pieces    |    store    | Available champions for purchase | [See notes](#shop_pieces-note) |  134.0  |
 
 #### *shop_pieces* note
 
@@ -375,7 +375,7 @@ Data Example:
 
 key            | Category    | Values                           | Notes                    | Since GEP Ver. |
 -------------- | ------------| ---------------------------------|--------------------------|---------------|
-board_pieces   |    board    | Exact position of each chess-piece on the grid, including their current level and the items they currently possess. | [See notes](#board_pieces-note) |  134.0  |
+board_pieces   |    board    | Exact position of each chess piece on the grid, including their current level and the items they possess | [See notes](#board_pieces-note) |  134.0  |
 
 #### *board_pieces* note
 
@@ -412,7 +412,7 @@ Data Example:
 
 key            | Category    | Values                           | Notes                    | Since GEP Ver. |
 -------------- | ------------| ---------------------------------|--------------------------|---------------|
-bench_pieces   |    bench    | Exact position of each chess-piece on the bench including their current level and items they possess. (inventory) | [See notes](#bench_pieces-note) |  134.0  |
+bench_pieces   |    bench    | Exact position of each chess-piece on the bench including their current level and items they possess (inventory) | [See notes](#bench_pieces-note) |  134.0  |
 
 #### *bench_pieces* note
 

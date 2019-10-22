@@ -29,11 +29,11 @@ Provides information about the currently running game.
 
 #### Version added: 0.78 
 
-> Returns an object with information about the currently running game or games, if more than one is running, or null if no game is running.
+> Returns an object with information about the currently running game or games, if more than one is running, or returns null if no game is running.
 
 Parameter | Type     | Description                                                              |
 ----------| -------- | ------------------------------------------------------------------------ |
-callback  | function | Called with the currently running or active [GameInfo](#gameinfo-object) |
+callback  | function | Called with the currently running [GameInfo](#gameinfo-object) |
 
 #### Callback argument: Success
 
@@ -74,8 +74,8 @@ overwolf.games.getRunningGameInfo(function(){console.log(JSON.stringify(argument
 
 Parameter   | Type     | Description                                                              |
 ------------| -------- | ------------------------------------------------------------------------ |
-gameClassId | int      | Class id of the game                                                  |
-callback    | function | Called with the info about the game                                      |
+gameClassId | int      | Class ID of the game                                                  |
+callback    | function | Returns info about the game                                      |
 
 #### Callback argument: Success
 
@@ -123,8 +123,8 @@ This method is similar to [getGameInfo()](#getgameinfogameclassid-callback) exce
 
 Parameter   | Type     | Description                                                              |
 ------------| -------- | ------------------------------------------------------------------------ |
-gameClassId | int      |The class id of the game                                                  |
-callback    | function | Called with the info about the game                                      |
+gameClassId | int      |The class ID of the game                                                  |
+callback    | function |Called with the info about the game                                       |
 
 #### Callback argument: Success
 
@@ -295,20 +295,20 @@ Contains information about a game.
 
 | Name               | Type     | Description                                                                                         | Since |
 |--------------------| ---------|-----------------------------------------------------------------------------------------------------|------ |
-| isInFocus          | bool     | Returns whether the game is currently in focus.                                                     | 0.78  |
-| isRunning          | bool     | Returns whether the game is currently running.                                                      | 0.78  |
-| allowsVideoCapture | bool     | Returns whether the game allows video to be captured.                                               | 0.78  |
-| title              | string   | Returns the title of the game.                                                                      | 0.78  |
-| id                 | int      | Returns the id of the game.                                                                         | 0.78  |
-| width              | int      | Returns the pixel width of the game window.                                                         | 0.78  |
-| height             | int      | Returns the pixel height of the game window.                                                        | 0.78  |
-| logicalWidth       | int      | Returns the game reported (logical) pixel width of the game window.                                 | 0.78  |
-| logicalHeight      | int      | Returns the game reported (logical) pixel height of the game window.                                | 0.78  |
-| renderers          | string[] | Returns an array of the rendering technology names supported by the running game.                   | 0.78  |
-| detectedRenderer   | string   | Returns the rendering technology detected by the running game.                                      | 0.78  |
-| commandLine        | string   | Returns the game process commandline.                                                               | 0.78  |
-| monitorHandle      | object   | Returns the current monitor handle.                                                                 | 0.135 |
-| windowHandle       | object   | Returns the current app window handle.                                                              | 0.135 |
+| isInFocus          | bool     | Returns whether the game is currently in focus                                                      | 0.78  |
+| isRunning          | bool     | Returns whether the game is currently running                                                       | 0.78  |
+| allowsVideoCapture | bool     | Returns whether the game allows video to be captured                                                | 0.78  |
+| title              | string   | Returns the title of the game                                                                       | 0.78  |
+| id                 | int      | Returns the ID of the game                                                                          | 0.78  |
+| width              | int      | Returns the pixel width of the game window                                                          | 0.78  |
+| height             | int      | Returns the pixel height of the game window                                                         | 0.78  |
+| logicalWidth       | int      | Returns the game-reported (logical) pixel width of the game window                                  | 0.78  |
+| logicalHeight      | int      | Returns the game-reported (logical) pixel height of the game window                                 | 0.78  |
+| renderers          | string[] | Returns an array of the rendering technology names supported by the running game                    | 0.78  |
+| detectedRenderer   | string   | Returns the rendering technology detected by the running game                                       | 0.78  |
+| commandLine        | string   | Returns the game process commandline                                                                | 0.78  |
+| monitorHandle      | object   | Returns the current monitor handle                                                                  | 0.135 |
+| windowHandle       | object   | Returns the current app window handle                                                               | 0.135 |
 
 #### Example data
 
@@ -342,12 +342,12 @@ Contains information about a game.
 
 #### Version added: 0.78 
 
-An object containing the game info object in addition to a set of flags indicating the change from the last time that data was updated.
+An object containing the game info object in addition to a set of flags indicating the changes from the last time that data was updated.
 
 | Name               | Type     | Description                                                                                         | Since |
 |--------------------| ---------|-----------------------------------------------------------------------------------------------------|------ |
-| gameInfo           | [GameInfo](#gameinfo-object) object     | The new game info data.                                              | 0.78  |
-| resolutionChanged  | bool     | Indicates if there was a change in resolution (i.e. the width or height properties were changed).   | 0.78  |
-| focusChanged       | bool     | Indicates if there was a change in the game focus status.                                           | 0.78  |
-| runningChanged     | bool     | Indicates if there was a change in the game running status.                                         | 0.78  |
-| gameChanged        | bool     | Indicates if the gameInfo property represents a different game than before.                         | 0.78  |
+| gameInfo           | [GameInfo](#gameinfo-object) object     | The new game info data                                               | 0.78  |
+| resolutionChanged  | bool     | Indicates if there was a change in resolution (i.e. the width or height properties were changed)    | 0.78  |
+| focusChanged       | bool     | Indicates if there was a change in the game focus status                                            | 0.78  |
+| runningChanged     | bool     | Indicates if there was a change in the game running status                                          | 0.78  |
+| gameChanged        | bool     | Indicates if the gameInfo property represents a different game than before                          | 0.78  |
