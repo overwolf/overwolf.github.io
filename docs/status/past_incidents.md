@@ -4,10 +4,8 @@ title: Past Incidents
 sidebar_label: Past Incidents
 ---
 
-Status and alerts are provided according to service endpoints or API.  
-Subscribe above to get up to minute alert notifications on any service interruption.
-
-
+Note that the services interruptions log is currently updated only once a day and not in real time.  
+To get real time alerts please join [our dev slack](../support/contact-us#join-our-slack) and subscribe to the #announcments channel.
 
 
 Oct 15, 2019
