@@ -1,5 +1,5 @@
 ---
-id: past_incidents
+id: past-incidents
 title: Past Incidents
 sidebar_label: Past Incidents
 ---
