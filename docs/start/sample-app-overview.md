@@ -43,11 +43,12 @@ Same for the sample app, so make sure not to edit the author or app name in the 
 
 ## Screenshots
 
-This is how the sample app's main window looks like: a desktop window that disaply some textual information. The real action will take place in the in-game window.
-Once you launch Fortniote, this window will be replaced with the in-game window.
+This is how the sample app's main window looks like: a desktop window that disaply some textual information.
 
 ![alt-text](assets/sample-app/desktop-window.png)
 
-This is the injected in-game window overlayed on your game screen.  The window displays game events, data collected as well as a sample advertisement for monetization.
+But the real action will take place in the in-game window - Once you launch Fortniote, the desktop window will be replaced with this in-game window:
 
-![alt-text](assets/sample-app/in-gmae-window.png)
+![alt-text](assets/sample-app/in-game-window.png)
+
+This is the injected in-game window overlayed on your game screen.  The window displays game events, data collected as well as a sample advertisement for monetization.
