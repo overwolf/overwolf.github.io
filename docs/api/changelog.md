@@ -10,7 +10,11 @@ Follow this entry for ongoing updates and changes to the project or tools:
 
 * Added new override setting to overwolf.windows.obtainDeclaredWindow() - [useDefaultSizeAndLocation](overwolf-windows#obtaindeclaredwindowwindowname-usedefaultsizeandlocation-callback).
   When this flag is set to true, the window will be created using the default (manifest) size and location, rather than the saved setting.
-
+* [League of Legends Launcher Events](overwolf-games-launchers-events-lol#docsNav)
+  * New update:
+    * lcu_info
+    * lol_end_game_stats
+    * game_version
 
 ## Version 0.135 (September 2019)
 
