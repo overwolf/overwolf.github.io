@@ -32,7 +32,7 @@ but how does TypeScript know about the types of variables and functions of exist
 
 Type definition files allow you to provide type information for JavaScript code that is by itself (by its very nature) not statically typed. The file extension for such a file is “d.ts”, where d stands for definition. Type definition files make it possible to enjoy the benefits of type checking, autocompletion, and member documentation.
 
-While extremely useful, those definition files take a lot of time to create, depending on the size of the library. Luckily, we did it for you. You can find the Overwolf API ts definition file [here](https://github.com/overwolf/community-gists).
+**You can find the Overwolf API ts definition file [here](https://github.com/overwolf/community-gists)**.
 
 
 ## Using overwolf.d.ts file
