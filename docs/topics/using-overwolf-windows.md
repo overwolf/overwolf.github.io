@@ -43,7 +43,7 @@ Here is an example window declaration:
 
 * [`grab_keyboard_focus`](../api/manifest-json#windows-grab_keyboard_focus) – This property is set to false by default, but if set to true, this property means opening your window will automatically take the user's keyboard focus and any keystrokes will be made in the app window rather than the current game the user's seeing. Since some windows open surprisingly or automatically, for example based on a game event or a hotkey pressed, you want to keep this false in most cases and avoid 'stealing' user keyboard focus away. **grab_focus_on_desktop** is the complementary property which describes out-of-game behavior, this is set to True by default because the user is not playing when launching the app in desktop mode.
 
-* [`size`](../api/manifest-json#windows-size) – Allows you to set the size of your app window when it is first opened. If your window is not resizable, this will be its permanent size. However, if your app is resizable – app size is saved by Overwolf when closed so that the next time it is opened, **it will open with the same size as it was closed with by the user**, this will persist even if the app is uninstalled and reinstalled. More [window size tips](#windows-sizes).
+* [`size`](../api/manifest-json#windows-size) – Allows you to set the size of your app window when it is first opened. If your window is not resizable, this will be its permanent size. However, if your app is resizable – app size is saved by Overwolf when closed so that the next time it is opened, **it will open with the same size as it was closed with by the user**, this will persist even if the app is uninstalled and reinstalled. More [window size tips](#window-sizes).
 
 * [`min_size`](../api/manifest-json#windows-min_size) and [`max_size`](../api/manifest-json#windows-max_size) - These properties define the smallest and largest your app window can be in pixels.
 
@@ -214,9 +214,9 @@ You can also do the following when handling window sizes:
 
 ### Set default window size
 
-As the [size](../api/manifest-json#windows-size) flag only applies during the first time you open the window, you can force create the new window using the default size/posity 
+As the [size](../api/manifest-json#windows-size) flag only applies during the first time you open the window, you can force create the new window using the default size/position. 
 
-you can set [min_size](../api/manifest-json#windows-min_size) and [max_size](../api/manifest-json#windows-max_size) to the same values and force your app window to always load with identical dimensions, or you can set the [`useDefaultSizeAndLocation`](../api/overwolf-windows#obtaindeclaredwindowwindowname-usedefaultsizeandlocation-callback) to true, when calling the 
+you can set [min_size](../api/manifest-json#windows-min_size) and [max_size](../api/manifest-json#windows-max_size) to the same values and force your app window to always load with identical dimensions, or you can set the [`useDefaultSizeAndLocation`](../api/overwolf-windows#obtaindeclaredwindowwindowname-usedefaultsizeandlocation-callback) to true, when calling the [obtainDeclaredWindow()](../api/overwolf-windows#obtaindeclaredwindowwindowname-usedefaultsizeandlocation-callback) function.
 
 In addition, if you want to dynamically set your window size according to the [user's desktop resolution](#detect-the-resolution) and DPI, you can use [setMinSize()](../api/overwolf-windows#setminsizewindowid-width-height-callback).
 
