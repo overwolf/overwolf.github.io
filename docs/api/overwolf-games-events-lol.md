@@ -277,3 +277,10 @@ executed          | "tower"                              | “Executed!”      
 key  | Category    | Values                                     | Notes  | Since GEP Ver. |
 -----| ------------| -------------------------------------------| ------ | ------------- | 
 ping | performance | The change in latency values of the local player  |        |    128.0      |
+
+## `gameMode`
+
+#### *gameMode note*
+
+The information provided by this feature is incorrect at the moment. Please use "queueID" instead. (can be found either in the launcher events provider or in the game events provider).
+* [matchState](#matchstate) You can redirect from here.
