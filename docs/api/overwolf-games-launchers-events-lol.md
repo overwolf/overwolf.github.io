@@ -25,6 +25,8 @@ if the  game launcher wasn't closed by the user, it is possible to access game l
 * [champ_select](#champ_select)
 * [lobby_info](#lobby_info)
 * [end_game](#end_game)
+* [lcu_info](#lcu_info)
+* [game_info](#game_info)
 
 ## `game_flow`
 
@@ -95,6 +97,7 @@ The queueID of the currently chosen game mode. Example:
 key   | Category    | Values                    | Notes                 | Since Version |
 ------| ------------| ------------------------- | --------------------- | ------------- |
 tft_end_game_stats | end_game_tft| See [notes](#tft_end_game_stats-note) |                |   134.0       |
+lol_end_game_stats | end_game_lol| See [notes](#end_game_stats-note) |                |   137.0       |
 
 #### *tft_end_game_stats* note
 
@@ -120,4 +123,49 @@ Data Example:
                }
    }
 }
+```
+
+#### *end_game_stats* note
+
+Provides a variety of data regarding the previous game.
+Data includes information such as:
+
+* Damage Dealt
+* Damage Taken
+* Heals Given
+* Magic Damage
+* True Damage
+* etc. etc..
+
+## `lcu_info`
+
+### Info Updates
+
+key   | Category    | Values                    | Notes                 | Since Version |
+------| ------------| ------------------------- | --------------------- | ------------- |
+lcu_info |credentials| Credentials that are used to connect to the launcher API |See [notes](#lcu_info-note)|   135.0   |
+
+#### *lcu_info* note:
+
+Data Example:
+
+```json
+{"feature":"lcu_info","category":"credentials","key":"token","value":"cmlvdDoyZ3ltZUNKN3JxNUNNdTliaGlCUlNR"}
+{"feature":"lcu_info","category":"credentials","key":"port","value":"61862"}
+```
+
+## `game_info`
+
+### Info Updates
+
+key   | Category    | Values                    | Notes                 | Since Version |
+------| ------------| ------------------------- | --------------------- | ------------- |
+game_version |game_info| Numerical version of the client. |See [notes](#game_version-note)|   137.0       |
+
+#### *game_version* note:
+
+Data Example:
+
+```json
+{"feature":"game_info","category":"game_info","key":"game_version","value":"9.21.2940813"}
 ```
