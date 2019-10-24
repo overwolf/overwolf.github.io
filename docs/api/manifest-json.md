@@ -26,6 +26,7 @@ Note that not all flags are mandatory - we included all available flags for docu
         "<a href="#meta-version">version</a>": "1.2.3.456",
         "<a href="#meta-minimum">minimum-overwolf-version</a>": "128.0.0.1",
         "<a href="#meta-minimum-gep">minimum-gep-version</a>": "128.0.0.1",
+        "<a href="#meta-minimum-gs">minimum-gs-version</a>": "128.0.0.1",
         "<a href="#meta-description">description</a>": "A plain text description",
         "<a href="#meta-dock">dock_button_title</a>": "Short name of your app",    
         "<a href="#meta-mouse-over">icon</a>": "iconMouseOver.png",
@@ -141,6 +142,7 @@ Note that not all flags are mandatory - we included all available flags for docu
         "<a href="#meta-object">version</a>": "1.2.3.456",
         "<a href="#meta-object">minimum-overwolf-version</a>": "128.0.0.1",
         "<a href="#meta-object">minimum-gep-version</a>": "128.0.0.1",
+        "<a href="#meta-object">minimum-gs-version</a>": "128.0.0.1",
         "<a href="#meta-object">description</a>": "A plain text description",
         "<a href="#meta-object">dock_button_title</a>": "Short name of your app",    
         "<a href="#meta-object">icon</a>": "iconMouseOver.png",
@@ -274,7 +276,8 @@ Includes app metadata:
 | <a class="anchor" aria-hidden="true" id="meta-author"></a>author              | string   |  Mandatory. The app's developer. *See [note](#meta-note).*                                               | 0.78  |
 | <a class="anchor" aria-hidden="true" id="meta-version"></a>version            | string   |  Mandatory. Up to four dot-separated integers identifying the current app version.</br>Needs to be in the format of X.X.X where the X’s are numbers.</br>Here are some examples of valid versions: </br> ["version": "1", "version": "1.0", "version": "2.11.3", "version": "4.1.2.345"]                                          | 0.78  |
 | <a class="anchor" aria-hidden="true" id="meta-minimum"></a>minimum-overwolf-version | string   |  Mandatory. Minimum version of the Overwolf Client with which the app is compatible. The format is similar to the "version" field.  | 0.78  |
-| <a class="anchor" aria-hidden="true" id="meta-minimum-gep"></a>minimum-gep-version | string   |  Minimum version of the Overwolf Game Events Provider with which the app is compatible. The format is similar to the "version" field.  | 0.78  |
+| <a class="anchor" aria-hidden="true" id="meta-minimum-gep"></a>minimum-gep-version | string   |  Minimum version of the Overwolf Game Events Provider with which the app is compatible. The format is similar to the "version" field.  | 0.134  |
+| <a class="anchor" aria-hidden="true" id="meta-minimum-gs"></a>minimum-gs-version | string   |  Minimum version of the Overwolf Game Summary with which the app is compatible. The format is similar to the "version" field.  | 0.137  |
 | <a class="anchor" aria-hidden="true" id="meta-description"></a>description    | string   |  Mandatory. Your app's description in the Appstore tile. Limited to 180 characters.                   | 0.78  |
 | <a class="anchor" aria-hidden="true" id="meta-dock"></a>dock_button_title | string   |  Short name of your app. Provide a short title that will fit in the dock button area – 18 chars max        | 0.79  |
 | <a class="anchor" aria-hidden="true" id="meta-mouse-over"></a>icon            | string   |  Mandatory. A relative path from the app folder to the icon’s png file. This is the mouse-over (multi-colored) version of the icon that will be displayed on the Overwolf dock. The icon dimensions should be 256×256 pixels, 72 PPI. Overwolf will resize it to 37×37. Please make sure the png is smaller than 30KB.  More details on app icons can be found [here](../start/submit-app-proposal).                         | 0.78  |

@@ -10,7 +10,10 @@ Follow this entry for ongoing updates and changes to the project or tools:
 
 * New doc about our [Game Events Simulator app](../topics/using-events-simulator).
 * New [sample app](../start/sample-app-overview) with enhanced UI.
-* New [past Incidents](../status/past-incidents) page. 
+* New [past Incidents](../status/past-incidents) page.
+* [minimum-gs-version](manifest-json#meta-minimum-gs) - New manifest flag. Allow extensions to set a minimum game summary app version in manifest, this works similarly to minimum-overwolf-version and relevant only for apps thay using the game summary pannel.
+* New API function: [overwolf.utils.openStore()](overwolf-utils#openstoreparam) - Opens the requested app’s profile/login/subscription page in the Overwolf Appstore.
+
 
 ## Version 0.136 (October 2019)
 

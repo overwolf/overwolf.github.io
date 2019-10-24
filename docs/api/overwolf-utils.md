@@ -27,8 +27,14 @@ Common use cases:
 * [overwolf.utils.getSystemInformation()](#getsysteminformationcallback)
 * [overwolf.utils.getPeripherals()](#getperipheralscallback)
 * [overwolf.utils.openStoreOneAppPage()](#openstoreoneapppageappid)
+* [overwolf.utils.openStore()](#openstoreparam)
 * [overwolf.utils.isMouseLeftButtonPressed()](#ismouseleftbuttonpressedcallback)
 * [overwolf.utils.uploadClientLogs()](#uploadclientlogscallback)
+
+## Types Reference
+
+* [overwolf.utils.enums.eStorePage](#estorepage-enum) enum
+* [overwolf.utils.OpenStoreParams](#openstoreparams-object) Object
 
 ## placeOnClipboard(data)
 #### Version added: 0.80
@@ -335,11 +341,39 @@ A callback function which will be called with the status of the request
 ## openStoreOneAppPage(appId)
 #### Version added: 0.98
 
-> Opens the requested app’s page in the Overwolf Appstore.
+> Opens the requested app’s profile page in the Overwolf Appstore.
 
 Parameter   | Type     | Description                                 |
 ----------- | ---------| --------------------------------------------|
-appId	    | string   | The requested app id                        |
+appId	      | string   | The requested app id                        |
+
+## openStore(param)
+#### Version added: 0.137
+
+> Opens the requested app’s profile/login/subscription page in the Overwolf Appstore.
+
+Parameter   | Type                                                | Description              |
+----------- | ----------------------------------------------------| -------------------------|
+param	      | [OpenStoreParams](#openstoreparams-object) Object   | The requested store page |
+
+#### Usage example
+
+open current app subscription page:
+
+```js
+overwolf.utils.openStore({
+   page:overwolf.utils.enums.eStorePage.SubscriptionPage
+  })
+```
+or specify app uid
+
+```js
+overwolf.utils.openStore({
+    page:overwolf.utils.enums.eStorePage.SubscriptionPage,
+    uid:"fiekjlgoffmlmgfmggnoeoljkmfkcapcdmcgcfgm"
+  })
+
+```
 
 ## isMouseLeftButtonPressed(callback)
 #### Version added: 0.104
@@ -348,7 +382,7 @@ appId	    | string   | The requested app id                        |
 
 Parameter   | Type     | Description                                 |
 ----------- | ---------| --------------------------------------------|
-callback	| function | A callback with the result                  |
+callback	   | function | A callback with the result                  |
 
 ## uploadClientLogs(callback)
 #### Version added: 0.111
@@ -361,4 +395,26 @@ This is an experimental function and shouldn’t be used without Overwolf’s pe
 
 Parameter   | Type     | Description                                 |
 ----------- | ---------| --------------------------------------------|
-callback	| function | A callback with the result                  |
+callback	   | function | A callback with the result                  |
+
+## eStorePage enum
+
+#### Version added: 0.137
+
+> Available types of an app's store pages.
+
+| Options          | Description                                                                                          |
+|------------------| -----------------------------------------------------------------------------------------------------|
+| LoginPage        |                                                                                                      |
+| OneAppPage       | app's profile page that popup when you click on an app tile in the store                             |
+| SubscriptionPage |                                                                                                      |
+
+## OpenStoreParams Object
+#### Version added: 0.137
+
+> Container that represent a store page.
+
+Parameter   | Type                                | Description                   |
+----------- | ------------------------------------| ----------------------------- |
+uid         | string                              | the target app id             |
+page        | [eStorePage](#estorepage-enum) enum | Store page to open            |
