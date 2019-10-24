@@ -6,6 +6,11 @@ sidebar_label: Changelog
 
 Follow this entry for ongoing updates and changes to the project or tools:
 
+## Version 0.137 (November 2019)
+
+* New doc about our [Game Events Simulator app](../topics/using-events-simulator).
+* New [sample app](../start/sample-app-overview) with enhanced UI.
+
 ## Version 0.136 (October 2019)
 
 * Added new override setting to overwolf.windows.obtainDeclaredWindow() - [useDefaultSizeAndLocation](overwolf-windows#obtaindeclaredwindowwindowname-usedefaultsizeandlocation-callback).
