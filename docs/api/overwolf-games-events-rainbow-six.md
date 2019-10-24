@@ -80,6 +80,7 @@ While the possible values are:
 * Player vs. AI > Terrorist Hunt: `MATCHMAKING_PVE`
 * Tutorials: It’s just a video tutorial, not a game mode.
 
+*Note that on custom games or vs. AI, there is no support in Overwolf real time game events*
 
 ## `match`
 
