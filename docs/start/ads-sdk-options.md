@@ -26,9 +26,11 @@ Example: `{width: 400, height:300}`
 * Alternatively, you can input an array of JSON objects to allow for multiple formats of ads. Example: `[{width:400, height:300}, {width:300, height:250}]` will enable ads in both size formats for that container.
 
 * Currently supported formats:
-  1. 728×90
-  2. 300×250
-  3. 400×300
+  1. 400×300 Video
+  2. 300x250 Video & Banner
+  3. 728x90 Banner
+  4. 300x600 Banner
+  5. 160x600 Banner
 
 :::warning
 Make sure to only enter values that are supported by Overwolf. Entering an unsupported value will result in no ads showing.
