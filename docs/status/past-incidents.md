@@ -10,10 +10,15 @@ To get real time alerts please join [our dev slack](../support/contact-us#join-o
 Oct 23, 2019
 ------------
 
+`TFT API failure`
+
+**Investigating** - TFT "damage" event is unavailable, we are working on a fix. 
+Oct 23, 01:36 PM GMT+3
+
 `PUBG API failure`
 
 **Resolved** - This incident has been resolved.  
-Oct 17, 11:03 PM GMT+3
+Oct 23, 11:03 PM GMT+3
 
 **Investigating** - PUBG game events are down due to the new season 5 patch, we are working on a fix.  
 Oct 23, 12:39 PM GMT+3

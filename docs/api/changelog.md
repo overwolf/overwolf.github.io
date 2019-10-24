@@ -10,6 +10,7 @@ Follow this entry for ongoing updates and changes to the project or tools:
 
 * New doc about our [Game Events Simulator app](../topics/using-events-simulator).
 * New [sample app](../start/sample-app-overview) with enhanced UI.
+* New [past Incidents](../status/past-incidents) page. 
 
 ## Version 0.136 (October 2019)
 
