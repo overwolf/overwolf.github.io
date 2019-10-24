@@ -56,13 +56,11 @@ Example:
 key          | Category    | Values                    | Notes                 | Since GEP Ver. |
 --------------- | -----------| ------------------------------------------------------------------------------------ | ------------------------------------ | ------------- | 
 pseudo_match_id | match_info | The current session’s ID code. Example:</br> `0c0ea3df-97ea-4d3a-b1f6-f8e34042251f`  |  This is an internal Overwolf-generated code. |   130.0 |
-game_mode | match_info   | The current type of game mode. |See [notes](#game_mode-note) below for possible game modes |   134.0  |
+game_mode | match_info   | The current type of game mode. |See [notes](#game_mode-note) below for possible values |   134.0  |
 
 #### *game_mode* note
 
-Rainbow Six Siege - "game_mode" possible values:
-
-The game mode returns on this format:
+The `game_mode` returns on this format:
 
 ```json
 {"info":{"match_info":{"game_mode":"THE_SELECTED_GAME_MODE"}},"feature":"match_info"}
