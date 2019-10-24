@@ -12,6 +12,9 @@ Oct 23, 2019
 
 `PUBG API failure`
 
+**Resolved** - This incident has been resolved.  
+Oct 17, 11:03 PM GMT+3
+
 **Investigating** - PUBG game events are down due to the new season 5 patch, we are working on a fix.  
 Oct 23, 12:39 PM GMT+3
 
