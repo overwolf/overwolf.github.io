@@ -29,10 +29,11 @@ A callback function which will be called with the status of the request and the 
 	"status": "success",
 	"info":
 	{ 
-		"date_format": string,
-		"time_format": string, 
-		"currency_symbol": string, 
-		"is_metric": bool 
+		"date_format": "M/d/yyyy",
+		"time_format": "h:mm:ss tt", 
+		"currency_symbol": "$", 
+		"is_metric": false,
+		"name": "en-US"}
 	}
 }
 ```
