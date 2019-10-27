@@ -22,9 +22,16 @@ After receiving the new version, it will be added to our approval pipeline and w
 Apps are automatically updated by users every few hours, or when they restart Overwolf. 
 If there's a good reason to "force" an early or immediate update, you can:
 
-* Use [updateExtension()](../api/overwolf-extensions#updateextensioncallback) to check the app and perform an update.
+#### Use updateExtension() to check the app and perform an update
 
-* You can see the user's current version by using the [getManifest()](../api/overwolf-extension-current#getmanifestcallback) method - find the current app version under the manifest’s "meta" property. If their current version and your server stored version are not identical, you can prompt them to restart Overwolf.
+  1. Call [checkForExtensionUpdate()](../api/overwolf-extensions#checkforextensionupdatecallback).
+
+  2. If there is an update - register for the [onExtensionUpdateStateChanged](../api/overwolf-extensions#onextensionupdatestatechanged) event, and call [updateExtention()](../api/overwolf-extensions#updateextensioncallback)).
+
+  3. Once the the event is triggered and the update is completed succesfully, you can call [relaunch()](../api/overwolf-extensions#relaunch).
+
+*Note:* Another method is to check the user's current version by using the [getManifest()](../api/overwolf-extension-current#getmanifestcallback) method.  
+You can find the current app version under the manifest’s "meta" property. If their current version and your server stored version are not identical, you can prompt them to restart Overwolf.
 
 ## Rejected tests
 
