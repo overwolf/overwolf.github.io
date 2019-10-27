@@ -114,6 +114,8 @@ Note that not all flags are mandatory - we included all available flags for docu
         "<a href="#user_agent">user_agent</a>": "...",
         //Disable opening of the developer tools for the app
         "<a href="#disable_dt">disable_dt</a>": false,
+        //hosting app flexible data
+        "<a href="#service_providers">service_providers</a>": {"nafihghfcpikebhfhdhljejkcifgbdahdhngepfb": {"whatever": "value"}},
         //Additional setting for developers (only when the app is in dev mode)
         "<a id="developer-manifest" href="#developer-game-settings">developer</a>": {
                 //Enable auto App reloading when detecting local files changes.True by Default
@@ -211,6 +213,7 @@ Note that not all flags are mandatory - we included all available flags for docu
         "<a href="#launch_events">launch_events</a>": [{"event": "GameLaunch", "event_data":{"game_ids": [1136]}, "start_minimized": true}],
         "<a href="#user_agent">user_agent</a>": "...",
         "<a href="#disable_dt">disable_dt</a>": false,
+         "<a href="#service_providers">service_providers</a>": {"nafihghfcpikebhfhdhljejkcifgbdahdhngepfb": {"whatever": "value"}},
         "<a id="developer-manifest" href="#developer-game-settings">developer</a>": {
                 "<a href="#developer-game-settings">enable_auto_refresh</a>": true,
                 "<a href="#developer-game-settings">reload_delay</a>": 1000,
@@ -307,10 +310,11 @@ A list of additional settings for the app.
 | <a class="anchor" aria-hidden="true" id="disable_log_limit"></a>disable_log_limit | bool |  Disable the log file's 1000-line limitation. </br>*Note: Do not enable it without Overwolf's approval.*        | 0.12 |
 | <a class="anchor" aria-hidden="true" id="extra-objects"></a>extra-objects     | [extra-objects](#extra-objects-object) Object  |  Allows access to custom plugin dlls.  | 0.81  |
 | <a class="anchor" aria-hidden="true" id="hotkeys"></a>hotkeys     | [hotkeys](#hotkeys-object) Object   |  Shortcut keys that trigger an app action.  | 0.78  |
-| <a class="anchor" aria-hidden="true" id="content_scripts"></a>content_scripts | [content_scripts[]](#content-scripts-array) |  A list of content scripts to be loaded for specific windows. |0.78  |
+| <a class="anchor" aria-hidden="true" id="content_scripts"></a>content_scripts | [content_scripts[]](#content_scripts-array) |  A list of content scripts to be loaded for specific windows. |0.78  |
 | <a class="anchor" aria-hidden="true" id="launch_events"></a>launch_events | [launch_event_settings[]](#launch-event-settings-array) |  A list of events causing the app to launch. |0.82  |
 | <a class="anchor" aria-hidden="true" id="user_agent"></a>user_agent | string |  A custom user agent for the app to use when creating http requests. </br>*Note: using ‘navigator.userAgent’ will not return the custom user agent, but the default one.* |0.86  |
 | <a class="anchor" aria-hidden="true" id="disable_dt"></a>disable_dt | bool |  Disable opening of the developer tools for the app (with Ctrl+shift+I). </br>*Default value – “false”* |0.118  |
+| <a class="anchor" aria-hidden="true" id="service_providers"></a>service_providers | string |  hosting app flexible data. </br> If you app wants to provide some sort of service (like GS provides a "tab-hosting" service for apps) - you can use this flag to set different parameters that are relevant for the service provider app.|0.137  |
 | <a class="anchor" aria-hidden="true" id="developer-game-settings"></a>developer | [developer setting](#developer-settings-object) object|  Additional setting for developers. |0.127  |
 
 ## GameTargeting object
@@ -518,12 +522,16 @@ A list of content scripts to be loaded for specific windows.
 | js      | string | The list of JS files to be applied in this content script.  | 0.78  |
 
 In this example, when loading the index window, myscript.js will be loaded and when encountring https://google.com, mystyles.css and myscript2.js will be loaded:
+
 ```json
 "content_scripts": [
     { "windows": [ "index" ], "js": [ "myscript.js" ] },
     { "matches": [ "https://google.com/" ], "css": [ "mystyles.css" ], "js": [ "myscript2.js" ] }
 ]
 ```
+
+*Note: it also work for any iframes the app is hosting in an Overwolf window (not just the main page).*
+
 ## launch_event_settings array
 A list of events causing the app to launch. It's enough that one of the events occurs to launch the app.
 
@@ -613,4 +621,3 @@ You can defines how the “exclusive mode” should be turned off:
 
 * **ReleaseOnHidden** – When the window is hidden, automatically turn off exclusive mode. (if you are using this option, you must set also the [focus_game_takeover_release_hotkey](manifest-json#focus_game_takeover_release_hotkey) flag)
 * **ReleaseOnLostFocus** – If the user clicks outside the window, exclusive mode is turned off.
-

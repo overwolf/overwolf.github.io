@@ -32,6 +32,8 @@ You can use the following helpful URLs to retrieve an extension file content or 
 * [overwolf.extensions.updateExtension()](#updateextensioncallback)
 * [overwolf.extensions.updateExtensions()](#updateextensionscallback)
 * [overwolf.extensions.checkForExtensionUpdate()](#checkforextensionupdatecallback)
+* [overwolf.extensions.getServiceConsumers()](#getserviceconsumerscallback)
+
 
 ## Events Reference
 
@@ -267,6 +269,38 @@ Examples:
 ```json
 {state: "UpToDate", updateVersion: null, success: true, error: null}
 ```
+
+## getServiceConsumers(callback)
+#### Version added: 0.135
+
+> return service providers manifest data.
+
+Parameter | Type                  | Description                                                                           |
+--------- | ----------------------| ------------------------------------------------------------------------------------- |
+callback  | function              | Result of the request                                                                 |
+
+#### Data example
+
+Assuming the manifesr flag [service_providers](manifest-json#service_providers) is this:
+
+```json
+ "service_providers": {
+     "nafihghfcpikebhfhdhljejkcifgbdahdhngepfb": {
+       "whatever": "value"
+     }
+   },
+```
+
+The result of the call will be:
+
+```json
+overwolf.extensions.getServiceConsumers(console.info) {
+    data:  {hffhbjnafafjnehejohpkfhjdenpifhihebpkhni: "{"whatever":"value"}" },
+    success: true,
+    error : null
+}
+```
+
 
 ## onAppLaunchTriggered
 #### Version added: 0.92

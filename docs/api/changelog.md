@@ -11,8 +11,10 @@ Follow this entry for ongoing updates and changes to the project or tools:
 * New doc about our [Game Events Simulator app](../topics/using-events-simulator).
 * New [sample app](../start/sample-app-overview) with enhanced UI.
 * New [past Incidents](../status/past-incidents) page.
-* [minimum-gs-version](manifest-json#meta-minimum-gs) - New manifest flag. Allow extensions to set a minimum game summary app version in manifest, this works similarly to minimum-overwolf-version and relevant only for apps thay using the game summary pannel.
+* New manifest flag: [minimum-gs-version](manifest-json#meta-minimum-gs) - Allow extensions to set a minimum game summary app version in manifest, this works similarly to minimum-overwolf-version and relevant only for apps thay using the game summary pannel.
+* New manifest flag: [service_providers](manifest-json#service_providers) - you can use this flag to set different parameters that are relevant for a service provider app. Use the new API function [overwolf.extensions.getServiceConsumers()](overwolf-extensions#getserviceconsumerscallback) to read the flag value.
 * New API function: [overwolf.utils.openStore()](overwolf-utils#openstoreparam) - Opens the requested app’s profile/login/subscription page in the Overwolf Appstore.
+* New API namespace: [overwolf.extensions.shareddata](overwolf-extension-sharedData) - a new namespace that allows any app to share data with another app. the plan is to use it for the Game Summary tabs.
 
 
 ## Version 0.136 (October 2019)
