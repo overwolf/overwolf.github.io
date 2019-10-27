@@ -137,14 +137,14 @@
 <tr><th>key</th><th>Category</th><th>Values</th><th>Notes</th><th>Since GEP Ver.</th></tr>
 </thead>
 <tbody>
-<tr><td>pseudo_match_id</td><td>match_info</td><td>Current session’s ID code</td><td>See <a href="#pseudo_match_id-note">notes</a></td><td>133.0</td></tr>
-<tr><td>battle_state</td><td>match_info</td><td>Boolean. Whether a battle is in progress</td><td>See <a href="#battle_state-note">notes</a></td><td>133.0</td></tr>
-<tr><td>match_state</td><td>match_info</td><td>Boolean. Whether a match is in progress</td><td>See <a href="#match_state-note">notes</a></td><td>133.0</td></tr>
-<tr><td>round_type</td><td>match_info</td><td>Round is PvE, PvP or Carousel, as well as stage number</td><td>See <a href="#round_type-note">notes</a></td><td>133.0</td></tr>
-<tr><td>round_outcome</td><td>match_info</td><td>Outcome of the previous round</td><td>See <a href="#round_outcome-note">notes</a></td><td>133.0</td></tr>
-<tr><td>opponent</td><td>match_info</td><td>Names of your opponents</td><td>See <a href="#opponent-note">notes</a></td><td>133.0</td></tr>
-<tr><td>game_mode</td><td>match_info</td><td>Whether the current game mode is TFT or default LoL</td><td>See <a href="#game_mode-note">notes</a></td><td>133.0</td></tr>
-<tr><td>local_player_damage</td><td>match_info</td><td>Amount of damage caused by your champions</td><td>See <a href="#local_player_damage-note">notes</a></td><td>0.136</td></tr>
+<tr><td>pseudo_match_id</td><td>match_info</td><td>Current session’s ID code</td><td>See <a href="#pseudo_match_id-notes">notes</a></td><td>133.0</td></tr>
+<tr><td>battle_state</td><td>match_info</td><td>Boolean. Whether a battle is in progress</td><td>See <a href="#battle_state-notes">notes</a></td><td>133.0</td></tr>
+<tr><td>match_state</td><td>match_info</td><td>Boolean. Whether a match is in progress</td><td>See <a href="#match_state-notes">notes</a></td><td>133.0</td></tr>
+<tr><td>round_type</td><td>match_info</td><td>Round is PvE, PvP or Carousel, as well as stage number</td><td>See <a href="#round_type-notes">notes</a></td><td>133.0</td></tr>
+<tr><td>round_outcome</td><td>match_info</td><td>Outcome of the previous round</td><td>See <a href="#round_outcome-notes">notes</a></td><td>133.0</td></tr>
+<tr><td>opponent</td><td>match_info</td><td>Names of your opponents</td><td>See <a href="#opponent-notes">notes</a></td><td>133.0</td></tr>
+<tr><td>game_mode</td><td>match_info</td><td>Whether the current game mode is TFT or default LoL</td><td>See <a href="#game_mode-notes">notes</a></td><td>133.0</td></tr>
+<tr><td>local_player_damage</td><td>match_info</td><td>Amount of damage caused by your champions</td><td>See <a href="#local_player_damage-notes">notes</a></td><td>0.136</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="pseudo_match_id-notes"></a><a href="#pseudo_match_id-notes" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><em>pseudo_match_id</em> notes</h4>
@@ -194,12 +194,12 @@
 <tr><th>Event</th><th>Event Data</th><th>Fired When</th><th>Notes</th><th>Since GEP Ver.</th></tr>
 </thead>
 <tbody>
-<tr><td>round_start</td><td>&quot;PVE&quot;/&quot;PVP&quot;/&quot;carousel&quot;</td><td>One round ends and another begins</td><td>See <a href="#round_start-note">notes</a></td><td>133.0</td></tr>
-<tr><td>round_end</td><td>null</td><td>At the round's end</td><td>See <a href="#round_end-note">notes</a></td><td>133.0</td></tr>
-<tr><td>battle_start</td><td>&quot;PVP&quot;/&quot;PVE&quot;</td><td>Start of the battle vs an opponent or AI</td><td>See <a href="#battle_start-note">notes</a></td><td>133.0</td></tr>
-<tr><td>battle_end</td><td>null</td><td>End of the battle vs an opponent or AI</td><td>See <a href="#battle_end-note">notes</a></td><td>133.0</td></tr>
-<tr><td>match_start</td><td>null</td><td>Beginning of a TFT match</td><td>See <a href="#match_start-note">notes</a></td><td>133.0</td></tr>
-<tr><td>match_end</td><td>null</td><td>Ending of a TFT match</td><td>See <a href="#match_end-note">notes</a></td><td>133.0</td></tr>
+<tr><td>round_start</td><td>&quot;PVE&quot;/&quot;PVP&quot;/&quot;carousel&quot;</td><td>One round ends and another begins</td><td>See <a href="#round_start-notes">notes</a></td><td>133.0</td></tr>
+<tr><td>round_end</td><td>null</td><td>At the round's end</td><td>See <a href="#round_end-notes">notes</a></td><td>133.0</td></tr>
+<tr><td>battle_start</td><td>&quot;PVP&quot;/&quot;PVE&quot;</td><td>Start of the battle vs an opponent or AI</td><td>See <a href="#battle_start-notes">notes</a></td><td>133.0</td></tr>
+<tr><td>battle_end</td><td>null</td><td>End of the battle vs an opponent or AI</td><td>See <a href="#battle_end-notes">notes</a></td><td>133.0</td></tr>
+<tr><td>match_start</td><td>null</td><td>Beginning of a TFT match</td><td>See <a href="#match_start-notes">notes</a></td><td>133.0</td></tr>
+<tr><td>match_end</td><td>null</td><td>Ending of a TFT match</td><td>See <a href="#match_end-notes">notes</a></td><td>133.0</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="round_start-notes"></a><a href="#round_start-notes" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><em>round_start</em> notes</h4>
