@@ -7,13 +7,20 @@ sidebar_label: Past Incidents
 Note that the services interruptions log is currently updated only once a day and not in real time.  
 To get real time alerts please join [our dev slack](../support/contact-us#join-our-slack) and subscribe to the #announcments channel.
 
-Oct 23, 2019
+Oct 24, 2019
 ------------
 
 `TFT API failure`
 
+**Resolved** - This incident has been resolved.  
+Oct 26, 12:07 AM GMT+3
+
 **Investigating** - TFT "damage" event is unavailable, we are working on a fix. 
-Oct 23, 01:36 PM GMT+3
+Oct 24, 01:36 PM GMT+3
+
+
+Oct 23, 2019
+------------
 
 `PUBG API failure`
 
