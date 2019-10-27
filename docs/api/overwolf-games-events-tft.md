@@ -84,14 +84,14 @@ Data example:
 
 key             | Category   | Values                                                                 | Notes                 | Since GEP Ver. |
 --------------- | -----------| -----------------------------------------------------------------------| ----------------------| ------------- |
-pseudo_match_id | match_info | Current session’s ID code      |See [notes](#pseudo_match_id-note)|   133.0       |
-battle_state | match_info | Boolean. Whether a battle is in progress |See [notes](#battle_state-note)|   133.0       |
-match_state | match_info | Boolean. Whether a match is in progress    |See [notes](#match_state-note)|   133.0       |
-round_type | match_info | Round is PvE, PvP or Carousel, as well as stage number  |See [notes](#round_type-note)|   133.0       |
-round_outcome | match_info | Outcome of the previous round      |See [notes](#round_outcome-note)|   133.0       |
-opponent | match_info | Names of your opponents                        |See [notes](#opponent-note)|   133.0       |
-game_mode | match_info | Whether the current game mode is TFT or default LoL  |See [notes](#game_mode-note)|   133.0       |
-local_player_damage | match_info | Amount of damage caused by your champions |See [notes](#local_player_damage-note)|   0.136       |
+pseudo_match_id | match_info | Current session’s ID code      |See [notes](#pseudo_match_id-notes)|   133.0       |
+battle_state | match_info | Boolean. Whether a battle is in progress |See [notes](#battle_state-notes)|   133.0       |
+match_state | match_info | Boolean. Whether a match is in progress    |See [notes](#match_state-notes)|   133.0       |
+round_type | match_info | Round is PvE, PvP or Carousel, as well as stage number  |See [notes](#round_type-notes)|   133.0       |
+round_outcome | match_info | Outcome of the previous round      |See [notes](#round_outcome-notes)|   133.0       |
+opponent | match_info | Names of your opponents                        |See [notes](#opponent-notes)|   133.0       |
+game_mode | match_info | Whether the current game mode is TFT or default LoL  |See [notes](#game_mode-notes)|   133.0       |
+local_player_damage | match_info | Amount of damage caused by your champions |See [notes](#local_player_damage-notes)|   0.136       |
 
 #### *pseudo_match_id* notes
 
@@ -174,12 +174,12 @@ Data Example:
 
 Event       | Event Data                        | Fired When                                                             | Notes              | Since GEP Ver. |
 ------------| ----------------------------------| ---------------------------------------------------------------------- | ------------------ | --------------|
-round_start | "PVE"/"PVP"/"carousel"            | One round ends and another begins    |See [notes](#round_start-note)|     133.0     |
-round_end   | null                              | At the round's end                       |See [notes](#round_end-note)|     133.0     |
-battle_start| "PVP"/"PVE"                       | Start of the battle vs an opponent or AI   |See [notes](#battle_start-note)|     133.0     |
-battle_end  | null                              | End of the battle vs an opponent or AI   |See [notes](#battle_end-note)|     133.0     |
-match_start | null                              | Beginning of a TFT match            |See [notes](#match_start-note)|     133.0     |
-match_end   | null                              | Ending of a TFT match       |See [notes](#match_end-note)|     133.0     |
+round_start | "PVE"/"PVP"/"carousel"            | One round ends and another begins    |See [notes](#round_start-notes)|     133.0     |
+round_end   | null                              | At the round's end                       |See [notes](#round_end-notes)|     133.0     |
+battle_start| "PVP"/"PVE"                       | Start of the battle vs an opponent or AI   |See [notes](#battle_start-notes)|     133.0     |
+battle_end  | null                              | End of the battle vs an opponent or AI   |See [notes](#battle_end-notes)|     133.0     |
+match_start | null                              | Beginning of a TFT match            |See [notes](#match_start-notes)|     133.0     |
+match_end   | null                              | Ending of a TFT match       |See [notes](#match_end-notes)|     133.0     |
 
 #### *round_start* notes
 
@@ -222,9 +222,9 @@ Data example:
 
 ### Info Updates
 
-key            | Category    | Values                                                                               | Notes    | Since GEP Ver. |
--------------- | ------------| -------------------------------------------------------------------------------------| -------- | ----- |
-player_status  | roster      | Full list of players currently in the match  |[See notes](#player_status-note)|   133.0       |
+key            | Category    | Values                                       | Notes                           | Since GEP Ver. |
+-------------- | ------------| ---------------------------------------------| ------------------------------- | -------------- |
+player_status  | roster      | Full list of players currently in the match  | [See notes](#player_status-note)|   133.0        |
 
 #### *roster/player_status* notes
 
@@ -316,9 +316,9 @@ Data example:
 
 ### Info Updates
 
-key            | Category    | Values                           | Notes                    | Since GEP Ver. |
--------------- | ------------| ---------------------------------|--------------------------|---------------|
-shop_pieces    |    store    | Available champions for purchase | [See notes](#shop_pieces-note) |  134.0  |
+key            | Category    | Values                           | Notes                          | Since GEP Ver. |
+-------------- | ------------| ---------------------------------|--------------------------------|----------------|
+shop_pieces    |    store    | Available champions for purchase | [See notes](#shop_pieces-note) |  134.0         |
 
 #### *shop_pieces* note
 
