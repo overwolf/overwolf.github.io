@@ -197,7 +197,7 @@ In this section, you can find our best practices for developing and implementing
 
 
 ### Analytics
-* Please implement and use analytics for your app, more information about app analytics can be found [here](../app-analytics)
+* Please implement and use analytics for your app, more information about app analytics can be found [here](app-analytics)
 
 ## Technical
 
