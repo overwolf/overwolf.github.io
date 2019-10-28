@@ -33,6 +33,10 @@ Development can be challenging, but our product team is available for you to con
 
 After development is complete and you are happy with your app, you will officially become a part of the Overwolf pack! We’ll [publish your app](submit-your-app-to-the-store) to the Overwolf Appstore, promote it online, and do our best to communicate its value to gamers everywhere. This is when you can start sharing your app with the world and engage some gamers!
 
+### 4. Promote
+While Overwolf promotes all apps in both the appstore and the desktop client, you can have many more gamers join your community by actively promoting the app over social media, Youtube, Twitch or other channels. If your app is stable and the main challenge now is getting it out there, talk to us and our marketing team will figure out the best ways to boost your signal and bring new users in.
+[Click here to find out more](../topics/promoting-your-app)
+
 ## Updates and Maintenance
 
 Getting your app in the Appstore isn’t the end of the road. Once your app is live, you’ll want to drive more users to check it out. It’s vital to fix bugs and sometimes add new features to your app, to keep it [up to date](submit-an-app-update) and in demand.
