@@ -39,3 +39,8 @@ Read the full API docs for the subscriptions API [here](../api/overwolf-profile.
 ## We're here to help
 
 Our developer success team is ready to help in implementing your first subscription program! If you’re not certain about features you want to add, how to implement them or anything else around subscriptions and premium users - don’t hesitate to [reach out via Slack, email or Discord](../support/contact-us).
+
+## Request an app plan
+
+Please fill out the following form in order to get an app subscription plan:
+<iframe src="https://forms.monday.com/forms/embed/979e6511a563e67128e528de85296849" width="650" height="500" style="border: 0; box-shadow: 5px 5px 56px 0px rgba(0,0,0,0.25);"></iframe>
