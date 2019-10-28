@@ -1,7 +1,7 @@
 ---
 id: login-with-fb-google
 title: App Login with Facebook or Google
-sidebar_label: Login with Facebook or Google Accounts
+sidebar_label: App Login with Facebook or Google
 ---
 
 

@@ -6,7 +6,7 @@ sidebar_label: TeamSpeak Plugin
 
 The Overwolf **TeamSpeak Plugin** allows your app to perform TeamSpeak server, channel and client related operations. You can read the full list of functions and events available in the TeamSpeak Plugin in its [GitHub repository](https://github.com/overwolf/teamspeak-overwolf) .
 
-## Common uses for the TeamSpeak plugin
+## Common uses for the plugin
 
 TeamSpeak is a way for gamers to communicate using text and voice as they play. With this plugin you can, among other things:
 
