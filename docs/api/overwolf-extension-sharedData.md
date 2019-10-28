@@ -4,7 +4,7 @@ title: overwolf.extension.sharedData API
 sidebar_label: overwolf.extension.sharedData
 ---
 
-A set of functions providing more information and utilities for the current extension.
+A set of APIs to allow independent extensions to communicate with each other.
 
 ## Methods Reference
 
@@ -24,7 +24,7 @@ A set of functions providing more information and utilities for the current exte
 
 > Used by the owner app to set data for the consumer app, by appId.
 
-This function is one part of the way a hosting app communicates with the hosted app.  
+This function is one part of the service providing app to communicate with the consumer apps.
 for instance, Game Summary hosts GPO app in a tab. Game Summary is the owner, GPO is the cosumer.
 
 Parameter | Type       | Description                                                                                    |
@@ -38,7 +38,7 @@ callback  | function   | a status indicating success or failure                 
 
 > Used by the consumer app to get data set by the owner app.
 
-This function is one part of the way a hosting app communicates with the hosted app.  
+This function is one part of the service providing app to communicate with the consumer apps.
 for instance, Game Summary hosts GPO app in a tab. Game Summary is the owner, GPO is the cosumer.
 
 Parameter | Type                                                 | Description                                                                                    |
