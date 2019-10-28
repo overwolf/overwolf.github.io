@@ -8,7 +8,6 @@ Your app is live and you want gamers to get to know it and use it more. While we
 
 ## Communication Goals
 
-##
 1. Communicate to improve user experience. 
 2. Communicate to be transparent and clear with our audience.
 3. Communicate to inform users about value they can gain or explanations to software behaviors they encounter.
