@@ -43,4 +43,4 @@ Our developer success team is ready to help in implementing your first subscript
 ## Request an app plan
 
 Please fill out the following form in order to get an app subscription plan:
-<iframe src="https://forms.monday.com/forms/embed/979e6511a563e67128e528de85296849" width="650" height="500" style="border: 0; box-shadow: 5px 5px 56px 0px rgba(0,0,0,0.25);"></iframe>
+<iframe src="https://forms.monday.com/forms/embed/979e6511a563e67128e528de85296849" width="650" height="1250" style="border: 0; box-shadow: 5px 5px 56px 0px rgba(0,0,0,0.25);"></iframe>
