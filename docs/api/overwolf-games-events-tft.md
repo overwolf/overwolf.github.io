@@ -70,7 +70,9 @@ Data example:
 
 `{"PoSeiDonProX1":{"index":7,"health":16,"xp":8,`</br>`"localplayer":true,"rank":1}`
 
-Meaning 1st place/8th place, etc.
+Meaning 1st place/8th place, etc. 
+
+("Index" <b>rank</b> data in roster is not accurate in real-time - only once the local player had died or won).
 
 #### *gold* notes
 
@@ -239,6 +241,10 @@ Each player object includes the following data:
 * rank 
 
 Aside from summoner name which is received during the loading screen, the rest of the data mentioned above will be delivered once the actual game has begun.
+
+<b>Important note regarding "index" data</b>
+
+The final & accurate rank position of each player in the match will be given only at the end of the match when the local player had died or won.
 
 Data example:
 
