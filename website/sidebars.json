@@ -7,7 +7,7 @@
 			"Test Your App":
 			["start/how-to-test-your-app", "start/technical-checklist", "start/marketing-checklist"],
 			"Submit Your App":
-			["start/submit-your-app-to-the-store", "start/custom-installer-for-your-app", "start/promoting-your-app", "start/add-a-knowledge-base-to-app"],
+			["start/submit-your-app-to-the-store", "start/custom-installer-for-your-app", "start/add-a-knowledge-base-to-app"],
 			"Monetize Your App":
 			["start/monetization-overview", "start/ads-sdk-overview", "start/ads-sdk-options", "start/ads-sdk-interaction", "start/ads-sdk-versions", "start/app-subscriptions"],
 			"Maintain Your App":
@@ -17,6 +17,8 @@
         
 		"Best Practices":
 			["topics/best-practices-overview", "topics/using-overwolf-windows", "topics/app-specific-experience", "topics/first-time-user-experience", "topics/user-flow-error-handling", "topics/launch-time-performance", "topics/communication-guidelines", "topics/user-flow-and-error-handling","topics/games-settings", "topics/hotkeys-best-practices", "topics/second-monitor", "topics/data-persistence", "topics/validate-your-manifest", "topics/buttons-layout-usage"],
+		"Request a Service":
+			["topics/promoting-your-app"],
 		"Using Plugins":
 			["topics/plugins-overview", "topics/how-to-use-plugins-in-your-app", "topics/writing-your-own-plugin", "topics/sample-plugin", "topics/simple-io-plugin", "topics/team-speak-plugin", "topics/process-manager-plugin"],
 		"Using Events":
