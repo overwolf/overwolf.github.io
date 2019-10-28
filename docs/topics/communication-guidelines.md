@@ -4,7 +4,7 @@ title: Marketing Communication Guidelines
 sidebar_label: Marketing Communications
 ---
 
-Your app is live and you want gamers to get to know it and use it more. While we cover promotions in depth [here](../topics/promoting-your-app), this article is going to take a closer look at communications and some easy ways to engage positively with your users. A strong brand with clearly communicated messages prevents confusing on behalf of your users, making it easy to relate and explain the app's value to others. For example, clearly messaging that your app runs on Overwolf is important to prevent users from churning out or being negative towards your Overwolf installation flow.
+Your app is live and you want gamers to get to know it and use it more. While we cover promotions in depth [here](promoting-your-app), this article is going to take a closer look at communications and some easy ways to engage positively with your users. A strong brand with clearly communicated messages prevents confusing on behalf of your users, making it easy to relate and explain the app's value to others. For example, clearly messaging that your app runs on Overwolf is important to prevent users from churning out or being negative towards your Overwolf installation flow.
 
 ## Communication Goals
 
