@@ -1,7 +1,7 @@
 ---
 id:overwolf-games-events-fortnite
 title: Fortnite Game Events
-sidebar_label: Fortnite Events
+sidebar_label: Fortnite
 ---
 
 Please read the [overwolf.games.events](overwolf-games-events) documentation page to learn how to use Overwolf game events.

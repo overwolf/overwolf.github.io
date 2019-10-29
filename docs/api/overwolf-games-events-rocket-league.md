@@ -1,7 +1,7 @@
 ---
 id:overwolf-games-events-rocket-league
 title: Rocket League Game Events
-sidebar_label: Rocket League Events
+sidebar_label: Rocket League
 ---
 
 Please read the [overwolf.games.events](overwolf-games-events) documentation page to learn how to use Overwolf game events.

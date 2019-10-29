@@ -1,7 +1,7 @@
 ---
 id:overwolf-games-events-pubg
 title: PlayerUnkown's Battlegrounds Game Events
-sidebar_label: PUBG Game Events
+sidebar_label: PUBG Game
 ---
 
 Please read the [overwolf.games.events](overwolf-games-events) documentation page to learn how to use Overwolf game events.

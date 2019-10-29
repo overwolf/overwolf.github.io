@@ -1,7 +1,7 @@
 ---
 id:overwolf-games-events-autochess
 title: Auto Chess Game Events
-sidebar_label: Auto Chess Events
+sidebar_label: Auto Chess
 ---
 
 ## This game-mod is not supported by Overwolf at this time.

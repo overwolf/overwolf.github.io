@@ -1,7 +1,7 @@
 ---
 id:overwolf-games-events-lol
 title: League of Legends Game Events
-sidebar_label: League of Legends Events
+sidebar_label: League of Legends
 ---
 
 Please read the [overwolf.games.events](overwolf-games-events) documentation page to learn how to use Overwolf game events.

@@ -1,7 +1,7 @@
 ---
 id:overwolf-games-events-wow
 title: World of Warships Game Events
-sidebar_label: World of Warships Events
+sidebar_label: World of Warships
 ---
 
 Please read the [overwolf.games.events](overwolf-games-events) documentation page to learn how to use Overwolf game events.

@@ -1,7 +1,7 @@
 ---
 id: overwolf-games-events-rainbow-six
 title: Rainbow Six Siege Game Events
-sidebar_label: Rainbow Six Siege Game Events
+sidebar_label: Rainbow Six Siege
 ---
 
 Please read the [overwolf.games.events](overwolf-games-events) documentation page to learn how to use Overwolf game events.

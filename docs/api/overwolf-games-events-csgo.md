@@ -1,7 +1,7 @@
 ---
 id:overwolf-games-events-csgo
 title: CS:GO Game Events
-sidebar_label: CS:GO Events
+sidebar_label: CS:GO
 ---
 
 Please read the [overwolf.games.events](overwolf-games-events) documentation page to learn how to use Overwolf game events.

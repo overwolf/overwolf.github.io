@@ -1,7 +1,7 @@
 ---
 id:overwolf-games-events-wot
 title: World of Tanks Game Events
-sidebar_label: World of Tanks Events
+sidebar_label: World of Tanks
 ---
 
 Please read the [overwolf.games.events](overwolf-games-events) documentation page to learn how to use Overwolf game events.

@@ -1,7 +1,7 @@
 ---
 id:overwolf-games-events-splitgate
 title: Splitgate: Arena Warfare Game Events
-sidebar_label: Splitgate: Arena Warfare Events
+sidebar_label: Splitgate: Arena Warfare
 ---
 
 Please read the [overwolf.games.events](overwolf-games-events) documentation page to learn how to use Overwolf game events.

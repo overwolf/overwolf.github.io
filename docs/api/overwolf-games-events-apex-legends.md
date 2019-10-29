@@ -1,7 +1,7 @@
 ---
 id: overwolf-games-events-apex-legends
-title: Apex Legends Game Events
-sidebar_label: Apex Legends Events
+title: Apex Legends
+sidebar_label: Apex Legends
 ---
 
 Please read the [overwolf.games.events](overwolf-games-events) documentation page to learn how to use Overwolf game events.

@@ -1,7 +1,7 @@
 ---
 id: overwolf-games-events-hots
 title: Heroes of the Storm Game Events
-sidebar_label: Heroes of the Storm Events
+sidebar_label: Heroes of the Storm
 ---
 
 Please read the [overwolf.games.events](overwolf-games-events) documentation page to learn how to use Overwolf game events.

@@ -1,7 +1,7 @@
 ---
 id: overwolf-games-events-lor
 title: Legends of Runeterra Game Events
-sidebar_label: Legends of Runeterra Events
+sidebar_label: Legends of Runeterra
 ---
 
 Please read the [overwolf.games.events](overwolf-games-events) documentation page to learn how to use Overwolf game events.
