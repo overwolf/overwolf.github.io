@@ -40,7 +40,7 @@ Data Example:
 
 Event  | Event Data        | Fired When (announcement)                                          | Notes      | Since GEP Ver. |
 -------| ------------------| -------------------------------------------------------------------| ---------- | --------------|
-match_outcome |  victory/defeat   | When the local player wins/loses. |See [notes](#match_outcome)|    130.0      |
+match_outcome |  victory/defeat   | When the local player wins/loses. |See [notes](#match_outcome)|    138.0      |
 
 #### *match_outcome*
 
