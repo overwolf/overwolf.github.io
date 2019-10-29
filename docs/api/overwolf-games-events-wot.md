@@ -120,12 +120,29 @@ Data Example:
 
 ## `match_info`
 
+### Info Updates
+
 key          | Category    | Values                            | Notes                 | Since GEP Ver. |
 ------------ | ------------| --------------------------------- | --------------------- | ------------- |
 pseudo_match_id| match_info   |The current session’s ID code.|See [notes](#pseudo_match_id-note)|      47.0     |
+
+### Events
+
+Event      | Event Data  | Fired When          | Notes              | Since GEP Ver. |
+-----------| ------------| ------------------- | ------------------ | --------------|
+match_outcome |victory/defeat| See [notes](#match_outcome-note) |         |     137.0      | 
 
 #### *pseudo_match_id* note
 
 Data Example:
 
 `0c0ea3df-97ea-4d3a-b1f6-f8e34042251f`
+
+#### *match_outcome* note
+
+Data Example:
+
+```json
+{"events":[{"name":"match_outcome","data":"defeat"}]}
+{"events":[{"name":"match_outcome","data":"victory"}]}
+```
