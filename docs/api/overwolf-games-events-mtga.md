@@ -1,7 +1,7 @@
 ---
 id: overwolf-games-events-mtga
 title: MTGA Game Events
-sidebar_label: Magic The Gathering: Arena Events
+sidebar_label: MTG:Arena Events
 ---
 
 Please read the [overwolf.games.events](overwolf-games-events) documentation page to learn how to use Overwolf game events.
@@ -18,7 +18,9 @@ Please read the [overwolf.games.events](overwolf-games-events) documentation pag
 * [game_info](#game_info)
 * [match_info](#match_info)
 
-## game_info
+## `game_info`
+
+### Info Updates
 
 key          | Category    | Values                    | Notes                 | Since GEP Ver. |
 ------------ | ------------| ------------------------- | --------------------- | -------------  | 
@@ -32,7 +34,9 @@ Data Example:
 {"feature":"game_info","category":"game_info","key":"detailed_logs_enabled","value":true}
 ```
 
-## match_info
+## `match_info`
+
+### Events
 
 Event  | Event Data        | Fired When (announcement)                                          | Notes      | Since GEP Ver. |
 -------| ------------------| -------------------------------------------------------------------| ---------- | --------------|
