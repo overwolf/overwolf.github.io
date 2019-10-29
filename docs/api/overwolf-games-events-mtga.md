@@ -1,7 +1,7 @@
 ---
 id: overwolf-games-events-mtga
-title: MTGA Game Events
-sidebar_label: MTG:Arena
+title: MTG Arena Game Events
+sidebar_label: MTG Arena
 ---
 
 Please read the [overwolf.games.events](overwolf-games-events) documentation page to learn how to use Overwolf game events.
