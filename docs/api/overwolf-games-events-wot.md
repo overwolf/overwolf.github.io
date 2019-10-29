@@ -130,7 +130,7 @@ pseudo_match_id| match_info   |The current session’s ID code.|See [notes](#pse
 
 Event      | Event Data  | Fired When          | Notes              | Since GEP Ver. |
 -----------| ------------| ------------------- | ------------------ | --------------|
-match_outcome |victory/defeat| See [notes](#match_outcome-note) |         |     137.0      | 
+match_outcome |victory/defeat|When local player wins/loses.See [notes](#match_outcome-note) |         |     137.0      | 
 
 #### *pseudo_match_id* note
 
