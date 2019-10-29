@@ -339,7 +339,7 @@ A callback function which will be called with the status of the request
 ```
 
 ## openStoreOneAppPage(appId)
-#### Version added: 0.98
+#### Version added: 0.137
 
 > Opens the requested app’s profile page in the Overwolf Appstore.
 
