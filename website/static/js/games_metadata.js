@@ -110,5 +110,12 @@ const GamesMetadata = {
     iconUrl: "/docs/assets/games-logos/hots.png",
     iconLargeUrl: "/docs/assets/games-logos/large/hots.png",
     name: "Heroes of the Storm"
+  },
+  21308: {
+    id: 21308,
+    path: "/docs/status/mtga",
+    iconUrl: "/docs/assets/games-logos/mtg.png",
+    iconLargeUrl: "/docs/assets/games-logos/large/mtg.png",
+    name: "MTG Arena"
   }
 }

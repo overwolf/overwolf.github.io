@@ -1,7 +1,7 @@
 ---
 id: mtga
 title: Game events status
-sidebar_label: MTG Arena Game
+sidebar_label: MTG Arena
 ---
 
 <meta http-equiv="Content-Type" content="text/html charset=utf-8"/>
