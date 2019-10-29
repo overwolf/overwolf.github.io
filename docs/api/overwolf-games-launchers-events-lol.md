@@ -1,7 +1,7 @@
 ---
 id: overwolf-games-launchers-events-lol
 title: League of Legends Launcher Events
-sidebar_label: LOL Launcher Events
+sidebar_label: LOL Launcher
 ---
 
 Please read the [overwolf.games.launchers.events](overwolf-games-launchers-events#how-to-register-for-features) documentation page to learn how to use Overwolf game launchers events.
