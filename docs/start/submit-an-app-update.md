@@ -24,11 +24,9 @@ If there's a good reason to "force" an early or immediate update, you can:
 
 #### Use updateExtension() to check the app and perform an update:
 
-  1. Call [checkForExtensionUpdate()](../api/overwolf-extensions#checkforextensionupdatecallback).
+  1. Call [checkForExtensionUpdate()](../api/overwolf-extensions#checkforextensionupdatecallback). If there is an update - call [updateExtention()](../api/overwolf-extensions#updateextensioncallback)).
 
-  2. If there is an update - register for the [onExtensionUpdateStateChanged](../api/overwolf-extensions#onextensionupdatestatechanged) event, and call [updateExtention()](../api/overwolf-extensions#updateextensioncallback)).
-
-  3. Once the the event is triggered and the update is completed succesfully, you can call [relaunch()](../api/overwolf-extensions#relaunch).
+  2. If the callback of updateExtention() return "success", the update is completed succesfully and you can call [relaunch()](../api/overwolf-extensions#relaunch).
 
 **No app should ever update while it’s being used in-game**, unless the user explicitly wanted it. In fact, there is a failsafe mechanism where this API will only work if a user action that active it is detected.
 

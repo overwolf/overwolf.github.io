@@ -231,6 +231,52 @@ callback  | function              | Result of the request                       
 
 Note: there is a failsafe mechanism where this API will only work if a user action that active it is detected. This means no app should ever update while it’s being used in-game unless the user explicitly wanted it.
 
+#### Callback argument: Success
+
+A callback function which will be called with the status of the request
+
+```json
+{
+ "success": true,
+ "info": "new version 25.0.12 installed, restart app to apply."
+}
+```
+
+#### Callback argument: Failure
+
+A callback function which will be called with the status of the request
+
+```json
+{
+ "success": false,
+ "error": "MinOverwolfVersionRequirementUnmet",
+ "info": "Overwolf version 0.125.0.2 needs to be updated to 0.126.0.11"
+}
+```
+
+#### Possible error messages:
+
+Error Code                             | Description                                     |
+-------------------------------------- | ------------------------------------------------|
+UnknownError                           |  error before download starts                   |
+ExtensionNotFound                      |  error before download starts                   |
+ExtensionDisabled                      |  error before download starts                   |
+GameRunning                            |  error before download starts                   |
+PackageUpdaterUnavailable              |  error before download starts                   |
+MinOverwolfVersionRequirementUnmet     |  error before download starts                   |
+MinGepVersionRequirementUnmet          |  error before download starts                   |
+MinGameSummaryVersionRequirementUnmet  |  error before download starts                   |
+PackageInfoMissing                     |  error before download starts                   |
+AlreadyUpToDate                        |  error before download starts                   |
+AlreadyInstalled                       |  error after download starts                    |
+NoConnectivity                         |  error after download starts                    |
+MissingExtensionId                     |  error after download starts                    |
+InvalidInstallState                    |  error after download starts                    |
+InstallationError                      |  error after download starts                    |
+AppNotInstalled                        |  error after download starts                    |
+DownloadError                          |  error after download starts                    |
+
+
 ## updateExtensions(callback)
 #### Version added: 0.133
 
