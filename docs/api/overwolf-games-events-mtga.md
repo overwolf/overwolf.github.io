@@ -28,6 +28,9 @@ detailed_logs_enabled | game_info   | True / False | See [notes](#detailed_logs_
 
 #### *detailed_logs_enabled* note
 
+In order to get events for this game, you need to enable "Detailed Logs" from your account settings in the game.
+At the bottom you will have a checkbox - "Detailed Logs (Plugin Support)". You'll need to check it.
+
 Data Example:
 
 ```json
@@ -40,7 +43,7 @@ Data Example:
 
 Event  | Event Data        | Fired When (announcement)                                          | Notes      | Since GEP Ver. |
 -------| ------------------| -------------------------------------------------------------------| ---------- | --------------|
-match_outcome |  victory/defeat   | When the local player wins/loses. |See [notes](#match_outcome)|    130.0      |
+match_outcome |  victory/defeat   | When the local player wins/loses. |See [notes](#match_outcome)|    138.0      |
 
 #### *match_outcome*
 
