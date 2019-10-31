@@ -229,7 +229,7 @@ Parameter | Type                  | Description                                 
 --------- | ----------------------| ------------------------------------------------------------------------------------- |
 callback  | function              | Result of the request                                                                 |
 
-Note: there is a failsafe mechanism where this API will only work if a user action that active it is detected. This means no app should ever update while it’s being used in-game unless the user explicitly wanted it.
+Note: This API has a failsafe while games are active making sure automatic updates won't happen during play. Only if the user actively chose to update will the extension update while a game is active. 
 
 #### Callback argument: Success
 
