@@ -19,19 +19,19 @@ After receiving the new version, it will be added to our approval pipeline and w
 
 #### Forced user updates
 
-Apps are automatically updated by users every few hours, or when they restart Overwolf. 
+In general, apps are updated automatically every few hours, or when Overwolf is restarted. 
 If there's a good reason to "force" an early or immediate update, you can:
 
 #### Use updateExtension() to check the app and perform an update:
 
-  1. Call [checkForExtensionUpdate()](../api/overwolf-extensions#checkforextensionupdatecallback). If there is an update - call [updateExtention()](../api/overwolf-extensions#updateextensioncallback)).
+  1. Call [checkForExtensionUpdate()](../api/overwolf-extensions#checkforextensionupdatecallback). If there is an available update - call [updateExtention()](../api/overwolf-extensions#updateextensioncallback)).
 
-  2. If the callback of updateExtention() return "success", the update is completed succesfully and you can call [relaunch()](../api/overwolf-extensions#relaunch).
+  2. If the callback of updateExtention() returns "success", the update has completed succesfully and you can call [relaunch()](../api/overwolf-extensions#relaunch).
 
-**No app should ever update while it’s being used in-game**, unless the user explicitly wanted it. In fact, there is a failsafe mechanism where this API will only work if a user action that active it is detected.
+**No app should ever update while it’s being used in-game** unless the user explicitly requests it. In fact, there is a failsafe mechanism where this API will only work if a relevant user action is detected, such as clicking a button or otherwise choosing to update.
 
-*Note:* Another method is to check the user's current version by using the [getManifest()](../api/overwolf-extension-current#getmanifestcallback) method.  
-You can find the current app version under the manifest’s "meta" property. If their current version and your server stored version are not identical, you can prompt them to restart Overwolf.
+*Note:* Another method is checking the app's current version by using the [getManifest()](../api/overwolf-extension-current#getmanifestcallback) method.  
+You can find the current app version under the manifest’s "meta" property. If the current version and your server stored version are not identical, you can prompt them to restart Overwolf to update the app.
 
 ## Rejected tests
 
