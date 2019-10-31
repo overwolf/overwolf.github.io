@@ -36,7 +36,7 @@ Oct 15, 2019
 `Fortnite API failure`
 
 **Resolved** - This incident has been resolved.  
-"gameEnd" + "phase" events works properly with the new queue feature that Fortnite implemented.  
+"matchEnd" + "phase" events works properly with the new queue feature that Fortnite implemented.  
 Oct 26, 12:07 AM GMT+3
 
 **Partly Resolved** - game events are available again (except "ping". Also, "matchEnd" event won't be triggered once the local user starts the next match without going through the lobby ("ready up" button)).  
