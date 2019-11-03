@@ -114,24 +114,24 @@ To use this feature, third party developers need to create HTML pages to be disp
     <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"stall"</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"background-color: green; width:640px; height: 288px; display: none;"</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="vbscript">
-        <span class="hljs-keyword">let</span> language = CustomInstallerUtils.getLanguage();
-        <span class="hljs-keyword">let</span> installerState = CustomInstallerUtils.getInstallerState();
+    <span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span>
+        let language = CustomInstallerUtils.getLanguage();
+        let installerState = CustomInstallerUtils.getInstallerState();
 
         switch (installerState) {
-            <span class="hljs-keyword">case</span> <span class="hljs-comment">'downloading':</span>
-                <span class="hljs-keyword">let</span> downElement = document.getElementById(<span class="hljs-comment">'down');</span>
-                downElement.innerHTML = <span class="hljs-comment">'downloading, language is ' + language;</span>
-                downElement.style.display = <span class="hljs-comment">'block';</span>
+            case 'downloading':
+                let downElement = document.getElementById('down');
+                downElement.innerHTML = 'downloading, language is ' + language;
+                downElement.style.display = 'block';
                 break;
-            <span class="hljs-keyword">case</span> <span class="hljs-comment">'installing':</span>
-                <span class="hljs-keyword">let</span> stallElement = document.getElementById(<span class="hljs-comment">'stall');</span>
-                stallElement.innerHTML = ‘Installing, language <span class="hljs-keyword">is</span> <span class="hljs-comment">' + language;</span>
-                stallElement.style.display = <span class="hljs-comment">'block';</span>
+            case 'installing':
+                let stallElement = document.getElementById('stall');
+                stallElement.innerHTML = ‘Installing, language is ' + language;
+                stallElement.style.display = 'block';
                 break;
         }
         CustomInstallerUtils.notifyReady();
-    </span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
 
 <span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span>
@@ -148,7 +148,7 @@ To use this feature, third party developers need to create HTML pages to be disp
     <span class="hljs-comment">/**
      * This function will notify the installer that the page is ready
      */</span>
-    notifyReady: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+    <span class="hljs-attr">notifyReady</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
         parent.postMessage({
             <span class="hljs-attr">isLoaded</span>: <span class="hljs-literal">true</span>
         }, <span class="hljs-string">"*"</span>);
@@ -159,7 +159,7 @@ To use this feature, third party developers need to create HTML pages to be disp
      * 'downloading'
      * 'installing'
      */</span>
-    getInstallerState: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+    <span class="hljs-attr">getInstallerState</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
         <span class="hljs-keyword">return</span> getUrlParameterByName(<span class="hljs-string">'state'</span>);
     },
     <span class="hljs-comment">/**
@@ -170,7 +170,7 @@ To use this feature, third party developers need to create HTML pages to be disp
      * de - Deutsch
      * ko - Korean
      */</span>
-    getLanguage: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+    <span class="hljs-attr">getLanguage</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
         <span class="hljs-keyword">return</span> getUrlParameterByName(<span class="hljs-string">'lang'</span>)
     }
 }

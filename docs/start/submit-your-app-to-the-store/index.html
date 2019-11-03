@@ -139,15 +139,15 @@ The store tile description is included in the app's <a href="https://overwolf.gi
 <h3><a class="anchor" aria-hidden="true" id="5-storejson"></a><a href="#5-storejson" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>5. store.json</h3>
 <p>A json file containing the Appstore information of your app. You can configure appstore tags, categories and attached videos in this file.</p>
 <pre><code class="hljs css language-json">{
-  "category_description": "This is the Appstore category that the app will appear in."
-   //Currently only one category per app is possible.
-   //Possible values: "for games", "chat", "entertainment", "social", "utilities", "voip"
-  "video": {
-    "id": "(This is optional) The id of the app's video on YouTube, appears after the 'watch?v=' part of the YouTube link, e.g. '5k70GQxHsOU'",
-    "service": "youtube"
+  <span class="hljs-attr">"category_description"</span>: <span class="hljs-string">"This is the Appstore category that the app will appear in."</span>
+   <span class="hljs-comment">//Currently only one category per app is possible.</span>
+   <span class="hljs-comment">//Possible values: "for games", "chat", "entertainment", "social", "utilities", "voip"</span>
+  <span class="hljs-string">"video"</span>: {
+    <span class="hljs-attr">"id"</span>: <span class="hljs-string">"(This is optional) The id of the app's video on YouTube, appears after the 'watch?v=' part of the YouTube link, e.g. '5k70GQxHsOU'"</span>,
+    <span class="hljs-attr">"service"</span>: <span class="hljs-string">"youtube"</span>
   },
-  "tags": ["Search tags for your app, limited to five (5) tags. Be sure the tags are relevant", "Make sure the tags are comma separated and in quotes"],
-  "title": "App name"
+  <span class="hljs-attr">"tags"</span>: [<span class="hljs-string">"Search tags for your app, limited to five (5) tags. Be sure the tags are relevant"</span>, <span class="hljs-string">"Make sure the tags are comma separated and in quotes"</span>],
+  <span class="hljs-attr">"title"</span>: <span class="hljs-string">"App name"</span>
 }
 </code></pre>
 <h2><a class="anchor" aria-hidden="true" id="amazon-web-services-benefits"></a><a href="#amazon-web-services-benefits" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Amazon Web Services benefits</h2>

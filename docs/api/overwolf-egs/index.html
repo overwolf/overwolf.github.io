@@ -87,17 +87,17 @@
 <p>To enable your app's EGS shelf, you need an html page that will implement the UI and logic of the shelf. This HTML is placed inside your opk.</p>
 <p>You also need to declare the following in your app's manifest's <code>data.windows.egs_shelf_window</code> section:</p>
 <pre><code class="hljs css language-json">{
-    "file": "files/html/shelf.html", // where the html of the shelf exists in your app
-    "size": , // To be discussed
-    "egs_shelf": {
-      "title": "my shelf", // shelf title
-      "loading_text": "Loading My App Summary...", // text to be shown while the shelf is loading
-      "tooltip_text": "My App Summary", // the tooltip to be shown when the user mouse-over's the title of the shelf
-      "tooltip_url": "http...", // optional url to get more help about the shelf
-      "logo": "files/images/shelf/logo.png", // shelf's logo in the title
-      "background": "#FFFFFF", // default ARGB background of shelf
-      "ftue_header": "My App", // First-time-user-experience message - the title of this message
-      "ftue_body": "This shelf shows my app's summary of the last game" // FTUE description
+    <span class="hljs-attr">"file"</span>: <span class="hljs-string">"files/html/shelf.html"</span>, <span class="hljs-comment">// where the html of the shelf exists in your app</span>
+    <span class="hljs-attr">"size"</span>: , <span class="hljs-comment">// To be discussed</span>
+    <span class="hljs-attr">"egs_shelf"</span>: {
+      <span class="hljs-attr">"title"</span>: <span class="hljs-string">"my shelf"</span>, <span class="hljs-comment">// shelf title</span>
+      <span class="hljs-attr">"loading_text"</span>: <span class="hljs-string">"Loading My App Summary..."</span>, <span class="hljs-comment">// text to be shown while the shelf is loading</span>
+      <span class="hljs-attr">"tooltip_text"</span>: <span class="hljs-string">"My App Summary"</span>, <span class="hljs-comment">// the tooltip to be shown when the user mouse-over's the title of the shelf</span>
+      <span class="hljs-attr">"tooltip_url"</span>: <span class="hljs-string">"http..."</span>, <span class="hljs-comment">// optional url to get more help about the shelf</span>
+      <span class="hljs-attr">"logo"</span>: <span class="hljs-string">"files/images/shelf/logo.png"</span>, <span class="hljs-comment">// shelf's logo in the title</span>
+      <span class="hljs-attr">"background"</span>: <span class="hljs-string">"#FFFFFF"</span>, <span class="hljs-comment">// default ARGB background of shelf</span>
+      <span class="hljs-attr">"ftue_header"</span>: <span class="hljs-string">"My App"</span>, <span class="hljs-comment">// First-time-user-experience message - the title of this message</span>
+      <span class="hljs-attr">"ftue_body"</span>: <span class="hljs-string">"This shelf shows my app's summary of the last game"</span> <span class="hljs-comment">// FTUE description</span>
     }    
   }
 </code></pre>

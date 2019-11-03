@@ -246,17 +246,17 @@
 <pre><code class="hljs css language-js">overwolf.media.getScreenshotUrl(
     {
         <span class="hljs-comment">//Recommended for better rounding.</span>
-        roundAwayFromZero : <span class="hljs-string">"true"</span>,
+        <span class="hljs-attr">roundAwayFromZero</span> : <span class="hljs-string">"true"</span>,
         <span class="hljs-comment">//Optional - Crop the screen (happens before the rescale, if both are used).</span>
         <span class="hljs-comment">//Positive values are absolute, negative values are relative (-1.0 - 0)</span>
-        crop: {
+        <span class="hljs-attr">crop</span>: {
             <span class="hljs-attr">x</span>: <span class="hljs-number">-0.5</span>, <span class="hljs-comment">//Start cropping at the middle of the screen</span>
-            y: <span class="hljs-number">0</span>,
+            <span class="hljs-attr">y</span>: <span class="hljs-number">0</span>,
             <span class="hljs-attr">width</span>: <span class="hljs-number">400</span>,
             <span class="hljs-attr">height</span>: <span class="hljs-number">-0.5</span>
         },
         <span class="hljs-comment">//Optional - Rescale the final image to these dimensions</span>
-        rescale: {
+        <span class="hljs-attr">rescale</span>: {
             <span class="hljs-attr">width</span>: <span class="hljs-number">1920</span>,
             <span class="hljs-attr">height</span>: <span class="hljs-number">-0.4</span>
         }
