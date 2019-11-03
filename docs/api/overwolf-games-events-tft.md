@@ -10,7 +10,12 @@ Please read the [overwolf.games.events](overwolf-games-events) documentation pag
 5426
 :::
 
-**Note** that TFT and LOL share the same Game ID.
+**Note** that TFT and LOL share the same Game ID.  
+
+:::tip
+If you would like to know when the user is going to play TFT (hit the "Play" button), you can listen to the [lobby_info](overwolf-games-launchers-events-lol#info-updates-3) info update, and check the `queueID`. If it's 1090 - it's TFT.
+:::
+
 
 ## Sample Apps
 
