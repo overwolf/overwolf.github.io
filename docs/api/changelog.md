@@ -8,12 +8,11 @@ Follow this entry for ongoing updates and changes to the project or tools:
 
 ## Version 0.137 (November 2019)
 
-* [MTGA Events](overwolf-games-events-mtga)
-  * New supported game. 
-    * New info-update:
-      * detailed_logs_enabled
-    * New event:
-      * match_outcome
+* [MTGA Events](overwolf-games-events-mtga) - New supported game
+   * New info-update:
+     * detailed_logs_enabled
+   * New event:
+     * match_outcome
 * [WOT Events](overwolf-games-launchers-events-wot#docsNav)
   * New event:
     * match_outcome
