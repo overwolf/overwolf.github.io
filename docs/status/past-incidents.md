@@ -7,6 +7,17 @@ sidebar_label: Past Incidents
 Note that the services interruptions log is currently updated only once a day and not in real time.  
 To get real time alerts please join [our dev slack](../support/contact-us#join-our-slack) and subscribe to the #announcments channel.
 
+Nov 01, 2019
+------------
+
+`Fortnite API failure`
+
+**Resolved** - This incident has been resolved.  
+Nov 01, 07:20 PM GMT+3
+
+**Investigating** - TFT "damage" event is unavailable, we are working on a fix. 
+Nov 01, 03:43 PM GMT+3
+
 Oct 24, 2019
 ------------
 
