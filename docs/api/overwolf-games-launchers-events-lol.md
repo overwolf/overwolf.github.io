@@ -88,7 +88,8 @@ The queueID of the currently chosen game mode. Example:
 `{"feature":"lobby_info","category":"lobby_info","key":"queueId","value":1090}`
 
 * You can find here a [list of possible queue ids](https://developer.riotgames.com/game-constants.html). 
-* 1090 is the queueID of TFT matches.
+* 1090 is the queueID of TFT regular match.
+* 1100 is the queueID of TFT ranked match.
 
 ## `end_game`
 
