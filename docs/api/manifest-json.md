@@ -302,7 +302,7 @@ A list of additional settings for the app.
 | <a class="anchor" aria-hidden="true" id="start_window"></a>start_window   | string     |  Mandatory. The name of the window (from the “windows” list) to initially load when the app starts.        | 0.78  |
 | <a class="anchor" aria-hidden="true" id="window-data"></a>windows              | [extension_window_data](#extension-window-data-object) Object   |  Mandatory. A map from window names to window settings.                  | 0.78  |
 | <a class="anchor" aria-hidden="true" id="enable_top_isolated_sites_console"></a>enable_top_isolated_sites_console | bool           |  Enable/Disable printing of ads log to the console. </br>*Default value is “false”.*   |0.115  |
-| <a class="anchor" aria-hidden="true" id="externally_connectable"></a>externally_connectable    | [ExternallyConnectable](#externallyconnectable-object) Object  | A definition of external URLs the web app should be able to access.| 0.78  |
+| <a class="anchor" aria-hidden="true" id="externally_connectable"></a>externally_connectable    | [ExternallyConnectable](#externallyconnectable-object) Object  | A definition of external URLs the web app should be able to access. Allow your local app to be able to communicate with an iframe within the app. | 0.78  |
 | <a class="anchor" aria-hidden="true" id="protocol_override_domains"></a>protocol_override_domains     | [ProtocolOverrideDomains](#protocoloverridedomains-object) Object   |  Overrides the relative protocol with a preferred one.  | 0.78  |
 | <a class="anchor" aria-hidden="true" id="force_browser"></a>force_browser | string |  Choose whether links in the app will be opened using the user’s default browser or Overwolf’s browser.</br>*Possible values: "user" or "overwolf".* |0.91  |
 | <a class="anchor" aria-hidden="true" id="enable_osr_acceleration"></a>enable_osr_acceleration | bool |  Enable OSR/GPU acceleration if supported by this machine. </br>*Note 1: this flag is still in Beta. It may not function as expected in some machines.*</br>*Note 2: This flag is only relevant for D3D11 supported games.* </br>*Note 3: see also the [optimize_accelerate_rendering](#optimize_accelerate_rendering) flag.* |0.126  |
@@ -381,7 +381,8 @@ A list of settings for the app windows.
 | <a class="anchor" aria-hidden="true" id="optimize_accelerate_rendering"></a>optimize_accelerate_rendering | bool |  Valid only for transparent windows. Valid only if [enable_osr_acceleration](#enable_osr_acceleration) is on.| 0.127  |
 
 ## ExternallyConnectable object
-A definition of external URLs the web app should be able to access. Read more [here](http://en.wikipedia.org/wiki/Cross-origin_resource_sharing).
+A definition of external URLs the web app should be able to access. Read more [here](http://en.wikipedia.org/wiki/Cross-origin_resource_sharing).  
+Using "externally_connectable" will only allow your local app to be able to communicate with an iframe within the app (via [postMessage](https://developer.mozilla.org/en-US/docs/Web/API/Window/postMessage)).
 
 | Name    | Type     |  Description                                                                                                                               | Since |
 |---------|----------| ------------------------------------------------------------------------------------------------------------------------------------------ |------ |

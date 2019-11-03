@@ -111,6 +111,31 @@ Using sendMessage is not our best practice since it might not work on some occas
 
 ## Communication channels using an iframe inside an Overwolf window
 
+The recommended way to access the overwolf object from an online web page loaded inside an iframe is to set up a communication channel using the [postMessage](https://developer.mozilla.org/en-US/docs/Web/API/Window/postMessage) method.  
+
+To do so, allow your app to load and communicate with your domain via [externally_connectable](../api/manifest-json#externally_connectable) configuration in the manifest.  
+
+Your web page should post a message to the parent window (the Overwolf app) containing the page.  
+
+In the Overwolf app add an event listener for “message” event and validate the origin of the message:
+
+```js
+window.addEventListener("message", message => {
+	if (message.origin !== "https://yourdomain.gg") {
+	return;
+	}
+
+	let data = message.data;
+	if (!data) {
+	return;
+	}
+
+	// do something interesting with the data
+});
+```
+
+Make sure to handle cases where the iframe may not load or when an error may prevent setting the communication channel (a fallback or retry mechanism).
+
 ## Windows Types
 
 Behavior is different depending on window type, and we're going to go over two main types of Overwolf app windows: Transparent vs. Non-Transparent Windows.
