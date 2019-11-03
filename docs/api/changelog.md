@@ -8,12 +8,14 @@ Follow this entry for ongoing updates and changes to the project or tools:
 
 ## Version 0.137 (November 2019)
 
-* [MTGA Events](overwolf-games-launchers-events-mtga#docsNav)
-  * New supported game. New updates/events:
-    * detailed_logs
-    * match_outcome
+* [MTGA Events](overwolf-games-events-mtga)
+  * New supported game. 
+    * New info-update:
+      * detailed_logs_enabled
+    * New event:
+      * match_outcome
 * [WOT Events](overwolf-games-launchers-events-wot#docsNav)
-  * New feature:
+  * New event:
     * match_outcome
 * New doc about our [Game Events Simulator app](../topics/using-events-simulator).
 * New [sample app](../start/sample-app-overview) with enhanced UI.
