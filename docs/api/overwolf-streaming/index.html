@@ -228,7 +228,14 @@ As long as the &quot;enabled&quot; field = true, you can offer the user to use t
 <p>A callback function which will be called with the status of the request</p>
 <pre><code class="hljs css language-json">{ <span class="hljs-attr">"status"</span>: <span class="hljs-string">"error"</span>, <span class="hljs-attr">"error"</span>: <span class="hljs-string">"something went wrong..."</span> }
 </code></pre>
-<h4><a class="anchor" aria-hidden="true" id="usage-example"></a><a href="#usage-example" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Usage Example</h4>
+
+    <div class="admonition admonition-tip">
+      <div class="admonition-heading">
+        <h5><div class="admonition-icon"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="16" viewBox="0 0 12 16"><path fill-rule="evenodd" d="M6.5 0C3.48 0 1 2.19 1 5c0 .92.55 2.25 1 3 1.34 2.25 1.78 2.78 2 4v1h5v-1c.22-1.22.66-1.75 2-4 .45-.75 1-2.08 1-3 0-2.81-2.48-5-5.5-5zm3.64 7.48c-.25.44-.47.8-.67 1.11-.86 1.41-1.25 2.06-1.45 3.23-.02.05-.02.11-.02.17H5c0-.06 0-.13-.02-.17-.2-1.17-.59-1.83-1.45-3.23-.2-.31-.42-.67-.67-1.11C2.44 6.78 2 5.65 2 5c0-2.2 2.02-4 4.5-4 1.22 0 2.36.42 3.22 1.19C10.55 2.94 11 3.94 11 5c0 .66-.44 1.78-.86 2.48zM4 14h5c-.23 1.14-1.3 2-2.5 2s-2.27-.86-2.5-2z"/></svg></div> tip</h5>
+      </div>
+      <div class="admonition-content">
+    <p>Note that the stream will be recorded in chunks in a size of <code>max_file_size_bytes</code>. If you would like in addition, a full length single file copy, you can set <code>include_full_size_video</code> to true.</p>
+</div></div><h4><a class="anchor" aria-hidden="true" id="usage-example"></a><a href="#usage-example" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Usage Example</h4>
 <pre><code class="hljs css language-javascript">overwolf.streaming.start(
     {
       <span class="hljs-string">"provider"</span>: overwolf.streaming.enums.StreamingProvider.Twitch,
@@ -630,6 +637,20 @@ As long as the &quot;enabled&quot; field = true, you can offer the user to use t
 <blockquote>
 <p>Fired when the stream has stopped.</p>
 </blockquote>
+<h4><a class="anchor" aria-hidden="true" id="event-data-example"></a><a href="#event-data-example" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Event data example</h4>
+<pre><code class="hljs css language-json">{
+  <span class="hljs-attr">"stream_id"</span>: <span class="hljs-number">5</span>,
+  <span class="hljs-attr">"url"</span>: <span class="hljs-string">"overwolf://media/recordings/WolftrainerPro/League+of+Legends+11-05-2019+11-32-36-075.mp4"</span>,
+  <span class="hljs-attr">"file_path"</span>: <span class="hljs-string">"C:\\Users\\Admin\\Videos\\Overwolf\\WolftrainerPro\\League of Legends 11-05-2019 11-32-36-075.mp4"</span>,
+  <span class="hljs-attr">"duration"</span>: <span class="hljs-number">77090</span>,
+  <span class="hljs-attr">"last_file_path"</span>: <span class="hljs-string">"C:\\Users\\Admin\\Videos\\Overwolf\\WolftrainerPro\\League of Legends 11-05-2019 11-32-36-075"</span>,
+  <span class="hljs-attr">"split"</span>: <span class="hljs-literal">true</span>,
+  <span class="hljs-attr">"extra"</span>: <span class="hljs-string">"{\r\n  \"drawn\": 0,\r\n  \"dropped\": 0,\r\n  \"lagged\": 0,\r\n  \"percentage_dropped\": 0,\r\n  \"percentage_lagged\": 0,\r\n  \"system_info\": {\r\n    \"game_dvr_enabled\": true,\r\n    \"game_mode_enabled\": true\r\n  },\r\n  \"total_frames\": 773\r\n}"</span>,
+  <span class="hljs-attr">"osVersion"</span>: <span class="hljs-string">"10.0.18362.356"</span>,
+  <span class="hljs-attr">"osBuild"</span>: <span class="hljs-string">"1903"</span>
+}
+</code></pre>
+<p>Note that</p>
 <h2><a class="anchor" aria-hidden="true" id="onstartstreaming"></a><a href="#onstartstreaming" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>onStartStreaming</h2>
 <h4><a class="anchor" aria-hidden="true" id="version-added-0106"></a><a href="#version-added-0106" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Version added: 0.106</h4>
 <blockquote>
@@ -657,7 +678,7 @@ As long as the &quot;enabled&quot; field = true, you can offer the user to use t
 <li>Out_Of_Disk_Space</li>
 <li>Update_Driver</li>
 </ul>
-<h4><a class="anchor" aria-hidden="true" id="event-data-example"></a><a href="#event-data-example" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Event Data Example</h4>
+<h4><a class="anchor" aria-hidden="true" id="event-data-example-1"></a><a href="#event-data-example-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Event Data Example</h4>
 <pre><code class="hljs css language-json">{
     <span class="hljs-attr">"status"</span>: <span class="hljs-string">"error"</span>,
     <span class="hljs-attr">"stream_id"</span>: <span class="hljs-number">1</span>,
@@ -784,11 +805,11 @@ As long as the &quot;enabled&quot; field = true, you can offer the user to use t
 <tr><td>frame_interval</td><td>int</td><td>Interval between frames when creating gifs</td><td>0.83</td></tr>
 <tr><td>test_drop_frames_interval</td><td>uint</td><td>The interval, in milliseconds, in which to test for dropped frames</td><td>0.92</td></tr>
 <tr><td>notify_dropped_frames_ratio</td><td>double</td><td>The ratio of dropped to non-dropped frames for which to issue a notification</td><td>0.92</td></tr>
-<tr><td>max_file_size_bytes</td><td>uint</td><td>Defines file maximum size. when video reach {max_file_size_bytes}, the recorder will flush the video file and stat a new video file. onFileSpilt event will be fired</td><td>0.103</td></tr>
 <tr><td>sub_folder_name</td><td>string</td><td>Defines Sub folder for video file path destination (See note below this table)</td><td>0.103</td></tr>
 <tr><td>override_overwolf_setting</td><td>bool</td><td>Do not use Overwolf capture setting. In case True you must provider all video setting (encoder..)</td><td>0.103</td></tr>
 <tr><td>tobii</td><td><a href="overwolf-tobii">TobiiLayerParams</a> Object</td><td>Tobii Replay layer setting</td><td>0.97</td></tr>
-<tr><td>include_full_size_video</td><td>bool</td><td>If enabled, a full length copy of the stream will be copied to the same fodler.</td><td>0.78</td></tr>
+<tr><td>max_file_size_bytes</td><td>uint</td><td>Defines file maximum size. when video reach {max_file_size_bytes}, the recorder will flush the video file and stat a new video file. onFileSpilt event will be fired</td><td>0.103</td></tr>
+<tr><td>include_full_size_video</td><td>bool</td><td>in case max_file_size_bytes is onfull video will be recorded to disk parallel to splits videos.</td><td>0.105</td></tr>
 </tbody>
 </table>
 <h5><a class="anchor" aria-hidden="true" id="sub_folder_name-note"></a><a href="#sub_folder_name-note" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>sub_folder_name</code> note:</h5>
