@@ -323,7 +323,7 @@ Doing so will:
 
 ### Your app is not a website!
 
-Overwolf apps are supposed to act like native desktop applications, not websites. Avoid enabling mousewheel scrolls or text selection in your app's windows, these are website features which would look and feel weird in an application setting. Whenever in doubt in terms of design or user experience, compare your app to desktop applications and not to websites. 
+Overwolf apps are supposed to act like native desktop applications, not websites. Avoid enabling mousewheel scrolls or [text selection](https://stackoverflow.com/questions/826782/how-to-disable-text-selection-highlighting) in your app's windows, these are website features which would look and feel weird in an application setting. Whenever in doubt in terms of design or user experience, compare your app to desktop applications and not to websites. 
 
 ### Keep your windows small
 
