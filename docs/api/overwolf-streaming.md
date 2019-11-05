@@ -226,6 +226,9 @@ overwolf.streaming.start(
           "width": 1920,
           "height": 1080,
           "max_kbps": 1500,
+          "buffer_length": 20000,
+          "max_file_size_bytes": 50000000,
+          "include_full_size_video": true,
           "notify_dropped_frames_ratio": 0.5,
           "test_drop_frames_interval": 5000,
           "encoder": {
@@ -830,6 +833,7 @@ Stream video options.
 | sub_folder_name| string | Defines Sub folder for video file path destination (See note below this table) | 0.103  |
 | override_overwolf_setting| bool | Do not use Overwolf capture setting. In case True you must provider all video setting (encoder..) | 0.103  |
 | tobii| [TobiiLayerParams](overwolf-tobii) Object | Tobii Replay layer setting | 0.97  |
+| include_full_size_video| bool | If enabled, a full length copy of the stream will be copied to the same fodler.  | 0.78  |
 
 ##### `sub_folder_name` note: 
 
