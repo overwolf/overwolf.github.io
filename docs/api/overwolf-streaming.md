@@ -195,6 +195,10 @@ A callback function which will be called with the status of the request
 { "status": "error", "error": "something went wrong..." }
 ```
 
+:::tip
+Note that the stream will be recorded in chunks in a size of `max_file_size_bytes`. If you would like in addition, a full length single file copy, you can set `include_full_size_video` to true. 
+:::
+
 #### Usage Example
 
 ```javascript
@@ -670,6 +674,24 @@ A callback function which will be called with the status of the request
 
 > Fired when the stream has stopped.
 
+#### Event data example
+
+```json
+{
+  "stream_id": 5,
+  "url": "overwolf://media/recordings/WolftrainerPro/League+of+Legends+11-05-2019+11-32-36-075.mp4",
+  "file_path": "C:\\Users\\Admin\\Videos\\Overwolf\\WolftrainerPro\\League of Legends 11-05-2019 11-32-36-075.mp4",
+  "duration": 77090,
+  "last_file_path": "C:\\Users\\Admin\\Videos\\Overwolf\\WolftrainerPro\\League of Legends 11-05-2019 11-32-36-075",
+  "split": true,
+  "extra": "{\r\n  \"drawn\": 0,\r\n  \"dropped\": 0,\r\n  \"lagged\": 0,\r\n  \"percentage_dropped\": 0,\r\n  \"percentage_lagged\": 0,\r\n  \"system_info\": {\r\n    \"game_dvr_enabled\": true,\r\n    \"game_mode_enabled\": true\r\n  },\r\n  \"total_frames\": 773\r\n}",
+  "osVersion": "10.0.18362.356",
+  "osBuild": "1903"
+}
+```
+
+Note that 
+
 ## onStartStreaming
 
 #### Version added: 0.106
@@ -829,11 +851,11 @@ Stream video options.
 | frame_interval| int | Interval between frames when creating gifs | 0.83  |
 | test_drop_frames_interval | uint | The interval, in milliseconds, in which to test for dropped frames | 0.92  |
 | notify_dropped_frames_ratio| double | The ratio of dropped to non-dropped frames for which to issue a notification | 0.92  |
-| max_file_size_bytes| uint | Defines file maximum size. when video reach {max_file_size_bytes}, the recorder will flush the video file and stat a new video file. onFileSpilt event will be fired | 0.103  |
 | sub_folder_name| string | Defines Sub folder for video file path destination (See note below this table) | 0.103  |
 | override_overwolf_setting| bool | Do not use Overwolf capture setting. In case True you must provider all video setting (encoder..) | 0.103  |
 | tobii| [TobiiLayerParams](overwolf-tobii) Object | Tobii Replay layer setting | 0.97  |
-| include_full_size_video| bool | If enabled, a full length copy of the stream will be copied to the same fodler.  | 0.78  |
+| max_file_size_bytes| uint | Defines file maximum size. when video reach {max_file_size_bytes}, the recorder will flush the video file and stat a new video file. onFileSpilt event will be fired | 0.103  |
+| include_full_size_video| bool | in case max_file_size_bytes is onfull video will be recorded to disk parallel to splits videos.  | 0.105  |
 
 ##### `sub_folder_name` note: 
 
