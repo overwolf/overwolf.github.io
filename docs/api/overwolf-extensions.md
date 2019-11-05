@@ -38,7 +38,7 @@ You can use the following helpful URLs to retrieve an extension file content or 
 ## Events Reference
 
 * [overwolf.extensions.onAppLaunchTriggered](#onapplaunchtriggered)
-* [overwolf.extensions.onExtensionUpdateStateChanged](#onextensionupdatestatechanged)
+* [overwolf.extensions.onExtensionUpdated](#onextensionupdated)
 * [overwolf.extensions.onUncaughtException](#onuncaughtexception)
 
 
@@ -309,11 +309,15 @@ Possible values for the stats are "UpdateAvailable" or "UpToDate".
 Examples:
 
 ```json
-{state: "UpdateAvailable", updateVersion: "4.11.2", success: true, error: null}
+{state: "UpdateAvailable", updateVersion: "125.0.1", success: true, error: null}
 ```
 
 ```json
 {state: "UpToDate", updateVersion: null, success: true, error: null}
+```
+
+```json
+{state: "PendingRestart", updateVersion: "125.0.1", success: true, error: null}
 ```
 
 ## getServiceConsumers(callback)
@@ -381,10 +385,12 @@ after-install    | Auto-launched after installation                             
 if you want to get origin information without registering events, you can run the `window.location.href` command.
 :::
 
-## onExtensionUpdateStateChanged
-#### Version added: 0.132
+## onExtensionUpdated
+#### Version added: 0.138
 
 > Fires after the current app was successfully updated.
+
+Note that it only fires after an extension update was installed and is waiting for relaunch.
 
 ## onUncaughtException
 #### Version added: 0.133
