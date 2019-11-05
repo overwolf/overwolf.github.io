@@ -1,7 +1,7 @@
 ---
-id: buttons-layout-usage
-title: Buttons Layout Usage
-sidebar_label: Buttons Layout Usage
+id: overwolf-header-buttons 
+title: Overwolf Header Buttons
+sidebar_label: Overwolf header buttons
 ---
 
 
