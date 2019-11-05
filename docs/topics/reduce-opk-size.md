@@ -17,7 +17,7 @@ We suggest several proven ways to keep OPK size manageable:
 
 * Remove non-critical JavaScript from your app to reduce transmission times, CPU-intensive compiling and potential memory overhead.
 
-* Use remote assets and scripts. This is excluding assets used by the Home and Notification pages of your app, which you should locally store for faster performance. However, when it comes to resources that do not change often or are not needed immediatly on launch - you can dynamically load them from remote locations when required. Use CDN references for assets like images and scripts. That will force the app to download these assets only on the first time the app loads, so you will not have to package these assets into the OPK.
+* Use remote assets and scripts. This is excluding assets used by the Home and Notification pages of your app, which you should locally store for faster performance. However, when it comes to resources that do not change often or are not needed immediatly on launch - you can dynamically load them from remote locations when required. Use CDN references for assets like images and scripts. That will force the app to download these assets only on the first time the app loads (aftter the initial download the assets will be serverd from the cache), so you will not have to package these assets into the OPK.
   
 * Remove map files before zipping (*.map).  
 Many developers generate CSS style sheets using a CSS preprocessor, such as Sass, Less, or Stylus. That type of Developer tools in Firefox and Chrome will use the maps to link the generated css files to the original css to allow debugging as if the code was not compressed.
