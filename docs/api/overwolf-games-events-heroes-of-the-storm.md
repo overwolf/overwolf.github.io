@@ -62,7 +62,9 @@ match_end  | victory/defeat| Match ends   |See [notes](#match_end-note)|    134.
 talent_available  | null | A skill point is available for use.  |See [notes](#talent_available-note)|    134.0      |
 gates_opened  | null | When pregame preparation countdown has ended and the match begins.  |See [notes](#gates_opened-note)|    134.0      |
 
-#### *pseudo_match_id* note:
+#### *pseudo_match_id* note
+
+The reason that pseudo_match_id is different for each player is that its internal Overwolf info that created for highlights recording capabilities. You should not use it to determine that individual players are playing in the same match. For that, you should use the [roster](#roster) info.
 
 Data Example:
 
