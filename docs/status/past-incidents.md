@@ -15,7 +15,7 @@ Nov 07, 2019
 **Resolved** - This incident has been resolved.  
 Nov 07, 10:55 PM GMT+3
 
-**Investigating** -  Apex game events are down due to a new patch.
+**Investigating** -  Apex game events are down due to a new patch.  
 Nov 07, 08:38 AM GMT+3
 
 `Apex API failure`
@@ -23,7 +23,7 @@ Nov 07, 08:38 AM GMT+3
 **Resolved** - This incident has been resolved.  
 Nov 07, 10:55 PM GMT+3
 
-**Investigating** -  Apex game events are down due to a new patch.
+**Investigating** -  Apex game events are down due to a new patch.  
 Nov 07, 08:38 AM GMT+3
 
 `TFT API failure`
@@ -31,7 +31,7 @@ Nov 07, 08:38 AM GMT+3
 **Resolved** - This incident has been resolved.  
 Nov 07, 10:55 PM GMT+3
 
-**Investigating** -  TFT game events are down due to a new patch.
+**Investigating** -  TFT game events are down due to a new patch.  
 Nov 07, 08:38 AM GMT+3
 
 Nov 01, 2019
