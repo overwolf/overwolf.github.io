@@ -28,3 +28,4 @@ In our Twitch streaming app, for example, it logs into twitch with their OAuth2.
 redirect_uri = "overwolf-extension://oepmnephgakhodlemnladfmcnhfhbfdnbgolmcok/external-windows/login/login.html";
 ```
 
+If you have more ideas on how to reduce OPK size, please click on the EDIT button on the right, and add it in for everyone's benefit.
