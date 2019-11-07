@@ -7,6 +7,33 @@ sidebar_label: Past Incidents
 Note that the services interruptions log is currently updated only once a day and not in real time.  
 To get real time alerts please join [our dev slack](../support/contact-us#join-our-slack) and subscribe to the #announcments channel.
 
+Nov 07, 2019
+------------
+
+`PUBG API failure`
+
+**Resolved** - This incident has been resolved.  
+Nov 07, 10:55 PM GMT+3
+
+**Investigating** -  Apex game events are down due to a new patch.
+Nov 07, 08:38 AM GMT+3
+
+`Apex API failure`
+
+**Resolved** - This incident has been resolved.  
+Nov 07, 10:55 PM GMT+3
+
+**Investigating** -  Apex game events are down due to a new patch.
+Nov 07, 08:38 AM GMT+3
+
+`TFT API failure`
+
+**Resolved** - This incident has been resolved.  
+Nov 07, 10:55 PM GMT+3
+
+**Investigating** -  TFT game events are down due to a new patch.
+Nov 07, 08:38 AM GMT+3
+
 Nov 01, 2019
 ------------
 
