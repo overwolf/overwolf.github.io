@@ -12,6 +12,11 @@ We find that apps turn out much better with a bit of planning, and are here to h
 
 The goal here is sharing what your app is about before you invest too much time and effort into development- changes are easy early on and hard to do down the road. By looping us into your process you can enjoy our experience and technical expertise to spot and solve issues before they ever appear to gamers.
 
+:::tip note
+It's not required to have a registered business to work on an Overwolf app, apply for funding or collect revenues from your app.  
+The Overwolf platform welcomes creators of all types and sizes, from indie devs working alone to companies with large teams.
+:::
+
 ### Tips for writing a great proposal
 
 To help you prepare a kick-ass proposal, here’s what we recommend you do first:
