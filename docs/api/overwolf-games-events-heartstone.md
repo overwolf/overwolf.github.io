@@ -78,7 +78,7 @@ Can be one of the following:
 * scene_hub
 * scene_gameplay
 * scene_collectionmanager
-* scene_packopening
+* scene_packs
 * scene_tournament
 * scene_friendly
 * scene_fatal_error
