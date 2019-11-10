@@ -137,6 +137,12 @@ matchEnd    | null         | Match ended   |                    |  110.0  |
 key               | Category    | Values                    | Notes                 | Since GEP Ver. |
 ----------------- | ------------| ------------------------- | --------------------- | ------------- |
 pseudo_match_id   | match_info  |The current match’s ID code. See [notes](#pseudo_match_id-note)|                       |  130.2  |
+sessionID   | match_info  |The current session’s ID code. See [notes](#sessionID-note)|                       |  132.0  |
+matchID   | match_info  |The current match’s ID. See [notes](#matchID-note)|                       |  132.0  |
+userID   | match_info  |The current user’s ID code. See [notes](#userID-note)|                       |  132.0  |
+ticketID   | match_info  |The current ticket’s ID code. See [notes](#ticketID-note)|                       |  132.0  |
+partyID   | match_info  |The current party’s ID code. See [notes](#partyID-note)|                       |  132.0  |
+
 
 #### *pseudo_match_id* note
 
@@ -147,6 +153,47 @@ Example data:
 ```json
 0c0ea3df-97ea-4d3a-b1f6-f8e34042251f
 ```
+
+#### *sessionID* note
+
+Data Example:
+
+```json
+{"info":{"match_info":{"sessionID":"03765ae468cb4e8ca21cc290302a0ba0"}},"feature":"match"}
+```
+
+#### *matchID* note
+
+Data Example:
+
+```
+{"info":{"match_info":{"matchID":"ff75f8541670a4317136b0b239955416"}},"feature":"match"}
+```
+
+#### *userID* note
+
+Data Example:
+
+```json
+{"info":{"match_info":{"userID":"0608873718b84a11a2ee66316d09c941"}},"feature":"match"}
+```
+
+#### *ticketID* note
+
+Data Example:
+
+```json
+{"info":{"match_info":{"ticketID":"dd7fd486ad6c9ab52627514f1921d765"}},"feature":"match"}
+```
+
+#### *partyID* note
+
+Data Example:
+
+```json
+{"info":{"match_info":{"partyID":"24f122daf9c446199e59f1f6841cacfe"}},"feature":"match"}
+```
+
 
 ## `rank`
 
