@@ -6,6 +6,12 @@ sidebar_label: Changelog
 
 Follow this entry for ongoing updates and changes to the project or tools:
 
+## Version 0.138 (November 2019)
+
+* New Event: [overwolf.extensions.onExtensionUpdated](overwolf-extensions#onextensionupdated).  
+  Fires after the current app was successfully updated.
+* We updated the [recommended process](../start/submit-an-app-update#forced-user-updates) for manually update your app.
+  
 ## Version 0.137 (November 2019)
 
 * [MTGA Events](overwolf-games-events-mtga) - New supported game
