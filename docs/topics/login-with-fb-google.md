@@ -13,7 +13,7 @@ One possible flow can be as follow:
 
 2. Log In.  
 
-3. Redirect to the extension page. (More info [bellow](#redirect-back-to-your-ow-extension))
+3. Redirect to the extension page. (More info [below](#redirect-back-to-your-ow-extension))
 
 4. Set localStorage.  
 
@@ -27,4 +27,4 @@ In our Twitch streaming app, for example, it logs into twitch with their OAuth2.
 redirect_uri = "overwolf-extension://oepmnephgakhodlemnladfmcnhfhbfdnbgolmcok/external-windows/login/login.html";
 ```
 
-If you have more ideas on how to reduce OPK size, please click on the EDIT button on the right, and add it in for everyone's benefit.
+If you have more ideas on how to implement 3rd party logins in OW apps, please click on the EDIT button on the right, and add it in for everyone's benefit.
