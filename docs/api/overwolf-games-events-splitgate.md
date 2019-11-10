@@ -88,6 +88,18 @@ Possible values:
 * “OB” – Oddball
 * “TOB” – Team Oddball
 * “CTF” – Capture the Flag
+* "SHOTSNIP" - Team Shotty Snipers
+* "ROCKETS" - Team Rockets
+* "RACE" - Race
+* "DUOS" - Team Doubles
+* "SNIPS" - Team Snipers
+* "RTDM" - Ranked Team Deathmatch
+* "RKOTH" - Ranked King of the Hill
+* "RDOM" - Ranked Domination
+* "RCTF" Ranked Capture the Flag
+* "RDUOS" - Ranked Team Doubles
+* "RFFA" - Ranked Free For All
+* "VIP" - VIP
 
 Data Example:
 
