@@ -37,6 +37,8 @@ Before submitting your proposal, please read the [developer](https://overwolf.gi
 
 <iframe src="https://forms.monday.com/forms/embed/9c8c6385757e9f7b378182bf402f5c13" width="100%" height="1600px"> </iframe>
 
+Note that you do not have to own a registered business or company to work on Overwolf apps or collect revenues - Overwolf is open to independent developers and companies alike. 
+
 ## What happens next?
 
 We will review your concept internally and reach back within 4 business days to provide feedback - including whether Overwolf approves or rejects your app for the appstore.
