@@ -71,6 +71,7 @@ While the possible values are:
 * No mode was selected: `NONE`
 * Multiplayer > Newcomer: `MATCHMAKING_PVP`
 * Multiplayer > Casual: `MATCHMAKING_PVP`
+* Multiplayer > Unranked: `MATCHMAKING_PVP_UNRANKED`
 * Multiplayer > Ranked: `MATCHMAKING_PVP_RANKED`
 * Multiplayer > Custom game > Local: `CUSTOMGAME_PVP`
 * Multiplayer > Custom game > Online: `CUSTOMGAME_PVP_DEDICATED`
