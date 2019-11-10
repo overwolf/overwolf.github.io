@@ -6,13 +6,14 @@ sidebar_label: Changelog
 
 Follow this entry for ongoing updates and changes to the project or tools:
 
-## Version 0.138 (November 2019)
+## Version 0.138 (Nov. 2019)
 
 * New Event: [overwolf.extensions.onExtensionUpdated](overwolf-extensions#onextensionupdated).  
   Fires after the current app was successfully updated.
 * We updated the [recommended process](../start/submit-an-app-update#forced-user-updates) for manually update your app.
+* [overwolf.tobii](overwolf-tobii): this API has been deprecated.
   
-## Version 0.137 (November 2019)
+## Version 0.137 (Nov. 2019)
 
 * [MTGA Events](overwolf-games-events-mtga) - New supported game
    * New info-update:
@@ -32,7 +33,7 @@ Follow this entry for ongoing updates and changes to the project or tools:
 * New plugin: The [Process Manager plugin](../topics/process-manager-plugin) that allow OW apps to run executable (for example, run a game when you launch an OW app). 
 
 
-## Version 0.136 (October 2019)
+## Version 0.136 (Oct. 2019)
 
 * Added new override setting to overwolf.windows.obtainDeclaredWindow() - [useDefaultSizeAndLocation](overwolf-windows#obtaindeclaredwindowwindowname-usedefaultsizeandlocation-callback).
   When this flag is set to true, the window will be created using the default (manifest) size and location, rather than the saved setting.
@@ -42,7 +43,7 @@ Follow this entry for ongoing updates and changes to the project or tools:
     * lol_end_game_stats
     * game_version
 
-## Version 0.135 (September 2019)
+## Version 0.135 (Sep. 2019)
 
 * [CS: GO game events](overwolf-games-events-csgo#docsNav)
   * New update:
@@ -52,7 +53,7 @@ Follow this entry for ongoing updates and changes to the project or tools:
   * windowHandle - Returns the current app window handle.
 * New function: [overwolf.extensions.checkForExtensionUpdate()](overwolf-extensions#checkforextensionupdatecallback) -  allows the current app to check if there is an extension update.
 
-## Version 0.134 (August 2019)
+## Version 0.134 (Aug. 2019)
 
 * New API: [overwolf.profile.subscription](overwolf-profile.subscription).  
   Provides functions and events to help with user subscription management.
@@ -87,7 +88,7 @@ Follow this entry for ongoing updates and changes to the project or tools:
     * team_location
     * health
 
-## Version 0.133 (July 2019)
+## Version 0.133 (Jul. 2019)
 
 * [minimum-gep-version](manifest-json#meta-minimum-gep) - New manifest flag. Allow extensions to set a minimum GEP version in manifest, this works similarly to minimum-overwolf-version.
 
@@ -95,7 +96,7 @@ Follow this entry for ongoing updates and changes to the project or tools:
 
 * [overwolf.extensions.onExtensionUpdateStateChanged](overwolf-extensions#onextensionupdatestatechanged) - new event. Notify when the app was updated.
 
-## Version 0.132 (July 2019)
+## Version 0.132 (Jul. 2019)
 
 * [overwolf.os.getRegionInfo()](overwolf-os#getregioninfocallback) - new method. Returns regional information about the user.
   
@@ -103,7 +104,7 @@ Follow this entry for ongoing updates and changes to the project or tools:
 
 * [Teamfight Tactics Game Events](overwolf-games-events-tft) - TFT game events are now available. This game-mode is officially supported and more events will be added soon!
 
-## Version 0.131 (June 2019)
+## Version 0.131 (Jun. 2019)
 
 * [LoL Launcher events](overwolf-games-launchers-events-lol)
   * New update:
