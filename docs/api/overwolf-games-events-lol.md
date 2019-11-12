@@ -277,7 +277,12 @@ executed          | "tower"                              | “Executed!”      
 key  | Category    | Values                                     | Notes  | Since GEP Ver. |
 -----| ------------| -------------------------------------------| ------ | ------------- | 
 ping | performance | The change in latency values of the local player  |        |    128.0      |
-match_clock | match_info | The exact time in the game.  |        |    138.0      |
+
+### Events
+
+Event  | Event Data                                       |               Fired When                  | Notes     | Since GEP Ver. |
+-------| -------------------------------------------------| ----------------------------------------- | --------- | --------------|
+match_clock | The exact time in the match. | Every second that the clock is ticking. |           |      138.0    |
 
 ## `gameMode`
 
