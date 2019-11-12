@@ -282,7 +282,7 @@ ping | performance | The change in latency values of the local player  |See [not
 
 Event  | Event Data                                       |               Fired When                  | Notes     | Since GEP Ver. |
 -------| -------------------------------------------------| ----------------------------------------- | --------- | --------------|
-match_clock | The exact time in the match. | Every second that the clock is ticking. |See [notes](#match_clock-note)|      138.0    |
+match_clock | The exact time in the match (in seconds). | Every second that the clock is ticking. |See [notes](#match_clock-note)|      138.0    |
 
 #### *ping* note
 
