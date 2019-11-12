@@ -76,6 +76,7 @@ While the possible values are:
 * Multiplayer > Custom game > Local: `CUSTOMGAME_PVP`
 * Multiplayer > Custom game > Online: `CUSTOMGAME_PVP_DEDICATED`
 * Player vs. AI > Situations: `OPERATIONS`
+* Player vs. AI > Lonewolf: `LONEWOLF`
 * Player vs. AI > Terrorist Hunt: `MATCHMAKING_PVE`
 * Tutorials: It’s just a video tutorial, not a game mode.
 

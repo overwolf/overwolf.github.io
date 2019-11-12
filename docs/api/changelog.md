@@ -15,6 +15,9 @@ Follow this entry for ongoing updates and changes to the project or tools:
   Fires after the current app was successfully updated.
 * We updated the [recommended process](../start/submit-an-app-update#forced-user-updates) for manually update your app.
 * [overwolf.tobii](overwolf-tobii): this API has been deprecated.
+* [League of Legends Launcher Events](overwolf-games-launchers-events-lol#docsNav)
+  * New event:
+    * match_clock
   
 ## Version 0.137 (Nov. 2019)
 
