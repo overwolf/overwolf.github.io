@@ -16,10 +16,6 @@ Nov 07, 10:55 PM GMT+3
 **Investigating** -  Apex game events are down due to a new patch.  
 Nov 07, 08:38 AM GMT+3
 
-Auto-Chess
-----------
-No logs.
-
 CS: GO
 ------
 No logs.

@@ -62,13 +62,6 @@ const GamesMetadata = {
     iconLargeUrl: "/docs/assets/games-logos/large/fortnite.png",
     name: "Fortnite"
   },
-  21568: {
-    id: 21568,
-    path: "/docs/status/auto-chess",
-    iconUrl: "/docs/assets/games-logos/autochess.png",
-    iconLargeUrl: "/docs/assets/games-logos/large/autochess.png",
-    name: "Auto-Chess"
-  },
   7314: {
     id: 7314,
     path: "/docs/status/dota2",
