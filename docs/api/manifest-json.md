@@ -252,23 +252,25 @@ To use most overwolf.* APIs, your Overwolf app must declare relevant permissions
 
 | Permission             | Description                                                                                                       |
 | ---------------------  |-------------------------------------------------------------------------------------------------------------------| 
-| "Camera"               | Access webcam                                                                                                 | 
-| "Microphone"           | Access microphone                                                                                             | 
-| "Logging"              | Access [logging system APIs](overwolf-log)                                                                    | 
+| "Camera"               | Access webcam                                                                                                     | 
+| "Microphone"           | Access microphone                                                                                                 | 
+| "Logging"              | Access [overwolf.log](overwolf-log) API                                                                           | 
 | "Extensions"           | Run or get information about other apps                                                                           | 
 | "Streaming"            | Enable game streaming                                                                                             | 
 | "DesktopStreaming"     | Enable desktop streaming                                                                                          | 
 | "Profile"              | Access profile information and perform actions such as login and modifications                                    | 
-| "Clipboard"            | Access clipboard                                                                                              | 
-| "Hotkeys"              | Get hotkey information for the current app                                                                       | 
-| "Media"                | Access media library                                                                                          | 
+| "Clipboard"            | Access clipboard                                                                                                  | 
+| "Hotkeys"              | Get hotkey information for the current app                                                                        | 
+| "Media"                | Access media library                                                                                              | 
 | "GameInfo"             | Access current game information                                                                                   | 
 | "GameControl"          | Allows to send key strokes to the game by using [overwolf.utils.sendKeyStroke()](overwolf-utils)                  | 
 | "FileSystem"           | Allows accessing files from the local file system. </br>*Note: This is the only permission we currently enforce*  | 
-| "LogitechLed"          | Allows accessing [Logitech LED APIs](overwolf-logitech-led)                                                       | 
-| "LogitechArx"          | Allows accessing [Logitech Arx APIs](overwolf-logitech-arx)                                                       | 
-| "OwWebview"            |                                                                                                                   | 
+| "LogitechLed"          | Allows accessing [overwolf.logitech.led](overwolf-logitech-led) API                                               | 
+| "LogitechArx"          | Allows accessing [overwolf.logitech.arx](overwolf-logitech-arx) API                                               | 
+| "OwWebview"            | Allows using the owwebview tag                                                                                    | 
 | "VideoCaptureSettings" | Allows setting video capture settings                                                                             | 
+| "Web"                  | access to the [overwolf.web](overwolf-web) API                                                                    | 
+| "Tray"                 | Access to creating tray icons                                                                                     | 
 
 ## Meta object
 Includes app metadata:
@@ -314,7 +316,7 @@ A list of additional settings for the app.
 | <a class="anchor" aria-hidden="true" id="launch_events"></a>launch_events | [launch_event_settings[]](#launch-event-settings-array) |  A list of events causing the app to launch. |0.82  |
 | <a class="anchor" aria-hidden="true" id="user_agent"></a>user_agent | string |  A custom user agent for the app to use when creating http requests. </br>*Note: using ‘navigator.userAgent’ will not return the custom user agent, but the default one.* |0.86  |
 | <a class="anchor" aria-hidden="true" id="disable_dt"></a>disable_dt | bool |  Disable opening of the developer tools for the app (with Ctrl+shift+I). </br>*Default value – “false”* |0.118  |
-| <a class="anchor" aria-hidden="true" id="service_providers"></a>service_providers | string |  hosting app flexible data. </br> If you app wants to provide some sort of service (like GS provides a "tab-hosting" service for apps) - you can use this flag to set different parameters that are relevant for the service provider app.|0.137  |
+| <a class="anchor" aria-hidden="true" id="service_providers"></a>service_providers | string |  Provide extra data to external service providers. External apps (AKA service providers) can fetch this data from your app's manifest. |0.137  |
 | <a class="anchor" aria-hidden="true" id="developer-game-settings"></a>developer | [developer setting](#developer-settings-object) object|  Additional setting for developers. |0.127  |
 
 ## GameTargeting object

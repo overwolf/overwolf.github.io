@@ -84,6 +84,9 @@ Oct 23, 12:39 PM GMT+3
 Rainbow 6 Siege
 ---------------
 
+**Resolved** - This incident has been resolved.  
+Nov 12, 17:24 PM GMT+3
+
 **Investigating** -   Currently broken events are: Round Outcome, Match Outcome, Blue/Orange Scores.  
 Nov 12, 10:49 AM GMT+3
 

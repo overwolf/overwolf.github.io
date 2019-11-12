@@ -11,11 +11,16 @@ Use the `overwolf.profile` API to get Overwolf information for the current user 
 ## Methods Reference
 
 * [overwolf.profile.getCurrentUser()](#getcurrentusercallback)
+* [overwolf.profile.refreshUserProfile()](#refreshuserprofilecallback)
 * [overwolf.profile.openLoginDialog()](#openlogindialog)
 
 ## Events Reference
 
 * [overwolf.profile.onLoginStateChanged](#onloginstatechanged)
+
+## Types Reference
+
+* [GetCurrentUserResult](#getcurrentuserresult-object) Object
 
 ## getCurrentUser(callback)
 #### Version added: 0.78
@@ -24,9 +29,9 @@ Use the `overwolf.profile` API to get Overwolf information for the current user 
 
 Parameter | Type     | Description                                                                                        |
 ----------| ---------| -------------------------------------------------------------------------------------------------- |
-callback  | function | Returns with the result                                                                            |   
- 
-#### Callback argument: Success
+callback  | ([Result: GetCurrentUserResult](#getcurrentuserresult-object)) => void | A function called with the current user, or an error.| 
+
+ #### Callback argument: Success
 
 ```json
 {  
@@ -56,6 +61,17 @@ If the user is not logged-in, the `status` will be `error`, but you’ll still g
    "avatar":""
 }
 ```
+
+## refreshUserProfile(callback)
+#### Version added: 0.128
+
+> Fetches user profile from server, then invokes the callback with the currently logged-in Overwolf user.
+
+Parameter | Type     | Description                                                                                        |
+----------| ---------| -------------------------------------------------------------------------------------------------- |
+callback  | ([Result: GetCurrentUserResult](#getcurrentuserresult-object)) => void | A function called with the current user, or an error.|
+
+
 ## openLoginDialog()
 #### Version added: 0.80
 
@@ -70,12 +86,31 @@ If the user is not logged-in, the `status` will be `error`, but you’ll still g
 
 ```json
 {
-    status: "success",
+    "status": "success",
     
     // can be "Online", "Offline", "Connecting", etc.
-    connectionState: "Online", 
+    "connectionState": "Online", 
     
     // when the status is other than "Offline", will be the currently connected username.
-    username: "..." 
+    "username": "..." 
 }
 ```
+
+## GetCurrentUserResult Object
+
+Note: all the callbacks objects inherited from the Result object, and contains status and error fields.
+
+Parameter          | Type     | Description  |
+-------------------| ---------| ------------ |
+status             | string   |              |
+Reason             | string   |              |   
+username           | string   |              |   
+userId             | string   |              |   
+machineId          | string   |              |   
+partnerId          | int      |              |   
+channel            | string   |              |   
+parameters         | string   |              |   
+installParams      | string   |              |   
+avatar             | string   |              |   
+installerExtension | string   |              |   
+

@@ -8,7 +8,10 @@ Follow this entry for ongoing updates and changes to the project or tools:
 
 ## Version 0.138 (Nov. 2019)
 
-* New Event: [overwolf.extensions.onExtensionUpdated](overwolf-extensions#onextensionupdated).  
+* New Event: [overwolf.extensions.onExtensionUpdated](overwolf-extensions#onextensionupdated). Notify when the app was updated.  
+  This event will replace the depracated "overwolf.extensions.onExtensionUpdateStateChanged" event. 
+
+  
   Fires after the current app was successfully updated.
 * We updated the [recommended process](../start/submit-an-app-update#forced-user-updates) for manually update your app.
 * [overwolf.tobii](overwolf-tobii): this API has been deprecated.

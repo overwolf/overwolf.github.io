@@ -388,9 +388,7 @@ if you want to get origin information without registering events, you can run th
 ## onExtensionUpdated
 #### Version added: 0.138
 
-> Fires after the current app was successfully updated.
-
-Note that it only fires after an extension update was installed and is waiting for relaunch.
+> Fires when the current app's newest version has been installed. This most often means that an app relaunch is required in order for the update to apply.
 
 ## onUncaughtException
 #### Version added: 0.133
