@@ -278,6 +278,12 @@ key  | Category    | Values                                     | Notes  | Since
 -----| ------------| -------------------------------------------| ------ | ------------- | 
 ping | performance | The change in latency values of the local player  |        |    128.0      |
 
+### Events
+
+Event  | Event Data                                       |               Fired When                  | Notes     | Since GEP Ver. |
+-------| -------------------------------------------------| ----------------------------------------- | --------- | --------------|
+match_clock | The exact time in the match. | Every second that the clock is ticking. |           |      138.0    |
+
 ## `gameMode`
 
 #### *gameMode note*
