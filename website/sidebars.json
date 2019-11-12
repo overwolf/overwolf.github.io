@@ -37,7 +37,7 @@
 			"overwolf.egs":
 			["api/overwolf-egs"],
 			"overwolf.extensions":
-			["api/overwolf-extensions", "api/overwolf-extension-current", "api/overwolf-extension-sharedData"],
+			["api/overwolf-extensions", "api/overwolf-extensions-current", "api/overwolf-extensions-sharedData"],
 			"overwolf.games":
 			["api/overwolf-games", "api/overwolf-games-events", "api/overwolf-games-inputTracking","api/overwolf-games-launchers", "api/overwolf-games-launchers-events"],
 			"overwolf.io": ["api/overwolf-io"],
