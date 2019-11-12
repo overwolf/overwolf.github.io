@@ -518,7 +518,7 @@ A list of content scripts to be loaded for specific windows.
 | Name    | Type   | Description                                                 | Since |
 |---------| -------|-------------------------------------------------------------|------ |
 | windows | string | The list of windows for which to apply this content script. | 0.78  |
-| matches | string | The list of URLs for which to apply this content script.    | 0.78  |
+| matches | string | The list of URLs for which to apply this content script. (regex supported)    | 0.78  |
 | css     | string | The list of CSS files to be applied in this content script. | 0.78  |
 | js      | string | The list of JS files to be applied in this content script.  | 0.78  |
 
