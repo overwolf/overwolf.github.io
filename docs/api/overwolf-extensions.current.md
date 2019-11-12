@@ -1,15 +1,15 @@
 ---
-id: overwolf-extension-current
-title: overwolf.extension.current API
-sidebar_label: overwolf.extension.current
+id: overwolf-extensions-current
+title: overwolf.extensions.current API
+sidebar_label: overwolf.extensions.current
 ---
 
 A set of functions providing more information and utilities for the current extension.
 
 ## Methods Reference
 
-* [overwolf.extension.current.getExtraObject()](#getextraobjectname-callback)
-* [overwolf.extension.current.getManifest()](#getmanifestcallback)
+* [overwolf.extensions.current.getExtraObject()](#getextraobjectname-callback)
+* [overwolf.extensions.current.getManifest()](#getmanifestcallback)
 
 ## getExtraObject(name, callback)
 #### Version added: 0.80

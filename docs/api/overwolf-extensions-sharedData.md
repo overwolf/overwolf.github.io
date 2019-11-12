@@ -1,23 +1,23 @@
 ---
-id: overwolf-extension-sharedData
-title: overwolf.extension.sharedData API
-sidebar_label: overwolf.extension.sharedData
+id: overwolf-extensions-sharedData
+title: overwolf.extensions.sharedData API
+sidebar_label: overwolf.extensions.sharedData
 ---
 
 A set of APIs to allow independent extensions to communicate with each other.
 
 ## Methods Reference
 
-* [overwolf.extension.sharedData.set()](#setstring-appid-object-value-callback)
-* [overwolf.extension.sharedData.get()](#getshareddataparams-param-callback)
+* [overwolf.extensions.sharedData.set()](#setstring-appid-object-value-callback)
+* [overwolf.extensions.sharedData.get()](#getshareddataparams-param-callback)
 
 ## Events Reference
 
-* [overwolf.extensions.sharedData.OnChanged](#onchanged)
+* [overwolf.extensionss.sharedData.OnChanged](#onchanged)
 
 ## Types Reference
 
-* [overwolf.extension.sharedData.SharedDataParams](#shareddataparams-object) Object
+* [overwolf.extensions.sharedData.SharedDataParams](#shareddataparams-object) Object
 
 ## set(string appId, object value, callback)
 #### Version added: 0.137
@@ -65,9 +65,9 @@ overwolf.extensions.shareddata.get({target:"fiekjlgoffmlmgfmggnoeoljkmfkcapcdmcg
 
 ```json
 {
-    origin: string (uid),
-    target: string (uid),
-    data: string
+    "origin": string (uid),
+    "target": string (uid),
+    "data": string
 }
 ```
 
