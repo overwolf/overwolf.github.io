@@ -6,7 +6,7 @@ sidebar_label: Game Summary Hosted Apps
 
 Game Summary is a customizable "browser" for post-matchpost match apps.  
 
-Here are some screenshots of different tab apps that hosted in the game summary browser:
+Here are some screenshots of different OW apps that hosted as tabs for game summary:
 
 <div class="box" data-slick='{"slidesToShow": 1}'>
   <a data-fancybox="gallery" data-caption="game Summary apps" href="../assets/hosted-apps/gs-screenshot-1.png">
@@ -59,15 +59,15 @@ Please take a look at our [Game Summary tab sample app](https://github.com/overw
 
 ## Integrate your app with Game Summary
 
-Integrating your app to be hosted in Game Summary is easily done with these 3 steps:
+Integrating your app to be hosted as a Game Summary tab is easily done with these 3 steps:
 
 1. [Declare your tab](#declare-your-tab) -  Let Game Summary know that you want to be hosted.  
 2. [Build tab content](#build-tab-content) - Show post match content and respond to user interactions.  
-3. [Integrate with your app](##integrate-with-your-app) - Adjust your app behavior based on user preferences.
+3. [Integrate with your app](#integrate-with-your-app) - Adjust your app behavior based on user preferences.
 
 ### Declare your tab
 
-To be able to host your app in Game Summary, you must add a [service_providers](../api/manifest-json#service_providers) object in your app’s manifest (under the "data" Object):
+To be able to host your app in Game Summary, you must add a [service_providers](../api/manifest-json#service_providers) object in your app’s manifest (nested under the "data" Object):
 
 ```json
  "service_providers": {
@@ -83,7 +83,7 @@ To be able to host your app in Game Summary, you must add a [service_providers](
  }
 ```
 
-With the above declaration, you are providing the Game Summary (UID `nafihghfcpikebhfhdhljejkcifgbdahdhngepfb`) the enclosed data:
+With the above declaration, you define the game summary built-in app (UID `nafihghfcpikebhfhdhljejkcifgbdahdhngepfb`) as your hosting app, and you are providing the `game_summary_tab` object with the enclosed data:
 
 | Name           | Type  |  Description                                                                                                       | 
 |----------------|-------| ------------------------------------------------------------------------------------------------------------------ |
@@ -93,7 +93,7 @@ With the above declaration, you are providing the Game Summary (UID `nafihghfcpi
 | tab_title      | string | A title to be used for your tab                                                                                   | 
 | tab_tooltip    | string |  (Optional) A short name to be used as a tool tip message when hovering the tab icon. tab_title  will be used in case this field is not provided  | 
 
-Apps with the above declaration will be added as a tab to Game Summary for the relevant games. The user will be able to enable/disable your tab in the Game Summary settings.
+Apps with the above declaration will be added as a tab to Game Summary for the targeted games. The user will be able to enable/disable your tab in the Game Summary settings.
 
 ### Build tab content
 
@@ -101,41 +101,14 @@ This section describes how your tab content can communicate with Game Summary, m
 
 Game Summary tab content should present information relevant to the selected match.  
 
-In order to know which match is selected, and some other useful functionality, you should use the "overwolf.gamesummary" API functions and events:
+In order to know which match is selected, and some other useful functionality, you should use the following "overwolf.gamesummary" API functions and events:
 
-#### overwolf.gamesummary.getCurrentMatch()
-
-Returns the current game and match. If no match is selected yet returns null.
-
-Example usage:
-
-```js
-_handleGetCurrentMatch = (gameId, matchId) => {
-  // Show content based on "gameId" (int) and matchId (string)
-}
- 
-overwolf.gamesummary.getCurrentMatch(_handleGetCurrentMatch); // Async get current match
-```
-
-#### overwolf.gamesummary.onMatchChanged Event
-
-Fired when the user selects a new match.  
-
-Example usage:
-
-```js
-_handleOnMatchChanged = (gameId, matchId) => {
-  // Change content based on "gameId" (int) and matchId (string)
-}
- 
-overwolf.gamesummary.onMatchChanged.addListener(_handleOnMatchChanged); // Add a new listener
- 
-overwolf.gamesummary.onMatchChanged.removeListener(_handleOnMatchChanged); // Remove existing listener
-```
+* **[overwolf.gamesummary.getCurrentMatch()]()**: Returns the current game and match. If no match is selected yet returns null.
+* **[overwolf.gamesummary.onMatchChanged Event]()**: Fired when the user selects a new match.
 
 #### Notes
 
-1. When your tab is first loaded, register to onMatchChanged to be notified when the user changes a match.
+1. When your tab is first loaded, register to [onMatchChanged]() to be notified when the user changes a match.
 2. Since you might be loaded after a match is selected, you need to use [getCurrentMatch()](#getcurrentmatch) to receive the currently selected match.
 3. Your tab should always present content relevant to the selected match.
 4. `matchId` is based on the standard OW `pseudo_match_id`, you should track it and keep a mapping between the `matchID` and the relevant match data.
@@ -146,51 +119,11 @@ This section describes how your app can communicate with Game Summary, mainly us
 
 Your app should only collect the data needed for the tab content if the user has your tab enabled and active inside Game Summary.  
 
-In order to know if your tab is enabled, and some other useful functionality, you should use the [overwolf.extensions.sharedData](../api/overwolf-extensions-sharedData#docsNav) API functions and events:
+In order to know if your tab is enabled, and some other useful functionality, you should use the following [overwolf.extensions.sharedData](../api/overwolf-extensions-sharedData) API functions and events:
 
-#### overwolf.extensions.sharedData.get()
+* **[overwolf.extensions.sharedData.get()](../api/overwolf-extensions-sharedData#getshareddataparams-param-callback)**: Retrieve your app data from Game Summary.
+* **[overwolf.extensions.sharedData.onChanged Event](../api/overwolf-extensions-sharedData#onchanged)**: Fired when Game Summary changes your app tab settings data, mainly when the user enables/disables your tab.
 
-Retrieve your app data from Game Summary.
-
-Example usage:
-
-```js
-overwolf.extensions.sharedData.get(
-    {origin:"nafihghfcpikebhfhdhljejkcifgbdahdhngepfb"},
-    data => {
-        // Process game enable state
-        // See result callback format below
-    }
-);
-```
-
-Result callback format:
-
-```json
-const data  = {
-    "games": {                // Map of targeted games
-      "5426": {               // Game id
-          isActive: true,     // Is tab active for this game
-          isGameActive: true, // Is game active in Game Summary
-          index: 0            // Position of the tab for this game
-      },
-      "10798": {
-          isActive: false,
-          isGameActive: true,
-          index: 2
-      }
-    }
- }
-```
-
-#### overwolf.extensions.sharedData.onChanged Event
-
-Fired when Game Summary changes your app tab settings data, mainly when the user enables/disables your tab.
-
-Example usage:
-
-```js
-```
 
 #### Notes
 

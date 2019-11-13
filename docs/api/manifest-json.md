@@ -316,7 +316,7 @@ A list of additional settings for the app.
 | <a class="anchor" aria-hidden="true" id="launch_events"></a>launch_events | [launch_event_settings[]](#launch-event-settings-array) |  A list of events causing the app to launch. |0.82  |
 | <a class="anchor" aria-hidden="true" id="user_agent"></a>user_agent | string |  A custom user agent for the app to use when creating http requests. </br>*Note: using ‘navigator.userAgent’ will not return the custom user agent, but the default one.* |0.86  |
 | <a class="anchor" aria-hidden="true" id="disable_dt"></a>disable_dt | bool |  Disable opening of the developer tools for the app (with Ctrl+shift+I). </br>*Default value – “false”* |0.118  |
-| <a class="anchor" aria-hidden="true" id="service_providers"></a>service_providers | string |  Provide extra data to external service providers. External apps (AKA service providers) can fetch this data from your app's manifest. |0.137  |
+| <a class="anchor" aria-hidden="true" id="service_providers"></a>service_providers | [service_providers](#service_providers-object) object |  Extra data to external service providers |0.137  |
 | <a class="anchor" aria-hidden="true" id="developer-game-settings"></a>developer | [developer setting](#developer-settings-object) object|  Additional setting for developers. |0.127  |
 
 ## GameTargeting object
@@ -589,14 +589,30 @@ These settings are relevant only if your app is in dev mode (channel="developers
 Code Example:
 
 ```json
- "developer": 
-    {
-               
-        "enable_auto_refresh": true,
-        "reload_delay": 1000, 
-        "filter": "*.json;*.html"
-    }
+"developer": {
+    "enable_auto_refresh": true,
+    "reload_delay": 1000, 
+    "filter": "*.json;*.html"
+}
 ```
+
+## service_providers object
+
+Provide extra data to external service providers. External apps (AKA service providers) can fetch this data from your app's manifest.
+
+This object can contain any valid JSON objects, as long as it wrapped with the **hosting app UID**.
+
+Code Example:
+
+```json
+"service_providers": {
+    "nafihghfcpikebhfhdhljejkcifgbdahdhngepfb": {  //hosting app UID, Mandatory. On this case, it's the Game Summary built-in app UID.
+        "whatever": "value"
+    }
+}
+```
+
+You can see a working example on the [hosted apps](../topics/hosted-apps#declare-your-tab) best practice guide.
 
 ## size Object
 Defines a size (width and height) in pixels.

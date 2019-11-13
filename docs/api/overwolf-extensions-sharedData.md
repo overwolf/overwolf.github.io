@@ -18,6 +18,8 @@ A set of APIs to allow independent extensions to communicate with each other.
 ## Types Reference
 
 * [overwolf.extensions.sharedData.SharedDataParams](#shareddataparams-object) Object
+* [GetResult](#getresult-object) Object
+* [onChangedEvent](#onchangedevent-object) Object
 
 ## set(string appId, object value, callback)
 #### Version added: 0.137
@@ -27,11 +29,11 @@ A set of APIs to allow independent extensions to communicate with each other.
 This function is one part of the service providing app to communicate with the consumer apps.
 for instance, Game Summary hosts GPO app in a tab. Game Summary is the owner, GPO is the cosumer.
 
-Parameter | Type       | Description                                                                                    |
---------- | -----------| ---------------------------------------------------------------------------------------------- |
-appId	  | string     | The requested app id                                                                           |
-value	  | object     |                                                                                                |
-callback  | function   | a status indicating success or failure                                                         |
+Parameter | Type                                             | Description                             |
+--------- | -------------------------------------------------| ----------------------------------------|
+appId	  | string                                           | The requested app id                    |
+value	  | object                                           |                                         |
+callback  | ([Result: GetResult](#getresult-object)) => void | a status indicating success or failure  |
 
 ## get(SharedDataParams param, callback)
 #### Version added: 0.137
@@ -44,32 +46,32 @@ for instance, Game Summary hosts GPO app in a tab. Game Summary is the owner, GP
 Parameter | Type                                                 | Description                                                                                    |
 --------- | -----------------------------------------------------| ---------------------------------------------------------------------------------------------- |
 param	  | [SharedDataParams](#shareddataparams-object) object  |                                                                                                |
-callback  | function                                             | a status indicating success or failure                                                         |
+callback  | ([Result: GetResult](#getresult-object)) => void     | a status indicating success or failure                                                         |
 
-#### Usage example
+#### Usage examples
 
 ```js
+overwolf.extensions.sharedData.get(
+    {origin:"nafihghfcpikebhfhdhljejkcifgbdahdhngepfb"},
+    data => {
+        // Process game enable state
+        // See result callback format below
+    }
+);
+
 overwolf.extensions.shareddata.get({},console.log) //retrun all data set to my self
 
+
 overwolf.extensions.shareddata.get({origin:"*"},console.log) //return all data was set to my self
+
 
 overwolf.extensions.shareddata.get({target:"fiekjlgoffmlmgfmggnoeoljkmfkcapcdmcgcfgm"},console.info) //retrun data i set to "fiekjlgoffmlmgfmggnoeoljkmfkcapcdmcgcfgm" (extension id)
 ```
 
-## OnChanged
+## onChanged
 #### Version added: 0.137
 
-> Fired when the hosting app state changes.
-
-#### Event Data Example: Success
-
-```json
-{
-    "origin": string (uid),
-    "target": string (uid),
-    "data": string
-}
-```
+> Fired when the hosting app state changes, with the following structure: [onChangedEvent](#onchangedevent-object) Object
 
 ## SharedDataParams Object
 #### Version added: 0.137
@@ -80,3 +82,48 @@ Parameter   | Type                                | Description                 
 ----------- | ------------------------------------| ----------------------------- |
 origin      | string                              |                               |
 target      | string                              |                               |
+
+## GetResult Object
+
+Parameter          | Type     | Description                                 |
+-------------------| ---------| ------------------------------------------- |
+*success*          | boolean  | inherited from the "Result" Object          |
+*error*            | string   | inherited from the "Result" Object          |
+games              | string   | Map of targeted games                       |
+
+Example data: Success
+
+```json
+{
+    "games": {                // Map of targeted games
+      "5426": {               // Game id
+          isActive: true,     // Is tab active for this game
+          isGameActive: true, // Is game active in Game Summary
+          index: 0            // Position of the tab for this game
+      },
+      "10798": {
+          isActive: false,
+          isGameActive: true,
+          index: 2
+      }
+    }
+ }
+```
+
+## onChangedEvent Object
+
+Parameter    | Type       | Description     |
+-------------| -----------|---------------- |
+origin       |  string    |                 | 
+target       |  string    |                 |
+data         |  string    |                 |
+
+#### Event Data Example: Success
+
+```json
+{
+    "origin": string (uid),
+    "target": string (uid),
+    "data": string
+}
+```

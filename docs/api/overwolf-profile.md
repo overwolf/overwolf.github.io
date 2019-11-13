@@ -20,7 +20,11 @@ Use the `overwolf.profile` API to get Overwolf information for the current user 
 
 ## Types Reference
 
-* [GetCurrentUserResult](#getcurrentuserresult-object) Object
+* [overwolf.profile.GetCurrentUserResult](#getcurrentuserresult-object) Object
+* [overwolf.profile.LoginStateChangedEvent](#LoginStateChangedEvent) Object
+* [overwolf.profile.ConnectionState ](#connectionstate-enum) Enum
+
+
 
 ## getCurrentUser(callback)
 #### Version added: 0.78
@@ -31,37 +35,6 @@ Parameter | Type     | Description                                              
 ----------| ---------| -------------------------------------------------------------------------------------------------- |
 callback  | ([Result: GetCurrentUserResult](#getcurrentuserresult-object)) => void | A function called with the current user, or an error.| 
 
- #### Callback argument: Success
-
-```json
-{  
-   "status":"success",
-   "username":"itaygl",
-   "userId":"OW_34153336-192b-44f6-aa0f-4a9b744c689d",
-   "machineId":"653000ad-001c-43e9-a5c9-e23db5ad370a",
-   "partnerId":0,
-   "channel":"website"
-}
-```
-#### Callback argument: Failure
-
-If the user is not logged-in, the `status` will be `error`, but you’ll still get the rest of the available data (userId, machineId, etc.)
- 
-```json
-{  
-   "status":"error",
-   "username":null,
-   "userId":"OW_34153336-192b-44f6-aa0f-4a9b744c689d",
-   "machineId":"653000ad-001c-43e9-a5c9-e23db5ad370a",
-   "partnerId":0,
-   "channel":"website",
-   "reason":"Not signed in",
-   "parameters":{"no-ftue":null},
-   "installParams":null,
-   "avatar":""
-}
-```
-
 ## refreshUserProfile(callback)
 #### Version added: 0.128
 
@@ -71,7 +44,6 @@ Parameter | Type     | Description                                              
 ----------| ---------| -------------------------------------------------------------------------------------------------- |
 callback  | ([Result: GetCurrentUserResult](#getcurrentuserresult-object)) => void | A function called with the current user, or an error.|
 
-
 ## openLoginDialog()
 #### Version added: 0.80
 
@@ -80,37 +52,87 @@ callback  | ([Result: GetCurrentUserResult](#getcurrentuserresult-object)) => vo
 ## onLoginStateChanged
 #### Version added: 0.78
 
-> Fired when a user logged in or logged out, with the following structure:
+> Fired when a user logged in or logged out, with the following structure: [LoginStateChangedEvent](#loginstatechangedevent-object) Object
+
+
+## GetCurrentUserResult Object
+
+Parameter          | Type     | Description                                 |
+-------------------| ---------| ------------------------------------------- |
+*success*          | boolean  | inherited from the "Result" Object          |
+*error*            | string   | inherited from the "Result" Object          |
+status             | string   | deprecated. For backward compatibility only |
+Reason             | string   | deprecated. For backward compatibility only |   
+username           | string   |                                             |   
+userId             | string   |                                             |   
+machineId          | string   |                                             |   
+partnerId          | int      |                                             |   
+channel            | string   |                                             |   
+parameters         | string   |                                             |   
+installParams      | string   |                                             |   
+avatar             | string   |                                             |   
+installerExtension | string   |                                             |   
+
+ #### Example data: Success
+
+```json
+{  
+   "success": true,
+   "error": "",
+   "status":"success",
+   "username":"itaygl",
+   "userId":"OW_34153336-192b-44f6-aa0f-4a9b744c689d",
+   "machineId":"653000ad-001c-43e9-a5c9-e23db5ad370a",
+   "partnerId":0,
+   "channel":"website"
+}
+```
+#### Example data: Failure
+
+If the user is not logged-in, the `success` will be `false`, but you’ll still get the rest of the available data (userId, machineId, etc.)
+ 
+```json
+{  
+   "success": false,
+   "error": "Not signed in",
+   "status":"error",
+    "reason":"Not signed in",
+   "username":null,
+   "userId":"OW_34153336-192b-44f6-aa0f-4a9b744c689d",
+   "machineId":"653000ad-001c-43e9-a5c9-e23db5ad370a",
+   "partnerId":0,
+   "channel":"website",
+   "parameters":{"no-ftue":null},
+   "installParams":null,
+   "avatar":""
+}
+```
+
+## LoginStateChangedEvent Object
+
+Parameter       | Type                                           | Description     |
+----------------| -----------------------------------------------|---------------- |
+status          |  string                                        |                 | 
+connectionState |  [ConnectionState](#connectionstate-enum) enum |                 |
+username        |  string                                        |                 |
 
 #### Event data example: Success
 
 ```json
 {
     "status": "success",
-    
-    // can be "Online", "Offline", "Connecting", etc.
-    "connectionState": "Online", 
-    
-    // when the status is other than "Offline", will be the currently connected username.
-    "username": "..." 
+    "connectionState": "Online",  // can be "Online", "Offline", "Connecting", etc.
+    "username": "..."   // when the status is other than "Offline", will be the currently connected username.
 }
 ```
 
-## GetCurrentUserResult Object
+## ConnectionState enum
 
-Note: all the callbacks objects inherited from the Result object, and contains status and error fields.
-
-Parameter          | Type     | Description  |
--------------------| ---------| ------------ |
-status             | string   |              |
-Reason             | string   |              |   
-username           | string   |              |   
-userId             | string   |              |   
-machineId          | string   |              |   
-partnerId          | int      |              |   
-channel            | string   |              |   
-parameters         | string   |              |   
-installParams      | string   |              |   
-avatar             | string   |              |   
-installerExtension | string   |              |   
+Option         | Description                                 |
+---------------| ------------------------------------------- |
+Unknown        |                                             |
+Offline        |                                             |
+Connecting     |                                             |
+Online         |                                             |
+Disconnecting  |                                             |
 

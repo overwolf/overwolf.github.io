@@ -4,6 +4,10 @@ title: Overwolf Type Definition File
 sidebar_label: Type Definition File
 ---
 
+:::note
+We will release the defenition file on the next few days
+:::
+
 ## TypeScript overview
 
 TypeScript is a superset of JavaScript which adds optional static typing to the language, hence its name. Static typing enables the compiler to check that operations performed on variables are legal. Those checks prevent you from attempting to invoke a number as a function, for example.
