@@ -85,30 +85,13 @@ target      | string                              |                             
 
 ## GetResult Object
 
-Parameter          | Type     | Description                                 |
--------------------| ---------| ------------------------------------------- |
-*success*          | boolean  | inherited from the "Result" Object          |
-*error*            | string   | inherited from the "Result" Object          |
-games              | string   | Map of targeted games                       |
+Parameter          | Type                 | Description                                 |
+-------------------| ---------------------| ------------------------------------------- |
+*success*          | boolean              | Inherited from the "Result" Object          |
+*error*            | string               | Inherited from the "Result" Object          |
+data               | \<Dictionary> string | Dictionary<T>: An object that maps strings to values of type "T" |
 
-Example data: Success
-
-```json
-{
-    "games": {                // Map of targeted games
-      "5426": {               // Game id
-          isActive: true,     // Is tab active for this game
-          isGameActive: true, // Is game active in Game Summary
-          index: 0            // Position of the tab for this game
-      },
-      "10798": {
-          isActive: false,
-          isGameActive: true,
-          index: 2
-      }
-    }
- }
-```
+You can find [here](../topics/hosted-apps#integrate-with-your-app) a "real" usage example.
 
 ## onChangedEvent Object
 

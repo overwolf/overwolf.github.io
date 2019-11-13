@@ -104,7 +104,31 @@ Game Summary content should focus on presenting information relevant to the curr
 In order to know which match is selected, and some other useful functionality, you should use the following "overwolf.gamesummary" API functions and events:
 
 * **[overwolf.gamesummary.getCurrentMatch()]()**: Returns the current game and match. If no match is selected yet returns null.
+
+Usage example:
+
+```js
+_handleGetCurrentMatch = (gameId, matchId) => {
+  // Show content based on "gameId" (int) and matchId (string)
+}
+ 
+// Async get current match
+overwolf.gamesummary.getCurrentMatch(_handleGetCurrentMatch);
+```
+
 * **[overwolf.gamesummary.onMatchChanged Event]()**: Fired when the user selects a new match.
+
+Usage example:
+
+```js
+_handleOnMatchChanged = (gameId, matchId) => {
+  // Change content based on "gameId" (int) and matchId (string)
+}
+ // Add a new listener
+overwolf.gamesummary.onMatchChanged.addListener(_handleOnMatchChanged); 
+// Remove existing listener
+overwolf.gamesummary.onMatchChanged.removeListener(_handleOnMatchChanged)
+```
 
 #### Notes
 
@@ -122,6 +146,38 @@ Remember - your app should only collect the data needed for tab content if the u
 In order to know if your tab is enabled, you should use the following [overwolf.extensions.sharedData](../api/overwolf-extensions-sharedData) API functions and events:
 
 * **[overwolf.extensions.sharedData.get()](../api/overwolf-extensions-sharedData#getshareddataparams-param-callback)**: Retrieve your app data from Game Summary.
+
+Usage example:
+
+```js
+overwolf.extensions.sharedData.get(
+    {origin:"nafihghfcpikebhfhdhljejkcifgbdahdhngepfb"},
+    data => {
+        // Process game enable state
+        // See result format below
+    }
+);
+```
+
+Result format:
+
+```js
+const data  = {
+    "games": {                // Map of targeted games
+      "5426": {               // Game id
+          isActive: true,     // Is tab active for this game
+          isGameActive: true, // Is game active in Game Summary
+          index: 0            // Position of the tab for this game
+      },
+      "10798": {
+          isActive: false,
+          isGameActive: true,
+          index: 2
+      }
+    }
+ }
+```
+
 * **[overwolf.extensions.sharedData.onChanged Event](../api/overwolf-extensions-sharedData#onchanged)**: Fired when Game Summary changes your app tab settings data, mainly when the user enables/disables your tab.
 
 
