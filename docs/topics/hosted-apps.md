@@ -4,9 +4,9 @@ title: Game Summary: Hosted Apps
 sidebar_label: Game Summary Hosted Apps
 ---
 
-Game Summary is a customizable "browser" for post-matchpost match apps.  
+Game Summary is a customizable post-match 'browser' in which apps can provide value.  
 
-Here are some screenshots of different OW apps that hosted as tabs for game summary:
+Here are some screenshots showing what different OW apps did with their Game Summary tabs:
 
 <div class="box" data-slick='{"slidesToShow": 1}'>
   <a data-fancybox="gallery" data-caption="game Summary apps" href="../assets/hosted-apps/gs-screenshot-1.png">
@@ -37,8 +37,8 @@ Here are some screenshots of different OW apps that hosted as tabs for game summ
 
 ## Supported Games
 
-You can host your OW app as a tab for game summary.  
-This feature is currenly supported if your app is targeted to one of the following games:
+You can host your OW app as a tab on game summary.  
+This feature is currenly supported if your app is built for one of the following games:
 
 * League of Legends
 * CS:GO
@@ -51,15 +51,15 @@ This feature is currenly supported if your app is targeted to one of the followi
 * Tom Clancy’s Rainbow Six: Siege
 * World of Tanks
 * World of Warships
-* Heroes of the Storm.
+* Heroes of the Storm
 
 ## Sample App
 
-Please take a look at our [Game Summary tab sample app](https://github.com/overwolf) to quickly understand how developing your tab works.
+Please take a look at our [Game Summary tab sample app](https://github.com/overwolf) to quickly understand how developing your app's tab works.
 
 ## Integrate your app with Game Summary
 
-Integrating your app to be hosted as a Game Summary tab is easily done with these 3 steps:
+Integrating your app to be hosted as a Game Summary tab is easily done in 3 steps:
 
 1. [Declare your tab](#declare-your-tab) -  Let Game Summary know that you want to be hosted.  
 2. [Build tab content](#build-tab-content) - Show post match content and respond to user interactions.  
@@ -67,7 +67,7 @@ Integrating your app to be hosted as a Game Summary tab is easily done with thes
 
 ### Declare your tab
 
-To be able to host your app in Game Summary, you must add a [service_providers](../api/manifest-json#service_providers) object in your app’s manifest (nested under the "data" Object):
+To be able to host your app in Game Summary, you must add a [service_provider](../api/manifest-json#service_providers) object in your app’s manifest (nested under the "data" Object):
 
 ```json
  "service_providers": {
@@ -83,7 +83,7 @@ To be able to host your app in Game Summary, you must add a [service_providers](
  }
 ```
 
-With the above declaration, you define the game summary built-in app (UID `nafihghfcpikebhfhdhljejkcifgbdahdhngepfb`) as your hosting app, and you are providing the `game_summary_tab` object with the enclosed data:
+The above declaration defines the game summary built-in app (UID `nafihghfcpikebhfhdhljejkcifgbdahdhngepfb`) as your hosting app, and you are providing a `game_summary_tab` object with the enclosed data:
 
 | Name           | Type  |  Description                                                                                                       | 
 |----------------|-------| ------------------------------------------------------------------------------------------------------------------ |
@@ -91,15 +91,15 @@ With the above declaration, you define the game summary built-in app (UID `nafih
 | game_targeting | array |  The list of games that are supported by your app. Game Summary will add your tab for each supported game. </br>Provide the game id: {"game": game id }  | 
 | tab_icon       | string | A link to the icon to be used in the tab navigation                                                               | 
 | tab_title      | string | A title to be used for your tab                                                                                   | 
-| tab_tooltip    | string |  (Optional) A short name to be used as a tool tip message when hovering the tab icon. tab_title  will be used in case this field is not provided  | 
+| tab_tooltip    | string |  (Optional) A short name to be used as a tooltip when hovering over the tab icon. tab_title  will be used in case this field is not provided  | 
 
-Apps with the above declaration will be added as a tab to Game Summary for the targeted games. The user will be able to enable/disable your tab in the Game Summary settings.
+Apps with the above declaration will be added as a tab to Game Summary for the targeted games. Users will be able to enable/disable your tab in their Game Summary settings.
 
 ### Build tab content
 
-This section describes how your tab content can communicate with Game Summary, mainly used to receive the selected match. You will only be able to use this API when Game Summary index window is open, and your page is hosted inside the content iFrame.
+This section describes how your tab content can communicate with Game Summary. You will only be able to use this API when the Game Summary index window is open, and your page is hosted inside the content iFrame.
 
-Game Summary tab content should present information relevant to the selected match.  
+Game Summary content should focus on presenting information relevant to the currently selected match.  
 
 In order to know which match is selected, and some other useful functionality, you should use the following "overwolf.gamesummary" API functions and events:
 
@@ -115,11 +115,11 @@ In order to know which match is selected, and some other useful functionality, y
 
 ### Integrate with your app
 
-This section describes how your app can communicate with Game Summary, mainly used to determine if the tab is enabled or not. See notes below for more info.
+This part describes how your app can communicate with Game Summary, mainly used to determine if the tab is enabled or not. See notes below for more info.
 
-Your app should only collect the data needed for the tab content if the user has your tab enabled and active inside Game Summary.  
+Remember - your app should only collect the data needed for tab content if the user has your tab enabled and active inside Game Summary. 
 
-In order to know if your tab is enabled, and some other useful functionality, you should use the following [overwolf.extensions.sharedData](../api/overwolf-extensions-sharedData) API functions and events:
+In order to know if your tab is enabled, you should use the following [overwolf.extensions.sharedData](../api/overwolf-extensions-sharedData) API functions and events:
 
 * **[overwolf.extensions.sharedData.get()](../api/overwolf-extensions-sharedData#getshareddataparams-param-callback)**: Retrieve your app data from Game Summary.
 * **[overwolf.extensions.sharedData.onChanged Event](../api/overwolf-extensions-sharedData#onchanged)**: Fired when Game Summary changes your app tab settings data, mainly when the user enables/disables your tab.
