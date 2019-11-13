@@ -27,6 +27,9 @@ No logs.
 Fortnite
 --------
 
+**Investigating** - Fortnite events are down due to major game patch.  
+Nov 13, 14:32 PM GMT+3
+
 **Resolved** - This incident has been resolved.  
 Nov 01, 07:20 PM GMT+3
 
