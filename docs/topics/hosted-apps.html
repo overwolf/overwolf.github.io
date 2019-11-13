@@ -156,8 +156,27 @@ This feature is currenly supported if your app is built for one of the following
 <p>In order to know which match is selected, and some other useful functionality, you should use the following &quot;overwolf.gamesummary&quot; API functions and events:</p>
 <ul>
 <li><strong><a href="">overwolf.gamesummary.getCurrentMatch()</a></strong>: Returns the current game and match. If no match is selected yet returns null.</li>
+</ul>
+<p>Usage example:</p>
+<pre><code class="hljs css language-js">_handleGetCurrentMatch = <span class="hljs-function">(<span class="hljs-params">gameId, matchId</span>) =&gt;</span> {
+  <span class="hljs-comment">// Show content based on "gameId" (int) and matchId (string)</span>
+}
+ 
+<span class="hljs-comment">// Async get current match</span>
+overwolf.gamesummary.getCurrentMatch(_handleGetCurrentMatch);
+</code></pre>
+<ul>
 <li><strong><a href="">overwolf.gamesummary.onMatchChanged Event</a></strong>: Fired when the user selects a new match.</li>
 </ul>
+<p>Usage example:</p>
+<pre><code class="hljs css language-js">_handleOnMatchChanged = <span class="hljs-function">(<span class="hljs-params">gameId, matchId</span>) =&gt;</span> {
+  <span class="hljs-comment">// Change content based on "gameId" (int) and matchId (string)</span>
+}
+ <span class="hljs-comment">// Add a new listener</span>
+overwolf.gamesummary.onMatchChanged.addListener(_handleOnMatchChanged); 
+<span class="hljs-comment">// Remove existing listener</span>
+overwolf.gamesummary.onMatchChanged.removeListener(_handleOnMatchChanged)
+</code></pre>
 <h4><a class="anchor" aria-hidden="true" id="notes"></a><a href="#notes" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Notes</h4>
 <ol>
 <li>When your tab is first loaded, register to <a href="">onMatchChanged</a> to be notified when the user changes a match.</li>
@@ -171,6 +190,33 @@ This feature is currenly supported if your app is built for one of the following
 <p>In order to know if your tab is enabled, you should use the following <a href="../api/overwolf-extensions-sharedData">overwolf.extensions.sharedData</a> API functions and events:</p>
 <ul>
 <li><strong><a href="../api/overwolf-extensions-sharedData#getshareddataparams-param-callback">overwolf.extensions.sharedData.get()</a></strong>: Retrieve your app data from Game Summary.</li>
+</ul>
+<p>Usage example:</p>
+<pre><code class="hljs css language-js">overwolf.extensions.sharedData.get(
+    {<span class="hljs-attr">origin</span>:<span class="hljs-string">"nafihghfcpikebhfhdhljejkcifgbdahdhngepfb"</span>},
+    data =&gt; {
+        <span class="hljs-comment">// Process game enable state</span>
+        <span class="hljs-comment">// See result format below</span>
+    }
+);
+</code></pre>
+<p>Result format:</p>
+<pre><code class="hljs css language-js"><span class="hljs-keyword">const</span> data  = {
+    <span class="hljs-string">"games"</span>: {                <span class="hljs-comment">// Map of targeted games</span>
+      <span class="hljs-string">"5426"</span>: {               <span class="hljs-comment">// Game id</span>
+          <span class="hljs-attr">isActive</span>: <span class="hljs-literal">true</span>,     <span class="hljs-comment">// Is tab active for this game</span>
+          <span class="hljs-attr">isGameActive</span>: <span class="hljs-literal">true</span>, <span class="hljs-comment">// Is game active in Game Summary</span>
+          <span class="hljs-attr">index</span>: <span class="hljs-number">0</span>            <span class="hljs-comment">// Position of the tab for this game</span>
+      },
+      <span class="hljs-string">"10798"</span>: {
+          <span class="hljs-attr">isActive</span>: <span class="hljs-literal">false</span>,
+          <span class="hljs-attr">isGameActive</span>: <span class="hljs-literal">true</span>,
+          <span class="hljs-attr">index</span>: <span class="hljs-number">2</span>
+      }
+    }
+ }
+</code></pre>
+<ul>
 <li><strong><a href="../api/overwolf-extensions-sharedData#onchanged">overwolf.extensions.sharedData.onChanged Event</a></strong>: Fired when Game Summary changes your app tab settings data, mainly when the user enables/disables your tab.</li>
 </ul>
 <h4><a class="anchor" aria-hidden="true" id="notes-1"></a><a href="#notes-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Notes</h4>
@@ -180,7 +226,7 @@ This feature is currenly supported if your app is built for one of the following
 <li>If your tab is disabled for a game, the user expects that you will not collect any data needed only for the tab content. It is even more important if your app may impact the game’s performance (For example, the user will not want highlights to be recorded for LOL when the Game Highlights tab is disabled for LOL).</li>
 <li>As a best practice, once your app wakes up due to a new game start, check if your app tab is enabled for this game. If it does, go on and collect data as you need. If it doesn’t, don’t collect the tab content data. If your app only works as a Game Summary tab, terminate the process altogether.</li>
 </ol>
-</span></div></article></div><div class="docLastUpdate"><em>Last updated on 2019-11-13 by Shoomanjin</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/topics/type-definition-file"><span class="arrow-prev">← </span><span>Type Definition File</span></a><a class="docs-next button" href="/docs/topics/promoting-your-app"><span>Promoting your app</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#supported-games">Supported Games</a></li><li><a href="#sample-app">Sample App</a></li><li><a href="#integrate-your-app-with-game-summary">Integrate your app with Game Summary</a><ul class="toc-headings"><li><a href="#declare-your-tab">Declare your tab</a></li><li><a href="#build-tab-content">Build tab content</a></li><li><a href="#integrate-with-your-app">Integrate with your app</a></li></ul></li></ul></nav></div><footer class="site-footer"><div class="container"><ul><li>Legal</li><li><a href="/docs/topics/legal-overview">Terms overview</a></li><li><a href="/docs/topics/legal-developers-terms">Developer&#x27;s terms</a></li><li><a href="/docs/topics/legal-app-terms">App terms</a></li><li><a href="http://www.overwolf.com/legal/" target="_blank">Overwolf terms</a></li><li><a href="http://www.overwolf.com/legal/#Privacy-policy" target="_blank">Overwolf Privacy policy</a></li></ul><ul><li>Support</li><li><a href=" https://discuss.developers.overwolf.com/" target="_blank">Questions and Answers</a></li><li><a href="https://discordapp.com/invite/cjjrZDp" target="_blank">Discord</a></li><li><a href="/docs/support/contact-us#join-our-slack">Slack</a></li><li><a href="https://www.facebook.com/OverwolfDevs" target="_blank">Facebook</a></li><li><a href="https://twitter.com/OverwolfDevs" target="_blank">Twitter</a></li></ul><ul><li>Documentation</li><li><a href="/docs/api/changelog">Changelog</a></li><li><a href="/docs/api/overwolf-api-overview">API</a></li><li><a href="/docs/start/app-creation-process">App Creation Process</a></li><li><a href="/docs/topics/best-practices-overview">Best Practices</a></li><li><a href="/docs/status/all">Game Events status</a></li></ul><ul><li>Information</li><li><a href="http://www.overwolf.com/careers/">Careers</a></li><li><a href="https://play.overwolf.com/fund/" target="_blank">Fund</a></li><li><a href="https://medium.com/overwolf-developers" target="_blank">Developers Blog</a></li><li><a href="https://www.overwolf.com/appstore" target="_blank">Overwolf Appstore</a></li></ul></div></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+</span></div></article></div><div class="docLastUpdate"><em>Last updated on 2019-11-13 by eransharv</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/topics/type-definition-file"><span class="arrow-prev">← </span><span>Type Definition File</span></a><a class="docs-next button" href="/docs/topics/promoting-your-app"><span>Promoting your app</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#supported-games">Supported Games</a></li><li><a href="#sample-app">Sample App</a></li><li><a href="#integrate-your-app-with-game-summary">Integrate your app with Game Summary</a><ul class="toc-headings"><li><a href="#declare-your-tab">Declare your tab</a></li><li><a href="#build-tab-content">Build tab content</a></li><li><a href="#integrate-with-your-app">Integrate with your app</a></li></ul></li></ul></nav></div><footer class="site-footer"><div class="container"><ul><li>Legal</li><li><a href="/docs/topics/legal-overview">Terms overview</a></li><li><a href="/docs/topics/legal-developers-terms">Developer&#x27;s terms</a></li><li><a href="/docs/topics/legal-app-terms">App terms</a></li><li><a href="http://www.overwolf.com/legal/" target="_blank">Overwolf terms</a></li><li><a href="http://www.overwolf.com/legal/#Privacy-policy" target="_blank">Overwolf Privacy policy</a></li></ul><ul><li>Support</li><li><a href=" https://discuss.developers.overwolf.com/" target="_blank">Questions and Answers</a></li><li><a href="https://discordapp.com/invite/cjjrZDp" target="_blank">Discord</a></li><li><a href="/docs/support/contact-us#join-our-slack">Slack</a></li><li><a href="https://www.facebook.com/OverwolfDevs" target="_blank">Facebook</a></li><li><a href="https://twitter.com/OverwolfDevs" target="_blank">Twitter</a></li></ul><ul><li>Documentation</li><li><a href="/docs/api/changelog">Changelog</a></li><li><a href="/docs/api/overwolf-api-overview">API</a></li><li><a href="/docs/start/app-creation-process">App Creation Process</a></li><li><a href="/docs/topics/best-practices-overview">Best Practices</a></li><li><a href="/docs/status/all">Game Events status</a></li></ul><ul><li>Information</li><li><a href="http://www.overwolf.com/careers/">Careers</a></li><li><a href="https://play.overwolf.com/fund/" target="_blank">Fund</a></li><li><a href="https://medium.com/overwolf-developers" target="_blank">Developers Blog</a></li><li><a href="https://www.overwolf.com/appstore" target="_blank">Overwolf Appstore</a></li></ul></div></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
                 document.addEventListener('keyup', function(e) {
                   if (e.target !== document.body) {
                     return;
