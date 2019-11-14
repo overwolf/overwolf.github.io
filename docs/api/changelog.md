@@ -13,8 +13,8 @@ Follow this entry for ongoing updates and changes to the project or tools:
   * error: always being non-null.
 * New Event: [overwolf.extensions.onExtensionUpdated](overwolf-extensions#onextensionupdated). Notify when the app was updated.  
   This event will replace the depracated "overwolf.extensions.onExtensionUpdateStateChanged" event.   
-  Fires after the current app was successfully updated.
-* We updated the [recommended process](../start/submit-an-app-update#forced-user-updates) for manually update your app.
+  Fires after the current app were successfully updated.
+* We updated the [recommended process](../start/submit-an-app-update#forced-user-updates) for manual update of your app.
 * [overwolf.tobii](overwolf-tobii): this API has been deprecated.
 * [League of Legends Launcher Events](overwolf-games-launchers-events-lol#docsNav)
   * New event:
