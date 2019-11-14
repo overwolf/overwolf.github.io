@@ -4,48 +4,32 @@ title: overwolf.gamesummary API
 sidebar_label: overwolf.gamesummary
 ---
 
-Use the `overwolf-gamesummary` API to.
- 
+Provides information about the currently running game.
+
+:::important
+This API is accessible only if your app is hosted in the Game Summary container.  
+Read more in our [hosted apps](../topics/hosted-apps) guide.
+:::
 
 ## Methods Reference
 
-* [overwolf.extensions.launch()](#launchuid-parameter)
+* [overwolf.gamesummary.getCurrentMatch()](#getcurrentmatchcallback)
 
 ## Events Reference
 
-* [overwolf.extensions.onAppLaunchTriggered](#onapplaunchtriggered)
+* [overwolf.gamesummary.onMatchChanged](#onmatchchanged)
 
-## launch(uid , parameter)
-#### Version added: 0.78
+## getCurrentMatch(callback)
+#### Version added: 0.137
 
-> Launch an extension by unique ID.
+> Returns the current game and match. If no match is selected yet, returns null.
 
-Parameter | Type                  | Description                                                                           |
---------- | ----------------------| ------------------------------------------------------------------------------------- |
-uid       | string                | Extension unique ID                                                               |
-parameter | Object (optional)     | A parameter passed to the extension. The extension may or may not use this parameter |
-
-
-Retrieve a service object by ID, which will usually provide external APIs.
-
-Parameter | Type                  | Description                                                                              |
---------- | ----------------------| ---------------------------------------------------------------------------------------- |
-id        | string                | Service ID                                                                           |
-callback  | function              | A function called with the service, if found, and a flag indicating success or failure |
+Parameter | Type                  | Description                                                                            |
+--------- | ----------------------| -------------------------------------------------------------------------------------- |
+callback  | function              | A callback function                                                                    |
 
 
+## onMatchChanged
+#### Version added: 0.137
 
-
-## onAppLaunchTriggered
-#### Version added: 0.92
-
-> Fires when the current app is launched while already running. This is useful in the case where the app has custom logic for clicking its dock button while it is already running.
-
-### The origin string
-
-The event returns an `origin` string which returns what triggered the app launch:
-
-```json
-overwolf-extension://hffhbjnafafjnehejohpkfhjdenpifhihebpkhni/index.html?source=gamelaunchevent
-```
-
+> Fires when the user selects a new match.

@@ -10,24 +10,24 @@ Here are some screenshots showing what different OW apps did with their Game Sum
 
 <div class="box" data-slick='{"slidesToShow": 1}'>
   <a data-fancybox="gallery" data-caption="game highlights app" href="../assets/hosted-apps/gs-screenshot-1.png">
-    Game Summary app
+    Game Highlights app
     <span class="thumb">
       <img src="../assets/hosted-apps/gs-screenshot-1.png">
     </span>
   </a>
-  <a data-fancybox="gallery" data-caption="Legendary Builds" href="../assets/hosted-apps/gs-screenshot-2.png">
+  <a data-fancybox="gallery" data-caption="Game Performance Optimizer app" href="../assets/hosted-apps/gs-screenshot-2.png">
     Game Performance Optimizer app
     <span class="thumb">
       <img src="../assets/hosted-apps/gs-screenshot-2.png">
     </span>
   </a>
-  <a data-fancybox="gallery" data-caption="Legendary Builds" href="../assets/hosted-apps/gs-screenshot-3.png">
+  <a data-fancybox="gallery" data-caption="APM app" href="../assets/hosted-apps/gs-screenshot-3.png">
     APM app
     <span class="thumb">
       <img src="../assets/hosted-apps/gs-screenshot-3.png">
     </span>
   </a>
-  <a data-fancybox="gallery" data-caption="Legendary Builds" href="../assets/hosted-apps/gs-screenshot-4.png">
+  <a data-fancybox="gallery" data-caption="Videos and Streams app" href="../assets/hosted-apps/gs-screenshot-4.png">
     Videos and Streams app
     <span class="thumb">
       <img src="../assets/hosted-apps/gs-screenshot-4.png">
@@ -103,7 +103,7 @@ Game Summary content should focus on presenting information relevant to the curr
 
 In order to know which match is selected, and some other useful functionality, you should use the following "overwolf.gamesummary" API functions and events:
 
-* **[overwolf.gamesummary.getCurrentMatch()]()**: Returns the current game and match. If no match is selected yet returns null.
+* **[overwolf.gamesummary.getCurrentMatch()](../api/overwolf-gamesummary#getcurrentmatchcallback)**: Returns the current game and match. If no match is selected yet returns null.
 
 Usage example:
 
@@ -116,7 +116,7 @@ _handleGetCurrentMatch = (gameId, matchId) => {
 overwolf.gamesummary.getCurrentMatch(_handleGetCurrentMatch);
 ```
 
-* **[overwolf.gamesummary.onMatchChanged Event]()**: Fired when the user selects a new match.
+* **[overwolf.gamesummary.onMatchChanged Event](../api/overwolf-gamesummary#getcurrentmatchcallback)**: Fired when the user selects a new match.
 
 Usage example:
 
