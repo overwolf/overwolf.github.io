@@ -14,7 +14,7 @@ To develop, load or run unpacked or unreleased apps, you have to [whitelist](../
 
 ## Developers Version
 
-* Download the [Latest Overwolf Developers Client](https://download.overwolf.com/install/Download?Name=Game+Summary&ExtensionId=flkgdpkkjcoapbgmgpidhepajgkhckpgpibmlclb&Channel=developers).
+* Download the [Latest Overwolf Developers Client](https://download.overwolf.com/install/Download?Name=Game+Summary&ExtensionId=flkgdpkkjcoapbgmgpidhepajgkhckpgpibmlclb&Channel=Developers).
 
 
 ## Public Version

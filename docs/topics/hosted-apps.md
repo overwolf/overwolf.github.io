@@ -9,7 +9,7 @@ Game Summary is a customizable post-match 'browser' in which apps can provide va
 Here are some screenshots showing what different OW apps did with their Game Summary tabs:
 
 <div class="box" data-slick='{"slidesToShow": 1}'>
-  <a data-fancybox="gallery" data-caption="game Summary apps" href="../assets/hosted-apps/gs-screenshot-1.png">
+  <a data-fancybox="gallery" data-caption="game highlights app" href="../assets/hosted-apps/gs-screenshot-1.png">
     Game Summary app
     <span class="thumb">
       <img src="../assets/hosted-apps/gs-screenshot-1.png">
