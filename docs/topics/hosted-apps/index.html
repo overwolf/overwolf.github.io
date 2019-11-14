@@ -72,24 +72,24 @@
 <p>Here are some screenshots showing what different OW apps did with their Game Summary tabs:</p>
 <div class="box" data-slick='{"slidesToShow": 1}'>
   <a data-fancybox="gallery" data-caption="game highlights app" href="../assets/hosted-apps/gs-screenshot-1.png">
-    Game Summary app
+    Game Highlights app
     <span class="thumb">
       <img src="../assets/hosted-apps/gs-screenshot-1.png">
     </span>
   </a>
-  <a data-fancybox="gallery" data-caption="Legendary Builds" href="../assets/hosted-apps/gs-screenshot-2.png">
+  <a data-fancybox="gallery" data-caption="Game Performance Optimizer app" href="../assets/hosted-apps/gs-screenshot-2.png">
     Game Performance Optimizer app
     <span class="thumb">
       <img src="../assets/hosted-apps/gs-screenshot-2.png">
     </span>
   </a>
-  <a data-fancybox="gallery" data-caption="Legendary Builds" href="../assets/hosted-apps/gs-screenshot-3.png">
+  <a data-fancybox="gallery" data-caption="APM app" href="../assets/hosted-apps/gs-screenshot-3.png">
     APM app
     <span class="thumb">
       <img src="../assets/hosted-apps/gs-screenshot-3.png">
     </span>
   </a>
-  <a data-fancybox="gallery" data-caption="Legendary Builds" href="../assets/hosted-apps/gs-screenshot-4.png">
+  <a data-fancybox="gallery" data-caption="Videos and Streams app" href="../assets/hosted-apps/gs-screenshot-4.png">
     Videos and Streams app
     <span class="thumb">
       <img src="../assets/hosted-apps/gs-screenshot-4.png">
@@ -155,7 +155,7 @@ This feature is currenly supported if your app is built for one of the following
 <p>Game Summary content should focus on presenting information relevant to the currently selected match.</p>
 <p>In order to know which match is selected, and some other useful functionality, you should use the following &quot;overwolf.gamesummary&quot; API functions and events:</p>
 <ul>
-<li><strong><a href="">overwolf.gamesummary.getCurrentMatch()</a></strong>: Returns the current game and match. If no match is selected yet returns null.</li>
+<li><strong><a href="../api/overwolf-gamesummary#getcurrentmatchcallback">overwolf.gamesummary.getCurrentMatch()</a></strong>: Returns the current game and match. If no match is selected yet returns null.</li>
 </ul>
 <p>Usage example:</p>
 <pre><code class="hljs css language-js">_handleGetCurrentMatch = <span class="hljs-function">(<span class="hljs-params">gameId, matchId</span>) =&gt;</span> {
@@ -166,7 +166,7 @@ This feature is currenly supported if your app is built for one of the following
 overwolf.gamesummary.getCurrentMatch(_handleGetCurrentMatch);
 </code></pre>
 <ul>
-<li><strong><a href="">overwolf.gamesummary.onMatchChanged Event</a></strong>: Fired when the user selects a new match.</li>
+<li><strong><a href="../api/overwolf-gamesummary#getcurrentmatchcallback">overwolf.gamesummary.onMatchChanged Event</a></strong>: Fired when the user selects a new match.</li>
 </ul>
 <p>Usage example:</p>
 <pre><code class="hljs css language-js">_handleOnMatchChanged = <span class="hljs-function">(<span class="hljs-params">gameId, matchId</span>) =&gt;</span> {
