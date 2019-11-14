@@ -8,7 +8,7 @@ Follow this entry for ongoing updates and changes to the project or tools:
 
 ## Version 0.138 (Nov. 2019)
 
-* New Result object for all the callback functions in the API: From now on, all the callbacks types will inherit from a Result object, which contain two fielsd:
+* New Result object for all the callback functions in the API: From now on, all the callbacks types will inherit from a Result object, which contain two fields:
   * success: boolean.  
   * error: always being non-null.
 * New Event: [overwolf.extensions.onExtensionUpdated](overwolf-extensions#onextensionupdated). Notify when the app was updated.  
