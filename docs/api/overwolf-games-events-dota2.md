@@ -496,6 +496,8 @@ key               | Category    | Values                    | Notes             
 players           | roster      | 	A string holding a JSON array of player objects.|See [notes](#players-note)|  77.3 |
 bans           | roster      | 	A string holding a JSON array of bans objects.|See [notes](#bans-note)| 114.1 |
 draft           | roster      | A string holding a JSON array of bans objects.|See [notes](#draft-note)| 114.1 |
+role           | roster      | Specific numbers that indicate the role of the player. |See [notes](#role-note)| 138.0 |
+
 
 #### *players* note
 
@@ -574,6 +576,28 @@ Notes:
 3 – Dire
 0 – Not in team
 “heroId” – [Heroes IDs](https://github.com/kronusme/dota2-api/blob/master/data/heroes.json) (0 if still not picked)
+
+#### *role* note
+
+Possible values:
+
+1  - Safelane
+
+2  - Offlane
+
+4  - Midlane
+
+8  - Other
+
+16 - HardSupport
+
+8888 - Spectator
+
+Data Example:
+
+```json
+{"steamId":"76561198386503267","name":"THUGLIFE_","pickConfirmed":false,"hero":"","team":2,"role":8}
+```
 
 ## `party`
 
