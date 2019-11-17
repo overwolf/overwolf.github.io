@@ -4,9 +4,11 @@ title: Overwolf Type Definition File
 sidebar_label: Type Definition File
 ---
 
-:::note
-You can find the Overwolf API ts definition file [here](https://github.com/overwolf/community-gists/tree/master/typescript)
+:::important
+Even if your application not uses TypeScript at all, you can use the type definition files for autocompletion and documentation purposes. More details [here](#using-overwolfdts-file).
 :::
+
+**You can find the Overwolf API ts definition file [here](https://github.com/overwolf/community-gists/tree/master/typescript)**
 
 ## TypeScript overview
 
