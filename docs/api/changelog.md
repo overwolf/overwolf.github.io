@@ -19,6 +19,9 @@ This means no more if (!result || !result.status ...) checks. Instead, this shou
 * [League of Legends Launcher Events](overwolf-games-launchers-events-lol#docsNav)
   * New event:
     * match_clock
+* [Dota 2 Events](overwolf-games-launchers-events-dota2#docsNav)
+  * New info-update:
+    * role
   
 ## Version 0.137 (Nov. 2019)
 
