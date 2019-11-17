@@ -11,6 +11,7 @@ Follow this entry for ongoing updates and changes to the project or tools:
 * All API functions that take callback arguments:  
 from now on, we guarantee that a non-null result object parameter will always be returned and it will always contain a |success| boolean field.  
 This means no more if (!result || !result.status ...) checks. Instead, this should always work: if (result.success).
+* New Overwolf definition file addition -  make your lives easier and your coding experience faster. Full details can be found [here](../topics/type-definition-file).
 * New Event: [overwolf.extensions.onExtensionUpdated](overwolf-extensions#onextensionupdated). Notify when the app was updated.  
   This event will replace the depracated "overwolf.extensions.onExtensionUpdateStateChanged" event.   
   Fires after the current app were successfully updated.
