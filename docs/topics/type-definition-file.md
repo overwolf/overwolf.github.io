@@ -5,7 +5,7 @@ sidebar_label: Type Definition File
 ---
 
 :::note
-We will release the defenition file on the next few days
+You can find the Overwolf API ts definition file [here](https://github.com/overwolf/community-gists/tree/master/typescript)
 :::
 
 ## TypeScript overview
@@ -23,6 +23,7 @@ var anyObject: any;
 // count is a number
 var count: number;
 
+
 // regexPatterns is an array of regular expressions
 var regexPatterns: RegExp[];
 
@@ -35,8 +36,6 @@ but how does TypeScript know about the types of variables and functions of exist
 ## TypeScript definition files overview
 
 Type definition files allow you to provide type information for JavaScript code that is by itself (by its very nature) not statically typed. The file extension for such a file is “d.ts”, where d stands for definition. Type definition files make it possible to enjoy the benefits of type checking, autocompletion, and member documentation.
-
-**You can find the Overwolf API ts definition file [here](https://github.com/overwolf/community-gists/tree/master/typescript)**.
 
 
 ## Using overwolf.d.ts file
