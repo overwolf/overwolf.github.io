@@ -15,22 +15,16 @@ Here are some screenshots showing what different OW apps did with their Game Sum
       <img src="../assets/hosted-apps/gs-screenshot-1.png">
     </span>
   </a>
-  <a data-fancybox="gallery" data-caption="Game Performance Optimizer app" href="../assets/hosted-apps/gs-screenshot-2.png">
+  <a data-fancybox="gallery" data-caption="APM app" href="../assets/hosted-apps/gs-screenshot-2.png">
     Game Performance Optimizer app
     <span class="thumb">
       <img src="../assets/hosted-apps/gs-screenshot-2.png">
     </span>
   </a>
-  <a data-fancybox="gallery" data-caption="APM app" href="../assets/hosted-apps/gs-screenshot-3.png">
-    APM app
-    <span class="thumb">
-      <img src="../assets/hosted-apps/gs-screenshot-3.png">
-    </span>
-  </a>
-  <a data-fancybox="gallery" data-caption="Videos and Streams app" href="../assets/hosted-apps/gs-screenshot-4.png">
+  <a data-fancybox="gallery" data-caption="Videos and Streams app" href="../assets/hosted-apps/gs-screenshot-3.png">
     Videos and Streams app
     <span class="thumb">
-      <img src="../assets/hosted-apps/gs-screenshot-4.png">
+      <img src="../assets/hosted-apps/gs-screenshot-3.png">
     </span>
   </a>
 </div>
