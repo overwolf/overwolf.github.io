@@ -496,18 +496,13 @@ key               | Category    | Values                    | Notes             
 players           | roster      | 	A string holding a JSON array of player objects.|See [notes](#players-note)|  77.3 |
 bans           | roster      | 	A string holding a JSON array of bans objects.|See [notes](#bans-note)| 114.1 |
 draft           | roster      | A string holding a JSON array of bans objects.|See [notes](#draft-note)| 114.1 |
-role           | roster      | Specific numbers that indicate the role of the player. |See [notes](#role-note)| 138.0 |
-
 
 #### *players* note
 
 Data Example:
 
 ```json
-"[{"steamId":"90071996842377219","name":"Alfred Bot","team":2,"hero":43},
-{"steamId":"90071996842377217","name":"Benjamin Bot","team":0,"hero":0},
-...
-{"steamId":"90071996842377216","name":"Monty Bot","team":2,"hero":47}]"
+{"steamId":"76561198386503267","name":"THUGLIFE_","pickConfirmed":false,"hero":"","team":2,"role":8}
 ```
 
 Player object structure:
@@ -518,6 +513,7 @@ Player object structure:
   "name": "player name in game",
   "team": teamId,
   "hero": heroId
+  "role": number
 }
 ```
 
@@ -579,6 +575,8 @@ Notes:
 
 #### *role* note
 
+Part of `players` key.
+
 Possible values:
 
 1  - Safelane
@@ -591,13 +589,7 @@ Possible values:
 
 16 - HardSupport
 
-8888 - Spectator
-
-Data Example:
-
-```json
-{"steamId":"76561198386503267","name":"THUGLIFE_","pickConfirmed":false,"hero":"","team":2,"role":8}
-```
+888\any other number - Can be received during bot matchups and should be ignored.
 
 ## `party`
 
