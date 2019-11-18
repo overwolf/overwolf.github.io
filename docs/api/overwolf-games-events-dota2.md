@@ -513,7 +513,7 @@ Player object structure:
   "name": "player name in game",
   "team": teamId,
   "hero": heroId
-  "role": number
+  "role": int
 }
 ```
 
