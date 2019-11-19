@@ -44,7 +44,7 @@ Type definition files allow you to provide type information for JavaScript code 
 
 Even if your application uses plain JavaScript and no TypeScript at all, you can use the type definition files for autocompletion and documentation purposes. Simply include them in your Visual Studio Code project.  will then include the found types in its auto-completion list, given that you've got TypeScript installed:
 
-![alt-text](assets/ts-def-file.png)
+![alt-text](assets/def-file-demo.gif)
 
 Of course, you won't get the benefit of type checking because you're not actually using TypeScript, but still, the provided information can be very helpful for working with the dynamic and loosely typed language that is JavaScript.
 
