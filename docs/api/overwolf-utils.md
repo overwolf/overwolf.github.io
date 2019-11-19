@@ -193,6 +193,16 @@ Parameter   | Type     | Description                                 |
 ----------- | ---------| --------------------------------------------|
 url         | string   | A url to open                               |
 
+## openUrlInOverwolfBrowser(targetTabName)
+#### Version added: 0.91
+
+> Opens the url in Overwolf's browser.
+
+Parameter      | Type     | Description                                                                  |
+-------------- | ---------| -----------------------------------------------------------------------------|
+url            | string   | A url to open                                                                |
+targetTabName  | string   | [optional] a target tab - so that multiple calls will end up in the same tab |
+
 ## getSystemInformation(callback)
 #### Version added: 0.92
 
