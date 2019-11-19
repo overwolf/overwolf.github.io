@@ -278,11 +278,187 @@ totalMvps | player  |	Total MVP awards	 	            |                       |  
 score | player  |	Score in a match	            |                       |     70.0       |
 team | player  |	T / CT	                            |                       |     70.0       |
 steamid | player  |	The player’s steam id	            |                       |     70.0       |
-map | round            |	Map name	            |                       |     70.0       |
+map | round            |	Map name	            | See [notes](#map-note) |     70.0       |
 mode | round  |	Map mode (for example: "casual")            |                       |     70.0       |
 numOfRound | round  |	Round number in the match (starting 0)|                     |     70.0       |
 phase | round  |Match phase<ul><li>warmup</li><li>live</li><li>freezetime</li><li>over|    |     70.0       |
 scene | scene  |<ul><li>MainMenu</li><li>LoadingScreen</li><li>Game</li><li>MenuInGame(ESC)|  |     70.0       |
+
+#### *map* note
+
+List of all the map names and data:
+
+Casual/Ranked/Deathmatch Maps:
+
+* Dust II
+
+```json
+{"info":{"match_info":{"game_mode":"Offline Casual Dust II"}},"feature":"match_info"}
+```
+
+* Mirage
+
+```json
+{"info":{"match_info":{"game_mode":"Offline Casual Mirage"}},"feature":"match_info"}
+```
+
+* Inferno
+
+```json
+{"info":{"match_info":{"game_mode":"Offline Casual Inferno"}},"feature":"match_info"}
+```
+
+* Vertigo
+
+```json
+{"info":{"match_info":{"game_mode":"Offline Casual Vertigo"}},"feature":"match_info"}
+```
+
+* Cobblestone
+
+```json
+{"info":{"match_info":{"game_mode":"Offline Casual Cobblestone"}},"feature":"match_info"}
+```
+
+* Cache
+
+```json
+{"info":{"match_info":{"game_mode":"Offline Casual Cache"}},"feature":"match_info"}
+```
+
+* Zoo
+
+```json
+{"info":{"match_info":{"game_mode":"Offline Casual Zoo"}},"feature":"match_info"}
+```
+
+* Breach
+
+```json
+{"info":{"match_info":{"game_mode":"Offline Casual Breach"}},"feature":"match_info"}
+```
+
+* Seaside
+
+```json
+{"info":{"match_info":{"game_mode":"Offline Casual Seaside"}},"feature":"match_info"}
+```
+
+* Train
+
+```json
+{"info":{"match_info":{"game_mode":"Offline Casual Train"}},"feature":"match_info"}
+```
+
+* Overpass
+
+```json
+{"info":{"match_info":{"game_mode":"Offline Casual Overpass"}},"feature":"match_info"}
+```
+
+* Nuke
+
+```json
+{"info":{"match_info":{"game_mode":"Offline Casual Nuke"}},"feature":"match_info"}
+```
+
+* Canals
+
+```json
+{"info":{"match_info":{"game_mode":"Offline Casual Canals"}},"feature":"match_info"}
+```
+
+* Agency
+
+```json
+{"info":{"match_info":{"game_mode":"Offline Casual Agency"}},"feature":"match_info"}
+```
+
+* Miltia
+
+```json
+{"info":{"match_info":{"game_mode":"Offline Casual Militia"}},"feature":"match_info"}
+```
+
+* Office
+
+```json
+{"info":{"match_info":{"game_mode":"Offline Casual Office"}},"feature":"match_info"}
+```
+
+* Italy
+
+```json
+{"info":{"match_info":{"game_mode":"Offline Casual Italy"}},"feature":"match_info"}
+```
+
+* Assault
+
+```json
+{"info":{"match_info":{"game_mode":"Offline Casual Assault"}},"feature":"match_info"}
+```
+
+War Games Map names:
+
+* Lake
+
+```json
+{"info":{"match_info":{"game_mode":"Offline War Games Lake"}},"feature":"match_info"}
+```
+
+* St.marc
+
+```json
+{"info":{"match_info":{"game_mode":"Offline War Games St. Marc"}},"feature":"match_info"}
+```
+
+* Safehouse
+
+```json
+{"info":{"match_info":{"game_mode":"Offline War Games Safehouse"}},"feature":"match_info"}
+```
+
+* Shoots
+
+```json
+{"info":{"match_info":{"game_mode":"Offline War Games Shoots"}},"feature":"match_info"}
+```
+
+* Baggage
+
+```json
+{"info":{"match_info":{"game_mode":"Offline War Games Baggage"}},"feature":"match_info"}
+```
+
+* Monastery
+
+```json
+{"info":{"match_info":{"game_mode":"Offline War Games Monastery"}},"feature":"match_info"}
+```
+
+* Sugarcane
+
+```json
+{"info":{"match_info":{"game_mode":"Offline War Games Sugarcane"}},"feature":"match_info"}
+```
+
+* Bank
+
+```json
+{"info":{"match_info":{"game_mode":"Offline War Games Bank"}},"feature":"match_info"}
+```
+
+* Shortdust
+
+```json
+{"info":{"match_info":{"game_mode":"Offline War Games Shortdust"}},"feature":"match_info"}
+```
+
+* Dizzy
+
+```json
+{"info":{"match_info":{"game_mode":"Offline War Games Dizzy"}},"feature":"match_info"}
+```
 
 ## `roster`
 
