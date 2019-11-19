@@ -509,12 +509,12 @@ Player object structure:
 
 ```json
 {
-  "index": "player slot"
   "steamId": "steamId string",
   "name": "player name in game",
   "team": teamId,
-  "hero": heroId
-  "role": int
+  "hero": heroId,
+  "role": role type (int),
+  "index": "player slot (int 0-9)"
 }
 ```
 
