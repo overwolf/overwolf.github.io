@@ -24,6 +24,7 @@ Common use cases:
 * [overwolf.utils.openWindowsExplorer()](#openwindowsexplorerurl-callback)
 * [overwolf.utils.isTouchDevice()](#istouchdevicecallback)
 * [overwolf.utils.openUrlInDefaultBrowser()](#openurlindefaultbrowserurl)
+* [overwolf.utils.openUrlInOverwolfBrowser()](#openurlinoverwolfbrowserurl)
 * [overwolf.utils.getSystemInformation()](#getsysteminformationcallback)
 * [overwolf.utils.getPeripherals()](#getperipheralscallback)
 * [overwolf.utils.openStoreOneAppPage()](#openstoreoneapppageappid)
