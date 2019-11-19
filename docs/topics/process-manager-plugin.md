@@ -5,7 +5,7 @@ sidebar_label: Process Manager Plugin
 ---
 
 The Overwolf Process Manager Plugin allows your app to run executable (external program, EXE file) from an Overwolf app.
-You can read the full list of functions and events available in the Process Manager Plugin in its [GitHub repository](https://github.com/overwolf/process-manager-plugin) .
+You can read the full list of functions and events available in the Process Manager Plugin in its [GitHub repository](https://github.com/overwolf/overwolf-plugins/tree/master/sample_apps/process_manager) .
 
 ## Common uses for the plugin
 
@@ -14,8 +14,8 @@ You can read the full list of functions and events available in the Process Mana
 
 ## Downloads
 
-* You can download the plugin from our [GitHub rtepository](https://github.com/overwolf/process-manager-plugin).
-* A sample Overwolf app using the Process Manager plugin can be found [here](https://github.com/overwolf/process-manager-plugin/tree/master/sampleapp).  
+* You can download the plugin from our [GitHub rtepository](https://github.com/overwolf/overwolf-plugins/tree/master/sample_apps/process_manager).
+* A sample Overwolf app using the Process Manager plugin can be found [here](https://github.com/overwolf/overwolf-plugins/tree/master/sample_apps/process_manager).  
   This app runs notepad.exe once the Overwold app is launched.
 * Note that the DLL file is placed inside of the app’s directory – so if you recompile it, you’ll need to replace the old DLL with the new one inside the folder. Please review the manifest.json file to view how to reference the Plugin file.
 * All DLLs should be compiled for the x64 platform.
