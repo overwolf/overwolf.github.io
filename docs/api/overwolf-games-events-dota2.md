@@ -502,13 +502,14 @@ draft           | roster      | A string holding a JSON array of bans objects.|S
 Data Example:
 
 ```json
-{"steamId":"76561198386503267","name":"THUGLIFE_","pickConfirmed":false,"hero":"","team":2,"role":8}
+{"steamId":"76561198095792069","name":"mladen90","pickConfirmed":false,"hero":"","team":2,"role":1,"player_index":4}
 ```
 
 Player object structure:
 
 ```json
 {
+  "index": "player slot"
   "steamId": "steamId string",
   "name": "player name in game",
   "team": teamId,
