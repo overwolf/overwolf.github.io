@@ -27,6 +27,12 @@ No logs.
 Fortnite
 --------
 
+**Investigating** - Fortnite events are down.
+Nov 20, 09:32 PM GMT+3
+
+**Resolved** - This incident has been resolved.  
+Nov 13, 20:12 PM GMT+3
+
 **Investigating** - Fortnite events are down due to major game patch.  
 Nov 13, 14:32 PM GMT+3
 
@@ -72,6 +78,9 @@ No logs.
 PUBG
 ----
 
+**Investigating** - PUBG events are down.
+Nov 20, 09:32 PM GMT+3
+
 **Resolved** - This incident has been resolved.  
 Nov 07, 10:55 PM GMT+3
 
@@ -103,6 +112,9 @@ No logs.
 
 Teamfight Tactics
 -----------------
+
+**Investigating** -  TFT game events are down.
+Nov 20, 09:32 AM GMT+3
 
 **Resolved** - This incident has been resolved.  
 Nov 07, 10:55 PM GMT+3
