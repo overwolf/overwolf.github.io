@@ -244,6 +244,7 @@ A callback function which will be called with the status of the request
       "CPU":"Intel(R) Core(TM) i5-4590 CPU @ 3.30GHz",
       "LogicalCPUCount":4,
       "PhysicalCPUCount":4,
+      "VidEncSupport ":true,
       "GPUs":[  
          {  
             "Name":"AMD Radeon HD 7900 Series",
