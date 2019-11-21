@@ -112,6 +112,8 @@ Parameter  | Type   | Description                                               
 ---------- | -------| -------------------------------------------------------------- |
 keyString  | string | The key or key combination to send, as a string. e.g. “Alt+I”  |
 
+The accepted input for the `keyString` param is identical to Microsoft's [Key enum](https://docs.microsoft.com/en-us/dotnet/api/system.windows.input.key).
+
 ## openFilePicker(filter, callback)
 #### Version added: 0.91
 #### Permissions required: FileSystem
