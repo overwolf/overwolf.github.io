@@ -35,6 +35,8 @@ If you have a refer-a-friend program, an in-app store, or prizes you want to han
 
 * Create a tutorial video for your app (we can help!).
 
+* Your app supports at least 10 languages. 
+
 ## Alpha (+ 1%)
 
 * Reach 50,000 Monthly Active Users.
