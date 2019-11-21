@@ -17,7 +17,7 @@ This means no more if (!result || !result.status ...) checks. Instead, this shou
   Fires after the current app were successfully updated.
 * We updated the [recommended process](../start/submit-an-app-update#forced-user-updates) for manual update of your app.
 * [overwolf.tobii](overwolf-tobii): this API has been deprecated.
-* [League of Legends Launcher Events](overwolf-games-launchers-events-lol#docsNav)
+* [League of Legends Events](overwolf-games-events-lol)
   * New event:
     * match_clock
 * [Dota 2 Events](overwolf-games-launchers-events-dota2#docsNav)
