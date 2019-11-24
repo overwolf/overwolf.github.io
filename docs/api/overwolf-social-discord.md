@@ -218,7 +218,7 @@ Parameter              | Type    | Description                                  
 file                   | string  | The file to share                                                           |
 channelId              | string  | The channel ID that the file will be shared to                              |
 message                | string  | The message to include with the shared file                                 |
-trimming (Optional)    | [VideoCompositionSegment](overwolf-media-videos#videocompositionsegment-object)[]  | An array of objects containing start time and end time for the desired VideoCompositionSegment[]                                        |
+trimming (Optional)    | [VideoCompositionSegment](overwolf-media-videos#videocompositionsegment-object)  | An object containing start time and end time for the desired VideoCompositionSegment                                        |
 events (optional)      | string  | An array of chronological events that occurred during the capture           |
 gameClassId (Optional) | int     | The associated game's class ID                                              |
 gameTitle (Optional)   | string  | The associated game's title                                                 |
