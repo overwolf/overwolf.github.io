@@ -37,10 +37,6 @@ Common use cases:
 * Get hardware information
 * Get FPS performance information
 
-## overwolf.egs
-
-> Use the [overwolf.egs](api/overwolf-egs.md) API if you'd like to show your own Game Summary information for the last game session within the Overwolf Game Summary endgame screen.
-
 ## overwolf.extensions
 
 > Use the [overwolf.extensions](api/overwolf-extensions.md) API to operate or retrieve details on a specific Overwolf app.

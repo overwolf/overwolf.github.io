@@ -53,7 +53,3 @@ Seeing as gamer experience is our top priority, making your app the best it can 
 * Use your Reddit/Facebook/Twitter for technical updates such as a new version announcement, servers down/up notification, etc.
 
 * Develop an in-game "Mini mode", a condensed, compact view for key features of your app.  
-
-## Supreme (+ 4%)
-
-* Develop a Game Summary Tab with high user value around your collected stats. Doing so will make game summary an integral part of your app, and will be used as a promotional tool for users who don’t have your app installed yet. ([Learn more about Game Summary Tabs here](../api/overwolf-egs)).

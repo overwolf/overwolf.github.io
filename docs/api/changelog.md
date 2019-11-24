@@ -42,7 +42,6 @@ This means no more if (!result || !result.status ...) checks. Instead, this shou
 * New API function: [overwolf.utils.openStore()](overwolf-utils#openstoreparam) - Opens the requested app’s profile/login/subscription page in the Overwolf Appstore.
 * New API namespace: [overwolf.extensions.shareddata](overwolf-extension-sharedData) - a new namespace that allows any app to share data with another app. the plan is to use it for the Game Summary tabs.
 * New plugin: The [Process Manager plugin](../topics/process-manager-plugin) that allow OW apps to run executable (for example, run a game when you launch an OW app). 
-* New API: [overwolf.gamesummary](overwolf-gamesummary): Provides information about the currently running game. Accessible only if your app is hosted in the Game Summary container.
 
 
 ## Version 0.136 (Oct. 2019)
