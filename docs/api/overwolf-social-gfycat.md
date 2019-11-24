@@ -120,7 +120,7 @@ Types of errors that can occur:
 Parameter              | Type    | Description                                                                 |
 ---------------------- | --------| --------------------------------------------------------------------------- |
 file                   | string  | The file to share                                                           |
-trimming (Optional)    | [VideoCompositionSegment](overwolf-media-videos#videocompositionsegment-object)[]  | An array of objects containing start time and end time for the desired VideoCompositionSegment[]                                        |
+trimming (Optional)    | [VideoCompositionSegment](overwolf-media-videos#videocompositionsegment-object)  | An object containing start time and end time for the desired VideoCompositionSegment                                        |
 title                  | string  | The message to include with the shared file                                 |
 privateMode            | bool    | Only relevant for when the user is logged in, we then allow him toupload the file to his Gfycat account with private set to true. </br> Default value: false                                 |
 tags (Optional)        | string  | An array of chronological events that occurred during the capture           |
