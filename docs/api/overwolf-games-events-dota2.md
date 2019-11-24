@@ -495,7 +495,7 @@ key               | Category    | Values                    | Notes             
 ----------------- | ------------| ------------------------- | --------------------- | ------------- |
 players           | roster      | 	A string holding a JSON array of player objects.|See [notes](#players-note)|  77.3 |
 bans           | roster      | 	A string holding a JSON array of bans objects.|See [notes](#bans-note)| 114.1 |
-draft           | roster      | A string holding a JSON array of bans objects.|See [notes](#draft-note)| 114.1 |
+draft           | roster      | A string holding a JSON array of draft objects.|See [notes](#draft-note)| 114.1 |
 
 #### *players* note
 
