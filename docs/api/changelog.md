@@ -23,6 +23,7 @@ This means no more if (!result || !result.status ...) checks. Instead, this shou
 * [Dota 2 Events](overwolf-games-launchers-events-dota2#docsNav)
   * New info-update:
     * role
+    * hero_pool
   
 ## Version 0.137 (Nov. 2019)
 
