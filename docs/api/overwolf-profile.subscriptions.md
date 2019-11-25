@@ -43,3 +43,6 @@ Returns an array of plan IDs, or an error.
 
 > Fired when current extension subscription has changed.
 
+Parameter | Type     | Description                                                                                        |
+----------| ---------| -------------------------------------------------------------------------------------------------- |
+id  | int | SubscriptionID                                                                             |   

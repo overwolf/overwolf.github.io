@@ -38,7 +38,7 @@ Use the `overwolf.media` API to capture a screenshot or create a GIF of the curr
 * [MemoryScreenshotParams](#memoryscreenshotparams-object) Object
 * [RescaleParams](#rescaleparams-object) Object
 * [CropParams](#cropparams-object) Object
-* [overwolf.media.enums.eMediaType](#overwolfmediaenumsemediatype-enum) enum
+* [overwolf.media.enums.eMediaType](#emediatype-enum) enum
 
 ## In-memory screenshot overview
 
@@ -219,7 +219,7 @@ callback (Optional) | function   | A function called after the screenshot was ta
 
 Parameter           | Type                                                   | Description                                                |
 --------------------| -------------------------------------------------------| ---------------------------------------------------------- |
-mediaType		    | [eMediaType](#overwolfmediaenumsemediatype-enum) enum  | The type of the event                                      |
+mediaType		    | [eMediaType](#emediatype-enum) enum  | The type of the event                                      |
 jsonInfo		    | JObject                                                | A json with additional info about the events               |
 callback            | function                                               | A callback with the status if the call                     |
 
