@@ -121,7 +121,7 @@ Data Example:
 
 Data Example:
 
-`[“waitingForPlayers” | “countdown | “active” | “postGoalScored”]`
+`[“waitingForPlayers” | “countdown | “active” | “postGoalScored” | “ReplayPlayback” | “PrePodiumSpotlight” | “Finished” | “Unknown” | “PodiumSpotlight”]`
 
 ### Events
 
