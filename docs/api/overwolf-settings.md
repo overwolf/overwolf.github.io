@@ -51,6 +51,7 @@ You can also use the following helpful URLs to open the Overwolf settings and ho
 ## Types Reference
 
 * [overwolf.settings.enums.ResolutionSettings](#resolutionsettings-enum) enum
+* [overwolf.settings.enums.eIndicationPosition](#eindicationposition-enum) enum
 * [FpsSettings](#fpssettings-object) Object
 
 ## getHotKey(featureId, callback)
@@ -363,6 +364,19 @@ R1080p    |              |
 R720p     |              |
 R480p     |              |
 
+## eIndicationPosition enum
+#### Version added: 0.78
+
+> Describes position to use as anchor.
+
+Option            | Description  |
+----------------- | -------------|
+None              | -1           |
+TopLeftCorner     |  0           |
+TopRightCorner    |  1           |
+BottomLeftCorner  |  2           |
+BottomRightCorner |  3           |
+
 ## FpsSettings Object
 #### Version added: 0.78
 
@@ -373,7 +387,7 @@ Parameter | Type               | Description                          |
 offset    | Odkv2Point Object  | The offset from the edge (in pixels) |
 scale     | double             | A scale (1.0 = original)             |
 enabled   | bool               | Whether to enable or disable fps     |
-position  | position enum      | The position (anchor) to use         |
+position  | [eIndicationPosition](#eindicationposition-enum) enum      | The position (anchor) to use         |
 
 #### Object Data Example
 
