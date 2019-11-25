@@ -32,7 +32,7 @@ Parameter | Type                  | Description                                 
 --------- | ----------------------| -------------------------------------------------- |
 callback  | function              | Called with the current device information         |
 
-## overwolf.logitech.LogitechData Object
+## LogitechData Object
 #### Version added: 0.93
 
 > Container for Logitech data.
