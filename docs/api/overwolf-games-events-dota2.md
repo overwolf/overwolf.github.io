@@ -49,6 +49,7 @@ Please read the [overwolf.games.events](overwolf-games-events) documentation pag
 * [roster](#roster)
 * [party](#party)
 * [error](#error)
+* [hero_pool](#hero_pool)
 
 ## Game events status
 
@@ -646,4 +647,22 @@ Data Example:
 
 ```json
 {"feature":"error","category":"error","key":"plugin_error","value":"failed_initializing_monitor"}
+```
+
+## `hero_pool`
+
+### Info Updates
+
+key               | Category    | Values                    | Notes                 | Since GEP Ver. |
+----------------- | ------------| ------------------------- | --------------------- | ------------- |
+hero_pool | game_info  |The numberical ID's of heroes that are available for picking. |See [notes](#hero_pool-note)|  139.0   |
+
+#### *hero_pool* note
+
+This data is available only in "Single Draft" & "Random Draft" modes in Dota.
+
+Data Example:
+
+```json
+{"category":"game_info","key":"hero_pool","value":"[2,4,5,7,8,16,18,20,21,22,23,27,31,32,34,35,37,38,44,47,48,49,52,53,59,64,65,67,70,71,72,74,75,81,84,85,91,92,95,98,99,100,104,105,106,109,110,113,120,121]}
 ```
