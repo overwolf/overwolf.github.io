@@ -45,6 +45,15 @@ Returns an array of plan IDs, or an error.
 }
 ```
 
+If there is no active plans, a null is returned.
+
+```json
+{
+  "plans": null, 
+  "success": true
+}
+```
+
 ## onSubscriptionChanged
 #### Version added: 0.134
 
