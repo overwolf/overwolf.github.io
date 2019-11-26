@@ -40,16 +40,8 @@ Returns an array of plan IDs, or an error.
 
 ```json
 {
-  "plans": [ 4564, 23455 ],
-  "success": true
-}
-```
+  "plans": [ 4564, 23455 ], //If there is no active plans, a null is returned.
 
-If there is no active plans, a null is returned.
-
-```json
-{
-  "plans": null, 
   "success": true
 }
 ```
