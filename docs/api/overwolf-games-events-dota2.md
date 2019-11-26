@@ -661,6 +661,8 @@ hero_pool | game_info  |The numberical ID's of heroes that are available for pic
 
 This data is available only in "Single Draft" & "Random Draft" modes in Dota.
 
+You can find the Hero ID's in the following <a href="https://github.com/kronusme/dota2-api/blob/master/data/heroes.json" target="_blank">link</a>
+
 Data Example:
 
 ```json
