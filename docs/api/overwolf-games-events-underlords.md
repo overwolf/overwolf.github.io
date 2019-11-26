@@ -45,10 +45,10 @@ Data Example:
 Data Example:
 
 ```json
-{"info":{"match_info":{"round_type":"{\"round\":1,\"type\":\"PvE_creep_wave_1_#dac_creep_wave_1\"}"}},"feature":"match_info"}
+{"info":{"match_info":{"round_type":"{"round":1,"type":"PvE_creep_wave_1_#dac_creep_wave_1"}"}},"feature":"match_info"}
 ```
 ```json
-{"info":{"match_info":{"round_type":"{\"round\":4,\"type\":\"PvP\"}"}},"feature":"match_info"}
+{"info":{"match_info":{"round_type":"{"round":4,"type":"PvP"}"}},"feature":"match_info"}
 ```
 
 ### Events
