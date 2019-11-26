@@ -69,12 +69,13 @@ pid         |  int                              | PlanId          |
 uid         |  string                           | Username        | 
 extid       |  string                           | ExtensionId     | 
 muid        |  string                           | MUID            | 
-exp         |  int                              |Expiry           | 
+exp         |  int                              | Expiry          | 
 grc         |  int                              | Grace           | 
 state       |  [eState](#estate-enum) enum      |                 | 
 planInfo    |  [Info](#info-object) Object      |                 | 
 expired     |  boolean                          |                 | 
 
+Note that many users can have the same planID,  but each subscriptionID is the individual unique ID for a user's subscription.
 
 ## Info Object
 
