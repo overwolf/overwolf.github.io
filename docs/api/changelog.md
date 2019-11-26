@@ -24,6 +24,8 @@ This means no more if (!result || !result.status ...) checks. Instead, this shou
   * New info-update:
     * role
     * hero_pool
+* [Dota Underlords Events](https://overwolf.github.io/docs/api/overwolf-games-events-underlords)
+  * New supported game events
   
 ## Version 0.137 (Nov. 2019)
 
