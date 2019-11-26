@@ -26,6 +26,7 @@ myZip
          +---- IconMouseNormal.png
          +---- IconMouseOver.png
          +---- launcher_icon.ico
+         +---- WindowIcon.png
          +---- Files
                 +---- index.html
                 +---- css
@@ -70,6 +71,10 @@ A colored icon for the same button mentioned above when it is selected or mouse-
 * The launcher icon is a 256×256 transparent .png converted into an .ico file in the following resolutions: 16×16, 32×32, 48×48, 256×256.
 
 * The launcher icon should weigh less than 150Kb.
+
+#### 2.4. WindowIcon.png
+
+A colored icon for the window task bar icon \ window header. Similarly, file should be smaller than 30KB and sized 256X256 pixels with at least 72 PPI.
 
 ### 3. The "Files" folder
 

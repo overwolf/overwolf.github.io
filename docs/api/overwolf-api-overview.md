@@ -19,7 +19,7 @@ Overwolf APIs are global components that allow interaction with various Overwolf
 * [overwolf.media](#overwolfmedia)
 * [overwolf.os](#overwolfos)
 * [overwolf.profile](#overwolfprofile)
-* [overwolf.profile.subscription](#overwolfprofilesubscription)
+* [overwolf.profile.subscriptions](#overwolfprofilesubscriptions)
 * [overwolf.settings](#overwolfsettings)
 * [overwolf.social](#overwolfsocial)
 * [overwolf.streaming](#overwolfstreaming)
