@@ -74,7 +74,9 @@ A colored icon for the same button mentioned above when it is selected or mouse-
 
 #### 2.4. WindowIcon.png
 
-A colored icon for the window task bar icon \ window header. Similarly, file should be smaller than 30KB and sized 256X256 pixels with at least 72 PPI.
+A colored icon for the window task bar icon \ window header. If not defined, the [IconMouseOver](##22-iconmouseoverpng) will be taken.  
+The difference between the two icons, is that this taskbar icon should be squared, while the other icons are rounded, to fit the OW deck.  
+Similarly, file should be smaller than 30KB and sized 256X256 pixels with at least 72 PPI.
 
 ### 3. The "Files" folder
 

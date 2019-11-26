@@ -67,7 +67,7 @@ state       |  [eState](#estate-enum) enum      |                 |
 planInfo    |  [Info](#info-object) Object      |                 | 
 expired     |  boolean                          |                 | 
 
-Note that many users can have the same planID,  but each subscriptionID is the individual unique ID for a user's subscription.
+Note that many users can have the same planID,  while subscriptionID is an individual unique ID for a user's subscription.
 
 ## Info Object
 
