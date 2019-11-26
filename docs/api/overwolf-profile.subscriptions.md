@@ -18,6 +18,13 @@ The `overwolf.profile.subscriptions` API provides functions and events to help w
 
 * [overwolf.profile.subscriptions.onSubscriptionChanged](#onsubscriptionchanged)
 
+## Types Reference
+
+* [overwolf.profile.subscriptions.SubscriptionChangedEvent](#subscriptionchangedevent) Object
+* [overwolf.profile.subscriptions.Info](#info-object) Object
+* [overwolf.profile.subscriptions.eState](#estate-enum) Enum
+
+
 ## getActivePlans(callback)
 #### Version added: 0.134
 
@@ -41,8 +48,39 @@ Returns an array of plan IDs, or an error.
 ## onSubscriptionChanged
 #### Version added: 0.134
 
-> Fired when current extension subscription has changed.
+> Fired when current extension subscription has changed, with the following structure: [SubscriptionChangedEvent](#subscriptionchangedevent-object) Object
 
-Parameter | Type     | Description                                                                                        |
-----------| ---------| -------------------------------------------------------------------------------------------------- |
-id  | int | SubscriptionID                                                                             |   
+
+## SubscriptionChangedEvent Object
+
+Parameter   | Type                              | Description     |
+------------| ----------------------------------|---------------- |
+id          |  int                              | SubscriptionID  | 
+pid         |  int                              | PlanId          | 
+uid         |  string                           | Username        | 
+extid       |  string                           | ExtensionId     | 
+muid        |  string                           | MUID            | 
+exp         |  int                              |Expiry           | 
+grc         |  int                              | Grace           | 
+state       |  [eState](#estate-enum) enum      |                 | 
+planInfo    |  [Info](#info-object) Object      |                 | 
+expired     |  boolean                          |                 | 
+
+
+## Info Object
+
+Parameter     | Type       | Description     |
+--------------| -----------|---------------- |
+title         |  string    |                 | 
+description   |  string    |                 |
+periodMonths  |  int       |                 |
+price         |  int       |                 |
+
+
+## eState enum
+
+Option         | Description                                 |
+---------------| ------------------------------------------- |
+Active         | 0                                           |
+Cancelled      | 1                                           |
+Revoked        | 2                                           |
