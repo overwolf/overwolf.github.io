@@ -525,7 +525,7 @@ Notes:
   * 2 – Radiant
   * 3 – Dire
   * 0 – Not in team
-* “heroId” – [Heroes IDs](https://github.com/kronusme/dota2-api/blob/master/data/heroes.json) (0 if still not picked)
+* “heroId” – <a href="https://github.com/kronusme/dota2-api/blob/master/data/heroes.json" target="_blank">Heroes IDs</a> (0 if still not picked)
 
 #### *bans* note
 
@@ -548,7 +548,7 @@ Notes:
   * 2 – Radiant
   * 3 – Dire
   * 0 – Not in team
-* “heroId” – [Heroes IDs](https://github.com/kronusme/dota2-api/blob/master/data/heroes.json) (0 if still not picked)
+* “heroId” – <a href="https://github.com/kronusme/dota2-api/blob/master/data/heroes.json" target="_blank">Heroes IDs</a> (0 if still not picked)
 
 #### *draft* note
 
@@ -573,7 +573,7 @@ Notes:
 2 – Radiant
 3 – Dire
 0 – Not in team
-“heroId” – [Heroes IDs](https://github.com/kronusme/dota2-api/blob/master/data/heroes.json) (0 if still not picked)
+“heroId” – <a href="https://github.com/kronusme/dota2-api/blob/master/data/heroes.json" target="_blank">Heroes IDs</a> (0 if still not picked)
 
 #### *role* note
 
@@ -660,6 +660,8 @@ hero_pool | game_info  |The numberical ID's of heroes that are available for pic
 #### *hero_pool* note
 
 This data is available only in "Single Draft" & "Random Draft" modes in Dota.
+
+You can find the Hero ID's in the following <a href="https://github.com/kronusme/dota2-api/blob/master/data/heroes.json" target="_blank">link</a>
 
 Data Example:
 
