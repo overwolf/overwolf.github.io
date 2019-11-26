@@ -53,3 +53,6 @@ Seeing as gamer experience is our top priority, making your app the best it can 
 * Use your Reddit/Facebook/Twitter for technical updates such as a new version announcement, servers down/up notification, etc.
 
 * Develop an in-game "Mini mode", a condensed, compact view for key features of your app.  
+
+## Supreme (+ 4% to rev-share)
+* Develop a post game experience with high user value around your collected stats.
