@@ -110,5 +110,12 @@ const GamesMetadata = {
     iconUrl: "/docs/assets/games-logos/mtg.png",
     iconLargeUrl: "/docs/assets/games-logos/large/mtg.png",
     name: "MTG Arena"
+  },
+  21586: {
+    id: 21586,
+    path: "/docs/status/underlords",
+    iconUrl: "/docs/assets/games-logos/dota_underlords.png",
+    iconLargeUrl: "/docs/assets/games-logos/large/dota_underlords.png",
+    name: "Dota Underlords"
   }
 }
