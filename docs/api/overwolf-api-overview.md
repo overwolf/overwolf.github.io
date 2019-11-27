@@ -34,8 +34,8 @@ Overwolf APIs are global components that allow interaction with various Overwolf
 
 Common use cases:
 
-* Get hardware information
-* Get FPS performance information
+* Get hardware information.
+* Get FPS performance information.
 
 ## overwolf.extensions
 
@@ -43,9 +43,9 @@ Common use cases:
 
 Common use cases:
 
-* Launch another app
-* Get the running state of an Overwolf app
-* Get the manifest.json data of an app
+* Launch another app.
+* Get the running state of an Overwolf app.
+* Get the manifest.json data of an app.
 
 ## overwolf.games
 
