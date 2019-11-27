@@ -94,6 +94,13 @@ match_state – One of the following:
 * DOTA_GAMERULES_STATE_PRE_GAME
 * DOTA_GAMERULES_STATE_GAME_IN_PROGRESS
 * DOTA_GAMERULES_STATE_POST_GAME
+* DOTA_GAMERULES_STATE_TEAM_SHOWCASE
+
+Event data example:
+
+```json
+{"info":{"game":{"match_state":"DOTA_GAMERULES_STATE_TEAM_SHOWCASE"}},"feature":"match_state_changed"}
+```
 
 Fired when:
 
@@ -103,6 +110,7 @@ The internal game match state has changed.
 * DOTA_GAMERULES_STATE_PRE_GAME – Shown when the game begins, before the battle horn is heard.
 * DOTA_GAMERULES_STATE_GAME_IN_PROGRESS – Shown when the horn sounds to open the match.
 * DOTA_GAMERULES_STATE_POST_GAME – Shown during the post-game screen.
+* DOTA_GAMERULES_STATE_TEAM_SHOWCASE 
 
 ## `match_detected`
 
