@@ -194,9 +194,18 @@ match_type        | match_info  | The type of the current match. |See [notes](#m
 
 #### *match_type* note
 
+:::tip
+If you would like to know when the user is going to play the `battlegrounds` mode, you can listen to the match_type info update, and check If the value is `GT_BATTLEGROUNDS`.
+:::
+
 Data Example:
 
-`{"info":{"match_info":{"match_type":"GT_CASUAL"}},"feature":"match"}`
+```json
+{"info":{"match_info":{"match_type":"GT_CASUAL"}},"feature":"match"}
+
+{"feature":"match","category":"match_info","key":"match_type","value":"GT_BATTLEGROUNDS"}
+```
+
 
 ### Events
 
