@@ -322,6 +322,61 @@ total_damage_dealt_to_turrets    | damage | Value of all damage done to turrets 
 total_damage_dealt_to_objectives | damage | Value of all damage given to objectives in the match (Float). |See [notes](#total_damage_dealt_to_objectives-note)|    139.0      |
 total_damage_self_mitigated      | damage | Value of all mitigated damage in the match (Float). |See [notes](#total_damage_self_mitigated-note)|    139.0      |
 
+#### *total_damage_dealt* note
+
+Data Example:
+
+```json
+{"info":{"damage":{"total_damage_dealt":"65.000000"}},"feature":"damage"}
+```
+
+#### *total_damage_dealt_to_champions* note
+
+Data Example:
+
+```json
+{"info":{"damage":{"total_damage_dealt_to_champions":"65.000000"}},"feature":"damage"}
+```
+
+#### *total_damage_taken* note
+
+Data Example:
+
+```json
+{"info":{"damage":{"total_damage_taken":"8.452381"}},"feature":"damage"}
+```
+
+#### *total_damage_dealt_to_buildings* note
+
+Data Example:
+
+```json
+{"info":{"damage":{"total_damage_dealt_to_buildings":"49.191074"}},"feature":"damage"}
+```
+
+#### *total_damage_dealt_to_turrets* note
+
+Data Example:
+
+```json
+{"info":{"damage":{"total_damage_dealt_to_turrets":"49.191074"}},"feature":"damage"}
+```
+
+#### *total_damage_dealt_to_objectives* note
+
+Data Example:
+
+```json
+{"info":{"damage":{"total_damage_dealt_to_objectives":"49.191074"}},"feature":"damage"}
+```
+
+#### *total_damage_self_mitigated* note
+
+Data Example:
+
+```json
+{"info":{"damage":{"total_damage_self_mitigated":"62.607620"}},"feature":"damage"}
+```
 
 ### Events
 
@@ -336,3 +391,75 @@ true_damage_dealt_to_champions     | Float. | True damage is inflicted on any op
 physical_damage_taken              | Float. | Receiving physical damage from an opponent.  |See [notes](#physical_damage_taken-note)|      139.0    |
 magic_damage_taken                 | Float. | Receiving magic damage from an opponent. |See [notes](#magic_damage_taken-note)|      139.0    |
 true_damage_taken                  | Float. | Receiving true damage from an opponent. |See [notes](#true_damage_taken-note)|      139.0    |
+
+#### *physical_damage_dealt_player* note
+
+Data Example:
+
+```json
+{"events":[{"name":"physical_damage_dealt_player","data":"47.65625"}]}
+```
+
+#### *magic_damage_dealt_player* note
+
+Data Example:
+
+```json
+{"events":[{"name":"magic_damage_dealt_player","data":"65"}]}
+```
+
+#### *true_damage_dealt_player* note
+
+Data Example:
+
+```json
+{"events":[{"name":"true_damage_dealt_player","data":"14"}]}
+```
+
+#### *physical_damage_dealt_to_champions* note
+
+Data Example:
+
+```json
+{"events":[{"name":"physical_damage_dealt_to_champions","data":"47.65625"}]}
+```
+
+#### *magic_damage_dealt_to_champions* note
+
+Data Example:
+
+```json
+{"events":[{"name":"magic_damage_dealt_to_champions","data":"65"}]}
+```
+
+#### *true_damage_dealt_to_champions* note
+
+Data Example:
+
+```json
+{"events":[{"name":"true_damage_dealt_to_champions","data":"14"}]}
+```
+
+#### *physical_damage_taken* note
+
+Data Example:
+
+```json
+{"events":[{"name":"physical_damage_taken","data":"8.452381"}]}
+```
+
+#### *magic_damage_taken* note
+
+Data Example:
+
+```json
+{"events":[{"name":"magic_damage_taken","data":"11.355035"}]}
+```
+
+#### *true_damage_taken* note
+
+Data Example:
+
+```json
+{"events":[{"name":"true_damage_taken","data":"6"}]}
+```
