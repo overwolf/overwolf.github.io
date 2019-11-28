@@ -23,7 +23,7 @@ Seeing as gamer experience is our top priority, making your app the best it can 
 
 * Your app should have error notifications for network downtime, API issues and server errors. ([Read more here](../topics/user-flow-and-error-handling)).
 
-* Create and maintain a changelog.
+
 
 * Create a dedicated page which explains to gamers why your app is bundled with Overwolf. Make sure you mention:  
 
@@ -52,7 +52,11 @@ Seeing as gamer experience is our top priority, making your app the best it can 
 
 * Use your Reddit/Facebook/Twitter for technical updates such as a new version announcement, servers down/up notification, etc.
 
-* Develop an in-game "Mini mode", a condensed, compact view for key features of your app.  
+* Develop an in-game "Mini mode", a condensed, compact view for key features of your app - when applicable.
 
 ## Supreme (+ 4% to rev-share)
-* Develop a post game experience with high user value around your collected stats.
+* Develop a post game experience with high user value around your app's core value proposition. (+3%)
+
+* Create and maintain a change log inside the app and on [medium.com](medium.com). (+1%)
+
+
