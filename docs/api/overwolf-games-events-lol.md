@@ -34,6 +34,7 @@ Note that you can also use the LOL game launcher events. Read more [here](overwo
 * [level](#level)
 * [announcer](#announcer)
 * [counters](#counters)
+* [damage](#damage)
 
 ## Game events status
 
@@ -306,3 +307,32 @@ Data Example:
 
 The information provided by this feature is incorrect at the moment. Please use "queueID" instead. (can be found either in the launcher events provider or in the game events provider).
 * [matchState](#matchstate) You can redirect from here.
+
+## `damage`
+
+### Info Updates
+
+key  | Category    | Values                                     | Notes  | Since GEP Ver. |
+-----| ------------| -------------------------------------------| ------ | ------------- | 
+total_damage_dealt               | damage | Value of all damage done in the match (Float). |See [notes](#total_damage_dealt-note)|    139.0      |
+total_damage_dealt_to_champions  | damage | Value of all damage done to champions in the match (Float). |See [notes](#total_damage_dealt_to_champions-note)|    139.0      |
+total_damage_taken               | damage | Value of all the damage that was taken in the match (Float). |See [notes](#total_damage_taken-note)|    139.0      |
+total_damage_dealt_to_buildings  | damage | Value of all damage done to structures in the match (Float). |See [notes](#total_damage_dealt_to_buildings-note)|    139.0      |
+total_damage_dealt_to_turrets    | damage | Value of all damage done to turrets in the match (Float). |See [notes](#total_damage_dealt_to_turrets-note)|    139.0      |
+total_damage_dealt_to_objectives | damage | Value of all damage given to objectives in the match (Float). |See [notes](#total_damage_dealt_to_objectives-note)|    139.0      |
+total_damage_self_mitigated      | damage | Value of all mitigated damage in the match (Float). |See [notes](#total_damage_self_mitigated-note)|    139.0      |
+
+
+### Events
+
+Event  | Event Data                                       |               Fired When                  | Notes     | Since GEP Ver. |
+-------| -------------------------------------------------| ----------------------------------------- | --------- | --------------|
+physical_damage_dealt_player       | Float. | Damaging an opponent with physical damage. |See [notes](#physical_damage_dealt_player-note)|      139.0    |
+magic_damage_dealt_player          | Float. | Damaging an opponent with magic damage. |See [notes](#magic_damage_dealt_player-note)|      139.0    |
+true_damage_dealt_player           | Float. | Damaging an opponent with true damage. |See [notes](#true_damage_dealt_player-note)|      139.0    |
+physical_damage_dealt_to_champions | Float. | Physical damage is inflicted on any opponent. |See [notes](#physical_damage_dealt_to_champions-note)|      139.0    |
+magic_damage_dealt_to_champions    | Float. | Magic damage is inflicted on any opponent. |See [notes](#magic_damage_dealt_to_champions-note)|      139.0    |
+true_damage_dealt_to_champions     | Float. | True damage is inflicted on any opponent. |See [notes](#true_damage_dealt_to_champions-note)|      139.0    |
+physical_damage_taken              | Float. | Receiving physical damage from an opponent.  |See [notes](#physical_damage_taken-note)|      139.0    |
+magic_damage_taken                 | Float. | Receiving magic damage from an opponent. |See [notes](#magic_damage_taken-note)|      139.0    |
+true_damage_taken                  | Float. | Receiving true damage from an opponent. |See [notes](#true_damage_taken-note)|      139.0    |
