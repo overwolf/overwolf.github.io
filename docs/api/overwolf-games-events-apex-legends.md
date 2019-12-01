@@ -43,7 +43,7 @@ Check the current game event status [here](../status/all). Alternately, you can 
 key          | Category    | Values                    | Notes                 | Since GEP Ver. |
 ------------ | ------------| ------------------------- | --------------------- | -------------  | 
 me           | game_info   | Local Player Name         |                       |  128.0         |
-ultimate_cooldown | me     | Ultimate ability cooldown |                       |  128.0         |
+ultimate_cooldown | me     | Ultimate ability cooldown (range between 0-100) |                       |  128.0         |
 
 ## match_info
 
@@ -76,7 +76,7 @@ key          | Category    | Values                                             
 ------------ | ------------| ----------------------------------------------------------------------------------------------------------- | ------- | ------------- | 
 teammate_X   | match_info  | This feature provides the list of your squad members.                                                       |         |  128.0       |
 legendSelect_X| match_info | The name of the legend & order of selection for every member in the team, including noting who the jump-master is. |         |  128.0       |
-team_info| match_info | The current status of the local player’s team (```"active"``` or ```"eliminated"```). |         |  128.0       |
+team_info| match_info | The current status of the local player’s team. |         |  128.0       |
 
 #### `teammate_X` notes
 
@@ -96,7 +96,15 @@ As  youcan see, this object includes:
 Every team member, including the jump-master will be reported in the following way:
 
 ```json
-{"feature":"team","category":"match_info","key":"legendSelect_2","value":"{"playerName":"Sh4rgaas","legendName":"#character_octane_NAME","selectionOrder":"2","lead":true}"}
+{\"playerName\":\"fReeeeezeeeee\",\"legendName\":\"#character_pathfinder_NAME\",\"selectionOrder\":\"1\",\"lead\":false}
+```
+
+#### `team_info` notes
+
+The current status of the local player’s team ("active" or "eliminated").
+
+```json
+{\"team_state\":\"active\"}
 ```
 
 As you can see, this object includes:
@@ -232,9 +240,9 @@ inUse | me   | Items <b>currently used</b> by the local player.</br>Example:</br
 
 Event        | Event Data                        | Fired When   | Notes              | Since GEP Ver. |
 -------------| ----------------------------------| ----------------------------- | ------------------ | --------------|
-kill | victimName                              | Local player killed another player |                    |     130.0      | 
+kill | victimName                              | Local player killed another player. `{"victimName": "6ewehrw0lf"}` |                    |     130.0      | 
 knockdown | victimName                              | Local player knocked out another player |                    |    130.0      | 
-assist | victimName                              | Local player participated in a team member’s kill.</br></br>Provided values:</br>1. victimName</br>2. type - knockdown / elimination</br></br>Example:</br></br>`{"name":"assist","data":"{rn"victimName": "VioletAlbicocca",rn"type":"knockdown"rn}"}` |                    |    130.0      | 
+assist | victimName                              | Local player participated in a team member’s kill.</br></br>Provided values:</br>1. victimName</br>2. type - knockdown / elimination</br></br>Example:</br></br>`{"victimName": "VioletAlbicocca","type":"knockdown"}` |                    |    130.0      | 
 
 ## revive
 
