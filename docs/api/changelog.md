@@ -6,6 +6,11 @@ sidebar_label: Changelog
 
 Follow this entry for ongoing updates and changes to the project or tools:
 
+## Version 0.139 (Dec. 2019)
+
+* [League of Legends Events](overwolf-games-events-lol)  
+  We now officially support `damage`. More info soon.  
+
 ## Version 0.138 (Nov. 2019)
 
 * All API functions that take callback arguments:  
