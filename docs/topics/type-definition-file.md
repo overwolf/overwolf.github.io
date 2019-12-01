@@ -8,7 +8,7 @@ sidebar_label: Type Definition File
 Even if your application not uses TypeScript at all, you can use the type definition files for autocompletion and documentation purposes. More details [here](#using-overwolfdts-file).
 :::
 
-**You can find the Overwolf API ts definition file [here](https://github.com/overwolf/community-gists/tree/master/typescript)**
+**You can find the Overwolf API ts definition file [here](https://github.com/overwolf/types/blob/master/overwolf.d.ts)**
 
 ## TypeScript overview
 
@@ -42,7 +42,7 @@ Type definition files allow you to provide type information for JavaScript code 
 
 ## Using overwolf.d.ts file
 
-Even if your application uses plain JavaScript and no TypeScript at all, you can use the type definition files for autocompletion and documentation purposes. Simply include them in your Visual Studio Code project.  will then include the found types in its auto-completion list, given that you've got TypeScript installed:
+Even if your application uses plain JavaScript and no TypeScript at all, you can use the type definition file for autocompletion and documentation purposes. Simply include it in your Visual Studio Code project.  VS will then include the found types in its auto-completion list, given that you've got TypeScript installed:
 
 ![alt-text](assets/def-file-demo.gif)
 
