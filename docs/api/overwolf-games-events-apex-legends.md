@@ -241,7 +241,7 @@ inUse | me   | Items <b>currently used</b> by the local player.</br>Example:</br
 Event        | Event Data                        | Fired When   | Notes              | Since GEP Ver. |
 -------------| ----------------------------------| ----------------------------- | ------------------ | --------------|
 kill | victimName                              | Local player killed another player. `{"victimName": "6ewehrw0lf"}` |                    |     130.0      | 
-knockdown | victimName                              | Local player knocked out another player |                    |    130.0      | 
+knockdown | victimName                              | Local player knocked out another player. `{"victimName":"J0GUR7"}` |                    |    130.0      | 
 assist | victimName                              | Local player participated in a team member’s kill.</br></br>Provided values:</br>1. victimName</br>2. type - knockdown / elimination</br></br>Example:</br></br>`{"victimName": "VioletAlbicocca","type":"knockdown"}` |                    |    130.0      | 
 
 ## revive
