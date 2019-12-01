@@ -213,7 +213,7 @@ The following properties are provided:
 #### Event data example
 
 ```json
-{"name":"damage","data":"{rn"targetName":"masiqu22",rn"damageAmount":"13.000000",rn"armor":"true",rn "headshot":"false"rn}"}
+{"targetName": "Fortiziak","damageAmount": "25.000000","armor": "true","headshot": "true"}
 ```
 
 ## inventory
