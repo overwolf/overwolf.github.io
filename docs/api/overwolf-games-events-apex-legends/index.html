@@ -108,7 +108,7 @@
 </thead>
 <tbody>
 <tr><td>me</td><td>game_info</td><td>Local Player Name</td><td></td><td>128.0</td></tr>
-<tr><td>ultimate_cooldown</td><td>me</td><td>Ultimate ability cooldown</td><td></td><td>128.0</td></tr>
+<tr><td>ultimate_cooldown</td><td>me</td><td>Ultimate ability cooldown (range between 0-100)</td><td></td><td>128.0</td></tr>
 </tbody>
 </table>
 <h2><a class="anchor" aria-hidden="true" id="match_info"></a><a href="#match_info" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>match_info</h2>
@@ -150,7 +150,7 @@
 <tbody>
 <tr><td>teammate_X</td><td>match_info</td><td>This feature provides the list of your squad members.</td><td></td><td>128.0</td></tr>
 <tr><td>legendSelect_X</td><td>match_info</td><td>The name of the legend &amp; order of selection for every member in the team, including noting who the jump-master is.</td><td></td><td>128.0</td></tr>
-<tr><td>team_info</td><td>match_info</td><td>The current status of the local player’s team (<code>&quot;active&quot;</code> or <code>&quot;eliminated&quot;</code>).</td><td></td><td>128.0</td></tr>
+<tr><td>team_info</td><td>match_info</td><td>The current status of the local player’s team.</td><td></td><td>128.0</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="teammate_x-notes"></a><a href="#teammate_x-notes" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>teammate_X</code> notes</h4>
@@ -164,7 +164,11 @@
 </ul>
 <h4><a class="anchor" aria-hidden="true" id="legendselect_x-notes"></a><a href="#legendselect_x-notes" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>legendSelect_X</code> notes</h4>
 <p>Every team member, including the jump-master will be reported in the following way:</p>
-<pre><code class="hljs css language-json">{<span class="hljs-attr">"feature"</span>:<span class="hljs-string">"team"</span>,<span class="hljs-attr">"category"</span>:<span class="hljs-string">"match_info"</span>,<span class="hljs-attr">"key"</span>:<span class="hljs-string">"legendSelect_2"</span>,<span class="hljs-attr">"value"</span>:<span class="hljs-string">"{"</span>playerName<span class="hljs-string">":"</span>Sh4rgaas<span class="hljs-string">","</span>legendName<span class="hljs-string">":"</span>#character_octane_NAME<span class="hljs-string">","</span>selectionOrder<span class="hljs-string">":"</span><span class="hljs-number">2</span><span class="hljs-string">","</span>lead<span class="hljs-string">":true}"</span>}
+<pre><code class="hljs css language-json">{\"playerName\":\"fReeeeezeeeee\",\"legendName\":\"#character_pathfinder_NAME\",\"selectionOrder\":\"1\",\"lead\":false}
+</code></pre>
+<h4><a class="anchor" aria-hidden="true" id="team_info-notes"></a><a href="#team_info-notes" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>team_info</code> notes</h4>
+<p>The current status of the local player’s team (&quot;active&quot; or &quot;eliminated&quot;).</p>
+<pre><code class="hljs css language-json">{\"team_state\":\"active\"}
 </code></pre>
 <p>As you can see, this object includes:</p>
 <ul>
@@ -296,9 +300,9 @@
 <tr><th>Event</th><th>Event Data</th><th>Fired When</th><th>Notes</th><th>Since GEP Ver.</th></tr>
 </thead>
 <tbody>
-<tr><td>kill</td><td>victimName</td><td>Local player killed another player</td><td></td><td>130.0</td></tr>
+<tr><td>kill</td><td>victimName</td><td>Local player killed another player. <code>{&quot;victimName&quot;: &quot;6ewehrw0lf&quot;}</code></td><td></td><td>130.0</td></tr>
 <tr><td>knockdown</td><td>victimName</td><td>Local player knocked out another player</td><td></td><td>130.0</td></tr>
-<tr><td>assist</td><td>victimName</td><td>Local player participated in a team member’s kill.</br></br>Provided values:</br>1. victimName</br>2. type - knockdown / elimination</br></br>Example:</br></br><code>{&quot;name&quot;:&quot;assist&quot;,&quot;data&quot;:&quot;{rn&quot;victimName&quot;: &quot;VioletAlbicocca&quot;,rn&quot;type&quot;:&quot;knockdown&quot;rn}&quot;}</code></td><td></td><td>130.0</td></tr>
+<tr><td>assist</td><td>victimName</td><td>Local player participated in a team member’s kill.</br></br>Provided values:</br>1. victimName</br>2. type - knockdown / elimination</br></br>Example:</br></br><code>{&quot;victimName&quot;: &quot;VioletAlbicocca&quot;,&quot;type&quot;:&quot;knockdown&quot;}</code></td><td></td><td>130.0</td></tr>
 </tbody>
 </table>
 <h2><a class="anchor" aria-hidden="true" id="revive"></a><a href="#revive" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>revive</h2>
