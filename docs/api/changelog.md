@@ -9,7 +9,11 @@ Follow this entry for ongoing updates and changes to the project or tools:
 ## Version 0.139 (Dec. 2019)
 
 * [League of Legends Events](overwolf-games-events-lol)  
-  We now officially support `damage`. More info soon.  
+  We now officially support **damage**. More info soon.
+* [overwolf.utils.getSystemInformation()](overwolf-utils#getsysteminformationcallback) now has **VideoEncSupport** property.  
+  (New boolean parameter in response, under SystemParams.
+
+  
 
 ## Version 0.138 (Nov. 2019)
 
