@@ -261,7 +261,7 @@ A callback function which will be called with the status of the request
 
 > Finishes capturing a replay and returns a url to the created video file.
 
-* ou can only call this method if replay mode is on and using a valid id of a replay being captured to a file.
+* You can only call this method if replay mode is on and using a valid id of a replay being captured to a file.
 
 Parameter               | Type                                 | Description                                                             |
 ----------------------- | -------------------------------------| ----------------------------------------------------------------------- |
@@ -273,7 +273,7 @@ callback                | function                             | A callback func
 
 > Update Tobii streaming layer.
 
-* ou can only call this method if replay mode is on and using a valid id of a replay being captured to a file.
+* You can only call this method if replay mode is on and using a valid id of a replay being captured to a file.
 
 Parameter               | Type                                 | Description                                                                                      |
 ----------------------- | -------------------------------------| ------------------------------------------------------------------------------------------------ |
@@ -312,7 +312,6 @@ overwolf.media.replays.updateTobiiSetting({
 
 > Get supported auto highlights features for a game.
 
-* You can only call this method if replay mode is on and using a valid id of a replay being captured to a file.
 
 Parameter   | Type     | Description                                                                                                                                |
 ------------| ---------| ------------------------------------------------------------------------------------------------------------------------------------------ |
