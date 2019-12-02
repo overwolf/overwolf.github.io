@@ -91,8 +91,6 @@ Parameter          | Type                 | Description                         
 *error*            | string               | Inherited from the "Result" Object          |
 data               | \<Dictionary> string | Dictionary<T>: An object that maps strings to values of type "T" |
 
-You can find [here](../topics/hosted-apps#integrate-with-your-app) a "real" usage example.
-
 ## onChangedEvent Object
 
 Parameter    | Type       | Description     |

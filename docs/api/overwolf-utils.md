@@ -36,6 +36,20 @@ Common use cases:
 
 * [overwolf.utils.enums.eStorePage](#estorepage-enum) enum
 * [overwolf.utils.OpenStoreParams](#openstoreparams-object) Object
+* [overwolf.utils.GetSystemInformationResult](#getsysteminformationresult-object) Object
+* [overwolf.utils.GetMonitorsListResult](#getmonitorslistresult-object) Object
+* [overwolf.utils.GPUInfo](#gpuinfo-object) Object
+* [overwolf.utils.HardDiskInfo](#harddiskinfo-object) Object
+* [overwolf.utils.InputDeviceInfo](#inputdeviceinfo-object) Object
+* [overwolf.utils.MonitorInfo](#monitorinfo-object) Object
+* [overwolf.utils.Display](#display-object) Object
+
+
+
+
+
+
+
 
 ## placeOnClipboard(data)
 #### Version added: 0.80
@@ -65,42 +79,7 @@ callback  | function | Called with the string from the clipboard    |
 
 Parameter | Type     | Description                                  |
 --------- | ---------| -------------------------------------------- |
-callback  | function | Called with the monitors array               |
-
-#### Callback argument: Success
-
-A callback function which will be called with the status of the request
-
-```json
-{
-    "displays": [
-        {
-            "name": "Display 2",
-            "id": "\\.\DISPLAY2",
-            "x": -1280,
-            "y": 0,
-            "width": 1280,
-            "height": 1024,
-            "is_primary": false,
-            "handle": {
-                "value": 65579
-            }
-        },
-        {
-            "name": "Display 1",
-            "id": "\\.\DISPLAY1",
-            "x": 0,
-            "y": 0,
-            "width": 1920,
-            "height": 1080,
-            "is_primary": true,
-            "handle": {
-                "value": 65547
-            }
-        }
-    ]
-}
-```
+callback  | ([Result: GetMonitorsListResult](#getmonitorslistresult-object)) => void | Called with the monitors array               |
 
 ## sendKeyStroke(keyString)
 #### Version added: 0.83
@@ -211,97 +190,10 @@ targetTabName [optional] | string   | A target tab - so that multiple calls will
 
 > Returns system information which includes information about CPU, Monitors, GPU, HDD, RAM and more.
 
-Parameter | Type     | Description                                                                                  |
---------- | ---------| -------------------------------------------------------------------------------------------- |
-callback  | function | Called with the system information                                                           |
+Parameter | Type                                               | Description                         |
+--------- | ---------------------------------------------------| ----------------------------------- |
+callback  |  ([Result: GetSystemInformationResult](#getsysteminformationresult-object)) => void | Called with the system information  |
 
-#### Callback argument: Success
-
-A callback function which will be called with the status of the request
-
-```json
-{  
-   "status":"success",
-   "systemInfo":{  
-      "OS":"10.0 64Bit",
-      "NetFramework":"4.6.1 or later (394802), v2.0.50727 SP2, v3.0 SP2, v3.5 SP1, v4 Client, v4 Full",
-      "Monitors":[  
-         {  
-            "IsMain":true,
-            "Name":"DELL U2412M",
-            "Resolution":"1920, 1200",
-            "Location":"0, 0",
-            "Dpix":96,
-            "Dpiy":96
-         },
-         {  
-            "IsMain":false,
-            "Name":"DELL U2412M",
-            "Resolution":"1920, 1200",
-            "Location":"1920, 0",
-            "Dpix":96,
-            "Dpiy":96
-         }
-      ],
-      "CPU":"Intel(R) Core(TM) i5-4590 CPU @ 3.30GHz",
-      "LogicalCPUCount":4,
-      "PhysicalCPUCount":4,
-      "VidEncSupport ":true,
-      "GPUs":[  
-         {  
-            "Name":"AMD Radeon HD 7900 Series",
-            "Manufacturer":"Advanced Micro Devices, Inc.",
-            "ChipType":"AMD Radeon Graphics Processor (0x679A)"
-         }
-      ],
-      "MemorySize":"8531234816",
-      "NumberOfScreens":2,
-      "HardDisks":[  
-         {  
-            "Caption":"Samsung SSD 840 EVO 120GB",
-            "Size":120031511040,
-            "IsSsd":true
-         },
-         {  
-            "Caption":"ST1000DM003-1ER162",
-            "Size":1000202273280,
-            "IsSsd":false
-         }
-      ],
-      "Manufacturer":"MSI",
-      "Model":"MS-7817",
-      "IsLaptop":false,
-      "Motherboard":"MSI H81M-P33 (MS-7817)",
-      "AudioDevices":[  
-         "AMD High Definition Audio Device",
-         "Realtek High Definition Audio",
-         "Logitech G933 Gaming Headset"
-      ],
-      "InputDevices":[  
-         {  
-            "vendor":1133,
-            "id":49970,
-            "type":"MOUSE"
-         },
-         {  
-            "vendor":1133,
-            "id":49714,
-            "type":"KEYBOARD"
-         },
-         {  
-            "vendor":1133,
-            "id":49963,
-            "type":"KEYBOARD"
-         },
-         {  
-            "vendor":1133,
-            "id":49713,
-            "type":"MOUSE"
-         }
-      ]
-   }
-}
-```
 
 ## getPeripherals(callback)
 #### Version added: 0.98
@@ -432,3 +324,210 @@ Parameter   | Type                                | Description                 
 ----------- | ------------------------------------| ----------------------------- |
 uid         | string                              | the target app id             |
 page        | [eStorePage](#estorepage-enum) enum | Store page to open            |
+
+
+## GetSystemInformationResult Object
+
+Parameter          | Type     | Description                                 |
+-------------------| ---------| ------------------------------------------- |
+*success*          | boolean  | inherited from the "Result" Object          |
+*error*            | string   | inherited from the "Result" Object          |
+status             | string   | deprecated. For backward compatibility only |
+Reason             | string   | deprecated. For backward compatibility only |   
+AudioDevices       | string[] |                                             |   
+CPU                | string   |                                             |   
+GPUs               | [GPUInfo[]](#gpuinfo-object)         |                                    |   
+HardDisks          | [HardDiskInfo[]](#harddiskinfo-object)    |                                    |   
+InputDevices       | [InputDeviceInfo[]](#inputdeviceinfo-object) |                                    |   
+IsLaptop           | boolean  |                                             |   
+LogicalCPUCount    | number   |                                             |   
+Manufacturer       | string   |                                             |   
+MemorySize         | string   |                                             |   
+Model              | string   |                                             |   
+Monitors           | [MonitorInfo[]](#monitorinfo-object)     |                                    |   
+Motherboard        | string   |                                             |   
+NetFramework       | string   |                                             |   
+NumberOfScreens    | number   |                                             |   
+OS                 | string   |                                             |   
+OSBuild            | string   |                                             |   
+OSReleaseId        | string   |                                             |   
+PhysicalCPUCount   | number   |                                             |   
+VidEncSupport      | boolean  |                                             |   
+
+#### Example data: Success
+
+```json
+{  
+   "status":"success",
+   "systemInfo":{  
+      "OS":"10.0 64Bit",
+      "NetFramework":"4.6.1 or later (394802), v2.0.50727 SP2, v3.0 SP2, v3.5 SP1, v4 Client, v4 Full",
+      "Monitors":[  
+         {  
+            "IsMain":true,
+            "Name":"DELL U2412M",
+            "Resolution":"1920, 1200",
+            "Location":"0, 0",
+            "Dpix":96,
+            "Dpiy":96
+         },
+         {  
+            "IsMain":false,
+            "Name":"DELL U2412M",
+            "Resolution":"1920, 1200",
+            "Location":"1920, 0",
+            "Dpix":96,
+            "Dpiy":96
+         }
+      ],
+      "CPU":"Intel(R) Core(TM) i5-4590 CPU @ 3.30GHz",
+      "LogicalCPUCount":4,
+      "PhysicalCPUCount":4,
+      "VidEncSupport ":true,
+      "GPUs":[  
+         {  
+            "Name":"AMD Radeon HD 7900 Series",
+            "Manufacturer":"Advanced Micro Devices, Inc.",
+            "ChipType":"AMD Radeon Graphics Processor (0x679A)"
+         }
+      ],
+      "MemorySize":"8531234816",
+      "NumberOfScreens":2,
+      "HardDisks":[  
+         {  
+            "Caption":"Samsung SSD 840 EVO 120GB",
+            "Size":120031511040,
+            "IsSsd":true
+         },
+         {  
+            "Caption":"ST1000DM003-1ER162",
+            "Size":1000202273280,
+            "IsSsd":false
+         }
+      ],
+      "Manufacturer":"MSI",
+      "Model":"MS-7817",
+      "IsLaptop":false,
+      "Motherboard":"MSI H81M-P33 (MS-7817)",
+      "AudioDevices":[  
+         "AMD High Definition Audio Device",
+         "Realtek High Definition Audio",
+         "Logitech G933 Gaming Headset"
+      ],
+      "InputDevices":[  
+         {  
+            "vendor":1133,
+            "id":49970,
+            "type":"MOUSE"
+         },
+         {  
+            "vendor":1133,
+            "id":49714,
+            "type":"KEYBOARD"
+         },
+         {  
+            "vendor":1133,
+            "id":49963,
+            "type":"KEYBOARD"
+         },
+         {  
+            "vendor":1133,
+            "id":49713,
+            "type":"MOUSE"
+         }
+      ]
+   }
+}
+```
+
+## GetMonitorsListResult Object
+
+Parameter          | Type     | Description                                 |
+-------------------| ---------| ------------------------------------------- |
+*success*          | boolean  | inherited from the "Result" Object          |
+*error*            | string   | inherited from the "Result" Object          |
+status             | string   | deprecated. For backward compatibility only |
+Reason             | string   | deprecated. For backward compatibility only |   
+display            | [Display[]](#display-object) | the monitors array      |   
+
+
+#### Example data: Success
+
+```json
+{
+    "displays": [
+        {
+            "name": "Display 2",
+            "id": "\\.\DISPLAY2",
+            "x": -1280,
+            "y": 0,
+            "width": 1280,
+            "height": 1024,
+            "is_primary": false,
+            "handle": {
+                "value": 65579
+            }
+        },
+        {
+            "name": "Display 1",
+            "id": "\\.\DISPLAY1",
+            "x": 0,
+            "y": 0,
+            "width": 1920,
+            "height": 1080,
+            "is_primary": true,
+            "handle": {
+                "value": 65547
+            }
+        }
+    ]
+}
+```
+
+## GPUInfo Object
+
+Parameter          | Type     | Description                                 |
+-------------------| ---------| ------------------------------------------- |
+ChipType           | string   |                                             |
+Manufacturer       | string   |                                             |
+Name               | string   |                                             |
+
+## HardDiskInfo Object
+
+Parameter          | Type     | Description                                 |
+-------------------| ---------| ------------------------------------------- |
+Caption            | string   |                                             |
+IsSsd              | boolean  |                                             |
+Size               | number   |                                             |
+
+## InputDeviceInfo Object
+
+Parameter          | Type     | Description                                 |
+-------------------| ---------| ------------------------------------------- |
+id                 | number   |                                             |
+type               | string   |                                             |
+vendor             | number   |                                             |
+
+## MonitorInfo Object
+
+Parameter          | Type     | Description                                 |
+-------------------| ---------| ------------------------------------------- |
+Dpix               | number   |                                             |
+Dpiy               | number   |                                             |
+IsMain             | boolean  |                                             |
+Location           | string   |                                             |
+Name               | string   |                                             |
+Resolution         | string   |                                             |
+
+## Display Object
+
+Parameter          | Type     | Description                                 |
+-------------------| ---------| ------------------------------------------- |
+name               | string   |                                             |
+id                 | string   |                                             |
+x                  | number   |                                             |
+y                  | number   |                                             |
+width              | number   |                                             |
+height             | number   |                                             |
+is_primary         | boolean  |                                             |
+
