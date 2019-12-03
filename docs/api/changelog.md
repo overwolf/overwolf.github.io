@@ -12,6 +12,10 @@ Follow this entry for ongoing updates and changes to the project or tools:
   We now officially support **damage**. More info soon.
 * [overwolf.utils.getSystemInformation()](overwolf-utils#getsysteminformationcallback) now has **VideoEncSupport** property.  
   (New boolean parameter in response, under SystemParams.
+* [League of Legends Events](overwolf-games-events-lol)
+  * New event & info:
+    * damage
+    * heal
 
   
 
