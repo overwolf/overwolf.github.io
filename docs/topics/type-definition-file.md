@@ -10,6 +10,8 @@ Even if your application not uses TypeScript at all, you can use the type defini
 
 **You can find the Overwolf API ts definition file [here](https://github.com/overwolf/types/blob/master/overwolf.d.ts)**
 
+If you are working with Typescript, you can install the ts file as an [npm package](https://www.npmjs.com/package/@overwolf/types).
+
 ## TypeScript overview
 
 TypeScript is a superset of JavaScript which adds optional static typing to the language, hence its name. Static typing enables the compiler to check that operations performed on variables are legal. Those checks prevent you from attempting to invoke a number as a function, for example.
