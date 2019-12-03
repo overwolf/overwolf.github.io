@@ -10,7 +10,7 @@ Even if your application not uses TypeScript at all, you can use the type defini
 
 **You can find the Overwolf API ts definition file [here](https://github.com/overwolf/types/blob/master/overwolf.d.ts)**
 
-If you are working with Typescript, you can install the ts file as an [npm package](https://www.npmjs.com/package/@overwolf/types).
+If you are working with Typescript, you can install it as a [npm package](https://www.npmjs.com/package/@overwolf/types).
 
 ## TypeScript overview
 
