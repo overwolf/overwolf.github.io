@@ -35,6 +35,8 @@ Note that you can also use the LOL game launcher events. Read more [here](overwo
 * [announcer](#announcer)
 * [counters](#counters)
 * [damage](#damage)
+* [heal](#heal)
+
 
 ## Game events status
 
@@ -462,4 +464,38 @@ Data Example:
 
 ```json
 {"events":[{"name":"true_damage_taken","data":"6"}]}
+```
+
+## `heal`
+
+### Info Updates
+
+key  | Category    | Values                                     | Notes  | Since GEP Ver. |
+-----| ------------| -------------------------------------------| ------ | ------------- | 
+total_heal              | heal | Value of all healing done in the match (Float). |See [notes](#total_heal-note)|    139.0      |
+total_heal_on_teammates | heal | Value of all healing on teammates in the match (Float). |See [notes](#total_heal_on_teammates-note)|    139.0      |
+total_units_healed      | heal | Value of amount of units healed in the match (Float). |See [notes](#total_units_healed-note)|    139.0      |
+
+#### *total_heal* note
+
+Data Example:
+
+```json
+{"info":{"heal":{"total_heal":"27"}},"feature":"heal"}
+```
+
+#### *total_heal_on_teammates* note
+
+Data Example:
+
+```json
+{"info":{"heal":{"total_heal_on_teammates":"27"}},"feature":"heal"}
+```
+
+#### *total_units_healed* note
+
+Data Example:
+
+```json
+{"info":{"heal":{"total_units_healed":"1"}},"feature":"heal"}
 ```
