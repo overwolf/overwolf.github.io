@@ -8,9 +8,9 @@ sidebar_label: Type Definition File
 Even if your application not uses TypeScript at all, you can use the type definition files for autocompletion and documentation purposes. More details [here](#using-overwolfdts-file).
 :::
 
-**You can find the Overwolf API ts definition file [here](https://github.com/overwolf/types/blob/master/overwolf.d.ts)**
+**You can find the Overwolf API ts definition file [here](http://bit.ly/overwolf-ts-file)**
 
-If you are working with Typescript, you can install it as a [npm package](https://www.npmjs.com/package/@overwolf/types).
+If you are working with Typescript, you can install it as a [npm package](http://bit.ly/overwolf-types-npm).
 
 ## TypeScript overview
 
