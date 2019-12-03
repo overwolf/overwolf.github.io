@@ -24,6 +24,10 @@ Dota 2
 ------
 No logs.
 
+Dota Underlords
+---------------
+No logs.
+
 Fortnite
 --------
 
@@ -101,6 +105,9 @@ Oct 23, 12:39 PM GMT+3
 
 Rainbow 6 Siege
 ---------------
+
+**Investigating** -   Rainbow 6 game events are down due to the new season 5 patch, we are working on a fix.  
+Dec 03, 04:44 PM GMT+3
 
 **Resolved** - This incident has been resolved.  
 Nov 12, 17:24 PM GMT+3
