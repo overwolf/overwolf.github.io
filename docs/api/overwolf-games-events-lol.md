@@ -66,7 +66,7 @@ matchEnd   | null        |  Match has ended     |  Match is ended    |   140.0  
 
 key          | Category    | Values                    | Notes                 | Since GEP Ver. |
 --------------- | -----------| ------------------------------------------------------------------------------------ | ------------------------------------ | ------------- | 
-pseudo_match_id | match_info | Current session’s ID code. Example:</br> `a4e8fc75-b35e-466f-976c-09f4ee633d95`  |  This is an Overwolf-generated code unrelated to Riot Games.  |   0.130 |
+pseudo_match_id | match_info | Current match’s ID code. Example:</br> `a4e8fc75-b35e-466f-976c-09f4ee633d95`  |  This is an Overwolf-generated code unrelated to Riot Games.  |   0.130 |
 game_mode | match_info | Whether the current game mode is TFT or default LoL. See [notes](#game_mode-notes) |                 |   133.0       |
 #### *game_mode* notes
 
