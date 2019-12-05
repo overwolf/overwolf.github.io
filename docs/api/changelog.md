@@ -14,7 +14,9 @@ Follow this entry for ongoing updates and changes to the project or tools:
   * New event & info:
     * damage
     * heal
-
+* [League of Legends Launcher Events](overwolf-games-launchers-events-lol#docsNav)
+  * New update:
+    * close_client_during_game
   
 
 ## Version 0.138 (Nov. 2019)
