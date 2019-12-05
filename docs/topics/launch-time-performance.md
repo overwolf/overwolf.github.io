@@ -24,14 +24,14 @@ When Overwolf users launch an app, they expect it to load quickly and be respons
 Our goal is to load any window in under 30ms from the moment the user clicked to open the app from the Overwolf dock or used to hotkey in-game. A loader can be used once the app has been launched.
 
 
-<div class="box" data-slick='{"slidesToShow": 2}'>
+<div class="box" data-slick='{"slidesToShow": 1}'>
   <a data-fancybox="gallery" data-caption="CSGO" href="../assets/launch-time-performance/THLoader.jpg">
     Trophy Hunter loader
     <span class="thumb">
       <img src="../assets/launch-time-performance/THLoader.jpg" alt="CSGO">
     </span>
   </a>
-  <a data-fancybox="gallery" data-caption="CSGO" href="../assets/launch-time-performance/csgoScoutLoader.jpg">
+  <a data-fancybox="gallery" data-caption="CSGO" href="../assets\launch-time-performance\CSGOScoutloader.png">
     CSGO Scout loader
     <span class="thumb">
       <img src="../assets/launch-time-performance/csgoScoutLoader.jpg" alt="CSGO">
