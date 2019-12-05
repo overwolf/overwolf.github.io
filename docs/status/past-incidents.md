@@ -10,6 +10,9 @@ To get real time alerts please join [our dev slack](../support/contact-us#join-o
 Apex Legends
 ------------
 
+**Resolved** This incident has been resolved.  
+Nov 05, 07:46 PM GMT+3
+
 **Investigating** -  Apex game events are down due to a new patch.  
 Dec 04, 07:30 PM GMT+3
 
@@ -108,6 +111,9 @@ Oct 23, 12:39 PM GMT+3
 
 Rainbow 6 Siege
 ---------------
+
+**Resolved** This incident has been resolved.  
+Nov 05, 07:46 PM GMT+3
 
 **Partly Resolved** - This incident has been resolved.  (Headshot and attacker\defender events are still broken)
 Dec 04, 10:15 PM GMT+3
