@@ -34,7 +34,7 @@ Our goal is to load any window in under 30ms from the moment the user clicked to
   <a data-fancybox="gallery" data-caption="CSGO" href="../assets/launch-time-performance/CSGOScoutloader.png">
     CSGO Scout loader
     <span class="thumb">
-      <img src="../assets/launch-time-performance/csgoScoutLoader.jpg" alt="CSGO">
+      <img src="../assets/launch-time-performance/CSGOScoutloader.png" alt="CSGO">
     </span>
   </a>
 </div>
