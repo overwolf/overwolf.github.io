@@ -48,7 +48,7 @@ Data Example:
 
 key          | Category    | Values                    | Notes                 | Since GEP Ver. |
 ------------ | ------------| ------------------------- | --------------------- | ------------- | 
-pseudo_match_id| match_info| Current session’s ID code. | See [notes](#pseudo_match_id-note)|  134.0  |
+pseudo_match_id| match_info| Current match’s ID code. | See [notes](#pseudo_match_id-note)|  134.0  |
 teams_level  | match_info  | Current level of both teams| See [notes](#teams_level-note)|  134.0  |
 score        | match_info  | Current kill-score of both teams. | See [notes](#score-note)|  134.0  |
 match_state  | match_info  | Is a match in progress - true/false. | See [notes](#match_state-note)|  134.0  |

@@ -124,7 +124,7 @@ Data Example:
 
 key          | Category    | Values                            | Notes                 | Since GEP Ver. |
 ------------ | ------------| --------------------------------- | --------------------- | ------------- |
-pseudo_match_id| match_info   |The current session’s ID code.|See [notes](#pseudo_match_id-note)|      47.0     |
+pseudo_match_id| match_info   |Current match’s ID code.|See [notes](#pseudo_match_id-note)|      47.0     |
 
 ### Events
 

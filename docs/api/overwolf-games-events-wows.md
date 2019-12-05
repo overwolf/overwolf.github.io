@@ -77,7 +77,7 @@ Possible Values:
 
 key          | Category    | Values                    | Notes                 | Since GEP Ver. |
 ------------ | ------------| ------------------------- | --------------------- | ------------- |
-pseudo_match_id| match_info   |Current session’s ID code| See [notes](#pseudo_match_id-note) |     119.1     |
+pseudo_match_id| match_info   |Current match’s ID code| See [notes](#pseudo_match_id-note) |     119.1     |
 
 #### *pseudo_match_id* note
 
