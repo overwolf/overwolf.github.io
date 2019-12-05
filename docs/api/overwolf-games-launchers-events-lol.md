@@ -162,6 +162,7 @@ Data Example:
 key   | Category    | Values                    | Notes                 | Since Version |
 ------| ------------| ------------------------- | --------------------- | ------------- |
 game_version |game_info| Numerical version of the client. |See [notes](#game_version-note)|   137.0       |
+close_client_during_game |game_info| True / False (Bool) |See [notes](#close_client_during_game-note)|   137.0       |
 
 #### *game_version* note:
 
@@ -169,4 +170,15 @@ Data Example:
 
 ```json
 {"feature":"game_info","category":"game_info","key":"game_version","value":"9.21.2940813"}
+```
+
+#### *close_client_during_game* note
+
+Data Example:
+
+```json
+{"feature":"game_info","category":"game_info","key":"close_client_during_game","value":false}
+```
+```json
+{"feature":"game_info","category":"game_info","key":"close_client_during_game","value":true}
 ```
