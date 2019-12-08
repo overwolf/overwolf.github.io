@@ -482,7 +482,7 @@ hero_item_charged |Same as ‘hero_item_changed’	|Whenever an item’s charges
 
 key               | Category    | Values                    | Notes                 | Since GEP Ver. |
 ----------------- | ------------| ------------------------- | --------------------- | ------------- |
-pseudo_match_id   | match_info  | The current session’s ID code.|See [notes](#pseudo_match_id-note)|  130.0   |
+pseudo_match_id   | match_info  | The current match’s ID code.|See [notes](#pseudo_match_id-note)|  130.0   |
 game_mode   | match_info  | Dota2/Auto-chess. |See [notes](#game_mode-note)|  130.0   |
 
 #### *pseudo_match_id* note
@@ -573,21 +573,7 @@ party   | party  |A string holding a JSON array of player objects.|See [notes](#
 Data Example:
 
 ```json
-"[{"steamId":steamId 1,"isLeader":true,"isCoach":false},
-{"steamId":steamId 2,"isLeader":false,"isCoach":false},
- ... ,
-{"steamId":steamId N,"isLeader":true,"isCoach":true}
-]"
-```
-
-Player object structure:
-
-```json
-{
-  "steamId": "steamId string",
-  "isLeader": "true" | "false",
-  "isCoach": "true" | "false"
-}
+[{\"steamId\":\"76561198059980868\",\"isLeader\":false,\"isCoach\":false}]
 ```
 * steamId – the player’s Steam ID
 * isLeader – (bool) whether the player is the leader of the party
