@@ -76,7 +76,7 @@ key          | Category    | Values                    | Notes                 |
 --------------- | -----------| ------------------------------------------------------------------------------------ | ------------------------------------ | ------------- |
 mode | match_info | Solo/Duo/Squad</br>Example:</br> `{"mode":"squad"}`|    |   90.0 |
 match_id | match_info | The current match ID code.</br>Example:</br>`match.bro.official.pc-2018-03.steam.`</br>`solo.eu.2019.05.07.08.ce8d1a14-b2af`</br>`-41c8-8bf4-d2a504326630`  |  Can be compared and checked at this [link](https://pubglookup.com/) |   120.0 |
-pseudo_match_id | match_info | The current session’s ID code.</br>Example:</br> `0c0ea3df-97ea-4d3a-b1f6-f8e34042251f`  |  This is an Overwolf-generated code which is unrelated to the match ID given above.  | 130.0.15|
+pseudo_match_id | match_info | The current match’s ID code.</br>Example:</br> `0c0ea3df-97ea-4d3a-b1f6-f8e34042251f`  |  This is an Overwolf-generated code which is unrelated to the match ID given above.  | 130.0.15|
 
 ### Events
 

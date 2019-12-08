@@ -138,7 +138,7 @@ defeat      | null     |team_score (1 / 2)(1 – Victory, 2 - defeat)|    |   86
 
 key          | Category    | Values                    | Notes                 | Since GEP Ver. |
 ------------ | ------------| ------------------------- | --------------------- | ------------- | 
-pseudo_match_id| match_info| Current session’s internal ID code. |See [notes](#pseudo_match_id-note)|    130.0   |
+pseudo_match_id| match_info| Current match’s internal ID code. |See [notes](#pseudo_match_id-note)|    130.0   |
 
 #### *pseudo_match_id* note
 

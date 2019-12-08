@@ -91,7 +91,7 @@ Data example:
 
 key             | Category   | Values                                                                 | Notes                 | Since GEP Ver. |
 --------------- | -----------| -----------------------------------------------------------------------| ----------------------| ------------- |
-pseudo_match_id | match_info | Current session’s ID code      |See [notes](#pseudo_match_id-notes)|   133.0       |
+pseudo_match_id | match_info | Current match’s ID code      |See [notes](#pseudo_match_id-notes)|   133.0       |
 battle_state | match_info | Boolean. Whether a battle is in progress |See [notes](#battle_state-notes)|   133.0       |
 match_state | match_info | Boolean. Whether a match is in progress    |See [notes](#match_state-notes)|   133.0       |
 round_type | match_info | Round is PvE, PvP or Carousel, as well as stage number  |See [notes](#round_type-notes)|   133.0       |

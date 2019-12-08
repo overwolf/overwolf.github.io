@@ -481,7 +481,7 @@ hero_item_charged |Same as ‘hero_item_changed’	|Whenever an item’s charges
 
 key               | Category    | Values                    | Notes                 | Since GEP Ver. |
 ----------------- | ------------| ------------------------- | --------------------- | ------------- |
-pseudo_match_id   | match_info  | The current session’s ID code.|See [notes](#pseudo_match_id-note)|  130.0   |
+pseudo_match_id   | match_info  | The current match’s ID code.|See [notes](#pseudo_match_id-note)|  130.0   |
 game_mode   | match_info  | Dota2/Auto-chess. |See [notes](#game_mode-note)|  130.0   |
 
 #### *pseudo_match_id* note
