@@ -614,21 +614,7 @@ party   | party  |A string holding a JSON array of player objects.|See [notes](#
 Data Example:
 
 ```json
-"[{"steamId":steamId 1,"isLeader":true,"isCoach":false},
-{"steamId":steamId 2,"isLeader":false,"isCoach":false},
- ... ,
-{"steamId":steamId N,"isLeader":true,"isCoach":true}
-]"
-```
-
-Player object structure:
-
-```json
-{
-  "steamId": "steamId string",
-  "isLeader": "true" | "false",
-  "isCoach": "true" | "false"
-}
+[{\"steamId\":\"76561198059980868\",\"isLeader\":false,\"isCoach\":false}]
 ```
 * steamId – the player’s Steam ID
 * isLeader – (bool) whether the player is the leader of the party
