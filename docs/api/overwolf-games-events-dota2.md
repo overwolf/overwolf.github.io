@@ -80,15 +80,16 @@ The user starts playing, begins spectating or stops playing. Note that simply br
 
 ### Events
 
-Event       | Event Data   | Fired When    | Notes              | Since GEP Ver. |
-------------| -------------| --------------| ------------------ | --------------|
-match_state_changed  | Check notes |          |See [notes](#match_state_changed-note)|     77.3      |
+Event       | Event Data   | Fired When    | Notes                                  | Since GEP Ver. |
+------------| -------------| --------------| -------------------------------------- | ---------------|
+match_state | Check notes  |               | See [notes](#match_state-note) |      77.3      |
 
-#### *match_state_changed* note
+#### *match_state* note
 
 Event Data:
 
 match_state – One of the following:
+
 * DOTA_GAMERULES_STATE_WAIT_FOR_PLAYERS_TO_LOAD
 * DOTA_GAMERULES_STATE_HERO_SELECTION
 * DOTA_GAMERULES_STATE_PRE_GAME
@@ -516,47 +517,32 @@ Data Example:
 
 Player object structure:
 
-```json
-{
-  "steamId": "steamId string",
-  "name": "player name in game",
-  "team": teamId,
-  "hero": heroId,
-  "role": role type (int),
-  "index": "player slot (int 0-9)"
-}
-```
-
-Notes:
-
+* "steamId" - steamId string
+* "name" - player name in game
 * “teamId”
   * 2 – Radiant
   * 3 – Dire
   * 0 – Not in team
 * “heroId” – <a href="https://github.com/kronusme/dota2-api/blob/master/data/heroes.json" target="_blank">Heroes IDs</a> (0 if still not picked)
+* "role" - role type.
+   (1 - Safelane, 2 - Offlane, 4 - Midlane, 8 - Other, 16 - HardSupport, 888\any other number - Can be received during bot matchups and should be ignored)
+* "index" - player slot (int 0-9)
 
 #### *bans* note
 
 Data Example:
 
-`"[ {"heroId": 90 , "team" : 2} , ... , {...} ]"`
+```json
+[{"heroId": "75" , "team" : "0"},{"heroId": "14" , "team" : "0"}]
+```
 
 Bans object structure:
 
-```json
-{
-  "heroId" : heroId,
-  "team" : teamId
-}
-```
-
-Notes:
-
+* “heroId” – <a href="https://github.com/kronusme/dota2-api/blob/master/data/heroes.json" target="_blank">Heroes IDs</a> (0 if still not picked)
 * “teamId”
   * 2 – Radiant
   * 3 – Dire
   * 0 – Not in team
-* “heroId” – <a href="https://github.com/kronusme/dota2-api/blob/master/data/heroes.json" target="_blank">Heroes IDs</a> (0 if still not picked)
 
 #### *draft* note
 
@@ -568,38 +554,11 @@ Data Example:
 
 Draft object structure:
 
-```json
-{
-  "heroId" : heroId,
-  "team" : teamId
-}
-```
-
-Notes:
-
-“teamId”
-2 – Radiant
-3 – Dire
-0 – Not in team
-“heroId” – <a href="https://github.com/kronusme/dota2-api/blob/master/data/heroes.json" target="_blank">Heroes IDs</a> (0 if still not picked)
-
-#### *role* note
-
-Part of `players` key.
-
-Possible values:
-
-1  - Safelane
-
-2  - Offlane
-
-4  - Midlane
-
-8  - Other
-
-16 - HardSupport
-
-888\any other number - Can be received during bot matchups and should be ignored.
+* “heroId” – <a href="https://github.com/kronusme/dota2-api/blob/master/data/heroes.json" target="_blank">Heroes IDs</a> (0 if still not picked)
+* “teamId”
+  * 2 – Radiant
+  * 3 – Dire
+  * 0 – Not in team
 
 ## `party`
 

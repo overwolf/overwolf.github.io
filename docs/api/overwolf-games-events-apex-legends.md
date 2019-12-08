@@ -40,10 +40,10 @@ Check the current game event status [here](../status/all). Alternately, you can 
 
 ### Info Updates
 
-key          | Category    | Values                    | Notes                 | Since GEP Ver. |
------------- | ------------| ------------------------- | --------------------- | -------------  | 
-me           | game_info   | Local Player Name         |                       |  128.0         |
-ultimate_cooldown | me     | Ultimate ability cooldown (range between 0-100) |                       |  128.0         |
+key               | Category    | Values                    | Notes                 | Since GEP Ver. |
+----------------- | ------------| ------------------------- | --------------------- | -------------  | 
+name              | game_info   | Local Player Name         |                       |  128.0         |
+ultimate_cooldown | me          | Ultimate ability cooldown (range between 0-100)   |          |  128.0         |
 
 ## match_info
 
@@ -230,9 +230,9 @@ The following properties are provided:
 
 key                | Category    | Values                                         | Notes  | Since GEP Ver. |
 -------------------| ------------| -----------------------------------------------| ------ | ------------- | 
-inventory_XX        | me   | Lists the items picked up into the local player's inventory (Tab).</br>Example:</br>`{"feature":"inventory","category":"me","key":"inventory_0","value":"{"name":"Shotgun Shells","amount":"36"}"}`   |        |    130.0      |
-weapons | me   | Weapons currently used by the local player - there are two slots available marked 0 and 1.</br>Example:</br>`{"category":"game_info","key":"weapons","value":"{"weapon_0":"mp_weapon_shotgun_pistol","weapon_1":"mp_weapon_doubletake","active_0":"mp_weapon_doubletake"}","valueLength":107}` |        |    0.130      |
-inUse | me   | Items <b>currently used</b> by the local player.</br>Example:</br>`{"feature":"inventory","category":"me","key":"inUse","value":"{"inUse":"Triple Take"}"}` |        |    0.130      |
+inventory_XX        | me   | Lists the items picked up into the local player's inventory (Tab).</br>Example:</br>`{"name":"unknown_42","amount":"40"}`   |        |    130.0      |
+weapons | me   | Weapons currently used by the local player - there are two slots available marked 0 and 1.</br>Example:</br>`{"weapon0":"Wingman","weapon1":"Alternator SMG"}` |        |    0.130      |
+inUse | me   | Items <b>currently used</b> by the local player.</br>Example:</br>`{"inUse":"Kunai Melee"}` |        |    0.130      |
 
 ## kill
 
