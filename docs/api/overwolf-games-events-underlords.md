@@ -31,6 +31,7 @@ key          | Category    | Values                    | Notes                 |
 ------------ | ------------| ------------------------- | --------------------- | -------------  | 
 mode         | match_info  | Current-played game mode  |See [notes](#mode-note)      |     139.0      |
 round_type   | match_info  | PVE / PVP                 |See [notes](#round_type-note)|     139.0      |
+round_state  | match_info  |State the game is currently in.|See [notes](#round_state-note)|   139.0  |
 
 #### *mode* note
 
@@ -49,6 +50,17 @@ Data Example:
 ```
 ```json
 {"info":{"match_info":{"round_type":"{"round":4,"type":"PvP"}"}},"feature":"match_info"}
+```
+
+#### *round_state* note
+
+Data Example:
+
+```json
+{"info":{"match_info":{"round_state":"Ready"}},"feature":"match_info"}
+```
+```json
+{"info":{"match_info":{"round_state":"Combat"}},"feature":"match_info"}
 ```
 
 ### Events
