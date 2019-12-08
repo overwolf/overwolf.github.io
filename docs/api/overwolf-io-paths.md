@@ -34,6 +34,13 @@ You can call the object properties to get the requested path:
 
 ## Usage Example
 
+To get the system path:
+
+```js
+console.log(overwolf.io.paths.system)
+//prints "C:\WINDOWS\system32"
+```
+
 To get the full path of the current extension (OW app), you can call `overwolf.io.paths.localAppData` and concatenate your extension id and your app version to it:
 
 ```javascript
