@@ -17,6 +17,9 @@ Follow this entry for ongoing updates and changes to the project or tools:
 * [League of Legends Launcher Events](overwolf-games-launchers-events-lol#docsNav)
   * New update:
     * close_client_during_game
+* [MTGA Events](overwolf-games-events-mtga)
+   * New info-update:
+     * scene
   
 
 ## Version 0.138 (Nov. 2019)
