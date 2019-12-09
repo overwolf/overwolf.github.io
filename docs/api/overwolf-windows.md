@@ -720,6 +720,8 @@ callback               | function                              | Called with the
 
 Note: Using this method while you are playing a game in a fullscreen mode, will cause the game to auto-minimize (as the calling app window gets the front focus).
 
+QUESTION: is this still true with grabFocus = false?
+
 Parameter              | Type                                  | Description                                                               |
 -----------------------| --------------------------------------| --------------------------------------------------------------------------|
 windowId	           | string                                | The id or name of the window                                              |
