@@ -16,9 +16,11 @@ The app can work on Overwolf client version 0.135 and above. In order to downloa
 
 ## Roadmap
 
+Recently, we added samples for each event type so you can simulate more easily.
+
 Our next major step planned for the sample app is including data validation features in it. Currently the app doesn't check the data being sent to it, so if you send an integer instead of a True/False flag for an integer field it will just not work. For now, please make sure you send data in the correct format and of the correct type per function.
 
-Down the road, we will add samples for each event type so you can validate more easily.
+Down the road, we might add the option to simulate game events without runnning the game itself, so you can validate more easily.
 
 ## "no active game" mode
 
@@ -43,19 +45,29 @@ Once you choose a feature, the list of events and info updates for this feature 
 
 ## 3. Send data to the app
 
-After a feature was selected, you can set an exact value to send to the app as event data. Once the data is ready, just hit the "Trigger" button.
-
-::: note how to send data
-* Strings: encapsulate the text in double quotes (example: "my string")
-* Numbers: simply type the number (example: 123)
-* Boolean: true / false
-* Objects: stringify them and send them as strings (see strings)
-:::
+After a feature was selected, the sample data will be automatically fetched from the server.  
+You can than customize and set an exact value to send to the app as event data. Once the data is ready, just hit the "Trigger" button.
 
 ![alt-text](assets/events-simulator/3.png)
 
+:::important
+On the "Listener data preview" window, you will get a preview of the data that your app listener will receive from the simulator. In a real game, you will receive the data in the same format.  
+:::
+
 ## 4. Trigger the event
 
-Once you hit the "Trigger" button, you can see the event was triggered in the dev console. In this stage, if YOUR app is listenning to the triggered event / info update, it should respond to it as well.
+Once you hit the "Trigger" button, the event is triggered and you can see the event was triggered in the dev console.
+
+![alt-text](assets/events-simulator/simulator-usage.gif)
+
+
+## 5. Listen to the simulated event
+
+In this stage, if your app is listenning to the triggered event / info update, it should respond to it as well.
+In addition, you can test it using our library of [sample apps]((https://github.com/overwolf/events-sample-apps)) - these apps listen to all the events,  so if you are running Apex for example, install the Apex events sample app, open the debug console, and you should see all the triggered events from the simulator (and the events that come from the game of course)
 
 ![alt-text](assets/events-simulator/console.png)
+
+
+
+
