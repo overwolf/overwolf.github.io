@@ -215,6 +215,8 @@ Data Example:
 Data Example:
 
 ```json
+{"info":{"match_info":{"server_info":"{\"name\":\"Counter-Strike: Global Offensive\",\"ip\":\"=[A:1:2111360000:13753]:0:0\"}"}},"feature":"match_info"}
+
 {"match_info":{"server_info":"{"name":"RU | ALTAI AWP [!ws,!knife,!gloves,!viptest] 128tick","ip":"212.22.93.74:27040"}"}}
 ```
 
@@ -520,8 +522,9 @@ A list containing the URL address of all available replays that are currently st
 
 Data Example:
 
-`{"category":"game_info","key":"replays_list","value":"{"replays":[{"link": "steam://rungame/730/76561202255233023/+csgo_download_match%20CSGO-dVoC5-kwY8k-LCb3J-wCiMw-CrahQ","order":"0"},{"link": "steam://rungame/730/76561202255233023/+csgo_download_match%20CSGO-myDzD-AOTzm-wYZzH-bCmrA-JebRF","order":"1"}]}","valueLength":261}
-16:06:54.359 InfoDBContainer.js:69 [InfoDBContainer] UPDATING INFO (decoded): {"feature":"replay","category":"replay","key":"replay_list","value":"["steam://rungame/730/76561202255233023/+csgo_download_match CSGO-dVoC5-kwY8k-LCb3J-wCiMw-CrahQ","steam://rungame/730/76561202255233023/+csgo_download_match CSGO-myDzD-AOTzm-wYZzH-bCmrA-JebRF"]"}`
+```json
+{"feature":"replay","category":"replay","key":"replay_list","value":"["steam://rungame/730/76561202255233023/+csgo_download_match CSGO-dVoC5-kwY8k-LCb3J-wCiMw-CrahQ","steam://rungame/730/76561202255233023/+csgo_download_match CSGO-myDzD-AOTzm-wYZzH-bCmrA-JebRF"]"}
+```
 
 ## `counters`
 
