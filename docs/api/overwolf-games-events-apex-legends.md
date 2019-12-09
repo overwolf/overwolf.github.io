@@ -66,7 +66,12 @@ match_state  | game_info   | active/inactive           |                       |
 Event       | Event Data   | Fired When    | Notes              | Since GEP Ver. |
 ------------| -------------| --------------| ------------------ | --------------|
 match_start | null         | Match started |                    |     128.0     | 
-match_end   | null         | Match ended   |                    |     128.0     | 
+match_end   | null         | Match ended   |See [notes](#match-end-note)|     128.0     | 
+
+#### *match_end* note
+
+Currently we have a special case where if someone in your team got a yellow knockdown shield (the one that allows you to self-revive), and your entire team was knocked out, the match end will still fire despite no one reaching a death-state.
+This is a very rare case that does not commonly happen in the game, however we're still working on fixing it.
 
 ## team
 
