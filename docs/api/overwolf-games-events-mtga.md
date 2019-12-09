@@ -25,6 +25,32 @@ Please read the [overwolf.games.events](overwolf-games-events) documentation pag
 key          | Category    | Values                    | Notes                 | Since GEP Ver. |
 ------------ | ------------| ------------------------- | --------------------- | -------------  | 
 detailed_logs_enabled | game_info   | True / False | See [notes](#detailed_logs_enabled-note) |     138.0      |
+scene | game_info   | Current state (screen) of the game | See [notes](#scene-note) |     139.0      |
+
+#### *scene* note
+
+Possible values:
+
+* home
+* profile
+* decks
+* packs
+* store
+* event
+* loading
+* draft_pack (vertical/horizontal)
+* deck_building
+* match
+* sideboarding
+
+Data Example:
+
+```json
+{"feature":"game_info","category":"game_info","key":"scene","value":"home"}
+```
+```json
+{"feature":"game_info","category":"game_info","key":"scene","value":"decks"}
+```
 
 #### *detailed_logs_enabled* note
 
@@ -43,13 +69,13 @@ Data Example:
 
 Event  | Event Data        | Fired When (announcement)                                          | Notes      | Since GEP Ver. |
 -------| ------------------| -------------------------------------------------------------------| ---------- | --------------|
-match_outcome |  victory/defeat   | When the local player wins/loses. |See [notes](#match_outcome)|    138.0      |
+game_outcome |  victory/defeat   | When the local player wins/loses. |See [notes](#game_outcome)|    139.0      |
 
-#### *match_outcome*
+#### *game_outcome*
 
 Data Example:
 
 ```json
-{"feature":"match_outcome","data":"victory"}
-{"feature":"match_outcome","data":"defeat"}
+{"feature":"game_outcome","data":"victory"}
+{"feature":"game_outcome","data":"defeat"}
 ```
