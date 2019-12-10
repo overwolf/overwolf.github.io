@@ -70,6 +70,7 @@ Data Example:
 Event  | Event Data        | Fired When (announcement)                                          | Notes      | Since GEP Ver. |
 -------| ------------------| -------------------------------------------------------------------| ---------- | --------------|
 game_outcome |  victory/defeat   | When the local player wins/loses. |See [notes](#game_outcome)|    139.0      |
+match_outcome |  victory/defeat   | When the local player wins/loses. |See [notes](#match_outcome)|    139.0      |
 
 #### *game_outcome*
 
@@ -79,3 +80,15 @@ Data Example:
 {"feature":"game_outcome","data":"victory"}
 {"feature":"game_outcome","data":"defeat"}
 ```
+
+#### *match_outcome*
+
+This event is relevant for modes that have a best-of-3 format, thus giving the final outcome.
+
+Data Example:
+
+```json
+{"feature":"match_outcome","data":"victory"}
+{"feature":"match_outcome","data":"defeat"}
+```
+
