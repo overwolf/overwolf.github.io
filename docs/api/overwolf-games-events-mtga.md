@@ -71,6 +71,8 @@ Event  | Event Data        | Fired When (announcement)                          
 -------| ------------------| -------------------------------------------------------------------| ---------- | --------------|
 game_outcome |  victory/defeat   | When the local player wins/loses. |See [notes](#game_outcome)|    139.0      |
 match_outcome |  victory/defeat   | When the local player wins/loses. |See [notes](#match_outcome)|    139.0      |
+match_start |  null   | When match has started. |See [notes](#match_start)|    139.0      |
+
 
 #### *game_outcome*
 
@@ -90,5 +92,13 @@ Data Example:
 ```json
 {"feature":"match_outcome","data":"victory"}
 {"feature":"match_outcome","data":"defeat"}
+```
+
+#### *match_start*
+
+Data Example:
+
+```json
+{"feature":"match_start","data":"null"}
 ```
 
