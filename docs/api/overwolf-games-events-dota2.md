@@ -196,7 +196,13 @@ Event Data:
 
 Event       | Event Data   | Fired When    | Notes              | Since GEP Ver. |
 ------------| -------------| --------------| ------------------ | --------------|
-match_ended   | winner – radiant/dire  |When an ancient is destroyed and the game ends.  |       |     77.3      |
+match_ended | radiant/dire |When an ancient is destroyed and the game ends.  | See [notes](#match_ended-note)       |     77.3      |
+
+#### *match_ended* note
+
+```json
+{"winner": "dire"}
+```
 
 ## `kill`
 
@@ -209,6 +215,10 @@ kill    | Check notes |Whenever the player kills an enemy hero. 	|See [notes](#k
 #### *kill* note
 
 Event Data:
+
+```json
+{"kills": 1,"kill_streak": 1,"label": "kill"}
+```
 
 * <b>kills</b> – The total number of kills the player has.
 * <b>kill_streak</b> – The current number of hero kills without dying, denying oneself to neutral creeps does not reset this counter.

@@ -168,6 +168,9 @@ Oct 09, 10:24 AM GMT+3
 World of Tanks
 --------------
 
+**Investigating** - WoT events are down.  
+Dec 10, 03:36 PM GMT+3
+
 **Resolved** - This incident has been resolved.  
 Oct 17, 02:25 PM GMT+3
 
