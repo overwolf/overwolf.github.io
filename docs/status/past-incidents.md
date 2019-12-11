@@ -139,6 +139,12 @@ Teamfight Tactics
 -----------------
 
 **Resolved** - This incident has been resolved.  
+Dec 11, 17:15 AM GMT+3
+
+**Investigating** -  TFT game events are down.
+Dec 11, 09:19 AM GMT+3
+
+**Resolved** - This incident has been resolved.  
 Nov 20, 22:20 PM GMT+3
 
 **Investigating** -  TFT game events are down.
