@@ -71,6 +71,8 @@ Event  | Event Data        | Fired When (announcement)                          
 -------| ------------------| -------------------------------------------------------------------| ---------- | --------------|
 game_outcome |  victory/defeat   | When the local player wins/loses. |See [notes](#game_outcome)|    139.0      |
 match_outcome |  victory/defeat   | When the local player wins/loses. |See [notes](#match_outcome)|    139.0      |
+match_start | game_format+deck_id   | When match has started + Deck information |See [notes](#match_start)|    139.0      |
+
 
 #### *game_outcome*
 
@@ -90,5 +92,13 @@ Data Example:
 ```json
 {"feature":"match_outcome","data":"victory"}
 {"feature":"match_outcome","data":"defeat"}
+```
+
+#### *match_start*
+
+Data Example:
+
+```json
+{"events":[{"name":"match_start","data":"{"game_format":"Constructed_Event_2020","deck_id":"b6ed3e9b-db31-43b5-a903-29694f21f977","main_deck":[{"id":69890,"count":1},{"id":70107,"count":1},{"id":69905,"count":4},{"id":68526,"count":3},{"id":68547,"count":3},{"id":70105,"count":3},{"id":70110,"count":3},{"id":70109,"count":4},{"id":69218,"count":3},{"id":69876,"count":2},{"id":69880,"count":2},{"id":69894,"count":3},{"id":69877,"count":2},{"id":70017,"count":1},{"id":70054,"count":25}],"sideboard":[]}"}]}
 ```
 
