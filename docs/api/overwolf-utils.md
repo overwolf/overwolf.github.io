@@ -101,7 +101,7 @@ The accepted input for the `keyString` param is identical to Microsoft's [Key en
 
 Parameter | Type     | Description                                                                                  |
 --------- | ---------| -------------------------------------------------------------------------------------------- |
-filter    | string   | A file filter. Supports wild cards (*) and seperated by commas (,). Ex. myFile*.*,*.txt      |
+filter    | string   | A file filter. Provide an empty string for wild cards or seperate value by commas (,). Ex. myFile*.*,*.txt      |
 callback  | function | Called with a url to the selected file                                                       |
 
 #### Callback argument: Success
