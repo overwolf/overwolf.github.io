@@ -62,6 +62,9 @@ Data Example:
 ```json
 {"info":{"match_info":{"round_state":"Combat"}},"feature":"match_info"}
 ```
+```json
+{"info":{"match_info":{"round_state":"RoundOver"}},"feature":"match_info"}
+```
 
 ### Events
 
@@ -71,6 +74,9 @@ match_start | null         | Match started |See [notes](#match_start-note) |    
 match_end   | null         | Match ended   |See [notes](#match_end-note)   |     139.0      | 
 battle_start| null         | Combat started|See [notes](#battle_start-note)|     139.0      | 
 battle_end  | null         | Combat ended  |See [notes](#battle_end-note)  |     139.0      | 
+round_outcome| win/lose    | Combat ended  |See [notes](#round_outcome-note)  |     139.0      | 
+match_outcome| win/lose + rank| Match ended  |See [notes](#match_outcome-note)  |     139.0      | 
+
 
 #### *match_start* note
 
@@ -104,5 +110,20 @@ Data Example:
 {"events":[{"name":"battle_end","data":""}]}
 ```
 
+#### *round_outcome* note
 
+This event currently supports "PVP" rounds *ONLY*
 
+Data Example:
+
+```json
+{"events":[{"name":"round_outcome","data":"win"}]}
+```
+
+#### *match_outcome* note
+
+Data Example:
+
+```json
+{"events":[{"name":"match_outcome","data":"{"outcome":"win","rank":1}"}]}
+```
