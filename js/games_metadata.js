@@ -117,5 +117,12 @@ const GamesMetadata = {
     iconUrl: "/docs/assets/games-logos/dota_underlords.png",
     iconLargeUrl: "/docs/assets/games-logos/large/dota_underlords.png",
     name: "Dota Underlords"
+  },
+  5855: {
+    id: 5855,
+    path: "/docs/status/sc2",
+    iconUrl: "/docs/assets/games-logos/sc2.png",
+    iconLargeUrl: "/docs/assets/games-logos/large/sc2.png",
+    name: "StartCraft II"
   }
 }
