@@ -20,7 +20,13 @@ Follow this entry for ongoing updates and changes to the project or tools:
 * [MTGA Events](overwolf-games-events-mtga)
    * New info-update:
      * scene
-  
+* [Dota Underlords Events](https://overwolf.github.io/docs/api/overwolf-games-events-underlords)
+  * New events:
+    * round_outcome
+    * match_outcome
+* [Starcraft II Events](https://overwolf.github.io/docs/api/overwolf-games-events-sc2)
+  * New supported game
+
 
 ## Version 0.138 (Nov. 2019)
 
