@@ -1,6 +1,6 @@
 ---
 id: data-persistence
-title: Choosing the Best Client-Side Storage Technology for Your app
+title: Choosing your App's Client-Side Storage Technology
 sidebar_label:  Data persistence
 ---
 
@@ -107,6 +107,9 @@ The Application Cache uses a cache manifest. This is a simple text document list
 
 Read more about app cache [here](https://www.html5rocks.com/en/tutorials/appcache/beginner/).
 
+## Summary
 
-**If you're still unsure about which technology is best suited to your project, [contact us](../support/contact-us).**
+we've looked at some of the different client-side storage technologies that are available to you when building Overwolf applications.  
+
+If you're still unsure about which technology is best suited to your project, [contact us](../support/contact-us).
 
