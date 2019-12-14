@@ -1,26 +1,52 @@
 ---
 id: data-persistence
-title: Data persistence in Overwolf apps
+title: Choosing the Best Client-Side Storage Technology for Your app
 sidebar_label:  Data persistence
 ---
 
 ## Overview
 
-There are a number of ways for Overwolf apps to store data on the user's computer — with the user's permission — then retrieve it when necessary.  
-This lets you persist data for long-term storage, save sites or documents for offline use, retain user-specific settings for your site, and more. This article explains the very basics of how these work.
+There are a several ways for Overwolf apps to store data on the user's computer — then retrieve it when necessary. 
+This lets you persist data for long-term storage, save data or documents for offline use, retain user-specific settings for your app, and more.
+
+ In this article, we are going to take you through the most popular client-side storage technologies, highlighting their usage, benefits, and drawbacks.
 
 ## Cookies
+
+Cookies are essentially used to store a session id.
+
+In the past cookies were used to store various types of data, since there was no alternative. But nowadays with the Web Storage API and IndexedDB, we have much better alternatives, especially because cookies have a very low limit in the data they can hold, since they are sent back-and-forth for every HTTP request to our server - including requests for assets like images or CSS / JavaScript files.
+
+### Restrictions of cookies
+
+* Cookies can only store 4KB of data.
+* Cookies are private to the domain/app. An OW app can only read the cookies it set, not other OW apps cookies.
+* Cookies are limited in their total number (but the exact number depends on the specific browser implementation). If this number is exceeded, new cookies replace the older ones.
+
+Cookies can be set or read server side, or client side. In the client side, cookies are exposed by the document object as document.cookie
+
+### Usage
+
+A simple JavaScript snippet to set a cookie that expires in 24 hours is:
+
+```js
+document.cookie = 'name=OW; max-age=31536000' //set a cookie that expires in 1 year
+
+// return a string with all the cookies set for the page, semicolon separated
+const cookies = document.cookie 
+```
+
 
 ## Web Storage
 
 Web Storage provides a simple means to store key/value pairs in a user's browser.
 
-* Web Storage is persistent. Once a value is stored, it doesn't disappear or expire until it's explicitly removed by the application or the user.
+* Web Storage is persistent. Once a value is stored, it doesn't disappear or expire until the application, or the user explicitly removes it.
 * Web Storage can handle large amounts of data. Current browsers limit total size per storage area to 5MB.
 * Web Storage doesn't depend on the server and sends no data to the server. You're free to store data locally and sync it with the server asynchronously, of course, but Web Storage works equally well and is just as useful offline as it is online.
 * Web Storage provides four primary methods — getItem(key); setItem(key,value); removeItem(key); and clear().
 
-Web Storage includes of two different types of storage: SessionStorage and LocalStorage.
+Web Storage includes two different types of storage: SessionStorage and LocalStorage.
 
 ### Session storage
 
@@ -43,10 +69,44 @@ Web Storage can pretty much be used anywhere you would normally have used cookie
 
 ## IndexedDB
 
-## Comparision chart
+Indexed Database is an API for storing and retrieving data using an indexed, transactional database of key-value pairs on the user's computer. 
 
-Feature       | Cookies    | Session storage     | Local storage      |  IndexedDB    |
---------------| -----------| ------------------- | ------------------ | --------------|
-Capacity      |            |                     |                    |               | 
-Accessibility |            |                     |                    |               | 
-Expiration    |            |                     |                    |               | 
+IndexedDB provides faster, more sophisticated data storage and retrieval than simple key-value pair storage of the type available from Web Storage or cookies.
+
+### Benefits
+
+IndexedDB offers four specific benefits over Web Storage:
+
+* Indexed data can be searched efficiently.
+* Databases allow multiple values to be stored as a key, whereas key-value data requires every key to be unique.
+* Transactional databases offer some protection against system and application failures. If a transaction doesn't successfully complete, it can be rolled back.
+* IndexedDB databases impose no size limitations.
+
+### Usage
+
+All major browsers except Safari currently support IndexedDB.
+
+Use the [IndexedDB API](http://www.w3.org/TR/IndexedDB/) to set and get data:
+
+```js
+var request = indexedDB.open("myDatabase"); //the first step is to open a database
+
+//create an object store (which is something very much like a table)
+var objectStore = db.createObjectStore("customers", {keyPath: "id"}); 
+
+objectStore.add(customerData[i]); //add data
+```
+
+IndexedDB is the way to go if you're building an application that needs to store structured data. Just be aware of the steep learning curve when you're getting started.
+
+## Application Cache
+
+The Application Cache isn't like other client-side data storage APIs listed above, but it's worth mentioning, as it's an important component in enabling offline client-side Web apps.
+
+The Application Cache uses a cache manifest. This is a simple text document listing resources that should and shouldn't be cached, to tell the browser to download certain files, hold onto them and use the cached version rather than make a request to the server. Every major Web browser supports the Application Cache.
+
+Read more about app cache [here](https://www.html5rocks.com/en/tutorials/appcache/beginner/).
+
+
+**If you're still unsure about which technology is best suited to your project, [contact us](../support/contact-us).**
+
