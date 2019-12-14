@@ -137,6 +137,10 @@ Rocket League
 -------------
 No logs.
 
+StartCraft II
+-------------
+No logs.
+
 Splitgate
 ---------
 No logs.
