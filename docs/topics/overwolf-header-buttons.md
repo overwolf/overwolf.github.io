@@ -3,6 +3,7 @@ id: overwolf-header-buttons
 title: Overwolf Header Buttons
 sidebar_label: Overwolf header buttons
 ---
+<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
 
 
 You might have encountered [our sample app](https://github.com/overwolf/sample-app) at the start of your development process. In the sample app, we give you our best practice for buttons usage. The following are the buttons that we recommend for you to use in your app.
@@ -14,20 +15,33 @@ Here is an example for the sample app header with the HTML/CSS code:
   Window controls</a> by Overwolf Developers (<a href="https://codepen.io/OverwolfDevs">@OverwolfDevs</a>)
   on <a href="https://codepen.io">CodePen</a>.</span>
 </p>
-<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
 
-Available buttons:
+## Available buttons
 
-X  - Closes the app
+### Close 
 
-Square - Maximizes the app to fullscreen 
+X -  Closes the app.
 
-Restore - Restores the app to its original size
+### Maximize
 
-_ - Minimizes the app
+Square - Maximizes the app to fullscreen. 
 
-? -Your support tab.  Our best practice is to use the Widgetbot with this button. Read more here.
+### Restore
 
-Discord - Discord invite to your apps server.
+Restores the app to its original size
 
-Settings - If your app has any special settings, this would be the place to present them. Other than that, you can use this button to direct users to the Overwolf settings page.
+### Minimize 
+
+Minimizes the app
+
+### Help
+
+? -Your support tab.  Our best practice is to use the Widgetbot with this button. Read more [here](../start/add-a-knowledge-base-to-app).
+
+### Discord
+
+Discord invite to your apps server.
+
+### Settings 
+
+If your app has any special settings, this would be the place to present them. Other than that, you can use this button to direct users to the Overwolf settings page.
