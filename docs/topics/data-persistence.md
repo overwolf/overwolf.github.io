@@ -28,7 +28,8 @@ Cookies can be set or read server side, or client side. On the client's side, co
 A simple JavaScript snippet to set a cookie that expires in 1 year is:
 
 ```js
-document.cookie = 'name=OW; max-age=31536000' // set a cookie that expires in 1 year counted in seconds
+// set a cookie that expires in 1 year counted in seconds
+document.cookie = 'name=OW; max-age=31536000' 
 
 // return a string with all the cookies set for the page, semicolon separated
 const cookies = document.cookie 
