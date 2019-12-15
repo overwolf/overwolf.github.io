@@ -6,31 +6,31 @@ sidebar_label:  Data persistence
 
 ## Overview
 
-There are a several ways for Overwolf apps to store data on the user's computer — then retrieve it when necessary. 
-This lets you persist data for long-term storage, save data or documents for offline use, retain user-specific settings for your app, and more.
+There are several ways for Overwolf apps to store data locally in the user's computer for later retrieval when necessary. 
+Storing data persistently enables long-term storage, back ups of save data or documents for offline use, and to retain user-specific settings for your app.
 
- In this article, we are going to take you through the most popular client-side storage technologies, highlighting their usage, benefits, and drawbacks.
+In this article, we're going to review the most popular client-side storage technologies, highlighting their usage, benefits, and drawbacks.
 
 ## Cookies
 
-Cookies are essentially used to store a session id.
+Cookies are used to store a session's id.
 
-In the past cookies were used to store various types of data, since there was no alternative. But nowadays with the Web Storage API and IndexedDB, we have much better alternatives, especially because cookies have a very low limit in the data they can hold, since they are sent back-and-forth for every HTTP request to our server - including requests for assets like images or CSS / JavaScript files.
+In the past, cookies were used to store various types of local information, with no real alternative. Cookies are severely limited in size and can't store too much - they are sent back and forth for every HTTP request and asset requests for Images/CSS/JavaScript files. Nowadays we have Web Storage API, IndexedDB, and a bunch of solid alternatives which are much less limited than cookies and enable you to store more types of data easily.
 
 ### Restrictions of cookies
 
-* Cookies can only store 4KB of data.
-* Cookies are private to the domain/app. An OW app can only read the cookies it set, not other OW apps cookies.
-* Cookies are limited in their total number (but the exact number depends on the specific browser implementation). If this number is exceeded, new cookies replace the older ones.
+* Cookies can only store up to 4KB of data.
+* Cookies are private to the app. An OW app can only read the cookies it set itself, not other OW apps cookies.
+* Cookies are limited in total number (but the exact number depends on the specific browser implementation). If this number is exceeded, new cookies replace the older ones.
 
-Cookies can be set or read server side, or client side. In the client side, cookies are exposed by the document object as document.cookie
+Cookies can be set or read server side, or client side. On the client's side, cookies are exposed by the document object as document.cookie .
 
 ### Usage
 
-A simple JavaScript snippet to set a cookie that expires in 24 hours is:
+A simple JavaScript snippet to set a cookie that expires in 1 year is:
 
 ```js
-document.cookie = 'name=OW; max-age=31536000' //set a cookie that expires in 1 year
+document.cookie = 'name=OW; max-age=31536000' // set a cookie that expires in 1 year counted in seconds
 
 // return a string with all the cookies set for the page, semicolon separated
 const cookies = document.cookie 
@@ -39,11 +39,11 @@ const cookies = document.cookie
 
 ## Web Storage
 
-Web Storage provides a simple means to store key/value pairs in a user's browser.
+Web Storage provides a way to store key/value pairs in a user's browser.
 
-* Web Storage is persistent. Once a value is stored, it doesn't disappear or expire until the application, or the user explicitly removes it.
+* Web Storage is persistent. Once a value is stored, it doesn't disappear or expire until the application or the user explicitly removes it.
 * Web Storage can handle large amounts of data. Current browsers limit total size per storage area to 5MB.
-* Web Storage doesn't depend on the server and sends no data to the server. You're free to store data locally and sync it with the server asynchronously, of course, but Web Storage works equally well and is just as useful offline as it is online.
+* Web Storage doesn't depend on the server and sends no data to the server. You're free to store data locally and sync it with the server asynchronously, but Web Storage works equally well and is just as useful offline as it is online.
 * Web Storage provides four primary methods — getItem(key); setItem(key,value); removeItem(key); and clear().
 
 Web Storage includes two different types of storage: SessionStorage and LocalStorage.
@@ -65,7 +65,7 @@ localStorage.setItem( "firstname", "Sparky" );
 var name = localStorage.getItem( "firstname" );
 ```
 
-Web Storage can pretty much be used anywhere you would normally have used cookies. It provides what's perhaps the simplest way — even easier than cookies — to set and retrieve key-value pairs in a browser.
+Web Storage can be used anywhere you would normally have used cookies. It provides what's perhaps the simplest way — even easier than cookies — to set and retrieve key-value pairs in a browser.
 
 ## IndexedDB
 
@@ -78,7 +78,7 @@ IndexedDB provides faster, more sophisticated data storage and retrieval than si
 IndexedDB offers four specific benefits over Web Storage:
 
 * Indexed data can be searched efficiently.
-* Databases allow multiple values to be stored as a key, whereas key-value data requires every key to be unique.
+* Databases allow multiple values to be stored as a key, whereas key-value data requires each key to be unique.
 * Transactional databases offer some protection against system and application failures. If a transaction doesn't successfully complete, it can be rolled back.
 * IndexedDB databases impose no size limitations.
 
@@ -109,7 +109,7 @@ Read more about app cache [here](https://www.html5rocks.com/en/tutorials/appcach
 
 ## Summary
 
-we've looked at some of the different client-side storage technologies that are available to you when building Overwolf applications.  
+This was a review of the different client-side storage techniques you can leverage when building Overwolf applications.  
 
-If you're still unsure about which technology is best suited to your project, [contact us](../support/contact-us).
+If you're still unsure about which method is best suited to your project, [contact us](../support/contact-us).
 
