@@ -10,23 +10,39 @@ Use the `overwolf.os` API for Operating System related functionalities.
 
 * [overwolf.os.getRegionInfo()](#getregioninfocallback)
 
+## Types Reference
+
+* [overwolf.os.GetRegionInfoResult](#getregioninforesult-object) Object
+* [overwolf.os.RegionInfo](#regioninfo-object) Object
+
+
 
 ## getRegionInfo(callback)
 #### Version added: 0.132
 
 > Returns regional information about the user.
 
-Parameter | Type                                                    | Description             |
---------- | --------------------------------------------------------| ----------------------- |
-callback  | function                                                | Returns with the result |
+Parameter | Type                                                                    | Description             |
+--------- | ------------------------------------------------------------------------| ----------------------- |
+callback  | ([Result: GetRegionInfoResult](#getregioninforesult-object)) => void    | Returns with the result |
 
-#### Callback argument: Success
 
-A callback function which will be called with the status of the request and the returned object:
+## GetRegionInfoResult Object
+
+Parameter          | Type     | Description                                 |
+-------------------| ---------| ------------------------------------------- |
+*success*          | boolean  | inherited from the "Result" Object          |
+*error*            | string   | inherited from the "Result" Object          |
+status             | string   | deprecated. For backward compatibility only |
+Reason             | string   | deprecated. For backward compatibility only |   
+info               | [RegionInfo](#regioninfo-object) Object    | Region Info     |   
+
+
+#### Example data: Success
 
 ```json
 { 
-	"status": "success",
+	"success": true,
 	"info":
 	{ 
 		"date_format": "M/d/yyyy",
@@ -38,10 +54,13 @@ A callback function which will be called with the status of the request and the 
 }
 ```
 
-#### Callback argument: Failure
+## RegionInfo Object
 
-A callback function which will be called with the status of the request
+Parameter          | Type     | Description      |
+-------------------| ---------| ---------------- |
+date_format        | string   |                  |
+time_format        | string   |                  |
+currency_symbol    | string   |                  |
+is_metric          | boolean  |                  |   
+name               | string   |                  |   
 
-```json
-{ "status": "error", "reason": "something went wrong..." }
-```

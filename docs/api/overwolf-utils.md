@@ -334,6 +334,7 @@ Parameter          | Type     | Description                                 |
 *error*            | string   | inherited from the "Result" Object          |
 status             | string   | deprecated. For backward compatibility only |
 Reason             | string   | deprecated. For backward compatibility only |   
+systemInfo         | object   |                                             |   
 AudioDevices       | string[] |                                             |   
 CPU                | string   |                                             |   
 GPUs               | [GPUInfo[]](#gpuinfo-object)         |                                    |   

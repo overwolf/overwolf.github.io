@@ -19,6 +19,8 @@ Use the `overwolf.os.tray` API for windows system tray related functionalities.
 ## Types Reference
 
 * [ExtensionTrayMenu](#extensiontraymenu-object) Object
+* [overwolf.os.tray.onMenuItemClickedEvent](#onmenuitemclickedevent-object) Object
+
 
 ## setMenu(menu, callback)
 #### Version added: 0.131
@@ -29,7 +31,7 @@ Use the `overwolf.os.tray` API for windows system tray related functionalities.
 Parameter | Type                                                    | Description             |
 --------- | --------------------------------------------------------| ----------------------- |
 menu      | [ExtensionTrayMenu](#extensiontraymenu-object) object   | The menu object         |
-callback  | function                                                | Returns with the result |
+callback  | (Result) => void                                        | Returns with the result |
 
 #### ExtensionTrayMenu Object
 
@@ -91,7 +93,7 @@ overwolf.os.tray.setMenu(trayMenu, (res) => {
 ## onMenuItemClicked
 #### Version added: 0.131
 
-> Will be fired when an item from the tray icon’s context menu is selected.
+> Fired when an item from the tray icon’s context menu is selected, with the following structure: [onMenuItemClickedEvent](#onmenuitemclickedevent-object) Object
 
 #### Event data example
 
@@ -102,9 +104,15 @@ overwolf.os.tray.setMenu(trayMenu, (res) => {
 ## onTrayIconClicked
 #### Version added: 0.131
 
-> Will be fired when the tray icon is left clicked.
+> Fired when the tray icon is left clicked.
 
 ## onTrayIconDoubleClicked
 #### Version added: 0.131
 
-> Will be fired when the tray icon is double clicked.
+> Fired when the tray icon is double clicked.
+
+## onMenuItemClickedEvent Object
+
+Parameter   | Type                              | Description           |
+------------| ----------------------------------|---------------------- |
+item        |  string                           |                       | 
