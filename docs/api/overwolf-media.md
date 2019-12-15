@@ -157,7 +157,7 @@ callback        | function   | A function called after the screenshot was taken
 
 Parameter           | Type       | Description                                                                                                              |
 --------------------| -----------| ------------------------------------------------------------------------------------------------------------------------ |
-screenshotParams	| [MemoryScreenshotParams](#memoryscreenshotparams-object)  | A JSON containing the parameters of the screenshot                        |
+screenshotParams	| [MemoryScreenshotParams](#memoryscreenshotparams-object) object  | A JSON containing the parameters of the screenshot                        |
 callback (Optional) | function   | A function called after the screenshot was taken  
 
 #### Callback argument: Success
