@@ -13,9 +13,7 @@ In this article, we're going to review the most popular client-side storage tech
 
 ## Cookies
 
-Cookies are used to store a session's id.
-
-In the past, cookies were used to store various types of local information, with no real alternative. Cookies are severely limited in size and can't store too much - they are sent back and forth for every HTTP request and asset requests for Images/CSS/JavaScript files. Nowadays we have Web Storage API, IndexedDB, and a bunch of solid alternatives which are much less limited than cookies and enable you to store more types of data easily.
+In the past, cookies were used to store various types of local information like session's id, with no real alternative. Cookies are severely limited in size and can't store too much - they are sent back and forth for every HTTP request and asset requests for Images/CSS/JavaScript files. Nowadays we have Web Storage API, IndexedDB, and a bunch of solid alternatives which are much less limited than cookies and enable you to store more types of data easily.
 
 ### Restrictions of cookies
 
@@ -35,7 +33,6 @@ document.cookie = 'name=OW; max-age=31536000' // set a cookie that expires in 1 
 // return a string with all the cookies set for the page, semicolon separated
 const cookies = document.cookie 
 ```
-
 
 ## Web Storage
 
