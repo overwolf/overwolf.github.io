@@ -59,7 +59,7 @@ LocalStorage, meanwhile, persists across windows and tabs within a single browse
 Use the [Web Storage API](http://www.w3.org/TR/2013/REC-webstorage-20130730/) to set and get data:
 
 ```js
-localStorage.setItem( "firstname", "Sparky" );
+localStorage.setItem( "firstname", "Wolf" );
 var name = localStorage.getItem( "firstname" );
 ```
 
@@ -90,7 +90,7 @@ Use the [IndexedDB API](http://www.w3.org/TR/IndexedDB/) to set and get data:
 var request = indexedDB.open("myDatabase"); //the first step is to open a database
 
 //create an object store (which is something very much like a table)
-var objectStore = db.createObjectStore("customers", {keyPath: "id"}); 
+var objectStore = db.createObjectStore("players", {keyPath: "id"}); 
 
 objectStore.add(customerData[i]); //add data
 ```
