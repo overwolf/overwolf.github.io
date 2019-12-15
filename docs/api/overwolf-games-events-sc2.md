@@ -28,8 +28,8 @@ It's highly recommended to communicate errors to your users. Check game event st
 
 Event       | Event Data   | Fired When    | Notes              | Since GEP Ver. |
 ------------| -------------| --------------| ------------------ | --------------|
-match_start | null         |When the opposing team has scored a goal|See [notes](#match_start-note)|   139.0   | 
-match_end   | victory/defeat|When the opposing team has scored a goal|See [notes](#match_end-note)|   139.0   | 
+match_start | null         |When the match starts|See [notes](#match_start-note)|   139.0   | 
+match_end   | victory/defeat|When the match ends|See [notes](#match_end-note)|   139.0   | 
 
 #### *match_start* note
 
