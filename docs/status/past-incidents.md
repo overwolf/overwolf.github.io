@@ -37,6 +37,9 @@ No logs.
 Fortnite
 --------
 
+**Resolved** - This incident has been resolved.  
+Dec 15, 09:07 PM GMT+3
+
 **Investigating** - Fortnite events are down due to a game patch.  
 Dec 15, 13:34 PM GMT+3
 
