@@ -197,8 +197,16 @@ Data Example:
 
 key         | Category    | Values                          | Notes                 | Since GEP Ver. |
 ----------- | ------------| --------------------------------| --------------------- | ------------- |
-nicknames       | match_info   | The names of players in the player’s team</br>`{"nicknames":"{"team_members":[{"player": "yy899189"}`</br>`,{"player":"itayG"},{"player":"fucis"},{"player"`</br>`:"gedyan"}]}"}},"feature":"team"}`        |                       |   90.0        |
+nicknames       | match_info   | The names of players in the local players' squad.|See [notes](#nicknames-notes) |   90.0        |
 team_location| match_info  | The X,Y,Z location of your team members. |See [notes](#team_location-notes)|     134.0     |
+
+#### *nicknames* note
+
+Data Example:
+
+```json
+{"info":{"match_info":{"nicknames":"{"team_members":["1234564534123453","KromA","pablolo","LEOkonami"]}"}},"feature":"team"}
+```
 
 #### *team_location* note
 
