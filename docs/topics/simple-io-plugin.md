@@ -7,7 +7,7 @@ sidebar_label: Simple I/O Plugin
 
 A very useful plugin that we've developed ourselves is the **Simple IO Plugin**. This plugin allows your app to perform different filesystem I/O operations not available otherwise.
 
-You can [read  more](https://github.com/overwolf/overwolf-plugins/tree/master/sample_apps/simple-io-plugin/README.md) about the functions of the simple-io-plugin in the [Simple I/O GitHub repository](https://github.com/overwolf/overwolf-plugins/tree/master/sample_apps/simple-io-plugin).
+You can [read  more](https://github.com/overwolf/overwolf-plugins/blob/master/plugins/simple-io-plugin/README.md) about the functions of the simple-io-plugin in the [Simple I/O GitHub repository](https://github.com/overwolf/overwolf-plugins/tree/master/plugins/simple-io-plugin).
 
 ## Common uses for the plugin
 
