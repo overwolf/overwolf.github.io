@@ -34,6 +34,9 @@ Use the overwolf.media.replays API to capture a **short** video replay of the cu
 
 * [overwolf.media.replays.ReplayHighlightsSetting](#replayhighlightssetting-object) Object
 * [overwolf.media.replays.enums.ReplayType](#replaytype-enum) enum
+* [overwolf.media.replays.onHighlightsCapturedEvent](#onhighlightscapturedevent-object) Object
+* [overwolf.media.replays.raw_events](#raw_events-object) Object
+
 
 ## turnOn(parameters, callback)
 #### Version added: 0.130
@@ -361,7 +364,74 @@ overwolf.media.replays.getHighlightsFeatures(21216, JSON.stringify(console.log))
 
 #### Version added: 0.130
 
-> Fired when a new Replay highlight recorded (when highlightsSetting is enabled).
+> Fired when a new Replay highlight recorded (when highlightsSetting is enabled), with the following structure: [onHighlightsCapturedEvent](#onhighlightscapturedevent-object) Object
+
+#### Usage
+
+```js
+overwolf.media.replays.onHighlightsCaptured.addListener(function(info) {
+      console.log("a stream had captured: " + JSON.stringify(info));
+});
+```
+
+## onHighlightsCapturedEvent Object
+
+Parameter               | Type                              | Description           |
+------------------------| ----------------------------------|---------------------- |
+game_id                 |  number                           |                       | 
+match_id                |  string                           |                       | 
+match_internal_id       |  string                           |                       | 
+session_id              |  string                           |                       | 
+session_start_time      |  string                           |                       | 
+match_start_time        |  string                           |                       | 
+start_time              |  string                           |                       | 
+duration                |  string                           |                       | 
+events                  |  string[]                         |                       | 
+raw_events              |  [raw_events](#raw_events-object)[] |      | 
+media_url               |  string                           |                       | 
+media_path_encoded      |  string                           |                       | 
+thumbnail_url           |  string                           |                       | 
+thumbnail_encoded_path  |  string                           |                       | 
+replay_video_start_time |  number                           |                       | 
+
+#### Event data example
+
+```json
+{
+    "game_id":5426,
+    "match_id":"2334906612",
+    "match_internal_id":"",
+    "session_id":"f05099982b6c452dbf0ba8250d766dc8",
+    "session_start_time":1576572688739,
+    "match_start_time":1576572691238,
+    "start_time":1576572986453,
+    "duration":19333,
+    "events":["victory"],
+    "raw_events":[{"type":"victory","time":10000}],
+    "media_url":"overwolf://media/replays/Game+Summary/League+of+Legends/League+of+Legends_17-12-2019_10-51-31-222/League+of+Legends+12-17-2019+10-56-36-455.mp4","media_path":"C:\\Users\\Er\\Videos\\Overwolf\\Game Summary\\League of Legends\\League of Legends_17-12-2019_10-51-31-222\\League of Legends 12-17-2019 10-56-36-455.mp4",
+    "media_path_encoded":"file:///C:/Users/Er/Videos/Overwolf/Game Summary/League of Legends/League of Legends_17-12-2019_10-51-31-222/League of Legends 12-17-2019 10-56-36-455.mp4",
+    "thumbnail_url":"overwolf://media/thumbnails/Game+Summary/League+of+Legends/League+of+Legends_17-12-2019_10-51-31-222/League+of+Legends+12-17-2019+10-56-36-455.mp4","thumbnail_path":"C:\\Users\\Er\\Videos\\Overwolf\\Game Summary\\League of Legends\\League of Legends_17-12-2019_10-51-31-222\\Thumbnails\\League of Legends 12-17-2019 10-56-36-455.jpg",
+    "thumbnail_encoded_path":"file:///C:/Users/Er/Videos/Overwolf/Game Summary/League of Legends/League of Legends_17-12-2019_10-51-31-222/Thumbnails/League of Legends 12-17-2019 10-56-36-455.jpg",
+    "replay_video_start_time":1576572986699
+}
+```
+
+#### Find all the highlights of a specific match
+
+The `match_id` field from this event is equal to the `pseudo_match_id` from [match_info](overwolf-games-events-lol#match_info).
+You can cross-reference these two id's in order to find all the highlights of a certain match. (you should NOT use the `match_internal_id` as it's an OW internal ID)
+
+That works for all the supported games, except [LOL](overwolf-games-events-lol): in LOL the `match_id` from [onHighlightsCaptured](#onhighlightscaptured) is not equal to `pseudo_match_id` - it's the real RIOT match ID. So if you wanty to find the highlights of a specific LOL match, you should cross-reference this `match_id` with the `matchId` from the [matchState](overwolf-games-events-lol#matchstate).
+
+
+## raw_events Object
+
+Parameter           | Type                              | Description           |
+--------------------| ----------------------------------|---------------------- |
+type                |  string                           |                       | 
+time                |  number                           |                       | 
+
+
 
 ## ReplayHighlightsSetting Object
 #### Version added: 0.78

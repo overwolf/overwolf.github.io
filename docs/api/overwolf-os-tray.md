@@ -20,6 +20,7 @@ Use the `overwolf.os.tray` API for windows system tray related functionalities.
 
 * [ExtensionTrayMenu](#extensiontraymenu-object) Object
 * [overwolf.os.tray.onMenuItemClickedEvent](#onmenuitemclickedevent-object) Object
+* [overwolf.os.tray.menu_item](#menu_item-object) Object
 
 
 ## setMenu(menu, callback)
@@ -33,9 +34,35 @@ Parameter | Type                                                    | Descriptio
 menu      | [ExtensionTrayMenu](#extensiontraymenu-object) object   | The menu object         |
 callback  | (Result) => void                                        | Returns with the result |
 
-#### ExtensionTrayMenu Object
+#### Usage Example
+
+```js
+const trayMenu = {
+    "menu_items": [{
+            "label": "View main window",
+            "id": "view_window"
+        }
+    ]
+}
+
+overwolf.os.tray.setMenu(trayMenu, (res) => {
+	console.log("setMenu -> res", res) 
+});
+```
+
+#### notes
+
+a [launcher_icon](manifest-json#meta-launcher_icon) must be set in the manifest.
+
+## ExtensionTrayMenu Object
 
 A container object for a menu.
+
+Parameter          | Type                              | Description                                 |
+-------------------| ----------------------------------| ------------------------------------------- |
+menu_items         | [menu_item](#menu_item-object)[]  |  array of menu items                        |
+
+An example for a menu with sub items:
 
 ```json
 
@@ -65,29 +92,29 @@ A container object for a menu.
 }
 ```
 
-#### notes
+## menu_item Object
 
-* In order to create a separator, use the label "-".
-* "id" must be set for items without "sub_items".
-* Separators don't need ids.
-* "Enabled" is set to true by default.
-* [launcher_icon](manifest-json#meta-launcher_icon) must be set in the manifest.
+A container object for a menu item.
 
+Parameter          | Type         | Description                                                                                      |
+-------------------| -------------| ------------------------------------------------------------------------------------------------ |
+id                 | string       |  must be set for items without "sub_items". (Separators and items with sub_items don't need ids) |
+label              | string       |  in order to create a separator, use the label "-"                                               |
+enabled            | boolean      |  set to true by default                                                                          |
+sub_items          | menu_item[]  |  you can nest an array of menu items under this item                                             |
 
-#### Usage Example
+An example of a menu objects with sub items:
 
-```js
-const trayMenu = {
-    "menu_items": [{
-            "label": "View main window",
-            "id": "view_window"
-        }
-    ]
+```json
+{
+	"label": "More...",
+	"enabled": true,
+	"sub_items": [{
+		"label": "Version 1.0.0",
+		"id": "more_version",
+		"enabled": false
+	}]
 }
-
-overwolf.os.tray.setMenu(trayMenu, (res) => {
-	console.log("setMenu -> res", res) 
-});
 ```
 
 ## onMenuItemClicked
