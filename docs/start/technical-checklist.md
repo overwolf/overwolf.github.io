@@ -60,3 +60,4 @@ Seeing as gamer experience is our top priority, making your app the best it can 
 * Create and maintain a change log inside the app and on [medium.com](medium.com). (+1%)
 
 
+
