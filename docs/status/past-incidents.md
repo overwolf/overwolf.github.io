@@ -97,6 +97,9 @@ No logs.
 PUBG
 ----
 
+**Investigating** - PUBG events are down.
+Nov 18, 11:00 AM GMT+3
+
 **Resolved** - This incident has been resolved.  
 Nov 20, 22:20 PM GMT+3
 
