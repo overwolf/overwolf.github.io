@@ -202,10 +202,13 @@ team_location| match_info  | The X,Y,Z location of your team members. |See [note
 
 #### *nicknames* note
 
+Each member has an index number that indicates his position in the squad's roste by order of appearance (f.ex first position is index 0, 2nd position is index 1, 3rd position is index 2... etc.)
+
 Data Example:
 
 ```json
-{"info":{"match_info":{"nicknames":"{"team_members":["1234564534123453","KromA","pablolo","LEOkonami"]}"}},"feature":"team"}
+{"info":{"match_info":{"team_index":"[{"player":"Siogioto","index":0},{"player":"AgCorp","index":1},{"player":"LEOkonami","index":3}]"}},"feature":"team"}
+{"info":{"match_info":{"nicknames":"{"team_members":["Siogioto","AgCorp","LEOkonami"]}"}},"feature":"team"}
 ```
 
 #### *team_location* note
