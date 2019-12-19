@@ -37,6 +37,9 @@ No logs.
 Fortnite
 --------
 
+**Resolved** - This incident has been resolved.  
+Dec 19, 09:29 PM GMT+3
+
 **Investigating** - Fortnite events are down.
 Nov 18, 12:26 AM GMT+3
 
@@ -100,8 +103,11 @@ No logs.
 PUBG
 ----
 
+**Resolved** - This incident has been resolved.  
+Dec 19, 09:29 PM GMT+3
+
 **Investigating** - PUBG events are down.
-Nov 18, 11:00 AM GMT+3
+Dec 18, 11:00 AM GMT+3
 
 **Resolved** - This incident has been resolved.  
 Nov 20, 22:20 PM GMT+3
