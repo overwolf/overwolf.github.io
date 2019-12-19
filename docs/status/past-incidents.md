@@ -32,7 +32,9 @@ No logs.
 
 Dota Underlords
 ---------------
-No logs.
+
+**Investigating** - Dota Underlords events are down.
+Dec 19, 08:35 AM GMT+3
 
 Fortnite
 --------
