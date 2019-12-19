@@ -29,6 +29,9 @@ Follow this entry for ongoing updates and changes to the project or tools:
 * [CS: GO game events](overwolf-games-events-csgo#docsNav)
   * New update:
     * match_outcome
+* [PUBG game events](overwolf-games-events-pubg#docsNav)
+  * New update
+    * team_index
 
 
 ## Version 0.138 (Nov. 2019)
