@@ -6,7 +6,7 @@ sidebar_label: overwolf.log
 
 Provides logging functions that make use of Overwolf’s internal logging system.
 
-:::info
+:::note
 The overwolf.log API is an historical API that would allow the app to write logs to the disk.  
 Since then, we've developed the feature of storing regular console.log/error/info calls to disk.
 :::
