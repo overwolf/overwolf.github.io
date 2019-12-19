@@ -198,6 +198,7 @@ pseudo_match_id | match_info  |	The current match’s ID code. See [notes](#pseu
 server_info | match_info  |	The current session’s server ID. See [notes](#server_info-note)	| | 135.0  |
 game_mode | match_info  |	The current game mode that is played. See [notes](#game_mode-note)	| | 135.0  |
 phase | match_info  |	The current state of the match. See [notes](#phase-note)	| | 137.0  |
+match_outcome | match_info  |	win/lose. See [notes](#match_outcome-note)	| | 140.0  |
 
 
 #### *pseudo_match_id* note
@@ -266,6 +267,14 @@ Data Example:
 
 ```
 {"feature":"match_info","category":"match_info","key":"phase","value":"MatchResult"}
+```
+
+#### *match_outcome* note
+
+Data Example:
+
+```json
+{"info":{"match_info":{"match_outcome":"win"}},"feature":"match_info"}
 ```
 
 ## `info`
