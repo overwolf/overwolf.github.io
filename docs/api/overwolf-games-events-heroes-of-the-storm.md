@@ -52,6 +52,7 @@ pseudo_match_id| match_info| Current match’s ID code. | See [notes](#pseudo_ma
 teams_level  | match_info  | Current level of both teams| See [notes](#teams_level-note)|  134.0  |
 score        | match_info  | Current kill-score of both teams. | See [notes](#score-note)|  134.0  |
 match_state  | match_info  | Is a match in progress - true/false. | See [notes](#match_state-note)|  134.0  |
+game_mode    | match_info  | Current match's game_mode | See [notes](#game_mode-note)|?|
 
 ### Events
 
@@ -94,6 +95,20 @@ Data Example:
 
 ```json
 {"info":{"match_info":{"match_state":{"in_progress":true}}}, "feature":"match_info"}
+```
+
+#### *game_mode* note:
+
+Data Example:
+
+```json
+{"info":{"match_info":{"game_mode":"ranked_play"}},"feature":"match_info"}
+```
+
+Possible game_mode values:
+
+```json
+"ai_play", "quick_play", "ranked_play", "unranked_play"
 ```
 
 ##### *match_start* note:
