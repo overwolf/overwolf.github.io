@@ -160,7 +160,7 @@ weapon_change| <ul><li>weapon_name</li><li>weapon_type |Player switches weapons|
 * **weapon_name:**
 
 ```json
-"weapon_knife", "weapon_knife_t", "weapon_hkp2000", "weapon_usp_silencer", "weapon_glock", "weapon_elite",  "weapon_p250", "weapon_fiveseven", "weapon_cz75a","weapon_tec9", "weapon_deagle", "weapon_revolver", "weapon_nova", "weapon_xm1014", "weapon_mag7","weapon_sawedoff", "weapon_m249", "weapon_negev",  "weapon_mp9", "weapon_mac10", "weapon_mp7",  "weapon_ump45", "weapon_p90", "weapon_bizon","weapon_famas", "weapon_galilar", "weapon_m4a1",  "weapon_m4a1_silencer", "weapon_ak47","weapon_ssg08", "weapon_aug", "weapon_sg556", "weapon_awp", "weapon_scar20", "weapon_g3sg1","weapon_incgrenade", "weapon_decoy", "weapon_flashbang", "weapon_hegrenade", "weapon_smokegrenade", "weapon_c4"
+"weapon_knife", "weapon_knife_t", "weapon_hkp2000", "weapon_usp_silencer", "weapon_glock", "weapon_elite",  "weapon_p250", "weapon_fiveseven", "weapon_cz75a","weapon_tec9", "weapon_deagle", "weapon_revolver", "weapon_nova", "weapon_xm1014", "weapon_mag7","weapon_sawedoff", "weapon_m249", "weapon_negev",  "weapon_mp9", "weapon_mac10", "weapon_mp7",  "weapon_ump45", "weapon_p90", "weapon_bizon","weapon_famas", "weapon_galilar", "weapon_m4a1",  "weapon_m4a1_silencer", "weapon_ak47","weapon_ssg08", "weapon_aug", "weapon_sg556", "weapon_awp", "weapon_scar20", "weapon_g3sg1","weapon_incgrenade", "weapon_decoy", "weapon_flashbang", "weapon_hegrenade", "weapon_smokegrenade", "weapon_c4", "weapon_bayonet"
 ```
 
 ## `weapon_acquired`
