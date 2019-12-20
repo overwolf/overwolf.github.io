@@ -146,7 +146,13 @@ Data Examples:
 {"info":{"game_info":{"scene":"unranked_preparing"}}, "feature":"game_info"}
 {"info":{"game_info":{"scene":"collection"}}, "feature":"game_info"}
 {"info":{"game_info":{"scene":"home"}}, "feature":"game_info"}
-{"info":{"game_info":{"scene":"unranked_preparing"}}, "feature":"game_info"}
+{"info":{"game_info":{"scene":"ai_search"}}, "feature":"game_info"}
+{"info":{"game_info":{"scene":"loot"}}, "feature":"game_info"}
+{"info":{"game_info":{"scene":"quick_search"}}, "feature":"game_info"}
+{"info":{"game_info":{"scene":"ranked_preparing"}}, "feature":"game_info"}
+{"info":{"game_info":{"scene":"ranked_search"}}, "feature":"game_info"}
+{"info":{"game_info":{"scene":"score"}}, "feature":"game_info"}
+{"info":{"game_info":{"scene":"unknown_hots_game_scene"}}, "feature":"game_info"}
 ```
 
 ## `roster`
