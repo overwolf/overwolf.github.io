@@ -1,6 +1,6 @@
 ---
 id: using-tab
-title: Tab Key Features
+title: Using Tab in your app
 sidebar_label:  Using Tab in your app
 ---
 
@@ -16,7 +16,7 @@ Most games already have built-in hotkeys for common actions. These key combinati
 
 We can "hitch a ride" on game hotkeys and provide value in an automated manner. The main advanatage of this approach is that the player doesn't need to remember new hotkeys: We can bind OW hotkeys in parallel to the existing game hotkeys to increase value on existing actions.
 
-## The Tab Hotkey
+## Use Tab as an app Hotkey
 
 One of the most common hotkeys used in many games is the Tab key.
 
@@ -28,7 +28,11 @@ Examples:
 * In CS:GO, when a player buys weapons, you can show the player his new weapon's recoil pattern.
 * In Hearthstone, when a player enters the deck / collection screen, you can tell him which of his prepared decks is closest to a good meta deck and what cards he is missing to complete it.
 
-"Riding" the Tab key and similar hotkeys, when done right, is a highly recommended practice.
+**"Riding" the Tab key and similar hotkeys, when done right, is a highly recommended practice.**
+
+A LOL example of the popup that appears while the player is holding the tab key (and hides it on release):
+
+![alt-text](assets/tab-example-lol.gif)
 
 ## Implement "Tabbing" in Your App
 
@@ -37,6 +41,10 @@ Start by spotting the hotkeys your app's targeted game uses in this fashion - wh
 As mentioned above,  Overwolf hotkeys do not yet offer a "ShowOnHold" mode like the tab key does in some games. For now, in order to implement a hotkey which works with an OnHold Tab functionality, we will have to implement it in different way than the existing hotkeys API.
 
 The [overwolf.games.inputTracking](../api/overwolf-games-inputTracking) API offers some useful events for that purpose.
+
+:::important
+Generally, hotkeys cannot be shared between Overwolf apps: once an app is using a hotkey, no other app can use it. However, this method of listening to OnKey events bypasses that limitation by allowing several apps to register the same hotkey actions (for example, several apps can set Tab as an hotkey and it will respond differently in each game depending on it's Tab features).  
+:::
 
 ### Using the onKeyDown event
 
@@ -67,13 +75,3 @@ overwolf.games.inputTracking.onKeyUp.addListener(function(info) {
 ```
 
 Once released, we can hide/minimize our window.
-
-:::important
-Generally, hotkeys cannot be shared between Overwolf apps: once an app is using a hotkey, no other app can use it. However, this method of listening to OnKey events bypasses that limitation by allowing several apps to register the same hotkey actions (for example, several apps can set Tab as an hotkey and it will respond differently in each game depending on it's Tab features).  
-:::
-
-
-
-
-
-
