@@ -8,7 +8,7 @@ sidebar_label: Hotkey Best Practices
 
 There are two types of Hotkeys we use:
 
-* **Custom** - will only work and get a response from your app after registering that hotkey and only when the app is already running. To register a hotkey use [`overwolf.settings.registerHotKey()`](http://developers.overwolf.com/documentation/sdk/overwolf/settings/#registerhotkey)).
+* **Custom** - will only work and get a response from your app after registering that hotkey and only when the app is already running. To register a hotkey use [`overwolf.settings.registerHotKey()`](../api/overwolf-settings#registerhotkeyactionid-callback)).
 
 * **Toggle** - A special hotkey that launches your in-game app window if it isn’t already running.
 

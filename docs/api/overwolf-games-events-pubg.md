@@ -199,13 +199,17 @@ key         | Category    | Values                          | Notes             
 ----------- | ------------| --------------------------------| --------------------- | ------------- |
 nicknames       | match_info   | The names of players in the local players' squad.|See [notes](#nicknames-notes) |   90.0        |
 team_location| match_info  | The X,Y,Z location of your team members. |See [notes](#team_location-notes)|     134.0     |
+team_index| match_info  | The index number of every squad member position by order of appearance. |See [notes](#team_index-notes)|     134.0     |
+
 
 #### *nicknames* note
+
+Each member has an index number that indicates his position in the squad's roste by order of appearance (f.ex first position is index 0, 2nd position is index 1, 3rd position is index 2... etc.)
 
 Data Example:
 
 ```json
-{"info":{"match_info":{"nicknames":"{"team_members":["1234564534123453","KromA","pablolo","LEOkonami"]}"}},"feature":"team"}
+{"info":{"match_info":{"nicknames":"{"team_members":["Siogioto","AgCorp","LEOkonami"]}"}},"feature":"team"}
 ```
 
 #### *team_location* note
@@ -218,6 +222,14 @@ Data Example:
 {"player":"hajjjekc","location":{"x":"4185","y":"1309","z":"1500"}},
 {"player":"itayG","location":{"x":"4185","y":"1309","z":"1500"}},
 {"player":"ARNKC","location":{"x":"4185","y":"1309","z":"1500"}}]"}},"feature":"location"}
+```
+
+#### *team_index* note
+
+Data Example:
+
+```json
+{"info":{"match_info":{"team_index":"[{"player":"Siogioto","index":0},{"player":"AgCorp","index":1},{"player":"LEOkonami","index":3}]"}},"feature":"team"}
 ```
 
 ## `phase`

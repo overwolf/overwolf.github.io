@@ -26,6 +26,12 @@ Follow this entry for ongoing updates and changes to the project or tools:
     * match_outcome
 * [Starcraft II Events](https://overwolf.github.io/docs/api/overwolf-games-events-sc2)
   * New supported game
+* [CS: GO game events](overwolf-games-events-csgo#docsNav)
+  * New update:
+    * match_outcome
+* [PUBG game events](overwolf-games-events-pubg#docsNav)
+  * New update
+    * team_index
 
 
 ## Version 0.138 (Nov. 2019)
