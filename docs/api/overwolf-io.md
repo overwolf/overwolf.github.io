@@ -47,7 +47,7 @@ If the file doesn’t exist, an error status will be returned:
 
 #### Permissions required: FileSystem
 
-> Writes content into the target file.
+> Writes content into the target text file.
 
 If the file doesn’t exist, it will be created, along with any needed directories along the path. Otherwise, the file’s content will be overwritten.
 
@@ -75,7 +75,7 @@ callback             | function                | Returns with the result        
 
 #### Permissions required: FileSystem
 
-> Returns a string with the targeted file’s content.
+> Returns a string with the targeted text file’s content.
 
 Parameter | Type | Description |
 ------------ | ------------ | ------------ |
