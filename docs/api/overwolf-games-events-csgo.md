@@ -198,7 +198,7 @@ pseudo_match_id | match_info  |	The current match’s ID code. See [notes](#pseu
 server_info | match_info  |	The current session’s server ID. See [notes](#server_info-note)	| | 135.0  |
 game_mode | match_info  |	The current game mode that is played. See [notes](#game_mode-note)	| | 135.0  |
 phase | match_info  |	The current state of the match. See [notes](#phase-note)	| | 137.0  |
-match_outcome | match_info  |	win/lose. See [notes](#match_outcome-note)	| | 140.0  |
+match_outcome | match_info  |	win/lose/tie. See [notes](#match_outcome-note)	| | 140.0  |
 
 
 #### *pseudo_match_id* note
