@@ -1,15 +1,19 @@
 ---
 id: gists
-title: Useful gists / Code snippets
-sidebar_label: Community gists
+title: Useful community code snippets
+sidebar_label: Code snippets
 ---
 
-Our "gist" GitHub repository is typically used to share files and snippets with others quickly. 
-You can upload new gists and browse other gists that uploaded by the Overwolf developer's community.
-
 :::important
-We will try to review and test every new gist, but please note that these are community code snippets, and not Overwolf official code blocks.  
-The usage is at your own risk.
+Please note that these are community code snippets, and the usage is at your own risk.
 :::
 
-Our GitHub [Community gists](https://github.com/overwolf/community-gists) reposiotry.
+* Our GitHub [Community gists](https://github.com/overwolf/community-gists) reposiotry.  
+  Typically used to share files and snippets with others quickly.  
+  You can upload new gists and browse other gists that uploaded by the community.
+
+* [egamer/ow-events-status-element](https://www.npmjs.com/package/@egamer/ow-events-status-element).  
+  "We found ourselves needed to present an indication for OW events status in more than one place, so we created this small web-component package to help us do so.  
+  feel free to use it, send comments, suggestions, and other feedback".
+
+*

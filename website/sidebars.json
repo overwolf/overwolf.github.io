@@ -25,6 +25,8 @@
 			["topics/using-events", "topics/using-events-simulator", "topics/howto-check-events-status-from-app"],
 		"Integrations":
 			["topics/app-analytics", "topics/login-with-discord", "topics/events-SDK-for-game-developers", "topics/twitch-events-sdk-for-game-developers"],
+		"Community Snippets":
+			["support/gists"],
 		"Legal":
 			["topics/legal-overview", "topics/legal-app-terms", "topics/legal-developers-terms"]
     },
@@ -68,8 +70,6 @@
 			["support/contact-us", "support/create-ticket", "support/request-feature"],
 		"FAQ":
 			["support/FAQ"],
-		"Code Snippets":
-			["support/gists"],
 		"Training and Guides":
 			["support/training"]	
     },
