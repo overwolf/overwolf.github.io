@@ -315,7 +315,7 @@ Data Example:
 
 Event       | Event Data   | Fired When    | Notes              | Since GEP Ver. |
 ------------| -------------| --------------| ------------------ | --------------|
-matchOutcome| won/lost     |Match has ended|See [notes](#matchoutcome-note)|     123.0     |
+matchOutcome| won/lost/draw|Match has ended|See [notes](#matchoutcome-note)|     123.0     |
 matchStart  | null         |Match begins|See [notes](#matchstart-note)|     123.0     |
 matchEnd    | null         |Match has ended|See [notes](#matchend-note)|     123.0     |
 
