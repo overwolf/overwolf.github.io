@@ -154,7 +154,7 @@ weapon_change| <ul><li>weapon_name</li><li>weapon_type |Player switches weapons|
 * **weapon_type:**
 
 ```json
-"Knife", "Pistol", "Shotgun", "Machine Gun", "Submachine Gun", "Rifle", "SniperRifle", "Grenade", "C4"
+"Knife", "Pistol", "Shotgun", "Machine Gun", "Submachine Gun", "Rifle", "SniperRifle", "Grenade", "C4", "Tablet", "Fists"
 ```
 
 * **weapon_name:**
