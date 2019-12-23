@@ -1,7 +1,7 @@
 ---
 id: using-tab
-title: Using Tab in your app
-sidebar_label:  Using Tab in your app
+title: Use Tab as an app Hotkey
+sidebar_label:  Use Tab as an app Hotkey
 ---
 
 ## Hotkeys - Overview
