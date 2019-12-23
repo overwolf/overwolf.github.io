@@ -218,7 +218,7 @@ Users have two relevant resolutions to consider:
 
 ### Logical resolution
 
-The [GameInfo](/api/overwolf-games#gameinfo-object) object sent by the getRunningGameInfo() function has, in addition to the expected `width` and `height` fields, two more properties called `logicalWidth` and `logicalHeight`. These fields return the game's reported logical pixel dimensions.  
+The [GameInfo](../api/overwolf-games#gameinfo-object) object sent by the getRunningGameInfo() function has, in addition to the expected `width` and `height` fields, two more properties called `logicalWidth` and `logicalHeight`. These fields return the game's reported logical pixel dimensions.  
 If your screen is scaled by a DPI factor, you should work with logical sizes, as the regular sizes will wound up being scaled in proportion, while the logical is not DPI aware.
 
 ### Detecting resolution changes
