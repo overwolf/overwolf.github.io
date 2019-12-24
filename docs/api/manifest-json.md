@@ -517,12 +517,12 @@ Example code:
 ## content_scripts Array
 A list of content scripts to be loaded for specific windows.   
 
-| Name    | Type   | Description                                                 | Since |
-|---------| -------|-------------------------------------------------------------|------ |
-| windows | string | The list of windows for which to apply this content script. | 0.78  |
-| matches | string | The list of URLs for which to apply this content script. (regex supported)    | 0.78  |
-| css     | string | The list of CSS files to be applied in this content script. | 0.78  |
-| js      | string | The list of JS files to be applied in this content script.  | 0.78  |
+| Name    | Type     | Description                                                 | Since |
+|---------| ---------|-------------------------------------------------------------|------ |
+| windows | string[] | The list of windows for which to apply this content script. | 0.78  |
+| matches | string[] | The list of URLs for which to apply this content script. (regex supported)    | 0.78  |
+| css     | string[] | The list of CSS files to be applied in this content script. | 0.78  |
+| js      | string[] | The list of JS files to be applied in this content script.  | 0.78  |
 
 In this example, when loading the index window, myscript.js will be loaded and when encountring https://google.com, mystyles.css and myscript2.js will be loaded:
 
