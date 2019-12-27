@@ -7,11 +7,12 @@
 	color: white;
 	padding: 7px 16px;
   text-decoration: none !important;
+  color: white;
 }
 
 .btn-pink:hover {
 	background: #FF0055;
-	color: white;
+  color: white !important;
 }
 
 .getting-started-container {

@@ -15,7 +15,7 @@ class GettingStarted extends React.Component {
                 <h2>An introduction to Overwolf apps</h2>
 
                 <p>Overwolf apps are in-game apps created by independent creators or teams, improving the game experience of the biggest games out there. Overwolf overlay apps help gamers play smarter and have more fun doing it by making useful information and tools available in-game</p>
-
+               {/*
                 <div className="video-container">
                     <div className="video-container-inner">
                         <video controls disablepictureinpicture controlslist="nodownload">
@@ -23,9 +23,10 @@ class GettingStarted extends React.Component {
                         </video>
                     </div>
                     <div className="start-build-container-btn">
-                        <a href="../start/app-creation-process" className="btn-pink start-building-btn">Start Building</a>
+                        <a href="../start/sample-app-overview" className="btn-pink start-building-btn">Start Building</a>
                     </div>
                 </div>
+              */}
             </div>
 
             <h2>What can apps do?</h2>
@@ -65,7 +66,7 @@ class GettingStarted extends React.Component {
                 </li>
                 <li className="desktop">
                     <h3>Desktop</h3>
-                    <p>When the gamer's not in-game, apps can still provide value, for example by enabling a desktop window perfect for debriefing and researching one's performance after a long match.</p>
+                    <p>When the gamer's not in-game, apps can still provide value, for example by enabling a desktop window for debriefing and researching one's performance after a long match.</p>
                 </li>
                 <li className="companion-screen">
                     <h3>Companion Screen</h3>
@@ -82,9 +83,8 @@ class GettingStarted extends React.Component {
             <p>If you encounter any issues we can help with, difficulties to overcome or have suggestions to share, talk to us over at <a href="https://discordapp.com/invite/cjjrZDp" target="_blank">Discord</a> or directly at <a href="mailto:developers@overwolf.com">Developers@overwolf.com</a></p>
 
             <div className="start-build-footer-btn">
-                <a href="../start/app-creation-process" className="btn-pink start-building-btn">Start Building</a>
+                <a href="../start/sample-app-overview" className="btn-pink start-building-btn">Start Building</a>
             </div>
-
         </article>
         </div>
       </main>
