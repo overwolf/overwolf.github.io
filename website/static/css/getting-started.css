@@ -1,0 +1,332 @@
+    
+.btn-pink {
+	background: #E6004C;
+	display: inline-block;
+	font-size: 16px;
+	line-height: 145%;
+	color: white;
+	padding: 7px 16px;
+  text-decoration: none !important;
+}
+
+.btn-pink:hover {
+	background: #FF0055;
+	color: white;
+}
+
+.getting-started-container {
+  padding-top: 0px;
+  padding-right: 0px;
+  padding-bottom: 0px;
+  padding-left: 0px;
+	margin: 0 24px;
+	max-width: 784px;
+}
+
+@media (max-width: 1024px) {
+	.getting-started-container {
+		max-width: 655px;
+		margin: auto;
+	}
+}
+
+@media (max-width: 760px) {
+	.getting-started-container {
+		max-width: 100%;
+		padding: 40px 45px;
+	}
+}
+
+.getting-started-container h1,
+.getting-started-container h2,
+.getting-started-container p {
+	padding: 0;
+	margin: 0px 0px 30px 0px;
+}
+
+.getting-started-container h1 {
+	font-family: 'Klavika', sans-serif;
+	font-weight: 300;
+	line-height: 36px;
+	font-size: 32px;
+	color: #161326;
+}
+
+.getting-started-container h2 {
+	font-family: Lato;
+	font-weight: 400;
+	font-size: 24px;
+	line-height: 29px;
+	color: #161326;
+}
+
+@media (max-width: 1024px) {
+	.getting-started-container h2 {
+		margin-bottom: 20px;
+	}
+}
+
+.getting-started-container p {
+	font-family: Lato;
+	font-size: 16px;
+	line-height: 25px;
+	color: #332E4D;
+}
+
+.getting-started-container ul {
+	list-style: none;
+	padding: 0px;
+	margin: 0px;
+}
+
+@media (max-width: 760px) {
+	.getting-started-container .video-outer-area {
+		display: flex;
+		flex-direction: column;
+	}
+}
+
+@media (max-width: 760px) {
+	.getting-started-container .video-outer-area h2 {
+		order: 2;
+	}
+}
+
+@media (max-width: 760px) {
+	.getting-started-container .video-outer-area p {
+		order: 3;
+	}
+}
+
+.getting-started-container .video-outer-area .video-container {
+	width: 100%;
+	padding: 40px 0px;
+}
+
+@media (max-width: 1024px) {
+	.getting-started-container .video-outer-area .video-container {
+		padding-top: 10px;
+	}
+}
+
+@media (max-width: 760px) {
+	.getting-started-container .video-outer-area .video-container {
+		order: 1;
+		padding-top: 0;
+		padding-bottom: 30px;
+	}
+}
+
+.getting-started-container .video-outer-area .video-container .video-container-inner {
+	max-width: 442px;
+	margin: auto;
+}
+
+.getting-started-container .video-outer-area .video-container .video-container-inner video {
+	width: 100%;
+}
+
+.getting-started-container .video-outer-area .video-container .start-build-container-btn {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding-top: 30px;
+}
+
+@media (max-width: 760px) {
+	.getting-started-container .video-outer-area .video-container .start-build-container-btn {
+		padding-top: 25px;
+	}
+}
+
+.getting-started-container .icons-list {
+	padding-bottom: 20px;
+}
+
+@media (max-width: 760px) {
+	.getting-started-container .icons-list {
+		padding-bottom: 5px;
+	}
+}
+
+.getting-started-container .icons-list li {
+	position: relative;
+}
+
+.getting-started-container .icons-list li h3 {
+	font-family: Lato;
+	font-weight: 600;
+	font-size: 16px;
+	line-height: 25px;
+	margin: 0;
+	padding: 10px 0px 0px 0px;
+	color: #332E4D;
+}
+
+@media (max-width: 760px) {
+	.getting-started-container .icons-list li p {
+		margin-bottom: 25px;
+	}
+}
+
+@media (max-width: 320px) {
+	.getting-started-container .icons-list li p {
+		margin-bottom: 15px;
+	}
+}
+
+.getting-started-container .icons-list.what-apps-do-list li {
+	padding-left: 88px;
+}
+
+@media (max-width: 760px) {
+	.getting-started-container .icons-list.what-apps-do-list li {
+		padding-left: 63px;
+	}
+}
+
+.getting-started-container .icons-list.what-apps-do-list li::before {
+	content: '';
+	background-size: 48px;
+	background-repeat: no-repeat;
+	position: absolute;
+	width: 48px;
+	height: 48px;
+	top: 13px;
+	left: 0;
+}
+
+.getting-started-container .icons-list.what-apps-do-list li.highlights::before {
+	background-image: url(../img/getting-started/apps-do-list/video.svg);
+}
+
+.getting-started-container .icons-list.what-apps-do-list li.game-stats::before {
+	background-image: url(../img/getting-started/apps-do-list/stats.svg);
+}
+
+.getting-started-container .icons-list.what-apps-do-list li.build-recommendations::before {
+	background-image: url(../img/getting-started/apps-do-list/helmet.svg);
+}
+
+.getting-started-container .icons-list.what-apps-do-list li.tournaments::before {
+	background-image: url(../img/getting-started/apps-do-list/trophy.svg);
+}
+
+.getting-started-container .icons-list.what-apps-do-list li.easy-integration::before {
+	background-image: url(../img/getting-started/apps-do-list/tetris.svg);
+}
+
+.getting-started-container .icons-list.were-apps-live-list {
+	max-width: 600px;
+	padding-bottom: 60px;
+}
+
+@media (max-width: 1024px) {
+	.getting-started-container .icons-list.were-apps-live-list {
+		max-width: 640px;
+		padding-bottom: 40px;
+	}
+}
+
+@media (max-width: 760px) {
+	.getting-started-container .icons-list.were-apps-live-list {
+		padding-bottom: 10px;
+	}
+}
+
+.getting-started-container .icons-list.were-apps-live-list li {
+	padding-left: 260px;
+}
+
+@media (max-width: 760px) {
+	.getting-started-container .icons-list.were-apps-live-list li {
+		padding-left: 0px;
+		padding-top: 140px;
+	}
+}
+
+.getting-started-container .icons-list.were-apps-live-list li::before {
+	content: '';
+	background-size: 201px;
+	background-repeat: no-repeat;
+	position: absolute;
+	width: 201px;
+	height: 123px;
+	top: 18px;
+	left: 10px;
+}
+
+@media (max-width: 760px) {
+	.getting-started-container .icons-list.were-apps-live-list li::before {
+		top: 8px;
+		left: -10px;
+	}
+}
+
+.getting-started-container .icons-list.were-apps-live-list li.in-game::before {
+	background-image: url(../img/getting-started/apps-live-list/ingame.svg);
+}
+
+.getting-started-container .icons-list.were-apps-live-list li.desktop::before {
+	background-image: url(../img/getting-started/apps-live-list/desktop.svg);
+}
+
+.getting-started-container .icons-list.were-apps-live-list li.twitch-extension::before {
+	background-image: url(../img/getting-started/apps-live-list/twitch.svg);
+}
+
+@media (max-width: 760px) {
+	.getting-started-container .icons-list.were-apps-live-list li.companion-screen {
+		padding-top: 80px;
+	}
+}
+
+.getting-started-container .icons-list.were-apps-live-list li.companion-screen::before {
+	top: 28px;
+	background-image: url(../img/getting-started/apps-live-list/companion.svg);
+}
+
+@media (max-width: 760px) {
+	.getting-started-container .icons-list.were-apps-live-list li.companion-screen::before {
+		top: -20px;
+		left: 0;
+	}
+}
+
+.getting-started-container .start-build-footer-btn {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding-top: 30px;
+	padding-bottom: 70px;
+}
+
+@media (max-width: 1024px) {
+	.getting-started-container .start-build-footer-btn {
+		padding-top: 10px;
+	}
+}
+
+@media (max-width: 760px) {
+	.getting-started-container .start-build-footer-btn {
+		padding-top: 20px;
+	}
+}
+
+@media (max-width: 760px) {
+	.getting-started-container .what-can-apps-do-intro {
+		margin-bottom: 20px;
+	}
+}
+
+@media (max-width: 760px) {
+	.getting-started-container .were-apps-live-intro {
+		margin-bottom: 25px;
+	}
+}
+
+@media (max-width: 320px) {
+	.getting-started-container .were-apps-live-intro {
+		margin-bottom: 15px;
+	}
+}
