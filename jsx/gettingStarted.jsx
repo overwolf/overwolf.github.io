@@ -14,7 +14,7 @@ class GettingStarted extends React.Component {
             <div className="video-outer-area">
                 <h2>An introduction to Overwolf apps</h2>
 
-                <p>Overwolf apps are in-game apps created by independent creators or teams, improving the game experience of the biggest games out there. Overwolf overlay apps help gamers play smarter and have more fun doing it by making useful information and tools available in-game</p>
+                <p>Overwolf apps are in-game apps created by independent creators or teams, improving the game experience of the biggest games out there. Overwolf overlay apps help gamers play smarter and have more fun by making useful information and tools available in-game</p>
                {/*
                 <div className="video-container">
                     <div className="video-container-inner">
