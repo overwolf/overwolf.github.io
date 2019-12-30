@@ -6,6 +6,13 @@ sidebar_label: Changelog
 
 Follow this entry for ongoing updates and changes to the project or tools:
 
+## Version 0.141 (Jan. 2020)
+
+
+## Version 0.140 (Dec. 2019)
+
+* Internal bug fixes and refactoring.
+
 ## Version 0.139 (Dec. 2019)
 
 * [overwolf.utils.getSystemInformation()](overwolf-utils#getsysteminformationcallback) now has **VideoEncSupport** property.  
