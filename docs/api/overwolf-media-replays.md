@@ -202,7 +202,6 @@ Parameter               | Type                  | Description                   
 ----------------------- | ----------------------| ---------------------------------------------------------------------------------------------------------------- |
 replayType              | [ReplayType](#replaytype-enum) enum  | The type of replay to capture                                                                     |
 pastDuration	        | int                                  | The video lengh, in milliseconds to include prior to the time of this call                        |
-captureFinishedCallback	| function   |A callback function which will be called when capturing is finished, at the end of the future duration supplied to this call |
 callback                | function                             | A callback function which will be called with the status of the request                           |
 
 #### Callback argument: Success
