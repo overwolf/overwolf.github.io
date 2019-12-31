@@ -243,7 +243,7 @@ As the [size](../api/manifest-json#windows-size) flag only applies during the fi
 
 you can set [min_size](../api/manifest-json#windows-min_size) and [max_size](../api/manifest-json#windows-max_size) to the same values and force your app window to always load with identical dimensions, or you can set the [`useDefaultSizeAndLocation`](../api/overwolf-windows#obtaindeclaredwindowwindowname-usedefaultsizeandlocation-callback) to true, when calling the [obtainDeclaredWindow()](../api/overwolf-windows#obtaindeclaredwindowwindowname-usedefaultsizeandlocation-callback) function.
 
-In addition, if you want to dynamically set your window size according to the [user's desktop resolution](#detect-the-resolution) and DPI, you can use [setMinSize()](../api/overwolf-windows#setminsizewindowid-width-height-callback).
+In addition, if you want to dynamically set your window size according to the [user's desktop resolution](#detecting-screen-resolution) and [DPI](https://developer.mozilla.org/en-US/docs/Web/API/Window/devicePixelRatio), you can use [setMinSize()](../api/overwolf-windows#setminsizewindowid-width-height-callback).
 
 ### Enable user resolution choices
 
@@ -289,6 +289,16 @@ In order to position your window in a specific location, you'll first need to [g
 * To reposition a desktop window of your app, get the user desktop resolution by using [getMonitorsList()](../api/overwolf-utils#getmonitorslistcallback) and calculate the required location in pixels.
 
 * To reposition an in-game window of your app, get the in-game resolution by using [getRunningGameInfo()](../api/overwolf-games#getrunninggameinfocallback) and calculate the required location in pixels.
+
+### Identify when the window is dragged between monitors
+
+To identify if your app window was dragged from one monitor to another, you can follow these steps:
+
+* Identify when the drag is completed using the[dragMove()](../api/overwolf-windows#dragmovewindowid-callback) function.
+
+* Get the position of the window (window.screenX, window.screenY). 
+
+* Now with a simple calculation, you can determine which monitor the window is displayed. (For example, if you know that the 1st monitor has 1080px width, and the current window position start beyond that, it means that the window is displayed on the second monitor, etc.)
 
 ## General tips for using windows
 
