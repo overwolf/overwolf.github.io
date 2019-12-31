@@ -20,7 +20,7 @@ All the programs are free to use:
 3. `yarn install` - install all the required packges. (in case of an error read the note below). 
 4. `yarn start` - start the docusaurus app locally. That will automatically open your default browser with the local copy of the site.
 
-Note: if your VS Code terminal not recognize yarn or npm, open a CMD and run these commands, that make sure that these programs installed globally and will be recognized by VS Code: 
+**Note: if your VS Code terminal not recognize yarn or npm**, open a CMD and run these commands, that make sure that these programs installed globally and will be recognized by VS Code: 
 
 ```
 > npm install -g yarn
