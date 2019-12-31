@@ -9,7 +9,7 @@ All the programs are free to use:
 
 ### Create a local copy of the site on your machine
 
-1. Open VS Code, choose => Clone remote GitHub repo.
+1. Open VS Code ==> Ctrl+Shift+P, choose => Clone remote GitHub repo.
 2. Set the github repo to clone: https://github.com/overwolf/overwolf.github.io.git
 3. Choose local folder to clone to. For example: "d:\dev-site".
 
