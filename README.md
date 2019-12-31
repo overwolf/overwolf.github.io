@@ -6,12 +6,17 @@ This is intended as a quick reference and showcase.
 
 ## Reference
 
+* [Create local dev environmen](#ceate-local-dev-environment)
 * [Search box configuration](#search-configuration)
 * [Markdown cheet-sheet](#markdown-cheet-sheet)
-* [Create local dev environmen](#ceate-local-dev-environment)
 * [Edit an existing page](#edit-an-existing-page)
 * [Add a new page](#add-a-new-page)
 * [Add a new game events status page](#add-a-new-game-events-status-page)
+
+### Create local dev environment
+
+Basically you can do all the Docusaurus content edits directly from the GitHub web interface.
+But if you want to install a local version of the site, you can find all the details [here](create-local-dev-env.md).
 
 ### Search configuration
 
@@ -22,11 +27,6 @@ This is intended as a quick reference and showcase.
 ### Markdown cheet-sheet
 
 You can find our markdown cheet-sheet [here](markdown-cheat-sheet.md).
-
-### Create local dev environment
-
-Basically you can do all the Docusaurus content edits directly from the GitHub web interface.
-But if you want to install a local version of the site, you can find all the details [here](create-local-dev-env.md).
 
 ### Edit an existing page
 
