@@ -33,8 +33,11 @@ No logs.
 Dota Underlords
 ---------------
 
+**Resolved** - This incident has been resolved.  
+Dec 22, 14:35 PM GMT+3
+
 **Investigating** - Dota Underlords events are down.
-Dec 19, 08:35 AM GMT+3
+Dec 19, 08:29 AM GMT+3
 
 Fortnite
 --------
