@@ -168,6 +168,12 @@ Fired when:
 
 Fired when the game transitions between day time and night time. 
 
+Data Example:
+
+```json
+{"events":[{"name":"daytime_changed","data":"{"daytime":true,"clock_time":-89,"nightstalker_night":false}"}]}
+```
+
 ## `clock_time_changed `
 
 ### Events
@@ -190,18 +196,24 @@ Event Data:
 
 * <b>ward_purchase_cooldown</b> – The remaining store cooldown in seconds before a ward is available for purchase again. 
 
+Data Example:
+
+```json
+{"events":[{"name":"ward_purchase_cooldown_changed","data":"{"ward_purchase_cooldown":128}"}]}
+```
+
 ## `match_ended`
 
 ### Events
 
 Event       | Event Data   | Fired When    | Notes              | Since GEP Ver. |
-------------| -------------| --------------| ------------------ | --------------|
+------------| -------------| --------------| ------------------ | -------------- |
 match_ended | radiant/dire |When an ancient is destroyed and the game ends.  | See [notes](#match_ended-note)       |     77.3      |
 
 #### *match_ended* note
 
 ```json
-{"winner": "dire"}
+{"winner":"dire"}
 ```
 
 ## `kill`
@@ -230,7 +242,15 @@ Event Data:
 
 Event       | Event Data   | Fired When    | Notes              | Since GEP Ver. |
 ------------| -------------| --------------| ------------------ | --------------|
-assist    |assists – The total number of assists the player has. |Whenever the player assists in a kill of an enemy champion.|      |     77.3      |
+assist    |assists – The total number of assists the player has. |Whenever the player assists in a kill of an enemy champion.|See [notes](#assist-note)|     77.3      |
+
+#### *assist* note
+
+Data Example:
+
+```json
+{"events":[{"name":"assist","data":"{"assist":1}"}]}
+```
 
 ## `death`
 
@@ -238,7 +258,15 @@ assist    |assists – The total number of assists the player has. |Whenever the
 
 Event       | Event Data   | Fired When    | Notes              | Since GEP Ver. |
 ------------| -------------| --------------| ------------------ | --------------|
-death    |deaths – The total number of deaths the player has. |Whenever the player dies. |           |     77.3      |
+death    |deaths – The total number of deaths the player has. |Whenever the player dies. |See [notes](#death-note)|     77.3      |
+
+#### *death* note
+
+Data Example:
+
+```json
+{"events":[{"name":"death","data":"{"deaths":1}"}]}
+```
 
 ## `cs`
 
@@ -256,13 +284,23 @@ Event Data:
 * <b>denies</b> – The total amount of denies the player has.
 * <b>type</b> – last_hits/deny.
 
+Data Example:
+
+```json
+{"events":[{"name":"cs","data":"{"last_hits": 1,"denies":0,"type":"last_hit"}"}]}
+```
+
 ## `xpm `
 
 ### Events
 
 Event       | Event Data   | Fired When    | Notes              | Since GEP Ver. |
 ------------| -------------| --------------| ------------------ | --------------|
-xpm |xpm – The current Experience Per Minute value. |Whenever the XPM changes. |          |     77.3      |
+xpm |xpm – The current Experience Per Minute value. |Whenever the XPM changes. |See [notes](#xpm-note)| 77.3 |
+
+#### *xpm* note
+
+<b>This event is currently not supported.</b>
 
 ## `gpm`
 
@@ -271,6 +309,10 @@ xpm |xpm – The current Experience Per Minute value. |Whenever the XPM changes.
 Event       | Event Data   | Fired When    | Notes              | Since GEP Ver. |
 ------------| -------------| --------------| ------------------ | --------------|
 gpm | gpm – The current Gold Per Minute value. |Whenever the GPM changes. |        |     77.3      |
+
+#### *gpm* note
+
+<b>This event is currently not supported.</b>
 
 ## `gold`
 
@@ -281,6 +323,8 @@ Event       | Event Data   | Fired When    | Notes              | Since GEP Ver.
 gold | Check notes |Whenever gold changes. 	|See [notes](#gold-notes)|     77.3      |
 
 #### *gold* note
+
+<b>This event is currently not supported.</b>
 
 * <b>gold</b> – Total current gold.
 * <b>gold_reliable</b> – Reliable gold part.
@@ -329,6 +373,10 @@ Event       | Event Data   | Fired When    | Notes              | Since GEP Ver.
 ------------| -------------| --------------| ------------------ | --------------|
 hero_boughtback |<b>buyback_cooldown</b> – The cooldown remaining for buyback to become available.|Whenever the player buys back.|    |     77.3      |
 
+#### *hero_boughtback* note
+
+<b>This event is currently not supported.</b>
+
 ## `hero_health_mana_info`
 
 ### Events
@@ -374,6 +422,10 @@ Event Data:
 Event       | Event Data   | Fired When    | Notes              | Since GEP Ver. |
 ------------| -------------| --------------| ------------------ | --------------|
 hero_attributes_skilled |<b>attributes_level</b> – The current level of the player’s attributes.|Whenever the player skills up his attributes.|          |     77.3      |
+
+#### *hero_attributes_skilled* note
+
+<b>This event is currenty not supported.</b>
 
 ## `hero_ability_skilled`
 
