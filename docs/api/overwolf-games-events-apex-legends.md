@@ -101,7 +101,7 @@ As  youcan see, this object includes:
 Every team member, including the jump-master will be reported in the following way:
 
 ```json
-{\"playerName\":\"fReeeeezeeeee\",\"legendName\":\"#character_pathfinder_NAME\",\"selectionOrder\":\"1\",\"lead\":false}
+{"playerName":"fReeeeezeeeee","legendName":"#character_pathfinder_NAME","selectionOrder":"1","lead":false}
 ```
 
 #### `team_info` notes
@@ -109,7 +109,7 @@ Every team member, including the jump-master will be reported in the following w
 The current status of the local player’s team ("active" or "eliminated").
 
 ```json
-{\"team_state\":\"active\"}
+{"team_state":"active"}
 ```
 
 As you can see, this object includes:
@@ -247,7 +247,7 @@ Event        | Event Data                        | Fired When   | Notes         
 -------------| ----------------------------------| ----------------------------- | ------------------ | --------------|
 kill | victimName                              | Local player killed another player. `{"victimName": "6ewehrw0lf"}` |                    |     130.0      | 
 knockdown | victimName                              | Local player knocked out another player. `{"victimName":"J0GUR7"}` |                    |    130.0      | 
-assist | victimName                              | Local player participated in a team member’s kill.</br></br>Provided values:</br>1. victimName</br>2. type - knockdown / elimination</br></br>Example:</br></br>`{"victimName": "VioletAlbicocca","type":"knockdown"}` |                    |    130.0      | 
+assist | victimName                              | Local player participated in a team member’s kill.</br></br>Provided values:</br>1. victimName</br>2. type - knockdown / elimination</br></br>Example:</br></br>`{"victimName":"VioletAlbicocca","type":"knockdown"}` |                    |    130.0      | 
 
 ## revive
 
