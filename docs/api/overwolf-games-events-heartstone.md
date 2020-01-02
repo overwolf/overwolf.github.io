@@ -117,13 +117,13 @@ Decks are “visible” when the local player starts a new game, during the “d
 Example for a “deck” info-update structure:
 
 `{"feature":"decks","category":"decks","key":"Basic Shaman",
-"value":"{\"deck_id\":\"Basic Shaman\",
-\"cards\":[{\"id\":\"CS1_042\",\"count\":\"1\",\"premiumCount\":\"0\"},
-{\"id\":\"CS2_103\",\"count\":\"1\",\"premiumCount\":\"0\"},
+"value":"{"deck_id":"Basic Shaman",
+"cards":[{"id":"CS1_042","count":"1","premiumCount":"0"},
+{"id":"CS2_103","count":"1","premiumCount":"0"},
 ...
-{\"id\":\"LOOT_413\",\"count\":\"2\",\"premiumCount\":\"0\"},
-{\"id\":\"UNG_923\",\"count\":\"1\",\"premiumCount\":\"0\"}],
-\"deck_key\":\"deck_0\"}"} `
+{"id":"LOOT_413","count":"2","premiumCount":"0"},
+{"id":"UNG_923","count":"1","premiumCount":"0"}],
+"deck_key":"deck_0"}"} `
 
 <b>Arena Decks</b>
 
@@ -140,7 +140,7 @@ The following data is provided when the local player selects a deck:
 Example for a “selected deck” structure:
 
 `{"feature":"decks","category":"selected_deck","key":"selected_deck","value":
-"{\"deck_id\" : \"706741699\", \"deck_name\" : \"Basic Shaman\", \"class_skin\" : \"Thrall\" }`
+"{"deck_id":"706741699","deck_name":"Basic Shaman","class_skin":"Thrall" }`
 
 ## `match`
 
@@ -161,8 +161,8 @@ opponent | playersInfo   |  See [notes](#opponent-note) |     |   123.0 |
 * "<b>cardBackId</b>" – ID of the card back used in the current game (int)
 * "<b>cardId</b>" – ID of the card representing the hero (string)
 
-`{"playersInfo":{"localPlayer":"{\"name\":\"ччггтуычб\",\"standardRank\":25,\"standardLegendRank\":0,
-\"wildRank\":25,\"wildLegendRank\":0,\"cardBackId\":0,\"cardId\":\"HERO_02\"}"}`
+`{"playersInfo":{"localPlayer":"{"name":"ччггтуычб","standardRank":25,"standardLegendRank":0,
+"wildRank":25,"wildLegendRank":0,"cardBackId":0,"cardId":"HERO_02"}"}`
 
 #### *opponent* note
 
@@ -174,8 +174,8 @@ opponent | playersInfo   |  See [notes](#opponent-note) |     |   123.0 |
 * "<b>cardBackId</b>" – the ID of the card back used in the current game (int)
 * "<b>cardId</b>" – the ID of the card representing the hero (string)
 
-`{"playersInfo":{"opponent":"{\"name\":\"ПсевдоРыцарь\",\"standardRank\":25,\"standardLegendRank\":0,
-\"wildRank\":25,\"wildLegendRank\":0,\"cardBackId\":0,\"cardId\":\"HERO_02\"}"}`
+`{"playersInfo":{"opponent":"{"name":"ПсевдоРыцарь","standardRank":25,"standardLegendRank":0,
+"wildRank":25,"wildLegendRank":0,"cardBackId":0,"cardId":"HERO_02"}"}`
 
 ### Events
 
