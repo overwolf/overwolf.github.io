@@ -55,6 +55,7 @@ class Footer extends React.Component {
             <li><a href="https://play.overwolf.com/fund/" target="_blank">Fund</a></li>
             <li><a href="https://medium.com/overwolf-developers" target="_blank">Developers Blog</a></li>
             <li><a href="https://www.overwolf.com/appstore" target="_blank">Overwolf Appstore</a></li>        
+            <li><a href="https://brands.overwolf.com/" target="_blank">Advertise on Overwolf</a></li>        
           </ul>
         </div>
       </footer>
