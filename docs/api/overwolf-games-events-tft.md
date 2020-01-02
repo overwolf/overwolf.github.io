@@ -45,8 +45,8 @@ Because LOL and TFT share the same GameID, when checking TFTs game event status 
 
 key                 | Category      | Values                                                   | Notes                                               | Since GEP Ver. |
 ------------------- |---------------| -------------------------------------------------------- | --------------------------------------------------- | ------------- |
-summoner_name       | me            | Summoner name of the local player  |  See [notes](#summoner_name-note) |   133.0       |
-xp                  | me            | Current player level, xp points, and xp points left to reach the next level  | See [notes](#xp-note) |   133.0       |
+summoner_name       | me            | Summoner name of the local player  |  See [notes](#summoner_name-notes) |   133.0       |
+xp                  | me            | Current player level, xp points, and xp points left to reach the next level  | See [notes](#xp-notes) |   133.0       |
 health              | me            | Current amount of health points of the player |  See [notes](#health-notes) |   133.0       |
 rank                | me            | Current standing of the player        |   See [notes](#rank-notes)  |   133.0       |
 gold                | me             | Player's spare gold in hand   | See [notes](#gold-notes) |   133.0       |
