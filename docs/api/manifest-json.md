@@ -267,7 +267,6 @@ To use most overwolf.* APIs, your Overwolf app must declare relevant permissions
 | "FileSystem"           | Allows accessing files from the local file system. </br>*Note: This is the only permission we currently enforce*  | 
 | "LogitechLed"          | Allows accessing [overwolf.logitech.led](overwolf-logitech-led) API                                               | 
 | "LogitechArx"          | Allows accessing [overwolf.logitech.arx](overwolf-logitech-arx) API                                               | 
-| "OwWebview"            | Allows using the owwebview tag                                                                                    | 
 | "VideoCaptureSettings" | Allows setting video capture settings                                                                             | 
 | "Web"                  | access to the [overwolf.web](overwolf-web) API                                                                    | 
 | "Tray"                 | Access to creating tray icons                                                                                     | 
