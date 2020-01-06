@@ -16,8 +16,8 @@ Please read the [overwolf.games.events](overwolf-games-events) documentation pag
 ## Available Features
 
 * [stats](#stats)
-* [teamGoal](#teamGoal)
-* [opposingTeamGoal](#opposingTeamGoal)
+* [teamGoal](#teamgoal)
+* [opposingTeamGoal](#opposingteamgoal)
 * [match](#match)
 * [roster](#roster)
 * [me](#me)
