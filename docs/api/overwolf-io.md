@@ -8,20 +8,24 @@ Use the `overwolf.io` API to check whether a certain file exists, as well as to 
 
 ## Methods Reference
 
-* [`fileExists()`](#fileexistsfilepath-callback)
-* [`writeFileContents()`](#writefilecontentsfilepath-content-encoding-triggeruacifrequired-callback)
-* [`readFileContents()`](#readfilecontentsfilepath-encoding-callback)
-* [`copyFile()`](#copyfilesrc-dst-overridefile-reserved-callback)
-* [`dir()`](#dirpath-callback)
-* [`readBinaryFile()`](#readbinaryfilepath-callback)
-* [`readTextFile()`](#readtextfilepath-callback)
-* [`exist()`](#existpath-callback)
-* [`listenOnFile()`](#listenonfilepath-callback)
-* [`stopFilelistener()`](#)
+* [overwolf.io.fileExists()](#fileexistsfilepath-callback)
+* [overwolf.io.writeFileContents()](#writefilecontentsfilepath-content-encoding-triggeruacifrequired-callback)
+* [overwolf.io.readFileContents()](#readfilecontentsfilepath-encoding-callback)
+* [overwolf.io.copyFile()](#copyfilesrc-dst-overridefile-reserved-callback)
+* [overwolf.io.dir()](#dirpath-callback)
+* [overwolf.io.readBinaryFile()](#readbinaryfilepath-options-callback)
+* [overwolf.io.readTextFile()](#readtextfilepath-options-callback)
+* [overwolf.io.exist()](#existpath-callback)
+* [overwolf.io.listenOnFile()](#listenonfileid-path-option-callback)
+* [overwolf.io.stopFilelistener()](#stopfilelistenerid)
 
 ## Types Reference
 
-* [`eEncoding`](#eencoding)
+* [overwolf.io.eEncoding](#eencoding-enum) enum
+* [overwolf.io.enums.fileListenerState](#filelistenerstate-enum) enum
+* [overwolf.io.enums.ReadFileOptions](#readfileoptions-object) Object
+
+
 
 ## fileExists(filePath, callback)
 
@@ -61,7 +65,7 @@ Parameter            | Type                    | Description                    
 -------------------- | ----------------------- | --------------------------------------------------------------------------------------- |
 filePath             | string                  | Path to check for                                                                   |
 content              | string                  | Content to write                                                                    |
-encoding             | [eEncoding](#eencoding) enum | Encoding to use                                                               |
+encoding             | [eEncoding](#eencoding-enum) enum | Encoding to use                                                               |
 triggerUacIfRequired | bool                    | If additional permissions are required, triggers the Windows UAC dialog |
 callback             | function                | Returns with the result                                                                 |   
    
@@ -86,7 +90,7 @@ callback             | function                | Returns with the result        
 Parameter | Type | Description |
 ------------ | ------------ | ------------ |
 filePath | string | Full path of the targeted file|
-encoding | [eEncoding](#eencoding) enum | Encoding to use |
+encoding | [eEncoding](#eencoding-enum) enum | Encoding to use |
 callback | function | Returns with the result |
    
 #### Callback argument: Success
@@ -148,7 +152,7 @@ Parameter | Type     | Description             |
 path      | string   | The target path         |
 callback  | function | Returns with the result | 
 
-## readBinaryFile(path, callback)
+## readBinaryFile(path, options, callback)
 
 #### Version added: 0.141
 
@@ -159,20 +163,10 @@ callback  | function | Returns with the result |
 Parameter | Type     | Description             |
 ----------| ---------| ----------------------- |
 path      | string   | The target path         |
-options   | object   | Read [notes](#options-notes)         |
+options   | [ReadFileOptions](#readfileoptions-object) object |   |
 callback  | function | Returns with the result |   
 
-#### `options` notes
-
-```json
- { 
-    "encoding": overwolf.io.enums.eEncoding, 
-    "maxBytesToRead": int, //default it 0 => read all file
-    "offset": int //start read position, default is 0
- }
- ```
-
- #### Callback argument: Success
+#### Callback argument: Success
 
 ```json
  {
@@ -188,7 +182,7 @@ callback  | function | Returns with the result |
 }
 ```
 
-## readTextFile(path, callback)
+## readTextFile(path, options, callback)
 
 #### Version added: 0.141
 
@@ -199,18 +193,8 @@ callback  | function | Returns with the result |
 Parameter | Type     | Description             |
 ----------| ---------| ----------------------- |
 path      | string   | The target path         |
-options   | object   | Read [notes](#options-notes)         |
+options   | [ReadFileOptions](#readfileoptions-object) object |    |
 callback  | function | Returns with the result |   
-
-#### `options` notes
-
-```json
- { 
-    "encoding": overwolf.io.enums.eEncoding, 
-    "maxBytesToRead": int, //default it 0 => read all file
-    "offset": int //start read position, default is 0
- }
- ```
 
 #### Callback argument: Success
 
@@ -241,7 +225,17 @@ Parameter | Type     | Description             |
 path      | string   | The target path         |
 callback  | function | Returns with the result | 
 
-## listenOnFile(path, callback)
+#### Callback argument: Success
+
+```json
+ {
+    "success" : true,
+    "error": "", 
+    "exist": true
+}
+```
+
+## listenOnFile(id, path, option, callback)
 
 #### Version added: 0.141
 
@@ -251,16 +245,16 @@ callback  | function | Returns with the result |
 
 Parameter | Type     | Description             |
 ----------| ---------| ----------------------- |
-path      | string   | The target path         |
 id        | string   | listen Id               |
-options   | object   | Read [notes](options-notes-2)          |
+path      | string   | file path               |
+options   | object   | Read [notes](#options-notes-2)          |
 callback  | function | Returns with the result | 
 
 #### `options` notes
 
 ```json
 {
-    "skipToEnd" : false, //should skip directly to end of file
+    "skipToEnd" : false //should skip directly to end of file
 }
 ```
 
@@ -270,19 +264,24 @@ callback  | function | Returns with the result |
 {
     "success" : true, // when false the callback will stop listen
     "error": "", // valid only when success = false
-    "state": overwolf.io.enums.fileListenerState, // valid only when success =true (running,terminated, truncated)
+    "state": "running|terminated|truncated" // valid only when success =true (overwolf.io.enums.fileListenerState) 
     "content": "", //the line 
     "info" : 
     {
         "index" : 1, // line index
-        "isNew" : false, //false when exist line (e.g skip to end is false), true when new line was add to file
+        "isNew" : false, //false when line exist (e.g skip to end is false), true when new line was add to file
         "position" : 3000, // last file position
         "eof" :false, // is eof reached
     }
 }
 ```
 
-## stopFileListener(path, callback)
+#### listenOnFile notes 
+
+* "state" is from type [overwolf.io.enums.fileListenerState](#filelistenerstate-enum).
+* Please read what happens when you call [stopFileListener()](#stopfilelistener-notes).
+
+## stopFileListener(id)
 
 #### Version added: 0.141
 
@@ -290,14 +289,36 @@ callback  | function | Returns with the result |
 
 > Stop listen on file.
 
-When stop [listenOnFile](##listenonfilepath-callback) callback will trigger with `{success :true, state: overwolf.io.enums.fileListenerState.truncated}`
-
 Parameter | Type     | Description             |
 ----------| ---------| ----------------------- |
-id      | string   | The target path         |
+id        | string   | listen Id               |
 
- 
-## eEncoding
+#### stopFileListener notes
+
+On stop, [listenOnFile](#listenonfileid-path-option-callback) callback will trigger with a "truncated" state:
+
+```json
+{
+    "success" : true, 
+    "error": "", 
+    "state": "truncated" 
+    ...
+}
+```
+
+
+## fileListenerState enum
+
+File listener state.
+
+Options    | 
+-----------| 
+running    | 
+terminated |
+truncated  |
+
+## eEncoding enum
+
 File encoding.
 
 Options    | 
@@ -307,3 +328,14 @@ UTF8BOM    |
 Unicode    |
 UnicodeBOM |
 ASCII      |
+
+## ReadFileOptions Object
+#### Version added: 0.141
+
+> Describes the different options to read a file.
+
+Parameter        | Type                          | Description                       |
+---------------- | ------------------------------| --------------------------------- |
+encoding         | [eEncoding](#eencoding-enum) enum  |                                   |
+maxBytesToRead   | int                           | default it 0 => read all file     |
+offset           | int                           | start read position, default is 0 |
