@@ -14,7 +14,14 @@ Follow this entry for ongoing updates and changes to the project or tools:
   In addition, logs file names are now counted where the last number one is the newest file.  
 * New function: [overwolf.streaming.split](overwolf-streaming#splitstreamid-callback).  
   Split video files.
-* Implement the [IO-Pluign](../topics/simple-io-plugin) inside the [overwolf.io](overwolf-io) API. No need to use the external plugin anymore.
+* Implement most of the [IO-Pluign](../topics/simple-io-plugin) features in the [overwolf.io](overwolf-io) API.  
+  No need to use the external plugin anymore! the new functions:
+  * [overwolf.io.dir()](overwolf-io#dirpath-callback)
+  * [overwolf.io.readBinaryFile()](overwolf-io#readbinaryfilepath-options-callback)
+  * [overwolf.io.readTextFile()](overwolf-io#readtextfilepath-options-callback)
+  * [overwolf.io.exist()](overwolf-io#existpath-callback)
+  * [overwolf.io.listenOnFile()](overwolf-io#listenonfileid-path-option-callback)
+  * [overwolf.io.stopFilelistener()](overwolf-io#stopfilelistenerid)
 
 
 

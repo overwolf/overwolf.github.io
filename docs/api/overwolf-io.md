@@ -24,7 +24,7 @@ Use the `overwolf.io` API to check whether a certain file exists, as well as to 
 * [overwolf.io.eEncoding](#eencoding-enum) enum
 * [overwolf.io.enums.fileListenerState](#filelistenerstate-enum) enum
 * [overwolf.io.enums.ReadFileOptions](#readfileoptions-object) Object
-
+* [overwolf.io.enums.ListenFileOptions](#listenfileoptions-object) Object
 
 
 ## fileExists(filePath, callback)
@@ -160,6 +160,9 @@ callback  | function | Returns with the result |
 
 > Read binary file.
 
+ Reads a file's contents and returns as an array of byte values.  
+ This function is extremly slow! Use only for small files or to get file header info using the [options](#readfileoptions-object) parameter (maxBytesToRead) to limit amount of data to fetch.
+
 Parameter | Type     | Description             |
 ----------| ---------| ----------------------- |
 path      | string   | The target path         |
@@ -172,7 +175,7 @@ callback  | function | Returns with the result |
  {
     "success" : true,
     "error": "", 
-    "content": "", // the file content
+    "content": byte[], // the file content in bytes
     "info" : {
         "eof" : true, // is EOF
         "totalRead" : 3000, // total read bytes
@@ -189,6 +192,8 @@ callback  | function | Returns with the result |
 #### Permissions required: FileSystem
 
 > Read text file.
+
+Reads a file's contents and returns as text.
 
 Parameter | Type     | Description             |
 ----------| ---------| ----------------------- |
@@ -243,20 +248,14 @@ callback  | function | Returns with the result |
 
 > Start listen on file.
 
+ Stream a file (text files only), line-by-line, from the local filesystem.
+
 Parameter | Type     | Description             |
 ----------| ---------| ----------------------- |
 id        | string   | listen Id               |
 path      | string   | file path               |
-options   | object   | Read [notes](#options-notes-2)          |
+options   | [ListenFileOptions](#listenfileoptions-object) Object   |           |
 callback  | function | Returns with the result | 
-
-#### `options` notes
-
-```json
-{
-    "skipToEnd" : false //should skip directly to end of file
-}
-```
 
 #### Callback argument: Success
 
@@ -289,6 +288,9 @@ callback  | function | Returns with the result |
 
 > Stop listen on file.
 
+Stop streaming a file that you previously passed when calling  [listenOnFile](#listenonfileid-path-option-callback).  
+There are no callbacks - as this will never fail (even if the stream doesn't exist).
+
 Parameter | Type     | Description             |
 ----------| ---------| ----------------------- |
 id        | string   | listen Id               |
@@ -305,7 +307,6 @@ On stop, [listenOnFile](#listenonfileid-path-option-callback) callback will trig
     ...
 }
 ```
-
 
 ## fileListenerState enum
 
@@ -336,6 +337,15 @@ ASCII      |
 
 Parameter        | Type                          | Description                       |
 ---------------- | ------------------------------| --------------------------------- |
-encoding         | [eEncoding](#eencoding-enum) enum  |                                   |
+encoding         | [eEncoding](#eencoding-enum) enum  |                              |
 maxBytesToRead   | int                           | default it 0 => read all file     |
 offset           | int                           | start read position, default is 0 |
+
+## ListenFileOptions Object
+#### Version added: 0.141
+
+> Describes the different options to listen to a file.
+
+Parameter        | Type                          | Description                       |
+---------------- | ------------------------------| --------------------------------- |
+skipToEnd        | bool                          | should skip directly to end of file. default if false  |
