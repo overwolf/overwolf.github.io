@@ -8,6 +8,16 @@ Follow this entry for ongoing updates and changes to the project or tools:
 
 ## Version 0.141 (Jan. 2020)
 
+* New function: [overwolf.utils.OpenFilePicker](overwolf-utils#openfilepickerfilter-initialpath-callback).  
+  Now also accepts an initialPath parameter.
+* Logs: now end with the extension "log" (instead of numbers).  
+  In addition, logs file names are now counted where the last number one is the newest file.  
+* New function: [overwolf.streaming.split](overwolf-streaming#splitstreamid-callback).  
+  Split video files.
+* Implement the [IO-Pluign](../topics/simple-io-plugin) inside the [overwolf.io](overwolf-io) API. No need to use the external plugin anymore.
+
+
+
 
 ## Version 0.140 (Dec. 2019)
 

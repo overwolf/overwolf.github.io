@@ -20,6 +20,7 @@ Common use cases:
 * [overwolf.utils.getMonitorsList()](#getmonitorslistcallback)
 * [overwolf.utils.sendKeyStroke()](#sendkeystrokekeystring)
 * [overwolf.utils.openFilePicker()](#openfilepickerfilter-callback)
+* [overwolf.utils.openFilePicker()](#openfilepickerfilter-initialpath-callback)
 * [overwolf.utils.openFolderPicker()](#openfolderpickerinitialpath-callback)
 * [overwolf.utils.openWindowsExplorer()](#openwindowsexplorerurl-callback)
 * [overwolf.utils.isTouchDevice()](#istouchdevicecallback)
@@ -114,6 +115,18 @@ A callback function which will be called with the status of the request
     "url": "overwolf-fs://E/Video"
 }
 ```
+
+## openFilePicker(filter, initialPath, callback)
+#### Version added: 0.141
+#### Permissions required: FileSystem
+
+> Opens a file picker dialog to browse for a file. A url to the selected file will be returned.  In addition, this function also allows you to set the initial path/folder to start browsing from.
+
+Parameter    | Type     | Description                                                                                  |
+------------ | ---------| -------------------------------------------------------------------------------------------- |
+filter       | string   | A file filter. Provide an empty string for wild cards or seperate value by commas (,). Ex. myFile*.*,*.txt      |
+initialPath  | string   | An optional path to start browsing from                                                      |
+callback     | function | Called with a url to the selected file                                                       |
 
 ## openFolderPicker(initialPath, callback)
 #### Version added: 0.91

@@ -14,6 +14,7 @@ The term streaming might be a bit misleading – we regard saving a video to the
 
 * [overwolf.streaming.start()](#startsettings-callback)
 * [overwolf.streaming.stop()](#stopstreamid-callback)
+* [overwolf.streaming.split()](#splitstreamid-callback)
 * [overwolf.streaming.changeVolume()](#changevolumestreamid-audiooptions-callback)
 * [overwolf.streaming.setWatermarkSettings()](#setwatermarksettingssettings-callback)
 * [overwolf.streaming.getWatermarkSettings()](#getwatermarksettingscallback)
@@ -288,6 +289,20 @@ A callback function which will be called with the status of the request
 ```json
 { "status": "error", "error": "something went wrong..." }
 ```
+
+## split(streamId, callback)
+
+#### Version added: 0.141
+
+> Request to split video now.
+
+This is allow only when start recording with [enable_on_demand_split](#streamvideooptions-object) setting.  
+[onVideoFileSplited](#onvideofilesplited) event will be fired when video splits.
+
+Parameter | Type                                            | Description                  |
+--------- | ------------------------------------------------| ---------------------------- |
+streamId  |int                                              | The id of the stream to stop |
+callback  | function                                        | Returns with the result      |
 
 ## changeVolume(streamId, audioOptions, callback)
 
@@ -854,7 +869,8 @@ Stream video options.
 | sub_folder_name| string | Defines Sub folder for video file path destination (See note below this table) | 0.103  |
 | override_overwolf_setting| bool | Do not use Overwolf capture setting. In case True you must provider all video setting (encoder..) | 0.103  |
 | tobii| [TobiiLayerParams](overwolf-tobii) Object | Tobii Replay layer setting | 0.97  |
-| max_file_size_bytes| uint | Defines file maximum size. when video reach {max_file_size_bytes}, the recorder will flush the video file and stat a new video file. onFileSpilt event will be fired | 0.103  |
+| max_file_size_bytes| uint | Defines file maximum size. when video reach {max_file_size_bytes}, the recorder will flush the video file and stat a new video file. [onVideoFileSplited](#onvideofilesplited) event will be fired | 0.103  |
+| enable_on_demand_split| bool | Enable to split video file on demand. See [notes](#enable_on_demand_split-notes). | 0.141  |
 | include_full_size_video| bool | in case max_file_size_bytes is onfull video will be recorded to disk parallel to splits videos.  | 0.105  |
 
 ##### `sub_folder_name` note: 
@@ -863,6 +879,13 @@ Stream video options.
 `OverwolfVideoFolder\\AppName\\|sub_folder_name\\|file_name|`
 * In case [folder_name] is empty:  
 `OverwolfVideoFolder\\AppName\\|sub_folder_name|`
+
+#### `enable_on_demand_split` notes
+
+* When calling [split()](#splitstreamid-callback), the recorder will flash the video file.
+* When the recorder encoded the key frame with presentation time stamp thats is equal to grater than split() timestamps.
+* When |max_file_size_bytes| is set, this flag is ignored.  
+* [onVideoFileSplited](#onvideofilesplited) event will be fired.
 
 ## StreamingVideoEncoderSettings Object
 

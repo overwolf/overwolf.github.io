@@ -12,6 +12,12 @@ Use the `overwolf.io` API to check whether a certain file exists, as well as to 
 * [`writeFileContents()`](#writefilecontentsfilepath-content-encoding-triggeruacifrequired-callback)
 * [`readFileContents()`](#readfilecontentsfilepath-encoding-callback)
 * [`copyFile()`](#copyfilesrc-dst-overridefile-reserved-callback)
+* [`dir()`](#dirpath-callback)
+* [`readBinaryFile()`](#readbinaryfilepath-callback)
+* [`readTextFile()`](#readtextfilepath-callback)
+* [`exist()`](#existpath-callback)
+* [`listenOnFile()`](#listenonfilepath-callback)
+* [`stopFilelistener()`](#)
 
 ## Types Reference
 
@@ -127,8 +133,170 @@ Returns a string with the targeted file’s content.
 
 ```json
 {"status":"error"}
-```   
+```
 
+## dir(path, callback)
+
+#### Version added: 0.141
+
+#### Permissions required: FileSystem
+
+> List all files and sub folder in path.
+
+Parameter | Type     | Description             |
+----------| ---------| ----------------------- |
+path      | string   | The target path         |
+callback  | function | Returns with the result | 
+
+## readBinaryFile(path, callback)
+
+#### Version added: 0.141
+
+#### Permissions required: FileSystem
+
+> Read binary file.
+
+Parameter | Type     | Description             |
+----------| ---------| ----------------------- |
+path      | string   | The target path         |
+options   | object   | Read [notes](#options-notes)         |
+callback  | function | Returns with the result |   
+
+#### `options` notes
+
+```json
+ { 
+    "encoding": overwolf.io.enums.eEncoding, 
+    "maxBytesToRead": int, //default it 0 => read all file
+    "offset": int //start read position, default is 0
+ }
+ ```
+
+ #### Callback argument: Success
+
+```json
+ {
+    "success" : true,
+    "error": "", 
+    "content": "", // the file content
+    "info" : {
+        "eof" : true, // is EOF
+        "totalRead" : 3000, // total read bytes
+        "position" : 3000, // last file position
+        "totalLines" :100, // total read lines
+    }
+}
+```
+
+## readTextFile(path, callback)
+
+#### Version added: 0.141
+
+#### Permissions required: FileSystem
+
+> Read text file.
+
+Parameter | Type     | Description             |
+----------| ---------| ----------------------- |
+path      | string   | The target path         |
+options   | object   | Read [notes](#options-notes)         |
+callback  | function | Returns with the result |   
+
+#### `options` notes
+
+```json
+ { 
+    "encoding": overwolf.io.enums.eEncoding, 
+    "maxBytesToRead": int, //default it 0 => read all file
+    "offset": int //start read position, default is 0
+ }
+ ```
+
+#### Callback argument: Success
+
+```json
+ {
+    "success" : true,
+    "error": "", 
+    "content": "", // the file content
+    "info" : {
+        "eof" : true, // is EOF
+        "totalRead" : 3000, // total read bytes
+        "position" : 3000, // last file position
+        "totalLines" :100, // total read lines
+    }
+}
+```
+
+## exist(path, callback)
+
+#### Version added: 0.141
+
+#### Permissions required: FileSystem
+
+> Is path exist.
+
+Parameter | Type     | Description             |
+----------| ---------| ----------------------- |
+path      | string   | The target path         |
+callback  | function | Returns with the result | 
+
+## listenOnFile(path, callback)
+
+#### Version added: 0.141
+
+#### Permissions required: FileSystem
+
+> Start listen on file.
+
+Parameter | Type     | Description             |
+----------| ---------| ----------------------- |
+path      | string   | The target path         |
+id        | string   | listen Id               |
+options   | object   | Read [notes](options-notes-2)          |
+callback  | function | Returns with the result | 
+
+#### `options` notes
+
+```json
+{
+    "skipToEnd" : false, //should skip directly to end of file
+}
+```
+
+#### Callback argument: Success
+
+```json
+{
+    "success" : true, // when false the callback will stop listen
+    "error": "", // valid only when success = false
+    "state": overwolf.io.enums.fileListenerState, // valid only when success =true (running,terminated, truncated)
+    "content": "", //the line 
+    "info" : 
+    {
+        "index" : 1, // line index
+        "isNew" : false, //false when exist line (e.g skip to end is false), true when new line was add to file
+        "position" : 3000, // last file position
+        "eof" :false, // is eof reached
+    }
+}
+```
+
+## stopFileListener(path, callback)
+
+#### Version added: 0.141
+
+#### Permissions required: FileSystem
+
+> Stop listen on file.
+
+When stop [listenOnFile](##listenonfilepath-callback) callback will trigger with `{success :true, state: overwolf.io.enums.fileListenerState.truncated}`
+
+Parameter | Type     | Description             |
+----------| ---------| ----------------------- |
+id      | string   | The target path         |
+
+ 
 ## eEncoding
 File encoding.
 
