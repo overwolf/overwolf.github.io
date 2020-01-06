@@ -71,20 +71,22 @@
         </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><a class="edit-page-link button" href="https://github.com/overwolf/overwolf.github.io/tree/source/docs/api/overwolf-io.md" target="_blank" rel="noreferrer noopener">Edit</a><h1 id="__docusaurus" class="postHeaderTitle">overwolf.io API</h1></header><article><div><span><p>Use the <code>overwolf.io</code> API to check whether a certain file exists, as well as to write content into files. For more I/O functionalities, please use our <a href="../topics/simple-io-plugin">simple I/O plugin</a>.</p>
 <h2><a class="anchor" aria-hidden="true" id="methods-reference"></a><a href="#methods-reference" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Methods Reference</h2>
 <ul>
-<li><a href="#fileexistsfilepath-callback"><code>fileExists()</code></a></li>
-<li><a href="#writefilecontentsfilepath-content-encoding-triggeruacifrequired-callback"><code>writeFileContents()</code></a></li>
-<li><a href="#readfilecontentsfilepath-encoding-callback"><code>readFileContents()</code></a></li>
-<li><a href="#copyfilesrc-dst-overridefile-reserved-callback"><code>copyFile()</code></a></li>
-<li><a href="#dirpath-callback"><code>dir()</code></a></li>
-<li><a href="#readbinaryfilepath-callback"><code>readBinaryFile()</code></a></li>
-<li><a href="#readtextfilepath-callback"><code>readTextFile()</code></a></li>
-<li><a href="#existpath-callback"><code>exist()</code></a></li>
-<li><a href="#listenonfilepath-callback"><code>listenOnFile()</code></a></li>
-<li><a href="#"><code>stopFilelistener()</code></a></li>
+<li><a href="#fileexistsfilepath-callback">overwolf.io.fileExists()</a></li>
+<li><a href="#writefilecontentsfilepath-content-encoding-triggeruacifrequired-callback">overwolf.io.writeFileContents()</a></li>
+<li><a href="#readfilecontentsfilepath-encoding-callback">overwolf.io.readFileContents()</a></li>
+<li><a href="#copyfilesrc-dst-overridefile-reserved-callback">overwolf.io.copyFile()</a></li>
+<li><a href="#dirpath-callback">overwolf.io.dir()</a></li>
+<li><a href="#readbinaryfilepath-options-callback">overwolf.io.readBinaryFile()</a></li>
+<li><a href="#readtextfilepath-options-callback">overwolf.io.readTextFile()</a></li>
+<li><a href="#existpath-callback">overwolf.io.exist()</a></li>
+<li><a href="#listenonfileid-path-option-callback">overwolf.io.listenOnFile()</a></li>
+<li><a href="#stopfilelistenerid">overwolf.io.stopFilelistener()</a></li>
 </ul>
 <h2><a class="anchor" aria-hidden="true" id="types-reference"></a><a href="#types-reference" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Types Reference</h2>
 <ul>
-<li><a href="#eencoding"><code>eEncoding</code></a></li>
+<li><a href="#eencoding-enum">overwolf.io.eEncoding</a> enum</li>
+<li><a href="#filelistenerstate-enum">overwolf.io.enums.fileListenerState</a> enum</li>
+<li><a href="#readfileoptions-object">overwolf.io.enums.ReadFileOptions</a> Object</li>
 </ul>
 <h2><a class="anchor" aria-hidden="true" id="fileexistsfilepath-callback"></a><a href="#fileexistsfilepath-callback" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>fileExists(filePath, callback)</h2>
 <h4><a class="anchor" aria-hidden="true" id="version-added-093"></a><a href="#version-added-093" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Version added: 0.93</h4>
@@ -121,7 +123,7 @@
 <tbody>
 <tr><td>filePath</td><td>string</td><td>Path to check for</td></tr>
 <tr><td>content</td><td>string</td><td>Content to write</td></tr>
-<tr><td>encoding</td><td><a href="#eencoding">eEncoding</a> enum</td><td>Encoding to use</td></tr>
+<tr><td>encoding</td><td><a href="#eencoding-enum">eEncoding</a> enum</td><td>Encoding to use</td></tr>
 <tr><td>triggerUacIfRequired</td><td>bool</td><td>If additional permissions are required, triggers the Windows UAC dialog</td></tr>
 <tr><td>callback</td><td>function</td><td>Returns with the result</td></tr>
 </tbody>
@@ -144,7 +146,7 @@
 </thead>
 <tbody>
 <tr><td>filePath</td><td>string</td><td>Full path of the targeted file</td></tr>
-<tr><td>encoding</td><td><a href="#eencoding">eEncoding</a> enum</td><td>Encoding to use</td></tr>
+<tr><td>encoding</td><td><a href="#eencoding-enum">eEncoding</a> enum</td><td>Encoding to use</td></tr>
 <tr><td>callback</td><td>function</td><td>Returns with the result</td></tr>
 </tbody>
 </table>
@@ -196,7 +198,7 @@
 <tr><td>callback</td><td>function</td><td>Returns with the result</td></tr>
 </tbody>
 </table>
-<h2><a class="anchor" aria-hidden="true" id="readbinaryfilepath-callback"></a><a href="#readbinaryfilepath-callback" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>readBinaryFile(path, callback)</h2>
+<h2><a class="anchor" aria-hidden="true" id="readbinaryfilepath-options-callback"></a><a href="#readbinaryfilepath-options-callback" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>readBinaryFile(path, options, callback)</h2>
 <h4><a class="anchor" aria-hidden="true" id="version-added-0141-1"></a><a href="#version-added-0141-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Version added: 0.141</h4>
 <h4><a class="anchor" aria-hidden="true" id="permissions-required-filesystem-4"></a><a href="#permissions-required-filesystem-4" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Permissions required: FileSystem</h4>
 <blockquote>
@@ -208,17 +210,10 @@
 </thead>
 <tbody>
 <tr><td>path</td><td>string</td><td>The target path</td></tr>
-<tr><td>options</td><td>object</td><td>Read <a href="#options-notes">notes</a></td></tr>
+<tr><td>options</td><td><a href="#readfileoptions-object">ReadFileOptions</a> object</td><td></td></tr>
 <tr><td>callback</td><td>function</td><td>Returns with the result</td></tr>
 </tbody>
 </table>
-<h4><a class="anchor" aria-hidden="true" id="options-notes"></a><a href="#options-notes" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>options</code> notes</h4>
-<pre><code class="hljs css language-json"> { 
-    <span class="hljs-attr">"encoding"</span>: overwolf.io.enums.eEncoding, 
-    <span class="hljs-attr">"maxBytesToRead"</span>: int, <span class="hljs-comment">//default it 0 =&gt; read all file</span>
-    <span class="hljs-attr">"offset"</span>: int <span class="hljs-comment">//start read position, default is 0</span>
- }
-</code></pre>
 <h4><a class="anchor" aria-hidden="true" id="callback-argument-success-4"></a><a href="#callback-argument-success-4" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Callback argument: Success</h4>
 <pre><code class="hljs css language-json"> {
     <span class="hljs-attr">"success"</span> : <span class="hljs-literal">true</span>,
@@ -232,7 +227,7 @@
     }
 }
 </code></pre>
-<h2><a class="anchor" aria-hidden="true" id="readtextfilepath-callback"></a><a href="#readtextfilepath-callback" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>readTextFile(path, callback)</h2>
+<h2><a class="anchor" aria-hidden="true" id="readtextfilepath-options-callback"></a><a href="#readtextfilepath-options-callback" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>readTextFile(path, options, callback)</h2>
 <h4><a class="anchor" aria-hidden="true" id="version-added-0141-2"></a><a href="#version-added-0141-2" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Version added: 0.141</h4>
 <h4><a class="anchor" aria-hidden="true" id="permissions-required-filesystem-5"></a><a href="#permissions-required-filesystem-5" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Permissions required: FileSystem</h4>
 <blockquote>
@@ -244,17 +239,10 @@
 </thead>
 <tbody>
 <tr><td>path</td><td>string</td><td>The target path</td></tr>
-<tr><td>options</td><td>object</td><td>Read <a href="#options-notes">notes</a></td></tr>
+<tr><td>options</td><td><a href="#readfileoptions-object">ReadFileOptions</a> object</td><td></td></tr>
 <tr><td>callback</td><td>function</td><td>Returns with the result</td></tr>
 </tbody>
 </table>
-<h4><a class="anchor" aria-hidden="true" id="options-notes-1"></a><a href="#options-notes-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>options</code> notes</h4>
-<pre><code class="hljs css language-json"> { 
-    <span class="hljs-attr">"encoding"</span>: overwolf.io.enums.eEncoding, 
-    <span class="hljs-attr">"maxBytesToRead"</span>: int, <span class="hljs-comment">//default it 0 =&gt; read all file</span>
-    <span class="hljs-attr">"offset"</span>: int <span class="hljs-comment">//start read position, default is 0</span>
- }
-</code></pre>
 <h4><a class="anchor" aria-hidden="true" id="callback-argument-success-5"></a><a href="#callback-argument-success-5" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Callback argument: Success</h4>
 <pre><code class="hljs css language-json"> {
     <span class="hljs-attr">"success"</span> : <span class="hljs-literal">true</span>,
@@ -283,7 +271,14 @@
 <tr><td>callback</td><td>function</td><td>Returns with the result</td></tr>
 </tbody>
 </table>
-<h2><a class="anchor" aria-hidden="true" id="listenonfilepath-callback"></a><a href="#listenonfilepath-callback" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>listenOnFile(path, callback)</h2>
+<h4><a class="anchor" aria-hidden="true" id="callback-argument-success-6"></a><a href="#callback-argument-success-6" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Callback argument: Success</h4>
+<pre><code class="hljs css language-json"> {
+    <span class="hljs-attr">"success"</span> : <span class="hljs-literal">true</span>,
+    <span class="hljs-attr">"error"</span>: <span class="hljs-string">""</span>, 
+    <span class="hljs-attr">"exist"</span>: <span class="hljs-literal">true</span>
+}
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="listenonfileid-path-option-callback"></a><a href="#listenonfileid-path-option-callback" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>listenOnFile(id, path, option, callback)</h2>
 <h4><a class="anchor" aria-hidden="true" id="version-added-0141-4"></a><a href="#version-added-0141-4" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Version added: 0.141</h4>
 <h4><a class="anchor" aria-hidden="true" id="permissions-required-filesystem-7"></a><a href="#permissions-required-filesystem-7" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Permissions required: FileSystem</h4>
 <blockquote>
@@ -294,48 +289,73 @@
 <tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
 </thead>
 <tbody>
-<tr><td>path</td><td>string</td><td>The target path</td></tr>
 <tr><td>id</td><td>string</td><td>listen Id</td></tr>
-<tr><td>options</td><td>object</td><td>Read <a href="options-notes-2">notes</a></td></tr>
+<tr><td>path</td><td>string</td><td>file path</td></tr>
+<tr><td>options</td><td>object</td><td>Read <a href="#options-notes-2">notes</a></td></tr>
 <tr><td>callback</td><td>function</td><td>Returns with the result</td></tr>
 </tbody>
 </table>
-<h4><a class="anchor" aria-hidden="true" id="options-notes-2"></a><a href="#options-notes-2" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>options</code> notes</h4>
+<h4><a class="anchor" aria-hidden="true" id="options-notes"></a><a href="#options-notes" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>options</code> notes</h4>
 <pre><code class="hljs css language-json">{
-    <span class="hljs-attr">"skipToEnd"</span> : <span class="hljs-literal">false</span>, <span class="hljs-comment">//should skip directly to end of file</span>
+    <span class="hljs-attr">"skipToEnd"</span> : <span class="hljs-literal">false</span> <span class="hljs-comment">//should skip directly to end of file</span>
 }
 </code></pre>
-<h4><a class="anchor" aria-hidden="true" id="callback-argument-success-6"></a><a href="#callback-argument-success-6" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Callback argument: Success</h4>
+<h4><a class="anchor" aria-hidden="true" id="callback-argument-success-7"></a><a href="#callback-argument-success-7" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Callback argument: Success</h4>
 <pre><code class="hljs css language-json">{
     <span class="hljs-attr">"success"</span> : <span class="hljs-literal">true</span>, <span class="hljs-comment">// when false the callback will stop listen</span>
     <span class="hljs-attr">"error"</span>: <span class="hljs-string">""</span>, <span class="hljs-comment">// valid only when success = false</span>
-    <span class="hljs-attr">"state"</span>: overwolf.io.enums.fileListenerState, <span class="hljs-comment">// valid only when success =true (running,terminated, truncated)</span>
-    <span class="hljs-attr">"content"</span>: <span class="hljs-string">""</span>, <span class="hljs-comment">//the line </span>
+    <span class="hljs-attr">"state"</span>: <span class="hljs-string">"running|terminated|truncated"</span> <span class="hljs-comment">// valid only when success =true (overwolf.io.enums.fileListenerState) </span>
+    <span class="hljs-string">"content"</span>: <span class="hljs-string">""</span>, <span class="hljs-comment">//the line </span>
     <span class="hljs-attr">"info"</span> : 
     {
         <span class="hljs-attr">"index"</span> : <span class="hljs-number">1</span>, <span class="hljs-comment">// line index</span>
-        <span class="hljs-attr">"isNew"</span> : <span class="hljs-literal">false</span>, <span class="hljs-comment">//false when exist line (e.g skip to end is false), true when new line was add to file</span>
+        <span class="hljs-attr">"isNew"</span> : <span class="hljs-literal">false</span>, <span class="hljs-comment">//false when line exist (e.g skip to end is false), true when new line was add to file</span>
         <span class="hljs-attr">"position"</span> : <span class="hljs-number">3000</span>, <span class="hljs-comment">// last file position</span>
         <span class="hljs-attr">"eof"</span> :<span class="hljs-literal">false</span>, <span class="hljs-comment">// is eof reached</span>
     }
 }
 </code></pre>
-<h2><a class="anchor" aria-hidden="true" id="stopfilelistenerpath-callback"></a><a href="#stopfilelistenerpath-callback" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>stopFileListener(path, callback)</h2>
+<h4><a class="anchor" aria-hidden="true" id="listenonfile-notes"></a><a href="#listenonfile-notes" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>listenOnFile notes</h4>
+<ul>
+<li>&quot;state&quot; is from type <a href="#filelistenerstate-enum">overwolf.io.enums.fileListenerState</a>.</li>
+<li>Please read what happens when you call <a href="#stopfilelistener-notes">stopFileListener()</a>.</li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="stopfilelistenerid"></a><a href="#stopfilelistenerid" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>stopFileListener(id)</h2>
 <h4><a class="anchor" aria-hidden="true" id="version-added-0141-5"></a><a href="#version-added-0141-5" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Version added: 0.141</h4>
 <h4><a class="anchor" aria-hidden="true" id="permissions-required-filesystem-8"></a><a href="#permissions-required-filesystem-8" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Permissions required: FileSystem</h4>
 <blockquote>
 <p>Stop listen on file.</p>
 </blockquote>
-<p>When stop <a href="##listenonfilepath-callback">listenOnFile</a> callback will trigger with <code>{success :true, state: overwolf.io.enums.fileListenerState.truncated}</code></p>
 <table>
 <thead>
 <tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
 </thead>
 <tbody>
-<tr><td>id</td><td>string</td><td>The target path</td></tr>
+<tr><td>id</td><td>string</td><td>listen Id</td></tr>
 </tbody>
 </table>
-<h2><a class="anchor" aria-hidden="true" id="eencoding"></a><a href="#eencoding" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>eEncoding</h2>
+<h4><a class="anchor" aria-hidden="true" id="stopfilelistener-notes"></a><a href="#stopfilelistener-notes" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>stopFileListener notes</h4>
+<p>On stop, <a href="#listenonfileid-path-option-callback">listenOnFile</a> callback will trigger with a &quot;truncated&quot; state:</p>
+<pre><code class="hljs css language-json">{
+    <span class="hljs-attr">"success"</span> : <span class="hljs-literal">true</span>, 
+    <span class="hljs-attr">"error"</span>: <span class="hljs-string">""</span>, 
+    <span class="hljs-attr">"state"</span>: <span class="hljs-string">"truncated"</span> 
+    ...
+}
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="filelistenerstate-enum"></a><a href="#filelistenerstate-enum" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>fileListenerState enum</h2>
+<p>File listener state.</p>
+<table>
+<thead>
+<tr><th>Options</th></tr>
+</thead>
+<tbody>
+<tr><td>running</td></tr>
+<tr><td>terminated</td></tr>
+<tr><td>truncated</td></tr>
+</tbody>
+</table>
+<h2><a class="anchor" aria-hidden="true" id="eencoding-enum"></a><a href="#eencoding-enum" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>eEncoding enum</h2>
 <p>File encoding.</p>
 <table>
 <thead>
@@ -349,7 +369,22 @@
 <tr><td>ASCII</td></tr>
 </tbody>
 </table>
-</span></div></article></div><div class="docLastUpdate"><em>Last updated on 2020-1-6 by eransharv</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/api/overwolf-games-launchers-events"><span class="arrow-prev">← </span><span>overwolf.games.launchers.events</span></a><a class="docs-next button" href="/docs/api/overwolf-io-paths"><span>overwolf.io.paths</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#methods-reference">Methods Reference</a></li><li><a href="#types-reference">Types Reference</a></li><li><a href="#fileexistsfilepath-callback">fileExists(filePath, callback)</a></li><li><a href="#writefilecontentsfilepath-content-encoding-triggeruacifrequired-callback">writeFileContents(filePath, content, encoding, triggerUacIfRequired, callback)</a></li><li><a href="#readfilecontentsfilepathencoding-callback">readFileContents(filePath,encoding, callback)</a></li><li><a href="#copyfilesrc-dst-overridefile-reserved-callback">copyFile(src, dst, overrideFile, reserved, callback)</a></li><li><a href="#dirpath-callback">dir(path, callback)</a></li><li><a href="#readbinaryfilepath-callback">readBinaryFile(path, callback)</a></li><li><a href="#readtextfilepath-callback">readTextFile(path, callback)</a></li><li><a href="#existpath-callback">exist(path, callback)</a></li><li><a href="#listenonfilepath-callback">listenOnFile(path, callback)</a></li><li><a href="#stopfilelistenerpath-callback">stopFileListener(path, callback)</a></li><li><a href="#eencoding">eEncoding</a></li></ul></nav></div><footer class="site-footer"><div class="container"><ul><li>Legal</li><li><a href="/docs/topics/legal-overview">Terms overview</a></li><li><a href="/docs/topics/legal-developers-terms">Developer&#x27;s terms</a></li><li><a href="/docs/topics/legal-app-terms">App terms</a></li><li><a href="http://www.overwolf.com/legal/" target="_blank">Overwolf terms</a></li><li><a href="http://www.overwolf.com/legal/#Privacy-policy" target="_blank">Overwolf Privacy policy</a></li></ul><ul><li>Support</li><li><a href=" https://discuss.developers.overwolf.com/" target="_blank">Questions and Answers</a></li><li><a href="https://discordapp.com/invite/cjjrZDp" target="_blank">Discord</a></li><li><a href="/docs/support/contact-us#join-our-slack">Slack</a></li><li><a href="https://www.facebook.com/OverwolfDevs" target="_blank">Facebook</a></li><li><a href="https://twitter.com/OverwolfDevs" target="_blank">Twitter</a></li></ul><ul><li>Documentation</li><li><a href="/docs/api/changelog">Changelog</a></li><li><a href="/docs/api/overwolf-api-overview">API</a></li><li><a href="/docs/start/app-creation-process">App Creation Process</a></li><li><a href="/docs/topics/best-practices-overview">Best Practices</a></li><li><a href="/docs/status/all">Game Events status</a></li></ul><ul><li>Information</li><li><a href="http://www.overwolf.com/careers/">Careers</a></li><li><a href="https://play.overwolf.com/fund/" target="_blank">Fund</a></li><li><a href="https://medium.com/overwolf-developers" target="_blank">Developers Blog</a></li><li><a href="https://www.overwolf.com/appstore" target="_blank">Overwolf Appstore</a></li><li><a href="https://brands.overwolf.com/" target="_blank">Advertise on Overwolf</a></li></ul></div></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+<h2><a class="anchor" aria-hidden="true" id="readfileoptions-object"></a><a href="#readfileoptions-object" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>ReadFileOptions Object</h2>
+<h4><a class="anchor" aria-hidden="true" id="version-added-0141-6"></a><a href="#version-added-0141-6" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Version added: 0.141</h4>
+<blockquote>
+<p>Describes the different options to read a file.</p>
+</blockquote>
+<table>
+<thead>
+<tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>encoding</td><td><a href="#eencoding-enum">eEncoding</a> enum</td><td></td></tr>
+<tr><td>maxBytesToRead</td><td>int</td><td>default it 0 =&gt; read all file</td></tr>
+<tr><td>offset</td><td>int</td><td>start read position, default is 0</td></tr>
+</tbody>
+</table>
+</span></div></article></div><div class="docLastUpdate"><em>Last updated on 2020-1-6 by eransharv</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/api/overwolf-games-launchers-events"><span class="arrow-prev">← </span><span>overwolf.games.launchers.events</span></a><a class="docs-next button" href="/docs/api/overwolf-io-paths"><span>overwolf.io.paths</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#methods-reference">Methods Reference</a></li><li><a href="#types-reference">Types Reference</a></li><li><a href="#fileexistsfilepath-callback">fileExists(filePath, callback)</a></li><li><a href="#writefilecontentsfilepath-content-encoding-triggeruacifrequired-callback">writeFileContents(filePath, content, encoding, triggerUacIfRequired, callback)</a></li><li><a href="#readfilecontentsfilepathencoding-callback">readFileContents(filePath,encoding, callback)</a></li><li><a href="#copyfilesrc-dst-overridefile-reserved-callback">copyFile(src, dst, overrideFile, reserved, callback)</a></li><li><a href="#dirpath-callback">dir(path, callback)</a></li><li><a href="#readbinaryfilepath-options-callback">readBinaryFile(path, options, callback)</a></li><li><a href="#readtextfilepath-options-callback">readTextFile(path, options, callback)</a></li><li><a href="#existpath-callback">exist(path, callback)</a></li><li><a href="#listenonfileid-path-option-callback">listenOnFile(id, path, option, callback)</a></li><li><a href="#stopfilelistenerid">stopFileListener(id)</a></li><li><a href="#filelistenerstate-enum">fileListenerState enum</a></li><li><a href="#eencoding-enum">eEncoding enum</a></li><li><a href="#readfileoptions-object">ReadFileOptions Object</a></li></ul></nav></div><footer class="site-footer"><div class="container"><ul><li>Legal</li><li><a href="/docs/topics/legal-overview">Terms overview</a></li><li><a href="/docs/topics/legal-developers-terms">Developer&#x27;s terms</a></li><li><a href="/docs/topics/legal-app-terms">App terms</a></li><li><a href="http://www.overwolf.com/legal/" target="_blank">Overwolf terms</a></li><li><a href="http://www.overwolf.com/legal/#Privacy-policy" target="_blank">Overwolf Privacy policy</a></li></ul><ul><li>Support</li><li><a href=" https://discuss.developers.overwolf.com/" target="_blank">Questions and Answers</a></li><li><a href="https://discordapp.com/invite/cjjrZDp" target="_blank">Discord</a></li><li><a href="/docs/support/contact-us#join-our-slack">Slack</a></li><li><a href="https://www.facebook.com/OverwolfDevs" target="_blank">Facebook</a></li><li><a href="https://twitter.com/OverwolfDevs" target="_blank">Twitter</a></li></ul><ul><li>Documentation</li><li><a href="/docs/api/changelog">Changelog</a></li><li><a href="/docs/api/overwolf-api-overview">API</a></li><li><a href="/docs/start/app-creation-process">App Creation Process</a></li><li><a href="/docs/topics/best-practices-overview">Best Practices</a></li><li><a href="/docs/status/all">Game Events status</a></li></ul><ul><li>Information</li><li><a href="http://www.overwolf.com/careers/">Careers</a></li><li><a href="https://play.overwolf.com/fund/" target="_blank">Fund</a></li><li><a href="https://medium.com/overwolf-developers" target="_blank">Developers Blog</a></li><li><a href="https://www.overwolf.com/appstore" target="_blank">Overwolf Appstore</a></li><li><a href="https://brands.overwolf.com/" target="_blank">Advertise on Overwolf</a></li></ul></div></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
                 document.addEventListener('keyup', function(e) {
                   if (e.target !== document.body) {
                     return;
