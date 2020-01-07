@@ -4,7 +4,7 @@ title: overwolf.io API
 sidebar_label: overwolf.io
 ---
 
-Use the `overwolf.io` API to check whether a certain file exists, as well as to write content into files. For more I/O functionalities, please use our [simple I/O plugin](../topics/simple-io-plugin).  
+Use the `overwolf.io` API to check whether a certain file exists and/or to write content into files. For more I/O functionalities, please use our [simple I/O plugin](../topics/simple-io-plugin).  
 
 ## Methods Reference
 
@@ -31,12 +31,12 @@ Use the `overwolf.io` API to check whether a certain file exists, as well as to 
 
 #### Version added: 0.93
 
-> Checks for the existance of a file in the given path.
+> Checks for the existance of a file in a given path.
 
 Parameter | Type | Description |
 ------------ | ------------ | ------------ |
 filePath | string | Path to check for |
-callback | function | Returns with the result |   
+callback | function | Returns the result |   
    
 #### Callback argument: Success
 
@@ -45,7 +45,7 @@ callback | function | Returns with the result |
 ```
 
 #### Callback argument: Failure
-If the file doesn’t exist, an error status will be returned:
+If the file does NOT exist, an error status will be returned:
 
 ```json 
 {"status":"error","reason":"File doesn't exists"}
@@ -57,9 +57,9 @@ If the file doesn’t exist, an error status will be returned:
 
 #### Permissions required: FileSystem
 
-> Writes content into the target text file.
+> Writes content into a target text file.
 
-If the file doesn’t exist, it will be created, along with any needed directories along the path. Otherwise, the file’s content will be overwritten.
+If the file doesn’t exist, it will be created, along with any required directories along the path. Otherwise, the file’s content will be overwritten.
 
 Parameter            | Type                    | Description                                                                             |
 -------------------- | ----------------------- | --------------------------------------------------------------------------------------- |
@@ -67,7 +67,7 @@ filePath             | string                  | Path to check for              
 content              | string                  | Content to write                                                                    |
 encoding             | [eEncoding](#eencoding-enum) enum | Encoding to use                                                               |
 triggerUacIfRequired | bool                    | If additional permissions are required, triggers the Windows UAC dialog |
-callback             | function                | Returns with the result                                                                 |   
+callback             | function                | Returns the result                                                                 |   
    
 #### Callback argument: Success
 ```json
@@ -91,11 +91,11 @@ Parameter | Type | Description |
 ------------ | ------------ | ------------ |
 filePath | string | Full path of the targeted file|
 encoding | [eEncoding](#eencoding-enum) enum | Encoding to use |
-callback | function | Returns with the result |
+callback | function | Returns the result |
    
 #### Callback argument: Success
 
-Returns a string with the targeted file’s content.
+Returns a string with the target file’s content.
 
 ```json
 {"status":"success","content":"Hello World!"}
@@ -145,7 +145,7 @@ Returns a string with the targeted file’s content.
 
 #### Permissions required: FileSystem
 
-> List all files and sub folder in path.
+> Lists all files and folder in the target path.
 
 Parameter | Type     | Description             |
 ----------| ---------| ----------------------- |
@@ -160,14 +160,14 @@ callback  | function | Returns with the result |
 
 > Read binary file.
 
- Reads a file's contents and returns as an array of byte values.  
- This function is extremly slow! Use only for small files or to get file header info using the [options](#readfileoptions-object) parameter (maxBytesToRead) to limit amount of data to fetch.
+ Reads a file's contents and returns an array of byte values.  
+ This function is extremly slow! Use it only for small files or to get file header info using the [options](#readfileoptions-object) parameter (maxBytesToRead) to limit the amount of data to fetch.
 
 Parameter | Type     | Description             |
 ----------| ---------| ----------------------- |
 path      | string   | The target path         |
 options   | [ReadFileOptions](#readfileoptions-object) object |   |
-callback  | function | Returns with the result |   
+callback  | function | Returns the result |   
 
 #### Callback argument: Success
 
@@ -193,13 +193,13 @@ callback  | function | Returns with the result |
 
 > Read text file.
 
-Reads a file's contents and returns as text.
+Reads a file's contents and returns it as text.
 
 Parameter | Type     | Description             |
 ----------| ---------| ----------------------- |
 path      | string   | The target path         |
 options   | [ReadFileOptions](#readfileoptions-object) object |    |
-callback  | function | Returns with the result |   
+callback  | function | Returns the result |   
 
 #### Callback argument: Success
 
@@ -228,7 +228,7 @@ callback  | function | Returns with the result |
 Parameter | Type     | Description             |
 ----------| ---------| ----------------------- |
 path      | string   | The target path         |
-callback  | function | Returns with the result | 
+callback  | function | Returns the result | 
 
 #### Callback argument: Success
 
@@ -246,7 +246,7 @@ callback  | function | Returns with the result |
 
 #### Permissions required: FileSystem
 
-> Start listen on file.
+> Start listening on file.
 
  Stream a file (text files only), line-by-line, from the local filesystem.
 
@@ -255,7 +255,7 @@ Parameter | Type     | Description             |
 id        | string   | listen Id               |
 path      | string   | file path               |
 options   | [ListenFileOptions](#listenfileoptions-object) Object   |           |
-callback  | function | Returns with the result | 
+callback  | function | Returns the result | 
 
 #### Callback argument: Success
 
@@ -286,7 +286,7 @@ callback  | function | Returns with the result |
 
 #### Permissions required: FileSystem
 
-> Stop listen on file.
+> Stop listening on file.
 
 Stop streaming a file that you previously passed when calling  [listenOnFile](#listenonfileid-path-option-callback).  
 There are no callbacks - as this will never fail (even if the stream doesn't exist).
