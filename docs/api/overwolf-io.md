@@ -338,8 +338,8 @@ ASCII      |
 Parameter        | Type                          | Description                       |
 ---------------- | ------------------------------| --------------------------------- |
 encoding         | [eEncoding](#eencoding-enum) enum  |                              |
-maxBytesToRead   | int                           | default it 0 => read all file     |
-offset           | int                           | start read position, default is 0 |
+maxBytesToRead   | int                           | default is 0 => read all file     |
+offset           | int                           | start reading point, default is 0 |
 
 ## ListenFileOptions Object
 #### Version added: 0.141
