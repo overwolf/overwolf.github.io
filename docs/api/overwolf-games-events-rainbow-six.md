@@ -117,7 +117,7 @@ deaths | player | Total number of player's deaths</br>`{"player":{"deaths":"1"}}
 
 Each player joining the game will be reported in the following way:
 
-`{"roster_0":"{\"name\":\"overwolfqa\",\"team\":\"Orange\",\"is_local\":true}"}`
+`{"roster_0":"{"name":"overwolfqa","team":"Orange","is_local":true}"}`
 
 As you can see, this object includes:
 
