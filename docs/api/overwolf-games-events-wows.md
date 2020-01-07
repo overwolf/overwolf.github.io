@@ -52,6 +52,14 @@ Possible Values:
 * Post_battle
 * Result_screen
 
+Data Example:
+
+```json
+{"info":{"game_info":{"scene":"dock"}},"feature":"game_info"}
+{"info":{"game_info":{"scene":"random_battle_queue"}},"feature":"game_info"}
+{"info":{"game_info":{"scene":"loading_screen"}},"feature":"game_info"}
+```
+
 ## `account_info`
 
 ### Info Updates
@@ -59,7 +67,7 @@ Possible Values:
 key          | Category    | Values                    | Notes                 | Since GEP Ver. |
 ------------ | ------------| ------------------------- | --------------------- | ------------- |
 realm | account_info   |                            | See [notes](#realm-note) |     119.1     |
-id | account_info   | Local player’s Wargaming account ID |                |     119.1     |
+id | account_info   | Local player’s Wargaming account ID | See [notes](#id-note) |     119.1     |
 playerName | account_info   | Local player’s Wargaming name |              |     119.1     |
 
 #### *realm* note
@@ -70,6 +78,20 @@ Possible Values:
 * EU
 * NA
 * Asia
+
+Data Example:
+
+```json
+{"info":{"account_info":{"realm":"eu"}},"feature":"account_info"}
+```
+
+#### *id* note
+
+Data Example:
+
+```json
+{"info":{"account_info":{"id":"536569483"}},"feature":"account_info"}
+```
 
 ## `match_info`
 
@@ -123,13 +145,13 @@ Each “player” contains the following data:
 Data Example:
 
 ```json
-"[{\"shipId\":\"1175724\",\"name\":\":Wright:\",\"team\":\"ally\",
-\"ship\":\"PZSC101_Cheng_An\",\"maxHealth\":\"4900\"},
-{\"shipId\":\"1175726\",\"name\":\":Buckmaster:\",\"team\":\"ally\",
-\"ship\":\"PJSC037_Hashidate_1940\",\"maxHealth\":\"5150\"},
+"[{"shipId":"1175724","name":":Wright:","team":"ally",
+"ship":"PZSC101_Cheng_An","maxHealth":"4900"},
+{"shipId":"1175726","name":":Buckmaster:","team":"ally",
+"ship":"PJSC037_Hashidate_1940","maxHealth":"5150"},
 ...
-{\"shipId\":\"1175728\",\"name\":\":Tovey:\",\"team\":\"enemy\",
-\"ship\":\"PASC001_Erie_1936\",\"maxHealth\":\"4950\"}]"
+{"shipId":"1175728","name":":Tovey:","team":"enemy",
+"ship":"PASC001_Erie_1936","maxHealth":"4950"}]"
 ```
 
 #### *health* note
@@ -183,9 +205,17 @@ Data Example:
 
 Event      | Event Data  | Fired When          | Notes              | Since GEP Ver. |
 -----------| ------------| ------------------- | ------------------ | --------------|
-matchStart | null        | Match starts       |                    |   119.1       | 
+matchStart | null        | Match starts       | See [notes](#matchStart-note) |   119.1       | 
 matchEnd   | null        | Match ends          |                    |   119.1       | 
 matchOutcome | "victory" / "lost" |  Match ends |                   |   119.1       | 
+
+#### *matchStart* note
+
+Data Example:
+
+```json
+{"events":[{"name":"matchStart","data":""}]}
+```
 
 ## `kill`
 
@@ -193,9 +223,33 @@ matchOutcome | "victory" / "lost" |  Match ends |                   |   119.1   
 
 Event      | Event Data  | Fired When          | Notes              | Since GEP Ver. |
 -----------| ------------| ------------------- | ------------------ | --------------|
-kill |Ship ID of the “victim” ship – int|A ship was destroyed by the local user|        |   121.0       | 
-damage   |<ul><li>amount – amount of damage done</li><li>shipId – int</li>|A ship was damaged by the local user|     |   121.0   | 
-ribbon |  ribbon – string | Ribbon was awarded |                    |   119.1       | 
+kill |Ship ID of the “victim” ship – int|A ship was destroyed by the local user| See [notes](#kill-note) |   121.0       | 
+damage   |<ul><li>amount – amount of damage done</li><li>shipId – int</li>|A ship was damaged by the local user|See [notes](#damage-note)|   121.0   | 
+ribbon |  ribbon – string | Ribbon was awarded | See [notes](#ribbon-note) |   119.1       | 
+
+#### *kill* note
+
+Data Example:
+
+```json
+{"events":[{"name":"kill","data":"351794"}]}
+```
+
+#### *damage* note
+
+```json
+{"events":[{"name":"damage","data":"{"amount":115,"shipId":"351794) (name=:Halgan:"}"}]}
+```
+
+#### *ribbon* note
+
+Data Example:
+
+```json
+{"events":[{"name":"ribbon","data":"RIBBON_CRIT"}]}
+{"events":[{"name":"ribbon","data":"RIBBON_BURN"}]}
+{"events":[{"name":"ribbon","data":"RIBBON_FRAG"}]}
+```
 
 ## `death`
 
