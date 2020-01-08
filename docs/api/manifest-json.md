@@ -14,6 +14,8 @@ This [JSON](http://www.json.org/) formatted file is responsible for describing a
 The following code shows supported manifest fields for Overwolf apps, with links to the section that discusses each field.
 Note that not all flags are mandatory - we included all available flags for documentation purposes.
 
+*Use this manifest with Overwolf client version 0.141 and above*
+
 <pre><code class="json">
 {
     //Mandatory
@@ -43,6 +45,7 @@ Note that not all flags are mandatory - we included all available flags for docu
         "<a href="#game_targeting">game_targeting</a>": {"type": "dedicated","game_ids": [10906, 7764]},
         //The name of the window (from the “windows” list) initially loaded when the app starts
         "<a href="#start_window">start_window</a>": "windowName",
+        "<a href="#enable_top_isolation">enable_top_isolation</a>": true,
          //A map from window names to window settings
         "<a href="#window-data">windows</a>": {
             "windowName": {
@@ -80,7 +83,6 @@ Note that not all flags are mandatory - we included all available flags for docu
                 "<a href="#is_background_page">is_background_page</a>": true,
                 "<a href="#focus_game_takeover">focus_game_takeover</a>": "ReleaseOnLostFocus",
                 "<a href="#focus_game_takeover_release_hotkey">focus_game_takeover_release_hotkey</a>": "...",
-                "<a href="#enable_top_isolation">enable_top_isolation</a>": true,
                 "<a href="#allow_local_file_access">allow_local_file_access</a>": true,
                 "<a href="#is_alt_f4_blocked">is_alt_f4_blocked</a>": false,
                 "<a href="#dev_tools_window_style">dev_tools_window_style</a>": false,
@@ -134,6 +136,8 @@ Note that not all flags are mandatory - we included all available flags for docu
 <details>
 <summary>Here you can see the same manifest.json file, but without comments</summary>
 
+*Use this manifest with Overwolf client version 0.141 and above*
+
 <pre><code class="json">
 {
     "<a href="#manifest_version">manifest_version</a>": 1,
@@ -154,6 +158,7 @@ Note that not all flags are mandatory - we included all available flags for docu
         "<a href="#meta-window-icon">window_icon</a>": "windowIcon.png"
     },
     "<a href="#permissions-array">permissions</a>": ["Streaming","Hotkeys","GameInfo"],
+    "<a href="#enable_top_isolation">enable_top_isolation</a>": true,
     "<a href="#data">data</a>": {
         "<a href="#game_targeting">game_targeting</a>": {"type": "dedicated","game_ids": [10906, 7764]},
         "<a href="#start_window">start_window</a>": "windowName",
@@ -192,7 +197,6 @@ Note that not all flags are mandatory - we included all available flags for docu
                 "<a href="#is_background_page">is_background_page</a>": true,
                 "<a href="#focus_game_takeover">focus_game_takeover</a>": "ReleaseOnLostFocus",
                 "<a href="#focus_game_takeover_release_hotkey">focus_game_takeover_release_hotkey</a>": "...",
-                "<a href="#enable_top_isolation">enable_top_isolation</a>": true,
                 "<a href="#allow_local_file_access">allow_local_file_access</a>": true,
                 "<a href="#is_alt_f4_blocked">is_alt_f4_blocked</a>": false,
                 "<a href="#dev_tools_window_style">dev_tools_window_style</a>": false,
