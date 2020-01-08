@@ -8,6 +8,9 @@ Follow this entry for ongoing updates and changes to the project or tools:
 
 ## Version 0.141 (Jan. 2020)
 
+* Manifest flag [enable_top_isolation](manifest-json#enable_top_isolation) has been "moved up" in the hirarchy:  
+  Now it's per app and not per windows - means, it's under the "data" node and not the "window" node.  
+  Note that it's backward compatible (means that if one of the app windows set this flag in the manifest - it will auto-merge to the entire app).
 * New function: [overwolf.utils.OpenFilePicker](overwolf-utils#openfilepickerfilter-initialpath-callback).  
   Now also accepts an initialPath parameter.
 * Logs: now end with the extension "log" (instead of numbers).  
