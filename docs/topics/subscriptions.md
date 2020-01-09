@@ -24,7 +24,7 @@ To simplify this guide, we assume that your premium users will get an "ad-free" 
 
 ## 3. Add an easy way to subscribe
 
-As a call to action, you can add in the relevant place in your app, a link to your app page in the Overwolf store, where they can purchase a subscription.
+As a call to action, you can add in the proper place in your app, a link to your app page in the Overwolf store, where they can purchase a subscription.
 
 In our example, our plan offers an "ad-free" version of the app. So the best place will be right under the ad:
 
@@ -43,7 +43,7 @@ And the app's subscription page will be opened in a new window:
 
 ![subscriptions page](../assets/subscriptions/subscription-page.png)
 
-Once the user succesfully finishes the subscription process, a [SubscriptionChangedEvent](#4-monitor-subscription-changes) is triggered.  
+Once the user successfully finishes the subscription process, a [SubscriptionChangedEvent](#4-monitor-subscription-changes) is triggered.  
 
 ## 3. Check if the user is subscribed
 
