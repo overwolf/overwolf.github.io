@@ -1,36 +1,35 @@
 ---
 id: subscriptions
-title: Integrate a subscription in your app
-sidebar_label: Integrate a subscription
+title: Integrate Subscriptions in your app
+sidebar_label: Integrate Subscriptions
 ---
 
+This article will provide a step by step explanation for how to set up and manage your app's subscription features. If you need assistance or encounter issues, talk to us!
 
-## 1. Create a demo subscription plan
+## 1. Create a Demo Subscription Plan
 
-The first step is to create a new subscription plan and set it in a "test" state.    
-For now, we will do that for you (after you fill [this form](../start/app-subscriptions)). In the future, you will be able to do that from our dev console.
+The first step to take is creating a new subscription plan and setting it in a "test" state.    
+Right now we have to do that for you (after you fill up [this form](../start/app-subscriptions)), but in the future you'll be able to do it independently from our dev console.
 
 :::note Notes
-* Only whitelisted developers with a live app on our store, can create a subscription plan.  
-* Currently, you are allowed to create only one plan for each app. This might change in the future. 
+* Only whitelisted developers with a live app on our store can create a subscription plan.  
+* For now, you may only create a single plan for each app. This might change in the future. 
 :::
 
-Once created, we will send you the new **subscription plan id**.
+Once created, we will send you a new **subscription plan id**.
 
-## 2. Define your app's premium features 
+## 2. Define your App's Premium Features 
 
-At this point, you should already know what your premium users will get in return - exclusive perks or services.  
-To simplify this guide, we assume that your premium users will get an "ad-free" version of your app.
+At this point, you should already know what your premium users will get for subscribing, usually exclusive perks or services.  
+To simplify this guide, we assume that your core offering for premium users will be an "ad-free" version of your app.
 
-## 3. Add an easy way to subscribe
+## 3. Add an Easy Way to Subscribe
 
-As a call to action, you can add in the proper place in your app, a link to your app page in the Overwolf store, where they can purchase a subscription.
-
-In our example, our plan offers an "ad-free" version of the app. So the best place will be right under the ad:
+You can add a link to your app's page in the Overwolf store as an in-app Call to Action to subscribe. In our example, our plan offers an "ad-free" version of the app. So the best location will be right under the ad which will be removed:
 
 ![remove an ad](../assets/subscriptions/remove-an-ad.png)
 
-When the users click the link, you should call to [overwolf.utils.openStore()](../api/overwolf-utils#openstoreparam).  
+When users click the link, you should call to [overwolf.utils.openStore()](../api/overwolf-utils#openstoreparam).  
 
 This will opens the current app’s subscriptions page in the Overwolf Appstore:
 
@@ -39,15 +38,15 @@ overwolf.utils.openStore({
    page:overwolf.utils.enums.eStorePage.SubscriptionPage
   })
 ```
-And the app's subscription page will be opened in a new window:
+The app's subscription page will open in a new window:
 
 ![subscriptions page](../assets/subscriptions/subscription-page.png)
 
 Once the user successfully finishes the subscription process, a [SubscriptionChangedEvent](#4-monitor-subscription-changes) is triggered.  
 
-## 3. Check if the user is subscribed
+## 3. Check Whether the User is Subscribed
 
-To limit the premium features for subscribed users (in this case, ads will be removed for premium users), you should check if the plan id that you created before is active for the current user. We will do that using the [overwolf.profile.subscriptions.getActivePlans()](../api/overwolf-profile.subscriptions#getactiveplanscallback) function:
+To properly reward subscribed users with premium features (in this case, removing ads), you should check whether your current subscription plan is active for the current user. We will do that using the [overwolf.profile.subscriptions.getActivePlans()](../api/overwolf-profile.subscriptions#getactiveplanscallback) function:
 
 ```js
 
@@ -68,14 +67,12 @@ overwolf.profile.subscriptions.getActivePlans(function(info) {
 );
 ```
 
-That's it! Whatever you are doing with the subscription is up to you. You can enable special features for subscribed users, remove ads, and so on.
+## 4. Monitor Subscription Changes
 
-## 4. Monitor subscription changes
+You can register to the [overwolf.profile.subscriptions.onSubscriptionChanged](../api/overwolf-profile.subscriptions#onsubscriptionchanged) event which fires when the current extension subscription status has changed.  
 
-You can register to the [overwolf.profile.subscriptions.onSubscriptionChanged](../api/overwolf-profile.subscriptions#onsubscriptionchanged) event, that fired when current extension subscription has changed.  
+If a user canceled their subscription or the subscription expired while the app is running, you can spot it on time and sync your app behavior accordingly.
 
-This way, if the user canceled the subscription or the subscription expired while the app is running, you can catch it on time and sync your app behavior accordingly.
-
-
+And there you have it! These are the basics of subscribing users to your app. We encourage you to figure out valuable premium plans and subscription features that will motivate your users to go premium. 
 
 
