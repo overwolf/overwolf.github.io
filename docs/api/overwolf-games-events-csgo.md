@@ -216,7 +216,7 @@ Data Example:
 Data Example:
 
 ```json
-{"info":{"match_info":{"server_info":"{\"name\":\"Counter-Strike: Global Offensive\",\"ip\":\"=[A:1:2111360000:13753]:0:0\"}"}},"feature":"match_info"}
+{"info":{"match_info":{"server_info":"{"name":"Counter-Strike: Global Offensive","ip":"=[A:1:2111360000:13753]:0:0"}"}},"feature":"match_info"}
 
 {"match_info":{"server_info":"{"name":"RU | ALTAI AWP [!ws,!knife,!gloves,!viptest] 128tick","ip":"212.22.93.74:27040"}"}}
 ```
@@ -493,7 +493,7 @@ Data Example:
     "feature":"roster",
     "category":"roster",
     "key":"lobby",
-    "value":"{"lobby_players\" : [{"steamId\":"76561198269560618"}]}"}
+    "value":"{"lobby_players" : [{"steamId":"76561198269560618"}]}"}
 ```
 
 #### *match* note
