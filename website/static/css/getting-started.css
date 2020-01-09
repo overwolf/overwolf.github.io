@@ -299,7 +299,16 @@
 	justify-content: center;
 	padding-top: 30px;
 	padding-bottom: 70px;
+	flex-direction:column;
 }
+
+
+.start-build-footer-btn p {
+	padding-top: 15px;
+	font-size: 14px;
+}
+
+
 
 @media (max-width: 1024px) {
 	.getting-started-container .start-build-footer-btn {
