@@ -9,7 +9,7 @@ This article will provide a step by step explanation for how to set up and manag
 ## 1. Create a Demo Subscription Plan
 
 The first step to take is creating a new subscription plan and setting it in a "test" state.    
-Right now we have to do that for you (after you fill up [this form](app-subscriptions)), but in the future you'll be able to do it independently from our dev console.
+Right now we have to do that for you (after you fill up [this form](../start/app-subscriptions)), but in the future you'll be able to do it independently from our dev console.
 
 :::note Notes
 * Only whitelisted developers with a live app on our store can create a subscription plan.  
@@ -37,7 +37,7 @@ This will opens the current app’s subscriptions page in the Overwolf Appstore:
 overwolf.utils.openStore({
    page:overwolf.utils.enums.eStorePage.SubscriptionPage
   })
-``` 
+```
 The app's subscription page will open in a new window:
 
 ![subscriptions page](../assets/subscriptions/subscription-page.png)

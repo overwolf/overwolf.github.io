@@ -9,7 +9,7 @@
 			"Submit Your App":
 			["start/submit-your-app-to-the-store", "start/custom-installer-for-your-app", "start/add-a-knowledge-base-to-app"],
 			"Monetize Your App":
-			["start/monetization-overview", "start/ads-sdk-overview", "start/ads-sdk-options", "start/ads-sdk-interaction", "start/ads-sdk-versions", "start/app-subscriptions"],
+			["start/monetization-overview", "start/ads-sdk-overview", "start/ads-sdk-options", "start/ads-sdk-interaction", "start/ads-sdk-versions", "start/app-subscriptions","start/subscriptions"],
 			"Maintain Your App":
 			["start/submit-an-app-update", "start/update-your-app-status"]
 	},
