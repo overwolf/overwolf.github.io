@@ -22,6 +22,29 @@ Once created, we will send you the new **subscription plan id**.
 At this point, you should already know what your premium users will get in return - exclusive perks or services.  
 To simplify this guide, we assume that your premium users will get an "ad-free" version of your app.
 
+## 3. Add an easy way to subscribe
+
+As a call to action, you can add in the relevant place in your app, a link to your app page in the Overwolf store, where they can purchase a subscription.
+
+In our example, our plan offers an "ad-free" version of the app. So the best place will be right under the ad:
+
+![remove an ad](../assets/subscriptions/remove-an-ad.png)
+
+When the users click the link, you should call to [overwolf.utils.openStore()](../api/overwolf-utils#openstoreparam).  
+
+This will opens the current app’s subscriptions page in the Overwolf Appstore:
+
+```js
+overwolf.utils.openStore({
+   page:overwolf.utils.enums.eStorePage.SubscriptionPage
+  })
+```
+And the app's subscription page will be opened in a new window:
+
+![subscriptions page](../assets/subscriptions/subscription-page.png)
+
+Once the user succesfully finishes the subscription process, a [SubscriptionChangedEvent](#4-monitor-subscription-changes) is triggered.  
+
 ## 3. Check if the user is subscribed
 
 To limit the premium features for subscribed users (in this case, ads will be removed for premium users), you should check if the plan id that you created before is active for the current user. We will do that using the [overwolf.profile.subscriptions.getActivePlans()](../api/overwolf-profile.subscriptions#getactiveplanscallback) function:
@@ -45,13 +68,14 @@ overwolf.profile.subscriptions.getActivePlans(function(info) {
 );
 ```
 
-That's it! Whatever you are doing with the subscription is up to you. You can enable special features for subscribed users and so on.
+That's it! Whatever you are doing with the subscription is up to you. You can enable special features for subscribed users, remove ads, and so on.
 
 ## 4. Monitor subscription changes
 
 You can register to the [overwolf.profile.subscriptions.onSubscriptionChanged](../api/overwolf-profile.subscriptions#onsubscriptionchanged) event, that fired when current extension subscription has changed.  
 
 This way, if the user canceled the subscription or the subscription expired while the app is running, you can catch it on time and sync your app behavior accordingly.
+
 
 
 
