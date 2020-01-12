@@ -56,7 +56,8 @@ Whenever permissions or overlay settings are changed, Overwolf informs users thr
 * **Auto Launch Permission** - is autolaunch allowed for this app?
   * [getAutoLaunchEnabled()](../docs/api/overwolf-settings-games#getautolaunchenabledgameclassid-callback)
   
- ### Bring more value
+ ## Bring more value
+ 
 * Apps should inform its users in the following cases:
   * The Overlay for the supported game is disabled – users will not be able to use the app in-game.
   * Auto Launch Permission is unchecked – app will NOT auto launch when the game begins, but can be manually launched.
