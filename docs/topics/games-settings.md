@@ -3,7 +3,6 @@ id: games-settings
 title: Per-Game Settings
 sidebar_label: Per-Game Settings
 ---
-# Per-Game Settings
 
 ### Overview
 The Overwolf platform enables users to control each app's permissions separately when it comes to opening windows and auto-launching app features. Users can also disable the in-game overlay for each app or for all apps of a specific game if they prefer it. 
