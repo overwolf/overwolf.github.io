@@ -47,12 +47,22 @@ display_name    | summoner_info  | Local player’s display name               |
 internal_name   | summoner_info  | Local player’s internal name              |                       |   125.0       |
 profile_icon_id | summoner_info  | Local player’s icon id	                 |                       |   125.0       |
 summoner_id     | summoner_info  | Local player’s summoner id                |                       |   125.0       |
-summoner_level	| summoner_info  | Local player’s summoner level              |                       |   125.0       |
+summoner_level	 | summoner_info  | Local player’s summoner level              |                       |   125.0       |
 region          | summoner_info  | Local player’s server (EU/NA etc)        |                       |   125.0       |
 locale          | summoner_info  | Local player’s selected LoL client language |                       |   125.0       |
 web_language    | summoner_info  | Local player’s type of language           |                       |   125.0       |
 web_region      | summoner_info  | Local player’s web region                 |                       |   125.0       |
 platform_id     | summoner_info  | Local player’s platform id                |                       |   125.0       |
+is_garena_user  | summoner_info  | Boolean - True / False                    | See [notes](#is_garena_user-note) |   143.0       |
+
+#### *is_garena_user* note
+
+Data Example:
+
+```json
+{"feature":"summoner_info","category":"summoner_info","key":"is_garena_user","value":false}
+{"feature":"summoner_info","category":"summoner_info","key":"is_garena_user","value":true}
+```
 
 ## `champ_select`
 
