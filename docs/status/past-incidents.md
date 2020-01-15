@@ -136,6 +136,12 @@ Rainbow 6 Siege
 ---------------
 
 **Resolved** This incident has been resolved.  
+Jan 14, 04:02 PM GMT+3
+
+**Investigating** -   Rainbow 6 game events are down, we are working on a fix.  
+Jan 13, 05:04 PM GMT+3
+
+**Resolved** This incident has been resolved.  
 Dec 12, 04:37 PM GMT+3
 
 **Investigating** -   Rainbow 6 game events are down due to a new patch, we are working on a fix.  
