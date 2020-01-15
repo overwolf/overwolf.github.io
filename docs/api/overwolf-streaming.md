@@ -218,11 +218,11 @@ overwolf.streaming.start(
         "audio": {
           "mic": {
             "volume": 100,
-            "enabled": true
+            "enable": true
           },
           "game": {
             "volume": 75,
-            "enabled": true
+            "enable": true
           }
         },
         "video": {
