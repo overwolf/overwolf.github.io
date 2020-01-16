@@ -4,6 +4,8 @@ title: Games IDs
 sidebar_label: Games IDs
 ---
 
+## What is the Game ID
+
 Each [supported game](#overwolf-supported-game-definition) has its own unique Game ID.
 
 Game IDs are used in your app’s manifest.json in multiple ways:  
