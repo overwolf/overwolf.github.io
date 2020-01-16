@@ -25,6 +25,7 @@ Follow this entry for ongoing updates and changes to the project or tools:
   * [overwolf.io.listenOnFile()](overwolf-io#listenonfileid-path-option-callback)
   * [overwolf.io.stopFilelistener()](overwolf-io#stopfilelistenerid)
 * [League of Legends Launcher Events](overwolf-games-launchers-events-lol#docsNav)
+  * New [status page](../status/lol-launcher) for LOL launcher.
   * New update:
     * is_garena_user
 
