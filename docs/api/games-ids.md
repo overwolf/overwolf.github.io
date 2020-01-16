@@ -38,12 +38,13 @@ The list is always updated, and you can find it in your local Overwolf app data 
 2. Open the Game List XML file (named with a number postfix, for example, gamelistXXX.xml, higher number means newer version), and search your game by name.
 
 3. Under each game, you can find it’s game ID.  
-   If you didn’t find the game you need, contact us through [Slack](../support/contact-us#join-our-slack) or by emailing developers@overwolf.com.
+   If you didn’t find the game you need, [contact us](../support/contact-us).
 
 ## Game-ID and Instance-ID
 
 Because a single game can have multiple executables: Steam, GOG, 32 / 64-bit clients, etc.  
-We differentiate between them by adding one digit for each game id, which is called an "Instance ID." 
+We differentiate between them by adding one digit for each game id, which is called an "Instance ID."  
+Basically, you have the ID, and then a series of instances (212160, 212161, …) 
 
 So basically, when your browser the [gamelist.xml](the-gamelistxml-file) file, you will get the game ID's that includes the instance id.
 Also, when you call [overwolf.games.onGameInfoUpdated](#overwolf-games#ongameinfoupdated), you will also get the full game id that includes the instance id.)
@@ -55,6 +56,8 @@ For example for Fortnite: in order to get 21216 instead of 212161, you can do:
 ```js
 Math.floor(gameInfoResult.gameInfo.id/10)
 ```
+
+You can see how we are using it in the [Fortnite events sample](https://github.com/overwolf/events-sample-apps/blob/master/fortnite-sample-app/main.js#L81) app.
 
 ## Top 30 Game IDs
 
