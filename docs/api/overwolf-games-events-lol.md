@@ -135,7 +135,7 @@ Data Example:
 
 Event      | Event Data  | Fired When          | Notes              | Since GEP Ver. |
 -----------| ------------| ------------------------------- | ------------------ | --------------|
-respawn    | null        | The player’s champion respawned |  Match has started |   140.0       | 
+respawn    | null        | The player’s champion respawned |                    |   140.0       | 
 
 ## `abilities`
 
