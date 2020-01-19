@@ -316,7 +316,7 @@ A list of additional settings for the app.
 | <a class="anchor" aria-hidden="true" id="extra-objects"></a>extra-objects     | [extra-objects](#extra-objects-object) Object  |  Allows access to custom plugin dlls.  | 0.81  |
 | <a class="anchor" aria-hidden="true" id="hotkeys"></a>hotkeys     | [hotkeys](#hotkeys-object) Object   |  Shortcut keys that trigger an app action.  | 0.78  |
 | <a class="anchor" aria-hidden="true" id="content_scripts"></a>content_scripts | [content_scripts[]](#content_scripts-array) |  A list of content scripts to be loaded for specific windows. |0.78  |
-| <a class="anchor" aria-hidden="true" id="launch_events"></a>launch_events | [launch_event_settings[]](#launch-event-settings-array) |  A list of events causing the app to launch. |0.82  |
+| <a class="anchor" aria-hidden="true" id="launch_events"></a>launch_events | [launch_event_settings[]](#launch_event_settings-array) |  A list of events causing the app to launch. |0.82  |
 | <a class="anchor" aria-hidden="true" id="user_agent"></a>user_agent | string |  A custom user agent for the app to use when creating http requests. </br> **Please read our [notes](#user_agent-note)** |0.86  |
 | <a class="anchor" aria-hidden="true" id="disable_dt"></a>disable_dt | bool |  Disable opening of the developer tools for the app (with Ctrl+shift+I). </br>*Default value – “false”* |0.118  |
 | <a class="anchor" aria-hidden="true" id="service_providers"></a>service_providers | [service_providers](#service_providers-object) object |  Extra data to external service providers |0.137  |
