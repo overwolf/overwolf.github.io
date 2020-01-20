@@ -745,7 +745,7 @@ hero              | me          |                           |                   
 Event data example:
 
 ```json
-{"team": "radiant", "steam_id": "7654654654", "hero": "keeper_of_the_light"}
+{"feature":"me","category":"me","key":"team","value":"radiant","steam_id":"7654654654","hero":"keeper_of_the_light"}
 ```
 
 ## `game`
@@ -754,12 +754,13 @@ Event data example:
 
 key               | Category    | Values                    | Notes                 | Since GEP Ver. |
 ----------------- | ------------| ------------------------- | --------------------- | -------------- |
-game_state        | game        |                           |                       |  139.0         |
-match_state       | game        |                           |                       |  139.0         |
+game_state        | game        |   Playing                 |                       |  139.0         |
+match_state       | game        |   Current game-state      |                       |  139.0         |
 
 
 Event data example:
 
 ```json
-{"game_state": "playing", "match_state": "DOTA_GAMERULES_STATE__GAME_IN_PROGRESS"}
+{"feature":"game","category":"game","key":"game_state","value":"playing"}
+{"feature":"game","category":"game","key":"match_state","value":"DOTA_GAMERULES_STATE__GAME_IN_PROGRESS"}
 ```
