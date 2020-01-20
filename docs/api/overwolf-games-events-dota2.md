@@ -741,6 +741,13 @@ team              | me          |                           |                   
 steam_id          | me          |                           |                       |  139.0         |
 hero              | me          |                           |                       |  139.0         |
 
+
+Event data example:
+
+```json
+{"team": "radiant", "steam_id": "7654654654", "hero": "keeper_of_the_light"}
+```
+
 ## `game`
 
 ### Info Updates
@@ -749,3 +756,10 @@ key               | Category    | Values                    | Notes             
 ----------------- | ------------| ------------------------- | --------------------- | -------------- |
 game_state        | game        |                           |                       |  139.0         |
 match_state       | game        |                           |                       |  139.0         |
+
+
+Event data example:
+
+```json
+{"game_state": "playing", "match_state": "DOTA_GAMERULES_STATE__GAME_IN_PROGRESS"}
+```
