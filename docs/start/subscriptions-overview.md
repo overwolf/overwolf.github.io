@@ -1,10 +1,8 @@
 ---
-id: app-subscriptions
-title: App Subscriptions
-sidebar_label: App Subscriptions
+id: subscriptions-overview
+title: Subscriptions Overview
+sidebar_label: Subscriptions Overview
 ---
-
-## Overview
 
 Even though our ads are forgivable and show up in the best possible times to not bother gamers as they play, some users still demand to remove ads entirely. Following that feedback, we’ve set up a new tool in your monetization arsenal - app subscription. 
 

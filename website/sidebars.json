@@ -11,7 +11,7 @@
 			"Monetize with Ads":
 			["start/monetization-overview", "start/ads-sdk-overview", "start/ads-sdk-options", "start/ads-sdk-interaction", "start/ads-sdk-versions"],
 			"Monetize with Subs":
-			["start/app-subscriptions","start/subscriptions"],
+			["start/subscriptions-overview","start/subscriptions-integration"],
 			"Maintain Your App":
 			["start/submit-an-app-update", "start/update-your-app-status"]
 	},
