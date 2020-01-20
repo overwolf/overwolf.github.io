@@ -50,6 +50,9 @@ Please read the [overwolf.games.events](overwolf-games-events) documentation pag
 * [party](#party)
 * [error](#error)
 * [hero_pool](#hero_pool)
+* [me](#me)
+* [game](#game)
+
 
 ## Game events status
 
@@ -727,3 +730,22 @@ Data Example:
 ```json
 {"category":"game_info","key":"hero_pool","value":"[2,4,5,7,8,16,18,20,21,22,23,27,31,32,34,35,37,38,44,47,48,49,52,53,59,64,65,67,70,71,72,74,75,81,84,85,91,92,95,98,99,100,104,105,106,109,110,113,120,121]}
 ```
+
+## `me`
+
+### Info Updates
+
+key               | Category    | Values                    | Notes                 | Since GEP Ver. |
+----------------- | ------------| ------------------------- | --------------------- | -------------- |
+team              | me          |                           |                       |  139.0         |
+steam_id          | me          |                           |                       |  139.0         |
+hero              | me          |                           |                       |  139.0         |
+
+## `game`
+
+### Info Updates
+
+key               | Category    | Values                    | Notes                 | Since GEP Ver. |
+----------------- | ------------| ------------------------- | --------------------- | -------------- |
+game_state        | game        |                           |                       |  139.0         |
+match_state       | game        |                           |                       |  139.0         |
