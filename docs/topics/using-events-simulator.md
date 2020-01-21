@@ -8,7 +8,7 @@ sidebar_label: Game Events Simulator
 
 This utility service can simulate events and updates for all Overwolf game events in any event-enabled game including: Fortnite, LOL, CS:GO, and the rest of the [list](../status/all). When the app identifies that one of the supported game is running, it automatically pulls the full list of features and events for that game from the Overwolf servers. 
 
-You can then simulate "fake" events and info updates of any sort you want to test and send it to your app using the Event Simulator.
+You can then simulate events and info updates of any sort you want to test and send it to your app using the Event Simulator.
 
 ::: important
 The Overwolf Event Simulator is supported in Overwolf version 0.135 or higher. To download the current version, please [contact us](../support/contact-us).
