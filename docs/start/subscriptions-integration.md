@@ -6,10 +6,16 @@ sidebar_label: Integrate Subscriptions
 
 This article will provide a step by step explanation for how to set up and manage your app's subscription features. If you need assistance or encounter issues, talk to us!
 
+## Preparing subscription assets
+
+Before implementing subscriptions into your app, prepare the core assets required for this implementation including store assets, potential landing page materials and anything else you’re going to need. 
+
+As mentioned [before](subscriptions-overview), any premium-only features need to be tested and polished before becoming available. Remember that paying customers and free users have different standards and expectations from you as the app’s creator.
+
 ## 1. Create a Demo Subscription Plan
 
 The first step to take is creating a new subscription plan and setting it in a "test" state.    
-Right now we have to do that for you (after you fill up [this form](../start/subscriptions-overview)), but in the future you'll be able to do it independently from our dev console.
+Right now we have to do that for you (after you fill up [this form](subscriptions-request-form)), but in the future you'll be able to do it independently from our dev console.
 
 :::note Notes
 * Only whitelisted developers with a live app on our store can create a subscription plan.  

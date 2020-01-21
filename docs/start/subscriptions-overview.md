@@ -12,23 +12,15 @@ Subscriptions don’t only provide you with a stable source of income, it brings
 
 ## Subscription Basics
 
-To sub to an app, all a user has to do is go to that app’s page in the Appstore and click the ‘Subscribe’ button, or if the developer chose to implement it use the in-app subscribe button. That’ll send them to a quick checkout flow on Paypal and return them once a subscription is successfully completed. 
+A complete user flow can be found [here](subscriptions-flow).  
 
-Subbed apps appear in a new settings page where users can easily monitor or cancel their subscriptions as wanted. Cancellation takes place at the end of the current subscription period. 
+A detailed instruction on how to implement subscriptions in your app can be found [here](subscriptions-integration).
 
 Any application can launch a subscription program based on removing ads, but we strongly recommend developing new perks and benefits for Premium users to ensure paying customers to feel like they got good value for their investment.
 
-
 ## Who can sub?
 
-Any of your users with a Paypal account can subscribe to an app. We’re planning to open up more payment channels down the road but for this first round of subscriptions, it’s Paypal only. 
-
-
-## Preparing subscription assets
-
-Before implementing subscriptions into your app, prepare the core assets required for this implementation including store assets, potential landing page materials and anything else you’re going to need. 
-
-As mentioned above, any premium-only features need to be tested and polished before becoming available. Remember that paying customers and free users have different standards and expectations from you as the app’s creator.
+Any of your users with a Paypal account or international credit card can subscribe to an app.
 
 ## The overwolf.profile.subscription API
 
@@ -40,5 +32,4 @@ Our developer success team is ready to help in implementing your first subscript
 
 ## Request an app plan
 
-Please fill out the following form in order to get an app subscription plan:
-<iframe src="https://forms.monday.com/forms/embed/979e6511a563e67128e528de85296849" width="650" height="1250" style="border: 0; box-shadow: 5px 5px 56px 0px rgba(0,0,0,0.25);"></iframe>
+Please fill [this form](subscriptions-request-form) order to get an app subscription plan.
