@@ -18,6 +18,6 @@ sidebar_label: Hearthstone
 
 <div id="gameEventsStatus">
   <!-- GameID - this page's game ID, very important -->
-  <script> const GameID = 9898; const DocsLink = "../api/overwolf-games-events-heartstone";</script>
+  <script> const GameID = 9898; const DocsLink = "../api/overwolf-games-events-hearthstone";</script>
   <script type="text/jsx" src="/jsx/specificGameEventsStatus.jsx"></script>
 </div>
