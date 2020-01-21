@@ -153,8 +153,19 @@ Data Example:
 { 
    "info":{ 
       "decks":{ 
-         "Adventure Deck":"{"deck_id":"Adventure Deck","cards":[{"id":"BOT_573","count":1,"premiumCount":0},{"id":"CS2_024","count":2,"premiumCount":0},{"id":"CS2_033","count":1,"premiumCount":0},{"id":"DALA_706","count":1,"premiumCount":0},{"id":"DALA_741","count":1,"premiumCount":0},{"id":"DALA_829","count":1,"premiumCount":0},{"id":"DAL_182","count":1,"premiumCount":0},{"id":"EX1_046","count":1,"premiumCount":0},{"id":"EX1_289","count":1,"premiumCount":0},{"id":"EX1_294","count":1,"premiumCount         ":0},{"id":"EX1_393","count":1,"premiumCount":0},{"id":"GIL_561","count":1,"premiumCount":0},{"id":"ICC_082","count":1,"premiumCount":0},{"id":"LOOT_347","count":1,"premiumCount":0},{"id":"TRL_313","count         ":1,"premiumCount":0},{"id":"UNG_809","count":1,"premiumCount":0},{"id":"UNG_845","count":1,"premiumCount":0},{"id":"UNG_941","count":1,"premiumCount":0}],"deck_key":"adventure_deck"}"
-      }
+         "Adventure Deck":"{
+                            "deck_id":"Adventure Deck",
+                            "cards":[
+                                      {"id":"BOT_573","count":1,"premiumCount":0},
+                                      {"id":"CS2_024","count":2,"premiumCount":0},
+                                      {"id":"CS2_033","count":1,"premiumCount":0},
+                                      ...
+                                      {"id":"UNG_845","count":1,"premiumCount":0},
+                                      {"id":"UNG_941","count":1,"premiumCount":0}
+                                    ],
+                             "deck_key":"adventure_deck"
+                           }"
+           }
    },
    "feature":"decks"
 }
@@ -168,11 +179,28 @@ Data Example:
 { 
    "info":{ 
       "decks":{ 
-"adventure_loot_options":"[{"deck_id":"option_a","cards":[{"id":"EX1_279","count":1,"premiumCount":0},{"id":"EX1_559","count":1,"premiumCount":0},{"id":"GVG_001","count":1,"premiumCount":0}]},
-{"deck_id":"option_b","cards":[{"id":"AT_090","count":1,"premiumCount":0},{"id":"AT_099","count":1,"premiumCount":0},{"id":"AT_119","count":1,"premiumCount":0}]},
-{"deck_id":"option_c","cards":[{"id":"CS2_028","count":1,"premiumCount":0},{"id":"EX1_295","count":1,"premiumCount":0},{"id":"GIL_801","count":1,"premiumCount":0}]}]"
-      }
-   },
+               "adventure_loot_options":"[
+                                          {"deck_id":"option_a","cards":[
+                                                                         {"id":"EX1_279","count":1,"premiumCount":0},
+                                                                         {"id":"EX1_559","count":1,"premiumCount":0},
+                                                                         {"id":"GVG_001","count":1,"premiumCount":0}
+                                                                         ]
+                                           },
+                                          {"deck_id":"option_b","cards":[
+                                                                          {"id":"AT_090","count":1,"premiumCount":0},
+                                                                          {"id":"AT_099","count":1,"premiumCount":0},
+                                                                          {"id":"AT_119","count":1,"premiumCount":0}
+                                                                         ]
+                                           },
+                                          {"deck_id":"option_c","cards":[
+                                                                         {"id":"CS2_028","count":1,"premiumCount":0},
+                                                                         {"id":"EX1_295","count":1,"premiumCount":0},
+                                                                         {"id":"GIL_801","count":1,"premiumCount":0}
+                                                                         ]
+                                            }
+                                          ]"
+              }
+     },
    "feature":"decks"
 }
 ```
