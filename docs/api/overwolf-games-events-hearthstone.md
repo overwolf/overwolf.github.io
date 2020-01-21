@@ -96,7 +96,7 @@ key               | Category    | Values                    | Notes             
 ----------------- | ------------| ------------------------- | --------------------- | ------------- |
 deck_id           | decks       |  The “decks” feature provides data about the currently “visible” decks. | See [notes](#deck_id-note)    |   119.1 |
 selected_deck     | selected_deck | The selected deck.  |  See [notes](#selected_deck-note)   |   119.1 |
-Adventure Deck     | decks | The currently played deck on adventure mode.  |  See [notes](#adventure_deck-note)   |   143.0 |
+Adventure Deck     | decks | The currently played deck on adventure mode.  |  See [notes](#Adventure Deck-note)   |   143.0 |
 adventure_loot_options | decks | The currently offered 3-option draft (between bosses)  |  See [notes](#adventure_loot_options-note)   |   143.0 |
 
 
