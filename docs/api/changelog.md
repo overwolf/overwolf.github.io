@@ -28,6 +28,11 @@ Follow this entry for ongoing updates and changes to the project or tools:
   * New [status page](../status/lol-launcher) for LOL launcher.
   * New update:
     * is_garena_user
+* [Hearthstone game events](overwolf-games-events-hearthstone#docsNav)
+  * New info updates:
+    * Adventure Deck
+    * adventure_loot_options
+    * battlegrounds_rating
 
 ## Version 0.140 (Dec. 2019)
 
@@ -139,7 +144,7 @@ This means no more if (!result || !result.status ...) checks. Instead, this shou
   * New update:
     * end_game
     
-* [Hearhstone game events](overwolf-games-events-heartstone#docsNav)
+* [Hearthstone game events](overwolf-games-events-hearthstone#docsNav)
   * New events:
     * match_type
     * match_start/end
