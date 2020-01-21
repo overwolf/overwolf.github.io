@@ -4,19 +4,19 @@ title: Subscriptions Overview
 sidebar_label: Subscriptions Overview
 ---
 
-Even though our ads are forgivable and show up in the best possible times to not bother gamers as they play, some users still demand to remove ads entirely. Following that feedback, we’ve set up a new tool in your monetization arsenal - app subscription. 
+Overwolf ads are crafted for gamers, showing in the most appropriate times when there are breaks in the action, and never bothering gamers while playing. Even so, some users still prefer to remove ads entirely regardless of timing and location. To address these requests and to generate more revenue for app creators, we’ve set up a new tool in your monetization arsenal - app subscription. 
 
-Users are now able to pay a monthly cost to become premium users of your app and get special perks and services in return. We encourage you to think up cool ways to reward premium users and improve their experience beyond just removing all ads from the subscribed app. 
+Gamers are now able to pay a monthly fee to become premium users of your app, getting special perks and services in return. We encourage you to think of cool ways to reward premium users and improve their experience beyond just removing all ads from the subscribed app. 
 
-Subscriptions don’t only provide you with a stable source of income, it brings your users closer to you and increases their involvement in your project - they are backing your continued development, remember to show them some love!
+Subscriptions provide you with a stable source of income, but even more importantly bring your users closer and increases their engagement with your project - they are supporting you to keep working on an app they enjoy remember to show them some love!
 
 ## Subscription Basics
 
 A complete user flow can be found [here](subscriptions-flow).  
 
-A detailed instruction on how to implement subscriptions in your app can be found [here](subscriptions-integration).
+Detailed instructions on how to implement subscriptions in your app can be found [here](subscriptions-integration).
 
-Any application can launch a subscription program based on removing ads, but we strongly recommend developing new perks and benefits for Premium users to ensure paying customers to feel like they got good value for their investment.
+Any application can launch a subscription program based on removing ads, but we strongly recommend producing new perks and benefits for Premium users to ensure they feel like they got good returns for their investment.
 
 ## Who can sub?
 
@@ -24,12 +24,12 @@ Any of your users with a Paypal account or international credit card can subscri
 
 ## The overwolf.profile.subscription API
 
-Read the full API docs for the subscriptions API [here](../api/overwolf-profile.subscriptions).
+Read full API documentation for the subscriptions API [here](../api/overwolf-profile.subscriptions).
 
 ## We're here to help
 
-Our developer success team is ready to help in implementing your first subscription program! If you’re not certain about features you want to add, how to implement them or anything else around subscriptions and premium users - don’t hesitate to [reach out via Slack, email or Discord](../support/contact-us).
+Our developer success team is ready to help implement your first subscription program! If you’re not certain about the features you want to add or how to implement them, don’t hesitate to [reach out via Slack, email or Discord](../support/contact-us).
 
-## Request an app plan
+## Request a Subscription plan
 
-Please fill [this form](subscriptions-request-form) order to get an app subscription plan.
+Please fill [this form](subscriptions-request-form) in order to get an app subscription plan.
