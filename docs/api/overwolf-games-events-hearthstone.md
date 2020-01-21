@@ -96,6 +96,9 @@ key               | Category    | Values                    | Notes             
 ----------------- | ------------| ------------------------- | --------------------- | ------------- |
 deck_id           | decks       |  The “decks” feature provides data about the currently “visible” decks. | See [notes](#deck_id-note)    |   119.1 |
 selected_deck     | selected_deck | The selected deck.  |  See [notes](#selected_deck-note)   |   119.1 |
+Adventure Deck     | decks | The currently played deck on adventure mode.  |  See [notes](#adventure_deck-note)   |   143.0 |
+adventure_loot_options | decks | The currently offered 3-option draft (between bosses)  |  See [notes](#adventure_loot_options-note)   |   143.0 |
+
 
 #### *deck_id* note
 
@@ -141,6 +144,38 @@ Example for a “selected deck” structure:
 
 `{"feature":"decks","category":"selected_deck","key":"selected_deck","value":
 "{"deck_id":"706741699","deck_name":"Basic Shaman","class_skin":"Thrall" }`
+
+#### *adventure deck* note
+
+Data Example:
+
+```json
+{ 
+   "info":{ 
+      "decks":{ 
+         "Adventure Deck":"{"deck_id":"Adventure Deck","cards":[{"id":"BOT_573","count":1,"premiumCount":0},{"id":"CS2_024","count":2,"premiumCount":0},{"id":"CS2_033","count":1,"premiumCount":0},{"id":"DALA_706","count":1,"premiumCount":0},{"id":"DALA_741","count":1,"premiumCount":0},{"id":"DALA_829","count":1,"premiumCount":0},{"id":"DAL_182","count":1,"premiumCount":0},{"id":"EX1_046","count":1,"premiumCount":0},{"id":"EX1_289","count":1,"premiumCount":0},{"id":"EX1_294","count":1,"premiumCount         ":0},{"id":"EX1_393","count":1,"premiumCount":0},{"id":"GIL_561","count":1,"premiumCount":0},{"id":"ICC_082","count":1,"premiumCount":0},{"id":"LOOT_347","count":1,"premiumCount":0},{"id":"TRL_313","count         ":1,"premiumCount":0},{"id":"UNG_809","count":1,"premiumCount":0},{"id":"UNG_845","count":1,"premiumCount":0},{"id":"UNG_941","count":1,"premiumCount":0}],"deck_key":"adventure_deck"}"
+      }
+   },
+   "feature":"decks"
+}
+```
+
+#### *adventure_loot_options* note
+
+Data Example:
+
+```json
+{ 
+   "info":{ 
+      "decks":{ 
+"adventure_loot_options":"[{"deck_id":"option_a","cards":[{"id":"EX1_279","count":1,"premiumCount":0},{"id":"EX1_559","count":1,"premiumCount":0},{"id":"GVG_001","count":1,"premiumCount":0}]},
+{"deck_id":"option_b","cards":[{"id":"AT_090","count":1,"premiumCount":0},{"id":"AT_099","count":1,"premiumCount":0},{"id":"AT_119","count":1,"premiumCount":0}]},
+{"deck_id":"option_c","cards":[{"id":"CS2_028","count":1,"premiumCount":0},{"id":"EX1_295","count":1,"premiumCount":0},{"id":"GIL_801","count":1,"premiumCount":0}]}]"
+      }
+   },
+   "feature":"decks"
+}
+```
 
 ## `match`
 
@@ -192,6 +227,7 @@ key               | Category    | Values                    | Notes             
 ----------------- | ------------| ------------------------- | --------------------- | ------------- |
 match_type        | match_info  | The type of the current match. |See [notes](#match_type-note)|   134.0 |
 pseudo_match_id   | match_info  | The ID of the current match. |See [notes](#pseudo_match_id-note)|   134.0 |
+battlegrounds_rating   | match_info  | The local player's BG rating. |See [notes](#battlegrounds_rating-note)|   143.0 |
 
 #### *match_type* note
 
@@ -214,6 +250,14 @@ This is an Overwolf generated code for internal use, not issued by the game or b
 Data Example:
 
 `{"info":{"match_info":{"pseudo_match_id":"5a7e3729-993c-414d-8e3f-592faeef81e7"}},"feature":"match_info"}`
+
+#### *battlegrounds_rating* note
+
+Data Example:
+
+```json
+{"info":{"match_info":{"battlegrounds_rating":"2153"}},"feature":"match_info"}
+```
 
 ### Events
 
