@@ -38,7 +38,7 @@ A Knowledge base is what we call your public library and documentation. If users
 
 * Header – A short, engaging description of your app. Font size should be Heading 3.
 
-* Headlines – Organize your article using headlines breaking each page into different topics. Use font size Heading 4 and format text as bold.
+* Headlines - Organize your article using headlines breaking each page into different topics. Use font size 18 and format text as bold.
 
 * All texts should be written in normal font size and not be formatted either bold or italic, unless there is a need to emphasize a specific point.
 
