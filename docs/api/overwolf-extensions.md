@@ -41,6 +41,11 @@ You can use the following helpful URLs to retrieve an extension file content or 
 * [overwolf.extensions.onExtensionUpdated](#onextensionupdated)
 * [overwolf.extensions.onUncaughtException](#onuncaughtexception)
 
+## Types Reference
+
+* [overwolf.extensions.CheckForUpdateResult](#checkforupdateresult-object) Object
+* [overwolf.extensions.ExtensionUpdateState](#extensionupdatestate-enum) Enum
+
 
 ## launch(uid , parameter)
 #### Version added: 0.78
@@ -300,25 +305,8 @@ Calling this function will not automatically update the extension, just checks i
 
 Parameter | Type                  | Description                                                                           |
 --------- | ----------------------| ------------------------------------------------------------------------------------- |
-callback  | function              | Result of the request                                                                 |
+callback  | ([Result: CheckForUpdateResult](#checkforupdateresult-object)) => void              | Result of the request                              |
 
-#### Data example
-
-Possible values for the stats are "UpdateAvailable" or "UpToDate". 
-
-Examples:
-
-```json
-{state: "UpdateAvailable", updateVersion: "125.0.1", success: true, error: null}
-```
-
-```json
-{state: "UpToDate", updateVersion: null, success: true, error: null}
-```
-
-```json
-{state: "PendingRestart", updateVersion: "125.0.1", success: true, error: null}
-```
 
 ## getServiceConsumers(callback)
 #### Version added: 0.135
@@ -411,3 +399,46 @@ if you want to get origin information without registering events, you can run th
 "SourceLine": "if(0!=dcLoadAds){var data_version={}"
 }
 ```
+
+## CheckForUpdateResult Object
+
+Parameter          | Type                            | Description                                       |
+-------------------| --------------------------------| ------------------------------------------------- |
+*success*          | boolean                         | inherited from the "Result" Object                |
+*error*            | string                          | inherited from the "Result" Object                |
+status             | string                          | deprecated. For backward compatibility only       |
+Reason             | string                          | deprecated. For backward compatibility only       |   
+state              | [ExtensionUpdateState](#extensionupdatestate-enum) enum  | extension update state                            |   
+updateVersion      | string                          | The latest extension version on the OW apps store. null if the extension is up to date |   
+
+#### Example data: Success
+
+Possible states are "UpdateAvailable", "UpToDate" or "PendingRestart".  
+For more info please read about the [ExtensionUpdateState](#extensionupdatestate-enum) enum.
+
+```json
+{"state": "UpdateAvailable", "updateVersion": "125.0.1", "success": true, "error": null}
+
+{"state": "UpToDate", "updateVersion": null, "success": true, "error": null}
+
+{"state": "PendingRestart", "updateVersion": "125.0.1", "success": true, "error": null}
+```
+
+## ExtensionUpdateState enum
+
+Option          | Description                                                 | Notes                                                |
+----------------| ----------------------------------------------------------- | ---------------------------------------------------- |
+UpToDate        | The extension is up to date. No action items are required   |                                                      |
+UpdateAvailable | There is an updated extension version on the OW apps store  |  See [notes](#updateavailable-notes)                                      |
+PendingRestart  | The extension just updated, and it's waiting for a relaunch |  See [notes](#pendingrestart-notes)                                      |
+
+#### `UpdateAvailable` notes
+
+* If the game is running, a game restart followed by an OW client restart are required.
+* The OW client relaunch will initiate a complete components update. (client, GEP and extensions updates).
+
+#### `PendingRestart` notes
+
+* If the game is running, a game restart or OW client restart is NOT required.
+* Only an extension restart is required. A button that allows the user to relaunch the extension is necessary.
+* The relaunch button should call [overwolf.extensions.relaunch()](#relaunch).
