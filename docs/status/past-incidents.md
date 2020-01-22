@@ -100,6 +100,9 @@ No logs.
 League of Legends
 -----------------
 
+**Resolved** - This incident has been resolved.  
+Jan 22, 05:10 PM GMT+3
+
 **Investigating** - Game events are down for RIOT maintenance. 
 Jan 22, 03:01 PM GMT+3
 
@@ -111,6 +114,9 @@ No logs.
 
 PUBG
 ----
+
+**Resolved** - This incident has been resolved.  
+Jan 22, 05:10 PM GMT+3
 
 **Investigating** - PUBG events are down.
 Jan 22, 10:16 AM GMT+3
