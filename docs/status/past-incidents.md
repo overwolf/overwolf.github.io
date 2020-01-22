@@ -99,6 +99,10 @@ No logs.
 
 League of Legends
 -----------------
+
+**Investigating** - Game events are down for RIOT maintenance. 
+Jan 22, 03:01 PM GMT+3
+
 No logs.
 
 MTG Arena
@@ -107,6 +111,9 @@ No logs.
 
 PUBG
 ----
+
+**Investigating** - PUBG events are down.
+Jan 22, 10:16 AM GMT+3
 
 **Resolved** - This incident has been resolved.  
 Dec 19, 09:29 PM GMT+3
