@@ -501,12 +501,12 @@ There are two types of hotkeys:
 
 The map between the hotkey feature name and it’s settings:
 
-| Name  | Type   |  Description                                          | Since |
-|-------|--------|-------------------------------------------------------| ----- |
-| title  | string |  Mandatory. Name of the hotkey as it will appear in the Hotkey tab in the settings. </br>*Note: the name must be unique in the client machine, so it's better to concatenate your app name to its tail*   | 0.78  |
-| action-type | enum |  Defines the behavior of the hotkey: </br>**["toggle", "custom"]** | 0.78  |
-| default | string |  The default key combination. | 0.78  |
-| passthrough | bool |  Defines the behavior of the hotkey. | 0.78  |
+| Name        | Type   |  Description                                                                         | Since |
+|-------------|--------|--------------------------------------------------------------------------------------| ----- |
+| title       | string |  Mandatory. Name of the hotkey as it will appear in the Hotkey tab in the settings.  | 0.78  |
+| action-type | enum   |  Defines the behavior of the hotkey: </br>**["toggle", "custom"]**                   | 0.78  |
+| default     | string |  The default key combination.                                                        | 0.78  |
+| passthrough | bool   |  Defines the behavior of the hotkey.                                                 | 0.78  |
 
 
 Example code:
