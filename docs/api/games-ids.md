@@ -63,7 +63,7 @@ You can see how we use it in the [Fortnite events sample](https://github.com/ove
 
 ## Top 30 Game IDs
 
-<details>
+<details open>
 <summary>Listed here are the top 30 game ID's (this list might outdated)</summary>
 
 | #   | Game Title                                               | Game ID       |
