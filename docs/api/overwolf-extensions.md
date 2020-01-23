@@ -444,7 +444,6 @@ This is the recommended flow for a manual update of Overwolf extensions.
 Note that regardless, the auto-update mechanism will automatically fetch available updates from Overwolf servers every few hours, 
 or once the Overwolf client is restarted. (that includes upgrades for all the available components: extensions, GEP, Client).
 
-
 TL;DR The flow is `UpdateAvailable => updateExtension() => relaunch() => relaunch game`.
 
 1. Once you get an `UpdateAvailable` state, You should offer the user an "Update" button.  
