@@ -20,7 +20,7 @@ The most simple and basic usage of this library can be done by adding a few line
 
 ```html
 <div id="ad-div"></div>
-<script src="http://content.overwolf.com/libs/ads/latest/owads.min.js" async onload="onOwAdReady()"></script>
+<script src="https://content.overwolf.com/libs/ads/latest/owads.min.js" async onload="onOwAdReady()"></script>
 <script>function onOwAdReady(){new OwAd(document.getElementById("ad-div"))}</script>
 ```
 
