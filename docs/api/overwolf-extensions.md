@@ -234,7 +234,9 @@ Parameter | Type                  | Description                                 
 --------- | ----------------------| ------------------------------------------------------------------------------------- |
 callback  | function              | Result of the request                                                                 |
 
-Note: This API has a failsafe while games are active making sure automatic updates won't happen during play. Only if the user actively chose to update will the extension update while a game is active. 
+#### `failsafe` note
+The update has a failsafe mechanism while the game is active, making sure automatic updates won't happen during play only if a user action is detected, like pressing a button, for example.
+
 
 #### Callback argument: Success
 
@@ -293,7 +295,7 @@ Parameter | Type                  | Description                                 
 --------- | ----------------------| ------------------------------------------------------------------------------------- |
 callback  | function              | Result of the request                                                             |
 
-Note: there is a failsafe mechanism where this API will only work if a user action that active it is detected. This means no app should ever update while it’s being used in-game unless the user explicitly wanted it.
+**See [failsafe note](#failsafe-note).**
 
 ## checkForExtensionUpdate(callback)
 #### Version added: 0.135
@@ -303,9 +305,12 @@ Note: there is a failsafe mechanism where this API will only work if a user acti
 This function allows the current app to check if there is an extension update, without having to wait for Overwolf to do so.
 Calling this function will not automatically update the extension, just checks if an update exists.
 
+**Please read our [Recommended extention update flow](#recommended-extention-update-flow).**
+
+
 Parameter | Type                  | Description                                                                           |
 --------- | ----------------------| ------------------------------------------------------------------------------------- |
-callback  | ([Result: CheckForUpdateResult](#checkforupdateresult-object)) => void              | Result of the request                              |
+callback  | ([Result: CheckForUpdateResult](#checkforupdateresult-object)) => void              | Result of the request    |
 
 
 ## getServiceConsumers(callback)
@@ -414,7 +419,7 @@ updateVersion      | string                          | The latest extension vers
 #### Example data: Success
 
 Possible states are "UpdateAvailable", "UpToDate" or "PendingRestart".  
-For more info please read about the [ExtensionUpdateState](#extensionupdatestate-enum) enum.
+For more info please read our [Recommended extention update flow](#recommended-extention-update-flow).
 
 ```json
 {"state": "UpdateAvailable", "updateVersion": "125.0.1", "success": true, "error": null}
@@ -429,16 +434,28 @@ For more info please read about the [ExtensionUpdateState](#extensionupdatestate
 Option          | Description                                                 | Notes                                                |
 ----------------| ----------------------------------------------------------- | ---------------------------------------------------- |
 UpToDate        | The extension is up to date. No action items are required   |                                                      |
-UpdateAvailable | There is an updated extension version on the OW apps store  |  See [notes](#updateavailable-notes)                                      |
-PendingRestart  | The extension just updated, and it's waiting for a relaunch |  See [notes](#pendingrestart-notes)                                      |
+UpdateAvailable | There is an updated extension version on the OW apps store  |                                                      |
+PendingRestart  | The extension just updated, and it's waiting for a relaunch |                                                      |
 
-#### `UpdateAvailable` notes
+## Recommended extension update flow
 
-* If the game is running, a game restart followed by an OW client restart are required.
-* The OW client relaunch will initiate a complete components update. (client, GEP and extensions updates).
+This is the recommended flow for a manual update of Overwolf extensions.  
 
-#### `PendingRestart` notes
+Note that regardless, the auto-update mechanism will automatically fetch available updates from Overwolf servers every few hours, 
+or once the Overwolf client is restarted. (that includes upgrades for all the available components: extensions, GEP, Client).
 
-* If the game is running, a game restart or OW client restart is NOT required.
-* Only an extension restart is required. A button that allows the user to relaunch the extension is necessary.
-* The relaunch button should call [overwolf.extensions.relaunch()](#relaunch).
+
+TL;DR The flow is `UpdateAvailable => updateExtension() => relaunch() => relaunch game`.
+
+1. Once you get an `UpdateAvailable` state, You should offer the user an "Update" button.  
+   The button should call [updateExtension()](#updateextensioncallback).  
+   See also the [failsafe note](#failsafe-note).
+
+2. Once the update succesfully completed, you can call again [checkForExtensionUpdate()](#checkforextensionupdatecallback),  
+  To make sure that the state changed to `PendingRestart`.
+
+3. At this point, an extension restart is required.  You can offer the user a "Relaunch" button.  
+   The button should call [relaunch()](#relaunch).  
+
+4. It's highly recomended to notify the user and ask for a game restart as well,  
+   to avoid any app related flow issues.
