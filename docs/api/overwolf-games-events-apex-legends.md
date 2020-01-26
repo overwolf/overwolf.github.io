@@ -45,7 +45,7 @@ key          | Category    | Values                    | Notes                 |
 ------------ | ------------| ------------------------- | --------------------- | ------------- | 
 gep_internal | gep_internal| Local + Public version number|See [notes](#gep_internal-note)|   143.0       |
 
-#### `gep_internal` note
+#### *gep_internal* note
 
 Data Example:
 
@@ -100,7 +100,7 @@ teammate_X   | match_info  | This feature provides the list of your squad member
 legendSelect_X| match_info | The name of the legend & order of selection for every member in the team, including noting who the jump-master is. |         |  128.0       |
 team_info| match_info | The current status of the local player’s team. |         |  128.0       |
 
-#### `teammate_X` notes
+#### *teammate_X* notes
 
 Each squad member joining the game will be reported in the following way: 
 
@@ -113,7 +113,7 @@ As  youcan see, this object includes:
 * `player` – Player name
 * `state` – alive/death/knocked out
 
-#### `legendSelect_X` notes
+#### *legendSelect_X* notes
 
 Every team member, including the jump-master will be reported in the following way:
 
@@ -121,7 +121,7 @@ Every team member, including the jump-master will be reported in the following w
 {"playerName":"fReeeeezeeeee","legendName":"#character_pathfinder_NAME","selectionOrder":"1","lead":false}
 ```
 
-#### `team_info` notes
+#### *team_info* notes
 
 The current status of the local player’s team ("active" or "eliminated").
 
@@ -143,7 +143,7 @@ key          | Category  | Values                                               
 ------------ | ----------| -------------------------------------------------------------- | ----------- | ------------- | 
 roster_XX  | match_info  | Provides the entire list of players in a match (~60 players).|             |  128.0       |
 
-#### `roster_XX` notes
+#### *roster_XX* notes
 
 Each player joining the game will be reported in the following way:
 
@@ -164,7 +164,7 @@ key       | Category   | Values             | Notes       | Since GEP Ver. |
 ----------| -----------| ------------------ | ----------- | ------------- | 
 location  | match_info | See example below  |             |  130.0        |
 
-#### `location` notes
+#### *location* notes
 
 * Map Center is (0,0,z)
 * King's Canyon appears to be 1x1km
@@ -193,7 +193,7 @@ key         | Category    | Values  | Notes     | Since GEP Ver. |
 ----------- | ------------| --------| --------- | ------------- | 
 match_summary| match_info |         |           |   130.0      |
 
-#### `match_summary` notes
+#### *match_summary* notes
 
 After a match, this will return:
 * The final position the squad has reached (ranked 1-20)
@@ -214,7 +214,7 @@ key              | Category   | Values                                          
 ---------------- | -----------| -------------------------------------------------------------------------- | ------- | ------------- | 
 totalDamageDealt | me         | The total amount of damage inflicted in a match of Apex. See example below.|         |  130.0        |
 
-#### `totalDamageDealt` notes
+#### *totalDamageDealt* notes
 
 Note that the game does not count damage that is inflicted on Armor, only Health damage after the armor was broken. However, our damage report includes damage done to armor, so it will always be higher than the in-game damage.
 
@@ -230,7 +230,7 @@ Event  | Event Data        | Fired When (announcement)                          
 -------| ------------------| -------------------------------------------------------------------| ---------- | --------------|
 damage | See example below | When the local player deals damage to another player. |            |    130.0      |
 
-#### `damage` notes
+#### *damage* notes
 
 The following properties are provided:
 
@@ -292,7 +292,7 @@ Event     | Event Data        | Fired When                                      
 ----------| ------------------| ------------------------------------------------------------------ | ------------------ | --------------|
 kill_feed | See example below | When information is presented on the game’s UI (top right corner). |                    |     130.0     | 
 
-#### `kill_feed` notes
+#### *kill_feed* notes
 
 The following properties are provided:
 

@@ -33,7 +33,7 @@ key          | Category    | Values                    | Notes                 |
 ------------ | ------------| ------------------------- | --------------------- | ------------- | 
 gep_internal | gep_internal| Local + Public version number|See [notes](#gep_internal-note)|   143.0       |
 
-#### `gep_internal` note
+#### *gep_internal* note
 
 Data Example:
 
