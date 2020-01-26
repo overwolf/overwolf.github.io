@@ -50,7 +50,7 @@ gep_internal | gep_internal| Local + Public version number|See [notes](#gep_inte
 Data Example:
 
 ```json
-{"feature":"gep_internal","category":"gep_internal","key":"version_info","value":"{\"local_version\":\"143.0.10\",\"public_version\":\"143.0.10\",\"is_updated\":true}"}
+{"feature":"gep_internal","category":"gep_internal","key":"version_info","value":"{"local_version":"143.0.10","public_version":"143.0.10","is_updated":true}"}
 ```
 
 ## me
