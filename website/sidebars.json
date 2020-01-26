@@ -16,7 +16,6 @@
 			["start/submit-an-app-update", "start/update-your-app-status"]
 	},
     "docs": {
-        
 		"Best Practices":
 			["topics/best-practices-overview", "topics/using-overwolf-windows", "topics/app-specific-experience", "topics/first-time-user-experience", "topics/user-flow-error-handling", "topics/launch-time-performance", "topics/communication-guidelines", "topics/user-flow-and-error-handling","topics/games-settings", "topics/hotkeys-best-practices", "topics/second-monitor", "topics/data-persistence", "topics/validate-your-manifest", "topics/overwolf-header-buttons", "topics/reduce-opk-size", "topics/using-tab", "topics/type-definition-file"],
 		"Request a Service":
