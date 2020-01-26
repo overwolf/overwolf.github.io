@@ -191,6 +191,12 @@ Teamfight Tactics
 -----------------
 
 **Resolved** - This incident has been resolved.  
+Jan 24, 12:50 PM GMT+3
+
+**Investigating** - Some of the TFT events are down, we are working on a fix.
+Jan 23, 11:25 AM GMT+3
+
+**Resolved** - This incident has been resolved.  
 Jan 08, 10:16 PM GMT+3
 
 **Investigating** -  TFT game events are down.
@@ -231,6 +237,9 @@ Oct 09, 10:24 AM GMT+3
 
 World of Tanks
 --------------
+
+**Resolved** - This incident has been resolved.  
+Dec 10, 10:57 PM GMT+3
 
 **Investigating** - WoT events are down.  
 Dec 10, 03:36 PM GMT+3
