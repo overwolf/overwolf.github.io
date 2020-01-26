@@ -40,6 +40,10 @@
 }
 
 .collapsible .arrow {
+  transform: rotate(180deg);
+}
+
+.collapsible .arrow.rotate {
   transform: none;
 }
 
