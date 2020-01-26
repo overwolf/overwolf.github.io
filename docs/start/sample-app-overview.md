@@ -6,15 +6,15 @@ sidebar_label: The Basics
 
 In this article, we'll use an example in order to learn how to build Overwolf apps that respond to real time game events and display content in an overlay while playing. If you are new to the concept of Overwolf apps, this is a great place to get started, and you can use it as a base for your own project.
 
-The sample app's functionality is pretty straight-forward: It auto-launch when the user launches Fortnite, just like any other Fortnite app, and reads all real time game events as you play. To demonstrate overlay features, the sample app prints all in-game event data collected into an overlay based component.
+The sample app's functionality is pretty straightforward: It auto-launches when the user launches Fortnite, just like any other Fortnite app, and reads all real time game events as you play. To demonstrate overlay features, the sample app prints all in-game event data collected into an overlay-based component.
 
 ## Sample App Functionality
 
-For demonstration purposes, the sample app is configured for [Fortnite](https://www.epicgames.com/fortnite/en-US/download), it loads when Fortnite starts and reads Fortnite in-game events. You can easily customize this sample to fit other games.
+For demonstration purposes, the sample app is configured for [Fortnite](https://www.epicgames.com/fortnite/en-US/download). It loads when Fortnite starts and reads Fortnite in-game events. You can easily customize this example to fit other games.
 
-Basic functions our sample app demonstrates:
+The basic functions our sample app demonstrates:
 
-* Automatically launches when the game is loaded.
+* Automatically launch when the game is loaded.
 
 * After registering to the overwolf.games.events API, the app can receive real time events from the game.
 
@@ -22,7 +22,7 @@ Basic functions our sample app demonstrates:
 
 * Define a custom hotkey to be used in-game.
 
-* Interactions between app windows.
+* Interact between app windows.
 
 * Background controller that manages data transfers.
 
@@ -37,24 +37,24 @@ Basic functions our sample app demonstrates:
 3. Click the *Load unpacked* button and choose the folder where you placed the sample app's repository.
 
 ::: important
-Each app has a unique id (UID) that is generated out of the "name" and "author" strings. Once an app is published on the Appstore, its UID can’t be changed.
-Same for the sample app, so make sure not to edit the author or app name in the manifest. It will prevent loading the app as unpacked app. 
+Each app has a unique id (UID) that is generated using the "name" and "author" strings. Once an app is published on the Appstore, its UID can’t be changed.
+The same goes for the sample app, so make sure not to edit the author or app name in the manifest. It will prevent loading the app as unpacked app. 
 :::
 
 ## Screenshots
 
-This is how the sample app's main window looks like: a desktop window that disaply some textual information.
+This is how the sample app's main window looks like: a desktop window disaplying some textual information.
 
 ![alt-text](assets/sample-app/desktop-window.png)
 
-But the real action will take place in the in-game window - Once you launch Fortniote, the desktop window will be replaced with this in-game window:
+The real action will take place in the in-game window - once you launch Fortniote, the desktop window will be replaced with this in-game window:
 
 ![alt-text](assets/sample-app/in-game-window.png)
 
-This is the injected in-game window overlayed on your game screen.  The window displays game events, data collected as well as a sample advertisement for monetization.
+This is the injected in-game window overlayed on your game screen.  The window displays game events, collected data, and a sample advertisement for monetization.
 
-When you hit the close button, the app warn you if you want to close it or just minimize it:
+When you hit the close button, the app warns you if you want to close it or just minimize it:
 
 ![alt-text](assets/sample-app/notification-window.png)
 
-The sample app contains other reusable code like settings button, FAQ button, hotkeys and other best practices that we implemented and you you can use in your apps.
+The sample app contains other reusable code like a settings button, FAQ button, hotkeys and other best practices that we implemented and you can use in your apps.
