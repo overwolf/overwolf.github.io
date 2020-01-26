@@ -16,11 +16,28 @@ Please read the [overwolf.games.events](overwolf-games-events) documentation pag
 
 ## Available Features
 
+* [gep_internal](#gep_internal)
 * [match_info](#match_info)
 
 ## Game events status
 
 It's highly recommended to communicate errors to your users. Check game event status [here](../status/all) or easily verify event status directly from your app [using our API](../topics/howto-check-events-status-from-app).
+
+## `gep_internal`
+
+### Info Updates
+
+key          | Category    | Values                    | Notes                 | Since GEP Ver. |
+------------ | ------------| ------------------------- | --------------------- | ------------- | 
+gep_internal | gep_internal| Local + Public version number|See [notes](#gep_internal-note)|   143.0       |
+
+#### `gep_internal` note
+
+Data Example:
+
+```json
+{"feature":"gep_internal","category":"gep_internal","key":"version_info","value":"{"local_version":"143.0.10","public_version":"143.0.10","is_updated":true}"}
+```
 
 ## `match_info`
 
