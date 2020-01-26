@@ -14,6 +14,8 @@ This [JSON](http://www.json.org/) formatted file is responsible for describing a
 The following code shows supported manifest fields for Overwolf apps, with links to the section that discusses each field.
 Note that not all flags are mandatory - we included all available flags for documentation purposes.
 
+*Use this manifest with Overwolf client version 0.141 and above*
+
 <pre><code class="json">
 {
     //Mandatory
@@ -43,6 +45,7 @@ Note that not all flags are mandatory - we included all available flags for docu
         "<a href="#game_targeting">game_targeting</a>": {"type": "dedicated","game_ids": [10906, 7764]},
         //The name of the window (from the “windows” list) initially loaded when the app starts
         "<a href="#start_window">start_window</a>": "windowName",
+        "<a href="#enable_top_isolation">enable_top_isolation</a>": true,
          //A map from window names to window settings
         "<a href="#window-data">windows</a>": {
             "windowName": {
@@ -80,7 +83,6 @@ Note that not all flags are mandatory - we included all available flags for docu
                 "<a href="#is_background_page">is_background_page</a>": true,
                 "<a href="#focus_game_takeover">focus_game_takeover</a>": "ReleaseOnLostFocus",
                 "<a href="#focus_game_takeover_release_hotkey">focus_game_takeover_release_hotkey</a>": "...",
-                "<a href="#enable_top_isolation">enable_top_isolation</a>": true,
                 "<a href="#allow_local_file_access">allow_local_file_access</a>": true,
                 "<a href="#is_alt_f4_blocked">is_alt_f4_blocked</a>": false,
                 "<a href="#dev_tools_window_style">dev_tools_window_style</a>": false,
@@ -134,6 +136,8 @@ Note that not all flags are mandatory - we included all available flags for docu
 <details>
 <summary>Here you can see the same manifest.json file, but without comments</summary>
 
+*Use this manifest with Overwolf client version 0.141 and above*
+
 <pre><code class="json">
 {
     "<a href="#manifest_version">manifest_version</a>": 1,
@@ -154,6 +158,7 @@ Note that not all flags are mandatory - we included all available flags for docu
         "<a href="#meta-window-icon">window_icon</a>": "windowIcon.png"
     },
     "<a href="#permissions-array">permissions</a>": ["Streaming","Hotkeys","GameInfo"],
+    "<a href="#enable_top_isolation">enable_top_isolation</a>": true,
     "<a href="#data">data</a>": {
         "<a href="#game_targeting">game_targeting</a>": {"type": "dedicated","game_ids": [10906, 7764]},
         "<a href="#start_window">start_window</a>": "windowName",
@@ -192,7 +197,6 @@ Note that not all flags are mandatory - we included all available flags for docu
                 "<a href="#is_background_page">is_background_page</a>": true,
                 "<a href="#focus_game_takeover">focus_game_takeover</a>": "ReleaseOnLostFocus",
                 "<a href="#focus_game_takeover_release_hotkey">focus_game_takeover_release_hotkey</a>": "...",
-                "<a href="#enable_top_isolation">enable_top_isolation</a>": true,
                 "<a href="#allow_local_file_access">allow_local_file_access</a>": true,
                 "<a href="#is_alt_f4_blocked">is_alt_f4_blocked</a>": false,
                 "<a href="#dev_tools_window_style">dev_tools_window_style</a>": false,
@@ -267,8 +271,7 @@ To use most overwolf.* APIs, your Overwolf app must declare relevant permissions
 | "FileSystem"           | Allows accessing files from the local file system. </br>*Note: This is the only permission we currently enforce*  | 
 | "LogitechLed"          | Allows accessing [overwolf.logitech.led](overwolf-logitech-led) API                                               | 
 | "LogitechArx"          | Allows accessing [overwolf.logitech.arx](overwolf-logitech-arx) API                                               | 
-| "OwWebview"            | Allows using the owwebview tag                                                                                    | 
-| "VideoCaptureSettings" | Allows setting video capture settings                                                                             | 
+| "VideoCaptureSettings" | Appear as a video capture extension in the capture settings + allows setting video capture settings                                                                             | 
 | "Web"                  | access to the [overwolf.web](overwolf-web) API                                                                    | 
 | "Tray"                 | Access to creating tray icons                                                                                     | 
 
@@ -313,11 +316,19 @@ A list of additional settings for the app.
 | <a class="anchor" aria-hidden="true" id="extra-objects"></a>extra-objects     | [extra-objects](#extra-objects-object) Object  |  Allows access to custom plugin dlls.  | 0.81  |
 | <a class="anchor" aria-hidden="true" id="hotkeys"></a>hotkeys     | [hotkeys](#hotkeys-object) Object   |  Shortcut keys that trigger an app action.  | 0.78  |
 | <a class="anchor" aria-hidden="true" id="content_scripts"></a>content_scripts | [content_scripts[]](#content_scripts-array) |  A list of content scripts to be loaded for specific windows. |0.78  |
-| <a class="anchor" aria-hidden="true" id="launch_events"></a>launch_events | [launch_event_settings[]](#launch-event-settings-array) |  A list of events causing the app to launch. |0.82  |
-| <a class="anchor" aria-hidden="true" id="user_agent"></a>user_agent | string |  A custom user agent for the app to use when creating http requests. </br>*Note: using ‘navigator.userAgent’ will not return the custom user agent, but the default one.* |0.86  |
+| <a class="anchor" aria-hidden="true" id="launch_events"></a>launch_events | [launch_event_settings[]](#launch_event_settings-array) |  A list of events causing the app to launch. |0.82  |
+| <a class="anchor" aria-hidden="true" id="user_agent"></a>user_agent | string |  A custom user agent for the app to use when creating http requests. </br> **Please read our [notes](#user_agent-note)** |0.86  |
 | <a class="anchor" aria-hidden="true" id="disable_dt"></a>disable_dt | bool |  Disable opening of the developer tools for the app (with Ctrl+shift+I). </br>*Default value – “false”* |0.118  |
 | <a class="anchor" aria-hidden="true" id="service_providers"></a>service_providers | [service_providers](#service_providers-object) object |  Extra data to external service providers |0.137  |
 | <a class="anchor" aria-hidden="true" id="developer-game-settings"></a>developer | [developer setting](#developer-settings-object) object|  Additional setting for developers. |0.127  |
+
+#### user_agent Notes
+
+* Don’t use this property if your app serves ads.  
+  In case you have to use it, consult with us before. 
+
+* using ‘navigator.userAgent’ will not return the custom user agent, but the default one.
+
 
 ## GameTargeting object
 An app can declare itself as targeted to one or more games.
@@ -353,7 +364,7 @@ A list of settings for the app windows.
 | <a class="anchor" aria-hidden="true" id="windows-show_only_on_stream"></a>show_only_on_stream | bool   |  Indicates whether this window is visible only in streams (not visible to the streamer), overriding any other setting.    | 0.78  |
 | <a class="anchor" aria-hidden="true" id="windows-ignore_keyboard_events"></a>ignore_keyboard_events | bool   |  Indicates whether the window will receive keyboard events or pass them on to the game.  | 0.83  |
 | <a class="anchor" aria-hidden="true" id="windows-in_game_only"></a>in_game_only  | bool   |  Marks the window as available in-game only (Not accessible on Desktop).                                                             | 0.78  |
-| <a class="anchor" aria-hidden="true" id="windows-desktop_only"></a>desktop_only | bool   |  Markets the window as available on desktop only, and not in-game. This flag should be used (set to “true”) when “use_os_windowing” or “native_window” flags are set to true. </br>*Note: using “desktop_only” and “native_window” flags for desktop windows will dramatically improve your app’s performance.*                                 | 0.89  |
+| <a class="anchor" aria-hidden="true" id="windows-desktop_only"></a>desktop_only | bool   |  Mark the window as available on desktop only, and not in-game. This flag should be used (set to “true”) when “use_os_windowing” or “native_window” flags are set to true. </br>*Note: using “desktop_only” and “native_window” flags for desktop windows will dramatically improve your app’s performance.*                                 | 0.89  |
 | <a class="anchor" aria-hidden="true" id="windows-disable_restore_animation"></a>disable_restore_animation | bool |  Indicates whether the window will animate on minimize/restore while in game.                             | 0.89  |
 | <a class="anchor" aria-hidden="true" id="windows-grab_keyboard_focus"></a>grab_keyboard_focus | bool |  Indicates whether the in-game window will 'steal' the keyboard focus automatically from the game when it opens, or leave the keyboard focus untouched. </br>*Default value is false* | 0.82  |
 | <a class="anchor" aria-hidden="true" id="windows-grab_focus_on_desktop"></a>grab_focus_on_desktop  | bool   |  Indicates whether the desktop window will grab the focus automatically when it opens, or leave the focus untouched. </br>*Default value is true* | 0.99  |
@@ -490,12 +501,12 @@ There are two types of hotkeys:
 
 The map between the hotkey feature name and it’s settings:
 
-| Name  | Type   |  Description                                          | Since |
-|-------|--------|-------------------------------------------------------| ----- |
-| title  | string |  Mandatory. Name of the hotkey as it will appear in the Hotkey tab in the settings. </br>*Note: the name must be unique in the client machine, so it's better to concatenate your app name to its tail*   | 0.78  |
-| action-type | enum |  Defines the behavior of the hotkey: </br>**["toggle", "custom"]** | 0.78  |
-| default | string |  The default key combination. | 0.78  |
-| passthrough | bool |  Defines the behavior of the hotkey. | 0.78  |
+| Name        | Type   |  Description                                                                         | Since |
+|-------------|--------|--------------------------------------------------------------------------------------| ----- |
+| title       | string |  Mandatory. Name of the hotkey as it will appear in the Hotkey tab in the settings.  | 0.78  |
+| action-type | enum   |  Defines the behavior of the hotkey: </br>**["toggle", "custom"]**                   | 0.78  |
+| default     | string |  The default key combination.                                                        | 0.78  |
+| passthrough | bool   |  Defines the behavior of the hotkey.                                                 | 0.78  |
 
 
 Example code:
@@ -517,12 +528,12 @@ Example code:
 ## content_scripts Array
 A list of content scripts to be loaded for specific windows.   
 
-| Name    | Type   | Description                                                 | Since |
-|---------| -------|-------------------------------------------------------------|------ |
-| windows | string | The list of windows for which to apply this content script. | 0.78  |
-| matches | string | The list of URLs for which to apply this content script. (regex supported)    | 0.78  |
-| css     | string | The list of CSS files to be applied in this content script. | 0.78  |
-| js      | string | The list of JS files to be applied in this content script.  | 0.78  |
+| Name    | Type     | Description                                                 | Since |
+|---------| ---------|-------------------------------------------------------------|------ |
+| windows | string[] | The list of windows for which to apply this content script. | 0.78  |
+| matches | string[] | The list of URLs for which to apply this content script. (regex supported)    | 0.78  |
+| css     | string[] | The list of CSS files to be applied in this content script. | 0.78  |
+| js      | string[] | The list of JS files to be applied in this content script.  | 0.78  |
 
 In this example, when loading the index window, myscript.js will be loaded and when encountring https://google.com, mystyles.css and myscript2.js will be loaded:
 

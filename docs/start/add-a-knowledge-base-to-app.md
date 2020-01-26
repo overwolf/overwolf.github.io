@@ -38,7 +38,7 @@ A Knowledge base is what we call your public library and documentation. If users
 
 * Header – A short, engaging description of your app. Font size should be Heading 3.
 
-* Headlines – Organize your article using headlines breaking each page into different topics. Use font size Heading 4 and format text as bold.
+* Headlines - Organize your article using headlines breaking each page into different topics. Use font size 18 and format text as bold.
 
 * All texts should be written in normal font size and not be formatted either bold or italic, unless there is a need to emphasize a specific point.
 
@@ -72,26 +72,8 @@ A good example for this kind of article, the [Legendary Builds – Troubleshooti
 
 To release a new article:
 
-1. Ask your Overwolf contact person to create a knowledge base website account for you via Slack or Email.
+1. Create your article in a google sheet document.
 
-2. You will receive a username and a password for the knowledge base site.
+2. Fill in [this form](https://form.jotform.com/overwolf/help-center-article-submit) and make sure you put the *PUBLIC* link.
 
-3. Login to the [Overwolf knowledge base site](http://support-admin.overwolf.com/wp-login.php).
-
-4. Click on "Knowledge Base" using the sidebar menu.
-
-![alt-text](assets/knowledge-base/1.jpg)
-
-Fill in your article's information and content.
-
-![alt-text](assets/knowledge-base/2.jpg)
-
-Referring to the above image, you should:
-
-1. Enter your article's title
-2. Add your article's content
-3. Choose the right category for your article
-4. Don’t forget to add MetaData information (This will help our users find this page easier)
-5. Click on “Publish” / “Submit for review”
-
-The Overwolf support team will review your new article and publish it following this review. 
+3. We will review and edit the article and release it to the help center and share the link with you.

@@ -41,6 +41,11 @@ You can use the following helpful URLs to retrieve an extension file content or 
 * [overwolf.extensions.onExtensionUpdated](#onextensionupdated)
 * [overwolf.extensions.onUncaughtException](#onuncaughtexception)
 
+## Types Reference
+
+* [overwolf.extensions.CheckForUpdateResult](#checkforupdateresult-object) Object
+* [overwolf.extensions.ExtensionUpdateState](#extensionupdatestate-enum) Enum
+
 
 ## launch(uid , parameter)
 #### Version added: 0.78
@@ -229,7 +234,9 @@ Parameter | Type                  | Description                                 
 --------- | ----------------------| ------------------------------------------------------------------------------------- |
 callback  | function              | Result of the request                                                                 |
 
-Note: This API has a failsafe while games are active making sure automatic updates won't happen during play. Only if the user actively chose to update will the extension update while a game is active. 
+#### `failsafe` note
+The update has a failsafe mechanism while the game is active, making sure automatic updates won't happen during play only if a user action is detected, like pressing a button, for example.
+
 
 #### Callback argument: Success
 
@@ -288,7 +295,7 @@ Parameter | Type                  | Description                                 
 --------- | ----------------------| ------------------------------------------------------------------------------------- |
 callback  | function              | Result of the request                                                             |
 
-Note: there is a failsafe mechanism where this API will only work if a user action that active it is detected. This means no app should ever update while it’s being used in-game unless the user explicitly wanted it.
+**See [failsafe note](#failsafe-note).**
 
 ## checkForExtensionUpdate(callback)
 #### Version added: 0.135
@@ -298,27 +305,13 @@ Note: there is a failsafe mechanism where this API will only work if a user acti
 This function allows the current app to check if there is an extension update, without having to wait for Overwolf to do so.
 Calling this function will not automatically update the extension, just checks if an update exists.
 
+**Please read our [Recommended extention update flow](#recommended-extention-update-flow).**
+
+
 Parameter | Type                  | Description                                                                           |
 --------- | ----------------------| ------------------------------------------------------------------------------------- |
-callback  | function              | Result of the request                                                                 |
+callback  | ([Result: CheckForUpdateResult](#checkforupdateresult-object)) => void              | Result of the request    |
 
-#### Data example
-
-Possible values for the stats are "UpdateAvailable" or "UpToDate". 
-
-Examples:
-
-```json
-{state: "UpdateAvailable", updateVersion: "125.0.1", success: true, error: null}
-```
-
-```json
-{state: "UpToDate", updateVersion: null, success: true, error: null}
-```
-
-```json
-{state: "PendingRestart", updateVersion: "125.0.1", success: true, error: null}
-```
 
 ## getServiceConsumers(callback)
 #### Version added: 0.135
@@ -411,3 +404,57 @@ if you want to get origin information without registering events, you can run th
 "SourceLine": "if(0!=dcLoadAds){var data_version={}"
 }
 ```
+
+## CheckForUpdateResult Object
+
+Parameter          | Type                            | Description                                       |
+-------------------| --------------------------------| ------------------------------------------------- |
+*success*          | boolean                         | inherited from the "Result" Object                |
+*error*            | string                          | inherited from the "Result" Object                |
+status             | string                          | deprecated. For backward compatibility only       |
+Reason             | string                          | deprecated. For backward compatibility only       |   
+state              | [ExtensionUpdateState](#extensionupdatestate-enum) enum  | extension update state                            |   
+updateVersion      | string                          | The latest extension version on the OW apps store. null if the extension is up to date |   
+
+#### Example data: Success
+
+Possible states are "UpdateAvailable", "UpToDate" or "PendingRestart".  
+For more info please read our [Recommended extention update flow](#recommended-extention-update-flow).
+
+```json
+{"state": "UpdateAvailable", "updateVersion": "125.0.1", "success": true, "error": null}
+
+{"state": "UpToDate", "updateVersion": null, "success": true, "error": null}
+
+{"state": "PendingRestart", "updateVersion": "125.0.1", "success": true, "error": null}
+```
+
+## ExtensionUpdateState enum
+
+Option          | Description                                                 | Notes                                                |
+----------------| ----------------------------------------------------------- | ---------------------------------------------------- |
+UpToDate        | The extension is up to date. No action items are required   |                                                      |
+UpdateAvailable | There is an updated extension version on the OW apps store  |                                                      |
+PendingRestart  | The extension just updated, and it's waiting for a relaunch |                                                      |
+
+## Recommended extension update flow
+
+This is the recommended flow for a manual update of Overwolf extensions.  
+
+Note that regardless, the auto-update mechanism will automatically fetch available updates from Overwolf servers every few hours, 
+or once the Overwolf client is restarted. (that includes upgrades for all the available components: extensions, GEP, Client).
+
+TL;DR The flow is `UpdateAvailable => updateExtension() => relaunch() => relaunch game`.
+
+1. Once you get an `UpdateAvailable` state, You should offer the user an "Update" button.  
+   The button should call [updateExtension()](#updateextensioncallback).  
+   See also the [failsafe note](#failsafe-note).
+
+2. Once the update succesfully completed, you can call again [checkForExtensionUpdate()](#checkforextensionupdatecallback),  
+  To make sure that the state changed to `PendingRestart`.
+
+3. At this point, an extension restart is required.  You can offer the user a "Relaunch" button.  
+   The button should call [relaunch()](#relaunch).  
+
+4. It's highly recomended to notify the user and ask for a game restart as well,  
+   to avoid any app related flow issues.

@@ -13,7 +13,7 @@ Please read the [overwolf.games.events](overwolf-games-events) documentation pag
 **Note** that TFT and LOL share the same Game ID.  
 
 :::tip
-If you would like to know when the user is going to play TFT (hit the "Play" button), you can listen to the [lobby_info](overwolf-games-launchers-events-lol#info-updates-3) info update, and check the `queueID`. If it's 1090 or 1100 - it's TFT.
+If you would like to know when the user is going to play TFT (hit the "Play" button), you can listen to the LoL Launcher [lobby_info](overwolf-games-launchers-events-lol#info-updates-3) info-update, and check the `queueID`. If it's 1090 or 1100 - it's TFT.
 :::
 
 
@@ -23,6 +23,7 @@ If you would like to know when the user is going to play TFT (hit the "Play" but
 
 ## Available Features
 
+* [gep_internal](#gep_internal)
 * [me](#me)
 * [match_info](#match_info)
 * [roster](#roster)
@@ -39,14 +40,30 @@ It's highly recommended to communicate errors to your users. Check game event st
 Because LOL and TFT share the same GameID, when checking TFTs game event status please use 21570 as the unique GameID for TFT.
 :::
 
+## `gep_internal`
+
+### Info Updates
+
+key          | Category    | Values                    | Notes                 | Since GEP Ver. |
+------------ | ------------| ------------------------- | --------------------- | ------------- | 
+gep_internal | gep_internal| Local + Public version number|See [notes](#gep_internal-note)|   143.0       |
+
+#### `gep_internal` note
+
+Data Example:
+
+```json
+{"feature":"gep_internal","category":"gep_internal","key":"version_info","value":"{"local_version":"143.0.10","public_version":"143.0.10","is_updated":true}"}
+```
+
 ## `me`
 
 ### Info Updates
 
 key                 | Category      | Values                                                   | Notes                                               | Since GEP Ver. |
 ------------------- |---------------| -------------------------------------------------------- | --------------------------------------------------- | ------------- |
-summoner_name       | me            | Summoner name of the local player  |  See [notes](#summoner_name-note) |   133.0       |
-xp                  | me            | Current player level, xp points, and xp points left to reach the next level  | See [notes](#xp-note) |   133.0       |
+summoner_name       | me            | Summoner name of the local player  |  See [notes](#summoner_name-notes) |   133.0       |
+xp                  | me            | Current player level, xp points, and xp points left to reach the next level  | See [notes](#xp-notes) |   133.0       |
 health              | me            | Current amount of health points of the player |  See [notes](#health-notes) |   133.0       |
 rank                | me            | Current standing of the player        |   See [notes](#rank-notes)  |   133.0       |
 gold                | me             | Player's spare gold in hand   | See [notes](#gold-notes) |   133.0       |

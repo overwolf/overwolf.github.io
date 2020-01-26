@@ -33,8 +33,11 @@ No logs.
 Dota Underlords
 ---------------
 
+**Resolved** - This incident has been resolved.  
+Dec 22, 14:35 PM GMT+3
+
 **Investigating** - Dota Underlords events are down.
-Dec 19, 08:35 AM GMT+3
+Dec 19, 08:29 AM GMT+3
 
 Fortnite
 --------
@@ -96,6 +99,13 @@ No logs.
 
 League of Legends
 -----------------
+
+**Resolved** - This incident has been resolved.  
+Jan 22, 05:10 PM GMT+3
+
+**Investigating** - Game events are down for RIOT maintenance. 
+Jan 22, 03:01 PM GMT+3
+
 No logs.
 
 MTG Arena
@@ -104,6 +114,12 @@ No logs.
 
 PUBG
 ----
+
+**Resolved** - This incident has been resolved.  
+Jan 22, 05:10 PM GMT+3
+
+**Investigating** - PUBG events are down.
+Jan 22, 10:16 AM GMT+3
 
 **Resolved** - This incident has been resolved.  
 Dec 19, 09:29 PM GMT+3
@@ -131,6 +147,12 @@ Oct 23, 12:39 PM GMT+3
 
 Rainbow 6 Siege
 ---------------
+
+**Resolved** This incident has been resolved.  
+Jan 14, 04:02 PM GMT+3
+
+**Investigating** -   Rainbow 6 game events are down, we are working on a fix.  
+Jan 13, 05:04 PM GMT+3
 
 **Resolved** This incident has been resolved.  
 Dec 12, 04:37 PM GMT+3
@@ -169,6 +191,18 @@ Teamfight Tactics
 -----------------
 
 **Resolved** - This incident has been resolved.  
+Jan 24, 12:50 PM GMT+3
+
+**Investigating** - Some of the TFT events are down, we are working on a fix.
+Jan 23, 11:25 AM GMT+3
+
+**Resolved** - This incident has been resolved.  
+Jan 08, 10:16 PM GMT+3
+
+**Investigating** -  TFT game events are down.
+Jan 08, 08:54 AM GMT+3
+
+**Resolved** - This incident has been resolved.  
 Dec 11, 17:15 AM GMT+3
 
 **Investigating** -  TFT game events are down.
@@ -203,6 +237,9 @@ Oct 09, 10:24 AM GMT+3
 
 World of Tanks
 --------------
+
+**Resolved** - This incident has been resolved.  
+Dec 10, 10:57 PM GMT+3
 
 **Investigating** - WoT events are down.  
 Dec 10, 03:36 PM GMT+3

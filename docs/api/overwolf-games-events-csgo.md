@@ -16,6 +16,7 @@ Please read the [overwolf.games.events](overwolf-games-events) documentation pag
 
 ## Available Features
 
+* [gep_internal](#gep_internal)
 * [match_info](#match_info)
 * [kill](#kill)
 * [death](#death)
@@ -44,6 +45,22 @@ Please read the [overwolf.games.events](overwolf-games-events) documentation pag
 It is highly recommended to communicate errors and warnings to your app users. 
 
 Check [here](../status/all) the game events status. OR -  easily check the game events status from your app, [using our API](../topics/howto-check-events-status-from-app).
+
+## `gep_internal`
+
+### Info Updates
+
+key          | Category    | Values                    | Notes                 | Since GEP Ver. |
+------------ | ------------| ------------------------- | --------------------- | ------------- | 
+gep_internal | gep_internal| Local + Public version number|See [notes](#gep_internal-note)|   143.0       |
+
+#### `gep_internal` note
+
+Data Example:
+
+```json
+{"feature":"gep_internal","category":"gep_internal","key":"version_info","value":"{"local_version":"143.0.10","public_version":"143.0.10","is_updated":true}"}
+```
 
 ## `kill`
 
@@ -216,7 +233,7 @@ Data Example:
 Data Example:
 
 ```json
-{"info":{"match_info":{"server_info":"{\"name\":\"Counter-Strike: Global Offensive\",\"ip\":\"=[A:1:2111360000:13753]:0:0\"}"}},"feature":"match_info"}
+{"info":{"match_info":{"server_info":"{"name":"Counter-Strike: Global Offensive","ip":"=[A:1:2111360000:13753]:0:0"}"}},"feature":"match_info"}
 
 {"match_info":{"server_info":"{"name":"RU | ALTAI AWP [!ws,!knife,!gloves,!viptest] 128tick","ip":"212.22.93.74:27040"}"}}
 ```
@@ -493,7 +510,7 @@ Data Example:
     "feature":"roster",
     "category":"roster",
     "key":"lobby",
-    "value":"{"lobby_players\" : [{"steamId\":"76561198269560618"}]}"}
+    "value":"{"lobby_players" : [{"steamId":"76561198269560618"}]}"}
 ```
 
 #### *match* note

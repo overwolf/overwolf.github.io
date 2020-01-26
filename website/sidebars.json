@@ -8,13 +8,14 @@
 			["start/how-to-test-your-app", "start/technical-checklist", "start/marketing-checklist"],
 			"Submit Your App":
 			["start/submit-your-app-to-the-store", "start/custom-installer-for-your-app", "start/add-a-knowledge-base-to-app"],
-			"Monetize Your App":
-			["start/monetization-overview", "start/ads-sdk-overview", "start/ads-sdk-options", "start/ads-sdk-interaction", "start/ads-sdk-versions", "start/app-subscriptions"],
+			"Monetize with Ads":
+			["start/monetization-overview", "start/ads-sdk-overview", "start/ads-sdk-options", "start/ads-sdk-interaction", "start/ads-sdk-versions"],
+			"Monetize with Subs":
+			["start/subscriptions-overview", "start/subscriptions-flow", "start/subscriptions-integration", "start/subscriptions-request-form"],
 			"Maintain Your App":
 			["start/submit-an-app-update", "start/update-your-app-status"]
 	},
     "docs": {
-        
 		"Best Practices":
 			["topics/best-practices-overview", "topics/using-overwolf-windows", "topics/app-specific-experience", "topics/first-time-user-experience", "topics/user-flow-error-handling", "topics/launch-time-performance", "topics/communication-guidelines", "topics/user-flow-and-error-handling","topics/games-settings", "topics/hotkeys-best-practices", "topics/second-monitor", "topics/data-persistence", "topics/validate-your-manifest", "topics/overwolf-header-buttons", "topics/reduce-opk-size", "topics/using-tab", "topics/type-definition-file"],
 		"Request a Service":
@@ -33,7 +34,7 @@
     "api": {
 			"API Reference": 
 			["api/overwolf-api-overview", "api/changelog", "api/manifest-json"],
-			"Available Game Events": ["api/games-ids", "api/overwolf-games-events-apex-legends", "api/overwolf-games-events-csgo", "api/overwolf-games-events-dota2", "api/overwolf-games-events-underlords", "api/overwolf-games-events-fortnite", "api/overwolf-games-events-heartstone", "api/overwolf-games-events-hots", "api/overwolf-games-events-lor", "api/overwolf-games-events-lol", "api/overwolf-games-events-mtga", "api/overwolf-games-events-pubg", "api/overwolf-games-events-rainbow-six", "api/overwolf-games-events-rocket-league", "api/overwolf-games-events-sc2","api/overwolf-games-events-splitgate", "api/overwolf-games-events-tft", "api/overwolf-games-events-wot","api/overwolf-games-events-wow","api/games-external-apis"],
+			"Available Game Events": ["api/games-ids", "api/overwolf-games-events-apex-legends", "api/overwolf-games-events-csgo", "api/overwolf-games-events-dota2", "api/overwolf-games-events-underlords", "api/overwolf-games-events-fortnite", "api/overwolf-games-events-hearthstone", "api/overwolf-games-events-hots", "api/overwolf-games-events-lor", "api/overwolf-games-events-lol", "api/overwolf-games-events-mtga", "api/overwolf-games-events-pubg", "api/overwolf-games-events-rainbow-six", "api/overwolf-games-events-rocket-league", "api/overwolf-games-events-sc2","api/overwolf-games-events-splitgate", "api/overwolf-games-events-tft", "api/overwolf-games-events-wot","api/overwolf-games-events-wow","api/games-external-apis"],
 			"Launcher IDs": ["api/launchers-ids","api/overwolf-games-launchers-events-lol"],
 			"overwolf.benchmarking": ["api/overwolf-benchmarking"],
 			"overwolf.extensions":
@@ -63,7 +64,7 @@
     },
 	"service": {
         "Games Events Status": 
-			["status/all", "status/past-incidents", "status/apex", "status/csgo", "status/dota2", "status/underlords", "status/fortnite", "status/hearthstone", "status/heroes-of-the-storm", "status/lol",  "status/mtga", "status/pubg", "status/rainbow-six-siege", "status/rocket-league", "status/sc2", "status/splitgate", "status/teamfight-tactics", "status/world-of-tanks","status/world-of-warships"]
+			["status/all", "status/past-incidents", "status/apex", "status/csgo", "status/dota2", "status/underlords", "status/fortnite", "status/hearthstone", "status/heroes-of-the-storm", "status/lol", "status/lol-launcher", "status/mtga", "status/pubg", "status/rainbow-six-siege", "status/rocket-league", "status/sc2", "status/splitgate", "status/teamfight-tactics", "status/world-of-tanks","status/world-of-warships"]
 		},
 	"support": {
         "Support": 

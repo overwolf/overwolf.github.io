@@ -8,7 +8,7 @@ function EasilySection(props) {
       <div className="container">
         <header>Easily create apps for PC gamers</header>
         <p>Overlay, real-time game events, monetization, auto patching, Anti-Cheat compatibility and all that good stuff</p>
-        <a className="btn" href={`${baseUrl}docs/start/submit-app-proposal`}>Submit an App Proposal</a>
+        <a className="btn" href={`${baseUrl}docs/start/getting-started`}>Start Building</a>
       </div>
       <img className="wolf" src="img/BG_lightning.svg" />
       <img className="wolf" src="img/robot.svg" />

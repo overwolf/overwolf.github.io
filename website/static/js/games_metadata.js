@@ -124,5 +124,12 @@ const GamesMetadata = {
     iconUrl: "/docs/assets/games-logos/sc2.png",
     iconLargeUrl: "/docs/assets/games-logos/large/sc2.png",
     name: "StartCraft II"
+  },
+  10902: {
+    id: 10902,
+    path: "/docs/status/lol-launcher",
+    iconUrl: "/docs/assets/games-logos/lol-launcher.png",
+    iconLargeUrl: "/docs/assets/games-logos/large/lol-launcher.png",
+    name: "League of Legends Launcher"
   }
 }

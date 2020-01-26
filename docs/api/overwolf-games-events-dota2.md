@@ -15,6 +15,7 @@ Please read the [overwolf.games.events](overwolf-games-events) documentation pag
 
 ## Available Features
 
+* [gep_internal](#gep_internal)
 * [game_state_changed](#game_state_changed)
 * [match_state_changed](#match_state_changed)
 * [match_detected](#match_detected)
@@ -50,12 +51,31 @@ Please read the [overwolf.games.events](overwolf-games-events) documentation pag
 * [party](#party)
 * [error](#error)
 * [hero_pool](#hero_pool)
+* [me](#me)
+* [game](#game)
+
 
 ## Game events status
 
 It is highly recommended to communicate errors and warnings to your app users. 
 
 Check [here](../status/all) the game events status. OR -  easily check the game events status from your app, [using our API](../topics/howto-check-events-status-from-app).
+
+## `gep_internal`
+
+### Info Updates
+
+key          | Category    | Values                    | Notes                 | Since GEP Ver. |
+------------ | ------------| ------------------------- | --------------------- | ------------- | 
+gep_internal | gep_internal| Local + Public version number|See [notes](#gep_internal-note)|   143.0       |
+
+#### `gep_internal` note
+
+Data Example:
+
+```json
+{"feature":"gep_internal","category":"gep_internal","key":"version_info","value":"{"local_version":"143.0.10","public_version":"143.0.10","is_updated":true}"}
+```
 
 ## `game_state_changed`
 
@@ -168,6 +188,12 @@ Fired when:
 
 Fired when the game transitions between day time and night time. 
 
+Data Example:
+
+```json
+{"events":[{"name":"daytime_changed","data":"{"daytime":true,"clock_time":-89,"nightstalker_night":false}"}]}
+```
+
 ## `clock_time_changed `
 
 ### Events
@@ -190,18 +216,24 @@ Event Data:
 
 * <b>ward_purchase_cooldown</b> – The remaining store cooldown in seconds before a ward is available for purchase again. 
 
+Data Example:
+
+```json
+{"events":[{"name":"ward_purchase_cooldown_changed","data":"{"ward_purchase_cooldown":128}"}]}
+```
+
 ## `match_ended`
 
 ### Events
 
 Event       | Event Data   | Fired When    | Notes              | Since GEP Ver. |
-------------| -------------| --------------| ------------------ | --------------|
+------------| -------------| --------------| ------------------ | -------------- |
 match_ended | radiant/dire |When an ancient is destroyed and the game ends.  | See [notes](#match_ended-note)       |     77.3      |
 
 #### *match_ended* note
 
 ```json
-{"winner": "dire"}
+{"winner":"dire"}
 ```
 
 ## `kill`
@@ -230,7 +262,15 @@ Event Data:
 
 Event       | Event Data   | Fired When    | Notes              | Since GEP Ver. |
 ------------| -------------| --------------| ------------------ | --------------|
-assist    |assists – The total number of assists the player has. |Whenever the player assists in a kill of an enemy champion.|      |     77.3      |
+assist    |assists – The total number of assists the player has. |Whenever the player assists in a kill of an enemy champion.|See [notes](#assist-note)|     77.3      |
+
+#### *assist* note
+
+Data Example:
+
+```json
+{"events":[{"name":"assist","data":"{"assist":1}"}]}
+```
 
 ## `death`
 
@@ -238,7 +278,15 @@ assist    |assists – The total number of assists the player has. |Whenever the
 
 Event       | Event Data   | Fired When    | Notes              | Since GEP Ver. |
 ------------| -------------| --------------| ------------------ | --------------|
-death    |deaths – The total number of deaths the player has. |Whenever the player dies. |           |     77.3      |
+death    |deaths – The total number of deaths the player has. |Whenever the player dies. |See [notes](#death-note)|     77.3      |
+
+#### *death* note
+
+Data Example:
+
+```json
+{"events":[{"name":"death","data":"{"deaths":1}"}]}
+```
 
 ## `cs`
 
@@ -256,13 +304,23 @@ Event Data:
 * <b>denies</b> – The total amount of denies the player has.
 * <b>type</b> – last_hits/deny.
 
-## `xpm `
+Data Example:
+
+```json
+{"events":[{"name":"cs","data":"{"last_hits": 1,"denies":0,"type":"last_hit"}"}]}
+```
+
+## `xpm`
 
 ### Events
 
 Event       | Event Data   | Fired When    | Notes              | Since GEP Ver. |
 ------------| -------------| --------------| ------------------ | --------------|
-xpm |xpm – The current Experience Per Minute value. |Whenever the XPM changes. |          |     77.3      |
+xpm |xpm – The current Experience Per Minute value. |Whenever the XPM changes. |See [notes](#xpm-note)| 77.3 |
+
+#### *xpm* note
+
+<b>This event is currently NOT supported.</b>
 
 ## `gpm`
 
@@ -271,6 +329,10 @@ xpm |xpm – The current Experience Per Minute value. |Whenever the XPM changes.
 Event       | Event Data   | Fired When    | Notes              | Since GEP Ver. |
 ------------| -------------| --------------| ------------------ | --------------|
 gpm | gpm – The current Gold Per Minute value. |Whenever the GPM changes. |        |     77.3      |
+
+#### *gpm* note
+
+<b>This event is currently NOT supported.</b>
 
 ## `gold`
 
@@ -282,6 +344,8 @@ gold | Check notes |Whenever gold changes. 	|See [notes](#gold-notes)|     77.3 
 
 #### *gold* note
 
+<b>This event is currently NOT supported.</b>
+
 * <b>gold</b> – Total current gold.
 * <b>gold_reliable</b> – Reliable gold part.
 * <b>gold_unreliable</b> – Unreliable gold part.
@@ -292,7 +356,11 @@ gold | Check notes |Whenever gold changes. 	|See [notes](#gold-notes)|     77.3 
 
 Event       | Event Data   | Fired When    | Notes              | Since GEP Ver. |
 ------------| -------------| --------------| ------------------ | --------------|
-hero_leveled_up | hero_level – The current hero level. |Whenever the player levels up. |          |     77.3      |
+hero_leveled_up | hero_level – The current hero level. |Whenever the player levels up. |See [notes](#hero_leveled_up-note)|     77.3      |
+
+#### *hero_leveled_up* note
+
+<b>Currently this event is NOT supported.</b>
 
 ## `hero_respawned`
 
@@ -300,7 +368,11 @@ hero_leveled_up | hero_level – The current hero level. |Whenever the player le
 
 Event       | Event Data   | Fired When    | Notes              | Since GEP Ver. |
 ------------| -------------| --------------| ------------------ | --------------|
-hero_respawned | N/A	 |Whenever the player respawns. This is also true when buying back. |          |     77.3      |
+hero_respawned | N/A	 |Whenever the player respawns. This is also true when buying back. |See [notes](#hero_respawned-note)|     77.3      |
+
+#### *hero_respawned* note
+
+<b>Currently this event is NOT supported.</b>
 
 ## `hero_buyback_info_changed`
 
@@ -311,6 +383,8 @@ Event       | Event Data   | Fired When    | Notes              | Since GEP Ver.
 hero_buyback_info_changed | Check notes |        |See [notes](#hero_buyback_info_changed-notes)|     77.3      |
 
 #### *hero_buyback_info_changed* note
+
+<b>Currently this event is NOT supported.</b>
 
 Event Data:
 
@@ -327,7 +401,11 @@ Every 4 seconds and every level-up, since buyback cost is affected by game time 
 
 Event       | Event Data   | Fired When    | Notes              | Since GEP Ver. |
 ------------| -------------| --------------| ------------------ | --------------|
-hero_boughtback |<b>buyback_cooldown</b> – The cooldown remaining for buyback to become available.|Whenever the player buys back.|    |     77.3      |
+hero_boughtback |<b>buyback_cooldown</b> – The cooldown remaining for buyback to become available.|Whenever the player buys back.|See [notes](#hero_boughtback-note)|     77.3      |
+
+#### *hero_boughtback* note
+
+<b>This event is currently NOT supported.</b>
 
 ## `hero_health_mana_info`
 
@@ -338,6 +416,8 @@ Event       | Event Data   | Fired When    | Notes              | Since GEP Ver.
 hero_health_mana_info | Check notes |Whenever either of the players mana, health, max mana or max health changes.|See [notes](#hero_health_mana_info-notes)|     77.3      |
 
 #### *hero_health_mana_info* note
+
+<b>Currently this event is NOT supported.</b>
 
 Event Data:
 
@@ -355,6 +435,8 @@ Event       | Event Data   | Fired When    | Notes              | Since GEP Ver.
 hero_status_effect_changed | Check notes |Whenever any of these effects changes.	|See [notes](#hero_status_effect_changed-notes)|     77.3      |
 
 #### *hero_status_effect_changed* note
+
+<b>Currently this event is NOT supported.</b>
 
 Event Data:
 
@@ -374,6 +456,8 @@ Event Data:
 Event       | Event Data   | Fired When    | Notes              | Since GEP Ver. |
 ------------| -------------| --------------| ------------------ | --------------|
 hero_attributes_skilled |<b>attributes_level</b> – The current level of the player’s attributes.|Whenever the player skills up his attributes.|          |     77.3      |
+
+#### *hero_attributes_skilled* note
 
 ## `hero_ability_skilled`
 
@@ -400,7 +484,15 @@ hero_ability_skilled | Check notes |Whenever the player skills up an ability.|Se
 
 Event       | Event Data   | Fired When    | Notes              | Since GEP Ver. |
 ------------| -------------| --------------| ------------------ | --------------|
-hero_ability_used |Same as ‘hero_ability_skilled’|Whenever the player uses an ability.|       |     77.3      |
+hero_ability_used |Same as ‘hero_ability_skilled’|Whenever the player uses an ability.|See [notes](#hero_ability_used-note)|     77.3      |
+
+#### *hero_ability_used* note
+
+Data Example:
+
+```json
+{"events":[{"name":"hero_ability_used","data":"{"slot":0,"name":"sven_storm_bolt","level":4,  "can_cast":false,"passive":false,"ability_active":true,"cooldown":7,"ultimate":false}"}]}
+```
 
 ## `hero_ability_cooldown_changed`
 
@@ -408,7 +500,11 @@ hero_ability_used |Same as ‘hero_ability_skilled’|Whenever the player uses a
 
 Event       | Event Data   | Fired When    | Notes              | Since GEP Ver. |
 ------------| -------------| --------------| ------------------ | --------------|
-hero_ability_cooldown_changed |Same as ‘hero_ability_skilled’|Whenever an ability’s remaining cooldown is changed.	|       |     77.3      |
+hero_ability_cooldown_changed |Same as ‘hero_ability_skilled’|Whenever an ability’s remaining cooldown is changed.	|See [notes](#hero_ability_cooldown_changed-note)|     77.3      |
+
+#### *hero_ability_cooldown_changed* note
+
+<b>Currently this event is NOT supported.</b>
 
 ## `hero_ability_changed`
 
@@ -416,7 +512,11 @@ hero_ability_cooldown_changed |Same as ‘hero_ability_skilled’|Whenever an ab
 
 Event       | Event Data   | Fired When    | Notes              | Since GEP Ver. |
 ------------| -------------| --------------| ------------------ | --------------|
-hero_ability_changed |Same as ‘hero_ability_skilled’|Whenever an ability’s name changes.|       |     77.3      |
+hero_ability_changed |Same as ‘hero_ability_skilled’|Whenever an ability’s name changes.|See [notes](#hero_ability_changed-note)|     77.3      |
+
+#### *hero_ability_changed* note
+
+<b>Currently this event is NOT supported.</b>
 
 ## `hero_item_cooldown_changed`
 
@@ -427,6 +527,8 @@ Event       | Event Data   | Fired When    | Notes              | Since GEP Ver.
 hero_item_cooldown_changed |Check notes|Whenever an item’s remaining cooldown is changed.|See [notes](#hero_item_cooldown_changed-notes)|     77.3      |
 
 #### *hero_item_cooldown_changed* note
+
+<b>Currently this event is NOT supported.</b>
 
 Event Data:
 
@@ -448,6 +550,8 @@ hero_item_changed |Check notes|          |See [notes](#hero_item_changed-notes)|
 
 #### *hero_item_changed* note
 
+<b>Currently this event is NOT supported.</b>
+
 Event Data:
 
 * <b>slot</b> – The index of the item slot (0 – 5, top row from the left to bottom row from the right)
@@ -468,7 +572,11 @@ Whenever the item name in some hero/stash slot changes. This would mean that swa
 
 Event       | Event Data   | Fired When    | Notes              | Since GEP Ver. |
 ------------| -------------| --------------| ------------------ | --------------|
-hero_item_used |Same as ‘hero_item_changed’	|Whenever an item is used – Essentially this is when the item goes on cooldown. |       |     77.3      |
+hero_item_used |Same as ‘hero_item_changed’	|Whenever an item is used – Essentially this is when the item goes on cooldown. |See [notes](#hero_item_used-note)|     77.3      |
+
+#### *hero_item_used* note
+
+<b>Currently this event is NOT supported.</b>
 
 ## `hero_item_consumed`
 
@@ -476,7 +584,11 @@ hero_item_used |Same as ‘hero_item_changed’	|Whenever an item is used – Es
 
 Event       | Event Data   | Fired When    | Notes              | Since GEP Ver. |
 ------------| -------------| --------------| ------------------ | --------------|
-hero_item_consumed |Same as ‘hero_item_changed’	|Whenever an item’s charges decreases. |       |     77.3      |
+hero_item_consumed |Same as ‘hero_item_changed’	|Whenever an item’s charges decreases. |See [notes](#hero_item_consumed-note)|     77.3      |
+
+#### *hero_item_consumed* note
+
+<b>Currently this event is NOT supported.</b>
 
 ## `hero_item_charged`
 
@@ -484,7 +596,11 @@ hero_item_consumed |Same as ‘hero_item_changed’	|Whenever an item’s charge
 
 Event       | Event Data   | Fired When    | Notes              | Since GEP Ver. |
 ------------| -------------| --------------| ------------------ | --------------|
-hero_item_charged |Same as ‘hero_item_changed’	|Whenever an item’s charges increases.|       |     77.3      |
+hero_item_charged |Same as ‘hero_item_changed’	|Whenever an item’s charges increases.|See [notes](#hero_item_charged-note)|     77.3      |
+
+#### *hero_item_charged* note
+
+<b>Currently this event is NOT supported.</b>
 
 ## `match_info`
 
@@ -583,7 +699,7 @@ party   | party  |A string holding a JSON array of player objects.|See [notes](#
 Data Example:
 
 ```json
-[{\"steamId\":\"76561198059980868\",\"isLeader\":false,\"isCoach\":false}]
+[{"steamId":"76561198059980868","isLeader":false,"isCoach":false}]
 ```
 * steamId – the player’s Steam ID
 * isLeader – (bool) whether the player is the leader of the party
@@ -630,4 +746,38 @@ Data Example:
 
 ```json
 {"category":"game_info","key":"hero_pool","value":"[2,4,5,7,8,16,18,20,21,22,23,27,31,32,34,35,37,38,44,47,48,49,52,53,59,64,65,67,70,71,72,74,75,81,84,85,91,92,95,98,99,100,104,105,106,109,110,113,120,121]}
+```
+
+## `me`
+
+### Info Updates
+
+key               | Category    | Values                    | Notes                 | Since GEP Ver. |
+----------------- | ------------| ------------------------- | --------------------- | -------------- |
+team              | me          |                           |                       |  139.0         |
+steam_id          | me          |                           |                       |  139.0         |
+hero              | me          |                           |                       |  139.0         |
+
+
+Event data example:
+
+```json
+{"feature":"me","category":"me","key":"team","value":"radiant","steam_id":"7654654654","hero":"keeper_of_the_light"}
+```
+
+## `game`
+
+### Info Updates
+
+key               | Category    | Values                    | Notes                 | Since GEP Ver. |
+----------------- | ------------| ------------------------- | --------------------- | -------------- |
+game_state        | game        |   Playing                 |                       |  139.0         |
+match_state       | game        |   Current game-state      |                       |  139.0         |
+
+
+Event data example:
+
+```json
+{"feature":"game","category":"game","key":"game_state","value":"playing"}
+{"feature":"game","category":"game","key":"match_state","value":"DOTA_GAMERULES_STATE__GAME_IN_PROGRESS"}
 ```

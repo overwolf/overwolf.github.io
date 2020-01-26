@@ -15,6 +15,7 @@ Please read the [overwolf.games.events](overwolf-games-events) documentation pag
 
 ## Available Features
 
+* [gep_internal](#gep_internal)
 * [game_info](#game_info)
 * [match](#match)
 * [match_info](#match_info)
@@ -25,6 +26,22 @@ Please read the [overwolf.games.events](overwolf-games-events) documentation pag
 ## Game events status
 
 It's highly recommended to communicate errors and warnings to your app users. Check game event status [here](../status/all) or easily check game event status directly from your app [using our API](../topics/howto-check-events-status-from-app).
+
+## `gep_internal`
+
+### Info Updates
+
+key          | Category    | Values                    | Notes                 | Since GEP Ver. |
+------------ | ------------| ------------------------- | --------------------- | ------------- | 
+gep_internal | gep_internal| Local + Public version number|See [notes](#gep_internal-note)|   143.0       |
+
+#### `gep_internal` note
+
+Data Example:
+
+```json
+{"feature":"gep_internal","category":"gep_internal","key":"version_info","value":"{"local_version":"143.0.10","public_version":"143.0.10","is_updated":true}"}
+```
 
 ## `game_info`
 
@@ -117,7 +134,7 @@ deaths | player | Total number of player's deaths</br>`{"player":{"deaths":"1"}}
 
 Each player joining the game will be reported in the following way:
 
-`{"roster_0":"{\"name\":\"overwolfqa\",\"team\":\"Orange\",\"is_local\":true}"}`
+`{"roster_0":"{"name":"overwolfqa","team":"Orange","is_local":true}"}`
 
 As you can see, this object includes:
 

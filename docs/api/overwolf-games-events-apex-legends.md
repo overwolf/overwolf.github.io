@@ -15,6 +15,7 @@ Please read the [overwolf.games.events](overwolf-games-events) documentation pag
 
 ## Available Features
 
+* [gep_internal](#gep_internal)
 * [me](#me)
 * [team](#team)
 * [kill](#kill)
@@ -35,6 +36,22 @@ Please read the [overwolf.games.events](overwolf-games-events) documentation pag
 It is highly recommended to communicate errors and warnings to app users. 
 
 Check the current game event status [here](../status/all). Alternately, you can easily check that status from your app itself, [using our API](../topics/howto-check-events-status-from-app).
+
+## gep_internal
+
+### Info Updates
+
+key          | Category    | Values                    | Notes                 | Since GEP Ver. |
+------------ | ------------| ------------------------- | --------------------- | ------------- | 
+gep_internal | gep_internal| Local + Public version number|See [notes](#gep_internal-note)|   143.0       |
+
+#### `gep_internal` note
+
+Data Example:
+
+```json
+{"feature":"gep_internal","category":"gep_internal","key":"version_info","value":"{"local_version":"143.0.10","public_version":"143.0.10","is_updated":true}"}
+```
 
 ## me
 
@@ -101,7 +118,7 @@ As  youcan see, this object includes:
 Every team member, including the jump-master will be reported in the following way:
 
 ```json
-{\"playerName\":\"fReeeeezeeeee\",\"legendName\":\"#character_pathfinder_NAME\",\"selectionOrder\":\"1\",\"lead\":false}
+{"playerName":"fReeeeezeeeee","legendName":"#character_pathfinder_NAME","selectionOrder":"1","lead":false}
 ```
 
 #### `team_info` notes
@@ -109,7 +126,7 @@ Every team member, including the jump-master will be reported in the following w
 The current status of the local player’s team ("active" or "eliminated").
 
 ```json
-{\"team_state\":\"active\"}
+{"team_state":"active"}
 ```
 
 As you can see, this object includes:
@@ -247,7 +264,7 @@ Event        | Event Data                        | Fired When   | Notes         
 -------------| ----------------------------------| ----------------------------- | ------------------ | --------------|
 kill | victimName                              | Local player killed another player. `{"victimName": "6ewehrw0lf"}` |                    |     130.0      | 
 knockdown | victimName                              | Local player knocked out another player. `{"victimName":"J0GUR7"}` |                    |    130.0      | 
-assist | victimName                              | Local player participated in a team member’s kill.</br></br>Provided values:</br>1. victimName</br>2. type - knockdown / elimination</br></br>Example:</br></br>`{"victimName": "VioletAlbicocca","type":"knockdown"}` |                    |    130.0      | 
+assist | victimName                              | Local player participated in a team member’s kill.</br></br>Provided values:</br>1. victimName</br>2. type - knockdown / elimination</br></br>Example:</br></br>`{"victimName":"VioletAlbicocca","type":"knockdown"}` |                    |    130.0      | 
 
 ## revive
 

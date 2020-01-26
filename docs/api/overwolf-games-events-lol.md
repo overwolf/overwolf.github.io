@@ -19,6 +19,7 @@ Note that you can also use the LOL game launcher events. Read more [here](overwo
 
 ## Available Features
 
+* [gep_internal](#gep_internal)
 * [matchState](#matchstate)
 * [match_info](#match_info)
 * [death](#death)
@@ -42,16 +43,56 @@ Note that you can also use the LOL game launcher events. Read more [here](overwo
 
 It's highly recommended to communicate errors and warnings to your app users. Check current game event status [here](../status/all) or  easily check game event status from your app [using our API](../topics/howto-check-events-status-from-app).
 
+## `gep_internal`
+
+### Info Updates
+
+key          | Category    | Values                    | Notes                 | Since GEP Ver. |
+------------ | ------------| ------------------------- | --------------------- | ------------- | 
+gep_internal | gep_internal| Local + Public version number|See [notes](#gep_internal-note)|   143.0       |
+
+#### `gep_internal` note
+
+Data Example:
+
+```json
+{"feature":"gep_internal","category":"gep_internal","key":"version_info","value":"{"local_version":"143.0.10","public_version":"143.0.10","is_updated":true}"}
+```
+
 ## `matchState`
 
 ### Info Updates
 
 key          | Category    | Values                    | Notes                 | Since GEP Ver. |
 ------------ | ------------| ------------------------- | --------------------- | ------------- | 
-matchStarted | game_info   | true/false (string)       |                       |   140.0       |
-matchOutcome | game_info   | win/lose                  |                       |   140       |
-matchId      | game_info   | Current match id      |  `matchId:3828196424` |   120.0       |
+matchStarted | game_info   | true/false (string)       |See [notes](#matchStarted-note)|   140.0       |
+matchOutcome | game_info   | win/lose                  |See [notes](#matchOutcome-note)|   140.0       |
+matchId      | game_info   | Current match id          |See [notes](#matchId-note)     |   120.0       |
 queueId      | game_info   | Current match [queue id](https://developer.riotgames.com/game-constants.html)|  `queueId:440`        |   120.0       |
+
+#### *matchStarted* note
+
+Data Example:
+
+```json
+{"feature":"matchState","category":"game_info","key":"matchStarted","value":true}
+```
+
+#### *matchOutcome* note
+
+<b>This info update is currently broken.</b>
+
+#### *matchID* note
+
+Data Example:
+
+```json
+{"feature":"matchState","category":"game_info","key":"matchId","value":"4346980872"}
+```
+
+#### *queueID* note
+
+<b>This event is currently broken.</b>
 
 ### Events
 
@@ -65,7 +106,7 @@ matchEnd   | null        |  Match has ended     |  Match is ended    |   140.0  
 ### Info Updates
 
 key          | Category    | Values                    | Notes                 | Since GEP Ver. |
---------------- | -----------| ------------------------------------------------------------------------------------ | ------------------------------------ | ------------- | 
+------------ | ----------- | ------------------------- | --------------------- | -------------- | 
 pseudo_match_id | match_info | Current match’s ID code. Example:</br> `a4e8fc75-b35e-466f-976c-09f4ee633d95`  |  This is an Overwolf-generated code unrelated to Riot Games.  |   0.130 |
 game_mode | match_info | Whether the current game mode is TFT or default LoL. See [notes](#game_mode-notes) |                 |   133.0       |
 #### *game_mode* notes
@@ -81,13 +122,29 @@ Data example:
 
 key          | Category    | Values                            | Notes                 | Since GEP Ver. |
 ------------ | ------------| --------------------------------- | --------------------- | ------------- | 
-deaths       | game_info   | Number of deaths for this session |                       |   77.0        |
+deaths       | game_info   | Number of deaths for this session |See [notes](#deaths-note)|   77.0        |
+
+#### *deaths* note
+
+Data Example:
+
+```json
+{"info":{"game_info":{"deaths":"1"}},"feature":"death"}
+```
 
 ### Events
 
 Event | Event Data                        | Fired When                  | Notes              | Since GEP Ver. |
 ------| ----------------------------------| --------------------------- | ------------------ | --------------|
-death | Number of deaths for this session | The player’s champion died  |  Match has started |     77.0      | 
+death | Number of deaths for this session | The player’s champion died  | See [notes](#death-note) |     77.0      | 
+
+#### *death* note
+
+Data Example:
+
+```json
+{"events":[{"name":"death","data":"{"count":"1"}"}]}
+```
 
 ## `respawn`
 
@@ -95,7 +152,7 @@ death | Number of deaths for this session | The player’s champion died  |  Mat
 
 Event      | Event Data  | Fired When          | Notes              | Since GEP Ver. |
 -----------| ------------| ------------------------------- | ------------------ | --------------|
-respawn    | null        | The player’s champion respawned |  Match has started |   140.0       | 
+respawn    | null        | The player’s champion respawned |                    |   140.0       | 
 
 ## `abilities`
 
@@ -103,8 +160,16 @@ respawn    | null        | The player’s champion respawned |  Match has starte
 
 Event      | Event Data  | Fired When          | Notes              | Since GEP Ver. |
 -----------| ------------| ------------------------------- | ------------------ | --------------|
-ability    | ability number        | player has selected an ability	 |  <ul><li>abilities are numbered from 1-4 “ability”</li><li>event is fired when the player clicked an ability key (but he may cancel the ability action later)</li></ul>  |   140.0       | 
+ability    | ability number | player has selected an ability	 |  <ul><li>abilities are numbered from 1-4 “ability”</li><li>event is fired when the player clicked an ability key (but he may cancel the ability action later)</li></ul>  |   140.0       | 
 usedAbility  | JSON containing: “type” with the ability number between 1-4. Example:</br> `{ type: "4" }` for ult        | player activated the ability	 |  “usedAbility” fired when the player actually activated the ability  |   0.31       | 
+
+#### *ability* note
+
+Data Example:
+
+```json
+{"events":[{"name":"ability","data":"1"}]}
+```
 
 ## `kill`
 
@@ -112,17 +177,31 @@ usedAbility  | JSON containing: “type” with the ability number between 1-4. 
 
 key         | Category    | Values                          | Notes                 | Since GEP Ver. |
 ----------- | ------------| --------------------------------| --------------------- | ------------- | 
-kills       | game_info   | Total kills in the match        |                       |   35.0        |
+kills       | game_info   | Total kills in the match        | See [notes](#kills-note) |   35.0        |
 doubleKills | game_info   | Total double-kills in the match |                       |   35.0        |
 tripleKills | game_info   | Total triple-kills in the match |                       |   35.0        |
 quadraKills | game_info   | Total quadra-kills in the match |                       |   35.0        |
 pentaKills  | game_info   | Total penta-kills in the match  |                       |   35.0        |
 
+#### *kills* note
+
+```json
+{"info":{"game_info":{"doubleKills":"1"}},"feature":"kill"}
+```
+
 ### Events
 
 Event | Event Data                        | Fired When                  | Notes              | Since GEP Ver. |
 ------| ----------------------------------| --------------------------- | ------------------ | --------------|
-kill | A JSON containing:</br><ul><li>count: Number of times this kill type happened in the match</li><li>label: kill / double_kill / triple_kill / quadra_kill / penta_kill</li><li>totalKills: Total kills in this match</li></ul> | Killing another champion  |   |     70.0      | 
+kill | A JSON containing:</br><ul><li>count: Number of times this kill type happened in the match</li><li>label: kill / double_kill / triple_kill / quadra_kill / penta_kill</li><li>totalKills: Total kills in this match</li></ul> | Killing another champion  |See [notes](#kill-note)|     70.0      | 
+
+#### *kill* note
+
+Data Example:
+
+```json
+{"events":[{"name":"kill","data":"{"label":"kill","count":"1","totalKills":"1"}"}]}
+```
 
 ## `assist`
 
@@ -130,7 +209,15 @@ kill | A JSON containing:</br><ul><li>count: Number of times this kill type happ
 
 Event  | Event Data                                       |               Fired When                  | Notes     | Since GEP Ver. |
 -------| -------------------------------------------------| ----------------------------------------- | --------- | --------------|
-assist | Number of times this event happened in the match | When you assist killing another champion |           |       70.00    |
+assist | Number of times this event happened in the match | When you assist killing another champion |See [notes](#assist-note)|       70.00    |
+
+#### *assist* note
+
+Data Example:
+
+```json
+{"events":[{"name":"assist","data":"{"count":"1"}"}]}
+```
 
 ## `gold`
 
@@ -146,8 +233,16 @@ gold   | game_info   | numeric value – amount of gold  |                      
 
 key                | Category    | Values                                         | Notes  | Since GEP Ver. |
 -------------------| ------------| -----------------------------------------------| ------ | ------------- | 
-minionKills        | game_info   | amount of enemy minions killed by the player   |        |    70.0       |
+minionKills        | game_info   | amount of enemy minions killed by the player   |See [notes](#minionKills-note)|    70.0       |
 neutralMinionKills | game_info   | amount of neutral minions killed by the player |        |    70.0      |
+
+#### *minionKills* note
+
+Data Example:
+
+```json
+{"info":{"game_info":{"minionKills":"37"}},"feature":"minions"}
+```
 
 ## `summoner_info`
 
@@ -155,14 +250,76 @@ neutralMinionKills | game_info   | amount of neutral minions killed by the playe
 
 key       | Category        | Values                                         | Notes                                                   | Since GEP Ver. |
 ----------| ----------------| -----------------------------------------------| ------------------------------------------------------- | ------------- | 
-id        | summoner_info   | User’s Summoner Id                         |   Fired immediately with game start                     |      70.0      |
-region    | summoner_info   | User’s region (EUE, EUW, etc.)             |   Important note: Push runes/items feature is not allowed (by Riot) on Korea region, so in case your app provides such a feature, make sure to disable it for KR users.                                                                |    70.0        |
-champion  | summoner_info   | Name of the selected champion              |  All champion names (provided by the Overwolf Game Events Provider) match the champion-key from the Riot API, except for `Fiddlesticks`.</br><ul><li>Game Events Provider value: “FiddleSticks”</li><li>Riot API value: “Fiddlesticks”</li></ul>  |    70.0 |
-level     | summoner_info   | User’s summoner level                      |                                                         |    70.0        |
-tier      | summoner_info   | User’s tier in his most played queue       |                                                         |    120.0      |
-division  | summoner_info   | User’s division in his most played queue   |                                                         |    120.0      |
-queue     | summoner_info   | Most played match queue                    |                                                         |    120.0      |
-accountId | summoner_info   | User’s account id                           |                                                         |    120.0      |
+id        | summoner_info   | User’s Summoner Id                         |   Fired immediately with game start. Check [notes](#id-note) |      70.0      |
+region    | summoner_info   | User’s region (EUE, EUW, etc.)             |   Important note: Push runes/items feature is not allowed (by Riot) on Korea region, so in case your app provides such a feature, make sure to disable it for KR users. Also, check [notes](#region-note)|    70.0        |
+champion  | summoner_info   | Name of the selected champion              |  All champion names (provided by the Overwolf Game Events Provider) match the champion-key from the Riot API, except for `Fiddlesticks`.</br><ul><li>Game Events Provider value: “FiddleSticks”</li><li>Riot API value: “Fiddlesticks”</li></ul></br>Also, check [notes](#champion-note)  |    70.0 |
+level     | summoner_info   | User’s summoner level                      |  See [notes](#level-note) |    70.0        |
+tier      | summoner_info   | User’s tier in his most played queue       | See [notes](#tier-note) |    120.0      |
+division  | summoner_info   | User’s division in his most played queue   | See [notes](#division-note) |    120.0      |
+queue     | summoner_info   | Most played match queue                    | See [notes](#queue-note) |    120.0      |
+accountId | summoner_info   | User’s account id                           | See [notes](#accountId-note) |    120.0      |
+
+#### *id* note
+
+Data Example:
+
+```json
+{"feature":"summoner_info","category":"summoner_info","key":"id","value":57427695}
+```
+
+#### *region* note
+
+Data Example:
+
+```json
+{"feature":"summoner_info","category":"summoner_info","key":"region","value":"EUW"}
+```
+
+#### *champion* note
+
+```json
+{"feature":"summoner_info","category":"summoner_info","key":"champion","value":"Ezreal"}
+```
+
+#### *level* note
+
+Data Example:
+
+```json
+{"feature":"summoner_info","category":"summoner_info","key":"level","value":"139"}
+```
+
+#### *tier* note
+
+Data Example:
+
+```json
+{"feature":"summoner_info","category":"summoner_info","key":"tier","value":"PLATINUM"}
+```
+
+#### *division* note
+
+Data Example:
+
+```json
+{"feature":"summoner_info","category":"summoner_info","key":"division","value":"IV"}
+```
+
+#### *queue* note
+
+Data Example:
+
+```json
+{"feature":"summoner_info","category":"summoner_info","key":"queue","value":"RANKED_SOLO_5x5"}
+```
+
+#### *accountId* note
+
+Data Example:
+
+```json
+{"feature":"summoner_info","category":"summoner_info","key":"accountId","value":"209958980"}
+```
 
 ## `teams`
 

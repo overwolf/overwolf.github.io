@@ -12,7 +12,7 @@ const CompLibrary = require('../../core/CompLibrary.js');
 const Container = CompLibrary.Container;
 const GridBlock = CompLibrary.GridBlock;
 
-function Help(props) {
+function Download(props) {
   const {config: siteConfig, language = ''} = props;
   const {baseUrl, docsUrl} = siteConfig;
   const docsPart = `${docsUrl ? `${docsUrl}/` : ''}`;
@@ -50,4 +50,4 @@ function Help(props) {
   );
 }
 
-module.exports = Help;
+module.exports = Download;

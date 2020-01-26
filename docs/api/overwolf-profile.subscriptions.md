@@ -8,7 +8,7 @@ The `overwolf.profile.subscriptions` API provides functions and events to help w
 
 * **Permissions required: profile**
 
-* **Read all the info about app subscriptions [here](../start/app-subscriptions).**
+* **Read all the info about app subscriptions [here](../start/subscriptions-overview).**
 
 ## Methods Reference
 

@@ -6,6 +6,41 @@ sidebar_label: Changelog
 
 Follow this entry for ongoing updates and changes to the project or tools:
 
+## Version 0.141 (Jan. 2020)
+
+* Manifest flag [enable_top_isolation](manifest-json#enable_top_isolation) has been "moved up" in the hirarchy:  
+  Now it's per app and not per windows - means, it's under the "data" node and not the "window" node.  
+  Note that it's backward compatible (means that if one of the app windows set this flag in the manifest - it will auto-merge to the entire app).
+* New function: [overwolf.utils.OpenFilePicker](overwolf-utils#openfilepickerfilter-initialpath-callback).  
+  Now also accepts an initialPath parameter.
+* Logs: now end with the extension "log" (instead of numbers).  
+  In addition, logs file names are now counted where the last number one is the newest file.  
+* New function: [overwolf.streaming.split](overwolf-streaming#splitstreamid-callback).  
+  Split video files.
+* Implement the main features of the [IO-Pluign](../topics/simple-io-plugin) inside the [overwolf.io](overwolf-io) API: 
+  * [overwolf.io.dir()](overwolf-io#dirpath-callback)
+  * [overwolf.io.readBinaryFile()](overwolf-io#readbinaryfilepath-options-callback)
+  * [overwolf.io.readTextFile()](overwolf-io#readtextfilepath-options-callback)
+  * [overwolf.io.exist()](overwolf-io#existpath-callback)
+  * [overwolf.io.listenOnFile()](overwolf-io#listenonfileid-path-option-callback)
+  * [overwolf.io.stopFilelistener()](overwolf-io#stopfilelistenerid)
+* [League of Legends Launcher Events](overwolf-games-launchers-events-lol#docsNav)
+  * New [status page](../status/lol-launcher) for LOL launcher.
+  * New update:
+    * is_garena_user
+* [Hearthstone game events](overwolf-games-events-hearthstone#docsNav)
+  * New info updates:
+    * Adventure Deck
+    * adventure_loot_options
+    * battlegrounds_rating
+* All game-events
+  * New update:
+    * gep_internal
+
+## Version 0.140 (Dec. 2019)
+
+* Internal bug fixes and refactoring.
+
 ## Version 0.139 (Dec. 2019)
 
 * [overwolf.utils.getSystemInformation()](overwolf-utils#getsysteminformationcallback) now has **VideoEncSupport** property.  
@@ -112,7 +147,7 @@ This means no more if (!result || !result.status ...) checks. Instead, this shou
   * New update:
     * end_game
     
-* [Hearhstone game events](overwolf-games-events-heartstone#docsNav)
+* [Hearthstone game events](overwolf-games-events-hearthstone#docsNav)
   * New events:
     * match_type
     * match_start/end
