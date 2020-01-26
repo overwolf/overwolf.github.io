@@ -269,7 +269,7 @@ assist    |assists – The total number of assists the player has. |Whenever the
 Data Example:
 
 ```json
-{"events":[{"name":"assist","data":"{"assist":1}"}]}
+{"events":[{"name":"assist","data":"{\"assists\": 1}"}]}
 ```
 
 ## `death`
