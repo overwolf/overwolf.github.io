@@ -45,11 +45,13 @@ key          | Category    | Values                    | Notes                 |
 ------------ | ------------| ------------------------- | --------------------- | ------------- | 
 gep_internal | gep_internal| Local + Public version number|See [notes](#gep_internal-note)|   143.0       |
 
-#### *gep_internal* note
+#### `gep_internal` note
 
 Data Example:
 
+```json
 {"feature":"gep_internal","category":"gep_internal","key":"version_info","value":"{\"local_version\":\"143.0.10\",\"public_version\":\"143.0.10\",\"is_updated\":true}"}
+```
 
 ## me
 
@@ -290,7 +292,7 @@ Event     | Event Data        | Fired When                                      
 ----------| ------------------| ------------------------------------------------------------------ | ------------------ | --------------|
 kill_feed | See example below | When information is presented on the game’s UI (top right corner). |                    |     130.0     | 
 
-#### *kill_feed* notes
+#### `kill_feed` notes
 
 The following properties are provided:
 
