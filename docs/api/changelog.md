@@ -33,6 +33,9 @@ Follow this entry for ongoing updates and changes to the project or tools:
     * Adventure Deck
     * adventure_loot_options
     * battlegrounds_rating
+* All game-events
+  * New update:
+    * gep_internal
 
 ## Version 0.140 (Dec. 2019)
 
