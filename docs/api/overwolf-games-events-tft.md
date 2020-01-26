@@ -23,6 +23,7 @@ If you would like to know when the user is going to play TFT (hit the "Play" but
 
 ## Available Features
 
+* [gep_internal](#gep_internal)
 * [me](#me)
 * [match_info](#match_info)
 * [roster](#roster)
@@ -38,6 +39,22 @@ It's highly recommended to communicate errors to your users. Check game event st
 :::important
 Because LOL and TFT share the same GameID, when checking TFTs game event status please use 21570 as the unique GameID for TFT.
 :::
+
+## `gep_internal`
+
+### Info Updates
+
+key          | Category    | Values                    | Notes                 | Since GEP Ver. |
+------------ | ------------| ------------------------- | --------------------- | ------------- | 
+gep_internal | gep_internal| Local + Public version number|See [notes](#gep_internal-note)|   143.0       |
+
+#### `gep_internal` note
+
+Data Example:
+
+```json
+{"feature":"gep_internal","category":"gep_internal","key":"version_info","value":"{"local_version":"143.0.10","public_version":"143.0.10","is_updated":true}"}
+```
 
 ## `me`
 
