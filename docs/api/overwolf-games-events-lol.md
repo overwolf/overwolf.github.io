@@ -19,6 +19,7 @@ Note that you can also use the LOL game launcher events. Read more [here](overwo
 
 ## Available Features
 
+* [gep_internal](#gep_internal)
 * [matchState](#matchstate)
 * [match_info](#match_info)
 * [death](#death)
@@ -41,6 +42,22 @@ Note that you can also use the LOL game launcher events. Read more [here](overwo
 ## Game events status
 
 It's highly recommended to communicate errors and warnings to your app users. Check current game event status [here](../status/all) or  easily check game event status from your app [using our API](../topics/howto-check-events-status-from-app).
+
+## `gep_internal`
+
+### Info Updates
+
+key          | Category    | Values                    | Notes                 | Since GEP Ver. |
+------------ | ------------| ------------------------- | --------------------- | ------------- | 
+gep_internal | gep_internal| Local + Public version number|See [notes](#gep_internal-note)|   143.0       |
+
+#### `gep_internal` note
+
+Data Example:
+
+```json
+{"feature":"gep_internal","category":"gep_internal","key":"version_info","value":"{"local_version":"143.0.10","public_version":"143.0.10","is_updated":true}"}
+```
 
 ## `matchState`
 
