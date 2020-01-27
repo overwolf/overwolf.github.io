@@ -21,7 +21,40 @@ The most simple and basic usage of this library can be done by adding a few line
 ```html
 <div id="ad-div"></div>
 <script src="https://content.overwolf.com/libs/ads/latest/owads.min.js" async onload="onOwAdReady()"></script>
-<script>function onOwAdReady(){new OwAd(document.getElementById("ad-div"))}</script>
+<script>
+  // This isn't a recommended way of holding the ads object - we only want to demonstrate
+  // some concepts for the sake of documentation.
+  let _owAd = null;
+ 
+  // Setup a fallback timeout to check that onOwAdReady was called.
+  // The owads.min.js might have been blocked.
+  setTimeout(() => {
+    if (!owAd) {
+      console.error("Couldn't load owads.min.js!");
+    }
+  }, 20000);
+ 
+ 
+  function onOwAdReady() {
+    if (!OwAd) {
+      // This scenario might happen if the user is running behind an ISP/public 
+      // router that might have detected the library as an ad and redirected the
+      // request to an error page.
+      // The app should decide how to handle this scenario (trigger an event, 
+      // fallback to a place holder etc...)
+      return;
+    }
+ 
+    // The creation of an OwAd object will automatically load an ad (so no need to
+    // call refreshAd here).
+    _owAd = new OwAd(document.getElementById("ad-div"));
+ 
+    _owAd.addEventListener('ow_internal_rendered', () => {
+      // It is now safe to call any API you want ( e.g. _owAd.refreshAd() or 
+      // _owAd.removeAd() )
+    });
+  }
+</script>
 ```
 
 #### This code snippet does the following
