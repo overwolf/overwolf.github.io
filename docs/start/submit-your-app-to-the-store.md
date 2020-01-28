@@ -119,10 +119,6 @@ A json file containing the Appstore information of your app. You can configure a
   "category_description": "This is the Appstore category that the app will appear in."
    //Currently only one category per app is possible.
    //Possible values: "for games", "chat", "entertainment", "social", "utilities", "voip"
-  "video": {
-    "id": "(This is optional) The id of the app's video on YouTube, appears after the 'watch?v=' part of the YouTube link, e.g. '5k70GQxHsOU'",
-    "service": "youtube"
-  },
   "tags": ["Search tags for your app, limited to five (5) tags. Be sure the tags are relevant", "Make sure the tags are comma separated and in quotes"],
   "title": "App name"
 }
