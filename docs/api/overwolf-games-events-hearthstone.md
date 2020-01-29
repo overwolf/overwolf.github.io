@@ -34,7 +34,7 @@ key          | Category    | Values                    | Notes                 |
 ------------ | ------------| ------------------------- | --------------------- | ------------- | 
 gep_internal | gep_internal| Local + Public version number|See [notes](#gep_internal-note)|   143.0       |
 
-#### *gep_internal* note
+#### `gep_internal` note
 
 Data Example:
 
@@ -50,7 +50,7 @@ key               | Category    | Values                    | Notes             
 ----------------- | ------------| ------------------------- | --------------------- | ------------- |
 collection        | game_info   | Current card collection of the local player. See [notes](#collection-note) |     |   117.1 |
 
-#### *collection* note
+#### `collection` note
 
 * The “collection”  data is available as soon as the player logs into Hearthstone.
 * The collection is updated whenever the user adds/removes a card.
@@ -87,7 +87,7 @@ key               | Category    | Values                    | Notes             
 ----------------- | ------------| ------------------------- | --------------------- | ------------- |
 scene_state | game_info   |  Current game scene. See [notes](#scene_state-note) |     |   117.1 |
 
-#### *scene_state* note
+#### `scene_state` note
 
 Can be one of the following:
 * scene_startup
@@ -116,8 +116,7 @@ selected_deck     | selected_deck | The selected deck.  |  See [notes](#selected
 Adventure Deck     | decks | The currently played deck on adventure mode.  |  See [notes](#Adventure Deck-note)   |   143.0 |
 adventure_loot_options | decks | The currently offered 3-option draft (between bosses)  |  See [notes](#adventure_loot_options-note)   |   143.0 |
 
-
-#### *deck_id* note
+#### `deck_id` note
 
 Decks are “visible” when the local player starts a new game, during the “deck selection” screen, or when the local player enters the “My Collection” menu. The following data is being provided for each deck:
 * Deck name / id
@@ -149,7 +148,7 @@ Example for a “deck” info-update structure:
 
 Arena Decks, unlike standard decks, will be updated each time the local player chooses a card during the Arena Draft phase.
 
-#### *selected_deck* note
+#### `selected_deck` note
 
 The following data is provided when the local player selects a deck:
 
@@ -162,7 +161,7 @@ Example for a “selected deck” structure:
 `{"feature":"decks","category":"selected_deck","key":"selected_deck","value":
 "{"deck_id":"706741699","deck_name":"Basic Shaman","class_skin":"Thrall" }`
 
-#### *adventure deck* note
+#### `adventure deck` note
 
 Data Example:
 
@@ -188,7 +187,7 @@ Data Example:
 }
 ```
 
-#### *adventure_loot_options* note
+#### `adventure_loot_options` note
 
 Data Example:
 
@@ -231,7 +230,7 @@ key               | Category    | Values                    | Notes             
 localPlayer | playersInfo   |  See [notes](#localPlayer-note) |     |   123.0 |
 opponent | playersInfo   |  See [notes](#opponent-note) |     |   123.0 |
 
-#### *localPlayer* note
+#### `localPlayer` note
 
 * "<b>name</b>" – name of local player
 * "<b>standardRank</b>" – rank of the player in Constructed Standard mode (int)
@@ -244,7 +243,7 @@ opponent | playersInfo   |  See [notes](#opponent-note) |     |   123.0 |
 `{"playersInfo":{"localPlayer":"{"name":"ччггтуычб","standardRank":25,"standardLegendRank":0,
 "wildRank":25,"wildLegendRank":0,"cardBackId":0,"cardId":"HERO_02"}"}`
 
-#### *opponent* note
+#### `opponent` note
 
 * "<b>name</b>" – name of the opponent
 * "<b>standardRank</b>" – The rank of the player in Constructed, in Standard mode (int)
@@ -273,8 +272,9 @@ key               | Category    | Values                    | Notes             
 match_type        | match_info  | The type of the current match. |See [notes](#match_type-note)|   134.0 |
 pseudo_match_id   | match_info  | The ID of the current match. |See [notes](#pseudo_match_id-note)|   134.0 |
 battlegrounds_rating   | match_info  | The local player's BG rating. |See [notes](#battlegrounds_rating-note)|   143.0 |
+adventure_stats   | match_info | The stats of the current adventure run.  | See [notes](#adventure_stats-note) |   143.0 |
 
-#### *match_type* note
+#### `match_type` note
 
 :::tip
 If you would like to know when the user is going to play the `battlegrounds` mode, you can listen to the match_type info update, and check If the value is `GT_BATTLEGROUNDS`.
@@ -288,7 +288,7 @@ Data Example:
 {"feature":"match","category":"match_info","key":"match_type","value":"GT_BATTLEGROUNDS"}
 ```
 
-#### *pseudo_match_id* note
+#### `pseudo_match_id` note
 
 This is an Overwolf generated code for internal use, not issued by the game or by Blizzard.
 
@@ -296,12 +296,27 @@ Data Example:
 
 `{"info":{"match_info":{"pseudo_match_id":"5a7e3729-993c-414d-8e3f-592faeef81e7"}},"feature":"match_info"}`
 
-#### *battlegrounds_rating* note
+#### `battlegrounds_rating` note
 
 Data Example:
 
 ```json
 {"info":{"match_info":{"battlegrounds_rating":"2153"}},"feature":"match_info"}
+```
+
+#### `adventure_stats` note
+
+Data Example:
+
+```json
+{ 
+   "info":{ 
+      "match_info":{ 
+         "adventure_stats":"{"adventure_trl":{"dungeon_crawl_all_classes_total_boss_wins":29,"dungeon_crawl_all_classes_total_run_wins":1,"dungeon_crawl_hunter_boss_wins":1,"dungeon_crawl_hunter_run_wins":0,"dungeon_crawl_paladin_boss_wins":0,"dungeon_crawl_paladin_run_wins":0,"dungeon_crawl_mage_boss_wins":7,"dungeon_crawl_mage_run_wins":0,"dungeon_crawl_warlock_boss_wins":6,"dungeon_crawl_warlock_run_wins":0,"dungeon_crawl_warrior_boss_wins":8,"dungeon_crawl_warrior_run_wins":1,"dungeon_crawl_shaman_boss_wins":6,"dungeon_crawl_shaman_run_wins":0,"dungeon_crawl_priest_boss_wins":1,"dungeon_crawl_priest_run_wins":0,"dungeon_crawl_rogue_boss_wins":0,"dungeon_crawl_rogue_run_wins":0,"dungeon_crawl_druid_boss_wins":0}}"
+      }
+   },
+   "feature":"match_info"
+}
 ```
 
 ### Events
