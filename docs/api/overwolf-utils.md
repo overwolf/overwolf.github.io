@@ -44,6 +44,8 @@ Common use cases:
 * [overwolf.utils.InputDeviceInfo](#inputdeviceinfo-object) Object
 * [overwolf.utils.MonitorInfo](#monitorinfo-object) Object
 * [overwolf.utils.Display](#display-object) Object
+* [overwolf.utils.OpenFilePickerResult](#openfilepickerresult-object) Object
+
 
 
 
@@ -100,21 +102,13 @@ The accepted input for the `keyString` param is identical to Microsoft's [Key en
 
 > Opens a file picker dialog to browse for a file. A url to the selected file will be returned.
 
-Parameter | Type     | Description                                                                                  |
---------- | ---------| -------------------------------------------------------------------------------------------- |
-filter    | string   | A file filter. Provide an empty string for wild cards or seperate value by commas (,). Ex. myFile*.*,*.txt      |
-callback  | function | Called with a url to the selected file                                                       |
+Parameter | Type                                                                   | Description                                                                                                  |
+--------- | -----------------------------------------------------------------------| ------------------------------------------------------------------------------------------------------------ |
+filter    | string                                                                 | A file filter. See [notes](#filter-notes)   |
+callback  | ([Result: OpenFilePickerResult](#openfilepickerresult-object)) => void | Called with a url to the selected file                                                                       |
+#### *filter* notes
 
-#### Callback argument: Success
-
-A callback function which will be called with the status of the request
-
-```json
-{
-    "status": "success",
-    "url": "overwolf-fs://E/Video"
-}
-```
+Provide an empty string for wild cards or seperate value by commas (,). Ex. myFile*.*,*.txt.
 
 ## openFilePicker(filter, initialPath, callback)
 #### Version added: 0.141
@@ -122,11 +116,12 @@ A callback function which will be called with the status of the request
 
 > Opens a file picker dialog to browse for a file. A url to the selected file will be returned.  In addition, this function also allows you to set the initial path/folder to start browsing from.
 
-Parameter    | Type     | Description                                                                                  |
------------- | ---------| -------------------------------------------------------------------------------------------- |
-filter       | string   | A file filter. Provide an empty string for wild cards or seperate value by commas (,). Ex. myFile*.*,*.txt      |
-initialPath  | string   | An optional path to start browsing from                                                      |
-callback     | function | Called with a url to the selected file                                                       |
+Parameter   | Type                                                                   | Description                                                                                                  |
+----------- | -----------------------------------------------------------------------| ------------------------------------------------------------------------------------------------------------ |
+filter      | string                                                                 | A file filter.  A file filter. See [notes](#filter-notes)   |
+initialPath | string                                                                 | An optional path to start browsing from                                                                      |
+callback    | ([Result: OpenFilePickerResult](#openfilepickerresult-object)) => void | Called with a url to the selected file              |
+
 
 ## openFolderPicker(initialPath, callback)
 #### Version added: 0.91
@@ -545,3 +540,20 @@ width              | number   |                                             |
 height             | number   |                                             |
 is_primary         | boolean  |                                             |
 
+## OpenFilePickerResult Object
+
+Parameter          | Type     | Description                                 |
+-------------------| ---------| ------------------------------------------- |
+*success*          | boolean  | inherited from the "Result" Object          |
+*error*            | string   | inherited from the "Result" Object          |
+url                | string   | a url to the selected file                  |
+
+#### Example data: Success
+
+
+```json
+{
+    "success": true,
+    "url": "overwolf-fs://E/Video"
+}
+```
