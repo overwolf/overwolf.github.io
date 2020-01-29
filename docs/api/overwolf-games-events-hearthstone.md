@@ -116,7 +116,6 @@ selected_deck     | selected_deck | The selected deck.  |  See [notes](#selected
 Adventure Deck     | decks | The currently played deck on adventure mode.  |  See [notes](#Adventure Deck-note)   |   143.0 |
 adventure_loot_options | decks | The currently offered 3-option draft (between bosses)  |  See [notes](#adventure_loot_options-note)   |   143.0 |
 
-
 #### *deck_id* note
 
 Decks are “visible” when the local player starts a new game, during the “deck selection” screen, or when the local player enters the “My Collection” menu. The following data is being provided for each deck:
@@ -273,6 +272,7 @@ key               | Category    | Values                    | Notes             
 match_type        | match_info  | The type of the current match. |See [notes](#match_type-note)|   134.0 |
 pseudo_match_id   | match_info  | The ID of the current match. |See [notes](#pseudo_match_id-note)|   134.0 |
 battlegrounds_rating   | match_info  | The local player's BG rating. |See [notes](#battlegrounds_rating-note)|   143.0 |
+adventure_stats   | match_info | The stats of the current adventure run.  | See [notes](#adventure_stats-note) |   143.0 |
 
 #### *match_type* note
 
@@ -302,6 +302,21 @@ Data Example:
 
 ```json
 {"info":{"match_info":{"battlegrounds_rating":"2153"}},"feature":"match_info"}
+```
+
+#### *adventure_stats* note
+
+Data Example:
+
+```json
+{ 
+   "info":{ 
+      "match_info":{ 
+         "adventure_stats":"{"adventure_trl":{"dungeon_crawl_all_classes_total_boss_wins":29,"dungeon_crawl_all_classes_total_run_wins":1,"dungeon_crawl_hunter_boss_wins":1,"dungeon_crawl_hunter_run_wins":0,"dungeon_crawl_paladin_boss_wins":0,"dungeon_crawl_paladin_run_wins":0,"dungeon_crawl_mage_boss_wins":7,"dungeon_crawl_mage_run_wins":0,"dungeon_crawl_warlock_boss_wins":6,"dungeon_crawl_warlock_run_wins":0,"dungeon_crawl_warrior_boss_wins":8,"dungeon_crawl_warrior_run_wins":1,"dungeon_crawl_shaman_boss_wins":6,"dungeon_crawl_shaman_run_wins":0,"dungeon_crawl_priest_boss_wins":1,"dungeon_crawl_priest_run_wins":0,"dungeon_crawl_rogue_boss_wins":0,"dungeon_crawl_rogue_run_wins":0,"dungeon_crawl_druid_boss_wins":0}}"
+      }
+   },
+   "feature":"match_info"
+}
 ```
 
 ### Events
