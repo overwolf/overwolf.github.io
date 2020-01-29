@@ -6,9 +6,8 @@ sidebar_label: Changelog
 
 Follow this entry for ongoing updates and changes to the project or tools:
 
-## Version 0.142 (Dec. 2020)
+## Version 0.142 (Feb. 2020)
 
-* To Be Announced.
 * [Hearthstone game events](overwolf-games-events-hearthstone#docsNav)
   * New info updates:
     * adventure_stats
