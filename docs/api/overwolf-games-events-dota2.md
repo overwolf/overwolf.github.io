@@ -754,10 +754,11 @@ Data Example:
 
 key               | Category    | Values                    | Notes                 | Since GEP Ver. |
 ----------------- | ------------| ------------------------- | --------------------- | -------------- |
-team              | me          |                           |                       |  139.0         |
-steam_id          | me          |                           |                       |  139.0         |
-hero              | me          |                           |                       |  139.0         |
+team              | me          |  radiant / dire           | See [notes](#me-note) |  139.0         |
+steam_id          | me          |  ID number                | See [notes](#me-note) |  139.0         |
+hero              | me          | Name of the hero you're playing | See [notes](#me-note) |  139.0         |
 
+#### *me* note
 
 Event data example:
 
