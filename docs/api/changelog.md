@@ -6,6 +6,10 @@ sidebar_label: Changelog
 
 Follow this entry for ongoing updates and changes to the project or tools:
 
+## Version 0.142 (Dec. 2020)
+
+* To Be Announced.
+
 ## Version 0.141 (Jan. 2020)
 
 * Manifest flag [enable_top_isolation](manifest-json#enable_top_isolation) has been "moved up" in the hirarchy:  
