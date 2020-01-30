@@ -63,12 +63,13 @@ The term streaming might be a bit misleading – we regard saving a video to the
 * [overwolf.streaming.StreamDeviceVolume](#streamdevicevolume-object) Object
 * [overwolf.streaming.StreamPeripheralsCaptureOptions](#streamperipheralscaptureoptions-object) Object
 * [overwolf.streaming.StreamPeripheralsCaptureOptions](#streamperipheralscaptureoptions-object) Object
-* [overwolf.streaming.enums.StreamMouseCursor](#overwolfstreamingenumsstreammousecursor-enum)
+* [overwolf.streaming.enums.StreamMouseCursor](#streammousecursor-enum)
 * [overwolf.streaming.StreamIngestServer](#streamingestserver-object) Object
 * [overwolf.streaming.WatermarkSettings](#watermarksettings-object) Object
 * [overwolf.streaming.WatermarkSettings](#watermarksettings-object) Object
-* [overwolf.streaming.enums.StreamingMode](#overwolfstreamingenumsstreamingmode-enum)
-* [overwolf.streaming.enums.ObsStreamingMode](#overwolfstreamingenumsobsstreamingmode-enum)
+* [overwolf.streaming.enums.StreamingMode](#streamingmode-enum)
+* [overwolf.streaming.enums.ObsStreamingMode](#streamingmode-enum)
+* [overwolf.streaming.SplitResult](#splitresult-object) Object
 
 ## The basic usage flow should be:
 
@@ -269,10 +270,10 @@ overwolf.streaming.start(
 
 > Stops the given stream.
 
-Parameter | Type                                            | Description             |
---------- | ------------------------------------------------| ----------------------- |
-streamId  |int | The id of the stream to stop     |
-callback  | function                                        | Returns with the result |
+Parameter | Type        | Description                    |
+--------- | ------------| ------------------------------ |
+streamId  | int         | The id of the stream to stop   |
+callback  | function    | Returns with the result        |
 
 #### Callback argument: Success
 
@@ -299,10 +300,10 @@ A callback function which will be called with the status of the request
 This is allow only when start recording with [enable_on_demand_split](#streamvideooptions-object) setting.  
 [onVideoFileSplited](#onvideofilesplited) event will be fired when video splits.
 
-Parameter | Type                                            | Description                  |
---------- | ------------------------------------------------| ---------------------------- |
-streamId  |int                                              | The id of the stream to stop |
-callback  | function                                        | Returns with the result      |
+Parameter | Type                                            | Description                   |
+--------- | ------------------------------------------------| ----------------------------- |
+streamId  | int                                             | The id of the stream to split |
+callback  | ([Result: SplitResult](#splitresult-object)) => void       | Returns with the result       |
 
 ## changeVolume(streamId, audioOptions, callback)
 
@@ -433,7 +434,7 @@ A callback function which will be called with the status of the request
 Parameter     | Type                                                                                     | Description                                              |
 --------------| -----------------------------------------------------------------------------------------| ---------------------------------------------------------|
 windowId      | string                                                                                   | The id of the window for which to set the streaming mode |
-streamingMode | [overwolf.streaming.enums.StreamingMode](#overwolfstreamingenumsstreamingmode-enum) enum | The desired streaming mode                               |
+streamingMode | [overwolf.streaming.enums.StreamingMode](#streamingmode-enum) enum | The desired streaming mode                               |
 callback      | function                                                                                 | Returns with the result  (Optional)                      |
 
 #### Callback argument: Success
@@ -461,7 +462,7 @@ A callback function which will be called with the status of the request
 Parameter     | Type                                                                                            | Description                                              |
 --------------| ------------------------------------------------------------------------------------------------| ---------------------------------------------------------|
 windowId      | string                                                                                          | The id of the window for which to set the streaming mode |
-streamingMode | [ overwolf.streaming.enums.ObsStreamingMode](#overwolfstreamingenumsobsstreamingmode-enum) enum | The desired OBS streaming mode                           |
+streamingMode | [ObsStreamingMode](#streamingmode-enum) enum | The desired OBS streaming mode                           |
 callback      | function                                                                                        | Returns with the result  (Optional)                      |
 
 #### Callback argument: Success
@@ -596,7 +597,7 @@ Parameter                  | Type                                               
 ---------------------------| --------------------------------------------------------------------------------------------------| ------------------------------|
 streamId	                 | int                                                                                               | The id of the stream                   |
 newOptions	               | [StreamDesktopCaptureOptions](#streamdesktopcaptureoptions-object) Object                         | The updated desktop capture streaming options                    |
-mouseCursorStreamingMethod | [overwolf.streaming.enums.StreamMouseCursor](#overwolfstreamingenumsstreammousecursor-enum) enum  | The updated value of the mouse cursor streaming method           |
+mouseCursorStreamingMethod | [overwolf.streaming.enums.StreamMouseCursor](#streammousecursor-enum) enum  | The updated value of the mouse cursor streaming method           |
 callback                   | function                                                                                          | A callback function to call with success or failure indicationa     |
 
 #### Callback argument: Success
@@ -1085,9 +1086,9 @@ Stream capture options for peripheral devices.
 
 | Name                 | Type                                                                                               | Description                                                     | Since |
 |----------------------| -------------------------------------------------------------------------------------------------- |-----------------------------------------------------------------| ----- |
-| capture_mouse_cursor | [overwolf.streaming.enums.StreamMouseCursor](#overwolfstreamingenumsstreammousecursor-enum) enum   |  Defines when to capture the mouse cursor while streaming is on | 0.83  |
+| capture_mouse_cursor | [overwolf.streaming.enums.StreamMouseCursor](#streammousecursor-enum) enum   |  Defines when to capture the mouse cursor while streaming is on | 0.83  |
 
-## overwolf.streaming.enums.StreamMouseCursor enum
+## StreamMouseCursor enum
 
 #### Version added: 0.83
 
@@ -1119,7 +1120,7 @@ The basic stream information.
 |----------------| -------|---------------------------------------------------------------------------|------ |
 | showWatermark  | bool   | Determines whether or not to display the Overwolf watermark on the stream | 0.78  |
 
-## overwolf.streaming.enums.StreamingMode enum
+## StreamingMode enum
 
 #### Version added: 0.78
 
@@ -1129,7 +1130,7 @@ The basic stream information.
 | Always       | Always stream the window, even when it is hidden or minimized. The viewers will continue to see it while you don’t  |
 | Never        | Never stream the window. The viewers will not see the window even if you do see it.                                 |
 
-## overwolf.streaming.enums.ObsStreamingMode enum
+## ObsStreamingMode enum
 
 #### Version added: 0.78
 
@@ -1138,3 +1139,13 @@ The basic stream information.
 | OBSNoAwareness              | The default Overwolf window style                                                                                                                       |
 | OBSAwareness                | Allows to capture the window using Overwolf OBS plugin and will not be visible ingame or by Overwolf capturing apps (will still be visible in desktop)  |
 | OBSAwarenessHideFromDeskTop | Same as OBSAwareness but also not visible in desktop (hidden)                                                                                           |
+## SplitResult Object
+
+#### Version added: 0.141
+
+Returns with the result.
+
+Parameter          | Type     | Description                                 |
+-------------------| ---------| ------------------------------------------- |
+*success*          | boolean  | inherited from the "Result" Object          |
+*error*            | string   | inherited from the "Result" Object          |
