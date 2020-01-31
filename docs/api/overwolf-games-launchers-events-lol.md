@@ -148,9 +148,10 @@ Data includes information such as:
 * True Damage
 * etc. etc..
 
-Object example : 
+The following object contains one team and one player, but the real object contains 2 two and X player per team : 
 
-```
+```json
+{
    "accountId":23894133,
          "basePoints":0,
          "battleBoostIpEarned":0,
@@ -376,8 +377,7 @@ Object example :
          ],
          "timeUntilNextFirstWinBonus":0,
          "userId":23894133
-         }
-   }
+    }
 ```
 
 ## `lcu_info`
