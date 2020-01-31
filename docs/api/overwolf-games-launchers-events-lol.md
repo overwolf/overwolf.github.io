@@ -148,7 +148,7 @@ Data includes information such as:
 * True Damage
 * etc. etc..
 
-The following object contains one team and one player, but the real object contains 2 two and X player per team : 
+The following object contains one team and one player, but the real object contains 2 teams and X player per team : 
 
 ```json
 {
