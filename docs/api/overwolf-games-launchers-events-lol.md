@@ -83,6 +83,75 @@ There is a great deal of information provided. Few Example:
 
 And much more.
 
+<details>
+<summary>Data example: (Click here to toggle)</summary>
+
+```json
+{
+  "actions": [
+    
+  ],
+  "allowBattleBoost": false,
+  "allowDuplicatePicks": false,
+  "allowLockedEvents": false,
+  "allowRerolling": false,
+  "allowSkinSelection": true,
+  "bans": {
+    "myTeamBans": [
+      
+    ],
+    "numBans": 0,
+    "theirTeamBans": [
+      
+    ]
+  },
+  "benchChampionIds": [
+    
+  ],
+  "benchEnabled": false,
+  "boostableSkinCount": 1,
+  "chatDetails": {
+    "chatRoomName": "",
+    "chatRoomPassword": null
+  },
+  "counter": -1,
+  "entitledFeatureState": {
+    "additionalRerolls": 0,
+    "unlockedSkinIds": [
+      
+    ]
+  },
+  "hasSimultaneousBans": false,
+  "hasSimultaneousPicks": false,
+  "isSpectating": false,
+  "localPlayerCellId": -1,
+  "lockedEventIndex": -1,
+  "myTeam": [
+    
+  ],
+  "rerollsRemaining": 0,
+  "skipChampionSelect": false,
+  "theirTeam": [
+    
+  ],
+  "timer": {
+    "adjustedTimeLeftInPhase": 0,
+    "adjustedTimeLeftInPhaseInSec": 0,
+    "internalNowInEpochMs": 0,
+    "isInfinite": false,
+    "phase": "",
+    "timeLeftInPhase": 0,
+    "timeLeftInPhaseInSec": 0,
+    "totalTimeInPhase": 0
+  },
+  "trades": [
+    
+  ]
+}
+```
+
+</details>
+
 ## `lobby_info`
 
 ### Info Updates
@@ -108,37 +177,29 @@ The queueID of the currently chosen game mode. Example:
 key   | Category    | Values                    | Notes                 | Since Version |
 ------| ------------| ------------------------- | --------------------- | ------------- |
 tft_end_game_stats | end_game_tft| See [notes](#tft_end_game_stats-note) |                |   134.0       |
-lol_end_game_stats | end_game_lol| See [notes](#end_game_stats-note) |                |   137.0       |
+lol_end_game_stats | end_game_lol| See [notes](#lol_end_game_stats-note) |                |   137.0       |
 
 #### *tft_end_game_stats* note
 
 Data Example:
 
 ```json
-{  
-   "launcherClassId":10902,
-   "feature":"end_game",
-   "info":{  
-      "end_game_tft":{  
-         "tft_end_game_stats":"{"gameId":4156875865,"gameLength":1983,"isRanked":false,"localPlayer":
-{"boardPieces":[{"icon":"/lol-game-data/assets/v1/champion-icons/10.png","level":2,"name":"Kayle","price":5}
-,{"icon":"/lol-game-data/assets/v1/champion-icons/222.png","level":2,"name":"Jinx","price":4},
-{"icon":"/lol-game-data/assets/v1/champion-icons/89.png","level":2,"name":"Leona","price":4},
-{"icon":"/lol-game-data/assets/v1/champion-icons/254.png","level":2,"name":"Vi","price":3},
-{"icon":"/lol-game-data/assets/v1/champion-icons/236.png","level":2,"name":"Lucian","price":2},
-{"icon":"/lol-game-data/assets/v1/champion-icons/114.png","level":2,"name":"Fiora","price":1},
-{"icon":"/lol-game-data/assets/v1/champion-icons/86.png","level":2,"name":"Garen","price":1},
-{"icon":"/lol-game-data/assets/v1/champion-icons/67.png","level":2,"name":"Vayne","price":1}],"companion":{"colorName":"","icon":"lol-game-data/assets/ASSETS/Loadouts/Companions/Tooltip_MiniGolem_Grey_Tier1.Companions.png","speciesName":"Runespirit"}
-,"ffaStanding":0,"health":13,"iconId":3552,"isLocalPlayer":true,"puuid":"4379f318-5717-5891-8c29-29d703729921","rank":2,"summonerId":57427695,"summonerName":"PoSeiDonProX1"}
-...
-               }
+{
+   "launcherClassId": 10902,
+   "feature": "end_game",
+   "info": {
+      "end_game_tft": 
+      {
+         "tft_end_game_stats":
+         "{"gameId":4156875865,"gameLength":1983,"isRanked":false,"localPlayer": {"boardPieces":[{"icon":"/lol-game-data/assets/v1/champion-icons/10.png","level":2,"name":"Kayle","price":5} ,{"icon":"/lol-game-data/assets/v1/champion-icons/222.png","level":2,"name":"Jinx","price":4}, {"icon":"/lol-game-data/assets/v1/champion-icons/89.png","level":2,"name":"Leona","price":4}, {"icon":"/lol-game-data/assets/v1/champion-icons/254.png","level":2,"name":"Vi","price":3}, {"icon":"/lol-game-data/assets/v1/champion-icons/236.png","level":2,"name":"Lucian","price":2}, {"icon":"/lol-game-data/assets/v1/champion-icons/114.png","level":2,"name":"Fiora","price":1}, {"icon":"/lol-game-data/assets/v1/champion-icons/86.png","level":2,"name":"Garen","price":1}, {"icon":"/lol-game-data/assets/v1/champion-icons/67.png","level":2,"name":"Vayne","price":1}],"companion":{"colorName":"","icon":"lol-game-data/assets/ASSETS/Loadouts/Companions/Tooltip_MiniGolem_Grey_Tier1.Companions.png","speciesName":"Runespirit"} ,"ffaStanding":0,"health":13,"iconId":3552,"isLocalPlayer":true,"puuid":"4379f318-5717-5891-8c29-29d703729921","rank":2,"summonerId":57427695,"summonerName":"PoSeiDonProX1"}
+      }
    }
 }
 ```
 
-#### *end_game_stats* note
+#### *lol_end_game_stats* note
 
-Provides a variety of data regarding the previous game.
+Provides a variety of data regarding the previous game.  
 Data includes information such as:
 
 * Damage Dealt
@@ -148,237 +209,324 @@ Data includes information such as:
 * True Damage
 * etc. etc..
 
-The following object contains one team and one player, but the real object contains 2 teams and X player per team : 
+<details>
+<summary>Data example: (Click here to toggle)</summary>
 
 ```json
 {
-   "accountId":23894133,
-         "basePoints":0,
-         "battleBoostIpEarned":0,
-         "boostIpEarned":0,
-         "boostXpEarned":0,
-         "causedEarlySurrender":false,
-         "championId":75,
-         "coOpVsAiMinutesLeftToday":180,
-         "coOpVsAiMsecsUntilReset":0,
-         "completionBonusPoints":0,
-         "currentLevel":118,
-         "customMinutesLeftToday":0,
-         "customMsecsUntilReset":0,
-         "difficulty":"NONE",
-         "earlySurrenderAccomplice":false,
-         "elo":0,
-         "eloChange":0,
-         "experienceEarned":627,
-         "experienceTotal":1138,
-         "firstWinBonus":0,
-         "gameEndedInEarlySurrender":false,
-         "gameId":4385639801,
-         "gameLength":2002,
-         "gameMode":"CLASSIC",
-         "gameMutators":[
-             "TeambuilderRosterPositions(1)",
-             "Moments",
-             "Banana",
-             "BannerSystem(1)",
-             "TrophySystem(1)",
-             "BananasFoster(1)",
-             "SRTrophyWinner(8)"
-         ],
-         "gameType":"MATCHED_GAME",
-         "globalBoostXpEarned":0,
-         "imbalancedTeamsNoPoints":false,
-         "invalid":false,
-         "ipEarned":0,
-         "ipTotal":0,
-         "leveledUp":false,
-         "loyaltyBoostIpEarned":0,
-         "loyaltyBoostXpEarned":0,
-         "missionsXpEarned":400,
-         "myTeamStatus":"",
-         "newSpells":[
- 
-         ],
-         "nextLevelXp":3456,
-         "odinBonusIp":0,
-         "partyRewardsBonusIpEarned":0,
-         "pointsPenalties":null,
-         "preLevelUpExperienceTotal":511,
-         "preLevelUpNextLevelXp":3456,
-         "previousLevel":0,
-         "previousXpTotal":0,
-         "queueBonusEarned":0,
-         "queueType":"RANKED_SOLO_5x5",
-         "ranked":true,
-         "reportGameId":4385639801,
-         "rerollData":{
-             "pointChangeFromChampionsOwned":0,
-             "pointChangeFromGameplay":0,
-             "pointsUntilNextReroll":0,
-             "pointsUsed":0,
-             "previousPoints":0,
-             "rerollCount":0,
-             "totalPoints":0
-         },
-         "roomName":"endGame4385639801",
-         "roomPassword":"IOW2r8Z9ktvDEGup",
-         "rpEarned":0,
-         "sendStatsToTournamentProvider":false,
-         "skinId":75000,
-         "skinIndex":0,
-         "summonerId":20649197,
-         "summonerName":"NORA Sorikairo",
-         "talentPointsGained":0,
-         "teamBoost":{
-             "availableSkins":[
- 
-             ],
-             "ipReward":0,
-             "ipRewardForPurchaser":0,
-             "price":-1,
-             "skinUnlockMode":"",
-             "summonerName":"",
-             "unlocked":false
-         },
-         "teamEarlySurrendered":false,
-         "teams":[
-             {
-                 "championBans":[
-                     523,
-                     84,
-                     157,
-                     53,
-                     58
-                 ],
-                 "fullId":"",
-                 "isBottomTeam":true,
-                 "isPlayerTeam":true,
-                 "isWinningTeam":true,
-                 "memberStatusString":"",
-                 "name":"",
-                 "players":[
-                     {
-                         "botPlayer":false,
-                         "championId":145,
-                         "detectedTeamPosition":"BOTTOM",
-                         "elo":0,
-                         "eloChange":0,
-                         "gameId":4385639801,
-                         "isReportingDisabled":false,
-                         "items":[
-                             3072,
-                             3115,
-                             3157,
-                             3006,
-                             3124,
-                             3042,
-                             3340
-                         ],
-                         "leaver":false,
-                         "leaves":0,
-                         "level":42,
-                         "losses":0,
-                         "profileIconId":18,
-                         "selectedPosition":"BOTTOM",
-                         "skinIndex":14,
-                         "skinName":"Kaisa",
-                         "spell1Id":7,
-                         "spell2Id":4,
-                         "stats":{
-                             "ASSISTS":6,
-                             "BARRACKS_KILLED":0,
-                             "CHAMPIONS_KILLED":23,
-                             "COMBAT_PLAYER_SCORE":0,
-                             "GAME_ENDED_IN_EARLY_SURRENDER":0,
-                             "GAME_ENDED_IN_SURRENDER":0,
-                             "GOLD_EARNED":19996,
-                             "LARGEST_CRITICAL_STRIKE":0,
-                             "LARGEST_KILLING_SPREE":9,
-                             "LARGEST_MULTI_KILL":3,
-                             "LEVEL":17,
-                             "MAGIC_DAMAGE_DEALT_PLAYER":44003,
-                             "MAGIC_DAMAGE_DEALT_TO_CHAMPIONS":18170,
-                             "MAGIC_DAMAGE_TAKEN":4228,
-                             "MINIONS_KILLED":207,
-                             "NEUTRAL_MINIONS_KILLED":16,
-                             "NEUTRAL_MINIONS_KILLED_ENEMY_JUNGLE":4,
-                             "NEUTRAL_MINIONS_KILLED_YOUR_JUNGLE":4,
-                             "NUM_DEATHS":3,
-                             "OBJECTIVE_PLAYER_SCORE":0,
-                             "PERK0":8005,
-                             "PERK0_VAR1":1791,
-                             "PERK0_VAR2":1271,
-                             "PERK0_VAR3":519,
-                             "PERK1":9111,
-                             "PERK1_VAR1":1195,
-                             "PERK1_VAR2":580,
-                             "PERK1_VAR3":0,
-                             "PERK2":9104,
-                             "PERK2_VAR1":11,
-                             "PERK2_VAR2":20,
-                             "PERK2_VAR3":0,
-                             "PERK3":8299,
-                             "PERK3_VAR1":489,
-                             "PERK3_VAR2":0,
-                             "PERK3_VAR3":0,
-                             "PERK4":8473,
-                             "PERK4_VAR1":667,
-                             "PERK4_VAR2":0,
-                             "PERK4_VAR3":0,
-                             "PERK5":8453,
-                             "PERK5_VAR1":606,
-                             "PERK5_VAR2":346,
-                             "PERK5_VAR3":0,
-                             "PERK_PRIMARY_STYLE":8000,
-                             "PERK_SUB_STYLE":8400,
-                             "PHYSICAL_DAMAGE_DEALT_PLAYER":147180,
-                             "PHYSICAL_DAMAGE_DEALT_TO_CHAMPIONS":21930,
-                             "PHYSICAL_DAMAGE_TAKEN":12462,
-                             "PLAYER_SCORE_6":1,
-                             "SIGHT_WARDS_BOUGHT_IN_GAME":0,
-                             "SPELL1_CAST":96,
-                             "SPELL2_CAST":74,
-                             "TEAM_EARLY_SURRENDERED":0,
-                             "TEAM_OBJECTIVE":0,
-                             "TIME_CCING_OTHERS":0,
-                             "TOTAL_DAMAGE_DEALT":193325,
-                             "TOTAL_DAMAGE_DEALT_TO_BUILDINGS":6050,
-                             "TOTAL_DAMAGE_DEALT_TO_CHAMPIONS":40292,
-                             "TOTAL_DAMAGE_DEALT_TO_OBJECTIVES":16120,
-                             "TOTAL_DAMAGE_DEALT_TO_TURRETS":6050,
-                             "TOTAL_DAMAGE_SELF_MITIGATED":14229,
-                             "TOTAL_DAMAGE_SHIELDED_ON_TEAMMATES":0,
-                             "TOTAL_DAMAGE_TAKEN":17113,
-                             "TOTAL_HEAL":5470,
-                             "TOTAL_HEAL_ON_TEAMMATES":1232,
-                             "TOTAL_PLAYER_SCORE":0,
-                             "TOTAL_SCORE_RANK":0,
-                             "TOTAL_TIME_CROWD_CONTROL_DEALT":14,
-                             "TOTAL_TIME_SPENT_DEAD":122,
-                             "TRUE_DAMAGE_DEALT_PLAYER":2142,
-                             "TRUE_DAMAGE_DEALT_TO_CHAMPIONS":192,
-                             "TRUE_DAMAGE_TAKEN":422,
-                             "TURRETS_KILLED":2,
-                             "VISION_SCORE":28,
-                             "VISION_WARDS_BOUGHT_IN_GAME":1,
-                             "WARD_KILLED":1,
-                             "WARD_PLACED":12,
-                             "WIN":1
-                         },
-                         "summonerId":45367382,
-                         "summonerName":"Kreed58",
-                         "teamId":100,
-                         "userId":45367382,
-                         "wins":1
-                 }],
-                 "tag":"",
-                 "teamId":200
-             }
-         ],
-         "timeUntilNextFirstWinBonus":0,
-         "userId":23894133
+  "accountId": 2152743763473376,
+  "basePoints": 0,
+  "battleBoostIpEarned": 0,
+  "boostIpEarned": 0,
+  "boostXpEarned": 0,
+  "causedEarlySurrender": false,
+  "championId": 122,
+  "coOpVsAiMinutesLeftToday": 180,
+  "coOpVsAiMsecsUntilReset": 0,
+  "completionBonusPoints": 0,
+  "currentLevel": 2,
+  "customMinutesLeftToday": 0,
+  "customMsecsUntilReset": 0,
+  "difficulty": "EASY",
+  "earlySurrenderAccomplice": false,
+  "elo": 0,
+  "eloChange": 0,
+  "experienceEarned": 0,
+  "experienceTotal": 6,
+  "firstWinBonus": 0,
+  "gameEndedInEarlySurrender": false,
+  "gameId": 2371440758,
+  "gameLength": 1092,
+  "gameMode": "CLASSIC",
+  "gameMutators": [
+    "Banana",
+    "Moments",
+    "TeambuilderRosterPositions(1)",
+    "BannerSystem(1)",
+    "TrophySystem(1)",
+    "TeamPass_Summer2019",
+    "SRTrophyWinner(8)"
+  ],
+  "gameType": "CUSTOM_GAME",
+  "globalBoostXpEarned": 0,
+  "imbalancedTeamsNoPoints": false,
+  "invalid": false,
+  "ipEarned": 0,
+  "ipTotal": 0,
+  "leveledUp": false,
+  "loyaltyBoostIpEarned": 0,
+  "loyaltyBoostXpEarned": 0,
+  "missionsXpEarned": 0,
+  "myTeamStatus": "",
+  "newSpells": [
+    
+  ],
+  "nextLevelXp": 144,
+  "odinBonusIp": 0,
+  "partyRewardsBonusIpEarned": 0,
+  "pointsPenalties": null,
+  "preLevelUpExperienceTotal": 0,
+  "preLevelUpNextLevelXp": 0,
+  "previousLevel": 2,
+  "previousXpTotal": 6,
+  "queueBonusEarned": 0,
+  "queueType": "NONE",
+  "ranked": false,
+  "reportGameId": 2371440758,
+  "rerollData": {
+    "pointChangeFromChampionsOwned": 0,
+    "pointChangeFromGameplay": 0,
+    "pointsUntilNextReroll": 0,
+    "pointsUsed": 0,
+    "previousPoints": 0,
+    "rerollCount": 0,
+    "totalPoints": 0
+  },
+  "roomName": "endGame2371440758",
+  "roomPassword": "B4esuu1usdpgIDWh",
+  "rpEarned": 0,
+  "sendStatsToTournamentProvider": false,
+  "skinId": 122000,
+  "skinIndex": 0,
+  "summonerId": 78474202,
+  "summonerName": "eransharv",
+  "talentPointsGained": 0,
+  "teamBoost": null,
+  "teamEarlySurrendered": false,
+  "teams": [
+    {
+      "championBans": [
+        
+      ],
+      "fullId": "",
+      "isBottomTeam": true,
+      "isPlayerTeam": true,
+      "isWinningTeam": false,
+      "memberStatusString": "",
+      "name": "",
+      "players": [
+        {
+          "botPlayer": false,
+          "championId": 122,
+          "detectedTeamPosition": "MIDDLE",
+          "elo": 0,
+          "eloChange": 0,
+          "gameId": 2371440758,
+          "isReportingDisabled": false,
+          "items": [
+            2003,
+            1054,
+            1054,
+            1054,
+            1054,
+            1054,
+            3340
+          ],
+          "leaver": false,
+          "leaves": 0,
+          "level": 2,
+          "losses": 0,
+          "profileIconId": 3546,
+          "selectedPosition": "",
+          "skinIndex": 0,
+          "skinName": "Darius",
+          "spell1Id": 6,
+          "spell2Id": 7,
+          "stats": {
+            "ASSISTS": 0,
+            "BARRACKS_KILLED": 0,
+            "CHAMPIONS_KILLED": 0,
+            "COMBAT_PLAYER_SCORE": 0,
+            "GAME_ENDED_IN_EARLY_SURRENDER": 0,
+            "GAME_ENDED_IN_SURRENDER": 1,
+            "GOLD_EARNED": 3811,
+            "LARGEST_CRITICAL_STRIKE": 0,
+            "LARGEST_KILLING_SPREE": 0,
+            "LARGEST_MULTI_KILL": 0,
+            "LEVEL": 9,
+            "LOSE": 1,
+            "MAGIC_DAMAGE_DEALT_PLAYER": 0,
+            "MAGIC_DAMAGE_DEALT_TO_CHAMPIONS": 0,
+            "MAGIC_DAMAGE_TAKEN": 0,
+            "MINIONS_KILLED": 41,
+            "NEUTRAL_MINIONS_KILLED": 0,
+            "NEUTRAL_MINIONS_KILLED_ENEMY_JUNGLE": 0,
+            "NEUTRAL_MINIONS_KILLED_YOUR_JUNGLE": 0,
+            "NUM_DEATHS": 5,
+            "OBJECTIVE_PLAYER_SCORE": 0,
+            "PERK0": 8437,
+            "PERK0_VAR1": 0,
+            "PERK0_VAR2": 0,
+            "PERK0_VAR3": 0,
+            "PERK1": 8446,
+            "PERK1_VAR1": 2059,
+            "PERK1_VAR2": 0,
+            "PERK1_VAR3": 0,
+            "PERK2": 8444,
+            "PERK2_VAR1": 0,
+            "PERK2_VAR2": 0,
+            "PERK2_VAR3": 0,
+            "PERK3": 8451,
+            "PERK3_VAR1": 112,
+            "PERK3_VAR2": 0,
+            "PERK3_VAR3": 0,
+            "PERK4": 8224,
+            "PERK4_VAR1": 0,
+            "PERK4_VAR2": 0,
+            "PERK4_VAR3": 0,
+            "PERK5": 8237,
+            "PERK5_VAR1": 0,
+            "PERK5_VAR2": 0,
+            "PERK5_VAR3": 0,
+            "PERK_PRIMARY_STYLE": 8400,
+            "PERK_SUB_STYLE": 8200,
+            "PHYSICAL_DAMAGE_DEALT_PLAYER": 20384,
+            "PHYSICAL_DAMAGE_DEALT_TO_CHAMPIONS": 0,
+            "PHYSICAL_DAMAGE_TAKEN": 11724,
+            "SIGHT_WARDS_BOUGHT_IN_GAME": 0,
+            "SPELL1_CAST": 0,
+            "SPELL2_CAST": 29,
+            "TEAM_EARLY_SURRENDERED": 0,
+            "TEAM_OBJECTIVE": 0,
+            "TIME_CCING_OTHERS": 0,
+            "TOTAL_DAMAGE_DEALT": 21924,
+            "TOTAL_DAMAGE_DEALT_TO_BUILDINGS": 4117,
+            "TOTAL_DAMAGE_DEALT_TO_CHAMPIONS": 0,
+            "TOTAL_DAMAGE_DEALT_TO_OBJECTIVES": 4117,
+            "TOTAL_DAMAGE_DEALT_TO_TURRETS": 4117,
+            "TOTAL_DAMAGE_SELF_MITIGATED": 6377,
+            "TOTAL_DAMAGE_SHIELDED_ON_TEAMMATES": 0,
+            "TOTAL_DAMAGE_TAKEN": 11724,
+            "TOTAL_HEAL": 120,
+            "TOTAL_HEAL_ON_TEAMMATES": 0,
+            "TOTAL_PLAYER_SCORE": 0,
+            "TOTAL_SCORE_RANK": 0,
+            "TOTAL_TIME_CROWD_CONTROL_DEALT": 52,
+            "TOTAL_TIME_SPENT_DEAD": 133,
+            "TRUE_DAMAGE_DEALT_PLAYER": 1540,
+            "TRUE_DAMAGE_DEALT_TO_CHAMPIONS": 0,
+            "TRUE_DAMAGE_TAKEN": 0,
+            "TURRETS_KILLED": 0,
+            "VISION_SCORE": 0,
+            "VISION_WARDS_BOUGHT_IN_GAME": 0,
+            "WARD_KILLED": 0,
+            "WARD_PLACED": 0
+          },
+          "summonerId": 78474202,
+          "summonerName": "eransharv",
+          "teamId": 100,
+          "userId": 78474202,
+          "wins": 0
+        }
+      ],
+      "stats": {
+        "ASSISTS": 0,
+        "BARRACKS_KILLED": 0,
+        "CHAMPIONS_KILLED": 0,
+        "COMBAT_PLAYER_SCORE": 0,
+        "GAME_ENDED_IN_EARLY_SURRENDER": 0,
+        "GAME_ENDED_IN_SURRENDER": 1,
+        "GOLD_EARNED": 3811,
+        "LARGEST_CRITICAL_STRIKE": 0,
+        "LARGEST_KILLING_SPREE": 0,
+        "LARGEST_MULTI_KILL": 0,
+        "LEVEL": 9,
+        "LOSE": 1,
+        "MAGIC_DAMAGE_DEALT_PLAYER": 0,
+        "MAGIC_DAMAGE_DEALT_TO_CHAMPIONS": 0,
+        "MAGIC_DAMAGE_TAKEN": 0,
+        "MINIONS_KILLED": 41,
+        "NEUTRAL_MINIONS_KILLED": 0,
+        "NEUTRAL_MINIONS_KILLED_ENEMY_JUNGLE": 0,
+        "NEUTRAL_MINIONS_KILLED_YOUR_JUNGLE": 0,
+        "NUM_DEATHS": 5,
+        "OBJECTIVE_PLAYER_SCORE": 0,
+        "PERK0": 8437,
+        "PERK0_VAR1": 0,
+        "PERK0_VAR2": 0,
+        "PERK0_VAR3": 0,
+        "PERK1": 8446,
+        "PERK1_VAR1": 2059,
+        "PERK1_VAR2": 0,
+        "PERK1_VAR3": 0,
+        "PERK2": 8444,
+        "PERK2_VAR1": 0,
+        "PERK2_VAR2": 0,
+        "PERK2_VAR3": 0,
+        "PERK3": 8451,
+        "PERK3_VAR1": 112,
+        "PERK3_VAR2": 0,
+        "PERK3_VAR3": 0,
+        "PERK4": 8224,
+        "PERK4_VAR1": 0,
+        "PERK4_VAR2": 0,
+        "PERK4_VAR3": 0,
+        "PERK5": 8237,
+        "PERK5_VAR1": 0,
+        "PERK5_VAR2": 0,
+        "PERK5_VAR3": 0,
+        "PERK_PRIMARY_STYLE": 8400,
+        "PERK_SUB_STYLE": 8200,
+        "PHYSICAL_DAMAGE_DEALT_PLAYER": 20384,
+        "PHYSICAL_DAMAGE_DEALT_TO_CHAMPIONS": 0,
+        "PHYSICAL_DAMAGE_TAKEN": 11724,
+        "SIGHT_WARDS_BOUGHT_IN_GAME": 0,
+        "SPELL1_CAST": 0,
+        "SPELL2_CAST": 29,
+        "TEAM_EARLY_SURRENDERED": 0,
+        "TEAM_OBJECTIVE": 0,
+        "TIME_CCING_OTHERS": 0,
+        "TOTAL_DAMAGE_DEALT": 21924,
+        "TOTAL_DAMAGE_DEALT_TO_BUILDINGS": 4117,
+        "TOTAL_DAMAGE_DEALT_TO_CHAMPIONS": 0,
+        "TOTAL_DAMAGE_DEALT_TO_OBJECTIVES": 4117,
+        "TOTAL_DAMAGE_DEALT_TO_TURRETS": 4117,
+        "TOTAL_DAMAGE_SELF_MITIGATED": 6377,
+        "TOTAL_DAMAGE_SHIELDED_ON_TEAMMATES": 0,
+        "TOTAL_DAMAGE_TAKEN": 11724,
+        "TOTAL_HEAL": 120,
+        "TOTAL_HEAL_ON_TEAMMATES": 0,
+        "TOTAL_PLAYER_SCORE": 0,
+        "TOTAL_SCORE_RANK": 0,
+        "TOTAL_TIME_CROWD_CONTROL_DEALT": 52,
+        "TOTAL_TIME_SPENT_DEAD": 133,
+        "TRUE_DAMAGE_DEALT_PLAYER": 1540,
+        "TRUE_DAMAGE_DEALT_TO_CHAMPIONS": 0,
+        "TRUE_DAMAGE_TAKEN": 0,
+        "TURRETS_KILLED": 0,
+        "VISION_SCORE": 0,
+        "VISION_WARDS_BOUGHT_IN_GAME": 0,
+        "WARD_KILLED": 0,
+        "WARD_PLACED": 0
+      },
+      "tag": "",
+      "teamId": 100
+    },
+    {
+      "championBans": [
+        
+      ],
+      "fullId": "",
+      "isBottomTeam": false,
+      "isPlayerTeam": false,
+      "isWinningTeam": false,
+      "memberStatusString": "",
+      "name": "",
+      "players": [
+        
+      ],
+      "stats": null,
+      "tag": "",
+      "teamId": 200
     }
+  ],
+  "timeUntilNextFirstWinBonus": 0,
+  "userId": 2152743763473376
+}
 ```
+
+</details>
+
 
 ## `lcu_info`
 
