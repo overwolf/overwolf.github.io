@@ -8,6 +8,22 @@ Follow this entry for ongoing updates and changes to the project or tools:
 
 ## Version 0.142 (Feb. 2020)
 
+Note that the full documentation and links for this version will be added soon to the site.
+
+* New API - overwolf.settings.hotkeys.  
+  Returns an object with hotkeys methods and events.
+  * New manifest flag: `held`: Will be added to the [hotkeys object](#manifest-json#hotkeys-object).  
+    Defines a new type of hotkey (in addition to "toggle" and "custom").
+  * New function: `overwolf.settings.hotkeys.get()`. Returns all calling extension’s hotkeys.
+  * New event: `onHoldHotkey`: will fire only for hotkeys that are defined as "hold".
+  * New event: `onHotkeyChanged`:  moved from overwolf.settings.
+* `overwolf.extensions.getExtensions()` will now also return the permissions of the extension (required for the settings app).  
+* Cleanup upon uninstall:
+  * Delete extension folder upon uninstall extension.
+  * Clear all extension windows proprieties from setting.
+  * Clear localstorage.
+* Enable Drag & drop To Overwolf app window.
+
 * [Hearthstone game events](overwolf-games-events-hearthstone#docsNav)
   * New info updates:
     * adventure_stats
