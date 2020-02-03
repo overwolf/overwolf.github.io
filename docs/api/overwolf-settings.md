@@ -195,6 +195,12 @@ Parameter | Type                  | Description                                 
 path	  | string                | The folder to use                                                        |
 callback  | function              |  A callback function which will be called with the status of the request |
 
+Note: when you set a directory, you should use escape characters:
+
+```js
+overwolf.settings.setOverwolfVideosFolder("C:\\Users\\Azamoth\\Videos\\Captures",console.log)
+```
+
 ## getOverwolfScreenshotsFolder(callback)
 #### Version added: 0.103
 
@@ -250,12 +256,16 @@ callback  | function              |  A function called with the result of the re
 
 ## setVideoCaptureSettings(resolutionSettings, fps, callback)
 #### Version added: 0.117
+#### Permissions required: VideoCaptureSettings
+
+
+requires the |VideoCaptureSettings| permission.
 
 > Sets new video capture settings.
 
 Parameter          | Type                                                                  | Description                                              |
 -------------------| ----------------------------------------------------------------------| -------------------------------------------------------- |
-resolutionSettings | [overwolf.settings.ResolutionSettings](#resolutionsettings-enum) enum | The folder to use                                        |
+resolutionSettings | [overwolf.settings.ResolutionSettings](#resolutionsettings-enum) enum |                                                          |
 fps                | int                                                                   |                                                          |
 callback           | function                                                              |  A callback function which will be called with the status of the request|
 
