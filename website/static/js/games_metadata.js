@@ -131,5 +131,12 @@ const GamesMetadata = {
     iconUrl: "/docs/assets/games-logos/lol-launcher.png",
     iconLargeUrl: "/docs/assets/games-logos/large/lol-launcher.png",
     name: "League of Legends Launcher"
+  },
+  7212: {
+    id: 7212,
+    path: "/docs/status/path-of-exile",
+    iconUrl: "/docs/assets/games-logos/path-of-exile.png",
+    iconLargeUrl: "/docs/assets/games-logos/large/path-of-exile.png",
+    name: "Path of Exile"
   }
 }
