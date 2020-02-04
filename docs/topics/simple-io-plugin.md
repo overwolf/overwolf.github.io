@@ -18,7 +18,7 @@ This plugin enables you to:
 
 ## Download
 
-* You can get the plugin from our [GitHub repository](https://github.com/overwolf/overwolf-plugins/tree/master/sample_apps/simple-io-plugin).
+* You can get the plugin from our [GitHub repository](https://github.com/overwolf/overwolf-plugins/tree/master/plugins/simple-io-plugin).
 * The latest DLL can be found [here](https://github.com/overwolf/overwolf-plugins/tree/master/dist), don’t forget to Unblock it after downloading.
 
 ## Unblock Dll's
