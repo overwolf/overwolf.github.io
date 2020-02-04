@@ -23,8 +23,9 @@ Use the `overwolf.io` API to check whether a certain file exists and/or to write
 
 * [overwolf.io.eEncoding](#eencoding-enum) enum
 * [overwolf.io.enums.fileListenerState](#filelistenerstate-enum) enum
-* [overwolf.io.enums.ReadFileOptions](#readfileoptions-object) Object
-* [overwolf.io.enums.ListenFileOptions](#listenfileoptions-object) Object
+* [overwolf.io.ReadFileOptions](#readfileoptions-object) Object
+* [overwolf.io.ListenFileOptions](#listenfileoptions-object) Object
+* [overwolf.io.DirResult](#dirresult-object) Object
 
 
 ## fileExists(filePath, callback)
@@ -150,7 +151,7 @@ Returns a string with the targeted file’s content.
 Parameter | Type     | Description             |
 ----------| ---------| ----------------------- |
 path      | string   | The target path         |
-callback  | function | Returns with the result | 
+callback  | [(Result: DirResult)](#dirresult-object) => void | Returns with the result | 
 
 ## readBinaryFile(path, options, callback)
 
@@ -349,3 +350,14 @@ offset           | int                           | start reading point, default 
 Parameter        | Type                          | Description                       |
 ---------------- | ------------------------------| --------------------------------- |
 skipToEnd        | bool                          | should skip directly to end of file. default if false  |
+
+## DirResult Object
+#### Version added: 0.141
+
+> List of files and folders.
+
+Parameter        | Type                          | Description                        |
+---------------- | ------------------------------| ---------------------------------- |
+success          | boolean                       | Inherited from the "Result" Object |
+error            | string                        | Inherited from the "Result" Object |
+data             | string[]                      | List of files and folders          |
