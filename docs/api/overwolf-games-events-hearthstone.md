@@ -312,7 +312,26 @@ Data Example:
 { 
    "info":{ 
       "match_info":{ 
-         "adventure_stats":"{"adventure_trl":{"dungeon_crawl_all_classes_total_boss_wins":29,"dungeon_crawl_all_classes_total_run_wins":1,"dungeon_crawl_hunter_boss_wins":1,"dungeon_crawl_hunter_run_wins":0,"dungeon_crawl_paladin_boss_wins":0,"dungeon_crawl_paladin_run_wins":0,"dungeon_crawl_mage_boss_wins":7,"dungeon_crawl_mage_run_wins":0,"dungeon_crawl_warlock_boss_wins":6,"dungeon_crawl_warlock_run_wins":0,"dungeon_crawl_warrior_boss_wins":8,"dungeon_crawl_warrior_run_wins":1,"dungeon_crawl_shaman_boss_wins":6,"dungeon_crawl_shaman_run_wins":0,"dungeon_crawl_priest_boss_wins":1,"dungeon_crawl_priest_run_wins":0,"dungeon_crawl_rogue_boss_wins":0,"dungeon_crawl_rogue_run_wins":0,"dungeon_crawl_druid_boss_wins":0}}"
+         "adventure_stats":"{"adventure_trl":{
+         "dungeon_crawl_all_classes_total_boss_wins":29,
+         "dungeon_crawl_all_classes_total_run_wins":1,
+         "dungeon_crawl_hunter_boss_wins":1,
+         "dungeon_crawl_hunter_run_wins":0,
+         "dungeon_crawl_paladin_boss_wins":0,
+         "dungeon_crawl_paladin_run_wins":0,
+         "dungeon_crawl_mage_boss_wins":7,
+         "dungeon_crawl_mage_run_wins":0,
+         "dungeon_crawl_warlock_boss_wins":6,
+         "dungeon_crawl_warlock_run_wins":0,
+         "dungeon_crawl_warrior_boss_wins":8,
+         "dungeon_crawl_warrior_run_wins":1,
+         "dungeon_crawl_shaman_boss_wins":6,
+         "dungeon_crawl_shaman_run_wins":0,
+         "dungeon_crawl_priest_boss_wins":1,
+         "dungeon_crawl_priest_run_wins":0,
+         "dungeon_crawl_rogue_boss_wins":0,
+         "dungeon_crawl_rogue_run_wins":0,
+         "dungeon_crawl_druid_boss_wins":0}}"
       }
    },
    "feature":"match_info"
