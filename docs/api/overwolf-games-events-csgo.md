@@ -92,7 +92,7 @@ assist        | 	totalAssists – total assists for user it match |Player has as
 
 Event       | Event Data   | Fired When    | Notes              | Since GEP Ver. |
 ------------| -------------| --------------| ------------------ | --------------|
-headshot    | headshotsInRound – total headshots for user in the <b>current round</b> |Player has gained a killed with a headshot| Fired alongside kill event	 | 70.0  |
+headshot    | headshotsInRound – total headshots for user in the <b>current round</b> |Player has gained a kill with a headshot| Fired alongside kill event	 | 70.0  |
 
 ## `round_start`
 
