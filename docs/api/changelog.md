@@ -12,12 +12,17 @@ Note that the full documentation and links for this version will be added soon t
 
 * New API - overwolf.settings.hotkeys.  
   Returns an object with hotkeys methods and events.
-  * New manifest flag: `held`: Will be added to the [hotkeys object](#manifest-json#hotkeys-object).  
+  * New manifest flag: `hold`: Will be added to the [hotkeys object](#manifest-json#hotkeys-object).  
     Defines a new type of hotkey (in addition to "toggle" and "custom").
   * New function: `overwolf.settings.hotkeys.get()`. Returns all calling extension’s hotkeys.
-  * New event: `onHoldHotkey`: will fire only for hotkeys that are defined as "hold".
-  * New event: `onHotkeyChanged`:  moved from overwolf.settings.
+  * New event: `onHold`: will fire only for hotkeys that are defined as "hold".  
+    This event will be fired twice - on key down and on key up.
+  * New event: `onPressed`: will fire only for hotkeys that are not defined as "hold".  
+    This event will replace the depracated [overwolf.settings.registerHotKey]()function.    
+  * New event: `onChanged`:  will fire on hotkeys change. 
+
 * `overwolf.extensions.getExtensions()` will now also return the permissions of the extension (required for the settings app).  
+
 * Cleanup upon uninstall:
   * Delete extension folder upon uninstall extension.
   * Clear all extension windows proprieties from setting.
