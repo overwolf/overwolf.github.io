@@ -11,7 +11,13 @@ Apex Legends
 ------------
 
 **Resolved** This incident has been resolved.  
-Nov 05, 07:46 PM GMT+3
+Feb 05, 01:00 PM GMT+3
+
+**Investigating** -  Apex game events are down we are working on a fix.  
+Feb 04, 11:33 AM GMT+3
+
+**Resolved** This incident has been resolved.  
+Dec 05, 07:46 PM GMT+3
 
 **Investigating** -  Apex game events are down due to a new patch.  
 Dec 04, 07:30 PM GMT+3
@@ -43,10 +49,10 @@ Fortnite
 --------
 
 **Resolved** - This incident has been resolved.  
-Dec 19, 09:29 PM GMT+3
+Feb 05, 09:48 PM GMT+3
 
 **Investigating** - Fortnite events are down.
-Nov 18, 12:26 AM GMT+3
+Feb 05, 01:00 AM GMT+3
 
 **Resolved** - This incident has been resolved.  
 Dec 15, 09:07 PM GMT+3
