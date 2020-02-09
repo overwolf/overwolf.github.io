@@ -21,3 +21,7 @@ Please note that these are community code snippets, and the usage is at your own
   
 * [GR Digital/Overwolf app boilerplate](https://github.com/GRDigital/overwolf-boilerplate).  
   "the boilerplate we've used for multiple successful Overwolf apps, ranging from fairly simple to some of the most complex apps on the platform. It showcases updating the app from the server, deploying, logging and ffi with c-style plugin apis."
+
+* [Sorikairox/Overwolf VUE sample app](https://github.com/Sorikairox/overwolf-vue-sample).
+  Sorikairox built a Vue version of our official [OW sample app](https://github.com/overwolf/sample-app/tree/master/ts).
+
