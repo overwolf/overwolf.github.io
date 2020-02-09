@@ -51,7 +51,7 @@
 			"overwolf.os": ["api/overwolf-os","api/overwolf-os-tray"],
 			"overwolf.profile":	["api/overwolf-profile", "api/overwolf-profile.subscriptions"],
 			"overwolf.settings":
-			["api/overwolf-settings", "api/overwolf-settings-games"],
+			["api/overwolf-settings","api/overwolf-settings-hotkeys", "api/overwolf-settings-games"],
 			"overwolf.social":
 			["api/overwolf-social", "api/overwolf-social-reddit", "api/overwolf-social-youtube", "api/overwolf-social-discord", "api/overwolf-social-gfycat", "api/overwolf-social-twitter"],
 			"overwolf.streaming": ["api/overwolf-streaming"],

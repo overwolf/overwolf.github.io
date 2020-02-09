@@ -507,15 +507,18 @@ The map between the hotkey feature name and it’s settings:
 | action-type | enum   |  Defines the behavior of the hotkey: </br>**["toggle", "custom"]**                   | 0.78  |
 | default     | string |  The default key combination.                                                        | 0.78  |
 | passthrough | bool   |  Defines the behavior of the hotkey.                                                 | 0.78  |
-
+| hold        | bool   |  Defines whether this hotkey is meant to invoke an action while being held.          | 0.142 |
 
 Example code:
+
 ```json
 "hotkeys": {
     "show_YourAppName": { 
         "title": "Show Player",
         "action-type": "custom",
-        "default": "Shift+F9"
+        "default": "Shift+F9",
+        "passthrough": true,
+        "hold": true
     },
     "save_YourAppName": {
         "title": "Save Replay for later",

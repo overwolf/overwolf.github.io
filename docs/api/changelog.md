@@ -12,14 +12,15 @@ Note that the full documentation and links for this version will be added soon t
 
 * New API - overwolf.settings.hotkeys.  
   Returns an object with hotkeys methods and events.
-  * New manifest flag: `hold`: Will be added to the [hotkeys object](#manifest-json#hotkeys-object).  
-    Defines a new type of hotkey (in addition to "toggle" and "custom").
-  * New function: `overwolf.settings.hotkeys.get()`. Returns all calling extension’s hotkeys.
-  * New event: `onHold`: will fire only for hotkeys that are defined as "hold".  
+  * New manifest flag: `hold`: Will be added to the [hotkeys object](manifest-json#hotkeys).  
+    Defines a new type of hotkey - hotkey that works only while you are holding the key.  
+    The flag also added to our [manifest schema file](https://github.com/overwolf/community-gists/blob/master/overwolf-manifest-schema.json).  
+  * New function: [overwolf.settings.hotkeys.get()](overwolf-settings-hotkeys#getcallback). Returns all calling extension’s hotkeys.
+  * New event: [overwolf.settings.onHold](overwolf-settings-hotkeys#onhold): will fire only for hotkeys that are defined as "hold".  
     This event will be fired twice - on key down and on key up.
-  * New event: `onPressed`: will fire only for hotkeys that are not defined as "hold".  
-    This event will replace the depracated [overwolf.settings.registerHotKey]()function.    
-  * New event: `onChanged`:  will fire on hotkeys change. 
+  * New event: [overwolf.settings.onPressed](overwolf-settings-hotkeys#onpressed): will fire only for hotkeys that are not defined as "hold".  
+    This event will replace the depracated [overwolf.settings.registerHotKey](overwolf-settings#registerhotkeyactionid-callback) function.    
+  * New event: [overwolf.settings.onChanged](overwolf-settings-hotkeys#onchanged):  will fire on hotkeys change. 
 
 * `overwolf.extensions.getExtensions()` will now also return the permissions of the extension (required for the settings app).  
 
