@@ -1,5 +1,5 @@
 ---
-id: gists
+id: snippets
 title: Useful community code snippets
 sidebar_label: Code snippets
 ---

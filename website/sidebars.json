@@ -27,7 +27,7 @@
 		"Integrations":
 			["topics/app-analytics", "topics/login-with-discord", "topics/events-SDK-for-game-developers", "topics/twitch-events-sdk-for-game-developers"],
 		"Community Snippets":
-			["support/gists"],
+			["topics/snippets"],
 		"Legal":
 			["topics/legal-overview", "topics/legal-app-terms", "topics/legal-developers-terms"]
     },
