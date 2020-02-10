@@ -35,7 +35,7 @@ Note that the full documentation and links for this version will be added soon t
     * adventure_stats
 * [League of Legends Events](overwolf-games-events-lol)
   * New event & info:
-    * live_client_stats
+    * live_client_data
 
 ## Version 0.141 (Jan. 2020)
 
