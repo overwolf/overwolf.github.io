@@ -20,6 +20,7 @@ Note that you can also use the LOL game launcher events. Read more [here](overwo
 ## Available Features
 
 * [gep_internal](#gep_internal)
+* [live_client_data](#live_client_data)
 * [matchState](#matchstate)
 * [match_info](#match_info)
 * [death](#death)
@@ -57,6 +58,96 @@ Data Example:
 
 ```json
 {"feature":"gep_internal","category":"gep_internal","key":"version_info","value":"{"local_version":"143.0.10","public_version":"143.0.10","is_updated":true}"}
+```
+
+## `live_client_data`
+
+### Info Updates
+
+key          | Category    | Values                    | Notes                 | Since GEP Ver. |
+------------ | ------------| ------------------------- | --------------------- | ------------- | 
+active_player | live_client_data | In-game data received by the client. |See [notes](#active_player-note)|   143.1    |
+all_players | live_client_data | In-game data received by the client. |See [notes](#all_players-note)|   143.1   |
+events | live_client_data | In-game data received by the client. |See [notes](#events-note)|   143.1  |
+game_data | live_client_data | In-game data received by the client. |See [notes](#game_data-note)|   143.1  |
+
+#### *active_player* note
+
+Data Example:
+
+```json
+{ 
+   "live_client_data":{ 
+      "active_player":"
+      {"abilities":{"E":{"abilityLevel":0,"displayName":"","id":"BaseSpell","rawDescription":"","rawDisplayName":""},"Passive":{"displayName":"Passive","rawDescription":"Desc","rawDisplayName":"Passive"},"Q":{"abilityLevel":0,"displayName":"","id":"BaseSpell","rawDescription":"","rawDisplayName":""},"R":
+      {"abilityLevel":0,"displayName":"","id":"BaseSpell","rawDescription":"","rawDisplayName":""},"W":{"abilityLevel":1,"displayName":"","id":"TFT_Input_MoveUnit","rawDescription":"","rawDisplayName":""}},"championStats":
+      {"abilityPower":0,"armor":6,"armorPenetrationFlat":0,"armorPenetrationPercent":1,"attackDamage":8,"attackRange":100,"attackSpeed":2.5,"bonusArmorPenetrationPercent":1,"bonusMagicPenetrationPercent":1,"cooldownReduction":0,"critChance":0,"critDamage":150,"currentHealth":46,"healthRegenRate":0,"lifeSteal":0,"magicLethality":0,"magicPenetrationFlat":0,"magicPenetrationPercent":1,
+      "magicResist":0,"maxHealth":100,"moveSpeed":350,"physicalLethality":0,"resourceMax":0,"resourceRegenRate":0,"resourceType":"NONE","resourceValue":0,"spellVamp":0,"tenacity":0},"currentGold":3334.6337890625,"fullRunes":{},"level":7,"summonerName":"Sh4rgaas"}"
+   }
+},
+"feature":"live_client_data"
+}
+```
+
+#### *all_players* note
+
+Data Example:
+
+```json
+{ 
+   "info":{ 
+      "live_client_data":{ 
+         "all_players":
+         "[{"championName":"TFTChampion","isBot":false,"isDead":false,"items":[],"level":7,"position":"NONE","rawChampionName":"game_character_displayname_TFTChampion","respawnTimer":0,"runes":null,"scores":{"assists":0,"creepScore":0,"deaths":0,"kills":0,"wardScore":0},"skinID":0,"summonerName":"Sh4rgaas","summonerSpells":{},"team":"ORDER"},{"championName":"TFTChampion","isBot":false,"isDead":false,"items":
+         [],"level":8,"position":"NONE","rawChampionName":"game_character_displayname_TFTChampion","respawnTimer":0,"runes":null,"scores":{"assists":0,"creepScore":0,"deaths":0,"kills":0,"wardScore":0},"skinID":0,"summonerName":"MonAmiTotoro","summonerSpells":{},"team":"ORDER"},{"championName":"TFTChampion","isBot":false,"isDead":false,"items":
+         [],"level":7,"position":"NONE","rawChampionName":"game_character_displayname_TFTChampion","respawnTimer":0,"runes":null,"scores":{"assists":0,"creepScore":0,"deaths":0,"kills":0,"wardScore":0},"skinID":0,"summonerName":"Eloperrrr","summonerSpells":{},"team":"ORDER"},{"championName":"TFTChampion","isBot":false,"isDead":false,"items":
+         [],"level":8,"position":"NONE","rawChampionName":"game_character_displayname_TFTChampion","respawnTimer":0,"runes":null,"scores":{"assists":0,"creepScore":0,"deaths":0,"kills":0,"wardScore":0},"skinID":0,"summonerName":"Cosmik Debris","summonerSpells":{},"team":"ORDER"},{"championName":"TFTChampion","isBot":false,"isDead":false,"items":
+         [],"level":8,"position":"NONE","rawChampionName":"game_character_displayname_TFTChampion","respawnTimer":0,"runes":null,"scores":{"assists":0,"creepScore":0,"deaths":0,"kills":0,"wardScore":0},"skinID":0,"summonerName":"LjjNB","summonerSpells":{},"team":"ORDER"},{"championName":"TFTChampion","isBot":false,"isDead":false,"items":
+         [],"level":8,"position":"NONE","rawChampionName":"game_character_displayname_TFTChampion","respawnTimer":0,"runes":null,"scores":{"assists":0,"creepScore":0,"deaths":0,"kills":0,"wardScore":0},"skinID":0,"summonerName":"Danylekid","summonerSpells":{},"team":"ORDER"},{"championName":"TFTChampion","isBot":false,"isDead":true,"items":
+         [],"level":5,"position":"NONE","rawChampionName":"game_character_displayname_TFTChampion","respawnTimer":24668.880859375,"runes":null,"scores":{"assists":0,"creepScore":0,"deaths":1,"kills":0,"wardScore":0},"skinID":0,"summonerName":"silenceQX","summonerSpells":{},"team":"ORDER"},{"championName":"TFTChampion","isBot":false,"isDead":false,"items":
+         [],"level":7,"position":"NONE","rawChampionName":"game_character_displayname_TFTChampion","respawnTimer":0,"runes":null,"scores":{"assists":0,"creepScore":0,"deaths":0,"kills":0,"wardScore":0},"skinID":0,"summonerName":"hauweifaker","summonerSpells":{},"team":"ORDER"}]"
+      }
+   },
+   "feature":"live_client_data"
+}
+```
+
+#### *events* note
+
+Data Example:
+
+```json
+{ 
+   "info":{ 
+      "live_client_data":{ 
+         "events":
+         "{"Events":[{"EventID":0,"EventName":"GameStart","EventTime":0.04360299929976463},{"EventID":1,"EventName":"MinionsSpawning","EventTime":120.05189514160156},
+         {"Assisters":[],"EventID":2,"EventName":"ChampionKill","EventTime":1168.3543701171875,"KillerName":"silenceQX","VictimName":"silenceQX"},{"Assisters":
+         [],"EventID":3,"EventName":"ChampionKill","EventTime":1539.53759765625,"KillerName":"Eloperrrr","VictimName":"Eloperrrr"}]}"
+      }
+   },
+   "feature":"live_client_data"
+}
+```
+
+#### *game_data* note
+
+Data Example:
+
+```json
+{ "info":{ 
+      "live_client_data":{ 
+         "active_player":"{"abilities":{"E":{"abilityLevel":0,"displayName":"","id":"BaseSpell","rawDescription":"","rawDisplayName":""}
+         ,"Passive":{"displayName":"Passive","rawDescription":"Desc","rawDisplayName":"Passive"}
+         ,"Q":{"abilityLevel":0,"displayName":"","id":"BaseSpell","rawDescription":"","rawDisplayName":""}
+         ,"R":{"abilityLevel":0,"displayName":"","id":"BaseSpell","rawDescription":"","rawDisplayName":""},"W":{"abilityLevel":1,"displayName":"","id":"TFT_Input_MoveUnit","rawDescription":"","rawDisplayName":""}}
+         ,"championStats":{"abilityPower":0,"armor":6,"armorPenetrationFlat":0,"armorPenetrationPercent":1,"attackDamage":8,"attackRange":100,"attackSpeed":2.5,"bonusArmorPenetrationPercent":1,
+         "bonusMagicPenetrationPercent":1,"cooldownReduction":0,"critChance":0,"critDamage":150,"currentHealth":46,"healthRegenRate":0,"lifeSteal":0,"magicLethality":0,"magicPenetrationFlat":0,"magicPenetrationPercent"
+         :1,"magicResist":0,"maxHealth":100,"moveSpeed":350,"physicalLethality":0,"resourceMax":0,"resourceRegenRate":0,"resourceType":"NONE","resourceValue":0,"spellVamp":0,"tenacity":0},"currentGold":3415.21533203125,"fullRunes":{},"level":7,"summonerName":"Sh4rgaas"}"
+      }
+   },
+   "feature":"live_client_data"
+}
 ```
 
 ## `matchState`
