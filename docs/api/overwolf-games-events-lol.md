@@ -77,15 +77,17 @@ Data Example:
 
 ```json
 { 
-   "live_client_data":{ 
-      "active_player":"
-      {"abilities":{"E":{"abilityLevel":0,"displayName":"","id":"BaseSpell","rawDescription":"","rawDisplayName":""},"Passive":{"displayName":"Passive","rawDescription":"Desc","rawDisplayName":"Passive"},"Q":{"abilityLevel":0,"displayName":"","id":"BaseSpell","rawDescription":"","rawDisplayName":""},"R":
-      {"abilityLevel":0,"displayName":"","id":"BaseSpell","rawDescription":"","rawDisplayName":""},"W":{"abilityLevel":1,"displayName":"","id":"TFT_Input_MoveUnit","rawDescription":"","rawDisplayName":""}},"championStats":
-      {"abilityPower":0,"armor":6,"armorPenetrationFlat":0,"armorPenetrationPercent":1,"attackDamage":8,"attackRange":100,"attackSpeed":2.5,"bonusArmorPenetrationPercent":1,"bonusMagicPenetrationPercent":1,"cooldownReduction":0,"critChance":0,"critDamage":150,"currentHealth":46,"healthRegenRate":0,"lifeSteal":0,"magicLethality":0,"magicPenetrationFlat":0,"magicPenetrationPercent":1,
-      "magicResist":0,"maxHealth":100,"moveSpeed":350,"physicalLethality":0,"resourceMax":0,"resourceRegenRate":0,"resourceType":"NONE","resourceValue":0,"spellVamp":0,"tenacity":0},"currentGold":3334.6337890625,"fullRunes":{},"level":7,"summonerName":"Sh4rgaas"}"
-   }
-},
-"feature":"live_client_data"
+   "info":{ 
+      "live_client_data":{ 
+         "active_player":"{"abilities":{"E":{"abilityLevel":5,"displayName":"Unspeakable Horror","id"
+         :"NocturneUnspeakableHorror"
+         ,"rawDescription":"GeneratedTip_Spell_NocturneUnspeakableHorror_Description"
+         ...
+         ,"rawDisplayName":"GeneratedTip_Spell_NocturneUnspeakableHorror_DisplayName"}  
+{"id":5008,"rawDescriptio":"perk_tooltip_StatModAdaptive"},{"id":5002,"rawDescription":"perk_tooltip_StatModArmor"}]},"level":17,"summonerName":"Sh4rgaas"}"
+      }
+   },
+   "feature":"live_client_data"
 }
 ```
 
@@ -97,15 +99,15 @@ Data Example:
 { 
    "info":{ 
       "live_client_data":{ 
-         "all_players":
-         "[{"championName":"TFTChampion","isBot":false,"isDead":false,"items":[],"level":7,"position":"NONE","rawChampionName":"game_character_displayname_TFTChampion","respawnTimer":0,"runes":null,"scores":{"assists":0,"creepScore":0,"deaths":0,"kills":0,"wardScore":0},"skinID":0,"summonerName":"Sh4rgaas","summonerSpells":{},"team":"ORDER"},{"championName":"TFTChampion","isBot":false,"isDead":false,"items":
-         [],"level":8,"position":"NONE","rawChampionName":"game_character_displayname_TFTChampion","respawnTimer":0,"runes":null,"scores":{"assists":0,"creepScore":0,"deaths":0,"kills":0,"wardScore":0},"skinID":0,"summonerName":"MonAmiTotoro","summonerSpells":{},"team":"ORDER"},{"championName":"TFTChampion","isBot":false,"isDead":false,"items":
-         [],"level":7,"position":"NONE","rawChampionName":"game_character_displayname_TFTChampion","respawnTimer":0,"runes":null,"scores":{"assists":0,"creepScore":0,"deaths":0,"kills":0,"wardScore":0},"skinID":0,"summonerName":"Eloperrrr","summonerSpells":{},"team":"ORDER"},{"championName":"TFTChampion","isBot":false,"isDead":false,"items":
-         [],"level":8,"position":"NONE","rawChampionName":"game_character_displayname_TFTChampion","respawnTimer":0,"runes":null,"scores":{"assists":0,"creepScore":0,"deaths":0,"kills":0,"wardScore":0},"skinID":0,"summonerName":"Cosmik Debris","summonerSpells":{},"team":"ORDER"},{"championName":"TFTChampion","isBot":false,"isDead":false,"items":
-         [],"level":8,"position":"NONE","rawChampionName":"game_character_displayname_TFTChampion","respawnTimer":0,"runes":null,"scores":{"assists":0,"creepScore":0,"deaths":0,"kills":0,"wardScore":0},"skinID":0,"summonerName":"LjjNB","summonerSpells":{},"team":"ORDER"},{"championName":"TFTChampion","isBot":false,"isDead":false,"items":
-         [],"level":8,"position":"NONE","rawChampionName":"game_character_displayname_TFTChampion","respawnTimer":0,"runes":null,"scores":{"assists":0,"creepScore":0,"deaths":0,"kills":0,"wardScore":0},"skinID":0,"summonerName":"Danylekid","summonerSpells":{},"team":"ORDER"},{"championName":"TFTChampion","isBot":false,"isDead":true,"items":
-         [],"level":5,"position":"NONE","rawChampionName":"game_character_displayname_TFTChampion","respawnTimer":24668.880859375,"runes":null,"scores":{"assists":0,"creepScore":0,"deaths":1,"kills":0,"wardScore":0},"skinID":0,"summonerName":"silenceQX","summonerSpells":{},"team":"ORDER"},{"championName":"TFTChampion","isBot":false,"isDead":false,"items":
-         [],"level":7,"position":"NONE","rawChampionName":"game_character_displayname_TFTChampion","respawnTimer":0,"runes":null,"scores":{"assists":0,"creepScore":0,"deaths":0,"kills":0,"wardScore":0},"skinID":0,"summonerName":"hauweifaker","summonerSpells":{},"team":"ORDER"}]"
+         "all_players":"[{"championName":"Sett","isBot":false,"isDead":true,"items":
+         [{"canUse":false,"consumable":false,"count":1,"displayName":"Dead Man's Plate"
+      ,"itemID":3742,"price":1100,"rawDescription":"game_item_description_3742","rawDisplayName":"game_item_displayname_3742","slot":0}
+      ,{"canUse":false,"consumable":false,"count":1,"displayName":"Bramble Vest"
+...
+{"displayName":"Flash","rawDescription":"GeneratedTip_SummonerSpell_SummonerFlash_Description","rawDisplayName"
+:"GeneratedTip_SummonerSpell_SummonerFlash_DisplayName"},"summonerSpellTwo":
+{"displayName":"Ignite","rawDescription":"GeneratedTip_SummonerSpell_SummonerDot_Description"
+,"rawDisplayName":"GeneratedTip_SummonerSpell_SummonerDot_DisplayName"}},"team":"CHAOS"}]"
       }
    },
    "feature":"live_client_data"
@@ -120,10 +122,14 @@ Data Example:
 { 
    "info":{ 
       "live_client_data":{ 
-         "events":
-         "{"Events":[{"EventID":0,"EventName":"GameStart","EventTime":0.04360299929976463},{"EventID":1,"EventName":"MinionsSpawning","EventTime":120.05189514160156},
-         {"Assisters":[],"EventID":2,"EventName":"ChampionKill","EventTime":1168.3543701171875,"KillerName":"silenceQX","VictimName":"silenceQX"},{"Assisters":
-         [],"EventID":3,"EventName":"ChampionKill","EventTime":1539.53759765625,"KillerName":"Eloperrrr","VictimName":"Eloperrrr"}]}"
+         "events":"{"Events":[{"EventID":0,"EventName":"GameStart"
+         ,"EventTime":0.041107501834630966},{"EventID":1,"EventName":"MinionsSpawning",
+         "EventTime":65.05073547363281},{"Assisters":
+         ["CHOWCHOWTHEPAIN","CHAXILICIOUSLOL"],
+...      
+"EventID":2,"EventName":"ChampionKill","EventTime":321.79498291015625,"KillerName":"Adoucissant",
+"VictimName":"finite area"},{"Assisters":["finite area","Dilipa"],"EventID":101,"EventName":
+         "ChampionKill","EventTime":2256.623291015625,"KillerName":"St4ubwedel","VictimName":"CHOWCHOWTHEPAIN"}]}"
       }
    },
    "feature":"live_client_data"
@@ -135,15 +141,10 @@ Data Example:
 Data Example:
 
 ```json
-{ "info":{ 
+{ 
+   "info":{ 
       "live_client_data":{ 
-         "active_player":"{"abilities":{"E":{"abilityLevel":0,"displayName":"","id":"BaseSpell","rawDescription":"","rawDisplayName":""}
-         ,"Passive":{"displayName":"Passive","rawDescription":"Desc","rawDisplayName":"Passive"}
-         ,"Q":{"abilityLevel":0,"displayName":"","id":"BaseSpell","rawDescription":"","rawDisplayName":""}
-         ,"R":{"abilityLevel":0,"displayName":"","id":"BaseSpell","rawDescription":"","rawDisplayName":""},"W":{"abilityLevel":1,"displayName":"","id":"TFT_Input_MoveUnit","rawDescription":"","rawDisplayName":""}}
-         ,"championStats":{"abilityPower":0,"armor":6,"armorPenetrationFlat":0,"armorPenetrationPercent":1,"attackDamage":8,"attackRange":100,"attackSpeed":2.5,"bonusArmorPenetrationPercent":1,
-         "bonusMagicPenetrationPercent":1,"cooldownReduction":0,"critChance":0,"critDamage":150,"currentHealth":46,"healthRegenRate":0,"lifeSteal":0,"magicLethality":0,"magicPenetrationFlat":0,"magicPenetrationPercent"
-         :1,"magicResist":0,"maxHealth":100,"moveSpeed":350,"physicalLethality":0,"resourceMax":0,"resourceRegenRate":0,"resourceType":"NONE","resourceValue":0,"spellVamp":0,"tenacity":0},"currentGold":3415.21533203125,"fullRunes":{},"level":7,"summonerName":"Sh4rgaas"}"
+         "game_data":"{"gameMode":"CLASSIC","gameTime":2258.9697265625,"mapName":"Map11","mapNumber":11,"mapTerrain":"Mountain"}"
       }
    },
    "feature":"live_client_data"
