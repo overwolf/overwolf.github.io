@@ -94,6 +94,18 @@ Parameter      | Type                                | Description              
 videoUrl	   | string                              | The Overwolf URL of the video to delete                                                                 |
 callback	   | function                            |A callback function which will be called with the status of the request                                  |
 
+NOTE: If you are trying to delete a video which was already loaded into a video DOM element, deletion will fail since the file is locked by the Overwolf process. To avoid this error, set the video element's source to an empty string before trying to delete. See example below:
+
+```js
+const url = "overwolf://media/videos/video.mp4"; // Sample URL
+const videoElement = document.querySelector("#my-video");
+if (!videoElement.paused) { // Optional, pause the video before deleting
+  videoElement.pause();
+}
+videoElement.src = ""; // Set the video element source to an empty string
+overwolf.media.videos.deleteVideo(url);
+```
+
 ## VideoCompositionSegment Object
 #### Version added: 0.78
 
