@@ -488,6 +488,7 @@ Then, from your app you can use the [overwolf.current_extension](overwolf-curren
 overwolf.current_extension.getExtraObject(“simple-io-plugin”, function…)
 ```
 ## hotKeys object
+
 HotKeys are shortcut keystrokes that trigger app actions. The most common, basic usage is to show and hide your app in-game, but you can trigger more actions like saving, refreshing or any other custom actions.
 
 :::note Note
@@ -506,7 +507,7 @@ The map between the hotkey feature name and it’s settings:
 | title       | string |  Mandatory. Name of the hotkey as it will appear in the Hotkey tab in the settings.  | 0.78  |
 | action-type | enum   |  Defines the behavior of the hotkey: </br>**["toggle", "custom"]**                   | 0.78  |
 | default     | string |  The default key combination.                                                        | 0.78  |
-| passthrough | bool   |  Defines the behavior of the hotkey.                                                 | 0.78  |
+| passthrough | bool   |  The hotkey will not block keys from the game.                                       | 0.78  |
 | hold        | bool   |  Defines whether this hotkey is meant to invoke an action while being held.          | 0.142 |
 
 Example code:

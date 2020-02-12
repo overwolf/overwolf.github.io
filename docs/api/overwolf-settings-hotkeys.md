@@ -132,18 +132,18 @@ On the following example, you can see that the current extension set `Shift + F5
 
 #### Version added: 0.142
 
-> Fired only for hotkeys that set as `hold`.
+> Fired only for hotkeys that are set in the manifest as `hold`.
 
-Triggered only for the current extension hotkeys.
+* Triggered only for the current extension hotkeys.
+* This event will be fired twice - on key down and on key up.
 
 ## onPressed
 
 #### Version added: 0.142
 
-> Fired for hotkeys that NOT set as `hold` hotkeys.
+> Fired for hotkeys that are NOT set as `hold` hotkeys.
 
 Triggered only for the current extension hotkeys.  
-This event will be fired twice - on key down and on key up.
 
 This event will replace the depracated [overwolf.settings.registerHotKey()](overwolf-settings#registerhotkeyactionid-callback) function, as a way to register for hotkey events.
 
