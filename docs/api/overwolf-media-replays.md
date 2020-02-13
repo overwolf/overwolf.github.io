@@ -43,11 +43,14 @@ Use the overwolf.media.replays API to capture a **short** video replay of the cu
 
 > Turns on background replay capturing. Without calling it first, you will not be able to create video replays.
 
-:::note
+Only apps that have the **VideoCaptureSettings** permission in the manifest are considered as a capture app and displayed in the OW client capture tab.
+
+:::tip
 Using this method you can quickly get the game highlights videos without the overhead of using both OW events and streaming API’s.  
 :::
 
-There’s no need to know/understand each supported game’s mechanics, game flow, edge cases, timings, etc. Just request for any supported game highlight and OW will provide you with a video file that includes this event.
+There’s no need to know/understand each supported game’s mechanics, game flow, edge cases, timings, etc.  
+Just request for any supported game highlight and OW will provide you with a video file that includes this event.
 
 Parameter   | Type                                           | Description                                                             |
 ----------- | ---------------------------------------------- | ----------------------------------------------------------------------- |
@@ -62,9 +65,10 @@ A callback function which will be called with the status of the request
 { "status": "success" }
 ```
 
-#### Few important notes
+#### Important notes
 
-* `turnOn()` will fail if highlights are requested but not supported for the current game. (to get the list of supported highlights call [getHighlightsFeatures()](#gethighlightsfeaturesgameid-callback))
+* `turnOn()` will fail if highlights are requested but not supported for the current game.  
+  To get the list of supported highlights call [getHighlightsFeatures()](#gethighlightsfeaturesgameid-callback).
 * The below call will override your current OW client settings only if video setting is not null or values are different than zero.
 * For each OW app that uses this feature, a new video folder will be created. So in theory, a few OW installed apps can capture the same highlight, from the same game (if all these apps set to capture this highlight from this game of course). 
 
