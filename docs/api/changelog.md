@@ -22,8 +22,6 @@ Note that the full documentation and links for this version will be added soon t
     This event will replace the depracated [overwolf.settings.registerHotKey](overwolf-settings#registerhotkeyactionid-callback) function.    
   * New event: [overwolf.settings.onChanged](overwolf-settings-hotkeys#onchanged):  will fire on hotkeys change. 
 
-* `overwolf.extensions.getExtensions()` will now also return the permissions of the extension (required for the settings app).  
-
 * Cleanup upon uninstall:
   * Delete extension folder upon uninstall extension.
   * Clear all extension windows proprieties from setting.
