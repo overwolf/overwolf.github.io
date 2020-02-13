@@ -63,7 +63,27 @@ If you are using a transparent background controller (window), you must register
 
 ## "hold" hotkeys
 
+You can set a hotkey as a "hold" hotkey: a hotkey that behaves in a "ShowOnHold" mode (like the tab key does in some games).
+
+To implement a hotkey which works with a "ShowOnHold" functionality, you should set it as a "hold" hotkey in the manifest, and register to the [overwolf.settings.hotkeys.onHold](../api/overwolf-settings-hotkeys#onhold) event.
+
+You can read a full detailed example on how to do that [here](using-tab#set-the-hotkey-in-the-manifest).  
+This example demonstrates how to set the Tab key as a "hold" hotkey, but of course, you can set any other key as a "hold" hotkey.  
+
 ## Global hotkeys
+
+For extensions that target more than one game (global apps), there is an option to set hotkeys as global hotkeys.  
+This option is available only from the OW client UI. You cant set global hotkeys from the manifest or code.
+
+A screenshot from the OW client UI:
+
+![hotkeys_global](../assets/hotkeys_global.png)
+
+If you "upgrade" your hotkey to a global hotkey, the OW client will try to set this hotkey for all the installed games on your machine.
+
+Whenever hotkeys are added this way but a conflict exists, the hotkey is added as unassigned.
+
+You can get the list of all your app's assigned hotkeys using the [overwolf.settings.hotkeys.get()](../api/overwolf-settings-hotkeys#getcallback).
 
 ## Get notified on a hotkey change
 

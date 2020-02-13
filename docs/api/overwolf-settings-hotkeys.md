@@ -70,13 +70,11 @@ In the following example, we can see a callback example of an extension that set
     }
 }
 ```
+
 #### Callback example with global hotkeys
 
-For extensions that target more than one game (global apps), there is an option that available in the OW client UI, to set an extension hotkey as `global`. Read more about global hotkeys [here](#).  
-
-If you "upgrade" your hotkey to global hotkey, the OW client will try to set this hotkey for all the installed games on your machine, and your callback will return with the `global` array.
-
-Whenever hotkeys are added this way but a conflict exists, the hotkey is added as unassigned.
+For extensions that target more than one game (global apps), there is an option that available in the OW client UI, to set an extension hotkey as `global`.  
+Read more about global hotkeys [here](../topics/hotkeys-best-practices#global-hotkeys).  
 
 On the following example, you can see that the current extension set `Shift + F5` as a global hotkey for all the installed games: 
 
