@@ -36,6 +36,15 @@ Note that the full documentation and links for this version will be added soon t
 * [League of Legends Events](overwolf-games-events-lol)
   * New event & info:
     * live_client_data
+* [Path of Exile game events](games-events-path-of-exile)
+  * New events & info
+    * kill
+    * death
+    * match_outcome
+    * current_zone
+    * inventory open/close
+    * character_name
+    * character_level
 
 ## Version 0.141 (Jan. 2020)
 
