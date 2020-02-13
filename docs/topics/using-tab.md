@@ -6,13 +6,13 @@ sidebar_label:  Use Tab as an app Hotkey
 
 ## Hotkeys - Overview
 
-Overwolf Hotkeys are keys or key combinations that can control your app in-game. When using a hotkey, your app window is opened, and clicking it again will hide or minimize it. You can allow users to change hotkey combinations from your app’s settings panel by automatically directing the user to the Overwolf settings page.  
+Overwolf Hotkeys are keystrokes or key combinations that can control your app while in-game. When using a hotkey, your app window is opened, and clicking it again will hide or minimize it. You can allow users to change hotkey combinations from your app’s settings panel by automatically directing the user to the Overwolf settings page.  
 
 You can read all about hotkeys in our [Hotkey best practices](hotkeys-best-practices) guide.
 
 ## Binding App Hotkeys to Game Hotkeys
 
-Most games already have built-in hotkeys for common actions. These key combinations usually bound to the most important and common actions. Adding new hotkeys for your app makes the lives of players harder, as they needs to remember additional combinations.
+Most games already have built-in hotkeys for common actions. These key combinations are usually bound to the most important actions. Adding new hotkeys for your app makes the lives of players harder, as they needs to remember additional combinations.
 
 We can "hitch a ride" on game hotkeys and provide value in an automated manner. The main advanatage of this approach is that the player doesn't need to remember new hotkeys: We can bind OW hotkeys in parallel to the existing game hotkeys to increase value on existing actions.
 
@@ -28,7 +28,7 @@ Examples:
 * In CS:GO, when a player buys weapons, you can show the player his new weapon's recoil pattern.
 * In Hearthstone, when a player enters the deck / collection screen, you can tell him which of his prepared decks is closest to a good meta deck and what cards he is missing to complete it.
 
-**"Riding" the Tab key and similar hotkeys, when done right, is a highly recommended practice.**
+**"Riding" the Tab key and similar hotkeys, when done right and providing value to your users, is a highly recommended practice.**
 
 A LOL example of the popup that appears while the player is holding the tab key (and hides it on release):
 
@@ -36,12 +36,12 @@ A LOL example of the popup that appears while the player is holding the tab key 
 
 ## Implement "Tabbing" in Your App
 
-Start by spotting the hotkeys your app's targeted game uses in this fashion - whether it's Tab or other hotkeys. Break down what happens on a tab press - Is a new window launched? Is there a new bit of UI? Maybe the champion is doing something? Once mapped, you can think up ways to add value from your app to these screens and automated functions. 
+Start by spotting the hotkeys that your targeted game uses in this fashion - whether it's Tab or other hotkeys. Break down what happens when that key is pressed - Is a new window launched? Is there a new bit of UI? Maybe the champion is doing something? Once mapped, you can think up ways to add value from your app to these screens and automated functions. 
 
 The [overwolf.settings.hotkeys](../api/overwolf-settings-hotkeys) API offers some useful events for that purpose.  
 You can find the complete info about hotkeys and how to use them in our [hotkeys best practice](hotkeys-best-practices) guide.
 
-### Set the hotkey in the manifest
+### Set your hotkey in the manifest
 
 Overwolf hotkeys now offer a "ShowOnHold" mode like the tab key does in some games.  
 In order to implement a hotkey which works with an OnHold Tab functionality, we will have to set the hotkey in the manifest as a "hold" hotkey:
