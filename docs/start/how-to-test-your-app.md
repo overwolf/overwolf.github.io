@@ -184,7 +184,7 @@ In order to get a 400x300 video test ad enabled on your app, please follow these
   
 ### Ads are not hidden
 
-Open Overwolf's developer tools by pressing ctrl + i, and look at the console. No ad processes should be visible if no ads are displayed on screen.
+Open Overwolf's developer tools by pressing ctrl + shift + i, and look at the console. No ad processes should be visible if no ads are displayed on screen.
 
 ### Ads remove and refresh
 
