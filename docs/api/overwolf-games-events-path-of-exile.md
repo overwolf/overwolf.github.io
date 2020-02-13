@@ -90,7 +90,7 @@ character_level| me        | Local player level.       |See [notes](#character_l
 Data Example:
 
 ```json
-{"feature":"me","category":"me","key":"character_name","value":"Shaelgaas"}
+{"info":{"me":{"character_name":"Shaelgaas"}},"feature":"me"}
 ```
 
 #### *character_level* note
@@ -98,7 +98,7 @@ Data Example:
 Data Example:
 
 ```json
-{"feature":"me","category":"me","key":"character_level","value":"31"}
+{"info":{"me":{"character_level":"31"}},"feature":"me"}
 ```
 
 ## match_info
