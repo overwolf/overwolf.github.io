@@ -18,6 +18,8 @@ Please read the [overwolf.games.events](overwolf-games-events) documentation pag
 * [gep_internal](#gep_internal)
 * [kill](#kill)
 * [death](#death)
+* [me](#me)
+* [match_info](#match_info)
 
 ## Game event status
 
@@ -71,4 +73,71 @@ Data Example:
 
 ```json
 {"events":[{"name":"death","data":null}]}
+```
+
+## me
+
+### Info Updates
+
+key          | Category    | Values                    | Notes                 | Since GEP Ver. |
+------------ | ------------| ------------------------- | --------------------- | ------------- | 
+character_name| me        | Local player nickname.     |See [notes](#character_name-note)|   144.0  |
+character_level| me        | Local player level.       |See [notes](#character_level-note)|   144.0  |
+
+
+#### *character_name* note
+
+Data Example:
+
+```json
+{"feature":"me","category":"me","key":"character_name","value":"Shaelgaas"}
+```
+
+#### *character_level* note
+
+Data Example:
+
+```json
+{"feature":"me","category":"me","key":"character_level","value":"31"}
+```
+
+## match_info
+
+### Info Updates
+
+key          | Category    | Values                    | Notes                 | Since GEP Ver. |
+------------ | ------------| ------------------------- | --------------------- | ------------- | 
+current_zone | match_info  | Name of the current zone  |See [notes](#current_zone-note)|   144.0  |
+opened_page  | match_info  | Whether inventory is open/closed |See [notes](#opened_page-note)|   144.0  |
+
+### Events
+
+Event        | Event Data        | Fired When        | Notes              | Since GEP Ver. |
+-------------| ------------------| ----------------- | ------------------ | ---------------|
+match_outcome| victory/defeat  | Boss killed/You died.|See [notes](#match_outcome-note)|   144.0  |
+
+#### *current_zone* note
+
+Data Example:
+
+```json
+{"feature":"match_info","category":"match_info","key":"current_zone","value":"Lioneye's Watch"}
+```
+
+#### *opened_page* note
+
+Data Example:
+
+```json
+{"feature":"match_info","category":"match_info","key":"opened_page","value":"inventory"}
+{"feature":"match_info","category":"match_info","key":"opened_page","value":null}
+```
+
+#### *match_outcome* note
+
+Data Example:
+
+```json
+{"events":[{"name":"match_outcome","data":"victory"}]}
+{"events":[{"name":"match_outcome","data":"defeat"}]}
 ```
