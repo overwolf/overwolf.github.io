@@ -491,21 +491,14 @@ overwolf.current_extension.getExtraObject(“simple-io-plugin”, function…)
 
 HotKeys are shortcut keystrokes that trigger app actions. The most common, basic usage is to show and hide your app in-game, but you can trigger more actions like saving, refreshing or any other custom actions.
 
-:::note Note
-Hotkeys will only work in-game, and never on desktop
-:::
-
-There are two types of hotkeys:
-* **toggle** – Toggles application visibility by showing or hiding it. The advantage of it is that it can activate the app if it's closed, so use it if you want the hotkey to launch your app.   
-
-* **custom** – Defines a custom hotkey to be used by the app. It is up to the app to register custom hotkeys and handle them. Custom hotkeys will only work when your app is already running. Unlike Toggle hotkeys, using a custom hotkey with the app closed will do nothing. In addition, you will need to use the [registerHotKey](overwolf-settings) function to register the hotkey, but the advantage is that you can use this callback function to customize your app window behavior.  
+Please read all the info about hotkeys and how to use them in our [hotkeys best practice](../topics/hotkeys-best-practices) guide.
 
 The map between the hotkey feature name and it’s settings:
 
 | Name        | Type   |  Description                                                                         | Since |
 |-------------|--------|--------------------------------------------------------------------------------------| ----- |
 | title       | string |  Mandatory. Name of the hotkey as it will appear in the Hotkey tab in the settings.  | 0.78  |
-| action-type | enum   |  Defines the behavior of the hotkey: </br>**["toggle", "custom"]**                   | 0.78  |
+| action-type | enum   |  Defines the behavior of the hotkey: **["toggle", "custom"]**                   | 0.78  |
 | default     | string |  The default key combination.                                                        | 0.78  |
 | passthrough | bool   |  The hotkey will not block keys from the game.                                       | 0.78  |
 | hold        | bool   |  Defines whether this hotkey is meant to invoke an action while being held.          | 0.142 |

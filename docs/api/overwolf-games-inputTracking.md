@@ -151,6 +151,17 @@ The event information includes the virtual key code (key) and a boolean stating 
 }
 ```
 
+#### Using the onKeyUp event
+
+We will use it to catch the user's keypress release, for example, catch the tab release:
+
+```js
+overwolf.games.inputTracking.onKeyUp.addListener(function(info) {
+    if(info.key == "9") //9=tab
+		console.log("Tab key released: " + JSON.stringify(info));
+});
+```
+
 ## onKeyDown
 
 #### Version added: 0.78
@@ -165,6 +176,22 @@ The event information includes the virtual key code (key) and a boolean stating 
     "onGame": true
 }
 ```
+
+#### Using the onKeyDown event
+
+We can use it to catch the user's keypress, for example, catch the tab keypress:
+
+```js
+overwolf.games.inputTracking.onKeyDown.addListener(function(info) {
+    if(info.key == "9") //9=tab
+		console.log("Tab key pressed: " + JSON.stringify(info));
+});
+```
+
+The event also returns a boolean stating whether that keypress happened in the game or outside of it.
+
+Note that it's not recommended to use this method (catching user keypresses) for hotkeys.  
+For that, use the [overwolf.settings.hotkeys](overwolf-settings-hotkeys) API.
 
 ## onMouseUp
 

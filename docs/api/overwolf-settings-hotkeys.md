@@ -6,6 +6,8 @@ sidebar_label: overwolf.settings.hotkeys
 
 Use the `overwolf.settings.hotkeys` API to view and modify the Overwolf hotkeys settings properties.
 
+Please read all the info about hotkeys and how to use them in our [hotkeys best practice](../topics/hotkeys-best-practices) guide.
+
 ## Methods Reference
 
 * [overwolf.settings.hotkeys.get()](#getcallback)
@@ -137,15 +139,27 @@ On the following example, you can see that the current extension set `Shift + F5
 * Triggered only for the current extension hotkeys.
 * This event will be fired twice - on key down and on key up.
 
+#### Event data example
+
+```json
+{"name": "ges_showhide", "state": "down"}
+{"name": "ges_showhide", "state": "up"}
+```
+
 ## onPressed
 
 #### Version added: 0.142
 
 > Fired for hotkeys that are NOT set as `hold` hotkeys.
 
-Triggered only for the current extension hotkeys.  
+* Triggered only for the current extension hotkeys.
+* This event will replace the depracated [overwolf.settings.registerHotKey()](overwolf-settings#registerhotkeyactionid-callback) function, as a way to register for hotkey events.
 
-This event will replace the depracated [overwolf.settings.registerHotKey()](overwolf-settings#registerhotkeyactionid-callback) function, as a way to register for hotkey events.
+#### Event data example
+
+```json
+{"name": "ges_showhide"} //event triggered
+```
 
 ## onChanged
 
@@ -153,7 +167,9 @@ This event will replace the depracated [overwolf.settings.registerHotKey()](over
 
 > Fired on hotkey setting change.
 
-Triggered only for the current extension hotkeys.
+Triggered only for the current extension hotkeys.  
+
+Listen to this event if you want to get notified when the user changed your app hotkeys from the OW client settings page.
 
 #### Event data example
 

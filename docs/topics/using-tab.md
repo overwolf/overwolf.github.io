@@ -38,40 +38,41 @@ A LOL example of the popup that appears while the player is holding the tab key 
 
 Start by spotting the hotkeys your app's targeted game uses in this fashion - whether it's Tab or other hotkeys. Break down what happens on a tab press - Is a new window launched? Is there a new bit of UI? Maybe the champion is doing something? Once mapped, you can think up ways to add value from your app to these screens and automated functions. 
 
-As mentioned above,  Overwolf hotkeys do not yet offer a "ShowOnHold" mode like the tab key does in some games. For now, in order to implement a hotkey which works with an OnHold Tab functionality, we will have to implement it in different way than the existing hotkeys API.
+The [overwolf.settings.hotkeys](../api/overwolf-settings-hotkeys) API offers some useful events for that purpose.  
+You can find the complete info about hotkeys and how to use them in our [hotkeys best practice](hotkeys-best-practices) guide.
 
-The [overwolf.games.inputTracking](../api/overwolf-games-inputTracking) API offers some useful events for that purpose.
+### Set the hotkey in the manifest
 
-:::important
-Generally, hotkeys cannot be shared between Overwolf apps: once an app is using a hotkey, no other app can use it. However, this method of listening to OnKey events bypasses that limitation by allowing several apps to register the same hotkey actions (for example, several apps can set Tab as an hotkey and it will respond differently in each game depending on it's Tab features).  
-:::
+Overwolf hotkeys now offer a "ShowOnHold" mode like the tab key does in some games.  
+In order to implement a hotkey which works with an OnHold Tab functionality, we will have to set the hotkey in the manifest as a "hold" hotkey:
 
-### Using the onKeyDown event
-
-The [onKeyDown](../api/overwolf-games-inputTracking#onkeydown) event fires when a keyboard key has been pressed.
-
-We will use it to catch the user's tab keypress:
-
-```js
-overwolf.games.inputTracking.onKeyDown.addListener(function(info) {
-    if(info.key == "9") //9=tab
-		console.log("Tab key pressed: " + JSON.stringify(info));
-});
+```json
+"hotkeys": {
+    "show_YourAppName": { 
+        "title": "Show Player",
+        "action-type": "custom",
+        "default": "Shift+F9",
+        "hold": true
+    }
+}
 ```
 
-The event also returns a boolean stating whether that keypress happened in the game or outside of it, so we can make sure that the our app window will be displayed at the right time, only when the user is in the game.
+### Register to the onHold event
 
-### Using the onKeyUp event
+Custom hotkeys will only work when your app is already running.  
+Using a custom hotkey with the app closed will do nothing.
 
-The [onKeyUp](../api/overwolf-games-inputTracking#onkeyup) event fires when a keyboard key has been released, and it also states whether the keypress was in the game or not.  
-
-We will use it to catch the user's tab release:
+In addition, when you are using a [hold](#hold-hotkeys) hotkey, you should register to the [overwolf.settings.hotkeys.onHold](../api/overwolf-settings-hotkeys#onhold) event:
 
 ```js
-overwolf.games.inputTracking.onKeyUp.addListener(function(info) {
-    if(info.key == "9") //9=tab
-		console.log("Tab key released: " + JSON.stringify(info));
-});
+overwolf.settings.hotkeys.onHold.addListener(console.log)
 ```
 
-Once released, we can hide/minimize our window.
+Note that this event will be fired twice - on key down and on key up:
+
+```json
+{"name": "ges_showhide", "state": "down"}
+{"name": "ges_showhide", "state": "up"}
+```
+
+Once the tab key is released, we can hide/minimize your window.

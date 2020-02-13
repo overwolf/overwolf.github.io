@@ -60,6 +60,10 @@ You can also use the following helpful URLs to open the Overwolf settings and ho
 
 > Returns the hotkey assigned to a given feature id by calling the callback.
 
+:::warning
+This function is deprecated. Instead, please use [overwolf.settings.hotkeys.get](overwolf-settings-hotkeys#getcallback).
+:::
+
 Parameter | Type                  | Description                                                             |
 --------- | ----------------------| ----------------------------------------------------------------------- |
 featureId | string                | The feature id for which to get the set hotkey                           |
@@ -81,6 +85,10 @@ A callback function which will be called with the status of the request
 #### Permissions required: Hotkeys
 
 > Registers a callback for a given hotkey action.
+
+:::warning
+This function is deprecated. Instead, please register to the [overwolf.settings.hotkeys.onPressed](overwolf-settings-hotkeys#onpressed) event.
+:::
 
 Parameter | Type                  | Description                                                             |
 --------- | ----------------------| ----------------------------------------------------------------------- |
@@ -352,8 +360,8 @@ callback           | function           |  A callback function which will be cal
 
 > Fired when a hotkey is modified. Apps will only be notified of hotkey changes that relate to them.
 
-:::tip
-Listen to this event if you want to get notified when the user changed your app hotkeys from the OW settings page.
+:::warning
+This function is deprecated. Instead, please use the  [overwolf.settings.hotkeys.onChanged](overwolf-settings-hotkeys#onchanged) event.
 :::
 
 #### Event Data Example: Success
