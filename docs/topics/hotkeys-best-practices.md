@@ -1,12 +1,12 @@
 ---
 id: hotkeys-best-practices
 title: Hotkeys Best Practices
-sidebar_label: Hotkeys best practices
+sidebar_label: Hotkey best practices
 ---
 
 ## Using Hotkeys
 
-The hotkeys are set in the manifest file, under the [hotKeys section](../api/manifest-json#hotkeys-object).
+Hotkeys are set in the manifest file, under the [hotKeys section](../api/manifest-json#hotkeys-object).
 
 :::important
 Hotkeys will only work in-game, not on desktop.
@@ -38,69 +38,68 @@ There are two types of Hotkeys we use:
 ### Toggle
 
 A special hotkey that toggles the application visibility by showing or hiding it.  
-**The minority of the apps are using it, as it's the only action that it can do.**
+**Few apps are using it, as it's the only action that it can do.**
 
-* The advantage of it is that it can activate your app if it's closed, and launches your in-game app window.
+* The advantage is that a toggle hotkey can activate your app even if it's closed, and launches your in-game app window.
 * Another advantage is that you don't have to register for any event. Just define the hotkey as "toggle" in the manifest.
 
 :::important
 If you are using a transparent background controller (window), a toggle hotkey will not work properly. Please use a [custom hotkey](#custom).
 :::
 
-### Custom
+### Custom Hotkeys
 
 Defines a custom hotkey to be used by the app.  
-Most of the apps are using this kind of hotkey, as it can activate any action and, you can customize your app window behavior.
+Most apps are using this kind of hotkey, as it can activate any action and you can customize your app's window behavior.
 
-* Custom hotkeys will only work when your app is already running.  
-  Unlike Toggle hotkeys, using a custom hotkey with the app closed will do nothing.
-* Custom hotkeys will only work and get a response from your app after registering the hotkey using the [overwolf.settings.hotkeys.onPressed](../api/overwolf-settings-hotkeys#onpressed) event.
-* If you are using a [hold](#hold-hotkeys) hotkey, you should register to the [overwolf.settings.hotkeys.onHold](../api/overwolf-settings-hotkeys#onhold) event, instead of the [onPressed](../api/overwolf-settings-hotkeys#onhold) event.
+* Custom hotkeys will only function when your app is already running (Unlike Toggle hotkeys, using a custom hotkey with the app closed will do nothing).
+* Custom hotkeys will only function and get a response from your app after registering the hotkey using the [overwolf.settings.hotkeys.onPressed](../api/overwolf-settings-hotkeys#onpressed) event.
+* If you are using a [hold](#hold-hotkeys) type hotkey, you should register to the [overwolf.settings.hotkeys.onHold](../api/overwolf-settings-hotkeys#onhold) event, instead of the [onPressed](../api/overwolf-settings-hotkeys#onhold) event.
 
 :::important
-If you are using a transparent background controller (window), you must register the hotkey in that window.
+If you are using a transparent background controller (window), you must register the hotkey in that window as well.
 :::
 
-## "hold" hotkeys
+## "Hold" hotkeys
 
-You can set a hotkey as a "hold" hotkey: a hotkey that behaves in a "ShowOnHold" mode (like the tab key does in some games).
+You can set a hotkey as a "hold" hotkey: a hotkey that functions while pressed down and stops when released, usually used for "ShowOnHold" mode (like the tab key does in some games).
 
 To implement a hotkey which works with a "ShowOnHold" functionality, you should set it as a "hold" hotkey in the manifest, and register to the [overwolf.settings.hotkeys.onHold](../api/overwolf-settings-hotkeys#onhold) event.
 
-You can read a full detailed example on how to do that [here](using-tab#set-the-hotkey-in-the-manifest).  
-This example demonstrates how to set the Tab key as a "hold" hotkey, but of course, you can set any other key as a "hold" hotkey.  
+You can read a detailed example on how to do that [here](using-tab#set-the-hotkey-in-the-manifest).  
+This example demonstrates how to set the Tab key as a "hold" hotkey, but of course, you can set any other key as a "hold" hotkey in the same way.  
 
-## Global hotkeys
+## Global Hotkeys
 
-For extensions that target more than one game (global apps), there is an option to set hotkeys as global hotkeys.  
+For apps that work in more than one game or global apps there is an option to set hotkeys as global hotkeys.  
 This option is available only from the OW client UI. You cant set global hotkeys from the manifest or code.
 
 A screenshot from the OW client UI:
 
 ![hotkeys_global](../assets/hotkeys_global.png)
 
-If you "upgrade" your hotkey to a global hotkey, the OW client will try to set this hotkey for all the installed games on your machine.
+If you "upgrade" your hotkey to a global hotkey, the OW client will try to set this hotkey for all installed games on your machine.
 
 Whenever hotkeys are added this way but a conflict exists, the hotkey is added as unassigned.
 
 You can get the list of all your app's assigned hotkeys using the [overwolf.settings.hotkeys.get()](../api/overwolf-settings-hotkeys#getcallback).
 
-## Get notified on a hotkey change
+## Get notified on a Hotkey change
 
-Listen to the [overwolf.settings.hotkeys.onChanged](../api/overwolf-settings-hotkeys#onchanged) event if you want to get notified when the user changed your app hotkeys from the OW client settings page.
+Listen to the [overwolf.settings.hotkeys.onChanged](../api/overwolf-settings-hotkeys#onchanged) event if you want to get notified when users change your app's hotkeys from the OW client settings page.
 
-## Reassign hotkeys
+## Reassign Hotkeys
 
 It is not possible to reassign hotkeys directly from apps, only through the Overwolf client settings page.  
 What you can do is place a direct link to the relevant settings page using `href="overwolf://settings/hotkeys#hotkey_name_in_manifest`.  
 
 :::note
-It's possible to use left or right arrows for hotkeys. To do so, you should use the code `Left` or `Right` in your manifest.json.
+It's possible to even use left or right arrows for hotkeys. To do so, you should use the code `Left` or `Right` in your manifest.json.
 :::
 
 ## Pass through 
 
-You can set a hotkey as "passthrough," which means that the hotkey will not block keys from the game.  
+You can set a hotkey as "passthrough," which means that the hotkey will not interfere with keys from the game.  
 The key combination will trigger your app hotkey and then will "passthrough" the game.
 
 Example code from the manifest, for a hotkey that set to pass through:
