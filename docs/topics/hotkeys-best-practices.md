@@ -57,7 +57,7 @@ Most apps are using this kind of hotkey, as it can activate any action and you c
 * If you are using a [hold](#hold-hotkeys) type hotkey, you should register to the [overwolf.settings.hotkeys.onHold](../api/overwolf-settings-hotkeys#onhold) event, instead of the [onPressed](../api/overwolf-settings-hotkeys#onhold) event.
 
 :::important
-If you are using a transparent background controller (window), you must register the hotkey in that window as well.
+If you are using a transparent background controller (window), register your app's hotkeys to the **onPressed** event, in that window.
 :::
 
 ## "Hold" hotkeys
