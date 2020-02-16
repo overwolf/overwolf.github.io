@@ -15,7 +15,7 @@ Only whitelisted Overwolf developer accounts can load or install apps that not a
 An Overwolf app's code has three main parts:
 
 1. A manifest file (manifest.json), detailing the properties of the app. More info [here](#manifest-file).
-2. HTML / javascript source files. More info [here](#html-js-source-files).
+2. HTML / javascript source files. More info [here](#htmljs-source-files).
 3. Visuals and images such as icons and buttons. More info [here](#assets).
 
 :::important Only JS frameworks are supported
@@ -98,7 +98,7 @@ After you finish building your app, you need to pack everything including the ma
 
 An OPK package is actually a ZIP package:  To create it, just ZIP all your files together, then manually change the file extension from ZIP to OPK. Double clicking an OPK will install the package.
 
-We remind you that only [whitelisted](#whitelist-you-as-a-developer) developers can install OPKs that were not downloaded from the store.
+We remind you that only [whitelisted](#whitelist-as-a-developer) developers can install OPKs that were not downloaded from the store.
 
 ## Safety & Security
 
