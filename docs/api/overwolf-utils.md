@@ -554,6 +554,10 @@ url                | string   | a url to the selected file                  |
 ```json
 {
     "success": true,
-    "url": "overwolf-fs://E/Video"
+    "url": "overwolf-fs://C/Users/Hal9000/AppData/Local/O…mjiecdnnjmgfifjgkfegkljnjjbzap/1.0.14/logo.png"
 }
 ```
+#### url note
+
+Use the OW file url (overwolf-fs://..) and not a regular file URL (file://) for file operations like upload a file using `XMLHttpRequest` object, etc.
+Otherwise, you will get a cross origin error.
