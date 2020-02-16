@@ -19,7 +19,8 @@ Please note that these are community code snippets, and the usage is at your own
 * [GR Digital/memory-reader](https://github.com/GRDigital/memory-reader).  
   A little library for simple external memory reading from Overwolf apps.
   
-* [GR Digital/Overwolf app boilerplate](https://github.com/GRDigital/overwolf-boilerplate).  
+* [GR Digital/Overwolf app boilerplate](https://github.com/GRDigital/overwolf-boilerplate).
+  Overwolf boilerplate with Flowtype and React here.
   "the boilerplate we've used for multiple successful Overwolf apps, ranging from fairly simple to some of the most complex apps on the platform. It showcases updating the app from the server, deploying, logging and ffi with c-style plugin apis."
 
 * [Sorikairox/Overwolf VUE sample app](https://github.com/Sorikairox/overwolf-vue-sample).
