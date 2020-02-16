@@ -114,3 +114,7 @@ Example code from the manifest, for a hotkey that set to pass through:
     },
 }
 ```
+
+## Uninstall
+
+All app hotkeys removed once the extension is uninstalled.
