@@ -8,8 +8,7 @@ In this article, we'll use an example in order to learn how to build Overwolf ap
 
 The sample app's functionality is pretty straightforward: It auto-launches when the user launches Fortnite, just like any other Fortnite app, and reads all real time game events as you play. To demonstrate overlay features, the sample app prints all in-game event data collected into an overlay-based component.
 
-The sample app is built with JS code and TypeScript. An official Vue, React, and Angular version will be added soon.  
-Until then, you can use some community boilerplates for React and Vue that can be found in our [community snippets](../topics/snippets) page.
+The sample app is built with JS code and TypeScript. An official Vue, React, and Angular version will be added soon. Until then, check our [community snippets](../topics/snippets) page for an unofficial Vue version and other code samples, like React boilerplate for Overwolf apps and more.
 
 ## Sample App Functionality
 
