@@ -6,7 +6,7 @@ sidebar_label: overwolf.benchmarking
 
 This is a set of functions for querying system stats and benchmarks. These calls require administrative permissions, which the user may be prompted to grant with a UAC message which may interrupt him while playing. In order to avoid interruptions, it is recommended to ask before requesting permissions.
 
-:::warning Warning
+:::warning
 The overwolf.benchmarking API is not regularly maintained and some of it’s methods and events might not work as intended.
 :::
 

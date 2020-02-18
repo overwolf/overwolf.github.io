@@ -154,6 +154,10 @@ overwolf.settings.registerHotKey(
 
 > Returns the current language overwolf is set to in a two letter ISO name format.
 
+:::warning
+This function is deprecated. Instead, please use [overwolf.settings.language]() API.
+:::
+
 Parameter | Type                  | Description                                                             |
 --------- | ----------------------| ----------------------------------------------------------------------- |
 callback  | function              |  A callback function which will be called with the status of the request|

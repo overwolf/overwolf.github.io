@@ -6,11 +6,30 @@ sidebar_label: Changelog
 
 Follow this entry for ongoing updates and changes to the project or tools:
 
-## Version 0.142 (Feb. 2020)
+## Version 0.143 (Mar. 2020)
 
 Note that the full documentation and links for this version will be added soon to the site.
 
-* New API - overwolf.settings.hotkeys.  
+* From now, whenever you try to use an obsolete API, the dev console will print a warning.  
+  Try: overwolf.setting.getCurrentOverwolfLanguage().
+* New API - [overwolf.settings.language]().  
+  Returns an object with language methods and events.
+  * [overwolf.settings.language.get(callback)]().
+  * [overwolf.settings.language.onLanguageChanged]() event.
+* New event: [overwolf.windows.onScreenPropertyChanged(callback)]().  
+  Detect moving window to another monitor.  
+  Triggered if more than 50% of the window has been moved to another monitor.  
+  Returns the new monitor handle.
+* Upgrade OBS to 24.0.5.  
+  * Update FFMpeg version.
+  * Support new NVEC Encoders ("jim_encoder", "NVEC New").
+* Allow overriding recording indication type and position in API:  
+  Now when calling [overwolf.streaming.start()](overwolf-streaming#startsettings-callback), `indication_position` and `indication_type` can be set under video settings. (Until now, you could do that only from the OW client UI).
+
+
+## Version 0.142 (Feb. 2020)
+
+* New API - [overwolf.settings.hotkeys](overwolf-settings-hotkey).  
   Returns an object with hotkeys methods and events.
   * New manifest flag: `hold`: Will be added to the [hotkeys object](manifest-json#hotkeys).  
     Defines a new type of hotkey - hotkey that works only while you are holding the key.  
