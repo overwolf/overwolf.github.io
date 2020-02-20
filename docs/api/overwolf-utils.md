@@ -84,6 +84,8 @@ Parameter | Type     | Description                                  |
 --------- | ---------| -------------------------------------------- |
 callback  | ([Result: GetMonitorsListResult](#getmonitorslistresult-object)) => void | Called with the monitors array               |
 
+Note that this function does not return the DPI of the monitors. To get the DPI, you can use [getSystemInformation()](getsysteminformationcallback).
+
 ## sendKeyStroke(keyString)
 #### Version added: 0.83
 #### Permissions required: GameControl
