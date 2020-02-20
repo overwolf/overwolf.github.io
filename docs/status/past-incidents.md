@@ -199,6 +199,9 @@ No logs.
 Teamfight Tactics
 -----------------
 
+**Investigating** - TFT events are down, we are working on a fix.
+Feb 20, 01:25 PM GMT+3
+
 **Resolved** - This incident has been resolved.  
 Jan 24, 12:50 PM GMT+3
 
