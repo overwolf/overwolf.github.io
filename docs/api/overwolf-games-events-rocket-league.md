@@ -344,7 +344,7 @@ steamId      | me          | Player’s Steam ID     |                       |  
 name         | me          | Player’s name         |                       |    14.0       |
 goals        | me          | Player’s goal count  |                       |    14.0       |
 score        | me          | Player’s score        |                       |    14.0       |
-deaths       | me          | Player’s death count  |                       |    14.0       |
+deaths       | me          | Player’s death count  | Currently not supported                       |    14.0       |
 team         | me          | Player’s team number  |                       |    14.0       |
 team_score        | me          | Team score    |                       |    86.0       |
 
