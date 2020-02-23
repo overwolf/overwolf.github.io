@@ -48,6 +48,9 @@ Dec 19, 08:29 AM GMT+3
 Fortnite
 --------
 
+**Resolved** - This incident has been resolved.  
+Feb 21, 02:30 PM GMT+3
+
 **Investigating** - Fortnite events are down.
 Feb 20, 01:05 PM GMT+3
 
@@ -198,6 +201,9 @@ No logs.
 
 Teamfight Tactics
 -----------------
+
+**Resolved** - This incident has been resolved.  
+Feb 20, 10:18 PM GMT+3
 
 **Investigating** - TFT events are down, we are working on a fix.
 Feb 20, 01:25 PM GMT+3
