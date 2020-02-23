@@ -7,4 +7,4 @@ sidebar_label: Architecture
 
 ## Architecture
 
-TBA
+This content will be added soon.
