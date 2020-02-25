@@ -22,7 +22,7 @@ Use the `overwolf.profile` API to get Overwolf information for the current user 
 
 * [overwolf.profile.GetCurrentUserResult](#getcurrentuserresult-object) Object
 * [overwolf.profile.LoginStateChangedEvent](#loginstatechangedevent-object) Object
-* [overwolf.profile.ConnectionState ](#connectionstate-enum) Enum
+* [overwolf.profile.ConnectionState](#connectionstate-enum) Enum
 
 
 

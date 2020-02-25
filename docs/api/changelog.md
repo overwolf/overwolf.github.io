@@ -16,7 +16,7 @@ Note that the full documentation and links for this version will be added soon t
   Returns an object with language methods and events.
   * [overwolf.settings.language.get(callback)]().
   * [overwolf.settings.language.onLanguageChanged]() event.
-* New event: [overwolf.windows.onScreenPropertyChanged(callback)]().  
+* New event: [overwolf.windows.onScreenPropertyChanged](overwolf-windows#onscreenpropertychanged).  
   Detect moving window to another monitor.  
   Triggered if more than 50% of the window has been moved to another monitor.  
   Returns the new monitor handle.

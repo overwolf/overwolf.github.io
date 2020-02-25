@@ -60,6 +60,7 @@ Please make sure to read our guide on [how to use Overwolf windows](../topics/us
 * [overwolf.windows.onStateChanged](#onstatechanged)
 * [overwolf.windows.onMessageReceived](#onmessagereceived)
 * [overwolf.windows.onAltF4Blocked](#onaltf4blocked)
+* [overwolf.windows.onScreenPropertyChanged](#onscreenpropertychanged)
 
 ## Types Reference
 
@@ -72,6 +73,7 @@ Please make sure to read our guide on [how to use Overwolf windows](../topics/us
 * [overwolf.windows.enums.MessagePromptIcon](#messageprompticon-enum) Enum
 * [overwolf.windows.enums.WindowDragEdge](#windowdragedge-enum) Enum
 * [overwolf.windows.enums.WindowStyle](#windowstyle-enum) Enum
+* [overwolf.windows.onScreenPropertyChangedEvent](#onscreenpropertychangedevent-object) Object
 
 ## getMainWindow()
 #### Version added: 0.113
@@ -861,6 +863,11 @@ overwolf.windows.onMessageReceived.addListener((message)=>{
 
 > Fired when the user was prevented from closing a window using Alt+F4.
 
+## onScreenPropertyChanged
+#### Version added: 0.143
+
+> Fired when native window (or OSR on desktop) moved to other monitoror when current monitor resolution changed, with the following structure: [overwolf.windows.onScreenPropertyChangedEvent](#onscreenpropertychangedevent-object) Object
+
 ## ODKWindow Object
 #### Version added: 0.78
 
@@ -988,3 +995,21 @@ TopLeft     |  Drag the top-left window edge in order to resize it      |
 TopRight    |  Drag the top-right window edge in order to resize it     |
 BottomLeft  |  Drag the bottom-left window edge in order to resize it   |
 BottomRight |  Drag the bottom-right window edge in order to resize it  |
+
+## onScreenPropertyChangedEvent Object
+
+Parameter       | Type                                                              | Description     |
+----------------| ------------------------------------------------------------------|---------------- |
+id              |  string                                                           | the window ID   | 
+name            |  string                                                           | the window name |
+monitor         |  [overwolf.utils.Display](overwolf-utils#display-object) object  | Display info    |
+
+#### Event data example: Success
+
+```json
+{
+  "id": "Window_Extension_anoahjhemlbnmhkljlgbmnfflpnhgjpmfjnhdfoe_desktop",
+  "name": "desktop",
+  "monitor": {"name": "DELL P2319H", "id": "DISPLAY4", "x": 0, "y": 0, "width": 1920, "height": 1080, "is_primary": true}
+}
+```
