@@ -47,7 +47,7 @@ In the following example, we can see a callback example of an extension that set
         {
             "name":"shots_fired_toggle_visibility",
             "title":"Show In-Game",
-            "virtualKeycode":70, //F3
+            "virtualKeycode":114, //F3
             "modifierKeys":2, //Ctrl
             "extension-uid":"jdecmlblpoddjcmpdbhnefehffjfcjeijpkebedd",
             "isPassthrough":false,
@@ -59,8 +59,8 @@ In the following example, we can see a callback example of an extension that set
         {
             "name":"shots_fired_toggle_visibility",
             "title":"Show In-Game",
-            "virtualKeycode":70,
-            "modifierKeys":2,
+            "virtualKeycode":114, //F3
+            "modifierKeys":2, //Ctrl
             "extension-uid":"jdecmlblpoddjcmpdbhnefehffjfcjeijpkebedd",
             "isPassthrough":false,
             "hold":false,
@@ -70,6 +70,9 @@ In the following example, we can see a callback example of an extension that set
     }
 }
 ```
+
+Note that the callback returns a virtualKeycode and a modifierKey code. You can convert these values easily to a string using the [MS ModifierKeys Enum](https://docs.microsoft.com/en-us/dotnet/api/system.windows.input.modifierkeys) and the [MS VirtualKey Enum](https://docs.microsoft.com/en-us/uwp/api/windows.system.virtualkey).
+
 
 #### Callback example with global hotkeys
 
