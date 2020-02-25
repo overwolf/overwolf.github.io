@@ -12,10 +12,10 @@ Note that the full documentation and links for this version will be added soon t
 
 * From now, whenever you try to use an obsolete API, the dev console will print a warning.  
   Try: overwolf.setting.getCurrentOverwolfLanguage().
-* New API - [overwolf.settings.language]().  
+* New API - [overwolf.settings.language](overwolf-settings-language).  
   Returns an object with language methods and events.
-  * [overwolf.settings.language.get(callback)]().
-  * [overwolf.settings.language.onLanguageChanged]() event.
+  * [overwolf.settings.language.get()](overwolf-settings-language#getcallback).
+  * [overwolf.settings.language.onLanguageChanged](overwolf-settings-language#onlanguagechanged) event.
 * New event: [overwolf.windows.onScreenPropertyChanged](overwolf-windows#onscreenpropertychanged).  
   Detect moving window to another monitor.  
   Triggered if more than 50% of the window has been moved to another monitor.  

@@ -922,6 +922,8 @@ Stream video options.
 | X264         | Use the x264 encoder. This is the default encoder                      |
 | NVIDIA_NVENC |    Uses the nVidia encoder                                             |
 | AMD_AMF      | Uses the AMD AMF encoder                                               |
+| NVIDIA_NVENC_NEW  | Uses the New nVidia encoder                                       |
+
 
 ## StreamingVideoEncoderNVIDIA_NVENCSettings Object
 

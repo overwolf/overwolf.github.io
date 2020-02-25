@@ -20,10 +20,6 @@ Please read all the info about hotkeys and how to use them in our [hotkeys best 
 * [overwolf.settings.hotkeys.onPressed](#onpressed)
 * [overwolf.settings.hotkeys.onChanged](#onchanged)
 
-## Types Reference
-
-* [overwolf.settings.hotkeys.example](#) enum
-
 ## get(callback)
 #### Version added: 0.142
 #### Permissions required: Hotkeys
