@@ -41,35 +41,38 @@ The term streaming might be a bit misleading – we regard saving a video to the
 ## Types Reference
 
 * [overwolf.streaming.StreamSettings](#streamsettings-object) Object
-* [overwolf.streaming.enums.StreamingProvider](#overwolfstreamingenumsstreamingprovider-enum)
+* [overwolf.streaming.enums.StreamingProvider](#overwolfstreamingenumsstreamingprovider-enum) Enum
 * [overwolf.streaming.StreamParams](#streamparams-object) Object
 * [overwolf.streaming.StreamInfo](#streaminfo-object) Object
 * [overwolf.streaming.StreamAuthParams](#streamauthparams-object) Object
 * [overwolf.streaming.StreamVideoOptions](#streamvideooptions-object) Object
 * [overwolf.streaming.StreamingVideoEncoderSettings](#streamingvideoencodersettings-object) Object
-* [overwolf.streaming.enums.StreamEncoder](#overwolfstreamingenumsstreamencoder-enum)
+* [overwolf.streaming.enums.StreamEncoder](#overwolfstreamingenumsstreamencoder-enum) Enum
 * [overwolf.streaming.StreamingVideoEncoderNVIDIA_NVENCSettings](#streamingvideoencodernvidia_nvencsettings-object) Object
 * [overwolf.streaming.enums.StreamEncoderPreset_NVIDIA](#overwolfstreamingenumsstreamencoderpreset_nvidia-enum)
 * [overwolf.streaming.enums.StreamEncoderRateControl_NVIDIA](#overwolfstreamingenumsstreamencoderratecontrol-nvidia-enum)
 * [overwolf.streaming.StreamingVideoEncoderIntelSettings](#streamingvideoencoderintelsettings-object) Object
 * [overwolf.streaming.StreamingVideoEncoderx264Setting](#streamingvideoencoderx264settings-object) Object
-* [overwolf.streaming.enums.StreamEncoderPreset_x264](#overwolfstreamingenumsstreamencoderpreset_x264-enum)
-* [overwolf.streaming.enums.StreamEncoderRateControl_x264](#overwolfstreamingenumsstreamencoderratecontrol_x264-enum)
+* [overwolf.streaming.enums.StreamEncoderPreset_x264](#overwolfstreamingenumsstreamencoderpreset_x264-enum) Enum
+* [overwolf.streaming.enums.StreamEncoderRateControl_x264](#overwolfstreamingenumsstreamencoderratecontrol_x264-enum) Enum
 * [overwolf.streaming.StreamingVideoEncoderAMD_AMFSettings](#streamingvideoencoderamd_amfsettings-object) Object
-* [overwolf.streaming.enums.StreamEncoderPreset_AMD_AMF](#overwolfstreamingenumsstreamencoderpreset_amd_amf-enum)
-* [overwolf.streaming.enums.StreamEncoderRateControl_AMD_AMF](#overwolfstreamingenumsstreamencoderratecontrol_amd_amf-enum)
+* [overwolf.streaming.enums.StreamEncoderPreset_AMD_AMF](#overwolfstreamingenumsstreamencoderpreset_amd_amf-enum) Enum
+* [overwolf.streaming.enums.StreamEncoderRateControl_AMD_AMF](#overwolfstreamingenumsstreamencoderratecontrol_amd_amf-enum) Enum
 * [overwolf.streaming.StreamDesktopCaptureOptions](#streamdesktopcaptureoptions-object) Object
-* [overwolf.streaming.StreamAudioOptions](#streamaudiooptions-object)
+* [overwolf.streaming.StreamAudioOptions](#streamaudiooptions-object) Object
 * [overwolf.streaming.StreamDeviceVolume](#streamdevicevolume-object) Object
 * [overwolf.streaming.StreamPeripheralsCaptureOptions](#streamperipheralscaptureoptions-object) Object
 * [overwolf.streaming.StreamPeripheralsCaptureOptions](#streamperipheralscaptureoptions-object) Object
-* [overwolf.streaming.enums.StreamMouseCursor](#streammousecursor-enum)
+* [overwolf.streaming.enums.StreamMouseCursor](#streammousecursor-enum) Enum
 * [overwolf.streaming.StreamIngestServer](#streamingestserver-object) Object
 * [overwolf.streaming.WatermarkSettings](#watermarksettings-object) Object
 * [overwolf.streaming.WatermarkSettings](#watermarksettings-object) Object
-* [overwolf.streaming.enums.StreamingMode](#streamingmode-enum)
-* [overwolf.streaming.enums.ObsStreamingMode](#streamingmode-enum)
+* [overwolf.streaming.enums.StreamingMode](#streamingmode-enum) Enum
+* [overwolf.streaming.enums.ObsStreamingMode](#streamingmode-enum) Enum
 * [overwolf.streaming.SplitResult](#splitresult-object) Object
+* [overwolf.streaming.enums.indication_position](#indication_position-enum) Enum
+* [overwolf.streaming.enums.indication_type](#indication_type-enum) Enum
+
 
 ## The basic usage flow should be:
 
@@ -873,6 +876,8 @@ Stream video options.
 | max_file_size_bytes| uint | Defines file maximum size. when video reach {max_file_size_bytes}, the recorder will flush the video file and stat a new video file. [onVideoFileSplited](#onvideofilesplited) event will be fired | 0.103  |
 | enable_on_demand_split| bool | Enable to split video file on demand. See [notes](#enable_on_demand_split-notes). | 0.141  |
 | include_full_size_video| bool | in case max_file_size_bytes is onfull video will be recorded to disk parallel to splits videos.  | 0.105  |
+| indication_position | [indication_position](#indication_position-enum) Enum | Position of the recorder indicator. Available for video capture only.  | 0.143  |
+| indication_type     | [indication_type](#indication_type-enum) Enum | Type of the recorder indicator. Available for video capture only.  | 0.143  |
 
 ##### `sub_folder_name` note: 
 
@@ -1149,3 +1154,25 @@ Parameter          | Type     | Description                                 |
 -------------------| ---------| ------------------------------------------- |
 *success*          | boolean  | inherited from the "Result" Object          |
 *error*            | string   | inherited from the "Result" Object          |
+
+## indication_position enum
+
+#### Version added: 0.143
+
+| Options      | Description                                                            |
+|--------------| -----------------------------------------------------------------------|
+| none         |                                                                        |
+| top_left     |                                                                        |
+| top_right    |                                                                        |
+| bottom_left  |                                                                        |
+| bottom_right |                                                                        |
+
+## indication_type enum
+
+#### Version added: 0.143
+
+| Options      | Description                                                            |
+|--------------| -----------------------------------------------------------------------|
+| off          |                                                                        |
+| dot          |                                                                        |
+| dot_time     |                                                                        |
