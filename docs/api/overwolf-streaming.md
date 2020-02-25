@@ -876,6 +876,7 @@ Stream video options.
 | max_file_size_bytes| uint | Defines file maximum size. when video reach {max_file_size_bytes}, the recorder will flush the video file and stat a new video file. [onVideoFileSplited](#onvideofilesplited) event will be fired | 0.103  |
 | enable_on_demand_split| bool | Enable to split video file on demand. See [notes](#enable_on_demand_split-notes). | 0.141  |
 | include_full_size_video| bool | in case max_file_size_bytes is onfull video will be recorded to disk parallel to splits videos.  | 0.105  |
+| disable_when_sht_not_supported| bool | Do not start video replay service in case shared texture is not supported.  | 0.105  |
 | indication_position | [indication_position](#indication_position-enum) Enum | Position of the recorder indicator. Available for video capture only.  | 0.143  |
 | indication_type     | [indication_type](#indication_type-enum) Enum | Type of the recorder indicator. Available for video capture only.  | 0.143  |
 
