@@ -536,11 +536,21 @@ Parameter          | Type     | Description                                 |
 -------------------| ---------| ------------------------------------------- |
 name               | string   |                                             |
 id                 | string   |                                             |
-x                  | number   |                                             |
-y                  | number   |                                             |
+x                  | number   | See [note](#x-note)                         |
+y                  | number   | See [note](#y-note)                         |
 width              | number   |                                             |
 height             | number   |                                             |
 is_primary         | boolean  |                                             |
+
+#### X note
+
+X returns the pixel distance of your currently active monitor from your primary monitor.  
+For example, if your primary monitor is 1920px wide, and the currently active window is on another monitor located to the left of your primary, X will return 1920 or -1920 based on their relative positions.
+
+#### Y note
+
+Y returns the pixel distnace of your currently active monitor from your primary monitor.  
+For Example, if your primary monitor and secondary monitor are side by side, Y will return 0, if your displays are one on top of the other and the primary monitor is 1200px tall, Y will return 1200 or -1200 based on their relative positions.
 
 ## OpenFilePickerResult Object
 

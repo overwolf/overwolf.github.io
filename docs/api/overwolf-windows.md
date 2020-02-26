@@ -866,7 +866,7 @@ overwolf.windows.onMessageReceived.addListener((message)=>{
 ## onScreenPropertyChanged
 #### Version added: 0.143
 
-> Fired when native window (or OSR on desktop) moved to other monitoror when current monitor resolution changed, with the following structure: [overwolf.windows.onScreenPropertyChangedEvent](#onscreenpropertychangedevent-object) Object
+> Fired when native window (or OSR on desktop) moved to other monitor when current monitor resolution changed, with the following structure: [overwolf.windows.onScreenPropertyChangedEvent](#onscreenpropertychangedevent-object) Object
 
 ## ODKWindow Object
 #### Version added: 0.78
