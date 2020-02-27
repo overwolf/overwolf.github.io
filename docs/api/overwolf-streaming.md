@@ -74,7 +74,9 @@ The term streaming might be a bit misleading – we regard saving a video to the
 * [overwolf.streaming.enums.indication_type](#indication_type-enum) Enum
 
 
-## The basic usage flow should be:
+## Basic streaming usage flow
+
+The basic usage flow should be:
 
 ### 1. Register to the onStopStreaming
 
@@ -179,6 +181,8 @@ Call [stop()](#stopstreamid-callback) to stop the streaming session.
 
 > Start a new stream.
 
+Note that this feature will work only when your target game is running. 
+
 Parameter | Type                                            | Description             |
 --------- | ------------------------------------------------| ----------------------- |
 settings  | [StreamSettings](#streamsettings-object) object | The stream settings     |
@@ -189,7 +193,7 @@ callback  | function                                        | Returns with the r
 A callback function which will be called with the status of the request
 
 ```json
-{ "status": "success", "stream_id": 1 }
+{ "status": "success", "stream_id": 3 }
 ```
 
 #### Callback argument: Failure
@@ -206,65 +210,75 @@ Note that the stream will be recorded in chunks in a size of `max_file_size_byte
 
 #### Usage Example
 
+For full details read the [Basic streaming usage flow](#basic-streaming-usage-flow).
+
 ```javascript
-overwolf.streaming.start(
-    {
-      "provider": overwolf.streaming.enums.StreamingProvider.Twitch,
-      "settings": {
-        "stream_info": {
-          "url": "http://www.twitch.tv/{twitch_user_name}",
-          "title": "title"
-        },
-        "auth": {
-          "client_id": "{twitch_client_id}",
-          "token": storage.get('login-token')
-        },
-        "audio": {
-          "mic": {
-            "volume": 100,
-            "enable": true
-          },
-          "game": {
-            "volume": 75,
-            "enable": true
-          }
-        },
-        "video": {
-          "auto_calc_kbps": false,
-          "fps": 30,
-          "width": 1920,
-          "height": 1080,
-          "max_kbps": 1500,
-          "buffer_length": 20000,
-          "max_file_size_bytes": 50000000,
-          "include_full_size_video": true,
-          "notify_dropped_frames_ratio": 0.5,
-          "test_drop_frames_interval": 5000,
-          "encoder": {
-            "name": overwolf.streaming.enums.StreamEncoder.X264,
-            "config": {
-              "preset": overwolf.streaming.enums.StreamEncoderPreset_x264.ULTRAFAST,
-              "rate_control": overwolf.streaming.enums.StreamEncoderRateControl_x264.RC_CBR,
-              "keyframe_interval": 2
-            }
-          }
-        },
-        "ingest_server": {
-          "name": "US West: San Francisco, CA",
-          "template_url": "rtmp://live.twitch.tv/app/{stream_key}"
-        },
-        "peripherals": {
-          "capture_mouse_cursor": "both"
+
+overwolf.streaming.onStopStreaming.addListener(console.log); //register to the onStopStreaming
+overwolf.streaming.onStreamingError.addListener(console.log); //register to the onStreamingError
+overwolf.streaming.onStreamingWarning.addListener(console.log); //register to the onStreamingWarning
+
+var streamId; //we will use this variable to save the stream id
+
+var stream_settings = {
+  "provider": overwolf.streaming.enums.StreamingProvider.VideoRecorder,
+  "settings": {
+    "audio": {
+      "mic": {
+        "volume": 75,
+        "enable": true
+      },
+      "game": {
+        "volume": 75,
+        "enable": true
+      }
+    },
+    "video": {
+      "auto_calc_kbps": false,
+      "fps": 30,
+      "width": 1920,
+      "height": 1080,
+      "max_kbps": 1500,
+      "buffer_length": 20000,
+      "max_file_size_bytes": 50000000,
+      "include_full_size_video": true,
+      "notify_dropped_frames_ratio": 0.5,
+      "test_drop_frames_interval": 5000,
+      "indication_position": 'TopRightCorner',
+      "indication_type": 'dot',
+      "encoder": {
+        "name": overwolf.streaming.enums.StreamEncoder.X264,
+        "config": {
+          "preset": overwolf.streaming.enums.StreamEncoderPreset_x264,
+          "rate_control": overwolf.streaming.enums.StreamEncoderRateControl_x264,
+          "keyframe_interval": 2
         }
       }
     },
+
+    "peripherals": {
+      "capture_mouse_cursor": "both"
+    }
+  }
+};
+
+
+//start the stream
+overwolf.streaming.start(stream_settings,
     function(result) {
-        if (result.status == "success")
-        {
-            console.debug(result.stream_id);
+      if (result.status == "success")
+      {
+        streamId = result.stream_id; //we need it for stopping the stream and manipulating stream settings later 
+        console.debug(result.stream_id); 
+        }
+        else {
+          console.debug("something went wrong...");
         }
     }
 );
+
+//stop the stream
+overwolf.streaming.stop(streamId);
 ```
 
 ## stop(streamId, callback)
@@ -280,10 +294,23 @@ callback  | function    | Returns with the result        |
 
 #### Callback argument: Success
 
-A callback function which will be called with the status of the request, and the  stream id if successful
+A callback function which will be called with the status of the request, and the stream id and media URL if successful
 
 ```json
-{ "status": "success", "stream_id": 1 }
+{
+   "success":true,
+   "stream_id":3,
+   "url":"overwolf://media/recordings/Game+Events+Simulator/Desktop+02-27-2020+14-37-13-913.mp4",
+   "file_path":"C:\\Users\\Hal9000\\Videos\\Overwolf\\Game Events Simulator\\Desktop 02-27-2020 14-37-13-913.mp4",
+   "duration":61045,
+   "last_file_path":"C:\\Users\\Hal9000\\Videos\\Overwolf\\Game Events Simulator\\Desktop 02-27-2020 14-37-13-913",
+   "split": true,
+   "extra":"{"drawn": 856,"dropped": 0,"lagged": 0,"percentage_dropped": 0,"percentage_lagged": 0,"system_info": {"game_dvr_enabled": true,"game_mode_enabled": true}",
+  "total_frames": 1835
+}",
+   "osVersion": "10.0.18362.650",
+   "osBuild":"1903"
+}
 ```
 
 #### Callback argument: Failure
