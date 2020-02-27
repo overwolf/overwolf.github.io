@@ -22,7 +22,7 @@ Note that the full documentation and links for this version will be added soon t
   Returns the new monitor handle.
 * Upgrade OBS to 24.0.5.  
   * Update FFMpeg version.
-  * Support new NVEC Encoders ("jim_encoder", "NVEC New").
+  * Support new NVEC Encoders ("NVEC New").
 * Allow overriding recording indication type and position in API:  
   Now when calling [overwolf.streaming.start()](overwolf-streaming#startsettings-callback), [indication_position](overwolf-streaming#indication_position-enum) and [indication_type](overwolf-streaming#indication_type-enum) can be set under video settings. (Until now, you could do that only from the OW client UI).
 
