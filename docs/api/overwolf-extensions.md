@@ -305,7 +305,7 @@ callback  | function              | Result of the request                       
 This function allows the current app to check if there is an extension update, without having to wait for Overwolf to do so.
 Calling this function will not automatically update the extension, just checks if an update exists.
 
-**Please read our [Recommended extention update flow](#recommended-extention-update-flow).**
+**Please read our [Recommended extention update flow](#recommended-extension-update-flow).**
 
 
 Parameter | Type                  | Description                                                                           |
@@ -419,7 +419,7 @@ updateVersion      | string                          | The latest extension vers
 #### Example data: Success
 
 Possible states are "UpdateAvailable", "UpToDate" or "PendingRestart".  
-For more info please read our [Recommended extention update flow](#recommended-extention-update-flow).
+For more info please read our **[Recommended extention update flow](#recommended-extension-update-flow)**.
 
 ```json
 {"state": "UpdateAvailable", "updateVersion": "125.0.1", "success": true, "error": null}
