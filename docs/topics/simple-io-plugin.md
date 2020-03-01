@@ -1,7 +1,7 @@
 ---
 id: simple-io-plugin
-title: The Overwolf Simple IO Plugin
-sidebar_label: Simple I/O Plugin
+title: The Overwolf Simple IO plugin
+sidebar_label: Simple I/O plugin
 ---
 
 

@@ -1,7 +1,7 @@
 ---
 id: getting-started
-title: Getting Started
-sidebar_label: Getting Started
+title: Getting started
+sidebar_label: Getting started
 ---
 
 <meta http-equiv="Content-Type" content="text/html charset=utf-8"/>

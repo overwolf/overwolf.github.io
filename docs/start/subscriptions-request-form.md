@@ -1,7 +1,7 @@
 ---
 id: subscriptions-request-form
 title: Request an app plan
-sidebar_label: Request an App Plan
+sidebar_label: Request an app plan
 ---
 
 Please fill out the following form in order to get an app subscription plan:

@@ -1,6 +1,6 @@
 ---
 id: ads-sdk-interaction
-title: Managing ads
+title: Managing Ads
 sidebar_label: Managing Ads
 ---
 

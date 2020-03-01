@@ -1,6 +1,6 @@
 ---
 id: login-with-discord
-title: App Login with Discord, Facebook or Google
+title: App login with Discord, Facebook or Google
 sidebar_label: Login with Discord
 ---
 

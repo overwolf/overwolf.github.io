@@ -1,7 +1,7 @@
 ---
 id: submit-an-app-update
 title: Submitting a new version of your app
-sidebar_label:  Submit an App Update
+sidebar_label:  Submit an app update
 ---
 
 Your app is available on the Overwolf Appstore and it's time to release new features you've been working on. That’s awesome! In this article we'll go over the process of submitting updates for your app in a few simple steps.

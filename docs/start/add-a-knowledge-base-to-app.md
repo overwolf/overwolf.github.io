@@ -1,7 +1,7 @@
 ---
 id: add-a-knowledge-base-to-app
-title: Add a Knowledge Base to your App
-sidebar_label:  App Knowledge Base
+title: Add a Knowledge base to your App
+sidebar_label:  App Knowledge base
 ---
 
 ## What is a knowledge base?

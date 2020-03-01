@@ -1,7 +1,7 @@
 ---
 id: using-overwolf-windows
-title: Using Overwolf Windows
-sidebar_label: Using Overwolf Windows
+title: Using Overwolf windows
+sidebar_label: Using Overwolf windows
 ---
 
 ## Overview

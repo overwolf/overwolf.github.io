@@ -1,7 +1,7 @@
 ---
 id: legal-developers-terms
 title: Overwolf Developers Terms and Conditions
-sidebar_label: Developers Terms
+sidebar_label: Developers terms
 ---
 
 ## Developer's terms

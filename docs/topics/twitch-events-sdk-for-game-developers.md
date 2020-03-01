@@ -1,6 +1,6 @@
 ---
 id: twitch-events-sdk-for-game-developers
-title: Twitch Extensions and Game Events
+title: Twitch Extensions and game events
 sidebar_label: Twitch Extensions
 ---
 

@@ -1,7 +1,7 @@
 ---
 id: ads-sdk-overview
 title: Overwolf Advertising SDK
-sidebar_label: Ad SDK Overview
+sidebar_label: Ad SDK overview
 ---
 
 The Overwolf advertising SDK is a JavaScript library that allows developers to integrate ads into their Overwolf applications. Ads are managed, filtered and hosted by Overwolf. The Advertising SDK is how you as a developer can show ads in your apps and monetize your traffic, but it's important to do it right - please contact us and we'll help integrate forgivable ads that do not hurt user experience.

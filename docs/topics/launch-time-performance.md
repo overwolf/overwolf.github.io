@@ -1,7 +1,7 @@
 ---
 id: launch-time-performance
 title: App Launch Performance
-sidebar_label: App Launch Performance
+sidebar_label: App launch performance
 ---
 
 

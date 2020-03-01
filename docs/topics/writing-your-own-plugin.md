@@ -1,7 +1,7 @@
 ---
 id: writing-your-own-plugin
-title: Writing Your Own Overwolf Plugin
-sidebar_label: Write Your Own Plugin
+title: Writing your own Overwolf plugin
+sidebar_label: Write your own plugin
 ---
 
 It's entirely possible for you to create new plug-ins for your needs, just follow these basic rules:

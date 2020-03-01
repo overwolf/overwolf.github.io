@@ -1,6 +1,6 @@
 ---
 id: update-your-app-status
-title: Changing App Status
+title: Changing app status
 sidebar_label:  Set app status
 ---
 

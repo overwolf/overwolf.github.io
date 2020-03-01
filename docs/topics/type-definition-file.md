@@ -1,7 +1,7 @@
 ---
 id: type-definition-file
-title: Overwolf Type Definition File
-sidebar_label: Type Definition File
+title: Overwolf Type definition file
+sidebar_label: Type definition file
 ---
 
 :::important

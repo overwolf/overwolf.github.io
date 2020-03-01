@@ -1,6 +1,6 @@
 ---
 id: using-dev-tools
-title: Using Overwolf`s Developers Tools
+title: Using Overwolf`s developers tools
 sidebar_label: Using our dev tools
 ---
 

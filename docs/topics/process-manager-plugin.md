@@ -1,7 +1,7 @@
 ---
 id: process-manager-plugin
-title: The Process Manager Plugin
-sidebar_label: Process Manager Plugin
+title: The Process Mnager plugin
+sidebar_label: Process Manager plugin
 ---
 
 The Overwolf Process Manager Plugin allows your app to run executable (external program, EXE file) from an Overwolf app.

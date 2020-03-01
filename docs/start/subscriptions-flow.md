@@ -1,7 +1,7 @@
 ---
 id: subscriptions-flow
-title: Subscriptions User Flow
-sidebar_label: Subscriptions User Flow
+title: Subscriptions user flow
+sidebar_label: Subscriptions user flow
 ---
 
 ## Subscribing from the app's page

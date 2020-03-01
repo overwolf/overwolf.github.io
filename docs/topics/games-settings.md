@@ -1,7 +1,7 @@
 ---
 id: games-settings
-title: Per-Game Settings
-sidebar_label: Per-Game Settings
+title: Per-game settings
+sidebar_label: Per-game settings
 ---
 
 ## Overview

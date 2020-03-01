@@ -1,7 +1,7 @@
 ---
 id: marketing-checklist
-title: Marketing Checklist
-sidebar_label: Marketing Checklist
+title: Marketing checklist
+sidebar_label: Marketing checklist
 ---
 
 So, your app is live on the Overwolf Appstore, and you've already gone through the [technical checklist](technical-checklist). Now is a great time to review your marketing efforts with this checklist to ensure a smooth launch and better chance of achieving your app's long-term growth goals.

@@ -1,7 +1,7 @@
 ---
 id: app-creation-process
-title: App Creation Process
-sidebar_label: App Creation Process
+title: App Creation process
+sidebar_label: App Creation process
 ---
 
 ## Overview

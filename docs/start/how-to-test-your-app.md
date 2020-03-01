@@ -1,6 +1,6 @@
 ---
 id: how-to-test-your-app
-title: How to Test Your App
+title: How to test your App
 sidebar_label:  App testing basics
 ---
 

@@ -1,7 +1,7 @@
 ---
 id: legal-app-terms
 title: Overwolf Standard Application Terms and Conditions
-sidebar_label: App Terms
+sidebar_label: App terms
 ---
 
 ## App terms

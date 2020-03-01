@@ -1,6 +1,6 @@
 ---
 id: sdk-introduction
-title: Overwolf SDK Introduction
+title: Overwolf SDK introduction
 sidebar_label: SDK Introduction
 ---
 

@@ -1,7 +1,7 @@
 ---
 id: app-analytics
-title: Using Analytics in your App
-sidebar_label:  Integrating App Analytics
+title: Using Analytics in your app
+sidebar_label:  Integrating app analytics
 ---
 
 One of the most effective ways to improve your app and learn more about your users is implementing solid analytics that provide you with usage statistics. Stats support your product decision making by providing real-world user usage data, including showing how users actually interact with each part of your product. Analytics also underline where users drop off and lose interest, what product abilities are completely ignored and much more.

@@ -1,7 +1,7 @@
 ---
 id: plugins-overview
-title: Overwolf Plug-ins Overview
-sidebar_label: Plugins Overview
+title: Overwolf Plug-ins overview
+sidebar_label: Plugins overview
 ---
 
 A plug-in is a .NET class library (DLL) that can contain functions, events or properties written in a .NET language. Your app can call on the plugin’s contents from within the context of the Javascript.

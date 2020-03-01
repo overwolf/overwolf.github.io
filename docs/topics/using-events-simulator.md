@@ -1,7 +1,7 @@
 ---
 id: using-events-simulator
-title: Using the Game Events simulator App
-sidebar_label: Game Events Simulator
+title: Using the game events simulator App
+sidebar_label: Game events Simulator
 ---
 
 ## Overview

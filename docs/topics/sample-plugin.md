@@ -1,7 +1,7 @@
 ---
 id: sample-plugin
-title: Overwolf Sample Plugin
-sidebar_label: Sample Plugin
+title: Overwolf sample plugin
+sidebar_label: Sample plugin
 ---
 
 This is an unpacked [Overwolf sample app](https://github.com/overwolf/overwolf-plugin-sample/tree/master/sampleapp) that utilizes the Overwolf [Sample Plugin](https://github.com/overwolf/overwolf-plugin-sample)

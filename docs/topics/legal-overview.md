@@ -1,7 +1,7 @@
 ---
 id: legal-overview
-title: Legal Overview
-sidebar_label: Legal Overview
+title: Legal overview
+sidebar_label: Legal overview
 ---
 
 ## Legal Stuff

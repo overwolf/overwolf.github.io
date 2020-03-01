@@ -1,7 +1,7 @@
 ---
 id: using-events
-title: Using Events in Your App
-sidebar_label: Using Game Events
+title: Using events in your app
+sidebar_label: Using game events
 ---
 In this basic overview we'll discuss javaScript events which fuel various Overwolf's APIs. If you are familiar with JS events, and you want to learn how to use Overwolf game events, you can skip directly to the [overwolf.games.events API](../api/overwolf-games-events) entry.
 

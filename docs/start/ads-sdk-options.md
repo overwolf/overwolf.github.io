@@ -1,7 +1,7 @@
 ---
 id: ads-sdk-options
-title: Configuring Your Ads
-sidebar_label:  Configuring Your Ads
+title: Configuring your Ads
+sidebar_label:  Configuring your Ads
 ---
 
 

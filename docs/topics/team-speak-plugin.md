@@ -1,7 +1,7 @@
 ---
 id: team-speak-plugin
-title: The Overwolf TeamSpeak Plugin
-sidebar_label: TeamSpeak Plugin
+title: The Overwolf TeamSpeak plugin
+sidebar_label: TeamSpeak plugin
 ---
 
 The Overwolf **TeamSpeak Plugin** allows your app to perform TeamSpeak server, channel and client related operations. You can read the full list of functions and events available in the TeamSpeak Plugin in its [GitHub repository](https://github.com/overwolf/teamspeak-overwolf) .

@@ -1,7 +1,7 @@
 ---
 id: subscriptions-overview
-title: Subscriptions Overview
-sidebar_label: Subscriptions Overview
+title: Subscriptions overview
+sidebar_label: Subscriptions overview
 ---
 
 Overwolf ads are crafted for gamers, showing in the most appropriate times when there are breaks in the action, and never bothering gamers while playing. Even so, some users still prefer to remove ads entirely regardless of timing and location. To address these requests and to generate more revenue for app creators, we’ve set up a new tool in your monetization arsenal - app subscription. 

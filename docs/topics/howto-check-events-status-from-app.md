@@ -1,7 +1,7 @@
 ---
 id: howto-check-events-status-from-app
-title: Veritfying Events for Your App
-sidebar_label: Verifying Event Status
+title: Veritfying events for your spp
+sidebar_label: Verifying event status
 ---
 
 As we discussed in the Error Handling page, it's important to properly communicate issues with your app to users in the right way. A simple and accurate message describing the state of the app will make for a better user experience and prevents bad user reviews.

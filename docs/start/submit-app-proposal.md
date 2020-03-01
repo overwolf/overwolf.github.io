@@ -1,7 +1,7 @@
 ---
 id: submit-app-proposal
-title: Submitting an App Proposal
-sidebar_label:  Submit App Proposal
+title: Submitting an app proposal
+sidebar_label:  Submit app proposal
 ---
 
 ## Overview 

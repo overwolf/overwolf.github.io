@@ -1,7 +1,7 @@
 ---
 id: second-monitor
-title: Second Monitor Usage
-sidebar_label: Second Monitor Usage
+title: Second monitor usage
+sidebar_label: Second monitor usage
 ---
 
 ## Second Screen value opportunities

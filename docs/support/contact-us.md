@@ -1,7 +1,7 @@
 ---
 id: contact-us
-title: Contact Us
-sidebar_label: Contact Us
+title: Contact us
+sidebar_label: Contact us
 ---
 
 ## Send us an email

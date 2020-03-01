@@ -1,7 +1,7 @@
 ---
 id: submit-your-app-to-the-store
-title: Submitting Your app to the Appstore
-sidebar_label: App Submission Basics
+title: Submitting your app to the appstore
+sidebar_label: App submission basics
 ---
 
 

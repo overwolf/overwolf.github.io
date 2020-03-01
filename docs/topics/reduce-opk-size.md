@@ -1,7 +1,7 @@
 ---
 id: reduce-opk-size
-title: Reducing the OPK Size
-sidebar_label: Reduce OPK Size
+title: Reducing the OPK size
+sidebar_label: Reduce OPK size
 ---
 
 As explained in [the SDK introduction section](../start/sdk-introduction#opk-package), OPK files are Overwolf's app installation package which includes your app's files: the manifest, source files and other assets. All files are packed in a package which has the OPK file extension.

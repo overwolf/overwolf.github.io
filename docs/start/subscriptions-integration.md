@@ -1,7 +1,7 @@
 ---
 id: subscriptions-integration
-title: Integrate Subscriptions in your app
-sidebar_label: Integrate Subscriptions
+title: Integrate subscriptions in your app
+sidebar_label: Integrate subscriptions
 ---
 
 This article will provide a step by step explanation for how to set up and manage your app's subscription features. If you need assistance or encounter issues, talk to us!
