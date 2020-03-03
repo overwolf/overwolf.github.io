@@ -34,7 +34,9 @@ No logs.
 
 Dota 2
 ------
-No logs.
+
+**Investigating** - Dota 2 events are down.
+Mar 03, 09:21 AM GMT+3
 
 Dota Underlords
 ---------------
