@@ -31,10 +31,10 @@ const siteConfig = {
   headerLinks: [
     {doc: 'start/getting-started', label: 'Getting Started'},
     {doc: 'topics/best-practices-overview', label: 'Docs'},
-    {doc: 'api/overwolf-api-overview', label: 'API'},
-    {doc: 'status/all', label: 'Status'},
+    {doc: 'api/changelog', label: 'API'},
+    {doc: 'status/all', label: 'Events Status'},
     {doc: 'download/download-overview', label: 'Download'},
-	  {href: '/docs/api/changelog', label: 'Changelog'},
+	  //{href: '/docs/api/changelog', label: 'Changelog'},
     //{blog: true, label: 'Blog'},
     {href: 'https://medium.com/overwolf-developers', label: 'Blog' },
     {href: 'https://discuss.developers.overwolf.com/', label: 'Q&A' },

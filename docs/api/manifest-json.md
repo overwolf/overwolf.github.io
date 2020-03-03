@@ -231,7 +231,7 @@ Note that not all flags are mandatory - we included all available flags for docu
 ## Validate your manifest.json
 To help you make sure that your manifest file is correct and complete, validate it against our schema file.
 
-Please read all the info in our [schema validation best practice](../topics/validate-your-manifest).
+Please read all the info in our [schema validation best practice](validate-your-manifest).
 
 
 ## Access the manifest from your app

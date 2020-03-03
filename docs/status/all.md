@@ -1,7 +1,7 @@
 ---
 id: all
-title: Events Status Health - ALL Games
-sidebar_label: All Games Events Status
+title: Game events status health
+sidebar_label: All Games
 ---
 
 <meta http-equiv="Content-Type" content="text/html charset=utf-8"/>
