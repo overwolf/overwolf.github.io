@@ -63,8 +63,8 @@ Parameter          | Type     | Description                                 |
 *error*            | string   | inherited from the "Result" Object          |
 status             | string   | deprecated. For backward compatibility only |
 Reason             | string   | deprecated. For backward compatibility only |   
-username           | string   |                                             |   
-userId             | string   |                                             |   
+username           | string   | unique identifier. null for not logged-in users     |   
+userId             | string   | see [note](#note-userid-is-not-a-unique-identifier) |   
 machineId          | string   |                                             |   
 partnerId          | int      |                                             |   
 channel            | string   |                                             |   
@@ -75,12 +75,13 @@ installerExtension | string   |                                             |
 
 #### Note: *userId* is not a unique identifier
 
-The term `userId` might be a bit misleading: it's not a unique identifier for an Overwolf user.  
-The userId is more like "OW Client Installation ID", and we use it to identify not logged-in users on the machine.
+The term `userId` might be a bit misleading: it's not a unique identifier for an Overwolf user.
+The userId is unique for each OW client installation on the current machine, so it's more like "clientID".  
+We use it to identify not logged-in users on the machine.
 
 To uniquely identify logged-in users, you should use the `username` (this field will be null for not logged-in user).  
 
-Each user has to pick a unique OW username upon registering. Event If he logged in through Google, Discord, etc. - OW automatically generate a unique user name for him.  
+Each user has to pick a unique OW username upon registering. Even If he logged in through Google, Discord, etc. - OW automatically generate a unique user name for him.  
 So at the bottom line, you can always count on the username to be a unique identifier for logged-in users. 
 
 
