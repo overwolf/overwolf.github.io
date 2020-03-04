@@ -75,9 +75,9 @@ installerExtension | string   |                                             |
 
 #### Note: *userId* is not a unique identifier
 
-The term userId might be a bit misleading: it's not a unique identifier for an Overwolf user.  
+The term `userId` might be a bit misleading: it's not a unique identifier for an Overwolf user.  
 To uniquely identify logged-in users, you should use the `username` (this field will be null for not logged-in user).  
-The `userId` is more like "OW Client Installation ID", and we use it to identify not logged-in users on the machine.
+The userId is more like "OW Client Installation ID", and we use it to identify not logged-in users on the machine.
 
 
  #### Example data: Success
