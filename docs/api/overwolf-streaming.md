@@ -313,6 +313,10 @@ A callback function which will be called with the status of the request, and the
 }
 ```
 
+:::tip
+To use the `file_path` and not the `url` (as a source for a video player, for example) - you should add the `allow_local_file_access : true` flag to your app manifest, under the relevant window section.
+:::
+
 #### Callback argument: Failure
 
 A callback function which will be called with the status of the request
