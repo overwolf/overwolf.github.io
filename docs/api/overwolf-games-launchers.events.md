@@ -59,7 +59,7 @@ A callback function which will be called with the status of the request
 
 ```json
 {  
-   "status":"success",
+   "success":true,
    "res":{  
       "game_flow":{  
          "phase":"None"
@@ -71,10 +71,30 @@ A callback function which will be called with the status of the request
          "profile_icon_id":"3902",
          "summoner_id":"79489298",
          "summoner_level":"31"
+      },
+      "game_info": {
+         "close_client_during_game": "0"
+      },
+      "credentials": {
+         "token": "cmlvdDpxb2hlamFqeHRzRUI4dGw1TUljSmJR",
+         "port": "65038"
       }
+
    }
 }
 ```
+
+#### Callback argument: Failure
+
+```json
+{
+   "success": false, 
+   "status": "error", 
+   "reason": "Launcher isn't running or the associated game isn't running"
+}
+
+```
+
 
 ## onInfoUpdates
 
