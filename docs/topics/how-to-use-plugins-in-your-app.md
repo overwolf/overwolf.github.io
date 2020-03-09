@@ -39,4 +39,12 @@ overwolf.extensions.current.getExtraObject(“simple-io-plugin”, (result) => {
 })
 ```
 
-Now you can call on the plugin’s functions, events or properties directly. Take a look at our [sample app](https://github.com/overwolf/sample-app) on GitHub for an example of using plugins, in this case a generic [helper class](https://github.com/overwolf/overwolf-plugins/blob/master/sampleapp/overwolfplugin.js) for initializing the plugin – feel free to use or modify it in your own app as needed.
+Now you can call on the plugin’s functions, events or properties directly.
+
+Take a look at our [Process Manager plugin](https://github.com/overwolf/overwolf-plugins/blob/master/sample_apps/process_manager) on GitHub, for an example of using plugins. You can find there a generic helper class for initializing the plugin, so the initializing will look like this:
+
+```js
+var plugin = new OverwolfPlugin("process-manager-plugin", true);
+```
+
+Feel free to use or modify it in your own app as needed.
