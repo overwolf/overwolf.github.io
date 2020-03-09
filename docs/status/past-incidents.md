@@ -53,6 +53,9 @@ Dec 19, 08:29 AM GMT+3
 Fortnite
 --------
 
+**Resolved** - This incident has been resolved.  
+Mar 06, 04:19 PM GMT+3
+
 **Investigating** - Fortnite events are down.
 Mar 03, 09:21 AM GMT+3
 
