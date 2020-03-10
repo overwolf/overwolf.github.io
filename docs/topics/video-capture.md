@@ -10,7 +10,7 @@ Overwolf offers two APIs with video capture capabilities:
 
 1. [overwolf.media.replays](../api/overwolf-media-replays).
   * Mainly used to capture a **short** highlight video reply of the currently running game.
-  * You can capture an highlight manually, or you can use the **auto-highlights detection**.
+  * You can capture a highlight manually, or you can use the **auto-highlights detection**.
   * Offers only video capture to the local disk, **without streaming**.
 
 2. [overwolf.streaming](../api/overwolf-streaming).
@@ -20,10 +20,10 @@ Overwolf offers two APIs with video capture capabilities:
 
 ## Required Permissions
 
-Using any of the above APIs's requirse the **VideoCaptureSettings** flag in your app manifest: Only apps with this permission, will be defined as a capture apps than can be configured in the OW client "capture" tab.
+Using any of the above APIs requires the **VideoCaptureSettings** flag in your app manifest: Only apps with this permission, will be defined as a capture apps than can be configured in the OW client "capture" tab.
 
-In addition, some file operations that related to videos, might require to add the `allow_local_file_access : true` flag in your app manifest.
-For example - if you want to play the captures videos using the absout file path (instead of the generated Overwolf "media://" path).
+Additionally, some file operations that related to videos, might require adding `allow_local_file_access : true` flag in your app manifest.
+For example - if you want to play the captures videos using the absolute file path (instead of the generated Overwolf "media://" path).
 
 See for an example the [overwolf.streaming.stop()](../api/overwolf-streaming#stopstreamid-callback) documentation.
 
@@ -44,9 +44,9 @@ With this API, you can listen to game events and manually start and stop the vid
 But, as mentioned above, the real "power" of this API is to auto-detect and auto-capture the game highlights:  
 
 There's no need to understand each supported game's mechanics, game flow, edge cases, timings, etc.  
-Just request any supported game highlight, and OW will provide you with a video file that includes this event.
+Just request any supported game highlight, and OW provides you with a video file that includes this event.
 
-Following, you will find a description of both capture methods: manual capture and auto-highlights capture.
+Following, you can find a description of both capture methods: manual capture and auto-highlights capture.
 
 ### Manual capture
 
@@ -57,8 +57,8 @@ This is the basic usage flow:
 
 2. Call [overwolf.media.replays.turnOn()](../api/overwolf-media-replays#turnonparameters-callback) with the auto-highlights feature disabled:  
    Set the `enable` field of the [overwolf.media.replays.ReplayHighlightsSetting](../api/overwolf-media-replays#replayhighlightssetting-object) Object to `false`.  
-   Here you also set the capture buffer that is used for all the other functions:  
-   For example, if you set a 3 min buffer, you will be able to capture a game highlight that is not longer than this buffer.
+   Here you also set the capture buffer that uses for all the other functions:  
+   For example, if you set a 3 min buffer, you able to capture a game highlight that is not longer than this buffer.
 
 3. Listen to your game events and wait for the game highlight (match_Start, kill, etc.) that you want to capture.  
    Once it accrued - start to video captur the screen:
@@ -92,8 +92,8 @@ This is the basic usage flow:
 
 With this API, there is no auto-detect and auto-capture of the game highlights - you should listen to game events and manually start and stop the video capture.  
 
-You should understand each supported game's mechanics, game flow, edge cases, timings, etc., in order to define and capture your game highlights.  
-In addition, you can capture the whole game to file/s or even sttream it to  Twitch, Youtube, etc. 
+It would be best if you understood each supported game's mechanics, game flow, edge cases, timings, etc., to define and capture your game highlights.  
+Besides, you can capture the whole game to file/s or even stream it to  Twitch, Youtube, etc. 
 
 This is the basic usage flow:
 
