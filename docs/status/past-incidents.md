@@ -171,6 +171,9 @@ Oct 23, 12:39 PM GMT+3
 Rainbow 6 Siege
 ---------------
 
+**Investigating** -   Rainbow 6 game events are down, we are working on a fix.  
+Mar 10, 03:24 PM GMT+3
+
 **Resolved** This incident has been resolved.  
 Jan 14, 04:02 PM GMT+3
 
