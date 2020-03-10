@@ -10,6 +10,10 @@ The term streaming might be a bit misleading – we regard saving a video to the
 
 **Permissions required: Streaming**
 
+:::important
+Please read all the info about streaming usage and options on our [video capture best practices](../topics/video-capture) guide.
+:::
+
 ## Methods Reference
 
 * [overwolf.streaming.start()](#startsettings-callback)
@@ -73,120 +77,20 @@ The term streaming might be a bit misleading – we regard saving a video to the
 * [overwolf.streaming.enums.indication_position](#indication_position-enum) Enum
 * [overwolf.streaming.enums.indication_type](#indication_type-enum) Enum
 
-
-## Basic streaming usage flow
-
-The basic usage flow should be:
-
-### 1. Register to the onStopStreaming
-
-Register to the [onStopStreaming](#onstopstreaming) event to know when the streaming stopped:
-
-```js
-overwolf.streaming.onStopStreaming.addListener(function(result) {
-  //result.stream_id
-  //result.url (relevant to video only)
-});
-```
-
-### 2. Register to the onStreamingError
-
-Register to the [onStreamingError](#onstreamingerror) event, to know if a streaming error occurred which will also stop the streaming session:
-
-```js
-overwolf.streaming.onStreamingError.addListener(function(result) {
-  //result.stream_id
-  /*
-    result.error = (one of):
-      "Unknown"
-      "Unauthorized"
-      "Invalid_Server"
-      "No_Internet"
-      "Invalid_Video_Settings"
-      "No_Playback_Device"
-      "Not_InGame"
-      "Internet_Congested"
-      "Twitch_Dll_Load_Error"
-      "Twitch_Init_Error"
-      "MEDIA_PLAYER_DLL_ERROR"
-      "No_Encoder"
-      "Out_Of_Disk_Space"
-
-      "CAPTURE_DEVICE_ERROR"
-      "CAPTURE_DEVICE_NO_FRAMES"
-      "GAME_UNSUPPORTED_FORMAT_ERROR"
-      "KRAKEN_DEVICE"
-      "PLAYBACK_DEVICE_FORMAT"
-      "INPUT_DEVICE_FORMAT"
-      "NVIDIA_UPDATE_DRIVER"
-      "NVIDIA_ENCODER"
-      "CPU_OVERLOADED"
-      "FILE_OUTPUT_ERROR"
-      "SWITCHABLE_GRAPHICS_SHT_UNSUPPORTED"
-      "NO_CAPTURE_DEVICE"  
-  */
-});
-```
-
-NOTE: we only started with the UPPERCASE convention later on.
-
-### 3. Register to the onStreamingWarning
-
- Register to the [onStreamingWarning](#onstreamingwarning) event to know when a warning occurred:
-
-```js
-overwolf.streaming.onStreamingWarning.addListener(function(result) {
-  //result.stream_id
-  //result.error = "HIGH_CPU_USAGE" // there will probably be frames lost
-});
-```
-
-### 4. Register to onStreamingSourceImageChanged
-
- Optionally register to [onStreamingSourceImageChanged](#onstreamingsourceimagechanged), to get an event when the user switched between capturing his desktop and the game.
-
-### 5. Call overwolf.streaming.getStreamEncoders
-
-Call [getStreamEncoders()](#getstreamencoderscallback) and [getAudioDevices()](#getaudiodevicescallback).
-This will give a list of all possible encoders and audio devices – you can then use this list to let the user select his preferred encoder/device.
-In terms of encoder priorities – we recommend: NVIDIA > AMD > INTEL > x264.
-As long as the "enabled" field = true, you can offer the user to use the encoder.
-
-### 6. Call overwolf.streaming.start
-
-Create a JSON object with all of the streaming details (See example on the top of the page) and call [start()](#startsettings-callback).
-
-* For video recording you don’t need the `ingest_server`, `stream_info` and `auth` objects.
-* For video recording we recommend using a `max_kbps` value of higher than 8000.
-* For streaming we recommend using a `max_kbps` smaller than 3000.
-* Once start succeeded, you’ll get a callback with `result.status == "success"` and a `stream_id` that can be used to stop the streaming session or change the volume of the stream.
-
-### 7. Allow the user to change volume
-
-Allow the user to change volume with [changeVolume()](#changevolumestreamid-audiooptions-callback) while streaming.
-
-### 8. Call overwolf.streaming.stop
-
-Call [stop()](#stopstreamid-callback) to stop the streaming session.
-
-### Extras
-
-* Use [setBRBImage()](#setbrbimagestreamid-image-backgroundcolor-callback) when streaming to Twitch.tv when `capture_desktop` is not enabled, this will allow you to customize the Be-Right-Back image the viewers will see.
-* Use [setWindowStreamingMode](#setwindowstreamingmodewindowid-streamingmode-callback) for video recording and streaming – this method works on a per-overwolf-window basis – for each window you can decide if it is to be shown in the stream or not – regardless of whether the streamer is viewing it or not.
-* Use [setWindowObsStreamingMode](#setwindowobsstreamingmodewindowid-obsstreamingmode-callback) when you aren’t streaming with Overwolf but want to leverage Overwolf’s APIs and stream with OBS.
-
 ## start(settings, callback)
 
 #### Version added: 0.78
 
 > Start a new stream.
 
-Note that this feature will work only when your target game is running. 
+Note that this feature will work only when your target game is running.  
 
 Parameter | Type                                            | Description             |
 --------- | ------------------------------------------------| ----------------------- |
 settings  | [StreamSettings](#streamsettings-object) object | The stream settings     |
 callback  | function                                        | Returns with the result |
+
+For more info read our [Basic streaming usage flow](../topics/video-capture#usage-example).
 
 #### Callback argument: Success
 
@@ -209,8 +113,6 @@ Note that the stream will be recorded in chunks in a size of `max_file_size_byte
 :::
 
 #### Usage Example
-
-For full details read the [Basic streaming usage flow](#basic-streaming-usage-flow).
 
 ```javascript
 
@@ -786,6 +688,15 @@ Note that
 #### Version added: 0.78
 
 > Fired upon a warning with the stream.
+
+#### Usage example
+
+```js
+overwolf.streaming.onStreamingWarning.addListener(function(result) {
+  //result.stream_id
+  //result.error = "HIGH_CPU_USAGE" // there will probably be frames lost
+});
+```
 
 ## onVideoFileSplited
 
