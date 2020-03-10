@@ -29,7 +29,7 @@ Please read the [overwolf.games.events](overwolf-games-events) documentation pag
 * [match_summary](#match_summary)
 * [roster](#roster)
 * [rank](#rank)
-* [kill_feed](#kill-feed)
+* [kill_feed](#kill_feed)
 
 ## Game event status
 
