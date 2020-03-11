@@ -203,7 +203,10 @@ Nov 12, 10:49 AM GMT+3
 
 Rocket League
 -------------
-No logs.
+
+**Investigating** -   Rocket League game events are down, we are working on a fix.  
+Mar 11, 11:46 PM GMT+3
+
 
 StartCraft II
 -------------
