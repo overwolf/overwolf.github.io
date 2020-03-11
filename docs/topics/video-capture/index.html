@@ -69,30 +69,30 @@
               }
             });
         </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><a class="edit-page-link button" href="https://github.com/overwolf/overwolf.github.io/tree/source/docs/topics/video-capture.md" target="_blank" rel="noreferrer noopener">Edit</a><h1 id="__docusaurus" class="postHeaderTitle">Video capture best practices</h1></header><article><div><span><h2><a class="anchor" aria-hidden="true" id="overview"></a><a href="#overview" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Overview</h2>
-<p>Overwolf offers two APIs with video capture capabilities:</p>
+<p>Overwolf offers two APIs with video capturing capabilities:</p>
 <ol>
 <li><a href="../api/overwolf-media-replays">overwolf.media.replays</a>.</li>
 </ol>
 <ul>
-<li>Mainly used to capture a <strong>short</strong> highlight video reply of the currently running game.</li>
-<li>You can capture a highlight manually, or you can use the <strong>auto-highlights detection</strong>.</li>
-<li>Offers only video capture to the local disk, <strong>without streaming</strong>.</li>
+<li>Mainly used to capture <strong>short</strong> highlight video replays of the currently running game.</li>
+<li>You can capture a highlight manually, or you can use <strong>auto-highlights detection</strong>.</li>
+<li>Meant only for video capture to the local hard drive, <strong>without streaming</strong>.</li>
 </ul>
 <ol start="2">
 <li><a href="../api/overwolf-streaming">overwolf.streaming</a>.</li>
 </ol>
 <ul>
-<li>Mainly used to capture a <strong>long</strong> video capture of the currently running game. (even a full game capture)</li>
-<li>Only manual capture is available, <strong>No auto-highlights</strong> detection.</li>
-<li>In addition to local disk capture, <strong>streaming option is available</strong> to supported services like Twitch, YouTube, Facebook, etc.</li>
+<li>Mainly used to capture <strong>long</strong> video replays of the currently running game, up to a full game capture.</li>
+<li>Only manual capture is available, <strong>No auto-highlights detection</strong>.</li>
+<li>In addition to local capture, <strong>streaming option is available</strong> to supported services like Twitch, YouTube, Facebook, etc.</li>
 </ul>
 <h2><a class="anchor" aria-hidden="true" id="required-permissions"></a><a href="#required-permissions" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Required Permissions</h2>
-<p>Using any of the above APIs requires the <strong>VideoCaptureSettings</strong> flag in your app manifest: Only apps with this permission, will be defined as a capture apps than can be configured in the OW client &quot;capture&quot; tab.</p>
-<p>Additionally, some file operations that related to videos might require adding <code>allow_local_file_access : true</code> flag in your app manifest.
-For example - if you want to play the captures videos using the absolute file path (instead of the generated Overwolf &quot;media://&quot; path).</p>
+<p>Using any of the above APIs requires the <strong>VideoCaptureSettings</strong> flag in your app manifest: Only apps with this permission will be defined as capture apps which can be configured in the OW client &quot;capture&quot; tab.</p>
+<p>Additionally, some file operations related to videos might require adding <code>allow_local_file_access : true</code> flag in your app manifest.
+For example - if you want to play the captured videos using absolute file paths (instead of the generated Overwolf &quot;media://&quot; path).</p>
 <p>See for an example the <a href="../api/overwolf-streaming#stopstreamid-callback">overwolf.streaming.stop()</a> documentation.</p>
 <h2><a class="anchor" aria-hidden="true" id="comparison-table"></a><a href="#comparison-table" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Comparison table</h2>
-<p>To summerizem, these are the main differentials between the <strong>overwolf.media.replays</strong> API to the <strong>overwolf.streaming</strong> API:</p>
+<p>To summerize, these are the main differences between the <strong>overwolf.media.replays</strong> API to the <strong>overwolf.streaming</strong> API:</p>
 <table>
 <thead>
 <tr><th>Feature</th><th>overwolf.media.replays</th><th>overwolf.streaming</th></tr>
@@ -105,33 +105,33 @@ For example - if you want to play the captures videos using the absolute file pa
 </tbody>
 </table>
 <h2><a class="anchor" aria-hidden="true" id="using-overwolfmediareplays"></a><a href="#using-overwolfmediareplays" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Using overwolf.media.replays</h2>
-<p>With this API, you can listen to game events and manually start and stop the video capture.<br>
-But, as mentioned above, the real &quot;power&quot; of this API is to auto-detect and auto-capture the game highlights:</p>
+<p>With this API, you can listen to game events and manually start and stop video capture.<br>
+As mentioned above, the real &quot;power&quot; of this API is to auto-detect and auto-capture game highlights:</p>
 <p>There's no need to understand each supported game's mechanics, game flow, edge cases, timings, etc.<br>
-Just request any supported game highlight, and OW provides you with a video file that includes this event.</p>
-<p>Following, you can find a description of both capture methods: manual capture and auto-highlights capture.</p>
-<h3><a class="anchor" aria-hidden="true" id="manual-capture"></a><a href="#manual-capture" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Manual capture</h3>
-<p>This is the basic usage flow:</p>
+Just request any supported game's highlight, and OW provides you with a video file that includes this event.</p>
+<p>Below, you can find a description of both capture methods: manual capture and auto-highlights capture.</p>
+<h3><a class="anchor" aria-hidden="true" id="manual-capture"></a><a href="#manual-capture" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Manual Capture</h3>
+<p>Basic usage flow:</p>
 <ol>
-<li><p><strong>Register to the relevant capture events for your app.</strong>  <br>
+<li><p><strong>Register to relevant capture events for your app.</strong>  <br>
 The <a href="../api/overwolf-media-replays#events-reference">available events</a> are: onCaptureError, onCaptureStopped, onCapureWarning, onReplayServicesStarted.</p></li>
 <li><p><strong>Call <a href="../api/overwolf-media-replays#turnonparameters-callback">overwolf.media.replays.turnOn()</a></strong> with the auto-highlights feature disabled:<br>
 Set the <code>enable</code> field of the <a href="../api/overwolf-media-replays#replayhighlightssetting-object">overwolf.media.replays.ReplayHighlightsSetting</a> Object to <code>false</code>.<br>
-Here you also set the capture buffer that uses for all the other functions:<br>
-For example, if you set a 3 min buffer, you able to capture a game highlight that is not longer than this buffer.</p></li>
+You may also set the capture buffer that is used for all the other functions:<br>
+For example, if you set a 3 minute buffer, you will be able to capture game highlights not longer than this buffer.</p></li>
 <li><p><strong>Listen to your game events</strong> and wait for the game highlight (match_start, kill, etc.) that you want to capture.<br>
-Once it accrued - start to video captur the screen:</p></li>
+Once it occured - start to video capture the screen:</p></li>
 <li><p><strong>Call one of the <a href="../api/overwolf-media-replays#startcapturereplaytype-pastduration-callback">overwolf.media.replays.startCapture()</a></strong> methods:<br>
 Here you can set the pastDuration and futureDuration buffers.<br>
-Note that all the methods, the replay id returns in the callback, which is needed to finish capturing the replay.</p></li>
+Note that in all methods, the replay ID returns via callback, and it is needed to finish capturing the replay.</p></li>
 <li><p><strong>Call <a href="../api/overwolf-media-replays#stopcapturereplaytype-replayid-callback">overwolf.media.replays.stopCapture()</a></strong>.<br>
-Finishes capturing a replay and returns a URL to the created video file.</p></li>
-<li><p><strong>Call <a href="../api/overwolf-media-replays#turnoffcallback">overwolf.media.replays.turnOff()</a></strong>, as soon as you’re no longer interested in capturing, in order to free up resources.</p></li>
+Finishes capturing a replay and returns a URL leading to the created video file.</p></li>
+<li><p><strong>Call <a href="../api/overwolf-media-replays#turnoffcallback">overwolf.media.replays.turnOff()</a></strong>, as soon as you’re no longer interested in capturing video in order to free up resources.</p></li>
 </ol>
 <h3><a class="anchor" aria-hidden="true" id="auto-highlights-capture"></a><a href="#auto-highlights-capture" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Auto-highlights capture</h3>
-<p>This is the basic usage flow:</p>
+<p>Basic usage flow:</p>
 <ol>
-<li><p><strong>Register to the relevant capture events for your app.</strong>  <br>
+<li><p><strong>Register to relevant capture events for your app.</strong>  <br>
 The <a href="../api/overwolf-media-replays#events-reference">available events</a> are: onCaptureError, onCaptureStopped, onCapureWarning, onReplayServicesStarted, onHighlightsCaptured.</p></li>
 <li><p><strong>Call <a href="../api/overwolf-media-replays#turnonparameters-callback">overwolf.media.replays.turnOn()</a></strong> with the auto-highlights feature enabled:<br>
 Set the <code>enable</code> field of the <a href="../api/overwolf-media-replays#replayhighlightssetting-object">overwolf.media.replays.ReplayHighlightsSetting</a> Object to <code>true</code>.<br>
@@ -151,11 +151,11 @@ Besides, you can capture the whole game to file/s or even stream it to  Twitch, 
 The <a href="../api/overwolf-streaming#events-reference">available events</a> are: onStreamingSourceImageChanged, onStopStreaming, onStartStreaming, onStreamingError, onStreamingWarning, onVideoFileSplited, onRecordingEngineStateChanged.</p></li>
 <li><p><strong>Get the available stream encoders.</strong>  <br>
 Call <a href="../api/overwolf-streaming#getstreamencoderscallback">getStreamEncoders()</a> and <a href="../api/overwolf-streaming#getaudiodevicescallback">getAudioDevices()</a>.<br>
-This gives a list of all possible encoders and audio devices – you can then use this list to let the user select his preferred encoder/device.<br>
+This returns a list of all possible encoders and audio devices – you can then use this list to let users select their preferred encoder/device.<br>
 In terms of encoder priorities – we recommend: NVIDIA &gt; AMD &gt; INTEL &gt; x264.<br>
-As long as the &quot;enabled&quot; field = true, you can offer the user to use the encoder.</p></li>
+As long as the &quot;enabled&quot; field = true, you can offer users to use the encoder.</p></li>
 <li><p><strong>Call overwolf.streaming.start().</strong>  <br>
-Create a JSON object with all of the streaming details and call <a href="../api/overwolf-streaming#startsettings-callback">start()</a>.<br>
+Create a JSON object with all streaming details and call <a href="../api/overwolf-streaming#startsettings-callback">start()</a>.<br>
 <a href="../api/overwolf-streaming#usage-example">Here</a> you can find a complete usage example.</p>
 <ul>
 <li>For video recording, you don’t need the <code>ingest_server</code>, <code>stream_info</code>, and <code>auth</code> objects.</li>
@@ -163,18 +163,18 @@ Create a JSON object with all of the streaming details and call <a href="../api/
 <li>For streaming, we recommend using a <code>max_kbps</code> smaller than 3000.</li>
 <li>Once start succeeded, you’ll get a callback with <code>result.status == &quot;success&quot;</code> and a <code>stream_id</code> that can be used to stop the streaming session or change the volume of the stream.</li>
 </ul></li>
-<li><p><strong>Allow the user to change the volume.</strong>  <br>
+<li><p><strong>Allow users to change volume.</strong>  <br>
 Allow the user to change volume with <a href="../api/overwolf-streaming#changevolumestreamid-audiooptions-callback">changeVolume()</a> while streaming.</p></li>
 <li><p><strong>Call overwolf.streaming.stop().</strong>  <br>
 Call <a href="../api/overwolf-streaming#stopstreamid-callback">stop()</a> to stop the streaming session.</p></li>
 </ol>
 <h3><a class="anchor" aria-hidden="true" id="extras"></a><a href="#extras" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Extras</h3>
 <ul>
-<li>Use <a href="../api/overwolf-streaming#setbrbimagestreamid-image-backgroundcolor-callback">setBRBImage()</a> when streaming to Twitch.tv when <code>capture_desktop</code> is not enabled, this will allow you to customize the Be-Right-Back image the viewers will see.</li>
+<li>Use <a href="../api/overwolf-streaming#setbrbimagestreamid-image-backgroundcolor-callback">setBRBImage()</a> when streaming to Twitch.tv when <code>capture_desktop</code> is not enabled, this will allow you to customize the Be-Right-Back image that viewers will see.</li>
 <li>Use <a href="../api/overwolf-streaming#setwindowstreamingmodewindowid-streamingmode-callback">setWindowStreamingMode</a> for video recording and streaming – this method works on a per-overwolf-window basis – for each window you can decide if it is to be shown in the stream or not – regardless of whether the streamer is viewing it or not.</li>
 <li>Use <a href="../api/overwolf-streaming#setwindowobsstreamingmodewindowid-obsstreamingmode-callback">setWindowObsStreamingMode</a> when you aren’t streaming with Overwolf but want to leverage Overwolf’s APIs and stream with OBS.</li>
 </ul>
-</span></div></article></div><div class="docLastUpdate"><em>Last updated on 2020-3-10 by eransharv</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/topics/create-download-link"><span class="arrow-prev">← </span><span>Download Link with referral ID</span></a><a class="docs-next button" href="/docs/topics/promoting-your-app"><span>Promoting your app</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#overview">Overview</a></li><li><a href="#required-permissions">Required Permissions</a></li><li><a href="#comparison-table">Comparison table</a></li><li><a href="#using-overwolfmediareplays">Using overwolf.media.replays</a><ul class="toc-headings"><li><a href="#manual-capture">Manual capture</a></li><li><a href="#auto-highlights-capture">Auto-highlights capture</a></li></ul></li><li><a href="#using-overwolfstreaming">Using overwolf.streaming</a><ul class="toc-headings"><li><a href="#usage-flow">Usage flow</a></li><li><a href="#extras">Extras</a></li></ul></li></ul></nav></div><footer class="site-footer"><div class="container"><ul><li>Legal</li><li><a href="/docs/topics/legal-overview">Terms overview</a></li><li><a href="/docs/topics/legal-developers-terms">Developer&#x27;s terms</a></li><li><a href="/docs/topics/legal-app-terms">App terms</a></li><li><a href="http://www.overwolf.com/legal/" target="_blank">Overwolf terms</a></li><li><a href="http://www.overwolf.com/legal/#Privacy-policy" target="_blank">Overwolf Privacy policy</a></li></ul><ul><li>Support</li><li><a href=" https://discuss.developers.overwolf.com/" target="_blank">Questions and Answers</a></li><li><a href="https://discordapp.com/invite/cjjrZDp" target="_blank">Discord</a></li><li><a href="/docs/support/contact-us#join-our-slack">Slack</a></li><li><a href="https://www.facebook.com/OverwolfDevs" target="_blank">Facebook</a></li><li><a href="https://twitter.com/OverwolfDevs" target="_blank">Twitter</a></li></ul><ul><li>Documentation</li><li><a href="/docs/api/changelog">Changelog</a></li><li><a href="/docs/api/overwolf-api-overview">API</a></li><li><a href="/docs/start/app-creation-process">App Creation Process</a></li><li><a href="/docs/topics/best-practices-overview">Best Practices</a></li><li><a href="/docs/status/all">Game Events status</a></li></ul><ul><li>Information</li><li><a href="http://www.overwolf.com/careers/">Careers</a></li><li><a href="https://play.overwolf.com/fund/" target="_blank">Fund</a></li><li><a href="https://medium.com/overwolf-developers" target="_blank">Developers Blog</a></li><li><a href="https://www.overwolf.com/appstore" target="_blank">Overwolf Appstore</a></li><li><a href="https://brands.overwolf.com/" target="_blank">Advertise on Overwolf</a></li></ul></div></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+</span></div></article></div><div class="docLastUpdate"><em>Last updated on 2020-3-11 by Shoomanjin</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/topics/create-download-link"><span class="arrow-prev">← </span><span>Download Link with referral ID</span></a><a class="docs-next button" href="/docs/topics/promoting-your-app"><span>Promoting your app</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#overview">Overview</a></li><li><a href="#required-permissions">Required Permissions</a></li><li><a href="#comparison-table">Comparison table</a></li><li><a href="#using-overwolfmediareplays">Using overwolf.media.replays</a><ul class="toc-headings"><li><a href="#manual-capture">Manual Capture</a></li><li><a href="#auto-highlights-capture">Auto-highlights capture</a></li></ul></li><li><a href="#using-overwolfstreaming">Using overwolf.streaming</a><ul class="toc-headings"><li><a href="#usage-flow">Usage flow</a></li><li><a href="#extras">Extras</a></li></ul></li></ul></nav></div><footer class="site-footer"><div class="container"><ul><li>Legal</li><li><a href="/docs/topics/legal-overview">Terms overview</a></li><li><a href="/docs/topics/legal-developers-terms">Developer&#x27;s terms</a></li><li><a href="/docs/topics/legal-app-terms">App terms</a></li><li><a href="http://www.overwolf.com/legal/" target="_blank">Overwolf terms</a></li><li><a href="http://www.overwolf.com/legal/#Privacy-policy" target="_blank">Overwolf Privacy policy</a></li></ul><ul><li>Support</li><li><a href=" https://discuss.developers.overwolf.com/" target="_blank">Questions and Answers</a></li><li><a href="https://discordapp.com/invite/cjjrZDp" target="_blank">Discord</a></li><li><a href="/docs/support/contact-us#join-our-slack">Slack</a></li><li><a href="https://www.facebook.com/OverwolfDevs" target="_blank">Facebook</a></li><li><a href="https://twitter.com/OverwolfDevs" target="_blank">Twitter</a></li></ul><ul><li>Documentation</li><li><a href="/docs/api/changelog">Changelog</a></li><li><a href="/docs/api/overwolf-api-overview">API</a></li><li><a href="/docs/start/app-creation-process">App Creation Process</a></li><li><a href="/docs/topics/best-practices-overview">Best Practices</a></li><li><a href="/docs/status/all">Game Events status</a></li></ul><ul><li>Information</li><li><a href="http://www.overwolf.com/careers/">Careers</a></li><li><a href="https://play.overwolf.com/fund/" target="_blank">Fund</a></li><li><a href="https://medium.com/overwolf-developers" target="_blank">Developers Blog</a></li><li><a href="https://www.overwolf.com/appstore" target="_blank">Overwolf Appstore</a></li><li><a href="https://brands.overwolf.com/" target="_blank">Advertise on Overwolf</a></li></ul></div></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
                 document.addEventListener('keyup', function(e) {
                   if (e.target !== document.body) {
                     return;
