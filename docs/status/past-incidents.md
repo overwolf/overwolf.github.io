@@ -204,7 +204,7 @@ Nov 12, 10:49 AM GMT+3
 Rocket League
 -------------
 
-**Investigating** -   Rocket League game events are down, we are working on a fix.  
+**Investigating** -   Rocket League game events are down,  latest patch includes many changes (DX11 and x64 support). we are working on a fix.  
 Mar 11, 11:46 PM GMT+3
 
 
