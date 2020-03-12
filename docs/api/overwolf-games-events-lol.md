@@ -172,7 +172,7 @@ Data Example:
 
 #### *matchOutcome* note
 
-<b>This info update is currently broken.</b>
+<b>This event is currently broken.</b>
 
 #### *matchID* note
 
