@@ -38,6 +38,7 @@ Describe the player's current deck in an active game.
 Data Example:
 
 ```json
+{"active_deck":"{\"DeckCode\":null,\"CardsInDeck\":null}"}},"feature":"game_client_data"}
 ```
 
 #### *card_positions* note
@@ -47,6 +48,11 @@ Determine the position of the cards in the collection, deck builder, Expedition 
 Data Example:
 
 ```json
+{\"PlayerName\":null,\"OpponentName\":null,\"GameState\":\"Menus\",\"Screen\":{\"ScreenWidth\":1920,\"ScreenHeight\":1080},\"Rectangles\":[]}"}
+
+OR 
+
+{\"PlayerName\":\"Sh4rgaas\",\"OpponentName\":\"decks_mediumelise_name\",\"GameState\":\"InProgress\",\"Screen\":{\"ScreenWidth\":1920,\"ScreenHeight\":1080},\"Rectangles\":[{\"CardID\":1510579131,\"CardCode\":\"face\",\"TopLeftX\":179,\"TopLeftY\":481,\"Width\":117,\"Height\":117,\"LocalPlayer\":true},{\"CardID\":1487329530,\"CardCode\":\"face\",\"TopLeftX\":179,\"TopLeftY\":716,\"Width\":117,\"Height\":117,\"LocalPlayer\":false}]}"}
 ```
 
 #### *expeditions* note
@@ -57,6 +63,7 @@ Returns a number of fields including the current state of the Expedition and a l
 Data Example:
 
 ```json
+{"game_client_data":{"expeditions":"{\"IsActive\":true,\"State\":\"Picking\",\"Record\":[],\"DraftPicks\":[],\"Deck\":[],\"Games\":0,\"Wins\":0,\"Losses\":0}"}}
 ```
 
 #### *game_result* note
@@ -67,4 +74,5 @@ The request returns an int for GameID and a boolean for LocalPlayerWon.
 Data Example:
 
 ```json
+{\"GameID\":2,\"LocalPlayerWon\":false}"}
 ```
