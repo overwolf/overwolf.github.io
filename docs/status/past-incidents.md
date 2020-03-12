@@ -131,6 +131,10 @@ Jan 22, 03:01 PM GMT+3
 
 No logs.
 
+Legends of Runeterra
+--------------------
+No logs.
+
 MTG Arena
 ---------
 No logs.
@@ -167,6 +171,10 @@ Oct 23, 11:03 PM GMT+3
 
 **Investigating** - PUBG game events are down due to the new season 5 patch, we are working on a fix.  
 Oct 23, 12:39 PM GMT+3
+
+PUBG Lite
+---------
+No logs.
 
 Rainbow 6 Siege
 ---------------
