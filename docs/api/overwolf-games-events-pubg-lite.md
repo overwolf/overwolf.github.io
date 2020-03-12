@@ -63,7 +63,7 @@ headshots | match_info | Total number of headshots in the match |               
 total_damage_dealt   | match_info   | Total damage dealt in the current match |   |  127.0       |
 max_kill_distance   | match_info   | Max kill distance in CM|          |  127.0       |
 
-#### `kills` notes:
+#### `kills` notes
 
 Currently there is a known issue where if a teammate knocks out an enemy and local player finishes him off, he will not get the kill event.
 
@@ -77,11 +77,11 @@ headshot   | null        |  The local player hit another player with a headshot 
 damage_dealt   | amount of damage dealt by the local player |  The local player “damaged” an enemy or himself |      |  127.0       | 
 fire   | null        |  When local player attacks.  | Relevant also for fists. |  128.0       | 
 
-#### `kill` note:
+#### `kill` note
 
 Currently there is a known issue where if a teammate knocks out an enemy and local player finishes him off, he will not get the kill event.
 
-#### `damage_dealt` note:
+#### `damage_dealt` note
 
 This event can not be used in real time, as it can give an un-fair advantage to the user. You can use it post-match.
 
@@ -200,7 +200,7 @@ Event      | Event Data  | Fired When          | Notes              | Since GEP 
 -----------| ------------| ------------------------------- | ------------------ | --------------|
 jump | null        | Local player jumps (space) |                   |  128.0       |
 
-#### *health* note:
+#### *health* note
 
 Data Example:
 
@@ -315,6 +315,6 @@ Event      | Event Data  | Fired When          | Notes              | Since GEP 
 -----------| ------------| ------------------------------- | ------------------ | --------------|
 killer | The killer’s nickname | The local player was killed by one of the players |  |    90.4    |
 
-#### `killer` notes:
+#### `killer` notes
 
 When one of local player’s squad members kill the local player, the provided data will be "self_kill”.
