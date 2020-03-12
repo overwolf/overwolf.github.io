@@ -148,8 +148,8 @@ revived    | null        | The local player was revived    |                    
 
 Event      | Event Data  | Fired When          | Notes              | Since GEP Ver. |
 -----------| ------------| ------------------------------- | ------------------ | --------------|
-death      | null | The local player dies |                        |   0.90    |
-knockedout | null | The local player is knocked-out |   |   0.90    |
+death      | null | The local player dies |                        |   146.0    |
+knockedout | null | The local player is knocked-out |   |   146.0    |
 
 ## `killer`
 
@@ -157,7 +157,7 @@ knockedout | null | The local player is knocked-out |   |   0.90    |
 
 Event      | Event Data  | Fired When          | Notes              | Since GEP Ver. |
 -----------| ------------| ------------------------------- | ------------------ | --------------|
-killer | The killer’s nickname | The local player was killed by one of the players |  |    90.4    |
+killer | The killer’s nickname | The local player was killed by one of the players |  |    146.0    |
 
 #### `killer` notes:
 
