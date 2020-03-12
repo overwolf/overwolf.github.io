@@ -62,6 +62,10 @@ Note that the full documentation and links for this version will be added soon t
     * inventory open/close
     * character_name
     * character_level
+* [PUBG Lite game events](games-events-pubg-lite)
+  * New supported game
+* [Legends of Runeterra game events](games-events-lor)
+  * New supported game
 
 ## Version 0.141 (Jan. 2020)
 
