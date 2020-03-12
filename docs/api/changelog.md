@@ -10,6 +10,7 @@ Follow this entry for ongoing updates and changes to the project or tools:
 
 Note that the full documentation and links for this version will be added soon to the site.
 
+* The Vulkan Graphics API is now supported.
 * From now, whenever you try to use an obsolete API, the dev console will print a warning.  
   Try: overwolf.setting.getCurrentOverwolfLanguage().
 * New API - [overwolf.settings.language](overwolf-settings-language).  
@@ -25,6 +26,7 @@ Note that the full documentation and links for this version will be added soon t
   * Support new NVEC Encoders ("NVEC New").
 * Allow overriding recording indication type and position in API:  
   Now when calling [overwolf.streaming.start()](overwolf-streaming#startsettings-callback), [indication_position](overwolf-streaming#indication_position-enum) and [indication_type](overwolf-streaming#indication_type-enum) can be set under video settings. (Until now, you could do that only from the OW client UI).
+* HTTPS - "Referrers", "Origins", and "AncestorsOrigin" should now all be using HTTPS instead of HTTP.
 
 
 ## Version 0.142 (Feb. 2020)
