@@ -1,7 +1,7 @@
 ---
 id: first-time-user-experience
-title: First time uyser experience
-sidebar_label: First time uyser experience
+title: First time user experience
+sidebar_label: First time user experience
 ---
 
 ## Overview
