@@ -142,8 +142,8 @@ const GamesMetadata = {
   21620: {
     id: 21620,
     path: "/docs/status/lor",
-    iconUrl: "/docs/assets/games-logos/path-of-exile.png",
-    iconLargeUrl: "/docs/assets/games-logos/large/path-of-exile.png",
+    iconUrl: "/docs/assets/games-logos/lor.png",
+    iconLargeUrl: "/docs/assets/games-logos/large/lor.png",
     name: "Legends of Runeterra"
   },
   21598: {
