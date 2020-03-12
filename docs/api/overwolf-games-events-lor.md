@@ -38,7 +38,12 @@ Describe the player's current deck in an active game.
 Data Example:
 
 ```json
+
+// player is not in an active game
 {"active_deck":"{\"DeckCode\":null,\"CardsInDeck\":null}"}},"feature":"game_client_data"}
+
+// player is in an active game
+{"active_deck":"{\"DeckCode\":\"CEBAGAIDFYYTOBABAIBAQDZZAICACAYEEQVDMBIBAIFQYJBFHAAQCAICEE\",\"CardsInDeck\":{\"01NX046\":3,\"01NX049\":3,\"01NX055\":3,\"01IO002\":3,\"01IO008\":3,\"01IO015\":3,\"01IO057\":3,\"01NX004\":2,\"01NX036\":2,\"01NX042\":2,\"01NX054\":2,\"01IO011\":2,\"01IO012\":2,\"01IO036\":2,\"01IO037\":2,\"01IO056\":2,\"01IO033\":1}}"}},"feature":"game_client_data"}
 ```
 
 #### *card_positions* note
@@ -50,7 +55,7 @@ Data Example:
 ```json
 {\"PlayerName\":null,\"OpponentName\":null,\"GameState\":\"Menus\",\"Screen\":{\"ScreenWidth\":1920,\"ScreenHeight\":1080},\"Rectangles\":[]}"}
 
-OR 
+//OR 
 
 {\"PlayerName\":\"Sh4rgaas\",\"OpponentName\":\"decks_mediumelise_name\",\"GameState\":\"InProgress\",\"Screen\":{\"ScreenWidth\":1920,\"ScreenHeight\":1080},\"Rectangles\":[{\"CardID\":1510579131,\"CardCode\":\"face\",\"TopLeftX\":179,\"TopLeftY\":481,\"Width\":117,\"Height\":117,\"LocalPlayer\":true},{\"CardID\":1487329530,\"CardCode\":\"face\",\"TopLeftX\":179,\"TopLeftY\":716,\"Width\":117,\"Height\":117,\"LocalPlayer\":false}]}"}
 ```
