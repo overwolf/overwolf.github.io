@@ -179,7 +179,7 @@ If there is no "start_position" property (size and position) for a window in the
 ### Usage example
 
 ```js
-overwolf.windows.obtainDeclaredWindow("desktop", { useDefaultSizeAndLocation: true }, console.log);
+overwolf.windows.obtainDeclaredWindow("desktop", true, console.log);
 ```
 
 #### Callback argument: Success
