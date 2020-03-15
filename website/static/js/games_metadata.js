@@ -152,5 +152,12 @@ const GamesMetadata = {
     iconUrl: "/docs/assets/games-logos/pubg.png",
     iconLargeUrl: "/docs/assets/games-logos/large/pubg.png",
     name: "PUBG Lite"
+  },
+  765: {
+    id: 765,
+    path: "/docs/status/world-of-warcraft",
+    iconUrl: "/docs/assets/games-logos/warcraft.png",
+    iconLargeUrl: "/docs/assets/games-logos/large/warcraft.png",
+    name: "World of Warcraft"
   }
 }
