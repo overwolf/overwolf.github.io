@@ -27,11 +27,11 @@ Note that the full documentation and links for this version will be added soon t
 * Allow overriding recording indication type and position in API:  
   Now when calling [overwolf.streaming.start()](overwolf-streaming#startsettings-callback), [indication_position](overwolf-streaming#indication_position-enum) and [indication_type](overwolf-streaming#indication_type-enum) can be set under video settings. (Until now, you could do that only from the OW client UI).
 * HTTPS - "Referrers", "Origins", and "AncestorsOrigin" should now all be using HTTPS instead of HTTP.
-* [PUBG Lite game events](games-events-pubg-lite)
+* [PUBG Lite game events](overwolf-games-events-pubg-lite)
   * New supported game
-* [Legends of Runeterra game events](games-events-lor)
+* [Legends of Runeterra game events](overwolf-games-events-lor)
   * New supported game
-* [World of Warcraft game events](games-events-wow)
+* [World of Warcraft game events](overwolf-games-events-wow)
   * New supported game
 
 
