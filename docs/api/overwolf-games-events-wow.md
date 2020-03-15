@@ -46,6 +46,22 @@ Data Example:
 }
 ```
 
-```json
-{"info":{"game_info":{"group_applicants":null}},"feature":"game_info"}
-```
+Possible values for `application_status`:
+
+* 0 - None
+* 1 - Applied
+* 2 - Invited
+* 3 - Failed
+* 4 - Cancelled
+* 5 - Declined
+* 6- DeclinedFull
+* 7 - DeclinedDelist
+* 8 - Timedout
+* 9 - Invitedeclined
+* 10 - Inviteaccepted
+
+Possible values for `role`:
+
+* 2- tank
+* 4- healer
+* 8- damage
