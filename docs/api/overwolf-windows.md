@@ -159,7 +159,7 @@ overrideSetting	| [WindowProperties](#windowproperties-object) Object | Override
 callback        | function                                            | A callback function which will be called with the current window object as a parameter |
 
 ## obtainDeclaredWindow(windowName, useDefaultSizeAndLocation, callback)
-#### Version added: 0.78
+#### Version added: 0.136
 
 > Creates an instance of your window (the window’s name has to be declared in the manifest.json) or returns a window by the window name.
 
@@ -909,7 +909,7 @@ enablePopupBlocker  | bool   |                                                  
 
 Parameter                   | Type   | Description                                                          |
 --------------------------- | -------| -------------------------------------------------------------------- |
-useDefaultSizeAndLocation   | bool   |  See note [here](#usedefaultsizeandlocation-note)                                                                    |
+useDefaultSizeAndLocation   | bool   |                                                                      |
 
 The default behaviour of OW is to "remember" the last size and position of a window, before it closes.
 When `useDefaultSizeAndLocation` is set to true, the window will be created using the default (manifest) size and location, rather than the saved setting (if one exists).
