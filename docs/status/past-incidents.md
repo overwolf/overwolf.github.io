@@ -139,6 +139,13 @@ MTG Arena
 ---------
 No logs.
 
+Path of Exile
+-------------
+
+**Investigating** - Path of Exile events are down.  
+Mar 14, 04:53 PM GMT+3
+
+
 PUBG
 ----
 
