@@ -175,6 +175,8 @@ Data example:
 
 #### *game_mode* notes
 
+By default - 'game_mode' will always return "lol" value unless TFT is played.
+
 Data example:
 
 ```json
