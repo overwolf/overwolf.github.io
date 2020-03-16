@@ -166,20 +166,13 @@ callback        | function                                            | A callba
 Parameter                 | Type                                                | Description                                                                            |
 ------------------------- | ----------------------------------------------------| -------------------------------------------------------------------------------------- |
 windowName                | string                                              | The name of the window that was declared in the data.windows section in the manifest   |
-useDefaultSizeAndLocation	| bool                                                | Enable the manifest size and position settings (default is false). See note [here](#usedefaultsizeandlocation-note)       |
+useDefaultSizeAndLocation	| [DefaultSizeAndLocation](#defaultsizeandlocation-object) Object | Enable the manifest size and position settings                            |
 callback                  | function                                            | A callback function which will be called with the current window object as a parameter |
-
-#### `useDefaultSizeAndLocation` note
-
-The default behaviour of OW is to "remember" the last size and position of a window, before it closes.
-When this flag is set to true, the window will be created using the default (manifest) size and location, rather than the saved setting (if one exists).
-
-If there is no "start_position" property (size and position) for a window in the manifest, it will default to 0,0.
 
 ### Usage example
 
 ```js
-overwolf.windows.obtainDeclaredWindow("desktop", true, console.log);
+overwolf.windows.obtainDeclaredWindow("main", {useDefaultSizeAndLocation: true}, console.log)
 ```
 
 #### Callback argument: Success
@@ -909,6 +902,19 @@ Parameter           | Type   | Description                                      
 nativeWindow        | bool   |                                                                      |
 enablePopupBlocker  | bool   |                                                                      |
 
+## DefaultSizeAndLocation Object
+#### Version added: 0.136
+
+> An object that Enable the manifest size and position settings (default is false).
+
+Parameter                   | Type   | Description                                                          |
+--------------------------- | -------| -------------------------------------------------------------------- |
+useDefaultSizeAndLocation   | bool   |  See note [here](#usedefaultsizeandlocation-note)                                                                    |
+
+The default behaviour of OW is to "remember" the last size and position of a window, before it closes.
+When `useDefaultSizeAndLocation` is set to true, the window will be created using the default (manifest) size and location, rather than the saved setting (if one exists).
+
+If there is no "start_position" property (size and position) for a window in the manifest, it will default to 0,0.
 
 
 ## MessageBoxParams Object
