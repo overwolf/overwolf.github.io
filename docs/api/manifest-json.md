@@ -546,18 +546,20 @@ In this example, when loading the index window, myscript.js will be loaded and w
 ## launch_event_settings array
 A list of events causing the app to launch. It's enough that one of the events occurs to launch the app.
 
-| Name    | Type   | Description                                                 | Since |
-|---------| -------|-------------------------------------------------------------|------ |
-| event | enum | The type name of the event. </br>**["GameLaunch", "AllGamesLaunch"]**| 0.82  |
-| event_data |  [launch_event](#launch-event-object) object | The list of game class IDs for which the app will launch.    | 0.82  |
-| start_minimized     | bool | The app’s main window will start minimized. | 0.82  |
-| include_launchers      | bool | The app will be launched when game launcher is detected.  | 0.103  |
+| Name              | Type   | Description                                                                             | Since |
+|-------------------| -------|-----------------------------------------------------------------------------------------|------ |
+| event             | enum   | The type name of the event. </br>**["GameLaunch", "AllGamesLaunch"]**                   | 0.82  |
+| event_data        |  [launch_event](#launch-event-object) object | The list of game class IDs for which the app will launch.    | 0.82  |
+| tracked           | bool   | Launch App when gameid is detected (even when not injected).                            | 0.132  
+| start_minimized   | bool   | The app’s main window will start minimized.                                             | 0.82  |
+| include_launchers | bool   | The app will be launched when game launcher is detected.                                | 0.103 |
 
 Code Example:
 
 ```json
 "launch_events": [{
     "event": "GameLaunch",
+    "tracked": false,
     "event_data": {
         "game_ids": [1136],
         "wait_for_stable_framerate": 30
