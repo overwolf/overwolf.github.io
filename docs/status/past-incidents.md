@@ -105,7 +105,6 @@ Oct 18, 01:58 PM GMT+3
 **Investigating** - Fortnite events are down due to major game update.  
 Oct 15, 12:58 PM GMT+3
 
-
 Heartstone
 ----------
 
@@ -114,7 +113,6 @@ Oct 15, 11:22 AM GMT+3
 
 **Investigating** - Game events are down.  
 Oct 09, 01:39 PM GMT+3
-
 
 Heroes of the Storm
 -------------------
@@ -186,6 +184,9 @@ No logs.
 Rainbow 6 Siege
 ---------------
 
+**Resolved** This incident has been resolved.  
+Mar 12, 04:37 PM GMT+3
+
 **Investigating** -   Rainbow 6 game events are down, we are working on a fix.  
 Mar 10, 03:24 PM GMT+3
 
@@ -220,7 +221,7 @@ Rocket League
 -------------
 
 **Resolved** - This incident has been resolved.  
-Mar 17, 08:15 PM GMT+3
+Mar 17, 08:15 lPM GMT+3
 
 **Investigating** -   Rocket League game events are down,  latest patch includes many changes (DX11 and x64 support). we are working on a fix.  
 Mar 11, 11:46 PM GMT+3
