@@ -28,19 +28,63 @@ The basic functions our sample app demonstrates:
 
 * Background controller that manages data transfers.
 
-## How to load the app
+## Setting up
 
-[This repository](https://github.com/overwolf/sample-app) contains the Overwolf sample app.
+In order to run the app, you must first complete several steps.
 
-1. Download the app to your machine as a ZIP archive, Unzip it.
+### 1. Install Overwolf Client
 
-2. Under Overwolf's settings, choose the *Support* tab and then go into *Development options*.
+Download and install the [Overwolf desktop client](https://download.overwolf.com/install/Download).
 
-3. Click the *Load unpacked* button and choose the folder where you placed the sample app's repository.
+### 2. Install NodeJS
+
+Download and install [NodeJS](https://nodejs.org/).  
+
+After installing, run the following commands in your favorite IDE terminal ([Visual Studio Code](https://code.visualstudio.com/) is free and easy to use)
+
+```js
+node -v //returns your node version, if installed
+npm -v  //returns your npm version, if installed
+```
+
+If they run successfully, proceed to the next steps.
+
+### 3. Download the source code
+
+[This repository](https://github.com/overwolf/sample-app/tree/master/ts) contains the Overwolf sample app.  
+Download the app's source code from the repository as a zip file, and extract it to a new folder on your machine.
+
+### 4. Build the app
+
+In your terminal, run the following commands:
+
+```js
+cd ts //the path to your extracted 'ts' folder here
+npm install //install all modules listed as dependencies in package.json
+npm run build //create a "dist" folder with the compiled components
+```
+
+### 5. Install the app as "unpacked extension"
+
+Usually, all the apps in the Overwolf app store are OPK packages that can be installed with a double-click.
+Unlike that, while you are developing an app, you want to load the unpacked code, change it, and test it regularly.  
+
+For this reason, in addition to the OPK installation, you can load the app as "unpacked extension":  
+(Note that to do that you have to **[whitelist](sdk-introduction#whitelist-as-a-developer)** your OW username as a developer).
+
+* Open the Overwolf desktop client settings (by right-clicking the client and selecting "Support"  
+  Or by clicking on the wrench icon in the dock and going to the "Support" tab).
+
+* Click on "Development options".
+
+* In the opened window, click on "Load unpacked extension" and select the extracted 'ts' folder.  
+  This will add the app to your Overwolf dock.
+
+* Click on the app's icon in your OW dock to run the app.
 
 ::: important
-Each app has a unique id (UID) that is generated using the "name" and "author" strings. Once an app is published on the Appstore, its UID can’t be changed.
-The same goes for the sample app, so make sure not to edit the author or app name in the manifest. It will prevent loading the app as unpacked app. 
+Each app has a unique id (UID) that is generated using the "name" and "author" strings. Once an app is published on the Appstore, its UID can't be changed.
+The same goes for the sample app, so make sure not to edit the author or app name in the manifest. It will prevent loading the app as an unpacked app. 
 :::
 
 ## Screenshots
