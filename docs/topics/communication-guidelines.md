@@ -16,9 +16,13 @@ Your app is live and you want gamers to get to know it and use it more. While we
 
 As an example of good visual messaging making it clear for the users that they'll have to install something from us, you should implement the 'Get it on Overwolf' badge in your landing page, social media channels and other public settings. Mentioning the Overwolf appstore when referring or promoting your app is generally a good practice. 
 
-The right badge to use:
+The right badge to use, basic version:
 
-![alt-text](assets/overwolf-appstore-badge.png)
+![alt-text](assets/GetItOnOW-Base.png)
+
+Dark version:
+
+![alt-text](assets/GetItOnOW-Dark.png)
 
 Note that you should always link this and other badges to your app's page in the Overwolf appstore, never a direct download. 
 
