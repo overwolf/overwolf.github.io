@@ -93,7 +93,7 @@ This is how the sample app's main window looks like: a desktop window disaplying
 
 ![alt-text](assets/sample-app/desktop-window.png)
 
-The real action will take place in the in-game window - once you launch Fortniote, the desktop window will be replaced with this in-game window:
+The real action will take place in the in-game window - once you launch Fortnite, the desktop window will be replaced with this in-game window:
 
 ![alt-text](assets/sample-app/in-game-window.png)
 
