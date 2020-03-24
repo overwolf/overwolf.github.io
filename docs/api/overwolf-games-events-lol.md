@@ -633,15 +633,15 @@ Data Example:
 
 Event  | Event Data                                       |               Fired When                  | Notes     | Since GEP Ver. |
 -------| -------------------------------------------------| ----------------------------------------- | --------- | --------------|
-physical_damage_dealt_player       | Float. | Damaging an opponent with physical damage. |See [notes](#physical_damage_dealt_player-note)|      139.0    |
-magic_damage_dealt_player          | Float. | Damaging an opponent with magic damage. |See [notes](#magic_damage_dealt_player-note)|      139.0    |
-true_damage_dealt_player           | Float. | Damaging an opponent with true damage. |See [notes](#true_damage_dealt_player-note)|      139.0    |
-physical_damage_dealt_to_champions | Float. | Physical damage is inflicted on any opponent. |See [notes](#physical_damage_dealt_to_champions-note)|      139.0    |
-magic_damage_dealt_to_champions    | Float. | Magic damage is inflicted on any opponent. |See [notes](#magic_damage_dealt_to_champions-note)|      139.0    |
-true_damage_dealt_to_champions     | Float. | True damage is inflicted on any opponent. |See [notes](#true_damage_dealt_to_champions-note)|      139.0    |
-physical_damage_taken              | Float. | Receiving physical damage from an opponent.  |See [notes](#physical_damage_taken-note)|      139.0    |
-magic_damage_taken                 | Float. | Receiving magic damage from an opponent. |See [notes](#magic_damage_taken-note)|      139.0    |
-true_damage_taken                  | Float. | Receiving true damage from an opponent. |See [notes](#true_damage_taken-note)|      139.0    |
+physical_damage_dealt_player       | Float | Damaging an opponent with physical damage. |See [notes](#physical_damage_dealt_player-note)|      139.0    |
+magic_damage_dealt_player          | Float | Damaging an opponent with magic damage. |See [notes](#magic_damage_dealt_player-note)|      139.0    |
+true_damage_dealt_player           | Float | Damaging an opponent with true damage. |See [notes](#true_damage_dealt_player-note)|      139.0    |
+physical_damage_dealt_to_champions | Float | Physical damage is inflicted on any opponent. |See [notes](#physical_damage_dealt_to_champions-note)|      139.0    |
+magic_damage_dealt_to_champions    | Float | Magic damage is inflicted on any opponent. |See [notes](#magic_damage_dealt_to_champions-note)|      139.0    |
+true_damage_dealt_to_champions     | Float | True damage is inflicted on any opponent. |See [notes](#true_damage_dealt_to_champions-note)|      139.0    |
+physical_damage_taken              | Float | Receiving physical damage from an opponent.  |See [notes](#physical_damage_taken-note)|      139.0    |
+magic_damage_taken                 | Float | Receiving magic damage from an opponent. |See [notes](#magic_damage_taken-note)|      139.0    |
+true_damage_taken                  | Float | Receiving true damage from an opponent. |See [notes](#true_damage_taken-note)|      139.0    |
 
 #### *physical_damage_dealt_player* note
 
@@ -656,7 +656,7 @@ Data Example:
 Data Example:
 
 ```json
-{"events":[{"name":"magic_damage_dealt_player","data":"65"}]}
+{"events":[{"name":"magic_damage_dealt_player","data":"65.0"}]}
 ```
 
 #### *true_damage_dealt_player* note
@@ -664,7 +664,7 @@ Data Example:
 Data Example:
 
 ```json
-{"events":[{"name":"true_damage_dealt_player","data":"14"}]}
+{"events":[{"name":"true_damage_dealt_player","data":"14.0"}]}
 ```
 
 #### *physical_damage_dealt_to_champions* note
@@ -680,7 +680,7 @@ Data Example:
 Data Example:
 
 ```json
-{"events":[{"name":"magic_damage_dealt_to_champions","data":"65"}]}
+{"events":[{"name":"magic_damage_dealt_to_champions","data":"65.0"}]}
 ```
 
 #### *true_damage_dealt_to_champions* note
@@ -688,7 +688,7 @@ Data Example:
 Data Example:
 
 ```json
-{"events":[{"name":"true_damage_dealt_to_champions","data":"14"}]}
+{"events":[{"name":"true_damage_dealt_to_champions","data":"14.0"}]}
 ```
 
 #### *physical_damage_taken* note
@@ -712,7 +712,7 @@ Data Example:
 Data Example:
 
 ```json
-{"events":[{"name":"true_damage_taken","data":"6"}]}
+{"events":[{"name":"true_damage_taken","data":"6.0"}]}
 ```
 
 ## `heal`
@@ -730,7 +730,7 @@ total_units_healed      | heal | Value of amount of units healed in the match (F
 Data Example:
 
 ```json
-{"info":{"heal":{"total_heal":"27"}},"feature":"heal"}
+{"info":{"heal":{"total_heal":"27.0"}},"feature":"heal"}
 ```
 
 #### *total_heal_on_teammates* note
@@ -738,7 +738,7 @@ Data Example:
 Data Example:
 
 ```json
-{"info":{"heal":{"total_heal_on_teammates":"27"}},"feature":"heal"}
+{"info":{"heal":{"total_heal_on_teammates":"27.0"}},"feature":"heal"}
 ```
 
 #### *total_units_healed* note
@@ -746,5 +746,5 @@ Data Example:
 Data Example:
 
 ```json
-{"info":{"heal":{"total_units_healed":"1"}},"feature":"heal"}
+{"info":{"heal":{"total_units_healed":"1.0"}},"feature":"heal"}
 ```
