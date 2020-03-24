@@ -1,6 +1,6 @@
 ---
 id: howto-check-events-status-from-app
-title: Veritfying events for your spp
+title: Verifying events for your app
 sidebar_label: Verifying event status
 ---
 
