@@ -104,13 +104,9 @@ hit	       |See [notes](#hit-note)| The player’s tank was damaged |         | 
 #### *death* note
 
 Event Data:
-
-JSON containing:
-
-* {enemyTeam: boolean}
-True if the event refers to an enemy unit
-False if the event refers to an ally unit
-* {damage: integer}
+```json
+{"events":[{"data":"","name":"death"}]}
+```
 
 #### *hit* note
 
