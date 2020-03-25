@@ -4,7 +4,7 @@ title: Submit a new version of your app
 sidebar_label: Submit a new version
 ---
 
-Your app is available on the Overwolf Appstore and it's time to release new features you've been working on. That’s awesome! In this article we'll go over the process of submitting updated version of your app using the new OW developers console.  
+Your app is available on the Overwolf Appstore, and it's time to release new features you've been working on. That's awesome! In this article, we'll go over the process of submitting an updated version of your app using the new OW developers console.
 
 **Don't forget to update your manifest [build version](../api/manifest-json#meta-object)**, once the version has been changed.
 
@@ -16,9 +16,9 @@ Soon, we will add this feature, as long as other features like asset management,
 
 ### 1. Create an OPK package
 
-OPK files are Overwolf's app installation package which includes your app's files: the manifest, source files and other assets. All files are packed in a package which has the OPK file extension.
+OPK files are Overwolf's app installation package, which includes your app's files: the manifest, source files, and other assets. All files are packed in a package that has the OPK file extension.
 
-To create it, just ZIP all your files together, then manually change the file extension from ZIP to OPK.  
+To create it, ZIP all your files together, then manually change the file extension from ZIP to OPK.  
 Make sure to have all the following items in this structure:
 
 <pre>
@@ -33,7 +33,7 @@ Make sure to have all the following items in this structure:
 +---- assets
 </pre>
 
-Double clicking an OPK will install the package. 
+Double-clicking an OPK will install the package. 
 
 **Make sure to pack the manifest and all the files and folder in the root of the package, like this:** 
 
@@ -43,7 +43,7 @@ More info about the OPK structure can be found [here](../start/submit-your-app-t
 
 ### 2. Login to the developers console
 
-Once you have a valid OPK with the new version To get the update cycle started, upload the new version to [OW developers console](https://console.overwolf.com/).
+Once you have a valid OPK with the latest version To get the update cycle started, upload the new version to [OW developers console](https://console.overwolf.com/).
 
 ![welcome-screen](../assets/dev-console/welcome-screen.png)
 
