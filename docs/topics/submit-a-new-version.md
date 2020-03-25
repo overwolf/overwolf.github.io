@@ -22,19 +22,22 @@ To create it, just ZIP all your files together, then manually change the file ex
 Make sure to have all the following items in this structure:
 
 <pre>
-app folder
-    +---- manifest.json
-    +---- IconMouseNormal.png
-    +---- IconMouseOver.png
-    +---- launcher_icon.ico
-    +---- WindowIcon.png
-    +---- Files
-        +---- index.html
-        +---- css
-        +---- assets
++---- manifest.json
++---- IconMouseNormal.png
++---- IconMouseOver.png
++---- launcher_icon.ico
++---- WindowIcon.png
++---- index.html
++---- Files
++---- css
++---- assets
 </pre>
 
 Double clicking an OPK will install the package. 
+
+**Make sure to pack the manifest and all the files and folder in the root of the package, like this:** 
+
+![welcome-screen](../assets/dev-console/opk.gif)
 
 More info about the OPK structure can be found [here](../start/submit-your-app-to-the-store#how-to-submit-an-app).
 
