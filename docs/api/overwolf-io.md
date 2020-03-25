@@ -153,6 +153,12 @@ Parameter | Type     | Description             |
 path      | string   | The target path         |
 callback  | [(Result: DirResult)](#dirresult-object) => void | Returns with the result | 
 
+#### Usage example
+
+```js
+overwolf.io.dir("C:/Users/Hal9000/Videos/Overwolf",console.log)
+```
+
 ## readBinaryFile(path, options, callback)
 
 #### Version added: 0.141
@@ -361,3 +367,27 @@ Parameter        | Type                          | Description                  
 success          | boolean                       | Inherited from the "Result" Object |
 error            | string                        | Inherited from the "Result" Object |
 data             | string[]                      | List of files and folders          |
+
+#### Example data
+
+```json
+{
+   "success":true,
+   "path":"C:/Users/Hal9000/Videos/Overwolf",
+   "data":[
+      {
+         "name":"Fortnite 03-19-2020 17-15-56-087.mp4",
+         "type":"file"
+      },
+      {
+         "name":"Game Events Simulator",
+         "type":"dir"
+      },
+      {
+         "name":"Game Summary",
+         "type":"dir"
+      }
+
+   ]
+}
+```
