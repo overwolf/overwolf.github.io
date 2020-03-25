@@ -121,10 +121,17 @@ If the file doesn’t exist, an error status will be returned:
 Parameter | Type | Description |
 ------------ | ------------ | ------------ |
 src | string | A relative file path from your extension's root folder, or a full overwolf-extension:// URI to the source file |
-dst | string | Destination path to copy to including file name |
+dst | string | Destination absolute path to copy to including filename. See usage example below |
 overrideFile | bool | "true" if you want an existing file to be overwritten, "false" otherwise |
 reserved | bool | For future use |
 callback | function | Returns with the result |   
+
+#### Usage example
+
+```js
+overwolf.io.copyFile("Fortnite Battle Royale 03-19-2020 14-10-18-457.mp4","C:/Users/Hal9000/AppData/Local/Overwolf/Extensions/nhmkaollkcmjiecdnnjmgfifjgkfegkljnjjbipp/1.0.18/copy.mp4",false,false,console.log)
+
+```
 
 #### Callback argument: Success
 
