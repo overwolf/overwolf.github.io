@@ -88,6 +88,11 @@
 <li><a href="#oninfoupdates2">overwolf.games.events.onInfoUpdates2</a></li>
 <li><a href="#onnewevents">overwolf.games.events.onNewEvents</a></li>
 </ul>
+<h2><a class="anchor" aria-hidden="true" id="types-reference"></a><a href="#types-reference" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Types Reference</h2>
+<ul>
+<li><a href="#setrequiredfeaturesresult-object">overwolf.games.events.SetRequiredFeaturesResult</a> Object</li>
+<li><a href="#getinforesult-object">overwolf.games.events.GetInfoResult</a> Object</li>
+</ul>
 <h2><a class="anchor" aria-hidden="true" id="sample-app"></a><a href="#sample-app" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Sample App</h2>
 <p>You can find an example of <code>overwolf.games.events</code> API usage <a href="https://github.com/overwolf/events-sample-apps/tree/master/lol-events-sample-app">here</a>, this one notifies whenever a relevant event has happened in League of Legends.</p>
 <h2><a class="anchor" aria-hidden="true" id="features-overview"></a><a href="#features-overview" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Features Overview</h2>
@@ -153,20 +158,9 @@ This property is an array of <a href="games-ids">game class ids</a> that the app
 </thead>
 <tbody>
 <tr><td>features</td><td>string[]</td><td>String array of features to utilize</td></tr>
-<tr><td>callback</td><td>function</td><td>Callback function which will be called with the status of the request</td></tr>
+<tr><td>callback</td><td><a href="##setrequiredfeaturesresult-object">(Result:SetRequiredFeaturesResult)</a> =&gt; void</td><td>all available features for the registered games declared in the manifest</td></tr>
 </tbody>
 </table>
-<h4><a class="anchor" aria-hidden="true" id="callback-argument"></a><a href="#callback-argument" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Callback argument</h4>
-<p>If successful, the callback will contain all available features for the registered games declared in the manifest.</p>
-<pre><code class="hljs css language-json">{  
-   <span class="hljs-attr">"status"</span>:<span class="hljs-string">"success"</span>,
-   <span class="hljs-attr">"supportedFeatures"</span>:[  
-      <span class="hljs-string">"summoner_info"</span>,
-      <span class="hljs-string">"teams"</span>,
-      <span class="hljs-string">"kill"</span>
-   ]
-}
-</code></pre>
 <h4><a class="anchor" aria-hidden="true" id="usage-example"></a><a href="#usage-example" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Usage Example</h4>
 <p>Example for setting League of Legends required features:</p>
 <pre><code class="hljs css language-javascript"><span class="hljs-keyword">var</span> g_interestedInFeatures = [
@@ -178,9 +172,9 @@ This property is an array of <a href="games-ids">game class ids</a> that the app
 ];
 
 overwolf.games.events.setRequiredFeatures(g_interestedInFeatures, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">info</span>) </span>{
-    <span class="hljs-keyword">if</span> (info.status == <span class="hljs-string">"error"</span>)
+    <span class="hljs-keyword">if</span> (info.success == <span class="hljs-literal">false</span>)
     {
-      <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"Could not set required features: "</span> + info.reason);
+      <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"Could not set required features: "</span> + info.error);
       <span class="hljs-keyword">return</span>;
     }
 }
@@ -191,7 +185,7 @@ overwolf.games.events.setRequiredFeatures(g_interestedInFeatures, <span class="h
         <h5><div class="admonition-icon"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="16" viewBox="0 0 14 16"><path fill-rule="evenodd" d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"/></svg></div> important</h5>
       </div>
       <div class="admonition-content">
-    <p>it's important to wait for the <code>success</code> status to make sure that required features will be registered and trigger events properly.</p>
+    <p>it's important to wait for the <strong>success</strong> status to make sure that required features will be registered and trigger events properly.</p>
 </div></div><p>Example for setting required features and waiting for 'success':</p>
 <pre><code class="hljs css language-js">  <span class="hljs-keyword">async</span> setRequiredFeatures() {
     <span class="hljs-keyword">let</span> tries = <span class="hljs-number">1</span>;
@@ -202,7 +196,7 @@ overwolf.games.events.setRequiredFeatures(g_interestedInFeatures, <span class="h
         overwolf.games.events.setRequiredFeatures(FEATURES_ARRAY, resolve);
       })
 
-      <span class="hljs-keyword">if</span> ( result.status === <span class="hljs-string">'success'</span> ) {
+      <span class="hljs-keyword">if</span> ( result.success === <span class="hljs-literal">true</span> ) {
         <span class="hljs-comment">// make sure our required features were registered</span>
         <span class="hljs-keyword">return</span> (result.supportedFeatures.length &gt; <span class="hljs-number">0</span>); 
       }
@@ -228,49 +222,9 @@ overwolf.games.events.setRequiredFeatures(g_interestedInFeatures, <span class="h
 <tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
 </thead>
 <tbody>
-<tr><td>callback</td><td>function</td><td>Callback function which will be called with the status of the request</td></tr>
+<tr><td>callback</td><td><a href="#getinforesult-object">(Result:GetInfoResult)</a> =&gt; void</td><td>Provides the current game info</td></tr>
 </tbody>
 </table>
-<h4><a class="anchor" aria-hidden="true" id="callback-argument-1"></a><a href="#callback-argument-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Callback argument</h4>
-<p>The current game's info, registered features, and all available info for the current game session.</p>
-<pre><code class="hljs css language-json">{  
-      <span class="hljs-attr">"status"</span>:<span class="hljs-string">"status"</span>,
-      <span class="hljs-attr">"res"</span>:{  
-         <span class="hljs-attr">"summoner_info"</span>:{  
-            <span class="hljs-attr">"id"</span>:<span class="hljs-string">"79489298"</span>,
-            <span class="hljs-attr">"name"</span>:<span class="hljs-string">"itaygl"</span>,
-            <span class="hljs-attr">"region"</span>:<span class="hljs-string">"EUW"</span>,
-            <span class="hljs-attr">"champion"</span>:<span class="hljs-string">"Rengar"</span>
-         },
-         <span class="hljs-attr">"game_info"</span>:{  
-            <span class="hljs-attr">"match_started"</span>:<span class="hljs-string">"True"</span>,
-            <span class="hljs-attr">"matchStarted"</span>:<span class="hljs-string">"True"</span>,
-            <span class="hljs-attr">"teams"</span>:<span class="hljs-string">"%5B%7B%22team%22:%22100%22,%22champion%22:%22Rengar%22"</span>,
-            <span class="hljs-attr">"gameMode"</span>:<span class="hljs-string">"custom"</span>,
-            <span class="hljs-attr">"game_mode"</span>:<span class="hljs-string">"custom"</span>,
-            <span class="hljs-attr">"minionKills"</span>:<span class="hljs-string">"5"</span>,
-            <span class="hljs-attr">"minions_kills"</span>:<span class="hljs-string">"5"</span>,
-            <span class="hljs-attr">"gold"</span>:<span class="hljs-string">"1002"</span>
-         },
-         <span class="hljs-attr">"features"</span>:{  
-            <span class="hljs-attr">"kill"</span>:<span class="hljs-string">"True"</span>,
-            <span class="hljs-attr">"assist"</span>:<span class="hljs-string">"True"</span>,
-            <span class="hljs-attr">"minions"</span>:<span class="hljs-string">"True"</span>,
-            <span class="hljs-attr">"deathAndRespawn"</span>:<span class="hljs-string">"True"</span>,
-            <span class="hljs-attr">"death"</span>:<span class="hljs-string">"True"</span>,
-            <span class="hljs-attr">"minion"</span>:<span class="hljs-string">"True"</span>,
-            <span class="hljs-attr">"gold"</span>:<span class="hljs-string">"True"</span>,
-            <span class="hljs-attr">"level"</span>:<span class="hljs-string">"True"</span>,
-            <span class="hljs-attr">"abilities"</span>:<span class="hljs-string">"True"</span>,
-            <span class="hljs-attr">"gameMode"</span>:<span class="hljs-string">"True"</span>,
-            <span class="hljs-attr">"game_mode"</span>:<span class="hljs-string">"True"</span>
-         },
-         <span class="hljs-attr">"level"</span>:{  
-            <span class="hljs-attr">"level"</span>:<span class="hljs-string">"3"</span>
-         }
-      }
-   }
-</code></pre>
 <h4><a class="anchor" aria-hidden="true" id="usage-example-1"></a><a href="#usage-example-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Usage Example</h4>
 <pre><code class="hljs css language-javascript">overwolf.games.events.getInfo(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">info</span>) </span>{
    <span class="hljs-built_in">console</span>.log(info);
@@ -323,7 +277,7 @@ overwolf.games.events.setRequiredFeatures(g_interestedInFeatures, <span class="h
   <span class="hljs-attr">"events"</span>: [
     {
       <span class="hljs-attr">"name"</span>: <span class="hljs-string">"death"</span>,
-      <span class="hljs-attr">"data"</span>: <span class="hljs-string">"{"</span>count<span class="hljs-string">": "</span><span class="hljs-number">2</span><span class="hljs-string">"}"</span>
+      <span class="hljs-attr">"data"</span>: <span class="hljs-string">"{`count`: `2`}"</span>
     }
   ]
 }
@@ -335,7 +289,79 @@ overwolf.games.events.setRequiredFeatures(g_interestedInFeatures, <span class="h
       </div>
       <div class="admonition-content">
     <p>Our best practice is removing event listeners and then adding the listener back to prevent accidental multiple listeners.</p>
-</div></div></span></div></article></div><div class="docLastUpdate"><em>Last updated on 2019-10-17 by Shoomanjin</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/api/overwolf-games"><span class="arrow-prev">← </span><span>overwolf.games</span></a><a class="docs-next button" href="/docs/api/overwolf-games-inputTracking"><span class="function-name-prevnext">overwolf.games.inputTracking</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#general">General</a></li><li><a href="#methods-reference">Methods Reference</a></li><li><a href="#events-reference">Events Reference</a></li><li><a href="#sample-app">Sample App</a></li><li><a href="#features-overview">Features Overview</a></li><li><a href="#feature-types">Feature types</a></li><li><a href="#how-to-register-to-features">How to register to features</a><ul class="toc-headings"><li><a href="#1-update-your-manifest-file">1. Update your manifest file</a></li><li><a href="#2-listen-to-the-relevant-js-object">2. Listen to the relevant JS object</a></li><li><a href="#3-call-setrequiredfeatures">3. Call setRequiredFeatures()</a></li><li><a href="#4-call-getinfo">4. Call getInfo()</a></li></ul></li><li><a href="#setrequiredfeaturesfeatures-callback">setRequiredFeatures(features, callback)</a></li><li><a href="#getinfocallback">getInfo(callback)</a></li><li><a href="#onerror">onError</a></li><li><a href="#oninfoupdates2">onInfoUpdates2</a></li><li><a href="#onnewevents">onNewEvents</a></li></ul></nav></div><footer class="site-footer"><div class="container"><ul><li>Legal</li><li><a href="/docs/topics/legal-overview">Terms overview</a></li><li><a href="/docs/topics/legal-developers-terms">Developer&#x27;s terms</a></li><li><a href="/docs/topics/legal-app-terms">App terms</a></li><li><a href="http://www.overwolf.com/legal/" target="_blank">Overwolf terms</a></li><li><a href="http://www.overwolf.com/legal/#Privacy-policy" target="_blank">Overwolf Privacy policy</a></li></ul><ul><li>Support</li><li><a href=" https://discuss.developers.overwolf.com/" target="_blank">Questions and Answers</a></li><li><a href="https://discordapp.com/invite/cjjrZDp" target="_blank">Discord</a></li><li><a href="/docs/support/contact-us#join-our-slack">Slack</a></li><li><a href="https://www.facebook.com/OverwolfDevs" target="_blank">Facebook</a></li><li><a href="https://twitter.com/OverwolfDevs" target="_blank">Twitter</a></li></ul><ul><li>Documentation</li><li><a href="/docs/api/changelog">Changelog</a></li><li><a href="/docs/api/overwolf-api-overview">API</a></li><li><a href="/docs/start/app-creation-process">App Creation Process</a></li><li><a href="/docs/topics/best-practices-overview">Best Practices</a></li><li><a href="/docs/status/all">Game Events status</a></li></ul><ul><li>Information</li><li><a href="http://www.overwolf.com/careers/">Careers</a></li><li><a href="https://play.overwolf.com/fund/" target="_blank">Fund</a></li><li><a href="https://medium.com/overwolf-developers" target="_blank">Developers Blog</a></li><li><a href="https://www.overwolf.com/appstore" target="_blank">Overwolf Appstore</a></li><li><a href="https://brands.overwolf.com/" target="_blank">Advertise on Overwolf</a></li></ul></div></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+</div></div><h2><a class="anchor" aria-hidden="true" id="setrequiredfeaturesresult-object"></a><a href="#setrequiredfeaturesresult-object" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>SetRequiredFeaturesResult Object</h2>
+<table>
+<thead>
+<tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>success</td><td>boolean</td><td></td></tr>
+<tr><td>error</td><td>string</td><td>null if success is true</td></tr>
+<tr><td>supportedFeatures</td><td>string[]</td><td>all available features for the registered games declared in the manifest</td></tr>
+</tbody>
+</table>
+<h4><a class="anchor" aria-hidden="true" id="example-data-success"></a><a href="#example-data-success" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Example data: Success</h4>
+<pre><code class="hljs css language-json">{  
+   <span class="hljs-attr">"success"</span>:<span class="hljs-literal">true</span>,
+   <span class="hljs-attr">"supportedFeatures"</span>:[  
+      <span class="hljs-string">"summoner_info"</span>,
+      <span class="hljs-string">"teams"</span>,
+      <span class="hljs-string">"kill"</span>
+   ]
+}
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="getinforesult-object"></a><a href="#getinforesult-object" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>GetInfoResult Object</h2>
+<table>
+<thead>
+<tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>success</td><td>boolean</td><td></td></tr>
+<tr><td>error</td><td>string</td><td>null if success is true</td></tr>
+<tr><td>res</td><td>object</td><td>Provides the current game info</td></tr>
+</tbody>
+</table>
+<h4><a class="anchor" aria-hidden="true" id="example-data-success-1"></a><a href="#example-data-success-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Example data: Success</h4>
+<p>The current game's info, registered features, and all available info for the current game session.</p>
+<pre><code class="hljs css language-json">{  
+   <span class="hljs-attr">"success"</span>:<span class="hljs-literal">true</span>,
+   <span class="hljs-attr">"res"</span>:{  
+      <span class="hljs-attr">"summoner_info"</span>:{  
+         <span class="hljs-attr">"id"</span>:<span class="hljs-string">"79489298"</span>,
+         <span class="hljs-attr">"name"</span>:<span class="hljs-string">"itaygl"</span>,
+         <span class="hljs-attr">"region"</span>:<span class="hljs-string">"EUW"</span>,
+         <span class="hljs-attr">"champion"</span>:<span class="hljs-string">"Rengar"</span>
+      },
+      <span class="hljs-attr">"game_info"</span>:{  
+         <span class="hljs-attr">"match_started"</span>:<span class="hljs-string">"True"</span>,
+         <span class="hljs-attr">"matchStarted"</span>:<span class="hljs-string">"True"</span>,
+         <span class="hljs-attr">"teams"</span>:<span class="hljs-string">"%5B%7B%22team%22:%22100%22,%22champion%22:%22Rengar%22"</span>,
+         <span class="hljs-attr">"gameMode"</span>:<span class="hljs-string">"custom"</span>,
+         <span class="hljs-attr">"game_mode"</span>:<span class="hljs-string">"custom"</span>,
+         <span class="hljs-attr">"minionKills"</span>:<span class="hljs-string">"5"</span>,
+         <span class="hljs-attr">"minions_kills"</span>:<span class="hljs-string">"5"</span>,
+         <span class="hljs-attr">"gold"</span>:<span class="hljs-string">"1002"</span>
+      },
+      <span class="hljs-attr">"features"</span>:{  
+         <span class="hljs-attr">"kill"</span>:<span class="hljs-string">"True"</span>,
+         <span class="hljs-attr">"assist"</span>:<span class="hljs-string">"True"</span>,
+         <span class="hljs-attr">"minions"</span>:<span class="hljs-string">"True"</span>,
+         <span class="hljs-attr">"deathAndRespawn"</span>:<span class="hljs-string">"True"</span>,
+         <span class="hljs-attr">"death"</span>:<span class="hljs-string">"True"</span>,
+         <span class="hljs-attr">"minion"</span>:<span class="hljs-string">"True"</span>,
+         <span class="hljs-attr">"gold"</span>:<span class="hljs-string">"True"</span>,
+         <span class="hljs-attr">"level"</span>:<span class="hljs-string">"True"</span>,
+         <span class="hljs-attr">"abilities"</span>:<span class="hljs-string">"True"</span>,
+         <span class="hljs-attr">"gameMode"</span>:<span class="hljs-string">"True"</span>,
+         <span class="hljs-attr">"game_mode"</span>:<span class="hljs-string">"True"</span>
+      },
+      <span class="hljs-attr">"level"</span>:{  
+         <span class="hljs-attr">"level"</span>:<span class="hljs-string">"3"</span>
+      }
+   }
+}
+</code></pre>
+</span></div></article></div><div class="docLastUpdate"><em>Last updated on 2020-3-28 by eransharv</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/api/overwolf-games"><span class="arrow-prev">← </span><span>overwolf.games</span></a><a class="docs-next button" href="/docs/api/overwolf-games-inputTracking"><span class="function-name-prevnext">overwolf.games.inputTracking</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#general">General</a></li><li><a href="#methods-reference">Methods Reference</a></li><li><a href="#events-reference">Events Reference</a></li><li><a href="#types-reference">Types Reference</a></li><li><a href="#sample-app">Sample App</a></li><li><a href="#features-overview">Features Overview</a></li><li><a href="#feature-types">Feature types</a></li><li><a href="#how-to-register-to-features">How to register to features</a><ul class="toc-headings"><li><a href="#1-update-your-manifest-file">1. Update your manifest file</a></li><li><a href="#2-listen-to-the-relevant-js-object">2. Listen to the relevant JS object</a></li><li><a href="#3-call-setrequiredfeatures">3. Call setRequiredFeatures()</a></li><li><a href="#4-call-getinfo">4. Call getInfo()</a></li></ul></li><li><a href="#setrequiredfeaturesfeatures-callback">setRequiredFeatures(features, callback)</a></li><li><a href="#getinfocallback">getInfo(callback)</a></li><li><a href="#onerror">onError</a></li><li><a href="#oninfoupdates2">onInfoUpdates2</a></li><li><a href="#onnewevents">onNewEvents</a></li><li><a href="#setrequiredfeaturesresult-object">SetRequiredFeaturesResult Object</a></li><li><a href="#getinforesult-object">GetInfoResult Object</a></li></ul></nav></div><footer class="site-footer"><div class="container"><ul><li>Legal</li><li><a href="/docs/topics/legal-overview">Terms overview</a></li><li><a href="/docs/topics/legal-developers-terms">Developer&#x27;s terms</a></li><li><a href="/docs/topics/legal-app-terms">App terms</a></li><li><a href="http://www.overwolf.com/legal/" target="_blank">Overwolf terms</a></li><li><a href="http://www.overwolf.com/legal/#Privacy-policy" target="_blank">Overwolf Privacy policy</a></li></ul><ul><li>Support</li><li><a href=" https://discuss.developers.overwolf.com/" target="_blank">Questions and Answers</a></li><li><a href="https://discordapp.com/invite/cjjrZDp" target="_blank">Discord</a></li><li><a href="/docs/support/contact-us#join-our-slack">Slack</a></li><li><a href="https://www.facebook.com/OverwolfDevs" target="_blank">Facebook</a></li><li><a href="https://twitter.com/OverwolfDevs" target="_blank">Twitter</a></li></ul><ul><li>Documentation</li><li><a href="/docs/api/changelog">Changelog</a></li><li><a href="/docs/api/overwolf-api-overview">API</a></li><li><a href="/docs/start/app-creation-process">App Creation Process</a></li><li><a href="/docs/topics/best-practices-overview">Best Practices</a></li><li><a href="/docs/status/all">Game Events status</a></li></ul><ul><li>Information</li><li><a href="http://www.overwolf.com/careers/">Careers</a></li><li><a href="https://play.overwolf.com/fund/" target="_blank">Fund</a></li><li><a href="https://medium.com/overwolf-developers" target="_blank">Developers Blog</a></li><li><a href="https://www.overwolf.com/appstore" target="_blank">Overwolf Appstore</a></li><li><a href="https://brands.overwolf.com/" target="_blank">Advertise on Overwolf</a></li></ul></div></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
                 document.addEventListener('keyup', function(e) {
                   if (e.target !== document.body) {
                     return;

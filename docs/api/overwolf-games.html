@@ -85,8 +85,16 @@
 </ul>
 <h2><a class="anchor" aria-hidden="true" id="types-reference"></a><a href="#types-reference" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Types Reference</h2>
 <ul>
-<li><a href="#gameinfo-object">GameInfo</a></li>
-<li><a href="#gameinfochangedata-object">GameInfoChangeData</a></li>
+<li><a href="#gameinfo-object">overwolf.games.GameInfo</a> Object</li>
+<li><a href="#getrunninggameinforesult-object">overwolf.games.GetRunningGameInfoResult</a> Object</li>
+<li><a href="#getgameinforesult-object">overwolf.games.GetGameInfoResult</a> Object</li>
+<li><a href="#installedgameinfo-object">overwolf.games.InstalledGameInfo</a> Object</li>
+<li><a href="#getgamedbinforesult-object">overwolf.games.GetGameDBInfoResult</a> Object</li>
+<li><a href="#getrecentlyplayedresult-object">overwolf.games.GetRecentlyPlayedResult</a> Object</li>
+<li><a href="#runninggameinfo-object">overwolf.games.RunningGameInfo</a> Object</li>
+<li><a href="#gameinfoupdatedevent-object">overwolf.games.GameInfoUpdatedEvent</a> Object</li>
+<li><a href="#majorframeratechangeevent-object">overwolf.games.MajorFrameRateChangeEvent</a> Object</li>
+<li><a href="#GameRendererDetectedEvent">overwolf.games.GameRendererDetectedEvent</a> Object</li>
 </ul>
 <h2><a class="anchor" aria-hidden="true" id="getrunninggameinfocallback"></a><a href="#getrunninggameinfocallback" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>getRunningGameInfo(callback)</h2>
 <h4><a class="anchor" aria-hidden="true" id="version-added-078"></a><a href="#version-added-078" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Version added: 0.78</h4>
@@ -98,29 +106,9 @@
 <tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
 </thead>
 <tbody>
-<tr><td>callback</td><td>function</td><td>Called with the currently running <a href="#gameinfo-object">GameInfo</a></td></tr>
+<tr><td>callback</td><td><a href="#getrunninggameinforesult-object">(Result:GetRunningGameInfoResult)</a> =&gt; void</td><td>Returns info about the currently running game</td></tr>
 </tbody>
 </table>
-<h4><a class="anchor" aria-hidden="true" id="callback-argument-success"></a><a href="#callback-argument-success" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Callback argument: Success</h4>
-<pre><code class="hljs css language-json">{
-    "isInFocus": true,
-    "isRunning": true,
-    "allowsVideoCapture": true,
-    "title": "Counter-Strike: Global Offensive",
-    "id": 77641,
-    "width": 1920,
-    "height": 1080,
-    "logicalWidth": 1920,
-    "logicalHeight": 1080,
-    "renderers": [
-        "D3D9"
-    ],
-    "detectedRenderer": "D3D9",
-    "executionPath": "D://Steam/steamapp/scommon/Counter-Strike Global Offensive/csgo.exe",
-    "sessionId": "1a1b96a9d8bb439d8f21abc21faa1184",
-    "commandLine": "D://Steam/steamapps/common/Counter-Strike Global Offensive/csgo.exe" -steam -novid +mat_vignette_enable 0"
-}
-</code></pre>
 <h4><a class="anchor" aria-hidden="true" id="usage-example"></a><a href="#usage-example" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Usage Example</h4>
 <pre><code class="hljs css language-javascript">overwolf.games.getRunningGameInfo(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{<span class="hljs-built_in">console</span>.log(<span class="hljs-built_in">JSON</span>.stringify(<span class="hljs-built_in">arguments</span>))})
 </code></pre>
@@ -136,37 +124,9 @@
 </thead>
 <tbody>
 <tr><td>gameClassId</td><td>int</td><td>Class ID of the game</td></tr>
-<tr><td>callback</td><td>function</td><td>Returns info about the game</td></tr>
+<tr><td>callback</td><td><a href="#getgameinforesult-object">(Result:GetGameInfoResult)</a> =&gt; void</td><td>Returns info about the game</td></tr>
 </tbody>
 </table>
-<h4><a class="anchor" aria-hidden="true" id="callback-argument-success-1"></a><a href="#callback-argument-success-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Callback argument: Success</h4>
-<pre><code class="hljs css language-json">{
-    "status": "success",
-    "gameInfo": {
-        "GameInfoClassID": 7764,
-        "GameInfoID": 77641,
-        "ProcessPath": "D:SteamSteamAppscommonCounter-Strike Global Offensivecsgo.exe",
-        "LauncherPath": "D:Steamsteam.exe",
-        "LauncherCommandLineParams": "-applaunch 730",
-        "LastTimeVerified": "2016-04-25T06:56:18.180Z",
-        "ManuallyAdded": false,
-        "WasAutoAddedByProcessDetection": false,
-        "GameInfo": {
-            "ID": 77641,
-            "GameTitle": "Counter-Strike: Global Offensive",
-            "DisplayName": "CS: GO",
-            "ProcessNames": [
-                "SteamApps*Counter-Strike Global Offensivecsgo.exe"
-            ],
-            "LuancherNames": [
-                "steam.exe"
-            ],
-            "CommandLine": null,
-            ...
-        }
-    }
-}
-</code></pre>
 <h2><a class="anchor" aria-hidden="true" id="getgamedbinfogameclassidcallback"></a><a href="#getgamedbinfogameclassidcallback" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>getGameDBInfo(gameClassId,callback)</h2>
 <h4><a class="anchor" aria-hidden="true" id="version-added-0112"></a><a href="#version-added-0112" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Version added: 0.112</h4>
 <blockquote>
@@ -181,7 +141,7 @@
     <p>This method is similar to <a href="#getgameinfogameclassid-callback">getGameInfo()</a> except that it can return two different results:</p>
 <ul>
 <li>If the game is detected as installed, then the <code>installedGameInfo</code> member of the result will be set and the <code>gameInfo</code> member will be null.</li>
-<li>If the game is NOT detected as installed, then the returned JSON status will be <code>error</code>.</li>
+<li>If the game is NOT detected as installed, then the returned JSON status will be <code>success:false</code>.</li>
 </ul>
 </div></div><table>
 <thead>
@@ -189,55 +149,9 @@
 </thead>
 <tbody>
 <tr><td>gameClassId</td><td>int</td><td>The class ID of the game</td></tr>
-<tr><td>callback</td><td>function</td><td>Called with the info about the game</td></tr>
+<tr><td>callback</td><td><a href="#getgamedbinforesult-object">(Result:GetGameDBInfoResult)</a> =&gt; void</td><td>Returns info about the game</td></tr>
 </tbody>
 </table>
-<h4><a class="anchor" aria-hidden="true" id="callback-argument-success-2"></a><a href="#callback-argument-success-2" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Callback argument: Success</h4>
-<pre><code class="hljs css language-json">{  
-   "status":"success",
-   "gameInfo":null,
-   "installedGameInfo":{  
-      "GameInfoClassID":10906,
-      "GameInfoID":109062,
-      "ProcessPath":"E:/Steam Games/steamapps/common/PUBG/TslGame/Binaries/Win64/TslGame.exe",
-      "LauncherPath":"c:/program files (x86)/steam/Steam.exe",
-      "LauncherCommandLineParams":"-applaunch 578080",
-      "LastTimeVerified":"2018-03-14T12:02:06.686Z",
-      "ManuallyAdded":false,
-      "WasAutoAddedByProcessDetection":true,
-      "GameInfo":{  
-         "ID":109062,
-         "NativeID":10906,
-         "Type":0,
-         "LauncherGameClassId":0,
-         "GameTitle":"PLAYERUNKNOWN'S BATTLEGROUNDS",
-         "ShortTitle":null,
-         "DisplayName":"PUBG",
-         "ProcessNames":[  
-            "TslGame.exe"
-         ],
-         "LauncherNames":[  
-            "Steam.exe"
-         ],
-         "CommandLine":null,
-         "GameRenderers":82,
-         "ActualDetectedRenderers":0,
-         "FirstGameResolutionHeight":null,
-         "FirstGameResolutionWidth":null,
-         "GameGenres":"Action_Survival-Horror",
-         "InjectionDecision":1,
-         "SupportedScheme":null,
-         "UnsupportedScheme":"5/1",
-         "LauncherDirectoryRegistryKey":"HKEY_LOCAL_MACHINESOFTWAREValveSteamInstallPath",
-         "LaunchParams":"-applaunch 578080",
-         ...
-      }
-   }
-}
-</code></pre>
-<h4><a class="anchor" aria-hidden="true" id="callback-argument-failure"></a><a href="#callback-argument-failure" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Callback argument: Failure</h4>
-<pre><code class="hljs css language-json">{<span class="hljs-attr">"status"</span>:<span class="hljs-string">"error"</span>,<span class="hljs-attr">"reason"</span>:<span class="hljs-string">"game not found"</span>}
-</code></pre>
 <h2><a class="anchor" aria-hidden="true" id="getrecentlyplayedgamesmaxnumofgames-callback"></a><a href="#getrecentlyplayedgamesmaxnumofgames-callback" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>getRecentlyPlayedGames(maxNumOfGames, callback)</h2>
 <h4><a class="anchor" aria-hidden="true" id="version-added-0122"></a><a href="#version-added-0122" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Version added: 0.122</h4>
 <blockquote>
@@ -249,12 +163,548 @@
 </thead>
 <tbody>
 <tr><td>maxNumOfGames</td><td>int</td><td>Maximum number of games to receive. Currently we support a maximum of 3 games</td></tr>
-<tr><td>callback</td><td>function</td><td>Called with the array of game IDs</td></tr>
+<tr><td>callback</td><td><a href="#getrecentlyplayedresult-object">(Result:GetRecentlyPlayedResult)</a> =&gt; void</td><td>an array of the most recently played game IDs</td></tr>
 </tbody>
 </table>
-<h4><a class="anchor" aria-hidden="true" id="callback-argument-success-3"></a><a href="#callback-argument-success-3" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Callback argument: Success</h4>
+<h2><a class="anchor" aria-hidden="true" id="ongameinfoupdated"></a><a href="#ongameinfoupdated" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>onGameInfoUpdated</h2>
+<blockquote>
+<p>Fired when game info is updated, including game name, game running, game terminated, game changing focus, etc.<br>
+with the following structure: <a href="#gameinfoupdatedevent-object">GameInfoUpdatedEvent</a> Object.</p>
+</blockquote>
+<h2><a class="anchor" aria-hidden="true" id="ongamelaunched"></a><a href="#ongamelaunched" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>onGameLaunched</h2>
+<blockquote>
+<p>Fired when a game is launched, with the following structure: <a href="#runninggameinfo-object">RunningGameInfo</a> object.</p>
+</blockquote>
+<h2><a class="anchor" aria-hidden="true" id="onmajorframeratechange"></a><a href="#onmajorframeratechange" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>onMajorFrameRateChange</h2>
+<blockquote>
+<p>Fired when the rendering frame-rate of the currently injected game changes dramatically, with the following structure: <a href="#majorframeratechangeevent-object">MajorFrameRateChangeEvent</a> object.</p>
+</blockquote>
+<h2><a class="anchor" aria-hidden="true" id="ongamerendererdetected"></a><a href="#ongamerendererdetected" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>onGameRendererDetected</h2>
+<blockquote>
+<p>Fired when the rendering method of the game has been detected, with the following structure: <a href="#gamerendererdetectedevent-object">GameRendererDetectedEvent</a> object.</p>
+</blockquote>
+<h2><a class="anchor" aria-hidden="true" id="gameinfo-object"></a><a href="#gameinfo-object" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>GameInfo object</h2>
+<h4><a class="anchor" aria-hidden="true" id="version-added-078-1"></a><a href="#version-added-078-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Version added: 0.78</h4>
+<p>Contains information about a game.</p>
+<table>
+<thead>
+<tr><th>Name</th><th>Type</th><th>Description</th><th>Since</th></tr>
+</thead>
+<tbody>
+<tr><td>ActualDetectedRenderers</td><td>number</td><td></td><td>0.78</td></tr>
+<tr><td>ActualGameRendererAllowsVideoCapture</td><td>boolean</td><td></td><td>0.78</td></tr>
+<tr><td>AllowCCMix</td><td>boolean</td><td></td><td>0.78</td></tr>
+<tr><td>AllowCursorMix</td><td>boolean</td><td></td><td>0.78</td></tr>
+<tr><td>AllowRIMix</td><td>boolean</td><td></td><td>0.78</td></tr>
+<tr><td>Client_GameControlMode</td><td>number</td><td></td><td>0.78</td></tr>
+<tr><td>CommandLine</td><td>string</td><td></td><td>0.78</td></tr>
+<tr><td>ControlModes</td><td>number</td><td></td><td>0.78</td></tr>
+<tr><td>CursorMode</td><td>number</td><td></td><td>0.78</td></tr>
+<tr><td>DIT</td><td>number</td><td></td><td>0.78</td></tr>
+<tr><td>DetectDirKey</td><td>string</td><td></td><td>0.78</td></tr>
+<tr><td>DetectDirKeys</td><td>string[]</td><td></td><td>0.78</td></tr>
+<tr><td>DisableActionMixed</td><td>boolean</td><td></td><td>0.78</td></tr>
+<tr><td>DisableActivityInfo</td><td>boolean</td><td></td><td>0.78</td></tr>
+<tr><td>DisableAeroOnDX11</td><td>boolean</td><td></td><td>0.78</td></tr>
+<tr><td>DisableBlockChain</td><td>boolean</td><td></td><td>0.78</td></tr>
+<tr><td>DisableD3d9Ex</td><td>boolean</td><td></td><td>0.78</td></tr>
+<tr><td>DisableDIAquire</td><td>boolean</td><td></td><td>0.78</td></tr>
+<tr><td>DisableEXHandle</td><td>boolean</td><td></td><td>0.78</td></tr>
+<tr><td>DisableEternalEnum</td><td>boolean</td><td></td><td>0.78</td></tr>
+<tr><td>DisableExclusiveModeUI</td><td>boolean</td><td></td><td>0.78</td></tr>
+<tr><td>DisableFeature_TS3</td><td>boolean</td><td></td><td>0.78</td></tr>
+<tr><td>DisableFeature_VideoCapture</td><td>boolean</td><td></td><td>0.78</td></tr>
+<tr><td>DisableMultipleInjections</td><td>boolean</td><td></td><td>0.78</td></tr>
+<tr><td>DisableOWGestures</td><td>boolean</td><td></td><td>0.78</td></tr>
+<tr><td>DisableRenderAI</td><td>boolean</td><td></td><td>0.78</td></tr>
+<tr><td>DisableResizeRelease</td><td>boolean</td><td></td><td>0.78</td></tr>
+<tr><td>DisableSmartMixMode</td><td>boolean</td><td></td><td>0.78</td></tr>
+<tr><td>DisplayName</td><td>string</td><td></td><td>0.78</td></tr>
+<tr><td>EnableClockGesture</td><td>boolean</td><td></td><td>0.78</td></tr>
+<tr><td>EnableFocusOnAnyClick</td><td>boolean</td><td></td><td>0.78</td></tr>
+<tr><td>EnableMTCursor</td><td>boolean</td><td></td><td>0.78</td></tr>
+<tr><td>EnableRawInput</td><td>boolean</td><td></td><td>0.78</td></tr>
+<tr><td>EnableSmartDIFocus</td><td>boolean</td><td></td><td>0.78</td></tr>
+<tr><td>EnableSmartDIFocus2</td><td>boolean</td><td></td><td>0.78</td></tr>
+<tr><td>EnableSmartFocus</td><td>boolean</td><td></td><td>0.78</td></tr>
+<tr><td>EnableTXR</td><td>boolean</td><td></td><td>0.78</td></tr>
+<tr><td>ExecutedMoreThan</td><td>boolean</td><td></td><td>0.78</td></tr>
+<tr><td>FIGVTH</td><td>boolean</td><td></td><td>0.78</td></tr>
+<tr><td>FPSIndicationThreshold</td><td>number</td><td></td><td>0.78</td></tr>
+<tr><td>FirstGameResolutionHeight</td><td>number</td><td></td><td>0.78</td></tr>
+<tr><td>FirstGameResolutionWidth</td><td>number</td><td></td><td>0.78</td></tr>
+<tr><td>FixActionFocus</td><td>boolean</td><td></td><td>0.78</td></tr>
+<tr><td>FixCC</td><td>boolean</td><td></td><td>0.78</td></tr>
+<tr><td>FixCOEx</td><td>boolean</td><td></td><td>0.78</td></tr>
+<tr><td>FixCVCursor</td><td>boolean</td><td></td><td>0.78</td></tr>
+<tr><td>FixCursorOffset</td><td>boolean</td><td></td><td>0.78</td></tr>
+<tr><td>FixDIBlock</td><td>boolean</td><td></td><td>0.78</td></tr>
+<tr><td>FixDIFocus</td><td>boolean</td><td></td><td>0.78</td></tr>
+<tr><td>FixDXThreadSafe</td><td>boolean</td><td></td><td>0.78</td></tr>
+<tr><td>FixFSTB</td><td>boolean</td><td></td><td>0.78</td></tr>
+<tr><td>FixHotkeyRI</td><td>boolean</td><td></td><td>0.78</td></tr>
+<tr><td>FixInputBlock</td><td>boolean</td><td></td><td>0.78</td></tr>
+<tr><td>FixInvisibleCursorCR</td><td>boolean</td><td></td><td>0.78</td></tr>
+<tr><td>FixMixModeCursor</td><td>boolean</td><td></td><td>0.78</td></tr>
+<tr><td>FixModifierMixMode</td><td>boolean</td><td></td><td>0.78</td></tr>
+<tr><td>FixMouseDIExclusive</td><td>boolean</td><td></td><td>0.78</td></tr>
+<tr><td>FixRCEx</td><td>boolean</td><td></td><td>0.78</td></tr>
+<tr><td>FixResolutionChange</td><td>boolean</td><td></td><td>0.78</td></tr>
+<tr><td>FixRestoreSWL</td><td>boolean</td><td></td><td>0.78</td></tr>
+<tr><td>FixSWL</td><td>boolean</td><td></td><td>0.78</td></tr>
+<tr><td>FixSWLW</td><td>boolean</td><td></td><td>0.78</td></tr>
+<tr><td>ForceCaptureChangeRehook</td><td>boolean</td><td></td><td>0.78</td></tr>
+<tr><td>ForceControlRehook</td><td>boolean</td><td></td><td>0.78</td></tr>
+<tr><td>ForceGBB</td><td>boolean</td><td></td><td>0.78</td></tr>
+<tr><td>GameGenres</td><td>string</td><td></td><td>0.78</td></tr>
+<tr><td>GameLinkURL</td><td>string</td><td></td><td>0.78</td></tr>
+<tr><td>GameNotes</td><td>string</td><td></td><td>0.78</td></tr>
+<tr><td>GameRenderers</td><td>number</td><td></td><td>0.78</td></tr>
+<tr><td>GameTitle</td><td>string</td><td></td><td>0.78</td></tr>
+<tr><td>GenericProcessName</td><td>boolean</td><td></td><td>0.78</td></tr>
+<tr><td>GroupTitle</td><td>string</td><td></td><td>0.78</td></tr>
+<tr><td>ID</td><td>number</td><td></td><td>0.78</td></tr>
+<tr><td>IconFile</td><td>string</td><td></td><td>0.78</td></tr>
+<tr><td>IgnoreMultipleDevices</td><td>boolean</td><td></td><td>0.78</td></tr>
+<tr><td>IgnoreRelease</td><td>boolean</td><td></td><td>0.78</td></tr>
+<tr><td>ImGuiRendering</td><td>boolean</td><td></td><td>0.78</td></tr>
+<tr><td>InjectionDecision</td><td>number</td><td></td><td>0.78</td></tr>
+<tr><td>Input</td><td>number</td><td></td><td>0.78</td></tr>
+<tr><td>InstallHint</td><td>string</td><td></td><td>0.78</td></tr>
+<tr><td>IsConflictingWithControlHotkey</td><td>boolean</td><td></td><td>0.78</td></tr>
+<tr><td>IsNew</td><td>boolean</td><td></td><td>0.78</td></tr>
+<tr><td>IsSteamGame</td><td>boolean</td><td></td><td>0.78</td></tr>
+<tr><td>KeepInGameOnLostFocus</td><td>boolean</td><td></td><td>0.78</td></tr>
+<tr><td>Label</td><td>string</td><td></td><td>0.78</td></tr>
+<tr><td>LastInjectionDecision</td><td>number</td><td></td><td>0.78</td></tr>
+<tr><td>LastKnownExecutionPath</td><td>string</td><td></td><td>0.78</td></tr>
+<tr><td>LaunchParams</td><td>string</td><td></td><td>0.78</td></tr>
+<tr><td>Launchable</td><td>boolean</td><td></td><td>0.78</td></tr>
+<tr><td>LauncherDirectoryRegistryKey</td><td>string</td><td></td><td>0.78</td></tr>
+<tr><td>LauncherDirectoryRegistryKeys</td><td>string[]</td><td></td><td>0.78</td></tr>
+<tr><td>LauncherGameClassId</td><td>number</td><td></td><td>0.78</td></tr>
+<tr><td>LauncherNames</td><td>string[]</td><td></td><td>0.78</td></tr>
+<tr><td>ModifierStatus</td><td>number</td><td></td><td>0.78</td></tr>
+<tr><td>NativeID</td><td>number</td><td></td><td>0.78</td></tr>
+<tr><td>PassThruBoundsOffsetPixel</td><td>number</td><td></td><td>0.78</td></tr>
+<tr><td>PressToClickThrough</td><td>number</td><td></td><td>0.78</td></tr>
+<tr><td>ProcessCommandLine</td><td>string</td><td></td><td>0.78</td></tr>
+<tr><td>ProcessID</td><td>number</td><td></td><td>0.78</td></tr>
+<tr><td>ProcessNames</td><td>string[]</td><td></td><td>0.78</td></tr>
+<tr><td>RecreateSB</td><td>boolean</td><td></td><td>0.78</td></tr>
+<tr><td>ReleaseKBInOverlayFocus</td><td>boolean</td><td></td><td>0.78</td></tr>
+<tr><td>ResizeNotifyResolution</td><td>boolean</td><td></td><td>0.78</td></tr>
+<tr><td>RestoreBB</td><td>boolean</td><td></td><td>0.78</td></tr>
+<tr><td>RestoreRT</td><td>boolean</td><td></td><td>0.78</td></tr>
+<tr><td>RunElevated</td><td>boolean</td><td></td><td>0.78</td></tr>
+<tr><td>SendHotkeyRI</td><td>boolean</td><td></td><td>0.78</td></tr>
+<tr><td>SetDIInExclusive</td><td>boolean</td><td></td><td>0.78</td></tr>
+<tr><td>ShortTitle</td><td>string</td><td></td><td>0.78</td></tr>
+<tr><td>SkipGameProc</td><td>boolean</td><td></td><td>0.78</td></tr>
+<tr><td>SmartReleaseKBInOverlayFocus</td><td>boolean</td><td></td><td>0.78</td></tr>
+<tr><td>StableFPSThreshold</td><td>number</td><td></td><td>0.78</td></tr>
+<tr><td>StuckInTrans_Margin</td><td>number</td><td></td><td>0.78</td></tr>
+<tr><td>StuckInTrans_MouseMoveGap</td><td>number</td><td></td><td>0.78</td></tr>
+<tr><td>SupportedScheme</td><td>string</td><td></td><td>0.78</td></tr>
+<tr><td>SupportedVersion</td><td>string</td><td></td><td>0.78</td></tr>
+<tr><td>TCModes</td><td>number</td><td></td><td>0.78</td></tr>
+<tr><td>TerminateOnWindowClose</td><td>boolean</td><td>v</td></tr>
+<tr><td>Type</td><td>number</td><td></td><td>0.78</td></tr>
+<tr><td>TypeString</td><td>string</td><td></td><td>0.78</td></tr>
+<tr><td>UnsupportedScheme</td><td>string</td><td></td><td>0.78</td></tr>
+<tr><td>UpdateCursor</td><td>boolean</td><td></td><td>0.78</td></tr>
+<tr><td>UpdateCursorMT</td><td>boolean</td><td></td><td>0.78</td></tr>
+<tr><td>UseAllSafeHook</td><td>boolean</td><td></td><td>0.78</td></tr>
+<tr><td>UseEH</td><td>string</td><td></td><td>0.78</td></tr>
+<tr><td>UseHardwareDevice</td><td>boolean</td><td></td><td>0.78</td></tr>
+<tr><td>UseLauncherIcon</td><td>boolean</td><td></td><td>0.78</td></tr>
+<tr><td>UseLongHook</td><td>boolean</td><td></td><td>0.78</td></tr>
+<tr><td>UseMCH</td><td>string</td><td></td><td>0.78</td></tr>
+<tr><td>UseMH</td><td>boolean</td><td></td><td>0.78</td></tr>
+<tr><td>UseMHScheme</td><td>string</td><td></td><td>0.78</td></tr>
+<tr><td>UseMKLL</td><td>boolean</td><td></td><td>0.78</td></tr>
+<tr><td>UseMW</td><td>boolean</td><td></td><td>0.78</td></tr>
+<tr><td>UsePR</td><td>boolean</td><td></td><td>0.78</td></tr>
+<tr><td>UseRI</td><td>boolean</td><td></td><td>0.78</td></tr>
+<tr><td>UseRIB</td><td>boolean</td><td></td><td>0.78</td></tr>
+<tr><td>UseSafeHook</td><td>boolean</td><td></td><td>0.78</td></tr>
+<tr><td>UseTSHook</td><td>boolean</td><td></td><td>0.78</td></tr>
+<tr><td>WaitRestore</td><td>boolean</td><td></td><td>0.78</td></tr>
+<tr><td>Win7Support</td><td>number</td><td></td><td>0.78</td></tr>
+<tr><td>Win8Support</td><td>number</td><td></td><td>0.78</td></tr>
+<tr><td>Win10Support</td><td>number</td><td></td><td>0.78</td></tr>
+<tr><td>XPSupport</td><td>number</td><td></td><td>0.78</td></tr>
+</tbody>
+</table>
+<h4><a class="anchor" aria-hidden="true" id="example-data"></a><a href="#example-data" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Example data</h4>
+<pre><code class="hljs css language-json">{
+    <span class="hljs-attr">"ID"</span>:<span class="hljs-number">11361</span>,
+    <span class="hljs-attr">"NativeID"</span>:<span class="hljs-number">1136</span>,
+    <span class="hljs-attr">"Type"</span>:<span class="hljs-number">0</span>,
+    <span class="hljs-attr">"TypeString"</span>:<span class="hljs-string">"Game"</span>,
+    <span class="hljs-attr">"LauncherGameClassId"</span>:<span class="hljs-number">0</span>,
+    <span class="hljs-attr">"GameTitle"</span>:<span class="hljs-string">"Guild Wars"</span>,
+    <span class="hljs-attr">"ShortTitle"</span>:<span class="hljs-literal">null</span>,
+    <span class="hljs-attr">"UseLauncherIcon"</span>:<span class="hljs-literal">false</span>,
+    <span class="hljs-attr">"DisplayName"</span>:<span class="hljs-literal">null</span>,
+    <span class="hljs-attr">"ProcessNames"</span>:[
+    <span class="hljs-string">"Gw.exe"</span>
+    ],
+    <span class="hljs-attr">"LauncherNames"</span>:[
+    <span class="hljs-string">"Gw.exe"</span>
+    ],
+    <span class="hljs-attr">"CommandLine"</span>:<span class="hljs-string">"Guild Wars"</span>,
+    <span class="hljs-attr">"GameRenderers"</span>:<span class="hljs-number">2</span>,
+    <span class="hljs-attr">"ActualDetectedRenderers"</span>:<span class="hljs-number">0</span>,
+    <span class="hljs-attr">"FirstGameResolutionHeight"</span>:<span class="hljs-literal">null</span>,
+    <span class="hljs-attr">"FirstGameResolutionWidth"</span>:<span class="hljs-literal">null</span>,
+    <span class="hljs-attr">"GameGenres"</span>:<span class="hljs-string">"Role-Playing_Real-Time-Battle-RPG"</span>,
+    <span class="hljs-attr">"InjectionDecision"</span>:<span class="hljs-number">1</span>,
+    <span class="hljs-attr">"SupportedScheme"</span>:<span class="hljs-literal">null</span>,
+    <span class="hljs-attr">"UnsupportedScheme"</span>:<span class="hljs-literal">null</span>,
+    <span class="hljs-attr">"LauncherDirectoryRegistryKey"</span>:<span class="hljs-string">"HKEY_CURRENT_USER\\Software\\ArenaNet\\Guild Wars\\Path"</span>,
+    <span class="hljs-attr">"LauncherDirectoryRegistryKeys"</span>:<span class="hljs-literal">null</span>,
+    <span class="hljs-attr">"LaunchParams"</span>:<span class="hljs-literal">null</span>,
+    <span class="hljs-attr">"RunElevated"</span>:<span class="hljs-literal">false</span>,
+    <span class="hljs-attr">"GenericProcessName"</span>:<span class="hljs-literal">false</span>,
+    <span class="hljs-attr">"Launchable"</span>:<span class="hljs-literal">true</span>,
+    <span class="hljs-attr">"IconFile"</span>:<span class="hljs-literal">null</span>,
+    <span class="hljs-attr">"GameLinkURL"</span>:<span class="hljs-literal">null</span>,
+    <span class="hljs-attr">"FixCursorOffset"</span>:<span class="hljs-literal">false</span>,
+    <span class="hljs-attr">"FixResolutionChange"</span>:<span class="hljs-literal">true</span>,
+    <span class="hljs-attr">"FixDIBlock"</span>:<span class="hljs-literal">false</span>,
+    <span class="hljs-attr">"FixDIFocus"</span>:<span class="hljs-literal">false</span>,
+    <span class="hljs-attr">"FixSWL"</span>:<span class="hljs-literal">false</span>,
+    <span class="hljs-attr">"UseSafeHook"</span>:<span class="hljs-literal">false</span>,
+    <span class="hljs-attr">"UseAllSafeHook"</span>:<span class="hljs-literal">false</span>,
+    <span class="hljs-attr">"UseLongHook"</span>:<span class="hljs-literal">true</span>,
+    <span class="hljs-attr">"FixInputBlock"</span>:<span class="hljs-literal">false</span>,
+    <span class="hljs-attr">"IgnoreRelease"</span>:<span class="hljs-literal">false</span>,
+    <span class="hljs-attr">"ReleaseKBInOverlayFocus"</span>:<span class="hljs-literal">false</span>,
+    <span class="hljs-attr">"SmartReleaseKBInOverlayFocus"</span>:<span class="hljs-literal">false</span>,
+    <span class="hljs-attr">"UseTSHook"</span>:<span class="hljs-literal">false</span>,
+    <span class="hljs-attr">"TerminateOnWindowClose"</span>:<span class="hljs-literal">false</span>,
+    <span class="hljs-attr">"AllowCursorMix"</span>:<span class="hljs-literal">false</span>,
+    <span class="hljs-attr">"FixMixModeCursor"</span>:<span class="hljs-literal">false</span>,
+    <span class="hljs-attr">"SetDIInExclusive"</span>:<span class="hljs-literal">false</span>,
+    <span class="hljs-attr">"FixMouseDIExclusive"</span>:<span class="hljs-literal">false</span>,
+    <span class="hljs-attr">"DisableActionMixed"</span>:<span class="hljs-literal">false</span>,
+    <span class="hljs-attr">"DisableResizeRelease"</span>:<span class="hljs-literal">false</span>,
+    <span class="hljs-attr">"DisableEternalEnum"</span>:<span class="hljs-literal">false</span>,
+    <span class="hljs-attr">"ForceCaptureChangeRehook"</span>:<span class="hljs-literal">false</span>,
+    <span class="hljs-attr">"ForceControlRehook"</span>:<span class="hljs-literal">false</span>,
+    <span class="hljs-attr">"FixActionFocus"</span>:<span class="hljs-literal">false</span>,
+    <span class="hljs-attr">"RestoreRT"</span>:<span class="hljs-literal">false</span>,
+    <span class="hljs-attr">"ForceGBB"</span>:<span class="hljs-literal">false</span>,
+    <span class="hljs-attr">"EnableSmartFocus"</span>:<span class="hljs-literal">false</span>,
+    <span class="hljs-attr">"EnableSmartDIFocus"</span>:<span class="hljs-literal">false</span>,
+    <span class="hljs-attr">"DisableFeature_VideoCapture"</span>:<span class="hljs-literal">false</span>,
+    <span class="hljs-attr">"DisableFeature_TS3"</span>:<span class="hljs-literal">false</span>,
+    <span class="hljs-attr">"FixSWLW"</span>:<span class="hljs-literal">false</span>,
+    <span class="hljs-attr">"EnableFocusOnAnyClick"</span>:<span class="hljs-literal">false</span>,
+    <span class="hljs-attr">"EnableMTCursor"</span>:<span class="hljs-literal">false</span>,
+    <span class="hljs-attr">"Input"</span>:<span class="hljs-number">0</span>,
+    <span class="hljs-attr">"ControlModes"</span>:<span class="hljs-number">0</span>,
+    <span class="hljs-attr">"CursorMode"</span>:<span class="hljs-number">0</span>,
+    <span class="hljs-attr">"XPSupport"</span>:<span class="hljs-number">0</span>,
+    <span class="hljs-attr">"Win7Support"</span>:<span class="hljs-number">0</span>,
+    <span class="hljs-attr">"Win8Support"</span>:<span class="hljs-number">0</span>,
+    <span class="hljs-attr">"Win10Support"</span>:<span class="hljs-number">0</span>,
+    <span class="hljs-attr">"DisableVideoCapture"</span>:<span class="hljs-number">0</span>,
+    <span class="hljs-attr">"InstallHint"</span>:<span class="hljs-literal">null</span>,
+    <span class="hljs-attr">"DetectDirKey"</span>:<span class="hljs-string">"HKEY_CURRENT_USER\\Software\\ArenaNet\\Guild Wars\\Path"</span>,
+    <span class="hljs-attr">"DetectDirKeys"</span>:<span class="hljs-literal">null</span>,
+    <span class="hljs-attr">"PressToClickThrough"</span>:<span class="hljs-number">0</span>,
+    <span class="hljs-attr">"StuckInTrans_MouseMoveGap"</span>:<span class="hljs-literal">null</span>,
+    <span class="hljs-attr">"StuckInTrans_Margin"</span>:<span class="hljs-number">0</span>,
+    <span class="hljs-attr">"GroupTitle"</span>:<span class="hljs-literal">null</span>,
+    <span class="hljs-attr">"GameNotes"</span>:<span class="hljs-literal">null</span>,
+    <span class="hljs-attr">"Client_GameControlMode"</span>:<span class="hljs-number">2</span>,
+    <span class="hljs-attr">"SupportedVersion"</span>:<span class="hljs-literal">null</span>,
+    <span class="hljs-attr">"DisableAeroOnDX11"</span>:<span class="hljs-literal">false</span>,
+    <span class="hljs-attr">"FixCC"</span>:<span class="hljs-literal">false</span>,
+    <span class="hljs-attr">"EnableRawInput"</span>:<span class="hljs-literal">false</span>,
+    <span class="hljs-attr">"IsConflictingWithControlHotkey"</span>:<span class="hljs-literal">false</span>,
+    <span class="hljs-attr">"EnableClockGesture"</span>:<span class="hljs-literal">false</span>,
+    <span class="hljs-attr">"DisableOWGestures"</span>:<span class="hljs-literal">false</span>,
+    <span class="hljs-attr">"UpdateCursor"</span>:<span class="hljs-literal">false</span>,
+    <span class="hljs-attr">"UpdateCursorMT"</span>:<span class="hljs-literal">false</span>,
+    <span class="hljs-attr">"DisableDIAquire"</span>:<span class="hljs-literal">false</span>,
+    <span class="hljs-attr">"EnableSmartDIFocus2"</span>:<span class="hljs-literal">false</span>,
+    <span class="hljs-attr">"ResizeNotifyResolution"</span>:<span class="hljs-literal">false</span>,
+    <span class="hljs-attr">"DisableD3d9Ex"</span>:<span class="hljs-literal">false</span>,
+    <span class="hljs-attr">"UseRI"</span>:<span class="hljs-literal">false</span>,
+    <span class="hljs-attr">"UseRIB"</span>:<span class="hljs-literal">false</span>,
+    <span class="hljs-attr">"AllowRIMix"</span>:<span class="hljs-literal">false</span>,
+    <span class="hljs-attr">"RestoreBB"</span>:<span class="hljs-literal">false</span>,
+    <span class="hljs-attr">"RecreateSB"</span>:<span class="hljs-literal">false</span>,
+    <span class="hljs-attr">"FixFSTB"</span>:<span class="hljs-literal">false</span>,
+    <span class="hljs-attr">"FixCOEx"</span>:<span class="hljs-literal">false</span>,
+    <span class="hljs-attr">"FixRCEx"</span>:<span class="hljs-literal">false</span>,
+    <span class="hljs-attr">"DisableBlockChain"</span>:<span class="hljs-literal">false</span>,
+    <span class="hljs-attr">"UseMH"</span>:<span class="hljs-literal">false</span>,
+    <span class="hljs-attr">"UseMHScheme"</span>:<span class="hljs-literal">null</span>,
+    <span class="hljs-attr">"UseMCH"</span>:<span class="hljs-string">"6;10"</span>,
+    <span class="hljs-attr">"UseEH"</span>:<span class="hljs-literal">null</span>,
+    <span class="hljs-attr">"AllowCCMix"</span>:<span class="hljs-literal">false</span>,
+    <span class="hljs-attr">"UseMKLL"</span>:<span class="hljs-literal">false</span>,
+    <span class="hljs-attr">"UseNewKLL"</span>:<span class="hljs-literal">false</span>,
+    <span class="hljs-attr">"UseNewMLLForExclusive"</span>:<span class="hljs-literal">false</span>,
+    <span class="hljs-attr">"UseMW"</span>:<span class="hljs-literal">false</span>,
+    <span class="hljs-attr">"UsePR"</span>:<span class="hljs-literal">false</span>,
+    <span class="hljs-attr">"WaitRestore"</span>:<span class="hljs-literal">false</span>,
+    <span class="hljs-attr">"KeepInGameOnLostFocus"</span>:<span class="hljs-literal">false</span>,
+    <span class="hljs-attr">"DisableRenderAI"</span>:<span class="hljs-literal">false</span>,
+    <span class="hljs-attr">"DisableSmartMixMode"</span>:<span class="hljs-literal">false</span>,
+    <span class="hljs-attr">"ImGuiRendering"</span>:<span class="hljs-literal">false</span>,
+    <span class="hljs-attr">"DIT"</span>:<span class="hljs-number">0</span>,
+    <span class="hljs-attr">"IgnoreMultipleDevices"</span>:<span class="hljs-literal">false</span>,
+    <span class="hljs-attr">"TCModes"</span>:<span class="hljs-number">0</span>,
+    <span class="hljs-attr">"FixHotkeyRI"</span>:<span class="hljs-literal">true</span>,
+    <span class="hljs-attr">"SendHotkeyRI"</span>:<span class="hljs-literal">false</span>,
+    <span class="hljs-attr">"FixRestoreSWL"</span>:<span class="hljs-literal">false</span>,
+    <span class="hljs-attr">"FIGVTH"</span>:<span class="hljs-literal">false</span>,
+    <span class="hljs-attr">"UseHardwareDevice"</span>:<span class="hljs-literal">false</span>,
+    <span class="hljs-attr">"FixCVCursor"</span>:<span class="hljs-literal">false</span>,
+    <span class="hljs-attr">"EnableTXR"</span>:<span class="hljs-literal">true</span>,
+    <span class="hljs-attr">"PassThruBoundsOffsetPixel"</span>:<span class="hljs-number">0</span>,
+    <span class="hljs-attr">"FixModifierMixMode"</span>:<span class="hljs-literal">false</span>,
+    <span class="hljs-attr">"DisableEXHandle"</span>:<span class="hljs-literal">false</span>,
+    <span class="hljs-attr">"FixDXThreadSafe"</span>:<span class="hljs-literal">false</span>,
+    <span class="hljs-attr">"FixInvisibleCursorCR"</span>:<span class="hljs-literal">false</span>,
+    <span class="hljs-attr">"SkipGameProc"</span>:<span class="hljs-literal">false</span>,
+    <span class="hljs-attr">"Label"</span>:<span class="hljs-string">"Guild Wars"</span>,
+    <span class="hljs-attr">"DisableActivityInfo"</span>:<span class="hljs-literal">false</span>,
+    <span class="hljs-attr">"ModifierStatus"</span>:<span class="hljs-number">0</span>,
+    <span class="hljs-attr">"DisableExclusiveModeUI"</span>:<span class="hljs-literal">false</span>,
+    <span class="hljs-attr">"ProcessCommandLine"</span>:<span class="hljs-string">"\"D:/Games/Guild Wars/Gw.exe\""</span>,
+    <span class="hljs-attr">"ProcessID"</span>:<span class="hljs-number">10684</span>,
+    <span class="hljs-attr">"StableFPSThreshold"</span>:<span class="hljs-number">10</span>,
+    <span class="hljs-attr">"FPSIndicationThreshold"</span>:<span class="hljs-number">3</span>,
+    <span class="hljs-attr">"DisableMultipleInjections"</span>:<span class="hljs-literal">false</span>,
+    <span class="hljs-attr">"IsNew"</span>:<span class="hljs-literal">true</span>,
+    <span class="hljs-attr">"ExecutedMoreThan"</span>:<span class="hljs-literal">true</span>,
+    <span class="hljs-attr">"LastKnownExecutionPath"</span>:<span class="hljs-string">"D:/Games/Guild Wars/Gw.exe"</span>,
+    <span class="hljs-attr">"LastInjectionDecision"</span>:<span class="hljs-number">1</span>,
+    <span class="hljs-attr">"IsSteamGame"</span>:<span class="hljs-literal">false</span>
+}
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="runninggameinfo-object"></a><a href="#runninggameinfo-object" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>RunningGameInfo Object</h2>
+<table>
+<thead>
+<tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>isInFocus</td><td>bool</td><td>Returns whether the game is currently in focus</td></tr>
+<tr><td>isRunning</td><td>bool</td><td>Returns whether the game is currently running</td></tr>
+<tr><td>allowsVideoCapture</td><td>bool</td><td>Returns whether the game allows video to be captured</td></tr>
+<tr><td>title</td><td>string</td><td>Returns the title of the game</td></tr>
+<tr><td>id</td><td>int</td><td>Returns the game ID concatenated with the Instance ID of the game. Divide it by 10 to get the game ID</td></tr>
+<tr><td>width</td><td>int</td><td>Returns the pixel width of the game window</td></tr>
+<tr><td>height</td><td>int</td><td>Returns the pixel height of the game window</td></tr>
+<tr><td>logicalWidth</td><td>int</td><td>Returns the game-reported (logical) pixel width of the game window</td></tr>
+<tr><td>logicalHeight</td><td>int</td><td>Returns the game-reported (logical) pixel height of the game window</td></tr>
+<tr><td>renderers</td><td>string[]</td><td>Returns an array of the rendering technology names supported by the running game</td></tr>
+<tr><td>detectedRenderer</td><td>string</td><td>Returns the rendering technology detected by the running game</td></tr>
+<tr><td>commandLine</td><td>string</td><td>Returns the game process commandline</td></tr>
+<tr><td>monitorHandle</td><td>object</td><td>Returns the current monitor handle</td></tr>
+<tr><td>windowHandle</td><td>object</td><td>Returns the current app window handle</td></tr>
+</tbody>
+</table>
+<h4><a class="anchor" aria-hidden="true" id="data-example"></a><a href="#data-example" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Data example</h4>
+<pre><code class="hljs css language-json">{
+    <span class="hljs-attr">"success"</span>:<span class="hljs-literal">true</span>,
+    <span class="hljs-attr">"isInFocus"</span>:<span class="hljs-literal">false</span>,
+    <span class="hljs-attr">"isRunning"</span>:<span class="hljs-literal">true</span>,
+    <span class="hljs-attr">"allowsVideoCapture"</span>:<span class="hljs-literal">true</span>,
+    <span class="hljs-attr">"title"</span>:<span class="hljs-string">"Guild Wars"</span>,
+    <span class="hljs-attr">"displayName"</span>:<span class="hljs-string">""</span>,
+    <span class="hljs-attr">"shortTitle"</span>:<span class="hljs-string">""</span>,
+    <span class="hljs-attr">"id"</span>:<span class="hljs-number">11361</span>,
+    <span class="hljs-attr">"classId"</span>:<span class="hljs-number">1136</span>,
+    <span class="hljs-attr">"width"</span>:<span class="hljs-number">1920</span>,
+    <span class="hljs-attr">"height"</span>:<span class="hljs-number">1080</span>,
+    <span class="hljs-attr">"logicalWidth"</span>:<span class="hljs-number">1920</span>,
+    <span class="hljs-attr">"logicalHeight"</span>:<span class="hljs-number">1080</span>,
+    <span class="hljs-attr">"renderers"</span>:[
+        <span class="hljs-string">"D3D9"</span>
+    ],
+    <span class="hljs-attr">"detectedRenderer"</span>:<span class="hljs-string">"Unknown"</span>,
+    <span class="hljs-attr">"executionPath"</span>:<span class="hljs-string">"D:/Games/Guild Wars/Gw.exe"</span>,
+    <span class="hljs-attr">"sessionId"</span>:<span class="hljs-string">"3ced63b755724fd4ab1d3d2a210aa764"</span>,
+    <span class="hljs-attr">"commandLine"</span>:<span class="hljs-string">"\"D:/Games/Guild Wars/Gw.exe\""</span>,
+    <span class="hljs-attr">"type"</span>:<span class="hljs-number">0</span>,
+    <span class="hljs-attr">"typeAsString"</span>:<span class="hljs-string">"Game"</span>,
+    <span class="hljs-attr">"windowHandle"</span>:{
+        <span class="hljs-attr">"value"</span>:<span class="hljs-number">0</span>
+    },
+    <span class="hljs-attr">"monitorHandle"</span>:{
+        <span class="hljs-attr">"value"</span>:<span class="hljs-number">0</span>
+    }
+}
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="installedgameinfo-object"></a><a href="#installedgameinfo-object" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>InstalledGameInfo Object</h2>
+<table>
+<thead>
+<tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>GameInfoClassID</td><td>number</td><td></td></tr>
+<tr><td>GameInfoID</td><td>number</td><td></td></tr>
+<tr><td>LastTimeVerified</td><td>Date</td><td></td></tr>
+<tr><td>LauncherCommandLineParams</td><td>string</td><td></td></tr>
+<tr><td>LauncherPath</td><td>string</td><td></td></tr>
+<tr><td>ManuallyAdded</td><td>boolean</td><td></td></tr>
+<tr><td>ProcessPath</td><td>string</td><td></td></tr>
+<tr><td>WasAutoAddedByProcessDetection</td><td>boolean</td><td></td></tr>
+<tr><td>GameInfo</td><td><a href="#gameinfo-object">GameInfo</a> object</td><td></td></tr>
+</tbody>
+</table>
+<h4><a class="anchor" aria-hidden="true" id="example-data-1"></a><a href="#example-data-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Example data</h4>
+<pre><code class="hljs css language-json">{
+    "GameInfoClassID":1136,
+    "GameInfoID":11361,
+    "ProcessPath":null,
+    "LauncherPath":"D:/Games/Guild Wars/Gw.exe",
+    "LauncherCommandLineParams":null,
+    "LastTimeVerified":"2020-03-28T19:47:44.828Z",
+    "ManuallyAdded":false,
+    "WasAutoAddedByProcessDetection":true,
+    "GameInfo":{ ... }
+}
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="getrunninggameinforesult-object"></a><a href="#getrunninggameinforesult-object" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>GetRunningGameInfoResult Object</h2>
+<table>
+<thead>
+<tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>success</td><td>boolean</td><td></td></tr>
+<tr><td>error</td><td>string</td><td>null if success is true</td></tr>
+<tr><td>isInFocus</td><td>bool</td><td>Returns whether the game is currently in focus</td></tr>
+<tr><td>isRunning</td><td>bool</td><td>Returns whether the game is currently running</td></tr>
+<tr><td>allowsVideoCapture</td><td>bool</td><td>Returns whether the game allows video to be captured</td></tr>
+<tr><td>title</td><td>string</td><td>Returns the title of the game</td></tr>
+<tr><td>id</td><td>int</td><td>Returns the game ID concatenated with the Instance ID of the game. Divide it by 10 to get the game ID</td></tr>
+<tr><td>width</td><td>int</td><td>Returns the pixel width of the game window</td></tr>
+<tr><td>height</td><td>int</td><td>Returns the pixel height of the game window</td></tr>
+<tr><td>logicalWidth</td><td>int</td><td>Returns the game-reported (logical) pixel width of the game window</td></tr>
+<tr><td>logicalHeight</td><td>int</td><td>Returns the game-reported (logical) pixel height of the game window</td></tr>
+<tr><td>renderers</td><td>string[]</td><td>Returns an array of the rendering technology names supported by the running game</td></tr>
+<tr><td>detectedRenderer</td><td>string</td><td>Returns the rendering technology detected by the running game</td></tr>
+<tr><td>commandLine</td><td>string</td><td>Returns the game process commandline</td></tr>
+<tr><td>monitorHandle</td><td>object</td><td>Returns the current monitor handle</td></tr>
+<tr><td>windowHandle</td><td>object</td><td>Returns the current app window handle</td></tr>
+</tbody>
+</table>
+<h4><a class="anchor" aria-hidden="true" id="example-data-success"></a><a href="#example-data-success" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Example data: Success</h4>
+<pre><code class="hljs css language-json">{
+    <span class="hljs-attr">"success"</span>:<span class="hljs-literal">true</span>,
+    <span class="hljs-attr">"isInFocus"</span>:<span class="hljs-literal">false</span>,
+    <span class="hljs-attr">"isRunning"</span>:<span class="hljs-literal">true</span>,
+    <span class="hljs-attr">"allowsVideoCapture"</span>:<span class="hljs-literal">true</span>,
+    <span class="hljs-attr">"title"</span>:<span class="hljs-string">"Guild Wars"</span>,
+    <span class="hljs-attr">"displayName"</span>:<span class="hljs-string">""</span>,
+    <span class="hljs-attr">"shortTitle"</span>:<span class="hljs-string">""</span>,
+    <span class="hljs-attr">"id"</span>:<span class="hljs-number">11361</span>,
+    <span class="hljs-attr">"classId"</span>:<span class="hljs-number">1136</span>,
+    <span class="hljs-attr">"width"</span>:<span class="hljs-number">1920</span>,
+    <span class="hljs-attr">"height"</span>:<span class="hljs-number">1080</span>,
+    <span class="hljs-attr">"logicalWidth"</span>:<span class="hljs-number">1920</span>,
+    <span class="hljs-attr">"logicalHeight"</span>:<span class="hljs-number">1080</span>,
+    <span class="hljs-attr">"renderers"</span>:[
+        <span class="hljs-string">"D3D9"</span>
+    ],
+    <span class="hljs-attr">"detectedRenderer"</span>:<span class="hljs-string">"Unknown"</span>,
+    <span class="hljs-attr">"executionPath"</span>:<span class="hljs-string">"D:/Games/Guild Wars/Gw.exe"</span>,
+    <span class="hljs-attr">"sessionId"</span>:<span class="hljs-string">"3ced63b755724fd4ab1d3d2a210aa764"</span>,
+    <span class="hljs-attr">"commandLine"</span>:<span class="hljs-string">"\"D:/Games/Guild Wars/Gw.exe\""</span>,
+    <span class="hljs-attr">"type"</span>:<span class="hljs-number">0</span>,
+    <span class="hljs-attr">"typeAsString"</span>:<span class="hljs-string">"Game"</span>,
+    <span class="hljs-attr">"windowHandle"</span>:{
+        <span class="hljs-attr">"value"</span>:<span class="hljs-number">0</span>
+    },
+    <span class="hljs-attr">"monitorHandle"</span>:{
+        <span class="hljs-attr">"value"</span>:<span class="hljs-number">0</span>
+    }
+}
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="getgameinforesult-object"></a><a href="#getgameinforesult-object" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>GetGameInfoResult Object</h2>
+<table>
+<thead>
+<tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>success</td><td>boolean</td><td></td></tr>
+<tr><td>error</td><td>string</td><td>null if success is true</td></tr>
+<tr><td>gameInfo</td><td><a href="#installedgameinfo-object">InstalledGameInfo</a> object</td><td>Provides the installed game info</td></tr>
+</tbody>
+</table>
+<h4><a class="anchor" aria-hidden="true" id="example-data-success-1"></a><a href="#example-data-success-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Example data: Success</h4>
+<pre><code class="hljs css language-json">{
+   "success":true,
+   "gameInfo":{ //InstalledGameInfo object
+      "GameInfoClassID":1136,
+      "GameInfoID":11361,
+      "ProcessPath":null,
+      "LauncherPath":"D:/Games/Guild Wars/Gw.exe",
+      "LauncherCommandLineParams":null,
+      "LastTimeVerified":"2020-03-28T19:47:44.828Z",
+      "ManuallyAdded":false,
+      "WasAutoAddedByProcessDetection":true,
+      "GameInfo":{ ... }  // GameInfo object
+   }
+}
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="getgamedbinforesult-object"></a><a href="#getgamedbinforesult-object" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>GetGameDBInfoResult Object</h2>
+<table>
+<thead>
+<tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>success</td><td>boolean</td><td></td></tr>
+<tr><td>error</td><td>string</td><td>null if success is true</td></tr>
+<tr><td>installedGameInfo</td><td><a href="#installedgameinfo-object">InstalledGameInfo</a> object</td><td>Provides the installed game info</td></tr>
+</tbody>
+</table>
+<h4><a class="anchor" aria-hidden="true" id="example-data-success-2"></a><a href="#example-data-success-2" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Example data: Success</h4>
+<pre><code class="hljs css language-json">{
+   "success":true,
+   "gameInfo":null, //null means that the game is installed on this machine
+   "installedGameInfo":{    //InstalledGameInfo object
+      "GameInfoClassID":1136,
+      "GameInfoID":11361,
+      "ProcessPath":null,
+      "LauncherPath":"D:/Games/Guild Wars/Gw.exe",
+      "LauncherCommandLineParams":null,
+      "LastTimeVerified":"2020-03-28T19:47:44.828Z",
+      "ManuallyAdded":false,
+      "WasAutoAddedByProcessDetection":true,
+      "GameInfo":{ ... } // GameInfo object
+   }
+}
+</code></pre>
+<h4><a class="anchor" aria-hidden="true" id="example-data-failure"></a><a href="#example-data-failure" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Example data: Failure</h4>
+<pre><code class="hljs css language-json">{
+    <span class="hljs-attr">"success"</span>:<span class="hljs-literal">false</span>,
+    <span class="hljs-attr">"error"</span>:<span class="hljs-string">"game not found"</span>,
+    <span class="hljs-attr">"reason"</span>:<span class="hljs-string">"game not found"</span> <span class="hljs-comment">//for backward compatibility</span>
+}
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="getrecentlyplayedresult-object"></a><a href="#getrecentlyplayedresult-object" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>GetRecentlyPlayedResult Object</h2>
+<table>
+<thead>
+<tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>success</td><td>boolean</td><td></td></tr>
+<tr><td>error</td><td>string</td><td>null if success is true</td></tr>
+<tr><td>games</td><td>number[]</td><td>an array of the most recently played game IDs</td></tr>
+</tbody>
+</table>
+<h4><a class="anchor" aria-hidden="true" id="example-data-success-3"></a><a href="#example-data-success-3" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Example data: Success</h4>
 <pre><code class="hljs css language-json">{  
-   <span class="hljs-attr">"status"</span>:<span class="hljs-string">"success"</span>,
+   <span class="hljs-attr">"success"</span>:<span class="hljs-literal">true</span>,
    <span class="hljs-attr">"games"</span>:[  
       <span class="hljs-number">54261</span>,
       <span class="hljs-number">11361</span>,
@@ -262,13 +712,56 @@
    ]
 }
 </code></pre>
-<h2><a class="anchor" aria-hidden="true" id="ongameinfoupdated"></a><a href="#ongameinfoupdated" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>onGameInfoUpdated</h2>
-<blockquote>
-<p>Fired when game info is updated, including game name, game running, game terminated, game changing focus, etc. Passes a <a href="#gameinfochangedata-object">GameInfoChangeData</a> object.</p>
-</blockquote>
+<h2><a class="anchor" aria-hidden="true" id="majorframeratechangeevent-object"></a><a href="#majorframeratechangeevent-object" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>MajorFrameRateChangeEvent Object</h2>
+<h4><a class="anchor" aria-hidden="true" id="version-added-078-2"></a><a href="#version-added-078-2" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Version added: 0.78</h4>
+<table>
+<thead>
+<tr><th>Name</th><th>Type</th><th>Description</th><th>Since</th></tr>
+</thead>
+<tbody>
+<tr><td>fps_status</td><td>string</td><td>can be “None”, “Stable”, “Drop” and “Increase”</td><td></td></tr>
+<tr><td>fps</td><td>number</td><td>Indicates if there was a change in resolution (i.e. the width or height properties were changed)</td><td></td></tr>
+</tbody>
+</table>
 <h4><a class="anchor" aria-hidden="true" id="event-data-example"></a><a href="#event-data-example" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Event data example:</h4>
 <pre><code class="hljs css language-json">{
-    <span class="hljs-attr">"gameInfo"</span>: {
+    <span class="hljs-attr">"fps_status"</span>: <span class="hljs-string">"Increase"</span>, <span class="hljs-comment">// can be “None”, “Stable”, “Drop” and “Increase”.</span>
+    <span class="hljs-attr">"fps"</span>: <span class="hljs-number">35</span>
+}
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="gamerendererdetectedevent-object"></a><a href="#gamerendererdetectedevent-object" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>GameRendererDetectedEvent Object</h2>
+<h4><a class="anchor" aria-hidden="true" id="version-added-078-3"></a><a href="#version-added-078-3" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Version added: 0.78</h4>
+<table>
+<thead>
+<tr><th>Name</th><th>Type</th><th>Description</th><th>Since</th></tr>
+</thead>
+<tbody>
+<tr><td>detectedRenderer</td><td>string</td><td></td><td></td></tr>
+</tbody>
+</table>
+<h4><a class="anchor" aria-hidden="true" id="event-data-example-1"></a><a href="#event-data-example-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Event data example</h4>
+<pre><code class="hljs css language-json">{
+    <span class="hljs-attr">"detectedRenderer"</span>: <span class="hljs-string">"D3D9"</span>
+}
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="gameinfoupdatedevent-object"></a><a href="#gameinfoupdatedevent-object" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>GameInfoUpdatedEvent Object</h2>
+<h4><a class="anchor" aria-hidden="true" id="version-added-078-4"></a><a href="#version-added-078-4" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Version added: 0.78</h4>
+<p>An object containing the game info object in addition to a set of flags indicating the changes from the last time that data was updated.</p>
+<table>
+<thead>
+<tr><th>Name</th><th>Type</th><th>Description</th><th>Since</th></tr>
+</thead>
+<tbody>
+<tr><td>gameInfo</td><td><a href="#runninggameinfo-object">RunningGameInfo</a> object</td><td>The new game info data</td><td>0.78</td></tr>
+<tr><td>resolutionChanged</td><td>bool</td><td>Indicates if there was a change in resolution (i.e. the width or height properties were changed)</td><td>0.78</td></tr>
+<tr><td>focusChanged</td><td>bool</td><td>Indicates if there was a change in the game focus status</td><td>0.78</td></tr>
+<tr><td>runningChanged</td><td>bool</td><td>Indicates if there was a change in the game running status</td><td>0.78</td></tr>
+<tr><td>gameChanged</td><td>bool</td><td>Indicates if the gameInfo property represents a different game than before</td><td>0.78</td></tr>
+</tbody>
+</table>
+<h4><a class="anchor" aria-hidden="true" id="event-data-example-2"></a><a href="#event-data-example-2" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Event data example</h4>
+<pre><code class="hljs css language-json">{
+    <span class="hljs-attr">"gameInfo"</span>: {   <span class="hljs-comment">//RunningGameInfo object</span>
         <span class="hljs-attr">"isInFocus"</span>: <span class="hljs-literal">true</span>,
         <span class="hljs-attr">"isRunning"</span>: <span class="hljs-literal">true</span>,
         <span class="hljs-attr">"allowsVideoCapture"</span>: <span class="hljs-literal">true</span>,
@@ -293,115 +786,7 @@
     <span class="hljs-attr">"gameChanged"</span>: <span class="hljs-literal">false</span>
 }
 </code></pre>
-<h2><a class="anchor" aria-hidden="true" id="ongamelaunched"></a><a href="#ongamelaunched" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>onGameLaunched</h2>
-<blockquote>
-<p>Fired when a game is launched.</p>
-</blockquote>
-<h4><a class="anchor" aria-hidden="true" id="event-data-example-1"></a><a href="#event-data-example-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Event data example:</h4>
-<pre><code class="hljs css language-json">{
-    <span class="hljs-attr">"isInFocus"</span>: <span class="hljs-literal">false</span>,
-    <span class="hljs-attr">"isRunning"</span>: <span class="hljs-literal">true</span>,
-    <span class="hljs-attr">"allowsVideoCapture"</span>: <span class="hljs-literal">true</span>,
-    <span class="hljs-attr">"title"</span>: <span class="hljs-string">"Dota 2"</span>,
-    <span class="hljs-attr">"id"</span>: <span class="hljs-number">73143</span>,
-    <span class="hljs-attr">"width"</span>: <span class="hljs-number">1920</span>,
-    <span class="hljs-attr">"height"</span>: <span class="hljs-number">1080</span>,
-    <span class="hljs-attr">"logicalWidth"</span>: <span class="hljs-number">1920</span>,
-    <span class="hljs-attr">"logicalHeight"</span>: <span class="hljs-number">1080</span>,
-    <span class="hljs-attr">"renderers"</span>: [
-        <span class="hljs-string">"D3D9"</span>,
-        <span class="hljs-string">"D3D11"</span>
-    ],
-    <span class="hljs-attr">"detectedRenderer"</span>: <span class="hljs-string">"Unknown"</span>,
-    <span class="hljs-attr">"executionPath"</span>: <span class="hljs-string">"D:/Steam/steamapps/common/dota2/game/bin/win64/dota2.exe"</span>,
-    <span class="hljs-attr">"sessionId"</span>: <span class="hljs-string">"9b163a0c0ca74d2c8f01f85d4fade07f"</span>,
-    <span class="hljs-attr">"commandLine"</span>: <span class="hljs-string">"D:/Steam/steamapps/common/dota2/game/bin/win64/dota2.exe -steam"</span>
-}
-</code></pre>
-<h2><a class="anchor" aria-hidden="true" id="onmajorframeratechange"></a><a href="#onmajorframeratechange" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>onMajorFrameRateChange</h2>
-<blockquote>
-<p>Fired when the rendering frame-rate of the currently injected game changes dramatically.</p>
-</blockquote>
-<h4><a class="anchor" aria-hidden="true" id="event-data-example-2"></a><a href="#event-data-example-2" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Event data example:</h4>
-<pre><code class="hljs css language-json">{
-    <span class="hljs-attr">"fps_status"</span>: <span class="hljs-string">"Increase"</span>, <span class="hljs-comment">// can be “None”, “Stable”, “Drop” and “Increase”.</span>
-    <span class="hljs-attr">"fps"</span>: <span class="hljs-number">35</span>
-}
-</code></pre>
-<h2><a class="anchor" aria-hidden="true" id="ongamerendererdetected"></a><a href="#ongamerendererdetected" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>onGameRendererDetected</h2>
-<blockquote>
-<p>Fired when the rendering method of the game has been detected.</p>
-</blockquote>
-<h4><a class="anchor" aria-hidden="true" id="event-data-example-3"></a><a href="#event-data-example-3" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Event data example:</h4>
-<pre><code class="hljs css language-json">{
-    <span class="hljs-attr">"detectedRenderer"</span>: <span class="hljs-string">"D3D9"</span>
-}
-</code></pre>
-<h2><a class="anchor" aria-hidden="true" id="gameinfo-object"></a><a href="#gameinfo-object" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>GameInfo object</h2>
-<h4><a class="anchor" aria-hidden="true" id="version-added-078-1"></a><a href="#version-added-078-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Version added: 0.78</h4>
-<p>Contains information about a game.</p>
-<table>
-<thead>
-<tr><th>Name</th><th>Type</th><th>Description</th><th>Since</th></tr>
-</thead>
-<tbody>
-<tr><td>isInFocus</td><td>bool</td><td>Returns whether the game is currently in focus</td><td>0.78</td></tr>
-<tr><td>isRunning</td><td>bool</td><td>Returns whether the game is currently running</td><td>0.78</td></tr>
-<tr><td>allowsVideoCapture</td><td>bool</td><td>Returns whether the game allows video to be captured</td><td>0.78</td></tr>
-<tr><td>title</td><td>string</td><td>Returns the title of the game</td><td>0.78</td></tr>
-<tr><td>id</td><td>int</td><td>Returns the game ID concatenated with the Instance ID of the game. Divide it by 10 to get the game ID</td><td>0.78</td></tr>
-<tr><td>width</td><td>int</td><td>Returns the pixel width of the game window</td><td>0.78</td></tr>
-<tr><td>height</td><td>int</td><td>Returns the pixel height of the game window</td><td>0.78</td></tr>
-<tr><td>logicalWidth</td><td>int</td><td>Returns the game-reported (logical) pixel width of the game window</td><td>0.78</td></tr>
-<tr><td>logicalHeight</td><td>int</td><td>Returns the game-reported (logical) pixel height of the game window</td><td>0.78</td></tr>
-<tr><td>renderers</td><td>string[]</td><td>Returns an array of the rendering technology names supported by the running game</td><td>0.78</td></tr>
-<tr><td>detectedRenderer</td><td>string</td><td>Returns the rendering technology detected by the running game</td><td>0.78</td></tr>
-<tr><td>commandLine</td><td>string</td><td>Returns the game process commandline</td><td>0.78</td></tr>
-<tr><td>monitorHandle</td><td>object</td><td>Returns the current monitor handle</td><td>0.135</td></tr>
-<tr><td>windowHandle</td><td>object</td><td>Returns the current app window handle</td><td>0.135</td></tr>
-</tbody>
-</table>
-<h4><a class="anchor" aria-hidden="true" id="example-data"></a><a href="#example-data" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Example data</h4>
-<pre><code class="hljs css language-json">{ 
-   <span class="hljs-attr">"isInFocus"</span>:<span class="hljs-literal">false</span>,
-   <span class="hljs-attr">"isRunning"</span>:<span class="hljs-literal">true</span>,
-   <span class="hljs-attr">"allowsVideoCapture"</span>:<span class="hljs-literal">true</span>,
-   <span class="hljs-attr">"title"</span>:<span class="hljs-string">"Guild Wars"</span>,
-   <span class="hljs-attr">"displayName"</span>:<span class="hljs-string">""</span>,
-   <span class="hljs-attr">"shortTitle"</span>:<span class="hljs-string">""</span>,
-   <span class="hljs-attr">"id"</span>:<span class="hljs-number">11361</span>,
-   <span class="hljs-attr">"classId"</span>:<span class="hljs-number">1136</span>,
-   <span class="hljs-attr">"width"</span>:<span class="hljs-number">1920</span>,
-   <span class="hljs-attr">"height"</span>:<span class="hljs-number">1080</span>,
-   <span class="hljs-attr">"logicalWidth"</span>:<span class="hljs-number">1920</span>,
-   <span class="hljs-attr">"logicalHeight"</span>:<span class="hljs-number">1080</span>,
-   <span class="hljs-attr">"renderers"</span>:[<span class="hljs-string">"D3D9"</span>],
-   <span class="hljs-attr">"detectedRenderer"</span>:<span class="hljs-string">"D3D9"</span>,
-   <span class="hljs-attr">"executionPath"</span>:<span class="hljs-string">"D:/Games/Guild Wars/Gw.exe"</span>,
-   <span class="hljs-attr">"sessionId"</span>:<span class="hljs-string">"96879a3f7545472194ae86eb5a8fd64a"</span>,
-   <span class="hljs-attr">"commandLine"</span>:<span class="hljs-string">"\"D:/Games/Guild Wars/Gw.exe\""</span>,
-   <span class="hljs-attr">"type"</span>:<span class="hljs-number">0</span>,
-   <span class="hljs-attr">"typeAsString"</span>:<span class="hljs-string">"Game"</span>,
-   <span class="hljs-attr">"windowHandle"</span>:{<span class="hljs-attr">"value"</span>:<span class="hljs-number">592562</span>},
-   <span class="hljs-attr">"monitorHandle"</span>:{<span class="hljs-attr">"value"</span>:<span class="hljs-number">329731</span>}
-}
-</code></pre>
-<h2><a class="anchor" aria-hidden="true" id="gameinfochangedata-object"></a><a href="#gameinfochangedata-object" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>GameInfoChangeData object</h2>
-<h4><a class="anchor" aria-hidden="true" id="version-added-078-2"></a><a href="#version-added-078-2" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Version added: 0.78</h4>
-<p>An object containing the game info object in addition to a set of flags indicating the changes from the last time that data was updated.</p>
-<table>
-<thead>
-<tr><th>Name</th><th>Type</th><th>Description</th><th>Since</th></tr>
-</thead>
-<tbody>
-<tr><td>gameInfo</td><td><a href="#gameinfo-object">GameInfo</a> object</td><td>The new game info data</td><td>0.78</td></tr>
-<tr><td>resolutionChanged</td><td>bool</td><td>Indicates if there was a change in resolution (i.e. the width or height properties were changed)</td><td>0.78</td></tr>
-<tr><td>focusChanged</td><td>bool</td><td>Indicates if there was a change in the game focus status</td><td>0.78</td></tr>
-<tr><td>runningChanged</td><td>bool</td><td>Indicates if there was a change in the game running status</td><td>0.78</td></tr>
-<tr><td>gameChanged</td><td>bool</td><td>Indicates if the gameInfo property represents a different game than before</td><td>0.78</td></tr>
-</tbody>
-</table>
-</span></div></article></div><div class="docLastUpdate"><em>Last updated on 2019-12-2 by Sorikairox</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/api/overwolf-extensions-sharedData"><span class="arrow-prev">← </span><span class="function-name-prevnext">overwolf.extensions.sharedData</span></a><a class="docs-next button" href="/docs/api/overwolf-games-events"><span>overwolf.games.events</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#methods-reference">Methods Reference</a></li><li><a href="#events-reference">Events Reference</a></li><li><a href="#types-reference">Types Reference</a></li><li><a href="#getrunninggameinfocallback">getRunningGameInfo(callback)</a></li><li><a href="#getgameinfogameclassidcallback">getGameInfo(gameClassId,callback)</a></li><li><a href="#getgamedbinfogameclassidcallback">getGameDBInfo(gameClassId,callback)</a></li><li><a href="#getrecentlyplayedgamesmaxnumofgames-callback">getRecentlyPlayedGames(maxNumOfGames, callback)</a></li><li><a href="#ongameinfoupdated">onGameInfoUpdated</a></li><li><a href="#ongamelaunched">onGameLaunched</a></li><li><a href="#onmajorframeratechange">onMajorFrameRateChange</a></li><li><a href="#ongamerendererdetected">onGameRendererDetected</a></li><li><a href="#gameinfo-object">GameInfo object</a></li><li><a href="#gameinfochangedata-object">GameInfoChangeData object</a></li></ul></nav></div><footer class="site-footer"><div class="container"><ul><li>Legal</li><li><a href="/docs/topics/legal-overview">Terms overview</a></li><li><a href="/docs/topics/legal-developers-terms">Developer&#x27;s terms</a></li><li><a href="/docs/topics/legal-app-terms">App terms</a></li><li><a href="http://www.overwolf.com/legal/" target="_blank">Overwolf terms</a></li><li><a href="http://www.overwolf.com/legal/#Privacy-policy" target="_blank">Overwolf Privacy policy</a></li></ul><ul><li>Support</li><li><a href=" https://discuss.developers.overwolf.com/" target="_blank">Questions and Answers</a></li><li><a href="https://discordapp.com/invite/cjjrZDp" target="_blank">Discord</a></li><li><a href="/docs/support/contact-us#join-our-slack">Slack</a></li><li><a href="https://www.facebook.com/OverwolfDevs" target="_blank">Facebook</a></li><li><a href="https://twitter.com/OverwolfDevs" target="_blank">Twitter</a></li></ul><ul><li>Documentation</li><li><a href="/docs/api/changelog">Changelog</a></li><li><a href="/docs/api/overwolf-api-overview">API</a></li><li><a href="/docs/start/app-creation-process">App Creation Process</a></li><li><a href="/docs/topics/best-practices-overview">Best Practices</a></li><li><a href="/docs/status/all">Game Events status</a></li></ul><ul><li>Information</li><li><a href="http://www.overwolf.com/careers/">Careers</a></li><li><a href="https://play.overwolf.com/fund/" target="_blank">Fund</a></li><li><a href="https://medium.com/overwolf-developers" target="_blank">Developers Blog</a></li><li><a href="https://www.overwolf.com/appstore" target="_blank">Overwolf Appstore</a></li><li><a href="https://brands.overwolf.com/" target="_blank">Advertise on Overwolf</a></li></ul></div></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+</span></div></article></div><div class="docLastUpdate"><em>Last updated on 2020-3-28 by eransharv</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/api/overwolf-extensions-sharedData"><span class="arrow-prev">← </span><span class="function-name-prevnext">overwolf.extensions.sharedData</span></a><a class="docs-next button" href="/docs/api/overwolf-games-events"><span>overwolf.games.events</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#methods-reference">Methods Reference</a></li><li><a href="#events-reference">Events Reference</a></li><li><a href="#types-reference">Types Reference</a></li><li><a href="#getrunninggameinfocallback">getRunningGameInfo(callback)</a></li><li><a href="#getgameinfogameclassidcallback">getGameInfo(gameClassId,callback)</a></li><li><a href="#getgamedbinfogameclassidcallback">getGameDBInfo(gameClassId,callback)</a></li><li><a href="#getrecentlyplayedgamesmaxnumofgames-callback">getRecentlyPlayedGames(maxNumOfGames, callback)</a></li><li><a href="#ongameinfoupdated">onGameInfoUpdated</a></li><li><a href="#ongamelaunched">onGameLaunched</a></li><li><a href="#onmajorframeratechange">onMajorFrameRateChange</a></li><li><a href="#ongamerendererdetected">onGameRendererDetected</a></li><li><a href="#gameinfo-object">GameInfo object</a></li><li><a href="#runninggameinfo-object">RunningGameInfo Object</a></li><li><a href="#installedgameinfo-object">InstalledGameInfo Object</a></li><li><a href="#getrunninggameinforesult-object">GetRunningGameInfoResult Object</a></li><li><a href="#getgameinforesult-object">GetGameInfoResult Object</a></li><li><a href="#getgamedbinforesult-object">GetGameDBInfoResult Object</a></li><li><a href="#getrecentlyplayedresult-object">GetRecentlyPlayedResult Object</a></li><li><a href="#majorframeratechangeevent-object">MajorFrameRateChangeEvent Object</a></li><li><a href="#gamerendererdetectedevent-object">GameRendererDetectedEvent Object</a></li><li><a href="#gameinfoupdatedevent-object">GameInfoUpdatedEvent Object</a></li></ul></nav></div><footer class="site-footer"><div class="container"><ul><li>Legal</li><li><a href="/docs/topics/legal-overview">Terms overview</a></li><li><a href="/docs/topics/legal-developers-terms">Developer&#x27;s terms</a></li><li><a href="/docs/topics/legal-app-terms">App terms</a></li><li><a href="http://www.overwolf.com/legal/" target="_blank">Overwolf terms</a></li><li><a href="http://www.overwolf.com/legal/#Privacy-policy" target="_blank">Overwolf Privacy policy</a></li></ul><ul><li>Support</li><li><a href=" https://discuss.developers.overwolf.com/" target="_blank">Questions and Answers</a></li><li><a href="https://discordapp.com/invite/cjjrZDp" target="_blank">Discord</a></li><li><a href="/docs/support/contact-us#join-our-slack">Slack</a></li><li><a href="https://www.facebook.com/OverwolfDevs" target="_blank">Facebook</a></li><li><a href="https://twitter.com/OverwolfDevs" target="_blank">Twitter</a></li></ul><ul><li>Documentation</li><li><a href="/docs/api/changelog">Changelog</a></li><li><a href="/docs/api/overwolf-api-overview">API</a></li><li><a href="/docs/start/app-creation-process">App Creation Process</a></li><li><a href="/docs/topics/best-practices-overview">Best Practices</a></li><li><a href="/docs/status/all">Game Events status</a></li></ul><ul><li>Information</li><li><a href="http://www.overwolf.com/careers/">Careers</a></li><li><a href="https://play.overwolf.com/fund/" target="_blank">Fund</a></li><li><a href="https://medium.com/overwolf-developers" target="_blank">Developers Blog</a></li><li><a href="https://www.overwolf.com/appstore" target="_blank">Overwolf Appstore</a></li><li><a href="https://brands.overwolf.com/" target="_blank">Advertise on Overwolf</a></li></ul></div></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
                 document.addEventListener('keyup', function(e) {
                   if (e.target !== document.body) {
                     return;

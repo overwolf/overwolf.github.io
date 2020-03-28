@@ -82,6 +82,13 @@
 <li><a href="#onmouseup">overwolf.games.inputTracking.onMouseUp</a></li>
 <li><a href="#onmousedown">overwolf.games.inputTracking.onMouseDown</a></li>
 </ul>
+<h2><a class="anchor" aria-hidden="true" id="types-reference"></a><a href="#types-reference" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Types Reference</h2>
+<ul>
+<li><a href="#inputactivity-object">overwolf.games.inputTracking.InputActivity</a> Object</li>
+<li><a href="#mouseposition-object">overwolf.games.inputTracking.MousePosition</a> Object</li>
+<li><a href="#getactivityresult-object">overwolf.games.inputTracking.GetActivityResult</a> Object</li>
+<li><a href="#getmousepositionresult-object">overwolf.games.inputTracking.GetMousePositionResult</a> Object</li>
+</ul>
 <h2><a class="anchor" aria-hidden="true" id="getactivityinformationcallback"></a><a href="#getactivityinformationcallback" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>getActivityInformation(callback)</h2>
 <h4><a class="anchor" aria-hidden="true" id="version-added-092"></a><a href="#version-added-092" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Version added: 0.92</h4>
 <blockquote>
@@ -92,85 +99,28 @@
 <tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
 </thead>
 <tbody>
-<tr><td>callback</td><td>function</td><td>Callback with input activity information</td></tr>
+<tr><td>callback</td><td><a href="#getactivityresult-object">(Result:GetActivityResult)</a> =&gt; void</td><td>Callback with input activity information</td></tr>
 </tbody>
 </table>
-<h4><a class="anchor" aria-hidden="true" id="callback-argument-success"></a><a href="#callback-argument-success" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Callback argument: Success</h4>
 <p>The information includes key presses and clicks for keyboard/mouse, total session time, idle time and overall actions-per-minute. This information resets between game executions.</p>
-<pre><code class="hljs css language-json">{
-  <span class="hljs-attr">"status"</span>: <span class="hljs-string">"success"</span>,
-  <span class="hljs-attr">"activity"</span>: {
-    <span class="hljs-attr">"mouse"</span>: {
-      <span class="hljs-attr">"total"</span>: <span class="hljs-number">34</span>,
-      <span class="hljs-attr">"dist"</span>: <span class="hljs-number">18822</span>,
-      <span class="hljs-attr">"keys"</span>: {
-        <span class="hljs-attr">"M_Right"</span>: <span class="hljs-number">29</span>,
-        <span class="hljs-attr">"M_Left"</span>: <span class="hljs-number">5</span>
-      }
-    },
-    <span class="hljs-attr">"keyboard"</span>: {
-      <span class="hljs-attr">"total"</span>: <span class="hljs-number">0</span>,
-      <span class="hljs-attr">"keys"</span>: {}
-    },
-    <span class="hljs-attr">"aTime"</span>: <span class="hljs-number">2.86</span>,
-    <span class="hljs-attr">"iTime"</span>: <span class="hljs-number">4.63</span>,
-    <span class="hljs-attr">"apm"</span>: <span class="hljs-number">12</span>
-  }
-}
-</code></pre>
 <h2><a class="anchor" aria-hidden="true" id="getmatchactivityinformationcallback"></a><a href="#getmatchactivityinformationcallback" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>getMatchActivityInformation(callback)</h2>
 <h4><a class="anchor" aria-hidden="true" id="version-added-092-1"></a><a href="#version-added-092-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Version added: 0.92</h4>
 <blockquote>
 <p>Returns input activity information (similar to <a href="#getactivityinformationcallback">getActivityInformation()</a>), however, when this is supported, it will return data only for the latest match of the current game.</p>
 </blockquote>
-<p>In order to get the information:</p>
-<ul>
-<li>The latest match must have lasted for more than 5 minutes.</li>
-<li>The user must have clicked more than 30 times on either keyboard or mouse.</li>
-</ul>
 <table>
 <thead>
 <tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
 </thead>
 <tbody>
-<tr><td>callback</td><td>function</td><td>Callback with the activity information</td></tr>
+<tr><td>callback</td><td><a href="#getactivityresult-object">(Result:GetActivityResult)</a> =&gt; void</td><td>Callback with input activity information</td></tr>
 </tbody>
 </table>
-<h4><a class="anchor" aria-hidden="true" id="callback-argument-success-1"></a><a href="#callback-argument-success-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Callback argument: Success</h4>
-<pre><code class="hljs css language-json">{  
-   <span class="hljs-attr">"status"</span>:<span class="hljs-string">"success"</span>,
-   <span class="hljs-attr">"activity"</span>:{  
-      <span class="hljs-attr">"mouse"</span>:{  
-         <span class="hljs-attr">"total"</span>:<span class="hljs-number">424</span>,
-         <span class="hljs-attr">"dist"</span>:<span class="hljs-number">111176</span>,
-         <span class="hljs-attr">"keys"</span>:{  
-            <span class="hljs-attr">"M_Right"</span>:<span class="hljs-number">413</span>,
-            <span class="hljs-attr">"M_Left"</span>:<span class="hljs-number">11</span>
-         }
-      },
-      <span class="hljs-attr">"keyboard"</span>:{  
-         <span class="hljs-attr">"total"</span>:<span class="hljs-number">83</span>,
-         <span class="hljs-attr">"keys"</span>:{  
-            <span class="hljs-attr">"4"</span>:<span class="hljs-number">1</span>,
-            <span class="hljs-attr">"Q"</span>:<span class="hljs-number">20</span>,
-            <span class="hljs-attr">"W"</span>:<span class="hljs-number">20</span>,
-            <span class="hljs-attr">"E"</span>:<span class="hljs-number">19</span>,
-            <span class="hljs-attr">"R"</span>:<span class="hljs-number">10</span>,
-            <span class="hljs-attr">"SPACE"</span>:<span class="hljs-number">4</span>,
-            <span class="hljs-attr">"LCONTROL+TAB"</span>:<span class="hljs-number">2</span>,
-            <span class="hljs-attr">"TAB"</span>:<span class="hljs-number">2</span>,
-            <span class="hljs-attr">"ESCAPE"</span>:<span class="hljs-number">2</span>,
-            <span class="hljs-attr">"LMENU+F4"</span>:<span class="hljs-number">1</span>,
-            <span class="hljs-attr">"F"</span>:<span class="hljs-number">1</span>,
-            <span class="hljs-attr">"OEM_3"</span>:<span class="hljs-number">1</span>
-         }
-      },
-      <span class="hljs-attr">"aTime"</span>:<span class="hljs-number">4.36</span>,
-      <span class="hljs-attr">"iTime"</span>:<span class="hljs-number">1.31</span>,
-      <span class="hljs-attr">"apm"</span>:<span class="hljs-number">116</span>
-   }
-}
-</code></pre>
+<p>In order to get the information:</p>
+<ul>
+<li>The latest match must have lasted for more than 5 minutes.</li>
+<li>The user must have clicked more than 30 times on either keyboard or mouse.</li>
+</ul>
 <h2><a class="anchor" aria-hidden="true" id="getmousepositioncallback"></a><a href="#getmousepositioncallback" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>getMousePosition(callback)</h2>
 <h4><a class="anchor" aria-hidden="true" id="version-added-093"></a><a href="#version-added-093" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Version added: 0.93</h4>
 <blockquote>
@@ -182,22 +132,9 @@
 <tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
 </thead>
 <tbody>
-<tr><td>callback</td><td>function</td><td>Callback with the activity information</td></tr>
+<tr><td>callback</td><td><a href="#getmousepositionresult-object">(Result:GetMousePositionResult)</a> =&gt; void</td><td>Callback with input activity information</td></tr>
 </tbody>
 </table>
-<h4><a class="anchor" aria-hidden="true" id="callback-argument-success-2"></a><a href="#callback-argument-success-2" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Callback argument: Success</h4>
-<pre><code class="hljs css language-json">{
-    <span class="hljs-attr">"status"</span>: <span class="hljs-string">"success"</span>,
-    <span class="hljs-attr">"mousePosition"</span>: {
-        <span class="hljs-attr">"x"</span>: <span class="hljs-number">1741</span>,
-        <span class="hljs-attr">"y"</span>: <span class="hljs-number">656</span>,
-        <span class="hljs-attr">"onGame"</span>: <span class="hljs-literal">true</span>,
-        <span class="hljs-attr">"handle"</span>: {
-            <span class="hljs-attr">"value"</span>: <span class="hljs-number">526402</span>
-        }
-    }
-}
-</code></pre>
 <h2><a class="anchor" aria-hidden="true" id="onkeyup"></a><a href="#onkeyup" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>onKeyUp</h2>
 <h4><a class="anchor" aria-hidden="true" id="version-added-078"></a><a href="#version-added-078" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Version added: 0.78</h4>
 <blockquote>
@@ -265,7 +202,102 @@ For that, use the <a href="overwolf-settings-hotkeys">overwolf.settings.hotkeys<
     <span class="hljs-attr">"onGame"</span>: <span class="hljs-literal">true</span>
 }
 </code></pre>
-</span></div></article></div><div class="docLastUpdate"><em>Last updated on 2020-2-13 by eransharv</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/api/overwolf-games-events"><span class="arrow-prev">← </span><span>overwolf.games.events</span></a><a class="docs-next button" href="/docs/api/overwolf-games-launchers"><span>overwolf.games.launchers</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#methods-reference">Methods Reference</a></li><li><a href="#events-reference">Events Reference</a></li><li><a href="#getactivityinformationcallback">getActivityInformation(callback)</a></li><li><a href="#getmatchactivityinformationcallback">getMatchActivityInformation(callback)</a></li><li><a href="#getmousepositioncallback">getMousePosition(callback)</a></li><li><a href="#onkeyup">onKeyUp</a></li><li><a href="#onkeydown">onKeyDown</a></li><li><a href="#onmouseup">onMouseUp</a></li><li><a href="#onmousedown">onMouseDown</a></li></ul></nav></div><footer class="site-footer"><div class="container"><ul><li>Legal</li><li><a href="/docs/topics/legal-overview">Terms overview</a></li><li><a href="/docs/topics/legal-developers-terms">Developer&#x27;s terms</a></li><li><a href="/docs/topics/legal-app-terms">App terms</a></li><li><a href="http://www.overwolf.com/legal/" target="_blank">Overwolf terms</a></li><li><a href="http://www.overwolf.com/legal/#Privacy-policy" target="_blank">Overwolf Privacy policy</a></li></ul><ul><li>Support</li><li><a href=" https://discuss.developers.overwolf.com/" target="_blank">Questions and Answers</a></li><li><a href="https://discordapp.com/invite/cjjrZDp" target="_blank">Discord</a></li><li><a href="/docs/support/contact-us#join-our-slack">Slack</a></li><li><a href="https://www.facebook.com/OverwolfDevs" target="_blank">Facebook</a></li><li><a href="https://twitter.com/OverwolfDevs" target="_blank">Twitter</a></li></ul><ul><li>Documentation</li><li><a href="/docs/api/changelog">Changelog</a></li><li><a href="/docs/api/overwolf-api-overview">API</a></li><li><a href="/docs/start/app-creation-process">App Creation Process</a></li><li><a href="/docs/topics/best-practices-overview">Best Practices</a></li><li><a href="/docs/status/all">Game Events status</a></li></ul><ul><li>Information</li><li><a href="http://www.overwolf.com/careers/">Careers</a></li><li><a href="https://play.overwolf.com/fund/" target="_blank">Fund</a></li><li><a href="https://medium.com/overwolf-developers" target="_blank">Developers Blog</a></li><li><a href="https://www.overwolf.com/appstore" target="_blank">Overwolf Appstore</a></li><li><a href="https://brands.overwolf.com/" target="_blank">Advertise on Overwolf</a></li></ul></div></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+<h2><a class="anchor" aria-hidden="true" id="inputactivity-object"></a><a href="#inputactivity-object" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>InputActivity Object</h2>
+<table>
+<thead>
+<tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>aTime</td><td>number</td><td></td></tr>
+<tr><td>iTime</td><td>number</td><td></td></tr>
+<tr><td>apm</td><td>boolean</td><td></td></tr>
+<tr><td>mouse</td><td>object</td><td>{ total: number, dist: number, keys: any }</td></tr>
+<tr><td>keyboard</td><td>object</td><td>{ total: number, keys: any }</td></tr>
+</tbody>
+</table>
+<h2><a class="anchor" aria-hidden="true" id="mouseposition-object"></a><a href="#mouseposition-object" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>MousePosition Object</h2>
+<table>
+<thead>
+<tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>x</td><td>number</td><td></td></tr>
+<tr><td>y</td><td>number</td><td></td></tr>
+<tr><td>onGame</td><td>boolean</td><td></td></tr>
+<tr><td>handle</td><td>object</td><td>{ value: number }</td></tr>
+</tbody>
+</table>
+<h2><a class="anchor" aria-hidden="true" id="getactivityresult-object"></a><a href="#getactivityresult-object" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>GetActivityResult Object</h2>
+<table>
+<thead>
+<tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>success</td><td>boolean</td><td></td></tr>
+<tr><td>error</td><td>string</td><td>null if success is true</td></tr>
+<tr><td>activity</td><td><a href="#inputactivity-object">InputActivity</a> object</td><td>the input  activity information</td></tr>
+</tbody>
+</table>
+<h4><a class="anchor" aria-hidden="true" id="example-data-success"></a><a href="#example-data-success" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Example data: Success</h4>
+<pre><code class="hljs css language-json">{  
+   <span class="hljs-attr">"success"</span>:<span class="hljs-literal">true</span>,
+   <span class="hljs-attr">"activity"</span>:{  
+      <span class="hljs-attr">"mouse"</span>:{  
+         <span class="hljs-attr">"total"</span>:<span class="hljs-number">424</span>,
+         <span class="hljs-attr">"dist"</span>:<span class="hljs-number">111176</span>,
+         <span class="hljs-attr">"keys"</span>:{  
+            <span class="hljs-attr">"M_Right"</span>:<span class="hljs-number">413</span>,
+            <span class="hljs-attr">"M_Left"</span>:<span class="hljs-number">11</span>
+         }
+      },
+      <span class="hljs-attr">"keyboard"</span>:{  
+         <span class="hljs-attr">"total"</span>:<span class="hljs-number">83</span>,
+         <span class="hljs-attr">"keys"</span>:{  
+            <span class="hljs-attr">"4"</span>:<span class="hljs-number">1</span>,
+            <span class="hljs-attr">"Q"</span>:<span class="hljs-number">20</span>,
+            <span class="hljs-attr">"W"</span>:<span class="hljs-number">20</span>,
+            <span class="hljs-attr">"E"</span>:<span class="hljs-number">19</span>,
+            <span class="hljs-attr">"R"</span>:<span class="hljs-number">10</span>,
+            <span class="hljs-attr">"SPACE"</span>:<span class="hljs-number">4</span>,
+            <span class="hljs-attr">"LCONTROL+TAB"</span>:<span class="hljs-number">2</span>,
+            <span class="hljs-attr">"TAB"</span>:<span class="hljs-number">2</span>,
+            <span class="hljs-attr">"ESCAPE"</span>:<span class="hljs-number">2</span>,
+            <span class="hljs-attr">"LMENU+F4"</span>:<span class="hljs-number">1</span>,
+            <span class="hljs-attr">"F"</span>:<span class="hljs-number">1</span>,
+            <span class="hljs-attr">"OEM_3"</span>:<span class="hljs-number">1</span>
+         }
+      },
+      <span class="hljs-attr">"aTime"</span>:<span class="hljs-number">4.36</span>,
+      <span class="hljs-attr">"iTime"</span>:<span class="hljs-number">1.31</span>,
+      <span class="hljs-attr">"apm"</span>:<span class="hljs-number">116</span>
+   }
+}
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="getmousepositionresult-object"></a><a href="#getmousepositionresult-object" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>GetMousePositionResult Object</h2>
+<table>
+<thead>
+<tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>success</td><td>boolean</td><td></td></tr>
+<tr><td>error</td><td>string</td><td>null if success is true</td></tr>
+<tr><td>mousePosition</td><td><a href="#mouseposition-object">MousePosition</a> object</td><td>the input  activity information</td></tr>
+</tbody>
+</table>
+<h4><a class="anchor" aria-hidden="true" id="example-data-success-1"></a><a href="#example-data-success-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Example data: Success</h4>
+<pre><code class="hljs css language-json">{
+    <span class="hljs-attr">"success"</span>: <span class="hljs-literal">true</span>,
+    <span class="hljs-attr">"mousePosition"</span>: {
+        <span class="hljs-attr">"x"</span>: <span class="hljs-number">1741</span>,
+        <span class="hljs-attr">"y"</span>: <span class="hljs-number">656</span>,
+        <span class="hljs-attr">"onGame"</span>: <span class="hljs-literal">true</span>,
+        <span class="hljs-attr">"handle"</span>: {
+            <span class="hljs-attr">"value"</span>: <span class="hljs-number">526402</span>
+        }
+    }
+}
+</code></pre>
+</span></div></article></div><div class="docLastUpdate"><em>Last updated on 2020-3-28 by eransharv</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/api/overwolf-games-events"><span class="arrow-prev">← </span><span>overwolf.games.events</span></a><a class="docs-next button" href="/docs/api/overwolf-games-launchers"><span>overwolf.games.launchers</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#methods-reference">Methods Reference</a></li><li><a href="#events-reference">Events Reference</a></li><li><a href="#types-reference">Types Reference</a></li><li><a href="#getactivityinformationcallback">getActivityInformation(callback)</a></li><li><a href="#getmatchactivityinformationcallback">getMatchActivityInformation(callback)</a></li><li><a href="#getmousepositioncallback">getMousePosition(callback)</a></li><li><a href="#onkeyup">onKeyUp</a></li><li><a href="#onkeydown">onKeyDown</a></li><li><a href="#onmouseup">onMouseUp</a></li><li><a href="#onmousedown">onMouseDown</a></li><li><a href="#inputactivity-object">InputActivity Object</a></li><li><a href="#mouseposition-object">MousePosition Object</a></li><li><a href="#getactivityresult-object">GetActivityResult Object</a></li><li><a href="#getmousepositionresult-object">GetMousePositionResult Object</a></li></ul></nav></div><footer class="site-footer"><div class="container"><ul><li>Legal</li><li><a href="/docs/topics/legal-overview">Terms overview</a></li><li><a href="/docs/topics/legal-developers-terms">Developer&#x27;s terms</a></li><li><a href="/docs/topics/legal-app-terms">App terms</a></li><li><a href="http://www.overwolf.com/legal/" target="_blank">Overwolf terms</a></li><li><a href="http://www.overwolf.com/legal/#Privacy-policy" target="_blank">Overwolf Privacy policy</a></li></ul><ul><li>Support</li><li><a href=" https://discuss.developers.overwolf.com/" target="_blank">Questions and Answers</a></li><li><a href="https://discordapp.com/invite/cjjrZDp" target="_blank">Discord</a></li><li><a href="/docs/support/contact-us#join-our-slack">Slack</a></li><li><a href="https://www.facebook.com/OverwolfDevs" target="_blank">Facebook</a></li><li><a href="https://twitter.com/OverwolfDevs" target="_blank">Twitter</a></li></ul><ul><li>Documentation</li><li><a href="/docs/api/changelog">Changelog</a></li><li><a href="/docs/api/overwolf-api-overview">API</a></li><li><a href="/docs/start/app-creation-process">App Creation Process</a></li><li><a href="/docs/topics/best-practices-overview">Best Practices</a></li><li><a href="/docs/status/all">Game Events status</a></li></ul><ul><li>Information</li><li><a href="http://www.overwolf.com/careers/">Careers</a></li><li><a href="https://play.overwolf.com/fund/" target="_blank">Fund</a></li><li><a href="https://medium.com/overwolf-developers" target="_blank">Developers Blog</a></li><li><a href="https://www.overwolf.com/appstore" target="_blank">Overwolf Appstore</a></li><li><a href="https://brands.overwolf.com/" target="_blank">Advertise on Overwolf</a></li></ul></div></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
                 document.addEventListener('keyup', function(e) {
                   if (e.target !== document.body) {
                     return;
