@@ -20,6 +20,8 @@ Returns an object with events and functions related to game launcher status.
 
 * [overwolf.games.launchers.ILauncherInfo](#ilauncherinfo-object) Object
 * [overwolf.games.launchers.ILauncherInfoChangeData](#ilauncherinfochangedata-object) Object
+* [overwolf.games.launchers.GetRunningLaunchersInfoResult](#getrunninglaunchersinforesult-object) Object
+* [overwolf.games.launchers.LauncherInfo](#launcherinfo-object) Object
 
 ## getRunningLaunchersInfo(callback)
 #### Version added: 0.103
@@ -28,32 +30,8 @@ Returns an object with events and functions related to game launcher status.
 
 Parameter | Type                  | Description                                          |
 --------- | ----------------------| ---------------------------------------------------- |
-callback  | function              | Called with the currently running detected launchers |
+callback  | [(Result:GetRunningLaunchersInfoResult)](#getrunninglaunchersinforesult-object) => void | Called with the currently running detected launchers |
 
-#### Callback argument: Success
-
-```json
-{  
-      "launchers":[  
-         {  
-            "title":"League of Legends Launcher",
-            "id":54271,
-            "classId":5427,
-            "isInFocus":false,
-            "position":{  
-               "top":252,
-               "left":2066,
-               "width":1280,
-               "height":720
-            },
-            "handle":329882,
-            "commandLine":"E:/Games/RADS/projects/league_client/releases/0.0.0.65/deploy/LeagueClientUx.exe "--release=0.0.0.35" "--remoting-auth-token=scIN957coAwcbo0WW78nzg" "--rads-product-directory=E:/Games/RADS/solutions/league_client_sln/releases/0.0.0.35/deploy/" "--respawn-command=LeagueClient.exe" "--respawn-display-name=League of Legends" "--app-port=57610" "--install-directory=E:/Games/" "--app-name=LeagueClient" "--ux-name=LeagueClientUx" "--ux-helper-name=LeagueClientUxHelper" "--log-dir=LeagueClient Logs" "--bugsplat-name=league_client_riotgames_com" "--bugsplat-platform-id=EUW1" "--project=LeagueClient" "--app-log-file-path=E:/Games/Logs/LeagueClient Logs/2017-04-20T11-12-28_9576_LeagueClient.log" "--app-pid=9576"",
-            "processId":1468,
-            "path":"E:/Games/RADS/projects/league_client/releases/0.0.0.65/deploy/LeagueClientUx.exe"
-         }
-      ]
-}
-```
 
 ## onUpdated
 #### Version added: 0.103
@@ -96,3 +74,51 @@ handle      | uint                                | Returns the launcher’s mai
 commandLine | string                              | Returns the launcher’s process command-line                      |
 processId   | uint                                | Returns the launcher’s process id                                |
 path        | string                              | Returns the process path of the launcher             |
+
+## GetRunningLaunchersInfoResult Object
+
+Parameter          | Type     | Description                                 |
+-------------------| ---------| ------------------------------------------- |
+success            | boolean  |                                             |
+error              | string   | null if success is true                     |
+launchers          | [LauncherInfo](#launcherinfo-object)[] | an array of currently running detected launchers |   
+
+#### Example data: Success
+
+```json
+{  
+   "success": true,
+   "launchers":[  
+      {  
+         "title":"League of Legends Launcher",
+         "id":54271,
+         "classId":5427,
+         "isInFocus":false,
+         "position":{  
+            "top":252,
+            "left":2066,
+            "width":1280,
+            "height":720
+         },
+         "handle":329882,
+         "commandLine":"E:/Games/RADS/projects/league_client/releases/0.0.0.65/deploy/LeagueClientUx.exe "--release=0.0.0.35" "--remoting-auth-token=scIN957coAwcbo0WW78nzg" "--rads-product-directory=E:/Games/RADS/solutions/league_client_sln/releases/0.0.0.35/deploy/" "--respawn-command=LeagueClient.exe" "--respawn-display-name=League of Legends" "--app-port=57610" "--install-directory=E:/Games/" "--app-name=LeagueClient" "--ux-name=LeagueClientUx" "--ux-helper-name=LeagueClientUxHelper" "--log-dir=LeagueClient Logs" "--bugsplat-name=league_client_riotgames_com" "--bugsplat-platform-id=EUW1" "--project=LeagueClient" "--app-log-file-path=E:/Games/Logs/LeagueClient Logs/2017-04-20T11-12-28_9576_LeagueClient.log" "--app-pid=9576"",
+         "processId":1468,
+         "path":"E:/Games/RADS/projects/league_client/releases/0.0.0.65/deploy/LeagueClientUx.exe"
+      }
+   ]
+}
+```
+
+## LauncherInfo Object
+
+Parameter          | Type     | Description                                 |
+-------------------| ---------| ------------------------------------------- |
+title              | string   |                                             |
+id                 | number   |                                             |
+classId            | number   |                                             |   
+isInFocus          | boolean  |                                             |   
+position           | object   |                                             |   
+handle             | number   |                                             |   
+commandLine        | string   |                                             |   
+processId          | number   |                                             |   
+path               | string   |                                             |   

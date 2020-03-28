@@ -16,6 +16,13 @@ This API returns an object with launcher related events and info-updates (Curren
 * [overwolf.games.launchers.events.onInfoUpdates](#oninfoupdates)
 * [overwolf.games.launchers.events.onNewEvents](#onnewevents)
 
+## Types Reference
+
+* [overwolf.games.launchers.events.SetRequiredFeaturesResult](#setrequiredfeaturesresult-object) Object
+* [overwolf.games.launchers.events.GetInfoResult](#getinforesult-object) Object
+
+
+
 ## How to register for features
 
 The Launcher Events Provider keeps an info DB with information about the launcher state.
@@ -31,17 +38,9 @@ It is also possible to get the currently available information using [`overwolf.
 
 Parameter        | Type     | Description                            |
 ---------------- | ---------| -------------------------------------- |
-launcherClassId  | int      | Launcher ID of interest            |
-features         | string   | String array of features to utilize  |
-callback         | function | Returns with the result                |
-
-#### Callback argument: Success
-
-A callback function which will be called with the status of the request
-
-```json
-{"status": "success", "supportedFeatures": Array(1)}
-```
+launcherClassId  | int      | Launcher ID of interest                |
+features         | string   | String array of features to utilize    |
+callback         | ([Result: SetRequiredFeaturesResult](#setrequiredfeaturesresult-object)) => void | Returns with the result  |
 
 ## getInfo(launcherClassId, callback)
 #### Version added: 0.126
@@ -51,11 +50,43 @@ A callback function which will be called with the status of the request
 Parameter        | Type     | Description                            |
 ---------------- | ---------| -------------------------------------- |
 launcherClassId  | int      | The launcher Id of interest            |
-callback         | function | Provides the current game info                |
+callback         | ([Result: GetInfoResult](#getinforesult-object)) => void | Returns with the result  |
 
-#### Callback argument: Success
+## onInfoUpdates
 
-A callback function which will be called with the status of the request
+#### Version added: 0.78
+
+> Fired when there are game info updates with a JSON object of the updates.
+
+## onNewEvents
+
+#### Version added: 0.78
+
+> Fired when there are new game events with a JSON object of the events.
+
+## SetRequiredFeaturesResult Object
+
+Parameter          | Type     | Description                                 |
+-------------------| ---------| ------------------------------------------- |
+success            | boolean  |                                             |
+error              | string   | null if success is true                     |
+supportedFeatures  | string[] | an array of supported features              |   
+
+#### Example data: Success
+
+```json
+{"success": true, "supportedFeatures": Array[1])}
+```
+
+## GetInfoResult Object
+
+Parameter          | Type     | Description                                 |
+-------------------| ---------| ------------------------------------------- |
+success            | boolean  |                                             |
+error              | string   | null if success is true                     |
+res                | object   | Provides the current game info              |   
+
+#### Example data: Success
 
 ```json
 {  
@@ -84,26 +115,11 @@ A callback function which will be called with the status of the request
 }
 ```
 
-#### Callback argument: Failure
+#### Example data: Failure
 
 ```json
 {
    "success": false, 
-   "status": "error", 
-   "reason": "Launcher isn't running or the associated game isn't running"
+   "error": "Launcher isn't running or the associated game isn't running"
 }
-
 ```
-
-
-## onInfoUpdates
-
-#### Version added: 0.78
-
-> Fired when there are game info updates with a JSON object of the updates.
-
-## onNewEvents
-
-#### Version added: 0.78
-
-> Fired when there are new game events with a JSON object of the events.

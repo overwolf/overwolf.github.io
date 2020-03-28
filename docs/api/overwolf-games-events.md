@@ -23,6 +23,11 @@ The full list of supported games with their Game ID’s is always up to date and
 * [overwolf.games.events.onInfoUpdates2](#oninfoupdates2)
 * [overwolf.games.events.onNewEvents](#onnewevents)
 
+## Types Reference
+
+* [overwolf.games.events.SetRequiredFeaturesResult](#setrequiredfeaturesresult-object) Object
+* [overwolf.games.events.GetInfoResult](#getinforesult-object) Object
+
 ## Sample App
 
 You can find an example of `overwolf.games.events` API usage [here](https://github.com/overwolf/events-sample-apps/tree/master/lol-events-sample-app), this one notifies whenever a relevant event has happened in League of Legends.
@@ -104,21 +109,7 @@ For that reason, you should also call [`overwolf.games.events.getInfo()`](#getin
 Parameter | Type     | Description |
 --------- | ---------| ------------ |
 features  | string[] | String array of features to utilize |
-callback  | function | Callback function which will be called with the status of the request |
-
-#### Callback argument
-If successful, the callback will contain all available features for the registered games declared in the manifest.
-
-```json
-{  
-   "status":"success",
-   "supportedFeatures":[  
-      "summoner_info",
-      "teams",
-      "kill"
-   ]
-}
-```
+callback  | [(Result:SetRequiredFeaturesResult)](##setrequiredfeaturesresult-object) => void | all available features for the registered games declared in the manifest|
 
 #### Usage Example
 
@@ -134,16 +125,16 @@ var g_interestedInFeatures = [
 ];
 
 overwolf.games.events.setRequiredFeatures(g_interestedInFeatures, function(info) {
-    if (info.status == "error")
+    if (info.success == false)
     {
-      console.log("Could not set required features: " + info.reason);
+      console.log("Could not set required features: " + info.error);
       return;
     }
 }
 ```
 
 :::important
-it's important to wait for the `success` status to make sure that required features will be registered and trigger events properly.
+it's important to wait for the **success** status to make sure that required features will be registered and trigger events properly.
 :::
 
 Example for setting required features and waiting for 'success':
@@ -158,7 +149,7 @@ Example for setting required features and waiting for 'success':
         overwolf.games.events.setRequiredFeatures(FEATURES_ARRAY, resolve);
       })
 
-      if ( result.status === 'success' ) {
+      if ( result.success === true ) {
         // make sure our required features were registered
         return (result.supportedFeatures.length > 0); 
       }
@@ -181,53 +172,9 @@ Example for setting required features and waiting for 'success':
 
 > Gets the current game info.
 
-Parameter | Type     | Description |
---------- | ---------| ------------ |
-callback  | function | Callback function which will be called with the status of the request |
-
-#### Callback argument
-
-The current game's info, registered features, and all available info for the current game session. 
-
-```json
-{  
-      "status":"status",
-      "res":{  
-         "summoner_info":{  
-            "id":"79489298",
-            "name":"itaygl",
-            "region":"EUW",
-            "champion":"Rengar"
-         },
-         "game_info":{  
-            "match_started":"True",
-            "matchStarted":"True",
-            "teams":"%5B%7B%22team%22:%22100%22,%22champion%22:%22Rengar%22",
-            "gameMode":"custom",
-            "game_mode":"custom",
-            "minionKills":"5",
-            "minions_kills":"5",
-            "gold":"1002"
-         },
-         "features":{  
-            "kill":"True",
-            "assist":"True",
-            "minions":"True",
-            "deathAndRespawn":"True",
-            "death":"True",
-            "minion":"True",
-            "gold":"True",
-            "level":"True",
-            "abilities":"True",
-            "gameMode":"True",
-            "game_mode":"True"
-         },
-         "level":{  
-            "level":"3"
-         }
-      }
-   }
-```
+Parameter | Type                                                    | Description                    |
+--------- | --------------------------------------------------------| ------------------------------ |
+callback  | [(Result:GetInfoResult)](#getinforesult-object) => void | Provides the current game info |
 
 #### Usage Example
 
@@ -295,7 +242,7 @@ overwolf.games.events.onNewEvents.addListener(function(info) {
   "events": [
     {
       "name": "death",
-      "data": "{"count": "2"}"
+      "data": "{`count`: `2`}"
     }
   ]
 }
@@ -304,3 +251,76 @@ overwolf.games.events.onNewEvents.addListener(function(info) {
 :::tip
 Our best practice is removing event listeners and then adding the listener back to prevent accidental multiple listeners.
 :::
+
+## SetRequiredFeaturesResult Object
+
+Parameter          | Type     | Description                                                              |
+-------------------| ---------| ------------------------------------------------------------------------ |
+success            | boolean  |                                                                          |
+error              | string   | null if success is true                                                  |
+supportedFeatures  | string[] | all available features for the registered games declared in the manifest |   
+
+#### Example data: Success
+
+```json
+{  
+   "success":true,
+   "supportedFeatures":[  
+      "summoner_info",
+      "teams",
+      "kill"
+   ]
+}
+```
+
+## GetInfoResult Object
+
+Parameter          | Type     | Description                                                              |
+-------------------| ---------| ------------------------------------------------------------------------ |
+success            | boolean  |                                                                          |
+error              | string   | null if success is true                                                  |
+res                | object   | Provides the current game info                                           |   
+
+#### Example data: Success
+
+The current game's info, registered features, and all available info for the current game session.
+
+```json
+{  
+   "success":true,
+   "res":{  
+      "summoner_info":{  
+         "id":"79489298",
+         "name":"itaygl",
+         "region":"EUW",
+         "champion":"Rengar"
+      },
+      "game_info":{  
+         "match_started":"True",
+         "matchStarted":"True",
+         "teams":"%5B%7B%22team%22:%22100%22,%22champion%22:%22Rengar%22",
+         "gameMode":"custom",
+         "game_mode":"custom",
+         "minionKills":"5",
+         "minions_kills":"5",
+         "gold":"1002"
+      },
+      "features":{  
+         "kill":"True",
+         "assist":"True",
+         "minions":"True",
+         "deathAndRespawn":"True",
+         "death":"True",
+         "minion":"True",
+         "gold":"True",
+         "level":"True",
+         "abilities":"True",
+         "gameMode":"True",
+         "game_mode":"True"
+      },
+      "level":{  
+         "level":"3"
+      }
+   }
+}
+```

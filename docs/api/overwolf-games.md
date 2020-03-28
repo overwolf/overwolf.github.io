@@ -22,8 +22,16 @@ Provides information about the currently running game.
 
 ## Types Reference
 
-* [GameInfo](#gameinfo-object)
-* [GameInfoChangeData](#gameinfochangedata-object)
+* [overwolf.games.GameInfo](#gameinfo-object) Object
+* [overwolf.games.GetRunningGameInfoResult](#getrunninggameinforesult-object) Object
+* [overwolf.games.GetGameInfoResult](#getgameinforesult-object) Object
+* [overwolf.games.InstalledGameInfo](#installedgameinfo-object) Object
+* [overwolf.games.GetGameDBInfoResult](#getgamedbinforesult-object) Object
+* [overwolf.games.GetRecentlyPlayedResult](#getrecentlyplayedresult-object) Object
+* [overwolf.games.RunningGameInfo](#runninggameinfo-object) Object
+* [overwolf.games.GameInfoUpdatedEvent](#gameinfoupdatedevent-object) Object
+* [overwolf.games.MajorFrameRateChangeEvent](#majorframeratechangeevent-object) Object
+* [overwolf.games.GameRendererDetectedEvent](#GameRendererDetectedEvent) Object
 
 ## getRunningGameInfo(callback)
 
@@ -33,30 +41,7 @@ Provides information about the currently running game.
 
 Parameter | Type     | Description                                                              |
 ----------| -------- | ------------------------------------------------------------------------ |
-callback  | function | Called with the currently running [GameInfo](#gameinfo-object) |
-
-#### Callback argument: Success
-
-```json
-{
-    "isInFocus": true,
-    "isRunning": true,
-    "allowsVideoCapture": true,
-    "title": "Counter-Strike: Global Offensive",
-    "id": 77641,
-    "width": 1920,
-    "height": 1080,
-    "logicalWidth": 1920,
-    "logicalHeight": 1080,
-    "renderers": [
-        "D3D9"
-    ],
-    "detectedRenderer": "D3D9",
-    "executionPath": "D://Steam/steamapp/scommon/Counter-Strike Global Offensive/csgo.exe",
-    "sessionId": "1a1b96a9d8bb439d8f21abc21faa1184",
-    "commandLine": "D://Steam/steamapps/common/Counter-Strike Global Offensive/csgo.exe" -steam -novid +mat_vignette_enable 0"
-}
-```
+callback  | [(Result:GetRunningGameInfoResult)](#getrunninggameinforesult-object) => void | Returns info about the currently running game |
 
 #### Usage Example
 
@@ -72,41 +57,10 @@ overwolf.games.getRunningGameInfo(function(){console.log(JSON.stringify(argument
 
 **Note**: Game info will be returned only if the game is installed on the local machine.
 
-Parameter   | Type     | Description                                                              |
-------------| -------- | ------------------------------------------------------------------------ |
-gameClassId | int      | Class ID of the game                                                  |
-callback    | function | Returns info about the game                                      |
-
-#### Callback argument: Success
-
-```json
-{
-    "status": "success",
-    "gameInfo": {
-        "GameInfoClassID": 7764,
-        "GameInfoID": 77641,
-        "ProcessPath": "D:SteamSteamAppscommonCounter-Strike Global Offensivecsgo.exe",
-        "LauncherPath": "D:Steamsteam.exe",
-        "LauncherCommandLineParams": "-applaunch 730",
-        "LastTimeVerified": "2016-04-25T06:56:18.180Z",
-        "ManuallyAdded": false,
-        "WasAutoAddedByProcessDetection": false,
-        "GameInfo": {
-            "ID": 77641,
-            "GameTitle": "Counter-Strike: Global Offensive",
-            "DisplayName": "CS: GO",
-            "ProcessNames": [
-                "SteamApps*Counter-Strike Global Offensivecsgo.exe"
-            ],
-            "LuancherNames": [
-                "steam.exe"
-            ],
-            "CommandLine": null,
-            ...
-        }
-    }
-}
-```
+Parameter   | Type                                           | Description                 |
+------------| ---------------------------------------------- | ----------------------------|
+gameClassId | int                                            | Class ID of the game        |
+callback    | [(Result:GetGameInfoResult)](#getgameinforesult-object) => void | Returns info about the game |
 
 ## getGameDBInfo(gameClassId,callback)
 
@@ -116,66 +70,16 @@ callback    | function | Returns info about the game                            
 
 :::note
 This method is similar to [getGameInfo()](#getgameinfogameclassid-callback) except that it can return two different results:
-
 * If the game is detected as installed, then the `installedGameInfo` member of the result will be set and the `gameInfo` member will be null.
-* If the game is NOT detected as installed, then the returned JSON status will be `error`.
+* If the game is NOT detected as installed, then the returned JSON status will be `success:false`.
 :::
 
 Parameter   | Type     | Description                                                              |
 ------------| -------- | ------------------------------------------------------------------------ |
 gameClassId | int      |The class ID of the game                                                  |
-callback    | function |Called with the info about the game                                       |
+callback    | [(Result:GetGameDBInfoResult)](#getgamedbinforesult-object) => void | Returns info about the game |
 
-#### Callback argument: Success
 
-```json
-{  
-   "status":"success",
-   "gameInfo":null,
-   "installedGameInfo":{  
-      "GameInfoClassID":10906,
-      "GameInfoID":109062,
-      "ProcessPath":"E:/Steam Games/steamapps/common/PUBG/TslGame/Binaries/Win64/TslGame.exe",
-      "LauncherPath":"c:/program files (x86)/steam/Steam.exe",
-      "LauncherCommandLineParams":"-applaunch 578080",
-      "LastTimeVerified":"2018-03-14T12:02:06.686Z",
-      "ManuallyAdded":false,
-      "WasAutoAddedByProcessDetection":true,
-      "GameInfo":{  
-         "ID":109062,
-         "NativeID":10906,
-         "Type":0,
-         "LauncherGameClassId":0,
-         "GameTitle":"PLAYERUNKNOWN'S BATTLEGROUNDS",
-         "ShortTitle":null,
-         "DisplayName":"PUBG",
-         "ProcessNames":[  
-            "TslGame.exe"
-         ],
-         "LauncherNames":[  
-            "Steam.exe"
-         ],
-         "CommandLine":null,
-         "GameRenderers":82,
-         "ActualDetectedRenderers":0,
-         "FirstGameResolutionHeight":null,
-         "FirstGameResolutionWidth":null,
-         "GameGenres":"Action_Survival-Horror",
-         "InjectionDecision":1,
-         "SupportedScheme":null,
-         "UnsupportedScheme":"5/1",
-         "LauncherDirectoryRegistryKey":"HKEY_LOCAL_MACHINESOFTWAREValveSteamInstallPath",
-         "LaunchParams":"-applaunch 578080",
-		 ...
-      }
-   }
-}
-```
-#### Callback argument: Failure
-
-```json
-{"status":"error","reason":"game not found"}
-```
 ## getRecentlyPlayedGames(maxNumOfGames, callback)
 
 #### Version added: 0.122 
@@ -185,13 +89,553 @@ callback    | function |Called with the info about the game                     
 Parameter     | Type     | Description                                                                       |
 --------------| -------- | --------------------------------------------------------------------------------- |
 maxNumOfGames | int      | Maximum number of games to receive. Currently we support a maximum of 3 games |
-callback      | function | Called with the array of game IDs                                                 |
+callback    | [(Result:GetRecentlyPlayedResult)](#getrecentlyplayedresult-object) => void | an array of the most recently played game IDs |
 
-#### Callback argument: Success
+## onGameInfoUpdated
+
+> Fired when game info is updated, including game name, game running, game terminated, game changing focus, etc.  
+with the following structure: [GameInfoUpdatedEvent](#gameinfoupdatedevent-object) Object.
+
+## onGameLaunched
+
+> Fired when a game is launched, with the following structure: [RunningGameInfo](#runninggameinfo-object) object.
+
+## onMajorFrameRateChange
+
+> Fired when the rendering frame-rate of the currently injected game changes dramatically, with the following structure: [MajorFrameRateChangeEvent](#majorframeratechangeevent-object) object.
+
+## onGameRendererDetected
+
+> Fired when the rendering method of the game has been detected, with the following structure: [GameRendererDetectedEvent](#gamerendererdetectedevent-object) object.
+
+## GameInfo object
+
+#### Version added: 0.78 
+
+Contains information about a game.
+
+| Name                          | Type     | Description                            | Since |
+|-------------------------------| ---------|----------------------------------------|------ |
+|ActualDetectedRenderers        | number   |                                        | 0.78 |
+|ActualGameRendererAllowsVideoCapture| boolean| | 0.78 |
+|AllowCCMix| boolean| | 0.78 |
+|AllowCursorMix| boolean| | 0.78 |
+|AllowRIMix| boolean| | 0.78 |
+|Client_GameControlMode| number| | 0.78 |
+|CommandLine| string| | 0.78 |
+|ControlModes| number| | 0.78 |
+|CursorMode| number| | 0.78 |
+|DIT| number| | 0.78 |
+|DetectDirKey| string| | 0.78 |
+|DetectDirKeys| string[]| | 0.78 |
+|DisableActionMixed| boolean| | 0.78 |
+|DisableActivityInfo| boolean| | 0.78 |
+|DisableAeroOnDX11| boolean| | 0.78 |
+|DisableBlockChain| boolean| | 0.78 |
+|DisableD3d9Ex| boolean| | 0.78 |
+|DisableDIAquire| boolean| | 0.78 |
+|DisableEXHandle| boolean| | 0.78 |
+|DisableEternalEnum| boolean| | 0.78 |
+|DisableExclusiveModeUI| boolean| | 0.78 |
+|DisableFeature_TS3| boolean| | 0.78 |
+|DisableFeature_VideoCapture| boolean| | 0.78 |
+|DisableMultipleInjections| boolean| | 0.78 |
+|DisableOWGestures| boolean| | 0.78 |
+|DisableRenderAI| boolean| | 0.78 |
+|DisableResizeRelease| boolean| | 0.78 |
+|DisableSmartMixMode| boolean| | 0.78 |
+|DisplayName| string| | 0.78 |
+|EnableClockGesture| boolean| | 0.78 |
+|EnableFocusOnAnyClick| boolean| | 0.78 |
+|EnableMTCursor| boolean| | 0.78 |
+|EnableRawInput| boolean| | 0.78 |
+|EnableSmartDIFocus| boolean| | 0.78 |
+|EnableSmartDIFocus2| boolean| | 0.78 |
+|EnableSmartFocus| boolean| | 0.78 |
+|EnableTXR| boolean| | 0.78 |
+|ExecutedMoreThan| boolean| | 0.78 |
+|FIGVTH| boolean| | 0.78 |
+|FPSIndicationThreshold| number| | 0.78 |
+|FirstGameResolutionHeight| number| | 0.78 |
+|FirstGameResolutionWidth| number| | 0.78 |
+|FixActionFocus| boolean| | 0.78 |
+|FixCC| boolean| | 0.78 |
+|FixCOEx| boolean| | 0.78 |
+|FixCVCursor| boolean| | 0.78 |
+|FixCursorOffset| boolean| | 0.78 |
+|FixDIBlock| boolean| | 0.78 |
+|FixDIFocus| boolean| | 0.78 |
+|FixDXThreadSafe| boolean| | 0.78 |
+|FixFSTB| boolean| | 0.78 |
+|FixHotkeyRI| boolean| | 0.78 |
+|FixInputBlock| boolean| | 0.78 |
+|FixInvisibleCursorCR| boolean| | 0.78 |
+|FixMixModeCursor| boolean| | 0.78 |
+|FixModifierMixMode| boolean| | 0.78 |
+|FixMouseDIExclusive| boolean| | 0.78 |
+|FixRCEx| boolean| | 0.78 |
+|FixResolutionChange| boolean| | 0.78 |
+|FixRestoreSWL| boolean| | 0.78 |
+|FixSWL| boolean| | 0.78 |
+|FixSWLW| boolean| | 0.78 |
+|ForceCaptureChangeRehook| boolean| | 0.78 |
+|ForceControlRehook| boolean| | 0.78 |
+|ForceGBB| boolean| | 0.78 |
+|GameGenres| string| | 0.78 |
+|GameLinkURL| string| | 0.78 |
+|GameNotes| string| | 0.78 |
+|GameRenderers| number| | 0.78 |
+|GameTitle| string| | 0.78 |
+|GenericProcessName| boolean| | 0.78 |
+|GroupTitle| string| | 0.78 |
+|ID| number| | 0.78 |
+|IconFile| string| | 0.78 |
+|IgnoreMultipleDevices| boolean| | 0.78 |
+|IgnoreRelease| boolean| | 0.78 |
+|ImGuiRendering| boolean| | 0.78 |
+|InjectionDecision| number| | 0.78 |
+|Input| number| | 0.78 |
+|InstallHint| string| | 0.78 |
+|IsConflictingWithControlHotkey| boolean| | 0.78 |
+|IsNew| boolean| | 0.78 |
+|IsSteamGame| boolean| | 0.78 |
+|KeepInGameOnLostFocus| boolean| | 0.78 |
+|Label| string| | 0.78 |
+|LastInjectionDecision| number| | 0.78 |
+|LastKnownExecutionPath| string| | 0.78 |
+|LaunchParams| string| | 0.78 |
+|Launchable| boolean| | 0.78 |
+|LauncherDirectoryRegistryKey| string| | 0.78 |
+|LauncherDirectoryRegistryKeys| string[]| | 0.78 |
+|LauncherGameClassId| number| | 0.78 |
+|LauncherNames| string[]| | 0.78 |
+|ModifierStatus| number| | 0.78 |
+|NativeID| number| | 0.78 |
+|PassThruBoundsOffsetPixel| number| | 0.78 |
+|PressToClickThrough| number| | 0.78 |
+|ProcessCommandLine| string| | 0.78 |
+|ProcessID| number| | 0.78 | 
+|ProcessNames| string[]| | 0.78 |
+|RecreateSB| boolean| | 0.78 |
+|ReleaseKBInOverlayFocus| boolean| | 0.78 |
+|ResizeNotifyResolution| boolean| | 0.78 |
+|RestoreBB| boolean| | 0.78 |
+|RestoreRT| boolean| | 0.78 |
+|RunElevated| boolean| | 0.78 |
+|SendHotkeyRI| boolean| | 0.78 |
+|SetDIInExclusive| boolean| | 0.78 |
+|ShortTitle| string| | 0.78 |
+|SkipGameProc| boolean| | 0.78 |
+|SmartReleaseKBInOverlayFocus| boolean| | 0.78 |
+|StableFPSThreshold| number| | 0.78 | 
+|StuckInTrans_Margin| number| | 0.78 |
+|StuckInTrans_MouseMoveGap| number| | 0.78 |
+|SupportedScheme| string| | 0.78 |
+|SupportedVersion| string| | 0.78 |
+|TCModes| number| | 0.78 |
+|TerminateOnWindowClose| boolean| v
+|Type| number| | 0.78 |
+|TypeString| string| | 0.78 |
+|UnsupportedScheme| string| | 0.78 |
+|UpdateCursor| boolean| | 0.78 |
+|UpdateCursorMT| boolean| | 0.78 | 
+|UseAllSafeHook| boolean| | 0.78 |
+|UseEH| string| | 0.78 |
+|UseHardwareDevice| boolean| | 0.78 |
+|UseLauncherIcon| boolean| | 0.78 |
+|UseLongHook| boolean| | 0.78 |
+|UseMCH| string| | 0.78 |
+|UseMH| boolean| | 0.78 |
+|UseMHScheme| string| | 0.78 |
+|UseMKLL| boolean| | 0.78 |
+|UseMW| boolean| | 0.78 |
+|UsePR| boolean| | 0.78 |
+|UseRI| boolean| | 0.78 |
+|UseRIB| boolean| | 0.78 |
+|UseSafeHook| boolean| | 0.78 |
+|UseTSHook| boolean| | 0.78 |
+|WaitRestore| boolean| | 0.78 |
+|Win7Support| number| | 0.78 |
+|Win8Support| number| | 0.78 |
+|Win10Support| number| | 0.78 |
+|XPSupport| number| | 0.78 |
+
+#### Example data
+
+```json
+{
+    "ID":11361,
+    "NativeID":1136,
+    "Type":0,
+    "TypeString":"Game",
+    "LauncherGameClassId":0,
+    "GameTitle":"Guild Wars",
+    "ShortTitle":null,
+    "UseLauncherIcon":false,
+    "DisplayName":null,
+    "ProcessNames":[
+    "Gw.exe"
+    ],
+    "LauncherNames":[
+    "Gw.exe"
+    ],
+    "CommandLine":"Guild Wars",
+    "GameRenderers":2,
+    "ActualDetectedRenderers":0,
+    "FirstGameResolutionHeight":null,
+    "FirstGameResolutionWidth":null,
+    "GameGenres":"Role-Playing_Real-Time-Battle-RPG",
+    "InjectionDecision":1,
+    "SupportedScheme":null,
+    "UnsupportedScheme":null,
+    "LauncherDirectoryRegistryKey":"HKEY_CURRENT_USER\\Software\\ArenaNet\\Guild Wars\\Path",
+    "LauncherDirectoryRegistryKeys":null,
+    "LaunchParams":null,
+    "RunElevated":false,
+    "GenericProcessName":false,
+    "Launchable":true,
+    "IconFile":null,
+    "GameLinkURL":null,
+    "FixCursorOffset":false,
+    "FixResolutionChange":true,
+    "FixDIBlock":false,
+    "FixDIFocus":false,
+    "FixSWL":false,
+    "UseSafeHook":false,
+    "UseAllSafeHook":false,
+    "UseLongHook":true,
+    "FixInputBlock":false,
+    "IgnoreRelease":false,
+    "ReleaseKBInOverlayFocus":false,
+    "SmartReleaseKBInOverlayFocus":false,
+    "UseTSHook":false,
+    "TerminateOnWindowClose":false,
+    "AllowCursorMix":false,
+    "FixMixModeCursor":false,
+    "SetDIInExclusive":false,
+    "FixMouseDIExclusive":false,
+    "DisableActionMixed":false,
+    "DisableResizeRelease":false,
+    "DisableEternalEnum":false,
+    "ForceCaptureChangeRehook":false,
+    "ForceControlRehook":false,
+    "FixActionFocus":false,
+    "RestoreRT":false,
+    "ForceGBB":false,
+    "EnableSmartFocus":false,
+    "EnableSmartDIFocus":false,
+    "DisableFeature_VideoCapture":false,
+    "DisableFeature_TS3":false,
+    "FixSWLW":false,
+    "EnableFocusOnAnyClick":false,
+    "EnableMTCursor":false,
+    "Input":0,
+    "ControlModes":0,
+    "CursorMode":0,
+    "XPSupport":0,
+    "Win7Support":0,
+    "Win8Support":0,
+    "Win10Support":0,
+    "DisableVideoCapture":0,
+    "InstallHint":null,
+    "DetectDirKey":"HKEY_CURRENT_USER\\Software\\ArenaNet\\Guild Wars\\Path",
+    "DetectDirKeys":null,
+    "PressToClickThrough":0,
+    "StuckInTrans_MouseMoveGap":null,
+    "StuckInTrans_Margin":0,
+    "GroupTitle":null,
+    "GameNotes":null,
+    "Client_GameControlMode":2,
+    "SupportedVersion":null,
+    "DisableAeroOnDX11":false,
+    "FixCC":false,
+    "EnableRawInput":false,
+    "IsConflictingWithControlHotkey":false,
+    "EnableClockGesture":false,
+    "DisableOWGestures":false,
+    "UpdateCursor":false,
+    "UpdateCursorMT":false,
+    "DisableDIAquire":false,
+    "EnableSmartDIFocus2":false,
+    "ResizeNotifyResolution":false,
+    "DisableD3d9Ex":false,
+    "UseRI":false,
+    "UseRIB":false,
+    "AllowRIMix":false,
+    "RestoreBB":false,
+    "RecreateSB":false,
+    "FixFSTB":false,
+    "FixCOEx":false,
+    "FixRCEx":false,
+    "DisableBlockChain":false,
+    "UseMH":false,
+    "UseMHScheme":null,
+    "UseMCH":"6;10",
+    "UseEH":null,
+    "AllowCCMix":false,
+    "UseMKLL":false,
+    "UseNewKLL":false,
+    "UseNewMLLForExclusive":false,
+    "UseMW":false,
+    "UsePR":false,
+    "WaitRestore":false,
+    "KeepInGameOnLostFocus":false,
+    "DisableRenderAI":false,
+    "DisableSmartMixMode":false,
+    "ImGuiRendering":false,
+    "DIT":0,
+    "IgnoreMultipleDevices":false,
+    "TCModes":0,
+    "FixHotkeyRI":true,
+    "SendHotkeyRI":false,
+    "FixRestoreSWL":false,
+    "FIGVTH":false,
+    "UseHardwareDevice":false,
+    "FixCVCursor":false,
+    "EnableTXR":true,
+    "PassThruBoundsOffsetPixel":0,
+    "FixModifierMixMode":false,
+    "DisableEXHandle":false,
+    "FixDXThreadSafe":false,
+    "FixInvisibleCursorCR":false,
+    "SkipGameProc":false,
+    "Label":"Guild Wars",
+    "DisableActivityInfo":false,
+    "ModifierStatus":0,
+    "DisableExclusiveModeUI":false,
+    "ProcessCommandLine":"\"D:/Games/Guild Wars/Gw.exe\"",
+    "ProcessID":10684,
+    "StableFPSThreshold":10,
+    "FPSIndicationThreshold":3,
+    "DisableMultipleInjections":false,
+    "IsNew":true,
+    "ExecutedMoreThan":true,
+    "LastKnownExecutionPath":"D:/Games/Guild Wars/Gw.exe",
+    "LastInjectionDecision":1,
+    "IsSteamGame":false
+}
+```
+
+## RunningGameInfo Object
+
+Parameter            | Type     | Description                                                                                         | 
+---------------------| ---------| --------------------------------------------------------------------------------------------------- | 
+| isInFocus          | bool     | Returns whether the game is currently in focus                                                      | 
+| isRunning          | bool     | Returns whether the game is currently running                                                       | 
+| allowsVideoCapture | bool     | Returns whether the game allows video to be captured                                                | 
+| title              | string   | Returns the title of the game                                                                       | 
+| id                 | int      | Returns the game ID concatenated with the Instance ID of the game. Divide it by 10 to get the game ID |
+| width              | int      | Returns the pixel width of the game window                                                          | 
+| height             | int      | Returns the pixel height of the game window                                                         | 
+| logicalWidth       | int      | Returns the game-reported (logical) pixel width of the game window                                  | 
+| logicalHeight      | int      | Returns the game-reported (logical) pixel height of the game window                                 | 
+| renderers          | string[] | Returns an array of the rendering technology names supported by the running game                    | 
+| detectedRenderer   | string   | Returns the rendering technology detected by the running game                                       | 
+| commandLine        | string   | Returns the game process commandline                                                                | 
+| monitorHandle      | object   | Returns the current monitor handle                                                                  | 
+| windowHandle       | object   | Returns the current app window handle                                                               | 
+
+#### Data example
+
+```json
+{
+    "success":true,
+    "isInFocus":false,
+    "isRunning":true,
+    "allowsVideoCapture":true,
+    "title":"Guild Wars",
+    "displayName":"",
+    "shortTitle":"",
+    "id":11361,
+    "classId":1136,
+    "width":1920,
+    "height":1080,
+    "logicalWidth":1920,
+    "logicalHeight":1080,
+    "renderers":[
+        "D3D9"
+    ],
+    "detectedRenderer":"Unknown",
+    "executionPath":"D:/Games/Guild Wars/Gw.exe",
+    "sessionId":"3ced63b755724fd4ab1d3d2a210aa764",
+    "commandLine":"\"D:/Games/Guild Wars/Gw.exe\"",
+    "type":0,
+    "typeAsString":"Game",
+    "windowHandle":{
+        "value":0
+    },
+    "monitorHandle":{
+        "value":0
+    }
+}
+```
+
+## InstalledGameInfo Object
+
+Parameter                       | Type     | Description                                                              |
+--------------------------------| ---------| ------------------------------------------------------------------------ |
+GameInfoClassID                 | number   |                                                                          |
+GameInfoID                      | number   |                                                                          |
+LastTimeVerified                | Date     |                                                                          |
+LauncherCommandLineParams       | string   |                                                                          |
+LauncherPath                    | string   |                                                                          |
+ManuallyAdded                   | boolean  |                                                                          |
+ProcessPath                     | string   |                                                                          |
+WasAutoAddedByProcessDetection  | boolean  |                                                                          |
+GameInfo                        | [GameInfo](#gameinfo-object) object    |                                            |
+
+#### Example data
+
+```json
+{
+    "GameInfoClassID":1136,
+    "GameInfoID":11361,
+    "ProcessPath":null,
+    "LauncherPath":"D:/Games/Guild Wars/Gw.exe",
+    "LauncherCommandLineParams":null,
+    "LastTimeVerified":"2020-03-28T19:47:44.828Z",
+    "ManuallyAdded":false,
+    "WasAutoAddedByProcessDetection":true,
+    "GameInfo":{ ... }
+}
+```
+
+## GetRunningGameInfoResult Object
+
+Parameter            | Type     | Description                                                                                         | 
+---------------------| ---------| --------------------------------------------------------------------------------------------------- | 
+| success            | boolean  |                                                                                                     |  
+| error              | string   | null if success is true                                                                             |
+| isInFocus          | bool     | Returns whether the game is currently in focus                                                      | 
+| isRunning          | bool     | Returns whether the game is currently running                                                       | 
+| allowsVideoCapture | bool     | Returns whether the game allows video to be captured                                                | 
+| title              | string   | Returns the title of the game                                                                       | 
+| id                 | int      | Returns the game ID concatenated with the Instance ID of the game. Divide it by 10 to get the game ID |
+| width              | int      | Returns the pixel width of the game window                                                          | 
+| height             | int      | Returns the pixel height of the game window                                                         | 
+| logicalWidth       | int      | Returns the game-reported (logical) pixel width of the game window                                  | 
+| logicalHeight      | int      | Returns the game-reported (logical) pixel height of the game window                                 | 
+| renderers          | string[] | Returns an array of the rendering technology names supported by the running game                    | 
+| detectedRenderer   | string   | Returns the rendering technology detected by the running game                                       | 
+| commandLine        | string   | Returns the game process commandline                                                                | 
+| monitorHandle      | object   | Returns the current monitor handle                                                                  | 
+| windowHandle       | object   | Returns the current app window handle                                                               | 
+
+#### Example data: Success
+
+```json
+{
+    "success":true,
+    "isInFocus":false,
+    "isRunning":true,
+    "allowsVideoCapture":true,
+    "title":"Guild Wars",
+    "displayName":"",
+    "shortTitle":"",
+    "id":11361,
+    "classId":1136,
+    "width":1920,
+    "height":1080,
+    "logicalWidth":1920,
+    "logicalHeight":1080,
+    "renderers":[
+        "D3D9"
+    ],
+    "detectedRenderer":"Unknown",
+    "executionPath":"D:/Games/Guild Wars/Gw.exe",
+    "sessionId":"3ced63b755724fd4ab1d3d2a210aa764",
+    "commandLine":"\"D:/Games/Guild Wars/Gw.exe\"",
+    "type":0,
+    "typeAsString":"Game",
+    "windowHandle":{
+        "value":0
+    },
+    "monitorHandle":{
+        "value":0
+    }
+}
+```
+
+
+
+## GetGameInfoResult Object
+
+Parameter          | Type                                                   | Description                         |
+-------------------| -------------------------------------------------------| ------------------------------------|
+success            | boolean                                                |                                     |
+error              | string                                                 | null if success is true             |
+gameInfo           | [InstalledGameInfo](#installedgameinfo-object) object  | Provides the installed game info    |   
+
+#### Example data: Success
+
+```json
+{
+   "success":true,
+   "gameInfo":{ //InstalledGameInfo object
+      "GameInfoClassID":1136,
+      "GameInfoID":11361,
+      "ProcessPath":null,
+      "LauncherPath":"D:/Games/Guild Wars/Gw.exe",
+      "LauncherCommandLineParams":null,
+      "LastTimeVerified":"2020-03-28T19:47:44.828Z",
+      "ManuallyAdded":false,
+      "WasAutoAddedByProcessDetection":true,
+      "GameInfo":{ ... }  // GameInfo object
+   }
+}
+```
+
+## GetGameDBInfoResult Object
+
+Parameter          | Type                                                   | Description                         |
+-------------------| -------------------------------------------------------| ------------------------------------|
+success            | boolean                                                |                                     |
+error              | string                                                 | null if success is true             |
+installedGameInfo  | [InstalledGameInfo](#installedgameinfo-object) object  | Provides the installed game info    |   
+
+#### Example data: Success
+
+```json
+{
+   "success":true,
+   "gameInfo":null, //null means that the game is installed on this machine
+   "installedGameInfo":{    //InstalledGameInfo object
+      "GameInfoClassID":1136,
+      "GameInfoID":11361,
+      "ProcessPath":null,
+      "LauncherPath":"D:/Games/Guild Wars/Gw.exe",
+      "LauncherCommandLineParams":null,
+      "LastTimeVerified":"2020-03-28T19:47:44.828Z",
+      "ManuallyAdded":false,
+      "WasAutoAddedByProcessDetection":true,
+      "GameInfo":{ ... } // GameInfo object
+   }
+}
+```
+
+#### Example data: Failure
+
+```json
+{
+    "success":false,
+    "error":"game not found",
+    "reason":"game not found" //for backward compatibility
+}
+```
+
+## GetRecentlyPlayedResult Object
+
+Parameter          | Type         | Description                                    |
+-------------------| -------------| -----------------------------------------------|
+success            | boolean      |                                                |
+error              | string       | null if success is true                        |
+games              | number[]     | an array of the most recently played game IDs  |   
+
+#### Example data: Success
 
 ```json
 {  
-   "status":"success",
+   "success":true,
    "games":[  
       54261,
       11361,
@@ -200,15 +644,61 @@ callback      | function | Called with the array of game IDs                    
 }
 ```
 
-## onGameInfoUpdated
+## MajorFrameRateChangeEvent Object
 
-> Fired when game info is updated, including game name, game running, game terminated, game changing focus, etc. Passes a [GameInfoChangeData](#gameinfochangedata-object) object.
+#### Version added: 0.78 
+
+
+| Name         | Type     | Description                                                                                         |  Since |
+|--------------| ---------|-----------------------------------------------------------------------------------------------------| ------ |
+| fps_status   | string   | can be “None”, “Stable”, “Drop” and “Increase”                                                      |        |
+| fps          | number   | Indicates if there was a change in resolution (i.e. the width or height properties were changed)    |        |
 
 #### Event data example:
 
 ```json
 {
-    "gameInfo": {
+    "fps_status": "Increase", // can be “None”, “Stable”, “Drop” and “Increase”.
+    "fps": 35
+}
+```
+
+## GameRendererDetectedEvent Object
+
+#### Version added: 0.78 
+
+
+| Name               | Type     | Description     |  Since |
+|--------------------| ---------|-----------------| ------ |
+| detectedRenderer   | string   |                 |        |
+
+#### Event data example
+
+```json
+{
+    "detectedRenderer": "D3D9"
+}
+```
+
+## GameInfoUpdatedEvent Object
+
+#### Version added: 0.78 
+
+An object containing the game info object in addition to a set of flags indicating the changes from the last time that data was updated.
+
+| Name               | Type     | Description                                                                                         | Since |
+|--------------------| ---------|-----------------------------------------------------------------------------------------------------|------ |
+| gameInfo           | [RunningGameInfo](#runninggameinfo-object) object     | The new game info data                                 | 0.78  |
+| resolutionChanged  | bool     | Indicates if there was a change in resolution (i.e. the width or height properties were changed)    | 0.78  |
+| focusChanged       | bool     | Indicates if there was a change in the game focus status                                            | 0.78  |
+| runningChanged     | bool     | Indicates if there was a change in the game running status                                          | 0.78  |
+| gameChanged        | bool     | Indicates if the gameInfo property represents a different game than before                          | 0.78  |
+
+#### Event data example
+
+```json
+{
+    "gameInfo": {   //RunningGameInfo object
         "isInFocus": true,
         "isRunning": true,
         "allowsVideoCapture": true,
@@ -233,121 +723,3 @@ callback      | function | Called with the array of game IDs                    
     "gameChanged": false
 }
 ```
-
-## onGameLaunched
-
-> Fired when a game is launched.
-
-#### Event data example:
-
-```json
-{
-    "isInFocus": false,
-    "isRunning": true,
-    "allowsVideoCapture": true,
-    "title": "Dota 2",
-    "id": 73143,
-    "width": 1920,
-    "height": 1080,
-    "logicalWidth": 1920,
-    "logicalHeight": 1080,
-    "renderers": [
-        "D3D9",
-        "D3D11"
-    ],
-    "detectedRenderer": "Unknown",
-    "executionPath": "D:/Steam/steamapps/common/dota2/game/bin/win64/dota2.exe",
-    "sessionId": "9b163a0c0ca74d2c8f01f85d4fade07f",
-    "commandLine": "D:/Steam/steamapps/common/dota2/game/bin/win64/dota2.exe -steam"
-}
-```
-
-## onMajorFrameRateChange
-
-> Fired when the rendering frame-rate of the currently injected game changes dramatically.
-
-#### Event data example:
-
-```json
-{
-    "fps_status": "Increase", // can be “None”, “Stable”, “Drop” and “Increase”.
-    "fps": 35
-}
-```
-
-## onGameRendererDetected
-
-> Fired when the rendering method of the game has been detected.
-
-#### Event data example:
-
-```json
-{
-    "detectedRenderer": "D3D9"
-}
-```
-
-## GameInfo object
-
-#### Version added: 0.78 
-
-Contains information about a game.
-
-| Name               | Type     | Description                                                                                         | Since |
-|--------------------| ---------|-----------------------------------------------------------------------------------------------------|------ |
-| isInFocus          | bool     | Returns whether the game is currently in focus                                                      | 0.78  |
-| isRunning          | bool     | Returns whether the game is currently running                                                       | 0.78  |
-| allowsVideoCapture | bool     | Returns whether the game allows video to be captured                                                | 0.78  |
-| title              | string   | Returns the title of the game                                                                       | 0.78  |
-| id                 | int      | Returns the game ID concatenated with the Instance ID of the game. Divide it by 10 to get the game ID                                                                           | 0.78  |
-| width              | int      | Returns the pixel width of the game window                                                          | 0.78  |
-| height             | int      | Returns the pixel height of the game window                                                         | 0.78  |
-| logicalWidth       | int      | Returns the game-reported (logical) pixel width of the game window                                  | 0.78  |
-| logicalHeight      | int      | Returns the game-reported (logical) pixel height of the game window                                 | 0.78  |
-| renderers          | string[] | Returns an array of the rendering technology names supported by the running game                    | 0.78  |
-| detectedRenderer   | string   | Returns the rendering technology detected by the running game                                       | 0.78  |
-| commandLine        | string   | Returns the game process commandline                                                                | 0.78  |
-| monitorHandle      | object   | Returns the current monitor handle                                                                  | 0.135 |
-| windowHandle       | object   | Returns the current app window handle                                                               | 0.135 |
-
-#### Example data
-
-```json
-{ 
-   "isInFocus":false,
-   "isRunning":true,
-   "allowsVideoCapture":true,
-   "title":"Guild Wars",
-   "displayName":"",
-   "shortTitle":"",
-   "id":11361,
-   "classId":1136,
-   "width":1920,
-   "height":1080,
-   "logicalWidth":1920,
-   "logicalHeight":1080,
-   "renderers":["D3D9"],
-   "detectedRenderer":"D3D9",
-   "executionPath":"D:/Games/Guild Wars/Gw.exe",
-   "sessionId":"96879a3f7545472194ae86eb5a8fd64a",
-   "commandLine":"\"D:/Games/Guild Wars/Gw.exe\"",
-   "type":0,
-   "typeAsString":"Game",
-   "windowHandle":{"value":592562},
-   "monitorHandle":{"value":329731}
-}
-```
-
-## GameInfoChangeData object
-
-#### Version added: 0.78 
-
-An object containing the game info object in addition to a set of flags indicating the changes from the last time that data was updated.
-
-| Name               | Type     | Description                                                                                         | Since |
-|--------------------| ---------|-----------------------------------------------------------------------------------------------------|------ |
-| gameInfo           | [GameInfo](#gameinfo-object) object     | The new game info data                                               | 0.78  |
-| resolutionChanged  | bool     | Indicates if there was a change in resolution (i.e. the width or height properties were changed)    | 0.78  |
-| focusChanged       | bool     | Indicates if there was a change in the game focus status                                            | 0.78  |
-| runningChanged     | bool     | Indicates if there was a change in the game running status                                          | 0.78  |
-| gameChanged        | bool     | Indicates if the gameInfo property represents a different game than before                          | 0.78  |

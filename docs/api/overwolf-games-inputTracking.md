@@ -19,93 +19,38 @@ Provides keyboard and mouse activity information while the user is in-game.
 * [overwolf.games.inputTracking.onMouseUp](#onmouseup)
 * [overwolf.games.inputTracking.onMouseDown](#onmousedown)
 
+## Types Reference
+
+* [overwolf.games.inputTracking.InputActivity](#inputactivity-object) Object
+* [overwolf.games.inputTracking.MousePosition](#mouseposition-object) Object
+* [overwolf.games.inputTracking.GetActivityResult](#getactivityresult-object) Object
+* [overwolf.games.inputTracking.GetMousePositionResult](#getmousepositionresult-object) Object
+
+
 ## getActivityInformation(callback)
 #### Version added: 0.92
 
 > Returns input activity information.
 
-Parameter | Type                  | Description                              |
---------- | ----------------------| ---------------------------------------- |
-callback  | function              | Callback with input activity information |
-
-#### Callback argument: Success
+Parameter | Type                                 | Description                              |
+--------- | -------------------------------------| ---------------------------------------- |
+callback  | [(Result:GetActivityResult)](#getactivityresult-object) => void | Callback with input activity information |
 
 The information includes key presses and clicks for keyboard/mouse, total session time, idle time and overall actions-per-minute. This information resets between game executions.
-
-```json
-{
-  "status": "success",
-  "activity": {
-    "mouse": {
-      "total": 34,
-      "dist": 18822,
-      "keys": {
-        "M_Right": 29,
-        "M_Left": 5
-      }
-    },
-    "keyboard": {
-      "total": 0,
-      "keys": {}
-    },
-    "aTime": 2.86,
-    "iTime": 4.63,
-    "apm": 12
-  }
-}
-```
 
 ## getMatchActivityInformation(callback)
 #### Version added: 0.92
 
 > Returns input activity information (similar to [getActivityInformation()](#getactivityinformationcallback)), however, when this is supported, it will return data only for the latest match of the current game.
 
+Parameter | Type                  | Description                              |
+--------- | ----------------------| ---------------------------------------- |
+callback  | [(Result:GetActivityResult)](#getactivityresult-object) => void | Callback with input activity information |
+
 In order to get the information:
 
 * The latest match must have lasted for more than 5 minutes.
 * The user must have clicked more than 30 times on either keyboard or mouse.
-
-Parameter | Type                  | Description                              |
---------- | ----------------------| ---------------------------------------- |
-callback  | function              | Callback with the activity information |
-
-#### Callback argument: Success
-
-```json
-{  
-   "status":"success",
-   "activity":{  
-      "mouse":{  
-         "total":424,
-         "dist":111176,
-         "keys":{  
-            "M_Right":413,
-            "M_Left":11
-         }
-      },
-      "keyboard":{  
-         "total":83,
-         "keys":{  
-            "4":1,
-            "Q":20,
-            "W":20,
-            "E":19,
-            "R":10,
-            "SPACE":4,
-            "LCONTROL+TAB":2,
-            "TAB":2,
-            "ESCAPE":2,
-            "LMENU+F4":1,
-            "F":1,
-            "OEM_3":1
-         }
-      },
-      "aTime":4.36,
-      "iTime":1.31,
-      "apm":116
-   }
-}
-```
 
 ## getMousePosition(callback)
 #### Version added: 0.93
@@ -116,23 +61,7 @@ The data includes the mouse position and a boolean stating whether the click was
 
 Parameter | Type                  | Description                              |
 --------- | ----------------------| ---------------------------------------- |
-callback  | function              | Callback with the activity information |
-
-#### Callback argument: Success
-
-```json
-{
-    "status": "success",
-    "mousePosition": {
-        "x": 1741,
-        "y": 656,
-        "onGame": true,
-        "handle": {
-            "value": 526402
-        }
-    }
-}
-```
+callback  | [(Result:GetMousePositionResult)](#getmousepositionresult-object) => void | Callback with input activity information |
 
 ## onKeyUp
 
@@ -226,5 +155,94 @@ The event information includes whether the left or white mouse button was clicke
     "x": 177,
     "y": 529,
     "onGame": true
+}
+```
+
+## InputActivity Object
+
+Parameter          | Type     | Description                                 |
+-------------------| ---------| ------------------------------------------- |
+aTime              | number   |                                             |
+iTime              | number   |                                             |
+apm                | boolean  |                                             |   
+mouse              | object   | { total: number, dist: number, keys: any }  |   
+keyboard           | object   | { total: number, keys: any }                |   
+
+## MousePosition Object
+
+Parameter          | Type     | Description                                 |
+-------------------| ---------| ------------------------------------------- |
+x                  | number   |                                             |
+y                  | number   |                                             |
+onGame             | boolean  |                                             |   
+handle             | object   |  { value: number }                          |   
+
+## GetActivityResult Object
+
+Parameter          | Type     | Description                                 |
+-------------------| ---------| ------------------------------------------- |
+success            | boolean  |                                             |
+error              | string   | null if success is true                     |
+activity           | [InputActivity](#inputactivity-object) object |  the input  activity information |   
+
+#### Example data: Success
+
+```json
+{  
+   "success":true,
+   "activity":{  
+      "mouse":{  
+         "total":424,
+         "dist":111176,
+         "keys":{  
+            "M_Right":413,
+            "M_Left":11
+         }
+      },
+      "keyboard":{  
+         "total":83,
+         "keys":{  
+            "4":1,
+            "Q":20,
+            "W":20,
+            "E":19,
+            "R":10,
+            "SPACE":4,
+            "LCONTROL+TAB":2,
+            "TAB":2,
+            "ESCAPE":2,
+            "LMENU+F4":1,
+            "F":1,
+            "OEM_3":1
+         }
+      },
+      "aTime":4.36,
+      "iTime":1.31,
+      "apm":116
+   }
+}
+```
+
+## GetMousePositionResult Object
+
+Parameter          | Type     | Description                                 |
+-------------------| ---------| ------------------------------------------- |
+success            | boolean  |                                             |
+error              | string   | null if success is true                     |
+mousePosition      | [MousePosition](#mouseposition-object) object |  the input  activity information |   
+
+#### Example data: Success
+
+```json
+{
+    "success": true,
+    "mousePosition": {
+        "x": 1741,
+        "y": 656,
+        "onGame": true,
+        "handle": {
+            "value": 526402
+        }
+    }
 }
 ```
