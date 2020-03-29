@@ -11,7 +11,7 @@ Please read the [overwolf.games.events](overwolf-games-events) documentation pag
 :::
 
 ## Sample Apps
-* [Dota2 game events sample app](https://github.com/overwolf/dota-events-sample-app)
+* [Dota2 game events sample app](https://github.com/overwolf/events-sample-apps/tree/master/dota-events-sample-app-master)
 
 ## Available Features
 
