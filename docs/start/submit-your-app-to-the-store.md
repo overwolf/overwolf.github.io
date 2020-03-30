@@ -35,7 +35,7 @@ myZip
          +---- Tile.jpg
          +---- Icon.png
          +---- ScreenshotX.jpg
-         +----  description.txt
+         +----  description.html
          +----  store.json
 
 </pre>
@@ -98,7 +98,7 @@ Please make sure your chosen icon looks great on both dark and bright background
 
 <img src="../assets/submit-your-app-to-the-store/SubIcon.png" alt="Icon" width="100"/>
 
-### 3. ScreenshotX.jpg  
+### 3. ScreenshotX.html
 Include at least one screenshot of your app which will be shown in the app’s page when reached through the Appstore. Providing more than one attractive screenshots increases your app’s chances of getting noticed and winning hearts. For each image file change X to a number (1-5). 
 
 Screenshots must be in JPG format, sized 656X410 pixels. Please choose screenshots that remain clear and where features can be spotted at this resolution. You may include up to 5 screenshots per app, or 4 screenshots if you choose to implement a video (see store.json information below).
