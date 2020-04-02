@@ -98,14 +98,14 @@ Please make sure your chosen icon looks great on both dark and bright background
 
 <img src="../assets/submit-your-app-to-the-store/SubIcon.png" alt="Icon" width="100"/>
 
-### 3. ScreenshotX.html
+### 3. ScreenshotX.jpg
 Include at least one screenshot of your app which will be shown in the app’s page when reached through the Appstore. Providing more than one attractive screenshots increases your app’s chances of getting noticed and winning hearts. For each image file change X to a number (1-5). 
 
 Screenshots must be in JPG format, sized 656X410 pixels. Please choose screenshots that remain clear and where features can be spotted at this resolution. You may include up to 5 screenshots per app, or 4 screenshots if you choose to implement a video (see store.json information below).
 
-<img src="../assets/submit-your-app-to-the-store/SubScreenshot1.png" alt="Screenshot" width="900"/>
+<img src="../assets/submit-your-app-to-the-store/SubScreenshot1.jpg" alt="Screenshot" width="900"/>
 
-### 4. description.txt  
+### 4. description.html  
 An **HTML** text file containing the full Appstore description of your app, this description will appear when users click on your app's store tile. This description can be edited using basic HTML including H3, BR, A HREF and several other functions. The maximum length for an appstore description is 2000 characters including spaces. Please notice that the description **must** contain an header tag.
 The store tile description is included in the app's [manifest.json](https://overwolf.github.io/docs/api/manifest-json)
 
