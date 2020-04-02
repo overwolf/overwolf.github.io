@@ -72,7 +72,6 @@ Basic usage flow:
 
    Note that you only need to call stop if you called `startCapture()` without setting the `futureDuration` parameter. Otherwise, the capture is stopped automatically.
 
-
 6. **Call [overwolf.media.replays.turnOff()](../api/overwolf-media-replays#turnoffcallback)**, as soon as you’re no longer interested in capturing video in order to free up resources.
 
 ### Auto-highlights capture
