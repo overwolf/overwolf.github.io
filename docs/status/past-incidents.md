@@ -30,7 +30,12 @@ Nov 07, 08:38 AM GMT+3
 
 CS: GO
 ------
-No logs.
+
+**Resolved** - This incident has been resolved.  
+Apr 01, 11:47 PM GMT+3
+
+**Investigating** - CS:GO "roster" events are down, we are working on a fix.  
+Apr 01, 10:20 AM GMT+3
 
 Dota 2
 ------
@@ -38,7 +43,7 @@ Dota 2
 **Resolved** - This incident has been resolved.  
 Mar 03, 11:50 AM GMT+3
 
-**Investigating** - Dota 2 events are down.
+**Investigating** - Dota 2 events are down.  
 Mar 03, 09:21 AM GMT+3
 
 Dota Underlords
@@ -47,7 +52,7 @@ Dota Underlords
 **Resolved** - This incident has been resolved.  
 Dec 22, 14:35 PM GMT+3
 
-**Investigating** - Dota Underlords events are down.
+**Investigating** - Dota Underlords events are down.  
 Dec 19, 08:29 AM GMT+3
 
 Fortnite
@@ -56,19 +61,19 @@ Fortnite
 **Resolved** - This incident has been resolved.  
 Mar 06, 04:19 PM GMT+3
 
-**Investigating** - Fortnite events are down.
+**Investigating** - Fortnite events are down.  
 Mar 03, 09:21 AM GMT+3
 
 **Resolved** - This incident has been resolved.  
 Feb 21, 02:30 PM GMT+3
 
-**Investigating** - Fortnite events are down.
+**Investigating** - Fortnite events are down.  
 Feb 20, 01:05 PM GMT+3
 
 **Resolved** - This incident has been resolved.  
 Feb 05, 09:48 PM GMT+3
 
-**Investigating** - Fortnite events are down.
+**Investigating** - Fortnite events are down.  
 Feb 05, 01:00 AM GMT+3
 
 **Resolved** - This incident has been resolved.  
@@ -80,7 +85,7 @@ Dec 15, 13:34 PM GMT+3
 **Resolved** - This incident has been resolved.  
 Nov 20, 22:20 PM GMT+3
 
-**Investigating** - Fortnite events are down.
+**Investigating** - Fortnite events are down.  
 Nov 20, 09:32 PM GMT+3
 
 **Resolved** - This incident has been resolved.  
@@ -124,10 +129,8 @@ League of Legends
 **Resolved** - This incident has been resolved.  
 Jan 22, 05:10 PM GMT+3
 
-**Investigating** - Game events are down for RIOT maintenance. 
+**Investigating** - Game events are down for RIOT maintenance.  
 Jan 22, 03:01 PM GMT+3
-
-No logs.
 
 Legends of Runeterra
 --------------------
@@ -153,19 +156,19 @@ PUBG
 **Resolved** - This incident has been resolved.  
 Jan 22, 05:10 PM GMT+3
 
-**Investigating** - PUBG events are down.
+**Investigating** - PUBG events are down.  
 Jan 22, 10:16 AM GMT+3
 
 **Resolved** - This incident has been resolved.  
 Dec 19, 09:29 PM GMT+3
 
-**Investigating** - PUBG events are down.
+**Investigating** - PUBG events are down.  
 Dec 18, 11:00 AM GMT+3
 
 **Resolved** - This incident has been resolved.  
 Nov 20, 22:20 PM GMT+3
 
-**Investigating** - PUBG events are down.
+**Investigating** - PUBG events are down.  
 Nov 20, 09:32 PM GMT+3
 
 **Resolved** - This incident has been resolved.  
@@ -242,39 +245,45 @@ Teamfight Tactics
 -----------------
 
 **Resolved** - This incident has been resolved.  
+Apr 01, 11:47 PM GMT+3
+
+**Investigating** - TFT "champion level" events are currently down, we are working on a fix.  
+Apr 01, 10:20 AM GMT+3
+
+**Resolved** - This incident has been resolved.  
 Mar 04, 11:50 PM GMT+3
 
-**Investigating** - TFT events are down, we are working on a fix.
+**Investigating** - TFT events are down, we are working on a fix.  
 Mar 04, 10:01 AM GMT+3
 
 **Resolved** - This incident has been resolved.  
 Feb 20, 10:18 PM GMT+3
 
-**Investigating** - TFT events are down, we are working on a fix.
+**Investigating** - TFT events are down, we are working on a fix.  
 Feb 20, 01:25 PM GMT+3
 
 **Resolved** - This incident has been resolved.  
 Jan 24, 12:50 PM GMT+3
 
-**Investigating** - Some of the TFT events are down, we are working on a fix.
+**Investigating** - Some of the TFT events are down, we are working on a fix.  
 Jan 23, 11:25 AM GMT+3
 
 **Resolved** - This incident has been resolved.  
 Jan 08, 10:16 PM GMT+3
 
-**Investigating** -  TFT game events are down.
+**Investigating** -  TFT game events are down.  
 Jan 08, 08:54 AM GMT+3
 
 **Resolved** - This incident has been resolved.  
 Dec 11, 17:15 AM GMT+3
 
-**Investigating** -  TFT game events are down.
+**Investigating** -  TFT game events are down.  
 Dec 11, 09:19 AM GMT+3
 
 **Resolved** - This incident has been resolved.  
 Nov 20, 22:20 PM GMT+3
 
-**Investigating** -  TFT game events are down.
+**Investigating** -  TFT game events are down.  
 Nov 20, 09:32 AM GMT+3
 
 **Resolved** - This incident has been resolved.  

@@ -68,7 +68,10 @@ Basic usage flow:
    Note that in all methods, the replay ID returns via callback, and it is needed to finish capturing the replay.
 
 5. **Call [overwolf.media.replays.stopCapture()](../api/overwolf-media-replays#stopcapturereplaytype-replayid-callback)**.  
-   Finishes capturing a replay and returns a URL leading to the created video file.
+   Finishes capturing a replay and returns a URL leading to the created video file.  
+
+   Note that you only need to call stop if you called `startCapture()` without setting the `futureDuration` parameter. Otherwise, the capture is stopped automatically.
+
 
 6. **Call [overwolf.media.replays.turnOff()](../api/overwolf-media-replays#turnoffcallback)**, as soon as you’re no longer interested in capturing video in order to free up resources.
 
@@ -81,12 +84,12 @@ Basic usage flow:
 
 2. **Call [overwolf.media.replays.turnOn()](../api/overwolf-media-replays#turnonparameters-callback)** with the auto-highlights feature enabled:  
    Set the `enable` field of the [overwolf.media.replays.ReplayHighlightsSetting](../api/overwolf-media-replays#replayhighlightssetting-object) Object to `true`.  
-   Here you also set the capture buffer that is used for all the other functions.
+   Here you also set the capture buffer that is used for all the other functions.  
 
-3. **Call [overwolf.media.replays.stopCapture()](../api/overwolf-media-replays#stopcapturereplaytype-replayid-callback)**.  
-   Finishes capturing a replay and returns a URL to the created video file.
+   With this mode, you don't need to start or stop the capture. It's done automatically.  
+   Once a highlight is captured, the `onHighlightsCaptured` event is triggered, and contain the URL of the created video file.
 
-4. **Call [overwolf.media.replays.turnOff()](../api/overwolf-media-replays#turnoffcallback)**, as soon as you’re no longer interested in capturing, in order to free up resources.
+3. **Call [overwolf.media.replays.turnOff()](../api/overwolf-media-replays#turnoffcallback)**, as soon as you’re no longer interested in capturing, in order to free up resources.
 
 ## Using overwolf.streaming
 
