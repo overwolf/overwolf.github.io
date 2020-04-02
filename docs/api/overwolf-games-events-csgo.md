@@ -39,6 +39,7 @@ Please read the [overwolf.games.events](overwolf-games-events) documentation pag
 * [team_set](#team_set)
 * [replay](#replay)
 * [counters](#counters)
+* [mvp](#mvp)
 
 ## Game events status
 
@@ -559,3 +560,19 @@ Data Example:
 key               | Category    | Values                    | Notes                 | Since GEP Ver. |
 ----------------- | ------------| ------------------------- | --------------------- | ------------- |
 ping              | performance | Latency to server         |                       |               |
+
+## `mvp`
+
+### Events
+
+Event       | Event Data   | Fired When    | Notes              | Since GEP Ver. |
+------------| -------------| --------------| ------------------ | --------------|
+mvp         | totalMvps    | mvp is awarded.| See [notes](#mvp-note)|     70.0      |
+
+#### *mvp* note
+
+Data Example:
+
+```json
+{"event":"mvp","value":{"totalMvps":1}}
+```
