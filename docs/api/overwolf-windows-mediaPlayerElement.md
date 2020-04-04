@@ -4,7 +4,7 @@ title: overwolf.windows.mediaPlayerElement API
 sidebar_label: overwolf.windows.mediaPlayerElement
 ---
 
-Use the `overwolf.windows.mediaPlayerElement` API to allows adding a media player element to a window to play video files.
+Use this API to allows adding a media player element to a window to play video files.
 
 ## Methods Reference
 

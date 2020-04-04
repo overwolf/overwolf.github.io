@@ -95,7 +95,7 @@ Common use cases:
 
 ## overwolf.profile.subscriptions
 
-> [overwolf.profile.subscriptions](api/overwolf-profile.subscriptions.md) Provides functions and events to help with user profile subscription management.
+> [overwolf.profile.subscriptions](api/overwolf-profile-subscriptions.md) Provides functions and events to help with user profile subscription management.
 
 
 ## overwolf.settings

@@ -4,7 +4,7 @@ title: overwolf.os.tray API
 sidebar_label: overwolf.os.tray
 ---
 
-Use the `overwolf.os.tray` API for windows system tray related functionalities.
+Use this API for windows system tray related functionalities.
 
 ## Methods Reference
 

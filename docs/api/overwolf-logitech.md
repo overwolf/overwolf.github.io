@@ -4,6 +4,8 @@ title: overwolf.logitech API
 sidebar_label: overwolf.logitech
 ---
 
+An API for Logitech features.
+
 ## Methods Reference
 
 * [overwolf.logitech.getVersion()](#getversioncallback)

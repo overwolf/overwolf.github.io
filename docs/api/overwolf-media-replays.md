@@ -4,7 +4,11 @@ title: overwolf.media.replays API
 sidebar_label: overwolf.media.replays
 ---
 
-Use the overwolf.media.replays API to capture a **short** video replay of the currently running game.
+Use this API to capture a **short** video replay of the currently running game.
+
+:::important
+Please read all the info about video capture usage and options on our [video capture best practices](../topics/video-capture) guide.
+:::
 
 ## Methods Reference
 

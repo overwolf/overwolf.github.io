@@ -4,7 +4,7 @@ title: overwolf.games.launchers.events API
 sidebar_label: overwolf.games.launchers.events
 ---
 
-This API returns an object with launcher related events and info-updates (Currently supported only for the League of Legends Launcher).
+Returns an object with launcher related events and info-updates (Currently supported only for the League of Legends Launcher).
 
 ## Methods Reference
 

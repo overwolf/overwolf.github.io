@@ -4,7 +4,7 @@ title: overwolf.settings.language API
 sidebar_label: overwolf.settings.language
 ---
 
-Use the `overwolf.settings.language` API to view and modify the Overwolf hotkeys language properties.
+Use this API to view and modify the Overwolf hotkeys language properties.
 
 ## Methods Reference
 

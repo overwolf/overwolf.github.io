@@ -4,9 +4,9 @@ title: overwolf.settings.hotkeys API
 sidebar_label: overwolf.settings.hotkeys
 ---
 
-Use the `overwolf.settings.hotkeys` API to view and modify the Overwolf hotkeys settings properties.
+Use this API to view and modify the Overwolf hotkeys settings properties.
 
-:::tip
+:::important
 Please read all the info about hotkeys and how to use them in our [hotkeys best practice](../topics/hotkeys-best-practices) guide.
 :::
 

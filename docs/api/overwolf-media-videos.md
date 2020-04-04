@@ -4,7 +4,11 @@ title: overwolf.media.videos API
 sidebar_label: overwolf.media.videos
 ---
 
-Use the `overwolf.media.videos` API to create video composition, delete video files, and get details of video files that were created by the app.
+Use this API to create video composition, delete video files, and get details of video files that were created by the app.
+
+:::important
+Please read all the info about video capture usage and options on our [video capture best practices](../topics/video-capture) guide.
+:::
 
 ## Methods Reference
 

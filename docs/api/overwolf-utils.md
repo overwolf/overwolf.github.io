@@ -4,7 +4,7 @@ title: overwolf.utils API
 sidebar_label: overwolf.utils
 ---
 
-Use the overwolf.utils API to get the user’s system information, send keystrokes to the game, open URL in default browser and more.
+Use this API to get the user’s system information, send keystrokes to the game, open URL in default browser and more.
 
 Common use cases:
 

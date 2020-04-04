@@ -24,7 +24,7 @@ Any of your users with a Paypal account or international credit card can subscri
 
 ## The overwolf.profile.subscription API
 
-Read full API documentation for the subscriptions API [here](../api/overwolf-profile.subscriptions).
+Read full API documentation for the subscriptions API [here](../api/overwolf-profile-subscriptions).
 
 ## We're here to help
 

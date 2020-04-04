@@ -4,7 +4,7 @@ title: overwolf.web API
 sidebar_label: overwolf.web
 ---
 
-Use the `overwolf.web` API to open a local HTTP web-server and a WebSocket.
+Use this API to open a local HTTP web-server and a WebSocket.
 
 ## Methods Reference
 

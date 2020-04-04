@@ -52,7 +52,7 @@ Once the user successfully finishes the subscription process, a [SubscriptionCha
 
 ## 3. Check Whether the User is Subscribed
 
-To properly reward subscribed users with premium features (in this case, removing ads), you should check whether your current subscription plan is active for the current user. We will do that using the [overwolf.profile.subscriptions.getActivePlans()](../api/overwolf-profile.subscriptions#getactiveplanscallback) function:
+To properly reward subscribed users with premium features (in this case, removing ads), you should check whether your current subscription plan is active for the current user. We will do that using the [overwolf.profile.subscriptions.getActivePlans()](../api/overwolf-profile-subscriptions#getactiveplanscallback) function:
 
 ```js
 
@@ -75,7 +75,7 @@ overwolf.profile.subscriptions.getActivePlans(function(info) {
 
 ## 4. Monitor Subscription Changes
 
-You can register to the [overwolf.profile.subscriptions.onSubscriptionChanged](../api/overwolf-profile.subscriptions#onsubscriptionchanged) event which fires when the current extension subscription status has changed.  
+You can register to the [overwolf.profile.subscriptions.onSubscriptionChanged](../api/overwolf-profile-subscriptions#onsubscriptionchanged) event which fires when the current extension subscription status has changed.  
 
 If a user canceled their subscription or the subscription expired while the app is running, you can spot it on time and sync your app behavior accordingly.
 

@@ -197,7 +197,7 @@ This means no more if (!result || !result.status ...) checks. Instead, this shou
 
 ## Version 0.134 (Aug. 2019)
 
-* New API: [overwolf.profile.subscriptions](overwolf-profile.subscriptions).  
+* New API: [overwolf.profile.subscriptions](overwolf-profile-subscriptions).  
   Provides functions and events to help with user subscription management.
 
 * [Teamfight Tactics Events](overwolf-games-events-tft#docsNav)

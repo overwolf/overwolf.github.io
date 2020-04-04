@@ -4,7 +4,7 @@ title: overwolf.settings API
 sidebar_label: overwolf.settings
 ---
 
-Use the `overwolf.settings` API to view and modify one of the following Overwolf settings properties:
+Use this API to view and modify one of the following Overwolf settings properties:
 
 * Hotkeys – register a function for a given hotkey, or retrieve an existing hotkey key combination.
 * Retrieve the current Overwolf user language.

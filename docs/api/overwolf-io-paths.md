@@ -4,12 +4,13 @@ title: overwolf.io.paths API
 sidebar_label: overwolf.io.paths
 ---
 
-Use the `overwolf.io.paths` API to obtain system folder paths. 
-You can call the object properties to get the requested path:
+Use this API to obtain system folder paths.
 
 :::tip
  For more I/O functionalities, please use our [simple I/O plugin](../topics/simple-io-plugin).
 :::
+
+You can call the object properties to get the requested path:
 
 ## Supported paths
 

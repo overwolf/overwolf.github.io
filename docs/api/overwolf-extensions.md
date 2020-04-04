@@ -4,7 +4,7 @@ title: overwolf.extensions API
 sidebar_label: overwolf.extensions
 ---
 
-Use the `overwolf.extensions` API to change or retrieve the information of an Overwolf app or respond to events in the app’s lifecycle.
+Change or retrieve the information of an Overwolf app or respond to events in the app’s lifecycle.
  
 ## Special Overwolf URLs
 

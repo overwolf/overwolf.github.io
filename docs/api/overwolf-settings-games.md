@@ -4,9 +4,11 @@ title: overwolf.settings.games API
 sidebar_label: overwolf.settings.games
 ---
 
-Use the `overwolf.settings.games` API to view the game-settings features functions.
+Use this API to view the game-settings features functions.
 
-* More information and best practices for using game settings can be found [here](../topics/games-settings).
+:::important
+Please read our best practices for using game settings can be found [here](../topics/games-settings).
+:::
 
 ## Special OW URL's
 

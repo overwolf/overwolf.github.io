@@ -1,14 +1,16 @@
 ---
-id: overwolf-profile.subscriptions
+id: overwolf-profile-subscriptions
 title: overwolf.profile.subscriptions API
 sidebar_label: overwolf.profile.subscriptions
 ---
 
-The `overwolf.profile.subscriptions` API provides functions and events to help with user profile subscription management.
+Provides functions and events to help with user profile subscription management.
 
 * **Permissions required: profile**
 
-* **Read all the info about app subscriptions [here](../start/subscriptions-overview).**
+:::important
+Please read all the info about app subscriptions [here](../start/subscriptions-overview).
+:::
 
 ## Methods Reference
 

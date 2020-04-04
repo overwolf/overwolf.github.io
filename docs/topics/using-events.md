@@ -1,46 +1,129 @@
 ---
 id: using-events
-title: Using events in your app
-sidebar_label: Using game events
+title: Using game events in your app
+sidebar_label: Using game events in your app
 ---
-In this basic overview we'll discuss javaScript events which fuel various Overwolf's APIs. If you are familiar with JS events, and you want to learn how to use Overwolf game events, you can skip directly to the [overwolf.games.events API](../api/overwolf-games-events) entry.
 
-## JS Events Basics
+Overwolf supports events for multiple games, and for each supported game, there are many game events: kills, deaths, victories, damage caused, gold spent, and many others.
 
-An event is an object that reacts when something interesting to you happens. Here’s an example of using the `onStopStreaming` event to be notified whenever a stream has stopped:
+The full list of supported games with their Game ID’s is always up to date and can be found [here](../api/games-ids).
 
-```js
-overwolf.streaming.onStopStreaming.addListener(
-    function (value) {
-        alert("a stream with id " + value.stream_id + " had stopped");
-    }
-);
+In this guide, we'll discuss the different types of Overwolf game events features, how to register to these game events, and how to consume them from your OW app, using the [overwolf.games.events API](../api/overwolf-games-events).
+
+## Features Overview
+
+Each supported game has its own set of available features.
+A feature is a category of related game events, for example 'Match Start', 'Match End', 'Match Outcome' are all events belonging to the Match feature.  
+
+You can review the supported features for each game in the relevant game page found on the sidebar menu, for example, [the League of Legends page](../api/overwolf-games-events-lol).
+
+## Feature types
+
+Each feature is broken down into two entity types: **info updates** and **events**.
+
+1. `Info Updates` – game information changes that define the game’s current status.  
+   For example - a match is currently taking place.
+
+2. `Events` – specific events that happen in the game.  
+   For example - You just got killed.
+
+A single feature can contain multiple info updates and events.  
+
+On the next clause, you are going to learn how to [register to features](#how-to-register-to-features) and listen to events or info updates.
+
+#### feature example: "Death" feature in LoL
+
+The "Death" feature in League of Legends has a:
+
+* "death" **event**, which fires when the player's champion died.
+
+* "deaths" **info update**, holds a counter for the total number of player deaths in the current session.
+
+## How to register to features
+
+To make sure the data you have is full and consistent, please follow these steps in order:
+
+### 1. Update your manifest file
+
+#### set the relevant game events
+
+The first step is to declare the game for which your app wants to register features.</br>
+The declaration is made by adding the game’s class ID under the [game_events](../api/manifest-json#game_events) section in your manifest.json.  
+This property is an array of [game class ids](../api/games-ids) that the app wants to register for.  
+
+Note that a single app can register for multiple games, but there is no wildcard support, so even if your app wants to consume events from all the supported games, you should set each one of them.
+
+This is how the value would look like if the app is interested in receiving events for LoL and CS:GO:
+
+```json
+"data":{
+      "game_events":[5426, 7764]
+      ...
+   }
 ```
 
-As the example shows, you register for these alerts using addListener().
+#### set the overlay permissions
 
-:::warning
-We’ve seen situations where apps would register addListener multiple times for the same event – this caused the event to be triggered multiple times and causes unexpected bugs and memory leaks. Please pay attention when registering to events and prevent it.
+The second step is to set the game IDs that your app targeted and permitted to display in-game overlay windows on them
 
-You can also unregister from an event using the removeListener() function.
-:::
+This is how the value would look like if the app is interested in displaying an in-game overlay for LoL and CS:GO:
 
-## addListener(callback)
+```json
+"game_targeting": {
+    "type": "dedicated",
+    "game_ids": [5426, 7764]
+}
+```
 
-#### Version added: 0.78 
+#### set auto-launch
 
-> Registers a listener to an event. When the event occurs, all registered listeners are called.
+If you like, you can define a list of games triggering the app to launch, using the [launch_events](../api/manifest-json#launch_events) manifest property.
 
-Parameter     | Type     | Description                                                                       |
---------------| -------- | --------------------------------------------------------------------------------- |
-callback      | function | The callback function to call when the event occurs                               |
+This is how the value would look like if the app is interested to auto-launching for LoL and CS:GO:
 
-## removeListener(callback)
+```json
+"launch_events": [{
+    "event": "GameLaunch",
+    "tracked": false,
+    "event_data": {
+        "game_ids": [5426, 7764],
+        "wait_for_stable_framerate": 30
+    },
+    "start_minimized": true
+}]
+```
 
-#### Version added: 0.78 
+### 2. Listen to info updates or events
 
-> Unregister a listener to an event.
+We mentioned above that each feature is broken down into two entity types: info updates and events.  
+The next step is to add a listener to the relevant entity type in your code.  
 
-Parameter     | Type     | Description                                                                                                                 |
---------------| -------- | --------------------------------------------------------------------------------------------------------------------------- |
-callback      | function | The callback should be the same function that was passed to addListener()</br>**so this won’t work with anonymous function**  |
+#### Listen to game events
+
+You can receive this entity type by registering to the [overwolf.games.events.onNewEvents](../api/#onnewevents) event listener.
+
+#### Listen to info updates
+
+You can receive this entity type by registering to the [overwolf.games.events.onInfoUpdates2](../api/#oninfoupdates2) event listener.  
+
+To get all the current info state and all the info-updates that happend BEFORE you registered to this event listnerer, make sure to call [overwolf.games.events.getInfo()](../api/#getinfocallback). Read more about it on [chapter 4](../api/#4-get-current-info-state). 
+
+### 3. Call setRequiredFeatures()
+
+The final step is to call [overwolf.games.events.setRequiredFeatures](../api/#setrequiredfeaturesfeatures-callback). Once the app wants to start receiving specific info updates and events, you call this function with an array of feature names that you would like your app to use.
+
+This is an example when an app requires Rocket League features:
+
+```javascript
+overwolf.games.events.setRequiredFeatures(['stats', 'match'], function(info) {
+    console.log(info);
+});
+```
+
+### 4. Get current info state
+
+In some cases, you might add the listener to [onInfoUpdates2](../api/#oninfoupdates2) or to [onNewEvents](../api/#onnewevents) AFTER the info update has already happened so that the app will miss the info-update event.
+
+Also, you might want to receive all info updates that happened before [setRequiredFeatures()](../api/#setrequiredfeaturesfeatures-callback) succeeded.
+
+For those reasons, as a final step, you should call [overwolf.games.events.getInfo()](../api/#getinfocallback) to get the current info state.

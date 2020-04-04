@@ -23,7 +23,7 @@
 		"Using Plugins":
 			["topics/plugins-overview", "topics/how-to-use-plugins-in-your-app", "topics/writing-your-own-plugin", "topics/sample-plugin", "topics/simple-io-plugin", "topics/team-speak-plugin", "topics/process-manager-plugin"],
 		"Using Events":
-			["topics/using-events", "topics/using-events-simulator", "topics/howto-check-events-status-from-app"],
+			["topics/events-overview","topics/using-events","topics/using-events-simulator", "topics/howto-check-events-status-from-app"],
 		"Integrations":
 			["topics/app-analytics", "topics/login-with-discord", "topics/events-SDK-for-game-developers", "topics/twitch-events-sdk-for-game-developers"],
 		"Community Snippets":
@@ -53,7 +53,7 @@
 			"overwolf.media":
 			["api/overwolf-media", "api/overwolf-media-audio", "api/overwolf-media-replays","api/overwolf-media-videos"],
 			"overwolf.os": ["api/overwolf-os","api/overwolf-os-tray"],
-			"overwolf.profile":	["api/overwolf-profile", "api/overwolf-profile.subscriptions"],
+			"overwolf.profile":	["api/overwolf-profile", "api/overwolf-profile-subscriptions"],
 			"overwolf.settings":
 			["api/overwolf-settings","api/overwolf-settings-hotkeys", "api/overwolf-settings-language", "api/overwolf-settings-games"],
 			"overwolf.social":
