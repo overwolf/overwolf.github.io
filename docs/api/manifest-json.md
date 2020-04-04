@@ -311,7 +311,7 @@ A list of additional settings for the app.
 | <a class="anchor" aria-hidden="true" id="protocol_override_domains"></a>protocol_override_domains     | [ProtocolOverrideDomains](#protocoloverridedomains-object) Object   |  Overrides the relative protocol with a preferred one.  | 0.78  |
 | <a class="anchor" aria-hidden="true" id="force_browser"></a>force_browser | string |  Choose whether links in the app will be opened using the user’s default browser or Overwolf’s browser.</br>*Possible values: "user" or "overwolf".* |0.91  |
 | <a class="anchor" aria-hidden="true" id="enable_osr_acceleration"></a>enable_osr_acceleration | bool |  Enable OSR/GPU acceleration if supported by this machine. </br>*Note 1: this flag is still in Beta. It may not function as expected in some machines.*</br>*Note 2: This flag is only relevant for D3D11 supported games.* </br>*Note 3: see also the [optimize_accelerate_rendering](#optimize_accelerate_rendering) flag.* |0.126  |
-| <a class="anchor" aria-hidden="true" id="game_events"></a>game_events | [game_events[]](#game-events-array) |  A list of game ids for which game events are required. |0.92  |
+| <a class="anchor" aria-hidden="true" id="game_events"></a>game_events | [game_events[]](#game_events-array) |  A list of game ids for which game events are required. |0.92  |
 | <a class="anchor" aria-hidden="true" id="disable_log_limit"></a>disable_log_limit | bool |  Disable the log file's 1000-line limitation. </br>*Note: Do not enable it without Overwolf's approval.*        | 0.12 |
 | <a class="anchor" aria-hidden="true" id="extra-objects"></a>extra-objects     | [extra-objects](#extra-objects-object) Object  |  Allows access to custom plugin dlls.  | 0.81  |
 | <a class="anchor" aria-hidden="true" id="hotkeys"></a>hotkeys     | [hotkeys](#hotkeys-object) Object   |  Shortcut keys that trigger an app action.  | 0.78  |
@@ -331,21 +331,25 @@ A list of additional settings for the app.
 
 
 ## GameTargeting object
-An app can declare itself as targeted to one or more games.
+An app can declare itself as targeted to one or more games (or for all the games).
 
 | Name     | Type   |  Description   | Since |
 |----------|---------------------------------|  ------------------------------------------------------------------- |------ |
 | type     | string |  "all" – All games (e.g voice communication apps).</br>"dedicated" – Dedicated to a game or several games.</br> "none" – No games. | 0.78  |
-| game_ids | [game_ids[]](#game-ids-array) |    The game IDs that your app targets                                                                                                  | 0.78  |
+| game_ids | [game_ids[]](#game-ids-array) |    The game IDs that your app targeted and permitted to display in-game overlay windows on them. | 0.78  |
 
 Example code:
 
 ```json
 "game_targeting": {
     "type": "all" / "none" / "dedicated",
-    "game_ids": [5426, 7764]  // only if type === "dedicated"
+    "game_ids": [5426, 7764]  // only if type === "dedicated", wildcard not supported
 }
 ```
+
+:::important
+In addition to this flag, don't forget to set also the [game_events](#game_events-array) array, which defines from which games it can consume real-time game events.
+:::
 
 ## extension_window_data object
 A list of settings for the app windows.
@@ -447,18 +451,23 @@ Example code:
 
 ## game_events array
  A list of game ids for which game events are required.
- The full list of games that Overwolf supports real time event listnening can be found [here](games-ids).
-
+ The full list of games that Overwolf supports real time event listnening can be found [here](games-ids).  
+ 
 | Name        | Type  |  Description                          | Since |
 |-------------|-------| ------------------------------------- |------ |
 | game_events | int[] | The games IDs that your app targets.  | 0.92  |
+
+Note: this array is exactly the same as the [game_ids[]](#game-ids-array), and we use it only for backwards compatibility.
 
 Example code:
 ```json
 "game_events": [7764, 5426, 7314]
 ```
 
-Note: this array is exactly the same as the [game_ids[]](#game-ids-array), and we use it only for backwards compatibility.
+:::important
+* Wildcards are not supported- even if your game is targeted to all games, you should specify all the relevant game ids.  
+* In adddition to this flag, don't forget the to set the [GameTargeting](#gametargeting-object) object, which configures the overlay permissions.
+:::
 
 ## extra-objects object
 Allows the access of custom plugin dlls. For more info see https://github.com/overwolf/overwolf-plugins.
