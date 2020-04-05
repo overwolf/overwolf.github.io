@@ -12,6 +12,10 @@ Please take the time you need to implement any chosen analytics service thorough
 
 ## Google Analytics: Basic Implementation
 
+:::warning
+The below information is regarding the implementation of Google Analytics' **"analytics.js"**. The newer, more up-to-date implementation of **"gtag.js"** _does not work_ in Overwolf apps at the moment. Keep this in mind when searching for implementation documentation elsewhere.
+:::
+
 ### Update your manifest.json
 
 Open up the external connections necessary for communicating with the Google service:
