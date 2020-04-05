@@ -56,84 +56,94 @@ assist     |See [notes](#assist-note)| The player’s tank assisted in destroyin
 
 Event Data:
 
-JSON containing:
-* {enemyTeam: boolean}
-True if the event refers to an enemy unit
-False if the event refers to an ally unit
+```json
+{"enemyTeam":true}
+```
+
+true if the event refers to an enemy unit, false if the event refers to an ally unit
 
 #### *one_shot_kill* note
 
 Event Data:
 
-JSON containing:
+```json
+{"enemyTeam":true}
+```
 
-* {enemyTeam: boolean}
-True if the event refers to an enemy unit
-False if the event refers to an ally unit
+true if the event refers to an enemy unit, false if the event refers to an ally unit
 
 #### *damage* note
 
 Event Data:
 
-JSON containing:
+```json
+{"enemyTeam":true,"damage":"33"}
+```
 
-* {enemyTeam: boolean}
-True if the event refers to an enemy unit
-False if the event refers to an ally unit
-* {damage: number}
+true if the event refers to an enemy unit, false if the event refers to an ally unit
 
 #### *assist* note
 
 Event Data:
 
-JSON containing:
+```json
+{"enemyTeam":true}
+```
 
-* {enemyTeam: boolean}
-True if the event refers to an enemy unit
-False if the event refers to an ally unit
+true if the event refers to an enemy unit, false if the event refers to an ally unit
 
 ## `death`
 
 ### Events
 
-Event      | Event Data  | Fired When          | Notes              | Since GEP Ver. |
------------| ------------| ------------------- | ------------------ | --------------|
-death      |See [notes](#death-note)| The player’s tank was destroyed |         |     47.0      | 
-hit	       |See [notes](#hit-note)| The player’s tank was damaged |         |     47.0      | 
-
-#### *death* note
-
-Event Data:
-
-JSON containing:
-
-* {enemyTeam: boolean}
-True if the event refers to an enemy unit
-False if the event refers to an ally unit
-* {damage: integer}
+Event      | Event Data           | Fired When                      | Notes              | Since GEP Ver. |
+-----------| ---------------------| ------------------------------- | ------------------ | ---------------|
+death      | null                 | The player’s tank was destroyed |                    |     47.0       | 
+hit	       |See [notes](#hit-note)| The player’s tank was damaged   |                    |     47.0       | 
 
 #### *hit* note
 
-JSON containing:
-* {damage: integer}
+Event Data:
+
+```json
+{"enemyTeam":true,"damage":"41"}
+```
+
+true if the event refers to an enemy unit, false if the event refers to an ally unit
 
 ## `game_info`
 
 ### Info Updates
 
-key          | Category    | Values                            | Notes                 | Since GEP Ver. |
------------- | ------------| --------------------------------- | --------------------- | ------------- |
-game_start_timestamp| game_info   |Date string of the time the game was launched|               |      47.0     |
-game_state   | game_info   |battle/hangar/wot_starting/replay|               |      47.0     |
-map_name     | game_info   | See [notes](#map_name-note) |               |      86.0     |
+key                  | Category    | Values                                       | Notes                 | Since GEP Ver. |
+-------------------- | ------------| -------------------------------------------- | --------------------- | -------------- |
+game_start_timestamp | game_info   |See [notes](#game_start_timestamp-note)       |                       |      47.0      |
+game_state           | game_info   |See [notes](#game_state-note)                 |                       |      47.0      |
+map_name             | game_info   |See [notes](#map_name-note)                   |                       |      86.0      |
+
+#### *game_start_timestamp* note
+
+Date string of the time the game was launched.
+
+Example data - "Tue Feb 07 2017 15:48:48 GMT+0200"
+
+#### *game_state* note
+
+what is the current state of the game.
+
+Data example: 
+
+['hangar' | 'battle' | 'training' | 'replay']
+
+'replay' means we are running a replay file.
 
 #### *map_name* note
 
 Name of the map or loading space the player is currently in
 
-Data Example:
+Data example: 
 
-`'hangar_v2' | 'hangar_bootcamp' | '05_prohorovka' | '08_ruinberg'`
+['hangar_v2' | 'hangar_bootcamp' | '05_prohorovka' | '08_ruinberg']
 
 ## `match_info`
 
@@ -143,6 +153,12 @@ key          | Category    | Values                            | Notes          
 ------------ | ------------| --------------------------------- | --------------------- | ------------- |
 pseudo_match_id| match_info   |Current match’s ID code.|See [notes](#pseudo_match_id-note)|      47.0     |
 
+Data example
+
+```json
+{"feature":"match_info","category":"match_info","key":"pseudo_match_id","value":"c03af125-b319-449a-9b6f-1310073f3f86"}
+```
+
 ### Events
 
 Event      | Event Data  | Fired When          | Notes              | Since GEP Ver. |
@@ -151,9 +167,11 @@ match_outcome |victory/defeat|When local player wins/loses.See [notes](#match_ou
 
 #### *pseudo_match_id* note
 
-Data Example:
+Data example:
 
-`0c0ea3df-97ea-4d3a-b1f6-f8e34042251f`
+```json
+{"feature":"match_info","category":"match_info","key":"pseudo_match_id","value":"c03af125-b319-449a-9b6f-1310073f3f86"}
+```
 
 #### *match_outcome* note
 
