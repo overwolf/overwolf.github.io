@@ -38,7 +38,7 @@ In this section, you can find our best practices for developing and implementing
   * Troubleshooting – Issues reported by many users or recurring bugs should be posted along with solves.
   * Your app’s changelog and patch notes so users can follow its progress and know what to expect when updating.
 * Don’t forget to place a link to your support page in a prominent location in the app.
-* Find an example for a support page [here](http://support.overwolf.com/article-categories/legendary-builds/)
+* Find an example for a support page [here](https://support.overwolf.com/support/solutions/folders/9000191299)
 
 
 ### Discord server

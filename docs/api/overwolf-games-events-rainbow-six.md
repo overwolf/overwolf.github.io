@@ -87,14 +87,16 @@ While the possible values are:
 
 * No mode was selected: `NONE`
 * Multiplayer > Newcomer: `MATCHMAKING_PVP`
-* Multiplayer > Casual: `MATCHMAKING_PVP`
+* Multiplayer > Quick Match: `MATCHMAKING_PVP`
+* Multiplayer > Special Event: `MATCHMAKING_PVP_EVENT`
+* Multiplayer > Arcade Playlist: `MATCHMAKING_PVP_EVENT`
 * Multiplayer > Unranked: `MATCHMAKING_PVP_UNRANKED`
 * Multiplayer > Ranked: `MATCHMAKING_PVP_RANKED`
 * Multiplayer > Custom game > Local: `CUSTOMGAME_PVP`
 * Multiplayer > Custom game > Online: `CUSTOMGAME_PVP_DEDICATED`
 * Player vs. AI > Situations: `OPERATIONS`
-* Player vs. AI > Lonewolf: `LONEWOLF`
-* Player vs. AI > Terrorist Hunt: `MATCHMAKING_PVE`
+* Player vs. AI > Training Grounds Lonewolf: `MATCHMAKING_PVE_LONEWOLF`
+* Player vs. AI > Training Grounds: `MATCHMAKING_PVE`
 * Tutorials: It’s just a video tutorial, not a game mode.
 
 *Note that on custom games or vs. AI, there is no support in Overwolf real time game events*

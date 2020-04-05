@@ -42,7 +42,7 @@ Examine your app's [Overwolf minimal version](../api/manifest-json#meta-minimum)
   
 #### Verify game_targeting flag existence
 
-#### Verify correct_launch events
+#### Verify correct launch_events
 
 ## Windows
 

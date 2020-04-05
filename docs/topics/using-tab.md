@@ -52,6 +52,7 @@ In order to implement a hotkey which works with an OnHold Tab functionality, we 
         "title": "Show Player",
         "action-type": "custom",
         "default": "Shift+F9",
+        "passthrough": true,
         "hold": true
     }
 }
