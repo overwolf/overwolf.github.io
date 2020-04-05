@@ -119,37 +119,24 @@
 </table>
 <h4><a class="anchor" aria-hidden="true" id="kill-note"></a><a href="#kill-note" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><em>kill</em> note</h4>
 <p>Event Data:</p>
-<p>JSON containing:</p>
-<ul>
-<li>{enemyTeam: boolean}
-True if the event refers to an enemy unit
-False if the event refers to an ally unit</li>
-</ul>
+<pre><code class="hljs css language-json">{<span class="hljs-attr">"enemyTeam"</span>:<span class="hljs-literal">true</span>}
+</code></pre>
+<p>true if the event refers to an enemy unit, false if the event refers to an ally unit</p>
 <h4><a class="anchor" aria-hidden="true" id="one_shot_kill-note"></a><a href="#one_shot_kill-note" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><em>one_shot_kill</em> note</h4>
 <p>Event Data:</p>
-<p>JSON containing:</p>
-<ul>
-<li>{enemyTeam: boolean}
-True if the event refers to an enemy unit
-False if the event refers to an ally unit</li>
-</ul>
+<pre><code class="hljs css language-json">{<span class="hljs-attr">"enemyTeam"</span>:<span class="hljs-literal">true</span>}
+</code></pre>
+<p>true if the event refers to an enemy unit, false if the event refers to an ally unit</p>
 <h4><a class="anchor" aria-hidden="true" id="damage-note"></a><a href="#damage-note" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><em>damage</em> note</h4>
 <p>Event Data:</p>
-<p>JSON containing:</p>
-<ul>
-<li>{enemyTeam: boolean}
-True if the event refers to an enemy unit
-False if the event refers to an ally unit</li>
-<li>{damage: number}</li>
-</ul>
+<pre><code class="hljs css language-json">{<span class="hljs-attr">"enemyTeam"</span>:<span class="hljs-literal">true</span>,<span class="hljs-attr">"damage"</span>:<span class="hljs-string">"33"</span>}
+</code></pre>
+<p>true if the event refers to an enemy unit, false if the event refers to an ally unit</p>
 <h4><a class="anchor" aria-hidden="true" id="assist-note"></a><a href="#assist-note" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><em>assist</em> note</h4>
 <p>Event Data:</p>
-<p>JSON containing:</p>
-<ul>
-<li>{enemyTeam: boolean}
-True if the event refers to an enemy unit
-False if the event refers to an ally unit</li>
-</ul>
+<pre><code class="hljs css language-json">{<span class="hljs-attr">"enemyTeam"</span>:<span class="hljs-literal">true</span>}
+</code></pre>
+<p>true if the event refers to an enemy unit, false if the event refers to an ally unit</p>
 <h2><a class="anchor" aria-hidden="true" id="death"></a><a href="#death" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>death</code></h2>
 <h3><a class="anchor" aria-hidden="true" id="events-1"></a><a href="#events-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Events</h3>
 <table>
@@ -157,24 +144,15 @@ False if the event refers to an ally unit</li>
 <tr><th>Event</th><th>Event Data</th><th>Fired When</th><th>Notes</th><th>Since GEP Ver.</th></tr>
 </thead>
 <tbody>
-<tr><td>death</td><td>See <a href="#death-note">notes</a></td><td>The player’s tank was destroyed</td><td></td><td>47.0</td></tr>
+<tr><td>death</td><td>null</td><td>The player’s tank was destroyed</td><td></td><td>47.0</td></tr>
 <tr><td>hit</td><td>See <a href="#hit-note">notes</a></td><td>The player’s tank was damaged</td><td></td><td>47.0</td></tr>
 </tbody>
 </table>
-<h4><a class="anchor" aria-hidden="true" id="death-note"></a><a href="#death-note" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><em>death</em> note</h4>
-<p>Event Data:</p>
-<p>JSON containing:</p>
-<ul>
-<li>{enemyTeam: boolean}
-True if the event refers to an enemy unit
-False if the event refers to an ally unit</li>
-<li>{damage: integer}</li>
-</ul>
 <h4><a class="anchor" aria-hidden="true" id="hit-note"></a><a href="#hit-note" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><em>hit</em> note</h4>
-<p>JSON containing:</p>
-<ul>
-<li>{damage: integer}</li>
-</ul>
+<p>Event Data:</p>
+<pre><code class="hljs css language-json">{<span class="hljs-attr">"enemyTeam"</span>:<span class="hljs-literal">true</span>,<span class="hljs-attr">"damage"</span>:<span class="hljs-string">"41"</span>}
+</code></pre>
+<p>true if the event refers to an enemy unit, false if the event refers to an ally unit</p>
 <h2><a class="anchor" aria-hidden="true" id="game_info"></a><a href="#game_info" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>game_info</code></h2>
 <h3><a class="anchor" aria-hidden="true" id="info-updates-1"></a><a href="#info-updates-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Info Updates</h3>
 <table>
@@ -182,15 +160,23 @@ False if the event refers to an ally unit</li>
 <tr><th>key</th><th>Category</th><th>Values</th><th>Notes</th><th>Since GEP Ver.</th></tr>
 </thead>
 <tbody>
-<tr><td>game_start_timestamp</td><td>game_info</td><td>Date string of the time the game was launched</td><td></td><td>47.0</td></tr>
-<tr><td>game_state</td><td>game_info</td><td>battle/hangar/wot_starting/replay</td><td></td><td>47.0</td></tr>
+<tr><td>game_start_timestamp</td><td>game_info</td><td>See <a href="#game_start_timestamp-note">notes</a></td><td></td><td>47.0</td></tr>
+<tr><td>game_state</td><td>game_info</td><td>See <a href="#game_state-note">notes</a></td><td></td><td>47.0</td></tr>
 <tr><td>map_name</td><td>game_info</td><td>See <a href="#map_name-note">notes</a></td><td></td><td>86.0</td></tr>
 </tbody>
 </table>
+<h4><a class="anchor" aria-hidden="true" id="game_start_timestamp-note"></a><a href="#game_start_timestamp-note" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><em>game_start_timestamp</em> note</h4>
+<p>Date string of the time the game was launched.</p>
+<p>Example data - &quot;Tue Feb 07 2017 15:48:48 GMT+0200&quot;</p>
+<h4><a class="anchor" aria-hidden="true" id="game_state-note"></a><a href="#game_state-note" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><em>game_state</em> note</h4>
+<p>what is the current state of the game.</p>
+<p>Data example:</p>
+<p>['hangar' | 'battle' | 'training' | 'replay']</p>
+<p>'replay' means we are running a replay file.</p>
 <h4><a class="anchor" aria-hidden="true" id="map_name-note"></a><a href="#map_name-note" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><em>map_name</em> note</h4>
 <p>Name of the map or loading space the player is currently in</p>
-<p>Data Example:</p>
-<p><code>'hangar_v2' | 'hangar_bootcamp' | '05_prohorovka' | '08_ruinberg'</code></p>
+<p>Data example:</p>
+<p>['hangar_v2' | 'hangar_bootcamp' | '05_prohorovka' | '08_ruinberg']</p>
 <h2><a class="anchor" aria-hidden="true" id="match_info"></a><a href="#match_info" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>match_info</code></h2>
 <h3><a class="anchor" aria-hidden="true" id="info-updates-2"></a><a href="#info-updates-2" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Info Updates</h3>
 <table>
@@ -201,6 +187,9 @@ False if the event refers to an ally unit</li>
 <tr><td>pseudo_match_id</td><td>match_info</td><td>Current match’s ID code.</td><td>See <a href="#pseudo_match_id-note">notes</a></td><td>47.0</td></tr>
 </tbody>
 </table>
+<p>Data example</p>
+<pre><code class="hljs css language-json">{<span class="hljs-attr">"feature"</span>:<span class="hljs-string">"match_info"</span>,<span class="hljs-attr">"category"</span>:<span class="hljs-string">"match_info"</span>,<span class="hljs-attr">"key"</span>:<span class="hljs-string">"pseudo_match_id"</span>,<span class="hljs-attr">"value"</span>:<span class="hljs-string">"c03af125-b319-449a-9b6f-1310073f3f86"</span>}
+</code></pre>
 <h3><a class="anchor" aria-hidden="true" id="events-2"></a><a href="#events-2" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Events</h3>
 <table>
 <thead>
@@ -211,14 +200,15 @@ False if the event refers to an ally unit</li>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="pseudo_match_id-note"></a><a href="#pseudo_match_id-note" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><em>pseudo_match_id</em> note</h4>
-<p>Data Example:</p>
-<p><code>0c0ea3df-97ea-4d3a-b1f6-f8e34042251f</code></p>
+<p>Data example:</p>
+<pre><code class="hljs css language-json">{<span class="hljs-attr">"feature"</span>:<span class="hljs-string">"match_info"</span>,<span class="hljs-attr">"category"</span>:<span class="hljs-string">"match_info"</span>,<span class="hljs-attr">"key"</span>:<span class="hljs-string">"pseudo_match_id"</span>,<span class="hljs-attr">"value"</span>:<span class="hljs-string">"c03af125-b319-449a-9b6f-1310073f3f86"</span>}
+</code></pre>
 <h4><a class="anchor" aria-hidden="true" id="match_outcome-note"></a><a href="#match_outcome-note" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><em>match_outcome</em> note</h4>
 <p>Data Example:</p>
 <pre><code class="hljs css language-json">{<span class="hljs-attr">"events"</span>:[{<span class="hljs-attr">"name"</span>:<span class="hljs-string">"match_outcome"</span>,<span class="hljs-attr">"data"</span>:<span class="hljs-string">"defeat"</span>}]}
 {<span class="hljs-attr">"events"</span>:[{<span class="hljs-attr">"name"</span>:<span class="hljs-string">"match_outcome"</span>,<span class="hljs-attr">"data"</span>:<span class="hljs-string">"victory"</span>}]}
 </code></pre>
-</span></div></article></div><div class="docLastUpdate"><em>Last updated on 2020-1-26 by eransharv</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/api/overwolf-games-events-tft"><span class="arrow-prev">← </span><span>Teamfight Tactics</span></a><a class="docs-next button" href="/docs/api/overwolf-games-events-wow"><span>World of Warcraft</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#sample-apps">Sample Apps</a></li><li><a href="#available-features">Available Features</a></li><li><a href="#game-events-status">Game events status</a></li><li><a href="#gep_internal"><code>gep_internal</code></a><ul class="toc-headings"><li><a href="#info-updates">Info Updates</a></li></ul></li><li><a href="#kill"><code>kill</code></a><ul class="toc-headings"><li><a href="#events">Events</a></li></ul></li><li><a href="#death"><code>death</code></a><ul class="toc-headings"><li><a href="#events-1">Events</a></li></ul></li><li><a href="#game_info"><code>game_info</code></a><ul class="toc-headings"><li><a href="#info-updates-1">Info Updates</a></li></ul></li><li><a href="#match_info"><code>match_info</code></a><ul class="toc-headings"><li><a href="#info-updates-2">Info Updates</a></li><li><a href="#events-2">Events</a></li></ul></li></ul></nav></div><footer class="site-footer"><div class="container"><ul><li>Legal</li><li><a href="/docs/topics/legal-overview">Terms overview</a></li><li><a href="/docs/topics/legal-developers-terms">Developer&#x27;s terms</a></li><li><a href="/docs/topics/legal-app-terms">App terms</a></li><li><a href="http://www.overwolf.com/legal/" target="_blank">Overwolf terms</a></li><li><a href="http://www.overwolf.com/legal/#Privacy-policy" target="_blank">Overwolf Privacy policy</a></li></ul><ul><li>Support</li><li><a href=" https://discuss.developers.overwolf.com/" target="_blank">Questions and Answers</a></li><li><a href="https://discordapp.com/invite/cjjrZDp" target="_blank">Discord</a></li><li><a href="/docs/support/contact-us#join-our-slack">Slack</a></li><li><a href="https://www.facebook.com/OverwolfDevs" target="_blank">Facebook</a></li><li><a href="https://twitter.com/OverwolfDevs" target="_blank">Twitter</a></li></ul><ul><li>Documentation</li><li><a href="/docs/api/changelog">Changelog</a></li><li><a href="/docs/api/overwolf-api-overview">API</a></li><li><a href="/docs/start/app-creation-process">App Creation Process</a></li><li><a href="/docs/topics/best-practices-overview">Best Practices</a></li><li><a href="/docs/status/all">Game Events status</a></li></ul><ul><li>Information</li><li><a href="http://www.overwolf.com/careers/">Careers</a></li><li><a href="https://play.overwolf.com/fund/" target="_blank">Fund</a></li><li><a href="https://medium.com/overwolf-developers" target="_blank">Developers Blog</a></li><li><a href="https://www.overwolf.com/appstore" target="_blank">Overwolf Appstore</a></li><li><a href="https://brands.overwolf.com/" target="_blank">Advertise on Overwolf</a></li></ul></div></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+</span></div></article></div><div class="docLastUpdate"><em>Last updated on 2020-4-5 by eransharv</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/api/overwolf-games-events-tft"><span class="arrow-prev">← </span><span>Teamfight Tactics</span></a><a class="docs-next button" href="/docs/api/overwolf-games-events-wow"><span>World of Warcraft</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#sample-apps">Sample Apps</a></li><li><a href="#available-features">Available Features</a></li><li><a href="#game-events-status">Game events status</a></li><li><a href="#gep_internal"><code>gep_internal</code></a><ul class="toc-headings"><li><a href="#info-updates">Info Updates</a></li></ul></li><li><a href="#kill"><code>kill</code></a><ul class="toc-headings"><li><a href="#events">Events</a></li></ul></li><li><a href="#death"><code>death</code></a><ul class="toc-headings"><li><a href="#events-1">Events</a></li></ul></li><li><a href="#game_info"><code>game_info</code></a><ul class="toc-headings"><li><a href="#info-updates-1">Info Updates</a></li></ul></li><li><a href="#match_info"><code>match_info</code></a><ul class="toc-headings"><li><a href="#info-updates-2">Info Updates</a></li><li><a href="#events-2">Events</a></li></ul></li></ul></nav></div><footer class="site-footer"><div class="container"><ul><li>Legal</li><li><a href="/docs/topics/legal-overview">Terms overview</a></li><li><a href="/docs/topics/legal-developers-terms">Developer&#x27;s terms</a></li><li><a href="/docs/topics/legal-app-terms">App terms</a></li><li><a href="http://www.overwolf.com/legal/" target="_blank">Overwolf terms</a></li><li><a href="http://www.overwolf.com/legal/#Privacy-policy" target="_blank">Overwolf Privacy policy</a></li></ul><ul><li>Support</li><li><a href=" https://discuss.developers.overwolf.com/" target="_blank">Questions and Answers</a></li><li><a href="https://discordapp.com/invite/cjjrZDp" target="_blank">Discord</a></li><li><a href="/docs/support/contact-us#join-our-slack">Slack</a></li><li><a href="https://www.facebook.com/OverwolfDevs" target="_blank">Facebook</a></li><li><a href="https://twitter.com/OverwolfDevs" target="_blank">Twitter</a></li></ul><ul><li>Documentation</li><li><a href="/docs/api/changelog">Changelog</a></li><li><a href="/docs/api/overwolf-api-overview">API</a></li><li><a href="/docs/start/app-creation-process">App Creation Process</a></li><li><a href="/docs/topics/best-practices-overview">Best Practices</a></li><li><a href="/docs/status/all">Game Events status</a></li></ul><ul><li>Information</li><li><a href="http://www.overwolf.com/careers/">Careers</a></li><li><a href="https://play.overwolf.com/fund/" target="_blank">Fund</a></li><li><a href="https://medium.com/overwolf-developers" target="_blank">Developers Blog</a></li><li><a href="https://www.overwolf.com/appstore" target="_blank">Overwolf Appstore</a></li><li><a href="https://brands.overwolf.com/" target="_blank">Advertise on Overwolf</a></li></ul></div></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
                 document.addEventListener('keyup', function(e) {
                   if (e.target !== document.body) {
                     return;
