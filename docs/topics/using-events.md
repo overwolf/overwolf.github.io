@@ -100,17 +100,17 @@ The next step is to add a listener to the relevant entity type in your code.
 
 #### Listen to game events
 
-You can receive this entity type by registering to the [overwolf.games.events.onNewEvents](../api/#onnewevents) event listener.
+You can receive this entity type by registering to the [overwolf.games.events.onNewEvents](../api/overwolf-games-events#onnewevents) event listener.
 
 #### Listen to info updates
 
-You can receive this entity type by registering to the [overwolf.games.events.onInfoUpdates2](../api/#oninfoupdates2) event listener.  
+You can receive this entity type by registering to the [overwolf.games.events.onInfoUpdates2](../api/overwolf-games-events#oninfoupdates2) event listener.  
 
-To get all the current info state and all the info-updates that happend BEFORE you registered to this event listnerer, make sure to call [overwolf.games.events.getInfo()](../api/#getinfocallback). Read more about it on [chapter 4](../api/#4-get-current-info-state). 
+To get all the current info state and all the info-updates that happend BEFORE you registered to this event listnerer, make sure to call [overwolf.games.events.getInfo()](../api/overwolf-games-events#getinfocallback). Read more about it on [chapter 4](../api/overwolf-games-events#4-get-current-info-state). 
 
 ### 3. Call setRequiredFeatures()
 
-The final step is to call [overwolf.games.events.setRequiredFeatures](../api/#setrequiredfeaturesfeatures-callback). Once the app wants to start receiving specific info updates and events, you call this function with an array of feature names that you would like your app to use.
+The final step is to call [overwolf.games.events.setRequiredFeatures](../api/overwolf-games-events#setrequiredfeaturesfeatures-callback). Once the app wants to start receiving specific info updates and events, you call this function with an array of feature names that you would like your app to use.
 
 This is an example when an app requires Rocket League features:
 
@@ -122,8 +122,8 @@ overwolf.games.events.setRequiredFeatures(['stats', 'match'], function(info) {
 
 ### 4. Get current info state
 
-In some cases, you might add the listener to [onInfoUpdates2](../api/#oninfoupdates2) or to [onNewEvents](../api/#onnewevents) AFTER the info update has already happened so that the app will miss the info-update event.
+In some cases, you might add the listener to [onInfoUpdates2](../api/overwolf-games-events#oninfoupdates2) or to [onNewEvents](../api/overwolf-games-events#onnewevents) AFTER the info update has already happened so that the app will miss the info-update event.
 
-Also, you might want to receive all info updates that happened before [setRequiredFeatures()](../api/#setrequiredfeaturesfeatures-callback) succeeded.
+Also, you might want to receive all info updates that happened before [setRequiredFeatures()](../api/overwolf-games-events#setrequiredfeaturesfeatures-callback) succeeded.
 
-For those reasons, as a final step, you should call [overwolf.games.events.getInfo()](../api/#getinfocallback) to get the current info state.
+For those reasons, as a final step, you should call [overwolf.games.events.getInfo()](../api/overwolf-games-events#getinfocallback) to get the current info state.
