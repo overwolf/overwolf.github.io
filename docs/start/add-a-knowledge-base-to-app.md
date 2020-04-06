@@ -42,7 +42,7 @@ A Knowledge base is what we call your public library and documentation. If users
 
 * All texts should be written in normal font size and not be formatted either bold or italic, unless there is a need to emphasize a specific point.
 
-Check out CSGO Scout's knowledge base to get an idea of how it should look like "[here](http://support.overwolf.com/article-categories/csgo-scout/)".
+Check out CSGO Scout's knowledge base to get an idea of how it should look like "[here](https://support.overwolf.com/support/solutions/folders/9000191098)".
 
 ### Mandatory articles
 
@@ -54,19 +54,19 @@ This article explains the functionality and usage of your app. For example, Lege
 
 The second part is focused on in-game experience and guides the user in making the most out of the app while playing.
 
-For reference, check out this 'what does it do' article by the creators of CSGO Scout [here](http://support.overwolf.com/knowledge-base/what-is-csgo-scout/).
+For reference, check out this 'what does it do' article by the creators of CSGO Scout [here](https://support.overwolf.com/support/solutions/articles/9000179411-what-is-csgo-scout-).
 
 #### Frequently asked questions (FAQ)
 
 The second mandatory article is your app's Frequently Asked Questions section, or FAQ. This is where you keep answers to common questions asked by your users. Even if not asked directly, you can also use the FAQ to cover questions you think might come up.
 
-Take a look at this good FAQ example made by [CSGO Scout](http://support.overwolf.com/knowledge-base/csgo-scout-faq/)
+Take a look at this good FAQ example made by [CSGO Scout](https://support.overwolf.com/support/solutions/articles/9000179555-csgo-scout-faq)
 
 #### Troubleshooting
 
 Another article we found useful for gamers in a technical one focused on issues the app has and how to fix them. Just like in the FAQ, you should figure out what issues matter most to your userbase. You might have encountered some issues reported repeatedly or otherwise spotted an issue that you would like to help your users solve. 
 
-A good example for this kind of article, the [Legendary Builds – Troubleshooting](http://support.overwolf.com/knowledge-base/troubleshooting-2/) article.
+A good example for this kind of article, the [Legendary Builds – Troubleshooting](https://support.overwolf.com/support/solutions/articles/9000180372-legendary-builds-troubleshooting) article.
 
 ## Submitting an article
 
