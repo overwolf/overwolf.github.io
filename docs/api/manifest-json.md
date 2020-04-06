@@ -331,7 +331,7 @@ A list of additional settings for the app.
 
 
 ## GameTargeting object
-An app can declare itself as targeted to one or more games (or for all the games).
+An app can declare itself as targeted to one or more games (or to all supported games).
 
 | Name     | Type   |  Description   | Since |
 |----------|---------------------------------|  ------------------------------------------------------------------- |------ |
@@ -348,7 +348,7 @@ Example code:
 ```
 
 :::important
-In addition to this flag, don't forget to set also the [game_events](#game_events-array) array, which defines from which games it can consume real-time game events.
+In addition to this flag, don't forget to also set the [game_events](#game_events-array) array, which defines from which games it can consume real-time game events.
 :::
 
 ## extension_window_data object
@@ -434,11 +434,11 @@ Example code:
 ```json
 "protocol_override_domains" : {"ajax.googleapis.com": "https", "domain.com": "http"}
 ```
-This will swap the overwolf-app protocol with https for ajax.googleapis.com domain requestsand with http for domain.com requests.
+This will swap the overwolf-app protocol with https for ajax.googleapis.com domain requests and with http for domain.com requests.
 
 ## game_ids array
  A list of game ids for which game events are required.
- The full list of games that Overwolf supports real time event listnening can be found [here](games-ids).
+ The full list of games that Overwolf supports real time event listening can be found [here](games-ids).
 
 | Name     | Type  |  Description                          | Since |
 |----------|-------| ------------------------------------- |------ |
@@ -451,7 +451,7 @@ Example code:
 
 ## game_events array
  A list of game ids for which game events are required.
- The full list of games that Overwolf supports real time event listnening can be found [here](games-ids).  
+ The full list of games that Overwolf supports real time event listening can be found [here](games-ids).  
  
 | Name        | Type  |  Description                          | Since |
 |-------------|-------| ------------------------------------- |------ |
@@ -466,7 +466,7 @@ Example code:
 
 :::important
 * Wildcards are not supported- even if your game is targeted to all games, you should specify all the relevant game ids.  
-* In adddition to this flag, don't forget the to set the [GameTargeting](#gametargeting-object) object, which configures the overlay permissions.
+* In adddition to this flag, don't forget to set the [GameTargeting](#gametargeting-object) object, which configures the overlay permissions.
 :::
 
 ## extra-objects object
@@ -502,7 +502,7 @@ HotKeys are shortcut keystrokes that trigger app actions. The most common, basic
 
 Please read all the info about hotkeys and how to use them in our [hotkeys best practice](../topics/hotkeys-best-practices) guide.
 
-The map between the hotkey feature name and it’s settings:
+The map between the hotkey feature name and its settings:
 
 | Name        | Type   |  Description                                                                         | Since |
 |-------------|--------|--------------------------------------------------------------------------------------| ----- |
@@ -541,7 +541,7 @@ A list of content scripts to be loaded for specific windows.
 | css     | string[] | The list of CSS files to be applied in this content script. | 0.78  |
 | js      | string[] | The list of JS files to be applied in this content script.  | 0.78  |
 
-In this example, when loading the index window, myscript.js will be loaded and when encountring https://google.com, mystyles.css and myscript2.js will be loaded:
+In this example, when loading the index window, myscript.js will be loaded and when encountering https://google.com, mystyles.css and myscript2.js will be loaded:
 
 ```json
 "content_scripts": [
