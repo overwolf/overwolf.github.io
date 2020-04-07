@@ -64,7 +64,7 @@
 			"overwolf.web":
 			["api/overwolf-web", "api/overwolf-web-webserver", "api/overwolf-web-websocket"],
 			"overwolf.windows":
-			["api/overwolf-windows", "api/overwolf-windows-mediaPlayerElement"]
+			["api/overwolf-windows"]
     },
 	"service": {
         "Games Events Status": 
