@@ -10,33 +10,35 @@ Overwolf offers two APIs with video capturing capabilities:
 
 1. [overwolf.media.replays](../api/overwolf-media-replays).
   * Mainly used to capture **short** highlight video replays of the currently running game.
-  * You can capture a highlight manually, or you can use **auto-highlights detection**.
+  * You can capture a highlight manually, or you can use **auto-highlights capturing**.
   * Meant only for video capture to the local hard drive, **without streaming**.
 
 2. [overwolf.streaming](../api/overwolf-streaming).
-  * Mainly used to capture **long** video replays of the currently running game, up to a full game capture.
-  * Only manual capture is available, **No auto-highlights detection**.
+  * Mainly used to capture **long** videos of the currently running game, up to a full game capture.
+  * Only manual capture is available, **No auto-highlights capturing**.
   * In addition to local capture, **streaming option is available** to supported services like Twitch, YouTube, Facebook, etc.
 
 ## Required Permissions
 
 Using any of the above APIs requires the **VideoCaptureSettings** flag in your app manifest: Only apps with this permission will be defined as capture apps which can be configured in the OW client "capture" tab.
 
-Additionally, some file operations related to videos might require adding `allow_local_file_access : true` flag in your app manifest.
-For example - if you want to play the captured videos using absolute file paths (instead of the generated Overwolf "media://" path).
+#### Notes
+
+* For playing a video from the local disk (using absolute file paths instead of the generated Overwolf "media://" path), you require adding **allow_local_file_access: true** flag in your app manifest.
+* There is a problem with playing a video from the local disk when your app is running from within an iframe that is on a non-local domain.
 
 See for an example the [overwolf.streaming.stop()](../api/overwolf-streaming#stopstreamid-callback) documentation.
 
 ## Comparison table
 
-To summerize, these are the main differences between the **overwolf.media.replays** API to the **overwolf.streaming** API:
+To summarize, these are the main differences between the **overwolf.media.replays** API to the **overwolf.streaming** API:
 
-Feature                | overwolf.media.replays   | overwolf.streaming             | 
----------------------- | -------------------------| ------------------------------ |
-Highlights detection   | +                        | -                              |     
-Manual capture         | +                        | +                              |     
-Custom capture length  | +                        | +                              |     
-Streaming support      | -                        | +                              |     
+Feature                    | overwolf.media.replays   | overwolf.streaming             | 
+-------------------------- | -------------------------| ------------------------------ |
+Auto-highlights capturing  | +                        | -                              |     
+Manual capture             | +                        | +                              |     
+Custom capture length      | +                        | +                              |     
+Streaming support          | -                        | +                              |     
 
 ## Using overwolf.media.replays
 
@@ -92,10 +94,9 @@ Basic usage flow:
 
 ## Using overwolf.streaming
 
-With this API, there is no auto-detect and auto-capture of the game highlights - you should listen to game events and manually start and stop the video capture.  
+With this API, there is no auto-detect and auto-capture of the game highlights, as it mainly used to capture the full-length of the game (or stream it to Twitch, Youtube, etc).
 
-It would be best if you understood each supported game's mechanics, game flow, edge cases, timings, etc., to define and capture your game highlights.  
-Besides, you can capture the whole game to file/s or even stream it to  Twitch, Youtube, etc. 
+You should mainly listen to when a game/match starts and when it end, and manually start and stop the video capture.  
 
 ### Usage flow
 
