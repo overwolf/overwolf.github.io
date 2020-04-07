@@ -234,13 +234,40 @@ Data Example:
 
 key          | Category    | Values                    | Notes                 | Since GEP Ver. |
 ------------ | ------------| ------------------------- | --------------------- | ------------- | 
-pseudo_match_id| match_info| Current match’s internal ID code. |See [notes](#pseudo_match_id-note)|    130.0   |
+pseudo_match_id| match_info| Current match’s internal ID code.|See [notes](#pseudo_match_id-note)|    130.0   |
+mutator_settings| match_info| The current-chosen settings of the private match.|See [notes](#mutator_settings-note)|    147.0   |
+arena        | match_info| The current private match's arena setting. |See [notes](#arena-note)|    147.0   |
+server_info  | match_info| The info of the current match's server info. |See [notes](#server_info-note)|    147.0   |
 
 #### *pseudo_match_id* note
 
 Data Example:
 
 `0c0ea3df-97ea-4d3a-b1f6-f8e34042251f`
+
+#### *mutator_settings* note
+
+Data Example:
+
+```json
+{"info":{"match_info":{"mutator_settings":"SmallBall,HighBounciness,FastBall,LightBall,Pinball,BotsNone"}},"feature":"match_info"}
+```
+
+#### *arena* note
+
+Data Example:
+
+```json
+{"info":{"match_info":{"arena":"Random"}},"feature":"match_info"}
+```
+
+#### *server_info* note
+
+Data Example:
+
+```json
+{"info":{"match_info":{"server_info":"EU511-Gimbal9"}},"feature":"match_info"}
+```
 
 ## `roster`
 
