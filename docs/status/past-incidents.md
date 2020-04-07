@@ -10,6 +10,9 @@ To get real time alerts please join [our dev slack](../support/contact-us#join-o
 Apex Legends
 ------------
 
+**Investigating** -  Apex game events are down we are working on a fix.  
+Apr 07, 08:57 PM GMT+3
+
 **Resolved** This incident has been resolved.  
 Feb 05, 01:00 PM GMT+3
 
@@ -142,6 +145,9 @@ No logs.
 
 Path of Exile
 -------------
+
+**Investigating** -  Path of Exile events are down. we are working on a fix.  
+Apr 07, 08:57 PM GMT+3
 
 **Resolved** - This incident has been resolved.  
 Mar 19, 04:43 PM GMT+3
