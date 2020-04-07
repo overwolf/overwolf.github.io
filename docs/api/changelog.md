@@ -33,6 +33,11 @@ Note that the full documentation and links for this version will be added soon t
   * New supported game
 * [World of Warcraft game events](overwolf-games-events-wow)
   * New supported game
+* [Rocket League game events](overwolf-games-events-rocket-league)
+  * New info updates:
+    * server_info
+    * mutator_settings
+    * arena
 
 
 ## Version 0.142 (Feb. 2020)
@@ -70,7 +75,7 @@ Note that the full documentation and links for this version will be added soon t
     * inventory open/close
     * character_name
     * character_level
-
+    
 ## Version 0.141 (Jan. 2020)
 
 * Manifest flag [enable_top_isolation](manifest-json#enable_top_isolation) has been "moved up" in the hirarchy:  
