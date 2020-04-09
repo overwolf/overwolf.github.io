@@ -123,7 +123,7 @@ const GamesMetadata = {
     path: "/docs/status/sc2",
     iconUrl: "/docs/assets/games-logos/sc2.png",
     iconLargeUrl: "/docs/assets/games-logos/large/sc2.png",
-    name: "StartCraft II"
+    name: "StarCraft II"
   },
   10902: {
     id: 10902,
