@@ -10,6 +10,9 @@ To get real time alerts please join [our dev slack](../support/contact-us#join-o
 Apex Legends
 ------------
 
+**Resolved** This incident has been resolved.  
+Apr 08, 06:27 PM GMT+3
+
 **Investigating** -  Apex game events are down we are working on a fix.  
 Apr 07, 08:57 PM GMT+3
 
@@ -180,7 +183,7 @@ Nov 20, 09:32 PM GMT+3
 **Resolved** - This incident has been resolved.  
 Nov 07, 10:55 PM GMT+3
 
-**Investigating** -  Apex game events are down due to a new patch.  
+**Investigating** -  PUBG game events are down due to a new patch.  
 Nov 07, 08:38 AM GMT+3
 
 **Resolved** - This incident has been resolved.  
