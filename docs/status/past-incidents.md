@@ -149,9 +149,6 @@ No logs.
 Path of Exile
 -------------
 
-**Investigating** -  Path of Exile events are down. we are working on a fix.  
-Apr 07, 08:57 PM GMT+3
-
 **Resolved** - This incident has been resolved.  
 Mar 19, 04:43 PM GMT+3
 
