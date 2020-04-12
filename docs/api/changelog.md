@@ -11,8 +11,7 @@ Follow this entry for ongoing updates and changes to the project or tools:
 Note that this version merged with version 0.144.
 In addition, the full documentation and links for this version will be added soon to the site.
 
-* New API: [overwolf.campaigns](#)
-* New feature: grab attention using [overwolf.windows.flash()](#)
+* New API: [overwolf.campaigns](#) for the new LoL "Refer a friend" feature.
 
 ## Version 0.143 (Mar. 2020)
 
