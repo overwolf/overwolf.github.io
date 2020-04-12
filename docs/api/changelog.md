@@ -6,9 +6,15 @@ sidebar_label: Changelog
 
 Follow this entry for ongoing updates and changes to the project or tools:
 
-## Version 0.143 (Mar. 2020)
+## Version 0.145 (Apr. 2020)
 
-Note that the full documentation and links for this version will be added soon to the site.
+Note that this version merged with version 0.144.
+In addition, the full documentation and links for this version will be added soon to the site.
+
+* New API: [overwolf.campaigns](#)
+* New feature: grab attention using [overwolf.windows.flash()](#)
+
+## Version 0.143 (Mar. 2020)
 
 * The Vulkan Graphics API is now supported.
 * From now, whenever you try to use an obsolete API, the dev console will print a warning.  
