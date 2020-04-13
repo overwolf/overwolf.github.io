@@ -6,6 +6,11 @@ sidebar_label: Changelog
 
 Follow this entry for ongoing updates and changes to the project or tools:
 
+## Version 0.147 (In process)
+
+* Added manifest flag `disable_cleanup`. If set to true, app local data will not be cleaned up after app uninstallation.
+
+
 ## Version 0.145 (Apr. 2020)
 
 Note that this version merged with version 0.144.
