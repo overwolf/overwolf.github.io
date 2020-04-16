@@ -65,6 +65,12 @@ Fortnite
 --------
 
 **Resolved** - This incident has been resolved.  
+Feb 16, 08:21 PM GMT+3
+
+**Investigating** - Some game events are down, we are working on a fix.  
+Feb 16, 12:23 PM GMT+3
+
+**Resolved** - This incident has been resolved.  
 Mar 06, 04:19 PM GMT+3
 
 **Investigating** - Fortnite events are down.  
@@ -127,7 +133,12 @@ Oct 09, 01:39 PM GMT+3
 
 Heroes of the Storm
 -------------------
-No logs.
+
+**Resolved** - This incident has been resolved.  
+Feb 16, 08:21 PM GMT+3
+
+**Investigating** - HotS game events are down, we are working on a fix.  
+Feb 16, 12:23 PM GMT+3
 
 League of Legends
 -----------------
