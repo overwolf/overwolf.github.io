@@ -98,7 +98,7 @@ overwolf.media.replays.turnOn({
     "settings": streamSetting,
     "highlights": {
         "enable" : true, //set false if you want to record the highligths manually
-        "requiredHighlights" : ["death","assist","victory"] //an interesting evenst that happened in game
+        "requiredHighlights" : ["death","assist","victory"] // events to capture
     }
 }, callback);
 ```
