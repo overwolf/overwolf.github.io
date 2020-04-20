@@ -156,6 +156,11 @@ callback  | function              | A callback function which will be called wit
 
 > Starts capturing a replay to a file. 
 
+:::note
+**Capture()** will automatically stop after it reaches the **futureDuration**. No need to call **stopCapture()**. 
+If you want to stop the capture manually, you can use [startCapture()](#startcapturereplaytype-pastduration-callback). 
+:::
+
 * A replay id will be returned in the callback which is needed to finish capturing the replay.
 * You can only call this method if replay mode is on and no other replay is currently being captured to a file.
 
@@ -188,6 +193,11 @@ A callback function which will be called with the status of the request
 
 > Starts capturing a replay to a file.
 
+:::note
+**Capture()** will automatically stop after it reaches the **futureDuration**. No need to call **stopCapture()**. 
+If you want to stop the capture manually, you can use [startCapture()](#startcapturereplaytype-pastduration-callback). 
+:::
+
 * A replay id will be returned in the callback which is needed to finish capturing the replay.
 * You can only call this method if replay mode is on and no other replay is currently being captured to a file.
 
@@ -202,6 +212,13 @@ callback                | function                             | A callback func
 #### Version added: 0.78
 
 > Starts capturing a replay to a file.
+
+:::note
+**startCapture()** won't automatically stop until you call [stopCapture()](#stopcapturereplaytype-replayid-callback).
+
+It's useful if you want to stop the capturing based on a future event, like video combos: kill, doublekill, triple kill - where you can't predict what will happen after the first kill.
+If you want to automatically stop after it reaches **futureDuration**, you can use [capture()](#capturepastduration-futureduration-capturefinishedcallback-callback). 
+:::
 
 * A replay id will be returned in the callback which is needed to finish capturing the replay.
 * You can only call this method if replay mode is on and no other replay is currently being captured to a file.
@@ -228,6 +245,13 @@ A callback function which will be called with the status of the request
 #### Version added: 0.78
 
 > Starts capturing a replay to a file.
+
+:::note
+**startCapture()** won't automatically stop until you call [stopCapture()](#stopcapturereplaytype-replayid-callback).
+
+It's useful if you want to stop the capturing based on a future event, like video combos: kill, doublekill, triple kill - where you can't predict what will happen after the first kill.
+If you want to automatically stop after it reaches **futureDuration**, you can use [capture()](#capturepastduration-futureduration-capturefinishedcallback-callback). 
+:::
 
 * A replay id will be returned in the callback which is needed to finish capturing the replay.
 * You can only call this method if replay mode is on and no other replay is currently being captured to a file.

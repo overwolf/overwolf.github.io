@@ -18,7 +18,7 @@ Use this API to get info about active campagins.
 
 ## Types Reference
 
-* [overwolf.campaigns.raf.enums.RafUserAction ](#rafuseraction-enum) enum
+* [overwolf.campaigns.raf.enums.RafUserAction](#rafuseraction-enum) enum
 * [overwolf.campaigns.raf.GetCampaignsResult](#getcampaignsresult-object) Object
 * [overwolf.campaigns.raf.GetRedeemCodeResult](#getredeemcoderesult-object) Object
 * [overwolf.campaigns.raf.campaign](#campaign-object) Object
@@ -148,8 +148,8 @@ revoked          | boolean                       |                              
 publicToken      | string                        |                                   |
 privateToken     | string                        |                                   |
 type             | string                        |                                   |
-extra            | object                        |                                   |
+extra            | object                        | Campaign-specific information     |
 referralUrl      | string                        |                                   |
 reward           | string                        |                                   |
-disabled         | boolean                       |                                   |
-exposed          | boolean                       |                                   |
+disabled         | boolean                       | Set to true if an existing campaign is not returned from the server |
+exposed          | boolean                       | Set to true when a user is informed of the campaign                 |
