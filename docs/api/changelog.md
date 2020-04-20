@@ -8,7 +8,14 @@ Follow this entry for ongoing updates and changes to the project or tools:
 
 ## Version 0.147 (In process)
 
+Note that this version merged with version 0.146.
+
 * Added manifest flag `disable_cleanup`. If set to true, app local data will not be cleaned up after app uninstallation.
+* adding a url that will send the user to a specific per-game hotkey in the settings.  
+  * Current hotkey url: `overwolf://settings/hotkeys#hotkey_name_in_manifest`
+  * New hotkey url: `overwolf://settings/games-overlay?hotkey=hotkey_name_in_manifest&gameId=game_id`  
+    where game_id is optional. Also added scrolling to the selected hotkey input field.
+* Update obs-ffmpeg.dll (NVENC encoder).  That can affect some devs that are trying to capture videos and get encoders errors and a message that the NVEC driver should be updated. 
 
 
 ## Version 0.145 (Apr. 2020)
@@ -16,7 +23,7 @@ Follow this entry for ongoing updates and changes to the project or tools:
 Note that this version merged with version 0.144.
 In addition, the full documentation and links for this version will be added soon to the site.
 
-* New API: [overwolf.campaigns](#) for the new LoL "Refer a friend" feature.
+* New API: [overwolf.campaigns](overwolf-campaigns-raf) for the new LoL "Refer a friend" feature.
 
 ## Version 0.143 (Mar. 2020)
 
