@@ -19,6 +19,9 @@ Use this API to get info about active campagins.
 ## Types Reference
 
 * [overwolf.campaigns.raf.enums.RafUserAction ](#rafuseraction-enum) enum
+* [overwolf.campaigns.raf.GetCampaignsResult](#getcampaignsresult-object) Object
+* [overwolf.campaigns.raf.GetRedeemCodeResult](#getredeemcoderesult-object) Object
+* [overwolf.campaigns.raf.campaign](#campaign-object) Object
 
 ## get(callback)
 #### Version added: 0.145
@@ -27,21 +30,8 @@ Use this API to get info about active campagins.
 
 Parameter | Type                  | Description                                                             |
 --------- | ----------------------| ----------------------------------------------------------------------- |
-callback  | function              | Returns an array of campaigns, or an error                              |
+callback  | ([Result: GetCampaignsResult](#getcampaignsresult-object)) => void  | Returns an array of campaigns   |
 
-#### Callback argument: Success
-
-```json
-
-{"campaigns":[],"success":true}
-
-```
-
-#### Callback argument: Failure
-
-```json
-{"success":false,"error":"Extension nhmkaollkcmjiecdnnjmgfifjgkfegkljnjjbipp does not have a valid campaign"}
-```
 
 ## getRedeemCode(campaignID,extra, callback)
 #### Version added: 0.145
@@ -52,22 +42,8 @@ Parameter  | Type                  | Description                                
 ---------- | ----------------------| ----------------------------------------------------------------------- |
 campaignID | string                | The ID of the campaign the code was rewarded for                        |
 extra      | object                | Any extra information the campaign requires                             |
-callback   | function              | Returns with the code                                                   |
+callback   | ([Result: GetRedeemCodeResult](#getredeemcoderesult-object)) => void   | Returns with the code                                                   |
 
-#### Callback argument: Success
-
-Returns with the code
-
-```json
-
-```
-
-#### Callback argument: Failure
-
-```json
-
-{"code":null,"success":false,"error":"Campaign was not found!"}
-```
 
 ## reportUserAction(campaignID, RafUserAction, callback)
 #### Version added: 0.145
@@ -77,7 +53,7 @@ Returns with the code
 Parameter     | Type                  | Description                                                             |
 ------------- | ----------------------| ----------------------------------------------------------------------- |
 campaignID    | string                | The ID of the campaign the analytic is for                              |
-RafUserAction | [RafUserAction](#rafuseraction-enum) enum    | One of defined   "RafUserAction"                                         |
+RafUserAction | [RafUserAction](#rafuseraction-enum) enum    | One of defined   "RafUserAction"                 |
 callback      | function              | Reports success or failure                                              |
 
 #### Callback argument: Success
@@ -85,6 +61,7 @@ callback      | function              | Reports success or failure              
 Returns with the code
 
 ```json
+{"success":true}
 
 ```
 
@@ -113,3 +90,66 @@ copy_link  |  User clicked on "Copy link"              |
 redeem     | User clicked on "How do I redeem"         |
 share      | User shared on social media               |
 
+## GetCampaignsResult Object
+
+Parameter          | Type                            | Description                                       |
+-------------------| --------------------------------| ------------------------------------------------- |
+*success*          | boolean                         | inherited from the "Result" Object                |
+*error*            | string                          | inherited from the "Result" Object                |
+status             | string                          | deprecated. For backward compatibility only       |
+Reason             | string                          | deprecated. For backward compatibility only       |   
+campaigns          | [campaign](#campaign-object)[]  |                                                   |   
+
+#### Example data: Success
+
+```json
+{"campaigns":[],"success":true}
+```
+
+#### Example data: Failure
+
+```json
+{"success":false,"error":"Extension nhmkaollkcmjiecdnnjmgfifjgkfegkljnjjbipp does not have a valid campaign"}
+```
+
+## GetRedeemCodeResult Object
+
+Parameter          | Type                            | Description                                       |
+-------------------| --------------------------------| ------------------------------------------------- |
+*success*          | boolean                         | inherited from the "Result" Object                |
+*error*            | string                          | inherited from the "Result" Object                |
+status             | string                          | deprecated. For backward compatibility only       |
+Reason             | string                          | deprecated. For backward compatibility only       |   
+code               | string                          |                                                   |   
+
+#### Example data: Success
+
+```json
+```
+
+#### Example data: Failure
+
+```json
+{"code":null,"success":false,"error":"Campaign was not found!"}
+
+```
+
+## Campaign Object
+#### Version added: 0.145
+
+> Describes a campaign
+
+Parameter        | Type                          | Description                       |
+---------------- | ------------------------------| --------------------------------- |
+id               | string                        |                                   |
+extensionId      | string                        |                                   |
+games            | int[]                         |                                   |
+revoked          | boolean                       |                                   |
+publicToken      | string                        |                                   |
+privateToken     | string                        |                                   |
+type             | string                        |                                   |
+extra            | object                        |                                   |
+referralUrl      | string                        |                                   |
+reward           | string                        |                                   |
+disabled         | boolean                       |                                   |
+exposed          | boolean                       |                                   |
