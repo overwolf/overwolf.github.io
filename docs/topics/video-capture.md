@@ -42,11 +42,10 @@ Streaming support          | -                        | +                       
 
 ## Using overwolf.media.replays
 
-With this API, you can listen to game events and manually start and stop video capture.  
-As mentioned above, the real "power" of this API is to auto-detect and auto-capture game highlights:  
+With this API, you can listen to game events and manually start and stop video capture.
 
-There's no need to understand each supported game's mechanics, game flow, edge cases, timings, etc.  
-Just request any supported game's highlight, and OW provides you with a video file that includes this event.
+As mentioned above, the real "power" of this API is to auto-detect and auto-capture game highlights:  
+When this feature is enabled, there's no need to understand each supported game's mechanics, game flow, edge cases, timings, etc. Just request any supported game's highlight, and OW provides you with a video file that includes this event.
 
 Below, you can find a description of both capture methods: manual capture and auto-highlights capture.
 
@@ -54,25 +53,25 @@ Below, you can find a description of both capture methods: manual capture and au
 
 Basic usage flow:
 
-1. **Register to relevant capture events for your app.**  
-   The [available events](../api/overwolf-media-replays#events-reference) are: onCaptureError, onCaptureStopped, onCapureWarning, onReplayServicesStarted.
+1. **Register to relevant capture events for your app.**
+   * The [available events](../api/overwolf-media-replays#events-reference) are: onCaptureError, onCaptureStopped, onCapureWarning, onReplayServicesStarted.
 
-2. **Call [overwolf.media.replays.turnOn()](../api/overwolf-media-replays#turnonparameters-callback)** with the auto-highlights feature disabled:  
-   Set the `enable` field of the [overwolf.media.replays.ReplayHighlightsSetting](../api/overwolf-media-replays#replayhighlightssetting-object) Object to `false`.  
-   You may also set the capture buffer that is used for all the other functions:  
+2. **Call [overwolf.media.replays.turnOn()](../api/overwolf-media-replays#turnonparameters-callback)** with the auto-highlights feature disabled:
+   * Set the **enable** field of the [overwolf.media.replays.ReplayHighlightsSetting](../api/overwolf-media-replays#replayhighlightssetting-object) Object to **false**.
+   * You may also set the capture buffer that is used for all the other functions:  
    For example, if you set a 3 minute buffer, you will be able to capture game highlights not longer than this buffer.
 
 3. **Listen to your game events** and wait for the game highlight (match_start, kill, etc.) that you want to capture.  
    Once it occured - start to video capture the screen:
 
-4. **Call one of the [overwolf.media.replays.startCapture()](../api/overwolf-media-replays#startcapturereplaytype-pastduration-callback)** methods:  
-   Here you can set the pastDuration and futureDuration buffers.  
-   Note that in all methods, the replay ID returns via callback, and it is needed to finish capturing the replay.
+4. **Call [overwolf.media.replays.startCapture()](../api/overwolf-media-replays#startcapturereplaytype-pastduration-callback)** methods:  
+    * Note that it won't automatically stop until you call [stopCapture()](../api/overwolf-media-replays#stopcapturereplaytype-replayid-callback).
+    * It's useful if you want to stop the capturing based on a future event. If you want to automatically stop after it reaches **futureDuration**, you can use [capture()](../api/overwolf-media-replays#capturepastduration-futureduration-capturefinishedcallback-callback).
+    * Note that in all methods, the replay ID returns via callback, and it is needed to finish capturing the replay.
 
-5. **Call [overwolf.media.replays.stopCapture()](../api/overwolf-media-replays#stopcapturereplaytype-replayid-callback)**.  
-   Finishes capturing a replay and returns a URL leading to the created video file.  
-
-   Note that you only need to call stop if you called `startCapture()` without setting the `futureDuration` parameter. Otherwise, the capture is stopped automatically.
+5. **Call [overwolf.media.replays.stopCapture()](../api/overwolf-media-replays#stopcapturereplaytype-replayid-callback)**.
+   * Finishes capturing a replay and returns a URL leading to the created video file. 
+   * Note that you only need to call stop if you called **startCapture()** without setting the **futureDuration** parameter. Otherwise, the capture is stopped automatically.
 
 6. **Call [overwolf.media.replays.turnOff()](../api/overwolf-media-replays#turnoffcallback)**, as soon as you’re no longer interested in capturing video in order to free up resources.
 
@@ -81,14 +80,13 @@ Basic usage flow:
 Basic usage flow:
 
 1. **Register to relevant capture events for your app.**  
-   The [available events](../api/overwolf-media-replays#events-reference) are: onCaptureError, onCaptureStopped, onCapureWarning, onReplayServicesStarted, onHighlightsCaptured.
+   * The [available events](../api/overwolf-media-replays#events-reference) are: onCaptureError, onCaptureStopped, onCapureWarning, onReplayServicesStarted, onHighlightsCaptured.
 
-2. **Call [overwolf.media.replays.turnOn()](../api/overwolf-media-replays#turnonparameters-callback)** with the auto-highlights feature enabled:  
-   Set the `enable` field of the [overwolf.media.replays.ReplayHighlightsSetting](../api/overwolf-media-replays#replayhighlightssetting-object) Object to `true`.  
-   Here you also set the capture buffer that is used for all the other functions.  
-
-   With this mode, you don't need to start or stop the capture. It's done automatically.  
-   Once a highlight is captured, the `onHighlightsCaptured` event is triggered, and contain the URL of the created video file.
+2. **Call [overwolf.media.replays.turnOn()](../api/overwolf-media-replays#turnonparameters-callback)** with the auto-highlights feature enabled:
+   * Set the **enable** field of the [overwolf.media.replays.ReplayHighlightsSetting](../api/overwolf-media-replays#replayhighlightssetting-object) Object to **true**.  
+   Here you also set the capture buffer that is used for all the other functions.
+   * With this mode, you don't need to start or stop the capture. It's done automatically.
+   * Once a highlight is captured, the **onHighlightsCaptured** event is triggered, and contain the URL of the created video file.
 
 3. **Call [overwolf.media.replays.turnOff()](../api/overwolf-media-replays#turnoffcallback)**, as soon as you’re no longer interested in capturing, in order to free up resources.
 
@@ -102,28 +100,28 @@ You should mainly listen to when a game/match starts and when it end, and manual
 
 This is the basic usage flow:
 
-1. **Register to the relevant capture events** for your app.  
-The [available events](../api/overwolf-streaming#events-reference) are: onStreamingSourceImageChanged, onStopStreaming, onStartStreaming, onStreamingError, onStreamingWarning, onVideoFileSplited, onRecordingEngineStateChanged.
+1. **Register to the relevant capture events** for your app.
+   * The [available events](../api/overwolf-streaming#events-reference) are: onStreamingSourceImageChanged, onStopStreaming, onStartStreaming, onStreamingError, onStreamingWarning, onVideoFileSplited, onRecordingEngineStateChanged.
 
 2. **Get the available stream encoders.**  
-  Call [getStreamEncoders()](../api/overwolf-streaming#getstreamencoderscallback) and [getAudioDevices()](../api/overwolf-streaming#getaudiodevicescallback).  
-  This returns a list of all possible encoders and audio devices – you can then use this list to let users select their preferred encoder/device.  
-  In terms of encoder priorities – we recommend: NVIDIA > AMD > INTEL > x264.  
-  As long as the "enabled" field = true, you can offer users to use the encoder.
+   * Call [getStreamEncoders()](../api/overwolf-streaming#getstreamencoderscallback) and [getAudioDevices()](../api/overwolf-streaming#getaudiodevicescallback).
+   * This returns a list of all possible encoders and audio devices – you can then use this list to let users select their preferred encoder/device.
+   * In terms of encoder priorities – we recommend: NVIDIA > AMD > INTEL > x264.
+   * As long as the "enabled" field = true, you can offer users to use the encoder.
 
-3. **Call overwolf.streaming.start().**  
-   Create a JSON object with all streaming details and call [start()](../api/overwolf-streaming#startsettings-callback).  
+3. **Call overwolf.streaming.start().**
+   * Create a JSON object with all streaming details and call [start()](../api/overwolf-streaming#startsettings-callback).  
    [Here](../api/overwolf-streaming#usage-example) you can find a complete usage example.
-   * For video recording, you don’t need the `ingest_server`, `stream_info`, and `auth` objects.
-   * For video recording, we recommend using a `max_kbps` value of higher than 8000.
-   * For streaming, we recommend using a `max_kbps` smaller than 3000.
-   * Once start succeeded, you’ll get a callback with `result.status == "success"` and a `stream_id` that can be used to stop the streaming session or change the volume of the stream.
+   * For video recording, you don’t need the **ingest_server**, **stream_info**, and **auth** objects.
+   * For video recording, we recommend using a **max_kbps** value of higher than 8000.
+   * For streaming, we recommend using a **max_kbps** smaller than 3000.
+   * Once start succeeded, you’ll get a callback with **result.status == "success"** and a **stream_id** that can be used to stop the streaming session or change the volume of the stream.
 
-4. **Allow users to change volume.**  
-  Allow the user to change volume with [changeVolume()](../api/overwolf-streaming#changevolumestreamid-audiooptions-callback) while streaming.
+4. **Allow users to change volume.**
+   * Allow the user to change volume with [changeVolume()](../api/overwolf-streaming#changevolumestreamid-audiooptions-callback) while streaming.
 
-5. **Call overwolf.streaming.stop().**  
-  Call [stop()](../api/overwolf-streaming#stopstreamid-callback) to stop the streaming session.
+5. **Call overwolf.streaming.stop().**
+   * Call [stop()](../api/overwolf-streaming#stopstreamid-callback) to stop the streaming session.
 
 ### Extras
 
