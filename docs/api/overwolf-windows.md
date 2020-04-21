@@ -53,6 +53,8 @@ Please make sure to read our guide on [how to use Overwolf windows](../topics/us
 * [overwolf.windows.displayMessageBox()](#displaymessageboxmessageparams-callback)
 * [overwolf.windows.isAccelreatedOSR()](#isaccelreatedosrcallback)
 * [overwolf.windows.setMinSize()](#setminsizewindowid-width-height-callback)
+* [overwolf.windows.flash()](#flashwindowid-behavior-callback)
+
 
 ## Events Reference
 
@@ -73,6 +75,7 @@ Please make sure to read our guide on [how to use Overwolf windows](../topics/us
 * [overwolf.windows.enums.MessagePromptIcon](#messageprompticon-enum) Enum
 * [overwolf.windows.enums.WindowDragEdge](#windowdragedge-enum) Enum
 * [overwolf.windows.enums.WindowStyle](#windowstyle-enum) Enum
+* [overwolf.windows.enums.FlashBehavior](#flashbehavior-enum) Enum
 * [overwolf.windows.onScreenPropertyChangedEvent](#onscreenpropertychangedevent-object) Object
 
 ## getMainWindow()
@@ -805,6 +808,17 @@ width		               | int                                               | The 
 height		             | int                                               | The new minimum height                                                    |
 callback               | function                                          | Called with the result of the request                                     |
 
+## flash(windowId, behavior,callback)
+#### Version added: 0.146
+
+> Flashes a window.
+
+Parameter              | Type                                              | Description                                                               |
+-----------------------| --------------------------------------------------| --------------------------------------------------------------------------|
+windowId		           | string                                            | The id of the window to flash                                             |
+behavior               | [FlashBehavior](#flashbehavior-enum) enum         | Defines window flashing behavior                                          |
+callback               | function                                          | Called after the window is flashed                                        |
+
 ## onMainWindowRestored
 #### Version added: 0.85
 
@@ -1001,6 +1015,18 @@ TopLeft     |  Drag the top-left window edge in order to resize it      |
 TopRight    |  Drag the top-right window edge in order to resize it     |
 BottomLeft  |  Drag the bottom-left window edge in order to resize it   |
 BottomRight |  Drag the bottom-right window edge in order to resize it  |
+
+## FlashBehavior enum
+#### Version added: 0.146
+
+> Window flashing behavior.
+
+Option          | Description          |
+--------------- | ---------------------|
+automatic       |  Turns off automatically when the window regains focus. Does not turn on if window is already in focus.  |
+on              |  Turns flashing on   |
+off             |  Turns flashing off  |
+
 
 ## onScreenPropertyChangedEvent Object
 

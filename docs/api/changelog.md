@@ -9,19 +9,24 @@ Follow this entry for ongoing updates and changes to the project or tools:
 ## Version 0.147 (In process)
 
 Note that this version merged with version 0.146.
+Some of the links below are broken, as the full documentation for this version is not ready yet.
 
-* Added manifest flag `disable_cleanup`. If set to true, app local data will not be cleaned up after app uninstallation.
-* adding a url that will send the user to a specific per-game hotkey in the settings.  
-  * Current hotkey url: `overwolf://settings/hotkeys#hotkey_name_in_manifest`
-  * New hotkey url: `overwolf://settings/games-overlay?hotkey=hotkey_name_in_manifest&gameId=game_id`  
-    where game_id is optional. Also added scrolling to the selected hotkey input field.
-* Update obs-ffmpeg.dll (NVENC encoder).  That can affect some devs that are trying to capture videos and get encoders errors and a message that the NVEC driver should be updated. 
+* New feature: [overwolf.window.flash()](overwolf-windows#flashwindowid-behavior-callback)  
+  Flashes a window that is not in focus (for example, minimized to taskbar). 
+* New API: [overwolf.extensions.io]() 
+* New manifest flag: [disable_cleanup]().  
+  If set to true, app local data will not be cleaned up after app uninstallation.
+* Allow apps to request opening the settings app in a specific game id. An example:
+  * Current hotkey URL: *overwolf://settings/hotkeys#hotkey_name_in_manifest*.  
+  * New hotkey URL: *overwolf://settings/games-overlay?hotkey=hotkey_name_in_manifest&gameId=game_id*.
+  (game_id is optional).
+* Update obs-ffmpeg.dll (NVENC encoder).  
+  That can affect some devs that are trying to capture videos and get encoders errors and a message that the NVEC driver should be updated. 
 
 
 ## Version 0.145 (Apr. 2020)
 
 Note that this version merged with version 0.144.
-In addition, the full documentation and links for this version will be added soon to the site.
 
 * New API: [overwolf.campaigns](overwolf-campaigns-raf) for the new LoL "Refer a friend" feature.
 
