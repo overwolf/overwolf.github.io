@@ -373,6 +373,34 @@ overwolf.media.replays.getHighlightsFeatures(21216, JSON.stringify(console.log))
 
 > Fired when an errror has occured with the capturing.
 
+#### Possible Error Codes
+
+* Unknown
+* Unauthorized
+* Invalid_Server
+* No_Internet
+* Invalid_Video_Settings
+* No_Playback_Device
+* Not_InGame
+* Internet_Congested
+* Game_Quit_Mid_Stream
+* Twitch_Dll_Load_Error
+* Twitch_Init_Error
+* No_Encoder
+* Out_Of_Disk_Space
+* Update_Driver
+
+#### Event Data Example
+
+```json
+{
+    "status": "error",
+    "stream_id": 1,
+    "error": "Internet_Congested"
+}
+```
+
+
 ## onCaptureStopped
 
 #### Version added: 0.117
