@@ -126,7 +126,9 @@ Note that not all flags are mandatory - we included all available flags for docu
                 "<a href="#developer-game-settings">reload_delay</a>": 1000,
                 //Filter files which will be tracked.e.g (*.js;*.html)Default: all files (*.*)
                 "<a href="#developer-game-settings">filter</a>": <span style="font-weight: 400;">"*.json;*.html"</span><span style="font-weight: 400;"> 
-            }
+            },
+        //If set to true, app local data will not be cleaned up after app uninstallation
+        "<a href="#disable_cleanup">disable_cleanup</a>": true
     }
 }
 </code></pre>
@@ -222,7 +224,8 @@ Note that not all flags are mandatory - we included all available flags for docu
                 "<a href="#developer-game-settings">enable_auto_refresh</a>": true,
                 "<a href="#developer-game-settings">reload_delay</a>": 1000,
                 "<a href="#developer-game-settings">filter</a>": <span style="font-weight: 400;">"*.json;*.html"</span><span style="font-weight: 400;"> 
-            }
+            },
+        "<a href="#disable_cleanup">disable_cleanup</a>": true
     }
 }
 </code></pre>
@@ -321,6 +324,7 @@ A list of additional settings for the app.
 | <a class="anchor" aria-hidden="true" id="disable_dt"></a>disable_dt | bool |  Disable opening of the developer tools for the app (with Ctrl+shift+I). </br>*Default value – “false”* |0.118  |
 | <a class="anchor" aria-hidden="true" id="service_providers"></a>service_providers | [service_providers](#service_providers-object) object |  Extra data to external service providers |0.137  |
 | <a class="anchor" aria-hidden="true" id="developer-game-settings"></a>developer | [developer setting](#developer-settings-object) object|  Additional setting for developers. |0.127  |
+| <a class="anchor" aria-hidden="true" id="disable_cleanup"></a>disable_cleanup | bool |  If set to true, app local data will not be cleaned up after app uninstallation. | 0.147  |
 
 #### user_agent Notes
 
