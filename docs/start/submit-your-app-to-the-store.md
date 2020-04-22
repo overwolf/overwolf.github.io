@@ -28,15 +28,15 @@ myZip
          +---- launcher_icon.ico
          +---- WindowIcon.png
          +---- Files
-                +---- index.html
-                +---- css
-                +---- assets
+               +---- index.html
+               +---- css
+               +---- assets
   +---- store
          +---- Tile.jpg
          +---- Icon.png
          +---- ScreenshotX.jpg
-         +----  description.html
-         +----  store.json
+         +---- description.html
+         +---- store.json
 
 </pre>
 
