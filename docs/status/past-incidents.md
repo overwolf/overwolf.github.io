@@ -67,6 +67,12 @@ Fortnite
 **Resolved** - This incident has been resolved.  
 Feb 16, 08:21 PM GMT+3
 
+**Investigating** - Fortnite game events are down, we are working on a fix.  
+Apr 15, 02:40 PM GMT+3
+
+**Resolved** - This incident has been resolved.  
+Feb 16, 08:21 PM GMT+3
+
 **Investigating** - Some game events are down, we are working on a fix.  
 Feb 16, 12:23 PM GMT+3
 
@@ -133,6 +139,12 @@ Oct 09, 01:39 PM GMT+3
 
 Heroes of the Storm
 -------------------
+
+**Resolved** - This incident has been resolved.  
+Feb 16, 08:21 PM GMT+3
+
+**Investigating** - HotS game events are down, we are working on a fix.  
+Apr 15, 12:23 PM GMT+3
 
 **Resolved** - This incident has been resolved.  
 Feb 16, 08:21 PM GMT+3
@@ -329,6 +341,12 @@ Oct 09, 10:24 AM GMT+3
 
 World of Tanks
 --------------
+
+**Resolved** - This incident has been resolved.  
+Apr 23, 11:12 PM GMT+3
+
+**Investigating** - WoT events are down.  
+Apr 22, 05:43 PM GMT+3
 
 **Resolved** - This incident has been resolved.  
 Dec 10, 10:57 PM GMT+3
