@@ -54,7 +54,7 @@ Parameter     | Type                  | Description                             
 ------------- | ----------------------| ----------------------------------------------------------------------- |
 campaignID    | string                | The ID of the campaign the analytic is for                              |
 RafUserAction | [RafUserAction](#rafuseraction-enum) enum    | One of defined   "RafUserAction"                 |
-callback      | function              | Reports success or failure                                              |
+callback      | (Result) => void                         | Reports success or failure.                          |
 
 #### Callback argument: Success
 
