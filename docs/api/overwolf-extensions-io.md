@@ -4,7 +4,7 @@ title: overwolf.extensions.io API
 sidebar_label: overwolf.extensions.io
 ---
 
-Use this API to get info about active campagins.
+Use this API to get I/O functionalities.
 
 ## Methods Reference
 
@@ -22,12 +22,13 @@ Use this API to get info about active campagins.
 
 * [overwolf.extensions.io.enums.FileType](#filetype-enum) enum
 * [overwolf.extensions.io.enums.StorageSpace](#storagespace-enum) enum
+* [overwolf.extensions.io.Content](#content-object) Object
 * [overwolf.extensions.io.ReadTextFileResult](#readtextfileresult-object) Object
 * [overwolf.extensions.io.ExistResult](#existresult-object) Object
 * [overwolf.extensions.io.ExistResult](#existresult-object) Object
 * [overwolf.extensions.io.GetStoragePathResult](#getstoragepathresult-object) Object
-* [overwolf.extensions.io.ReadTextFileResult](#) Object
-
+* [overwolf.extensions.io.DirResult](#dirresult-object) Object
+* [overwolf.extensions.io.DeleteResult](#deleteresult-object) Object
 
 ## createDirectory(space, path, callback)
 #### Version added: 0.147
@@ -82,7 +83,7 @@ Parameter   | Type                                     | Description            
 ----------- | -----------------------------------------| --------------------------------------------------------------------|
 space       | [StorageSpace](#storagespace-enum) enum  | The selected storage space.                                         |
 path        | string                                   | Path within the space. Use null or empty string for the space root. |
-callback    | (Result) => void                         | Reports success or failure.                                         |
+callback    | ([Result: DeleteResult](#deleteresult-object)) => void  | Returns with array of file and directory paths that could not be deleted.                                         |
 
 ## copy(space, source, destination, callback)
 #### Version added: 0.147
@@ -105,7 +106,7 @@ Parameter     | Type                                     | Description          
 ------------- | -----------------------------------------| --------------------------------------------------------------------|
 space         | [StorageSpace](#storagespace-enum) enum  | The selected storage space.                                         |
 directoryPath | string                                   | Path within the space. Use null or empty string for the space root. |
-callback      | (Result) => void                         | Reports success or failure.                                         |
+callback      | ([Result: DirResult](#dirresult-object)) => void   | Returns with array of file names within the directory.    |
 
 ## readTextFile(space, filePath, callback)
 #### Version added: 0.147
@@ -151,6 +152,14 @@ pictures   | The extension's captured pictures folder, `OverwolfPicturesFolder\A
 videos     | The extension's captured videos folder, `OverwolfVideosFolder\AppName\`                   |
 appData    | The extension's folder under Roaming app data, `AppData\Roaming\Overwolf\Extensions\UID\` |
 
+## Content Object
+#### Version added: 0.147
+
+Parameter          | Type                            | Description                                       |
+-------------------| --------------------------------| ------------------------------------------------- |
+type               | [FileType](#filetype-enum) enum | FileType is "file" or "directory".                |   
+path               | string                          |                                                   |
+
 ## ReadTextFileResult Object
 #### Version added: 0.147
 
@@ -181,7 +190,7 @@ Parameter          | Type                            | Description              
 *error*            | string                          | inherited from the "Result" Object                |
 status             | string                          | deprecated. For backward compatibility only       |
 Reason             | string                          | deprecated. For backward compatibility only       |   
-type               | [FileType](#) enum              | FileType is "file"|"directory".                   |   
+type               | [FileType](#filetype-enum) enum | FileType is "file" or "directory".                |   
 
 #### Example data: Success
 
@@ -214,6 +223,19 @@ path               | string                          | Full path of the requeste
 ```json
 ```
 
+## DirResult Object
+#### Version added: 0.147
+
+Parameter          | Type                            | Description                                       |
+-------------------| --------------------------------| ------------------------------------------------- |
+*success*          | boolean                         | inherited from the "Result" Object                |
+*error*            | string                          | inherited from the "Result" Object                |
+status             | string                          | deprecated. For backward compatibility only       |
+Reason             | string                          | deprecated. For backward compatibility only       |   
+files              | string[]                        | Array of file names within the directory.         |  
+directories        | string[]                        | Array of directory names within the directory.    |   
+
+
 #### Example data: Success
 
 ```json
@@ -223,3 +245,25 @@ path               | string                          | Full path of the requeste
 
 ```json
 ```
+
+## DeleteResult Object
+#### Version added: 0.147
+
+Parameter          | Type                            | Description                                       |
+-------------------| --------------------------------| ------------------------------------------------- |
+*success*          | boolean                         | inherited from the "Result" Object                |
+*error*            | string                          | inherited from the "Result" Object                |
+status             | string                          | deprecated. For backward compatibility only       |
+Reason             | string                          | deprecated. For backward compatibility only       |   
+undeleted_content  | [Content[]](#content-object)    | Array of file and directory paths that could not be deleted. |  
+
+#### Example data: Success
+
+```json
+```
+
+#### Example data: Failure
+
+```json
+```
+
