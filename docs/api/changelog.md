@@ -19,9 +19,11 @@ The full documentation for this version is not ready yet.
   No need to use the external I/O plugin anymore for your current extension-related I/O functionalities.  
   Now you can easily create, delete, or update files on your extension's [dedicated storage space]((overwolf-extensions-io#storagespace-enum)).   
 * Allow apps to request opening the settings app in a specific game id. An example:
-  * Current hotkey URL: *overwolf://settings/hotkeys#hotkey_name_in_manifest*.  
-  * New hotkey URL: *overwolf://settings/games-overlay?hotkey=hotkey_name_in_manifest&gameId=game_id*.
-  (game_id is optional).
+  * Current hotkey URL:  
+    `overwolf://settings/hotkeys#hotkey_name_in_manifest`.  
+  * New hotkey URL:  
+    `overwolf://settings/games-overlay?hotkey=hotkey_name_in_manifest&gameId=game_id`.  
+    game_id is optional.
 * Update obs-ffmpeg.dll (NVENC encoder).  
   That can affect some devs that are trying to capture videos and get encoders errors and a message that the NVEC driver should be updated. 
 
