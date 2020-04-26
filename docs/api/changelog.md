@@ -8,8 +8,8 @@ Follow this entry for ongoing updates and changes to the project or tools:
 
 ## Version 0.147 (In process)
 
-Note that this version merged with version 0.146.
-Some of the links below are broken, as the full documentation for this version is not ready yet.
+Note that iteration 146 and 147 were combined into a single iteration.  
+The full documentation for this version is not ready yet.
 
 * New feature: [overwolf.window.flash()](overwolf-windows#flashwindowid-behavior-callback)  
   Flashes a window that is not in focus (for example, minimized to taskbar). 
@@ -28,9 +28,11 @@ Some of the links below are broken, as the full documentation for this version i
 
 ## Version 0.145 (Apr. 2020)
 
-Note that this version merged with version 0.144.
+Note that iteration 144 and 145 were combined into a single iteration.
 
 * New API: [overwolf.campaigns](overwolf-campaigns-raf) for the new LoL "Refer a friend" feature.
+* Cookie Sync - Cookie Syncing was updated to support Microsoft Edge (non-dev version) and the new Firefox schema.
+* Security and bug Fixes.
 
 ## Version 0.143 (Mar. 2020)
 
