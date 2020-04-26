@@ -4,10 +4,11 @@ title: overwolf.io API
 sidebar_label: overwolf.io
 ---
 
-Check whether a certain file exists and/or to write content into files.
+Check whether a certain file exists and/or to write content into files.  
 
 :::tip
-For more I/O functionalities, please use our [simple I/O plugin](../topics/simple-io-plugin).  
+For app-related I/O functionalities, use the [overwolf.extensions.io](overwolf-extensions-io) API.
+Also, our [simple I/O plugin](../topics/simple-io-plugin) offers several more general I/O features that are not available through the APIs.   
 :::
 
 ## Methods Reference

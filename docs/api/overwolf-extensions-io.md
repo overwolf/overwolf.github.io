@@ -4,7 +4,14 @@ title: overwolf.extensions.io API
 sidebar_label: overwolf.extensions.io
 ---
 
-Use this API to get I/O functionalities.
+Use this API to get I/O functionalities for the current extension and access your extension's [dedicated storage space]((#storagespace-enum)) like the picturs folder, videos folder or appData folder.
+
+:::tip
+For general I/O functionalities, use the [overwolf.io](overwolf-io) API.
+Also, our [simple I/O plugin](../topics/simple-io-plugin) offers several more general I/O features that are not available through the APIs.   
+:::
+
+
 
 ## Methods Reference
 
@@ -25,7 +32,6 @@ Use this API to get I/O functionalities.
 * [overwolf.extensions.io.Content](#content-object) Object
 * [overwolf.extensions.io.ReadTextFileResult](#readtextfileresult-object) Object
 * [overwolf.extensions.io.ExistResult](#existresult-object) Object
-* [overwolf.extensions.io.ExistResult](#existresult-object) Object
 * [overwolf.extensions.io.GetStoragePathResult](#getstoragepathresult-object) Object
 * [overwolf.extensions.io.DirResult](#dirresult-object) Object
 * [overwolf.extensions.io.DeleteResult](#deleteresult-object) Object
@@ -41,6 +47,13 @@ space     | [StorageSpace](#storagespace-enum) enum  | The selected storage spac
 path      | string                                   | Path within the space. Use null or empty string for the space root. |
 callback  | (Result) => void                         | Reports success or failure.                                         |
 
+#### Usage example
+
+```js
+overwolf.extensions.io.createDirectory(overwolf.extensions.io.enums.StorageSpace.appData,"hal9000",console.log)
+//==> {success: true}
+```
+
 ## getStoragePath(space, callback)
 #### Version added: 0.147
 
@@ -50,6 +63,13 @@ Parameter | Type                                     | Description              
 --------- | -----------------------------------------| --------------------------------------------------------------------|
 space     | [StorageSpace](#storagespace-enum) enum  | The selected storage space.                                         |
 callback  | ([Result: GetStoragePathResult](#getstoragepathresult-object)) => void | Returns with the full path of the requested extension storage space                                                   |
+
+#### Usage example
+
+```js
+overwolf.extensions.io.getStoragePath(overwolf.extensions.io.enums.StorageSpace.appData,console.log)
+//==>{path: "C:\Users\Hal9000\AppData\Roaming\Overwolf\nhmkaollkcmjiecdnnjmgfifjgkfegkljnjjbipp", success: true}
+```
 
 ## exist(space, path, callback)
 #### Version added: 0.147
@@ -61,6 +81,17 @@ Parameter | Type                                     | Description              
 space     | [StorageSpace](#storagespace-enum) enum  | The selected storage space.                                         |
 path      | string                                   | Path within the space. Use null or empty string for the space root. |
 callback  | ([Result: ExistResult](#existresult-object)) => void       | Returns with the type of the file (if exist).     |
+
+#### Usage example
+
+```js
+overwolf.extensions.io.exist(overwolf.extensions.io.enums.StorageSpace.appData,"hal9000",console.log)
+//==> "{type": "directory", "success":true}
+
+//you can use full path as well (just add escape slash for backslash)
+overwolf.extensions.io.exist(overwolf.extensions.io.enums.StorageSpace.appData,"C:\\Users\\OWUser\\AppData\\Roaming\\Overwolf\\nhmkaollkcmjiecdnnjmgfifjgkfegkljnjjbipp\\hal9000",console.log)
+//==> "{type": "directory", "success":true}
+```
 
 ## move(space, source, destination, callback)
 #### Version added: 0.147
@@ -74,6 +105,13 @@ source      | string                                   | Path for the source.   
 destination | string                                   | Path to move to, including filename.                                |
 callback    | (Result) => void                         | Reports success or failure.                                         |
 
+#### Usage example
+
+```js
+overwolf.extensions.io.move(overwolf.extensions.io.enums.StorageSpace.appData,"hal9000\\log.txt","log.txt",console.log)
+//==>{"success":true}
+```
+
 ## delete(space, path, callback)
 #### Version added: 0.147
 
@@ -84,6 +122,13 @@ Parameter   | Type                                     | Description            
 space       | [StorageSpace](#storagespace-enum) enum  | The selected storage space.                                         |
 path        | string                                   | Path within the space. Use null or empty string for the space root. |
 callback    | ([Result: DeleteResult](#deleteresult-object)) => void  | Returns with array of file and directory paths that could not be deleted.                                         |
+
+#### Usage example
+
+```js
+overwolf.extensions.io.delete(overwolf.extensions.io.enums.StorageSpace.appData,"log.txt",console.log)
+//==>{success: true}
+```
 
 ## copy(space, source, destination, callback)
 #### Version added: 0.147
@@ -97,6 +142,13 @@ source      | string                                   | Path for the source.   
 destination | string                                   | Path to copy to, including filename.                                |
 callback    | (Result) => void                         | Reports success or failure.                                         |
 
+#### Usage example
+
+```js
+overwolf.extensions.io.copy(overwolf.extensions.io.enums.StorageSpace.appData,"hal9000\\log.txt","log.txt",console.log)
+//==>{"success":true}
+```
+
 ## dir(space, directoryPath, callback)
 #### Version added: 0.147
 
@@ -107,6 +159,13 @@ Parameter     | Type                                     | Description          
 space         | [StorageSpace](#storagespace-enum) enum  | The selected storage space.                                         |
 directoryPath | string                                   | Path within the space. Use null or empty string for the space root. |
 callback      | ([Result: DirResult](#dirresult-object)) => void   | Returns with array of file names within the directory.    |
+
+#### Usage example
+
+```js
+overwolf.extensions.io.dir(overwolf.extensions.io.enums.StorageSpace.appData,"",console.log)
+//==>{"files":[],"directories":["hal9000"],"success":true}
+```
 
 ## readTextFile(space, filePath, callback)
 #### Version added: 0.147
@@ -119,6 +178,12 @@ space         | [StorageSpace](#storagespace-enum) enum  | The selected storage 
 filePath      | string                                   | Path of a file to read (within the space).                          |
 callback      | ([Result: ReadTextFileResult](#)) => void| Returns with the content of the fil.                                |
 
+#### Usage example
+
+```js
+overwolf.extensions.io.readTextFile(overwolf.extensions.io.enums.StorageSpace.appData,"hal9000\\loxg.txt",console.log)
+```
+
 ## writeTextFile(space, filePath, content, callback)
 #### Version added: 0.147
 
@@ -128,8 +193,15 @@ Parameter     | Type                                     | Description          
 ------------- | -----------------------------------------| --------------------------------------------------------------------|
 space         | [StorageSpace](#storagespace-enum) enum  | The selected storage space.                                         |
 filePath      | string                                   | Path of a file to write to (within the space).                      |
-content       | string                                   | Text content to write.                                              |
+content       | string                                   | Text content to write (added to the end of file, not overwrite the content)  |
 callback      | (Result) => void                         | Reports success or failure.                                         |
+
+#### Usage example
+
+```js
+overwolf.extensions.io.writeTextFile(overwolf.extensions.io.enums.StorageSpace.appData,"hal9000\\log.txt","add this to your tail",console.log)
+//==>{"success":true}
+```
 
 ## FileType enum
 #### Version added: 0.147
@@ -145,6 +217,9 @@ directory  |                                           |
 #### Version added: 0.147
 
 > The selected storage space.
+
+The default Overwolf's captured pictures and videos folder is the windows "pictures"/"videos" folder.  
+Of course, the user can change it anytime from the OW client UI.
 
 Option     | Description                                                                               |
 -----------| ------------------------------------------------------------------------------------------|
@@ -165,8 +240,6 @@ path               | string                          |                          
 
 Parameter          | Type                            | Description                                       |
 -------------------| --------------------------------| ------------------------------------------------- |
-*success*          | boolean                         | inherited from the "Result" Object                |
-*error*            | string                          | inherited from the "Result" Object                |
 status             | string                          | deprecated. For backward compatibility only       |
 Reason             | string                          | deprecated. For backward compatibility only       |   
 content            | string                                                                              |   
@@ -174,11 +247,16 @@ content            | string                                                     
 #### Example data: Success
 
 ```json
+{"content":"just a demo text","success":true}
 ```
 
 #### Example data: Failure
 
 ```json
+{
+    "success":false,
+    "error":"hal9000\\loxg.txt does not exist."
+}
 ```
 
 ## ExistResult Object
@@ -186,8 +264,6 @@ content            | string                                                     
 
 Parameter          | Type                            | Description                                       |
 -------------------| --------------------------------| ------------------------------------------------- |
-*success*          | boolean                         | inherited from the "Result" Object                |
-*error*            | string                          | inherited from the "Result" Object                |
 status             | string                          | deprecated. For backward compatibility only       |
 Reason             | string                          | deprecated. For backward compatibility only       |   
 type               | [FileType](#filetype-enum) enum | FileType is "file" or "directory".                |   
@@ -195,11 +271,17 @@ type               | [FileType](#filetype-enum) enum | FileType is "file" or "di
 #### Example data: Success
 
 ```json
+"{type": "directory", "success":true}
 ```
 
 #### Example data: Failure
 
 ```json
+{
+    "type": "file", 
+    "success": false, 
+    "error": "C:\Users\hal9000\AppData\Roaming\Overwolf\nhm…dnnjmgfifjgkfegkljnjjbipp\DirNameX does not exist."
+}
 ```
 
 ## GetStoragePathResult Object
@@ -207,8 +289,6 @@ type               | [FileType](#filetype-enum) enum | FileType is "file" or "di
 
 Parameter          | Type                            | Description                                       |
 -------------------| --------------------------------| ------------------------------------------------- |
-*success*          | boolean                         | inherited from the "Result" Object                |
-*error*            | string                          | inherited from the "Result" Object                |
 status             | string                          | deprecated. For backward compatibility only       |
 Reason             | string                          | deprecated. For backward compatibility only       |   
 path               | string                          | Full path of the requested extension storage space|   
@@ -216,6 +296,12 @@ path               | string                          | Full path of the requeste
 #### Example data: Success
 
 ```json
+//the path of the extension's app data storage space
+
+{
+    "path": "C:\Users\Hal9000\AppData\Roaming\Overwolf\nhmkaollkcmjiecdnnjmgfifjgkfegkljnjjbipp", 
+    "success": true
+}
 ```
 
 #### Example data: Failure
@@ -228,22 +314,28 @@ path               | string                          | Full path of the requeste
 
 Parameter          | Type                            | Description                                       |
 -------------------| --------------------------------| ------------------------------------------------- |
-*success*          | boolean                         | inherited from the "Result" Object                |
-*error*            | string                          | inherited from the "Result" Object                |
 status             | string                          | deprecated. For backward compatibility only       |
 Reason             | string                          | deprecated. For backward compatibility only       |   
 files              | string[]                        | Array of file names within the directory.         |  
 directories        | string[]                        | Array of directory names within the directory.    |   
 
-
 #### Example data: Success
 
 ```json
+{
+    "files":["hal9000\\log.txt"],
+    "directories":[],
+    "success":true
+}
 ```
 
 #### Example data: Failure
 
 ```json
+{
+    "success":false,
+    "error":"Could not find a part of the path 'C:\\Users\\OWUser\\AppData\\Roaming\\Overwolf\\nhmkaollkcmjiecdnnjmgfifjgkfegkljnjjbipp\\hal900'."
+}
 ```
 
 ## DeleteResult Object
@@ -260,10 +352,15 @@ undeleted_content  | [Content[]](#content-object)    | Array of file and directo
 #### Example data: Success
 
 ```json
+{"success": "true"}
 ```
 
 #### Example data: Failure
 
 ```json
+{
+    "success": false, 
+    "error": "File or directory do not exist"
+}
 ```
 

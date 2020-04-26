@@ -15,7 +15,9 @@ Some of the links below are broken, as the full documentation for this version i
   Flashes a window that is not in focus (for example, minimized to taskbar). 
 * New manifest flag: [disable_cleanup](manifest-json#disable_cleanup).  
   If set to true, app local data will not be cleaned up after app uninstallation.
-* New API: [overwolf.extensions.io](overwolf-extensions-io) 
+* New API: [overwolf.extensions.io](overwolf-extensions-io)  
+  No need to use the external I/O plugin anymore for your current extension-related I/O functionalities.  
+  Now you can easily create, delete, or update files on your extension's [dedicated storage space]((overwolf-extensions-io#storagespace-enum)).   
 * Allow apps to request opening the settings app in a specific game id. An example:
   * Current hotkey URL: *overwolf://settings/hotkeys#hotkey_name_in_manifest*.  
   * New hotkey URL: *overwolf://settings/games-overlay?hotkey=hotkey_name_in_manifest&gameId=game_id*.
