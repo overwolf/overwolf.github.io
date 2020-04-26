@@ -17,7 +17,7 @@ The full documentation for this version is not ready yet.
   If set to true, app local data will not be cleaned up after app uninstallation.
 * New API: [overwolf.extensions.io](overwolf-extensions-io)  
   No need to use the external I/O plugin anymore for your current extension-related I/O functionalities.  
-  Now you can easily create, delete, or update files on your extension's [dedicated storage space]((overwolf-extensions-io#storagespace-enum)).   
+  Now you can easily create, delete, or update files on your extension's [dedicated storage space](overwolf-extensions-io#storagespace-enum).   
 * Allow apps to request opening the settings app in a specific game id. An example:
   * Current hotkey URL:  
     `overwolf://settings/hotkeys#hotkey_name_in_manifest`.  
