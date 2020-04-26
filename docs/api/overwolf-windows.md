@@ -53,7 +53,7 @@ Please make sure to read our guide on [how to use Overwolf windows](../topics/us
 * [overwolf.windows.displayMessageBox()](#displaymessageboxmessageparams-callback)
 * [overwolf.windows.isAccelreatedOSR()](#isaccelreatedosrcallback)
 * [overwolf.windows.setMinSize()](#setminsizewindowid-width-height-callback)
-* [overwolf.windows.flash()](#flashwindowid-behavior-callback)
+* [overwolf.windows.flash()](#flashwindowid-behaviorcallback)
 
 
 ## Events Reference
