@@ -4,7 +4,7 @@ title: overwolf.extensions.io API
 sidebar_label: overwolf.extensions.io
 ---
 
-Use this API to get I/O functionalities for the current extension and access your extension's [dedicated storage space](#storagespace-enum) like the picturs folder, videos folder or appData folder.
+Use this API to get I/O functionalities for the current extension and access your extension's [dedicated storage space](#storagespace-enum) like the pictures folder, videos folder, or appData folder.
 
 :::tip
 For general I/O functionalities, use the [overwolf.io](overwolf-io) API.
