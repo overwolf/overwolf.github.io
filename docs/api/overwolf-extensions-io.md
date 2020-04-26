@@ -218,7 +218,7 @@ directory  |                                           |
 
 > The selected storage space.
 
-The default Overwolf's captured pictures and videos folder is the windows "pictures"/"videos" folder.  
+Note that the default Overwolf's captured pictures and videos folder is the windows "pictures"/"videos" folder.  
 Of course, the user can change it anytime from the OW client UI.
 
 Option     | Description                                                                               |
