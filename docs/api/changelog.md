@@ -11,7 +11,7 @@ Follow this entry for ongoing updates and changes to the project or tools:
 Note that iteration 146 and 147 were combined into a single iteration.  
 The full documentation for this version is not ready yet.
 
-* New feature: [overwolf.window.flash()](overwolf-windows#flashwindowid-behavior-callback)  
+* New feature: [overwolf.window.flash()](overwolf-windows#flashwindowid-behaviorcallback)  
   Flashes a window that is not in focus (for example, minimized to taskbar). 
 * New manifest flag: [disable_cleanup](manifest-json#disable_cleanup).  
   If set to true, app local data will not be cleaned up after app uninstallation.
