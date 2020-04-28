@@ -25,6 +25,7 @@ Please read the [overwolf.games.events](overwolf-games-events) documentation pag
 * [me](#me)
 * [phase](#phase)
 * [map](#map)
+* [team_feed](#team_feed)
 
 ## Game events status
 
@@ -162,3 +163,31 @@ killer | The killer’s nickname | The local player was killed by one of the pla
 #### `killer` notes:
 
 When one of local player’s squad members kill the local player, the provided data will be "self_kill”.
+
+## `team_feed`
+
+### Events
+
+Event      | Event Data  | Fired When          | Notes              | Since GEP Ver. |
+-----------| ------------| ------------------------------- | ------------------ | --------------|
+team_feed | Action name, attacker name, weapon name, and victim name. | Whenever a game update appears in the middle of the screen. | See [notes](#team_feed-notes) |    148.0    |
+
+#### *team_feed* note
+
+Data Examples:
+
+```json
+{"events":[{"name":"team_feed","data":"{"message":"YouKilledPlayer","attacker":"Shargaas","weapon": "SKS","victim":"sOrgUsUs"}"}]}
+```
+
+```json
+{"events":[{"name":"team_feed","data":"{"message":"YourTeammateKilledPlayer","attacker":"KingSlayer3x","weapon": "QBZ","victim":"4Senius"}"}]}
+```
+
+```json
+{"events":[{"name":"team_feed","data":"{"message":"YourTeammateHaveBeenPutDown","attacker":"Egemen365", "weapon":"SLR","victim":"KingSlayer3x"}"}]}
+```
+
+```json
+{"events":[{"name":"team_feed","data":"{"message":"YouPutDownPlayer","attacker":"Shargaas","weapon": "M416","victim":"cerenihat}"}]}
+```
