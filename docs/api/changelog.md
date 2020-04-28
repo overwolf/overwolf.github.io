@@ -6,7 +6,7 @@ sidebar_label: Changelog
 
 Follow this entry for ongoing updates and changes to the project or tools:
 
-## Version 0.147 (In process)
+## Version 0.147 (In progress)
 
 Note that iteration 146 and 147 were combined into a single iteration.  
 The full documentation for this version is not ready yet.
