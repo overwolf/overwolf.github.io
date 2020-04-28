@@ -26,16 +26,18 @@ The full documentation for this version is not ready yet.
     game_id is optional.
 * Update obs-ffmpeg.dll (NVENC encoder).  
   That can affect some devs that are trying to capture videos and get encoders errors and a message that the NVEC driver should be updated. 
+
 * [PUBG Lite](overwolf-games-events-pubglite)
   * New event:
     * team_feed
+    * knockout
 * [CS: GO](overwolf-games-events-csgo)
   * New event:
     * kill_feed
-  * New update:
+  * New event:
     * scoreboard
 * [Rainbow Six: Siege](overwolf-games-events-rainbow-six)
-  * New update:
+  * New feature:
     * me
 * [Escape From Tarkov](overwolf-games-events-escape-from-tarkov)
   * New supported game
