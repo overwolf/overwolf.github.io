@@ -61,6 +61,11 @@ Dec 22, 14:35 PM GMT+3
 **Investigating** - Dota Underlords events are down.  
 Dec 19, 08:29 AM GMT+3
 
+Escape From Tarkov
+-----------------
+
+No logs.
+
 Fortnite
 --------
 

@@ -159,5 +159,12 @@ const GamesMetadata = {
     iconUrl: "/docs/assets/games-logos/warcraft.png",
     iconLargeUrl: "/docs/assets/games-logos/large/warcraft.png",
     name: "World of Warcraft"
+  },
+  21634: {
+    id: 21634,
+    path: "/docs/status/escape-from-tarkov",
+    iconUrl: "/docs/assets/games-logos/tarkov.png",
+    iconLargeUrl: "/docs/assets/games-logos/large/tarkov.png",
+    name: "Escape From Tarkov"
   }
 }
