@@ -22,6 +22,7 @@ Please read the [overwolf.games.events](overwolf-games-events) documentation pag
 * [roster](#roster)
 * [kill](#kill)
 * [death](#death)
+* [me](#me)
 
 ## Game events status
 
@@ -169,3 +170,28 @@ Event  | Event Data                                       |               Fired 
 knockedout | null | Local player’s hp reaches 20. |                  |   123.0     |
 death | null |  Local player dies |                  |   123.0     |
 killer | Killer name</br>`{"name":"killer","data":"Pickyuser18857"}` |  The local player was killed by an enemy |                  |   123.0     |
+
+## `me`
+
+### Info Updates
+
+key          | Category    | Values                            | Notes                 | Since GEP Ver. |
+------------ | ------------| --------------------------------- | --------------------- | ------------- | 
+name         | me          | Local player's in-game name.      | See [notes](#name-note)     |   148.0  |
+account_id   | me          | Local player's account ID.        |See [notes](#account_id-note)|   148.0  |
+
+#### *name* note
+
+Data Example:
+
+```json
+{"info":{"me":{"name":"WolfOnTop.top"}},"feature":"me"}
+```
+
+#### *account_id* note
+
+Data Example:
+
+```json
+{"info":{"me":{"account_id":"1b810848-34df-4834-aa26-61c838059a37"}},"feature":"me"}
+```
