@@ -40,6 +40,8 @@ Please read the [overwolf.games.events](overwolf-games-events) documentation pag
 * [replay](#replay)
 * [counters](#counters)
 * [mvp](#mvp)
+* [scoreboard](#scoreboard)
+* [kill_feed](#kill_feed)
 
 ## Game events status
 
@@ -575,4 +577,36 @@ Data Example:
 
 ```json
 {"event":"mvp","value":{"totalMvps":1}}
+```
+
+## `scoreboard`
+
+### Info Updates
+
+key               | Category    | Values                    | Notes                 | Since GEP Ver. |
+----------------- | ------------| ------------------------- | --------------------- | ------------- |
+scoreboard_xx     | game_info   | Possible values:<br><ul><li>Steam ID</li><li>Team</li><li>Amount of money</li><li>Amount of kills</li><li>Assists</li><li>Deaths</li><li>Mvps</li><li>Score</li><li>Enemy flash</li><li>Utility damage</li><li>Average damage round</li> |See [notes](#scoreboard_xx-note)|    148.0       |
+
+#### *scoreboard_xx* note
+
+Data Examples:
+
+```json
+{"info":{"game_info":{"scoreboard_1":"{"steamid":76561198864213590,"team":"T","money":0,"kills":2,"assists":0,"deaths":2,"mvps":0,"score":5,"adr":0,"ud":3,"ef":2}"}},"feature":"scoreboard"}
+```
+
+## `kill_feed`
+
+### Events
+
+Event       | Event Data   | Fired When    | Notes              | Since GEP Ver. |
+------------| -------------| --------------| ------------------ | --------------|
+kill_feed   | Kills & assists information| Anytime a player dies in match. | See [notes](#kill_feed-note)|     148.0      |
+
+#### *kill_feed* note
+
+Data Example:
+
+```json
+{"events":[{"name":"kill_feed","data":"{"attacker":"Na`Vi NICKname?","assister":"","weapon":"scar20","headshot":false,"wallbang":"0","flashed":false,"victim":"Ercüment Çözer"}"}]}
 ```
