@@ -145,11 +145,16 @@ As you can see, this object includes:
 * team - Blue/Orange
 * is_local - local player or not (Boolean)
 
-When one of the players dies or leaves the match, the relevant “roster_ XX” object will be updated to:
+When one of the players leaves the match, the relevant “roster_ XX” object will be updated to:
 
 `{"players":{"roster_3":null}}`
 
 If a new player replaces a leaver, a new “roster_XX” object will be assigned to the new player who joined.
+
+#### Category `player` notes
+
+The `team`, `health`, `score`, `kills`, and `deaths` events are _only_ available for the local player.
+
 
 ## `kill`
 
