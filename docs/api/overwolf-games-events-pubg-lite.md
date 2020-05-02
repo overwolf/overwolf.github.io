@@ -60,6 +60,7 @@ headshots | match_info | Total number of headshots in the match |               
 total_damage_dealt   | match_info   | Total damage dealt in the current match |   |  146.0       |
 max_kill_distance   | match_info   | Max kill distance in CM|          |  146.0      |
 
+
 ### Events
 
 Event      | Event Data  | Fired When          | Notes              | Since GEP Ver. |
@@ -67,10 +68,20 @@ Event      | Event Data  | Fired When          | Notes              | Since GEP 
 kill | null        | The local player killed another player |   |   146.0      | 
 headshot   | null        |  The local player hit another player with a headshot 	   |     |  146.0      | 
 damage_dealt   | amount of damage dealt by the local player |  The local player “damaged” an enemy or himself |      |  146.0   | 
+knockout | weapon name + victim name  | The local player knocked-out another player |See [notes](#knockout-note)|   148.0      | 
+
 
 #### `damage_dealt` note:
 
 This event can not be used in real time, as it can give an un-fair advantage to the user. You can use it post-match.
+
+#### *knockout* note
+
+Data Example:
+
+```json
+{"feature":"kill","event":"knockout","data":{"weapon":"SCAR-L","victim":"moshi_official"}}
+```
 
 ## `match`
 
