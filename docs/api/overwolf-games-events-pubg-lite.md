@@ -67,11 +67,11 @@ Event      | Event Data  | Fired When          | Notes              | Since GEP 
 -----------| ------------| ------------------- | ------------------ | --------------|
 kill | null        | The local player killed another player |   |   146.0      | 
 headshot   | null        |  The local player hit another player with a headshot 	   |     |  146.0      | 
-damage_dealt   | amount of damage dealt by the local player |  The local player “damaged” an enemy or himself |      |  146.0   | 
+damage_dealt   | amount of damage dealt by the local player |  The local player “damaged” an enemy or himself | See [notes](#damage_dealt-note)      |  146.0   | 
 knockout | weapon name + victim name  | The local player knocked-out another player |See [notes](#knockout-note)|   148.0      | 
 
 
-#### `damage_dealt` note:
+#### *damage_dealt* note
 
 This event can not be used in real time, as it can give an un-fair advantage to the user. You can use it post-match.
 
