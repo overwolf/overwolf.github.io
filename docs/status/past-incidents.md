@@ -64,7 +64,11 @@ Dec 19, 08:29 AM GMT+3
 Escape From Tarkov
 -----------------
 
-No logs.
+**Resolved** - This incident has been resolved.  
+Apr 30, 09:28 PM GMT+3
+
+**Investigating** - Escape From Tarkov game events are down, we are working on a fix.  
+Apr 29, 02:40 PM GMT+3
 
 Fortnite
 --------
@@ -280,6 +284,9 @@ No logs.
 
 Teamfight Tactics
 -----------------
+
+**Resolved** - This incident has been resolved.  
+Apr 30, 09:28 PM GMT+3
 
 **Investigating** - TFT events are currently down, we are working on a fix.  
 Apr 29, 12:20 AM GMT+3
