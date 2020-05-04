@@ -1131,13 +1131,13 @@ Parameter          | Type     | Description                                 |
 
 #### Version added: 0.143
 
-| Options      | Description                                                            |
-|--------------| -----------------------------------------------------------------------|
-| none         |                                                                        |
-| top_left     |                                                                        |
-| top_right    |                                                                        |
-| bottom_left  |                                                                        |
-| bottom_right |                                                                        |
+| Options           | Description                                                     |
+|-------------------| ----------------------------------------------------------------|
+| None              |                                                                 |
+| TopLeftCorner     |                                                                 |
+| TopRightCorner    |                                                                 |
+| BottomLeftCorner  |                                                                 |
+| BottomRightCorner |                                                                 |
 
 ## indication_type enum
 
@@ -1145,6 +1145,6 @@ Parameter          | Type     | Description                                 |
 
 | Options      | Description                                                            |
 |--------------| -----------------------------------------------------------------------|
-| off          |                                                                        |
-| dot          |                                                                        |
-| dot_time     |                                                                        |
+| NoIndication |                                                                        |
+| Dot          |                                                                        |
+| DotAndTimer  |                                                                        |
