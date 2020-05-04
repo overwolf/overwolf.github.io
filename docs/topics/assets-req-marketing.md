@@ -10,9 +10,8 @@ sidebar_label: Marketing asset requierments
 -   The assets you provide us with be used to ensure the landing pages and marketing materials we make are as on-brand as they can be.
 -   This will result in landing pages that don't only look  cool and professional, but also convert better. Higher install rates help making the most out of every marketing dollar you invest.  
 -   We will never use your assets for anything other than promoting your brand without your consent.
--   Here is an example of a landing page we created for partners:
-
-[https://go.overwolf.com/outplayed/\
+-   Here is an example of a landing page we created for partners:  
+  [https://go.overwolf.com/outplayed/\
 ](https://go.overwolf.com/outplayed/)<https://go.overwolf.com/facecheck-llstylish/>
 
 ## What we need
@@ -26,7 +25,25 @@ sidebar_label: Marketing asset requierments
  -   Please provide all approved variations of the logo.
  -   If there is no option for SVG format, please provide the logo in a high resolution PNG file with no added background.
  
- ![](https://lh4.googleusercontent.com/Fi_6tVkUtn9HdXg-0rjSZWG_4uJs7WF4dOkvMerGgOJpnGQB4C_wy73VUyrNrDBeqVXQXPY8-4mDJxT67J2BkvvQ2eRDXbbGkwuWh-XryqPfSymt6iBnIjVp3fWE6f2bez5Zx_mTRw)![](https://lh3.googleusercontent.com/SZKwVAqcCmpecoAEGl9YZv5YCR7O5mC3VSr6R544NiTtc5tgDdQiX6UMbgAf8wqnrormqlCHWqcKDZU33EHqa2HVjrLbkkZsiEMZkv_Hstc2Lyw_0eutg_-p39SGmjx9cj6jG6SFxQ)![](https://lh5.googleusercontent.com/moDxgd34KQDEp3PyWkbtOt9BHCz8XPJ-KPbgYJrtlVfWeO4z8l3JUjh1c1N4hPVg2AJ8rVY-bIUlHILl_mBNzSedi4EYnEvBfIUZqds2PEQwmLN0lYjK-TE3kDSf7yoSOV9Kmpe3_Q)![](https://lh3.googleusercontent.com/_xJuZiANOjDCum9GHniNNMDPwn8yjH2sd_9CBoi_zr-mdlEjwTMJ9f-AMeXAC7bIQUQQfDQTu3lYs54HV_bFEyMQeWvgjzrqkQkU1Bt_Sl4LBT0CrE5xT7g2B9lLNdRW7U5px6yWJg)
+ <div class="box" data-slick='{"slidesToShow": 3}'>
+  <a data-fancybox="gallery" data-caption="" href="https://lh5.googleusercontent.com/moDxgd34KQDEp3PyWkbtOt9BHCz8XPJ-KPbgYJrtlVfWeO4z8l3JUjh1c1N4hPVg2AJ8rVY-bIUlHILl_mBNzSedi4EYnEvBfIUZqds2PEQwmLN0lYjK-TE3kDSf7yoSOV9Kmpe3_Q"> 
+    <span class="thumb">
+      <img src="https://lh5.googleusercontent.com/moDxgd34KQDEp3PyWkbtOt9BHCz8XPJ-KPbgYJrtlVfWeO4z8l3JUjh1c1N4hPVg2AJ8rVY-bIUlHILl_mBNzSedi4EYnEvBfIUZqds2PEQwmLN0lYjK-TE3kDSf7yoSOV9Kmpe3_Q" alt="StreamAware">
+    </span>
+  </a>
+  <a data-fancybox="gallery" data-caption="" href="https://lh4.googleusercontent.com/Fi_6tVkUtn9HdXg-0rjSZWG_4uJs7WF4dOkvMerGgOJpnGQB4C_wy73VUyrNrDBeqVXQXPY8-4mDJxT67J2BkvvQ2eRDXbbGkwuWh-XryqPfSymt6iBnIjVp3fWE6f2bez5Zx_mTRw"> 
+    <span class="thumb">
+      <img src="https://lh4.googleusercontent.com/Fi_6tVkUtn9HdXg-0rjSZWG_4uJs7WF4dOkvMerGgOJpnGQB4C_wy73VUyrNrDBeqVXQXPY8-4mDJxT67J2BkvvQ2eRDXbbGkwuWh-XryqPfSymt6iBnIjVp3fWE6f2bez5Zx_mTRw" alt="StreamAware">
+    </span>
+  </a>
+    <a data-fancybox="gallery" data-caption="" href="https://lh3.googleusercontent.com/SZKwVAqcCmpecoAEGl9YZv5YCR7O5mC3VSr6R544NiTtc5tgDdQiX6UMbgAf8wqnrormqlCHWqcKDZU33EHqa2HVjrLbkkZsiEMZkv_Hstc2Lyw_0eutg_-p39SGmjx9cj6jG6SFxQ"> 
+    <span class="thumb">
+      <img src="https://lh3.googleusercontent.com/SZKwVAqcCmpecoAEGl9YZv5YCR7O5mC3VSr6R544NiTtc5tgDdQiX6UMbgAf8wqnrormqlCHWqcKDZU33EHqa2HVjrLbkkZsiEMZkv_Hstc2Lyw_0eutg_-p39SGmjx9cj6jG6SFxQ" alt="StreamAware">
+    </span>
+  </a>
+
+</div>
+
 -   JPEG format
 -   Has background
 -   SVG / PNG  format
@@ -39,12 +56,10 @@ sidebar_label: Marketing asset requierments
 
 ### 3. Main Brand Colors
 -   Preferably in a Figma file containing all the colors and specific uses.
--   If not possible, please specify the hex values of the colors in textual form. In text format, please include uses for each color and priority of usage.\
-    For example:
-CTA Color : #e5004c (Pink)\
-Text Color: #f4f2ff (Purple-Grey)\
-BG Colors: #161326 (Dark Purple)\
-                    #797399 (Purple)
+-   If not possible, please specify the hex values of the colors in textual form. In text format, please include uses for each color and priority of usage. For example:  
+* CTA Color : `#e5004c` (Pink)
+* Text Color: `#f4f2ff` (Purple-Grey)
+* BG Colors: `#161326` (Dark Purple) / `#797399` (Purple)
                     
 ### 4. App Description
 -   What is the exact app name in written in text form? (i.e AppName / App Name / Appname)
