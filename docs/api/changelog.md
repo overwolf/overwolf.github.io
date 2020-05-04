@@ -25,7 +25,9 @@ The full documentation for this version is not ready yet.
     `overwolf://settings/games-overlay?hotkey=hotkey_name_in_manifest&gameId=game_id`.  
     game_id is optional.
 * Update obs-ffmpeg.dll (NVENC encoder).  
-  That can affect some devs that are trying to capture videos and get encoders errors and a message that the NVEC driver should be updated. 
+  That can affect some devs that are trying to capture videos and get encoders errors and a message that the NVEC driver should be updated.
+* Updates for the streaming and replay APIs: added a [quota object](#overwolf-streaming#streamquotaparams-object):  
+  Allow setting max media folder size in GB, and exclude folders that are not part of this quota.
 
 * [PUBG Lite](overwolf-games-events-pubglite)
   * New event:
