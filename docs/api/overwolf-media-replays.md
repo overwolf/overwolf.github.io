@@ -40,6 +40,8 @@ Please read all the info about video capture usage and options on our [video cap
 * [overwolf.media.replays.enums.ReplayType](#replaytype-enum) enum
 * [overwolf.media.replays.onHighlightsCapturedEvent](#onhighlightscapturedevent-object) Object
 * [overwolf.media.replays.raw_events](#raw_events-object) Object
+* [overwolf.media.replays.ReplayVideoOptions](#replayvideooptions-object) Object
+* [overwolf.media.replays.ReplayStreamParams](#replaystreamparams-object) Object
 
 
 ## turnOn(parameters, callback)
@@ -91,6 +93,10 @@ A callback function which will be called with the status of the request
         "fps" :30,
         "width" :1920,
         "height" : 1080
+    },
+    "quota": {
+      "max_quota_gb": 2,
+      "excluded_directories": [ "cool_session" ] //set directories that are not part of the quota
     }
 };
 
@@ -505,13 +511,67 @@ requiredHighlights   | string  | An array of requested highlights. use ["*"] to 
 ## ReplaySetting Object
 #### Version added: 0.133
 
-> Container for the capture configuration.
+> Capture settings container.
 
-Parameter | Type                                                               | Description                                  |
---------- | -------------------------------------------------------------------| -------------------------------------------- |
+Parameter | Type                                                               | Description                                    |
+--------- | -------------------------------------------------------------------| ---------------------------------------------- |
 highlights| [ReplayHighlightsSetting](#replayhighlightssetting-object) Object  | **Optional**. Enable auto Highlights recording |
-settings  | [StreamParams](overwolf-streaming#streamparams-object) Object      | Mandatory. the settings required to start a stream      |
+settings  | [ReplayStreamParams](#replaystreamparams-object) Object            | The stream provider settings                   |
 
+#### Object data example
+
+```json
+"settings": {
+    "video": { "buffer_length": 20000 },
+    "audio": {
+	  "mic": {
+	    "volume": 100,
+		  "enable": true
+	  },
+	  "game": {
+	    "volume": 75,
+		  "enable": true
+	  }
+    },
+    "peripherals": { 
+    "capture_mouse_cursor": "both" 
+    },
+    "quota": {
+      "max_quota_gb": 2,
+      "excluded_directories": [ "cool_session" ] //set directories that are not part of the quota
+    }
+} 
+```
+
+## ReplayStreamParams Object
+
+#### Version added: 0.147
+
+Represents the settings required to start a replay video.
+
+| Name         | Type                                                                              | Description                              | Since |
+|--------------| ----------------------------------------------------------------------------------|------------------------------------------|------ |
+| audio        | [StreamAudioOptions](overwolf-streaming#streamaudiooptions-object) Object                           | Stream audio options                     | 0.78  |
+| peripherals  | [StreamPeripheralsCaptureOptions](overwolf-streaming#streamperipheralscaptureoptions-object) Object | Defines how peripherals (i.e. mouse cursor) are streamed.</br>**Permissions required: DesktopStreaming**                                                                                                 | 0.78  |
+| max_quota_gb | double                                                                            | Max media folder size in GB. </br>  **deprecated**  | 0.78  |
+| quota        | [StreamQuotaParams](overwolf-streaming#streamquotaparams-object) object           | Parameters for limiting disk space allocation. See [note](#quota-note)  | 0.147  |
+| video        | [ReplayVideoOptions](#replayvideooptions-object) Object                           | Replay video options                     | 0.147  |
+
+#### `quota` note
+
+You can allocate limited disk space for your captured video and even set an array of directories that are excluded from max quota calculations.  
+You can use it, for example, to implement "favorites captures" feature: allow your app's users to mark some captured videos as "favorites," move them to one of the excluded directories, and make sure that they not deleted when the quota has reached the limit. Of course, this is just a suggested usage example.
+
+## ReplayVideoOptions Object
+
+#### Version added: 0.147
+
+Replay video options.
+
+| Name                           | Type   | Description                                                                       | Since  |
+|--------------------------------| -------|-----------------------------------------------------------------------------------|------- |
+| disable_when_sht_not_supported | bool   | Do not start video replay service in case shared texture is not supported         | 0.147  |
+| buffer_length                  | int    | Defines the length of the buffer to be recorded in millisenconds (max 40 seconds) | 0.147  |
 
 ## ReplayType enum
 #### Version added: 0.78

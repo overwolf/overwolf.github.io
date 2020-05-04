@@ -76,6 +76,7 @@ Please read all the info about streaming usage and options on our [video capture
 * [overwolf.streaming.SplitResult](#splitresult-object) Object
 * [overwolf.streaming.enums.indication_position](#indication_position-enum) Enum
 * [overwolf.streaming.enums.indication_type](#indication_type-enum) Enum
+* [StreamQuotaParams](#streamquotaparams-object) Object
 
 ## start(settings, callback)
 
@@ -160,6 +161,10 @@ var stream_settings = {
 
     "peripherals": {
       "capture_mouse_cursor": "both"
+    },
+    "quota": {
+      "max_quota_gb": 2,
+      "excluded_directories": [ "cool_session" ] //set directories that are not part of the quota
     }
   }
 };
@@ -725,20 +730,25 @@ Stream settings container.
 
 ```json
 "settings": {
-	"video": { "buffer_length": 20000 },
-	"audio": {
-	    "mic": {
-	        "volume": 100,
-		"enable": true
-	    },
-	    "game": {
-	        "volume": 75,
-		"enable": true
-	    }
-         },
-	    "peripherals": { "capture_mouse_cursor": "both" }
-	 }
-}
+    "video": { "buffer_length": 20000 },
+    "audio": {
+	  "mic": {
+	    "volume": 100,
+		  "enable": true
+	  },
+	  "game": {
+	    "volume": 75,
+		  "enable": true
+	  }
+    },
+    "peripherals": { 
+    "capture_mouse_cursor": "both" 
+    },
+    "quota": {
+      "max_quota_gb": 2,
+      "excluded_directories": [ "cool_session" ] //set directories that are not part of the quota
+    }
+} 
 ```
 
 ## overwolf.streaming.enums.StreamingProvider enum
@@ -760,15 +770,32 @@ Represents the settings required to start a stream.
 
 | Name         | Type                                                                              | Description                              | Since |
 |--------------| ----------------------------------------------------------------------------------|------------------------------------------|------ |
+| audio        | [StreamAudioOptions](#streamaudiooptions-object) Object                           | Stream audio options                     | 0.78  |
+| peripherals  | [StreamPeripheralsCaptureOptions](#streamperipheralscaptureoptions-object) Object | Defines how peripherals (i.e. mouse cursor) are streamed.</br>**Permissions required: DesktopStreaming**                                                                                                 | 0.78  |
+| max_quota_gb | double                                                                            | Max media folder size in GB. </br>  **deprecated**  | 0.78  |
+| quota        | [StreamQuotaParams](#streamquotaparams-object) object                             | Parameters for limiting disk space allocation. See [note](#quota-note)  | 0.147  |
 | stream_info  | [StreamInfo](#streaminfo-object) object                                           | The basic stream information             | 0.78  |
 | auth         | [StreamAuthParams](#streamauthparams-object) object                               | Stream authorization data                | 0.78  |
 | video        | [StreamVideoOptions](#streamvideooptions-object) Object                           | Stream video options                     | 0.78  |
-| audio        | [StreamAudioOptions](#streamaudiooptions-object) Object                           | Stream audio options                     | 0.78  |
-| peripherals  | [StreamPeripheralsCaptureOptions](#streamperipheralscaptureoptions-object) Object | Defines how peripherals (i.e. mouse cursor) are streamed.</br>**Permissions required: DesktopStreaming**                                                                                                 | 0.78  |
 | ingest_server| [StreamIngestServer](##streamingestserver-object) Object                          | Information on the server that is being streamed to | 0.78  |
 | replay_type  | [ReplayType](overwolf-media-replays#replaytype-enum) enum                         | The replay type to use                   | 0.78  |
 | gif_as_video | bool                                                                              | Create gif as video (Gif Replay Type only) | 0.78  |
-| max_quota_gb | double                                                                            | Max media folder size in GB              | 0.78  |
+
+#### `quota` note
+
+You can allocate limited disk space for your captured video and even set an array of directories that are excluded from max quota calculations.  
+You can use it, for example, to implement "favorites captures" feature: allow your app's users to mark some captured videos as "favorites," move them to one of the excluded directories, and make sure that they not deleted when the quota has reached the limit. Of course, this is just a suggested usage example.
+
+## StreamQuotaParams Object
+
+#### Version added: 0.147
+
+The basic quota information.
+
+| Name                 | Type     | Description                                                        | Since  |
+|----------------------| ---------|--------------------------------------------------------------------|------- |
+| max_quota_gb         | double   | Max media folder size in GB                                        | 0.147  |
+| excluded_directories | string[] | Array of directories that are excluded from max quota calculations | 0.147  |
 
 ## StreamInfo Object
 
