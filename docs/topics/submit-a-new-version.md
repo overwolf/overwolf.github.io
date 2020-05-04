@@ -71,6 +71,8 @@ We highly recommend starting with a low phasing rate (like 15%), to get some fee
 
 ![rollout](../assets/dev-console/rollout.png)
 
+:::note The 'Installs' and 'Active Installs' statistics only update once per day. :::
+
 ### 5. Increase or Halt the phasing rate
 
 After the new version was rolled out to production and is working as expected, you can gradually increase the phasing rate until it reaches %100 - meaning all of your users got the new version.
