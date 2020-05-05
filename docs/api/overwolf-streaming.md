@@ -719,12 +719,6 @@ overwolf.streaming.onStreamingWarning.addListener(function(result) {
 
 > Fired upon video file splited.
 
-## onRecordingEngineStateChanged
-
-#### Version added: 0.127
-
-> Fired when a replay stated\\stopped by any app.
-
 ## StreamSettings Object
 
 #### Version added: 0.78
