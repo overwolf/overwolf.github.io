@@ -214,7 +214,8 @@ Users have two relevant resolutions to consider:
 
 * Desktop resolution can be detected by using [overwolf.utils.getMonitorsList()](../api/overwolf-utils#getmonitorslistcallback).
 
-* Game resolution can be detected by using [overwolf.games.getRunningGameInfo()](../api/overwolf-games#getrunninggameinfocallback).
+* Game resolution can be detected by using [overwolf.games.getRunningGameInfo()](../api/overwolf-games#getrunninggameinfocallback).  
+In addition, it returns also the monitorHandle, which can be used to get the monitor the game runs in.
 
 ### Logical resolution
 
@@ -294,7 +295,7 @@ In order to position your window in a specific location, you'll first need to [g
 
 To identify if your app window was dragged from one monitor to another, you can follow these steps:
 
-* Identify when the drag is completed using the[dragMove()](../api/overwolf-windows#dragmovewindowid-callback) function.
+* Identify when the drag is completed using the [dragMove()](../api/overwolf-windows#dragmovewindowid-callback) function.
 
 * Get the position of the window (window.screenX, window.screenY). 
 
