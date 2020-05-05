@@ -71,7 +71,9 @@ We highly recommend starting with a low phasing rate (like 15%), to get some fee
 
 ![rollout](../assets/dev-console/rollout.png)
 
-:::note The 'Installs' and 'Active Installs' statistics only update once per day. :::
+:::note 
+The 'Installs' and 'Active Installs' statistics only update once per day. 
+:::
 
 ### 5. Increase or Halt the phasing rate
 
