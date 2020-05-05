@@ -767,7 +767,7 @@ callback               | function                              | Called with the
 
 Parameter              | Type                                              | Description                                                               |
 -----------------------| --------------------------------------------------| --------------------------------------------------------------------------|
-messageParams		   | [MessageBoxParams](#messageboxparams-obj) Object  | The type and texts that the message prompt will have                      |
+messageParams		   | [MessageBoxParams](#messageboxparams-object) Object  | The type and texts that the message prompt will have                      |
 callback               | function                                          | Returns the user's action (confirmed = true / false)                      |
 
 ## isAccelreatedOSR(callback)
@@ -775,9 +775,12 @@ callback               | function                                          | Ret
 
 > Is the current window accelerated and is OSR |GPU| acceleration is supported for this machine.
 
+:::info
+This function name is misspelled. It is kept this way for backwards compatibility.
+:::
+
 Parameter              | Type                                              | Description                                                               |
 -----------------------| --------------------------------------------------| --------------------------------------------------------------------------|
-messageParams		   | [MessageBoxParams](#messageboxparams-obj) Object  | The type and texts that the message prompt will have                      |
 callback               | function                                          | Returns the user's action (confirmed = true / false)                      |
 
 #### Callback argument: Success
