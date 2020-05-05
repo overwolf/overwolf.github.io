@@ -480,6 +480,14 @@ A callback function which will be called with the status of the request
 }
 ```
 
+#### Endoder Preset note
+
+For each encoder in the list, a preset enum returns. For example:
+
+1. The NVIDIA encoder returns [StreamEncoderPreset_NVIDIA](#overwolfstreamingenumsstreamencoderpreset_nvidia-enum) enum.
+2. The X264 encoder returns [StreamEncoderPreset_x264](#overwolfstreamingenumsstreamencoderpreset_x264-enum) enum.
+3. The AMD encoder returns [StreamEncoderPreset_AMD_AMF](#overwolfstreamingenumsstreamencoderpreset_amd_amf-enum) enum.
+
 #### Callback argument: Failure
 
 A callback function which will be called with the status of the request
@@ -487,6 +495,8 @@ A callback function which will be called with the status of the request
 ```json
 { "status": "error" }
 ```
+
+
 
 ## getAudioDevices(callback)
 
