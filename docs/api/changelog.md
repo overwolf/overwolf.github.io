@@ -48,7 +48,7 @@ The full documentation for this version is not ready yet.
 
 Note that iteration 144 and 145 were combined into a single iteration.
 
-* New API: [overwolf.campaigns](overwolf-campaigns-raf) for the new LoL "Refer a friend" feature.
+* New API: [overwolf.campaigns]() for the new LoL "Refer a friend" feature. **Note: the docs for this API will be released soon**
 * Cookie Sync - Cookie Syncing was updated to support Microsoft Edge (non-dev version) and the new Firefox schema.
 * Security and bug Fixes.
 
