@@ -55,7 +55,7 @@ The following events are supported:
 | -------------       | -------------
 | player_loaded	      | Ad video player successfully loaded on page*
 | display_ad_loaded   | Display ad was served instead of a video ad    
-| play                | Ad started playing *
+| play                | Ad started playing
 |impression	          | Video “impression” – Depends on the advertiser, the impression event gets triggered after 0-6 seconds *
 |complete             | Video ad played fully until completed *
 |error                | Error occurred while trying to load ad *
