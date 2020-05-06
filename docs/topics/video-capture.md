@@ -111,7 +111,7 @@ This is the basic usage flow:
 
 3. **Call overwolf.streaming.start().**
    * Create a JSON object with all streaming details and call [start()](../api/overwolf-streaming#startsettings-callback).  
-   [Here](../api/overwolf-streaming#usage-example) you can find a complete usage example.
+   [Here](../api/overwolf-streaming#usage-examples) you can find a complete usage example.
    * For video recording, you don’t need the **ingest_server**, **stream_info**, and **auth** objects.
    * For video recording, we recommend using a **max_kbps** value of higher than 8000.
    * For streaming, we recommend using a **max_kbps** smaller than 3000.

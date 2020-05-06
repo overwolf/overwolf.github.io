@@ -113,7 +113,51 @@ A callback function which will be called with the status of the request
 Note that the stream will be recorded in chunks in a size of `max_file_size_bytes`. If you would like in addition, a full length single file copy, you can set `include_full_size_video` to true. 
 :::
 
-#### Usage Example
+#### Usage Examples
+
+<details open>
+<summary>Minimal required settings:</summary>
+
+Here you can find example with the minimal required setting.  
+Note that when a setting value is not defined, a default value is set.
+
+```javascript
+
+overwolf.streaming.onStopStreaming.addListener(console.log); //register to the onStopStreaming
+overwolf.streaming.onStreamingError.addListener(console.log); //register to the onStreamingError
+overwolf.streaming.onStreamingWarning.addListener(console.log); //register to the onStreamingWarning
+
+var streamId; //we will use this variable to save the stream id
+
+var stream_settings = {
+  "provider": overwolf.streaming.enums.StreamingProvider.VideoRecorder,
+  "settings": {
+    "audio": {"mic": {},"game": {} },
+    "video": {}
+  }
+};
+
+//start the stream
+overwolf.streaming.start(stream_settings,
+    function(result) {
+      if (result.status == "success")
+      {
+        streamId = result.stream_id; //we need it for stopping the stream and manipulating stream settings later 
+        console.debug(result.stream_id); 
+        }
+        else {
+          console.debug("something went wrong...");
+        }
+    }
+);
+
+//stop the stream
+overwolf.streaming.stop(streamId);
+```
+</details>
+
+<details>
+<summary>Example with customized Audio and Video settings:</summary>
 
 ```javascript
 
@@ -157,18 +201,9 @@ var stream_settings = {
           "keyframe_interval": 2
         }
       }
-    },
-
-    "peripherals": {
-      "capture_mouse_cursor": "both"
-    },
-    "quota": {
-      "max_quota_gb": 2,
-      "excluded_directories": [ "cool_session" ] //set directories that are not part of the quota
     }
   }
 };
-
 
 //start the stream
 overwolf.streaming.start(stream_settings,
@@ -187,6 +222,51 @@ overwolf.streaming.start(stream_settings,
 //stop the stream
 overwolf.streaming.stop(streamId);
 ```
+</details>
+
+<details>
+<summary>Example with customized Quota settings:</summary>
+
+You can customize the stream quota settings and enable individual folders that are not part of the quota (to save favorite videos, for example).  Read more about quota options [here](#quota-note).
+
+```javascript
+
+overwolf.streaming.onStopStreaming.addListener(console.log); //register to the onStopStreaming
+overwolf.streaming.onStreamingError.addListener(console.log); //register to the onStreamingError
+overwolf.streaming.onStreamingWarning.addListener(console.log); //register to the onStreamingWarning
+
+var streamId; //we will use this variable to save the stream id
+
+var stream_settings = {
+  "provider": overwolf.streaming.enums.StreamingProvider.VideoRecorder,
+  "settings": {
+    "audio": {"mic": {},"game": {} },
+    "video": {},
+    "quota": {
+      "max_quota_gb": 2,
+      "excluded_directories": [ "cool_session" ] //set directories that are not part of the quota
+    }
+  }
+};
+
+//start the stream
+overwolf.streaming.start(stream_settings,
+    function(result) {
+      if (result.status == "success")
+      {
+        streamId = result.stream_id; //we need it for stopping the stream and manipulating stream settings later 
+        console.debug(result.stream_id); 
+        }
+        else {
+          console.debug("something went wrong...");
+        }
+    }
+);
+
+//stop the stream
+overwolf.streaming.stop(streamId);
+```
+</details>
 
 ## stop(streamId, callback)
 
@@ -777,7 +857,7 @@ Represents the settings required to start a stream.
 | audio        | [StreamAudioOptions](#streamaudiooptions-object) Object                           | Stream audio options                     | 0.78  |
 | peripherals  | [StreamPeripheralsCaptureOptions](#streamperipheralscaptureoptions-object) Object | Defines how peripherals (i.e. mouse cursor) are streamed.</br>**Permissions required: DesktopStreaming**                                                                                                 | 0.78  |
 | max_quota_gb | double                                                                            | Max media folder size in GB. </br>  **deprecated**  | 0.78  |
-| quota        | [StreamQuotaParams](#streamquotaparams-object) object                             | Parameters for limiting disk space allocation. See [note](#quota-note)  | 0.147  |
+| quota        | [StreamQuotaParams](#streamquotaparams-object) object                             | Parameters for limiting disk space allocation. | 0.147  |
 | stream_info  | [StreamInfo](#streaminfo-object) object                                           | The basic stream information             | 0.78  |
 | auth         | [StreamAuthParams](#streamauthparams-object) object                               | Stream authorization data                | 0.78  |
 | video        | [StreamVideoOptions](#streamvideooptions-object) Object                           | Stream video options                     | 0.78  |
@@ -785,16 +865,14 @@ Represents the settings required to start a stream.
 | replay_type  | [ReplayType](overwolf-media-replays#replaytype-enum) enum                         | The replay type to use                   | 0.78  |
 | gif_as_video | bool                                                                              | Create gif as video (Gif Replay Type only) | 0.78  |
 
-#### `quota` note
-
-You can allocate limited disk space for your captured video and even set an array of directories that are excluded from max quota calculations.  
-You can use it, for example, to implement "favorites captures" feature: allow your app's users to mark some captured videos as "favorites," move them to one of the excluded directories, and make sure that they not deleted when the quota has reached the limit. Of course, this is just a suggested usage example.
-
 ## StreamQuotaParams Object
 
 #### Version added: 0.147
 
 The basic quota information.
+
+You can allocate limited disk space for your captured video and even set an array of directories that are excluded from max quota calculations.  
+You can use it, for example, to implement "favorites captures" feature: allow your app's users to mark some captured videos as "favorites," move them to one of the excluded directories, and make sure that they not deleted when the quota has reached the limit. Of course, this is just a suggested usage example.
 
 | Name                 | Type     | Description                                                        | Since  |
 |----------------------| ---------|--------------------------------------------------------------------|------- |
