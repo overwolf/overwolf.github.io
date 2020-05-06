@@ -87,7 +87,7 @@ The `game_mode` returns on this format:
 While the possible values are:
 
 * No mode was selected: `NONE`
-* Multiplayer > Newcomer: `MATCHMAKING_PVP`
+* Multiplayer > Newcomer: `MATCHMAKING_PVP_NEWCOMER`
 * Multiplayer > Quick Match: `MATCHMAKING_PVP`
 * Multiplayer > Special Event: `MATCHMAKING_PVP_EVENT`
 * Multiplayer > Arcade Playlist: `MATCHMAKING_PVP_EVENT`
