@@ -24,6 +24,7 @@ If you would like to know when the user is going to play TFT (hit the "Play" but
 ## Available Features
 
 * [gep_internal](#gep_internal)
+* [live_client_data](#live_client_data)
 * [me](#me)
 * [match_info](#match_info)
 * [roster](#roster)
@@ -54,6 +55,97 @@ Data Example:
 
 ```json
 {"feature":"gep_internal","category":"gep_internal","key":"version_info","value":"{"local_version":"143.0.10","public_version":"143.0.10","is_updated":true}"}
+```
+
+## `live_client_data`
+
+### Info Updates
+
+key          | Category    | Values                    | Notes                 | Since GEP Ver. |
+------------ | ------------| ------------------------- | --------------------- | ------------- | 
+active_player | live_client_data | In-game data received by the client. |See [notes](#active_player-note)|   143.1    |
+all_players | live_client_data | In-game data received by the client. |See [notes](#all_players-note)|   143.1   |
+events | live_client_data | In-game data received by the client. |See [notes](#events-note)|   143.1  |
+game_data | live_client_data | In-game data received by the client. |See [notes](#game_data-note)|   143.1  |
+
+#### *active_player* note
+
+Data Example:
+
+```json
+{ 
+   "info":{ 
+      "live_client_data":{ 
+         "active_player":"{"abilities":{"E":{"abilityLevel":5,"displayName":"Unspeakable Horror","id"
+         :"NocturneUnspeakableHorror"
+         ,"rawDescription":"GeneratedTip_Spell_NocturneUnspeakableHorror_Description"
+         ...
+         ,"rawDisplayName":"GeneratedTip_Spell_NocturneUnspeakableHorror_DisplayName"}  
+{"id":5008,"rawDescriptio":"perk_tooltip_StatModAdaptive"},{"id":5002,"rawDescription":"perk_tooltip_StatModArmor"}]},"level":17,"summonerName":"Sh4rgaas"}"
+      }
+   },
+   "feature":"live_client_data"
+}
+```
+
+#### *all_players* note
+
+Data Example:
+
+```json
+{ 
+   "info":{ 
+      "live_client_data":{ 
+         "all_players":"[{"championName":"Sett","isBot":false,"isDead":true,"items":
+         [{"canUse":false,"consumable":false,"count":1,"displayName":"Dead Man's Plate"
+      ,"itemID":3742,"price":1100,"rawDescription":"game_item_description_3742","rawDisplayName":"game_item_displayname_3742","slot":0}
+      ,{"canUse":false,"consumable":false,"count":1,"displayName":"Bramble Vest"
+...
+{"displayName":"Flash","rawDescription":"GeneratedTip_SummonerSpell_SummonerFlash_Description","rawDisplayName"
+:"GeneratedTip_SummonerSpell_SummonerFlash_DisplayName"},"summonerSpellTwo":
+{"displayName":"Ignite","rawDescription":"GeneratedTip_SummonerSpell_SummonerDot_Description"
+,"rawDisplayName":"GeneratedTip_SummonerSpell_SummonerDot_DisplayName"}},"team":"CHAOS"}]"
+      }
+   },
+   "feature":"live_client_data"
+}
+```
+
+#### *events* note
+
+Data Example:
+
+```json
+{ 
+   "info":{ 
+      "live_client_data":{ 
+         "events":"{"Events":[{"EventID":0,"EventName":"GameStart"
+         ,"EventTime":0.041107501834630966},{"EventID":1,"EventName":"MinionsSpawning",
+         "EventTime":65.05073547363281},{"Assisters":
+         ["CHOWCHOWTHEPAIN","CHAXILICIOUSLOL"],
+...      
+"EventID":2,"EventName":"ChampionKill","EventTime":321.79498291015625,"KillerName":"Adoucissant",
+"VictimName":"finite area"},{"Assisters":["finite area","Dilipa"],"EventID":101,"EventName":
+         "ChampionKill","EventTime":2256.623291015625,"KillerName":"St4ubwedel","VictimName":"CHOWCHOWTHEPAIN"}]}"
+      }
+   },
+   "feature":"live_client_data"
+}
+```
+
+#### *game_data* note
+
+Data Example:
+
+```json
+{ 
+   "info":{ 
+      "live_client_data":{ 
+         "game_data":"{"gameMode":"CLASSIC","gameTime":2258.9697265625,"mapName":"Map11","mapNumber":11,"mapTerrain":"Mountain"}"
+      }
+   },
+   "feature":"live_client_data"
+}
 ```
 
 ## `me`
