@@ -49,7 +49,7 @@ We differentiate between them by adding one digit to each game ID, which is call
 Basically, you have the base game ID, and then a series of instances (212160, 212161, …) 
 
 When you browse the [gamelist.xml](the-gamelistxml-file) file, you will find the game ID's including instance ID.
-Also, when you call [overwolf.games.onGameInfoUpdated](#overwolf-games#ongameinfoupdated), you will get the same full ID including the instance ID.
+Also, when you call [overwolf.games.onGameInfoUpdated](overwolf-games#ongameinfoupdated), you will get the same full ID including the instance ID.
 
 In order to translate the instance ID into the game ID that needs to be used in the manifest, you can divide the instance ID by 10 and round down.
 
