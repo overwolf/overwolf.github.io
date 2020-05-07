@@ -51,7 +51,7 @@ Basically, you have the base game ID, and then a series of instances (212160, 21
 When you browse the [gamelist.xml](the-gamelistxml-file) file, you will find the game ID's including instance ID.
 Also, when you call [overwolf.games.onGameInfoUpdated](#overwolf-games#ongameinfoupdated), you will get the same full ID including the instance ID.
 
-In order to remove instance ID and get the game ID that needs to be used in the manifest, you can divide the ID by 10.
+In order to translate the instance ID into the game ID that needs to be used in the manifest, you can divide the instance ID by 10 and round down.
 
 For example for Fortnite: in order to get 21216 instead of 212161, you can do:
 
@@ -60,6 +60,8 @@ Math.floor(gameInfoResult.gameInfo.id/10)
 ```
 
 You can see how we use it in the [Fortnite events sample](https://github.com/overwolf/events-sample-apps/blob/master/fortnite-sample-app/main.js#L81) app.
+
+Note that the GameInfo object also has a `classId` property, which already equals the game ID.
 
 ## Top 30 Game IDs
 
