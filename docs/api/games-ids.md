@@ -61,7 +61,7 @@ Math.floor(gameInfoResult.gameInfo.id/10)
 
 You can see how we use it in the [Fortnite events sample](https://github.com/overwolf/events-sample-apps/blob/master/fortnite-sample-app/main.js#L81) app.
 
-Note that the GameInfo object also has a `classId` property, which already equals the game ID.
+Note that the [RunningGameInfo object](overwolf-games#runninggameinfo-object) also has a `classId` property, which already equals the game ID.
 
 ## Top 30 Game IDs
 
