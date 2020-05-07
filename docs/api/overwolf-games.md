@@ -424,7 +424,8 @@ Parameter            | Type     | Description                                   
 | isRunning          | bool     | Returns whether the game is currently running                                                       | 
 | allowsVideoCapture | bool     | Returns whether the game allows video to be captured                                                | 
 | title              | string   | Returns the title of the game                                                                       | 
-| id                 | int      | Returns the game ID concatenated with the Instance ID of the game. Divide it by 10 to get the game ID |
+| id                 | int      | Returns the game ID concatenated with the Instance ID of the game. Divide it by 10 and round down to get the game ID |
+| classId            | int      | Returns the game ID                                                                                 |
 | width              | int      | Returns the pixel width of the game window                                                          | 
 | height             | int      | Returns the pixel height of the game window                                                         | 
 | logicalWidth       | int      | Returns the game-reported (logical) pixel width of the game window                                  | 
@@ -510,7 +511,8 @@ Parameter            | Type     | Description                                   
 | isRunning          | bool     | Returns whether the game is currently running                                                       | 
 | allowsVideoCapture | bool     | Returns whether the game allows video to be captured                                                | 
 | title              | string   | Returns the title of the game                                                                       | 
-| id                 | int      | Returns the game ID concatenated with the Instance ID of the game. Divide it by 10 to get the game ID |
+| id                 | int      | Returns the game ID concatenated with the Instance ID of the game. Divide it by 10 and round down to get the game ID |
+| classId            | int      | Returns the game ID                                                                                 |
 | width              | int      | Returns the pixel width of the game window                                                          | 
 | height             | int      | Returns the pixel height of the game window                                                         | 
 | logicalWidth       | int      | Returns the game-reported (logical) pixel width of the game window                                  | 
