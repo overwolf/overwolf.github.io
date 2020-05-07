@@ -8,14 +8,11 @@ Your app is available on the Overwolf Appstore and it's time to release new feat
 
 ## Submitting a new version
 
-To get the update cycle started, send the new version, including a detailed change log, to [developers@overwolf.com](mailto:developers@overwolf.com). You can also contact the Overwolf team directly through our Slack with the required information.  
+To get the update cycle started, you need access to the developers console. If you don't have access yet, contact your Developer Success Manager through our Slack.  
 
-Please keep your update documentation and files in the same format as your original submission, rather than sending fragmented files.
-Once the version has been changed, update the [build version](../api/manifest-json#meta-object) in the manifest. If nothing has been changed in your app's store assets, the app folder will do just fine.
+The details for how to submit a new version, [can be found here](../topics/submit-a-new-version).
 
 ## Going Live
-
-After receiving the new version, it will be added to our approval pipeline and we'll get to reviewing it in up to 96 hours. Assuming the review process goes well and no issues were spotted, you can expect your approved update to go live 4-8 hours after completing our review. 
 
 #### Forced user updates
 
