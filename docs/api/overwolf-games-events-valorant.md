@@ -122,7 +122,7 @@ Data Example:
 
 ```json
 {"feature":"game_info","category":"game_info","key":"scene","value":"WaitingToStart"}
-{"feature":"game_info","category":"game_info","key":"scene","value":"InProgress"}
+{"feature":"game_info","category":"game_info","key":"state","value":"InProgress"}
 {"feature":"game_info","category":"game_info","key":"scene","value":"Triad"}
 ```
 Possible Scene values:
