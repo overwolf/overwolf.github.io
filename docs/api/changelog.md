@@ -43,6 +43,8 @@ The full documentation for this version is not ready yet.
     * me
 * [Escape From Tarkov](overwolf-games-events-escape-from-tarkov)
   * New supported game
+* [VALORANT](overwolf-games-events-valorant)
+  * New supported game
 
 ## Version 0.145 (Apr. 2020)
 
