@@ -111,7 +111,8 @@ Data Example:
 
 key          | Category    | Values                    | Notes                 | Since GEP Ver. |
 ------------ | ------------| ------------------------- | --------------------- | ------------- | 
-scene        | game_info   | The current game-state.   |See [notes](#scene-note)|   148.0       |
+scene        | game_info   | The current scene-state.   |See [notes](#scene-note)|   148.0       |
+state        | game_info   | The current game-state.   |See [notes](#state-note)|   148.0       |
 
 #### *scene* note
 
@@ -123,7 +124,29 @@ Data Example:
 {"feature":"game_info","category":"game_info","key":"scene","value":"WaitingToStart"}
 {"feature":"game_info","category":"game_info","key":"scene","value":"InProgress"}
 {"feature":"game_info","category":"game_info","key":"scene","value":"Triad"}
+```
+Possible Scene values:
 
+* MainMenu
+* Triad
+* Duality
+* Bonsai
+* Range
+* CharacterSelectPersistentLevel
+
+Possible states:
+* WaitingToStart
+* LeavingMap
+* Aborted
+* InProgress
+* Init
+
+#### *state* note
+
+Data Example:
+
+```json
+{"feature":"game_info","category":"game_info","key":"state","value":"InProgress"}
 ```
 
 ## `kill`
