@@ -1,7 +1,7 @@
 ---
 id: overwolf-games-events-valorant
-title: VALORANT
-sidebar_label: VALORANT
+title: Valorant
+sidebar_label: Valorant
 ---
 
 Please read the [overwolf.games.events](overwolf-games-events) documentation page to learn how to use Overwolf game events.
