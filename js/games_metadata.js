@@ -166,5 +166,12 @@ const GamesMetadata = {
     iconUrl: "/docs/assets/games-logos/tarkov.png",
     iconLargeUrl: "/docs/assets/games-logos/large/tarkov.png",
     name: "Escape From Tarkov"
+  },
+  21640: {
+    id: 21640,
+    path: "/docs/status/valorant",
+    iconUrl: "/docs/assets/games-logos/valorant.png",
+    iconLargeUrl: "/docs/assets/games-logos/large/valorant.png",
+    name: "Valorant"
   }
 }
