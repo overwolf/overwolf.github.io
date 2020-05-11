@@ -155,8 +155,8 @@ Data Example:
 
 key          | Category    | Values                    | Notes                 | Since GEP Ver. |
 ------------ | ------------| ------------------------- | --------------------- | ------------- | 
-kill         | kill        | Amount of kills performed by the local player. |See [notes](#kill-note)|   148.0       |
-assist       | kill        | Amount of assists performed by the local player. |See [notes](#assist-note)|   148.0  |
+kills         | kill        | Amount of kills performed by the local player. |See [notes](#kill-note)|   148.0       |
+assists       | kill        | Amount of assists performed by the local player. |See [notes](#assist-note)|   148.0  |
 
 #### *kill* note
 
@@ -205,7 +205,7 @@ Data Example:
 
 key          | Category    | Values                    | Notes                 | Since GEP Ver. |
 ------------ | ------------| ------------------------- | --------------------- | ------------- | 
-death        | death       | Amount of deaths by the local player. |See [notes](#death-note)|   148.0       |
+deaths       | death       | Amount of deaths by the local player. |See [notes](#death-note)|   148.0       |
 
 #### *death* note
 
