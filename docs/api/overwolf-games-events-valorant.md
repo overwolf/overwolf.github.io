@@ -121,18 +121,16 @@ state        | game_info   | The current game-state.   |See [notes](#state-note)
 Data Example:
 
 ```json
-{"feature":"game_info","category":"game_info","key":"scene","value":"WaitingToStart"}
-{"feature":"game_info","category":"game_info","key":"state","value":"InProgress"}
 {"feature":"game_info","category":"game_info","key":"scene","value":"Triad"}
 ```
 Possible Scene values:
 
 * MainMenu
-* Triad
-* Duality
-* Bonsai
-* Range
-* CharacterSelectPersistentLevel
+* Triad (Bind)
+* Duality (Haven)
+* Bonsai (Split)
+* Range (Practice Range)
+* CharacterSelectPersistentLevel (Character Selection)
 
 Possible states:
 * WaitingToStart
@@ -146,6 +144,7 @@ Possible states:
 Data Example:
 
 ```json
+{"feature":"game_info","category":"game_info","key":"state","value":"WaitingToStart"}
 {"feature":"game_info","category":"game_info","key":"state","value":"InProgress"}
 ```
 
