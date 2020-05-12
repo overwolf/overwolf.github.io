@@ -125,19 +125,13 @@ Data Example:
 ```
 Possible Scene values:
 
-* MainMenu
-* Triad (Bind)
-* Duality (Haven)
-* Bonsai (Split)
-* Range (Practice Range)
-* CharacterSelectPersistentLevel (Character Selection)
+* "MainMenu" - Main menu
+* "Triad" - Bind map
+* "Duality" - Haven map
+* "Bonsai" - Split map
+* "Range" - Practice Range map
+* "CharacterSelectPersistentLevel" - Character Selection
 
-Possible states:
-* WaitingToStart
-* LeavingMap
-* Aborted
-* InProgress
-* Init
 
 #### *state* note
 
@@ -147,6 +141,13 @@ Data Example:
 {"feature":"game_info","category":"game_info","key":"state","value":"WaitingToStart"}
 {"feature":"game_info","category":"game_info","key":"state","value":"InProgress"}
 ```
+
+Possible states:
+* "WaitingToStart"
+* "LeavingMap"
+* "Aborted"
+* "InProgress"
+* "Init"
 
 ## `kill`
 
