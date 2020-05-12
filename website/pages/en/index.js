@@ -25,7 +25,7 @@ function TilesSection(props) {
         <Tile config={siteConfig} href={`${baseUrl}docs/start/app-creation-process`} header="Tutorials" imgSrc="img/tutorials.svg">
           Newbie and pro web devs should start here
         </Tile>
-        <Tile config={siteConfig} href={`https://www.overwolf.com/appstore`} header="Get inspired" imgSrc="img/potion.svg">
+        <Tile config={siteConfig} href={`https://www.overwolf.com/appstore`} header="Get inspired" imgSrc="img/potion.svg" target="_blank">
           See what others crafted
         </Tile>
         <Tile config={siteConfig} href={`${baseUrl}docs/topics/best-practices-overview`} header="Read our scrolls" imgSrc="img/scroll.svg">
@@ -37,10 +37,10 @@ function TilesSection(props) {
 }
 
 function Tile(props) {
-  const {config: siteConfig, header, imgSrc, href} = props;
+  const {config: siteConfig, header, imgSrc, href, target} = props;
   return (
     <li>
-      <a href={href}>
+      <a href={href} target={target}>
         <img className="icon" src={imgSrc} />
         <header className="subtitle">{header}</header>
         <p>
