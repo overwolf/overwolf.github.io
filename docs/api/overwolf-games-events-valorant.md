@@ -180,8 +180,8 @@ Data Example:
 
 Event       | Event Data   | Fired When    | Notes              | Since GEP Ver. |
 ------------| -------------| --------------| ------------------ | --------------|
-kill        | Integer      | Kill is performed. | See [notes](#kill-note) | 148.0  |
-assist      | Integer      | Assist is performed. | See [notes](#assist-note) | 148.0  |
+kill        | Total kills  | Kill is performed. | See [notes](#kill-note) | 148.0  |
+assist      | Total assists| Assist is performed. | See [notes](#assist-note) | 148.0  |
 
 #### *kill* note
 
@@ -219,7 +219,7 @@ Data Example:
 
 Event       | Event Data   | Fired When    | Notes              | Since GEP Ver. |
 ------------| -------------| --------------| ------------------ | --------------|
-death       | Integer      | Local player died. | See [notes](#death-note) | 148.0  |
+death       | Total deaths | Local player died. | See [notes](#death-note) | 148.0  |
 
 #### *death* note
 
