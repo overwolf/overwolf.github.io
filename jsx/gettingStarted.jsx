@@ -15,7 +15,7 @@ class GettingStarted extends React.Component {
                 <h2>An introduction to Overwolf apps</h2>
 
                 <p>Overwolf apps are in-game apps created by independent creators or teams, improving the game experience of the biggest games out there. Overwolf overlay apps help gamers play smarter and have more fun by making useful information and tools available in-game</p>
-               {/*
+                {/*
                 <div className="video-container">
                     <div className="video-container-inner">
                         <video controls disablepictureinpicture controlslist="nodownload">
@@ -26,7 +26,14 @@ class GettingStarted extends React.Component {
                         <a href="../start/sample-app-overview" className="btn-pink start-building-btn">Start Building</a>
                     </div>
                 </div>
-              */}
+                */}
+                <div className="video-container">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/gYW8vAGNeJ8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <div className="start-build-container-btn">
+                        <a href="../start/sample-app-overview" className="btn-pink start-building-btn">Start Building</a>
+                    </div>
+                </div>
+            
             </div>
 
             <h2>What can apps do?</h2>
