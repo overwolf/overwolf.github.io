@@ -28,6 +28,7 @@ The full documentation for this version is not ready yet.
   That can affect some devs that are trying to capture videos and get encoders errors and a message that the NVEC driver should be updated.
 * Updates for the streaming and replay APIs: added a [quota object](#overwolf-streaming#streamquotaparams-object):  
   Allow setting max media folder size in GB, and exclude folders that are not part of this quota.
+* Video recording engine updated, and now it supports Vulkan capturing!
 
 * [PUBG Lite](overwolf-games-events-pubglite)
   * New event:
