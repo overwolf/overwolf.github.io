@@ -141,6 +141,12 @@ Heartstone
 ----------
 
 **Resolved** - This incident has been resolved.  
+May 13, 05:26 PM GMT+3
+
+**Investigating** - Heartstone Game events are down.  
+May 13, 08:43 AM GMT+3
+
+**Resolved** - This incident has been resolved.  
 Oct 15, 11:22 AM GMT+3
 
 **Investigating** - Game events are down.  
@@ -353,6 +359,15 @@ Oct 10, 08:04 PM GMT+3
 
 **Investigating** - Game events are down.  
 Oct 09, 10:24 AM GMT+3
+
+Valorant
+--------
+
+**Resolved** - This incident has been resolved.  
+May 13, 12:14 PM GMT+3
+
+**Investigating** - Valorant events are down for some regions.  
+May 13, 12:10 AM GMT+3
 
 World of Tanks
 --------------
