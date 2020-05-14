@@ -47,6 +47,7 @@ The full documentation for this version is not ready yet.
   * New supported game
 * [VALORANT](overwolf-games-events-valorant)
   * New supported game
+* [Auto-highlights](auto-highlights-capture) now supports VALORANT "kill", "death" and "assist" events
 
 ## Version 0.145 (Apr. 2020)
 
