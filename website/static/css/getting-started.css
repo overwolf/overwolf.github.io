@@ -131,6 +131,7 @@
 	align-items: center;
 	justify-content: center;
 	padding-top: 30px;
+	padding-bottom: 15px;
 }
 
 @media (max-width: 760px) {
@@ -345,3 +346,7 @@
 	   height: 155px;
 	}
 }
+
+.center-text {
+	text-align: center;
+ }
