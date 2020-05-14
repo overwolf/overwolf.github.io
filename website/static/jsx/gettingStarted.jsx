@@ -32,6 +32,9 @@ class GettingStarted extends React.Component {
                     <div className="start-build-container-btn">
                         <a href="../start/sample-app-overview" className="btn-pink start-building-btn">Start Building</a>
                     </div>
+                    <div>
+                        <p>Already have a killer app concept? <a href="submit-app-proposal" title="Submit your app proposal"> Submit your app proposal</a></p>           
+                    </div>
                 </div>
             
             </div>
