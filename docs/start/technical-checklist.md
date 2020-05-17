@@ -13,7 +13,7 @@ Seeing as gamer experience is our top priority, making your app the best it can 
 
 * Your Main (index) window is used as a hidden controller that opens other windows.
 
-* Window management is done according to our best practices ([Read more here](../topics/using-overwolf-windows#general-tips-for-using-windows)).
+* Window management is done according to our best practices ([Read more here](../topics/windows-tips)).
 
 * No full screen windows are used.
 

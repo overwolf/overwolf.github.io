@@ -29,6 +29,6 @@ Many gamers have a second screen which is usually unused while they play and foc
   If you know the resolution of each screen, you can do the calculation for exactly where you should display your window.
 
 5. Note that the [GameInfo](../api/overwolf-games#gameinfo-object) object contains a monitorHandle and a windowHandle. Take advantage of that if needed.  
-  Usage example: [identify](using-overwolf-windows#identify-when-the-window-is-dragged-between-monitors) that the user moved the game window to the secondary screen.
+  Usage example: [identify](windows-resolution-size-position#identify-when-the-window-is-dragged-between-monitors) that the user moved the game window to the secondary screen.
  
 6. Use the transparent background window to share data and have your app windows communicate.
