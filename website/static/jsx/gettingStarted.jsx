@@ -28,7 +28,7 @@ class GettingStarted extends React.Component {
                 </div>
                 */}
                 <div className="video-container">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/gYW8vAGNeJ8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/2YKUKkLeWNA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     <div className="start-build-container-btn">
                         <a href="../start/sample-app-overview" className="btn-pink start-building-btn">Start Building</a>
                     </div>
