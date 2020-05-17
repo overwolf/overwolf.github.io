@@ -4,8 +4,6 @@ title: Windows Types
 sidebar_label: Windows Types
 ---
 
-## Windows Types
-
 Behavior is different depending on window type, and we're going to go over two main types of Overwolf app windows: Transparent vs. Non-Transparent Windows.
 
 ###  Non-Transparent Window

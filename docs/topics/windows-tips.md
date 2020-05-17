@@ -1,14 +1,12 @@
 ---
 id: windows-tips
-title: General Tips
+title: General tips for using windows
 sidebar_label: General Tips
 ---
 
-## General tips for using windows
-
 In this segment we'll share some best practices and tips born of experience on using Overwolf windows:
 
-### Call getCurrentWindow() once
+## Call getCurrentWindow() once
 
 A window should call [overwolf.windows.getCurrentWindow()](../api/overwolf-windows#getcurrentwindowcallback) once during startup and then store the results in a variable for later use. Also makes your code more elegant:
 
@@ -20,7 +18,7 @@ overwolf.windows.getCurrentWindow(function(result) {
 });
 ```
 
-### Avoid full-screen transparent windows
+## Avoid full-screen transparent windows
 
 Overwolf apps are supposed to act like native desktop applications and not as websites – therefore, don’t be tempted to create full-screen transparent windows with draggable HTML elements (e.g. `<div>`) as windows.
 Doing so will:
@@ -35,22 +33,22 @@ Doing so will:
 
   * Cause a risk of grabbing focus without the gamer wanting it or understanding why.
 
-### Your app is not a website!
+## Your app is not a website!
 
 Overwolf apps are supposed to act like native desktop applications, not websites. Avoid enabling mousewheel scrolls or [text selection](https://stackoverflow.com/questions/826782/how-to-disable-text-selection-highlighting) in your app's windows, these are website features which would look and feel weird in an application setting. Whenever in doubt in terms of design or user experience, compare your app to desktop applications and not to websites. 
 
-### Keep your windows small
+## Keep your windows small
 
 App windows should provide their value in the leanest, more accurate fashion possible. When Overwolf renders transparent windows it does it’s best to do it efficiently, however, large windows do have performance costs. Therefore, avoid using large windows and try to get your app's design to be focused, to the point and as small as you can effectively make it.
 
-### Use block_top_window_navigation
+## Use block_top_window_navigation
 
 Unless you have good reasons to do otherwise, always set the [block_top_window_navigation](../api/manifest-json#windows-block_top_window_navigation) flag to true in your manifest.json file.
 
 This will ensure that no bugs or accidental calls like window.top.href take control of your entire app.
 The only reason this isn’t set to true by default is for backwards compatibility for apps that are hosted on remote servers.
 
-### Use a background controller
+## Use a background controller
 
 Consider using your main window as a hidden controller window that the user doesn’t see – it can act as a service that runs in the background and communicates with other visible windows of the app. For apps that auto-launch when the game starts or wish to implement pop-up notifications, this is a must-have.
 
@@ -64,7 +62,7 @@ This "hidden" window should have the [is_background_page](../api/manifest-json#i
 }
 ```
 
-### Use native desktop windows
+## Use native desktop windows
 
 If your app includes a window that will only be visible on desktop but not while playing, you should add the following flags to that window's data in the app’s manifest.json file:
 
