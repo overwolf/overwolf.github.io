@@ -18,7 +18,7 @@
     "docs": {
 		"Best Practices":
 			["topics/best-practices-overview", "topics/app-specific-experience", "topics/first-time-user-experience", "topics/user-flow-error-handling", "topics/launch-time-performance", "topics/communication-guidelines", "topics/user-flow-and-error-handling","topics/games-settings", "topics/hotkeys-best-practices", "topics/second-monitor", "topics/data-persistence", "topics/reduce-opk-size", "topics/using-tab", "topics/type-definition-file", "topics/create-download-link", "topics/video-capture"],
-		"Using Windows":
+		"Using Windows API":
 			["topics/using-overwolf-windows", "topics/communicating-between-windows", "topics/windows-types", "topics/windows-resolution-size-position", "topics/windows-tips"],
 		"Using Plugins":
 			["topics/plugins-overview", "topics/how-to-use-plugins-in-your-app", "topics/writing-your-own-plugin", "topics/sample-plugin", "topics/simple-io-plugin", "topics/team-speak-plugin", "topics/process-manager-plugin"],

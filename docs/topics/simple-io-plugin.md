@@ -10,8 +10,7 @@ A very useful plugin that we've developed ourselves is the **Simple IO Plugin**.
 You can [read  more](https://github.com/overwolf/overwolf-plugins/blob/master/plugins/simple-io-plugin/README.md) about the functions of the simple-io-plugin in the [Simple I/O GitHub repository](https://github.com/overwolf/overwolf-plugins/tree/master/plugins/simple-io-plugin).
 
 :::important
-We implement a lot of functionality from the simple io-plugin into the [overwolf.io](../api/overwolf-io) API.  
-Please check it before implementing the plugin in your app.
+We implement a lot of functionality from the simple io-plugin into the [overwolf.io](../api/overwolf-io) API and the [overwolf.extensions.io](../api/overwolf-extensions-io) API. Please check it before implementing the plugin in your app.
 :::
 
 ## Common uses for the plugin

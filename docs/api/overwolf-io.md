@@ -8,7 +8,7 @@ Check whether a certain file exists and/or to write content into files.
 
 :::tip
 For app-related I/O functionalities, use the [overwolf.extensions.io](overwolf-extensions-io) API.
-Also, our [simple I/O plugin](../topics/simple-io-plugin) offers several more general I/O features that are not available through the APIs.   
+In addition, the [simple I/O plugin](../topics/simple-io-plugin) offers several more general I/O features that are not available through the APIs.   
 :::
 
 ## Methods Reference

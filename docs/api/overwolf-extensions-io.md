@@ -8,10 +8,8 @@ Use this API to get I/O functionalities for the current extension and access you
 
 :::tip
 For general I/O functionalities, use the [overwolf.io](overwolf-io) API.
-Also, our [simple I/O plugin](../topics/simple-io-plugin) offers several more general I/O features that are not available through the APIs.   
+In addition, the [simple I/O plugin](../topics/simple-io-plugin) offers several more general I/O features that are not available through the APIs.   
 :::
-
-
 
 ## Methods Reference
 
