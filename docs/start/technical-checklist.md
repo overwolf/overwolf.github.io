@@ -9,55 +9,23 @@ Following this technical checklist improves user experience for your app.
 Seeing as gamer experience is our top priority, making your app the best it can be will be rewarded! Completing the full list of technical recommendations can increase your share of your apps revenues by up to 7%.
 :::
 
-## Pup (+ 1% to rev-share)
+## Technical Hunter (+3% to rev-share)
 
-* Your Main (index) window is used as a hidden controller that opens other windows.
+-   Your Main (index) window is used as a hidden controller that opens other windows.
 
-* Window management is done according to our best practices ([Read more here](../topics/windows-tips)).
+-   Window management is done according to our best practices ([Read more here](https://overwolf.github.io/docs/topics/using-overwolf-windows#general-tips-for-using-windows)).
 
-* No full screen windows are used.
+-   No in-game full screen windows are used.
 
-* All windows launch in up to 30ms ([Read more here](../topics/launch-time-performance)).
+-   All windows launch in up to 30ms ([Read more here](https://overwolf.github.io/docs/topics/launch-time-performance)).
 
-* App assets are as small as possible (Use [TinyJPG](https://tinyjpg.com/) & [TinyPNG](https://tinypng.com/)).
+-   Your app should have error notifications for network downtime, API issues and server errors. ([Read more here](https://overwolf.github.io/docs/topics/user-flow-and-error-handling)).
 
-* Your app should have error notifications for network downtime, API issues and server errors. ([Read more here](../topics/user-flow-and-error-handling)).
+-   \App follows local/server assets best practices. ([Read more here](https://overwolf.github.io/docs/topics/launch-time-performance)).
 
+-   Avoid the use of non-100% transparency in your window design, calculating pixel values may cause a performance drop.
 
-
-* Create a dedicated page which explains to gamers why your app is bundled with Overwolf. Make sure you mention:  
-
-  * Overlay capabilities.
-  * Real-time game events.
-  * A fast and simple development framework – allows you to write an in-game app with just HTML and JS without the need to master C++.
-  * Helps you in monetization, which allows you to focus on the app more and thus drives a better product for your users.
-
-## Hunter (+ 1% to rev-share)
-
-* Create a desktop mode for your app ([Read more here](../topics/app-specific-experience)).
-
-* Avoid the use of non-100% transparency in your window design, calculating pixel values may cause a performance drop.
-
-* Write Knowledgebase articles ([Read more here](add-a-knowledge-base-to-app)).
-
-* Add a contact form ([Read more here](../topics/best-practices-overview)).
-
-## Alpha (+ 1% to rev-share)
-
-* Develop and implement a First Time User Experience (FTUE), ([Read more here](../topics/first-time-user-experience)).
-
-* Your App will detect and notify users if it needs to be updated. ([Read more here](submit-an-app-update)).
-
-* Follow local/server assets best practices. ([Read more here](../topics/launch-time-performance)).
-
-* Use your Reddit/Facebook/Twitter for technical updates such as a new version announcement, servers down/up notification, etc.
-
-* Develop an in-game "Mini mode", a condensed, compact view for key features of your app - when applicable.
-
-## Supreme (+ 4% to rev-share)
-* Develop a post game experience with high user value around your app's core value proposition. (+3%)
-
-* Create and maintain a change log inside the app and on [medium.com](medium.com). (+1%)
+-   The app passed Overwolf's performance test. It works smoothly and does not cause lags in game. Moreover, the app has 0% GPU/CPU/memory usage when idle.
 
 
 
