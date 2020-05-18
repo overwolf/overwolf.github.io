@@ -17,31 +17,26 @@ The Overwolf team is here for you and we’re happy to evaluate your strategy an
 If you have a refer-a-friend program, an in-app store, or prizes you want to hand out, we can help you with RP purchase. Please contact your Developer Success Manager for more details.
 :::
 
-## Pup (+ 1%)
+## Marketing Alpha (+3% to rev-share)
+-   Participate in CRI / CRN (CRN is contingent in retention performance). Link to extra information will be added soon
 
-* Add the "Get it on Overwolf" button to your website, where applicable. [Read more](../topics/communication-guidelines).
+-   Manage your community - Operate Twitter account, manage community on a Discord server
 
-* Add the "Get it on Overwolf" badge to relevant marketing assets (social media, influencers, other marketing campaigns).
+-   Have an active and maintained website, and add a top bar CTA in your website that redirects users to download the in-game app - either to a download link or a dedicated page.
 
-* Add an Overwolf linked logo next to your own on Facebook, Discord and Twitter.
+-   Create a tutorial video for your app (we can help!).
 
-* Guide users to download your app as part of your website onboarding flow.
+-   The app has passed Overwolf's marketing review and has more than 10,000 MAU
 
-* Reach 3,000 Monthly Active Users.
+-   Create a dedicated page on your website, or include a specific section in your home page, describing why your app is built on Overwolf. For example, you can refer to the following:
 
-## Hunter (+ 1%)
+-   In-game overlay capabilities.
 
-* Reach 20,000 Monthly Active Users.
+-   Real-time game events and APIs.
 
-* Create a tutorial video for your app (we can help!).
+-   A fast and simple development framework -- allows you to write an in-game app with just HTML and JS without the need to master C++.
 
-* Your app supports at least 10 languages. 
-
-## Alpha (+ 1%)
-
-* Reach 50,000 Monthly Active Users.
-
-* Develop a Twitch extension with similar features and value like your app - Talk to us and we will fund your extra work on this!
+-   Helps you in monetization, which allows you to focus on the app more and thus drives a better product for your users.
 
 ## Examples
 
