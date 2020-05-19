@@ -18,7 +18,10 @@ If you have a refer-a-friend program, an in-app store, or prizes you want to han
 :::
 
 ## Marketing Alpha (+3% to rev-share)
--   Participate in CRI / CRN (CRN is contingent in retention performance). Link to extra information will be added soon
+* Participate in CRI / CRN
+   *  Content Recommendation Installer
+   *  Content Recommendation Notification
+   *  This doesn't require any development from your end
 
 -   Manage your community - Operate Twitter account, manage community on a Discord server
 
