@@ -81,6 +81,18 @@ You can allow users to choose their preferred window size in the app's settings.
 
 ## Window position
 
+### Window coordinates overview
+
+The windows API using X and Y coordinates to define the position of a window.  
+
+#### X note
+X returns the pixel distance of your currently active monitor from your primary monitor.
+For example, if your primary monitor is 1920px wide, and the currently active window is on another monitor located to the left of your primary, X will return 1920 or -1920 based on their relative positions.
+
+#### Y note
+Y returns the pixel distnace of your currently active monitor from your primary monitor.
+For Example, if your primary monitor and secondary monitor are side by side, Y will return 0, if your displays are one on top of the other and the primary monitor is 1200px tall, Y will return 1200 or -1200 based on their relative positions.
+
 ### Set a default position
 
 As the [start_position](../api/manifest-json#windows-start_position) flag only applies the first time you open a windows, you can use [changePosition()](../api/overwolf-windows#changepositionwindowid-left-top-callback) if you want to change the position of the window dynamically. For example, if you'd like to place the window in the middle of the screen after you [calculate the user's resolution](#detecting-screen-resolution).
@@ -99,6 +111,8 @@ To identify if your app window was dragged from one monitor to another, you can 
 
 * Identify when the drag is completed using the [dragMove()](../api/overwolf-windows#dragmovewindowid-callback) function.
 
-* Get the position of the window (window.screenX, window.screenY). 
+* Get the position of the window (window.screenX, window.screenY).
 
-* Now with a simple calculation, you can determine which monitor the window is displayed. (For example, if you know that the 1st monitor has 1080px width, and the current window position start beyond that, it means that the window is displayed on the second monitor, etc.)
+### determine which monitor the window is displayed
+
+Once you get the X & Y coordinates of a window (at the end of dragMove(), using getCurrentWindow(), etc.), With a simple calculation, you can determine which monitor the window is displayed. (For example, if you know that the 1st monitor has 1080px width, and the current window position start beyond that, it means that the window is displayed on the second monitor, etc.)
