@@ -38,29 +38,3 @@ If you have a refer-a-friend program, an in-app store, or prizes you want to han
 
 -   Helps you in monetization, which allows you to focus on the app more and thus drives a better product for your users.
 
-## Examples
-
-Check out a few live examples from apps we liked:
-
-<div class="box" data-slick='{"slidesToShow": 1}'>
-  <a data-fancybox="gallery" data-caption="StreamAware’s page on twitter contains a description, download link and a cover image with the Overwolf badge" href="../assets/marketing-checklist/1.jpg"> 
-    <span class="thumb">
-      <img src="../assets/marketing-checklist/1.jpg" alt="StreamAware">
-    </span>
-  </a>
-  <a data-fancybox="gallery" data-caption="PUBG Tracker’s website is listing the Overwolf badge on their website, and announcing the app’s release to their users" href="../assets/marketing-checklist/2.jpg">
-    <span class="thumb">
-      <img src="../assets/marketing-checklist/2.jpg" alt="PUBG">
-    </span>
-  </a>
-  <a data-fancybox="gallery" data-caption="A dedicated download page on the Mobalytics page" href="../assets/marketing-checklist/3.jpg">
-    <span class="thumb">
-      <img src="../assets/marketing-checklist/3.jpg" alt="Mobalytics">
-    </span>
-  </a>
-  <a data-fancybox="gallery" data-caption="The Mobalytics Overwolf website is suggesting to download the in-game app for improved experience" href="../assets/marketing-checklist/4.jpg">    
-    <span class="thumb">
-      <img src="../assets/marketing-checklist/4.jpg" alt="Mobalytics">
-    </span>
-  </a>
-</div>
