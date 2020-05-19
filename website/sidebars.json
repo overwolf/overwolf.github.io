@@ -5,7 +5,7 @@
 			"Sample App":
 			["start/sample-app-overview", "start/sample-app-components",  "start/sample-app-ui-components", "start/sample-app-architecture"],
 			"Test Your App":
-			["start/how-to-test-your-app", "start/technical-checklist", "start/marketing-checklist", "start/product-checklist"],
+			["start/how-to-test-your-app", "start/technical-checklist", "start/product-checklist", "start/marketing-checklist"],
 			"Submit Your App":
 			["start/submit-your-app-to-the-store", "start/custom-installer-for-your-app", "start/add-a-knowledge-base-to-app"],
 			"Monetize with Ads":
