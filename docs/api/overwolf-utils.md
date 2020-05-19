@@ -18,6 +18,7 @@ Common use cases:
 * [overwolf.utils.placeOnClipboard()](#placeonclipboarddata)
 * [overwolf.utils.getFromClipboard()](#getfromclipboardcallback)
 * [overwolf.utils.getMonitorsList()](#getmonitorslistcallback)
+* [overwolf.utils.getWindowDPI()](#getwindowdpicallback)
 * [overwolf.utils.sendKeyStroke()](#sendkeystrokekeystring)
 * [overwolf.utils.openFilePicker()](#openfilepickerfilter-callback)
 * [overwolf.utils.openFilePicker()](#openfilepickerfilter-initialpath-callback)
@@ -45,12 +46,6 @@ Common use cases:
 * [overwolf.utils.MonitorInfo](#monitorinfo-object) Object
 * [overwolf.utils.Display](#display-object) Object
 * [overwolf.utils.OpenFilePickerResult](#openfilepickerresult-object) Object
-
-
-
-
-
-
 
 
 
@@ -84,7 +79,29 @@ Parameter | Type     | Description                                  |
 --------- | ---------| -------------------------------------------- |
 callback  | ([Result: GetMonitorsListResult](#getmonitorslistresult-object)) => void | Called with the monitors array               |
 
+## getWindowDPI(callback)
+#### Version added: 0.83
+#### Permissions required: DesktopStreaming
+
+> Returns the DPI and sclae of the current window.
+
+Parameter | Type     | Description                                  |
+--------- | ---------| -------------------------------------------- |
+callback  | function | Called with the DPI info                     |
+
 Note that this function does not return the DPI of the monitors. To get the DPI, you can use [Window.devicePixelRatio](https://developer.mozilla.org/en-US/docs/Web/API/Window/devicePixelRatio).
+
+#### Callback argument: Success
+
+A callback function which will be called with the status of the request
+
+```json
+{
+    "status": "success",
+    "dpi": 120,
+    "scale": 1.25
+}
+```
 
 ## sendKeyStroke(keyString)
 #### Version added: 0.83
