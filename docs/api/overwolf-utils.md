@@ -89,7 +89,7 @@ Parameter | Type     | Description                                  |
 --------- | ---------| -------------------------------------------- |
 callback  | function | Called with the DPI info                     |
 
-Note that this function does not return the DPI of the monitors. To get the DPI, you can use [Window.devicePixelRatio](https://developer.mozilla.org/en-US/docs/Web/API/Window/devicePixelRatio).
+Note that you can use [Window.devicePixelRatio](https://developer.mozilla.org/en-US/docs/Web/API/Window/devicePixelRatio) to get the DPI of the current window. It's pure JS and even more efficient.
 
 #### Callback argument: Success
 
