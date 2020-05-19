@@ -4,7 +4,7 @@ title: Marketing checklist
 sidebar_label: Marketing checklist
 ---
 
-So, your app is live on the Overwolf Appstore, and you've already gone through the [technical checklist](technical-checklist). Now is a great time to review your marketing efforts with this checklist to ensure a smooth launch and better chance of achieving your app's long-term growth goals.
+So, your app is live on the Overwolf Appstore, and you've already gone through the [Technical checklist](https://overwolf.github.io/docs/start/technical-checklist) and the [Product checklist](https://overwolf.github.io/docs/start/product-checklist). Now is a great time to review your marketing efforts with this checklist to ensure a smooth launch and better chance of achieving your app's long-term growth goals.
 
 There is no one 'correct' way to market and promote apps. You know your users best, and promotions that worked for one app doesn't necessarily apply for a different audience of gamers. With that in mind, here are some ideas for promoting your app effectively based on best practices and lessons that we’ve learned. Use those ideas that fit your app and audience.
 
