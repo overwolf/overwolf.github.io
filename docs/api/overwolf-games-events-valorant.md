@@ -53,7 +53,7 @@ key          | Category    | Values                    | Notes                 |
 player_name  | me          | Name of local player.     |See [notes](#player_name-note)|   148.0       |
 player_id    | me          | ID of the local player.   |See [notes](#player_id-note)|   148.0       |
 region       | me          | Region of the local player.|See [notes](#region-note)|   148.0       |
-agent        | me          | Picked character ID.       |See [notes](#agent-note)|   149.0       |
+agent        | me          | Character Internal ID.       |See [notes](#agent-note)|   149.0       |
 
 #### *player_name* note
 
@@ -81,6 +81,9 @@ Data Example:
 
 #### *agent* note
 
+Not all agents have their game-name match their ID data, since this is an internal name, so take that into account.
+Furthermore, if a character has an ability that gives him different points of view (f.ex Sova with his drone), the ID will change accordingly to the drone.
+
 Data Example:
 
 ```json
@@ -96,7 +99,7 @@ key          | Category    | Values                    | Notes                 |
 round_number | match_info  | Number of current round.  |See [notes](#round_number-note)|   149.0       |
 score        | match_info  | Amount of rounds won/lost.|See [notes](#score-note)|   149.0       |
 round_phase  | match_info  | Current state of the round.|See [notes](#round_phase-note)|   149.0       |
-team         | match_info  | Attacker / Defender.      |See [notes](#team-note)|   149.0       |
+team         | match_info  | Attack / Defense.      |See [notes](#team-note)|   149.0       |
 
 #### *round_number* note
 
