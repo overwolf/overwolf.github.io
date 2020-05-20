@@ -53,7 +53,7 @@ key          | Category    | Values                    | Notes                 |
 player_name  | me          | Name of local player.     |See [notes](#player_name-note)|   148.0       |
 player_id    | me          | ID of the local player.   |See [notes](#player_id-note)|   148.0       |
 region       | me          | Region of the local player.|See [notes](#region-note)|   148.0       |
-
+agent        | me          | Picked character ID.       |See [notes](#agent-note)|   149.0       |
 
 #### *player_name* note
 
@@ -79,7 +79,62 @@ Data Example:
 {"info":{"me":{"region":"esp"}},"feature":"me"}
 ```
 
+#### *agent* note
+
+Data Example:
+
+```json
+{"info":{"me":{"agent":"Phoenix_PC_C"}},"feature":"me"}
+```
+
 ## `match_info`
+
+### Info Updates
+
+key          | Category    | Values                    | Notes                 | Since GEP Ver. |
+------------ | ------------| ------------------------- | --------------------- | ------------- | 
+round_number | match_info  | Number of current round.  |See [notes](#round_number-note)|   149.0       |
+score        | match_info  | Amount of rounds won/lost.|See [notes](#score-note)|   149.0       |
+round_phase  | match_info  | Current state of the round.|See [notes](#round_phase-note)|   149.0       |
+team         | match_info  | Attacker / Defender.      |See [notes](#team-note)|   149.0       |
+
+#### *round_number* note
+
+Data Example:
+
+```json
+{"info":{"match_info":{"round_number":"1"}},"feature":"match_info"}
+{"info":{"match_info":{"round_number":"2"}},"feature":"match_info"}
+{"info":{"match_info":{"round_number":"3"}},"feature":"match_info"}
+```
+
+#### *score* note
+
+Data example:
+
+```json
+{"info":{"match_info":{"score":"{\"won\":9,\"lost\":2}"}},"feature":"match_info"}
+```
+
+#### *round_phase* note
+
+Data Example:
+
+```json
+{"info":{"match_info":{"round_phase":"shopping"}},"feature":"match_info"}
+{"info":{"match_info":{"round_phase":"combat"}},"feature":"match_info"}
+{"info":{"match_info":{"round_phase":"end"}},"feature":"match_info"}
+{"info":{"match_info":{"round_phase":"game_end"}},"feature":"match_info"}
+```
+
+#### *team* note
+
+Data Example:
+
+```json
+{"info":{"match_info":{"team":"attack"}},"feature":"match_info"}
+{"info":{"match_info":{"team":"defense"}},"feature":"match_info"}
+```
 
 ### Events
 
@@ -87,6 +142,7 @@ Event       | Event Data   | Fired When    | Notes              | Since GEP Ver.
 ------------| -------------| --------------| ------------------ | --------------|
 match_start | null         | Match started. | See [notes](#match_start-note) | 148.0  |
 match_end   | null         | Match ended.   | See [notes](#match_end-note) | 148.0  |
+
 
 #### *match_start* note
 
@@ -102,7 +158,6 @@ Data Example:
 
 ```json
 {"feature":"match_info","event":"match_end","data":null}
-
 ```
 
 ## `game_info`
