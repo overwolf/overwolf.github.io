@@ -240,6 +240,12 @@ No logs.
 Rainbow 6 Siege
 ---------------
 
+**Resolved** Rainbow Six "name" and "account_id" info-updates are available again.  
+May 18, 09:18 PM GMT+3
+
+**Maintenance** -   Rainbow Six "account_id" and "name" info-updates are down for maintenance.  
+May 07, 10:27 PM GMT+3
+
 **Resolved** This incident has been resolved.  
 Mar 12, 04:37 PM GMT+3
 
