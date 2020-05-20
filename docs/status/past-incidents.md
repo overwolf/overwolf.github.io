@@ -64,6 +64,9 @@ Dec 19, 08:29 AM GMT+3
 Escape From Tarkov
 -----------------
 
+**Investigating** - Escape From Tarkov game events are down, we are working on a fix.  
+May 20, 10:25 AM GMT+3
+
 **Resolved** - This incident has been resolved.  
 Apr 30, 09:28 PM GMT+3
 
