@@ -21,6 +21,11 @@ In order to prevent ads being called but not shown, please make sure you use the
 * When the window is minimized, do not delete or destroy the `owAd` instance object, instead call the `removeAd()` method.
 * When the window is restored, call the same `owAd` instance’s `refreshAd()` method.
 
+## Type Definitions
+Type definitions for the `OwAd` class and the various interfaces it uses can be found at our [types](https://github.com/overwolf/types/blob/master/owads.d.ts) github.
+Import this file to your app to get autocompletion and type inference with the `OwAd`.
+
+
 #### Sample code for handling ads with minimized/restored window
 
 ```
