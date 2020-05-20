@@ -1,6 +1,6 @@
 ---
 id: monetization-overview
-title: Monetizate your app
+title: Monetize your app
 sidebar_label:  Monetization overview
 ---
 
