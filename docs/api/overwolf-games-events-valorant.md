@@ -90,6 +90,20 @@ Data Example:
 {"info":{"me":{"agent":"Phoenix_PC_C"}},"feature":"me"}
 ```
 
+Possible agent values:
+
+* "Clay_PC_C" = Raze
+* "Pandemic_PC_C" = Viper
+* "Wraith_PC_C" = Omen
+* "Hunter_PC_C" = Sova
+* "Thorne_PC_C" = Sage
+* "Phoenix_PC_C" = Phoenix
+* "Wushu_PC_C" = Jett
+* "Gumshoe_PC_C" = Cypher
+* "Sarge_PC_C" = Brimstone
+* "Breach_PC_C" = Breach
+
+
 ## `match_info`
 
 ### Info Updates
@@ -100,6 +114,8 @@ round_number | match_info  | Number of current round.  |See [notes](#round_numbe
 score        | match_info  | Amount of rounds won/lost.|See [notes](#score-note)|   149.0       |
 round_phase  | match_info  | Current state of the round.|See [notes](#round_phase-note)|   149.0       |
 team         | match_info  | Attack / Defense.      |See [notes](#team-note)|   149.0       |
+match_outcome| match_info  | Victory / Defeat.      |See [notes](#match_outcome-note)|   149.0       |
+
 
 #### *round_number* note
 
@@ -137,6 +153,14 @@ Data Example:
 ```json
 {"info":{"match_info":{"team":"attack"}},"feature":"match_info"}
 {"info":{"match_info":{"team":"defense"}},"feature":"match_info"}
+```
+
+#### *match_outcome* note
+
+Data Example:
+
+```json
+{"info":{"match_info":{"match_outcome":"victory"}},"feature":"match_info"}
 ```
 
 ### Events
