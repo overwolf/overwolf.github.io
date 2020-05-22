@@ -1,6 +1,6 @@
 ---
 id: process-manager-plugin
-title: The Process Mnager plugin
+title: The Process Manager plugin
 sidebar_label: Process Manager plugin
 ---
 
