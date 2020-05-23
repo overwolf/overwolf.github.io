@@ -41,7 +41,7 @@ Double-clicking an OPK will install the package.
 
 **Make sure to pack the manifest and all the files and folder in the root of the package, like this:** 
 
-![welcome-screen](../assets/dev-console/opk.gif)
+![welcome-screen](../assets/dev-console/update-version/opk.gif)
 
 More info about the OPK structure can be found [here](../start/submit-your-app-to-the-store#how-to-submit-an-app).
 
@@ -51,7 +51,7 @@ Once you have a valid OPK with the latest version, to get the update cycle start
 
 From the developers console you can:
 
-![welcome-screen](../assets/dev-console/welcome-screen.png)
+![welcome-screen](../assets/dev-console/update-version/welcome-screen.png)
 
 1. Choose an OPK and upload it.
 2. See which versions are public and live, and their rollout status.
@@ -61,7 +61,7 @@ From the developers console you can:
 
 Drag your OPK to upload it. Once it's ready, you can set the rollout percentage.
 
-![opk-upload](../assets/dev-console/opk-upload.png)
+![opk-upload](../assets/dev-console/update-version/opk-upload.png)
 
 ### 4. Set the phasing rate
 
@@ -69,7 +69,7 @@ After uploading a new version of your app, you can choose the phasing (rollout) 
 
 We highly recommend starting with a low phasing rate (like 15%), to get some feedback on compatibility issues, bug reports and other issues that you might have missed in your QA process.
 
-![rollout](../assets/dev-console/rollout.png)
+![rollout](../assets/dev-console/update-version/rollout.png)
 
 :::note 
 The 'Installs' and 'Active Installs' statistics only update once per day. 
@@ -81,10 +81,10 @@ After the new version was rolled out to production and is working as expected, y
 
 If you find any issues, you can immediately halt the rollout.
 
-![rollout](../assets/dev-console/increase-phasing.png)
+![rollout](../assets/dev-console/update-version/increase-phasing.png)
 
 ## Release history
 
 You can easily view the release history of all the previous versions:
 
-![rollout](../assets/dev-console/release-hostory.png)
+![rollout](../assets/dev-console/update-version/release-hostory.png)
