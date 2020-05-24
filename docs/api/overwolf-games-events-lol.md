@@ -158,9 +158,12 @@ Data Example:
 key          | Category    | Values                    | Notes                 | Since GEP Ver. |
 ------------ | ------------| ------------------------- | --------------------- | ------------- | 
 matchStarted | game_info   | true/false (string)       |See [notes](#matchStarted-note)|   140.0       |
-matchOutcome | game_info   | win/lose                  |See [notes](#matchOutcome-note)|   140.0       |
 matchId      | game_info   | Current match id          |See [notes](#matchId-note)     |   120.0       |
 queueId      | game_info   | Current match [queue id](https://developer.riotgames.com/game-constants.html)|  `queueId:440`        |   120.0       |
+
+:::tip
+As there is no matchOutcome event for LoL, you can detect it by using the [announcer](l#announcer) or [live_client_data](#live_client_data) events.
+:::
 
 #### *matchStarted* note
 
@@ -169,10 +172,6 @@ Data Example:
 ```json
 {"feature":"matchState","category":"game_info","key":"matchStarted","value":true}
 ```
-
-#### *matchOutcome* note
-
-<b>This event is currently broken.</b>
 
 #### *matchID* note
 
