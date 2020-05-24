@@ -11,7 +11,7 @@ Note that the process described in this article is only available for apps alrea
 
 :::important Save your work
 Once done, don't forget to click the **save** button on the bottom of the screen.  
-Navigate to another tab or page, will cause the lost of unsaved data.
+Navigation to another tab or page, will cause the loss of any unsaved data.
 :::
 
 ## Login to the developers console
