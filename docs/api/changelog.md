@@ -10,8 +10,7 @@ Follow this entry for ongoing updates and changes to the project or tools:
 
 The full documentation for this version is not ready yet.
 
-* "DPI-aware" feature for native windows: It means that when you move the native window between monitors with different DPIs for example from 100 DPI to 125 DPI,
-The window will automatically resize according to the new DPI.
+* "DPI-aware" feature for native windows: It means that when you move the native window between monitors with different DPIs for example from 100 DPI to 125 DPI, אhe window will automatically resize according to the new DPI.
 * To disable this feature we added the following flag for the relevant window in the manifest: **disable_auto_dpi_sizing**.
 
 ## Version 0.147 (May. 2020)

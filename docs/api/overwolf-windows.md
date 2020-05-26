@@ -211,6 +211,10 @@ Parameter            | Type        | Description                                
 windowId	           | string      | The id or name of the window to drag                  |
 callback (Optional)  | function    | A callback which is called when the drag is completed |
 
+:::note
+When you dragMove a **native window** between monitors with different DPIs, the window will automatically resize according to the new DPI.
+:::
+
 #### Callback argument: Success
 
 ```json

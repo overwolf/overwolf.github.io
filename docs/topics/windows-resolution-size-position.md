@@ -113,6 +113,8 @@ To identify if your app window was dragged from one monitor to another, you can 
 
 * Get the position of the window (window.screenX, window.screenY).
 
+Note that when you move a **native window** between monitors with different DPIs, the window will automatically resize according to the new DPI.
+
 ### determine which monitor the window is displayed
 
 Once you get the X & Y coordinates of a window (at the end of dragMove(), using getCurrentWindow(), etc.), With a simple calculation, you can determine which monitor the window is displayed. (For example, if you know that the 1st monitor has 1080px width, and the current window position start beyond that, it means that the window is displayed on the second monitor, etc.)
