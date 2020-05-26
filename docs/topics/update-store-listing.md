@@ -16,51 +16,51 @@ Navigation to another tab or page, will cause the loss of any unsaved data.
 
 ## Login to the developers console
 
-After logging to the [OW developers console](#https://console.overwolf.com/) you can choose store listing:
+After logging to the [Overwolf developers console](#https://console.overwolf.com/), navigate to Store Listing:
 
 ![login](../assets/dev-console/update-store/login.png)
 
 ## Update store listing
 
-On the store listing screen, you can update all your app details that displayed in the store: name, screenshots, etc.
-There are several read-only properties like name, author, and app visibility. Other than that, you can control all your store app's info through this page.
+The Store Listing tab lets you update the app details properties that are displated in the Overwolf appstore, including the app's name, screenshots, and more.
 
-#### Note
-If you followed our guide on how to [submit your app to the app store for the first time](https://overwolf.github.io/docs/start/submit-your-app-to-the-store#the-store-folder-should-contain), you should have a **store** folder containing all the texts and assets used in this article.
+#### Notes
+1. A few properties are read-only, and cannot be edited. These are: App name, author, and app visibility. 
+2. The app's assets like screenshots, description text and more can be found in the **store** folder of your app. For more details follow this guide on how to [submit your app to the app store for the first time](https://overwolf.github.io/docs/start/submit-your-app-to-the-store#the-store-folder-should-contain).
 
 ### Name and Author
 
-Read-only properties: The extension UID is automatically generated from hashing the app name and the app author, on the first time that the app is uploaded to the store - and never changes on the app life cycle.  
-If you want to edit one of these fields, contact us.
+Read-only properties: The app's UID.
 
 ![name-author](../assets/dev-console/update-store/name-author.png)
 
 ### App visibility
 
-Read-only property: currently, only the OW team can change this property and make your app "invisible" in the store: 
-Only users with a direct download link will be able to see your one-app page in the OW app store and download the app. 
-Usually, we use this option during the pre-launch period for final tests.
+When an app is set to **hidden** it becomes "invisible" to users. Only users with a direct download link will be able to access your one-app page in the Overwolf app store and download the app. This setting is usually used during the pre-launch period for final tests.
+
+This property is read-only, if you wish to change your app status to **hidden** please contact the Overwolf team.
 
 ![visibility](../assets/dev-console/update-store/hidden.png)
 
 ### Short description
 
-Short description (180 character limit) of your app. Only plain text no HTML or Markdown.
+Add or edit a short description of your app, with a limit of 180 characters. In this field use plain text only (no HTML or Markdown).
 
 ![short-desc](../assets/dev-console/update-store/short-desc.png)
 
 ### Full description
 
-Full description of your app. This description will appear when users click on your app's store tile.  
-Support plain, Markdown, or HTML format (except H1 and H2 tags).
+Add or edit a full description of your app, used when a user clicks on your app's store tile.  
+This field support both plain text, markdown, or HTML format (except H1 and H2 tags).
 
-Note: you can use the content of the [description.html file from the "store" folde](../start/submit-your-app-to-the-store#4-descriptionhtml) that you used for uploading your app to the store for the first time.
+#### Note
+You can also use the text found [description.html file from the "store" folde](../start/submit-your-app-to-the-store#4-descriptionhtml) that you used for uploading your app to the store for the first time.
 
 ![full-desc](../assets/dev-console/update-store/full-desc.png)
 
 ### Tile
 
-The Appstore tile asset for your app.  
+Upload or edit an asset that will be used as an Appstore tile for your app.  
 * Should be a JPG format image sized 258X198 at 72PPI.
 * Same as the [tile file](../start/submit-your-app-to-the-store#1-tilejpg) from the "store" folder.
 
@@ -68,8 +68,8 @@ The Appstore tile asset for your app.
 
 ### Icon 
 
-This is the icon used to represent your app in the Overwolf appstore.  
-* Please make sure your chosen icon looks great on both dark and bright backgrounds.
+Upload or edit an asset that wil be used as the app's icon in the Overwolf appstore.  
+* Please make sure your chosen icon looks good on both dark and bright backgrounds.
 * Should be a PNG format image sized 55X55.
 * Same as the [icon file](../start/submit-your-app-to-the-store#2-iconpng) from the "store" folder.
 
@@ -77,11 +77,11 @@ This is the icon used to represent your app in the Overwolf appstore.
 
 ### Screenshots 
 
-Include at least one screenshot of your app which will be shown in the app’s page when reached through the Appstore.
+Include at least one screenshot of your app. These screenshots will be displayed on the app’s page. 
 * Should be a JPG format image sized 656x410.
-* Providing more than one attractive screenshots increases your app’s chances of getting noticed and winning hearts.
-* You may include up to 5 screenshots per app. 
-* Please choose screenshots that remain clear and where features can be spotted at this resolution.
+* Using attractive screenshots of your app will increase its chances of getting noticed and winning hearts, so try including more than one.
+* You may add up to 5 screenshots per app. 
+* We recommend choosing screenshots that showcase the app's features in a clear way. 
 * Same as the [ScreenshotX section](../start/submit-your-app-to-the-store#3-screenshotxjpg) from the "store" folder.
 
 ![screenshots](../assets/dev-console/update-store/screenshots.png)
