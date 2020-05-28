@@ -30,7 +30,7 @@ Below you can see an example from the [sample app](#sample-app).
 ### Transparent window
 
 :::important
-The term transparent might be a bit misleadin, . This window has no borders, window control buttons or default background – create those elements by yourself in your HTML/CSS.
+The term transparent might be a bit misleading. This window has no borders, window control buttons or default background – create those elements by yourself in your HTML/CSS.
 :::
 
 In order to create this window type, the `transparent` property in the manifest.json should be set to ‘true’.
