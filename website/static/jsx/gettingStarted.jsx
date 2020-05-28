@@ -90,7 +90,7 @@ class GettingStarted extends React.Component {
 
             <h2>Your next steps</h2>
             <p>In this website you can find everything you need to build your app from the ground up, whether you're going at it independently or seeking help. If your concept is solid and you're in need of development resources, <a href="https://www.overwolf.com/fund/home" target="_blank">apply to our fund!</a></p>
-            <p>If you encounter any issues we can help with, difficulties to overcome or have suggestions to share, talk to us over at <a href="https://discordapp.com/invite/cjjrZDp" target="_blank">Discord</a> or directly at <a href="mailto:developers@overwolf.com">Developers@overwolf.com</a></p>
+            <p>If you encounter any issues we can help with, difficulties to overcome or have suggestions to share, talk to us over at <a href=" https://discord.gg/7256qS2" target="_blank">Discord</a> or directly at <a href="mailto:developers@overwolf.com">Developers@overwolf.com</a></p>
 
             <div className="start-build-footer-btn">
                 <a href="../start/sample-app-overview" className="btn-pink start-building-btn">Start Building</a>
