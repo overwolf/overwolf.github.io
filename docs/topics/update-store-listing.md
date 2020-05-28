@@ -22,8 +22,8 @@ After logging to the [OW developers console](#https://console.overwolf.com/) you
 
 ## Update store listing
 
-On the store listing screen, you can update all your app details that displayed in the store: name, screenshots, etc.
-There are several read-only properties like name, author, and app visibility. Other than that, you can control all your store app's info through this page.
+On the store listing screen, you can update your app details that displayed in the store like description, screenshots, etc.
+Several fields are read-only properties like name, author, and app visibility. Other than that, you can control all your store app's info through this page.
 
 #### Note
 If you followed our guide on how to [submit your app to the app store for the first time](https://overwolf.github.io/docs/start/submit-your-app-to-the-store#the-store-folder-should-contain), you should have a **store** folder containing all the texts and assets used in this article.
