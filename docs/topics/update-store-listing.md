@@ -22,7 +22,8 @@ After logging to the [Overwolf developers console](#https://console.overwolf.com
 
 ## Update store listing
 
-The Store Listing tab lets you update the app details properties that are displated in the Overwolf appstore, including the app's name, screenshots, and more.
+The Store Listing tab lets you update the app details properties displayed in the Overwolf Appstore, including the app's description, screenshots, and more.
+Several fields are read-only properties like name, author, and app visibility. Other than that, you can control all your store app's info through this page.
 
 #### Notes
 1. A few properties are read-only, and cannot be edited. These are: App name, author, and app visibility. 

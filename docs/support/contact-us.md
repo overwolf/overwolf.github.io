@@ -13,7 +13,7 @@ Please send us an email if you would like to join our Dev Community on Slack: [d
 
 ## Join our Discord
 Join our Discord community where you can interact with Overwolf staff and other Overwolf app developers in real-time.
-Click [here](https://discord.gg/cjjrZDp) to join our Discord server.
+Click [here](https://discord.gg/7256qS2) to join our Discord server.
 
 ## Follow us on twitter
 https://twitter.com/OverwolfDevs
