@@ -128,7 +128,7 @@ For that, use the [overwolf.settings.hotkeys](overwolf-settings-hotkeys) API.
 
 > Fired when a mouse key has been released.
 
-The event information includes whether the left or white mouse button was clicked (button), x and y coordinates (x, y) and a boolean stating whether the keypress was in the game or on an Overwolf widget (onGame).
+The event information includes whether the left or right mouse button was clicked (button), x and y coordinates (x, y) and a boolean stating whether the keypress was in the game or on an Overwolf widget (onGame).
 
 #### Event Data Example: Success
 
