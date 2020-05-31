@@ -146,7 +146,8 @@ Note that not all flags are mandatory - we included all available flags for docu
                 "<a href="#is_alt_f4_blocked">is_alt_f4_blocked</a>": false,
                 "<a href="#dev_tools_window_style">dev_tools_window_style</a>": false,
                 "<a href="#debug_url">debug_url</a>": "http://localhost:3000",
-                "<a href="#optimize_accelerate_rendering">optimize_accelerate_rendering</a>": false //Use directly shared texture rendering in game (only DX11)
+                "<a href="#optimize_accelerate_rendering">optimize_accelerate_rendering</a>": false, //Use directly shared texture rendering in game (only DX11)
+                "<a href="#disable_auto_dpi_sizing">disable_auto_dpi_sizing</a>": false //disable the DPI Aware behavior of native windows
             },
         },
         //Toggle printing of ads log to the console
@@ -258,7 +259,8 @@ Note that not all flags are mandatory - we included all available flags for docu
                 "<a href="#is_alt_f4_blocked">is_alt_f4_blocked</a>": false,
                 "<a href="#dev_tools_window_style">dev_tools_window_style</a>": false,
                 "<a href="#debug_url">debug_url</a>": "http://localhost:3000",
-                "<a href="#optimize_accelerate_rendering">optimize_accelerate_rendering</a>": false 
+                "<a href="#optimize_accelerate_rendering">optimize_accelerate_rendering</a>": false,
+                "<a href="#disable_auto_dpi_sizing">disable_auto_dpi_sizing</a>": false //disable the DPI Aware behavior of native windows
             },
         },
         "<a href="#enable_top_isolated_sites_console">enable_top_isolated_sites_console</a>": false,
@@ -466,6 +468,7 @@ In case you have to use it, consult with us before.</p></li>
 <tr><td><a class="anchor" aria-hidden="true" id="dev_tools_window_style"></a>dev_tools_window_style</td><td>bool</td><td>Opens developer tools in dedicated window.</td><td>0.117</td></tr>
 <tr><td><a class="anchor" aria-hidden="true" id="debug_url"></a>debug_url</td><td>string</td><td>For local-server debugging (like react apps). You can use this field to set the localhost:port URL.</br><em>Notes: You must have a local web server installed on your machine. </br>Valid only when loading unpacked extensions.</br>Valid only with &quot;localhost&quot; / &quot;127.0.0.1&quot;</em></td><td>0.127</td></tr>
 <tr><td><a class="anchor" aria-hidden="true" id="optimize_accelerate_rendering"></a>optimize_accelerate_rendering</td><td>bool</td><td>Valid only for transparent windows. Valid only if <a href="#enable_osr_acceleration">enable_osr_acceleration</a> is on.</td><td>0.127</td></tr>
+<tr><td><a class="anchor" aria-hidden="true" id="disable_auto_dpi_sizing"></a>disable_auto_dpi_sizing</td><td>bool</td><td>Relevant only for native windows. Disable the DPI Aware behavior of native windows.</td><td>0.148</td></tr>
 </tbody>
 </table>
 <h2><a class="anchor" aria-hidden="true" id="externallyconnectable-object"></a><a href="#externallyconnectable-object" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>ExternallyConnectable object</h2>
