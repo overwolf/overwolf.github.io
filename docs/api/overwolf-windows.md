@@ -779,8 +779,10 @@ callback               | function                                          | Ret
 
 > Is the current window accelerated and is OSR |GPU| acceleration is supported for this machine.
 
-:::info
-This function name is misspelled. It is kept this way for backwards compatibility.
+Note that the function name is misspelled. It is kept this way for backwards compatibility.
+
+:::warning
+The OSR acceleration feature is is no longer supported and maintained. 
 :::
 
 Parameter              | Type                                              | Description                                                               |
