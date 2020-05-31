@@ -43,6 +43,7 @@ A Transparent Window is a window **without** borders, control buttons and opacit
 * Any part of your window that has a transparent background ("background: transparent;") will become a see-through area that blends with the game or desktop behind it.
 * You should implement the window header with the control elements (like maximize, minimize) independently, by yourself in the HTML/CSS. (you can use our [UI components samples](../start/sample-app-ui-components))
 * You should implement dragging behavior independently, by yourself. (you can use our [sample app](../start/sample-app-overview) that already implemented this feature)
+* Avoid full-screen transparent windows. [More info here](windows-tips#avoid-full-screen-transparent-windows).
 
 #### Example from the manifest.json:
 

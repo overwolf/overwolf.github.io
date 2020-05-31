@@ -64,11 +64,7 @@ This "hidden" window should have the [is_background_page](../api/manifest-json#i
 
 ## Use native desktop windows
 
-If your app includes a window that will only be visible on desktop but not while playing, you should add the following flags to that window's data in the app’s manifest.json file:
+If your app includes a window that will only be visible on desktop but not while playing, you should set your window as "native".  
+It will dramatically improve your app performance and help design an efficient, elegant product.
 
-```json
-"desktop_only": true,
-"native_window":true
-```
-
-These steps will dramatically improve your app performance and help design an efficient, elegant product.
+ [Read more](windows-types#native-window).
