@@ -11,7 +11,7 @@ Note that the process described in this article is only available for apps alrea
 
 :::important Save your work
 Once done, don't forget to click the **save** button on the bottom of the screen. Navigation to another tab or page, will cause the loss of any unsaved data.  
-Changes submitted will take up to ~15min to process and go live.
+Changes submitted will take up to ~30min to process and go live.
 :::
 
 ## Login to the developers console
