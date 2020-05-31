@@ -80,6 +80,7 @@ Upload or edit an asset that wil be used as the app's icon in the Overwolf appst
 
 Include at least one screenshot of your app. These screenshots will be displayed on the app’s page. 
 * Should be a JPG format image sized 656x410.
+* We automatically compress and optimize your images.  
 * Using attractive screenshots of your app will increase its chances of getting noticed and winning hearts, so try including more than one.
 * You may add up to 5 screenshots per app. 
 * We recommend choosing screenshots that showcase the app's features in a clear way. 
