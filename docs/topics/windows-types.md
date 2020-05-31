@@ -89,7 +89,9 @@ It will dramatically improve your app performance and help design an efficient, 
 
 * A native window is always a non-transparent window.
 * Any part of your window that has a transparent background ("background: transparent;") will become black.
-* You should implement the window header with the control elements (like maximize, minimize) independently, by yourself in the HTML/CSS.
+* You should implement the window header with the control elements (like maximize, minimize) independently, by yourself in the HTML/CSS. (you can use our [UI components samples](../start/sample-app-ui-components))
+* You should implement dragging behavior independently, by yourself. (you can use our [sample app](../start/sample-app-overview) that already implemented this feature)
+* Native windows change their size according to the users' DPI automagically. (to disable that use the disable_auto_dpi_sizing flag)
 
 #### Example from the manifest.json:
 
@@ -110,8 +112,10 @@ desktop_only support       | +                        | +                       
 in_game_only support       | +                        | +                              | -                            |
 built-in controls (maximize,minimize)         | -     | +                              | -                            |
 built-in dragging          | -                        | +                              | -                            |
+built-in resizing          | +                        | +                              | +                            |
 See-through background     | +                        | - (white bg)                   | - (black bg)                 |
-
+DPI-Aware mechanic         | -                        | -                              | +                            |
+       
 ## Sample app
 
 You should download our [sample app](../start/sample-app-overview), it covers transparent/non-transparent window creation and much more.
