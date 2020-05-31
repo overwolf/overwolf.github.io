@@ -10,8 +10,8 @@ In this article, we'll go over the process of updating your app store listing us
 Note that the process described in this article is only available for apps already published on the Overwolf app store.
 
 :::important Save your work
-Once done, don't forget to click the **save** button on the bottom of the screen.  
-Navigation to another tab or page, will cause the loss of any unsaved data.
+Once done, don't forget to click the **save** button on the bottom of the screen. Navigation to another tab or page, will cause the loss of any unsaved data.  
+Changes submitted will take up to ~15min to process and go live.
 :::
 
 ## Login to the developers console
