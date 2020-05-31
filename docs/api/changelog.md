@@ -6,11 +6,13 @@ sidebar_label: Changelog
 
 Follow this entry for ongoing updates and changes to the project or tools:
 
-## Version 0.148 (In progress)
+## Version 0.149 (In progress)
 
 The full documentation for this version is not ready yet.
 
-* "DPI-aware" feature for native windows:  
+## Version 0.148 (Jun. 2020)
+
+* "DPI-aware" feature for [native](../topics/windows-types#native-window) windows:  
   It means that when you move the native window between monitors with different DPIs for example from 100 DPI to 125 DPI, the window will automatically resize according to the new DPI.  
   There's also a new manifest flag to disable that behavior if the developer wants none of that: [disable_auto_dpi_sizing](manifest-json#disable_auto_dpi_sizing).
 * Moved to be part of our internal API and removed from the docs:
@@ -20,7 +22,6 @@ The full documentation for this version is not ready yet.
 ## Version 0.147 (May. 2020)
 
 Note that iteration 146 and 147 were combined into a single iteration.  
-The full documentation for this version is not ready yet.
 
 * New feature: [overwolf.window.flash()](overwolf-windows#flashwindowid-behaviorcallback)  
   Flashes a window that is not in focus (for example, minimized to taskbar).  
