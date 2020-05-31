@@ -101,7 +101,7 @@ You should mainly listen to when a game/match starts and when it end, and manual
 This is the basic usage flow:
 
 1. **Register to the relevant capture events** for your app.
-   * The [available events](../api/overwolf-streaming#events-reference) are: onStreamingSourceImageChanged, onStopStreaming, onStartStreaming, onStreamingError, onStreamingWarning, onVideoFileSplited, onRecordingEngineStateChanged.
+   * The [available events](../api/overwolf-streaming#events-reference) are: onStreamingSourceImageChanged, onStopStreaming, onStartStreaming, onStreamingError, onStreamingWarning, onVideoFileSplited.
 
 2. **Get the available stream encoders.**  
    * Call [getStreamEncoders()](../api/overwolf-streaming#getstreamencoderscallback) and [getAudioDevices()](../api/overwolf-streaming#getaudiodevicescallback).

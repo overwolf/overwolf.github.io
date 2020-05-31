@@ -30,7 +30,6 @@ Please read all the info about streaming usage and options on our [video capture
 * [overwolf.streaming.getAudioDevices()](#getaudiodevicescallback)
 * [overwolf.streaming.updateStreamingDesktopOptions()](#updatestreamingdesktopoptionsstreamid-newoptions-mousecursorstreamingmethod-callback)
 * [overwolf.streaming.updateTobiiSetting()](#updatetobiisettingstreamid-param-callback)
-* [overwolf.streaming.getRunningRecorders()](#getrunningrecorderscallback)
 
 ## Events Reference
 
@@ -40,7 +39,6 @@ Please read all the info about streaming usage and options on our [video capture
 * [overwolf.streaming.onStreamingError](#onstreamingerror)
 * [overwolf.streaming.onStreamingWarning](#onstreamingwarning)
 * [overwolf.streaming.onVideoFileSplited](#onvideofilesplited)
-* [overwolf.streaming.onRecordingEngineStateChanged](#onrecordingenginestatechanged)
 
 ## Types Reference
 
@@ -665,40 +663,6 @@ A callback function which will be called with the status of the request
 
 ```json
 { "status": "success" }
-```
-
-#### Callback argument: Failure
-
-A callback function which will be called with the status of the request
-
-```json
-{ "status": "error" }
-```
-
-## getRunningRecorders(callback)
-
-#### Version added: 0.127
-
-> Returns a list of all running recording services (in a case that the app is using our capturing features).
-
-Parameter | Type             | Description                                                                      |
-----------| -----------------| ---------------------------------------------------------------------------------|
-callback  | function         | A callback function to call with the array of recorders and their extensions ids |
-
-#### Callback argument: Success
-
-A callback function which will be called with the status of the request
-
-```json
-//example value:
-{
-  "0": {
-    "extensions": [
-      "nafihghfcpikebhfhdhljejkcifgbdahdhngepfb",
-      "hffhbjnafafjnehejohpkfhjdenpifhihebpkhni"
-    ]
-  }
-}
 ```
 
 #### Callback argument: Failure
