@@ -51,7 +51,7 @@ fetch('https://console-api.overwolf.com/v1/apps/nafihghfcpikebhfhdhljejkcifgbdah
 
 ### Response example
 
-In case of succesful request:
+In case of successful request:
 
 ```json
 {"state":2,"updates_popup_active":false,"yellow_text":"hi there"}

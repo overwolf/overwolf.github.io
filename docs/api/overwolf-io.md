@@ -37,7 +37,7 @@ In addition, the [simple I/O plugin](../topics/simple-io-plugin) offers several 
 
 #### Version added: 0.93
 
-> Checks for the existance of a file in a given path.
+> Checks for the existence of a file in a given path.
 
 Parameter | Type | Description |
 ------------ | ------------ | ------------ |
@@ -180,7 +180,7 @@ overwolf.io.dir("C:/Users/Hal9000/Videos/Overwolf",console.log)
 > Read binary file.
 
  Reads a file's contents and returns an array of byte values.  
- This function is extremly slow! Use it only for small files or to get file header info using the [options](#readfileoptions-object) parameter (maxBytesToRead) to limit the amount of data to fetch.
+ This function is extremely slow! Use it only for small files or to get file header info using the [options](#readfileoptions-object) parameter (maxBytesToRead) to limit the amount of data to fetch.
 
 Parameter | Type     | Description             |
 ----------| ---------| ----------------------- |

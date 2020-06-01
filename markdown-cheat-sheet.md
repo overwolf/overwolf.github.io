@@ -66,7 +66,7 @@ Strikethrough uses two tildes. ~~Scratch this.~~
 ### Links
 
 URLs and URLs in angle brackets will automatically get turned into links.
-There are diferent types of links:
+There are different types of links:
 
 1. External links. Use absolute URL: `[external](http://google.com)`.
 
@@ -155,7 +155,7 @@ A warning.
 
 ## Backslash Escape
 
-Markdown allows you to use backslash escapes to generate literal characters which would otherwise have special meaning in Markdown’s formating syntax.
+Markdown allows you to use backslash escapes to generate literal characters which would otherwise have special meaning in Markdown’s formatting syntax.
 
 <pre lang="no-highlight">
 <code>

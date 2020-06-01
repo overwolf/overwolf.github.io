@@ -121,7 +121,7 @@ overwolf.games.events.getInfo(function(info) {
 
 #### Version added: 0.78
 
-> Fired when an error occured in the Game Event system.
+> Fired when an error occurred in the Game Event system.
 
 ## onInfoUpdates2
 

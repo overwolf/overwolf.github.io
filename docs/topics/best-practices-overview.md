@@ -77,7 +77,7 @@ In this section, you can find our best practices for developing and implementing
 </div>
 
 ### Ask for feedback
-* Getting feedback from users is essential for your app’s success. Make sure users can share feedback regarding the app easily, preferrably with an in-app link or interface. 
+* Getting feedback from users is essential for your app’s success. Make sure users can share feedback regarding the app easily, preferably with an in-app link or interface. 
 * Based on the Facecheck team's experience with this feature, adding it in-app improves reviews and increases feedback. 
 * Example for this implementation:
 
@@ -208,7 +208,7 @@ In this section, you can find our best practices for developing and implementing
 * Use our [JSON schema validator](../api/manifest-json#validate-your-manifestjson) in order to locate missing or false data in the manifest file.
 
 ### Overwolf APIs
-* Understand all available API’s – After thinking up your app but before you code it, preferrably, you should browse the API documentation section. Check out the available functions that could work for you and your app or help you implement the features you have in mind.
+* Understand all available API’s – After thinking up your app but before you code it, preferably, you should browse the API documentation section. Check out the available functions that could work for you and your app or help you implement the features you have in mind.
 * I/O plugin – Make sure you know how to use the Overwolf simple I/O plugin, it allows you to read files from the local hard drive as well as get interesting information from the games own log files.
 
 ### App’s size

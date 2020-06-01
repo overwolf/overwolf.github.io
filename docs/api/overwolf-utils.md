@@ -127,7 +127,7 @@ filter    | string                                                              
 callback  | ([Result: OpenFilePickerResult](#openfilepickerresult-object)) => void | Called with a url to the selected file                                                                       |
 #### *filter* notes
 
-Provide an empty string for wild cards or seperate value by commas (,). Ex. myFile*.*,*.txt.
+Provide an empty string for wild cards or separate value by commas (,). Ex. myFile*.*,*.txt.
 
 ## openFilePicker(filter, initialPath, callback)
 #### Version added: 0.141
