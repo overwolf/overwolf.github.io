@@ -54,7 +54,7 @@ In order to add a new page, you should:
 3. Add the new page ID as a new entry in the [website\sidebars.json](website/sidebars.json) file.  
   make sure to add it in the right location.
   You can use these docs template as a baseline for new pages:
-  * [API page tempalte](/docs-templates/api-page-template.md)
+  * [API page template](/docs-templates/api-page-template.md)
   * [Game Events page template](/docs-templates/game-events-page-template.md)
 
 ### Add a new game events status page

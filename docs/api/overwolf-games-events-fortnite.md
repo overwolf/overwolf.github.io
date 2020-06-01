@@ -392,7 +392,7 @@ Data Example:
 {"info":{"selected_material":{"selected_material":"1"}},"feature":"items"}
 ```
 
-## `coutners`
+## `counters`
 
 ### Info Updates
 

@@ -62,7 +62,7 @@ Basic usage flow:
    For example, if you set a 3 minute buffer, you will be able to capture game highlights not longer than this buffer.
 
 3. **Listen to your game events** and wait for the game highlight (match_start, kill, etc.) that you want to capture.  
-   Once it occured - start to video capture the screen:
+   Once it occurred - start to video capture the screen:
 
 4. **Call [overwolf.media.replays.startCapture()](../api/overwolf-media-replays#startcapturereplaytype-pastduration-callback)** methods:  
     * Note that it won't automatically stop until you call [stopCapture()](../api/overwolf-media-replays#stopcapturereplaytype-replayid-callback).

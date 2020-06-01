@@ -305,7 +305,7 @@ callback  | function              | Result of the request                       
 This function allows the current app to check if there is an extension update, without having to wait for Overwolf to do so.
 Calling this function will not automatically update the extension, just checks if an update exists.
 
-**Please read our [Recommended extention update flow](#recommended-extension-update-flow).**
+**Please read our [Recommended extension update flow](#recommended-extension-update-flow).**
 
 
 Parameter | Type                  | Description                                                                           |
@@ -419,7 +419,7 @@ updateVersion      | string                          | The latest extension vers
 #### Example data: Success
 
 Possible states are "UpdateAvailable", "UpToDate" or "PendingRestart".  
-For more info please read our **[Recommended extention update flow](#recommended-extension-update-flow)**.
+For more info please read our **[Recommended extension update flow](#recommended-extension-update-flow)**.
 
 ```json
 {"state": "UpdateAvailable", "updateVersion": "125.0.1", "success": true, "error": null}
@@ -450,11 +450,11 @@ TL;DR The flow is `UpdateAvailable => updateExtension() => relaunch() => relaunc
    The button should call [updateExtension()](#updateextensioncallback).  
    See also the [failsafe note](#failsafe-note).
 
-2. Once the update succesfully completed, you can call again [checkForExtensionUpdate()](#checkforextensionupdatecallback),  
+2. Once the update successfully completed, you can call again [checkForExtensionUpdate()](#checkforextensionupdatecallback),  
   To make sure that the state changed to `PendingRestart`.
 
 3. At this point, an extension restart is required.  You can offer the user a "Relaunch" button.  
    The button should call [relaunch()](#relaunch).  
 
-4. It's highly recomended to notify the user and ask for a game restart as well,  
+4. It's highly recommended to notify the user and ask for a game restart as well,  
    to avoid any app related flow issues.

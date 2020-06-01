@@ -17,7 +17,7 @@ All the programs are free to use:
 
 1. open the terminal in VS Code.
 2. `cd .\website` - change directory to the website directory.
-3. `yarn install` - install all the required packges. (in case of an error read the note below). 
+3. `yarn install` - install all the required packages. (in case of an error read the note below). 
 4. `yarn start` - start the docusaurus app locally. That will automatically open your default browser with the local copy of the site.
 
 **Note: if your VS Code terminal not recognize yarn or npm**, open a CMD and run these commands, that make sure that these programs installed globally and will be recognized by VS Code: 
