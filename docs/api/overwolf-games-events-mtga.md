@@ -55,14 +55,12 @@ Possible values:
 * scene_event_page
 * scene_deck_builder
 * scene_draft_table
+* scene_draft_table_queue: IKO_Premier_Draft
 
 Data Example:
 
 ```json
 {"feature":"game_info","category":"game_info","key":"scene","value":"home"}
-```
-```json
-{"feature":"game_info","category":"game_info","key":"scene","value":"decks"}
 ```
 
 #### *detailed_logs_enabled* note
@@ -81,19 +79,7 @@ Data Example:
 Data Example:
 
 ```json
-{
-"feature":"game_info",
-"category":"game_info",
-"key":"sideboard_cards",
-"value":{
-	"cards\":[
-{"card_id":71182,"card_name":"FerociousTigorilla","card_amount":1},
-...
-{"card_id":71222,"card_name":"Gemrazer","card_amount":1}
-		]
-	}
-}
-
+{"info":{"game_info":{"sideboard_cards":"{"cards":[{"card_id":71208,"card_name":"Yidaro, Wandering Monster","card_amount":1}]}"}},"feature":"game_info"}
 ```
 
 #### *main_deck_cards* note
@@ -101,18 +87,11 @@ Data Example:
 Data Example:
 
 ```json
-{
-"feature":"game_info",
-"category":"game_info",
-"key":"main_deck_cards",
-"value":{
-	"cards\":[
-{"card_id":71182,"card_name":"FerociousTigorilla","card_amount":1},
-...
-{"card_id":71222,"card_name":"Gemrazer","card_amount":1}
-		]
-	}
-}
+{"info":{"game_info":{"main_deck_cards":"{"cards":[{"card_id":69945,"card_name":"Shock","card_amount":3},{"card_id":69245,"card_name":"Spear Spewer","card_amount":2},{"card_id":69352,"card_name":"Carnival // Carnage","card_amount":2},{"card_id":69344,"card_name":"Footlight Fiend","card_amount":3},{"card_id":69349,"card_name":"Bedeck // Bedazzle","card_amount":1},
+{"card_id":69292,"card_name":"Cult Guildmage","card_amount":2},{"card_id":69644,"card_name":"Dreadhorde Butcher","card_amount":1},{"card_id":69235,"card_name":"Light Up the Stage","card_amount":2},{"card_id":69243,"card_name":"Skewer the Critics","card_amount":3},
+{"card_id":69285,"card_name":"Bedevil","card_amount":1},{"card_id":69309,"card_name":"Hackrobat","card_amount":3},{"card_id":69313,"card_name":"Judith, the Scourge Diva","card_amount":1},{"card_id":69653,"card_name":"Mayhem Devil","card_amount":1},{"card_id":69326,"card_name":"Rakdos Roustabout","card_amount":2},{"card_id":69341,"card_name":"Theater of Horrors","card_amount":1},
+{"card_id":71125,"card_name":"Mythos of Illuna","card_amount":1},{"card_id":69325,"card_name":"Rakdos Firewheeler","card_amount":2},{"card_id":69191,"card_name":"Blade Juggler","card_amount":2},{"card_id":69304,"card_name":"Get the Point","card_amount":2},{"card_id":70388,"card_name":"Castle Locthwain","card_amount":1},{"card_id":69410,"card_name":"Swamp","card_amount":10},
+{"card_id":69411,"card_name":"Mountain","card_amount":10},{"card_id":69393,"card_name":"Blood Crypt","card_amount":1},{"card_id":69403,"card_name":"Rakdos Guildgate","card_amount":4}]}"}},"feature":"game_info"}
 ```
 
 ## `match_info`
@@ -131,12 +110,7 @@ draft_picked_card | match_info | Name and ID of currently picked card. | See [no
 Data Example:
 
 ```json
-{
-"feature":"match_info",
-"category":"match_info",
-"key":"draft_pack",
-"value":"{"pack_number":3, "pick_number":4,"pick_time":16}"
-}
+{"info":{"match_info":{"draft_pack":"{"pack_number":1,"pick_number":2,"pick_time":70}"}},"feature":"match_info"}
 ```
 
 #### *draft_cards* note
@@ -146,19 +120,8 @@ Updates each time you add/remove cards from your pack.
 Data Example:
 
 ```json
-{
-“feature”:”match_info”,
-"category":"match_info",
-"key":"draft_cards",
-"value":"\"cards\":[
-	{\"id\":71323, "name":"Thornwood Falls"},
-	{"id":71111, "name":"Capture Sphere"},
-	{"id":71069, "name":"Farfinder"},
-	…
-	,{"id":71231, "name":"Migration Path"}
-	]",
-"valueLength":459
-}
+{"info":{"match_info":{"draft_cards":"{"cards":[{"id":71319, "name":"Rugged Highlands"},{"id":71196, "name":"Prickly Marmoset"},{"id":71219, "name":"Fertilid"},{"id":71090, "name":"Maned Serval"},{"id":71307, "name":"Sleeper Dart"},{"id":71162,"name":"Memory
+Leak"},{"id":71098, "name":"Solid Footing"},{"id":71143, "name":"Boot Nipper"},{"id":71309, "name":"Zagoth Crystal"},{"id":71199,"name":"Reptilian Reflection"},{"id":71215, "name":"Colossification"}]}"}},"feature":"match_info"}
 ```
 
 #### *draft_picked_card* note
@@ -166,13 +129,7 @@ Data Example:
 Data Example:
 
 ```json
-{
-“feature”:”match_info”,
-"category":"match_info",
-"key":"draft_picked_card",
-"value":"{"picked_card_id":71080 , "picked_card_name":"Flourishing Fox"}",
-"valueLength":63
-}
+{"info":{"match_info":{"draft_picked_card":"{"picked_card_id":71073 , "picked_card_name":"Coordinated Charge"}"}},"feature":"match_info"}
 ```
 
 ### Events
@@ -210,7 +167,9 @@ Data Example:
 Data Example:
 
 ```json
-{"events":[{"name":"match_start","data":"{"game_format":"Constructed_Event_2020","deck_id":"b6ed3e9b-db31-43b5-a903-29694f21f977","main_deck":[{"id":69890,"count":1},{"id":70107,"count":1},{"id":69905,"count":4},{"id":68526,"count":3},{"id":68547,"count":3},{"id":70105,"count":3},{"id":70110,"count":3},{"id":70109,"count":4},{"id":69218,"count":3},{"id":69876,"count":2},{"id":69880,"count":2},{"id":69894,"count":3},{"id":69877,"count":2},{"id":70017,"count":1},{"id":70054,"count":25}],"sideboard":[]}"}]}
+{"events":[{"name":"match_start","data":"{"game_format":"Constructed_Event_2020","deck_id":"b6ed3e9b-db31-43b5-a903-29694f21f977","main_deck":[{"id":69890,"count":1},{"id":70107,"count":1},{"id":69905,"count":4},{"id":68526,"count":3},
+{"id":68547,"count":3},{"id":70105,"count":3},{"id":70110,"count":3},{"id":70109,"count":4},{"id":69218,"count":3},
+{"id":69876,"count":2},{"id":69880,"count":2},{"id":69894,"count":3},{"id":69877,"count":2},{"id":70017,"count":1},{"id":70054,"count":25}],"sideboard":[]}"}]}
 ```
 
 #### *draft_start* note
@@ -218,11 +177,7 @@ Data Example:
 Data Example:
 
 ```json
-{
-"feature":"match_info",
-“event”:”draft_start”,
-“data”:null
-}
+{"events":[{"name":"draft_start","data":""}]}
 ```
 
 #### *draft_end* note
@@ -230,10 +185,5 @@ Data Example:
 Data Example:
 
 ```json
-{
-"feature":"match_info",
-“event”:”draft_end”,
-“data”:null
-}
-
+{"events":[{"name":"draft_end","data":""}]}
 ```
