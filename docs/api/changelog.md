@@ -8,8 +8,11 @@ Follow this entry for ongoing updates and changes to the project or tools:
 
 ## Version 0.149 (In progress)
 
-The full documentation for this version is not ready yet.
-
+* [MTGA](overwolf-games-events-mtga)
+  * New updates and events under:
+    * match_info
+    * game_info
+    
 ## Version 0.148 (Jun. 2020)
 
 * "DPI-aware" feature for [native](../topics/windows-types#native-window) windows:  
