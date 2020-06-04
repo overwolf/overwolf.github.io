@@ -102,7 +102,7 @@ Possible agent values:
 * "Gumshoe_PC_C" = Cypher
 * "Sarge_PC_C" = Brimstone
 * "Breach_PC_C" = Breach
-
+* "Vampire_PC_C" = Reyna
 
 ## `match_info`
 
@@ -211,6 +211,7 @@ Possible Scene values:
 * "Triad" - Bind map
 * "Duality" - Haven map
 * "Bonsai" - Split map
+* "Ascent" - Ascent map
 * "Range" - Practice Range map
 * "CharacterSelectPersistentLevel" - Character Selection
 
