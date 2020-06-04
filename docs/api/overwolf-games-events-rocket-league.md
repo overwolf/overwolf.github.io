@@ -145,7 +145,7 @@ ended        | matchState  | true / false              |                       |
 matchType    | matchInfo   | Current match type            |See [notes](#matchType-note)|    86.0  |
 ranked       | matchInfo   | True if the match is ranked, false otherwise "True/False" |     |  86.0  |
 maxPlayers   | matchInfo   | Maximum number of players allowed in this match |See [notes](#maxPlayers-note)|    86.0       |
-gameMode (Not Available)| matchInfo   | Game mode of the match |See [notes](#gameMode-note)|    86.0       |
+gameMode     | matchInfo   | Game mode of the match |See [notes](#gameMode-note)|    86.0       |
 gameState    | matchInfo   | Current state of the game|See [notes](#gameState-note)|    86.0       |
 gameType     | matchInfo   | Current game type           |                       |    86.0       |
 
