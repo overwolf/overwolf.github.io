@@ -30,7 +30,7 @@ Please read all the info about video capture usage and options on our [video cap
 
 * [overwolf.media.replays.onCaptureError](#oncaptureerror)
 * [overwolf.media.replays.onCaptureStopped](#oncapturestopped)
-* [overwolf.media.replays.onCapureWarning](#oncapurewarning)
+* [overwolf.media.replays.onCaptureWarning](#oncapturewarning)
 * [overwolf.media.replays.onReplayServicesStarted](#onreplayservicesstarted)
 * [overwolf.media.replays.onHighlightsCaptured](#onhighlightscaptured)
 
@@ -413,7 +413,7 @@ overwolf.media.replays.getHighlightsFeatures(21216, JSON.stringify(console.log))
 
 > Fired when replay service is stopped.
 
-## onCapureWarning
+## onCaptureWarning
 
 #### Version added: 0.117
 

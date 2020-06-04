@@ -56,7 +56,7 @@ Below, you can find a description of both capture methods: manual capture and au
 Basic usage flow:
 
 1. **Register to relevant capture events for your app.**
-   * The [available events](../api/overwolf-media-replays#events-reference) are: onCaptureError, onCaptureStopped, onCapureWarning, onReplayServicesStarted.
+   * The [available events](../api/overwolf-media-replays#events-reference) are: onCaptureError, onCaptureStopped, onCaptureWarning, onReplayServicesStarted.
 
 2. **Call [overwolf.media.replays.turnOn()](../api/overwolf-media-replays#turnonparameters-callback)** with the auto-highlights feature disabled:
    * Set the **enable** field of the [overwolf.media.replays.ReplayHighlightsSetting](../api/overwolf-media-replays#replayhighlightssetting-object) Object to **false**.
@@ -82,7 +82,7 @@ Basic usage flow:
 Basic usage flow:
 
 1. **Register to relevant capture events for your app.**  
-   * The [available events](../api/overwolf-media-replays#events-reference) are: onCaptureError, onCaptureStopped, onCapureWarning, onReplayServicesStarted, onHighlightsCaptured.
+   * The [available events](../api/overwolf-media-replays#events-reference) are: onCaptureError, onCaptureStopped, onCaptureWarning, onReplayServicesStarted, onHighlightsCaptured.
 
 2. **Call [overwolf.media.replays.turnOn()](../api/overwolf-media-replays#turnonparameters-callback)** with the auto-highlights feature enabled:
    * Set the **enable** field of the [overwolf.media.replays.ReplayHighlightsSetting](../api/overwolf-media-replays#replayhighlightssetting-object) Object to **true**.  
