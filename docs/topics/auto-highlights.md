@@ -31,6 +31,4 @@ Below, you can find a list of games that supports highlights.
 * HotS
 * Valorant
 
-Soon, we will add for each game, which highlights it supports.
-
-
+Soon, we will add the list of supported auto-highlights for each game.
