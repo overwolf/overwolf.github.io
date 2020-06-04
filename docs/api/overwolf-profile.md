@@ -79,6 +79,8 @@ The term `userId` might be a bit misleading: it's not a unique identifier for an
 The userId is unique for each OW client installation on the current machine, so it's more like "clientID".  
 We use it to identify not logged-in users on the machine.
 
+On a Windows computer, with multiple users - there might be multiple `userIds` but a single `MachineId`;
+
 To uniquely identify logged-in users, you should use the `username` (this field will be null for not logged-in user).  
 
 Each user has to pick a unique OW username upon registering. Even If he logged in through Google, Discord, etc. - OW automatically generate a unique user name for him.  
