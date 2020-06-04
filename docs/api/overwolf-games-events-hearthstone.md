@@ -233,28 +233,26 @@ opponent | playersInfo   |  See [notes](#opponent-note) |     |   123.0 |
 #### *localPlayer* note
 
 * "<b>name</b>" – name of local player
-* "<b>standardRank</b>" – rank of the player in Constructed Standard mode (int)
+* "<b>standardRank</b>" – rank of the player in Constructed Standard mode (string)
 * "<b>standardLegendRank</b>" – rank of the player in Constructed Standard mode, once he reached Legend (int)
 * "<b>wildRank</b>" – rank of the player in Constructed Wild mode (int)
 * "<b>wildLegendRank</b>"– rank of the player in Constructed Wild mode, once he reached Legend (int)
 * "<b>cardBackId</b>" – ID of the card back used in the current game (int)
 * "<b>cardId</b>" – ID of the card representing the hero (string)
 
-`{"playersInfo":{"localPlayer":"{"name":"ччггтуычб","standardRank":25,"standardLegendRank":0,
-"wildRank":25,"wildLegendRank":0,"cardBackId":0,"cardId":"HERO_02"}"}`
+`{"playersInfo":{"localPlayer":"{"name":"Overwolf","standardRank":"Bronze 10","standardLegendRank":0,"wildRank":0,"wildLegendRank":0,"cardBackId":157,"cardId":"HERO_05"}"}`
 
 #### *opponent* note
 
 * "<b>name</b>" – name of the opponent
-* "<b>standardRank</b>" – The rank of the player in Constructed, in Standard mode (int)
+* "<b>standardRank</b>" – The rank of the player in Constructed, in Standard mode (string)
 * "<b>standardLegendRank</b>"– The rank of the player in Constructed, in Standard mode, once he reached Legend (int)
 * "<b>wildRank</b>" – The rank of the player in Constructed, in Wild mode (int)
 * "<b>wildLegendRank</b> – The rank of the player in Constructed, in Wild mode, once he reached Legend (int)
 * "<b>cardBackId</b>" – the ID of the card back used in the current game (int)
 * "<b>cardId</b>" – the ID of the card representing the hero (string)
 
-`{"playersInfo":{"opponent":"{"name":"ПсевдоРыцарь","standardRank":25,"standardLegendRank":0,
-"wildRank":25,"wildLegendRank":0,"cardBackId":0,"cardId":"HERO_02"}"}`
+`{"playersInfo":{"opponent":"{"name":"furhyax","standardRank":"Bronze 10","standardLegendRank":0,"wildRank":0,"wildLegendRank":0,"cardBackId":172,"cardId":"HERO_09a"}"}`
 
 ### Events
 
