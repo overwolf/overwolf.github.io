@@ -208,8 +208,8 @@ Data Example:
 Possible Scene values:
 
 * "MainMenu" - Main menu
-* "Triad" - Bind map
-* "Duality" - Haven map
+* "Triad" - Haven map
+* "Duality" - Bind map
 * "Bonsai" - Split map
 * "Ascent" - Ascent map
 * "Range" - Practice Range map
