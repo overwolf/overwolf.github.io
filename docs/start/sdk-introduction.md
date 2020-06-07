@@ -8,7 +8,7 @@ Overwolf's SDK unlocks in-game app development, and the documents listed in the 
 
 ## Whitelist as a developer
 
-Only whitelisted Overwolf developer accounts can load or install apps that not available on the Overwolf store, including unreleased beta versions. If you are not whitelisted you will not be able to run or install such apps, which means testing your work in progress will be hard. Therefore, start by [reaching out](mailto:developers@overwolf.com) and getting whitelisted.
+Only whitelisted Overwolf developer accounts can load or install apps that not available on the Overwolf store, including unreleased beta versions. If you are not whitelisted you will not be able to run or install such apps, which means testing your work in progress will be hard. Therefore, start by [submitting your app proposal](https://overwolf.github.io/docs/start/submit-app-proposal#legal) in order to get whitelisted.
 
 ## App architecture
 
