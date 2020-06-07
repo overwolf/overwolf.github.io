@@ -136,6 +136,10 @@ Parameter | Type                  | Description                                 
 replayType| [ReplayType](#replaytype-enum) enum       | The type of replay to get state for                 |
 callback  | function              | A callback function which will be called with the status of the request |
 
+:::warning
+This function is deprecated. Instead, please use [overwolf.media.replays.getState()](#getstatecallback).
+:::
+
 #### Callback argument: Success
 
 A callback function which will be called with the status of the request
@@ -156,6 +160,7 @@ Parameter | Type                  | Description                                 
 --------- | ----------------------| ----------------------------------------------------------------------- |
 callback  | function              | A callback function which will be called with the status of the request |
 
+Note that you get the state only from the window that turned the capturing on.
 
 ## capture(replayType, pastDuration, futureDuration, captureFinishedCallback, callback)
 #### Version added: 0.78
