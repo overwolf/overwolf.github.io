@@ -86,3 +86,26 @@ Sometimes it’s useful to see timestamps when you are debugging.
 To enable this, go to the console settings (top right wheel), and select your preferred timestamps preferences:
 
 ![alt-text](assets/dev-tools-10.png)
+
+## Use the remote debugger
+
+In addition to the developer tools debugger, you can use the regular chrome debugger.  
+
+The remote debugger has two advantages:
+
+1. Easier to use in a secondary monitor.  
+   In some cases, like debug in-game windows, it's more convenient to open the debugger on a different screen, and not on as an in-game Overlay that can hide the UI.
+2. Eliminate overwolf-debugger related issues.  
+  In some hard to crack cases, it might help to open another debugger that might display the data differently.
+
+  #### How to use the remote debugger
+
+  1. Make sure your OW app is running.
+  2. Open a new chrome browser tab.
+  3. Browse to this URL: http://localhost:54284
+  
+You can see all the list of open OW apps and windows.  In this example, you can see a couple of Facecheck app's windows, along with our rocket league sample app, ads window, and more:
+
+![alt-text](assets/dev-tools-11.png)
+
+Clicking on a link will open a remote debugger tab.
