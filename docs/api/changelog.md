@@ -8,6 +8,12 @@ Follow this entry for ongoing updates and changes to the project or tools:
 
 ## Version 0.149 (In progress)
 
+* overwolf.windows.changeSize() accept now a new param: **auto_dpi_resize**. 
+  Boolean param Whether to automatically account for DPI scale when resizing.
+* **LaunchWithOverwolf** - new manifest flag, enable launching app together with the OW client.
+* New API: **overwolf.settings.setExtensionSettings(extensionSettings, callback)**, overwolf.settings.getExtensionSettings().
+  Currently only supports enabling/disabling auto_launch_with_overwolf.  
+  Apps launched this way will have origin "overwolfstartlaunchevent"
 * [MTGA](overwolf-games-events-mtga)
   * New updates and events under:
     * match_info
