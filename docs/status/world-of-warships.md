@@ -17,6 +17,6 @@ sidebar_label: World of Warships
 <script src="/js/games_metadata.js"></script>
 
 <div id="gameEventsStatus">
-  <script> const GameID = 10746; const DocsLink = "../api/overwolf-games-events-wow";</script>
+  <script> const GameID = 10746; const DocsLink = "../api/overwolf-games-events-wows";</script>
   <script type="text/jsx" src="/jsx/specificGameEventsStatus.jsx"></script>
 </div>
