@@ -46,6 +46,9 @@ Apr 01, 10:20 AM GMT+3
 Dota 2
 ------
 
+**Investigating** - Dota 2 events are down.  
+Jun 10, 09:19 AM GMT+3
+
 **Resolved** - This incident has been resolved.  
 Mar 03, 11:50 AM GMT+3
 
