@@ -46,6 +46,9 @@ Apr 01, 10:20 AM GMT+3
 Dota 2
 ------
 
+**Resolved** - This incident has been resolved.  
+Jun 10, 14:00 PM GMT+3
+
 **Investigating** - Dota 2 events are down.  
 Jun 10, 09:19 AM GMT+3
 
@@ -302,6 +305,9 @@ No logs.
 
 Teamfight Tactics
 -----------------
+
+**Investigating** - TFT events are currently down, we are working on a fix.  
+Jun 10, 11:23 AM GMT+3
 
 **Resolved** - This incident has been resolved.  
 Apr 30, 09:28 PM GMT+3
