@@ -8,18 +8,27 @@ Follow this entry for ongoing updates and changes to the project or tools:
 
 ## Version 0.149 (In progress)
 
+Note that some of the links are not working, as the work on the docs is still in progress.
+
+#### API
+
 * overwolf.windows.changeSize() accept now a new param: **auto_dpi_resize**. 
   Boolean param Whether to automatically account for DPI scale when resizing.
 * **LaunchWithOverwolf** - new manifest flag, enable launching app together with the OW client.
 * New API: **overwolf.settings.setExtensionSettings(extensionSettings, callback)**, overwolf.settings.getExtensionSettings().
   Currently only supports enabling/disabling auto_launch_with_overwolf.  
   Apps launched this way will have origin "overwolfstartlaunchevent"
+
+#### Game events
+
 * [MTGA](overwolf-games-events-mtga)
   * New updates and events under:
     * match_info
     * game_info
     
 ## Version 0.148 (Jun. 2020)
+
+#### API
 
 * "DPI-aware" feature for [native](../topics/windows-types#native-window) windows:  
   It means that when you move the native window between monitors with different DPIs for example from 100 DPI to 125 DPI, the window will automatically resize according to the new DPI.  
@@ -31,6 +40,8 @@ Follow this entry for ongoing updates and changes to the project or tools:
 ## Version 0.147 (May. 2020)
 
 Note that iteration 146 and 147 were combined into a single iteration.  
+
+#### API
 
 * New feature: [overwolf.window.flash()](overwolf-windows#flashwindowid-behaviorcallback)  
   Flashes a window that is not in focus (for example, minimized to taskbar).  
@@ -52,6 +63,8 @@ Note that iteration 146 and 147 were combined into a single iteration.
 * Updates for the streaming and replay APIs: added a [quota object](#overwolf-streaming#streamquotaparams-object):  
   Allow setting max media folder size in GB, and exclude folders that are not part of this quota.
 * Video recording engine updated, and now it supports Vulkan capturing!
+
+#### Game events
 
 * [PUBG Lite](overwolf-games-events-pubglite)
   * New event:
@@ -75,11 +88,15 @@ Note that iteration 146 and 147 were combined into a single iteration.
 
 Note that iteration 144 and 145 were combined into a single iteration.
 
+#### API
+
 * New API: [overwolf.campaigns]() for the new LoL "Refer a friend" feature. **Note: the docs for this API will be released soon**
 * Cookie Sync - Cookie Syncing was updated to support Microsoft Edge (non-dev version) and the new Firefox schema.
 * Security and bug Fixes.
 
 ## Version 0.143 (Mar. 2020)
+
+#### Game events
 
 * The Vulkan Graphics API is now supported.
 * From now, whenever you try to use an obsolete API, the dev console will print a warning.  
@@ -98,6 +115,9 @@ Note that iteration 144 and 145 were combined into a single iteration.
 * Allow overriding recording indication type and position in API:  
   Now when calling [overwolf.streaming.start()](overwolf-streaming#startsettings-callback), [indication_position](overwolf-streaming#indication_position-enum) and [indication_type](overwolf-streaming#indication_type-enum) can be set under video settings. (Until now, you could do that only from the OW client UI).
 * HTTPS - "Referrers", "Origins", and "AncestorsOrigin" should now all be using HTTPS instead of HTTP.
+
+#### Game events
+
 * [PUBG Lite game events](overwolf-games-events-pubg-lite)
   * New supported game
 * [Legends of Runeterra game events](overwolf-games-events-lor)
@@ -110,8 +130,9 @@ Note that iteration 144 and 145 were combined into a single iteration.
     * mutator_settings
     * arena
 
-
 ## Version 0.142 (Feb. 2020)
+
+#### API
 
 * New API - [overwolf.settings.hotkeys](overwolf-settings-hotkey).  
   Returns an object with hotkeys methods and events.
@@ -130,6 +151,8 @@ Note that iteration 144 and 145 were combined into a single iteration.
   * Clear all extension windows proprieties from setting.
   * Clear localstorage.
 * Enable Drag & drop To Overwolf app window.
+
+#### Game events
 
 * [Hearthstone game events](overwolf-games-events-hearthstone#docsNav)
   * New info updates:
