@@ -90,12 +90,17 @@ Listen to the [overwolf.settings.hotkeys.onChanged](../api/overwolf-settings-hot
 
 ## Reassign Hotkeys
 
-It is not possible to reassign hotkeys directly from apps, only through the Overwolf client settings page.  
-What you can do is place a direct link to the relevant settings page using `href="overwolf://settings/hotkeys#hotkey_name_in_manifest`.  
+It is not possible to reassign hotkeys directly from apps, only through the Overwolf client settings page.
 
-:::note
-It's possible to even use left or right arrows for hotkeys. To do so, you should use the code `Left` or `Right` in your manifest.json.
-:::
+What you can do is place a direct link to the relevant settings page using:
+
+ `overwolf://settings/games-overlay?hotkey=hotkey_name_in_manifest`.
+
+You can even link into the hotkeys of a specific game settings:
+
+`overwolf://settings/games-overlay?hotkey=hotkey_name_in_manifest&gameId=game_id`
+
+> It's possible to even use left or right arrows for hotkeys. To do so, you should use the code `Left` or `Right` in your manifest.json.
 
 ## Pass through 
 

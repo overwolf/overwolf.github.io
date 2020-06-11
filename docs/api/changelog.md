@@ -51,7 +51,7 @@ Note that iteration 146 and 147 were combined into a single iteration.
 * New API: [overwolf.extensions.io](overwolf-extensions-io)  
   No need to use the external I/O plugin anymore for your current extension-related I/O functionalities.  
   Now you can easily create, delete, or update files on your extension's [dedicated storage space](overwolf-extensions-io#storagespace-enum).   
-* Allow apps to request opening the hotkey settings for a specific game. An example:
+* Allow apps to request [opening the hotkey settings](../topics/hotkeys-best-practices#reassign-hotkeys) for a specific game. An example:
   * Current hotkey URL:  
     `overwolf://settings/hotkeys#hotkey_name_in_manifest`.  
   * New hotkey URL:  
