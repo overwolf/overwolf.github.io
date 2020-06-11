@@ -14,16 +14,22 @@ Use this API to view and modify one of the following Overwolf settings propertie
 
 You can also use the following helpful URLs to open the Overwolf settings and hotkey windows:
 
-* `overwolf://settings/`  
+* `overwolf://settings`  
   A clickable link that opens the Overwolf settings window from your app.
 
-* `overwolf://settings/hotkeys`  
-   A clickable link that opens the Overwolf Hotkey settings window from your app.
+* `overwolf://settings/games-overlay`  
+   A clickable link that opens the Overwolf Overlay and Hotkeys settings window from your app.
 
-* `overwolf://settings/hotkeys#<local extension hotkey name>`  
-  A clickable link that opens the Overwolf Hotkey settings window from your app, and then focuses on the stated hotkey.
+* `overwolf://settings/games-overlay?hotkey=hotkey_name_in_manifest`  
+  A clickable link that opens the Overwolf Overlay and Hotkeys settings window from your app, and then focuses on the stated hotkey.
   This should be the same hotkey name as written in the manifest.json.  
+  
   Note that this means you can’t focus on Overwolf’s built-in hotkeys or hotkeys of other apps.
+
+* You can even link into the hotkeys of a specific game settings:  
+  `overwolf://settings/games-overlay?hotkey=hotkey_name_in_manifest&gameId=game_id`
+
+Read more about how to use the [overwolf.settings.hotkeys API](overwolf-settings-hotkeys) in our [Hotkeys best practices guide](../topics/hotkeys-best-practices).
 
 ## Methods Reference
 
