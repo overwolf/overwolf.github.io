@@ -14,8 +14,8 @@ Note that some of the links are not working, as the work on the docs is still in
 
 * overwolf.windows.changeSize() accept now a new param: **auto_dpi_resize**. 
   Boolean param Whether to automatically account for DPI scale when resizing.
-* **LaunchWithOverwolf** - new manifest flag, enable launching app together with the OW client.
-* New API: **overwolf.settings.setExtensionSettings(extensionSettings, callback)**, overwolf.settings.getExtensionSettings().
+* [**LaunchWithOverwolf**](manifest-json#enable-app-auto-launach-with-overwolf) - new manifest flag, enable launching app together with the OW client.
+* New API: [**overwolf.settings.setExtensionSettings(extensionSettings, callback)**](overwolf-settings#setextensionsettingsextensionsettings-callback), overwolf.settings.getExtensionSettings().
   Currently only supports enabling/disabling auto_launch_with_overwolf.  
   Apps launched this way will have origin "overwolfstartlaunchevent"
 

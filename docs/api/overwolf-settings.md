@@ -40,6 +40,8 @@ You can also use the following helpful URLs to open the Overwolf settings and ho
 * [overwolf.settings.setAudioCaptureSettings()](#setaudiocapturesettingsenablesound-enablemicrophone-callback)
 * [overwolf.settings.getFpsSettings()](#getfpssettingscallback)
 * [overwolf.settings.setFpsSettings()](#setfpssettingssettings-callback)
+* [overwolf.settings.setExtensionSettings()](#setextensionsettingsextensionsettings-callback)
+* [overwolf.settings.getExtensionSettings()](#getextensionsettingscallback)
 
 ## Events Reference
 
@@ -336,9 +338,57 @@ A callback function which will be called with the status of the request
 
 Parameter          | Type               | Description                                                              |
 -------------------| -------------------| ------------------------------------------------------------------------ |
-settings           | [fpsSettings](#fpssettings-object) Object |  A callback function which will be called with the status of the request |
+settings           | [fpsSettings](#fpssettings-object) Object |  Container for the FPS settings                   |
 callback           | function           |  A callback function which will be called with the status of the request |
 
+## setExtensionSettings(extensionSettings, callback)
+#### Version added: 0.149
+
+> Sets the extension settings.  
+
+Currently only supports enabling/disabling app auto-launach with Overwolf client.
+
+Parameter          | Type                                                                 | Description                                                              |
+-------------------| ---------------------------------------------------------------------| ------------------------------------------------------------------------ |
+extensionSettings  | [GeneralExtensionSettings ](#generalextensionsettings-object) Object |  Container for the extension  settings                                   |
+callback           | function                                                             |  A callback function which will be called with the status of the request |
+
+#### Callback argument: Success
+
+```json
+{
+    "success": true,
+    "settings": {
+        "auto_launch_with_overwolf": true
+    }
+}
+```
+
+#### Notes
+
+* If you would like to set app auto-launch with OW client, you should add the "Tray" permission to your app's [manifest permissions list](manifest-json#permissions-array)
+* After setting the "auto_launch_with_overwolf", your app should use auto-launch after you start the client (takes ~15 seconds).
+* You can set the same app auto-launch with OW client using the manifest. [Read more about it](manifest-json#enable-app-auto-launch-with-overwolf).
+
+## getExtensionSettings(callback)
+#### Version added: 0.149
+
+> Gets the extension settings.  
+
+Parameter          | Type                                                                 | Description                                                              |
+-------------------| ---------------------------------------------------------------------| ------------------------------------------------------------------------ |
+callback           | function                                                             |  A callback function which will be called with the status of the request |
+
+#### Callback argument: Success
+
+```json
+{
+    "success": true,
+    "settings": {
+        "auto_launch_with_overwolf": true
+    }
+}
+```
 
 ## onFpsSettingsChanged
 

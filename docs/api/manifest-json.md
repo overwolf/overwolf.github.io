@@ -565,8 +565,8 @@ A list of events causing the app to launch. It's enough that one of the events o
 
 | Name              | Type   | Description                                                                             | Since |
 |-------------------| -------|-----------------------------------------------------------------------------------------|------ |
-| event             | enum   | The type name of the event. </br>**["GameLaunch", "AllGamesLaunch"]**                   | 0.82  |
-| event_data        |  [launch_event](#launch-event-object) object | The list of game class IDs for which the app will launch.    | 0.82  |
+| event             | enum   | The type name of the event. </br>**["GameLaunch", "AllGamesLaunch", "LaunchWithOverwolf"]**                   | 0.82  |
+| event_data        |  [launch_event](#launch_event-object) object | The list of game class IDs for which the app will launch.    | 0.82  |
 | tracked           | bool   | Launch App when gameid is detected (even when not injected).                            | 0.132  
 | start_minimized   | bool   | The app’s main window will start minimized.                                             | 0.82  |
 | include_launchers | bool   | The app will be launched when game launcher is detected.                                | 0.103 |
@@ -574,16 +574,39 @@ A list of events causing the app to launch. It's enough that one of the events o
 Code Example:
 
 ```json
-"launch_events": [{
-    "event": "GameLaunch",
-    "tracked": false,
-    "event_data": {
-        "game_ids": [1136],
-        "wait_for_stable_framerate": 30
-    },
-    "start_minimized": true
-}]
+"launch_events": [
+    {
+        "event": "GameLaunch",
+        "tracked": false,
+        "event_data": {
+            "game_ids": [1136],
+            "wait_for_stable_framerate": 30
+        },
+        "start_minimized": true
+    }
+]
 ```
+
+#### Enable app auto-launch with Overwolf
+
+Along with the option to launch your app when a specific game is started (or launch with all games), you can launch your app when the OW client launches: just set the event name to "LaunchWithOverwolf" like in the below example. (other options are "GameLaunch" and "AllGamesLaunch")
+
+Notes:
+
+* You should add the "Tray" permission to your app's [manifest permissions list](#permissions-array).
+* Your app should use auto-launch after you start the client (takes ~15 seconds).
+* In addition, you can set the auto-launch options using the [overwolf.settings.setExtensionSettings()](overwolf-settings#setextensionsettingsextensionsettings-callback) API.
+
+Code example:
+
+```json
+"launch_events": [
+    {
+        "event": "LaunchWithOverwolf" // The event is fired when Overwolf starts.
+    }
+]
+```
+
 ## launch_event object
 Contains a list of game class IDs for which the app will launch.
 
