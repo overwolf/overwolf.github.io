@@ -266,8 +266,8 @@ callback             | function                                     | Will be ca
 Parameter           | Type       | Description                                                                                  |
 --------------------| -----------| ---------------------------------------------------------------------------------------------|
 windowId	          | string     | The id or name of the window to resize                                                       |
-width	              | int        | The edge or corner from which to resize the window                                           |
-height	    	      | int        | The real content of the window (for the ingame drawing resizing white area)                  |
+width	              | int        | The new width to resize the window to                                                        |
+height	    	      | int        | The new height to resize the window to                                                       |
 callback (Optional) | function   | A callback which is called when the size change is completed with the status of the request  |
 
 #### Callback argument: Success
