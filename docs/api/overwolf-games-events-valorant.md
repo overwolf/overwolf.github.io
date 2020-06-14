@@ -115,6 +115,8 @@ score        | match_info  | Amount of rounds won/lost.|See [notes](#score-note)
 round_phase  | match_info  | Current state of the round.|See [notes](#round_phase-note)|   149.0       |
 team         | match_info  | Attack / Defense.      |See [notes](#team-note)|   149.0       |
 match_outcome| match_info  | Victory / Defeat.      |See [notes](#match_outcome-note)|   149.0       |
+round_report | match_info  | * Total Damage<br>* Total number of bullets hit.<br>* Number of bullets hit on head.<br>* Number of hit headshots that killed. |See [notes](#round_report-note)|   150.0       |
+
 
 
 #### *round_number* note
@@ -161,6 +163,16 @@ Data Example:
 
 ```json
 {"info":{"match_info":{"match_outcome":"victory"}},"feature":"match_info"}
+```
+
+#### *round_report* note
+
+This data is <b>per round</b>.
+
+Data Example:
+
+```json
+{"feature":"match_info","category":"match_info","key":"round_report","value":"{"damage":331,"hit":6,"headshot":0,"final_headshot":1}"}
 ```
 
 ### Events
@@ -240,6 +252,8 @@ key          | Category    | Values                    | Notes                 |
 ------------ | ------------| ------------------------- | --------------------- | ------------- | 
 kills         | kill        | Amount of kills performed by the local player. |See [notes](#kill-note)|   148.0       |
 assists       | kill        | Amount of assists performed by the local player. |See [notes](#assist-note)|   148.0  |
+headshots     | kill   | Amount of headshots performed by the local player. |See [notes](#headshots-note)|   150.0  |
+
 
 #### *kill* note
 
@@ -259,12 +273,22 @@ Data Example:
 {"info":{"kill":{"assists":1}},"feature":"kill"}
 ```
 
+#### *headshots* note
+
+Data Example:
+
+```json
+{"feature":"kill","category":"kill","key":"headshots","value":1}
+```
+
 ### Events
 
 Event       | Event Data   | Fired When    | Notes              | Since GEP Ver. |
 ------------| -------------| --------------| ------------------ | --------------|
 kill        | Total kills  | Kill is performed. | See [notes](#kill-note) | 148.0  |
 assist      | Total assists| Assist is performed. | See [notes](#assist-note) | 148.0  |
+headshot    | Total headshots| Headshot is performed. | See [notes](#headshot-note) | 150.0  |
+
 
 #### *kill* note
 
@@ -280,6 +304,14 @@ Data Example:
 
 ```json
 {"events":[{"name":"assist","data":1}]}
+```
+
+#### *headshot* note
+
+Data Example:
+
+```json
+{"events":[{"name":"headshot","data":"1"}]}
 ```
 
 ## `death`
