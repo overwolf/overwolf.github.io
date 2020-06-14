@@ -365,6 +365,7 @@ callback           | function                                                   
 * If you would like to set app auto-launch with OW client, you should add the "Tray" permission to your app's [manifest permissions list](manifest-json#permissions-array)
 * After setting the "auto_launch_with_overwolf", your app should use auto-launch after you start the client (takes ~15 seconds).
 * You can set the same app auto-launch with OW client using the manifest. [Read more about it](manifest-json#enable-app-auto-launch-with-overwolf).
+* Apps launched this way will have [origin](overwolf-extensions#the-origin-string) "overwolfstartlaunchevent".
 
 ## getExtensionSettings(callback)
 #### Version added: 0.149

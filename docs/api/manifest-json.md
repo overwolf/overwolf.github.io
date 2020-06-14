@@ -596,6 +596,7 @@ Notes:
 * You should add the "Tray" permission to your app's [manifest permissions list](#permissions-array).
 * Your app should use auto-launch after you start the client (takes ~15 seconds).
 * In addition, you can set the auto-launch options using the [overwolf.settings.setExtensionSettings()](overwolf-settings#setextensionsettingsextensionsettings-callback) API.
+* Apps launched this way will have [origin](overwolf-extensions#the-origin-string) "overwolfstartlaunchevent".
 
 Code example:
 

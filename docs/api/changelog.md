@@ -12,12 +12,13 @@ Note that some of the links are not working, as the work on the docs is still in
 
 #### API
 
-* overwolf.windows.changeSize() accept now a new param: **auto_dpi_resize**. 
-  Boolean param Whether to automatically account for DPI scale when resizing.
-* [**LaunchWithOverwolf**](manifest-json#enable-app-auto-launach-with-overwolf) - new manifest flag, enable launching app together with the OW client.
-* New API: [**overwolf.settings.setExtensionSettings(extensionSettings, callback)**](overwolf-settings#setextensionsettingsextensionsettings-callback), overwolf.settings.getExtensionSettings().
-  Currently only supports enabling/disabling auto_launch_with_overwolf.  
-  Apps launched this way will have origin "overwolfstartlaunchevent"
+* [overwolf.windows.changeSize()](overwolf-windows#changesizechangesizeparams-callback).  
+  Accept now a new boolean param whether to automatically account for DPI scale when resizing ("auto_dpi_resize").
+* ["LaunchWithOverwolf"](manifest-json#enable-app-auto-launch-with-overwolf) - new manifest flag, enable launching app together with the OW client.
+* New API to support enabling/disabling auto-launch with the Overwolf client:  
+  (Apps launched this way will have [origin](overwolf-extensions#the-origin-string) "overwolfstartlaunchevent") 
+  * [overwolf.settings.setExtensionSettings(extensionSettings, callback)](overwolf-settings#setextensionsettingsextensionsettings-callback)
+  * [overwolf.settings.getExtensionSettings](overwolf-settings#getextensionsettingscallback).
 
 #### Game events
 

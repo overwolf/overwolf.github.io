@@ -22,6 +22,7 @@ Please make sure to read our guide on [how to use Overwolf windows](../topics/us
 * [overwolf.windows.dragResize()](#dragresizewindowid-edge-contentrect)
 * [overwolf.windows.dragResize()](#dragresizewindowid-edge-rect-callback)
 * [overwolf.windows.changeSize()](#changesizewindowid-width-height-callback)
+* [overwolf.windows.changeSize()](#changesizechangesizeparams-callback)
 * [overwolf.windows.changePosition()](#changepositionwindowid-left-top-callback)
 * [overwolf.windows.close()](#closewindowid-callback)
 * [overwolf.windows.minimize()](#minimizewindowid-callback)
@@ -273,7 +274,39 @@ callback (Optional) | function   | A callback which is called when the size chan
 #### Callback argument: Success
 
 ```json
-{ "status": "success" }
+{ "success": true }
+```
+
+## changeSize(changeSizeParams, callback)
+#### Version added: 0.149
+
+> Changes the window size to the new width and height, in pixels, including DPI scale when resizing.
+
+Note: works for all the [window types](../topics/windows-types).
+
+Parameter               | Type       | Description                                                                                  |
+------------------------| -----------| ---------------------------------------------------------------------------------------------|
+ChangeWindowSizeParams  | [ChangeWindowSizeParams](#changewindowsizeparams-object) Object | Container for the window settings        |
+callback                | function   | A callback which is called when the size change is completed with the status of the request  |
+
+#### Usage example
+
+```js
+let sizeSettings = {
+  "window_id":"Window_Extension_nhmkaollkcmjiecdnnjmgfifjgkfegkljnjjbipp",
+  "width":1000,
+  "height":1000,
+  "auto_dpi_resize":true
+};
+
+overwolf.windows.changeSize(sizeSettings ,console.log);
+
+```
+
+#### Callback argument: Success
+
+```json
+{ "success": true }
 ```
 
 ## changePosition(windowId, left, top, callback)
@@ -1052,5 +1085,26 @@ monitor         |  [overwolf.utils.Display](overwolf-utils#display-object) objec
   "id": "Window_Extension_anoahjhemlbnmhkljlgbmnfflpnhgjpmfjnhdfoe_desktop",
   "name": "desktop",
   "monitor": {"name": "DELL P2319H", "id": "DISPLAY4", "x": 0, "y": 0, "width": 1920, "height": 1080, "is_primary": true}
+}
+```
+
+## ChangeWindowSizeParams Object
+#### Version added: 0.149
+
+> Container for the window settings.
+
+Parameter       | Type          | Description             |
+----------------| --------------| ----------------------- |
+window_id       | string        |                         |
+width           | int           |                         |
+height          | int           |                         |
+auto_dpi_resize | boolean       |                         |
+
+```json
+{
+  "window_id":"Window_Extension_nhmkaollkcmjiecdnnjmgfifjgkfegkljnjjbipp",
+  "width":1000,
+  "height":1000,
+  "auto_dpi_resize":true
 }
 ```

@@ -373,6 +373,7 @@ commandline      | Launched from the command line using overwolf.exe -launchapp 
 tray             | Launched from the tray                                                       |
 startup          | Launched upon startup (like remote configurations)                           |
 after-install    | Auto-launched after installation                                             |
+overwolfstartlaunchevent | Auto-launched with the client launch (when [app auto-launch with Overwolf](manifest-json#enable-app-auto-launch-with-overwolf) is enabled) |
 
 :::tip
 if you want to get origin information without registering events, you can run the `window.location.href` command.
