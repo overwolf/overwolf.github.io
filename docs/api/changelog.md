@@ -29,7 +29,6 @@ Note that some of the links are not working, as the work on the docs is still in
 * [VALORANT](overwolf-games-events-valorant)
   * New updates and events under:
     * match_info
-    * game_info
     * kill
     
 ## Version 0.148 (Jun. 2020)
