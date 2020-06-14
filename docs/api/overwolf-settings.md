@@ -61,6 +61,10 @@ Read more about how to use the [overwolf.settings.hotkeys API](overwolf-settings
 * [overwolf.settings.enums.ResolutionSettings](#resolutionsettings-enum) enum
 * [overwolf.settings.enums.eIndicationPosition](#eindicationposition-enum) enum
 * [FpsSettings](#fpssettings-object) Object
+* [GetFpsSettingsResult](#getfpssettingsresult-object) Object
+* [GeneralExtensionSettings](#generalextensionsettings-object) Object
+* [GetExtensionSettingsResult](#getextensionsettingsresult-object) Object
+
 
 ## getHotKey(featureId, callback)
 #### Version added: 0.78
@@ -316,26 +320,7 @@ callback           | function                                                   
 
 Parameter          | Type               | Description                                                              |
 -------------------| -------------------| ------------------------------------------------------------------------ |
-callback           | function           |  A callback function which will be called with the status of the request |
-
-#### Callback argument: Success
-
-A callback function which will be called with the status of the request
-
-```json
-{
-    "status": "success",
-    "settings": {
-        "offset": {
-            "x": 0,
-            "y": 0
-        },
-        "scale": 1,
-        "enabled": false,
-        "position": 0
-    }
-}
-```
+callback           | ([Result: GetFpsSettingsResult](#getfpssettingsresult-object)) => void  |  A callback function which will be called with the status of the request |
 
 ## setFpsSettings(settings, callback)
 #### Version added: 0.89
@@ -344,8 +329,16 @@ A callback function which will be called with the status of the request
 
 Parameter          | Type               | Description                                                              |
 -------------------| -------------------| ------------------------------------------------------------------------ |
-settings           | [fpsSettings](#fpssettings-object) Object |  Container for the FPS settings                   |
+settings           | [FpsSettings](#fpssettings-object) Object |  Container for the FPS settings                   |
 callback           | function           |  A callback function which will be called with the status of the request |
+
+#### Callback argument: Success
+
+```json
+{
+    "success": true,
+}
+```
 
 ## setExtensionSettings(extensionSettings, callback)
 #### Version added: 0.149
@@ -356,7 +349,7 @@ Currently only supports enabling/disabling app auto-launach with Overwolf client
 
 Parameter          | Type                                                                 | Description                                                              |
 -------------------| ---------------------------------------------------------------------| ------------------------------------------------------------------------ |
-extensionSettings  | [GeneralExtensionSettings ](#generalextensionsettings-object) Object |  Container for the extension  settings                                   |
+extensionSettings  | [GeneralExtensionSettings](#generalextensionsettings-object) Object  |  Container for the extension settings                                   |
 callback           | function                                                             |  A callback function which will be called with the status of the request |
 
 #### Callback argument: Success
@@ -364,9 +357,6 @@ callback           | function                                                   
 ```json
 {
     "success": true,
-    "settings": {
-        "auto_launch_with_overwolf": true
-    }
 }
 ```
 
@@ -383,18 +373,8 @@ callback           | function                                                   
 
 Parameter          | Type                                                                 | Description                                                              |
 -------------------| ---------------------------------------------------------------------| ------------------------------------------------------------------------ |
-callback           | function                                                             |  A callback function which will be called with the status of the request |
+callback           | ([Result: GetExtensionSettingsResult](#getextensionsettingsresult-object)) => void  |  A callback function which will be called with the status of the request |
 
-#### Callback argument: Success
-
-```json
-{
-    "success": true,
-    "settings": {
-        "auto_launch_with_overwolf": true
-    }
-}
-```
 
 ## onFpsSettingsChanged
 
@@ -479,6 +459,67 @@ position  | [eIndicationPosition](#eindicationposition-enum) enum      | The pos
         "scale": 1,
         "enabled": false,
         "position": 0
+    }
+}
+```
+
+## GeneralExtensionSettings Object
+#### Version added: 0.149
+
+> Container for the extension settings.
+
+Parameter                   | Type               | Description                                                               |
+--------------------------- | -------------------| ------------------------------------------------------------------------- |
+auto_launch_with_overwolf   | bool               | set your app to auto-launch when the OW client starts (takes ~15 seconds) |
+
+```json
+{
+    "settings": {
+        "auto_launch_with_overwolf": true
+    }
+}
+```
+
+## GetFpsSettingsResult Object
+
+Parameter          | Type     | Description                                 |
+-------------------| ---------| ------------------------------------------- |
+*success*          | boolean  | inherited from the "Result" Object          |
+*error*            | string   | inherited from the "Result" Object          |
+settings           | [FpsSettings](#fpssettings-object) Object   | container for the FPS object |
+
+#### Example data: Success
+
+```json
+{
+    "status": "success",
+    "settings": {
+        "offset": {
+            "x": 0,
+            "y": 0
+        },
+        "scale": 1,
+        "enabled": false,
+        "position": 0
+    }
+}
+```
+
+## GetExtensionSettingsResult Object
+
+Parameter          | Type     | Description                                 |
+-------------------| ---------| ------------------------------------------- |
+*success*          | boolean  | inherited from the "Result" Object          |
+*error*            | string   | inherited from the "Result" Object          |
+settings           | [GeneralExtensionSettings](#generalextensionsettings-object) Object   | Container for the extension settings |
+
+#### Example data: Success
+
+```json
+{
+    "success": true,
+    "settings": {
+        "auto_launch_with_overwolf": true
     }
 }
 ```
