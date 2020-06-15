@@ -292,7 +292,7 @@ Data Example:
 
 key          | Category    | Values                    | Notes                 | Since GEP Ver. |
 ------------ | ------------| ------------------------- | --------------------- | -------------  | 
-death        | death       | Total amount of deaths.   |See [notes](#death-note)|   151.0       | 
+deaths       | death       | Total amount of deaths.   |See [notes](#death-note)|   151.0       | 
 
 #### *death* note
 
