@@ -41,7 +41,6 @@ Data Example:
 
 key          | Category    | Values                    | Notes                 | Since GEP Ver. |
 ------------ | ------------| ------------------------- | --------------------- | -------------  | 
-detailed_logs_enabled | game_info   | True / False | See [notes](#detailed_logs_enabled-note) |     138.0      |
 scene | game_info   | Current state (screen) of the game | See [notes](#scene-note) |     150.0      |
 sideboard_cards | game_info   | Cards that are currently held in the sideboard. | See [notes](#sideboard_cards-note) |     150.0      |
 main_deck_cards | game_info   | Cards that are currently in your main deck. | See [notes](#main_deck_cards-note) |     150.0      |
@@ -61,17 +60,6 @@ Data Example:
 
 ```json
 {"feature":"game_info","category":"game_info","key":"scene","value":"home"}
-```
-
-#### *detailed_logs_enabled* note
-
-In order to get events for this game, you need to enable "Detailed Logs" from your account settings in the game.
-At the bottom you will have a checkbox - "Detailed Logs (Plugin Support)". You'll need to check it.
-
-Data Example:
-
-```json
-{"feature":"game_info","category":"game_info","key":"detailed_logs_enabled","value":true}
 ```
 
 #### *sideboard_cards* note
@@ -221,41 +209,8 @@ Data Example:
 
 Event  | Event Data        | Fired When (announcement)                                          | Notes      | Since GEP Ver. |
 -------| ------------------| -------------------------------------------------------------------| ---------- | --------------|
-game_outcome |  victory/defeat   | When the local player wins/loses. |See [notes](#game_outcome)|    139.0      |
-match_outcome |  victory/defeat   | When the local player wins/loses. |See [notes](#match_outcome)|    139.0      |
-match_start | game_format+deck_id   | When match has started + Deck information |See [notes](#match_start)|    139.0      |
 draft_start | null   | When draft has started. |See [notes](#draft_start-note)|    150.0      |
 draft_end | null   | When draft has ended. |See [notes](#draft_end-note)|    150.0      |
-
-#### *game_outcome*
-
-Data Example:
-
-```json
-{"feature":"game_outcome","data":"victory"}
-{"feature":"game_outcome","data":"defeat"}
-```
-
-#### *match_outcome*
-
-This event is relevant for modes that have a best-of-3 format, thus giving the final outcome.
-
-Data Example:
-
-```json
-{"feature":"match_outcome","data":"victory"}
-{"feature":"match_outcome","data":"defeat"}
-```
-
-#### *match_start*
-
-Data Example:
-
-```json
-{"events":[{"name":"match_start","data":"{"game_format":"Constructed_Event_2020","deck_id":"b6ed3e9b-db31-43b5-a903-29694f21f977","main_deck":[{"id":69890,"count":1},{"id":70107,"count":1},{"id":69905,"count":4},{"id":68526,"count":3},
-{"id":68547,"count":3},{"id":70105,"count":3},{"id":70110,"count":3},{"id":70109,"count":4},{"id":69218,"count":3},
-{"id":69876,"count":2},{"id":69880,"count":2},{"id":69894,"count":3},{"id":69877,"count":2},{"id":70017,"count":1},{"id":70054,"count":25}],"sideboard":[]}"}]}
-```
 
 #### *draft_start* note
 
