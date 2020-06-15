@@ -30,7 +30,9 @@ Note that some of the links are not working, as the work on the docs is still in
   * New updates and events under:
     * match_info
     * kill
-    
+* [OVERWATCH](overwolf-games-events-overwatch)
+  * New supported game
+
 ## Version 0.148 (Jun. 2020)
 
 #### API
