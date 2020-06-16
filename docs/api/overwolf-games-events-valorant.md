@@ -116,7 +116,7 @@ round_phase  | match_info  | Current state of the round.|See [notes](#round_phas
 team         | match_info  | Attack / Defense.      |See [notes](#team-note)|   149.0       |
 match_outcome| match_info  | Victory / Defeat.      |See [notes](#match_outcome-note)|   149.0       |
 round_report | match_info  | * Total Damage<br>* Total number of bullets hit.<br>* Number of bullets hit on head.<br>* Number of hit headshots that killed. |See [notes](#round_report-note)|   150.0       |
-
+game_mode    | match_info  | Bomb / Quick Bomb / Custom: True/False. |See [notes](#game_mode-note)|   151.0       |
 
 
 #### *round_number* note
@@ -173,6 +173,14 @@ Data Example:
 
 ```json
 {"feature":"match_info","category":"match_info","key":"round_report","value":"{"damage":331,"hit":6,"headshot":0,"final_headshot":1}"}
+```
+
+#### *game_mode* note
+
+Data Example:
+
+```json
+{"info":{"match_info":{"game_mode":"{"mode":"bomb","custom":true}"}},"feature":"match_info"}
 ```
 
 ### Events
