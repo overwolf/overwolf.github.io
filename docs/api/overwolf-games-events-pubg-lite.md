@@ -26,6 +26,7 @@ Please read the [overwolf.games.events](overwolf-games-events) documentation pag
 * [phase](#phase)
 * [map](#map)
 * [team_feed](#team_feed)
+* [team](#team)
 
 ## Game events status
 
@@ -201,4 +202,37 @@ Data Examples:
 
 ```json
 {"events":[{"name":"team_feed","data":"{"message":"YouPutDownPlayer","attacker":"Shargaas","weapon": "M416","victim":"cerenihat}"}]}
+```
+
+## `team`
+
+### Info Updates
+
+key          | Category    | Values                            | Notes                 | Since GEP Ver. |
+------------ | ------------| --------------------------------- | --------------------- | ------------- |
+team_index   | match_info  | The nicknames of your team members.| See [notes](#team_index-note) |   151.0   |
+
+#### *team_index* note
+
+Data Example:
+
+```json
+        {
+            "feature": "team",
+            "category": "match_info",
+            "key": "team_index",
+            "value": "[{"
+            player ":"
+            Shargaas ","
+            index ":0},{"
+            player ":"
+            emoemre341 ","
+            index ":0},{"
+            player ":"
+            karakorsan41 ","
+            index ":0},{"
+            player ":"
+            lasennediyon ","
+            index ":0}]"
+        }
 ```
