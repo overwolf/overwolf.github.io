@@ -82,6 +82,9 @@ Apr 29, 02:40 PM GMT+3
 Fortnite
 --------
 
+**Investigating** - Fortnite game events are down, we are working on a fix.  
+Jun 17, 10:33 AM GMT+3
+
 **Resolved** - This incident has been resolved.  
 Feb 16, 08:21 PM GMT+3
 
@@ -245,6 +248,9 @@ No logs.
 
 Rainbow 6 Siege
 ---------------
+
+**Investigating** - Rainbow Six game events are down, we are working on a fix.  
+Jun 16, 07:59 PM GMT+3
 
 **Resolved** Rainbow Six "name" and "account_id" info-updates are available again.  
 May 18, 09:18 PM GMT+3
