@@ -272,6 +272,8 @@ objective_kill | Integer   | Objective kill is performed.. |See [notes](#objecti
 
 #### *elimination* note
 
+The event includes the total amount performed in the match.
+
 Data Example:
 
 ```json
@@ -279,6 +281,8 @@ Data Example:
 ```
 
 #### *objective_kill* note
+
+The event includes the total amount performed in the match.
 
 Data Example:
 
@@ -314,6 +318,8 @@ Event  | Event Data        | Fired When (announcement)           | Notes      | 
 death  | Integer           | Death has occurred.                  |See [notes](#death-note)|    150.0      |
 
 #### *death* note
+
+The event includes the total amount performed in the match.
 
 Data Example:
 
