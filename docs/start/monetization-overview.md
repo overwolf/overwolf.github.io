@@ -5,7 +5,7 @@ sidebar_label:  Monetization overview
 ---
 
 
-Congratulations! You’ve created a great Overwolf app loved and used by many gamers. It's time for you to start making money and fund your passion for development based on your app's success!
+Congratulations! You’ve created a great Overwolf app loved and used by many gamers. If you want to, you can now explore monetization capabilities such as subs or ads. Please make sure to follow our guidelines, and in case you choose to have ads, create a non-intrusive in-app ad experience, ideally with an ability to subscribe (and remove ads, get extra features etc.).
 
 ## How does it work?
 
