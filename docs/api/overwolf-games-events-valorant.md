@@ -116,7 +116,7 @@ round_phase  | match_info  | Current state of the round.|See [notes](#round_phas
 team         | match_info  | Attack / Defense.      |See [notes](#team-note)|   149.0       |
 match_outcome| match_info  | Victory / Defeat.      |See [notes](#match_outcome-note)|   149.0       |
 round_report | match_info  | * Total Damage<br>* Total number of bullets hit.<br>* Number of bullets hit on head.<br>* Number of hit headshots that killed. |See [notes](#round_report-note)|   150.0       |
-game_mode    | match_info  | Bomb / Quick Bomb / Custom: True/False. |See [notes](#game_mode-note)|   151.0       |
+game_mode    | match_info  | Bomb / Quick Bomb         |See [notes](#game_mode-note)|   151.0       |
 
 
 #### *round_number* note
@@ -176,6 +176,14 @@ Data Example:
 ```
 
 #### *game_mode* note
+
+Current values:
+
+* Bomb = Regular game (Unrated).
+* Quick Bomb = Spike Rush.
+
+Both of these values also have "custom" value which is identified as a Boolean, either "True" or "False".<br>
+True meaning that the current game is custom made, and false being an online game which is not custom.
 
 Data Example:
 
