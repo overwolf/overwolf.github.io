@@ -63,7 +63,12 @@ Drag your OPK to upload it. Once it's ready, you can set the rollout percentage.
 
 ![opk-upload](../assets/dev-console/update-version/opk-upload.png)
 
-### 4. Set the phasing rate
+### 4. Submit your OPK for QA review
+
+Before you can start deploying your new app's version to the production environment (which is the OW app store), you can send your app for an Overwolf QA review.  
+We created a separate guide on [how to submit your OPK for QA review](submit-for-review) by the Overwolf team.
+
+### 5. Set the phasing rate
 
 After uploading a new version of your app, you can choose the phasing (rollout) rate - meaning what percentage of your app's users will get this new version.
 
@@ -75,7 +80,7 @@ We highly recommend starting with a low phasing rate (like 15%), to get some fee
 The 'Installs' and 'Active Installs' statistics only update once per day. 
 :::
 
-### 5. Increase or Halt the phasing rate
+### 6. Increase or Halt the phasing rate
 
 After the new version was rolled out to production and is working as expected, you can gradually increase the phasing rate until it reaches %100 - meaning all of your users got the new version.
 
