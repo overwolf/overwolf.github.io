@@ -19,14 +19,34 @@ Once you click on the "Add release notes" button, a window will popup and you ca
 ![release](../assets/dev-console/submit-review/release-notes.png)
 
 :::note
-These notes will not be displayed in your app as a changelog. It's an interanl notes that act as a way of communication between you, the app developer, and the OW QA team.
+These notes will not be displayed in your app as a changelog, cannot be fetched through the OW API, etc. It's just internal notes addressed to our QA team so they can focus on new features and changes.
 :::
 
 ## 2. Submit for review
 
-After you finish to update the release note, the "submit for review" button will turn enabled.
+After you finish to update the release notes, the "submit for review" button will turn enabled.
 Hitting submit will send it to our QA team and display the message: "Version X was succesfully submited for review".
 
 ![release](../assets/dev-console/submit-review/submit.png)
 
-Note that once your app is waiting for review, the deployment button on the bottom ("start rollout to production") becomes disabled.
+Note that once your app is waiting for review, the deployment button on the right bottom ("start rollout to production") becomes disabled.
+
+## 3. QA review results
+
+Once the OW QA team reviewed your app, it can approve it or reject it.  
+You will get a notification about the review result.
+
+### Rejected
+
+If our QA team rejected your app, you would be asked to contact your account manager for more info.  
+In a future version of the dev console, we probably add the detailed review report directly in the dev console, but currently, once your app is rejected, the QA team will usually email you the report.
+
+![rejected](../assets/dev-console/submit-review/rejected.png)
+
+After you fix all the issues, you are welcome to upload another updated OPK.
+
+### Approved
+
+Once your app is approved, You can [set the phasing rate](submit-a-new-version#5-set-the-phasing-rate), and start rolling it out to production.
+
+![approved](../assets/dev-console/submit-review/approved.png)
