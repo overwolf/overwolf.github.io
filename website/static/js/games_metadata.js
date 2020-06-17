@@ -173,5 +173,12 @@ const GamesMetadata = {
     iconUrl: "/docs/assets/games-logos/valorant.png",
     iconLargeUrl: "/docs/assets/games-logos/large/valorant.png",
     name: "Valorant"
+  },
+  10844: {
+    id: 10844,
+    path: "/docs/status/overwatch",
+    iconUrl: "/docs/assets/games-logos/overwatch.png",
+    iconLargeUrl: "/docs/assets/games-logos/large/overwatch.png",
+    name: "Overwatch"
   }
 }
