@@ -118,6 +118,9 @@ Data Example:
         }
 ```
 
+Note that on the response the leading zeros are removed ("0030" => "30") 
+
+
 #### *map* note
 
 Important to note there are some values that are still unknown. Most of them are listed down here.
@@ -202,6 +205,8 @@ Data Example:
             "value": "707"
         }
 ```
+
+Note that on the response the leading zeros are removed ("0030" => "30") 
 
 ## `match_info`
 
