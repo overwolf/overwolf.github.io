@@ -93,6 +93,9 @@ This is how the value would look like if the app is interested to auto-launching
 }]
 ```
 
+Along with the option to launch your app when a specific game is started (or launch with all games), you can launch your app [when the OW client launches](../api/manifest-json#enable-app-auto-launch-with-overwolf).
+
+
 ### 2. Listen to info updates or events
 
 We mentioned above that each feature is broken down into two entity types: info updates and events.  
