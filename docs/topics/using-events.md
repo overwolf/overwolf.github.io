@@ -129,4 +129,4 @@ In some cases, you might add the listener to [onInfoUpdates2](../api/overwolf-ga
 
 Also, you might want to receive all info updates that happened before [setRequiredFeatures()](../api/overwolf-games-events#setrequiredfeaturesfeatures-callback) succeeded.
 
-For those reasons, as a final step, you should call [overwolf.games.events.getInfo()](../api/overwolf-games-events#getinfocallback) to get the current info state.
+> For those reasons, as a final step, you should call [overwolf.games.events.getInfo()](../api/overwolf-games-events#getinfocallback) to get the current info state.
