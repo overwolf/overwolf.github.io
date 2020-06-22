@@ -9,7 +9,7 @@ Congratulations! You’ve created a great Overwolf app loved and used by many ga
 
 ## How does it work?
 
-Earn revenue by placing ads in your app! Overwolf apps profit from advertising, and we've built a smart solution that only shows ads when gamers aren't playing or busy. This includes loading times, waiting for the next round, and other times which do not interrupt gameplay. 
+Earn revenue by placing ads in your app! Overwolf apps profit from advertising, and we've built a smart solution that only shows ads when gamers aren't playing or busy. This includes loading times, waiting for the next round, and other times which do not interrupt gameplay...
 
 You can easily add image or video based ads to your app, and we'll do the rest in terms of targeting, ad inventory and paying out your revenues!
 
