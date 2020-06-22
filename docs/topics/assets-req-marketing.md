@@ -44,10 +44,9 @@ sidebar_label: Marketing asset requierments
 
 </div>
 
--   JPEG format
--   Has background
--   SVG / PNG  format
--   No background
+-   JPEG format - Has background
+-   SVG / PNG  format - No background
+
 
 ### 2. Fonts
 -   Format: TTF
