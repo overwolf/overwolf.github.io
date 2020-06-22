@@ -15,8 +15,6 @@ Subscription based monetization is ideal for allowing your users to enjoy an-ad 
 
 Introducing ads in your app can help you support development while offering a free service. Please note that you cannot place ads anywhere you like as we take the game experience seriously and ads that might interfere with gameplay will not be approved. We recommend using idle times such as loading, in-between rounds and other times which do not take focus from the game.
 
-You can also easily add image or video based ads to your app, and we'll do the rest in terms of targeting, ad inventory and paying out your revenues!
-
 #### Ads Monetization Basics
 
 ####
