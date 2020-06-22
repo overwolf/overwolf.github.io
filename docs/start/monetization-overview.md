@@ -5,15 +5,19 @@ sidebar_label:  Monetization overview
 ---
 
 
-Congratulations! You’ve created a great Overwolf app loved and used by many gamers. If you want to, you can now explore monetization capabilities such as subs or ads. Please make sure to follow our guidelines, and in case you choose to have ads, create a non-intrusive in-app ad experience, ideally with an ability to subscribe (and remove ads, get extra features etc.).
+Congratulations! You’ve created a great Overwolf app loved and used by many gamers. If you want to, you can now explore monetization capabilities such as subs or ads. Please make sure to follow our guidelines, and in case you choose to have ads, create a non-intrusive in-app ad experience, ideally with an ability to subscribe.
 
-## How does it work?
+## How does Subscirption work?
 
-Earn revenue by placing ads in your app! Overwolf apps profit from advertising, and we've built a smart solution that only shows ads when gamers aren't playing or busy. This includes loading times, waiting for the next round, and other times which do not interrupt gameplay. 
+Subscription based monetization is ideal for allowing your users to enjoy an-ad free experience, get extra features/perks and support you, the creator. Introducing a Subscription plan is pretty easy as Overwolf takes care of the payments, allowing you to focus on implementation and design of premium features. 
 
-You can easily add image or video based ads to your app, and we'll do the rest in terms of targeting, ad inventory and paying out your revenues!
+## How does ads work?
 
-#### Monetizing is simple
+Introducing ads in your app can help you support development while offering a free service. Please note that you cannot place ads anywhere you like as we take the game experience seriously and ads that might interfere with gameplay will not be approved. We recommend using idle times such as loading, in-between rounds and other times which do not take focus from the game.
+
+You can also easily add image or video based ads to your app, and we'll do the rest in terms of targeting, ad inventory and paying out your revenues!
+
+#### Ads Monetization Basics
 
 ####
 1. Select the type and size of ads you wish to work with, and determine where will they be displayed visually in your app. Please review our ad policy or consult with the team if uncertain.
