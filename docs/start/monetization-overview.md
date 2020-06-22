@@ -7,7 +7,7 @@ sidebar_label:  Monetization overview
 
 Congratulations! You’ve created a great Overwolf app loved and used by many gamers. If you want to, you can now explore monetization capabilities such as subs or ads. Please make sure to follow our guidelines, and in case you choose to have ads, create a non-intrusive in-app ad experience, ideally with an ability to subscribe.
 
-## How does Subscirption work?
+## How does subscirptions work?
 
 Subscription based monetization is ideal for allowing your users to enjoy an-ad free experience, get extra features/perks and support you, the creator. Introducing a Subscription plan is pretty easy as Overwolf takes care of the payments, allowing you to focus on implementation and design of premium features. 
 
