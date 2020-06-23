@@ -25,7 +25,7 @@ However, full-blown desktop application solutions such as electron.js, AppJS and
 
 
 To build Overwolf apps, you need to download the Overwolf client.
-You can find the latest developer client version [Here](https://download.overwolf.com/install/Download?Name=Game+Summary&ExtensionId=flkgdpkkjcoapbgmgpidhepajgkhckpgpibmlclb&Channel=developers).
+You can find the latest developer client version [Here](https://download.overwolf.com/install/Download?Channel=developers).
 
 ### Manifest file
 
