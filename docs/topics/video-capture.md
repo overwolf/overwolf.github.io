@@ -92,6 +92,8 @@ Basic usage flow:
 
 3. **Call [overwolf.media.replays.turnOff()](../api/overwolf-media-replays#turnoffcallback)**, as soon as you’re no longer interested in capturing, in order to free up resources.
 
+Note that all the processes that use the auto-highlights mode considered to be a "single" user. So no conflicts. Few apps can work together and capture the same highlights.
+
 ## Using overwolf.streaming
 
 With this API, there is no auto-detect and auto-capture of the game highlights, as it mainly used to capture the full-length of the game (or stream it to Twitch, Youtube, etc).
