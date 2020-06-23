@@ -15,7 +15,7 @@ To learn how a real-world Overwolf apps should look like, continue to the [sampl
 ## Get the Overwolf client
 
 To build Overwolf apps, you first need to download the Overwolf client.
-You can find the latest version [Here](https://download.overwolf.com/install/Download?Name=Game+Summary&ExtensionId=flkgdpkkjcoapbgmgpidhepajgkhckpgpibmlclb&Channel=developers).
+You can find the latest version [Here](https://download.overwolf.com/install/Download?Channel=developers).
 
 ## Building a demo app from scratch
 
