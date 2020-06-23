@@ -202,6 +202,9 @@ No logs.
 Path of Exile
 -------------
 
+**Resolved** - This incident has been resolved.  
+Jun 23, 17:10 PM GMT+3
+
 **Investigating** - PUBG events are down.  
 Jun 19, 09:18 PM GMT+3
 
