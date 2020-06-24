@@ -4,7 +4,9 @@ title: Changelog
 sidebar_label: Changelog
 ---
 
-Follow this entry for ongoing updates and changes to the project or tools:
+Follow this entry for ongoing updates and changes to the project or tools.
+
+Here you can find our [Developers Roadmap](https://trello.com/b/1V10E4IB/overwolf-roadmap).
 
 ## Version 0.149 (In progress)
 
@@ -32,6 +34,7 @@ Note that some of the links are not working, as the work on the docs is still in
     * kill
 * [OVERWATCH](overwolf-games-events-overwatch)
   * New supported game
+  * [Auto-highlights](../topics/auto-highlights) support
 
 ## Version 0.148 (Jun. 2020)
 
