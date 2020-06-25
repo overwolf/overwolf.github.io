@@ -16,7 +16,7 @@ if the  game launcher wasn't closed by the user, it is possible to access game l
 
 ## Sample Apps
 
-* [LOL game launcher sample app](https://github.com/overwolf/lol-launcher-sample-app)
+* [LOL game launcher sample app](https://github.com/overwolf/events-sample-apps)
 
 ## Available Features
 
