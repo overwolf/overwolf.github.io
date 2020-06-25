@@ -52,7 +52,7 @@ Add or edit a short description of your app, with a limit of 180 characters. In 
 ### Full description
 
 Add or edit a full description of your app, used when a user clicks on your app's store tile.  
-This field support both plain text, markdown, or HTML format (except H1 and H2 tags).
+This field support both plain text and markdown. Please don't use HTML tags.
 
 #### Note
 You can also use the text found [description.html file from the "store" folde](../start/submit-your-app-to-the-store#4-descriptionhtml) that you used for uploading your app to the store for the first time.

@@ -26,7 +26,7 @@ Below, you can find a list of games that supports highlights.
 * Apex
 * WoT
 * RL
-* WoW
+* WoWs
 * Splitgate
 * HotS
 * Valorant
