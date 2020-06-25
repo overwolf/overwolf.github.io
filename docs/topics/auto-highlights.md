@@ -29,6 +29,7 @@ Below, you can find a list of games that support highlights.
 * WoWs
 * Splitgate
 * HotS
+* TFT
 * Valorant
 * Overwatch
 
