@@ -14,7 +14,7 @@ Here you can find our guide on [how to use and capture auto-highlights](video-ca
 
 ## List of supported games
 
-Below, you can find a list of games that supports highlights.  
+Below, you can find a list of games that support highlights.  
 
 * LoL
 * Dota 2
