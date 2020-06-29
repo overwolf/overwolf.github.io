@@ -22,7 +22,7 @@ In addition, compress all of the images/assets to reduce the final app size. You
 
 To get started, you first need an OPK file with the app's version you wish to Submit.
 
-OPK files are Overwolf's app installation package, which includes [your app's files](#opk-structure): the manifest, source files, and other assets. All files are packed in a package that has the OPK file extension:
+OPK files are Overwolf's app installation package, which includes [your app's files](#opk-structure): the manifest, source files, and other assets. All files are packed in a package that has the OPK file extension: 
 
 <pre>
 +---- manifest.json
