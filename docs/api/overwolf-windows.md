@@ -1098,7 +1098,7 @@ Parameter       | Type          | Description             |
 window_id       | string        |                         |
 width           | int           |                         |
 height          | int           |                         |
-auto_dpi_resize | boolean       | relevant only for native windows |
+auto_dpi_resize | boolean       | relevant only for native windows. Overwrite the [disable_auto_dpi_sizing](manifest-json#disable_auto_dpi_sizing) manifest flag |
 
 ```json
 {
