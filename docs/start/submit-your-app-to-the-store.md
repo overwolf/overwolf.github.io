@@ -15,77 +15,74 @@ Before your new app can go live, we recommend create a customer support page for
 
 ## How to Submit an App
 
-* Please take the time to [validate your manifest](../api/validate-your-manifest) before submitting your app for review.
-* Compress all of the images/assets to reduce the final app size. You can use https://tinypng.com/ free service to compress the images.
-* **Make sure you have all of the following items zipped in this structure when you send it to us:**
+Please take the time to [validate your manifest](../api/validate-your-manifest) before submitting your app for review.  
+In addition, compress all of the images/assets to reduce the final app size. You can use https://tinypng.com/ free service to compress the images.
+
+### OPK package overview
+
+To get started, you first need an OPK file with the app's version you wish to Submit.
+
+OPK files are Overwolf's app installation package, which includes [your app's files](#opk-structure): the manifest, source files, and other assets. All files are packed in a package that has the OPK file extension:
 
 <pre>
-myZip
-  +---- app
-         +---- manifest.json
-         +---- IconMouseNormal.png
-         +---- IconMouseOver.png
-         +---- launcher_icon.ico
-         +---- WindowIcon.png
-         +---- Files
-               +---- index.html
-               +---- css
-               +---- assets
-  +---- store
-         +---- Tile.jpg
-         +---- Icon.png
-         +---- ScreenshotX.jpg
-         +---- description.html
-         +---- store.json
-
++---- manifest.json
++---- IconMouseNormal.png
++---- IconMouseOver.png
++---- launcher_icon.ico
++---- WindowIcon.png
++---- index.html
++---- Files
++---- css
++---- assets
 </pre>
 
-## The "App" folder should contain
+Double-clicking an OPK will install the package.
 
-### 1. manifest.json file
+### How to create an OPK package
 
-Your app's [manifest.json](https://overwolf.github.io/docs/api/manifest-json#docsNav) file.
+To create it, ZIP all your files together, then manually change the file extension from ZIP to OPK.  
+Make sure to pack the manifest and all the files and folder in the root of the package, like this:
 
-### 2. App Icons
+![welcome-screen](../assets/dev-console/update-version/opk.gif)
 
-#### 2.1. IconMouseNormal.png
+### OPK structure
 
-A **gray-scale** icon for the default state of your app button when it is unselected. File should be smaller than 30KB and sized 256X256 pixels with at least 72 PPI.
+As mentioned above, the OPK package should contain all the app's files and assets:
 
-<img src="../assets/submit-your-app-to-the-store/SubIconMouseNormal.png" alt="IconMouseNormal" width="100"/>
+#### manifest.json file  
+  Your app's [manifest.json](https://overwolf.github.io/docs/api/manifest-json#docsNav) file.
 
-#### 2.2. IconMouseOver.png
+#### App Icons
+  * IconMouseNormal.png  
+  A **gray-scale** icon for the default state of your app button when it is unselected. File should be smaller than 30KB and sized 256X256 pixels with at least 72 PPI.
+  <img src="../assets/submit-your-app-to-the-store/SubIconMouseNormal.png" alt="IconMouseNormal" width="100"/>
+  * IconMouseOver.png  
+  A colored icon for the same button mentioned above when it is selected or mouse-overed. Similarly, file should be smaller than 30KB and sized 256X256 pixels with at least 72 PPI.
+  <img src="../assets/submit-your-app-to-the-store/SubIconMouseOver.png" alt="IconMouseOver" width="100"/>
+  * launcher_icon.ico  
+    * Add the ["launcher_icon"](https://overwolf.github.io/docs/api/manifest-json#meta-launcher_icon) property to your app's manifest.json file.  
+    * Add the icon asset to your app’s folder.  
+    * The launcher icon should look like the app's dock icon to prevent confusion.  
+    * The launcher icon is a 256×256 transparent .png converted into an .ico file in the following resolutions: 16×16, 32×32, 48×48, 256×256.  
+    * The launcher icon should weigh less than 150Kb.
+  * WindowIcon.png  
+    * A colored icon for the window task bar icon \ window header. If not defined, the **IconMouseOver** will be taken.  
+    The difference between the two icons, is that this taskbar icon should be squared, while the other icons are rounded, to fit the OW deck.  
+    Similarly, file should be smaller than 30KB and sized 256X256 pixels with at least 72 PPI.
 
-A colored icon for the same button mentioned above when it is selected or mouse-overed. Similarly, file should be smaller than 30KB and sized 256X256 pixels with at least 72 PPI.
+#### The "Files" folder
 
-<img src="../assets/submit-your-app-to-the-store/SubIconMouseOver.png" alt="IconMouseOver" width="100"/>
-
-#### 2.3. launcher_icon.ico
-
-* Add the ["launcher_icon"](https://overwolf.github.io/docs/api/manifest-json#meta-launcher_icon) property to your app's manifest.json file.
-
-* Add the icon asset to your app’s folder.
-
-* The launcher icon should look like the app's dock icon to prevent confusion.
-
-* The launcher icon is a 256×256 transparent .png converted into an .ico file in the following resolutions: 16×16, 32×32, 48×48, 256×256.
-
-* The launcher icon should weigh less than 150Kb.
-
-#### 2.4. WindowIcon.png
-
-A colored icon for the window task bar icon \ window header. If not defined, the [IconMouseOver](##22-iconmouseoverpng) will be taken.  
-The difference between the two icons, is that this taskbar icon should be squared, while the other icons are rounded, to fit the OW deck.  
-Similarly, file should be smaller than 30KB and sized 256X256 pixels with at least 72 PPI.
-
-### 3. The "Files" folder
-
-  A folder containing your app's code. 
+A folder containing your app's code. 
   
   * Make sure your manifest pathing is correct.
   * The structure and content of this folder are not defined, as it depends on your personal preferences.
 
-## The "Store" folder should contain
+## Prepare your store assets 
+
+After submitting your OPK to the store for the first time, you will get access to the OW dev console.  
+Through the console, you will be able to upload a new app version and [update your store listing page](../topics/update-store-listing), with all the app info, like screenshots, description, etc. These assets, of course, should be prepared in front.
+
+Here is the list of the required store assets:
 
 ### 1. Tile.jpg  
 The Appstore tile asset for your app, it should be a JPG format image sized 258X198 at 72PPI.
@@ -108,24 +105,13 @@ You may include up to 5 screenshots per app.
 
 <img src="../assets/submit-your-app-to-the-store/SubScreenshot1.png" alt="Screenshot" width="900"/>
 
-### 4. description.html  
-An **HTML** text file containing the full Appstore description of your app, this description will appear when users click on your app's store tile. This description can be edited using basic HTML including H3, BR, A HREF and several other functions. The maximum length for an appstore description is 2000 characters including spaces. Please notice that the description **must** contain an header tag.
+### 4. Store description  
+
+The full Appstore description of your app, this description will appear when users click on your app's store tile. This description can be edited using the markdown format. The maximum length for an appstore description is 2000 characters including spaces.  
 The store tile description is included in the app's [manifest.json](https://overwolf.github.io/docs/api/manifest-json)
 
 <img src="../assets/submit-your-app-to-the-store/Subdescription.png" alt="Description" width="900"/>
 
-### 5. store.json 
-A json file containing the Appstore information of your app. You can configure appstore tags, categories and attached videos in this file. 
-
-```json
-{
-  "category_description": "This is the Appstore category that the app will appear in."
-   //Currently only one category per app is possible.
-   //Possible values: "for games", "chat", "entertainment", "social", "utilities", "voip"
-  "tags": ["Search tags for your app, limited to five (5) tags. Be sure the tags are relevant", "Make sure the tags are comma separated and in quotes"],
-  "title": "App name"
-}
-```
 
 ## Amazon Web Services benefits
 

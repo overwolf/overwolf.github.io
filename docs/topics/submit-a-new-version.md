@@ -19,31 +19,7 @@ Don't forget to update your manifest [build version](../api/manifest-json#meta-o
 
 To get started, you first need an OPK file with the latest version you wish to upload.
 
-OPK files are Overwolf's app installation package, which includes your app's files: the manifest, source files, and other assets. All files are packed in a package that has the OPK file extension.
-
-To create it, ZIP all your files together, then manually change the file extension from ZIP to OPK.
-
-Make sure to have all the following items in this structure:
-
-<pre>
-+---- manifest.json
-+---- IconMouseNormal.png
-+---- IconMouseOver.png
-+---- launcher_icon.ico
-+---- WindowIcon.png
-+---- index.html
-+---- Files
-+---- css
-+---- assets
-</pre>
-
-Double-clicking an OPK will install the package.
-
-**Make sure to pack the manifest and all the files and folder in the root of the package, like this:** 
-
-![welcome-screen](../assets/dev-console/update-version/opk.gif)
-
-More info about the OPK structure can be found [here](../start/submit-your-app-to-the-store#how-to-submit-an-app).
+Please follow the OPK creation process as described [here](../start/submit-your-app-to-the-store#opk-package-overview).
 
 ### 2. Login to the developers console
 

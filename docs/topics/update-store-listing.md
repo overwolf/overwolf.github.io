@@ -26,8 +26,8 @@ The Store Listing tab lets you update the app details properties displayed in th
 Several fields are read-only properties like name, author, and app visibility. Other than that, you can control all your store app's info through this page.
 
 #### Notes
-1. A few properties are read-only, and cannot be edited. These are: App name, author, and app visibility. 
-2. The app's assets like screenshots, description text and more can be found in the **store** folder of your app. For more details follow this guide on how to [submit your app to the app store for the first time](https://overwolf.github.io/docs/start/submit-your-app-to-the-store#the-store-folder-should-contain).
+
+A few properties are read-only, and cannot be edited. These are: App name, author, and app visibility. 
 
 ### Name and Author
 
@@ -54,16 +54,13 @@ Add or edit a short description of your app, with a limit of 180 characters. In 
 Add or edit a full description of your app, used when a user clicks on your app's store tile.  
 This field support both plain text and markdown. Please don't use HTML tags.
 
-#### Note
-You can also use the text found [description.html file from the "store" folde](../start/submit-your-app-to-the-store#4-descriptionhtml) that you used for uploading your app to the store for the first time.
-
 ![full-desc](../assets/dev-console/update-store/full-desc.png)
 
 ### Tile
 
 Upload or edit an asset that will be used as an Appstore tile for your app.  
 * Should be a JPG format image sized 258X198 at 72PPI.
-* Same as the [tile file](../start/submit-your-app-to-the-store#1-tilejpg) from the "store" folder.
+* Same as the [tile file](../start/submit-your-app-to-the-store#1-tilejpg).
 
 ![tile](../assets/dev-console/update-store/tile.png)
 
@@ -72,7 +69,7 @@ Upload or edit an asset that will be used as an Appstore tile for your app.
 Upload or edit an asset that wil be used as the app's icon in the Overwolf appstore.  
 * Please make sure your chosen icon looks good on both dark and bright backgrounds.
 * Should be a PNG format image sized 55X55.
-* Same as the [icon file](../start/submit-your-app-to-the-store#2-iconpng) from the "store" folder.
+* Same as the [icon file](../start/submit-your-app-to-the-store#2-iconpng).
 
 ![icon](../assets/dev-console/update-store/icon.png)
 
@@ -85,6 +82,6 @@ Include at least one screenshot of your app. These screenshots will be displayed
 * Using attractive screenshots of your app will increase its chances of getting noticed and winning hearts, so try including more than one.
 * You may add up to 5 screenshots per app. 
 * We recommend choosing screenshots that showcase the app's features in a clear way. 
-* Same as the [ScreenshotX section](../start/submit-your-app-to-the-store#3-screenshotxjpg) from the "store" folder.
+* Same as the [ScreenshotX section](../start/submit-your-app-to-the-store#3-screenshotxjpg).
 
 ![screenshots](../assets/dev-console/update-store/screenshots.png)
