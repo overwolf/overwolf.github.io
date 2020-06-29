@@ -280,9 +280,9 @@ callback (Optional) | function   | A callback which is called when the size chan
 ## changeSize(changeSizeParams, callback)
 #### Version added: 0.149
 
-> Changes the window size to the new width and height, in pixels, including DPI scale when resizing.
+> Changes the window size to the new width and height, in pixels, including DPI scale when resizing (that is relevant only for native windows).
 
-Note: works for all the [window types](../topics/windows-types).
+Note: this function works for all the [window types](../topics/windows-types).
 
 Parameter               | Type       | Description                                                                                  |
 ------------------------| -----------| ---------------------------------------------------------------------------------------------|
@@ -296,7 +296,7 @@ let sizeSettings = {
   "window_id":"Window_Extension_nhmkaollkcmjiecdnnjmgfifjgkfegkljnjjbipp",
   "width":1000,
   "height":1000,
-  "auto_dpi_resize":true
+  "auto_dpi_resize":true //relevant only for native windows
 };
 
 overwolf.windows.changeSize(sizeSettings ,console.log);
@@ -1098,7 +1098,7 @@ Parameter       | Type          | Description             |
 window_id       | string        |                         |
 width           | int           |                         |
 height          | int           |                         |
-auto_dpi_resize | boolean       |                         |
+auto_dpi_resize | boolean       | relevant only for native windows |
 
 ```json
 {
