@@ -198,9 +198,14 @@ Legends of Runeterra
 --------------------
 No logs.
 
-MTG Arena
+MTGA Arena
 ---------
-No logs.
+
+**Resolved** - This incident has been resolved.  
+Jun 25, 09:18 PM GMT+3
+
+**Investigating** - MTGA events are down.  
+Jun 25, 09:18 PM GMT+3
 
 Path of Exile
 -------------
@@ -407,6 +412,9 @@ Oct 09, 10:24 AM GMT+3
 
 Valorant
 --------
+
+**Resolved** - This incident has been resolved.  
+Jun 24, 17:48 PM GMT+3
 
 **Investigating** - Valorant events are down.  
 Jun 23, 17:48 PM GMT+3
