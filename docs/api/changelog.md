@@ -36,6 +36,10 @@ Note that some of the links are not working, as the work on the docs is still in
   * New supported game
   * [Auto-highlights](../topics/auto-highlights) support
 
+#### Docs
+
+* We are now supporting bigger [screenshots](../start/submit-your-app-to-the-store#3-screenshotxjpg) for your OW app store page: 1200x750 pixels, instead of the old 656X410.
+
 ## Version 0.148 (Jun. 2020)
 
 #### API
