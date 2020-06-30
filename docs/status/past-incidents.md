@@ -10,6 +10,9 @@ To get real time alerts please join [our dev slack](../support/contact-us#join-o
 Apex Legends
 ------------
 
+**Resolved** This incident has been resolved.  
+Jun 26, 19:08 PM GMT+3
+
 **Investigating** - Apex game events are down we are working on a fix.  
 Jun 23, 18:50 PM GMT+3
 
@@ -84,6 +87,9 @@ Apr 29, 02:40 PM GMT+3
 
 Fortnite
 --------
+
+**Investigating** - Fortnite game events are down, we are working on a fix.  
+Jun 30, 11:41 AM GMT+3
 
 **Resolved** - This incident has been resolved.  
 Jun 17, 10:41 PM GMT+3
