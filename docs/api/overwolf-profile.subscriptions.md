@@ -35,8 +35,9 @@ Parameter | Type                                                                
 ----------| -----------------------------------------------------------------------| ------------------------------------ |
 callback  | ([Result: GetActivePlansResult](#getactiveplansresult-object)) => void | Returns with the result              |   
 
-Note that many users can have the same planID,  while subscriptionID is an individual unique ID for a user's subscription.
-
+Notes:  
+* Many users can have the same planID,  while subscriptionID is an individual unique ID for a user's subscription.
+* When calling getActivePlans(), make sure you use your live app and not the sample app, etc., as subscriptions are pairs to a specific app UID.
 
 ## onSubscriptionChanged
 #### Version added: 0.134
