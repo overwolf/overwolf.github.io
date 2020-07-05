@@ -164,7 +164,7 @@ Furthermore, if a character has an ability that gives him different points of vi
 <tr><td>team</td><td>match_info</td><td>Attack / Defense.</td><td>See <a href="#team-note">notes</a></td><td>149.0</td></tr>
 <tr><td>match_outcome</td><td>match_info</td><td>Victory / Defeat.</td><td>See <a href="#match_outcome-note">notes</a></td><td>149.0</td></tr>
 <tr><td>round_report</td><td>match_info</td><td>* Total Damage<br>* Total number of bullets hit.<br>* Number of bullets hit on head.<br>* Number of hit headshots that killed.</td><td>See <a href="#round_report-note">notes</a></td><td>150.0</td></tr>
-<tr><td>game_mode</td><td>match_info</td><td>Bomb / Quick Bomb (includes ranked detection - see notes).</td><td>See <a href="#game_mode-note">notes</a></td><td>151.0</td></tr>
+<tr><td>game_mode</td><td>match_info</td><td>* Mode: Bomb / Quick Bomb<br>* Ranked: 0 (Practice), 1 (Competitive), 2 (Spike Rush/Other)</td><td>See <a href="#game_mode-note">notes</a></td><td>151.0</td></tr>
 <tr><td>roster</td><td>match_info</td><td>* Player Name<br>* Player ID<br>* Name of picked character<br>* Player's Rank<br>* Whether it is the local player<br>* If player is a teammate or not.</td><td>See <a href="#roster-note">notes</a></td><td>151.0</td></tr>
 </tbody>
 </table>
@@ -204,6 +204,7 @@ Furthermore, if a character has an ability that gives him different points of vi
 <ul>
 <li>Bomb = Regular game (Unrated).</li>
 <li>Quick Bomb = Spike Rush.</li>
+<li>Ranked = 1 = Competitive.</li>
 </ul>
 <p>Both of these values also have &quot;custom&quot; value which is identified as a Boolean, either &quot;True&quot; or &quot;False&quot;.<br>
 True meaning that the current game is custom made, and false being an online game which is not custom.<br>
