@@ -116,8 +116,8 @@ round_phase  | match_info  | Current state of the round.|See [notes](#round_phas
 team         | match_info  | Attack / Defense.      |See [notes](#team-note)|   149.0       |
 match_outcome| match_info  | Victory / Defeat.      |See [notes](#match_outcome-note)|   149.0       |
 round_report | match_info  | * Total Damage<br>* Total number of bullets hit.<br>* Number of bullets hit on head.<br>* Number of hit headshots that killed. |See [notes](#round_report-note)|   150.0       |
-game_mode    | match_info  | Bomb / Quick Bomb         |See [notes](#game_mode-note)|   151.0       |
-
+game_mode    | match_info  |* Mode: Bomb / Quick Bomb<br>* Ranked: 0 (Practice), 1 (Competitive), 2 (Spike Rush/Other) |See [notes](#game_mode-note)|   151.0       |
+roster    | match_info  | * Player Name<br>* Player ID<br>* Name of picked character<br>* Player's Rank<br>* Whether it is the local player<br>* If player is a teammate or not. |See [notes](#roster-note)|   151.0       |
 
 #### *round_number* note
 
@@ -181,14 +181,38 @@ Current values:
 
 * Bomb = Regular game (Unrated).
 * Quick Bomb = Spike Rush.
+* Ranked = 1 = Competitive.
 
 Both of these values also have "custom" value which is identified as a Boolean, either "True" or "False".<br>
-True meaning that the current game is custom made, and false being an online game which is not custom.
+True meaning that the current game is custom made, and false being an online game which is not custom.<br>
+We recently added "ranked" value to game_mode which will indicate if the game you are playing is ranked or not. The values you will be getting range betweeb 0 which is received in the practice range, 1 which means it's a ranked game, and 2 which is received during Spike Rush and is just a random value, it does not represent a ranked game.
 
 Data Example:
 
 ```json
-{"info":{"match_info":{"game_mode":"{"mode":"bomb","custom":true}"}},"feature":"match_info"}
+{"info":{"match_info":{"game_mode":"{"mode":"bomb","custom":true,"ranked":"0"}"}},"feature":"match_info"}
+{"info":{"match_info":{"game_mode":"{"mode":"bomb","custom":false,"ranked":"1"}"}},"feature":"match_info"}
+```
+
+#### *roster* note
+
+Data Example:
+
+```json
+{"info":{"match_info":{"roster_3":"{"name":"Sh4rgaas #EUNE","player_id":"2fb49e77-85c6-522c-a240-27c78a2f9a8f","character":"Pandemic","rank":0,"locked":false,"local":true,"teammate":true}"}},"feature":"match_info"}
+{"info":{"match_info":{"roster_4":"{"name":"BreachMain #EUW","player_id":"d8b9c6f7-2cc6-5a75-825f-a5658b37eb1d","character":"Vampire","rank":0,"locked":true,"local":false,"teammate":true}"}},"feature":"match_info"}
+{"info":{"match_info":{"roster_3":"{"name":"Sh4rgaas #EUNE","player_id":"2fb49e77-85c6-522c-a240-27c78a2f9a8f","character":"Pandemic","rank":0,"locked":true,"local":true,"teammate":true}"}},"feature":"match_info"}
+{"info":{"match_info":{"roster_1":"{"name":"NoobaHooba #8609","player_id":"f0be482b-d182-51a7-a17b-5d5d73d2f0cc","character":"Hunter","rank":0,"locked":false,"local":false,"teammate":true}"}},"feature":"match_info"}
+{"info":{"match_info":{"roster_0":"{"name":"TroyDarion #6170","player_id":"e70b9fb9-b64a-503e-a0ac-3bd12bcac218","character":"Gumshoe","rank":0,"locked":false,"local":false,"teammate":true}"}},"feature":"match_info"}
+{"info":{"match_info":{"roster_1":"{"name":"NoobaHooba #8609","player_id":"f0be482b-d182-51a7-a17b-5d5d73d2f0cc","character":"Hunter","rank":0,"locked":true,"local":false,"teammate":true}"}},"feature":"match_info"}
+{"info":{"match_info":{"roster_0":"{"name":"TroyDarion #6170","player_id":"e70b9fb9-b64a-503e-a0ac-3bd12bcac218","character":"Gumshoe","rank":0,"locked":true,"local":false,"teammate":true}"}},"feature":"match_info"}
+{"info":{"match_info":{"roster_2":"{"name":"SoloMeoParedes #ESP","player_id":"db36fb3b-e351-5da2-b0e3-c3a0400e8ddd","character":"Thorne","rank":0,"locked":false,"local":false,"teammate":true}"}},"feature":"match_info"}
+{"info":{"match_info":{"roster_2":"{"name":"SoloMeoParedes #ESP","player_id":"db36fb3b-e351-5da2-b0e3-c3a0400e8ddd","character":"Thorne","rank":0,"locked":true,"local":false,"teammate":true}"}},"feature":"match_info"}
+{"info":{"match_info":{"roster_6":"{"name":"zayed2 #EUW","player_id":"4d5efc43-b001-5c47-81d2-2f3cacff5ac7","character":"Wraith","rank":0,"teammate":false,"locked":false,"local":false}"}},"feature":"match_info"}
+{"info":{"match_info":{"roster_7":"{"name":"maheralkurdy #7836","player_id":"2080a484-c481-5362-812c-7572f5182b10","character":"Wushu","rank":0,"teammate":false,"locked":false,"local":false}"}},"feature":"match_info"}
+{"info":{"match_info":{"roster_5":"{"name":"Kubix11223 #5713","player_id":"dafa74b0-80ad-5dba-a753-70318f91d80a","character":"Thorne","rank":0,"teammate":false,"locked":false,"local":false}"}},"feature":"match_info"}
+{"info":{"match_info":{"roster_9":"{"name":"ImJOWY #2905","player_id":"162ec3aa-0114-554e-839f-fbe276467ece","character":"Clay","rank":0,"teammate":false,"locked":false,"local":false}"}},"feature":"match_info"}
+{"info":{"match_info":{"roster_8":"{"name":"kot #8059","player_id":"4d7d329c-efc4-5400-9910-2a6b76f13c7b","character":"Phoenix","rank":0,"teammate":false,"locked":false,"local":false}"}},"feature":"match_info"}
 ```
 
 ### Events
