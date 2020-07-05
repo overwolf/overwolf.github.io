@@ -35,6 +35,9 @@ Note that some of the links are not working, as the work on the docs is still in
 * [OVERWATCH](overwolf-games-events-overwatch)
   * New supported game
   * [Auto-highlights](../topics/auto-highlights) support
+* [RAINBOW SIX](overwolf-games-events-rainbow-six)
+  * New updates and events under:
+    * roster
 
 #### Docs
 
