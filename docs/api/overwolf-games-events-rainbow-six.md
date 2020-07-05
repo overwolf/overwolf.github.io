@@ -132,6 +132,9 @@ health | player | Player’s current health – (0-100)</br>`{"player":{"health"
 score | player | Player’s current score</br>`{"player":{"score":"335"}}` |   |   123.0 |
 kills | player | Total number of kills by the player</br>`{"player":{"kills":"0"}}` |   |   123.0 |
 deaths | player | Total number of player's deaths</br>`{"player":{"deaths":"1"}}` |   |   123.0 |
+operatorid | player | The numeric ID of the chosen operator.<br>`{"player":{"operator":"514"}}` |  |   151.0 |
+
+
 
 #### `roster_XX` notes
 
@@ -153,7 +156,7 @@ If a new player replaces a leaver, a new “roster_XX” object will be assigned
 
 #### Category `player` notes
 
-The `team`, `health`, `score`, `kills`, and `deaths` events are _only_ available for the local player.
+The `team`, `health`, `score`, `kills`, `operatorid` and `deaths` events are _only_ available for the local player.
 
 
 ## `kill`
