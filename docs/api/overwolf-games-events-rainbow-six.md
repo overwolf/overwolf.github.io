@@ -126,7 +126,7 @@ matchOutcome | victory / defeat</br>`{"name":"matchOutcome","data":"defeat"}` | 
 
 key          | Category    | Values                    | Notes                 | Since GEP Ver. |
 --------------- | -----------| ------------------------------------------------------------------------------------ | ------------------------------------ | ------------- | 
-roster_XX | players | Provides info for the currently active players (10 players). See [notes](#roster_xx-notes) below |  This is an internal Overwolf-generated code. |   123.0 |
+roster_XX | players | Provides info for the currently active players (10 players). See [notes](#roster_xx-notes) below |   |   123.0 |
 team | player | Player’s current team – Orange/Blue  |   |   123.0 |
 health | player | Player’s current health – (0-100)</br>`{"player":{"health":"70"}}` |   |   123.0 |
 score | player | Player’s current score</br>`{"player":{"score":"335"}}` |   |   123.0 |
