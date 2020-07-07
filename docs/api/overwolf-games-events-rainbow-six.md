@@ -144,14 +144,14 @@ Each player joining the game will be reported in the following way:
 
 As you can see, this object includes:
 
-* name - player name
+* name - player's name
 * team - Blue/Orange
 * is_local - local player or not (Boolean)
-* operator id - numeric value, available for team members only.
-* total amount of kills.
-* total amount of deaths.
-* score (in current round).
-* health
+* operator id - The ID of the selected operator (available for team members only)
+* kills - Total amount of kills made by the player
+* deaths - Total amount of deaths
+* score - Player score in the current round
+* health - Current health of the player (available for team members only)
 
 When one of the players leaves the match, the relevant “roster_ XX” object will be updated to:
 
