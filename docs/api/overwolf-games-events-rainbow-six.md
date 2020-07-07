@@ -127,12 +127,12 @@ matchOutcome | victory / defeat</br>`{"name":"matchOutcome","data":"defeat"}` | 
 key          | Category    | Values                    | Notes                 | Since GEP Ver. |
 --------------- | -----------| ------------------------------------------------------------------------------------ | ------------------------------------ | ------------- | 
 roster_XX | players | Provides info for the currently active players (10 players). See [notes](#roster_xx-notes) below |   |   123.0 |
-team | player | Player’s current team – Orange/Blue  |   |   123.0 |
-health | player | Player’s current health – (0-100)</br>`{"player":{"health":"70"}}` |   |   123.0 |
-score | player | Player’s current score</br>`{"player":{"score":"335"}}` |   |   123.0 |
-kills | player | Total number of kills by the player</br>`{"player":{"kills":"0"}}` |   |   123.0 |
-deaths | player | Total number of player's deaths</br>`{"player":{"deaths":"1"}}` |   |   123.0 |
-operatorid | player | The numeric ID of the chosen operator.<br>`{"player":{"operator":"514"}}` |  |   151.0 |
+team | players | Player’s current team – Orange/Blue  |   |   123.0 |
+health | players | Player’s current health – (0-100)</br>`{"player":{"health":"70"}}` |   |   123.0 |
+score | players | Player’s current score</br>`{"player":{"score":"335"}}` |   |   123.0 |
+kills | players | Total number of kills by the player</br>`{"player":{"kills":"0"}}` |   |   123.0 |
+deaths | players | Total number of player's deaths</br>`{"player":{"deaths":"1"}}` |   |   123.0 |
+operatorid | players | The numeric ID of the chosen operator.<br>`{"player":{"operator":"514"}}` |  |   151.0 |
 
 
 
@@ -140,24 +140,24 @@ operatorid | player | The numeric ID of the chosen operator.<br>`{"player":{"ope
 
 Each player joining the game will be reported in the following way:
 
-`{"roster_0":"{"name":"overwolfqa","team":"Orange","is_local":true}"}`
+`{"info":{"players":{"roster_0":"{"name":"WolfOnTop.top","team":"Orange","is_local":true,"operator":514,"kills":0,"deaths":0,"score":0,"health":0}"}},"feature":"roster"}`
 
 As you can see, this object includes:
 
 * name - player name
 * team - Blue/Orange
 * is_local - local player or not (Boolean)
+* operator id - numeric value, available for team members only.
+* total amount of kills.
+* total amount of deaths.
+* score (in current round).
+* health
 
 When one of the players leaves the match, the relevant “roster_ XX” object will be updated to:
 
 `{"players":{"roster_3":null}}`
 
 If a new player replaces a leaver, a new “roster_XX” object will be assigned to the new player who joined.
-
-#### Category `player` notes
-
-The `team`, `health`, `score`, `kills`, `operatorid` and `deaths` events are _only_ available for the local player.
-
 
 ## `kill`
 
