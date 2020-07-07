@@ -147,7 +147,7 @@ As you can see, this object includes:
 * name - player's name
 * team - Blue/Orange
 * is_local - local player or not (Boolean)
-* operator id - The ID of the selected operator (available for team members only)
+* [operator id](https://github.com/overwolf/community-gists/blob/master/siege_operator_ids.json) - The ID of the selected operator (available for team members only)
 * kills - Total amount of kills made by the player
 * deaths - Total amount of deaths
 * score - Player score in the current round
