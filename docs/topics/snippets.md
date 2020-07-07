@@ -8,7 +8,7 @@ sidebar_label: Code snippets
 Please note that these are community code snippets, and the usage is at your own risk.
 :::
 
-* The Overwolf [gists](https://github.com/overwolf/community-gists) reposiotry.  
+* The Overwolf [gists](https://github.com/overwolf/community-gists) repository.  
   Typically used to share files and snippets with others quickly.  
   You can upload new gists and browse other gists that uploaded by the community.
 
