@@ -205,6 +205,8 @@ Provided data:
 * team - chaos/order
 * hero_name
 
+For a full list of hero names check the following [link](https://heroespatchnotes.github.io/heroes-talents/)
+
 Data Example:
 
 ```json
