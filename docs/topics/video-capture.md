@@ -20,7 +20,7 @@ Overwolf offers two APIs with video capturing capabilities:
 
 ## Required Permissions
 
-Using any of the above APIs requires the **VideoCaptureSettings** flag in your app manifest: Only apps with this permission will be defined as capture apps which can be configured in the OW client "capture" tab.
+Using any of the above APIs requires the **VideoCaptureSettings** permission flag in your app manifest: Only apps with this permission will be defined as capture apps which can be configured in the OW client "capture" tab (see https://overwolf.github.io/docs/api/manifest-json#permissions-array)
 
 #### Notes
 
