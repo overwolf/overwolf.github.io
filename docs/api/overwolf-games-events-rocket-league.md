@@ -175,7 +175,7 @@ Data Example:
 
 Data Example:
 
-`[“soccer” | “basketball”, “hockey”, “items”, “volleyball”, “breakout”, “playTest”]`
+`[“soccar” | “basketball”, “hockey”, “items”, “volleyball”, “breakout”, “playTest”]`
 
 #### *gameState* note
 
