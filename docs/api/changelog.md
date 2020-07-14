@@ -32,7 +32,7 @@ Here you can find our [Developers Roadmap](https://trello.com/b/1V10E4IB/overwol
     * kill
 * [OVERWATCH](overwolf-games-events-overwatch)
   * New supported game
-  * [Auto-highlights](../topics/auto-highlights) support
+  * [Auto-highlights](../api/auto-highlights) support
 * [RAINBOW SIX](overwolf-games-events-rainbow-six)
   * New updates and events under:
     * roster

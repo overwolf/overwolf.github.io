@@ -357,7 +357,7 @@ overwolf.media.replays.updateTobiiSetting({
 
 > Get supported auto highlights features for a game.
 
-You can browse in our [list of auto-highlights supported games](../topics/auto-highlights).
+You can browse in our [list of auto-highlights supported games](../api/auto-highlights).
 
 Parameter   | Type     | Description                                                                                                                                |
 ------------| ---------| ------------------------------------------------------------------------------------------------------------------------------------------ |

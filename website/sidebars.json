@@ -17,7 +17,7 @@
 	},
     "docs": {
 		"Best Practices":
-			["topics/best-practices-overview", "topics/app-specific-experience", "topics/first-time-user-experience", "topics/user-flow-error-handling", "topics/launch-time-performance", "topics/communication-guidelines", "topics/user-flow-and-error-handling","topics/games-settings", "topics/hotkeys-best-practices", "topics/second-monitor", "topics/data-persistence", "topics/reduce-opk-size", "topics/using-tab", "topics/type-definition-file", "topics/create-download-link", "topics/video-capture", "topics/auto-highlights"],
+			["topics/best-practices-overview", "topics/app-specific-experience", "topics/first-time-user-experience", "topics/user-flow-error-handling", "topics/launch-time-performance", "topics/communication-guidelines", "topics/user-flow-and-error-handling","topics/games-settings", "topics/hotkeys-best-practices", "topics/second-monitor", "topics/data-persistence", "topics/reduce-opk-size", "topics/using-tab", "topics/type-definition-file", "topics/create-download-link", "topics/video-capture"],
 		"Using Windows API":
 			["topics/using-overwolf-windows", "topics/communicating-between-windows", "topics/windows-types", "topics/windows-resolution-size-position", "topics/windows-tips"],
 		"Using Plugins":
@@ -53,7 +53,7 @@
 			"overwolf.logitech":
 			["api/overwolf-logitech", "api/overwolf-logitech-arx", "api/overwolf-logitech-led"],
 			"overwolf.media":
-			["api/overwolf-media", "api/overwolf-media-audio", "api/overwolf-media-replays","api/overwolf-media-videos"],
+			["api/overwolf-media", "api/overwolf-media-audio", "api/overwolf-media-replays","api/overwolf-media-videos", "api/auto-highlights"],
 			"overwolf.os": ["api/overwolf-os","api/overwolf-os-tray"],
 			"overwolf.profile":	["api/overwolf-profile", "api/overwolf-profile-subscriptions"],
 			"overwolf.settings":
