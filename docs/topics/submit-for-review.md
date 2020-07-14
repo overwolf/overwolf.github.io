@@ -25,7 +25,7 @@ These notes will not be displayed in your app as a changelog, cannot be fetched 
 ## 2. Submit for review
 
 After you finish to update the release notes, the "submit for review" button will turn enabled.
-Hitting submit will send it to our QA team and display the message: "Version X was succesfully submited for review".
+Hitting submit will send it to our QA team and display the message: "Version X was successfully submitted for review".
 
 ![release](../assets/dev-console/submit-review/submit.png)
 

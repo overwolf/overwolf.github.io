@@ -1,10 +1,10 @@
 ---
 id: assets-req-marketing
-title: Marketing asset requierments
-sidebar_label: Marketing asset requierments
+title: Marketing asset requirements
+sidebar_label: Marketing asset requirements
 ---
 
-##  Assets requierments for media kit
+##  Assets requirements for media kit
 
 ### Assets Requests from Developers
 -   The assets you provide us with be used to ensure the landing pages and marketing materials we make are as on-brand as they can be.
