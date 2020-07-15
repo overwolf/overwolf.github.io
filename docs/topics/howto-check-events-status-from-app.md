@@ -104,8 +104,3 @@ https://game-events-status.overwolf.com/5426_prod.json
 }
 ```
 
-To circumvent potential local caching issues, where the status is incorrectly returned for longer than necessary, add the current UNIX timestamp after the request endpoint. This will ensure you get the latest known status of the game events every request.
-
-```js
-var url = "https://game-events-status.overwolf.com/5426_prod.json?time="+Math.round((new Date()).getTime() / 1000);
-```
