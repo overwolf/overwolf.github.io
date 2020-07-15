@@ -33,4 +33,45 @@ Below, you can find a list of games that support highlights.
 * Valorant
 * Overwatch
 
-Soon, we will add the list of supported auto-highlights for each game.
+## How it works
+
+The highlights settings for all the games are saved in a file called `highlights.json`, located under the OW installation folder. 
+You can view the latest version of this file on our GitHub [here](https://github.com/overwolf/community-gists/tree/master/highlights.json).
+
+the gameID's defines each game, and for each game, there is an events array, that contains a list of features that support highlights.
+
+An example highlights settings for "League of Legends":
+
+
+```json
+"5426": { 
+		"events": {
+			"death": {
+				"timing": {
+					"past": 12000,
+					"future": 3000,
+					"pending": 12000
+				}
+			},
+			"assist": {
+				"timing": {
+					"past": 12000,
+					"future": 8000,
+					"pending": 12000
+			 	}
+			}
+		}
+}
+```
+
+As you can see, for each feature there is a timing object with three fields: past, future, pending.
+
+* Past
+* Future
+* Pending
+
+#### Note 
+
+These settings are shared between ALL the OW apps, and each change in the capture timing affects all the other apps. Besides, only the OW team can edit this file as it's part of the client code (every local change will be overwritten on an OW client update).
+
+If you have any request for timing changes or adding new games/features to this list, please create a feature request on [our Q&A site](https://discuss.developers.overwolf.com/).
