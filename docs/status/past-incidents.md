@@ -278,6 +278,9 @@ No logs.
 Rainbow 6 Siege
 ---------------
 
+**Resolved** This incident has been resolved.
+Jul 14, 21:00 PM GMT+3
+
 **Investigating** - Rainbow Six game events are down (both Vulkan and DX versions), we are working on a fix.  
 Jul 14, 17:00 PM GMT+3
 
