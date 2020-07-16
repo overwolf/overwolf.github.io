@@ -66,9 +66,10 @@ An example highlights settings for "League of Legends":
 
 As you can see, for each feature there is a timing object with three fields: past, future, pending.
 
-* Past
-* Future
-* Pending
+* Past - Time before the event to record.
+* Future - Time after the event to record.
+* Pending -Time that we wait for another event to trigger to merge several events into one highlight.  
+  For example, if there is a Kill and immediately after, there is a Death. According to the pending value of the Kill, the two highlights might merge into one highlight video, instead of two overlapping videos.
 
 #### Note 
 
