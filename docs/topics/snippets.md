@@ -32,5 +32,8 @@ Please note that these are community code snippets, and the usage is at your own
 * AlbericoD published a **package of react hooks** for Overwolf:  
   NPM: https://www.npmjs.com/package/overwolf-hooks  
   Repo: https://github.com/AlbericoD/overwolf-hooks#readme
+  
+* [gosuai/overwolf-webproxy-plugin](https://github.com/gosuai/overwolf-webproxy-plugin).
+  Plugin that starts a local webserver with CORS headers.
 
 
