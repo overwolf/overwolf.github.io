@@ -92,6 +92,7 @@ It will dramatically improve your app performance and help design an efficient, 
 * You should implement the window header with the control elements (like maximize, minimize) independently, by yourself in the HTML/CSS. (you can use our [UI components samples](../start/sample-app-ui-components))
 * You should implement dragging behavior independently, by yourself. (you can use our [sample app](../start/sample-app-overview) that already implemented this feature)
 * Native windows change their size according to the users' DPI automagically. (to disable that use the disable_auto_dpi_sizing flag)
+* On native window, `window.screen` returns the dimensions of the desktop with calculating DPI. (on non-native window, it returns without calculating DPI)
 
 #### Example from the manifest.json:
 

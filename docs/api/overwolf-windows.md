@@ -100,6 +100,7 @@ callback  | function                   | A callback function which will be calle
 A callback function which will be called with the status of the request and a [ODKWindow](#odkwindow-object) Object.
 * The callback param "stateEx" returns one of these states:  
   [closed | minimized | hidden | normal | maximized].
+* Returns the width/height of the window without calculating the DPI.
 
 ```json
 {
@@ -264,6 +265,8 @@ callback             | function                                     | Will be ca
 
 > Changes the window size to the new width and height, in pixels.
 
+Note: this function doesn't calculate DPI - so you need to pre-calculate DPI before calling it, or, use [this signature](#changesizechangesizeparams-callback) that calculates DPI - so you don't need to calculate it yourself.
+
 Parameter           | Type       | Description                                                                                  |
 --------------------| -----------| ---------------------------------------------------------------------------------------------|
 windowId	          | string     | The id or name of the window to resize                                                       |
@@ -280,9 +283,12 @@ callback (Optional) | function   | A callback which is called when the size chan
 ## changeSize(changeSizeParams, callback)
 #### Version added: 0.149
 
-> Changes the window size to the new width and height, in pixels, including DPI scale when resizing (that is relevant only for native windows).
+> Changes the window size to the new width and height, in pixels, including DPI scale when resizing.
 
-Note: this function works for all the [window types](../topics/windows-types).
+#### Notes
+
+* This function calculates DPI, so you don't need to calculate it yourself.
+* This function works for all the [window types](../topics/windows-types).
 
 Parameter               | Type       | Description                                                                                  |
 ------------------------| -----------| ---------------------------------------------------------------------------------------------|
@@ -313,6 +319,8 @@ overwolf.windows.changeSize(sizeSettings ,console.log);
 #### Version added: 0.78
 
 > Changes the window position in pixels from the top left corner.
+
+Note: changePosition() calculates DPI before changing position (so you should pass coordinates without calculating their DPI).
 
 Parameter           | Type       | Description                                                                                    |
 --------------------| -----------| -----------------------------------------------------------------------------------------------|

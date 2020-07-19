@@ -79,6 +79,20 @@ You can allow users to choose their preferred window size in the app's settings.
   </a>
 </div>
 
+### DPI
+
+We gather a couple of essential facts to remember regarding window's size/position and DPI:
+
+* [overwolf.windows.getCurrentWindow()](../api/overwolf-windows#getcurrentwindowcallback) - returns the width/height of the window without calculating the DPI.
+* [window.screen](https://developer.mozilla.org/en-US/docs/Web/API/Window/screen) property:
+  * On a non-native window, returns the dimensions of the desktop without calculating the DPI.
+  * On a native window, returns the dimensions of the desktop with calculating DPI.
+* [overwolf.windows.changePosition()](../api/overwolf-windows#changepositionwindowid-left-top-callback) - Calculates DPI before changing position, so you should pass coordinates without calculating their DPI.
+* overwolf.windows.changeSize() - There are two signatures for this function: 
+  * [The "old" signature](../api/overwolf-windows#changesizewindowid-width-height-callback) does not calculate DPI - so you need to pre-calculate DPI before calling it. 
+  * [The "new" signature](../api/overwolf-windows#changesizechangesizeparams-callback) calculates DPI - so you do not need to calculate it yourself.
+* The HTML elements will return width/height with calculating DPI (e.g., in dev tools, select an element and see the width/height of an element).
+
 ## Window position
 
 ### Window coordinates overview
