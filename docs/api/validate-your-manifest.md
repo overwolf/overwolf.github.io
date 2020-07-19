@@ -10,7 +10,16 @@ You can find the most updated schema in our <a href="https://github.com/overwolf
 
 ## Online validation
 
-1. Go to <a href="http://www.jsonschemavalidator.net" target="_blank">jsonschemavalidator.net</a> or similar service.
+#### Validate your JSON structure
+
+Make sure that your **manifest.json** file is a strictly valid JSON, without trailing commas, etc.  
+You can use <a href="https://jsonlint.com/" target="_blank">jsonlint.com</a> or any other similar services.
+
+#### Validate your schema
+
+Make sure that your **manifest.json** file contains only valid Overwolf flags, properties, etc.
+
+1. Go to <a href="http://www.jsonschemavalidator.net" target="_blank">jsonschemavalidator.net</a> or similar service like <a href="http://www.jsonschemalint.com" target="_blank">jsonschemalint.com</a>.
 2. Copy-paste the [schema's](https://raw.githubusercontent.com/overwolf/community-gists/master/overwolf-manifest-schema.json) and your manifest.json code into the "Schema" and "Input JSON" windows, respectively.
 3. Check for any errors or missing data.
 
