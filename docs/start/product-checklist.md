@@ -21,6 +21,6 @@ sidebar_label: Product checklist
 
 -   Write Knowledge Base articles ([Read more here](https://overwolf.github.io/docs/start/add-a-knowledge-base-to-app)).
 
--   Your app supports at least 10 languages.
+-   Your app supports at least 5 languages.
 
 -   The app has 2nd week retention greater than 40%.
