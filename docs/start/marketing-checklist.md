@@ -32,12 +32,11 @@ If you have a refer-a-friend program, an in-app store, or prizes you want to han
 -   The app has passed Overwolf's marketing review and has more than 10,000 MAU
 
 -   Create a dedicated page on your website, or include a specific section in your home page, describing why your app is built on Overwolf. For example, you can refer to the following:
+  *   In-game overlay capabilities.
 
--   In-game overlay capabilities.
+  *   Real-time game events and APIs.
 
--   Real-time game events and APIs.
+  *   A fast and simple development framework -- allows you to write an in-game app with just HTML and JS without the need to master C++.
 
--   A fast and simple development framework -- allows you to write an in-game app with just HTML and JS without the need to master C++.
-
--   Helps you in monetization, which allows you to focus on the app more and thus drives a better product for your users.
+  *   Helps you in monetization, which allows you to focus on the app more and thus drives a better product for your users.
 
