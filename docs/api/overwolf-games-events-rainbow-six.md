@@ -132,7 +132,7 @@ health | players | Player’s current health – (0-100)</br>`{"player":{"health
 score | players | Player’s current score</br>`{"player":{"score":"335"}}` |   |   123.0 |
 kills | players | Total number of kills by the player</br>`{"player":{"kills":"0"}}` |   |   123.0 |
 deaths | players | Total number of player's deaths</br>`{"player":{"deaths":"1"}}` |   |   123.0 |
-operatorid | players | The numeric ID of the chosen operator.<br>`{"player":{"operator":"514"}}` |  |   151.0 |
+operator | players | The numeric ID of the chosen operator.<br>`{"player":{"operator":"514"}}` |  |   151.0 |
 
 
 
@@ -147,7 +147,7 @@ As you can see, this object includes:
 * name - player's name
 * team - Blue/Orange
 * is_local - local player or not (Boolean)
-* [operator id](https://github.com/overwolf/community-gists/blob/master/siege_operator_ids.json) - The ID of the selected operator (available for team members only)
+* [operator](https://github.com/overwolf/community-gists/blob/master/siege_operator_ids.json) - The ID of the selected operator (available for team members only)
 * kills - Total amount of kills made by the player
 * deaths - Total amount of deaths
 * score - Player score in the current round
