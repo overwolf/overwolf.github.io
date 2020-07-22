@@ -211,6 +211,12 @@ MTGA Arena
 ---------
 
 **Resolved** - This incident has been resolved.  
+Jul 17, 03:41 PM GMT+3
+
+**Investigating** - MTGA events are down.  
+Jul 16, 08:33 PM GMT+3
+
+**Resolved** - This incident has been resolved.  
 Jun 25, 09:18 PM GMT+3
 
 **Investigating** - MTGA events are down.  
@@ -234,6 +240,9 @@ Mar 14, 04:53 PM GMT+3
 
 PUBG
 ----
+
+**Investigating** - PUBG events are down.  
+Jul 22, 10:10 AM GMT+3
 
 **Resolved** - This incident has been resolved.  
 Jun 19, 08:21 PM GMT+3
