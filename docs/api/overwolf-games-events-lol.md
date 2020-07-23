@@ -159,7 +159,7 @@ key          | Category    | Values                    | Notes                 |
 ------------ | ------------| ------------------------- | --------------------- | ------------- | 
 matchStarted | game_info   | true/false (string)       |See [notes](#matchStarted-note)|   140.0       |
 matchId      | game_info   | Current match id          |See [notes](#matchId-note)     |   120.0       |
-queueId      | game_info   | Current match [queue id](https://developer.riotgames.com/game-constants.html)|  `queueId:440`        |   120.0       |
+queueId      | game_info   | Current match [queue id](https://developer.riotgames.com/game-constants.html)|  **This event is not available anymore**        |   120.0       |
 
 :::tip
 As there is no matchOutcome event for LoL, you can detect it by using the [announcer](l#announcer) or [live_client_data](#live_client_data) events.
