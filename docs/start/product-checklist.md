@@ -23,4 +23,6 @@ sidebar_label: Product checklist
 
 -   Your app supports at least 5 languages.
 
+-   Your app supports 2nd screen functionality, by offering real time stats, builds, tips, leaderboards or any other relevant info 
+
 -   The app has 2nd week retention greater than 40%.
