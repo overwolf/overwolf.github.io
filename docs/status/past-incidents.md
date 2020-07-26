@@ -11,6 +11,12 @@ Apex Legends
 ------------
 
 **Resolved** This incident has been resolved.  
+Jul 26, 13:40 PM GMT+3
+
+**Investigating** - Apex game events are down we are working on a fix.  
+Jul 25, 10:26 PM GMT+3
+
+**Resolved** This incident has been resolved.  
 Jun 26, 19:08 PM GMT+3
 
 **Investigating** - Apex game events are down we are working on a fix.  
