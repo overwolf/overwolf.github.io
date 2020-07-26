@@ -30,7 +30,7 @@ The overwolf.benchmarking API is not regularly maintained and some of it’s met
 
 > Requests hardware information within a given interval.
 
-Note that this call requires Overwolf to have Administrative permissions, and should they be missing, the callback will return 'Permissions Required'. You will then have to ask the app user for permissions and according to the user’s choice, call `requestPermissions`. It is then necessary to call `requestProcessInfo` again.
+Note that this call requires Overwolf to have Administrative permissions, and should they be missing, the callback will return 'Permissions Required'. You will then have to ask the app user for permissions and according to the user’s choice, call [requestPermissions](#requestPermissions). It is then necessary to call [requestProcessInfo](#requestprocessinfo) again.
 
 Parameter | Type     | Description                                                                                        |
 ----------| ---------| -------------------------------------------------------------------------------------------------- |
@@ -43,7 +43,7 @@ callback  | function | Returns with the result                           |
 
 > Requests process information within a given interval. 
 
-See requestPermissions for administrative permissions instructions.
+See [requestPermissions](#requestPermissions) for administrative permissions instructions.
 
 Parameter | Type     | Description                                                                                        |
 ----------| ---------| -------------------------------------------------------------------------------------------------- |
