@@ -63,7 +63,7 @@ kills             | match_info  | Total number of kills in the match |          
 
 Event       | Event Data   | Fired When    | Notes              | Since GEP Ver. |
 ------------| -------------| --------------| ------------------ | --------------|
-kill        | null         | The local player killed another player | |  110.0.0  |
+kill        | totalKills – total kills for player in match         | The local player killed another player | |  110.0.0  |
 knockout    | null     | The local player knocked out another player |  | 110.0.0  |
 hit         | isHeadshot – bool(“true” when the hit is a “headshot”)| The local player hits an enemy with a weapon (hits with a pickaxe are not counted) See [notes](#hit-note) |                    |     110.0.0     |
 
