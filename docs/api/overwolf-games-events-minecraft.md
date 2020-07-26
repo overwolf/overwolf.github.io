@@ -25,6 +25,8 @@ It is highly recommended to communicate errors and warnings to app users.
 
 Check the current game event status [here](../status/all). Alternately, you can easily check that status from your app itself, [using our API](../topics/howto-check-events-status-from-app).
 
+<b>Important Note</b>: The events are currently available only to the standard game. We do not support moded  clients.
+
 ## gep_internal
 
 ### Info Updates
