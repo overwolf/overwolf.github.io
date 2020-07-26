@@ -8,6 +8,11 @@ Follow this entry for ongoing updates and changes to the project or tools.
 
 Here you can find our [Developers Roadmap](https://trello.com/b/1V10E4IB/overwolf-roadmap).
 
+## Version 0.153 (Aug. 2020)
+
+Work is still in progress.
+
+
 ## Version 0.149 (Jul. 2020)
 
 #### API
