@@ -180,5 +180,12 @@ const GamesMetadata = {
     iconUrl: "/docs/assets/games-logos/overwatch.png",
     iconLargeUrl: "/docs/assets/games-logos/large/overwatch.png",
     name: "Overwatch"
+  },
+  8032: {
+    id: 8032,
+    path: "/docs/status/minecraft",
+    iconUrl: "/docs/assets/games-logos/minecraft.png",
+    iconLargeUrl: "/docs/assets/games-logos/large/minecraft.png",
+    name: "Minecraft"
   }
 }
