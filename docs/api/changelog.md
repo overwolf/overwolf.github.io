@@ -10,8 +10,8 @@ Here you can find our [Developers Roadmap](https://trello.com/b/1V10E4IB/overwol
 
 ## Version 0.153 (Aug. 2020)
 
-Work is still in progress.
-
+* [Minecraft](overwolf-games-events-minecraft)
+  * New supported game
 
 ## Version 0.149 (Jul. 2020)
 
