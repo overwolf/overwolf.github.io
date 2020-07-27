@@ -27,6 +27,7 @@ Common use cases:
 * [overwolf.utils.isTouchDevice()](#istouchdevicecallback)
 * [overwolf.utils.openUrlInDefaultBrowser()](#openurlindefaultbrowserurl)
 * [overwolf.utils.openUrlInOverwolfBrowser()](#openurlinoverwolfbrowserurl)
+* [overwolf.utils.openUrlInOverwolfBrowser()](#openurlindefaultbrowserurl-openurloptions)
 * [overwolf.utils.getSystemInformation()](#getsysteminformationcallback)
 * [overwolf.utils.getPeripherals()](#getperipheralscallback)
 * [overwolf.utils.openStoreOneAppPage()](#openstoreoneapppageappid)
@@ -46,7 +47,7 @@ Common use cases:
 * [overwolf.utils.MonitorInfo](#monitorinfo-object) Object
 * [overwolf.utils.Display](#display-object) Object
 * [overwolf.utils.OpenFilePickerResult](#openfilepickerresult-object) Object
-
+* [overwolf.utils.OpenUrlOptions](#openurloptions-object) Object
 
 
 ## placeOnClipboard(data)
@@ -212,6 +213,16 @@ Parameter                | Type     | Description                               
 url                      | string   | A url to open                                                                |
 targetTabName [optional] | string   | A target tab - so that multiple calls will end up in the same tab |
 
+## openUrlInDefaultBrowser(url,openUrlOptions)
+#### Version added: 0.153
+
+> Opens the url in the user’s default browser.
+
+Parameter   | Type     | Description                                 |
+----------- | ---------| --------------------------------------------|
+url         | string   | A url to open                               |
+openUrlOptions | [OpenUrlOptions](#openurloptions-object) Object   | allows extra behaviour |
+
 ## getSystemInformation(callback)
 #### Version added: 0.92
 
@@ -341,6 +352,7 @@ callback	   | function | A callback with the result                  |
 | LoginPage        |                                                                                                      |
 | OneAppPage       | app's profile page that popup when you click on an app tile in the store                             |
 | SubscriptionPage |                                                                                                      |
+| ReviewsPage      |                                                                                                      |
 
 ## OpenStoreParams Object
 #### Version added: 0.137
@@ -588,3 +600,14 @@ url                | string   | a url to the selected file                  |
 ```
 
 You can use the retrieved URL later to serve the stated file: for example, to upload it to a remote server, you can use XMLHttpRequest. Using a file URL (file://) and not OW URL (overwolf-fs://), will trigger a cross-origin error.
+
+## OpenUrlOptions Object
+#### Version added: 0.153
+
+> Container for extra browser behaviour.
+
+Right now "skip_in_game_notification" is the only option.  
+
+Parameter                 | Type  | Description                   |
+------------------------- | ------| ----------------------------- |
+skip_in_game_notification | bool  | When set to true, the alert notifying in-game users that their browser is about to open will not display.   |

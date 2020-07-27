@@ -87,7 +87,7 @@ Please make sure to read our guide on [how to use Overwolf windows](../topics/us
 This function allows you to get direct access to your main index page (which should be a controller/background page) and it’s HTML Window object (and thus any JS function or DOM element). Read more in the ["Communication between windows"](../topics/communicating-between-windows) section.
 
 ## getCurrentWindow(callback)
-#### Version added: 0.78
+#### Version added: 0.78.  updated: 0.153
 
 > Calls the given callback function with the current window object as a parameter.
 
@@ -112,6 +112,7 @@ A callback function which will be called with the status of the request and a [O
         "height": 600,
         "top": 153,
         "left": 417,
+        "monitorId": "\\.\DISPLAY4",
         "isVisible": true,
         "state": "Minimized", //deprecated and kept only for backward compatibility
         "stateEx": "hidden", //always use this param to get the state of the window

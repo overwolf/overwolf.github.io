@@ -132,3 +132,5 @@ Note that when you move a **native window** between monitors with different DPIs
 ### determine which monitor the window is displayed
 
 Once you get the X & Y coordinates of a window (at the end of dragMove(), using getCurrentWindow(), etc.), With a simple calculation, you can determine which monitor the window is displayed. (For example, if you know that the 1st monitor has 1080px width, and the current window position start beyond that, it means that the window is displayed on the second monitor, etc.)
+
+Update: now you can get the monitor id of the current window using [overwolf.windows.getCurrentWindow()](../api/overwolf-windows#getcurrentwindowcallback)

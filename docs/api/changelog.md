@@ -10,12 +10,33 @@ Here you can find our [Developers Roadmap](https://trello.com/b/1V10E4IB/overwol
 
 ## Version 0.153 (Aug. 2020)
 
+Note that iterations 150 to 153 were combined into a single iteration.  
+In addition, the work on the documentation for this version is still in-progress.
+
+#### API
+
+* [overwolf.utils.openUrlInDefaultBrowser()](overwolf-utils#openurlindefaultbrowserurl-openurloptions) - Now allows extra behaviour. Right now "skip_in_game_notification" is the only option. When set to true, the alert notifyi8ng in-game users that their browser is about to open will not display. 
+* Add to [overwolf.utils.enums.eStorePage](overwolf-utils#estorepage-enum) - Now you can Open the requested app’s reviews/feedabck page in the Overwolf Appstore.
+* [overwolf.windows.getCurrentWindow()](overwolf-windows#getcurrentwindowcallback) now returns also the monitor id.  
+  Now you quickly determine which monitor the window is displayed.
+
+#### Platform
+
+* Chrome Developer Tools disabled for OW windows as default.  
+  From now on, when clicking Ctrl+Shift+I on a window will NOT open the developer tools. (Even if the [disable_dt](manifest-json#disable_dt) manifest flag is set to false). The only way to enable it back is by changing a registry key.  
+  This key will be published on our slack only for OW whitelisted developers. Of course, you can always [contact us](../support/contact-us) and request it.
+* Feature flag  - ablility to turn on\off client features (via command line, remote server, remote config app).
+* Allow pin to taskbar (and launch the app + app icon).
+* "Jump list" to show the extension's icon.
+
+#### Game events
+
 * [Minecraft](overwolf-games-events-minecraft)
   * New supported game
 
 ## Version 0.149 (Jul. 2020)
 
-#### API
+#### API and Platform
 
 * [overwolf.windows.changeSize()](overwolf-windows#changesizechangesizeparams-callback).  
   Accept now a new boolean param whether to automatically account for DPI scale when resizing ("auto_dpi_resize").
@@ -48,7 +69,7 @@ Here you can find our [Developers Roadmap](https://trello.com/b/1V10E4IB/overwol
 
 ## Version 0.148 (Jun. 2020)
 
-#### API
+#### API and Platform
 
 * "DPI-aware" feature for [native](../topics/windows-types#native-window) windows:  
   It means that when you move the native window between monitors with different DPIs for example from 100 DPI to 125 DPI, the window will automatically resize according to the new DPI.  
@@ -61,7 +82,7 @@ Here you can find our [Developers Roadmap](https://trello.com/b/1V10E4IB/overwol
 
 Note that iteration 146 and 147 were combined into a single iteration.  
 
-#### API
+#### API and Platform
 
 * New feature: [overwolf.window.flash()](overwolf-windows#flashwindowid-behaviorcallback)  
   Flashes a window that is not in focus (for example, minimized to taskbar).  
@@ -108,7 +129,7 @@ Note that iteration 146 and 147 were combined into a single iteration.
 
 Note that iteration 144 and 145 were combined into a single iteration.
 
-#### API
+#### API and Platform
 
 * New API: [overwolf.campaigns]() for the new LoL "Refer a friend" feature. **Note: the docs for this API will be released soon**
 * Cookie Sync - Cookie Syncing was updated to support Microsoft Edge (non-dev version) and the new Firefox schema.
@@ -152,7 +173,7 @@ Note that iteration 144 and 145 were combined into a single iteration.
 
 ## Version 0.142 (Feb. 2020)
 
-#### API
+#### API and Platform
 
 * New API - [overwolf.settings.hotkeys](overwolf-settings-hotkey).  
   Returns an object with hotkeys methods and events.
