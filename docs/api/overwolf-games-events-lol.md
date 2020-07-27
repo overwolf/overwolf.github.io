@@ -200,12 +200,23 @@ key          | Category    | Values                    | Notes                 |
 ------------ | ----------- | ------------------------- | --------------------- | -------------- | 
 pseudo_match_id | match_info | Current match’s ID code. Example:</br> `a4e8fc75-b35e-466f-976c-09f4ee633d95`  |  This is an Overwolf-generated code unrelated to Riot Games.  |   0.130 |
 game_mode | match_info | Whether the current game mode is TFT or default LoL. See [notes](#game_mode-notes) |                 |   133.0       |
+match_paused | match_info | Whether a match is paused or not (Bool - True/False). See [notes](#match_paused-notes) |                 |   153.1       |
+
 #### *game_mode* notes
 
 Data example:
 
 `{"info":{"match_info":{"game_mode":"tft"}},"feature":"match_info"}`  
 `{"info":{"match_info":{"game_mode":"lol"}},"feature":"match_info"}`
+
+#### *match_paused* note
+
+Data Example:
+
+```json
+{"feature":"match_info","category":"match_info","key":"match_paused","value":true}
+{"feature":"match_info","category":"match_info","key":"match_paused","value":false}
+```
 
 ## `death`
 
