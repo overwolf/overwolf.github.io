@@ -98,6 +98,10 @@ Data Example:
 {"feature":"match_info","category":"match_info","key":"server","value":"play.omniverse.rocks"}
 ```
 
+#### note regarding statistics
+
+To activate and extract the data out of the statistics you must open the main menu (ESC) and click on the statistics.
+
 #### *general_stats* note
 
 Data Example:
