@@ -15,7 +15,7 @@ In addition, the work on the documentation for this version is still in-progress
 
 #### API
 
-* [overwolf.utils.openUrlInDefaultBrowser()](overwolf-utils#openurlindefaultbrowserurl-openurloptions) - Now allows extra behaviour. Right now "skip_in_game_notification" is the only option. When set to true, the alert notifyi8ng in-game users that their browser is about to open will not display. 
+* [overwolf.utils.openUrlInDefaultBrowser()](overwolf-utils#openurlindefaultbrowserurlopenurloptions) - Now allows extra behaviour. Right now "skip_in_game_notification" is the only option. When set to true, the alert notifyi8ng in-game users that their browser is about to open will not display. 
 * Add to [overwolf.utils.enums.eStorePage](overwolf-utils#estorepage-enum) - Now you can Open the requested app’s reviews/feedabck page in the Overwolf Appstore.
 * [overwolf.windows.getCurrentWindow()](overwolf-windows#getcurrentwindowcallback) now returns also the monitor id.  
   Now you quickly determine which monitor the window is displayed.

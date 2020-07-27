@@ -27,7 +27,7 @@ Common use cases:
 * [overwolf.utils.isTouchDevice()](#istouchdevicecallback)
 * [overwolf.utils.openUrlInDefaultBrowser()](#openurlindefaultbrowserurl)
 * [overwolf.utils.openUrlInOverwolfBrowser()](#openurlinoverwolfbrowserurl)
-* [overwolf.utils.openUrlInOverwolfBrowser()](#openurlindefaultbrowserurl-openurloptions)
+* [overwolf.utils.openUrlInOverwolfBrowser()](#openurlindefaultbrowserurlopenurloptions)
 * [overwolf.utils.getSystemInformation()](#getsysteminformationcallback)
 * [overwolf.utils.getPeripherals()](#getperipheralscallback)
 * [overwolf.utils.openStoreOneAppPage()](#openstoreoneapppageappid)
