@@ -19,6 +19,7 @@ In addition, the work on the documentation for this version is still in-progress
 * Add to [overwolf.utils.enums.eStorePage](overwolf-utils#estorepage-enum) - Now you can Open the requested app’s reviews/feedabck page in the Overwolf Appstore.
 * [overwolf.windows.getCurrentWindow()](overwolf-windows#getcurrentwindowcallback) now returns also the monitor id.  
   Now you quickly determine which monitor the window is displayed.
+* New manifest flag - "process_name".
 
 #### Platform
 
