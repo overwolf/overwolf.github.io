@@ -95,25 +95,25 @@
 <p>Type definitions for the <code>OwAd</code> class and the various interfaces it uses can be found at our <a href="https://github.com/overwolf/types/blob/master/owads.d.ts">types</a> github.
 Import this file to your app to get autocompletion and type inference with the <code>OwAd</code>.</p>
 <h4><a class="anchor" aria-hidden="true" id="sample-code-for-handling-ads-with-minimizedrestored-window"></a><a href="#sample-code-for-handling-ads-with-minimizedrestored-window" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Sample code for handling ads with minimized/restored window</h4>
-<pre><code class="hljs">// define the event handler
-function <span class="hljs-keyword">on</span>WindowStateChanged(<span class="hljs-keyword">state</span>) {
-  console.<span class="hljs-keyword">log</span>(`Window <span class="hljs-keyword">state</span> changed: ${JSON.stringify(<span class="hljs-keyword">state</span>)}`);
+<pre><code class="hljs"><span class="hljs-comment">// define the event handler</span>
+<span class="hljs-selector-tag">function</span> <span class="hljs-selector-tag">onWindowStateChanged</span>(state) {
+  <span class="hljs-selector-tag">console</span><span class="hljs-selector-class">.log</span>(<span class="hljs-built_in">`Window state changed: ${JSON.stringify(state)}`</span>);
 
-  if(<span class="hljs-keyword">state</span>) {
-    // when <span class="hljs-keyword">state</span> changes <span class="hljs-keyword">to</span> minimized, call removeAd()
-    if (<span class="hljs-keyword">state</span>.window_state === <span class="hljs-string">"minimized"</span>) {
-      owAdInstance.removeAd();
+  <span class="hljs-selector-tag">if</span>(state) {
+    <span class="hljs-comment">// when state changes to minimized, call removeAd()</span>
+    <span class="hljs-selector-tag">if</span> (state.window_state === <span class="hljs-string">"minimized"</span>) {
+      <span class="hljs-selector-tag">owAdInstance</span><span class="hljs-selector-class">.removeAd</span>();
     }
-    // when <span class="hljs-keyword">state</span> changes <span class="hljs-keyword">from</span> minimized <span class="hljs-keyword">to</span> normal, call refreshAd()
-    else if(<span class="hljs-keyword">state</span>.window_previous_state === <span class="hljs-string">"minimized"</span> &amp;&amp; <span class="hljs-keyword">state</span>.window_state === <span class="hljs-string">"normal"</span>){
-      owAdInstance.refreshAd();
+    <span class="hljs-comment">// when state changes from minimized to normal, call refreshAd()</span>
+    <span class="hljs-selector-tag">else</span> <span class="hljs-selector-tag">if</span>(state.window_previous_state === <span class="hljs-string">"minimized"</span> &amp;&amp; state.window_state === <span class="hljs-string">"normal"</span>){
+      <span class="hljs-selector-tag">owAdInstance</span><span class="hljs-selector-class">.refreshAd</span>();
     }
   }
 }
 
-// call the overwolf api
-overwolf.windows.<span class="hljs-keyword">on</span>StateChanged.removeListener(<span class="hljs-keyword">on</span>WindowStateChanged);
-overwolf.windows.<span class="hljs-keyword">on</span>StateChanged.addListener(<span class="hljs-keyword">on</span>WindowStateChanged);
+<span class="hljs-comment">// call the overwolf api</span>
+<span class="hljs-selector-tag">overwolf</span><span class="hljs-selector-class">.windows</span><span class="hljs-selector-class">.onStateChanged</span><span class="hljs-selector-class">.removeListener</span>(onWindowStateChanged);
+<span class="hljs-selector-tag">overwolf</span><span class="hljs-selector-class">.windows</span><span class="hljs-selector-class">.onStateChanged</span><span class="hljs-selector-class">.addListener</span>(onWindowStateChanged);
 </code></pre>
 <h2><a class="anchor" aria-hidden="true" id="events"></a><a href="#events" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Events</h2>
 <p>You can use Overwolf ad objects created by calling <code>new OwAd()</code>) to listen to events related to the displayed ad. Registering an event can be done by calling the function <code>addEventListener</code> on the ad object. Like other libraries, the first parameter sent to <code>addEventListener</code> is the name of the event, and the second is a handler function for the event.</p>
