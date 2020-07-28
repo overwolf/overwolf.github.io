@@ -27,7 +27,6 @@ In addition, the work on the documentation for this version is still in-progress
 * `Chrome Developer Tools disabled for OW windows as default`.  
   From now on, when clicking Ctrl+Shift+I on a window will NOT open the developer tools. (Even if the [disable_dt](manifest-json#disable_dt) manifest flag is set to false). The only way to enable it back is by changing a registry key.  
   This key will be published on our slack only for OW whitelisted developers. Of course, you can always [contact us](../support/contact-us) and request it.
-* Feature flag  - ability to turn on\off client features (via command line, remote server, remote config app).
 * Allow pin to the taskbar (and launch the app + app icon).
 * "Jump list" to show the extension's icon.
 
