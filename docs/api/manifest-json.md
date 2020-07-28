@@ -129,7 +129,9 @@ Note that not all flags are mandatory - we included all available flags for docu
                 "<a href="#developer-game-settings">filter</a>": <span style="font-weight: 400;">"*.json;*.html"</span><span style="font-weight: 400;"> 
             },
         //If set to true, app local data will not be cleaned up after app uninstallation
-        "<a href="#disable_cleanup">disable_cleanup</a>": true
+        "<a href="#disable_cleanup">disable_cleanup</a>": true,
+        "<a href="#process_name">process_name</a>": "my sample app",
+
     }
 }
 </code></pre>
@@ -227,7 +229,8 @@ Note that not all flags are mandatory - we included all available flags for docu
                 "<a href="#developer-game-settings">reload_delay</a>": 1000,
                 "<a href="#developer-game-settings">filter</a>": <span style="font-weight: 400;">"*.json;*.html"</span><span style="font-weight: 400;"> 
             },
-        "<a href="#disable_cleanup">disable_cleanup</a>": true
+        "<a href="#disable_cleanup">disable_cleanup</a>": true,
+        "<a href="#process_name">process_name</a>": "my sample app",
     }
 }
 </code></pre>
@@ -322,11 +325,12 @@ A list of additional settings for the app.
 | <a class="anchor" aria-hidden="true" id="hotkeys"></a>hotkeys     | [hotkeys](#hotkeys-object) Object   |  Shortcut keys that trigger an app action.  | 0.78  |
 | <a class="anchor" aria-hidden="true" id="content_scripts"></a>content_scripts | [content_scripts[]](#content_scripts-array) |  A list of content scripts to be loaded for specific windows. |0.78  |
 | <a class="anchor" aria-hidden="true" id="launch_events"></a>launch_events | [launch_event_settings[]](#launch_event_settings-array) |  A list of events causing the app to launch. |0.82  |
-| <a class="anchor" aria-hidden="true" id="user_agent"></a>user_agent | string |  A custom user agent for the app to use when creating http requests. </br> **Please read our [notes](#user_agent-note)** |0.86  |
+| <a class="anchor" aria-hidden="true" id="user_agent"></a>user_agent | string |  A custom user agent for the app to use when creating http requests. </br> **Please read our [notes](#user_agent-notes)** |0.86  |
 | <a class="anchor" aria-hidden="true" id="disable_dt"></a>disable_dt | bool |  Disable opening of the developer tools for the app (with Ctrl+shift+I). </br>*Default value – “false”* |0.118  |
 | <a class="anchor" aria-hidden="true" id="service_providers"></a>service_providers | [service_providers](#service_providers-object) object |  Extra data to external service providers |0.137  |
 | <a class="anchor" aria-hidden="true" id="developer-game-settings"></a>developer | [developer setting](#developer-settings-object) object|  Additional setting for developers. |0.127  |
 | <a class="anchor" aria-hidden="true" id="disable_cleanup"></a>disable_cleanup | bool |  If set to true, app local data will not be cleaned up after app uninstallation. | 0.147  |
+| <a class="anchor" aria-hidden="true" id="process_name"></a>process_name | string |  Allow overriding the OverwolfBrowser.exe process name in task manager. </br> **Please read our [notes](#process_name-notes)** | 0.153  |
 
 #### user_agent Notes
 
@@ -334,6 +338,13 @@ A list of additional settings for the app.
   In case you have to use it, consult with us before. 
 
 * using ‘navigator.userAgent’ will not return the custom user agent, but the default one.
+
+#### process_name Notes
+
+* By adding your custom "process_name" to an app manifest, the OverwolfBrowser.exe process name is overridden.
+* All the processes related to the app ads are now running with the name given them by this flag.
+* All the processes related to the app ads are displayed in the task manager with the name given them by this flag.
+* The process saves here:  `%localappdata%\Overwolf\ProcessCache\%OW_VERSION%\%UID%\|ProcessName|`
 
 
 ## GameTargeting object

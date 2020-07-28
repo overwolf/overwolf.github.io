@@ -19,7 +19,8 @@ In addition, the work on the documentation for this version is still in-progress
 * Add to [overwolf.utils.enums.eStorePage](overwolf-utils#estorepage-enum) - Now you can Open the requested app’s reviews/feedabck page in the Overwolf Appstore.
 * [overwolf.windows.getCurrentWindow()](overwolf-windows#getcurrentwindowcallback) now returns also the monitor id.  
   Now you quickly determine which monitor the window is displayed.
-* New manifest flag - "process_name".
+* New manifest flag - [process_name](manifest-json#process_name-notes).  
+  By adding your custom "process_name" to an app manifest, the OverwolfBrowser.exe process name is overridden, and all the processes related to the app ads are now running with the name given them by this flag.
 
 #### Platform
 
