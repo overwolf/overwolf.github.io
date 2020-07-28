@@ -33,6 +33,9 @@ In addition, the work on the documentation for this version is still in-progress
 
 * [Minecraft](overwolf-games-events-minecraft)
   * New supported game
+* [LOL](overwolf-games-events-lol)
+  * New updates under:
+    * match_info
 
 ## Version 0.149 (Jul. 2020)
 
