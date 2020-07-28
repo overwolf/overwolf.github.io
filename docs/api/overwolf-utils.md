@@ -223,6 +223,17 @@ Parameter   | Type     | Description                                 |
 url         | string   | A url to open                               |
 openUrlOptions | [OpenUrlOptions](#openurloptions-object) Object   | allows extra behaviour |
 
+#### Usage example
+
+Do not display the pop-up warning for the user if in-game:
+
+```js
+overwolf.utils.openUrlInDefaultBrowser("http://overwolf.com", {
+   skip_in_game_notification:true
+  })
+```
+
+
 ## getSystemInformation(callback)
 #### Version added: 0.92
 
@@ -610,4 +621,4 @@ Right now "skip_in_game_notification" is the only option.
 
 Parameter                 | Type  | Description                   |
 ------------------------- | ------| ----------------------------- |
-skip_in_game_notification | bool  | When set to true, the alert notifying in-game users that their browser is about to open will not display.   |
+skip_in_game_notification | bool  | When set to true,  Do not display the pop-up warning for the user if in-game  |
