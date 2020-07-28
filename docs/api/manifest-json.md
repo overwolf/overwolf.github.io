@@ -344,8 +344,6 @@ A list of additional settings for the app.
 * By adding your custom "process_name" to an app manifest, the OverwolfBrowser.exe process name is overridden.
 * All the processes related to the app ads are now running with the name given them by this flag.
 * All the processes related to the app ads are displayed in the task manager with the name given them by this flag.
-* The process saves here:  `%localappdata%\Overwolf\ProcessCache\%OW_VERSION%\%UID%\|ProcessName|`
-
 
 ## GameTargeting object
 An app can declare itself as targeted to one or more games (or to all supported games).
