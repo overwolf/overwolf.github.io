@@ -88,9 +88,9 @@
 <p><code>POST /auth/backend</code></p>
 <p>Providing the credentials obtained from Overwolf:</p>
 <pre><code class="hljs">{
- <span class="hljs-attribute">broadcaster</span>: OUR_STREAMER_ID, <span class="hljs-comment">//the Twitch channel ID that you get from the Twitch API</span>
- <span class="hljs-attribute">client_key</span>: CLIENT_KEY,
- <span class="hljs-attribute">client_secret</span>: CLIENT_SECRET
+<span class="hljs-symbol"> broadcaster:</span> OUR_STREAMER_ID, <span class="hljs-comment">//the Twitch channel ID that you get from the Twitch API</span>
+<span class="hljs-symbol"> client_key:</span> CLIENT_KEY,
+<span class="hljs-symbol"> client_secret:</span> CLIENT_SECRET
 }
 </code></pre>
 <p>If authentication is successful the response will contain a JSON with a token property. This token should be used to connect to the PubSub socket and as a token for authorization from other game event Pubsub endpoints.</p>
