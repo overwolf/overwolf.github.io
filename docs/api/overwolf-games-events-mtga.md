@@ -44,7 +44,7 @@ key          | Category    | Values                    | Notes                 |
 scene | game_info   | Current state (screen) of the game | See [notes](#scene-note) |     150.0      |
 sideboard_cards | game_info   | Cards that are currently held in the sideboard. | See [notes](#sideboard_cards-note) |     150.0      |
 main_deck_cards | game_info   | Cards that are currently in your main deck. | See [notes](#main_deck_cards-note) |     150.0      |
-
+game_mode     | game_info   | The currently played game-mode. | See [notes](#game_mode-note) |     150.0      |
 
 #### *scene* note
 
@@ -96,6 +96,14 @@ Data Example:
   },
   "feature": "game_info"
 }
+```
+
+#### *game_mode* note
+
+Data Example:
+
+```json
+{"feature":"game_info","category":"game_info","key":"game_mode","value":"AIBotMatch"}
 ```
 
 ## `match_info`
