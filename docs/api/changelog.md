@@ -37,6 +37,9 @@ In addition, the work on the documentation for this version is still in-progress
 * [LOL](overwolf-games-events-lol)
   * New updates under:
     * match_info
+* [MTGA](overwolf-games-events-mtga)
+  * New updates under:
+    * game_info
 
 ## Version 0.149 (Jul. 2020)
 
