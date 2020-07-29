@@ -345,6 +345,8 @@ A list of additional settings for the app.
 * All the processes related to the app ads are now running with the name given them by this flag.
 * All the processes related to the app ads are displayed in the task manager with the name given them by this flag.
 
+Note that The flag only affects external processes running, not ones that interact directly with the game. Also, the process will still have Overwolf's signature.
+
 ## GameTargeting object
 An app can declare itself as targeted to one or more games (or to all supported games).
 
