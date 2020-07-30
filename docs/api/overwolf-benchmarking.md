@@ -30,12 +30,23 @@ The overwolf.benchmarking API is not regularly maintained and some of it’s met
 
 > Requests hardware information within a given interval.
 
-Note that this call requires Overwolf to have Administrative permissions, and should they be missing, the callback will return 'Permissions Required'. You will then have to ask the app user for permissions and according to the user’s choice, call [requestPermissions](#requestPermissions). It is then necessary to call [requestProcessInfo](#requestprocessinfo) again.
+See [requestPermissions](#requestpermissionscallback) for administrative permissions instructions.
 
 Parameter | Type     | Description                                                                                        |
 ----------| ---------| -------------------------------------------------------------------------------------------------- |
 interval  | int      | The desired maximal interval (in milliseconds) in which events will be triggered. Minimum is 500ms |
 callback  | function | Returns with the result                           |   
+
+#### Usage
+
+Before calling this function, you should subscribe to the [onHardwareInfoReady](#onhardwareinfoready) event.  
+The event will be triggered every X time, as you set in the requestHardwareInfo interval.
+
+When you want to stop receiving the information, please call [stopRequesting()](#stoprequesting).
+
+#### Example data
+
+See the [onHardwareInfoReady](#onhardwareinfoready) event.
 
 ## requestProcessInfo(interval, callback)
 
@@ -43,12 +54,23 @@ callback  | function | Returns with the result                           |
 
 > Requests process information within a given interval. 
 
-See [requestPermissions](#requestPermissions) for administrative permissions instructions.
+See [requestPermissions](#requestpermissionscallback) for administrative permissions instructions.
 
 Parameter | Type     | Description                                                                                        |
 ----------| ---------| -------------------------------------------------------------------------------------------------- |
 interval  | int      | The desired maximal interval (in milliseconds) in which events will be triggered. Minimum is 500ms |
 callback  | function | Returns with the result                           |   
+
+#### Usage
+
+Before calling this function, you should subscribe to the [onProcessInfoReady](#onprocessinfoready) event.  
+The event will be triggered every X time, as you set in the requestProcessInfo interval.
+
+When you want to stop receiving the information, please call [stopRequesting()](#stoprequesting).
+
+#### Example data
+
+See the [onProcessInfoReady](#onprocessinfoready) event.
 
 ## requestFpsInfo(interval, callback)
 
@@ -60,6 +82,17 @@ Parameter | Type     | Description                                              
 ----------| ---------| -------------------------------------------------------------------------------------------------- |
 interval  | int      | The desired maximal interval (in milliseconds) in which events will be triggered. Minimum is 500ms |
 callback  | function | Returns with the result                          |   
+
+#### Usage
+
+Before calling this function, you should subscribe to the [onFpsInfoReady](#onfpsinfoready) event.  
+The event will be triggered every X time, as you set in the requestFpsInfo interval.
+
+When you want to stop receiving the information, please call [stopRequesting()](#stoprequesting).
+
+#### Example data
+
+See the [onFpsInfoReady](#onfpsinfoready) event.
 
 ## stopRequesting()
 
@@ -79,6 +112,14 @@ Use this when you no longer want to receive events or when you close your app.
 Parameter | Type     | Description                                                                                        |
 ----------| ---------| -------------------------------------------------------------------------------------------------- |
 callback  | function | Returns with the result                                                                            |  
+
+#### More info
+
+Note that the some functions in the benchmarking API requires Overwolf to have Administrative permissions, and should they be missing, the callback will return 'Permissions Required'.  
+
+You will then have to ask the app user for permissions and according to the user’s choice, call [requestPermissions](#requestpermissionscallback). 
+
+It is then necessary to call the requested function (for example, requestProcessInfo) again.
 
 ## onHardwareInfoReady
 
@@ -107,6 +148,8 @@ callback  | function | Returns with the result                                  
 > Fired when process information is ready with a JSON containing the information.
 
 #### Event data example: Success
+
+The event returns the top ten processes in terms of CPU usage and Memory usage.
 
 ```json
 {
@@ -151,6 +194,18 @@ callback  | function | Returns with the result                                  
 
 #### Event data example: Success
 
+If you are in a game:
+
 ```json
-{ "Fps": 61 }
+{ 
+    "Fps": 61 
+}
+```
+
+If you are not in a game:
+
+```json
+{
+    "Fps":"Not in a game"
+}
 ```
