@@ -363,7 +363,10 @@ Parameter           | Type       | Description                                  
 windowId	          | string     | The id or name of the window to minimize                                                       |
 callback (Optional) | function   | Called after the window is minimized                                                           |
 
-**Note** that this function will not work if the manifest [resizable flag](https://overwolf.github.io/docs/api/manifest-json#windows-resizable) is set to `false`.
+**Notes**
+
+* This function will not work if the manifest [resizable flag](https://overwolf.github.io/docs/api/manifest-json#windows-resizable) is set to `false`.
+* When minimizing a **native** window, the window object values for `top`,`left`,`width`and `height` are unexpected and shouldn't be regarded.
 
 #### Callback argument: Success
 
