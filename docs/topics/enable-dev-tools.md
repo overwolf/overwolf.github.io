@@ -4,28 +4,21 @@ title:  Enable Developer Tools
 sidebar_label: Enable Developer Tools
 ---
 
-Overwolf client let you turn on or off a couple of client features, like enable developer tools and more.  
-The full list of supported features can be found [below](#supported-features).  
+Since OW client version 0.153, we decided to protect both users and developers from any security breach and disable the Chrome Developer Tools by default. 
 
-You can toggle these features in two ways: through the command line, or through the windows registry.  
+You can toggle this feature on or off in two ways: through the command line, or the windows registry.
 
 :::tip
 The recommended and easiest way to enable Chrome Developer Tools is to [add a registry key](#windows-registry).
 :::
 
-## Supported features
-
-Currently there is only one feature that can be toggled:
-
-* `enable-dev-tools` - enable Chrome Developer Tools for OW windows (disabled as default).
-
-## How to toggle a feature
+## How to enable dev tools
 
 There are two ways to toggle a feature (ordered by precedence): command line, or registry.
 
 ### Command line
 
-To **enable** feature through the command line: "*overwolf.exe --ow-enable-features="%feature1%,%feature2%*".
+To **enable** the feature through the command line: "*overwolf.exe --ow-enable-features="%feature1%,%feature2%*".
 
 To **disable**: "*overwolf.exe --ow-disable-features="%feature1%,%feature2%*".
 
@@ -37,7 +30,7 @@ overwolf.exe --ow-enable-features=enable-dev-tools
 
 ### Windows registry
 
-As mentioned earlier, the easiest way to toggle a feature is by adding a registry key.
+As mentioned earlier, the easiest way to toggle the feature is by adding a registry key.
 
 This method is also not affected by a client update - once you enable a feature through the registry (for example - enabled the dev tools) - it's enabled, even if there was a client update.
 
