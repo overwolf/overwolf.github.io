@@ -8,7 +8,7 @@ The Overwolf developer toolkit is a set of web authoring and debugging tools.
 You can use these tools for a variety of tasks, among them: Listing which assets the page has requested, how long each asset took to load, reviewing tools for currently-loaded HTML, CSS or JS, and more.
 
 :::important
-Chrome Developer Tools disabled as default. The only way to enable it, is by changing a registry key. Please [contact us](../support/contact-us) and request it.
+Chrome Developer Tools disabled as default. The only way to enable it, is by [adding a registry key](../topics/toggle-client-features#download-registry-key).
 :::
 
 ## How can I access the Overwolf developer tools?
