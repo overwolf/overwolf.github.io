@@ -24,9 +24,8 @@ In addition, the work on the documentation for this version is still in-progress
 
 #### Platform
 
-* `Chrome Developer Tools disabled for OW windows as default`.  
+* [Chrome Developer Tools disabled for OW windows as default](../topics/toggle-client-features#supported-features).  
   From now on, when clicking Ctrl+Shift+I on a window will NOT open the developer tools. (Even if the [disable_dt](manifest-json#disable_dt) manifest flag is set to false). The only way to enable it back is by changing a registry key.  
-  This key will be published on our slack only for OW whitelisted developers. Of course, you can always [contact us](../support/contact-us) and request it.
 * Allow pin to the taskbar (and launch the app + app icon):  
   Now you can pin an open app to the taskbar, and the app icon will not change to the Overwolf icon, and the pinned app can be launched from the taskbar.
 * "Jump list" to show the extension's icon.
