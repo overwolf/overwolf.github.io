@@ -1,7 +1,7 @@
 ---
-id: toggle-client-features
-title:  Turn on/off client features
-sidebar_label: Toggle client features
+id: enable-dev-tools
+title:  Enable Developer Tools
+sidebar_label: Enable Developer Tools
 ---
 
 Overwolf client let you turn on or off a couple of client features, like enable developer tools and more.  
