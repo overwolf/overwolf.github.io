@@ -222,7 +222,6 @@ Event       | Event Data   | Fired When    | Notes              | Since GEP Ver.
 match_start | null         | Match started. | See [notes](#match_start-note) | 148.0  |
 match_end   | null         | Match ended.   | See [notes](#match_end-note) | 148.0  |
 
-
 #### *match_start* note
 
 Data Example:
@@ -232,6 +231,8 @@ Data Example:
 ```
 
 #### *match_end* note
+
+Please note that `match_end` does not work on custom matches nor training.
 
 Data Example:
 
