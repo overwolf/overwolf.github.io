@@ -420,7 +420,12 @@ callback (Optional) | function   | Called after the window is restored          
   "window_id": "Window_Extension_mhlpbbigoglahfnkpekoamfknlnaneebgodenaam"
 }
 ```
-Note: When restoring a minimized/maximized window, it restores the window to the previous size/position.
+
+#### Notes 
+
+* When restoring a minimized/maximized window, it restores the window to the previous size/position.
+* Read some usage tips [here](../topics/using-overwolf-windows#how-to-create-a-new-window).
+
 
 ## restore(windowName, callback)
 #### Version added: 0.78
@@ -440,7 +445,10 @@ callback (Optional) | function   | Called after the window is restored          
   "window_id": "Window_Extension_mhlpbbigoglahfnkpekoamfknlnaneebgodenaam"
 }
 ```
-Note: When restoring a minimized/maximized window, it restores the window to the previous size/position.
+#### Notes 
+
+* When restoring a minimized/maximized window, it restores the window to the previous size/position.
+* Read some usage tips [here](../topics/using-overwolf-windows#how-to-create-a-new-window).
 
 ## hide(windowId, callback)
 #### Version added: 0.108
