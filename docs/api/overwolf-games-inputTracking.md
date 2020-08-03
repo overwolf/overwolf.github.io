@@ -32,11 +32,19 @@ Provides keyboard and mouse activity information while the user is in-game.
 
 > Returns input activity information.
 
+:::warning
+Some functionality of this function might not work as intended. Instead, please use [getMatchActivityInformation()](#getmatchactivityinformationcallback).
+:::
+
 Parameter | Type                                 | Description                              |
 --------- | -------------------------------------| ---------------------------------------- |
 callback  | [(Result:GetActivityResult)](#getactivityresult-object) => void | Callback with input activity information |
 
-The information includes key presses and clicks for keyboard/mouse, total session time, idle time and overall actions-per-minute. This information resets between game executions.
+#### Notes
+
+* The information includes key presses and clicks for keyboard/mouse, total session time, idle time and overall actions-per-minute. This information resets between game executions.
+* When a new game starts, we reset the entire session - when the game ends, the last activity information is available until the next game session.
+* You have to play for 5 minutes and have at least 30 keys to be eligible.
 
 ## getMatchActivityInformation(callback)
 #### Version added: 0.92
