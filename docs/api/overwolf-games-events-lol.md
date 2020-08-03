@@ -353,7 +353,7 @@ Data Example:
 key       | Category        | Values                                         | Notes                                                   | Since GEP Ver. |
 ----------| ----------------| -----------------------------------------------| ------------------------------------------------------- | ------------- | 
 id        | summoner_info   | User’s Summoner Id                         |   Fired immediately with game start. Check [notes](#id-note) |      70.0      |
-region    | summoner_info   | User’s region (EUE, EUW, etc.)             |   Important note: Push runes/items feature is not allowed (by Riot) on Korea region, so in case your app provides such a feature, make sure to disable it for KR users. Also, check [notes](#region-note)|    70.0        |
+region    | summoner_info   | User’s region (EUE, EUW, etc.) or PBE client (See notes)             |   Important note: Push runes/items feature is not allowed (by Riot) on Korea region, so in case your app provides such a feature, make sure to disable it for KR users. Also, check [notes](#region-note)|    70.0        |
 champion  | summoner_info   | Name of the selected champion              |  All champion names (provided by the Overwolf Game Events Provider) match the champion-key from the Riot API, except for `Fiddlesticks`.</br><ul><li>Game Events Provider value: “FiddleSticks”</li><li>Riot API value: “Fiddlesticks”</li></ul></br>Also, check [notes](#champion-note)  |    70.0 |
 level     | summoner_info   | User’s summoner level                      |  See [notes](#level-note) |    70.0        |
 tier      | summoner_info   | User’s tier in his most played queue       | See [notes](#tier-note) |    120.0      |
@@ -375,6 +375,13 @@ Data Example:
 
 ```json
 {"feature":"summoner_info","category":"summoner_info","key":"region","value":"EUW"}
+```
+
+Note that if the current client is a PBE client, instead of the region value, it returns "PBE":
+
+```json
+{"feature":"summoner_info","category":"summoner_info","key":"region","value":"PBE"}
+
 ```
 
 #### *champion* note
