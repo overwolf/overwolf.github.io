@@ -36,7 +36,7 @@ const siteConfig = {
     {doc: 'download/download-overview', label: 'Download'},
 	  //{href: '/docs/api/changelog', label: 'Changelog'},
     //{blog: true, label: 'Blog'},
-    {href: 'https://medium.com/overwolf-developers', label: 'Blog' },
+    {href: 'https://medium.com/overwolf', label: 'Blog' },
     {href: 'https://discuss.developers.overwolf.com/', label: 'Q&A' },
 	  {doc: 'support/contact-us', label: 'Support'},  //{page: 'help', label: 'Support'}
 	  {search: true }

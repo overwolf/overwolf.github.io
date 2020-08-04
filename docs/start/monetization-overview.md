@@ -49,7 +49,7 @@ Introducing ads in your app can help you support development while offering a fr
 
 TL;DR – **Use Forgivable Ads.** In some more words, don’t create ad experiences that you would not stand for as a gamer. Ads present a challenge and tend to provoke negative responses, but they are critical to our economy and our ability to create great apps. In general, talk to us if you're worried or unsure about your app's experience. 
 
-Advertisers need to get continuous value from advertising on Overwolf, so to keep the CPMs high and to get more advertisers on the platform we need to provide a high-quality experience. With time, we found that it's not only about the [right time and place](https://medium.com/overwolf-developers/a-new-way-for-brands-to-engage-with-gamers-ca4cfafc5d41), but also about advertising in a balanced way.
+Advertisers need to get continuous value from advertising on Overwolf, so to keep the CPMs high and to get more advertisers on the platform we need to provide a high-quality experience. With time, we found that it's not only about the [right time and place](https://medium.com/overwolf/a-new-way-for-brands-to-engage-with-gamers-ca4cfafc5d41), but also about advertising in a balanced way.
 
 For example, refreshing and showing new ads is only allowed when switching between app windows, pages or tabs, and never while the user is using on-screen features.
 

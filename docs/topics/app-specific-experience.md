@@ -36,7 +36,7 @@ Read more about [desktop icons](../start/submit-your-app-to-the-store).
 
 It's important to create an engaging welcome screen for your app. Once users clicked on the desktop icon or the app’s icon in the Overwolf dock, the welcome screen should appear. It's the best place to start your onboarding experience and provide a clear call for action. In the case of LoLwiz, the welcome screen prompts users: "Start a match and LoLwiz will automatically appear in-game!". Setting expectations and leading them to use the app.
 
-For further reading, we put together more insights about the importance of [onboarding experiences](https://medium.com/overwolf-developers/apps-ftue-best-practices-670dd4fb2b10).
+For further reading, we put together more insights about the importance of [onboarding experiences](https://medium.com/overwolf/apps-ftue-best-practices-670dd4fb2b10).
 
 ![alt-text](assets/app-specific-experience/lolwiz-home.jpg)
 

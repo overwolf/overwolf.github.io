@@ -18,7 +18,7 @@ A Knowledge base is what we call your public library and documentation. If users
 
 ### Best practices
 
-* First time users that just installed your app have never used it before and probably need guidance in making the most out of your app’s features. A well made FTUE (First Time User Experience) greatly increases the chances of retaining your users, read more about first time user experience [here](https://medium.com/overwolf-developers/apps-ftue-best-practices-670dd4fb2b10).
+* First time users that just installed your app have never used it before and probably need guidance in making the most out of your app’s features. A well made FTUE (First Time User Experience) greatly increases the chances of retaining your users, read more about first time user experience [here](https://medium.com/overwolf/apps-ftue-best-practices-670dd4fb2b10).
 
 * While each app has different information to share, all apps can benefit from a knowledgebase that includes a FAQ and troubleshooting articles. Try to include all the information the user might need.
 
