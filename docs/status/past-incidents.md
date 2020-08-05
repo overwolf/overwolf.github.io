@@ -368,6 +368,9 @@ No logs.
 Teamfight Tactics
 -----------------
 
+**Investigating** - Some TFT events are currently down (local_player_damage, round_outcome, board_pieces, health), we are working on a fix.  
+Jul 05, 11:52 AM GMT+3
+
 **Resolved** - This incident has been resolved.  
 Jun 10, 09:46 PM GMT+3
 
@@ -445,6 +448,12 @@ Oct 09, 10:24 AM GMT+3
 
 Valorant
 --------
+
+**Resolved** - This incident has been resolved.  
+Jul 05, 17:43 PM GMT+3
+
+**Investigating** - Valorant events are down.  
+Jul 05, 10:29 PM GMT+3
 
 **Resolved** - This incident has been resolved.  
 Jul 22, 09:33 PM GMT+3
