@@ -92,7 +92,6 @@ Full list of game-modes:
 * 0021 = "Escort"
 * 0022 = "Hybrid"
 * 0023 = "Control"
-* 0024 = "Practice Range"
 * 0025 = "Tutorial"
 * 0026 = "Uprising All Heroes"
 * 0029 = "Team Deathmatch"
