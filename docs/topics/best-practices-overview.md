@@ -184,17 +184,11 @@ In this section, you can find our best practices for developing and implementing
 
 
 ### Ad container placeholder
-* Place your app's logo underneath the ad layer, so when there are no ads playing, the container will display something familiar to the user.
-* Example:
-<div class="box" data-slick='{"slidesToShow": 1}'>
-  <a data-fancybox="gallery" data-caption="Ad container placeholder" href="../assets/best-practices-overview/hero_watch_main_screen.png">
-    Ad container placeholder
-    <span class="thumb">
-      <img src="../assets/best-practices-overview/hero_watch_main_screen.png" alt="Ad container placeholder">
-    </span>
-  </a>
-</div>
+* Place an image (e.g. App's logo, company's logo, an inspiring message to the user) underneath the ad frame, so when there are no ads playing, the container will display something familiar to the user, and related to the app in terms of design.
+* The image placed behind the ad container should fit within a centered rectangle, with a maximum size of 250x250 pixels.
+* Example of proper placing and sizing:
 
+![alt-text](assets/best-practices-overview/hero_watch_main_screen_size.png)
 
 ### Analytics
 * Please implement and use analytics for your app, more information about app analytics can be found [here](app-analytics)
