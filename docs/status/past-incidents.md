@@ -368,6 +368,9 @@ No logs.
 Teamfight Tactics
 -----------------
 
+**Resolved** - This incident has been resolved.  
+Aug 07, 12:46 PM GMT+3
+
 **Investigating** - Some TFT events are currently down (local_player_damage, round_outcome, board_pieces, health), we are working on a fix.  
 Jul 05, 11:52 AM GMT+3
 
