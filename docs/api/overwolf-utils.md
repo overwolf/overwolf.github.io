@@ -86,11 +86,13 @@ callback  | ([Result: GetMonitorsListResult](#getmonitorslistresult-object)) => 
 
 > Returns the DPI and sclae of the current window.
 
+:::warning
+We removed this function from our API. Instead, please use [Window.devicePixelRatio](https://developer.mozilla.org/en-US/docs/Web/API/Window/devicePixelRatio) to get the DPI of the current window. It's pure JS and even more efficient. [More info](../topics/windows-resolution-size-position#dpi) about DPI and OW windows.
+:::
+
 Parameter | Type     | Description                                  |
 --------- | ---------| -------------------------------------------- |
 callback  | function | Called with the DPI info                     |
-
-Note that you can use [Window.devicePixelRatio](https://developer.mozilla.org/en-US/docs/Web/API/Window/devicePixelRatio) to get the DPI of the current window. It's pure JS and even more efficient.
 
 #### Callback argument: Success
 
