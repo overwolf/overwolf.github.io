@@ -103,6 +103,7 @@ Possible agent values:
 * "Sarge_PC_C" = Brimstone
 * "Breach_PC_C" = Breach
 * "Vampire_PC_C" = Reyna
+* "Killjoy_PC_C" = Killjoy
 
 ## `match_info`
 
