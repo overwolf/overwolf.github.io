@@ -104,7 +104,8 @@ A callback function which will be called with the status of the request and a [O
 
 ```json
 {
-    "status": "success",
+    "success": true,
+    "status": "success", //for backward compatibility
     "window": {
         "id": "Window_Extension_hffhbjnafafjnehejohpkfhjdenpifhihebpkhni",
         "name": "index",
@@ -138,7 +139,8 @@ A callback function which will be called with the status of the request and a [O
 
 ```json
 {
-    "status": "success",
+    "success": true,
+    "status": "success", //for backward compatibility
     "window": {
         "id": "Window_Extension_hffhbjnafafjnehejohpkfhjdenpifhihebpkhni",
         "name": "index",
@@ -189,7 +191,8 @@ A callback function which will be called with the status of the request and a [O
 
 ```json
 {
-    "status": "success",
+    "success": true,
+    "status": "success", //for backward compatibility
     "window": {
         "id": "Window_Extension_hffhbjnafafjnehejohpkfhjdenpifhihebpkhni",
         "name": "index",
@@ -222,7 +225,8 @@ When you dragMove a **native window** between monitors with different DPIs, the 
 
 ```json
 {
-    "status": "success",
+    "success": true,
+    "status": "success", //for backward compatibility
     "horizontalChange": -51,
     "verticalChange": 6
 }
@@ -278,7 +282,10 @@ callback (Optional) | function   | A callback which is called when the size chan
 #### Callback argument: Success
 
 ```json
-{ "success": true }
+{ 
+  "success": true,
+  "status": "success" //for backward compatibility 
+}
 ```
 
 ## changeSize(changeSizeParams, callback)
@@ -313,7 +320,11 @@ overwolf.windows.changeSize(sizeSettings ,console.log);
 #### Callback argument: Success
 
 ```json
-{ "success": true }
+{
+  "success": true,
+  "status": "success" //for backward compatibility 
+
+}
 ```
 
 ## changePosition(windowId, left, top, callback)
@@ -333,7 +344,10 @@ callback (Optional) | function   |A callback which is called when the position c
 #### Callback argument: Success
 
 ```json
-{ "status": "success" }
+{ 
+ "success": true,
+ "status": "success" //for backward compatibility  
+}
 ```
 
 ## close(windowId, callback)
@@ -348,7 +362,8 @@ callback (Optional) | function   | Called after the window is closed            
 
 ```json
 {
-  "status": "success",
+  "success": true,
+  "status": "success", //for backward compatibility
   "window_id": "Window_Extension_mhlpbbigoglahfnkpekoamfknlnaneebgodenaam"
 }
 ```
@@ -372,7 +387,8 @@ callback (Optional) | function   | Called after the window is minimized         
 
 ```json
 {
-  "status": "success",
+  "success": true,
+  "status": "success", //for backward compatibility
   "window_id": "Window_Extension_mhlpbbigoglahfnkpekoamfknlnaneebgodenaam"
 }
 ```
@@ -397,7 +413,8 @@ callback (Optional) | function   | Called after the window is maximized         
 
 ```json
 {
-  "status": "success",
+  "success": true,
+  "status": "success", //for backward compatibility
   "window_id": "Window_Extension_mhlpbbigoglahfnkpekoamfknlnaneebgodenaam"
 }
 ```
@@ -416,7 +433,8 @@ callback (Optional) | function   | Called after the window is restored          
 
 ```json
 {
-  "status": "success",
+  "success": true,
+  "status": "success", //for backward compatibility
   "window_id": "Window_Extension_mhlpbbigoglahfnkpekoamfknlnaneebgodenaam"
 }
 ```
@@ -441,7 +459,8 @@ callback (Optional) | function   | Called after the window is restored          
 
 ```json
 {
-  "status": "success",
+  "success": true,
+  "status": "success", //for backward compatibility
   "window_id": "Window_Extension_mhlpbbigoglahfnkpekoamfknlnaneebgodenaam"
 }
 ```
@@ -476,10 +495,11 @@ Note: the callback param "window_state_ex" returns one of these states: [closed 
 
 ```json
 {
-    "status": "success",
-    "window_id": "Window_Extension_onemchifcjibofkgemelmnjeialamgnigfpomeih",
-    "window_state": "minimized", //deprecated and kept only for backward compatibility
-    "window_state_ex": "hidden" //always use this param to get the state of the window.
+   "success": true,
+   "status": "success", //for backward compatibility
+   "window_id": "Window_Extension_onemchifcjibofkgemelmnjeialamgnigfpomeih",
+   "window_state": "minimized", //deprecated and kept only for backward compatibility
+   "window_state_ex": "hidden" //always use this param to get the state of the window.
 }
 ```
 
@@ -496,7 +516,8 @@ callback            | function   | Called with an array containing the states of
 
 ```json
 {
-    "status": "success",
+    "success": true,
+    "status": "success", //for backward compatibility
     "result": {
         "index": "normal",
         "settings": "minimized",
@@ -518,7 +539,10 @@ callback            | function   | A callback function which will be called with
 #### Callback argument: Success
 
 ```json
-{ "status": "success" }
+{ 
+  "success": true,
+  "status": "success" //for backward compatibility 
+}
 ```
 
 ## setDesktopOnly(windowId, shouldBeDesktopOnly, callback)
@@ -536,7 +560,8 @@ callback            | function   | A callback function which will be called with
 
 ```json
 {
-  "status": "success",
+  "success": true,
+  "status": "success", //for backward compatibility
   "window_id": "Window_Extension_mhlpbbigoglahfnkpekoamfknlnaneebgodenaam"
 }
 ```
@@ -556,7 +581,8 @@ callback               | function   | A callback function which will be called w
 
 ```json
 {
-  "status": "success",
+  "success": true,
+  "status": "success", //for backward compatibility
   "window_id": "Window_Extension_mhlpbbigoglahfnkpekoamfknlnaneebgodenaam"
 }
 ```
@@ -575,7 +601,10 @@ callback               | function   | A callback function which will be called w
 #### Callback argument: Success
 
 ```json
-{ "status": "success" }
+{ 
+  "success": true,
+    "status": "success" //for backward compatibility
+ }
 ```
 
 ## sendToBack(windowId, callback)
@@ -592,7 +621,10 @@ callback               | function   | A callback function which will be called w
 #### Callback argument: Success
 
 ```json
-{ "status": "success" }
+{ 
+  "success": true,
+    "status": "success" //for backward compatibility
+}
 ```
 
 ## sendMessage(windowId, messageId, messageContent, callback)
@@ -622,7 +654,10 @@ overwolf.windows.sendMessage('secondWindow', '1', 'hello second window', ()=>{co
 #### Callback argument: Success
 
 ```json
-{ "status": "success" }
+{ 
+  "success": true,
+    "status": "success" //for backward compatibility
+ }
 ```
 
 ## setWindowStyle(windowId, style, callback)
@@ -639,7 +674,10 @@ callback               | function                              | A callback func
 #### Callback argument: Success
 
 ```json
-{ "status": "success" }
+{ 
+  "success": true,
+    "status": "success" //for backward compatibility
+ }
 ```
 
 ## removeWindowStyle(windowId, style, callback)
@@ -656,7 +694,10 @@ callback               | function                              | A callback func
 #### Callback argument: Success
 
 ```json
-{ "status": "success" }
+{ 
+  "success": true,
+    "status": "success" //for backward compatibility
+ }
 ```
 
 ## getOpenWindows(callback)
@@ -723,7 +764,10 @@ A callback function which will be called with the status of the request.
 * “partial” – The window is partially visible to the user (and partially covered by other window/s).
 
 ```json
-{"status": "success","visible": "hidden" | "fully" | "partial"}
+{
+  "success": true,
+    "status": "success", //for backward compatibility
+    "visible": "hidden" | "fully" | "partial"}
 ```
 
 #### Callback argument: Failure
@@ -847,7 +891,12 @@ callback               | function                                          | Ret
 A callback function which will be called with the status of the request
 
 ```json
-{"status":"success","accelerated":false,"supported":true}
+{
+  "success": true,
+  "status": "success", //for backward compatibility
+  "accelerated":false,
+  "supported":true
+}
 ```
 
 #### Callback argument: Failure

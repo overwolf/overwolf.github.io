@@ -36,7 +36,6 @@ Below, you can find a list of games that support highlights.
 ## How it works
 
 The highlights settings for all the games are saved in a file called `highlights.json`, located under the OW installation folder. 
-You can view the latest version of this file on our GitHub [here](https://github.com/overwolf/community-gists/tree/master/highlights.json).
 
 Note that every change of this file on your local OW client installation will be overwritten once the client is updated.
 
