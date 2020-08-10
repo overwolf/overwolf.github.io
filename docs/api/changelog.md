@@ -20,15 +20,17 @@ In addition, the work on the documentation for this version is still in-progress
 * [overwolf.windows.getCurrentWindow()](overwolf-windows#getcurrentwindowcallback) now returns also the monitor id.  
   Now you quickly determine which monitor the window is displayed.
 * New manifest flag - [process_name](manifest-json#process_name-notes).  
-  By adding your custom "process_name" to an app manifest, the OverwolfBrowser.exe process name is overridden, and all the processes related to the app ads are now running with the name given them by this flag.
+  using one simple flag in the manifest, app developers can now differentiate their own apps from the rest of the OverwolfBrwoser.exe process rubble in the Task Manager.  
+  By adding your custom "process_name" to an app manifest, all the processes related to the app ads are now running with the name given them by this flag.
+* Added extra info to the overwolf.settings.hotkeys.onChanged API, so it’s consistent with the overwolf.settings.hotkeys.get function.
 
 #### Platform
 
-* [Chrome Developer Tools disabled for OW windows as default](../topics/enable-dev-tools#supported-features).  
+* [Disabled Dev Tools as a default](../topics/enable-dev-tools#supported-features).  
   From now on, when clicking Ctrl+Shift+I on a window will NOT open the developer tools. (Even if the [disable_dt](manifest-json#disable_dt) manifest flag is set to false). The only way to enable it back is by changing a registry key.  
 * Allow pin to the taskbar (and launch the app + app icon):  
-  Now you can pin an open app to the taskbar, and the app icon will not change to the Overwolf icon, and the pinned app can be launched from the taskbar.
-* "Jump list" to show the extension's icon.
+  Now you can pin an open app to the taskbar, and the app icon will not change to the Overwolf icon, and the pinned app can be launched from the taskbar. (even if OW is closed)
+* Non-logged in app installations - We have reverted the need to be logged into Overwolf in order download and install apps.
 
 #### Game events
 
