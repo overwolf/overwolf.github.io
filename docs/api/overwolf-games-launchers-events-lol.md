@@ -27,6 +27,7 @@ if the  game launcher wasn't closed by the user, it is possible to access game l
 * [end_game](#end_game)
 * [lcu_info](#lcu_info)
 * [game_info](#game_info)
+* [clash](#clash)
 
 ## `game_flow`
 
@@ -572,3 +573,12 @@ Data Example:
 ```json
 {"feature":"game_info","category":"game_info","key":"close_client_during_game","value":true}
 ```
+
+## `clash`
+
+### Info Updates
+
+key   | Category    | Values                    | Notes                 | Since Version |
+------| ------------| ------------------------- | --------------------- | ------------- |
+tournament_summary | clash       | Summary of clash match |                       |   153.0       |
+
