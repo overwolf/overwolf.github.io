@@ -42,6 +42,9 @@ In addition, the work on the documentation for this version is still in-progress
 * [MTGA](overwolf-games-events-mtga)
   * New updates under:
     * game_info
+* [LoL Launcher](overwolf-games-events-launchers-events-lol)
+  * New updates under:
+    * clash
 
 ## Version 0.149 (Jul. 2020)
 
