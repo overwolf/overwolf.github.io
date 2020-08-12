@@ -215,11 +215,15 @@ Types of errors that can occur:
 
 Parameter              | Type    | Description                                                                 |
 ---------------------- | --------| --------------------------------------------------------------------------- |
-file                   | string  | The file to share                                                           |
+file                   | string  | **Optional**. The file to share. See [note](#file-note)                                   |
 channelId              | string  | The channel ID that the file will be shared to                              |
-message                | string  | The message to include with the shared file                                 |
+message                | string  | The message to include with the shared file. See [note](#file-note)                   |
 trimming (Optional)    | [VideoCompositionSegment](overwolf-media-videos#videocompositionsegment-object)  | An object containing start time and end time for the desired VideoCompositionSegment                                        |
 events (optional)      | string  | An array of chronological events that occurred during the capture           |
 gameClassId (Optional) | int     | The associated game's class ID                                              |
 gameTitle (Optional)   | string  | The associated game's title                                                 |
 metadata (Optional)    | Object  | Extra information about the game session                                    |
+
+#### file note
+
+Since version 0.153, the "file" param is optional when calling [overwolf.social.discord.share()](sharediscordshareparameters-callback). Instead, you can use the "message" param to include a URL of a file that you want to share.

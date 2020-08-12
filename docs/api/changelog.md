@@ -23,6 +23,7 @@ In addition, the work on the documentation for this version is still in-progress
   using one simple flag in the manifest, app developers can now differentiate their own apps from the rest of the OverwolfBrwoser.exe process rubble in the Task Manager.  
   By adding your custom "process_name" to an app manifest, all the processes related to the app ads are now running with the name given them by this flag.
 * Added extra info to the overwolf.settings.hotkeys.onChanged API, so it’s consistent with the overwolf.settings.hotkeys.get function.
+* The "file" param is now optional when calling overwolf.social.discord.share(). Instead, you can use the "message" param to include a URL of a file that you want to share.
 
 #### Platform
 
