@@ -24,6 +24,14 @@ Make sure to validate your manifest.json syntax:
   2. Press the "validate" button in jsonlint.com (If you're seeing "valid json", it's clear).
   3. Make sure you have no errors reported.
 
+### Validate the schema
+
+Ensure that your manifest.json is consistent with our schema:
+
+  1. Copy the contents of the app’s manifest.json and paste it under "Input JSON:" in [jsonschemavalidator.net](https://www.jsonschemavalidator.net/).
+  2. Copy the contents of our [schema](https://raw.githubusercontent.com/overwolf/community-gists/master/overwolf-manifest-schema.json) and paste it under "Select schema:". 
+  3. Make sure you have no errors and that you see a green checkmark with the text "No errors found. JSON validates against the schema".
+
 #### Minimal Overwolf supported version
 
 Examine your app's [Overwolf minimal version](../api/manifest-json#meta-minimum) and compare it to the previous version's Overwolf Minimal version. Unless your update requires new properties or APIs, these versions should be identical.
@@ -32,13 +40,19 @@ Examine your app's [Overwolf minimal version](../api/manifest-json#meta-minimum)
 
 1. `"block_top_window_navigation":true` – Means that whenever app users click on an ad, it will open the link in a new window.
 2. `"popup_blocker":true` – This flag prevents ads that will try to create a popup for the user without the user’s consent.
-3. `"mute":true' - Mute sounds in window.
+3. `"mute":true` - Mute sounds in window.
 
 #### Verify the 'launcher_icon' property
 
 1. Make sure `"launcher_icon": "icon.ico"` appears in the “meta” object, `icon.ico` can have any name as long as the icon exists in the app's opk file.
 2. Check that the `icon.ico` file exists in your app folder/opk and its size is smaller than 150KB.
 3. Make sure that you have the following resolutions for it: `16x16, 32x32,48x48, 256x256`.
+
+#### Verify the 'icon' and 'icon_gray' property
+
+1. Make sure `"icon": "IconMouseOver.png"` and `"icon_gray": "IconMouseNormal.png"` appear in the “meta” object, `IconMouseOver.png` and `IconMouseNormal.png` can have any name as long as the icons exist in the app's opk file.
+2. Check that the `IconMouseOver.png` & `IconMouseNormal.png` files exist in your app folder/opk and their size is smaller than 30KB.
+3. Make sure that both .png files are `256x256` in resolution size.
   
 #### Verify game_targeting flag existence
 
@@ -81,6 +95,7 @@ Test preconditions: The user is now running the game your app supports.
 1. Open the app window with your designated hotkey and make sure the overlay appears properly.
 2. Test general app functionality in-game and ensure your features work.
 3. Click the app window in spots where clicks going through to the game would have an effect. For example, click an app button which covers an in-game menu and make sure your clicks only affect the app layer and never that menu.
+4. Any in-game browser links must be opened in overwolf's browser, or if they must be opened in the user's default browser, first prompt a warning to the user and let them know.
   
 ## Hotkeys
 
@@ -98,7 +113,7 @@ Test preconditions: The user is now running the game your app supports.
 
 6. Allow users to change hotkey combinations from inside your app’s settings panel by automatically directing the user to the Overwolf settings page as suggested in our best practices Hotkeys segment. More information about hotkeys can be found in the manifest.json and overwolf.settings API pages – Make sure that when it’s done, the new hotkey is updated automatically in your app without needing to re-launch the app.
 
-7. Launch your app using the dock icon.
+7. Launch your app using the dock icon while in-game. The dock icon must provide some form of functionality to the user.
 
 ### Test mid-game installation
 
@@ -126,7 +141,7 @@ Preconditions: Uninstall your app to perform the following test.
 
 3. Close Overwolf and launch your app using the desktop icon.
 
-4. Verify all windows are close upon exit.
+4. Verify all windows are close upon exit, as well as all app-related processes in http://localhost:54284 (except those that are designed to be background processes).
 
 ## Game specific apps
 
@@ -198,3 +213,8 @@ Ads should close when your app window is minimized.
 
   4. No ad process should be found in the localhost.
 
+ ## Pre-Release
+
+ ### App's opk file doesn't warn for any viruses
+ 
+ Before sending any opk file for our approval, make sure that [virustotal.com](https://www.virustotal.com/gui/home/upload) doesn't warn about any viruses for it. Any opk's which virustotal warns about will not be tested.
