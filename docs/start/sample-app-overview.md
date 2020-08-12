@@ -72,8 +72,8 @@ Unlike that, while you are developing an app, you want to load the unpacked code
 For this reason, in addition to the OPK installation, you can load the app as "unpacked extension":  
 (Note that to do that you have to **[whitelist](sdk-introduction#whitelist-as-a-developer)** your OW username as a developer).
 
-* Open the Overwolf desktop client settings (by right-clicking the client and selecting "Support"  
-  Or by clicking on the wrench icon in the dock and going to the "Support" tab).
+* Open the Overwolf desktop client settings (by right-clicking the client and selecting "Packages"  
+  Or by clicking on the wrench icon in the dock and going to the "About" tab => "Development Options").
 
 * Click on "Development options".
 
