@@ -29,7 +29,7 @@ Make sure to validate your manifest.json syntax:
 Ensure that your manifest.json is consistent with our schema:
 
   1. Copy the contents of the app’s manifest.json and paste it under "Input JSON:" in [jsonschemavalidator.net](https://www.jsonschemavalidator.net/).
-  2. Copy the contents of our [scheme](https://raw.githubusercontent.com/overwolf/community-gists/master/overwolf-manifest-schema.json) and paste it under "Select schema:". 
+  2. Copy the contents of our [schema](https://raw.githubusercontent.com/overwolf/community-gists/master/overwolf-manifest-schema.json) and paste it under "Select schema:". 
   3. Make sure you have no errors and that you see a green checkmark with the text "No errors found. JSON validates against the schema".
 
 #### Minimal Overwolf supported version
