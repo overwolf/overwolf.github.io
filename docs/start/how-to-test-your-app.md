@@ -40,7 +40,7 @@ Examine your app's [Overwolf minimal version](../api/manifest-json#meta-minimum)
 
 1. `"block_top_window_navigation":true` – Means that whenever app users click on an ad, it will open the link in a new window.
 2. `"popup_blocker":true` – This flag prevents ads that will try to create a popup for the user without the user’s consent.
-3. `"mute":true' - Mute sounds in window.
+3. `"mute":true` - Mute sounds in window.
 
 #### Verify the 'launcher_icon' property
 
@@ -141,7 +141,7 @@ Preconditions: Uninstall your app to perform the following test.
 
 3. Close Overwolf and launch your app using the desktop icon.
 
-4. Verify all windows are close upon exit, as well as all app-related processes in http://localhost:54284 (except those who are designed to be background processes).
+4. Verify all windows are close upon exit, as well as all app-related processes in http://localhost:54284 (except those that are designed to be background processes).
 
 ## Game specific apps
 
