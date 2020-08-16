@@ -13,13 +13,14 @@ Calling a new `OwAd()` will return a javascript object which you can use to cont
 | removeAd        | Removes current ad from the DOM                                                                                    |
 
 ::: important
-removeAd() will be called on minimizing and refreshAd() will be called on restoring.
+removeAd() will be called on minimizing and refreshAd() will be called on restoring.  
 :::
 
 In order to prevent ads being called but not shown, please make sure you use the `removeAd()` function where necessary. Also note:
 
 * When the window is minimized, do not delete or destroy the `owAd` instance object, instead call the `removeAd()` method.
 * When the window is restored, call the same `owAd` instance’s `refreshAd()` method.
+* To check when the window is minimized or restored, you can use the [overwolf.windows.onStateChanged](../api/overwolf-windows#onstatechanged) event. This event applies on all windows opened\closed in the app, so it's highly recommended to add some checking in the event handler to make sure that the window with the state change is the window with the ad, and to avoid unnecessary wrong calls to the *refreshAd()* and *removeAd()*.
 
 ## Type Definitions
 Type definitions for the `OwAd` class and the various interfaces it uses can be found at our [types](https://github.com/overwolf/types/blob/master/owads.d.ts) github.
