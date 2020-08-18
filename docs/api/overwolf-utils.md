@@ -583,6 +583,7 @@ y                  | number   | See [note](#y-note)                         |
 width              | number   |                                             |
 height             | number   |                                             |
 is_primary         | boolean  |                                             |
+handle             | object   | Returns the current monitor handle          |
 
 #### X note
 
