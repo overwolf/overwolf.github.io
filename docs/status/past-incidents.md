@@ -10,6 +10,9 @@ To get real time alerts please join [our dev slack](../support/contact-us#join-o
 Apex Legends
 ------------
 
+**Investigating** - Apex game events are down we are working on a fix.  
+Aug 18, 08:29 PM GMT+3
+
 **Resolved** This incident has been resolved.  
 Jul 26, 13:40 PM GMT+3
 
