@@ -580,6 +580,8 @@ name               | string   |                                             |
 id                 | string   |                                             |
 x                  | number   | See [note](#x-note)                         |
 y                  | number   | See [note](#y-note)                         |
+dpiX               | number   |                                             |
+dpiY               | number   |                                             |
 width              | number   |                                             |
 height             | number   |                                             |
 is_primary         | boolean  |                                             |
@@ -594,6 +596,44 @@ For example, if your primary monitor is 1920px wide, and the currently active wi
 
 Y returns the pixel distnace of your currently active monitor from your primary monitor.  
 For Example, if your primary monitor and secondary monitor are side by side, Y will return 0, if your displays are one on top of the other and the primary monitor is 1200px tall, Y will return 1200 or -1200 based on their relative positions.
+
+#### Example data: Success
+
+```json
+{
+   "success":true,
+   "displays":[
+      {
+         "name":"Generic PnP Monitor",
+         "id":"\\\\.\\DISPLAY1",
+         "x":-1920,
+         "y":-25,
+         "width":1920,
+         "height":1080,
+         "is_primary":false,
+         "handle":{
+            "value":14159063
+         },
+         "dpiX":120,
+         "dpiY":120
+      },
+      {
+         "name":"Generic PnP Monitor",
+         "id":"\\\\.\\DISPLAY4",
+         "x":0,
+         "y":0,
+         "width":1680,
+         "height":1050,
+         "is_primary":true,
+         "handle":{
+            "value":1182814
+         },
+         "dpiX":96,
+         "dpiY":96
+      }
+   ]
+}
+```
 
 ## OpenFilePickerResult Object
 
