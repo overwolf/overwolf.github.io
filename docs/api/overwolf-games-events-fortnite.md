@@ -327,7 +327,7 @@ key          | Category    | Values                    | Notes                 |
 ------------ | ------------| ------------------------- | --------------------- | ------------- |
 item_X       | inventory   |Current inventory of the local player. See [notes](#item_x-note) |    |   119.2       |
 selected_slot|selected_slot|Currently selected slot in the quickbar. See [notes](#selected_slot-note) |    |   119.2       |
-quickbar_X   | quickbar    |Display names of the items in the primary quickbar. (list of possible display names can be found [here](https://www.stormshield.one/items?utf8=%E2%9C%93&items_grid%5Bkind%5D=br_weapon&items_grid%5Bpatch_added%5D=&items_grid%5Bhash_code%5D=&commit=Search)) See [notes](#quickbar_X-note) |    |   119.2       |
+quickbar_X   | quickbar    |Display names of the items in the primary quickbar. See [notes](#quickbar_x-note) |    |   119.2       |
 selected_material| selected_material  | The currently selected building material. See [notes](#selected_material-note) |    |   119.2 |
 
 #### *item_X* note
