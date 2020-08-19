@@ -55,7 +55,7 @@ Please make sure to read our guide on [how to use Overwolf windows](../topics/us
 * [overwolf.windows.isAccelreatedOSR()](#isaccelreatedosrcallback)
 * [overwolf.windows.setMinSize()](#setminsizewindowid-width-height-callback)
 * [overwolf.windows.flash()](#flashwindowid-behaviorcallback)
-
+* [overwolf.windows.setZoom()](#setzoomwinzoomfactorowid-windowid)
 
 ## Events Reference
 
@@ -929,6 +929,16 @@ Parameter              | Type                                              | Des
 windowId		           | string                                            | The id of the window to flash                                             |
 behavior               | [FlashBehavior](#flashbehavior-enum) enum         | Defines window flashing behavior                                          |
 callback               | function                                          | Called after the window is flashed                                        |
+
+## setZoom(winzoomFactorowId, windowId)
+#### Version added: 0.154
+
+> Set window zoom level (0.0 for reset).
+
+Parameter              | Type                                              | Description                                                               |
+-----------------------| --------------------------------------------------| --------------------------------------------------------------------------|
+winzoomFactorowId      | double                                            | The zoome factor                                                          |
+windowId		           | string                                            | The window id, empty for current window                                   |
 
 ## onMainWindowRestored
 #### Version added: 0.85

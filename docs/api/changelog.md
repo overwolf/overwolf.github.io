@@ -27,7 +27,8 @@ In addition, the work on the documentation for this version is still in-progress
 
 * WebServer: Overwolf.web.webserver now allow CORS.
 
-* Change Zoom - new feature:  overwolf.window.setZoom().
+* New feature: Set window zoom level - [overwolf.window.setZoom()](overwolf-windows#setzoomwinzoomfactorowid-windowid).  
+  Now you can change the zoom factor of your window through the API (the effect is exactly like changing the zoom in a web browser).
 
 
 #### Platform
