@@ -24,16 +24,15 @@ In addition, the work on the documentation for this version is still in-progress
   If this flag in on, when creating a video capture folder, it will use the app "short name" as the folder name, instead of using the app name from the manifest. (the app "short name" is defined in the [dock_button_title](manifest-json#meta-dock) manifest flag).
 
 * New manifest flag [max_rotation_log_files](manifest-json#max_rotation_log_files) - for app Log rotaion control. It allow to increase app log's file rotation (up to 40).
-
-* WebServer: Overwolf.web.webserver now allow CORS.
-
+    
 * New feature: Set window zoom level - [overwolf.window.setZoom()](overwolf-windows#setzoomwinzoomfactorowid-windowid).  
   Now you can change the zoom factor of your window through the API (the effect is exactly like changing the zoom in a web browser).
 
-
 #### Platform
 
-* TBA
+* WebServer: [overwolf.web.webserver](overwolf-web-webserver) now allow CORS.  
+  Now the built-in OW webserver sends the correct CORS headers ([Access-Control-Allow-Origin](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Access-Control-Allow-Origin)) to client.  
+  Cross-Origin Resource Sharing (CORS) is a mechanism that uses additional HTTP headers to tell browsers to give a web application running at one origin, access to selected resources from a different origin. The CORS mechanism supports secure cross-origin requests and data transfers between browsers and servers.  It's useful for case when you need to pass some data (ex: authentication token) from your website to Overwolf app.
 
 #### Game events
 

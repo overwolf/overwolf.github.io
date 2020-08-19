@@ -6,6 +6,8 @@ sidebar_label: overwolf.web.webserver
 
 An instance of a web server.
 
+The OW webserver is CORS (Cross-Origin Resource Sharing) enabled. 
+
 ## Methods Reference
 
 * [overwolf.web.webserver.listen()](#listencallback)
