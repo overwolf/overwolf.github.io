@@ -574,10 +574,41 @@ You can use it, for example, to implement "favorites captures" feature: allow yo
 
 Replay video options.
 
-| Name                           | Type   | Description                                                                       | Since  |
-|--------------------------------| -------|-----------------------------------------------------------------------------------|------- |
-| disable_when_sht_not_supported | bool   | Do not start video replay service in case shared texture is not supported         | 0.147  |
-| buffer_length                  | int    | Defines the length of the buffer to be recorded in millisenconds (max 40 seconds) | 0.147  |
+| Name      | Type   | Description                                                                                             | Since |
+|-----------| -------|---------------------------------------------------------------------------------------------------------|------ |
+| auto_detect | bool | Defines if to try to automatically detect the best settings for streaming       | 0.83  |
+| auto_calc_kbps | bool | Defines if to try to automatically calculate the kbps. If set to true, then the max_kbps field is ignored | 0.83  |
+| fps   | int | Defines the Frames Per Second for the stream | 0.78  |
+| width | int | Defines the stream width in pixels  | 0.78  |
+| height| int | Defines the stream height in pixels | 0.78  |
+| max_kbps| int | Defines the maximum KB per second of the stream | 0.78  |
+| buffer_length| int | Defines the length of the buffer to be recorded in millisenconds (max 40 seconds) | 0.83  |
+| encoder|  [StreamingVideoEncoderSettings](overwolf-streaming#streamingvideoencodersettings-object) Object |Defines the video encoder settings to use | 0.83  |
+| capture_desktop|  [StreamDesktopCaptureOptions](overwolf-streaming#streamdesktopcaptureoptions-object) Object |Defines the desktop streaming options.</br>Permissions required: DesktopStreaming | 0.83  |
+| frame_interval| int | Interval between frames when creating gifs | 0.83  |
+| test_drop_frames_interval | uint | The interval, in milliseconds, in which to test for dropped frames | 0.92  |
+| notify_dropped_frames_ratio| double | The ratio of dropped to non-dropped frames for which to issue a notification | 0.92  |
+| sub_folder_name| string | Defines Sub folder for video file path destination (See note below this table) | 0.103  |
+| override_overwolf_setting| bool | Do not use Overwolf capture setting. In case True you must provider all video setting (encoder..) | 0.103  |
+| tobii| [TobiiLayerParams](overwolf-tobii) Object | Tobii Replay layer setting | 0.97  |
+| max_file_size_bytes| uint | Defines file maximum size. when video reach {max_file_size_bytes}, the recorder will flush the video file and stat a new video file.  | 0.103  |
+| include_full_size_video| bool | in case max_file_size_bytes is onfull video will be recorded to disk parallel to splits videos.  | 0.105  |
+| disable_when_sht_not_supported| bool | Do not start video replay service in case shared texture is not supported.  | 0.105  |
+| indication_position | [indication_position](overwolf-streaming#indication_position-enum) Enum | Position of the recorder indicator. Available for video capture only.  | 0.143  |
+| indication_type     | [indication_type](overwolf-streaming#indication_type-enum) Enum | Type of the recorder indicator. Available for video capture only.  | 0.143  |
+| use_app_display_name | bool | Use the app display (if has any e.g [dock_button_title](manifest-json#meta-dock) name when creating video folder. See [note](#use_app_display_name-notes)  | 0.154  |
+
+#### use_app_display_name notes
+
+If this flag in on, when creating a video capture folder, it will use the app "short name" as the folder name, instead of using the app name from the manifest.  
+The app "short name" is defined in the [dock_button_title](manifest-json#meta-dock) manifest flag.
+
+#### sub_folder_name notes 
+
+* Defines Sub folder for video file path destination (Optional):  
+`OverwolfVideoFolder\\AppName\\|sub_folder_name\\|file_name|`
+* In case [folder_name] is empty:  
+`OverwolfVideoFolder\\AppName\\|sub_folder_name|`
 
 ## ReplayType enum
 #### Version added: 0.78

@@ -8,10 +8,39 @@ Follow this entry for ongoing updates and changes to the project or tools.
 
 Here you can find our [Developers Roadmap](https://trello.com/b/1V10E4IB/overwolf-roadmap).
 
+## Version 0.155 (In-Progress)
+
+Note that iterations 154 and 155 were combined into a single iteration.  
+In addition, the work on the documentation for this version is still in-progress.
+
+#### API
+
+* [overwolf.utils.placeOnClipboard()](overwolf-utils#placeonclipboarddata) and [overwolf.utils.getFromClipboard()](overwolf-utils#getfromclipboardcallback) reimplemented so that we tackle the coexistence issues with AutoHotKey script.
+
+* [overwolf.games.inputTracking.getActivityInformation()](overwolf-games-inputTracking#getactivityinformationcallback) - remove the 5 minutes min time for getting a result.  
+  Note that We're still not recording the first 30 characters, and we will send the activity info to our servers only if your sessions is longer than 5 minutes.
+
+* New flag for [replay](overwolf-media-replays#replayvideooptions-object) \ [streaming](overwolf-streaming#streamvideooptions-object) video settings object: **use_app_display_name**.  
+  If this flag in on, when creating a video capture folder, it will use the app "short name" as the folder name, instead of using the app name from the manifest. (the app "short name" is defined in the [dock_button_title](manifest-json#meta-dock) manifest flag).
+
+* New manifest flag [max_rotation_log_files](manifest-json#max_rotation_log_files) - for app Log rotaion control. It allow to increase app log's file rotation (up to 40).
+
+* WebServer: Overwolf.web.webserver now allow CORS.
+
+* Change Zoom - new feature:  overwolf.window.setZoom().
+
+
+#### Platform
+
+* TBA
+
+#### Game events
+
+* TBA
+
 ## Version 0.153 (Aug. 2020)
 
 Note that iterations 150 to 153 were combined into a single iteration.  
-In addition, the work on the documentation for this version is still in-progress.
 
 #### API
 

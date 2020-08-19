@@ -894,15 +894,21 @@ Stream video options.
 | disable_when_sht_not_supported| bool | Do not start video replay service in case shared texture is not supported.  | 0.105  |
 | indication_position | [indication_position](#indication_position-enum) Enum | Position of the recorder indicator. Available for video capture only.  | 0.143  |
 | indication_type     | [indication_type](#indication_type-enum) Enum | Type of the recorder indicator. Available for video capture only.  | 0.143  |
+| use_app_display_name | bool | Use the app display (if has any e.g [dock_button_title](manifest-json#meta-dock) name when creating video folder. See [note](#use_app_display_name-notes)  | 0.154  |
 
-##### `sub_folder_name` note: 
+#### use_app_display_name notes
+
+If this flag in on, when creating a video capture folder, it will use the app "short name" as the folder name, instead of using the app name from the manifest.  
+The app "short name" is defined in the [dock_button_title](manifest-json#meta-dock) manifest flag.
+
+#### sub_folder_name notes 
 
 * Defines Sub folder for video file path destination (Optional):  
 `OverwolfVideoFolder\\AppName\\|sub_folder_name\\|file_name|`
 * In case [folder_name] is empty:  
 `OverwolfVideoFolder\\AppName\\|sub_folder_name|`
 
-#### `enable_on_demand_split` notes
+#### enable_on_demand_split notes
 
 * When calling [split()](#splitstreamid-callback), the recorder will flash the video file.
 * When the recorder encoded the key frame with presentation time stamp thats is equal to grater than split() timestamps.
