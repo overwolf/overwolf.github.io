@@ -6,7 +6,11 @@ sidebar_label: overwolf.web.webserver
 
 An instance of a web server.
 
-The OW webserver is CORS (Cross-Origin Resource Sharing) enabled. 
+The OW webserver is CORS enabled and sends the [Access-Control-Allow-Origin](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Access-Control-Allow-Origin) headers to clients.  
+
+Cross-Origin Resource Sharing (CORS) is a mechanism that uses additional HTTP headers to tell browsers to give a web application running at one origin, access to selected resources from a different origin. The CORS mechanism supports secure cross-origin requests and data transfers between browsers and servers.  
+
+It's useful for case when you need to pass some data (ex: authentication token) from your website to Overwolf app.
 
 ## Methods Reference
 

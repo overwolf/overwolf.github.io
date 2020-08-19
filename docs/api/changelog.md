@@ -32,7 +32,8 @@ In addition, the work on the documentation for this version is still in-progress
 
 * WebServer: [overwolf.web.webserver](overwolf-web-webserver) now allow CORS.  
   Now the built-in OW webserver sends the correct CORS headers ([Access-Control-Allow-Origin](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Access-Control-Allow-Origin)) to client.  
-  Cross-Origin Resource Sharing (CORS) is a mechanism that uses additional HTTP headers to tell browsers to give a web application running at one origin, access to selected resources from a different origin. The CORS mechanism supports secure cross-origin requests and data transfers between browsers and servers.  It's useful for case when you need to pass some data (ex: authentication token) from your website to Overwolf app.
+  It's useful for case when you need to pass some data (ex: authentication token) from your website to Overwolf app.  
+  More info [here](overwolf-web-webserver).
 
 #### Game events
 
