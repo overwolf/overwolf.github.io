@@ -65,7 +65,7 @@ sidebar_label: Marketing asset requirements
 -   Add a short textual description of what the app does.
 -   Describe the app's value - what does the app offer that is different from other apps for the same games/games. Why should gamers use it?
 -   Add short textual titles and description of the app's top 3 features
--   Example on the next slide.
+-   Check the example landing pages mentioned above for inspiration.
 
 ### 5. Full Mockups of the app
 -   Please provide a fully "realistic" usage mockup of each of the apps different pages/tabs/windows/etc...
