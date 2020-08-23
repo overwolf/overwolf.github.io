@@ -20,7 +20,10 @@ In order to prevent ads being called but not shown, please make sure you use the
 
 * When the window is minimized, do not delete or destroy the `owAd` instance object, instead call the `removeAd()` method.
 * When the window is restored, call the same `owAd` instance’s `refreshAd()` method.
-* To check when the window is minimized or restored, you can use the [overwolf.windows.onStateChanged](../api/overwolf-windows#onstatechanged) event. This event applies on all windows opened\closed in the app, so it's highly recommended to add some checking in the event handler to make sure that the window with the state change is the window with the ad, and to avoid unnecessary wrong calls to the *refreshAd()* and *removeAd()*.
+* To check when the window is minimized or restored, you can use the [overwolf.windows.onStateChanged](../api/overwolf-windows#onstatechanged) event. 
+  * This event applies on all windows opened\closed in the app, so it's highly recommended to add some checking in the event handler to make sure that the window with the state change is the window with the ad, and to avoid unnecessary wrong calls to the *refreshAd()* and *removeAd()*.
+  * For in-game windows only, *onStateChanged* event is not fired when using Win+D for minimizing all windows. So in that case you can't hide/refres ads.  
+    If you want to handle that scenario you can listen to [onGameInfoUpdated](../api/overwolf-games#ongameinfoupdated) event and stop the ad if *gameInfo.isInFocus* is false. (note that LoL might have different behavior, so double-check it).
 
 ## Type Definitions
 Type definitions for the `OwAd` class and the various interfaces it uses can be found at our [types](https://github.com/overwolf/types/blob/master/owads.d.ts) github.
