@@ -253,6 +253,9 @@ Mar 14, 04:53 PM GMT+3
 PUBG
 ----
 
+**Resolved** - This incident has been resolved.  
+Aug 19, 07:24 AM GMT+3
+
 **Investigating** - PUBG events are down.  
 Aug 19, 11:52 AM GMT+3
 
@@ -466,6 +469,9 @@ Oct 09, 10:24 AM GMT+3
 
 Valorant
 --------
+
+**Investigating** - Valorant events are down.  
+Aug 22, 04:04 PM GMT+3
 
 **Resolved** - This incident has been resolved.  
 Jul 05, 17:43 PM GMT+3
