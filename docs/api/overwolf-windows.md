@@ -1148,6 +1148,9 @@ automatic       |  Turns off automatically when the window regains focus. Does n
 on              |  Turns flashing on   |
 off             |  Turns flashing off  |
 
+#### automatic note
+
+The right way to test the **automatic** behavior, is to open the debug URL http://localhost:54284/, open the dev console from there, and than call the **flash()** function. 
 
 ## onScreenPropertyChangedEvent Object
 
