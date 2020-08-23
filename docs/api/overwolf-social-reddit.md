@@ -161,7 +161,29 @@ file                   | string  | The file to share                            
 subreddit              | string  | The subreddit to which the file will be shared                              |
 description            | string  | The shared video's description                                              |
 trimming (Optional)    | [VideoCompositionSegment](overwolf-media-videos#videocompositionsegment-object)  | An object containing start time and end time for the desired VideoCompositionSegment                                        |
-tags (Optional)        | string  | An array of chronological events that occurred during the capture           |
+events (Optional)      | string  | An array of chronological events that occurred during the capture           |
 gameClassId (Optional) | int     | The associated game's class ID                                              |
 gameTitle (Optional)   | string  | The associated game's title                                                 |
 metadata (Optional)    | object  | Extra information about the game session                                    |
+
+#### Data example
+
+```json
+{
+  "file": "file://D:\\Videos\\Overwolf\\Outplayed\\League of Legends/League of Legends_8-16-2020_2-6-20-576\\League of Legends 08-16-2020_2-06-22-522.mp4",
+  "events": [
+    "PvP Round"
+  ],
+  "gameClassId": 5426,
+  "gameTitle": "League of Legends",
+  "title": "Check out my video! #TeamfightTactics | Captured by #Outplayed",
+  "subreddit": "clips",
+  "trimming": {
+    "startTime": 1136507,
+    "endTime": 1177391
+  },
+  "metadata": {
+    "mode": "tft"
+  }
+}
+```
