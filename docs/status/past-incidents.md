@@ -470,6 +470,9 @@ Oct 09, 10:24 AM GMT+3
 Valorant
 --------
 
+**Resolved** - This incident has been resolved.  
+Aug 23, 03:58 PM GMT+3
+
 **Investigating** - Valorant events are down.  
 Aug 22, 04:04 PM GMT+3
 
