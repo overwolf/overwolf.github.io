@@ -9,8 +9,8 @@ Provides information about the currently running game.
 ## Methods Reference
 
 * [overwolf.games.getRunningGameInfo()](#getrunninggameinfocallback)
-* [overwolf.games.getGameInfo()](#getgameinfogameclassid-callback)
-* [overwolf.games.getGameDBInfo()](#getgamedbinfogameclassid-callback)
+* [overwolf.games.getGameInfo()](#getgameinfogameclassidcallback)
+* [overwolf.games.getGameDBInfo()](#getgamedbinfogameclassidcallback)
 * [overwolf.games.getRecentlyPlayedGames()](#getrecentlyplayedgamesmaxnumofgames-callback)
 
 ## Events Reference
