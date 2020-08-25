@@ -109,7 +109,7 @@ You can receive this entity type by registering to the [overwolf.games.events.on
 
 You can receive this entity type by registering to the [overwolf.games.events.onInfoUpdates2](../api/overwolf-games-events#oninfoupdates2) event listener.  
 
-To get all the current info state and all the info-updates that happend BEFORE you registered to this event listnerer, make sure to call [overwolf.games.events.getInfo()](../api/overwolf-games-events#getinfocallback). Read more about it on [chapter 4](../api/overwolf-games-events#4-get-current-info-state). 
+To get all the current info state and all the info-updates that happend BEFORE you registered to this event listener, make sure to call [overwolf.games.events.getInfo()](../api/overwolf-games-events#getinfocallback). Read more about it on [chapter 4](../api/overwolf-games-events#4-get-current-info-state). 
 
 ### 3. Call setRequiredFeatures()
 
