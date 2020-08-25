@@ -37,7 +37,7 @@ In addition, the work on the documentation for this version is still in-progress
 
 #### Game events
 
-* TBA
+* Hearthstone - "match_end" now includes a match outcome value
 
 ## Version 0.153 (Aug. 2020)
 
