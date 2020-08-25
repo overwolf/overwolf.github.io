@@ -37,7 +37,7 @@ In addition, the work on the documentation for this version is still in-progress
 
 #### Game events
 
-* Hearthstone - "match_end" now includes a match outcome value
+* [Hearthstone](overwolf-games-events-hearthstone) - "match_end" now includes a match outcome value
 
 ## Version 0.153 (Aug. 2020)
 
