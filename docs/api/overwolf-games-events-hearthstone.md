@@ -341,5 +341,5 @@ Data Example:
 Event       | Event Data   | Fired When    | Notes              | Since GEP Ver. |
 ------------| -------------| --------------| ------------------ | --------------|
 match_start| mode</br>`{"name":"match_start","data":"standard"}` | match starts	|  | 134.0  |
-match_end   | null         | match ends   	|                   |     134.0     |
-match_outcome| "WON" / "LOST" | match concludes	|               |     134.0     |
+match_end   |"win"/"lose"/"tie"| match ends |                   |     134.0     |
+match_outcome| "WON" / "LOST" | match concludes| Not reliable on some rare scenarios, please use `"match_end"` event data instead|     134.0     |
