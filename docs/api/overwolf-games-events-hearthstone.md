@@ -259,7 +259,7 @@ opponent | playersInfo   |  See [notes](#opponent-note) |     |   123.0 |
 Event       | Event Data   | Fired When    | Notes              | Since GEP Ver. |
 ------------| -------------| --------------| ------------------ | --------------|
 match_start| mode</br>`{"name":"match_start","data":"standard"}` | match starts	|  | 123.0  |
-match_end  | null	 | match ends|  | 123.0  |
+match_end  | "win"/"lose"/"tie"	 | match ends|  | 123.0  |
 
 ## `match_info`
 
