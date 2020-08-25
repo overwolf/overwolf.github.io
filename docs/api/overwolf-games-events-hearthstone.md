@@ -340,4 +340,4 @@ Data Example:
 
 Event       | Event Data   | Fired When    | Notes              | Since GEP Ver. |
 ------------| -------------| --------------| ------------------ | --------------|
-match_outcome| "WON" / "LOST" | match concludes| Not reliable on some rare scenarios, please use `"match_end"` event data instead|     134.0     |
+match_outcome| "WON" / "LOST" | match concludes| This event is not reliable on some rare scenarios, please use `"match_end"` event data instead|     134.0     |
