@@ -253,6 +253,9 @@ Mar 14, 04:53 PM GMT+3
 PUBG
 ----
 
+**Investigating** - PUBG events are down.  
+Aug 26, 09:37 AM GMT+3
+
 **Resolved** - This incident has been resolved.  
 Aug 19, 07:24 AM GMT+3
 
