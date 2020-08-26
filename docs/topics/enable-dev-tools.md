@@ -50,5 +50,5 @@ To enable a feature through the registry, you should add it under the [HKEY_CURR
 
  #### Download registry key
 
- To enable the developer tools on your OW client, you can save [this file](https://raw.githubusercontent.com/overwolf/community-gists/master/features.json/enable-dev-tools.reg) to your machine (make sure to save it with the *.reg extension), and run it.
+ To enable the developer tools on your OW client, you can save [this file](https://raw.githubusercontent.com/overwolf/community-gists/master/enable-dev-tools.reg) to your machine (make sure to save it with the *.reg extension), and run it.
 
