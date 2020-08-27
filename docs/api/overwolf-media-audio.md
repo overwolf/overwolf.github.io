@@ -6,6 +6,10 @@ sidebar_label: overwolf.media.audio
 
 A set of functions for playback of audio files. Currently supports MP3 and WAV files.
 
+:::warning
+The overwolf.media.audio API is not regularly maintained and some of it’s methods and events might not work as intended.
+:::
+
 ## Methods Reference
 
 * [overwolf.media.audio.create()](#createurl-callback)

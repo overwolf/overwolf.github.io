@@ -23,21 +23,32 @@ In addition, the work on the documentation for this version is still in-progress
 * New flag for [replay](overwolf-media-replays#replayvideooptions-object) \ [streaming](overwolf-streaming#streamvideooptions-object) video settings object: **use_app_display_name**.  
   If this flag in on, when creating a video capture folder, it will use the app "short name" as the folder name, instead of using the app name from the manifest. (the app "short name" is defined in the [dock_button_title](manifest-json#meta-dock) manifest flag).
 
-* New manifest flag [max_rotation_log_files](manifest-json#max_rotation_log_files) - for app Log rotaion control. It allow to increase app log's file rotation (up to 40).
+* it is now possible to change the number of maximum saved log files that
+apps are saving with the new max_rotation_log_file manifest flag
+New manifest flag [max_rotation_log_files](manifest-json#max_rotation_log_files) - for app Log rotaion control. It allow to increase app log's file rotation (up to 40).
     
 * New feature: Set window zoom level - [overwolf.window.setZoom()](overwolf-windows#setzoomwinzoomfactorowid-windowid).  
   Now you can change the zoom factor of your window through the API (the effect is exactly like changing the zoom in a web browser).
+
+* The [overwolf.media.audio](overwolf-media-audio) is now considered obsolete, and will display the relevant warning in the console when using it.
 
 #### Platform
 
 * WebServer: [overwolf.web.webserver](overwolf-web-webserver) now allow CORS.  
   Now the built-in OW webserver sends the correct CORS headers ([Access-Control-Allow-Origin](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Access-Control-Allow-Origin)) to client.  
-  It's useful for case when you need to pass some data (ex: authentication token) from your website to Overwolf app.  
-  More info [here](overwolf-web-webserver).
+  It's useful for case when you need to pass some data (ex: authentication token) from your website to Overwolf app. More info [here](overwolf-web-webserver).
+
+#### Bug fixes
+
+* On Uninstall, Overwolf now deletes all related registry entries from all users.
+* Fixed a highlights bug where on rare occasions it would record the video, but wouldn't inform the app requesting it.
+* Fixed cases where the video onStop/onStart listeners wouldn't return a callback.
+* Fixed a bug where HTML5 audio would play twice.
+* Fixed a bug with video naming when using the split API and the configuration include_full_size_video was false.
 
 #### Game events
 
-* [Hearthstone](overwolf-games-events-hearthstone) - "match_end" now includes a match outcome value
+* [Hearthstone](overwolf-games-events-hearthstone) - "match_end" now includes a match outcome value.d
 
 ## Version 0.153 (Aug. 2020)
 
