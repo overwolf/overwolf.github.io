@@ -7,7 +7,7 @@ sidebar_label: overwolf.media.audio
 A set of functions for playback of audio files. Currently supports MP3 and WAV files.
 
 :::warning obsolete
-The overwolf.media.audio API is deprecated. Use html5 <audio> tag instead.
+The overwolf.media.audio API is deprecated. Use the html5 [audio](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/audio) tag instead.
 :::
 
 ## Methods Reference
