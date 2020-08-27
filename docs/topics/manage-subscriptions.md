@@ -6,4 +6,4 @@ sidebar_label: Manage your subscriptions
 
 ## Overview
 
-TBD.
+TBD. Will be updated soon.
