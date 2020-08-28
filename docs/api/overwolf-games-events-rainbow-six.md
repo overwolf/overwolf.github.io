@@ -97,7 +97,8 @@ While the possible values are:
 * Multiplayer > Custom game > Online: `CUSTOMGAME_PVP_DEDICATED`
 * Player vs. AI > Situations: `OPERATIONS`
 * Player vs. AI > Training Grounds Lonewolf: `MATCHMAKING_PVE_LONEWOLF`
-* Player vs. AI > Training Grounds: `MATCHMAKING_PVE`
+* Player vs. AI > Training Grounds with Squad only: `MATCHMAKING_PVE_PARTY`
+* Player vs. AI > Training Grounds Online: `MATCHMAKING_PVE`
 * Tutorials: It’s just a video tutorial, not a game mode.
 
 *Note that on custom games or vs. AI, there is no support in Overwolf real time game events*
