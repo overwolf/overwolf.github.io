@@ -301,6 +301,7 @@ callback  | function              | Result of the request                       
 #### Version added: 0.135
 
 > Checks if an update is available for the calling extension.
+
 > The function always returns UpToDate when used on an unpacked extensions
 
 This function allows the current app to check if there is an extension update, without having to wait for Overwolf to do so.
@@ -442,6 +443,7 @@ PendingRestart  | The extension just updated, and it's waiting for a relaunch | 
 ## Recommended extension update flow
 
 This is the recommended flow for a manual update of Overwolf extensions.
+
 Note that a call to [checkForExtensionUpdate()](#checkforextensionupdatecallback) will not work when the extension was loaded unpacked.
 
 Note that regardless, the auto-update mechanism will automatically fetch available updates from Overwolf servers every few hours, 
