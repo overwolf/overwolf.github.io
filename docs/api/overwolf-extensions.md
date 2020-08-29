@@ -461,4 +461,4 @@ TL;DR The flow is `UpdateAvailable => updateExtension() => relaunch()`.
 3. At this point, an extension restart is required.  You can offer the user a "Relaunch" button.  
    The button should call [relaunch()](#relaunch).  
 
-4. Suppose your app depends on a sequence of game events, to avoid any app-related flow issues, it's highly recommended to **notify the user and ask for a game restart** as well.
+4. In a case that your app depends on a sequence of game events, to avoid any app-related flow issues, it's highly recommended to **notify the user and ask for a game restart** as well.
