@@ -302,7 +302,7 @@ callback  | function              | Result of the request                       
 
 > Checks if an update is available for the calling extension.
 
-> The function always returns UpToDate when used on an unpacked extensions
+> The function always returns UpToDate when used on an unpacked extension.
 
 This function allows the current app to check if there is an extension update, without having to wait for Overwolf to do so.
 Calling this function will not automatically update the extension, just checks if an update exists.
