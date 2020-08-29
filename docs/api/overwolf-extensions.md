@@ -449,7 +449,7 @@ Note that a call to [checkForExtensionUpdate()](#checkforextensionupdatecallback
 Note that regardless, the auto-update mechanism will automatically fetch available updates from Overwolf servers every few hours, 
 or once the Overwolf client is restarted. (that includes upgrades for all the available components: extensions, GEP, Client).
 
-TL;DR The flow is `UpdateAvailable => updateExtension() => relaunch() => relaunch game`.
+TL;DR The flow is `UpdateAvailable => updateExtension() => relaunch()`.
 
 1. Once you get an `UpdateAvailable` state, You should offer the user an "Update" button.  
    The button should call [updateExtension()](#updateextensioncallback).  
@@ -461,5 +461,4 @@ TL;DR The flow is `UpdateAvailable => updateExtension() => relaunch() => relaunc
 3. At this point, an extension restart is required.  You can offer the user a "Relaunch" button.  
    The button should call [relaunch()](#relaunch).  
 
-4. It's highly recommended to notify the user and ask for a game restart as well,  
-   to avoid any app related flow issues.
+4. Suppose your app depends on a sequence of game events, to avoid any app-related flow issues, it's highly recommended to **notify the user and ask for a game restart** as well.
