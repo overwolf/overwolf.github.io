@@ -377,8 +377,10 @@ Returns the content of a file in an app's library.</p></li>
 <h2><a class="anchor" aria-hidden="true" id="checkforextensionupdatecallback"></a><a href="#checkforextensionupdatecallback" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>checkForExtensionUpdate(callback)</h2>
 <h4><a class="anchor" aria-hidden="true" id="version-added-0135"></a><a href="#version-added-0135" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Version added: 0.135</h4>
 <blockquote>
-<p>Checks if an update is available for the calling extension.
-The function always returns UpToDate when used on an unpacked extensions</p>
+<p>Checks if an update is available for the calling extension.</p>
+</blockquote>
+<blockquote>
+<p>The function always returns UpToDate when used on an unpacked extensions</p>
 </blockquote>
 <p>This function allows the current app to check if there is an extension update, without having to wait for Overwolf to do so.
 Calling this function will not automatically update the extension, just checks if an update exists.</p>
@@ -512,8 +514,8 @@ For more info please read our <strong><a href="#recommended-extension-update-flo
 </tbody>
 </table>
 <h2><a class="anchor" aria-hidden="true" id="recommended-extension-update-flow"></a><a href="#recommended-extension-update-flow" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Recommended extension update flow</h2>
-<p>This is the recommended flow for a manual update of Overwolf extensions.
-Note that a call to <a href="#checkforextensionupdatecallback">checkForExtensionUpdate()</a> will not work when the extension was loaded unpacked.</p>
+<p>This is the recommended flow for a manual update of Overwolf extensions.</p>
+<p>Note that a call to <a href="#checkforextensionupdatecallback">checkForExtensionUpdate()</a> will not work when the extension was loaded unpacked.</p>
 <p>Note that regardless, the auto-update mechanism will automatically fetch available updates from Overwolf servers every few hours,
 or once the Overwolf client is restarted. (that includes upgrades for all the available components: extensions, GEP, Client).</p>
 <p>TL;DR The flow is <code>UpdateAvailable =&gt; updateExtension() =&gt; relaunch() =&gt; relaunch game</code>.</p>
