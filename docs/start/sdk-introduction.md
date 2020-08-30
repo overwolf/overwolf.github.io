@@ -20,10 +20,11 @@ An Overwolf app's code has three main parts:
 
 :::important Only JS frameworks are supported
 For example vue.js, angular.js, react, backbone.js and similar ones.  
-However, full-blown desktop application solutions such as electron.js, AppJS and similar ones are not supported.
+However, full-blown desktop application solutions such as electron.js, AppJS and similar ones are not supported.  
+For Vue.JS developers - we strongly advise against using UI libraries like Vuetify, Bueify, etc., as we've seen issues in non-native windows where different controls might not respond to clicks.
 :::
 
-
+If you know what you're doing and are looking for a workaround, find the control's outer element, have it listen to onmousedown, and simulate a click().
 To build Overwolf apps, you need to download the Overwolf client.
 You can find the latest developer client version [Here](https://download.overwolf.com/install/Download?Channel=developers).
 
