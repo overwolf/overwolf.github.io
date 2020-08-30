@@ -47,7 +47,7 @@ New manifest flag [max_rotation_log_files](manifest-json#max_rotation_log_files)
 * Fixed a bug with video naming when using the split API and the configuration include_full_size_video was false.
 
 #### Dev Console
-
+ 
 * Now you can edit your subscription plan and manage your subscribers.  
   We have added to the Dev Console a new tab: "Subscription". When clicked, two options will appear:
   * Plans - you can edit the subscription plans you already own: title, price, description, period, status, and assets (that'll be shown in Overwolf's app store).  
