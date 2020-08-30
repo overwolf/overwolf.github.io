@@ -32,12 +32,14 @@ See for an example the [overwolf.streaming.stop()](../api/overwolf-streaming#sto
 #### Windows 10 Hardware-Accelerated GPU Scheduling notice
 
 :::important
+
 The Hardware-Accelerated GPU Scheduling feature is currently supported on Windows 10 version 2004 or Build 19041 and Nvidia latest GPU driver (451.49).
 
 When set to On, it might cause captured videos to be laggy/choppy.  
 
-We created a quick experimental plugin with [a simple way of detecting if it is on or not](https://github.com/overwolf/experimental-plugin) (you just need to download the plugin and add it)
-If you detect it is on, you can give a warning to the user with a link to change this setting: 
+We created a quick experimental plugin with [a simple way of detecting whether it is ON or OFF](https://github.com/overwolf/experimental-plugin) (you just need to download the plugin and add it. Don't forget to unblock the dll)
+If you detect it is ON, you should display a warning to the user with a link to set this setting to OFF.
+ 
 You may open the relevant Windows Graphics settings by calling: [overwolf.utils.openUrlInDefaultBrowser('ms-settings:display-advancedgraphics')](../api/overwolf-utils#openurlindefaultbrowserurl);
 :::
 
