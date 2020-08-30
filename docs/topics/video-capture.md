@@ -29,6 +29,14 @@ Using any of the above APIs requires the **VideoCaptureSettings** permission fla
 
 See for an example the [overwolf.streaming.stop()](../api/overwolf-streaming#stopstreamid-callback) documentation.
 
+:::important Windows 10 Hardware-Accelerated GPU Scheduling notice
+This feature currently supported on Windows 2004 and Nvidia latest GPU driver (451.49). When set to On, it might cause captured videos to be laggy/choppy.  
+
+We created a quick experimental plugin with [a simple way of detecting if it is on or not](https://github.com/overwolf/experimental-plugin) (you just need to download the plugin and add it)
+If you detect it is on, you can give a warning to the user with a link to change this setting: 
+You may open the relevant Windows Graphics settings by calling: [overwolf.utils.openUrlInDefaultBrowser('ms-settings:display-advancedgraphics')](../api/overwolf-utils#openurlindefaultbrowserurl);
+:::
+
 ## Comparison table
 
 To summarize, these are the main differences between the **overwolf.media.replays** API to the **overwolf.streaming** API:
