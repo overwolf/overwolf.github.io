@@ -37,7 +37,7 @@ New manifest flag [max_rotation_log_files](manifest-json#max_rotation_log_files)
 * WebServer: [overwolf.web.webserver](overwolf-web-webserver) now allow CORS.  
   Now the built-in OW webserver sends the correct CORS headers ([Access-Control-Allow-Origin](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Access-Control-Allow-Origin)) to client.  
   It's useful for case when you need to pass some data (ex: authentication token) from your website to Overwolf app. More info [here](overwolf-web-webserver).
-* Windows 10 version 2004 *Hardware-Accelerated GPU Scheduling* feature might cause captured videos to be leggy. More info [here](../topics/video-capture#windows-10-hardware-accelerated-gpu-scheduling-notice).
+* Windows 10 version 2004 *Hardware-Accelerated GPU Scheduling* feature might cause captured videos to be laggy. More info [here](../topics/video-capture#windows-10-hardware-accelerated-gpu-scheduling-notice).
 
 #### Bug fixes
 
