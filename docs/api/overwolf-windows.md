@@ -707,7 +707,7 @@ callback               | function                              | A callback func
 
 :::warning
 we highly recommend not to use getOpenWindows() for windows communication.  
-Please read the ["Communication between windows"](#) section for more info.
+Please read the ["Communicating between windows"](../topics/communicating-between-windows) section for more info.
 :::
 
 Parameter              | Type                                  | Description                                                                                       |
