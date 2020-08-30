@@ -46,6 +46,18 @@ New manifest flag [max_rotation_log_files](manifest-json#max_rotation_log_files)
 * Fixed a bug where HTML5 audio would play twice.
 * Fixed a bug with video naming when using the split API and the configuration include_full_size_video was false.
 
+#### Dev Console
+
+* Now you can edit your subscription plan and manage your subscribers.  
+  We have added to the Dev Console a new tab: "Subscription". When clicked, two options will appear:
+  * Plans - you can edit the subscription plans you already own: title, price, description, period, status, and assets (that'll be shown in Overwolf's app store).  
+    For now, you can only edit current plans. To create one, please ask your dev-rel manager.
+  * Subscribers - you’ll be able to edit each subscriber expiration date and status (active/canceled/revoked/invalid).
+* You can now see your app's URL to the Overwolf store listing directly from the console.
+* To make our apps more transparent to users, we added the option to configure if you have ads, subs, and if the app is free. This will be shown to users on the app store.
+* You can now see which tags are enabled for your app when searching for a game. To add more tags contact your dev-rel manager.
+
+
 #### Game events
 
 * [Hearthstone](overwolf-games-events-hearthstone) - "match_end" now includes a match outcome value.d
