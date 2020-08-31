@@ -622,6 +622,10 @@ A callback function which will be called with the status of the request
 
 > Update stream desktop capture options.
 
+:::warning OBSOLETE
+This function is obsolete.
+:::
+
 Parameter                  | Type                                                                                              | Description                   |
 ---------------------------| --------------------------------------------------------------------------------------------------| ------------------------------|
 streamId	                 | int                                                                                               | The id of the stream                   |

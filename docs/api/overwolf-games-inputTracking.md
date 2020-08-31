@@ -32,8 +32,8 @@ Provides keyboard and mouse activity information while the user is in-game.
 
 > Returns input activity information.
 
-:::warning
-Some functionality of this function might not work as intended. Instead, please use [getMatchActivityInformation()](#getmatchactivityinformationcallback).
+:::warning OBSOLETE
+This function is obsolete. Instead, please use [getMatchActivityInformation()](#getmatchactivityinformationcallback).
 :::
 
 Parameter | Type                                 | Description                              |

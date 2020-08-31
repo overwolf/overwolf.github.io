@@ -72,8 +72,8 @@ Read more about how to use the [overwolf.settings.hotkeys API](overwolf-settings
 
 > Returns the hotkey assigned to a given feature id by calling the callback.
 
-:::warning
-This function is deprecated. Instead, please use [overwolf.settings.hotkeys.get](overwolf-settings-hotkeys#getcallback).
+:::warning OBSOLETE
+This function is obsolete.  Instead, please use [overwolf.settings.hotkeys.get()](overwolf-settings-hotkeys#getcallback).
 :::
 
 Parameter | Type                  | Description                                                             |
@@ -98,8 +98,8 @@ A callback function which will be called with the status of the request
 
 > Registers a callback for a given hotkey action.
 
-:::warning
-This function is deprecated. Instead, please register to the [overwolf.settings.hotkeys.onPressed](overwolf-settings-hotkeys#onpressed) event.
+:::warning OBSOLETE
+This function is obsolete. Instead, please register to the [overwolf.settings.hotkeys.onPressed](overwolf-settings-hotkeys#onpressed) event.
 :::
 
 Parameter | Type                  | Description                                                             |
@@ -166,8 +166,8 @@ overwolf.settings.registerHotKey(
 
 > Returns the current language overwolf is set to in a two letter ISO name format.
 
-:::warning
-This function is deprecated. Instead, please use [overwolf.settings.language]() API.
+:::warning OBSOLETE
+This function is obsolete.  Instead, please use [overwolf.settings.language]() API.
 :::
 
 Parameter | Type                  | Description                                                             |
@@ -327,6 +327,10 @@ callback           | ([Result: GetFpsSettingsResult](#getfpssettingsresult-objec
 
 > Sets the state (on/off), position, offset (in pixels) and scale [0, 1] of the Fps control.
 
+:::warning OBSOLETE
+This function is obsolete.
+:::
+
 Parameter          | Type               | Description                                                              |
 -------------------| -------------------| ------------------------------------------------------------------------ |
 settings           | [FpsSettings](#fpssettings-object) Object |  Container for the FPS settings                   |
@@ -401,8 +405,8 @@ callback           | ([Result: GetExtensionSettingsResult](#getextensionsettings
 
 > Fired when a hotkey is modified. Apps will only be notified of hotkey changes that relate to them.
 
-:::warning
-This function is deprecated. Instead, please use the  [overwolf.settings.hotkeys.onChanged](overwolf-settings-hotkeys#onchanged) event.
+:::warning OBSOLETE
+This event is obsolete.  Instead, please use the  [overwolf.settings.hotkeys.onChanged](overwolf-settings-hotkeys#onchanged) event.
 :::
 
 #### Event Data Example: Success

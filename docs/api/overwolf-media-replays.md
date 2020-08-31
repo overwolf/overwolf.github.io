@@ -131,14 +131,14 @@ A callback function which will be called with the status of the request
 
 > Returns whether replay capturing is turned on or off.
 
+:::warning OBSOLETE
+This function is obsolete. Instead, please use [overwolf.media.replays.getState()](#getstatecallback).
+:::
+
 Parameter | Type                  | Description                                                             |
 --------- | ----------------------| ----------------------------------------------------------------------- |
 replayType| [ReplayType](#replaytype-enum) enum       | The type of replay to get state for                 |
 callback  | function              | A callback function which will be called with the status of the request |
-
-:::warning
-This function is deprecated. Instead, please use [overwolf.media.replays.getState()](#getstatecallback).
-:::
 
 #### Callback argument: Success
 
@@ -166,6 +166,10 @@ Note that you get the state only from the window that turned the capturing on.
 #### Version added: 0.78
 
 > Starts capturing a replay to a file. 
+
+:::warning OBSOLETE
+This function is obsolete.
+:::
 
 :::note
 **Capture()** will automatically stop after it reaches the **futureDuration**. No need to call **stopCapture()**. 
@@ -224,6 +228,10 @@ callback                | function                             | A callback func
 
 > Starts capturing a replay to a file.
 
+:::warning OBSOLETE
+This function is obsolete.
+:::
+
 :::note
 **startCapture()** won't automatically stop until you call [stopCapture()](#stopcapturereplaytype-replayid-callback).
 
@@ -277,6 +285,10 @@ callback                | function                             | A callback func
 #### Version added: 0.78
 
 > Finishes capturing a replay and returns a url to the created video file.
+
+:::warning OBSOLETE
+This function is obsolete.
+:::
 
 * You can only call this method if replay mode is on and using a valid id of a replay being captured to a file (“url” property).
 

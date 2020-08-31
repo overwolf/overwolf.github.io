@@ -878,7 +878,7 @@ callback               | function                                          | Ret
 
 Note that the function name is misspelled. It is kept this way for backwards compatibility.
 
-:::warning
+:::warning OBSOLETE
 The OSR acceleration feature is is no longer supported and maintained. 
 :::
 

@@ -4,8 +4,8 @@ title: overwolf.tobii API
 sidebar_label: overwolf.tobii
 ---
 
-:::warning
-The overwolf.tobii API is no longer supported and maintained.  
+:::warning OBSOLETE
+This API is no longer supported and maintained. Some of it’s methods and events might not work as intended.  
 If you want to integrate tobii in your OW app, please wrap the [tobii DLL](https://developer.tobii.com/consumer-eye-trackers/core-sdk/) as an [OW plugin](../topics/plugins-overview).
 :::
 
