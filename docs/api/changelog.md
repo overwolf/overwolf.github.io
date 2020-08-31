@@ -46,6 +46,7 @@ This is the full list of OBSOLETE functions and APIs:
   * overwolf.streaming.updateStreamingDesktopOptions()
   * overwolf.benchmarking (all)
   * overwolf.tobii (all)
+  * overwolf.media.audio (all)
   * overwolf.settings.setFpsSettings()
   * overwolf.settings.registerHotKey()
   * overwolf.settings.getCurrentOverwolfLanguage()
