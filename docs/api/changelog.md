@@ -32,6 +32,25 @@ New manifest flag [max_rotation_log_files](manifest-json#max_rotation_log_files)
 
 * The [overwolf.media.audio](overwolf-media-audio) is now considered obsolete, and will display the relevant warning in the console when using it.
 
+* We marked several functions and APIs as **OBSOLETE**. Soon, we altogether remove them from the docs and from the API itself. Note that you should get a warning in your dev console when using one of the obsolete functions.  
+This is the full list of OBSOLETE functions and APIs:
+  * overwolf.media.stopGifBuffer()
+  * overwolf.media.generateGif()
+  * overwolf.media.startGifBuffer()
+  * overwolf.media.replays.turnOff()
+  * overwolf.media.replays.getState()
+  * overwolf.media.replays.startCapture()
+  * overwolf.media.replays.stopCapture()
+  * overwolf.media.replays.capture()
+  * overwolf.media.replays.finishCapture()
+  * overwolf.streaming.updateStreamingDesktopOptions()
+  * overwolf.benchmarking (all)
+  * overwolf.tobii (all)
+  * overwolf.settings.setFpsSettings()
+  * overwolf.settings.registerHotKey()
+  * overwolf.settings.getCurrentOverwolfLanguage()
+  * overwolf.settings.OnHotkeyChanged
+
 #### Platform
 
 * WebServer: [overwolf.web.webserver](overwolf-web-webserver) now allow CORS.  
