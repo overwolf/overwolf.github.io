@@ -37,12 +37,12 @@ This is the full list of OBSOLETE functions and APIs:
   * overwolf.media.stopGifBuffer()
   * overwolf.media.generateGif()
   * overwolf.media.startGifBuffer()
-  * overwolf.media.replays.turnOff()
+  * overwolf.media.replays.turnOff(replyID, callback) - this signature already removed from the docs.
   * overwolf.media.replays.getState()
   * overwolf.media.replays.startCapture(replayType, pastDuration, callback)
   * overwolf.media.replays.stopCapture(ReplayType, replayId, callback)
   * overwolf.media.replays.capture(replayType, pastDuration, futureDuration, captureFinishedCallback, callback)
-  * overwolf.media.replays.finishCapture()
+  * overwolf.media.replays.finishCapture() - already removed from the docs.
   * overwolf.streaming.updateStreamingDesktopOptions()
   * overwolf.benchmarking (all)
   * overwolf.tobii (all)
