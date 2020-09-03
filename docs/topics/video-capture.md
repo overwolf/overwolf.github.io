@@ -42,11 +42,11 @@ If you detect it is ON, you should display a warning to the user with a link to 
 
 **Suggested warning window**  
 
-We attached here a recommened warning window design, to infrom the user that a video capture issue is detected, with a button that opens the relevant Windows Graphics settings.
+We attached here a recommended warning window design to inform the user that a video capture issue is detected, with a button that opens the relevant Windows Graphics settings.
 
 * Window Title: Video capture issue detected.
 * Body: The "Hardware-accelerated GPU scheduling" option on Windows settings is turned on. We highly recommend turning it off, as it can make your captured videos choppy.
-* Learn more: link to [our support KB](https://support.overwolf.com/support/solutions/articles/9000181387-common-capture-issues) for detailed info.
+* Learn more: link to [our support knowledgebase](https://support.overwolf.com/support/solutions/articles/9000181387-common-capture-issues) for detailed info.
 * Primary button: Open Windows Settings by calling:
   * [overwolf.utils.openUrlInDefaultBrowser('ms-settings:display-advancedgraphics')](../api/overwolf-utils#openurlindefaultbrowserurl);.
 * Secondary button: Close.
