@@ -40,7 +40,21 @@ When set to On, it might cause captured videos to be laggy/choppy.
 We created a quick experimental plugin with [a simple way of detecting whether it is ON or OFF](https://github.com/overwolf/experimental-plugin) (you just need to download the plugin and add it. Don't forget to unblock the dll)
 If you detect it is ON, you should display a warning to the user with a link to set this setting to OFF.
 
-You may open the relevant Windows Graphics settings by calling: [overwolf.utils.openUrlInDefaultBrowser('ms-settings:display-advancedgraphics')](../api/overwolf-utils#openurlindefaultbrowserurl);
+**Suggested warning window**  
+
+We attached here a recommened warning window design, to infrom the user that a video capture issue is detected, with a button that opens the relevant Windows Graphics settings.
+
+* Window Title: Video capture issue detected.
+* Body: The "Hardware-accelerated GPU scheduling" option on Windows settings is turned on. We highly recommend turning it off, as it can make your captured videos choppy.
+* Learn more: link to [our support KB](https://support.overwolf.com/support/solutions/articles/9000181387-common-capture-issues) for detailed info.
+* Primary button: Open Windows Settings by calling:
+  * [overwolf.utils.openUrlInDefaultBrowser('ms-settings:display-advancedgraphics')](../api/overwolf-utils#openurlindefaultbrowserurl);.
+* Secondary button: Close.
+
+Screenshot:
+
+![alt-text](assets/video-capture-issue.png)
+
 :::
 
 ## Comparison table
