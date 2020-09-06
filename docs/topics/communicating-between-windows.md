@@ -13,9 +13,9 @@ Recommended ways to communicate between app windows:
 
 In our experience the best method for communicating between windows of the same app is using [`overwolf.windows.getMainWindow()`](../api/overwolf-windows#getmainwindow). This function allows you to get direct access to your main index page and it’s HTML Window object - including any JS function or DOM element.   
 
-Using this method, you can use a shared “communication-bus” variable that allows different windows to communicate.  
+Using this method, you can use a shared “communication-bus” variable - one global "manager" object in your background that allows different windows to communicate through this one single object. 
 
-We strongly recommend not to use [overwolf.windows.getOpenWindows()](../api/overwolf-windows#getopenwindowscallback) for windows communication.
+This object is also guaranteed to exist when calling this method from any other window - unlike [overwolf.windows.getOpenWindows()](../api/overwolf-windows#getopenwindowscallback). We strongly recommend not to use getOpenWindows()](../api/overwolf-windows#getopenwindowscallback) for windows communication.
 
 * Read more about [background controllers](windows-tips#use-a-background-controller). 
 * Download [our sample app](../start/sample-app-overview) which demonstrates all basic design principals.

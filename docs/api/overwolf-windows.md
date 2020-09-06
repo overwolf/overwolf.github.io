@@ -84,7 +84,14 @@ Please make sure to read our guide on [how to use Overwolf windows](../topics/us
 
 > Returns a window object of the index page.
 
-This function allows you to get direct access to your main index page (which should be a controller/background page) and it’s HTML Window object (and thus any JS function or DOM element). Read more in the ["Communication between windows"](../topics/communicating-between-windows) section.
+This function allows you to get direct access to your main index page (which should be a controller/background page) and it’s HTML Window object (and thus any JS function or DOM element), which is also guaranteed to exist when calling this method from any other window (unlike the [getOpenWindows()](#getopenwindowscallback)).  
+
+If you hold one global "manager" object in your background, then all other windows have a single object to interact with.
+This is why we recommend the getMainWindow() approach.  
+
+[overwolf.windows.sendMessage](#sendmessagewindowid-messageid-messagecontent-callback) performs object copying, so it might be a bit less efficient - depending on your use-case
+
+Read more in the ["Communication between windows"](../topics/communicating-between-windows) section.
 
 ## getCurrentWindow(callback)
 #### Version added: 0.78.  updated: 0.153
@@ -634,7 +641,7 @@ callback               | function   | A callback function which will be called w
 The window receiving the message needs to listen on the [onMessageReceived](#onmessagereceived) event.
 
 :::warning
-Using sendMessage is not our suggested choice for communication between windows since it might not work on some occasions (for example, when sending extremely big messages).  
+Using sendMessage  performs object copying, so it might be a bit less efficient - depending on your use-case. (edited)  is not our suggested choice for communication between windows since it might not work on some occasions (for example, when sending extremely big messages).  
 Read more in the ["Communication between windows"](#) section.
 :::
 
