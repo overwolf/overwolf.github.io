@@ -254,6 +254,12 @@ PUBG
 ----
 
 **Resolved** - This incident has been resolved.  
+Sep 03, 06:45 AM GMT+3
+
+**Investigating** - PUBG events are down.  
+Sep 03, 09:57 AM GMT+3
+
+**Resolved** - This incident has been resolved.  
 Aug 26, 03:48 PM GMT+3
 
 **Investigating** - PUBG events are down.  
@@ -392,6 +398,9 @@ No logs.
 Teamfight Tactics
 -----------------
 
+**Resolved** - This incident has been resolved.  
+Sep 03, 14:35 AM GMT+3
+
 **Investigating** - TFT events are currently down, we are working on a fix.  
 Sep 03, 12:35 AM GMT+3
 
@@ -478,6 +487,9 @@ Oct 09, 10:24 AM GMT+3
 
 Valorant
 --------
+
+**Resolved** - This incident has been resolved.  
+Sep 03, 06:45 PM GMT+3
 
 **Investigating** - Valorant events are down.  
 Sep 01, 08:39 PM GMT+3
