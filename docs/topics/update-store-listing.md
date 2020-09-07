@@ -47,13 +47,13 @@ This property is read-only, if you wish to change your app status to **hidden** 
 
 This is the direct link to the app’s store listing on the Overwolf Appstore. This is a read only property and cannot be edited.
 
-(insert image here: storelisting/app_url.png)
+![app_url](../assets/dev-console/update-store/app_url.png)
 
 ### Monetization Properties
 
 This is a read only option that shows the users in the store what type of monetization is implemented in the app.
 
-(insert image here: storelisting/monetization.png)
+![monetization](../assets/dev-console/update-store/monetization.png)
 
 ### Short description
 
@@ -74,7 +74,7 @@ See which tags are enabled for your app when searching in the appstore.
 
 To add more tags, please contact your DevRel Manager.
 
-(insert image here: storelisting/tags.png)
+![tags](../assets/dev-console/update-store/tags.png)
 
 ### Tile
 
