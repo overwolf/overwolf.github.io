@@ -1003,6 +1003,9 @@ overwolf.windows.onMessageReceived.addListener((message)=>{
 
 > Fired when native window (or OSR on desktop) moved to other monitor when current monitor resolution changed, with the following structure: [overwolf.windows.onScreenPropertyChangedEvent](#onscreenpropertychangedevent-object) Object
 
+Note that currently, only the relevant window gets this event - so your background page doesn't. From OW v0.156 we are going to fix it:  
+If your app has multiple windows listening to this event - you also need to test the window name/id arguments that are passed to the event to see if it is relevant for your window. Otherwise, all windows will get this event for ANY window of your app.
+
 ## ODKWindow Object
 #### Version added: 0.78
 

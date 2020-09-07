@@ -26,6 +26,7 @@ Our best practice is to implement asynchronous-only functions that accept a call
 ```js
 public void add(int x, int y, Action<object> callback)
 ```
+
 :::important
 * Overwolf version 116.2 and all later versions will only support 64 bit CPUs, and therefore you’ll be required to compile your .DLL to target the x64 platform.
 * DLLs must be compiled with the .NET 4.5 framework and NOT with an earlier/higher version.
