@@ -43,6 +43,18 @@ This property is read-only, if you wish to change your app status to **hidden** 
 
 ![visibility](../assets/dev-console/update-store/hidden.png)
 
+### App URL
+
+This is the direct link to the app’s store listing on the Overwolf Appstore. This is a read only property and cannot be edited.
+
+(insert image here: storelisting/app_url.png)
+
+### Monetization Properties
+
+This is a read only option that shows the users in the store what type of monetization is implemented in the app.
+
+(insert image here: storelisting/monetization.png)
+
 ### Short description
 
 Add or edit a short description of your app, with a limit of 180 characters. In this field use plain text only (no HTML or Markdown).
@@ -55,6 +67,14 @@ Add or edit a full description of your app, used when a user clicks on your app'
 This field support both plain text and markdown. Please don't use HTML tags.
 
 ![full-desc](../assets/dev-console/update-store/full-desc.png)
+
+### Tags
+
+See which tags are enabled for your app when searching in the appstore.
+
+To add more tags, please contact your DevRel Manager.
+
+(insert image here: storelisting/tags.png)
 
 ### Tile
 
