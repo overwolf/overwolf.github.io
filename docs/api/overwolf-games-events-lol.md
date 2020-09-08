@@ -70,6 +70,8 @@ active_player | live_client_data | In-game data received by the client. |See [no
 all_players | live_client_data | In-game data received by the client. |See [notes](#all_players-note)|   143.1   |
 events | live_client_data | In-game data received by the client. |See [notes](#events-note)|   143.1  |
 game_data | live_client_data | In-game data received by the client. |See [notes](#game_data-note)|   143.1  |
+port | live_client_data | In-game data received by the client. |See [notes](#port-note)|   155.0  |
+
 
 #### *active_player* note
 
@@ -149,6 +151,14 @@ Data Example:
    },
    "feature":"live_client_data"
 }
+```
+
+#### *port* note
+
+Data Example:
+
+```json
+{"feature":"live_client_data","category":"live_client_data","key":"port","value":53988}
 ```
 
 ## `matchState`
