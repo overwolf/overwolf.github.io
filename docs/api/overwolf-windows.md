@@ -78,6 +78,7 @@ Please make sure to read our guide on [how to use Overwolf windows](../topics/us
 * [overwolf.windows.enums.WindowStyle](#windowstyle-enum) Enum
 * [overwolf.windows.enums.FlashBehavior](#flashbehavior-enum) Enum
 * [overwolf.windows.onScreenPropertyChangedEvent](#onscreenpropertychangedevent-object) Object
+* [overwolf.windows.WindowStateChangedEvent](#windowstatechangedevent-object) Object
 
 ## getMainWindow()
 #### Version added: 0.113
@@ -955,19 +956,7 @@ windowId		           | string                                            | The w
 ## onStateChanged
 #### Version added: 0.85
 
-> Fired when the state of a window is changed.
-
-#### Event Data Example: Success
-
-```json
-{  
-   "window_id":"Window_Extension_mafljdlldoddlbenhhdndoamnaficdiphpnjdlce_main",
-   "window_state":"normal",
-   "window_previous_state":"minimized",
-   "app_id":"mafljdlldoddlbenhhdndoamnaficdiphpnjdlce",
-   "window_name":"main"
-}
-```
+> Fired when the state of a window is changed, with the following structure: [WindowStateChangedEvent](#windowstatechangedevent-object) Object
 
 ## onMessageReceived
 #### Version added: 0.85
@@ -1179,6 +1168,36 @@ monitor         |  [overwolf.utils.Display](overwolf-utils#display-object) objec
   "monitor": {"name": "DELL P2319H", "id": "DISPLAY4", "x": 0, "y": 0, "width": 1920, "height": 1080, "is_primary": true}
 }
 ```
+
+## WindowStateChangedEvent Object
+
+Parameter                | Type           | Description                | Notes                     |
+-------------------------| ---------------|--------------------------- | --------------------------|
+window_id                |  string        | the window ID              | See [notes](#notes-4).    |                           
+window_state             |  string        | the window state           |  Deprecated. See [notes](#notes-4).   |   
+window_state_ex          |  string        | the window state           |  Deprecated. See [notes](#notes-4).   |   
+window_previous_state    |  string        | the window previous state  |  See [notes](#notes-4).   |   
+window_previous_state_ex |  string        | the window previous state  |  See [notes](#notes-4).   |   
+app_id                   |  string        | the app ID                 | See [notes](#notes-4).    |   
+
+#### Event data example: Success
+
+```json
+{
+    "window_id": "Window_Extension_cghphpbjeabdkomiphingnegihoigeggcfphdofo_index",
+    "window_state_ex": "normal", //use this
+    "window_state": "normal", 
+    "window_previous_state_ex": "closed", //use this
+    "window_previous_state": "minimized", 
+    "app_id": "cghphpbjeabdkomiphingnegihoigeggcfphdofo",
+    "window_name": "index"
+}
+```
+
+#### Notes
+
+*  Use *window_state_ex* that is more accurate than the old *window_state* that was left for backward comparability.
+*  Use *window_previous_state_ex* that is more accurate than the old *window_previous_state* that was left for backward comparability.
 
 ## ChangeWindowSizeParams Object
 #### Version added: 0.149
