@@ -82,6 +82,7 @@ This is the full list of OBSOLETE functions and APIs:
 #### Game events
 
 * [Hearthstone](overwolf-games-events-hearthstone) - "match_end" now includes a match outcome value.d
+* [League of Legends](overwolf-games-events-lol#live_client_data) - new event - "port". Random port that comes from Riot
 
 ## Version 0.153 (Aug. 2020)
 
