@@ -48,6 +48,7 @@ This is the full list of OBSOLETE functions and APIs:
   * overwolf.tobii (all)
   * overwolf.media.audio (all)
   * overwolf.settings.setFpsSettings()
+  * overwolf.settings.getHotKey()
   * overwolf.settings.registerHotKey()
   * overwolf.settings.getCurrentOverwolfLanguage()
   * overwolf.settings.OnHotkeyChanged
