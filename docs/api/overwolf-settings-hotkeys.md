@@ -45,6 +45,7 @@ In the following example, we can see a callback example of an extension that set
             "title":"Show In-Game",
             "virtualKeycode":114, //F3
             "modifierKeys":2, //Ctrl
+            "binding": "Ctrl+F3",
             "extension-uid":"jdecmlblpoddjcmpdbhnefehffjfcjeijpkebedd",
             "isPassthrough":false,
             "hold":false,
@@ -57,6 +58,7 @@ In the following example, we can see a callback example of an extension that set
             "title":"Show In-Game",
             "virtualKeycode":114, //F3
             "modifierKeys":2, //Ctrl
+            "binding": "Ctrl+F3",
             "extension-uid":"jdecmlblpoddjcmpdbhnefehffjfcjeijpkebedd",
             "isPassthrough":false,
             "hold":false,
@@ -67,10 +69,11 @@ In the following example, we can see a callback example of an extension that set
 }
 ```
 
-Note that the callback returns a virtualKeycode and a modifierKey code. You can convert these values easily to a string using the [MS ModifierKeys Enum](https://docs.microsoft.com/en-us/dotnet/api/system.windows.input.modifierkeys) and the [MS VirtualKey Enum](https://docs.microsoft.com/en-us/uwp/api/windows.system.virtualkey).
+#### Notes
 
-Note: if several modifier keys are assigned (like Ctrl + Shift), the `modifierKeys` is the sum of all the modifier values (e.g. Alt + Shift would be 5)
-
+* The "binding" field that the callback returns gives you a human-readable hotkey name. ("Ctrl+F3" for example)
+* The callback returns a virtualKeycode and a modifierKey code. You can convert these values easily to a string using the [MS ModifierKeys Enum](https://docs.microsoft.com/en-us/dotnet/api/system.windows.input.modifierkeys) and the [MS VirtualKey Enum](https://docs.microsoft.com/en-us/uwp/api/windows.system.virtualkey).
+* If several modifier keys are assigned (like Ctrl + Shift), the `modifierKeys` is the sum of all the modifier values (e.g. Alt + Shift would be 5)
 
 #### Callback example with global hotkeys
 
