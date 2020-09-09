@@ -194,6 +194,9 @@ Oct 09, 01:39 PM GMT+3
 Heroes of the Storm
 -------------------
 
+**Investigating** - HotS game events are down, we are working on a fix.  
+Sep 08, 09:00 PM GMT+3
+
 **Resolved** - This incident has been resolved.  
 Feb 16, 08:21 PM GMT+3
 
