@@ -41,6 +41,7 @@ In the following example, we can see a callback example of an extension that set
     "games":{
         "10906":[  //PUBG
         {
+            "binding":"Ctrl+F3",
             "name":"shots_fired_toggle_visibility",
             "title":"Show In-Game",
             "virtualKeycode":114, //F3
@@ -53,6 +54,7 @@ In the following example, we can see a callback example of an extension that set
         ],
         "21620":[ // Legends of Runeterra
         {
+            "binding":"Ctrl+F3",
             "name":"shots_fired_toggle_visibility",
             "title":"Show In-Game",
             "virtualKeycode":114, //F3
@@ -84,6 +86,7 @@ On the following example, you can see that the current extension set `Shift + F5
     "success":true,
     "globals":[ 
     { 
+         "binding":"Ctrl+F3",
          "name":"toggle_app",
          "title":"Show/Hide Buff window",
          "virtualKeycode":116, //F5
@@ -104,6 +107,7 @@ On the following example, you can see that the current extension set `Shift + F5
     "success":true,
     "globals":[ 
     { 
+         "binding":"Ctrl+F3",
          "name":"toggle_app",
          "title":"Show/Hide Buff window",
          "virtualKeycode":116, //F5
@@ -117,6 +121,7 @@ On the following example, you can see that the current extension set `Shift + F5
     "games":{ 
         "5426":[ 
         { 
+            "binding":"Ctrl+F3",
             "name":"toggle_app",
             "title":"Show/Hide Buff window",
             "virtualKeycode":68, //D
