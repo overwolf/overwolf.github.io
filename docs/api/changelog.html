@@ -76,15 +76,25 @@
 <ul>
 <li><a href="overwolf-windows#onscreenpropertychanged">overwolf.windows.onScreenPropertyChanged</a> event:<br>
 Now the event is being fired for all the declared windows. So you also need to test the window name/id arguments that are passed to the event to see if it is relevant for your window.</li>
-<li></li>
+<li><a href="overwolf-extensions-current#getextraobjectname-callback">overwolf.extensions.current.getExtraObject</a>: Improve the robustness of the API. Write to log and return a callback.</li>
+<li><a href="overwolf-utils#getsysteminformationcallback">overwolf.utils.getSystemInformation</a>: return if Windows 10 version 2004 <em>Hardware-Accelerated GPU Scheduling</em> is enabled.</li>
 </ul>
 <h4><a class="anchor" aria-hidden="true" id="platform"></a><a href="#platform" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Platform</h4>
 <ul>
-<li>Soon</li>
+<li>Replay capture accuracy: change replay's timestamp logic: capture replay's with using PTS (Presentation timestamp) and not ETS (Encoding timestamp).</li>
+<li>Separate audio tracks: new flag for <a href="overwolf-streaming#streamsettings-object">stream settings</a>: <strong>separate_tracks&quot;: bool</strong>.<br>
+When disabled (default), create the video source with track1 only.<br>
+When enabled, video (mp4) will be created with three different audio tracks:
+<ul>
+<li>track1: Microphone + Desktop.</li>
+<li>track2: Desktop output.</li>
+<li>track3: Microphone input.</li>
+</ul></li>
+<li>Extension logs: Send the isolated relevant's extension logs to server (upon crash/request to send logs).</li>
 </ul>
 <h4><a class="anchor" aria-hidden="true" id="bug-fixes"></a><a href="#bug-fixes" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Bug fixes</h4>
 <ul>
-<li>Soon</li>
+<li>Do not launch extension with &quot;LaunchWithOverwolf&quot; launch event when extension is disabled.</li>
 </ul>
 <h4><a class="anchor" aria-hidden="true" id="dev-console"></a><a href="#dev-console" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Dev Console</h4>
 <ul>
