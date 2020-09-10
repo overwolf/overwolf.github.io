@@ -958,6 +958,11 @@ windowId		           | string                                            | The w
 
 > Fired when the state of a window is changed, with the following structure: [WindowStateChangedEvent](#windowstatechangedevent-object) Object
 
+#### Notes
+
+* The event fire for ALL windows declared (background,in-game,desktop, etc). If your app has multiple windows listening to this event - you also need to test the window name/id arguments that are passed to the event to see if it is relevant for your window.
+* If your app displays an ad, you should register to onStateChanged, to check if the window is minimized to hide the ad. When onStateChanged is fired, check the window name/id, to see if the window that triggered the event  - is the one with the ad and not another window.
+
 ## onMessageReceived
 #### Version added: 0.85
 
@@ -992,8 +997,10 @@ overwolf.windows.onMessageReceived.addListener((message)=>{
 
 > Fired when native window (or OSR on desktop) moved to other monitor when current monitor resolution changed, with the following structure: [overwolf.windows.onScreenPropertyChangedEvent](#onscreenpropertychangedevent-object) Object
 
-Note that currently, only the relevant window gets this event - so your background page doesn't. From OW v0.156 we are going to fix it:  
-If your app has multiple windows listening to this event - you also need to test the window name/id arguments that are passed to the event to see if it is relevant for your window. Otherwise, all windows will get this event for ANY window of your app.
+#### Notes
+
+* Currently, only the relevant window gets this event - so your background page or other windows doesn't. 
+* From OW v0.156 we are going to fix it:  The event fire for ALL windows declared (background,in-game,desktop, etc). If your app has multiple windows listening to this event - you also need to test the window name/id arguments that are passed to the event to see if it is relevant for your window.
 
 ## ODKWindow Object
 #### Version added: 0.78
@@ -1175,8 +1182,8 @@ Parameter                | Type           | Description                | Notes  
 -------------------------| ---------------|--------------------------- | --------------------------|
 window_id                |  string        | the window ID              | See [notes](#notes-4).    |                           
 window_state             |  string        | the window state           |  Deprecated. See [notes](#notes-4).   |   
-window_state_ex          |  string        | the window state           |  Deprecated. See [notes](#notes-4).   |   
-window_previous_state    |  string        | the window previous state  |  See [notes](#notes-4).   |   
+window_state_ex          |  string        | the window state           |  See [notes](#notes-4).   |   
+window_previous_state    |  string        | the window previous state  |  Deprecated. See [notes](#notes-4).   |   
 window_previous_state_ex |  string        | the window previous state  |  See [notes](#notes-4).   |   
 app_id                   |  string        | the app ID                 | See [notes](#notes-4).    |   
 
@@ -1196,8 +1203,8 @@ app_id                   |  string        | the app ID                 | See [no
 
 #### Notes
 
-*  Use *window_state_ex* that is more accurate than the old *window_state* that was left for backward comparability.
-*  Use *window_previous_state_ex* that is more accurate than the old *window_previous_state* that was left for backward comparability.
+* Use ***window_state_ex*** and ***window_previous_state_ex*** that are more accurate than the old *window_state* and *window_previous_state*, left for backward comparability.
+* *window_state_ex* returns one of these states: [closed | minimized | hidden | normal | maximized].
 
 ## ChangeWindowSizeParams Object
 #### Version added: 0.149
