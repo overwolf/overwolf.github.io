@@ -958,10 +958,13 @@ windowId		           | string                                            | The w
 
 > Fired when the state of a window is changed, with the following structure: [WindowStateChangedEvent](#windowstatechangedevent-object) Object
 
-#### Notes
+The event fire for ALL windows declared (background,in-game,desktop, etc). If your app has multiple windows listening to this event - you also need to test the window name/id arguments that are passed to the event to see if it is relevant for your window.
 
-* The event fire for ALL windows declared (background,in-game,desktop, etc). If your app has multiple windows listening to this event - you also need to test the window name/id arguments that are passed to the event to see if it is relevant for your window.
-* If your app displays an ad, you should register to onStateChanged, to check if the window is minimized to hide the ad. When onStateChanged is fired, check the window name/id, to see if the window that triggered the event  - is the one with the ad and not another window.
+#### Notes for Ads users
+
+* If your app displays an ad, you must add some checking in the event handler to make sure that the window with the state change is the window with the ad, and to avoid unnecessary wrong calls to the refreshAd() and removeAd().
+* For in-game windows only, onStateChanged event is not fired when using Win+D for minimizing all windows. So in that case you can't hide/refres ads.
+If you want to handle that scenario you can listen to onGameInfoUpdated event and stop the ad if gameInfo.isInFocus is false.
 
 ## onMessageReceived
 #### Version added: 0.85
