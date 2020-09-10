@@ -964,7 +964,7 @@ The event is being fired for all the declared windows (background,in-game,deskto
 
 * If your app displays an ad, you must add some checking in the event handler to make sure that the window with the state change is the window with the ad, and to avoid unnecessary wrong calls to the refreshAd() and removeAd().
 * For in-game windows only, onStateChanged event is not fired when using Win+D for minimizing all windows. So in that case you can't hide/refres ads.
-If you want to handle that scenario you can listen to onGameInfoUpdated event and stop the ad if gameInfo.isInFocus is false.
+If you want to handle that scenario you can listen to [onGameInfoUpdated](overwolf-games#ongameinfoupdated) event and stop the ad if gameInfo.isInFocus is false.
 
 ## onMessageReceived
 #### Version added: 0.85
