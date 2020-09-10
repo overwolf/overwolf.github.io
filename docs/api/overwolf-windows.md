@@ -958,7 +958,7 @@ windowId		           | string                                            | The w
 
 > Fired when the state of a window is changed, with the following structure: [WindowStateChangedEvent](#windowstatechangedevent-object) Object
 
-The event fire for ALL windows declared (background,in-game,desktop, etc). If your app has multiple windows listening to this event - you also need to test the window name/id arguments that are passed to the event to see if it is relevant for your window.
+The event is being fired for all the declared windows (background,in-game,desktop, etc). If your app has multiple windows listening to this event - you also need to test the window name/id arguments that are passed to the event to see if it is relevant for your window.
 
 #### Notes for Ads users
 
