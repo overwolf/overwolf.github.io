@@ -1003,7 +1003,7 @@ overwolf.windows.onMessageReceived.addListener((message)=>{
 #### Notes
 
 * Currently, only the relevant window gets this event - so your background page or other windows doesn't. 
-* From OW v0.156 we are going to fix it:  The event fire for ALL windows declared (background,in-game,desktop, etc). If your app has multiple windows listening to this event - you also need to test the window name/id arguments that are passed to the event to see if it is relevant for your window.
+* From OW v0.156 we are going to fix it: The event is being fired for all the declared windows (background,in-game,desktop, etc). If your app has multiple windows listening to this event - you also need to test the window name/id arguments that are passed to the event to see if it is relevant for your window.
 
 ## ODKWindow Object
 #### Version added: 0.78

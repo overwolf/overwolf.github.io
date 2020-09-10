@@ -8,10 +8,35 @@ Follow this entry for ongoing updates and changes to the project or tools.
 
 Here you can find our [Developers Roadmap](https://trello.com/b/1V10E4IB/overwolf-roadmap).
 
-## Version 0.155 (In-Progress)
+## Version 0.156 (In-Progress)
+
+Note that the work on the documentation for this version is still in-progress.
+
+#### API
+
+* [overwolf.windows.onScreenPropertyChanged](overwolf-windows#onscreenpropertychanged) event:  
+  Now the event is being fired for all the declared windows. So you also need to test the window name/id arguments that are passed to the event to see if it is relevant for your window.
+* 
+
+#### Platform
+
+* Soon
+
+#### Bug fixes
+
+* Soon
+
+#### Dev Console
+
+* Soon
+
+#### Game events
+
+* Soon
+
+## Version 0.155 (Sep. 2020)
 
 Note that iterations 154 and 155 were combined into a single iteration.  
-In addition, the work on the documentation for this version is still in-progress.
 
 #### API
 
