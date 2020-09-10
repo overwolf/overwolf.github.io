@@ -16,15 +16,23 @@ Note that the work on the documentation for this version is still in-progress.
 
 * [overwolf.windows.onScreenPropertyChanged](overwolf-windows#onscreenpropertychanged) event:  
   Now the event is being fired for all the declared windows. So you also need to test the window name/id arguments that are passed to the event to see if it is relevant for your window.
-* 
+* [overwolf.extensions.current.getExtraObject](overwolf-extensions-current#getextraobjectname-callback): Improve the robustness of the API. Write to log and return a callback.
+* [overwolf.utils.getSystemInformation](overwolf-utils#getsysteminformationcallback): return if Windows 10 version 2004 *Hardware-Accelerated GPU Scheduling* is enabled. 
 
 #### Platform
 
-* Soon
+* Replay capture accuracy: change replay's timestamp logic: capture replay's with using PTS (Presentation timestamp) and not ETS (Encoding timestamp).
+* Separate audio tracks: new flag for [stream settings](overwolf-streaming#streamsettings-object): **separate_tracks": bool**.  
+  When disabled (default), create the video source with track1 only.  
+  When enabled, video (mp4) will be created with three different audio tracks:
+  * track1: Microphone + Desktop.
+  * track2: Desktop output.
+  * track3: Microphone input.  
+* Extension logs: Send the isolated relevant's extension logs to server (upon crash/request to send logs).
 
 #### Bug fixes
 
-* Soon
+* Do not launch extension with "LaunchWithOverwolf" launch event when extension is disabled. 
 
 #### Dev Console
 
