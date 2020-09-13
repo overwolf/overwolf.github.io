@@ -113,3 +113,39 @@ You can see all the list of open OW apps and windows.  In this example, you can 
 ![alt-text](assets/dev-tools-11.png)
 
 Clicking on a link will open a remote debugger tab.
+
+## Use local debugger with debug_url flag
+
+For local-server debugging (like react apps) you can use the [debug_url](../api/manifest-json#debug_url) flag.
+
+### Run your React app locally
+
+Runs on a node.js server.
+
+1. download some react project. [This one for example](https://github.com/aditya-sridhar/simple-reactjs-app).
+2. extract it to some folder and open it in VS Code.
+3. Run in the terminal command *npm -i*
+
+For this example, we assume that your react app is running on localhost:3000.
+
+### Debug your OW app window locally
+
+For this example, we assume that your app has two windows: a background controller called "main" and an app window called "popup".
+
+1. In your app's manifest, add the [debug_url](../api/manifest-json#debug_url) flag on the same port as your react app (3000):
+   
+   "popup": { "file": "popup.html","debug_url": "http://localhost:3000" }
+2. load your OW app as an unpacked extension.
+3. Open the CEF remote debugging URL in chrome (http://localhost:54284).
+4. Find the "main" app window on the list, and open it. The dev console will open for this window.
+5. Open the "popup" window:*
+   * *overwolf.windows.obtainDeclaredWindow('popup', console.log)*
+   * *overwolf.windows.restore('popup', console.log)*
+  
+  The popup window will open, and your react app will load in it.  
+   Now every change that you'll do in the react code will reflect in the OW window.
+
+### Notes
+* You must have a local web server installed on your machine.
+* Valid only when loading unpacked extensions.
+* Valid only with "localhost" / "127.0.0.1".
