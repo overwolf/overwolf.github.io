@@ -102,7 +102,7 @@ The user starts playing, begins spectating or stops playing. Note that simply br
 
 Event       | Event Data   | Fired When    | Notes                                  | Since GEP Ver. |
 ------------| -------------| --------------| -------------------------------------- | ---------------|
-match_state | Check notes  |               | See [notes](#match_state-note) |      77.3      |
+match_state_changed | Check notes  |               | See [notes](#match_state-note) |      77.3      |
 
 #### *match_state* note
 
