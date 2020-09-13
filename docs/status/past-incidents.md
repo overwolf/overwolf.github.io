@@ -326,6 +326,9 @@ No logs.
 Rainbow 6 Siege
 ---------------
 
+**Investigating** - Rainbow Six game events are down, we are working on a fix.  
+Sep 10, 05:31 PM GMT+3
+
 **Resolved** This incident has been resolved.
 Aug 12, 03:56 PM GMT+3
 
