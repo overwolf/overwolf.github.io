@@ -187,5 +187,12 @@ const GamesMetadata = {
     iconUrl: "/docs/assets/games-logos/minecraft.png",
     iconLargeUrl: "/docs/assets/games-logos/large/minecraft.png",
     name: "Minecraft"
+  },
+  8954: {
+    id: 8954,
+    path: "/docs/status/warframe",
+    iconUrl: "/docs/assets/games-logos/warframe.png",
+    iconLargeUrl: "/docs/assets/games-logos/large/warframe.png",
+    name: "Warframe"
   }
 }
