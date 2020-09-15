@@ -178,6 +178,8 @@ daytime_changed   | Check notes |          |See [notes](#daytime_changed-note)| 
 
 #### *daytime_changed* note
 
+<b>This event is currently NOT supported.</b>
+
 Event Data:
 
 * <b>daytime</b> – True if it is current day time, false otherwise.
@@ -211,6 +213,8 @@ Event       | Event Data   | Fired When    | Notes              | Since GEP Ver.
 ward_purchase_cooldown_changed   | Check notes |Fired every second where wards are on cooldown. |See [notes](#ward_purchase_cooldown_changed-note)|     77.3      |
 
 #### *ward_purchase_cooldown_changed* note
+
+<b>This event is currently NOT supported.</b>
 
 Event Data:
 
