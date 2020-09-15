@@ -567,3 +567,9 @@ Worlf of Warships
 -----------------
 
 No logs.
+
+Warframe
+-----------------
+
+No logs.
+

@@ -40,8 +40,11 @@ Note that the work on the documentation for this version is still in-progress.
 
 #### Game events
 
-* Soon
-
+* [WARFRAME](overwolf-games-events-warframe)
+  * New updates and events under:
+    * inventory
+    * kill
+    
 ## Version 0.155 (Sep. 2020)
 
 Note that iterations 154 and 155 were combined into a single iteration.  
