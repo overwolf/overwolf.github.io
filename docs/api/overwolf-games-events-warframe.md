@@ -46,7 +46,6 @@ Data Example:
 key          | Category    | Values                    | Notes                 | Since GEP Ver. |
 ------------ | ------------| ------------------------- | --------------------- | ------------- | 
 username    | game_info   | Name of local player.      |See [notes](#username-note)|   156.0       |
-inventory    | game_info   | Type and amount of items on the local player.|See [notes](#inventory-note)|   156.0       |
 
 #### *username* note
 
@@ -54,21 +53,6 @@ Data Example:
 
 ```json
 {"category":"game_info","key":"username","value":"dsa_gfdg","valueLength":8}
-```
-
-#### *inventory* note
-
-Data Example:
-
-```json
-{
-    "category": "game_info",
-    "key": "inventory",
-    "value": {"Slots":8},"PremiumCredits":50,"PremiumCreditsFree":50,"PveBonusLoadoutBin":{"Slots":0},"PvpBonusLoadoutBin":{"Slots":0},
-    ...
-    {"ItemCount":1,"ItemType":"Lotus/Types/Recipes/Components/VorBoltRemoverFakeItem"}],
-    "valueLength": 16212
-}
 ```
 
 ## `match_info`
@@ -85,10 +69,11 @@ Data Example:
 
 ```json
 {
-    "category": "match_info",
+    "category": "game_info",
     "key": "inventory",
-    "value": "{"SubscribedToEmails":0,"Created":{"$date":{"$numberLong":"1599480129791"}},
+    "value": {"Slots":8},"PremiumCredits":50,"PremiumCreditsFree":50,"PveBonusLoadoutBin":{"Slots":0},"PvpBonusLoadoutBin":{"Slots":0},
     ...
-    {"ItemCount":1,"ItemType":"/Lotus/Types/Items/MiscItems/Morphic"},{"ItemCount":626,"ItemType":"/Lotus/Types/Items/MiscItems/PolymerBundle"},{"ItemCount":1627,"ItemType":"/Lotus/Types/Items/MiscItems/Salvage"},
+    {"ItemCount":1,"ItemType":"Lotus/Types/Recipes/Components/VorBoltRemoverFakeItem"}],
+    "valueLength": 16212
 }
 ```
