@@ -43,7 +43,7 @@ Note that the work on the documentation for this version is still in-progress.
 * [WARFRAME](overwolf-games-events-warframe)
   * New updates and events under:
     * inventory
-    * kill
+    * username
     
 ## Version 0.155 (Sep. 2020)
 
