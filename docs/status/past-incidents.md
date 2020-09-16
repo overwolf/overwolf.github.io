@@ -573,3 +573,8 @@ Warframe
 
 No logs.
 
+Overwatch
+-----------------
+
+**Investigating** - Overwatch events are down.  
+Sep 15, 11:56 AM GMT+3
