@@ -260,6 +260,12 @@ PUBG
 ----
 
 **Resolved** - This incident has been resolved.  
+Sep 16, 09:25 PM GMT+3
+
+**Investigating** - PUBG events are down.  
+Sep 16, 12:14 AM GMT+3
+
+**Resolved** - This incident has been resolved.  
 Sep 03, 06:45 AM GMT+3
 
 **Investigating** - PUBG events are down.  
@@ -500,6 +506,9 @@ Oct 09, 10:24 AM GMT+3
 Valorant
 --------
 
+**Investigating** - Valorant events are down.  
+Sep 16, 09:25 PM GMT+3
+
 **Resolved** - This incident has been resolved.  
 Sep 03, 06:45 PM GMT+3
 
@@ -575,6 +584,9 @@ No logs.
 
 Overwatch
 -----------------
+
+**Resolved** - This incident has been resolved.  
+Sep 16, 09:25 PM GMT+3
 
 **Investigating** - Overwatch events are down.  
 Sep 15, 11:56 AM GMT+3
