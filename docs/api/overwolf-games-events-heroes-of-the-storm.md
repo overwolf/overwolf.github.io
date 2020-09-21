@@ -69,7 +69,11 @@ pseudo_match_id| match_info| Current match’s ID code. | See [notes](#pseudo_ma
 teams_level  | match_info  | Current level of both teams| See [notes](#teams_level-note)|  134.0  |
 score        | match_info  | Current kill-score of both teams. | See [notes](#score-note)|  134.0  |
 match_state  | match_info  | Is a match in progress - true/false. | See [notes](#match_state-note)|  134.0  |
-game_mode    | match_info  | Current match's game_mode | See [notes](#game_mode-note)|?|
+game_mode    | match_info  | Current match's game_mode | See [notes](#game_mode-note)|134.0|
+draft_XX     | match_info  | Currently selected hero for draft | See [notes](#draft-note)|134.0|
+bans_XX      | match_info  | Currently selected hero for ban | See [notes](#bans-note)|134.0|
+
+
 
 ### Events
 
@@ -127,6 +131,25 @@ Possible game_mode values:
 ```json
 "ai_play", "quick_play", "ranked_play", "unranked_play"
 ```
+
+#### *draft* note:
+
+Data Example:
+
+```json
+{"info":{"match_info":{"draft_6":"{"player_name" : "Azurites","hero_name" : "Valeera"}"}},"feature":"draft"}
+{"info":{"match_info":{"draft_6":"{"player_name" : "Azurites","hero_name" : "Mei"}"}},"feature":"draft"}
+```
+
+#### *bans* note:
+
+Data Example:
+
+```json
+{"info":{"match_info":{"bans_1":"{"hero_name" : "Mei"}"}},"feature":"bans"}
+{"info":{"match_info":{"bans_1":"{"hero_name" : "Valeera"}"}},"feature":"bans"}
+```
+
 
 ##### *match_start* note:
 
