@@ -22,7 +22,7 @@ Note that the work on the documentation for this version is still in-progress.
 #### Platform
 
 * Replay capture accuracy: change replay's timestamp logic: capture replay's with using PTS (Presentation timestamp) and not ETS (Encoding timestamp).
-* Separate audio tracks: new flag for [stream settings](overwolf-streaming#streamsettings-object): **separate_tracks": bool**.  
+* Multiple audio tracks: It is now possible to record videos that support more than one audio track, using the new flag for [stream settings](overwolf-streaming#streamsettings-object): **separate_tracks": bool**.  
   When disabled (default), create the video source with track1 only.  
   When enabled, video (mp4) will be created with three different audio tracks:
   * track1: Microphone + Desktop.
@@ -33,6 +33,10 @@ Note that the work on the documentation for this version is still in-progress.
 #### Bug fixes
 
 * Do not launch extension with "LaunchWithOverwolf" launch event when extension is disabled. 
+* overwolf.extensions.current.getExtraObject - Fixed cases where this function wouldn’t return a callback.
+* Fixed a bug with native windows when navigating to a different window.
+* Reaching 50MB of free space no longer causes the OBS process to hang.
+* The video recording UI no longer stays in a pending state if we can’t load ow-graphics-hook32.dll for whatever reason.
 
 #### Dev Console
 
