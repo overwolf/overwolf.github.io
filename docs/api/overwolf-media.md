@@ -93,7 +93,7 @@ A callback function which will be called with the status of the request and the 
 
 ```json
 {  
-   "status":"success",
+   "success":true,
    "url":"overwolf://media/screenshots/custom/E:/Desktop%20Capture-07-15-2018%2014-15-22-793.jpg",
    "path":"E:/Desktop Capture-07-15-2018 14-15-22-793.jpg"
 }

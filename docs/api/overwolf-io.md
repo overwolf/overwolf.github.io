@@ -104,7 +104,7 @@ callback | function | Returns the result |
 Returns a string with the target file’s content.
 
 ```json
-{"status":"success","content":"Hello World!"}
+{"success":true,"content":"Hello World!"}
 ```
 
 #### Callback argument: Failure
@@ -112,7 +112,7 @@ Returns a string with the target file’s content.
 If the file doesn’t exist, an error status will be returned:
 
 ```json
-{"status":"error","reason":"File doesn't exists"}
+{"success":false,"error":"File doesn't exists"}
 ```
 
 ## copyFile(src, dst, overrideFile, reserved, callback)
@@ -143,7 +143,7 @@ overwolf.io.copyFile("Fortnite Battle Royale 03-19-2020 14-10-18-457.mp4","C:/Us
 Returns a string with the targeted file’s content.
 
 ```json
-{"status":"success""}
+{"success":true}
 ```
 
 #### Callback argument: Failure

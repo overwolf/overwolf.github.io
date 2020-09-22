@@ -93,7 +93,6 @@ So at the bottom line, you can always count on the username to be a unique ident
 {  
    "success": true,
    "error": "",
-   "status":"success",
    "username":"itaygl",
    "userId":"OW_34153336-192b-44f6-aa0f-4a9b744c689d",
    "machineId":"653000ad-001c-43e9-a5c9-e23db5ad370a",

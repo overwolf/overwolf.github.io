@@ -240,7 +240,7 @@ callback  | function              |  A function called with the result of the re
 
 ```json
 {  
-   "status":"success",
+   "success":true,
    "path":{  
       "Value":"C:\Users\USER\Pictures\Overwolf",
       "Type":"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089",

@@ -26,7 +26,7 @@ callback  | function                   | returns a list of disabled services    
 A callback function which will be called with the status of the request.
 
 ```json
-{"status":"success","disabled_services":["youtube"]}
+{"success":true,"disabled_services":["youtube"]}
  ```
 
  #### Callback argument: Failure

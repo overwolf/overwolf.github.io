@@ -388,7 +388,7 @@ overwolf.media.replays.getHighlightsFeatures(21216, JSON.stringify(console.log))
 
 
 ```json
-{"status":"success","features":["kill","knockout","death","knockedout","victoryRoyale"]}
+{"success":true,"features":["kill","knockout","death","knockedout","victoryRoyale"]}
 ```
 
 ## onCaptureError

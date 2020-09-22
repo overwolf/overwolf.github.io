@@ -261,7 +261,7 @@ A callback function which will be called with the status of the request
 
 ```json
 {  
-   "status":"success",
+   "success":true,
    "peripherals":{  
       "inputDevices":[  
          {  
@@ -411,7 +411,7 @@ VidEncSupport      | boolean  |                                             |
 
 ```json
 {  
-   "status":"success",
+   "success":true,
    "systemInfo":{  
       "OS":"10.0 64Bit",
       "NetFramework":"4.6.1 or later (394802), v2.0.50727 SP2, v3.0 SP2, v3.5 SP1, v4 Client, v4 Full",
