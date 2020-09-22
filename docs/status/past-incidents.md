@@ -228,6 +228,9 @@ No logs.
 MTGA Arena
 ---------
 
+**Resolved** - This incident has been resolved.  
+Sep 22, 17:00 PM GMT+3
+
 **Investigating** - MTGA events are down.  
 Sep 17, 09:39 PM GMT+3
 
