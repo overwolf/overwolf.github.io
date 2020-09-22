@@ -228,6 +228,9 @@ No logs.
 MTGA Arena
 ---------
 
+**Investigating** - MTGA events are down.  
+Sep 17, 09:39 PM GMT+3
+
 **Resolved** - This incident has been resolved.  
 Jul 17, 03:41 PM GMT+3
 
@@ -242,6 +245,12 @@ Jun 25, 09:18 PM GMT+3
 
 Path of Exile
 -------------
+
+**Resolved** - This incident has been resolved.  
+Sep 21, 07:58 PM GMT+3
+
+**Investigating** - PUBG events are down.  
+Sep 18, 08:30 PM GMT+3
 
 **Resolved** - This incident has been resolved.  
 Jun 23, 17:10 PM GMT+3
