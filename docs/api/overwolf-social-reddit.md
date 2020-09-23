@@ -159,6 +159,7 @@ Parameter              | Type    | Description                                  
 ---------------------- | --------| --------------------------------------------------------------------------- |
 file                   | string  | The file to share                                                           |
 subreddit              | string  | The subreddit to which the file will be shared                              |
+title                  | string  | The shared video's title                                                    |
 description            | string  | The shared video's description                                              |
 trimming (Optional)    | [VideoCompositionSegment](overwolf-media-videos#videocompositionsegment-object)  | An object containing start time and end time for the desired VideoCompositionSegment                                        |
 events (Optional)      | string  | An array of chronological events that occurred during the capture           |
