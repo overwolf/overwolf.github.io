@@ -482,6 +482,8 @@ callback (Optional) | function   | Called after the window is restored          
 
 > Hides the window from screen and taskbar.
 
+Note that the [tray icon](overwolf-os-tray#setmenumenu-callback) (if defined) visibility is not affected by calling this function.
+
 Parameter           | Type       | Description                                                                                    |
 --------------------| -----------| -----------------------------------------------------------------------------------------------|
 windowId	        | string     | The id or name of the window to hide                                                           |

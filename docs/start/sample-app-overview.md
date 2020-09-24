@@ -78,7 +78,9 @@ For this reason, in addition to the OPK installation, you can load the app as "u
 * Click on "Development options".
 
 * In the opened window, click on "Load unpacked extension" and select the extracted 'ts' folder.  
-  This will add the app to your Overwolf dock.
+  This will add the app to your Overwolf dock.  
+  
+* **Make sure you are logged in to the OW client**. Otherwise, you will get an "Unauthorized App" error message. (Click on the "Appstore" icon in the OW dock to login to the OW client).
 
 * Click on the app's icon in your OW dock to run the app.
 
