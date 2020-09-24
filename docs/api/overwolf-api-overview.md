@@ -9,7 +9,6 @@ Overwolf APIs are global components that allow interaction with various Overwolf
 ## API's Reference
 
 * [overwolf.benchmarking](#overwolfbenchmarking)
-* [overwolf.egs](#overwolfegs)
 * [overwolf.extensions](#overwolfextensions)
 * [overwolf.games](#overwolfgames)
 * [overwolf.games.events](#overwolfgamesevents)
