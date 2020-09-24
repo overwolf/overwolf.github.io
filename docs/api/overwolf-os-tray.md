@@ -50,9 +50,10 @@ overwolf.os.tray.setMenu(trayMenu, (res) => {
 });
 ```
 
-#### notes
+#### Notes
 
-a [launcher_icon](manifest-json#meta-launcher_icon) must be set in the manifest.
+* A [launcher_icon](manifest-json#meta-launcher_icon) must be set in the manifest.
+* Calling setMenu() is mandatory to get a tray icon.
 
 ## ExtensionTrayMenu Object
 
