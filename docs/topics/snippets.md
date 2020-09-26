@@ -35,5 +35,11 @@ Please note that these are community code snippets, and the usage is at your own
   
 * [gosuai/overwolf-webproxy-plugin](https://github.com/gosuai/overwolf-webproxy-plugin).
   Plugin that starts a local webserver with CORS headers.
+  
+* [firestone/ow-utils-plugin](https://github.com/Zero-to-Heroes/ow-utils-csharp).
+  Plugin that is used to take a screenshot of the current active window.
+  
+* [firestone/unityspy](https://github.com/Zero-to-Heroes/unity-spy-.net4.5)
+  A library to read the memory of Unity games. See also the [Overwolf wrapper](https://github.com/Zero-to-Heroes/overwolf-unityspy-wrapper).
 
 
