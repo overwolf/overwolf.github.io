@@ -194,5 +194,12 @@ const GamesMetadata = {
     iconUrl: "/docs/assets/games-logos/warframe.png",
     iconLargeUrl: "/docs/assets/games-logos/large/warframe.png",
     name: "Warframe"
+  },
+  21626: {
+    id: 21626,
+    path: "/docs/status/warzone",
+    iconUrl: "/docs/assets/games-logos/warzone.png",
+    iconLargeUrl: "/docs/assets/games-logos/large/warzone.png",
+    name: "Call of Duty: Warzone"
   }
 }
