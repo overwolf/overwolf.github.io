@@ -39,6 +39,7 @@ Note that not all flags are mandatory - we included all available flags for docu
     },
     //An array of permissions that the app requires
     "<a href="#permissions-array">permissions</a>": ["Streaming","Hotkeys","GameInfo"],
+    "<a href="#max_rotation_log_files">max_rotation_log_files</a>": 20,
     //Mandatory, a list of additional meta-data on the app
     "<a href="#data">data</a>": {
         //An app can declare itself as targeted to one game or more
@@ -130,9 +131,7 @@ Note that not all flags are mandatory - we included all available flags for docu
             },
         //If set to true, app local data will not be cleaned up after app uninstallation
         "<a href="#disable_cleanup">disable_cleanup</a>": true,
-        "<a href="#process_name">process_name</a>": "my sample app",
-        "<a href="#max_rotation_log_files">max_rotation_log_files</a>": 20
-        
+        "<a href="#process_name">process_name</a>": "my sample app"
 
     }
 }
@@ -166,6 +165,7 @@ Note that not all flags are mandatory - we included all available flags for docu
     },
     "<a href="#permissions-array">permissions</a>": ["Streaming","Hotkeys","GameInfo"],
     "<a href="#enable_top_isolation">enable_top_isolation</a>": true,
+    "<a href="#max_rotation_log_files">max_rotation_log_files</a>": 20,
     "<a href="#data">data</a>": {
         "<a href="#game_targeting">game_targeting</a>": {"type": "dedicated","game_ids": [10906, 7764]},
         "<a href="#start_window">start_window</a>": "windowName",
@@ -232,8 +232,7 @@ Note that not all flags are mandatory - we included all available flags for docu
                 "<a href="#developer-game-settings">filter</a>": <span style="font-weight: 400;">"*.json;*.html"</span><span style="font-weight: 400;"> 
             },
         "<a href="#disable_cleanup">disable_cleanup</a>": true,
-        "<a href="#process_name">process_name</a>": "my sample app",
-        "<a href="#max_rotation_log_files">max_rotation_log_files</a>": 20
+        "<a href="#process_name">process_name</a>": "my sample app"
 
     }
 }
