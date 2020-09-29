@@ -48,7 +48,7 @@ Note that the work on the documentation for this version is still in-progress.
   * New updates and events under:
     * inventory
     * username
-* [Call od Duty - Warzone](overwolf-games-events-warzone)
+* [Call of Duty - Warzone](overwolf-games-events-warzone)
   * New updates and events under:
     * match_info
     * game_info
