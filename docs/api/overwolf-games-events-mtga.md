@@ -32,7 +32,7 @@ gep_internal | gep_internal| Local + Public version number|See [notes](#gep_inte
 Data Example:
 
 ```json
-{"feature":"gep_internal","category":"gep_internal","key":"version_info","value":"{"local_version":"143.0.10","public_version":"143.0.10","is_updated":true}"}
+{"info":{"gep_internal":{"version_info":"{\"local_version\":\"157.0.1\",\"public_version\":\"157.0.1\",\"is_updated\":true}"}},"feature":"gep_internal"}
 ```
 
 ## `game_info`
@@ -115,7 +115,6 @@ key          | Category    | Values                    | Notes                 |
 draft_pack   | match_info  | Pack number you currently pick for, time left to pick and pick number. | See [notes](#draft_pack-note) |     150.0      |
 draft_cards  | match_info  | Name and ID of all picked cards during draft. | See [notes](#draft_cards-note) |     150.0      |
 draft_picked_card | match_info | Name and ID of currently picked card. | See [notes](#draft_picked_card-note) |     150.0      |
-
 
 #### *draft_pack* note
 

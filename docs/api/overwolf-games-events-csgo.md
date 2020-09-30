@@ -62,7 +62,7 @@ gep_internal | gep_internal| Local + Public version number|See [notes](#gep_inte
 Data Example:
 
 ```json
-{"feature":"gep_internal","category":"gep_internal","key":"version_info","value":"{"local_version":"143.0.10","public_version":"143.0.10","is_updated":true}"}
+{"info":{"gep_internal":{"version_info":"{\"local_version\":\"157.0.1\",\"public_version\":\"157.0.1\",\"is_updated\":true}"}},"feature":"gep_internal"}
 ```
 
 ## `kill`
@@ -219,7 +219,6 @@ server_info | match_info  |	The current session’s server ID. See [notes](#serv
 game_mode | match_info  |	The current game mode that is played. See [notes](#game_mode-note)	| | 135.0  |
 phase | match_info  |	The current state of the match. See [notes](#phase-note)	| | 137.0  |
 match_outcome | match_info  |	win/lose/tie. See [notes](#match_outcome-note)	| | 140.0  |
-
 
 #### *pseudo_match_id* note
 

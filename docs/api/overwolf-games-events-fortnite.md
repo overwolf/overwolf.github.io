@@ -48,7 +48,7 @@ gep_internal | gep_internal| Local + Public version number|See [notes](#gep_inte
 Data Example:
 
 ```json
-{"feature":"gep_internal","category":"gep_internal","key":"version_info","value":"{"local_version":"143.0.10","public_version":"143.0.10","is_updated":true}"}
+{"info":{"gep_internal":{"version_info":"{\"local_version\":\"157.0.1\",\"public_version\":\"157.0.1\",\"is_updated\":true}"}},"feature":"gep_internal"}
 ```
 
 ## `kill`
@@ -166,7 +166,6 @@ userID   | match_info  |The current user’s ID code. See [notes](#userID-note)|
 ticketID   | match_info  |The current ticket’s ID code. See [notes](#ticketID-note)|                       |  132.0  |
 partyID   | match_info  |The current party’s ID code. See [notes](#partyID-note)|                       |  132.0  |
 
-
 #### *pseudo_match_id* note
 
 Note that this is an Overwolf-generated code, not an Epic Games designation.
@@ -216,7 +215,6 @@ Data Example:
 ```json
 {"info":{"match_info":{"partyID":"24f122daf9c446199e59f1f6841cacfe"}},"feature":"match"}
 ```
-
 
 ## `rank`
 

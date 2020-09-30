@@ -40,7 +40,7 @@ gep_internal | gep_internal| Local + Public version number|See [notes](#gep_inte
 Data Example:
 
 ```json
-{"feature":"gep_internal","category":"gep_internal","key":"version_info","value":"{"local_version":"143.0.10","public_version":"143.0.10","is_updated":true}"}
+{"info":{"gep_internal":{"version_info":"{\"local_version\":\"157.0.1\",\"public_version\":\"157.0.1\",\"is_updated\":true}"}},"feature":"gep_internal"}
 ```
 
 ## `me`
@@ -72,8 +72,6 @@ match_state  | match_info  | Is a match in progress - true/false. | See [notes](
 game_mode    | match_info  | Current match's game_mode | See [notes](#game_mode-note)|134.0|
 draft_XX     | match_info  | Currently selected hero for draft | See [notes](#draft-note)|134.0|
 bans_XX      | match_info  | Currently selected hero for ban | See [notes](#bans-note)|134.0|
-
-
 
 ### Events
 
