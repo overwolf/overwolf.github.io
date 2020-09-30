@@ -15,6 +15,7 @@ Please read the [overwolf.games.events](overwolf-games-events) documentation pag
 
 ## Available Features
 
+* [gep_internal](#gep_internal)
 * [game_info](#game_info)
 * [match_info](#match_info)
 
@@ -27,6 +28,22 @@ Check the current game event status [here](../status/all). Alternately, you can 
 :::warning note
 The events are currently available only to the standard game. We do not support modded  clients.
 :::
+
+## `gep_internal`
+
+### Info Updates
+
+key          | Category    | Values                    | Notes                 | Since GEP Ver. |
+------------ | ------------| ------------------------- | --------------------- | ------------- | 
+gep_internal | gep_internal| Local + Public version number|See [notes](#gep_internal-note)|   143.0       |
+
+#### *gep_internal* note
+
+Data Example:
+
+```json
+{"info":{"gep_internal":{"version_info":"{\"local_version\":\"157.0.1\",\"public_version\":\"157.0.1\",\"is_updated\":true}"}},"feature":"gep_internal"}
+```
 
 ## game_info
 
@@ -61,7 +78,6 @@ Data Example:
 
 key          | Category    | Values                    | Notes                 | Since GEP Ver. |
 ------------ | ------------| ------------------------- | --------------------- | ------------- | 
-gep_internal | gep_internal| Local + Public version number|See [notes](#gep_internal-note)|   143.0       |
 server       | match_info  | The full id of the server. |See [notes](#server-note)|   153.0       |
 general_stats| match_info  | All of the current general statistics. |See [notes](#general_stats-note)|   153.0       |
 item_stats   | match_info  | All of the current item statistics. |See [notes](#item_stats-note)|   153.0       |
@@ -73,14 +89,6 @@ Event        | Event Data        | Fired When        | Notes              | Sinc
 -------------| ------------------| ----------------- | ------------------ | ---------------|
 match_start  | null              | When loading into map.|See [notes](#match_start-note)|   153.0  |
 match_end    | null              | When disconnecting from map.|See [notes](#match_end-note)|   153.0  |
-
-#### *gep_internal* note
-
-Data Example:
-
-```json
-{"info":{"gep_internal":{"version_info":"{\"local_version\":\"157.0.1\",\"public_version\":\"157.0.1\",\"is_updated\":true}"}},"feature":"gep_internal"}
-```
 
 #### *server* note
 
