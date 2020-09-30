@@ -15,6 +15,7 @@ Please read the [overwolf.games.events](overwolf-games-events) documentation pag
 
 ## Available Features
 
+* [gep_internal](#gep_internal)
 * [match_info](#match_info)
 * [me](#me)
 * [game_info](#game_info)
@@ -25,6 +26,22 @@ Please read the [overwolf.games.events](overwolf-games-events) documentation pag
 ## Game events status
 
 It's highly recommended to communicate errors and warnings to your app users. Check game event status [here](../status/all) or easily check game event status from your app [using our API](../topics/howto-check-events-status-from-app).
+
+## `gep_internal`
+
+### Info Updates
+
+key          | Category    | Values                    | Notes                 | Since GEP Ver. |
+------------ | ------------| ------------------------- | --------------------- | ------------- | 
+gep_internal | gep_internal| Local + Public version number|See [notes](#gep_internal-note)|   143.0       |
+
+#### *gep_internal* note
+
+Data Example:
+
+```json
+{"info":{"gep_internal":{"version_info":"{\"local_version\":\"157.0.1\",\"public_version\":\"157.0.1\",\"is_updated\":true}"}},"feature":"gep_internal"}
+```
 
 ## `me`
 
@@ -48,7 +65,6 @@ Data Example:
 
 key          | Category    | Values                    | Notes                 | Since GEP Ver. |
 ------------ | ------------| ------------------------- | --------------------- | ------------- | 
-gep_internal | gep_internal| Local + Public version number|See [notes](#gep_internal-note)|   143.0       |
 pseudo_match_id| match_info| Current match’s ID code. | See [notes](#pseudo_match_id-note)|  134.0  |
 teams_level  | match_info  | Current level of both teams| See [notes](#teams_level-note)|  134.0  |
 score        | match_info  | Current kill-score of both teams. | See [notes](#score-note)|  134.0  |
@@ -65,14 +81,6 @@ match_start| null          | Match starts |See [notes](#match_start-note)|    13
 match_end  | victory/defeat| Match ends   |See [notes](#match_end-note)|    134.0      |
 talent_available  | null | A skill point is available for use.  |See [notes](#talent_available-note)|    134.0      |
 gates_opened  | null | When pregame preparation countdown has ended and the match begins.  |See [notes](#gates_opened-note)|    134.0      |
-
-#### *gep_internal* note
-
-Data Example:
-
-```json
-{"info":{"gep_internal":{"version_info":"{\"local_version\":\"157.0.1\",\"public_version\":\"157.0.1\",\"is_updated\":true}"}},"feature":"gep_internal"}
-```
 
 #### *pseudo_match_id* note
 
