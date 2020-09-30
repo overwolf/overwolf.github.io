@@ -21,6 +21,7 @@ Please read the [overwolf.games.events](overwolf-games-events) documentation pag
 * [death](#death)
 * [killer](#killer)
 * [match](#match)
+* [match_info](#match_info)
 * [rank](#rank)
 * [counters](#counters)
 * [location](#location)
@@ -93,7 +94,6 @@ key          | Category    | Values                    | Notes                 |
 --------------- | -----------| ------------------------------------------------------------------------------------ | ------------------------------------ | ------------- |
 mode | match_info | Solo/Duo/Squad</br>Example:</br> `{"mode":"squad"}`|    |   90.0 |
 match_id | match_info | The current match ID code.</br>Example:</br>`match.bro.official.pc-2018-03.steam.`</br>`solo.eu.2019.05.07.08.ce8d1a14-b2af`</br>`-41c8-8bf4-d2a504326630`  |  Can be compared and checked at this [link](https://pubglookup.com/) |   120.0 |
-pseudo_match_id | match_info | The current match’s ID code.</br>Example:</br> `0c0ea3df-97ea-4d3a-b1f6-f8e34042251f`  |  This is an Overwolf-generated code which is unrelated to the match ID given above.  | 130.0.15|
 
 ### Events
 
@@ -106,6 +106,14 @@ matchSummary | null        | The match summary screen (with the user’s rank) i
 #### `matchEnd` notes
 
 The  matchEnd event fired when your player is killed, and when you exit to the lobby. (which means that if you get killed and than you exit to the lobby, you will see two calls for this event).
+
+## `match_info`
+
+### Info Updates
+
+key          | Category    | Values                    | Notes                 | Since GEP Ver. |
+--------------- | -----------| ------------------------------------------------------------------------------------ | ------------------------------------ | ------------- |
+pseudo_match_id | match_info | The current match’s ID code.</br>Example:</br> `0c0ea3df-97ea-4d3a-b1f6-f8e34042251f`  |  This is an Overwolf-generated code which is unrelated to the match ID given above.  | 130.0.15|
 
 ## `rank`
 
@@ -193,6 +201,7 @@ inventory_XX       | inventory   | Info about the inventory of the local player.
 equipped_XX       | inventory   | Info about “equipable” items. Each “equipped_XX” object represents </br>one item and is being cleared once this item is dropped/replaced </br>by the player.</br>This info-update provides:<ul><li>name (string) – the name of the item</li><li>count (int) – number of items</li>`{"feature":"me","category":"inventory","key":"equipped_1",`</br>`"value":"{"name": "Item_Weapon_vz61Skorpion_C_1"`</br>`"count":"1"}"}` |                       |    130.0.9        |
 weaponState       | inventory   | Info about the weapon and its state.</br>This info-update provides:<ul><li>name (string) – the name of the weapon used by the local player</li><li>equipped (bool) – in hand (true) or holstered (false)</li><li>count (int) – number of items |                       |    130.0.9        |
 health  | me   | The player’s current health |See [notes](#health-notes)|   135.0        |
+stance  | me   | The player’s current stance | Possible values are: stand, crouch and prone. |   135.0        |
 
 ### Events
 
