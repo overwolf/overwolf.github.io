@@ -15,7 +15,6 @@ Please read the [overwolf.games.events](overwolf-games-events) documentation pag
 
 ## Available Features
 
-* [gep_internal](#gep_internal)
 * [kill](#kill)
 * [killed](#killed)
 * [killer](#killer)
@@ -34,22 +33,6 @@ Please read the [overwolf.games.events](overwolf-games-events) documentation pag
 ## Game events status
 
 It is highly recommended to communicate errors and warnings to app users. Check game event status [here](../status/all). You can also easily check game events status from your app, [using our API](../topics/howto-check-events-status-from-app).
-
-## `gep_internal`
-
-### Info Updates
-
-key          | Category    | Values                    | Notes                 | Since GEP Ver. |
------------- | ------------| ------------------------- | --------------------- | ------------- | 
-gep_internal | gep_internal| Local + Public version number|See [notes](#gep_internal-note)|   143.0       |
-
-#### *gep_internal* note
-
-Data Example:
-
-```json
-{"feature":"gep_internal","category":"gep_internal","key":"version_info","value":"{"local_version":"143.0.10","public_version":"143.0.10","is_updated":true}"}
-```
 
 ## `kill`
 
@@ -159,6 +142,7 @@ matchEnd    | null         | Match ended   |                    |  110.0  |
 
 key               | Category    | Values                    | Notes                 | Since GEP Ver. |
 ----------------- | ------------| ------------------------- | --------------------- | ------------- |
+gep_internal | gep_internal| Local + Public version number. See [notes](#gep_internal-note)|     |   143.0       |
 pseudo_match_id   | match_info  |The current match’s ID code. See [notes](#pseudo_match_id-note)|                       |  130.2  |
 sessionID   | match_info  |The current session’s ID code. See [notes](#sessionID-note)|                       |  132.0  |
 matchID   | match_info  |The current match’s ID. See [notes](#matchID-note)|                       |  132.0  |
@@ -166,6 +150,13 @@ userID   | match_info  |The current user’s ID code. See [notes](#userID-note)|
 ticketID   | match_info  |The current ticket’s ID code. See [notes](#ticketID-note)|                       |  132.0  |
 partyID   | match_info  |The current party’s ID code. See [notes](#partyID-note)|                       |  132.0  |
 
+#### *gep_internal* note
+
+Data Example:
+
+```json
+{"info":{"gep_internal":{"version_info":"{\"local_version\":\"157.0.1\",\"public_version\":\"157.0.1\",\"is_updated\":true}"}},"feature":"gep_internal"}
+```
 
 #### *pseudo_match_id* note
 
@@ -216,7 +207,6 @@ Data Example:
 ```json
 {"info":{"match_info":{"partyID":"24f122daf9c446199e59f1f6841cacfe"}},"feature":"match"}
 ```
-
 
 ## `rank`
 
