@@ -15,7 +15,6 @@ Please read the [overwolf.games.events](overwolf-games-events) documentation pag
 
 ## Available Features
 
-* [gep_internal](#gep_internal)
 * [game_state_changed](#game_state_changed)
 * [match_state_changed](#match_state_changed)
 * [match_detected](#match_detected)
@@ -60,22 +59,6 @@ Please read the [overwolf.games.events](overwolf-games-events) documentation pag
 It is highly recommended to communicate errors and warnings to your app users. 
 
 Check [here](../status/all) the game events status. OR -  easily check the game events status from your app, [using our API](../topics/howto-check-events-status-from-app).
-
-## `gep_internal`
-
-### Info Updates
-
-key          | Category    | Values                    | Notes                 | Since GEP Ver. |
------------- | ------------| ------------------------- | --------------------- | ------------- | 
-gep_internal | gep_internal| Local + Public version number|See [notes](#gep_internal-note)|   143.0       |
-
-#### *gep_internal* note
-
-Data Example:
-
-```json
-{"feature":"gep_internal","category":"gep_internal","key":"version_info","value":"{"local_version":"143.0.10","public_version":"143.0.10","is_updated":true}"}
-```
 
 ## `game_state_changed`
 
@@ -614,6 +597,7 @@ key               | Category    | Values                    | Notes             
 ----------------- | ------------| ------------------------- | --------------------- | ------------- |
 pseudo_match_id   | match_info  | The current match’s ID code.|See [notes](#pseudo_match_id-note)|  130.0   |
 game_mode   | match_info  | Dota2/Auto-chess. |See [notes](#game_mode-note)|  130.0   |
+gep_internal | gep_internal| Local + Public version number|See [notes](#gep_internal-note)|   143.0       |
 
 #### *pseudo_match_id* note
 
@@ -626,6 +610,14 @@ Data Example:
 Data Example:
 
 `{"info":{"match_info":{"game_mode":"autochess"}},"feature":"match_info"}`
+
+#### *gep_internal* note
+
+Data Example:
+
+```json
+{"info":{"gep_internal":{"version_info":"{\"local_version\":\"157.0.1\",\"public_version\":\"157.0.1\",\"is_updated\":true}"}},"feature":"gep_internal"}
+```
 
 ## `roster`
 
