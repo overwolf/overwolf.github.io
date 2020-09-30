@@ -15,6 +15,7 @@ Please read the [overwolf.games.events](overwolf-games-events) documentation pag
 
 ## Available Features
 
+* [gep_internal](#gep_internal)
 * [scene_state](#scene_state)
 * [collection](#collection)
 * [decks](#decks)
@@ -24,6 +25,22 @@ Please read the [overwolf.games.events](overwolf-games-events) documentation pag
 ## Game events status
 
 It is highly recommended to communicate errors and warnings to your app users. Check game event status [here](../status/all), or easily check game events status from your app [using our API](../topics/howto-check-events-status-from-app).
+
+## `gep_internal`
+
+### Info Updates
+
+key          | Category    | Values                    | Notes                 | Since GEP Ver. |
+------------ | ------------| ------------------------- | --------------------- | ------------- | 
+gep_internal | gep_internal| Local + Public version number|See [notes](#gep_internal-note)|   143.0       |
+
+#### *gep_internal* note
+
+Data Example:
+
+```json
+{"info":{"gep_internal":{"version_info":"{\"local_version\":\"157.0.1\",\"public_version\":\"157.0.1\",\"is_updated\":true}"}},"feature":"gep_internal"}
+```
 
 ## `collection`
 
@@ -250,19 +267,10 @@ match_end  | "win"/"lose"/"tie"	 | match ends|  | 123.0  |
 
 key               | Category    | Values                    | Notes                 | Since GEP Ver. |
 ----------------- | ------------| ------------------------- | --------------------- | ------------- |
-gep_internal | gep_internal| Local + Public version number|See [notes](#gep_internal-note)|   143.0       |
 match_type        | match_info  | The type of the current match. |See [notes](#match_type-note)|   134.0 |
 pseudo_match_id   | match_info  | The ID of the current match. |See [notes](#pseudo_match_id-note)|   134.0 |
 battlegrounds_rating   | match_info  | The local player's BG rating. |See [notes](#battlegrounds_rating-note)|   143.0 |
 adventure_stats   | match_info | The stats of the current adventure run.  | See [notes](#adventure_stats-note) |   143.0 |
-
-#### *gep_internal* note
-
-Data Example:
-
-```json
-{"info":{"gep_internal":{"version_info":"{\"local_version\":\"157.0.1\",\"public_version\":\"157.0.1\",\"is_updated\":true}"}},"feature":"gep_internal"}
-```
 
 #### *match_type* note
 
