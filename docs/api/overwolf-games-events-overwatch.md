@@ -15,7 +15,6 @@ Please read the [overwolf.games.events](overwolf-games-events) documentation pag
 
 ## Available Features
 
-* [gep_internal](#gep_internal)
 * [game_info](#game_info)
 * [match_info](#match_info)
 * [kill](#kill)
@@ -26,22 +25,6 @@ Please read the [overwolf.games.events](overwolf-games-events) documentation pag
 It is highly recommended to communicate errors and warnings to app users. 
 
 Check the current game event status [here](../status/all). Alternately, you can easily check that status from your app itself, [using our API](../topics/howto-check-events-status-from-app).
-
-## `gep_internal`
-
-### Info Updates
-
-key          | Category    | Values                    | Notes                 | Since GEP Ver. |
------------- | ------------| ------------------------- | --------------------- | ------------- | 
-gep_internal | gep_internal| Local + Public version number|See [notes](#gep_internal-note)|   143.0       |
-
-#### *gep_internal* note
-
-Data Example:
-
-```json
-{"feature":"gep_internal","category":"gep_internal","key":"version_info","value":"{"local_version":"143.0.10","public_version":"143.0.10","is_updated":true}"}
-```
 
 ## `game_info`
 
@@ -208,6 +191,20 @@ Data Example:
 Note that on the response the leading zeros are removed ("0030" => "30") 
 
 ## `match_info`
+
+### Info Updates
+
+key          | Category    | Values                    | Notes                 | Since GEP Ver. |
+------------ | ------------| ------------------------- | --------------------- | ------------- | 
+gep_internal | gep_internal| Local + Public version number|See [notes](#gep_internal-note)|   143.0       |
+
+#### *gep_internal* note
+
+Data Example:
+
+```json
+{"info":{"gep_internal":{"version_info":"{\"local_version\":\"157.0.1\",\"public_version\":\"157.0.1\",\"is_updated\":true}"}},"feature":"gep_internal"}
+```
 
 ### Events
 
