@@ -15,7 +15,7 @@ Please read the [overwolf.games.events](overwolf-games-events) documentation pag
 
 ## Available Features
 
-
+* [gep_internal](#gep_internal)
 * [me](#me)
 * [team](#team)
 * [kill](#kill)
@@ -37,6 +37,22 @@ It is highly recommended to communicate errors and warnings to app users.
 
 Check the current game event status [here](../status/all). Alternately, you can easily check that status from your app itself, [using our API](../topics/howto-check-events-status-from-app).
 
+## `gep_internal`
+
+### Info Updates
+
+key          | Category    | Values                    | Notes                 | Since GEP Ver. |
+------------ | ------------| ------------------------- | --------------------- | ------------- | 
+gep_internal | gep_internal| Local + Public version number|See [notes](#gep_internal-note)|   143.0       |
+
+#### *gep_internal* note
+
+Data Example:
+
+```json
+{"info":{"gep_internal":{"version_info":"{\"local_version\":\"157.0.1\",\"public_version\":\"157.0.1\",\"is_updated\":true}"}},"feature":"gep_internal"}
+```
+
 ## me
 
 ### Info Updates
@@ -53,15 +69,6 @@ ultimate_cooldown | me          | Ultimate ability cooldown (range between 0-100
 key          | Category    | Values                    | Notes                 | Since GEP Ver. |
 --------------- | -----------| ------------------------------------------------------------------------------------ | ------------------------------------ | ------------- | 
 pseudo_match_id | match_info | The current match’s ID code.</br></br>Example:</br></br> `0c0ea3df-97ea-4d3a-b1f6-f8e34042251f`  |  This is an Overwolf-generated code, unrelated to Respawn.  |   130.0 |
-gep_internal | gep_internal| Local + Public version number|See [notes](#gep_internal-note)|   143.0       |
-
-#### *gep_internal* note
-
-Data Example:
-
-```json
-{"info":{"gep_internal":{"version_info":"{\"local_version\":\"157.0.1\",\"public_version\":\"157.0.1\",\"is_updated\":true}"}},"feature":"gep_internal"}
-```
 
 ## match_state
 
