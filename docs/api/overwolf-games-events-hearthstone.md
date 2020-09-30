@@ -225,10 +225,14 @@ Data Example:
 
 ### Info Updates
 
-key               | Category    | Values                    | Notes                 | Since GEP Ver. |
------------------ | ------------| ------------------------- | --------------------- | ------------- |
-localPlayer | playersInfo   |  See [notes](#localPlayer-note) |     |   123.0 |
-opponent | playersInfo   |  See [notes](#opponent-note) |     |   123.0 |
+key               | Category    | Values                          | Notes                 | Since GEP Ver. |
+----------------- | ------------| ------------------------------- | --------------------- | -------------- |
+localPlayer       | playersInfo |  See [notes](#localPlayer-note) |                       |   123.0        |
+opponent          | playersInfo |  See [notes](#opponent-note)    |                       |   123.0        |
+match_type        | match_info  | The type of the current match.  |See [notes](#match_type-note)               |   134.0 |
+battlegrounds_rating | match_info | The local player's BG rating. |See [notes](#battlegrounds_rating-note)     |   143.0 |
+adventure_stats   | match_info  | The stats of the current adventure run. | See [notes](#adventure_stats-note) |   143.0 |
+
 
 #### *localPlayer* note
 
@@ -240,7 +244,9 @@ opponent | playersInfo   |  See [notes](#opponent-note) |     |   123.0 |
 * "<b>cardBackId</b>" – ID of the card back used in the current game (int)
 * "<b>cardId</b>" – ID of the card representing the hero (string)
 
-`{"playersInfo":{"localPlayer":"{"name":"Overwolf","standardRank":"Bronze 10","standardLegendRank":0,"wildRank":0,"wildLegendRank":0,"cardBackId":157,"cardId":"HERO_05"}"}`
+```json
+{"playersInfo":{"localPlayer":"{"name":"Overwolf","standardRank":"Bronze 10","standardLegendRank":0,"wildRank":0,"wildLegendRank":0,"cardBackId":157,"cardId":"HERO_05"}"}`
+```
 
 #### *opponent* note
 
@@ -252,25 +258,9 @@ opponent | playersInfo   |  See [notes](#opponent-note) |     |   123.0 |
 * "<b>cardBackId</b>" – the ID of the card back used in the current game (int)
 * "<b>cardId</b>" – the ID of the card representing the hero (string)
 
-`{"playersInfo":{"opponent":"{"name":"furhyax","standardRank":"Bronze 10","standardLegendRank":0,"wildRank":0,"wildLegendRank":0,"cardBackId":172,"cardId":"HERO_09a"}"}`
-
-### Events
-
-Event       | Event Data   | Fired When    | Notes              | Since GEP Ver. |
-------------| -------------| --------------| ------------------ | --------------|
-match_start| mode</br>`{"name":"match_start","data":"standard"}` | match starts	|  | 123.0  |
-match_end  | "win"/"lose"/"tie"	 | match ends|  | 123.0  |
-
-## `match_info`
-
-### Info Updates
-
-key               | Category    | Values                    | Notes                 | Since GEP Ver. |
------------------ | ------------| ------------------------- | --------------------- | ------------- |
-match_type        | match_info  | The type of the current match. |See [notes](#match_type-note)|   134.0 |
-pseudo_match_id   | match_info  | The ID of the current match. |See [notes](#pseudo_match_id-note)|   134.0 |
-battlegrounds_rating   | match_info  | The local player's BG rating. |See [notes](#battlegrounds_rating-note)|   143.0 |
-adventure_stats   | match_info | The stats of the current adventure run.  | See [notes](#adventure_stats-note) |   143.0 |
+```json
+{"playersInfo":{"opponent":"{"name":"furhyax","standardRank":"Bronze 10","standardLegendRank":0,"wildRank":0,"wildLegendRank":0,"cardBackId":172,"cardId":"HERO_09a"}"}`
+```
 
 #### *match_type* note
 
@@ -285,14 +275,6 @@ Data Example:
 
 {"feature":"match","category":"match_info","key":"match_type","value":"GT_BATTLEGROUNDS"}
 ```
-
-#### *pseudo_match_id* note
-
-This is an Overwolf generated code for internal use, not issued by the game or by Blizzard.
-
-Data Example:
-
-`{"info":{"match_info":{"pseudo_match_id":"5a7e3729-993c-414d-8e3f-592faeef81e7"}},"feature":"match_info"}`
 
 #### *battlegrounds_rating* note
 
@@ -338,6 +320,28 @@ Data Example:
 
 ### Events
 
-Event       | Event Data   | Fired When    | Notes              | Since GEP Ver. |
-------------| -------------| --------------| ------------------ | --------------|
-match_outcome| "WON" / "LOST" | match concludes| This event is not reliable on some rare scenarios, please use `"match_end"` event data instead|     134.0     |
+Event        | Event Data   | Fired When    | Notes              | Since GEP Ver. |
+-------------| -------------| --------------| ------------------ | --------------|
+match_start  | mode</br>`{"name":"match_start","data":"standard"}` | match starts	|  | 123.0  |
+match_end    | "win"/"lose"/"tie" | match ends      |                                                                                                 | 123.0  |
+match_outcome| "WON" / "LOST"     | match concludes | This event is not reliable on some rare scenarios, please use `"match_end"` event data instead  | 134.0  |
+
+
+## `match_info`
+
+### Info Updates
+
+key               | Category    | Values                    | Notes                 | Since GEP Ver. |
+----------------- | ------------| ------------------------- | --------------------- | ------------- |
+pseudo_match_id   | match_info  | The ID of the current match. |See [notes](#pseudo_match_id-note)|   134.0 |
+
+#### *pseudo_match_id* note
+
+This is an Overwolf generated code for internal use, not issued by the game or by Blizzard.
+
+Data Example:
+
+```json
+{"info":{"match_info":{"pseudo_match_id":"5a7e3729-993c-414d-8e3f-592faeef81e7"}},"feature":"match_info"}
+```
+
