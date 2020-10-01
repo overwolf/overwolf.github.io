@@ -43,7 +43,8 @@ Note that the work on the documentation for this version is still in-progress.
 * Soon
 
 #### Game events
-
+* GENERAL
+  * Recently both Path of Exile and Rocket League received an Epic Games version and our events are currently unreliable on those versions. We are adjusting the events and will update in the near future.
 * [WARFRAME](overwolf-games-events-warframe)
   * New updates and events under:
     * inventory
