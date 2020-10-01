@@ -40,7 +40,7 @@ gep_internal | gep_internal| Local + Public version number|See [notes](#gep_inte
 Data Example:
 
 ```json
-{"info":{"gep_internal":{"version_info":"{\"local_version\":\"157.0.1\",\"public_version\":\"157.0.1\",\"is_updated\":true}"}},"feature":"gep_internal"}
+{"info":{"gep_internal":{"version_info":"{"local_version":"157.0.1","public_version":"157.0.1","is_updated":true}"}},"feature":"gep_internal"}
 ```
 
 ## `game_info`
@@ -58,22 +58,10 @@ map       | game_info   | Name of currently played map.|See [notes](#map-note)  
 Data Example:
 
 ```json
-        {
-            "feature": "game_info",
-            "category": "game_info",
-            "key": "game_state",
-            "value": "loading_screen_start"
-        } {
-            "feature": "game_info",
-            "category": "game_info",
-            "key": "game_state",
-            "value": "game_loaded"
-        } {
-            "feature": "game_info",
-            "category": "game_info",
-            "key": "game_state",
-            "value": "match_in_progress"
-        }
+{"info":{"game_info":{"game_state":"loading_screen_start"}},"feature":"game_info"}
+{"info":{"game_info":{"game_state":"game_loaded"}},"feature":"game_info"}
+{"info":{"game_info":{"game_state":"match_in_progress"}},"feature":"game_info"}
+{"info":{"game_info":{"game_state":"match_ended"}},"feature":"game_info"}
 ```
 
 #### *game_mode* note
@@ -109,12 +97,7 @@ Full list of game-modes:
 Data Example:
 
 ```json
-        {
-            "feature": "game_info",
-            "category": "game_info",
-            "key": "game_mode",
-            "value": "30"
-        }
+{"info":{"game_info":{"game_mode":"16"}},"feature":"game_info"}
 ```
 
 Note that on the response the leading zeros are removed ("0030" => "30") 
@@ -197,12 +180,7 @@ Possible map values:
 Data Example:
 
 ```json
-        {
-            "feature": "match_info",
-            "category": "match_info",
-            "key": "map",
-            "value": "707"
-        }
+{"info":{"match_info":{"map":"357"}},"feature":"match_info"}
 ```
 
 Note that on the response the leading zeros are removed ("0030" => "30") 
@@ -246,12 +224,7 @@ objective_kills| kill   | Total amount of objective kills.|See [notes](#objectiv
 Data Example:
 
 ```json
-        {
-            "feature": "kill",
-            "category": "kill",
-            "key": "eliminations",
-            "value": 1
-        }
+{"info":{"kill":{"eliminations":"6"}},"feature":"kill"}
 ```
 
 #### *objective_kills* note
@@ -259,12 +232,7 @@ Data Example:
 Data Example:
 
 ```json
-        {
-            "feature": "kill",
-            "category": "kill",
-            "key": "objective_kills",
-            "value": 1
-        }
+{"info":{"kill":{"objective_kills":"2"}},"feature":"kill"}
 ```
 
 ### Events
@@ -307,12 +275,7 @@ deaths       | death       | Total amount of deaths.   |See [notes](#death-note)
 Data Example:
 
 ```json
-        {
-            "feature": "death",
-            "category": "death",
-            "key": "deaths",
-            "value": 1
-        }
+{"info":{"death":{"deaths":"5"}},"feature":"death"}
 ```
 
 ### Events
