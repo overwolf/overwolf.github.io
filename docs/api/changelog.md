@@ -53,6 +53,10 @@ Note that the work on the documentation for this version is still in-progress.
   * New updates and events under:
     * match_info
     * game_info
+* [Fortnite](overwolf-games-events-fortnite)
+  * New update under:
+    * me
+
     
 ## Version 0.155 (Sep. 2020)
 
