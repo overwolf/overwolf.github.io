@@ -28,6 +28,8 @@ Please read the [overwolf.games.events](overwolf-games-events) documentation pag
 
 It's recommended to communicate errors and warnings to your users. You can check game event status [here](../status/all) or easily verify event status directly from your app [using our API](../topics/howto-check-events-status-from-app).
 
+<b>Importnat Note:</b> We are aware that since Rocket League became Free to Play there is a new Epic Games version of the game, however, our events currently are not 100% reliable on that version. Take into account that the events below are working for the Steam version of the game. We are working on adjusting the Epic version as well.
+
 ## `gep_internal`
 
 ### Info Updates
@@ -41,7 +43,7 @@ gep_internal | gep_internal| Local + Public version number|See [notes](#gep_inte
 Data Example:
 
 ```json
-{"feature":"gep_internal","category":"gep_internal","key":"version_info","value":"{"local_version":"143.0.10","public_version":"143.0.10","is_updated":true}"}
+{"info":{"gep_internal":{"version_info":"{"local_version":"157.0.1","public_version":"157.0.1","is_updated":true}"}},"feature":"gep_internal"}
 ```
 
 ## `stats`
@@ -324,7 +326,7 @@ playerLeft  | Check notes |A player leaves the match|See [notes](#playerLeft-not
 Data Example:
 
 ```json
-{"events":[{"name":"rosterChange","data":"{"roster":[{"steamId":"1","score": 0,"goals":"0","deaths":"0","name":"Fury","state":"64","team_score": 1,"team":"1","index":0},{"steamId":"2535423426833677","score":0,"goals": "0","deaths":"0","name":"IISGoAt708","state":"0","team_score": 3,"team":"2","index":1},{"steamId":"2535428144972964","score": 34,"goals":"0","deaths":"0","name":"Joschy900","state":"0","team_score": 1,"team":"1","index":2},{"steamId": "2535424769966317","score":0,"goals":"0","deaths":"0","name":"JteRushencroks0","state": "0","team_score":1,"team":"1","index":3},{"steamId": "76561198045142971","score":455,"goals":"3","deaths":"0","name":"Klide", "state":"0","team_score":3,"team":"2","index\":4},{ "steamId":"4193393565673947567","score":62,"goals":"0","deaths":"0","name": "YAHHOLAND","state":"0","team_score":3,"team":"2","index":5}]}"}]}
+{"events":[{"name":"rosterChange","data":"{"roster":[{"steamId":"1","score": 0,"goals":"0","deaths":"0","name":"Fury","state":"64","team_score": 1,"team":"1","index":0},{"steamId":"2535423426833677","score":0,"goals": "0","deaths":"0","name":"IISGoAt708","state":"0","team_score": 3,"team":"2","index":1},{"steamId":"2535428144972964","score": 34,"goals":"0","deaths":"0","name":"Joschy900","state":"0","team_score": 1,"team":"1","index":2},{"steamId": "2535424769966317","score":0,"goals":"0","deaths":"0","name":"JteRushencroks0","state": "0","team_score":1,"team":"1","index":3},{"steamId": "76561198045142971","score":455,"goals":"3","deaths":"0","name":"Klide", "state":"0","team_score":3,"team":"2","index":4},{ "steamId":"4193393565673947567","score":62,"goals":"0","deaths":"0","name": "YAHHOLAND","state":"0","team_score":3,"team":"2","index":5}]}"}]}
 ```
 
 #### *playerJoined* note
