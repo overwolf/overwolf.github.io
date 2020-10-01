@@ -42,7 +42,7 @@ gep_internal | gep_internal| Local + Public version number|See [notes](#gep_inte
 Data Example:
 
 ```json
-{"info":{"gep_internal":{"version_info":"{\"local_version\":\"157.0.1\",\"public_version\":\"157.0.1\",\"is_updated\":true}"}},"feature":"gep_internal"}
+{"info":{"gep_internal":{"version_info":"{"local_version":"157.0.1","public_version":"157.0.1","is_updated":true}"}},"feature":"gep_internal"}
 ```
 
 ## game_info
@@ -59,9 +59,8 @@ name         | game_info   | The name of the local player. |See [notes](#name-no
 Data Example:
 
 ```json
-{"feature":"game_info","category":"game_info","key":"scene","value":"Play Multiplayer"}
-{"feature":"game_info","category":"game_info","key":"scene","value":"Game Menu"}
-{"feature":"game_info","category":"game_info","key":"scene","value":"Statistics"}
+{"info":{"game_info":{"scene":"Title Screen"}},"feature":"game_info"}
+{"info":{"game_info":{"scene":"Select World"}},"feature":"game_info"}
 ```
 
 #### *name* note
@@ -69,7 +68,7 @@ Data Example:
 Data Example:
 
 ```json
-{"feature":"game_info","category":"game_info","key":"name","value":"OverwoldDeBest"}
+{"info":{"game_info":{"name":"OverwoldDeBest"}},"feature":"game_info"}
 ```
 
 ## match_info
@@ -95,7 +94,7 @@ match_end    | null              | When disconnecting from map.|See [notes](#mat
 Data Example:
 
 ```json
-{"feature":"match_info","category":"match_info","key":"server","value":"play.omniverse.rocks"}
+{"info":{"match_info":{"server":"Play.datblock.com"}},"feature":"match_info"}
 ```
 
 #### note regarding statistics
@@ -107,23 +106,24 @@ To activate and extract the data out of the statistics you must open the main me
 Data Example:
 
 ```json
-{"feature":"match_info","category":"match_info","key":"general_stats","value":"[
-    {"name":"clean_banner","value":"0"},
-    {"name":"open_shulker_box","value":"0"},
-    {"name":"animals_bred","value":"0"},
-    {"name":"fish_caught","value":"0"},
-    {"name":"leave_game","value":"278"},
-    {"name":"interact_with_smithing_table","value":"0"},
-    {"name":"interact_with_crafting_table","value":"0"},
+{
+    "info": {
+        "match_info": {
+            "general_stats": "[ {
+                "name": "damage_absorbed",
+                "value": "0"
+            },
+            {
+                "name": "fall_one_cm",
+                "value": "0 cm"
+            },
+            {
+                "name": "walk_one_cm",
+                "value": "79.65 m"
+            },
 ...
-    {"name":"jump","value":"4872"},
-    {"name":"inspect_dispenser","value":"0"},
-    {"name":"tune_noteblock","value":"0"},
-    {"name":"crouch_one_cm","value":"19.8 m"},
-    {"name":"open_chest","value":"0"},
-    {"name":"time_since_death","value":"6.46667 min"},
-    {"name":"walk_under_water_one_cm","value":"99.38 m"},
-    {"name":"drop","value":"2"}
+            {"name":"enchant_item","value":"0"}]"}},
+                "feature":"match_info"}
 ```
 
 #### *item_stats* note
@@ -131,12 +131,14 @@ Data Example:
 Data Example:
 
 ```json
-{"feature":"match_info","category":"match_info","key":"items_stats","value":"[
-    {"name":".stone_sword","value":"1","stat_type":"stat_type.minecraft.dropped"},
-    {"name":".stone_pickaxe","value":"1","stat_type":"stat_type.minecraft.dropped"},
-    {"name":"ft.stone_pickaxe","value":"1","stat_type":"stat_type.minecraft.picked_up"},
-    {"name":"ft.stone_sword","value":"1","stat_type":"stat_type.minecraft.picked_up"},
-    {"name":"ead","value":"13","stat_type":"stat_type.minecraft.used"}]"}
+    {"info":
+        {"match_info":{"items_stats":"[
+            {"name":"rass","value":"4","stat_type":"stat_type.minecraft.mined"},
+            {"name":"ead_bush","value":"31","stat_type":"stat_type.minecraft.mined"},
+            {"name":"ft.wheat_seeds","value":"6","stat_type":"stat_type.minecraft.picked_up"},
+            {"name":"ft.beef","value":"1","stat_type":"stat_type.minecraft.picked_up"},
+            {"name":"ft.leather","value":"1","stat_type":"stat_type.minecraft.picked_up"}]"}},
+            "feature":"match_info"}
 ```
 
 #### *mobs_stats* note
@@ -144,9 +146,7 @@ Data Example:
 Data Example:
 
 ```json
-{"feature":"match_info","category":"match_info","key":"mobs_stats","value":"[
-    {"name":"sheep","value":"6","stat_type":"stat_type.minecraft.killed"},
-    {"name":"cow","value":"1","stat_type":"stat_type.minecraft.killed"}]"}
+{"info":{"match_info":{"mobs_stats":"[{"name":"cow","value":"1","stat_type":"stat_type.minecraft.killed"}]"}},"feature":"match_info"}
 ```
 
 #### *match_start* note
