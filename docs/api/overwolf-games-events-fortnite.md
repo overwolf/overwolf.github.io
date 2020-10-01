@@ -48,7 +48,7 @@ gep_internal | gep_internal| Local + Public version number|See [notes](#gep_inte
 Data Example:
 
 ```json
-{"info":{"gep_internal":{"version_info":"{\"local_version\":\"157.0.1\",\"public_version\":\"157.0.1\",\"is_updated\":true}"}},"feature":"gep_internal"}
+{"info":{"gep_internal":{"version_info":"{"local_version":"157.0.1","public_version":"157.0.1","is_updated":true}"}},"feature":"gep_internal"}
 ```
 
 ## `kill`
@@ -143,7 +143,7 @@ mode              | match_info  | Possible Values:<ul><li>"solo"</li><li>"duo"</
 Data example:
 
 ```json
-{"feature":"match","category":"match_info","key":"mode","value":"solo"}
+{"info":{"match_info":{"mode":"solo"}},"feature":"match"}
 ```
 
 ### Events
@@ -244,13 +244,14 @@ name         | me          |   The player’s nickname. See [notes](#name-notes)
 health       | me  |The player’s current health % (100-0). See [notes](#health-notes)| |   110.0       |
 accuracy     | me  |The local player’s current accuracy (hits/total shots). See [notes](#accuracy-note)|   |   110.0       |
 shield       | me  |The amount of shield the local player currently has. See [notes](#shield-notes)|         |   110.0       |
+total_shots  | me  |The amount of times the local player shot (not including grenades). See [notes](#total_shots-notes)|         |   157.0       |
 
 #### *name* note
 
 Data Example:
 
 ```json
-{"name":"itayG"}
+{"info":{"me":{"name":"Sh4rgaas"}},"feature":"me"}
 ```
 
 #### *health* note
@@ -258,7 +259,7 @@ Data Example:
 Data Example:
 
 ```json
-{"health":"37"}
+{"info":{"me":{"health":"100"}},"feature":"me"}
 ```
 
 #### *accuracy* note
@@ -266,7 +267,7 @@ Data Example:
 Data Example:
 
 ```json
-{"accuracy":"0.333333"}
+{"info":{"me":{"accuracy":"0.500000"}},"feature":"me"}
 ```
 
 #### *shield* note
@@ -274,7 +275,15 @@ Data Example:
 Data Example:
 
 ```json
-{"info":{"me":{"shield":"50"}},"feature":"me"}
+{"info":{"me":{"shield":"40"}},"feature":"me"}
+```
+
+#### *total_shots* note
+
+Data Example:
+
+```json
+{"info":{"me":{"total_shots":"84"}},"feature":"me"}
 ```
 
 ## `phase`
@@ -298,7 +307,7 @@ location     | game_info   |Player’s current grid location, represented by (x,
 Data Example:
 
 ```json
-{"x" : 621, "y" : 2469, "z" : 50}
+{"info":{"game_info":{"location":"{ "x" : 1209, "y" : 1560, "z" : -18 }"}},"feature":"location"}
 ```
 
 ## `team`
@@ -314,7 +323,13 @@ nicknames    | match_info  | Names of the players in the user’s team. See [not
 Data Example:
 
 ```json
-{"feature":"team","category":"match_info","key":"nicknames","value":"{"team_members":[{"player":"Itaygl"},{"player":"ErW_iN"},{"player":"einhorn28"},{"player":"Jacqulees"}]}"}
+{"info":{"match_info":
+  {"nicknames":"{"team_members" : [
+    {"player" : "Sh4rgaas"},
+    {"player" : "Benda3907"},
+    {"player" : "KapiXono"},
+    {"player" : "Bradost-dost12"}
+      ]}"}},"feature":"team"}
 ```
 
 ## `items`
