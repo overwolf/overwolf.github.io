@@ -27,6 +27,8 @@ It is highly recommended to communicate errors and warnings to app users.
 
 Check the current game event status [here](../status/all). Alternately, you can easily check that status from your app itself, [using our API](../topics/howto-check-events-status-from-app).
 
+<b>Important Note:</b> We are aware that recently an Epic Games version was released, and our events are currently unreliable in that version. Please make sure to use the events below for Steam and Standalone PoE versions. Thank you.
+
 ## gep_internal
 
 ### Info Updates
@@ -40,7 +42,7 @@ gep_internal | gep_internal| Local + Public version number|See [notes](#gep_inte
 Data Example:
 
 ```json
-{"feature":"gep_internal","category":"gep_internal","key":"version_info","value":"{"local_version":"143.0.10","public_version":"143.0.10","is_updated":true}"}
+{"info":{"gep_internal":{"version_info":"{"local_version":"157.0.1","public_version":"157.0.1","is_updated":true}"}},"feature":"gep_internal"}
 ```
 
 ## kill
@@ -121,7 +123,7 @@ match_outcome| victory/defeat  | Boss killed/You died.|See [notes](#match_outcom
 Data Example:
 
 ```json
-{"feature":"match_info","category":"match_info","key":"current_zone","value":"Lioneye's Watch"}
+{"info":{"match_info":{"current_zone":""Lioneye's Watch""}},"feature":"match_info"}
 ```
 
 #### *opened_page* note
@@ -129,8 +131,8 @@ Data Example:
 Data Example:
 
 ```json
-{"feature":"match_info","category":"match_info","key":"opened_page","value":"inventory"}
-{"feature":"match_info","category":"match_info","key":"opened_page","value":null}
+{"info":{"match_info":{"opened_page":"inventory"}},"feature":"match_info"}
+{"info":{"match_info":{"opened_page":null}},"feature":"match_info"}
 ```
 
 #### *match_outcome* note

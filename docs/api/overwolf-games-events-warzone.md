@@ -38,7 +38,7 @@ gep_internal | gep_internal| Local + Public version number|See [notes](#gep_inte
 Data Example:
 
 ```json
-{"feature":"gep_internal","category":"gep_internal","key":"version_info","value":"{"local_version":"143.0.10","public_version":"143.0.10","is_updated":true}"}
+{"info":{"gep_internal":{"version_info":"{"local_version":"157.0.1","public_version":"157.0.1","is_updated":true}"}},"feature":"gep_internal"}
 ```
 
 ## match_info
@@ -82,7 +82,7 @@ lobby_state  | game_info   | Current state of the lobby screen. |See [notes](#lo
 Data Example:
 
 ```json
-{"feature":"game_info","category":"game_info","key":"activision_id","value":"ItayG#9798518"}
+{"info":{"game_info":{"activision_id":"7766#6156337"}},"feature":"game_info"}
 ```
 
 #### *battlenet_tag* note
@@ -90,7 +90,7 @@ Data Example:
 Data Example:
 
 ```json
-{"feature":"game_info","category":"game_info","key":"battlenet_tag","value":"ItayG#21647"}
+{"info":{"game_info":{"battlenet_tag":"Shargaas#2430"}},"feature":"game_info"}
 ```
 
 #### *match_state* note
@@ -98,7 +98,7 @@ Data Example:
 Data Example:
 
 ```json
-{"feature":"game_info","category":"game_info","key":"match_state","value":"eIDLE"}
+{"info":{"game_info":{"match_state":"eIDLE"}},"feature":"game_info"}
 ```
 
 Possible values:
@@ -116,7 +116,7 @@ Possible values:
 Data Example:
 
 ```json
-{"feature":"game_info","category":"game_info","key":"lobby_state","value":"eIDLE"}
+{"info":{"game_info":{"lobby_state":"eWAITING_FOR_LOBBY_INFO"}},"feature":"game_info"}
 ```
 
 Possible values:
