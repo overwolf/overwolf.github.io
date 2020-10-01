@@ -29,6 +29,24 @@ Using any of the above APIs requires the **VideoCaptureSettings** permission fla
 
 See for an example the [overwolf.streaming.stop()](../api/overwolf-streaming#stopstreamid-callback) documentation.
 
+## Choosing the right Encoder
+
+To capture video, your app must use a Video Encoder.  
+Both of the APIs, [overwolf.streaming](overwolf-streaming) and [overwolf.media.replays](overwolf-media-replays) offer ways to manually set a video encoder or use the default encoder that the user defines through the OW client UI.
+
+To get the best capture results, It is highly recommended to check which encoder is set before capturing videos in your app. You can get the list of available encoders for the current user using [overwolf.streaming.getStreamEncoders()](overwolf-streaming#getstreamencoderscallback).
+  
+There are software-based encoders, like the X264, that consume a lot of CPU and might cause some lagging videos or other issues, mostly if the capture resolution or FPS are set to high.
+
+If you recognize that the user is using a software-based encoder, like the X264, it's recommended to choose one of these options:
+
+1. Without notifying the user - manually override the user encoder with other available GPU-based encoders.  
+   * Note that these settings will apply only to your app and will not change the encoder settings as defined by the user through the OW client UI.
+2. With Notifying the user - let them know that the chosen encoder might cause low-quality video captures.  
+   Then, let the user decide if they want to change the encoder to other encoders, or choose to lower the resolution and/or FPS.  
+   * You can use [this](#windows-10-hardware-accelerated-gpu-scheduling-notice) suggested warning window with a link to the "capture" OW client settings.
+
+
 #### Windows 10 Hardware-Accelerated GPU Scheduling notice
 
 :::important
