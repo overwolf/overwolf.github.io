@@ -10,6 +10,10 @@ Please read the [overwolf.games.events](overwolf-games-events) documentation pag
 7212
 :::
 
+:::note Important Note
+ We are aware that recently an Epic Games version was released, and our events are currently unreliable in that version. Please make sure to use the events below for Steam and Standalone PoE versions. Thank you.
+ :::
+
 ## Sample Apps
 * [Path of Exile game events sample app](https://github.com/overwolf/events-sample-apps)
 
@@ -26,8 +30,6 @@ Please read the [overwolf.games.events](overwolf-games-events) documentation pag
 It is highly recommended to communicate errors and warnings to app users. 
 
 Check the current game event status [here](../status/all). Alternately, you can easily check that status from your app itself, [using our API](../topics/howto-check-events-status-from-app).
-
-<b>Important Note:</b> We are aware that recently an Epic Games version was released, and our events are currently unreliable in that version. Please make sure to use the events below for Steam and Standalone PoE versions. Thank you.
 
 ## gep_internal
 
