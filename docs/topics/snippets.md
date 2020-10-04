@@ -28,8 +28,10 @@ Please note that these are community code snippets, and the usage is at your own
 
 * [AlbericoD/overwolf-modern-react-boilerplate](https://github.com/AlbericoD/overwolf-modern-react-boilerplate).
   Overwolf **Modern React Boilerplate**.
+  "An opinionated  open source boilerplate in **React.JS** with the new hook API and the **overwolf-hooks** package, this repository helps developers create fast, internationalized, modular and modern code without ejecting the code from the **create react app (CRA)**."
 
-* AlbericoD published a **package of react hooks** for Overwolf:  
+* AlbericoD published a **package of react hooks** for Overwolf.
+  "Custom hooks to help use overwolf api with the new react hooks technology."  
   NPM: https://www.npmjs.com/package/overwolf-hooks  
   Repo: https://github.com/AlbericoD/overwolf-hooks#readme
   

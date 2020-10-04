@@ -42,12 +42,12 @@ key          | Category    | Values                    | Notes                 |
 ------------ | ------------| ------------------------- | --------------------- | ------------- | 
 gep_internal | gep_internal| Local + Public version number|See [notes](#gep_internal-note)|   146.0       |
 
-#### *gep_internal* note
+#### `gep_internal` note
 
 Data Example:
 
 ```json
-{"feature":"gep_internal","category":"gep_internal","key":"version_info","value":"{"local_version":"143.0.10","public_version":"143.0.10","is_updated":true}"}
+{"info":{"gep_internal":{"version_info":"{"local_version":"157.0.1","public_version":"157.0.1","is_updated":true}"}},"feature":"gep_internal"}
 ```
 
 ## `kill`
@@ -68,20 +68,26 @@ Event      | Event Data  | Fired When          | Notes              | Since GEP 
 -----------| ------------| ------------------- | ------------------ | --------------|
 kill | null        | The local player killed another player |   |   146.0      | 
 headshot   | null        |  The local player hit another player with a headshot 	   |     |  146.0      | 
-damage_dealt   | amount of damage dealt by the local player |  The local player “damaged” an enemy or himself | See [notes](#damage_dealt-note)      |  146.0   | 
+damage_dealt   | amount of damage dealt by the local player |  The local player “damaged” an enemy or himself | See [notes](#damage_dealt-notes)      |  146.0   | 
 knockout | weapon name + victim name  | The local player knocked-out another player |See [notes](#knockout-note)|   148.0      | 
 
 
-#### *damage_dealt* note
+#### `damage_dealt` note
 
 This event can not be used in real time, as it can give an un-fair advantage to the user. You can use it post-match.
-
-#### *knockout* note
 
 Data Example:
 
 ```json
-{"feature":"kill","event":"knockout","data":{"weapon":"SCAR-L","victim":"moshi_official"}}
+{"events":[{"name":"damage_dealt","data":"42.63"}]}
+```
+
+#### `knockout` note
+
+Data Example:
+
+```json
+{"events":[{"name":"knockout","data":"{"weapon":"SLR","victim":"salambebek1"}"}]}
 ```
 
 ## `match`
@@ -90,7 +96,7 @@ Data Example:
 
 key          | Category    | Values                    | Notes                 | Since GEP Ver. |
 --------------- | -----------| ------------------------------------------------------------------------------------ | ------------------------------------ | ------------- |
-mode | match_info | Solo/Duo/Squad</br>Example:</br> `{"mode":"squad"}`|    |   146.0 |
+mode | match_info | Solo/Duo/Squad</br>Example:</br> `{"mode":"squad"}`| See [notes](#mode-notes) |   146.0 |
 match_id | match_info | The current match ID code.</br>Example:</br>`match.bro.official.pc-2018-03.steam.`</br>`solo.eu.2019.05.07.08.ce8d1a14-b2af`</br>`-41c8-8bf4-d2a504326630`  |  Can be compared and checked at this [link](https://pubglookup.com/) |   146.0 |
 pseudo_match_id | match_info | The current match’s ID code.</br>Example:</br> `0c0ea3df-97ea-4d3a-b1f6-f8e34042251f`  |  This is an Overwolf-generated code which is unrelated to the match ID given above.  | 146.0 |
 
@@ -101,7 +107,23 @@ Event      | Event Data  | Fired When          | Notes              | Since GEP 
 matchStart | null        | Match started |   |   146.0       | 
 matchEnd | null        | Match ended. See [notes](#matchend-notes) below |   |   146.0       | 
 
-#### `matchEnd` notes
+#### `mode` note
+
+Data Example:
+
+```json
+{"info":{"match_info":{"mode":"squad"}},"feature":"match"}
+```
+
+#### `match_id` note
+
+Data Example:
+
+```json
+{"info":{"match_info":{"match_id":"match.bro.official.lpc-2019-06.gacct.squad.eu.2020.10.04.08.aa64b4d8-0f0a-4892-9678-3cdca2b0fedb"}},"feature":"match"}
+```
+
+#### `matchEnd` note
 
 The  matchEnd event fired when your player is killed, and when you exit to the lobby. (which means that if you get killed and than you exit to the lobby, you will see two calls for this event).
 
@@ -161,8 +183,24 @@ revived    | null        | The local player was revived    |                    
 
 Event      | Event Data  | Fired When          | Notes              | Since GEP Ver. |
 -----------| ------------| ------------------------------- | ------------------ | --------------|
-death      | null | The local player dies |                        |   146.0    |
-knockedout | null | The local player is knocked-out |   |   146.0    |
+death      | null | The local player dies | See [notes](#death-notes) |   146.0    |
+knockedout | null | The local player is knocked-out |See [notes](#knockedout-notes)|   146.0    |
+
+#### *death* note
+
+Data Example:
+
+```json
+{"events":[{"name":"death","data":""}]}
+```
+
+#### *knockedout* note
+
+Data Example:
+
+```json
+{"events":[{"name":"knockedout","data":""}]}
+```
 
 ## `killer`
 
@@ -184,7 +222,7 @@ Event      | Event Data  | Fired When          | Notes              | Since GEP 
 -----------| ------------| ------------------------------- | ------------------ | --------------|
 team_feed | Action name, attacker name, weapon name, and victim name. | Whenever a game update appears in the middle of the screen. | See [notes](#team_feed-notes) |    148.0    |
 
-#### *team_feed* note
+#### `team_feed` note
 
 Data Examples:
 
@@ -212,20 +250,10 @@ key          | Category    | Values                            | Notes          
 ------------ | ------------| --------------------------------- | --------------------- | ------------- |
 nicknames    | match_info  | The nicknames of your team members.| See [notes](#nicknames-note) |   151.0   |
 
-#### *team_index* note
+#### `nicknames` note
 
 Data Example:
 
 ```json
-        {
-            "feature": "team",
-            "category": "match_info",
-            "key": "nicknames",
-            "value": "{"
-            team_members ":["
-            Shargaas ","
-            emoemre341 ","
-            karakorsan41 ","
-            lasennediyon "]}"
-        }
+{"info":{"match_info":{"nicknames":"{"team_members":["REMT1","Shargaas","anselxx"]}"}},"feature":"team"}
 ```
