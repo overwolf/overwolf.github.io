@@ -57,7 +57,7 @@ gep_internal | gep_internal| Local + Public version number|See [notes](#gep_inte
 Data Example:
 
 ```json
-{"info":{"gep_internal":{"version_info":"{\"local_version\":\"157.0.1\",\"public_version\":\"157.0.1\",\"is_updated\":true}"}},"feature":"gep_internal"}
+{"info":{"gep_internal":{"version_info":"{"local_version":"157.0.1","public_version":"157.0.1","is_updated":true}"}},"feature":"gep_internal"}
 ```
 
 ## `live_client_data`
@@ -158,7 +158,7 @@ Data Example:
 Data Example:
 
 ```json
-{"feature":"live_client_data","category":"live_client_data","key":"port","value":53988}
+{"info":{"live_client_data":{"port":53988}},"feature":"live_client_data"}
 ```
 
 ## `matchState`
@@ -180,7 +180,7 @@ As there is no matchOutcome event for LoL, you can detect it by using the [annou
 Data Example:
 
 ```json
-{"feature":"matchState","category":"game_info","key":"matchStarted","value":true}
+{"info":{"game_info":{"matchStarted":"true"}},"feature":"matchState"}
 ```
 
 #### *matchID* note
@@ -188,7 +188,7 @@ Data Example:
 Data Example:
 
 ```json
-{"feature":"matchState","category":"game_info","key":"matchId","value":"4346980872"}
+{"info":{"game_info":{"matchId":"2603009084"}},"feature":"game_info"}
 ```
 
 #### *queueID* note
@@ -224,8 +224,8 @@ Data example:
 Data Example:
 
 ```json
-{"feature":"match_info","category":"match_info","key":"match_paused","value":true}
-{"feature":"match_info","category":"match_info","key":"match_paused","value":false}
+{"info":{"match_info":{"match_paused":"true"}},"feature":"match_info"}
+{"info":{"match_info":{"match_paused":"false"}},"feature":"match_info"}
 ```
 
 ## `death`
@@ -264,7 +264,15 @@ Data Example:
 
 Event      | Event Data  | Fired When          | Notes              | Since GEP Ver. |
 -----------| ------------| ------------------------------- | ------------------ | --------------|
-respawn    | null        | The player’s champion respawned |                    |   140.0       | 
+respawn    | null        | The player’s champion respawned | See [notes](#respawn-notes) |   140.0       | 
+
+#### *respawn* note
+
+Data Example:
+
+```json
+{"events":[{"name":"respawn","data":"{}"}]}
+```
 
 ## `abilities`
 
@@ -337,7 +345,15 @@ Data Example:
 
 key    | Category    | Values                          | Notes                 | Since GEP Ver. |
 -------| ------------| --------------------------------| --------------------- | ------------- | 
-gold   | game_info   | numeric value – amount of gold  |                       |  70.00         |
+gold   | game_info   | numeric value – amount of gold  | See [notes](#gold-notes) |  70.00         |
+
+#### *gold* note
+
+Data Example:
+
+```json
+{"info":{"game_info":{"gold":"173"}},"feature":"gold"}
+```
 
 ## `minions`
 
@@ -376,7 +392,7 @@ accountId | summoner_info   | User’s account id                           | Se
 Data Example:
 
 ```json
-{"feature":"summoner_info","category":"summoner_info","key":"id","value":57427695}
+{"info":{"summoner_info":{"id":"21549264"}},"feature":summoner_info}
 ```
 
 #### *region* note
@@ -384,20 +400,20 @@ Data Example:
 Data Example:
 
 ```json
-{"feature":"summoner_info","category":"summoner_info","key":"region","value":"EUW"}
+{"info":{"summoner_info":{"region":"EUNE"}},"feature":summoner_info}
 ```
 
 Note that if the current client is a PBE client, instead of the region value, it returns "PBE":
 
 ```json
-{"feature":"summoner_info","category":"summoner_info","key":"region","value":"PBE"}
+{"info":{"summoner_info":{"region":"PBE"}},"feature":summoner_info}
 
 ```
 
 #### *champion* note
 
 ```json
-{"feature":"summoner_info","category":"summoner_info","key":"champion","value":"Ezreal"}
+{"info":{"summoner_info":{"champion":"Samira"}},"feature":summoner_info}
 ```
 
 #### *level* note
@@ -405,7 +421,7 @@ Note that if the current client is a PBE client, instead of the region value, it
 Data Example:
 
 ```json
-{"feature":"summoner_info","category":"summoner_info","key":"level","value":"139"}
+{"info":{"summoner_info":{"level":"39"}},"feature":summoner_info}
 ```
 
 #### *tier* note
@@ -413,7 +429,7 @@ Data Example:
 Data Example:
 
 ```json
-{"feature":"summoner_info","category":"summoner_info","key":"tier","value":"PLATINUM"}
+{"info":{"summoner_info":{"tier":"PLATINUM"}},"feature":summoner_info}
 ```
 
 #### *division* note
@@ -421,7 +437,7 @@ Data Example:
 Data Example:
 
 ```json
-{"feature":"summoner_info","category":"summoner_info","key":"division","value":"IV"}
+{"info":{"summoner_info":{"division":"IV"}},"feature":summoner_info}
 ```
 
 #### *queue* note
@@ -429,7 +445,7 @@ Data Example:
 Data Example:
 
 ```json
-{"feature":"summoner_info","category":"summoner_info","key":"queue","value":"RANKED_SOLO_5x5"}
+{"info":{"summoner_info":{"queue":"RANKED_SOLO_5x5"}},"feature":summoner_info}
 ```
 
 #### *accountId* note
@@ -437,7 +453,7 @@ Data Example:
 Data Example:
 
 ```json
-{"feature":"summoner_info","category":"summoner_info","key":"accountId","value":"209958980"}
+{"info":{"summoner_info":{"accountId":"25112115"}},"feature":summoner_info}
 ```
 
 ## `teams`
