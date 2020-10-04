@@ -36,8 +36,7 @@ Both of the APIs, [overwolf.streaming](overwolf-streaming) and [overwolf.media.r
 
 To get the best capture results according to your requirements, It is highly recommended to check which encoder is set before capturing videos in your app. You can get the list of available encoders for the current user using [overwolf.streaming.getStreamEncoders()](overwolf-streaming#getstreamencoderscallback).
 
-There are CPU/software-based encoders, like the X264, and there are GPU based encoders from Intel (QSV), NVIDIA (NVEnc) and AMD (VCE).  
-CPU encoding is focused on quality where GPU encoding is focused on speed. So CPU/software encoders like the X264 are quality wise better than GPU based encoders.  
+There are CPU/software-based encoders, like the X264, and there are GPU based encoders from Intel (QSV), NVIDIA (NVEnc) and AMD (VCE). CPU encoding is focused on quality where GPU encoding is focused on speed. So CPU/software encoders like the X264 are quality wise better than GPU based encoders.  
 
 If you can accept lower quality or higher final bitrate then GPU encoder will be faster, if your goal is highest possible quality at lowest possible bitrate then CPU based encoder will be closer to your goal at a cost of encoding time. Just remember that CPU/software encoders like X264 consume a lot of CPU and might cause some lagging videos or other issues, mostly if the capture resolution or FPS are set to high in through the OW client.
 
