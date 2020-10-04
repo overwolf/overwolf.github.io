@@ -41,7 +41,7 @@ gep_internal | gep_internal| Local + Public version number|See [notes](#gep_inte
 Data Example:
 
 ```json
-{"feature":"gep_internal","category":"gep_internal","key":"version_info","value":"{"local_version":"143.0.10","public_version":"143.0.10","is_updated":true}"}
+{"info":{"gep_internal":{"version_info":"{"local_version":"157.0.1","public_version":"157.0.1","is_updated":true}"}},"feature":"gep_internal"}
 ```
 
 ## `game_info`
@@ -110,7 +110,7 @@ While the possible values are:
 key          | Category    | Values                            | Notes                 | Since GEP Ver. |
 ------------ | ------------| --------------------------------- | --------------------- | ------------- | 
 number       | round   | Current round number</br>Example:</br>`{"round":{"number":"3"}}` |                       |   123.0 |
-score       | match   | Match score</br>Example:</br>`{"match":{"score":"{\"blue\":\"2\",\"orange\":\"1\"}"}}` |                       |   123.0  |
+score       | match   | Match score</br>Example:</br>`{"match":{"score":"{"blue":"2","orange":"1"}"}}` |                       |   123.0  |
 
 ### Events
 
