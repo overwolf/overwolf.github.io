@@ -54,7 +54,7 @@ gep_internal | gep_internal| Local + Public version number|See [notes](#gep_inte
 Data Example:
 
 ```json
-{"feature":"gep_internal","category":"gep_internal","key":"version_info","value":"{"local_version":"143.0.10","public_version":"143.0.10","is_updated":true}"}
+{"info":{"gep_internal":{"version_info":"{"local_version":"157.0.1","public_version":"157.0.1","is_updated":true}"}},"feature":"gep_internal"}
 ```
 
 ## `live_client_data`
@@ -164,25 +164,25 @@ gold                | me             | Player's spare gold in hand   | See [note
 
 Data example:
 
-`{"feature":"me","category":"me","summoner_name":"PoSeIdOnPrOx1"}`
+`{"info":{"me":{"summoner_name":"PoSeIdOnPrOx1"}},"feature":"me"}`
 
 #### *xp* notes
 
 Data example:
 
-`{"xp_level":"3", "xp_progress":"4", "xp_progress_max":"6"}`
+`{"info":{"me":{"xp":"{"level":1,"current_xp":0,"xp_max":2}"}},"feature":"me"}`
 
 #### *health* notes
 
 Data example:
 
-`{"summoner":"PoSeiDonProX1","index":"8", "health":"89", "xp":"3","localplayer":"1","rank":"0"}]`
+`{"info":{"me":{"health":"11"}},"feature":"me"}`
 
 #### *rank* notes
 
 Data example:
 
-`{"PoSeiDonProX1":{"index":7,"health":16,"xp":8,`</br>`"localplayer":true,"rank":1}`
+`{"info":{"me":{"rank":"2"}},"feature":"me"}`
 
 Meaning 1st place/8th place, etc. 
 
@@ -262,7 +262,7 @@ Data example:
 Data example:
 
 ```json
-{"info":{"match_info":{"opponent":"{\"name\":\"Eksuspuroshion\"}"}},"feature":"match_info"}
+{"info":{"match_info":{"opponent":"{"name":"Eksuspuroshion"}"}},"feature":"match_info"}
 ```
 
 #### *game_mode* notes
@@ -285,7 +285,7 @@ This also includes the star level of each champion (1, 2 and 3 stars), indicated
 Data Example:
 
 ```json
-{"local_player_damage":"{"unit_0":{"name":"TFT_Brand","damage":8161,"level":2},"unit_1":{"name":"TFT_Shyvana", "damage":2725,"level":2},"unit_2":{"name":"TFT_Gnar","damage":2271,"level":2},"unit_3":{"name":"TFT_Nidalee","damage":1033,"level":2},"unit_4":{"name":"TFT_Swain", "damage":907, "level":1},"unit_5":{"name":"TFT_Elise","damage":577,"level":2},"unit_6":{"name":"TFT_Sejuani", "damage":565,"level":2},"unit_7":{"name":"TFT_Jayce","damage":102,"level":1}}"}}
+{"info":{"match_info":{"local_player_damage":"{"unit_0":{"name":"TFT4_Warwick","damage":658,"level":1},"unit_1":{"name":"TFT4_Fiora","damage":593,"level":2},"unit_2":{"name":"TFT4_Shen","damage":545,"level":1},"unit_3":{"name":"TFT4_Jax","damage":2115,"level":3},"unit_4":{"name":"TFT4_Kalista","damage":2015,"level":2},"unit_5":{"name":"TFT4_Yasuo","damage":1558,"level":2},"unit_6":{"name":"TFT4_Irelia","damage":138,"level":2},"unit_7":{"name":"TFT4_Janna","damage":113,"level":2},"unit_8":{"name":"TFT4_Yone","damage":1074,"level":1}}"}},"feature":"match_info"}
 ```
 
 ### Events
