@@ -50,7 +50,7 @@ gep_internal | gep_internal| Local + Public version number|See [notes](#gep_inte
 Data Example:
 
 ```json
-{"info":{"gep_internal":{"version_info":"{\"local_version\":\"157.0.1\",\"public_version\":\"157.0.1\",\"is_updated\":true}"}},"feature":"gep_internal"}
+{"info":{"gep_internal":{"version_info":"{"local_version":"157.0.1","public_version":"157.0.1","is_updated":true}"}},"feature":"gep_internal"}
 ```
 
 ## me
@@ -203,7 +203,7 @@ After a match, this will return:
 #### Event data example
 
 ```json
-{"feature":"match_summary","category":"match_info","key":"match_summary","value":"{"rank":"12","teams":"20","squadKills":"5"}"}
+{"info":{"match_info":{"match_summary":"{"rank":"12","teams":"20","squadKills":"5"}"}},"feature":"match_summary"}
 ```
 
 ## damage
@@ -221,7 +221,7 @@ Note that the game does not count damage that is inflicted on Armor, only Health
 #### Event data example
 
 ```json
-{"feature":"damage","category":"me","key":"totalDamageDealt","value":668}
+{"info":{"me":{"totalDamageDealt":668}},"feature":"damage"}
 ```
 
 ### Events
