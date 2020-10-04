@@ -41,7 +41,7 @@ gep_internal | gep_internal| Local + Public version number|See [notes](#gep_inte
 Data Example:
 
 ```json
-{"feature":"gep_internal","category":"gep_internal","key":"version_info","value":"{"local_version":"143.0.10","public_version":"143.0.10","is_updated":true}"}
+{"info":{"gep_internal":{"version_info":"{"local_version":"157.0.1","public_version":"157.0.1","is_updated":true}"}},"feature":"gep_internal"}
 ```
 
 ## `me`
@@ -135,7 +135,7 @@ Data Example:
 Data example:
 
 ```json
-{"info":{"match_info":{"score":"{\"won\":9,\"lost\":2}"}},"feature":"match_info"}
+{"info":{"match_info":{"score":"{"won":9,"lost":2}"}},"feature":"match_info"}
 ```
 
 #### *round_phase* note
@@ -173,7 +173,7 @@ This data is <b>per round</b>.
 Data Example:
 
 ```json
-{"feature":"match_info","category":"match_info","key":"round_report","value":"{"damage":331,"hit":6,"headshot":0,"final_headshot":1}"}
+{"info":{"match_info":{"round_report":"{"damage":331,"hit":6,"headshot":0,"final_headshot":1}"}},"feature":"match_info"}
 ```
 
 #### *game_mode* note
@@ -230,7 +230,7 @@ match_end   | null         | Match ended.   | See [notes](#match_end-note) | 148
 Data Example:
 
 ```json
-{"feature":"match_info","event":"match_start","data":null}
+{"event":"match_start","data":null}
 ```
 
 #### *match_end* note
@@ -240,7 +240,7 @@ Please note that `match_end` does not work on custom matches nor training.
 Data Example:
 
 ```json
-{"feature":"match_info","event":"match_end","data":null}
+{"event":"match_end","data":null}
 ```
 
 ## `game_info`
@@ -259,7 +259,7 @@ state        | game_info   | The current game-state.   |See [notes](#state-note)
 Data Example:
 
 ```json
-{"feature":"game_info","category":"game_info","key":"scene","value":"Triad"}
+{"info":{"game_info":{"scene":"Triad"}},"feature":"game_info"}
 ```
 Possible Scene values:
 
@@ -277,8 +277,8 @@ Possible Scene values:
 Data Example:
 
 ```json
-{"feature":"game_info","category":"game_info","key":"state","value":"WaitingToStart"}
-{"feature":"game_info","category":"game_info","key":"state","value":"InProgress"}
+{"info":{"game_info":{"state":"WaitingToStart"}},"feature":"game_info"}
+{"info":{"game_info":{"state":"InProgress"}},"feature":"game_info"}
 ```
 
 Possible states:
@@ -304,9 +304,9 @@ headshots     | kill   | Amount of headshots performed by the local player. |See
 Data Example:
 
 ```json
-{"feature":"kill","category":"kill","key":"kills","value":1}
-{"feature":"kill","category":"kill","key":"kills","value":2}
-{"feature":"kill","category":"kill","key":"kills","value":3}
+{"info":{"kill":{"kills":1}},"feature":"kill"}
+{"info":{"kill":{"kills":2}},"feature":"kill"}
+{"info":{"kill":{"kills":3}},"feature":"kill"}
 ```
 
 #### *assist* note
@@ -322,7 +322,7 @@ Data Example:
 Data Example:
 
 ```json
-{"feature":"kill","category":"kill","key":"headshots","value":1}
+{"info":{"kill":{"headshots":1}},"feature":"kill"}
 ```
 
 ### Events
@@ -371,7 +371,7 @@ deaths       | death       | Amount of deaths by the local player. |See [notes](
 Data Example:
 
 ```json
-{"feature":"death","category":"death","key":"deaths","value":1}
+{"info":{"death":{"deaths":1}},"feature":"death"}
 ```
 
 ### Events
