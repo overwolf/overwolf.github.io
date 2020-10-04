@@ -38,7 +38,7 @@ gep_internal | gep_internal| Local + Public version number|See [notes](#gep_inte
 Data Example:
 
 ```json
-{"info":{"gep_internal":{"version_info":"{\"local_version\":\"157.0.1\",\"public_version\":\"157.0.1\",\"is_updated\":true}"}},"feature":"gep_internal"}
+{"info":{"gep_internal":{"version_info":"{"local_version":"157.0.1","public_version":"157.0.1","is_updated":true}"}},"feature":"gep_internal"}
 ```
 
 ## `match_info`
@@ -54,7 +54,7 @@ map          | match_info  | Name of selected map.     | See [notes](#map-note)|
 Data Example:
 
 ```json
-{“feature”:”match_info”,“category”:”match_info”,“key”:”map”,“value”:” woods”}
+{"info":{"match_info":{"map":"woods"}},"feature":"match_info"}
 ```
 
 ### Events
@@ -69,7 +69,7 @@ match_end   | null         | Match has ended.                   | See [notes](#m
 Data Example:
 
 ```json
-{“feature”:”match_info,“event”:”match_start”,“data”:”null”}
+{“event”:”match_start”,“data”:”null”}
 ```
 
 #### *match_end* note
@@ -77,7 +77,7 @@ Data Example:
 Data Example:
 
 ```json
-{“feature”:”match_info,“event”:”match_end”,“data”:”null”}
+{“event”:”match_end”,“data”:”null”}
 ```
 
 ## `game_info`
@@ -93,17 +93,17 @@ phase        | game_info   | Current game state.       | See [notes](#phase-note
 Data Example:
 
 ```json
-{“feature”:”game_info”, ”category”:”game_info”, ”key”:”phase”, ”value”:”scene_Login”}
+{"info":{"game_info":{"phase":"scene_Login"}},"feature":"game_info"}
 ```
 ```json
-{“feature”:”game_info”, ”category”:”game_info”, ”key”:”phase”, ”value”:”scene_ExitRaid”}
+{"info":{"game_info":{"phase":"scene_ExitRaid"}},"feature":"game_info"}
 ```
 ```json
-{“feature”:”game_info”, ”category”:”game_info”, ”key”:”phase”, ”value”:”scene_BattleUI”}
+{"info":{"game_info":{"phase":"scene_BattleUI"}},"feature":"game_info"}
 ```
 ```json
-{“feature”:”game_info”, ”category”:”game_info”, ”key”:”phase”, ”value”:”scene_SelectRaidSide”}
+{"info":{"game_info":{"phase":"scene_SelectRaidSide"}},"feature":"game_info"}
 ```
 ```json
-{“feature”:”game_info”, ”category”:”game_info”, ”key”:”phase”, ”value”:”scene_SelectLocation”}
+{"info":{"game_info":{"phase":"scene_SelectLocation"}},"feature":"game_info"}
 ```
