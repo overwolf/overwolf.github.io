@@ -178,7 +178,9 @@ daytime_changed   | Check notes |          |See [notes](#daytime_changed-note)| 
 
 #### *daytime_changed* note
 
-<b>This event is currently NOT supported.</b>
+:::warning OBSOLETE
+This event is currently NOT supported.
+:::
 
 Event Data:
 
@@ -214,7 +216,9 @@ ward_purchase_cooldown_changed   | Check notes |Fired every second where wards a
 
 #### *ward_purchase_cooldown_changed* note
 
-<b>This event is currently NOT supported.</b>
+:::warning OBSOLETE
+This event is currently NOT supported.
+:::
 
 Event Data:
 
@@ -324,7 +328,9 @@ xpm |xpm – The current Experience Per Minute value. |Whenever the XPM changes.
 
 #### *xpm* note
 
-<b>This event is currently NOT supported.</b>
+:::warning OBSOLETE
+This event is currently NOT supported.
+:::
 
 ## `gpm`
 
@@ -336,7 +342,9 @@ gpm | gpm – The current Gold Per Minute value. |Whenever the GPM changes. |   
 
 #### *gpm* note
 
-<b>This event is currently NOT supported.</b>
+:::warning OBSOLETE
+This event is currently NOT supported.
+:::
 
 ## `gold`
 
@@ -348,7 +356,9 @@ gold | Check notes |Whenever gold changes. 	|See [notes](#gold-notes)|     77.3 
 
 #### *gold* note
 
-<b>This event is currently NOT supported.</b>
+:::warning OBSOLETE
+This event is currently NOT supported.
+:::
 
 * <b>gold</b> – Total current gold.
 * <b>gold_reliable</b> – Reliable gold part.
@@ -409,7 +419,9 @@ hero_boughtback |<b>buyback_cooldown</b> – The cooldown remaining for buyback 
 
 #### *hero_boughtback* note
 
-<b>This event is currently NOT supported.</b>
+:::warning OBSOLETE
+This event is currently NOT supported.
+:::
 
 ## `hero_health_mana_info`
 
@@ -725,6 +737,10 @@ key               | Category    | Values                    | Notes             
 plugin_error   | error  |This info update fires when the plugin is not initializing for some reason.|See [notes](#plugin_error-note)|  133.8   |
 
 #### *plugin_error* note
+
+:::warning OBSOLETE
+This event is currently NOT supported.
+:::
 
 Data Example:
 
