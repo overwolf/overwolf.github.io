@@ -445,7 +445,6 @@ This means no more if (!result || !result.status ...) checks. Instead, this shou
     * match_outcome
 * New doc about our [Game Events Simulator app](../topics/using-events-simulator).
 * New [sample app](../start/sample-app-overview) with enhanced UI.
-* New game events [past Incidents](../status/past-incidents) page.
 * New manifest flag: [minimum-gs-version](manifest-json#meta-minimum-gs) - Allows extensions (apps) to set a minimum game summary app version in the manifest, this works similarly to minimum-overwolf-version and relevant only for apps thay using the game summary pannel.
 * New manifest flag: [service_providers](manifest-json#service_providers) - you can use this flag to set different parameters that are relevant for a service provider app. Use the new API function [overwolf.extensions.getServiceConsumers()](overwolf-extensions#getserviceconsumerscallback) to read the flag value.
 * New API function: [overwolf.utils.openStore()](overwolf-utils#openstoreparam) - Opens the requested app’s profile/login/subscription page in the Overwolf Appstore.
