@@ -193,7 +193,9 @@ Data Example:
 
 #### *queueID* note
 
-<b>This event is currently broken.</b>
+:::warning OBSOLETE
+This event is currently NOT supported.
+:::
 
 ### Events
 
