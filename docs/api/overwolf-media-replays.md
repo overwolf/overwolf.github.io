@@ -630,4 +630,4 @@ The app "short name" is defined in the [dock_button_title](manifest-json#meta-do
 Option    | Description  |
 --------- | -------------|
 Video     |              |
-gif       |              |
+gif       | (Deprecated) |
