@@ -50,7 +50,7 @@ gep_internal | gep_internal| Local + Public version number|See [notes](#gep_inte
 Data Example:
 
 ```json
-{"feature":"gep_internal","category":"gep_internal","key":"version_info","value":"{"local_version":"143.0.10","public_version":"143.0.10","is_updated":true}"}
+{"info":{"gep_internal":{"version_info":"{"local_version":"157.0.1","public_version":"157.0.1","is_updated":true}"}},"feature":"gep_internal"}
 ```
 
 ## `kill`
@@ -287,7 +287,7 @@ This feature provides the entire list of players (~99 players).
 Each player that joins the game (during the “airfield” phase) will be reported in the following way:
 
 ```json
-{"feature":"roster","category":"match_info","key":"roster_0","value":"{"player":"Dr4ex","kills":"0","out":false}"}
+{"info":{"match_info":{"roster_0":"{"player":"Dr4ex","kills":"0","out":false}"}},"feature":"roster"}
 ```
 
 As you can see, this object includes:

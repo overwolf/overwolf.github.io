@@ -273,7 +273,7 @@ Data Example:
 ```json
 {"info":{"match_info":{"match_type":"GT_CASUAL"}},"feature":"match"}
 
-{"feature":"match","category":"match_info","key":"match_type","value":"GT_BATTLEGROUNDS"}
+{"info":{"match_info":{"match_type":"GT_BATTLEGROUNDS"}},"feature":"match"}
 ```
 
 #### *battlegrounds_rating* note
