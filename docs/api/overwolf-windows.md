@@ -67,7 +67,6 @@ Please make sure to read our guide on [how to use Overwolf windows](../topics/us
 
 ## Types Reference
 
-* [overwolf.windows.ODKWindow](#odkwindow-object) Object
 * [overwolf.windows.WindowProperties](#windowproperties-object) Object
 * [overwolf.windows.RelativeTo](#relativeto-object) Object
 * [overwolf.windows.SetWindowPositionProperties](#setwindowpositionproperties-object) Object
@@ -79,6 +78,9 @@ Please make sure to read our guide on [how to use Overwolf windows](../topics/us
 * [overwolf.windows.enums.FlashBehavior](#flashbehavior-enum) Enum
 * [overwolf.windows.onScreenPropertyChangedEvent](#onscreenpropertychangedevent-object) Object
 * [overwolf.windows.WindowStateChangedEvent](#windowstatechangedevent-object) Object
+* [overwolf.windows.WindowResult](#windowresult-object) Object
+* [overwolf.windows.WindowInfo](#windowinfo-object) Object
+* [overwolf.windows.enums.WindowStateEx](#windowstateex-enum) Enum
 
 ## getMainWindow()
 #### Version added: 0.113
@@ -99,35 +101,10 @@ Read more in the ["Communication between windows"](../topics/communicating-betwe
 
 > Calls the given callback function with the current window object as a parameter.
 
-Parameter | Type                       | Description                                                                            |
---------- | ---------------------------| -------------------------------------------------------------------------------------- |
-callback  | function                   | A callback function which will be called with the current window object as a parameter |
+Parameter | Type                                                     | Description             |
+--------- | ---------------------------------------------------------| ------------------------|
+callback  | [(Result: WindowResult)](#windowresult-object) => void   | A callback function which will be called with the current window object as a parameter |
 
-#### Callback argument: Success
-
-A callback function which will be called with the status of the request and a [ODKWindow](#odkwindow-object) Object.
-* The callback param "stateEx" returns one of these states:  
-  [closed | minimized | hidden | normal | maximized].
-* Returns the width/height of the window without calculating the DPI.
-
-```json
-{
-    "success": true,
-    "status": "success", //for backward compatibility
-    "window": {
-        "id": "Window_Extension_hffhbjnafafjnehejohpkfhjdenpifhihebpkhni",
-        "name": "index",
-        "width": 600,
-        "height": 600,
-        "top": 153,
-        "left": 417,
-        "monitorId": "\\.\DISPLAY4",
-        "isVisible": true,
-        "state": "Minimized", //deprecated and kept only for backward compatibility
-        "stateEx": "hidden", //always use this param to get the state of the window
-        "Parent": null
-    }
-```
 
 ## obtainDeclaredWindow(windowName, callback)
 #### Version added: 0.78
@@ -137,31 +114,8 @@ A callback function which will be called with the status of the request and a [O
 Parameter | Type                       | Description                                                                            |
 --------- | ---------------------------| -------------------------------------------------------------------------------------- |
 windowName| string                     | The name of the window that was declared in the data.windows section in the manifest   |
-callback  | function                   | A callback function which will be called with the current window object as a parameter |
+callback  | [(Result: WindowResult)](#windowresult-object) => void | A callback function which will be called with the current window object as a parameter |
 
-#### Callback argument: Success
-
-A callback function which will be called with the status of the request and a [ODKWindow](#odkwindow-object) Object.
-* The callback param "stateEx" returns one of these states:  
-  [closed | minimized | hidden | normal | maximized].
-
-```json
-{
-    "success": true,
-    "status": "success", //for backward compatibility
-    "window": {
-        "id": "Window_Extension_hffhbjnafafjnehejohpkfhjdenpifhihebpkhni",
-        "name": "index",
-        "width": 600,
-        "height": 600,
-        "top": 153,
-        "left": 417,
-        "isVisible": true,
-        "state": "Minimized", //deprecated and kept only for backward compatibility
-        "stateEx": "hidden", //always use this param to get the state of the window
-        "Parent": null
-    }
-```
 
 ## obtainDeclaredWindow(windowName, overrideSetting, callback)
 #### Version added: 0.78
@@ -172,7 +126,7 @@ Parameter       | Type                                                | Descript
 --------------- | ----------------------------------------------------| -------------------------------------------------------------------------------------- |
 windowName      | string                                              | The name of the window that was declared in the data.windows section in the manifest   |
 overrideSetting	| [WindowProperties](#windowproperties-object) Object | Override manifest settings                                                             |
-callback        | function                                            | A callback function which will be called with the current window object as a parameter |
+callback        | [(Result: WindowResult)](#windowresult-object) => void | A callback function which will be called with the current window object as a parameter |
 
 ## obtainDeclaredWindow(windowName, useDefaultSizeAndLocation, callback)
 #### Version added: 0.136
@@ -183,36 +137,12 @@ Parameter                 | Type                                                
 ------------------------- | ----------------------------------------------------| -------------------------------------------------------------------------------------- |
 windowName                | string                                              | The name of the window that was declared in the data.windows section in the manifest   |
 useDefaultSizeAndLocation	| [DefaultSizeAndLocation](#defaultsizeandlocation-object) Object | Enable the manifest size and position settings                            |
-callback                  | function                                            | A callback function which will be called with the current window object as a parameter |
+callback                  | [(Result: WindowResult)](#windowresult-object) => void | A callback function which will be called with the current window object as a parameter |
 
 ### Usage example
 
 ```js
 overwolf.windows.obtainDeclaredWindow("main", {useDefaultSizeAndLocation: true}, console.log)
-```
-
-#### Callback argument: Success
-
-A callback function which will be called with the status of the request and a [ODKWindow](#odkwindow-object) Object.
-* The callback param "stateEx" returns one of these states:  
-  [closed | minimized | hidden | normal | maximized].
-
-```json
-{
-    "success": true,
-    "status": "success", //for backward compatibility
-    "window": {
-        "id": "Window_Extension_hffhbjnafafjnehejohpkfhjdenpifhihebpkhni",
-        "name": "index",
-        "width": 600,
-        "height": 600,
-        "top": 153,
-        "left": 417,
-        "isVisible": true,
-        "state": "Minimized", //deprecated and kept only for backward compatibility
-        "stateEx": "hidden", //always use this param to get the state of the window
-        "Parent": null
-    }
 ```
 
 ## dragMove(windowId, callback)
@@ -1007,37 +937,6 @@ overwolf.windows.onMessageReceived.addListener((message)=>{
 * Currently, only the relevant window gets this event - so your background page or other windows doesn't. 
 * From OW v0.156 we are going to fix it: The event is being fired for all the declared windows (background,in-game,desktop, etc). If your app has multiple windows listening to this event - you also need to test the window name/id arguments that are passed to the event to see if it is relevant for your window.
 
-## ODKWindow Object
-#### Version added: 0.78
-
-> An object that holds information about a requested window.
-
-Parameter | Type   | Description                                                          |
---------- | -------| -------------------------------------------------------------------- |
-id        | string | Gets the window ID                                                   |
-name      | string | Gets the window name as declared in the manifest                     |
-width     | int    | Gets the window width in pixels                                      |
-height    | int    | Gets the window height in pixels                                     |
-top       | int    | Gets the window Y coordinate in pixels from the top of the screen    |
-left      | int    | Gets the window X coordinate in pixels from the top of the screen    |
-isVisible | book   | Indicates if the window is currently visible or minimized            |
-parent    | string | The parent window id                                                 |
-
-#### Object Data Example
-
-```json
-"window": {
-    "id": "Window_Extension_hffhbjnafafjnehejohpkfhjdenpifhihebpkhni",
-    "name": "index",
-    "width": 600,
-    "height": 600,
-    "top": 153,
-    "left": 417,
-    "isVisible": true,
-    "Parent": null
-}
-```
-
 ## WindowProperties Object
 #### Version added: 0.118
 
@@ -1231,3 +1130,71 @@ auto_dpi_resize | boolean       | relevant only for native windows. Overwrite th
   "auto_dpi_resize":true
 }
 ```
+
+## WindowResult Object
+#### Version added: 0.149
+
+> Container for the currrent window object.
+
+Parameter       | Type          | Description             |
+----------------| --------------| ----------------------- |
+window          | [WindowInfo](#windowinfo-object) object     |             |
+
+
+```json
+{
+  "success": true,
+  "window": { ... }
+}
+```
+
+## WindowInfo Object
+#### Version added: 0.149
+
+> The current window object.
+
+Parameter       | Type          | Description             |
+----------------| --------------| ----------------------- |
+id              | string        |                         |
+name            | string        |                         |
+width           | number        |                         | 
+height          | number        |                         | 
+top             | number        |                         | 
+left            | number        |                         | 
+monitorId       | string        |                         | 
+isVisible       | boolean       |                         | 
+state           | string        | deprecated and kept only for backward compatibility  |
+stateEx         | [WindowStateEx](#windowstateex-enum) enum | always use this param to get the state of the window | 
+Parent          | string        | The parent window id    |
+
+
+```json
+{
+    "success": true,
+    "window": {
+        "id": "Window_Extension_hffhbjnafafjnehejohpkfhjdenpifhihebpkhni",
+        "name": "index",
+        "width": 600,
+        "height": 600,
+        "top": 153,
+        "left": 417,
+        "monitorId": "\\.\DISPLAY4",
+        "isVisible": true,
+        "state": "Minimized", //deprecated 
+        "stateEx": "hidden", //the state of the window
+        "Parent": null
+    }
+```
+
+## WindowStateEx enum
+#### Version added: 0.149
+
+> Possible windows states.
+
+Option      |  Description  |
+------------| --------------|
+closed      |               |
+minimized   |               |
+hidden      |               |
+normal      |               |
+maximized   |               |
