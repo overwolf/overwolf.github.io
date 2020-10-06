@@ -21,6 +21,10 @@ Please read the [overwolf.games.events](overwolf-games-events) documentation pag
 * [game_info](#game_info)
 * [match_info](#match_info)
 
+:::important
+In WoT, due to technical reasons, Overwolf API starts to work only if the game was launched before, at least one time (because only then, we identify the location of the game installation). So, if you identify an error when you try to register to the game events (and in particular - when you get the “failed after 11 tries” error when calling [setRequiredFeatures](overwolf-games-launchers-events#setrequiredfeatureslauncherclassid-features-callback) ) - on that case, notify the user that she has to relaunch the game. Not ideal - but working. And cover those cases.
+:::
+
 ## Game events status
 
 It's highly recommended to communicate errors and warnings to your app users. Check game event status [here](../status/all) or easily check game events straight from your app [using our API](../topics/howto-check-events-status-from-app).
