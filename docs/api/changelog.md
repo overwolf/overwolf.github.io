@@ -56,6 +56,9 @@ Note that the work on the documentation for this version is still in-progress.
 * [Fortnite](overwolf-games-events-fortnite)
   * New update under:
     * me
+* [World of Warcraft](overwolf-games-events-wow)
+  * New update under:
+    * group_applicants
 
     
 ## Version 0.155 (Sep. 2020)
