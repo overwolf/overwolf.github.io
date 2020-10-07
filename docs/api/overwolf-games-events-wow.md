@@ -18,7 +18,24 @@ If you have further requests for events that you require please contact us at de
 
 ## Available Features
 
+* [gep_internal](#gep_internal)
 * [game_info](#game_info)
+
+## `gep_internal`
+
+### Info Updates
+
+key          | Category    | Values                    | Notes                 | Since GEP Ver. |
+------------ | ------------| ------------------------- | --------------------- | ------------- | 
+gep_internal | gep_internal| Local + Public version number|See [notes](#gep_internal-note)|   143.0       |
+
+#### *gep_internal* note
+
+Data Example:
+
+```json
+{"info":{"gep_internal":{"version_info":"{"local_version":"157.0.1","public_version":"157.0.1","is_updated":true}"}},"feature":"gep_internal"}
+```
 
 ## `game_info`
 
@@ -26,7 +43,7 @@ If you have further requests for events that you require please contact us at de
 
 key            | Category         | Values                               | Notes                            | Since GEP Ver. |
 -------------- | -----------------| ------------------------------------ | -------------------------------- | -------------  | 
-group_applicants| game_info | The amount of applicants and information regarding their item score and role. | See [notes](#group_applicants-note)   | 146.0.7 |
+group_applicants| game_info | The amount of applicants and information regarding their item score, role, class and name of their server. | See [notes](#group_applicants-note)   | 146.0.7 |
 
 #### *group_applicants* note
 
@@ -36,10 +53,10 @@ Data Example:
 {
 	"info": {
 		"game_info": {
-			"group_applicants": "{"Nocdem":{"player_name":"Nocdem","applicant_id":4,"application_status":1,"level":120,"item_level":468,"honor_level":1,"role":8}
-      ,"Zvirblis":{"player_name":"Zvirblis","applicant_id":3,"application_status":1,"level":120,"item_level":468,"honor_level":22,"role":8}
-      ,"Valliadri":{"player_name":"Valliadri","applicant_id":2,"application_status":1,"level":120,"item_level":472,"honor_level":27,"role":2}
-      ,"Naity":{"player_name":"Naity","applicant_id":2,"application_status":1,"level":120,"item_level":469,"honor_level":13,"role":8}}"
+			"group_applicants": "{"Shivanpally":{"player_name" : "Shivanpally", "server_name" : "Draenor", "applicant_id" : "1", "application_status" : "1", "level" 			 : "120", "item_level" : "477", "honor_level" : "6", "role" : "8","class" : "2"},
+			"Mêêrès":{"player_name" : "Mêêrès", "server_name" : "TarrenMill", "applicant_id" : "3", "application_status" : "1", "level" : "120", "item_level" 
+			: "478", "honor_level" : "0", "role" : "12","class" : "11"},
+			"Kayleb":{"player_name" : "Kayleb", "server_name" : "Blackhand", "applicant_id" : "2", "application_status" : "1", "level" : "120", "item_level" : "480", 			  "honor_level" : "214", "role" : "4","class" : "7"}}"
 		}
 	},
 	"feature": "game_info"
@@ -65,3 +82,18 @@ Possible values for `role`:
 * 2- tank
 * 4- healer
 * 8- damage
+
+Possible values for `class`:
+
+* Warrior = 1
+* Paladin = 2
+* Hunter = 3
+* Rogue = 4
+* Priest = 5
+* Death Knight = 6
+* Shaman = 7
+* Mage = 8
+* Warlock = 9
+* Monk = 10
+* Druid = 11
+* Demon Hunter = 12
