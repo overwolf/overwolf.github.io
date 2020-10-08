@@ -81,6 +81,9 @@ server       | match_info  | The full id of the server. |See [notes](#server-not
 general_stats| match_info  | All of the current general statistics. |See [notes](#general_stats-note)|   153.0       |
 item_stats   | match_info  | All of the current item statistics. |See [notes](#item_stats-note)|   153.0       |
 mobs_stats   | match_info  | All of the current mob statistics. |See [notes](#mobs_stats-note)|   153.0       |
+location     | match_info  | Current player's location in the game. |See [notes](#location-note)|   157.0       |
+facing       | match_info  | The current direction the player is facing. |See [notes](#facing-note)|   157.0       |
+
 
 ### Events
 
@@ -147,6 +150,25 @@ Data Example:
 
 ```json
 {"info":{"match_info":{"mobs_stats":"[{"name":"cow","value":"1","stat_type":"stat_type.minecraft.killed"}]"}},"feature":"match_info"}
+```
+
+#### *location* note
+
+Data Example:
+
+```json
+{"info":{"match_info":{"location":"{"x":-289.403,"y":60.9237,"z":474.063}"}},"feature":"match_info"}
+{"info":{"match_info":{"location":"{"x":-289.669,"y":60.4237,"z":475.049}"}},"feature":"match_info"}
+{"info":{"match_info":{"location":"{"x":-290.248,"y":59.9237,"z":476.861}"}},"feature":"match_info"}
+{"info":{"match_info":{"location":"{"x":-290.754,"y":59.4237,"z":478.788}"}},"feature":"match_info"}
+```
+
+#### *facing* note
+
+Data Example:
+
+```json
+{"info":{"match_info":{"facing":"{"x":146.851,"y":1.34979}"}},"feature":"match_info"}
 ```
 
 #### *match_start* note
