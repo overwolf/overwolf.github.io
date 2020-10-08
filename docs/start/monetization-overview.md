@@ -63,7 +63,7 @@ To get a more general idea, we follow the industry Standards, Guidelines & Best 
 * Video ads aim for high completion rates to monetize well. Therefore, place video ads only in windows that have a good average open time - 30s minimum is recommended to fully view standard video ads. 
 * Advertisers want to engage with the user and use their advertising budgets smartly to get maximum value. One of the ways to measure that is completion rate, which represents the number of users that watched 100% of the video ad out of the total number of users who saw the ad showing up. A good, high Completion rate is 70% or higher.
 * While developing your app, put yourself in the user’s shoes. As the developer, you should find the best timing to present ads. Most games have “Dead” moments where nothing happens (Client Loading, Match Loading, post-game victory screen, etc.) so the ad won’t interrupt gameplay.
-* Ads cannot be placed on the following: signup/login windows, error windows, pop-up windows, auto-closed windows and empty windows
+* Ads cannot be placed on the following: signup/login windows, error windows, pop-up windows that only show an ad, auto-closed windows and empty windows
 
 ### Ad size
 
