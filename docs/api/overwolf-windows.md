@@ -81,6 +81,9 @@ Please make sure to read our guide on [how to use Overwolf windows](../topics/us
 * [overwolf.windows.WindowResult](#windowresult-object) Object
 * [overwolf.windows.WindowInfo](#windowinfo-object) Object
 * [overwolf.windows.enums.WindowStateEx](#windowstateex-enum) Enum
+* [overwolf.windows.DragMovedResult](#dragmovedresult-object) Object
+* [overwolf.windows.DragResizeResult](#dragresizeresult-object) Object
+* [overwolf.windows.WindowIdResult](#windowidresult-object) Object
 
 ## getMainWindow()
 #### Version added: 0.113
@@ -139,7 +142,7 @@ windowName                | string                                              
 useDefaultSizeAndLocation	| [DefaultSizeAndLocation](#defaultsizeandlocation-object) Object | Enable the manifest size and position settings                            |
 callback                  | [(Result: WindowResult)](#windowresult-object) => void | A callback function which will be called with the current window object as a parameter |
 
-### Usage example
+#### Usage example
 
 ```js
 overwolf.windows.obtainDeclaredWindow("main", {useDefaultSizeAndLocation: true}, console.log)
@@ -154,21 +157,12 @@ Parameter            | Type        | Description                                
 -------------------- | ------------| ------------------------------------------------------|
 windowId	           | string      | The id or name of the window to drag                  |
 callback (Optional)  | function    | A callback which is called when the drag is completed |
+callback (Optional)  | [(Result: DragMovedResult)](#dragmovedresult-object) => void | A callback which is called when the drag is completed  |
 
 :::note
 When you dragMove a **native window** between monitors with different DPIs, the window will automatically resize according to the new DPI.
 :::
 
-#### Callback argument: Success
-
-```json
-{
-    "success": true,
-    "status": "success", //for backward compatibility
-    "horizontalChange": -51,
-    "verticalChange": 6
-}
-```
 
 ## dragResize(windowId, edge)
 #### Version added: 0.100
@@ -201,7 +195,7 @@ Parameter            | Type                                         | Descriptio
 windowId	           | string                                       | The id or name of the window to resize                                         |
 edge                 | [WindowDragEdge](#windowdragedge-enum) Enum  | The edge or corner from which to resize the window                             |
 rect    	           | [ODKRect](#odkrect-object) Object            | The real content of the window (for the ingame drawing resizing white area)    |
-callback             | function                                     | Will be called when the resizing process is completed                          |
+callback             | [(Result: DragResizeResult)](#dragresizeresult-object) => void | A callback which is called when the resizing process is completed  |
 
 ## changeSize(windowId, width, height, callback)
 #### Version added: 0.78
@@ -215,16 +209,8 @@ Parameter           | Type       | Description                                  
 windowId	          | string     | The id or name of the window to resize                                                       |
 width	              | int        | The new width to resize the window to                                                        |
 height	    	      | int        | The new height to resize the window to                                                       |
-callback (Optional) | function   | A callback which is called when the size change is completed with the status of the request  |
+callback (Optional) | (Result) => void | Reports success or failure when the size change is completed.                          |
 
-#### Callback argument: Success
-
-```json
-{ 
-  "success": true,
-  "status": "success" //for backward compatibility 
-}
-```
 
 ## changeSize(changeSizeParams, callback)
 #### Version added: 0.149
@@ -239,7 +225,7 @@ callback (Optional) | function   | A callback which is called when the size chan
 Parameter               | Type       | Description                                                                                  |
 ------------------------| -----------| ---------------------------------------------------------------------------------------------|
 ChangeWindowSizeParams  | [ChangeWindowSizeParams](#changewindowsizeparams-object) Object | Container for the window settings        |
-callback                | function   | A callback which is called when the size change is completed with the status of the request  |
+callback (Optional) | (Result) => void | Reports success or failure when the size change is completed.                          |
 
 #### Usage example
 
@@ -255,16 +241,6 @@ overwolf.windows.changeSize(sizeSettings ,console.log);
 
 ```
 
-#### Callback argument: Success
-
-```json
-{
-  "success": true,
-  "status": "success" //for backward compatibility 
-
-}
-```
-
 ## changePosition(windowId, left, top, callback)
 #### Version added: 0.78
 
@@ -277,16 +253,7 @@ Parameter           | Type       | Description                                  
 windowId	          | string     |The id or name of the window for which to change the position                                   |
 left		            | int        | The new window position on the X axis in pixels from the left                                  |
 top		    	        | int        | The new window position on the Y axis in pixels from the top                                   |
-callback (Optional) | function   |A callback which is called when the position change is completed with the status of the request |
-
-#### Callback argument: Success
-
-```json
-{ 
- "success": true,
- "status": "success" //for backward compatibility  
-}
-```
+callback (Optional) | (Result) => void | Reports success or failure when the position change is completed.                          |
 
 ## close(windowId, callback)
 #### Version added: 0.78
@@ -296,15 +263,8 @@ callback (Optional) | function   |A callback which is called when the position c
 Parameter           | Type       | Description                                                                                    |
 --------------------| -----------| -----------------------------------------------------------------------------------------------|
 windowId	          | string     |The id or name of the window for which to change the position                                   |
-callback (Optional) | function   | Called after the window is closed                                                              |
+callback (Optional) | [(Result: WindowIdResult)](#windowidresult-object) => void   | Called after the window is closed          |
 
-```json
-{
-  "success": true,
-  "status": "success", //for backward compatibility
-  "window_id": "Window_Extension_mhlpbbigoglahfnkpekoamfknlnaneebgodenaam"
-}
-```
 
 ## minimize(windowId, callback)
 #### Version added: 0.78
@@ -1198,3 +1158,60 @@ minimized   |               |
 hidden      |               |
 normal      |               |
 maximized   |               |
+
+## DragMovedResult Object
+#### Version added: 0.149
+
+> Container for the horizontal and vertical changes after an OW app window dragged or moved.
+
+Parameter         | Type          | Description             |
+------------------| --------------| ----------------------- |
+horizontalChange  | number        |                         | 
+verticalChange    | number        |                         | 
+
+
+```json
+{
+    "success": true,
+    "horizontalChange": -51,
+    "verticalChange": 6
+}
+```
+
+## DragResizeResult Object
+#### Version added: 0.149
+
+> Container for the width and height changes after an OW app window resized.
+
+Parameter         | Type          | Description             |
+------------------| --------------| ----------------------- |
+id                | string        |                         | 
+width             | number        |                         | 
+height            | number        |                         | 
+
+
+```json
+{
+    "success": true,
+    "id": "Window_Extension_nhmkaollkcmjiecdnnjmgfifjgkfegkljnjjbipp",
+    "width": 600,
+    "height": 800
+}
+```
+
+## WindowIdResult Object
+#### Version added: 0.149
+
+> Container for the width and height changes after an OW app window resized.
+
+Parameter         | Type          | Description             |
+------------------| --------------| ----------------------- |
+window_id         | string        |                         | 
+
+
+```json
+{
+    "success": true,
+    "window_id": "Window_Extension_nhmkaollkcmjiecdnnjmgfifjgkfegkljnjjbipp"
+}
+```
