@@ -13,7 +13,7 @@
 			"Monetize with Subs":
 			["start/subscriptions-overview", "start/subscriptions-flow", "start/subscriptions-integration", "start/subscriptions-request-form"],
 			"Maintain Your App":
-			["start/submit-an-app-update", "start/update-your-app-status", "start/get-professional-help"]
+			["start/submit-an-app-update", "start/update-your-app-status"]
 	},
     "docs": {
 		"Best Practices":
