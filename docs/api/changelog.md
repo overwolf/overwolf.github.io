@@ -59,7 +59,9 @@ Note that the work on the documentation for this version is still in-progress.
 * [World of Warcraft](overwolf-games-events-wow)
   * New update under:
     * group_applicants
-
+* [Minecraft](overwolf-games-events-minecraft)
+  * New update under:
+    * match_info
     
 ## Version 0.155 (Sep. 2020)
 
