@@ -960,7 +960,17 @@ Defines the configuration for the NVIDIA NVENC encoder.
 |-------------------| -----------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------| ----- |
 | preset            |  [overwolf.streaming.enums.StreamEncoderPreset_NVIDIA](#overwolfstreamingenumsstreamencoderpreset_nvidia-enum) enum  |  Defines which preset the encoder should use                    | 0.83  |
 | rate_control      |  [overwolf.streaming.enums.StreamEncoderRateControl_NVIDIA](#overwolfstreamingenumsstreamencoderratecontrol_nvidia-enum) enum  |  Defines the rate control mode the encoder should use | 0.83  |
-| keyframe_interval |  int                                                                                                |  Defines the time, in seconds, after which to send a keyframe | 0.83  |
+| keyframe_interval |  int                                                                                                |  Defines the time, in seconds, after which to send a keyframe. See [notes](#keyframe_interval-notes). | 0.83  |
+
+#### keyframe_interval notes
+
+Keyframes are points in the video where the entire frame is sent instead of just the differences from the previous frame.  
+
+* Having a keyframe interval of 2 means that it takes at most 2 seconds for the viewers to catch up to a point where they can properly display the feed. 
+* Streaming services would allow it to be 1, but setting it to 0 usually ends up making it somewhere around 8.5s between keyframes.
+* 2 offers a better balance between picture quality and viewer join speed.
+
+Increasing the keyframe_interval of the encoder configuration may help the performance but decrease in quality or inability to seek a specific resolution (if you want to slice the video, for example).
 
 ## overwolf.streaming.enums.StreamEncoderPreset_NVIDIA enum
 
@@ -1007,7 +1017,7 @@ Defines the configuration for an x264 encoder.
 |-------------------| -----------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------| ----- |
 | preset            |  [overwolf.streaming.enums.StreamEncoderPreset_x264](#overwolfstreamingenumsstreamencoderratecontrol_x264-enum-enum) enum  |  Defines which preset the encoder should use                    | 0.83  |
 | rate_control      |  [overwolf.streaming.enums.StreamEncoderRateControl_x264](#overwolfstreamingenumsstreamencoderratecontrol_x264-enum) enum  |  Defines the rate control mode the encoder should use | 0.83  |
-| keyframe_interval |  int                                                                                                |  Defines the time, in seconds, after which to send a keyframe | 0.83  |
+| keyframe_interval |  int                                                                                                |  Defines the time, in seconds, after which to send a keyframe. See [notes](#keyframe_interval-notes). | 0.83  |
 
 ## overwolf.streaming.enums.StreamEncoderPreset_x264 enum
 
@@ -1048,7 +1058,7 @@ Defines the configuration for an x264 encoder.
 |-------------------| -----------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------| ----- |
 | preset            |  [overwolf.streaming.enums.StreamEncoderPreset_AMD_AMF](#overwolfstreamingenumsstreamencoderpreset_amd_amf-enum) enum  |  Defines which preset the encoder should use                    | 0.84  |
 | rate_control      |  [overwolf.streaming.enums.StreamEncoderRateControl_AMD_AMF](#overwolfstreamingenumsstreamencoderratecontrol_amd_amf-enum) enum  |  Defines the rate control mode the encoder should use | 0.84  |
-| keyframe_interval |  int                                                                                                |  Defines the time, in seconds, after which to send a keyframe | 0.83  |
+| keyframe_interval |  int                                                                                                |  Defines the time, in seconds, after which to send a keyframe. See [notes](#keyframe_interval-notes). | 0.83  |
 
 ## overwolf.streaming.enums.StreamEncoderPreset_AMD_AMF enum
 
