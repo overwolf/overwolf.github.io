@@ -30,7 +30,8 @@ Note that the work on the documentation for this version is still in-progress.
 
 #### Game events
 
-* We're expanding our library with typedef files for the different in-game events, starting with Valorant info updates (since I personally love it and it doesn't say anywhere that I'm not allowed to have fun at work).
+* We're expanding our library with typedef files for the different in-game events, starting with Valorant info updates.  
+  You can find our def file in [this repo](https://github.com/overwolf/types), or as an [npm package](https://www.npmjs.com/package/@overwolf/types).
 
 ## Version 0.156 (Oct. 2020)
 
