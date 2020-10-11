@@ -882,7 +882,7 @@ Stream video options.
 | fps   | int | Defines the Frames Per Second for the stream | 0.78  |
 | width | int | Defines the stream width in pixels  | 0.78  |
 | height| int | Defines the stream height in pixels | 0.78  |
-| max_kbps| int | Defines the maximum KB per second of the stream | 0.78  |
+| max_kbps| int | Defines the maximum KB per second of the stream. See [notes](#max_kbps-notes). | 0.78  |
 | buffer_length| int | Defines the length of the buffer to be recorded in millisenconds (max 40 seconds) | 0.83  |
 | encoder|  [StreamingVideoEncoderSettings](#streamingvideoencodersettings-object) Object |Defines the video encoder settings to use | 0.83  |
 | capture_desktop|  [StreamDesktopCaptureOptions](#streamdesktopcaptureoptions-object) Object |Defines the desktop streaming options.</br>Permissions required: DesktopStreaming | 0.83  |
@@ -918,6 +918,13 @@ The app "short name" is defined in the [dock_button_title](manifest-json#meta-do
 * When the recorder encoded the key frame with presentation time stamp thats is equal to grater than split() timestamps.
 * When |max_file_size_bytes| is set, this flag is ignored.  
 * [onVideoFileSplited](#onvideofilesplited) event will be fired.
+
+#### max_kbps notes
+
+increase the **max_kbps** of the encoder configuration may help the performance, but increase the video file size.
+
+* For video recording, we recommend using a value of higher than 8000.
+* For streaming, we recommend using a value smaller than 3000.
 
 ## StreamingVideoEncoderSettings Object
 

@@ -593,7 +593,7 @@ Replay video options.
 | fps   | int | Defines the Frames Per Second for the stream | 0.78  |
 | width | int | Defines the stream width in pixels  | 0.78  |
 | height| int | Defines the stream height in pixels | 0.78  |
-| max_kbps| int | Defines the maximum KB per second of the stream | 0.78  |
+| max_kbps| int | Defines the maximum KB per second of the stream. See [notes](overwolf-streaming#max_kbps-notes). | 0.78  |
 | buffer_length| int | Defines the length of the buffer to be recorded in millisenconds (max 40 seconds) | 0.83  |
 | encoder|  [StreamingVideoEncoderSettings](overwolf-streaming#streamingvideoencodersettings-object) Object |Defines the video encoder settings to use | 0.83  |
 | capture_desktop|  [StreamDesktopCaptureOptions](overwolf-streaming#streamdesktopcaptureoptions-object) Object |Defines the desktop streaming options.</br>Permissions required: DesktopStreaming | 0.83  |

@@ -106,24 +106,33 @@ Basic usage flow:
 1. **Register to relevant capture events for your app.**
    * The [available events](../api/overwolf-media-replays#events-reference) are: onCaptureError, onCaptureStopped, onCaptureWarning, onReplayServicesStarted.
 
-2. **Call [overwolf.media.replays.turnOn()](../api/overwolf-media-replays#turnonparameters-callback)** with the auto-highlights feature disabled:
+2. **Choose the right video encoder**  
+   * Get the available stream encoders: Call [getStreamEncoders()](../api/overwolf-streaming#getstreamencoderscallback).  
+     (You can also call [getAudioDevices()](../api/overwolf-streaming#getaudiodevicescallback) and choose a specific audio device).
+   * This returns a list of all possible encoders and audio devices – you can then use this list to let users select their preferred encoder/device.
+   * In terms of encoder priorities – we recommend: NVIDIA > AMD > INTEL > x264.
+   * As long as the "enabled" encoder's property is set to true, you can offer users to use this encoder.
+   * Note that you don't have to set the Encoder explicitly. Instead, the API will automatically use the default encoder for this machine.   
+   * More info can be found in the [Choosing the right Encoder](#choosing-the-right-encoder) section above. 
+   
+3. **Call [overwolf.media.replays.turnOn()](../api/overwolf-media-replays#turnonparameters-callback)** with the auto-highlights feature disabled:
    * Set the **enable** field of the [overwolf.media.replays.ReplayHighlightsSetting](../api/overwolf-media-replays#replayhighlightssetting-object) Object to **false**.
    * You may also set the capture buffer that is used for all the other functions:  
    For example, if you set a 3 minute buffer, you will be able to capture game highlights not longer than this buffer.
 
-3. **Listen to your game events** and wait for the game highlight (match_start, kill, etc.) that you want to capture.  
+4. **Listen to your game events** and wait for the game highlight (match_start, kill, etc.) that you want to capture.  
    Once it occurred - start to video capture the screen:
 
-4. **Call [overwolf.media.replays.startCapture()](../api/overwolf-media-replays#startcapturereplaytype-pastduration-callback)** methods:  
+5. **Call [overwolf.media.replays.startCapture()](../api/overwolf-media-replays#startcapturereplaytype-pastduration-callback)** methods:  
     * Note that it won't automatically stop until you call [stopCapture()](../api/overwolf-media-replays#stopcapturereplaytype-replayid-callback).
     * It's useful if you want to stop the capturing based on a future event. If you want to automatically stop after it reaches **futureDuration**, you can use [capture()](../api/overwolf-media-replays#capturepastduration-futureduration-capturefinishedcallback-callback).
     * Note that in all methods, the replay ID returns via callback, and it is needed to finish capturing the replay.
 
-5. **Call [overwolf.media.replays.stopCapture()](../api/overwolf-media-replays#stopcapturereplaytype-replayid-callback)**.
+6. **Call [overwolf.media.replays.stopCapture()](../api/overwolf-media-replays#stopcapturereplaytype-replayid-callback)**.
    * Finishes capturing a replay and returns a URL leading to the created video file. 
    * Note that you only need to call stop if you called **startCapture()** without setting the **futureDuration** parameter. Otherwise, the capture is stopped automatically.
 
-6. **Call [overwolf.media.replays.turnOff()](../api/overwolf-media-replays#turnoffcallback)**, as soon as you’re no longer interested in capturing video in order to free up resources.
+7. **Call [overwolf.media.replays.turnOff()](../api/overwolf-media-replays#turnoffcallback)**, as soon as you’re no longer interested in capturing video in order to free up resources.
 
 ### Auto-highlights capture
 
@@ -132,13 +141,22 @@ Basic usage flow:
 1. **Register to relevant capture events for your app.**  
    * The [available events](../api/overwolf-media-replays#events-reference) are: onCaptureError, onCaptureStopped, onCaptureWarning, onReplayServicesStarted, onHighlightsCaptured.
 
-2. **Call [overwolf.media.replays.turnOn()](../api/overwolf-media-replays#turnonparameters-callback)** with the auto-highlights feature enabled:
+2. **Choose the right video encoder**  
+   * Get the available stream encoders: Call [getStreamEncoders()](../api/overwolf-streaming#getstreamencoderscallback).  
+     (You can also call [getAudioDevices()](../api/overwolf-streaming#getaudiodevicescallback) and choose a specific audio device).
+   * This returns a list of all possible encoders and audio devices – you can then use this list to let users select their preferred encoder/device.
+   * In terms of encoder priorities – we recommend: NVIDIA > AMD > INTEL > x264.
+   * As long as the "enabled" encoder's property is set to true, you can offer users to use this encoder.
+   * Note that you don't have to set the Encoder explicitly. Instead, the API will automatically use the default encoder for this machine.   
+   * More info can be found in the [Choosing the right Encoder](#choosing-the-right-encoder) section above. 
+
+3. **Call [overwolf.media.replays.turnOn()](../api/overwolf-media-replays#turnonparameters-callback)** with the auto-highlights feature enabled:
    * Set the **enable** field of the [overwolf.media.replays.ReplayHighlightsSetting](../api/overwolf-media-replays#replayhighlightssetting-object) Object to **true**.  
    Here you also set the capture buffer that is used for all the other functions.
    * With this mode, you don't need to start or stop the capture. It's done automatically.
    * Once a highlight is captured, the **onHighlightsCaptured** event is triggered, and contain the URL of the created video file.
 
-3. **Call [overwolf.media.replays.turnOff()](../api/overwolf-media-replays#turnoffcallback)**, as soon as you’re no longer interested in capturing, in order to free up resources.
+4. **Call [overwolf.media.replays.turnOff()](../api/overwolf-media-replays#turnoffcallback)**, as soon as you’re no longer interested in capturing, in order to free up resources.
 
 Note that all the processes that use the auto-highlights mode considered to be a "single" user. So no conflicts. Few apps can work together and capture the same highlights.
 
@@ -155,19 +173,23 @@ This is the basic usage flow:
 1. **Register to the relevant capture events** for your app.
    * The [available events](../api/overwolf-streaming#events-reference) are: onStreamingSourceImageChanged, onStopStreaming, onStartStreaming, onStreamingError, onStreamingWarning, onVideoFileSplited.
 
-2. **Get the available stream encoders.**  
-   * Call [getStreamEncoders()](../api/overwolf-streaming#getstreamencoderscallback) and [getAudioDevices()](../api/overwolf-streaming#getaudiodevicescallback).
+2. **Choose the right video encoder**  
+   * Get the available stream encoders: Call [getStreamEncoders()](../api/overwolf-streaming#getstreamencoderscallback).  
+     (You can also call [getAudioDevices()](../api/overwolf-streaming#getaudiodevicescallback) and choose a specific audio device).
    * This returns a list of all possible encoders and audio devices – you can then use this list to let users select their preferred encoder/device.
    * In terms of encoder priorities – we recommend: NVIDIA > AMD > INTEL > x264.
-   * As long as the "enabled" field = true, you can offer users to use the encoder.
+   * As long as the "enabled" encoder's property is set to true, you can offer users to use this encoder.
+   * Note that you don't have to set the Encoder explicitly. Instead, the API will automatically use the default encoder for this machine.   
+   * More info can be found in the [Choosing the right Encoder](#choosing-the-right-encoder) section above. 
 
 3. **Call overwolf.streaming.start().**
    * Create a JSON object with all streaming details and call [start()](../api/overwolf-streaming#startsettings-callback).  
    [Here](../api/overwolf-streaming#usage-examples) you can find a complete usage example.
    * For video recording, you don’t need the **ingest_server**, **stream_info**, and **auth** objects.
-   * Increasing the **keyframe_interval** may help the performance but decrease in quality or inability to seek a specific resolution (if you want to slice the video, for example). we recommend using a value of 2.
-   * For video recording, we recommend using a **max_kbps** value of higher than 8000.
-   * For streaming, we recommend using a **max_kbps** smaller than 3000.
+   * Increasing the [keyframe_interval](../api/overwolf-streaming#keyframe_interval-notes) may help the performance but decrease in quality or inability to seek a specific resolution (if you want to slice the video, for example). We recommend using a value of 2, that offers a balance between picture quality and viewer join speed.
+   * increase the **max_kbps** of the encoder configuration may help the performance, but increase the video file size.
+     * For video recording, we recommend using a value of higher than 8000.
+     * For streaming, we recommend using a value smaller than 3000.
    * Once start succeeded, you’ll get a callback with **result.status == "success"** and a **stream_id** that can be used to stop the streaming session or change the volume of the stream.
 
 4. **Allow users to change volume.**
@@ -182,3 +204,7 @@ This is the basic usage flow:
 * Use [setWindowStreamingMode](../api/overwolf-streaming#setwindowstreamingmodewindowid-streamingmode-callback) for video recording and streaming – this method works on a per-overwolf-window basis – for each window you can decide if it is to be shown in the stream or not – regardless of whether the streamer is viewing it or not.
 * Use [setWindowObsStreamingMode](../api/overwolf-streaming#setwindowobsstreamingmodewindowid-obsstreamingmode-callback) when you aren’t streaming with Overwolf but want to leverage Overwolf’s APIs and stream with OBS.
 
+## External links
+
+* Read more about [Using the right "Rate Control" in OBS for streaming or recording](https://blog.mobcrush.com/using-the-right-rate-control-in-obs-for-streaming-or-recording-4737e22895ed).
+* Read more about [Boost your stream quality with these 3 simple settings](https://blog.mobcrush.com/boost-your-stream-quality-with-these-3-simple-settings-47ac974dbe56).
