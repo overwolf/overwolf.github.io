@@ -282,7 +282,7 @@ callback  | function | Returns the result |
 {
     "success" : true, // when false the callback will stop listen
     "error": "", // valid only when success = false
-    "state": "running|terminated|truncated" // valid only when success =true (overwolf.io.enums.fileListenerState) 
+    "state": "started|running|terminated|truncated" // valid only when success =true (overwolf.io.enums.fileListenerState) 
     "content": "", //the line 
     "info" : 
     {
@@ -333,6 +333,7 @@ File listener state.
 
 Options    | 
 -----------| 
+started    |
 running    | 
 terminated |
 truncated  |

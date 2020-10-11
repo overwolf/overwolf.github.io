@@ -22,7 +22,7 @@ Note that the work on the documentation for this version is still in-progress.
 
 #### Bug fixes
 
-* Soon.
+* [overwolf.io.listenOnFile](overwolf-io#listenonfileid-path-option-callback) - add an indication that the watching on file started successfully.
 
 #### Dev Console
 
@@ -30,7 +30,7 @@ Note that the work on the documentation for this version is still in-progress.
 
 #### Game events
 
-* Soon.
+* We're expanding our library with typedef files for the different in-game events, starting with Valorant info updates (since I personally love it and it doesn't say anywhere that I'm not allowed to have fun at work).
 
 ## Version 0.156 (Oct. 2020)
 
