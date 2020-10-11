@@ -783,7 +783,9 @@ hero              | me          | Name of the hero you're playing | See [notes](
 Event data example:
 
 ```json
-{"feature":"me","category":"me","key":"team","value":"radiant","steam_id":"7654654654","hero":"keeper_of_the_light"}
+{"info":{"me":{"team":"radiant"}},"feature":"me"}
+{"info":{"me":{"steam_id":"7654654654"}},"feature":"me"}
+{"info":{"me":{"hero":"keeper_of_the_light"}},"feature":"me"}
 ```
 
 ## `game`
@@ -799,6 +801,6 @@ match_state       | game        |   Current game-state      |                   
 Event data example:
 
 ```json
-{"feature":"game","category":"game","key":"game_state","value":"playing"}
-{"feature":"game","category":"game","key":"match_state","value":"DOTA_GAMERULES_STATE__GAME_IN_PROGRESS"}
+{"info":{"game":{"game_state":"playing"}},"feature":"game"}
+{"info":{"game":{"match_state":"DOTA_GAMERULES_STATE_INIT"}},"feature":"game"}
 ```
