@@ -349,7 +349,7 @@ callback           | function           |  A callback function which will be cal
 
 > Sets the extension settings.  
 
-Currently only supports enabling/disabling app auto-launach with Overwolf client.
+Supports enabling/disabling app auto-launach with Overwolf client and more.
 
 Parameter          | Type                                                                 | Description                                                              |
 -------------------| ---------------------------------------------------------------------| ------------------------------------------------------------------------ |
@@ -476,14 +476,21 @@ position  | [eIndicationPosition](#eindicationposition-enum) enum      | The pos
 Parameter                   | Type               | Description                                                               |
 --------------------------- | -------------------| ------------------------------------------------------------------------- |
 auto_launch_with_overwolf   | bool               | set your app to auto-launch when the OW client starts (takes ~15 seconds) |
+exit_overwolf_on_exit       | bool               | set your app to auto-close OW client after closing curseforge. </br> See [notes](#exit_overwolf_on_exit-notes) |
 
 ```json
 {
     "settings": {
-        "auto_launch_with_overwolf": true
+        "auto_launch_with_overwolf": true,
+        "exit_overwolf_on_exit": false
     }
 }
 ```
+
+#### exit_overwolf_on_exit notes
+
+only extensions with Overwolf as author are permitted to change this property.  
+When turned on, after closing the app, overwolf will close.
 
 ## GetFpsSettingsResult Object
 

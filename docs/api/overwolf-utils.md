@@ -138,12 +138,12 @@ Provide an empty string for wild cards or separate value by commas (,). Ex. myFi
 
 > Opens a file picker dialog to browse for a file. A url to the selected file will be returned.  In addition, this function also allows you to set the initial path/folder to start browsing from.
 
-Parameter   | Type                                                                   | Description                                                                                                  |
------------ | -----------------------------------------------------------------------| ------------------------------------------------------------------------------------------------------------ |
+Parameter   | Type                                                                   | Description                                                 |
+----------- | -----------------------------------------------------------------------| ----------------------------------------------------------- |
 filter      | string                                                                 | A file filter.  A file filter. See [notes](#filter-notes)   |
-initialPath | string                                                                 | An optional path to start browsing from                                                                      |
-callback    | ([Result: OpenFilePickerResult](#openfilepickerresult-object)) => void | Called with a url to the selected file              |
-
+initialPath (optional) | string                                                      | An optional path to start browsing from                     |
+callback    | ([Result: OpenFilePickerResult](#openfilepickerresult-object)) => void | Called with a url to the selected file                      |
+multipleSelect (optional) | boolean                                                  | An optional param to allow multiple file selection          |
 
 ## openFolderPicker(initialPath, callback)
 #### Version added: 0.91
@@ -662,6 +662,6 @@ You can use the retrieved URL later to serve the stated file: for example, to up
 
 Right now "skip_in_game_notification" is the only option.  
 
-Parameter                 | Type  | Description                   |
-------------------------- | ------| ----------------------------- |
-skip_in_game_notification | bool  | When set to true,  Do not display the pop-up warning for the user if in-game  |
+Parameter                 | Type     | Description                   |
+------------------------- | ---------| ----------------------------- |
+skip_in_game_notification | boolean  | When set to true,  Do not display the pop-up warning for the user if in-game  |

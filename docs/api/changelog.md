@@ -14,15 +14,22 @@ Note that the work on the documentation for this version is still in-progress.
 
 #### API
 
-* Soon.
+* [overwolf.utils.openFilePicker](overwolf-utils#openfilepickerfilter-initialpath-callback) - now accepts multiple selection of files.  The selected files will be returned on the callback as an array.
+* [overwolf.settings.setExtensionSettings](overwolf-settings#setextensionsettingsextensionsettings-callback) - added new property "exit_overwolf_on_exit".  
+  Close OW client after closing CurseForge apps.
+
 
 #### Platform
 
-* Soon.
+* Release phasing - keep same distribution per release.  
+  Now, when you release version 1.0 to 10% of your users using the phase system, and found a major bug - you can release an immediate fix 1.1 that target the same 10% of your users.
+* Aero-snap support for native windows - Resizable windows should support aero-snap (winkey arrows and sticky-behaviour to screen edges).
 
 #### Bug fixes
 
 * [overwolf.io.listenOnFile](overwolf-io#listenonfileid-path-option-callback) - add an indication that the watching on file started successfully.
+* Several security patches for ransomware protection and processes protection.
+* Stability patches - for better crash handling and to prevent high CPU usage in some cases. 
 
 #### Dev Console
 
