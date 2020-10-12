@@ -18,12 +18,13 @@ Please read all the info about video capture usage and options on our [video cap
 * [overwolf.media.videos.getVideosSize()](#getvideossizecallback)
 * [overwolf.media.videos.deleteOldVideos()](#deleteoldvideoskeepnewestxgbs-callback)
 * [overwolf.media.videos.deleteVideo()](#deletevideovideourl-callback)
-* [overwolf.media.videos.addWatermark ()](#-callback)
-
+* [overwolf.media.videos.addWatermark ()](#addwatermarksourcevideourl-watermarkurl-watermarkparams-callback)
 
 ## Types Reference
 
 * [VideoCompositionSegment](#videocompositionsegment-object) Object
+* [WatermarkParams](#watermarkparams-object) Object
+* [WatermarkLocation](#watermarklocation-enum) Enum
 
 ## createVideoComposition(sourceVideoUrl, segments, callback)
 #### Version added: 0.78
@@ -121,19 +122,45 @@ Parameter      | Type                                | Description              
 -------------- | ------------------------------------| ------------------------------------------------------------------------------------------------------- |
 videoUrl	   | string                              | The url of the source video in an overwolf://media form.                                                |
 watermarkUrl   | string                              | The url of the watermark video/image in an overwolf://media form.                                       |
-watermarkParams| [WatermarkParams] object            | use this object to mark the watermark location.                                                         |
+watermarkParams| [WatermarkParams](watermarkparams-object) object            | use this object to mark the watermark                                           |
 videoUrl	   | string                              | The url of the source video in an overwolf://media form                                                 |
 callback	   | function                            | A callback function which will be called with the status of the request and the url to the target video.|
 
+## WatermarkParams Object
+#### Version added: 0.157
 
+> A helper structure to describe watermark parameters.
+
+Parameter   | Type | Description                          |
+----------- | -----| ------------------------------------ |
+startTime   | int  | Segment start time (in milliseconds) |
+endTime     | int  | Segment end time (in milliseconds)   |
+location    | [WatermarkLocation](#watermarklocation-enum) enum   | Segment end time (in milliseconds)   |
+scaleHeight | int                  | Segment end time (in milliseconds)   |
+
+## WatermarkLocation enum
+#### Version added: 0.157
+
+> Watermark location to use.
+
+Option       | Description  |
+------------ | -------------|
+topLeft      |              |
+topCenter    |              |
+topRight     |              |
+midLeft      |              |
+center       |              |
+midRight     |              |
+bottomLeft   |              |
+bottomCenter |              |
+bottomRight  |              |
 
 ## VideoCompositionSegment Object
 #### Version added: 0.78
 
 > A helper structure to describe video segments.
 
-Parameter | Type | Description                          |
---------- | -----| ------------------------------------ |
-startTime | int  | Segment start time (in milliseconds) |
-endTime   | int  | Segment end time (in milliseconds)   |
-
+Parameter   | Type                 | Description                          |
+----------- | ---------------------| ------------------------------------ |
+startTime   | int                  | Segment start time (in milliseconds) |
+endTime     | int                  | Segment end time (in milliseconds)   |
