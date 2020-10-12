@@ -653,6 +653,19 @@ url                | string   | a url to the selected file                  |
 }
 ```
 
+Or in case of multiples files picks
+
+```json
+{
+    "success": true,
+    "urls": [
+        "overwolf-fs://C/Users/Eran/AppData/Local/Overwolf/Extensions/nhmkaollkcmjiecdnnjmgfifjgkfegkljnjjbipp/1.0.19/logo192.png",
+        "overwolf-fs://C/Users/Eran/AppData/Local/Overwolf/Extensions/nhmkaollkcmjiecdnnjmgfifjgkfegkljnjjbipp/1.0.19/logo512.png"
+    ]
+
+}
+```
+
 You can use the retrieved URL later to serve the stated file: for example, to upload it to a remote server, you can use XMLHttpRequest. Using a file URL (file://) and not OW URL (overwolf-fs://), will trigger a cross-origin error.
 
 ## OpenUrlOptions Object

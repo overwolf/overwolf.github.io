@@ -433,7 +433,6 @@ callback            | function   | Called with an array containing the states of
 
 Parameter           | Type       | Description                                                                                    |
 --------------------| -----------| -----------------------------------------------------------------------------------------------|
-windowId	        | string     | The id or name of the window to restore                                                        |
 callback            | function   | A callback function which will be called with the status of the request                        |
 
 #### Callback argument: Success

@@ -18,6 +18,8 @@ Please read all the info about video capture usage and options on our [video cap
 * [overwolf.media.videos.getVideosSize()](#getvideossizecallback)
 * [overwolf.media.videos.deleteOldVideos()](#deleteoldvideoskeepnewestxgbs-callback)
 * [overwolf.media.videos.deleteVideo()](#deletevideovideourl-callback)
+* [overwolf.media.videos.addWatermark ()](#-callback)
+
 
 ## Types Reference
 
@@ -109,6 +111,21 @@ if (!videoElement.paused) { // Optional, pause the video before deleting
 videoElement.src = ""; // Set the video element source to an empty string
 overwolf.media.videos.deleteVideo(url);
 ```
+
+## addWatermark(sourceVideoUrl, watermarkUrl, watermarkParams, callback)
+#### Version added: 0.157
+
+> Adds a video/image watermark to a video.
+
+Parameter      | Type                                | Description                                                                                             |
+-------------- | ------------------------------------| ------------------------------------------------------------------------------------------------------- |
+videoUrl	   | string                              | The url of the source video in an overwolf://media form.                                                |
+watermarkUrl   | string                              | The url of the watermark video/image in an overwolf://media form.                                       |
+watermarkParams| [WatermarkParams] object            | use this object to mark the watermark location.                                                         |
+videoUrl	   | string                              | The url of the source video in an overwolf://media form                                                 |
+callback	   | function                            | A callback function which will be called with the status of the request and the url to the target video.|
+
+
 
 ## VideoCompositionSegment Object
 #### Version added: 0.78
