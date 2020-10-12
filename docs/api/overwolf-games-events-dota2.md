@@ -74,7 +74,7 @@ gep_internal | gep_internal| Local + Public version number|See [notes](#gep_inte
 Data Example:
 
 ```json
-{"info":{"gep_internal":{"version_info":"{\"local_version\":\"157.0.1\",\"public_version\":\"157.0.1\",\"is_updated\":true}"}},"feature":"gep_internal"}
+{"info":{"gep_internal":{"version_info":"{"local_version":"157.0.1","public_version":"157.0.1","is_updated":true}"}},"feature":"gep_internal"}
 ```
 
 ## `game_state_changed`
@@ -95,6 +95,12 @@ game_state_changed |<ul><li>game_state</li><li>match_state</li><li>match_id</li>
 Fired when:
 
 The user starts playing, begins spectating or stops playing. Note that simply bringing up the menu is not enough to trigger the ‘idle’ event – an active game (played or spectated) must be closed.
+
+Data Example:
+
+```json
+{"events":[{"name":"game_state_changed","data":"{"game_state": "playing",  "match_state": "DOTA_GAMERULES_STATE_INIT",  "match_id": "0",  "player_steam_id": "76561197971316549",  "player_team": "radiant"}"}]}
+```
 
 ## `match_state_changed`
 
@@ -120,7 +126,7 @@ match_state – One of the following:
 Event data example:
 
 ```json
-{"info":{"game":{"match_state":"DOTA_GAMERULES_STATE_TEAM_SHOWCASE"}},"feature":"match_state_changed"}
+{"events":[{"name":"match_state_changed","data":"{  "match_state": "DOTA_GAMERULES_STATE_HERO_SELECTION"}"}]}
 ```
 
 Fired when:
@@ -178,10 +184,6 @@ daytime_changed   | Check notes |          |See [notes](#daytime_changed-note)| 
 
 #### *daytime_changed* note
 
-:::warning OBSOLETE
-This event is currently NOT supported.
-:::
-
 Event Data:
 
 * <b>daytime</b> – True if it is current day time, false otherwise.
@@ -190,12 +192,12 @@ Event Data:
 
 Fired when:
 
-Fired when the game transitions between day time and night time. 
+The game transitions between day time and night time. 
 
 Data Example:
 
 ```json
-{"events":[{"name":"daytime_changed","data":"{"daytime":true,"clock_time":-89,"nightstalker_night":false}"}]}
+{"events":[{"name":"daytime_changed","data":"{  "daytime": true,  "clock_time": -89,  "nightstalker_night": false}"}]}
 ```
 
 ## `clock_time_changed `
@@ -205,6 +207,12 @@ Data Example:
 Event       | Event Data   | Fired When    | Notes              | Since GEP Ver. |
 ------------| -------------| --------------| ------------------ | --------------|
 clock_time_changed    | Same as ‘map_daytime_changed’. 	 |Fired every second|   |     77.3      |
+
+#### *clock_time_changed* note
+
+```json
+{"events":[{"name":"clock_time_changed","data":"{  "daytime": true,  "clock_time": -89,  "nightstalker_night": false}"}]}
+```
 
 ## `ward_purchase_cooldown_changed `
 
@@ -241,7 +249,7 @@ match_ended | radiant/dire |When an ancient is destroyed and the game ends.  | S
 #### *match_ended* note
 
 ```json
-{"winner":"dire"}
+{"events":[{"name":"match_ended","data":"{  "winner": "radiant"}"}]}
 ```
 
 ## `kill`
@@ -257,7 +265,7 @@ kill    | Check notes |Whenever the player kills an enemy hero. 	|See [notes](#k
 Event Data:
 
 ```json
-{"kills": 1,"kill_streak": 1,"label": "kill"}
+{"events":[{"name":"kill","data":"{  "kills": 10,  "kill_streak": 7,  "label": "kill"}"}]}
 ```
 
 * <b>kills</b> – The total number of kills the player has.
@@ -277,7 +285,7 @@ assist    |assists – The total number of assists the player has. |Whenever the
 Data Example:
 
 ```json
-{"events":[{"name":"assist","data":"{\"assists\": 1}"}]}
+{"events":[{"name":"assist","data":"{"assists": 1}"}]}
 ```
 
 ## `death`
@@ -342,9 +350,11 @@ gpm | gpm – The current Gold Per Minute value. |Whenever the GPM changes. |   
 
 #### *gpm* note
 
-:::warning OBSOLETE
-This event is currently NOT supported.
-:::
+Data Example:
+
+```json
+{"events":[{"name":"gpm","data":"{  "gpm": 363605184}"}]}
+```
 
 ## `gold`
 
@@ -356,13 +366,15 @@ gold | Check notes |Whenever gold changes. 	|See [notes](#gold-notes)|     77.3 
 
 #### *gold* note
 
-:::warning OBSOLETE
-This event is currently NOT supported.
-:::
-
 * <b>gold</b> – Total current gold.
 * <b>gold_reliable</b> – Reliable gold part.
 * <b>gold_unreliable</b> – Unreliable gold part.
+
+Data Example:
+
+```json
+{"events":[{"name":"gold","data":"{  "gold": 10599,  "gold_reliable": 0,  "gold_unreliable": 10599}"}]}
+```
 
 ## `hero_leveled_up `
 
@@ -374,7 +386,11 @@ hero_leveled_up | hero_level – The current hero level. |Whenever the player le
 
 #### *hero_leveled_up* note
 
-<b>Currently this event is NOT supported.</b>
+Data Example:
+
+```json
+{"events":[{"name":"hero_leveled_up","data":"{  "hero_level": 30}"}]}
+```
 
 ## `hero_respawned`
 
@@ -398,8 +414,6 @@ hero_buyback_info_changed | Check notes |        |See [notes](#hero_buyback_info
 
 #### *hero_buyback_info_changed* note
 
-<b>Currently this event is NOT supported.</b>
-
 Event Data:
 
 * <b>buyback_cost</b> – Gold cost to buyback
@@ -408,6 +422,12 @@ Event Data:
 Fired when:
 
 Every 4 seconds and every level-up, since buyback cost is affected by game time and player level. It will also be called every second when buyback is on cooldown.
+
+Data Example:
+
+```json
+{"events":[{"name":"hero_buyback_info_changed","data":"{  "buyback_cost": 8541,  "buyback_cooldown": 0}"}]}
+```
 
 ## `hero_boughtback`
 
@@ -419,9 +439,11 @@ hero_boughtback |<b>buyback_cooldown</b> – The cooldown remaining for buyback 
 
 #### *hero_boughtback* note
 
-:::warning OBSOLETE
-This event is currently NOT supported.
-:::
+Data Example:
+
+```json
+{"events":[{"name":"hero_boughtback","data":"{}"}]}
+```
 
 ## `hero_health_mana_info`
 
@@ -433,7 +455,6 @@ hero_health_mana_info | Check notes |Whenever either of the players mana, health
 
 #### *hero_health_mana_info* note
 
-<b>Currently this event is NOT supported.</b>
 
 Event Data:
 
@@ -441,6 +462,12 @@ Event Data:
 * <b>max_health</b> – Current maximum health.
 * <b>mana</b> – Current mana.
 * <b>max_mana</b> – Current maximum mana.
+
+Data Example:
+
+```json
+{"events":[{"name":"hero_health_mana_info","data":"{  "health": 2620,  "max_health": 2620,  "mana": 711,  "max_mana": 711}"}]}
+```
 
 ## `hero_status_effect_changed`
 
@@ -452,8 +479,6 @@ hero_status_effect_changed | Check notes |Whenever any of these effects changes.
 
 #### *hero_status_effect_changed* note
 
-<b>Currently this event is NOT supported.</b>
-
 Event Data:
 
 * <b>silenced</b> – True if the player is silenced, false otherwise.
@@ -464,6 +489,12 @@ Event Data:
 * <b>muted</b> – True if the player is muted, false otherwise.
 * <b>break</b> – True if the player is broken, false otherwise.
 * <b>has_debuff</b> – True if the player is affected by any debuff, false otherwise.
+
+Data Example:
+
+```json
+{"events":[{"name":"hero_status_effect_changed","data":"{  "silenced": true,  "stunned": false,  "disarmed": false,  "magicimmune": false,  "hexed": false,  "muted": false,  "break": false,  "has_debuff": false}"}]}
+```
 
 ## `hero_attributes_skilled`
 
@@ -520,7 +551,11 @@ hero_ability_cooldown_changed |Same as ‘hero_ability_skilled’|Whenever an ab
 
 #### *hero_ability_cooldown_changed* note
 
-<b>Currently this event is NOT supported.</b>
+Data Example:
+
+```json
+{"events":[{"name":"hero_ability_cooldown_changed","data":"{  "slot": 3,  "name": "sven_gods_strength",  "level": 3,  "can_cast": false,  "passive": false,  "ability_active": true,  "cooldown": 59,  "ultimate": true}"}]}
+```
 
 ## `hero_ability_changed`
 
@@ -544,8 +579,6 @@ hero_item_cooldown_changed |Check notes|Whenever an item’s remaining cooldown 
 
 #### *hero_item_cooldown_changed* note
 
-<b>Currently this event is NOT supported.</b>
-
 Event Data:
 
 * <b>slot</b> – The index of the item slot (0 – 5, top row from the left to bottom row from the right)
@@ -555,6 +588,12 @@ Event Data:
 * <b>can_cast</b> – True unless there’s not enough mana to use the item, the player is muted, or when the item is on cooldown. (only when passive = false)
 * <b>cooldown</b> – The remaining cooldown until the item is ready to be used. (only when passive = false)
 * <b>charges</b> – The remaining charges of the item (only when passive = false and where item can be charged)
+
+Data Example:
+
+```json
+{"events":[{"name":"hero_item_cooldown_changed","data":"{  "slot": 3,  "location": "hero",  "name": "item_mask_of_madness",  "can_cast": false,  "passive": false,  "cooldown": 16,  "charges": null}"}]}
+```
 
 ## `hero_item_changed`
 
@@ -592,7 +631,11 @@ hero_item_used |Same as ‘hero_item_changed’	|Whenever an item is used – Es
 
 #### *hero_item_used* note
 
-<b>Currently this event is NOT supported.</b>
+Data Example:
+
+```json
+{"events":[{"name":"hero_item_used","data":"{  "slot": 0,  "location": "hero",  "name": "item_blink",  "can_cast": false,  "passive": false,  "cooldown": 15,  "charges": null}"}]}
+```
 
 ## `hero_item_consumed`
 
