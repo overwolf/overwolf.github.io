@@ -140,10 +140,12 @@ total       | match_info   | The total number of players |                      
 
 ### Info Updates
 
-key          | Category    | Values                            | Notes                 | Since GEP Ver. |
------------- | ------------| --------------------------------- | --------------------- | ------------- |
-name       | me   | The player’s nickname</br>`{"name":"itayG"}` |                     |   146.0       |
-health  | me   | The player’s current health |See [notes](#health-notes)               |   146.0       |
+key     | Category    | Values                                       | Notes                      | Since GEP Ver.|
+------- | ------------| -------------------------------------------- | -------------------------- | ------------- |
+name    | me          | The player’s nickname</br>`{"name":"itayG"}` |                            |   146.0       |
+health  | me          | The player’s current health                  | See [notes](#health-notes) |   146.0       |
+view    | me          |                                              | See [notes](#view-notes)   |   146.0       |
+
 
 #### *health* note:
 
@@ -151,6 +153,14 @@ Data Example:
 
 ```json
 {"health":"{"health":100,"ko_health":100}"}
+```
+
+#### *view* note:
+
+Data Example:
+
+```json
+{"view":"TPP"}
 ```
 
 ## `phase`
