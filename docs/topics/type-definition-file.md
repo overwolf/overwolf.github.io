@@ -50,3 +50,14 @@ Even if your application uses plain JavaScript and no TypeScript at all, you can
 
 Of course, you won't get the benefit of type checking because you're not actually using TypeScript, but still, the provided information can be very helpful for working with the dynamic and loosely typed language that is JavaScript.
 
+## Using types for games events
+
+To make your lives easier when working with our games events API, We've expanded our library with typedef files for the different in-game events.
+We added Type definition files for each game, for autocompletion and documentation purposes.
+
+You can find the game's events definition files under the same repo and npm package above, under the [GEP folder](https://github.com/overwolf/types/tree/master/gep).
+
+VS will then include the found types in its auto-completion list, given that you've got TypeScript installed. Here is an example for Valorant:
+
+![alt-text](assets/valorant.d.ts2.gif)
+
