@@ -224,10 +224,6 @@ ward_purchase_cooldown_changed   | Check notes |Fired every second where wards a
 
 #### *ward_purchase_cooldown_changed* note
 
-:::warning OBSOLETE
-This event is currently NOT supported.
-:::
-
 Event Data:
 
 * <b>ward_purchase_cooldown</b> – The remaining store cooldown in seconds before a ward is available for purchase again. 
@@ -336,9 +332,11 @@ xpm |xpm – The current Experience Per Minute value. |Whenever the XPM changes.
 
 #### *xpm* note
 
-:::warning OBSOLETE
-This event is currently NOT supported.
-:::
+Data Example:
+
+```json
+{"events":[{"name":"xpm","data":"{  "xpm": 250}"}]}
+```
 
 ## `gpm`
 
@@ -455,7 +453,6 @@ hero_health_mana_info | Check notes |Whenever either of the players mana, health
 
 #### *hero_health_mana_info* note
 
-
 Event Data:
 
 * <b>health</b> – Current health.
@@ -524,6 +521,12 @@ hero_ability_skilled | Check notes |Whenever the player skills up an ability.|Se
 * ability_active – Unknown, TBD.
 * cooldown – Remaining cooldown until the ability is ready to cast.
 * ultimate – True if the ability is an ultimate ability.
+
+Data Example:
+
+```json
+{"events":[{"name":"hero_ability_skilled","data":"{  "slot": 1,  "name": "sven_great_cleave",  "level": 1,  "can_cast": false,  "passive": true,  "ability_active": true,  "cooldown": 0,  "ultimate": false}"}]}
+```
 
 ## `hero_ability_used`
 
@@ -647,7 +650,11 @@ hero_item_consumed |Same as ‘hero_item_changed’	|Whenever an item’s charge
 
 #### *hero_item_consumed* note
 
-<b>Currently this event is NOT supported.</b>
+Data Example:
+
+```json
+{"events":[{"name":"hero_item_consumed","data":"{  "slot": 1,  "location": "hero",  "name": "item_tango",  "can_cast": true,  "passive": false,  "cooldown": 0,  "charges": 4}"}]}
+```
 
 ## `hero_item_charged`
 
@@ -659,7 +666,11 @@ hero_item_charged |Same as ‘hero_item_changed’	|Whenever an item’s charges
 
 #### *hero_item_charged* note
 
-<b>Currently this event is NOT supported.</b>
+Data Example:
+
+```json
+{"events":[{"name":"hero_item_charged","data":"{  "slot": 0,  "location": "hero",  "name": "item_ward_observer",  "can_cast": true,  "passive": false,  "cooldown": 0,  "charges": 2}"}]}
+```
 
 ## `match_info`
 
