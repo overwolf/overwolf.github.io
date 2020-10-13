@@ -316,8 +316,8 @@ A callback function which will be called with the status of the request
 
 > Request to split video now.
 
-This is allow only when start recording with [enable_on_demand_split](#streamvideooptions-object) setting.  
-[onVideoFileSplited](#onvideofilesplited) event will be fired when video splits.
+This method is available when recording with the [enable_on_demand_split](#streamvideooptions-object) setting.  
+[onVideoFileSplited](#onvideofilesplited) event will be fired when the video splits.
 
 Parameter | Type                                            | Description                   |
 --------- | ------------------------------------------------| ----------------------------- |
@@ -893,7 +893,7 @@ Stream video options.
 | override_overwolf_setting| bool | Do not use Overwolf capture setting. In case True you must provider all video setting (encoder..) | 0.103  |
 | tobii| [TobiiLayerParams](overwolf-tobii) Object | Tobii Replay layer setting | 0.97  |
 | max_file_size_bytes| uint | Defines file maximum size. when video reach {max_file_size_bytes}, the recorder will flush the video file and stat a new video file. [onVideoFileSplited](#onvideofilesplited) event will be fired | 0.103  |
-| enable_on_demand_split| bool | Enable to split video file on demand. See [notes](#enable_on_demand_split-notes). | 0.141  |
+| enable_on_demand_split| bool | Enable video file splitting on demand. See [notes](#enable_on_demand_split-notes). | 0.141  |
 | include_full_size_video| bool | in case max_file_size_bytes is onfull video will be recorded to disk parallel to splits videos.  | 0.105  |
 | disable_when_sht_not_supported| bool | Do not start video replay service in case shared texture is not supported.  | 0.105  |
 | indication_position | [indication_position](#indication_position-enum) Enum | Position of the recorder indicator. Available for video capture only.  | 0.143  |
@@ -914,7 +914,7 @@ The app "short name" is defined in the [dock_button_title](manifest-json#meta-do
 
 #### enable_on_demand_split notes
 
-* When calling [split()](#splitstreamid-callback), the recorder will flash the video file.
+* When calling [split()](#splitstreamid-callback), the recorder will flush the video file to the local disk.
 * When the recorder encoded the key frame with presentation time stamp thats is equal to grater than split() timestamps.
 * When |max_file_size_bytes| is set, this flag is ignored.  
 * [onVideoFileSplited](#onvideofilesplited) event will be fired.
