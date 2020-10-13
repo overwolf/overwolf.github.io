@@ -57,7 +57,9 @@ We added Type definition files for each game, for autocompletion and documentati
 
 You can find the game's events definition files under the same repo and npm package above, under the [GEP folder](https://github.com/overwolf/types/tree/master/gep).
 
-VS will then include the found types in its auto-completion list, given that you've got TypeScript installed. Here is an example for Valorant:
+VS will then include the found types in its auto-completion list, given that you've got TypeScript installed.  
+
+Here is an example for Valorant:
 
 ![alt-text](assets/valorant.d.ts2.gif)
 
