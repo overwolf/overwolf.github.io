@@ -33,7 +33,7 @@ Note that the work on the documentation for this version is still in-progress.
 
 #### Dev Console
 
-* Soon.
+* We added a "per-version" retention report, to compare retention between different app versions. You can see it on your board.
 
 #### Game events
 
