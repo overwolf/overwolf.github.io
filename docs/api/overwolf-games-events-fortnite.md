@@ -166,6 +166,13 @@ userID   | match_info  |The current user’s ID code. See [notes](#userID-note)|
 ticketID   | match_info  |The current ticket’s ID code. See [notes](#ticketID-note)|                       |  132.0  |
 partyID   | match_info  |The current party’s ID code. See [notes](#partyID-note)|                       |  132.0  |
 
+
+### Events
+
+Event       | Event Data   | Fired When    | Notes              | Since GEP Ver. |
+------------| -------------| --------------| ------------------ | --------------|
+generic     | kill/death/knocked | Generic events are generated. | See [notes](#generic-note) |  153.0  |
+
 #### *pseudo_match_id* note
 
 Note that this is an Overwolf-generated code, not an Epic Games designation.
@@ -214,6 +221,27 @@ Data Example:
 
 ```json
 {"info":{"match_info":{"partyID":"24f122daf9c446199e59f1f6841cacfe"}},"feature":"match"}
+```
+
+#### *generic* note
+
+These are general events provided by the game client.
+
+Possible values:
+
+* "knocked"
+* "kill"
+* "2kill" - double kill
+* "3kill" - triple kill
+* "mkill" - multi kill
+* "won"
+* "death"
+
+Data Example:
+
+```json
+{"events":[{"name":"generic","data":"death"}]}
+{"events":[{"name":"generic","data":"kill"}]}
 ```
 
 ## `rank`
