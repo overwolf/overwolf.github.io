@@ -1,5 +1,5 @@
 ---
-id: Looking for Group
+id: looking-for-group
 title: Looking for Group
 sidebar_label: Looking for Group
 ---
