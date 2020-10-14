@@ -86,11 +86,15 @@ Note that the work on the documentation for this version is still in-progress.
 * [Fortnite](overwolf-games-events-fortnite)
   * New update under:
     * me
+    * match_info
 * [World of Warcraft](overwolf-games-events-wow)
   * New update under:
     * group_applicants
 * [Minecraft](overwolf-games-events-minecraft)
   * New update under:
+    * match_info
+* [VALORANT](overwolf-games-events-valorant)
+  * New updates under:
     * match_info
     
 ## Version 0.155 (Sep. 2020)
