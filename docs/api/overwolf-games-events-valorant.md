@@ -136,6 +136,7 @@ Data example:
 
 ```json
 {"info":{"match_info":{"score":"{"won":9,"lost":2}"}},"feature":"match_info"}
+{"info":{"match_info":{"score":"{"draw"}},"feature":"match_info"}
 ```
 
 #### *round_phase* note
