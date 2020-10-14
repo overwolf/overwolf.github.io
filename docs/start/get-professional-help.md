@@ -9,41 +9,56 @@ You can find below a list of teams that are familiar with Overwolf framework and
 
 Want to be on the list? Let us know at develop@overwolf.com
 
-## Fulcrum ![fulcrum logo](https://fulcrum.rocks/static/logoMini.png)
-**Services offered**
+## Fulcrum 
+
+![fulcrum logo](https://fulcrum.rocks/static/logoMini.png)
+
+### Services offered
+
 * Development
 * UI
 * UX
 * Product review
 
-**Website:** https://fulcrum.rocks/
+### Website
+
+https://fulcrum.rocks/
 
 Fulcrum are the team behind the successful [Buff app](https://www.overwolf.com/app/buff.game-Buff_Achievement_Tracker) and offer full services to help develop and design your app from scratch, or tweek it however you want.
 
 ---
 
-![Nuerony logo](https://www.neurony.ro/uploads/files/2015/08/logo.png)
+## Nuerony 
 
-**Services offered**
+![Nuerony logo](assets/looking-for-a-group/neurony-logo.png)
+
+### Services offered
+
 * Development
 * QA
 * UI
 * UX
 * Product review
 
-**Website:** https://www.neurony.ro/
+### Website
+
+https://www.neurony.ro/
 
 Web Software development solution company with an experience of 15 years, and over 600 projects. They helped develop the [Icy Heroes](https://www.overwolf.com/app/Icy_Veins-Icy_Heroes) app for Heroes of the Storm
 Neurony can help you in the process from initial design all the way to product launch and more.
 
 ---
 
-## ![Trust sourcing logo](https://trust-sourcing.com/wp-content/uploads/2018/07/logo3.png)
+## Trust
 
-**Services offered**
+![Trust logo](assets/looking-for-a-group/trust-logo.png)
+
+### Services offered
+
 * HR services in Kiev, Ukraine.
 
-**Website:** https://trust-sourcing.com/
+### Website
+https://trust-sourcing.com/
 
 Looking to hire a trustworthy and professional team members? Trust Sourcing has helped Overwolf personally with hiring professional employees based in Kiev, Ukraine and can help you find your next team member in areas such as Software Development,IT, QA, DevOps and more
 
@@ -51,10 +66,12 @@ Looking to hire a trustworthy and professional team members? Trust Sourcing has 
 
 ## Yuval Games
 
-**Services offered**
+### Services offered
+
 * Product review
 * UX
 
-**Website:** https://www.yuvalgames.com/esports
+### Website
+https://www.yuvalgames.com/esports
 
 As a past member of the team, few know the Overwolf ecosystem as well as Yuval. Among his many notable projects was helping make [Facecheck](https://www.overwolf.com/app/Convex_Apps-FaceCheck) one of the top apps on the platform.
