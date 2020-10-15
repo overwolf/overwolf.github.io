@@ -62,6 +62,10 @@ This is how the value would look like if the app is interested in receiving even
    }
 ```
 
+:::tip
+Using `game_events` you declare from which games your app wants to recive "real-time" game events (kill, death, etc.). In addition, your app can recive general "game info" events (process name, focus, command line info and more) regarding the current state of the current running game. That means for example, that if you define
+:::
+
 #### set the overlay permissions
 
 The second step is to set the game IDs that your app targeted and permitted to display in-game overlay windows on them

@@ -173,7 +173,8 @@ This function is obsolete.
 
 :::note
 **Capture()** will automatically stop after it reaches the **futureDuration**. No need to call **stopCapture()**. 
-If you want to stop the capture manually, you can use [startCapture()](#startcapturereplaytype-pastduration-callback). 
+If you want to stop the capture manually, you can use [startCapture()](#startcapturepastduration-callback
+). 
 :::
 
 * A replay id will be returned in the callback which is needed to finish capturing the replay.
@@ -210,7 +211,7 @@ A callback function which will be called with the status of the request
 
 :::note
 **Capture()** will automatically stop after it reaches the **futureDuration**. No need to call **stopCapture()**. 
-If you want to stop the capture manually, you can use [startCapture()](#startcapturereplaytype-pastduration-callback). 
+If you want to stop the capture manually, you can use [startCapture()](#startcapturepastduration-callback). 
 :::
 
 * A replay id will be returned in the callback which is needed to finish capturing the replay.
@@ -233,7 +234,7 @@ This function is obsolete.
 :::
 
 :::note
-**startCapture()** won't automatically stop until you call [stopCapture()](#stopcapturereplaytype-replayid-callback).
+**startCapture()** won't automatically stop until you call [stopCapture()](#stopcapturereplayid-callback).
 
 It's useful if you want to stop the capturing based on a future event, like video combos: kill, doublekill, triple kill - where you can't predict what will happen after the first kill.
 If you want to automatically stop after it reaches **futureDuration**, you can use [capture()](#capturepastduration-futureduration-capturefinishedcallback-callback). 
@@ -266,13 +267,13 @@ A callback function which will be called with the status of the request
 > Starts capturing a replay to a file.
 
 :::note
-**startCapture()** won't automatically stop until you call [stopCapture()](#stopcapturereplaytype-replayid-callback).
+**startCapture()** won't automatically stop until you call [stopCapture()](#stopcapturereplayid-callback).
 
 It's useful if you want to stop the capturing based on a future event, like video combos: kill, doublekill, triple kill - where you can't predict what will happen after the first kill.
 If you want to automatically stop after it reaches **futureDuration**, you can use [capture()](#capturepastduration-futureduration-capturefinishedcallback-callback). 
 :::
 
-* A replay id will be returned in the callback which is needed to finish capturing the replay.
+* A replay id will be returned in the callback (as the last part of the file name ) which is needed to finish capturing the replay.
 * You can only call this method if replay mode is on and no other replay is currently being captured to a file.
 
 Parameter               | Type                  | Description                                                                                                      |
@@ -280,6 +281,20 @@ Parameter               | Type                  | Description                   
 replayType              | [ReplayType](#replaytype-enum) enum  | The type of replay to capture                                                                     |
 captureFinishedCallback	| function   |A callback function which will be called when capturing is finished, at the end of the future duration supplied to this call |
 callback                | function                             | A callback function which will be called with the status of the request       
+
+#### Callback argument: Success
+
+A callback function which will be called with the status of the request
+
+```json
+{
+    "success": true,
+    "url": "overwolf://media/replays/App+Name/Dota+2+06-28-2016+17-59-37-620.mp4",
+    "path": "E://Video/Overwolf/App Name/Dota 2 06-28-2016 17-59-37-620.mp4"
+}
+```
+
+Note that the last part of the file name is the **replayId**, which is needed to finish capturing the replay by calling [stopCapture()](#stopcapturereplayid-callback). In the above example, it's 620.
 
 ## stopCapture(ReplayType, replayId, callback)
 #### Version added: 0.78
@@ -298,6 +313,22 @@ replayType              | [ReplayType](#replaytype-enum) enum  | The type of rep
 replayId		        | string                               | The id of the replay you want to stop capturing                         |
 callback                | function                             | A callback function which will be called with the status of the request |
 
+## stopCapture(replayId, callback)
+#### Version added: 0.117
+
+> Finishes capturing a replay and returns a url to the created video file.
+
+* You can only call this method if replay mode is on and using a valid id of a replay being captured to a file.
+
+Parameter               | Type                                 | Description                                                             |
+----------------------- | -------------------------------------| ----------------------------------------------------------------------- |
+replayId		        | string                               | The id of the replay you want to stop capturing. Read [notes](#replayid-notes).        |
+callback                | function                             | A callback function which will be called with the status of the request |
+
+#### replayId notes
+
+The replayId is returned in the [callback of the startCapture()](#callback-argument-success-5), as the last part of the file name.   
+
 #### Callback argument: Success
 
 A callback function which will be called with the status of the request
@@ -312,18 +343,6 @@ A callback function which will be called with the status of the request
     "thumbnail_url": "overwolf://media/thumbnails/App+Name/Dota+2+06-28-2016+17-59-37-620.mp4"
 }
 ```
-
-## stopCapture(replayId, callback)
-#### Version added: 0.117
-
-> Finishes capturing a replay and returns a url to the created video file.
-
-* You can only call this method if replay mode is on and using a valid id of a replay being captured to a file.
-
-Parameter               | Type                                 | Description                                                             |
------------------------ | -------------------------------------| ----------------------------------------------------------------------- |
-replayId		        | string                               | The id of the replay you want to stop capturing                         |
-callback                | function                             | A callback function which will be called with the status of the request |
 
 ## updateTobiiSetting(param, callback)
 #### Version added: 0.110
