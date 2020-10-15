@@ -11,9 +11,9 @@ The full list of supported games with their Game ID’s is always up to date and
 **Please read all the info about how to use game events in your app in our [using game events](../topics/using-events) guide.**
 
 :::important The difference between overwolf.games.events to overwolf.games  
-This API enables you to get real-time game events (kill, death, etc.) for [specific games that defined](../topics/using-events#set-the-relevant-game-events) in your app's manifest, under the "game_events" section.
+This API enables you to get real-time game events (kill, death, etc.) for [specific games that are defined](../topics/using-events#set-the-relevant-game-events) in your app's manifest, under the "game_events" section.
 
-Regardless, you have the overwolf.games API that gives you general "game info" events about the currently running game's state (process name, focus, command line info, and more), as long as it's supported game, of course.
+Regardless, you have the [overwolf.games](overwolf-games) API that gives you general "game info" events about the currently running game's state (process name, focus, command line info, and more).
 :::
 
 ## Methods Reference

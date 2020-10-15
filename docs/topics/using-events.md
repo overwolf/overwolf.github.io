@@ -10,6 +10,8 @@ The full list of supported games with their Game ID’s is always up to date and
 
 In this guide, we'll discuss the different types of Overwolf game events features, how to register to these game events, and how to consume them from your OW app, using the [overwolf.games.events API](../api/overwolf-games-events).
 
+If you like to get general info updates about the currently running game, like process name, focus, command line info, you can use the [overwolf.games](../api/overwolf-games) API. You don't even have to register for features and real-time game events. 
+
 ## Features Overview
 
 Each supported game has its own set of available features.
@@ -63,7 +65,7 @@ This is how the value would look like if the app is interested in receiving even
 ```
 
 :::tip
-Using `game_events` you declare from which games your app wants to recive "real-time" game events (kill, death, etc.). In addition, your app can recive general "game info" events (process name, focus, command line info and more) regarding the current state of the current running game. That means for example, that if you define
+This field define from which games exactly your app should receive real-time game events like kill, death, etc. If you don't need real-time game events and just want to get general game info and state for the current running game, you can leave this field (`game_events`) even empty, and use the [overwolf.games](../api/overwolf-games) API.
 :::
 
 #### set the overlay permissions

@@ -7,8 +7,8 @@ sidebar_label: overwolf.games
 Provides information about the currently running game.
 
 :::important The difference between overwolf.games to overwolf.games.events
-ll the events below: **onGameInfoUpdated**, **onGameLaunched**, etc. are "game info" events that update the running game's current state (process name, focus, command line info, and more).  
-These events are not related to real-time game events (kill, death, start/end match, etc.), which are handled by the [overwolf.games.events](overwolf-games-events) API.
+All the events below: **onGameInfoUpdated**, **onGameLaunched**, etc. are "game info" events that update the running game's current state (process name, focus, command line info, and more).  
+These events are not related to real-time game events (kill, death, start/end match, etc.), which are handled by the [overwolf.games.events](overwolf-games-events) API and require to [update your manifest file](../topics/using-events#how-to-register-to-features).
 :::
 
 ## Methods Reference
