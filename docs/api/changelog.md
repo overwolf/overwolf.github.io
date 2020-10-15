@@ -17,18 +17,23 @@ Note that the work on the documentation for this version is still in-progress.
 * [overwolf.utils.openFilePicker](overwolf-utils#openfilepickerfilter-initialpath-callback) - now accepts multiple selection of files.  The selected files will be returned on the callback as an array.
 * [overwolf.settings.setExtensionSettings](overwolf-settings#setextensionsettingsextensionsettings-callback) - added new property "exit_overwolf_on_exit".  
   Close OW client after closing CurseForge apps.
+* [overwolf.io.listenOnFile](overwolf-io#listenonfileid-path-option-callback) - add an indication that the watching on file started successfully.
 
 #### Platform
 
 * Release phasing - keep same distribution per release.  
   Now, when you release version 1.0 to 10% of your users using the phase system, and found a major bug - you can release an immediate fix 1.1 that target the same 10% of your users.
-* Aero-snap support for native windows - Resizable windows should support aero-snap (winkey arrows and sticky-behaviour to screen edges).
+* <a href="https://support.microsoft.com/en-us/windows/snap-your-windows-885a9b1e-a983-a3b1-16cd-c531795e6241" target="_blank">Aero-snap</a> support for native windows - Resizable native windows should support aero-snap (winkey + arrows and sticky-behaviour to screen edges).
 
 #### Bug fixes
 
-* [overwolf.io.listenOnFile](overwolf-io#listenonfileid-path-option-callback) - add an indication that the watching on file started successfully.
+* Full-screen embedded videos no longer automatically repositioned in the top-left corner.
+* Fixed an exception that could occur when shutting down Overwolf.
+* Fixed a bug where the Windows 10 Controlled folder access prevented users from saving Overwolf videos in the default system directory.
+* Rainbow 6: Siege - CPU usage no longer increases when the user Alt-Tabs to with Overwolf.
+* Fixed several issues in Rainbow 6: Siege related to users who have enabled RawInput.
+* Fixed an issue when using overwolf.extensions.relaunch too quickly.
 * Several security patches for ransomware protection and processes protection.
-* Stability patches - for better crash handling and to prevent high CPU usage in some cases. 
 
 #### Dev Console
 
