@@ -17,7 +17,6 @@ Note that the work on the documentation for this version is still in-progress.
 * [overwolf.utils.openFilePicker](overwolf-utils#openfilepickerfilter-initialpath-callback) - now accepts multiple selection of files.  The selected files will be returned on the callback as an array.
 * [overwolf.settings.setExtensionSettings](overwolf-settings#setextensionsettingsextensionsettings-callback) - added new property "exit_overwolf_on_exit".  
   Close OW client after closing CurseForge apps.
-* [overwolf.media.video.addWatermark](overwolf-media-videos#addwatermarksourcevideourl-watermarkurl-watermarkparams-callback) - added addWatermark api, used to add a  video/image watermark to a video.
 
 #### Platform
 
