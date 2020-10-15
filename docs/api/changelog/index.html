@@ -77,18 +77,23 @@
 <li><a href="overwolf-utils#openfilepickerfilter-initialpath-callback">overwolf.utils.openFilePicker</a> - now accepts multiple selection of files.  The selected files will be returned on the callback as an array.</li>
 <li><a href="overwolf-settings#setextensionsettingsextensionsettings-callback">overwolf.settings.setExtensionSettings</a> - added new property &quot;exit_overwolf_on_exit&quot;.<br>
 Close OW client after closing CurseForge apps.</li>
+<li><a href="overwolf-io#listenonfileid-path-option-callback">overwolf.io.listenOnFile</a> - add an indication that the watching on file started successfully.</li>
 </ul>
 <h4><a class="anchor" aria-hidden="true" id="platform"></a><a href="#platform" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Platform</h4>
 <ul>
 <li>Release phasing - keep same distribution per release.<br>
 Now, when you release version 1.0 to 10% of your users using the phase system, and found a major bug - you can release an immediate fix 1.1 that target the same 10% of your users.</li>
-<li>Aero-snap support for native windows - Resizable windows should support aero-snap (winkey arrows and sticky-behaviour to screen edges).</li>
+<li><a href="https://support.microsoft.com/en-us/windows/snap-your-windows-885a9b1e-a983-a3b1-16cd-c531795e6241" target="_blank">Aero-snap</a> support for native windows - Resizable native windows should support aero-snap (winkey + arrows and sticky-behaviour to screen edges).</li>
 </ul>
 <h4><a class="anchor" aria-hidden="true" id="bug-fixes"></a><a href="#bug-fixes" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Bug fixes</h4>
 <ul>
-<li><a href="overwolf-io#listenonfileid-path-option-callback">overwolf.io.listenOnFile</a> - add an indication that the watching on file started successfully.</li>
+<li>Full-screen embedded videos no longer automatically repositioned in the top-left corner.</li>
+<li>Fixed an exception that could occur when shutting down Overwolf.</li>
+<li>Fixed a bug where the Windows 10 Controlled folder access prevented users from saving Overwolf videos in the default system directory.</li>
+<li>Rainbow 6: Siege - CPU usage no longer increases when the user Alt-Tabs to with Overwolf.</li>
+<li>Fixed several issues in Rainbow 6: Siege related to users who have enabled RawInput.</li>
+<li>Fixed an issue when using overwolf.extensions.relaunch too quickly.</li>
 <li>Several security patches for ransomware protection and processes protection.</li>
-<li>Stability patches - for better crash handling and to prevent high CPU usage in some cases.</li>
 </ul>
 <h4><a class="anchor" aria-hidden="true" id="dev-console"></a><a href="#dev-console" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Dev Console</h4>
 <ul>
