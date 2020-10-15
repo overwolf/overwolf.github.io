@@ -21,8 +21,8 @@ Note that the work on the documentation for this version is still in-progress.
 
 #### Platform
 
-* Release phasing - keep same distribution per release.  
-  Now, when you release version 1.0 to 10% of your users using the phase system, and found a major bug - you can release an immediate fix 1.1 that target the same 10% of your users.
+* Release phasing - keep the same distribution per release.  
+  When you release version 1.0 to 10% of your users using the phase system and found a major bug - you can release an immediate fix 1.1 that targets the same 10% of your users.
 * <a href="https://support.microsoft.com/en-us/windows/snap-your-windows-885a9b1e-a983-a3b1-16cd-c531795e6241" target="_blank">Aero-snap</a> support for native windows - Resizable native windows should support aero-snap (winkey + arrows and sticky-behaviour to screen edges).
 
 #### Bug fixes
@@ -37,7 +37,7 @@ Note that the work on the documentation for this version is still in-progress.
 
 #### Dev Console
 
-* We added a "per-version" retention report, to compare retention between different app versions. You can see it on your board.
+* We added a "per-version" retention report to compare retention between different app versions. You can see it on your board.
 
 #### Game events
 
