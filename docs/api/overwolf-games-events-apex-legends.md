@@ -266,6 +266,10 @@ kill | victimName                              | Local player killed another pla
 knockdown | victimName                              | Local player knocked out another player. `{"victimName":"J0GUR7"}` |                    |    130.0      | 
 assist | victimName                              | Local player participated in a team member’s kill.</br></br>Provided values:</br>1. victimName</br>2. type - knockdown / elimination</br></br>Example:</br></br>`{"victimName":"VioletAlbicocca","type":"knockdown"}` |                    |    130.0      | 
 
+#### *kill* note
+
+* Currently performing an execution has a chance to not catch a kill event. It is a known issue and we're currently working on a fix.
+
 ## revive
 
 ### Events
