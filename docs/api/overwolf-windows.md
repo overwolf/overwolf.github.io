@@ -84,6 +84,13 @@ Please make sure to read our guide on [how to use Overwolf windows](../topics/us
 * [overwolf.windows.DragMovedResult](#dragmovedresult-object) Object
 * [overwolf.windows.DragResizeResult](#dragresizeresult-object) Object
 * [overwolf.windows.WindowIdResult](#windowidresult-object) Object
+* [overwolf.windows.GetWindowStateResult](#getwindowstateresult-object) Object
+* [overwolf.windows.GetWindowStatesResult](#getwindowstatesresult-object) Object
+* [overwolf.windows.IsMutedResult](#ismutedresult-object) Object
+* [overwolf.windows.IsWindowVisibleToUserResult](#iswindowvisibletouserresult-object) Object
+* [overwolf.windows.DisplayMessageBoxResult](#displaymessageboxresult-object) Object
+
+
 
 ## getMainWindow()
 #### Version added: 0.113
@@ -349,21 +356,7 @@ callback            | [(Result: WindowIdResult)](#windowidresult-object) => void
 Parameter           | Type       | Description                                                                                    |
 --------------------| -----------| -----------------------------------------------------------------------------------------------|
 windowId	          | string     | The id or name of the window to restore                                                        |
-callback            | function   | Called with the window state                                                                   |
-
-#### Callback argument: Success
-
-Note: the callback param "window_state_ex" returns one of these states: [closed | minimized | hidden | normal | maximized]
-
-```json
-{
-   "success": true,
-   "status": "success", //for backward compatibility
-   "window_id": "Window_Extension_onemchifcjibofkgemelmnjeialamgnigfpomeih",
-   "window_state": "minimized", //deprecated and kept only for backward compatibility
-   "window_state_ex": "hidden" //always use this param to get the state of the window.
-}
-```
+callback            | [(Result: GetWindowStateResult)](#getwindowstateresult-object) => void   | Called with the window state     |
 
 ## getWindowsStates(callback)
 #### Version added: 0.90
@@ -372,39 +365,17 @@ Note: the callback param "window_state_ex" returns one of these states: [closed 
 
 Parameter           | Type       | Description                                                                                    |
 --------------------| -----------| -----------------------------------------------------------------------------------------------|
-callback            | function   | Called with an array containing the states of the windows                                      |
-
-#### Callback argument: Success
-
-```json
-{
-    "success": true,
-    "status": "success", //for backward compatibility
-    "result": {
-        "index": "normal",
-        "settings": "minimized",
-        "notice": "closed"
-    }
-}
-```
+callback            | [(Result: GetWindowStatesResult)](#getwindowstatesresult-object) => void   | Called with an array containing the states of the windows     |
 
 ## openOptionsPage(callback)
 #### Version added: 0.89
 
 > Opens the options page specified in the manifest file. Does nothing if no such page has been specified.
 
-Parameter           | Type       | Description                                                                                    |
---------------------| -----------| -----------------------------------------------------------------------------------------------|
-callback            | function   | A callback function which will be called with the status of the request                        |
+Parameter           | Type             | Description                                         |
+--------------------| -----------------|-----------------------------------------------------|
+callback            | (Result) => void | Reports success or failure                          |
 
-#### Callback argument: Success
-
-```json
-{ 
-  "success": true,
-  "status": "success" //for backward compatibility 
-}
-```
 
 ## setDesktopOnly(windowId, shouldBeDesktopOnly, callback)
 #### Version added: 0.89
@@ -413,19 +384,9 @@ callback            | function   | A callback function which will be called with
 
 Parameter           | Type       | Description                                                                                    |
 --------------------| -----------| -----------------------------------------------------------------------------------------------|
-windowId	        | string     | The id or name of the window to set                                                            |
+windowId	          | string     | The id or name of the window to set                                                            |
 shouldBeDesktopOnly	| bool       |                                                                                                |
-callback            | function   | A callback function which will be called with the status of the request                        |
-
-#### Callback argument: Success
-
-```json
-{
-  "success": true,
-  "status": "success", //for backward compatibility
-  "window_id": "Window_Extension_mhlpbbigoglahfnkpekoamfknlnaneebgodenaam"
-}
-```
+callback            | [(Result: WindowIdResult)](#windowidresult-object) => void   | Called after the window was hidden           |
 
 ## setRestoreAnimationsEnabled(windowId, shouldEnableAnimations, callback)
 #### Version added: 0.89
@@ -434,19 +395,9 @@ callback            | function   | A callback function which will be called with
 
 Parameter              | Type       | Description                                                                                    |
 -----------------------| -----------| -----------------------------------------------------------------------------------------------|
-windowId	           | string     | The id or name of the window to set                                                            |
+windowId	             | string     | The id or name of the window to set                                                            |
 shouldEnableAnimations | bool       |                                                                                                |
-callback               | function   | A callback function which will be called with the status of the request                        |
-
-#### Callback argument: Success
-
-```json
-{
-  "success": true,
-  "status": "success", //for backward compatibility
-  "window_id": "Window_Extension_mhlpbbigoglahfnkpekoamfknlnaneebgodenaam"
-}
-```
+callback               | [(Result: WindowIdResult)](#windowidresult-object) => void   | Called after the window was hidden           |
 
 ## setTopmost(windowId, shouldBeTopmost, callback)
 #### Version added: 0.89
@@ -455,18 +406,9 @@ callback               | function   | A callback function which will be called w
 
 Parameter              | Type       | Description                                                                                    |
 -----------------------| -----------| -----------------------------------------------------------------------------------------------|
-windowId	           | string     | The id or name of the window to set                                                            |
+windowId	             | string     | The id or name of the window to set                                                            |
 shouldBeTopmost	       | bool       |                                                                                                |
-callback               | function   | A callback function which will be called with the status of the request                        |
-
-#### Callback argument: Success
-
-```json
-{ 
-  "success": true,
-    "status": "success" //for backward compatibility
- }
-```
+callback               | (Result) => void | Reports success or failure                                                               |
 
 ## sendToBack(windowId, callback)
 #### Version added: 0.89
@@ -475,18 +417,9 @@ callback               | function   | A callback function which will be called w
 
 Parameter              | Type       | Description                                                                                    |
 -----------------------| -----------| -----------------------------------------------------------------------------------------------|
-windowId	           | string     | The id or name of the window to set                                                            |
+windowId	             | string     | The id or name of the window to set                                                            |
 shouldBeTopmost	       | bool       |                                                                                                |
-callback               | function   | A callback function which will be called with the status of the request                        |
-
-#### Callback argument: Success
-
-```json
-{ 
-  "success": true,
-    "status": "success" //for backward compatibility
-}
-```
+callback               | (Result) => void | Reports success or failure                                                               |
 
 ## sendMessage(windowId, messageId, messageContent, callback)
 #### Version added: 0.92
@@ -504,21 +437,12 @@ Parameter              | Type       | Description                               
 windowId	             | string     | The id or name of the window to send the message to                                            |
 messageId		           | string     | A message id                                                                                   |
 messageContent	       | Object     | The content of the message                                                                     |
-callback               | function   | A callback function which will be called with the status of the request                        |
+callback               | (Result) => void | Reports success or failure                                                               |
 
 #### Usage example
 
 ```js
 overwolf.windows.sendMessage('secondWindow', '1', 'hello second window', ()=>{console.log('Message sent to window "secondWindow"')})
-```
-
-#### Callback argument: Success
-
-```json
-{ 
-  "success": true,
-    "status": "success" //for backward compatibility
- }
 ```
 
 ## setWindowStyle(windowId, style, callback)
@@ -528,18 +452,9 @@ overwolf.windows.sendMessage('secondWindow', '1', 'hello second window', ()=>{co
 
 Parameter              | Type                                  | Description                                                               |
 -----------------------| --------------------------------------| --------------------------------------------------------------------------|
-windowId	           | string                                | The id or name of the window to style                                     |
-style			       | [WindowStyle](#windowstyle-enum) Enum | The style to be added                                                     |
-callback               | function                              | A callback function which will be called with the status of the request   |
-
-#### Callback argument: Success
-
-```json
-{ 
-  "success": true,
-    "status": "success" //for backward compatibility
- }
-```
+windowId	             | string                                | The id or name of the window to style                                     |
+style			             | [WindowStyle](#windowstyle-enum) Enum | The style to be added                                                     |
+callback               | (Result) => void                      | Reports success or failure                                                |
 
 ## removeWindowStyle(windowId, style, callback)
 #### Version added: 0.98
@@ -548,18 +463,9 @@ callback               | function                              | A callback func
 
 Parameter              | Type                                  | Description                                                               |
 -----------------------| --------------------------------------| --------------------------------------------------------------------------|
-windowId	           | string                                | The id or name of the window to style                                     |
-style			       | [WindowStyle](#windowstyle-enum) Enum | The style to be remvoed                                                   |
-callback               | function                              | A callback function which will be called with the status of the request   |
-
-#### Callback argument: Success
-
-```json
-{ 
-  "success": true,
-    "status": "success" //for backward compatibility
- }
-```
+windowId	             | string                                | The id or name of the window to style                                     |
+style			             | [WindowStyle](#windowstyle-enum) Enum | The style to be remvoed                                                   |
+callback               | (Result) => void                      | Reports success or failure                                                |
 
 ## getOpenWindows(callback)
 #### Version added: 0.92
@@ -582,8 +488,8 @@ callback               | function                              | A callback func
 
 Parameter              | Type                                  | Description                                                                                       |
 -----------------------| --------------------------------------| --------------------------------------------------------------------------------------------------|
-mute	               | bool                                  | Window mute state (true - mute is on, false - mute is off)                                        |
-callback               | function                              | Called with the result of the request                                                             |
+mute	                 | bool                                  | Window mute state (true - mute is on, false - mute is off)                                        |
+callback               | (Result) => void                      | Reports success or failure                                                                        |
 
 ## muteAll(callback)
 #### Version added: 0.102
@@ -601,7 +507,7 @@ callback               | (Result) => void                      | Called with the
 
 Parameter              | Type                                  | Description                                                                                       |
 -----------------------| --------------------------------------| --------------------------------------------------------------------------------------------------|
-callback               | function                              | Called with the result of the request `{"muted": true/false}`                                     |
+callback               | [(Result: IsMutedResult)](#ismutedresult-object) => void   | Called with the result of the request `{"muted": true/false}`                |
 
 ## isWindowVisibleToUser(callback)
 #### Version added: 0.102
@@ -614,30 +520,7 @@ callback               | function                              | Called with the
 
 Parameter              | Type                                  | Description                                                                                       |
 -----------------------| --------------------------------------| --------------------------------------------------------------------------------------------------|
-callback               | function                              | Called with the result of the request `{"muted": true/false}`                                     |
-
-#### Callback argument: Success
-
-A callback function which will be called with the status of the request.
-
-* “hidden” – The window is completely hidden.
-* “fully” – The window is fully visible to the user.
-* “partial” – The window is partially visible to the user (and partially covered by other window/s).
-
-```json
-{
-  "success": true,
-    "status": "success", //for backward compatibility
-    "visible": "hidden" | "fully" | "partial"}
-```
-
-#### Callback argument: Failure
-
-A callback function which will be called with the status of the request
-
-```json
-{ "status": "error", "reason": "something went wrong..." }
-```
+callback               | [(Result: IsWindowVisibleToUserResult)](#iswindowvisibletouserresult-object) => void  | Called with the result of the request `{"visible": hidden/fully/partial}`    |
 
 ## bringToFront(windowId, callback)
 #### Version added: 0.119
@@ -730,7 +613,7 @@ callback               | (Result) => void                      | Called with the
 Parameter              | Type                                              | Description                                                               |
 -----------------------| --------------------------------------------------| --------------------------------------------------------------------------|
 messageParams		       | [MessageBoxParams](#messageboxparams-object) Object  | The type and texts that the message prompt will have                      |
-callback               | function                                          | Returns the user's action (confirmed = true / false)                      |
+callback               | [(Result: DisplayMessageBoxResult)](#displaymessageboxresult-object) => void    | Returns the user's action (confirmed = true / false)   |
 
 ## isAccelreatedOSR(callback)
 #### Version added: 0.126
@@ -745,7 +628,7 @@ The OSR acceleration feature is is no longer supported and maintained.
 
 Parameter              | Type                                              | Description                                                               |
 -----------------------| --------------------------------------------------| --------------------------------------------------------------------------|
-callback               | function                                          | Returns the user's action (confirmed = true / false)                      |
+callback               | (Result) => void                                  | Called with the result of the request                                     |
 
 #### Callback argument: Success
 
@@ -756,16 +639,9 @@ A callback function which will be called with the status of the request
   "success": true,
   "status": "success", //for backward compatibility
   "accelerated":false,
-  "supported":true
+  "supported":true,
+  "optimized": true
 }
-```
-
-#### Callback argument: Failure
-
-A callback function which will be called with the status of the request
-
-```json
-{ "status": "error", "error": "something went wrong..." }
 ```
 
 ## setMinSize(windowId, width, height, callback)
@@ -1174,5 +1050,81 @@ window_id         | string        |                         |
 {
     "success": true,
     "window_id": "Window_Extension_nhmkaollkcmjiecdnnjmgfifjgkfegkljnjjbipp"
+}
+```
+
+## GetWindowStateResult Object
+#### Version added: 0.149
+
+> Container for the window states.
+
+Parameter         | Type          | Description             |
+------------------| --------------| ----------------------- |
+window_id         | string        |                         | 
+window_state      | string        |                         | 
+window_state_ex   |  [WindowStateEx](#windowstateex-enum) enum        |          | 
+
+```json
+{
+   "success": true,
+   "status": "success", //deprecated and kept only for backward compatibility
+   "window_id": "Window_Extension_onemchifcjibofkgemelmnjeialamgnigfpomeih",
+   "window_state": "minimized", //deprecated and kept only for backward compatibility
+   "window_state_ex": "hidden" //always use this param to get the state of the window.
+}
+```
+
+## IsMutedResult Object
+#### Version added: 0.149
+
+> Container for the mute state.
+
+Parameter         | Type          | Description             |
+------------------| --------------| ----------------------- |
+muted             | boolean       |                         | 
+
+```json
+{
+  "success": true,
+  "status": "success", //deprecated and kept only for backward compatibility
+  "muted": true
+}
+```
+
+## IsWindowVisibleToUserResult Object
+#### Version added: 0.149
+
+> Container for the window visibility states.
+
+Parameter         | Type          | Description             |
+------------------| --------------| ----------------------- |
+visible           | string        |                         | 
+
+* "hidden" – The window is completely hidden.
+* "fully" – The window is fully visible to the user.
+* "partial" – The window is partially visible to the user (and partially covered by other window/s).
+
+```json
+{
+  "success": true,
+  "status": "success", //deprecated and kept only for backward compatibility
+  "hidden": true
+}
+```
+
+## displaymessageboxresult Object
+#### Version added: 0.149
+
+> Container for the window visibility states.
+
+Parameter         | Type          | Description             |
+------------------| --------------| ----------------------- |
+confirmed         | boolean       |                         | 
+
+```json
+{
+  "success": true,
+  "status": "success", //deprecated and kept only for backward compatibility
+  "confirmed": true
 }
 ```
