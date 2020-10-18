@@ -274,22 +274,12 @@ callback (Optional) | [(Result: WindowIdResult)](#windowidresult-object) => void
 Parameter           | Type       | Description                                                                                    |
 --------------------| -----------| -----------------------------------------------------------------------------------------------|
 windowId	          | string     | The id or name of the window to minimize                                                       |
-callback (Optional) | function   | Called after the window is minimized                                                           |
+callback (Optional) | [(Result: WindowIdResult)](#windowidresult-object) => void   | Called after the window is minimized         |
 
 **Notes**
 
 * This function will not work if the manifest [resizable flag](https://overwolf.github.io/docs/api/manifest-json#windows-resizable) is set to `false`.
 * When minimizing a **native** window, the window object values for `top`,`left`,`width`and `height` are unexpected and shouldn't be regarded.
-
-#### Callback argument: Success
-
-```json
-{
-  "success": true,
-  "status": "success", //for backward compatibility
-  "window_id": "Window_Extension_mhlpbbigoglahfnkpekoamfknlnaneebgodenaam"
-}
-```
 
 ## maximize(windowId, callback)
 #### Version added: 0.81
@@ -298,8 +288,8 @@ callback (Optional) | function   | Called after the window is minimized         
 
 Parameter           | Type       | Description                                                                                    |
 --------------------| -----------| -----------------------------------------------------------------------------------------------|
-windowId	          | string     | The id or name of the window to maximize                                                         |
-callback (Optional) | function   | Called after the window is maximized                                                           |
+windowId	          | string     | The id or name of the window to maximize                                                       |
+callback (Optional) | [(Result: WindowIdResult)](#windowidresult-object) => void   | Called after the window is maximized         |
 
 #### Notes
 
@@ -307,15 +297,6 @@ callback (Optional) | function   | Called after the window is maximized         
 
 * If you would like to "unmaximize" the window after calling "maximize()", you can call [window.restore()](#restorewindowid-callback), to restore the window to the previous size/position. 
 
-#### Callback argument: Success
-
-```json
-{
-  "success": true,
-  "status": "success", //for backward compatibility
-  "window_id": "Window_Extension_mhlpbbigoglahfnkpekoamfknlnaneebgodenaam"
-}
-```
 
 ## restore(windowId, callback)
 #### Version added: 0.78
@@ -325,17 +306,7 @@ callback (Optional) | function   | Called after the window is maximized         
 Parameter           | Type       | Description                                                                                    |
 --------------------| -----------| -----------------------------------------------------------------------------------------------|
 windowId	          | string     | The id of the window to restore                                                                |
-callback (Optional) | function   | Called after the window is restored                                                            |
-
-#### Callback argument: Success
-
-```json
-{
-  "success": true,
-  "status": "success", //for backward compatibility
-  "window_id": "Window_Extension_mhlpbbigoglahfnkpekoamfknlnaneebgodenaam"
-}
-```
+callback (Optional) | [(Result: WindowIdResult)](#windowidresult-object) => void   | Called after the window is restored          |
 
 #### Notes 
 
@@ -351,17 +322,8 @@ callback (Optional) | function   | Called after the window is restored          
 Parameter           | Type       | Description                                                                                    |
 --------------------| -----------| -----------------------------------------------------------------------------------------------|
 windowName	        | string     | The id of the window to restore                                                                |
-callback (Optional) | function   | Called after the window is restored                                                            |
+callback (Optional) | [(Result: WindowIdResult)](#windowidresult-object) => void   | Called after the window is restored          |
 
-#### Callback argument: Success
-
-```json
-{
-  "success": true,
-  "status": "success", //for backward compatibility
-  "window_id": "Window_Extension_mhlpbbigoglahfnkpekoamfknlnaneebgodenaam"
-}
-```
 #### Notes 
 
 * When restoring a minimized/maximized window, it restores the window to the previous size/position.
@@ -376,8 +338,8 @@ Note that the [tray icon](overwolf-os-tray#setmenumenu-callback) (if defined) vi
 
 Parameter           | Type       | Description                                                                                    |
 --------------------| -----------| -----------------------------------------------------------------------------------------------|
-windowId	        | string     | The id or name of the window to hide                                                           |
-callback            | function   |Called after the window was hidden                                                              |
+windowId	          | string     | The id or name of the window to hide                                                           |
+callback            | [(Result: WindowIdResult)](#windowidresult-object) => void   | Called after the window was hidden           |
 
 ## getWindowState(windowId, callback)
 #### Version added: 0.85
@@ -630,7 +592,7 @@ callback               | function                              | Called with the
 
 Parameter              | Type                                  | Description                                                                                       |
 -----------------------| --------------------------------------| --------------------------------------------------------------------------------------------------|
-callback               | function                              | Called with the result of the request                                                             |
+callback               | (Result) => void                      | Called with the result of the request                                                             |
 
 ## isMuted(callback)
 #### Version added: 0.102
@@ -684,8 +646,8 @@ A callback function which will be called with the status of the request
 
 Parameter              | Type                                  | Description                                                               |
 -----------------------| --------------------------------------| --------------------------------------------------------------------------|
-windowId	           | string                                | The id or name of the window                                              |
-callback               | function                              | Called with the result of the request                                     |
+windowId	             | string                                | The id or name of the window                                              |
+callback               | (Result) => void                      | Called with the result of the request                                     |
 
 ## bringToFront(callback)
 #### Version added: 0.119
@@ -697,7 +659,7 @@ Note: Using this method while you are playing a game in a fullscreen mode, will 
 
 Parameter              | Type                                  | Description                                                               |
 -----------------------| --------------------------------------| --------------------------------------------------------------------------|
-callback               | function                              | Called with the result of the request                                     |
+callback               | (Result) => void                      | Called with the result of the request                                     |
 
 ## bringToFront(grabFocus, callback)
 #### Version added: 0.124
@@ -708,8 +670,8 @@ Note: Using this method while you are playing a game in a fullscreen mode, will 
 
 Parameter              | Type                                  | Description                                                               |
 -----------------------| --------------------------------------| --------------------------------------------------------------------------|
-grabFocus		       | bool                                  | window will take system focus                                             |
-callback               | function                              | Called with the result of the request                                     |
+grabFocus		           | bool                                  | window will take system focus                                             |
+callback               | (Result) => void                      | Called with the result of the request                                     |
 
 ## bringToFront(windowId, grabFocus, callback)
 #### Version added: 0.124
@@ -720,9 +682,9 @@ Note: Using this method while you are playing a game in a fullscreen mode, will 
 
 Parameter              | Type                                  | Description                                                               |
 -----------------------| --------------------------------------| --------------------------------------------------------------------------|
-windowId	           | string                                | The id or name of the window                                              |
-grabFocus		       | bool                                  | window will take system focus                                             |
-callback               | function                              | Called with the result of the request                                     |
+windowId	             | string                                | The id or name of the window                                              |
+grabFocus		           | bool                                  | window will take system focus                                             |
+callback               | (Result) => void                      | Called with the result of the request                                     |
 
 ## setPosition(properties, callback)
 #### Version added: 0.123
@@ -732,7 +694,7 @@ callback               | function                              | Called with the
 Parameter              | Type                                  | Description                                                               |
 -----------------------| --------------------------------------| --------------------------------------------------------------------------|
 properties	           | [SetWindowPositionProperties](#setwindowpositionproperties-object) Object  | The desired location in the windows stack    |
-callback               | function                              | Called with the result of the request                                     |
+callback               | (Result) => void                      | Called with the result of the request                                     |
 
 #### Usage Example
 
@@ -756,9 +718,9 @@ overwolf.windows.setPosition({
 
 Parameter              | Type                                  | Description                                                               |
 -----------------------| --------------------------------------| --------------------------------------------------------------------------|
-windowId	           | string                                | The id or name of the window                                              |
+windowId	             | string                                | The id or name of the window                                              |
 properties	           | [SetWindowPositionProperties](#setwindowpositionproperties-object) Object  | The desired location in the windows stack    |
-callback               | function                              | Called with the result of the request                                     |
+callback               | (Result) => void                      | Called with the result of the request                                     |
 
 ## displayMessageBox(messageParams, callback)
 #### Version added: 0.119
@@ -767,7 +729,7 @@ callback               | function                              | Called with the
 
 Parameter              | Type                                              | Description                                                               |
 -----------------------| --------------------------------------------------| --------------------------------------------------------------------------|
-messageParams		   | [MessageBoxParams](#messageboxparams-object) Object  | The type and texts that the message prompt will have                      |
+messageParams		       | [MessageBoxParams](#messageboxparams-object) Object  | The type and texts that the message prompt will have                      |
 callback               | function                                          | Returns the user's action (confirmed = true / false)                      |
 
 ## isAccelreatedOSR(callback)
@@ -816,7 +778,7 @@ Parameter              | Type                                              | Des
 windowId		           | string                                            | The id of the window                                                      |
 width		               | int                                               | The new minimum width                                                     |
 height		             | int                                               | The new minimum height                                                    |
-callback               | function                                          | Called with the result of the request                                     |
+callback               | (Result) => void                                  | Called with the result of the request                                     |
 
 ## flash(windowId, behavior,callback)
 #### Version added: 0.146
@@ -827,7 +789,7 @@ Parameter              | Type                                              | Des
 -----------------------| --------------------------------------------------| --------------------------------------------------------------------------|
 windowId		           | string                                            | The id of the window to flash                                             |
 behavior               | [FlashBehavior](#flashbehavior-enum) enum         | Defines window flashing behavior                                          |
-callback               | function                                          | Called after the window is flashed                                        |
+callback               | (Result) => void                                  | Called with the result of the request                                     |
 
 ## setZoom(winzoomFactorowId, windowId)
 #### Version added: 0.154
