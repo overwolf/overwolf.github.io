@@ -150,6 +150,11 @@
 <li><a href="#dragmovedresult-object">overwolf.windows.DragMovedResult</a> Object</li>
 <li><a href="#dragresizeresult-object">overwolf.windows.DragResizeResult</a> Object</li>
 <li><a href="#windowidresult-object">overwolf.windows.WindowIdResult</a> Object</li>
+<li><a href="#getwindowstateresult-object">overwolf.windows.GetWindowStateResult</a> Object</li>
+<li><a href="#getwindowstatesresult-object">overwolf.windows.GetWindowStatesResult</a> Object</li>
+<li><a href="#ismutedresult-object">overwolf.windows.IsMutedResult</a> Object</li>
+<li><a href="#iswindowvisibletouserresult-object">overwolf.windows.IsWindowVisibleToUserResult</a> Object</li>
+<li><a href="#displaymessageboxresult-object">overwolf.windows.DisplayMessageBoxResult</a> Object</li>
 </ul>
 <h2><a class="anchor" aria-hidden="true" id="getmainwindow"></a><a href="#getmainwindow" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>getMainWindow()</h2>
 <h4><a class="anchor" aria-hidden="true" id="version-added-0113"></a><a href="#version-added-0113" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Version added: 0.113</h4>
@@ -468,19 +473,9 @@ overwolf.windows.changeSize(sizeSettings ,<span class="hljs-built_in">console</s
 </thead>
 <tbody>
 <tr><td>windowId</td><td>string</td><td>The id or name of the window to restore</td></tr>
-<tr><td>callback</td><td>function</td><td>Called with the window state</td></tr>
+<tr><td>callback</td><td><a href="#getwindowstateresult-object">(Result: GetWindowStateResult)</a> =&gt; void</td><td>Called with the window state</td></tr>
 </tbody>
 </table>
-<h4><a class="anchor" aria-hidden="true" id="callback-argument-success"></a><a href="#callback-argument-success" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Callback argument: Success</h4>
-<p>Note: the callback param &quot;window_state_ex&quot; returns one of these states: [closed | minimized | hidden | normal | maximized]</p>
-<pre><code class="hljs css language-json">{
-   <span class="hljs-attr">"success"</span>: <span class="hljs-literal">true</span>,
-   <span class="hljs-attr">"status"</span>: <span class="hljs-string">"success"</span>, <span class="hljs-comment">//for backward compatibility</span>
-   <span class="hljs-attr">"window_id"</span>: <span class="hljs-string">"Window_Extension_onemchifcjibofkgemelmnjeialamgnigfpomeih"</span>,
-   <span class="hljs-attr">"window_state"</span>: <span class="hljs-string">"minimized"</span>, <span class="hljs-comment">//deprecated and kept only for backward compatibility</span>
-   <span class="hljs-attr">"window_state_ex"</span>: <span class="hljs-string">"hidden"</span> <span class="hljs-comment">//always use this param to get the state of the window.</span>
-}
-</code></pre>
 <h2><a class="anchor" aria-hidden="true" id="getwindowsstatescallback"></a><a href="#getwindowsstatescallback" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>getWindowsStates(callback)</h2>
 <h4><a class="anchor" aria-hidden="true" id="version-added-090"></a><a href="#version-added-090" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Version added: 0.90</h4>
 <blockquote>
@@ -491,20 +486,9 @@ overwolf.windows.changeSize(sizeSettings ,<span class="hljs-built_in">console</s
 <tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
 </thead>
 <tbody>
-<tr><td>callback</td><td>function</td><td>Called with an array containing the states of the windows</td></tr>
+<tr><td>callback</td><td><a href="#getwindowstatesresult-object">(Result: GetWindowStatesResult)</a> =&gt; void</td><td>Called with an array containing the states of the windows</td></tr>
 </tbody>
 </table>
-<h4><a class="anchor" aria-hidden="true" id="callback-argument-success-1"></a><a href="#callback-argument-success-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Callback argument: Success</h4>
-<pre><code class="hljs css language-json">{
-    <span class="hljs-attr">"success"</span>: <span class="hljs-literal">true</span>,
-    <span class="hljs-attr">"status"</span>: <span class="hljs-string">"success"</span>, <span class="hljs-comment">//for backward compatibility</span>
-    <span class="hljs-attr">"result"</span>: {
-        <span class="hljs-attr">"index"</span>: <span class="hljs-string">"normal"</span>,
-        <span class="hljs-attr">"settings"</span>: <span class="hljs-string">"minimized"</span>,
-        <span class="hljs-attr">"notice"</span>: <span class="hljs-string">"closed"</span>
-    }
-}
-</code></pre>
 <h2><a class="anchor" aria-hidden="true" id="openoptionspagecallback"></a><a href="#openoptionspagecallback" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>openOptionsPage(callback)</h2>
 <h4><a class="anchor" aria-hidden="true" id="version-added-089"></a><a href="#version-added-089" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Version added: 0.89</h4>
 <blockquote>
@@ -515,15 +499,9 @@ overwolf.windows.changeSize(sizeSettings ,<span class="hljs-built_in">console</s
 <tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
 </thead>
 <tbody>
-<tr><td>callback</td><td>function</td><td>A callback function which will be called with the status of the request</td></tr>
+<tr><td>callback</td><td>(Result) =&gt; void</td><td>Reports success or failure</td></tr>
 </tbody>
 </table>
-<h4><a class="anchor" aria-hidden="true" id="callback-argument-success-2"></a><a href="#callback-argument-success-2" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Callback argument: Success</h4>
-<pre><code class="hljs css language-json">{ 
-  <span class="hljs-attr">"success"</span>: <span class="hljs-literal">true</span>,
-  <span class="hljs-attr">"status"</span>: <span class="hljs-string">"success"</span> <span class="hljs-comment">//for backward compatibility </span>
-}
-</code></pre>
 <h2><a class="anchor" aria-hidden="true" id="setdesktoponlywindowid-shouldbedesktoponly-callback"></a><a href="#setdesktoponlywindowid-shouldbedesktoponly-callback" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>setDesktopOnly(windowId, shouldBeDesktopOnly, callback)</h2>
 <h4><a class="anchor" aria-hidden="true" id="version-added-089-1"></a><a href="#version-added-089-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Version added: 0.89</h4>
 <blockquote>
@@ -536,16 +514,9 @@ overwolf.windows.changeSize(sizeSettings ,<span class="hljs-built_in">console</s
 <tbody>
 <tr><td>windowId</td><td>string</td><td>The id or name of the window to set</td></tr>
 <tr><td>shouldBeDesktopOnly</td><td>bool</td><td></td></tr>
-<tr><td>callback</td><td>function</td><td>A callback function which will be called with the status of the request</td></tr>
+<tr><td>callback</td><td><a href="#windowidresult-object">(Result: WindowIdResult)</a> =&gt; void</td><td>Called after the window was hidden</td></tr>
 </tbody>
 </table>
-<h4><a class="anchor" aria-hidden="true" id="callback-argument-success-3"></a><a href="#callback-argument-success-3" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Callback argument: Success</h4>
-<pre><code class="hljs css language-json">{
-  <span class="hljs-attr">"success"</span>: <span class="hljs-literal">true</span>,
-  <span class="hljs-attr">"status"</span>: <span class="hljs-string">"success"</span>, <span class="hljs-comment">//for backward compatibility</span>
-  <span class="hljs-attr">"window_id"</span>: <span class="hljs-string">"Window_Extension_mhlpbbigoglahfnkpekoamfknlnaneebgodenaam"</span>
-}
-</code></pre>
 <h2><a class="anchor" aria-hidden="true" id="setrestoreanimationsenabledwindowid-shouldenableanimations-callback"></a><a href="#setrestoreanimationsenabledwindowid-shouldenableanimations-callback" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>setRestoreAnimationsEnabled(windowId, shouldEnableAnimations, callback)</h2>
 <h4><a class="anchor" aria-hidden="true" id="version-added-089-2"></a><a href="#version-added-089-2" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Version added: 0.89</h4>
 <blockquote>
@@ -558,16 +529,9 @@ overwolf.windows.changeSize(sizeSettings ,<span class="hljs-built_in">console</s
 <tbody>
 <tr><td>windowId</td><td>string</td><td>The id or name of the window to set</td></tr>
 <tr><td>shouldEnableAnimations</td><td>bool</td><td></td></tr>
-<tr><td>callback</td><td>function</td><td>A callback function which will be called with the status of the request</td></tr>
+<tr><td>callback</td><td><a href="#windowidresult-object">(Result: WindowIdResult)</a> =&gt; void</td><td>Called after the window was hidden</td></tr>
 </tbody>
 </table>
-<h4><a class="anchor" aria-hidden="true" id="callback-argument-success-4"></a><a href="#callback-argument-success-4" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Callback argument: Success</h4>
-<pre><code class="hljs css language-json">{
-  <span class="hljs-attr">"success"</span>: <span class="hljs-literal">true</span>,
-  <span class="hljs-attr">"status"</span>: <span class="hljs-string">"success"</span>, <span class="hljs-comment">//for backward compatibility</span>
-  <span class="hljs-attr">"window_id"</span>: <span class="hljs-string">"Window_Extension_mhlpbbigoglahfnkpekoamfknlnaneebgodenaam"</span>
-}
-</code></pre>
 <h2><a class="anchor" aria-hidden="true" id="settopmostwindowid-shouldbetopmost-callback"></a><a href="#settopmostwindowid-shouldbetopmost-callback" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>setTopmost(windowId, shouldBeTopmost, callback)</h2>
 <h4><a class="anchor" aria-hidden="true" id="version-added-089-3"></a><a href="#version-added-089-3" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Version added: 0.89</h4>
 <blockquote>
@@ -580,15 +544,9 @@ overwolf.windows.changeSize(sizeSettings ,<span class="hljs-built_in">console</s
 <tbody>
 <tr><td>windowId</td><td>string</td><td>The id or name of the window to set</td></tr>
 <tr><td>shouldBeTopmost</td><td>bool</td><td></td></tr>
-<tr><td>callback</td><td>function</td><td>A callback function which will be called with the status of the request</td></tr>
+<tr><td>callback</td><td>(Result) =&gt; void</td><td>Reports success or failure</td></tr>
 </tbody>
 </table>
-<h4><a class="anchor" aria-hidden="true" id="callback-argument-success-5"></a><a href="#callback-argument-success-5" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Callback argument: Success</h4>
-<pre><code class="hljs css language-json">{ 
-  <span class="hljs-attr">"success"</span>: <span class="hljs-literal">true</span>,
-    <span class="hljs-attr">"status"</span>: <span class="hljs-string">"success"</span> <span class="hljs-comment">//for backward compatibility</span>
- }
-</code></pre>
 <h2><a class="anchor" aria-hidden="true" id="sendtobackwindowid-callback"></a><a href="#sendtobackwindowid-callback" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>sendToBack(windowId, callback)</h2>
 <h4><a class="anchor" aria-hidden="true" id="version-added-089-4"></a><a href="#version-added-089-4" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Version added: 0.89</h4>
 <blockquote>
@@ -601,15 +559,9 @@ overwolf.windows.changeSize(sizeSettings ,<span class="hljs-built_in">console</s
 <tbody>
 <tr><td>windowId</td><td>string</td><td>The id or name of the window to set</td></tr>
 <tr><td>shouldBeTopmost</td><td>bool</td><td></td></tr>
-<tr><td>callback</td><td>function</td><td>A callback function which will be called with the status of the request</td></tr>
+<tr><td>callback</td><td>(Result) =&gt; void</td><td>Reports success or failure</td></tr>
 </tbody>
 </table>
-<h4><a class="anchor" aria-hidden="true" id="callback-argument-success-6"></a><a href="#callback-argument-success-6" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Callback argument: Success</h4>
-<pre><code class="hljs css language-json">{ 
-  <span class="hljs-attr">"success"</span>: <span class="hljs-literal">true</span>,
-    <span class="hljs-attr">"status"</span>: <span class="hljs-string">"success"</span> <span class="hljs-comment">//for backward compatibility</span>
-}
-</code></pre>
 <h2><a class="anchor" aria-hidden="true" id="sendmessagewindowid-messageid-messagecontent-callback"></a><a href="#sendmessagewindowid-messageid-messagecontent-callback" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>sendMessage(windowId, messageId, messageContent, callback)</h2>
 <h4><a class="anchor" aria-hidden="true" id="version-added-092"></a><a href="#version-added-092" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Version added: 0.92</h4>
 <blockquote>
@@ -632,17 +584,11 @@ The window receiving the message needs to listen on the <a href="#onmessagerecei
 <tr><td>windowId</td><td>string</td><td>The id or name of the window to send the message to</td></tr>
 <tr><td>messageId</td><td>string</td><td>A message id</td></tr>
 <tr><td>messageContent</td><td>Object</td><td>The content of the message</td></tr>
-<tr><td>callback</td><td>function</td><td>A callback function which will be called with the status of the request</td></tr>
+<tr><td>callback</td><td>(Result) =&gt; void</td><td>Reports success or failure</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="usage-example-2"></a><a href="#usage-example-2" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Usage example</h4>
 <pre><code class="hljs css language-js">overwolf.windows.sendMessage(<span class="hljs-string">'secondWindow'</span>, <span class="hljs-string">'1'</span>, <span class="hljs-string">'hello second window'</span>, ()=&gt;{<span class="hljs-built_in">console</span>.log(<span class="hljs-string">'Message sent to window "secondWindow"'</span>)})
-</code></pre>
-<h4><a class="anchor" aria-hidden="true" id="callback-argument-success-7"></a><a href="#callback-argument-success-7" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Callback argument: Success</h4>
-<pre><code class="hljs css language-json">{ 
-  <span class="hljs-attr">"success"</span>: <span class="hljs-literal">true</span>,
-    <span class="hljs-attr">"status"</span>: <span class="hljs-string">"success"</span> <span class="hljs-comment">//for backward compatibility</span>
- }
 </code></pre>
 <h2><a class="anchor" aria-hidden="true" id="setwindowstylewindowid-style-callback"></a><a href="#setwindowstylewindowid-style-callback" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>setWindowStyle(windowId, style, callback)</h2>
 <h4><a class="anchor" aria-hidden="true" id="version-added-098"></a><a href="#version-added-098" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Version added: 0.98</h4>
@@ -656,15 +602,9 @@ The window receiving the message needs to listen on the <a href="#onmessagerecei
 <tbody>
 <tr><td>windowId</td><td>string</td><td>The id or name of the window to style</td></tr>
 <tr><td>style</td><td><a href="#windowstyle-enum">WindowStyle</a> Enum</td><td>The style to be added</td></tr>
-<tr><td>callback</td><td>function</td><td>A callback function which will be called with the status of the request</td></tr>
+<tr><td>callback</td><td>(Result) =&gt; void</td><td>Reports success or failure</td></tr>
 </tbody>
 </table>
-<h4><a class="anchor" aria-hidden="true" id="callback-argument-success-8"></a><a href="#callback-argument-success-8" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Callback argument: Success</h4>
-<pre><code class="hljs css language-json">{ 
-  <span class="hljs-attr">"success"</span>: <span class="hljs-literal">true</span>,
-    <span class="hljs-attr">"status"</span>: <span class="hljs-string">"success"</span> <span class="hljs-comment">//for backward compatibility</span>
- }
-</code></pre>
 <h2><a class="anchor" aria-hidden="true" id="removewindowstylewindowid-style-callback"></a><a href="#removewindowstylewindowid-style-callback" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>removeWindowStyle(windowId, style, callback)</h2>
 <h4><a class="anchor" aria-hidden="true" id="version-added-098-1"></a><a href="#version-added-098-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Version added: 0.98</h4>
 <blockquote>
@@ -677,15 +617,9 @@ The window receiving the message needs to listen on the <a href="#onmessagerecei
 <tbody>
 <tr><td>windowId</td><td>string</td><td>The id or name of the window to style</td></tr>
 <tr><td>style</td><td><a href="#windowstyle-enum">WindowStyle</a> Enum</td><td>The style to be remvoed</td></tr>
-<tr><td>callback</td><td>function</td><td>A callback function which will be called with the status of the request</td></tr>
+<tr><td>callback</td><td>(Result) =&gt; void</td><td>Reports success or failure</td></tr>
 </tbody>
 </table>
-<h4><a class="anchor" aria-hidden="true" id="callback-argument-success-9"></a><a href="#callback-argument-success-9" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Callback argument: Success</h4>
-<pre><code class="hljs css language-json">{ 
-  <span class="hljs-attr">"success"</span>: <span class="hljs-literal">true</span>,
-    <span class="hljs-attr">"status"</span>: <span class="hljs-string">"success"</span> <span class="hljs-comment">//for backward compatibility</span>
- }
-</code></pre>
 <h2><a class="anchor" aria-hidden="true" id="getopenwindowscallback"></a><a href="#getopenwindowscallback" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>getOpenWindows(callback)</h2>
 <h4><a class="anchor" aria-hidden="true" id="version-added-092-1"></a><a href="#version-added-092-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Version added: 0.92</h4>
 <blockquote>
@@ -718,7 +652,7 @@ The window receiving the message needs to listen on the <a href="#onmessagerecei
 </thead>
 <tbody>
 <tr><td>mute</td><td>bool</td><td>Window mute state (true - mute is on, false - mute is off)</td></tr>
-<tr><td>callback</td><td>function</td><td>Called with the result of the request</td></tr>
+<tr><td>callback</td><td>(Result) =&gt; void</td><td>Reports success or failure</td></tr>
 </tbody>
 </table>
 <h2><a class="anchor" aria-hidden="true" id="muteallcallback"></a><a href="#muteallcallback" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>muteAll(callback)</h2>
@@ -744,7 +678,7 @@ The window receiving the message needs to listen on the <a href="#onmessagerecei
 <tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
 </thead>
 <tbody>
-<tr><td>callback</td><td>function</td><td>Called with the result of the request <code>{&quot;muted&quot;: true/false}</code></td></tr>
+<tr><td>callback</td><td><a href="#ismutedresult-object">(Result: IsMutedResult)</a> =&gt; void</td><td>Called with the result of the request <code>{&quot;muted&quot;: true/false}</code></td></tr>
 </tbody>
 </table>
 <h2><a class="anchor" aria-hidden="true" id="iswindowvisibletousercallback"></a><a href="#iswindowvisibletousercallback" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>isWindowVisibleToUser(callback)</h2>
@@ -764,25 +698,9 @@ The window receiving the message needs to listen on the <a href="#onmessagerecei
 <tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
 </thead>
 <tbody>
-<tr><td>callback</td><td>function</td><td>Called with the result of the request <code>{&quot;muted&quot;: true/false}</code></td></tr>
+<tr><td>callback</td><td><a href="#iswindowvisibletouserresult-object">(Result: IsWindowVisibleToUserResult)</a> =&gt; void</td><td>Called with the result of the request <code>{&quot;visible&quot;: hidden/fully/partial}</code></td></tr>
 </tbody>
 </table>
-<h4><a class="anchor" aria-hidden="true" id="callback-argument-success-10"></a><a href="#callback-argument-success-10" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Callback argument: Success</h4>
-<p>A callback function which will be called with the status of the request.</p>
-<ul>
-<li>“hidden” – The window is completely hidden.</li>
-<li>“fully” – The window is fully visible to the user.</li>
-<li>“partial” – The window is partially visible to the user (and partially covered by other window/s).</li>
-</ul>
-<pre><code class="hljs css language-json">{
-  <span class="hljs-attr">"success"</span>: <span class="hljs-literal">true</span>,
-    <span class="hljs-attr">"status"</span>: <span class="hljs-string">"success"</span>, <span class="hljs-comment">//for backward compatibility</span>
-    <span class="hljs-attr">"visible"</span>: <span class="hljs-string">"hidden"</span> | <span class="hljs-string">"fully"</span> | <span class="hljs-string">"partial"</span>}
-</code></pre>
-<h4><a class="anchor" aria-hidden="true" id="callback-argument-failure"></a><a href="#callback-argument-failure" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Callback argument: Failure</h4>
-<p>A callback function which will be called with the status of the request</p>
-<pre><code class="hljs css language-json">{ <span class="hljs-attr">"status"</span>: <span class="hljs-string">"error"</span>, <span class="hljs-attr">"reason"</span>: <span class="hljs-string">"something went wrong..."</span> }
-</code></pre>
 <h2><a class="anchor" aria-hidden="true" id="bringtofrontwindowid-callback"></a><a href="#bringtofrontwindowid-callback" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>bringToFront(windowId, callback)</h2>
 <h4><a class="anchor" aria-hidden="true" id="version-added-0119"></a><a href="#version-added-0119" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Version added: 0.119</h4>
 <blockquote>
@@ -893,7 +811,7 @@ The window receiving the message needs to listen on the <a href="#onmessagerecei
 </thead>
 <tbody>
 <tr><td>messageParams</td><td><a href="#messageboxparams-object">MessageBoxParams</a> Object</td><td>The type and texts that the message prompt will have</td></tr>
-<tr><td>callback</td><td>function</td><td>Returns the user's action (confirmed = true / false)</td></tr>
+<tr><td>callback</td><td><a href="#displaymessageboxresult-object">(Result: DisplayMessageBoxResult)</a> =&gt; void</td><td>Returns the user's action (confirmed = true / false)</td></tr>
 </tbody>
 </table>
 <h2><a class="anchor" aria-hidden="true" id="isaccelreatedosrcallback"></a><a href="#isaccelreatedosrcallback" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>isAccelreatedOSR(callback)</h2>
@@ -914,21 +832,18 @@ The window receiving the message needs to listen on the <a href="#onmessagerecei
 <tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
 </thead>
 <tbody>
-<tr><td>callback</td><td>function</td><td>Returns the user's action (confirmed = true / false)</td></tr>
+<tr><td>callback</td><td>(Result) =&gt; void</td><td>Called with the result of the request</td></tr>
 </tbody>
 </table>
-<h4><a class="anchor" aria-hidden="true" id="callback-argument-success-11"></a><a href="#callback-argument-success-11" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Callback argument: Success</h4>
+<h4><a class="anchor" aria-hidden="true" id="callback-argument-success"></a><a href="#callback-argument-success" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Callback argument: Success</h4>
 <p>A callback function which will be called with the status of the request</p>
 <pre><code class="hljs css language-json">{
   <span class="hljs-attr">"success"</span>: <span class="hljs-literal">true</span>,
   <span class="hljs-attr">"status"</span>: <span class="hljs-string">"success"</span>, <span class="hljs-comment">//for backward compatibility</span>
   <span class="hljs-attr">"accelerated"</span>:<span class="hljs-literal">false</span>,
-  <span class="hljs-attr">"supported"</span>:<span class="hljs-literal">true</span>
+  <span class="hljs-attr">"supported"</span>:<span class="hljs-literal">true</span>,
+  <span class="hljs-attr">"optimized"</span>: <span class="hljs-literal">true</span>
 }
-</code></pre>
-<h4><a class="anchor" aria-hidden="true" id="callback-argument-failure-1"></a><a href="#callback-argument-failure-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Callback argument: Failure</h4>
-<p>A callback function which will be called with the status of the request</p>
-<pre><code class="hljs css language-json">{ <span class="hljs-attr">"status"</span>: <span class="hljs-string">"error"</span>, <span class="hljs-attr">"error"</span>: <span class="hljs-string">"something went wrong..."</span> }
 </code></pre>
 <h2><a class="anchor" aria-hidden="true" id="setminsizewindowid-width-height-callback"></a><a href="#setminsizewindowid-width-height-callback" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>setMinSize(windowId, width, height, callback)</h2>
 <h4><a class="anchor" aria-hidden="true" id="version-added-0132"></a><a href="#version-added-0132" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Version added: 0.132</h4>
@@ -1388,7 +1303,92 @@ When <code>useDefaultSizeAndLocation</code> is set to true, the window will be c
     <span class="hljs-attr">"window_id"</span>: <span class="hljs-string">"Window_Extension_nhmkaollkcmjiecdnnjmgfifjgkfegkljnjjbipp"</span>
 }
 </code></pre>
-</span></div></article></div><div class="docLastUpdate"><em>Last updated on 2020-10-18 by eransharv</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/api/overwolf-web-websocket"><span class="arrow-prev">← </span><span>overwolf.web.websocket</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#methods-reference">Methods Reference</a></li><li><a href="#events-reference">Events Reference</a></li><li><a href="#types-reference">Types Reference</a></li><li><a href="#getmainwindow">getMainWindow()</a></li><li><a href="#getcurrentwindowcallback">getCurrentWindow(callback)</a></li><li><a href="#obtaindeclaredwindowwindowname-callback">obtainDeclaredWindow(windowName, callback)</a></li><li><a href="#obtaindeclaredwindowwindowname-overridesetting-callback">obtainDeclaredWindow(windowName, overrideSetting, callback)</a></li><li><a href="#obtaindeclaredwindowwindowname-usedefaultsizeandlocation-callback">obtainDeclaredWindow(windowName, useDefaultSizeAndLocation, callback)</a></li><li><a href="#dragmovewindowid-callback">dragMove(windowId, callback)</a></li><li><a href="#dragresizewindowid-edge">dragResize(windowId, edge)</a></li><li><a href="#dragresizewindowid-edge-contentrect">dragResize(windowId, edge, contentRect)</a></li><li><a href="#dragresizewindowid-edge-rect-callback">dragResize(windowId, edge, rect, callback)</a></li><li><a href="#changesizewindowid-width-height-callback">changeSize(windowId, width, height, callback)</a></li><li><a href="#changesizechangesizeparams-callback">changeSize(changeSizeParams, callback)</a></li><li><a href="#changepositionwindowid-left-top-callback">changePosition(windowId, left, top, callback)</a></li><li><a href="#closewindowid-callback">close(windowId, callback)</a></li><li><a href="#minimizewindowid-callback">minimize(windowId, callback)</a></li><li><a href="#maximizewindowid-callback">maximize(windowId, callback)</a></li><li><a href="#restorewindowid-callback">restore(windowId, callback)</a></li><li><a href="#restorewindowname-callback">restore(windowName, callback)</a></li><li><a href="#hidewindowid-callback">hide(windowId, callback)</a></li><li><a href="#getwindowstatewindowid-callback">getWindowState(windowId, callback)</a></li><li><a href="#getwindowsstatescallback">getWindowsStates(callback)</a></li><li><a href="#openoptionspagecallback">openOptionsPage(callback)</a></li><li><a href="#setdesktoponlywindowid-shouldbedesktoponly-callback">setDesktopOnly(windowId, shouldBeDesktopOnly, callback)</a></li><li><a href="#setrestoreanimationsenabledwindowid-shouldenableanimations-callback">setRestoreAnimationsEnabled(windowId, shouldEnableAnimations, callback)</a></li><li><a href="#settopmostwindowid-shouldbetopmost-callback">setTopmost(windowId, shouldBeTopmost, callback)</a></li><li><a href="#sendtobackwindowid-callback">sendToBack(windowId, callback)</a></li><li><a href="#sendmessagewindowid-messageid-messagecontent-callback">sendMessage(windowId, messageId, messageContent, callback)</a></li><li><a href="#setwindowstylewindowid-style-callback">setWindowStyle(windowId, style, callback)</a></li><li><a href="#removewindowstylewindowid-style-callback">removeWindowStyle(windowId, style, callback)</a></li><li><a href="#getopenwindowscallback">getOpenWindows(callback)</a></li><li><a href="#setmutemute-callback">setMute(mute, callback)</a></li><li><a href="#muteallcallback">muteAll(callback)</a></li><li><a href="#ismutedcallback">isMuted(callback)</a></li><li><a href="#iswindowvisibletousercallback">isWindowVisibleToUser(callback)</a></li><li><a href="#bringtofrontwindowid-callback">bringToFront(windowId, callback)</a></li><li><a href="#bringtofrontcallback">bringToFront(callback)</a></li><li><a href="#bringtofrontgrabfocus-callback">bringToFront(grabFocus, callback)</a></li><li><a href="#bringtofrontwindowid-grabfocus-callback">bringToFront(windowId, grabFocus, callback)</a></li><li><a href="#setpositionproperties-callback">setPosition(properties, callback)</a></li><li><a href="#setpositionwindowid-properties-callback">setPosition(windowId, properties, callback)</a></li><li><a href="#displaymessageboxmessageparams-callback">displayMessageBox(messageParams, callback)</a></li><li><a href="#isaccelreatedosrcallback">isAccelreatedOSR(callback)</a></li><li><a href="#setminsizewindowid-width-height-callback">setMinSize(windowId, width, height, callback)</a></li><li><a href="#flashwindowid-behaviorcallback">flash(windowId, behavior,callback)</a></li><li><a href="#setzoomwinzoomfactorowid-windowid">setZoom(winzoomFactorowId, windowId)</a></li><li><a href="#onmainwindowrestored">onMainWindowRestored</a></li><li><a href="#onstatechanged">onStateChanged</a></li><li><a href="#onmessagereceived">onMessageReceived</a></li><li><a href="#onaltf4blocked">onAltF4Blocked</a></li><li><a href="#onscreenpropertychanged">onScreenPropertyChanged</a></li><li><a href="#windowproperties-object">WindowProperties Object</a></li><li><a href="#defaultsizeandlocation-object">DefaultSizeAndLocation Object</a></li><li><a href="#messageboxparams-object">MessageBoxParams Object</a></li><li><a href="#relativeto-object">RelativeTo Object</a></li><li><a href="#setwindowpositionproperties-object">SetWindowPositionProperties Object</a></li><li><a href="#odkrect-object">ODKRect Object</a></li><li><a href="#windowstyle-enum">WindowStyle enum</a></li><li><a href="#messageprompticon-enum">MessagePromptIcon enum</a></li><li><a href="#windowdragedge-enum">WindowDragEdge enum</a></li><li><a href="#flashbehavior-enum">FlashBehavior enum</a></li><li><a href="#onscreenpropertychangedevent-object">onScreenPropertyChangedEvent Object</a></li><li><a href="#windowstatechangedevent-object">WindowStateChangedEvent Object</a></li><li><a href="#changewindowsizeparams-object">ChangeWindowSizeParams Object</a></li><li><a href="#windowresult-object">WindowResult Object</a></li><li><a href="#windowinfo-object">WindowInfo Object</a></li><li><a href="#windowstateex-enum">WindowStateEx enum</a></li><li><a href="#dragmovedresult-object">DragMovedResult Object</a></li><li><a href="#dragresizeresult-object">DragResizeResult Object</a></li><li><a href="#windowidresult-object">WindowIdResult Object</a></li></ul></nav></div><footer class="site-footer"><div class="container"><ul><li>Legal</li><li><a href="/docs/topics/legal-overview">Terms overview</a></li><li><a href="/docs/topics/legal-developers-terms">Developer&#x27;s terms</a></li><li><a href="/docs/topics/legal-app-terms">App terms</a></li><li><a href="http://www.overwolf.com/legal/" target="_blank">Overwolf terms</a></li><li><a href="http://www.overwolf.com/legal/#Privacy-policy" target="_blank">Overwolf Privacy policy</a></li></ul><ul><li>Support</li><li><a href=" https://discuss.developers.overwolf.com/" target="_blank">Questions and Answers</a></li><li><a href=" https://discord.gg/7256qS2" target="_blank">Discord</a></li><li><a href="/docs/support/contact-us#join-our-slack">Slack</a></li><li><a href="https://www.facebook.com/OverwolfDevs" target="_blank">Facebook</a></li><li><a href="https://twitter.com/OverwolfDevs" target="_blank">Twitter</a></li></ul><ul><li>Documentation</li><li><a href="/docs/api/changelog">Changelog</a></li><li><a href="/docs/api/overwolf-api-overview">API</a></li><li><a href="/docs/start/app-creation-process">App Creation Process</a></li><li><a href="/docs/topics/best-practices-overview">Best Practices</a></li><li><a href="/docs/status/all">Game Events status</a></li></ul><ul><li>Information</li><li><a href="http://www.overwolf.com/careers/">Careers</a></li><li><a href="https://play.overwolf.com/fund/" target="_blank">Fund</a></li><li><a href="https://medium.com/overwolf" target="_blank">Developers Blog</a></li><li><a href="https://www.overwolf.com/appstore" target="_blank">Overwolf Appstore</a></li><li><a href="https://brands.overwolf.com/" target="_blank">Advertise on Overwolf</a></li></ul></div></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+<h2><a class="anchor" aria-hidden="true" id="getwindowstateresult-object"></a><a href="#getwindowstateresult-object" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>GetWindowStateResult Object</h2>
+<h4><a class="anchor" aria-hidden="true" id="version-added-0149-8"></a><a href="#version-added-0149-8" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Version added: 0.149</h4>
+<blockquote>
+<p>Container for the window states.</p>
+</blockquote>
+<table>
+<thead>
+<tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>window_id</td><td>string</td><td></td></tr>
+<tr><td>window_state</td><td>string</td><td></td></tr>
+<tr><td>window_state_ex</td><td><a href="#windowstateex-enum">WindowStateEx</a> enum</td><td></td></tr>
+</tbody>
+</table>
+<pre><code class="hljs css language-json">{
+   <span class="hljs-attr">"success"</span>: <span class="hljs-literal">true</span>,
+   <span class="hljs-attr">"status"</span>: <span class="hljs-string">"success"</span>, <span class="hljs-comment">//deprecated and kept only for backward compatibility</span>
+   <span class="hljs-attr">"window_id"</span>: <span class="hljs-string">"Window_Extension_onemchifcjibofkgemelmnjeialamgnigfpomeih"</span>,
+   <span class="hljs-attr">"window_state"</span>: <span class="hljs-string">"minimized"</span>, <span class="hljs-comment">//deprecated and kept only for backward compatibility</span>
+   <span class="hljs-attr">"window_state_ex"</span>: <span class="hljs-string">"hidden"</span> <span class="hljs-comment">//always use this param to get the state of the window.</span>
+}
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="ismutedresult-object"></a><a href="#ismutedresult-object" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>IsMutedResult Object</h2>
+<h4><a class="anchor" aria-hidden="true" id="version-added-0149-9"></a><a href="#version-added-0149-9" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Version added: 0.149</h4>
+<blockquote>
+<p>Container for the mute state.</p>
+</blockquote>
+<table>
+<thead>
+<tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>muted</td><td>boolean</td><td></td></tr>
+</tbody>
+</table>
+<pre><code class="hljs css language-json">{
+  <span class="hljs-attr">"success"</span>: <span class="hljs-literal">true</span>,
+  <span class="hljs-attr">"status"</span>: <span class="hljs-string">"success"</span>, <span class="hljs-comment">//deprecated and kept only for backward compatibility</span>
+  <span class="hljs-attr">"muted"</span>: <span class="hljs-literal">true</span>
+}
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="iswindowvisibletouserresult-object"></a><a href="#iswindowvisibletouserresult-object" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>IsWindowVisibleToUserResult Object</h2>
+<h4><a class="anchor" aria-hidden="true" id="version-added-0149-10"></a><a href="#version-added-0149-10" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Version added: 0.149</h4>
+<blockquote>
+<p>Container for the window visibility states.</p>
+</blockquote>
+<table>
+<thead>
+<tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>visible</td><td>string</td><td></td></tr>
+</tbody>
+</table>
+<ul>
+<li>&quot;hidden&quot; – The window is completely hidden.</li>
+<li>&quot;fully&quot; – The window is fully visible to the user.</li>
+<li>&quot;partial&quot; – The window is partially visible to the user (and partially covered by other window/s).</li>
+</ul>
+<pre><code class="hljs css language-json">{
+  <span class="hljs-attr">"success"</span>: <span class="hljs-literal">true</span>,
+  <span class="hljs-attr">"status"</span>: <span class="hljs-string">"success"</span>, <span class="hljs-comment">//deprecated and kept only for backward compatibility</span>
+  <span class="hljs-attr">"hidden"</span>: <span class="hljs-literal">true</span>
+}
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="displaymessageboxresult-object"></a><a href="#displaymessageboxresult-object" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>displaymessageboxresult Object</h2>
+<h4><a class="anchor" aria-hidden="true" id="version-added-0149-11"></a><a href="#version-added-0149-11" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Version added: 0.149</h4>
+<blockquote>
+<p>Container for the window visibility states.</p>
+</blockquote>
+<table>
+<thead>
+<tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>confirmed</td><td>boolean</td><td></td></tr>
+</tbody>
+</table>
+<pre><code class="hljs css language-json">{
+  <span class="hljs-attr">"success"</span>: <span class="hljs-literal">true</span>,
+  <span class="hljs-attr">"status"</span>: <span class="hljs-string">"success"</span>, <span class="hljs-comment">//deprecated and kept only for backward compatibility</span>
+  <span class="hljs-attr">"confirmed"</span>: <span class="hljs-literal">true</span>
+}
+</code></pre>
+</span></div></article></div><div class="docLastUpdate"><em>Last updated on 2020-10-18 by eransharv</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/api/overwolf-web-websocket"><span class="arrow-prev">← </span><span>overwolf.web.websocket</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#methods-reference">Methods Reference</a></li><li><a href="#events-reference">Events Reference</a></li><li><a href="#types-reference">Types Reference</a></li><li><a href="#getmainwindow">getMainWindow()</a></li><li><a href="#getcurrentwindowcallback">getCurrentWindow(callback)</a></li><li><a href="#obtaindeclaredwindowwindowname-callback">obtainDeclaredWindow(windowName, callback)</a></li><li><a href="#obtaindeclaredwindowwindowname-overridesetting-callback">obtainDeclaredWindow(windowName, overrideSetting, callback)</a></li><li><a href="#obtaindeclaredwindowwindowname-usedefaultsizeandlocation-callback">obtainDeclaredWindow(windowName, useDefaultSizeAndLocation, callback)</a></li><li><a href="#dragmovewindowid-callback">dragMove(windowId, callback)</a></li><li><a href="#dragresizewindowid-edge">dragResize(windowId, edge)</a></li><li><a href="#dragresizewindowid-edge-contentrect">dragResize(windowId, edge, contentRect)</a></li><li><a href="#dragresizewindowid-edge-rect-callback">dragResize(windowId, edge, rect, callback)</a></li><li><a href="#changesizewindowid-width-height-callback">changeSize(windowId, width, height, callback)</a></li><li><a href="#changesizechangesizeparams-callback">changeSize(changeSizeParams, callback)</a></li><li><a href="#changepositionwindowid-left-top-callback">changePosition(windowId, left, top, callback)</a></li><li><a href="#closewindowid-callback">close(windowId, callback)</a></li><li><a href="#minimizewindowid-callback">minimize(windowId, callback)</a></li><li><a href="#maximizewindowid-callback">maximize(windowId, callback)</a></li><li><a href="#restorewindowid-callback">restore(windowId, callback)</a></li><li><a href="#restorewindowname-callback">restore(windowName, callback)</a></li><li><a href="#hidewindowid-callback">hide(windowId, callback)</a></li><li><a href="#getwindowstatewindowid-callback">getWindowState(windowId, callback)</a></li><li><a href="#getwindowsstatescallback">getWindowsStates(callback)</a></li><li><a href="#openoptionspagecallback">openOptionsPage(callback)</a></li><li><a href="#setdesktoponlywindowid-shouldbedesktoponly-callback">setDesktopOnly(windowId, shouldBeDesktopOnly, callback)</a></li><li><a href="#setrestoreanimationsenabledwindowid-shouldenableanimations-callback">setRestoreAnimationsEnabled(windowId, shouldEnableAnimations, callback)</a></li><li><a href="#settopmostwindowid-shouldbetopmost-callback">setTopmost(windowId, shouldBeTopmost, callback)</a></li><li><a href="#sendtobackwindowid-callback">sendToBack(windowId, callback)</a></li><li><a href="#sendmessagewindowid-messageid-messagecontent-callback">sendMessage(windowId, messageId, messageContent, callback)</a></li><li><a href="#setwindowstylewindowid-style-callback">setWindowStyle(windowId, style, callback)</a></li><li><a href="#removewindowstylewindowid-style-callback">removeWindowStyle(windowId, style, callback)</a></li><li><a href="#getopenwindowscallback">getOpenWindows(callback)</a></li><li><a href="#setmutemute-callback">setMute(mute, callback)</a></li><li><a href="#muteallcallback">muteAll(callback)</a></li><li><a href="#ismutedcallback">isMuted(callback)</a></li><li><a href="#iswindowvisibletousercallback">isWindowVisibleToUser(callback)</a></li><li><a href="#bringtofrontwindowid-callback">bringToFront(windowId, callback)</a></li><li><a href="#bringtofrontcallback">bringToFront(callback)</a></li><li><a href="#bringtofrontgrabfocus-callback">bringToFront(grabFocus, callback)</a></li><li><a href="#bringtofrontwindowid-grabfocus-callback">bringToFront(windowId, grabFocus, callback)</a></li><li><a href="#setpositionproperties-callback">setPosition(properties, callback)</a></li><li><a href="#setpositionwindowid-properties-callback">setPosition(windowId, properties, callback)</a></li><li><a href="#displaymessageboxmessageparams-callback">displayMessageBox(messageParams, callback)</a></li><li><a href="#isaccelreatedosrcallback">isAccelreatedOSR(callback)</a></li><li><a href="#setminsizewindowid-width-height-callback">setMinSize(windowId, width, height, callback)</a></li><li><a href="#flashwindowid-behaviorcallback">flash(windowId, behavior,callback)</a></li><li><a href="#setzoomwinzoomfactorowid-windowid">setZoom(winzoomFactorowId, windowId)</a></li><li><a href="#onmainwindowrestored">onMainWindowRestored</a></li><li><a href="#onstatechanged">onStateChanged</a></li><li><a href="#onmessagereceived">onMessageReceived</a></li><li><a href="#onaltf4blocked">onAltF4Blocked</a></li><li><a href="#onscreenpropertychanged">onScreenPropertyChanged</a></li><li><a href="#windowproperties-object">WindowProperties Object</a></li><li><a href="#defaultsizeandlocation-object">DefaultSizeAndLocation Object</a></li><li><a href="#messageboxparams-object">MessageBoxParams Object</a></li><li><a href="#relativeto-object">RelativeTo Object</a></li><li><a href="#setwindowpositionproperties-object">SetWindowPositionProperties Object</a></li><li><a href="#odkrect-object">ODKRect Object</a></li><li><a href="#windowstyle-enum">WindowStyle enum</a></li><li><a href="#messageprompticon-enum">MessagePromptIcon enum</a></li><li><a href="#windowdragedge-enum">WindowDragEdge enum</a></li><li><a href="#flashbehavior-enum">FlashBehavior enum</a></li><li><a href="#onscreenpropertychangedevent-object">onScreenPropertyChangedEvent Object</a></li><li><a href="#windowstatechangedevent-object">WindowStateChangedEvent Object</a></li><li><a href="#changewindowsizeparams-object">ChangeWindowSizeParams Object</a></li><li><a href="#windowresult-object">WindowResult Object</a></li><li><a href="#windowinfo-object">WindowInfo Object</a></li><li><a href="#windowstateex-enum">WindowStateEx enum</a></li><li><a href="#dragmovedresult-object">DragMovedResult Object</a></li><li><a href="#dragresizeresult-object">DragResizeResult Object</a></li><li><a href="#windowidresult-object">WindowIdResult Object</a></li><li><a href="#getwindowstateresult-object">GetWindowStateResult Object</a></li><li><a href="#ismutedresult-object">IsMutedResult Object</a></li><li><a href="#iswindowvisibletouserresult-object">IsWindowVisibleToUserResult Object</a></li><li><a href="#displaymessageboxresult-object">displaymessageboxresult Object</a></li></ul></nav></div><footer class="site-footer"><div class="container"><ul><li>Legal</li><li><a href="/docs/topics/legal-overview">Terms overview</a></li><li><a href="/docs/topics/legal-developers-terms">Developer&#x27;s terms</a></li><li><a href="/docs/topics/legal-app-terms">App terms</a></li><li><a href="http://www.overwolf.com/legal/" target="_blank">Overwolf terms</a></li><li><a href="http://www.overwolf.com/legal/#Privacy-policy" target="_blank">Overwolf Privacy policy</a></li></ul><ul><li>Support</li><li><a href=" https://discuss.developers.overwolf.com/" target="_blank">Questions and Answers</a></li><li><a href=" https://discord.gg/7256qS2" target="_blank">Discord</a></li><li><a href="/docs/support/contact-us#join-our-slack">Slack</a></li><li><a href="https://www.facebook.com/OverwolfDevs" target="_blank">Facebook</a></li><li><a href="https://twitter.com/OverwolfDevs" target="_blank">Twitter</a></li></ul><ul><li>Documentation</li><li><a href="/docs/api/changelog">Changelog</a></li><li><a href="/docs/api/overwolf-api-overview">API</a></li><li><a href="/docs/start/app-creation-process">App Creation Process</a></li><li><a href="/docs/topics/best-practices-overview">Best Practices</a></li><li><a href="/docs/status/all">Game Events status</a></li></ul><ul><li>Information</li><li><a href="http://www.overwolf.com/careers/">Careers</a></li><li><a href="https://play.overwolf.com/fund/" target="_blank">Fund</a></li><li><a href="https://medium.com/overwolf" target="_blank">Developers Blog</a></li><li><a href="https://www.overwolf.com/appstore" target="_blank">Overwolf Appstore</a></li><li><a href="https://brands.overwolf.com/" target="_blank">Advertise on Overwolf</a></li></ul></div></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
                 document.addEventListener('keyup', function(e) {
                   if (e.target !== document.body) {
                     return;
