@@ -76,7 +76,7 @@ You can read the [Manifest.json](../api/manifest-json) section to learn about ad
 <body>
 
 <h1>Basic sample app</h1>
-<p>This is a native desktop window that cannot be injectd into the game.</p>
+<p>This is a native desktop window that cannot be injected into the game.</p>
 
 </body>
 </html>
