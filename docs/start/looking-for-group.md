@@ -11,7 +11,7 @@ Want to be on the list? Let us know at develop@overwolf.com
 
 ## Fulcrum 
 
-![fulcrum logo](https://fulcrum.rocks/static/logoMini.png)
+![fulcrum logo](assets/looking-for-a-group/fulcrum_logo.png)
 
 ### Services offered
 
