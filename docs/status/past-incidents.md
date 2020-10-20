@@ -421,10 +421,6 @@ StartCraft II
 -------------
 No logs.
 
-Splitgate
----------
-No logs.
-
 Teamfight Tactics
 -----------------
 
