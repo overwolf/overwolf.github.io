@@ -9,9 +9,11 @@ You can find below a list of teams that are familiar with Overwolf framework and
 
 Want to be on the list? Let us know at develop@overwolf.com
 
-## Fulcrum 
+---
 
 ![fulcrum logo](assets/looking-for-a-group/fulcrum_logo.png)
+
+## Fulcrum 
 
 ### Services offered
 
@@ -28,9 +30,9 @@ Fulcrum are the team behind the successful [Buff app](https://www.overwolf.com/a
 
 ---
 
-## Nuerony 
-
 ![Nuerony logo](assets/looking-for-a-group/neurony-logo.png)
+
+## Nuerony 
 
 ### Services offered
 
@@ -49,9 +51,10 @@ Neurony can help you in the process from initial design all the way to product l
 
 ---
 
+![Trust logo](assets/looking-for-a-group/trust-logo.png)
+
 ## Trust
 
-![Trust logo](assets/looking-for-a-group/trust-logo.png)
 
 ### Services offered
 
@@ -61,17 +64,3 @@ Neurony can help you in the process from initial design all the way to product l
 https://trust-sourcing.com/
 
 Looking to hire a trustworthy and professional team members? Trust Sourcing has helped Overwolf personally with hiring professional employees based in Kiev, Ukraine and can help you find your next team member in areas such as Software Development,IT, QA, DevOps and more
-
----
-
-## Yuval Games
-
-### Services offered
-
-* Product review
-* UX
-
-### Website
-https://www.yuvalgames.com/esports
-
-As a past member of the team, few know the Overwolf ecosystem as well as Yuval. Among his many notable projects was helping make [Facecheck](https://www.overwolf.com/app/Convex_Apps-FaceCheck) one of the top apps on the platform.
