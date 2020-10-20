@@ -20,13 +20,6 @@ const GamesMetadata = {
     iconLargeUrl: "/docs/assets/games-logos/large/rainbow_six_siege.png",
     name: "Rainbow Six: Siege"
   },
-  /*21404: {
-    id: 21404,
-    path: "/docs/status/splitgate",
-    iconUrl: "/docs/assets/games-logos/splitgate.png",
-    iconLargeUrl: "/docs/assets/games-logos/large/splitgate.png",
-    name: "Splitgate: Arena Warfare"
-  },*/
   10798: {
     id: 10798,
     path: "/docs/status/rocket-league",
