@@ -63,4 +63,4 @@ Neurony can help you in the process from initial design all the way to product l
 ### Website
 https://trust-sourcing.com/
 
-Looking to hire a trustworthy and professional team members? Trust Sourcing has helped Overwolf personally with hiring professional employees based in Kiev, Ukraine and can help you find your next team member in areas such as Software Development,IT, QA, DevOps and more
+Looking to hire a trustworthy and professional team members? Trust Sourcing has helped Overwolf personally with hiring professional employees based in Kiev, Ukraine and can help you find your next team member in areas such as Software Development, IT, QA, DevOps and more
