@@ -62,6 +62,8 @@ Data Example:
 key          | Category    | Values                    | Notes                 | Since GEP Ver. |
 ------------ | ------------| ------------------------- | --------------------- | ------------- | 
 inventory    | match_info  | Type and amount of items on the local player.|See [notes](#inventory-note)|   156.0       |
+highlighted  | match_info  | Currently viewed item.    |See [notes](#highlighted-note)|   157.0       |
+
 
 #### *inventory* note
 
@@ -76,4 +78,15 @@ Data Example:
     {"ItemCount":1,"ItemType":"Lotus/Types/Recipes/Components/VorBoltRemoverFakeItem"}],
     "valueLength": 16212
 }
+```
+
+#### *highlighted* note
+
+Data Example:
+
+```json
+{"info":{"match_info":{"highlighted":"{"name":"ARCANE FURY","riven_details":[]}"}},"feature":"match_info"}
+
+{"info":{"match_info":{"highlighted":"{"name":"Melee Riven Mod","riven_details":{"lvl":8,"pol":"AP_ATTACK","lim":795832191,"buffs":[{"Tag":"WeaponMeleeComboInitialBonusMod","Value":"+20.2"},{"Tag":"WeaponCritDamageMod","Value":"+77.7"},{"Tag":"WeaponMeleeDamageMod","Value":"+126"}],"curses":[{"Tag":"WeaponStunChanceMod","Value":"-60"}],"compat":"/Lotus/Weapons/Tenno/Melee/Swords/TnRailjackGreatKatana/TnRailJackGreatKatanaWeapon","lvlReq":16,"rerolls":123}}"}},"feature":"match_info"}
+
 ```
