@@ -98,6 +98,9 @@ Note that the work on the documentation for this version is still in-progress.
 * [VALORANT](overwolf-games-events-valorant)
   * New updates under:
     * match_info
+* [Warframe](overwolf-games-events-warframe)
+  * New updates under:
+    * match_info
     
 ## Version 0.155 (Sep. 2020)
 
