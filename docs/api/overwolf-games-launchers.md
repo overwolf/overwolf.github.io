@@ -18,10 +18,10 @@ Returns an object with events and functions related to game launcher status.
 
 ## Types Reference
 
-* [overwolf.games.launchers.ILauncherInfo](#ilauncherinfo-object) Object
-* [overwolf.games.launchers.ILauncherInfoChangeData](#ilauncherinfochangedata-object) Object
 * [overwolf.games.launchers.GetRunningLaunchersInfoResult](#getrunninglaunchersinforesult-object) Object
+* [overwolf.games.launchers.UpdatedEvent](#updatedevent-object) Object
 * [overwolf.games.launchers.LauncherInfo](#launcherinfo-object) Object
+* [overwolf.games.launchers.Position](#position-object) Object
 
 ## getRunningLaunchersInfo(callback)
 #### Version added: 0.103
@@ -32,48 +32,20 @@ Parameter | Type                  | Description                                 
 --------- | ----------------------| ---------------------------------------------------- |
 callback  | [(Result:GetRunningLaunchersInfoResult)](#getrunninglaunchersinforesult-object) => void | Called with the currently running detected launchers |
 
-
 ## onUpdated
 #### Version added: 0.103
 
-> Fired when launcher info is updated. Passes an [`ILauncherInfo`](#ilauncherinfo-object) object.
+> Fired when launcher info is updated, with the following structure: [UpdatedEvent](#updatedevent-object) Object.
 
 ## onLaunched
 #### Version added: 0.103
 
-> Fired when a launcher has launched.
+> Fired when a launcher has launched, with the following structure: [LauncherInfo](#launcherinfo-object) Object.
 
 ## onTerminated
 #### Version added: 0.103
 
-> Fired when a launcher is closed.
-
-## ILauncherInfoChangeData Object
-#### Version added: 0.103
-
-> An object containing the game info object in addition to a set of flags indicating the change from the last time that data was updated.
-
-Parameter  | Type                                           | Description                   |
----------- | -----------------------------------------------| ----------------------------- |
-info       | [ILauncherInfo](#ilauncherinfo-object) Object  | Launcher info data        |
-changeType | LauncherInfoChangeType                         | New game info data        |
-
-## ILauncherInfo Object
-#### Version added: 0.103
-
-> An object containing the game info object in addition to a set of flags indicating the change from the last time that data was updated.
-
-Parameter   | Type                                | Description                                                      |
------------ | ------------------------------------| ---------------------------------------------------------------- |
-title       | string                              | Returns the title of the launcher                    |
-id          | int                                 | Returns the instance id of the launcher              |
-classId     | int                                 | Returns the class id of the launcher                 |
-isInFocus   | bool                                | Returns whether the launcher is currently in focus   |
-position    | [ODKRect](overwolf-windows) Object  | Returns the launcher’s window position                           |
-handle      | uint                                | Returns the launcher’s main window handle                        |
-commandLine | string                              | Returns the launcher’s process command-line                      |
-processId   | uint                                | Returns the launcher’s process id                                |
-path        | string                              | Returns the process path of the launcher             |
+> Fired when a launcher is closed, with the following structure: [LauncherInfo](#launcherinfo-object) Object.
 
 ## GetRunningLaunchersInfoResult Object
 
@@ -117,8 +89,53 @@ title              | string   |                                             |
 id                 | number   |                                             |
 classId            | number   |                                             |   
 isInFocus          | boolean  |                                             |   
-position           | object   |                                             |   
+position           | [Position](#position-object) object   |                |   
 handle             | number   |                                             |   
 commandLine        | string   |                                             |   
 processId          | number   |                                             |   
 path               | string   |                                             |   
+
+## Position Object
+
+> Returns the launcher’s window position
+
+Parameter          | Type     | Description                                 |
+-------------------| ---------| ------------------------------------------- |
+height             | number   |                                             |
+left               | number   |                                             |
+top                | number   |                                             |   
+width              | number   |                                             |   
+
+## UpdatedEvent Object
+
+Parameter                | Type                                           | Description                | Notes                     |
+-------------------------| -----------------------------------------------|--------------------------- | --------------------------|
+info                     | [LauncherInfo](#launcherinfo-object) Object    | Launcher info data         |                           |
+changeType               | string[]                                       | New game info data         |                           |
+
+
+#### Event data example: Success
+
+```json
+"info":
+   {  
+         "title":"League of Legends Launcher",
+         "id":54271,
+         "classId":5427,
+         "isInFocus":false,
+         "position":{  
+            "top":252,
+            "left":2066,
+            "width":1280,
+            "height":720
+         },
+         "handle":329882,
+         "commandLine":"E:/Games/RADS/projects/league_client/releases/0.0.0.65/deploy/LeagueClientUx.exe",
+         "processId":1468,
+         "path":"E:/Games/RADS/projects/league_client/releases/0.0.0.65/deploy/LeagueClientUx.exe"
+   },
+"changeType":
+   {
+     //including game name, game running, game terminated, game changing focus, etc.
+   }
+```
