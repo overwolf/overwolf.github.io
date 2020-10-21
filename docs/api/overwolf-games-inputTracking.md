@@ -25,7 +25,8 @@ Provides keyboard and mouse activity information while the user is in-game.
 * [overwolf.games.inputTracking.MousePosition](#mouseposition-object) Object
 * [overwolf.games.inputTracking.GetActivityResult](#getactivityresult-object) Object
 * [overwolf.games.inputTracking.GetMousePositionResult](#getmousepositionresult-object) Object
-
+* [overwolf.games.inputTracking.KeyEvent](#keyevent-object) Object
+* [overwolf.games.inputTracking.MouseEvent](#mouseevent-object) Object
 
 ## getActivityInformation(callback)
 #### Version added: 0.92
@@ -75,18 +76,9 @@ callback  | [(Result:GetMousePositionResult)](#getmousepositionresult-object) =>
 
 #### Version added: 0.78
 
-> Fired when a keyboard key has been released.
+> Fired when a keyboard key has been released, with the following structure: [KeyEvent](#keyevent-object) Object.
 
 The event information includes the virtual key code (key) and a boolean stating whether the keypress was in the game or on an Overwolf widget (onGame).
-
-#### Event Data Example: Success
-
-```json
-{
-    "key": "81",
-    "onGame": true
-}
-```
 
 #### Using the onKeyUp event
 
@@ -103,16 +95,7 @@ overwolf.games.inputTracking.onKeyUp.addListener(function(info) {
 
 #### Version added: 0.78
 
-> Fired when a keyboard key has been pressed.
-
-#### Event Data Example: Success
-
-```json
-{
-    "key": "81",
-    "onGame": true
-}
-```
+> Fired when a keyboard key has been pressed, with the following structure: [KeyEvent](#keyevent-object) Object.
 
 #### Using the onKeyDown event
 
@@ -134,37 +117,15 @@ For that, use the [overwolf.settings.hotkeys](overwolf-settings-hotkeys) API.
 
 #### Version added: 0.78
 
-> Fired when a mouse key has been released.
+> Fired when a mouse key has been released, with the following structure: [MouseEvent](#mouseevent-object) Object.
 
 The event information includes whether the left or right mouse button was clicked (button), x and y coordinates (x, y) and a boolean stating whether the keypress was in the game or on an Overwolf widget (onGame).
-
-#### Event Data Example: Success
-
-```json
-{
-    "button": "none",
-    "x": 1002,
-    "y": 821,
-    "onGame": false
-}
-```
 
 ## onMouseDown
 
 #### Version added: 0.78
 
-> Fired when a mouse key has been pressed.
-
-#### Event Data Example: Success
-
-```json
-{
-    "button": "xbutton2",
-    "x": 177,
-    "y": 529,
-    "onGame": true
-}
-```
+> Fired when a mouse key has been pressed, with the following structure: [MouseEvent](#mouseevent-object) Object.
 
 ## InputActivity Object
 
@@ -254,3 +215,42 @@ mousePosition      | [MousePosition](#mouseposition-object) object |  the input 
     }
 }
 ```
+
+## KeyEvent Object
+
+Parameter                | Type           | Description                | Notes                     |
+-------------------------| ---------------|--------------------------- | --------------------------|
+key                      |  string        |                            |                           |                           
+onGame                   |  boolean       |                            |                           |                           
+
+#### Event data example: Success
+
+```json
+{
+    "key": "81",
+    "onGame": true
+}
+```
+
+## MouseEvent Object
+
+Parameter                | Type           | Description                | Notes                     |
+-------------------------| ---------------|--------------------------- | --------------------------|
+button                   |  string        |                            |                           |                           
+x                        |  number        |                            |                           |                           
+y                        |  number        |                            |                           |                           
+onGame                   |  boolean        |                            |                           |                           
+
+
+#### Event data example: Success
+
+```json
+{
+    "button": "xbutton2",
+    "x": 177,
+    "y": 529,
+    "onGame": true
+}
+```
+
+
