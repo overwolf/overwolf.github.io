@@ -89,8 +89,8 @@ Please make sure to read our guide on [how to use Overwolf windows](../topics/us
 * [overwolf.windows.IsMutedResult](#ismutedresult-object) Object
 * [overwolf.windows.IsWindowVisibleToUserResult](#iswindowvisibletouserresult-object) Object
 * [overwolf.windows.DisplayMessageBoxResult](#displaymessageboxresult-object) Object
-
-
+* [overwolf.windows.MessageReceivedEvent](#messagereceivedevent-object) Object
+* [overwolf.windows.AltF4BlockedEvent](#altf4blockedevent-object) Object
 
 ## getMainWindow()
 #### Version added: 0.113
@@ -698,16 +698,7 @@ If you want to handle that scenario you can listen to [onGameInfoUpdated](overwo
 ## onMessageReceived
 #### Version added: 0.85
 
-> Fired when this window received a message.
-
-#### Event Data Example: Success
-
-```json
-{
-  "id": "1",
-  "content": "hello"
-}
-```
+> Fired when this window received a message, with the following structure: [MessageReceivedEvent](#messagereceivedevent-object) Object
 
 #### Usage example
 
@@ -722,7 +713,7 @@ overwolf.windows.onMessageReceived.addListener((message)=>{
 ## onAltF4Blocked
 #### Version added: 0.85
 
-> Fired when the user was prevented from closing a window using Alt+F4.
+> Fired when the user was prevented from closing a window using Alt+F4, with the following structure: [AltF4BlockedEvent](#altf4blockedevent-object) Object
 
 ## onScreenPropertyChanged
 #### Version added: 0.143
@@ -1128,3 +1119,34 @@ confirmed         | boolean       |                         |
   "confirmed": true
 }
 ```
+
+## MessageReceivedEvent Object
+
+Parameter                | Type           | Description                | Notes                     |
+-------------------------| ---------------|--------------------------- | --------------------------|
+id                       |  string        | the window ID              |                           |                           
+content                  |  string        | the message content        |                           |   
+
+#### Event data example: Success
+
+```json
+{
+  "id": "1",
+  "content": "hello"
+}
+```
+
+## AltF4BlockedEvent Object
+
+Parameter                | Type           | Description                | Notes                     |
+-------------------------| ---------------|--------------------------- | --------------------------|
+id                       |  string        | the window ID              |                           |                           
+
+#### Event data example: Success
+
+```json
+{
+  "id": "1",
+}
+```
+
