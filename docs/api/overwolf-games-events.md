@@ -31,6 +31,11 @@ Regardless, you have the [overwolf.games](overwolf-games) API that gives you gen
 
 * [overwolf.games.events.SetRequiredFeaturesResult](#setrequiredfeaturesresult-object) Object
 * [overwolf.games.events.GetInfoResult](#getinforesult-object) Object
+* [overwolf.windows.ErrorEvent](#errorevent-object) Object
+* [overwolf.windows.InfoUpdates2Event](#infoupdates2event-object) Object
+* [overwolf.windows.NewGameEvents](#newgameevents-object) Object
+* [overwolf.windows.GameEvent](#gameevent-object) Object
+
 
 ## Sample App
 
@@ -125,13 +130,13 @@ overwolf.games.events.getInfo(function(info) {
 
 #### Version added: 0.78
 
-> Fired when an error occurred in the Game Event system.
+> Fired when an error occurred in the Game Event system,  with the following structure: [ErrorEvent](#errorevent-object) Object.
 
 ## onInfoUpdates2
 
 #### Version added: 0.96
 
-> Fired when there are game info updates with a JSON object of the updates.
+> Fired when there are game info updates with a JSON object of the updates, in the following structure: [InfoUpdates2Event](#infoupdates2event-object) Object
 
 **Our best practice is removing event listeners and then adding the listener back to prevent accidental multiple listeners.**
 
@@ -143,24 +148,11 @@ overwolf.games.events.onInfoUpdates2.addListener(function(info) {
 });
 ```
 
-#### Event data example
-
-```json
-{  
-   "info":{  
-      "game_info":{  
-         "minionKills":"3"
-      }
-   },
-   "feature":"minions"
-}
-```
-
 ## onNewEvents
 
 #### Version added: 0.96
 
-> Fired when there are new game events with a JSON object of events information.
+> Fired when there are new game events with a JSON object of events information, in the following structure: [NewGameEvents](#newgameevents-object) Object
 
 **Our best practice is removing event listeners and then adding the listener back to prevent accidental multiple listeners.**
 
@@ -170,19 +162,6 @@ overwolf.games.events.onInfoUpdates2.addListener(function(info) {
 overwolf.games.events.onNewEvents.addListener(function(info) {
    console.log('EVENT FIRED: ' + JSON.stringify(info));  
 });
-```
-
-#### Event data example
-
-```json
-{
-  "events": [
-    {
-      "name": "death",
-      "data": "{`count`: `2`}"
-    }
-  ]
-}
 ```
 
 ## SetRequiredFeaturesResult Object
@@ -255,5 +234,74 @@ The current game's info, registered features, and all available info for the cur
          "level":"3"
       }
    }
+}
+```
+
+## ErrorEvent Object
+
+Parameter                | Type           | Description                | Notes                     |
+-------------------------| ---------------|--------------------------- | --------------------------|
+reason                   |  string        | the error reason           |                           |                           
+
+#### Event data example: Success
+
+```json
+{
+  "reason": "some reason",
+}
+```
+
+## InfoUpdates2Event Object
+
+Parameter                | Type           | Description                | Notes                     |
+-------------------------| ---------------|--------------------------- | --------------------------|
+info                     |  string        |                            |                           |                           
+feature                  |  string        |                            |                           |                           
+
+#### Event data example: Success
+
+```json
+{  
+   "info":{  
+      "game_info":{  
+         "minionKills":"3"
+      }
+   },
+   "feature":"minions"
+}
+```
+
+## NewGameEvents Object
+
+Parameter                | Type           | Description                | Notes                     |
+-------------------------| ---------------|--------------------------- | --------------------------|
+events                   |  [GameEvent](#gameevent-object)[] array |   |                           |                           
+
+#### Event data example: Success
+
+```json
+{
+  "events": [
+    {
+      "name": "death",
+      "data": "{`count`: `2`}"
+    }
+  ]
+}
+```
+
+## GameEvent Object
+
+Parameter                | Type           | Description                | Notes                     |
+-------------------------| ---------------|--------------------------- | --------------------------|
+name                     |  string        |                            |                           |                           
+data                     |  string        |                            |                           |                           
+
+#### Event data example: Success
+
+```json
+{
+   "name": "death",
+   "data": "{`count`: `2`}"
 }
 ```
