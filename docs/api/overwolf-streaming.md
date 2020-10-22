@@ -316,6 +316,10 @@ A callback function which will be called with the status of the request
 
 > Request to split video now.
 
+:::warning
+This is an experimental function and shouldn’t be used without Overwolf’s permission
+:::
+
 This method is available when recording with the [enable_on_demand_split](#streamvideooptions-object) setting.  
 [onVideoFileSplited](#onvideofilesplited) event will be fired when the video splits.
 
