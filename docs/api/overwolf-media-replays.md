@@ -42,6 +42,7 @@ Please read all the info about video capture usage and options on our [video cap
 * [overwolf.media.replays.raw_events](#raw_events-object) Object
 * [overwolf.media.replays.ReplayVideoOptions](#replayvideooptions-object) Object
 * [overwolf.media.replays.ReplayStreamParams](#replaystreamparams-object) Object
+* [overwolf.media.replays.TurnOnResult](#turnonresult-object) Object
 
 
 ## turnOn(parameters, callback)
@@ -60,16 +61,8 @@ Just request for any supported game highlight and OW will provide you with a vid
 
 Parameter   | Type                                           | Description                                                             |
 ----------- | ---------------------------------------------- | ----------------------------------------------------------------------- |
-parameters  | [ReplaySetting](#replaysetting-object) object  |  Container for the capture configuration                                              |
-callback    | function                                       | A callback function which will be called with the status of the request |
-
-#### Callback argument: Success
-
-A callback function which will be called with the status of the request
-
-```json
-{ "status": "success" }
-```
+parameters  | [ReplaySetting](#replaysetting-object) object  |  Container for the capture configuration                                |
+callback    | [(Result: TurnOnResult)](#turnonresult-object) => void   | A callback function which will be called with the status of the request |
 
 #### Important notes
 
@@ -620,7 +613,7 @@ Replay video options.
 | test_drop_frames_interval | uint | The interval, in milliseconds, in which to test for dropped frames | 0.92  |
 | notify_dropped_frames_ratio| double | The ratio of dropped to non-dropped frames for which to issue a notification | 0.92  |
 | sub_folder_name| string | Defines Sub folder for video file path destination (See note below this table) | 0.103  |
-| override_overwolf_setting| bool | Do not use Overwolf capture setting. In case True you must provider all video setting (encoder..) | 0.103  |
+| override_overwolf_setting| bool | Do not use Overwolf capture setting. | 0.103  |
 | tobii| [TobiiLayerParams](overwolf-tobii) Object | Tobii Replay layer setting | 0.97  |
 | max_file_size_bytes| uint | Defines file maximum size. when video reach {max_file_size_bytes}, the recorder will flush the video file and stat a new video file.  | 0.103  |
 | include_full_size_video| bool | in case max_file_size_bytes is onfull video will be recorded to disk parallel to splits videos.  | 0.105  |
@@ -650,3 +643,28 @@ Option    | Description  |
 --------- | -------------|
 Video     |              |
 gif       | (Deprecated) |
+
+## TurnOnResult Object
+#### Version added: 0.149
+
+> Container for the turnOn result.
+
+Parameter         | Type          | Description             |
+------------------| --------------| ----------------------- |
+description       | string        |                         | 
+metadata          | string        |                         | 
+mediaFolder       | string        |                         | 
+osVersion         | string        |                         | 
+osBuild           | string        |                         | 
+
+
+```json
+{
+   "success": true,
+   "status": "success", //deprecated and kept only for backward compatibility
+   "description": "",
+   "metadata": "", 
+   "osVersion": "",
+   "osBuild": ""
+}
+```

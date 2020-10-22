@@ -890,7 +890,7 @@ Stream video options.
 | test_drop_frames_interval | uint | The interval, in milliseconds, in which to test for dropped frames | 0.92  |
 | notify_dropped_frames_ratio| double | The ratio of dropped to non-dropped frames for which to issue a notification | 0.92  |
 | sub_folder_name| string | Defines Sub folder for video file path destination (See note below this table) | 0.103  |
-| override_overwolf_setting| bool | Do not use Overwolf capture setting. In case True you must provider all video setting (encoder..) | 0.103  |
+| override_overwolf_setting| bool | Do not use Overwolf capture setting.  | 0.103  |
 | tobii| [TobiiLayerParams](overwolf-tobii) Object | Tobii Replay layer setting | 0.97  |
 | max_file_size_bytes| uint | Defines file maximum size. when video reach {max_file_size_bytes}, the recorder will flush the video file and stat a new video file. [onVideoFileSplited](#onvideofilesplited) event will be fired | 0.103  |
 | enable_on_demand_split| bool | Enable video file splitting on demand. See [notes](#enable_on_demand_split-notes). | 0.141  |
