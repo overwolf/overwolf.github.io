@@ -27,9 +27,15 @@ Please note that these are community code snippets, and the usage is at your own
   Sorikairox built a **Vue version** of our official [OW sample app](https://github.com/overwolf/sample-app/tree/master/ts).
 
 * [AlbericoD/overwolf-modern-react-boilerplate](https://github.com/AlbericoD/overwolf-modern-react-boilerplate).
-  Overwolf **Modern React Boilerplate**.
-  "An opinionated  open source boilerplate in **React.JS** with the new hook API and the **overwolf-hooks** package, this repository helps developers create fast, internationalized, modular and modern code without ejecting the code from the **create react app (CRA)**."
-
+  **Overwolf Modern React Boilerplate**.
+  "An opinionated  open source boilerplate in **React.JS** with the new hook API and the **[overwolf-hooks](https://www.npmjs.com/package/overwolf-hooks)** package, this repository helps developers create fast, internationalized, modular and modern code with template for **[create react app (CRA)](https://github.com/facebook/create-react-app)**."
+    > To use this template, add --template overwolf-typescript-redux when creating a new app. 
+    ```sh
+    For example:
+    npx create-react-app my-app --template overwolf-typescript-redux
+    # or
+    yarn create react-app my-app --template overwolf-typescript-redux
+  ```
 * AlbericoD published a **package of react hooks** for Overwolf.
   "Custom hooks to help use overwolf api with the new react hooks technology."  
   NPM: https://www.npmjs.com/package/overwolf-hooks  
