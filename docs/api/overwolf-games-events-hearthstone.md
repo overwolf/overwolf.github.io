@@ -264,6 +264,8 @@ adventure_stats   | match_info  | The stats of the current adventure run. | See 
 
 #### *match_type* note
 
+<b>Important:</b> There's a new game mode called "Duels". We do NOT support this mode at this time. We will update accordingly in the near future.
+
 :::tip
 If you would like to know when the user is going to play the `battlegrounds` mode, you can listen to the match_type info update, and check If the value is `GT_BATTLEGROUNDS`.
 :::
