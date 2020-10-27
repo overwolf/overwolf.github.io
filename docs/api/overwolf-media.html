@@ -97,10 +97,14 @@
 </ul>
 <h2><a class="anchor" aria-hidden="true" id="types-reference"></a><a href="#types-reference" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Types Reference</h2>
 <ul>
-<li><a href="#memoryscreenshotparams-object">MemoryScreenshotParams</a> Object</li>
-<li><a href="#rescaleparams-object">RescaleParams</a> Object</li>
-<li><a href="#cropparams-object">CropParams</a> Object</li>
+<li><a href="#memoryscreenshotparams-object">overwolf.media.MemoryScreenshotParams</a> Object</li>
+<li><a href="#rescaleparams-object">overwolf.media.RescaleParams</a> Object</li>
+<li><a href="#cropparams-object">overwolf.media.CropParams</a> Object</li>
 <li><a href="#emediatype-enum">overwolf.media.enums.eMediaType</a> enum</li>
+<li><a href="#fileresult-object">overwolf.media.FileResult</a> Object</li>
+<li><a href="#getappvideocapturefoldersizeresult-object">overwolf.media.GetAppVideoCaptureFolderSizeResult</a> Object</li>
+<li><a href="#screenshottakenevent-object">overwolf.media.ScreenshotTakenEvent</a> Object</li>
+<li><a href="#gifgenerationerrorevent-object">overwolf.media.GifGenerationErrorEvent</a> Object</li>
 </ul>
 <h2><a class="anchor" aria-hidden="true" id="in-memory-screenshot-overview"></a><a href="#in-memory-screenshot-overview" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>In-memory screenshot overview</h2>
 <p>Some methods in the overwold.media API allows you to take in-memory screenshot.</p>
@@ -121,16 +125,9 @@
 <tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
 </thead>
 <tbody>
-<tr><td>callback (Optional)</td><td>function</td><td>A function called after the screenshot was taken</td></tr>
+<tr><td>callback (Optional)</td><td><a href="#fileresult-object">(Result: FileResult)</a> =&gt; void</td><td>A function called after the screenshot was taken</td></tr>
 </tbody>
 </table>
-<h4><a class="anchor" aria-hidden="true" id="callback-argument-success"></a><a href="#callback-argument-success" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Callback argument: Success</h4>
-<p>A callback function which will be called with the status of the request and the screenshot URL.</p>
-<pre><code class="hljs css language-json">{
-    <span class="hljs-attr">"status"</span>: <span class="hljs-string">"success"</span>,
-    <span class="hljs-attr">"url"</span>: <span class="hljs-string">"overwolf://media/screenshots/&lt;screenshot name&gt;"</span>
-}
-</code></pre>
 <h2><a class="anchor" aria-hidden="true" id="takescreenshottargetfolder-callback"></a><a href="#takescreenshottargetfolder-callback" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>takeScreenshot(targetFolder, callback)</h2>
 <h4><a class="anchor" aria-hidden="true" id="version-added-0117"></a><a href="#version-added-0117" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Version added: 0.117</h4>
 <blockquote>
@@ -142,17 +139,9 @@
 </thead>
 <tbody>
 <tr><td>targetFolder</td><td>string</td><td>Target screen shot folder path</td></tr>
-<tr><td>callback</td><td>function</td><td>A function called after the screenshot was taken</td></tr>
+<tr><td>callback</td><td><a href="#fileresult-object">(Result: FileResult)</a> =&gt; void</td><td>A callback function which will be called with the status of the request and the screenshot URL.</td></tr>
 </tbody>
 </table>
-<h4><a class="anchor" aria-hidden="true" id="callback-argument-success-1"></a><a href="#callback-argument-success-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Callback argument: Success</h4>
-<p>A callback function which will be called with the status of the request and the screenshot URL.</p>
-<pre><code class="hljs css language-json">{  
-   <span class="hljs-attr">"success"</span>:<span class="hljs-literal">true</span>,
-   <span class="hljs-attr">"url"</span>:<span class="hljs-string">"overwolf://media/screenshots/custom/E:/Desktop%20Capture-07-15-2018%2014-15-22-793.jpg"</span>,
-   <span class="hljs-attr">"path"</span>:<span class="hljs-string">"E:/Desktop Capture-07-15-2018 14-15-22-793.jpg"</span>
-}
-</code></pre>
 <h2><a class="anchor" aria-hidden="true" id="takewindowsscreenshotbyhandlewindowhandle-postmediaevent-callback"></a><a href="#takewindowsscreenshotbyhandlewindowhandle-postmediaevent-callback" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>takeWindowsScreenshotByHandle(windowHandle, postMediaEvent, callback)</h2>
 <h4><a class="anchor" aria-hidden="true" id="version-added-0115"></a><a href="#version-added-0115" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Version added: 0.115</h4>
 <blockquote>
@@ -165,7 +154,7 @@
 <tbody>
 <tr><td>windowHandle</td><td>int</td><td>The window handle number. The handle number can retrieved from <a href="overwolf-games-launchers#getrunninglaunchersinfocallback">overwolf.games.launchers.getRunningLaunchersInfo()</a></td></tr>
 <tr><td>postMediaEvent</td><td>bool</td><td>set true to post <a href="#onmediaevent">(onMediaEvent)</a></td></tr>
-<tr><td>callback</td><td>function</td><td>A function called after the screenshot was taken</td></tr>
+<tr><td>callback</td><td><a href="#fileresult-object">(Result: FileResult)</a> =&gt; void</td><td>A function called after the screenshot was taken</td></tr>
 </tbody>
 </table>
 <h2><a class="anchor" aria-hidden="true" id="takewindowsscreenshotbyhandlewindowhandle-postmediaevent-targetfolder-callback"></a><a href="#takewindowsscreenshotbyhandlewindowhandle-postmediaevent-targetfolder-callback" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>takeWindowsScreenshotByHandle(windowHandle, postMediaEvent, targetFolder, callback)</h2>
@@ -181,7 +170,7 @@
 <tr><td>windowHandle</td><td>int</td><td>The window handle number. The handle number can retrieved from <a href="overwolf-games-launchers#getrunninglaunchersinfocallback">overwolf.games.launchers.getRunningLaunchersInfo()</a></td></tr>
 <tr><td>postMediaEvent</td><td>bool</td><td>set true to post <a href="#onmediaevent">(onMediaEvent)</a></td></tr>
 <tr><td>targetFolder</td><td>string</td><td>Set target folder path for screenshot</td></tr>
-<tr><td>callback</td><td>function</td><td>A function called after the screenshot was taken</td></tr>
+<tr><td>callback</td><td><a href="#fileresult-object">(Result: FileResult)</a> =&gt; void</td><td>A function called after the screenshot was taken</td></tr>
 </tbody>
 </table>
 <h2><a class="anchor" aria-hidden="true" id="takewindowsscreenshotbynamewindowname-postmediaevent-callback"></a><a href="#takewindowsscreenshotbynamewindowname-postmediaevent-callback" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>takeWindowsScreenshotByName(windowName, postMediaEvent, callback)</h2>
@@ -196,7 +185,7 @@
 <tbody>
 <tr><td>windowName</td><td>string</td><td>The window name</td></tr>
 <tr><td>postMediaEvent</td><td>bool</td><td>set true to post <a href="#onmediaevent">(onMediaEvent)</a></td></tr>
-<tr><td>callback</td><td>function</td><td>A function called after the screenshot was taken</td></tr>
+<tr><td>callback</td><td><a href="#fileresult-object">(Result: FileResult)</a> =&gt; void</td><td>A function called after the screenshot was taken</td></tr>
 </tbody>
 </table>
 <h2><a class="anchor" aria-hidden="true" id="takewindowsscreenshotbynamewindowname-postmediaevent-targetfolder-callback"></a><a href="#takewindowsscreenshotbynamewindowname-postmediaevent-targetfolder-callback" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>takeWindowsScreenshotByName(windowName, postMediaEvent, targetFolder, callback)</h2>
@@ -212,7 +201,7 @@
 <tr><td>windowName</td><td>string</td><td>The window name</td></tr>
 <tr><td>postMediaEvent</td><td>bool</td><td>set true to post <a href="#onmediaevent">(onMediaEvent)</a></td></tr>
 <tr><td>targetFolder</td><td>string</td><td>Set target folder path for screenshot</td></tr>
-<tr><td>callback</td><td>function</td><td>A function called after the screenshot was taken</td></tr>
+<tr><td>callback</td><td><a href="#fileresult-object">(Result: FileResult)</a> =&gt; void</td><td>A function called after the screenshot was taken</td></tr>
 </tbody>
 </table>
 <h2><a class="anchor" aria-hidden="true" id="getscreenshoturlscreenshotparams-callback"></a><a href="#getscreenshoturlscreenshotparams-callback" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>getScreenshotUrl(screenshotParams, callback)</h2>
@@ -232,16 +221,9 @@
 </thead>
 <tbody>
 <tr><td>screenshotParams</td><td><a href="#memoryscreenshotparams-object">MemoryScreenshotParams</a> object</td><td>A JSON containing the parameters of the screenshot</td></tr>
-<tr><td>callback (Optional)</td><td>function</td><td>A function called after the screenshot was taken</td></tr>
+<tr><td>callback (optional)</td><td><a href="#fileresult-object">(Result: FileResult)</a> =&gt; void</td><td>A function called after the screenshot was taken</td></tr>
 </tbody>
 </table>
-<h4><a class="anchor" aria-hidden="true" id="callback-argument-success-2"></a><a href="#callback-argument-success-2" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Callback argument: Success</h4>
-<p>A callback function which will be called with the status of the request and the screenshot URL.</p>
-<pre><code class="hljs css language-json">{
-    <span class="hljs-attr">"status"</span>: <span class="hljs-string">"success"</span>,
-    <span class="hljs-attr">"url"</span>: <span class="hljs-string">"overwolf://media/memoryscreenshots/74/Counter-Strike+Global+Offensive-05-02-2016+13-54-54"</span>
-}
-</code></pre>
 <h4><a class="anchor" aria-hidden="true" id="usage-example"></a><a href="#usage-example" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Usage Example</h4>
 <pre><code class="hljs css language-js">overwolf.media.getScreenshotUrl(
     {
@@ -281,7 +263,7 @@
 <tbody>
 <tr><td>image</td><td>Object</td><td>A URL or image object to be shared</td></tr>
 <tr><td>description</td><td>string</td><td>The description to be used when posting to social networks</td></tr>
-<tr><td>callback (Optional)</td><td>function</td><td>A function called after the screenshot was taken</td></tr>
+<tr><td>callback</td><td>(Result) =&gt; void</td><td>Reports success or failure</td></tr>
 </tbody>
 </table>
 <h2><a class="anchor" aria-hidden="true" id="postmediaeventmediatype-jsoninfo-callback"></a><a href="#postmediaeventmediatype-jsoninfo-callback" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>postMediaEvent(mediaType, jsonInfo, callback)</h2>
@@ -296,7 +278,7 @@
 <tbody>
 <tr><td>mediaType</td><td><a href="#emediatype-enum">eMediaType</a> enum</td><td>The type of the event</td></tr>
 <tr><td>jsonInfo</td><td>JObject</td><td>A json with additional info about the events</td></tr>
-<tr><td>callback</td><td>function</td><td>A callback with the status if the call</td></tr>
+<tr><td>callback</td><td>(Result) =&gt; void</td><td>Reports success or failure</td></tr>
 </tbody>
 </table>
 <h2><a class="anchor" aria-hidden="true" id="deleteoldgifskeepnewestxgbs-callback"></a><a href="#deleteoldgifskeepnewestxgbs-callback" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>deleteOldGifs(keepNewestXGbs, callback)</h2>
@@ -310,7 +292,7 @@
 </thead>
 <tbody>
 <tr><td>keepNewestXGbs</td><td>int</td><td>Keep the newest X GBs of gifs. Pass 0 to delete all gifs</td></tr>
-<tr><td>callback</td><td>function</td><td>A callback function which will be called with the status of the request</td></tr>
+<tr><td>callback</td><td>(Result) =&gt; void</td><td>Reports success or failure</td></tr>
 </tbody>
 </table>
 <h2><a class="anchor" aria-hidden="true" id="getgifssizecallback"></a><a href="#getgifssizecallback" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>getGifsSize(callback)</h2>
@@ -324,7 +306,7 @@
 </thead>
 <tbody>
 <tr><td>keepNewestXGbs</td><td>int</td><td>Keep the newest X GBs of gifs. Pass 0 to delete all gifs</td></tr>
-<tr><td>callback</td><td>function</td><td>A callback with the gifs size</td></tr>
+<tr><td>callback</td><td>(Result) =&gt; void</td><td>Reports success or failure</td></tr>
 </tbody>
 </table>
 <h2><a class="anchor" aria-hidden="true" id="getappvideocapturefoldersizecallback"></a><a href="#getappvideocapturefoldersizecallback" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>getAppVideoCaptureFolderSize(callback)</h2>
@@ -341,7 +323,7 @@
 <tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
 </thead>
 <tbody>
-<tr><td>callback</td><td>function</td><td>A callback with the size in MB</td></tr>
+<tr><td>callback</td><td><a href="#getappvideocapturefoldersizeresult-object">(Result: GetAppVideoCaptureFolderSizeResult)</a> =&gt; void   A callback with the size in MB</td></tr>
 </tbody>
 </table>
 <h2><a class="anchor" aria-hidden="true" id="getappscreencapturefoldersizecallback"></a><a href="#getappscreencapturefoldersizecallback" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>getAppScreenCaptureFolderSize(callback)</h2>
@@ -358,7 +340,7 @@
 <tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
 </thead>
 <tbody>
-<tr><td>callback</td><td>function</td><td>A callback with the size in MB</td></tr>
+<tr><td>callback</td><td><a href="#getappscreencapturefoldersizeresult-object">(Result: GetAppScreenCaptureFolderSizeResult)</a> =&gt; void   A callback with the size in MB</td></tr>
 </tbody>
 </table>
 <h2><a class="anchor" aria-hidden="true" id="onmediaevent"></a><a href="#onmediaevent" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>onMediaEvent</h2>
@@ -388,12 +370,12 @@
 <h2><a class="anchor" aria-hidden="true" id="onscreenshottaken"></a><a href="#onscreenshottaken" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>onScreenshotTaken</h2>
 <h4><a class="anchor" aria-hidden="true" id="version-added-078-3"></a><a href="#version-added-078-3" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Version added: 0.78</h4>
 <blockquote>
-<p>Fired when a screenshot was taken.</p>
+<p>Fired when a screenshot was taken, with the following structure: <a href="#ScreenshotTakenEvent-object">ScreenshotTakenEvent</a> Object</p>
 </blockquote>
 <h2><a class="anchor" aria-hidden="true" id="ongifgenerationerror"></a><a href="#ongifgenerationerror" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>onGifGenerationError</h2>
 <h4><a class="anchor" aria-hidden="true" id="version-added-091-3"></a><a href="#version-added-091-3" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Version added: 0.91</h4>
 <blockquote>
-<p>Fired when there’s an error with the gif generation buffer.</p>
+<p>Fired when there’s an error with the gif generation buffer, with the following structure: <a href="#gifgenerationerrorevent-object">GifGenerationErrorEvent</a> Object</p>
 </blockquote>
 <h2><a class="anchor" aria-hidden="true" id="memoryscreenshotparams-object"></a><a href="#memoryscreenshotparams-object" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>MemoryScreenshotParams Object</h2>
 <h4><a class="anchor" aria-hidden="true" id="version-added-078-4"></a><a href="#version-added-078-4" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Version added: 0.78</h4>
@@ -454,7 +436,98 @@
 <tr><td>Image</td><td></td></tr>
 </tbody>
 </table>
-</span></div></article></div><div class="docLastUpdate"><em>Last updated on 2020-9-22 by eransharv</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/api/overwolf-logitech-led"><span class="arrow-prev">← </span><span>overwolf.logitech.led</span></a><a class="docs-next button" href="/docs/api/overwolf-media-audio"><span>overwolf.media.audio</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#methods-reference">Methods Reference</a></li><li><a href="#events-reference">Events Reference</a></li><li><a href="#types-reference">Types Reference</a></li><li><a href="#in-memory-screenshot-overview">In-memory screenshot overview</a></li><li><a href="#sample-app">Sample app</a></li><li><a href="#takescreenshotcallback">takeScreenshot(callback)</a></li><li><a href="#takescreenshottargetfolder-callback">takeScreenshot(targetFolder, callback)</a></li><li><a href="#takewindowsscreenshotbyhandlewindowhandle-postmediaevent-callback">takeWindowsScreenshotByHandle(windowHandle, postMediaEvent, callback)</a></li><li><a href="#takewindowsscreenshotbyhandlewindowhandle-postmediaevent-targetfolder-callback">takeWindowsScreenshotByHandle(windowHandle, postMediaEvent, targetFolder, callback)</a></li><li><a href="#takewindowsscreenshotbynamewindowname-postmediaevent-callback">takeWindowsScreenshotByName(windowName, postMediaEvent, callback)</a></li><li><a href="#takewindowsscreenshotbynamewindowname-postmediaevent-targetfolder-callback">takeWindowsScreenshotByName(windowName, postMediaEvent, targetFolder, callback)</a></li><li><a href="#getscreenshoturlscreenshotparams-callback">getScreenshotUrl(screenshotParams, callback)</a></li><li><a href="#shareimageimage-description-callback">shareImage(image, description, callback)</a></li><li><a href="#postmediaeventmediatype-jsoninfo-callback">postMediaEvent(mediaType, jsonInfo, callback)</a></li><li><a href="#deleteoldgifskeepnewestxgbs-callback">deleteOldGifs(keepNewestXGbs, callback)</a></li><li><a href="#getgifssizecallback">getGifsSize(callback)</a></li><li><a href="#getappvideocapturefoldersizecallback">getAppVideoCaptureFolderSize(callback)</a></li><li><a href="#getappscreencapturefoldersizecallback">getAppScreenCaptureFolderSize(callback)</a></li><li><a href="#onmediaevent">onMediaEvent</a></li><li><a href="#onscreenshottaken">onScreenshotTaken</a></li><li><a href="#ongifgenerationerror">onGifGenerationError</a></li><li><a href="#memoryscreenshotparams-object">MemoryScreenshotParams Object</a></li><li><a href="#rescaleparams-object">RescaleParams Object</a></li><li><a href="#cropparams-object">CropParams Object</a></li><li><a href="#emediatype-enum">eMediaType enum</a></li></ul></nav></div><footer class="site-footer"><div class="container"><ul><li>Legal</li><li><a href="/docs/topics/legal-overview">Terms overview</a></li><li><a href="/docs/topics/legal-developers-terms">Developer&#x27;s terms</a></li><li><a href="/docs/topics/legal-app-terms">App terms</a></li><li><a href="http://www.overwolf.com/legal/" target="_blank">Overwolf terms</a></li><li><a href="http://www.overwolf.com/legal/#Privacy-policy" target="_blank">Overwolf Privacy policy</a></li></ul><ul><li>Support</li><li><a href=" https://discuss.developers.overwolf.com/" target="_blank">Questions and Answers</a></li><li><a href=" https://discord.gg/7256qS2" target="_blank">Discord</a></li><li><a href="/docs/support/contact-us#join-our-slack">Slack</a></li><li><a href="https://www.facebook.com/OverwolfDevs" target="_blank">Facebook</a></li><li><a href="https://twitter.com/OverwolfDevs" target="_blank">Twitter</a></li></ul><ul><li>Documentation</li><li><a href="/docs/api/changelog">Changelog</a></li><li><a href="/docs/api/overwolf-api-overview">API</a></li><li><a href="/docs/start/app-creation-process">App Creation Process</a></li><li><a href="/docs/topics/best-practices-overview">Best Practices</a></li><li><a href="/docs/status/all">Game Events status</a></li></ul><ul><li>Information</li><li><a href="http://www.overwolf.com/careers/">Careers</a></li><li><a href="https://play.overwolf.com/fund/" target="_blank">Fund</a></li><li><a href="https://medium.com/overwolf" target="_blank">Developers Blog</a></li><li><a href="https://www.overwolf.com/appstore" target="_blank">Overwolf Appstore</a></li><li><a href="https://brands.overwolf.com/" target="_blank">Advertise on Overwolf</a></li></ul></div></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+<h2><a class="anchor" aria-hidden="true" id="fileresult-object"></a><a href="#fileresult-object" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>FileResult Object</h2>
+<h4><a class="anchor" aria-hidden="true" id="version-added-0149"></a><a href="#version-added-0149" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Version added: 0.149</h4>
+<blockquote>
+<p>Container for get file URL result.</p>
+</blockquote>
+<table>
+<thead>
+<tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>url</td><td>string</td><td></td></tr>
+<tr><td>path</td><td>string</td><td></td></tr>
+</tbody>
+</table>
+<pre><code class="hljs css language-json">{
+   <span class="hljs-attr">"success"</span>: <span class="hljs-literal">true</span>,
+   <span class="hljs-attr">"status"</span>: <span class="hljs-string">"success"</span>, <span class="hljs-comment">//deprecated and kept only for backward compatibility</span>
+   <span class="hljs-attr">"url"</span>: <span class="hljs-string">"overwolf://media/replays/App+Name/Dota+2+06-28-2016+17-59-37-620.mp4"</span>,
+   <span class="hljs-attr">"path"</span>: <span class="hljs-string">"E://Video/Overwolf/App Name/Dota 2 06-28-2016 17-59-37-620.mp4"</span>
+}
+</code></pre>
+<p>Note that the last part of the file name is the <strong>replayId</strong>.  In the above example, it's 620.<br>
+The <strong>replayId</strong> is needed to finish capturing the replay by calling for example to  <a href="overwolf-media-replays#stopcapturereplayid-callback">overwolf.media.replays.stopCapture()</a>. In the above example, it's 620.</p>
+<h2><a class="anchor" aria-hidden="true" id="getappvideocapturefoldersizeresult-object"></a><a href="#getappvideocapturefoldersizeresult-object" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>GetAppVideoCaptureFolderSizeResult Object</h2>
+<h4><a class="anchor" aria-hidden="true" id="version-added-0149-1"></a><a href="#version-added-0149-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Version added: 0.149</h4>
+<blockquote>
+<p>Container for get file getAppVideoCaptureFolderSize result.</p>
+</blockquote>
+<table>
+<thead>
+<tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>totalVideosSizeMB</td><td>number</td><td></td></tr>
+</tbody>
+</table>
+<pre><code class="hljs css language-json">{
+   <span class="hljs-attr">"success"</span>: <span class="hljs-literal">true</span>,
+   <span class="hljs-attr">"status"</span>: <span class="hljs-string">"success"</span>, <span class="hljs-comment">//deprecated and kept only for backward compatibility</span>
+   <span class="hljs-attr">"totalVideosSizeMB"</span>: <span class="hljs-number">12123</span>,
+}
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="getappscreencapturefoldersizeresult-object"></a><a href="#getappscreencapturefoldersizeresult-object" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>GetAppScreenCaptureFolderSizeResult Object</h2>
+<h4><a class="anchor" aria-hidden="true" id="version-added-0149-2"></a><a href="#version-added-0149-2" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Version added: 0.149</h4>
+<blockquote>
+<p>Container for get file getAppVideoCaptureFolderSize result.</p>
+</blockquote>
+<table>
+<thead>
+<tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>screenCaptureSizeMB</td><td>number</td><td></td></tr>
+</tbody>
+</table>
+<pre><code class="hljs css language-json">{
+   <span class="hljs-attr">"success"</span>: <span class="hljs-literal">true</span>,
+   <span class="hljs-attr">"status"</span>: <span class="hljs-string">"success"</span>, <span class="hljs-comment">//deprecated and kept only for backward compatibility</span>
+   <span class="hljs-attr">"screenCaptureSizeMB"</span>: <span class="hljs-number">12123</span>,
+}
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="screenshottakenevent-object"></a><a href="#screenshottakenevent-object" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>ScreenshotTakenEvent Object</h2>
+<table>
+<thead>
+<tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>url</td><td>string</td><td></td></tr>
+</tbody>
+</table>
+<h4><a class="anchor" aria-hidden="true" id="event-data-example-success-1"></a><a href="#event-data-example-success-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Event data example: Success</h4>
+<pre><code class="hljs css language-json">{
+  <span class="hljs-attr">"success"</span>: <span class="hljs-literal">true</span>,
+  <span class="hljs-attr">"url"</span>: <span class="hljs-string">""</span>
+}
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="gifgenerationerrorevent-object"></a><a href="#gifgenerationerrorevent-object" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>GifGenerationErrorEvent Object</h2>
+<table>
+<thead>
+<tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>reason</td><td>string</td><td></td></tr>
+</tbody>
+</table>
+<h4><a class="anchor" aria-hidden="true" id="event-data-example-success-2"></a><a href="#event-data-example-success-2" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Event data example: Success</h4>
+<pre><code class="hljs css language-json">{
+  <span class="hljs-attr">"success"</span>: <span class="hljs-literal">true</span>,
+  <span class="hljs-attr">"reason"</span>: <span class="hljs-string">""</span>
+}
+</code></pre>
+</span></div></article></div><div class="docLastUpdate"><em>Last updated on 2020-10-27 by eransharv</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/api/overwolf-logitech-led"><span class="arrow-prev">← </span><span>overwolf.logitech.led</span></a><a class="docs-next button" href="/docs/api/overwolf-media-audio"><span>overwolf.media.audio</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#methods-reference">Methods Reference</a></li><li><a href="#events-reference">Events Reference</a></li><li><a href="#types-reference">Types Reference</a></li><li><a href="#in-memory-screenshot-overview">In-memory screenshot overview</a></li><li><a href="#sample-app">Sample app</a></li><li><a href="#takescreenshotcallback">takeScreenshot(callback)</a></li><li><a href="#takescreenshottargetfolder-callback">takeScreenshot(targetFolder, callback)</a></li><li><a href="#takewindowsscreenshotbyhandlewindowhandle-postmediaevent-callback">takeWindowsScreenshotByHandle(windowHandle, postMediaEvent, callback)</a></li><li><a href="#takewindowsscreenshotbyhandlewindowhandle-postmediaevent-targetfolder-callback">takeWindowsScreenshotByHandle(windowHandle, postMediaEvent, targetFolder, callback)</a></li><li><a href="#takewindowsscreenshotbynamewindowname-postmediaevent-callback">takeWindowsScreenshotByName(windowName, postMediaEvent, callback)</a></li><li><a href="#takewindowsscreenshotbynamewindowname-postmediaevent-targetfolder-callback">takeWindowsScreenshotByName(windowName, postMediaEvent, targetFolder, callback)</a></li><li><a href="#getscreenshoturlscreenshotparams-callback">getScreenshotUrl(screenshotParams, callback)</a></li><li><a href="#shareimageimage-description-callback">shareImage(image, description, callback)</a></li><li><a href="#postmediaeventmediatype-jsoninfo-callback">postMediaEvent(mediaType, jsonInfo, callback)</a></li><li><a href="#deleteoldgifskeepnewestxgbs-callback">deleteOldGifs(keepNewestXGbs, callback)</a></li><li><a href="#getgifssizecallback">getGifsSize(callback)</a></li><li><a href="#getappvideocapturefoldersizecallback">getAppVideoCaptureFolderSize(callback)</a></li><li><a href="#getappscreencapturefoldersizecallback">getAppScreenCaptureFolderSize(callback)</a></li><li><a href="#onmediaevent">onMediaEvent</a></li><li><a href="#onscreenshottaken">onScreenshotTaken</a></li><li><a href="#ongifgenerationerror">onGifGenerationError</a></li><li><a href="#memoryscreenshotparams-object">MemoryScreenshotParams Object</a></li><li><a href="#rescaleparams-object">RescaleParams Object</a></li><li><a href="#cropparams-object">CropParams Object</a></li><li><a href="#emediatype-enum">eMediaType enum</a></li><li><a href="#fileresult-object">FileResult Object</a></li><li><a href="#getappvideocapturefoldersizeresult-object">GetAppVideoCaptureFolderSizeResult Object</a></li><li><a href="#getappscreencapturefoldersizeresult-object">GetAppScreenCaptureFolderSizeResult Object</a></li><li><a href="#screenshottakenevent-object">ScreenshotTakenEvent Object</a></li><li><a href="#gifgenerationerrorevent-object">GifGenerationErrorEvent Object</a></li></ul></nav></div><footer class="site-footer"><div class="container"><ul><li>Legal</li><li><a href="/docs/topics/legal-overview">Terms overview</a></li><li><a href="/docs/topics/legal-developers-terms">Developer&#x27;s terms</a></li><li><a href="/docs/topics/legal-app-terms">App terms</a></li><li><a href="http://www.overwolf.com/legal/" target="_blank">Overwolf terms</a></li><li><a href="http://www.overwolf.com/legal/#Privacy-policy" target="_blank">Overwolf Privacy policy</a></li></ul><ul><li>Support</li><li><a href=" https://discuss.developers.overwolf.com/" target="_blank">Questions and Answers</a></li><li><a href=" https://discord.gg/7256qS2" target="_blank">Discord</a></li><li><a href="/docs/support/contact-us#join-our-slack">Slack</a></li><li><a href="https://www.facebook.com/OverwolfDevs" target="_blank">Facebook</a></li><li><a href="https://twitter.com/OverwolfDevs" target="_blank">Twitter</a></li></ul><ul><li>Documentation</li><li><a href="/docs/api/changelog">Changelog</a></li><li><a href="/docs/api/overwolf-api-overview">API</a></li><li><a href="/docs/start/app-creation-process">App Creation Process</a></li><li><a href="/docs/topics/best-practices-overview">Best Practices</a></li><li><a href="/docs/status/all">Game Events status</a></li></ul><ul><li>Information</li><li><a href="http://www.overwolf.com/careers/">Careers</a></li><li><a href="https://play.overwolf.com/fund/" target="_blank">Fund</a></li><li><a href="https://medium.com/overwolf" target="_blank">Developers Blog</a></li><li><a href="https://www.overwolf.com/appstore" target="_blank">Overwolf Appstore</a></li><li><a href="https://brands.overwolf.com/" target="_blank">Advertise on Overwolf</a></li></ul></div></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
                 document.addEventListener('keyup', function(e) {
                   if (e.target !== document.body) {
                     return;
