@@ -38,12 +38,19 @@ Please read all the info about video capture usage and options on our [video cap
 
 * [overwolf.media.replays.ReplayHighlightsSetting](#replayhighlightssetting-object) Object
 * [overwolf.media.replays.enums.ReplayType](#replaytype-enum) enum
-* [overwolf.media.replays.onHighlightsCapturedEvent](#onhighlightscapturedevent-object) Object
-* [overwolf.media.replays.raw_events](#raw_events-object) Object
 * [overwolf.media.replays.ReplayVideoOptions](#replayvideooptions-object) Object
 * [overwolf.media.replays.ReplayStreamParams](#replaystreamparams-object) Object
 * [overwolf.media.replays.TurnOnResult](#turnonresult-object) Object
-
+* [overwolf.media.replays.TurnOffResult](#turnoffresult-object) Object
+* [overwolf.media.replays.GetStateResult](#getstateresult-object) Object
+* [overwolf.media.replays.ReplayResult](#replayresult-object) Object
+* [overwolf.media.replays.GetHighlightsFeaturesResult](#gethighlightsfeaturesresult-object) Object
+* [overwolf.media.replays.raw_events](#raw_events-object) Object
+* [overwolf.media.replays.HighlightsCapturedEvent](#highlightscapturedevent-object) Object
+* [overwolf.media.replays.CaptureErrorEvent](#captureerrorevent-object) Object
+* [overwolf.media.replays.CaptureStoppedEvent](#capturestoppedevent-object) Object
+* [overwolf.media.replays.CaptureWarningEvent](#capturewarningevent-object) Object
+* [overwolf.media.replays.ReplayServicesStartedEvent](#replayservicesstartedevent-object) Object
 
 ## turnOn(parameters, callback)
 #### Version added: 0.130
@@ -109,7 +116,7 @@ overwolf.media.replays.turnOn({
 
 Parameter | Type                  | Description                                                             |
 --------- | ----------------------| ----------------------------------------------------------------------- |
-callback  | function              | A callback function which will be called with the status of the request |
+callback    | [(Result: TurnOffResult)](#turnoffresult-object) => void   | A callback function which will be called with the status of the request |
 
 #### Callback argument: Success
 
@@ -131,18 +138,8 @@ This function is obsolete. Instead, please use [overwolf.media.replays.getState(
 Parameter | Type                  | Description                                                             |
 --------- | ----------------------| ----------------------------------------------------------------------- |
 replayType| [ReplayType](#replaytype-enum) enum       | The type of replay to get state for                 |
-callback  | function              | A callback function which will be called with the status of the request |
+callback  | [(Result: GetStateResult)](#getstateresult-object) => void   | A callback function which will be called with the status of the request |
 
-#### Callback argument: Success
-
-A callback function which will be called with the status of the request
-
-```json
-{
-    "status": "success",
-    "isOn": true
-}
-```
 
 ## getState(callback)
 #### Version added: 0.117
@@ -151,7 +148,7 @@ A callback function which will be called with the status of the request
 
 Parameter | Type                  | Description                                                             |
 --------- | ----------------------| ----------------------------------------------------------------------- |
-callback  | function              | A callback function which will be called with the status of the request |
+callback  | [(Result: GetStateResult)](#getstateresult-object) => void   | A callback function which will be called with the status of the request |
 
 Note that you get the state only from the window that turned the capturing on.
 
@@ -166,8 +163,7 @@ This function is obsolete.
 
 :::note
 **Capture()** will automatically stop after it reaches the **futureDuration**. No need to call **stopCapture()**. 
-If you want to stop the capture manually, you can use [startCapture()](#startcapturepastduration-callback
-). 
+If you want to stop the capture manually, you can use [startCapture()](#startcapturepastduration-callback). 
 :::
 
 * A replay id will be returned in the callback which is needed to finish capturing the replay.
@@ -178,24 +174,8 @@ Parameter               | Type                  | Description                   
 replayType              | [ReplayType](#replaytype-enum) enum  | The type of replay to capture                                                                     |
 pastDuration	        | int                                  | The video length, in milliseconds to include prior to the time of this call                        |
 futureDuration          | int        | The video length, in milliseconds to include after the time of this call. To ignore it, simply give it a non-positive value  |
-captureFinishedCallback	| function   |A callback function which will be called when capturing is finished, at the end of the future duration supplied to this call |
-callback                | function                             | A callback function which will be called with the status of the request                           |
-
-
-#### Callback argument: Success
-
-A callback function which will be called with the status of the request
-
-```json
-{
-    "status": "success",
-    "url": "overwolf://media/replays/App+Name/Dota+2+06-28-2016+17-55-59-435.mp4",
-    "path": "E:/Video/Overwolf/App Name/Dota 2 06-28-2016 17-55-59-435.mp4",
-    "duration": 10512,
-    "start_time": 1467125753892,
-    "thumbnail_url": "overwolf://media/thumbnails/App+Name/Dota+2+06-28-2016+17-55-59-435.mp4"
-}
-```
+captureFinishedCallback	| [(Result: ReplayResult)](#replayresult-object) => void   |A callback function which will be called when capturing is finished, at the end of the future duration supplied to this call |
+callback                | (Result) => void | Reports success or failure                                                               |
 
 ## capture(pastDuration, futureDuration, captureFinishedCallback, callback)
 #### Version added: 0.78
@@ -214,8 +194,8 @@ Parameter               | Type                  | Description                   
 ----------------------- | ----------------------| ---------------------------------------------------------------------------------------------------------------- |
 pastDuration	        | int                                  | The video length, in milliseconds to include prior to the time of this call                        |
 futureDuration          | int        | The video length, in milliseconds to include after the time of this call. To ignore it, simply give it a non-positive value  |
-captureFinishedCallback	| function   |A callback function which will be called when capturing is finished, at the end of the future duration supplied to this call |
-callback                | function                             | A callback function which will be called with the status of the request                           |
+captureFinishedCallback	| [(Result: ReplayResult)](#replayresult-object) => void   |A callback function which will be called when capturing is finished, at the end of the future duration supplied to this call |
+callback                | (Result) => void                             | A callback function which will be called with the status of the request                           |
 
 ## startCapture(replayType, pastDuration, callback)
 #### Version added: 0.78
@@ -240,19 +220,7 @@ Parameter               | Type                  | Description                   
 ----------------------- | ----------------------| ---------------------------------------------------------------------------------------------------------------- |
 replayType              | [ReplayType](#replaytype-enum) enum  | The type of replay to capture                                                                     |
 pastDuration	        | int                                  | The video length, in milliseconds to include prior to the time of this call                        |
-callback                | function                             | A callback function which will be called with the status of the request                           |
-
-#### Callback argument: Success
-
-A callback function which will be called with the status of the request
-
-```json
-{
-    "status": "success",
-    "url": "overwolf://media/replays/App+Name/Dota+2+06-28-2016+17-59-37-620.mp4",
-    "path": "E://Video/Overwolf/App Name/Dota 2 06-28-2016 17-59-37-620.mp4"
-}
-```
+callback                | [(Result: FileResult)](overwolf-media#fileresult-object) => void    | A callback function which will be called with the status of the request                           |
 
 ## startCapture(pastDuration, callback)
 #### Version added: 0.78
@@ -273,21 +241,7 @@ Parameter               | Type                  | Description                   
 ----------------------- | ----------------------| ---------------------------------------------------------------------------------------------------------------- |
 replayType              | [ReplayType](#replaytype-enum) enum  | The type of replay to capture                                                                     |
 captureFinishedCallback	| function   |A callback function which will be called when capturing is finished, at the end of the future duration supplied to this call |
-callback                | function                             | A callback function which will be called with the status of the request       
-
-#### Callback argument: Success
-
-A callback function which will be called with the status of the request
-
-```json
-{
-    "success": true,
-    "url": "overwolf://media/replays/App+Name/Dota+2+06-28-2016+17-59-37-620.mp4",
-    "path": "E://Video/Overwolf/App Name/Dota 2 06-28-2016 17-59-37-620.mp4"
-}
-```
-
-Note that the last part of the file name is the **replayId**, which is needed to finish capturing the replay by calling [stopCapture()](#stopcapturereplayid-callback). In the above example, it's 620.
+callback                | [(Result: FileResult)](overwolf-media#fileresult-object) => void    | A callback function which will be called with the status of the request                           |
 
 ## stopCapture(ReplayType, replayId, callback)
 #### Version added: 0.78
@@ -304,7 +258,7 @@ Parameter               | Type                                 | Description    
 ----------------------- | -------------------------------------| ----------------------------------------------------------------------- |
 replayType              | [ReplayType](#replaytype-enum) enum  | The type of replay to capture                                           |
 replayId		        | string                               | The id of the replay you want to stop capturing                         |
-callback                | function                             | A callback function which will be called with the status of the request |
+callback                | [(Result: FileResult)](overwolf-media#fileresult-object) => void  | A callback function which will be called with the status of the request |
 
 ## stopCapture(replayId, callback)
 #### Version added: 0.117
@@ -316,31 +270,21 @@ callback                | function                             | A callback func
 Parameter               | Type                                 | Description                                                             |
 ----------------------- | -------------------------------------| ----------------------------------------------------------------------- |
 replayId		        | string                               | The id of the replay you want to stop capturing. Read [notes](#replayid-notes).        |
-callback                | function                             | A callback function which will be called with the status of the request |
+callback                | [(Result: ReplayResult)](#replayresult-object) => void   | A callback function which will be called with the status of the request |
 
 #### replayId notes
 
 The replayId is returned in the [callback of the startCapture()](#callback-argument-success-5), as the last part of the file name.   
 
-#### Callback argument: Success
-
-A callback function which will be called with the status of the request
-
-```json
-{
-    "status": "success",
-    "url": "overwolf://media/replays/App+Name/Dota+2+06-28-2016+17-59-37-620.mp4",
-    "path": "E://Video/Overwolf/App Name/Dota 2 06-28-2016 17-59-37-620.mp4",
-    "duration": 84556,
-    "start_time": 1467125971875,
-    "thumbnail_url": "overwolf://media/thumbnails/App+Name/Dota+2+06-28-2016+17-59-37-620.mp4"
-}
-```
 
 ## updateTobiiSetting(param, callback)
 #### Version added: 0.110
 
 > Update Tobii streaming layer.
+
+:::warning OBSOLETE
+This function is obsolete.
+:::
 
 * You can only call this method if replay mode is on and using a valid id of a replay being captured to a file.
 
@@ -386,7 +330,7 @@ You can browse in our [list of auto-highlights supported games](../api/auto-high
 Parameter   | Type     | Description                                                                                                                                |
 ------------| ---------| ------------------------------------------------------------------------------------------------------------------------------------------ |
 gameId		| int      | The id of the game you want to capture it highlights                                                                                       |
-callback    | function |A callback function which provides a list of the generated video highlights URL’s for this session and relevant metadata for each highlight |
+callback    | [(Result: GetHighlightsFeaturesResult)](#gethighlightsfeaturesresult-object) => void  |A callback function which provides a list of the generated video highlights URL’s for this session and relevant metadata for each highlight |
 
 #### Usage example
 
@@ -396,70 +340,35 @@ callback    | function |A callback function which provides a list of the generat
 overwolf.media.replays.getHighlightsFeatures(21216, JSON.stringify(console.log))
 ```
 
-#### Callback argument: Success
-
-
-```json
-{"success":true,"features":["kill","knockout","death","knockedout","victoryRoyale"]}
-```
-
 ## onCaptureError
 
 #### Version added: 0.78
 
-> Fired when an errror has occurred with the capturing.
-
-#### Possible Error Codes
-
-* Unknown
-* Unauthorized
-* Invalid_Server
-* No_Internet
-* Invalid_Video_Settings
-* No_Playback_Device
-* Not_InGame
-* Internet_Congested
-* Game_Quit_Mid_Stream
-* Twitch_Dll_Load_Error
-* Twitch_Init_Error
-* No_Encoder
-* Out_Of_Disk_Space
-* Update_Driver
-
-#### Event Data Example
-
-```json
-{
-    "status": "error",
-    "stream_id": 1,
-    "error": "Internet_Congested"
-}
-```
-
+> Fired when an errror has occurred with the capturing, with the following structure: [CaptureErrorEvent](#captureerrorevent-object) Object
 
 ## onCaptureStopped
 
 #### Version added: 0.117
 
-> Fired when replay service is stopped.
+> Fired when replay service is stopped, with the following structure: [CaptureStoppedEvent](#capturestoppedevent-object) Object
 
 ## onCaptureWarning
 
 #### Version added: 0.117
 
->Fired on capture service warning.
+>Fired on capture service warning, with the following structure: [CaptureWarningEvent](#capturewarningevent-object) Object
 
 ## onReplayServicesStarted
 
 #### Version added: 0.117
 
-> Fired when an replay service was started (on any app)
+> Fired when an replay service was started (on any app),  with the following structure: [ReplayServicesStartedEvent](#replayservicesstartedevent-object) Object
 
 ## onHighlightsCaptured
 
 #### Version added: 0.130
 
-> Fired when a new Replay highlight recorded (when highlightsSetting is enabled), with the following structure: [onHighlightsCapturedEvent](#onhighlightscapturedevent-object) Object
+> Fired when a new Replay highlight recorded (when highlightsSetting is enabled), with the following structure: [HighlightsCapturedEvent](#highlightscapturedevent-object) Object
 
 #### Usage
 
@@ -469,7 +378,7 @@ overwolf.media.replays.onHighlightsCaptured.addListener(function(info) {
 });
 ```
 
-## onHighlightsCapturedEvent Object
+## HighlightsCapturedEvent Object
 
 Parameter               | Type                              | Description           |
 ------------------------| ----------------------------------|---------------------- |
@@ -663,8 +572,154 @@ osBuild           | string        |                         |
    "success": true,
    "status": "success", //deprecated and kept only for backward compatibility
    "description": "",
+   "metadata": "",
+   "mediaFolder": "", 
+   "osVersion": "",
+   "osBuild": ""
+}
+```
+
+## TurnOffResult Object
+#### Version added: 0.149
+
+> Container for the turnOff result.
+
+Parameter         | Type          | Description             |
+------------------| --------------| ----------------------- |
+description       | string        |                         | 
+metadata          | string        |                         | 
+osVersion         | string        |                         | 
+osBuild           | string        |                         | 
+
+
+```json
+{
+   "success": true,
+   "status": "success", //deprecated and kept only for backward compatibility
+   "description": "",
    "metadata": "", 
    "osVersion": "",
    "osBuild": ""
 }
 ```
+
+## GetStateResult Object
+#### Version added: 0.149
+
+> Container for the GetState result.
+
+Parameter         | Type          | Description             |
+------------------| --------------| ----------------------- |
+isOn              | boolean       |                         | 
+
+
+```json
+{
+   "success": true,
+   "status": "success", //deprecated and kept only for backward compatibility
+   "isOn": true
+}
+```
+
+## ReplayResult Object
+#### Version added: 0.149
+
+> Container for the capture result.
+
+Parameter     | Type          | Description             |
+--------------| --------------| ----------------------- |
+url           | string        |                         | 
+path          | string        |                         | 
+encodedPath   | string        |                         | 
+duration      | number        |                         | 
+thumbnail_url | string        |                         | 
+thumbnail_path| string        |                         | 
+thumbnail_encoded_path| string        |                         | 
+start_time    | number        |                         | 
+
+
+```json
+{
+   "success": true,
+   "status": "success", //deprecated and kept only for backward compatibility
+   "url": "",
+   "path": "E:/Video/Overwolf/App Name/Dota 2 06-28-2016 17-55-59-435.mp4", 
+   "encodedPath": "",
+   "duration": "10512",
+    "thumbnail_url": "overwolf://media/thumbnails/App+Name/Dota+2+06-28-2016+17-55-59-435.mp4",
+   "thumbnail_path": "", 
+   "thumbnail_encoded_path": "",
+   "start_time": "1467125753892"
+}
+```
+
+## GetHighlightsFeaturesResult Object
+#### Version added: 0.149
+
+> Container for the GetHighlightsFeatures result.
+
+Parameter     | Type          | Description             |
+--------------| --------------| ----------------------- |
+features      | string[]      |                         | 
+
+```json
+{"success":true,"features":["kill","knockout","death","knockedout","victoryRoyale"]}
+```
+
+## CaptureErrorEvent Object
+
+Parameter   | Type                                                              | Description     |
+------------| ------------------------------------------------------------------|---------------- |
+status      |  string                                                           |                 | 
+stream_id   |  string                                                           |                 |
+error       |  string                                                           |                 |
+
+#### Possible Error Codes
+
+* Unknown
+* Unauthorized
+* Invalid_Server
+* No_Internet
+* Invalid_Video_Settings
+* No_Playback_Device
+* Not_InGame
+* Internet_Congested
+* Game_Quit_Mid_Stream
+* Twitch_Dll_Load_Error
+* Twitch_Init_Error
+* No_Encoder
+* Out_Of_Disk_Space
+* Update_Driver
+
+#### Event Data Example
+
+```json
+{
+   "status": "error",
+   "stream_id": 1,
+   "error": "Internet_Congested"
+}
+```
+
+## CaptureStoppedEvent Object
+
+Parameter       | Type                                                              | Description     |
+----------------| ------------------------------------------------------------------|---------------- |
+status          |  string                                                           |                 | 
+reason          |  string                                                           |                 |
+metaData        |  string                                                           |                 |
+osVersion       |  string                                                           |                 |
+
+## CaptureWarningEvent Object
+
+Parameter       | Type                                                              | Description     |
+----------------| ------------------------------------------------------------------|---------------- |
+warning         |  string                                                           |                 | 
+reason          |  string                                                           |                 |
+
+## ReplayServicesStartedEvent Object
+
+Parameter       | Type                                                              | Description     |
+----------------| ------------------------------------------------------------------|---------------- |
+extensions      |  string []                                                        |                 | 
+

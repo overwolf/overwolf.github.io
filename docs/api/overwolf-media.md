@@ -35,10 +35,14 @@ Use this API to capture a screenshot or create a GIF of the currently running ga
 
 ## Types Reference
 
-* [MemoryScreenshotParams](#memoryscreenshotparams-object) Object
-* [RescaleParams](#rescaleparams-object) Object
-* [CropParams](#cropparams-object) Object
+* [overwolf.media.MemoryScreenshotParams](#memoryscreenshotparams-object) Object
+* [overwolf.media.RescaleParams](#rescaleparams-object) Object
+* [overwolf.media.CropParams](#cropparams-object) Object
 * [overwolf.media.enums.eMediaType](#emediatype-enum) enum
+* [overwolf.media.FileResult](#fileresult-object) Object
+* [overwolf.media.GetAppVideoCaptureFolderSizeResult](#getappvideocapturefoldersizeresult-object) Object
+* [overwolf.media.ScreenshotTakenEvent](#screenshottakenevent-object) Object
+* [overwolf.media.GifGenerationErrorEvent](#gifgenerationerrorevent-object) Object
 
 ## In-memory screenshot overview
 
@@ -64,18 +68,7 @@ You can use the retrieved URL later in order to serve the stated screenshot: for
 
 Parameter            | Type                  | Description                                      |
 -------------------- | ----------------------| ------------------------------------------------ |
-callback (Optional)  | function              | A function called after the screenshot was taken |
-
-#### Callback argument: Success
-
-A callback function which will be called with the status of the request and the screenshot URL.
-
-```json
-{
-    "status": "success",
-    "url": "overwolf://media/screenshots/<screenshot name>"
-}
-```
+callback (Optional)  | [(Result: FileResult)](#fileresult-object) => void               | A function called after the screenshot was taken |
 
 ## takeScreenshot(targetFolder, callback)
 #### Version added: 0.117
@@ -85,19 +78,7 @@ A callback function which will be called with the status of the request and the 
 Parameter            | Type                  | Description                                      |
 -------------------- | ----------------------| ------------------------------------------------ |
 targetFolder         | string                | Target screen shot folder path                   |
-callback             | function              | A function called after the screenshot was taken |
-
-#### Callback argument: Success
-
-A callback function which will be called with the status of the request and the screenshot URL.
-
-```json
-{  
-   "success":true,
-   "url":"overwolf://media/screenshots/custom/E:/Desktop%20Capture-07-15-2018%2014-15-22-793.jpg",
-   "path":"E:/Desktop Capture-07-15-2018 14-15-22-793.jpg"
-}
-```
+callback             | [(Result: FileResult)](#fileresult-object) => void  | A callback function which will be called with the status of the request and the screenshot URL. |
 
 ## takeWindowsScreenshotByHandle(windowHandle, postMediaEvent, callback)
 #### Version added: 0.115
@@ -108,7 +89,7 @@ Parameter       | Type       | Description                                      
 ----------------| -----------| ------------------------------------------------------------------------------------------------------------------------ |
 windowHandle    | int        | The window handle number. The handle number can retrieved from [overwolf.games.launchers.getRunningLaunchersInfo()](overwolf-games-launchers#getrunninglaunchersinfocallback)        |
 postMediaEvent	| bool       | set true to post [(onMediaEvent)](#onmediaevent)                                                                                     |
-callback        | function   | A function called after the screenshot was taken                                                                         |
+callback        |  [(Result: FileResult)](#fileresult-object) => void   | A function called after the screenshot was taken                                                                         |
 
 ## takeWindowsScreenshotByHandle(windowHandle, postMediaEvent, targetFolder, callback)
 #### Version added: 0.115
@@ -120,7 +101,7 @@ Parameter       | Type       | Description                                      
 windowHandle    | int        | The window handle number. The handle number can retrieved from [overwolf.games.launchers.getRunningLaunchersInfo()](overwolf-games-launchers#getrunninglaunchersinfocallback)        |
 postMediaEvent	| bool       | set true to post [(onMediaEvent)](#onmediaevent)                                                                                     |
 targetFolder	| string     | Set target folder path for screenshot                                                                                    |
-callback        | function   | A function called after the screenshot was taken                                                                         |
+callback        |  [(Result: FileResult)](#fileresult-object) => void   | A function called after the screenshot was taken                                                                         |
 
 ## takeWindowsScreenshotByName(windowName, postMediaEvent, callback)
 #### Version added: 0.115
@@ -131,7 +112,7 @@ Parameter       | Type       | Description                                      
 ----------------| -----------| ------------------------------------------------------------------------------------------------------------------------ |
 windowName	    | string     | The window name                                                                                                          |
 postMediaEvent	| bool       | set true to post [(onMediaEvent)](#onmediaevent)                                                                         |
-callback        | function   | A function called after the screenshot was taken  
+callback        |  [(Result: FileResult)](#fileresult-object) => void   | A function called after the screenshot was taken                                                                         |
 
 ## takeWindowsScreenshotByName(windowName, postMediaEvent, targetFolder, callback)
 #### Version added: 0.117
@@ -143,7 +124,7 @@ Parameter       | Type       | Description                                      
 windowName	    | string     | The window name                                                                                                          |
 postMediaEvent	| bool       | set true to post [(onMediaEvent)](#onmediaevent)                                                                         |
 targetFolder	| string     | Set target folder path for screenshot                                                                                    |
-callback        | function   | A function called after the screenshot was taken  
+callback        |  [(Result: FileResult)](#fileresult-object) => void   | A function called after the screenshot was taken                                                                         |
 
 ## getScreenshotUrl(screenshotParams, callback)
 #### Version added: 0.85
@@ -155,21 +136,10 @@ callback        | function   | A function called after the screenshot was taken
 * You can take a look at the in-memory screenshot [sample app](#sample-app).
 * You can read more about the in-memory screenshot [here](#in-memory-screenshot-overview).
 
-Parameter           | Type       | Description                                                                                                              |
---------------------| -----------| ------------------------------------------------------------------------------------------------------------------------ |
-screenshotParams	| [MemoryScreenshotParams](#memoryscreenshotparams-object) object  | A JSON containing the parameters of the screenshot                        |
-callback (Optional) | function   | A function called after the screenshot was taken  
-
-#### Callback argument: Success
-
-A callback function which will be called with the status of the request and the screenshot URL.
-
-```json
-{
-    "status": "success",
-    "url": "overwolf://media/memoryscreenshots/74/Counter-Strike+Global+Offensive-05-02-2016+13-54-54"
-}
-```
+Parameter           | Type                                                            | Description                                            |
+--------------------| ----------------------------------------------------------------| ------------------------------------------------------ |
+screenshotParams	| [MemoryScreenshotParams](#memoryscreenshotparams-object) object | A JSON containing the parameters of the screenshot     |
+callback (optional) |  [(Result: FileResult)](#fileresult-object) => void             | A function called after the screenshot was taken       |
 
 #### Usage Example
 
@@ -206,22 +176,22 @@ overwolf.media.getScreenshotUrl(
 
 > Opens the social network sharing console to allow the user to share a picture.
 
-Parameter           | Type       | Description                                                                                                              |
---------------------| -----------| ------------------------------------------------------------------------------------------------------------------------ |
-image		        | Object     | A URL or image object to be shared                                                                                       |
-description		    | string     | The description to be used when posting to social networks                                                               |
-callback (Optional) | function   | A function called after the screenshot was taken                                                                         |
+Parameter           | Type             | Description                                                                                                              |
+--------------------| -----------------| ------------------------------------------------------------------------------------------------------------------------ |
+image		        | Object           | A URL or image object to be shared                                                                                       |
+description		    | string           | The description to be used when posting to social networks                                                               |
+callback            | (Result) => void | Reports success or failure                                                                                               |
 
 ## postMediaEvent(mediaType, jsonInfo, callback)
 #### Version added: 0.91
 
 > Posts a media event for other apps to receive.
 
-Parameter           | Type                                                   | Description                                                |
---------------------| -------------------------------------------------------| ---------------------------------------------------------- |
+Parameter           | Type                                 | Description                                                |
+--------------------| -------------------------------------| ---------------------------------------------------------- |
 mediaType		    | [eMediaType](#emediatype-enum) enum  | The type of the event                                      |
-jsonInfo		    | JObject                                                | A json with additional info about the events               |
-callback            | function                                               | A callback with the status if the call                     |
+jsonInfo		    | JObject                              | A json with additional info about the events               |
+callback            | (Result) => void                     | Reports success or failure                                 |
 
 ## deleteOldGifs(keepNewestXGbs, callback)
 #### Version added: 0.91
@@ -231,7 +201,7 @@ callback            | function                                               | A
 Parameter         | Type                  | Description                                                             |
 ------------------| ----------------------| ----------------------------------------------------------------------- |
 keepNewestXGbs	  | int                   | Keep the newest X GBs of gifs. Pass 0 to delete all gifs                |
-callback          | function              | A callback function which will be called with the status of the request |
+callback          | (Result) => void      | Reports success or failure                                              |
 
 ## getGifsSize(callback)
 #### Version added: 0.91
@@ -241,7 +211,7 @@ callback          | function              | A callback function which will be ca
 Parameter         | Type                  | Description                                                             |
 ------------------| ----------------------| ----------------------------------------------------------------------- |
 keepNewestXGbs	  | int                   | Keep the newest X GBs of gifs. Pass 0 to delete all gifs                |
-callback          | function              | A callback with the gifs size                                           |
+callback          | (Result) => void      | Reports success or failure                                              |
 
 ## getAppVideoCaptureFolderSize(callback)
 #### Version added: 0.106
@@ -253,7 +223,7 @@ callback          | function              | A callback with the gifs size       
 
 Parameter         | Type                  | Description                                                             |
 ------------------| ----------------------| ----------------------------------------------------------------------- |
-callback          | function              | A callback with the size in MB                                          |
+callback          | [(Result: GetAppVideoCaptureFolderSizeResult)](#getappvideocapturefoldersizeresult-object) => void   A callback with the size in MB                                          |
 
 ## getAppScreenCaptureFolderSize(callback)
 #### Version added: 0.106
@@ -265,7 +235,7 @@ callback          | function              | A callback with the size in MB      
 
 Parameter         | Type                  | Description                                                             |
 ------------------| ----------------------| ----------------------------------------------------------------------- |
-callback          | function              | A callback with the size in MB                                          |
+callback          | [(Result: GetAppScreenCaptureFolderSizeResult)](#getappscreencapturefoldersizeresult-object) => void   A callback with the size in MB                                          |
 
 ## onMediaEvent
 
@@ -299,13 +269,13 @@ callback          | function              | A callback with the size in MB      
 
 #### Version added: 0.78
 
-> Fired when a screenshot was taken.
+> Fired when a screenshot was taken, with the following structure: [ScreenshotTakenEvent](#ScreenshotTakenEvent-object) Object
 
 ## onGifGenerationError
 
 #### Version added: 0.91
 
-> Fired when there’s an error with the gif generation buffer.
+> Fired when there’s an error with the gif generation buffer, with the following structure: [GifGenerationErrorEvent](#gifgenerationerrorevent-object) Object
 
 ## MemoryScreenshotParams Object
 #### Version added: 0.78
@@ -338,7 +308,7 @@ Parameter | Type     | Description                                              
 x         | double   | The x offset. Positive value is considered absolute (0 – WIDTH) and negative is considered relative (-1.0 – 0)   |
 y         | double   | The y offset. Positive value is considered absolute (0 – HEIGHT) and negative is considered relative (-1.0 – 0)  |
 width     | double   | The target width                                                                                                 |
-height     | double   | The target height                                                                                                 |
+height    | double   | The target height                                                                                                |
 
 ## eMediaType enum
 #### Version added: 0.78
@@ -349,3 +319,90 @@ Option    | Description  |
 --------- | -------------|
 Video     |              |
 Image     |              |
+
+## FileResult Object
+#### Version added: 0.149
+
+> Container for get file URL result.
+
+Parameter         | Type          | Description             |
+------------------| --------------| ----------------------- |
+url               | string        |                         | 
+path              | string        |                         | 
+
+```json
+{
+   "success": true,
+   "status": "success", //deprecated and kept only for backward compatibility
+   "url": "overwolf://media/replays/App+Name/Dota+2+06-28-2016+17-59-37-620.mp4",
+   "path": "E://Video/Overwolf/App Name/Dota 2 06-28-2016 17-59-37-620.mp4"
+}
+```
+
+Note that the last part of the file name is the **replayId**.  In the above example, it's 620.  
+The **replayId** is needed to finish capturing the replay by calling for example to  [overwolf.media.replays.stopCapture()](overwolf-media-replays#stopcapturereplayid-callback). In the above example, it's 620.
+
+
+## GetAppVideoCaptureFolderSizeResult Object
+#### Version added: 0.149
+
+> Container for get file getAppVideoCaptureFolderSize result.
+
+Parameter         | Type          | Description             |
+------------------| --------------| ----------------------- |
+totalVideosSizeMB | number        |                         | 
+
+```json
+{
+   "success": true,
+   "status": "success", //deprecated and kept only for backward compatibility
+   "totalVideosSizeMB": 12123,
+}
+```
+
+## GetAppScreenCaptureFolderSizeResult Object
+#### Version added: 0.149
+
+> Container for get file getAppVideoCaptureFolderSize result.
+
+Parameter         | Type          | Description             |
+------------------| --------------| ----------------------- |
+screenCaptureSizeMB | number        |                         | 
+
+```json
+{
+   "success": true,
+   "status": "success", //deprecated and kept only for backward compatibility
+   "screenCaptureSizeMB": 12123,
+}
+```
+
+## ScreenshotTakenEvent Object
+
+Parameter       | Type                                                              | Description     |
+----------------| ------------------------------------------------------------------|---------------- |
+url             |  string                                                           |                 | 
+
+#### Event data example: Success
+
+```json
+{
+  "success": true,
+  "url": ""
+}
+```
+
+## GifGenerationErrorEvent Object
+
+Parameter       | Type                                                              | Description     |
+----------------| ------------------------------------------------------------------|---------------- |
+reason             |  string                                                           |                 | 
+
+#### Event data example: Success
+
+```json
+{
+  "success": true,
+  "reason": ""
+}
+```
