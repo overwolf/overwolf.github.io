@@ -69,6 +69,31 @@ ultimate_cooldown | me          | Ultimate ability cooldown (range between 0-100
 key          | Category    | Values                    | Notes                 | Since GEP Ver. |
 --------------- | -----------| ------------------------------------------------------------------------------------ | ------------------------------------ | ------------- | 
 pseudo_match_id | match_info | The current match’s ID code.</br></br>Example:</br></br> `0c0ea3df-97ea-4d3a-b1f6-f8e34042251f`  |  This is an Overwolf-generated code, unrelated to Respawn.  |   130.0 |
+game_mode      | match_info | The currently selected game mode. | See [notes](#game_mode-note) |   158.0 |
+tabs            | match_info | The current amount of squads, players, cash, and kills of the match (in relation to local player).| See [notes](#tabs-note) |   158.0 |
+
+#### *game_mode* note
+
+Data Example:
+
+```json
+{"info":{"match_info":{"game_mode":"#PL_CAN_TRIO"}},"feature":"match_info"}
+```
+Possible values:
+- "#PL_FIRINGRANGE"
+- "#PL_TRAINING"
+- "#PL_des_duo"
+- "#PL_CAN_TRIO"
+- "#PL_Ranked_Leagues"
+- "#SHADOWROYALE_MODE"
+
+#### *tabs* note
+
+Data Example:
+
+```json
+{"info":{"match_info":{"tabs":"{"kills":1,"spectators":0,"teams":6,"players":13,"cash":15}"}},"feature":"match_info"}
+```
 
 ## match_state
 
@@ -269,6 +294,7 @@ assist | victimName                              | Local player participated in 
 #### *kill* note
 
 * Currently performing an execution has a chance to not catch a kill event. It is a known issue and we're currently working on a fix.
+* Furthermore, assist in a `knockdown` event currently is not supported, only for `elimination`.
 
 ## revive
 
