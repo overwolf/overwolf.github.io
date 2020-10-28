@@ -526,7 +526,7 @@ Parameter            | Type     | Description                                   
 | detectedRenderer   | string   | Returns the rendering technology detected by the running game                                       | 
 | commandLine        | string   | Returns the game process commandline                                                                | 
 | monitorHandle      | object   | Returns the current monitor handle                                                                  | 
-| windowHandle       | object   | Returns the current app window handle                                                               | 
+| windowHandle       | object   | Returns the current game window handle                                                               | 
 
 #### Example data: Success
 
