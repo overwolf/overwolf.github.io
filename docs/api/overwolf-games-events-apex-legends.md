@@ -287,6 +287,7 @@ assist | victimName                              | Local player participated in 
 #### *kill* note
 
 * Currently performing an execution has a chance to not catch a kill event. It is a known issue and we're currently working on a fix.
+* Furthermore, assist in a `knockdown` event currently is not supported, only for `elimination`.
 
 ## revive
 
