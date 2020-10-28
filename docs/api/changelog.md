@@ -77,6 +77,7 @@ Note that the work on the documentation for this version is still in-progress.
 #### Game events
 * GENERAL
   * Recently both Path of Exile and Rocket League received an Epic Games version and our events are currently unreliable on those versions. We are adjusting the events and will update in the near future.
+  * Be advised that currently in Apex Legends - the assist event is broken in relation to "knockdown". Only "elimination" is supported.
 * [WARFRAME](overwolf-games-events-warframe)
   * New updates and events under:
     * inventory
