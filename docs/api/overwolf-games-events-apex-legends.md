@@ -79,6 +79,13 @@ Data Example:
 ```json
 {"info":{"match_info":{"game_mode":"#PL_CAN_TRIO"}},"feature":"match_info"}
 ```
+Possible values:
+- "#PL_FIRINGRANGE"
+- "#PL_TRAINING"
+- "#PL_des_duo"
+- "#PL_CAN_TRIO"
+- "#PL_Ranked_Leagues"
+- "#SHADOWROYALE_MODE"
 
 #### *tabs* note
 
