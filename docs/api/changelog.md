@@ -101,6 +101,9 @@ Note that the work on the documentation for this version is still in-progress.
 * [Warframe](overwolf-games-events-warframe)
   * New updates under:
     * match_info
+* [APEX LEGENDS](overwolf-games-events-apex-legends)
+  * New updates under:
+    * match_info
     
 ## Version 0.155 (Sep. 2020)
 
