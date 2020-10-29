@@ -293,7 +293,7 @@ assist | victimName                              | Local player participated in 
 
 #### *kill* note
 
-* Currently performing an execution has a chance to not catch a kill event. It is a known issue and we're currently working on a fix.
+* Currently performing an execution does not catch a kill event. If you want to correctly count the amount of kills despite this issue, please use the new `tabs` key in the match_info feature.
 * Furthermore, assist in a `knockdown` event currently is not supported, only for `elimination`.
 
 ## revive
