@@ -8,7 +8,37 @@ Follow this entry for ongoing updates and changes to the project or tools.
 
 Here you can find our [Developers Roadmap](https://trello.com/b/1V10E4IB/overwolf-roadmap).
 
-## Version 0.157 (In-Progress)
+## Version 0.158 (In-Progress)
+
+Note that the work on the documentation for this version is still in-progress.
+
+#### API
+
+* New API: [overwolf.games.inputTracking.onMouseWheel](): Fired a mouse wheel event.
+* New window manifest flag [restrict_to_game_bounds]():  
+  Restrict window to game client (window) area. A window will always stay inside the game window while dragging.
+
+#### Platform
+
+* Block custom schemas from non overwolf-extensions urls: make sure that only our schema still work: (overwolf://, overwolf-fs://, overwolf-extensions://, overwolf-folder://)
+
+#### Bug fixes
+
+* Fix bug that prevets to notify all the apps using highlights when the game was closed during the highlight capture.
+* Removed user token from logs: we used to write the user token after changes to the login state.
+* Improve in-game dragging: Fixes an offset when dragging windows ingame.
+* Taken hotkeys don't appear as unassigned: Fix when the client can’t detect ‘unassigned’ hotkeys when they are already taken.
+
+
+#### Dev Console
+
+* Soon.
+
+#### Game events
+
+* Soon.
+
+## Version 0.157 (Nov. 2020)
 
 Note that the work on the documentation for this version is still in-progress.
 
