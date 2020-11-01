@@ -18,6 +18,8 @@ Provides keyboard and mouse activity information while the user is in-game.
 * [overwolf.games.inputTracking.onKeyDown](#onkeydown)
 * [overwolf.games.inputTracking.onMouseUp](#onmouseup)
 * [overwolf.games.inputTracking.onMouseDown](#onmousedown)
+* [overwolf.games.inputTracking.onMouseWheel](#onmousewheel)
+
 
 ## Types Reference
 
@@ -126,6 +128,12 @@ The event information includes whether the left or right mouse button was clicke
 #### Version added: 0.78
 
 > Fired when a mouse key has been pressed, with the following structure: [MouseEvent](#mouseevent-object) Object.
+
+## onMouseWheel
+
+#### Version added: 0.158
+
+> Fired when a mouse wheel has been used, with the following structure: [WheelEvent](#wheelevent-object) Object.
 
 ## InputActivity Object
 
@@ -247,6 +255,27 @@ onGame                   |  boolean        |                            |       
 ```json
 {
     "button": "xbutton2",
+    "x": 177,
+    "y": 529,
+    "onGame": true
+}
+```
+
+## WheelEvent Object
+
+Parameter                | Type           | Description                | Notes                     |
+-------------------------| ---------------|--------------------------- | --------------------------|
+delta                    |  number        |                            |                           |                           
+x                        |  number        |                            |                           |                           
+y                        |  number        |                            |                           |                           
+onGame                   |  boolean        |                            |                           |                           
+
+
+#### Event data example: Success
+
+```json
+{
+    "delta": "13",
     "x": 177,
     "y": 529,
     "onGame": true

@@ -14,8 +14,8 @@ Note that the work on the documentation for this version is still in-progress.
 
 #### API
 
-* New API: [overwolf.games.inputTracking.onMouseWheel](): Fired a mouse wheel event.
-* New window manifest flag [restrict_to_game_bounds]():  
+* New API: [overwolf.games.inputTracking.onMouseWheel](overwolf-games-inputTracking#onmousewheel): Fired a mouse wheel event.
+* New window manifest flag [restrict_to_game_bounds](manifest-json#restrict_to_game_bounds):  
   Restrict window to game client (window) area. A window will always stay inside the game window while dragging.
 
 #### Platform
@@ -32,7 +32,7 @@ Note that the work on the documentation for this version is still in-progress.
 
 #### Dev Console
 
-* Soon.
+* Add 
 
 #### Game events
 

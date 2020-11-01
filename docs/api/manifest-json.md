@@ -89,7 +89,8 @@ Note that not all flags are mandatory - we included all available flags for docu
                 "<a href="#dev_tools_window_style">dev_tools_window_style</a>": false,
                 "<a href="#debug_url">debug_url</a>": "http://localhost:3000",
                 "<a href="#optimize_accelerate_rendering">optimize_accelerate_rendering</a>": false, //Use directly shared texture rendering in game (only DX11)
-                "<a href="#disable_auto_dpi_sizing">disable_auto_dpi_sizing</a>": false //disable the DPI Aware behavior of native windows
+                "<a href="#disable_auto_dpi_sizing">disable_auto_dpi_sizing</a>": false, //disable the DPI Aware behavior of native windows
+                "<a href="#restrict_to_game_bounds">restrict_to_game_bounds</a>": false //Restrict window to game client (window) area. 
             },
         },
         //Toggle printing of ads log to the console
@@ -209,7 +210,8 @@ Note that not all flags are mandatory - we included all available flags for docu
                 "<a href="#dev_tools_window_style">dev_tools_window_style</a>": false,
                 "<a href="#debug_url">debug_url</a>": "http://localhost:3000",
                 "<a href="#optimize_accelerate_rendering">optimize_accelerate_rendering</a>": false,
-                "<a href="#disable_auto_dpi_sizing">disable_auto_dpi_sizing</a>": false //disable the DPI Aware behavior of native windows
+                "<a href="#disable_auto_dpi_sizing">disable_auto_dpi_sizing</a>": false,
+                "<a href="#restrict_to_game_bounds">restrict_to_game_bounds</a>": false
             },
         },
         "<a href="#enable_top_isolated_sites_console">enable_top_isolated_sites_console</a>": false,
@@ -418,6 +420,7 @@ A list of settings for the app windows.
 | <a class="anchor" aria-hidden="true" id="debug_url"></a>debug_url   | string     |  For local-server debugging (like react apps). You can use this field to set the localhost:port URL.</br>*Notes: You must have a local web server installed on your machine. </br>Valid only when loading unpacked extensions.</br>Valid only with "localhost" / "127.0.0.1"*                                                                                     | 0.127  |
 | <a class="anchor" aria-hidden="true" id="optimize_accelerate_rendering"></a>optimize_accelerate_rendering | bool |  Valid only for transparent windows. Valid only if [enable_osr_acceleration](#enable_osr_acceleration) is on.| 0.127  |
 | <a class="anchor" aria-hidden="true" id="disable_auto_dpi_sizing"></a>disable_auto_dpi_sizing | bool |  Relevant only for native windows. Disable the DPI Aware behavior of native windows.| 0.148  |
+| <a class="anchor" aria-hidden="true" id="restrict_to_game_bounds"></a>restrict_to_game_bounds | bool |  A window will always stay inside the game window while dragging.| 0.158  |
 
 
 ## ExternallyConnectable object
