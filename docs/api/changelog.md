@@ -29,10 +29,9 @@ Note that the work on the documentation for this version is still in-progress.
 * Improve in-game dragging: Fixes an offset when dragging windows ingame.
 * Taken hotkeys don't appear as unassigned: Fix when the client can’t detect ‘unassigned’ hotkeys when they are already taken.
 
-
 #### Dev Console
 
-* Add 
+* Added the ability to reply to user feedback/review on the app store. 
 
 #### Game events
 
