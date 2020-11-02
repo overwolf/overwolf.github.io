@@ -83,7 +83,7 @@ Here you can see some examples for transparent windows:
 
 ## Native window
 
-If your app includes a window that will only be visible on desktop but not while playing (desktop_only:true), you should define this window as a ["native"](../api/manifest-json#native_window).  
+If your app includes a window that will only be visible on desktop, either before, after or on a 2nd screen during game (desktop_only:true), you should define this window as a ["native"](../api/manifest-json#native_window).  
 
 It will dramatically improve your app performance and help design an efficient, elegant product.
 
