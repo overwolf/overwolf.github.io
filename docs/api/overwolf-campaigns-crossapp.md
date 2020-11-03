@@ -15,8 +15,8 @@ For example - an app can promote a video capture and sharing app and receive a n
 
 * [overwolf.campaigns.crossapp.getAvailableActions()](#getavailableactionscallback)
 * [overwolf.campaigns.crossapp.set()](#setcampaign-callback)
-* [overwolf.campaigns.crossapp.reportConversion()](#)
-* [overwolf.campaigns.crossapp.consumeConversions()](#)
+* [overwolf.campaigns.crossapp.reportConversion()](#reportconversionconversioninfo-callback)
+* [overwolf.campaigns.crossapp.consumeConversions()](#consumeconversionscallback)
 
 ## Events Reference
 
@@ -66,7 +66,7 @@ Returns with the code
 
 Parameter      | Type                  | Description                                                             |
 -------------- | ----------------------| ----------------------------------------------------------------------- |
-conversionInfo | [CrossAppCampaignConversion](#crossappcampaignconversion-object) object    |                                                      |
+conversionInfo | [CrossAppCampaignConversion](#crossappcampaignconversion-object) object    |                    |
 callback       | (Result) => void      | Reports success or failure.                                             |
 
 #### Callback argument: Success
@@ -78,24 +78,23 @@ Returns with the code
 
 ```
 
-## onCampaignChanged
+## consumeConversions(callback)
+#### Version added: 0.158
+
+> Consume all pending conversions for this extension. Consumed conversions are deleted.
+
+Parameter      | Type                  | Description                                                             |
+-------------- | ----------------------| ----------------------------------------------------------------------- |
+callback       |  [GetCrossAppConversionsResult](#getcrossappconversionsresult-object) object      |    |
+
+## onAvailableActionUpdated
+
+> Called when an available action has updated (or added), with the following structure: [CrossAppCampaign](#crossappcampaign-object) Object.
 
 #### Version added: 0.158
 
 > Fired when current extension campaign is updated.
 
-## RafUserAction enum
-#### Version added: 0.158
-
-> Refer a Friend user action.
-
-Option     | Description                               |
------------| ------------------------------------------|
-dismiss    | User dismissed the campaign notification  |
-learn_more |  User clicked on "Learn more"             |
-copy_link  |  User clicked on "Copy link"              |
-redeem     | User clicked on "How do I redeem"         |
-share      | User shared on social media               |
 
 ## GetCrossAppAvailableActionsResult Object
 
@@ -143,29 +142,9 @@ e.g. Date.now() or (new Date()).getTime().
 
 This is a free-form json object that gives more instructions on the required action.
 
-## Campaign Object
-#### Version added: 0.158
-
-> Describes a campaign
-
-Parameter        | Type                          | Description                       |
----------------- | ------------------------------| --------------------------------- |
-id               | string                        |                                   |
-extensionId      | string                        |                                   |
-games            | int[]                         |                                   |
-revoked          | boolean                       |                                   |
-publicToken      | string                        |                                   |
-privateToken     | string                        |                                   |
-type             | string                        |                                   |
-extra            | object                        | Campaign-specific information     |
-referralUrl      | string                        |                                   |
-reward           | string                        |                                   |
-disabled         | boolean                       | Set to true if an existing campaign is not returned from the server |
-exposed          | boolean                       | Set to true when a user is informed of the campaign                 |
-
 ## CrossAppCampaignConversion Object
 
-> Container that represent a shared data parameters.
+> Container that represent a cross app campaign conversions.
 
 Parameter          | Type                            | Description                                       |
 -------------------| --------------------------------| ------------------------------------------------- |
@@ -174,8 +153,8 @@ Parameter          | Type                            | Description              
 id                 | string                          | The ID of the cross-app campaign the conversion targets. |   
 owner_app_uid      | string                          | The UID of the app that owns the targeted cross-app campaign. |   
 data               | object                          | Conversion data for the specified action. |   
-origin_app_uid     | object                          | The UID of the app that performed the conversion (the promoted app). Optional. See [notes](). |   
-timestamp          | number                          | When the conversion took place.  Optional. See [notes]().  |   
+origin_app_uid     | object                       | The UID of the app that performed the conversion (the promoted app). Optional. See [notes](#origin_app_uid-notes). |   
+timestamp          | number                          | When the conversion took place.  Optional. See [notes](#timestamp-notes).  |   
 
 #### origin_app_uid notes
 
@@ -184,4 +163,14 @@ Set by the Overwolf client when calling |consumeConversions|.
 #### timestamp notes
 
 Set by the Overwolf client when calling |consumeConversions|.
+
+## GetCrossAppConversionsResult Object
+
+> Container that represent a cross app conversions.
+
+Parameter          | Type                            | Description                                       |
+-------------------| --------------------------------| ------------------------------------------------- |
+*success*          | boolean                         | inherited from the "Result" Object                |
+*error*            | string                          | inherited from the "Result" Object                |
+conversions        | [CrossAppCampaignConversion](#crossappcampaignconversion-object)[]   |                 |
 
