@@ -59,6 +59,23 @@ Returns with the code
 
 ```
 
+#### Usage example
+
+```js
+overwolf.campaigns.crossapp.set({
+ id: '8mRuEC_bbbbbbDxk', // fake
+ action: 'ar-invite',
+ expiration: Date.now() + 1000 * 60 * 60 * 24 * 7,
+ target_apps_uids: ['*'],
+ data: {
+   name: 'ar-aw-gr-2020', // fake
+   iconUrl: 'https://content.overwolf.com/achievement-rewards/campaigns/8mRuEC_bbbbbbDxk/icon.svg', // will be a local file in the future
+   title: "Gewinne 650 RP",
+   text: "mit der Alienware Challenge!"
+ }
+}, console.log);
+```
+
 ## reportConversion(conversionInfo, callback)
 #### Version added: 0.158
 
@@ -116,8 +133,6 @@ actions            | [CrossAppCampaign](#crossappcampaign-object)[]  |          
 
 Parameter          | Type                            | Description                                       |
 -------------------| --------------------------------| ------------------------------------------------- |
-*success*          | boolean                         | inherited from the "Result" Object                |
-*error*            | string                          | inherited from the "Result" Object                |
 id                 | string                          | An id to identify the campaign (action/conversion). See [notes](#id-notes). |   
 action             | string                          | The type of action this cross-app campaign supports.This is a free-text string. |   
 expiration         | number                          | Expiration date expressed in milliseconds since epoch (Unix Time, UTC). See [notes](#expiration-notes). |   
@@ -125,9 +140,22 @@ owner_app_uid      | string                          | The UID of the app that o
 target_apps_uids   | string[]                        | An array of app UIDs this cross-app campaign targets. Optional |   
 data               | object                          | Information about the cross-app campaign. See [notes](#data-notes). |   
 
-#### Example data: Success
+#### Example object data
 
 ```json
+{
+    "id": "8mRuEC_bbbbbbDxk", // fake
+    "action": "ar-invite",
+    "expiration": Date.now() + 1000 * 60 * 60 * 24 * 7,
+    "target_apps_uids": ["*"],
+    "data": 
+    {
+        "name": "ar-aw-gr-2020", // fake
+        "iconUrl": "https://content.overwolf.com/achievement-rewards/campaigns/8mRuEC_bbbbbbDxk/icon.svg", // will be a local file in the future
+        "title": "Gewinne 650 RP",
+        "text": "mit der Alienware Challenge!"
+    }
+ }
 ```
 
 #### id notes
@@ -148,8 +176,6 @@ This is a free-form json object that gives more instructions on the required act
 
 Parameter          | Type                            | Description                                       |
 -------------------| --------------------------------| ------------------------------------------------- |
-*success*          | boolean                         | inherited from the "Result" Object                |
-*error*            | string                          | inherited from the "Result" Object                |
 id                 | string                          | The ID of the cross-app campaign the conversion targets. |   
 owner_app_uid      | string                          | The UID of the app that owns the targeted cross-app campaign. |   
 data               | object                          | Conversion data for the specified action. |   
