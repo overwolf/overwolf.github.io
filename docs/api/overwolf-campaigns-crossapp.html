@@ -76,8 +76,8 @@ For example - an app can promote a video capture and sharing app and receive a n
 <ul>
 <li><a href="#getavailableactionscallback">overwolf.campaigns.crossapp.getAvailableActions()</a></li>
 <li><a href="#setcampaign-callback">overwolf.campaigns.crossapp.set()</a></li>
-<li><a href="#">overwolf.campaigns.crossapp.reportConversion()</a></li>
-<li><a href="#">overwolf.campaigns.crossapp.consumeConversions()</a></li>
+<li><a href="#reportconversionconversioninfo-callback">overwolf.campaigns.crossapp.reportConversion()</a></li>
+<li><a href="#consumeconversionscallback">overwolf.campaigns.crossapp.consumeConversions()</a></li>
 </ul>
 <h2><a class="anchor" aria-hidden="true" id="events-reference"></a><a href="#events-reference" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Events Reference</h2>
 <ul>
@@ -142,28 +142,27 @@ For example - an app can promote a video capture and sharing app and receive a n
 <pre><code class="hljs css language-json">{<span class="hljs-attr">"success"</span>:<span class="hljs-literal">true</span>}
 
 </code></pre>
-<h2><a class="anchor" aria-hidden="true" id="oncampaignchanged"></a><a href="#oncampaignchanged" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>onCampaignChanged</h2>
+<h2><a class="anchor" aria-hidden="true" id="consumeconversionscallback"></a><a href="#consumeconversionscallback" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>consumeConversions(callback)</h2>
 <h4><a class="anchor" aria-hidden="true" id="version-added-0158-3"></a><a href="#version-added-0158-3" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Version added: 0.158</h4>
 <blockquote>
-<p>Fired when current extension campaign is updated.</p>
-</blockquote>
-<h2><a class="anchor" aria-hidden="true" id="rafuseraction-enum"></a><a href="#rafuseraction-enum" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>RafUserAction enum</h2>
-<h4><a class="anchor" aria-hidden="true" id="version-added-0158-4"></a><a href="#version-added-0158-4" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Version added: 0.158</h4>
-<blockquote>
-<p>Refer a Friend user action.</p>
+<p>Consume all pending conversions for this extension. Consumed conversions are deleted.</p>
 </blockquote>
 <table>
 <thead>
-<tr><th>Option</th><th>Description</th></tr>
+<tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
 </thead>
 <tbody>
-<tr><td>dismiss</td><td>User dismissed the campaign notification</td></tr>
-<tr><td>learn_more</td><td>User clicked on &quot;Learn more&quot;</td></tr>
-<tr><td>copy_link</td><td>User clicked on &quot;Copy link&quot;</td></tr>
-<tr><td>redeem</td><td>User clicked on &quot;How do I redeem&quot;</td></tr>
-<tr><td>share</td><td>User shared on social media</td></tr>
+<tr><td>callback</td><td><a href="#getcrossappconversionsresult-object">GetCrossAppConversionsResult</a> object</td><td></td></tr>
 </tbody>
 </table>
+<h2><a class="anchor" aria-hidden="true" id="onavailableactionupdated"></a><a href="#onavailableactionupdated" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>onAvailableActionUpdated</h2>
+<blockquote>
+<p>Called when an available action has updated (or added), with the following structure: <a href="#crossappcampaign-object">CrossAppCampaign</a> Object.</p>
+</blockquote>
+<h4><a class="anchor" aria-hidden="true" id="version-added-0158-4"></a><a href="#version-added-0158-4" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Version added: 0.158</h4>
+<blockquote>
+<p>Fired when current extension campaign is updated.</p>
+</blockquote>
 <h2><a class="anchor" aria-hidden="true" id="getcrossappavailableactionsresult-object"></a><a href="#getcrossappavailableactionsresult-object" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>GetCrossAppAvailableActionsResult Object</h2>
 <table>
 <thead>
@@ -205,33 +204,9 @@ For example - an app can promote a video capture and sharing app and receive a n
 <p>e.g. Date.now() or (new Date()).getTime().</p>
 <h4><a class="anchor" aria-hidden="true" id="data-notes"></a><a href="#data-notes" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>data notes</h4>
 <p>This is a free-form json object that gives more instructions on the required action.</p>
-<h2><a class="anchor" aria-hidden="true" id="campaign-object"></a><a href="#campaign-object" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Campaign Object</h2>
-<h4><a class="anchor" aria-hidden="true" id="version-added-0158-5"></a><a href="#version-added-0158-5" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Version added: 0.158</h4>
-<blockquote>
-<p>Describes a campaign</p>
-</blockquote>
-<table>
-<thead>
-<tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
-</thead>
-<tbody>
-<tr><td>id</td><td>string</td><td></td></tr>
-<tr><td>extensionId</td><td>string</td><td></td></tr>
-<tr><td>games</td><td>int[]</td><td></td></tr>
-<tr><td>revoked</td><td>boolean</td><td></td></tr>
-<tr><td>publicToken</td><td>string</td><td></td></tr>
-<tr><td>privateToken</td><td>string</td><td></td></tr>
-<tr><td>type</td><td>string</td><td></td></tr>
-<tr><td>extra</td><td>object</td><td>Campaign-specific information</td></tr>
-<tr><td>referralUrl</td><td>string</td><td></td></tr>
-<tr><td>reward</td><td>string</td><td></td></tr>
-<tr><td>disabled</td><td>boolean</td><td>Set to true if an existing campaign is not returned from the server</td></tr>
-<tr><td>exposed</td><td>boolean</td><td>Set to true when a user is informed of the campaign</td></tr>
-</tbody>
-</table>
 <h2><a class="anchor" aria-hidden="true" id="crossappcampaignconversion-object"></a><a href="#crossappcampaignconversion-object" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>CrossAppCampaignConversion Object</h2>
 <blockquote>
-<p>Container that represent a shared data parameters.</p>
+<p>Container that represent a cross app campaign conversions.</p>
 </blockquote>
 <table>
 <thead>
@@ -243,15 +218,29 @@ For example - an app can promote a video capture and sharing app and receive a n
 <tr><td>id</td><td>string</td><td>The ID of the cross-app campaign the conversion targets.</td></tr>
 <tr><td>owner_app_uid</td><td>string</td><td>The UID of the app that owns the targeted cross-app campaign.</td></tr>
 <tr><td>data</td><td>object</td><td>Conversion data for the specified action.</td></tr>
-<tr><td>origin_app_uid</td><td>object</td><td>The UID of the app that performed the conversion (the promoted app). Optional. See <a href="">notes</a>.</td></tr>
-<tr><td>timestamp</td><td>number</td><td>When the conversion took place.  Optional. See <a href="">notes</a>.</td></tr>
+<tr><td>origin_app_uid</td><td>object</td><td>The UID of the app that performed the conversion (the promoted app). Optional. See <a href="#origin_app_uid-notes">notes</a>.</td></tr>
+<tr><td>timestamp</td><td>number</td><td>When the conversion took place.  Optional. See <a href="#timestamp-notes">notes</a>.</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="origin_app_uid-notes"></a><a href="#origin_app_uid-notes" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>origin_app_uid notes</h4>
 <p>Set by the Overwolf client when calling |consumeConversions|.</p>
 <h4><a class="anchor" aria-hidden="true" id="timestamp-notes"></a><a href="#timestamp-notes" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>timestamp notes</h4>
 <p>Set by the Overwolf client when calling |consumeConversions|.</p>
-</span></div></article></div><div class="docLastUpdate"><em>Last updated on 2020-11-3 by eransharv</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/api/overwolf-benchmarking"><span class="arrow-prev">← </span><span>overwolf.benchmarking</span></a><a class="docs-next button" href="/docs/api/overwolf-extensions"><span>overwolf.extensions</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#methods-reference">Methods Reference</a></li><li><a href="#events-reference">Events Reference</a></li><li><a href="#types-reference">Types Reference</a></li><li><a href="#getavailableactionscallback">getAvailableActions(callback)</a></li><li><a href="#setcampaign-callback">set(campaign, callback)</a></li><li><a href="#reportconversionconversioninfo-callback">reportConversion(conversionInfo, callback)</a></li><li><a href="#oncampaignchanged">onCampaignChanged</a></li><li><a href="#rafuseraction-enum">RafUserAction enum</a></li><li><a href="#getcrossappavailableactionsresult-object">GetCrossAppAvailableActionsResult Object</a></li><li><a href="#crossappcampaign-object">CrossAppCampaign Object</a></li><li><a href="#campaign-object">Campaign Object</a></li><li><a href="#crossappcampaignconversion-object">CrossAppCampaignConversion Object</a></li></ul></nav></div><footer class="site-footer"><div class="container"><ul><li>Legal</li><li><a href="/docs/topics/legal-overview">Terms overview</a></li><li><a href="/docs/topics/legal-developers-terms">Developer&#x27;s terms</a></li><li><a href="/docs/topics/legal-app-terms">App terms</a></li><li><a href="http://www.overwolf.com/legal/" target="_blank">Overwolf terms</a></li><li><a href="http://www.overwolf.com/legal/#Privacy-policy" target="_blank">Overwolf Privacy policy</a></li></ul><ul><li>Support</li><li><a href=" https://discuss.developers.overwolf.com/" target="_blank">Questions and Answers</a></li><li><a href=" https://discord.gg/7256qS2" target="_blank">Discord</a></li><li><a href="/docs/support/contact-us#join-our-slack">Slack</a></li><li><a href="https://www.facebook.com/OverwolfDevs" target="_blank">Facebook</a></li><li><a href="https://twitter.com/OverwolfDevs" target="_blank">Twitter</a></li></ul><ul><li>Documentation</li><li><a href="/docs/api/changelog">Changelog</a></li><li><a href="/docs/api/overwolf-api-overview">API</a></li><li><a href="/docs/start/app-creation-process">App Creation Process</a></li><li><a href="/docs/topics/best-practices-overview">Best Practices</a></li><li><a href="/docs/status/all">Game Events status</a></li></ul><ul><li>Information</li><li><a href="http://www.overwolf.com/careers/">Careers</a></li><li><a href="https://play.overwolf.com/fund/" target="_blank">Fund</a></li><li><a href="https://medium.com/overwolf" target="_blank">Developers Blog</a></li><li><a href="https://www.overwolf.com/appstore" target="_blank">Overwolf Appstore</a></li><li><a href="https://brands.overwolf.com/" target="_blank">Advertise on Overwolf</a></li></ul></div></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+<h2><a class="anchor" aria-hidden="true" id="getcrossappconversionsresult-object"></a><a href="#getcrossappconversionsresult-object" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>GetCrossAppConversionsResult Object</h2>
+<blockquote>
+<p>Container that represent a cross app conversions.</p>
+</blockquote>
+<table>
+<thead>
+<tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td><em>success</em></td><td>boolean</td><td>inherited from the &quot;Result&quot; Object</td></tr>
+<tr><td><em>error</em></td><td>string</td><td>inherited from the &quot;Result&quot; Object</td></tr>
+<tr><td>conversions</td><td><a href="#crossappcampaignconversion-object">CrossAppCampaignConversion</a>[]</td><td></td></tr>
+</tbody>
+</table>
+</span></div></article></div><div class="docLastUpdate"><em>Last updated on 2020-11-3 by eransharv</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/api/overwolf-benchmarking"><span class="arrow-prev">← </span><span>overwolf.benchmarking</span></a><a class="docs-next button" href="/docs/api/overwolf-extensions"><span>overwolf.extensions</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#methods-reference">Methods Reference</a></li><li><a href="#events-reference">Events Reference</a></li><li><a href="#types-reference">Types Reference</a></li><li><a href="#getavailableactionscallback">getAvailableActions(callback)</a></li><li><a href="#setcampaign-callback">set(campaign, callback)</a></li><li><a href="#reportconversionconversioninfo-callback">reportConversion(conversionInfo, callback)</a></li><li><a href="#consumeconversionscallback">consumeConversions(callback)</a></li><li><a href="#onavailableactionupdated">onAvailableActionUpdated</a></li><li><a href="#getcrossappavailableactionsresult-object">GetCrossAppAvailableActionsResult Object</a></li><li><a href="#crossappcampaign-object">CrossAppCampaign Object</a></li><li><a href="#crossappcampaignconversion-object">CrossAppCampaignConversion Object</a></li><li><a href="#getcrossappconversionsresult-object">GetCrossAppConversionsResult Object</a></li></ul></nav></div><footer class="site-footer"><div class="container"><ul><li>Legal</li><li><a href="/docs/topics/legal-overview">Terms overview</a></li><li><a href="/docs/topics/legal-developers-terms">Developer&#x27;s terms</a></li><li><a href="/docs/topics/legal-app-terms">App terms</a></li><li><a href="http://www.overwolf.com/legal/" target="_blank">Overwolf terms</a></li><li><a href="http://www.overwolf.com/legal/#Privacy-policy" target="_blank">Overwolf Privacy policy</a></li></ul><ul><li>Support</li><li><a href=" https://discuss.developers.overwolf.com/" target="_blank">Questions and Answers</a></li><li><a href=" https://discord.gg/7256qS2" target="_blank">Discord</a></li><li><a href="/docs/support/contact-us#join-our-slack">Slack</a></li><li><a href="https://www.facebook.com/OverwolfDevs" target="_blank">Facebook</a></li><li><a href="https://twitter.com/OverwolfDevs" target="_blank">Twitter</a></li></ul><ul><li>Documentation</li><li><a href="/docs/api/changelog">Changelog</a></li><li><a href="/docs/api/overwolf-api-overview">API</a></li><li><a href="/docs/start/app-creation-process">App Creation Process</a></li><li><a href="/docs/topics/best-practices-overview">Best Practices</a></li><li><a href="/docs/status/all">Game Events status</a></li></ul><ul><li>Information</li><li><a href="http://www.overwolf.com/careers/">Careers</a></li><li><a href="https://play.overwolf.com/fund/" target="_blank">Fund</a></li><li><a href="https://medium.com/overwolf" target="_blank">Developers Blog</a></li><li><a href="https://www.overwolf.com/appstore" target="_blank">Overwolf Appstore</a></li><li><a href="https://brands.overwolf.com/" target="_blank">Advertise on Overwolf</a></li></ul></div></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
                 document.addEventListener('keyup', function(e) {
                   if (e.target !== document.body) {
                     return;
