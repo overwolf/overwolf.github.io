@@ -9,6 +9,7 @@ Overwolf APIs are global components that allow interaction with various Overwolf
 ## API's Reference
 
 * [overwolf.benchmarking](#overwolfbenchmarking)
+* [overwolf.campaigns](#overwolfcampaigns)
 * [overwolf.extensions](#overwolfextensions)
 * [overwolf.games](#overwolfgames)
 * [overwolf.games.events](#overwolfgamesevents)
@@ -35,6 +36,15 @@ Common use cases:
 
 * Get hardware information.
 * Get FPS performance information.
+
+## overwolf.campaigns
+
+> Use the [overwolf.campaigns](overwolf-campaigns-crossapp) API to get info about active campagins.
+
+Common use cases:
+
+* Get info about active campagins.
+* Allows crossapp-promotions: One app can promote another app and then get an indication for a successful conversion.
 
 ## overwolf.extensions
 
