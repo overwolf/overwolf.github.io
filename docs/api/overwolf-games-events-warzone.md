@@ -62,11 +62,12 @@ match_end    | null              | Match ended. | See [notes](#match_end-note)  
 #### *roster* note
 
 ```json
+{"info":{"match_info":{"roster_33":"{\"player\":\"ItayG#9798518\",\"is_local\":true,\"is_bot\":0,\"team_id\":35,\"armor\":0,\"damage\":0,\"rank\":39,\"ping\":64,\"kills\":0,\"deaths\":0,\"score\":0,\"assists\":0}"}},"feature":"match_info"}
 {"info":{"match_info":{"roster_30":"{"player":"GiussaSimo13#2220952","is_local":false,"is_bot":0,"team_id":31,"rank":55,"ping":47,"kills":0,"deaths":0,"score":0,"assists":0}"}},"feature":"match_info"}
 {"info":{"match_info":{"roster_31":"{"player":"HARPOON97#7053414","is_local":false,"is_bot":0,"team_id":14,"rank":137,"ping":46,"kills":0,"deaths":0,"score":0,"assists":0}"}},"feature":"match_info"}
-{"info":{"match_info":{"roster_25":"{"player":"EiLorax_8523973","is_local":false,"is_bot":0,"team_id":32,"rank":55,"ping":47,"kills":0,"deaths":0,"score":0,"assists":0}"}},"feature":"match_info"}
-{"info":{"match_info":{"roster_34":"{"player":"JONNY122129#8483496","is_local":false,"is_bot":0,"team_id":22,"rank":73,"ping":86,"kills":0,"deaths":0,"score":0,"assists":0}"}},"feature":"match_info"}
+{"info":{"match_info":{"roster_25":"
 ```
+- Note: The information provided for the local player also includes "damage" and "armor"
 
 #### *match_start* note
 
