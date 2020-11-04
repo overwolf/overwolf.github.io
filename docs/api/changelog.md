@@ -35,7 +35,10 @@ Note that the work on the documentation for this version is still in-progress.
 
 #### Game events
 
-* Soon.
+* [Call of Duty - Warzone](overwolf-games-events-warzone)
+  * New events under:
+    * kill
+    * death
 
 ## Version 0.157 (Nov. 2020)
 
