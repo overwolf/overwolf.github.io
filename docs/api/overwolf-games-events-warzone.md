@@ -18,6 +18,8 @@ Please read the [overwolf.games.events](overwolf-games-events) documentation pag
 * [gep_internal](#gep_internal)
 * [match_info](#match_info)
 * [game_info](#game_info)
+* [kill](#kill)
+* [death](#death)
 
 ## Game event status
 
@@ -43,12 +45,28 @@ Data Example:
 
 ## match_info
 
+### Info Updates
+
+key          | Category    | Values                    | Notes                 | Since GEP Ver. |
+------------ | ------------| ------------------------- | --------------------- | ------------- | 
+roster       | match_info  | The names and details of all players in the current server. |See [notes](#roster-note)|   158.1       |
+
+
 ### Events
 
 Event        | Event Data        | Fired When   | Notes              | Since GEP Ver. |
 -------------| ------------------| ------------ | ------------------ | ---------------|
 match_start  | null              | Match started.| See [notes](#match_start-note)     | 157.0 |
 match_end    | null              | Match ended. | See [notes](#match_end-note)        | 157.0 |
+
+#### *roster* note
+
+```json
+{"info":{"match_info":{"roster_30":"{"player":"GiussaSimo13#2220952","is_local":false,"is_bot":0,"team_id":31,"rank":55,"ping":47,"kills":0,"deaths":0,"score":0,"assists":0}"}},"feature":"match_info"}
+{"info":{"match_info":{"roster_31":"{"player":"HARPOON97#7053414","is_local":false,"is_bot":0,"team_id":14,"rank":137,"ping":46,"kills":0,"deaths":0,"score":0,"assists":0}"}},"feature":"match_info"}
+{"info":{"match_info":{"roster_25":"{"player":"EiLorax_8523973","is_local":false,"is_bot":0,"team_id":32,"rank":55,"ping":47,"kills":0,"deaths":0,"score":0,"assists":0}"}},"feature":"match_info"}
+{"info":{"match_info":{"roster_34":"{"player":"JONNY122129#8483496","is_local":false,"is_bot":0,"team_id":22,"rank":73,"ping":86,"kills":0,"deaths":0,"score":0,"assists":0}"}},"feature":"match_info"}
+```
 
 #### *match_start* note
 
@@ -126,3 +144,44 @@ Possible values:
 * "eWAITING_FOR_LOBBY_INFO"
 * "eJOINING_LOBBY"
 * "eLOBBY_JOINED"
+
+## kill
+
+### Events
+
+Event        | Event Data        | Fired When   | Notes              | Since GEP Ver. |
+-------------| ------------------| ------------ | ------------------ | ---------------|
+kill         | null              | Local player has performed a kill.| See [notes](#kill-note)     | 158.1 |
+assist       | null              | Local player has performed an assist. | See [notes](#assist-note)        | 158.1 |
+
+#### *kill* note
+
+Data Example:
+
+```json
+{"events":[{"name":"kill","data":null}]}
+```
+
+#### *assist* note
+
+Data Example:
+
+```json
+{"events":[{"name":"assist","data":null}]}
+```
+
+## death
+
+### Info Updates
+
+key          | Category    | Values                    | Notes                 | Since GEP Ver. |
+------------ | ------------| ------------------------- | --------------------- | ------------- | 
+death        | death       | Amount of deaths by the local player. |See [notes](#death-note)|   158.1       |
+
+#### *death* note
+
+Data Example:
+
+```json
+{"events":[{"name":"death","data":null}]}
+```
