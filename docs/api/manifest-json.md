@@ -132,7 +132,8 @@ Note that not all flags are mandatory - we included all available flags for docu
             },
         //If set to true, app local data will not be cleaned up after app uninstallation
         "<a href="#disable_cleanup">disable_cleanup</a>": true,
-        "<a href="#process_name">process_name</a>": "my sample app"
+        "<a href="#process_name">process_name</a>": "my sample app",
+        "<a href="#url_protocol">url_protocol</a>": {"scheme": "testscheme"}
 
     }
 }
@@ -234,7 +235,8 @@ Note that not all flags are mandatory - we included all available flags for docu
                 "<a href="#developer-game-settings">filter</a>": <span style="font-weight: 400;">"*.json;*.html"</span><span style="font-weight: 400;"> 
             },
         "<a href="#disable_cleanup">disable_cleanup</a>": true,
-        "<a href="#process_name">process_name</a>": "my sample app"
+        "<a href="#process_name">process_name</a>": "my sample app",
+        "<a href="#url_protocol">url_protocol</a>": {"scheme": "testscheme"}
 
     }
 }
@@ -337,6 +339,7 @@ A list of additional settings for the app.
 | <a class="anchor" aria-hidden="true" id="disable_cleanup"></a>disable_cleanup | bool |  If set to true, app local data will not be cleaned up after app uninstallation. | 0.147  |
 | <a class="anchor" aria-hidden="true" id="process_name"></a>process_name | string |  Allow overriding the OverwolfBrowser.exe process name in task manager. </br> **Please read our [notes](#process_name-notes)** | 0.153  |
 | <a class="anchor" aria-hidden="true" id="max_rotation_log_files"></a>max_rotation_log_files | number | Increase the app's log file rotation (defaults to 10, max is 40). | 0.154  |
+| <a class="anchor" aria-hidden="true" id="url_protocol"></a>url_protocol | [url_protocol](#url_protocol-object) object | Ability to open an application from a browser using a link. | 0.158  |
 
 #### user_agent Notes
 
@@ -709,3 +712,33 @@ You can defines how the “exclusive mode” should be turned off:
 
 * **ReleaseOnHidden** – When the window is hidden, automatically turn off exclusive mode. (if you are using this option, you must set also the [focus_game_takeover_release_hotkey](manifest-json#focus_game_takeover_release_hotkey) flag)
 * **ReleaseOnLostFocus** – If the user clicks outside the window, exclusive mode is turned off.
+
+## url_protocol object
+
+Ability to open an application from a browser using a link.
+
+Add your custom data protocol under "url_protocol" (for example, `outplayed://something/null`) to create a link to your app.
+
+You can use this link on a webpage or OW app to open your OW app. It will open your OW app, with an option to send some additional data to your app.
+
+| Name        | Type   |  Description                                                                         | Since |
+|-------------|--------|--------------------------------------------------------------------------------------| ----- |
+| scheme      | string |  Mandatory.  The custom data URL protocol scheme.                                    | 0.158  |
+
+#### Example data:
+
+```json
+{"scheme": "outplayed"}
+```
+
+#### Link behavior
+
+* For a closed app, a click on a custom link launches the app.
+* For a closed OW client, a click on a custom link launches OW + the app.
+* For an open app, a click on a custom link opens the app and fire the [onAppLaunchTriggered](overwolf-extensions#onapplaunchtriggered) event with a "urlscheme" origin.  
+
+If an extra params has been sent (e.g. "outplayed://something/null"), the [onAppLaunchTriggered](overwolf-extensions#onapplaunchtriggered) event callback will show them under the "parameter" field: 
+
+```json
+{origin: "urlscheme", parameter: "outplayed%3a%2f%2fsomething%null"}
+```
