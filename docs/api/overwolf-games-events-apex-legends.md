@@ -10,6 +10,10 @@ Please read the [overwolf.games.events](overwolf-games-events) documentation pag
 21566
 :::
 
+:::note Important Note
+We are aware that there is a new Steam version of the game, however, our events currently are not 100% reliable on that version. Take into account that the events below are working for the Origin version of the game. We are working on adjusting the Steam version as well.
+:::
+
 ## Sample Apps
 * [APEX game events sample app](https://github.com/overwolf/events-sample-apps)
 
