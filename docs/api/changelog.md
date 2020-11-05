@@ -17,10 +17,10 @@ Note that the work on the documentation for this version is still in-progress.
 * New API: [overwolf.games.inputTracking.onMouseWheel](overwolf-games-inputTracking#onmousewheel): Fired a mouse wheel event.
 * New window manifest flag [restrict_to_game_bounds](manifest-json#restrict_to_game_bounds):  
   Restrict window to game client (window) area. A window will always stay inside the game window while dragging.
-* Application "deep links":   Ability to open an application from a browser using a link.  
-  Add the new [url_protocol](manifest-json#url_protocol) flag to your app's manifest, to create a link to your app.  
+* URI protocol: allows apps to open by using a URI protocol that can be passed via the command-line or a web address.  
+  Just add the new [url_protocol](manifest-json#url_protocol) flag to your app's manifest, to create a link to your app.  
   For example: "outplayed://something/null".  
-  Then, you can use this link in a webpage or app, and it will open your OW app, with an option to send some additional data to your app.
+  Then, you can use this link in a webpage or app, and it will open your OW app, with an option to send some additional data to your app. 
 
 #### Platform
 
