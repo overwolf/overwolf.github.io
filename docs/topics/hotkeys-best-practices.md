@@ -92,11 +92,7 @@ Listen to the [overwolf.settings.hotkeys.onChanged](../api/overwolf-settings-hot
 
 It is not possible to reassign hotkeys directly from apps, only through the Overwolf client settings page.
 
-What you can do is place a direct link to the relevant settings page using:
-
- `overwolf://settings/games-overlay?hotkey=hotkey_name_in_manifest`.
-
-You can even link into the hotkeys of a specific game settings:
+What you can do is place a direct link to the relevant settings page, into the hotkeys of a specific game settings, using:
 
 `overwolf://settings/games-overlay?hotkey=hotkey_name_in_manifest&gameId=game_id`
 
