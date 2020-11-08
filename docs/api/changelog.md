@@ -40,6 +40,7 @@ Note that the work on the documentation for this version is still in-progress.
 #### Game events
 
 * [Call of Duty - Warzone](overwolf-games-events-warzone)
+  * Auto-highlights support.
   * New events:
     * kill
     * death

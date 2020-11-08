@@ -30,6 +30,7 @@ Below, you can find a list of games that support highlights.
 * HotS
 * Valorant
 * Overwatch
+* Call of Duty: Warzone
 
 ## How it works
 
