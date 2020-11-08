@@ -15,23 +15,6 @@ In this section, you can find our best practices for developing and implementing
 
 * A good first step is creating an instructional page detailing main app features and explaining what user should do next to start using the app (if there's configuration or sign ups required). A larger scale FTUE will break down app features by providing a step-by-step tutorial for each.
 
-* Demonstrating a relatively basic FTUE, check out these examples for Fortnite Live Stats and for Game Summary:
-
-<div class="box" data-slick='{"slidesToShow": 2}'>
-  <a data-fancybox="gallery" data-caption="FortniteLiveStats" href="https://www.youtube.com/watch?v=Su7CTcMlnqw">
-    Fortnite Live Stats
-    <span class="thumb">
-      <img src="https://img.youtube.com/vi/Su7CTcMlnqw/hqdefault.jpg" alt="Fortnite Live Stats">
-    </span>
-  </a>
-  <a data-fancybox="gallery" data-caption="GameSummary" href="https://www.youtube.com/watch?v=RHWs1erUXew">
-    GameSummary
-    <span class="thumb">
-      <img src="https://img.youtube.com/vi/RHWs1erUXew/hqdefault.jpg"" alt="GameSummary">
-    </span>
-  </a>
-</div>
-
 ### App support page
 * It's important to make sure that a user encountering an issue has somewhere to go and get help for it. Towards that end, you must create a support page before your new app goes live. This support page should include:
   * FAQ – Common questions users ask you repeatedly, or just key messages such as - What Does your app do? How should one use it? What games are supported by it? etc.
