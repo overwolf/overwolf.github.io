@@ -104,6 +104,7 @@ Possible agent values:
 * "Breach_PC_C" = Breach
 * "Vampire_PC_C" = Reyna
 * "Killjoy_PC_C" = Killjoy
+* "Guide_PC_C" = Skye
 
 ## `match_info`
 
