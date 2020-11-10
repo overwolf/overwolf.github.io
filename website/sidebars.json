@@ -31,7 +31,7 @@
 		"Request a Service":
 			["topics/assets-req-marketing", "topics/promoting-your-app"],
 		"Community Help":
-			["topics/snippets","topics/looking-for-group"],
+			["topics/snippets","topics/looking-for-group", "topics/apps-academy", "topics/dev-powerapps"],
 		"Legal":
 			["topics/legal-overview", "topics/legal-app-terms", "topics/legal-developers-terms"]
     },
