@@ -10,10 +10,6 @@ Please read the [overwolf.games.events](overwolf-games-events) documentation pag
 10798
 :::
 
-:::note Important Note
-We are aware that since Rocket League became Free to Play there is a new Epic Games version of the game, however, our events currently are not 100% reliable on that version. Take into account that the events below are working for the Steam version of the game. We are working on adjusting the Epic version as well.
-:::
-
 ## Sample Apps
 * [Rocket League game events sample app](https://github.com/overwolf/rocket-league-events-sample-app)
 
