@@ -19,10 +19,11 @@ Introducing ads in your app can help you support development while offering a fr
 
 * Payments will be processed based on NET 60 (for example, January will be paid in April).
 * The minimum amount for each payment is $200 (net) based on the agreed revenue share. If the amount payable is less than $200, Overwolf will roll such amount over to the subsequent payment period until the total amount payable reaches a minimum of $200.
-* Payments are processed via bank wire (make sure you completed the payment details form).
+* Payments are processed via bank wire (contact your DevRel manager to fill in the payment details form).
 * Payments can only be transferred in USD.
-* The revenue numbers in the developer’s dashboard are not final. Final numbers for payment will be sent separately via email after reconciling all numbers and campaigns.
-* Revenue from video ads is updated daily while revenue from Display ads and Subscriptions is updated on a monthly basis. 
+* The revenue numbers in the Developer’s Dashboard are not final. Final numbers for payment will be sent separately via email after reconciling all numbers and campaigns.
+* Revenue from video ads is updated daily while revenue from display ads and subscriptions is updated on a monthly basis. 
+
 
 #### Ads Monetization Basics
 
