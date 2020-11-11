@@ -34,3 +34,22 @@ Data Example:
 ```json
 {"info":{"gep_internal":{"version_info":"{"local_version":"157.0.1","public_version":"157.0.1","is_updated":true}"}},"feature":"gep_internal"}
 ```
+
+## `match_info`
+
+### Info Updates
+
+key          | Category    | Values                    | Notes                 | Since GEP Ver. |
+------------ | ------------| ------------------------- | --------------------- | ------------- | 
+contact_xx   | match_info  | Names of people in your contacts. |See [notes](#contact_xx-note)|   159.0    |
+
+#### *contact_xx* note
+
+Data Example:
+
+```json
+{"info":{"match_info":{"contact_0":"{"name":"Lucy Floresta","home_world":"Twintania"}"}},"feature":"match_info"}
+{"info":{"match_info":{"contact_1":"{"name":"Onodera Kosaki","home_world":"Twintania"}"}},"feature":"match_info"}
+{"info":{"match_info":{"contact_2":"{"name":"Nihlomer Vox","home_world":"Lich"}"}},"feature":"match_info"}
+...
+```
