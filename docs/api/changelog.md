@@ -46,6 +46,9 @@ Note that the work on the documentation for this version is still in-progress.
     * death
     * assist
     * roster
+* [Final Fantasy XIV](overwolf-games-events-ffxiv)
+  * New info update under:
+    * match_info
 
 ## Version 0.157 (Nov. 2020)
 
