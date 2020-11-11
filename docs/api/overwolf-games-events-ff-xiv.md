@@ -7,7 +7,7 @@ sidebar_label: Final Fantasy XIV
 Please read the [overwolf.games.events](overwolf-games-events) documentation page to learn how to use Overwolf game events.
 
 :::important Game ID
-21308
+6350
 :::
 
 ## Sample Apps
