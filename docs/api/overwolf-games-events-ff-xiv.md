@@ -16,7 +16,6 @@ Please read the [overwolf.games.events](overwolf-games-events) documentation pag
 ## Available Features
 
 * [gep_internal](#gep_internal)
-* [game_info](#game_info)
 * [match_info](#match_info)
 
 ## `gep_internal`
