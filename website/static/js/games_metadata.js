@@ -194,5 +194,12 @@ const GamesMetadata = {
     iconUrl: "/docs/assets/games-logos/warzone.png",
     iconLargeUrl: "/docs/assets/games-logos/large/warzone.png",
     name: "Call of Duty: Warzone"
+  },
+  6350: {
+    id: 6350,
+    path: "/docs/status/ff-xiv",
+    iconUrl: "/docs/assets/games-logos/ff-xiv.png",
+    iconLargeUrl: "/docs/assets/games-logos/large/ff-xiv.png",
+    name: "Final Fantasy XIV"
   }
 }
