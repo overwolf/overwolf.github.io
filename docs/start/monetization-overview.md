@@ -63,7 +63,7 @@ Advertisers need to get continuous value from advertising on Overwolf, so to kee
 
 For example, refreshing and showing new ads is only allowed when switching between app windows, pages or tabs, and never while the user is using on-screen features.
 
-To get a more general idea, we follow the industry Standards, Guidelines & Best Practices which are provided by the IAB (read more [here](https://www.iab.com/guidelines/iab-standards-guidelines-best-practice-documents-in-public-comment/)). We also constantly scan our traffic with 3rd party anti-fraud tools to monitor quality and spot issues.
+To get a more general idea, we follow the industry Standards, Guidelines & Best Practices which are provided by the IAB. We also constantly scan our traffic with 3rd party anti-fraud tools to monitor quality and spot issues.
 
 ### Dos and Don’ts
 **Ad Location**
