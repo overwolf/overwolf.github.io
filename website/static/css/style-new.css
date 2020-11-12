@@ -63,20 +63,25 @@ nav.toc {
   padding-right: 0px;
 }
 
-.toc .toggleNav ul li.navListItemActive a {
-  color: rgba(229, 0, 76, 1);
-}
-
 .toc .toggleNav ul li a {
   color: #797399;
   padding-left: 22px;
   font-size: 14px;
 }
 
+.toc .toggleNav ul li a:hover,
+.toc .toggleNav ul li.navListItemActive a {
+  color: #161326;
+}
+
 .toc .toggleNav .navGroup .navGroupCategoryTitle {
   border-left: 4px solid transparent;
   padding: 5px 0px 5px 21px;
+  color: #332E4D;
   font-size: 16px;
+}
+.toc .toggleNav .navGroup .navGroupCategoryTitle:hover {
+  color: #161326;
 }
 
 .toc .toggleNav .navGroup .navGroupSubcategoryTitle {
@@ -126,6 +131,10 @@ html:not(.theme-dark) .hljs {
 
 code:not(.hljs) {
   background-color: #D3CFE5;
+}
+code,
+.hljs {
+  color: #484266;
 }
 
 code a {

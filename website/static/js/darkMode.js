@@ -1,7 +1,7 @@
 (function(){
 var
     hljsStylesheetBright = getStylesheetByHref('https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/default.min.css'),
-    hljsStylesheetDark = getStylesheetByHref('https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/dracula.min.css'),
+    hljsStylesheetDark = getStylesheetByHref('https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/atelier-cave-dark.min.css'),
     darkModeCheckbox;
 
 function start() {

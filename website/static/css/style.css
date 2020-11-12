@@ -1042,7 +1042,7 @@ use {
 .body.home .main-content section.easily .wolf {
 	position: absolute;
 	left: 53%;
-	bottom: 0;
+	bottom: 35px;
 	padding-top: 110px;
 	overflow: hidden;
 	max-height: 100%;

@@ -33,8 +33,13 @@
 	}
 }
 .theme-dark .onPageNav .toc-headings > li > a.active,
-.theme-dark .onPageNav .toc-headings > li > a.hover,
+.theme-dark .onPageNav .toc-headings > li > a.hover {
+	color: #F4F2FF;
+}
 .theme-dark .toc .toggleNav .navGroup .navGroupCategoryTitle {
+	color: #D3CFE5;
+}
+.theme-dark .toc .toggleNav .navGroup .navGroupCategoryTitle:hover {
 	color: #F4F2FF;
 }
 .theme-dark .toc .toggleNav ul li a {
@@ -76,6 +81,10 @@
 .theme-dark code:not(.hljs) {
 	color: #F4F2FF;
 	background-color: #332E4D;
+}
+.theme-dark .hljs {
+	color: #958FB2;
+	background-color: #0D0A1A;
 }
 .theme-dark .hash-link-icon {
 	fill: #F4F2FF
