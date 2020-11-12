@@ -2724,7 +2724,9 @@ form.slack-invite .result.success {
 	display: block;
 	position: relative;
 	padding: 14px 35px 16px 55px;
+	color: inherit;
 	background: #D3CFE5;
+	text-decoration: none;
 	/* box-shadow: 0px 0px 20px #050c0d; */
 	transition: all .15s ease
 }

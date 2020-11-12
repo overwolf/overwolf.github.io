@@ -76,11 +76,14 @@ const siteConfig = {
 
   highlight: {
     // Highlight.js theme to use for syntax highlighting in code blocks.
-    theme: 'default',
+    // theme: 'default',
+    version: '9.15.6',
+    themeUrl: 'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/default.min.css'
   },
 
   // Add custom scripts here that would be placed in <script> tags.
   scripts: [
+    '/js/darkMode.js',
     'https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js',
     'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js',
     'https://buttons.github.io/buttons.js',
@@ -101,7 +104,7 @@ const siteConfig = {
     '/js/luckyorange.js'
   ],
   stylesheets: [
-    'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/default.min.css',
+    'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/dracula.min.css',
     'https://fonts.googleapis.com/css?family=Lato%3A400%2C400i%2C700%2C900&ver=4.5.3',
     'https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css',
     'https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css',
@@ -129,7 +132,7 @@ const siteConfig = {
    scrollToTop: true,
    scrollToTopOptions: {
     zIndex: 100,
-    backgroundColor: '#20232A',
+    backgroundColor: '#332E4D',
   },
    docsSideNavCollapsible: true,
 
