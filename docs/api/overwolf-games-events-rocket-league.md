@@ -64,6 +64,7 @@ Event Data:
 * <b>deaths</b> – Death count of the player
 * <b>name</b> –  Name of the player scoring the goal
 * <b>team</b> – Team number of the scoring player (1 or 2)
+* <b>local</b> – Whether the player who scored is the local player
 
 Comments:
 
@@ -72,7 +73,7 @@ Encoded stringified JSON containing the properties. Need to do a decodeURI() on 
 Data Example:
 
 ```json
-{"events":[{"name":"goal","data":"{"steamId":"76561198045142971","score":827,"goals":"5",  "deaths":"0","name":"Klide","state":"0","team_score":5,"team":"2","index":4}"}]}
+{"events":[{"name":"goal","data":"{  "steamId": "0",  "score": 118,  "goals": "1",  "deaths": "0",  "name": "Ram is troll",  "state": "0",  "team_score": 1,  "team": "2",  "local": "1",  "index": 3}"}]}
 ```
 
 #### *score* note
