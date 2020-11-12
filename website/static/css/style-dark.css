@@ -153,7 +153,8 @@
 	}
 }
 .theme-dark .toc .toggleNav,
-.theme-dark .navBreadcrumb a, .navBreadcrumb span {
+.theme-dark .navBreadcrumb a,
+.theme-dark .navBreadcrumb span {
 	color: #F4F2FF;
 }
 .theme-dark .line1,
