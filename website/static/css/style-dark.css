@@ -180,6 +180,29 @@
 	border-bottom-color: #332E4D;
 }
 
+/* brute-force make all blocks look the same */
+.theme-dark .admonition {
+	background-color: #332E4D !important; 
+	/* border-left: 4px solid #E6004C !important; */
+	color: #D3CFE5 !important;
+  }
+
+.theme-dark .admonition h5 {
+	color: #D3CFE5 !important;
+}
+
+.theme-dark .admonition-icon svg {
+    stroke: #D3CFE5 !important;
+    fill: #D3CFE5 !important;
+}
+
+blockquote {
+    background-color: #332E4D !important; 
+    border-left: 2px solid #FF3434;
+    padding: 15px 30px 15px 15px;
+    color: #D3CFE5 !important;
+}
+
 .dark-mode-switch {
 	display: block;
 	position: absolute;
