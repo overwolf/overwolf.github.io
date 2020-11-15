@@ -1,7 +1,7 @@
 ---
 id: ads-sdk-versions
 title: Library versions
-sidebar_label: Current Ad SDK
+sidebar_label: Current Ads SDK
 ---
 
 From time to time, we may update the relevant library with bug fixes and new features.
