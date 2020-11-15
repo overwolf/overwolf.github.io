@@ -196,7 +196,7 @@
     fill: #D3CFE5 !important;
 }
 
-blockquote {
+.theme-dark blockquote {
     background-color: #332E4D !important; 
     border-left: 2px solid #FF3434;
     padding: 15px 30px 15px 15px;
