@@ -52,8 +52,10 @@
 .theme-dark .collapsible .arrow svg path[fill="#565656"] {
 	fill: #F4F2FF;
 }
-.theme-dark .mainContainer .post a { color: #B2A1E5; }
-.theme-dark .main-content a { color: #B2A1E5; }
+.theme-dark .mainContainer .post a { color: #8E7CBF; }
+.theme-dark .mainContainer .post a:hover { color: #B2A1E5; }
+.theme-dark .main-content a { color: #8E7CBF; }
+.theme-dark .main-content a:hover { color: #B2A1E5; }
 .theme-dark .mainContainer h1,
 .theme-dark .mainContainer h2,
 .theme-dark .mainContainer h3,
