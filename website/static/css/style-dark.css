@@ -54,6 +54,7 @@
 }
 .theme-dark .mainContainer .post a { color: #8E7CBF; }
 .theme-dark .mainContainer .post a:hover { color: #B2A1E5; }
+.theme-dark .mainContainer .post a.btn-pink { color: white; }
 .theme-dark .main-content a { color: #8E7CBF; }
 .theme-dark .main-content a:hover { color: #B2A1E5; }
 .theme-dark .mainContainer h1,
