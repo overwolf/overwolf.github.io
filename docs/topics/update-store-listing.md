@@ -16,7 +16,7 @@ Changes submitted will take up to ~30min to process and go live.
 
 ## Login to the developers console
 
-After logging to the [Overwolf developers console](#https://console.overwolf.com/), navigate to Store Listing:
+After logging to the [Overwolf developers console](https://console.overwolf.com/), navigate to Store Listing:
 
 ![login](../assets/dev-console/update-store/login.png)
 
