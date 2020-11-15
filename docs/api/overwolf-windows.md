@@ -166,10 +166,10 @@ windowId	           | string      | The id or name of the window to drag        
 callback (Optional)  | function    | A callback which is called when the drag is completed |
 callback (Optional)  | [(Result: DragMovedResult)](#dragmovedresult-object) => void | A callback which is called when the drag is completed  |
 
-:::note
-When you dragMove a **native window** between monitors with different DPIs, the window will automatically resize according to the new DPI.
-:::
+#### Notes
 
+* When you dragMove a **native window** between monitors with different DPIs, the window will automatically resize according to the new DPI.
+* When you quickly Click / DoubleClick a window that has dragMove(), without moving it at all - a **"Left mouse released"** error is thrown.
 
 ## dragResize(windowId, edge)
 #### Version added: 0.100
