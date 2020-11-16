@@ -32,6 +32,7 @@ Note that the work on the documentation for this version is still in-progress.
 #### Bug fixes
 
 * Call overwolf.media.replays.capture with futureDuration of -1.
+* Revmoe State 'open' when opening OSR windw.
 
 #### Dev Console
 
