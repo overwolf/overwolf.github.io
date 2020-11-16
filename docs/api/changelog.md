@@ -8,9 +8,34 @@ Follow this entry for ongoing updates and changes to the project or tools.
 
 Here you can find our [Developers Roadmap](https://trello.com/b/1V10E4IB/overwolf-roadmap).
 
-## Version 0.158 (In-Progress)
+## Version 0.159 (In-Progress)
 
 Note that the work on the documentation for this version is still in-progress.
+
+#### API
+
+* [overwolf.windows.obtainDeclaredWindow()](overwolf-windows#obtaindeclaredwindowwindowname-callback) will now also return monitorId (where applicable) - allowing one window (background) to know on which monitor another window exists. 
+* Remove app indexedDB upon uninstall.
+* [overwolf.streaming.start]() now support undefined settings.
+
+
+#### Platform
+
+* Soon.
+
+#### Bug fixes
+
+* Soon.
+
+#### Dev Console
+
+* Soon.
+
+#### Game events
+
+* Soon.
+
+## Version 0.158 (Nov. 2020)
 
 #### API
 
