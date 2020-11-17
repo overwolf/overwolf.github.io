@@ -426,7 +426,7 @@ A list of settings for the app windows.
 | <a class="anchor" aria-hidden="true" id="optimize_accelerate_rendering"></a>optimize_accelerate_rendering | bool |  Valid only for transparent windows. Valid only if [enable_osr_acceleration](#enable_osr_acceleration) is on.| 0.127  |
 | <a class="anchor" aria-hidden="true" id="disable_auto_dpi_sizing"></a>disable_auto_dpi_sizing | bool |  Relevant only for native windows. Disable the DPI Aware behavior of native windows.| 0.148  |
 | <a class="anchor" aria-hidden="true" id="restrict_to_game_bounds"></a>restrict_to_game_bounds | bool |  A window will always stay inside the game window while dragging.| 0.158  |
-| <a class="anchor" aria-hidden="true" id="disable_hardware_acceleration"></a>disable_hardware_acceleration | bool |  Disable GPU hardware acceleration. Relevant only to native windows. </br>*Notes: It would be best to use this flag for native windows with ads or updated content displayed on a secondary screen.*| 0.159  |
+| <a class="anchor" aria-hidden="true" id="disable_hardware_acceleration"></a>disable_hardware_acceleration | bool |  Diable GPU hardware acceleration, per window. Relevant only to native windows. </br>*Notes: Use this flag mainly for native windows that run as a second-screen with the game. It improves the performance of the game by reducing usage of the GPU while you are playing.*| 0.159  |
 
 
 ## ExternallyConnectable object

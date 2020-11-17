@@ -23,13 +23,12 @@ Note that the work on the documentation for this version is still in-progress.
   * Support multiple replay's consumers.
   * New API to retrieve connected WebCams: [overwolf.media.getWebcams]().
 
-
 #### Platform
 
-* Per window turn-off GPU hardware acceleration. Use this manifest flag  [disable_hardware_acceleration](manifest-json#disable_hardware_acceleration)ץ
+* [disable_hardware_acceleration](manifest-json#disable_hardware_acceleration) new manifest flag:
+  * Diable GPU hardware acceleration, per window.
   * Relevant only for native windows.
-  * It would be best to use this flag for windows with ads or updated content displayed on a secondary screen.
-
+  * Use this flag mainly for native windows that run as a second-screen with the game. It improves the performance of the game by reducing usage of the GPU while you are playing.
 
 #### Bug fixes
 
