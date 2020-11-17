@@ -26,9 +26,10 @@ Note that the work on the documentation for this version is still in-progress.
 
 #### Platform
 
-* Per window turn-off GPU hardware acceleration. Use this manifest flag  [disable_hardware_acceleration](manifest-json#disable_hardware_acceleration)ץ
-  * Relevant only for native windows.
-  * It would be best to use this flag for windows with ads or updated content displayed on a secondary screen.
+* [disable_hardware_acceleration](manifest-json#disable_hardware_acceleration) - A **must-have** manifest flag for second-screen native windows
+  * This flag turns-off GPU hardware acceleration while the releavnt native window is idle   
+  * Relevant only for native windows
+  * Should be used with windows that contain ads or any type of graphic animation
 
 
 #### Bug fixes
