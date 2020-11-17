@@ -24,11 +24,13 @@ Many gamers have a second screen which is usually unused while they play and foc
 
 3. We recommend you set [`native_window`](../api/manifest-json#native_window) flag to true.
 
-4. Identify which screen is the secondary one and display the secondary window on that screen.  
+4. If your native window run as a second-screen with the game, make sure to set the [disable_hardware_acceleration](../api/manifest-json#disable_hardware_acceleration) manifest flag.  It improves the performance of the game by reducing usage of the GPU while you are playing. 
+
+5. Identify which screen is the secondary one and display the secondary window on that screen.  
   Use the [getMonitorsList()](../api/overwolf-utils#getmonitorslistcallback) function for that.  
   If you know the resolution of each screen, you can do the calculation for exactly where you should display your window.
 
-5. Note that the [GameInfo](../api/overwolf-games#gameinfo-object) object contains a monitorHandle and a windowHandle. Take advantage of that if needed.  
+6. Note that the [GameInfo](../api/overwolf-games#gameinfo-object) object contains a monitorHandle and a windowHandle. Take advantage of that if needed.  
   Usage example: [identify](windows-resolution-size-position#identify-when-the-window-is-dragged-between-monitors) that the user moved the game window to the secondary screen.
  
-6. Use the transparent background window to share data and have your app windows communicate.
+7. Use the transparent background window to share data and have your app windows communicate.
