@@ -29,6 +29,7 @@ Note that the work on the documentation for this version is still in-progress.
   * Diable GPU hardware acceleration, per window.
   * Relevant only for native windows.
   * Use this flag mainly for native windows that run as a second-screen with the game. It improves the performance of the game by reducing usage of the GPU while you are playing.
+* Cleanup upon uninstall: Clear IndexedDB.
 
 #### Bug fixes
 
