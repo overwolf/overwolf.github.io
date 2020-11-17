@@ -1,7 +1,7 @@
 ---
-id: achievement-rewards
+id: achievement-rewards-integration
 title: Achievement Rewards Integration
-sidebar_label: Achievement Rewards
+sidebar_label: Achievement Rewards integration
 ---
 
 ## How to integrate with AR
@@ -80,10 +80,10 @@ At this point, the Achievement Rewards app will open a window and the user can r
 The icon container size shall be 30x30 pixels
 :::
 
-![icon container](../assets/example_1.jpg)
+![icon container](../assets/achievement-rewards/example_1.jpg)
 
 ### TOOLTIP
-![tooltip alignment](../assets/example_2.png)
+![tooltip alignment](../assets/achievement-rewards/example_2.png)
 
 **TOOLTIP POSITION AND BEHAVIOR** - here, you can find examples of how the tooltip positions should look like.
 :::important
@@ -91,7 +91,7 @@ The tooltip shall appear on first launch until the user has clicked the icon for
 :::
 
 `EXAMPLE: Center alignment tooltip position`
-![center alignment](../assets/example_3.jpg)
+![center alignment](../assets/achievement-rewards/example_3.jpg)
 
 `EXAMPLE: Right alignment tooltip position`
-![right alignment](../assets/example_4.jpg)
+![right alignment](../assets/achievement-rewards/example_4.jpg)
