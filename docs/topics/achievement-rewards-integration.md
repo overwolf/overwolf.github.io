@@ -86,6 +86,7 @@ The icon container size shall be 30x30 pixels
 ![tooltip alignment](../assets/achievement-rewards/example_2.png)
 
 **TOOLTIP POSITION AND BEHAVIOR** - here, you can find examples of how the tooltip positions should look like.
+
 :::important
 The tooltip shall appear on first launch until the user has clicked the icon for the first time and has launched the AR Challenge app.
 :::
