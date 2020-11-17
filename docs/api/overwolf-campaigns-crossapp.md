@@ -63,15 +63,17 @@ Returns with the code
 
 ```js
 overwolf.campaigns.crossapp.set({
- id: '8mRuEC_bbbbbbDxk', // fake
+ id: 'xxxxxx_bbbbbbDxk', // fake
  action: 'ar-invite',
- expiration: Date.now() + 1000 * 60 * 60 * 24 * 7,
+ expiration: 1735733700000,
  target_apps_uids: ['*'],
  data: {
-   name: 'ar-aw-gr-2020', // fake
-   iconUrl: 'https://content.overwolf.com/achievement-rewards/campaigns/8mRuEC_bbbbbbDxk/icon.svg', // will be a local file in the future
-   title: "Gewinne 650 RP",
-   text: "mit der Alienware Challenge!"
+   iconUrl: "overwolf-extension://lkjsndfnnnnd.../campaigns/xxxxxx_bbbbbbDx/icon.svg"
+   name: "ar-campaign" // fake
+   text: "with The Branded Challenge!"
+   textColor: "#E6E6E6"
+   title: "Win a cool Reward"
+   titleColor: "#B2A1E5"
  }
 }, console.log);
 ```
@@ -144,16 +146,19 @@ data               | object                          | Information about the cro
 
 ```json
 {
-    "id": "8mRuEC_bbbbbbDxk", // fake
+    "id": "xxxxxx_bbbbbbDxk", // fake
     "action": "ar-invite",
-    "expiration": Date.now() + 1000 * 60 * 60 * 24 * 7,
+    "expiration": 1735733700000,
     "target_apps_uids": ["*"],
     "data": 
     {
-        "name": "ar-aw-gr-2020", // fake
-        "iconUrl": "https://content.overwolf.com/achievement-rewards/campaigns/8mRuEC_bbbbbbDxk/icon.svg", // will be a local file in the future
-        "title": "Gewinne 650 RP",
-        "text": "mit der Alienware Challenge!"
+        "name": "ar-campaign", // fake
+        "iconUrl": "overwolf-extension://lkjsndfnnnnd.../campaigns/xxxxxx_bbbbbbDx/icon.svg",
+        "text": "with The Branded Challenge!"
+        "textColor": "E6E6E6"
+        "title": "Win a cool Reward",
+        "titleColor": "#B2A1E5",
+        
     }
  }
 ```
