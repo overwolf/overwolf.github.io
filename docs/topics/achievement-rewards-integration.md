@@ -8,8 +8,9 @@ sidebar_label: Achievement Rewards integration
 Full API Documentation found here: [overwolf-campaigns-crossapp](../api/overwolf-campaigns-crossapp)
 
 ### Step 1
-When your app starts up - it should call the `overwolf.campaigns.crossapp.getAvailableActions` - and check if there is an existing action available. The result might look like this:
-```
+When your app starts up - it should call the `overwolf.campaigns.crossapp.getAvailableActions` - and check if there is an existing action available. 
+The result might look like this:
+```json
 {
   actions: [{
     id: ‘XXXXXXXXXXXXXXXX’,
@@ -50,7 +51,7 @@ The interesting fields of a campaign action are:
 
 ### Step 4
 If there is such campaign, Use the iconUrl to display the invitation button - once clicked - the app should call: 
-```
+```js
 overwolf.campaigns.crossapp.reportConversion({
     id: ‘XXXXXXXXXXXXXXXX’,
     data: {},
