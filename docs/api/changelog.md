@@ -37,7 +37,7 @@ Note that the work on the documentation for this version is still in-progress.
 
 #### Dev Console
 
-* Soon.
+* Crash logs are now available on the "Crash reports" section
 
 #### Game events
 
