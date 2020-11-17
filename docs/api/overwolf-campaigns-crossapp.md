@@ -59,23 +59,6 @@ Returns with the code
 
 ```
 
-#### Usage example
-
-```js
-overwolf.campaigns.crossapp.set({
- id: '8mRuEC_bbbbbbDxk', // fake
- action: 'ar-invite',
- expiration: Date.now() + 1000 * 60 * 60 * 24 * 7,
- target_apps_uids: ['*'],
- data: {
-   name: 'ar-aw-gr-2020', // fake
-   iconUrl: 'https://content.overwolf.com/achievement-rewards/campaigns/8mRuEC_bbbbbbDxk/icon.svg', // will be a local file in the future
-   title: "Gewinne 650 RP",
-   text: "mit der Alienware Challenge!"
- }
-}, console.log);
-```
-
 ## reportConversion(conversionInfo, callback)
 #### Version added: 0.158
 
