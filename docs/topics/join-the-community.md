@@ -16,12 +16,13 @@ The Overwolf Developers community is a great place to learn from other developer
 
 - Ask questions and get quick answers from the community
 
-(insert image "1.png")
+![join-the-community](assets/join-the-community/1.png)
 
 - Get feedback for your UI
 
-(insert image "2.png")
+![join-the-community](assets/join-the-community/2.png)
 
 - Learn from other developers
 
-(insert image "3.png")
+![join-the-community](assets/join-the-community/3.png)
+
