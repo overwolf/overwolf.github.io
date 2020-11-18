@@ -14,15 +14,15 @@ The Overwolf Developers community is a great place to learn from other developer
 
 ## How can the community help?
 
-#### Ask questions and get quick answers from the community
+* Ask questions and get quick answers from the community
 
 ![join-the-community](assets/join-the-community/1.png)
 
-#### Get feedback for your UI
+* Get feedback for your UI
 
 ![join-the-community](assets/join-the-community/2.png)
 
-#### Learn from other developers
+* Learn from other developers
 
 ![join-the-community](assets/join-the-community/3.png)
 
