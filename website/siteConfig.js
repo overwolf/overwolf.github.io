@@ -33,8 +33,6 @@ const siteConfig = {
     {doc: 'topics/best-practices-overview', label: 'Docs'},
     {doc: 'api/changelog', label: 'API'},
     {doc: 'status/all', label: 'Events Status'},
-    {doc: 'download/download-overview', label: 'Download'},
-	  //{href: '/docs/api/changelog', label: 'Changelog'},
     //{blog: true, label: 'Blog'},
     {href: 'https://medium.com/overwolf', label: 'Blog', external: true},
     {href: 'https://discuss.developers.overwolf.com/', label: 'Q&A', external: true },

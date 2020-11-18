@@ -78,11 +78,7 @@
 			["support/contact-us", "support/create-ticket", "support/request-feature"],
 		"FAQ":
 			["support/FAQ"],
-		"Training and Guides":
-			["support/training"]	
-    },
-	"download": {
-        "Download": 
-			["download/download-overview"]
+		"Download":
+			["support/download-overview"]
     }
 }
