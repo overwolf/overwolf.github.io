@@ -40,6 +40,8 @@ Use this API to capture a screenshot or create a GIF of the currently running ga
 * [overwolf.media.RescaleParams](#rescaleparams-object) Object
 * [overwolf.media.CropParams](#cropparams-object) Object
 * [overwolf.media.enums.eMediaType](#emediatype-enum) enum
+* [overwolf.media.enums.eSourceType](#esourcetype-enum) enum
+* [overwolf.media.enums.eVideoSourceTransform](#evideosourcetransform-enum) enum
 * [overwolf.media.FileResult](#fileresult-object) Object
 * [overwolf.media.GetAppVideoCaptureFolderSizeResult](#getappvideocapturefoldersizeresult-object) Object
 * [overwolf.media.ScreenshotTakenEvent](#screenshottakenevent-object) Object
@@ -333,7 +335,24 @@ Option    | Description  |
 --------- | -------------|
 Video     |              |
 Image     |              |
+
+## eSourceType enum
+#### Version added: 0.159
+
+> Video source type.
+
+Option    | Description  |
+--------- | -------------|
 Webcam    |              |
+
+## eVideoSourceTransform enum
+#### Version added: 0.159
+
+> Video transform type.
+
+Option    | Description  |
+--------- | -------------|
+Stretch   |              |
 
 
 ## FileResult Object

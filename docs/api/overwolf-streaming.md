@@ -903,6 +903,7 @@ Stream video options.
 | indication_position | [indication_position](#indication_position-enum) Enum | Position of the recorder indicator. Available for video capture only.  | 0.143  |
 | indication_type     | [indication_type](#indication_type-enum) Enum | Type of the recorder indicator. Available for video capture only.  | 0.143  |
 | use_app_display_name | bool | Use the app display (if has any e.g [dock_button_title](manifest-json#meta-dock) name when creating video folder. See [note](#use_app_display_name-notes)  | 0.154  |
+| sources | [overwolf.media.replaysVideoSource](overwolf-media-replays#videosource-object)[] | Add sources to video (currently only webcam is supported).   | 0.159  |
 
 #### use_app_display_name notes
 

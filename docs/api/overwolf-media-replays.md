@@ -51,7 +51,8 @@ Please read all the info about video capture usage and options on our [video cap
 * [overwolf.media.replays.CaptureStoppedEvent](#capturestoppedevent-object) Object
 * [overwolf.media.replays.CaptureWarningEvent](#capturewarningevent-object) Object
 * [overwolf.media.replays.ReplayServicesStartedEvent](#replayservicesstartedevent-object) Object
-
+* [overwolf.media.replays.VideoSource](#videosource-object) Object
+ 
 ## turnOn(parameters, callback)
 #### Version added: 0.130
 
@@ -530,6 +531,7 @@ Replay video options.
 | indication_position | [indication_position](overwolf-streaming#indication_position-enum) Enum | Position of the recorder indicator. Available for video capture only.  | 0.143  |
 | indication_type     | [indication_type](overwolf-streaming#indication_type-enum) Enum | Type of the recorder indicator. Available for video capture only.  | 0.143  |
 | use_app_display_name | bool | Use the app display (if has any e.g [dock_button_title](manifest-json#meta-dock) name when creating video folder. See [note](#use_app_display_name-notes)  | 0.154  |
+| sources | [VideoSource](#videosource-object)[] | Add sources to video (currently only webcam is supported).  | 0.159  |
 
 #### use_app_display_name notes
 
@@ -542,6 +544,32 @@ The app "short name" is defined in the [dock_button_title](manifest-json#meta-do
 `OverwolfVideoFolder\\AppName\\|sub_folder_name\\|file_name|`
 * In case [folder_name] is empty:  
 `OverwolfVideoFolder\\AppName\\|sub_folder_name|`
+
+## VideoSource Object
+#### Version added: 0.159
+
+> Container for the video source settings.
+
+Parameter         | Type                                        | Description             |
+------------------| --------------------------------------------| ----------------------- |
+source_type       | [overwolf.media.enums.eSourceType](overwolf-media#esourcetype-enum)            |                         | 
+name              | string                                      |                         | 
+secondary_file    | boolean        | source will be create on secondry video file(i.e another ow-obs.exe process will be createdw ith the same setting as the original one.   | 
+transform         | [overwolf.media.enums.eVideoSourceTransform](overwolf-media#evideosourcetransform-enum)  |                         | 
+
+```json
+{
+  "source_type": "overwolf.media.replays.enums.eSourceType.WebCam",
+  "name":"webcam",
+  "secondary_file": true,
+  "transform": "overwolf.media.replays.enums.eVideoSourceTransform.Stretch",
+  "parameters": { 
+          "device_id" : "default" },
+          "position": {x:200,y:200} // offset is pixel relative to dock position (transform)
+          "size_scale" : {x:0.25,y:0.25}// render size the source in stream (relative to video size), valid only when transform != eVideoSourceTransform.Stretch
+        }
+}
+```
 
 ## ReplayType enum
 #### Version added: 0.78
