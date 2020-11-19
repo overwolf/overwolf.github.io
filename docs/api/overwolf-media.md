@@ -23,6 +23,7 @@ Use this API to capture a screenshot or create a GIF of the currently running ga
 * [overwolf.media.getGifsSize()](#getgifssizecallback)
 * [overwolf.media.getAppVideoCaptureFolderSize()](#getappvideocapturefoldersizecallback)
 * [overwolf.media.getAppScreenCaptureFolderSize()](#getappscreencapturefoldersizecallback)
+* [overwolf.media.getWebcams()](#getwebcamscallback)
 * overwolf.media.startGifBuffer() - Obsolete
 * overwolf.media.stopGifBuffer() - Obsolete
 * overwolf.media.generateGif() - Obsolete
@@ -43,6 +44,9 @@ Use this API to capture a screenshot or create a GIF of the currently running ga
 * [overwolf.media.GetAppVideoCaptureFolderSizeResult](#getappvideocapturefoldersizeresult-object) Object
 * [overwolf.media.ScreenshotTakenEvent](#screenshottakenevent-object) Object
 * [overwolf.media.GifGenerationErrorEvent](#gifgenerationerrorevent-object) Object
+* [overwolf.media.GetWebcamsResult](#getwebcamsresult-object) Object
+* [overwolf.media.Webcam](#webcam-object) Object
+
 
 ## In-memory screenshot overview
 
@@ -237,6 +241,16 @@ Parameter         | Type                  | Description                         
 ------------------| ----------------------| ----------------------------------------------------------------------- |
 callback          | [(Result: GetAppScreenCaptureFolderSizeResult)](#getappscreencapturefoldersizeresult-object) => void   A callback with the size in MB                                          |
 
+## getWebcams(callback)
+#### Version added: 0.159
+
+> Get all connected Webcams.
+
+Parameter         | Type                  | Description                                                             |
+------------------| ----------------------| ----------------------------------------------------------------------- |
+callback          | [(Result: GetWebcamsResult)](#getwebcamsresult-object) => void   A callback with the connected Webcams   |
+
+
 ## onMediaEvent
 
 #### Version added: 0.78
@@ -319,6 +333,8 @@ Option    | Description  |
 --------- | -------------|
 Video     |              |
 Image     |              |
+Webcam    |              |
+
 
 ## FileResult Object
 #### Version added: 0.149
@@ -329,6 +345,7 @@ Parameter         | Type          | Description             |
 ------------------| --------------| ----------------------- |
 url               | string        |                         | 
 path              | string        |                         | 
+
 
 ```json
 {
@@ -358,6 +375,60 @@ totalVideosSizeMB | number        |                         |
    "status": "success", //deprecated and kept only for backward compatibility
    "totalVideosSizeMB": 12123,
 }
+```
+
+## GetWebcamsResult Object
+#### Version added: 0.159
+
+> Container for get Webcams result.
+
+Parameter         | Type                                       | Description             |
+------------------| -------------------------------------------| ----------------------- |
+WebCams           | [overwolf.media.Webcam](#webcam-object)[]  |                         | 
+
+```json
+{
+   "success": true,
+   "status": "success", //deprecated and kept only for backward compatibility
+   "WebCams ": [
+      {
+        "name":"Webcam C170",
+        "path":"\\\\?\\usb#vid_046d&pid_082b&mi_00#7&2c79cd0&0&0000#{65e8773d-8f56-11d0-a3b9-00a0c9223196}\\global",
+        "id":"Webcam C170:\\\\?\\usb#vid_046d&pid_082b&mi_00#7&2c79cd0&0&0000#{65e8773d-8f56-11d0-a3b9-00a0c9223196}\\global"
+      },
+      {
+        "name":"USB2.0 HD UVC WebCam",
+        "path":"\\\\?\\usb#vid_13d3&pid_5666&mi_00#6&2f2fc667&1&0000#{65e8773d-8f56-11d0-a3b9-00a0c9223196}\\global",
+        "id":"USB2.0 HD UVC WebCam:\\\\?\\usb#vid_13d3&pid_5666&mi_00#6&2f2fc667&1&0000#{65e8773d-8f56-11d0-a3b9-00a0c9223196}\\global"
+      },
+      {
+        "name":"OBS Virtual Camera",
+        "path":"",
+        "id":"OBS Virtual Camera:"
+      }
+   ],
+}
+```
+
+## Webcam Object
+#### Version added: 0.159
+
+> Container for Webcam proporties.
+
+Parameter         | Type          | Description             |
+------------------| --------------| ----------------------- |
+name              | string        |                         | 
+path              | string        |                         | 
+id                | string        |                         | 
+
+#### Data example
+
+```json
+{
+  "name":"Webcam C170",
+  "path":"\\\\?\\usb#vid_046d&pid_082b&mi_00#7&2c79cd0&0&0000#{65e8773d-8f56-11d0-a3b9-00a0c9223196}\\global",
+  "id":"Webcam C170:\\\\?\\usb#vid_046d&pid_082b&mi_00#7&2c79cd0&0&0000#{65e8773d-8f56-11d0-a3b9-00a0c9223196}\\global"
+},
 ```
 
 ## GetAppScreenCaptureFolderSizeResult Object

@@ -21,7 +21,7 @@ Note that the work on the documentation for this version is still in-progress.
   * Allow adding to a video source (Webcam) to replay's video. (generic obs source + secondary file).
   * The webcam source can be rendered to a different video file (or not).
   * Support multiple replay's consumers.
-  * New API to retrieve connected WebCams: [overwolf.media.getWebcams]().
+  * New API to retrieve connected WebCams: [overwolf.media.getWebcams](overwolf-media#getwebcamscallback).
 
 #### Platform
 
