@@ -45,6 +45,10 @@ Note that the work on the documentation for this version is still in-progress.
 
 #### API
 
+* [disable_hardware_acceleration](manifest-json#disable_hardware_acceleration) new manifest flag:
+  * Diable GPU hardware acceleration, per window.
+  * Relevant only for native windows.
+  * It should always be used for native windows that are running on the secondary screen. It improves the game's performance by reducing the usage of the GPU while you are playing and fixes a bug where some users encountered FPS drops when using a secondary screen. 
 * New API: [overwolf.games.inputTracking.onMouseWheel](overwolf-games-inputTracking#onmousewheel): Fired a mouse wheel event.
 * New window manifest flag [restrict_to_game_bounds](manifest-json#restrict_to_game_bounds):  
   Restrict window to game client (window) area. A window will always stay inside the game window while dragging.
