@@ -28,13 +28,14 @@ Note that the work on the documentation for this version is still in-progress.
 * [disable_hardware_acceleration](manifest-json#disable_hardware_acceleration) new manifest flag:
   * Diable GPU hardware acceleration, per window.
   * Relevant only for native windows.
-  * Use this flag mainly for native windows that run as a second-screen with the game. It improves the performance of the game by reducing usage of the GPU while you are playing.
+  * It should always be used for native windows that are running on the secondary screen. It improves the game's performance by reducing the usage of the GPU while you are playing and fixes a bug where some users encountered FPS drops when using a secondary screen. 
 * Cleanup upon uninstall: Clear IndexedDB.
 
 #### Bug fixes
 
 * Call overwolf.media.replays.capture with futureDuration of -1.
 * Revmoe State 'open' when opening OSR windw.
+* Overwolf windows should no longer be considered as incognito.
 
 #### Dev Console
 
