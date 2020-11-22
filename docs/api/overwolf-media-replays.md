@@ -571,6 +571,34 @@ transform         | [overwolf.media.enums.eVideoSourceTransform](overwolf-media#
 }
 ```
 
+#### Usage example
+
+```js
+let settings = {
+  "video": {
+    "buffer_length": 30,
+    "sources": [
+    {
+      "source_type": overwolf.media.replays.enums.eSourceType.WebCam,
+      "name":"webcam",
+      "secondary_file": true,
+      "transform": overwolf.media.replays.enums.eVideoSourceTransform.Stretch,
+      "parameters": { "device_id" : "default" },
+      "position": {x:200,y:200} // offset is pixel relative to dock position (transform)
+      "size_scale" : {x:0.25,y:0.25}// render size the source in stream (relative to video size), valid only when transform != eVideoSourceTransform.Stretch
+    }]
+  }
+};
+
+overwolf.media.replays.turnOn({
+    "settings": streamSetting,
+    "highlights": {
+        "enable" : true, //set false if you want to record the highligths manually
+        "requiredHighlights" : ["death","assist","victory"] // events to capture
+    }
+}, callback);
+```
+
 ## ReplayType enum
 #### Version added: 0.78
 
