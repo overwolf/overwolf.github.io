@@ -19,9 +19,6 @@ class Webinars extends React.Component {
             <p>In this session, you will be able to better understand how to create your app identity with the best UX&UI methods, such as visual communications, creating a smooth interface, and more.</p>
             <div className="video-container">
                 <iframe width="560" height="315" src="https://www.youtube.com/embed/LC7i6jmZ_Oc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    <div className="center-text">
-                        <p>Create your app identity with the best UX&UI</p>           
-                    </div>
             </div>
         </div>
         <div>
@@ -31,9 +28,6 @@ class Webinars extends React.Component {
             <p>We decided to take a deep dive into monetization and do a quick introduction to ads, explain how do ads work on Overwolf, and cover the important metrics, tips and best practices.</p>
             <div className="video-container">
                 <iframe width="560" height="315" src="https://www.youtube.com/embed/GYOgZuPyq2E" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    <div className="center-text">
-                        <p>Quick introduction to ads</p>           
-                    </div>
             </div>
         </div>
         <div>
@@ -43,9 +37,6 @@ class Webinars extends React.Component {
             <p>With the help of our marketing expertise, you’ll be able to understand how to get your campaign started with only $100, and how to work with influencers and why is that important?</p>
             <div className="video-container">
                 <iframe width="560" height="315" src="https://www.youtube.com/embed/jBDFc9kmTU0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    <div className="center-text">
-                        <p>How to get your campaign started</p>           
-                    </div>
             </div>
         </div>
         <div>
