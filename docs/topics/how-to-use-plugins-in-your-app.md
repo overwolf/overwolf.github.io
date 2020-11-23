@@ -20,13 +20,13 @@ To implement an existing plugin for use in your app, follow these steps:
 "extra-objects": {
   "simple-io-plugin": {
     "file": "files/plugins/simple-io-plugin.dll",
-    "class": "overwolf.plugins.SimpleIOPlugin"
+    "class": "overwolf.plugins.simpleio.SimpleIOPlugin"
     }
   }
 }
 ```
 
-This tells Overwolf that your app contains a plugin named: `simple-io-plugin` which can be found inside the file: `files/plugins/simple-io-plugin.dll` with the .NET class name `overwolf.plugins.SimpleIOPlugin.`
+This tells Overwolf that your app contains a plugin named: `simple-io-plugin` which can be found inside the file: `files/plugins/simple-io-plugin.dll` with the .NET class name `overwolf.plugins.simpleio.SimpleIOPlugin.`
 
 4. Create an instance of this plug-in in your app's Javascript code:
 
