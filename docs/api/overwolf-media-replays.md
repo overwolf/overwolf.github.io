@@ -537,7 +537,7 @@ Replay video options.
 
 Using the "sources," you can add a video source (currently, only Webcam is supported) to the captured video.  
 Read about [overwolf.media.replaysVideoSource](overwolf-media-replays#videosource-object) for more info.  
-Note: this API does support secondary files for Webcam, while the overwolf.streaming API does not.  
+Note: This API does support secondary files for Webcam (means, the webcam rendered to a different video file), while the overwolf.streaming API does not.  
 
 #### use_app_display_name notes
 

@@ -909,7 +909,7 @@ Stream video options.
 
 Using the "sources," you can add a video source (currently, only Webcam is supported) to the captured video.  
 Read about [overwolf.media.replaysVideoSource](overwolf-media-replays#videosource-object) for more info.  
-Note: the overwolf.streaming API does **not** support secondary files for Webcam, like in the [overwolf.media.replays](overwolf-media-replays) API.  
+Note: the overwolf.streaming API does **not** support secondary files for Webcam (means, the webcam rendered to a different video file), like in the [overwolf.media.replays](overwolf-media-replays) API.  
 
 #### use_app_display_name notes
 
