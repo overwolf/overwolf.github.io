@@ -191,6 +191,7 @@ Note that on the response the leading zeros are removed ("0030" => "30")
 
 Event  | Event Data        | Fired When (announcement)           | Notes      | Since GEP Ver. |
 -------| ------------------| -------------------------------------| ---------- | --------------|
+pseudo_match_id | match_info | The current match’s ID code.</br></br>Example:</br></br> `0c0ea3df-97ea-4d3a-b1f6-f8e34042251f`  |  This is an Overwolf-generated code, unrelated to Blizzard.  |   159.0 |
 match_start | null      | Match started. |See [notes](#match_start-note)|    150.0      |
 match_end   | null      | Match ended.   |See [notes](#match_end-note)|    150.0      |
 

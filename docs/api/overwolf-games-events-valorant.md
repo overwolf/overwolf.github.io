@@ -112,6 +112,7 @@ Possible agent values:
 
 key          | Category    | Values                    | Notes                 | Since GEP Ver. |
 ------------ | ------------| ------------------------- | --------------------- | ------------- | 
+pseudo_match_id | match_info | The current match’s ID code.</br></br>Example:</br></br> `0c0ea3df-97ea-4d3a-b1f6-f8e34042251f`  |  This is an Overwolf-generated code, unrelated to Riot.  |   159.0 |
 round_number | match_info  | Number of current round.  |See [notes](#round_number-note)|   149.0       |
 score        | match_info  | Amount of rounds won/lost.|See [notes](#score-note)|   149.0       |
 round_phase  | match_info  | Current state of the round.|See [notes](#round_phase-note)|   149.0       |
