@@ -26,3 +26,4 @@ The Overwolf Developers community is a great place to learn from other developer
 
 ![join-the-community](assets/join-the-community/3.png)
 
+ 
