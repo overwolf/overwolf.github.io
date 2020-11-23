@@ -903,7 +903,13 @@ Stream video options.
 | indication_position | [indication_position](#indication_position-enum) Enum | Position of the recorder indicator. Available for video capture only.  | 0.143  |
 | indication_type     | [indication_type](#indication_type-enum) Enum | Type of the recorder indicator. Available for video capture only.  | 0.143  |
 | use_app_display_name | bool | Use the app display (if has any e.g [dock_button_title](manifest-json#meta-dock) name when creating video folder. See [note](#use_app_display_name-notes)  | 0.154  |
-| sources | [overwolf.media.replaysVideoSource](overwolf-media-replays#videosource-object)[] | Add sources to video (currently only webcam is supported).   | 0.159  |
+| sources | [overwolf.media.replaysVideoSource](overwolf-media-replays#videosource-object)[] | Add sources to video. See [note](#sources-notes)   | 0.159  |
+
+#### sources notes
+
+Using the "sources," you can add a video source (currently, only Webcam is supported) to the captured video.  
+Read about [overwolf.media.replaysVideoSource](overwolf-media-replays#videosource-object) for more info.  
+Note: the overwolf.streaming API does **not** support secondary files for Webcam, like in the [overwolf.media.replays](overwolf-media-replays) API.  
 
 #### use_app_display_name notes
 
