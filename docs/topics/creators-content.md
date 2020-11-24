@@ -6,7 +6,7 @@ sidebar_label: Creators content
 
 ## Useful community snippets
 
-Our community is constantly sharing knowledge on different topics: codes to implant on your app, how to better build your roadmap, useful sites to create a better UI, and more.
+Our community is constantly sharing knowledge on different topics: codes to Impalement on your app, how to better build your roadmap, useful sites to create a better UI, and more.
 
 Here are the things that were shared:
 
@@ -19,5 +19,3 @@ Here are the things that were shared:
 - [Overwolf app development: how to start](https://dowmeister.medium.com/overwolf-app-development-how-to-start-b0a897104d98) / Francesco “dowmeister” Bramato - Trucky Overlay
 
 - [Storybook on Overwolf: How to abstract your logic for a better UI](https://rocket-analyst.medium.com/storybook-on-overwolf-how-to-abstract-your-logic-for-a-better-ui-2f266381b5ea) / Redblueflame - Rocket Analyst
-
-- [Some more helpful links](https://overwolf.github.io/docs/topics/snippets)
