@@ -4,13 +4,11 @@ title: Manage your subscriptions
 sidebar_label: Manage your subscriptions
 ---
 
-## Overview
-
 In this article, we'll go over the process of updating the different aspects of your app’s subscription plan.
 
 If you don’t yet have a subscription plan enabled, follow [our guide first](../start/subscriptions-overview).
 
-### Log in to the developers console
+## Log in to the developers console
 
 After logging in to the Overwolf developers console, navigate to the subscriptions tab.
 
@@ -21,7 +19,7 @@ After logging in to the Overwolf developers console, navigate to the subscriptio
 
 ![subs_tab](../assets/dev-console/manage-subs/subs_tab.png)
  
-### Plans Tab
+## Plans Tab
 
 In this tab you can edit the subscription plans you already own: title, price, description, period, status and assets (that will be shown in the Overwolf app store).
 
@@ -29,7 +27,7 @@ In this tab you can edit the subscription plans you already own: title, price, d
 
 To edit your plan, simply press the “EDIT” button for your plan.
 
-### Title, ID, Price, Period, Status
+## Title, ID, Price, Period, Status
 
 - Title: How your subscriptions plan will be called on the dev console - this is not visible to users on the app store
 - ID: Your plan’s ID number. This is a read-only item and cannot be changed.
@@ -39,7 +37,7 @@ To edit your plan, simply press the “EDIT” button for your plan.
 
 ![plan_details](../assets/dev-console/manage-subs/plan_details.png)
 
-### Customize the app’s subscription listing in the app store
+## Customize the app’s subscription listing in the app store
 
 Control the assets you’d like to be shown on the app’s subscription listing in the app store.
 
@@ -58,7 +56,7 @@ Control the assets you’d like to be shown on the app’s subscription listing 
 
 ![plan_ad](../assets/dev-console/manage-subs/plan_ad.png)
 
-### Subscribers tab
+## Subscribers tab
 
 Control and monitor you app's subscribers through this tab.
 
