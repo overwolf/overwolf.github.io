@@ -1,7 +1,7 @@
 ---
 id: users-and-permissions
 title: Manage users and permissions
-sidebar_label: Uers and permissions
+sidebar_label: Users and permissions
 ---
 
 In this article, we'll go over the process of adding and updating users to your dev console account.  
