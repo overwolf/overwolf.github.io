@@ -382,6 +382,10 @@ callback            | (Result) => void | Reports success or failure             
 
 > Sets whether the window should be injected to games or not.
 
+:::warning OBSOLETE
+This function is obsolete.
+:::
+
 If you are using this function on an in-game window while you are in a game, the window will hide, but it will not appear on the desktop automatically.
 Nevertheless, we are always recommending to use different windows for in-game and desktop.  
 

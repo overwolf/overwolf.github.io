@@ -22,6 +22,7 @@ Note that the work on the documentation for this version is still in-progress.
   * The webcam source can be rendered to a different video file (or not).
   * Support multiple replay's consumers.
   * New API to retrieve connected WebCams: [overwolf.media.getWebcams](overwolf-media#getwebcamscallback).
+* [overwolf.windows.setDesktopOnly()](overwolf-windows#setdesktoponlywindowid-shouldbedesktoponly-callback) - This function is now obsolete.
 
 #### Platform
 
@@ -42,7 +43,12 @@ Note that the work on the documentation for this version is still in-progress.
 
 #### Game events
 
-* Soon.
+* Valorant.
+  * Added new update: **pseudo_match_id**  under [match_info](overwolf-games-events-valorant#match_info).
+* COD: Warzone.
+  * Added new update: **pseudo_match_id**  under [match_info](overwolf-games-events-warzone#match_info).
+* Overwatch.
+  * Added new update: **pseudo_match_id**  under [match_info](overwolf-games-events-overwatch#match_info).
 
 ## Version 0.158 (Nov. 2020)
 
