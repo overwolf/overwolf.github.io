@@ -1,7 +1,7 @@
 ---
 id: join-the-community
 title: Join the Dev Community
-sidebar_label: Join the community
+sidebar_label: Join the Community
 ---
 
 ## Overview
