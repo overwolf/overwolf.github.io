@@ -1,6 +1,6 @@
 ---
 id: creators-content
-title: Creators Content
+title: Developers Articles
 sidebar_label: Developers Articles
 ---
 
