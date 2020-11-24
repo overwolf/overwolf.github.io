@@ -1,7 +1,7 @@
 ---
 id: creators-content
 title: Creators Content
-sidebar_label: Creators content
+sidebar_label: Developers Articles
 ---
 
 ## Useful community snippets
