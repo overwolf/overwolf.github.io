@@ -21,7 +21,7 @@ Now, after everything is clear and makes sense, let's start.
 
 ## Login to the developers console
 
-After logging to the [Overwolf developers console](https://console.overwolf.com/), navigate to "Users and Permissions":
+After logging to the [Overwolf developers console](https://console.overwolf.com/), navigate to "Settings" - "Users and Permissions":
 
 ![login](../assets/dev-console/users-and-permissions/login.png)
 
@@ -93,5 +93,5 @@ Each user can be set to a single role per app. e.g., a user can be the owner or 
 
 Currently, there are two available app's roles: user and owner.
 
-* User - can do X. 
-* Owner - can do Y.
+* User - Can view and edit any section except the "Users and permissions page" 
+* Owner - Can view and edit any section related to his app
