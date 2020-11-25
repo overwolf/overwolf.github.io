@@ -93,5 +93,5 @@ Each user can be set to a single role per app. e.g., a user can be the owner or 
 
 Currently, there are two available app's roles: user and owner.
 
-* User - Can view and edit any section except the "Users and permissions page" 
+* User - Can view and edit any section except the "Users and permissions" page 
 * Owner - Can view and edit any section related to his app
