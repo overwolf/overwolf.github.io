@@ -149,4 +149,4 @@ For this example, we assume that your app has two windows: a background controll
 * You must have a local web server installed on your machine.
 * Valid only when loading unpacked extensions.
 * Valid only with "localhost" / "127.0.0.1".
-* When using debug_url, calling [getMainWindow()](../api/overwolf-windows#getmainwindow) has a known issue, and it will not work as expected: it returns a reference to the current window instead of the main window.
+* When using debug_url, calling [getMainWindow()](../api/overwolf-windows#getmainwindow) produces a known issue, and it will not work as expected: it returns a reference to the current window instead of the main window.
