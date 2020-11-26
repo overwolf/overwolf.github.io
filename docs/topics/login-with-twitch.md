@@ -5,11 +5,17 @@ sidebar_label: Login with Twitch
 ---
 
 This article will explain how to implement a 3rd party login interface in your Overwolf app.  
-You can also use this method to implement Facebook, Google, Discrod, or other logins.
+You can also use this method to implement Facebook, Google, Discord, or other logins.
 
 The main challenge here is figuring out how to transfer the info that the auth window gets from the external service back to the OW app.
 
-This is a suggested login flow into Twitch using their OAuth2, as implemented in our streaming app:
+:::important
+As Google (and maybe other Providers in the future) will discontinue support for sign-in from embedded browser frameworks (e.g., OW browser) starting Jan. 2021, the best way to go is to send the user to their default browser, and not use the OW browser.
+:::
+
+You can force it using the [force_browser](https://overwolf.github.io/docs/api/manifest-json#force_browser) flag.
+
+This is a suggested login flow into Twitch using their OAuth2:
 
 ## 1. Prerequisite
 
@@ -43,11 +49,7 @@ Replace the [EXTENSION-ID] with your extension's id.
 
 ## 2. Open the login window
 
-When the user click on the "Login with Twitch" button in the app, we open the dedicated login window.
-
-As Google (and maybe other services in the future) will discontinue support for sign-in to Google accounts from embedded browser frameworks (e.g., OW browser) starting Jan. 2021, the best way to go is to send the user to their default browser, and not use the OW browser.
-
-You can force it using the [force_browser](https://overwolf.github.io/docs/api/manifest-json#force_browser) flag.
+When the user clicks on the "Login with Twitch" button in the app, we open the dedicated login window.
 
 ### 2.1 Check for existing auth token
 
@@ -84,6 +86,6 @@ window.location.replace(`overwolf-extension://[EXTENSION-ID]/dist/login/login.ht
    
 ## 3. Get the auth token.
 
-We store the hash in the localStorage and send it to our background page.
+We recommend encrypting the hash/token, before storing in the localStorage - for security reasons.
 
 ## 4.  Close the Log In window.
