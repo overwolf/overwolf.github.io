@@ -15,11 +15,6 @@ To develop, load or run unpacked or unreleased apps, you have to [whitelist](../
 ## Developers Version
 
 * Download the [Latest Overwolf Developers Client](https://download.overwolf.com/install/Download?Channel=Developers).
-
-
-## Public Version
-
-* Download the [Latest Overwolf Public Version](https://download.overwolf.com/install/Download?Channel=website).
 * If you already installed the OW client public version, you can easily switch it to the developers channel/version:
   * Open Overwolf setting.
   * Go to about.
@@ -28,6 +23,10 @@ To develop, load or run unpacked or unreleased apps, you have to [whitelist](../
   * Update and Relaunch.
 
 ![change-channel](../assets/change-channel.png)
+
+## Public Version
+
+* Download the [Latest Overwolf Public Version](https://download.overwolf.com/install/Download?Channel=website).
 
 ## Sample App
 
