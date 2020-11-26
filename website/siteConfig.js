@@ -19,7 +19,7 @@ const siteConfig = {
   wrapPagesHTML: true,
   title: ' ', // Title for your website.
   homepage_title: 'Easily create apps for PC gamers',
-  tagline: 'Overlay, real-time game events, monetization, auto patching, Anti-Cheat compatibility and all that good stuff',
+  tagline: 'Easily create apps for PC games on the Overwolf framework',
   url: 'https://overwolf.github.io', // Your website URL
   baseUrl: '/', // Base URL for your project */
 
