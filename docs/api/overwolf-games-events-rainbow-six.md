@@ -128,7 +128,7 @@ matchOutcome | victory / defeat</br>`{"name":"matchOutcome","data":"defeat"}` | 
 key          | Category    | Values                    | Notes                 | Since GEP Ver. |
 --------------- | -----------| ------------------------------------------------------------------------------------ | ------------------------------------ | ------------- | 
 roster_XX | players | Provides info for the currently active players (10 players). See [notes](#roster_xx-notes) below |   |   123.0 |
-team | players | Player’s current team – Orange/Blue  |   |   123.0 |
+team | players | Player’s current team – Orange/Blue/Spectator  |   |   123.0 |
 health | players | Player’s current health – (0-100)</br>`{"player":{"health":"70"}}` |   |   123.0 |
 score | players | Player’s current score</br>`{"player":{"score":"335"}}` |   |   123.0 |
 kills | players | Total number of kills by the player</br>`{"player":{"kills":"0"}}` |   |   123.0 |
@@ -146,7 +146,9 @@ Each player joining the game will be reported in the following way:
 As you can see, this object includes:
 
 * name - player's name
-* team - Blue/Orange
+* team - Blue/Orange/Spectator
+
+As of version 159, you may detect the local player as a spectator when creating a custom match (Example: `{"info":{"player":{"team":"Spectator"}},"feature":"roster"}`).
 * is_local - local player or not (Boolean)
 * [operator](https://github.com/overwolf/community-gists/blob/master/siege_operator_ids.json) - The ID of the selected operator (available for team members only)
 * kills - Total amount of kills made by the player
