@@ -50,4 +50,6 @@ Please note that these are community code snippets, and the usage is at your own
 * [firestone/unityspy](https://github.com/Zero-to-Heroes/unity-spy-.net4.5)
   A library to read the memory of Unity games. See also the [Overwolf wrapper](https://github.com/Zero-to-Heroes/overwolf-unityspy-wrapper).
 
+* [truckyoverlay/virustotal](https://github.com/natewatson999/node-virustotal)
+Plugin that automatically checks for malware with VirusTotal.
 
