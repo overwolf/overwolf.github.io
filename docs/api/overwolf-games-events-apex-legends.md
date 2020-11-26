@@ -340,3 +340,21 @@ The following properties are provided:
 ```json
 {"events":[{"name":"kill_feed","data":"{"local_player_name":"Shargaas","attackerName":"shayan3200", "victimName":"i999n","weaponName":"alternator","action":"knockdown"}"}]}
 ```
+#### "Bleed Out" note
+
+The **weaponName** can return with a "Bleed Out" value. For example:
+
+```
+"events": [{
+    "name": "kill_feed",
+	"data": {
+	    "attackerName": "Red_Wizard19TTV",
+		"victimName": "SoSochek_1337",
+		"weaponName": "Bleed Out",
+		"action": "Bleed Out"
+    }
+}]
+```
+
+"Bleed Out" is when something "external" kills you, which is not an enemy player.  
+For example, if you are knocked out already, and you are outside of the safe zone, your HP automatically depletes, and when it reaches zero, and you die, you will **Bleed Out**, and the **weaponName** and **action** will return with the "Bleed Out" value.  The same rules apply for the "Caustic" legend gas barrels; if they kill you, you also receive a "Bleed Out."
