@@ -90,11 +90,12 @@ Where `clientId` is your Twitch clientId and `fullRedirectUri` is your static lo
  
 ## 4. Return back to the app
 
-After we successfully logged in to Twitch, we can save the auth token and redirect the user back to the app's background page.
+After we successfully logged in to Twitch, we can save the auth token and close the app's login window.
 
-We recommend encrypting the hash/token before storing in the localStorage - for security reasons.
-
+You can save the auth token in a localStorage variable. We recommend encrypting the hash/token before storing it - for security reasons.
 
 ## 5.  Close the Log In window.
 
-We can now safely close the login window. The login process is done.
+Now, we can safely close the login window. 
+
+The login process is done.
