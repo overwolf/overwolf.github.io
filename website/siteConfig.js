@@ -118,8 +118,8 @@ const siteConfig = {
   cleanUrl: true,
 
   // Open Graph and Twitter card images.
-  ogImage: 'img/ow_share.png',
-  twitterImage: 'img/ow_share.png',
+  ogImage: 'img/ow_share_new.png',
+  twitterImage: 'img/ow_share_new.png',
 
   // Show documentation's last contributor's name.
   // enableUpdateBy: true,
