@@ -5,23 +5,48 @@ sidebar_label: Login with Twitch
 ---
 
 This article will explain how to implement a 3rd party login interface in your Overwolf app.  
-You can also use this method to implement Facebook, Google, Discord, or other logins.
 
 The main challenge here is figuring out how to transfer the info that the auth window gets from the external service back to the OW app.
 
 :::important
-As Google (and maybe other Providers in the future) will discontinue support for sign-in from embedded browser frameworks (e.g., OW browser) starting Jan. 2021, the best way to go is to send the user to their default browser, and not use the OW browser.
+As Google (and maybe other providers in the future) will discontinue support for sign-in from embedded browser frameworks (e.g., OW browser) starting Jan. 2021, the best way to go is to send the user their default browser, and not use the OW browser.  
+In the future, we will add some instructions on how to do that. Meanwhile, you can use the suggested workaround that explains in this article.
 :::
-
-You can force it using the [force_browser](https://overwolf.github.io/docs/api/manifest-json#force_browser) flag.
 
 This is a suggested login flow into Twitch using their OAuth2:
 
-## 1. Prerequisite
+## Prerequisite
 
-### Set a dedicated login window
+### Register your app on Twitch
 
-Add a new window in your app's manifest, for the 3rd party authentication page:
+To make an app that uses the Twitch API, you first need to register your app on the [Twitch developer site](https://dev.twitch.tv/dashboard/apps/create).  
+
+When creating this app, enter your `redirect URI`, where your users are redirected after being authorized.  
+As Twitch doesn't accept URIs where the top domain is not HTTP, **you can't use the OW URI scheme** (overwolf-extension://..).  
+
+As a workaround, we set a static login page on our server as the redirect URI. Within this page, we can easily use an OW URI to redirect back to our OW app. Jump to the [next chapter](#create-a-static-logic-page), create the static page, and get back. 
+
+Once you create a developer app, you are assigned a unique `client ID` for your app.
+
+### Create a static logic page
+
+On your server, Create a static login page. Let's call it index.html.
+
+Redirect back to your app login page:
+
+```js
+window.location.replace(`overwolf-extension://[EXTENSION-ID]/dist/login/login.html${location.hash}`);
+```
+
+Replace the [EXTENSION-ID] with your extension's id.  
+
+The [URL hash](https://www.w3schools.com/jsref/prop_loc_hash.asp) is the Twitch auth token sent back to the app.
+
+Now that you have a live static login page on your server, [go back](#register-your-app-on-twitch) and set the Twitch redirect URI.
+
+### Create a dedicated login window
+
+Add a new window in your app's manifest, for the authentication process:
 
 ```json
 "login": {
@@ -37,55 +62,40 @@ Add a new window in your app's manifest, for the 3rd party authentication page:
 }
 ```
 
-### Set a Redirect URI
+## 1. Open the login window
 
-In our background controller, index.html, we set the **redirect_uri** to approve later the login page on Twitch's backend.  
+When the user clicks on the "Login with Twitch" button in the app, open the dedicated login window.
 
-```js
-redirect_uri = "overwolf-extension://[EXTENSION-ID]/external-windows/login/login.html";
-```
+## 2. Check for existing auth token
 
-Replace the [EXTENSION-ID] with your extension's id.
+When the login window starts, the first thing to do is to check if the user is already logged in:  
 
-## 2. Open the login window
+As mentioned earlier, the Twitch auth token is sent back to the app through a [URL hash](https://www.w3schools.com/jsref/prop_loc_hash.asp).
 
-When the user clicks on the "Login with Twitch" button in the app, we open the dedicated login window.
+So we can check the location.hash: 
 
-### 2.1 Check for existing auth token
+* If location.hash is not set - the user is not logged yet. We continue the redirection to the Twitch login URL ([step 3](#3-redirect-to-twitch-login-page)).
 
-When the login window starts, the first thing to do is to check if the user is already logged-in:  
-in Twitch, the auth token is sent back to the app throug a [URL hash](https://www.w3schools.com/jsref/prop_loc_hash.asp).
+* If location.hash is set - the user successfully passes the Twitch login and redirects back to the app with the auth token.  
+  We save the auth token and redirect the user back to the app's background page ([step 4](#4-return-back-to-the-app))
 
-* If there is no hash - we continue the redirection to the Twitch login URL ([step 2.2](#22-redirect-to-twitch-login-page)).
+## 3. Redirect to Twitch login page
 
-* If there is a hash - it means that the user already logged in. We redirect the user to the background page (index.html), with the hash (step [2.4](#24-redirect-to-the-extension-page)).
-
-### 2.2 Redirect to Twitch login page
-
-If there is no hash, we manually navigates (`window.location.replace`) to: 
+Manually navigates (`window.location.replace`) to: 
 
 ```js
 https://id.twitch.tv/oauth2/authorize?client_id=${clientId}&redirect_uri=${fullRedirectUri}`
 ```
 
-Where `clientId` is your Twitch clientId and `fullRedirectUri` is our login page that we set [earlier](#set-a-redirect-uri). 
+Where `clientId` is your Twitch clientId and `fullRedirectUri` is your static login page that we set earlier. 
+ 
+## 4. Return back to the app
 
-### 2.3 Getting back from Twitch
+After we successfully logged in to Twitch, we can save the auth token and redirect the user back to the app's background page.
 
-After a succesful login, Twitch will auto-redirect back to the `fullRedirectUri`, with an auth token as a [URL hash](https://www.w3schools.com/jsref/prop_loc_hash.asp).
+We recommend encrypting the hash/token before storing in the localStorage - for security reasons.
 
-The login page will look for the hash ([step 2.1](#21-check-for-existing-auth-token)) and if it exist, it will redirect the user back to the extension's background page ([next step](#24-redirect-to-the-extension-page)).
 
-### 2.4 Redirect to the extension page
+## 5.  Close the Log In window.
 
-Now, after we succefully logged in to Twitch, we can redirect the user back to the background page (index.html) with the auth token as hash:
-
-```js
-window.location.replace(`overwolf-extension://[EXTENSION-ID]/dist/login/login.html${location.hash}`);
-```
-   
-## 3. Get the auth token.
-
-We recommend encrypting the hash/token, before storing in the localStorage - for security reasons.
-
-## 4.  Close the Log In window.
+We can now safely close the login window. The login process is done.
