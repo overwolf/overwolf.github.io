@@ -31,7 +31,10 @@ In addition, the [simple I/O plugin](../topics/simple-io-plugin) offers several 
 * [overwolf.io.ReadFileOptions](#readfileoptions-object) Object
 * [overwolf.io.ListenFileOptions](#listenfileoptions-object) Object
 * [overwolf.io.DirResult](#dirresult-object) Object
-
+* [overwolf.io.FileExistsResult](#fileexistsresult-object) Object
+* [overwolf.io.ReadFileContentsResult](#readfilecontentsresult-object) Object
+* [overwolf.io.ListenOnFileResult](#listenonfileresult-object) Object
+* [overwolf.io.ExistsResult](#existsresult-object) Object
 
 ## fileExists(filePath, callback)
 
@@ -43,19 +46,7 @@ Parameter | Type | Description |
 ------------ | ------------ | ------------ |
 filePath | string | Path to check for |
 callback | function | Returns the result |   
-   
-#### Callback argument: Success
-
-```json 
-{ "status": "success", "found": true }
-```
-
-#### Callback argument: Failure
-If the file does NOT exist, an error status will be returned:
-
-```json 
-{"status":"error","reason":"File doesn't exists"}
-```
+callback  | [(Result: FileExistsResult)](#fileexistsresult-object) => void | Returns with the result | 
 
 ## writeFileContents(filePath, content, encoding, triggerUacIfRequired, callback)
 
@@ -73,18 +64,8 @@ filePath             | string                  | Path to check for              
 content              | string                  | Content to write                                                                    |
 encoding             | [eEncoding](#eencoding-enum) enum | Encoding to use                                                               |
 triggerUacIfRequired | bool                    | If additional permissions are required, triggers the Windows UAC dialog |
-callback             | function                | Returns the result                                                                 |   
+callback             | (Result) => void        | Returns with the result                                                                  |   
    
-#### Callback argument: Success
-```json
-{ "status": "success" }
-```
-#### Callback argument: Failure
-
-```json
-{"status":"error"}
-```   
-
 ## readFileContents(filePath,encoding, callback)
 
 #### Version added: 0.93
@@ -97,24 +78,8 @@ Parameter | Type | Description |
 ------------ | ------------ | ------------ |
 filePath | string | Full path of the targeted file|
 encoding | [eEncoding](#eencoding-enum) enum | Encoding to use |
-callback | function | Returns the result |
+callback   | [(Result: ReadFileContentsResult)](#readfilecontentsresult-object) => void       | Returns the result |   
    
-#### Callback argument: Success
-
-Returns a string with the target file’s content.
-
-```json
-{"success":true,"content":"Hello World!"}
-```
-
-#### Callback argument: Failure
-
-If the file doesn’t exist, an error status will be returned:
-
-```json
-{"success":false,"error":"File doesn't exists"}
-```
-
 ## copyFile(src, dst, overrideFile, reserved, callback)
 
 #### Version added: 0.93
@@ -129,27 +94,13 @@ src | string | A relative file path from your extension's root folder, or a full
 dst | string | Destination absolute path to copy to including filename. See usage example below |
 overrideFile | bool | "true" if you want an existing file to be overwritten, "false" otherwise |
 reserved | bool | For future use |
-callback | function | Returns with the result |   
+callback             | (Result) => void        | Returns with the result                                                                 |   
 
 #### Usage example
 
 ```js
 overwolf.io.copyFile("Fortnite Battle Royale 03-19-2020 14-10-18-457.mp4","C:/Users/Hal9000/AppData/Local/Overwolf/Extensions/nhmkaollkcmjiecdnnjmgfifjgkfegkljnjjbipp/1.0.18/copy.mp4",false,false,console.log)
 
-```
-
-#### Callback argument: Success
-
-Returns a string with the targeted file’s content.
-
-```json
-{"success":true}
-```
-
-#### Callback argument: Failure
-
-```json
-{"status":"error"}
 ```
 
 ## dir(path, callback)
@@ -247,17 +198,7 @@ callback  | function | Returns the result |
 Parameter | Type     | Description             |
 ----------| ---------| ----------------------- |
 path      | string   | The target path         |
-callback  | function | Returns the result | 
-
-#### Callback argument: Success
-
-```json
- {
-    "success" : true,
-    "error": "", 
-    "exist": true
-}
-```
+callback  | [(Result: ExistsResult)](#existsresult-object) => void | Returns with the result | 
 
 ## listenOnFile(id, path, option, callback)
 
@@ -274,30 +215,7 @@ Parameter | Type     | Description             |
 id        | string   | listen Id               |
 path      | string   | file path               |
 options   | [ListenFileOptions](#listenfileoptions-object) Object   |           |
-callback  | function | Returns the result | 
-
-#### Callback argument: Success
-
-```json
-{
-    "success" : true, // when false the callback will stop listen
-    "error": "", // valid only when success = false
-    "state": "started|running|terminated|truncated" // valid only when success =true (overwolf.io.enums.fileListenerState) 
-    "content": "", //the line 
-    "info" : 
-    {
-        "index" : 1, // line index
-        "isNew" : false, //false when line exist (e.g skip to end is false), true when new line was add to file
-        "position" : 3000, // last file position
-        "eof" :false, // is eof reached
-    }
-}
-```
-
-#### listenOnFile notes 
-
-* "state" is from type [overwolf.io.enums.fileListenerState](#filelistenerstate-enum).
-* Please read what happens when you call [stopFileListener()](#stopfilelistener-notes).
+callback  | [(Result: ListenOnFileResult)](#listenonfileresult-object) => void | Returns with the result | 
 
 ## stopFileListener(id)
 
@@ -402,5 +320,97 @@ data             | string[]                      | List of files and folders    
       }
 
    ]
+}
+```
+
+## FileExistsResult Object
+#### Version added: 0.141
+
+> The result.
+
+Parameter        | Type                          | Description                        |
+---------------- | ------------------------------| ---------------------------------- |
+success          | boolean                       | Inherited from the "Result" Object |
+error            | string                        | Inherited from the "Result" Object |
+found            | boolean                       | Retuen if the file exist or not    |
+
+#### Example data
+
+```json
+{
+   "success":true,
+   "found":true
+}
+```
+
+## ReadFileContentsResult Object
+#### Version added: 0.141
+
+> the status of the request and the file contect.
+
+Parameter        | Type                          | Description                        |
+---------------- | ------------------------------| ---------------------------------- |
+success          | boolean                       | Inherited from the "Result" Object |
+error            | string                        | Inherited from the "Result" Object |
+content          | string                        | string with the taraget file’s content   |
+
+#### Example data
+
+
+```json
+{"success":true,"content":"Hello World!"}
+```
+
+## ListenOnFileResult Object
+#### Version added: 0.141
+
+> The result.
+
+Parameter        | Type                          | Description                        |
+---------------- | ------------------------------| ---------------------------------- |
+success          | boolean                       | Inherited from the "Result" Object |
+error            | string                        | Inherited from the "Result" Object |
+content          | string                        | string with the taraget line content   |
+
+#### Example data
+
+```json
+{
+    "success" : true, // when false the callback will stop listen
+    "error": "", // valid only when success = false
+    "state": "started|running|terminated|truncated" // valid only when success =true (overwolf.io.enums.fileListenerState) 
+    "content": "", //the line 
+    "info" : 
+    {
+        "index" : 1, // line index
+        "isNew" : false, //false when line exist (e.g skip to end is false), true when new line was add to file
+        "position" : 3000, // last file position
+        "eof" :false, // is eof reached
+    }
+}
+```
+
+#### notes 
+
+* "state" is from type [overwolf.io.enums.fileListenerState](#filelistenerstate-enum).
+* Please read what happens when you call [stopFileListener()](#stopfilelistener-notes).
+
+## ExistsResult Object
+#### Version added: 0.141
+
+> The result.
+
+Parameter        | Type                          | Description                        |
+---------------- | ------------------------------| ---------------------------------- |
+success          | boolean                       | Inherited from the "Result" Object |
+error            | string                        | Inherited from the "Result" Object |
+exist            | boolean                       | Retuen if the file exist or not    |
+
+#### Example data
+
+```json
+{
+   "success":true,
+   "exist":true
 }
 ```
