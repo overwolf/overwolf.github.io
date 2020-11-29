@@ -519,7 +519,7 @@ Example code:
     },
     "simple-io-plugin":{  
         "file":"plugins/simple-io-plugin.dll",
-        "class":"overwolf.plugins.SimpleIOPlugin"
+        "class":"overwolf.plugins.simpleio.SimpleIOPlugin"
     }
 }
 ```
