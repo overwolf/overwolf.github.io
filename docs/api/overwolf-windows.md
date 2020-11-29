@@ -960,6 +960,7 @@ monitorId       | string        |                         |
 isVisible       | boolean       |                         | 
 state           | string        | deprecated and kept only for backward compatibility  |
 stateEx         | [WindowStateEx](#windowstateex-enum) enum | always use this param to get the state of the window | 
+monitorId       | string        | return monitorId (If the Window is not opened already) - allowing one window (background) to know on which monitor another window exists.  |
 Parent          | string        | The parent window id    |
 
 
