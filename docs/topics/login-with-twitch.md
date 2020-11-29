@@ -76,8 +76,7 @@ So we can check the location.hash:
 
 * If location.hash is not set - the user is not logged yet. We continue the redirection to the Twitch login URL ([step 3](#3-redirect-to-twitch-login-page)).
 
-* If location.hash is set - the user successfully passes the Twitch login and redirects back to the app with the auth token.  
-  We save the auth token and redirect the user back to the app's background page ([step 4](#4-return-back-to-the-app))
+* If location.hash is set - the user successfully passes the Twitch login and redirects back to the app with the auth token. We save the auth token and redirect the user back to the app's background page ([step 4](#4-return-back-to-the-app))
 
 ## 3. Redirect to Twitch login page
 
