@@ -62,6 +62,19 @@ Add a new window in your app's manifest, for the authentication process:
 }
 ```
 
+### Set externally_connectable
+
+Add to your app manifest the [externally_connectable](../api/manifest-json#externally_connectable) flag with the Twitch URL:
+
+```json
+"externally_connectable": {
+    "matches": [
+    "http://*.twitch.tv", //make sure that the end of URL is WITHOUT any slash/backslash
+    "https://*.twitch.tv"
+    ]
+}
+```
+
 ## 1. Open the login window
 
 When the user clicks on the "Login with Twitch" button in the app, open the dedicated login window.
