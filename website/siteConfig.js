@@ -18,7 +18,7 @@ const users = [
 const siteConfig = {
   wrapPagesHTML: true,
   title: ' ', // Title for your website.
-  homepage_title: 'Easily create apps for PC gamers',
+  homepage_title: 'The Developers Site',
   tagline: 'Easily create apps for PC games on the Overwolf framework',
   url: 'https://overwolf.github.io', // Your website URL
   baseUrl: '/', // Base URL for your project */
