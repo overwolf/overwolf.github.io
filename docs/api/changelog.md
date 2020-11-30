@@ -37,6 +37,7 @@ Note that the work on the documentation for this version is still in-progress.
 * Twitch login popup window: allow extension popup window to handle OW custom scheme (if origin is match externally connectable regex).
 * Block custom scheme when app ExternallyConnectable is null.
 * Log when blocking Custom overwolf Scheme navigation.
+* Fix overwolf.windows.bringToFront() api for native\desktop only: will move window to top most and will set the window as the foreground window (fullcreen game mode will be minimized).
 
 #### Dev Console
 
