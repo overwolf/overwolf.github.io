@@ -543,7 +543,7 @@ callback               | (Result) => void                      | Called with the
 
 * For in-game windows, calling this function will always bring the window to the front. 
 * For desktop/native windows, the behavior depends on the game mode:
-  * Fullscreen game: The window will stay in the background behind the game. If you want to take focus, use the [grabFocus](#bringtofrontgrabfocus-callback) version).
+  * Fullscreen game: The window will stay in the background behind the game. If you want to take focus, use the [grabFocus](#bringtofrontgrabfocus-callback) version.
   * Windowed game: The window will move to the foreground. The game window will not be changed. 
 
 ## bringToFront(callback)
@@ -555,7 +555,7 @@ callback               | (Result) => void                      | Called with the
 
 * For in-game windows, calling this function will always bring the window to the front. 
 * For desktop/native windows, the behavior depends on the game mode:
-  * Fullscreen game: The window will stay in the background behind the game. If you want to take focus, use the [grabFocus](#bringtofrontgrabfocus-callback) version).
+  * Fullscreen game: The window will stay in the background behind the game. If you want to take focus, use the [grabFocus](#bringtofrontgrabfocus-callback) version.
   * Windowed game: The window will move to the foreground. The game window will not be changed. 
 
 Parameter              | Type                                  | Description                                                               |
@@ -572,7 +572,7 @@ callback               | (Result) => void                      | Called with the
 * For in-game windows, calling this function will always bring the window to the front. 
 * For desktop/native windows, the behavior depends on the game mode AND the grabFocus param:
   * Fullscreen game + grabFocus:false - The window will stay in the background behind the game.
-  * Fullscreen game + grabFocus:true - The window will move to the foreground and take the focus. The game window will be minimized.
+  * Fullscreen game + grabFocus:true - The window will move to the foreground and take the focus. The game window will be minimized (use with caution, usually it's a bad UX).
   * Windowed game + grabFocus:true/false - The window will move to the foreground. The game window will not be changed. 
 
 Parameter              | Type                                  | Description                                                               |
@@ -590,9 +590,9 @@ callback               | (Result) => void                      | Called with the
 * For in-game windows, calling this function will always bring the window to the front. 
 * For desktop/native windows, the behavior depends on the game mode AND the grabFocus param:
   * Fullscreen game + grabFocus:false - The window will stay in the background behind the game.
-  * Fullscreen game + grabFocus:true - The window will move to the foreground and take the focus. The game window will be minimized.
+  * Fullscreen game + grabFocus:true - The window will move to the foreground and take the focus. The game window will be minimized (use with caution, usually it's a bad UX).
   * Windowed game + grabFocus:true/false - The window will move to the foreground. The game window will not be changed. 
-  
+
 Parameter              | Type                                  | Description                                                               |
 -----------------------| --------------------------------------| --------------------------------------------------------------------------|
 windowId	             | string                                | The id or name of the window                                              |
