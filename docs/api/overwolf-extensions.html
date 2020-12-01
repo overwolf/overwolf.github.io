@@ -87,10 +87,9 @@ Returns the content of a file in an app's library.</p></li>
 <li><a href="#registerinfoid-eventscallback-callback">overwolf.extensions.registerInfo()</a></li>
 <li><a href="#unregisterinfoid-callback">overwolf.extensions.unregisterInfo()</a></li>
 <li><a href="#getrunningstateid-callback">overwolf.extensions.getRunningState()</a></li>
-<li><a href="#getrunningstateid-callback">overwolf.extensions.getManifest()</a></li>
+<li><a href="#getmanifestid-callback">overwolf.extensions.getManifest()</a></li>
 <li><a href="#relaunch">overwolf.extensions.relaunch()</a></li>
 <li><a href="#updateextensioncallback">overwolf.extensions.updateExtension()</a></li>
-<li><a href="#updateextensionscallback">overwolf.extensions.updateExtensions()</a></li>
 <li><a href="#checkforextensionupdatecallback">overwolf.extensions.checkForExtensionUpdate()</a></li>
 <li><a href="#getserviceconsumerscallback">overwolf.extensions.getServiceConsumers()</a></li>
 </ul>
@@ -104,6 +103,9 @@ Returns the content of a file in an app's library.</p></li>
 <ul>
 <li><a href="#checkforupdateresult-object">overwolf.extensions.CheckForUpdateResult</a> Object</li>
 <li><a href="#extensionupdatestate-enum">overwolf.extensions.ExtensionUpdateState</a> Enum</li>
+<li><a href="#getinforesult-object">overwolf.extensions.GetInfoResult</a> Object</li>
+<li><a href="#getrunningstateresult-object">overwolf.extensions.GetRunningStateResult</a> Object</li>
+<li><a href="#serviceprovidersdataresult-object">overwolf.extensions.ServiceProvidersDataResult</a> Object</li>
 </ul>
 <h2><a class="anchor" aria-hidden="true" id="launchuid--parameter"></a><a href="#launchuid--parameter" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>launch(uid , parameter)</h2>
 <h4><a class="anchor" aria-hidden="true" id="version-added-078"></a><a href="#version-added-078" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Version added: 0.78</h4>
@@ -154,6 +156,7 @@ Returns the content of a file in an app's library.</p></li>
 <tbody>
 <tr><td>id</td><td>string</td><td>ID of the extension to get info for</td></tr>
 <tr><td>callback</td><td>function</td><td>Called with the info</td></tr>
+<tr><td>callback</td><td>(<a href="#getinforesult-object">Result: GetInfoResult</a>) =&gt; void</td><td>Called with the info</td></tr>
 </tbody>
 </table>
 <h2><a class="anchor" aria-hidden="true" id="registerinfoid-eventscallback-callback"></a><a href="#registerinfoid-eventscallback-callback" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>registerInfo(id, eventsCallback, callback)</h2>
@@ -168,7 +171,7 @@ Returns the content of a file in an app's library.</p></li>
 <tbody>
 <tr><td>id</td><td>string</td><td>ID of the extension to get updates for</td></tr>
 <tr><td>eventsCallback</td><td>function</td><td>A callback to receive info updates</td></tr>
-<tr><td>callback</td><td>function</td><td>Status of the request</td></tr>
+<tr><td>callback</td><td>(Result) =&gt; void</td><td>Returns with the result</td></tr>
 </tbody>
 </table>
 <h2><a class="anchor" aria-hidden="true" id="unregisterinfoid-callback"></a><a href="#unregisterinfoid-callback" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>unregisterInfo(id, callback)</h2>
@@ -182,7 +185,7 @@ Returns the content of a file in an app's library.</p></li>
 </thead>
 <tbody>
 <tr><td>id</td><td>string</td><td>ID of the extension to stop getting updates for</td></tr>
-<tr><td>callback</td><td>function</td><td>Status of the request</td></tr>
+<tr><td>callback</td><td>(Result) =&gt; void</td><td>Returns with the result</td></tr>
 </tbody>
 </table>
 <h2><a class="anchor" aria-hidden="true" id="getmanifestid-callback"></a><a href="#getmanifestid-callback" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>getManifest(id, callback)</h2>
@@ -196,13 +199,9 @@ Returns the content of a file in an app's library.</p></li>
 </thead>
 <tbody>
 <tr><td>id</td><td>string</td><td>ID of the extension to get the manifest for</td></tr>
-<tr><td>callback</td><td>function</td><td>A function called with the manifest data</td></tr>
+<tr><td>callback</td><td>(<a href="#overwolf-extensions-current#getmanifestresult-object">Result: GetManifestResult</a> =&gt; void</td><td>Result of the request</td></tr>
 </tbody>
 </table>
-<h4><a class="anchor" aria-hidden="true" id="callback-argument-success"></a><a href="#callback-argument-success" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Callback argument: Success</h4>
-<p>A callback function which will be called with the status of the request</p>
-<pre><code class="hljs css language-json">{ <span class="hljs-attr">"status"</span>: <span class="hljs-string">"success"</span>, <span class="hljs-attr">"isRunning"</span>: <span class="hljs-literal">true</span> }
-</code></pre>
 <h2><a class="anchor" aria-hidden="true" id="getrunningstateid-callback"></a><a href="#getrunningstateid-callback" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>getRunningState(id, callback)</h2>
 <h4><a class="anchor" aria-hidden="true" id="version-added-091-5"></a><a href="#version-added-091-5" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Version added: 0.91</h4>
 <blockquote>
@@ -214,90 +213,9 @@ Returns the content of a file in an app's library.</p></li>
 </thead>
 <tbody>
 <tr><td>id</td><td>string</td><td>ID of the extension to get updates for</td></tr>
-<tr><td>callback</td><td>function</td><td>Status of the request</td></tr>
+<tr><td>callback</td><td>(<a href="#getrunningstateresult-object">Result: GetRunningStateResult</a> =&gt; void</td><td>Result of the request</td></tr>
 </tbody>
 </table>
-<h4><a class="anchor" aria-hidden="true" id="callback-argument-success-1"></a><a href="#callback-argument-success-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Callback argument: Success</h4>
-<p>A callback function which will be called with the status of the request</p>
-<pre><code class="hljs css language-json">{
-    <span class="hljs-attr">"manifest_version"</span>: <span class="hljs-number">1</span>,
-    <span class="hljs-attr">"type"</span>: <span class="hljs-string">"WebApp"</span>,
-    <span class="hljs-attr">"meta"</span>: {
-        <span class="hljs-attr">"name"</span>: <span class="hljs-string">"App Name"</span>,
-        <span class="hljs-attr">"version"</span>: <span class="hljs-string">"1.0.0.0"</span>,
-        <span class="hljs-attr">"minimum-overwolf-version"</span>: <span class="hljs-string">"0.92.21.0"</span>,
-        <span class="hljs-attr">"author"</span>: <span class="hljs-string">"Author"</span>,
-        <span class="hljs-attr">"icon"</span>: <span class="hljs-string">"icon.png"</span>,
-        <span class="hljs-attr">"icon_gray"</span>: <span class="hljs-string">"icon_gray.png"</span>,
-        <span class="hljs-attr">"description"</span>: <span class="hljs-string">""</span>
-    },
-    <span class="hljs-attr">"permissions"</span>: [
-        <span class="hljs-string">"Extensions"</span>,
-        <span class="hljs-string">"Hotkeys"</span>,
-        <span class="hljs-string">"GameInfo"</span>,
-        <span class="hljs-string">"GameControl"</span>,
-        <span class="hljs-string">"FileSystem"</span>
-    ],
-    <span class="hljs-attr">"channel-id"</span>: <span class="hljs-number">0</span>,
-    <span class="hljs-attr">"dependencies"</span>: <span class="hljs-literal">null</span>,
-    <span class="hljs-attr">"data"</span>: {
-        <span class="hljs-attr">"externally_connectable"</span>: {
-            <span class="hljs-attr">"matches"</span>: [
-                <span class="hljs-string">"http://*.overwolf.com"</span>,
-                <span class="hljs-string">"http://overwolf.com"</span>
-            ]
-        },
-        <span class="hljs-attr">"protocol_override_domains"</span>: <span class="hljs-literal">null</span>,
-        <span class="hljs-attr">"force_browser"</span>: <span class="hljs-string">"NotSet"</span>,
-        <span class="hljs-attr">"plugins"</span>: [
-            <span class="hljs-string">"npSimpleIOPlugin.dll"</span>
-        ],
-        <span class="hljs-attr">"game_events"</span>: <span class="hljs-literal">null</span>,
-        <span class="hljs-attr">"extra-objects"</span>: <span class="hljs-literal">null</span>,
-        <span class="hljs-attr">"hotkeys"</span>: <span class="hljs-literal">null</span>,
-        <span class="hljs-attr">"content_scripts"</span>: <span class="hljs-literal">null</span>,
-        <span class="hljs-attr">"launch_events"</span>: [
-            {
-                <span class="hljs-attr">"event"</span>: <span class="hljs-number">1</span>,
-                <span class="hljs-attr">"event_data"</span>: {
-                    <span class="hljs-attr">"game_ids"</span>: <span class="hljs-literal">null</span>,
-                    <span class="hljs-attr">"wait_for_stable_framerate"</span>: <span class="hljs-literal">null</span>
-                },
-                <span class="hljs-attr">"start_minimized"</span>: <span class="hljs-literal">true</span>
-            }
-        ],
-        <span class="hljs-attr">"user_agent"</span>: <span class="hljs-literal">null</span>,
-        <span class="hljs-attr">"windows"</span>: {
-            <span class="hljs-attr">"index"</span>: {
-                <span class="hljs-attr">"file"</span>: <span class="hljs-string">"index.html"</span>,
-                <span class="hljs-attr">"show_in_taskbar"</span>: <span class="hljs-literal">true</span>,
-                <span class="hljs-attr">"transparent"</span>: <span class="hljs-literal">true</span>,
-                <span class="hljs-attr">"resizable"</span>: <span class="hljs-literal">false</span>,
-                <span class="hljs-attr">"show_minimize"</span>: <span class="hljs-literal">true</span>,
-                <span class="hljs-attr">"clickthrough"</span>: <span class="hljs-literal">false</span>,
-                <span class="hljs-attr">"disable_rightclick"</span>: <span class="hljs-literal">false</span>,
-                <span class="hljs-attr">"forcecapture"</span>: <span class="hljs-literal">false</span>,
-                <span class="hljs-attr">"show_only_on_stream"</span>: <span class="hljs-literal">false</span>,
-                <span class="hljs-attr">"ignore_keyboard_events"</span>: <span class="hljs-literal">false</span>,
-                <span class="hljs-attr">"in_game_only"</span>: <span class="hljs-literal">false</span>,
-                <span class="hljs-attr">"desktop_only"</span>: <span class="hljs-literal">false</span>,
-                <span class="hljs-attr">"disable_restore_animation"</span>: <span class="hljs-literal">false</span>,
-                <span class="hljs-attr">"grab_keyboard_focus"</span>: <span class="hljs-literal">false</span>,
-                <span class="hljs-attr">"size"</span>: {
-                    <span class="hljs-attr">"width"</span>: <span class="hljs-number">910</span>,
-                    <span class="hljs-attr">"height"</span>: <span class="hljs-number">560</span>
-                },
-                <span class="hljs-attr">"start_position"</span>: {
-                    <span class="hljs-attr">"top"</span>: <span class="hljs-number">10</span>,
-                    <span class="hljs-attr">"left"</span>: <span class="hljs-number">10</span>
-                },
-                <span class="hljs-attr">"topmost"</span>: <span class="hljs-literal">false</span>
-            }
-        },
-        <span class="hljs-attr">"start_window"</span>: <span class="hljs-string">"index"</span>
-    }
-}
-</code></pre>
 <h2><a class="anchor" aria-hidden="true" id="relaunch"></a><a href="#relaunch" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>relaunch()</h2>
 <h4><a class="anchor" aria-hidden="true" id="version-added-0112"></a><a href="#version-added-0112" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Version added: 0.112</h4>
 <blockquote>
@@ -314,66 +232,11 @@ Returns the content of a file in an app's library.</p></li>
 <tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
 </thead>
 <tbody>
-<tr><td>callback</td><td>function</td><td>Result of the request</td></tr>
+<tr><td>callback</td><td>(<a href="#updateextensionresult-object">Result: UpdateExtensionResult</a> =&gt; void</td><td>Result of the request</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="failsafe-note"></a><a href="#failsafe-note" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>failsafe</code> note</h4>
 <p>The update has a failsafe mechanism while the game is active, making sure automatic updates won't happen during play only if a user action is detected, like pressing a button, for example.</p>
-<h4><a class="anchor" aria-hidden="true" id="callback-argument-success-2"></a><a href="#callback-argument-success-2" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Callback argument: Success</h4>
-<p>A callback function which will be called with the status of the request</p>
-<pre><code class="hljs css language-json">{
- <span class="hljs-attr">"success"</span>: <span class="hljs-literal">true</span>,
- <span class="hljs-attr">"info"</span>: <span class="hljs-string">"new version 25.0.12 installed, restart app to apply."</span>
-}
-</code></pre>
-<h4><a class="anchor" aria-hidden="true" id="callback-argument-failure"></a><a href="#callback-argument-failure" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Callback argument: Failure</h4>
-<p>A callback function which will be called with the status of the request</p>
-<pre><code class="hljs css language-json">{
- <span class="hljs-attr">"success"</span>: <span class="hljs-literal">false</span>,
- <span class="hljs-attr">"error"</span>: <span class="hljs-string">"MinOverwolfVersionRequirementUnmet"</span>,
- <span class="hljs-attr">"info"</span>: <span class="hljs-string">"Overwolf version 0.125.0.2 needs to be updated to 0.126.0.11"</span>
-}
-</code></pre>
-<h4><a class="anchor" aria-hidden="true" id="possible-error-messages"></a><a href="#possible-error-messages" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Possible error messages:</h4>
-<table>
-<thead>
-<tr><th>Error Code</th><th>Description</th></tr>
-</thead>
-<tbody>
-<tr><td>UnknownError</td><td>error before download starts</td></tr>
-<tr><td>ExtensionNotFound</td><td>error before download starts</td></tr>
-<tr><td>ExtensionDisabled</td><td>error before download starts</td></tr>
-<tr><td>GameRunning</td><td>error before download starts</td></tr>
-<tr><td>PackageUpdaterUnavailable</td><td>error before download starts</td></tr>
-<tr><td>MinOverwolfVersionRequirementUnmet</td><td>error before download starts</td></tr>
-<tr><td>MinGepVersionRequirementUnmet</td><td>error before download starts</td></tr>
-<tr><td>MinGameSummaryVersionRequirementUnmet</td><td>error before download starts</td></tr>
-<tr><td>PackageInfoMissing</td><td>error before download starts</td></tr>
-<tr><td>AlreadyUpToDate</td><td>error before download starts</td></tr>
-<tr><td>AlreadyInstalled</td><td>error after download starts</td></tr>
-<tr><td>NoConnectivity</td><td>error after download starts</td></tr>
-<tr><td>MissingExtensionId</td><td>error after download starts</td></tr>
-<tr><td>InvalidInstallState</td><td>error after download starts</td></tr>
-<tr><td>InstallationError</td><td>error after download starts</td></tr>
-<tr><td>AppNotInstalled</td><td>error after download starts</td></tr>
-<tr><td>DownloadError</td><td>error after download starts</td></tr>
-</tbody>
-</table>
-<h2><a class="anchor" aria-hidden="true" id="updateextensionscallback"></a><a href="#updateextensionscallback" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>updateExtensions(callback)</h2>
-<h4><a class="anchor" aria-hidden="true" id="version-added-0133-1"></a><a href="#version-added-0133-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Version added: 0.133</h4>
-<blockquote>
-<p>Attempts to download an update for all installed extensions.</p>
-</blockquote>
-<p>This function allow the app to check and perform an update without having to wait for Overwolf to do so.</p>
-<table>
-<thead>
-<tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
-</thead>
-<tbody>
-<tr><td>callback</td><td>function</td><td>Result of the request</td></tr>
-</tbody>
-</table>
-<p><strong>See <a href="#failsafe-note">failsafe note</a>.</strong></p>
 <h2><a class="anchor" aria-hidden="true" id="checkforextensionupdatecallback"></a><a href="#checkforextensionupdatecallback" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>checkForExtensionUpdate(callback)</h2>
 <h4><a class="anchor" aria-hidden="true" id="version-added-0135"></a><a href="#version-added-0135" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Version added: 0.135</h4>
 <blockquote>
@@ -403,7 +266,7 @@ Calling this function will not automatically update the extension, just checks i
 <tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
 </thead>
 <tbody>
-<tr><td>callback</td><td>function</td><td>Result of the request</td></tr>
+<tr><td>callback</td><td>(<a href="#serviceprovidersdataresult-object">Result: ServiceProvidersDataResult</a>) =&gt; void</td><td>Result of the request</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="data-example"></a><a href="#data-example" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Data example</h4>
@@ -416,9 +279,9 @@ Calling this function will not automatically update the extension, just checks i
 </code></pre>
 <p>The result of the call will be:</p>
 <pre><code class="hljs css language-json">overwolf.extensions.getServiceConsumers(console.info) {
-    data:  {hffhbjnafafjnehejohpkfhjdenpifhihebpkhni: "{"whatever":"value"}" },
-    success: true,
-    error : null
+    "data":  {"hffhbjnafafjnehejohpkfhjdenpifhihebpkhni": "{'whatever':'value'}" },
+    "success": true,
+    "error" : null
 }
 </code></pre>
 <h2><a class="anchor" aria-hidden="true" id="onapplaunchtriggered"></a><a href="#onapplaunchtriggered" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>onAppLaunchTriggered</h2>
@@ -463,7 +326,7 @@ Calling this function will not automatically update the extension, just checks i
 <p>Fires when the current app's newest version has been installed. This most often means that an app relaunch is required in order for the update to apply.</p>
 </blockquote>
 <h2><a class="anchor" aria-hidden="true" id="onuncaughtexception"></a><a href="#onuncaughtexception" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>onUncaughtException</h2>
-<h4><a class="anchor" aria-hidden="true" id="version-added-0133-2"></a><a href="#version-added-0133-2" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Version added: 0.133</h4>
+<h4><a class="anchor" aria-hidden="true" id="version-added-0133-1"></a><a href="#version-added-0133-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Version added: 0.133</h4>
 <blockquote>
 <p>Called for global uncaught exceptions in a frame.</p>
 </blockquote>
@@ -480,6 +343,105 @@ Calling this function will not automatically update the extension, just checks i
 <span class="hljs-attr">"SourceLine"</span>: <span class="hljs-string">"if(0!=dcLoadAds){var data_version={}"</span>
 }
 </code></pre>
+<h2><a class="anchor" aria-hidden="true" id="getinforesult-object"></a><a href="#getinforesult-object" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>GetInfoResult Object</h2>
+<table>
+<thead>
+<tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td><em>success</em></td><td>boolean</td><td>inherited from the &quot;Result&quot; Object</td></tr>
+<tr><td><em>error</em></td><td>string</td><td>inherited from the &quot;Result&quot; Object</td></tr>
+<tr><td>info</td><td>string</td><td>The extension info</td></tr>
+</tbody>
+</table>
+<h4><a class="anchor" aria-hidden="true" id="example-data-success"></a><a href="#example-data-success" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Example data: Success</h4>
+<pre><code class="hljs css language-json">
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="getrunningstateresult-object"></a><a href="#getrunningstateresult-object" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>GetRunningStateResult Object</h2>
+<table>
+<thead>
+<tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td><em>success</em></td><td>boolean</td><td>inherited from the &quot;Result&quot; Object</td></tr>
+<tr><td><em>error</em></td><td>string</td><td>inherited from the &quot;Result&quot; Object</td></tr>
+<tr><td>isRunning</td><td>boolean</td><td></td></tr>
+</tbody>
+</table>
+<h4><a class="anchor" aria-hidden="true" id="example-data-success-1"></a><a href="#example-data-success-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Example data: Success</h4>
+<pre><code class="hljs css language-json">{ <span class="hljs-attr">"status"</span>: <span class="hljs-string">"success"</span>, <span class="hljs-attr">"isRunning"</span>: <span class="hljs-literal">true</span> }
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="serviceprovidersdataresult-object"></a><a href="#serviceprovidersdataresult-object" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>ServiceProvidersDataResult Object</h2>
+<table>
+<thead>
+<tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td><em>success</em></td><td>boolean</td><td>inherited from the &quot;Result&quot; Object</td></tr>
+<tr><td><em>error</em></td><td>string</td><td>inherited from the &quot;Result&quot; Object</td></tr>
+<tr><td>data</td><td>object</td><td></td></tr>
+</tbody>
+</table>
+<h4><a class="anchor" aria-hidden="true" id="example-data-success-2"></a><a href="#example-data-success-2" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Example data: Success</h4>
+<pre><code class="hljs css language-json">{
+    <span class="hljs-attr">"data"</span>: {
+    <span class="hljs-attr">"hffhbjnafafjnehejohpkfhjdenpifhihebpkhni"</span>: <span class="hljs-string">"{'whatever':'value'}"</span>
+    },
+    <span class="hljs-attr">"success"</span>: <span class="hljs-literal">true</span>,
+    <span class="hljs-attr">"error"</span>: <span class="hljs-literal">null</span>
+}
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="updateextensionresult-object"></a><a href="#updateextensionresult-object" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>UpdateExtensionResult Object</h2>
+<table>
+<thead>
+<tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td><em>success</em></td><td>boolean</td><td>inherited from the &quot;Result&quot; Object</td></tr>
+<tr><td><em>error</em></td><td>string</td><td>inherited from the &quot;Result&quot; Object</td></tr>
+<tr><td>state</td><td>string</td><td></td></tr>
+<tr><td>info</td><td>string</td><td></td></tr>
+<tr><td>version</td><td>string</td><td></td></tr>
+</tbody>
+</table>
+<h4><a class="anchor" aria-hidden="true" id="example-data-success-3"></a><a href="#example-data-success-3" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Example data: Success</h4>
+<pre><code class="hljs css language-json">{
+ <span class="hljs-attr">"success"</span>: <span class="hljs-literal">true</span>,
+ <span class="hljs-attr">"info"</span>: <span class="hljs-string">"new version 25.0.12 installed, restart app to apply."</span>
+}
+</code></pre>
+<h4><a class="anchor" aria-hidden="true" id="example-data-failure"></a><a href="#example-data-failure" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Example data: Failure</h4>
+<pre><code class="hljs css language-json">{
+ <span class="hljs-attr">"success"</span>: <span class="hljs-literal">false</span>,
+ <span class="hljs-attr">"error"</span>: <span class="hljs-string">"MinOverwolfVersionRequirementUnmet"</span>,
+ <span class="hljs-attr">"info"</span>: <span class="hljs-string">"Overwolf version 0.125.0.2 needs to be updated to 0.126.0.11"</span>
+}
+</code></pre>
+<h4><a class="anchor" aria-hidden="true" id="possible-error-messages"></a><a href="#possible-error-messages" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Possible error messages</h4>
+<table>
+<thead>
+<tr><th>Error Code</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>UnknownError</td><td>error before download starts</td></tr>
+<tr><td>ExtensionNotFound</td><td>error before download starts</td></tr>
+<tr><td>ExtensionDisabled</td><td>error before download starts</td></tr>
+<tr><td>GameRunning</td><td>error before download starts</td></tr>
+<tr><td>PackageUpdaterUnavailable</td><td>error before download starts</td></tr>
+<tr><td>MinOverwolfVersionRequirementUnmet</td><td>error before download starts</td></tr>
+<tr><td>MinGepVersionRequirementUnmet</td><td>error before download starts</td></tr>
+<tr><td>MinGameSummaryVersionRequirementUnmet</td><td>error before download starts</td></tr>
+<tr><td>PackageInfoMissing</td><td>error before download starts</td></tr>
+<tr><td>AlreadyUpToDate</td><td>error before download starts</td></tr>
+<tr><td>AlreadyInstalled</td><td>error after download starts</td></tr>
+<tr><td>NoConnectivity</td><td>error after download starts</td></tr>
+<tr><td>MissingExtensionId</td><td>error after download starts</td></tr>
+<tr><td>InvalidInstallState</td><td>error after download starts</td></tr>
+<tr><td>InstallationError</td><td>error after download starts</td></tr>
+<tr><td>AppNotInstalled</td><td>error after download starts</td></tr>
+<tr><td>DownloadError</td><td>error after download starts</td></tr>
+</tbody>
+</table>
 <h2><a class="anchor" aria-hidden="true" id="checkforupdateresult-object"></a><a href="#checkforupdateresult-object" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>CheckForUpdateResult Object</h2>
 <table>
 <thead>
@@ -494,7 +456,7 @@ Calling this function will not automatically update the extension, just checks i
 <tr><td>updateVersion</td><td>string</td><td>The latest extension version on the OW apps store. null if the extension is up to date</td></tr>
 </tbody>
 </table>
-<h4><a class="anchor" aria-hidden="true" id="example-data-success"></a><a href="#example-data-success" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Example data: Success</h4>
+<h4><a class="anchor" aria-hidden="true" id="example-data-success-4"></a><a href="#example-data-success-4" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Example data: Success</h4>
 <p>Possible states are &quot;UpdateAvailable&quot;, &quot;UpToDate&quot; or &quot;PendingRestart&quot;.<br>
 For more info please read our <strong><a href="#recommended-extension-update-flow">Recommended extension update flow</a></strong>.</p>
 <pre><code class="hljs css language-json">{<span class="hljs-attr">"state"</span>: <span class="hljs-string">"UpdateAvailable"</span>, <span class="hljs-attr">"updateVersion"</span>: <span class="hljs-string">"125.0.1"</span>, <span class="hljs-attr">"success"</span>: <span class="hljs-literal">true</span>, <span class="hljs-attr">"error"</span>: <span class="hljs-literal">null</span>}
@@ -530,7 +492,7 @@ To make sure that the state changed to <code>PendingRestart</code>.</p></li>
 The button should call <a href="#relaunch">relaunch()</a>.</p></li>
 <li><p>In a case that your app depends on a sequence of game events, to avoid any app-related flow issues, it's highly recommended to <strong>notify the user and ask for a game restart</strong> as well.</p></li>
 </ol>
-</span></div></article></div><div class="docLastUpdate"><em>Last updated on 2020-11-4 by eransharv</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/api/overwolf-campaigns-crossapp"><span class="arrow-prev">← </span><span>overwolf.campaigns.crossapp</span></a><a class="docs-next button" href="/docs/api/overwolf-extensions-current"><span>overwolf.extensions.current</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#special-overwolf-urls">Special Overwolf URLs</a></li><li><a href="#methods-reference">Methods Reference</a></li><li><a href="#events-reference">Events Reference</a></li><li><a href="#types-reference">Types Reference</a></li><li><a href="#launchuid--parameter">launch(uid , parameter)</a></li><li><a href="#setinfoinfo">setInfo(info)</a></li><li><a href="#getinfoid-callback">getInfo(id, callback)</a></li><li><a href="#registerinfoid-eventscallback-callback">registerInfo(id, eventsCallback, callback)</a></li><li><a href="#unregisterinfoid-callback">unregisterInfo(id, callback)</a></li><li><a href="#getmanifestid-callback">getManifest(id, callback)</a></li><li><a href="#getrunningstateid-callback">getRunningState(id, callback)</a></li><li><a href="#relaunch">relaunch()</a></li><li><a href="#updateextensioncallback">updateExtension(callback)</a></li><li><a href="#updateextensionscallback">updateExtensions(callback)</a></li><li><a href="#checkforextensionupdatecallback">checkForExtensionUpdate(callback)</a></li><li><a href="#getserviceconsumerscallback">getServiceConsumers(callback)</a></li><li><a href="#onapplaunchtriggered">onAppLaunchTriggered</a><ul class="toc-headings"><li><a href="#the-origin-string">The origin string</a></li><li><a href="#the-source-param">The source param</a></li></ul></li><li><a href="#onextensionupdated">onExtensionUpdated</a></li><li><a href="#onuncaughtexception">onUncaughtException</a></li><li><a href="#checkforupdateresult-object">CheckForUpdateResult Object</a></li><li><a href="#extensionupdatestate-enum">ExtensionUpdateState enum</a></li><li><a href="#recommended-extension-update-flow">Recommended extension update flow</a></li></ul></nav></div><footer class="site-footer"><div class="container"><ul><li>Legal</li><li><a href="/docs/topics/legal-overview">Terms overview</a></li><li><a href="/docs/topics/legal-developers-terms">Developer&#x27;s terms</a></li><li><a href="/docs/topics/legal-app-terms">App terms</a></li><li><a href="http://www.overwolf.com/legal/" target="_blank">Overwolf terms</a></li><li><a href="http://www.overwolf.com/legal/#Privacy-policy" target="_blank">Overwolf Privacy policy</a></li></ul><ul><li>Support</li><li><a href=" https://discuss.developers.overwolf.com/" target="_blank">Questions and Answers</a></li><li><a href=" https://discord.gg/7256qS2" target="_blank">Discord</a></li><li><a href="/docs/support/contact-us#join-our-slack">Slack</a></li><li><a href="https://www.facebook.com/OverwolfDevs" target="_blank">Facebook</a></li><li><a href="https://twitter.com/OverwolfDevs" target="_blank">Twitter</a></li></ul><ul><li>Documentation</li><li><a href="/docs/api/changelog">Changelog</a></li><li><a href="/docs/api/overwolf-api-overview">API</a></li><li><a href="/docs/start/app-creation-process">App Creation Process</a></li><li><a href="/docs/topics/best-practices-overview">Best Practices</a></li><li><a href="/docs/status/all">Game Events status</a></li></ul><ul><li>Information</li><li><a href="http://www.overwolf.com/careers/">Careers</a></li><li><a href="https://play.overwolf.com/fund/" target="_blank">Fund</a></li><li><a href="https://medium.com/overwolf" target="_blank">Developers Blog</a></li><li><a href="https://www.overwolf.com/appstore" target="_blank">Overwolf Appstore</a></li><li><a href="https://brands.overwolf.com/" target="_blank">Advertise on Overwolf</a></li></ul></div></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+</span></div></article></div><div class="docLastUpdate"><em>Last updated on 2020-12-1 by eransharv</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/api/overwolf-campaigns-crossapp"><span class="arrow-prev">← </span><span>overwolf.campaigns.crossapp</span></a><a class="docs-next button" href="/docs/api/overwolf-extensions-current"><span>overwolf.extensions.current</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#special-overwolf-urls">Special Overwolf URLs</a></li><li><a href="#methods-reference">Methods Reference</a></li><li><a href="#events-reference">Events Reference</a></li><li><a href="#types-reference">Types Reference</a></li><li><a href="#launchuid--parameter">launch(uid , parameter)</a></li><li><a href="#setinfoinfo">setInfo(info)</a></li><li><a href="#getinfoid-callback">getInfo(id, callback)</a></li><li><a href="#registerinfoid-eventscallback-callback">registerInfo(id, eventsCallback, callback)</a></li><li><a href="#unregisterinfoid-callback">unregisterInfo(id, callback)</a></li><li><a href="#getmanifestid-callback">getManifest(id, callback)</a></li><li><a href="#getrunningstateid-callback">getRunningState(id, callback)</a></li><li><a href="#relaunch">relaunch()</a></li><li><a href="#updateextensioncallback">updateExtension(callback)</a></li><li><a href="#checkforextensionupdatecallback">checkForExtensionUpdate(callback)</a></li><li><a href="#getserviceconsumerscallback">getServiceConsumers(callback)</a></li><li><a href="#onapplaunchtriggered">onAppLaunchTriggered</a><ul class="toc-headings"><li><a href="#the-origin-string">The origin string</a></li><li><a href="#the-source-param">The source param</a></li></ul></li><li><a href="#onextensionupdated">onExtensionUpdated</a></li><li><a href="#onuncaughtexception">onUncaughtException</a></li><li><a href="#getinforesult-object">GetInfoResult Object</a></li><li><a href="#getrunningstateresult-object">GetRunningStateResult Object</a></li><li><a href="#serviceprovidersdataresult-object">ServiceProvidersDataResult Object</a></li><li><a href="#updateextensionresult-object">UpdateExtensionResult Object</a></li><li><a href="#checkforupdateresult-object">CheckForUpdateResult Object</a></li><li><a href="#extensionupdatestate-enum">ExtensionUpdateState enum</a></li><li><a href="#recommended-extension-update-flow">Recommended extension update flow</a></li></ul></nav></div><footer class="site-footer"><div class="container"><ul><li>Legal</li><li><a href="/docs/topics/legal-overview">Terms overview</a></li><li><a href="/docs/topics/legal-developers-terms">Developer&#x27;s terms</a></li><li><a href="/docs/topics/legal-app-terms">App terms</a></li><li><a href="http://www.overwolf.com/legal/" target="_blank">Overwolf terms</a></li><li><a href="http://www.overwolf.com/legal/#Privacy-policy" target="_blank">Overwolf Privacy policy</a></li></ul><ul><li>Support</li><li><a href=" https://discuss.developers.overwolf.com/" target="_blank">Questions and Answers</a></li><li><a href=" https://discord.gg/7256qS2" target="_blank">Discord</a></li><li><a href="/docs/support/contact-us#join-our-slack">Slack</a></li><li><a href="https://www.facebook.com/OverwolfDevs" target="_blank">Facebook</a></li><li><a href="https://twitter.com/OverwolfDevs" target="_blank">Twitter</a></li></ul><ul><li>Documentation</li><li><a href="/docs/api/changelog">Changelog</a></li><li><a href="/docs/api/overwolf-api-overview">API</a></li><li><a href="/docs/start/app-creation-process">App Creation Process</a></li><li><a href="/docs/topics/best-practices-overview">Best Practices</a></li><li><a href="/docs/status/all">Game Events status</a></li></ul><ul><li>Information</li><li><a href="http://www.overwolf.com/careers/">Careers</a></li><li><a href="https://play.overwolf.com/fund/" target="_blank">Fund</a></li><li><a href="https://medium.com/overwolf" target="_blank">Developers Blog</a></li><li><a href="https://www.overwolf.com/appstore" target="_blank">Overwolf Appstore</a></li><li><a href="https://brands.overwolf.com/" target="_blank">Advertise on Overwolf</a></li></ul></div></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
                 document.addEventListener('keyup', function(e) {
                   if (e.target !== document.body) {
                     return;
