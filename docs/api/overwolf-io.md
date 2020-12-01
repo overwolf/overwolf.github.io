@@ -15,7 +15,7 @@ In addition, the [simple I/O plugin](../topics/simple-io-plugin) offers several 
 
 * [overwolf.io.fileExists()](#fileexistsfilepath-callback)
 * [overwolf.io.writeFileContents()](#writefilecontentsfilepath-content-encoding-triggeruacifrequired-callback)
-* [overwolf.io.readFileContents()](#readfilecontentsfilepath-encoding-callback)
+* [overwolf.io.readFileContents()](##readfilecontentsfilepath-encoding-callback)
 * [overwolf.io.copyFile()](#copyfilesrc-dst-overridefile-reserved-callback)
 * [overwolf.io.dir()](#dirpath-callback)
 * [overwolf.io.readBinaryFile()](#readbinaryfilepath-options-callback)
@@ -35,6 +35,9 @@ In addition, the [simple I/O plugin](../topics/simple-io-plugin) offers several 
 * [overwolf.io.ReadFileContentsResult](#readfilecontentsresult-object) Object
 * [overwolf.io.ListenOnFileResult](#listenonfileresult-object) Object
 * [overwolf.io.ExistsResult](#existsresult-object) Object
+* [overwolf.io.ReadBinaryFileResult](#readbinaryfileresult-object) Object
+* [overwolf.io.ReadTextFileResult](#readtextfileresult-object) Object
+* [overwolf.io.FileInfo](#binaryfileinfo-object) Object
 
 ## fileExists(filePath, callback)
 
@@ -137,23 +140,7 @@ Parameter | Type     | Description             |
 ----------| ---------| ----------------------- |
 path      | string   | The target path         |
 options   | [ReadFileOptions](#readfileoptions-object) object |   |
-callback  | function | Returns the result |   
-
-#### Callback argument: Success
-
-```json
- {
-    "success" : true,
-    "error": "", 
-    "content": byte[], // the file content in bytes
-    "info" : {
-        "eof" : true, // is EOF
-        "totalRead" : 3000, // total read bytes
-        "position" : 3000, // last file position
-        "totalLines" :100, // total read lines
-    }
-}
-```
+callback  | [(Result: ReadBinaryFileResult)](#readbinaryfileresult-object) => void | Returns with the result | 
 
 ## readTextFile(path, options, callback)
 
@@ -169,23 +156,7 @@ Parameter | Type     | Description             |
 ----------| ---------| ----------------------- |
 path      | string   | The target path         |
 options   | [ReadFileOptions](#readfileoptions-object) object |    |
-callback  | function | Returns the result |   
-
-#### Callback argument: Success
-
-```json
- {
-    "success" : true,
-    "error": "", 
-    "content": "", // the file content
-    "info" : {
-        "eof" : true, // is EOF
-        "totalRead" : 3000, // total read bytes
-        "position" : 3000, // last file position
-        "totalLines" :100, // total read lines
-    }
-}
-```
+callback  | [(Result: ReadTextFileResult)](#readtextfileresult-object) => void | Returns with the result | 
 
 ## exist(path, callback)
 
@@ -332,7 +303,7 @@ Parameter        | Type                          | Description                  
 ---------------- | ------------------------------| ---------------------------------- |
 success          | boolean                       | Inherited from the "Result" Object |
 error            | string                        | Inherited from the "Result" Object |
-found            | boolean                       | Retuen if the file exist or not    |
+found            | boolean                       | Return if the file exist or not    |
 
 #### Example data
 
@@ -378,15 +349,8 @@ content          | string                        | string with the taraget line 
 {
     "success" : true, // when false the callback will stop listen
     "error": "", // valid only when success = false
-    "state": "started|running|terminated|truncated" // valid only when success =true (overwolf.io.enums.fileListenerState) 
-    "content": "", //the line 
-    "info" : 
-    {
-        "index" : 1, // line index
-        "isNew" : false, //false when line exist (e.g skip to end is false), true when new line was add to file
-        "position" : 3000, // last file position
-        "eof" :false, // is eof reached
-    }
+    "state": "started|running|terminated|truncated", // valid only when success =true (overwolf.io.enums.fileListenerState) 
+    "content": "" //the line  
 }
 ```
 
@@ -404,7 +368,7 @@ Parameter        | Type                          | Description                  
 ---------------- | ------------------------------| ---------------------------------- |
 success          | boolean                       | Inherited from the "Result" Object |
 error            | string                        | Inherited from the "Result" Object |
-exist            | boolean                       | Retuen if the file exist or not    |
+exist            | boolean                       | Return if the file exist or not    |
 
 #### Example data
 
@@ -414,3 +378,73 @@ exist            | boolean                       | Retuen if the file exist or n
    "exist":true
 }
 ```
+
+## ReadBinaryFileResult Object
+#### Version added: 0.141
+
+> The result.
+
+Parameter        | Type                          | Description                        |
+---------------- | ------------------------------| ---------------------------------- |
+success          | boolean                       | Inherited from the "Result" Object |
+error            | string                        | Inherited from the "Result" Object |
+content          | string                        | Return with the file content       |
+info             | [FileInfo](#fileinfo-object) object   | Return with the file content       |
+
+#### Example data
+
+```json
+ {
+    "success" : true,
+    "error": "", 
+    "content": byte[], // the file content in bytes
+    "info" : {
+        "eof" : true, // is EOF
+        "totalRead" : 3000, // total read bytes
+        "position" : 3000, // last file position
+        "totalLines" :100, // total read lines
+    }
+}
+```
+
+## ReadTextFileResult Object
+#### Version added: 0.141
+
+> The result.
+
+Parameter        | Type                          | Description                        |
+---------------- | ------------------------------| ---------------------------------- |
+success          | boolean                       | Inherited from the "Result" Object |
+error            | string                        | Inherited from the "Result" Object |
+content          | string                        | Return with the file content       |
+info             | [FileInfo](#fileinfo-object) object   | Return with the file content       |
+
+#### Example data
+
+```json
+ {
+    "success" : true,
+    "error": "", 
+    "content": byte[], // the file content in bytes
+    "info" : {
+        "eof" : true, // is EOF
+        "totalRead" : 3000, // total read bytes
+        "position" : 3000, // last file position
+        "totalLines" :100, // total read lines
+    }
+}
+```
+
+## FileInfo Object
+#### Version added: 0.141
+
+> Container for the file info properties.
+
+Parameter        | Type                          | Description                        |
+---------------- | ------------------------------| ---------------------------------- |
+success          | boolean                       | Inherited from the "Result" Object |
+error            | string                        | Inherited from the "Result" Object |
+eof              | boolean                       |                                    |
+totalRead        | number                        |                                    |
+position         | number                        |                                    |
+totalLines       | number                        |                                    |
