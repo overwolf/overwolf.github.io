@@ -81,7 +81,7 @@
 <ul>
 <li><a href="#fileexistsfilepath-callback">overwolf.io.fileExists()</a></li>
 <li><a href="#writefilecontentsfilepath-content-encoding-triggeruacifrequired-callback">overwolf.io.writeFileContents()</a></li>
-<li><a href="#readfilecontentsfilepath-encoding-callback">overwolf.io.readFileContents()</a></li>
+<li><a href="##readfilecontentsfilepath-encoding-callback">overwolf.io.readFileContents()</a></li>
 <li><a href="#copyfilesrc-dst-overridefile-reserved-callback">overwolf.io.copyFile()</a></li>
 <li><a href="#dirpath-callback">overwolf.io.dir()</a></li>
 <li><a href="#readbinaryfilepath-options-callback">overwolf.io.readBinaryFile()</a></li>
@@ -101,6 +101,9 @@
 <li><a href="#readfilecontentsresult-object">overwolf.io.ReadFileContentsResult</a> Object</li>
 <li><a href="#listenonfileresult-object">overwolf.io.ListenOnFileResult</a> Object</li>
 <li><a href="#existsresult-object">overwolf.io.ExistsResult</a> Object</li>
+<li><a href="#readbinaryfileresult-object">overwolf.io.ReadBinaryFileResult</a> Object</li>
+<li><a href="#readtextfileresult-object">overwolf.io.ReadTextFileResult</a> Object</li>
+<li><a href="#binaryfileinfo-object">overwolf.io.FileInfo</a> Object</li>
 </ul>
 <h2><a class="anchor" aria-hidden="true" id="fileexistsfilepath-callback"></a><a href="#fileexistsfilepath-callback" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>fileExists(filePath, callback)</h2>
 <h4><a class="anchor" aria-hidden="true" id="version-added-093"></a><a href="#version-added-093" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Version added: 0.93</h4>
@@ -207,22 +210,9 @@ This function is extremely slow! Use it only for small files or to get file head
 <tbody>
 <tr><td>path</td><td>string</td><td>The target path</td></tr>
 <tr><td>options</td><td><a href="#readfileoptions-object">ReadFileOptions</a> object</td><td></td></tr>
-<tr><td>callback</td><td>function</td><td>Returns the result</td></tr>
+<tr><td>callback</td><td><a href="#readbinaryfileresult-object">(Result: ReadBinaryFileResult)</a> =&gt; void</td><td>Returns with the result</td></tr>
 </tbody>
 </table>
-<h4><a class="anchor" aria-hidden="true" id="callback-argument-success"></a><a href="#callback-argument-success" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Callback argument: Success</h4>
-<pre><code class="hljs css language-json"> {
-    <span class="hljs-attr">"success"</span> : <span class="hljs-literal">true</span>,
-    <span class="hljs-attr">"error"</span>: <span class="hljs-string">""</span>, 
-    <span class="hljs-attr">"content"</span>: byte[], <span class="hljs-comment">// the file content in bytes</span>
-    <span class="hljs-attr">"info"</span> : {
-        <span class="hljs-attr">"eof"</span> : <span class="hljs-literal">true</span>, <span class="hljs-comment">// is EOF</span>
-        <span class="hljs-attr">"totalRead"</span> : <span class="hljs-number">3000</span>, <span class="hljs-comment">// total read bytes</span>
-        <span class="hljs-attr">"position"</span> : <span class="hljs-number">3000</span>, <span class="hljs-comment">// last file position</span>
-        <span class="hljs-attr">"totalLines"</span> :<span class="hljs-number">100</span>, <span class="hljs-comment">// total read lines</span>
-    }
-}
-</code></pre>
 <h2><a class="anchor" aria-hidden="true" id="readtextfilepath-options-callback"></a><a href="#readtextfilepath-options-callback" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>readTextFile(path, options, callback)</h2>
 <h4><a class="anchor" aria-hidden="true" id="version-added-0141-2"></a><a href="#version-added-0141-2" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Version added: 0.141</h4>
 <h4><a class="anchor" aria-hidden="true" id="permissions-required-filesystem-5"></a><a href="#permissions-required-filesystem-5" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Permissions required: FileSystem</h4>
@@ -237,22 +227,9 @@ This function is extremely slow! Use it only for small files or to get file head
 <tbody>
 <tr><td>path</td><td>string</td><td>The target path</td></tr>
 <tr><td>options</td><td><a href="#readfileoptions-object">ReadFileOptions</a> object</td><td></td></tr>
-<tr><td>callback</td><td>function</td><td>Returns the result</td></tr>
+<tr><td>callback</td><td><a href="#readtextfileresult-object">(Result: ReadTextFileResult)</a> =&gt; void</td><td>Returns with the result</td></tr>
 </tbody>
 </table>
-<h4><a class="anchor" aria-hidden="true" id="callback-argument-success-1"></a><a href="#callback-argument-success-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Callback argument: Success</h4>
-<pre><code class="hljs css language-json"> {
-    <span class="hljs-attr">"success"</span> : <span class="hljs-literal">true</span>,
-    <span class="hljs-attr">"error"</span>: <span class="hljs-string">""</span>, 
-    <span class="hljs-attr">"content"</span>: <span class="hljs-string">""</span>, <span class="hljs-comment">// the file content</span>
-    <span class="hljs-attr">"info"</span> : {
-        <span class="hljs-attr">"eof"</span> : <span class="hljs-literal">true</span>, <span class="hljs-comment">// is EOF</span>
-        <span class="hljs-attr">"totalRead"</span> : <span class="hljs-number">3000</span>, <span class="hljs-comment">// total read bytes</span>
-        <span class="hljs-attr">"position"</span> : <span class="hljs-number">3000</span>, <span class="hljs-comment">// last file position</span>
-        <span class="hljs-attr">"totalLines"</span> :<span class="hljs-number">100</span>, <span class="hljs-comment">// total read lines</span>
-    }
-}
-</code></pre>
 <h2><a class="anchor" aria-hidden="true" id="existpath-callback"></a><a href="#existpath-callback" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>exist(path, callback)</h2>
 <h4><a class="anchor" aria-hidden="true" id="version-added-0141-3"></a><a href="#version-added-0141-3" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Version added: 0.141</h4>
 <h4><a class="anchor" aria-hidden="true" id="permissions-required-filesystem-6"></a><a href="#permissions-required-filesystem-6" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Permissions required: FileSystem</h4>
@@ -414,7 +391,7 @@ There are no callbacks - as this will never fail (even if the stream doesn't exi
 <tbody>
 <tr><td>success</td><td>boolean</td><td>Inherited from the &quot;Result&quot; Object</td></tr>
 <tr><td>error</td><td>string</td><td>Inherited from the &quot;Result&quot; Object</td></tr>
-<tr><td>found</td><td>boolean</td><td>Retuen if the file exist or not</td></tr>
+<tr><td>found</td><td>boolean</td><td>Return if the file exist or not</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="example-data-1"></a><a href="#example-data-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Example data</h4>
@@ -460,15 +437,8 @@ There are no callbacks - as this will never fail (even if the stream doesn't exi
 <pre><code class="hljs css language-json">{
     <span class="hljs-attr">"success"</span> : <span class="hljs-literal">true</span>, <span class="hljs-comment">// when false the callback will stop listen</span>
     <span class="hljs-attr">"error"</span>: <span class="hljs-string">""</span>, <span class="hljs-comment">// valid only when success = false</span>
-    <span class="hljs-attr">"state"</span>: <span class="hljs-string">"started|running|terminated|truncated"</span> <span class="hljs-comment">// valid only when success =true (overwolf.io.enums.fileListenerState) </span>
-    <span class="hljs-string">"content"</span>: <span class="hljs-string">""</span>, <span class="hljs-comment">//the line </span>
-    <span class="hljs-attr">"info"</span> : 
-    {
-        <span class="hljs-attr">"index"</span> : <span class="hljs-number">1</span>, <span class="hljs-comment">// line index</span>
-        <span class="hljs-attr">"isNew"</span> : <span class="hljs-literal">false</span>, <span class="hljs-comment">//false when line exist (e.g skip to end is false), true when new line was add to file</span>
-        <span class="hljs-attr">"position"</span> : <span class="hljs-number">3000</span>, <span class="hljs-comment">// last file position</span>
-        <span class="hljs-attr">"eof"</span> :<span class="hljs-literal">false</span>, <span class="hljs-comment">// is eof reached</span>
-    }
+    <span class="hljs-attr">"state"</span>: <span class="hljs-string">"started|running|terminated|truncated"</span>, <span class="hljs-comment">// valid only when success =true (overwolf.io.enums.fileListenerState) </span>
+    <span class="hljs-attr">"content"</span>: <span class="hljs-string">""</span> <span class="hljs-comment">//the line  </span>
 }
 </code></pre>
 <h4><a class="anchor" aria-hidden="true" id="notes"></a><a href="#notes" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>notes</h4>
@@ -488,7 +458,7 @@ There are no callbacks - as this will never fail (even if the stream doesn't exi
 <tbody>
 <tr><td>success</td><td>boolean</td><td>Inherited from the &quot;Result&quot; Object</td></tr>
 <tr><td>error</td><td>string</td><td>Inherited from the &quot;Result&quot; Object</td></tr>
-<tr><td>exist</td><td>boolean</td><td>Retuen if the file exist or not</td></tr>
+<tr><td>exist</td><td>boolean</td><td>Return if the file exist or not</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="example-data-4"></a><a href="#example-data-4" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Example data</h4>
@@ -497,7 +467,83 @@ There are no callbacks - as this will never fail (even if the stream doesn't exi
    <span class="hljs-attr">"exist"</span>:<span class="hljs-literal">true</span>
 }
 </code></pre>
-</span></div></article></div><div class="docLastUpdate"><em>Last updated on 2020-11-29 by eransharv</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/api/overwolf-games-launchers-events"><span class="arrow-prev">← </span><span>overwolf.games.launchers.events</span></a><a class="docs-next button" href="/docs/api/overwolf-io-paths"><span>overwolf.io.paths</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#methods-reference">Methods Reference</a></li><li><a href="#types-reference">Types Reference</a></li><li><a href="#fileexistsfilepath-callback">fileExists(filePath, callback)</a></li><li><a href="#writefilecontentsfilepath-content-encoding-triggeruacifrequired-callback">writeFileContents(filePath, content, encoding, triggerUacIfRequired, callback)</a></li><li><a href="#readfilecontentsfilepathencoding-callback">readFileContents(filePath,encoding, callback)</a></li><li><a href="#copyfilesrc-dst-overridefile-reserved-callback">copyFile(src, dst, overrideFile, reserved, callback)</a></li><li><a href="#dirpath-callback">dir(path, callback)</a></li><li><a href="#readbinaryfilepath-options-callback">readBinaryFile(path, options, callback)</a></li><li><a href="#readtextfilepath-options-callback">readTextFile(path, options, callback)</a></li><li><a href="#existpath-callback">exist(path, callback)</a></li><li><a href="#listenonfileid-path-option-callback">listenOnFile(id, path, option, callback)</a></li><li><a href="#stopfilelistenerid">stopFileListener(id)</a></li><li><a href="#filelistenerstate-enum">fileListenerState enum</a></li><li><a href="#eencoding-enum">eEncoding enum</a></li><li><a href="#readfileoptions-object">ReadFileOptions Object</a></li><li><a href="#listenfileoptions-object">ListenFileOptions Object</a></li><li><a href="#dirresult-object">DirResult Object</a></li><li><a href="#fileexistsresult-object">FileExistsResult Object</a></li><li><a href="#readfilecontentsresult-object">ReadFileContentsResult Object</a></li><li><a href="#listenonfileresult-object">ListenOnFileResult Object</a></li><li><a href="#existsresult-object">ExistsResult Object</a></li></ul></nav></div><footer class="site-footer"><div class="container"><ul><li>Legal</li><li><a href="/docs/topics/legal-overview">Terms overview</a></li><li><a href="/docs/topics/legal-developers-terms">Developer&#x27;s terms</a></li><li><a href="/docs/topics/legal-app-terms">App terms</a></li><li><a href="http://www.overwolf.com/legal/" target="_blank">Overwolf terms</a></li><li><a href="http://www.overwolf.com/legal/#Privacy-policy" target="_blank">Overwolf Privacy policy</a></li></ul><ul><li>Support</li><li><a href=" https://discuss.developers.overwolf.com/" target="_blank">Questions and Answers</a></li><li><a href=" https://discord.gg/7256qS2" target="_blank">Discord</a></li><li><a href="/docs/support/contact-us#join-our-slack">Slack</a></li><li><a href="https://www.facebook.com/OverwolfDevs" target="_blank">Facebook</a></li><li><a href="https://twitter.com/OverwolfDevs" target="_blank">Twitter</a></li></ul><ul><li>Documentation</li><li><a href="/docs/api/changelog">Changelog</a></li><li><a href="/docs/api/overwolf-api-overview">API</a></li><li><a href="/docs/start/app-creation-process">App Creation Process</a></li><li><a href="/docs/topics/best-practices-overview">Best Practices</a></li><li><a href="/docs/status/all">Game Events status</a></li></ul><ul><li>Information</li><li><a href="http://www.overwolf.com/careers/">Careers</a></li><li><a href="https://play.overwolf.com/fund/" target="_blank">Fund</a></li><li><a href="https://medium.com/overwolf" target="_blank">Developers Blog</a></li><li><a href="https://www.overwolf.com/appstore" target="_blank">Overwolf Appstore</a></li><li><a href="https://brands.overwolf.com/" target="_blank">Advertise on Overwolf</a></li></ul></div></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+<h2><a class="anchor" aria-hidden="true" id="readbinaryfileresult-object"></a><a href="#readbinaryfileresult-object" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>ReadBinaryFileResult Object</h2>
+<h4><a class="anchor" aria-hidden="true" id="version-added-0141-13"></a><a href="#version-added-0141-13" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Version added: 0.141</h4>
+<blockquote>
+<p>The result.</p>
+</blockquote>
+<table>
+<thead>
+<tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>success</td><td>boolean</td><td>Inherited from the &quot;Result&quot; Object</td></tr>
+<tr><td>error</td><td>string</td><td>Inherited from the &quot;Result&quot; Object</td></tr>
+<tr><td>content</td><td>string</td><td>Return with the file content</td></tr>
+<tr><td>info</td><td><a href="#fileinfo-object">FileInfo</a> object</td><td>Return with the file content</td></tr>
+</tbody>
+</table>
+<h4><a class="anchor" aria-hidden="true" id="example-data-5"></a><a href="#example-data-5" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Example data</h4>
+<pre><code class="hljs css language-json"> {
+    <span class="hljs-attr">"success"</span> : <span class="hljs-literal">true</span>,
+    <span class="hljs-attr">"error"</span>: <span class="hljs-string">""</span>, 
+    <span class="hljs-attr">"content"</span>: byte[], <span class="hljs-comment">// the file content in bytes</span>
+    <span class="hljs-attr">"info"</span> : {
+        <span class="hljs-attr">"eof"</span> : <span class="hljs-literal">true</span>, <span class="hljs-comment">// is EOF</span>
+        <span class="hljs-attr">"totalRead"</span> : <span class="hljs-number">3000</span>, <span class="hljs-comment">// total read bytes</span>
+        <span class="hljs-attr">"position"</span> : <span class="hljs-number">3000</span>, <span class="hljs-comment">// last file position</span>
+        <span class="hljs-attr">"totalLines"</span> :<span class="hljs-number">100</span>, <span class="hljs-comment">// total read lines</span>
+    }
+}
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="readtextfileresult-object"></a><a href="#readtextfileresult-object" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>ReadTextFileResult Object</h2>
+<h4><a class="anchor" aria-hidden="true" id="version-added-0141-14"></a><a href="#version-added-0141-14" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Version added: 0.141</h4>
+<blockquote>
+<p>The result.</p>
+</blockquote>
+<table>
+<thead>
+<tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>success</td><td>boolean</td><td>Inherited from the &quot;Result&quot; Object</td></tr>
+<tr><td>error</td><td>string</td><td>Inherited from the &quot;Result&quot; Object</td></tr>
+<tr><td>content</td><td>string</td><td>Return with the file content</td></tr>
+<tr><td>info</td><td><a href="#fileinfo-object">FileInfo</a> object</td><td>Return with the file content</td></tr>
+</tbody>
+</table>
+<h4><a class="anchor" aria-hidden="true" id="example-data-6"></a><a href="#example-data-6" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Example data</h4>
+<pre><code class="hljs css language-json"> {
+    <span class="hljs-attr">"success"</span> : <span class="hljs-literal">true</span>,
+    <span class="hljs-attr">"error"</span>: <span class="hljs-string">""</span>, 
+    <span class="hljs-attr">"content"</span>: byte[], <span class="hljs-comment">// the file content in bytes</span>
+    <span class="hljs-attr">"info"</span> : {
+        <span class="hljs-attr">"eof"</span> : <span class="hljs-literal">true</span>, <span class="hljs-comment">// is EOF</span>
+        <span class="hljs-attr">"totalRead"</span> : <span class="hljs-number">3000</span>, <span class="hljs-comment">// total read bytes</span>
+        <span class="hljs-attr">"position"</span> : <span class="hljs-number">3000</span>, <span class="hljs-comment">// last file position</span>
+        <span class="hljs-attr">"totalLines"</span> :<span class="hljs-number">100</span>, <span class="hljs-comment">// total read lines</span>
+    }
+}
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="fileinfo-object"></a><a href="#fileinfo-object" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>FileInfo Object</h2>
+<h4><a class="anchor" aria-hidden="true" id="version-added-0141-15"></a><a href="#version-added-0141-15" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Version added: 0.141</h4>
+<blockquote>
+<p>Container for the file info properties.</p>
+</blockquote>
+<table>
+<thead>
+<tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>success</td><td>boolean</td><td>Inherited from the &quot;Result&quot; Object</td></tr>
+<tr><td>error</td><td>string</td><td>Inherited from the &quot;Result&quot; Object</td></tr>
+<tr><td>eof</td><td>boolean</td><td></td></tr>
+<tr><td>totalRead</td><td>number</td><td></td></tr>
+<tr><td>position</td><td>number</td><td></td></tr>
+<tr><td>totalLines</td><td>number</td><td></td></tr>
+</tbody>
+</table>
+</span></div></article></div><div class="docLastUpdate"><em>Last updated on 2020-12-1 by eransharv</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/api/overwolf-games-launchers-events"><span class="arrow-prev">← </span><span>overwolf.games.launchers.events</span></a><a class="docs-next button" href="/docs/api/overwolf-io-paths"><span>overwolf.io.paths</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#methods-reference">Methods Reference</a></li><li><a href="#types-reference">Types Reference</a></li><li><a href="#fileexistsfilepath-callback">fileExists(filePath, callback)</a></li><li><a href="#writefilecontentsfilepath-content-encoding-triggeruacifrequired-callback">writeFileContents(filePath, content, encoding, triggerUacIfRequired, callback)</a></li><li><a href="#readfilecontentsfilepathencoding-callback">readFileContents(filePath,encoding, callback)</a></li><li><a href="#copyfilesrc-dst-overridefile-reserved-callback">copyFile(src, dst, overrideFile, reserved, callback)</a></li><li><a href="#dirpath-callback">dir(path, callback)</a></li><li><a href="#readbinaryfilepath-options-callback">readBinaryFile(path, options, callback)</a></li><li><a href="#readtextfilepath-options-callback">readTextFile(path, options, callback)</a></li><li><a href="#existpath-callback">exist(path, callback)</a></li><li><a href="#listenonfileid-path-option-callback">listenOnFile(id, path, option, callback)</a></li><li><a href="#stopfilelistenerid">stopFileListener(id)</a></li><li><a href="#filelistenerstate-enum">fileListenerState enum</a></li><li><a href="#eencoding-enum">eEncoding enum</a></li><li><a href="#readfileoptions-object">ReadFileOptions Object</a></li><li><a href="#listenfileoptions-object">ListenFileOptions Object</a></li><li><a href="#dirresult-object">DirResult Object</a></li><li><a href="#fileexistsresult-object">FileExistsResult Object</a></li><li><a href="#readfilecontentsresult-object">ReadFileContentsResult Object</a></li><li><a href="#listenonfileresult-object">ListenOnFileResult Object</a></li><li><a href="#existsresult-object">ExistsResult Object</a></li><li><a href="#readbinaryfileresult-object">ReadBinaryFileResult Object</a></li><li><a href="#readtextfileresult-object">ReadTextFileResult Object</a></li><li><a href="#fileinfo-object">FileInfo Object</a></li></ul></nav></div><footer class="site-footer"><div class="container"><ul><li>Legal</li><li><a href="/docs/topics/legal-overview">Terms overview</a></li><li><a href="/docs/topics/legal-developers-terms">Developer&#x27;s terms</a></li><li><a href="/docs/topics/legal-app-terms">App terms</a></li><li><a href="http://www.overwolf.com/legal/" target="_blank">Overwolf terms</a></li><li><a href="http://www.overwolf.com/legal/#Privacy-policy" target="_blank">Overwolf Privacy policy</a></li></ul><ul><li>Support</li><li><a href=" https://discuss.developers.overwolf.com/" target="_blank">Questions and Answers</a></li><li><a href=" https://discord.gg/7256qS2" target="_blank">Discord</a></li><li><a href="/docs/support/contact-us#join-our-slack">Slack</a></li><li><a href="https://www.facebook.com/OverwolfDevs" target="_blank">Facebook</a></li><li><a href="https://twitter.com/OverwolfDevs" target="_blank">Twitter</a></li></ul><ul><li>Documentation</li><li><a href="/docs/api/changelog">Changelog</a></li><li><a href="/docs/api/overwolf-api-overview">API</a></li><li><a href="/docs/start/app-creation-process">App Creation Process</a></li><li><a href="/docs/topics/best-practices-overview">Best Practices</a></li><li><a href="/docs/status/all">Game Events status</a></li></ul><ul><li>Information</li><li><a href="http://www.overwolf.com/careers/">Careers</a></li><li><a href="https://play.overwolf.com/fund/" target="_blank">Fund</a></li><li><a href="https://medium.com/overwolf" target="_blank">Developers Blog</a></li><li><a href="https://www.overwolf.com/appstore" target="_blank">Overwolf Appstore</a></li><li><a href="https://brands.overwolf.com/" target="_blank">Advertise on Overwolf</a></li></ul></div></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
                 document.addEventListener('keyup', function(e) {
                   if (e.target !== document.body) {
                     return;
