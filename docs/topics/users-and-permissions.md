@@ -4,18 +4,18 @@ title: Manage users and permissions
 sidebar_label: Users and permissions
 ---
 
-In this article, we'll go over the process of adding and updating users to your dev console account.  
-These users can be your team member or others, that maintain your app, update your store listing, release managers, etc.  
-For each user, you will be able to set different permissions and roles.
+In this article, we'll go over the process of adding and updating users in your developer console account.  
+These users can be your team members, or anyone else who maintains your app, updates your store listing, manages releases, etc.  
+You will be able to set different permissions and roles for each user.
 
 ## Partners and Users overview
 
-Before we begin, a few words about what a Partner is and the hierarchy and relation between Partners, Users, and Apps.
+Before we begin, a few words about what a Partner is and about the hierarchy and relations between Partners, Users, and Apps.
 
 * The **Partner** entity represents a team or company.
-* **User** can be part of many partners (teams), and partner can contain many users.
-* A partner can own many **Apps**, but the app can be owned by one partner only.
-* A user can be part or own many apps, and app can contain many users.
+* A **User** can be part of many Partners (teams), and a Partner can contain many users.
+* A Partner can own many **Apps**, but an App can be owned by only one Partner.
+* A User can be part of, or own many Apps, and an app can contain many users.
 
 Now, after everything is clear and makes sense, let's start.
 
@@ -25,36 +25,36 @@ After logging to the [Overwolf developers console](https://console.overwolf.com/
 
 ![login](../assets/dev-console/users-and-permissions/login.png)
 
-## Select partner
+## Select Partner
 
-As you can see on the following screenshot, my user is part of many partners (teams). Note that it's not so common, as usually, you will be part of one partner.  
+As you can see in the following screenshot, my User is part of many Partners (teams). Note that it's not so common, as you will usually be part of one Partner.  
 
 ![login](../assets/dev-console/users-and-permissions/partners-list.png)
 
-Let's edit the first partner and add users to it.
+Let's edit the first Partner and add users to it.
 
-## Edit partner details
+## Edit Partner details
 
-After selecting which partner you want to edit, you will get to the **Partner Details** page.
+After selecting which Partner you would like to edit, you will get to the **Partner Details** page.
 
-As the partner's owner, you can edit various properties like the name, primary owner, and associated apps. 
+As the Partner's owner, you can edit various properties like its name, primary owner, and associated apps. 
 
 ![login](../assets/dev-console/users-and-permissions/partner-details.png)
 
-Assuming the current partner contains at least one app, let's add a new user and associate it with that app.
+Assuming the current Partner contains at least one App, let's add a new user and associate it with that app.
 
-## Add new user
+## Add new User
 
 After clicking the "Add User" button, you will get this popup:
 
 ![login](../assets/dev-console/users-and-permissions/add-user-popup.png)
 
-Enter the user's email, and hit "Add". 
+Enter the User's email, and hit "Add". 
 
-## Manage user details
+## Manage User details
 
-Now that we set the new user, we can associate it with one or more apps that "belong" to the current partner.  
-In addition, for each app we can set the right permissions (role) for the user.  
+Now that we set the new User, we can associate it with one or more Apps that "belong" to the current Partner.  
+In addition, in each App we can set different permissions (roles) for different users.  
 
 Let's select it from the list and hit "Manage".
 
@@ -62,11 +62,11 @@ Let's select it from the list and hit "Manage".
 
 ### Associate user with an app
 
-After clicking the "Manage" button, you will get the user details page:
+After clicking the "Manage" button, you will get the User details page:
 
 ![login](../assets/dev-console/users-and-permissions/user-details.png)
 
-The first step is to associate the new user with an app. hit the the "Add App" button.
+The first step is to associate the new User with an App. hit the the "Add App" button.
 
 ### Set the user's role for an app
 
@@ -74,24 +74,24 @@ After clicking the "Add App" button, you will get this popup:
 
 ![login](../assets/dev-console/users-and-permissions/add-app-popup.png)
 
-You can choose one of the partner's apps and the user's role for that app's select box.  
+You can choose one of the Partner's Apps and the User's role for that App's select box.  
 
 A role is a set of permissions. Read more about roles [below](#roles-and-permissions). 
 
-Repeat the process until you finish setting all the required permissions for all the partner's apps.  
-On the following screenshot, you can see that we set our user as the "Owner" of the "WorkFlowy" app:     
+Repeat the process until you finish setting all the required permissions for all the Partner's Apps.  
+In the following screenshot, you can see that we set our User as the "Owner" of the "WorkFlowy" app:     
 
 ![login](../assets/dev-console/users-and-permissions/user-details-with-permissions.png)
 
-After you finish to set the required permissions for the user, for the different partner's app, don't forget to hit the "Save" button.
+After you finish setting the required permissions for the user in the various Apps, don't forget to hit the "Save" button.
 
 ## Roles and permissions
 
-As mentioned above, A role is a set of permissions for an app.  
+As mentioned above, A role is a set of permissions for an App.  
 
-Each user can be set to a single role per app. e.g., a user can be the owner or "regular" user for a specific app. 
+Each user can be set to a single role per App. E.g., a certain user can be either the "owner" or "regular user" for a specific app. 
 
-Currently, there are two available app's roles: user and owner.
+Currently, there are two available App roles: Sser and Owner.
 
 * User - Can view and edit any section except the "Users and permissions" page 
-* Owner - Can view and edit any section related to his app
+* Owner - Can view and edit any section related to their App
