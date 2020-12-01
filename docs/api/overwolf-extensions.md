@@ -27,10 +27,9 @@ You can use the following helpful URLs to retrieve an extension file content or 
 * [overwolf.extensions.registerInfo()](#registerinfoid-eventscallback-callback)
 * [overwolf.extensions.unregisterInfo()](#unregisterinfoid-callback)
 * [overwolf.extensions.getRunningState()](#getrunningstateid-callback)
-* [overwolf.extensions.getManifest()](#getrunningstateid-callback)
+* [overwolf.extensions.getManifest()](#getmanifestid-callback)
 * [overwolf.extensions.relaunch()](#relaunch)
 * [overwolf.extensions.updateExtension()](#updateextensioncallback)
-* [overwolf.extensions.updateExtensions()](#updateextensionscallback)
 * [overwolf.extensions.checkForExtensionUpdate()](#checkforextensionupdatecallback)
 * [overwolf.extensions.getServiceConsumers()](#getserviceconsumerscallback)
 
@@ -45,7 +44,9 @@ You can use the following helpful URLs to retrieve an extension file content or 
 
 * [overwolf.extensions.CheckForUpdateResult](#checkforupdateresult-object) Object
 * [overwolf.extensions.ExtensionUpdateState](#extensionupdatestate-enum) Enum
-
+* [overwolf.extensions.GetInfoResult](#getinforesult-object) Object
+* [overwolf.extensions.GetRunningStateResult](#getrunningstateresult-object) Object
+* [overwolf.extensions.ServiceProvidersDataResult](#serviceprovidersdataresult-object) Object
 
 ## launch(uid , parameter)
 #### Version added: 0.78
@@ -83,17 +84,19 @@ Parameter | Type                  | Description                                 
 --------- | ----------------------| ---------------------------------------------------------------------------------------- |
 id        | string                | ID of the extension to get info for                                                  |
 callback  | function              | Called with the info                                                                     |
+callback  | ([Result: GetInfoResult](#getinforesult-object)) => void              |  Called with the info     |
+
 
 ## registerInfo(id, eventsCallback, callback)
 #### Version added: 0.91
 
 > Requests info updates for an extension. Will also be called when the extension launches or closes.
 
-Parameter      | Type        | Description                                                                           |
--------------- | ------------| ------------------------------------------------------------------------------------- |
-id             | string      | ID of the extension to get updates for                                            |
-eventsCallback | function    | A callback to receive info updates                                                    |
-callback	   | function    | Status of the request                                                             |
+Parameter      | Type              | Description                                                                           |
+-------------- | ------------------| ------------------------------------------------------------------------------------- |
+id             | string            | ID of the extension to get updates for                                                |
+eventsCallback | function          | A callback to receive info updates                                                    |
+callback       | (Result) => void  | Returns with the result                                                               |   
 
 ## unregisterInfo(id, callback)
 #### Version added: 0.91
@@ -102,8 +105,8 @@ callback	   | function    | Status of the request                               
 
 Parameter | Type                  | Description                                                                              |
 --------- | ----------------------| ---------------------------------------------------------------------------------------- |
-id        | string                | ID of the extension to stop getting updates for                                      |
-callback  | function              | Status of the request                                                                 | 
+id        | string                | ID of the extension to stop getting updates for                                          |
+callback  | (Result) => void      | Returns with the result                                                                  |   
 
 ## getManifest(id, callback)
 #### Version added: 0.91
@@ -113,15 +116,7 @@ callback  | function              | Status of the request                       
 Parameter | Type                  | Description                                                                              |
 --------- | ----------------------| ---------------------------------------------------------------------------------------- |
 id        | string                | ID of the extension to get the manifest for                                          |
-callback  | function              | A function called with the manifest data                                                 | 
-
-#### Callback argument: Success
-
-A callback function which will be called with the status of the request
-
-```json
-{ "status": "success", "isRunning": true }
-```
+callback  | ([Result: GetManifestResult](#overwolf-extensions-current#getmanifestresult-object) => void              | Result of the request    |
 
 ## getRunningState(id, callback)
 #### Version added: 0.91
@@ -131,92 +126,7 @@ A callback function which will be called with the status of the request
 Parameter | Type                  | Description                                                                              |
 --------- | ----------------------| ---------------------------------------------------------------------------------------- |
 id        | string                | ID of the extension to get updates for                                               |
-callback  | function              | Status of the request                                                                | 
-
-#### Callback argument: Success
-
-A callback function which will be called with the status of the request
-
-```json
-{
-    "manifest_version": 1,
-    "type": "WebApp",
-    "meta": {
-        "name": "App Name",
-        "version": "1.0.0.0",
-        "minimum-overwolf-version": "0.92.21.0",
-        "author": "Author",
-        "icon": "icon.png",
-        "icon_gray": "icon_gray.png",
-        "description": ""
-    },
-    "permissions": [
-        "Extensions",
-        "Hotkeys",
-        "GameInfo",
-        "GameControl",
-        "FileSystem"
-    ],
-    "channel-id": 0,
-    "dependencies": null,
-    "data": {
-        "externally_connectable": {
-            "matches": [
-                "http://*.overwolf.com",
-                "http://overwolf.com"
-            ]
-        },
-        "protocol_override_domains": null,
-        "force_browser": "NotSet",
-        "plugins": [
-            "npSimpleIOPlugin.dll"
-        ],
-        "game_events": null,
-        "extra-objects": null,
-        "hotkeys": null,
-        "content_scripts": null,
-        "launch_events": [
-            {
-                "event": 1,
-                "event_data": {
-                    "game_ids": null,
-                    "wait_for_stable_framerate": null
-                },
-                "start_minimized": true
-            }
-        ],
-        "user_agent": null,
-        "windows": {
-            "index": {
-                "file": "index.html",
-                "show_in_taskbar": true,
-                "transparent": true,
-                "resizable": false,
-                "show_minimize": true,
-                "clickthrough": false,
-                "disable_rightclick": false,
-                "forcecapture": false,
-                "show_only_on_stream": false,
-                "ignore_keyboard_events": false,
-                "in_game_only": false,
-                "desktop_only": false,
-                "disable_restore_animation": false,
-                "grab_keyboard_focus": false,
-                "size": {
-                    "width": 910,
-                    "height": 560
-                },
-                "start_position": {
-                    "top": 10,
-                    "left": 10
-                },
-                "topmost": false
-            }
-        },
-        "start_window": "index"
-    }
-}
-```
+callback  | ([Result: GetRunningStateResult](#getrunningstateresult-object) => void              | Result of the request    |
 
 ## relaunch()
 #### Version added: 0.112
@@ -232,70 +142,10 @@ This function allows apps to check and perform an update without having to wait 
 
 Parameter | Type                  | Description                                                                           |
 --------- | ----------------------| ------------------------------------------------------------------------------------- |
-callback  | function              | Result of the request                                                                 |
+callback  | ([Result: UpdateExtensionResult](#updateextensionresult-object) => void              | Result of the request    |
 
 #### `failsafe` note
 The update has a failsafe mechanism while the game is active, making sure automatic updates won't happen during play only if a user action is detected, like pressing a button, for example.
-
-
-#### Callback argument: Success
-
-A callback function which will be called with the status of the request
-
-```json
-{
- "success": true,
- "info": "new version 25.0.12 installed, restart app to apply."
-}
-```
-
-#### Callback argument: Failure
-
-A callback function which will be called with the status of the request
-
-```json
-{
- "success": false,
- "error": "MinOverwolfVersionRequirementUnmet",
- "info": "Overwolf version 0.125.0.2 needs to be updated to 0.126.0.11"
-}
-```
-
-#### Possible error messages:
-
-Error Code                             | Description                                     |
--------------------------------------- | ------------------------------------------------|
-UnknownError                           |  error before download starts                   |
-ExtensionNotFound                      |  error before download starts                   |
-ExtensionDisabled                      |  error before download starts                   |
-GameRunning                            |  error before download starts                   |
-PackageUpdaterUnavailable              |  error before download starts                   |
-MinOverwolfVersionRequirementUnmet     |  error before download starts                   |
-MinGepVersionRequirementUnmet          |  error before download starts                   |
-MinGameSummaryVersionRequirementUnmet  |  error before download starts                   |
-PackageInfoMissing                     |  error before download starts                   |
-AlreadyUpToDate                        |  error before download starts                   |
-AlreadyInstalled                       |  error after download starts                    |
-NoConnectivity                         |  error after download starts                    |
-MissingExtensionId                     |  error after download starts                    |
-InvalidInstallState                    |  error after download starts                    |
-InstallationError                      |  error after download starts                    |
-AppNotInstalled                        |  error after download starts                    |
-DownloadError                          |  error after download starts                    |
-
-
-## updateExtensions(callback)
-#### Version added: 0.133
-
-> Attempts to download an update for all installed extensions.
-
-This function allow the app to check and perform an update without having to wait for Overwolf to do so.
-
-Parameter | Type                  | Description                                                                           |
---------- | ----------------------| ------------------------------------------------------------------------------------- |
-callback  | function              | Result of the request                                                             |
-
-**See [failsafe note](#failsafe-note).**
 
 ## checkForExtensionUpdate(callback)
 #### Version added: 0.135
@@ -309,7 +159,6 @@ Calling this function will not automatically update the extension, just checks i
 
 **Please read our [Recommended extension update flow](#recommended-extension-update-flow).**
 
-
 Parameter | Type                  | Description                                                                           |
 --------- | ----------------------| ------------------------------------------------------------------------------------- |
 callback  | ([Result: CheckForUpdateResult](#checkforupdateresult-object)) => void              | Result of the request    |
@@ -322,7 +171,7 @@ callback  | ([Result: CheckForUpdateResult](#checkforupdateresult-object)) => vo
 
 Parameter | Type                  | Description                                                                           |
 --------- | ----------------------| ------------------------------------------------------------------------------------- |
-callback  | function              | Result of the request                                                                 |
+callback  | ([Result: ServiceProvidersDataResult](#serviceprovidersdataresult-object)) => void              |  Result of the request     |
 
 #### Data example
 
@@ -340,12 +189,11 @@ The result of the call will be:
 
 ```json
 overwolf.extensions.getServiceConsumers(console.info) {
-    data:  {hffhbjnafafjnehejohpkfhjdenpifhihebpkhni: "{"whatever":"value"}" },
-    success: true,
-    error : null
+    "data":  {"hffhbjnafafjnehejohpkfhjdenpifhihebpkhni": "{'whatever':'value'}" },
+    "success": true,
+    "error" : null
 }
 ```
-
 
 ## onAppLaunchTriggered
 #### Version added: 0.92
@@ -408,6 +256,107 @@ if you want to get origin information without registering events, you can run th
 "SourceLine": "if(0!=dcLoadAds){var data_version={}"
 }
 ```
+
+## GetInfoResult Object
+
+Parameter          | Type                            | Description                                       |
+-------------------| --------------------------------| ------------------------------------------------- |
+*success*          | boolean                         | inherited from the "Result" Object                |
+*error*            | string                          | inherited from the "Result" Object                |
+info               | string                          | The extension info                                |
+
+
+#### Example data: Success
+
+```json
+
+```
+
+## GetRunningStateResult Object
+
+Parameter          | Type                            | Description                                       |
+-------------------| --------------------------------| ------------------------------------------------- |
+*success*          | boolean                         | inherited from the "Result" Object                |
+*error*            | string                          | inherited from the "Result" Object                |
+isRunning          | boolean                         |                                                   |
+
+#### Example data: Success
+
+```json
+{ "status": "success", "isRunning": true }
+```
+
+## ServiceProvidersDataResult Object
+
+Parameter          | Type                            | Description                                       |
+-------------------| --------------------------------| ------------------------------------------------- |
+*success*          | boolean                         | inherited from the "Result" Object                |
+*error*            | string                          | inherited from the "Result" Object                |
+data               | object                          |                                                   |
+
+#### Example data: Success
+
+```json
+{
+    "data": {
+    "hffhbjnafafjnehejohpkfhjdenpifhihebpkhni": "{'whatever':'value'}"
+    },
+    "success": true,
+    "error": null
+}
+```
+
+## UpdateExtensionResult Object
+
+Parameter          | Type                            | Description                                       |
+-------------------| --------------------------------| ------------------------------------------------- |
+*success*          | boolean                         | inherited from the "Result" Object                |
+*error*            | string                          | inherited from the "Result" Object                |
+state              | string                          |                                                   |
+info               | string                          |                                                   |
+version            | string                          |                                                   |
+
+#### Example data: Success
+
+```json
+{
+ "success": true,
+ "info": "new version 25.0.12 installed, restart app to apply."
+}
+```
+
+#### Example data: Failure
+
+```json
+{
+ "success": false,
+ "error": "MinOverwolfVersionRequirementUnmet",
+ "info": "Overwolf version 0.125.0.2 needs to be updated to 0.126.0.11"
+}
+```
+
+#### Possible error messages
+
+Error Code                             | Description                                     |
+-------------------------------------- | ------------------------------------------------|
+UnknownError                           |  error before download starts                   |
+ExtensionNotFound                      |  error before download starts                   |
+ExtensionDisabled                      |  error before download starts                   |
+GameRunning                            |  error before download starts                   |
+PackageUpdaterUnavailable              |  error before download starts                   |
+MinOverwolfVersionRequirementUnmet     |  error before download starts                   |
+MinGepVersionRequirementUnmet          |  error before download starts                   |
+MinGameSummaryVersionRequirementUnmet  |  error before download starts                   |
+PackageInfoMissing                     |  error before download starts                   |
+AlreadyUpToDate                        |  error before download starts                   |
+AlreadyInstalled                       |  error after download starts                    |
+NoConnectivity                         |  error after download starts                    |
+MissingExtensionId                     |  error after download starts                    |
+InvalidInstallState                    |  error after download starts                    |
+InstallationError                      |  error after download starts                    |
+AppNotInstalled                        |  error after download starts                    |
+DownloadError                          |  error after download starts                    |
+
 
 ## CheckForUpdateResult Object
 
