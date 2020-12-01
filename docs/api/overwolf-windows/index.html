@@ -729,7 +729,7 @@ The window receiving the message needs to listen on the <a href="#onmessagerecei
 <li>For in-game windows, calling this function will always bring the window to the front.</li>
 <li>For desktop/native windows, the behavior depends on the game mode:
 <ul>
-<li>Fullscreen game: The window will stay in the background behind the game. If you want to take focus, use the <a href="#bringtofrontgrabfocus-callback">grabFocus</a> version).</li>
+<li>Fullscreen game: The window will stay in the background behind the game. If you want to take focus, use the <a href="#bringtofrontgrabfocus-callback">grabFocus</a> version.</li>
 <li>Windowed game: The window will move to the foreground. The game window will not be changed.</li>
 </ul></li>
 </ul>
@@ -743,7 +743,7 @@ The window receiving the message needs to listen on the <a href="#onmessagerecei
 <li>For in-game windows, calling this function will always bring the window to the front.</li>
 <li>For desktop/native windows, the behavior depends on the game mode:
 <ul>
-<li>Fullscreen game: The window will stay in the background behind the game. If you want to take focus, use the <a href="#bringtofrontgrabfocus-callback">grabFocus</a> version).</li>
+<li>Fullscreen game: The window will stay in the background behind the game. If you want to take focus, use the <a href="#bringtofrontgrabfocus-callback">grabFocus</a> version.</li>
 <li>Windowed game: The window will move to the foreground. The game window will not be changed.</li>
 </ul></li>
 </ul>
@@ -766,7 +766,7 @@ The window receiving the message needs to listen on the <a href="#onmessagerecei
 <li>For desktop/native windows, the behavior depends on the game mode AND the grabFocus param:
 <ul>
 <li>Fullscreen game + grabFocus:false - The window will stay in the background behind the game.</li>
-<li>Fullscreen game + grabFocus:true - The window will move to the foreground and take the focus. The game window will be minimized.</li>
+<li>Fullscreen game + grabFocus:true - The window will move to the foreground and take the focus. The game window will be minimized (use with caution, usually it's a bad UX).</li>
 <li>Windowed game + grabFocus:true/false - The window will move to the foreground. The game window will not be changed.</li>
 </ul></li>
 </ul>
@@ -790,7 +790,7 @@ The window receiving the message needs to listen on the <a href="#onmessagerecei
 <li>For desktop/native windows, the behavior depends on the game mode AND the grabFocus param:
 <ul>
 <li>Fullscreen game + grabFocus:false - The window will stay in the background behind the game.</li>
-<li>Fullscreen game + grabFocus:true - The window will move to the foreground and take the focus. The game window will be minimized.</li>
+<li>Fullscreen game + grabFocus:true - The window will move to the foreground and take the focus. The game window will be minimized (use with caution, usually it's a bad UX).</li>
 <li>Windowed game + grabFocus:true/false - The window will move to the foreground. The game window will not be changed.</li>
 </ul></li>
 </ul>
