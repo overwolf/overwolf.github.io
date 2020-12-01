@@ -27,7 +27,7 @@ Note that the work on the documentation for this version is still in-progress.
 #### Platform
 
 * Cleanup upon uninstall: Clear IndexedDB.
-* New guide: [App login with Twitch, Discord, Facebook or Google](../docs/topics/login-with-twitch).
+* New guide: [App login with Twitch, Discord, Facebook or Google](../topics/login-with-twitch).
 
 #### Bug fixes
 
