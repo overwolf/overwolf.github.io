@@ -431,7 +431,11 @@ A list of settings for the app windows.
 
 ## ExternallyConnectable object
 A definition of external URLs the web app should be able to access. Read more [here](http://en.wikipedia.org/wiki/Cross-origin_resource_sharing).  
-Using "externally_connectable" will only allow your local app to be able to communicate with an iframe within the app (via [postMessage](https://developer.mozilla.org/en-US/docs/Web/API/Window/postMessage)).
+
+Using "externally_connectable" will allow your local app to be able to communicate with an iframe within the app (via [postMessage](https://developer.mozilla.org/en-US/docs/Web/API/Window/postMessage)).
+
+Adding externally_connectable to your app allows you to send HTTP/S requests (e.g., fetch data using XmlHttpRequest) to the defined URL's and get a response without getting a CORS violation error.
+
 
 | Name    | Type     |  Description                                                                                                                               | Since |
 |---------|----------| ------------------------------------------------------------------------------------------------------------------------------------------ |------ |
