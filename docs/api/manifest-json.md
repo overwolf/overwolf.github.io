@@ -434,7 +434,7 @@ A definition of external URLs the web app should be able to access. Read more [h
 
 Using "externally_connectable" will allow your local app to be able to communicate with an iframe within the app (via [postMessage](https://developer.mozilla.org/en-US/docs/Web/API/Window/postMessage)).
 
-Adding externally_connectable to your app allows you to send HTTP/S requests (e.g., fetch data using XmlHttpRequest) to the defined URL's and get a response without getting a CORS violation error.
+In addition, adding externally_connectable to your app allows you to send HTTP/S requests (e.g., fetch data using XmlHttpRequest) to the defined URL's and get a response without getting a CORS violation error.
 
 
 | Name    | Type     |  Description                                                                                                                               | Since |
