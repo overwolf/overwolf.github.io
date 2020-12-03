@@ -366,6 +366,8 @@ url               | string        |                         |
 path              | string        |                         | 
 
 
+#### Example data: Success
+
 ```json
 {
    "success": true,
@@ -388,6 +390,8 @@ Parameter         | Type          | Description             |
 ------------------| --------------| ----------------------- |
 totalVideosSizeMB | number        |                         | 
 
+#### Example data: Success
+
 ```json
 {
    "success": true,
@@ -404,6 +408,8 @@ totalVideosSizeMB | number        |                         |
 Parameter         | Type                                       | Description             |
 ------------------| -------------------------------------------| ----------------------- |
 WebCams           | [overwolf.media.Webcam](#webcam-object)[]  |                         | 
+
+#### Example data: Success
 
 ```json
 {
@@ -458,6 +464,8 @@ id                | string        |                         |
 Parameter         | Type          | Description             |
 ------------------| --------------| ----------------------- |
 screenCaptureSizeMB | number        |                         | 
+
+#### Example data: Success
 
 ```json
 {

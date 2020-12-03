@@ -1028,6 +1028,7 @@ Parameter         | Type          | Description             |
 horizontalChange  | number        |                         | 
 verticalChange    | number        |                         | 
 
+#### Example data: Success
 
 ```json
 {
@@ -1048,6 +1049,7 @@ id                | string        |                         |
 width             | number        |                         | 
 height            | number        |                         | 
 
+#### Example data: Success
 
 ```json
 {
@@ -1067,6 +1069,7 @@ Parameter         | Type          | Description             |
 ------------------| --------------| ----------------------- |
 window_id         | string        |                         | 
 
+#### Example data: Success
 
 ```json
 {
@@ -1086,6 +1089,8 @@ window_id         | string        |                         |
 window_state      | string        |                         | 
 window_state_ex   |  [WindowStateEx](#windowstateex-enum) enum        |          | 
 
+#### Example data: Success
+
 ```json
 {
    "success": true,
@@ -1104,6 +1109,8 @@ window_state_ex   |  [WindowStateEx](#windowstateex-enum) enum        |         
 Parameter         | Type          | Description             |
 ------------------| --------------| ----------------------- |
 muted             | boolean       |                         | 
+
+#### Example data: Success
 
 ```json
 {
@@ -1126,6 +1133,8 @@ visible           | string        |                         |
 * "fully" – The window is fully visible to the user.
 * "partial" – The window is partially visible to the user (and partially covered by other window/s).
 
+#### Example data: Success
+
 ```json
 {
   "success": true,
@@ -1142,6 +1151,8 @@ visible           | string        |                         |
 Parameter         | Type          | Description             |
 ------------------| --------------| ----------------------- |
 confirmed         | boolean       |                         | 
+
+#### Example data: Success
 
 ```json
 {

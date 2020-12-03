@@ -20,6 +20,15 @@ Please read all the info about hotkeys and how to use them in our [hotkeys best 
 * [overwolf.settings.hotkeys.onPressed](#onpressed)
 * [overwolf.settings.hotkeys.onChanged](#onchanged)
 
+## Types Reference
+
+* [overwolf.settings.hotkeys.GetAssignedHotkeyResult](#getassignedhotkeyresult-object) Object
+* [overwolf.settings.hotkeys.IHotkey](#ihotkey-object) Object
+* [overwolf.settings.hotkeys.OnHoldEvent](#onholdevent-object) Object
+* [overwolf.settings.hotkeys.OnPressedEvent](#onpressedevent-object) Object
+* [overwolf.settings.hotkeys.OnChangedEvent](#onchangedevent-object) Object
+
+
 ## get(callback)
 #### Version added: 0.142
 #### Permissions required: Hotkeys
@@ -29,6 +38,80 @@ Please read all the info about hotkeys and how to use them in our [hotkeys best 
 Parameter | Type                  | Description                                                             |
 --------- | ----------------------| ----------------------------------------------------------------------- |
 callback  | function              | A callback function which will be called with the status of the request |
+callback  | [(Result:GetAssignedHotkeyResult )](#getassignedhotkeyresult-object) => void | Returns info about the currently running game |
+
+## onHold
+
+#### Version added: 0.142
+
+> Fired only for hotkeys that are set in the manifest as `hold`, with the following structure: [onHold](#onholdevent-object) Object
+
+* Triggered only for the current extension hotkeys.
+* This event will be fired twice - on key down and on key up.
+
+## onPressed
+
+#### Version added: 0.142
+
+> Fired for hotkeys that are NOT set as hold hotkeys, with the following structure: [OnPressedEvent](#onpressedevent-object) Object
+
+* Triggered only for the current extension hotkeys.
+* This event will replace the depracated [overwolf.settings.registerHotKey()](overwolf-settings#registerhotkeyactionid-callback) function, as a way to register for hotkey events.
+
+## OnChanged
+
+#### Version added: 0.142
+
+> Fired on hotkey setting change, with the following structure: [OnChangedEvent](#onchangedevent-object) Object
+
+* Triggered only for the current extension hotkeys.
+* Listen to this event if you want to get notified when the user changed your app hotkeys from the OW client settings page.
+
+## IHotkey Object
+#### Version added: 0.142
+
+> Container for hotkey properties.
+
+Parameter       | Type          | Description             |
+----------------| --------------| ----------------------- |
+| name          | string        |                         |
+| title         | string        |                         |
+| virtualKeycode| number        |                         |
+| modifierKeys  | number        |                         |
+| extensionuid  | string        |                         |
+| isPassthrough | boolean       |                         |
+| hold          | boolean       |                         |
+| IsUnassigned  | boolean       |                         |
+| binding       | string        |                         |
+
+#### Example data
+
+```json
+{
+    "binding":"Ctrl+F3",
+    "name":"shots_fired_toggle_visibility",
+    "title":"Show In-Game",
+    "virtualKeycode":114, //F3
+    "modifierKeys":2, //Ctrl
+    "binding": "Ctrl+F3",
+    "extension-uid":"jdecmlblpoddjcmpdbhnefehffjfcjeijpkebedd",
+    "isPassthrough":false,
+    "hold":false,
+    "IsUnassigned":false
+}
+```
+
+## GetAssignedHotkeyResult Object
+#### Version added: 0.142
+
+> Container for the assigned hotkeys.
+
+Parameter         | Type          | Description             |
+------------------| --------------| ----------------------- |
+| success         | boolean       | Inherited from the "Result" Object |  
+| error           | string        | Inherited from the "Result" Object. null if success is true |
+| globals         | [IHotkey](#ihotkey-object)[]       |                         | 
+| games           | object        |                         | 
 
 #### Callback example
 
@@ -139,46 +222,39 @@ On the following example, you can see that the current extension set `Shift + F5
 }
 ```
 
-## onHold
+## OnHoldEvent Object
 
-#### Version added: 0.142
-
-> Fired only for hotkeys that are set in the manifest as `hold`.
-
-* Triggered only for the current extension hotkeys.
-* This event will be fired twice - on key down and on key up.
+Parameter   | Type                                                              | Description     |
+------------| ------------------------------------------------------------------|---------------- |
+name        |  string                                                           |                 | 
+state       |  string ("down"/"up')                                             |                 |
 
 #### Event data example
 
 ```json
 {"name": "ges_showhide", "state": "down"}
-{"name": "ges_showhide", "state": "up"}
 ```
 
-## onPressed
+## OnPressedEvent Object
 
-#### Version added: 0.142
-
-> Fired for hotkeys that are NOT set as `hold` hotkeys.
-
-* Triggered only for the current extension hotkeys.
-* This event will replace the depracated [overwolf.settings.registerHotKey()](overwolf-settings#registerhotkeyactionid-callback) function, as a way to register for hotkey events.
+Parameter   | Type                                                              | Description     |
+------------| ------------------------------------------------------------------|---------------- |
+name        |  string                                                           |                 | 
 
 #### Event data example
 
 ```json
-{"name": "ges_showhide"} //event triggered
+{"name": "ges_showhide", "state": "down"}
 ```
 
-## onChanged
+## OnChangedEvent Object
 
-#### Version added: 0.142
-
-> Fired on hotkey setting change.
-
-Triggered only for the current extension hotkeys.  
-
-Listen to this event if you want to get notified when the user changed your app hotkeys from the OW client settings page.
+Parameter     | Type                                                              | Description     |
+--------------| ------------------------------------------------------------------|---------------- |
+name          |  string                                                           |                 | 
+gameId        |  number                                                           |                 | 
+description   |  string                                                           |                 | 
+binding       |  string                                                           |                 | 
 
 #### Event data example
 
