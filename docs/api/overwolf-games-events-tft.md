@@ -239,6 +239,8 @@ Data example:
 
 #### *round_type* notes
 
+Note: There is a known issue currently with carousel rounds that are not being counted (meaning they are skipped, 2-4 to 2-6 etc.), we will fix it in the near future.
+
 Data examples:
 
 ```json
