@@ -122,6 +122,13 @@ This should be the same hotkey name as written in the manifest.json.</p>
 <li><a href="#getfpssettingsresult-object">GetFpsSettingsResult</a> Object</li>
 <li><a href="#generalextensionsettings-object">GeneralExtensionSettings</a> Object</li>
 <li><a href="#getextensionsettingsresult-object">GetExtensionSettingsResult</a> Object</li>
+<li><a href="#folderresult-object">FolderResult</a> Object</li>
+<li><a href="#path-object">Path</a> Object</li>
+<li><a href="#getvideocapturesettingsresult-object">GetVideoCaptureSettingsResult</a> Object</li>
+<li><a href="#getaudiocapturesettingsresult-object">GetAudioCaptureSettingsResult</a> Object</li>
+<li><a href="#fpssettingschangedevent-object">FpsSettingsChangedEvent</a> Object</li>
+<li><a href="#videocapturesettingschangedevent-object">VideoCaptureSettingsChangedEvent</a> Object</li>
+<li><a href="#audiocapturesettingschangedevent-object">AudioCaptureSettingsChangedEvent</a> Object</li>
 </ul>
 <h2><a class="anchor" aria-hidden="true" id="gethotkeyfeatureid-callback"></a><a href="#gethotkeyfeatureid-callback" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>getHotKey(featureId, callback)</h2>
 <h4><a class="anchor" aria-hidden="true" id="version-added-078"></a><a href="#version-added-078" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Version added: 0.78</h4>
@@ -253,20 +260,9 @@ A Note regarding hotkeys: Shift can only be combined with the F keys.</p>
 <tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
 </thead>
 <tbody>
-<tr><td>callback</td><td>function</td><td>A callback function which will be called with the status of the request</td></tr>
+<tr><td>callback</td><td><a href="#folderresult-object">(Result:FolderResult )</a> =&gt; void</td><td>called with the status of the request</td></tr>
 </tbody>
 </table>
-<h4><a class="anchor" aria-hidden="true" id="callback-argument-success-3"></a><a href="#callback-argument-success-3" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Callback argument: Success</h4>
-<p>A callback function which will be called with the status of the request and the current language overwolf is set to:</p>
-<pre><code class="hljs css language-json">{
-    <span class="hljs-attr">"status"</span>: <span class="hljs-string">"success"</span>,
-    <span class="hljs-attr">"path"</span>: {
-        <span class="hljs-attr">"Value"</span>: <span class="hljs-string">"E:\Video\Overwolf"</span>,
-        <span class="hljs-attr">"Type"</span>: <span class="hljs-string">"System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"</span>,
-        <span class="hljs-attr">"Name"</span>: <span class="hljs-string">"Folders_VideoCapturesFolder"</span>
-    }
-}
-</code></pre>
 <h2><a class="anchor" aria-hidden="true" id="setoverwolfvideosfolderpath-callback"></a><a href="#setoverwolfvideosfolderpath-callback" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>setOverwolfVideosFolder(path, callback)</h2>
 <h4><a class="anchor" aria-hidden="true" id="version-added-0119"></a><a href="#version-added-0119" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Version added: 0.119</h4>
 <blockquote>
@@ -278,7 +274,7 @@ A Note regarding hotkeys: Shift can only be combined with the F keys.</p>
 </thead>
 <tbody>
 <tr><td>path</td><td>string</td><td>The folder to use</td></tr>
-<tr><td>callback</td><td>function</td><td>A callback function which will be called with the status of the request</td></tr>
+<tr><td>callback</td><td><a href="#folderresult-object">(Result:FolderResult )</a> =&gt; void</td><td>called with the status of the request</td></tr>
 </tbody>
 </table>
 <p>Note: when you set a directory, you should use escape characters:</p>
@@ -294,20 +290,9 @@ A Note regarding hotkeys: Shift can only be combined with the F keys.</p>
 <tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
 </thead>
 <tbody>
-<tr><td>callback</td><td>function</td><td>A function called with the result of the request which contains the current Overwolf screenshots folder</td></tr>
+<tr><td>callback</td><td><a href="#folderresult-object">(Result:FolderResult )</a> =&gt; void</td><td>called with the result of the request which contains the current Overwolf screenshots folder</td></tr>
 </tbody>
 </table>
-<h4><a class="anchor" aria-hidden="true" id="callback-argument-success-4"></a><a href="#callback-argument-success-4" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Callback argument: Success</h4>
-<p>A callback function which will be called with the status of the request and the current language overwolf is set to:</p>
-<pre><code class="hljs css language-json">{  
-   <span class="hljs-attr">"success"</span>:<span class="hljs-literal">true</span>,
-   <span class="hljs-attr">"path"</span>:{  
-      <span class="hljs-attr">"Value"</span>:<span class="hljs-string">"C:\Users\USER\Pictures\Overwolf"</span>,
-      <span class="hljs-attr">"Type"</span>:<span class="hljs-string">"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"</span>,
-      <span class="hljs-attr">"Name"</span>:<span class="hljs-string">"Folders_ScreenCapturesFolder"</span>
-   }
-}
-</code></pre>
 <h2><a class="anchor" aria-hidden="true" id="setoverwolfscreenshotsfolderpath-callback"></a><a href="#setoverwolfscreenshotsfolderpath-callback" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>setOverwolfScreenshotsFolder(path, callback)</h2>
 <h4><a class="anchor" aria-hidden="true" id="version-added-0119-1"></a><a href="#version-added-0119-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Version added: 0.119</h4>
 <blockquote>
@@ -319,7 +304,7 @@ A Note regarding hotkeys: Shift can only be combined with the F keys.</p>
 </thead>
 <tbody>
 <tr><td>path</td><td>string</td><td>The folder to use</td></tr>
-<tr><td>callback</td><td>function</td><td>A function called with the result of the request which contains the current Overwolf screenshots folder</td></tr>
+<tr><td>callback</td><td><a href="#folderresult-object">(Result:FolderResult )</a> =&gt; void</td><td>called with the result of the request which contains the current Overwolf screenshots folder</td></tr>
 </tbody>
 </table>
 <h2><a class="anchor" aria-hidden="true" id="getvideocapturesettingscallback"></a><a href="#getvideocapturesettingscallback" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>getVideoCaptureSettings(callback)</h2>
@@ -332,17 +317,9 @@ A Note regarding hotkeys: Shift can only be combined with the F keys.</p>
 <tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
 </thead>
 <tbody>
-<tr><td>path</td><td>string</td><td>The folder to use</td></tr>
-<tr><td>callback</td><td>function</td><td>A function called with the result of the request which contains the current Overwolf screenshots folder</td></tr>
+<tr><td>callback</td><td><a href="#getvideocapturesettingsresult-object">(Result:GetVideoCaptureSettingsResult)</a> =&gt; void</td><td>called with the result of the request which contains the current Overwolf capture settings</td></tr>
 </tbody>
 </table>
-<pre><code class="hljs css language-json">{
-    <span class="hljs-attr">"encoder"</span>: <span class="hljs-string">"NVIDIA_NVENC"</span>,
-    <span class="hljs-attr">"preset"</span>: <span class="hljs-string">"DEFAULT"</span>,
-    <span class="hljs-attr">"fps"</span>: <span class="hljs-number">30</span>,
-    <span class="hljs-attr">"resolution"</span>: <span class="hljs-number">2</span>
-}
-</code></pre>
 <h2><a class="anchor" aria-hidden="true" id="setvideocapturesettingsresolutionsettings-fps-callback"></a><a href="#setvideocapturesettingsresolutionsettings-fps-callback" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>setVideoCaptureSettings(resolutionSettings, fps, callback)</h2>
 <h4><a class="anchor" aria-hidden="true" id="version-added-0117"></a><a href="#version-added-0117" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Version added: 0.117</h4>
 <h4><a class="anchor" aria-hidden="true" id="permissions-required-videocapturesettings"></a><a href="#permissions-required-videocapturesettings" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Permissions required: VideoCaptureSettings</h4>
@@ -357,7 +334,7 @@ A Note regarding hotkeys: Shift can only be combined with the F keys.</p>
 <tbody>
 <tr><td>resolutionSettings</td><td><a href="#resolutionsettings-enum">overwolf.settings.ResolutionSettings</a> enum</td><td></td></tr>
 <tr><td>fps</td><td>int</td><td></td></tr>
-<tr><td>callback</td><td>function</td><td>A callback function which will be called with the status of the request</td></tr>
+<tr><td>callback</td><td>(Result) =&gt; void</td><td>called with the result of the request</td></tr>
 </tbody>
 </table>
 <h2><a class="anchor" aria-hidden="true" id="getaudiocapturesettingscallback"></a><a href="#getaudiocapturesettingscallback" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>getAudioCaptureSettings(callback)</h2>
@@ -370,7 +347,7 @@ A Note regarding hotkeys: Shift can only be combined with the F keys.</p>
 <tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
 </thead>
 <tbody>
-<tr><td>callback</td><td>function</td><td>A callback function which will be called with the status of the request</td></tr>
+<tr><td>callback</td><td><a href="#getaudiocapturesettingsresult-object">(Result:GetAudioCaptureSettingsResult)</a> =&gt; void</td><td>called with the status of the request</td></tr>
 </tbody>
 </table>
 <h2><a class="anchor" aria-hidden="true" id="setaudiocapturesettingsenablesound-enablemicrophone-callback"></a><a href="#setaudiocapturesettingsenablesound-enablemicrophone-callback" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>setAudioCaptureSettings(enableSound, enableMicrophone, callback)</h2>
@@ -385,7 +362,7 @@ A Note regarding hotkeys: Shift can only be combined with the F keys.</p>
 <tbody>
 <tr><td>enableSound</td><td>bool</td><td>The folder to use</td></tr>
 <tr><td>enableMicrophone</td><td>bool</td><td></td></tr>
-<tr><td>callback</td><td>function</td><td>A callback function which will be called with the status of the request</td></tr>
+<tr><td>callback</td><td>(Result) =&gt; void</td><td>called with the result of the request</td></tr>
 </tbody>
 </table>
 <h2><a class="anchor" aria-hidden="true" id="getfpssettingscallback"></a><a href="#getfpssettingscallback" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>getFpsSettings(callback)</h2>
@@ -419,14 +396,9 @@ A Note regarding hotkeys: Shift can only be combined with the F keys.</p>
 </thead>
 <tbody>
 <tr><td>settings</td><td><a href="#fpssettings-object">FpsSettings</a> Object</td><td>Container for the FPS settings</td></tr>
-<tr><td>callback</td><td>function</td><td>A callback function which will be called with the status of the request</td></tr>
+<tr><td>callback</td><td>(Result) =&gt; void</td><td>called with the result of the request</td></tr>
 </tbody>
 </table>
-<h4><a class="anchor" aria-hidden="true" id="callback-argument-success-5"></a><a href="#callback-argument-success-5" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Callback argument: Success</h4>
-<pre><code class="hljs css language-json">{
-    <span class="hljs-attr">"success"</span>: <span class="hljs-literal">true</span>,
-}
-</code></pre>
 <h2><a class="anchor" aria-hidden="true" id="setextensionsettingsextensionsettings-callback"></a><a href="#setextensionsettingsextensionsettings-callback" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>setExtensionSettings(extensionSettings, callback)</h2>
 <h4><a class="anchor" aria-hidden="true" id="version-added-0149"></a><a href="#version-added-0149" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Version added: 0.149</h4>
 <blockquote>
@@ -439,14 +411,9 @@ A Note regarding hotkeys: Shift can only be combined with the F keys.</p>
 </thead>
 <tbody>
 <tr><td>extensionSettings</td><td><a href="#generalextensionsettings-object">GeneralExtensionSettings</a> Object</td><td>Container for the extension settings</td></tr>
-<tr><td>callback</td><td>function</td><td>A callback function which will be called with the status of the request</td></tr>
+<tr><td>callback</td><td>(Result) =&gt; void</td><td>called with the result of the request</td></tr>
 </tbody>
 </table>
-<h4><a class="anchor" aria-hidden="true" id="callback-argument-success-6"></a><a href="#callback-argument-success-6" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Callback argument: Success</h4>
-<pre><code class="hljs css language-json">{
-    <span class="hljs-attr">"success"</span>: <span class="hljs-literal">true</span>,
-}
-</code></pre>
 <h4><a class="anchor" aria-hidden="true" id="notes"></a><a href="#notes" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Notes</h4>
 <ul>
 <li>If you would like to set app auto-launch with OW client, you should add the &quot;Tray&quot; permission to your app's <a href="manifest-json#permissions-array">manifest permissions list</a></li>
@@ -470,17 +437,17 @@ A Note regarding hotkeys: Shift can only be combined with the F keys.</p>
 <h2><a class="anchor" aria-hidden="true" id="onfpssettingschanged"></a><a href="#onfpssettingschanged" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>onFpsSettingsChanged</h2>
 <h4><a class="anchor" aria-hidden="true" id="version-added-089-2"></a><a href="#version-added-089-2" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Version added: 0.89</h4>
 <blockquote>
-<p>Fired when fps settings are changed.</p>
+<p>Fired when fps settings are changed, with the following structure: <a href="#fpssettingschangedevent-object">FpsSettingsChangedEvent</a> Object.</p>
 </blockquote>
 <h2><a class="anchor" aria-hidden="true" id="onvideocapturesettingschanged"></a><a href="#onvideocapturesettingschanged" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>OnVideoCaptureSettingsChanged</h2>
 <h4><a class="anchor" aria-hidden="true" id="version-added-0117-3"></a><a href="#version-added-0117-3" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Version added: 0.117</h4>
 <blockquote>
-<p>Fired when video capture settings are changed.</p>
+<p>Fired when video capture settings are changed, with the following structure: <a href="#fpssettingschangedevent-object">VideoCaptureSettingsChangedEvent</a> Object.</p>
 </blockquote>
 <h2><a class="anchor" aria-hidden="true" id="onaudiocapturesettingschanged"></a><a href="#onaudiocapturesettingschanged" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>OnAudioCaptureSettingsChanged</h2>
 <h4><a class="anchor" aria-hidden="true" id="version-added-0117-4"></a><a href="#version-added-0117-4" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Version added: 0.117</h4>
 <blockquote>
-<p>Fired when audio capture settings are changed.</p>
+<p>Fired when audio capture settings are changed, with the following structure: <a href="#audiocapturesettingschangedevent-object">AudioCaptureSettingsChangedEvent</a> Object.</p>
 </blockquote>
 <h2><a class="anchor" aria-hidden="true" id="onhotkeychanged"></a><a href="#onhotkeychanged" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>OnHotKeyChanged</h2>
 <h4><a class="anchor" aria-hidden="true" id="version-added-0119-2"></a><a href="#version-added-0119-2" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Version added: 0.119</h4>
@@ -622,7 +589,131 @@ A Note regarding hotkeys: Shift can only be combined with the F keys.</p>
     }
 }
 </code></pre>
-</span></div></article></div><div class="docLastUpdate"><em>Last updated on 2020-10-16 by Tom Wolf</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/api/overwolf-profile-subscriptions"><span class="arrow-prev">← </span><span>overwolf.profile.subscriptions</span></a><a class="docs-next button" href="/docs/api/overwolf-settings-hotkeys"><span>overwolf.settings.hotkeys</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#special-ow-urls">Special OW URL's</a></li><li><a href="#methods-reference">Methods Reference</a></li><li><a href="#events-reference">Events Reference</a></li><li><a href="#types-reference">Types Reference</a></li><li><a href="#gethotkeyfeatureid-callback">getHotKey(featureId, callback)</a></li><li><a href="#registerhotkeyactionid-callback">registerHotKey(actionId, callback)</a></li><li><a href="#getcurrentoverwolflanguagecallback">getCurrentOverwolfLanguage(callback)</a></li><li><a href="#getoverwolfvideosfoldercallback">getOverwolfVideosFolder(callback)</a></li><li><a href="#setoverwolfvideosfolderpath-callback">setOverwolfVideosFolder(path, callback)</a></li><li><a href="#getoverwolfscreenshotsfoldercallback">getOverwolfScreenshotsFolder(callback)</a></li><li><a href="#setoverwolfscreenshotsfolderpath-callback">setOverwolfScreenshotsFolder(path, callback)</a></li><li><a href="#getvideocapturesettingscallback">getVideoCaptureSettings(callback)</a></li><li><a href="#setvideocapturesettingsresolutionsettings-fps-callback">setVideoCaptureSettings(resolutionSettings, fps, callback)</a></li><li><a href="#getaudiocapturesettingscallback">getAudioCaptureSettings(callback)</a></li><li><a href="#setaudiocapturesettingsenablesound-enablemicrophone-callback">setAudioCaptureSettings(enableSound, enableMicrophone, callback)</a></li><li><a href="#getfpssettingscallback">getFpsSettings(callback)</a></li><li><a href="#setfpssettingssettings-callback">setFpsSettings(settings, callback)</a></li><li><a href="#setextensionsettingsextensionsettings-callback">setExtensionSettings(extensionSettings, callback)</a></li><li><a href="#getextensionsettingscallback">getExtensionSettings(callback)</a></li><li><a href="#onfpssettingschanged">onFpsSettingsChanged</a></li><li><a href="#onvideocapturesettingschanged">OnVideoCaptureSettingsChanged</a></li><li><a href="#onaudiocapturesettingschanged">OnAudioCaptureSettingsChanged</a></li><li><a href="#onhotkeychanged">OnHotKeyChanged</a></li><li><a href="#resolutionsettings-enum">ResolutionSettings enum</a></li><li><a href="#eindicationposition-enum">eIndicationPosition enum</a></li><li><a href="#fpssettings-object">FpsSettings Object</a></li><li><a href="#generalextensionsettings-object">GeneralExtensionSettings Object</a></li><li><a href="#getfpssettingsresult-object">GetFpsSettingsResult Object</a></li><li><a href="#getextensionsettingsresult-object">GetExtensionSettingsResult Object</a></li></ul></nav></div><footer class="site-footer"><div class="container"><ul><li>Legal</li><li><a href="/docs/topics/legal-overview">Terms overview</a></li><li><a href="/docs/topics/legal-developers-terms">Developer&#x27;s terms</a></li><li><a href="/docs/topics/legal-app-terms">App terms</a></li><li><a href="http://www.overwolf.com/legal/" target="_blank">Overwolf terms</a></li><li><a href="http://www.overwolf.com/legal/#Privacy-policy" target="_blank">Overwolf Privacy policy</a></li></ul><ul><li>Support</li><li><a href=" https://discuss.developers.overwolf.com/" target="_blank">Questions and Answers</a></li><li><a href=" https://discord.gg/7256qS2" target="_blank">Discord</a></li><li><a href="/docs/support/contact-us#join-our-slack">Slack</a></li><li><a href="https://www.facebook.com/OverwolfDevs" target="_blank">Facebook</a></li><li><a href="https://twitter.com/OverwolfDevs" target="_blank">Twitter</a></li></ul><ul><li>Documentation</li><li><a href="/docs/api/changelog">Changelog</a></li><li><a href="/docs/api/overwolf-api-overview">API</a></li><li><a href="/docs/start/app-creation-process">App Creation Process</a></li><li><a href="/docs/topics/best-practices-overview">Best Practices</a></li><li><a href="/docs/status/all">Game Events status</a></li></ul><ul><li>Information</li><li><a href="http://www.overwolf.com/careers/">Careers</a></li><li><a href="https://play.overwolf.com/fund/" target="_blank">Fund</a></li><li><a href="https://medium.com/overwolf" target="_blank">Developers Blog</a></li><li><a href="https://www.overwolf.com/appstore" target="_blank">Overwolf Appstore</a></li><li><a href="https://brands.overwolf.com/" target="_blank">Advertise on Overwolf</a></li></ul></div></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+<h2><a class="anchor" aria-hidden="true" id="folderresult-object"></a><a href="#folderresult-object" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>FolderResult Object</h2>
+<table>
+<thead>
+<tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td><em>success</em></td><td>boolean</td><td>inherited from the &quot;Result&quot; Object</td></tr>
+<tr><td><em>error</em></td><td>string</td><td>inherited from the &quot;Result&quot; Object</td></tr>
+<tr><td>path</td><td><a href="#path-object">Path</a> Object</td><td>Container for the path entity</td></tr>
+</tbody>
+</table>
+<h4><a class="anchor" aria-hidden="true" id="example-data-success-2"></a><a href="#example-data-success-2" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Example data: Success</h4>
+<pre><code class="hljs css language-json">{
+    <span class="hljs-attr">"status"</span>: <span class="hljs-string">"success"</span>,
+    <span class="hljs-attr">"path"</span>: { 
+        <span class="hljs-attr">"Value"</span>: <span class="hljs-string">"E:\Video\Overwolf"</span>,
+        <span class="hljs-attr">"Type"</span>: <span class="hljs-string">"System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"</span>,
+        <span class="hljs-attr">"Name"</span>: <span class="hljs-string">"Folders_VideoCapturesFolder"</span>
+    }
+}
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="path-object"></a><a href="#path-object" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Path Object</h2>
+<blockquote>
+<p>Container for the path entity</p>
+</blockquote>
+<table>
+<thead>
+<tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>Value</td><td>string</td><td></td></tr>
+<tr><td>Type</td><td>string</td><td></td></tr>
+<tr><td>Name</td><td>string</td><td></td></tr>
+</tbody>
+</table>
+<h4><a class="anchor" aria-hidden="true" id="example-data"></a><a href="#example-data" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Example data</h4>
+<pre><code class="hljs css language-json">{
+    <span class="hljs-attr">"Value"</span>: <span class="hljs-string">"E:\Video\Overwolf"</span>,
+    <span class="hljs-attr">"Type"</span>: <span class="hljs-string">"System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"</span>,
+    <span class="hljs-attr">"Name"</span>: <span class="hljs-string">"Folders_VideoCapturesFolder"</span>
+}
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="getvideocapturesettingsresult-object"></a><a href="#getvideocapturesettingsresult-object" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>GetVideoCaptureSettingsResult Object</h2>
+<table>
+<thead>
+<tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td><em>success</em></td><td>boolean</td><td>inherited from the &quot;Result&quot; Object</td></tr>
+<tr><td><em>error</em></td><td>string</td><td>inherited from the &quot;Result&quot; Object</td></tr>
+<tr><td>encoder</td><td>string</td><td></td></tr>
+<tr><td>preset</td><td>string</td><td></td></tr>
+<tr><td>fps</td><td>number</td><td></td></tr>
+<tr><td>resolution</td><td>number</td><td></td></tr>
+</tbody>
+</table>
+<h4><a class="anchor" aria-hidden="true" id="example-data-success-3"></a><a href="#example-data-success-3" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Example data: Success</h4>
+<pre><code class="hljs css language-json">{
+    <span class="hljs-attr">"encoder"</span>: <span class="hljs-string">"NVIDIA_NVENC"</span>,
+    <span class="hljs-attr">"preset"</span>: <span class="hljs-string">"DEFAULT"</span>,
+    <span class="hljs-attr">"fps"</span>: <span class="hljs-number">30</span>,
+    <span class="hljs-attr">"resolution"</span>: <span class="hljs-number">2</span>
+}
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="getaudiocapturesettingsresult-object"></a><a href="#getaudiocapturesettingsresult-object" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>GetAudioCaptureSettingsResult Object</h2>
+<table>
+<thead>
+<tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td><em>success</em></td><td>boolean</td><td>inherited from the &quot;Result&quot; Object</td></tr>
+<tr><td><em>error</em></td><td>string</td><td>inherited from the &quot;Result&quot; Object</td></tr>
+<tr><td>sound_enabled</td><td>boolean</td><td></td></tr>
+<tr><td>microphone_enabled</td><td>boolean</td><td></td></tr>
+</tbody>
+</table>
+<h4><a class="anchor" aria-hidden="true" id="example-data-success-4"></a><a href="#example-data-success-4" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Example data: Success</h4>
+<pre><code class="hljs css language-json">{
+    <span class="hljs-attr">"sound_enabled"</span>: <span class="hljs-literal">true</span>,
+    <span class="hljs-attr">"microphone_enabled"</span>: <span class="hljs-literal">false</span>
+}
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="fpssettingschangedevent-object"></a><a href="#fpssettingschangedevent-object" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>FpsSettingsChangedEvent Object</h2>
+<table>
+<thead>
+<tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>setting</td><td>string   (&quot;OnScreenLocation&quot;</td><td>&quot;Enabled&quot;</td><td>&quot;Scale&quot;</td><td>&quot;Offset&quot;)</td><td></td></tr>
+</tbody>
+</table>
+<h4><a class="anchor" aria-hidden="true" id="event-data-example"></a><a href="#event-data-example" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Event data example</h4>
+<pre><code class="hljs css language-json">{ 
+   <span class="hljs-attr">"setting"</span>:<span class="hljs-string">"OnScreenLocation"</span>
+}
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="videocapturesettingschangedevent-object"></a><a href="#videocapturesettingschangedevent-object" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>VideoCaptureSettingsChangedEvent Object</h2>
+<table>
+<thead>
+<tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>setting</td><td>string   (&quot;resolution&quot;</td><td>&quot;fps&quot;</td><td>&quot;unknown&quot;</td><td>&quot;Offset&quot;)</td><td></td></tr>
+</tbody>
+</table>
+<h4><a class="anchor" aria-hidden="true" id="event-data-example-1"></a><a href="#event-data-example-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Event data example</h4>
+<pre><code class="hljs css language-json">{ 
+   <span class="hljs-attr">"setting"</span>:<span class="hljs-string">"resolution"</span>
+}
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="audiocapturesettingschangedevent-object"></a><a href="#audiocapturesettingschangedevent-object" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>AudioCaptureSettingsChangedEvent Object</h2>
+<table>
+<thead>
+<tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>setting</td><td>string   (&quot;speakers&quot;</td><td>&quot;microphone&quot;</td><td>&quot;unknown&quot;</td><td>&quot;Offset&quot;)</td><td></td></tr>
+</tbody>
+</table>
+<h4><a class="anchor" aria-hidden="true" id="event-data-example-2"></a><a href="#event-data-example-2" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Event data example</h4>
+<pre><code class="hljs css language-json">{ 
+   <span class="hljs-attr">"setting"</span>:<span class="hljs-string">"speakers"</span>
+}
+</code></pre>
+</span></div></article></div><div class="docLastUpdate"><em>Last updated on 2020-12-3 by eransharv</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/api/overwolf-profile-subscriptions"><span class="arrow-prev">← </span><span>overwolf.profile.subscriptions</span></a><a class="docs-next button" href="/docs/api/overwolf-settings-hotkeys"><span>overwolf.settings.hotkeys</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#special-ow-urls">Special OW URL's</a></li><li><a href="#methods-reference">Methods Reference</a></li><li><a href="#events-reference">Events Reference</a></li><li><a href="#types-reference">Types Reference</a></li><li><a href="#gethotkeyfeatureid-callback">getHotKey(featureId, callback)</a></li><li><a href="#registerhotkeyactionid-callback">registerHotKey(actionId, callback)</a></li><li><a href="#getcurrentoverwolflanguagecallback">getCurrentOverwolfLanguage(callback)</a></li><li><a href="#getoverwolfvideosfoldercallback">getOverwolfVideosFolder(callback)</a></li><li><a href="#setoverwolfvideosfolderpath-callback">setOverwolfVideosFolder(path, callback)</a></li><li><a href="#getoverwolfscreenshotsfoldercallback">getOverwolfScreenshotsFolder(callback)</a></li><li><a href="#setoverwolfscreenshotsfolderpath-callback">setOverwolfScreenshotsFolder(path, callback)</a></li><li><a href="#getvideocapturesettingscallback">getVideoCaptureSettings(callback)</a></li><li><a href="#setvideocapturesettingsresolutionsettings-fps-callback">setVideoCaptureSettings(resolutionSettings, fps, callback)</a></li><li><a href="#getaudiocapturesettingscallback">getAudioCaptureSettings(callback)</a></li><li><a href="#setaudiocapturesettingsenablesound-enablemicrophone-callback">setAudioCaptureSettings(enableSound, enableMicrophone, callback)</a></li><li><a href="#getfpssettingscallback">getFpsSettings(callback)</a></li><li><a href="#setfpssettingssettings-callback">setFpsSettings(settings, callback)</a></li><li><a href="#setextensionsettingsextensionsettings-callback">setExtensionSettings(extensionSettings, callback)</a></li><li><a href="#getextensionsettingscallback">getExtensionSettings(callback)</a></li><li><a href="#onfpssettingschanged">onFpsSettingsChanged</a></li><li><a href="#onvideocapturesettingschanged">OnVideoCaptureSettingsChanged</a></li><li><a href="#onaudiocapturesettingschanged">OnAudioCaptureSettingsChanged</a></li><li><a href="#onhotkeychanged">OnHotKeyChanged</a></li><li><a href="#resolutionsettings-enum">ResolutionSettings enum</a></li><li><a href="#eindicationposition-enum">eIndicationPosition enum</a></li><li><a href="#fpssettings-object">FpsSettings Object</a></li><li><a href="#generalextensionsettings-object">GeneralExtensionSettings Object</a></li><li><a href="#getfpssettingsresult-object">GetFpsSettingsResult Object</a></li><li><a href="#getextensionsettingsresult-object">GetExtensionSettingsResult Object</a></li><li><a href="#folderresult-object">FolderResult Object</a></li><li><a href="#path-object">Path Object</a></li><li><a href="#getvideocapturesettingsresult-object">GetVideoCaptureSettingsResult Object</a></li><li><a href="#getaudiocapturesettingsresult-object">GetAudioCaptureSettingsResult Object</a></li><li><a href="#fpssettingschangedevent-object">FpsSettingsChangedEvent Object</a></li><li><a href="#videocapturesettingschangedevent-object">VideoCaptureSettingsChangedEvent Object</a></li><li><a href="#audiocapturesettingschangedevent-object">AudioCaptureSettingsChangedEvent Object</a></li></ul></nav></div><footer class="site-footer"><div class="container"><ul><li>Legal</li><li><a href="/docs/topics/legal-overview">Terms overview</a></li><li><a href="/docs/topics/legal-developers-terms">Developer&#x27;s terms</a></li><li><a href="/docs/topics/legal-app-terms">App terms</a></li><li><a href="http://www.overwolf.com/legal/" target="_blank">Overwolf terms</a></li><li><a href="http://www.overwolf.com/legal/#Privacy-policy" target="_blank">Overwolf Privacy policy</a></li></ul><ul><li>Support</li><li><a href=" https://discuss.developers.overwolf.com/" target="_blank">Questions and Answers</a></li><li><a href=" https://discord.gg/7256qS2" target="_blank">Discord</a></li><li><a href="/docs/support/contact-us#join-our-slack">Slack</a></li><li><a href="https://www.facebook.com/OverwolfDevs" target="_blank">Facebook</a></li><li><a href="https://twitter.com/OverwolfDevs" target="_blank">Twitter</a></li></ul><ul><li>Documentation</li><li><a href="/docs/api/changelog">Changelog</a></li><li><a href="/docs/api/overwolf-api-overview">API</a></li><li><a href="/docs/start/app-creation-process">App Creation Process</a></li><li><a href="/docs/topics/best-practices-overview">Best Practices</a></li><li><a href="/docs/status/all">Game Events status</a></li></ul><ul><li>Information</li><li><a href="http://www.overwolf.com/careers/">Careers</a></li><li><a href="https://play.overwolf.com/fund/" target="_blank">Fund</a></li><li><a href="https://medium.com/overwolf" target="_blank">Developers Blog</a></li><li><a href="https://www.overwolf.com/appstore" target="_blank">Overwolf Appstore</a></li><li><a href="https://brands.overwolf.com/" target="_blank">Advertise on Overwolf</a></li></ul></div></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
                 document.addEventListener('keyup', function(e) {
                   if (e.target !== document.body) {
                     return;
