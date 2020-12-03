@@ -64,7 +64,13 @@ Read more about how to use the [overwolf.settings.hotkeys API](overwolf-settings
 * [GetFpsSettingsResult](#getfpssettingsresult-object) Object
 * [GeneralExtensionSettings](#generalextensionsettings-object) Object
 * [GetExtensionSettingsResult](#getextensionsettingsresult-object) Object
-
+* [FolderResult](#folderresult-object) Object
+* [Path](#path-object) Object
+* [GetVideoCaptureSettingsResult](#getvideocapturesettingsresult-object) Object
+* [GetAudioCaptureSettingsResult](#getaudiocapturesettingsresult-object) Object
+* [FpsSettingsChangedEvent](#fpssettingschangedevent-object) Object
+* [VideoCaptureSettingsChangedEvent](#videocapturesettingschangedevent-object) Object
+* [AudioCaptureSettingsChangedEvent](#audiocapturesettingschangedevent-object) Object
 
 ## getHotKey(featureId, callback)
 #### Version added: 0.78
@@ -192,22 +198,8 @@ callback  | function              |  A callback function which will be called wi
 
 Parameter | Type                  | Description                                                             |
 --------- | ----------------------| ----------------------------------------------------------------------- |
-callback  | function              |  A callback function which will be called with the status of the request|
+callback  | [(Result:FolderResult )](#folderresult-object) => void | called with the status of the request |
 
-#### Callback argument: Success
-
- A callback function which will be called with the status of the request and the current language overwolf is set to:
-
-```json
-{
-    "status": "success",
-    "path": {
-        "Value": "E:\Video\Overwolf",
-        "Type": "System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089",
-        "Name": "Folders_VideoCapturesFolder"
-    }
-}
-```
 
 ## setOverwolfVideosFolder(path, callback)
 #### Version added: 0.119
@@ -217,7 +209,7 @@ callback  | function              |  A callback function which will be called wi
 Parameter | Type                  | Description                                                              |
 --------- | ----------------------| -----------------------------------------------------------------------  |
 path	  | string                | The folder to use                                                        |
-callback  | function              |  A callback function which will be called with the status of the request |
+callback  | [(Result:FolderResult )](#folderresult-object) => void | called with the status of the request |
 
 Note: when you set a directory, you should use escape characters:
 
@@ -232,22 +224,7 @@ overwolf.settings.setOverwolfVideosFolder("C:\\Users\\Azamoth\\Videos\\Captures"
 
 Parameter | Type                  | Description                                                                                              |
 --------- | ----------------------| -------------------------------------------------------------------------------------------------------- |
-callback  | function              |  A function called with the result of the request which contains the current Overwolf screenshots folder |
-
-#### Callback argument: Success
-
- A callback function which will be called with the status of the request and the current language overwolf is set to:
-
-```json
-{  
-   "success":true,
-   "path":{  
-      "Value":"C:\Users\USER\Pictures\Overwolf",
-      "Type":"System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089",
-      "Name":"Folders_ScreenCapturesFolder"
-   }
-}
-```
+callback  | [(Result:FolderResult )](#folderresult-object) => void | called with the result of the request which contains the current Overwolf screenshots folder |
 
 ## setOverwolfScreenshotsFolder(path, callback)
 #### Version added: 0.119
@@ -257,7 +234,7 @@ callback  | function              |  A function called with the result of the re
 Parameter | Type                  | Description                                                                                              |
 --------- | ----------------------| -------------------------------------------------------------------------------------------------------- |
 path	  | string                | The folder to use                                                                                        |
-callback  | function              |  A function called with the result of the request which contains the current Overwolf screenshots folder |
+callback  | [(Result:FolderResult )](#folderresult-object) => void | called with the result of the request which contains the current Overwolf screenshots folder |
 
 ## getVideoCaptureSettings(callback)
 #### Version added: 0.86
@@ -266,22 +243,11 @@ callback  | function              |  A function called with the result of the re
 
 Parameter | Type                  | Description                                                                                              |
 --------- | ----------------------| -------------------------------------------------------------------------------------------------------- |
-path	  | string                | The folder to use                                                                                        |
-callback  | function              |  A function called with the result of the request which contains the current Overwolf screenshots folder |
-
-```json
-{
-    "encoder": "NVIDIA_NVENC",
-    "preset": "DEFAULT",
-    "fps": 30,
-    "resolution": 2
-}
-```
+callback  | [(Result:GetVideoCaptureSettingsResult)](#getvideocapturesettingsresult-object) => void | called with the result of the request which contains the current Overwolf capture settings |
 
 ## setVideoCaptureSettings(resolutionSettings, fps, callback)
 #### Version added: 0.117
 #### Permissions required: VideoCaptureSettings
-
 
 requires the |VideoCaptureSettings| permission.
 
@@ -291,7 +257,7 @@ Parameter          | Type                                                       
 -------------------| ----------------------------------------------------------------------| -------------------------------------------------------- |
 resolutionSettings | [overwolf.settings.ResolutionSettings](#resolutionsettings-enum) enum |                                                          |
 fps                | int                                                                   |                                                          |
-callback           | function                                                              |  A callback function which will be called with the status of the request|
+callback           | (Result) => void                                                      | called with the result of the request                    |
 
 ## getAudioCaptureSettings(callback)
 #### Version added: 0.117
@@ -300,7 +266,7 @@ callback           | function                                                   
 
 Parameter          | Type        | Description                                                              |
 -------------------| ------------| ------------------------------------------------------------------------ |
-callback           | function    |  A callback function which will be called with the status of the request |
+callback  | [(Result:GetAudioCaptureSettingsResult)](#getaudiocapturesettingsresult-object) => void | called with the status of the request |
 
 ## setAudioCaptureSettings(enableSound, enableMicrophone, callback)
 #### Version added: 0.117
@@ -311,7 +277,7 @@ Parameter          | Type                                                       
 -------------------| ----------------------------------------------------------------------| -------------------------------------------------------- |
 enableSound	       | bool                                                                  | The folder to use                                        |
 enableMicrophone   | bool                                                                  |                                                          |
-callback           | function                                                              |  A callback function which will be called with the status of the request|
+callback           | (Result) => void                                                      | called with the result of the request                    |
 
 ## getFpsSettings(callback)
 #### Version added: 0.89
@@ -334,15 +300,7 @@ This function is obsolete.
 Parameter          | Type               | Description                                                              |
 -------------------| -------------------| ------------------------------------------------------------------------ |
 settings           | [FpsSettings](#fpssettings-object) Object |  Container for the FPS settings                   |
-callback           | function           |  A callback function which will be called with the status of the request |
-
-#### Callback argument: Success
-
-```json
-{
-    "success": true,
-}
-```
+callback           | (Result) => void   | called with the result of the request                    |
 
 ## setExtensionSettings(extensionSettings, callback)
 #### Version added: 0.149
@@ -354,15 +312,7 @@ Supports enabling/disabling app auto-launach with Overwolf client and more.
 Parameter          | Type                                                                 | Description                                                              |
 -------------------| ---------------------------------------------------------------------| ------------------------------------------------------------------------ |
 extensionSettings  | [GeneralExtensionSettings](#generalextensionsettings-object) Object  |  Container for the extension settings                                   |
-callback           | function                                                             |  A callback function which will be called with the status of the request |
-
-#### Callback argument: Success
-
-```json
-{
-    "success": true,
-}
-```
+callback           | (Result) => void   | called with the result of the request                    |
 
 #### Notes
 
@@ -380,24 +330,23 @@ Parameter          | Type                                                       
 -------------------| ---------------------------------------------------------------------| ------------------------------------------------------------------------ |
 callback           | ([Result: GetExtensionSettingsResult](#getextensionsettingsresult-object)) => void  |  A callback function which will be called with the status of the request |
 
-
 ## onFpsSettingsChanged
 
 #### Version added: 0.89
 
-> Fired when fps settings are changed.
+> Fired when fps settings are changed, with the following structure: [FpsSettingsChangedEvent](#fpssettingschangedevent-object) Object.
 
 ## OnVideoCaptureSettingsChanged
 
 #### Version added: 0.117
 
-> Fired when video capture settings are changed.
+> Fired when video capture settings are changed, with the following structure: [VideoCaptureSettingsChangedEvent](#fpssettingschangedevent-object) Object.
 
 ## OnAudioCaptureSettingsChanged
 
 #### Version added: 0.117
 
-> Fired when audio capture settings are changed.
+> Fired when audio capture settings are changed, with the following structure: [AudioCaptureSettingsChangedEvent](#audiocapturesettingschangedevent-object) Object.
 
 ## OnHotKeyChanged
 
@@ -528,3 +477,127 @@ settings           | [GeneralExtensionSettings](#generalextensionsettings-object
     }
 }
 ```
+
+## FolderResult Object
+
+Parameter          | Type     | Description                                 |
+-------------------| ---------| ------------------------------------------- |
+*success*          | boolean  | inherited from the "Result" Object          |
+*error*            | string   | inherited from the "Result" Object          |
+path               | [Path](#path-object) Object   | Container for the path entity |
+
+#### Example data: Success
+
+```json
+{
+    "status": "success",
+    "path": { 
+        "Value": "E:\Video\Overwolf",
+        "Type": "System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089",
+        "Name": "Folders_VideoCapturesFolder"
+    }
+}
+```
+
+## Path Object
+
+> Container for the path entity
+
+Parameter          | Type     | Description                                 |
+-------------------| ---------| ------------------------------------------- |
+Value              | string   |                                             |
+Type               | string   |                                             |
+Name               | string   |                                             |
+
+#### Example data
+
+```json
+{
+    "Value": "E:\Video\Overwolf",
+    "Type": "System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089",
+    "Name": "Folders_VideoCapturesFolder"
+}
+```
+
+## GetVideoCaptureSettingsResult Object
+
+Parameter          | Type     | Description                                 |
+-------------------| ---------| ------------------------------------------- |
+*success*          | boolean  | inherited from the "Result" Object          |
+*error*            | string   | inherited from the "Result" Object          |
+encoder            | string   |                                             |
+preset             | string   |                                             |
+fps                | number   |                                             |
+resolution         | number   |                                             |
+
+#### Example data: Success
+
+```json
+{
+    "encoder": "NVIDIA_NVENC",
+    "preset": "DEFAULT",
+    "fps": 30,
+    "resolution": 2
+}
+```
+
+## GetAudioCaptureSettingsResult Object
+
+Parameter          | Type     | Description                                 |
+-------------------| ---------| ------------------------------------------- |
+*success*          | boolean  | inherited from the "Result" Object          |
+*error*            | string   | inherited from the "Result" Object          |
+sound_enabled      | boolean  |                                             |
+microphone_enabled | boolean  |                                             |
+
+#### Example data: Success
+
+```json
+{
+    "sound_enabled": true,
+    "microphone_enabled": false
+}
+```
+
+## FpsSettingsChangedEvent Object
+
+Parameter     | Type                                                              | Description     |
+--------------| ------------------------------------------------------------------|---------------- |
+setting       |  string   ("OnScreenLocation" | "Enabled" | "Scale" | "Offset")           |                 | 
+
+#### Event data example
+
+```json
+{ 
+   "setting":"OnScreenLocation"
+}
+```
+
+## VideoCaptureSettingsChangedEvent Object
+
+Parameter     | Type                                                              | Description     |
+--------------| ------------------------------------------------------------------|---------------- |
+setting       |  string   ("resolution" | "fps" | "unknown" | "Offset")           |                 | 
+
+#### Event data example
+
+```json
+{ 
+   "setting":"resolution"
+}
+```
+
+## AudioCaptureSettingsChangedEvent Object
+
+Parameter     | Type                                                              | Description     |
+--------------| ------------------------------------------------------------------|---------------- |
+setting       |  string   ("speakers" | "microphone" | "unknown" | "Offset")           |                 | 
+
+#### Event data example
+
+```json
+{ 
+   "setting":"speakers"
+}
+```
+
