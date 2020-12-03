@@ -30,6 +30,13 @@ You can also use the following helpful URLs to open the relevant Overwolf game s
 * [overwolf.settings.games.onOverlayEnablementChanged](#onoverlayenablementchanged)
 * [overwolf.settings.games.onAutoLaunchEnablementChanged](#onautolaunchenablementchanged)
 
+## Types Reference
+
+* [OverlayEnabledResult](#overlayenabledresult-object) Object
+* [AutolaunchEnabledResult](#autolaunchenabledresult-object) Object
+* [OverlayEnablementChangedEvent](#overlayenablementchangedevent-object) Object
+* [AutoLaunchEnablementChangedEvent](#autolaunchenablementchangedevent-object) Object
+
 ## getOverlayEnabled(gameClassId, callback)
 #### Version added: 0.112
 
@@ -38,15 +45,7 @@ You can also use the following helpful URLs to open the relevant Overwolf game s
 Parameter   | Type      | Description                                                             |
 ----------- | ----------| ----------------------------------------------------------------------- |
 gameClassId | int       | The game ID for which the flag is retrieved for                         |
-callback    | function  | A callback function which will be called with the status of the request |
-
-#### Callback argument: Success
-
-A callback function which will be called with the status of the request
-
-```json
-{ "status": "success", "gameClassId": 5426, "enabled": true}
-```
+callback    | ([Result: OverlayEnabledResult](#overlayenabledresult-object)) => void  |  A callback function which will be called with the status of the request |
 
 ## getAutoLaunchEnabled(gameClassId, callback)
 #### Version added: 0.112
@@ -56,20 +55,13 @@ A callback function which will be called with the status of the request
 Parameter   | Type      | Description                                                             |
 ----------- | ----------| ----------------------------------------------------------------------- |
 gameClassId | int       | The game ID for which the flag is retrieved for                         |
-callback    | function  | A callback function which will be called with the status of the request |
-
-#### Callback argument: Success
-
-A callback function which will be called with the status of the request
-
-```json
-{ "status": "success", "gameClassId": 5426, "autoLaunchEnabled": true }
-```
+callback    | ([Result: AutolaunchEnabledResult](#autolaunchenabledresult-object)) => void  |  A callback function which will be called with the status of the request |
 
 ## onOverlayEnablementChanged
 #### Version added: 0.124
 
-> Fired when the overlay is enabled or disabled for a game.
+> Fired when the overlay is enabled or disabled for a game, with the following structure: [OverlayEnablementChangedEvent](#overlayenablementchangedevent-object) Object
+
 
 #### Event Data Example: Success
 
@@ -80,10 +72,69 @@ A callback function which will be called with the status of the request
 ## onAutoLaunchEnablementChanged
 #### Version added: 0.124
 
-> Fired when auto launch is enabled or disabled for a game.
+> Fired when auto launch is enabled or disabled for a game, with the following structure: [AutoLaunchEnablementChangedEvent](#autolaunchenablementchangedevent-object) Object
 
-#### Event Data Example: Success
+
+## OverlayEnabledResult Object
+
+Parameter          | Type     | Description                                 |
+-------------------| ---------| ------------------------------------------- |
+*success*          | boolean  | inherited from the "Result" Object          |
+*error*            | string   | inherited from the "Result" Object          |
+enabled            | boolean  |                                             |
+
+#### Example data: Success
 
 ```json
+{
+    "enabled": true
+}
+```
+
+## AutolaunchEnabledResult Object
+
+Parameter          | Type     | Description                                 |
+-------------------| ---------| ------------------------------------------- |
+*success*          | boolean  | inherited from the "Result" Object          |
+*error*            | string   | inherited from the "Result" Object          |
+autoLaunchEnabled  | boolean  |                                             |
+
+#### Example data: Success
+
+```json
+{
+    "autoLaunchEnabled": true
+}
+```
+
+## OverlayEnablementChangedEvent Object
+
+Parameter     | Type                                                     | Description     |
+--------------| ---------------------------------------------------------|---------------- |
+gameId        |  number                                                  |                 | 
+enabled       |  boolean                                                  |                 | 
+
+#### Event data example
+
+```json
+
+{ "gameId": 7764, "enabled": false }
+
+```
+
+## AutoLaunchEnablementChangedEvent Object
+
+Parameter     | Type                                                     | Description     |
+--------------| ---------------------------------------------------------|---------------- |
+gameId        |  number                                                  |                 | 
+appId         |  string                                                  |                 | 
+enabled       |  boolean                                                 |                 | 
+
+
+#### Event data example
+
+```json
+
 { "gameId": 7764, "appId": "hffhbjnafafjnehejohpkfhjdenpifhihebpkhni", "enabled": false }
+
 ```
