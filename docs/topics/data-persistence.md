@@ -54,6 +54,8 @@ SessionStorage limits the scope of data saved in the current browser window to j
 
 LocalStorage, meanwhile, persists across windows and tabs within a single browser. So, if you have the same site open in three windows in Chrome, all could all share the same localStorage container.
 
+LocalStorage databases impose a size limit of ~50Mb (from OW v0.161. Before, the size was 5Mb).
+
 ### Usage
 
 Use the [Web Storage API](http://www.w3.org/TR/2013/REC-webstorage-20130730/) to set and get data:
