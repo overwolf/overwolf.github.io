@@ -136,7 +136,6 @@ deaths | players | Total number of player's deaths</br>`{"player":{"deaths":"1"}
 operator | players | The numeric ID of the chosen operator.<br>`{"player":{"operator":"514"}}` |  |   151.0 |
 
 
-
 #### `roster_XX` notes
 
 Each player joining the game will be reported in the following way:
@@ -151,8 +150,8 @@ As you can see, this object includes:
 As of version 159, you may detect the local player as a spectator when creating a custom match (Example: `{"info":{"player":{"team":"Spectator"}},"feature":"roster"}`).
 * is_local - local player or not (Boolean)
 * [operator](https://github.com/overwolf/community-gists/blob/master/siege_operator_ids.json) - The ID of the selected operator (available for team members only)
-* kills - Total amount of kills made by the player
-* deaths - Total amount of deaths
+* kills - Total amount of kills made by the player (<b>Important</b>: Kill score is being reset between rounds).
+* deaths - Total amount of deaths (<b>Important</b>: Death score is being reset between rounds).
 * score - Player score in the current round
 * health - Current health of the player (available for team members only)
 
@@ -168,9 +167,8 @@ If a new player replaces a leaver, a new “roster_XX” object will be assigned
 
 Event  | Event Data                                       |               Fired When                  | Notes     | Since GEP Ver. |
 -------| -------------------------------------------------| ----------------------------------------- | --------- | --------------|
-kill | null | Local player killed an enemy |                  |   123.0     |
+kill | null | Local player killed an enemy |                       |   123.0     |
 headshot | null | Local player killed an enemy with a headshot |   |   123.0     |
-
 
 ## `death`
 
@@ -178,7 +176,7 @@ headshot | null | Local player killed an enemy with a headshot |   |   123.0    
 
 Event  | Event Data                                       |               Fired When                  | Notes     | Since GEP Ver. |
 -------| -------------------------------------------------| ----------------------------------------- | --------- | --------------|
-knockedout | null | Local player’s hp reaches 20. |                  |   123.0     |
+knockedout | null | Local player’s hp reaches 20. | See [notes](#death-notes) |   123.0     |
 death | null |  Local player dies |                  |   123.0     |
 killer | Killer name</br>`{"name":"killer","data":"Pickyuser18857"}` |  The local player was killed by an enemy |                  |   123.0     |
 
