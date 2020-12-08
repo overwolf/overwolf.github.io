@@ -18,6 +18,9 @@ Use this API to open a local HTTP web-server and a WebSocket.
 * [overwolf.web.enums.HttpRequestMethods](#httprequestmethods-enum) enum
 * [overwolf.web.enums.MessageType](#messagetype-enum) enum
 * [overwolf.web.FetchHeader](#fetchheader-object) Object
+* [overwolf.web.CreateServerResult](#createserverresult-object) Object
+* [overwolf.web.SendHttpRequestResult](#sendhttprequestresult-object) Object
+* [overwolf.web.CreateWebSocketResult](#createwebsocketresult-object) Object
 
 ## createServer(port, callback)
 #### Version added: 0.93
@@ -29,28 +32,8 @@ Parameter | Type                  | Description                                 
 --------- | ----------------------| ----------------------------------------------------------------------- |
 port	  | int                   | The port to use                                                         |
 callback  | function              | A callback function which will be called with the status of the request |
+callback  | [CreateServerResult](#createserverresult-object) Object   | Container for the server object     |
 
-#### Callback argument: Success
-
-A callback function which returns the status of the request and an object with two fields: A status string and a server object.
-
-```json
-{
-    "status": "success",
-    "server": {
-        "onRequest": {}
-    }
-}
-```
-The server object is of type [overwolf.web.webserver](#).
-
-#### Callback argument: Failure
-
-A callback function which will be called with the status of the request
-
-```json
-{ "status": "error", "error": "something went wrong..." }
-```
 
 #### Usage Example
 
@@ -98,25 +81,12 @@ url		  | string                                                 |               
 method	  | [HttpRequestMethods](#httprequestmethods-enum) enum    |                                                                         |
 headers	  | [FetchHeader](#fetchheader-object)[]                   | an array of http headers (key,value) pairs. See [notes](#headers-notes) below |
 data	  | string (Optional)                                      | The data being sent to the server (relevant for POST/PUT requests)      |
-callback  | function                                               | A callback function which will be called with the status of the request |
+callback  | [SendHttpRequestResult](#sendhttprequestresult-object) Object   | Container for the send requests     |
 
 #### `headers` notes
 
 An example of [FetchHeader](#fetchheader-object) objects array:  `[{ key: "Content-Type", value: "application/json" }]`.
 
-#### Callback argument: Success
-
-```json
-{ "status": "success" }
-```
-
-The server object is of type [overwolf.web.webserver](#).
-
-#### Callback argument: Failure
-
-```json
-{ "status": "error", "error": "something went wrong..." }
-```
 
 ## createWebSocket(connectionParams, callback)
 #### Version added: 0.129
@@ -127,30 +97,7 @@ The server object is of type [overwolf.web.webserver](#).
 Parameter        | Type                                                   | Description                                                             |
 ---------------- | -------------------------------------------------------| ----------------------------------------------------------------------- |
 connectionParams | [WebSockcetConnectionParams](#websockcetconnectionparams-object) Object  |  connection params. See [notes](#connectionparams-notes) below   |
-callback         | function                                               | A callback function which will be called with the status of the request |
-
-#### Callback argument: Success
-
-This call returns a status and a WebSocket object.
-
-```json
-{
-     "status": "success",
-     "client": "IOverwolfWebSocket"
-}
-```
-
-The server object is of type [overwolf.web.webserver](overwolf-web-webserver).
-
-#### Callback argument: Failure
-
-```json
-{
-     "status": "error",
-     "error": "something went wrong...",
-     "client": ""
-}
-```
+callback         | [CreateWebSocketResult](#createwebsocketresult-object) Object                                               | A callback function which will be called with the status of the request |
 
 #### `connectionParams` notes
 
@@ -223,4 +170,67 @@ ping              |              |
 binary            |              |
 text              |              |
 
+
+#### Example data: Success
+
+```json
+
+```
+
+## CreateServerResult Object
+
+Parameter          | Type     | Description                                 |
+-------------------| ---------| ------------------------------------------- |
+*success*          | boolean  | inherited from the "Result" Object          |
+*error*            | string   | inherited from the "Result" Object          |
+server             | [WebServer](overwolf-web-webserver) object   |                                             |
+
+#### Example data: Success
+
+A callback function which returns the status of the request and an object with two fields: A status string and a server object.
+
+```json
+{
+    "status": "success",
+    "server": {
+        "onRequest": {}
+    }
+}
+```
+
+## SendHttpRequestResult Object
+
+Parameter          | Type     | Description                                 |
+-------------------| ---------| ------------------------------------------- |
+*success*          | boolean  | inherited from the "Result" Object          |
+*error*            | string   | inherited from the "Result" Object          |
+statusCode         | number   |                                             |
+data               | string   |                                             |
+
+#### Example data: Success
+
+```json
+{ "status": "success" }
+```
+
+## CreateWebSocketResult Object
+
+
+Parameter          | Type     | Description                                 |
+-------------------| ---------| ------------------------------------------- |
+*success*          | boolean  | inherited from the "Result" Object          |
+*error*            | string   | inherited from the "Result" Object          |
+client             | [WebSocket](overwolf-web-websocket) object   |                                             |
+
+#### Example data: Success
+
+```json
+This call returns a status and a WebSocket object.
+
+```json
+{
+     "status": "success",
+     "client": "IOverwolfWebSocket"
+}
+``````
 
