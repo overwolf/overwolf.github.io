@@ -152,7 +152,7 @@ As of version 159, you may detect the local player as a spectator when creating 
 * [operator](https://github.com/overwolf/community-gists/blob/master/siege_operator_ids.json) - The ID of the selected operator (available for team members only)
 * kills - Total amount of kills made by the player (<b>Important</b>: Kill score is being reset between rounds).
 * deaths - Total amount of deaths (<b>Important</b>: Death score is being reset between rounds).
-* score - Player score in the current round
+* score - Player score in the current round (<b>Important</b>: Score is being reset between rounds).
 * health - Current health of the player (available for team members only)
 
 When one of the players leaves the match, the relevant “roster_ XX” object will be updated to:
