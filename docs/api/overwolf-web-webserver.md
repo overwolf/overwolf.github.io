@@ -21,6 +21,10 @@ It's useful for case when you need to pass some data (ex: authentication token) 
 
 * [overwolf.web.webserver.onRequest](#onrequest)
 
+## Types Reference
+
+* [overwolf.web.websocket.RequestEvent](#requestevent-object) Object
+
 ## listen(callback)
 #### Version added: 0.93
 
@@ -30,7 +34,7 @@ If the port is already in use, or this instance is already listening, an error w
 
 Parameter | Type                       | Description                                                             |
 --------- | ---------------------------| ----------------------------------------------------------------------- |
-callback  | function                   | A callback function which will be called with the status of the request |
+callback  | (Result) => void           | A callback function which will be called with the status of the request    |
 
 #### Callback argument: Success
 
@@ -46,11 +50,21 @@ A callback function which will be called with the status of the request
 ## close()
 #### Version added: 0.93
 
-> Closes the web server. It can be re-opened again.
+> Closes the web server. It can be re-opened again. 
 
 ## onRequest
 #### Version added: 0.93
 
-> Fired when the web server receives an incoming request. 
+> Fired when the web server receives an incoming request, with the following structure: [RequestEvent](#requestevent-object) Object.
 
-The event contains three strings: ‘url’, ‘content’ and ‘contentType’.
+
+## RequestEvent Object
+#### Version added: 0.93
+
+> Container for the Requestevent object.
+
+Parameter   | Type                 | Description                          |
+----------- | ---------------------| ------------------------------------ |
+url         | string               |                                      |
+content     | string               |                                      |
+contentType | string               |                                      |
