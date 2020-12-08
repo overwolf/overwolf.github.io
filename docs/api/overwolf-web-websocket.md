@@ -24,6 +24,11 @@ Our web sockets by-pass cert checks for localhost WSS servers like LCU (league o
 * [overwolf.web.websocket.onOpen](#onopen)
 * [overwolf.web.websocket.onClosed](#onclosed)
 
+## Types Reference
+
+* [overwolf.web.websocket.ErrorEvent](#errorevent-object) Object
+* [overwolf.web.websocket.onClosedEvent](#onclosedevent-object) Object
+
 ## connect(callback)
 #### Version added: 0.129
 
@@ -31,9 +36,10 @@ Our web sockets by-pass cert checks for localhost WSS servers like LCU (league o
 
 If the port is already in use, or this instance is already listening, an error will be returned.
 
-Parameter | Type                       | Description                                                                |
---------- | ---------------------------| -------------------------------------------------------------------------- |
-callback  | function                   | A callback function which will be called with the status of the connection |
+Parameter | Type                       | Description                                |
+--------- | ---------------------------| ------------------------------------------ |
+callback  | (Result) => void           | called with the status of the connection   |
+
 
 ## send(message, callback)
 #### Version added: 0.129
@@ -45,7 +51,7 @@ If the port is already in use, or this instance is already listening, an error w
 Parameter | Type                       | Description                                                                |
 --------- | ---------------------------| -------------------------------------------------------------------------- |
 message	  | string                     | Message to send                                                            |
-callback  | function                   | A callback function which will be called with the status of the request    |
+callback  | (Result) => void           | A callback function which will be called with the status of the request    |
 
 ## close()
 #### Version added: 0.129
@@ -55,12 +61,12 @@ callback  | function                   | A callback function which will be calle
 ## onMessage()
 #### Version added: 0.129
 
-> Fired when the websocket receives an incoming message.
+> Fired when the websocket receives an incoming message, with the following structure: [MessageEvent](#messageevent-object) Object.
 
 ## onError()
 #### Version added: 0.129
 
-> Fired on error.
+> Fired on error, with the following structure: [ErrorEvent](#errorevent-object) Object.
 
 ## onOpen()
 #### Version added: 0.129
@@ -70,4 +76,34 @@ callback  | function                   | A callback function which will be calle
 ## onClosed()
 #### Version added: 0.129
 
-> Fired when connection closed.
+> Fired when connection closed, with the following structure: [onClosedEvent](#onclosedevent-object) Object.
+
+## MessageEvent Object
+#### Version added: 0.129
+
+> Container for the message event object.
+
+Parameter | Type                 | Description                          |
+--------- | ---------------------| ------------------------------------ |
+message   | string               |                                      |
+type      | [overwolf.web.enums.MessageType](overwolf-web#messagetype-enum) enum |                 |
+
+## ErrorEvent Object
+#### Version added: 0.129
+
+> Container for the error event object.
+
+Parameter | Type                 | Description                          |
+--------- | ---------------------| ------------------------------------ |
+message   | string               |                                      |
+exception | object               |                                      |
+
+## onClosedEvent Object
+#### Version added: 0.129
+
+> Container for the onClose event object.
+
+Parameter | Type                 | Description                          |
+--------- | ---------------------| ------------------------------------ |
+code      | number               |                                      |
+reason    | string               |                                      |

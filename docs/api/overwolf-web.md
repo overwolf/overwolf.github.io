@@ -16,6 +16,7 @@ Use this API to open a local HTTP web-server and a WebSocket.
 
 * [overwolf.web.WebSockcetConnectionParams](#websockcetconnectionparams-object) Object
 * [overwolf.web.enums.HttpRequestMethods](#httprequestmethods-enum) enum
+* [overwolf.web.enums.MessageType](#messagetype-enum) enum
 * [overwolf.web.FetchHeader](#fetchheader-object) Object
 
 ## createServer(port, callback)
@@ -139,7 +140,7 @@ This call returns a status and a WebSocket object.
 }
 ```
 
-The server object is of type [overwolf.web.webserver](#).
+The server object is of type [overwolf.web.webserver](overwolf-web-webserver).
 
 #### Callback argument: Failure
 
@@ -210,3 +211,16 @@ value       | string           |                               |
 ```json
 { "key": "Content-Type", "value": "application/json" }
 ```
+
+## MessageType enum
+#### Version added: 0.129
+
+> Describes different types on messages.
+
+Option            | Description  |
+----------------- | -------------|
+ping              |              |
+binary            |              |
+text              |              |
+
+
