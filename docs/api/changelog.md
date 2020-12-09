@@ -41,7 +41,10 @@ Note that the work on the documentation for this version is still in-progress.
 
 #### Dev Console
 
-* Crash logs are now available on the "Crash reports" section
+* Crash logs are now available on the "Crash reports" section.
+* Comments and Replies - It is now possible for app developers to reply to users' reviews (through the dev console). These replies will be visible to anyone who checks the reviews of the app.
+* Comments Info - While on the subject of comments and reviews, we are now also sending some additional information about users' Overwolf versions and modules and some basic system information such as DPI and resolution. This will help you and us diagnose some issues when they happen.
+* Test Subscription - It is now possible for app developers to see the test subscriptions they made in the Developers console. These will only be visible if the app developer is logged into Overwolf, and will be hidden otherwise, which allows the developer to play around with how the subscription flow looks and feels before adding the subscription feature.
 
 #### Game events
 
