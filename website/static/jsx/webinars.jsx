@@ -45,7 +45,7 @@ class Webinars extends React.Component {
             <p>Gil Ben-Itzhak, Overwolf's head of BI</p>
             <p>Reading the app's reports can be overwhelming. When understanding what to focus on and when, you can interpret it to more users and overall better performance.</p>
             <div className="video-container">
-                <iframe width="560" height="315" src="https://youtu.be/fJOFM1yuKMw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/fJOFM1yuKMw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
         </div>
         <div>
