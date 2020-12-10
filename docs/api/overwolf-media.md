@@ -415,7 +415,7 @@ WebCams           | [overwolf.media.Webcam](#webcam-object)[]  |                
 {
    "success": true,
    "status": "success", //deprecated and kept only for backward compatibility
-   "WebCams ": [
+   "webCams ": [
       {
         "name":"Webcam C170",
         "path":"\\\\?\\usb#vid_046d&pid_082b&mi_00#7&2c79cd0&0&0000#{65e8773d-8f56-11d0-a3b9-00a0c9223196}\\global",
