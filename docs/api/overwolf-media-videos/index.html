@@ -91,6 +91,8 @@
 <li><a href="#videocompositionsegment-object">VideoCompositionSegment</a> Object</li>
 <li><a href="#watermarkparams-object">WatermarkParams</a> Object</li>
 <li><a href="#watermarklocation-enum">WatermarkLocation</a> Enum</li>
+<li><a href="#getvideosresult-object">overwolf.media.GetVideosResult</a> Object</li>
+<li><a href="#getvideossizeresult-object">overwolf.media.GetVideosSizeResult</a> Object</li>
 </ul>
 <h2><a class="anchor" aria-hidden="true" id="createvideocompositionsourcevideourl-segments-callback"></a><a href="#createvideocompositionsourcevideourl-segments-callback" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>createVideoComposition(sourceVideoUrl, segments, callback)</h2>
 <h4><a class="anchor" aria-hidden="true" id="version-added-078"></a><a href="#version-added-078" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Version added: 0.78</h4>
@@ -104,7 +106,7 @@
 <tbody>
 <tr><td>sourceVideoUrl</td><td>string</td><td>The url of the source video in an <code>overwolf://media</code> form</td></tr>
 <tr><td>segments</td><td><a href="#videocompositionsegment-object">VideoCompositionSegment[]</a></td><td>A JSON containing a list of segments. See <a href="#segments-notes">notes below</a></td></tr>
-<tr><td>callback</td><td>function</td><td>A callback function which will be called with the status of the request and the url to the target video</td></tr>
+<tr><td>callback</td><td><a href="overwolf-media#fileresult-object">(Result: FileResult)</a> =&gt; void</td><td>Called with the status of the request and the url to the target video</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="segments-notes"></a><a href="#segments-notes" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>segments</code> notes</h4>
@@ -129,7 +131,7 @@
 <tbody>
 <tr><td>files</td><td>string[]</td><td>List of video files (the url of each video is  in the form of <code>overwolf://media or file://</code>)</td></tr>
 <tr><td>outputFile</td><td>string</td><td>The name of the output video file</td></tr>
-<tr><td>callback</td><td>function</td><td>A callback function which will be called with the status of the request and the url of the output video</td></tr>
+<tr><td>callback</td><td><a href="overwolf-media#fileresult-object">(Result: FileResult)</a> =&gt; void</td><td>Called with the status of the request and the url to the output video</td></tr>
 </tbody>
 </table>
 <h2><a class="anchor" aria-hidden="true" id="getvideoscallback"></a><a href="#getvideoscallback" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>getVideos(callback)</h2>
@@ -142,7 +144,7 @@
 <tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
 </thead>
 <tbody>
-<tr><td>callback</td><td>function</td><td>A callback function which will be called with the status of the request</td></tr>
+<tr><td>callback</td><td><a href="#getvideosresult-object">(Result: GetVideosResult)</a> =&gt; void</td><td>Called with the status of the request</td></tr>
 </tbody>
 </table>
 <h2><a class="anchor" aria-hidden="true" id="getvideossizecallback"></a><a href="#getvideossizecallback" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>getVideosSize(callback)</h2>
@@ -155,7 +157,7 @@
 <tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
 </thead>
 <tbody>
-<tr><td>callback</td><td>function</td><td>A callback with the videos size</td></tr>
+<tr><td>callback</td><td><a href="#getvideossizeresult-object">(Result: GetVideosSizeResult)</a> =&gt; void</td><td>Called with the status of the request  and the videos size</td></tr>
 </tbody>
 </table>
 <h2><a class="anchor" aria-hidden="true" id="deleteoldvideoskeepnewestxgbs-callback"></a><a href="#deleteoldvideoskeepnewestxgbs-callback" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>deleteOldVideos(keepNewestXGbs, callback)</h2>
@@ -169,7 +171,7 @@
 </thead>
 <tbody>
 <tr><td>keepNewestXGbs</td><td>int</td><td>Keep the newest X GBs of videos. Pass 0 to delete all videos</td></tr>
-<tr><td>callback</td><td>function</td><td>A callback function which will be called with the status of the request</td></tr>
+<tr><td>callback</td><td>(Result) =&gt; void</td><td>A callback function which will be called with the status of the request</td></tr>
 </tbody>
 </table>
 <h2><a class="anchor" aria-hidden="true" id="deletevideovideourl-callback"></a><a href="#deletevideovideourl-callback" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>deleteVideo(videoUrl, callback)</h2>
@@ -183,7 +185,7 @@
 </thead>
 <tbody>
 <tr><td>videoUrl</td><td>string</td><td>The Overwolf URL of the video to delete</td></tr>
-<tr><td>callback</td><td>function</td><td>A callback function which will be called with the status of the request</td></tr>
+<tr><td>callback</td><td>(Result) =&gt; void</td><td>A callback function which will be called with the status of the request</td></tr>
 </tbody>
 </table>
 <p>NOTE: If you are trying to delete a video which was already loaded into a video DOM element, deletion will fail since the file is locked by the Overwolf process. To avoid this error, set the video element's source to an empty string before trying to delete. See example below:</p>
@@ -205,11 +207,10 @@ overwolf.media.videos.deleteVideo(url);
 <tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
 </thead>
 <tbody>
-<tr><td>videoUrl</td><td>string</td><td>The url of the source video in an <a href="overwolf://media">overwolf://media</a> form.</td></tr>
+<tr><td>sourceVideoUrl</td><td>string</td><td>The url of the source video in an <a href="overwolf://media">overwolf://media</a> form.</td></tr>
 <tr><td>watermarkUrl</td><td>string</td><td>The url of the watermark video/image in an <a href="overwolf://media">overwolf://media</a> form.</td></tr>
-<tr><td>watermarkParams</td><td><a href="watermarkparams-object">WatermarkParams</a> object</td><td>use this object to mark the watermark</td></tr>
-<tr><td>videoUrl</td><td>string</td><td>The url of the source video in an <a href="overwolf://media">overwolf://media</a> form</td></tr>
-<tr><td>callback</td><td>function</td><td>A callback function which will be called with the status of the request and the url to the target video.</td></tr>
+<tr><td>watermarkParams</td><td><a href="#watermarkparams-object">WatermarkParams</a> object</td><td>use this object to mark the watermark</td></tr>
+<tr><td>callback</td><td><a href="overwolf-media#fileresult-object">(Result: FileResult)</a> =&gt; void</td><td>Called with the status of the request and the url to the output video</td></tr>
 </tbody>
 </table>
 <h2><a class="anchor" aria-hidden="true" id="watermarkparams-object"></a><a href="#watermarkparams-object" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>WatermarkParams Object</h2>
@@ -224,8 +225,8 @@ overwolf.media.videos.deleteVideo(url);
 <tbody>
 <tr><td>startTime</td><td>int</td><td>Segment start time (in milliseconds)</td></tr>
 <tr><td>endTime</td><td>int</td><td>Segment end time (in milliseconds)</td></tr>
-<tr><td>location</td><td><a href="#watermarklocation-enum">WatermarkLocation</a> enum</td><td>Segment end time (in milliseconds)</td></tr>
-<tr><td>scaleHeight</td><td>int</td><td>Segment end time (in milliseconds)</td></tr>
+<tr><td>location</td><td><a href="#watermarklocation-enum">WatermarkLocation</a> enum</td><td>The location of the watermark (in pixles)</td></tr>
+<tr><td>scaleHeight</td><td>int</td><td>scale height in pixels</td></tr>
 </tbody>
 </table>
 <h2><a class="anchor" aria-hidden="true" id="watermarklocation-enum"></a><a href="#watermarklocation-enum" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>WatermarkLocation enum</h2>
@@ -263,7 +264,33 @@ overwolf.media.videos.deleteVideo(url);
 <tr><td>endTime</td><td>int</td><td>Segment end time (in milliseconds)</td></tr>
 </tbody>
 </table>
-</span></div></article></div><div class="docLastUpdate"><em>Last updated on 2020-10-12 by eransharv</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/api/overwolf-media-replays"><span class="arrow-prev">← </span><span>overwolf.media.replays</span></a><a class="docs-next button" href="/docs/api/auto-highlights"><span>Highlights supported games</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#methods-reference">Methods Reference</a></li><li><a href="#types-reference">Types Reference</a></li><li><a href="#createvideocompositionsourcevideourl-segments-callback">createVideoComposition(sourceVideoUrl, segments, callback)</a></li><li><a href="#createvideocompositionfiles-outputfile-callback">createVideoComposition(files, outputFile, callback)</a></li><li><a href="#getvideoscallback">getVideos(callback)</a></li><li><a href="#getvideossizecallback">getVideosSize(callback)</a></li><li><a href="#deleteoldvideoskeepnewestxgbs-callback">deleteOldVideos(keepNewestXGbs, callback)</a></li><li><a href="#deletevideovideourl-callback">deleteVideo(videoUrl, callback)</a></li><li><a href="#addwatermarksourcevideourl-watermarkurl-watermarkparams-callback">addWatermark(sourceVideoUrl, watermarkUrl, watermarkParams, callback)</a></li><li><a href="#watermarkparams-object">WatermarkParams Object</a></li><li><a href="#watermarklocation-enum">WatermarkLocation enum</a></li><li><a href="#videocompositionsegment-object">VideoCompositionSegment Object</a></li></ul></nav></div><footer class="site-footer"><div class="container"><ul><li>Legal</li><li><a href="/docs/topics/legal-overview">Terms overview</a></li><li><a href="/docs/topics/legal-developers-terms">Developer&#x27;s terms</a></li><li><a href="/docs/topics/legal-app-terms">App terms</a></li><li><a href="http://www.overwolf.com/legal/" target="_blank">Overwolf terms</a></li><li><a href="http://www.overwolf.com/legal/#Privacy-policy" target="_blank">Overwolf Privacy policy</a></li></ul><ul><li>Support</li><li><a href=" https://discuss.developers.overwolf.com/" target="_blank">Questions and Answers</a></li><li><a href=" https://discord.gg/7256qS2" target="_blank">Discord</a></li><li><a href="/docs/support/contact-us#join-our-slack">Slack</a></li><li><a href="https://www.facebook.com/OverwolfDevs" target="_blank">Facebook</a></li><li><a href="https://twitter.com/OverwolfDevs" target="_blank">Twitter</a></li></ul><ul><li>Documentation</li><li><a href="/docs/api/changelog">Changelog</a></li><li><a href="/docs/api/overwolf-api-overview">API</a></li><li><a href="/docs/start/app-creation-process">App Creation Process</a></li><li><a href="/docs/topics/best-practices-overview">Best Practices</a></li><li><a href="/docs/status/all">Game Events status</a></li></ul><ul><li>Information</li><li><a href="http://www.overwolf.com/careers/">Careers</a></li><li><a href="https://play.overwolf.com/fund/" target="_blank">Fund</a></li><li><a href="https://medium.com/overwolf" target="_blank">Developers Blog</a></li><li><a href="https://www.overwolf.com/appstore" target="_blank">Overwolf Appstore</a></li><li><a href="https://brands.overwolf.com/" target="_blank">Advertise on Overwolf</a></li></ul></div></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+<h2><a class="anchor" aria-hidden="true" id="getvideosresult-object"></a><a href="#getvideosresult-object" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>GetVideosResult Object</h2>
+<h4><a class="anchor" aria-hidden="true" id="version-added-089-3"></a><a href="#version-added-089-3" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Version added: 0.89</h4>
+<blockquote>
+<p>Container for get videos result.</p>
+</blockquote>
+<table>
+<thead>
+<tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>videos</td><td>string[]</td><td></td></tr>
+</tbody>
+</table>
+<h2><a class="anchor" aria-hidden="true" id="getvideossizeresult-object"></a><a href="#getvideossizeresult-object" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>GetVideosSizeResult Object</h2>
+<h4><a class="anchor" aria-hidden="true" id="version-added-091-1"></a><a href="#version-added-091-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Version added: 0.91</h4>
+<blockquote>
+<p>Container for get videos size result.</p>
+</blockquote>
+<table>
+<thead>
+<tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>totalSizeGbs</td><td>number</td><td></td></tr>
+</tbody>
+</table>
+</span></div></article></div><div class="docLastUpdate"><em>Last updated on 2020-12-11 by eransharv</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/api/overwolf-media-replays"><span class="arrow-prev">← </span><span>overwolf.media.replays</span></a><a class="docs-next button" href="/docs/api/auto-highlights"><span>Highlights supported games</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#methods-reference">Methods Reference</a></li><li><a href="#types-reference">Types Reference</a></li><li><a href="#createvideocompositionsourcevideourl-segments-callback">createVideoComposition(sourceVideoUrl, segments, callback)</a></li><li><a href="#createvideocompositionfiles-outputfile-callback">createVideoComposition(files, outputFile, callback)</a></li><li><a href="#getvideoscallback">getVideos(callback)</a></li><li><a href="#getvideossizecallback">getVideosSize(callback)</a></li><li><a href="#deleteoldvideoskeepnewestxgbs-callback">deleteOldVideos(keepNewestXGbs, callback)</a></li><li><a href="#deletevideovideourl-callback">deleteVideo(videoUrl, callback)</a></li><li><a href="#addwatermarksourcevideourl-watermarkurl-watermarkparams-callback">addWatermark(sourceVideoUrl, watermarkUrl, watermarkParams, callback)</a></li><li><a href="#watermarkparams-object">WatermarkParams Object</a></li><li><a href="#watermarklocation-enum">WatermarkLocation enum</a></li><li><a href="#videocompositionsegment-object">VideoCompositionSegment Object</a></li><li><a href="#getvideosresult-object">GetVideosResult Object</a></li><li><a href="#getvideossizeresult-object">GetVideosSizeResult Object</a></li></ul></nav></div><footer class="site-footer"><div class="container"><ul><li>Legal</li><li><a href="/docs/topics/legal-overview">Terms overview</a></li><li><a href="/docs/topics/legal-developers-terms">Developer&#x27;s terms</a></li><li><a href="/docs/topics/legal-app-terms">App terms</a></li><li><a href="http://www.overwolf.com/legal/" target="_blank">Overwolf terms</a></li><li><a href="http://www.overwolf.com/legal/#Privacy-policy" target="_blank">Overwolf Privacy policy</a></li></ul><ul><li>Support</li><li><a href=" https://discuss.developers.overwolf.com/" target="_blank">Questions and Answers</a></li><li><a href=" https://discord.gg/7256qS2" target="_blank">Discord</a></li><li><a href="/docs/support/contact-us#join-our-slack">Slack</a></li><li><a href="https://www.facebook.com/OverwolfDevs" target="_blank">Facebook</a></li><li><a href="https://twitter.com/OverwolfDevs" target="_blank">Twitter</a></li></ul><ul><li>Documentation</li><li><a href="/docs/api/changelog">Changelog</a></li><li><a href="/docs/api/overwolf-api-overview">API</a></li><li><a href="/docs/start/app-creation-process">App Creation Process</a></li><li><a href="/docs/topics/best-practices-overview">Best Practices</a></li><li><a href="/docs/status/all">Game Events status</a></li></ul><ul><li>Information</li><li><a href="http://www.overwolf.com/careers/">Careers</a></li><li><a href="https://play.overwolf.com/fund/" target="_blank">Fund</a></li><li><a href="https://medium.com/overwolf" target="_blank">Developers Blog</a></li><li><a href="https://www.overwolf.com/appstore" target="_blank">Overwolf Appstore</a></li><li><a href="https://brands.overwolf.com/" target="_blank">Advertise on Overwolf</a></li></ul></div></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
                 document.addEventListener('keyup', function(e) {
                   if (e.target !== document.body) {
                     return;
