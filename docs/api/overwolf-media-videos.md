@@ -25,6 +25,8 @@ Please read all the info about video capture usage and options on our [video cap
 * [VideoCompositionSegment](#videocompositionsegment-object) Object
 * [WatermarkParams](#watermarkparams-object) Object
 * [WatermarkLocation](#watermarklocation-enum) Enum
+* [overwolf.media.GetVideosResult](#getvideosresult-object) Object
+* [overwolf.media.GetVideosSizeResult](#getvideossizeresult-object) Object
 
 ## createVideoComposition(sourceVideoUrl, segments, callback)
 #### Version added: 0.78
@@ -36,7 +38,7 @@ Parameter      | Type                                                           
 -------------- | ------------------------------------------------------------------| ------------------------------------------------------------------------------------------------------- |
 sourceVideoUrl | string                                                            | The url of the source video in an `overwolf://media` form                                               |
 segments	   | [VideoCompositionSegment[]](#videocompositionsegment-object)      | A JSON containing a list of segments. See [notes below](#segments-notes)                                |
-callback	   | function                                                          | A callback function which will be called with the status of the request and the url to the target video |
+callback       | [(Result: FileResult)](overwolf-media#fileresult-object) => void  | Called with the status of the request and the url to the target video                                   |
 
 #### `segments` notes
 
@@ -61,7 +63,7 @@ Parameter      | Type                                | Description              
 -------------- | ------------------------------------| ------------------------------------------------------------------------------------------------------- |
 files	       | string[]                            | List of video files (the url of each video is  in the form of `overwolf://media or file://`)            |
 outputFile	   | string                              | The name of the output video file                                                                       |
-callback	   | function                            | A callback function which will be called with the status of the request and the url of the output video |
+callback       | [(Result: FileResult)](overwolf-media#fileresult-object) => void  | Called with the status of the request and the url to the output video     |
 
 ## getVideos(callback)
 #### Version added: 0.89
@@ -70,7 +72,8 @@ callback	   | function                            | A callback function which wi
 
 Parameter      | Type                                | Description                                                                                             |
 -------------- | ------------------------------------| ------------------------------------------------------------------------------------------------------- |
-callback	   | function                            | A callback function which will be called with the status of the request                                 |
+callback       | [(Result: GetVideosResult)](#getvideosresult-object) => void  | Called with the status of the request                                         |
+
 
 ## getVideosSize(callback)
 #### Version added: 0.91
@@ -79,7 +82,7 @@ callback	   | function                            | A callback function which wi
 
 Parameter      | Type                                | Description                                                                                             |
 -------------- | ------------------------------------| ------------------------------------------------------------------------------------------------------- |
-callback	   | function                            | A callback with the videos size                                                                         |
+callback       | [(Result: GetVideosSizeResult)](#getvideossizeresult-object) => void  | Called with the status of the request  and the videos size            |
 
 ## deleteOldVideos(keepNewestXGbs, callback)
 #### Version added: 0.89
@@ -89,7 +92,7 @@ callback	   | function                            | A callback with the videos s
 Parameter      | Type                                | Description                                                                                             |
 -------------- | ------------------------------------| ------------------------------------------------------------------------------------------------------- |
 keepNewestXGbs | int                                 | Keep the newest X GBs of videos. Pass 0 to delete all videos                                            |
-callback	   | function                            | A callback function which will be called with the status of the request                                 |
+callback       | (Result) => void                    | A callback function which will be called with the status of the request                                 |
 
 ## deleteVideo(videoUrl, callback)
 #### Version added: 0.89
@@ -99,7 +102,7 @@ callback	   | function                            | A callback function which wi
 Parameter      | Type                                | Description                                                                                             |
 -------------- | ------------------------------------| ------------------------------------------------------------------------------------------------------- |
 videoUrl	   | string                              | The Overwolf URL of the video to delete                                                                 |
-callback	   | function                            |A callback function which will be called with the status of the request                                  |
+callback       | (Result) => void                    | A callback function which will be called with the status of the request                                 |
 
 NOTE: If you are trying to delete a video which was already loaded into a video DOM element, deletion will fail since the file is locked by the Overwolf process. To avoid this error, set the video element's source to an empty string before trying to delete. See example below:
 
@@ -120,11 +123,10 @@ overwolf.media.videos.deleteVideo(url);
 
 Parameter      | Type                                | Description                                                                                             |
 -------------- | ------------------------------------| ------------------------------------------------------------------------------------------------------- |
-videoUrl	   | string                              | The url of the source video in an overwolf://media form.                                                |
+sourceVideoUrl | string                              | The url of the source video in an overwolf://media form.                                                |
 watermarkUrl   | string                              | The url of the watermark video/image in an overwolf://media form.                                       |
-watermarkParams| [WatermarkParams](watermarkparams-object) object            | use this object to mark the watermark                                           |
-videoUrl	   | string                              | The url of the source video in an overwolf://media form                                                 |
-callback	   | function                            | A callback function which will be called with the status of the request and the url to the target video.|
+watermarkParams| [WatermarkParams](#watermarkparams-object) object   | use this object to mark the watermark                                                    |
+callback       | [(Result: FileResult)](overwolf-media#fileresult-object) => void  | Called with the status of the request and the url to the output video     |
 
 ## WatermarkParams Object
 #### Version added: 0.157
@@ -135,8 +137,9 @@ Parameter   | Type | Description                          |
 ----------- | -----| ------------------------------------ |
 startTime   | int  | Segment start time (in milliseconds) |
 endTime     | int  | Segment end time (in milliseconds)   |
-location    | [WatermarkLocation](#watermarklocation-enum) enum   | Segment end time (in milliseconds)   |
-scaleHeight | int                  | Segment end time (in milliseconds)   |
+location    | [WatermarkLocation](#watermarklocation-enum) enum   | The location of the watermark (in pixles)   |
+scaleHeight | int  | scale height in pixels               |
+
 
 ## WatermarkLocation enum
 #### Version added: 0.157
@@ -164,3 +167,21 @@ Parameter   | Type                 | Description                          |
 ----------- | ---------------------| ------------------------------------ |
 startTime   | int                  | Segment start time (in milliseconds) |
 endTime     | int                  | Segment end time (in milliseconds)   |
+
+## GetVideosResult Object
+#### Version added: 0.89
+
+> Container for get videos result.
+
+Parameter         | Type                                       | Description             |
+------------------| -------------------------------------------| ----------------------- |
+videos            | string[]                                   |                         | 
+
+## GetVideosSizeResult Object
+#### Version added: 0.91
+
+> Container for get videos size result.
+
+Parameter         | Type                                       | Description             |
+------------------| -------------------------------------------| ----------------------- |
+totalSizeGbs      | number                                     |                         | 

@@ -49,7 +49,6 @@ Use this API to capture a screenshot or create a GIF of the currently running ga
 * [overwolf.media.GetWebcamsResult](#getwebcamsresult-object) Object
 * [overwolf.media.Webcam](#webcam-object) Object
 
-
 ## In-memory screenshot overview
 
 Some methods in the overwold.media API allows you to take in-memory screenshot.
