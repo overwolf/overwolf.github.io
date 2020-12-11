@@ -128,6 +128,15 @@ watermarkUrl   | string                              | The url of the watermark 
 watermarkParams| [WatermarkParams](#watermarkparams-object) object   | use this object to mark the watermark                                                    |
 callback       | [(Result: FileResult)](overwolf-media#fileresult-object) => void  | Called with the status of the request and the url to the output video     |
 
+#### Usage example
+
+```js
+overwolf.media.videos.addWatermark("overwolf://media/videos/Settings/test.mp4",'overwolf://media/videos/Settings/giphy.gif', {
+	location: overwolf.media.videos.enums.WatermarkLocation.BottomLeft,
+    scaleHeight: 300
+    },console.log)
+```
+
 ## WatermarkParams Object
 #### Version added: 0.157
 

@@ -10,6 +10,10 @@ Provides information about the currently disabled services.
 
 * [overwolf.social.getDisabledServices()](#getdisabledservicescallback)
 
+## Types Reference
+
+* [GetDisabledServicesResult](#getDisabledServicesResult-object) Object
+
 ## getDisabledServices(callback)
 #### Version added: 0.126
 
@@ -19,20 +23,21 @@ Note: You can’t disable or enable sharing service from your app. It’s done f
 
 Parameter | Type                       | Description                                                             |
 --------- | ---------------------------| ----------------------------------------------------------------------- |
-callback  | function                   | returns a list of disabled services                                     |
+callback  | [(Result: GetDisabledServicesResult)](#getdisabledservicesresult-object) => void  | returns a list of disabled services     |
+
+
+## GetDisabledServicesResult Object
+#### Version added: 0.126
+
+> Container for GetDisabledServices result.
+
+Parameter         | Type                                       | Description             |
+------------------| -------------------------------------------| ----------------------- |
+disabled_services | string[]                                   |                         | 
 
 #### Callback argument: Success
 
-A callback function which will be called with the status of the request.
-
 ```json
 {"success":true,"disabled_services":["youtube"]}
- ```
-
- #### Callback argument: Failure
-
-A callback function which will be called with the status of the request.
-
-```json
-{ "status": "error", "reason": [description] } 
 ```
+
