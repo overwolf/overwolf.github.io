@@ -25,7 +25,7 @@
 		"Using Events":
 			["topics/events-overview","topics/using-events","topics/using-events-simulator", "topics/howto-check-events-status-from-app"],
 		"Developers Console":
-			["topics/submit-a-new-version","topics/submit-for-review", "topics/update-store-listing","topics/manage-subscriptions", "topics/users-and-permissions", "topics/crash-reports"],
+			["topics/submit-a-new-version","topics/submit-for-review", "topics/update-store-listing","topics/manage-subscriptions", "topics/users-and-permissions", "topics/crash-reports", "topics/rating-and-reviews"],
 		"Integrations":
 			["topics/app-analytics", "topics/login-with-twitch", "topics/events-SDK-for-game-developers", "topics/twitch-events-sdk-for-game-developers"],
 		"Request a Service":
