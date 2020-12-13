@@ -26,6 +26,12 @@ You can use [overwolf.social.getDisabledServices()](overwolf-social#getdisableds
 ## Types Reference
 
 * [overwolf.social.reddit.RedditShareParameters](#redditshareparameters-object) Object
+* [overwolf.social.reddit.Subreddit](#subreddit-object) Object
+* [overwolf.social.reddit.RedditAllowedPostTypes](#redditallowedposttypes-object) Object
+* [overwolf.social.reddit.GetUserInfoResult](#getuserinforesult-object) Object
+* [overwolf.social.reddit.SearchSubredditsResult](#searchsubredditsresult-object) Object
+* [overwolf.social.reddit.LoginStateChangedEvent](#loginstatechangedevent-object) Object
+* [overwolf.social.reddit.ShareFailedEvent](#sharefailedevent-object) Object
 
 ## performUserLogin()
 #### Version added: 0.128
@@ -41,23 +47,7 @@ There is no callback for this method and the only way to know if the user signed
 
 Parameter | Type                       | Description                                                             |
 --------- | ---------------------------| ----------------------------------------------------------------------- |
-callback  | function                   | Will contain the status of the request                                  |
-
-#### Callback argument: Success
-
-A callback function which will be called with the status of the request.
-
-```json
-{ "status": "success" }
- ```
-
- #### Callback argument: Failure
-
-A callback function which will be called with the status of the request.
-
-```json
-{ "status": "error", "reason": [description] } 
-```
+callback  | (Result) => void           | A callback function which will be called with the status of the request |
 
 ## getUserInfo(callback)
 #### Version added: 0.128
@@ -66,23 +56,7 @@ A callback function which will be called with the status of the request.
 
 Parameter | Type                       | Description                                                             |
 --------- | ---------------------------| ----------------------------------------------------------------------- |
-callback  | function                   | Will contain the status of the request                                  |
-
-#### Callback argument: Success
-
-A callback function which will be called with the status of the request.
-
-```json
-{ "userInfo": { "avatar": "http://abs.twimg.com/sticky/...", "displayName": "u/foobar", "name": "foobar" }}
- ```
-
- #### Callback argument: Failure
-
-A callback function which will be called with the status of the request.
-
-```json
-{ "status": "error", "reason": [description] } 
-```
+callback  | [(Result: GetUserInfoResult)](#getuserinforesult-object) => void   | A callback function which will be called with the status of the request |
 
 ## searchSubreddits(query, callback)
 #### Version added: 0.128
@@ -92,7 +66,8 @@ A callback function which will be called with the status of the request.
 Parameter | Type                       | Description                                                             |
 --------- | ---------------------------| ----------------------------------------------------------------------- |
 query     | string                     | The search string                                                       |
-callback  | function                   | Will contain an array of subreddits that match the search string        |
+callback  |  [(Result: SearchSubredditsResult)](#searchsubredditsresult-object) => void   | Will contain an array of subreddits that match the search string  |
+
 
 ## share(redditShareParameters, callback)
 #### Version added: 0.128
@@ -102,25 +77,10 @@ callback  | function                   | Will contain an array of subreddits tha
 Parameter             | Type                       | Description                                                           |
 --------------------- | ---------------------------| --------------------------------------------------------------------- |
 redditShareParameters | [RedditShareParameters](#redditshareparameters-object) Object | The share parameters               |
-callback              | function                   | Will contain the status of the request                                |
-
-#### Callback argument: Success
-
-A callback function which will be called with the status of the request.
-
-```json
-{ "status": "success" }
-```
-
- #### Callback argument: Failure
-
-A callback function which will be called with the status of the request.
-
-```json
-{ "status": "error", "reason": [description] } 
-```
+callback  | (Result) => void   | A callback function which will be called with the status of the request |
 
 Types of errors that can occur:
+
 * Disconnected (user isn't signed in)
 * MissingFile (trying to share a missing file)
 * UnsupportedFile (trying to share an unsupported format)
@@ -128,27 +88,12 @@ Types of errors that can occur:
 ## onLoginStateChanged
 #### Version added: 0.128
 
-> Fired when the user’s login state changes.
-
-#### Event Data Example: Success
-
-```json
-{ "state": "connected"/"disconnected" }
-```
+> Fired when the user’s login state changes, with the following structure: [LoginStateChangedEvent](#loginstatechangedevent-object) Object.
 
 ## onShareFailed
 #### Version added: 0.128
 
-> Fired when an error is returned from Reddit.
-
-#### Event Data Example: Success
-
-Currently, supported errors are:
-
-```json
-{ "error": "NotFound", "details": "that subreddit doesn't exist" }
-{ "error": "RateLimit", "details": "you are doing that too much. try again in 7 minutes." }
-```
+> Fired when an error is returned from Reddit, with the following structure: [ShareFailedEvent](#sharefailedevent-object) Object.
 
 ## RedditShareParameters Object
 #### Version added: 0.128
@@ -187,4 +132,90 @@ metadata (Optional)    | object  | Extra information about the game session     
     "mode": "tft"
   }
 }
+```
+
+## GetUserInfoResult Object
+#### Version added: 0.128
+
+> Container for get user info result.
+
+Parameter         | Type          | Description             |
+------------------| --------------| ----------------------- |
+userInfo          | object        |                         | 
+
+#### Example data: Success
+
+```json
+{
+  "userInfo": { "avatar": "http://abs.twimg.com/sticky/...", "id": "111111111112222222", "name": "full name", "screenName": "screenname123" }
+}
+```
+
+## SearchSubredditsResult Object
+#### Version added: 0.128
+
+> Container for search subreddits result.
+
+Parameter         | Type          | Description             |
+------------------| --------------| ----------------------- |
+subreddits        | [Subreddit](#subreddit-object)[]   |                         | 
+
+## Subreddit Object
+#### Version added: 0.128
+
+> Container object.
+
+Parameter              | Type    | Description                                                                 |
+---------------------- | --------| --------------------------------------------------------------------------- |
+subreddit              | number  |                                                                             |
+name                   | string  |                                                                             |
+displayName            | string  |                                                                             |
+allowedPostTypes       | [RedditAllowedPostTypes](#redditallowedposttypes-object) object  |                                                             |
+communityIcon          | number  |                                                                             |
+
+## RedditAllowedPostTypes Object
+#### Version added: 0.128
+
+> Container object.
+
+Parameter              | Type    | Description                                                                 |
+---------------------- | --------| --------------------------------------------------------------------------- |
+images                 | boolean |                                                                             |
+text                   | boolean |                                                                             |
+videos                 | boolean |                                                                             |
+links                  | boolean |                                                                             |
+spoilers               | boolean |                                                                             |
+
+## LoginStateChangedEvent Object
+#### Version added: 0.128
+
+> Container object.
+
+Parameter              | Type    | Description                                                                 |
+---------------------- | --------| --------------------------------------------------------------------------- |
+status                 | string  | "connected" / "disconnected"                                                |
+
+#### Event Data Example: Success
+
+```json
+{ "state": "connected"/"disconnected" }
+```
+
+## ShareFailedEvent Object
+#### Version added: 0.128
+
+> Container object.
+
+Parameter              | Type    | Description                                                                 |
+---------------------- | --------| --------------------------------------------------------------------------- |
+error                  | string  |                                                                             |
+details                | string  |                                                                             |
+
+#### Event Data Example: Success
+
+Currently, supported errors are:
+
+```json
+{ "error": "NotFound", "details": "that subreddit doesn't exist" }
+{ "error": "RateLimit", "details": "you are doing that too much. try again in 7 minutes." }
 ```
