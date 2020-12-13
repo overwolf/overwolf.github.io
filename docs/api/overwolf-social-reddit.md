@@ -28,9 +28,7 @@ You can use [overwolf.social.getDisabledServices()](overwolf-social#getdisableds
 * [overwolf.social.reddit.RedditShareParameters](#redditshareparameters-object) Object
 * [overwolf.social.reddit.Subreddit](#subreddit-object) Object
 * [overwolf.social.reddit.RedditAllowedPostTypes](#redditallowedposttypes-object) Object
-* [overwolf.social.reddit.GetUserInfoResult](#getuserinforesult-object) Object
 * [overwolf.social.reddit.SearchSubredditsResult](#searchsubredditsresult-object) Object
-* [overwolf.social.reddit.LoginStateChangedEvent](#loginstatechangedevent-object) Object
 * [overwolf.social.reddit.ShareFailedEvent](#sharefailedevent-object) Object
 
 ## performUserLogin()
@@ -56,7 +54,7 @@ callback  | (Result) => void           | A callback function which will be calle
 
 Parameter | Type                       | Description                                                             |
 --------- | ---------------------------| ----------------------------------------------------------------------- |
-callback  | [(Result: GetUserInfoResult)](#getuserinforesult-object) => void   | A callback function which will be called with the status of the request |
+callback  | [(Result: GetUserInfoResult)](overwolf-social#getuserinforesult-object) => void   | A callback function which will be called with the status of the request |
 
 ## searchSubreddits(query, callback)
 #### Version added: 0.128
@@ -88,7 +86,7 @@ Types of errors that can occur:
 ## onLoginStateChanged
 #### Version added: 0.128
 
-> Fired when the user’s login state changes, with the following structure: [LoginStateChangedEvent](#loginstatechangedevent-object) Object.
+> Fired when the user’s login state changes, with the following structure: [LoginStateChangedEvent](overwolf-social#loginstatechangedevent-object) Object.
 
 ## onShareFailed
 #### Version added: 0.128
@@ -134,23 +132,6 @@ metadata (Optional)    | object  | Extra information about the game session     
 }
 ```
 
-## GetUserInfoResult Object
-#### Version added: 0.128
-
-> Container for get user info result.
-
-Parameter         | Type          | Description             |
-------------------| --------------| ----------------------- |
-userInfo          | object        |                         | 
-
-#### Example data: Success
-
-```json
-{
-  "userInfo": { "avatar": "http://abs.twimg.com/sticky/...", "id": "111111111112222222", "name": "full name", "screenName": "screenname123" }
-}
-```
-
 ## SearchSubredditsResult Object
 #### Version added: 0.128
 
@@ -185,21 +166,6 @@ text                   | boolean |                                              
 videos                 | boolean |                                                                             |
 links                  | boolean |                                                                             |
 spoilers               | boolean |                                                                             |
-
-## LoginStateChangedEvent Object
-#### Version added: 0.128
-
-> Container object.
-
-Parameter              | Type    | Description                                                                 |
----------------------- | --------| --------------------------------------------------------------------------- |
-status                 | string  | "connected" / "disconnected"                                                |
-
-#### Event Data Example: Success
-
-```json
-{ "state": "connected"/"disconnected" }
-```
 
 ## ShareFailedEvent Object
 #### Version added: 0.128

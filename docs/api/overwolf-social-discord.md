@@ -26,6 +26,9 @@ You can use [overwolf.social.getDisabledServices()](overwolf-social#getdisableds
 ## Types Reference
 
 * [overwolf.social.discord.DiscordShareParameters](#discordshareparameters-object) Object
+* [overwolf.social.discord.GetGuildsResult](#getguildsresult-object) Object
+* [overwolf.social.discord.Role](#role-object) Object
+* [overwolf.social.discord.Guild](#guild-object) Object
 
 ## performUserLogin()
 #### Version added: 0.115
@@ -41,23 +44,7 @@ There is no callback for this method and the only way to know if the user signed
 
 Parameter | Type                       | Description                                                             |
 --------- | ---------------------------| ----------------------------------------------------------------------- |
-callback  | function                   | Will contain the status of the request                                  |
-
-#### Callback argument: Success
-
-A callback function which will be called with the status of the request.
-
-```json
-{ "status": "success" }
- ```
-
- #### Callback argument: Failure
-
-A callback function which will be called with the status of the request.
-
-```json
-{ "status": "error", "reason": [description] } 
-```
+callback  | (Result) => void           | A callback function which will be called with the status of the request |
 
 ## getUserInfo(callback)
 #### Version added: 0.115
@@ -66,92 +53,17 @@ A callback function which will be called with the status of the request.
 
 Parameter | Type                       | Description                                                             |
 --------- | ---------------------------| ----------------------------------------------------------------------- |
-callback  | function                   | Will contain the status of the request                                  |
-
-#### Callback argument: Success
-
-A callback function which will be called with the status of the request.
-
-```json
-{
-  "status": "success",
-  "userInfo": {
-    "id": "1111111111111",
-    "discriminator": 9999,
-    "username": "itay",
-    "email": "itay@overwolf.com",
-    "avatar": null,
-    "verified": true
-  }
-}
- ```
-
- #### Callback argument: Failure
-
-A callback function which will be called with the status of the request.
-
-```json
-{ "status": "error", "reason": [description] } 
-```
+callback  | [(Result: GetUserInfoResult)](overwolf-social#getuserinforesult-object) => void   | A callback function which will be called with the status of the request |
 
 ## getGuilds(callback)
 #### Version added: 0.115
 
 > If the user is currently logged into Discord, this will return the guilds that the user is registered to. Otherwise, an error is returned
 
-
 Parameter             | Type                       | Description                                                           |
 --------------------- | ---------------------------| --------------------------------------------------------------------- |
 discordShareParams    | [DiscordShareParameters](#discordshareparameters-object) Object        | The share parameters       |
 callback              | function                   | Will contain the status of the request                                |
-
-#### Callback argument: Success
-
-A callback function which will be called with the status of the request and the guilds that the user is registered to.
-
-```json
-{
-  "status": "success",
-  "guilds": [
-    {
-      "id": "310742576380772355",
-      "name": "Overwolf",
-      "icon": "https://cdn.discordapp.com/icons/310742576380772355/ff2c69e1b4b4d3563fdfbeb6e8a96d37.png",
-      "owner": false,
-      "roles": null
-    },
-    {
-      "id": "407312977017045002",
-      "name": "PUBGG",
-      "icon": "https://cdn.discordapp.com/icons/407312977017045002/032b6941ca08ffcd89bbcb7fb16b2217.png",
-      "owner": false,
-      "roles": null
-    },
-    {
-      "id": "407984551600717834",
-      "name": "Legendary Builds",
-      "icon": "https://cdn.discordapp.com/icons/407984551600717834/2fec1c02b5095bd7bce6208c2348e70c.png",
-      "owner": false,
-      "roles": null
-    },
-    {
-      "id": "418527834936573954",
-      "name": "Official PUBG API HQ",
-      "icon": "https://cdn.discordapp.com/icons/418527834936573954/372e39d981644b6345dc6d0c9b957f52.png",
-      "owner": false,
-      "roles": null
-    }
-  ]
-}
-```
-
- #### Callback argument: Failure
-
-A callback function which will be called with the status of the request.
-
-```json
-{ "status": "error", "reason": [description] } 
-```
 
 ## getChannels(guildId, callback)
 #### Version added: 0.115
@@ -173,23 +85,7 @@ callback  | function                   | Returns the channels of the given guild
 Parameter             | Type                       | Description                                                           |
 --------------------- | ---------------------------| --------------------------------------------------------------------- |
 discordShareParams    | [DiscordShareParameters](#discordshareparameters-object) Object        | The share parameters       |
-callback              | function                   | Will contain the status of the request                                |
-
-#### Callback argument: Success
-
-A callback function which will be called with the status of the request.
-
-```json
-{ "status": "success" }
-```
-
- #### Callback argument: Failure
-
-A callback function which will be called with the status of the request.
-
-```json
-{ "status": "error", "reason": [description] } 
-```
+callback  | (Result) => void   | A callback function which will be called with the status of the request |
 
 Types of errors that can occur:
 * Disconnected (user isn't signed in)
@@ -200,13 +96,7 @@ Types of errors that can occur:
 ## onLoginStateChanged
 #### Version added: 0.115
 
-> Fired when the user’s login state changes.
-
-#### Event Data Example: Success
-
-```json
-{ "state": "connected"/"disconnected" }
-```
+> Fired when the user’s login state changes, with the following structure: [LoginStateChangedEvent](overwolf-social#loginstatechangedevent-object) Object.
 
 ## DiscordShareParameters Object
 #### Version added: 0.115
@@ -227,3 +117,74 @@ metadata (Optional)    | Object  | Extra information about the game session     
 #### file note
 
 Since version 0.153, the "file" param is optional when calling [overwolf.social.discord.share()](sharediscordshareparameters-callback). Instead, you can use the "message" param to include a URL of a file that you want to share.
+
+## GetGuildsResult Object
+#### Version added: 0.128
+
+> Container for get Guilds result.
+
+Parameter         | Type          | Description             |
+------------------| --------------| ----------------------- |
+guilds            | [Guild](#guild-object)[]  |                         | 
+
+#### Example data: Success
+
+A callback function which will be called with the status of the request and the guilds that the user is registered to.
+
+```json
+{
+  "status": "success",
+  "guilds": [
+    {
+      "id": "310742576380772355",
+      "name": "Overwolf",
+      "icon": "https://cdn.discordapp.com/icons/310742576380772355/ff2c69e1b4b4d3563fdfbeb6e8a96d37.png",
+      "owner": false,
+      "roles": null
+    },
+    {
+      "id": "407312977017045002",
+      "name": "PUBGG",
+      "icon": "https://cdn.discordapp.com/icons/407312977017045002/032b6941ca08ffcd89bbcb7fb16b2217.png",
+      "owner": false,
+      "roles": null
+    }
+  ]
+}
+```
+
+## Guild Object
+#### Version added: 0.128
+
+> Container for the Guild entity.
+
+Parameter         | Type          | Description             |
+------------------| --------------| ----------------------- |
+icon              | string        |                         | 
+id                | string        |                         | 
+name              | string        |                         | 
+owner_id          | string        |                         | 
+roles             | [Role](#role-object)[]        |                         | 
+
+#### Example data
+
+```json
+{
+  "id": "310742576380772355",
+  "name": "Overwolf",
+  "icon": "https://cdn.discordapp.com/icons/310742576380772355/ff2c69e1b4b4d3563fdfbeb6e8a96d37.png",
+  "owner": false,
+  "roles": null
+}
+```
+
+## Role Object
+#### Version added: 0.128
+
+> Container for the Role entity.
+
+Parameter         | Type          | Description             |
+------------------| --------------| ----------------------- |
+id                | string        |                         | 
+name              | string        |                         | 
+permissions       | number        |                         | 

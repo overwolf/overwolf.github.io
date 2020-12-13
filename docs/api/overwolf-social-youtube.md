@@ -39,23 +39,7 @@ There is no callback for this method and the only way to know if the user signed
 
 Parameter | Type                       | Description                                                             |
 --------- | ---------------------------| ----------------------------------------------------------------------- |
-callback  | function                   | Will contain the status of the request                                  |
-
-#### Callback argument: Success
-
-A callback function which will be called with the status of the request.
-
-```json
-{ "status": "success" }
- ```
-
- #### Callback argument: Failure
-
-A callback function which will be called with the status of the request.
-
-```json
-{ "status": "error", "reason": [description] } 
-```
+callback  | (Result) => void           | A callback function which will be called with the status of the request |
 
 ## getUserInfo(callback)
 #### Version added: 0.125
@@ -64,23 +48,7 @@ A callback function which will be called with the status of the request.
 
 Parameter | Type                       | Description                                                             |
 --------- | ---------------------------| ----------------------------------------------------------------------- |
-callback  | function                   | Will contain the status of the request                                  |
-
-#### Callback argument: Success
-
-A callback function which will be called with the status of the request.
-
-```json
-{ "userInfo": { "avatar": "http://abs.twimg.com/sticky/...", "id": "111111111112222222", "name": "full name", "screenName": "screenname123"}}
- ```
-
- #### Callback argument: Failure
-
-A callback function which will be called with the status of the request.
-
-```json
-{ "status": "error", "reason": [description] } 
-```
+callback  | [(Result: GetUserInfoResult)](overwolf-social#getuserinforesult-object) => void   | A callback function which will be called with the status of the request |
 
 ## share(YouTubeShareParameters, callback)
 #### Version added: 0.125
@@ -92,23 +60,7 @@ A callback function which will be called with the status of the request.
 Parameter             | Type                       | Description                                                           |
 --------------------- | ---------------------------| --------------------------------------------------------------------- |
 youTubeShareParams    | [YouTubeShareParameters](#youtubeshareparameters-object) Object        | The share parameters       |
-callback              | function                   | Will contain the status of the request                                |
-
-#### Callback argument: Success
-
-A callback function which will be called with the status of the request.
-
-```json
-{ "status": "success" }
-```
-
- #### Callback argument: Failure
-
-A callback function which will be called with the status of the request.
-
-```json
-{ "status": "error", "reason": [description] } 
-```
+callback  | (Result) => void   | A callback function which will be called with the status of the request |
 
 Types of errors that can occur:
 * Disconnected (user isn't signed in)
@@ -118,13 +70,7 @@ Types of errors that can occur:
 ## onLoginStateChanged
 #### Version added: 0.125
 
-> Fired when the user’s login state changes.
-
-#### Event Data Example: Success
-
-```json
-{ "state": "connected"/"disconnected" }
-```
+> Fired when the user’s login state changes, with the following structure: [LoginStateChangedEvent](overwolf-social#loginstatechangedevent-object) Object.
 
 ## YouTubeShareParameters Object
 #### Version added: 0.125
