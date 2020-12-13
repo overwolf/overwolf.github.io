@@ -21,3 +21,9 @@ Replying to reviews engages your users and makes them feel valued, helping to bu
 
 * Personalizing your responses rather than using generic responses for similar reviews (e.g. "Hey Alex, thanks for your feedback.").
 * When you release an app update that fixes issues mentioned in older reviews, consider replying to relevant reviews to tell these users about the fix.
+
+## Manage your user's reviews
+
+From the dev console, you can find the "User feedback" on the left navigation bar.
+
+![welcome-screen](../assets/dev-console/rating-and-reviews/main-screen.png)
