@@ -28,7 +28,7 @@ From the dev console, you can find the "User feedback" on the left navigation ba
 
 ![welcome-screen](../assets/dev-console/rating-and-reviews/main-screen.png)
 
-* On the right side you can see the number of reviews, your avarage rating, and all the reviews in a list.
+On the right side you can see the number of reviews, your avarage rating, and all the reviews in a list.
 
 ### Reply to review
 
@@ -45,10 +45,10 @@ And in the dev console "rating and reviews" page, where you can reply to each fe
 #### Few important notes
 
 * Only one reply per review. This means, after adding your response, you can only remove or edit it. But not add another reply.
-* The user can't answer your reply, create a thread/discussion, etc.
+* The user can't answer your reply, create a thread/discussion, etc. (he can edit his review, though)
 * The user does not get any notification that you replied to his review. 
 
-Note that in the future, we will add the required features like sending the users notifications that they got our reply, etc.
+In future versions, we will add more features like user notifications when we reply to the review.
 
 ### Support info
 
@@ -56,7 +56,7 @@ When a user posts a review on your app, OW automatically pulls some basic info f
 
 ![feedback-info](../assets/dev-console/rating-and-reviews/feedback-info.png)
 
-As you can see, you can find here a lot of support information on the user that can be useful for your feedback:
+As you can see, you can find here a lot of support info on the user that enables you to provide higher quality and relevant reply to the review.
 
 * App version (known issue: currently, the store version of your app is presented here. We will fix it soon, as it should display the installed version).
 * OW version.
