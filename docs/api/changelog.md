@@ -32,7 +32,7 @@ Note that the work on the documentation for this version is still in-progress.
 #### Bug fixes
 
 * Call overwolf.media.replays.capture with futureDuration of -1.
-* Revmoe State 'open' when opening OSR windw.
+* Remove State 'open' when opening OSR windw.
 * Overwolf windows should no longer be considered as incognito.
 * Twitch login popup window: allow extension popup window to handle OW custom scheme (if origin is match externally connectable regex).
 * Block custom scheme when app ExternallyConnectable is null.
