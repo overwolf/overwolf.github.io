@@ -113,6 +113,9 @@ callback        |  [(Result: FileResult)](#fileresult-object) => void   | A func
 
 > Takes a window screenshot and calls the callback with the success status and the screenshot URL. The screenshot is saved to the screenshots folder.
 
+This function is to capture a native OS window by it's OS Title - for example - "Untitled - Notepad".  
+To capture one of your app's windows you should use HTML5 [Canvas.toDataURL()](https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement/toDataURL).
+
 Parameter       | Type       | Description                                                                                                              |
 ----------------| -----------| ------------------------------------------------------------------------------------------------------------------------ |
 windowName	    | string     | The window name                                                                                                          |
@@ -123,6 +126,9 @@ callback        |  [(Result: FileResult)](#fileresult-object) => void   | A func
 #### Version added: 0.117
 
 > Takes a window screenshot and calls the callback with the success status and the screenshot URL. The screenshot is saved to the `targetFolder` folder.
+
+This function is to capture a native OS window by it's OS Title - for example - "Untitled - Notepad".  
+To capture one of your app's windows you should use HTML5 [Canvas.toDataURL()](https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement/toDataURL).
 
 Parameter       | Type       | Description                                                                                                              |
 ----------------| -----------| ------------------------------------------------------------------------------------------------------------------------ |
