@@ -108,33 +108,33 @@ postMediaEvent	| bool       | set true to post [(onMediaEvent)](#onmediaevent)  
 targetFolder	| string     | Set target folder path for screenshot                                                                                    |
 callback        |  [(Result: FileResult)](#fileresult-object) => void   | A function called after the screenshot was taken                                                                         |
 
-## takeWindowsScreenshotByName(windowName, postMediaEvent, callback)
+## takeWindowsScreenshotByName(windowTitle, postMediaEvent, callback)
 #### Version added: 0.115
 
 > Takes a window screenshot and calls the callback with the success status and the screenshot URL. The screenshot is saved to the screenshots folder.
 
-This function is to capture a native OS window by it's OS Title - for example - "Untitled - Notepad".  
+This function is to capture a native OS window by it's OS window Title - for example - "Untitled - Notepad".  
 To capture one of your app's windows you should use HTML5 [Canvas.toDataURL()](https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement/toDataURL).
 
 Parameter       | Type       | Description                                                                                                              |
 ----------------| -----------| ------------------------------------------------------------------------------------------------------------------------ |
-windowName	    | string     | The window name                                                                                                          |
+windowTitle	    | string     | The OS window title                                                                                                          |
 postMediaEvent	| bool       | set true to post [(onMediaEvent)](#onmediaevent)                                                                         |
 callback        |  [(Result: FileResult)](#fileresult-object) => void   | A function called after the screenshot was taken                                                                         |
 
-## takeWindowsScreenshotByName(windowName, postMediaEvent, targetFolder, callback)
+## takeWindowsScreenshotByName(windowTitle, postMediaEvent, targetFolder, callback)
 #### Version added: 0.117
 
 > Takes a window screenshot and calls the callback with the success status and the screenshot URL. The screenshot is saved to the `targetFolder` folder.
 
-This function is to capture a native OS window by it's OS Title - for example - "Untitled - Notepad".  
+This function is to capture a native OS window by it's OS window Title - for example - "Untitled - Notepad".  
 To capture one of your app's windows you should use HTML5 [Canvas.toDataURL()](https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement/toDataURL).
 
 Parameter       | Type       | Description                                                                                                              |
 ----------------| -----------| ------------------------------------------------------------------------------------------------------------------------ |
-windowName	    | string     | The window name                                                                                                          |
+windowTitle	    | string     | The OS window title 
 postMediaEvent	| bool       | set true to post [(onMediaEvent)](#onmediaevent)                                                                         |
-targetFolder	| string     | Set target folder path for screenshot                                                                                    |
+targetFolder  	| string     | Set target folder path for screenshot                                                                                    |
 callback        |  [(Result: FileResult)](#fileresult-object) => void   | A function called after the screenshot was taken                                                                         |
 
 ## getScreenshotUrl(screenshotParams, callback)
