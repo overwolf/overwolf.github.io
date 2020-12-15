@@ -13,7 +13,8 @@ Please read all the info about hotkeys and how to use them in our [hotkeys best 
 ## Methods Reference
 
 * [overwolf.settings.hotkeys.get()](#getcallback)
-* [overwolf.settings.hotkeys.assign()](#assignassignhotkey-callback)
+* [overwolf.settings.hotkeys.assign()](#assignhotkey-callback)
+* [overwolf.settings.hotkeys.unassign()](#unassignhotkey-callback)
 
 ## Events Reference
 
@@ -28,19 +29,22 @@ Please read all the info about hotkeys and how to use them in our [hotkeys best 
 * [overwolf.settings.hotkeys.OnHoldEvent](#onholdevent-object) Object
 * [overwolf.settings.hotkeys.OnPressedEvent](#onpressedevent-object) Object
 * [overwolf.settings.hotkeys.OnChangedEvent](#onchangedevent-object) Object
+* [overwolf.settings.hotkeys.AssignHotkeyObject](#assignhotkeyobject-object) Object
+* [overwolf.settings.hotkeys.UnassignHotkeyObject](#unassignhotkeyobject-object) Object
+* [overwolf.settings.hotkeys.HotkeyModifiers](#hotkeymodifiers-object) Object
 
-## assign(assignHotkey, callback)
+## assign(hotkey, callback)
 #### Version added: 0.160
 #### Permissions required: Hotkeys
 
-> Assign / Unassign global hotkey for the current extension, OR, if a gameId is specified, assign/unassign a dedicated hotkey.
+> Assign global hotkey for the current extension, OR, if a gameId is specified, assign/unassign a dedicated hotkey.
 
 Parameter     | Type                  | Description                                                             |
 ------------- | ----------------------| ----------------------------------------------------------------------- |
-assignHotkey  | object                | The hotkey to assign                                                    |
+hotkey        | [AssignHotkeyObject](#assignhotkeyobject-object) object    | The hotkey to assign       |
 callback      | (Result) => void      | Reports success or failure                                              |
 
-#### Usage example: Assign hotkey
+#### Usage example
 
 ```js
 newHotkey = {
@@ -48,44 +52,31 @@ newHotkey = {
   gameId: <only use if applicable>,
   virtualKey: 75,
   modifiers: {
-    ctrl: true //shift, alt
+    ctrl: true //shift
   }
 };
 overwolf.settings.hotkeys.assign(newHotkey, console.log)
-
-removeHotkey = { 
-    name: <name-of hotkey>,
-    gameId: <only use if applicable>
- }
-
-overwolf.settings.hotkeys.assign(newHotkey, console.log) //assign the hotkey
-
-overwolf.settings.hotkeys.assign(removeHotkey, console.log) //unassign the hotkey
 ```
 
-## assign(assignHotkey, callback)
+## unassign(hotkey, callback)
 #### Version added: 0.160
 #### Permissions required: Hotkeys
 
-> Assign hotkey **for the current extension** in all the games.
+> Unassign global hotkey for the current extension, OR, if a gameId is specified, assign/unassign a dedicated hotkey.
 
 Parameter     | Type                  | Description                                                             |
 ------------- | ----------------------| ----------------------------------------------------------------------- |
-assignHotkey  | object                | The hotkey to assign                                                    |
+hotkey        | [UnassignHotkeyObject](#unassignhotkeyobject-object) object    | The hotkey to unassign       |
 callback      | (Result) => void      | Reports success or failure                                              |
 
 #### Usage example
 
 ```js
-newHotkey = {
-  name: <name-of hotkey>
+hotkey = {
+  name: <name-of hotkey>,
   gameId: <only use if applicable>
-  virtualKey: 75,
-  modifiers: {
-    ctrl: true
-  }
 };
-overwolf.settings.hotkeys.assign(newHotkey, console.log)
+overwolf.settings.hotkeys.unassign(hotkey, console.log)
 ```
 
 ## get(callback)
@@ -325,3 +316,36 @@ binding       |  string                                                         
    "binding":"Shift+F4" //the new hotkey
 }
 ```
+
+## AssignHotkeyObject Object
+#### Version added: 0.160
+
+> Container for assigned hotkey properties.
+
+Parameter       | Type                       | Description             |
+----------------| ---------------------------| ----------------------- |
+ name           | string                     |                         |
+ gameId         | number                     |                         |
+ modifiers      | [HotkeyModifiers](#hotkeymodifiers-object) object |                         |
+ virtualKey     | number                     |                         |
+
+## UnassignHotkeyObject Object
+#### Version added: 0.160
+
+> Container for unassigned hotkey properties.
+
+Parameter          | Type          | Description             |
+-------------------| --------------| ----------------------- |
+ name              | string        |                         |
+ gameId (optional) | number        |                         |
+
+## HotkeyModifiers Object
+#### Version added: 0.160
+
+> Container for hotkey modifiers.
+
+Parameter       | Type            | Description             |
+----------------| ----------------| ----------------------- |
+ ctrl           | boolean         |                         |
+ alt            | boolean         |                         |
+ shift          | boolean         |                         | 

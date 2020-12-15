@@ -14,7 +14,8 @@ Note that the work on the documentation for this version is still in-progress.
 
 #### API
 
-* Allow apps to [add/remove their hotkeys](overwolf-settings-hotkeys#assignassignhotkey-callback) right from the app (using a new API) without opening the OW client UI. You can assign only hotkeys that pre-defined in your manifest.
+* Allow apps to add/remove their hotkeys right from the app (using a new API) without opening the OW client UI. You can assign only hotkeys that pre-defined in your manifest.
+  * Use the new [overwolf.settings.hotkeys.assign()](overwolf-settings-hotkeys#assignhotkey-callback) and  [overwolf.settings.hotkeys.unassign()](overwolf-settings-hotkeys#unassignhotkey-callback) APIs.
 
 #### Platform
 
