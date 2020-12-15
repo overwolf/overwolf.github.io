@@ -8,9 +8,31 @@ Follow this entry for ongoing updates and changes to the project or tools.
 
 Here you can find our [Developers Roadmap](https://trello.com/b/1V10E4IB/overwolf-roadmap).
 
-## Version 0.159 (In-Progress)
+## Version 0.160 (In-Progress)
 
 Note that the work on the documentation for this version is still in-progress.
+
+#### API
+
+* Allow apps to [add/remove their hotkeys](overwolf-settings-hotkeys#assignassignhotkey-callback) right from the app (using a new API) without opening the OW client UI. You can assign only hotkeys that pre-defined in your manifest.
+
+#### Platform
+
+* Soon
+
+#### Bug fixes
+
+* Soon
+
+#### Dev Console
+
+* Soon
+
+#### Game Events
+
+* Soon
+
+## Version 0.159 (Dec. 2020)
 
 #### API
 

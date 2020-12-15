@@ -13,6 +13,7 @@ Please read all the info about hotkeys and how to use them in our [hotkeys best 
 ## Methods Reference
 
 * [overwolf.settings.hotkeys.get()](#getcallback)
+* [overwolf.settings.hotkeys.assign()](#assignassignhotkey-callback)
 
 ## Events Reference
 
@@ -28,6 +29,64 @@ Please read all the info about hotkeys and how to use them in our [hotkeys best 
 * [overwolf.settings.hotkeys.OnPressedEvent](#onpressedevent-object) Object
 * [overwolf.settings.hotkeys.OnChangedEvent](#onchangedevent-object) Object
 
+## assign(assignHotkey, callback)
+#### Version added: 0.160
+#### Permissions required: Hotkeys
+
+> Assign / Unassign hotkey **for the current extension** in all the games.
+
+Parameter     | Type                  | Description                                                             |
+------------- | ----------------------| ----------------------------------------------------------------------- |
+assignHotkey  | object                | The hotkey to assign                                                    |
+callback      | (Result) => void      | Reports success or failure                                              |
+
+#### Usage example: Assign hotkey
+
+```js
+newHotkey = {
+  name: <name-of hotkey>,
+  gameId: <only use if applicable>,
+  virtualKey: 75,
+  modifiers: {
+    ctrl: true //shift, alt
+  }
+};
+overwolf.settings.hotkeys.assign(newHotkey, console.log)
+
+removeHotkey = { 
+    name: <name-of hotkey>,
+    gameId: <only use if applicable>
+ }
+
+overwolf.settings.hotkeys.assign(newHotkey, console.log) //assign the hotkey
+
+overwolf.settings.hotkeys.assign(removeHotkey, console.log) //unassign the hotkey
+```
+
+## assign(assignHotkey, callback)
+#### Version added: 0.160
+#### Permissions required: Hotkeys
+
+> Assign hotkey **for the current extension** in all the games.
+
+Parameter     | Type                  | Description                                                             |
+------------- | ----------------------| ----------------------------------------------------------------------- |
+assignHotkey  | object                | The hotkey to assign                                                    |
+callback      | (Result) => void      | Reports success or failure                                              |
+
+#### Usage example
+
+```js
+newHotkey = {
+  name: <name-of hotkey>
+  gameId: <only use if applicable>
+  virtualKey: 75,
+  modifiers: {
+    ctrl: true
+  }
+};
+overwolf.settings.hotkeys.assign(newHotkey, console.log)
+```
 
 ## get(callback)
 #### Version added: 0.142
