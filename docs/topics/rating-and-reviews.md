@@ -1,6 +1,6 @@
 ---
 id: rating-and-reviews
-title: Rating and reviews managment
+title: Rating and reviews management
 sidebar_label: Rating and reviews
 ---
 
@@ -28,13 +28,13 @@ From the dev console, you can find the "User feedback" on the left navigation ba
 
 ![welcome-screen](../assets/dev-console/rating-and-reviews/main-screen.png)
 
-On the right side you can see the number of reviews, your avarage rating, and all the reviews in a list.
+On the right side you can see the number of reviews, your average rating, and all the reviews in a list.
 
 ### Reply to review
 
 Once the user adds a review on your app, it displays in both places.
 
-In the app's page on the OW AppStore:
+On the app's page on the OW AppStore:
 
 ![feedback-appstore](../assets/dev-console/rating-and-reviews/feedback-appstore.png)
 
