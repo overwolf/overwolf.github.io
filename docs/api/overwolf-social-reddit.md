@@ -209,3 +209,14 @@ id                     | string  |                                              
 text                   | string  |                                                                             |
 mod_only               | boolean |                                                                             |
 allowable_content      | string  |                                                                             |
+
+#### Data Example
+
+```json
+{
+  "id": "248a072-1e48-11e6-0e1648f491d1",
+  "text": "Highlight",
+  "mod_only": false,
+  "allowable_content": "all"
+}
+```
