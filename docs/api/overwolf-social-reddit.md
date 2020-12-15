@@ -17,6 +17,7 @@ You can use [overwolf.social.getDisabledServices()](overwolf-social#getdisableds
 * [overwolf.social.reddit.getUserInfo()](#getuserinfocallback)
 * [overwolf.social.reddit.searchSubreddits()](#searchsubredditsquery-callback)
 * [overwolf.social.reddit.share()](#shareredditshareparameters-callback)
+* [overwolf.social.reddit.getSubredditFlairs()](#getsubredditflairssubredditname-callback)
 
 ## Events Reference
 
@@ -83,6 +84,16 @@ Types of errors that can occur:
 * MissingFile (trying to share a missing file)
 * UnsupportedFile (trying to share an unsupported format)
 
+## getSubredditFlairs(subredditName, callback)
+#### Version added: 0.160
+
+> Returns a list of flairs supported by the given subreddit.
+
+Parameter     | Type               | Description                                                             |
+--------------| -------------------| ----------------------------------------------------------------------- |
+subredditName | string             | The given subreddit                                                     |
+callback      | (Result) => void   | A callback function which will be called with the status of the request |
+
 ## onLoginStateChanged
 #### Version added: 0.128
 
@@ -109,6 +120,7 @@ events (Optional)      | string  | An array of chronological events that occurre
 gameClassId (Optional) | int     | The associated game's class ID                                              |
 gameTitle (Optional)   | string  | The associated game's title                                                 |
 metadata (Optional)    | object  | Extra information about the game session                                    |
+flair_id (Optional)    | [Flair](#flair-object) object  |                                                                   |
 
 #### Data example
 
@@ -185,3 +197,15 @@ Currently, supported errors are:
 { "error": "NotFound", "details": "that subreddit doesn't exist" }
 { "error": "RateLimit", "details": "you are doing that too much. try again in 7 minutes." }
 ```
+
+## Flair Object
+#### Version added: 0.160
+
+> Container object.
+
+Parameter              | Type    | Description                                                                 |
+---------------------- | --------| --------------------------------------------------------------------------- |
+id                     | string  |                                                                             |
+text                   | string  |                                                                             |
+mod_only               | boolean |                                                                             |
+allowable_content      | string  |                                                                             |
