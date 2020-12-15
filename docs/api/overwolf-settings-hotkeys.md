@@ -33,7 +33,7 @@ Please read all the info about hotkeys and how to use them in our [hotkeys best 
 #### Version added: 0.160
 #### Permissions required: Hotkeys
 
-> Assign / Unassign hotkey **for the current extension** in all the games.
+> Assign / Unassign global hotkey for the current extension, OR, if a gameId is specified, assign/unassign a dedicated hotkey.
 
 Parameter     | Type                  | Description                                                             |
 ------------- | ----------------------| ----------------------------------------------------------------------- |
