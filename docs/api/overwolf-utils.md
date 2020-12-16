@@ -48,7 +48,10 @@ Common use cases:
 * [overwolf.utils.Display](#display-object) Object
 * [overwolf.utils.OpenFilePickerResult](#openfilepickerresult-object) Object
 * [overwolf.utils.OpenUrlOptions](#openurloptions-object) Object
-
+* [overwolf.utils.OpenFolderPickerResult](#openfolderpickerresult-object) Object
+* [overwolf.utils.IsTouchDeviceResult](#istouchdeviceresult-object) Object
+* [overwolf.utils.GetPeripheralsResult](#getperipheralsresult-object) Object
+* [overwolf.utils.IsMouseLeftButtonPressedResult](#ismouseleftbuttonpressedresult-object) Object
 
 ## placeOnClipboard(data)
 #### Version added: 0.80
@@ -153,18 +156,8 @@ multipleSelect (optional) | boolean                                             
 Parameter   | Type     | Description                     |
 ----------- | ---------| --------------------------------|
 initialPath | string   | The starting folder's path      |
-callback    | function | Called with the selected folder |
+callback    | ([Result: OpenFolderPickerResult](#openfolderpickerresult-object)) => void | Called with the selected folder |
 
-#### Callback argument: Success
-
-A callback function which will be called with the status of the request
-
-```json
-{
-    "status": "success",
-    "path": "E:/Downloads"
-}
-```
 
 ## openWindowsExplorer(url, callback)
 #### Version added: 0.91
@@ -174,7 +167,7 @@ A callback function which will be called with the status of the request
 Parameter   | Type     | Description                                 |
 ----------- | ---------| --------------------------------------------|
 url         | string   | An overwolf media url (overwolf://media/*)  |
-callback    | function | Called with the result of the request       |
+callback      | (Result) => void   | A callback function which will be called with the status of the request |
 
 ## isTouchDevice(callback)
 #### Version added: 0.91
@@ -183,18 +176,7 @@ callback    | function | Called with the result of the request       |
 
 Parameter   | Type     | Description                                 |
 ----------- | ---------| --------------------------------------------|
-callback    | function | Called with the result of the request       |
-
-#### Callback argument: Success
-
-A callback function which will be called with the status of the request
-
-```json
-{
-    "result": "success",
-    "isTouch": false
-}
-```
+callback    | ([Result: IsTouchDeviceResult](#istouchdeviceresult-object)) => void | Called with the result of the request |
 
 ## openUrlInDefaultBrowser(url)
 #### Version added: 0.91
@@ -245,7 +227,6 @@ Parameter | Type                                               | Description    
 --------- | ---------------------------------------------------| ----------------------------------- |
 callback  |  ([Result: GetSystemInformationResult](#getsysteminformationresult-object)) => void | Called with the system information  |
 
-
 ## getPeripherals(callback)
 #### Version added: 0.98
 
@@ -253,47 +234,7 @@ callback  |  ([Result: GetSystemInformationResult](#getsysteminformationresult-o
 
 Parameter | Type     | Description                                                                                  |
 --------- | ---------| -------------------------------------------------------------------------------------------- |
-callback  | function | Called with the system information                                                           |
-
-#### Callback argument: Success
-
-A callback function which will be called with the status of the request
-
-```json
-{  
-   "success":true,
-   "peripherals":{  
-      "inputDevices":[  
-         {  
-            "vendor":1133,
-            "id":49970,
-            "type":"MOUSE"
-         },
-         {  
-            "vendor":1133,
-            "id":49714,
-            "type":"KEYBOARD"
-         },
-         {  
-            "vendor":1133,
-            "id":49963,
-            "type":"KEYBOARD"
-         },
-         {  
-            "vendor":1133,
-            "id":49713,
-            "type":"MOUSE"
-         }
-      ],
-      "audioDevices":[  
-         "AMD High Definition Audio Device",
-         "Realtek High Definition Audio",
-         "Logitech G933 Gaming Headset"
-      ]
-   }
-}
-
-```
+callback  |  ([Result: GetPeripheralsResult](#getperipheralsresult-object)) => void | Called with the peripherals information  |
 
 ## openStoreOneAppPage(appId)
 #### Version added: 0.137
@@ -339,7 +280,7 @@ overwolf.utils.openStore({
 
 Parameter   | Type     | Description                                 |
 ----------- | ---------| --------------------------------------------|
-callback	   | function | A callback with the result                  |
+callback  |  ([Result: IsMouseLeftButtonPressedResult](#ismouseleftbuttonpressedresult-object)) => void | A callback with the result  |
 
 ## uploadClientLogs(callback)
 #### Version added: 0.111
@@ -352,7 +293,7 @@ This is an experimental function and shouldn’t be used without Overwolf’s pe
 
 Parameter   | Type     | Description                                 |
 ----------- | ---------| --------------------------------------------|
-callback	   | function | A callback with the result                  |
+callback    | (Result) => void   | A callback function which will be called with the status of the request |
 
 ## eStorePage enum
 
@@ -678,3 +619,82 @@ Right now "skip_in_game_notification" is the only option.
 Parameter                 | Type     | Description                   |
 ------------------------- | ---------| ----------------------------- |
 skip_in_game_notification | boolean  | When set to true,  Do not display the pop-up warning for the user if in-game  |
+
+## OpenFolderPickerResult Object
+
+Parameter          | Type     | Description                                 |
+-------------------| ---------| ------------------------------------------- |
+*success*          | boolean  | inherited from the "Result" Object          |
+*error*            | string   | inherited from the "Result" Object          |
+path               | string   | The selected folder                         |
+
+
+
+#### Example data: Success
+
+```json
+{
+    "status": "success",
+    "path": "E:/Downloads"
+}
+```
+
+## peripherals Object
+
+Parameter          | Type     | Description                                 |
+-------------------| ---------| ------------------------------------------- |
+inputDevices       | [InputDeviceInfo](#inputdeviceinfo-object)[]  |        |
+audioDevices       | string[] |                                             |
+
+## GetPeripheralsResult Object
+
+Parameter          | Type     | Description                                 |
+-------------------| ---------| ------------------------------------------- |
+*success*          | boolean  | inherited from the "Result" Object          |
+*error*            | string   | inherited from the "Result" Object          |
+peripherals        | [peripherals](#peripherals-object) object  |                              |
+
+#### Example data: Success
+
+```json
+{  
+   "success":true,
+   "peripherals":{  
+      "inputDevices":[  
+         {  
+            "vendor":1133,
+            "id":49970,
+            "type":"MOUSE"
+         },
+         {  
+            "vendor":1133,
+            "id":49714,
+            "type":"KEYBOARD"
+         },
+         {  
+            "vendor":1133,
+            "id":49963,
+            "type":"KEYBOARD"
+         },
+         {  
+            "vendor":1133,
+            "id":49713,
+            "type":"MOUSE"
+         }
+      ],
+      "audioDevices":[  
+         "AMD High Definition Audio Device",
+         "Realtek High Definition Audio",
+         "Logitech G933 Gaming Headset"
+      ]
+   }
+}
+```
+
+## IsMouseLeftButtonPressedResult Object
+
+Parameter          | Type     | Description                                 |
+-------------------| ---------| ------------------------------------------- |
+*success*          | boolean  | inherited from the "Result" Object          |
+*error*            | string   | inherited from the "Result" Object          |
+pressed            | boolean  |                              |
