@@ -72,7 +72,7 @@ This example demonstrates how to set the Tab key as a "hold" hotkey, but of cour
 ## Global Hotkeys
 
 For apps that work in more than one game or global apps there is an option to set hotkeys as global hotkeys.  
-This option is available only from the OW client UI. You cant set global hotkeys from the manifest or code.
+This option is available from the OW client UI or using the [API](../api/overwolf-settings-hotkeys#assignhotkey-callback).
 
 A screenshot from the OW client UI:
 
@@ -90,11 +90,13 @@ Listen to the [overwolf.settings.hotkeys.onChanged](../api/overwolf-settings-hot
 
 ## Reassign Hotkeys
 
-It is not possible to reassign hotkeys directly from apps, only through the Overwolf client settings page.
+It is possible to reassign hotkeys directly from apps, or, through the Overwolf client settings page.
 
 What you can do is place a direct link to the relevant settings page, into the hotkeys of a specific game settings, using:
 
 `overwolf://settings/games-overlay?hotkey=hotkey_name_in_manifest&gameId=game_id`
+
+Or, you can use the [overwolf.settings.hotkeys.assing()](../api/overwolf-settings-hotkeys#assignhotkey-callback) and [unassign()](../api/overwolf-settings-hotkeys#unassignhotkey-callback) APIs.
 
 > It's possible to even use left or right arrows for hotkeys. To do so, you should use the code `Left` or `Right` in your manifest.json.
 
