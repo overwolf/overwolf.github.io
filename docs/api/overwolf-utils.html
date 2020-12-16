@@ -111,6 +111,10 @@
 <li><a href="#display-object">overwolf.utils.Display</a> Object</li>
 <li><a href="#openfilepickerresult-object">overwolf.utils.OpenFilePickerResult</a> Object</li>
 <li><a href="#openurloptions-object">overwolf.utils.OpenUrlOptions</a> Object</li>
+<li><a href="#openfolderpickerresult-object">overwolf.utils.OpenFolderPickerResult</a> Object</li>
+<li><a href="#istouchdeviceresult-object">overwolf.utils.IsTouchDeviceResult</a> Object</li>
+<li><a href="#getperipheralsresult-object">overwolf.utils.GetPeripheralsResult</a> Object</li>
+<li><a href="#ismouseleftbuttonpressedresult-object">overwolf.utils.IsMouseLeftButtonPressedResult</a> Object</li>
 </ul>
 <h2><a class="anchor" aria-hidden="true" id="placeonclipboarddata"></a><a href="#placeonclipboarddata" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>placeOnClipboard(data)</h2>
 <h4><a class="anchor" aria-hidden="true" id="version-added-080"></a><a href="#version-added-080" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Version added: 0.80</h4>
@@ -243,16 +247,9 @@
 </thead>
 <tbody>
 <tr><td>initialPath</td><td>string</td><td>The starting folder's path</td></tr>
-<tr><td>callback</td><td>function</td><td>Called with the selected folder</td></tr>
+<tr><td>callback</td><td>(<a href="#openfolderpickerresult-object">Result: OpenFolderPickerResult</a>) =&gt; void</td><td>Called with the selected folder</td></tr>
 </tbody>
 </table>
-<h4><a class="anchor" aria-hidden="true" id="callback-argument-success-1"></a><a href="#callback-argument-success-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Callback argument: Success</h4>
-<p>A callback function which will be called with the status of the request</p>
-<pre><code class="hljs css language-json">{
-    <span class="hljs-attr">"status"</span>: <span class="hljs-string">"success"</span>,
-    <span class="hljs-attr">"path"</span>: <span class="hljs-string">"E:/Downloads"</span>
-}
-</code></pre>
 <h2><a class="anchor" aria-hidden="true" id="openwindowsexplorerurl-callback"></a><a href="#openwindowsexplorerurl-callback" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>openWindowsExplorer(url, callback)</h2>
 <h4><a class="anchor" aria-hidden="true" id="version-added-091-2"></a><a href="#version-added-091-2" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Version added: 0.91</h4>
 <blockquote>
@@ -264,7 +261,7 @@
 </thead>
 <tbody>
 <tr><td>url</td><td>string</td><td>An overwolf media url (<a href="overwolf://media/*">overwolf://media/*</a>)</td></tr>
-<tr><td>callback</td><td>function</td><td>Called with the result of the request</td></tr>
+<tr><td>callback</td><td>(Result) =&gt; void</td><td>A callback function which will be called with the status of the request</td></tr>
 </tbody>
 </table>
 <h2><a class="anchor" aria-hidden="true" id="istouchdevicecallback"></a><a href="#istouchdevicecallback" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>isTouchDevice(callback)</h2>
@@ -277,16 +274,9 @@
 <tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
 </thead>
 <tbody>
-<tr><td>callback</td><td>function</td><td>Called with the result of the request</td></tr>
+<tr><td>callback</td><td>(<a href="#istouchdeviceresult-object">Result: IsTouchDeviceResult</a>) =&gt; void</td><td>Called with the result of the request</td></tr>
 </tbody>
 </table>
-<h4><a class="anchor" aria-hidden="true" id="callback-argument-success-2"></a><a href="#callback-argument-success-2" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Callback argument: Success</h4>
-<p>A callback function which will be called with the status of the request</p>
-<pre><code class="hljs css language-json">{
-    <span class="hljs-attr">"result"</span>: <span class="hljs-string">"success"</span>,
-    <span class="hljs-attr">"isTouch"</span>: <span class="hljs-literal">false</span>
-}
-</code></pre>
 <h2><a class="anchor" aria-hidden="true" id="openurlindefaultbrowserurl"></a><a href="#openurlindefaultbrowserurl" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>openUrlInDefaultBrowser(url)</h2>
 <h4><a class="anchor" aria-hidden="true" id="version-added-091-4"></a><a href="#version-added-091-4" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Version added: 0.91</h4>
 <blockquote>
@@ -357,45 +347,9 @@
 <tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
 </thead>
 <tbody>
-<tr><td>callback</td><td>function</td><td>Called with the system information</td></tr>
+<tr><td>callback</td><td>(<a href="#getperipheralsresult-object">Result: GetPeripheralsResult</a>) =&gt; void</td><td>Called with the peripherals information</td></tr>
 </tbody>
 </table>
-<h4><a class="anchor" aria-hidden="true" id="callback-argument-success-3"></a><a href="#callback-argument-success-3" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Callback argument: Success</h4>
-<p>A callback function which will be called with the status of the request</p>
-<pre><code class="hljs css language-json">{  
-   <span class="hljs-attr">"success"</span>:<span class="hljs-literal">true</span>,
-   <span class="hljs-attr">"peripherals"</span>:{  
-      <span class="hljs-attr">"inputDevices"</span>:[  
-         {  
-            <span class="hljs-attr">"vendor"</span>:<span class="hljs-number">1133</span>,
-            <span class="hljs-attr">"id"</span>:<span class="hljs-number">49970</span>,
-            <span class="hljs-attr">"type"</span>:<span class="hljs-string">"MOUSE"</span>
-         },
-         {  
-            <span class="hljs-attr">"vendor"</span>:<span class="hljs-number">1133</span>,
-            <span class="hljs-attr">"id"</span>:<span class="hljs-number">49714</span>,
-            <span class="hljs-attr">"type"</span>:<span class="hljs-string">"KEYBOARD"</span>
-         },
-         {  
-            <span class="hljs-attr">"vendor"</span>:<span class="hljs-number">1133</span>,
-            <span class="hljs-attr">"id"</span>:<span class="hljs-number">49963</span>,
-            <span class="hljs-attr">"type"</span>:<span class="hljs-string">"KEYBOARD"</span>
-         },
-         {  
-            <span class="hljs-attr">"vendor"</span>:<span class="hljs-number">1133</span>,
-            <span class="hljs-attr">"id"</span>:<span class="hljs-number">49713</span>,
-            <span class="hljs-attr">"type"</span>:<span class="hljs-string">"MOUSE"</span>
-         }
-      ],
-      <span class="hljs-attr">"audioDevices"</span>:[  
-         <span class="hljs-string">"AMD High Definition Audio Device"</span>,
-         <span class="hljs-string">"Realtek High Definition Audio"</span>,
-         <span class="hljs-string">"Logitech G933 Gaming Headset"</span>
-      ]
-   }
-}
-
-</code></pre>
 <h2><a class="anchor" aria-hidden="true" id="openstoreoneapppageappid"></a><a href="#openstoreoneapppageappid" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>openStoreOneAppPage(appId)</h2>
 <h4><a class="anchor" aria-hidden="true" id="version-added-0137"></a><a href="#version-added-0137" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Version added: 0.137</h4>
 <blockquote>
@@ -445,7 +399,7 @@
 <tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
 </thead>
 <tbody>
-<tr><td>callback</td><td>function</td><td>A callback with the result</td></tr>
+<tr><td>callback</td><td>(<a href="#ismouseleftbuttonpressedresult-object">Result: IsMouseLeftButtonPressedResult</a>) =&gt; void</td><td>A callback with the result</td></tr>
 </tbody>
 </table>
 <h2><a class="anchor" aria-hidden="true" id="uploadclientlogscallback"></a><a href="#uploadclientlogscallback" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>uploadClientLogs(callback)</h2>
@@ -465,7 +419,7 @@
 <tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
 </thead>
 <tbody>
-<tr><td>callback</td><td>function</td><td>A callback with the result</td></tr>
+<tr><td>callback</td><td>(Result) =&gt; void</td><td>A callback function which will be called with the status of the request</td></tr>
 </tbody>
 </table>
 <h2><a class="anchor" aria-hidden="true" id="estorepage-enum"></a><a href="#estorepage-enum" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>eStorePage enum</h2>
@@ -804,7 +758,90 @@ For Example, if your primary monitor and secondary monitor are side by side, Y w
 <tr><td>skip_in_game_notification</td><td>boolean</td><td>When set to true,  Do not display the pop-up warning for the user if in-game</td></tr>
 </tbody>
 </table>
-</span></div></article></div><div class="docLastUpdate"><em>Last updated on 2020-10-12 by eransharv</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/api/overwolf-tobii"><span class="arrow-prev">← </span><span>overwolf.tobii</span></a><a class="docs-next button" href="/docs/api/overwolf-web"><span>overwolf.web</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#methods-reference">Methods Reference</a></li><li><a href="#types-reference">Types Reference</a></li><li><a href="#placeonclipboarddata">placeOnClipboard(data)</a></li><li><a href="#getfromclipboardcallback">getFromClipboard(callback)</a></li><li><a href="#getmonitorslistcallback">getMonitorsList(callback)</a></li><li><a href="#getwindowdpicallback">getWindowDPI(callback)</a></li><li><a href="#sendkeystrokekeystring">sendKeyStroke(keyString)</a></li><li><a href="#openfilepickerfilter-callback">openFilePicker(filter, callback)</a></li><li><a href="#openfilepickerfilter-initialpath-callback">openFilePicker(filter, initialPath, callback)</a></li><li><a href="#openfolderpickerinitialpath-callback">openFolderPicker(initialPath, callback)</a></li><li><a href="#openwindowsexplorerurl-callback">openWindowsExplorer(url, callback)</a></li><li><a href="#istouchdevicecallback">isTouchDevice(callback)</a></li><li><a href="#openurlindefaultbrowserurl">openUrlInDefaultBrowser(url)</a></li><li><a href="#openurlinoverwolfbrowserurl">openUrlInOverwolfBrowser(url)</a></li><li><a href="#openurlindefaultbrowserurlopenurloptions">openUrlInDefaultBrowser(url,openUrlOptions)</a></li><li><a href="#getsysteminformationcallback">getSystemInformation(callback)</a></li><li><a href="#getperipheralscallback">getPeripherals(callback)</a></li><li><a href="#openstoreoneapppageappid">openStoreOneAppPage(appId)</a></li><li><a href="#openstoreparam">openStore(param)</a></li><li><a href="#ismouseleftbuttonpressedcallback">isMouseLeftButtonPressed(callback)</a></li><li><a href="#uploadclientlogscallback">uploadClientLogs(callback)</a></li><li><a href="#estorepage-enum">eStorePage enum</a></li><li><a href="#openstoreparams-object">OpenStoreParams Object</a></li><li><a href="#getsysteminformationresult-object">GetSystemInformationResult Object</a></li><li><a href="#getmonitorslistresult-object">GetMonitorsListResult Object</a></li><li><a href="#gpuinfo-object">GPUInfo Object</a></li><li><a href="#harddiskinfo-object">HardDiskInfo Object</a></li><li><a href="#inputdeviceinfo-object">InputDeviceInfo Object</a></li><li><a href="#monitorinfo-object">MonitorInfo Object</a></li><li><a href="#display-object">Display Object</a></li><li><a href="#openfilepickerresult-object">OpenFilePickerResult Object</a></li><li><a href="#openurloptions-object">OpenUrlOptions Object</a></li></ul></nav></div><footer class="site-footer"><div class="container"><ul><li>Legal</li><li><a href="/docs/topics/legal-overview">Terms overview</a></li><li><a href="/docs/topics/legal-developers-terms">Developer&#x27;s terms</a></li><li><a href="/docs/topics/legal-app-terms">App terms</a></li><li><a href="http://www.overwolf.com/legal/" target="_blank">Overwolf terms</a></li><li><a href="http://www.overwolf.com/legal/#Privacy-policy" target="_blank">Overwolf Privacy policy</a></li></ul><ul><li>Support</li><li><a href=" https://discuss.developers.overwolf.com/" target="_blank">Questions and Answers</a></li><li><a href=" https://discord.gg/7256qS2" target="_blank">Discord</a></li><li><a href="/docs/support/contact-us#join-our-slack">Slack</a></li><li><a href="https://www.facebook.com/OverwolfDevs" target="_blank">Facebook</a></li><li><a href="https://twitter.com/OverwolfDevs" target="_blank">Twitter</a></li></ul><ul><li>Documentation</li><li><a href="/docs/api/changelog">Changelog</a></li><li><a href="/docs/api/overwolf-api-overview">API</a></li><li><a href="/docs/start/app-creation-process">App Creation Process</a></li><li><a href="/docs/topics/best-practices-overview">Best Practices</a></li><li><a href="/docs/status/all">Game Events status</a></li></ul><ul><li>Information</li><li><a href="http://www.overwolf.com/careers/">Careers</a></li><li><a href="https://play.overwolf.com/fund/" target="_blank">Fund</a></li><li><a href="https://medium.com/overwolf" target="_blank">Developers Blog</a></li><li><a href="https://www.overwolf.com/appstore" target="_blank">Overwolf Appstore</a></li><li><a href="https://brands.overwolf.com/" target="_blank">Advertise on Overwolf</a></li></ul></div></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+<h2><a class="anchor" aria-hidden="true" id="openfolderpickerresult-object"></a><a href="#openfolderpickerresult-object" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>OpenFolderPickerResult Object</h2>
+<table>
+<thead>
+<tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td><em>success</em></td><td>boolean</td><td>inherited from the &quot;Result&quot; Object</td></tr>
+<tr><td><em>error</em></td><td>string</td><td>inherited from the &quot;Result&quot; Object</td></tr>
+<tr><td>path</td><td>string</td><td>The selected folder</td></tr>
+</tbody>
+</table>
+<h4><a class="anchor" aria-hidden="true" id="example-data-success-4"></a><a href="#example-data-success-4" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Example data: Success</h4>
+<pre><code class="hljs css language-json">{
+    <span class="hljs-attr">"status"</span>: <span class="hljs-string">"success"</span>,
+    <span class="hljs-attr">"path"</span>: <span class="hljs-string">"E:/Downloads"</span>
+}
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="peripherals-object"></a><a href="#peripherals-object" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>peripherals Object</h2>
+<table>
+<thead>
+<tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>inputDevices</td><td><a href="#inputdeviceinfo-object">InputDeviceInfo</a>[]</td><td></td></tr>
+<tr><td>audioDevices</td><td>string[]</td><td></td></tr>
+</tbody>
+</table>
+<h2><a class="anchor" aria-hidden="true" id="getperipheralsresult-object"></a><a href="#getperipheralsresult-object" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>GetPeripheralsResult Object</h2>
+<table>
+<thead>
+<tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td><em>success</em></td><td>boolean</td><td>inherited from the &quot;Result&quot; Object</td></tr>
+<tr><td><em>error</em></td><td>string</td><td>inherited from the &quot;Result&quot; Object</td></tr>
+<tr><td>peripherals</td><td><a href="#peripherals-object">peripherals</a> object</td><td></td></tr>
+</tbody>
+</table>
+<h4><a class="anchor" aria-hidden="true" id="example-data-success-5"></a><a href="#example-data-success-5" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Example data: Success</h4>
+<pre><code class="hljs css language-json">{  
+   <span class="hljs-attr">"success"</span>:<span class="hljs-literal">true</span>,
+   <span class="hljs-attr">"peripherals"</span>:{  
+      <span class="hljs-attr">"inputDevices"</span>:[  
+         {  
+            <span class="hljs-attr">"vendor"</span>:<span class="hljs-number">1133</span>,
+            <span class="hljs-attr">"id"</span>:<span class="hljs-number">49970</span>,
+            <span class="hljs-attr">"type"</span>:<span class="hljs-string">"MOUSE"</span>
+         },
+         {  
+            <span class="hljs-attr">"vendor"</span>:<span class="hljs-number">1133</span>,
+            <span class="hljs-attr">"id"</span>:<span class="hljs-number">49714</span>,
+            <span class="hljs-attr">"type"</span>:<span class="hljs-string">"KEYBOARD"</span>
+         },
+         {  
+            <span class="hljs-attr">"vendor"</span>:<span class="hljs-number">1133</span>,
+            <span class="hljs-attr">"id"</span>:<span class="hljs-number">49963</span>,
+            <span class="hljs-attr">"type"</span>:<span class="hljs-string">"KEYBOARD"</span>
+         },
+         {  
+            <span class="hljs-attr">"vendor"</span>:<span class="hljs-number">1133</span>,
+            <span class="hljs-attr">"id"</span>:<span class="hljs-number">49713</span>,
+            <span class="hljs-attr">"type"</span>:<span class="hljs-string">"MOUSE"</span>
+         }
+      ],
+      <span class="hljs-attr">"audioDevices"</span>:[  
+         <span class="hljs-string">"AMD High Definition Audio Device"</span>,
+         <span class="hljs-string">"Realtek High Definition Audio"</span>,
+         <span class="hljs-string">"Logitech G933 Gaming Headset"</span>
+      ]
+   }
+}
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="ismouseleftbuttonpressedresult-object"></a><a href="#ismouseleftbuttonpressedresult-object" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>IsMouseLeftButtonPressedResult Object</h2>
+<table>
+<thead>
+<tr><th>Parameter</th><th>Type</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td><em>success</em></td><td>boolean</td><td>inherited from the &quot;Result&quot; Object</td></tr>
+<tr><td><em>error</em></td><td>string</td><td>inherited from the &quot;Result&quot; Object</td></tr>
+<tr><td>pressed</td><td>boolean</td><td></td></tr>
+</tbody>
+</table>
+</span></div></article></div><div class="docLastUpdate"><em>Last updated on 2020-12-16 by eransharv</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/api/overwolf-tobii"><span class="arrow-prev">← </span><span>overwolf.tobii</span></a><a class="docs-next button" href="/docs/api/overwolf-web"><span>overwolf.web</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#methods-reference">Methods Reference</a></li><li><a href="#types-reference">Types Reference</a></li><li><a href="#placeonclipboarddata">placeOnClipboard(data)</a></li><li><a href="#getfromclipboardcallback">getFromClipboard(callback)</a></li><li><a href="#getmonitorslistcallback">getMonitorsList(callback)</a></li><li><a href="#getwindowdpicallback">getWindowDPI(callback)</a></li><li><a href="#sendkeystrokekeystring">sendKeyStroke(keyString)</a></li><li><a href="#openfilepickerfilter-callback">openFilePicker(filter, callback)</a></li><li><a href="#openfilepickerfilter-initialpath-callback">openFilePicker(filter, initialPath, callback)</a></li><li><a href="#openfolderpickerinitialpath-callback">openFolderPicker(initialPath, callback)</a></li><li><a href="#openwindowsexplorerurl-callback">openWindowsExplorer(url, callback)</a></li><li><a href="#istouchdevicecallback">isTouchDevice(callback)</a></li><li><a href="#openurlindefaultbrowserurl">openUrlInDefaultBrowser(url)</a></li><li><a href="#openurlinoverwolfbrowserurl">openUrlInOverwolfBrowser(url)</a></li><li><a href="#openurlindefaultbrowserurlopenurloptions">openUrlInDefaultBrowser(url,openUrlOptions)</a></li><li><a href="#getsysteminformationcallback">getSystemInformation(callback)</a></li><li><a href="#getperipheralscallback">getPeripherals(callback)</a></li><li><a href="#openstoreoneapppageappid">openStoreOneAppPage(appId)</a></li><li><a href="#openstoreparam">openStore(param)</a></li><li><a href="#ismouseleftbuttonpressedcallback">isMouseLeftButtonPressed(callback)</a></li><li><a href="#uploadclientlogscallback">uploadClientLogs(callback)</a></li><li><a href="#estorepage-enum">eStorePage enum</a></li><li><a href="#openstoreparams-object">OpenStoreParams Object</a></li><li><a href="#getsysteminformationresult-object">GetSystemInformationResult Object</a></li><li><a href="#getmonitorslistresult-object">GetMonitorsListResult Object</a></li><li><a href="#gpuinfo-object">GPUInfo Object</a></li><li><a href="#harddiskinfo-object">HardDiskInfo Object</a></li><li><a href="#inputdeviceinfo-object">InputDeviceInfo Object</a></li><li><a href="#monitorinfo-object">MonitorInfo Object</a></li><li><a href="#display-object">Display Object</a></li><li><a href="#openfilepickerresult-object">OpenFilePickerResult Object</a></li><li><a href="#openurloptions-object">OpenUrlOptions Object</a></li><li><a href="#openfolderpickerresult-object">OpenFolderPickerResult Object</a></li><li><a href="#peripherals-object">peripherals Object</a></li><li><a href="#getperipheralsresult-object">GetPeripheralsResult Object</a></li><li><a href="#ismouseleftbuttonpressedresult-object">IsMouseLeftButtonPressedResult Object</a></li></ul></nav></div><footer class="site-footer"><div class="container"><ul><li>Legal</li><li><a href="/docs/topics/legal-overview">Terms overview</a></li><li><a href="/docs/topics/legal-developers-terms">Developer&#x27;s terms</a></li><li><a href="/docs/topics/legal-app-terms">App terms</a></li><li><a href="http://www.overwolf.com/legal/" target="_blank">Overwolf terms</a></li><li><a href="http://www.overwolf.com/legal/#Privacy-policy" target="_blank">Overwolf Privacy policy</a></li></ul><ul><li>Support</li><li><a href=" https://discuss.developers.overwolf.com/" target="_blank">Questions and Answers</a></li><li><a href=" https://discord.gg/7256qS2" target="_blank">Discord</a></li><li><a href="/docs/support/contact-us#join-our-slack">Slack</a></li><li><a href="https://www.facebook.com/OverwolfDevs" target="_blank">Facebook</a></li><li><a href="https://twitter.com/OverwolfDevs" target="_blank">Twitter</a></li></ul><ul><li>Documentation</li><li><a href="/docs/api/changelog">Changelog</a></li><li><a href="/docs/api/overwolf-api-overview">API</a></li><li><a href="/docs/start/app-creation-process">App Creation Process</a></li><li><a href="/docs/topics/best-practices-overview">Best Practices</a></li><li><a href="/docs/status/all">Game Events status</a></li></ul><ul><li>Information</li><li><a href="http://www.overwolf.com/careers/">Careers</a></li><li><a href="https://play.overwolf.com/fund/" target="_blank">Fund</a></li><li><a href="https://medium.com/overwolf" target="_blank">Developers Blog</a></li><li><a href="https://www.overwolf.com/appstore" target="_blank">Overwolf Appstore</a></li><li><a href="https://brands.overwolf.com/" target="_blank">Advertise on Overwolf</a></li></ul></div></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
                 document.addEventListener('keyup', function(e) {
                   if (e.target !== document.body) {
                     return;
