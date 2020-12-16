@@ -96,7 +96,7 @@ What you can do is place a direct link to the relevant settings page, into the h
 
 `overwolf://settings/games-overlay?hotkey=hotkey_name_in_manifest&gameId=game_id`
 
-Or, you can use the [overwolf.settings.hotkeys.assing()](../api/overwolf-settings-hotkeys#assignhotkey-callback) and [unassign()](../api/overwolf-settings-hotkeys#unassignhotkey-callback) APIs.
+Or, you can use the [overwolf.settings.hotkeys.assign()](../api/overwolf-settings-hotkeys#assignhotkey-callback) and [unassign()](../api/overwolf-settings-hotkeys#unassignhotkey-callback) APIs.
 
 > It's possible to even use left or right arrows for hotkeys. To do so, you should use the code `Left` or `Right` in your manifest.json.
 
