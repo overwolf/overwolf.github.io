@@ -16,7 +16,7 @@ Note that the work on the documentation for this version is still in-progress.
 
 * Allow apps to add/remove their hotkeys right from the app (using a new API) without opening the OW client UI. You can assign only hotkeys that pre-defined in your manifest.
   * Use the new [overwolf.settings.hotkeys.assign()](overwolf-settings-hotkeys#assignhotkey-callback) and  [overwolf.settings.hotkeys.unassign()](overwolf-settings-hotkeys#unassignhotkey-callback) APIs.
-* 
+* Reddit presents new required param for sharing: added a new share param called [Flair](overwolf-social-reddit#flair-object),  and a new function: [overwolf.social.reddit.getSubredditFlairs()](overwolf-social-reddit#getsubredditflairssubredditname-callback).
 
 
 #### Platform
@@ -25,7 +25,7 @@ Note that the work on the documentation for this version is still in-progress.
 
 #### Bug fixes
 
-* We fixed the Reddit share: added a new share param called [Flair](overwolf-social-reddit#flair-object),  and a new function: [overwolf.social.reddit.getSubredditFlairs()](overwolf-social-reddit#getsubredditflairssubredditname-callback).
+* Soon
 
 #### Dev Console
 
