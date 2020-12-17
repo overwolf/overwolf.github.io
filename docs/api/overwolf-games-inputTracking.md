@@ -71,11 +71,17 @@ In order to get the information:
 
 The data includes the mouse position and a boolean stating whether the click was in the game or on an Overwolf widget (onGame).
 
-**Note that you need to call [init()](#initcallback) before calling this function**, OR, register to one of the events: [onMouseUp](#onmouseup), [onMouseDown](#onmousedown), [onMouseWheel](#onmousewheel).
-
 Parameter | Type                  | Description                              |
 --------- | ----------------------| ---------------------------------------- |
 callback  | [(Result:GetMousePositionResult)](#getmousepositionresult-object) => void | Callback with input activity information |
+
+Note that you need to call [init()](#initcallback) before calling this function, OR, register to one of the events: [onMouseUp](#onmouseup), [onMouseDown](#onmousedown), [onMouseWheel](#onmousewheel).  
+
+Otherwise, you will get an error: 
+
+```json
+{status: "error", reason: "Input tracking not initialized."}`
+```
 
 ## init(callback)
 #### Version added: 0.160
