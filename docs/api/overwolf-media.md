@@ -499,7 +499,7 @@ url             |  string                                                       
 
 Parameter       | Type                                                              | Description     |
 ----------------| ------------------------------------------------------------------|---------------- |
-reason             |  string                                                           |                 | 
+reason          |  string                                                           |                 | 
 
 #### Event data example: Success
 

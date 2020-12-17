@@ -68,13 +68,22 @@ Please read all the info about streaming usage and options on our [video capture
 * [overwolf.streaming.enums.StreamMouseCursor](#streammousecursor-enum) Enum
 * [overwolf.streaming.StreamIngestServer](#streamingestserver-object) Object
 * [overwolf.streaming.WatermarkSettings](#watermarksettings-object) Object
-* [overwolf.streaming.WatermarkSettings](#watermarksettings-object) Object
 * [overwolf.streaming.enums.StreamingMode](#streamingmode-enum) Enum
 * [overwolf.streaming.enums.ObsStreamingMode](#streamingmode-enum) Enum
 * [overwolf.streaming.SplitResult](#splitresult-object) Object
 * [overwolf.streaming.enums.indication_position](#indication_position-enum) Enum
 * [overwolf.streaming.enums.indication_type](#indication_type-enum) Enum
-* [StreamQuotaParams](#streamquotaparams-object) Object
+* [overwolf.streaming.StreamQuotaParams](#streamquotaparams-object) Object
+* [overwolf.streaming.StreamResult](#streamresult-object) Object
+* [overwolf.streaming.StreamEvent](#streamevent-object) Object
+* [overwolf.streaming.StopStreamingEvent](#stopstreamingevent-object) Object
+* [overwolf.streaming.StopStreamingResult](#stopstreamingresult-object) Object
+* [overwolf.streaming.GetWatermarkSettingsResult](#getwatermarksettingsresult-object) Object
+* [overwolf.streaming.GetWindowStreamingModeResult](#getwindowstreamingmoderesult-object) Object
+* [overwolf.streaming.GetStreamEncodersResult](#getstreamencodersresult-object) Object
+* [overwolf.streaming.GetAudioDevicesResult](#getaudiodevicesresult-object) Object
+* [overwolf.streaming.StreamingSourceImageChangedEvent](#streamingsourceimagechangedevent-object) Object
+* [overwolf.streaming.VideoFileSplitedEvent](#videofilesplitedevent-object) Object
 
 ## start(settings, callback)
 
@@ -87,25 +96,9 @@ Note that this feature will work only when your target game is running.
 Parameter | Type                                            | Description             |
 --------- | ------------------------------------------------| ----------------------- |
 settings  | [StreamSettings](#streamsettings-object) object | The stream settings     |
-callback  | function                                        | Returns with the result |
+callback  |  ([Result: StreamResult](#streamresult-object)) => void | Returns with the result  |
 
 For more info read our [Basic streaming usage flow](../topics/video-capture#usage-example).
-
-#### Callback argument: Success
-
-A callback function which will be called with the status of the request
-
-```json
-{ "status": "success", "stream_id": 3 }
-```
-
-#### Callback argument: Failure
-
-A callback function which will be called with the status of the request
-
-```json
-{ "status": "error", "error": "something went wrong..." }
-```
 
 :::tip
 Note that the stream will be recorded in chunks in a size of `max_file_size_bytes`. If you would like in addition, a full length single file copy, you can set `include_full_size_video` to true. 
@@ -275,40 +268,7 @@ overwolf.streaming.stop(streamId);
 Parameter | Type        | Description                    |
 --------- | ------------| ------------------------------ |
 streamId  | int         | The id of the stream to stop   |
-callback  | function    | Returns with the result        |
-
-#### Callback argument: Success
-
-A callback function which will be called with the status of the request, and the stream id and media URL if successful
-
-```json
-{
-   "success":true,
-   "stream_id":3,
-   "url":"overwolf://media/recordings/Game+Events+Simulator/Desktop+02-27-2020+14-37-13-913.mp4",
-   "file_path":"C:\\Users\\Hal9000\\Videos\\Overwolf\\Game Events Simulator\\Desktop 02-27-2020 14-37-13-913.mp4",
-   "duration":61045,
-   "last_file_path":"C:\\Users\\Hal9000\\Videos\\Overwolf\\Game Events Simulator\\Desktop 02-27-2020 14-37-13-913",
-   "split": true,
-   "extra":"{"drawn": 856,"dropped": 0,"lagged": 0,"percentage_dropped": 0,"percentage_lagged": 0,"system_info": {"game_dvr_enabled": true,"game_mode_enabled": true}",
-  "total_frames": 1835
-}",
-   "osVersion": "10.0.18362.650",
-   "osBuild":"1903"
-}
-```
-
-:::tip
-To use the `file_path` and not the `url` (as a source for a video player, for example) - you should add the `allow_local_file_access : true` flag to your app manifest, under the relevant window section.
-:::
-
-#### Callback argument: Failure
-
-A callback function which will be called with the status of the request
-
-```json
-{ "status": "error", "error": "something went wrong..." }
-```
+callback  |  ([Result: StopStreamingResult](#stopstreamingresult-object)) => void | Returns with the result  |
 
 ## split(streamId, callback)
 
@@ -338,23 +298,7 @@ Parameter     | Type                                                    | Descri
 ------------- | --------------------------------------------------------| ----------------------------------------------------- |
 streamId      | int                                                     | The id of the stream on which the volume is changed   |
 audioOptions  | [StreamAudioOptions](#streamaudiooptions-object) Object | The new volumes encapsulated in an object             |
-audioOptions  | function                                                | Returns with the result                               |
-
-#### Callback argument: Success
-
-A callback function which will be called with the status of the request
-
-```json
-{ "status": "success" }
-```
-
-#### Callback argument: Failure
-
-A callback function which will be called with the status of the request
-
-```json
-{ "status": "error" }
-```
+callback      | (Result) => void                                        | Returns with the result                               |
 
 ## setWatermarkSettings(settings, callback)
 
@@ -365,23 +309,7 @@ A callback function which will be called with the status of the request
 Parameter | Type                                                    | Description                                           |
 ----------| --------------------------------------------------------| ----------------------------------------------------- |
 settings  | [WatermarkSettings](#watermarksettings-object) Object   | The new watermark settings                            |
-callback  | function                                                | Returns with the result                               |
-
-#### Callback argument: Success
-
-A callback function which will be called with the status of the request when done setting the new watermark settings.
-
-```json
-{ "status": "success" }
-```
-
-#### Callback argument: Failure
-
-A callback function which will be called with the status of the request
-
-```json
-{ "status": "error" }
-```
+callback  | (Result) => void                                        | Returns with the result                               |
 
 #### Usage Example
 
@@ -400,26 +328,9 @@ overwolf.streaming.setWatermarkSettings(
 
 > Gets the watermark settings.
 
-Parameter | Type                                                    | Description                                           |
-----------| --------------------------------------------------------| ----------------------------------------------------- |
-settings  | [WatermarkSettings](#watermarksettings-object) Object   | The new watermark settings                            |
-callback  | function                                                | Returns with the result                               |
-
-#### Callback argument: Success
-
-A function that will be called with a JSON containing the status and the watermark settings if successful
-
-```json
-{ "status": "success" , showWatermark: true }
-```
-
-#### Callback argument: Failure
-
-A callback function which will be called with the status of the request
-
-```json
-{ "status": "error" }
-```
+Parameter | Type                                                                               | Description                                                |
+----------| -----------------------------------------------------------------------------------| ---------------------------------------------------------- |
+callback  | [(Result: GetWatermarkSettingsResult)](#getwatermarksettingsresult-object) => void | Returns with the result and the current watermark settings |
 
 ## getWindowStreamingMode(windowId, callback)
 
@@ -430,23 +341,7 @@ A callback function which will be called with the status of the request
 Parameter | Type     | Description                                              |
 ----------| ---------| -------------------------------------------------------- |
 windowId  | string   | The id of the window for which to get the streaming mode |
-callback  | function | Returns with the result                                  |
-
-#### Callback argument: Success
-
-A callback function which will be called with the status of the request and the window’s streaming mode as a parameter
-
-```json
-{ "status": "success", streaming_mode: "WhenVisible" }
-```
-
-#### Callback argument: Failure
-
-A callback function which will be called with the status of the request
-
-```json
-{ "status": "error" }
-```
+callback  | [(Result: GetWindowStreamingModeResult)](#getwindowstreamingmoderesult-object) => void |  Returns with the result |
 
 ## setWindowStreamingMode(windowId, streamingMode, callback)
 
@@ -457,24 +352,8 @@ A callback function which will be called with the status of the request
 Parameter     | Type                                                                                     | Description                                              |
 --------------| -----------------------------------------------------------------------------------------| ---------------------------------------------------------|
 windowId      | string                                                                                   | The id of the window for which to set the streaming mode |
-streamingMode | [overwolf.streaming.enums.StreamingMode](#streamingmode-enum) enum | The desired streaming mode                               |
-callback      | function                                                                                 | Returns with the result  (Optional)                      |
-
-#### Callback argument: Success
-
-A callback function which will be called with the status of the request, after streaming mode was set
-
-```json
-{ "status": "success" }
-```
-
-#### Callback argument: Failure
-
-A callback function which will be called with the status of the request
-
-```json
-{ "status": "error" }
-```
+streamingMode | [overwolf.streaming.enums.StreamingMode](#streamingmode-enum) enum | The desired streaming mode                                                     |
+callback      | (Result) => void                                                                         | Returns with the result                                  |
 
 ## setWindowObsStreamingMode(windowId, obsStreamingMode, callback)
 
@@ -482,27 +361,11 @@ A callback function which will be called with the status of the request
 
 > Sets the streaming mode for the window when using OBS.
 
-Parameter     | Type                                                                                            | Description                                              |
---------------| ------------------------------------------------------------------------------------------------| ---------------------------------------------------------|
-windowId      | string                                                                                          | The id of the window for which to set the streaming mode |
-streamingMode | [ObsStreamingMode](#streamingmode-enum) enum | The desired OBS streaming mode                           |
-callback      | function                                                                                        | Returns with the result  (Optional)                      |
-
-#### Callback argument: Success
-
-A callback function which will be called with the status of the request, after streaming mode was set
-
-```json
-{ "status": "success" }
-```
-
-#### Callback argument: Failure
-
-A callback function which will be called with the status of the request
-
-```json
-{ "status": "error" }
-```
+Parameter     | Type                                              | Description                                              |
+--------------| --------------------------------------------------| ---------------------------------------------------------|
+windowId      | string                                            | The id of the window for which to set the streaming mode |
+streamingMode | [ObsStreamingMode](#streamingmode-enum) enum      | The desired OBS streaming mode                           |
+callback      | (Result) => void                                  | Returns with the result                                  |
 
 ## setBRBImage(streamId, image, backgroundColor, callback)
 
@@ -515,23 +378,7 @@ Parameter       | Type      | Description                                       
 streamId        | int       | The id of the stream for which to set the Be Right Back image            |
 image           | Object    | The image to set, as an IMG object or a URL                              |
 backgroundColor | string    | The color to paint the last game frame with before overlaying the image  |
-callback        | function  | Returns with the result  (Optional)                                      |
-
-#### Callback argument: Success
-
-A callback function which will be called with the status of the request
-
-```json
-{ "status": "success" }
-```
-
-#### Callback argument: Failure
-
-A callback function which will be called with the status of the request
-
-```json
-{ "status": "error" }
-```
+callback        | (Result) => void | Returns with the result                                           |
 
 ## getStreamEncoders(callback)
 
@@ -539,46 +386,9 @@ A callback function which will be called with the status of the request
 
 > Returns an array of supported streaming encoders, with extra metadata for each one.
 
-Parameter       | Type      | Description                                                               |
-----------------| ----------| --------------------------------------------------------------------------|
-callback        | function  | A callback function to call with the array of encoders and their metadata |
-
-#### Callback argument: Success
-
-A callback function which will be called with the status of the request
-
-```json
-{
-    "status": "success",
-    "encoders": [
-        {
-            "name" : "INTEL",
-            "display_name" : "Intel® Quick Sync (uses iGPU)",
-            "enabled" : true,
-            "presets" : ["LOW", "MEDIUM", "HIGH"]
-        },
-        ...
-    ]
-}
-```
-
-#### Endoder Preset note
-
-For each encoder in the list, a preset enum returns. For example:
-
-1. The NVIDIA encoder returns [StreamEncoderPreset_NVIDIA](#overwolfstreamingenumsstreamencoderpreset_nvidia-enum) enum.
-2. The X264 encoder returns [StreamEncoderPreset_x264](#overwolfstreamingenumsstreamencoderpreset_x264-enum) enum.
-3. The AMD encoder returns [StreamEncoderPreset_AMD_AMF](#overwolfstreamingenumsstreamencoderpreset_amd_amf-enum) enum.
-
-#### Callback argument: Failure
-
-A callback function which will be called with the status of the request
-
-```json
-{ "status": "error" }
-```
-
-
+Parameter   | Type      | Description                                                               |
+------------| ----------| --------------------------------------------------------------------------|
+callback    | [(Result: GetStreamEncodersResult)](#getstreamencodersresult-object) => void |   A callback function to call with the array of encoders and their metadata |
 
 ## getAudioDevices(callback)
 
@@ -588,37 +398,7 @@ A callback function which will be called with the status of the request
 
 Parameter       | Type      | Description                                                                    |
 ----------------| ----------| -------------------------------------------------------------------------------|
-callback        | function  | A callback function to call with the array of audio devices and their metadata |
-
-#### Callback argument: Success
-
-A callback function which will be called with the status of the request
-
-```json
-{
-    "status": "success",
-    "devices": [
-        {
-            "display_name" : "Speakers (USB Ear-Microphone)",
-            "display_id" : "{0.0.0.00000000}.{ec2a6c4b-f750-4045-bb93-d745ecc76937}",
-            "device_state" : "Active",
-            "can_record" : false,
-            "can_playback" : true
-        },
-        ...
-    ],
-    "default_recording_device_id": "{0.0.0.00000000}.{ec2a6c4b-f750-4045-bb93-d745ecc76937}",
-    "default_playback_device_id": "{0.0.1.00000000}.{39da502b-2b96-4b76-83ae-9841f0b46570}"
-}
-```
-
-#### Callback argument: Failure
-
-A callback function which will be called with the status of the request
-
-```json
-{ "status": "error" }
-```
+callback       | [(Result: GetAudioDevicesResult)](#getaudiodevicesresult-object) => void |    A callback function to call with the array of audio devices and their metadata |
 
 ## updateStreamingDesktopOptions(streamId, newOptions, mouseCursorStreamingMethod, callback)
 
@@ -635,23 +415,7 @@ Parameter                  | Type                                               
 streamId	                 | int                                                                                               | The id of the stream                   |
 newOptions	               | [StreamDesktopCaptureOptions](#streamdesktopcaptureoptions-object) Object                         | The updated desktop capture streaming options                    |
 mouseCursorStreamingMethod | [overwolf.streaming.enums.StreamMouseCursor](#streammousecursor-enum) enum  | The updated value of the mouse cursor streaming method           |
-callback                   | function                                                                                          | A callback function to call with success or failure indicationa     |
-
-#### Callback argument: Success
-
-A callback function which will be called with the status of the request
-
-```json
-{ "status": "success" }
-```
-
-#### Callback argument: Failure
-
-A callback function which will be called with the status of the request
-
-```json
-{ "status": "error" }
-```
+callback                   | (Result) => void      | Reports success or failure                                              |
 
 ## updateTobiiSetting(streamId, param, callback)
 
@@ -663,65 +427,31 @@ Parameter | Type             | Description                                      
 ----------| -----------------| ----------------------------------------------------------------|
 streamId  | int              | The id of the stream                                            |
 param     | TobiiLayerParams | The Tobii layer visibility param                                |
-callback  | function         | A callback function to call with success or failure indicationa |
-
-#### Callback argument: Success
-
-A callback function which will be called with the status of the request
-
-```json
-{ "status": "success" }
-```
-
-#### Callback argument: Failure
-
-A callback function which will be called with the status of the request
-
-```json
-{ "status": "error" }
-```
+callback          | (Result) => void      | Reports success or failure                                              |
 
 ## onStreamingSourceImageChanged
 
 #### Version added: 0.78
 
-> Fired when the stream started streaming a new image source (desktop, game).
+> Fired when the stream started streaming a new image source (desktop, game), with the following structure: [StreamingSourceImageChangedEvent](#streamingsourceimagechangedevent-object) Object.
 
 ## onStopStreaming
 
 #### Version added: 0.78
 
-> Fired when the stream has stopped.
-
-#### Event data example
-
-```json
-{
-  "stream_id": 5,
-  "url": "overwolf://media/recordings/WolftrainerPro/League+of+Legends+11-05-2019+11-32-36-075.mp4",
-  "file_path": "C:\\Users\\Admin\\Videos\\Overwolf\\WolftrainerPro\\League of Legends 11-05-2019 11-32-36-075.mp4",
-  "duration": 77090,
-  "last_file_path": "C:\\Users\\Admin\\Videos\\Overwolf\\WolftrainerPro\\League of Legends 11-05-2019 11-32-36-075",
-  "split": true,
-  "extra": "{\r\n  \"drawn\": 0,\r\n  \"dropped\": 0,\r\n  \"lagged\": 0,\r\n  \"percentage_dropped\": 0,\r\n  \"percentage_lagged\": 0,\r\n  \"system_info\": {\r\n    \"game_dvr_enabled\": true,\r\n    \"game_mode_enabled\": true\r\n  },\r\n  \"total_frames\": 773\r\n}",
-  "osVersion": "10.0.18362.356",
-  "osBuild": "1903"
-}
-```
-
-Note that 
+> Fired when the stream has stopped, with the following structure: [StopStreamingEvent](#stopstreamingevent-object) Object.
 
 ## onStartStreaming
 
 #### Version added: 0.106
 
-> Fired when the stream has started.
+> Fired when the stream has started, with the following structure: [StreamEvent](#streamevent-object) Object.
 
 ## onStreamingError
 
 #### Version added: 0.78
 
-> Fired upon an error with the stream.
+> Fired upon an error with the stream, with the following structure: [StreamEvent](#streamevent-object) Object.
 
 #### Possible Error Codes
 
@@ -754,7 +484,7 @@ Note that
 
 #### Version added: 0.78
 
-> Fired upon a warning with the stream.
+> Fired upon a warning with the stream, with the following structure: [StreamEvent](#streamevent-object) Object.
 
 #### Usage example
 
@@ -769,7 +499,7 @@ overwolf.streaming.onStreamingWarning.addListener(function(result) {
 
 #### Version added: 0.103
 
-> Fired upon video file splited.
+> Fired upon video file splited, with the following structure: [VideoFileSplitedEvent](#videofilesplitedevent-object) Object.
 
 ## StreamSettings Object
 
@@ -1232,3 +962,237 @@ Parameter          | Type     | Description                                 |
 | NoIndication |                                                                        |
 | Dot          |                                                                        |
 | DotAndTimer  |                                                                        |
+
+## StreamResult Object
+
+Parameter          | Type     | Description                                 |
+-------------------| ---------| ------------------------------------------- |
+*success*          | boolean  | inherited from the "Result" Object          |
+*error*            | string   | inherited from the "Result" Object          |
+stream_id          | number   | optional                                    |
+SubErrorMessage    | string   | optional                                    |
+
+#### Example data: Success
+
+```json
+{ "status": "success", "stream_id": 3 }
+
+```
+
+#### Example data: Failure
+
+```json
+{ "status": "error", "error": "something went wrong...", "SubErrorMessage": "already running" }
+```
+
+## StreamEvent Object
+
+Parameter          | Type     | Description                                 |
+-------------------| ---------| ------------------------------------------- |
+stream_id          | number   | optional                                    |
+SubErrorMessage    | string   | optional                                    |
+
+## StopStreamingEvent Object
+
+Parameter          | Type     | Description                                 |
+-------------------| ---------| ------------------------------------------- |
+success            | boolean  |                                             |
+stream_id          | number   |                                             |
+url                | string   |                                             |
+file_path          | string   |                                             |
+duration           | number   |                                             |
+last_file_path     | string   |                                             |
+split              | boolean  |                                             |
+extra              | object   |                                             |
+total_frames       | number   |                                             |
+osVersion          | string   |                                             |
+osBuild            | string   |                                             |
+
+#### Event data example: Success
+
+```json
+{
+   "success":true,
+   "stream_id":3,
+   "url":"overwolf://media/recordings/Game+Events+Simulator/Desktop+02-27-2020+14-37-13-913.mp4",
+   "file_path":"C:\\Users\\Hal9000\\Videos\\Overwolf\\Game Events Simulator\\Desktop 02-27-2020 14-37-13-913.mp4",
+   "duration":61045,
+   "last_file_path":"C:\\Users\\Hal9000\\Videos\\Overwolf\\Game Events Simulator\\Desktop 02-27-2020 14-37-13-913",
+   "split": true,
+   "extra":"{"drawn": 856,"dropped": 0,"lagged": 0,"percentage_dropped": 0,"percentage_lagged": 0,"system_info": {"game_dvr_enabled": true,"game_mode_enabled": true}",
+   "total_frames": 1835,
+   "osVersion": "10.0.18362.650",
+   "osBuild":"1903"
+}
+```
+
+:::tip
+To use the `file_path` and not the `url` (as a source for a video player, for example) - you should add the `allow_local_file_access : true` flag to your app manifest, under the relevant window section.
+:::
+
+## StopStreamingResult Object
+
+Parameter          | Type     | Description                                 |
+-------------------| ---------| ------------------------------------------- |
+*success*          | boolean  | inherited from the "Result" Object          |
+*error*            | string   | inherited from the "Result" Object          |
+stream_id          | number   |                                             |
+url                | string   |                                             |
+file_path          | string   |                                             |
+duration           | number   |                                             |
+last_file_path     | string   |                                             |
+split              | boolean  |                                             |
+extra              | object   |                                             |
+total_frames       | number   |                                             |
+osVersion          | string   |                                             |
+osBuild            | string   |                                             |
+
+#### Callback argument: Success
+
+```json
+{
+   "success":true,
+   "stream_id":3,
+   "url":"overwolf://media/recordings/Game+Events+Simulator/Desktop+02-27-2020+14-37-13-913.mp4",
+   "file_path":"C:\\Users\\Hal9000\\Videos\\Overwolf\\Game Events Simulator\\Desktop 02-27-2020 14-37-13-913.mp4",
+   "duration":61045,
+   "last_file_path":"C:\\Users\\Hal9000\\Videos\\Overwolf\\Game Events Simulator\\Desktop 02-27-2020 14-37-13-913",
+   "split": true,
+   "extra":"{"drawn": 856,"dropped": 0,"lagged": 0,"percentage_dropped": 0,"percentage_lagged": 0,"system_info": {"game_dvr_enabled": true,"game_mode_enabled": true}",
+   "total_frames": 1835,
+   "osVersion": "10.0.18362.650",
+   "osBuild":"1903"
+}
+```
+
+:::tip
+To use the `file_path` and not the `url` (as a source for a video player, for example) - you should add the `allow_local_file_access : true` flag to your app manifest, under the relevant window section.
+:::
+
+## GetWatermarkSettingsResult Object
+
+Parameter          | Type     | Description                                 |
+-------------------| ---------| ------------------------------------------- |
+*success*          | boolean  | inherited from the "Result" Object          |
+*error*            | string   | inherited from the "Result" Object          |
+showWatermark      | boolean  |                                             |
+
+#### Callback argument: Success
+
+A function that will be called with a JSON containing the status and the watermark settings if successful
+
+```json
+{ "status": "success" , "showWatermark": true }
+```
+
+## GetWindowStreamingModeResult Object
+
+Parameter          | Type     | Description                                 |
+-------------------| ---------| ------------------------------------------- |
+*success*          | boolean  | inherited from the "Result" Object          |
+*error*            | string   | inherited from the "Result" Object          |
+streaming_mode     | string   |                                             |
+
+#### Callback argument: Success
+
+A callback function which will be called with the status of the request and the window’s streaming mode as a parameter
+
+```json
+{ "status": "success", "streaming_mode": "WhenVisible" }
+```
+
+## GetStreamEncodersResult Object
+
+Parameter          | Type     | Description                                 |
+-------------------| ---------| ------------------------------------------- |
+*success*          | boolean  | inherited from the "Result" Object          |
+*error*            | string   | inherited from the "Result" Object          |
+encoders           | [EncoderData](#encoderdata-object)[]   |                                 |
+
+#### Callback argument: Success
+
+A callback function which will be called with the status of the request
+
+```json
+{
+    "status": "success",
+    "encoders": [
+        {
+            "name" : "INTEL",
+            "display_name" : "Intel® Quick Sync (uses iGPU)",
+            "enabled" : true,
+            "presets" : ["LOW", "MEDIUM", "HIGH"]
+        },
+        ...
+    ]
+}
+```
+
+## EncoderData Object
+
+Parameter          | Type     | Description                                 |
+-------------------| ---------| ------------------------------------------- |
+*success*          | boolean  | inherited from the "Result" Object          |
+*error*            | string   | inherited from the "Result" Object          |
+name               | string   |                                             |
+display_name       | string   |                                             |
+enabled            | boolean  |                                             |
+presets            | string[] | See [notes](#endoder-preset-notes)          |
+
+
+#### Endoder Preset notes
+
+For each encoder in the list, a preset enum returns. For example:
+
+1. The NVIDIA encoder returns [StreamEncoderPreset_NVIDIA](#overwolfstreamingenumsstreamencoderpreset_nvidia-enum) enum.
+2. The X264 encoder returns [StreamEncoderPreset_x264](#overwolfstreamingenumsstreamencoderpreset_x264-enum) enum.
+3. The AMD encoder returns [StreamEncoderPreset_AMD_AMF](#overwolfstreamingenumsstreamencoderpreset_amd_amf-enum) enum.
+
+## GetAudioDevicesResult Object
+
+Parameter          | Type     | Description                                 |
+-------------------| ---------| ------------------------------------------- |
+*success*          | boolean  | inherited from the "Result" Object          |
+*error*            | string   | inherited from the "Result" Object          |
+encoders           | [EncoderData](#encoderdata-object)[]   |                                 |
+
+#### Callback argument: Success
+
+A callback function which will be called with the status of the request
+
+```json
+{
+    "status": "success",
+    "devices": [
+        {
+            "display_name" : "Speakers (USB Ear-Microphone)",
+            "display_id" : "{0.0.0.00000000}.{ec2a6c4b-f750-4045-bb93-d745ecc76937}",
+            "device_state" : "Active",
+            "can_record" : false,
+            "can_playback" : true
+        },
+        ...
+    ],
+    "default_recording_device_id": "{0.0.0.00000000}.{ec2a6c4b-f750-4045-bb93-d745ecc76937}",
+    "default_playback_device_id": "{0.0.1.00000000}.{39da502b-2b96-4b76-83ae-9841f0b46570}"
+}
+```
+
+## StreamingSourceImageChangedEvent Object
+
+Parameter       | Type             | Description     |
+----------------| -----------------|---------------- |
+stream_id       |  number          |                 |
+old_source      |  string          |                 |
+new_source      |  string          |                 |
+
+## VideoFileSplitedEvent Object
+
+Parameter       | Type                    | Description     |
+----------------| ------------------------|---------------- |
+stream_id       |  number                 |                 | 
+file_name       |  string                 |                 | 
+duration        |  number                 |                 | 
+count           |  number                 |                 | 
+next_file       |  string                 |                 | 
+
