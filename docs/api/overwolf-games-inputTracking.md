@@ -11,6 +11,7 @@ Provides keyboard and mouse activity information while the user is in-game.
 * [overwolf.games.inputTracking.getActivityInformation()](#getactivityinformationcallback)
 * [overwolf.games.inputTracking.getMatchActivityInformation()](#getmatchactivityinformationcallback)
 * [overwolf.games.inputTracking.getMousePosition()](#getmousepositioncallback)
+* [overwolf.games.inputTracking.init()](#initcallback)
 
 ## Events Reference
 
@@ -70,9 +71,20 @@ In order to get the information:
 
 The data includes the mouse position and a boolean stating whether the click was in the game or on an Overwolf widget (onGame).
 
+**Note that you need to call [init()](#initcallback) before calling this function**, OR, register to one of the events: [onMouseUp](#onmouseup), [onMouseDown](#onmousedown), [onMouseWheel](#onmousewheel).
+
 Parameter | Type                  | Description                              |
 --------- | ----------------------| ---------------------------------------- |
 callback  | [(Result:GetMousePositionResult)](#getmousepositionresult-object) => void | Callback with input activity information |
+
+## init(callback)
+#### Version added: 0.160
+
+> For using [getMousePosition](#getmousepositioncallback) without pre-register to events
+
+Parameter | Type                  | Description                              |
+--------- | ----------------------| ---------------------------------------- |
+callback       | (Result) => void  | Returns with the result                                                               |   
 
 ## onKeyUp
 
