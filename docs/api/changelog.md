@@ -21,7 +21,7 @@ Note that iterations 160 to 162 were combined into a single iteration.
 * Add to [GameInfoUpdatedEvent](overwolf-games#gameinfoupdatedevent-object) a new info change type: **gameOverlayChanged**.  Indicates if OW unable to hook input devices when hooking into a game.
 * Added a new API namespace: [overwolf.cryptography](overwolf-cryptography).
   * Currently supports two functions: *encryptForCurrentUser()* and *decryptForCurrentUser()*.
-* Add `overwolf.games.inputTracking.init()` for using *getMousePosition* without pre-register to events.
+* Added [overwolf.games.inputTracking.init()](overwolf-games-inputTracking#initcallback) for using *getMousePosition* without pre-register to events.
 
 #### Platform
 

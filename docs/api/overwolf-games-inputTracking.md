@@ -80,11 +80,11 @@ callback  | [(Result:GetMousePositionResult)](#getmousepositionresult-object) =>
 ## init(callback)
 #### Version added: 0.160
 
-> For using [getMousePosition](#getmousepositioncallback) without pre-register to events
+> For using [getMousePosition](#getmousepositioncallback) without pre-register to events.
 
 Parameter | Type                  | Description                              |
 --------- | ----------------------| ---------------------------------------- |
-callback       | (Result) => void  | Returns with the result                                                               |   
+callback  | (Result) => void      | Returns with the result                  |   
 
 ## onKeyUp
 
