@@ -19,7 +19,7 @@ Note that iterations 160 to 162 were combined into a single iteration.
   * Use the new [overwolf.settings.hotkeys.assign()](overwolf-settings-hotkeys#assignhotkey-callback) and  [overwolf.settings.hotkeys.unassign()](overwolf-settings-hotkeys#unassignhotkey-callback) APIs.
 * Reddit presents new required param for sharing: added a new share param called [Flair](overwolf-social-reddit#flair-object),  and a new function: [overwolf.social.reddit.getSubredditFlairs()](overwolf-social-reddit#getsubredditflairssubredditname-callback).
 * Add to [GameInfoUpdatedEvent](overwolf-games#gameinfoupdatedevent-object) a new info change type: **gameOverlayChanged**.  Indicates if OW unable to hook input devices when hooking into a game.
-* Added a new API namespace: [overwolf.cryptography](overwolf.cryptography).
+* Added a new API namespace: [overwolf.cryptography](overwolf-cryptography).
   * Currently supports two functions: *encryptForCurrentUser()* and *decryptForCurrentUser()*.
 * Add `overwolf.games.inputTracking.init()` for using *getMousePosition* without pre-register to events.
 
