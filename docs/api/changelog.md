@@ -8,7 +8,7 @@ Follow this entry for ongoing updates and changes to the project or tools.
 
 Here you can find our [Developers Roadmap](https://trello.com/b/1V10E4IB/overwolf-roadmap).
 
-## Version 0.160 (In-Progress)
+## Version 0.162 (In-Progress)
 
 Note that the work on the documentation for this version is still in-progress.
 
@@ -17,7 +17,7 @@ Note that the work on the documentation for this version is still in-progress.
 * Allow apps to add/remove their hotkeys right from the app (using a new API) without opening the OW client UI. You can assign only hotkeys that pre-defined in your manifest.
   * Use the new [overwolf.settings.hotkeys.assign()](overwolf-settings-hotkeys#assignhotkey-callback) and  [overwolf.settings.hotkeys.unassign()](overwolf-settings-hotkeys#unassignhotkey-callback) APIs.
 * Reddit presents new required param for sharing: added a new share param called [Flair](overwolf-social-reddit#flair-object),  and a new function: [overwolf.social.reddit.getSubredditFlairs()](overwolf-social-reddit#getsubredditflairssubredditname-callback).
-* Add to [GameInfoUpdatedEvent](overwolf-games#gameinfoupdatedevent-object) a new info change type: **gameOverlayChanged**.
+* Add to [GameInfoUpdatedEvent](overwolf-games#gameinfoupdatedevent-object) a new info change type: **gameOverlayChanged**.  Indicates if OW unable to hook input devices when hooking into a game.
 * Added a new API namespace: `overwolf.cryptography`.
   * Currently supports two functions: *encryptForCurrentUser()* and *decryptForCurrentUser()*.
 * Add `overwolf.games.inputTracking.init()` for using *getMousePosition* without pre-register to events.

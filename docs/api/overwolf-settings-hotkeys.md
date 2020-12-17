@@ -39,6 +39,8 @@ Please read all the info about hotkeys and how to use them in our [hotkeys best 
 
 > Assign global hotkey for the current extension, OR, if a gameId is specified, assign/unassign a dedicated hotkey.
 
+**Note: you can assign only hotkeys that pre-defined in your manifest.**
+
 Parameter     | Type                  | Description                                                             |
 ------------- | ----------------------| ----------------------------------------------------------------------- |
 hotkey        | [AssignHotkeyObject](#assignhotkeyobject-object) object    | The hotkey to assign       |
