@@ -33,7 +33,7 @@ Here is an HTML/CSS code example for an empty Overwolf window:
 
 ## Buttons
 
-An example of of a call to action and other general buttons:
+An example of a call to action and other general buttons:
 
 <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="result" data-user="OverwolfDevs" data-slug-hash="wvaoZWE" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Buttons">
   <span>See the Pen <a href="https://codepen.io/OverwolfDevs/pen/wvaoZWE">
