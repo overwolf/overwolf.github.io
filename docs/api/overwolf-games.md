@@ -700,7 +700,7 @@ An object containing the game info object in addition to a set of flags indicati
 | focusChanged       | bool     | Indicates if there was a change in the game focus status                                            | 0.78  |
 | runningChanged     | bool     | Indicates if there was a change in the game running status                                          | 0.78  |
 | gameChanged        | bool     | Indicates if the gameInfo property represents a different game than before                          | 0.78  |
-| gameOverlayChanged | bool     |                                                                                                     | 0.160 |
+| gameOverlayChanged | bool     | Indicates if OW unable to hook input devices when hooking into a game                               | 0.160 |
 
 
 #### Event data example
