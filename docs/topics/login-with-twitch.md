@@ -108,7 +108,7 @@ Where `clientId` is your Twitch clientId and `fullRedirectUri` is your static lo
 
 After we successfully logged in to Twitch, we can save the auth token and close the app's login window.
 
-You can save the auth token in a localStorage variable. We recommend encrypting the hash/token before storing it - for security reasons.
+You can save the auth token in a localStorage variable. We recommend encrypting the hash/token before storing it - for security reasons. You can use the [overwolf.cryptography API](../api/overwolf-cryptography) for that.
 
 ## 5.  Close the Log In window.
 

@@ -693,15 +693,15 @@ games              | number[]     | an array of the most recently played game ID
 
 An object containing the game info object in addition to a set of flags indicating the changes from the last time that data was updated.
 
-| Name               | Type     | Description                                                                                         | Since |
-|--------------------| ---------|-----------------------------------------------------------------------------------------------------|------ |
-| gameInfo           | [RunningGameInfo](#runninggameinfo-object) object     | The new game info data                                 | 0.78  |
-| resolutionChanged  | bool     | Indicates if there was a change in resolution (i.e. the width or height properties were changed)    | 0.78  |
-| focusChanged       | bool     | Indicates if there was a change in the game focus status                                            | 0.78  |
-| runningChanged     | bool     | Indicates if there was a change in the game running status                                          | 0.78  |
-| gameChanged        | bool     | Indicates if the gameInfo property represents a different game than before                          | 0.78  |
-| gameOverlayChanged | bool     | Indicates if OW unable to hook input devices when hooking into a game                               | 0.160 |
-
+| Name                  | Type     | Description                                                                                         | Since |
+|-----------------------| ---------|-----------------------------------------------------------------------------------------------------|------ |
+| gameInfo              | [RunningGameInfo](#runninggameinfo-object) object     | The new game info data                                 | 0.78  |
+| resolutionChanged     | bool     | Indicates if there was a change in resolution (i.e. the width or height properties were changed)    | 0.78  |
+| focusChanged          | bool     | Indicates if there was a change in the game focus status                                            | 0.78  |
+| runningChanged        | bool     | Indicates if there was a change in the game running status                                          | 0.78  |
+| gameChanged           | bool     | Indicates if the gameInfo property represents a different game than before                          | 0.78  |
+| gameOverlayChanged    | bool     | Indicates if OW hooks input device changes when hooking into a game. If true, check if overlayInputHookError is true as well to identify that there is a hooking issue.  | 0.160 |
+| overlayInputHookError | bool     |  Indicates that a hooking error has occurred.                                                       | 0.160 |
 
 #### Event data example
 

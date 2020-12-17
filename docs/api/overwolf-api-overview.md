@@ -10,6 +10,7 @@ Overwolf APIs are global components that allow interaction with various Overwolf
 
 * [overwolf.benchmarking](#overwolfbenchmarking)
 * [overwolf.campaigns](#overwolfcampaigns)
+* [overwolf.cryptography](#overwolfcryptography)
 * [overwolf.extensions](#overwolfextensions)
 * [overwolf.games](#overwolfgames)
 * [overwolf.games.events](#overwolfgamesevents)
@@ -45,6 +46,15 @@ Common use cases:
 
 * Get info about active campagins.
 * Allows crossapp-promotions: One app can promote another app and then get an indication for a successful conversion.
+
+## overwolf.cryptography
+
+> Use the [overwolf.cryptography](overwolf-cryptography) API to encrypt and decrypt ciphertext.
+
+Common use cases:
+
+* Secure app data and variables.
+* Encrypt localStorage variables that store auth-tokens when using OAuth.
 
 ## overwolf.extensions
 
