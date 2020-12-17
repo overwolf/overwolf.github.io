@@ -20,6 +20,7 @@ Note that the work on the documentation for this version is still in-progress.
 * Add to [GameInfoUpdatedEvent](overwolf-games#gameinfoupdatedevent-object) a new info change type: **gameOverlayChanged**.
 * Added a new API namespace: `overwolf.cryptography`.
   * Currently supports two functions: *encryptForCurrentUser()* and *decryptForCurrentUser()*.
+* Add `overwolf.games.inputTracking.init()` for using *getMousePosition* without pre-register to events.
 
 #### Platform
 
