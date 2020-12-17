@@ -17,19 +17,27 @@ Note that the work on the documentation for this version is still in-progress.
 * Allow apps to add/remove their hotkeys right from the app (using a new API) without opening the OW client UI. You can assign only hotkeys that pre-defined in your manifest.
   * Use the new [overwolf.settings.hotkeys.assign()](overwolf-settings-hotkeys#assignhotkey-callback) and  [overwolf.settings.hotkeys.unassign()](overwolf-settings-hotkeys#unassignhotkey-callback) APIs.
 * Reddit presents new required param for sharing: added a new share param called [Flair](overwolf-social-reddit#flair-object),  and a new function: [overwolf.social.reddit.getSubredditFlairs()](overwolf-social-reddit#getsubredditflairssubredditname-callback).
-
+* Add to [GameInfoUpdatedEvent](overwolf-games#gameinfoupdatedevent-object) a new info change type: **gameOverlayChanged**.
+* Added a new API namespace: `overwolf.cryptography`.
+  * Currently supports two functions: *encryptForCurrentUser()* and *decryptForCurrentUser()*.
 
 #### Platform
 
-* Soon
+* Security patches:
+  * Block browser from creating iframe to *overwolf-extensions://*.
+  * Block iframes inside apps from creating an iframe to *overwolf-extensions://* - unless in externally_connectable
+  * Block app windows that run in a remote address - from creating iframes to *overwolf-extensions://* - unless in *externally_connectable*.
+* Update to new OBS (141 with sdk 10.0.19041.1).
+* Increase `localstorge` size to ~50MB. Note that localstorge should be used up to 20-25 MB saved data. If you need more than that, you should use other storage.
+* Enable `navigator.storage.persist()` for *overwolf-extension:\\* scheme.
 
 #### Bug fixes
 
-* Soon
+* FilePicker with multipleSelection splits files with comma in their names.
 
 #### Dev Console
 
-* Soon
+* Rates and Reviewes: users can leave reviews and rate your app in Overwolf’s App store, and you can browse these ratings and reviews and reply to users from the dev console.
 
 #### Game Events
 
