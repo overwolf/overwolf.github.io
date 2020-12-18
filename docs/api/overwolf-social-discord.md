@@ -21,7 +21,7 @@ You can use [overwolf.social.getDisabledServices()](overwolf-social#getdisableds
 
 ## Events Reference
 
-* [ooverwolf.social.discord.onLoginStateChanged](#onloginstatechanged)
+* [overwolf.social.discord.onLoginStateChanged](#onloginstatechanged)
 
 ## Types Reference
 
