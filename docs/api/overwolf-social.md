@@ -4,7 +4,7 @@ title: overwolf.social API
 sidebar_label: overwolf.social
 ---
 
-Provides information about the currently disabled services.
+Provides sharing services to different social networks like Reddit, Twitter, etc. and also information about the currently disabled services.
 
 ## Methods Reference
 
@@ -13,9 +13,6 @@ Provides information about the currently disabled services.
 ## Types Reference
 
 * [GetDisabledServicesResult](#getDisabledServicesResult-object) Object
-* [overwolf.social.reddit.GetUserInfoResult](#getuserinforesult-object) Object
-* [overwolf.social.reddit.LoginStateChangedEvent](#loginstatechangedevent-object) Object
-* [overwolf.social.reddit.LoginState](#loginstate-enum) enum
 
 ## getDisabledServices(callback)
 #### Version added: 0.126
@@ -42,65 +39,3 @@ disabled_services | string[]                                   |                
 ```json
 {"success":true,"disabled_services":["youtube"]}
 ```
-
-## GetUserInfoResult Object
-#### Version added: 0.128
-
-> Container for get user info result.
-
-Parameter         | Type          | Description             |
-------------------| --------------| ----------------------- |
-userInfo          | object        |                         | 
-
-#### Example data: Reddit / Youtube / Twitter / Gfycat
-
-```json
-{
-  "status": "success",
-  "userInfo": {
-     "avatar": "http://abs.twimg.com/sticky/...", 
-     "id": "111111111112222222", 
-     "name": "full name", 
-     "screenName": "screenname123"
-  }
-}
-```
-
-#### Example data: Discord user
-
-```json
-{
-  "status": "success",
-  "userInfo": {
-    "id": "1111111111111",
-    "discriminator": 9999,
-    "username": "itay",
-    "email": "itay@overwolf.com",
-    "avatar": null,
-    "verified": true
-  }
-}
-```
-
-## LoginStateChangedEvent Object
-#### Version added: 0.128
-
-> Container object.
-
-Parameter              | Type                                 | Description                                    |
----------------------- | -------------------------------------| ---------------------------------------------- |
-status                 | [LoginState](#loginstate-enum) enum  |                                                |
-
-#### Event Data Example: Success
-
-```json
-{ "state": "connected"/"disconnected" }
-```
-
-## LoginState enum
-#### Version added: 0.128
-
-| Options      | Description                                                            |
-|--------------| -----------------------------------------------------------------------|
-| Connected    | "connected"                                                            |
-| Disconnected | "disconnected"                                                         |

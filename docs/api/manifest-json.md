@@ -239,8 +239,7 @@ Note that not all flags are mandatory - we included all available flags for docu
         "<a href="#disable_cleanup">disable_cleanup</a>": true,
         "<a href="#process_name">process_name</a>": "my sample app",
         "<a href="#url_protocol">url_protocol</a>": {"scheme": "testscheme"}
-
-    }
+            
 }
 </code></pre>
 </details>
@@ -322,7 +321,7 @@ A list of additional settings for the app.
 |-----------------------------------|--------------------------------------------| -------------------------------------------------------------------------| ----- | 
 | <a class="anchor" aria-hidden="true" id="game_targeting"></a>game_targeting              | [GameTargeting](#gametargeting-object) Object   |  An app can declare itself as targeted for one game or more.                  | 0.78  |
 | <a class="anchor" aria-hidden="true" id="start_window"></a>start_window   | string     |  Mandatory. The name of the window (from the “windows” list) to initially load when the app starts.        | 0.78  |
-| <a class="anchor" aria-hidden="true" id="window-data"></a>windows              | [extension_window_data](#extension-window-data-object) Object   |  Mandatory. A map from window names to window settings.                  | 0.78  |
+| <a class="anchor" aria-hidden="true" id="window-data"></a>windows              | [extension_window_data](#extension_window_data-object) Object   |  Mandatory. A map from window names to window settings.                  | 0.78  |
 | <a class="anchor" aria-hidden="true" id="enable_top_isolated_sites_console"></a>enable_top_isolated_sites_console | bool           |  Enable/Disable printing of ads log to the console. </br>*Default value is “false”.*   |0.115  |
 | <a class="anchor" aria-hidden="true" id="externally_connectable"></a>externally_connectable    | [ExternallyConnectable](#externallyconnectable-object) Object  | A definition of external URLs the web app should be able to access. Allow your local app to be able to communicate with an iframe within the app. | 0.78  |
 | <a class="anchor" aria-hidden="true" id="protocol_override_domains"></a>protocol_override_domains     | [ProtocolOverrideDomains](#protocoloverridedomains-object) Object   |  Overrides the relative protocol with a preferred one.  | 0.78  |
