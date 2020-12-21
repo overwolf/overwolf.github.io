@@ -31,6 +31,8 @@ You can use [overwolf.social.getDisabledServices()](overwolf-social#getdisableds
 * [overwolf.social.reddit.RedditAllowedPostTypes](#redditallowedposttypes-object) Object
 * [overwolf.social.reddit.SearchSubredditsResult](#searchsubredditsresult-object) Object
 * [overwolf.social.reddit.ShareFailedEvent](#sharefailedevent-object) Object
+* [overwolf.social.reddit.LoginStateChangedEvent](#loginstatechangedevent-object) Object
+
 
 ## performUserLogin()
 #### Version added: 0.128
@@ -220,3 +222,4 @@ allowable_content      | string  |                                              
   "allowable_content": "all"
 }
 ```
+
