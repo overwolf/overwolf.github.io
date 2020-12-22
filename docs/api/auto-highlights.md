@@ -10,7 +10,7 @@ With the [overwolf.media.replays](../api/overwolf-media-replays) API, you can au
 
 When this feature is enabled, there's no need to understand each supported game's mechanics, game flow, edge cases, timings, etc. Just request any supported game's highlight, and OW provides you with a video file that includes this event.
 
-Here you can find our guide on [how to use and capture auto-highlights](video-capture#using-overwolfmediareplays).
+Here you can find our guide on [how to use and capture auto-highlights](../topics/video-capture#using-overwolfmediareplays).
 
 ## List of supported games
 
