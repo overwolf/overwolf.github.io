@@ -223,7 +223,7 @@ Option     | Description                                                        
 -----------| ------------------------------------------------------------------------------------------|
 pictures   | The extension's captured pictures folder, `OverwolfPicturesFolder\AppName\`               |
 videos     | The extension's captured videos folder, `OverwolfVideosFolder\AppName\`                   |
-appData    | The extension's folder under Roaming app data, `AppData\Roaming\Overwolf\Extensions\UID\` |
+appData    | The extension's folder under Roaming app data, `AppData\Roaming\Overwolf\[Extensions UID]`|
 
 ## Content Object
 #### Version added: 0.147
