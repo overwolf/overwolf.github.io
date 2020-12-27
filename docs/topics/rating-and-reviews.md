@@ -8,58 +8,59 @@ Users can leave reviews and rate your app in Overwolf’s AppStore. You can brow
 
 ## Why is this important
 
-Replying to reviews engages your users and makes them feel valued, helping to build loyalty. When you respond to negative reviews, it indicates how and when you'll address the feedback, where possible. Users will be more likely to leave a good rating and share your app following a positive interaction.
+Replying to reviews engages your users and makes them feel valued, further building loyalty. When you respond to negative reviews, it indicates how and when you'll address the feedback, where possible. Users will be more likely to leave a good rating and share your app following a positive interaction.
 
 ## Best practices
 
-* Keep it concise and clear when addressing your user’s feedback.
+* Keep it concise and clear when addressing feedback from your users.
 * Strive for a friendly tone that’s consistent with the voice of your brand.
-* Remain positive and respectful, even if it seems the user is attacking ("Your feedback helps us to improve") Clearly acknowledge the reviewer's feedback, and let them know you’re working on addressing the issue ("This is a known issue, and we're doing our best on working to fix it.")
-* Use proper grammar and spelling. We advise using [Grammarly](https://app.grammarly.com/). 
+* Remain positive and respectful, even if it seems the user is attacking. You can try something like, "Thanks, your feedback helps us improve our app." Clearly acknowledge the reviewer's feedback, and let them know you’re working on taking care of the the issue. Something in the lines of, "This is a known issue, and we're doing our best on working to fix it."
+* Use proper grammar and spelling. We recommend using [Grammarly](https://app.grammarly.com/). 
 
 ## Pro Tips
 
 * Personalizing your responses rather than using generic responses for similar reviews (e.g. "Hey Alex, thanks for your feedback.").
 * When you release an app update that fixes issues mentioned in older reviews, consider replying to relevant reviews to tell these users about the fix.
 
-## Manage your user's reviews
+## Manage your users' reviews
 
-From the dev console, you can find the "User feedback" on the left navigation bar.
+From the dev console, you can find the "User feedback" item on the left navigation bar.
 
 ![welcome-screen](../assets/dev-console/rating-and-reviews/main-screen.png)
 
-On the right side you can see the number of reviews, your average rating, and all the reviews in a list.
+On the right side you can find the number of reviews, your average rating, and all the reviews in a list.
 
-### Reply to review
+### Reply to reviews
 
-Once the user adds a review on your app, it displays in both places.
+Once the user adds a review on your app, it will appear in both places.
 
-On the app's page on the OW AppStore:
+On the app's page on the Overwolf AppStore:
 
 ![feedback-appstore](../assets/dev-console/rating-and-reviews/feedback-appstore.png)
 
-And in the dev console "rating and reviews" page, where you can reply to each feedback:
+And on the "Rating and Reviews" page in the dev console, where you can reply to each review:
 
 ![feedback](../assets/dev-console/rating-and-reviews/feedback.png)
 
-#### Few important notes
+#### A few important notes
 
-* Only one reply per review. This means, after adding your response, you can only remove or edit it. But not add another reply.
-* The user can't answer your reply, create a thread/discussion, etc. (he can edit his review, though)
-* The user does not get any notification that you replied to his review. 
+* Only one reply per review. This means that after adding your response, you can only remove or edit it - but not add another reply.
+* Users can't respond to your reply, nor can they create a thread/discussion, etc. They can, h
+ever, edit their own review.
+* Users does not receive any notification that you replied to their review. 
 
-In future versions, we will add more features like user notifications when we reply to the review.
+In future versions, we will add more features, such as notifying users when someone replies to their review.
 
 ### Support info
 
-When a user posts a review on your app, OW automatically pulls some basic info from his OW client:
+When a user posts a review on your app, Overwolf automatically pulls some basic info from their Overwolf client:
 
 ![feedback-info](../assets/dev-console/rating-and-reviews/feedback-info.png)
 
-As you can see, you can find here a lot of support info on the user that enables you to provide higher quality and relevant reply to the review.
+As you can see, there is quite a bit of support info on users you can find here. Feel free to use it when responding to users, to provide the most accurate and relevant reply.
 
 * App version (known issue: currently, the store version of your app is presented here. We will fix it soon, as it should display the installed version).
-* OW version.
+* Overwolf version.
 * GEP version.
 * Main and Secondary screen sizes.
 * Main and Secondary screen DPI.
