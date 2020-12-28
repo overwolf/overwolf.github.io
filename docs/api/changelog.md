@@ -43,7 +43,10 @@ Note that iterations 160 to 162 were combined into a single iteration.
 
 #### Game Events
 
-* Soon
+* [Rocket League](overwolf-games-events-rl)
+  * New events & updates:
+    * death
+    * action_points
 
 ## Version 0.159 (Dec. 2020)
 
