@@ -23,6 +23,7 @@ Please read the [overwolf.games.events](overwolf-games-events) documentation pag
 * [roster](#roster)
 * [me](#me)
 * [match_info](#match_info)
+* [death](#death)
 
 ## Game events status
 
@@ -51,7 +52,6 @@ Data Example:
 Event       | Event Data   | Fired When    | Notes              | Since GEP Ver. |
 ------------| -------------| --------------| ------------------ | --------------|
 goal        | Check notes  | A goal has been scored |See [notes](#goal-note)|     14.0      | 
-death       | null         | Player has died      |Currently not supported|     86.0      | 
 score       | Check notes  | Score of a player has changed|See [notes](#score-note)|     86.0      | 
 
 #### *goal* note
@@ -61,7 +61,6 @@ Event Data:
 * <b>steamId</b> – Steam id of the player scoring the goal
 * <b>score</b> – Score of the player scoring the goal
 * <b>goals</b> – Goal count of the player
-* <b>deaths</b> – Death count of the player
 * <b>name</b> –  Name of the player scoring the goal
 * <b>team</b> – Team number of the scoring player (1 or 2)
 * <b>local</b> – Whether the player who scored is the local player
@@ -73,7 +72,7 @@ Encoded stringified JSON containing the properties. Need to do a decodeURI() on 
 Data Example:
 
 ```json
-{"events":[{"name":"goal","data":"{  "steamId": "0",  "score": 118,  "goals": "1",  "deaths": "0",  "name": "Ram is troll",  "state": "0",  "team_score": 1,  "team": "2",  "local": "1",  "index": 3}"}]}
+{"events":[{"name":"goal","data":"{  "steamId": "0",  "score": 118,  "goals": "1",  "name": "Ram is troll",  "state": "0",  "team_score": 1,  "team": "2",  "local": "1",  "index": 3}"}]}
 ```
 
 #### *score* note
@@ -83,7 +82,6 @@ Event Data:
 * <b>steamId</b> – Steam ID of the player
 * <b>score</b> – Score of the player
 * <b>goals</b> – Goal count of the player
-* <b>deaths</b> – Death count of the player
 * <b>name</b> –  Name of the player
 * <b>state</b>
 * <b>team_score</b>
@@ -116,7 +114,7 @@ teamGoal    | null         |When the local player’s team has scored a goal|See
 Data Example:
 
 ```json
-{"events":[{"name":"teamGoal","data":"{"steamId":"2535424769966317","score":126,"goals":"1","deaths": "0","name":"JteRushencroks0","state":"0","team_score":2,"team":"1","index":4}"}]}
+{"events":[{"name":"teamGoal","data":"{"steamId":"2535424769966317","score":126,"goals":"1","name":"JteRushencroks0","state":"0","team_score":2,"team":"1","index":4}"}]}
 ```
 
 ## `opposingTeamGoal`
@@ -132,7 +130,7 @@ opposingTeamGoal| null     |When the opposing team has scored a goal|See [notes]
 Data Example:
 
 ```json
-{"events":[{"name":"opposingTeamGoal","data":"{"steamId":"2535461211167231","score":128,"goals":"1",  "deaths":"0","name":"JaffaCake200015","state":"0","team_score":1,"team":"1","index":2}"}]}
+{"events":[{"name":"opposingTeamGoal","data":"{"steamId":"2535461211167231","score":128,"goals":"1","name":"JaffaCake200015","state":"0","team_score":1,"team":"1","index":2}"}]}
 ```
 
 ## `match`
@@ -239,6 +237,7 @@ pseudo_match_id| match_info| Current match’s internal ID code.|See [notes](#ps
 mutator_settings| match_info| The current-chosen settings of the private match.|See [notes](#mutator_settings-note)|    147.0   |
 arena        | match_info| The current private match's arena setting. |See [notes](#arena-note)|    147.0   |
 server_info  | match_info| The info of the current match's server info. |See [notes](#server_info-note)|    147.0   |
+action_points  | match_info| Name of action that granted a score to local player. |See [notes](#action_points-note)|    160.0   |
 
 #### *pseudo_match_id* note
 
@@ -270,6 +269,23 @@ Data Example:
 {"info":{"match_info":{"server_info":"EU511-Gimbal9"}},"feature":"match_info"}
 ```
 
+#### *action_points* note
+
+Data Examples:
+
+```json
+{"events":[{"name":"action_points","data":"Shot On Goal"}]}
+{"events":[{"name":"action_points","data":"Goal"}]}
+{"events":[{"name":"action_points","data":"First Touch"}]}
+{"events":[{"name":"action_points","data":"Center Ball"}]}
+{"events":[{"name":"action_points","data":"Pool Shot"}]}
+{"events":[{"name":"action_points","data":"Assist"}]}
+{"events":[{"name":"action_points","data":"Clear Goal"}]}
+{"events":[{"name":"action_points","data":"Demolish"}]}
+{"events":[{"name":"action_points","data":"Save"}]}
+{"events":[{"name":"action_points","data":"Epic Save"}]}
+```
+
 ## `roster`
 
 ### Info Updates
@@ -286,7 +302,6 @@ team1_score / team2_score| teamsScore|team1 / team2 score – integer|See [notes
   * steamId – Steam ID of the player who died
   * score – Score of the player who died
   * goals – Goal count of the player
-  * deaths – Death count of the player
   * name –  Name of the player that died
   * team – Team number of the player (1 or 2)
 
@@ -297,7 +312,7 @@ Encoded stringified JSON containing the properties. Need to do a decodeURI() on 
 Data Example:
 
 ```json
-{"info":{"playersInfo":{"player0":"%7B%22steamId%22:%222535441382512370%22,%22score%22:0,%22goals%22:%220%22,%22deaths%22:%220%22,%22name%22:%22Grexio%22,%22state%22:%220%22,%22team_score%22:0,%22team%22:%221%22,%22index%22:0%7D"}},"feature":"roster"}
+{"info":{"playersInfo":{"player0":"%7B%22steamId%22:%222535466851496806%22,%22score%22:52,%22goals%22:%220%22,%22name%22:%22Daknowntesco%22,%22state%22:%220%22,%22team_score%22:0,%22team%22:%221%22,%22local%22:%220%22,%22index%22:0%7D"}},"feature":"roster"}
 ```
 
 #### *teamsInfo* note
@@ -325,7 +340,7 @@ playerLeft  | Check notes |A player leaves the match|See [notes](#playerLeft-not
 Data Example:
 
 ```json
-{"events":[{"name":"rosterChange","data":"{"roster":[{"steamId":"1","score": 0,"goals":"0","deaths":"0","name":"Fury","state":"64","team_score": 1,"team":"1","index":0},{"steamId":"2535423426833677","score":0,"goals": "0","deaths":"0","name":"IISGoAt708","state":"0","team_score": 3,"team":"2","index":1},{"steamId":"2535428144972964","score": 34,"goals":"0","deaths":"0","name":"Joschy900","state":"0","team_score": 1,"team":"1","index":2},{"steamId": "2535424769966317","score":0,"goals":"0","deaths":"0","name":"JteRushencroks0","state": "0","team_score":1,"team":"1","index":3},{"steamId": "76561198045142971","score":455,"goals":"3","deaths":"0","name":"Klide", "state":"0","team_score":3,"team":"2","index":4},{ "steamId":"4193393565673947567","score":62,"goals":"0","deaths":"0","name": "YAHHOLAND","state":"0","team_score":3,"team":"2","index":5}]}"}]}
+{"events":[{"name":"rosterChange","data":"{"roster": [{"steamId": "2535466851496806","score": 52,"goals": "0","name": "Daknowntesco","state": "0","team_score": 0,"team": "1","local": "0","index": 0},{"steamId": "8815809362838850094","score": 0,"goals": "0","name": "YT_BR33Z3_","state": "0","team_score": 0,"team": "2","local": "0","index": 1},{"steamId": "76561198239574678","score": 0,"goals": "0","name": "lars","state": "0","team_score": 0,"team": "1","local": "0","index": 2}]}"}]}
 ```
 
 #### *playerJoined* note
@@ -335,14 +350,13 @@ Event Data:
 * <b>steamId</b> – Steam ID of the player
 * <b>score</b> – Score of the player
 * <b>goals</b> – Goal count of the player
-* <b>deaths</b> – Death count of the player
 * <b>name</b> –  Name of the player
 * <b>team</b> – Team number of the player (1 or 2)
 
 Data Example:
 
 ```json
-{"events":[{"name":"playerJoined","data":"{"steamId":"2535428144972964","score":0,"goals": "0","deaths":"0","name":"Joschy900","state":"0\","team_score":0,"team":"1","index": 2}"}]}
+{"events":[{"name":"playerJoined","data":"{"steamId":"2535428144972964","score":0,"goals": "0","name":"Joschy900","state":"0\","team_score":0,"team":"1","index": 2}"}]}
 ```
 
 #### *playerLeft* note
@@ -352,14 +366,13 @@ Event Data:
 * <b>steamId</b> – Steam ID of the player
 * <b>score</b> – Score of the player
 * <b>goals</b> – Goal count of the player
-* <b>deaths</b> – Death count of the player
 * <b>name</b> –  Name of the player
 * <b>team</b> – Team number of the player (1 or 2)
 
 Data Example:
 
 ```json
-{"events":[{"name":"playerLeft","data":"{"steamId":"156382600742638838","score":52,"goals":"0",  "deaths":"0","name":"JHONNYHS","state":"0","team_score":1,"team":"2","index": 2}"}]}
+{"events":[{"name":"playerLeft","data":"{"steamId":"156382600742638838","score":52,"goals":"0","name":"JHONNYHS","state":"0","team_score":1,"team":"2","index": 2}"}]}
 ```
 
 ## `me`
@@ -372,7 +385,6 @@ steamId      | me          | Player’s Steam ID     |                       |  
 name         | me          | Player’s name         |                       |    14.0       |
 goals        | me          | Player’s goal count  |                       |    14.0       |
 score        | me          | Player’s score        |                       |    14.0       |
-deaths       | me          | Player’s death count  | Currently not supported                       |    14.0       |
 team         | me          | Player’s team number  |                       |    14.0       |
 team_score        | me          | Team score    |                       |    86.0       |
 
@@ -386,3 +398,18 @@ Data Examples:
 {"info":{"me":{"team_score":"1"}},"feature":"me"}
 ```
 
+## `death`
+
+### Events
+
+Event       | Event Data   | Fired When    | Notes              | Since GEP Ver. |
+------------| -------------| --------------| ------------------ | --------------|
+death       | null |A player is demolished by an opponent. |See [notes](#death-note)|      160.0     | 
+
+#### *death* note
+
+Data Example:
+
+```json
+{"events":[{"name":"death","data":""}]}
+```
