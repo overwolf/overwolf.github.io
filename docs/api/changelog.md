@@ -43,7 +43,7 @@ Note that iterations 160 to 162 were combined into a single iteration.
 
 #### Game Events
 
-* [Rocket League](overwolf-games-events-rl)
+* [Rocket League](overwolf-games-events-rocket-league)
   * New events & updates:
     * death
     * action_points
