@@ -24,7 +24,7 @@ Note that iterations 160 to 162 were combined into a single iteration.
 * Added [overwolf.games.inputTracking.init()](overwolf-games-inputTracking#initcallback) for using *getMousePosition* without pre-register to events.
 
 #### Platform
-
+ 
 * Security patches:
   * Block browser from creating iframe to *overwolf-extensions://*.
   * Block iframes inside apps from creating an iframe to *overwolf-extensions://* - unless in externally_connectable
