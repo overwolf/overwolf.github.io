@@ -15,7 +15,7 @@ In our experience the best method for communicating between windows of the same 
 
 Using this method, you can use a shared “communication-bus” variable - one global "manager" object in your background that allows different windows to communicate through this one single object. 
 
-This object is also guaranteed to exist when calling this method from any other window - unlike [overwolf.windows.getOpenWindows()](../api/overwolf-windows#getopenwindowscallback). We strongly recommend not to use getOpenWindows()](../api/overwolf-windows#getopenwindowscallback) for windows communication.
+This object is also guaranteed to exist when calling this method from any other window - unlike [overwolf.windows.getOpenWindows()](../api/overwolf-windows#getopenwindowscallback). We strongly recommend not to use [getOpenWindows()](../api/overwolf-windows#getopenwindowscallback) for windows communication.
 
 * Read more about [background controllers](windows-tips#use-a-background-controller). 
 * Download [our sample app](../start/sample-app-overview) which demonstrates all basic design principals.
