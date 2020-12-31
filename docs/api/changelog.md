@@ -47,6 +47,11 @@ Note that iterations 160 to 162 were combined into a single iteration.
   * New events & updates:
     * death
     * action_points
+* [Call of Duty: Warzone](overwolf-games-events-warzone)
+  * New events & updates:
+    * game_mode
+    * game_map
+    * roster
 
 ## Version 0.159 (Dec. 2020)
 
