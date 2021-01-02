@@ -1,0 +1,212 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>App login with Overwolf · Overwolf</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="This article will explain how to implement an Overwolf login/auth interface in your Overwolf app or your Website. This flow is web browser flow only, not API-based authentication."/><meta name="docsearch:language" content="en"/><meta property="og:title" content="App login with Overwolf · Overwolf"/><meta property="og:type" content="website"/><meta property="og:url" content="https://overwolf.github.io/"/><meta property="og:description" content="This article will explain how to implement an Overwolf login/auth interface in your Overwolf app or your Website. This flow is web browser flow only, not API-based authentication."/><meta property="og:image" content="https://overwolf.github.io/img/ow_share_new.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://overwolf.github.io/img/ow_share_new.png"/><link rel="shortcut icon" href="/img/ow-favicon.ico"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/default.min.css"/><script>
+              (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+              (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+              m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+              })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+              ga('create', 'UA-144253676-1', 'auto');
+              ga('send', 'pageview');
+            </script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/atelier-cave-dark.min.css"/><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato%3A400%2C400i%2C700%2C900&amp;ver=4.5.3"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css"/><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css"/><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/overlayscrollbars/1.8.0/css/OverlayScrollbars.min.css"/><link rel="stylesheet" href="/css/code-block-buttons.css"/><script type="text/javascript" src="/js/darkMode.js"></script><script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js"></script><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/overlayscrollbars/1.8.0/js/jquery.overlayScrollbars.min.js"></script><script type="text/javascript" src="https://d10lpsik1i8c69.cloudfront.net/w.js"></script><script type="text/javascript" src="/js/code-block-buttons.js"></script><script type="text/javascript" src="/js/onload.js"></script><script type="text/javascript" src="/js/activeNavBar.js"></script><script type="text/javascript" src="/js/slicker.js"></script><script type="text/javascript" src="/js/replaceArrow.js"></script><script type="text/javascript" src="/js/appendUpdate.js"></script><script type="text/javascript" src="/js/overlayScrollbars.js"></script><script type="text/javascript" src="/js/highlight.js"></script><script type="text/javascript" src="/js/luckyorange.js"></script><script src="https://unpkg.com/vanilla-back-to-top@7.1.14/dist/vanilla-back-to-top.min.js"></script><script>
+        document.addEventListener('DOMContentLoaded', function() {
+          addBackToTop(
+            {"zIndex":100,"backgroundColor":"#332E4D"}
+          )
+        });
+        </script><script src="/js/scrollSpy.js"></script><link rel="stylesheet" href="/css/main.css"/><script src="/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/"><img class="logo" src="/img/headerIcon.svg" alt="Overwolf"/><h2 class="headerTitleWithLogo">Overwolf</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href="/docs/start/getting-started" target="_self">Getting Started</a></li><li class="siteNavGroupActive"><a href="/docs/topics/best-practices-overview" target="_self">Docs</a></li><li class=""><a href="/docs/api/changelog" target="_self">API</a></li><li class=""><a href="/docs/status/all" target="_self">Events Status</a></li><li class=""><a href="https://medium.com/overwolf" target="_blank">Blog</a></li><li class=""><a href="https://discuss.developers.overwolf.com/" target="_blank">Q&amp;A</a></li><li class=""><a href="/docs/support/contact-us" target="_self">Support</a></li><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>Integrations</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Best Practices<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/topics/best-practices-overview">Overview</a></li><li class="navListItem"><a class="navItem" href="/docs/topics/app-specific-experience">App specific experience</a></li><li class="navListItem"><a class="navItem" href="/docs/topics/first-time-user-experience">First time user experience</a></li><li class="navListItem"><a class="navItem" href="/docs/topics/launch-time-performance">App launch performance</a></li><li class="navListItem"><a class="navItem" href="/docs/topics/communication-guidelines">Marketing Communications</a></li><li class="navListItem"><a class="navItem" href="/docs/topics/user-flow-and-error-handling">User journey and error handling</a></li><li class="navListItem"><a class="navItem" href="/docs/topics/games-settings">Per-game settings</a></li><li class="navListItem"><a class="navItem" href="/docs/topics/hotkeys-best-practices">Hotkey best practices</a></li><li class="navListItem"><a class="navItem" href="/docs/topics/second-monitor">Second monitor usage</a></li><li class="navListItem"><a class="navItem" href="/docs/topics/data-persistence">Data persistence</a></li><li class="navListItem"><a class="navItem" href="/docs/topics/reduce-opk-size">Reduce OPK size</a></li><li class="navListItem"><a class="navItem" href="/docs/topics/using-tab">Use Tab as an app Hotkey</a></li><li class="navListItem"><a class="navItem" href="/docs/topics/type-definition-file">Type definition file</a></li><li class="navListItem"><a class="navItem" href="/docs/topics/create-download-link">Download Link with referral ID</a></li><li class="navListItem"><a class="navItem" href="/docs/topics/video-capture">Video capture best practices</a></li><li class="navListItem"><a class="navItem" href="/docs/topics/enable-dev-tools">Enable Developer Tools</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Using Windows API<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/topics/using-overwolf-windows">Using Overwolf windows</a></li><li class="navListItem"><a class="navItem" href="/docs/topics/communicating-between-windows">Windows Communication</a></li><li class="navListItem"><a class="navItem" href="/docs/topics/windows-types">Windows Types</a></li><li class="navListItem"><a class="navItem" href="/docs/topics/windows-resolution-size-position">Resolution Size and Position</a></li><li class="navListItem"><a class="navItem" href="/docs/topics/windows-tips">General Tips</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Using Plugins<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/topics/plugins-overview">Plugins overview</a></li><li class="navListItem"><a class="navItem" href="/docs/topics/how-to-use-plugins-in-your-app">Plug-in Implementation</a></li><li class="navListItem"><a class="navItem" href="/docs/topics/writing-your-own-plugin">Write your own plugin</a></li><li class="navListItem"><a class="navItem" href="/docs/topics/sample-plugin">Sample plugin</a></li><li class="navListItem"><a class="navItem" href="/docs/topics/simple-io-plugin">Simple I/O plugin</a></li><li class="navListItem"><a class="navItem" href="/docs/topics/team-speak-plugin">TeamSpeak plugin</a></li><li class="navListItem"><a class="navItem" href="/docs/topics/process-manager-plugin">Process Manager plugin</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Using Events<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/topics/events-overview">JavaScript events overview</a></li><li class="navListItem"><a class="navItem" href="/docs/topics/using-events">Using game events in your app</a></li><li class="navListItem"><a class="navItem" href="/docs/topics/using-events-simulator">Game events Simulator</a></li><li class="navListItem"><a class="navItem" href="/docs/topics/howto-check-events-status-from-app">Verifying event status</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Developers Console<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/topics/submit-a-new-version">Submit a new version</a></li><li class="navListItem"><a class="navItem" href="/docs/topics/submit-for-review">Submit for review</a></li><li class="navListItem"><a class="navItem" href="/docs/topics/update-store-listing">Update store listing</a></li><li class="navListItem"><a class="navItem" href="/docs/topics/manage-subscriptions">Manage your subscriptions</a></li><li class="navListItem"><a class="navItem" href="/docs/topics/users-and-permissions">Users and permissions</a></li><li class="navListItem"><a class="navItem" href="/docs/topics/crash-reports">Crash reports</a></li><li class="navListItem"><a class="navItem" href="/docs/topics/rating-and-reviews">Rating and reviews</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Integrations<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/topics/app-analytics">Integrating app analytics</a></li><li class="navListItem"><a class="navItem" href="/docs/topics/login-with-twitch">Login with Twitch</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/docs/topics/login-with-overwolf">Login with Overwolf</a></li><li class="navListItem"><a class="navItem" href="/docs/topics/events-SDK-for-game-developers">Event SDK for Game Devs</a></li><li class="navListItem"><a class="navItem" href="/docs/topics/twitch-events-sdk-for-game-developers">Twitch Extensions</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Request a Service<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/topics/assets-req-marketing">Marketing asset requirements</a></li><li class="navListItem"><a class="navItem" href="/docs/topics/looking-for-group">Looking for Group</a></li><li class="navListItem"><a class="navItem" href="/docs/topics/promoting-your-app">Promoting your app</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Community Help<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/topics/join-the-community">Join the Community</a></li><li class="navListItem"><a class="navItem" href="/docs/topics/webinars">Webinars</a></li><li class="navListItem"><a class="navItem" href="/docs/topics/creators-content">Developers Articles</a></li><li class="navListItem"><a class="navItem" href="/docs/topics/snippets">Code snippets</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Legal<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/topics/legal-overview">Legal overview</a></li><li class="navListItem"><a class="navItem" href="/docs/topics/legal-app-terms">App terms</a></li><li class="navListItem"><a class="navItem" href="/docs/topics/legal-developers-terms">Developers terms</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><a class="edit-page-link button" href="https://github.com/overwolf/overwolf.github.io/tree/source/docs/topics/login-with-overwolf.md" target="_blank" rel="noreferrer noopener">Edit</a><h1 id="__docusaurus" class="postHeaderTitle">App login with Overwolf</h1></header><article><div><span><p>This article will explain how to implement an Overwolf login/auth interface in your Overwolf app or your Website. This flow is web browser flow only, not API-based authentication.</p>
+<h2><a class="anchor" aria-hidden="true" id="login-flow-overview"></a><a href="#login-flow-overview" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Login flow overview</h2>
+<p>The login form is hosted on the OW servers. That means you should implement only a &quot;Login with Overwolf&quot; button on your website/app. You can't directly login from your website/app, as we currently do not offer client SDK that supports API-based authentication.</p>
+<p>The login button should open the OW login page (<a href="https://accounts.overwolf.com/oauth2/">https://accounts.overwolf.com/oauth2/</a>), hosted on the OW servers, in a new browser tab or popup window.</p>
+<p>Once the login is done, the user is redirected to a pre-defined redirect_URI hosted on your servers.</p>
+<p>Note that we support the OW URI scheme (overwolf-extension://..), so if you implement the login in your OW app, the redirect_URI should be the name of one of your app's windows.</p>
+<h2><a class="anchor" aria-hidden="true" id="prerequisite"></a><a href="#prerequisite" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Prerequisite</h2>
+<h3><a class="anchor" aria-hidden="true" id="register-your-app-on-overwolf"></a><a href="#register-your-app-on-overwolf" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Register your app on Overwolf</h3>
+<p>To implement OW login in your app or website, you first need to register your app on Overwolf (send us an email to <a href="mailto:developers@overwolf.com">developers@overwolf.com</a>) to generate your <code>client_id</code> and <code>client_secret</code>.</p>
+<p>You should provide these parameters:</p>
+<ol>
+<li>client_name - The app's name.</li>
+<li>redirect_uris - List of callback URL's (at least one).<br>
+An endpoint on your server/app. More details <a href="#create-redirect_uri-endpoint">here</a>.</li>
+<li>logo_uri - URL of the app's logo.</li>
+<li>policy_uri - URL of the app's policy.</li>
+<li>tos_uri - URL of the app's &quot;Terms of Service&quot;.</li>
+</ol>
+<p>Once the registration is completed, you will get from us your app's <code>client_id</code> and your <code>client_secret</code>.</p>
+<h3><a class="anchor" aria-hidden="true" id="create-redirect_uri-endpoint"></a><a href="#create-redirect_uri-endpoint" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Create redirect_uri endpoint</h3>
+<p>On your server, create a URL that will be used to get the auth-token from Overwolf.<br>
+<a href="#3-implement-your-app-s-server-side-endpoint">Here</a> you can find more details on the required server side code for this page.</p>
+<p>If you implement the OW login in your OW app, you can use existing app window, or create a dedicate window for that.</p>
+<h3><a class="anchor" aria-hidden="true" id="implement-your-apps-server-side-endpoint"></a><a href="#implement-your-apps-server-side-endpoint" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Implement your app's server side endpoint.</h3>
+<p>On your server, create a URL that will be used to get the auth-token from Overwolf, by doing a POST request to OW server.</p>
+<p>In our example, this page is <a href="http://localhost:5000/oidc-callback">http://localhost:5000/oidc-callback</a>.</p>
+<p>In the code behind of this page, you should do a POST request with the following details:</p>
+<pre><code class="hljs css language-js">https:<span class="hljs-comment">//accounts.overwolf.com/oauth2/token?client_id={client id}&amp;client_secret={client secret}&amp;grant_type=authorization_code&amp;code={code that came from request object, e.g: request.query.code}&amp;redirect_uri={redirect_uri}</span>
+</code></pre>
+<h4><a class="anchor" aria-hidden="true" id="requiree-query-params"></a><a href="#requiree-query-params" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Requiree Query params:</h4>
+<ul>
+<li>client_id</li>
+<li>client_secret</li>
+<li>grant_type</li>
+<li>code</li>
+<li>redirect_uri</li>
+</ul>
+<h4><a class="anchor" aria-hidden="true" id="required-http-headers"></a><a href="#required-http-headers" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Required HTTP headers:</h4>
+<ul>
+<li>Content-Type: &quot;application/x-www-form-urlencoded&quot;</li>
+</ul>
+<p>At this point, you should get a response from the POST request, with the auth token (or error). More info on <a href="3-get-the-auth-token">step 3</a>.</p>
+<h2><a class="anchor" aria-hidden="true" id="1-engage-the-sso-flow"></a><a href="#1-engage-the-sso-flow" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>1. Engage the SSO flow.</h2>
+<p>The first step is to implemet a login button in your website/app.<br>
+The button click should open a new tab or popup window that redirect to the OW login page, by implementing this GET request:</p>
+<pre><code class="hljs css language-js">GET https:<span class="hljs-comment">//accounts.overwolf.com/oauth2/auth?response_type=code&amp;client_id={client id}&amp;redirect_uri={redirect_uri}&amp;scope={desired scope separated by '+', e.g: openid+profile+email}</span>
+</code></pre>
+<h4><a class="anchor" aria-hidden="true" id="requiree-query-params-1"></a><a href="#requiree-query-params-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Requiree Query params:</h4>
+<ul>
+<li>response_type</li>
+<li>client_id</li>
+<li>redirect_uri</li>
+<li>scope</li>
+</ul>
+<h4><a class="anchor" aria-hidden="true" id="sample-code-that-implemeting-the-above"></a><a href="#sample-code-that-implemeting-the-above" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Sample code that implemeting the above</h4>
+<p>This is an example of a server side code that runs once the user clicks on the &quot;Login with Overwolf&quot; button.</p>
+<p>As you can see, the <code>redirect_uri</code> is <code>http://localhost:5000/oidc-callback</code>. This is page that recive the auth token (or login error) once the auth process is finished on the OW side.</p>
+<pre><code class="hljs css language-js"><span class="hljs-keyword">var</span> express = <span class="hljs-built_in">require</span>(<span class="hljs-string">'express'</span>);
+<span class="hljs-keyword">var</span> router = express.Router();
+<span class="hljs-keyword">const</span> axios = <span class="hljs-built_in">require</span>(<span class="hljs-string">'axios'</span>);
+<span class="hljs-keyword">const</span> querystring = <span class="hljs-built_in">require</span>(<span class="hljs-string">'querystring'</span>);
+
+<span class="hljs-keyword">const</span> demoClient = {
+  <span class="hljs-attr">client_id</span>: <span class="hljs-string">'xxxxxxxx'</span>,
+  <span class="hljs-attr">client_secret</span>: <span class="hljs-string">'yyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy'</span>,
+};
+
+<span class="hljs-comment">/**
+ * start the auth flow by opening this in the browser:
+ * https://accounts.overwolf.com/oauth2/auth?response_type=code&amp;client_id=14p5m4qp90bya1svhql1r04k0rk1yn80&amp;redirect_uri=http://localhost:5000/oidc-callback&amp;scope=openid+profile+email
+ *
+ * this is the callback endpoint as passed in the redirect_uri parameter
+ * and should be whitelisted in the oauth client application
+ */</span>
+router.get(<span class="hljs-string">'/oidc-callback'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">req, res, next</span>) </span>{
+  <span class="hljs-keyword">const</span> client = demoClient;
+  axios.post(<span class="hljs-string">'https://accounts.overwolf.com/oauth2/token'</span>,
+    querystring.stringify({
+      <span class="hljs-attr">client_id</span>: client.client_id,
+      <span class="hljs-attr">client_secret</span>: client.client_secret,
+      <span class="hljs-attr">grant_type</span>: <span class="hljs-string">'authorization_code'</span>,
+      <span class="hljs-attr">code</span>: req.query.code,
+      <span class="hljs-attr">redirect_uri</span>: <span class="hljs-string">'http://localhost:5000/oidc-callback'</span>
+    }),
+    {
+      <span class="hljs-attr">headers</span>: {
+        <span class="hljs-string">"Content-Type"</span>: <span class="hljs-string">"application/x-www-form-urlencoded"</span>
+      }
+    }).then(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">response</span>) </span>{
+      <span class="hljs-comment">// the response will contain the access token to be used</span>
+      <span class="hljs-built_in">console</span>.log(response);
+      res.json({});
+    }).catch(<span class="hljs-function">(<span class="hljs-params">e</span>) =&gt;</span> {
+      <span class="hljs-built_in">console</span>.error(e)
+      res.send(<span class="hljs-string">'err'</span>)
+  });
+});
+
+router.get(<span class="hljs-string">'/oidcresult'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">req, res, next</span>) </span>{
+  res.json(req.query);
+});
+
+<span class="hljs-built_in">module</span>.exports = router;
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="2-login-on-overwolf"></a><a href="#2-login-on-overwolf" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>2. Login on Overwolf</h2>
+<p>Once the SSO flow is engaged, the user is redirected to the OW hosted login page:</p>
+<p><img src="/docs/assets/ow_login.png" alt="OW login screenshot"></p>
+<p>On succesful login, the user gets also a consent screen to requested scopes.<br>
+After the consent, we will redirect the user back to the redirect_uri (on the above example is <a href="http://localhost:5000/oidc-callback">http://localhost:5000/oidc-callback</a>).</p>
+<h2><a class="anchor" aria-hidden="true" id="3-get-the-auth-token"></a><a href="#3-get-the-auth-token" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>3. Get the auth token</h2>
+<p>If there was no error in the flow, you should get a response from the POST request with the following auth token details:</p>
+<ul>
+<li>access_token</li>
+<li>expires_in</li>
+<li>id_token</li>
+<li>scope</li>
+<li>token_type</li>
+</ul>
+<p>You can save the auth token in a localStorage variable. We recommend encrypting the hash/token before storing it - for security reasons. You can use the <a href="../api/overwolf-cryptography">overwolf.cryptography API</a> for that.</p>
+<h2><a class="anchor" aria-hidden="true" id="4-close-the-log-in-window"></a><a href="#4-close-the-log-in-window" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>4. Close the Log In window.</h2>
+<p>Now, we can safely close the login window.</p>
+<p>The login process is complete.</p>
+</span></div></article></div><div class="docLastUpdate"><em>Last updated on 2021-1-2 by eransharv</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/topics/login-with-twitch"><span class="arrow-prev">← </span><span>Login with Twitch</span></a><a class="docs-next button" href="/docs/topics/events-SDK-for-game-developers"><span>Event SDK for Game Devs</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#login-flow-overview">Login flow overview</a></li><li><a href="#prerequisite">Prerequisite</a><ul class="toc-headings"><li><a href="#register-your-app-on-overwolf">Register your app on Overwolf</a></li><li><a href="#create-redirect_uri-endpoint">Create redirect_uri endpoint</a></li><li><a href="#implement-your-apps-server-side-endpoint">Implement your app's server side endpoint.</a></li></ul></li><li><a href="#1-engage-the-sso-flow">1. Engage the SSO flow.</a></li><li><a href="#2-login-on-overwolf">2. Login on Overwolf</a></li><li><a href="#3-get-the-auth-token">3. Get the auth token</a></li><li><a href="#4-close-the-log-in-window">4. Close the Log In window.</a></li></ul></nav></div><footer class="site-footer"><div class="container"><ul><li>Legal</li><li><a href="/docs/topics/legal-overview">Terms overview</a></li><li><a href="/docs/topics/legal-developers-terms">Developer&#x27;s terms</a></li><li><a href="/docs/topics/legal-app-terms">App terms</a></li><li><a href="http://www.overwolf.com/legal/" target="_blank">Overwolf terms</a></li><li><a href="http://www.overwolf.com/legal/#Privacy-policy" target="_blank">Overwolf Privacy policy</a></li></ul><ul><li>Support</li><li><a href=" https://discuss.developers.overwolf.com/" target="_blank">Questions and Answers</a></li><li><a href=" https://discord.gg/7256qS2" target="_blank">Discord</a></li><li><a href="/docs/support/contact-us#join-our-slack">Slack</a></li><li><a href="https://www.facebook.com/OverwolfDevs" target="_blank">Facebook</a></li><li><a href="https://twitter.com/OverwolfDevs" target="_blank">Twitter</a></li></ul><ul><li>Documentation</li><li><a href="/docs/api/changelog">Changelog</a></li><li><a href="/docs/api/overwolf-api-overview">API</a></li><li><a href="/docs/start/app-creation-process">App Creation Process</a></li><li><a href="/docs/topics/best-practices-overview">Best Practices</a></li><li><a href="/docs/status/all">Game Events status</a></li></ul><ul><li>Information</li><li><a href="http://www.overwolf.com/careers/">Careers</a></li><li><a href="https://play.overwolf.com/fund/" target="_blank">Fund</a></li><li><a href="https://medium.com/overwolf" target="_blank">Developers Blog</a></li><li><a href="https://www.overwolf.com/appstore" target="_blank">Overwolf Appstore</a></li><li><a href="https://brands.overwolf.com/" target="_blank">Advertise on Overwolf</a></li></ul></div></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+                document.addEventListener('keyup', function(e) {
+                  if (e.target !== document.body) {
+                    return;
+                  }
+                  // keyCode for '/' (slash)
+                  if (e.keyCode === 191) {
+                    const search = document.getElementById('search_input_react');
+                    search && search.focus();
+                  }
+                });
+              </script><script>
+              var search = docsearch({
+                
+                apiKey: 'fe54eceb2ea7e0780cc7030fcd4020d4',
+                indexName: 'overwolf',
+                inputSelector: '#search_input_react',
+                algoliaOptions: {}
+              });
+            </script></body></html>
