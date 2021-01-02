@@ -62,11 +62,11 @@ match_end    | null              | Match ended. | See [notes](#match_end-note)  
 #### *roster* note
 
 ```json
-{"info":{"match_info":{"roster_33":"{"player":"ItayG#9798518\","is_local":true,"is_bot":0,"team_id":35,"armor":0,\"damage":0,"rank":39,"ping":64,"kills":0,"deaths":0,"score":0,"assists":0}"}},"feature":"match_info"}
+{"info":{"match_info":{"roster_1":"{"player":"7766#6156337","is_local":true,"is_bot":0,"team_id":32,"armor":256,"damage":437,"rank":9,"ping":73,"cash":9000,"completed_contracts":1,"opened_supply_boxes":1,"kills":1,"deaths":0,"score":550,"assists":0}"}},"feature":"match_info"}
 {"info":{"match_info":{"roster_30":"{"player":"GiussaSimo13#2220952","is_local":false,"is_bot":0,"team_id":31,"rank":55,"ping":47,"kills":0,"deaths":0,"score":0,"assists":0}"}},"feature":"match_info"}
 {"info":{"match_info":{"roster_31":"{"player":"HARPOON97#7053414","is_local":false,"is_bot":0,"team_id":14,"rank":137,"ping":46,"kills":0,"deaths":0,"score":0,"assists":0}"}},"feature":"match_info"}
 ```
-- Note: The information provided for the local player also includes "damage" and "armor"
+- Note: The information provided for the local player also includes "damage" and "armor" & the same values are provided for team members aswell if you play on duos and above.
 
 #### *match_start* note
 
@@ -94,6 +94,8 @@ activision_id| game_info   | Local player's Activision ID. |See [notes](#activis
 battlenet_tag| game_info   | Local player's Battlenet tag. |See [notes](#battlenet_tag-note)|   157.0       |
 match_state  | game_info   | Current game's match state.   |See [notes](#match_state-note)|   157.0       |
 lobby_state  | game_info   | Current state of the lobby screen. |See [notes](#lobby_state-note)|   157.0       |
+game_mode  | game_info   | Current game-mode type (solo/quads, etc). |See [notes](#game_mode-note)|   160.0       |
+game_map  | game_info   | Currently played game-map. |See [notes](#game_map-note)|   160.0       |
 
 #### *activision_id* note
 
@@ -144,6 +146,29 @@ Possible values:
 * "eWAITING_FOR_LOBBY_INFO"
 * "eJOINING_LOBBY"
 * "eLOBBY_JOINED"
+
+#### *game_mode* note
+
+Data Example:
+
+```json
+{"info":{"game_info":{"game_mode":"150"}},"feature":"game_info"}
+```
+
+Possible Values:
+
+* 150 (solo)
+* 152 (quads)
+* 24 (training)
+* 100 (plunder)
+
+#### *game_map* note
+
+Data Example:
+
+```json
+{"info":{"game_info":{"game_map":"mp_don3"}},"feature":"game_info"}
+```
 
 ## kill
 
