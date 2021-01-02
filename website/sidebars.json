@@ -27,7 +27,7 @@
 		"Developers Console":
 			["topics/submit-a-new-version","topics/submit-for-review", "topics/update-store-listing","topics/manage-subscriptions", "topics/users-and-permissions", "topics/crash-reports", "topics/rating-and-reviews"],
 		"Integrations":
-			["topics/app-analytics", "topics/login-with-twitch", "topics/events-SDK-for-game-developers", "topics/twitch-events-sdk-for-game-developers"],
+			["topics/app-analytics", "topics/login-with-twitch","topics/login-with-overwolf", "topics/events-SDK-for-game-developers", "topics/twitch-events-sdk-for-game-developers"],
 		"Request a Service":
 			["topics/assets-req-marketing", "topics/looking-for-group", "topics/promoting-your-app"],
 		"Community Help":
