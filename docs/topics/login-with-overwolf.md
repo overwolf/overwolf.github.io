@@ -133,7 +133,10 @@ Once the SSO flow is engaged, the user is redirected to the OW hosted login page
 
 ![OW login screenshot](assets/ow_login.png)
 
-On succesful login, the user gets also a consent screen to requested scopes.  
+On succesful login, the user gets also a consent screen to requested scopes:
+
+![OW login consent](assets/ow_login_consent.png)
+
 After the consent, we will redirect the user back to the redirect_uri (on the above example is http://localhost:5000/oidc-callback).
 
 ## 3. Get the auth token
