@@ -131,10 +131,14 @@ callback       | [(Result: FileResult)](overwolf-media#fileresult-object) => voi
 #### Usage example
 
 ```js
-overwolf.media.videos.addWatermark("overwolf://media/videos/Settings/test.mp4",'overwolf://media/videos/Settings/giphy.gif', {
+const sourceVideoUrl = 'overwolf://media/videos/Settings/test.mp4'; // 'overwolf://media' scheme
+const watermarkUrl = 'giphy.gif'; // relative path to a file on the extension directory
+const params = {
 	location: overwolf.media.videos.enums.WatermarkLocation.BottomLeft,
-    scaleHeight: 300
-    },console.log)
+    	scaleHeight: 300
+};
+
+overwolf.media.videos.addWatermark(sourceVideoUrl ,watermarkUrl, params ,console.log);
 ```
 
 ## WatermarkParams Object
