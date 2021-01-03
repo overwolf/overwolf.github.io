@@ -132,7 +132,7 @@ callback       | [(Result: FileResult)](overwolf-media#fileresult-object) => voi
 
 ```js
 const sourceVideoUrl = 'overwolf://media/videos/Settings/test.mp4'; // 'overwolf://media' scheme
-const watermarkUrl = 'giphy.gif'; // relative path to a file on the extension directory
+const watermarkUrl = 'giphy.gif'; // relative path to a file in the extension directory
 const params = {
 	location: overwolf.media.videos.enums.WatermarkLocation.BottomLeft,
     	scaleHeight: 300
