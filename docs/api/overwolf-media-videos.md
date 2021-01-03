@@ -124,17 +124,21 @@ overwolf.media.videos.deleteVideo(url);
 Parameter      | Type                                | Description                                                                                             |
 -------------- | ------------------------------------| ------------------------------------------------------------------------------------------------------- |
 sourceVideoUrl | string                              | The url of the source video in an overwolf://media form.                                                |
-watermarkUrl   | string                              | The url of the watermark video/image in an overwolf://media form.                                       |
+watermarkUrl   | string                              | The url of the watermark video/image in relative path or an overwolf://media form.                      |
 watermarkParams| [WatermarkParams](#watermarkparams-object) object   | use this object to mark the watermark                                                    |
 callback       | [(Result: FileResult)](overwolf-media#fileresult-object) => void  | Called with the status of the request and the url to the output video     |
 
 #### Usage example
 
 ```js
-overwolf.media.videos.addWatermark("overwolf://media/videos/Settings/test.mp4",'overwolf://media/videos/Settings/giphy.gif', {
+const sourceVideoUrl = 'overwolf://media/videos/Settings/test.mp4'; // 'overwolf://media' scheme
+const watermarkUrl = 'giphy.gif'; // relative path to a file in the extension directory
+const params = {
 	location: overwolf.media.videos.enums.WatermarkLocation.BottomLeft,
-    scaleHeight: 300
-    },console.log)
+    	scaleHeight: 300
+};
+
+overwolf.media.videos.addWatermark(sourceVideoUrl ,watermarkUrl, params ,console.log);
 ```
 
 ## WatermarkParams Object
