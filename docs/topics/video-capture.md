@@ -32,9 +32,9 @@ See for an example the [overwolf.streaming.stop()](../api/overwolf-streaming#sto
 ## Choosing the right Encoder
 
 When capturing a video, a "video encoder" is used.  
-Both of the APIs, [overwolf.streaming](overwolf-streaming) and [overwolf.media.replays](overwolf-media-replays) offer ways to manually set a video encoder or use the default encoder that the user defines through the OW client UI.
+Both of the APIs, [overwolf.streaming](../api/overwolf-streaming) and [overwolf.media.replays](../api/overwolf-media-replays) offer ways to manually set a video encoder or use the default encoder that the user defines through the OW client UI.
 
-To get the best capture results according to your requirements, It is highly recommended to check which encoder is set before capturing videos in your app. You can get the list of available encoders for the current user using [overwolf.streaming.getStreamEncoders()](overwolf-streaming#getstreamencoderscallback).
+To get the best capture results according to your requirements, It is highly recommended to check which encoder is set before capturing videos in your app. You can get the list of available encoders for the current user using [overwolf.streaming.getStreamEncoders()](../api/overwolf-streaming#getstreamencoderscallback).
 
 There are CPU/software-based encoders, like the X264, and there are GPU based encoders from Intel (QSV), NVIDIA (NVEnc) and AMD (VCE). CPU encoding is focused on quality where GPU encoding is focused on speed. So CPU/software encoders like the X264 are quality wise better than GPU based encoders.  
 
