@@ -10,7 +10,7 @@ This article will explain how to implement an Overwolf login/auth interface in y
 
 The login form is hosted on the OW servers. That means you should implement only a "Login with Overwolf" button on your website. The actual login is done using a login form on our site, as we currently do not offer client SDK that supports API-based authentication.
 
-The login button should open the OW login page (https://accounts.overwolf.com/oauth2/), hosted on the OW servers, in a new browser tab or a popup window.  
+The login button should open the OW login page (fulll details on [step 1](#1-engage-the-sso-flow)) hosted on the OW servers, in a new browser tab or a popup window.
 
 Once the login is done, the user is redirected to a pre-defined redirect_URI hosted on your servers.
 
@@ -91,7 +91,7 @@ const demoClient = {
 
 /**
  * start the auth flow by opening this in the browser:
- * https://accounts.overwolf.com/oauth2/auth?response_type=code&client_id=14p5m4qp90bya1svhql1r04k0rk1yn80&redirect_uri=http://localhost:5000/oidc-callback&scope=openid+profile+email
+ * https://accounts.overwolf.com/oauth2/auth?response_type=code&client_id=xxxxxxxx&redirect_uri=http://localhost:5000/oidc-callback&scope=openid+profile+email
  *
  * this is the callback endpoint as passed in the redirect_uri parameter
  * and should be whitelisted in the oauth client application
