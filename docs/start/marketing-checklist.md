@@ -8,16 +8,13 @@ So, your app is live on the Overwolf Appstore, and you've already gone through t
 
 There is no one 'correct' way to market and promote apps. You know your users best, and promotions that worked for one app doesn't necessarily apply for a different audience of gamers. With that in mind, here are some ideas for promoting your app effectively based on best practices and lessons that we’ve learned. Use those ideas that fit your app and audience.
 
-The checklist has three tiers, please take your time and follow it step by step when you are able.
-Since we're all here to benefit users with great apps, completing the checklist of recommendations fully will increase your share of the revenues by up to 3%.
-
 The Overwolf team is here for you and we’re happy to evaluate your strategy and assist in any way we can.
 
 :::note
-If you have a refer-a-friend program, an in-app store, or prizes you want to hand out, we can help you with RP purchase. Please contact your Developer Success Manager for more details.
+If you have a refer-a-friend program, an in-app store, or prizes you want to hand out, we can help you with RP purchase. Please contact your Developer Relations Manager for more details.
 :::
 
-## Marketing Alpha (+3% to rev-share)
+## Marketing Alpha 
 * Participate in CRI / CRN
    *  Content Recommendation Installer
    *  Content Recommendation Notification
@@ -39,4 +36,6 @@ If you have a refer-a-friend program, an in-app store, or prizes you want to han
   *   A fast and simple development framework -- allows you to write an in-game app with just HTML and JS without the need to master C++.
 
   *   Helps you in monetization, which allows you to focus on the app more and thus drives a better product for your users.
+  
+  *Note: this checklist previously awarded extra percentages for the revshare, but it was discontinued as of Jan 1st, 2021.
 
