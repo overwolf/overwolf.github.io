@@ -4,12 +4,7 @@ title: Technical checklist
 sidebar_label: Technical checklist
 ---
 
-:::note
-Following this technical checklist improves user experience for your app.  
-Seeing as gamer experience is our top priority, making your app the best it can be will be rewarded!
-:::
-
-## Technical Hunter (+3% to rev-share)
+## Technical Hunter
 
 -   Your Main (index) window is used as a hidden controller that opens other windows.
 
@@ -27,5 +22,5 @@ Seeing as gamer experience is our top priority, making your app the best it can 
 
 -   The app passed Overwolf's performance test. It works smoothly and does not cause lags in game. Moreover, the app has 0% GPU/CPU/memory usage when idle.
 
-
+*Note: this checklist previously awarded extra percentages for the revshare, but it was discontinued as of Jan 1st, 2021.
 
