@@ -4,7 +4,7 @@ title: Product checklist
 sidebar_label: Product checklist
 ---
 
-## Product Predator (+4% to rev-share)
+## Product Predator
 
 
 -   Implement a First Time User Experience (FTUE) ([Read more here](https://overwolf.github.io/docs/topics/first-time-user-experience)).
@@ -26,3 +26,5 @@ sidebar_label: Product checklist
 -   Your app supports 2nd screen functionality, by offering real time stats, builds, tips, leaderboards or any other relevant info 
 
 -   The app has 2nd week retention greater than 40%.
+
+*Note: this checklist previously awarded extra percentages for the revshare, but it was discontinued as of Jan 1st, 2021.
