@@ -13,7 +13,7 @@ This flow is web browser flow only, as currently, we do not offer client SDK tha
 * Developers register their app for OW SSO and get unique client_id and client_secret.
 * The actual login is done using a login form hosted on the OW servers.  This means you should implement on your Website only a "Login with Overwolf" button that opens a new window/tab with the OW login form. (More info in [step 1: Engage the SSO flow](#1-engage-the-sso-flow)).
 * Once the login is completed on the OW hosted login page, the user is redirected to a pre-defined redirect_URI hosted on YOUR server (More info on how to implement this page in ["Create redirect_uri endpoint"](#create-redirect_uri-endpoint)).
-* The redirect_URI page executes a POST request to OW servers to request and get the auth token that was created after the login and save it for later usage (More info in [step 3: Get the auth token](#3-get-the-auth-token)).
+* The redirect_URI page executes a POST request to OW servers to request and get the auth token that was created after the login (More info in [step 3: Get the auth token](#3-get-the-auth-token)).
 
 ## Prerequisite
 
@@ -26,7 +26,7 @@ You should provide these parameters:
 1. client_name - The app's name.
 2. redirect_uris - An endpoint hosted on your server. More details [here](#create-redirect_uri-endpoint).  
 3. logo_uri - URL of the app's logo.
-4. policy_uri - URL of the app's policy.
+4. policy_uri - URL of the app's privacy policy.
 5. tos_uri - URL of the app's "Terms of Service".
 
 Once the registration is completed, you will get your app's `client_id` and `client_secret`.
@@ -39,7 +39,7 @@ On your server, create an endpoint used to get the auth-token from Overwolf (by 
 POST https://accounts.overwolf.com/oauth2/token?client_id={client id}&client_secret={client secret}&grant_type=authorization_code&code={code that came from request object, e.g: request.query.code}&redirect_uri={redirect_uri}
 ```
 
-#### Requiree Query params:
+#### Required Query params:
 
 * client_id
 * client_secret
@@ -113,7 +113,7 @@ The button click should open a new tab or popup window by implementing this GET 
 GET https://accounts.overwolf.com/oauth2/auth?response_type=code&client_id={client id}&redirect_uri={redirect_uri}&scope={desired scope separated by '+', e.g: openid+profile+email}
 ```  
 
-#### Requiree Query params:
+#### Required Query params:
 
 * response_type
 * client_id
@@ -145,8 +145,6 @@ Once the POST completed, you will get the following auth token details:
 * id_token
 * scope
 * token_type
-
-You can save the auth token in a localStorage variable. We recommend encrypting the hash/token before storing it - for security reasons. You can use the [overwolf.cryptography API](../API/overwolf-cryptography) for that.
 
 ## 4. Close the login window.
 
