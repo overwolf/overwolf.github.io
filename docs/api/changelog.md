@@ -8,9 +8,38 @@ Follow this entry for ongoing updates and changes to the project or tools.
 
 Here you can find our [Developers Roadmap](https://trello.com/b/1V10E4IB/overwolf-roadmap).
 
-## Version 0.162 (In-Progress)
+## Version 0.165 (In-Progress)
 
 Note that the work on the documentation for this version is still in-progress.  
+Note that iterations 163 to 165 were combined into a single iteration.  
+
+#### API
+
+* [overwolf.media.videos.addWatermark()](overwolf-media-videos#addwatermarksourcevideourl-watermarkurl-watermarkparams-callback) watermark file now supports absolute/local path to a file in the extension directory.  
+Furthermore, The error messages in case of a failure were improved.
+
+#### Platform
+
+* Increase max log file item to upload from 1 Mb to 3Mb (When using [uploadClientLogs()](overwolf-utils#uploadclientlogscallback)).
+* Increase *.HTML dump limit log size to 5 Mb.
+* Change Extension crash notification Text to: "%APP_NAME% has crashed".
+* Browser inGame dragging: stop the drag when alt+tab from game. Make sure we stop the dragging when OnDragEnd is triggered.
+* New Overlay process: internal changes and enhancements. no further details will be released. Just mentioned here as it includes many internal changes.
+
+#### Bug fixes
+
+* Fixed: If a hotkey is defined in the manifest with no default key binding, [hotkeys.get()](overwolf-settings-hotkeys#getcallback)/attempting to set the hotkey would result in an error.
+
+#### Dev Console
+
+* Soon.
+
+#### Game events
+
+* Soon.
+
+## Version 0.162 (Jan. 2021)
+
 Note that iterations 160 to 162 were combined into a single iteration.  
 
 #### API
@@ -33,7 +62,7 @@ Note that iterations 160 to 162 were combined into a single iteration.
 * Increase `localstorge` size to ~50MB. Note that localstorge should be used up to 20-25 MB saved data. If you need more than that, you should use other storage.
 * Enable `navigator.storage.persist()` for *overwolf-extension:\\* scheme.
 
-#### Bug fixes
+#### Bug Fixes
 
 * FilePicker with multipleSelection splits files with comma in their names.
 
@@ -72,7 +101,7 @@ Note that iterations 160 to 162 were combined into a single iteration.
 * Cleanup upon uninstall: Clear IndexedDB.
 * New guide: [App login with Twitch, Discord, Facebook or Google](../topics/login-with-twitch).
 
-#### Bug fixes
+#### Bug Fixes
 
 * Call overwolf.media.replays.capture with futureDuration of -1.
 * Remove State 'open' when opening OSR windw.
@@ -89,7 +118,7 @@ Note that iterations 160 to 162 were combined into a single iteration.
 * Comments Info - While on the subject of comments and reviews, we are now also sending some additional information about users' Overwolf versions and modules and some basic system information such as DPI and resolution. This will help you and us diagnose some issues when they happen.
 * Test Subscription - It is now possible for app developers to see the test subscriptions they made in the Developers console. These will only be visible if the app developer is logged into Overwolf, and will be hidden otherwise, which allows the developer to play around with how the subscription flow looks and feels before adding the subscription feature.
 
-#### Game events
+#### Game Events
 
 * Valorant.
   * Added new update: **pseudo_match_id**  under [match_info](overwolf-games-events-valorant#match_info).
@@ -122,7 +151,7 @@ Note that iterations 160 to 162 were combined into a single iteration.
   * Relevant only for native windows.
   * It should always be used for native windows that are running on the secondary screen. It improves the game's performance by reducing the usage of the GPU while you are playing and fixes a bug where some users encountered FPS drops when using a secondary screen. 
 
-#### Bug fixes
+#### Bug Fixes
 
 * Fix bug that prevets to notify all the apps using highlights when the game was closed during the highlight capture.
 * Removed user token from logs: we used to write the user token after changes to the login state.
@@ -133,7 +162,7 @@ Note that iterations 160 to 162 were combined into a single iteration.
 
 * Added the ability to reply to user feedback/review on the app store. 
 
-#### Game events
+#### Game Events
 
 * [Call of Duty - Warzone](overwolf-games-events-warzone)
   * Auto-highlights support.
@@ -159,7 +188,7 @@ Note that iterations 160 to 162 were combined into a single iteration.
   When you release version 1.0 to 10% of your users using the phase system and found a major bug - you can release an immediate fix 1.1 that targets the same 10% of your users.
 * <a href="https://support.microsoft.com/en-us/windows/snap-your-windows-885a9b1e-a983-a3b1-16cd-c531795e6241" target="_blank">Aero-snap</a> support for native windows - Resizable native windows should support aero-snap (winkey + arrows and sticky-behaviour to screen edges).
 
-#### Bug fixes
+#### Bug Fixes
 
 * Full-screen embedded videos no longer automatically repositioned in the top-left corner.
 * Fixed an exception that could occur when shutting down Overwolf.
@@ -173,7 +202,7 @@ Note that iterations 160 to 162 were combined into a single iteration.
 
 * We added a "per-version" retention report to compare retention between different app versions. You can see it on your board.
 
-#### Game events
+#### Game Events
 
 * We're expanding our library with typedef files for the different in-game events, starting with Valorant info updates.  You can find our def file in [this repo](https://github.com/overwolf/types), or as an [npm package](https://www.npmjs.com/package/@overwolf/types).  
   More info [here](../topics/type-definition-file#using-types-for-games-events).
@@ -198,7 +227,7 @@ Note that iterations 160 to 162 were combined into a single iteration.
   * track3: Microphone input.  
 * Extension logs: Send the isolated relevant's extension logs to server (upon crash/request to send logs).
 
-#### Bug fixes
+#### Bug Fixes
 
 * Do not launch extension with "LaunchWithOverwolf" launch event when extension is disabled. 
 * overwolf.extensions.current.getExtraObject - Fixed cases where this function wouldn’t return a callback.
