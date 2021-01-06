@@ -124,7 +124,8 @@ overwolf.media.videos.deleteVideo(url);
 Parameter      | Type                                | Description                                                                                             |
 -------------- | ------------------------------------| ------------------------------------------------------------------------------------------------------- |
 sourceVideoUrl | string                              | The url of the source video in an overwolf://media form.                                                |
-watermarkUrl   | string                              | The url of the watermark video/image in relative path or an overwolf://media form.                      |
+watermarkUrl   | string                              | The url of the watermark video/image. Supports absolute/local path to a file in the 
+extension directory (or an overwolf://media form).                      |
 watermarkParams| [WatermarkParams](#watermarkparams-object) object   | use this object to mark the watermark                                                    |
 callback       | [(Result: FileResult)](overwolf-media#fileresult-object) => void  | Called with the status of the request and the url to the output video     |
 
