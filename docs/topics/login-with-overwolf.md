@@ -151,3 +151,15 @@ Once the POST completed, you will get the following auth token details:
 Now, we can safely close the login window.
 
 The login process is complete.
+
+## 5. Live Demo (coming soon)
+
+Below you can find a live example of the Overwolf SSO Process:
+
+After clicking on this page, a new tab will be open, and you will be able to login with your Overwolf username. Once done, you'll be back to this page, and the token will be displayed. 
+
+Of course, in practice, you will do something more meaningful with the auth token...
+
+--> **Login with OW button here** <--
+
+The server side code that implemented in our server (in the redirect_uri), can be downloaded from [our Github]().
