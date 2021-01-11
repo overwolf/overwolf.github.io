@@ -70,7 +70,7 @@ const demoClient = {
  * this is the callback endpoint as passed in the redirect_uri parameter
  * and should be whitelisted in the oauth client application
  */
-router.get('/oidc-callback', function(req, res, next) {
+router.get('/auth/overwolf/callback', function(req, res, next) {
   const client = demoClient;
   axios.post('https://accounts.overwolf.com/oauth2/token',
     querystring.stringify({
@@ -78,7 +78,7 @@ router.get('/oidc-callback', function(req, res, next) {
       client_secret: client.client_secret,
       grant_type: 'authorization_code',
       code: req.query.code,
-      redirect_uri: 'http://localhost:5000/oidc-callback'
+      redirect_uri: 'http://localhost:5000/auth/overwolf/callback'
     }),
     {
       headers: {
@@ -101,7 +101,7 @@ router.get('/oidcresult', function(req, res, next) {
 module.exports = router;
 ```
 
-As you can see, `redirect_uri` is `http://localhost:5000/oidc-callback`. This page receives the auth token (or login error) once the auth process is finished on the OW side.
+As you can see, `redirect_uri` is `http://localhost:5000/auth/overwolf/callback`. This page receives the auth token (or login error) once the auth process is finished on the OW side.
 
 
 ## 1. Engage the SSO flow.
