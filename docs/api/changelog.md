@@ -581,7 +581,7 @@ Note that iteration 144 and 145 were combined into a single iteration.
   * [overwolf.io.readTextFile()](overwolf-io#readtextfilepath-options-callback)
   * [overwolf.io.exist()](overwolf-io#existpath-callback)
   * [overwolf.io.listenOnFile()](overwolf-io#listenonfileid-path-option-callback)
-  * [overwolf.io.stopFilelistener()](overwolf-io#stopfilelistenerid)
+  * [overwolf.io.stopFileListener()](overwolf-io#stopfilelistenerid)
 * [League of Legends Launcher Events](overwolf-games-launchers-events-lol#docsNav)
   * New [status page](../status/lol-launcher) for LOL launcher.
   * New update:

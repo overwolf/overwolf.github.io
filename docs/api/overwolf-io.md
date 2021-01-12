@@ -22,7 +22,7 @@ In addition, the [simple I/O plugin](../topics/simple-io-plugin) offers several 
 * [overwolf.io.readTextFile()](#readtextfilepath-options-callback)
 * [overwolf.io.exist()](#existpath-callback)
 * [overwolf.io.listenOnFile()](#listenonfileid-path-option-callback)
-* [overwolf.io.stopFilelistener()](#stopfilelistenerid)
+* [overwolf.io.stopFileListener()](#stopfilelistenerid)
 
 ## Types Reference
 

@@ -425,6 +425,8 @@ position  | [eIndicationPosition](#eindicationposition-enum) enum      | The pos
 Parameter                   | Type               | Description                                                               |
 --------------------------- | -------------------| ------------------------------------------------------------------------- |
 auto_launch_with_overwolf   | bool               | set your app to auto-launch when the OW client starts (takes ~15 seconds) |
+exit_overwolf_on_exit       | bool               | set the OW client to auto-shutdown when your OW app closes ("Shutdown" permission is required) |
+
 
 ```json
 {
