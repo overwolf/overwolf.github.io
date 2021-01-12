@@ -4,7 +4,17 @@ title: App login with Overwolf
 sidebar_label: Login with Overwolf
 ---
 
-This article will explain how to implement an Overwolf login/auth interface in your Website. 
+<meta http-equiv="Content-Type" content="text/html charset=utf-8"/>
+<!-- importing React -->
+<script src="https://unpkg.com/react@15/dist/react.js"></script>
+<!-- importing React-Dom -->
+<script src="https://unpkg.com/react-dom@15/dist/react-dom.js"></script>
+<!-- importing babel for jsx -->
+<script src=" https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+<!-- importing the remarkable plugin -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/remarkable/1.7.1/remarkable.js"></script>
+
+This article will explain how to implement an Overwolf login/auth interface in your Website.
 
 ## Login flow overview
 
@@ -24,7 +34,7 @@ To implement OW login in your Website, you first need to register your app on Ov
 You should provide these parameters:
 
 1. client_name - The app's name.
-2. redirect_uris - An endpoint hosted on your server. More details [here](#create-redirect_uri-endpoint).  
+2. redirect_uris - An endpoint hosted on your server. More details [here](#create-redirect_uri-endpoint).
 3. logo_uri - URL of the app's logo.
 4. policy_uri - URL of the app's privacy policy.
 5. tos_uri - URL of the app's "Terms of Service".
@@ -33,7 +43,7 @@ Once the registration is completed, you will get your app's `client_id` and `cli
 
 ### Create redirect_uri endpoint
 
-On your server, create an endpoint used to get the auth-token from Overwolf (by making a POST request to the OW server).  
+On your server, create an endpoint used to get the auth-token from Overwolf (by making a POST request to the OW server).
 
 ```js
 POST https://accounts.overwolf.com/oauth2/token?client_id={client id}&client_secret={client secret}&grant_type=authorization_code&code={code that came from request object, e.g: request.query.code}&redirect_uri={redirect_uri}
@@ -44,7 +54,7 @@ POST https://accounts.overwolf.com/oauth2/token?client_id={client id}&client_sec
 * client_id
 * client_secret
 * grant_type
-* code 
+* code
 * redirect_uri
 
 #### Required HTTP headers:
@@ -106,12 +116,12 @@ As you can see, `redirect_uri` is `http://localhost:5000/oidc-callback`. This pa
 
 ## 1. Engage the SSO flow.
 
-The first step is to implement a login button on your Website.  
+The first step is to implement a login button on your Website.
 The button click should open a new tab or popup window by implementing this GET request:
 
 ```js
 GET https://accounts.overwolf.com/oauth2/auth?response_type=code&client_id={client id}&redirect_uri={redirect_uri}&scope={desired scope separated by '+', e.g: openid+profile+email}
-```  
+```
 
 #### Required Query params:
 
@@ -134,7 +144,7 @@ After the consent, we will redirect the user back to the redirect_uri pre-define
 
 ## 3. Get the auth token
 
-If there was no error in the flow, the user is redirected to the redirect_uri endpoint, that POST request for the auth-token.  
+If there was no error in the flow, the user is redirected to the redirect_uri endpoint, that POST request for the auth-token.
 You can see how this POST request looks like in the [Create redirect_uri endpoint
 ](#create-redirect_uri-endpoint) section.
 
@@ -151,3 +161,17 @@ Once the POST completed, you will get the following auth token details:
 Now, we can safely close the login window.
 
 The login process is complete.
+
+## 5. Live Demo
+
+Below you can find a live example of the Overwolf SSO Process:
+
+After clicking on this page, a new tab will be open, and you will be able to login with your Overwolf username. Once done, you'll be back to this page, and the token will be displayed.
+
+Of course, in practice, you will do something more meaningful with the auth token...
+
+<div id="ssoDemo">
+  <script type="text/jsx" src="/jsx/ssoDemo.jsx"></script>
+</div>
+
+The server side code that implemented in our server (in the redirect_uri), can be downloaded from [our Github]().
