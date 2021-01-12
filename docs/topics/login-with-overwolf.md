@@ -174,4 +174,4 @@ Of course, in practice, you will do something more meaningful with the auth toke
   <script type="text/jsx" src="/jsx/ssoDemo.jsx"></script>
 </div>
 
-The server side code implemented in our server (in the redirect_uri), can be downloaded from [our Github]().
+The server side code implemented in our server (in the redirect_uri), can be downloaded from [our Github](https://github.com/overwolf/ow-sso).
