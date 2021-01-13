@@ -27,7 +27,7 @@ class SSODemo extends React.Component {
 
     openLoginWindow() {
         const loginWindow = window.open(
-            "https://accounts.overwolf.com/oauth2/auth?response_type=code&client_id=GYp5FgzDpr8vctky&redirect_uri=http://localhost:5000/auth/overwolf/callback&scope=openid+profile+email",
+            "https://accounts.overwolf.com/oauth2/auth?response_type=code&client_id=GYp5FgzDpr8vctky&redirect_uri=http://sso-sample-server.overwolf.com/auth/overwolf/callback&scope=openid+profile+email",
             '_blank'
         );
 
