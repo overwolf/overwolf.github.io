@@ -334,6 +334,7 @@ blockquote {
 }
 .sso-demo code {
   display: block;
+  margin-bottom: 16px;
   padding: 1.25rem 1.5rem;
   color: #484266;
   background: #D3CFE5;
@@ -344,17 +345,18 @@ blockquote {
 	background-color: #0D0A1A;
 }
 
-a.button-sso-login {
-  display: inline-block;
-	min-width: 130px;
+button.button-sso-login {
+  display: block;
+  width: 130px;
+  height: 36px;
+  line-height: 36px;
 	background: #E6004C;
-	padding: 6px 10px;
 	text-align: center;
   color: #F4F2FF !important;
   text-decoration: none;
 	transition: background .2s
 }
 
-a.button-sso-login:hover {
+button.button-sso-login:hover {
 	background: #FF0055
 }
