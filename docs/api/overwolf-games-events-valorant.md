@@ -105,6 +105,7 @@ Possible agent values:
 * "Vampire_PC_C" = Reyna
 * "Killjoy_PC_C" = Killjoy
 * "Guide_PC_C" = Skye
+* "Stealth_PC_C" = Yoru
 
 ## `match_info`
 
