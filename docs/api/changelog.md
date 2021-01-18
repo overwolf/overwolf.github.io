@@ -26,6 +26,10 @@ Furthermore, The error messages in case of a failure were improved.
 * Browser inGame dragging: stop the drag when alt+tab from game. Make sure we stop the dragging when OnDragEnd is triggered.
 * New Overlay process: internal changes and enhancements. no further details will be released. Just mentioned here as it includes many internal changes.
 
+#### Docs
+
+* [SSO guide](../topics/login-with-overwolf) - how to implement "login with Overwolf" button on your website.
+
 #### Bug fixes
 
 * Fixed: If a hotkey is defined in the manifest with no default key binding, [hotkeys.get()](overwolf-settings-hotkeys#getcallback)/attempting to set the hotkey would result in an error.

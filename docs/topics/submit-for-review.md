@@ -10,7 +10,7 @@ In this article, we'll go over the process of submitting the updated version for
 
 ## 1. Add release notes
 
-After [uploading the new version](/submit-a-new-version#3-upload-the-new-opk) of the OPK, you need to add some release notes, that includes info about new version changes, new features to test and everything that you think might be useful for our QA team.
+After [uploading the new version](submit-a-new-version#3-upload-the-new-opk) of the OPK, you need to add some release notes, that includes info about new version changes, new features to test and everything that you think might be useful for our QA team.
 
 ![upload](../assets/dev-console/submit-review/upload.png)
 
