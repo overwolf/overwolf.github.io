@@ -176,6 +176,6 @@ Of course, in practice, you will do something more meaningful with the auth toke
 
 Note: currently, after login, you can't logout. Soon we will add here a logout button that enables you to quickly logout.
 
-#### Download from Github
+## Download from Github
 
 The server side code implemented in our server (in the redirect_uri), can be downloaded from [our Github](https://github.com/overwolf/ow-sso).
