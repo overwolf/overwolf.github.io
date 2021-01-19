@@ -10,6 +10,13 @@ The sample app's functionality is pretty straightforward: It auto-launches when 
 
 The sample app is built with JS code and TypeScript. An official Vue, React, and Angular version will be added soon. Until then, check our [community snippets](../topics/snippets) page for an unofficial Vue version and other code samples, like React boilerplate for Overwolf apps and more.
 
+:::note Download
+It's highly recommended to follow the below steps for setting up the sample app, including download the source code and built it manually. 
+
+For those who need it, here is a direct download link to the latest version (v2.0.0):  
+[Download here](https://github.com/overwolf/sample-app/raw/master/ts/releases/2.0.0.opk).  
+:::
+
 ## Sample App Functionality
 
 For demonstration purposes, the sample app is configured for [Fortnite](https://www.epicgames.com/fortnite/en-US/download). It loads when Fortnite starts and reads Fortnite in-game events. You can easily customize this example to fit other games.
