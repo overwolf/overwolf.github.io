@@ -16,6 +16,17 @@ sidebar_label: Login with Overwolf
 
 This article will explain how to implement an Overwolf login/auth interface in your website.
 
+## Typical usage
+
+One of the common uses for this feature is to enable OW apps developers to identify subscribed users on their website. 
+Many times you would like to offer your premium users that purchased a subscription some unique features or content.
+
+Besides, you can use this feature to do whatever you like: enable your users to use single sign-on without the need for a separate account, display synced info from your server (info that gathered using your OW apps and now can be displayed on your website too), etc.
+
+:::tip Get the Active Subscription
+On the [Engage the SSO flow](#1-engage-the-sso-flow) chapter, we explain how to fetch the active subscription for the user, and [later](#3-get-the-auth-token) how to read it, along with other details like the user email, openID and more.
+:::
+
 ## Login flow overview
 
 This flow is for web browser only, we do not currently offer a client SDK that supports API-based authentication.
@@ -23,7 +34,7 @@ This flow is for web browser only, we do not currently offer a client SDK that s
 * Developers register their app for the OW SSO and get a unique client_id and client_secret.
 * The actual login is done using a login form hosted on the OW servers. This means you should only implement a "Login with Overwolf" button in your website. Once clicked, this button will open a new window/tab with the OW login form. (More info in [step 1: Engage the SSO flow](#1-engage-the-sso-flow)).
 * Once the login is completed on the OW hosted login page, the user is redirected to a pre-defined redirect_URI hosted on YOUR server (More info on how to implement this page in ["Create redirect_uri endpoint"](#create-redirect_uri-endpoint)).
-* The redirect_URI page executes a POST request to OW servers to request and get the auth token that was created after the login (More info in [step 3: Get the auth token](#3-get-the-auth-token)).
+* The redirect_URI page executes a POST request to OW servers to request and get the auth token (and might include some other details like email, subscriptions, etc.) that was created after the login (More info in [step 3: Get the auth token](#3-get-the-auth-token)).
 
 ## Prerequisite
 
@@ -128,7 +139,9 @@ GET https://accounts.overwolf.com/oauth2/auth?response_type=code&client_id={clie
 * response_type
 * client_id
 * redirect_uri
-* scope
+* scope - here you can define which details you would like to fetch from OW server.  
+  * Currently you can get the user openID, profile image, email and `active subscriptions`.  
+  * During the login process the user will have to accept each scope, through the consent form (more details below).
 
 ## 2. Login on Overwolf
 
@@ -155,6 +168,10 @@ Once the POST completed, you will get the following auth token details:
 * id_token
 * scope
 * token_type
+
+:::tip Active Subscriptions
+Note that under the `scope`, you will get the additional details as you requested and as the user accept to share with you, like his openID, email, active subscriptions and more.
+:::
 
 ## 4. Close the login window.
 
