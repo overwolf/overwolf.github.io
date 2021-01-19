@@ -39,9 +39,12 @@ Furthermore, The error messages in case of a failure were improved.
 * Soon.
 
 #### Game events
-
-* Soon.
-
+* [Rainbow Six: Siege](overwolf-games-events-rainbow-six)
+  * New feature & updates:
+    * defuser
+    * match_id
+    * map_id
+    
 ## Version 0.162 (Jan. 2021)
 
 Note that iterations 160 to 162 were combined into a single iteration.  

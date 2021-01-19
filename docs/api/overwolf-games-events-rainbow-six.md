@@ -23,6 +23,8 @@ Please read the [overwolf.games.events](overwolf-games-events) documentation pag
 * [kill](#kill)
 * [death](#death)
 * [me](#me)
+* [defuser](#defuser)
+
 
 ## Game events status
 
@@ -75,6 +77,9 @@ key          | Category    | Values                    | Notes                 |
 --------------- | -----------| ------------------------------------------------------------------------------------ | ------------------------------------ | ------------- | 
 pseudo_match_id | match_info | The current match’s ID code. Example:</br> `0c0ea3df-97ea-4d3a-b1f6-f8e34042251f`  |  This is an internal Overwolf-generated code. |   130.0 |
 game_mode | match_info   | The current type of game mode. |See [notes](#game_mode-note) below for possible values|   134.0  |
+match_id | match_info   | The current match's ID. |See [notes](#match_id-note) below for possible values|   162.1  |
+map_id | match_info   | The currently played map. |See [notes](#map_id-note) below for possible values|   162.1  |
+
 
 #### *game_mode* note
 
@@ -102,6 +107,23 @@ While the possible values are:
 * Tutorials: It’s just a video tutorial, not a game mode.
 
 *Note that on custom games or vs. AI, there is no support in Overwolf real time game events*
+
+#### *match_id* note
+
+The `match_id` returns on this format:
+
+```json
+{"info":{"match_info":{"match_id":"18F5D014-3FB9-0510-9083-DF555E39AD2B"}},"feature":"match_info"}
+```
+
+#### *map_id* note
+
+The `map_id` returns on this format:
+
+```json
+{"info":{"match_info":{"map_id":"BANK"}},"feature":"match_info"}
+```
+
 
 ## `match`
 
@@ -140,7 +162,7 @@ operator | players | The numeric ID of the chosen operator.<br>`{"player":{"oper
 
 Each player joining the game will be reported in the following way:
 
-`{"info":{"players":{"roster_0":"{"name":"WolfOnTop.top","team":"Orange","is_local":true,"operator":514,"kills":0,"deaths":0,"score":0,"health":0}"}},"feature":"roster"}`
+`{"info":{"players":{"roster_0":"{"name":"WolfOnTop.top","is_local":"1","team":"1","operator":"0","kills":"0","headshots":"0","deaths":"0","score":"0","defuser":"0","health":"0"}"}},"feature":"roster"}`
 
 As you can see, this object includes:
 
@@ -203,4 +225,20 @@ Data Example:
 
 ```json
 {"info":{"me":{"account_id":"1b810848-34df-4834-aa26-61c838059a37"}},"feature":"me"}
+```
+
+## `defuser`
+
+### Events
+
+Event  | Event Data                                       |               Fired When                  | Notes     | Since GEP Ver. |
+-------| -------------------------------------------------| ----------------------------------------- | --------- | --------------|
+defuser_planted | null | Defuser was planted. | See [notes](#defuser_planted-notes) |   162.1     |
+
+#### *defuser_planted* note
+
+Data Example:
+
+```json
+{"name":"defuser_planted","data":null}
 ```
