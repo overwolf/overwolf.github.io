@@ -23,6 +23,8 @@ Please read the [overwolf.games.events](overwolf-games-events) documentation pag
 * [kill](#kill)
 * [death](#death)
 * [me](#me)
+* [defuser](#defuser)
+
 
 ## Game events status
 
