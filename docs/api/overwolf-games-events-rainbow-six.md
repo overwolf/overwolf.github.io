@@ -162,7 +162,7 @@ operator | players | The numeric ID of the chosen operator.<br>`{"player":{"oper
 
 Each player joining the game will be reported in the following way:
 
-`{"info":{"players":{"roster_0":"{"name":"WolfOnTop.top","team":"Orange","is_local":true,"operator":514,"kills":0,"deaths":0,"score":0,"health":0}"}},"feature":"roster"}`
+`{"info":{"players":{"roster_0":"{"name":"WolfOnTop.top","is_local":"1","team":"1","operator":"0","kills":"0","headshots":"0","deaths":"0","score":"0","defuser":"0","health":"0"}"}},"feature":"roster"}`
 
 As you can see, this object includes:
 
