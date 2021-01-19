@@ -19,10 +19,10 @@ class CommunityAlphas extends React.Component {
                   <div className="video-container">
                   <iframe width="560" height="315" src="https://www.youtube.com/embed/NYutk56WV1A" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                       <div className="start-build-container-btn">
-                          <a href="https://alphas-devs.overwolf.com/" className="btn-pink start-building-btn">Learn more</a>
+                          <a href="https://alphas-devs.overwolf.com/" className="btn-pink start-building-btn"  target="_blank">Learn more</a>
                       </div>
                       <div className="center-text">
-                          <p>Already have a published app / OPK ready? <a href="https://alphas-devs.overwolf.com/community-alpha/" title="Request an Alpha task" target="_blank">Request an Alpha task</a></p>           
+                          <p>Already have a published app / OPK ready? <a href="https://alphas-devs.overwolf.com/#contact-us" title="Request an Alpha task" target="_blank">Request an Alpha task</a></p>           
                       </div>
                   </div>
               
