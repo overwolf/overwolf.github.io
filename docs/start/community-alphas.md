@@ -4,14 +4,19 @@ title: Community Alphas
 sidebar_label:  Community alphas
 ---
 
-## Get quality feedback from gamers within a few days
+<meta http-equiv="Content-Type" content="text/html charset=utf-8"/>
+<!-- importing React -->
+<script src="https://unpkg.com/react@15/dist/react.js"></script>
+<!-- importing React-Dom -->
+<script src="https://unpkg.com/react-dom@15/dist/react-dom.js"></script>
+<!-- importing babel for jsx -->
+<script src=" https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+<!-- importing the remarkable plugin -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/remarkable/1.7.1/remarkable.js"></script>
+<!-- importing getting started page custom css file -->
+<link href="/css/getting-started.css" rel="stylesheet">
 
-Getting honest feedback from actual gamers can benefit and help you come up with ideas and improvements for your app. Creating your own community takes time, so let us help, it's free! 
+<div id="communityAlphas">
+  <script type="text/jsx" src="/jsx/communityAlphas.jsx"></script>
+</div>
 
-The Community Alphas are a group of passionate gamers handpicked for their ability to provide feedback and pay attention to details. They are split teams per-game and are eager to test both new and existing apps, speak up their mind, and brainstorm ideas.
-
-(Add a video preview of this youtube video: https://www.youtube.com/watch?v=NYutk56WV1A&feature=emb_logo&ab_channel=Overwolf)
-
-Learn more (please create pink button like in "Getting Started" with this link: https://alphas-devs.overwolf.com/)
-
-Already have a published app / OPK ready?  [Request an Alpha task](https://alphas-devs.overwolf.com/community-alpha/#contact-us)
