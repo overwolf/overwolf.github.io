@@ -1,7 +1,7 @@
 {
 	"start": {
 		"Getting Started": 
-			["start/getting-started", "start/app-creation-process", "start/submit-app-proposal", "start/sdk-introduction","start/using-dev-tools"],
+			["start/getting-started", "start/app-creation-process", "start/submit-app-proposal", "start/sdk-introduction","start/using-dev-tools", "start/game-compliance-guiding-principles"],
 			"Sample App":
 			["start/sample-app-overview", "start/sample-app-components",  "start/sample-app-ui-components", "start/sample-app-architecture"],
 			"Test Your App":
