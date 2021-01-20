@@ -124,6 +124,30 @@ The `map_id` returns on this format:
 {"info":{"match_info":{"map_id":"BANK"}},"feature":"match_info"}
 ```
 
+The possible values are:
+
+* `HOUSE`
+* `OREGON`
+* `HEREFORD BASE`
+* `CLUB HOUSE`
+* `PRESIDENTIAL PLANE`
+* `YACHT`
+* `CONSULATE`
+* `BANK`
+* `KANAL`
+* `CHALET`
+* `BARLETT UNIVERSITY` (note that the actual map name in-game is named Bar***t***lett U.)
+* `KAFE DOSTOYEVSKY`
+* `BORDER`
+* `FAVELA`
+* `SKYSCRAPER`
+* `COASTLINE`
+* `THEME PARK`
+* `TOWER`
+* `VILLA`
+* `FORTRESS`
+* `OUTBACK`
+
 
 ## `match`
 
@@ -240,5 +264,5 @@ defuser_planted | null | Defuser was planted. | See [notes](#defuser_planted-not
 Data Example:
 
 ```json
-{"name":"defuser_planted","data":null}
+{"events":[{"name":"defuser_planted","data":""}]}
 ```

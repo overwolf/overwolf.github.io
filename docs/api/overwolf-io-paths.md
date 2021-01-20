@@ -45,7 +45,7 @@ console.log(overwolf.io.paths.system)
 To get the full path of the current extension (OW app), you can call `overwolf.io.paths.localAppData` and concatenate your extension id and your app version to it:
 
 ```javascript
-Overwolf.io.paths.localAppData + "/overwolf/extensions/[your extension id]/[version]"
+overwolf.io.paths.localAppData + "/overwolf/extensions/[your extension id]/[version]"
 ```
 Where version can be [retrieved from the app manifest](overwolf-extension-current#getmanifestcallback).
 
