@@ -136,7 +136,7 @@ The possible values are:
 * `BANK`
 * `KANAL`
 * `CHALET`
-* `BARLETT UNIVERSITY` (note this is misspelled, the map in-game is named Bar***t***lett U.)
+* `BARLETT UNIVERSITY` (note that the actual map name in-game is named Bar***t***lett U.)
 * `KAFE DOSTOYEVSKY`
 * `BORDER`
 * `FAVELA`
