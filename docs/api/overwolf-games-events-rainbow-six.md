@@ -264,5 +264,5 @@ defuser_planted | null | Defuser was planted. | See [notes](#defuser_planted-not
 Data Example:
 
 ```json
-{"name":"defuser_planted","data":null}
+{"events":[{"name":"defuser_planted","data":""}]}
 ```
