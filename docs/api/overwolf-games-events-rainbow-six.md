@@ -124,6 +124,30 @@ The `map_id` returns on this format:
 {"info":{"match_info":{"map_id":"BANK"}},"feature":"match_info"}
 ```
 
+The possible values are:
+
+* `HOUSE`
+* `OREGON`
+* `HEREFORD BASE`
+* `CLUB HOUSE`
+* `PRESIDENTIAL PLANE`
+* `YACHT`
+* `CONSULATE`
+* `BANK`
+* `KANAL`
+* `CHALET`
+* `BARLETT UNIVERSITY` (note this is misspelled, the map in-game is named Bar***t***lett U.)
+* `KAFE DOSTOYEVSKY`
+* `BORDER`
+* `FAVELA`
+* `SKYSCRAPER`
+* `COASTLINE`
+* `THEME PARK`
+* `TOWER`
+* `VILLA`
+* `FORTRESS`
+* `OUTBACK`
+
 
 ## `match`
 
