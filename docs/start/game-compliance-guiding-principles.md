@@ -15,9 +15,9 @@ It’s therefore important to keep the delicate balance between the success of t
 
 3. The app should follow game developers EULA and TOS.
 
-4. You can be inspired by the game UI, but not imitate game UI elements.Your app should have its own visual identity.
+4. You can be inspired by the game UI, but not imitate game UI elements. Your app should have its own visual identity.
 
-5. Your App should be recognizable with a name and a window header so the player could easily  understand where the game ends and where the app begins. It is recommended to have your own brand.
+5. Your app should be recognizable with a name and a window header so the player could easily  understand where the game ends and where the app begins. It is recommended to have your own brand.
 
 6. The app should have a communication channel with your audience to allow quick bug fixing cycles.
 
