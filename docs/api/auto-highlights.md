@@ -75,4 +75,4 @@ As you can see, for each feature there is a timing object with three fields: pas
 
 These settings are shared between ALL the OW apps, and each change in the capture timing affects all the other apps. Besides, only the OW team can edit this file as it's part of the client code (every local change will be overwritten on an OW client update).
 
-If you have any request for timing changes or adding new games/features to this list, please create a feature request on [our Q&A site](https://discuss.developers.overwolf.com/).
+If you have any request for timing changes or adding new games/features to this list, please create a feature request on [our Q&A site](https://discuss.overwolf.com/).

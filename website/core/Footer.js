@@ -35,7 +35,7 @@ class Footer extends React.Component {
           </ul>
           <ul>
             <li>Support</li>          
-            <li><a href=" https://discuss.developers.overwolf.com/" target="_blank">Questions and Answers</a></li>
+            <li><a href=" https://discuss.overwolf.com/" target="_blank">Questions and Answers</a></li>
             <li><a href=" https://discord.gg/7256qS2" target="_blank">Discord</a></li>
             <li><a href="/docs/support/contact-us#join-our-slack">Slack</a></li>
             <li><a href="https://www.facebook.com/OverwolfDevs" target="_blank">Facebook</a></li>

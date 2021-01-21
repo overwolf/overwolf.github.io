@@ -59,7 +59,7 @@ For example, the [`takeScreenshot(callback)`](#takescreenshotcallback) method re
 overwolf://media/screenshots/custom/E:/Desktop%20Capture-07-15-2018%2014-15-22-793.jpg
 ```
 
-You can use the retrieved URL later in order to serve the stated screenshot: for example, to upload it to remote server, you can use [HTML canvas](https://discuss.developers.overwolf.com/t/how-can-i-send-a-screenshot-to-an-external-server-without-saving-it-to-a-file/109).
+You can use the retrieved URL later in order to serve the stated screenshot: for example, to upload it to remote server, you can use [HTML canvas](https://discuss.overwolf.com/t/how-can-i-send-a-screenshot-to-an-external-server-without-saving-it-to-a-file/109).
 
 ## Sample app
 

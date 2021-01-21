@@ -35,7 +35,7 @@ const siteConfig = {
     {doc: 'status/all', label: 'Events Status'},
     //{blog: true, label: 'Blog'},
     {href: 'https://medium.com/overwolf', label: 'Blog', external: true},
-    {href: 'https://discuss.developers.overwolf.com/', label: 'Q&A', external: true },
+    {href: 'https://discuss.overwolf.com/', label: 'Q&A', external: true },
 	  {doc: 'support/contact-us', label: 'Support'},  //{page: 'help', label: 'Support'}
 	  {search: true }
   ],

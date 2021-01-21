@@ -20,7 +20,7 @@ You can read the full list of functions and events available in the Process Mana
 * Note that the DLL file is placed inside of the app’s directory – so if you recompile it, you’ll need to replace the old DLL with the new one inside the folder. Please review the manifest.json file to view how to reference the Plugin file.
 * All DLLs should be compiled for the x64 platform.
 
-Don’t hesitate to ask us questions in our [developers Q&A site](https://discuss.developers.overwolf.com/).
+Don’t hesitate to ask us questions in our [developers Q&A site](https://discuss.overwolf.com/).
 
 ## Unblock DLL's
 

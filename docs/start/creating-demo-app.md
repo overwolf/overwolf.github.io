@@ -82,7 +82,7 @@ You can read the [Manifest.json](../api/manifest-json) section to learn about ad
 </html>
 ```
 
-6. Pack all the files and icons in the folder as an Overwolf app installer A.K.A ["OPK" package](https://discuss.developers.overwolf.com/t/what-is-an-opk-package/23):  
+6. Pack all the files and icons in the folder as an Overwolf app installer A.K.A ["OPK" package](https://discuss.overwolf.com/t/what-is-an-opk-package/23):  
   basically zip everything, and change the file extension from ZIP to OPK after you're done.
 
 **You now have a working Overwolf app installer!**  
