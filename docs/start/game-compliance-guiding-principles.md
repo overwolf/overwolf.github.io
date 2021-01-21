@@ -21,7 +21,7 @@ It’s therefore important to keep the delicate balance between the success of t
 
 6. The app should have a communication channel with your audience to allow quick bug fixing cycles.
 
-7 .Ads are here to help us keep the app free but you should never implement them in a way that will interfere with gameplay ([further reading](https://overwolf.github.io/docs/start/ads-monetization-basics "Ads Monetization Basics")).
+7. Ads are here to help us keep the app free but you should never implement them in a way that will interfere with gameplay ([further reading](https://overwolf.github.io/docs/start/ads-monetization-basics "Ads Monetization Basics")).
 
 8. Should there be an issue regarding any of the above, be responsive and communicate with the game developer and with Overwolf. It is important to have all parties aligned and get the issue resolved as quickly as possible.
 
