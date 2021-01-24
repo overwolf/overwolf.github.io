@@ -48,9 +48,8 @@ A single game can have multiple executables: Steam, GOG, 32 / 64-bit clients, et
 We differentiate between them by adding one digit to each game ID, which is called an "Instance ID."  
 Basically, you have the base game ID, and then a series of instances (212160, 212161, …) 
 
-When you browse the [gamelist.xml](the-gamelistxml-file) file, you will find the game ID's including instance ID.
-Also, when you call [overwolf.games.onGameInfoUpdated](overwolf-games#ongameinfoupdated), you will get the same full ID including the instance ID.
-
+When you call [overwolf.games.onGameInfoUpdated](overwolf-games#ongameinfoupdated) you will get the same full ID including the instance ID.  
+Besides, there is a file called "gamelist.xml" in the OW client folder that contains all the supported game ids, including instance ID.
 In order to translate the instance ID into the game ID that needs to be used in the manifest, you can divide the instance ID by 10 and round down.
 
 For example for Fortnite: in order to get 21216 instead of 212161, you can do:
