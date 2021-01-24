@@ -23,8 +23,8 @@ Many times you would like to offer your premium users that purchased a subscript
 
 Besides, you can use this feature to do whatever you like: enable your users to use single sign-on without the need for a separate account, display synced info from your server (info that gathered using your OW apps and now can be displayed on your website too), etc.
 
-:::tip Get the Active Subscription
-On the [Engage the SSO flow](#1-engage-the-sso-flow) chapter, we explain how to fetch the active subscription for the user, and [later](#3-get-the-auth-token) how to read it, along with other details like the user email, openID and more.
+:::note
+This feature (get info about active subscriptions) will be released soon. We will update this page accordingly. 
 :::
 
 ## Login flow overview
@@ -140,7 +140,7 @@ GET https://accounts.overwolf.com/oauth2/auth?response_type=code&client_id={clie
 * client_id
 * redirect_uri
 * scope - here you can define which details you would like to fetch from OW server.  
-  * Currently you can get the user openID, profile image, email and `active subscriptions`.  
+  * Currently you can get the user openID, profile image, email. Soon, you will be able to get also the `active subscriptions` for this user.
   * During the login process the user will have to accept each scope, through the consent form (more details below).
 
 ## 2. Login on Overwolf
@@ -169,8 +169,8 @@ Once the POST completed, you will get the following auth token details:
 * scope
 * token_type
 
-:::tip Active Subscriptions
-Note that under the `scope`, you will get the additional details as you requested and as the user accept to share with you, like his openID, email, active subscriptions and more.
+:::info Active Subscriptions
+This feature (get info about active subscriptions) will be released soon. We will update this page accordingly. 
 :::
 
 ## 4. Close the login window.
