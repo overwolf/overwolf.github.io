@@ -8,13 +8,13 @@ Use this API to encrypt and decrypt ciphertext and secure app data and variables
 
 ## Methods Reference
 
-* [overwolf.games.encryptForCurrentUser()](#encryptforcurrentuserplaintext-callback)
-* [overwolf.games.decryptForCurrentUser()](#decryptforcurrentuserciphertext-callback)
+* [overwolf.cryptography.encryptForCurrentUser()](#encryptforcurrentuserplaintext-callback)
+* [overwolf.cryptography.decryptForCurrentUser()](#decryptforcurrentuserciphertext-callback)
 
 ## Types Reference
 
-* [overwolf.games.EncryptedDataResult](#encrypteddataresult-object) Object
-* [overwolf.games.DecryptedDataResult](#decrypteddataresult-object) Object
+* [overwolf.cryptography.EncryptedDataResult](#encrypteddataresult-object) Object
+* [overwolf.cryptography.DecryptedDataResult](#decrypteddataresult-object) Object
 
 ## encryptForCurrentUser(plaintext, callback))
 
