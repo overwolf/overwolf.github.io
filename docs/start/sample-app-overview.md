@@ -18,7 +18,7 @@ For those who need it, here is a direct download link to the latest version (v2.
 :::
 
 :::tip Video guide
-Here you can find a [video tutorial](../topics/creators-content#video-tutorials) that guide you how to download, build and use the sample app.
+You can find a [video tutorial](../topics/creators-content#video-tutorials) that guides you on downloading, building, and using the sample app.
 :::
 
 ## Sample App Functionality
