@@ -17,6 +17,10 @@ For those who need it, here is a direct download link to the latest version (v2.
 [Download here](https://github.com/overwolf/sample-app/raw/master/ts/releases/2.0.0.opk).  
 :::
 
+:::tip Video guide
+Here you can find a [video tutorial](../topics/creators-content#video-tutorials) that guide you how to download, build and use the sample app.
+:::
+
 ## Sample App Functionality
 
 For demonstration purposes, the sample app is configured for [Fortnite](https://www.epicgames.com/fortnite/en-US/download). It loads when Fortnite starts and reads Fortnite in-game events. You can easily customize this example to fit other games.
