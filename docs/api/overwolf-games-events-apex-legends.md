@@ -83,8 +83,8 @@ Possible values:
 
 - "#PL_FIRINGRANGE"
 - "#PL_TRAINING"
-- "#PL_des_duo"
-- "#PL_CAN_TRIO"
+- "#PL_DUO"
+- "#PL_TRIO"
 - "#PL_Ranked_Leagues"
 - "#SHADOWROYALE_MODE"
 
