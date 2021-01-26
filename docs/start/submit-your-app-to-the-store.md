@@ -65,6 +65,8 @@ As mentioned above, the OPK package should contain all the app's files and asset
     * The launcher icon should look like the app's dock icon to prevent confusion.  
     * The launcher icon is a 256×256 transparent .png converted into an .ico file in the following resolutions: 16×16, 32×32, 48×48, 256×256.  
     * The launcher icon should weigh less than 150Kb.
+    * **Contact us if you want to update your installer icon** with the ICO file (the installer is the EXE bundle icon that the users downloads from the OW app store).
+
   * WindowIcon.png  
     * A colored icon for the window task bar icon \ window header. If not defined, the **IconMouseOver** will be taken.  
     The difference between the two icons, is that this taskbar icon should be squared, while the other icons are rounded, to fit the OW deck.  
