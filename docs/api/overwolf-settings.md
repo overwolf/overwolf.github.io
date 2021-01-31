@@ -307,19 +307,13 @@ callback           | (Result) => void   | called with the result of the request 
 
 > Sets the extension settings.  
 
-Supports enabling/disabling app auto-launach with Overwolf client and more.
+Supports enabling/disabling app auto-launach with Overwolf client, exit with Overwolf client and more.
 
 Parameter          | Type                                                                 | Description                                                              |
 -------------------| ---------------------------------------------------------------------| ------------------------------------------------------------------------ |
 extensionSettings  | [GeneralExtensionSettings](#generalextensionsettings-object) Object  |  Container for the extension settings                                   |
 callback           | (Result) => void   | called with the result of the request                    |
 
-#### Notes
-
-* If you would like to set app auto-launch with OW client, you should add the "Tray" permission to your app's [manifest permissions list](manifest-json#permissions-array)
-* After setting the "auto_launch_with_overwolf", your app should use auto-launch after you start the client (takes ~15 seconds).
-* You can set the same app auto-launch with OW client using the manifest. [Read more about it](manifest-json#enable-app-auto-launch-with-overwolf).
-* Apps launched this way will have [origin](overwolf-extensions#the-origin-string) "overwolfstartlaunchevent".
 
 ## getExtensionSettings(callback)
 #### Version added: 0.149
@@ -424,17 +418,31 @@ position  | [eIndicationPosition](#eindicationposition-enum) enum      | The pos
 
 Parameter                   | Type               | Description                                                               |
 --------------------------- | -------------------| ------------------------------------------------------------------------- |
-auto_launch_with_overwolf   | bool               | set your app to auto-launch when the OW client starts (takes ~15 seconds) |
-exit_overwolf_on_exit       | bool               | set the OW client to auto-shutdown when your OW app closes ("Shutdown" permission is required) |
+auto_launch_with_overwolf   | bool               | set your app to auto-launch when the OW client starts. See [notes](#auto_launch_with_overwolf-notes).     |
+exit_overwolf_on_exit       | bool               | set the OW client to auto-shutdown when your OW app closes. See [notes](#exit_overwolf_on_exit-notes).|
 
 
 ```json
 {
     "settings": {
-        "auto_launch_with_overwolf": true
+        "auto_launch_with_overwolf": true,
+        "exit_overwolf_on_exit": false
     }
 }
 ```
+
+#### `auto_launch_with_overwolf` notes
+
+* After setting the "auto_launch_with_overwolf", your app should use auto-launch after you start the client (takes ~15 seconds).
+* If you would like to set app auto-launch with OW client, you should add the "Tray" permission to your app's [manifest permissions list](manifest-json#permissions-array).
+* You can set the same app auto-launch with OW client using the manifest. [Read more about it](manifest-json#enable-app-auto-launch-with-overwolf).
+* Apps launched this way will have [origin](overwolf-extensions#the-origin-string) "overwolfstartlaunchevent".
+
+#### `exit_overwolf_on_exit` notes
+
+* If you would like to set app auto-launch with OW client, you should add the "Shutdown" permission to your app's [manifest permissions list](manifest-json#permissions-array).
+* Currently you can NOT set the same auto-exit with OW client using the manifest. Maybe we will add this feature in the future.
+* Overwolf client no not closes when an app that was using that setting has crashed, however, it will still close Overwolf if the user has dismissed the crash notification or didn’t click on the "Relaunch" button in that same notification.
 
 ## GetFpsSettingsResult Object
 

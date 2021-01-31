@@ -65,7 +65,7 @@ only then updating to the new version (which was the case until now).
 #### Bug fixes
 
 * Fixed: If a hotkey is defined in the manifest with no default key binding, [hotkeys.get()](overwolf-settings-hotkeys#getcallback)/attempting to set the hotkey would result in an error.
-* The setting [exit_overwolf_on_exit](overwolf-settings#generalextensionsettings-object) no longer closes Overwolf when an app that was using that setting has crashed, however, it will still close Overwolf if the user has dismissed the crash notification or didn’t click on. the “Relaunch” button in that same notification.
+* The setting exit_overwolf_on_exit (can be set through [overwolf.settings.setExtensionSettings()](overwolf-settings#setextensionsettingsextensionsettings-callback)) no longer closes Overwolf when an app that was using that setting has crashed, however, it will still close Overwolf if the user has dismissed the crash notification or didn't click on the "Relaunch" button in that same notification.
 * Fixed an issue with the hotkeys API for apps that have their hotkeys defined in the manifest.json, but have no default binding.
 
 #### Dev Console
