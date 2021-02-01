@@ -5,7 +5,7 @@ sidebar_label: App launch performance
 ---
 
 
-When Overwolf users launch an app, they expect it to load quickly and be responsive immediately when launched. Bad launch performance or a an app that takes a while to start working can disappoint or annoy users, not meeting their standards. Naturally, different apps have different requirements, and some apps to take a couple of seconds to load - however, you should do your very best to make your app light and efficient so loading and launch times are as short as possible.
+When gamers launch an app, they expect it to load quickly and be responsive immediately when launched. Bad launch performance or a an app that takes a while to start working can disappoint or annoy users, not meeting their standards. Naturally, different apps have different requirements, and some apps to take a couple of seconds to load - however, you should do your very best to make your app light and efficient so loading and launch times are as short as possible.
 
 #### Tips for a better launch experience
 
