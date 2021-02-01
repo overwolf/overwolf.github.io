@@ -237,6 +237,8 @@ account_id   | me          | Local player's account ID.        |See [notes](#acc
 
 #### *name* note
 
+This update is currently not available. You may workaround this by finding the local player via the roster update.
+
 Data Example:
 
 ```json
