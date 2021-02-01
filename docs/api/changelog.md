@@ -78,6 +78,7 @@ only then updating to the new version (which was the case until now).
     * defuser
     * match_id
     * map_id
+   * 'name' update is currently unavailable.
     
 ## Version 0.162 (Jan. 2021)
 
