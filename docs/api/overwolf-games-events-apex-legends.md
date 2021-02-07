@@ -95,7 +95,7 @@ Note that we get these values from the game, so they might be changed from seaso
 Data Example:
 
 ```json
-{"info":{"match_info":{"tabs":"{"kills":1,"spectators":0,"teams":6,"players":13,"cash":15}"}},"feature":"match_info"}
+{"info":{"match_info":{"tabs":"{"kills":1,"spectators":0,"teams":11,"players":30,"damage":394,"cash":0}"}},"feature":"match_info"}
 ```
 
 ## match_state
