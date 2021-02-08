@@ -176,13 +176,20 @@ roster_XX  | match_info  | Provides the entire list of players in a match (~60 p
 Each player joining the game will be reported in the following way:
 
 ```json
-{"info":{"match_info":{"roster_3":"{"name":"RunLikePistorius","isTeammate":false}"}},"feature":"roster"}
+{"info":{"match_info":{"roster_13":"{"name":"ilgaru88","isTeammate":true,"team_id":12,"platform_hw":2,"platform_sw":2,"state":"alive"}"}},"feature":"roster"}
 ```
 
 As you can see, this object includes:
 
 * `name` - Player name
 * `isTeammate` (Bool) - Player is/isn't a squad member
+* `platform` - The platform which the player plays on currently.
+
+Possible platform values:
+
+* `"platform_hw":2,"platform_sw":2` = PC/Origin
+* `"platform_hw":2,"platform_sw":7` = PC/Steam
+* `"platform_hw":1,"platform_sw":1` = PS4
 
 ## location
 
