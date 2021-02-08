@@ -79,6 +79,9 @@ only then updating to the new version (which was the case until now).
     * match_id
     * map_id
    * 'name' update is currently unavailable.
+* [Apex Legends](overwolf-games-events-apex)
+  * New addition to update:
+    * roster
     
 ## Version 0.162 (Jan. 2021)
 
