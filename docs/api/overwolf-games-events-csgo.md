@@ -515,6 +515,8 @@ Data Example:
     "value":"{"lobby_players" : [{"steamId":"76561198269560618"}]}"}
 ```
 
+<b>Note: This event is not supported on trusted mode.</b>
+
 #### *match* note
 
 Each player contains:
@@ -553,6 +555,8 @@ Data Example:
 ```json
 {"feature":"replay","category":"replay","key":"replay_list","value":"["steam://rungame/730/76561202255233023/+csgo_download_match CSGO-dVoC5-kwY8k-LCb3J-wCiMw-CrahQ","steam://rungame/730/76561202255233023/+csgo_download_match CSGO-myDzD-AOTzm-wYZzH-bCmrA-JebRF"]"}
 ```
+
+<b>Note: This event is not supported on trusted mode.</b>
 
 ## `counters`
 
@@ -609,3 +613,5 @@ Data Example:
 ```json
 {"events":[{"name":"kill_feed","data":"{"attacker":"Na`Vi NICKname?","assister":"","weapon":"scar20","headshot":false,"wallbang":"0","flashed":false,"victim":"Ercüment Çözer"}"}]}
 ```
+
+<b>Note: This event is not supported on trusted mode.</b>
