@@ -183,6 +183,7 @@ As you can see, this object includes:
 
 * `name` - Player name
 * `isTeammate` (Bool) - Player is/isn't a squad member
+* `team_id` - Numerical value for each squad in-game.
 * `platform` - The platform which the player plays on currently.
 
 Possible platform values:
