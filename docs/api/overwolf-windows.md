@@ -318,6 +318,7 @@ callback (Optional) | [(Result: WindowIdResult)](#windowidresult-object) => void
 #### Notes 
 
 * When restoring a minimized/maximized window, it restores the window to the previous size/position.
+* When restoring a (non-desktop) window that is partly out of the game bounds, it repositions the window so that it fully fits inside the game bounds
 * Read some usage tips [here](../topics/using-overwolf-windows#how-to-create-a-new-window).
 
 
@@ -334,6 +335,7 @@ callback (Optional) | [(Result: WindowIdResult)](#windowidresult-object) => void
 #### Notes 
 
 * When restoring a minimized/maximized window, it restores the window to the previous size/position.
+* When restoring a (non-desktop) window that is partly out of the game bounds, it repositions the window so that it fully fits inside the game bounds
 * Read some usage tips [here](../topics/using-overwolf-windows#how-to-create-a-new-window).
 
 ## hide(windowId, callback)
