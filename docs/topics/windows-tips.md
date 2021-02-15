@@ -39,7 +39,7 @@ Overwolf apps are supposed to act like native desktop applications, not websites
 
 ## Keep your windows small
 
-App windows should provide their value in the leanest, more accurate fashion possible. When Overwolf renders transparent windows it does it’s best to do it efficiently, however, large windows do have performance costs. Therefore, avoid using large windows and try to get your app's design to be focused, to the point and as small as you can effectively make it.
+App windows should provide their value in the leanest, most accurate fashion possible. When Overwolf renders transparent windows it does it’s best to do it efficiently, however, large windows do have performance costs. Therefore, avoid using large windows and try to get your app's design to be focused, to the point and as small as you can effectively make it.
 
 ## Use block_top_window_navigation
 
