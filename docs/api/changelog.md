@@ -78,6 +78,7 @@ only then updating to the new version (which was the case until now).
     * defuser
     * match_id
     * map_id
+    * round_outcome_type
    * 'name' update is currently unavailable.
 * [Apex Legends](overwolf-games-events-apex)
   * New addition to update:
