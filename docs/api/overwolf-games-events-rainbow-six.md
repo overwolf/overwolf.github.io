@@ -79,7 +79,7 @@ pseudo_match_id | match_info | The current match’s ID code. Example:</br> `0c0
 game_mode | match_info   | The current type of game mode. |See [notes](#game_mode-note) below for possible values|   134.0  |
 match_id | match_info   | The current match's ID. |See [notes](#match_id-note) below for possible values|   162.1  |
 map_id | match_info   | The currently played map. |See [notes](#map_id-note) below for possible values|   162.1  |
-
+round_outcome_type | match_info   | The type of win/loss of the last-played round. |See [notes](#round_outcome_type-note) below for possible values|   165.0  |
 
 #### *game_mode* note
 
@@ -148,6 +148,24 @@ The possible values are:
 * `FORTRESS`
 * `OUTBACK`
 
+#### *round_outcome_type* note
+
+Data Example:
+
+```json
+{"info":{"match_info":{"round_outcome_type":"team_has_been_eliminated"}},"feature":"match_info"}
+```
+
+Possible values:
+
+* "team_has_been_eliminated"
+* "bomb_detonated"
+* "bomb_deactivated"
+* "objective_secured"
+* "objective_protected"
+* "time_has_expired"
+* "extracted_thehostages"
+* "killed_hostages"
 
 ## `match`
 
@@ -260,6 +278,8 @@ Data Example:
 Event  | Event Data                                       |               Fired When                  | Notes     | Since GEP Ver. |
 -------| -------------------------------------------------| ----------------------------------------- | --------- | --------------|
 defuser_planted | null | Defuser was planted. | See [notes](#defuser_planted-notes) |   162.1     |
+defuser_disabled | null | Defuser was disabled. | See [notes](#defuser_disabled-notes) |   165.0     |
+
 
 #### *defuser_planted* note
 
@@ -267,4 +287,12 @@ Data Example:
 
 ```json
 {"events":[{"name":"defuser_planted","data":""}]}
+```
+
+#### *defuser_disabled* note
+
+Data Example:
+
+```json
+{"events":[{"name":"defuser_disabled","data":""}]}
 ```
