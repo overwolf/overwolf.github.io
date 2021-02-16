@@ -61,9 +61,9 @@ var isSubscribed = false; //flag that tells if the current user got an active su
 
 overwolf.profile.subscriptions.getActivePlans(function(info) { 
     
-    if (info.status == "success" && info.plans != null) {    
+    if (info.success && info.plans != null) {    
     
-        if(info.plans[0] == myPlanID)  {//this is a premium user            
+        if(info.plans.includes(myPlanID))  {//this is a premium user            
         
             isSubscribed = true; //mark this user as a subscribed user
             removeAds();    
