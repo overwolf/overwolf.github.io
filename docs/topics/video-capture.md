@@ -93,7 +93,7 @@ Streaming support          | -                        | +                       
 With this API, you can listen to game events and manually start and stop video capture.
 
 
-is enabled, there's no need to understand each supported game's mechanics, game flow, edge cases, timings, etc. Just request any supported game's highlight, and OW provides you with a video file that includes this event.
+With auto-highlights capture enabled, there's no need to understand each supported game's mechanics, game flow, edge cases, timings, etc. Just request any supported game's highlight, and OW provides you with a video file that includes this event.
 
 Here you can find a [list of auto-highlights supported games](auto-highlights).
 
