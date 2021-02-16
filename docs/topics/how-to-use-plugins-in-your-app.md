@@ -5,6 +5,10 @@ sidebar_label: Plug-in Implementation
 ---
 
 
+:::important
+When you finish developing your plugin, you should sign it to avoid security and deployment issues. [Here](https://makolyte.com/dotnet-how-to-sign-your-code-with-a-code-signing-certificate/) you can find more on how to sign your code.
+:::
+
 To implement an existing plugin for use in your app, follow these steps:
 
 1. Place the plugin’s DLL file or files in your app’s directory as well as inside your OPK when you create it.
