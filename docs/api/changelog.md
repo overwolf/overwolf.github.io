@@ -14,15 +14,19 @@ Note that the work on the documentation for this version is still in-progress.
 
 #### API
 
-* Soon.
+* The [disable_cleanup](manifest-json#disable_cleanup) flag in the manifest.json no longer deletes the app's files in the `%Localappdata%/Overwolf/Extensions` folder.
 
 #### Platform
 
-* Soon.
+* Overwolf will now restore installed apps in cases where the local database got corrupted.
+* Updated OBS to version 26.1.1. - now we have the latest and best recording capabilities.
+* Improve the OBS crash reports.
+* Overwolf Appstore as a default extension - So the Overwolf Appstore has all grown up, it is now a default extension within Overwolf. Most of you won’t
+even notice a change, and that’s good, but under the hood, there are several big differences.
 
 #### Bug fixes
 
-* Soon.
+* App diff will now also work for apps with audio files, like Killer Voices.
 
 #### Dev Console
 
