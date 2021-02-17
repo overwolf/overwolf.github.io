@@ -24,9 +24,6 @@ Note that the work on the documentation for this version is still in-progress.
 * Overwolf Appstore as a default extension - So the Overwolf Appstore has all grown up, it is now a default extension within Overwolf. Most of you won’t
 even notice a change, and that’s good, but under the hood, there are several big differences.
 
-#### Bug fixes
-
-* App diff will now also work for apps with audio files, like Killer Voices.
 
 #### Dev Console
 
