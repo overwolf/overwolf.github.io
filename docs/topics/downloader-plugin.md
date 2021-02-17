@@ -1,7 +1,7 @@
 ---
 id: downloader-plugin
 title: The Overwolf Downloader plugin
-sidebar_label: id: Downloader plugin
+sidebar_label: Downloader plugin
 ---
 
 
