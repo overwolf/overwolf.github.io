@@ -21,7 +21,7 @@
 		"Using Windows API":
 			["topics/using-overwolf-windows", "topics/communicating-between-windows", "topics/windows-types", "topics/windows-resolution-size-position", "topics/windows-tips"],
 		"Using Plugins":
-			["topics/plugins-overview", "topics/how-to-use-plugins-in-your-app", "topics/writing-your-own-plugin", "topics/sample-plugin", "topics/simple-io-plugin", "topics/team-speak-plugin", "topics/process-manager-plugin"],
+			["topics/plugins-overview", "topics/how-to-use-plugins-in-your-app", "topics/writing-your-own-plugin", "topics/sample-plugin", "topics/simple-io-plugin", "topics/team-speak-plugin", "topics/downloader-plugin", "topics/process-manager-plugin"],
 		"Using Events":
 			["topics/events-overview","topics/using-events","topics/using-events-simulator", "topics/howto-check-events-status-from-app"],
 		"Developers Console":

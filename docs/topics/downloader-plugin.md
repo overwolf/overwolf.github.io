@@ -1,0 +1,24 @@
+---
+id: downloader-plugin
+title: The Overwolf Downloader plugin
+sidebar_label: id: Downloader plugin
+---
+
+
+This plugin allows your app to download a remote (http/s) file to the local disk.
+
+You can read  more in the [Dowloader repository](https://github.com/overwolf/overwolf-plugins/tree/master/plugins/downloader).
+
+## Common uses for the plugin
+
+This plugin enables you to:
+
+* Download a remote (http/s) file to the local disk.
+* Supports gzip.
+* Supports MD5 check.
+
+## Download
+
+* You can get the plugin from our [GitHub repository](https://github.com/overwolf/overwolf-plugins/tree/master/plugins/downloader).
+* See sample app for more information.
+
