@@ -51,7 +51,6 @@
 			["api/overwolf-games", "api/overwolf-games-events", "api/overwolf-games-inputTracking","api/overwolf-games-launchers", "api/overwolf-games-launchers-events"],
 			"overwolf.io":
 			["api/overwolf-io","api/overwolf-io-paths"],
-			"overwolf.log":	["api/overwolf-log"],
 			"overwolf.logitech":
 			["api/overwolf-logitech", "api/overwolf-logitech-arx", "api/overwolf-logitech-led"],
 			"overwolf.media":
