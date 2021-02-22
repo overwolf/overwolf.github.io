@@ -18,7 +18,7 @@ The first step to take is creating a new subscription plan and setting it in a "
 Right now we have to do that for you (after you fill up [this form](subscriptions-request-form)), but in the future you'll be able to do it independently from our dev console.
 
 :::note Notes
-* Only whitelisted developers with a live app on our store can create a subscription plan.  
+* Only whitelisted app "owners" with a live app on our store can create a subscription plan.  
 * For now, you may only create a single plan for each app. This might change in the future. 
 :::
 
