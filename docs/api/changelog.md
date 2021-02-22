@@ -23,6 +23,9 @@ Note that the work on the documentation for this version is still in-progress.
 * Improve the OBS crash reports.
 * Overwolf Appstore as a default extension - So the Overwolf Appstore has all grown up, it is now a default extension within Overwolf. Most of you won’t
 even notice a change, and that’s good, but under the hood, there are several big differences.
+* We updated version 0.166.87.17 and up with a new CEF version (87).
+
+
 
 
 #### Dev Console
