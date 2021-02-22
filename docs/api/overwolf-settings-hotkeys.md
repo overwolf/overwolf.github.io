@@ -39,7 +39,9 @@ Please read all the info about hotkeys and how to use them in our [hotkeys best 
 
 > Assign global hotkey for the current extension, OR, if a gameId is specified, assign/unassign a dedicated hotkey.
 
-**Note: you can assign only hotkeys that pre-defined in your manifest.**
+#### Notes
+* You can assign only hotkeys that pre-defined in your manifest.
+* Currently **you can't assign a global hotkey through the API**, only through the manifest. We will fix that very soon.
 
 Parameter     | Type                  | Description                                                             |
 ------------- | ----------------------| ----------------------------------------------------------------------- |
