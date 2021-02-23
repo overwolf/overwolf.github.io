@@ -35,7 +35,22 @@ if the  game launcher wasn't closed by the user, it is possible to access game l
 
 key   | Category    | Values                    | Notes                 | Since Version |
 ------| ------------| ------------------------- | --------------------- | ------------- |
-phase | game_flow   | Current phase in the game |                       |   125.0       |
+phase | game_flow   | Current phase in the game | See [notes](#phase-note)  |   125.0       |
+
+#### *phase* note
+
+Data Example:
+
+```json
+{"feature":"game_flow","category":"game_flow","key":"phase","value":"Lobby"}
+{"feature":"game_flow","category":"game_flow","key":"phase","value":"ReadyCheck"}
+{"feature":"game_flow","category":"game_flow","key":"phase","value":"ChampSelect"}
+{"feature":"game_flow","category":"game_flow","key":"phase","value":"GameStart"}
+{"feature":"game_flow","category":"game_flow","key":"phase","value":"InProgress"}
+{"feature":"game_flow","category":"game_flow","key":"phase","value":"WaitingForStats"}
+{"feature":"game_flow","category":"game_flow","key":"phase","value":"PreEndOfGame"}
+{"feature":"game_flow","category":"game_flow","key":"phase","value":"EndOfGame"}
+```
 
 ## `summoner_info`
 
