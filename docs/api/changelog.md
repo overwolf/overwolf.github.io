@@ -111,7 +111,7 @@ Note that iterations 160 to 162 were combined into a single iteration.
   * Block iframes inside apps from creating an iframe to *overwolf-extensions://* - unless in externally_connectable
   * Block app windows that run in a remote address - from creating iframes to *overwolf-extensions://* - unless in *externally_connectable*.
 * Update to new OBS (141 with sdk 10.0.19041.1).
-* Increase `localstorge` size to ~50MB. Note that localstorge should be used up to 20-25 MB saved data. If you need more than that, you should use other storage.
+* Increase `localstorage` size to ~50MB. Note that localstorage should be used up to 20-25 MB saved data. If you need more than that, you should use other storage.
 * Enable `navigator.storage.persist()` for *overwolf-extension:\\* scheme.
 
 #### Bug Fixes
