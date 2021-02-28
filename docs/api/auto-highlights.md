@@ -32,6 +32,10 @@ Below, you can find a list of games that support highlights.
 * Overwatch
 * Call of Duty: Warzone
 
+:::tip
+To check using the API if a particular game is supporting auto-highlights, you can use [overwolf.media.replays.getHighlightsFeatures()](overwolf-media-replays#gethighlightsfeaturesgameid-callback)
+:::
+
 ## How it works
 
 The highlights settings for all the games are saved in a file called `highlights.json`, located under the OW installation folder. 

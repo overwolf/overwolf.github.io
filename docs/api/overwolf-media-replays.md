@@ -341,6 +341,15 @@ callback    | [(Result: GetHighlightsFeaturesResult)](#gethighlightsfeaturesresu
 overwolf.media.replays.getHighlightsFeatures(21216, JSON.stringify(console.log))
 ```
 
+If you run getHighlightsFeatures() for unsupported game,  you will get "no feature supported" error:
+
+```json 
+{
+  "success": false, 
+  "status": "error", 
+  "error": "no feature supported"}
+```
+
 ## onCaptureError
 
 #### Version added: 0.78
