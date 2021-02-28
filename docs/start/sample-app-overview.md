@@ -13,8 +13,8 @@ The sample app is built with JS code and TypeScript. An official Vue, React, and
 :::note Download
 It's highly recommended to follow the below steps for setting up the sample app, including download the source code and built it manually. 
 
-For those who need it, here is a direct download link to the latest version (v2.0.0):  
-[Download here](https://github.com/overwolf/sample-app/raw/master/ts/releases/2.0.0.opk).  
+For those who need it, here is a direct download link to the latest version:  
+[Download here](https://www.overwolf.com/app/Overwolf-Sample_App).  
 :::
 
 :::tip Video guide
@@ -88,7 +88,7 @@ For this reason, in addition to the OPK installation, you can load the app as "u
 
 * Click on "Development options".
 
-* In the opened window, click on "Load unpacked extension" and select the extracted 'ts' folder.  
+* In the opened window, click on "Load unpacked extension" and select the extracted 'ts/dist' folder.  
   This will add the app to your Overwolf dock.  
   
 * **Make sure you are logged in to the OW client**. Otherwise, you will get an "Unauthorized App" error message. (Click on the "Appstore" icon in the OW dock to login to the OW client).
