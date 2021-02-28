@@ -123,19 +123,10 @@ window.CustomInstallerUtils = {
 }
 ```
 
-## 2.  Upload files to S3 server
+## 2.  Upload files to Overwolf
 
-*This step is done by Overwolf.*
-
-Upload the files to the following path on Overwolf’s S3 server: `/owcachedcontent/Installer/promo/<app_uid>/`.
-
-## 3. Build the installer with Jenkins
-
-*This step is done by Overwolf.*
-
-Use Jenkins to build `Overwolf-Installer-Setup-with-app` with your app’s parameters. 
-
-Make sure to enable the `CUSTOM_PROMO_PAGES` flag.
+Overwolf does the next steps:  
+Please send the files to your dev rel manager or developers@overwolf.com, and we will build your custom installer and update you when it's ready. 
 
 ## 4. Download and install
 
