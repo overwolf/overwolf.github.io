@@ -996,7 +996,6 @@ SubErrorMessage    | string   | optional                                    |
 
 Parameter          | Type     | Description                                 |
 -------------------| ---------| ------------------------------------------- |
-success            | boolean  |                                             |
 stream_id          | number   |                                             |
 url                | string   |                                             |
 file_path          | string   |                                             |
@@ -1008,11 +1007,10 @@ total_frames       | number   |                                             |
 osVersion          | string   |                                             |
 osBuild            | string   |                                             |
 
-#### Event data example: Success
+#### Event data example
 
 ```json
 {
-   "success":true,
    "stream_id":3,
    "url":"overwolf://media/recordings/Game+Events+Simulator/Desktop+02-27-2020+14-37-13-913.mp4",
    "file_path":"C:\\Users\\Hal9000\\Videos\\Overwolf\\Game Events Simulator\\Desktop 02-27-2020 14-37-13-913.mp4",
