@@ -16,6 +16,9 @@ You can also use the following helpful URLs to open the Overwolf settings and ho
 
 * `overwolf://settings`  
   A clickable link that opens the Overwolf settings window from your app.
+  
+* `overwolf://settings/subscriptions`  
+  A clickable link that opens the Overwolf Subscriptions settings window from your app.
 
 * `overwolf://settings/games-overlay`  
    A clickable link that opens the Overwolf Overlay and Hotkeys settings window from your app.
