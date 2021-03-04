@@ -112,8 +112,6 @@ The real action will take place in the in-game window - once you launch Fortnite
 
 This is the injected in-game window overlayed on your game screen.  The window displays game events, collected data, and a sample advertisement for monetization.
 
+
 When you hit the close button, the app will close itself.
 
-![alt-text](assets/sample-app/notification-window.png)
-
-The sample app contains other reusable code like a settings button, FAQ button, hotkeys and other best practices that we implemented and you can use in your apps.
