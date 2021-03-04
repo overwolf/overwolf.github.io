@@ -55,9 +55,10 @@ If you recognize that the user is using a CPU/software-based encoder, like the X
 
 The Hardware-Accelerated GPU Scheduling feature is currently supported on Windows 10 version 2004 or Build 19041 and Nvidia latest GPU driver (451.49).
 
-When set to On, it might cause captured videos to be laggy/choppy.  
+When set to On, it might cause captured videos to be laggy/choppy.
 
-We created a quick experimental plugin with [a simple way of detecting whether it is ON or OFF](https://github.com/overwolf/experimental-plugin) (you just need to download the plugin and add it. Don't forget to unblock the dll)
+You can detect if it's ON by calling [overwolf.utils.getSystemInformation()](../api/overwolf-utils#getsysteminformationresult-object). The callback object contains the **HAGSEnabled** property that can be true or false.
+
 If you detect it is ON, you should display a warning to the user with a link to set this setting to OFF.
 
 **Suggested warning window**  
