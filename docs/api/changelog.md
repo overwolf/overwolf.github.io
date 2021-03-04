@@ -8,9 +8,34 @@ Follow this entry for ongoing updates and changes to the project or tools.
 
 Here you can find our [Developers Roadmap](https://trello.com/b/1V10E4IB/overwolf-roadmap).
 
-## Version 0.166 (In-Progress)
+
+## Version 0.168 (In-Progress)
 
 Note that the work on the documentation for this version is still in-progress.
+Note that iterations 167 to 168 were combined into a single iteration.  
+
+
+#### API
+
+* You can מם' detect if the [Windows 10 Hardware-Accelerated GPU Scheduling](../topics/video-capture#windows-10-hardware-accelerated-gpu-scheduling-notice) feature is enabled by calling [overwolf.utils.getSystemInformation()](../api/overwolf-utils#getsysteminformationresult-object). The callback object contains the **HAGSEnabled** property that can be true or false.
+
+#### Platform
+
+* Soon.
+
+
+#### Dev Console
+
+* Soon.
+
+#### Game events
+
+* Soon.
+
+
+
+## Version 0.166 (Mar. 2021)
+
 
 #### API
 
@@ -26,11 +51,9 @@ even notice a change, and that’s good, but under the hood, there are several b
 * We updated version 0.166.87.17 and up with a new CEF version (87).
 
 
-
-
 #### Dev Console
 
-* Soon.
+* Export data to CSV.
 
 #### Game events
 
