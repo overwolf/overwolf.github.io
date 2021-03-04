@@ -836,7 +836,7 @@ Option            | Description                                                 
 ----------------- | --------------------------------------------------------------------------------------------|
 InputPassThrough  |  Mouse and keyboard input will pass to the window AND to the game (no input blocking).     |
 
-Note: the manifest [clickthrough](manifest-json#windows-clickthrough) flag has a different behavior - when it's true, the input passes through the window to the game.  
+Note: the manifest [clickthrough](manifest-json#windows-clickthrough) flag has a different behavior - when it's set to `true`, the input passes through the window to the game.  
 
 ## MessagePromptIcon enum
 #### Version added: 0.78
