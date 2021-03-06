@@ -40,6 +40,7 @@ Common use cases:
 * [overwolf.utils.enums.eStorePage](#estorepage-enum) enum
 * [overwolf.utils.OpenStoreParams](#openstoreparams-object) Object
 * [overwolf.utils.GetSystemInformationResult](#getsysteminformationresult-object) Object
+* [overwolf.utils.SystemInfo](#systeminfo-object)
 * [overwolf.utils.GetMonitorsListResult](#getmonitorslistresult-object) Object
 * [overwolf.utils.GPUInfo](#gpuinfo-object) Object
 * [overwolf.utils.HardDiskInfo](#harddiskinfo-object) Object
@@ -327,27 +328,7 @@ Parameter          | Type     | Description                                 |
 *error*            | string   | inherited from the "Result" Object          |
 status             | string   | deprecated. For backward compatibility only |
 Reason             | string   | deprecated. For backward compatibility only |   
-systemInfo         | object   |                                             |   
-AudioDevices       | string[] |                                             |   
-CPU                | string   |                                             |   
-GPUs               | [GPUInfo[]](#gpuinfo-object)         |                                    |   
-HardDisks          | [HardDiskInfo[]](#harddiskinfo-object)    |                                    |   
-InputDevices       | [InputDeviceInfo[]](#inputdeviceinfo-object) |                                    |   
-IsLaptop           | boolean  |                                             |   
-LogicalCPUCount    | number   |                                             |   
-Manufacturer       | string   |                                             |   
-MemorySize         | string   |                                             |   
-Model              | string   |                                             |   
-Monitors           | [MonitorInfo[]](#monitorinfo-object)     |                                    |   
-Motherboard        | string   |                                             |   
-NetFramework       | string   |                                             |   
-NumberOfScreens    | number   |                                             |   
-OS                 | string   |                                             |   
-OSBuild            | string   |                                             |   
-OSReleaseId        | string   |                                             |   
-PhysicalCPUCount   | number   |                                             |   
-VidEncSupport      | boolean  |                                             |   
-HAGSEnabled        | boolean  | indicates if the current OS enabled the [Windows 10 Hardware-Accelerated GPU Scheduling](../topics/video-capture#windows-10-hardware-accelerated-gpu-scheduling-notice) feature   |   
+systemInfo         | [SystemInfo](#systeminfo-object) Object  |                                             |   
 
 #### Example data: Success
 
@@ -434,6 +415,31 @@ HAGSEnabled        | boolean  | indicates if the current OS enabled the [Windows
    }
 }
 ```
+
+
+### SystemInfo Object
+Parameter          | Type     | Description                                 |
+-------------------| ---------| ------------------------------------------- |
+AudioDevices       | string[] |                                             |   
+CPU                | string   |                                             |   
+GPUs               | [GPUInfo[]](#gpuinfo-object)         |                                    |   
+HardDisks          | [HardDiskInfo[]](#harddiskinfo-object)    |                                    |   
+InputDevices       | [InputDeviceInfo[]](#inputdeviceinfo-object) |                                    |   
+IsLaptop           | boolean  |                                             |   
+LogicalCPUCount    | number   |                                             |   
+Manufacturer       | string   |                                             |   
+MemorySize         | string   |                                             |   
+Model              | string   |                                             |   
+Monitors           | [MonitorInfo[]](#monitorinfo-object)     |                                    |   
+Motherboard        | string   |                                             |   
+NetFramework       | string   |                                             |   
+NumberOfScreens    | number   |                                             |   
+OS                 | string   |                                             |   
+OSBuild            | string   |                                             |   
+OSReleaseId        | string   |                                             |   
+PhysicalCPUCount   | number   |                                             |   
+VidEncSupport      | boolean  |                                             |   
+HAGSEnabled        | boolean  | indicates if the current OS enabled the [Windows 10 Hardware-Accelerated GPU Scheduling](../topics/video-capture#windows-10-hardware-accelerated-gpu-scheduling-notice) feature   |   
 
 ## GetMonitorsListResult Object
 
