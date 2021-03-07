@@ -106,6 +106,7 @@ Possible agent values:
 * "Killjoy_PC_C" = Killjoy
 * "Guide_PC_C" = Skye
 * "Stealth_PC_C" = Yoru
+* "Rift_PC_C" = Astra
 
 ## `match_info`
 
