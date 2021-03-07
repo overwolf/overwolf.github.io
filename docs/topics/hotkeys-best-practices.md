@@ -78,11 +78,21 @@ A screenshot from the OW client UI:
 
 ![hotkeys_global](../assets/hotkeys_global.png)
 
-If you "upgrade" your hotkey to a global hotkey, the OW client will try to set this hotkey for all installed games on your machine.
+If you "upgrade" your hotkey to a global hotkey through the OW client "settings" page, the client will try to set this hotkey for all installed games on your machine.
 
 Whenever hotkeys are added this way but a conflict exists, the hotkey is added as unassigned.
 
 You can get the list of all your app's assigned hotkeys using the [overwolf.settings.hotkeys.get()](../api/overwolf-settings-hotkeys#getcallback).
+
+### Set through the manifest
+
+If [game_targeting](../api/manifest-json#game_targeting) flag is set to "all", then hotkeys will be set global as default.  
+Whenever hotkeys are added, but a conflict exists, the hotkey is added as unassigned.
+
+To make it more transparent - there is no way to set a specific hotkey as "global" in the manifest other than set "game_targeting: "all".
+
+If your app was not able to set the hotkeys for all the games, then the user can assign it through the OW client "settings" page or, the dev can set it global through the [API](../api/overwolf-settings-hotkeys#assignhotkey-callback). 
+
 
 ## Get notified on a Hotkey change
 
