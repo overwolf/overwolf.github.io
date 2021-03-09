@@ -40,10 +40,12 @@ Double-clicking an OPK will install the package.
 
 ### How to create an OPK package
 
-To create it, ZIP all your files together, then manually change the file extension from ZIP to OPK.  
+To create it, ZIP all your files together (make sure to use normal compression rate and not the highest rate), then manually change the file extension from ZIP to OPK.  
 Make sure to pack the manifest and all the files and folder in the root of the package, like this:
 
 ![welcome-screen](../assets/dev-console/update-version/opk.gif)
+
+**Note:** Make sure to use "Normal" compression rate and not the highest rate.
 
 ### OPK structure
 
