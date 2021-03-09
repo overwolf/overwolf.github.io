@@ -6,7 +6,7 @@ sidebar_label: Rating and reviews
 
 Users can leave reviews and rate your app in Overwolf’s AppStore. You can browse these ratings and reviews and reply to users from the dev console.
 
-## Why is this important
+## Why is this important 
 
 Replying to reviews engages your users and makes them feel valued, further building loyalty. When you respond to negative reviews, it indicates how and when you'll address the feedback, where possible. Users will be more likely to leave a good rating and share your app following a positive interaction.
 
