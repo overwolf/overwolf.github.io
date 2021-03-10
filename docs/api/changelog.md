@@ -26,7 +26,7 @@ Note that iterations 167 to 168 were combined into a single iteration.
 
 #### Dev Console
 
-* Soon.
+* Soon. 
 
 #### Game events
 
