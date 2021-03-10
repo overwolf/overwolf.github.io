@@ -17,7 +17,7 @@ Note that iterations 167 to 168 were combined into a single iteration.
 
 #### API
 
-* You can now detect if the [Windows 10 Hardware-Accelerated GPU Scheduling](../topics/video-capture#windows-10-hardware-accelerated-gpu-scheduling-notice) feature is enabled by calling [overwolf.utils.getSystemInformation()](../api/overwolf-utils#getsysteminformationresult-object). The callback object contains the **HAGSEnabled** property that can be true or false.
+* You can now detect if the [Windows 10 Hardware-Accelerated GPU Scheduling](../topics/video-capture#windows-10-hardware-accelerated-gpu-scheduling-notice) feature is enabled by calling [overwolf.utils.getSystemInformation()](../api/overwolf-utils#getsysteminformationresult-object). The callback object contains the **HAGSEnabled** property that can be true or false. 
 
 #### Platform
 
