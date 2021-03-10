@@ -13,7 +13,7 @@ Please read all the info about video capture usage and options on our [video cap
 ## Methods Reference
 
 * [overwolf.media.videos.createVideoComposition()](#createvideocompositionsourcevideourl-segments-callback)
-* [overwolf.media.videos.createVideoCompositionFiles()](#createvideocompositionfiles-outputfile-callback)
+* [overwolf.media.videos.createVideoCompositionFiles()](#createvideocompositionfilesfiles-outputfile-callback)
 * [overwolf.media.videos.getVideos()](#getvideoscallback)
 * [overwolf.media.videos.getVideosSize()](#getvideossizecallback)
 * [overwolf.media.videos.deleteOldVideos()](#deleteoldvideoskeepnewestxgbs-callback)
@@ -54,7 +54,7 @@ The JSON containing a list of segments, each segment has a start time and an end
 }
 ```
 
-## createVideoComposition(files, outputFile, callback)
+## createVideoCompositionFiles(files, outputFile, callback)
 #### Version added: 0.112
 
 > Creates a compilation video out of a list of video files.
