@@ -12,7 +12,7 @@ Here you can find our [Developers Roadmap](https://trello.com/b/1V10E4IB/overwol
 ## Version 0.168 (In-Progress)
 
 Note that the work on the documentation for this version is still in-progress.
-Note that iterations 167 to 168 were combined into a single iteration.  
+Also, iterations 167 to 168 were combined into a single iteration.  
 
 
 #### API
