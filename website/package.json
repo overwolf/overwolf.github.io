@@ -9,10 +9,10 @@
     "rename-version": "docusaurus-rename-version"
   },
   "devDependencies": {
-    "docusaurus": "^1.14.7"
+    "docusaurus": "^1.14.7",
+    "fs-extra": "^9.1.0"
   },
   "dependencies": {
-    "fs-extra": "^9.1.0",
     "remarkable-admonitions": "^0.2.1"
   }
 }
