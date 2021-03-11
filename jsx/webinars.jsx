@@ -13,6 +13,15 @@ class Webinars extends React.Component {
             In order to participate, stay tuned to the announcements channel in [the community.](https://discord.gg/overwolf-developers)
         </p>
         <div>
+            <h2>Entertaineurship</h2>
+            <h4>March 9th, 2020</h4>
+            <p>Uri Marchand, Overwolf's CEO and co-founder</p>
+            <p>A special webinar aiming to share stories of Overwolf's journey from an entrepreneurial point of view. We go over the high level approach to pivoting the product, fund raising, team building and many more pieces of advice that can help any project owner.</p>
+            <div className="video-container">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/UL0lSMMDtj4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+        <div>
             <h2>UI/UX</h2>
             <h4>July 8th, 2020</h4>
             <p>Jasmin Weizman, Overwolf’s UI/UX lead designer</p>
