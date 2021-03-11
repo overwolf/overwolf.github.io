@@ -51,10 +51,10 @@ Whenever permissions or overlay settings are changed, Overwolf informs users thr
 
 * Every app can use the [Game Settings API](https://overwolf.github.io/docs/api/overwolf-settings-games) to query the status of Overwolf's settings PER GAME including:
 * **Overlay Settings** – is the overlay enabled or disabled?
-   * [getOverlayEnabled()](../docs/api/overwolf-settings-games#getoverlayenabledgameclassid-callback)
+   * [getOverlayEnabled()](../docs/api/overwolf-settings-games#getoverlayenabledgameclassid-callback) --> 404 Link
  
 * **Auto Launch Permission** - is autolaunch allowed for this app?
-  * [getAutoLaunchEnabled()](../docs/api/overwolf-settings-games#getautolaunchenabledgameclassid-callback)
+  * [getAutoLaunchEnabled()](../docs/api/overwolf-settings-games#getautolaunchenabledgameclassid-callback) --> 404 Link
   
  ## Bring more value
  
