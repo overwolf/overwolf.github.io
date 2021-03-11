@@ -3,6 +3,6 @@
 
 
 remarkable-admonitions@^0.2.1:
-  version "0.2.1"
-  resolved "https://registry.yarnpkg.com/remarkable-admonitions/-/remarkable-admonitions-0.2.1.tgz#425ceb34e01a1f169048d9687a5c8e16675da26c"
-  integrity sha512-Uqeye087AIuo+BMUwteuG7e3GhoPqeT8aFjD8DaIqjUk2rn+7T7A6xank7fVlU+GHgbjT49DDC13nHLWwdBxRw==
+  version "0.2.2"
+  resolved "https://registry.yarnpkg.com/remarkable-admonitions/-/remarkable-admonitions-0.2.2.tgz#8765f9ec66be4f4c651a4e1cfb559dd7f920819c"
+  integrity sha512-CcMTEcLYmJLXX3IVMk4LyW4oFD2NQxh5FeLzn4k89TAPpyWIeVix/B/g/gDbZAUpCNY9l6heovR5NNIktf8X5A==
