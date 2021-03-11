@@ -29,7 +29,7 @@
 		"Integrations":
 			["topics/app-analytics", "topics/login-with-twitch","topics/login-with-overwolf", "topics/events-SDK-for-game-developers", "topics/twitch-events-sdk-for-game-developers"],
 		"Request a Service":
-			["topics/assets-req-marketing", "topics/looking-for-group", "topics/promoting-your-app"],
+			["topics/assets-req-marketing", "topics/looking-for-group", "topics/promoting-your-app", "topics/app-recommendations"],
 		"Community Help":
 			["topics/join-the-community", "topics/webinars", "topics/creators-content", "topics/snippets"],
 		"Legal":
