@@ -25,4 +25,4 @@ https://twitter.com/OverwolfDevs
 https://www.facebook.com/OverwolfDevs
 
 ## Subscribe to our Newsletter
-[Subscribe here.](http://eepurl.com/g-Ebmb)
+[Subscribe here.](http://eepurl.com/dxC30D)
