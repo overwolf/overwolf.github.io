@@ -28,7 +28,7 @@ https://download.overwolf.com/install/Download?Name=BUFF&ExtensionId=caboggillkk
 ```
 
 :::info
-utm_campaign data will be saved to the OW database only for new OW installations! If the user that uses the download link already has the OW client installed, the link will only update the app if necessary, but not save the data in `utm_campaign` to the OW Database.
+utm_campaign data will be saved to the OW database for new and existing OW installations. If the user that uses the download link already has the OW client installed, the link will update the app if necessary, band save the data in `utm_campaign` to the OW Database.
 :::
 
 ## Extract referral data using API

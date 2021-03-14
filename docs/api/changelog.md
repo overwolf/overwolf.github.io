@@ -31,9 +31,8 @@ Also, iterations 167 to 168 were combined into a single iteration.
 
 * General partner reports on redash - now you can export your reports to CSV.
 * OW browser redirects: allow to open tab and redirect back to overwolf-extension when origin URL is at 'externally_connectable' and to tab was open from the same extension. See more details in our [OAuth integration guide](../topics/login-with-twitch).
-* App UTM params: UTM params tagged with the installer are now saved to the DB in an app context, should be sent with 'InstalledApp' analytic.
-The parameters will be passed as command line arguments in case overwolf is installed. More info about UTM params on our [Referral ID Guide](../topics/create-download-link#extract-referral-data-using-api).
-
+* App UTM params: Until now, UTM params tagged with the installer were saved to the OW database only for new OW installations.
+Now, they are saved to the DB in an app context, also for existing installations. (should be sent with 'InstalledApp' analytic). The parameters will be passed as command-line arguments in case overwolf is installed - more info about UTM params on our Referral ID Guide.
 
 
 #### Dev Console
