@@ -17,11 +17,24 @@ Also, iterations 167 to 168 were combined into a single iteration.
 
 #### API
 
-* You can now detect if the [Windows 10 Hardware-Accelerated GPU Scheduling](../topics/video-capture#windows-10-hardware-accelerated-gpu-scheduling-notice) feature is enabled by calling [overwolf.utils.getSystemInformation()](../api/overwolf-utils#getsysteminformationresult-object). The callback object contains the **HAGSEnabled** property that can be true or false. 
+* You can now detect if the [Windows 10 Hardware-Accelerated GPU Scheduling](../topics/video-capture#windows-10-hardware-accelerated-gpu-scheduling-notice) feature is enabled by calling [overwolf.utils.getSystemInformation()](../api/overwolf-utils#getsysteminformationresult-object). The callback object contains the **HAGSEnabled** property that can be true or false.  Note that the user can set the HA feature on or off therough the client settings.
+* Close overwolf when closing an app: Any app can now add the new 'Shutdown' permissions to it's manifest, then call [overwolf.settings.setExtensionSettings()](overwolf-settings#setextensionsettingsextensionsettings-callback) with "exit_overwolf_on_exit: true".
+* Alternative recording resolutions: Added support for two new methods to calculate the recording resolution:  
+  * Exact - get the exact resolution quality the user wanted (1080, 720, 480), keeping the original aspect ratio of the game.
+  * Close - find from generated list the closet entry to quality the user wanted, keeping the original aspect ratio of the game.
+  * More info will be added soon.
+* Social API: [overwolf.social.youtube.performLogin()](overwolf-social-youtube#performlogoutcallback) now opens in default browser and using pubsub to update client.
+* Added new state to [WindowStateEx](overwolf-windows#windowstateex-enum) enum.
+* [overwolf.util.openFilePicker()](overwolf-utils#openfilepickerfilter-callback): now returns both overwolf-url and path to file.
+* url-scheme: added 'overwolfstore' url-scheme - use 'overwolfstore://app/:uid/reviews/:commentId' to open a specific comment.
 
 #### Platform
 
-* General partners reports on redash - now you can export your reports to CSV.
+* General partner reports on redash - now you can export your reports to CSV.
+* OW browser redirects: allow to open tab and redirect back to overwolf-extension when origin URL is at 'externally_connectable' and to tab was open from the same extension. See more details in our [OAuth integration guide](../topics/login-with-twitch).
+* App UTM params: UTM params tagged with the installer are now saved to the DB in an app context, should be sent with 'InstalledApp' analytic.
+The parameters will be passed as command line arguments in case overwolf is installed. More info about UTM params on our [Referral ID Guide](../topics/create-download-link#extract-referral-data-using-api).
+
 
 
 #### Dev Console
