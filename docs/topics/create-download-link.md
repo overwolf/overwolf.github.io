@@ -27,7 +27,7 @@ Once you have the base download link, you can concatenate your referral ID in th
 https://download.overwolf.com/install/Download?Name=BUFF&ExtensionId=caboggillkkpgkiokbjmgldfkedbfnpkgadakcdl&Channel=website&utm_campaign=[REFERRAL_ID]
 ```
 
-:::important
+:::info
 utm_campaign data will be saved to the OW database only for new OW installations! If the user that uses the download link already has the OW client installed, the link will only update the app if necessary, but not save the data in `utm_campaign` to the OW Database.
 :::
 
