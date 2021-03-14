@@ -24,7 +24,6 @@ Also, iterations 167 to 168 were combined into a single iteration.
   * Close - find from generated list the closet entry to quality the user wanted, keeping the original aspect ratio of the game.
   * More info will be added soon.
 * Social API: [overwolf.social.youtube.performLogin()](overwolf-social-youtube#performlogoutcallback) now opens in default browser and using pubsub to update client.
-* Added new state to [WindowStateEx](overwolf-windows#windowstateex-enum) enum.
 * [overwolf.util.openFilePicker()](overwolf-utils#openfilepickerfilter-callback): now returns both overwolf-url and path to file.
 * url-scheme: added 'overwolfstore' url-scheme - use 'overwolfstore://app/:uid/reviews/:commentId' to open a specific comment.
 
