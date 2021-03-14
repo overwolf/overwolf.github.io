@@ -475,7 +475,8 @@ settings  | [ReplayStreamParams](#replaystreamparams-object) Object            |
     "audio": {
 	  "mic": {
 	    "volume": 100,
-		  "enable": true
+		  "enable": true,
+      
 	  },
 	  "game": {
 	    "volume": 75,
