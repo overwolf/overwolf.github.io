@@ -26,6 +26,13 @@ Our community is constantly sharing knowledge on different topics: codes to Impa
 </div>
 
 ## Articles
+- [Level Up Your Coding Skills](https://mailchi.mp/overwolf.com/ui-ux-best-practices) / Leon Machens - Trophy Hunter
+
+- [Discord RPC Plugin](https://github.com/overwolf/community-gists/tree/master/DiscordRPCPlugin) / Francesco Bramato - Trucky Overlay
+
+- [Manage Your Own Influencers Community](https://mailchi.mp/7e277b4b904c/the-reddit-post-that-caused-us-to-stop-overwolf-devs-251297) / Francesco Bramato - Trucky Overlay
+
+- [Feedback From Users and the Way It Affected Our App](https://mailchi.mp/7e277b4b904c/the-reddit-post-that-caused-us-to-stop-overwolf-devs-251297) / Yuval Altun - LoR Guardian
 
 - [Get users to make their voice heard](https://mailchi.mp/7012fff3a2a9/the-reddit-post-that-caused-us-to-stop-overwolf-devs-251221) / Sébastien Tromp - Firestone
 
