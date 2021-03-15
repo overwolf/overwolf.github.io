@@ -46,7 +46,6 @@ Now, they are saved to the DB in an app context, also for existing installations
 * Soon.
 
 
-
 ## Version 0.166 (Mar. 2021)
 
 

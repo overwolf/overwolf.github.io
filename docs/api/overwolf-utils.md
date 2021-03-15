@@ -590,6 +590,7 @@ Parameter          | Type     | Description                                 |
 *success*          | boolean  | inherited from the "Result" Object          |
 *error*            | string   | inherited from the "Result" Object          |
 url                | string   | a url to the selected file                  |
+file               | string   | an absolute path to the selected file       |
 
 #### Example data: Success
 
@@ -597,7 +598,8 @@ url                | string   | a url to the selected file                  |
 ```json
 {
     "success": true,
-    "url": "overwolf-fs://C/Users/Hal9000/AppData/Local/O…mjiecdnnjmgfifjgkfegkljnjjbzap/1.0.14/logo.png"
+    "url": "overwolf-fs://C/file.txt",
+    "file": "C:\file.txt"
 }
 ```
 
@@ -607,8 +609,8 @@ Or in case of multiples files picks
 {
     "success": true,
     "urls": [
-        "overwolf-fs://C/Users/Eran/AppData/Local/Overwolf/Extensions/nhmkaollkcmjiecdnnjmgfifjgkfegkljnjjbipp/1.0.19/logo192.png",
-        "overwolf-fs://C/Users/Eran/AppData/Local/Overwolf/Extensions/nhmkaollkcmjiecdnnjmgfifjgkfegkljnjjbipp/1.0.19/logo512.png"
+        "overwolf-fs://C/file1.txt",
+        "overwolf-fs://C/file2.txt"
     ]
 
 }
