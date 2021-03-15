@@ -128,6 +128,6 @@ window.CustomInstallerUtils = {
 Overwolf does the next steps:  
 Please send the files to your dev rel manager or developers@overwolf.com, and we will build your custom installer and update you when it's ready. 
 
-## 4. Download and install
+## 3. Download and install
 
 Download your app from the <a href="https://www.overwolf.com/appstore"  target="_blank">Overwolf Store</a>. The installer should display the custom content.
