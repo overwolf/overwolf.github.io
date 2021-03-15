@@ -67,10 +67,6 @@ even notice a change, and that’s good, but under the hood, there are several b
 
 * Export data to CSV.
 
-#### Game events
-
-* Soon.
-
 
 ## Version 0.165 (Feb. 2021)
 
