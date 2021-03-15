@@ -25,7 +25,7 @@ Also, iterations 167 to 168 were combined into a single iteration.
   * More info will be added soon.
 * Social API: [overwolf.social.youtube.performLogin()](overwolf-social-youtube#performlogoutcallback) now opens in default browser and using pubsub to update client.
 * [overwolf.util.openFilePicker()](overwolf-utils#openfilepickerfilter-callback): now returns both overwolf-url and path to file.  
-  **Important: note that this function signature is not backsword compatible: the `url` property in the callback now returns the path in overwolf-fs:// format and not in an absolute path. (the `file` property returns the absolute path).
+  **Important: note that this function signature is not backwards compatible: the `url` property in the callback now returns the path in overwolf-fs:// format and not in an absolute path. (the new `file` property returns the absolute path).
 * url-scheme: added 'overwolfstore' url-scheme - use 'overwolfstore://app/:uid/reviews/:commentId' to open a specific comment.
 
 #### Platform
