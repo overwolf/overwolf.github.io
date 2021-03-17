@@ -86,6 +86,8 @@ callback    | [(Result: TurnOnResult)](#turnonresult-object) => void   | A callb
     "video": {
         "sub_folder_name": folderName,
         "buffer_length": bufferLength,
+        "base_frame_size_source" : ["Setting","Auto"] , // if not set, "Setting" is the default
+        "frame_size_method": ["Original", "ExactOrKeepRatio", "ExactOrClosestResolution"] , // // Original
         "tobii": {
         "visible": tobiiService.getTobiiIsOn(), //false
         "effect": tobiiService.getEffectSetting() //inverted,
@@ -542,6 +544,18 @@ Replay video options.
 | indication_type     | [indication_type](overwolf-streaming#indication_type-enum) Enum | Type of the recorder indicator. Available for video capture only.  | 0.143  |
 | use_app_display_name | bool | Use the app display (if has any e.g [dock_button_title](manifest-json#meta-dock) name when creating video folder. See [note](#use_app_display_name-notes)  | 0.154  |
 | sources | [VideoSource](#videosource-object)[] | Add sources to video. See [note](#sources-notes)  | 0.159  |
+| base_frame_size_source | [eVideoBaseFrameSizeSource](overwolf-streaming#evideobaseframesizesource-enum) Enum | See [note](#base_frame_size_source-notes)   | 0.168  |
+| eVideoFrameSizeCalcMethod | [eVideoFrameSizeCalcMethod](overwolf-streaming#evideoframesizecalcmethod-enum) Enum | See [note](#evideoframesizecalcmethod-notes)   | 0.168  |
+
+#### base_frame_size_source notes
+
+If not set, "Setting" (setting configuraion) is the default. "Auto" is logical width\height (if in game, take game, otherwhise take monitor).
+
+#### eVideoFrameSizeCalcMethod notes
+
+* "Original": Original calculation to get the output resolution for the needed quaulity keeping the aspect ratio.
+* "ExactOrKeepRatio": Get the exact resolution from a resolutions list for the needed quality, if not found in the list then calculate a new resolution keeping the aspect ratio.
+* "ExactOrClosestResolution": Find the closer resolution from a resolutions list for the needed quality.
 
 #### sources notes
 

@@ -84,6 +84,9 @@ Please read all the info about streaming usage and options on our [video capture
 * [overwolf.streaming.GetAudioDevicesResult](#getaudiodevicesresult-object) Object
 * [overwolf.streaming.StreamingSourceImageChangedEvent](#streamingsourceimagechangedevent-object) Object
 * [overwolf.streaming.VideoFileSplitedEvent](#videofilesplitedevent-object) Object
+* [overwolf.streaming.enums.eVideoBaseFrameSizeSource](#evideobaseframesizesource-enum) Enum
+* [overwolf.streaming.enums.eVideoFrameSizeCalcMethod](#evideoframesizecalcmethod-enum) Enum
+
 
 ## start(settings, callback)
 
@@ -184,6 +187,8 @@ var stream_settings = {
       "test_drop_frames_interval": 5000,
       "indication_position": 'TopRightCorner',
       "indication_type": 'dot',
+      "base_frame_size_source" : ["Setting","Auto"] , // if not set, "Setting" is the default
+       "frame_size_method": ["Original", "ExactOrKeepRatio", "ExactOrClosestResolution"] , // // Original
       "encoder": {
         "name": overwolf.streaming.enums.StreamEncoder.X264,
         "config": {
@@ -634,6 +639,18 @@ Stream video options.
 | indication_type     | [indication_type](#indication_type-enum) Enum | Type of the recorder indicator. Available for video capture only.  | 0.143  |
 | use_app_display_name | bool | Use the app display (if has any e.g [dock_button_title](manifest-json#meta-dock) name when creating video folder. See [note](#use_app_display_name-notes)  | 0.154  |
 | sources | [overwolf.media.replaysVideoSource](overwolf-media-replays#videosource-object)[] | Add sources to video. See [note](#sources-notes)   | 0.159  |
+| base_frame_size_source | [eVideoBaseFrameSizeSource](#evideobaseframesizesource-enum) Enum | See [note](#base_frame_size_source-notes)   | 0.168  |
+| eVideoFrameSizeCalcMethod | [eVideoFrameSizeCalcMethod](#evideoframesizecalcmethod-enum) Enum | See [note](#evideoframesizecalcmethod-notes)   | 0.168  |
+
+#### base_frame_size_source notes
+
+If not set, "Setting" (setting configuraion) is the default. "Auto" is logical width\height (if in game, take game, otherwhise take monitor).
+
+#### eVideoFrameSizeCalcMethod notes
+
+* "Original": Original calculation to get the output resolution for the needed quaulity keeping the aspect ratio.
+* "ExactOrKeepRatio": Get the exact resolution from a resolutions list for the needed quality, if not found in the list then calculate a new resolution keeping the aspect ratio.
+* "ExactOrClosestResolution": Find the closer resolution from a resolutions list for the needed quality.
 
 #### sources notes
 
@@ -1193,4 +1210,23 @@ file_name       |  string                 |                 |
 duration        |  number                 |                 | 
 count           |  number                 |                 | 
 next_file       |  string                 |                 | 
+
+## eVideoBaseFrameSizeSource enum
+
+#### Version added: 0.168
+
+| Options           | Description                                                     |
+|-------------------| ----------------------------------------------------------------|
+| Auto              |  logical width\height (if in game, take game, otherwhise take monitor) |
+| Setting           |  setting configuraion                                           |
+
+## eVideoFrameSizeCalcMethod enum
+
+#### Version added: 0.168
+
+| Options           | Description                                                     |
+|-------------------| ----------------------------------------------------------------|
+| Original          |  Original calculation to get the output resolution for the needed quaulity keeping the aspect ratio |
+| ExactOrKeepRatio  |  Get the exact resolution from a resolutions list for the needed quality, if not found in the list then calculate a new resolution keeping the aspect ratio. |
+| ExactOrClosestResolution   |  Original calculation to get the output resolution for the needed quaulity keeping the aspect ratio |
 
