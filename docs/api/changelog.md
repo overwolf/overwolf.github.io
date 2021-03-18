@@ -39,7 +39,13 @@ Now, they are saved to the DB in an app context, also for existing installations
 
 #### Dev Console
 
-* Soon. 
+* Subscriptions
+  * Added support for dark theme subscription plan page
+  * Added the option to edit the Xsolla payment page background image
+  * Added filters and improved sorting for your subscribers list
+  * Bug fixes
+* Release management
+  * Improved UX 
 
 #### Game events
 
