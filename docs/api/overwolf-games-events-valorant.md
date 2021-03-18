@@ -189,6 +189,7 @@ Current values:
 * Quick Bomb = Spike Rush.
 * Ranked = 1 = Competitive.
 * Deathmatch = Deatchmatch
+* Escalation = Escalation
 
 Both of these values also have "custom" value which is identified as a Boolean, either "True" or "False".<br>
 True meaning that the current game is custom made, and false being an online game which is not custom.<br>
