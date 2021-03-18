@@ -49,8 +49,15 @@ Now, they are saved to the DB in an app context, also for existing installations
 
 #### Game events
 
-* Soon.
-
+* [VALORANT](overwolf-games-events-valorant)
+  * New supported game mode
+  * Fix to support the new patch
+* [Teamfight Tactics](overwolf-games-events-tft)
+  * Fix to support the new patch.
+* [Fortnite](overwolf-games-events-fortnite)
+  * Support for the new season
+* [Rainbow Six: Siege](overwolf-games-events-rainbow-six)
+  * Support for the new season
 
 ## Version 0.166 (Mar. 2021)
 
