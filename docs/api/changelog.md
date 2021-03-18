@@ -50,10 +50,10 @@ Now, they are saved to the DB in an app context, also for existing installations
 #### Game events
 
 * [VALORANT](overwolf-games-events-valorant)
-  * New supported game mode
+  * New supported game mode - Escalation
   * Fix to support the new patch
 * [Teamfight Tactics](overwolf-games-events-tft)
-  * Fix to support the new patch.
+  * Fix to support the new patch
 * [Fortnite](overwolf-games-events-fortnite)
   * Support for the new season
 * [Rainbow Six: Siege](overwolf-games-events-rainbow-six)
