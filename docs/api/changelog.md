@@ -8,12 +8,10 @@ Follow this entry for ongoing updates and changes to the project or tools.
 
 Here you can find our [Developers Roadmap](https://trello.com/b/1V10E4IB/overwolf-roadmap).
 
-
 ## Version 0.168 (In-Progress)
 
 Note that the work on the documentation for this version is still in-progress.
 Also, iterations 167 to 168 were combined into a single iteration.  
-
 
 #### API
 
@@ -26,6 +24,7 @@ Also, iterations 167 to 168 were combined into a single iteration.
   **Important: note that this function signature is not backwards compatible: the `url` property in the callback now returns the path in overwolf-fs:// format and not in an absolute path. (the new `file` property returns the absolute path).
 * url-scheme: added 'overwolfstore' url-scheme - use 'overwolfstore://app/:uid/reviews/:commentId' to open a specific comment.  
   This originally intended to be used as a link in emails users would get if a dev replied to their comment.
+* Some news for you on the video capture front. We added support for alternative recording resolutions. More info in our [Video capture best practices](../topics/video-capture#recording-resolutions) guide.
 
 #### Platform
 

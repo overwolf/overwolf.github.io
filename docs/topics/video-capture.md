@@ -89,6 +89,34 @@ Manual capture             | +                        | +                       
 Custom capture length      | +                        | +                              |     
 Streaming support          | -                        | +                              |     
 
+## Recording resolutions
+
+The capture APIs (overwolf.media.replays and overwolf.streaming) support alternative recording resolutions.  
+Note that it's not mandatory, and you don't have to set it explicitly if you don't need/want to.
+
+You can choose one of the following recording resolutions types:  
+
+* Original -  Original calculation to get the output resolution for the needed quality keeping the aspect ratio.
+* Exact - get the same/exact resolution quality the user wanted (1080, 720, 480), keeping the game's original aspect ratio.
+* Close - find from the generated list the closest entry to quality the user wanted, keeping the game's original aspect ratio.
+
+#### How to use
+
+Before you start the capture (in both capture APIs), you have to define the video options in your settings.
+In this object, you can set the [base_frame_size_source]((overwolf-streaming#evideobaseframesizesource-enum)) and [frame_size_method](overwolf-streaming#evideoframesizecalcmethod-enum).
+
+An example:
+
+```js
+ let settings = 
+ {
+   "video": {
+      "base_frame_size_source" : overwolf.streaming.enums.eVideoBaseFrameSizeSource.Auto, // Setting|Auto, if not set, "Setting" is the default
+      "frame_size_method": overwolf.streaming.enums.eVideoFrameSizeCalcMetho.Original  // Original|ExactOrKeepRatio|ExactOrClosestResolution
+   }
+ };
+```  
+
 ## Using overwolf.media.replays
 
 With this API, you can listen to game events and manually start and stop video capture.

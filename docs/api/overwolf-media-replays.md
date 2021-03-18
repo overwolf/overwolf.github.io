@@ -549,12 +549,17 @@ Replay video options.
 
 #### base_frame_size_source notes
 
-If not set, "Setting" (setting configuraion) is the default. "Auto" is logical width\height (if in game, take game, otherwhise take monitor).
+Possible values:
+
+* If not set, "Setting" (setting configuration) is the default. This means that it will look at what method has been selected in the [eVideoFrameSizeCalcMethod](overwolf-streaming#evideoframesizecalcmethod-enum) field.
+* "Auto" is logical width\height (if in-game, take the game, otherwise take monitor).
 
 #### eVideoFrameSizeCalcMethod notes
 
-* "Original": Original calculation to get the output resolution for the needed quaulity keeping the aspect ratio.
-* "ExactOrKeepRatio": Get the exact resolution from a resolutions list for the needed quality, if not found in the list then calculate a new resolution keeping the aspect ratio.
+If the above base_frame_size_source was set as "Setting", the bellow values are available:
+
+* "Original": Original calculation to get the output resolution for the needed quality keeping the aspect ratio.
+* "ExactOrKeepRatio": Get the exact resolution from a resolutions list for the needed quality; if not found in the list, then calculate a new resolution keeping the aspect ratio.
 * "ExactOrClosestResolution": Find the closer resolution from a resolutions list for the needed quality.
 
 #### sources notes
