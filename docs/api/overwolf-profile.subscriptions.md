@@ -35,9 +35,11 @@ Parameter | Type                                                                
 ----------| -----------------------------------------------------------------------| ------------------------------------ |
 callback  | ([Result: GetActivePlansResult](#getactiveplansresult-object)) => void | Returns with the result              |   
 
-Notes:  
+#### Important Notes
+
 * Many users can have the same planID,  while subscriptionID is an individual unique ID for a user's subscription.
 * When calling getActivePlans(), make sure you use your live app and not the sample app, etc., as subscriptions are pairs to a specific app UID.
+* We refresh cache every 2 hours and update it on-demand when the user does an action (cancel, subscribe, extend, etc.)
 
 ## onSubscriptionChanged
 #### Version added: 0.134
