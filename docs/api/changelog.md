@@ -38,12 +38,25 @@ Now, they are saved to the DB in an app context, also for existing installations
 
 #### Dev Console
 
-* Soon. 
+* Subscriptions
+  * Added support for dark theme subscription plan page (coming soon)
+  * Added the option to edit the Xsolla payment page background image
+  * Added filters and improved sorting for your subscribers list
+  * Bug fixes
+* Release management
+  * Improved UX 
 
 #### Game events
 
-* Soon.
-
+* [VALORANT](overwolf-games-events-valorant)
+  * New supported game mode - Escalation
+  * Fix to support the new patch
+* [Teamfight Tactics](overwolf-games-events-tft)
+  * Fix to support the new patch
+* [Fortnite](overwolf-games-events-fortnite)
+  * Support for the new season
+* [Rainbow Six: Siege](overwolf-games-events-rainbow-six)
+  * Support for the new season
 
 ## Version 0.166 (Mar. 2021)
 
