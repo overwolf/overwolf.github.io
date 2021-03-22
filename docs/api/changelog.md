@@ -46,6 +46,10 @@ Now, they are saved to the DB in an app context, also for existing installations
 * Release management
   * Improved UX 
 
+#### Bug fixes
+
+* DirectX 11 games should no longer minimize when spamming Overwolf windows.
+
 #### Game events
 
 * [VALORANT](overwolf-games-events-valorant)
