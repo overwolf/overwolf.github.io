@@ -21,7 +21,10 @@ Let's see all the required steps:
 
 First, you must generate an API key. To do so, navigate to the Dev Console's [Dev Setup Page](https://console.overwolf.com/#/dev-setup) and login if prompted.
 
-In the page, click on the button labled "Revoke And Get New Key". You will be warned that this invalidates existing keys. Since this is your first time generating an API key you don't have to worry about it, but keep it in mind for the future. For security concerns, the key is available *ONCE* and once only, and *CANNOT BE RETRIEVED*, not even by us. So keep it safe.
+In the page, click on the button labled "Revoke And Get New Key". You will be warned that this invalidates existing keys. Since this is your first time generating an API key you don't have to worry about it, but keep it in mind for the future. 
+
+For security concerns, the key is available *ONCE* and once only, and *CANNOT BE RETRIEVED*, not even by us. So keep it safe.
+Of course, your API key is generated and working only for YOUR app. For each app, you have to generate a different key.
 
 ### Generate a POST request
 
