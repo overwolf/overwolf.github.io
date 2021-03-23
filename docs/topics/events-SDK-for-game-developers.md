@@ -6,24 +6,24 @@ sidebar_label: Event SDK for Game Devs
 
 ## Introduction
 
-The Overwolf event SDK empowers game developers to mark and communicate in-game events and real time game data, making potential Overwolf apps much more valuable. For example, implementing the SDK properly can allow app developers to build an app that creates a video compilation of kill shots in a FPS or a highlight reel of team kills in a MOBA.
+The Overwolf event SDK empowers game developers to mark and communicate in-game events and real-time game data, making potential Overwolf apps much more valuable. For example, implementing the SDK properly can allow app developers to build an app that creates a video compilation of kill shots in an FPS, or a highlight reel of team kills in a MOBA.
 
 ### How does it work?
 
-You know your game better than anyone - choose the events that you think are worth relating to such as kills, deaths, match start, match end, achievement reached, gold earned, or any other important in-game trigger. After implementing these lines of code for each relevant event, every time they occur a call will be sent through Overwolf to Overwolf apps supporting your game.
+You know your game better than anyone - choose the events you think are worth relating to, such as kills, deaths, match start, match end, an achievement reached, gold earned, or any other crucial in-game trigger. After implementing these code lines for each relevant event, a call will be sent through Overwolf to Overwolf apps supporting your game every time they occur.
 
 This solution is:
 
-1. Easy – all you need is to define the events you want used and send notifications over to Overwolf with a simple function.
-2. Dynamic – you have complete flexibility on the types of events you expose, and can implement new ones quickly.
-3. Safe – The solution will still work as a one-way communication even if Overwolf is not running in the background. Further, game events run on a different thread so game performance will not be hurt.
+1. Easy – all you need is to define the events you want to use and send notifications over to Overwolf with a simple function.
+2. Dynamic – you have complete flexibility on the types of events you expose and can implement new ones quickly.
+3. Safe – the solution will still work as a one-way communication even if Overwolf is not running in the background. Further, game events run on a different thread, so game performance will not be hurt.
 
 ### Structure
 
 The Overwolf event SDK is a configurable real-time database split into two main sections:
 
-1. Information categories – Data that is usually updated once per match. This will include the player’s ID, the members of his team, the player’s level and other data points that remain static throughout the game.
-2. Events – This section includes a real-time database of events (e.g. double kill, head-shot, current gold). Events update frequently and expire just as frequently, and they are focused on what's happening in a given match.
+1. Information categories – Data that is usually updated once per match. This will include the player's ID, the team members, the player's level, and other data points that remain static throughout the game.
+2. Events – This section includes a real-time database of events (e.g., double kill, head-shot, current gold). Events update frequently and expire just as often, and they are focused on what's happening in a given match.
 
 ### Implementation
 
@@ -31,7 +31,7 @@ Download the SDK from [this link](https://github.com/overwolf/game-events-sdk).
 
 1. Include the 32/64 DLL with your game.
 2. Review the tester.
-3. Start updating your code with the interesting events.
+3. Start updating your code with interesting events.
 4. If you want ideas or a list of recommended events based on our experience, please send us an email.
 
 For that or any other questions, feel free to reach out directly at developers@overwolf.com 
