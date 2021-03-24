@@ -310,7 +310,7 @@ callback           | (Result) => void   | called with the result of the request 
 
 > Sets the extension settings.  
 
-Supports enabling/disabling app auto-launach with Overwolf client, exit with Overwolf client and more.
+Supports enabling/disabling app auto-launch with Overwolf client, exit with Overwolf client and more.
 
 Parameter          | Type                                                                 | Description                                                              |
 -------------------| ---------------------------------------------------------------------| ------------------------------------------------------------------------ |
