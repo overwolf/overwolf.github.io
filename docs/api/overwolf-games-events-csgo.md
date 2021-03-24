@@ -611,7 +611,7 @@ kill_feed   | Kills & assists information| Anytime a player dies in match. | See
 Data Example:
 
 ```json
-{"events":[{"name":"kill_feed","data":"{"attacker":"Na`Vi NICKname?","assister":"","weapon":"scar20","headshot":false,"wallbang":"0","flashed":false,"victim":"Ercüment Çözer"}"}]}
+{"events":[{"name":"kill_feed","data":"{"attacker":"ALP","assister":"","weapon":"m4a1","headshot":true,"suicide":false,"wallbang":false,"revenge":false,"domination":false,"noscope":false,"throughsmoke":false,"flashed":false,"victim":"Matiosss"}"}]}
 ```
 
 <b>Note: This event is not supported on trusted mode.</b>
