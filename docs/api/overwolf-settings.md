@@ -421,8 +421,8 @@ position  | [eIndicationPosition](#eindicationposition-enum) enum      | The pos
 
 Parameter                   | Type               | Description                                                               |
 --------------------------- | -------------------| ------------------------------------------------------------------------- |
-auto_launch_with_overwolf   | bool               | set your app to auto-launch when the OW client starts. See [notes](#auto_launch_with_overwolf-notes).     |
-exit_overwolf_on_exit       | bool               | set the OW client to auto-shutdown when your OW app closes. See [notes](#exit_overwolf_on_exit-notes).|
+auto_launch_with_overwolf   | bool               | Set your app to auto-launch when the OW client starts. See [notes](#auto_launch_with_overwolf-notes).     |
+exit_overwolf_on_exit       | bool               | Set the OW client to auto-shutdown when your OW app closes. See [notes](#exit_overwolf_on_exit-notes).|
 
 :::warning
 The exit_overwolf_on_exit option shouldn’t be used without Overwolf’s permission
