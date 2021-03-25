@@ -10,6 +10,10 @@ Please read the [overwolf.games.events](overwolf-games-events) documentation pag
 7764
 :::
 
+:::note trusted mode
+When running this game in trusted mode (without any launch parameters), OW can't go into an "exclusive mode" once the game is in a fullscreen state. This means - there is no way to interact with your OW app window when this issue occurs. We'll add relevant indications for this unique state soon. (so you'll be able to notify the user / change the app flow accordingly if needed).
+:::
+
 ## Sample Apps
 
 * [CS:GO game events sample app](https://github.com/overwolf/events-sample-apps)
