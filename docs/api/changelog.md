@@ -59,6 +59,11 @@ Now, they are saved to the DB in an app context, also for existing installations
   * Support for the new season
 * [Rainbow Six: Siege](overwolf-games-events-rainbow-six)
   * Support for the new season
+* [CS:GO](overwolf-games-events-csgo)
+  * Change & update to `kill_feed`
+* [Fortnite](overwolf-games-events-fortnite)
+  * Improved plugin code.
+
 
 ## Version 0.166 (Mar. 2021)
 
