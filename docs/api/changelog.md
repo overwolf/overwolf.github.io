@@ -16,7 +16,8 @@ Also, iterations 167 to 168 were combined into a single iteration.
 #### API
 
 * You can now detect if the [Windows 10 Hardware-Accelerated GPU Scheduling](../topics/video-capture#windows-10-hardware-accelerated-gpu-scheduling-notice) feature is enabled by calling [overwolf.utils.getSystemInformation()](../api/overwolf-utils#getsysteminformationresult-object). The callback object contains the **HAGSEnabled** property that can be true or false.  Note that the user can set the HA feature on or off therough the client settings.
-* Close overwolf when closing an app: Any app can now add the new 'Shutdown' permissions to it's manifest, then call [overwolf.settings.setExtensionSettings()](overwolf-settings#setextensionsettingsextensionsettings-callback) with "exit_overwolf_on_exit: true".
+* Close overwolf when closing an app: apps can now add the new 'Shutdown' permissions to it's manifest, then call [overwolf.settings.setExtensionSettings()](overwolf-settings#setextensionsettingsextensionsettings-callback) with "exit_overwolf_on_exit: true".
+  * **Note: This option shouldn’t be used without Overwolf’s permission**.
 * Social API: [overwolf.social.youtube.performLogin()](overwolf-social-youtube#performlogoutcallback) now opens in default browser and using pubsub to update client.
 * [overwolf.util.openFilePicker()](overwolf-utils#openfilepickerfilter-callback): now returns both overwolf-url and path to file.  
   **Important: note that this function signature is not backwards compatible: the `url` property in the callback now returns the path in overwolf-fs:// format and not in an absolute path. (the new `file` property returns the absolute path).
