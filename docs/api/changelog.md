@@ -8,10 +8,40 @@ Follow this entry for ongoing updates and changes to the project or tools.
 
 Here you can find our [Developers Roadmap](https://trello.com/b/1V10E4IB/overwolf-roadmap).
 
-## Version 0.168 (In-Progress)
+## Version 0.169 (In-Progress)
 
 Note that the work on the documentation for this version is still in-progress.
-Also, iterations 167 to 168 were combined into a single iteration.  
+
+#### API
+
+* Soon.
+
+#### Platform
+
+* Interal OBS enhancments.
+* Improve OBS encoders support detection.
+* Added support for overlay above UWP (Universal Windows Platform) games (minecraft, sea of thieves & roblox). 
+* Improve OBS encoders support detection using the overrwolf.streaming.getStreamEncoders() API.
+
+#### Dev Console
+
+* General enhancments for the crash reports section.
+
+#### Bug fixes
+
+* Fixed the issue where native windows can be resized greater than their manifest maximum size.
+* Fixed the issue where Video elements "glitched" when switching the app to full-screen mode.
+* Fixed the issue where you got an error that you should update your graphic card drivers only AFTER the game capturing starts. Now, you get this error before the capture starts.
+* Fixed the Rocket league (Epic version) invisible cursor issue.
+
+
+#### Game events
+
+* Soon.
+
+## Version 0.168 (Apr. 2021)
+
+Note that iterations 167 to 168 were combined into a single iteration.  
 
 #### API
 
