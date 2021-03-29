@@ -14,14 +14,12 @@ Note that the work on the documentation for this version is still in-progress.
 
 #### API
 
-* Soon.
+* Improve OBS encoders support detection using the overrwolf.streaming.getStreamEncoders() API.
 
 #### Platform
 
 * Interal OBS enhancments.
-* Improve OBS encoders support detection.
 * Added support for overlay above UWP (Universal Windows Platform) games (minecraft, sea of thieves & roblox). 
-* Improve OBS encoders support detection using the overrwolf.streaming.getStreamEncoders() API.
 
 #### Dev Console
 
