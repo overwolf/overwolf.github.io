@@ -14,7 +14,7 @@ class Webinars extends React.Component {
         </p>
         <div>
             <h2>Entertaineurship</h2>
-            <h4>March 9th, 2020</h4>
+            <h4>March 9th, 2021</h4>
             <p>Uri Marchand, Overwolf's CEO and co-founder</p>
             <p>A special webinar aiming to share stories of Overwolf's journey from an entrepreneurial point of view. We go over the high level approach to pivoting the product, fund raising, team building and many more pieces of advice that can help any project owner.</p>
             <div className="video-container">
@@ -22,21 +22,12 @@ class Webinars extends React.Component {
             </div>
         </div>
         <div>
-            <h2>UI/UX</h2>
-            <h4>July 8th, 2020</h4>
-            <p>Jasmin Weizman, Overwolf’s UI/UX lead designer</p>
-            <p>In this session, you will be able to better understand how to create your app identity with the best UX&UI methods, such as visual communications, creating a smooth interface, and more.</p>
+            <h2>Data</h2>
+            <h4>December 9th, 2020</h4>
+            <p>Gil Ben-Itzhak, Overwolf's head of BI</p>
+            <p>Reading the app's reports can be overwhelming. When understanding what to focus on and when, you can interpret it to more users and overall better performance.</p>
             <div className="video-container">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/LC7i6jmZ_Oc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            </div>
-        </div>
-        <div>
-            <h2>Monetization</h2>
-            <h4>September 9th, 2020</h4>
-            <p>Elazar Heim, Overwolf’s VP of revenue</p>
-            <p>We decided to take a deep dive into monetization and do a quick introduction to ads, explain how do ads work on Overwolf, and cover the important metrics, tips and best practices.</p>
-            <div className="video-container">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/GYOgZuPyq2E" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/fJOFM1yuKMw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
         </div>
         <div>
@@ -49,12 +40,21 @@ class Webinars extends React.Component {
             </div>
         </div>
         <div>
-            <h2>Data</h2>
-            <h4>December 9th, 2020</h4>
-            <p>Gil Ben-Itzhak, Overwolf's head of BI</p>
-            <p>Reading the app's reports can be overwhelming. When understanding what to focus on and when, you can interpret it to more users and overall better performance.</p>
+            <h2>Monetization</h2>
+            <h4>September 9th, 2020</h4>
+            <p>Elazar Heim, Overwolf’s VP of revenue</p>
+            <p>We decided to take a deep dive into monetization and do a quick introduction to ads, explain how do ads work on Overwolf, and cover the important metrics, tips and best practices.</p>
             <div className="video-container">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/fJOFM1yuKMw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/GYOgZuPyq2E" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+        <div>
+            <h2>UI/UX</h2>
+            <h4>July 8th, 2020</h4>
+            <p>Jasmin Weizman, Overwolf’s UI/UX lead designer</p>
+            <p>In this session, you will be able to better understand how to create your app identity with the best UX&UI methods, such as visual communications, creating a smooth interface, and more.</p>
+            <div className="video-container">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/LC7i6jmZ_Oc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
         </div>
         </main>
