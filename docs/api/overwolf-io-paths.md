@@ -32,6 +32,9 @@ You can call the object properties to get the requested path:
 * fonts
 * startMenu
 * localAppData
+* overwolf install dir
+* overwolf install dir with version number
+* OBS dir
 
 ## Usage Example
 
