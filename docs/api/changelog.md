@@ -14,7 +14,7 @@ Note that the work on the documentation for this version is still in-progress.
 
 #### API
 
-* Improve OBS encoders support detection using the overrwolf.streaming.getStreamEncoders() API.
+* Improve OBS encoders support detection using the [overrwolf.streaming.getStreamEncoders()](overwolf-streaming#getstreamencoderscallback) API (we added new fields to [EncoderData](overwolf-streaming#encoderdata-object) object).
 
 #### Platform
 

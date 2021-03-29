@@ -1158,7 +1158,9 @@ name               | string   |                                             |
 display_name       | string   |                                             |
 enabled            | boolean  |                                             |
 presets            | string[] | See [notes](#endoder-preset-notes)          |
-
+valid              | boolean  | Is the encoder valid for usage. The encoder can be supported but not valid |
+vendor_error       | string   | "Invalid version", for example              |
+error_decsription  | string   | "Not supporte",d for example                |
 
 #### Endoder Preset notes
 
