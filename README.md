@@ -7,7 +7,7 @@ This is intended as a quick reference and showcase.
 
 ## Reference
 
-* [Create local dev environmen](#create-local-dev-environment)
+* [Create local dev environment](#create-local-dev-environment)
 * [Search box configuration](#search-configuration)
 * [Markdown cheet-sheet](#markdown-cheet-sheet)
 * [Edit an existing page](#edit-an-existing-page)
