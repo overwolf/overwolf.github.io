@@ -33,3 +33,8 @@ Our developer success team is ready to help implement your first subscription pr
 ## Request a Subscription plan
 
 Please fill [this form](subscriptions-request-form) in order to get an app subscription plan.
+
+## Can I integrate external payment solutions?
+Yes, but you’ll have to get approval first. 
+Longer answer - Overwolf offers ads and subscriptions as a service for creators to monetize their apps. Overwolf’s revenue is generated through a revenue share from those ads and subscriptions and as a result, Patreon, direct PayPal, or any other payment solutions services that are outside of Overwolf’s ecosystem, creates complexity. And still, we understand that this might be important for some.You can do that by sending us an [email](mailto:developers@overwolf.com), or by contacting your direct Developer Relations Manager. We’re continuously improving our subscription service to make sure it’ll fit all your needs. If you have any suggestions for us on how to improve, we’d love to hear by requesting a new feature [here](https://discuss.overwolf.com/).
+To read more about Overwolf’s business model [click here](https://medium.com/overwolf/how-does-overwolf-make-money-f70a195a4ea9#:~:text=So%20how%20DO%20we%20make,subscription%20plans%20to%20their%20apps.&text=A%20little%20over%2085%25%20of,passed%20on%20to%20app%20creators.).
