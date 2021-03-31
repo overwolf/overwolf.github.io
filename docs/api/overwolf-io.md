@@ -15,7 +15,7 @@ In addition, the [simple I/O plugin](../topics/simple-io-plugin) offers several 
 
 * [overwolf.io.fileExists()](#fileexistsfilepath-callback)
 * [overwolf.io.writeFileContents()](#writefilecontentsfilepath-content-encoding-triggeruacifrequired-callback)
-* [overwolf.io.readFileContents()](##readfilecontentsfilepath-encoding-callback)
+* [overwolf.io.readFileContents()](#readfilecontentsfilepath-encoding-callback)
 * [overwolf.io.copyFile()](#copyfilesrc-dst-overridefile-reserved-callback)
 * [overwolf.io.dir()](#dirpath-callback)
 * [overwolf.io.readBinaryFile()](#readbinaryfilepath-options-callback)
