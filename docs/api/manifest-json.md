@@ -339,7 +339,7 @@ A list of additional settings for the app.
 | <a class="anchor" aria-hidden="true" id="service_providers"></a>service_providers | [service_providers](#service_providers-object) object |  Extra data to external service providers |0.137  |
 | <a class="anchor" aria-hidden="true" id="developer-game-settings"></a>developer | [developer setting](#developer-settings-object) object|  Additional setting for developers. |0.127  |
 | <a class="anchor" aria-hidden="true" id="disable_cleanup"></a>disable_cleanup | bool |  If set to true, app local data will not be cleaned up after app uninstallation. | 0.147  |
-| <a class="anchor" aria-hidden="true" id="process_name"></a>process_name | string |  Allow overriding the OverwolfBrowser.exe process name in task manager. </br> **Please read our [notes](#process_name-notes)** | 0.153  |
+| <a class="anchor" aria-hidden="true" id="process_name"></a>process_name | string |  Overrides the default (OverwolfBrowser.exe) process name in task manager. </br> **Please read our [notes](#process_name-notes)** | 0.153  |
 | <a class="anchor" aria-hidden="true" id="max_rotation_log_files"></a>max_rotation_log_files | number | Increase the app's log file rotation (defaults to 10, max is 40). | 0.154  |
 | <a class="anchor" aria-hidden="true" id="url_protocol"></a>url_protocol | [url_protocol](#url_protocol-object) object | Ability to open an application from a browser using a link. | 0.158  |
 
@@ -352,9 +352,7 @@ A list of additional settings for the app.
 
 #### process_name Notes
 
-* By adding your custom "process_name" to an app manifest, the OverwolfBrowser.exe process name is overridden.
-* All the processes related to the app ads are now running with the name given them by this flag.
-* All the processes related to the app ads are displayed in the task manager with the name given them by this flag.
+* By adding a custom "process_name", the deafult OverwolfBrowser.exe process name (shown in the task manager) is overridden.
 
 Note that The flag only affects external processes running, not ones that interact directly with the game. Also, the process will still have Overwolf's signature.
 
