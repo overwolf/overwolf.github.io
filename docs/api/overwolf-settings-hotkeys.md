@@ -41,7 +41,7 @@ Please read all the info about hotkeys and how to use them in our [hotkeys best 
 
 #### Notes
 * You can assign only hotkeys that pre-defined in your manifest.
-* Currently **you can't assign a global hotkey through the API**, only through the manifest and only if your app is targeted to all games. We will fix that very soon.  
+* You can assign a global hotkey (means - not send a game id) through the API only if your app is targeted in the manifest to more then one game (or to all games).
   Please read all the info in our [hotkeys best practice](../topics/hotkeys-best-practices#set-through-the-manifest) guide.
 
 Parameter     | Type                  | Description                                                             |
