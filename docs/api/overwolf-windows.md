@@ -126,7 +126,9 @@ Parameter | Type                       | Description                            
 windowName| string                     | The name of the window that was declared in the data.windows section in the manifest   |
 callback  | [(Result: WindowResult)](#windowresult-object) => void | A callback function which will be called with the current window object as a parameter |
 
-Note that the window sizes that returned in the callback of this function are **not DPI-aware**.
+#### Note
+
+The window sizes that returned in the callback of this function are **not DPI-aware**.
 
 ## obtainDeclaredWindow(windowName, overrideSetting, callback)
 #### Version added: 0.78
@@ -139,7 +141,9 @@ windowName      | string                                              | The name
 overrideSetting	| [WindowProperties](#windowproperties-object) Object | Override manifest settings                                                             |
 callback        | [(Result: WindowResult)](#windowresult-object) => void | A callback function which will be called with the current window object as a parameter |
 
-Note that the window sizes that returned in the callback of this function are **not DPI-aware**.
+#### Note
+
+The window sizes that returned in the callback of this function are **not DPI-aware**.
 
 ## obtainDeclaredWindow(windowName, useDefaultSizeAndLocation, callback)
 #### Version added: 0.136
@@ -158,7 +162,9 @@ callback                  | [(Result: WindowResult)](#windowresult-object) => vo
 overwolf.windows.obtainDeclaredWindow("main", {useDefaultSizeAndLocation: true}, console.log)
 ```
 
-Note that the window sizes that returned in the callback of this function are **not DPI-aware**.
+#### Note
+
+The window sizes that returned in the callback of this function are **not DPI-aware**.
 
 ## dragMove(windowId, callback)
 #### Version added: 0.78
