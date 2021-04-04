@@ -17,7 +17,7 @@ The notifications must meet several requirements:
 
 Additionally, during development we found that retention of players who see these notifications is actually slightly better compared to those who don’t see them.
 
-## How does it look like
+## How does it look like?
 
 Content recommendations are displayed after a player finishes playing a certain game, and only while there is a relevant app to recommend.
 
