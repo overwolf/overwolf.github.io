@@ -157,8 +157,8 @@ The event information includes whether the left or right mouse button was clicke
 
 Parameter          | Type     | Description                                 |
 -------------------| ---------| ------------------------------------------- |
-aTime              | number   |                                             |
-iTime              | number   |                                             |
+aTime              | number   | active time. total active time in minutes   |
+iTime              | number   | idle time                                   |
 apm                | boolean  |                                             |   
 mouse              | object   | { total: number, dist: number, keys: any }  |   
 keyboard           | object   | { total: number, keys: any }                |   
