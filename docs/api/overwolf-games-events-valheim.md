@@ -49,7 +49,7 @@ Data Example:
 key          | Category    | Values                    | Notes                 | Since GEP Ver. |
 ------------ | ------------| ------------------------- | --------------------- | ------------- | 
 scene        | game_info   | The current game scene.   |  See [notes](#scene-note) |   169.0       |
-player       | game_info   | Name of local Player      |  See [notes](#player-note)|   169.0       |
+player_name  | game_info   | Name of local Player      |  See [notes](#player-note)|   169.0       |
 death        | game_info   | Total number of deaths    |  See [notes](#death-note) |   169.0       |
 state        | game_info   | In progress / Not in progress | See [notes](#state-note)|   169.0       |
 
@@ -65,12 +65,12 @@ Data Example:
 {"game_info":{"scene":"Loading"}},"feature":"game_info"}
 ```
 
-#### *player* note
+#### *player_name* note
 
 Data Example:
 
 ```json
-{"game_info":{"player":"Shargaas"}},"feature":"game_info"}
+{"game_info":{"player_name":"Shargaas"}},"feature":"game_info"}
 ```
 
 #### *death* note
