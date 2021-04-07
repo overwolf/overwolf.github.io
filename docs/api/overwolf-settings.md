@@ -214,10 +214,8 @@ Parameter | Type                  | Description                                 
 path	  | string                | The folder to use                                                        |
 callback  | [(Result:FolderResult )](#folderresult-object) => void | called with the status of the request |
 
-Note: when you set a directory, you should use escape characters:
-
 ```js
-overwolf.settings.setOverwolfVideosFolder("C:\\Users\\Azamoth\\Videos\\Captures",console.log)
+overwolf.settings.setOverwolfVideosFolder("C:\Users\Azamoth\Videos\Captures",console.log)
 ```
 
 ## getOverwolfScreenshotsFolder(callback)
@@ -500,18 +498,14 @@ Parameter          | Type     | Description                                 |
 -------------------| ---------| ------------------------------------------- |
 *success*          | boolean  | inherited from the "Result" Object          |
 *error*            | string   | inherited from the "Result" Object          |
-path               | [Path](#path-object) Object   | Container for the path entity |
+path               | string   | Folder path |
 
 #### Example data: Success
 
 ```json
 {
     "status": "success",
-    "path": { 
-        "Value": "E:\Video\Overwolf",
-        "Type": "System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089",
-        "Name": "Folders_VideoCapturesFolder"
-    }
+    "path": "E:\Video\Overwolf"
 }
 ```
 
