@@ -201,5 +201,12 @@ const GamesMetadata = {
     iconUrl: "/docs/assets/games-logos/ff-xiv.png",
     iconLargeUrl: "/docs/assets/games-logos/large/ff-xiv.png",
     name: "Final Fantasy XIV"
+  },
+  21668: {
+    id: 21668,
+    path: "/docs/status/valheim",
+    iconUrl: "/docs/assets/games-logos/valheim.png",
+    iconLargeUrl: "/docs/assets/games-logos/large/valheim.png",
+    name: "Valheim"
   }
 }
