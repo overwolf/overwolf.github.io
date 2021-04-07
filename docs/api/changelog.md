@@ -39,7 +39,8 @@ Note that the work on the documentation for this version is still in-progress.
 
 #### Game events
 
-* Soon.
+* [Valehim](overwolf-games-events-valheim)
+  * New supported game
 
 ## Version 0.168 (Apr. 2021)
 
