@@ -39,7 +39,7 @@ gep_internal | gep_internal| Local + Public version number|See [notes](#gep_inte
 Data Example:
 
 ```json
-{"info":{"gep_internal":{"version_info":"{"local_version":"157.0.1","public_version":"157.0.1","is_updated":true}"}},"feature":"gep_internal"}
+{"gep_internal":{"version_info":"{"local_version":"157.0.1","public_version":"157.0.1","is_updated":true}"}},"feature":"gep_internal"}
 ```
 
 ## `game_info`
@@ -58,11 +58,11 @@ state        | game_info   | In progress / Not in progress | See [notes](#state-
 Data Example:
 
 ```json
-{"info":{"game_info":{"scene":"MainMenu"}},"feature":"game_info"}
-{"info":{"game_info":{"scene":"SelectCharacter"}},"feature":"game_info"}
-{"info":{"game_info":{"scene":"WorldList"}},"feature":"game_info"}
-{"info":{"game_info":{"scene":"ServerList"}},"feature":"game_info"}
-{"info":{"game_info":{"scene":"Loading"}},"feature":"game_info"}
+{"game_info":{"scene":"MainMenu"}},"feature":"game_info"}
+{"game_info":{"scene":"SelectCharacter"}},"feature":"game_info"}
+{"game_info":{"scene":"WorldList"}},"feature":"game_info"}
+{"game_info":{"scene":"ServerList"}},"feature":"game_info"}
+{"game_info":{"scene":"Loading"}},"feature":"game_info"}
 ```
 
 #### *player* note
@@ -70,7 +70,7 @@ Data Example:
 Data Example:
 
 ```json
-{"info":{"game_info":{"player":"Shargaas"}},"feature":"game_info"}
+{"game_info":{"player":"Shargaas"}},"feature":"game_info"}
 ```
 
 #### *death* note
@@ -78,7 +78,7 @@ Data Example:
 Data Example:
 
 ```json
-{"info":{"game_info":{"death":"14"}},"feature":"game_info"}
+{"game_info":{"death":"14"}},"feature":"game_info"}
 ```
 
 #### *state* note
@@ -86,8 +86,8 @@ Data Example:
 Data Example:
 
 ```json
-{"info":{"game_info":{"state":"in_progress"}},"feature":"game_info"}
-{"info":{"game_info":{"state":"ended"}},"feature":"game_info"}
+{"game_info":{"state":"in_progress"}},"feature":"game_info"}
+{"game_info":{"state":"ended"}},"feature":"game_info"}
 ```
 
 ### Events
