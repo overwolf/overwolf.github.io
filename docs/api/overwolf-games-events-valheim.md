@@ -75,6 +75,8 @@ Data Example:
 
 #### *death* note
 
+This info is updated on the start of a match. The number of deaths is saved across multiple sessions.
+
 Data Example:
 
 ```json
