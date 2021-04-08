@@ -167,7 +167,7 @@ overwolf.windows.obtainDeclaredWindow("main", {useDefaultSizeAndLocation: true},
 #### Window sizes notes
 
 * For windows that are already opened: the sizes returned in the callback already consider the DPI scaling.
-* For newly created windows: the sizes are **not DPI-aware**.
+* For windows that just now instantiated using obtainDeclaredWindow(), the sizes are **not DPI-aware**.
 
 ## dragMove(windowId, callback)
 #### Version added: 0.78
