@@ -128,8 +128,8 @@ callback  | [(Result: WindowResult)](#windowresult-object) => void | A callback 
 
 #### Window sizes notes
 
-* For windows that are already opened: the sizes returned in the callback already consider the DPI scaling ("DPI-aware") - as you'd get from `window.screen.availWidth`.
-* For newly created windows: the sizes are **not DPI-aware** (like you'd get from `window.screen.availWidth * window.devicePixelRatio`).
+* For windows that are already opened: the sizes returned in the callback already consider the DPI scaling ("DPI-aware").
+* For newly created windows: the sizes are **not DPI-aware**.
 
 ## obtainDeclaredWindow(windowName, overrideSetting, callback)
 #### Version added: 0.78
