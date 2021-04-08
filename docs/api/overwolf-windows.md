@@ -117,7 +117,7 @@ callback  | [(Result: WindowResult)](#windowresult-object) => void   | A callbac
 
 #### Note
 
-* The sizes returned in the callback are NOT consider the DPI scaling.
+* The sizes returned in the callback already consider the DPI scaling (to be fixed by version 0.170).
 
 ## obtainDeclaredWindow(windowName, callback)
 #### Version added: 0.78
@@ -131,7 +131,7 @@ callback  | [(Result: WindowResult)](#windowresult-object) => void | A callback 
 
 #### Note
 
-* The sizes returned in the callback already consider the DPI scaling.
+* The sizes returned in the callback already consider the DPI scaling (to be fixed by version 0.170).
 
 ## obtainDeclaredWindow(windowName, overrideSetting, callback)
 #### Version added: 0.78
@@ -146,7 +146,7 @@ callback        | [(Result: WindowResult)](#windowresult-object) => void | A cal
 
 #### Note
 
-* The sizes returned in the callback already consider the DPI scaling.
+* The sizes returned in the callback already consider the DPI scaling (to be fixed by version 0.170).
 
 ## obtainDeclaredWindow(windowName, useDefaultSizeAndLocation, callback)
 #### Version added: 0.136
@@ -167,7 +167,7 @@ overwolf.windows.obtainDeclaredWindow("main", {useDefaultSizeAndLocation: true},
 
 #### Note
 
-* The sizes returned in the callback already consider the DPI scaling.
+* The sizes returned in the callback already consider the DPI scaling (to be fixed by version 0.170).
 
 ## dragMove(windowId, callback)
 #### Version added: 0.78
