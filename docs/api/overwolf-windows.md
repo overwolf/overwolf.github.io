@@ -115,6 +115,9 @@ Parameter | Type                                                     | Descripti
 --------- | ---------------------------------------------------------| ------------------------|
 callback  | [(Result: WindowResult)](#windowresult-object) => void   | A callback function which will be called with the current window object as a parameter |
 
+#### Note
+
+* The sizes returned in the callback are NOT consider the DPI scaling.
 
 ## obtainDeclaredWindow(windowName, callback)
 #### Version added: 0.78
@@ -126,10 +129,9 @@ Parameter | Type                       | Description                            
 windowName| string                     | The name of the window that was declared in the data.windows section in the manifest   |
 callback  | [(Result: WindowResult)](#windowresult-object) => void | A callback function which will be called with the current window object as a parameter |
 
-#### Window sizes notes
+#### Note
 
-* For windows that are already opened: the sizes returned in the callback already consider the DPI scaling.
-* For newly created windows: the sizes are **not DPI-aware**.
+* The sizes returned in the callback already consider the DPI scaling.
 
 ## obtainDeclaredWindow(windowName, overrideSetting, callback)
 #### Version added: 0.78
@@ -142,10 +144,9 @@ windowName      | string                                              | The name
 overrideSetting	| [WindowProperties](#windowproperties-object) Object | Override manifest settings                                                             |
 callback        | [(Result: WindowResult)](#windowresult-object) => void | A callback function which will be called with the current window object as a parameter |
 
-#### Window sizes notes
+#### Note
 
-* For windows that are already opened: the sizes returned in the callback already consider the DPI scaling.
-* For newly created windows: the sizes are **not DPI-aware**.
+* The sizes returned in the callback already consider the DPI scaling.
 
 ## obtainDeclaredWindow(windowName, useDefaultSizeAndLocation, callback)
 #### Version added: 0.136
@@ -164,10 +165,9 @@ callback                  | [(Result: WindowResult)](#windowresult-object) => vo
 overwolf.windows.obtainDeclaredWindow("main", {useDefaultSizeAndLocation: true}, console.log)
 ```
 
-#### Window sizes notes
+#### Note
 
-* For windows that are already opened: the sizes returned in the callback already consider the DPI scaling.
-* For windows that just now instantiated using obtainDeclaredWindow(), the sizes are **not DPI-aware**.
+* The sizes returned in the callback already consider the DPI scaling.
 
 ## dragMove(windowId, callback)
 #### Version added: 0.78
