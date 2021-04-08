@@ -128,7 +128,7 @@ callback  | [(Result: WindowResult)](#windowresult-object) => void | A callback 
 
 #### Window sizes notes
 
-* For windows that are already opened: the sizes returned in the callback already consider the DPI scaling ("DPI-aware").
+* For windows that are already opened: the sizes returned in the callback already consider the DPI scaling.
 * For newly created windows: the sizes are **not DPI-aware**.
 
 ## obtainDeclaredWindow(windowName, overrideSetting, callback)
@@ -142,7 +142,10 @@ windowName      | string                                              | The name
 overrideSetting	| [WindowProperties](#windowproperties-object) Object | Override manifest settings                                                             |
 callback        | [(Result: WindowResult)](#windowresult-object) => void | A callback function which will be called with the current window object as a parameter |
 
-**Important**: Please check [our notes](#window-sizes-notes) about the window sizes that the callback returned.
+#### Window sizes notes
+
+* For windows that are already opened: the sizes returned in the callback already consider the DPI scaling.
+* For newly created windows: the sizes are **not DPI-aware**.
 
 ## obtainDeclaredWindow(windowName, useDefaultSizeAndLocation, callback)
 #### Version added: 0.136
@@ -161,7 +164,10 @@ callback                  | [(Result: WindowResult)](#windowresult-object) => vo
 overwolf.windows.obtainDeclaredWindow("main", {useDefaultSizeAndLocation: true}, console.log)
 ```
 
-**Important**: Please check [our notes](#window-sizes-notes) about the window sizes that the callback returned.
+#### Window sizes notes
+
+* For windows that are already opened: the sizes returned in the callback already consider the DPI scaling.
+* For newly created windows: the sizes are **not DPI-aware**.
 
 ## dragMove(windowId, callback)
 #### Version added: 0.78
