@@ -68,6 +68,7 @@ Read more about how to use the [overwolf.settings.hotkeys API](overwolf-settings
 * [GeneralExtensionSettings](#generalextensionsettings-object) Object
 * [GetExtensionSettingsResult](#getextensionsettingsresult-object) Object
 * [FolderResult](#folderresult-object) Object
+* [SetFolderResult](#setfolderresult-object) Object
 * [Path](#path-object) Object
 * [GetVideoCaptureSettingsResult](#getvideocapturesettingsresult-object) Object
 * [GetAudioCaptureSettingsResult](#getaudiocapturesettingsresult-object) Object
@@ -212,7 +213,7 @@ callback  | [(Result:FolderResult )](#folderresult-object) => void | called with
 Parameter | Type                  | Description                                                              |
 --------- | ----------------------| -----------------------------------------------------------------------  |
 path	  | string                | The folder to use                                                        |
-callback  | [(Result:FolderResult )](#folderresult-object) => void | called with the status of the request |
+callback  | [(Result:SetFolderResult)](#setfolderresult-object) => void | called with the status of the request |
 
 Note: when you set a directory, you should use escape characters:
 
@@ -237,7 +238,7 @@ callback  | [(Result:FolderResult )](#folderresult-object) => void | called with
 Parameter | Type                  | Description                                                                                              |
 --------- | ----------------------| -------------------------------------------------------------------------------------------------------- |
 path	  | string                | The folder to use                                                                                        |
-callback  | [(Result:FolderResult )](#folderresult-object) => void | called with the result of the request which contains the current Overwolf screenshots folder |
+callback  | [(Result:SetFolderResult )](#setfolderresult-object) => void | called with the result of the request which contains the current Overwolf screenshots folder |
 
 ## getVideoCaptureSettings(callback)
 #### Version added: 0.86
@@ -491,6 +492,44 @@ settings           | [GeneralExtensionSettings](#generalextensionsettings-object
     "settings": {
         "auto_launch_with_overwolf": true
     }
+}
+```
+
+## FolderResult Object
+
+Parameter          | Type     | Description                                 |
+-------------------| ---------| ------------------------------------------- |
+*success*          | boolean  | inherited from the "Result" Object          |
+*error*            | string   | inherited from the "Result" Object          |
+path               | [Path](#path-object) Object   | Container for the path entity |
+
+#### Example data: Success
+
+```json
+{
+    "status": "success",
+    "path": { 
+        "Value": "E:\Video\Overwolf",
+        "Type": "System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089",
+        "Name": "Folders_VideoCapturesFolder"
+    }
+}
+```
+
+## SetFolderResult Object
+
+Parameter          | Type     | Description                                 |
+-------------------| ---------| ------------------------------------------- |
+*success*          | boolean  | inherited from the "Result" Object          |
+*error*            | string   | inherited from the "Result" Object          |
+path               | string   | Container for the path                      |
+
+#### Example data: Success
+
+```json
+{
+    "status": "success",
+    "path": "E:\Video\Overwolf"
 }
 ```
 
