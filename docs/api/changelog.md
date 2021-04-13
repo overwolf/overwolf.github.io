@@ -41,6 +41,9 @@ Note that the work on the documentation for this version is still in-progress.
 
 * [Valehim](overwolf-games-events-valheim)
   * New supported game
+* [Dota](overwolf-games-events-dota)
+  * New info update
+    * game_mode
 
 ## Version 0.168 (Apr. 2021)
 
