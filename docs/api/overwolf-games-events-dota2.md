@@ -679,7 +679,8 @@ Data Example:
 key               | Category    | Values                    | Notes                 | Since GEP Ver. |
 ----------------- | ------------| ------------------------- | --------------------- | ------------- |
 pseudo_match_id   | match_info  | The current match’s ID code.|See [notes](#pseudo_match_id-note)|  130.0   |
-game_mode   | match_info  | Dota2/Auto-chess. |See [notes](#game_mode-note)|  130.0   |
+game_mode   | match_info  | Type of mode that is currently played |See [notes](#game_mode-note)|  171.1   |
+
 
 #### *pseudo_match_id* note
 
@@ -691,7 +692,11 @@ Data Example:
 
 Data Example:
 
-`{"info":{"match_info":{"game_mode":"autochess"}},"feature":"match_info"}`
+```json
+{"info":{"match_info":{"game_mode":"{"lobby_type": "DOTA_lobby_type_name_custom_lobby" , "game_mode" : "NONE"}"}},"feature":"match_info"}
+{"info":{"match_info":{"game_mode":"{"lobby_type": "DOTA_lobby_type_name_custom_lobby" , "game_mode" : "GameMode_AllPick"}"}},"feature":"match_info"}
+{"info":{"match_info":{"game_mode":"{"lobby_type": "DOTA_lobby_type_name_custom_lobby" , "game_mode" : "GameMode_Turbo"}"}},"feature":"match_info"}
+```
 
 ## `roster`
 
