@@ -108,7 +108,7 @@ Note that on the response the leading zeros are removed ("0030" => "30")
 key               | Category    | Values                                                              | Notes                 | Since Version |
 ----------------- | ------------| ------------------------------------------------------------------- | --------------------- | ------------- |
 pseudo_match_id | match_info | The current match’s ID code.</br></br>Example:</br></br> `0c0ea3df-97ea-4d3a-b1f6-f8e34042251f`  |  This is an Overwolf-generated code, unrelated to Blizzard.  |   159.0 |
-map       | game_info   | Name of currently played map.|See [notes](#map-note)   |   151.0       |
+map       | match_info   | Name of currently played map.|See [notes](#map-note)   |   151.0       |
 
 #### *map* note
 
