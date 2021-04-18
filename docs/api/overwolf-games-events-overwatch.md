@@ -23,7 +23,7 @@ Please read the [overwolf.games.events](overwolf-games-events) documentation pag
 
 ## Game event status
 
-It is highly recommended to communicate errors and warnings to app users. 
+It is highly recommended to communicate errors and warnings to app users.
 
 Check the current game event status [here](../status/all). Alternately, you can easily check that status from your app itself, [using our API](../topics/howto-check-events-status-from-app).
 
@@ -32,7 +32,7 @@ Check the current game event status [here](../status/all). Alternately, you can 
 ### Info Updates
 
 key          | Category    | Values                    | Notes                 | Since GEP Ver. |
------------- | ------------| ------------------------- | --------------------- | ------------- | 
+------------ | ------------| ------------------------- | --------------------- | ------------- |
 gep_internal | gep_internal| Local + Public version number|See [notes](#gep_internal-note)|   143.0       |
 
 #### *gep_internal* note
@@ -48,10 +48,9 @@ Data Example:
 ### Info Updates
 
 key          | Category    | Values                    | Notes                 | Since GEP Ver. |
------------- | ------------| ------------------------- | --------------------- | -------------  | 
+------------ | ------------| ------------------------- | --------------------- | -------------  |
 game_state   | game_info   | Current state of the game.|See [notes](#game_state-note)|   151.0       |
 game_mode    | game_info   | Currently played game-mode.|See [notes](#game_mode-note)|   151.0       |
-map       | game_info   | Name of currently played map.|See [notes](#map-note)   |   151.0       |
 
 #### *game_state* note:
 
@@ -100,8 +99,16 @@ Data Example:
 {"info":{"game_info":{"game_mode":"16"}},"feature":"game_info"}
 ```
 
-Note that on the response the leading zeros are removed ("0030" => "30") 
+Note that on the response the leading zeros are removed ("0030" => "30")
 
+## `match_info`
+
+### Info Updates
+
+key               | Category    | Values                                                              | Notes                 | Since Version |
+----------------- | ------------| ------------------------------------------------------------------- | --------------------- | ------------- |
+pseudo_match_id | match_info | The current match’s ID code.</br></br>Example:</br></br> `0c0ea3df-97ea-4d3a-b1f6-f8e34042251f`  |  This is an Overwolf-generated code, unrelated to Blizzard.  |   159.0 |
+map       | match_info   | Name of currently played map.|See [notes](#map-note)   |   151.0       |
 
 #### *map* note
 
@@ -183,15 +190,12 @@ Data Example:
 {"info":{"match_info":{"map":"357"}},"feature":"match_info"}
 ```
 
-Note that on the response the leading zeros are removed ("0030" => "30") 
-
-## `match_info`
+Note that on the response the leading zeros are removed ("0030" => "30")
 
 ### Events
 
 Event  | Event Data        | Fired When (announcement)           | Notes      | Since GEP Ver. |
 -------| ------------------| -------------------------------------| ---------- | --------------|
-pseudo_match_id | match_info | The current match’s ID code.</br></br>Example:</br></br> `0c0ea3df-97ea-4d3a-b1f6-f8e34042251f`  |  This is an Overwolf-generated code, unrelated to Blizzard.  |   159.0 |
 match_start | null      | Match started. |See [notes](#match_start-note)|    150.0      |
 match_end   | null      | Match ended.   |See [notes](#match_end-note)|    150.0      |
 
@@ -216,7 +220,7 @@ Data Example:
 ### Info Updates
 
 key          | Category    | Values                    | Notes                 | Since GEP Ver. |
------------- | ------------| ------------------------- | --------------------- | -------------  | 
+------------ | ------------| ------------------------- | --------------------- | -------------  |
 eliminations  | kill    | Total amount of eliminations.|See [notes](#eliminations-note)|   151.0 |
 objective_kills| kill   | Total amount of objective kills.|See [notes](#objective_kills-note)|   151.0 |
 
@@ -268,8 +272,8 @@ Data Example:
 ### Info Updates
 
 key          | Category    | Values                    | Notes                 | Since GEP Ver. |
------------- | ------------| ------------------------- | --------------------- | -------------  | 
-deaths       | death       | Total amount of deaths.   |See [notes](#death-note)|   151.0       | 
+------------ | ------------| ------------------------- | --------------------- | -------------  |
+deaths       | death       | Total amount of deaths.   |See [notes](#death-note)|   151.0       |
 
 #### *death* note
 
