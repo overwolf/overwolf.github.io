@@ -126,27 +126,27 @@ The `map_id` returns on this format:
 
 The possible values are:
 
-* `HOUSE`
-* `OREGON`
-* `HEREFORD BASE`
-* `CLUB HOUSE`
-* `PRESIDENTIAL PLANE`
-* `YACHT`
-* `CONSULATE`
 * `BANK`
-* `KANAL`
-* `CHALET`
 * `BARLETT UNIVERSITY` (note that the actual map name in-game is named Bar***t***lett U.)
-* `KAFE DOSTOYEVSKY`
 * `BORDER`
-* `FAVELA`
-* `SKYSCRAPER`
 * `COASTLINE`
+* `CHALET`
+* `CLUB HOUSE`
+* `CONSULATE`
+* `FAVELA`
+* `FORTRESS`
+* `HEREFORD BASE`
+* `HOUSE`
+* `KAFE DOSTOYEVSKY`
+* `KANAL`
+* `OREGON`
+* `OUTBACK`
+* `PRESIDENTIAL PLANE`
+* `SKYSCRAPER`
 * `THEME PARK`
 * `TOWER`
 * `VILLA`
-* `FORTRESS`
-* `OUTBACK`
+* `YACHT`
 
 #### *round_outcome_type* note
 
