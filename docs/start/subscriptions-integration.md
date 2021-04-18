@@ -72,6 +72,14 @@ overwolf.profile.subscriptions.getActivePlans(function(info) {
     }
 );
 ```
+--Suggested Changes from Dev(the if statements above caused issues for LeagueTracker app)--
+
+overwolf.profile.subscriptions.getActivePlans(function(info) { 
+    if (info.success && info.plans != null && info.plans.includes(myPlanID)) {    
+            isSubscribed = true;
+            removeAds();
+    }
+);
 
 ## 4. Monitor Subscription Changes
 
