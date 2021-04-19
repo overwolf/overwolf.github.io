@@ -14,6 +14,8 @@ Please read the [overwolf.games.events](overwolf-games-events) documentation pag
 
 :::tip
 If you would like to know when the user is going to play TFT (hit the "Play" button), you can listen to the LoL Launcher [lobby_info](overwolf-games-launchers-events-lol#info-updates-3) info-update, and check the `queueID`. If it's 1090 or 1100 - it's TFT.
+
+<b>Note:</b> Riot is working on a new TFT mode named "Hyperoll". The mode is currently available in the PBE servers and soon in live servers and can be detected as 1130 in the `queueID`.
 :::
 
 
