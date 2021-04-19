@@ -14,16 +14,17 @@ Note that the work on the documentation for this version is still in-progress.
 
 #### API
 
-* Improve OBS encoders support detection using the [overrwolf.streaming.getStreamEncoders()](overwolf-streaming#getstreamencoderscallback) API (we added new fields to [EncoderData](overwolf-streaming#encoderdata-object) object).
+* Improve OBS encoders support detection using the [overrwolf.streaming.getStreamEncoders()](overwolf-streaming#getstreamencoderscallback) API (we added new error state for unsupported encoders [EncoderData](overwolf-streaming#encoderdata-object) object).
 * Added the following properties to [overwolf.io.paths](overwolf-io-paths):
   * overwolf install dir : 'overwolf.io.paths.overwolfInstallation'.
   * overwolf install dir with version number : 'overwolf.io.paths.overwolfInstallationWithVersion'.
   * obs dir : 'overwolf.io.paths.obsBin'.
+* Improved behavior when switching a video to full screen in an Overwolf native window.
 
 #### Platform
 
-* Interal OBS enhancments.
-* Added support for overlay above UWP (Universal Windows Platform) games (minecraft, sea of thieves & roblox). 
+* General stability fixes for OBS and uncommon recording failures, Improved error indications when we do fail to record.
+* Added support for overlay above UWP (Universal Windows Platform) games (minecraft, sea of thieves & roblox). some of these games are still not working perfectly, and currently, the plan is to only enable Sea of Thieves for UWP in the near future. 
 
 #### Dev Console
 
@@ -35,7 +36,8 @@ Note that the work on the documentation for this version is still in-progress.
 * Fixed the issue where Video elements "glitched" when switching the app to full-screen mode.
 * Fixed the issue where you got an error that you should update your graphic card drivers only AFTER the game capturing starts. Now, you get this error before the capture starts.
 * Fixed the Rocket league (Epic version) invisible cursor issue.
-
+* CS:GO’s "Out of Process Overlay" is no longer the only supported overlay mode.
+* We've killed the nameless Overwolf window that would sometimes appear when going in-game.
 
 #### Game events
 
