@@ -44,6 +44,8 @@ Note that the work on the documentation for this version is still in-progress.
 * [Dota](overwolf-games-events-dota)
   * New info update
     * game_mode
+* [TFT](overwolf-games-events-tft)
+ * Riot is working on a new TFT mode named "Hyperoll". The mode is currently available in the PBE servers and soon in live servers and can be detected as 1130 in the `queueID`.
 
 ## Version 0.168 (Apr. 2021)
 
