@@ -66,6 +66,8 @@ As mentioned above, the OPK package should contain all the app's files and asset
     * Add the icon asset to your app’s folder.  
     * The launcher icon should look like the app's dock icon to prevent confusion.  
     * The launcher icon is a 256×256 transparent .png converted into an .ico file in the following resolutions: 16×16, 32×32, 48×48, 256×256.  
+      In order to create multi-layer .ico file, you can use third-party software like the free online service [convertico](https://convertico.com) or other.  
+      In the "Choose icon layer sizes" section please choose the above sizes (16×16, 32×32, 48×48, 256×256).
     * The launcher icon should weigh less than 150Kb.
     * **Contact us if you want to update your installer icon** with the ICO file (the installer is the EXE bundle icon that the users downloads from the OW app store).
 
