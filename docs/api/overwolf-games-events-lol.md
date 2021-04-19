@@ -399,6 +399,8 @@ Data Example:
 
 #### *region* note
 
+For a full list of regions please visit the official Riot's API [here](https://developer.riotgames.com/docs/lol) (under "Platform Routing Values").
+
 Data Example:
 
 ```json
