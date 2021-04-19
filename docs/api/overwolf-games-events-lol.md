@@ -75,9 +75,12 @@ port | live_client_data | In-game data received by the client. |See [notes](#por
 
 #### *active_player* note
 
-Data Example:
+<details>
+<summary>Click to see some data example</summary>
 
-```json
+<pre><code class="json">
+
+
 {
   "info": {
     "live_client_data": {
@@ -249,13 +252,18 @@ Data Example:
   },
   "feature": "live_client_data"
 }
-```
+
+</code></pre>
+</details>
 
 #### *all_players* note
 
-Data Example:
 
-```json
+<details>
+<summary>Click to see some data example</summary>
+
+<pre><code class="json">
+
 {
   "info": {
     "live_client_data": {
@@ -924,7 +932,11 @@ Data Example:
   },
   "feature": "live_client_data"
 }
-```
+
+</code></pre>
+</details>
+
+
 
 #### *events* note
 
