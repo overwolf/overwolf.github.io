@@ -74,18 +74,19 @@
 <p>Note that the work on the documentation for this version is still in-progress.</p>
 <h4><a class="anchor" aria-hidden="true" id="api"></a><a href="#api" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>API</h4>
 <ul>
-<li>Improve OBS encoders support detection using the <a href="overwolf-streaming#getstreamencoderscallback">overrwolf.streaming.getStreamEncoders()</a> API (we added new fields to <a href="overwolf-streaming#encoderdata-object">EncoderData</a> object).</li>
+<li>Improve OBS encoders support detection using the <a href="overwolf-streaming#getstreamencoderscallback">overrwolf.streaming.getStreamEncoders()</a> API (we added new error state for unsupported encoders <a href="overwolf-streaming#encoderdata-object">EncoderData</a> object).</li>
 <li>Added the following properties to <a href="overwolf-io-paths">overwolf.io.paths</a>:
 <ul>
 <li>overwolf install dir : 'overwolf.io.paths.overwolfInstallation'.</li>
 <li>overwolf install dir with version number : 'overwolf.io.paths.overwolfInstallationWithVersion'.</li>
 <li>obs dir : 'overwolf.io.paths.obsBin'.</li>
 </ul></li>
+<li>Improved behavior when switching a video to full screen in an Overwolf native window.</li>
 </ul>
 <h4><a class="anchor" aria-hidden="true" id="platform"></a><a href="#platform" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Platform</h4>
 <ul>
-<li>Interal OBS enhancments.</li>
-<li>Added support for overlay above UWP (Universal Windows Platform) games (minecraft, sea of thieves &amp; roblox).</li>
+<li>General stability fixes for OBS and uncommon recording failures, Improved error indications when we do fail to record.</li>
+<li>Added support for overlay above UWP (Universal Windows Platform) games (minecraft, sea of thieves &amp; roblox). some of these games are still not working perfectly, and currently, the plan is to only enable Sea of Thieves for UWP in the near future.</li>
 </ul>
 <h4><a class="anchor" aria-hidden="true" id="dev-console"></a><a href="#dev-console" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Dev Console</h4>
 <ul>
@@ -97,6 +98,8 @@
 <li>Fixed the issue where Video elements &quot;glitched&quot; when switching the app to full-screen mode.</li>
 <li>Fixed the issue where you got an error that you should update your graphic card drivers only AFTER the game capturing starts. Now, you get this error before the capture starts.</li>
 <li>Fixed the Rocket league (Epic version) invisible cursor issue.</li>
+<li>CS:GO’s &quot;Out of Process Overlay&quot; is no longer the only supported overlay mode.</li>
+<li>We've killed the nameless Overwolf window that would sometimes appear when going in-game.</li>
 </ul>
 <h4><a class="anchor" aria-hidden="true" id="game-events"></a><a href="#game-events" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Game events</h4>
 <ul>
