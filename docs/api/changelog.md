@@ -43,7 +43,7 @@ Note that the work on the documentation for this version is still in-progress.
 
 * [Valehim](overwolf-games-events-valheim)
   * New supported game
-* [Dota](overwolf-games-events-dota)
+* [Dota](overwolf-games-events-dota2)
   * New info update
     * game_mode
 * [TFT](overwolf-games-events-tft)
