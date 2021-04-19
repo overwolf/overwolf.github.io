@@ -103,7 +103,7 @@ You can choose one of the following recording resolutions types:
 #### How to use
 
 Before you start the capture (in both capture APIs), you have to define the video options in your settings.
-In this object, you can set the [base_frame_size_source]((overwolf-streaming#evideobaseframesizesource-enum)) and [frame_size_method](overwolf-streaming#evideoframesizecalcmethod-enum).
+In this object, you can set the [base_frame_size_source](../api/overwolf-streaming#evideobaseframesizesource-enum) and [frame_size_method](../api/overwolf-streaming#evideoframesizecalcmethod-enum).
 
 An example:
 
