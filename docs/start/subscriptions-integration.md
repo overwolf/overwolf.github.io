@@ -60,26 +60,12 @@ var myPlanID = 4564; //my app's subscription plan id
 var isSubscribed = false; //flag that tells if the current user got an active subscription
 
 overwolf.profile.subscriptions.getActivePlans(function(info) { 
-    
-    if (info.success && info.plans != null) {    
-    
-        if(info.plans.includes(myPlanID))  {//this is a premium user            
-        
-            isSubscribed = true; //mark this user as a subscribed user
-            removeAds();    
-        
-        }
-    }
-);
-```
---Suggested Changes from Dev(the if statements above caused issues for LeagueTracker app)--
-
-overwolf.profile.subscriptions.getActivePlans(function(info) { 
     if (info.success && info.plans != null && info.plans.includes(myPlanID)) {    
             isSubscribed = true;
             removeAds();
     }
 );
+```
 
 ## 4. Monitor Subscription Changes
 
