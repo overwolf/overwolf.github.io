@@ -75,8 +75,9 @@ overwolf.games.events.setRequiredFeatures(g_interestedInFeatures, function(info)
 }
 ```
 
-:::note
-it's important to wait for the **success** status to make sure that required features will be registered and trigger events properly.
+:::notes
+1. it's important to wait for the **success** status to ensure that required features will be registered and trigger events properly.  
+2. If your app uses a [background controller](../topics/communicating-between-windows#using-a-background-controller), make sure to call the setRequiredFeatures function only from your background controller.
 :::
 
 Example for setting required features and waiting for 'success':

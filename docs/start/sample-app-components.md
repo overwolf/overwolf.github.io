@@ -42,6 +42,10 @@ The window's `run()` method detects whether a Fortnite game is currently running
 
 The background window has no visual representation, which can be gleaned from the empty background.html file or from the [{is_background_page:true}](../api/manifest-json#is_background_page) property the background window has in our manifest.json.
 
+:::tip
+You can read more about the background controller concept in our [Communicating between windows](../topics/communicating-between-windows#using-a-background-controller) guide.
+:::
+
 ### windows/in_game
 
 The in_game window listens to [Info Events](../api/overwolf-games-events#oninfoupdates2) and [Game Events](../api/overwolf-games-events#onnewevents) emitted by the game and
@@ -57,11 +61,11 @@ This window serves a purely visual purpose and has no special logic.
 
 This is a base class that holds the logic shared by the in_game and desktop windows, such as minimize/close, drag, etc.
 
-## odk-ts and types
+## types package
 
-Currently, the Overwolf SDK is written in javascript. These folders hold typescript wrappers and type definitions for the SDK methods used in this app.
+Currently, the Overwolf SDK is written in javascript. The [type definition file](../topics/type-definition-file) holds typescript type definitions for the SDK methods used in this app.
 
-We are constantly working on improving our SDK and both the odk-ts and the types definition file will be released as proper packages in the future.
+We released the types file as a [npm package](http://bit.ly/overwolf-types-npm), and the sample app used this package.
 
 ## icons
 
