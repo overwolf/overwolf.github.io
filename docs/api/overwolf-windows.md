@@ -223,7 +223,9 @@ callback             | [(Result: DragResizeResult)](#dragresizeresult-object) =>
 
 > Changes the window size to the new width and height, in pixels.
 
-Note: this function doesn't calculate DPI - so you need to pre-calculate DPI before calling it, or, use [this signature](#changesizechangesizeparams-callback) that calculates DPI - so you don't need to calculate it yourself.
+:::warning OBSOLETE
+This function is obsolete and doesn't calculate DPI - so you need to pre-calculate DPI before calling it, or, use this signature of  that calculates DPI - so you don't need to calculate it yourself.
+:::
 
 Parameter           | Type       | Description                                                                                  |
 --------------------| -----------| ---------------------------------------------------------------------------------------------|
