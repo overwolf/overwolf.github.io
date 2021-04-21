@@ -118,7 +118,7 @@ subreddit              | string  | The subreddit to which the file will be share
 title                  | string  | The shared video's title                                                    |
 description            | string  | The shared video's description                                              |
 trimming (Optional)    | [VideoCompositionSegment](overwolf-media-videos#videocompositionsegment-object)  | An object containing start time and end time for the desired VideoCompositionSegment                                        |
-events (Optional)      | string  | An array of chronological events that occurred during the capture           |
+tags (Optional)        | string  | An array of chronological events that occurred during the capture           |
 gameClassId (Optional) | int     | The associated game's class ID                                              |
 gameTitle (Optional)   | string  | The associated game's title                                                 |
 metadata (Optional)    | object  | Extra information about the game session                                    |
@@ -129,7 +129,7 @@ flair_id (Optional)    | [Flair](#flair-object) object  |                       
 ```json
 {
   "file": "file://D:\\Videos\\Overwolf\\Outplayed\\League of Legends/League of Legends_8-16-2020_2-6-20-576\\League of Legends 08-16-2020_2-06-22-522.mp4",
-  "events": [
+  "tags": [
     "PvP Round"
   ],
   "gameClassId": 5426,
