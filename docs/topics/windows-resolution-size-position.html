@@ -127,6 +127,10 @@ If your screen is scaled by a DPI factor, you should work with logical sizes, as
 <p>This section explains the DPI-related behavior of each of the relevant overwolf.windows API methods.<br>
 Please note that we will release an improved and more consistent (DPI-wise) window management API soon.</p>
 <p>To summarize, these are the main differences between native and non-native windows:</p>
+<ul>
+<li>The <code>+</code> means DPI-aware: &quot;width&quot; / &quot;height&quot; returned in the function's callback without DPI scaling.</li>
+<li>The <code>-</code> means not-DPI-aware: &quot;width&quot; / &quot;height&quot; returned in the function's callback already WITH DPI scaling.</li>
+</ul>
 <table>
 <thead>
 <tr><th>function</th><th>native window</th><th>non-native window</th><th>notes</th></tr>
@@ -135,18 +139,11 @@ Please note that we will release an improved and more consistent (DPI-wise) wind
 <tr><td><a href="../api/overwolf-windows#getcurrentwindowcallback">overwolf.windows.getCurrentWindow()</a></td><td>+</td><td>+</td><td></td></tr>
 <tr><td><a href="../api/overwolf-windows#obtaindeclaredwindowwindowname-callback">overwolf.windows.obtainDeclaredWindow()</a></td><td>-</td><td>-</td><td>From 0.170 this function will be DPI-aware</td></tr>
 <tr><td><a href="../api/overwolf-windows#changepositionwindowid-left-top-callback">overwolf.windows.changePosition()</a></td><td>+</td><td>+</td><td>Gets the &quot;left&quot;/&quot;top&quot; values and calculates the new required window position based on the screen's DPI. (accepts values as they are returned from getCurrentWindow - without DPI scaling)</td></tr>
-<tr><td><a href="../api/overwolf-windows#changesizechangesizeparams-callback">overwolf.windows.changeSize()</a></td><td>+</td><td>+</td><td>gets the &quot;width&quot;/&quot;height&quot; values (via the &quot;ChangeWindowSizeParams&quot; object)  and calculates the new required window size based on the screen’s DPI.  (accepts values as they are returned from getCurrentWindow - without DPI scaling)</td></tr>
+<tr><td><a href="../api/overwolf-windows#changesizechangesizeparams-callback">overwolf.windows.changeSize()</a></td><td>+</td><td>+</td><td>gets the &quot;width&quot;/&quot;height&quot; values (via the &quot;ChangeWindowSizeParams&quot; object)  and calculates the new required window size based on the screen’s DPI.  (accepts values as they are returned from getCurrentWindow - without DPI scaling) </br></br> <strong>Known issue</strong> - For non-native windows - the DPI calculations is not DPI aware per-monitor - so if the window is on a 100% DPI monitor but the main monitor is 125% - it will resize based on 125%.</td></tr>
 <tr><td><a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/screen">window.screen</a></td><td>-</td><td>+</td><td></td></tr>
 <tr><td>HTML element size</td><td>TBD</td><td>TBD</td><td></td></tr>
 </tbody>
 </table>
-<h4><a class="anchor" aria-hidden="true" id="notes"></a><a href="#notes" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Notes:</h4>
-<ul>
-<li>The <code>+</code> means DPI-aware: &quot;width&quot; / &quot;height&quot; returned in the function's callback without DPI scaling.</li>
-<li>The <code>-</code> means not-DPI-aware: &quot;width&quot; / &quot;height&quot; returned in the function's callback already WITH DPI scaling.</li>
-</ul>
-<h4><a class="anchor" aria-hidden="true" id="known-issue"></a><a href="#known-issue" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Known issue</h4>
-<p>For non-native windows - the DPI calculations is not DPI aware per-monitor - so if the window is on a 100% DPI monitor but the main monitor is 125% - it will resize based on 125%.</p>
 <h2><a class="anchor" aria-hidden="true" id="window-position"></a><a href="#window-position" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Window position</h2>
 <h3><a class="anchor" aria-hidden="true" id="window-coordinates-overview"></a><a href="#window-coordinates-overview" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Window coordinates overview</h3>
 <p>The windows API using X and Y coordinates to define the position of a window.</p>
