@@ -313,8 +313,24 @@ assist | victimName                              | Local player participated in 
 
 Event        | Event Data                        | Fired When   | Notes              | Since GEP Ver. |
 -------------| ----------------------------------| ----------------------------- | ------------------ | --------------|
-healed_from_ko | null                              | Local player was revived from knocked out state. |                    |     128.0     | 
-respawn | null                              | Local player was returned to the game at a beacon. |                    |     128.0      | 
+healed_from_ko | null                              | Local player was revived from knocked out state. | See [notes](#healed_from_ko-note) |     128.0     | 
+respawn | null                              | Local player was returned to the game at a beacon. |See [notes](#respawn-note)|     128.0      | 
+
+#### *healed_from_ko* note
+
+Data Example:
+
+```json
+{"events":[{"name":"healed_from_ko","data":null}]}
+```
+
+#### *respawn* note
+
+Data Example:
+
+```json
+{"events":[{"name":"respawn","data":null}]}
+```
 
 ## death
 
@@ -322,8 +338,24 @@ respawn | null                              | Local player was returned to the g
 
 Event        | Event Data                        | Fired When   | Notes              | Since GEP Ver. |
 -------------| ----------------------------------| ----------------------------- | ------------------ | --------------|
-knocked_out | null                              | Local player’s health drops to zero.	 |                    |     128.0      | 
-death | null (in the future we will provide the killer name). | Local player died during knocked out state. | There is another health bar during knocked out</br>state, it’s orange, above the player name. |     128.0      | 
+knocked_out | null                              | Local player’s health drops to zero.	 | See [notes](#knocked_out-note)|     128.0      | 
+death | null (in the future we will provide the killer name). | Local player died during knocked out state. | There is another health bar during knocked out</br>state, it’s orange, above the player name. See [notes](#death-note) |     128.0      | 
+
+#### *knocked_out* note
+
+Data Example:
+
+```json
+{"events":[{"name":"knocked_out","data":null}]}
+```
+
+#### *death* note
+
+Data Example:
+
+```json
+{"events":[{"name":"death","data":null}]}
+```
 
 ## kill_feed
 
