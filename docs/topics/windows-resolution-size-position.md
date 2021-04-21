@@ -86,23 +86,17 @@ Please note that we will release an improved and more consistent (DPI-wise) wind
 
 To summarize, these are the main differences between native and non-native windows:
 
+* The `+` means DPI-aware: "width" / "height" returned in the function's callback without DPI scaling.
+* The `-` means not-DPI-aware: "width" / "height" returned in the function's callback already WITH DPI scaling.
+
 function                                | native window            | non-native window             |  notes  |          
 --------------------------------------- | -------------------------| ----------------------------- | ------  |
 [overwolf.windows.getCurrentWindow()](../api/overwolf-windows#getcurrentwindowcallback)     | +                        | +                             |         |
 [overwolf.windows.obtainDeclaredWindow()](../api/overwolf-windows#obtaindeclaredwindowwindowname-callback) | -                        | -                             | From 0.170 this function will be DPI-aware  |
 [overwolf.windows.changePosition()](../api/overwolf-windows#changepositionwindowid-left-top-callback)       | +                        | +                             | Gets the "left"/"top" values and calculates the new required window position based on the screen's DPI. (accepts values as they are returned from getCurrentWindow - without DPI scaling)        |
-[overwolf.windows.changeSize()](../api/overwolf-windows#changesizechangesizeparams-callback)           | +                        | +                             | gets the "width"/"height" values (via the "ChangeWindowSizeParams" object)  and calculates the new required window size based on the screen’s DPI.  (accepts values as they are returned from getCurrentWindow - without DPI scaling)        |
+[overwolf.windows.changeSize()](../api/overwolf-windows#changesizechangesizeparams-callback)           | +                        | +                             | gets the "width"/"height" values (via the "ChangeWindowSizeParams" object)  and calculates the new required window size based on the screen’s DPI.  (accepts values as they are returned from getCurrentWindow - without DPI scaling) </br></br> **Known issue** - For non-native windows - the DPI calculations is not DPI aware per-monitor - so if the window is on a 100% DPI monitor but the main monitor is 125% - it will resize based on 125%.        |
 [window.screen](https://developer.mozilla.org/en-US/docs/Web/API/Window/screen)                           | -                        | +                             |         |
 HTML element size                       | TBD                      | TBD                           |         |
-
-#### Notes:
-
-* The `+` means DPI-aware: "width" / "height" returned in the function's callback without DPI scaling.
-* The `-` means not-DPI-aware: "width" / "height" returned in the function's callback already WITH DPI scaling.
-
-#### Known issue
-
-For non-native windows - the DPI calculations is not DPI aware per-monitor - so if the window is on a 100% DPI monitor but the main monitor is 125% - it will resize based on 125%.
 
 ## Window position
 
