@@ -24,8 +24,6 @@ Use this API to get Overwolf information for the current user of the app (e.g us
 * [overwolf.profile.LoginStateChangedEvent](#loginstatechangedevent-object) Object
 * [overwolf.profile.ConnectionState](#connectionstate-enum) Enum
 
-
-
 ## getCurrentUser(callback)
 #### Version added: 0.78
 
@@ -72,6 +70,8 @@ parameters         | string   |                                             |
 installParams      | string   |                                             |   
 avatar             | string   |                                             |   
 installerExtension | string   |                                             |   
+displayName        | string   |                                             |   
+
 
 #### Note: *userId* is not a unique identifier
 
@@ -90,14 +90,17 @@ So at the bottom line, you can always count on the username to be a unique ident
  #### Example data: Success
 
 ```json
-{  
+{
    "success": true,
    "error": "",
    "username":"itaygl",
    "userId":"OW_34153336-192b-44f6-aa0f-4a9b744c689d",
    "machineId":"653000ad-001c-43e9-a5c9-e23db5ad370a",
    "partnerId":0,
-   "channel":"website"
+   "channel":"website",
+   "displayName": "itay gl", 
+   "avatar": "https://lh5.googleusercontent.com/-vvsdlz7W2oM/AAAAAAAAAAI/AAAAAAAAAAA/ACHi3reB9VADjY3FzaTDSA7-Adrsny38xg/mo/photo.jpg?sz=50",
+   "installParams":  "{source: "", medium: "", campaign: "", term: "", content: """,
 }
 ```
 #### Example data: Failure

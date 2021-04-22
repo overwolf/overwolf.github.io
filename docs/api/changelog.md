@@ -15,10 +15,10 @@ Note that the work on the documentation for this version is still in-progress.
 #### API
 
 * Subscriptions API: 
-  * New function, [overwolf.profile.subscriptions.getDetailedActivePlans()]() - Get more details about the subscription.
+  * New function, [overwolf.profile.subscriptions.getDetailedActivePlans()](overwolf-profile-subscriptions#getdetailedactiveplanscallback) - Get more details about the subscription.
   * Allow apps to launch the subscription window inside their app and change subscription through the app (includs new permission: "subscription").
-  * [overwolf.profile.subscriptions.enums.SubscriptionState]() - new enum.
-* [overwolf.profile.getCurrentUser]() - now also returns displayName.
+  * [overwolf.profile.SubscriptionState](overwolf-profile-subscriptions#subscriptionstate-enum) - new enum that define the possible subscription states.
+* [overwolf.profile.getCurrentUser](overwolf-profile#getcurrentusercallback) - now also returns displayName.
 
 #### Platform
 
