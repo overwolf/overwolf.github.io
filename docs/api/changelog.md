@@ -19,9 +19,6 @@ Note that the work on the documentation for this version is still in-progress.
   * Allow apps to launch the subscription window inside their app and change subscription through the app (includs new permission: "subscription").
   * [overwolf.profile.subscriptions.enums.SubscriptionState]() - new enum.
 * [overwolf.profile.getCurrentUser]() - now also returns displayName.
-* App Channels:
-  * Allow apps to change the app channel through the API (feature that will allow your end users to change the app channels through your app's UI).
-  * Use SetExtensionSettings({channel: 'channel_name'}, callback).
 
 #### Platform
 
