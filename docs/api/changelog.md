@@ -8,9 +8,38 @@ Follow this entry for ongoing updates and changes to the project or tools.
 
 Here you can find our [Developers Roadmap](https://trello.com/b/1V10E4IB/overwolf-roadmap).
 
-## Version 0.169 (In-Progress)
+## Version 0.170 (In-Progress)
 
 Note that the work on the documentation for this version is still in-progress.
+
+#### API
+
+* Subscriptions API: 
+  * New function, [overwolf.profile.subscriptions.getDetailedActivePlans()]() - Get more details about the subscription.
+  * Allow apps to launch the subscription window inside their app and change subscription through the app (includs new permission: "subscription").
+  * [overwolf.profile.subscriptions.enums.SubscriptionState]() - new enum.
+* [overwolf.profile.getCurrentUser]() - now also returns displayName.
+* App Channels:
+  * Allow apps to change the app channel through the API (feature that will allow your end users to change the app channels through your app's UI).
+  * Use SetExtensionSettings({channel: 'channel_name'}, callback).
+
+#### Platform
+
+* Soon
+
+#### Dev Console
+
+* Soon
+
+#### Bug fixes
+
+* Fix [overwolf.utils.openUrlInOverwolfBrowser](): allow to open tab and redirect back to overwolf-extension when origin URL is at 'externally_connectable' and to tab was open from the same extension.
+
+#### Game events
+
+* Soon
+
+## Version 0.169 (Apr. 2021)
 
 #### API
 
