@@ -10,6 +10,10 @@ Please read the [overwolf.games.events](overwolf-games-events) documentation pag
 21626
 :::
 
+:::warning
+This game is not supported by Overwolf at this time.
+:::
+
 ## Sample Apps
 * [Warzone game events sample app](https://github.com/overwolf/events-sample-apps)
 
