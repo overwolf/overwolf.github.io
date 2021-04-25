@@ -715,7 +715,7 @@ windowId		           | string                                            | The i
 behavior               | [FlashBehavior](#flashbehavior-enum) enum         | Defines window flashing behavior                                          |
 callback               | (Result) => void                                  | Called with the result of the request                                     |
 
-## setZoom(winzoomFactorowId, windowId)
+## setZoom(zoomFactor, windowId)
 #### Version added: 0.154
 
 > Set window zoom level (0.0 for reset).
