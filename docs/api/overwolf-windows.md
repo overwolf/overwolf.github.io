@@ -722,7 +722,7 @@ callback               | (Result) => void                                  | Cal
 
 Parameter              | Type                                              | Description                                                               |
 -----------------------| --------------------------------------------------| --------------------------------------------------------------------------|
-winzoomFactorowId      | double                                            | The zoome factor                                                          |
+zoomFactor             | double                                            | The zoome factor                                                          |
 windowId		           | string                                            | The window id, empty for current window                                   |
 
 ## onMainWindowRestored
