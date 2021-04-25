@@ -34,7 +34,7 @@ Note that the work on the documentation for this version is still in-progress.
 
 #### Game events
 
-* Soon
+* Support for the COD: Warzone game has been disabled temporarily.
 
 ## Version 0.169 (Apr. 2021)
 
