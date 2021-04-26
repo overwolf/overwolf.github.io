@@ -33,5 +33,5 @@ The Front Appp Demonstrates:
 
 Download the app [HERE](https://www.overwolf.com/app/Overwolf-Front_App)
 
-![alt-text](assets/front-app.jpg)
+![front-app](assets/sample-app/front-app.jpg)
 
