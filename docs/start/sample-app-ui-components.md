@@ -1,7 +1,7 @@
 ---
 id: sample-app-ui-components
-title: basic UI components
-sidebar_label: Basic UI components
+title: Overwolf UI Components
+sidebar_label: Overwolf UI Components
 ---
 
 <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
