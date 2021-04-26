@@ -37,12 +37,11 @@ sidebar_label: Ads Monetization Basics
 ### Advertising policy
 
 Overwolf requires that only advertisements displayed or distributed through Overwolf’s proprietary advertising platform may be displayed or distributed through Applications.
+If you manage an external website, please do not implement 3rd party iframes with ads inside the Overwolf application.
 
 **Use Forgivable Ads.** In some more words, don’t create ad experiences that you would not stand for as a gamer. Ads present a challenge and tend to provoke negative responses, but they are critical to our economy and our ability to create great apps. In general, talk to us if you're worried or unsure about your app's experience. 
 
 Advertisers need to get continuous value from advertising on Overwolf, so to keep the CPMs high and to get more advertisers on the platform we need to provide a high-quality experience. With time, we found that it's not only about the [right time and place](https://medium.com/overwolf/a-new-way-for-brands-to-engage-with-gamers-ca4cfafc5d41), but also about advertising in a balanced way.
-
-For example, refreshing and showing new ads is only allowed when switching between app windows, pages or tabs, and never while the user is using on-screen features.
 
 To get a more general idea, we follow the industry Standards, Guidelines & Best Practices which are provided by the IAB. We also constantly scan our traffic with 3rd party anti-fraud tools to monitor quality and spot issues.
 
