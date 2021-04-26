@@ -1,7 +1,7 @@
 ---
 id: sample-app-components
 title: Sample app components
-sidebar_label: Components
+sidebar_label: Sample app components
 ---
 
 You can download the latest version from our GitHub [here](https://github.com/overwolf/sample-app/tree/master/ts), and read how to setup it [here](sample-app-overview).

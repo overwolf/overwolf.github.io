@@ -1,7 +1,7 @@
 ---
 id: sample-app-ui-components
-title: Sample app UI components
-sidebar_label: UI components
+title: basic UI components
+sidebar_label: Basic UI components
 ---
 
 <script async src="https://static.codepen.io/assets/embed/ei.js"></script>

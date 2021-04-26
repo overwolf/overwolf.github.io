@@ -1,7 +1,7 @@
 ---
 id: sample-app-overview
 title: Overwolf basic sample app
-sidebar_label: The Basic - Sample App
+sidebar_label: The Basic sample App
 ---
 
 In this article, we'll use an example in order to learn how to build Overwolf apps that respond to real time game events and display content in an overlay while playing. If you are new to the concept of Overwolf apps, this is a great place to get started, and you can use it as a base for your own project.
