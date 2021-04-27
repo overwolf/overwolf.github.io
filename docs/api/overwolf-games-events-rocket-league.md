@@ -24,6 +24,7 @@ Please read the [overwolf.games.events](overwolf-games-events) documentation pag
 * [me](#me)
 * [match_info](#match_info)
 * [death](#death)
+* [game_info](#game_info)
 
 ## Game events status
 
@@ -412,4 +413,42 @@ Data Example:
 
 ```json
 {"events":[{"name":"death","data":""}]}
+```
+
+
+## `game_info`
+
+### Info Updates
+
+key          | Category    | Values                    | Notes                 | Since GEP Ver. |
+------------ | ------------| ------------------------- | --------------------- | ------------- | 
+trade_menu_opened         | game_info | true / false   | See [notes](#trade_menu_opened-note) |    170.3       |
+trade_my_proposition      | game_info | Local player's items that are on offer. | See [notes](#trade_my_proposition-note) |    170.3       |
+trade_opponent_proposition| game_info | Team member's items that are on offer. | See [notes](#trade_opponent_proposition-note) |    170.3       |
+
+#### *trade_menu_opened* note
+
+Data Example:
+
+```json
+{"info":{"game_info":{"trade_menu_opened":"true"}},"feature":"game_info"}
+{"info":{"game_info":{"trade_menu_opened":"false"}},"feature":"game_info"}
+```
+
+#### *trade_my_proposition* note
+
+Data Example:
+
+```json
+{"info":{"game_info":{"trade_my_proposition":"[{"Index": "0","key" : "2625_0","ProductId" : "2625","ProductName" : "skin_aftershock_tigertiger","Color" : "0","Count" : "1"}]"}},"feature":"game_info"}
+{"info":{"game_info":{"trade_my_proposition":"[]"}},"feature":"game_info"}
+```
+
+#### *trade_opponent_proposition* note
+
+Data Example:
+
+```json
+{"info":{"game_info":{"trade_opponent_proposition":"[{"Index": "0","key" : "2969_0","ProductId" : "2969","ProductName" : "skin_vanquish_watermelon","Color" : "0","Count" : "1"},{"Index": "1","key" : "4727_0","ProductId" : "4727","ProductName" : "hat_accordion","Color" : "0","Count" : "1"}]"}},"feature":"game_info"}
+{"info":{"game_info":{"trade_opponent_proposition":"[]"}},"feature":"game_info"}
 ```
