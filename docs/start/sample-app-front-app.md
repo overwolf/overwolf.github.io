@@ -4,7 +4,7 @@ title: Overwolf Front App
 sidebar_label: UX/UI Best Practices
 description: The Front App is an Overwolf tutoring app intended to be used by the developers’ community - providing an easy onboarding to the basics of Overwolf app layouts and capabilities and as a reference to see, use, and learn from best practices of user experience and app flows.
 ---
-![front-app](assets/sample-app/front-app.jpg)
+![front-app](assets/sample-app/front-app-cover.jpg)
 
 In your journey of creating a genuinely legendary app, you might need some tools to assist you along the road. We’re here to accompany you and provide support so you can reach the right path. 
 The Front App is an Overwolf tutoring app intended to be used by the developers’ community - providing an easy onboarding to the basics of Overwolf app layouts and capabilities and as a reference to see, use, and learn from best practices of user experience and app flows.
