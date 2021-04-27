@@ -11,6 +11,12 @@ This app (Front App) is made to give examples and teach about UX/UI best practic
 **Do not copy code for functionality and logic from this app!**  Make sure you have gone over the [basic sample app documentation](sample-app-overview).
 :::
 
+## Start Exploring
+
+Download the app [HERE](https://www.overwolf.com/app/Overwolf-Front_App)
+
+![front-app](assets/sample-app/front-app.jpg)
+
 ## Front App Functionality
 
 For demonstration purposes, the Front App is configured for [League of Legends](https://euw.leagueoflegends.com/en-us/). The app will function in-game and auto-launch by default when launching the game.
@@ -28,9 +34,3 @@ The Front App Demonstrates:
 * Feedback/Bug Report
 * Social Functionality
 
-
-## Start Exploring
-
-Download the app [HERE](https://www.overwolf.com/app/Overwolf-Front_App)
-
-![front-app](assets/sample-app/front-app.jpg)
