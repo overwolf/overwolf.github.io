@@ -24,12 +24,12 @@ The Front App Demonstrates:
 * Monetization
 * Loading Screens
 * In-Game Notifications
-* Dialog Boxes and Modals.
+* Dialog Boxes and Modals
 * Feedback/Bug Report
 * Social Functionality
 
 
-## Getting Started
+## Start Exploring
 
 Download the app [HERE](https://www.overwolf.com/app/Overwolf-Front_App)
 
