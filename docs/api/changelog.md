@@ -35,6 +35,9 @@ Note that the work on the documentation for this version is still in-progress.
 #### Game events
 
 * Support for the COD: Warzone game has been disabled temporarily.
+* [Rocket League](overwolf-games-events-rocket-league)
+  * New info update
+    * game_info
 
 ## Version 0.169 (Apr. 2021)
 
