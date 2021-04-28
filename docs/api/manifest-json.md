@@ -586,7 +586,7 @@ In this example, when loading the index window, myscript.js will be loaded and w
 *Note: it also work for any iframes the app is hosting in an Overwolf window (not just the main page).*
 
 ## launch_event_settings array
-A list of events causing the app to launch. It's enough that one of the events occurs to launch the app.
+A list of events causing the app to launch. It's enough that one of the events occurs to launch the app.  
 
 | Name              | Type   | Description                                                                             | Since |
 |-------------------| -------|-----------------------------------------------------------------------------------------|------ |
@@ -595,6 +595,8 @@ A list of events causing the app to launch. It's enough that one of the events o
 | tracked           | bool   | Launch App when gameid is detected (even when not injected).                            | 0.132  
 | start_minimized   | bool   | The app’s main window will start minimized.                                             | 0.82  |
 | include_launchers | bool   | The app will be launched when game launcher is detected.                                | 0.103 |
+
+Note that these launch events settings only works for supported games. 
 
 Code Example:
 
