@@ -20,7 +20,11 @@ This app (Front App) is made to give examples and teach about UX/UI best practic
 
 ## Front App Functionality
 
-For demonstration purposes, the Front App is configured for [League of Legends](https://euw.leagueoflegends.com/en-us/). The app will function in-game and auto-launch by default when launching the game.
+:::note In-Game Functionality
+While you can explore the app on desktop without the need of any game installed, for demonstration purposes, the Front App in-game is currently configured for [League of Legends](https://euw.leagueoflegends.com/en-us/).
+Additional games support will be added down the road.
+:::
+
 
 The Front App Demonstrates:
 
