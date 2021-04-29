@@ -10,9 +10,8 @@ Provides functions and events to help with user profile subscription in-app mana
 
 ## Methods Reference
 
-* [overwolf.profile.subscriptions.inapp.show()](#showcallback)
+* [overwolf.profile.subscriptions.inapp.show()](#showplanid-theme-callback)
 * [overwolf.profile.subscriptions.inapp.hide()](#hidecallback)
-* [overwolf.profile.subscriptions.inapp.changeTheme()](#changethemecallback)
 
 ## Events Reference
 
@@ -21,5 +20,50 @@ Provides functions and events to help with user profile subscription in-app mana
 
 ## Types Reference
 
-* [overwolf.profile.subscriptions.inapp.InAppSubModalOpenedEvent](#inappsubmodalopenedevent) Object
-* [overwolf.profile.subscriptions.inapp.InAppSubModalClosedEvent](#inappsubmodalclosedevent) Object
+* [overwolf.profile.subscriptions.inapp.InAppSubModalOpenedEvent](#inappsubmodalopenedevent-object) Object
+* [overwolf.profile.subscriptions.inapp.InAppSubModalClosedEvent](#inappsubmodalclosedevent-object) Object
+
+## show(planId, theme, callback)
+#### Version added: 0.170
+#### Permissions required: Subscription #####
+
+> Shows the in-app subscription page as a modal window on top of the current window.
+
+Parameter | Type                                   | Description                                                      |
+----------| ---------------------------------------| ---------------------------------------------------------------- |
+planId    | number                                 | The plan Id to display                                           |   
+theme     | string                                 | Optional. "Dark" or "Light. If not defined, the default is light |   
+callback  | Result => void                         | Returns with the result                                          |   
+
+## hide(callback)
+#### Version added: 0.170
+#### Permissions required: Subscription #####
+
+> Hide the current active in-app subscription modal window.
+
+Parameter | Type                                   | Description                                                      |
+----------| ---------------------------------------| ---------------------------------------------------------------- |
+callback  | Result => void                         | Returns with the result                                          |   
+
+## onInAppSubModalOpened
+#### Version added: 0.170
+
+> Fired when a subscription in-app modal window is opened: with the following structure: [InAppSubModalOpenedEvent](#inappsubmodalopenedevent-object) Object
+
+## InAppSubModalOpenedEvent Object
+
+Parameter       | Type                                           | Description     |
+----------------| -----------------------------------------------|---------------- |
+status          |  string                                        |                 | 
+
+
+## onInAppSubModalClosed
+#### Version added: 0.170
+
+> Fired when a subscription in-app modal window is closed: with the following structure: [InAppSubModalClosedEvent](#inappsubmodalclosedevent-object) Object
+
+## InAppSubModalClosedEvent Object
+
+Parameter       | Type                                           | Description     |
+----------------| -----------------------------------------------|---------------- |
+status          |  string                                        |                 | 

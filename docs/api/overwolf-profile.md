@@ -103,6 +103,7 @@ So at the bottom line, you can always count on the username to be a unique ident
    "installParams":  "{source: "", medium: "", campaign: "", term: "", content: """,
 }
 ```
+
 #### Example data: Failure
 
 If the user is not logged-in, the `success` will be `false`, but you’ll still get the rest of the available data (userId, machineId, etc.)
