@@ -709,8 +709,11 @@ Defines a top-left position in pixels.
 | left  | int  | Defines the position in the X axis from the left in pixels.  *Optional parameter* | 0.78  |
 
 ## focus_game_takeover options
+
 In games such as Overwatch and World of Tanks, which have a state without a mouse cursor, the user can’t control the Overwolf app window.
-This flag automatically sets the app window into “exclusive mode” – input don’t pass to the game, and a cursor is available.
+This flag automatically sets the app window into "exclusive mode" – input don’t pass to the game, and a cursor is available.
+
+Note that some of the games (e.g [CS:GO](overwolf-games-events-csgo)) can run in "trusted mode," which disable the "exclusive mode" in the game and makes it impossible to  interact with your OW app window.
 
 You can defines how the “exclusive mode” should be turned off:
 
