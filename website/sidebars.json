@@ -56,7 +56,7 @@
 			"overwolf.media":
 			["api/overwolf-media", "api/overwolf-media-audio", "api/overwolf-media-replays","api/overwolf-media-videos", "api/auto-highlights"],
 			"overwolf.os": ["api/overwolf-os","api/overwolf-os-tray"],
-			"overwolf.profile":	["api/overwolf-profile", "api/overwolf-profile-subscriptions"],
+			"overwolf.profile":	["api/overwolf-profile", "api/overwolf-profile-subscriptions","api/overwolf-profile-subscriptions-inapp"],
 			"overwolf.settings":
 			["api/overwolf-settings","api/overwolf-settings-hotkeys", "api/overwolf-settings-language", "api/overwolf-settings-games"],
 			"overwolf.social":
