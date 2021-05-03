@@ -116,7 +116,7 @@ Now, they are saved to the DB in an app context, also for existing installations
 
 #### Bug fixes
 
-* DirectX 11 games should no longer minimize when spamming Overwolf windows.
+* DirectX 11 games should no longer be minimized while `overwolf.windows.restore()` is being used consecutively.
 
 #### Game events
 
