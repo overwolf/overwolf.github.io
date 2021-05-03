@@ -75,4 +75,8 @@ If a user canceled their subscription or the subscription expired while the app 
 
 And there you have it! These are the basics of subscribing users to your app. We encourage you to figure out valuable premium plans and subscription features that will motivate your users to go premium. 
 
+## Notes
 
+As the app owner, you have the option to add subscribers (usually for testing) through your dev console. Note that using this method is not the best way to test, as sync and other issues might prevent the new subscriber from being displayed as an active subscriber in the OW client settings page or even through the API (getActivePlans() can return 0 active subscriptions for example).
+
+Therefore, the best way to test subscription-related issues is to follow the end-user scenario - open the plan page, hit the subscribe button, and purchase a test subscription.  
