@@ -10,6 +10,10 @@ Please read the [overwolf.games.events](overwolf-games-events) documentation pag
 21598
 :::
 
+:::caution Service Termination Notice
+Support for the PUBG Lite game will be disabled permanently from Apr. 2021 since PUBG Lite will be shut down at that date. In addition, we will remove all the related content from our site.
+:::
+
 ## Sample Apps
 * [PUBG game events sample app](https://github.com/overwolf/events-sample-apps)
 

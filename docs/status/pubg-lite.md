@@ -16,6 +16,10 @@ sidebar_label: PUBG Lite
 <!-- importing games metadata -->
 <script src="/js/games_metadata.js"></script>
 
+:::caution Service Termination Notice
+Support for the PUBG Lite game will be disabled permanently from Apr. 2021 since PUBG Lite will be shut down at that date. In addition, we will remove all the related content from our site.
+:::
+
 <div id="gameEventsStatus">
   <script> const GameID = 21598; const DocsLink = "../api/overwolf-games-events-pubg-lite";</script>
   <script type="text/jsx" src="/jsx/specificGameEventsStatus.jsx"></script>
