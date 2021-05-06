@@ -45,8 +45,7 @@ And on the "Rating and Reviews" page in the dev console, where you can reply to 
 #### A few important notes
 
 * Only one reply per review. This means that after adding your response, you can only remove or edit it - but not add another reply.
-* Users can't respond to your reply, nor can they create a thread/discussion, etc. They can, h
-ever, edit their own review.
+* Users can't respond to your reply, nor can they create a thread/discussion, etc. They can, however, edit their own review.
 * Users does not receive any notification that you replied to their review. 
 
 In future versions, we will add more features, such as notifying users when someone replies to their review.
