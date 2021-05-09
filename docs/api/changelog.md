@@ -39,6 +39,9 @@ Note that the work on the documentation for this version is still in-progress.
 * [Rocket League](overwolf-games-events-rocket-league)
   * New info update under:
     * game_info
+* [Apex Legends](overwolf-games-events-apex-legends)
+  * New "Arena" game mode will be enabled in the near future.
+
 
 ## Version 0.169 (Apr. 2021)
 
