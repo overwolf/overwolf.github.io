@@ -17,7 +17,7 @@ TeamSpeak is a way for gamers to communicate using text and voice as they play. 
 
 ## Downloads
 
-* You can download the plugin from our [GitHub rtepository](https://github.com/overwolf/teamspeak-overwolf).
+* You can download the plugin from our [GitHub repository](https://github.com/overwolf/teamspeak-overwolf).
 * A sample Overwolf app using the TeamSpeak plugin can be found [here](https://github.com/overwolf/teamspeak-overwolf/tree/master/sampleApp).
 
 ## Unblock DLL's
