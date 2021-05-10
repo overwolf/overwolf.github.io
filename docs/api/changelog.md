@@ -14,14 +14,18 @@ Note that the work on the documentation for this version is still in-progress.
 
 #### API
 
-* App Channels: Channels are no longer exclusive to the Overwolf client, apps can now also have channels; Creators can set a specific channel to use a specific version, this way they can super easily create and distribute beta versions for their apps.
-  * **Note that testing is still in progress. We will announce that soon for general usage.** 
+* **App Channels:**  
+  Channels are no longer exclusive to the Overwolf client, apps can now also have channels; Creators can set a specific channel to use a specific version, this way they can super easily create and distribute beta versions for their apps.
+  * *Note that testing is still in progress. We will announce that soon for general usage.* 
   * API: [The overwolf.settings.setExtensionSettings](overwolf-settings#setextensionsettingsextensionsettings-callback) function now accepts a new property in its [GeneralExtensionSettings](overwolf-settings#generalextensionsettings-object) object called `channel`, this will set the app to a specific channel.
-* Subscriptions API: 
-  * New function, [overwolf.profile.subscriptions.getDetailedActivePlans()](overwolf-profile-subscriptions#getdetailedactiveplanscallback) - Get more details about the subscription.
+* **In-app Subscriptions flow:**  
+  We now give Creators the option to show the subscription modal inside their apps. You will never have to send the users to the store again.
+  * In order for this feature to work, the Creator will need to add `Subscription` to the “Permissions” array in the app’s `manifest.json` file.
   * New API, [overwolf.profile.subscriptions.inapp](overwolf-profile-subscriptions-inapp): Allow apps to launch the subscription window inside their app and change subscription through the app (includs new permission: "subscription").
-  * [overwolf.profile.SubscriptionState](overwolf-profile-subscriptions#subscriptionstate-enum) - new enum that define the possible subscription states.
-* [overwolf.profile.getCurrentUser](overwolf-profile#getcurrentusercallback) - now also returns displayName.
+  * API: New function introduced to return additional details about the subscribed user, such as expiry date and subscription state:  
+    [overwolf.profile.subscriptions.getDetailedActivePlans()](overwolf-profile-subscriptions#getdetailedactiveplanscallback).
+  *  new enum with the 3 available subscription states: active, cancelled, and revoked: [overwolf.profile.SubscriptionState](overwolf-profile-subscriptions#subscriptionstate-enum).
+  * [overwolf.profile.getCurrentUser](overwolf-profile#getcurrentusercallback) - this API now also returns the user’s display name.
 
 #### Platform
 
