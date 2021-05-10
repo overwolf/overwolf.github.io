@@ -275,6 +275,7 @@ Possible Scene values:
 * "Bonsai" - Split map
 * "Ascent" - Ascent map
 * "Port" - Icebox map
+* "Foxtrot" - Breeze map
 * "Range" - Practice Range map
 * "CharacterSelectPersistentLevel" - Character Selection
 
