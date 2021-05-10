@@ -14,6 +14,8 @@ Note that the work on the documentation for this version is still in-progress.
 
 #### API
 
+* App Channels: Channels are no longer exclusive to the Overwolf client, apps can now also have channels; Creators can set a specific channel to use a specific version, this way they can super easily create and distribute beta versions for their apps.
+  * API: [The overwolf.settings.setExtensionSettings](overwolf-settings#setextensionsettingsextensionsettings-callback) function now accepts a new property in its [GeneralExtensionSettings](overwolf-settings#generalextensionsettings-object) object called `channel`, this will set the app to a specific channel.
 * Subscriptions API: 
   * New function, [overwolf.profile.subscriptions.getDetailedActivePlans()](overwolf-profile-subscriptions#getdetailedactiveplanscallback) - Get more details about the subscription.
   * New API, [overwolf.profile.subscriptions.inapp](overwolf-profile-subscriptions-inapp): Allow apps to launch the subscription window inside their app and change subscription through the app (includs new permission: "subscription").

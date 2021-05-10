@@ -424,6 +424,7 @@ Parameter                   | Type               | Description                  
 --------------------------- | -------------------| ------------------------------------------------------------------------- |
 auto_launch_with_overwolf   | bool               | Set your app to auto-launch when the OW client starts. See [notes](#auto_launch_with_overwolf-notes).     |
 exit_overwolf_on_exit       | bool               | Set the OW client to auto-shutdown when your OW app closes. See [notes](#exit_overwolf_on_exit-notes).|
+channel                     | string             | Set the app to a specific channel. See [notes](#channel-notes).|
 
 :::warning
 The exit_overwolf_on_exit option shouldn’t be used without Overwolf’s permission
@@ -433,9 +434,16 @@ The exit_overwolf_on_exit option shouldn’t be used without Overwolf’s permis
 {
     "settings": {
         "auto_launch_with_overwolf": true,
-        "exit_overwolf_on_exit": false
+        "exit_overwolf_on_exit": false,
+        "channel": "channel_name"
     }
 }
+```
+
+Usage example:
+
+```js
+SetExtensionSettings({"auto_launch_with_overwolf": true, channel: 'channel_name'}, callback).
 ```
 
 #### `auto_launch_with_overwolf` notes
@@ -450,6 +458,11 @@ The exit_overwolf_on_exit option shouldn’t be used without Overwolf’s permis
 * If you would like to set app auto-launch with OW client, you should add the "Shutdown" permission to your app's [manifest permissions list](manifest-json#permissions-array).
 * Currently you can NOT set the same auto-exit with OW client using the manifest. Maybe we will add this feature in the future.
 * Overwolf client no not closes when an app that was using that setting has crashed, however, it will still close Overwolf if the user has dismissed the crash notification or didn’t click on the "Relaunch" button in that same notification.
+
+#### `channel` notes
+
+* You should pre-define your app channels in your dev console.
+* You can set a specific channel to use a specific version, this way you can super easily create and distribute beta versions for your apps.
 
 ## GetFpsSettingsResult Object
 
