@@ -43,6 +43,8 @@ Note that the work on the documentation for this version is still in-progress.
 
 * Support for the COD: Warzone game has been disabled temporarily.
 * Support for the PUBG Lite game will be disabled permanently from Apr. 2021 since PUBG Lite will be shut down at that date. In addition, we will remove all the content from our site.
+* * [VALORANT](overwolf-games-events-valorant)
+  * New supported map - Breeze.
 * [Rocket League](overwolf-games-events-rocket-league)
   * New info update under:
     * game_info
