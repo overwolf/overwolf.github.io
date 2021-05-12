@@ -75,7 +75,15 @@ Data Example:
 
 Event       | Event Data   | Fired When    | Notes              | Since GEP Ver. |
 ------------| -------------| --------------| ------------------ | --------------|
-kill        | totalKills – total kills for player in match |Player has killed an enemy| | 70.0  |
+kill        | totalKills – total kills for player in match |Player has killed an enemy|See [notes](#kill-note) | 70.0  |
+
+#### *kill* note
+
+Data Example:
+
+```json
+{"events":[{"name":"kill","data":"{  "totalKills": 1}"}]}
+```
 
 ## `death`
 
@@ -83,7 +91,16 @@ kill        | totalKills – total kills for player in match |Player has killed 
 
 Event       | Event Data   | Fired When    | Notes              | Since GEP Ver. |
 ------------| -------------| --------------| ------------------ | --------------|
-death        | totalDeaths – total deaths of the player in a match |Player has died| | 70.0  |
+death        | totalDeaths – total deaths of the player in a match |Player has died| See [notes](#death-note)| 70.0  |
+
+#### *death* note
+
+Data Example:
+
+```json
+{"events":[{"name":"death","data":"{  "totalDeaths": 1}"}]}
+```
+
 
 ## `assist`
 
@@ -91,7 +108,16 @@ death        | totalDeaths – total deaths of the player in a match |Player has
 
 Event       | Event Data   | Fired When    | Notes              | Since GEP Ver. |
 ------------| -------------| --------------| ------------------ | --------------|
-assist        | 	totalAssists – total assists for user it match |Player has assisted in killing an enemy| | 70.0  |
+assist        | 	totalAssists – total assists for user it match |Player has assisted in killing an enemy|See [notes](#assist-note)| 70.0  |
+
+#### *assist* note
+
+Data Example:
+
+```json
+{"events":[{"name":"assist","data":"{  "totalAssists": 1}"}]}
+```
+
 
 ## `headshot`
 
@@ -101,13 +127,29 @@ Event       | Event Data   | Fired When    | Notes              | Since GEP Ver.
 ------------| -------------| --------------| ------------------ | --------------|
 headshot    | headshotsInRound – total headshots for user in the <b>current round</b> |Player has gained a kill with a headshot| Fired alongside kill event	 | 70.0  |
 
+#### *headshot* note
+
+Data Example:
+
+```json
+{"events":[{"name":"headshot","data":"{  "headshotsInRound": 1}"}]}
+```
+
 ## `round_start`
 
 ### Events
 
 Event       | Event Data   | Fired When    | Notes              | Since GEP Ver. |
 ------------| -------------| --------------| ------------------ | --------------|
-round_start | <ul><li>num_of_rounds – total number of rounds in current match</li><li>player_team – CT/T</li> | A new round has began | |     70.0      |
+round_start | <ul><li>num_of_rounds – total number of rounds in current match</li><li>player_team – CT/T</li> | A new round has began |See [notes](#round_start-note)|     70.0      |
+
+#### *round_start* note
+
+Data Example:
+
+```json
+{"events":[{"name":"round_start","data":"{  "num_of_rounds": 1,  "player_team": "T"}"}]}
+```
 
 ## `match_start`
 
@@ -115,7 +157,15 @@ round_start | <ul><li>num_of_rounds – total number of rounds in current match<
 
 Event       | Event Data   | Fired When    | Notes              | Since GEP Ver. |
 ------------| -------------| --------------| ------------------ | --------------|
-match_start |     None     |A new match has started|            |      70.0     |
+match_start |     None     |A new match has started|See [notes](#match_start-note)|      70.0     |
+
+#### *match_start* note
+
+Data Example:
+
+```json
+{"events":[{"name":"match_start","data":"{  "player_team": null}"}]}
+```
 
 ## `match_end`
 
@@ -123,7 +173,16 @@ match_start |     None     |A new match has started|            |      70.0     
 
 Event       | Event Data   | Fired When    | Notes              | Since GEP Ver. |
 ------------| -------------| --------------| ------------------ | --------------|
-match_end   |     None     |Match has ended|                    |      70.0     |
+match_end   |     None     |Match has ended|See [notes](#match_end-note)|      70.0     |
+
+
+#### *match_end* note
+
+Data Example:
+
+```json
+{"events":[{"name":"match_end","data":"{}"}]}
+```
 
 ## `team_round_win`
 
@@ -131,7 +190,16 @@ match_end   |     None     |Match has ended|                    |      70.0     
 
 Event       | Event Data   | Fired When    | Notes              | Since GEP Ver. |
 ------------| -------------| --------------| ------------------ | --------------|
-team_round_win|     None     |<ul><li>winningTeam – the team that won the round (CT/T)</li><li>bomb – bomb status (exploded/defused/planted)|   |      70.0     |
+team_round_win|     None     |<ul><li>winningTeam – the team that won the round (CT/T)</li><li>bomb – bomb status (exploded/defused/planted)| See [notes](#team_round_win-note) |      70.0     |
+  
+
+#### *team_round_win* note
+
+Data Example:
+
+```json
+{"events":[{"name":"team_round_win","data":"{  "winningTeam": "T",  "bomb": null}"}]}
+```
   
 ## `bomb_planted`
 
@@ -139,7 +207,15 @@ team_round_win|     None     |<ul><li>winningTeam – the team that won the roun
 
 Event       | Event Data   | Fired When    | Notes              | Since GEP Ver. |
 ------------| -------------| --------------| ------------------ | --------------|
-bomb_planted|     None     |A bomb has been planted (by any player)|            |      70.0     |
+bomb_planted|     None     |A bomb has been planted (by any player)| See [notes](#bomb_planted-note) |      70.0     |
+
+#### *bomb_planted* note
+
+Data Example:
+
+```json
+{"events":[{"name":"bomb_planted","data":"{}"}]}
+```
 
 ## `bomb_change`
 
@@ -147,7 +223,17 @@ bomb_planted|     None     |A bomb has been planted (by any player)|            
 
 Event       | Event Data   | Fired When    | Notes              | Since GEP Ver. |
 ------------| -------------| --------------| ------------------ | --------------|
-bomb_change |Bomb state (planted / exploded / defused)|Bomb state was changed|  |      70.0     |
+bomb_change |Bomb state (planted / exploded / defused)|Bomb state was changed|See [notes](#bomb_change-note)|      70.0     |
+
+#### *bomb_change* note
+
+Data Example:
+
+```json
+{"events":[{"name":"bomb_change","data":"{  "state": "planted"}"}]}
+{"events":[{"name":"bomb_change","data":"{  "state": "exploded"}"}]}
+{"events":[{"name":"bomb_change","data":"{  "state": "defused"}"}]}
+```
 
 ## `reloading`
 
@@ -155,8 +241,16 @@ bomb_change |Bomb state (planted / exploded / defused)|Bomb state was changed|  
 
 Event       | Event Data   | Fired When    | Notes              | Since GEP Ver. |
 ------------| -------------| --------------| ------------------ | --------------|
-reloading |<ul><li>weapon_name</li><li>weapon_current_ammo</li><li>weapon_max_ammo</li><li>weapon_type| Player reloads his weapon | |70.0
-  
+reloading |<ul><li>weapon_name</li><li>weapon_current_ammo</li><li>weapon_max_ammo</li><li>weapon_type| Player reloads his weapon |See [notes](#reloading-note)|70.0
+
+#### *reloading* note
+
+Data Example:
+
+```json
+{"events":[{"name":"reloading","data":"{  "weapon_name": "weapon_glock",  "weapon_current_ammo": 3,  "weapon_max_ammo": 20,  "weapon_type": "Pistol"}"}]}
+```
+
 ## `fired`
 
 ### Events
@@ -164,7 +258,15 @@ reloading |<ul><li>weapon_name</li><li>weapon_current_ammo</li><li>weapon_max_am
 Event       | Event Data   | Fired When    | Notes              | Since GEP Ver. |
 ------------| -------------| --------------| ------------------ | --------------|
 fired       |<ul><li>weapon_name</li><li>weapon_current_ammo</li><li>weapon_max_ammo</li><li>weapon_type|  | "fired" is not available on "Arms Race" and "Demolition" modes | 70.0  |
-  
+
+### *fired* note
+
+Data Example:
+
+```json
+{"events":[{"name":"fired","data":"{  "weapon_name": "weapon_glock",  "weapon_current_ammo": 19,  "weapon_max_ammo": 20,  "weapon_type": "Pistol"}"}]}
+```
+
 ## `weapon_change`
 
 ### Events
@@ -193,7 +295,15 @@ weapon_change| <ul><li>weapon_name</li><li>weapon_type |Player switches weapons|
 
 Event       | Event Data   | Fired When    | Notes              | Since GEP Ver. |
 ------------| -------------| --------------| ------------------ | --------------|
-weapon_acquired| <ul><li>weapon_name</li><li>weapon_type |Player acquired a new weapon (either purchased or picked up)|  | 70.0  |
+weapon_acquired| <ul><li>weapon_name</li><li>weapon_type |Player acquired a new weapon (either purchased or picked up)|See [notes](#weapon_acquired-note)| 70.0  |
+
+#### *weapon_acquired* note
+
+Data Example:
+
+```json
+{"events":[{"name":"weapon_acquired","data":"{  "weapon_name": "weapon_hkp2000",  "weapon_type": "Pistol"}"}]}
+```
 
 ## `player_activity_change`
 
@@ -201,7 +311,15 @@ weapon_acquired| <ul><li>weapon_name</li><li>weapon_type |Player acquired a new 
 
 Event       | Event Data   | Fired When    | Notes              | Since GEP Ver. |
 ------------| -------------| --------------| ------------------ | --------------|
-player_activity_change | <ul><li>playing</li><li>menu |<ul><li>The player started playing</li><li>The player entered the game’s menu | | 70.0  |
+player_activity_change | <ul><li>playing</li><li>menu |<ul><li>The player started playing</li><li>The player entered the game’s menu |See [notes](#player_activity_change-note)| 70.0  |
+
+#### *player_activity_change* note
+
+Data Example:
+
+```json
+{"events":[{"name":"player_activity_change","data":"{  "activity": "playing"}"}]}
+```
 
 ## `team_set`
 
@@ -209,8 +327,15 @@ player_activity_change | <ul><li>playing</li><li>menu |<ul><li>The player starte
 
 Event       | Event Data   | Fired When    | Notes              | Since GEP Ver. |
 ------------| -------------| --------------| ------------------ | --------------|
-team_set    |<ul><li>CT</li><li>T|The player selected a team|   |      70.0     |
+team_set    |<ul><li>CT</li><li>T|The player selected a team|See [notes](#team_set-note)|      70.0     |
 
+#### *team_set* note
+
+Data Example:
+
+```json
+{"events":[{"name":"team_set","data":"{  "team": "T"}"}]}
+```
 
 ## `match_info`
 
@@ -298,6 +423,8 @@ Data Example:
 
 ```json
 {"info":{"match_info":{"match_outcome":"win"}},"feature":"match_info"}
+{"info":{"match_info":{"match_outcome":"lose"}},"feature":"match_info"}
+
 ```
 
 ## `info`
@@ -306,17 +433,65 @@ Data Example:
 
 key               | Category    | Values                    | Notes                 | Since GEP Ver. |
 ----------------- | ------------| ------------------------- | --------------------- | ------------- |
-totalKills | player  |	Total kills in a match	            |                       |    70.0       |
-totalDeaths | player  |	Total deaths in a match		    |                       |    70.0       |
-totalMvps | player  |	Total MVP awards	 	            |                       |     70.0       |
-score | player  |	Score in a match	            |                       |     70.0       |
-team | player  |	T / CT	                            |                       |     70.0       |
-steamid | player  |	The player’s steam id	            |                       |     70.0       |
+totalKills | player  |	Total kills in a match	            | See [notes](#totalKills-note)|    70.0       |
+totalDeaths | player  |	Total deaths in a match		    | See [notes](#totalDeaths-note) |    70.0       |
+totalMvps | player  |	Total MVP awards	 	            |See [notes](#totalMvps-note) |     70.0       |
+score | player  |	Score in a match	            | See [notes](#score-note) |     70.0       |
+team | player  |	T / CT	                            |See [notes](#team-note)|     70.0       |
+steamid | player  |	The player’s steam id	            |See [notes](#steamid-note)|     70.0       |
 map | round            |	Map name	            | See [notes](#map-note) |     70.0       |
-mode | round  |	Map mode (for example: "casual")            |                       |     70.0       |
-numOfRound | round  |	Round number in the match (starting 0)|                     |     70.0       |
-phase | round  |Match phase<ul><li>warmup</li><li>live</li><li>freezetime</li><li>over|    |     70.0       |
-scene | scene  |<ul><li>MainMenu</li><li>LoadingScreen</li><li>Game</li><li>MenuInGame(ESC)|  |     70.0       |
+mode | round  |	Map mode (for example: "casual")            |See [notes](#mode-note)|     70.0       |
+numOfRound | round  |	Round number in the match (starting 0)|See [notes](#numOfRound-note)|     70.0       |
+phase | round  |Match phase<ul><li>warmup</li><li>live</li><li>freezetime</li><li>over|See [notes](#phase-note)|     70.0       |
+scene | scene  |<ul><li>MainMenu</li><li>LoadingScreen</li><li>Game</li><li>MenuInGame(ESC)|See [notes](#scene-note)|     70.0       |
+
+#### *totalKills* note
+
+Data Example:
+
+```json
+{"info":{"player":{"totalKills":"1"}},"feature":"info"}
+```
+
+#### *totalDeaths* note
+
+Data Example:
+
+```json
+{"info":{"player":{"totalDeaths":"1"}},"feature":"info"}
+```
+
+#### *totalMvps* note
+
+Data Example:
+
+```json
+{"info":{"player":{"totalMvps":"1"}},"feature":"info"}
+```
+
+#### *score* note
+
+Data Example:
+
+```json
+{"info":{"player":{"score":"2"}},"feature":"info"}
+```
+
+#### *team* note
+
+Data Example:
+
+```json
+{"info":{"player":{"team":"CT"}},"feature":"info"}
+```
+
+#### *steamId* note
+
+Data Example:
+
+```json
+{"info":{"player":{"steamid":"76561197971316549"}},"feature":"info"}
+```
 
 #### *map* note
 
@@ -492,6 +667,42 @@ War Games Map names:
 
 ```json
 {"info":{"match_info":{"game_mode":"Offline War Games Dizzy"}},"feature":"match_info"}
+```
+
+#### *mode* note
+
+Data Example:
+
+```json
+{"info":{"round":{"mode":"casual"}},"feature":"info"}
+```
+
+#### *numOfRound* note
+
+Data Example:
+
+```json
+{"info":{"round":{"numOfRound":"1"}},"feature":"info"}
+```
+
+#### *phase* note
+
+Data Example:
+
+```json
+{"info":{"round":{"phase":"live"}},"feature":"info"}
+{"info":{"round":{"phase":"freezetime"}},"feature":"info"}
+```
+
+#### *scene* note
+
+Data Example:
+
+```json
+{"info":{"scene":{"scene":"ClientLoading"}},"feature":"info"}
+{"info":{"scene":{"scene":"MainMenu"}},"feature":"info"}
+{"info":{"scene":{"scene":"LoadingScreen"}},"feature":"info"}
+{"info":{"scene":{"scene":"Game"}},"feature":"info"}
 ```
 
 ## `roster`
