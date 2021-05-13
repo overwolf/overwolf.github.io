@@ -33,7 +33,7 @@ Note that the work on the documentation for this version is still in-progress.
 
 #### Dev Console
 
-* Soon
+* Subscriptions statistics page was added
 
 #### Bug fixes
 
