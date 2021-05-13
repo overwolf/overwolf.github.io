@@ -66,6 +66,7 @@ Note that the work on the documentation for this version is still in-progress.
   * overwolf install dir with version number : 'overwolf.io.paths.overwolfInstallationWithVersion'.
   * obs dir : 'overwolf.io.paths.obsBin'.
 * Improved behavior when switching a video to full screen in an Overwolf native window.
+* New event: [overwolf.streaming.onSupportedEncodersUpdated](overwolf-streaming#supportedencodersupdatedevent-object) -  Fired upon support encoder list updated.
 
 #### Platform
 

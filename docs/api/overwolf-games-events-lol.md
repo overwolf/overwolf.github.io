@@ -1238,7 +1238,7 @@ Data Example:
 
 #### *region* note
 
-For a full list of regions please visit the official Riot's API [here](https://developer.riotgames.com/docs/lol) (under "Platform Routing Values").
+For a full list of regions and Riot Games Servers please visit [here](https://leagueoflegends.fandom.com/wiki/Servers).
 
 Data Example:
 
@@ -1252,6 +1252,8 @@ Note that if the current client is a PBE client, instead of the region value, it
 {"info":{"summoner_info":{"region":"PBE"}},"feature":summoner_info}
 
 ```
+
+Note that you can also get this info earlier by using the [LEP region info-update](overwolf-games-launchers-events-lol#summoner_info).
 
 #### *champion* note
 

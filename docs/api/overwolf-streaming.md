@@ -39,6 +39,8 @@ Please read all the info about streaming usage and options on our [video capture
 * [overwolf.streaming.onStreamingError](#onstreamingerror)
 * [overwolf.streaming.onStreamingWarning](#onstreamingwarning)
 * [overwolf.streaming.onVideoFileSplited](#onvideofilesplited)
+* [overwolf.streaming.onSupportedEncodersUpdated](#onsupportedencodersupdated)
+
 
 ## Types Reference
 
@@ -505,6 +507,12 @@ overwolf.streaming.onStreamingWarning.addListener(function(result) {
 #### Version added: 0.103
 
 > Fired upon video file splited, with the following structure: [VideoFileSplitedEvent](#videofilesplitedevent-object) Object.
+
+## onSupportedEncodersUpdated
+
+#### Version added: 0.169
+
+> Fired upon support encoder list updated, with the following structure: [SupportedEncodersUpdatedEvent](#supportedencodersupdatedevent-object) Object.
 
 ## StreamSettings Object
 
@@ -1217,6 +1225,12 @@ file_name       |  string                 |                 |
 duration        |  number                 |                 | 
 count           |  number                 |                 | 
 next_file       |  string                 |                 | 
+
+## SupportedEncodersUpdatedEvent Object
+
+Parameter       | Type                                   | Description     |
+----------------| ---------------------------------------|---------------- |
+encoders        | [EncoderData](#encoderdata-object)[]   |                 |
 
 ## eVideoBaseFrameSizeSource enum
 
