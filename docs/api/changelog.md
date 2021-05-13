@@ -50,6 +50,10 @@ Note that the work on the documentation for this version is still in-progress.
     * game_info
 * [Apex Legends](overwolf-games-events-apex-legends)
   * New "Arena" game mode will be enabled in the near future.
+* [Valheim](overwolf-games-events-valheim)
+  * New updates and events under:
+    * game_info
+    * kill
 
 
 ## Version 0.169 (Apr. 2021)
