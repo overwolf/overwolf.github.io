@@ -59,8 +59,24 @@ Data Example:
 
 key               | Category    | Values                    | Notes                 | Since GEP Ver. |
 ----------------- | ------------| ------------------------- | --------------------- | -------------  | 
-name              | game_info   | Local Player Name         |                       |  128.0         |
-ultimate_cooldown | me          | Ultimate ability cooldown (range between 0-100)   |          |  128.0         |
+name              | game_info   | Local Player Name         |  See [notes](#name-note) |  128.0         |
+ultimate_cooldown | me          | Ultimate ability cooldown (range between 0-100)   | See [notes](#ultimate_cooldown-note) |  128.0         |
+
+#### *name* note
+
+Data Example:
+
+```json
+{"info":{"me":{"name":"Shargaas"}},"feature":"me"}
+```
+
+#### *ultimate_cooldown* note
+
+Data Example:
+
+```json
+{"info":{"me":{"ultimate_cooldown":"{"ultimate_cooldown":"20"}"}},"feature":"me"}
+```
 
 ## match_info
 
@@ -104,14 +120,31 @@ Data Example:
 
 key          | Category    | Values                    | Notes                 | Since GEP Ver. |
 ------------ | ------------| ------------------------- | --------------------- | ------------- | 
-match_state  | game_info   | active/inactive           |                       |  128.0       |
+match_state  | game_info   | active/inactive           | See [notes](#match_state-note) |  128.0       |
 
 ### Events
 
 Event       | Event Data   | Fired When    | Notes              | Since GEP Ver. |
 ------------| -------------| --------------| ------------------ | --------------|
-match_start | null         | Match started |                    |     128.0     | 
-match_end   | null         | Match ended   |See [notes](#match-end-note)|     128.0     | 
+match_start | null         | Match started |See [notes](#match_start-note)|     128.0     | 
+match_end   | null         | Match ended   |See [notes](#match_end-note)|     128.0     | 
+
+#### *match_state* note
+
+Data Example:
+
+```json
+{"info":{"game_info":{"match_state":"active"}},"feature":"match_state"}
+{"info":{"game_info":{"match_state":"inactive"}},"feature":"match_state"}
+```
+
+#### *match_start* note
+
+Data Example:
+
+```json
+{"events":[{"name":"match_start","data":""}]}
+```
 
 #### *match_end* note
 
@@ -219,7 +252,16 @@ location  | match_info | See example below  |             |  130.0        |
 
 key          | Category    | Values                    | Notes                 | Since GEP Ver. |
 ------------ | ------------| ------------------------- | --------------------- | ------------- | 
-victory  | match_info   | true/false           |  At the end of the match provides “true” for winning and “false” for losing.                     |  128.0   |
+victory  | match_info   | true/false   |  At the end of the match provides “true” for winning and “false” for losing.  |  128.0   |
+
+#### *victory* note
+
+Data Example:
+
+```json
+{"info":{"match_info":{"victory":"false"}},"feature":"rank"}
+{"info":{"match_info":{"victory":"true"}},"feature":"rank"}
+```
 
 ## match_summary
 
@@ -292,20 +334,58 @@ inventory_XX        | me   | Lists the items picked up into the local player's i
 weapons | me   | Weapons currently used by the local player - there are two slots available marked 0 and 1.</br>Example:</br>`{"weapon0":"Wingman","weapon1":"Alternator SMG"}` |        |    0.130      |
 inUse | me   | Items <b>currently used</b> by the local player.</br>Example:</br>`{"inUse":"Kunai Melee"}` |        |    0.130      |
 
+#### *weapons* note
+
+Data Example:
+
+```json
+{"info":{"me":{"weapons":"{"weapon0":"P2020"}"}},"feature":"inventory"}
+```
+
+#### *inUse* note
+
+Data Example:
+
+```json
+{"info":{"me":{"inUse":"{"inUse":"R-99"}"}},"feature":"inventory"}
+```
+
 ## kill
 
 ### Events
 
 Event        | Event Data                        | Fired When   | Notes              | Since GEP Ver. |
 -------------| ----------------------------------| ----------------------------- | ------------------ | --------------|
-kill | victimName                              | Local player killed another player. `{"victimName": "6ewehrw0lf"}` |                    |     130.0      | 
-knockdown | victimName                              | Local player knocked out another player. `{"victimName":"J0GUR7"}` |                    |    130.0      | 
-assist | victimName                              | Local player participated in a team member’s kill.</br></br>Provided values:</br>1. victimName</br>2. type - knockdown / elimination</br></br>Example:</br></br>`{"victimName":"VioletAlbicocca","type":"knockdown"}` |                    |    130.0      | 
+kill | victimName   | Local player killed another player. `{"victimName": "6ewehrw0lf"}` |                    |     130.0      | 
+knockdown | victimName  | Local player knocked out another player. `{"victimName":"J0GUR7"}` |                    |    130.0      | 
+assist | victimName  | Local player participated in a team member’s kill.</br></br>Provided values:</br>1. victimName</br>2. type - knockdown / elimination</br></br>Example:</br></br>`{"victimName":"VioletAlbicocca","type":"knockdown"}` |                    |    130.0      | 
 
 #### *kill* note
 
 * Currently performing an execution does not catch a kill event. If you want to correctly count the amount of kills despite this issue, please use the new `tabs` key in the match_info feature.
 * Furthermore, assist in a `knockdown` event currently is not supported, only for `elimination`.
+
+Data Example:
+
+```json
+{"events":[{"name":"kill","data":"{  "victimName": "`1[LuL] Sladdi #limbo"}"}]}
+```
+
+#### *knockdown* note
+
+Data Example:
+
+```json
+{"events":[{"name":"knockdown","data":"{  "victimName": "`1 Kixfoxn"}"}]}
+```
+
+#### *assist* note
+
+Data Example:
+
+```json
+{"events":[{"name":"assist","data":"{  "victimName": "kazikov.qwerty",  "type": "elimination"}"}]}
+```
 
 ## revive
 
