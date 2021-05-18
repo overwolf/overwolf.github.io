@@ -129,9 +129,10 @@ Parameter | Type                       | Description                            
 windowName| string                     | The name of the window that was declared in the data.windows section in the manifest   |
 callback  | [(Result: WindowResult)](#windowresult-object) => void | A callback function which will be called with the current window object as a parameter |
 
-#### Note
+#### Notes
 
-* The sizes returned in the callback already consider the DPI scaling (to be fixed by version 0.170).
+* If the window does not exist - the function return null in the sizes.
+* If the window exists - the sizes returned in the callback already consider the DPI scaling (to be fixed by version 0.170).
 
 ## obtainDeclaredWindow(windowName, overrideSetting, callback)
 #### Version added: 0.78
@@ -144,9 +145,10 @@ windowName      | string                                              | The name
 overrideSetting	| [WindowProperties](#windowproperties-object) Object | Override manifest settings                                                             |
 callback        | [(Result: WindowResult)](#windowresult-object) => void | A callback function which will be called with the current window object as a parameter |
 
-#### Note
+#### Notes
 
-* The sizes returned in the callback already consider the DPI scaling (to be fixed by version 0.170).
+* If the window does not exist - the function return null in the sizes.
+* If the window exists - the sizes returned in the callback already consider the DPI scaling (to be fixed by version 0.170).
 
 ## obtainDeclaredWindow(windowName, useDefaultSizeAndLocation, callback)
 #### Version added: 0.136
@@ -165,9 +167,10 @@ callback                  | [(Result: WindowResult)](#windowresult-object) => vo
 overwolf.windows.obtainDeclaredWindow("main", {useDefaultSizeAndLocation: true}, console.log)
 ```
 
-#### Note
+#### Notes
 
-* The sizes returned in the callback already consider the DPI scaling (to be fixed by version 0.170).
+* If the window does not exist - the function return null in the sizes.
+* If the window exists - the sizes returned in the callback already consider the DPI scaling (to be fixed by version 0.170).
 
 ## dragMove(windowId, callback)
 #### Version added: 0.78
