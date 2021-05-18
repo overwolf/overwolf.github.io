@@ -140,6 +140,8 @@ callback  | ([Result: GetRunningStateResult](#getrunningstateresult-object) => v
 
 This function allows apps to check and perform an update without having to wait for Overwolf to do so automatically.
 
+**Please read our [Recommended extension update flow](#recommended-extension-update-flow).**
+
 Parameter | Type                  | Description                                                                           |
 --------- | ----------------------| ------------------------------------------------------------------------------------- |
 callback  | ([Result: UpdateExtensionResult](#updateextensionresult-object) => void              | Result of the request    |
@@ -412,3 +414,7 @@ TL;DR The flow is `UpdateAvailable => updateExtension() => relaunch()`.
    The button should call [relaunch()](#relaunch).  
 
 4. In a case that your app depends on a sequence of game events, to avoid any app-related flow issues, it's highly recommended to **notify the user and ask for a game restart** as well.
+
+#### Note
+
+In order to test the manual update scenario without initiate auto-update immediately, please delete the folder `%localappdata%\PackagesCache` before calling `updateExtension`.
