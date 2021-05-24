@@ -29,7 +29,7 @@ Note that the work on the documentation for this version is still in-progress.
 
 #### Platform
 
-* Soon
+* .NET 4.8 implementation - we’ve upgraded the .NET version Overwolf uses to 4.8.
 
 #### Dev Console
 
@@ -38,6 +38,8 @@ Note that the work on the documentation for this version is still in-progress.
 #### Bug fixes
 
 * Fix [overwolf.utils.openUrlInOverwolfBrowser](): allow to open tab and redirect back to overwolf-extension when origin URL is at 'externally_connectable' and to tab was open from the same extension.
+* Overwolf no longer reloads apps when a secondary GPU process is being created.
+* Fixed a typo in setRequiredFeatures when getting the “Provider not ready” error, what was once `succedss` is now `success`.
 
 #### Game events
 
