@@ -57,15 +57,39 @@ Data Example:
 
 key               | Category    | Values                    | Notes                 | Since GEP Ver. |
 ----------------- | ------------| ------------------------- | --------------------- | ------------- |
-kills             | match_info  | Total number of kills in the match |              |  110.0        |
+kills             | match_info  | Total number of kills in the match | See [notes](#kill-note) |  110.0        |
+
+#### *kills* note
+
+Data Example:
+
+```json
+{"info":{"match_info":{"kills":"1"}},"feature":"kill"}
+````
 
 ### Events
 
 Event       | Event Data   | Fired When    | Notes              | Since GEP Ver. |
 ------------| -------------| --------------| ------------------ | --------------|
-kill        | totalKills – total kills for player in match         | The local player killed another player | |  110.0.0  |
-knockout    | null     | The local player knocked out another player |  | 110.0.0  |
+kill        | totalKills – total kills for player in match         | The local player killed another player |See [notes](#kill-note)|  110.0.0  |
+knockout    | null     | The local player knocked out another player |See [notes](#knockout-note)| 110.0.0  |
 hit         | isHeadshot – bool(“true” when the hit is a “headshot”)| The local player hits an enemy with a weapon (hits with a pickaxe are not counted) See [notes](#hit-note) |                    |     110.0.0     |
+
+#### *kill* note
+
+Data Example:
+
+```json
+{"events":[{"name":"kill","data":"1"}]}
+```
+
+#### *knockout* note
+
+Data Example:
+
+```json
+{"events":[{"name":"knockout","data":""}]}
+```
 
 #### *hit* note
 
@@ -113,7 +137,15 @@ Data Example:
 
 Event       | Event Data   | Fired When    | Notes              | Since GEP Ver. |
 ------------| -------------| --------------| ------------------ | --------------|
-revived      | null | The local player was revived |                  |  110.0  |
+revived      | null | The local player was revived | See [notes](#revived-note) |  110.0  |
+
+#### *revived* note
+
+Data Example:
+
+```json
+{"events":[{"name":"revived","data":""}]}
+```
 
 ## `death`
 
@@ -121,8 +153,16 @@ revived      | null | The local player was revived |                  |  110.0  
 
 Event      | Event Data                                                              | Fired When                      | Notes              | Since GEP Ver. |
 -----------| ------------------------------------------------------------------------| --------------------------------| ------------------ | --------------|
-death      | null                                                                    | The local player died           |                    |  110.0        |
-knockedout | The name of the player who knocked you out. See [note](#knockedout-note)| The local player is knocked-out |                    |  118.1        |
+death      | null                                                                    | The local player died           | See [notes](#death-note) |  110.0        |
+knockedout | The name of the player who knocked you out. See [note](#knockedout-note)| The local player is knocked-out | See [notes](#knockedout-note) |  118.1        |
+
+#### *death* note
+
+Data Example:
+
+```json
+{"events":[{"name":"death","data":""}]}
+```
 
 #### `knockedout` note
 
@@ -139,20 +179,54 @@ Data example:
 key               | Category    | Values                    | Notes                 | Since GEP Ver. |
 ----------------- | ------------| ------------------------- | --------------------- | ------------- |
 mode              | match_info  | Possible Values:<ul><li>"solo"</li><li>"duo"</li><li>"squad"</li><li>"Playlist_Respawn" (Team Rumble)</li><li>"Playlist_PlaygroundV2" (Creative)</li><li>"Playlist_Creative_PlayOnly" (Playground)</li><li>"Playlist_ShowdownAlt_Solo" (Arena Solo)</li><li>"Playlist_ShowdownAlt_Squads" (Arena Squads)</li><li>"Playlist_Crucible_Solo" (The Combine)</li><li>Playlist_BattleLab</li><li>Playlist_Creative_ZebraWallet_Random</li><li>Playlist_Creative_ZebraWallet_Random2</li>|              |  110.0        |
+
+*Important note* - Fortnite is a game that rotates game modes when the season changes and with patches. Thus it's important to remember that not all values that are listed below are valid at all times. These values change with time and with patches (except for the base modes like solo / duo / etc).
   
 Data example:
 
 ```json
 {"info":{"match_info":{"mode":"solo"}},"feature":"match"}
+{"info":{"match_info":{"mode":"duo"}},"feature":"match"}
+{"info":{"match_info":{"mode":"Playlist_Trios"}},"feature":"match"}
+{"info":{"match_info":{"mode":"squad"}},"feature":"match"}
+{"info":{"match_info":{"mode":"Playlist_ShowdownAlt_Solo"}},"feature":"match"}
+{"info":{"match_info":{"mode":"Playlist_ShowdownAlt_Duos"}},"feature":"match"}
+{"info":{"match_info":{"mode":"Playlist_ShowdownAlt_Trios"}},"feature":"match"}
+{"info":{"match_info":{"mode":"Playlist_Daybreak_PE_Squads"}},"feature":"match"}
+{"info":{"match_info":{"mode":"Playlist_Respawn"}},"feature":"match"}
+{"info":{"match_info":{"mode":"Playlist_BattleLab"}},"feature":"match"}
+{"info":{"match_info":{"mode":"Playlist_Creative_LTM_NewRVB2"}},"feature":"match"}
+{"info":{"match_info":{"mode":"Playlist_Creative_LTM_ProRVB"}},"feature":"match"}
+{"info":{"match_info":{"mode":"Playlist_Creative_LTM_PRO100"}},"feature":"match"}
+{"info":{"match_info":{"mode":"Playlist_Creative_LTM_FinestYTReal2v2"}},"feature":"match"}
+{"info":{"match_info":{"mode":"Playlist_Daybreak_PP_Squads"}},"feature":"match"}
+{"info":{"match_info":{"mode":"Playlist_Papaya"}},"feature":"match"}
+{"info":{"match_info":{"mode":"Playlist_Daybreak_PE_Squads"}},"feature":"match"}
 ```
 
 ### Events
 
 Event       | Event Data   | Fired When    | Notes              | Since GEP Ver. |
 ------------| -------------| --------------| ------------------ | --------------|
-matchStart  | null         | Match started |                    |  110.0  |
-matchEnd    | null         | Match ended   |                    |  110.0  |
+matchStart  | null         | Match started | See [notes](#matchStart-note) |  110.0  |
+matchEnd    | null         | Match ended   | See [notes](#matchEnd-note) |  110.0  |
 
+#### *matchStart* note
+  
+Data Example:
+
+```json
+{"events":[{"name":"matchStart","data":""}]}
+```
+
+#### *matchEnd* note
+  
+Data Example:
+
+```json
+{"events":[{"name":"matchEnd","data":""}]}
+```
+  
 ## `match_info`
 
 ### Info Updates
@@ -165,7 +239,6 @@ matchID   | match_info  |The current match’s ID. See [notes](#matchID-note)|  
 userID   | match_info  |The current user’s ID code. See [notes](#userID-note)|                       |  132.0  |
 ticketID   | match_info  |The current ticket’s ID code. See [notes](#ticketID-note)|                       |  132.0  |
 partyID   | match_info  |The current party’s ID code. See [notes](#partyID-note)|                       |  132.0  |
-
 
 ### Events
 
@@ -250,10 +323,18 @@ Data Example:
 
 key          | Category    | Values                    | Notes                 | Since GEP Ver. |
 ------------ | ------------| ------------------------- | --------------------- | ------------- |
-rank         | match_info  |The player’s rank at the end of the match|         |   110.0       |
-total_teams  | match_info  |Total number of active teams|                  |   110.0       |
-total_players| match_info  |Total number of active players|                |   110.0       |
+rank         | match_info  |The player’s rank at the end of the match| See [notes](#rank-note) |   110.0       |
+total_teams  | match_info  |Total number of active teams| See [notes](#total_teams-note) |   110.0       |
+total_players| match_info  |Total number of active players| See [notes](#total_players-note) |   110.0       |
 
+#### *rank* note
+  
+Data Example:
+
+```json
+{"info":{"match_info":{"rank":"1"}},"feature":"rank"}
+```
+  
 #### *total_teams* note
 
 This is a dynamic variable that is being updated every time a team joins, leaves or dies during the game
@@ -344,9 +425,9 @@ Data Example:
 
 key          | Category    | Values                    | Notes                 | Since GEP Ver. |
 ------------ | ------------| ------------------------- | --------------------- | ------------- |
-nicknames    | match_info  | Names of the players in the user’s team. See [notes](#team-note) |    |   170.0       |
+nicknames    | match_info  | Names of the players in the user’s team. See [notes](#nicknames-note) |    |   170.0       |
 
-#### *team* note
+#### *nicknames* note
 
 Data Example:
 
