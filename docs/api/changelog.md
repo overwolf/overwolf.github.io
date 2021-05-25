@@ -8,9 +8,32 @@ Follow this entry for ongoing updates and changes to the project or tools.
 
 Here you can find our [Developers Roadmap](https://trello.com/b/1V10E4IB/overwolf-roadmap).
 
-## Version 0.170 (In-Progress)
+## Version 0.173 (In-Progress)
 
-Note that the work on the documentation for this version is still in-progress.
+* Note that iterations 171 to 173 were combined into a single iteration. 
+* Note that the work on the documentation for this version is still in-progress.
+
+#### API
+
+* Soon
+
+#### Platform
+
+* Soon
+
+#### Dev Console
+
+* Soon
+
+#### Bug fixes
+
+* Soon
+
+#### Game events
+
+* Soon
+
+## Version 0.170 (May 2021)
 
 #### API
 
