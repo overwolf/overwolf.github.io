@@ -11,11 +11,15 @@ Here you can find our [Developers Roadmap](https://trello.com/b/1V10E4IB/overwol
 ## Version 0.173 (In-Progress)
 
 * Note that iterations 171 to 173 were combined into a single iteration. 
-* Note that the work on the documentation for this version is still in-progress.
+* Note that the work on the documentation for this version is still in-progress.ddddd
 
 #### API
 
-* Soon
+* overwolf.utils.openUrlInDefaultBrowser - enhance the security by checking the scheme and only allow requests to http/s or protocols allowed in the manifest.  
+  * Manifest example: `"data": {"allowed_protocols": { "protocols": ["mailto", "steam"]}}`
+  * 'file' in scheme will always be blocked.
+* Add `processId` to [overwolf.games.getRunningGameInfo](overwolf-games#getrunninggameinfocallback) and [overwolf.games.onGameInfoUpdated](overwolf-games#ongameinfoupdated).
+
 
 #### Platform
 
@@ -27,11 +31,12 @@ Here you can find our [Developers Roadmap](https://trello.com/b/1V10E4IB/overwol
 
 #### Bug fixes
 
-* Soon
+* Extension tray icons would get blurry when changing display settings (try changing DPI from 100% to 175%).
+* Replay API - TurnOffResult typo.
 
 #### Game events
 
-* Soon
+* overwolf.media.replays TurnOffResult typo.
 
 ## Version 0.170 (May 2021)
 

@@ -440,6 +440,7 @@ Parameter            | Type     | Description                                   
 | commandLine        | string   | Returns the game process commandline                                                                | 
 | monitorHandle      | object   | Returns the current monitor handle                                                                  | 
 | windowHandle       | object   | Returns the current app window handle                                                               | 
+| processId          | int      | Returns the current process id of the running game                                                  | 
 
 #### Data example
 
@@ -458,6 +459,7 @@ Parameter            | Type     | Description                                   
     "height":1080,
     "logicalWidth":1920,
     "logicalHeight":1080,
+    "processId": 3840,
     "renderers":[
         "D3D9"
     ],
@@ -526,7 +528,8 @@ Parameter            | Type     | Description                                   
 | detectedRenderer   | string   | Returns the rendering technology detected by the running game                                       | 
 | commandLine        | string   | Returns the game process commandline                                                                | 
 | monitorHandle      | object   | Returns the current monitor handle                                                                  | 
-| windowHandle       | object   | Returns the current game window handle                                                               | 
+| windowHandle       | object   | Returns the current game window handle                                                              | 
+| processId          | int      | Returns the current process id of the running game                                                  | 
 
 #### Example data: Success
 
@@ -545,6 +548,7 @@ Parameter            | Type     | Description                                   
     "height":1080,
     "logicalWidth":1920,
     "logicalHeight":1080,
+    "processId": 3840,
     "renderers":[
         "D3D9"
     ],
@@ -717,6 +721,7 @@ An object containing the game info object in addition to a set of flags indicati
         "height": 1080,
         "logicalWidth": 1920,
         "logicalHeight": 1080,
+        "processId": 3840,
         "renderers": [
             "D3D9",
             "D3D11"
