@@ -34,9 +34,11 @@ These events are not related to real-time game events (kill, death, start/end ma
 * [overwolf.games.GetGameDBInfoResult](#getgamedbinforesult-object) Object
 * [overwolf.games.GetRecentlyPlayedResult](#getrecentlyplayedresult-object) Object
 * [overwolf.games.RunningGameInfo](#runninggameinfo-object) Object
+* [overwolf.games.OverlayInfo](#overlayInfo-object) Object
 * [overwolf.games.GameInfoUpdatedEvent](#gameinfoupdatedevent-object) Object
 * [overwolf.games.MajorFrameRateChangeEvent](#majorframeratechangeevent-object) Object
 * [overwolf.games.GameRendererDetectedEvent](#GameRendererDetectedEvent) Object
+* [overwolf.extensions.GameInfoChangeReason](#gameinfochangereason-enum) Enum
 
 ## getRunningGameInfo(callback)
 
@@ -530,6 +532,8 @@ Parameter            | Type     | Description                                   
 | monitorHandle      | object   | Returns the current monitor handle                                                                  | 
 | windowHandle       | object   | Returns the current game window handle                                                              | 
 | processId          | int      | Returns the current process id of the running game                                                  | 
+| overlayInfo        | [OverlayInfo](#overlayInfo-object) Object  | Returns info about the the running out of process overlays        | 
+
 
 #### Example data: Success
 
@@ -566,8 +570,6 @@ Parameter            | Type     | Description                                   
     }
 }
 ```
-
-
 
 ## GetGameInfoResult Object
 
@@ -704,8 +706,9 @@ An object containing the game info object in addition to a set of flags indicati
 | focusChanged          | bool     | Indicates if there was a change in the game focus status                                            | 0.78  |
 | runningChanged        | bool     | Indicates if there was a change in the game running status                                          | 0.78  |
 | gameChanged           | bool     | Indicates if the gameInfo property represents a different game than before                          | 0.78  |
-| gameOverlayChanged    | bool     | Indicates if OW hooks input device changes when hooking into a game. If true, check if overlayInputHookError is true as well to identify that there is a hooking issue.  | 0.160 |
-| overlayInputHookError | bool     |  Indicates that a hooking error has occurred.                                                       | 0.160 |
+| gameOverlayChanged    | bool     | Indicates if OW hooks input device changes when hooking into a game. If true, check if overlayInputHookError is true as well to identify that there is a hooking issue   | 0.160 |
+| overlayInputHookError | bool     |  Indicates that a hooking error has occurred                                                        | 0.160 |
+| reason                | [GameInfoChangeReason](#gameinfochangereason-enum) enum   |  A detailed info about the hooking error reason | 0.173 |
 
 #### Event data example
 
@@ -735,6 +738,46 @@ An object containing the game info object in addition to a set of flags indicati
     "focusChanged": true,
     "runningChanged": false,
     "gameChanged": false,
-    "gameOverlayChanged": false
+    "gameOverlayChanged": false,
+    "reason": "gameFocusChanged"
 }
 ```
+
+## OverlayInfo Object
+
+Returns info about the current out of process overlays
+
+Parameter            | Type     | Description                                                                                         | 
+---------------------| ---------| --------------------------------------------------------------------------------------------------- | 
+| coexistingApps     | string[] | Detected coexisting apps                                                                            | 
+| inputFailure       | bool     | Global input hook failure detected, machine render is needed.                                       | 
+| hadInGameRender    | bool     | Overlay did render in game                                                                          | 
+| isCursorVisible    | bool     | Returns the title of the game                                                                       | 
+| exclusiveModeDisabled | bool  | exclusiveMode is disabled
+
+#### Data example
+
+```json
+{
+    "coexistingApps":"[]",
+    "inputFailure":false,
+    "hadInGameRender":true,
+    "isCursorVisible":true,
+    "exclusiveModeDisabled":true,
+    
+}
+```
+
+## GameInfoChangeReason enum
+
+Option                | Description                                                 | Notes                                                |
+----------------------| ----------------------------------------------------------- | ---------------------------------------------------- |
+game                  |   |                                                      |
+gameResolutionChanged |   |                                                      |
+gameFocusChanged      |  |                                                      |
+gameChanged           | |                                                      |
+gameLaunched      | |                                                      |
+gameTerminated      |  |                                                      |
+gameRendererDetected      |  |                                                      |
+gameWindowDataChanged      |  |                                                      |
+gameFocusCgameOverlayCoexistenceDetectedhanged      |        |                                                      |
