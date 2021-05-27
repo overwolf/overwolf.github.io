@@ -15,15 +15,14 @@ Here you can find our [Developers Roadmap](https://trello.com/b/1V10E4IB/overwol
 
 #### API
 
-* overwolf.utils.openUrlInDefaultBrowser - enhance the security by checking the scheme and only allow requests to http/s or protocols allowed in the manifest.  
+* overwolf.utils.openUrlInDefaultBrowser - enhance security by checking the scheme and only allow requests to http/s or protocols allowed in the manifest.  
   * Manifest example: `"data": {"allowed_protocols": { "protocols": ["mailto", "steam"]}}`
   * 'file' in scheme will always be blocked.
-* Coexistence API - API/Event to indicate if there is another overlay library running + if we don't manage to render anything, allow the app to give a user message
-  * Refactor overwolf.games.GetRunningGameInfo code - simplify code and reduce memory footprint.
-  * Add `processId` to [overwolf.games.getRunningGameInfo](overwolf-games#getrunninggameinfocallback) and [overwolf.games.onGameInfoUpdated](overwolf-games#ongameinfoupdated).
-  * Add new object, [overwolf.games.OverlayInfo](overwolf-games#overlayInfo-object),  with info about the current out of process overlays.
-  * Add new enum, [GameInfoChangeReason](overwolf-games#gameinfochangereason-enum), to [overwolf.games.GameInfoUpdatedEvent](overwolf-games#gameinfoupdatedevent-object), for a detailed info about the hooking error reason.
-  * Add `gameOverlayInputHookFailure` to [overwolf.games.GameInfoUpdatedEvent](overwolf-games#gameinfoupdatedevent-object), with an error description that you can display to the user, in case of hooking failure.
+* Added `processId` to [overwolf.games.getRunningGameInfo](overwolf-games#getrunninggameinfocallback) and [overwolf.games.onGameInfoUpdated](overwolf-games#ongameinfoupdated).
+* Coexistence API - API/Event to indicate if there is another overlay library running + if Overwolf doesn't manage to render anything, allow the app to give a relevant notification
+  * Added a new object, [overwolf.games.OverlayInfo](overwolf-games#overlayInfo-object),  with info about the current out of process overlays.
+  * Added a new enum, [GameInfoChangeReason](overwolf-games#gameinfochangereason-enum), to [overwolf.games.GameInfoUpdatedEvent](overwolf-games#gameinfoupdatedevent-object), for a detailed info about the hooking error reason.
+  * Added `gameOverlayInputHookFailure` to [overwolf.games.GameInfoUpdatedEvent](overwolf-games#gameinfoupdatedevent-object), with an error description that you can display to the user, in case of hooking failure.
 
 
 #### Platform
