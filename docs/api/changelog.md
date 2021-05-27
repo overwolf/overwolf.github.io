@@ -11,7 +11,7 @@ Here you can find our [Developers Roadmap](https://trello.com/b/1V10E4IB/overwol
 ## Version 0.173 (In-Progress)
 
 * Note that iterations 171 to 173 were combined into a single iteration. 
-* Note that the work on the documentation for this version is still in-progress.ddddd
+* Note that the work on the documentation for this version is still in-progress.
 
 #### API
 
