@@ -188,7 +188,7 @@ Current values:
 * Bomb = Regular game (Unrated).
 * Quick Bomb = Spike Rush.
 * Ranked = 1 = Competitive.
-* Deathmatch = Deatchmatch
+* Deathmatch = Deathmatch
 * Escalation = Escalation
 
 Both of these values also have "custom" value which is identified as a Boolean, either "True" or "False".<br>
