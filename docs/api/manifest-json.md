@@ -338,7 +338,7 @@ A list of additional settings for the app.
 | <a class="anchor" aria-hidden="true" id="disable_dt"></a>disable_dt | bool |  Disable opening of the developer tools for the app (with Ctrl+shift+I). </br>*Default value – “false”* |0.118  |
 | <a class="anchor" aria-hidden="true" id="service_providers"></a>service_providers | [service_providers](#service_providers-object) object |  Extra data to external service providers |0.137  |
 | <a class="anchor" aria-hidden="true" id="developer-game-settings"></a>developer | [developer setting](#developer-settings-object) object|  Additional setting for developers. |0.127  |
-| <a class="anchor" aria-hidden="true" id="disable_cleanup"></a>disable_cleanup | bool |  If set to true, app local data will not be cleaned up after app uninstallation. | 0.147  |
+| <a class="anchor" aria-hidden="true" id="disable_cleanup"></a>disable_cleanup | bool |  If set to true, app localStorage data will not be cleaned up after app uninstallation. | 0.147  |
 | <a class="anchor" aria-hidden="true" id="process_name"></a>process_name | string |  Overrides the default (OverwolfBrowser.exe) process name in task manager. </br> **Please read our [notes](#process_name-notes)** | 0.153  |
 | <a class="anchor" aria-hidden="true" id="max_rotation_log_files"></a>max_rotation_log_files | number | Increase the app's log file rotation (defaults to 10, max is 40). | 0.154  |
 | <a class="anchor" aria-hidden="true" id="url_protocol"></a>url_protocol | [url_protocol](#url_protocol-object) object | Ability to open an application from a browser using a link. | 0.158  |
