@@ -17,6 +17,7 @@ These events are not related to real-time game events (kill, death, start/end ma
 * [overwolf.games.getGameInfo()](#getgameinfogameclassidcallback)
 * [overwolf.games.getGameDBInfo()](#getgamedbinfogameclassidcallback)
 * [overwolf.games.getRecentlyPlayedGames()](#getrecentlyplayedgamesmaxnumofgames-callback)
+* [overwolf.games.getLastRunningGameInfo()](#getlastrunninggameinfocallback)
 
 ## Events Reference
 
@@ -34,11 +35,13 @@ These events are not related to real-time game events (kill, death, start/end ma
 * [overwolf.games.GetGameDBInfoResult](#getgamedbinforesult-object) Object
 * [overwolf.games.GetRecentlyPlayedResult](#getrecentlyplayedresult-object) Object
 * [overwolf.games.RunningGameInfo](#runninggameinfo-object) Object
-* [overwolf.games.OverlayInfo](#overlayInfo-object) Object
+* [overwolf.games.OverlayInfo](#overlayinfo-object) Object
 * [overwolf.games.GameInfoUpdatedEvent](#gameinfoupdatedevent-object) Object
 * [overwolf.games.MajorFrameRateChangeEvent](#majorframeratechangeevent-object) Object
 * [overwolf.games.GameRendererDetectedEvent](#GameRendererDetectedEvent) Object
-* [overwolf.extensions.GameInfoChangeReason](#gameinfochangereason-enum) Enum
+* [overwolf.games.GameInfoChangeReason](#gameinfochangereason-enum) Enum
+* [overwolf.games.KnownOverlayCoexistenceApps](#knownoverlaycoexistenceapps-enum) Enum
+* [overwolf.games.GameInfoType](#gameinfotype-enum) Enum
 
 ## getRunningGameInfo(callback)
 
@@ -97,6 +100,16 @@ Parameter     | Type     | Description                                          
 --------------| -------- | --------------------------------------------------------------------------------- |
 maxNumOfGames | int      | Maximum number of games to receive. Currently we support a maximum of 3 games |
 callback    | [(Result:GetRecentlyPlayedResult)](#getrecentlyplayedresult-object) => void | an array of the most recently played game IDs |
+
+## getLastRunningGameInfo(callback)
+
+#### Version added: 0.173 
+
+> Returns the last played gameinfo (when no game is currently running).
+
+Parameter     | Type             | Description                                                                       |
+--------------| ---------------- | --------------------------------------------------------------------------------- |
+callback      | (Result) => void | Returns with the result                                                           |
 
 ## onGameInfoUpdated
 
@@ -532,7 +545,7 @@ Parameter            | Type     | Description                                   
 | monitorHandle      | object   | Returns the current monitor handle                                                                  | 
 | windowHandle       | object   | Returns the current game window handle                                                              | 
 | processId          | int      | Returns the current process id of the running game                                                  | 
-| overlayInfo        | [OverlayInfo](#overlayInfo-object) Object  | Returns info about the the running out of process overlays        | 
+| overlayInfo        | [OverlayInfo](#overlayinfo-object) Object  | Returns info about the the running out of process overlays        | 
 
 
 #### Example data: Success
@@ -707,8 +720,8 @@ An object containing the game info object in addition to a set of flags indicati
 | runningChanged        | bool     | Indicates if there was a change in the game running status                                          | 0.78  |
 | gameChanged           | bool     | Indicates if the gameInfo property represents a different game than before                          | 0.78  |
 | gameOverlayChanged    | bool     | Indicates if OW hooks input device changes when hooking into a game. If true, check if overlayInputHookError is true as well to identify that there is a hooking issue   | 0.160 |
-| overlayInputHookError | bool     |  Indicates that a hooking error has occurred                                                        | 0.160 |
-| reason                | [GameInfoChangeReason](#gameinfochangereason-enum) enum   |  A detailed info about the hooking error reason | 0.173 |
+| overlayInputHookError | bool     | Indicates that a hooking error has occurred                                                         | 0.160 |
+| reason                | [GameInfoChangeReason](#gameinfochangereason-enum) enum   |  A detailed info about the hooking error reason    | 0.173 |
 
 #### Event data example
 
@@ -737,7 +750,7 @@ An object containing the game info object in addition to a set of flags indicati
     "resolutionChanged": false,
     "focusChanged": true,
     "runningChanged": false,
-    "gameChanged": false,
+    "gameChanged": false,          
     "gameOverlayChanged": false,
     "reason": "gameFocusChanged"
 }
@@ -749,17 +762,18 @@ Returns info about the current out of process overlays
 
 Parameter            | Type     | Description                                                                                         | 
 ---------------------| ---------| --------------------------------------------------------------------------------------------------- | 
-| coexistingApps     | string[] | Detected coexisting apps                                                                            | 
+| coexistingApps     | [KnownOverlayCoexistenceApps](#knownoverlaycoexistenceapps-enum)[] | Detected coexisting apps                                                   | 
 | inputFailure       | bool     | Global input hook failure detected, machine render is needed.                                       | 
-| hadInGameRender    | bool     | Overlay did render in game                                                                          | 
+| hadInGameRender    | bool     | Overwolf overlay did render in game                                                                 |
 | isCursorVisible    | bool     | Returns the title of the game                                                                       | 
-| exclusiveModeDisabled | bool  | exclusiveMode is disabled
+| exclusiveModeDisabled | bool  | ExclusiveMode is disabled                                                                           |
+| oopOverlay         | bool  | is game overlay is OOPO                                                                                |
 
 #### Data example
 
 ```json
 {
-    "coexistingApps":"[]",
+    "coexistingApps":["MSIAfterBurner", "MSIAfterBurner"],
     "inputFailure":false,
     "hadInGameRender":true,
     "isCursorVisible":true,
@@ -770,14 +784,38 @@ Parameter            | Type     | Description                                   
 
 ## GameInfoChangeReason enum
 
-Option                | Description                                                 | Notes                                                |
-----------------------| ----------------------------------------------------------- | ---------------------------------------------------- |
-game                  |   |                                                      |
-gameResolutionChanged |   |                                                      |
-gameFocusChanged      |  |                                                      |
-gameChanged           | |                                                      |
-gameLaunched      | |                                                      |
-gameTerminated      |  |                                                      |
-gameRendererDetected      |  |                                                      |
-gameWindowDataChanged      |  |                                                      |
-gameFocusCgameOverlayCoexistenceDetectedhanged      |        |                                                      |
+Option                          | Description   |
+--------------------------------| --------------|
+game                            |               |
+gameChanged                     |               |
+gameFocusChanged                |               |
+gameLaunched                    |               |
+gameOverlayCoexistenceDetected  |               |
+gameOverlayCursorVisibility     |               |
+gameOverlayExlusiveModeChanged  |               |
+gameOverlayInputHookFailure     |               |
+gameRendererDetected            |               |
+gameResolutionChanged           |               |
+gameTerminated                  |               |
+gameWindowDataChanged           |               |
+
+## GameInfoType enum
+
+Option                          | Description   |
+--------------------------------| --------------|
+Game                            |      0        |
+Launcher                        |      1        |
+
+## KnownOverlayCoexistenceApps enum
+
+Option                          | Description   |
+--------------------------------| --------------|
+Asus                            |               |
+Discord                         |               |
+MSIAfterBurner                  |               |
+Nahimic                         |               |
+Nahimic2                        |               |
+None                            |               |
+ObsStudio                       |               |
+PlaysTV                         |               |
+RazerSynapse                    |               |
