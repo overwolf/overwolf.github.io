@@ -725,7 +725,7 @@ callback               | (Result) => void                                  | Cal
 
 Parameter              | Type                                              | Description                                                               |
 -----------------------| --------------------------------------------------| --------------------------------------------------------------------------|
-zoomFactor             | double                                            | The zoome factor                                                          |
+zoomFactor             | double                                            | The new zoom factor. A value of 0 sets the window to its current default zoom factor. Values greater than 0 specify a (possibly non-default) zoom factor for the window.                                                          |
 windowId		           | string                                            | The window id, empty for current window                                   |
 
 ## onMainWindowRestored
