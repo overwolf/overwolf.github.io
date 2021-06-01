@@ -109,7 +109,7 @@ callback    | [(Result:GetRecentlyPlayedResult)](#getrecentlyplayedresult-object
 
 Parameter     | Type             | Description                                                                       |
 --------------| ---------------- | --------------------------------------------------------------------------------- |
-callback      | (Result) => void | Returns with the result                                                           |
+callback    | [(Result:GetGameInfoResult)](#getgameinforesult-object) => void | Returns info about the game |
 
 ## onGameInfoUpdated
 
