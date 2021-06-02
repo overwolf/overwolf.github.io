@@ -25,7 +25,8 @@ Here you can find our [Developers Roadmap](https://trello.com/b/1V10E4IB/overwol
   * Added a new [KnownOverlayCoexistenceApps](overwolf-games#knownoverlaycoexistenceapps-enum) enum with a list of known apps causing overlay coexistence issues with OW.
   * New API: [overwolf.games.getLastRunningGameInfo()](overwolf-games##getlastrunninggameinfocallback) - returns the last played gameinfo (when no game is currently running). 
   * new API: [overwolf.settings.games.setAutoLaunchEnabled](overwolf-settings-games#setautolaunchenabledgameclassid-callback): allows apps to control what games they auto-launch for following user gesture (similar to performUpdate).
-
+  * New API: [overwolf.os.tray.destroy](overwolf-os-tray#destroy) - Added a new method for removing an extension tray icon and menu immediately.
+  
 #### Platform
 
 * New client settings (Capture => Advanced Settings) with Rate Control and Max Kb/s sliders.

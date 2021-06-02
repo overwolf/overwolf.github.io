@@ -9,6 +9,8 @@ Use this API for windows system tray related functionalities.
 ## Methods Reference
 
 * [overwolf.os.tray.setMenu()](#setmenumenu-callback)
+* [overwolf.os.tray.destroy()](#destroy)
+
 
 ## Events Reference
 
@@ -54,6 +56,16 @@ overwolf.os.tray.setMenu(trayMenu, (res) => {
 
 * A [launcher_icon](manifest-json#meta-launcher_icon) must be set in the manifest.
 * Calling setMenu() is mandatory to get a tray icon.
+
+## destroy()
+#### Version added: 0.173
+#### Permissions required: Tray
+
+> Destroys the tray icon immediately.
+
+Parameter | Type                                                    | Description             |
+--------- | --------------------------------------------------------| ----------------------- |
+none      | none                                                    | no params               |
 
 ## ExtensionTrayMenu Object
 
