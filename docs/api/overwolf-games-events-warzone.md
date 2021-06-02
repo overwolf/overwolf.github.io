@@ -15,7 +15,7 @@ This game is not supported by Overwolf at this time.
 
 Supporting queue-dodging or similar behavior is prohibited.
 
-For more information check our * [Game compliance principles](https://overwolf.github.io/docs/start/game-compliance-guiding-principles)
+For more information check our [Game compliance principles](https://overwolf.github.io/docs/start/game-compliance-guiding-principles)
 :::
 
 ## Sample Apps
