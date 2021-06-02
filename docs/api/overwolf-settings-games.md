@@ -24,6 +24,7 @@ You can also use the following helpful URLs to open the relevant Overwolf game s
 
 * [overwolf.settings.games.getOverlayEnabled()](#getoverlayenabledgameclassid-callback)
 * [overwolf.settings.games.getAutoLaunchEnabled()](#getautolaunchenabledgameclassid-callback)
+* [overwolf.settings.games.setAutoLaunchEnabled()](#setautolaunchenabledgameclassid-callback)
 
 ## Events Reference
 
@@ -55,6 +56,17 @@ callback    | ([Result: OverlayEnabledResult](#overlayenabledresult-object)) => 
 Parameter   | Type      | Description                                                             |
 ----------- | ----------| ----------------------------------------------------------------------- |
 gameClassId | int       | The game ID for which the flag is retrieved for                         |
+callback    | ([Result: AutolaunchEnabledResult](#autolaunchenabledresult-object)) => void  |  A callback function which will be called with the status of the request |
+
+## setAutoLaunchEnabled(gameClassId, callback)
+#### Version added: 0.173
+
+> Sets the current Auto-Launch enabled setting for the calling app in a given game (gameClassId).
+
+Parameter   | Type      | Description                                                             |
+----------- | ----------| ----------------------------------------------------------------------- |
+gameClassId | int       | The game ID for which the flag is set                                   |
+enabled     | bool      | whether auto-launch should be enabled                                   |
 callback    | ([Result: AutolaunchEnabledResult](#autolaunchenabledresult-object)) => void  |  A callback function which will be called with the status of the request |
 
 ## onOverlayEnablementChanged

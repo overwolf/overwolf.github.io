@@ -24,10 +24,11 @@ Here you can find our [Developers Roadmap](https://trello.com/b/1V10E4IB/overwol
   * Added a new [GameInfoChangeReason](overwolf-games#gameinfochangereason-enum) enum to the [overwolf.games.onGameInfoUpdated](overwolf-games#ongameinfoupdated) event,with some info about the hooking error reason. (if an hooking error has occurred).
   * Added a new [KnownOverlayCoexistenceApps](overwolf-games#knownoverlaycoexistenceapps-enum) enum with a list of known apps causing overlay coexistence issues with OW.
   * New API: [overwolf.games.getLastRunningGameInfo()](overwolf-games##getlastrunninggameinfocallback) - returns the last played gameinfo (when no game is currently running). 
+  * new API: [overwolf.settings.games.setAutoLaunchEnabled](overwolf-settings-games#setautolaunchenabledgameclassid-callback): allows apps to control what games they auto-launch for following user gesture (similar to performUpdate).
 
 #### Platform
 
-* Soon
+* New client settings (Capture => Advanced Settings) with Rate Control and Max Kb/s sliders.
 
 #### Dev Console
 
@@ -37,6 +38,10 @@ Here you can find our [Developers Roadmap](https://trello.com/b/1V10E4IB/overwol
 
 * Extension tray icons would get blurry when changing display settings (try changing DPI from 100% to 175%).
 * Replay API - TurnOffResult typo.
+* [GameInfoUpdatedEvent](overwolf-games#gameinfoupdatedevent-object) Object - fixed the issue that runningChanged is not being updated once a game starts running.
+* Fixed the issue that Video recording won't start if game is minimized.
+* Fixed a bug where subs oneapp page sometimes won't open.
+* New Reddit (new.reddit.com) has an issue with escaped space characters in redirects. This fix ensures space (%20) won't be re-encoded to %2B and break the redirect
 
 #### Game events
 

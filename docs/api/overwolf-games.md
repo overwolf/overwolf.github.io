@@ -782,6 +782,10 @@ Parameter            | Type     | Description                                   
 }
 ```
 
+#### Note
+
+When the game terminates (`hadInGameRender: false`) and `coexistingApps` is not empty, you can show the users a message of a possible coexisting overlay issue.
+
 ## GameInfoChangeReason enum
 
 Option                          | Description   |
