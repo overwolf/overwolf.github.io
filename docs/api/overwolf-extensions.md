@@ -202,6 +202,8 @@ overwolf.extensions.getServiceConsumers(console.info) {
 
 > Fires when the current app is launched while already running. This is useful in the case where the app has custom logic for clicking its dock button while it is already running.
 
+Note that this event is also fired when the app is set for auto-launch in the manifest. In this case, the "source" parameter value will be "gamelaunchevent".
+
 ### The origin string
 
 The event returns an `origin` string which returns what triggered the app launch:
