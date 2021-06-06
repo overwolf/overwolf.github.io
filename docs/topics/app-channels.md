@@ -17,6 +17,14 @@ In addition to the "Production" server, you have the "Testing server." This serv
 
 For example, if one of your testers installed the "beta" channel version of your app, using the unique link that you supplied - you can get a list of bugs from him, fix them, and quickly distribute an improved version for your "beta" channel users.
 
+## How to create a new App Channel
+
+As mentioned above, you can easily create multiple app channels for your app through your dev console.
+
+Dashboard => Release Managment => Testing => Create Channel.
+
+Shortly we will update with some screenshots and more details.
+
 ## The App Channels API
 
 You can implement the channels feature directly in your app, using the app channels API. 
