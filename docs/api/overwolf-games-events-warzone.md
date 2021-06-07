@@ -13,7 +13,7 @@ Please read the [overwolf.games.events](overwolf-games-events) documentation pag
 :::warning
 This game is not supported by Overwolf at this time.
 
-Supporting queue-dodging or similar behavior is prohibited.
+When developing your app, you must comply with Activation’s Call of Duty:Warzone terms and conditions. Supporting que dodging, interfering with matchmaking or any such behavior is strictly prohibited, and will not be approved. If you have any doubt, please contact us directly before starting development.
 
 For more information check our [Game compliance principles](https://overwolf.github.io/docs/start/game-compliance-guiding-principles)
 :::
