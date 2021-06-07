@@ -33,7 +33,7 @@ Here you can find our [Developers Roadmap](https://trello.com/b/1V10E4IB/overwol
 
 #### Dev Console
 
-* Soon
+* App Channels - a new feature that enables you to create and distribute different app versions for your users /testers. The first part of this feature [announced already on v0.170](#api-1), and now [the second](../topics/app-channels) (and last) part is released - the app channels management tools from the dev console. 
 
 #### Bug fixes
 
