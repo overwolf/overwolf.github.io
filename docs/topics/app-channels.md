@@ -10,15 +10,15 @@ This article will explain what App Channels are and how to create a new app chan
 
 Channels are no longer exclusive to the Overwolf client, and your app can now also have channels; You can set a specific channel to use a particular version. This way, you can super easily create and distribute beta versions for your app.
 
-## The "Production" and "Testing" servers
+## The "Production" and "Testing" Environments
 
-Until now, you worked with a single release server: the "Production" server. This server stores your latest public version of your app (and previous versions), enabling you to release easily and quickly updates and new versions to your users and even release "downgrades" for previous versions.
+Until now, you worked with a single release environment: the "Production". This environment stores your latest public version of your app (and previous versions), enabling you to release easily and quickly updates and new versions to your users and even release "downgrades" for previous versions.
 
-In addition to the "Production" server, you have the "Testing server." This server enables you to create multiple "version channels."  Each channel is bound to a different app version and gets a separate download link and release management system.  With this setup, you can quickly release updates, fixes, and new versions for this specific channel. 
+In addition to the "Production" environment, you have the "Testing". This environment enables you to create multiple "version channels."  Each channel is bound to a different app version and gets a separate download link and release management system.  With this setup, you can quickly release updates, fixes, and new versions for this specific channel. 
 
 For example, if one of your testers installed the "beta" channel version of your app, using the unique link that you supplied - you can get a list of bugs from him, fix them, and quickly distribute an improved version for your "beta" channel users.
 
-When your app is ready to deploy - you can release the version to the production release server and phase it to your entire public user base.
+When your app is ready to deploy - you can release the version to the production release environment and phase it to your entire public user base.
 
 ## How to create a new App Channel
 
@@ -26,7 +26,7 @@ As mentioned above, you can easily create multiple app channels for your app thr
 
 ### 1. Create a new app channel
 
-You can see the default `Production` release server in the screenshot, where you can [deploy public version](submit-a-new-version#upload-new-app-version). Under it, you can see the `Testing` server where you can deploy custom and beta versions of your app:
+You can see the default `Production` release environment in the screenshot, where you can [deploy public version](submit-a-new-version#upload-new-app-version). Under it, you can see the `Testing` environment where you can deploy custom and beta versions of your app:
 
 ![production-and-testing](../assets/dev-console/app-channels/production-and-testing.png)
 
