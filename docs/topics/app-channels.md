@@ -62,13 +62,23 @@ After releasing a version to your new channel, you can go back to the channels l
 
 ![channels-list-with-version](../assets/dev-console/app-channels/channels-list-with-version.png)
 
-## Subscribe to an App Channel
+## Download a custom channel version
 
 There are two ways that your testers/users can get the custom app version from a speicif channel:
 
-1. Use the custom download link - as [explained above](#3-get-the-download-link), after creating a new channel and upload an app version into it, a custom download link is generated automatically (an app that bound with the client, behave exactly like the download links from the store).
+1. **Custom download link** - Get the custom download link from the dev console as [explained above](#3-get-the-download-link).  
+  After creating a new channel and upload an app version into it, a custom download link is generated automatically. Clicking on it will download an EXE file which is the latest OW client bound to your app. Exactly like the download links from the store.
 
-2. Use the API - as [explained below](#the-app-channels-api), you can use the API to change the current app channel, enabling you to integrate this feature in your app. For example, a combo box that enables your app users to change the channel from the app's UI.
+2. **API** - Use the API as [explained below](#the-app-channels-api) to change the current app channel, enabling you to integrate this feature in your app. For example, display a combo box that enables your app users to change the channel from the app's UI.
+
+## Apply the channel change
+
+After downloading the custom app version or changing the app channel, you will have to do ONE of the following to apply the change:
+
+1. Restart OW client.
+2. Wait up to four hours for the auto-update process to initiate.
+3. Update the app through the API and relaunch it, using the recommended [extension update flow](../api/overwolf-extensions#recommended-extension-update-flow).
+
 
 ## The App Channels API
 
