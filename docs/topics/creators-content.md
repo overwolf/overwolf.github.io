@@ -26,6 +26,8 @@ Our community is constantly sharing knowledge on different topics: codes to Impa
 </div>
 
 ## Articles
+- [How to Build the Best Support for Your App from Day One?](https://mailchi.mp/overwolf.com/how-to-support) / Overwolf Team
+- 
 - [Level Up Your Coding Skills](https://mailchi.mp/overwolf.com/ui-ux-best-practices) / Leon Machens - Trophy Hunter
 
 - [Discord RPC Plugin](https://github.com/overwolf/community-gists/tree/master/DiscordRPCPlugin) / Francesco Bramato - Trucky Overlay
