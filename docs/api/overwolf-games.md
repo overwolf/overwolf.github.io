@@ -765,7 +765,7 @@ Parameter            | Type     | Description                                   
 | coexistingApps     | [KnownOverlayCoexistenceApps](#knownoverlaycoexistenceapps-enum)[] | Detected coexisting apps                  | 
 | inputFailure       | bool     | Global input hook failure detected, machine restart is needed.                                      | 
 | hadInGameRender    | bool     | Overwolf overlay did render in game                                                                 |
-| isCursorVisible    | bool     | Returns the title of the game.  See [notes](#iscursorvisible-note)                                  | 
+| isCursorVisible    | bool     | Indication if the current game is working in "Exclusive Mode" without a visible cursor, like FPS games.  See [notes](#iscursorvisible-note)  | 
 | exclusiveModeDisabled | bool  | ExclusiveMode is disabled. See [notes](#exclusivemodedisabled-note)                                 |
 | oopOverlay         | bool     | is game overlay is OOPO. See [notes](#oopoverlay-note)                                              |
 
@@ -794,6 +794,9 @@ See also related flag, [exclusiveModeDisabled](#exclusivemodedisabled-note).
 #### **exclusiveModeDisabled** Note
 
 Exclusive mode is for games like FPS, where you don't have a cursor while in the game - so if you ctrl + tab - we turn the background dark - like steam. This is exclusive mode - as in, the input is exclusively going to Overwolf (not the game).
+
+See also related flag, [isCursorVisible](#iscursorvisible-note).  
+
 
 #### **oopOverlay** Note
 
