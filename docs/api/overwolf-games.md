@@ -762,12 +762,12 @@ Returns info about the current out of process overlays
 
 Parameter            | Type     | Description                                                                                         | 
 ---------------------| ---------| --------------------------------------------------------------------------------------------------- | 
-| coexistingApps     | [KnownOverlayCoexistenceApps](#knownoverlaycoexistenceapps-enum)[] | Detected coexisting apps                                                   | 
-| inputFailure       | bool     | Global input hook failure detected, machine render is needed.                                       | 
+| coexistingApps     | [KnownOverlayCoexistenceApps](#knownoverlaycoexistenceapps-enum)[] | Detected coexisting apps                  | 
+| inputFailure       | bool     | Global input hook failure detected, machine restart is needed.                                      | 
 | hadInGameRender    | bool     | Overwolf overlay did render in game                                                                 |
-| isCursorVisible    | bool     | Returns the title of the game                                                                       | 
-| exclusiveModeDisabled | bool  | ExclusiveMode is disabled                                                                           |
-| oopOverlay         | bool  | is game overlay is OOPO                                                                                |
+| isCursorVisible    | bool     | Returns the title of the game.  See [notes](#iscursorvisible-note)                                  | 
+| exclusiveModeDisabled | bool  | ExclusiveMode is disabled. See [notes](#exclusivemodedisabled-note)                                 |
+| oopOverlay         | bool     | is game overlay is OOPO. See [notes](#oopoverlay-note)                                              |
 
 #### Data example
 
@@ -777,14 +777,27 @@ Parameter            | Type     | Description                                   
     "inputFailure":false,
     "hadInGameRender":true,
     "isCursorVisible":true,
-    "exclusiveModeDisabled":true,
-    
+    "exclusiveModeDisabled":true,   
 }
 ```
 
 #### Note
 
 When the game terminates (`hadInGameRender: false`) and `coexistingApps` is not empty, you can show the users a message of a possible coexisting overlay issue.
+
+#### **isCursorVisible** Note
+
+Usually used for FPS games - when you are playing, you won't have a cursor - but if you Ctrl + Tab, you will. This can give the app an indication of this (i.e., can the user click an X to close the app window, or does he have to use a hotkey). Not relevant for games like LoL, where the user has a cursor.
+
+See also related flag, [exclusiveModeDisabled](#exclusivemodedisabled-note).  
+
+#### **exclusiveModeDisabled** Note
+
+Exclusive mode is for games like FPS, where you don't have a cursor while in the game - so if you ctrl + tab - we turn the background dark - like steam. This is exclusive mode - as in, the input is exclusively going to Overwolf (not the game).
+
+#### **oopOverlay** Note
+
+OOP stands for "Out of process" Overlay - relevant for Distney2, CSGO, and warzone - primarily for recording apps.
 
 ## GameInfoChangeReason enum
 
