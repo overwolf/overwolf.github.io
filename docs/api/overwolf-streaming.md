@@ -11,7 +11,8 @@ The term streaming might be a bit misleading – we regard saving a video to the
 **Permissions required: Streaming**
 
 :::important
-Please read all the info about streaming usage and options on our [video capture best practices](../topics/video-capture) guide.
+Please check the [streaming API sample app](#sample-app) that demonstrates a primary usage in the API.
+Please read all the info about streaming usage and options on our [video capture best practices](../topics/video-capture) guide.  
 :::
 
 ## Methods Reference
@@ -89,6 +90,25 @@ Please read all the info about streaming usage and options on our [video capture
 * [overwolf.streaming.enums.eVideoBaseFrameSizeSource](#evideobaseframesizesource-enum) Enum
 * [overwolf.streaming.enums.eVideoFrameSizeCalcMethod](#evideoframesizecalcmethod-enum) Enum
 
+## Sample app
+
+In our [APIs sample apps repository](https://github.com/overwolf/apis-sample-apps), you can find and download the `Streaming Sample App`. It's a great place to get started - All the samples in this repository are built with JS code and demonstrate primary usage in the API.
+
+### Functionality
+
+The sample app's functionality is pretty straightforward: You launch it, open the dev console (to see all the debug messages) and hit the `start` button to start the capture, and `stop` to stop it. You can look at the dev console to see the status of each call (success, failure, etc.). Once done, you can hit the open media folder to check the captured clip.
+Setting up
+
+### Setting up
+
+Download the app's source code from the [repository](https://github.com/overwolf/apis-sample-apps) as a zip file, and extract it to a new folder on your machine.  
+Load the app as an "unpacked extension" (Note that to do that you have to whitelist your OW username as a developer).
+
+* Open the Overwolf desktop client settings (by right-clicking the client and selecting "Packages" Or by clicking on the wrench icon in the dock and going to the "About" tab => "Development Options").
+* Click on "Development options".
+* In the opened window, click on "Load unpacked extension" and select the extracted 'streaming-sample' folder. This will add the app to your Overwolf dock.
+* Make sure you are logged in to the OW client. Otherwise, you will get an "Unauthorized App" error message. (Click on the "Appstore" icon in the OW dock to login to the OW client).
+* Click on the app's icon in your OW dock to run the app.
 
 ## start(settings, callback)
 
