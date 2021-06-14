@@ -524,10 +524,10 @@ Example code:
     }
 }
 ```
-Then, from your app you can use the [overwolf.current_extension](overwolf-current_extension) API to get an instance:
+Then, from your app you can use the [overwolf.extensions.current](overwolf-extensions-current) API to get an instance:
 
 ```javascript
-overwolf.current_extension.getExtraObject(“simple-io-plugin”, function…)
+overwolf.extensions.current.getExtraObject(“simple-io-plugin”, function…)
 ```
 ## hotKeys object
 
