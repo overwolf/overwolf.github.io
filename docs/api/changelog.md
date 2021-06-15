@@ -14,7 +14,8 @@ Here you can find our [Developers Roadmap](https://trello.com/b/1V10E4IB/overwol
 
 #### API
  
- * Soon.
+ * New manifest flag: Now you can set the [window style](manifest-json#windows-style) as `InputPassThrough` through the manifest, and not just with the [overwolf.windows.setWindowStyle()](overwolf-windows#setwindowstylewindowid-style-callback) function.
+ * New enum: [overwolf.profile.subscriptions.inapp.enums.Theme](overwolf-profile-subscriptions-inapp#theme-enum), to use with [overwolf.profile.subscriptions.inapp.show()](overwolf-profile-subscriptions-inapp#showplanid-theme-callback).  
 
 #### Platform
 
@@ -22,11 +23,13 @@ Here you can find our [Developers Roadmap](https://trello.com/b/1V10E4IB/overwol
 
 #### Dev Console
 
-* Soon
+* The first asset in the sub plan can be animation or static image, and users can see the asset type above the image.
+
       
 #### Bug fixes
 
-* Soon
+* Fixed store showing logged in state when client does not (after being logged in previously but failing a startup web request).
+* Fixed launch origin (relaunch) when using relaunch to launch apps.
 
 ## Version 0.173 (Jun 2021)
 
