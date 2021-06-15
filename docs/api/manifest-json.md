@@ -58,6 +58,7 @@ Note that not all flags are mandatory - we included all available flags for docu
                 "<a href="#windows-resizable">resizable</a>": false,
                 "<a href="#windows-show_minimize">show_minimize</a>": true,
                 "<a href="#windows-clickthrough">clickthrough</a>": false,
+                "<a href="#windows-style">style</a>": "inputPassThrough",
                 "<a href="#windows-disable_rightclick">disable_rightclick</a>": false,
                 "<a href="#windows-forcecapture">forcecapture</a>": false,
                 "<a href="#windows-show_only_on_stream">show_only_on_stream</a>": false,
@@ -180,6 +181,7 @@ Note that not all flags are mandatory - we included all available flags for docu
                 "<a href="#windows-resizable">resizable</a>": false,
                 "<a href="#windows-show_minimize">show_minimize</a>": true,
                 "<a href="#windows-clickthrough">clickthrough</a>": false,
+                "<a href="#windows-style">style</a>": "inputPassThrough",
                 "<a href="#windows-disable_rightclick">disable_rightclick</a>": false,
                 "<a href="#windows-forcecapture">forcecapture</a>": false,
                 "<a href="#windows-show_only_on_stream">show_only_on_stream</a>": false,
@@ -389,6 +391,7 @@ A list of settings for the app windows.
 | <a class="anchor" aria-hidden="true" id="windows-resizable"></a>resizable | bool   |  Indicates whether the window can be resized.                                                                                                  | 0.78  |
 | <a class="anchor" aria-hidden="true" id="windows-show_minimize"></a>show_minimize | bool   |  Indicates whether to show the window minimize button. Only relevant when not in transparent mode.                                             | 0.79  |
 | <a class="anchor" aria-hidden="true" id="windows-clickthrough"></a>clickthrough  | bool   |  Indicates whether the window will not receive clicks in-game, instead, the clicks will be passed on to the game.                              | 0.80  |
+| <a class="anchor" aria-hidden="true" id="windows-style"></a>style  | string   |  Mouse and keyboard input will pass to the window AND to the game (no input blocking). `InputPassThrough` is currently the only possible value, You can set this flag also using the [overwolf.windows.setWindowStyle()](overwolf-windows#setwindowstylewindowid-style-callback).                           | 0.174  |
 | <a class="anchor" aria-hidden="true" id="windows-disable_rightclick"></a>disable_rightclick | bool   |  When set to true, disable right clicks entirely for this window.                                                    | 0.92  |
 | <a class="anchor" aria-hidden="true" id="windows-forcecapture"></a>forcecapture | bool   |  Indicates whether this window should always be included in recordings, overriding any other setting.                                          | 0.78  |
 | <a class="anchor" aria-hidden="true" id="windows-show_only_on_stream"></a>show_only_on_stream | bool   |  Indicates whether this window is visible only in streams (not visible to the streamer), overriding any other setting.    | 0.78  |

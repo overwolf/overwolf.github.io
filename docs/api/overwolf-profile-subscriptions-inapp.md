@@ -22,6 +22,7 @@ Provides functions and events to help with user profile subscription in-app mana
 
 * [overwolf.profile.subscriptions.inapp.InAppSubModalOpenedEvent](#inappsubmodalopenedevent-object) Object
 * [overwolf.profile.subscriptions.inapp.InAppSubModalClosedEvent](#inappsubmodalclosedevent-object) Object
+* [overwolf.profile.subscriptions.inapp.enums.Theme](#theme-enum) Enum
 
 ## show(planId, theme, callback)
 #### Version added: 0.170
@@ -32,7 +33,7 @@ Provides functions and events to help with user profile subscription in-app mana
 Parameter | Type                                   | Description                                                      |
 ----------| ---------------------------------------| ---------------------------------------------------------------- |
 planId    | number                                 | The plan Id to display                                           |   
-theme     | string                                 | Optional. "Dark" or "Light. If not defined, the default is light |   
+theme     | [Theme](#theme-enum) enum               | Optional. "Dark" or "Light. If not defined, the default is light |   
 callback  | Result => void                         | Returns with the result                                          |   
 
 ## hide(callback)
@@ -67,3 +68,12 @@ status          |  string                                        |              
 Parameter       | Type                                           | Description     |
 ----------------| -----------------------------------------------|---------------- |
 status          |  string                                        |                 | 
+
+## Theme enum
+
+#### Version added: 0.174
+
+| Options           | Description                                                     |
+|-------------------| ----------------------------------------------------------------|
+| Light             |  Light                                                          |
+| Dark              |  Dark                                                           |
