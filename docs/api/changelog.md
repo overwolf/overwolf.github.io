@@ -1,4 +1,4 @@
----
+                         a---
 id: changelog
 title: Changelog
 sidebar_label: Changelog
@@ -8,7 +8,27 @@ Follow this entry for ongoing updates and changes to the project or tools.
 
 Here you can find our [Developers Roadmap](https://trello.com/b/1V10E4IB/overwolf-roadmap).
 
-## Version 0.173 (In-Progress)
+## Version 0.174 (In-Progress)
+
+* Note that the work on the documentation for this version is still in-progress.
+
+#### API
+ 
+ * Soon.
+
+#### Platform
+
+* Soon
+
+#### Dev Console
+
+* Soon
+      
+#### Bug fixes
+
+* Soon
+
+## Version 0.173 (Jun 2021)
 
 * Note that iterations 171 to 173 were combined into a single iteration. 
 * Note that the work on the documentation for this version is still in-progress.
