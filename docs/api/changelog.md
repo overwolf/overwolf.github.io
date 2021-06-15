@@ -23,9 +23,8 @@ Here you can find our [Developers Roadmap](https://trello.com/b/1V10E4IB/overwol
 
 #### Dev Console
 
-* The first asset in the sub plan can be animation or static image, and users can see the asset type above the image.
+* Subscriptions - The first asset in the sub plan can be animation or static image, and users can see the asset type above the image.
 
-      
 #### Bug fixes
 
 * Fixed store showing logged in state when client does not (after being logged in previously but failing a startup web request).
