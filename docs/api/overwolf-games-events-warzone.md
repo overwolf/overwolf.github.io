@@ -11,7 +11,6 @@ Please read the [overwolf.games.events](overwolf-games-events) documentation pag
 :::
 
 :::warning
-This game is not supported by Overwolf at this time.
 
 When developing your app, you must comply with Activision’s Call of Duty:Warzone terms and conditions. Supporting que dodging, interfering with matchmaking or any such behavior is strictly prohibited, and will not be approved. If you have any doubt, please contact us directly before starting development.
 
