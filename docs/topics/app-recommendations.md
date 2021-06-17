@@ -27,6 +27,6 @@ For example, if a player finished playing DOTA 2, but he doesn’t have a DOTA 2
 
 ## How can I get my app promoted via CRN?
 
-Apps are eligible to be promoted via the CRN tool once they hit 50% 2nd week retention for a few weeks in a row. If your app meets this requirement and you’d like to be promoted, please reach out to your developer relationship manager.
+Apps are eligible to be promoted via the CRN tool once they hit 50% 2nd week retention for a few weeks in a row. If your app meets this requirement and you’d like to be promoted, please reach out to your Developer Relations Manager.
 
 
