@@ -114,7 +114,7 @@ Note that not all flags are mandatory - we included all available flags for docu
         //shortcut keys that trigger an app action
         "<a href="#hotkeys">hotkeys</a>":{"save_YourAppName": {"title": "Save Replay for later", "action-type":"custom", "default":"Ctrl+Shift+F9"}},
         //A list of content scripts to be loaded for specific windows
-        "<a href="#content_scripts">content_scripts</a>": [{ "windows": [ "index" ], "js": [ "myscript.js" ] }s],
+        "<a href="#content_scripts">content_scripts</a>": [{ "windows": [ "index" ], "js": [ "myscript.js" ] }],
         //A list of events causing the app to launch
         "<a href="#launch_events">launch_events</a>": [{"event": "GameLaunch", "event_data":{"game_ids": [1136]}, "start_minimized": true}],
         //A custom user agent for the app to use when creating http requests. Don’t use this property if your app serves ads.
@@ -228,7 +228,7 @@ Note that not all flags are mandatory - we included all available flags for docu
         "<a href="#disable_log_limit">disable_log_limit</a>": false,
         "<a href="#extra-objects">extra-objects</a>": {"my-plugin":{"file":"plugins/my_plugin.dll","class":"MyPlugin.EntryPoint"}},
         "<a href="#hotkeys">hotkeys</a>":{"save_YourAppName": {"title": "Save Replay for later", "action-type":"custom", "default":"Ctrl+Shift+F9"}},
-        "<a href="#content_scripts">content_scripts</a>": [{ "windows": [ "index" ], "js": [ "myscript.js" ] }s],
+        "<a href="#content_scripts">content_scripts</a>": [{ "windows": [ "index" ], "js": [ "myscript.js" ] }],
         "<a href="#launch_events">launch_events</a>": [{"event": "GameLaunch", "event_data":{"game_ids": [1136]}, "start_minimized": true}],
         "<a href="#user_agent">user_agent</a>": "...",
         "<a href="#disable_dt">disable_dt</a>": false,
