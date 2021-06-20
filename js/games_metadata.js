@@ -193,7 +193,7 @@ const GamesMetadata = {
     path: "/docs/status/warzone",
     iconUrl: "/docs/assets/games-logos/warzone.png",
     iconLargeUrl: "/docs/assets/games-logos/large/warzone.png",
-    name: "Warzone"
+    name: "Call of Duty: Warzone"
   },
   6350: {
     id: 6350,
@@ -208,5 +208,12 @@ const GamesMetadata = {
     iconUrl: "/docs/assets/games-logos/valheim.png",
     iconLargeUrl: "/docs/assets/games-logos/large/valheim.png",
     name: "Valheim"
+  },
+  21404: {
+    id: 21404,
+    path: "/docs/status/splitgate",
+    iconUrl: "/docs/assets/games-logos/splitgate.png",
+    iconLargeUrl: "/docs/assets/games-logos/large/splitgate.png",
+    name: "Splitgate: Arena Warfare"
   }
 }
