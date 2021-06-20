@@ -164,7 +164,7 @@ Data Example:
 
 Possible Values:
 
-* 150 (solo)
+* 150 (solo, duo & trio)
 * 152 (quads)
 * 24 (training)
 * 100 (plunder)
