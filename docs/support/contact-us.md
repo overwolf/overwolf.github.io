@@ -14,15 +14,19 @@ Please send us an email if you would like to join our Dev Community on Slack: [d
 ## Join our Discord
 Join our Discord community where you can interact with Overwolf staff and other Overwolf app developers in real-time.
 
-Click [here](https://discord.gg/overwolf) to join our Overwolf Discord server (for app users looking for support).
+Click <a href="https://discord.gg/overwolf" target="_blank">here</a> to join our Overwolf Discord server (for app users looking for support).
 
-Click [here](https://discord.gg/overwolf-developers) to join our Overwolf Developers Discord server (for app developers looking to interact with- or get help from other developers).
+Click <a href="https://discord.gg/overwolf-developers" target="_blank">here</a> to join our Overwolf Developers Discord server (for app developers looking to interact with- or get help from other developers).
 
 ## Follow us on twitter
-https://twitter.com/OverwolfDevs
+
+<a href="https://twitter.com/OverwolfDevs" target="_blank">https://twitter.com/OverwolfDevs</a>
 
 ## Follow us on facebook
-https://www.facebook.com/OverwolfDevs
+
+<a href="https://www.facebook.com/OverwolfDevs" target="_blank">https://www.facebook.com/OverwolfDevs</a>
+
 
 ## Subscribe to our Newsletter
-[Subscribe here.](http://eepurl.com/dxC30D)
+
+<a href="http://eepurl.com/dxC30D" target="_blank">Subscribe here.</a>
