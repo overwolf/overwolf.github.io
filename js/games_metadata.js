@@ -215,5 +215,12 @@ const GamesMetadata = {
     iconUrl: "/docs/assets/games-logos/splitgate.png",
     iconLargeUrl: "/docs/assets/games-logos/large/splitgate.png",
     name: "Splitgate: Arena Warfare"
+  },
+  21666: {
+    id: 21666,
+    path: "/docs/status/football-manager-2021",
+    iconUrl: "/docs/assets/games-logos/fm21.png",
+    iconLargeUrl: "/docs/assets/games-logos/large/fm21.png",
+    name: "Football Manager 2021"
   }
 }
