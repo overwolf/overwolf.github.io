@@ -4,7 +4,8 @@ title: Support Experience
 sidebar_label:  Support Experience
 ---
 
-Today, gamers are proactive: They do their research, ask questions, and take control of their own journey. They can either be your #1 fan, or make it loud and clear that they are unhappy. It's no longer enough to just provide user satisfaction; you have a new mission, and it’s to create loyalty.
+Today, gamers are proactive: They do their research, ask questions, and take control of their own journey.
+They can either be your #1 fan, or make it loud and clear that they are unhappy. It's no longer enough to just provide user satisfaction; you have a new mission, and it’s to create loyalty.
 User support is a vital part of marketing and branding your app, and key in your journey to becoming legendary.
 
 
@@ -30,7 +31,7 @@ What are the questions users are going to ask? For example, in capture apps, the
 Once you have a clear vision of the best user support you would like to offer, it'll be easier to make a decision. From our experience, we recommend focusing on a platform that gamers are familiar with.
 Discord and emails are used by gamers frequently and could provide an easy, free-to-use solution.
 
-|               |      Discord                  |  Email                       |
+|               |      Discord                  |      Email                   |
 |---------------|:-----------------------------:|-----------------------------:|
 | Language      | “Dirty”, fast, non apologetic | Formal, polite               |
 | Length        | Short, concise                | Long, detailed and informed  |
