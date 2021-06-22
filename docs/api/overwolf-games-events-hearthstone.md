@@ -324,10 +324,37 @@ Data Example:
 
 Event        | Event Data   | Fired When    | Notes              | Since GEP Ver. |
 -------------| -------------| --------------| ------------------ | --------------|
-match_start  | mode</br>`{"name":"match_start","data":"standard"}` | match starts	|  | 123.0  |
-match_end    | "win"/"lose"/"tie" | match ends      |                                                                                                 | 123.0  |
+match_start  | Wild / Standard | match starts	| See [notes](#match_start-note) | 123.0  |
+match_end    | "win"/"lose"/"tie" | match ends      | See [notes](#match_end-note) | 123.0  |
 match_outcome| "WON" / "LOST"     | match concludes | This event is not reliable on some rare scenarios, please use `"match_end"` event data instead  | 134.0  |
 
+#### *match_start* note
+
+Data Example:
+
+```json
+{"events":[{"name":"match_start","data":"wild"}]}
+{"events":[{"name":"match_start","data":"standard"}]}
+```
+
+#### *match_end* note
+
+Data Example:
+
+```json
+{"events":[{"name":"match_end","data":"win"}]}
+{"events":[{"name":"match_end","data":"lose"}]}
+{"events":[{"name":"match_end","data":"tie"}]}
+```
+
+#### *match_outcome* note
+
+Data Example:
+
+```json
+{"events":[{"name":"match_outcome","data":"WON"}]}
+{"events":[{"name":"match_outcome","data":"LOST"}]}
+```
 
 ## `match_info`
 
