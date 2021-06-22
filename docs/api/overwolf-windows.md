@@ -457,7 +457,7 @@ The window receiving the message needs to listen on the [onMessageReceived](#onm
 
 :::warning
 Using sendMessage  performs object copying, so it might be a bit less efficient - depending on your use-case. (edited)  is not our suggested choice for communication between windows since it might not work on some occasions (for example, when sending extremely big messages).  
-Read more in the ["Communication between windows"](#) section.
+Read more in the [Windows Communication](../topics/communicating-between-windows) guide.
 :::
 
 Parameter              | Type       | Description                                                                                    |
