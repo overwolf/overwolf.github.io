@@ -150,7 +150,6 @@ Possible values: “Unranked”, “Ranked”, “Custom”
 
 key               | Category    | Values                    | Notes                 | Since GEP Ver. |
 ----------------- | ------------| ------------------------- | --------------------- | ------------- |
-id                | player_info   |	Local player's ID	  |See [notes](#id-note)|    123.0      |
 name              | player_info   |	Local player's name	  |See [notes](#name-note)|    123.0      |
 health            | player_info   |	Local player's health (0-100)	  |See [notes](#health-note)|    123.0      |
 team              | player_info   |	Local player's team (alpha/bravo)  |See [notes](#team-note)|    123.0      |
@@ -173,12 +172,6 @@ meleeKills              | player_info   |	Local player killed by a melee attack	
 portalKills              | player_info   |	Local player killed using portal	  |See [notes](#portalKills-note)|    130.0      |
 killsThroughPortal              | player_info   |	Local player killed through a portal	  |See [notes](#killsThroughPortal-note)|    130.0      |
 teabags              | player_info   |	Local player tea-bagged	enemy  |See [notes](#teabags-note)|    130.0      |
-
-#### *id* note
-
-Data Example:
-
-`{"player_info":{"id":"76561198269560618"}}`
 
 #### *name* note
 
