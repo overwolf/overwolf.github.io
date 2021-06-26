@@ -6,6 +6,10 @@ sidebar_label: Crash reports
 
 In this article, we'll go over the process of viewing the crash reports for your apps, and understand the different types of reports.
 
+:::important
+This report is currently down for maintenance / not available.
+:::
+
 ## Overview
 
 Whenever your app crashes unexpectedly, the crash logs are automatically uploaded to our servers by the OW client. If there is no available internet connection or any other reason preventing the client from uploading the crash logs, it will automatically try to upload the logs every several hours until success.

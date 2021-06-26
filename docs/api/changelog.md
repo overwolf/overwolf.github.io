@@ -52,6 +52,7 @@ Here you can find our [Developers Roadmap](https://trello.com/b/1V10E4IB/overwol
 #### Platform
 
 * New client settings (Capture => Advanced Settings) with Rate Control and Max Kb/s sliders.
+* Rebranding - we’re releasing almost all of Overwolf’s client modules with a new branding.
 
 #### Dev Console
 
