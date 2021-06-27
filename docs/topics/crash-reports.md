@@ -7,7 +7,7 @@ sidebar_label: Crash reports
 In this article, we'll go over the process of viewing the crash reports for your apps, and understand the different types of reports.
 
 :::important
-This report is currently down for maintenance / not available.
+This report is currently down for maintenance.
 :::
 
 ## Overview
