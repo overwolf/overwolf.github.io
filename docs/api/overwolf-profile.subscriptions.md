@@ -75,7 +75,7 @@ Parameter          | Type     | Description                                 |
 *error*            | string   | inherited from the "Result" Object          |
 status             | string   | deprecated. For backward compatibility only |
 Reason             | string   | deprecated. For backward compatibility only |   
-plans              | int[]    | an array of plan IDs                        |   
+plans              | int[]    | an array of plan IDs (only current active plans)  |   
 
 #### Example data: Success
 
