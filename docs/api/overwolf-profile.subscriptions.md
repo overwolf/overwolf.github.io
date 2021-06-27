@@ -124,6 +124,6 @@ periodMonths       | number   |                                             |
 
 Option         | Value                                       |
 ---------------| ------------------------------------------- |
-Active         | 0                                           |
-Cancelled      | 1                                           |
-Revoked        | 2                                           |
+Active         | "active"                                    |
+Cancelled      | "cancelled"                                 |
+Revoked        | "revoked"                                   |
