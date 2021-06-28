@@ -113,12 +113,13 @@ plans              | [Plan](#plan-object)[]   | an array of active plans        
 Parameter          | Type     | Description                                 |
 -------------------| ---------| ------------------------------------------- |
 planId             | number   |                                             |
-state              | [SubscriptionState](#subscriptionstate-enum) Enum   |                        |
-expiryDate         | number   |                                             |
+state              | [SubscriptionState](#subscriptionstate-enum) Enum   | See [Subscription states notes](#subscription-states-notes).      |
+expiryDate         | number   | See [Subscription states notes](#subscription-states-notes).                  |
 title              | string   |                                             |
 description        | string   |                                             |
 price              | number   |                                             |
 periodMonths       | number   |                                             |
+
 
 ## SubscriptionState enum
 
@@ -127,3 +128,10 @@ Option         | Value                                       |
 Active         | "active"                                    |
 Cancelled      | "cancelled"                                 |
 Revoked        | "revoked"                                   |
+
+#### Subscription states notes
+
+* If the state is `active`, the expiryDate means when the next renewal is (i.e., next payment).
+* If the state is `canceled`, the expiryDate means that a user canceled the subscription, and it will expire on this date. BTW, we give a few days of grace, so it could be that even when expired, the state will still be "active".  
+* `revoked` means an immediate cancellation - the date will be expired automatically. The only way to revoke is via the console.overwolf.com interface.
+
