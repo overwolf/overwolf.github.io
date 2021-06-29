@@ -16,7 +16,7 @@ Here you can find our [Developers Roadmap](https://trello.com/b/1V10E4IB/overwol
  
  * New manifest flag: Now you can set the [window style](manifest-json#windows-style) as `InputPassThrough` through the manifest, and not just with the [overwolf.windows.setWindowStyle()](overwolf-windows#setwindowstylewindowid-style-callback) function.
  * New enum: [overwolf.profile.subscriptions.inapp.enums.Theme](overwolf-profile-subscriptions-inapp#theme-enum), to use with [overwolf.profile.subscriptions.inapp.show()](overwolf-profile-subscriptions-inapp#showplanid-theme-callback).  
- * `overwolf.windows.changeSize(windowId, width, height, callback)` is now obsolete, replaced by `overwolf.windows.changeSize(changeSizeParams, callback)`.
+ * [overwolf.windows.changeSize(windowId, width, height, callback)](overwolf-windows#changesizewindowid-width-height-callback) is now obsolete, replaced by [overwolf.windows.changeSize(changeSizeParams, callback)](overwolf-windows#changesizechangesizeparams-callback).
 
 #### Platform
 
