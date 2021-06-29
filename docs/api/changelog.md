@@ -16,10 +16,11 @@ Here you can find our [Developers Roadmap](https://trello.com/b/1V10E4IB/overwol
  
  * New manifest flag: Now you can set the [window style](manifest-json#windows-style) as `InputPassThrough` through the manifest, and not just with the [overwolf.windows.setWindowStyle()](overwolf-windows#setwindowstylewindowid-style-callback) function.
  * New enum: [overwolf.profile.subscriptions.inapp.enums.Theme](overwolf-profile-subscriptions-inapp#theme-enum), to use with [overwolf.profile.subscriptions.inapp.show()](overwolf-profile-subscriptions-inapp#showplanid-theme-callback).  
+ * `overwolf.windows.changeSize(windowId, width, height, callback)` is now obsolete, replaced by `overwolf.windows.changeSize(changeSizeParams, callback)`.
 
 #### Platform
 
-* Soon
+* OBS enhancments.
 
 #### Dev Console
 
@@ -29,6 +30,8 @@ Here you can find our [Developers Roadmap](https://trello.com/b/1V10E4IB/overwol
 
 * Fixed store showing logged in state when client does not (after being logged in previously but failing a startup web request).
 * Fixed launch origin (relaunch) when using relaunch to launch apps.
+* Fixed the overwolf.profile.openLoginDialog API in cases where the store was closed.
+* Fixed an issue where failed to start game recording was not fired in some cases, even though we failed to record.
 
 ## Version 0.173 (Jun 2021)
 
