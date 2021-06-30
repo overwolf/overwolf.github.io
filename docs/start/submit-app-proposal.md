@@ -24,7 +24,7 @@ If you're just looking to explore Overwolf’s framework - no worries, we got yo
 Go check out our Javascript and Typescript based [Sample App](https://overwolf.github.io/docs/start/sample-app-overview#docsNav). It doesn't require you to be whitelisted, and it works for all the games that we support.
 You might not be able to distribute it, but It's a great way to start your journey in becoming a legendary in-game creator. 
 
-Still have some doubts? Join [the developers community](https://discord.gg/overwolf-developers) where you can get help from experts in the community.
+Still have some questions? Join [the developers community](https://discord.gg/overwolf-developers) where you can get help from experts in the community.
 
 ### Tips for writing a great proposal
 
