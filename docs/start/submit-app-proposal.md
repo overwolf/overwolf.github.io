@@ -17,6 +17,15 @@ It's not required to have a registered business to work on an Overwolf app, appl
 The Overwolf platform welcomes creators of all types and sizes, from indie devs working alone to companies with large teams.
 :::
 
+### Start creating
+
+If you're just looking to explore Overwolf’s framework - no worries, we got you.
+
+Go check out our Javascript and Typescript based [Sample App](https://overwolf.github.io/docs/start/sample-app-overview#docsNav). It doesn't require you to be whitelisted, and it works for all the games that we support.
+You might not be able to distribute it, but It's a great way to start your journey in becoming a legendary in-game creator. 
+
+Still have some doubts? Join [the developers community](https://discord.gg/overwolf-developers) where you can get help from experts in the community.
+
 ### Tips for writing a great proposal
 
 To help you prepare a kick-ass proposal, here’s what we recommend you do first:
@@ -32,9 +41,6 @@ Whether you’re new to Overwolf or a returning developer, it’s imperative you
 ### Prepare your proposal
 
 Submitting your app concept for review is easy, and we’re not looking for a complete set of technical documents at this point. Instead, the goal at this stage is creating a clear, concise description of what the app is and how it will work for gamers. We also want to see a mockup of your planned User Interface. This proposal (and the app itself) must be in English, although you may freely support more languages in the final app.
-
-### Twitch Extension 
-If you are planning on creating a Twitch Extension please fill out the "Overwolf app proposal".  
 
 ### Legal
 
