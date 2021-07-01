@@ -22,8 +22,6 @@ There are two options to enable the exclusive mode while you are in a game:
 
 Hitting Ctrl + tab while you are in a game set OW in exclusive mode - the game window get semi-transparent background, the OW dock is shown, and you can interact with your OW app's windows (if any windows are open).  
 
-[in action screenshoot of OW dock exclusive mode]
-
 Hitting ctrl+tab again or clicking outside of the OW app's window will "release" the exclusive mode.
 
 ### Using Hotkey
@@ -35,9 +33,9 @@ If you have a window that is bundled to a hotkey, and you want to enter into an 
 
 When the hotkey is fired, the window will show up and enter exclusive mode (enabling user interaction and accepting input from the user). When the hotkey is clicked again - the window will hide and exit the exclusive mode.
 
-[in action screenshoot of OW app window in exclusive mode]
+![hotkey](../assets/exclusive-mode/hotkey.png)
 
-Note the tooltip at the top of the screen that guides the user which hotkey release the exclusive mode
+In the above screenshot, you can see that the background is semi-transparent, and at the top of the screen a notification that guides the user which hotkey release the exclusive mode: "Ctrl + F to hide this app and return to the game". Of course, the key combination will change according to the current hotkey.
 
 ### Automatically on window launch
 
@@ -48,6 +46,10 @@ If you have a window that displayed automatically (a startup window, for example
 When the window is launched, it automatically enters exclusive mode (and enables user interaction and accepts input from the user).
 Once the user clicks outside the window, the window will exit the exclusive mode.
 
+![ctrl-tab](../assets/exclusive-mode/ctrl-tab.png)
+
+In the above screenshot, you can see at the top of the screen a general notification that guides the user "hide all apps to return to the game".
+
 ## Special Overlays
 
 Several specific "mouse-less" games: CSGO, Warzone, and Destiny 2, have some additional limitations in addition to the exclusive that is required to interact with the OW windows: 
@@ -56,9 +58,3 @@ Several specific "mouse-less" games: CSGO, Warzone, and Destiny 2, have some add
   **To detect if the game is running in non-borderless fullscreen, read the [overwolf.games.OverlayInfo.exclusiveModeDisabled](../api/overwolf-games#overlayinfo-object) property. If it's `true`, it means that the exclusive mode is disabled, and you should display the user notification about it.** (suggest him to change the mode to fullscreen borderless or windowed mode. Otherwise he will not be able to interact with your app's windows )
 
 * Overwolf allowed capturing these games only when it's in fullscreen-borderless mode. If the game is in fullscreen non-borderless or windowed mode (we'll support it also very soon), the capture will not work correctly.
-
-## Related flags
-
-There are several manifest flags that related to exclusive mode:
-
-* 
