@@ -12,9 +12,12 @@ Please read the [overwolf.games.events](overwolf-games-events) documentation pag
 
 :::warning
 
-When developing your app, you must comply with Activision’s Call of Duty:Warzone terms and conditions. Supporting que dodging, interfering with matchmaking or any such behavior is strictly prohibited, and will not be approved. If you have any doubt, please contact us directly before starting development.
+This game requires enabling exclusive mode on your OW app's windows. Read [eeMore info here](/exclusive-mode).
+
+In addition, when developing your app, you must comply with Activision’s Call of Duty:Warzone terms and conditions. Supporting que dodging, interfering with matchmaking or any such behavior is strictly prohibited, and will not be approved. If you have any doubt, please contact us directly before starting development.
 
 For more information check our [Game compliance principles](https://overwolf.github.io/docs/start/game-compliance-guiding-principles)
+
 :::
 
 ## Sample Apps
