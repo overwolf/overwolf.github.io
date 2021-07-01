@@ -721,7 +721,7 @@ You can defines how the “exclusive mode” should be turned off:
 * **ReleaseOnHidden** – When the window is hidden, automatically turn off exclusive mode. (if you are using this option, you must set also the [focus_game_takeover_release_hotkey](manifest-json#focus_game_takeover_release_hotkey) flag)
 * **ReleaseOnLostFocus** – If the user clicks outside the window, exclusive mode is turned off.
 
-Read more details info about OW exclusive mode [here](../topics/exclusive-mode).
+Read more in our [Exclusive Mode](../topics/exclusive-mode) guide.
 
 ## url_protocol object
 
