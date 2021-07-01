@@ -417,7 +417,7 @@ A list of settings for the app windows.
 | <a class="anchor" aria-hidden="true" id="disable_blur"></a>disable_blur         | bool       | Causes the app’s window to never “lose focus”, so the window.onblur event is never triggered.  </br>*Default value is false*              | 0.106  |
 | <a class="anchor" aria-hidden="true" id="native_window"></a>native_window  | bool  | Creates a native CEF desktop only window (which improves performance)</br>*Note: Should only be used with desktop_only windows*. </br>*Default value is false* | 0.107  |
 | <a class="anchor" aria-hidden="true" id="is_background_page"></a>is_background_page | bool       | This flag MUST be used with background/hidden controller windows. </br>*Note: With this flag set to 'true', there's no need to set window related properties such as size, focus,  transparency, etc.*                                                                                                                                                        | 0.107  |
-| <a class="anchor" aria-hidden="true" id="focus_game_takeover"></a>focus_game_takeover  | [string](#focus_game_takeover-options) |  Allows you to control the behavior of an app window while in a “mouse-less” game state. </BR>*Possible values: "ReleaseOnHidden" or "ReleaseOnLostFocus".*              | 0.107  |
+| <a class="anchor" aria-hidden="true" id="focus_game_takeover"></a>focus_game_takeover  | string |  Allows you to control the behavior of an app window while in a “mouse-less” game state. </BR>*Possible values: "ReleaseOnHidden" or "ReleaseOnLostFocus".*  Read [notes](#focus_game_takeover-options).            | 0.107  |
 | <a class="anchor" aria-hidden="true" id="focus_game_takeover_release_hotkey"></a>focus_game_takeover_release_hotkey | string | Allow Overwolf to display your app’s hotkey combination on the screen when the user switches to “exclusive mode”. </br>*The string value should be the hotkey name from the hotkeys section.*</br>*Relevant only if you set focus_game_takeover=ReleaseOnHidden*  | 0.110  |
 | <a class="anchor" aria-hidden="true" id="allow_local_file_access"></a>allow_local_file_access | bool  |  Allows access to local files that are not located in your app’s (extension) folder.</br>*Default value is false*       | 0.109 |
 | <a class="anchor" aria-hidden="true" id="is_alt_f4_blocked"></a>is_alt_f4_blocked   | bool  |  Blocks the user from closing the window by using Alt+F4.</br>You can register to the onAltF4Blocked event to be noticed when a “block” was triggered.| 0.113  |
@@ -701,8 +701,6 @@ Defines a size (width and height) in pixels.
 | width   | int  | Defines the width in pixels. *Optional parameter*   | 0.78  |
 | height  | int  | Defines the height in pixels.  *Optional parameter* | 0.78  |
 
-
-
 ## point Object
 Defines a top-left position in pixels.
 
@@ -722,6 +720,8 @@ You can defines how the “exclusive mode” should be turned off:
 
 * **ReleaseOnHidden** – When the window is hidden, automatically turn off exclusive mode. (if you are using this option, you must set also the [focus_game_takeover_release_hotkey](manifest-json#focus_game_takeover_release_hotkey) flag)
 * **ReleaseOnLostFocus** – If the user clicks outside the window, exclusive mode is turned off.
+
+Read more details info about OW exclusive mode [here](../topics/exclusive-mode).
 
 ## url_protocol object
 

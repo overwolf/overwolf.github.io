@@ -787,7 +787,7 @@ When the game terminates (`hadInGameRender: false`) and `coexistingApps` is not 
 
 #### **isCursorVisible** Note
 
-Usually used for FPS games - when you are playing, you won't have a cursor - but if you Ctrl + Tab, you will. This can give the app an indication of this (i.e., can the user click an X to close the app window, or does he have to use a hotkey). Not relevant for games like LoL, where the user has a cursor.
+Usually used for FPS games - when you are playing, you won't have a cursor - but if you Ctrl + Tab (enable [exclusive mode](../topics/exclusive-mode)), you will. This can give the app an indication of this (i.e., can the user click an X to close the app window, or does he have to use a hotkey). Not relevant for games like LoL, where the user has a cursor.
 
 See also related flag, [exclusiveModeDisabled](#exclusivemodedisabled-note).  
 
@@ -795,12 +795,11 @@ See also related flag, [exclusiveModeDisabled](#exclusivemodedisabled-note).
 
 Exclusive mode is for games like FPS, where you don't have a cursor while in the game - so if you ctrl + tab - we turn the background dark - like steam. This is exclusive mode - as in, the input is exclusively going to Overwolf (not the game).
 
-See also related flag, [isCursorVisible](#iscursorvisible-note).  
-
+See also related object property, [isCursorVisible](#iscursorvisible-note).  
 
 #### **oopOverlay** Note
 
-OOP stands for "Out of process" Overlay - relevant for Distney2, CSGO, and warzone - primarily for recording apps.
+OOP stands for "Out of process" Overlay - relevant for Distney2, CSGO, and warzone that requires [exclusive mode](../topics/exclusive-mode) to interact with the OW app's windows. 
 
 ## GameInfoChangeReason enum
 
