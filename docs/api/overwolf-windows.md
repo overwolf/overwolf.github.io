@@ -319,7 +319,7 @@ callback (Optional) | [(Result: WindowIdResult)](#windowidresult-object) => void
 
 #### Notes
 
-* `maximize()` will maximize the targeted window even if the manifest [resizable flag](https://overwolf.github.io/docs/api/manifest-json#windows-resizable) is set to `false`.
+* `maximize()` will maximize the targeted window even when the manifest [resizable flag](https://overwolf.github.io/docs/api/manifest-json#windows-resizable) is set to `false`.
 
 * In order to restore a maximized window to its previous state, call [window.restore()](#restorewindowid-callback). 
 
