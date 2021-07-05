@@ -304,7 +304,7 @@ callback (Optional) | [(Result: WindowIdResult)](#windowidresult-object) => void
 
 **Notes**
 
-* This function will not work if the manifest [resizable flag](https://overwolf.github.io/docs/api/manifest-json#windows-resizable) is set to `false`.
+* `minimize()` will minimize the targeted window even when the manifest [resizable flag](https://overwolf.github.io/docs/api/manifest-json#windows-resizable) is set to `false`.
 * When minimizing a **native** window, the window object values for `top`,`left`,`width`and `height` are unexpected and shouldn't be regarded.
 
 ## maximize(windowId, callback)
