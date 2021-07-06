@@ -98,6 +98,6 @@ overwolf.settings.setExtensionSettings({ channel: "beta" })
 
 ## App Channels Sample App
 
-You can download our [App Channels sample app]() that demonstrates how to use the app channels feature and API.
+You can download our [App Channels sample app](https://github.com/overwolf/apis-sample-apps/tree/master) that demonstrates how to use the app channels feature and API.
 
 * link will be available soon.
