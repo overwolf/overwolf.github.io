@@ -1,6 +1,6 @@
 ---
 id: login-with-twitch
-title: App login with Twitch, Discord, Facebook or Google
+title: App login with Twitch, Steam, Discord, Facebook or Google
 sidebar_label: Login with Twitch
 ---
 
@@ -12,6 +12,40 @@ The main challenge here is figuring out how to transfer the info that the auth w
 As Google (and possibly other providers in the future) will discontinue support for sign-in from embedded browser frameworks (e.g., OW browser) starting Jan. 2021, the best way to go is to send the user their default browser, and not use the OW browser.  
 In the future, we will add some instructions on how to do that. Meanwhile, you can use the suggested workaround explained in this article.
 :::
+
+## Sample app
+
+In our [APIs sample apps repository](https://github.com/overwolf/apis-sample-apps), you can find and download two sample apps that demonstrate how to integrate 3rd party login interface: 
+
+* The `Twitch Sample App`. Demonstrates how to implement login to your OW app using a Twitch account.
+* The `Steam Sample App`. Demonstrates how to implement login to your OW app using a Steam account.
+
+It's a great place to get started - All the samples in this repository are built with JS code and demonstrate primary usage in the API.
+Note that the above sample apps work "out of the box", as they using our OW server for the authentication part:
+In the repository of each app, you can also find this server-side code. 
+
+When you are ready to integrate the login button in your app, you should also implement this server-side code in your server.
+
+### Functionality
+
+The sample app's functionality is pretty straightforward: You launch it, open the dev console (to see all the debug messages), and hit the `Login` button to open the Twitch/Steam authentication window in the default user's browser. After successful login, you can `Log out`, or `Get user` to get the Twitch/Steam user info.
+
+In Twitch login, you can also get the current `Channel`.
+
+Of course, that all the time, you can look at the dev console to see the status of each call (success, failure, etc.). 
+
+### Setting up
+
+Download the app's source code from the [repository](https://github.com/overwolf/apis-sample-apps) as a zip file, and extract it to a new folder on your machine.  
+Load the app as an "unpacked extension" (Note that to do that you have to whitelist your OW username as a developer).
+
+* Open the Overwolf desktop client settings (by right-clicking the client and selecting "Packages" Or by clicking on the wrench icon in the dock and going to the "About" tab => "Development Options").
+* Click on "Development options".
+* In the opened window, click on "Load unpacked extension" and select the extracted `twitch-login-sample` folder. This will add the Twitch login sample app to your Overwolf dock. Do the same with the `steam-login-sample` to install the Steam login sample app.
+* Make sure you are logged in to the OW client. Otherwise, you will get an "Unauthorized App" error message. (Click on the "Appstore" icon in the OW dock to login to the OW client).
+* Click on the app's icons in your OW dock to run the apps.
+
+## Login Flow
 
 This is a suggested login flow into Twitch using their OAuth2:
 
