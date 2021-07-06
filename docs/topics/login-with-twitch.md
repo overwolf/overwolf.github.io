@@ -21,16 +21,21 @@ In our [APIs sample apps repository](https://github.com/overwolf/apis-sample-app
 * The `Steam Sample App`. Demonstrates how to implement login to your OW app using a Steam account.
 
 It's a great place to get started - All the samples in this repository are built with JS code and demonstrate primary usage in the API.
-Note that the above sample apps work "out of the box", as they using our OW server for the authentication part:
+Note that the above sample apps work "out of the box", as we are using our OW server for the authentication part:
 In the repository of each app, you can also find this server-side code. 
 
 When you are ready to integrate the login button in your app, you should also implement this server-side code in your server.
 
 ### Functionality
 
-The sample app's functionality is pretty straightforward: You launch it, open the dev console (to see all the debug messages), and hit the `Login` button to open the Twitch/Steam authentication window in the default user's browser. After successful login, you can `Log out`, or `Get user` to get the Twitch/Steam user info.
+The sample app's functionality is pretty straightforward: You launch it, open the dev console (to see all the debug messages), and hit the `Login` button to open the Twitch/Steam authentication window in the default user's browser. After successful login, you can `Log out`, or `Get user` to get the Twitch/Steam user info. In Twitch login, you can also get the current `Channel`:
 
-In Twitch login, you can also get the current `Channel`.
+![twitch-login](../assets/api-sample-apps/twitch-login.png)
+
+Here you can see the Steam authentication window:
+
+![twitch-login](../assets/api-sample-apps/steam.png)
+
 
 Of course, that all the time, you can look at the dev console to see the status of each call (success, failure, etc.). 
 
