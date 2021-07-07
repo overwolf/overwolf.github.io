@@ -90,7 +90,7 @@ You can read the current installed channel of your app using [overwolf.settings.
 overwolf.settings.getExtensionSettings() //{"settings":{"channel":"beta"},"success":true}
 ```
 
-You can change the current channel using [overwolf.settings.setExtensionSettings](../api/overwolf-settings#setextensionsettingsextensionsettings-callback) (and enale your app users to change thier app version for example).
+You can change the current channel using [overwolf.settings.setExtensionSettings](../api/overwolf-settings#setextensionsettingsextensionsettings-callback) (and enable your app users to change their app version for example).
 
 ```js
 overwolf.settings.setExtensionSettings({ channel: "beta" })
