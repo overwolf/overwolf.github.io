@@ -85,12 +85,14 @@
 <li>The <code>Steam Sample App</code>. Demonstrates how to implement login to your OW app using a Steam account.</li>
 </ul>
 <p>It's a great place to get started - All the samples in this repository are built with JS code and demonstrate primary usage in the API.
-Note that the above sample apps work &quot;out of the box&quot;, as they using our OW server for the authentication part:
+Note that the above sample apps work &quot;out of the box&quot;, as we are using our OW server for the authentication part:
 In the repository of each app, you can also find this server-side code.</p>
 <p>When you are ready to integrate the login button in your app, you should also implement this server-side code in your server.</p>
 <h3><a class="anchor" aria-hidden="true" id="functionality"></a><a href="#functionality" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Functionality</h3>
-<p>The sample app's functionality is pretty straightforward: You launch it, open the dev console (to see all the debug messages), and hit the <code>Login</code> button to open the Twitch/Steam authentication window in the default user's browser. After successful login, you can <code>Log out</code>, or <code>Get user</code> to get the Twitch/Steam user info.</p>
-<p>In Twitch login, you can also get the current <code>Channel</code>.</p>
+<p>The sample app's functionality is pretty straightforward: You launch it, open the dev console (to see all the debug messages), and hit the <code>Login</code> button to open the Twitch/Steam authentication window in the default user's browser. After successful login, you can <code>Log out</code>, or <code>Get user</code> to get the Twitch/Steam user info. In Twitch login, you can also get the current <code>Channel</code>:</p>
+<p><img src="../assets/api-sample-apps/twitch-login.png" alt="twitch-login"></p>
+<p>Here you can see the Steam authentication window:</p>
+<p><img src="../assets/api-sample-apps/steam.png" alt="twitch-login"></p>
 <p>Of course, that all the time, you can look at the dev console to see the status of each call (success, failure, etc.).</p>
 <h3><a class="anchor" aria-hidden="true" id="setting-up"></a><a href="#setting-up" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Setting up</h3>
 <p>Download the app's source code from the <a href="https://github.com/overwolf/apis-sample-apps">repository</a> as a zip file, and extract it to a new folder on your machine.<br>
