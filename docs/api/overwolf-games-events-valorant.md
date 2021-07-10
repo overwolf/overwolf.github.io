@@ -107,6 +107,7 @@ Possible agent values:
 * "Guide_PC_C" = Skye
 * "Stealth_PC_C" = Yoru
 * "Rift_PC_C" = Astra
+* "Grenadier_PC_C" = KAY/O
 
 ## `match_info`
 
