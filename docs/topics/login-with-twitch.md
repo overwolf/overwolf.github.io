@@ -15,20 +15,26 @@ In the future, we will add some instructions on how to do that. Meanwhile, you c
 
 ## Sample app
 
-In our [APIs sample apps repository](https://github.com/overwolf/apis-sample-apps), you can find and download two sample apps that demonstrate how to integrate 3rd party login interface: 
+In our [APIs sample apps repository](https://github.com/overwolf/apis-sample-apps), you can find and download three sample apps that demonstrate how to integrate 3rd party login interface: 
 
 * The `Twitch Sample App`. Demonstrates how to implement login to your OW app using a Twitch account.
 * The `Steam Sample App`. Demonstrates how to implement login to your OW app using a Steam account.
+* The `Google Sample App`. Demonstrates how to implement login to your OW app using a Google account.
 
 It's a great place to get started - All the samples in this repository are built with JS code and demonstrate primary usage in the API.
-Note that the above sample apps work "out of the box", as we are using our OW server for the authentication part:
-In the repository of each app, you can also find this server-side code. 
 
+### Server side code
+
+Note that the above sample apps work "out of the box" - download and install each app as an unpacked extension, or you can create an OPK for each app and install it. After installing, you can immediately see a real live example of an app that integrated Twitch/Steam/Google login flow. No need to configure any server, as the sample apps use our servers.
+
+You can find our server-side code in the repository. And you should implement it on your server if you want to integrate a login button in your app.
 When you are ready to integrate the login button in your app, you should also implement this server-side code in your server.
 
 ### Functionality
 
-The sample app's functionality is pretty straightforward: You launch it, open the dev console (to see all the debug messages), and hit the `Login` button to open the Twitch/Steam authentication window in the default user's browser. After successful login, you can `Log out`, or `Get user` to get the Twitch/Steam user info. In Twitch login, you can also get the current `Channel`:
+The sample app's functionality is pretty straightforward: You launch it, open the dev console (to see all the debug messages), and hit the `Login` button to open the Twitch/Steam authentication window in the default user's browser. After successful login, you can `Log out`, or `Get user` to get the Twitch/Steam user info.  
+
+In Twitch login, you can also get the current `Channel`:
 
 ![twitch-login](../assets/api-sample-apps/twitch-login.png)
 
