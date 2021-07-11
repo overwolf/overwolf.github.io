@@ -437,13 +437,14 @@ game_id                 |  number                           |                   
 match_id                |  string                           |                       | 
 match_internal_id       |  string                           |                       | 
 session_id              |  string                           |                       | 
-session_start_time      |  string                           |                       | 
-match_start_time        |  string                           |                       | 
-start_time              |  string                           |                       | 
+session_start_time      |  number                           |                       | 
+match_start_time        |  number                           |                       | 
+start_time              |  number                           |                       | 
 duration                |  string                           |                       | 
 events                  |  string[]                         |                       | 
 raw_events              |  [raw_events](#raw_events-object)[] |      | 
 media_url               |  string                           |                       | 
+media_path              |  string                           |                       | 
 media_path_encoded      |  string                           |                       | 
 thumbnail_url           |  string                           |                       | 
 thumbnail_encoded_path  |  string                           |                       | 
@@ -455,7 +456,7 @@ replay_video_start_time |  number                           |                   
 {
     "game_id":5426,
     "match_id":"2334906612",
-    "match_internal_id":"",
+    "match_internal_id":"0b818d3e-99a0-4e93-9bdd-b2af596bfc50",
     "session_id":"f05099982b6c452dbf0ba8250d766dc8",
     "session_start_time":1576572688739,
     "match_start_time":1576572691238,
