@@ -50,6 +50,8 @@ You should provide these parameters:
 4. policy_uri - URL of the app's privacy policy.
 5. tos_uri - URL of the app's "Terms of Service".
 
+Note: all the URIs needs to be accessible with a public domain (not localhost). Otherwise, our servers will not be able to complete the flow.
+
 Your app's `client_id` and `client_secret` will be provided once you complete the registration.
 
 ### Create redirect_uri endpoint
