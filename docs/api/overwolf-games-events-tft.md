@@ -448,46 +448,26 @@ Data Example:
    "info":{
       "store":{
          "shop_pieces":"{
-         "slot_1":{
-            "name":"TFT_Blitzcrank"
-         },
-         "slot_2":{
-            "name":"TFT_Garen"
-         },
-         "slot_3":{
-            "name":"TFT_Nidalee"
-         },
-         "slot_4":{
-            "name":"TFT_Mordekaiser"
-         },
-         "slot_5":{
-            "name":"TFT_Ahri"
-         }
-      }      "}},"feature":"store"
-   }
-
-{
-   "info":{
-      "store":{
-         "shop_pieces":"{
-         "slot_1":{
-            "name":"TFT_Blitzcrank"
-         },
-         "slot_2":{
-            "name":"Sold"
-         },
-         "slot_3":{
-            "name":"TFT_Nidalee"
-         },
-         "slot_4":{
-            "name":"TFT_Mordekaiser"
-         },
-         "slot_5":{
-            "name":"TFT_Ahri"
-         }
-      }      "}},"feature":"store"
-   }
-
+            "slot_1":{
+               "name":"TFT_Blitzcrank"
+            },
+            "slot_2":{
+               "name":"TFT_Garen"
+            },
+            "slot_3":{
+               "name":"TFT_Nidalee"
+            },
+            "slot_4":{
+               "name":"TFT_Mordekaiser"
+            },
+            "slot_5":{
+               "name":"TFT_Ahri"
+            }
+         }"
+      }
+   },
+   "feature":"store"
+}
 ```
 
 ## `board`
