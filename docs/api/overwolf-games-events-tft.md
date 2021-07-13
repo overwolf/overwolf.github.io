@@ -373,54 +373,54 @@ Data example:
   "info": {
     "roster": {
       "player_status": "{
-         \"Zedester\": {
-            \"index\":1,
-            \"health\":76,
-            \"xp\":5,
-            \"localplayer\":true,
-            \"rank\":0
+         "Zedester": {
+            "index": 1,
+            "health": 76,
+            "xp": 5,
+            "localplayer": true,
+            "rank": 0
          },
-         \"littlemelony\": {
-            \"index\":2,
-            \"health\":94,
-            \"xp\":4,
-            \"localplayer\":false,
-            \"rank\":0
+         "littlemelony": {
+            "index": 2,
+            "health": 94,
+            "xp": 4,
+            "localplayer": false,
+            "rank": 0
          },
-         \"XKrosX\": {
-            \"index\":3,
-            \"health\":88,
-            \"xp\":6,
-            \"localplayer\":false,
-            \"rank\":0
+         "XKrosX": {
+            "index": 3,
+            "health": 88,
+            "xp": 6,
+            "localplayer": false,
+            "rank": 0
          },
-         \"UP GuyFromMiddle\": {
-            \"index\":4,
-            \"health\":62,
-            \"xp\":6,
-            \"localplayer\":false,
-            \"rank\":0
+         "UP GuyFromMiddle": {
+            "index": 4,
+            "health": 62,
+            "xp": 6,
+            "localplayer": false,
+            "rank": 0
          },
-         \"Storas Tevas\": {
-            \"index\":5,
-            \"health\":90,
-            \"xp\":4,
-            \"localplayer\":false,
-            \"rank\":0
+         "Storas Tevas": {
+            "index": 5,
+            "health": 90,
+            "xp": 4,
+            "localplayer": false,
+            "rank": 0
          },
-         \"MAYAH MELISSA\": {
-            \"index\":6,
-            \"health\":100,
-            \"xp\":4,
-            \"localplayer\":false,
-            \"rank\":0
+         "MAYAH MELISSA": {
+            "index": 6,
+            "health": 100,
+            "xp": 4,
+            "localplayer": false,
+            "rank": 0
          },
-         \"TabsWay\": {
-            \"index\":7,
-            \"health\":92,
-            \"xp\":5,
-            \"localplayer\":false,
-            \"rank\":0
+         "TabsWay": {
+            "index": 7,
+            "health": 92,
+            "xp": 5,
+            "localplayer": false,
+            "rank": 0
          },
       }"
     }
@@ -486,24 +486,25 @@ Data Example:
 {
    "info":{
       "board":{
-         "board_pieces":"{"         cell_9":{
-            "name":"TFT_Tristana",
-            "level":"1",
-            "item_1":"TFT_Item_GuinsoosRageblade",
-            "item_2":"",
-            "item_3":""
-         },
-         "cell_16":{
-            "name":"TFT_KhaZix",
-            "level":"1",
-            "item_1":"",
-            "item_2":"",
-            "item_3":""
-         }
-      }      "
+         "board_pieces":"{
+            "cell_9":{
+               "name":"TFT_Tristana",
+               "level":"1",
+               "item_1":"TFT_Item_GuinsoosRageblade",
+               "item_2":"",
+               "item_3":""
+            },
+            "cell_16":{
+               "name":"TFT_KhaZix",
+               "level":"1",
+               "item_1":"",
+               "item_2":"",
+               "item_3":""
+            }
+         }"
       }
    },
-   "      feature":"board"
+   "feature":"board"
    }
 ```
 
