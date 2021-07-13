@@ -30,6 +30,6 @@ These are the recommended steps to keep both versions:
 * Abstracting framework specific code (Electron/Overwolf) and injecting the relevant implementation (e.g. Electron APIs vs Overwolf APIs, node.js vs .net plugins)
   * Here we can help with converting to .net
 * Once you get the technical part cover we suggest communicating with your users how the two clients differ from each other: added features, reducing cost, overlay etc
-* Last, if you’re not happy with our service - you can always easily go back to being exclusively on Election. If you choose to go just on Overwolf, you can go back at any given time to your 
+* Lastly, if you’re not happy with our service - you can always easily go back to being exclusively on Electron. If you choose to go just on Overwolf, you can go back at any given time to Electron.
 
 If you have any questions, please [reach out](../support/contact-us).
