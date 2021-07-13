@@ -10,7 +10,7 @@ Please read the [overwolf.games.events](overwolf-games-events) documentation pag
 5426
 :::
 
-**Note** that TFT and LOL share the same Game ID.  
+**Note** that TFT and LOL share the same Game ID.
 
 :::tip
 If you would like to know when the user is going to play TFT (hit the "Play" button), you can listen to the LoL Launcher [lobby_info](overwolf-games-launchers-events-lol#info-updates-3) info-update, and check the `queueID`. If it's 1090 or 1100 - it's TFT.
@@ -48,7 +48,7 @@ Because LOL and TFT share the same GameID, when checking TFTs game event status 
 ### Info Updates
 
 key          | Category    | Values                    | Notes                 | Since GEP Ver. |
------------- | ------------| ------------------------- | --------------------- | ------------- | 
+------------ | ------------| ------------------------- | --------------------- | ------------- |
 gep_internal | gep_internal| Local + Public version number|See [notes](#gep_internal-note)|   143.0       |
 
 #### *gep_internal* note
@@ -64,7 +64,7 @@ Data Example:
 ### Info Updates
 
 key          | Category    | Values                    | Notes                 | Since GEP Ver. |
------------- | ------------| ------------------------- | --------------------- | ------------- | 
+------------ | ------------| ------------------------- | --------------------- | ------------- |
 active_player | live_client_data | In-game data received by the client. |See [notes](#active_player-note)|   143.1    |
 all_players | live_client_data | In-game data received by the client. |See [notes](#all_players-note)|   143.1   |
 events | live_client_data | In-game data received by the client. |See [notes](#events-note)|   143.1  |
@@ -75,14 +75,14 @@ game_data | live_client_data | In-game data received by the client. |See [notes]
 Data Example:
 
 ```json
-{ 
-   "info":{ 
-      "live_client_data":{ 
+{
+   "info":{
+      "live_client_data":{
          "active_player":"{"abilities":{"E":{"abilityLevel":5,"displayName":"Unspeakable Horror","id"
          :"NocturneUnspeakableHorror"
          ,"rawDescription":"GeneratedTip_Spell_NocturneUnspeakableHorror_Description"
          ...
-         ,"rawDisplayName":"GeneratedTip_Spell_NocturneUnspeakableHorror_DisplayName"}  
+         ,"rawDisplayName":"GeneratedTip_Spell_NocturneUnspeakableHorror_DisplayName"}
 {"id":5008,"rawDescriptio":"perk_tooltip_StatModAdaptive"},{"id":5002,"rawDescription":"perk_tooltip_StatModArmor"}]},"level":17,"summonerName":"Sh4rgaas"}"
       }
    },
@@ -95,9 +95,9 @@ Data Example:
 Data Example:
 
 ```json
-{ 
-   "info":{ 
-      "live_client_data":{ 
+{
+   "info":{
+      "live_client_data":{
          "all_players":"[{"championName":"Sett","isBot":false,"isDead":true,"items":
          [{"canUse":false,"consumable":false,"count":1,"displayName":"Dead Man's Plate"
       ,"itemID":3742,"price":1100,"rawDescription":"game_item_description_3742","rawDisplayName":"game_item_displayname_3742","slot":0}
@@ -118,14 +118,14 @@ Data Example:
 Data Example:
 
 ```json
-{ 
-   "info":{ 
-      "live_client_data":{ 
+{
+   "info":{
+      "live_client_data":{
          "events":"{"Events":[{"EventID":0,"EventName":"GameStart"
          ,"EventTime":0.041107501834630966},{"EventID":1,"EventName":"MinionsSpawning",
          "EventTime":65.05073547363281},{"Assisters":
          ["CHOWCHOWTHEPAIN","CHAXILICIOUSLOL"],
-...      
+...
 "EventID":2,"EventName":"ChampionKill","EventTime":321.79498291015625,"KillerName":"Adoucissant",
 "VictimName":"finite area"},{"Assisters":["finite area","Dilipa"],"EventID":101,"EventName":
          "ChampionKill","EventTime":2256.623291015625,"KillerName":"St4ubwedel","VictimName":"CHOWCHOWTHEPAIN"}]}"
@@ -140,9 +140,9 @@ Data Example:
 Data Example:
 
 ```json
-{ 
-   "info":{ 
-      "live_client_data":{ 
+{
+   "info":{
+      "live_client_data":{
          "game_data":"{"gameMode":"CLASSIC","gameTime":2258.9697265625,"mapName":"Map11","mapNumber":11,"mapTerrain":"Mountain"}"
       }
    },
@@ -186,7 +186,7 @@ Data example:
 
 `{"info":{"me":{"rank":"2"}},"feature":"me"}`
 
-Meaning 1st place/8th place, etc. 
+Meaning 1st place/8th place, etc.
 
 ("Index" <b>rank</b> data in roster is not accurate in real-time - only once the local player had died or won).
 
@@ -354,11 +354,11 @@ The full roster of players will first appear during the loading screen.
 
 Each player object includes the following data:
 
-* summoner name
-* slot
+* index
 * health
-* xp level
-* rank 
+* xp
+* localplayer
+* rank
 
 Aside from summoner name which is received during the loading screen, the rest of the data mentioned above will be delivered once the actual game has begun.
 
@@ -369,72 +369,63 @@ The final & accurate rank position of each player in the match will be given onl
 Data example:
 
 ```json
-{  
-   "category":"game_info",
-   "key":"tft_roster",
-   "value":"[{summoner:Sh4rgaas}]",
-   "index":"1",
-   "health":"100",
-   "xp":"1",
-   "localplayer":"1",
-   "rank":"0"
-},
-{  
-   "summoner":"Zedester",
-   "index":"2",
-   "health":"100",
-   "xp":"1",
-   "localplayer":"0",
-   "rank":"0"
-},
-{  
-   "summoner":"littlemelony",
-   "index":"3",
-   "health":"100",
-   "xp":"1",
-   "localplayer":"0",
-   "rank":"0"
-},
-{  
-   "summoner":"XKrosX",
-   "index":"4",
-   "health":"100",
-   "xp":"1",
-   "localplayer":"0",
-   "rank":"0"
-},
-{  
-   "summoner":"UP GuyFromMiddle",
-   "index":"5",
-   "health":"100",
-   "xp":"1",
-   "localplayer":"0",
-   "rank":"0"
-},
-{  
-   "summoner":"Storas Tevas",
-   "index":"6",
-   "health":"100",
-   "xp":"1",
-   "localplayer":"0",
-   "rank":"0"
-},
-{  
-   "summoner":"MAYAH MELISSA",
-   "index":"7",
-   "health":"100",
-   "xp":"1",
-   "localplayer":"0",
-   "rank":"0"
-},
-{  
-   "summoner":"TabsWay",
-   "index":"8",
-   "health":"100",
-   "xp":"1",
-   "localplayer":"0",
-   "rank":"0\"}]",
-   "valueLength":772
+{
+  "info": {
+    "roster": {
+      "player_status": "{
+         \"Zedester\": {
+            \"index\":1,
+            \"health\":76,
+            \"xp\":5,
+            \"localplayer\":true,
+            \"rank\":0
+         },
+         \"littlemelony\": {
+            \"index\":2,
+            \"health\":94,
+            \"xp\":4,
+            \"localplayer\":false,
+            \"rank\":0
+         },
+         \"XKrosX\": {
+            \"index\":3,
+            \"health\":88,
+            \"xp\":6,
+            \"localplayer\":false,
+            \"rank\":0
+         },
+         \"UP GuyFromMiddle\": {
+            \"index\":4,
+            \"health\":62,
+            \"xp\":6,
+            \"localplayer\":false,
+            \"rank\":0
+         },
+         \"Storas Tevas\": {
+            \"index\":5,
+            \"health\":90,
+            \"xp\":4,
+            \"localplayer\":false,
+            \"rank\":0
+         },
+         \"MAYAH MELISSA\": {
+            \"index\":6,
+            \"health\":100,
+            \"xp\":4,
+            \"localplayer\":false,
+            \"rank\":0
+         },
+         \"TabsWay\": {
+            \"index\":7,
+            \"health\":92,
+            \"xp\":5,
+            \"localplayer\":false,
+            \"rank\":0
+         },
+      }"
+    }
+  },
+  "feature": "roster"
 }
 ```
 
@@ -453,45 +444,45 @@ Once you purchase a champion, there will be a new update which indicates "Sold" 
 Data Example:
 
 ```json
-{  
-   "info":{  
-      "store":{  
+{
+   "info":{
+      "store":{
          "shop_pieces":"{
-         "slot_1":{  
+         "slot_1":{
             "name":"TFT_Blitzcrank"
          },
-         "slot_2":{  
+         "slot_2":{
             "name":"TFT_Garen"
          },
-         "slot_3":{  
+         "slot_3":{
             "name":"TFT_Nidalee"
          },
-         "slot_4":{  
+         "slot_4":{
             "name":"TFT_Mordekaiser"
          },
-         "slot_5":{  
+         "slot_5":{
             "name":"TFT_Ahri"
          }
       }      "}},"feature":"store"
    }
 
-{  
-   "info":{  
-      "store":{  
+{
+   "info":{
+      "store":{
          "shop_pieces":"{
-         "slot_1":{  
+         "slot_1":{
             "name":"TFT_Blitzcrank"
          },
-         "slot_2":{  
+         "slot_2":{
             "name":"Sold"
          },
-         "slot_3":{  
+         "slot_3":{
             "name":"TFT_Nidalee"
          },
-         "slot_4":{  
+         "slot_4":{
             "name":"TFT_Mordekaiser"
          },
-         "slot_5":{  
+         "slot_5":{
             "name":"TFT_Ahri"
          }
       }      "}},"feature":"store"
@@ -512,17 +503,17 @@ board_pieces   |    board    | Exact position of each chess piece on the grid, i
 Data Example:
 
 ```json
-{ 
-   "info":{ 
-      "board":{ 
-         "board_pieces":"{"         cell_9":{ 
+{
+   "info":{
+      "board":{
+         "board_pieces":"{"         cell_9":{
             "name":"TFT_Tristana",
             "level":"1",
             "item_1":"TFT_Item_GuinsoosRageblade",
             "item_2":"",
             "item_3":""
          },
-         "cell_16":{ 
+         "cell_16":{
             "name":"TFT_KhaZix",
             "level":"1",
             "item_1":"",
@@ -549,52 +540,52 @@ bench_pieces   |    bench    | Exact position of each chess-piece on the bench i
 Data Example:
 
 ```json
-{ 
-   "info":{ 
-      "bench":{ 
-         "bench_pieces":"{"         slot_1":{ 
+{
+   "info":{
+      "bench":{
+         "bench_pieces":"{"         slot_1":{
             "name":"TFT_Garen",
             "level":"1",
             "item_1":"",
             "item_2":"",
             "item_3":""
          },
-         "slot_2":{ 
+         "slot_2":{
             "name":"TFT_Darius",
             "level":"2",
             "item_1":"",
             "item_2":"",
             "item_3":""
          },
-         "slot_3":{ 
+         "slot_3":{
             "name":"TFT_Leona",
             "level":"1",
             "item_1":"",
             "item_2":"",
             "item_3":""
          },
-         "slot_4":{ 
+         "slot_4":{
             "name":"TFT_Sejuani",
             "level":"1",
             "item_1":"",
             "item_2":"",
             "item_3":""
          },
-         "slot_5":{ 
+         "slot_5":{
             "name":"TFT_Leona",
             "level":"1",
             "item_1":"",
             "item_2":"",
             "item_3":""
          },
-         "slot_6":{ 
+         "slot_6":{
             "name":"TFT_Kayle",
             "level":"1",
             "item_1":"TFT_Item_RapidFirecannon",
             "item_2":"",
             "item_3":""
          },
-         "slot_9":{ 
+         "slot_9":{
             "name":"TFT_MissFortune",
             "level":"1",
             "item_1":"",
@@ -621,47 +612,47 @@ carousel_pieces   |   carousel  | Names of available champions in the carousel |
 Data Example:
 
 ```json
-{  
-   "info":{  
-      "carousel":{  
+{
+   "info":{
+      "carousel":{
          "carousel_pieces":"{
-         "slot_1":{  
+         "slot_1":{
             "name":"TFT_Morgana",
             "item_1":"0"
          },
-         "slot_2":{  
+         "slot_2":{
             "name":"TFT_Lissandra",
             "item_1":"0"
          },
-         "slot_3":{  
+         "slot_3":{
             "name":"TFT_Rengar",
             "item_1":"0"
          },
-         "slot_4":{  
+         "slot_4":{
             "name":"TFT_Veigar",
             "item_1":"0"
          },
-         "slot_5":{  
+         "slot_5":{
             "name":"TFT_Gangplank",
             "item_1":"0"
          },
-         "slot_6":{  
+         "slot_6":{
             "name":"TFT_Zed",
             "item_1":"0"
          },
-         "slot_7":{  
+         "slot_7":{
             "name":"TFT_Brand",
             "item_1":"0"
          },
-         "slot_8":{  
+         "slot_8":{
             "name":"TFT_Graves",
             "item_1":"0"
          },
-         "slot_9":{  
+         "slot_9":{
             "name":"TFT_Gnar",
             "item_1":"0"
          },
-         "slot_10":{  
+         "slot_10":{
             "name":"TFT_Chogath",
             "item_1":"0"
          }
