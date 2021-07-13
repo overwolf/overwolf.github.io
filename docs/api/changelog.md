@@ -16,6 +16,7 @@ Here you can find our [Developers Roadmap](https://trello.com/b/1V10E4IB/overwol
 
 * [Porting your Electron app to Overwolf](../topics/electron-migration) - new guide.
 * New sample apps to make the OW creators life easier: [login with Twitch/Steam sample app](../topics/login-with-twitch), [Replays API sample app](overwolf-media-replays#sample-app), [Streaming API sample app](overwolf-streaming#sample-app), and [Channels API sample app](../topics/app-channels#app-channels-sample-app).
+* How to [get user info](../topics/login-with-overwolf#get-user-info-from-token) when you integrate the "login with Overwolf" feature in your website.
 
 #### API
  
