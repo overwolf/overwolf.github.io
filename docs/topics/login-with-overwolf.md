@@ -175,6 +175,22 @@ Once the POST completed, you will get the following auth token details:
 This feature (get info about active subscriptions) will be released soon. We will update this page accordingly. 
 :::
 
+### Get user info from token
+
+Once you have the encrypted JWT token, you can easily decode/decrypt it on your server using one of the [available JWT libraries](https://jwt.io/) and get some additional user info: 
+
+* Sub (username)
+* Nickname
+* Picture (avatar)
+* Email
+* Other JWT properties.
+
+Most JWT packages can decode the token without verifying it, but in the production environment, it's recommended to verify the token to make sure that it hasn't been tampered with.
+
+For example, the npm package [jsonwebtoken](https://www.npmjs.com/package/jsonwebtoken) offers `jwt.decode()` to decode the token  and `jwt.verify()` to verify it. 
+
+Note that for verification, the OW public key is required. You can find it on this endpoint: https://accounts.overwolf.com/oauth2/jwks.json.
+
 ## 4. Close the login window.
 
 Now, we can safely close the login window.
