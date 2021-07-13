@@ -4,7 +4,7 @@ title: Porting your Electron app to Overwolf
 sidebar_label: Electron Migration
 ---
 
-In case you have an existing application on Electron, porting your app to Overwolf is very easy, and should take about a week of work for a single developer. This will allow you the best of both worlds while you maintain full control of your destiny. Like Electron, Overwol is built on Chromium. While Electron is a generalized product - Overwolf is dedicated specifically for gaming apps. 
+In case you have an existing application on Electron, porting your app to Overwolf is very easy, and should take about a week of work for a single developer. This will allow you the best of both worlds while you maintain full control of your destiny. Like Electron, Overwolf is built on Chromium. While Electron is a generalized product - Overwolf is dedicated specifically for gaming apps. 
 
 Once you have a build on Overwolf, you’d be able to enjoy features like in-game overlay, real time telemetry, monetization, analytics, customized installer, auto updates, free CDN, marketing, signatures, and a lot more!
 
