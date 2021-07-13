@@ -177,7 +177,7 @@ This feature (get info about active subscriptions) will be released soon. We wil
 
 ### Get user info from token
 
-Once you have the encrypted JWT token, you can easily decode/decrypt it on your server using one of the [available JWT libraries](https://jwt.io/) and get some additional user info: 
+Once you have the encrypted JWT token, you can easily decode/decrypt it on your server side code using one of the [available JWT libraries](https://jwt.io/) and get some additional user info: 
 
 * Sub (username)
 * Nickname
