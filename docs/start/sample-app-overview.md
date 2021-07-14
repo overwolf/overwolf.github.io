@@ -102,7 +102,7 @@ The same goes for the sample app, so make sure not to edit the author or app nam
 
 ## Screenshots
 
-This is how the sample app's main window looks like: a desktop window disaplying some textual information.
+This is how the sample app's main window looks like: a desktop window displaying some textual information.
 
 ![alt-text](assets/sample-app/desktop-window.png)
 
