@@ -35,7 +35,7 @@ It's recommended to communicate errors and warnings to your users. You can check
 ### Info Updates
 
 key          | Category    | Values                    | Notes                 | Since GEP Ver. |
------------- | ------------| ------------------------- | --------------------- | ------------- | 
+------------ | ------------| ------------------------- | --------------------- | ------------- |
 gep_internal | gep_internal| Local + Public version number|See [notes](#gep_internal-note)|   143.0       |
 
 #### *gep_internal* note
@@ -48,12 +48,37 @@ Data Example:
 
 ## `stats`
 
+### Info Updates
+
+key          | Category    | Values                    | Notes                 | Since GEP Ver. |
+------------ | ------------| ------------------------- | --------------------- | ------------- |
+player0 / player1 … palyerN(N = number of players in the match)| playersInfo| Check notes |See [notes](#player-note)|    14.0   |
+
+#### *player* note
+
+* Encoded stringified JSON containing the properties:
+  * steamId – Steam ID of the player who died
+  * score – Score of the player who died
+  * goals – Goal count of the player
+  * name –  Name of the player that died
+  * team – Team number of the player (1 or 2)
+
+Comment:
+
+Encoded stringified JSON containing the properties. Need to do a decodeURI() on the value and then JSON.parse() on the result.
+
+Data Example:
+
+```json
+{"info":{"playersInfo":{"player0":"%7B%22steamId%22:%222535466851496806%22,%22score%22:52,%22goals%22:%220%22,%22name%22:%22Daknowntesco%22,%22state%22:%220%22,%22team_score%22:0,%22team%22:%221%22,%22local%22:%220%22,%22index%22:0%7D"}},"feature":"roster"}
+```
+
 ### Events
 
 Event       | Event Data   | Fired When    | Notes              | Since GEP Ver. |
 ------------| -------------| --------------| ------------------ | --------------|
-goal        | Check notes  | A goal has been scored |See [notes](#goal-note)|     14.0      | 
-score       | Check notes  | Score of a player has changed|See [notes](#score-note)|     86.0      | 
+goal        | Check notes  | A goal has been scored |See [notes](#goal-note)|     14.0      |
+score       | Check notes  | Score of a player has changed|See [notes](#score-note)|     86.0      |
 
 #### *goal* note
 
@@ -108,7 +133,7 @@ Data Example:
 
 Event       | Event Data   | Fired When    | Notes              | Since GEP Ver. |
 ------------| -------------| --------------| ------------------ | --------------|
-teamGoal    | null         |When the local player’s team has scored a goal|See [notes](#teamGoal-note)|   131.0   | 
+teamGoal    | null         |When the local player’s team has scored a goal|See [notes](#teamGoal-note)|   131.0   |
 
 #### *teamGoal* note
 
@@ -124,7 +149,7 @@ Data Example:
 
 Event       | Event Data   | Fired When    | Notes              | Since GEP Ver. |
 ------------| -------------| --------------| ------------------ | --------------|
-opposingTeamGoal| null     |When the opposing team has scored a goal|See [notes](#oppopsingTeamGoal-note)|   131.0   | 
+opposingTeamGoal| null     |When the opposing team has scored a goal|See [notes](#oppopsingTeamGoal-note)|   131.0   |
 
 #### *opposingTeamGoal* note
 
@@ -139,11 +164,11 @@ Data Example:
 ### Info Updates
 
 key          | Category    | Values                    | Notes                 | Since GEP Ver. |
------------- | ------------| ------------------------- | --------------------- | ------------- | 
-started      | matchState  | true / false              |                       |    14.0       |
-ended        | matchState  | true / false              |                       |    86.0       |
+------------ | ------------| ------------------------- | --------------------- | ------------- |
+started      | matchState  | "true" / "false"          |                       |    14.0       |
+ended        | matchState  | "true" / "false"          |                       |    86.0       |
 matchType    | matchInfo   | Current match type            |See [notes](#matchType-note)|    86.0  |
-ranked       | matchInfo   | True if the match is ranked, false otherwise "True/False" |     |  86.0  |
+ranked       | matchInfo   | True if the match is ranked, false otherwise "true"/"false" |     |  86.0  |
 maxPlayers   | matchInfo   | Maximum number of players allowed in this match |See [notes](#maxPlayers-note)|    86.0       |
 gameMode     | matchInfo   | Game mode of the match |See [notes](#gameMode-note)|    86.0       |
 gameState    | matchInfo   | Current state of the game|See [notes](#gameState-note)|    86.0       |
@@ -153,7 +178,7 @@ gameType     | matchInfo   | Current game type           |                      
 
 Data Example:
 
-`[“Lobby” | “Private” | “Online” | “Offline”]`
+`["Lobby" | "Private" | "Online" | "Offline"]`
 
 Data Example:
 
@@ -175,13 +200,13 @@ Data Example:
 
 Data Example:
 
-`[“soccar” | “basketball”, “hockey”, “items”, “volleyball”, “breakout”, “playTest”]`
+`["Soccar" | "Basketball" | "Hockey" | "Items" | "Breakout" | "Unknown"]`
 
 #### *gameState* note
 
 Data Example:
 
-`[“waitingForPlayers” | “countdown | “active” | “postGoalScored” | “ReplayPlayback” | “PrePodiumSpotlight” | “Finished” | “Unknown” | “PodiumSpotlight”]`
+`["WaitingForPlayers" | "Countdown | "Active" | "PostGoalScored" | "ReplayPlayback" | "PrePodiumSpotlight" | "Finished" | "Unknown" | "PodiumSpotlight"]`
 
 ```json
 {"info":{"matchInfo":{"gameState":"WaitingForPlayers"}},"feature":"match"}
@@ -191,10 +216,10 @@ Data Example:
 
 Event       | Event Data   | Fired When    | Notes              | Since GEP Ver. |
 ------------| -------------| --------------| ------------------ | --------------|
-matchStart  | null         | Match starts  |See [notes](#matchStart-note)|      14.0     | 
-matchEnd    | null         | Match ends    |See [notes](#matchEnd-note)|      14.0     | 
-victory     | null     |team_score (1 / 2)(1 – Victory, 2 - defeat)|    |   86.0   | 
-defeat      | null     |team_score (1 / 2)(1 – Victory, 2 - defeat)|    |   86.0   | 
+matchStart  | null         | Match starts  |See [notes](#matchStart-note)|      14.0     |
+matchEnd    | null         | Match ends    |See [notes](#matchEnd-note)|      14.0     |
+victory     | null     |team_score (1 / 2)(1 – Victory, 2 - defeat)|    |   86.0   |
+defeat      | null     |team_score (1 / 2)(1 – Victory, 2 - defeat)|    |   86.0   |
 
 #### *matchStart* note
 
@@ -233,12 +258,11 @@ Data Example:
 ### Info Updates
 
 key          | Category    | Values                    | Notes                 | Since GEP Ver. |
------------- | ------------| ------------------------- | --------------------- | ------------- | 
+------------ | ------------| ------------------------- | --------------------- | ------------- |
 pseudo_match_id| match_info| Current match’s internal ID code.|See [notes](#pseudo_match_id-note)|    130.0   |
 mutator_settings| match_info| The current-chosen settings of the private match.|See [notes](#mutator_settings-note)|    147.0   |
 arena        | match_info| The current private match's arena setting. |See [notes](#arena-note)|    147.0   |
 server_info  | match_info| The info of the current match's server info. |See [notes](#server_info-note)|    147.0   |
-action_points  | match_info| Name of action that granted a score to local player. |See [notes](#action_points-note)|    160.0   |
 
 #### *pseudo_match_id* note
 
@@ -270,6 +294,12 @@ Data Example:
 {"info":{"match_info":{"server_info":"EU511-Gimbal9"}},"feature":"match_info"}
 ```
 
+### Events
+
+Event       | Event Data   | Fired When    | Notes              | Since GEP Ver. |
+------------| -------------| --------------| ------------------ | --------------|
+action_points  | match_info| Name of action that granted a score to local player. |See [notes](#action_points-note)|    160.0   |
+
 #### *action_points* note
 
 Data Examples:
@@ -292,7 +322,7 @@ Data Examples:
 ### Info Updates
 
 key          | Category    | Values                    | Notes                 | Since GEP Ver. |
------------- | ------------| ------------------------- | --------------------- | ------------- | 
+------------ | ------------| ------------------------- | --------------------- | ------------- |
 player0 / player1 … palyerN(N = number of players in the match)| playersInfo| Check notes |See [notes](#player-note)|    14.0   |
 team1 / team2| teamsInfo | Check notes |See [notes](#teamsInfo-note)|    24.0   |
 team1_score / team2_score| teamsScore|team1 / team2 score – integer|See [notes](#pseudo_match_id-note)|    86.0   |
@@ -332,9 +362,9 @@ Data Example
 
 Event       | Event Data   | Fired When    | Notes              | Since GEP Ver. |
 ------------| -------------| --------------| ------------------ | --------------|
-rosterChange| Array containing players' information|A player leaves or joins the match|See [notes](#rosterChange-note)|      14.0     | 
-playerJoined| Check notes |A player joins the match|See [notes](#playerJoined-note)|      24.0     | 
-playerLeft  | Check notes |A player leaves the match|See [notes](#playerLeft-note)|      24.0     | 
+rosterChange| Array containing players' information|A player leaves or joins the match|See [notes](#rosterChange-note)|      14.0     |
+playerJoined| Check notes |A player joins the match|See [notes](#playerJoined-note)|      24.0     |
+playerLeft  | Check notes |A player leaves the match|See [notes](#playerLeft-note)|      24.0     |
 
 #### *rosterChange* note
 
@@ -381,7 +411,7 @@ Data Example:
 ### Info Updates
 
 key          | Category    | Values                    | Notes                 | Since GEP Ver. |
------------- | ------------| ------------------------- | --------------------- | ------------- | 
+------------ | ------------| ------------------------- | --------------------- | ------------- |
 steamId      | me          | Player’s Steam ID     |                       |    14.0       |
 name         | me          | Player’s name         |                       |    14.0       |
 goals        | me          | Player’s goal count  |                       |    14.0       |
@@ -405,7 +435,7 @@ Data Examples:
 
 Event       | Event Data   | Fired When    | Notes              | Since GEP Ver. |
 ------------| -------------| --------------| ------------------ | --------------|
-death       | null |A player is demolished by an opponent. |See [notes](#death-note)|      160.0     | 
+death       | null |A player is demolished by an opponent. |See [notes](#death-note)|      160.0     |
 
 #### *death* note
 
@@ -421,8 +451,8 @@ Data Example:
 ### Info Updates
 
 key          | Category    | Values                    | Notes                 | Since GEP Ver. |
------------- | ------------| ------------------------- | --------------------- | ------------- | 
-trade_menu_opened         | game_info | true / false   | See [notes](#trade_menu_opened-note) |    170.3       |
+------------ | ------------| ------------------------- | --------------------- | ------------- |
+trade_menu_opened         | game_info | "true" / "false"   | See [notes](#trade_menu_opened-note) |    170.3       |
 trade_my_proposition      | game_info | Local player's items that are on offer. | See [notes](#trade_my_proposition-note) |    170.3       |
 trade_opponent_proposition| game_info | Team member's items that are on offer. | See [notes](#trade_opponent_proposition-note) |    170.3       |
 
