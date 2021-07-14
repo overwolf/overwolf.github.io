@@ -49,7 +49,7 @@ It's highly recommended to communicate errors and warnings to your app users. Ch
 ### Info Updates
 
 key          | Category    | Values                    | Notes                 | Since GEP Ver. |
------------- | ------------| ------------------------- | --------------------- | ------------- | 
+------------ | ------------| ------------------------- | --------------------- | ------------- |
 gep_internal | gep_internal| Local + Public version number|See [notes](#gep_internal-note)|   143.0       |
 
 #### *gep_internal* note
@@ -65,7 +65,7 @@ Data Example:
 ### Info Updates
 
 key          | Category    | Values                    | Notes                 | Since GEP Ver. |
------------- | ------------| ------------------------- | --------------------- | ------------- | 
+------------ | ------------| ------------------------- | --------------------- | ------------- |
 active_player | live_client_data | In-game data received by the client. |See [notes](#active_player-note)|   143.1    |
 all_players | live_client_data | In-game data received by the client. |See [notes](#all_players-note)|   143.1   |
 events | live_client_data | In-game data received by the client. |See [notes](#events-note)|   143.1  |
@@ -84,170 +84,141 @@ port | live_client_data | In-game data received by the client. |See [notes](#por
 {
   "info": {
     "live_client_data": {
-      "active_player": "{"
-      abilities ":{"
-      E ":{"
-      abilityLevel ":0,"
-      displayName ":"
-      Stacked Deck ","
-      id ":"
-      CardmasterStack ","
-      rawDescription ":"
-      GeneratedTip_Spell_CardmasterStack_Description ","
-      rawDisplayName ":"
-      GeneratedTip_Spell_CardmasterStack_DisplayName "},"
-      Passive ":{"
-      displayName ":"
-      Loaded Dice ","
-      id ":"
-      SecondSight ","
-      rawDescription ":"
-      GeneratedTip_Passive_SecondSight_Description ","
-      rawDisplayName ":"
-      GeneratedTip_Passive_SecondSight_DisplayName "},"
-      Q ":{"
-      abilityLevel ":0,"
-      displayName ":"
-      Wild Cards ","
-      id ":"
-      WildCards ","
-      rawDescription ":"
-      GeneratedTip_Spell_WildCards_Description ","
-      rawDisplayName ":"
-      GeneratedTip_Spell_WildCards_DisplayName "},"
-      R ":{"
-      abilityLevel ":0,"
-      displayName ":"
-      Destiny ","
-      id ":"
-      Destiny ","
-      rawDescription ":"
-      GeneratedTip_Spell_Destiny_Description ","
-      rawDisplayName ":"
-      GeneratedTip_Spell_Destiny_DisplayName "},"
-      W ":{"
-      abilityLevel ":0,"
-      displayName ":"
-      Pick a Card ","
-      id ":"
-      PickACard ","
-      rawDescription ":"
-      GeneratedTip_Spell_PickACard_Description ","
-      rawDisplayName ":"
-      GeneratedTip_Spell_PickACard_DisplayName "}},"
-      championStats ":{"
-      abilityHaste ":0,"
-      abilityPower ":0,"
-      armor ":21,"
-      armorPenetrationFlat ":0,"
-      armorPenetrationPercent ":1,"
-      attackDamage ":25,"
-      attackRange ":0,"
-      attackSpeed ":0.6510000228881836,"
-      bonusArmorPenetrationPercent ":1,"
-      bonusMagicPenetrationPercent ":1,"
-      cooldownReduction ":0,"
-      critChance ":0,"
-      critDamage ":0,"
-      currentHealth ":534,"
-      healthRegenRate ":0,"
-      lifeSteal ":0,"
-      magicLethality ":0,"
-      magicPenetrationFlat ":0,"
-      magicPenetrationPercent ":1,"
-      magicResist ":30,"
-      maxHealth ":534,"
-      moveSpeed ":330,"
-      physicalLethality ":0,"
-      resourceMax ":333,"
-      resourceRegenRate ":0,"
-      resourceType ":"
-      MANA ","
-      resourceValue ":333,"
-      spellVamp ":0,"
-      tenacity ":0},"
-      currentGold ":0,"
-      fullRunes ":{"
-      generalRunes ":[{"
-      displayName ":"
-      Dark Harvest ","
-      id ":8128,"
-      rawDescription ":"
-      perk_tooltip_DarkHarvest ","
-      rawDisplayName ":"
-      perk_displayname_DarkHarvest "},{"
-      displayName ":"
-      Taste of Blood ","
-      id ":8139,"
-      rawDescription ":"
-      perk_tooltip_TasteOfBlood ","
-      rawDisplayName ":"
-      perk_displayname_TasteOfBlood "},{"
-      displayName ":"
-      Eyeball Collection ","
-      id ":8138,"
-      rawDescription ":"
-      perk_tooltip_EyeballCollection ","
-      rawDisplayName ":"
-      perk_displayname_EyeballCollection "},{"
-      displayName ":"
-      Ravenous Hunter ","
-      id ":8135,"
-      rawDescription ":"
-      perk_tooltip_RavenousHunter ","
-      rawDisplayName ":"
-      perk_displayname_RavenousHunter "},{"
-      displayName ":"
-      Presence of Mind ","
-      id ":8009,"
-      rawDescription ":"
-      perk_tooltip_PresenceOfMind ","
-      rawDisplayName ":"
-      perk_displayname_PresenceOfMind "},{"
-      displayName ":"
-      Coup de Grace ","
-      id ":8014,"
-      rawDescription ":"
-      perk_tooltip_CoupDeGrace ","
-      rawDisplayName ":"
-      perk_displayname_CoupDeGrace "}],"
-      keystone ":{"
-      displayName ":"
-      Dark Harvest ","
-      id ":8128,"
-      rawDescription ":"
-      perk_tooltip_DarkHarvest ","
-      rawDisplayName ":"
-      perk_displayname_DarkHarvest "},"
-      primaryRuneTree ":{"
-      displayName ":"
-      Domination ","
-      id ":8100,"
-      rawDescription ":"
-      perkstyle_tooltip_7200 ","
-      rawDisplayName ":"
-      perkstyle_displayname_7200 "},"
-      secondaryRuneTree ":{"
-      displayName ":"
-      Precision ","
-      id ":8000,"
-      rawDescription ":"
-      perkstyle_tooltip_7201 ","
-      rawDisplayName ":"
-      perkstyle_displayname_7201 "},"
-      statRunes ":[{"
-      id ":5008,"
-      rawDescription ":"
-      perk_tooltip_StatModAdaptive "},{"
-      id ":5008,"
-      rawDescription ":"
-      perk_tooltip_StatModAdaptive "},{"
-      id ":5003,"
-      rawDescription ":"
-      perk_tooltip_StatModMagicResist "}]},"
-      level ":1,"
-      summonerName ":"
-      Sh4rgaas "}"
+      "active_player": {
+        "abilities": {
+          "E": {
+            "abilityLevel": 0,
+            "displayName": "Stacked Deck",
+            "id": "CardmasterStack",
+            "rawDescription": "GeneratedTip_Spell_CardmasterStack_Description",
+            "rawDisplayName": "GeneratedTip_Spell_CardmasterStack_DisplayName"
+          },
+          "Passive": {
+            "displayName": "Loaded Dice",
+            "id": "SecondSight",
+            "rawDescription": "GeneratedTip_Passive_SecondSight_Description",
+            "rawDisplayName": "GeneratedTip_Passive_SecondSight_DisplayName"
+          },
+          "Q": {
+            "abilityLevel": 0,
+            "displayName": "Wild Cards",
+            "id": "WildCards",
+            "rawDescription": "GeneratedTip_Spell_WildCards_Description",
+            "rawDisplayName": "GeneratedTip_Spell_WildCards_DisplayName"
+          },
+          "R": {
+            "abilityLevel": 0,
+            "displayName": "Destiny",
+            "id": "Destiny",
+            "rawDescription": "GeneratedTip_Spell_Destiny_Description",
+            "rawDisplayName": "GeneratedTip_Spell_Destiny_DisplayName"
+          },
+          "W": {
+            "abilityLevel": 0,
+            "displayName": "Pick a Card",
+            "id": "PickACard",
+            "rawDescription": "GeneratedTip_Spell_PickACard_Description",
+            "rawDisplayName": "GeneratedTip_Spell_PickACard_DisplayName"
+          }
+        },
+        "championStats": {
+          "abilityHaste": 0,
+          "abilityPower": 0,
+          "armor": 21,
+          "armorPenetrationFlat": 0,
+          "armorPenetrationPercent": 1,
+          "attackDamage": 25,
+          "attackRange": 0,
+          "attackSpeed": 0.6510000228881836,
+          "bonusArmorPenetrationPercent": 1,
+          "bonusMagicPenetrationPercent": 1,
+          "cooldownReduction": 0,
+          "critChance": 0,
+          "critDamage": 0,
+          "currentHealth": 534,
+          "healthRegenRate": 0,
+          "lifeSteal": 0,
+          "magicLethality": 0,
+          "magicPenetrationFlat": 0,
+          "magicPenetrationPercent": 1,
+          "magicResist": 30,
+          "maxHealth": 534,
+          "moveSpeed": 330,
+          "physicalLethality": 0,
+          "resourceMax": 333,
+          "resourceRegenRate": 0,
+          "resourceType": "MANA",
+          "resourceValue": 333,
+          "spellVamp": 0,
+          "tenacity": 0
+        },
+        "currentGold": 0,
+        "fullRunes": {
+          "generalRunes": [
+            {
+              "displayName": "Dark Harvest",
+              "id": 8128,
+              "rawDescription": "perk_tooltip_DarkHarvest",
+              "rawDisplayName": "perk_displayname_DarkHarvest"
+            },
+            {
+              "displayName": "Taste of Blood",
+              "id": 8139,
+              "rawDescription": "perk_tooltip_TasteOfBlood",
+              "rawDisplayName": "perk_displayname_TasteOfBlood"
+            },
+            {
+              "displayName": "Eyeball Collection",
+              "id": 8138,
+              "rawDescription": "perk_tooltip_EyeballCollection",
+              "rawDisplayName": "perk_displayname_EyeballCollection"
+            },
+            {
+              "displayName": "Ravenous Hunter",
+              "id": 8135,
+              "rawDescription": "perk_tooltip_RavenousHunter",
+              "rawDisplayName": "perk_displayname_RavenousHunter"
+            },
+            {
+              "displayName": "Presence of Mind",
+              "id": 8009,
+              "rawDescription": "perk_tooltip_PresenceOfMind",
+              "rawDisplayName": "perk_displayname_PresenceOfMind"
+            },
+            {
+              "displayName": "Coup de Grace",
+              "id": 8014,
+              "rawDescription": "perk_tooltip_CoupDeGrace",
+              "rawDisplayName": "perk_displayname_CoupDeGrace"
+            }
+          ],
+          "keystone": {
+            "displayName": "Dark Harvest",
+            "id": 8128,
+            "rawDescription": "perk_tooltip_DarkHarvest",
+            "rawDisplayName": "perk_displayname_DarkHarvest"
+          },
+          "primaryRuneTree": {
+            "displayName": "Domination",
+            "id": 8100,
+            "rawDescription": "perkstyle_tooltip_7200",
+            "rawDisplayName": "perkstyle_displayname_7200"
+          },
+          "secondaryRuneTree": {
+            "displayName": "Precision",
+            "id": 8000,
+            "rawDescription": "perkstyle_tooltip_7201",
+            "rawDisplayName": "perkstyle_displayname_7201"
+          },
+          "statRunes": [
+            { "id": 5008, "rawDescription": "perk_tooltip_StatModAdaptive" },
+            { "id": 5008, "rawDescription": "perk_tooltip_StatModAdaptive" },
+            { "id": 5003, "rawDescription": "perk_tooltip_StatModMagicResist" }
+          ]
+        },
+        "level": 1,
+        "summonerName": "Sh4rgaas"
+      }
     }
   },
   "feature": "live_client_data"
@@ -267,667 +238,554 @@ port | live_client_data | In-game data received by the client. |See [notes](#por
 {
   "info": {
     "live_client_data": {
-      "all_players": "[{"
-      championName ":"
-      Twisted Fate ","
-      isBot ":false,"
-      isDead ":false,"
-      items ":[{"
-      canUse ":true,"
-      consumable ":true,"
-      count ":1,"
-      displayName ":"
-      Poro - Snax ","
-      itemID ":2052,"
-      price ":0,"
-      rawDescription ":"
-      game_item_description_2052 ","
-      rawDisplayName ":"
-      game_item_displayname_2052 ","
-      slot ":6}],"
-      level ":1,"
-      position ":"
-      NONE ","
-      rawChampionName ":"
-      game_character_displayname_TwistedFate ","
-      rawSkinName ":"
-      game_character_skin_displayname_TwistedFate_9 ","
-      respawnTimer ":0,"
-      runes ":{"
-      keystone ":{"
-      displayName ":"
-      Dark Harvest ","
-      id ":8128,"
-      rawDescription ":"
-      perk_tooltip_DarkHarvest ","
-      rawDisplayName ":"
-      perk_displayname_DarkHarvest "},"
-      primaryRuneTree ":{"
-      displayName ":"
-      Domination ","
-      id ":8100,"
-      rawDescription ":"
-      perkstyle_tooltip_7200 ","
-      rawDisplayName ":"
-      perkstyle_displayname_7200 "},"
-      secondaryRuneTree ":{"
-      displayName ":"
-      Precision ","
-      id ":8000,"
-      rawDescription ":"
-      perkstyle_tooltip_7201 ","
-      rawDisplayName ":"
-      perkstyle_displayname_7201 "}},"
-      scores ":{"
-      assists ":0,"
-      creepScore ":0,"
-      deaths ":0,"
-      kills ":0,"
-      wardScore ":0},"
-      skinID ":9,"
-      skinName ":"
-      Cutpurse Twisted Fate ","
-      summonerName ":"
-      Sh4rgaas ","
-      summonerSpells ":{"
-      summonerSpellOne ":{"
-      displayName ":"
-      Ghost ","
-      rawDescription ":"
-      GeneratedTip_SummonerSpell_SummonerHaste_Description ","
-      rawDisplayName ":"
-      GeneratedTip_SummonerSpell_SummonerHaste_DisplayName "},"
-      summonerSpellTwo ":{"
-      displayName ":"
-      Flash ","
-      rawDescription ":"
-      GeneratedTip_SummonerSpell_SummonerFlash_Description ","
-      rawDisplayName ":"
-      GeneratedTip_SummonerSpell_SummonerFlash_DisplayName "}},"
-      team ":"
-      CHAOS "},{"
-      championName ":"
-      Brand ","
-      isBot ":false,"
-      isDead ":false,"
-      items ":[],"
-      level ":1,"
-      position ":"
-      NONE ","
-      rawChampionName ":"
-      game_character_displayname_Brand ","
-      rawSkinName ":"
-      game_character_skin_displayname_Brand_2 ","
-      respawnTimer ":0,"
-      runes ":{"
-      keystone ":{"
-      displayName ":"
-      Dark Harvest ","
-      id ":8128,"
-      rawDescription ":"
-      perk_tooltip_DarkHarvest ","
-      rawDisplayName ":"
-      perk_displayname_DarkHarvest "},"
-      primaryRuneTree ":{"
-      displayName ":"
-      Domination ","
-      id ":8100,"
-      rawDescription ":"
-      perkstyle_tooltip_7200 ","
-      rawDisplayName ":"
-      perkstyle_displayname_7200 "},"
-      secondaryRuneTree ":{"
-      displayName ":"
-      Precision ","
-      id ":8000,"
-      rawDescription ":"
-      perkstyle_tooltip_7201 ","
-      rawDisplayName ":"
-      perkstyle_displayname_7201 "}},"
-      scores ":{"
-      assists ":0,"
-      creepScore ":0,"
-      deaths ":0,"
-      kills ":0,"
-      wardScore ":0},"
-      skinID ":2,"
-      skinName ":"
-      Vandal Brand ","
-      summonerName ":"
-      Gordon xD ","
-      summonerSpells ":{"
-      summonerSpellOne ":{"
-      displayName ":"
-      Flash ","
-      rawDescription ":"
-      GeneratedTip_SummonerSpell_SummonerFlash_Description ","
-      rawDisplayName ":"
-      GeneratedTip_SummonerSpell_SummonerFlash_DisplayName "},"
-      summonerSpellTwo ":{"
-      displayName ":"
-      Heal ","
-      rawDescription ":"
-      GeneratedTip_SummonerSpell_SummonerHeal_Description ","
-      rawDisplayName ":"
-      GeneratedTip_SummonerSpell_SummonerHeal_DisplayName "}},"
-      team ":"
-      ORDER "},{"
-      championName ":"
-      Gragas ","
-      isBot ":false,"
-      isDead ":false,"
-      items ":[],"
-      level ":1,"
-      position ":"
-      NONE ","
-      rawChampionName ":"
-      game_character_displayname_Gragas ","
-      rawSkinName ":"
-      game_character_skin_displayname_Gragas_10 ","
-      respawnTimer ":0,"
-      runes ":{"
-      keystone ":{"
-      displayName ":"
-      Dark Harvest ","
-      id ":8128,"
-      rawDescription ":"
-      perk_tooltip_DarkHarvest ","
-      rawDisplayName ":"
-      perk_displayname_DarkHarvest "},"
-      primaryRuneTree ":{"
-      displayName ":"
-      Domination ","
-      id ":8100,"
-      rawDescription ":"
-      perkstyle_tooltip_7200 ","
-      rawDisplayName ":"
-      perkstyle_displayname_7200 "},"
-      secondaryRuneTree ":{"
-      displayName ":"
-      Precision ","
-      id ":8000,"
-      rawDescription ":"
-      perkstyle_tooltip_7201 ","
-      rawDisplayName ":"
-      perkstyle_displayname_7201 "}},"
-      scores ":{"
-      assists ":0,"
-      creepScore ":0,"
-      deaths ":0,"
-      kills ":0,"
-      wardScore ":0},"
-      skinID ":10,"
-      skinName ":"
-      Arctic Ops Gragas ","
-      summonerName ":"
-      IM Piotrovic ","
-      summonerSpells ":{"
-      summonerSpellOne ":{"
-      displayName ":"
-      Flash ","
-      rawDescription ":"
-      GeneratedTip_SummonerSpell_SummonerFlash_Description ","
-      rawDisplayName ":"
-      GeneratedTip_SummonerSpell_SummonerFlash_DisplayName "},"
-      summonerSpellTwo ":{"
-      displayName ":"
-      Ignite ","
-      rawDescription ":"
-      GeneratedTip_SummonerSpell_SummonerDot_Description ","
-      rawDisplayName ":"
-      GeneratedTip_SummonerSpell_SummonerDot_DisplayName "}},"
-      team ":"
-      ORDER "},{"
-      championName ":"
-      Shen ","
-      isBot ":false,"
-      isDead ":false,"
-      items ":[],"
-      level ":1,"
-      position ":"
-      NONE ","
-      rawChampionName ":"
-      game_character_displayname_Shen ","
-      rawSkinName ":"
-      game_character_skin_displayname_Shen_6 ","
-      respawnTimer ":0,"
-      runes ":{"
-      keystone ":{"
-      displayName ":"
-      Hail of Blades ","
-      id ":9923,"
-      rawDescription ":"
-      perk_tooltip_HailOfBlades ","
-      rawDisplayName ":"
-      perk_displayname_HailOfBlades "},"
-      primaryRuneTree ":{"
-      displayName ":"
-      Domination ","
-      id ":8100,"
-      rawDescription ":"
-      perkstyle_tooltip_7200 ","
-      rawDisplayName ":"
-      perkstyle_displayname_7200 "},"
-      secondaryRuneTree ":{"
-      displayName ":"
-      Precision ","
-      id ":8000,"
-      rawDescription ":"
-      perkstyle_tooltip_7201 ","
-      rawDisplayName ":"
-      perkstyle_displayname_7201 "}},"
-      scores ":{"
-      assists ":0,"
-      creepScore ":0,"
-      deaths ":0,"
-      kills ":0,"
-      wardScore ":0},"
-      skinID ":6,"
-      skinName ":"
-      TPA Shen ","
-      summonerName ":"
-      ToxicMolester ","
-      summonerSpells ":{"
-      summonerSpellOne ":{"
-      displayName ":"
-      Clarity ","
-      rawDescription ":"
-      GeneratedTip_SummonerSpell_SummonerMana_Description ","
-      rawDisplayName ":"
-      GeneratedTip_SummonerSpell_SummonerMana_DisplayName "},"
-      summonerSpellTwo ":{"
-      displayName ":"
-      Flash ","
-      rawDescription ":"
-      GeneratedTip_SummonerSpell_SummonerFlash_Description ","
-      rawDisplayName ":"
-      GeneratedTip_SummonerSpell_SummonerFlash_DisplayName "}},"
-      team ":"
-      ORDER "},{"
-      championName ":"
-      Vayne ","
-      isBot ":false,"
-      isDead ":false,"
-      items ":[],"
-      level ":1,"
-      position ":"
-      NONE ","
-      rawChampionName ":"
-      game_character_displayname_Vayne ","
-      respawnTimer ":0,"
-      runes ":{"
-      keystone ":{"
-      displayName ":"
-      Hail of Blades ","
-      id ":9923,"
-      rawDescription ":"
-      perk_tooltip_HailOfBlades ","
-      rawDisplayName ":"
-      perk_displayname_HailOfBlades "},"
-      primaryRuneTree ":{"
-      displayName ":"
-      Domination ","
-      id ":8100,"
-      rawDescription ":"
-      perkstyle_tooltip_7200 ","
-      rawDisplayName ":"
-      perkstyle_displayname_7200 "},"
-      secondaryRuneTree ":{"
-      displayName ":"
-      Precision ","
-      id ":8000,"
-      rawDescription ":"
-      perkstyle_tooltip_7201 ","
-      rawDisplayName ":"
-      perkstyle_displayname_7201 "}},"
-      scores ":{"
-      assists ":0,"
-      creepScore ":0,"
-      deaths ":0,"
-      kills ":0,"
-      wardScore ":0},"
-      skinID ":0,"
-      summonerName ":"
-      ToxikBull ","
-      summonerSpells ":{"
-      summonerSpellOne ":{"
-      displayName ":"
-      Flash ","
-      rawDescription ":"
-      GeneratedTip_SummonerSpell_SummonerFlash_Description ","
-      rawDisplayName ":"
-      GeneratedTip_SummonerSpell_SummonerFlash_DisplayName "},"
-      summonerSpellTwo ":{"
-      displayName ":"
-      Barrier ","
-      rawDescription ":"
-      GeneratedTip_SummonerSpell_SummonerBarrier_Description ","
-      rawDisplayName ":"
-      GeneratedTip_SummonerSpell_SummonerBarrier_DisplayName "}},"
-      team ":"
-      ORDER "},{"
-      championName ":"
-      Pantheon ","
-      isBot ":false,"
-      isDead ":false,"
-      items ":[],"
-      level ":1,"
-      position ":"
-      NONE ","
-      rawChampionName ":"
-      game_character_displayname_Pantheon ","
-      respawnTimer ":0,"
-      runes ":{"
-      keystone ":{"
-      displayName ":"
-      Electrocute ","
-      id ":8112,"
-      rawDescription ":"
-      perk_tooltip_Electrocute ","
-      rawDisplayName ":"
-      perk_displayname_Electrocute "},"
-      primaryRuneTree ":{"
-      displayName ":"
-      Domination ","
-      id ":8100,"
-      rawDescription ":"
-      perkstyle_tooltip_7200 ","
-      rawDisplayName ":"
-      perkstyle_displayname_7200 "},"
-      secondaryRuneTree ":{"
-      displayName ":"
-      Precision ","
-      id ":8000,"
-      rawDescription ":"
-      perkstyle_tooltip_7201 ","
-      rawDisplayName ":"
-      perkstyle_displayname_7201 "}},"
-      scores ":{"
-      assists ":0,"
-      creepScore ":0,"
-      deaths ":0,"
-      kills ":0,"
-      wardScore ":0},"
-      skinID ":0,"
-      summonerName ":"
-      Haorn ","
-      summonerSpells ":{"
-      summonerSpellOne ":{"
-      displayName ":"
-      Flash ","
-      rawDescription ":"
-      GeneratedTip_SummonerSpell_SummonerFlash_Description ","
-      rawDisplayName ":"
-      GeneratedTip_SummonerSpell_SummonerFlash_DisplayName "},"
-      summonerSpellTwo ":{"
-      displayName ":"
-      Mark ","
-      rawDescription ":"
-      GeneratedTip_SummonerSpell_SummonerSnowball_Description ","
-      rawDisplayName ":"
-      GeneratedTip_SummonerSpell_SummonerSnowball_DisplayName "}},"
-      team ":"
-      ORDER "},{"
-      championName ":"
-      Rell ","
-      isBot ":false,"
-      isDead ":false,"
-      items ":[],"
-      level ":1,"
-      position ":"
-      NONE ","
-      rawChampionName ":"
-      game_character_displayname_Rell ","
-      respawnTimer ":0,"
-      runes ":{"
-      keystone ":{"
-      displayName ":"
-      Aftershock ","
-      id ":8439,"
-      rawDescription ":"
-      perk_tooltip_VeteranAftershock ","
-      rawDisplayName ":"
-      perk_displayname_VeteranAftershock "},"
-      primaryRuneTree ":{"
-      displayName ":"
-      Resolve ","
-      id ":8400,"
-      rawDescription ":"
-      perkstyle_tooltip_7204 ","
-      rawDisplayName ":"
-      perkstyle_displayname_7204 "},"
-      secondaryRuneTree ":{"
-      displayName ":"
-      Precision ","
-      id ":8000,"
-      rawDescription ":"
-      perkstyle_tooltip_7201 ","
-      rawDisplayName ":"
-      perkstyle_displayname_7201 "}},"
-      scores ":{"
-      assists ":0,"
-      creepScore ":0,"
-      deaths ":0,"
-      kills ":0,"
-      wardScore ":0},"
-      skinID ":0,"
-      summonerName ":"
-      Tαkumi Usui ","
-      summonerSpells ":{"
-      summonerSpellOne ":{"
-      displayName ":"
-      Flash ","
-      rawDescription ":"
-      GeneratedTip_SummonerSpell_SummonerFlash_Description ","
-      rawDisplayName ":"
-      GeneratedTip_SummonerSpell_SummonerFlash_DisplayName "},"
-      summonerSpellTwo ":{"
-      displayName ":"
-      Mark ","
-      rawDescription ":"
-      GeneratedTip_SummonerSpell_SummonerSnowball_Description ","
-      rawDisplayName ":"
-      GeneratedTip_SummonerSpell_SummonerSnowball_DisplayName "}},"
-      team ":"
-      CHAOS "},{"
-      championName ":"
-      Anivia ","
-      isBot ":false,"
-      isDead ":false,"
-      items ":[],"
-      level ":1,"
-      position ":"
-      NONE ","
-      rawChampionName ":"
-      game_character_displayname_Anivia ","
-      rawSkinName ":"
-      game_character_skin_displayname_Anivia_8 ","
-      respawnTimer ":0,"
-      runes ":{"
-      keystone ":{"
-      displayName ":"
-      Dark Harvest ","
-      id ":8128,"
-      rawDescription ":"
-      perk_tooltip_DarkHarvest ","
-      rawDisplayName ":"
-      perk_displayname_DarkHarvest "},"
-      primaryRuneTree ":{"
-      displayName ":"
-      Domination ","
-      id ":8100,"
-      rawDescription ":"
-      perkstyle_tooltip_7200 ","
-      rawDisplayName ":"
-      perkstyle_displayname_7200 "},"
-      secondaryRuneTree ":{"
-      displayName ":"
-      Sorcery ","
-      id ":8200,"
-      rawDescription ":"
-      perkstyle_tooltip_7202 ","
-      rawDisplayName ":"
-      perkstyle_displayname_7202 "}},"
-      scores ":{"
-      assists ":0,"
-      creepScore ":0,"
-      deaths ":0,"
-      kills ":0,"
-      wardScore ":0},"
-      skinID ":8,"
-      skinName ":"
-      Papercraft Anivia ","
-      summonerName ":"
-      TheShackledCaps ","
-      summonerSpells ":{"
-      summonerSpellOne ":{"
-      displayName ":"
-      Flash ","
-      rawDescription ":"
-      GeneratedTip_SummonerSpell_SummonerFlash_Description ","
-      rawDisplayName ":"
-      GeneratedTip_SummonerSpell_SummonerFlash_DisplayName "},"
-      summonerSpellTwo ":{"
-      displayName ":"
-      Barrier ","
-      rawDescription ":"
-      GeneratedTip_SummonerSpell_SummonerBarrier_Description ","
-      rawDisplayName ":"
-      GeneratedTip_SummonerSpell_SummonerBarrier_DisplayName "}},"
-      team ":"
-      CHAOS "},{"
-      championName ":"
-      Jhin ","
-      isBot ":false,"
-      isDead ":false,"
-      items ":[],"
-      level ":1,"
-      position ":"
-      NONE ","
-      rawChampionName ":"
-      game_character_displayname_Jhin ","
-      rawSkinName ":"
-      game_character_skin_displayname_Jhin_3 ","
-      respawnTimer ":0,"
-      runes ":{"
-      keystone ":{"
-      displayName ":"
-      Dark Harvest ","
-      id ":8128,"
-      rawDescription ":"
-      perk_tooltip_DarkHarvest ","
-      rawDisplayName ":"
-      perk_displayname_DarkHarvest "},"
-      primaryRuneTree ":{"
-      displayName ":"
-      Domination ","
-      id ":8100,"
-      rawDescription ":"
-      perkstyle_tooltip_7200 ","
-      rawDisplayName ":"
-      perkstyle_displayname_7200 "},"
-      secondaryRuneTree ":{"
-      displayName ":"
-      Precision ","
-      id ":8000,"
-      rawDescription ":"
-      perkstyle_tooltip_7201 ","
-      rawDisplayName ":"
-      perkstyle_displayname_7201 "}},"
-      scores ":{"
-      assists ":0,"
-      creepScore ":0,"
-      deaths ":0,"
-      kills ":0,"
-      wardScore ":0},"
-      skinID ":3,"
-      skinName ":"
-      SKT T1 Jhin ","
-      summonerName ":"
-      SzczodryMarynarz ","
-      summonerSpells ":{"
-      summonerSpellOne ":{"
-      displayName ":"
-      Flash ","
-      rawDescription ":"
-      GeneratedTip_SummonerSpell_SummonerFlash_Description ","
-      rawDisplayName ":"
-      GeneratedTip_SummonerSpell_SummonerFlash_DisplayName "},"
-      summonerSpellTwo ":{"
-      displayName ":"
-      Barrier ","
-      rawDescription ":"
-      GeneratedTip_SummonerSpell_SummonerBarrier_Description ","
-      rawDisplayName ":"
-      GeneratedTip_SummonerSpell_SummonerBarrier_DisplayName "}},"
-      team ":"
-      CHAOS "},{"
-      championName ":"
-      Lissandra ","
-      isBot ":false,"
-      isDead ":false,"
-      items ":[],"
-      level ":1,"
-      position ":"
-      NONE ","
-      rawChampionName ":"
-      game_character_displayname_Lissandra ","
-      rawSkinName ":"
-      game_character_skin_displayname_Lissandra_3 ","
-      respawnTimer ":0,"
-      runes ":{"
-      keystone ":{"
-      displayName ":"
-      Electrocute ","
-      id ":8112,"
-      rawDescription ":"
-      perk_tooltip_Electrocute ","
-      rawDisplayName ":"
-      perk_displayname_Electrocute "},"
-      primaryRuneTree ":{"
-      displayName ":"
-      Domination ","
-      id ":8100,"
-      rawDescription ":"
-      perkstyle_tooltip_7200 ","
-      rawDisplayName ":"
-      perkstyle_displayname_7200 "},"
-      secondaryRuneTree ":{"
-      displayName ":"
-      Sorcery ","
-      id ":8200,"
-      rawDescription ":"
-      perkstyle_tooltip_7202 ","
-      rawDisplayName ":"
-      perkstyle_displayname_7202 "}},"
-      scores ":{"
-      assists ":0,"
-      creepScore ":0,"
-      deaths ":0,"
-      kills ":0,"
-      wardScore ":0},"
-      skinID ":3,"
-      skinName ":"
-      Program Lissandra ","
-      summonerName ":"
-      JALLLAA ","
-      summonerSpells ":{"
-      summonerSpellOne ":{"
-      displayName ":"
-      Mark ","
-      rawDescription ":"
-      GeneratedTip_SummonerSpell_SummonerSnowball_Description ","
-      rawDisplayName ":"
-      GeneratedTip_SummonerSpell_SummonerSnowball_DisplayName "},"
-      summonerSpellTwo ":{"
-      displayName ":"
-      Flash ","
-      rawDescription ":"
-      GeneratedTip_SummonerSpell_SummonerFlash_Description ","
-      rawDisplayName ":"
-      GeneratedTip_SummonerSpell_SummonerFlash_DisplayName "}},"
-      team ":"
-      CHAOS "}]"
+      "all_players": [
+        {
+          "championName": "Twisted Fate",
+          "isBot": false,
+          "isDead": false,
+          "items": [
+            {
+              "canUse": true,
+              "consumable": true,
+              "count": 1,
+              "displayName": "Poro - Snax",
+              "itemID": 2052,
+              "price": 0,
+              "rawDescription": "game_item_description_2052",
+              "rawDisplayName": "game_item_displayname_2052",
+              "slot": 6
+            }
+          ],
+          "level": 1,
+          "position": "NONE",
+          "rawChampionName": "game_character_displayname_TwistedFate",
+          "rawSkinName": "game_character_skin_displayname_TwistedFate_9",
+          "respawnTimer": 0,
+          "runes": {
+            "keystone": {
+              "displayName": "Dark Harvest",
+              "id": 8128,
+              "rawDescription": "perk_tooltip_DarkHarvest",
+              "rawDisplayName": "perk_displayname_DarkHarvest"
+            },
+            "primaryRuneTree": {
+              "displayName": "Domination",
+              "id": 8100,
+              "rawDescription": "perkstyle_tooltip_7200",
+              "rawDisplayName": "perkstyle_displayname_7200"
+            },
+            "secondaryRuneTree": {
+              "displayName": "Precision",
+              "id": 8000,
+              "rawDescription": "perkstyle_tooltip_7201",
+              "rawDisplayName": "perkstyle_displayname_7201"
+            }
+          },
+          "scores": {
+            "assists": 0,
+            "creepScore": 0,
+            "deaths": 0,
+            "kills": 0,
+            "wardScore": 0
+          },
+          "skinID": 9,
+          "skinName": "Cutpurse Twisted Fate",
+          "summonerName": "Sh4rgaas",
+          "summonerSpells": {
+            "summonerSpellOne": {
+              "displayName": "Ghost",
+              "rawDescription": "GeneratedTip_SummonerSpell_SummonerHaste_Description",
+              "rawDisplayName": "GeneratedTip_SummonerSpell_SummonerHaste_DisplayName"
+            },
+            "summonerSpellTwo": {
+              "displayName": "Flash",
+              "rawDescription": "GeneratedTip_SummonerSpell_SummonerFlash_Description",
+              "rawDisplayName": "GeneratedTip_SummonerSpell_SummonerFlash_DisplayName"
+            }
+          },
+          "team": "CHAOS"
+        },
+        {
+          "championName": "Brand",
+          "isBot": false,
+          "isDead": false,
+          "items": [],
+          "level": 1,
+          "position": "NONE",
+          "rawChampionName": "game_character_displayname_Brand",
+          "rawSkinName": "game_character_skin_displayname_Brand_2",
+          "respawnTimer": 0,
+          "runes": {
+            "keystone": {
+              "displayName": "Dark Harvest",
+              "id": 8128,
+              "rawDescription": "perk_tooltip_DarkHarvest",
+              "rawDisplayName": "perk_displayname_DarkHarvest"
+            },
+            "primaryRuneTree": {
+              "displayName": "Domination",
+              "id": 8100,
+              "rawDescription": "perkstyle_tooltip_7200",
+              "rawDisplayName": "perkstyle_displayname_7200"
+            },
+            "secondaryRuneTree": {
+              "displayName": "Precision",
+              "id": 8000,
+              "rawDescription": "perkstyle_tooltip_7201",
+              "rawDisplayName": "perkstyle_displayname_7201"
+            }
+          },
+          "scores": {
+            "assists": 0,
+            "creepScore": 0,
+            "deaths": 0,
+            "kills": 0,
+            "wardScore": 0
+          },
+          "skinID": 2,
+          "skinName": "Vandal Brand",
+          "summonerName": "Gordon xD",
+          "summonerSpells": {
+            "summonerSpellOne": {
+              "displayName": "Flash",
+              "rawDescription": "GeneratedTip_SummonerSpell_SummonerFlash_Description",
+              "rawDisplayName": "GeneratedTip_SummonerSpell_SummonerFlash_DisplayName"
+            },
+            "summonerSpellTwo": {
+              "displayName": "Heal",
+              "rawDescription": "GeneratedTip_SummonerSpell_SummonerHeal_Description",
+              "rawDisplayName": "GeneratedTip_SummonerSpell_SummonerHeal_DisplayName"
+            }
+          },
+          "team": "ORDER"
+        },
+        {
+          "championName": "Gragas",
+          "isBot": false,
+          "isDead": false,
+          "items": [],
+          "level": 1,
+          "position": "NONE",
+          "rawChampionName": "game_character_displayname_Gragas",
+          "rawSkinName": "game_character_skin_displayname_Gragas_10",
+          "respawnTimer": 0,
+          "runes": {
+            "keystone": {
+              "displayName": "Dark Harvest",
+              "id": 8128,
+              "rawDescription": "perk_tooltip_DarkHarvest",
+              "rawDisplayName": "perk_displayname_DarkHarvest"
+            },
+            "primaryRuneTree": {
+              "displayName": "Domination",
+              "id": 8100,
+              "rawDescription": "perkstyle_tooltip_7200",
+              "rawDisplayName": "perkstyle_displayname_7200"
+            },
+            "secondaryRuneTree": {
+              "displayName": "Precision",
+              "id": 8000,
+              "rawDescription": "perkstyle_tooltip_7201",
+              "rawDisplayName": "perkstyle_displayname_7201"
+            }
+          },
+          "scores": {
+            "assists": 0,
+            "creepScore": 0,
+            "deaths": 0,
+            "kills": 0,
+            "wardScore": 0
+          },
+          "skinID": 10,
+          "skinName": "Arctic Ops Gragas",
+          "summonerName": "IM Piotrovic",
+          "summonerSpells": {
+            "summonerSpellOne": {
+              "displayName": "Flash",
+              "rawDescription": "GeneratedTip_SummonerSpell_SummonerFlash_Description",
+              "rawDisplayName": "GeneratedTip_SummonerSpell_SummonerFlash_DisplayName"
+            },
+            "summonerSpellTwo": {
+              "displayName": "Ignite",
+              "rawDescription": "GeneratedTip_SummonerSpell_SummonerDot_Description",
+              "rawDisplayName": "GeneratedTip_SummonerSpell_SummonerDot_DisplayName"
+            }
+          },
+          "team": "ORDER"
+        },
+        {
+          "championName": "Shen",
+          "isBot": false,
+          "isDead": false,
+          "items": [],
+          "level": 1,
+          "position": "NONE",
+          "rawChampionName": "game_character_displayname_Shen",
+          "rawSkinName": "game_character_skin_displayname_Shen_6",
+          "respawnTimer": 0,
+          "runes": {
+            "keystone": {
+              "displayName": "Hail of Blades",
+              "id": 9923,
+              "rawDescription": "perk_tooltip_HailOfBlades",
+              "rawDisplayName": "perk_displayname_HailOfBlades"
+            },
+            "primaryRuneTree": {
+              "displayName": "Domination",
+              "id": 8100,
+              "rawDescription": "perkstyle_tooltip_7200",
+              "rawDisplayName": "perkstyle_displayname_7200"
+            },
+            "secondaryRuneTree": {
+              "displayName": "Precision",
+              "id": 8000,
+              "rawDescription": "perkstyle_tooltip_7201",
+              "rawDisplayName": "perkstyle_displayname_7201"
+            }
+          },
+          "scores": {
+            "assists": 0,
+            "creepScore": 0,
+            "deaths": 0,
+            "kills": 0,
+            "wardScore": 0
+          },
+          "skinID": 6,
+          "skinName": "TPA Shen",
+          "summonerName": "ToxicMolester",
+          "summonerSpells": {
+            "summonerSpellOne": {
+              "displayName": "Clarity",
+              "rawDescription": "GeneratedTip_SummonerSpell_SummonerMana_Description",
+              "rawDisplayName": "GeneratedTip_SummonerSpell_SummonerMana_DisplayName"
+            },
+            "summonerSpellTwo": {
+              "displayName": "Flash",
+              "rawDescription": "GeneratedTip_SummonerSpell_SummonerFlash_Description",
+              "rawDisplayName": "GeneratedTip_SummonerSpell_SummonerFlash_DisplayName"
+            }
+          },
+          "team": "ORDER"
+        },
+        {
+          "championName": "Vayne",
+          "isBot": false,
+          "isDead": false,
+          "items": [],
+          "level": 1,
+          "position": "NONE",
+          "rawChampionName": "game_character_displayname_Vayne",
+          "respawnTimer": 0,
+          "runes": {
+            "keystone": {
+              "displayName": "Hail of Blades",
+              "id": 9923,
+              "rawDescription": "perk_tooltip_HailOfBlades",
+              "rawDisplayName": "perk_displayname_HailOfBlades"
+            },
+            "primaryRuneTree": {
+              "displayName": "Domination",
+              "id": 8100,
+              "rawDescription": "perkstyle_tooltip_7200",
+              "rawDisplayName": "perkstyle_displayname_7200"
+            },
+            "secondaryRuneTree": {
+              "displayName": "Precision",
+              "id": 8000,
+              "rawDescription": "perkstyle_tooltip_7201",
+              "rawDisplayName": "perkstyle_displayname_7201"
+            }
+          },
+          "scores": {
+            "assists": 0,
+            "creepScore": 0,
+            "deaths": 0,
+            "kills": 0,
+            "wardScore": 0
+          },
+          "skinID": 0,
+          "summonerName": "ToxikBull",
+          "summonerSpells": {
+            "summonerSpellOne": {
+              "displayName": "Flash",
+              "rawDescription": "GeneratedTip_SummonerSpell_SummonerFlash_Description",
+              "rawDisplayName": "GeneratedTip_SummonerSpell_SummonerFlash_DisplayName"
+            },
+            "summonerSpellTwo": {
+              "displayName": "Barrier",
+              "rawDescription": "GeneratedTip_SummonerSpell_SummonerBarrier_Description",
+              "rawDisplayName": "GeneratedTip_SummonerSpell_SummonerBarrier_DisplayName"
+            }
+          },
+          "team": "ORDER"
+        },
+        {
+          "championName": "Pantheon",
+          "isBot": false,
+          "isDead": false,
+          "items": [],
+          "level": 1,
+          "position": "NONE",
+          "rawChampionName": "game_character_displayname_Pantheon",
+          "respawnTimer": 0,
+          "runes": {
+            "keystone": {
+              "displayName": "Electrocute",
+              "id": 8112,
+              "rawDescription": "perk_tooltip_Electrocute",
+              "rawDisplayName": "perk_displayname_Electrocute"
+            },
+            "primaryRuneTree": {
+              "displayName": "Domination",
+              "id": 8100,
+              "rawDescription": "perkstyle_tooltip_7200",
+              "rawDisplayName": "perkstyle_displayname_7200"
+            },
+            "secondaryRuneTree": {
+              "displayName": "Precision",
+              "id": 8000,
+              "rawDescription": "perkstyle_tooltip_7201",
+              "rawDisplayName": "perkstyle_displayname_7201"
+            }
+          },
+          "scores": {
+            "assists": 0,
+            "creepScore": 0,
+            "deaths": 0,
+            "kills": 0,
+            "wardScore": 0
+          },
+          "skinID": 0,
+          "summonerName": "Haorn",
+          "summonerSpells": {
+            "summonerSpellOne": {
+              "displayName": "Flash",
+              "rawDescription": "GeneratedTip_SummonerSpell_SummonerFlash_Description",
+              "rawDisplayName": "GeneratedTip_SummonerSpell_SummonerFlash_DisplayName"
+            },
+            "summonerSpellTwo": {
+              "displayName": "Mark",
+              "rawDescription": "GeneratedTip_SummonerSpell_SummonerSnowball_Description",
+              "rawDisplayName": "GeneratedTip_SummonerSpell_SummonerSnowball_DisplayName"
+            }
+          },
+          "team": "ORDER"
+        },
+        {
+          "championName": "Rell",
+          "isBot": false,
+          "isDead": false,
+          "items": [],
+          "level": 1,
+          "position": "NONE",
+          "rawChampionName": "game_character_displayname_Rell",
+          "respawnTimer": 0,
+          "runes": {
+            "keystone": {
+              "displayName": "Aftershock",
+              "id": 8439,
+              "rawDescription": "perk_tooltip_VeteranAftershock",
+              "rawDisplayName": "perk_displayname_VeteranAftershock"
+            },
+            "primaryRuneTree": {
+              "displayName": "Resolve",
+              "id": 8400,
+              "rawDescription": "perkstyle_tooltip_7204",
+              "rawDisplayName": "perkstyle_displayname_7204"
+            },
+            "secondaryRuneTree": {
+              "displayName": "Precision",
+              "id": 8000,
+              "rawDescription": "perkstyle_tooltip_7201",
+              "rawDisplayName": "perkstyle_displayname_7201"
+            }
+          },
+          "scores": {
+            "assists": 0,
+            "creepScore": 0,
+            "deaths": 0,
+            "kills": 0,
+            "wardScore": 0
+          },
+          "skinID": 0,
+          "summonerName": "Tαkumi Usui",
+          "summonerSpells": {
+            "summonerSpellOne": {
+              "displayName": "Flash",
+              "rawDescription": "GeneratedTip_SummonerSpell_SummonerFlash_Description",
+              "rawDisplayName": "GeneratedTip_SummonerSpell_SummonerFlash_DisplayName"
+            },
+            "summonerSpellTwo": {
+              "displayName": "Mark",
+              "rawDescription": "GeneratedTip_SummonerSpell_SummonerSnowball_Description",
+              "rawDisplayName": "GeneratedTip_SummonerSpell_SummonerSnowball_DisplayName"
+            }
+          },
+          "team": "CHAOS"
+        },
+        {
+          "championName": "Anivia",
+          "isBot": false,
+          "isDead": false,
+          "items": [],
+          "level": 1,
+          "position": "NONE",
+          "rawChampionName": "game_character_displayname_Anivia",
+          "rawSkinName": "game_character_skin_displayname_Anivia_8",
+          "respawnTimer": 0,
+          "runes": {
+            "keystone": {
+              "displayName": "Dark Harvest",
+              "id": 8128,
+              "rawDescription": "perk_tooltip_DarkHarvest",
+              "rawDisplayName": "perk_displayname_DarkHarvest"
+            },
+            "primaryRuneTree": {
+              "displayName": "Domination",
+              "id": 8100,
+              "rawDescription": "perkstyle_tooltip_7200",
+              "rawDisplayName": "perkstyle_displayname_7200"
+            },
+            "secondaryRuneTree": {
+              "displayName": "Sorcery",
+              "id": 8200,
+              "rawDescription": "perkstyle_tooltip_7202",
+              "rawDisplayName": "perkstyle_displayname_7202"
+            }
+          },
+          "scores": {
+            "assists": 0,
+            "creepScore": 0,
+            "deaths": 0,
+            "kills": 0,
+            "wardScore": 0
+          },
+          "skinID": 8,
+          "skinName": "Papercraft Anivia",
+          "summonerName": "TheShackledCaps",
+          "summonerSpells": {
+            "summonerSpellOne": {
+              "displayName": "Flash",
+              "rawDescription": "GeneratedTip_SummonerSpell_SummonerFlash_Description",
+              "rawDisplayName": "GeneratedTip_SummonerSpell_SummonerFlash_DisplayName"
+            },
+            "summonerSpellTwo": {
+              "displayName": "Barrier",
+              "rawDescription": "GeneratedTip_SummonerSpell_SummonerBarrier_Description",
+              "rawDisplayName": "GeneratedTip_SummonerSpell_SummonerBarrier_DisplayName"
+            }
+          },
+          "team": "CHAOS"
+        },
+        {
+          "championName": "Jhin",
+          "isBot": false,
+          "isDead": false,
+          "items": [],
+          "level": 1,
+          "position": "NONE",
+          "rawChampionName": "game_character_displayname_Jhin",
+          "rawSkinName": "game_character_skin_displayname_Jhin_3",
+          "respawnTimer": 0,
+          "runes": {
+            "keystone": {
+              "displayName": "Dark Harvest",
+              "id": 8128,
+              "rawDescription": "perk_tooltip_DarkHarvest",
+              "rawDisplayName": "perk_displayname_DarkHarvest"
+            },
+            "primaryRuneTree": {
+              "displayName": "Domination",
+              "id": 8100,
+              "rawDescription": "perkstyle_tooltip_7200",
+              "rawDisplayName": "perkstyle_displayname_7200"
+            },
+            "secondaryRuneTree": {
+              "displayName": "Precision",
+              "id": 8000,
+              "rawDescription": "perkstyle_tooltip_7201",
+              "rawDisplayName": "perkstyle_displayname_7201"
+            }
+          },
+          "scores": {
+            "assists": 0,
+            "creepScore": 0,
+            "deaths": 0,
+            "kills": 0,
+            "wardScore": 0
+          },
+          "skinID": 3,
+          "skinName": "SKT T1 Jhin",
+          "summonerName": "SzczodryMarynarz",
+          "summonerSpells": {
+            "summonerSpellOne": {
+              "displayName": "Flash",
+              "rawDescription": "GeneratedTip_SummonerSpell_SummonerFlash_Description",
+              "rawDisplayName": "GeneratedTip_SummonerSpell_SummonerFlash_DisplayName"
+            },
+            "summonerSpellTwo": {
+              "displayName": "Barrier",
+              "rawDescription": "GeneratedTip_SummonerSpell_SummonerBarrier_Description",
+              "rawDisplayName": "GeneratedTip_SummonerSpell_SummonerBarrier_DisplayName"
+            }
+          },
+          "team": "CHAOS"
+        },
+        {
+          "championName": "Lissandra",
+          "isBot": false,
+          "isDead": false,
+          "items": [],
+          "level": 1,
+          "position": "NONE",
+          "rawChampionName": "game_character_displayname_Lissandra",
+          "rawSkinName": "game_character_skin_displayname_Lissandra_3",
+          "respawnTimer": 0,
+          "runes": {
+            "keystone": {
+              "displayName": "Electrocute",
+              "id": 8112,
+              "rawDescription": "perk_tooltip_Electrocute",
+              "rawDisplayName": "perk_displayname_Electrocute"
+            },
+            "primaryRuneTree": {
+              "displayName": "Domination",
+              "id": 8100,
+              "rawDescription": "perkstyle_tooltip_7200",
+              "rawDisplayName": "perkstyle_displayname_7200"
+            },
+            "secondaryRuneTree": {
+              "displayName": "Sorcery",
+              "id": 8200,
+              "rawDescription": "perkstyle_tooltip_7202",
+              "rawDisplayName": "perkstyle_displayname_7202"
+            }
+          },
+          "scores": {
+            "assists": 0,
+            "creepScore": 0,
+            "deaths": 0,
+            "kills": 0,
+            "wardScore": 0
+          },
+          "skinID": 3,
+          "skinName": "Program Lissandra",
+          "summonerName": "JALLLAA",
+          "summonerSpells": {
+            "summonerSpellOne": {
+              "displayName": "Mark",
+              "rawDescription": "GeneratedTip_SummonerSpell_SummonerSnowball_Description",
+              "rawDisplayName": "GeneratedTip_SummonerSpell_SummonerSnowball_DisplayName"
+            },
+            "summonerSpellTwo": {
+              "displayName": "Flash",
+              "rawDescription": "GeneratedTip_SummonerSpell_SummonerFlash_Description",
+              "rawDisplayName": "GeneratedTip_SummonerSpell_SummonerFlash_DisplayName"
+            }
+          },
+          "team": "CHAOS"
+        }
+      ]
     }
   },
   "feature": "live_client_data"
@@ -982,7 +840,7 @@ Data Example:
 ### Info Updates
 
 key          | Category    | Values                    | Notes                 | Since GEP Ver. |
------------- | ------------| ------------------------- | --------------------- | ------------- | 
+------------ | ------------| ------------------------- | --------------------- | ------------- |
 matchStarted | game_info   | true/false (string)       |See [notes](#matchStarted-note)|   140.0       |
 matchId      | game_info   | Current match id          |See [notes](#matchId-note)     |   120.0       |
 queueId      | game_info   | Current match [queue id](https://developer.riotgames.com/game-constants.html)|  **This event is not available anymore**        |   120.0       |
@@ -1025,7 +883,7 @@ matchEnd   | null        |  Match has ended     |  Match is ended    |   140.0  
 ### Info Updates
 
 key          | Category    | Values                    | Notes                 | Since GEP Ver. |
------------- | ----------- | ------------------------- | --------------------- | -------------- | 
+------------ | ----------- | ------------------------- | --------------------- | -------------- |
 pseudo_match_id | match_info | Current match’s ID code. Example:</br> `a4e8fc75-b35e-466f-976c-09f4ee633d95`  |  This is an Overwolf-generated code unrelated to Riot Games.  |   0.130 |
 game_mode | match_info | Whether the current game mode is TFT or default LoL. See [notes](#game_mode-notes) |                 |   133.0       |
 match_paused | match_info | Whether a match is paused or not (Bool - True/False). See [notes](#match_paused-notes) |                 |   153.1       |
@@ -1034,7 +892,7 @@ match_paused | match_info | Whether a match is paused or not (Bool - True/False)
 
 Data example:
 
-`{"info":{"match_info":{"game_mode":"tft"}},"feature":"match_info"}`  
+`{"info":{"match_info":{"game_mode":"tft"}},"feature":"match_info"}`
 `{"info":{"match_info":{"game_mode":"lol"}},"feature":"match_info"}`
 
 #### *match_paused* note
@@ -1051,7 +909,7 @@ Data Example:
 ### Info Updates
 
 key          | Category    | Values                            | Notes                 | Since GEP Ver. |
------------- | ------------| --------------------------------- | --------------------- | ------------- | 
+------------ | ------------| --------------------------------- | --------------------- | ------------- |
 deaths       | game_info   | Number of deaths for this session |See [notes](#deaths-note)|   77.0        |
 
 #### *deaths* note
@@ -1066,7 +924,7 @@ Data Example:
 
 Event | Event Data                        | Fired When                  | Notes              | Since GEP Ver. |
 ------| ----------------------------------| --------------------------- | ------------------ | --------------|
-death | Number of deaths for this session | The player’s champion died  | See [notes](#death-note) |     77.0      | 
+death | Number of deaths for this session | The player’s champion died  | See [notes](#death-note) |     77.0      |
 
 #### *death* note
 
@@ -1082,7 +940,7 @@ Data Example:
 
 Event      | Event Data  | Fired When          | Notes              | Since GEP Ver. |
 -----------| ------------| ------------------------------- | ------------------ | --------------|
-respawn    | null        | The player’s champion respawned | See [notes](#respawn-notes) |   140.0       | 
+respawn    | null        | The player’s champion respawned | See [notes](#respawn-notes) |   140.0       |
 
 #### *respawn* note
 
@@ -1098,8 +956,8 @@ Data Example:
 
 Event      | Event Data  | Fired When          | Notes              | Since GEP Ver. |
 -----------| ------------| ------------------------------- | ------------------ | --------------|
-ability    | ability number | player has selected an ability	 |  <ul><li>abilities are numbered from 1-4 “ability”</li><li>event is fired when the player clicked an ability key (but he may cancel the ability action later)</li></ul>  |   140.0       | 
-usedAbility  | JSON containing: “type” with the ability number between 1-4. Example:</br> `{ type: "4" }` for ult        | player activated the ability	 |  “usedAbility” fired when the player actually activated the ability  |   0.31       | 
+ability    | ability number | player has selected an ability	 |  <ul><li>abilities are numbered from 1-4 “ability”</li><li>event is fired when the player clicked an ability key (but he may cancel the ability action later)</li></ul>  |   140.0       |
+usedAbility  | JSON containing: “type” with the ability number between 1-4. Example:</br> `{ type: "4" }` for ult        | player activated the ability	 |  “usedAbility” fired when the player actually activated the ability  |   0.31       |
 
 #### *ability* note
 
@@ -1125,7 +983,7 @@ Data Example:
 ### Info Updates
 
 key         | Category    | Values                          | Notes                 | Since GEP Ver. |
------------ | ------------| --------------------------------| --------------------- | ------------- | 
+----------- | ------------| --------------------------------| --------------------- | ------------- |
 kills       | game_info   | Total kills in the match        | See [notes](#kills-note) |   35.0        |
 doubleKills | game_info   | Total double-kills in the match |                       |   35.0        |
 tripleKills | game_info   | Total triple-kills in the match |                       |   35.0        |
@@ -1146,7 +1004,7 @@ pentaKills  | game_info   | Total penta-kills in the match  |                   
 
 Event | Event Data                        | Fired When                  | Notes              | Since GEP Ver. |
 ------| ----------------------------------| --------------------------- | ------------------ | --------------|
-kill | A JSON containing:</br><ul><li>count: Number of times this kill type happened in the match</li><li>label: kill / double_kill / triple_kill / quadra_kill / penta_kill</li><li>totalKills: Total kills in this match</li></ul> | Killing another champion  |See [notes](#kill-note)|     70.0      | 
+kill | A JSON containing:</br><ul><li>count: Number of times this kill type happened in the match</li><li>label: kill / double_kill / triple_kill / quadra_kill / penta_kill</li><li>totalKills: Total kills in this match</li></ul> | Killing another champion  |See [notes](#kill-note)|     70.0      |
 
 #### *kill* note
 
@@ -1177,7 +1035,7 @@ Data Example:
 ### Info Updates
 
 key    | Category    | Values                          | Notes                 | Since GEP Ver. |
--------| ------------| --------------------------------| --------------------- | ------------- | 
+-------| ------------| --------------------------------| --------------------- | ------------- |
 gold   | game_info   | numeric value – amount of gold  | See [notes](#gold-notes) |  70.00         |
 
 #### *gold* note
@@ -1193,7 +1051,7 @@ Data Example:
 ### Info Updates
 
 key                | Category    | Values                                         | Notes  | Since GEP Ver. |
--------------------| ------------| -----------------------------------------------| ------ | ------------- | 
+-------------------| ------------| -----------------------------------------------| ------ | ------------- |
 minionKills        | game_info   | amount of enemy minions killed by the player   |See [notes](#minionKills-note)|    70.0       |
 neutralMinionKills | game_info   | amount of neutral minions killed by the player |See [notes](#neutralMinionKills-note)|    70.0      |
 
@@ -1218,7 +1076,7 @@ Data Example:
 ### Info Updates
 
 key       | Category        | Values                                         | Notes                                                   | Since GEP Ver. |
-----------| ----------------| -----------------------------------------------| ------------------------------------------------------- | ------------- | 
+----------| ----------------| -----------------------------------------------| ------------------------------------------------------- | ------------- |
 id        | summoner_info   | User’s Summoner Id                         |   Fired immediately with game start. Check [notes](#id-note) |      70.0      |
 region    | summoner_info   | User’s region (EUE, EUW, etc.) or PBE client (See notes)             |   Important note: Push runes/items feature is not allowed (by Riot) on Korea region, so in case your app provides such a feature, make sure to disable it for KR users. Also, check [notes](#region-note)|    70.0        |
 champion  | summoner_info   | Name of the selected champion              |  All champion names (provided by the Overwolf Game Events Provider) match the champion-key from the Riot API, except for `Fiddlesticks`.</br><ul><li>Game Events Provider value: “FiddleSticks”</li><li>Riot API value: “Fiddlesticks”</li></ul></br>Also, check [notes](#champion-note)  |    70.0 |
@@ -1323,7 +1181,7 @@ Data Example:
 ### Info Updates
 
 key         | Category    | Values                                                                                | Notes                 | Since GEP Ver. |
------------ | ------------| --------------------------------------------------------------------------------------| --------------------- | ------------- | 
+----------- | ------------| --------------------------------------------------------------------------------------| --------------------- | ------------- |
 teams       | game_info   |  A URI – decoded string that represents a JSON object with the teams formation        |   Need to decodeURI() the value and then JSON.parse() the result. See example below.                    |   70.0        |
 
 Lets assume we save the data in a variable called `info`. It will be the equivalent of:
@@ -1339,7 +1197,7 @@ var info = {"info":[{"category":"game_info","key":"teams","value":
 %7B%22team%22:%22Chaos%22,%22champion%22:%22Orianna%22,%22skinId%22:%220%22,%22summoner%22:%22lp%20omg%20cartman%22%7D,
 %7B%22team%22:%22Chaos%22,%22champion%22:%22Ryze%22,%22skinId%22:%227%22,%22summoner%22:%22bigmoney%C5%82egolas%22%7D,
 %7B%22team%22:%22Chaos%22,%22champion%22:%22Malzahar%22,%22skinId%22:%220%22,%22summoner%22:%22hell0w0rld%22%7D,
-%7B%22team%22:%22Chaos%22,%22champion%22:%22Kayn%22,%22skinId%22:%220%22,%22summoner%22:%22erikolo878%22%7D%5D"}]} 
+%7B%22team%22:%22Chaos%22,%22champion%22:%22Kayn%22,%22skinId%22:%220%22,%22summoner%22:%22erikolo878%22%7D%5D"}]}
 ```
 
 So now we will decode the value:
@@ -1374,61 +1232,68 @@ var teams = JSON.parse(decoded);
 ### Info Updates
 
 key       | Category        | Values                                         | Notes                                                   | Since GEP Ver. |
-----------| ----------------| -----------------------------------------------| ------------------------------------------------------- | ------------- | 
+----------| ----------------| -----------------------------------------------| ------------------------------------------------------- | ------------- |
 level     | level           | Current level of the player's champion                 |   Fired immediately when game starts, updates whenever the champion levels up                     |      0.19     |
 
+```json
+{ "info": {
+    "level": { "level": "1" }
+  },
+  "feature": "level"
+}
+```
 ## `announcer`
 
 ### Events
 
 Event             | Event Data                           | Fired When (announcement)                   | Notes              | Since GEP Ver. |
 ------------------| -------------------------------------| ------------------------------------------- | ------------------ | --------------|
-welcome_rift      | null                                 | “Welcome to Summoner’s Rift!”               |                    |     70.05      | 
-minions_30_sec    | null                                 | “Thirty seconds until minions spawn!”       |                    |     70.05      | 
-minions_spawn     | null                                 | “Minions have spawned!”                     |                    |     70.05      | 
-first_blood       | null                                 | “First Blood!”                              |                    |     70.05      | 
-defeat            | null                                 | “Defeat!”                                   |                    |     70.05      | 
-victory           | null                                 | “Victory!”                                  |                    |     75.0      | 
-shutdown          | null                                 | “Shut down!”                                |                    |     75.0      | 
-ace               | null                                 | “Aced!”                                     |                    |     75.0      | 
-slain             | “team”                               | “An enemy has been slain!!”                 |                    |     75.0      | 
-self_slain        | “team”                               | “You have slain an enemy!!”                 |                    |     75.0      | 
-killing_spree     | “team”                               | “Killing Spree!”                            |                    |     75.0      | 
-rampage           | “team”                               | “Rampage!”                                  |                    |     75.0      | 
-unstoppable       | “team”                               | “Unstoppable”                               |                    |     75.0      | 
-dominating        | “team”                               | “Dominating!”                               |                    |     75.0      | 
-godlike           | “team”                               | “Godlike!”                                  |                    |     75.0      | 
-legendary         | “team”                               | “Legendary!”                                |                    |     75.0      | 
-double_kill       | “team”                               | “Double Kill!”                              |                    |     75.0      | 
-triple_kill       | “team”                               | “Triple Kill!”                              |                    |     75.0      | 
-quadra_kill       | “team”                               | “Quadra Kill!”                              |                    |     75.0      | 
-penta_kill        | “team”                               | “Penta Kill!”                               |                    |     75.0      | 
-turret_destroy    | "team"                               | “Your turret has been destroyed!”           |                    |     75.0      | 
-inhibitor_destroy | “team”                               | “Your inhibitor has been destroyed!”        |                    |     75.0      | 
-inhibitor_respawn | “team”                               | “Your inhibitor is respawning soon!”        |                    |     75.0      | 
-slain             | "enemy"                              | “An ally has been slain!”                   |                    |     75.0      | 
-slain_self        | “enemy”                              | “You have been slain!”                      |                    |     75.0      | 
-killing_spree     | “enemy”                              | “Enemy Killing Spree!”                      |                    |     75.0      | 
-rampage           | “enemy”                              | “Enemy Rampage!”                            |                    |     75.0      | 
-unstoppable       | “enemy”                              | “An enemy is Unstoppable!”                  |                    |     75.0      | 
-dominating        | “enemy”                              | “An enemy is Dominating!”                   |                    |     75.0      | 
-godlike           | “enemy”                              | “An enemy is Godlike!”                      |                    |     75.0      | 
-double_kill       | “enemy”                              | “Enemy Double Kill!”                        |                    |     75.0      | 
-triple_kill       | “enemy”                              | “Enemy Triple Kill!”                        |                    |     75.0      | 
-quadra_kill       | “enemy”                              | “Enemy Quadra Kill!”                        |                    |     75.0      | 
-penta_kill        | “enemy”                              | “Enemy Penta Kill!”                         |                    |     75.0      | 
-inhibitor_destroy | “enemy”                              | “Your team has destroyed an inhibitor!”     |                    |     75.0      | 
-inhibitor_respawn | “enemy”                              | “The enemy’s inhibitor is respawning soon!” |                    |     75.0      | 
-turret_destroy    | “enemy”                              | “Your team has destroyed a turret!”         |                    |     75.0      | 
-executed          | "minion"                             | “Executed!”                                 |                    |     75.0      | 
-executed          | "tower"                              | “Executed!”                                 |                    |     75.0      | 
+welcome_rift      | null                                 | “Welcome to Summoner’s Rift!”               |                    |     70.05      |
+minions_30_sec    | null                                 | “Thirty seconds until minions spawn!”       |                    |     70.05      |
+minions_spawn     | null                                 | “Minions have spawned!”                     |                    |     70.05      |
+first_blood       | null                                 | “First Blood!”                              |                    |     70.05      |
+defeat            | null                                 | “Defeat!”                                   |                    |     70.05      |
+victory           | null                                 | “Victory!”                                  |                    |     75.0      |
+shutdown          | null                                 | “Shut down!”                                |                    |     75.0      |
+ace               | null                                 | “Aced!”                                     |                    |     75.0      |
+slain             | “team”                               | “An enemy has been slain!!”                 |                    |     75.0      |
+self_slain        | “team”                               | “You have slain an enemy!!”                 |                    |     75.0      |
+killing_spree     | “team”                               | “Killing Spree!”                            |                    |     75.0      |
+rampage           | “team”                               | “Rampage!”                                  |                    |     75.0      |
+unstoppable       | “team”                               | “Unstoppable”                               |                    |     75.0      |
+dominating        | “team”                               | “Dominating!”                               |                    |     75.0      |
+godlike           | “team”                               | “Godlike!”                                  |                    |     75.0      |
+legendary         | “team”                               | “Legendary!”                                |                    |     75.0      |
+double_kill       | “team”                               | “Double Kill!”                              |                    |     75.0      |
+triple_kill       | “team”                               | “Triple Kill!”                              |                    |     75.0      |
+quadra_kill       | “team”                               | “Quadra Kill!”                              |                    |     75.0      |
+penta_kill        | “team”                               | “Penta Kill!”                               |                    |     75.0      |
+turret_destroy    | "team"                               | “Your turret has been destroyed!”           |                    |     75.0      |
+inhibitor_destroy | “team”                               | “Your inhibitor has been destroyed!”        |                    |     75.0      |
+inhibitor_respawn | “team”                               | “Your inhibitor is respawning soon!”        |                    |     75.0      |
+slain             | "enemy"                              | “An ally has been slain!”                   |                    |     75.0      |
+slain_self        | “enemy”                              | “You have been slain!”                      |                    |     75.0      |
+killing_spree     | “enemy”                              | “Enemy Killing Spree!”                      |                    |     75.0      |
+rampage           | “enemy”                              | “Enemy Rampage!”                            |                    |     75.0      |
+unstoppable       | “enemy”                              | “An enemy is Unstoppable!”                  |                    |     75.0      |
+dominating        | “enemy”                              | “An enemy is Dominating!”                   |                    |     75.0      |
+godlike           | “enemy”                              | “An enemy is Godlike!”                      |                    |     75.0      |
+double_kill       | “enemy”                              | “Enemy Double Kill!”                        |                    |     75.0      |
+triple_kill       | “enemy”                              | “Enemy Triple Kill!”                        |                    |     75.0      |
+quadra_kill       | “enemy”                              | “Enemy Quadra Kill!”                        |                    |     75.0      |
+penta_kill        | “enemy”                              | “Enemy Penta Kill!”                         |                    |     75.0      |
+inhibitor_destroy | “enemy”                              | “Your team has destroyed an inhibitor!”     |                    |     75.0      |
+inhibitor_respawn | “enemy”                              | “The enemy’s inhibitor is respawning soon!” |                    |     75.0      |
+turret_destroy    | “enemy”                              | “Your team has destroyed a turret!”         |                    |     75.0      |
+executed          | "minion"                             | “Executed!”                                 |                    |     75.0      |
+executed          | "tower"                              | “Executed!”                                 |                    |     75.0      |
 
 ## `counters`
 
 ### Info Updates
 
 key  | Category    | Values                                     | Notes  | Since GEP Ver. |
------| ------------| -------------------------------------------| ------ | ------------- | 
+-----| ------------| -------------------------------------------| ------ | ------------- |
 ping | performance | The change in latency values of the local player  |See [notes](#ping-note)|    128.0      |
 
 ### Events
@@ -1465,7 +1330,7 @@ The information provided by this feature is incorrect at the moment. Please use 
 ### Info Updates
 
 key  | Category    | Values                                     | Notes  | Since GEP Ver. |
------| ------------| -------------------------------------------| ------ | ------------- | 
+-----| ------------| -------------------------------------------| ------ | ------------- |
 total_damage_dealt               | damage | Value of all damage done in the match (Float). |See [notes](#total_damage_dealt-note)|    139.0      |
 total_damage_dealt_to_champions  | damage | Value of all damage done to champions in the match (Float). |See [notes](#total_damage_dealt_to_champions-note)|    139.0      |
 total_damage_taken               | damage | Value of all the damage that was taken in the match (Float). |See [notes](#total_damage_taken-note)|    139.0      |
@@ -1621,7 +1486,7 @@ Data Example:
 ### Info Updates
 
 key  | Category    | Values                                     | Notes  | Since GEP Ver. |
------| ------------| -------------------------------------------| ------ | ------------- | 
+-----| ------------| -------------------------------------------| ------ | ------------- |
 total_heal              | heal | Value of all healing done in the match (Float). |See [notes](#total_heal-note)|    139.0      |
 total_heal_on_teammates | heal | Value of all healing on teammates in the match (Float). |See [notes](#total_heal_on_teammates-note)|    139.0      |
 total_units_healed      | heal | Value of amount of units healed in the match (Float). |See [notes](#total_units_healed-note)|    139.0      |
