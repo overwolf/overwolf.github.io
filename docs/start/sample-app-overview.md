@@ -62,7 +62,7 @@ If they run successfully, proceed to the next steps.
 
 ### 3. Download the source code
 
-[This repository](https://github.com/overwolf/sample-app/tree/master/ts) contains the Overwolf sample app.  
+[This repository](https://github.com/overwolf/sample-app/) contains the Overwolf sample app.  
 Download the app's source code from the repository as a zip file, and extract it to a new folder on your machine.
 
 ### 4. Build the app
