@@ -37,7 +37,9 @@ In addition, the [simple I/O plugin](../topics/simple-io-plugin) offers several 
 * [overwolf.io.ExistsResult](#existsresult-object) Object
 * [overwolf.io.ReadBinaryFileResult](#readbinaryfileresult-object) Object
 * [overwolf.io.ReadTextFileResult](#readtextfileresult-object) Object
-* [overwolf.io.FileInfo](#binaryfileinfo-object) Object
+* [overwolf.io.FileInfo](#fileinfo-object) Object
+* [overwolf.io.FileInDir](#fileindir-object) Object
+
 
 ## fileExists(filePath, callback)
 
@@ -268,7 +270,7 @@ Parameter        | Type                          | Description                  
 ---------------- | ------------------------------| ---------------------------------- |
 success          | boolean                       | Inherited from the "Result" Object |
 error            | string                        | Inherited from the "Result" Object |
-data             | string[]                      | List of files and folders          |
+data             | [FileInDir]((#fileindir-object))[]   | List of files and folders          |
 
 #### Example data
 
@@ -448,3 +450,23 @@ eof              | boolean                       |                              
 totalRead        | number                        |                                    |
 position         | number                        |                                    |
 totalLines       | number                        |                                    |
+
+## FileInDir Object
+#### Version added: 0.141
+
+> Container for the list of files and folders in a directory.
+
+Parameter        | Type                          | Description                        |
+---------------- | ------------------------------| ---------------------------------- |
+success          | boolean                       | Inherited from the "Result" Object |
+error            | string                        | Inherited from the "Result" Object |
+name             | string                        |                                    |
+type             | string                        |                                    |
+
+#### Example data
+
+```js
+{
+   "name":"Fortnite 03-19-2020 17-15-56-087.mp4",
+   "type":"file"
+}
