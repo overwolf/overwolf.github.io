@@ -31,7 +31,7 @@ It is highly recommended to communicate errors and warnings to your app users. C
 ### Info Updates
 
 key          | Category    | Values                    | Notes                 | Since GEP Ver. |
------------- | ------------| ------------------------- | --------------------- | ------------- | 
+------------ | ------------| ------------------------- | --------------------- | ------------- |
 gep_internal | gep_internal| Local + Public version number|See [notes](#gep_internal-note)|   143.0       |
 
 #### *gep_internal* note
@@ -54,7 +54,7 @@ collection        | game_info   | Current card collection of the local player. S
 
 * The “collection”  data is available as soon as the player logs into Hearthstone.
 * The collection is updated whenever the user adds/removes a card.
-  
+
 Example for cards "collection":
 
 ```json
@@ -71,7 +71,7 @@ Example for cards "collection":
 
 `{
   "id" : "card_id" ,
-  "count" : "int" , 
+  "count" : "int" ,
   "premiumCount" : "int"
 }  `
 
@@ -111,38 +111,55 @@ Can be one of the following:
 
 key               | Category    | Values                    | Notes                 | Since GEP Ver. |
 ----------------- | ------------| ------------------------- | --------------------- | ------------- |
-deck_id           | decks       |  The “decks” feature provides data about the currently “visible” decks. | See [notes](#deck_id-note)    |   119.1 |
+[deck_id]           | decks       |  The “decks” feature provides data about the currently “visible” decks. | See [notes](#deck_id-note)    |   119.1 |
 selected_deck     | selected_deck | The selected deck.  |  See [notes](#selected_deck-note)   |   119.1 |
-Adventure Deck     | decks | The currently played deck on adventure mode.  |  See [notes](#Adventure Deck-note)   |   143.0 |
+Adventure Deck     | decks | The currently played deck on adventure mode.  |  See [notes](#Adventure-Deck-note)   |   143.0 |
 adventure_loot_options | decks | The currently offered 3-option draft (between bosses)  |  See [notes](#adventure_loot_options-note)   |   143.0 |
 
 #### *deck_id* note
 
+The key is the deck's `deck_id` string. It is not the literal string "deck_id". See example below.
+
 Decks are “visible” when the local player starts a new game, during the “deck selection” screen, or when the local player enters the “My Collection” menu. The following data is being provided for each deck:
 * Deck name / id
 * Deck cards (array of cards)
+* Deck key
 
 “Card” structure:
 
 `{
-  "id" : "card_id" ,
-  "count" : "int" , 
+  "id" : "card_id",
+  "count" : "int",
   "premiumCount" : "int"
 }  `
 * “id” – The [card's id](http://metastats.net/allcards/)
 * “count” – The number of regular cards
 * “premiumCount” – The number of premium (golden) cards
 
-Example for a “deck” info-update structure:
+Example for a “deck_id” info-update structure:
 
-`{"feature":"decks","category":"decks","key":"Basic Shaman",
-"value":"{"deck_id":"Basic Shaman",
-"cards":[{"id":"CS1_042","count":"1","premiumCount":"0"},
-{"id":"CS2_103","count":"1","premiumCount":"0"},
-...
-{"id":"LOOT_413","count":"2","premiumCount":"0"},
-{"id":"UNG_923","count":"1","premiumCount":"0"}],
-"deck_key":"deck_0"}"} `
+```json
+{
+  "info":{
+    "decks":{
+      "Mage":"{
+        \"deck_id\":\"Mage\",
+          \"cards\":[
+            {\"id\":\"BOT_573\",\"count\":1,\"premiumCount\":0},
+            {\"id\":\"CS2_024\",\"count\":2,\"premiumCount\":0},
+            {\"id\":\"CS2_033\",\"count\":1,\"premiumCount\":0},
+            ...
+            {\"id\":\"UNG_845\",\"count\":1,\"premiumCount\":0},
+            {\"id\":\"UNG_941\",\"count\":1,\"premiumCount\":0}
+          ],
+        \"deck_key\":\"adventure_deck\"
+      }"
+    }
+  },
+  "feature":"decks"
+}
+
+```
 
 <b>Arena Decks</b>
 
@@ -166,9 +183,9 @@ Example for a “selected deck” structure:
 Data Example:
 
 ```json
-{ 
-   "info":{ 
-      "decks":{ 
+{
+   "info":{
+      "decks":{
          "Adventure Deck":"{
                             "deck_id":"Adventure Deck",
                             "cards":[
@@ -192,9 +209,9 @@ Data Example:
 Data Example:
 
 ```json
-{ 
-   "info":{ 
-      "decks":{ 
+{
+   "info":{
+      "decks":{
                "adventure_loot_options":"[
                                           {"deck_id":"option_a","cards":[
                                                                          {"id":"EX1_279","count":1,"premiumCount":0},
@@ -291,9 +308,9 @@ Data Example:
 Data Example:
 
 ```json
-{ 
-   "info":{ 
-      "match_info":{ 
+{
+   "info":{
+      "match_info":{
          "adventure_stats":"{"adventure_trl":{
          "dungeon_crawl_all_classes_total_boss_wins":29,
          "dungeon_crawl_all_classes_total_run_wins":1,
@@ -373,4 +390,3 @@ Data Example:
 ```json
 {"info":{"match_info":{"pseudo_match_id":"5a7e3729-993c-414d-8e3f-592faeef81e7"}},"feature":"match_info"}
 ```
-
