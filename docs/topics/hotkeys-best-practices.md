@@ -40,7 +40,8 @@ There are two types of Hotkeys we use:
 A special hotkey that toggles the application visibility by showing or hiding it.  
 **Few apps are using it, as it's the only action that it can do.**
 
-* The advantage is that a toggle hotkey can activate your app even if it's closed, and launches your in-game app window.
+* The advantage is that a toggle hotkey can activate/launch your app even if it's closed and launches your in-game app window.  
+* After the app is running, toggle it again with the hotkey will hide the window without closing it or the app.
 * Another advantage is that you don't have to register for any event. Just define the hotkey as "toggle" in the manifest.
 
 :::important
