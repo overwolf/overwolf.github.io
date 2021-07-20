@@ -106,6 +106,7 @@ match_state  | game_info   | Current game's match state.   |See [notes](#match_s
 lobby_state  | game_info   | Current state of the lobby screen. |See [notes](#lobby_state-note)|   157.0       |
 game_mode  | game_info   | Current game-mode type (solo/quads, etc). |See [notes](#game_mode-note)|   160.0       |
 game_map  | game_info   | Currently played game-map. |See [notes](#game_map-note)|   160.0       |
+uno_id  | game_info   | Local player's uno ID |See [notes](#uno_id-note)|   175.0       |
 
 #### *activision_id* note
 
@@ -180,6 +181,14 @@ Data Example:
 {"info":{"game_info":{"game_map":"mp_don3"}},"feature":"game_info"}
 ```
 
+#### *uno_id* note
+
+Data Example:
+
+```json
+{"category":"game_info","key":"uno_id","value":"1679028041095409381"}
+```
+
 ## kill
 
 ### Events
@@ -207,11 +216,11 @@ Data Example:
 
 ## death
 
-### Info Updates
+### Events
 
-key          | Category    | Values                    | Notes                 | Since GEP Ver. |
------------- | ------------| ------------------------- | --------------------- | ------------- | 
-death        | death       | Amount of deaths by the local player. |See [notes](#death-note)|   158.1       |
+Event        | Event Data        | Fired When   | Notes              | Since GEP Ver. |
+-------------| ------------------| ------------ | ------------------ | ---------------|
+death        | null              | Local player has died.| See [notes](#death-note)     | 158.1 |
 
 #### *death* note
 
