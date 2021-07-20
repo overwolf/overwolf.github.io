@@ -35,7 +35,7 @@ It's highly recommended to communicate errors and warnings to your app users. Ch
 ### Info Updates
 
 key          | Category    | Values                    | Notes                 | Since GEP Ver. |
------------- | ------------| ------------------------- | --------------------- | ------------- | 
+------------ | ------------| ------------------------- | --------------------- | ------------- |
 gep_internal | gep_internal| Local + Public version number|See [notes](#gep_internal-note)|   143.0       |
 
 #### *gep_internal* note
@@ -51,7 +51,7 @@ Data Example:
 ### Info Updates
 
 key          | Category    | Values                    | Notes                 | Since GEP Ver. |
------------- | ------------| ------------------------- | --------------------- | ------------- | 
+------------ | ------------| ------------------------- | --------------------- | ------------- |
 phase | game_info   | The current game scene/phase. See [notes](#phase-notes) below |                       |   123.0  |
 
 #### `phase` notes
@@ -74,7 +74,7 @@ Example:
 ### Info Updates
 
 key          | Category    | Values                    | Notes                 | Since GEP Ver. |
---------------- | -----------| ------------------------------------------------------------------------------------ | ------------------------------------ | ------------- | 
+--------------- | -----------| ------------------------------------------------------------------------------------ | ------------------------------------ | ------------- |
 pseudo_match_id | match_info | The current match’s ID code. Example:</br> `0c0ea3df-97ea-4d3a-b1f6-f8e34042251f`  |  This is an internal Overwolf-generated code. |   130.0 |
 game_mode | match_info   | The current type of game mode. |See [notes](#game_mode-note) below for possible values|   134.0  |
 match_id | match_info   | The current match's ID. |See [notes](#match_id-note) below for possible values|   162.1  |
@@ -172,7 +172,7 @@ Possible values:
 ### Info Updates
 
 key          | Category    | Values                            | Notes                 | Since GEP Ver. |
------------- | ------------| --------------------------------- | --------------------- | ------------- | 
+------------ | ------------| --------------------------------- | --------------------- | ------------- |
 number       | round   | Current round number</br>Example:</br>`{"round":{"number":"3"}}` |                       |   123.0 |
 score       | match   | Match score</br>Example:</br>`{"match":{"score":"{"blue":"2","orange":"1"}"}}` |                       |   123.0  |
 
@@ -182,21 +182,21 @@ Event | Event Data                        | Fired When                  | Notes 
 ------| ----------------------------------| --------------------------- | ------------------ | --------------|
 roundStart | null                         | Round starts.               |                    |     123.0      |
 roundEnd | null                           | Round ends.                 |                    |     123.0      |
-roundOutcome | victory / defeat</br>`{"name":"roundOutcome","data":"victory"}` | Round concluded. |            |     123.0      | 
-matchOutcome | victory / defeat</br>`{"name":"matchOutcome","data":"defeat"}` | Match concluded. |           |     123.0     | 
+roundOutcome | victory / defeat</br>`{"name":"roundOutcome","data":"victory"}` | Round concluded. |            |     123.0      |
+matchOutcome | victory / defeat</br>`{"name":"matchOutcome","data":"defeat"}` | Match concluded. |           |     123.0     |
 
 ## `roster`
 
 ### Info Updates
 
 key          | Category    | Values                    | Notes                 | Since GEP Ver. |
---------------- | -----------| ------------------------------------------------------------------------------------ | ------------------------------------ | ------------- | 
+--------------- | -----------| ------------------------------------------------------------------------------------ | ------------------------------------ | ------------- |
 roster_XX | players | Provides info for the currently active players (10 players). See [notes](#roster_xx-notes) below |   |   123.0 |
 team | players | Player’s current team – Orange/Blue/Spectator  |   |   123.0 |
-health | players | Player’s current health – (0-100)</br>`{"player":{"health":"70"}}` |   |   123.0 |
-score | players | Player’s current score</br>`{"player":{"score":"335"}}` |   |   123.0 |
-kills | players | Total number of kills by the player</br>`{"player":{"kills":"0"}}` |   |   123.0 |
-deaths | players | Total number of player's deaths</br>`{"player":{"deaths":"1"}}` |   |   123.0 |
+health | players | Player’s current health – (0-100) or `null`</br>`{"player":{"health":"70"}}` |   |   123.0 |
+score | players | Player’s current score or `null`</br>`{"player":{"score":"335"}}` |   |   123.0 |
+kills | players | Total number of kills by the player or `null`</br>`{"player":{"kills":"0"}}` |   |   123.0 |
+deaths | players | Total number of player's deaths or `null`</br>`{"player":{"deaths":"1"}}` |   |   123.0 |
 operator | players | The numeric ID of the chosen operator.<br>`{"player":{"operator":"514"}}` |  |   151.0 |
 
 
@@ -204,7 +204,27 @@ operator | players | The numeric ID of the chosen operator.<br>`{"player":{"oper
 
 Each player joining the game will be reported in the following way:
 
-`{"info":{"players":{"roster_0":"{"name":"WolfOnTop.top","is_local":"1","team":"1","operator":"0","kills":"0","headshots":"0","deaths":"0","score":"0","defuser":"0","health":"0"}"}},"feature":"roster"}`
+Backslashes omitted for legibility.
+```json
+{
+  "info": {
+    "players":{
+      "roster_0": "{
+        "name": "WolfOnTop.top",
+        "is_local": true,
+        "team": 1,
+        "operator": 0,
+        "kills": 0,
+        "headshots": 0,
+        "deaths": 0,
+        "score": 0,
+        "defuser": 0,
+        "health": 0
+      }"
+    }
+  },
+  "feature": "roster"}
+```
 
 As you can see, this object includes:
 
@@ -249,7 +269,7 @@ killer | Killer name</br>`{"name":"killer","data":"Pickyuser18857"}` |  The loca
 ### Info Updates
 
 key          | Category    | Values                            | Notes                 | Since GEP Ver. |
------------- | ------------| --------------------------------- | --------------------- | ------------- | 
+------------ | ------------| --------------------------------- | --------------------- | ------------- |
 name         | me          | Local player's in-game name.      | See [notes](#name-note)     |   148.0  |
 account_id   | me          | Local player's account ID.        |See [notes](#account_id-note)|   148.0  |
 
