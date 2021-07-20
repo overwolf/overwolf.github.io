@@ -82,6 +82,9 @@ Here you can find our [Developers Roadmap](https://trello.com/b/1V10E4IB/overwol
 * [Football Manager2021](overwolf-games-events-fm2021)
   * New supported game with updates and events under:
     * match_info
+* [Warzone](overwolf-games-events-warzone)
+  * New update under:
+    * match_info
 
 ## Version 0.170 (May 2021)
 
