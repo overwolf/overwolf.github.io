@@ -165,6 +165,9 @@ Parameter | Type                  | Description                                 
 --------- | ----------------------| ------------------------------------------------------------------------------------- |
 callback  | ([Result: CheckForUpdateResult](#checkforupdateresult-object)) => void              | Result of the request    |
 
+#### Note
+
+When releasing from the dev console a new version to production/testing environment, the checkForExtensionUpdate API will be "aware" of the new version after 2 hours or after Overwolf client restart.
 
 ## getServiceConsumers(callback)
 #### Version added: 0.135
