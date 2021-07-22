@@ -8,9 +8,37 @@ Follow this entry for ongoing updates and changes to the project or tools.
 
 Here you can find our [Developers Roadmap](https://trello.com/b/1V10E4IB/overwolf-roadmap).
 
-## Version 0.174 (In-Progress)
+## Version 0.176 (In-Progress)
 
+* Note that iterations 176 to 177 were combined into a single iteration. 
 * Note that the work on the documentation for this version is still in-progress.
+
+#### Docs
+
+* Soon.
+
+#### API
+
+* Windows Native Notifications API - New API `overwolf.notifications` for sending windows Toast notifications from your OW app.
+* Enhanced capture abilities for CSGO, Warzone, Destiny 2 and other "mouse-less" games with [special overlays](../topics/exclusive-mode#special-overlays):  
+  * `onStartStreaming` and `onReplayServicesStarted` events now havge a new `is_game_window_capture` property.  
+  * Ability to disable window capture and force monitor capture - to prevent yellow box when capturing these games, using new video flag `game_window_capture`.
+
+#### Platform
+
+* Soon.
+
+#### Dev Console
+
+* Soon.
+
+#### Bug fixes
+
+* Soon.
+
+## Version 0.174 (Jul 2021)
+
+* Note that iterations 174 to 175 were combined into a single iteration. 
 
 #### Docs
 
@@ -42,7 +70,6 @@ Here you can find our [Developers Roadmap](https://trello.com/b/1V10E4IB/overwol
 ## Version 0.173 (Jun 2021)
 
 * Note that iterations 171 to 173 were combined into a single iteration. 
-* Note that the work on the documentation for this version is still in-progress.
 
 #### API
 
