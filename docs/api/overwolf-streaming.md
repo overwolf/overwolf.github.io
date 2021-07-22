@@ -906,6 +906,16 @@ Defines the configuration for an x264 encoder.
 | mic_volume  | int                                               |  Defines the microphone volume as applied to the stream in a range of 0 to 100 | 0.83  |
 | game        | [StreamDeviceVolume](#streamdevicevolume-object)  | Defines the game volume as applied to the stream                               | 0.83  |
 | game_volume | int                                               | Defines the game volume as applied to the stream in a range of 0 to 100        | 0.83  |
+| separate_tracks | bool                                          | Enable multiple audio tracks. See [notes](#separate_tracks-notes)              | 0.156 |
+
+#### separate_tracks notes
+
+When this flag is enabled, it is possible to record videos that support multiple audio tracks.  
+The Video will be created with three different audio tracks (when both Mic + Desktop is enabled):
+
+* Track 1: Microphone + Desktop
+* Track 2: Desktop output
+* Track 3: Microphone input
 
 ## StreamDeviceVolume Object
 
