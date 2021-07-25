@@ -18,6 +18,7 @@ Overwolf APIs are global components that allow interaction with various Overwolf
 * [overwolf.log](#overwolflog)
 * [overwolf.logitech](#overwolflogitech)
 * [overwolf.media](#overwolfmedia)
+* [overwolf.notifications](#overwolfnotifications)
 * [overwolf.os](#overwolfos)
 * [overwolf.profile](#overwolfprofile)
 * [overwolf.profile.subscriptions](#overwolfprofilesubscriptions)
@@ -102,6 +103,10 @@ Common use cases:
 * Use the [overwolf.media.audio](overwolf-media-audio) API to play an audio file.
 * Use the [overwolf.media.replays](overwolf-media-replays) API to capture a short video replay of the game currently played.
 * Use the [overwolf.media.videos](overwolf-media-videos) API to create a video composition, delete video files, or get the information of video files that were created by this app.
+
+## overwolf.notifications
+
+> Use the [overwolf.notifications](overwolf-notifications) API for sending windows OS toast notifications.
 
 ## overwolf.os
 

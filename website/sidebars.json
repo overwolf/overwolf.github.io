@@ -55,6 +55,8 @@
 			["api/overwolf-logitech", "api/overwolf-logitech-arx", "api/overwolf-logitech-led"],
 			"overwolf.media":
 			["api/overwolf-media", "api/overwolf-media-audio", "api/overwolf-media-replays","api/overwolf-media-videos", "api/auto-highlights"],
+			"overwolf.notifications":
+			["api/overwolf-notifications"],
 			"overwolf.os": ["api/overwolf-os","api/overwolf-os-tray"],
 			"overwolf.profile":	["api/overwolf-profile", "api/overwolf-profile-subscriptions","api/overwolf-profile-subscriptions-inapp"],
 			"overwolf.settings":
