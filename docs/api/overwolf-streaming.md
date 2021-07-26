@@ -1049,8 +1049,9 @@ SubErrorMessage    | string   | optional                                    |
 
 Parameter          | Type     | Description                                 |
 -------------------| ---------| ------------------------------------------- |
-stream_id          | number   | optional                                    |
-SubErrorMessage    | string   | optional                                    |
+stream_id          | number   |                                             |
+SubErrorMessage    | string   |                                             |
+is_game_window_capture | bool |                                             |
 
 ## StopStreamingEvent Object
 

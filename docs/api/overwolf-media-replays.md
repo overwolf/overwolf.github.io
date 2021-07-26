@@ -853,4 +853,5 @@ reason          |  string                                                       
 Parameter       | Type                                                              | Description     |
 ----------------| ------------------------------------------------------------------|---------------- |
 extensions      |  string []                                                        |                 | 
-
+is_game_window_capture |  bool                                                      |                 | 
+ 

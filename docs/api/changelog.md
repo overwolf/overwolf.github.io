@@ -21,8 +21,8 @@ Here you can find our [Developers Roadmap](https://trello.com/b/1V10E4IB/overwol
 
 * Windows Native Notifications API - New API [overwolf.notifications](overwolf-notifications) for sending windows Toast notifications from your OW app.
 * Enhanced capture abilities for CSGO, Warzone, Destiny 2 and other "mouse-less" games with [special overlays](../topics/exclusive-mode#special-overlays):  
-  * `onStartStreaming` and `onReplayServicesStarted` events now havge a new `is_game_window_capture` property.  
-  * Ability to disable window capture and force monitor capture - to prevent yellow box when capturing these games, using new video flag `game_window_capture`.
+  * [onStartStreaming](overwolf-streaming#onstartstreaming) and [onReplayServicesStarted](overwolf-media-replays#onreplayservicesstarted) events now have a new `is_game_window_capture` property.  
+  * Ability to disable window capture and force monitor capture - to prevent yellow box when capturing these games, using new video flags `game_window_capture` and `enable_when_available`. These flags can be set in the [ReplayVideoOptions](overwolf-media-replays#replayvideooptions-object) object and the [StreamVideoOptions](overwolf-streaming#streamvideooptions-object).
 
 #### Platform
 
@@ -34,7 +34,12 @@ Here you can find our [Developers Roadmap](https://trello.com/b/1V10E4IB/overwol
 
 #### Bug fixes
 
-* Soon.
+* Fix for OPK extension doesn't show the dock icon after uninstallation.
+* Subscription in-app login form fix.
+* Fix in-app sub brief error state at init.
+* Fix for "Refer a Friend" feature - campaigns with 0 required game sessions are not turning active.
+* Fix for the issue where the user saw Overlay request notification and ignored it, entering the game will dismiss the notification as if he didn't apply the overlay.
+* Fix: When an externally connectable website links or redirects you back to an overwolf app, the proper window appears and not a blank page.
 
 ## Version 0.174 (Jul 2021)
 
