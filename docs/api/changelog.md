@@ -20,9 +20,6 @@ Here you can find our [Developers Roadmap](https://trello.com/b/1V10E4IB/overwol
 #### API
 
 * Windows Native Notifications API - New API [overwolf.notifications](overwolf-notifications) for sending windows Toast notifications from your OW app.
-* Enhanced capture abilities for CSGO, Warzone, Destiny 2 and other "mouse-less" games with [special overlays](../topics/exclusive-mode#special-overlays):  
-  * [onStartStreaming](overwolf-streaming#onstartstreaming) and [onReplayServicesStarted](overwolf-media-replays#onreplayservicesstarted) events now have a new `is_game_window_capture` property.  
-  * Ability to disable window capture and force monitor capture - to prevent yellow box when capturing these games, using new video flags `game_window_capture` and `enable_when_available`. These flags can be set in the [ReplayVideoOptions](overwolf-media-replays#replayvideooptions-object) object and the [StreamVideoOptions](overwolf-streaming#streamvideooptions-object).
 
 #### Platform
 
