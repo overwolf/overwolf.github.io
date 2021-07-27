@@ -78,7 +78,7 @@ header             | string   | Mandatory                                   |
 texts              | string[] | Mandatory. See [notes](#texts-notes).       |   
 logoOverride       | [LogoOverride](#logooverride-object) object |  See [notes](#logooverride-notes).  |   
 heroImage          | string   | See [notes](#heroimage-notes).              |   
-inlineImage        | string   | See [notes](#inlineimage-notes              |   
+inlineImage        | string   | See [notes](#inlineimage-notes)             |   
 attribution        | string   | See [notes](#attribution-notes)             |   
 buttons            | [ToastNotificationButton](#toastnotificationbutton-object)[]  |  See [notes](#buttons-notes).  |   
 
