@@ -52,7 +52,7 @@ In the above screenshot, you can see at the top of the screen a general notifica
 
 ## Special Overlays
 
-Several specific "mouse-less" games: CSGO, Warzone, and Destiny 2, have some additional limitations in addition to the exclusive that is required to interact with the OW windows: 
+Several specific games: CSGO, Warzone, and Destiny 2, have some additional limitations in addition to the exclusive that is required to interact with the OW windows: 
 
 * When one of these games is running in non-borderless fullscreen mode (other modes are fullscreen borderless and windowed mode), the exclusive mode is completely disabled, and there's no option to interact with your app's window at all.  The only thing that you can do is to notify the user and ask them to change game mode to fullscreen borderless or windowed mode.  
   **To detect if the game is running in non-borderless fullscreen, read the [overwolf.games.OverlayInfo.exclusiveModeDisabled](../api/overwolf-games#overlayinfo-object) property. If it's `true`, it means that the exclusive mode is disabled, and you should display the user notification about it.** (suggest him to change the mode to fullscreen borderless or windowed mode. Otherwise he will not be able to interact with your app's windows )
