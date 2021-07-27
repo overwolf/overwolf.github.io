@@ -59,14 +59,42 @@ Data Example:
 
 key          | Category    | Values                    | Notes                 | Since GEP Ver. |
 ------------ | ------------| ------------------------- | --------------------- | ------------- |
-kills | match_info   | Total number of kills in the match  |                       |   90.0       |
-headshots | match_info | Total number of headshots in the match |                       |  127.0       |
-total_damage_dealt   | match_info   | Total damage dealt in the current match |   |  127.0       |
-max_kill_distance   | match_info   | Max kill distance in CM|          |  127.0       |
+kills | match_info   | Total number of kills in the match  | See [notes](#kills-note) |   90.0       |
+headshots | match_info | Total number of headshots in the match | See [notes](#headshots-note) |  127.0       |
+total_damage_dealt   | match_info   | Total damage dealt in the current match | See [notes](#total_damage_dealt-note)|  127.0       |
+max_kill_distance   | match_info   | Max kill distance in CM| See [notes](#max_kill_distance-note)|  127.0       |
 
 #### `kills` notes:
 
 Currently there is a known issue where if a teammate knocks out an enemy and local player finishes him off, he will not get the kill event.
+
+Data Example:
+
+```json
+{"info":{"match_info":{"kills":"1"}},"feature":"kill"}
+```
+
+#### `headshots` note
+
+Data Example:
+
+```json
+{"info":{"match_info":{"headshots":"1"}},"feature":"kill"}
+```
+
+#### `total_damage_dealt` note
+
+Data Example:
+
+```json
+{"info":{"match_info":{"total_damage_dealt":"100"}},"feature":"kill"}
+```
+
+#### `max_distance_kill` note
+
+```json
+{"info":{"match_info":{"max_kill_distance":"8488.008789"}},"feature":"kill"}
+```
 
 ### Events
 
@@ -82,9 +110,36 @@ fire   | null        |  When local player attacks.  | Relevant also for fists. |
 
 Currently there is a known issue where if a teammate knocks out an enemy and local player finishes him off, he will not get the kill event.
 
+Data Example:
+
+```json
+{"events":[{"name":"kill","data":""}]}
+```
+#### `knockout` note
+
+Data Example:
+
+```json
+{"events":[{"name":"knockout","data":""}]}
+```
+
+#### `headshot` note
+
+Data Example:
+
+```json
+{"events":[{"name":"headshot","data":""}]}
+```
+
 #### `damage_dealt` note:
 
 This event can not be used in real time, as it can give an un-fair advantage to the user. You can use it post-match.
+
+Data Example:
+
+```json
+{"events":[{"name":"damage_dealt","data":"39.102"}]}
+```
 
 ## `match`
 
@@ -103,9 +158,23 @@ matchStart | null        | Match started |   |   90.0       |
 matchEnd | null        | Match ended. See [notes](#matchend-notes) below |   |   90.0       | 
 matchSummary | null        | The match summary screen (with the user’s rank) is shown</br>`{"name":"matchSummary","data":""}` |   |   120.0      |
 
+#### `matchStart` notes
+
+Data Example:
+
+```json
+{"events":[{"name":"matchStart","data":""}]}
+```
+
 #### `matchEnd` notes
 
 The  matchEnd event fired when your player is killed, and when you exit to the lobby. (which means that if you get killed and than you exit to the lobby, you will see two calls for this event).
+
+Data Example:
+
+```json
+{"events":[{"name":"matchEnd","data":""}]}
+```
 
 ## `match_info`
 
@@ -121,8 +190,24 @@ pseudo_match_id | match_info | The current match’s ID code.</br>Example:</br> 
 
 key          | Category    | Values                            | Notes                 | Since GEP Ver. |
 ------------ | ------------| --------------------------------- | --------------------- | ------------- |
-me       | match_info   | The player’s rank at the end of the match |                       |   90.0        |
-total       | match_info   | The total number of players |                       |   90.0        |
+me       | match_info   | The player’s rank at the end of the match | See [notes](#me-note) |   90.0        |
+total       | match_info   | The total number of players | See [notes](#total-note) |   90.0        |
+
+#### `me` notes
+
+Data Example:
+
+```json
+{"info":{"match_info":{"me":"38"}},"feature":"rank"}
+```
+
+#### `total` notes
+
+Data Example:
+
+```json
+{"info":{"match_info":{"total":"98"}},"feature":"rank"}
+```
 
 ## `counters`
 
@@ -202,7 +287,7 @@ equipped_XX       | inventory   | Info about “equipable” items. Each “equi
 weaponState       | inventory   | Info about the weapon and its state.</br>This info-update provides:<ul><li>name (string) – the name of the weapon used by the local player</li><li>equipped (bool) – in hand (true) or holstered (false)</li><li>count (int) – number of items |                       |    130.0.9        |
 health  | me   | The player’s current health |See [notes](#health-notes)|   135.0        |
 stance  | me   | The player’s current stance | Possible values are: stand, crouch and prone. |   135.0        |
-
+  
 ### Events
 
 Event      | Event Data  | Fired When          | Notes              | Since GEP Ver. |
@@ -312,9 +397,25 @@ revived | null        | The local player was revived |   |   0.90    |
 
 Event      | Event Data  | Fired When          | Notes              | Since GEP Ver. |
 -----------| ------------| ------------------------------- | ------------------ | --------------|
-death      | null | The local player dies |                        |   0.90    |
-knockedout | null | The local player is knocked-out |   |   0.90    |
+death      | null | The local player dies |See [notes](#death-note)|   0.90    |
+knockedout | null | The local player is knocked-out |See [notes](#knockedout-note)   0.90    |
 damageTaken | null | The local player receives damage. | Not including damage </br>taken when outside the zone. |0.128 |
+
+#### `death` notes
+
+Data Example:
+
+```json
+{"events":[{"name":"death","data":""}]}
+```
+
+#### `knockedout` notes
+
+Data Example:
+
+```json
+{"events":[{"name":"knockedout","data":""}]}
+```
 
 ## `killer`
 
@@ -322,8 +423,14 @@ damageTaken | null | The local player receives damage. | Not including damage </
 
 Event      | Event Data  | Fired When          | Notes              | Since GEP Ver. |
 -----------| ------------| ------------------------------- | ------------------ | --------------|
-killer | The killer’s nickname | The local player was killed by one of the players |  |    90.4    |
+killer | The killer’s nickname | The local player was killed by one of the players |See [notes](#killer-note)|    90.4    |
 
 #### `killer` notes:
 
 When one of local player’s squad members kill the local player, the provided data will be "self_kill”.
+
+Data Example:
+
+```json
+{"events":[{"name":"killer","data":"{ "killer_name": "Ace_Tullis"}"}]} 
+```
