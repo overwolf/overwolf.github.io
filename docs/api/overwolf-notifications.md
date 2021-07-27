@@ -146,13 +146,6 @@ Circle    |  "Circle"    | Image is cropped to a circle shape.                  
 
 > Fired when a user tapped on the body of a toast notification or performed an action inside a toast notification, with the following structure: [ToastNotificationEvent](#toastnotificationevent-object) Object.
 
-## ToastNotificationButton Object
-
-Parameter          | Type     | Description                                 |
--------------------| ---------| ------------------------------------------- |
-id                 | string   |                                             |   
-eventType          | string   |                                             | 
-
 ## ToastNotificationEvent  Object
 
 Parameter          | Type     | Description                                 |
