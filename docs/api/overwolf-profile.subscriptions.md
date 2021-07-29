@@ -9,6 +9,7 @@ Provides functions and events to help with user profile subscription management.
 * **Permissions required: profile**
 
 :::important
+Please check the [subscriptions API sample app](#sample-app) that demonstrates a primary usage in the API.  
 Please read all the info about app subscriptions [here](../start/subscriptions-overview).
 :::
 
@@ -29,6 +30,30 @@ Please read all the info about app subscriptions [here](../start/subscriptions-o
 * [overwolf.profile.subscriptions.Plan](#plan-object) Object
 * [overwolf.profile.SubscriptionState](#subscriptionstate-enum) Enum
 
+## Sample app
+
+In our [APIs sample apps repository](https://github.com/overwolf/apis-sample-apps), you can find and download a  sample app that demonstrate the usage in the subscriptions and Ads API: 
+
+* The `subscriptions-sample` - Demonstrates how to display an ad and how to purchase a subscription that removes the ad. 
+
+It's a great place to get started - All the samples in this repository are built with JS code and demonstrate primary usage in the API.
+
+### Functionality
+
+The sample app's functionality is pretty straightforward: You launch it, open the dev console (to see all the debug messages), and hit the `Subscribe` button to purchase a subscription and remove the add. In addition, you have the `Subscribe in-app` button that opens the subscribe page inside the app UI, and allow you to purchase a subscription without leaving the app.
+
+You can look at the dev console to see the status of each call (success, failure, etc.).
+
+### Setting up
+
+Download the app's source code from the [repository](https://github.com/overwolf/apis-sample-apps) as a zip file, and extract it to a new folder on your machine.  
+Load the app as an "unpacked extension" (Note that to do that you have to whitelist your OW username as a developer).
+
+* Open the Overwolf desktop client settings (by right-clicking the client and selecting "Packages" Or by clicking on the wrench icon in the dock and going to the "About" tab => "Development Options").
+* Click on "Development options".
+* In the opened window, click on "Load unpacked extension" and select the extracted `subscriptions-sample` folder. This will add the manual sample app to your Overwolf dock. 
+* Make sure you are logged in to the OW client. Otherwise, you will get an "Unauthorized App" error message. (Click on the "Appstore" icon in the OW dock to login to the OW client).
+* Click on the app's icons in your OW dock to run the apps.
 
 ## getActivePlans(callback)
 #### Version added: 0.134
