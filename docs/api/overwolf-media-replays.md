@@ -585,7 +585,7 @@ Replay video options.
 | use_app_display_name | bool | Use the app display (if has any e.g [dock_button_title](manifest-json#meta-dock) name when creating video folder. See [note](#use_app_display_name-notes)  | 0.154  |
 | sources | [VideoSource](#videosource-object)[] | Add sources to video. See [note](#sources-notes)  | 0.159  |
 | base_frame_size_source | [eVideoBaseFrameSizeSource](overwolf-streaming#evideobaseframesizesource-enum) Enum | See [note](#base_frame_size_source-notes)   | 0.168  |
-| eVideoFrameSizeCalcMethod | [eVideoFrameSizeCalcMethod](overwolf-streaming#evideoframesizecalcmethod-enum) Enum | See [note](#evideoframesizecalcmethod-notes)   | 0.168  |
+| frame_size_method | [eVideoFrameSizeCalcMethod](overwolf-streaming#evideoframesizecalcmethod-enum) Enum | See [note](#frame_size_method-notes)   | 0.168  |
 
 #### base_frame_size_source notes
 
@@ -594,7 +594,7 @@ Possible values:
 * If not set, "Setting" (setting configuration) is the default. This means that it will look at what method has been selected in the [eVideoFrameSizeCalcMethod](overwolf-streaming#evideoframesizecalcmethod-enum) field.
 * "Auto" is logical width\height (if in-game, take the game, otherwise take monitor).
 
-#### eVideoFrameSizeCalcMethod notes
+#### frame_size_method notes
 
 If the above base_frame_size_source was set as "Setting", the bellow values are available:
 
