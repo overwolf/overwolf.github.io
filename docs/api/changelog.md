@@ -19,7 +19,13 @@ Here you can find our [Developers Roadmap](https://trello.com/b/1V10E4IB/overwol
 
 #### API
 
-* Windows Native Notifications API - New API [overwolf.notifications](overwolf-notifications) for sending windows Toast notifications from your OW app.
+* Toast Notification - Overwolf apps can use the newly implemented API, [overwolf.notification](overwolf-notifications), to show users native Windows notifications (those that pop up on the right bottom side of your screen).
+  * [showToastNotification(ToastNotificationParams, callback)](overwolf-notifications#showtoastnotificationargs-callback) - This self explanatory function shows the native Windows notification once called.
+  * [onToastNotification](overwolf-notifications#ontoastnotification) - An event listener that triggers when a notification was interacted with.
+  * New Enums: [AppLogoCrop](overwolf-notifications#applogocrop-enum), [ToatsEventType](overwolf-notifications#toatseventtype-enum), [ToastEventError](overwolf-notifications#toasteventerror-enum).
+* Dedicate video capture option for specific games (CSGO, Warzone, Destiny 2) that requires [exclusive mode](../topics/exclusive-mode) to interact with the OW windows: up until now when we recorded these games in windowed mode, it resulted in a recording of the whole desktop. We now provide the option to record only the game window.
+  * This feature is disabled by default, but you can enable it with the new `game_window_capture` property that you can find in the video settings object in the [replays API](overwolf-media-replays#replayvideooptions-object) or the [streaming API](overwolf-streaming#game_window_capture-notes).  
+  * New `is_game_window_capture` properties added to [onStartStreaming](overwolf-streaming#onstartstreaming) and [onReplayServicesStarted](overwolf-media-replays#onreplayservicesstarted) to inform the app Creator if this new capturing feature was used or not on the current OW window.
 
 #### Platform
 
@@ -31,12 +37,11 @@ Here you can find our [Developers Roadmap](https://trello.com/b/1V10E4IB/overwol
 
 #### Bug fixes
 
-* Fix for OPK extension doesn't show the dock icon after uninstallation.
 * Subscription in-app login form fix.
-* Fix in-app sub brief error state at init.
-* Fix for "Refer a Friend" feature - campaigns with 0 required game sessions are not turning active.
-* Fix for the issue where the user saw Overlay request notification and ignored it, entering the game will dismiss the notification as if he didn't apply the overlay.
-* Fix: When an externally connectable website links or redirects you back to an overwolf app, the proper window appears and not a blank page.
+* Overwolf will no longer crash when merging too many files while using [createVideoCompositionFiles()](overwolf-media-videos#createvideocompositionfilesfiles-outputfile-callback).
+* Fixed video recording for HyperScape.
+* Implemented a fix aimed at the integrity of the LevelDB.
+* Transparent windows in OpenGL games now get properly repainted.
 
 ## Version 0.174 (Jul 2021)
 

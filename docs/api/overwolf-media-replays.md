@@ -53,6 +53,7 @@ Please read all the info about video capture usage and options on our [video cap
 * [overwolf.media.replays.CaptureWarningEvent](#capturewarningevent-object) Object
 * [overwolf.media.replays.ReplayServicesStartedEvent](#replayservicesstartedevent-object) Object
 * [overwolf.media.replays.VideoSource](#videosource-object) Object
+* [overwolf.media.replays.GameWindowCapture](#gamewindowcapture-object) Object
 
 ## Sample app
 
@@ -586,6 +587,7 @@ Replay video options.
 | sources | [VideoSource](#videosource-object)[] | Add sources to video. See [note](#sources-notes)  | 0.159  |
 | base_frame_size_source | [eVideoBaseFrameSizeSource](overwolf-streaming#evideobaseframesizesource-enum) Enum | See [note](#base_frame_size_source-notes)   | 0.168  |
 | frame_size_method | [eVideoFrameSizeCalcMethod](overwolf-streaming#evideoframesizecalcmethod-enum) Enum | See [note](#frame_size_method-notes)   | 0.168  |
+| game_window_capture | [GameWindowCapture](#gamewindowcapture-object) Object | Dedicate option for game window capture (when available). See [note](#game_window_capture-notes)   | 0.176  |
 
 #### base_frame_size_source notes
 
@@ -601,6 +603,24 @@ If the above base_frame_size_source was set as "Setting", the bellow values are 
 * "Original": Original calculation to get the output resolution for the needed quality keeping the aspect ratio.
 * "ExactOrKeepRatio": Get the exact resolution from a resolutions list for the needed quality; if not found in the list, then calculate a new resolution keeping the aspect ratio.
 * "ExactOrClosestResolution": Find the closer resolution from a resolutions list for the needed quality.
+
+#### game_window_capture notes
+
+Dedicate option for specific games (CSGO, Warzone, Destiny 2) that requires [exclusive mode](../topics/exclusive-mode) to interact with the OW windows.  
+
+Up until now when we recorded these games in windowed mode, it resulted in a recording of the whole desktop.  
+We now provide the option to record only the game window. This feature is disabled by default, but you can enable it with these recording settings properties: 
+
+```json
+"video": {
+   "game_window_capture": {
+     "enable_when_available": bool,    // Disabled by default
+     "capture_overwolf_windows": bool  // Default value is taken from the Overwolf Settings
+   }
+}
+```
+
+Note that new `is_game_window_capture` properties added to [onReplayServicesStarted](overwolf-media-replays#onreplayservicesstarted) event to inform the app Creator if this new capturing feature was used or not on the current OW window.
 
 #### sources notes
 
@@ -855,3 +875,22 @@ Parameter       | Type                                                          
 extensions      |  string []                                                        |                 | 
 is_game_window_capture |  bool                                                      |                 | 
  
+## GameWindowCapture Object
+
+#### Version added: 0.176
+
+Game window capture options.
+
+| Name                     | Type  | Description                                        | Since |
+|--------------------------| ------|----------------------------------------------------|------ |
+| enable_when_available    | bool  | Disabled by default                                | 0.176 |
+| capture_overwolf_windows | bool  | Default value is taken from the Overwolf Settings  | 0.176 |
+
+#### Example data
+
+```json
+"game_window_capture": {
+     "enable_when_available": bool,    // Disabled by default
+     "capture_overwolf_windows": bool  // Default value is taken from the Overwolf Settings
+   }
+```
