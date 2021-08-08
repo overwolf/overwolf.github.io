@@ -29,7 +29,7 @@ public void add(int x, int y, Action<object> callback)
 
 :::important
 * Overwolf version 116.2 and all later versions will only support 64 bit CPUs, and therefore you’ll be required to compile your .DLL to target the x64 platform.
-* DLLs must be compiled with the .NET 4.5 framework and NOT with an earlier/higher version.
+* It is recommended that plugin DLLs be compiled with the .NET 4.8 framework (using a higher/lower framework version might lead to unexpected behaviors)
 :::
 
 We recommend you take a look at the [overwolf-plugin-sample](https://github.com/overwolf/overwolf-plugin-sample) or [overwolf-plugins](https://github.com/overwolf/overwolf-plugins) entry to get a quick start on developing your own plugins.
