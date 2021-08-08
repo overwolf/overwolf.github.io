@@ -620,7 +620,7 @@ We now provide the option to record only the game window. This feature is disabl
 }
 ```
 
-Note that new `is_game_window_capture` properties added to [onReplayServicesStarted](overwolf-media-replays#onreplayservicesstarted) event to inform the app Creator if this new capturing feature was used or not on the current OW window.
+Note that we added a new `is_game_window_capture` property to [onReplayServicesStarted](#onreplayservicesstarted) event to inform the app Creator if this new capturing feature was used or not on the current OW window.
 
 #### sources notes
 
