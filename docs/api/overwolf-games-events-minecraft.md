@@ -32,7 +32,8 @@ The events are currently available only to the standard game. We do not support 
 <b>`GEP supports the following Minecraft versions:`</b>
 
 * 1.12.2
-* 1.16.0 ~ present.
+* 1.16 & 1.16.1 versions are NOT supported.
+* 1.16.2 - present.
 
 
 ## `gep_internal`
