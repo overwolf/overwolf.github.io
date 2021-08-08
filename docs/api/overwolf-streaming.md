@@ -1071,7 +1071,7 @@ Parameter          | Type     | Description                                 |
 -------------------| ---------| ------------------------------------------- |
 stream_id          | number   |                                             |
 SubErrorMessage    | string   |                                             |
-is_game_window_capture | bool |                                             |
+is_game_window_capture | bool |  See [game_window_capture](#game_window_capture-notes) |
 
 ## StopStreamingEvent Object
 

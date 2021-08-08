@@ -873,7 +873,7 @@ reason          |  string                                                       
 Parameter       | Type                                                              | Description     |
 ----------------| ------------------------------------------------------------------|---------------- |
 extensions      |  string []                                                        |                 | 
-is_game_window_capture |  bool                                                      |                 | 
+is_game_window_capture |  bool                                                      |  See [game_window_capture](#game_window_capture-notes) | 
  
 ## GameWindowCapture Object
 
