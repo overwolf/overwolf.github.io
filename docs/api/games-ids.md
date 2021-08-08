@@ -4,19 +4,6 @@ title: Games IDs
 sidebar_label: Games IDs
 ---
 
-## What is the Game ID
-
-Each [supported game](#what-is-an-overwolf-supported-game) has its own unique Game ID.
-
-Game IDs are used in your app’s manifest.json in multiple ways:  
-
-* [game_targeting](manifest-json#game_targeting) property - A list of games which enable overlay for this app.  
-
-* [game_events](manifest-json#game_events) property - A list of games for which game events are required.
-
-* [launch_events](manifest-json#launch_events) property -  A list of games triggering the app to launch.
-
-
 ## What is an Overwolf Supported Game?
 
 In Overwolf, when we refer to a "supported game" it could mean one of two levels of support:
@@ -28,7 +15,20 @@ In Overwolf, when we refer to a "supported game" it could mean one of two levels
 2. Game events support - games which support overlay injection as well as real-time game events.  
    You can create OW apps for these games, that leverage game events using the [overwolf.games.events](overwolf-games-events) API.   
    The full list of games that supports events can be found [here](../status/all).
+   
+ Please note - game events can vary between games. If you'd like us to enable a new game event, you can request it [here](https://discuss.overwolf.com/c/game-events-features/42).
 
+## What is the Game ID
+
+Each [supported game](#what-is-an-overwolf-supported-game) has its own unique Game ID.
+
+Game IDs are used in your app’s manifest.json in multiple ways:  
+
+* [game_targeting](manifest-json#game_targeting) property - A list of games which enable overlay for this app.  
+
+* [game_events](manifest-json#game_events) property - A list of games for which game events are required.
+
+* [launch_events](manifest-json#launch_events) property -  A list of games triggering the app to launch.
 
 ## The gamelist.xml file
 
