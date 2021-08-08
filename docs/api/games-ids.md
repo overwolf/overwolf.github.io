@@ -15,8 +15,10 @@ In Overwolf, when we refer to a "supported game" it could mean one of two levels
 2. Game events support - games which support overlay injection as well as real-time game events.  
    You can create OW apps for these games, that leverage game events using the [overwolf.games.events](overwolf-games-events) API.   
    The full list of games that supports events can be found [here](../status/all).
-   
- Please note - game events can vary between games. If you'd like us to enable a new game event, you can request it [here](https://discuss.overwolf.com/c/game-events-features/42).
+
+ :::tip Note
+ Game events can vary between games. If you'd like us to enable a new game event, you can request it [here](https://discuss.overwolf.com/c/game-events-features/42).
+ :::
 
 ## What is the Game ID
 
