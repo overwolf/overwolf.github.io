@@ -181,6 +181,8 @@ key               | Category    | Values                    | Notes             
 mode              | match_info  | Possible Values:<ul><li>"solo"</li><li>"duo"</li><li>"squad"</li><li>"Playlist_Respawn" (Team Rumble)</li><li>"Playlist_PlaygroundV2" (Creative)</li><li>"Playlist_Creative_PlayOnly" (Playground)</li><li>"Playlist_ShowdownAlt_Solo" (Arena Solo)</li><li>"Playlist_ShowdownAlt_Squads" (Arena Squads)</li><li>"Playlist_Crucible_Solo" (The Combine)</li><li>Playlist_BattleLab</li><li>Playlist_Creative_ZebraWallet_Random</li><li>Playlist_Creative_ZebraWallet_Random2</li>|              |  110.0        |
 
 *Important note* - Fortnite is a game that rotates game modes when the season changes and with patches. Thus it's important to remember that not all values that are listed below are valid at all times. These values change with time and with patches (except for the base modes like solo / duo / etc).
+
+Furthermore - Event data is not fully reliable in `Creative` mode and should be taken into consideration when working with that mode.
   
 Data example:
 
