@@ -923,9 +923,7 @@ Defines the configuration for an x264 encoder.
 | Name        | Type                                              | Description                                                                    | Since |
 |-------------| --------------------------------------------------|--------------------------------------------------------------------------------| ----- |
 | mic         | [StreamDeviceVolume](#streamdevicevolume-object)  |  Defines the microphone volume as applied to the stream                        | 0.83  |
-| mic_volume  | int                                               |  Defines the microphone volume as applied to the stream in a range of 0 to 100 | 0.83  |
 | game        | [StreamDeviceVolume](#streamdevicevolume-object)  | Defines the game volume as applied to the stream                               | 0.83  |
-| game_volume | int                                               | Defines the game volume as applied to the stream in a range of 0 to 100        | 0.83  |
 | separate_tracks | bool                                          | Enable multiple audio tracks. See [notes](#separate_tracks-notes)              | 0.156 |
 
 #### separate_tracks notes
