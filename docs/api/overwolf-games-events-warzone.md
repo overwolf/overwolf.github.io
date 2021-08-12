@@ -60,7 +60,6 @@ Data Example:
 key          | Category    | Values                    | Notes                 | Since GEP Ver. |
 ------------ | ------------| ------------------------- | --------------------- | ------------- | 
 pseudo_match_id | match_info | The current match’s ID code.</br></br>Example:</br></br> `0c0ea3df-97ea-4d3a-b1f6-f8e34042251f`  |  This is an Overwolf-generated code, unrelated to Activision.  |   159.0 |
-roster       | match_info  | The names and details of all players in the current server. |See [notes](#roster-note)|   158.1       |
 
 ### Events
 
@@ -69,14 +68,6 @@ Event        | Event Data        | Fired When   | Notes              | Since GEP
 match_start  | null              | Match started.| See [notes](#match_start-note)     | 157.0 |
 match_end    | null              | Match ended. | See [notes](#match_end-note)        | 157.0 |
 
-#### *roster* note
-
-```json
-{"info":{"match_info":{"roster_1":"{"player":"7766#6156337","is_local":true,"is_bot":0,"team_id":32,"armor":256,"damage":437,"rank":9,"ping":73,"cash":9000,"completed_contracts":1,"opened_supply_boxes":1,"kills":1,"deaths":0,"score":550,"assists":0}"}},"feature":"match_info"}
-{"info":{"match_info":{"roster_30":"{"player":"GiussaSimo13#2220952","is_local":false,"is_bot":0,"team_id":31,"rank":55,"ping":47,"kills":0,"deaths":0,"score":0,"assists":0}"}},"feature":"match_info"}
-{"info":{"match_info":{"roster_31":"{"player":"HARPOON97#7053414","is_local":false,"is_bot":0,"team_id":14,"rank":137,"ping":46,"kills":0,"deaths":0,"score":0,"assists":0}"}},"feature":"match_info"}
-```
-- Note: The information provided for the local player also includes "damage" and "armor" & the same values are provided for team members aswell if you play on duos and above.
 
 #### *match_start* note
 
