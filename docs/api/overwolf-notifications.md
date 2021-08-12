@@ -26,7 +26,7 @@ Toast notifications are a combination of some data properties like header, visua
 * [overwolf.ToastNotificationButton](#toastnotificationbutton-object) Object
 * [overwolf.ToastNotificationEvent](#toastnotificationevent-object) Object
 * [overwolf.enums.AppLogoCrop](#applogocrop-enum) enum
-* [overwolf.enums.ToastEventType](#toasteventtype-enum) enum
+* [overwolf.enums.ToastEventType](#toatseventtype-enum) enum
 * [overwolf.enums.ToastEventError](#toasteventerror-enum) enum
 
 
