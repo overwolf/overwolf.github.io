@@ -405,7 +405,6 @@ Note that iterations 160 to 162 were combined into a single iteration.
   * New events & updates:
     * game_mode
     * game_map
-    * roster
 
 ## Version 0.159 (Dec. 2020)
 
@@ -495,7 +494,7 @@ Note that iterations 160 to 162 were combined into a single iteration.
     * kill
     * death
     * assist
-    * roster
+  
 * [Final Fantasy XIV](overwolf-games-events-ffxiv)
   * New info update under:
     * match_info
