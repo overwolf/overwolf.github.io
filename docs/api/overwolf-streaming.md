@@ -615,6 +615,10 @@ You can use it, for example, to implement "favorites captures" feature: allow yo
 | max_quota_gb         | double   | Max media folder size in GB                                        | 0.147  |
 | excluded_directories | string[] | Array of directories that are excluded from max quota calculations | 0.147  |
 
+#### Notes
+
+To set your app to never deletes the captured clips, you can skip passing `max_quota_gb` (it's an optional property), or you exclude a specific directory  using the excluded_directories param.
+
 ## StreamInfo Object
 
 #### Version added: 0.78
