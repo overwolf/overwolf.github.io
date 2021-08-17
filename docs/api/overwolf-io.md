@@ -190,6 +190,12 @@ path      | string   | file path               |
 options   | [ListenFileOptions](#listenfileoptions-object) Object   |           |
 callback  | [(Result: ListenOnFileResult)](#listenonfileresult-object) => void | Returns with the result | 
 
+#### Usage example
+
+```js
+overwolf.io.listenOnFile('test.txt','C:\\test\\test.txt', {},console.log)
+```
+
 ## stopFileListener(id)
 
 #### Version added: 0.141

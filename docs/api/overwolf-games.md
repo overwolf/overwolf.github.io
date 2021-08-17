@@ -47,7 +47,9 @@ These events are not related to real-time game events (kill, death, start/end ma
 
 #### Version added: 0.78 
 
-> Returns an object with information about the currently running game or games, if more than one is running, or returns null if no game is running.
+> Returns an object with information about the currently running game, or returns null if no game is running.
+
+Note: In a scenario when more than one game is running, we'll display information only from the latest one that was launched.
 
 Parameter | Type     | Description                                                              |
 ----------| -------- | ------------------------------------------------------------------------ |
