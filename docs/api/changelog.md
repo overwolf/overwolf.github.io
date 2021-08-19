@@ -19,11 +19,14 @@ Here you can find our [Developers Roadmap](https://trello.com/b/1V10E4IB/overwol
 
 #### API
 
-* Soon.
+* [overwolf.window.setZoom()](overwolf-windows#setzoomwinzoomfactorowid-windowid) can now be applied to a specific window and not to all of the app windows.
 
 #### Platform
 
-* Soon.
+* Installer:
+  * Auto-Launch - Up until now if Overwolf was already installed, downloading and installing an app from the "Appstore on web" will install the app, but it wouldn’t auto-launch the app after it was installed. Now it does.
+  * Error Messages - We have improved our installer error messages. They will always include links to our Discord or to our Help Center.
+* Analytics - A bunch of new analytics were created in this iteration.
 
 #### Dev Console
 
@@ -31,7 +34,7 @@ Here you can find our [Developers Roadmap](https://trello.com/b/1V10E4IB/overwol
 
 #### Bug fixes
 
-* Soon.
+* Fixed a bug with increased text scaling in Windows.
 
 ## Version 0.176 (Aug 21)
 
