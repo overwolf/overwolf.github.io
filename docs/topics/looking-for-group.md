@@ -13,6 +13,26 @@ Want to be on the list? Let us know at develop@overwolf.com
 
 ![fulcrum logo](assets/looking-for-a-group/fulcrum_logo.png)
 
+## GR Digital
+
+### Services offered
+
+* Development
+* UI
+* UX
+* Product review
+
+### Website
+
+https://grdigital.co.uk
+
+Design, Development and Marketing Agency based in the UK. We've worked with the Overwolf platform for 4 Years, developing 5+ Apps to date. Experienced in game development and integration, so even the wildest ideas become possible!
+
+
+---
+
+![fulcrum logo](assets/looking-for-a-group/fulcrum_logo.png)
+
 ## Fulcrum 
 
 ### Services offered
