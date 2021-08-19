@@ -11,7 +11,7 @@ Want to be on the list? Let us know at develop@overwolf.com
 
 ---
 
-![fulcrum logo](assets/looking-for-a-group/fulcrum_logo.png)
+![DFR logo](assets/looking-for-a-group/grdlogo.png)
 
 ## GR Digital
 
