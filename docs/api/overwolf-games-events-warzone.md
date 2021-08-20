@@ -74,7 +74,7 @@ match_end    | null              | Match ended. | See [notes](#match_end-note)  
 Data Example:
 
 ```json
-{"event":"match_start","data":null}
+{"events":[{"name":"match_start","data":null}]}
 ```
 
 #### *match_end* note
@@ -82,7 +82,7 @@ Data Example:
 Data Example:
 
 ```json
-{"event":"match_end","data":null}
+{"events":[{"name":"match_end","data":null}]}
 ```
 
 ## game_info
