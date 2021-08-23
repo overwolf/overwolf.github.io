@@ -40,10 +40,6 @@ Here you can find our [Developers Roadmap](https://trello.com/b/1V10E4IB/overwol
 
 * Note that iterations 176 to 177 were combined into a single iteration. 
 
-#### Docs
-
-* Soon.
-
 #### API
 
 * Toast Notification - Overwolf apps can use the newly implemented API, [overwolf.notification](overwolf-notifications), to show users native Windows notifications (those that pop up on the right bottom side of your screen).
@@ -53,14 +49,6 @@ Here you can find our [Developers Roadmap](https://trello.com/b/1V10E4IB/overwol
 * Dedicate video capture option for specific games (CSGO, Warzone, Destiny 2) that requires [exclusive mode](../topics/exclusive-mode) to interact with the OW windows: up until now when we recorded these games in windowed mode, it resulted in a recording of the whole desktop. We now provide the option to record only the game window.
   * This feature is disabled by default, but you can enable it with the new `game_window_capture` property that you can find in the video settings object in the [replays API](overwolf-media-replays#replayvideooptions-object) or the [streaming API](overwolf-streaming#game_window_capture-notes).  
   * New `is_game_window_capture` properties added to [onStartStreaming](overwolf-streaming#onstartstreaming) and [onReplayServicesStarted](overwolf-media-replays#onreplayservicesstarted) to inform the app Creator if this new capturing feature was used or not on the current OW window.
-
-#### Platform
-
-* Soon.
-
-#### Dev Console
-
-* Soon.
 
 #### Bug fixes
 
