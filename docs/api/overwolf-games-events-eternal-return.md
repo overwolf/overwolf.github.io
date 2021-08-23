@@ -17,10 +17,7 @@ Please read the [overwolf.games.events](overwolf-games-events) documentation pag
 
 * [gep_internal](#gep_internal)
 * [me](#me)
-* [game_info](#game_info)
 * [match_info](#match_info)
-* [kill](#kill)
-* [death](#death)
 
 ## Game event status
 
@@ -50,91 +47,18 @@ Data Example:
 
 key          | Category    | Values                    | Notes                 | Since GEP Ver. |
 ------------ | ------------| ------------------------- | --------------------- | ------------- | 
-player_name  | me          | Name of local player.     |See [notes](#player_name-note)|   148.0       |
-player_id    | me          | ID of the local player.   |See [notes](#player_id-note)|   148.0       |
-region       | me          | Region of the local player.|See [notes](#region-note)|   148.0       |
-agent        | me          | Character Internal ID.       |See [notes](#agent-note)|   149.0       |
+player_info  | me          | ID of the local player.     |See [notes](#player_info-note)|   148.0       |
+team    | match_info          | ID of the team player in match.   |See [notes](#team-note)|   148.0       |
+roster | match_info | All other player info known to the local player.  |  See [notes](#roster-note)  |   159.0 |
+match | match_info | ID of the match.  |  See [notes](#match-note)  |   159.0 |
+region | match_info | Starting location of all the users (if selected).  |  See [notes](#region-note)  |   159.0 |
 
-#### *player_name* note
-
-Data Example:
-
-```json
-{"info":{"me":{"player_name":"Doom#5339"}},"feature":"me"}
-```
-
-#### *player_id* note
+#### *player_info* note
 
 Data Example:
 
 ```json
-{"info":{"me":{"player_id":"f4029eff-92e6-56db-adba-4d073df968a4"}},"feature":"me"}
-```
-
-#### *region* note
-
-Data Example:
-
-```json
-{"info":{"me":{"region":"esp"}},"feature":"me"}
-```
-
-#### *agent* note
-
-Not all agents have their game-name match their ID data, since this is an internal name, so take that into account.
-Furthermore, if a character has an ability that gives him different points of view (f.ex Sova with his drone), the ID will change accordingly to the drone.
-
-Data Example:
-
-```json
-{"info":{"me":{"agent":"Phoenix_PC_C"}},"feature":"me"}
-```
-
-
-
-## `match_info`
-
-### Info Updates
-
-key          | Category    | Values                    | Notes                 | Since GEP Ver. |
------------- | ------------| ------------------------- | --------------------- | ------------- | 
-pseudo_match_id | match_info | The current match’s ID code.</br></br>Example:</br></br> `0c0ea3df-97ea-4d3a-b1f6-f8e34042251f`  |  This is an Overwolf-generated code, unrelated to Riot.  |   159.0 |
-round_number | match_info  | Number of current round.  |See [notes](#round_number-note)|   149.0       |
-score        | match_info  | Amount of rounds won/lost.|See [notes](#score-note)|   149.0       |
-round_phase  | match_info  | Current state of the round.|See [notes](#round_phase-note)|   149.0       |
-team         | match_info  | Attack / Defense.      |See [notes](#team-note)|   149.0       |
-match_outcome| match_info  | Victory / Defeat.      |See [notes](#match_outcome-note)|   149.0       |
-round_report | match_info  | * Total Damage<br>* Total number of bullets hit.<br>* Number of bullets hit on head.<br>* Number of hit headshots that killed. |See [notes](#round_report-note)|   150.0       |
-game_mode    | match_info  |* Mode: Bomb / Quick Bomb<br>* Ranked: 0 (Practice), 1 (Competitive), 2 (Spike Rush/Other) |See [notes](#game_mode-note)|   151.0       |
-roster    | match_info  | * Player Name<br>* Player ID<br>* Name of picked character<br>* Player's Rank<br>* Whether it is the local player<br>* If player is a teammate or not. |See [notes](#roster-note)|   151.0       |
-
-#### *round_number* note
-
-Data Example:
-
-```json
-{"info":{"match_info":{"round_number":"1"}},"feature":"match_info"}
-{"info":{"match_info":{"round_number":"2"}},"feature":"match_info"}
-{"info":{"match_info":{"round_number":"3"}},"feature":"match_info"}
-```
-
-#### *score* note
-
-Data example:
-
-```json
-{"info":{"match_info":{"score":"{"won":9,"lost":2}"}},"feature":"match_info"}
-```
-
-#### *round_phase* note
-
-Data Example:
-
-```json
-{"info":{"match_info":{"round_phase":"shopping"}},"feature":"match_info"}
-{"info":{"match_info":{"round_phase":"combat"}},"feature":"match_info"}
-{"info":{"match_info":{"round_phase":"end"}},"feature":"match_info"}
-{"info":{"match_info":{"round_phase":"game_end"}},"feature":"match_info"}
+{"info":{"me":{"player_info":{"user_num": 144222} }},"feature":"me"}
 ```
 
 #### *team* note
@@ -142,57 +66,123 @@ Data Example:
 Data Example:
 
 ```json
-{"info":{"match_info":{"team":"attack"}},"feature":"match_info"}
-{"info":{"match_info":{"team":"defense"}},"feature":"match_info"}
+{"info":{"match_info":{"team":{"ally1" : 1003024, "ally2" : 144240}}},"feature":"me"}
 ```
 
-#### *match_outcome* note
-
-Data Example:
-
-```json
-{"info":{"match_info":{"match_outcome":"victory"}},"feature":"match_info"}
-{"info":{"match_info":{"match_outcome":"draw"}},"feature":"match_info"}
-```
-
-#### *round_report* note
-
-This data is <b>per round</b>.
-
-Data Example:
-
-```json
-{"info":{"match_info":{"round_report":"{"damage":331,"hit":6,"headshot":0,"final_headshot":1}"}},"feature":"match_info"}
-```
-
-#### *game_mode* note
-
-Current values:
-
-* Bomb = Regular game (Unrated).
-* Quick Bomb = Spike Rush.
-* Ranked = 1 = Competitive.
-* Deathmatch = Deathmatch
-* Escalation = Escalation
+This distinction of ally1 and ally2 will be used as a reference point in later events.<br>
+team's info update does not work for premade teams.<br>
+User number will retrun 0 as value if there are none.<br>
+eg) In solo mode, both ally1 and ally2 will return 0. 
 
 
 #### *roster* note
-
-<b>*Important:*</b> If players (or local player) in the match activate the option to hide their names from players outside their party, the output you will see will be the name of the agent (like `Jett` or in the case of the local player it will be `Me`) instead.
-It is language dependant, so that is also important to take into account.
-
 Data Example:
 
 ```json
-{"info":{"match_info":{"roster_3":"{"name":"Sh4rgaas #EUNE","player_id":"2fb49e77-85c6-522c-a240-27c78a2f9a8f","character":"Pandemic","rank":0,"locked":false,"local":true,"teammate":true}"}},"feature":"match_info"}
+{"info":{"match_info" : {"roster" : [{"player_name" : "TestSubject1", "is_ally" : false, "player_character" : 12, "player_skin" : 1}]}},"feature":"me"}
 ```
 
+is_ally will specify whether the subject is an ally or not.<br>
+This info will contain the local player itself.
+
+
+
+#### *match* note
+Data Example:
+
+```json
+{"info":{"match_info" : {"match_id" : 1223222,"feature":"me"}
+```
+
+#### *region* note
+Data Example:
+
+```json
+{"info":{"match_info" : {"enemy" : [1, 2, 5, 2, 0 ,0 ...],"Self" : 12, "Ally1" : 12, " Ally2" : 12 } ,"feature":"me"}
+```
+
+The enemy array will be an array containing 16 integers. Each index number + 1 will represent the area code of [area_code](#area_code-note).<br>
+eg) index 0 of array represents the number of players selecting area code 1 as their starting point.
+
+
+
+#### *area_code* note
+Area codes are represented as following. (Note that changes can occur, and this should be double checked via ER Open API.)<br>
+Localized text can also be searched using the key "Area/Name/{area_code}" in the ER L10N file. (Available via ER Open API.)
+* 1 : Docks
+* 2 : Pond
+* 3 : Beach
+* 4 : Uptown
+* 5 : Alley
+* 6 : Hotel
+* 7 : Avenue
+* 8 : Hospital
+* 9 : Temple
+* 10 : Archery Range
+* 11 : Cemetery
+* 12 : Forest
+* 13 : Factory
+* 14 : Chapel
+* 15 : School
+* 16 : Research Center
+
+
+## `match_info`
 ### Events
 
 Event       | Event Data   | Fired When    | Notes              | Since GEP Ver. |
 ------------| -------------| --------------| ------------------ | --------------|
-match_start | null         | Match started. | See [notes](#match_start-note) | 148.0  |
-match_end   | null         | Match ended.   | See [notes](#match_end-note) | 148.0  |
+matching_start | game_mode, matching_team_mode| Matching started. | See [notes](#matching_start-note) | 148.0  |
+matching_standby| null         | Accept matching inquiry started   | See [notes](#matching_standby-note) | 148.0  |
+matching_complete | null         | Match starts. | See [notes](#matching_complete-note) | 148.0  |
+
+select_character| Character code  | Local player changes character in character selection. | See [notes](#select_character-note) | 148.0  |
+select_weapon| Weapon code  | Local player changes weapon in character selection. | See [notes](#select_weapon-note) | 148.0  |
+team_character| Ally, Character code  | Ally player changes character in character selection. | See [notes](#team_character-note) | 148.0  |
+team_weapon| Weapon code  | Ally player changes weapon in character selection. | See [notes](#team_weapon-note) | 148.0  |
+
+select_route| target_items, target_regions  | Local player selects route in character selection. | See [notes](#select_route-note) | 148.0  |
+select_starting_point| Area code  | Local player selects starting point in character selection. | See [notes](#select_starting_point-note) | 148.0  |
+ally_starting_point| Ally, Area code  | Ally player selects starting point in character selection. | See [notes](#ally_starting_point-note) | 148.0  |
+
+knock_down| Victim name, Current kill count  | Local player kills, or knocks down an enemy. | See [notes](#knock_down-note) | 148.0  |
+downed| Victim name, Killer name, Time left  | Ally player is downed. | See [notes](#downed-note) | 148.0  |
+down_count| Victim name, Time left  | Downed ally player has taken damag. | See [notes](#down_count-note) | 148.0  |
+get_up| Victim name, Healer name  | Downed ally player has recovered. | See [notes](#down_count-note) | 148.0  |
+
+kill| Killer name, Victim name, Killer kill count  | Player kills another player. (Announcement) | See [notes](#down_count-note) | 148.0  |
+hunt| Monster name, Level  | Local player hunts a monster. | See [notes](#down_count-note) | 148.0  |
+death| Victim name, Killer type  | Player is dead. (Announcement) | See [notes](#down_count-note) | 148.0  |
+resurrect| Player name  | Player is resurrected. (Announcement) | See [notes](#down_count-note) | 148.0  |
+
+wickeline_prep| Boolean | 1 minute before Wickeline is about to spawn.(Announcement) | See [notes](#down_count-note) | 148.0  |
+wickeline_appear| Boolean | Wickeline hass spawned.(System chat) | See [notes](#down_count-note) | 148.0  |
+wickeline_move| Area code | Wickeline has moved to another point.(System chat) | See [notes](#down_count-note) | 148.0  |
+wickeline_dead| Killer name | Player kills Wickeline. (System chat) | See [notes](#down_count-note) | 148.0  |
+android_prep | Area code, Android name | 1 minute before Android Alpha/Omega is about to spawn.(Announcement) | See [notes](#down_count-note) | 148.0  |
+android_appear| Android name | Android Alpha/Omega has spawned.(Announcement) | See [notes](#down_count-note) | 148.0  |
+android_dead| Boolean | Android Alpha/Omega is dead.(Announcement) | See [notes](#down_count-note) | 148.0  |
+meteorite_prep | Area code | 1 minute before Android Alpha/Omega is about to spawn.(Announcement) | See [notes](#down_count-note) | 148.0  |
+meteorite_appear| Boolean | Android Alpha/Omega has spawned.(Announcement) | See [notes](#down_count-note) | 148.0  |
+android_prep | Area code, Android name | 1 minute before Android Alpha/Omega is about to spawn.(Announcement) | See [notes](#down_count-note) | 148.0  |
+android_appear| Boolean | Android Alpha/Omega has spawned.(Announcement) | See [notes](#down_count-note) | 148.0  |
+
+change_to_day| Date | Atmosphere changes from night to day. | See [notes](#down_count-note) | 148.0  |
+change_to_night| Date | Atmosphere changes from day to night. | See [notes](#down_count-note) | 148.0  |
+new_restriction| New area codes, Old area codes | New restricted areas are set. | See [notes](#down_count-note) | 148.0  |
+restriction_accel| Boolean | Game is accelerated due to low survivor count.| See [notes](#down_count-note) | 148.0  |
+final_restriction| Restriction step | Restriction steps in Duo/Squad game mode. | See [notes](#down_count-note) | 148.0  |
+competitive_restriction| Restriction step | Restriction steps in Solo game mode. | See [notes](#down_count-note) | 148.0  |
+
+move_region| Area code | Local player moves to another region. | See [notes](#down_count-note) | 148.0  |
+
+scoreboard| Boolean | Local player opens/closes scoreboard. | See [notes](#down_count-note) | 148.0  |
+
+deal_damage| Victim, Boolean, Damage | Local player deals damage to another player. | See [notes](#down_count-note) | 148.0  |
+take_damage| Bruiser, Boolean, Damage, Current Health | Local player takes damage from another player. | See [notes](#down_count-note) | 148.0  |
+
+level_up | Current level | Atmosphere changes from night to day. | See [notes](#down_count-note) | 148.0  |
+
 
 #### *match_start* note
 
@@ -210,140 +200,5 @@ Data Example:
 
 ```json
 {"event":"match_end","data":null}
-```
-
-## `game_info`
-
-### Info Updates
-
-key          | Category    | Values                    | Notes                 | Since GEP Ver. |
------------- | ------------| ------------------------- | --------------------- | ------------- | 
-scene        | game_info   | The current scene-state.   |See [notes](#scene-note)|   148.0       |
-state        | game_info   | The current game-state.   |See [notes](#state-note)|   148.0       |
-
-#### *scene* note
-
-"Scene" info includes the scenes of the game and the name of the map that is currently played (like in the example down below - Triad).
-
-Data Example:
-
-```json
-{"info":{"game_info":{"scene":"Triad"}},"feature":"game_info"}
-```
-
-#### *state* note
-
-Data Example:
-
-```json
-{"info":{"game_info":{"state":"WaitingToStart"}},"feature":"game_info"}
-{"info":{"game_info":{"state":"InProgress"}},"feature":"game_info"}
-```
-
-Possible states:
-* "WaitingToStart"
-* "LeavingMap"
-* "Aborted"
-* "InProgress"
-* "Init"
-
-## `kill`
-
-### Info Updates
-
-key          | Category    | Values                    | Notes                 | Since GEP Ver. |
------------- | ------------| ------------------------- | --------------------- | ------------- | 
-kills         | kill        | Amount of kills performed by the local player. |See [notes](#kill-note)|   148.0       |
-assists       | kill        | Amount of assists performed by the local player. |See [notes](#assist-note)|   148.0  |
-headshots     | kill   | Amount of headshots performed by the local player. |See [notes](#headshots-note)|   150.0  |
-
-
-#### *kill* note
-
-Data Example:
-
-```json
-{"info":{"kill":{"kills":1}},"feature":"kill"}
-{"info":{"kill":{"kills":2}},"feature":"kill"}
-{"info":{"kill":{"kills":3}},"feature":"kill"}
-```
-
-#### *assist* note
-
-Data Example:
-
-```json
-{"info":{"kill":{"assists":1}},"feature":"kill"}
-```
-
-#### *headshots* note
-
-Data Example:
-
-```json
-{"info":{"kill":{"headshots":1}},"feature":"kill"}
-```
-
-### Events
-
-Event       | Event Data   | Fired When    | Notes              | Since GEP Ver. |
-------------| -------------| --------------| ------------------ | --------------|
-kill        | Total kills  | Kill is performed. | See [notes](#kill-note) | 148.0  |
-assist      | Total assists| Assist is performed. | See [notes](#assist-note) | 148.0  |
-headshot    | Total headshots| Headshot is performed. | See [notes](#headshot-note) | 150.0  |
-
-
-#### *kill* note
-
-Data Example:
-
-```json
-{"events":[{"name":"kill","data":6}]}
-```
-
-#### *assist* note
-
-Data Example:
-
-```json
-{"events":[{"name":"assist","data":1}]}
-```
-
-#### *headshot* note
-
-Data Example:
-
-```json
-{"events":[{"name":"headshot","data":"1"}]}
-```
-
-## `death`
-
-### Info Updates
-
-key          | Category    | Values                    | Notes                 | Since GEP Ver. |
------------- | ------------| ------------------------- | --------------------- | ------------- | 
-deaths       | death       | Amount of deaths by the local player. |See [notes](#death-note)|   148.0       |
-
-#### *death* note
-
-Data Example:
-
-```json
-{"info":{"death":{"deaths":1}},"feature":"death"}
-```
-
-### Events
-
-Event       | Event Data   | Fired When    | Notes              | Since GEP Ver. |
-------------| -------------| --------------| ------------------ | --------------|
-death       | Total deaths | Local player died. | See [notes](#death-note) | 148.0  |
-
-#### *death* note
-
-Data Example:
-
-```json
-{"events":[{"name":"death","data":14}]}
 ```
 
