@@ -19,12 +19,14 @@
         <h5><div class="admonition-icon"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="16" viewBox="0 0 14 16"><path fill-rule="evenodd" d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"/></svg></div>  Game ID</h5>
       </div>
       <div class="admonition-content">
-    <p>1234</p>
+    <p>21672</p>
 </div></div><h2><a class="anchor" aria-hidden="true" id="sample-apps"></a><a href="#sample-apps" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Sample Apps</h2>
 <ul>
 <li><a href="https://github.com/overwolf/events-sample-apps">Eternal Return game events sample app</a></li>
 </ul>
 <h2><a class="anchor" aria-hidden="true" id="available-features"></a><a href="#available-features" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Available Features</h2>
+<p>This is a on-going development.
+All events and info updates can be target to changes.</p>
 <ul>
 <li><a href="#gep_internal">gep_internal</a></li>
 <li><a href="#me">me</a></li>
@@ -55,16 +57,25 @@
 </thead>
 <tbody>
 <tr><td>player_info</td><td>me</td><td>ID of the local player.</td><td>See <a href="#player_info-note">notes</a></td><td>148.0</td></tr>
-<tr><td>team</td><td>match_info</td><td>ID of the team player in match.</td><td>See <a href="#team-note">notes</a></td><td>148.0</td></tr>
-<tr><td>roster</td><td>match_info</td><td>All other player info known to the local player.</td><td>See <a href="#roster-note">notes</a></td><td>159.0</td></tr>
-<tr><td>match</td><td>match_info</td><td>ID of the match.</td><td>See <a href="#match-note">notes</a></td><td>159.0</td></tr>
-<tr><td>region</td><td>match_info</td><td>Starting location of all the users (if selected).</td><td>See <a href="#region-note">notes</a></td><td>159.0</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="player_info-note"></a><a href="#player_info-note" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><em>player_info</em> note</h4>
 <p>Data Example:</p>
 <pre><code class="hljs css language-json">{<span class="hljs-attr">"info"</span>:{<span class="hljs-attr">"me"</span>:{<span class="hljs-attr">"player_info"</span>:{<span class="hljs-attr">"user_num"</span>: <span class="hljs-number">144222</span>} }},<span class="hljs-attr">"feature"</span>:<span class="hljs-string">"me"</span>}
 </code></pre>
+<h2><a class="anchor" aria-hidden="true" id="match_info"></a><a href="#match_info" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>match_info</code></h2>
+<h3><a class="anchor" aria-hidden="true" id="info-updates-2"></a><a href="#info-updates-2" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Info Updates</h3>
+<table>
+<thead>
+<tr><th>key</th><th>Category</th><th>Values</th><th>Notes</th><th>Since GEP Ver.</th></tr>
+</thead>
+<tbody>
+<tr><td>team</td><td>match_info</td><td>ID of the team player in match.</td><td>See <a href="#team-note">notes</a></td><td>148.0</td></tr>
+<tr><td>roster</td><td>match_info</td><td>All other player info known to the local player.</td><td>See <a href="#roster-note">notes</a></td><td>159.0</td></tr>
+<tr><td>match</td><td>match_info</td><td>ID of the match.</td><td>See <a href="#match-note">notes</a></td><td>159.0</td></tr>
+<tr><td>region</td><td>match_info</td><td>Starting location of all the users (if selected).</td><td>See <a href="#region-note">notes</a></td><td>159.0</td></tr>
+</tbody>
+</table>
 <h4><a class="anchor" aria-hidden="true" id="team-note"></a><a href="#team-note" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><em>team</em> note</h4>
 <p>Data Example:</p>
 <pre><code class="hljs css language-json">{<span class="hljs-attr">"info"</span>:{<span class="hljs-attr">"match_info"</span>:{<span class="hljs-attr">"team"</span>:{<span class="hljs-attr">"ally1"</span> : <span class="hljs-number">1003024</span>, <span class="hljs-attr">"ally2"</span> : <span class="hljs-number">144240</span>}}},<span class="hljs-attr">"feature"</span>:<span class="hljs-string">"me"</span>}
@@ -89,6 +100,480 @@ This info will contain the local player itself.</p>
 </code></pre>
 <p>The enemy array will be an array containing 16 integers. Each index number + 1 will represent the area code of <a href="#area_code-note">area_code</a>.<br>
 eg) index 0 of array represents the number of players selecting area code 1 as their starting point.</p>
+<h2><a class="anchor" aria-hidden="true" id="match_info-1"></a><a href="#match_info-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>match_info</code></h2>
+<h3><a class="anchor" aria-hidden="true" id="events"></a><a href="#events" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Events</h3>
+<table>
+<thead>
+<tr><th>Event</th><th>Event Data</th><th>Fired When</th><th>Notes</th><th>Since GEP Ver.</th></tr>
+</thead>
+<tbody>
+<tr><td>matching_start</td><td>game_mode, matching_team_mode</td><td>Matching started.</td><td>See <a href="#matching_start-note">notes</a></td><td>148.0</td></tr>
+<tr><td>matching_standby</td><td>null</td><td>Accept matching inquiry started</td><td>See <a href="#matching_standby-note">notes</a></td><td>148.0</td></tr>
+<tr><td>matching_complete</td><td>null</td><td>Match starts.</td><td>See <a href="#matching_complete-note">notes</a></td><td>148.0</td></tr>
+</tbody>
+</table>
+<h4><a class="anchor" aria-hidden="true" id="matching_start-note"></a><a href="#matching_start-note" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><em>matching_start</em> note</h4>
+<p>Data Example:</p>
+<pre><code class="hljs css language-json">{<span class="hljs-attr">"event"</span>:<span class="hljs-string">"matching_start"</span>,<span class="hljs-attr">"data"</span>:{<span class="hljs-attr">"game_mode"</span> : <span class="hljs-string">""</span>, <span class="hljs-attr">"matching_team_mode"</span> : <span class="hljs-string">""</span>}}
+</code></pre>
+<p>Possible game modes :</p>
+<ul>
+<li>Normal</li>
+<li>Rank</li>
+</ul>
+<p>Possible matching team modes :</p>
+<ul>
+<li>Solo</li>
+<li>Duo</li>
+<li>Squad</li>
+</ul>
+<h4><a class="anchor" aria-hidden="true" id="matching_standby-note"></a><a href="#matching_standby-note" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><em>matching_standby</em> note</h4>
+<p>Data Example:</p>
+<pre><code class="hljs css language-json">{<span class="hljs-attr">"event"</span>:<span class="hljs-string">"matching_standby"</span>,<span class="hljs-attr">"data"</span>:<span class="hljs-string">""</span>}
+</code></pre>
+<p>This is triggered when the local player is inquired whether to accept or decline the current matching.<br>
+It does not return the action of the local player.</p>
+<h4><a class="anchor" aria-hidden="true" id="matching_complete-note"></a><a href="#matching_complete-note" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><em>matching_complete</em> note</h4>
+<p>Data Example:</p>
+<pre><code class="hljs css language-json">{<span class="hljs-attr">"event"</span>:<span class="hljs-string">"matching_complete"</span>,<span class="hljs-attr">"data"</span>:<span class="hljs-string">""</span>}
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="character_selection"></a><a href="#character_selection" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>character_selection</code></h2>
+<h3><a class="anchor" aria-hidden="true" id="events-1"></a><a href="#events-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Events</h3>
+<table>
+<thead>
+<tr><th>Event</th><th>Event Data</th><th>Fired When</th><th>Notes</th><th>Since GEP Ver.</th></tr>
+</thead>
+<tbody>
+<tr><td>select_character</td><td>Character code</td><td>Local player selects character in character selection.</td><td>See <a href="#select_character-note">notes</a></td><td>148.0</td></tr>
+<tr><td>select_weapon</td><td>Weapon code</td><td>Local player selects weapon in character selection.</td><td>See <a href="#select_weapon-note">notes</a></td><td>148.0</td></tr>
+<tr><td>team_character</td><td>Ally, Character code</td><td>Ally player selects character in character selection.</td><td>See <a href="#team_character-note">notes</a></td><td>148.0</td></tr>
+<tr><td>team_weapon</td><td>Weapon code</td><td>Ally player selects weapon in character selection.</td><td>See <a href="#team_weapon-note">notes</a></td><td>148.0</td></tr>
+<tr><td>select_route</td><td>Target items, Target regions</td><td>Local player selects plan in character selection.</td><td>See <a href="#select_route-note">notes</a></td><td>148.0</td></tr>
+<tr><td>select_starting_point</td><td>Area code</td><td>Local player selects starting point in character selection.</td><td>See <a href="#select_starting_point-note">notes</a></td><td>148.0</td></tr>
+<tr><td>ally_starting_point</td><td>Area code, Area code</td><td>Ally player selects starting point in character selection.</td><td>See <a href="#ally_starting_point-note">notes</a></td><td>148.0</td></tr>
+</tbody>
+</table>
+<h4><a class="anchor" aria-hidden="true" id="select_character-note"></a><a href="#select_character-note" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><em>select_character</em> note</h4>
+<p>Data Example:</p>
+<pre><code class="hljs css language-json">{<span class="hljs-attr">"event"</span>:<span class="hljs-string">"select_character"</span>,<span class="hljs-attr">"data"</span>:<span class="hljs-number">1</span>}
+</code></pre>
+<p>See <a href="#character_code-note">character_code</a> for more info on character number.</p>
+<h4><a class="anchor" aria-hidden="true" id="select_weapon-note"></a><a href="#select_weapon-note" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><em>select_weapon</em> note</h4>
+<p>Data Example:</p>
+<pre><code class="hljs css language-json">{<span class="hljs-attr">"event"</span>:<span class="hljs-string">"select_character"</span>,<span class="hljs-attr">"data"</span>:<span class="hljs-number">1</span>}
+</code></pre>
+<p>See <a href="#weapon_code-note">weapon_code</a> for more info on weapon number.</p>
+<h4><a class="anchor" aria-hidden="true" id="team_character-note"></a><a href="#team_character-note" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><em>team_character</em> note</h4>
+<p>Data Example:</p>
+<pre><code class="hljs css language-json">{<span class="hljs-attr">"event"</span>:<span class="hljs-string">"team_character"</span>,<span class="hljs-attr">"data"</span>:{<span class="hljs-attr">"who"</span> : <span class="hljs-string">"ally1"</span>, <span class="hljs-attr">"character_num"</span> : <span class="hljs-number">12</span>}}
+</code></pre>
+<p>The data &quot;who&quot; refers to the distinction in <a href="#team-note">teams</a>.<br>
+See <a href="#character_code-note">character_code</a> for more info on character number.</p>
+<h4><a class="anchor" aria-hidden="true" id="team_weapon-note"></a><a href="#team_weapon-note" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><em>team_weapon</em> note</h4>
+<p>Data Example:</p>
+<pre><code class="hljs css language-json">{<span class="hljs-attr">"event"</span>:<span class="hljs-string">"team_weapon"</span>,<span class="hljs-attr">"data"</span>:{<span class="hljs-attr">"who"</span> : <span class="hljs-string">"ally1"</span>, <span class="hljs-attr">"weapon_num"</span> : <span class="hljs-number">12</span>}}
+</code></pre>
+<p>The data &quot;who&quot; refers to the distinction in <a href="#team-note">teams</a>.<br>
+See <a href="#weapon_code-note">weapon_code</a> for more info on weapon number.</p>
+<h4><a class="anchor" aria-hidden="true" id="select_route-note"></a><a href="#select_route-note" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><em>select_route</em> note</h4>
+<p>Data Example:</p>
+<pre><code class="hljs css language-json">{<span class="hljs-attr">"event"</span>:<span class="hljs-string">"select_route"</span>,<span class="hljs-attr">"data"</span>:{<span class="hljs-attr">"items"</span> : [<span class="hljs-number">122232</span>, <span class="hljs-number">144244</span>, ...], <span class="hljs-attr">"regions"</span> : [<span class="hljs-number">11</span>, <span class="hljs-number">3</span>, <span class="hljs-number">8</span> , <span class="hljs-number">5</span>]}}
+</code></pre>
+<p>The 'items' array consists of 6 items, each representing the item code. See <a href="#item_code-note">item_code</a> for more info.<br>
+The 'regions' array is the area code in order of index. See <a href="#area_code-note">area_code</a> for more info.<br>
+eg) Local player's saved plan visits area 11, 3, 8, and 5 in written order.</p>
+<h4><a class="anchor" aria-hidden="true" id="select_starting_point-note"></a><a href="#select_starting_point-note" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><em>select_starting_point</em> note</h4>
+<p>Data Example:</p>
+<pre><code class="hljs css language-json">{<span class="hljs-attr">"event"</span>:<span class="hljs-string">"select_starting_point"</span>,<span class="hljs-attr">"data"</span>:<span class="hljs-number">1</span>}
+</code></pre>
+<p>Area code for the local player's starting point.<br>
+See <a href="#area_code-note">area_code</a> for more info.</p>
+<h4><a class="anchor" aria-hidden="true" id="ally_starting_point-note"></a><a href="#ally_starting_point-note" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><em>ally_starting_point</em> note</h4>
+<p>Data Example:</p>
+<pre><code class="hljs css language-json">{<span class="hljs-attr">"event"</span>:<span class="hljs-string">"ally_starting_point"</span>,<span class="hljs-attr">"data"</span>:{<span class="hljs-attr">"ally1"</span> : <span class="hljs-number">5</span>, <span class="hljs-attr">"ally2"</span> : <span class="hljs-number">5</span>}}
+</code></pre>
+<p>Both ally's starting point area code is given.<br>
+See <a href="#area_code-note">area_code</a> for more info.</p>
+<h2><a class="anchor" aria-hidden="true" id="kills"></a><a href="#kills" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>kills</code></h2>
+<h3><a class="anchor" aria-hidden="true" id="events-2"></a><a href="#events-2" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Events</h3>
+<table>
+<thead>
+<tr><th>Event</th><th>Event Data</th><th>Fired When</th><th>Notes</th><th>Since GEP Ver.</th></tr>
+</thead>
+<tbody>
+<tr><td>knock_down</td><td>Victim name, Current kill count</td><td>Local player kills, or knocks down an enemy.</td><td>See <a href="#knock_down-note">notes</a></td><td>148.0</td></tr>
+<tr><td>downed</td><td>Victim name, Time left</td><td>Ally player is downed.</td><td>See <a href="#downed-note">notes</a></td><td>148.0</td></tr>
+<tr><td>down_count</td><td>Victim name, Time left</td><td>Downed ally player has taken damag.</td><td>See <a href="#down_count-note">notes</a></td><td>148.0</td></tr>
+<tr><td>get_up</td><td>Victim name, Healer name</td><td>Downed ally player has recovered.</td><td>See <a href="#get_up-note">notes</a></td><td>148.0</td></tr>
+<tr><td>hunt</td><td>Monster name, Level</td><td>Local player hunts a monster.</td><td>See <a href="#hunt-note">notes</a></td><td>148.0</td></tr>
+</tbody>
+</table>
+<h4><a class="anchor" aria-hidden="true" id="knock_down-note"></a><a href="#knock_down-note" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><em>knock_down</em> note</h4>
+<p>Data Example:</p>
+<pre><code class="hljs css language-json">{<span class="hljs-attr">"event"</span>:<span class="hljs-string">"knock_down"</span>,<span class="hljs-attr">"data"</span>:{<span class="hljs-attr">"victim"</span> : <span class="hljs-string">"TestSubject5"</span>, <span class="hljs-attr">"total_kills"</span> : <span class="hljs-number">5</span>}}
+</code></pre>
+<p>Knock-downs will also return kills in Solo game mode.<br>
+The victim returns the name of the player.<br>
+The name of the player can be an anonymous nickname such as &quot;Test Subject 1&quot;</p>
+<h4><a class="anchor" aria-hidden="true" id="downed-note"></a><a href="#downed-note" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><em>downed</em> note</h4>
+<p>Data Example:</p>
+<pre><code class="hljs css language-json">{<span class="hljs-attr">"event"</span>:<span class="hljs-string">"downed"</span>,<span class="hljs-attr">"data"</span>:{<span class="hljs-attr">"victim"</span> : <span class="hljs-string">"AllyPlayer"</span>, <span class="hljs-attr">"time_left"</span> : <span class="hljs-number">15.0</span>f}}
+</code></pre>
+<h4><a class="anchor" aria-hidden="true" id="down_count-note"></a><a href="#down_count-note" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><em>down_count</em> note</h4>
+<p>Data Example:</p>
+<pre><code class="hljs css language-json">{<span class="hljs-attr">"event"</span>:<span class="hljs-string">"down_count"</span>,<span class="hljs-attr">"data"</span>:{<span class="hljs-attr">"victim"</span> : <span class="hljs-string">"MeOrAllyPlayer125"</span>, <span class="hljs-attr">"time_left"</span> : <span class="hljs-number">10.5</span>f}}
+</code></pre>
+<p>This triggers when a downed ally has taken damage and the time left is updated consequently.</p>
+<h4><a class="anchor" aria-hidden="true" id="get_up-note"></a><a href="#get_up-note" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><em>get_up</em> note</h4>
+<p>Data Example:</p>
+<pre><code class="hljs css language-json">{<span class="hljs-attr">"event"</span>:<span class="hljs-string">"get_up"</span>,<span class="hljs-attr">"data"</span>:{<span class="hljs-attr">"victim"</span> : <span class="hljs-string">"MeOrAllyPlayer125"</span>, <span class="hljs-attr">"healer"</span> : <span class="hljs-string">"MeOrAlly112"</span>}}
+</code></pre>
+<h4><a class="anchor" aria-hidden="true" id="hunt-note"></a><a href="#hunt-note" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><em>hunt</em> note</h4>
+<p>Data Example:</p>
+<pre><code class="hljs css language-json">{<span class="hljs-attr">"event"</span>:<span class="hljs-string">"hunt"</span>,<span class="hljs-attr">"data"</span>:{<span class="hljs-attr">"monster"</span> : <span class="hljs-string">"Chicken"</span>, <span class="hljs-attr">"level"</span> : <span class="hljs-number">12</span>}}
+</code></pre>
+<p>See <a href="#monster-note">monster</a> for more info.</p>
+<h2><a class="anchor" aria-hidden="true" id="announces"></a><a href="#announces" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>announces</code></h2>
+<h3><a class="anchor" aria-hidden="true" id="events-3"></a><a href="#events-3" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Events</h3>
+<table>
+<thead>
+<tr><th>Event</th><th>Event Data</th><th>Fired When</th><th>Notes</th><th>Since GEP Ver.</th></tr>
+</thead>
+<tbody>
+<tr><td>kill</td><td>Killer name, Victim name, Killer kill count</td><td>Player kills another player. (Announcement)</td><td>See <a href="#kill-note">notes</a></td><td>148.0</td></tr>
+<tr><td>death</td><td>Victim name, Killer type</td><td>Player is dead. (Announcement)</td><td>See <a href="#death-note">notes</a></td><td>148.0</td></tr>
+<tr><td>resurrect</td><td>Player name</td><td>Player is resurrected. (Announcement)</td><td>See <a href="#resurrect-note">notes</a></td><td>148.0</td></tr>
+</tbody>
+</table>
+<h4><a class="anchor" aria-hidden="true" id="kill-note"></a><a href="#kill-note" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><em>kill</em> note</h4>
+<p>Data Example:</p>
+<pre><code class="hljs css language-json">{<span class="hljs-attr">"event"</span>:<span class="hljs-string">"kill"</span>,<span class="hljs-attr">"data"</span>:{<span class="hljs-attr">"killer"</span> : <span class="hljs-string">"Test Subject 15"</span>, <span class="hljs-attr">"victim"</span> : <span class="hljs-string">"Someone"</span>, <span class="hljs-attr">"total_kills"</span> : <span class="hljs-number">5</span>}}
+</code></pre>
+<p>Kill will return kill logs of all players. (Including the local player.)
+This will be triggered via announcements.</p>
+<h4><a class="anchor" aria-hidden="true" id="death-note"></a><a href="#death-note" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><em>death</em> note</h4>
+<p>Data Example:</p>
+<pre><code class="hljs css language-json">{<span class="hljs-attr">"event"</span>:<span class="hljs-string">"death"</span>,<span class="hljs-attr">"data"</span>:{<span class="hljs-attr">"victim"</span> : <span class="hljs-string">"Test Subject 15"</span>, <span class="hljs-attr">"killer_type"</span> : <span class="hljs-string">"WildLife"</span>}}
+</code></pre>
+<p>Possible killer type</p>
+<ul>
+<li>WildLife</li>
+<li>Restriction</li>
+<li>Meteor</li>
+</ul>
+<h4><a class="anchor" aria-hidden="true" id="resurrect-note"></a><a href="#resurrect-note" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><em>resurrect</em> note</h4>
+<p>Data Example:</p>
+<pre><code class="hljs css language-json">{<span class="hljs-attr">"event"</span>:<span class="hljs-string">"resurrect"</span>,<span class="hljs-attr">"data"</span>:<span class="hljs-string">"Test Subject 15"</span>}
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="game_objects"></a><a href="#game_objects" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>game_objects</code></h2>
+<h3><a class="anchor" aria-hidden="true" id="events-4"></a><a href="#events-4" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Events</h3>
+<table>
+<thead>
+<tr><th>Event</th><th>Event Data</th><th>Fired When</th><th>Notes</th><th>Since GEP Ver.</th></tr>
+</thead>
+<tbody>
+<tr><td>wickeline_prep</td><td>Boolean</td><td>1 minute before Wickeline is about to spawn.(Announcement)</td><td>See <a href="#wickeline_prep-note">notes</a></td><td>148.0</td></tr>
+<tr><td>wickeline_appear</td><td>Boolean</td><td>Wickeline hass spawned.(System chat)</td><td>See <a href="#wickeline_appear-note">notes</a></td><td>148.0</td></tr>
+<tr><td>wickeline_move</td><td>Area code</td><td>Wickeline has moved to another point.(System chat)</td><td>See <a href="#wickeline_move-note">notes</a></td><td>148.0</td></tr>
+<tr><td>wickeline_dead</td><td>Killer name</td><td>Player kills Wickeline. (System chat)</td><td>See <a href="#wickeline_dead-note">notes</a></td><td>148.0</td></tr>
+<tr><td>android_prep</td><td>Area code, Android name</td><td>1 minute before Android Alpha/Omega is about to spawn.(Announcement)</td><td>See <a href="#android_prep-note">notes</a></td><td>148.0</td></tr>
+<tr><td>android_appear</td><td>Android name</td><td>Android Alpha/Omega has spawned.(Announcement)</td><td>See <a href="#android_appear-note">notes</a></td><td>148.0</td></tr>
+<tr><td>android_dead</td><td>Boolean</td><td>Android Alpha/Omega is dead.(Announcement)</td><td>See <a href="#android_dead-note">notes</a></td><td>148.0</td></tr>
+<tr><td>meteorite_prep</td><td>Area code</td><td>1 minute before Android Alpha/Omega is about to spawn.(Announcement)</td><td>See <a href="#meteorite_prep-note">notes</a></td><td>148.0</td></tr>
+<tr><td>meteorite_appear</td><td>Boolean</td><td>Android Alpha/Omega has spawned.(Announcement)</td><td>See <a href="#meteorite_appear-note">notes</a></td><td>148.0</td></tr>
+<tr><td>tree_of_life_prep</td><td>Area code</td><td>1 minute before tree of life is about to spawn.(Announcement)</td><td>See <a href="#tree_of_life_prep-note">notes</a></td><td>148.0</td></tr>
+<tr><td>tree_of_life_appear</td><td>Boolean</td><td>Tree of life has spawned.(Announcement)</td><td>See <a href="#tree_of_life_appear-note">notes</a></td><td>148.0</td></tr>
+<tr><td>android_prep</td><td>Area code, Android name</td><td>1 minute before Android Alpha/Omega is about to spawn.(Announcement)</td><td>See <a href="#android_prep-note">notes</a></td><td>148.0</td></tr>
+<tr><td>android_appear</td><td>Boolean</td><td>Android Alpha/Omega has spawned.(Announcement)</td><td>See <a href="#android_appear-note">notes</a></td><td>148.0</td></tr>
+</tbody>
+</table>
+<h4><a class="anchor" aria-hidden="true" id="wickeline_prep-note"></a><a href="#wickeline_prep-note" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><em>wickeline_prep</em> note</h4>
+<p>Data Example:</p>
+<pre><code class="hljs css language-json">{<span class="hljs-attr">"event"</span>:<span class="hljs-string">"wickeline_prep"</span>,<span class="hljs-attr">"data"</span>:<span class="hljs-literal">true</span>}
+</code></pre>
+<h4><a class="anchor" aria-hidden="true" id="wickeline_appear-note"></a><a href="#wickeline_appear-note" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><em>wickeline_appear</em> note</h4>
+<p>Data Example:</p>
+<pre><code class="hljs css language-json">{<span class="hljs-attr">"event"</span>:<span class="hljs-string">"wickeline_appear"</span>,<span class="hljs-attr">"data"</span>:<span class="hljs-literal">true</span>}
+</code></pre>
+<h4><a class="anchor" aria-hidden="true" id="wickeline_move-note"></a><a href="#wickeline_move-note" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><em>wickeline_move</em> note</h4>
+<p>Data Example:</p>
+<pre><code class="hljs css language-json">{<span class="hljs-attr">"event"</span>:<span class="hljs-string">"wickeline_move"</span>,<span class="hljs-attr">"data"</span>:<span class="hljs-number">14</span>}
+</code></pre>
+<p>Area code of wickeline's new location.
+See <a href="#area_code-note">area_code</a> for more info.</p>
+<h4><a class="anchor" aria-hidden="true" id="wickeline_dead-note"></a><a href="#wickeline_dead-note" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><em>wickeline_dead</em> note</h4>
+<p>Data Example:</p>
+<pre><code class="hljs css language-json">{<span class="hljs-attr">"event"</span>:<span class="hljs-string">"wickeline_dead"</span>,<span class="hljs-attr">"data"</span>: <span class="hljs-string">"Test Subject 15"</span>}
+</code></pre>
+<p>Player name of Wickeline's killer.</p>
+<h4><a class="anchor" aria-hidden="true" id="android_prep-note"></a><a href="#android_prep-note" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><em>android_prep</em> note</h4>
+<p>Data Example:</p>
+<pre><code class="hljs css language-json">{<span class="hljs-attr">"event"</span>:<span class="hljs-string">"android_prep"</span>,<span class="hljs-attr">"data"</span>: {<span class="hljs-attr">"region"</span> : <span class="hljs-number">15</span>, <span class="hljs-attr">"android"</span> : <span class="hljs-string">"alpha"</span>}}
+</code></pre>
+<p>Area code of androids's spawn location. <br>
+See <a href="#area_code-note">area_code</a> for more info. <br></p>
+<p>Possible android value :</p>
+<ul>
+<li>alpha</li>
+<li>omega</li>
+</ul>
+<h4><a class="anchor" aria-hidden="true" id="android_appear-note"></a><a href="#android_appear-note" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><em>android_appear</em> note</h4>
+<p>Data Example:</p>
+<pre><code class="hljs css language-json">{<span class="hljs-attr">"event"</span>:<span class="hljs-string">"android_prep"</span>,<span class="hljs-attr">"data"</span>: <span class="hljs-string">"alpha"</span>}
+</code></pre>
+<p>Note that android_appear will not specify the spawn area code. <br>
+Possible android value :</p>
+<ul>
+<li>alpha</li>
+<li>omega</li>
+</ul>
+<h4><a class="anchor" aria-hidden="true" id="android_dead-note"></a><a href="#android_dead-note" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><em>android_dead</em> note</h4>
+<p>Data Example:</p>
+<pre><code class="hljs css language-json">{<span class="hljs-attr">"event"</span>:<span class="hljs-string">"android_prep"</span>,<span class="hljs-attr">"data"</span>: <span class="hljs-string">"alpha"</span>}
+</code></pre>
+<p>Possible android value :</p>
+<ul>
+<li>alpha</li>
+<li>omega</li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="day_change"></a><a href="#day_change" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>day_change</code></h2>
+<h3><a class="anchor" aria-hidden="true" id="events-5"></a><a href="#events-5" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Events</h3>
+<table>
+<thead>
+<tr><th>Event</th><th>Event Data</th><th>Fired When</th><th>Notes</th><th>Since GEP Ver.</th></tr>
+</thead>
+<tbody>
+<tr><td>change_to_day</td><td>Date</td><td>Atmosphere changes from night to day.</td><td>See <a href="#change_to_day-note">notes</a></td><td>148.0</td></tr>
+<tr><td>change_to_night</td><td>Date</td><td>Atmosphere changes from day to night.</td><td>See <a href="#change_to_night-note">notes</a></td><td>148.0</td></tr>
+<tr><td>new_restriction</td><td>New area codes, Old area codes</td><td>New restricted areas are set.</td><td>See <a href="#new_restriction-note">notes</a></td><td>148.0</td></tr>
+<tr><td>restriction_accel</td><td>Boolean</td><td>Restriction accel announcement is made.</td><td>See <a href="#restriction_accel-note">notes</a></td><td>148.0</td></tr>
+<tr><td>final_restriction</td><td>Restriction step</td><td>Restriction steps announcement is made in Duo/Squaed matching team mode.</td><td>See <a href="#final_restriction-note">notes</a></td><td>148.0</td></tr>
+<tr><td>competitive_restriction</td><td>Restriction step</td><td>Restriction steps announcement is made in Solo matching team mode.</td><td>See <a href="#competitive_restriction-note">notes</a></td><td>148.0</td></tr>
+</tbody>
+</table>
+<h4><a class="anchor" aria-hidden="true" id="change_to_day-note"></a><a href="#change_to_day-note" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><em>change_to_day</em> note</h4>
+<p>Data Example:</p>
+<pre><code class="hljs css language-json">{<span class="hljs-attr">"event"</span>:<span class="hljs-string">"change_to_day"</span>,<span class="hljs-attr">"data"</span>: <span class="hljs-number">3</span>}
+</code></pre>
+<p>Returns the current day count.</p>
+<h4><a class="anchor" aria-hidden="true" id="change_to_night-note"></a><a href="#change_to_night-note" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><em>change_to_night</em> note</h4>
+<p>Data Example:</p>
+<pre><code class="hljs css language-json">{<span class="hljs-attr">"event"</span>:<span class="hljs-string">"change_to_night"</span>,<span class="hljs-attr">"data"</span>: <span class="hljs-number">3</span>}
+</code></pre>
+<h4><a class="anchor" aria-hidden="true" id="new_restriction-note"></a><a href="#new_restriction-note" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><em>new_restriction</em> note</h4>
+<p>Data Example:</p>
+<pre><code class="hljs css language-json">{<span class="hljs-attr">"event"</span>:<span class="hljs-string">"new_restriciont"</span>,<span class="hljs-attr">"data"</span>: {<span class="hljs-attr">"added"</span> : [<span class="hljs-number">1</span>, <span class="hljs-number">4</span>, <span class="hljs-number">3</span>], <span class="hljs-attr">"current"</span> : [<span class="hljs-number">11</span>, <span class="hljs-number">13</span>, <span class="hljs-number">14</span>]}}
+</code></pre>
+<p>Returns the newly broadcasted restriction areas.<br>
+The 'current' array will represent currently restricted area codes. <br>
+The 'added' array will represent newly reserved restricted area codes.
+See <a href="#area_code-note">area_code</a> for more info.</p>
+<h4><a class="anchor" aria-hidden="true" id="restriction_accel-note"></a><a href="#restriction_accel-note" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><em>restriction_accel</em> note</h4>
+<p>Data Example:</p>
+<pre><code class="hljs css language-json">{<span class="hljs-attr">"event"</span>:<span class="hljs-string">"restriction_accel"</span>,<span class="hljs-attr">"data"</span>: <span class="hljs-literal">true</span>}
+</code></pre>
+<p>The restriction_accel will be called when it's true.</p>
+<h4><a class="anchor" aria-hidden="true" id="final_restriction-note"></a><a href="#final_restriction-note" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><em>final_restriction</em> note</h4>
+<p>Data Example:</p>
+<pre><code class="hljs css language-json">{<span class="hljs-attr">"event"</span>:<span class="hljs-string">"final_restriction"</span>,<span class="hljs-attr">"data"</span>: <span class="hljs-number">1</span>}
+</code></pre>
+<p>This event is only called in Duo/Squad matching team mode.
+This event cannot be used to find out the final safe area. Final safe area must be acquired by the &quot;new_restriction&quot; event.
+The final_restriction will be called each step of the announcement.
+Possible steps</p>
+<ul>
+<li>1 : Final safe area is broadcasted.</li>
+<li>2 : Final safe area is active.</li>
+<li>3 : No more safe area.</li>
+</ul>
+<h4><a class="anchor" aria-hidden="true" id="competitive_restriction-note"></a><a href="#competitive_restriction-note" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><em>competitive_restriction</em> note</h4>
+<p>Data Example:</p>
+<pre><code class="hljs css language-json">{<span class="hljs-attr">"event"</span>:<span class="hljs-string">"competitive_restriction"</span>,<span class="hljs-attr">"data"</span>: <span class="hljs-number">1</span>}
+</code></pre>
+<p>This event is only called in Solo matching team mode.
+This event cannot be used to find out the final safe area. Final safe area must be acquired by the &quot;new_restriction&quot; event.
+The competitive_restriction will be called each step of the announcement.
+Possible steps</p>
+<ul>
+<li>1 : Temporary safe area is set.</li>
+<li>2 : Temporary safe area is active.</li>
+<li>3 : Final safe area is set</li>
+<li>4 : Final safe area is active.</li>
+<li>5 : No more safe area.</li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="move_regions"></a><a href="#move_regions" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>move_regions</code></h2>
+<h3><a class="anchor" aria-hidden="true" id="events-6"></a><a href="#events-6" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Events</h3>
+<table>
+<thead>
+<tr><th>Event</th><th>Event Data</th><th>Fired When</th><th>Notes</th><th>Since GEP Ver.</th></tr>
+</thead>
+<tbody>
+<tr><td>move_region</td><td>Area code</td><td>Local player moves to another region.</td><td>See <a href="#move_region-note">notes</a></td><td>148.0</td></tr>
+</tbody>
+</table>
+<h4><a class="anchor" aria-hidden="true" id="move_region-note"></a><a href="#move_region-note" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><em>move_region</em> note</h4>
+<p>Data Example:</p>
+<pre><code class="hljs css language-json">{<span class="hljs-attr">"event"</span>:<span class="hljs-string">"move_region"</span>,<span class="hljs-attr">"data"</span>: <span class="hljs-number">1</span>}
+</code></pre>
+<p>See <a href="#area_code-note">area_code</a> for more info.</p>
+<h2><a class="anchor" aria-hidden="true" id="scoreboards"></a><a href="#scoreboards" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>scoreboards</code></h2>
+<h3><a class="anchor" aria-hidden="true" id="events-7"></a><a href="#events-7" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Events</h3>
+<table>
+<thead>
+<tr><th>Event</th><th>Event Data</th><th>Fired When</th><th>Notes</th><th>Since GEP Ver.</th></tr>
+</thead>
+<tbody>
+<tr><td>scoreboard</td><td>Boolean</td><td>Local player opens/closes scoreboard.</td><td>See <a href="#scoreboard-note">notes</a></td><td>148.0</td></tr>
+</tbody>
+</table>
+<h4><a class="anchor" aria-hidden="true" id="scoreboard-note"></a><a href="#scoreboard-note" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><em>scoreboard</em> note</h4>
+<p>Data Example:</p>
+<pre><code class="hljs css language-json">{<span class="hljs-attr">"event"</span>:<span class="hljs-string">"scoreboard"</span>,<span class="hljs-attr">"data"</span>: <span class="hljs-string">"open"</span>}
+</code></pre>
+<p>Possible data :</p>
+<ul>
+<li>open</li>
+<li>close</li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="damages"></a><a href="#damages" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>damages</code></h2>
+<h3><a class="anchor" aria-hidden="true" id="events-8"></a><a href="#events-8" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Events</h3>
+<table>
+<thead>
+<tr><th>Event</th><th>Event Data</th><th>Fired When</th><th>Notes</th><th>Since GEP Ver.</th></tr>
+</thead>
+<tbody>
+<tr><td>deal_damage</td><td>Victim, Boolean, Damage</td><td>Local player deals damage to another player.</td><td>See <a href="#deal_damage-note">notes</a></td><td>148.0</td></tr>
+<tr><td>take_damage</td><td>Bruiser, Boolean, Damage, Current Health</td><td>Local player takes damage from another player.</td><td>See <a href="#take_damage-note">notes</a></td><td>148.0</td></tr>
+</tbody>
+</table>
+<h4><a class="anchor" aria-hidden="true" id="deal_damage-note"></a><a href="#deal_damage-note" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><em>deal_damage</em> note</h4>
+<p>Data Example:</p>
+<pre><code class="hljs css language-json">{<span class="hljs-attr">"event"</span>:<span class="hljs-string">"deal_damage"</span>,<span class="hljs-attr">"data"</span>: {<span class="hljs-attr">"victim"</span> : <span class="hljs-string">"Test Subject 15"</span>, <span class="hljs-attr">"is_skill"</span> : <span class="hljs-literal">true</span>, <span class="hljs-attr">"damage"</span> : <span class="hljs-number">145.4</span>f}}
+</code></pre>
+<p>Eternal Return has many different damage types. However, &quot;is_skill&quot; distinguishes the damage type into two categories.</p>
+<ul>
+<li>true : damage is given via character skill, item skill, or weapon skill.</li>
+<li>false : damage is given via character's normal(auto) attack.</li>
+</ul>
+<h4><a class="anchor" aria-hidden="true" id="take_damage-note"></a><a href="#take_damage-note" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><em>take_damage</em> note</h4>
+<p>Data Example:</p>
+<pre><code class="hljs css language-json">{<span class="hljs-attr">"event"</span>:<span class="hljs-string">"take_damage"</span>,<span class="hljs-attr">"data"</span>: {<span class="hljs-attr">"bruiser"</span> : <span class="hljs-string">"Test Subject 15"</span>, <span class="hljs-attr">"is_skill"</span> : <span class="hljs-literal">true</span>, <span class="hljs-attr">"damage"</span> : <span class="hljs-number">145.4</span>f, <span class="hljs-attr">"current_health"</span> : <span class="hljs-number">1525</span>}}
+</code></pre>
+<p>Eternal Return has many different damage types. However, &quot;is_skill&quot; distinguishes the damage type into two categories.</p>
+<ul>
+<li>true : damage is given via character skill, item skill, or weapon skill.</li>
+<li>false : damage is given via character's normal(auto) attack.</li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="level_ups"></a><a href="#level_ups" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>level_ups</code></h2>
+<h3><a class="anchor" aria-hidden="true" id="events-9"></a><a href="#events-9" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Events</h3>
+<table>
+<thead>
+<tr><th>Event</th><th>Event Data</th><th>Fired When</th><th>Notes</th><th>Since GEP Ver.</th></tr>
+</thead>
+<tbody>
+<tr><td>level_up</td><td>Current character level</td><td>Local character levels up.</td><td>See <a href="#level_up-note">notes</a></td><td>148.0</td></tr>
+<tr><td>mastery_level_up</td><td>Mastery ID, Current mastery level</td><td>Local character's mastery levels up.</td><td>See <a href="#mastery_level_up-note">notes</a></td><td>148.0</td></tr>
+<tr><td>skill_level_up</td><td>Current level</td><td>Local character levels up a skill.</td><td>See <a href="#skill_level_up-note">notes</a></td><td>148.0</td></tr>
+<tr><td>skill_evolve</td><td>Current level</td><td>Local character evolves a skill.</td><td>See <a href="#skill_evolve-note">notes</a></td><td>148.0</td></tr>
+</tbody>
+</table>
+<h4><a class="anchor" aria-hidden="true" id="level_up-note"></a><a href="#level_up-note" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><em>level_up</em> note</h4>
+<p>Data Example:</p>
+<pre><code class="hljs css language-json">{<span class="hljs-attr">"event"</span>:<span class="hljs-string">"level_up"</span>,<span class="hljs-attr">"data"</span>: <span class="hljs-number">15</span>}
+</code></pre>
+<h4><a class="anchor" aria-hidden="true" id="mastery_level_up-note"></a><a href="#mastery_level_up-note" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><em>mastery_level_up</em> note</h4>
+<p>Data Example:</p>
+<pre><code class="hljs css language-json">{<span class="hljs-attr">"event"</span>:<span class="hljs-string">"mastery_level_up"</span>,<span class="hljs-attr">"data"</span>: {<span class="hljs-attr">"mastery_type"</span> : <span class="hljs-number">15</span>, <span class="hljs-attr">"level"</span> : <span class="hljs-number">15</span>}}
+</code></pre>
+<p>See <a href="#mastery_code-note">mastery_code</a> for more info.</p>
+<h4><a class="anchor" aria-hidden="true" id="skill_level_up-note"></a><a href="#skill_level_up-note" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><em>skill_level_up</em> note</h4>
+<p>Data Example:</p>
+<pre><code class="hljs css language-json">{<span class="hljs-attr">"event"</span>:<span class="hljs-string">"skill_level_up"</span>,<span class="hljs-attr">"data"</span>: {<span class="hljs-attr">"skill_group"</span> : <span class="hljs-number">112400</span>, <span class="hljs-attr">"level"</span> : <span class="hljs-number">5</span>}}
+</code></pre>
+<p>See <a href="#skill_group-note">skill_group</a> for more info.</p>
+<h4><a class="anchor" aria-hidden="true" id="skill_evolve-note"></a><a href="#skill_evolve-note" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><em>skill_evolve</em> note</h4>
+<p>Data Example:</p>
+<pre><code class="hljs css language-json">{<span class="hljs-attr">"event"</span>:<span class="hljs-string">"skill_evolve"</span>,<span class="hljs-attr">"data"</span>: {<span class="hljs-attr">"skill_group"</span> : <span class="hljs-number">112400</span>, <span class="hljs-attr">"evolve"</span> : <span class="hljs-number">2</span>}}
+</code></pre>
+<p>See <a href="#skill_group-note">skill_group</a> for more info.</p>
+<h2><a class="anchor" aria-hidden="true" id="routes"></a><a href="#routes" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>routes</code></h2>
+<h3><a class="anchor" aria-hidden="true" id="events-10"></a><a href="#events-10" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Events</h3>
+<table>
+<thead>
+<tr><th>Event</th><th>Event Data</th><th>Fired When</th><th>Notes</th><th>Since GEP Ver.</th></tr>
+</thead>
+<tbody>
+<tr><td>add_to_route</td><td>Item code</td><td>Local player adds an item to plan.</td><td>See <a href="#add_to_route-note">notes</a></td><td>148.0</td></tr>
+<tr><td>delete_route</td><td>Item code</td><td>Local player removes an item from plan.</td><td>See <a href="#delete_route-note">notes</a></td><td>148.0</td></tr>
+<tr><td>change_route</td><td>Target items, Target regions</td><td>Local player changes to another saved plan.</td><td>See <a href="#change_route-note">notes</a></td><td>148.0</td></tr>
+</tbody>
+</table>
+<h4><a class="anchor" aria-hidden="true" id="add_to_route-note"></a><a href="#add_to_route-note" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><em>add_to_route</em> note</h4>
+<p>Data Example:</p>
+<pre><code class="hljs css language-json">{<span class="hljs-attr">"event"</span>:<span class="hljs-string">"add_to_route"</span>,<span class="hljs-attr">"data"</span>: <span class="hljs-number">125524</span>}
+</code></pre>
+<p>See <a href="#item_code-note">item_code</a> for more info.</p>
+<h4><a class="anchor" aria-hidden="true" id="delete_route-note"></a><a href="#delete_route-note" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><em>delete_route</em> note</h4>
+<p>Data Example:</p>
+<pre><code class="hljs css language-json">{<span class="hljs-attr">"event"</span>:<span class="hljs-string">"delete_route"</span>,<span class="hljs-attr">"data"</span>: <span class="hljs-number">125524</span>}
+</code></pre>
+<p>See <a href="#item_code-note">item_code</a> for more info.</p>
+<h4><a class="anchor" aria-hidden="true" id="change_route-note"></a><a href="#change_route-note" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><em>change_route</em> note</h4>
+<p>Data Example:</p>
+<pre><code class="hljs css language-json">{<span class="hljs-attr">"event"</span>:<span class="hljs-string">"change_route"</span>,<span class="hljs-attr">"data"</span>: {<span class="hljs-attr">"target_items"</span> : [<span class="hljs-number">112400</span>, <span class="hljs-number">112402</span>], <span class="hljs-attr">"target_areas"</span> : [<span class="hljs-number">1</span>, <span class="hljs-number">4</span>, <span class="hljs-number">2</span>]}}
+</code></pre>
+<p>See <a href="#select_route-note">notes</a> for more info.</p>
+<h2><a class="anchor" aria-hidden="true" id="equipments"></a><a href="#equipments" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>equipments</code></h2>
+<h3><a class="anchor" aria-hidden="true" id="events-11"></a><a href="#events-11" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Events</h3>
+<table>
+<thead>
+<tr><th>Event</th><th>Event Data</th><th>Fired When</th><th>Notes</th><th>Since GEP Ver.</th></tr>
+</thead>
+<tbody>
+<tr><td>equip_item</td><td>Item code</td><td>Local player adds an item to plan.</td><td>See <a href="#equip_item-note">notes</a></td><td>148.0</td></tr>
+<tr><td>unequip_item</td><td>Item code</td><td>Local player removes an item from plan.</td><td>See <a href="#unequip_item-note">notes</a></td><td>148.0</td></tr>
+</tbody>
+</table>
+<h4><a class="anchor" aria-hidden="true" id="equip_item-note"></a><a href="#equip_item-note" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><em>equip_item</em> note</h4>
+<p>Data Example:</p>
+<pre><code class="hljs css language-json">{<span class="hljs-attr">"event"</span>:<span class="hljs-string">"equip_item"</span>,<span class="hljs-attr">"data"</span>: <span class="hljs-number">122424</span>}
+</code></pre>
+<p>See <a href="#item_code-note">item_code</a> for more info.</p>
+<h4><a class="anchor" aria-hidden="true" id="unequip_item-note"></a><a href="#unequip_item-note" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><em>unequip_item</em> note</h4>
+<p>Data Example:</p>
+<pre><code class="hljs css language-json">{<span class="hljs-attr">"event"</span>:<span class="hljs-string">"unequip_item"</span>,<span class="hljs-attr">"data"</span>: <span class="hljs-number">122424</span>}
+</code></pre>
+<p>See <a href="#item_code-note">item_code</a> for more info.</p>
+<h2><a class="anchor" aria-hidden="true" id="restriction_timers"></a><a href="#restriction_timers" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>restriction_timers</code></h2>
+<h3><a class="anchor" aria-hidden="true" id="events-12"></a><a href="#events-12" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Events</h3>
+<table>
+<thead>
+<tr><th>Event</th><th>Event Data</th><th>Fired When</th><th>Notes</th><th>Since GEP Ver.</th></tr>
+</thead>
+<tbody>
+<tr><td>restriction_timer</td><td>Time left</td><td>Restriction timer reduces, increases</td><td>See <a href="#restriction_timer-note">notes</a></td><td>148.0</td></tr>
+</tbody>
+</table>
+<h4><a class="anchor" aria-hidden="true" id="restriction_timer-note"></a><a href="#restriction_timer-note" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><em>restriction_timer</em> note</h4>
+<p>Data Example:</p>
+<pre><code class="hljs css language-json">{<span class="hljs-attr">"event"</span>:<span class="hljs-string">"restriction_timer"</span>,<span class="hljs-attr">"data"</span>: <span class="hljs-number">15.4</span>f}
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="match_ends"></a><a href="#match_ends" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>match_ends</code></h2>
+<h3><a class="anchor" aria-hidden="true" id="events-13"></a><a href="#events-13" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Events</h3>
+<table>
+<thead>
+<tr><th>Event</th><th>Event Data</th><th>Fired When</th><th>Notes</th><th>Since GEP Ver.</th></tr>
+</thead>
+<tbody>
+<tr><td>match_end</td><td>None</td><td>Match ends.</td><td>See <a href="#match_end-note">notes</a></td><td>148.0</td></tr>
+</tbody>
+</table>
+<h4><a class="anchor" aria-hidden="true" id="match_end-note"></a><a href="#match_end-note" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><em>match_end</em> note</h4>
+<p>Data Example:</p>
+<pre><code class="hljs css language-json">{<span class="hljs-attr">"event"</span>:<span class="hljs-string">"match_end"</span>,<span class="hljs-attr">"data"</span>:<span class="hljs-literal">null</span>}
+</code></pre>
+<h4><a class="anchor" aria-hidden="true" id="character_code-note"></a><a href="#character_code-note" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><em>character_code</em> note</h4>
+<p>Localized text can also be searched using the key &quot;Character/Name/{character_code}&quot; in the ER L10N file. (Available via ER Open API.)</p>
 <h4><a class="anchor" aria-hidden="true" id="area_code-note"></a><a href="#area_code-note" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><em>area_code</em> note</h4>
 <p>Area codes are represented as following. (Note that changes can occur, and this should be double checked via ER Open API.)<br>
 Localized text can also be searched using the key &quot;Area/Name/{area_code}&quot; in the ER L10N file. (Available via ER Open API.)</p>
@@ -110,65 +595,76 @@ Localized text can also be searched using the key &quot;Area/Name/{area_code}&qu
 <li>15 : School</li>
 <li>16 : Research Center</li>
 </ul>
-<h2><a class="anchor" aria-hidden="true" id="match_info"></a><a href="#match_info" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>match_info</code></h2>
-<h3><a class="anchor" aria-hidden="true" id="events"></a><a href="#events" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Events</h3>
-<table>
-<thead>
-<tr><th>Event</th><th>Event Data</th><th>Fired When</th><th>Notes</th><th>Since GEP Ver.</th></tr>
-</thead>
-<tbody>
-<tr><td>matching_start</td><td>game_mode, matching_team_mode</td><td>Matching started.</td><td>See <a href="#matching_start-note">notes</a></td><td>148.0</td></tr>
-<tr><td>matching_standby</td><td>null</td><td>Accept matching inquiry started</td><td>See <a href="#matching_standby-note">notes</a></td><td>148.0</td></tr>
-<tr><td>matching_complete</td><td>null</td><td>Match starts.</td><td>See <a href="#matching_complete-note">notes</a></td><td>148.0</td></tr>
-</tbody>
-</table>
-<p>select_character| Character code  | Local player changes character in character selection. | See <a href="#select_character-note">notes</a> | 148.0  |
-select_weapon| Weapon code  | Local player changes weapon in character selection. | See <a href="#select_weapon-note">notes</a> | 148.0  |
-team_character| Ally, Character code  | Ally player changes character in character selection. | See <a href="#team_character-note">notes</a> | 148.0  |
-team_weapon| Weapon code  | Ally player changes weapon in character selection. | See <a href="#team_weapon-note">notes</a> | 148.0  |</p>
-<p>select_route| target_items, target_regions  | Local player selects route in character selection. | See <a href="#select_route-note">notes</a> | 148.0  |
-select_starting_point| Area code  | Local player selects starting point in character selection. | See <a href="#select_starting_point-note">notes</a> | 148.0  |
-ally_starting_point| Ally, Area code  | Ally player selects starting point in character selection. | See <a href="#ally_starting_point-note">notes</a> | 148.0  |</p>
-<p>knock_down| Victim name, Current kill count  | Local player kills, or knocks down an enemy. | See <a href="#knock_down-note">notes</a> | 148.0  |
-downed| Victim name, Killer name, Time left  | Ally player is downed. | See <a href="#downed-note">notes</a> | 148.0  |
-down_count| Victim name, Time left  | Downed ally player has taken damag. | See <a href="#down_count-note">notes</a> | 148.0  |
-get_up| Victim name, Healer name  | Downed ally player has recovered. | See <a href="#down_count-note">notes</a> | 148.0  |</p>
-<p>kill| Killer name, Victim name, Killer kill count  | Player kills another player. (Announcement) | See <a href="#down_count-note">notes</a> | 148.0  |
-hunt| Monster name, Level  | Local player hunts a monster. | See <a href="#down_count-note">notes</a> | 148.0  |
-death| Victim name, Killer type  | Player is dead. (Announcement) | See <a href="#down_count-note">notes</a> | 148.0  |
-resurrect| Player name  | Player is resurrected. (Announcement) | See <a href="#down_count-note">notes</a> | 148.0  |</p>
-<p>wickeline_prep| Boolean | 1 minute before Wickeline is about to spawn.(Announcement) | See <a href="#down_count-note">notes</a> | 148.0  |
-wickeline_appear| Boolean | Wickeline hass spawned.(System chat) | See <a href="#down_count-note">notes</a> | 148.0  |
-wickeline_move| Area code | Wickeline has moved to another point.(System chat) | See <a href="#down_count-note">notes</a> | 148.0  |
-wickeline_dead| Killer name | Player kills Wickeline. (System chat) | See <a href="#down_count-note">notes</a> | 148.0  |
-android_prep | Area code, Android name | 1 minute before Android Alpha/Omega is about to spawn.(Announcement) | See <a href="#down_count-note">notes</a> | 148.0  |
-android_appear| Android name | Android Alpha/Omega has spawned.(Announcement) | See <a href="#down_count-note">notes</a> | 148.0  |
-android_dead| Boolean | Android Alpha/Omega is dead.(Announcement) | See <a href="#down_count-note">notes</a> | 148.0  |
-meteorite_prep | Area code | 1 minute before Android Alpha/Omega is about to spawn.(Announcement) | See <a href="#down_count-note">notes</a> | 148.0  |
-meteorite_appear| Boolean | Android Alpha/Omega has spawned.(Announcement) | See <a href="#down_count-note">notes</a> | 148.0  |
-android_prep | Area code, Android name | 1 minute before Android Alpha/Omega is about to spawn.(Announcement) | See <a href="#down_count-note">notes</a> | 148.0  |
-android_appear| Boolean | Android Alpha/Omega has spawned.(Announcement) | See <a href="#down_count-note">notes</a> | 148.0  |</p>
-<p>change_to_day| Date | Atmosphere changes from night to day. | See <a href="#down_count-note">notes</a> | 148.0  |
-change_to_night| Date | Atmosphere changes from day to night. | See <a href="#down_count-note">notes</a> | 148.0  |
-new_restriction| New area codes, Old area codes | New restricted areas are set. | See <a href="#down_count-note">notes</a> | 148.0  |
-restriction_accel| Boolean | Game is accelerated due to low survivor count.| See <a href="#down_count-note">notes</a> | 148.0  |
-final_restriction| Restriction step | Restriction steps in Duo/Squad game mode. | See <a href="#down_count-note">notes</a> | 148.0  |
-competitive_restriction| Restriction step | Restriction steps in Solo game mode. | See <a href="#down_count-note">notes</a> | 148.0  |</p>
-<p>move_region| Area code | Local player moves to another region. | See <a href="#down_count-note">notes</a> | 148.0  |</p>
-<p>scoreboard| Boolean | Local player opens/closes scoreboard. | See <a href="#down_count-note">notes</a> | 148.0  |</p>
-<p>deal_damage| Victim, Boolean, Damage | Local player deals damage to another player. | See <a href="#down_count-note">notes</a> | 148.0  |
-take_damage| Bruiser, Boolean, Damage, Current Health | Local player takes damage from another player. | See <a href="#down_count-note">notes</a> | 148.0  |</p>
-<p>level_up | Current level | Atmosphere changes from night to day. | See <a href="#down_count-note">notes</a> | 148.0  |</p>
-<h4><a class="anchor" aria-hidden="true" id="match_start-note"></a><a href="#match_start-note" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><em>match_start</em> note</h4>
-<p>Data Example:</p>
-<pre><code class="hljs css language-json">{<span class="hljs-attr">"event"</span>:<span class="hljs-string">"match_start"</span>,<span class="hljs-attr">"data"</span>:<span class="hljs-literal">null</span>}
-</code></pre>
-<h4><a class="anchor" aria-hidden="true" id="match_end-note"></a><a href="#match_end-note" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><em>match_end</em> note</h4>
-<p>Please note that <code>match_end</code> does not work on custom matches nor training.</p>
-<p>Data Example:</p>
-<pre><code class="hljs css language-json">{<span class="hljs-attr">"event"</span>:<span class="hljs-string">"match_end"</span>,<span class="hljs-attr">"data"</span>:<span class="hljs-literal">null</span>}
-</code></pre>
-</span></div></article></div><div class="docLastUpdate"><em>Last updated on 8/23/2021 by HH-Yoo</em></div><div class="docs-prevnext"></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#sample-apps">Sample Apps</a></li><li><a href="#available-features">Available Features</a></li><li><a href="#game-event-status">Game event status</a></li><li><a href="#gep_internal"><code>gep_internal</code></a><ul class="toc-headings"><li><a href="#info-updates">Info Updates</a></li></ul></li><li><a href="#me"><code>me</code></a><ul class="toc-headings"><li><a href="#info-updates-1">Info Updates</a></li></ul></li><li><a href="#match_info"><code>match_info</code></a><ul class="toc-headings"><li><a href="#events">Events</a></li></ul></li></ul></nav></div><footer class="site-footer"><div class="container"><ul><li>Legal</li><li><a href="/docs/topics/legal-overview">Terms overview</a></li><li><a href="/docs/topics/legal-developers-terms">Developer&#x27;s terms</a></li><li><a href="/docs/topics/legal-app-terms">App terms</a></li><li><a href="http://www.overwolf.com/legal/" target="_blank">Overwolf terms</a></li><li><a href="http://www.overwolf.com/legal/#Privacy-policy" target="_blank">Overwolf Privacy policy</a></li></ul><ul><li>Support</li><li><a href=" https://discuss.overwolf.com/" target="_blank">Questions and Answers</a></li><li><a href=" https://discord.gg/7256qS2" target="_blank">Discord</a></li><li><a href="/docs/support/contact-us#join-our-slack">Slack</a></li><li><a href="https://www.facebook.com/OverwolfDevs" target="_blank">Facebook</a></li><li><a href="https://twitter.com/OverwolfDevs" target="_blank">Twitter</a></li></ul><ul><li>Documentation</li><li><a href="/docs/api/changelog">Changelog</a></li><li><a href="/docs/api/overwolf-api-overview">API</a></li><li><a href="/docs/start/app-creation-process">App Creation Process</a></li><li><a href="/docs/topics/best-practices-overview">Best Practices</a></li><li><a href="/docs/status/all">Game Events status</a></li></ul><ul><li>Information</li><li><a href="http://www.overwolf.com/careers/">Careers</a></li><li><a href="https://play.overwolf.com/fund/" target="_blank">Fund</a></li><li><a href="https://medium.com/overwolf" target="_blank">Developers Blog</a></li><li><a href="https://www.overwolf.com/appstore" target="_blank">Overwolf Appstore</a></li><li><a href="https://brands.overwolf.com/" target="_blank">Advertise on Overwolf</a></li></ul></div></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+<h4><a class="anchor" aria-hidden="true" id="mastery_code-note"></a><a href="#mastery_code-note" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><em>mastery_code</em> note</h4>
+<p>Mastery codes are represented as following.<br>
+Localized text can also be searched using the key &quot;MasteryType/Name/{mastery_type}&quot; in the ER L10N file. (Available via ER Open API.)</p>
+<ul>
+<li>0 : None</li>
+<li>1 : Glove</li>
+<li>2 : Tonfa</li>
+<li>3 : Bat</li>
+<li>4 : Whip</li>
+<li>5 : HighAngleFire</li>
+<li>6 : DirectFire</li>
+<li>7 : Bow</li>
+<li>8 : CrossBow</li>
+<li>9 : Pistol</li>
+<li>10 : AssaultRifle</li>
+<li>11 : SniperRifle</li>
+<li>13 : Hammer</li>
+<li>14 : Axe</li>
+<li>15 : OneHandSword</li>
+<li>16 : TwoHandSword</li>
+<li>17 : Polearm</li>
+<li>18 : DualSword</li>
+<li>19 : Spear</li>
+<li>20 : Nunchaku</li>
+<li>21 : Rapier</li>
+<li>22 : Guitar</li>
+<li>23 : Camera</li>
+<li>101 : Trap</li>
+<li>102 : Craft</li>
+<li>103 : Search</li>
+<li>104 : Move</li>
+<li>201 : Health</li>
+<li>202 : Defense</li>
+<li>203 : Meditation</li>
+<li>204 : Hunt</li>
+</ul>
+<h4><a class="anchor" aria-hidden="true" id="weapon_code-note"></a><a href="#weapon_code-note" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><em>weapon_code</em> note</h4>
+<p>Weapon codes are represented as following. (Mastery types share some common values.)<br>
+Localized text can also be searched using the key &quot;WeaponType/Name/{weapon_type}&quot; in the ER L10N file. (Available via ER Open API.)</p>
+<ul>
+<li>0 : None</li>
+<li>1 : Glove</li>
+<li>2 : Tonfa</li>
+<li>3 : Bat</li>
+<li>4 : Whip</li>
+<li>5 : HighAngleFire</li>
+<li>6 : DirectFire</li>
+<li>7 : Bow</li>
+<li>8 : CrossBow</li>
+<li>9 : Pistol</li>
+<li>10 : AssaultRifle</li>
+<li>11 : SniperRifle</li>
+<li>13 : Hammer</li>
+<li>14 : Axe</li>
+<li>15 : OneHandSword</li>
+<li>16 : TwoHandSword</li>
+<li>17 : Polearm</li>
+<li>18 : DualSword</li>
+<li>19 : Spear</li>
+<li>20 : Nunchaku</li>
+<li>21 : Rapier</li>
+<li>22 : Guitar</li>
+<li>23 : Camera</li>
+</ul>
+<h4><a class="anchor" aria-hidden="true" id="skill_group-note"></a><a href="#skill_group-note" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><em>skill_group</em> note</h4>
+<p>Skillgroup codes are distinct group codes.<br>
+Localized text can also be searched using the key &quot;Skill/Group/Name/{skill_group}&quot; in the ER L10N file. (Available via ER Open API.)</p>
+<h4><a class="anchor" aria-hidden="true" id="item_code-note"></a><a href="#item_code-note" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><em>item_code</em> note</h4>
+<p>Localized text can also be searched using the key &quot;Item/Name/{item_code}&quot; in the ER L10N file. (Available via ER Open API.)</p>
+</span></div></article></div><div class="docLastUpdate"><em>Last updated on 8/23/2021 by HH-Yoo</em></div><div class="docs-prevnext"></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#sample-apps">Sample Apps</a></li><li><a href="#available-features">Available Features</a></li><li><a href="#game-event-status">Game event status</a></li><li><a href="#gep_internal"><code>gep_internal</code></a><ul class="toc-headings"><li><a href="#info-updates">Info Updates</a></li></ul></li><li><a href="#me"><code>me</code></a><ul class="toc-headings"><li><a href="#info-updates-1">Info Updates</a></li></ul></li><li><a href="#match_info"><code>match_info</code></a><ul class="toc-headings"><li><a href="#info-updates-2">Info Updates</a></li></ul></li><li><a href="#match_info-1"><code>match_info</code></a><ul class="toc-headings"><li><a href="#events">Events</a></li></ul></li><li><a href="#character_selection"><code>character_selection</code></a><ul class="toc-headings"><li><a href="#events-1">Events</a></li></ul></li><li><a href="#kills"><code>kills</code></a><ul class="toc-headings"><li><a href="#events-2">Events</a></li></ul></li><li><a href="#announces"><code>announces</code></a><ul class="toc-headings"><li><a href="#events-3">Events</a></li></ul></li><li><a href="#game_objects"><code>game_objects</code></a><ul class="toc-headings"><li><a href="#events-4">Events</a></li></ul></li><li><a href="#day_change"><code>day_change</code></a><ul class="toc-headings"><li><a href="#events-5">Events</a></li></ul></li><li><a href="#move_regions"><code>move_regions</code></a><ul class="toc-headings"><li><a href="#events-6">Events</a></li></ul></li><li><a href="#scoreboards"><code>scoreboards</code></a><ul class="toc-headings"><li><a href="#events-7">Events</a></li></ul></li><li><a href="#damages"><code>damages</code></a><ul class="toc-headings"><li><a href="#events-8">Events</a></li></ul></li><li><a href="#level_ups"><code>level_ups</code></a><ul class="toc-headings"><li><a href="#events-9">Events</a></li></ul></li><li><a href="#routes"><code>routes</code></a><ul class="toc-headings"><li><a href="#events-10">Events</a></li></ul></li><li><a href="#equipments"><code>equipments</code></a><ul class="toc-headings"><li><a href="#events-11">Events</a></li></ul></li><li><a href="#restriction_timers"><code>restriction_timers</code></a><ul class="toc-headings"><li><a href="#events-12">Events</a></li></ul></li><li><a href="#match_ends"><code>match_ends</code></a><ul class="toc-headings"><li><a href="#events-13">Events</a></li></ul></li></ul></nav></div><footer class="site-footer"><div class="container"><ul><li>Legal</li><li><a href="/docs/topics/legal-overview">Terms overview</a></li><li><a href="/docs/topics/legal-developers-terms">Developer&#x27;s terms</a></li><li><a href="/docs/topics/legal-app-terms">App terms</a></li><li><a href="http://www.overwolf.com/legal/" target="_blank">Overwolf terms</a></li><li><a href="http://www.overwolf.com/legal/#Privacy-policy" target="_blank">Overwolf Privacy policy</a></li></ul><ul><li>Support</li><li><a href=" https://discuss.overwolf.com/" target="_blank">Questions and Answers</a></li><li><a href=" https://discord.gg/7256qS2" target="_blank">Discord</a></li><li><a href="/docs/support/contact-us#join-our-slack">Slack</a></li><li><a href="https://www.facebook.com/OverwolfDevs" target="_blank">Facebook</a></li><li><a href="https://twitter.com/OverwolfDevs" target="_blank">Twitter</a></li></ul><ul><li>Documentation</li><li><a href="/docs/api/changelog">Changelog</a></li><li><a href="/docs/api/overwolf-api-overview">API</a></li><li><a href="/docs/start/app-creation-process">App Creation Process</a></li><li><a href="/docs/topics/best-practices-overview">Best Practices</a></li><li><a href="/docs/status/all">Game Events status</a></li></ul><ul><li>Information</li><li><a href="http://www.overwolf.com/careers/">Careers</a></li><li><a href="https://play.overwolf.com/fund/" target="_blank">Fund</a></li><li><a href="https://medium.com/overwolf" target="_blank">Developers Blog</a></li><li><a href="https://www.overwolf.com/appstore" target="_blank">Overwolf Appstore</a></li><li><a href="https://brands.overwolf.com/" target="_blank">Advertise on Overwolf</a></li></ul></div></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
                 document.addEventListener('keyup', function(e) {
                   if (e.target !== document.body) {
                     return;
