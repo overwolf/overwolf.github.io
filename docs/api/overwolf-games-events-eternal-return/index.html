@@ -88,7 +88,8 @@ eg) In solo mode, both ally1 and ally2 will return 0.</p>
 <p>Data Example:</p>
 <pre><code class="hljs css language-json">{<span class="hljs-attr">"info"</span>:{<span class="hljs-attr">"match_info"</span> : {<span class="hljs-attr">"roster"</span> : [{<span class="hljs-attr">"player_name"</span> : <span class="hljs-string">"TestSubject1"</span>, <span class="hljs-attr">"is_ally"</span> : <span class="hljs-literal">false</span>, <span class="hljs-attr">"player_character"</span> : <span class="hljs-number">12</span>, <span class="hljs-attr">"player_skin"</span> : <span class="hljs-number">1</span>}]}},<span class="hljs-attr">"feature"</span>:<span class="hljs-string">"me"</span>}
 </code></pre>
-<p>is_ally will specify whether the subject is an ally or not.<br>
+<p>&quot;roster&quot; includes information of all 18 players in the game. <br>
+&quot;is_ally&quot; will specify whether the subject is an ally or not.<br>
 This info will contain the local player itself.</p>
 <h4><a class="anchor" aria-hidden="true" id="match-note"></a><a href="#match-note" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><em>match</em> note</h4>
 <p>Data Example:</p>
@@ -100,7 +101,7 @@ This info will contain the local player itself.</p>
 </code></pre>
 <p>The enemy array will be an array containing 16 integers. Each index number + 1 will represent the area code of <a href="#area_code-note">area_code</a>.<br>
 eg) index 0 of array represents the number of players selecting area code 1 as their starting point.</p>
-<h2><a class="anchor" aria-hidden="true" id="match_info-1"></a><a href="#match_info-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>match_info</code></h2>
+<h2><a class="anchor" aria-hidden="true" id="matching"></a><a href="#matching" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>matching</code></h2>
 <h3><a class="anchor" aria-hidden="true" id="events"></a><a href="#events" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Events</h3>
 <table>
 <thead>
@@ -273,14 +274,14 @@ This will be triggered via announcements.</p>
 </thead>
 <tbody>
 <tr><td>wickeline_prep</td><td>Boolean</td><td>1 minute before Wickeline is about to spawn.(Announcement)</td><td>See <a href="#wickeline_prep-note">notes</a></td><td>148.0</td></tr>
-<tr><td>wickeline_appear</td><td>Boolean</td><td>Wickeline hass spawned.(System chat)</td><td>See <a href="#wickeline_appear-note">notes</a></td><td>148.0</td></tr>
-<tr><td>wickeline_move</td><td>Area code</td><td>Wickeline has moved to another point.(System chat)</td><td>See <a href="#wickeline_move-note">notes</a></td><td>148.0</td></tr>
+<tr><td>wickeline_appear</td><td>Boolean</td><td>Wickeline has spawned.(System chat)</td><td>See <a href="#wickeline_appear-note">notes</a></td><td>148.0</td></tr>
+<tr><td>wickeline_move</td><td>Area code</td><td>Wickeline has moved to another area.(System chat)</td><td>See <a href="#wickeline_move-note">notes</a></td><td>148.0</td></tr>
 <tr><td>wickeline_dead</td><td>Killer name</td><td>Player kills Wickeline. (System chat)</td><td>See <a href="#wickeline_dead-note">notes</a></td><td>148.0</td></tr>
 <tr><td>android_prep</td><td>Area code, Android name</td><td>1 minute before Android Alpha/Omega is about to spawn.(Announcement)</td><td>See <a href="#android_prep-note">notes</a></td><td>148.0</td></tr>
 <tr><td>android_appear</td><td>Android name</td><td>Android Alpha/Omega has spawned.(Announcement)</td><td>See <a href="#android_appear-note">notes</a></td><td>148.0</td></tr>
 <tr><td>android_dead</td><td>Boolean</td><td>Android Alpha/Omega is dead.(Announcement)</td><td>See <a href="#android_dead-note">notes</a></td><td>148.0</td></tr>
-<tr><td>meteorite_prep</td><td>Area code</td><td>1 minute before Android Alpha/Omega is about to spawn.(Announcement)</td><td>See <a href="#meteorite_prep-note">notes</a></td><td>148.0</td></tr>
-<tr><td>meteorite_appear</td><td>Boolean</td><td>Android Alpha/Omega has spawned.(Announcement)</td><td>See <a href="#meteorite_appear-note">notes</a></td><td>148.0</td></tr>
+<tr><td>meteorite_prep</td><td>Area code</td><td>1 minute before meteorite is about to spawn.(Announcement)</td><td>See <a href="#meteorite_prep-note">notes</a></td><td>148.0</td></tr>
+<tr><td>meteorite_appear</td><td>Boolean</td><td>Meteorite has spawned.(Announcement)</td><td>See <a href="#meteorite_appear-note">notes</a></td><td>148.0</td></tr>
 <tr><td>tree_of_life_prep</td><td>Area code</td><td>1 minute before tree of life is about to spawn.(Announcement)</td><td>See <a href="#tree_of_life_prep-note">notes</a></td><td>148.0</td></tr>
 <tr><td>tree_of_life_appear</td><td>Boolean</td><td>Tree of life has spawned.(Announcement)</td><td>See <a href="#tree_of_life_appear-note">notes</a></td><td>148.0</td></tr>
 <tr><td>android_prep</td><td>Area code, Android name</td><td>1 minute before Android Alpha/Omega is about to spawn.(Announcement)</td><td>See <a href="#android_prep-note">notes</a></td><td>148.0</td></tr>
@@ -291,6 +292,7 @@ This will be triggered via announcements.</p>
 <p>Data Example:</p>
 <pre><code class="hljs css language-json">{<span class="hljs-attr">"event"</span>:<span class="hljs-string">"wickeline_prep"</span>,<span class="hljs-attr">"data"</span>:<span class="hljs-literal">true</span>}
 </code></pre>
+<p>All of the events in &quot;game_objects&quot; feature are triggered by announcements and system chats.</p>
 <h4><a class="anchor" aria-hidden="true" id="wickeline_appear-note"></a><a href="#wickeline_appear-note" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><em>wickeline_appear</em> note</h4>
 <p>Data Example:</p>
 <pre><code class="hljs css language-json">{<span class="hljs-attr">"event"</span>:<span class="hljs-string">"wickeline_appear"</span>,<span class="hljs-attr">"data"</span>:<span class="hljs-literal">true</span>}
@@ -299,7 +301,7 @@ This will be triggered via announcements.</p>
 <p>Data Example:</p>
 <pre><code class="hljs css language-json">{<span class="hljs-attr">"event"</span>:<span class="hljs-string">"wickeline_move"</span>,<span class="hljs-attr">"data"</span>:<span class="hljs-number">14</span>}
 </code></pre>
-<p>Area code of wickeline's new location.
+<p>Area code of wickeline's new location.<br>
 See <a href="#area_code-note">area_code</a> for more info.</p>
 <h4><a class="anchor" aria-hidden="true" id="wickeline_dead-note"></a><a href="#wickeline_dead-note" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><em>wickeline_dead</em> note</h4>
 <p>Data Example:</p>
@@ -321,8 +323,8 @@ See <a href="#area_code-note">area_code</a> for more info. <br></p>
 <p>Data Example:</p>
 <pre><code class="hljs css language-json">{<span class="hljs-attr">"event"</span>:<span class="hljs-string">"android_prep"</span>,<span class="hljs-attr">"data"</span>: <span class="hljs-string">"alpha"</span>}
 </code></pre>
-<p>Note that android_appear will not specify the spawn area code. <br>
-Possible android value :</p>
+<p>Note that android_appear will not specify the spawn area code. <br></p>
+<p>Possible android value :</p>
 <ul>
 <li>alpha</li>
 <li>omega</li>
@@ -336,6 +338,26 @@ Possible android value :</p>
 <li>alpha</li>
 <li>omega</li>
 </ul>
+<h4><a class="anchor" aria-hidden="true" id="meteorite_prep-note"></a><a href="#meteorite_prep-note" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><em>meteorite_prep</em> note</h4>
+<p>Data Example:</p>
+<pre><code class="hljs css language-json">{<span class="hljs-attr">"event"</span>:<span class="hljs-string">"meteorite_prep"</span>,<span class="hljs-attr">"data"</span>: <span class="hljs-number">15</span>}
+</code></pre>
+<p>Area code of meteorite's spawn location. <br>
+See <a href="#area_code-note">area_code</a> for more info.</p>
+<h4><a class="anchor" aria-hidden="true" id="meteorite_appear-note"></a><a href="#meteorite_appear-note" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><em>meteorite_appear</em> note</h4>
+<p>Data Example:</p>
+<pre><code class="hljs css language-json">{<span class="hljs-attr">"event"</span>:<span class="hljs-string">"meteorite_prep"</span>,<span class="hljs-attr">"data"</span>: <span class="hljs-literal">true</span>}
+</code></pre>
+<h4><a class="anchor" aria-hidden="true" id="tree_of_life_prep-note"></a><a href="#tree_of_life_prep-note" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><em>tree_of_life_prep</em> note</h4>
+<p>Data Example:</p>
+<pre><code class="hljs css language-json">{<span class="hljs-attr">"event"</span>:<span class="hljs-string">"tree_of_life_prep"</span>,<span class="hljs-attr">"data"</span>: <span class="hljs-number">15</span>}
+</code></pre>
+<p>Area code of tree of life's spawn location. <br>
+See <a href="#area_code-note">area_code</a> for more info.</p>
+<h4><a class="anchor" aria-hidden="true" id="tree_of_life_appear-note"></a><a href="#tree_of_life_appear-note" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><em>tree_of_life_appear</em> note</h4>
+<p>Data Example:</p>
+<pre><code class="hljs css language-json">{<span class="hljs-attr">"event"</span>:<span class="hljs-string">"tree_of_life_prep"</span>,<span class="hljs-attr">"data"</span>: <span class="hljs-literal">true</span>}
+</code></pre>
 <h2><a class="anchor" aria-hidden="true" id="day_change"></a><a href="#day_change" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>day_change</code></h2>
 <h3><a class="anchor" aria-hidden="true" id="events-5"></a><a href="#events-5" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Events</h3>
 <table>
@@ -366,7 +388,7 @@ Possible android value :</p>
 </code></pre>
 <p>Returns the newly broadcasted restriction areas.<br>
 The 'current' array will represent currently restricted area codes. <br>
-The 'added' array will represent newly reserved restricted area codes.
+The 'added' array will represent newly reserved restricted area codes. <br>
 See <a href="#area_code-note">area_code</a> for more info.</p>
 <h4><a class="anchor" aria-hidden="true" id="restriction_accel-note"></a><a href="#restriction_accel-note" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><em>restriction_accel</em> note</h4>
 <p>Data Example:</p>
@@ -377,9 +399,9 @@ See <a href="#area_code-note">area_code</a> for more info.</p>
 <p>Data Example:</p>
 <pre><code class="hljs css language-json">{<span class="hljs-attr">"event"</span>:<span class="hljs-string">"final_restriction"</span>,<span class="hljs-attr">"data"</span>: <span class="hljs-number">1</span>}
 </code></pre>
-<p>This event is only called in Duo/Squad matching team mode.
-This event cannot be used to find out the final safe area. Final safe area must be acquired by the &quot;new_restriction&quot; event.
-The final_restriction will be called each step of the announcement.
+<p>This event is only called in Duo/Squad matching team mode. <br>
+This event cannot be used to find out the final safe area. Final safe area must be acquired by the &quot;new_restriction&quot; event. <br>
+The final_restriction will be called each step of the announcement. <br>
 Possible steps</p>
 <ul>
 <li>1 : Final safe area is broadcasted.</li>
@@ -390,9 +412,9 @@ Possible steps</p>
 <p>Data Example:</p>
 <pre><code class="hljs css language-json">{<span class="hljs-attr">"event"</span>:<span class="hljs-string">"competitive_restriction"</span>,<span class="hljs-attr">"data"</span>: <span class="hljs-number">1</span>}
 </code></pre>
-<p>This event is only called in Solo matching team mode.
-This event cannot be used to find out the final safe area. Final safe area must be acquired by the &quot;new_restriction&quot; event.
-The competitive_restriction will be called each step of the announcement.
+<p>This event is only called in Solo matching team mode. <br>
+This event cannot be used to find out the final safe area. Final safe area must be acquired by the &quot;new_restriction&quot; event.<br>
+The competitive_restriction will be called each step of the announcement.<br>
 Possible steps</p>
 <ul>
 <li>1 : Temporary safe area is set.</li>
@@ -664,7 +686,21 @@ Localized text can also be searched using the key &quot;WeaponType/Name/{weapon_
 Localized text can also be searched using the key &quot;Skill/Group/Name/{skill_group}&quot; in the ER L10N file. (Available via ER Open API.)</p>
 <h4><a class="anchor" aria-hidden="true" id="item_code-note"></a><a href="#item_code-note" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><em>item_code</em> note</h4>
 <p>Localized text can also be searched using the key &quot;Item/Name/{item_code}&quot; in the ER L10N file. (Available via ER Open API.)</p>
-</span></div></article></div><div class="docLastUpdate"><em>Last updated on 8/23/2021 by HH-Yoo</em></div><div class="docs-prevnext"></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#sample-apps">Sample Apps</a></li><li><a href="#available-features">Available Features</a></li><li><a href="#game-event-status">Game event status</a></li><li><a href="#gep_internal"><code>gep_internal</code></a><ul class="toc-headings"><li><a href="#info-updates">Info Updates</a></li></ul></li><li><a href="#me"><code>me</code></a><ul class="toc-headings"><li><a href="#info-updates-1">Info Updates</a></li></ul></li><li><a href="#match_info"><code>match_info</code></a><ul class="toc-headings"><li><a href="#info-updates-2">Info Updates</a></li></ul></li><li><a href="#match_info-1"><code>match_info</code></a><ul class="toc-headings"><li><a href="#events">Events</a></li></ul></li><li><a href="#character_selection"><code>character_selection</code></a><ul class="toc-headings"><li><a href="#events-1">Events</a></li></ul></li><li><a href="#kills"><code>kills</code></a><ul class="toc-headings"><li><a href="#events-2">Events</a></li></ul></li><li><a href="#announces"><code>announces</code></a><ul class="toc-headings"><li><a href="#events-3">Events</a></li></ul></li><li><a href="#game_objects"><code>game_objects</code></a><ul class="toc-headings"><li><a href="#events-4">Events</a></li></ul></li><li><a href="#day_change"><code>day_change</code></a><ul class="toc-headings"><li><a href="#events-5">Events</a></li></ul></li><li><a href="#move_regions"><code>move_regions</code></a><ul class="toc-headings"><li><a href="#events-6">Events</a></li></ul></li><li><a href="#scoreboards"><code>scoreboards</code></a><ul class="toc-headings"><li><a href="#events-7">Events</a></li></ul></li><li><a href="#damages"><code>damages</code></a><ul class="toc-headings"><li><a href="#events-8">Events</a></li></ul></li><li><a href="#level_ups"><code>level_ups</code></a><ul class="toc-headings"><li><a href="#events-9">Events</a></li></ul></li><li><a href="#routes"><code>routes</code></a><ul class="toc-headings"><li><a href="#events-10">Events</a></li></ul></li><li><a href="#equipments"><code>equipments</code></a><ul class="toc-headings"><li><a href="#events-11">Events</a></li></ul></li><li><a href="#restriction_timers"><code>restriction_timers</code></a><ul class="toc-headings"><li><a href="#events-12">Events</a></li></ul></li><li><a href="#match_ends"><code>match_ends</code></a><ul class="toc-headings"><li><a href="#events-13">Events</a></li></ul></li></ul></nav></div><footer class="site-footer"><div class="container"><ul><li>Legal</li><li><a href="/docs/topics/legal-overview">Terms overview</a></li><li><a href="/docs/topics/legal-developers-terms">Developer&#x27;s terms</a></li><li><a href="/docs/topics/legal-app-terms">App terms</a></li><li><a href="http://www.overwolf.com/legal/" target="_blank">Overwolf terms</a></li><li><a href="http://www.overwolf.com/legal/#Privacy-policy" target="_blank">Overwolf Privacy policy</a></li></ul><ul><li>Support</li><li><a href=" https://discuss.overwolf.com/" target="_blank">Questions and Answers</a></li><li><a href=" https://discord.gg/7256qS2" target="_blank">Discord</a></li><li><a href="/docs/support/contact-us#join-our-slack">Slack</a></li><li><a href="https://www.facebook.com/OverwolfDevs" target="_blank">Facebook</a></li><li><a href="https://twitter.com/OverwolfDevs" target="_blank">Twitter</a></li></ul><ul><li>Documentation</li><li><a href="/docs/api/changelog">Changelog</a></li><li><a href="/docs/api/overwolf-api-overview">API</a></li><li><a href="/docs/start/app-creation-process">App Creation Process</a></li><li><a href="/docs/topics/best-practices-overview">Best Practices</a></li><li><a href="/docs/status/all">Game Events status</a></li></ul><ul><li>Information</li><li><a href="http://www.overwolf.com/careers/">Careers</a></li><li><a href="https://play.overwolf.com/fund/" target="_blank">Fund</a></li><li><a href="https://medium.com/overwolf" target="_blank">Developers Blog</a></li><li><a href="https://www.overwolf.com/appstore" target="_blank">Overwolf Appstore</a></li><li><a href="https://brands.overwolf.com/" target="_blank">Advertise on Overwolf</a></li></ul></div></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+<h4><a class="anchor" aria-hidden="true" id="monster-note"></a><a href="#monster-note" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><em>monster</em> note</h4>
+<p>Following are monsters that appear in the game.
+Localized text can also be searched using the key &quot;Monster/Name/{monster_code}&quot; in the ER L10N file. (Available via ER Open API.)</p>
+<ul>
+<li>1 : Chicken</li>
+<li>2 : Bat</li>
+<li>3 : Bear</li>
+<li>4 : Wild Dog</li>
+<li>5 : Wolf</li>
+<li>6 : Bear</li>
+<li>7 : Wickeline</li>
+<li>8 : Alpha</li>
+<li>9 : Omega</li>
+</ul>
+</span></div></article></div><div class="docLastUpdate"><em>Last updated on 8/24/2021 by HH-Yoo</em></div><div class="docs-prevnext"></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#sample-apps">Sample Apps</a></li><li><a href="#available-features">Available Features</a></li><li><a href="#game-event-status">Game event status</a></li><li><a href="#gep_internal"><code>gep_internal</code></a><ul class="toc-headings"><li><a href="#info-updates">Info Updates</a></li></ul></li><li><a href="#me"><code>me</code></a><ul class="toc-headings"><li><a href="#info-updates-1">Info Updates</a></li></ul></li><li><a href="#match_info"><code>match_info</code></a><ul class="toc-headings"><li><a href="#info-updates-2">Info Updates</a></li></ul></li><li><a href="#matching"><code>matching</code></a><ul class="toc-headings"><li><a href="#events">Events</a></li></ul></li><li><a href="#character_selection"><code>character_selection</code></a><ul class="toc-headings"><li><a href="#events-1">Events</a></li></ul></li><li><a href="#kills"><code>kills</code></a><ul class="toc-headings"><li><a href="#events-2">Events</a></li></ul></li><li><a href="#announces"><code>announces</code></a><ul class="toc-headings"><li><a href="#events-3">Events</a></li></ul></li><li><a href="#game_objects"><code>game_objects</code></a><ul class="toc-headings"><li><a href="#events-4">Events</a></li></ul></li><li><a href="#day_change"><code>day_change</code></a><ul class="toc-headings"><li><a href="#events-5">Events</a></li></ul></li><li><a href="#move_regions"><code>move_regions</code></a><ul class="toc-headings"><li><a href="#events-6">Events</a></li></ul></li><li><a href="#scoreboards"><code>scoreboards</code></a><ul class="toc-headings"><li><a href="#events-7">Events</a></li></ul></li><li><a href="#damages"><code>damages</code></a><ul class="toc-headings"><li><a href="#events-8">Events</a></li></ul></li><li><a href="#level_ups"><code>level_ups</code></a><ul class="toc-headings"><li><a href="#events-9">Events</a></li></ul></li><li><a href="#routes"><code>routes</code></a><ul class="toc-headings"><li><a href="#events-10">Events</a></li></ul></li><li><a href="#equipments"><code>equipments</code></a><ul class="toc-headings"><li><a href="#events-11">Events</a></li></ul></li><li><a href="#restriction_timers"><code>restriction_timers</code></a><ul class="toc-headings"><li><a href="#events-12">Events</a></li></ul></li><li><a href="#match_ends"><code>match_ends</code></a><ul class="toc-headings"><li><a href="#events-13">Events</a></li></ul></li></ul></nav></div><footer class="site-footer"><div class="container"><ul><li>Legal</li><li><a href="/docs/topics/legal-overview">Terms overview</a></li><li><a href="/docs/topics/legal-developers-terms">Developer&#x27;s terms</a></li><li><a href="/docs/topics/legal-app-terms">App terms</a></li><li><a href="http://www.overwolf.com/legal/" target="_blank">Overwolf terms</a></li><li><a href="http://www.overwolf.com/legal/#Privacy-policy" target="_blank">Overwolf Privacy policy</a></li></ul><ul><li>Support</li><li><a href=" https://discuss.overwolf.com/" target="_blank">Questions and Answers</a></li><li><a href=" https://discord.gg/7256qS2" target="_blank">Discord</a></li><li><a href="/docs/support/contact-us#join-our-slack">Slack</a></li><li><a href="https://www.facebook.com/OverwolfDevs" target="_blank">Facebook</a></li><li><a href="https://twitter.com/OverwolfDevs" target="_blank">Twitter</a></li></ul><ul><li>Documentation</li><li><a href="/docs/api/changelog">Changelog</a></li><li><a href="/docs/api/overwolf-api-overview">API</a></li><li><a href="/docs/start/app-creation-process">App Creation Process</a></li><li><a href="/docs/topics/best-practices-overview">Best Practices</a></li><li><a href="/docs/status/all">Game Events status</a></li></ul><ul><li>Information</li><li><a href="http://www.overwolf.com/careers/">Careers</a></li><li><a href="https://play.overwolf.com/fund/" target="_blank">Fund</a></li><li><a href="https://medium.com/overwolf" target="_blank">Developers Blog</a></li><li><a href="https://www.overwolf.com/appstore" target="_blank">Overwolf Appstore</a></li><li><a href="https://brands.overwolf.com/" target="_blank">Advertise on Overwolf</a></li></ul></div></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
                 document.addEventListener('keyup', function(e) {
                   if (e.target !== document.body) {
                     return;
