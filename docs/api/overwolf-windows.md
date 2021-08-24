@@ -785,6 +785,7 @@ Parameter           | Type   | Description                                      
 ------------------- | -------| -------------------------------------------------------------------- |
 nativeWindow        | bool   |                                                                      |
 enablePopupBlocker  | bool   |                                                                      |
+isBottomMost        | bool   | Indicates whether the window will be on bottom of other Overwolf windows  |
 
 ## DefaultSizeAndLocation Object
 #### Version added: 0.136

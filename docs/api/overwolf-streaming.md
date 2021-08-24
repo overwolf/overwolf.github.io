@@ -675,6 +675,7 @@ Stream video options.
 | base_frame_size_source | [eVideoBaseFrameSizeSource](#evideobaseframesizesource-enum) Enum | See [note](#base_frame_size_source-notes)   | 0.168  |
 | frame_size_method | [eVideoFrameSizeCalcMethod](#evideoframesizecalcmethod-enum) Enum | See [note](#frame_size_method-notes)   | 0.168  |
 | game_window_capture | [GameWindowCapture](#gamewindowcapture-object) Object | Dedicate option for game window capture (when available). See [note](#game_window_capture-notes)   | 0.176  |
+| keep_game_capture_on_lost_focus | bool | Keep capturing the game when the game loses focus (i.e do not show "Be Right Back"). Note: if game is minimized, BRB will be shown.  | 0.180  |
 
 #### base_frame_size_source notes
 

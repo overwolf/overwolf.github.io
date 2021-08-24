@@ -72,6 +72,7 @@ Note that not all flags are mandatory - we included all available flags for docu
                 "<a href="#windows-max_size">max_size</a>": {...},
                 "<a href="#windows-start_position">start_position</a>": {...},
                 "<a href="#windows-topmost">topmost</a>": false,
+                "<a href="#windows-bottommost">bottommost</a>": false,
                 "<a href="#windows-block_top_window_navigation">block_top_window_navigation</a>": true,
                 "<a href="#windows-keep_window_location">keep_window_location</a>": true,
                 "<a href="#windows-use_os_windowing">use_os_windowing</a>": false,
@@ -196,6 +197,7 @@ Note that not all flags are mandatory - we included all available flags for docu
                 "<a href="#windows-max_size">max_size</a>": {...},
                 "<a href="#windows-start_position">start_position</a>": {...},
                 "<a href="#windows-topmost">topmost</a>": false,
+                "<a href="#windows-bottommost">bottommost</a>": false,
                 "<a href="#windows-block_top_window_navigation">block_top_window_navigation</a>": true,
                 "<a href="#windows-keep_window_location">keep_window_location</a>": true,
                 "<a href="#windows-use_os_windowing">use_os_windowing</a>": false,
@@ -406,6 +408,7 @@ A list of settings for the app windows.
 | <a class="anchor" aria-hidden="true" id="windows-max_size"></a>max_size      | [size](#size-object) object |  Defines the maximum size of the window in pixels. See our [window sizes tips](../topics/windows-resolution-size-position#window-sizes)                                                                        | 0.78  |
 | <a class="anchor" aria-hidden="true" id="windows-start_position"></a>start_position   | [point](#point-object) object|  The default starting position of the window counted in pixels from the top left corner of the screen.                       | 0.78  |
 | <a class="anchor" aria-hidden="true" id="windows-topmost"></a>topmost     | bool    |  Indicates whether the window will be on top of other Overwolf windows. Handle with care as topmost windows can negatively impact user experience.   | 0.89  |
+| <a class="anchor" aria-hidden="true" id="windows-bottommost"></a>bottommost     | bool    |  Indicates whether the window will be on bottom of other Overwolf windows. Handle with care as bottommost windows can negatively impact user experience.   | 0.180  |
 | <a class="anchor" aria-hidden="true" id="windows-block_top_window_navigation"></a>block_top_window_navigation | bool |  Refrain from non "target=_blank" html elements from “taking-over” the entire app’s window                         | 0.100  |
 | <a class="anchor" aria-hidden="true" id="windows-keep_window_location"></a>keep_window_location   | bool        |  Window location won’t be changed when game focus is changed                                           | 0.101  |
 | <a class="anchor" aria-hidden="true" id="windows-use_os_windowing"></a>use_os_windowing | bool |  When set to true, allows your window to have a full-screen maximize when calling the overwolf.windows.maximize function, and a real taskbar minimize when calling overwolf.windows.minimize. </br>*Note: Should only be used with desktop_only windows*                                                                                              | 0.102  |
