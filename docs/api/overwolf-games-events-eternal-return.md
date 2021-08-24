@@ -91,7 +91,8 @@ Data Example:
 {"info":{"match_info" : {"roster" : [{"player_name" : "TestSubject1", "is_ally" : false, "player_character" : 12, "player_skin" : 1}]}},"feature":"me"}
 ```
 
-is_ally will specify whether the subject is an ally or not.<br>
+"roster" includes information of all 18 players in the game. <br>
+"is_ally" will specify whether the subject is an ally or not.<br>
 This info will contain the local player itself.
 
 
@@ -114,7 +115,7 @@ The enemy array will be an array containing 16 integers. Each index number + 1 w
 eg) index 0 of array represents the number of players selecting area code 1 as their starting point.
 
 
-## `match_info`
+## `matching`
 ### Events
 
 Event       | Event Data   | Fired When    | Notes              | Since GEP Ver. |
@@ -373,14 +374,14 @@ Data Example:
 Event       | Event Data   | Fired When    | Notes              | Since GEP Ver. |
 ------------| -------------| --------------| ------------------ | --------------|
 wickeline_prep| Boolean | 1 minute before Wickeline is about to spawn.(Announcement) | See [notes](#wickeline_prep-note) | 148.0  |
-wickeline_appear| Boolean | Wickeline hass spawned.(System chat) | See [notes](#wickeline_appear-note) | 148.0  |
-wickeline_move| Area code | Wickeline has moved to another point.(System chat) | See [notes](#wickeline_move-note) | 148.0  |
+wickeline_appear| Boolean | Wickeline has spawned.(System chat) | See [notes](#wickeline_appear-note) | 148.0  |
+wickeline_move| Area code | Wickeline has moved to another area.(System chat) | See [notes](#wickeline_move-note) | 148.0  |
 wickeline_dead| Killer name | Player kills Wickeline. (System chat) | See [notes](#wickeline_dead-note) | 148.0  |
 android_prep | Area code, Android name | 1 minute before Android Alpha/Omega is about to spawn.(Announcement) | See [notes](#android_prep-note) | 148.0  |
 android_appear| Android name | Android Alpha/Omega has spawned.(Announcement) | See [notes](#android_appear-note) | 148.0  |
 android_dead| Boolean | Android Alpha/Omega is dead.(Announcement) | See [notes](#android_dead-note) | 148.0  |
-meteorite_prep | Area code | 1 minute before Android Alpha/Omega is about to spawn.(Announcement) | See [notes](#meteorite_prep-note) | 148.0  |
-meteorite_appear| Boolean | Android Alpha/Omega has spawned.(Announcement) | See [notes](#meteorite_appear-note) | 148.0  |
+meteorite_prep | Area code | 1 minute before meteorite is about to spawn.(Announcement) | See [notes](#meteorite_prep-note) | 148.0  |
+meteorite_appear| Boolean | Meteorite has spawned.(Announcement) | See [notes](#meteorite_appear-note) | 148.0  |
 tree_of_life_prep | Area code | 1 minute before tree of life is about to spawn.(Announcement) | See [notes](#tree_of_life_prep-note) | 148.0  |
 tree_of_life_appear| Boolean | Tree of life has spawned.(Announcement) | See [notes](#tree_of_life_appear-note) | 148.0  |
 android_prep | Area code, Android name | 1 minute before Android Alpha/Omega is about to spawn.(Announcement) | See [notes](#android_prep-note) | 148.0  |
@@ -394,6 +395,8 @@ Data Example:
 ```json
 {"event":"wickeline_prep","data":true}
 ```
+
+All of the events in "game_objects" feature are triggered by announcements and system chats.
 
 
 #### *wickeline_appear* note
@@ -413,7 +416,7 @@ Data Example:
 {"event":"wickeline_move","data":14}
 ```
 
-Area code of wickeline's new location. 
+Area code of wickeline's new location.<br>
 See [area_code](#area_code-note) for more info.
 
 
@@ -453,6 +456,7 @@ Data Example:
 ```
 
 Note that android_appear will not specify the spawn area code. <br>
+
 Possible android value :
 * alpha
 * omega
@@ -470,6 +474,49 @@ Data Example:
 Possible android value :
 * alpha
 * omega
+
+
+#### *meteorite_prep* note
+
+Data Example:
+
+```json
+{"event":"meteorite_prep","data": 15}
+```
+
+Area code of meteorite's spawn location. <br>
+See [area_code](#area_code-note) for more info.
+
+
+#### *meteorite_appear* note
+
+Data Example:
+
+```json
+{"event":"meteorite_prep","data": true}
+```
+
+
+#### *tree_of_life_prep* note
+
+Data Example:
+
+```json
+{"event":"tree_of_life_prep","data": 15}
+```
+
+Area code of tree of life's spawn location. <br>
+See [area_code](#area_code-note) for more info.
+
+
+#### *tree_of_life_appear* note
+
+Data Example:
+
+```json
+{"event":"tree_of_life_prep","data": true}
+```
+
 
 
 ## `day_change`
@@ -514,7 +561,7 @@ Data Example:
 
 Returns the newly broadcasted restriction areas.<br>
 The 'current' array will represent currently restricted area codes. <br>
-The 'added' array will represent newly reserved restricted area codes.
+The 'added' array will represent newly reserved restricted area codes. <br>
 See [area_code](#area_code-note) for more info.
 
 
@@ -537,9 +584,9 @@ Data Example:
 {"event":"final_restriction","data": 1}
 ```
 
-This event is only called in Duo/Squad matching team mode.
-This event cannot be used to find out the final safe area. Final safe area must be acquired by the "new_restriction" event.
-The final_restriction will be called each step of the announcement.
+This event is only called in Duo/Squad matching team mode. <br>
+This event cannot be used to find out the final safe area. Final safe area must be acquired by the "new_restriction" event. <br>
+The final_restriction will be called each step of the announcement. <br>
 Possible steps
 * 1 : Final safe area is broadcasted.
 * 2 : Final safe area is active.
@@ -554,9 +601,9 @@ Data Example:
 {"event":"competitive_restriction","data": 1}
 ```
 
-This event is only called in Solo matching team mode.
-This event cannot be used to find out the final safe area. Final safe area must be acquired by the "new_restriction" event.
-The competitive_restriction will be called each step of the announcement.
+This event is only called in Solo matching team mode. <br>
+This event cannot be used to find out the final safe area. Final safe area must be acquired by the "new_restriction" event.<br>
+The competitive_restriction will be called each step of the announcement.<br>
 Possible steps
 * 1 : Temporary safe area is set.
 * 2 : Temporary safe area is active.
@@ -893,3 +940,18 @@ Localized text can also be searched using the key "Skill/Group/Name/{skill_group
 #### *item_code* note
 
 Localized text can also be searched using the key "Item/Name/{item_code}" in the ER L10N file. (Available via ER Open API.)
+
+
+#### *monster* note
+
+Following are monsters that appear in the game.
+Localized text can also be searched using the key "Monster/Name/{monster_code}" in the ER L10N file. (Available via ER Open API.)
+* 1 : Chicken
+* 2 : Bat
+* 3 : Bear
+* 4 : Wild Dog
+* 5 : Wolf
+* 6 : Bear
+* 7 : Wickeline
+* 8 : Alpha
+* 9 : Omega
