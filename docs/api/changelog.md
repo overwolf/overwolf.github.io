@@ -20,7 +20,7 @@ Here you can find our [Developers Roadmap](https://trello.com/b/1V10E4IB/overwol
 
 * [bottommost](manifest-json#windows-bottommost) - a new manifest flag. Completely opposite to the [topmost](manifest-json#windows-topmost) flag. When set true to a window, it's not possible to drag it over other app's windows. Beside the manifest, you can set this flag through the API:
   * Added to [overwolf.windows.obtainDeclaredWindow()](overwolf-windows#obtaindeclaredwindowwindowname-overridesetting-callback): overrideSetting { isBottomMost :bool }.
-* * New `keep_game_capture_on_lost_focus` flag added to the video options object of the [streaming](overwolf-streaming#streamvideooptions-object) and [replays](overwolf-media-replays#replayvideooptions-object) APIs: When alt+tab, the recording stops, and BRB (be right back) message is displayed. With the flag set on, the recording will continue even when alt+tab.  Note: if the game is minimized and not rendered, BRB still shows up.
+* * New `keep_game_capture_on_lost_focus` flag added to the video options object of the [streaming](overwolf-streaming#streamvideooptions-object) and [replays](overwolf-media-replays#replayvideooptions-object) APIs.
 
 #### Platform
 
