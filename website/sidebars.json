@@ -1,7 +1,7 @@
 {
 	"start": {
 		"Getting Started": 
-			["start/getting-started", "start/app-creation-process", "start/submit-app-proposal", "start/sdk-introduction","start/using-dev-tools", "start/game-compliance-guiding-principles", "start/warzone-game-compliance-guiding-principles"],
+			["start/getting-started", "start/app-creation-process", "start/submit-app-proposal", "start/sdk-introduction","start/using-dev-tools", "start/game-compliance-guiding-principles"],
 			"Build Your First App":
 			["start/sample-app-overview", "start/sample-app-components",  "start/sample-app-front-app", "start/sample-app-ui-components"],
 			"Test Your App":
