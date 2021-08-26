@@ -629,9 +629,9 @@ microphone_enabled | boolean  |                                             |
 
 ## FpsSettingsChangedEvent Object
 
-Parameter     | Type                                                              | Description     |
---------------| ------------------------------------------------------------------|---------------- |
-setting       |  string   ("OnScreenLocation" | "Enabled" | "Scale" | "Offset")           |                 | 
+Parameter     | Type       | Description                                                                       |
+--------------| -----------|---------------------------------------------------------------------------------- |
+setting       |  string    | One of the following values: "OnScreenLocation" / "Enabled" / "Scale" / "Offset"  | 
 
 #### Event data example
 
@@ -643,9 +643,9 @@ setting       |  string   ("OnScreenLocation" | "Enabled" | "Scale" | "Offset") 
 
 ## VideoCaptureSettingsChangedEvent Object
 
-Parameter     | Type                                                              | Description     |
---------------| ------------------------------------------------------------------|---------------- |
-setting       |  string   ("resolution" | "fps" | "unknown" | "Offset")           |                 | 
+Parameter     | Type       | Description                                                                       |
+--------------| -----------|---------------------------------------------------------------------------------- |
+setting       |  string    | One of the following values: "resolution" / "fps" / "unknown" / "Offset"          | 
 
 #### Event data example
 
@@ -657,9 +657,9 @@ setting       |  string   ("resolution" | "fps" | "unknown" | "Offset")         
 
 ## AudioCaptureSettingsChangedEvent Object
 
-Parameter     | Type                                                              | Description     |
---------------| ------------------------------------------------------------------|---------------- |
-setting       |  string   ("speakers" | "microphone" | "unknown" | "Offset")           |                 | 
+Parameter     | Type       | Description                                                                       |
+--------------| -----------|---------------------------------------------------------------------------------- |
+setting       |  string    | One of the following values: "speakers" / "microphone" / "unknown" / "Offset"     | 
 
 #### Event data example
 
@@ -668,4 +668,3 @@ setting       |  string   ("speakers" | "microphone" | "unknown" | "Offset")    
    "setting":"speakers"
 }
 ```
-
