@@ -22,4 +22,5 @@ If you’re planning to track live stats in your app please note the following r
 * No live stats are allowed during the match itself 
 * No singling out specific players for outstanding behavior/performance
 
-<iframe src="https://forms.monday.com/forms/22a901e0adfeec67dbde029b3552d21e?r=use1" width="100%" height="1600px"> </iframe>
+<iframe src="https://forms.monday.com/forms/embed/22a901e0adfeec67dbde029b3552d21e" width="100%" height="1600px"> </iframe>
+
