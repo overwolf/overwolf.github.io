@@ -288,7 +288,7 @@ callback (Optional) | (Result) => void | Reports success or failure when the pos
 
 Parameter           | Type       | Description                                                                                    |
 --------------------| -----------| -----------------------------------------------------------------------------------------------|
-windowId	          | string     |The id or name of the window for which to change the position                                   |
+windowId	          | string     |The id or name of the window to close                                   |
 callback (Optional) | [(Result: WindowIdResult)](#windowidresult-object) => void   | Called after the window is closed          |
 
 
