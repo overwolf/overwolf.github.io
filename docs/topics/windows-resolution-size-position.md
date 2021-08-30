@@ -94,7 +94,7 @@ function                                | native window            | non-native 
 [overwolf.windows.getCurrentWindow()](../api/overwolf-windows#getcurrentwindowcallback)     | +                        | +                             |         |
 [overwolf.windows.obtainDeclaredWindow()](../api/overwolf-windows#obtaindeclaredwindowwindowname-callback) | -                        | -                             | From 0.170 this function will be DPI-aware  |
 [overwolf.windows.changePosition()](../api/overwolf-windows#changepositionwindowid-left-top-callback)       | +                        | +                             | Gets the "left"/"top" values and calculates the new required window position based on the screen's DPI. (accepts values as they are returned from getCurrentWindow - without DPI scaling)        |
-[overwolf.windows.changeSize()](../api/overwolf-windows#changesizechangesizeparams-callback)           | +                        | +                             | gets the "width"/"height" values (via the "ChangeWindowSizeParams" object)  and calculates the new required window size based on the screen’s DPI.  (accepts values as they are returned from getCurrentWindow - without DPI scaling) </br></br> **Known issue** - For non-native windows - the DPI calculations is not DPI aware per-monitor - so if the window is on a 100% DPI monitor but the main monitor is 125% - it will resize based on 125%.        |
+[overwolf.windows.changeSize()](../api/overwolf-windows#changesizechangesizeparams-callback)           | +                        | +                             | gets the "width"/"height" values (via the "ChangeWindowSizeParams" object)  and calculates the new required window size based on the screen’s DPI.  (accepts values as they are returned from getCurrentWindow - without DPI scaling) </br></br> **Known issue** - For non-native windows the DPI calculations are affected only by the DPI of the primary window, regardless of which monitor you opened the window on. i.e., if the window is on a 100% DPI monitor but the main monitor is 125% - it will resize based on 125%.        |
 [window.screen](https://developer.mozilla.org/en-US/docs/Web/API/Window/screen)                           | -                        | +                             |         |
 HTML element size                       | +                      | +                           |         |
 
@@ -124,8 +124,7 @@ In order to position your window in a specific location, you'll first need to [g
 
 * To reposition an in-game window of your app, get the in-game resolution by using [getRunningGameInfo()](../api/overwolf-games#getrunninggameinfocallback) and calculate the required location in pixels.
 
-Note that for Non-native windows - the DPI calculations is not DPI aware per-monitor - so if the window is on a 100% DPI monitor but the main monitor is 125% - it will resize based on 125%.
-
+Note that for non-native windows the DPI calculations are affected only by the DPI of the primary window, regardless of which monitor you opened the window on. i.e.,  if the window is on a 100% DPI monitor but the main monitor is 125% - it will resize based on 125%.
 
 ### Identify when the window is dragged between monitors
 
