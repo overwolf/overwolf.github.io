@@ -854,7 +854,8 @@ height      | int     |                |
 
 Option            | Description                                                                                 |
 ----------------- | --------------------------------------------------------------------------------------------|
-InputPassThrough  |  Mouse and keyboard input will pass to the window AND to the game (no input blocking).     |
+InputPassThrough  |  Mouse and keyboard input will pass to the window AND to the game (no input blocking).      |
+BottomMost        |  When set true to a window, it's not possible to drag it over other app's windows.          |
 
 Note: the manifest [clickthrough](manifest-json#windows-clickthrough) flag has a different behavior - when it's set to `true`, the input passes through the window to the game.  
 
