@@ -139,13 +139,6 @@ const GamesMetadata = {
     iconLargeUrl: "/docs/assets/games-logos/large/lor.png",
     name: "Legends of Runeterra"
   },
-  21598: {
-    id: 21598,
-    path: "/docs/status/pubg-lite",
-    iconUrl: "/docs/assets/games-logos/pubg.png",
-    iconLargeUrl: "/docs/assets/games-logos/large/pubg.png",
-    name: "PUBG Lite"
-  },
   765: {
     id: 765,
     path: "/docs/status/world-of-warcraft",
