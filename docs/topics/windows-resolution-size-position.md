@@ -134,13 +134,9 @@ To identify if your app window was dragged from one monitor to another, you can 
 
 * Get the position of the window (window.screenX, window.screenY).
 
-------------------------
 Note that when you move a **native window** between monitors with different DPIs, the window will automatically resize according to the new DPI (can be disabled with the [disable_auto_dpi_sizing](../api/manifest-json#disable_auto_dpi_sizing) manifest flag). 
 
-That is not the case when you move a hybrid/non-native window between monitors. You will have to extract the DPI of the second monitor (don't use window.devicePixelRatio as it will always return the DPI of the primary monitor. Use instead getMonitorsList) and use it in your resize/reposition calculations.
-
------------------------------
-
+Hybrid/non-native windows are not "DPI awarded" and will not auto-resize when moved between monitors with different DPIs.
 
 ### determine which monitor the window is displayed
 

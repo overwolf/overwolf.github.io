@@ -123,3 +123,27 @@ In this section we will see the recording starting and the recording settings:
 10:22:55.256(INFO)[8cb4]: Number of memory leaks: 144
 ```
 
+#### When investigating recording issues check:
+
+* Make sure that the user follows the troubleshooting steps in the Common [Capture Issues](https://support.overwolf.com/en/support/solutions/articles/9000181387-common-capture-issues) article.
+
+* Go through OBS logs and check for errors such as the users devices not being recognized or out of date, high resource usage (Such as CPU, RAM or GPU) or encoding errors.
+
+
+Check in Trace Logs or OBS logs if hardware accelerated GPU is enabled. This will appear as "OS: HAGSEnable: True". If it is enabled ask the user to disable it using this guide: https://support.overwolf.com/en/support/solutions/articles/9000183412-visual-artifacts-in-overwolf-apps-hardware-acceleration- 
+
+In order to test if the issue is related to the app or the user's computer settings you can ask them to try recording in OBS studio to check that they can record correctly. You can send the following canned comment:
+
+Can you please try recording with OBS Studio and let me know if the same issue occurs?
+You can get OBS Studio for free here: https://obsproject.com/ 
+
+If the issue persists when the users records using OBS Studios this indicates that the issue is related to their system and not to Overwolf or any Overwolf app.
+
+Check supported video encoders in OBS, make sure they are not using x264 which uses CPU (When drivers are not up to date we’ll see a message that encoder unavailable.)
+Reasons why they might use x264
+User defined encoder themselves in setting
+OW OBS used it as a fallback due to issues with other encoders
+Other encoders not recognized (Check trace to see if we recognize any other encoders)
+
+
+Check in the DxDiag logs that the user has enough free resources for recording.
