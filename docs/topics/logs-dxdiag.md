@@ -27,12 +27,12 @@ The DxDiag file is usually automatically added to the Overwolf log. However, at 
 
 You can use the following canned comment to request this from your users:
 
-Please extract this info by doing the following:
+You can extract this info by doing the following:
  
 1. Press the Windows key + R
 2. Type dxdiag and click on OK. The "DirectX Diagnostic Tool" window should pop up.
 3. In the new window choose "Save all information".
-4. After you saved the file, please attach it to your reply here.
+4. After you save the file, please attach it to your reply here.
 
 Video guide: https://www.hippovideo.io/video/play/VUI7E8-cy7fMzGG30VeRPg==
 

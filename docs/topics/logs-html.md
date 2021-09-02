@@ -8,33 +8,33 @@ These logs will appear as an HTML file with the game title (For example League o
 
 In this section you can see the client initializing and the users Windows OS:
 
-[screenshot-1]
+![6](../assets/logs/6.png)
 
 This section will show which dlls are injected (Allowing you to check coexistence issues with other programs) before the render:
 
-[screenshot-2]
+![7](../assets/logs/7.png)
 
 This section will show the rendered resolutions and windows mode:
 
-[screenshot-3]
+![8](../assets/logs/8.png)
 
 This section will show the rendered API:
 
-[screenshot-4]
+![9](../assets/logs/9.png)
 
 This section will show if the render was successful:
 
-[screenshot-5]
+![10](../assets/logs/10.png)
 
 This section will show if the OBS render hook was injected: 
 
-[screenshot-6]
+![11](../assets/logs/11.png)
 
 This section shows hotkeys that were sent and received by Overwolf 
 
-[screenshot-7]
+![12](../assets/logs/12.png)
 
 This section shows that the game ended properly without crashes
 
-[screenshot-8]
+![13](../assets/logs/13.png)
 

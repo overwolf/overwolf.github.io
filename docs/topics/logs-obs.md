@@ -123,27 +123,77 @@ In this section we will see the recording starting and the recording settings:
 10:22:55.256(INFO)[8cb4]: Number of memory leaks: 144
 ```
 
-#### When investigating recording issues check:
+## Recording issues checklist
+
+When investigating recording issues check:
 
 * Make sure that the user follows the troubleshooting steps in the Common [Capture Issues](https://support.overwolf.com/en/support/solutions/articles/9000181387-common-capture-issues) article.
 
 * Go through OBS logs and check for errors such as the users devices not being recognized or out of date, high resource usage (Such as CPU, RAM or GPU) or encoding errors.
 
+* Check in Trace Logs or OBS logs if hardware accelerated GPU is enabled. This will appear as "OS: HAGSEnable: True". If it is enabled ask the user to disable it using this guide: https://support.overwolf.com/en/support/solutions/articles/9000183412-visual-artifacts-in-overwolf-apps-hardware-acceleration- 
 
-Check in Trace Logs or OBS logs if hardware accelerated GPU is enabled. This will appear as "OS: HAGSEnable: True". If it is enabled ask the user to disable it using this guide: https://support.overwolf.com/en/support/solutions/articles/9000183412-visual-artifacts-in-overwolf-apps-hardware-acceleration- 
+* In order to test if the issue is related to the app or the user's computer settings you can ask them to try recording in OBS studio to check that they can record correctly. You can send the following canned comment:
 
-In order to test if the issue is related to the app or the user's computer settings you can ask them to try recording in OBS studio to check that they can record correctly. You can send the following canned comment:
-
+```text
 Can you please try recording with OBS Studio and let me know if the same issue occurs?
-You can get OBS Studio for free here: https://obsproject.com/ 
+You can get OBS Studio for free here: https://obsproject.com/.  
 
 If the issue persists when the users records using OBS Studios this indicates that the issue is related to their system and not to Overwolf or any Overwolf app.
+```
 
-Check supported video encoders in OBS, make sure they are not using x264 which uses CPU (When drivers are not up to date we’ll see a message that encoder unavailable.)
-Reasons why they might use x264
-User defined encoder themselves in setting
-OW OBS used it as a fallback due to issues with other encoders
-Other encoders not recognized (Check trace to see if we recognize any other encoders)
+* Check supported video encoders in OBS, make sure they are not using x264 which uses CPU (When drivers are not up to date we’ll see a message that encoder unavailable).
+* Reasons why they might use x264:
+  * User defined encoder themselves in setting.
+  * OW OBS used it as a fallback due to issues with other encoders.
+  * Other encoders not recognized (Check trace to see if we recognize any other encoders).
+* Check in the DxDiag logs that the user has enough free resources for recording.
+
+## Audio issues checklist
+
+When investigating audio issues check:
+
+* Verify if the user is having an issue with recording output sounds (Game sounds/discord) / Input (microphone) or both ?
+Turn off the mic and try to record/ turn off the sound and try to record
+
+* Make sure that the user follows the troubleshooting steps in the [Common Capture Issues article](https://support.overwolf.com/en/support/solutions/articles/9000181387-common-capture-issues). 
+
+* Check which audio devices are set as default. Make sure that these settings match across the Overwolf sound settings, your app sound settings and the computer sound settings.
+
+* If the user has more than one audio device check with them that they aren't switching them mid game. 
+Overwolf can not recognize a switch in audio devices once it has been started up. If the user would like to update their audio settings they will need to restart Overwolf and the game in order for the changes to apply.
+
+* Delays in sound- ask the user to record the same clip in your app and in OBS Studio and send you the recording files. Compare the properties of each file to check if they are recorded in a different framerate or bitrate
+
+![2](../assets/logs/2.png)
+
+Note that currently it is not possible to only record certain channels (Such as only recording input from Discord and not other active sound sources).
+
+## How to check if the drivers are up to date
+
+You can find the details regarding the driver the user is using in both the OBS log files and in the DxDiag. We recommend checking these details according to the OBS as the DxDiag may not always be the most up to date.
+
+These are the methods to check each of the drivers:
+
+### AMD
+
+AMD usually updates monthly, however, not all cards will get the update (Such as if the user is using an older card).
+In order to check if the user is on the most up to date version copy the number next to the Driver Version (For example: “ Driver Version: 27.20.20903.8001”) and google the driver number. You will reach the AMD release notes connect to a version name and release note that corresponds to the month. 
+
+In the following image the version was released in May:
+
+![3](../assets/logs/3.png)
+
+### Intel
+
+In order to check if an Intel driver is up to date copy the processor model and google it. You will then be able to view the latest drivers available and compre with the users current driver: 
+
+![4](../assets/logs/4.png)
+
+### Nvidia
+
+Nvidia does not update frequently. To check if the user is using the most up to date version look at their version number and take note of the last 5 numbers, then go to the Nvidia website [Hyperlink: https://www.nvidia.com/Download/index.aspx ] to look up the graphic card and compare the version numbers. 
 
 
-Check in the DxDiag logs that the user has enough free resources for recording.
+
+

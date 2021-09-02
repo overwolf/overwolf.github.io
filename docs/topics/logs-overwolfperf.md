@@ -6,7 +6,7 @@ sidebar_label:  OverwolfPerf log
 
 In this file you can view the performance of Overwolf and the Overwolf apps from the time the log file was generated.
 
- [screenshot]
+![5](../assets/logs/5.png)
 
  You can use this info when a user reports of slowness or freezing of their computer due to an Overwolf app or due to Overwolf itself.
 
