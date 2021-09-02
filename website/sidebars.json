@@ -35,7 +35,7 @@
 		"Community Help":
 			["topics/join-the-community", "topics/webinars", "topics/creators-content", "topics/snippets"],
 		"Legal":
-			["topics/legal-overview", "topics/legal-app-terms", "topics/legal-developers-terms"]
+			["topics/legal-overview", "topics/legal-app-terms", "topics/legal-developers-terms", "topics/curseforge-core-terms"]
     },
     "api": {
 			"API Reference": 

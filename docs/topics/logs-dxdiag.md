@@ -19,7 +19,7 @@ This log is not an Overwolf log but one found on any Windows computer. DxDiag is
 
 * Sound devices- Make sure that the sound devices are the same ones set in the Overwolf Settings
 
-[screenshot]
+![1](../assets/logs/1.png)
 
 #### Request the log from users
 
