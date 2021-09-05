@@ -6,11 +6,28 @@ sidebar_label:  What are Overwolf logs
 
 Logs are a recording of all the processes and changes made while Overwolf is running. These include details such as the users computer specs, which game and app are being played and recording details. You can use these logs to get insights about what exactly was happening on Overwolf while it was active. Moreover, you can use this information in order to troubleshoot and resolve various issues.
 
+## Location of the log files
+
+You can find the log files located in the local app data-folder, quickest way to get there is by entering `%localappdata%\Overwolf\Log` into your explorer window.
+
+Files and folders you might encounter in this folder are:
+
+* `Apps` (folder, containing log files for all installed applications in Overwolf)
+* `CrashHandler.log` (file(s), created when Overwolf expierences a crash)
+* `highlights.log` (file, logs info about games and sessions with highlight-support)
+* `Installer` (folder, logs related to installation of Overwolf)
+* `InstallerTrace_<processID>_<date>_<time>.log` (file(s), installer logs for apps)
+* `OverwolfBrowserError_<processID>.log` (file(s), detailed errors when the CEF experiences errors)
+* `OverwolfCEF_<processID>.log` (file(s), contains debug info if the chromium framework has problems)
+* `ServerTrace_<date>_<time>_<processID>.log` (file(s), logs for server communication)
+
+Other files found in this folder is explained below and in their on respective page.
+
 ## DxDiag
 
 This file contains system information such as OS version & Build, information on your users Processor and Display & Sound devices.
 
-You can use this log file to investigate the following issues:
+You can use this log file (`DxDiag\OverwolfDxDiag.txt`) to investigate the following issues:
 
 * Issues in app display
 * Issues with recordings
@@ -20,7 +37,7 @@ Read more about the DxDiag log [here](logs-dxdiag).
 
 ## Trace logs
 
-The Trace logs will help you keep trace of all the actions taken by Overwolf.  
+The Trace logs (example `Trace_<date>_<time>_<processID>.log`) will help you keep trace of all the actions taken by Overwolf.  
 
 In the trace logs you will find the following information: 
 
@@ -49,7 +66,7 @@ Read more about the Trace logs [here](logs-trace).
 
 OBS is the engine that Overwolf client use to record games. 
 
-In the OBS logs you will find:
+In the OBS logs (example you will find: `ow_obs_<date>_<time>-p<processID>.txt`)
 
 * The system information
 * Driver versions
@@ -67,7 +84,7 @@ Read more about the OBS log [here](logs-obs).
 
 ## OverwolfPerf
 
-In this file you can view the performance details of Overwolf and the Overwolf apps in the last run.
+In this file (`OverwolfPerf.txt`) you can view the performance details of Overwolf and the Overwolf apps in the last run.
 
 You can use this log file to investigate the following issues:
 
@@ -91,4 +108,4 @@ In the Overlay game HTML you will find:
 * If the hotkeys were sent and received by Overwolf 
 * If the game ended properly or crashes
 
-Read more about the OverwolfPerf log [here](logs-html).
+Read more about the Overlay log [here](logs-html).
