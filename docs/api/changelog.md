@@ -55,7 +55,7 @@ Here you can find our [Developers Roadmap](https://trello.com/b/1V10E4IB/overwol
 
 #### Dev Console
 
-* Soon.
+* None.
 
 #### Bug fixes
 
