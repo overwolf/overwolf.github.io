@@ -36,10 +36,6 @@ Provides keyboard and mouse activity information while the user is in-game.
 
 > Returns input activity information.
 
-:::warning OBSOLETE
-This function is obsolete. Instead, please use [getMatchActivityInformation()](#getmatchactivityinformationcallback).
-:::
-
 Parameter | Type                                 | Description                              |
 --------- | -------------------------------------| ---------------------------------------- |
 callback  | [(Result:GetActivityResult)](#getactivityresult-object) => void | Callback with input activity information |
@@ -54,6 +50,10 @@ callback  | [(Result:GetActivityResult)](#getactivityresult-object) => void | Ca
 #### Version added: 0.92
 
 > Returns input activity information (similar to [getActivityInformation()](#getactivityinformationcallback)), however, when this is supported, it will return data only for the latest match of the current game.
+
+:::warning
+This function is currently not working as expected. As a workaround, you can use [getctivityInformation()](#getactivityinformationcallback) and manually identify matches and calculate the deltas between them.
+:::
 
 Parameter | Type                  | Description                              |
 --------- | ----------------------| ---------------------------------------- |
