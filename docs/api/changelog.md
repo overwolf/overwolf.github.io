@@ -8,7 +8,7 @@ Follow this entry for ongoing updates and changes to the project or tools.
 
 Here you can find our [Developers Roadmap](https://trello.com/b/1V10E4IB/overwolf-roadmap).
 
-## Version 0.180 (In-Progress)
+## Version 0.181 (In-Progress)
 
 * Note that the work on the documentation for this version is still in-progress.
 
@@ -18,9 +18,7 @@ Here you can find our [Developers Roadmap](https://trello.com/b/1V10E4IB/overwol
 
 #### API
 
-* [bottommost](manifest-json#windows-bottommost) - a new manifest flag. Completely opposite to the [topmost](manifest-json#windows-topmost) flag. When set true to a window, it's not possible to drag it over other app's windows. Beside the manifest, you can set this flag through the API:
-  * Added to [overwolf.windows.obtainDeclaredWindow()](overwolf-windows#obtaindeclaredwindowwindowname-overridesetting-callback): overrideSetting { isBottomMost :bool }.
-* * New `keep_game_capture_on_lost_focus` flag added to the video options object of the [streaming](overwolf-streaming#streamvideooptions-object) and [replays](overwolf-media-replays#replayvideooptions-object) APIs.
+* Soon.
 
 #### Platform
 
@@ -34,7 +32,31 @@ Here you can find our [Developers Roadmap](https://trello.com/b/1V10E4IB/overwol
 
 * Soon.
 
-## Version 0.178 (Aug. 2021)
+## Version 0.180 (Sep 2021)
+
+#### Docs
+
+* None.
+
+#### API
+
+* [bottommost](manifest-json#windows-bottommost) - a new manifest flag. Completely opposite to the [topmost](manifest-json#windows-topmost) flag. When set true to a window, it's not possible to drag it over other app's windows. Beside the manifest, you can set this flag through the API:
+  * Added to [overwolf.windows.obtainDeclaredWindow()](overwolf-windows#obtaindeclaredwindowwindowname-overridesetting-callback): overrideSetting { isBottomMost :bool }.
+* * New `keep_game_capture_on_lost_focus` flag added to the video options object of the [streaming](overwolf-streaming#streamvideooptions-object) and [replays](overwolf-media-replays#replayvideooptions-object) APIs.
+
+#### Platform
+
+* None.
+
+#### Dev Console
+
+* None.
+
+#### Bug fixes
+
+* None.
+
+## Version 0.178 (Aug 2021)
 
 * Note that iterations 178 to 179 were combined into a single iteration. 
 
@@ -61,7 +83,7 @@ Here you can find our [Developers Roadmap](https://trello.com/b/1V10E4IB/overwol
 
 * Fixed a bug with increased text scaling in Windows.
 
-## Version 0.176 (Aug 21)
+## Version 0.176 (Aug 2021)
 
 * Note that iterations 176 to 177 were combined into a single iteration. 
 
