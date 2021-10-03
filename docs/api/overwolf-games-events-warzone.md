@@ -60,6 +60,7 @@ Data Example:
 key          | Category    | Values                    | Notes                 | Since GEP Ver. |
 ------------ | ------------| ------------------------- | --------------------- | ------------- | 
 pseudo_match_id | match_info | The current match’s ID code.</br></br>Example:</br></br> `0c0ea3df-97ea-4d3a-b1f6-f8e34042251f`  |  This is an Overwolf-generated code, unrelated to Activision.  |   159.0 |
+roster        | match_info | Local players' match information based on his actions and kda. |  See [notes](#roster-note)  |   159.0 |
 
 ### Events
 
@@ -68,6 +69,15 @@ Event        | Event Data        | Fired When   | Notes              | Since GEP
 match_start  | null              | Match started.| See [notes](#match_start-note)     | 157.0 |
 match_end    | null              | Match ended. | See [notes](#match_end-note)        | 157.0 |
 
+#### *roster* note
+
+Important to know that local player details arrive at the beginning of the match, and the information of the rest of the players arrives on the end of the match.
+
+Data Example:
+
+```json
+{"player":"ItayG#9798518","is_local":true,"is_bot":0,"team_id":35,"armor":0,"damage":0,"rank":39,"ping":64,"kills":0,"deaths":0,"score":0,"assists":0}
+```
 
 #### *match_start* note
 
