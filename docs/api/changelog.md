@@ -28,7 +28,7 @@ Here you can find our [Developers Roadmap](https://trello.com/b/1V10E4IB/overwol
 
 #### Platform
 
-* Support Streaming rate of up to 120 FPS.
+* Support capturing rate of up to 120 FPS using the [Streaming API](overwolf-streaming).
 
 #### Dev Console
 
