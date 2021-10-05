@@ -26,7 +26,9 @@ In addition, the [simple I/O plugin](../topics/simple-io-plugin) offers several 
 
 ## Types Reference
 
-* [overwolf.io.eEncoding](#eencoding-enum) enum
+* [overwolf.io.enums.eEncoding](#eencoding-enum) enum
+* [overwolf.io.enums.encoding](#encoding-enum) enum
+* [overwolf.io.enums.fileListenerState](#filelistenerstate-enum) enum
 * [overwolf.io.enums.fileListenerState](#filelistenerstate-enum) enum
 * [overwolf.io.ReadFileOptions](#readfileoptions-object) Object
 * [overwolf.io.ListenFileOptions](#listenfileoptions-object) Object
@@ -39,7 +41,6 @@ In addition, the [simple I/O plugin](../topics/simple-io-plugin) offers several 
 * [overwolf.io.ReadTextFileResult](#readtextfileresult-object) Object
 * [overwolf.io.FileInfo](#fileinfo-object) Object
 * [overwolf.io.FileInDir](#fileindir-object) Object
-
 
 ## fileExists(filePath, callback)
 
@@ -235,6 +236,20 @@ running    |
 terminated |
 truncated  |
 
+## encoding enum
+
+encoding types.
+
+Options    | 
+-----------| 
+Default    |
+UTF8       | 
+UTF32      |
+Unicode    |
+UTF7       |
+ASCII      |
+BigEndianUnicode |
+
 ## eEncoding enum
 
 File encoding.
@@ -266,6 +281,7 @@ offset           | int                           | start reading point, default 
 Parameter        | Type                          | Description                       |
 ---------------- | ------------------------------| --------------------------------- |
 skipToEnd        | bool                          | should skip directly to end of file. default if false  |
+encoding         | [encoding](#encoding-enum) enum| Encoding to use. `Default` is is the default value   |
 
 ## DirResult Object
 #### Version added: 0.141

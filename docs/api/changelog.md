@@ -26,11 +26,9 @@ Here you can find our [Developers Roadmap](https://trello.com/b/1V10E4IB/overwol
 
 * New [encoding](overwolf-io#encoding-enum) param to [overwolf.io.listenOnFile()](overwolf-io#listenonfileid-path-option-callback).
 
-* Support Streaming rate of up to 120 FPS.
-
 #### Platform
 
-* Soon.
+* Support Streaming rate of up to 120 FPS.
 
 #### Dev Console
 

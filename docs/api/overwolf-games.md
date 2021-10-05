@@ -770,6 +770,7 @@ Parameter            | Type     | Description                                   
 | isCursorVisible    | bool     | Indication if the current game is working in "Exclusive Mode" without a visible cursor, like FPS games.  See [notes](#iscursorvisible-note)  | 
 | exclusiveModeDisabled | bool  | ExclusiveMode is disabled. See [notes](#exclusivemodedisabled-note)                                 |
 | oopOverlay         | bool     | is game overlay is OOPO. See [notes](#oopoverlay-note)                                              |
+| isFullScreenOptimizationDisabled | bool  |  Indication if game process DisableFullscreen is on. See [notes](#isfullscreenoptimizationdisabled-note)             |
 
 #### Data example
 
@@ -779,7 +780,8 @@ Parameter            | Type     | Description                                   
     "inputFailure":false,
     "hadInGameRender":true,
     "isCursorVisible":true,
-    "exclusiveModeDisabled":true,   
+    "exclusiveModeDisabled":true,  
+    "isFullScreenOptimizationDisabled":false,
 }
 ```
 
@@ -802,6 +804,12 @@ See also related object property, [isCursorVisible](#iscursorvisible-note).
 #### **oopOverlay** Note
 
 OOP stands for "Out of process" Overlay - relevant for Distney2, CSGO, and warzone that requires [exclusive mode](../topics/exclusive-mode) to interact with the OW app's windows. 
+
+#### **isFullScreenOptimizationDisabled** Note
+
+The OW overlay is not visible in full-screen mode for games that require an [exclusive mode](../topics/exclusive-mode) to interact with the OW app's windows (like Distney2, CSGO, and warzone). This indication lets you show the user a desktop notification to switch from full screen to windowed or borderless mode or enable full-screen optimization.
+
+'isFullScreenOptimizationDisabled' will be on when DisableFullscreen is on, and the overlay is not visible. 
 
 ## GameInfoChangeReason enum
 
