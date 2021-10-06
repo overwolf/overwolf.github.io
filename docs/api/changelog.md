@@ -22,7 +22,10 @@ Here you can find our [Developers Roadmap](https://trello.com/b/1V10E4IB/overwol
 
 * New flag for the [OverlayInfo](overwolf-games#overlayinfo-object) object: [isFullScreenOptimizationDisabled](overwolf-games#isfullscreenoptimizationdisabled-note). The OW overlay is not visible in full-screen mode for games that require an exclusive mode to interact with the OW app's windows (like Distney2, CSGO, and warzone). This indication lets you show the user a desktop notification to switch from full screen to windowed or borderless mode or enable full-screen optimization.
 
-* New disk space warning when we are recording, and disk space is empty: `disk_space_warning`.  It will show in the [obs log](../topics/logs-obs) as: "On disk space warning...".
+* New disk space warnings when we are recording, and disk space is empty: 
+  * If you are using the Streaming API, [onStreamingWarning](overwolf-streaming#onstreamingwarning) event is fired, with the error text `disk_space_warning`.
+  * If you are using the Replays API,  [onCaptureWarning](overwolf-media-replays#oncapturewarning) event is fired, with the error text `disk_space_warning`.
+  * It will show in the [obs log](../topics/logs-obs) as: `On disk space warning...`.
 
 * New [encoding](overwolf-io#encoding-enum) param to [overwolf.io.listenOnFile()](overwolf-io#listenonfileid-path-option-callback).
 
