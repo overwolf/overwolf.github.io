@@ -71,7 +71,7 @@ match_end    | null              | Match ended. | See [notes](#match_end-note)  
 
 #### *roster* note
 
-Important to know that local player details arrive at the beginning of the match, and the information of the rest of the players arrives on the end of the match.
+Important to know that local player details arrive at the beginning and during the match, and the information of the rest of the players arrives on the end of the match.
 
 Data Example:
 
