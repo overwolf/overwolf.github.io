@@ -17,6 +17,9 @@ Here you can find our [Developers Roadmap](https://trello.com/b/1V10E4IB/overwol
 * [MTGA](overwolf-games-events-mtga)
   * New feature under:
     * game_info
+* [Warzone](overwolf-games-events-warzone)
+  * New update & note for:
+    * roster
     
 #### API
 
