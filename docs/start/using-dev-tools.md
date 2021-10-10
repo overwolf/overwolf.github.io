@@ -26,7 +26,7 @@ Doing this will immediately get you into the developmet tools menu for this app 
 ### 2 - Through the Overwolf settings
 
 1. Right click on the Overwolf tray icon.
-2. Select Settings → Support tab → Development options.
+2. Select Settings → About tab → Development options.
 3. Launch your app and select the relevant window's name.
 
 After you launch the app you're debugging, each window's name will show up in the developers tools interface. You can click on any window name to bring up a full breakdown of available developer tools for that window:
