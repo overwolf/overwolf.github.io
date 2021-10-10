@@ -807,7 +807,10 @@ OOP stands for "Out of process" Overlay - relevant for Distney2, CSGO, and warzo
 
 #### **isFullScreenOptimizationDisabled** Note
 
-The OW overlay is not visible in full-screen mode for games that require an [exclusive mode](../topics/exclusive-mode) to interact with the OW app's windows (like Distney2, CSGO, and warzone). This indication lets you show the user a desktop notification to switch from full screen to windowed or borderless mode or enable full-screen optimization.
+The OW overlay is not visible in full-screen mode for games that require an [exclusive mode](../topics/exclusive-mode) to interact with the OW app's windows (like Distney2, CSGO, and warzone). 
+
+This indication lets you show the user a desktop notification to switch from full screen to windowed or borderless mode or enable full-screen optimization.
+Note that you can't display your indication as there is no overlay. So in that case, you can show the indication when the match is over or on a second screen, if exist/S
 
 'isFullScreenOptimizationDisabled' will be on when DisableFullscreen is on, and the overlay is not visible. 
 
