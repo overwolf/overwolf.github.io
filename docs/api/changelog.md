@@ -20,6 +20,8 @@ Here you can find our [Developers Roadmap](https://trello.com/b/1V10E4IB/overwol
 * [Warzone](overwolf-games-events-warzone)
   * New update & note for:
     * roster
+* [New World](overwolf-games-events-new-world)
+  * New supported game.
     
 #### API
 
