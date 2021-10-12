@@ -27,7 +27,7 @@ Here you can find our [Developers Roadmap](https://trello.com/b/1V10E4IB/overwol
 
 * New flag for the [OverlayInfo](overwolf-games#overlayinfo-object) object: [isFullScreenOptimizationDisabled](overwolf-games#isfullscreenoptimizationdisabled-note). The OW overlay is not visible in full-screen mode for games that require an exclusive mode to interact with the OW app's windows (like Distney2, CSGO, and warzone). This indication lets you show the user a desktop notification to switch from full screen to windowed or borderless mode or enable full-screen optimization.
 
-* New disk space warnings when we are recording, and disk space is empty: 
+* New low disk space warnings when we are recording: 
   * If you are using the Streaming API, [onStreamingWarning](overwolf-streaming#onstreamingwarning) event is fired, with the error text `disk_space_warning`.
   * If you are using the Replays API,  [onCaptureWarning](overwolf-media-replays#oncapturewarning) event is fired, with the error text `disk_space_warning`.
   * It will show in the [obs log](../topics/logs-obs) as: `On disk space warning...`.
@@ -36,7 +36,8 @@ Here you can find our [Developers Roadmap](https://trello.com/b/1V10E4IB/overwol
 
 #### Platform
 
-* Support capturing rate of up to 120 FPS using the [Streaming API](overwolf-streaming).
+* Support capturing rate of up to 120 FPS.  
+  You have the option to either change the FPS in the Overwolf settings or App Creators can use it with our [Streaming API](overwolf-streaming).
 
 #### Dev Console
 
@@ -44,7 +45,9 @@ Here you can find our [Developers Roadmap](https://trello.com/b/1V10E4IB/overwol
 
 #### Bug fixes
 
-* Soon.
+* Recording Final Fantasy XIV no longer fails.
+* Game Capture no longer hangs when it fails to record.
+* Fixed an issue with the Zoom API.
 
 ## Version 0.180 (Sep 2021)
 
