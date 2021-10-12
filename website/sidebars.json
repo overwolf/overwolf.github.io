@@ -75,7 +75,7 @@
     },
 	"service": {
         "Games Events Status": 
-			["status/all", "status/apex", "status/csgo", "status/dota2", "status/ff-xiv","status/underlords", "status/escape-from-tarkov", "status/fm2021", "status/hearthstone", "status/heroes-of-the-storm", "status/lor", "status/lol", "status/lol-launcher", "status/minecraft", "status/mtga", "status/overwatch", "status/path-of-exile", "status/pubg", "status/pubg-lite", "status/rainbow-six-siege", "status/rocket-league", "status/sc2","status/splitgate", "status/teamfight-tactics", "status/valheim", "status/valorant", "status/world-of-tanks","status/world-of-warcraft","status/world-of-warships","status/warframe","status/warzone"]
+			["status/all", "status/apex", "status/csgo", "status/dota2", "status/ff-xiv","status/underlords", "status/escape-from-tarkov", "status/fm2021", "status/hearthstone", "status/heroes-of-the-storm", "status/lor", "status/lol", "status/lol-launcher", "status/minecraft", "status/mtga", "status/new-world", "status/overwatch", "status/path-of-exile", "status/pubg", "status/pubg-lite", "status/rainbow-six-siege", "status/rocket-league", "status/sc2","status/splitgate", "status/teamfight-tactics", "status/valheim", "status/valorant", "status/world-of-tanks","status/world-of-warcraft","status/world-of-warships","status/warframe","status/warzone"]
 		},
 	"support": {
         "Support": 
