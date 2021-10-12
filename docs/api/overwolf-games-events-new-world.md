@@ -48,12 +48,12 @@ Data Example:
 
 key          | Category    | Values                    | Notes                 | Since GEP Ver. |
 ------------ | ------------| ------------------------- | --------------------- | ------------- | 
-location     | game_info   | The current game scene.   |  See [notes](#scene-note) |   182.0       |
+location     | game_info   | The current game scene.   |  See [notes](#location-note) |   182.0       |
 
 #### *location* note
 
 Data Example:
 
 ```json
-{"game_info":{"location":"{"x":"-563.196045","y":"78.863182","z":"353.648682"}"}},"feature":"game_info"}
+{"info":{"game_info":{"location":"{ "x" : 9731.97, "y" : 343.266, "z" : 44.9754 }"}},"feature":"location"}
 ```
