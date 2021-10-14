@@ -597,7 +597,7 @@ Represents the settings required to start a stream.
 | stream_info  | [StreamInfo](#streaminfo-object) object                                           | The basic stream information             | 0.78  |
 | auth         | [StreamAuthParams](#streamauthparams-object) object                               | Stream authorization data                | 0.78  |
 | video        | [StreamVideoOptions](#streamvideooptions-object) Object                           | Stream video options                     | 0.78  |
-| ingest_server| [StreamIngestServer](#overwolf-streaming#streamingestserver-object) Object        | Information on the server that is being streamed to | 0.78  |
+| ingest_server| [StreamIngestServer](#streamingestserver-object) Object        | Information on the server that is being streamed to | 0.78  |
 | replay_type  | [ReplayType](overwolf-media-replays#replaytype-enum) enum                         | The replay type to use                   | 0.78  |
 | gif_as_video | bool                                                                              | Create gif as video (Gif Replay Type only) | 0.78  |
 
