@@ -222,5 +222,12 @@ const GamesMetadata = {
     iconUrl: "/docs/assets/games-logos/new-world.png",
     iconLargeUrl: "/docs/assets/games-logos/large/new-world.png",
     name: "New World"
+  },
+  21672: {
+    id: 21672,
+    path: "/docs/status/eternal-return",
+    iconUrl: "/docs/assets/games-logos/eternal-return.png",
+    iconLargeUrl: "/docs/assets/games-logos/large/eternal-return.png",
+    name: "Eeternal Return"
   }
 }
