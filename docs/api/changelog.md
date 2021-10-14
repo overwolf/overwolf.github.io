@@ -22,6 +22,8 @@ Here you can find our [Developers Roadmap](https://trello.com/b/1V10E4IB/overwol
     * roster
 * [New World](overwolf-games-events-new-world)
   * New supported game.
+* [Eternal Return](overwolf-games-events-eternal-return)
+  * New supported game.
     
 #### API
 
