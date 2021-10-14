@@ -55,5 +55,5 @@ location     | game_info   | The current game scene.   |  See [notes](#location-
 Data Example:
 
 ```json
-{"info":{"game_info":{"location":"{ "x" : 9731.97, "y" : 343.266, "z" : 44.9754 }"}},"feature":"location"}
+{"info":{"game_info":{"location":"{ "player.position.x,9597.41,player.position.y,2313.18,player.position.z,42.21,player.rotation.x,0,player.rotation.y,0,player.rotation.z,19,player.compass,E" }"}},"feature":"location"}
 ```
