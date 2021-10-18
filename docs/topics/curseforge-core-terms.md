@@ -5,13 +5,13 @@ Please read these Terms carefully. These Terms govern your access to and use of 
 
 
 
-1. **Definitions- **In these Terms the following terms when capitalized shall have the meaning set forth below
+1. **Definitions** - In these Terms the following terms when capitalized shall have the meaning set forth below
     1. "**Application**" means any application created by Developer through use of the Platform API and/or any software development kit provided to you by Overwolf. In addition, unless stated otherwise in these Terms for specific provisions, an Application also includes a Mod.
     2. "**Mod**" means software created by Developer for a third party game, not through use of the Platform API and/or any software development kit provided to you by Overwolf. Provided that they comply with the foregoing definition, Mods may be informally referred to as "add-ons","maps", “plugins”, ”modpacks” or “packs”.
     3. "**End User**" means an end user consumer of the Platform who wishes to use an Application.
     4. "**Platform API**" means Developer’s application program interface which allows Developers to create Applications for use on the Platform, including without limitation any software development kit which Overwolf may provide to you.
     5. "**Overwolf Standard Application Terms and Conditions**" means Overwolf’s standard terms and conditions for Applications, and which may be modified by Overwolf from time to time in its sole discretion. The most recent version of the Overwolf Standard Application Terms and Conditions are available at https://overwolf.github.io/docs/topics/legal-app-terms/.
-2. **CF Core and Development Tools.  **
+2. **CF Core and Development Tools**.
 
     Subject to the terms and conditions hereof, Overwolf grants Developer a limited, non-exclusive license to use the CF Core, including all code and files included therein, and any accompanying documentation files (“**Documentation**”) solely for the Purpose. Developer has no ownership or other rights in the CF Core or Documentation. Ownership of the CF Core and Documentation, all libraries and files included in the CF Core, all enhancements and modifications thereof, derivative works created by Developer, feedback provided by Developer and all intellectual property rights in the foregoing is and shall be the sole and exclusive property of Overwolf and its licensors.
 
@@ -19,7 +19,7 @@ Please read these Terms carefully. These Terms govern your access to and use of 
 
     Developer may use the CF Core solely for the CF Core Integration and will not (a) rent, lease, modify, copy, loan, transfer, sublicense, distribute or create derivative works of the CF Core or Documentation; (b) reverse engineer, decompile, translate, adapt, or disassemble the CF Core; (c) attempt to disable or circumvent any security mechanism accompanying the CF Core; or (d) remove or obscure any copyright or other notices from the CF Core. Developer will moreover not demonstrate or provide the CF Core to third parties or allow such third parties to perform any of the aforesaid actions.
 
-4. **Games and User-Content. **
+4. **Games and User-Content**.
 
     Developer will retain sole ownership of any right, title or interest to the Game, but hereby provides Overwolf with a non-exclusive, royalty-free, worldwide license to the Game for the Purpose and waives any moral rights with regard thereto. Overwolf may sublicense the aforesaid, at its sole discretion, to any User eligible under the terms of service of Overwolf and/or CF Core applicable at that time (the “**TOS**”). Developer hereby waives and disclaims any right, title or interest in and to the User-Content. 
 
