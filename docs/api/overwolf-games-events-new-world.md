@@ -49,7 +49,39 @@ Data Example:
 key          | Category    | Values                    | Notes                 | Since GEP Ver. |
 ------------ | ------------| ------------------------- | --------------------- | ------------- | 
 location     | game_info   | The current game scene.   |  See [notes](#location-note) |   182.0       |
+map          | game_info   | The current map.          |  See [notes](#map-note) |   183.0       |
+player_name  | game_info   | The local player name.   |  See [notes](#player_name-note) |   183.0       |
+world_name   | game_info   | The world name.   |  See [notes](#world_name-note) |   183.0       |
+
 
 #### *location* note
 
+Data Example:
 
+```json
+{"info":{"game_info":{"location":"{"player.position.x,9366.38,player.position.y,2762.52,player.position.z,89.21,player.rotation.x,0,player.rotation.y,0,player.rotation.z,223,player.compass,SW"}"}},"feature":"game_info"}
+```
+
+#### *map* note
+
+Data Example:
+
+```json
+{"info":{"game_info":{"map":"NewWorld_VitaeEterna"}"}},"feature":"game_info"}
+```
+
+#### *player_name* note
+
+Data Example:
+
+```json
+{"info":{"game_info":{"player_name":"Shargaas7"}"}},"feature":"game_info"}
+```
+
+#### *world_name* note
+
+Data Example:
+
+```json
+{"info":{"game_info":{"world_name":"live-1-28-3"}"}},"feature":"game_info"}
+```
