@@ -128,6 +128,10 @@ overwolf.extensions.io.delete(overwolf.extensions.io.enums.StorageSpace.appData,
 //==>{success: true}
 ```
 
+:::tip
+To delete old videos you can use [overwolf.media.videos.deleteOldVideos()](overwolf-media-videos#deleteoldvideoskeepnewestxgbs-callback), and to delete old gifs you can use [overwolf.media.deleteOldGifs()](overwolf-media#deleteoldgifskeepnewestxgbs-callback).
+:::
+
 ## copy(space, source, destination, callback)
 #### Version added: 0.147
 

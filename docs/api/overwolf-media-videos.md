@@ -94,6 +94,10 @@ Parameter      | Type                                | Description              
 keepNewestXGbs | int                                 | Keep the newest X GBs of videos. Pass 0 to delete all videos                                            |
 callback       | (Result) => void                    | A callback function which will be called with the status of the request                                 |
 
+:::tip
+To delete old gifs you can use [overwolf.media.videos.deleteOldGifs()](overwolf-media#deleteoldgifskeepnewestxgbs-callback), and to delete old screenshots you can use [overwolf.extensions.io.delete()](overwolf-extensions-io#deletespace-path-callback).
+:::
+
 ## deleteVideo(videoUrl, callback)
 #### Version added: 0.89
 
