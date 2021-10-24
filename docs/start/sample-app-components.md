@@ -48,8 +48,7 @@ You can read more about the background controller concept in our [Communicating 
 
 ### windows/in_game
 
-The in_game window listens to [Info Events](../api/overwolf-games-events#oninfoupdates2) and [Game Events](../api/overwolf-games-events#onnewevents) emitted by the game and
-displays an ad. Furthermore, it defines the behavior for the show/hide hotkey.
+The in_game window listens to [Info Events](../api/overwolf-games-events#oninfoupdates2) and [Game Events](../api/overwolf-games-events#onnewevents) emitted by the game. Furthermore, it defines the behavior for the show/hide hotkey.
 
 Read all about hotkeys [here](../topics/hotkeys-best-practices).
 

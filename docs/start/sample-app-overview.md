@@ -6,7 +6,10 @@ sidebar_label: The Basic Sample App
 
 In this article, we'll use an example in order to learn how to build Overwolf apps that respond to real time game events and display content in an overlay while playing. If you are new to the concept of Overwolf apps, this is a great place to get started, and you can use it as a base for your own project.
 
-The sample app's functionality is pretty straightforward: It auto-launches when the user launches Fortnite, just like any other Fortnite app, and reads all real time game events as you play. To demonstrate overlay features, the sample app prints all in-game event data collected into an overlay-based component.
+The sample app's functionality is pretty straightforward: It auto-launches when the user launches one of the supported games: 
+* Fortnite, CSGO, League of Legends, Escape From Tarkov, Minecraft, Overwatch, PUBG, Rainbow Six Siege, Splitgate: Arena Warfare, Path of Exile, Valorant, Dota 2, Call of Duty: Warzone or Warframe.
+
+The app reads all real time game events as you play. To demonstrate overlay features, the sample app prints all in-game event data collected into an overlay-based component.
 
 The sample app is built with JS code and TypeScript. An official Vue, React, and Angular version will be added soon. Until then, check our [community snippets](../topics/snippets) page for an unofficial Vue version and other code samples, like React boilerplate for Overwolf apps and more.
 
@@ -23,7 +26,7 @@ You can find a [video tutorial](../topics/creators-content#video-tutorials) that
 
 ## Sample App Functionality
 
-For demonstration purposes, the sample app is configured for [Fortnite](https://www.epicgames.com/fortnite/en-US/download). It loads when Fortnite starts and reads Fortnite in-game events. You can easily customize this example to fit other games.
+For demonstration purposes, the sample app is configured for the one of the supported games that listed above. It loads when Fortnite starts and reads Fortnite in-game events. You can easily customize this example to fit other games.
 
 The basic functions our sample app demonstrates:
 
