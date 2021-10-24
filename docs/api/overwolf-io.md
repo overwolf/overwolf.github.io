@@ -42,6 +42,14 @@ In addition, the [simple I/O plugin](../topics/simple-io-plugin) offers several 
 * [overwolf.io.FileInfo](#fileinfo-object) Object
 * [overwolf.io.FileInDir](#fileindir-object) Object
 
+## Sample app
+
+In our [APIs sample apps repository](https://github.com/overwolf/apis-sample-apps), you can find and download a sample app that demonstrate the usage in the IO API: 
+
+* The `io-sample` - Demonstrates how to open and load a file to your app, Display it, Add some content to it and Write it back to the file.  
+
+It's a great place to get started - All the samples in this repository are built with JS code and demonstrate primary usage in the API.
+
 ## fileExists(filePath, callback)
 
 #### Version added: 0.93
