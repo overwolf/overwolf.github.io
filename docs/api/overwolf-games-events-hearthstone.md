@@ -21,6 +21,7 @@ Please read the [overwolf.games.events](overwolf-games-events) documentation pag
 * [decks](#decks)
 * [match](#match)
 * [match-info](#match_info)
+* [arena](#arena)
 
 ## Game events status
 
@@ -389,4 +390,20 @@ Data Example:
 
 ```json
 {"info":{"match_info":{"pseudo_match_id":"5a7e3729-993c-414d-8e3f-592faeef81e7"}},"feature":"match_info"}
+```
+
+## `arena`
+
+### Info Updates
+
+key          | Category    | Values                    | Notes                 | Since GEP Ver. |
+------------ | ------------| ------------------------- | --------------------- | ------------- |
+arena_draft  | arena       | Three offered cards during arena draft.|See [notes](#arena_draft-note)|   184.0       |
+
+#### *arena_draft* note
+
+Data Example:
+
+```json
+{"info":{"arena":{"arena_draft":"{"cards":["TRL_509","SW_067","SW_319"]}"}},"feature":"arena"}
 ```
