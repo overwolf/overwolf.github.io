@@ -67,7 +67,7 @@ machineId          | string   |                                             |
 partnerId          | int      |                                             |   
 channel            | string   |                                             |   
 parameters         | string   |                                             |   
-installParams      | JSON     | see [Creating Download Link|(https://overwolf.github.io/docs/topics/create-download-link#extract-referral-data-using-api)|
+installParams      | JSON     | see [Creating Download Link](https://overwolf.github.io/docs/topics/create-download-link#extract-referral-data-using-api)|
 avatar             | string   |                                             |   
 installerExtension | string   |                                             |   
 displayName        | string   |                                             |   
