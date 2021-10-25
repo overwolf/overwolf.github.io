@@ -27,6 +27,8 @@ Here you can find our [Developers Roadmap](https://trello.com/b/1V10E4IB/overwol
 * [Hearthstone](overwolf-games-events-hearthstone)
   * New info update:
     * arena
+* Our [official sample app](../start/sample-app-overview) now works and auto-launches with a few more games: Fortnite, CSGO, League of Legends, Escape From Tarkov, Minecraft, Overwatch, PUBG, Rainbow Six Siege, Splitgate: Arena Warfare, Path of Exile, Valorant, Dota 2, Call of Duty: Warzone or Warframe.
+* New [IO sample app](overwolf-io#sample-app): Demonstrates how to open and load a file to your app, Display it, Add some content, and Write it back to the file.
     
 #### API
 
