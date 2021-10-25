@@ -8,9 +8,32 @@ Follow this entry for ongoing updates and changes to the project or tools.
 
 Here you can find our [Developers Roadmap](https://trello.com/b/1V10E4IB/overwolf-roadmap).
 
-## Version 0.181 (In-Progress)
+## Version 0.184 (In-Progress)
 
 * Note that the work on the documentation for this version is still in-progress.
+* Note that iterations 182 to 184 were combined into a single iteration. 
+
+#### Docs
+
+* Soon.
+
+#### API
+
+* Warframe game events supports is back.
+
+#### Platform
+
+* Soon.
+
+#### Dev Console
+
+* Soon.
+
+#### Bug fixes
+
+* Soon.
+
+## Version 0.181 (Oct 2021)
 
 #### Docs
 
@@ -48,7 +71,7 @@ Here you can find our [Developers Roadmap](https://trello.com/b/1V10E4IB/overwol
 
 #### Dev Console
 
-* Soon.
+* Internal enhancments.
 
 #### Bug fixes
 
