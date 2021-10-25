@@ -24,6 +24,9 @@ Here you can find our [Developers Roadmap](https://trello.com/b/1V10E4IB/overwol
   * New supported game.
 * [Eternal Return](overwolf-games-events-eternal-return)
   * New supported game.
+* [Hearthstone](overwolf-games-events-hearthstone)
+  * New info update:
+    * arena
     
 #### API
 
