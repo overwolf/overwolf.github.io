@@ -19,7 +19,7 @@ Here you can find our [Developers Roadmap](https://trello.com/b/1V10E4IB/overwol
 
 #### API
 
-* Warframe game events supports is back.
+* Warframe game events support is back.
 
 #### Platform
 
