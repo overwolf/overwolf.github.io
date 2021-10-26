@@ -15,7 +15,9 @@ Here you can find our [Developers Roadmap](https://trello.com/b/1V10E4IB/overwol
 
 #### Docs
 
-* Soon.
+* A new I/O sample app in our [APIs sample apps repository](https://github.com/overwolf/apis-sample-apps). Demonstrates how to open and load a file to your app, Display it, Add some content, and Write it back to the file.
+* As for now, the [basic sample](../start/sample-app-overview#docsNav) app was built only for Fortnite. In the new version of the sample app, we added support for 14 more games to ease your learning:
+League of Legends, Valorant, Minecraft, CSGO, Escape From Tarkov, Overwatch, PUBG, Rainbow Six Siege, Splitgate: Arena Warfare, Path of Exile, Dota 2, Call of Duty: Warzone, and Warframe.
 
 #### API
 
