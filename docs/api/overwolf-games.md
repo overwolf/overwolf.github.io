@@ -723,7 +723,7 @@ An object containing the game info object in addition to a set of flags indicati
 | gameChanged           | bool     | Indicates if the gameInfo property represents a different game than before                          | 0.78  |
 | gameOverlayChanged    | bool     | Indicates if OW hooks input device changes when hooking into a game. If true, check if overlayInputHookError is true as well to identify that there is a hooking issue   | 0.160 |
 | overlayInputHookError | bool     | Indicates that a hooking error has occurred                                                         | 0.160 |
-| reason                | [GameInfoChangeReason](#gameinfochangereason-enum) enum   |  A detailed info about the hooking error reason    | 0.173 |
+| reason                | string[] |  A detailed info about the hooking error reason (one or more [GameInfoChangeReason](#gameinfochangereason-enum) enum)    | 0.173 |
 
 #### Event data example
 
