@@ -20,14 +20,14 @@ function TilesSection(props) {
   return (
     <section className="tiles">
       <ul className="container">
-        <Tile config={siteConfig} href={`${baseUrl}docs/start/app-creation-process`} header="Tutorials" imgSrc="img/tutorials.svg">
+        <Tile config={siteConfig} href={`${baseUrl}docs/start/app-creation-process`} header="Tutorials" imgSrc="img/tutorials.png">
           Newbie and pro web devs should start here
         </Tile>
-        <Tile config={siteConfig} href={`https://www.overwolf.com/appstore`} header="Get inspired" imgSrc="img/potion.svg" target="_blank">
+        <Tile config={siteConfig} href={`https://www.overwolf.com/appstore`} header="Get inspired" imgSrc="img/posion.png" target="_blank">
           See what others crafted
         </Tile>
-        <Tile config={siteConfig} href={`${baseUrl}docs/topics/best-practices-overview`} header="Read our scrolls" imgSrc="img/scroll.svg">
-          Documentation, API and stuff you can use
+        <Tile config={siteConfig} href={`${baseUrl}docs/topics/best-practices-overview`} header="Read our scrolls" imgSrc="img/scroll.png">
+          Documentation, API and<br /> stuff you can use
         </Tile>
       </ul>
     </section>
@@ -57,13 +57,13 @@ function SdkSection(props) {
       <div className="container">
         <h1>Learn more about the Overwolf SDK</h1>
         <ul>
-          <SdkItem config={siteConfig} classNameImg="extra-padding-on-desktop" imgSrc="img/create.svg">
-            <a href={`${baseUrl}docs/start/sdk-introduction`}>Easily create a desktop app with overlay capabilities</a>, using just HTML and JS. Your own desktop app, desktop icon, auto updates, anti-cheat compatibility and the works... we do it all for you
+          <SdkItem config={siteConfig} classNameImg="extra-padding-on-desktop" imgSrc="img/create.png">
+            <a href={`${baseUrl}docs/start/sdk-introduction`}>Easily create a desktop app</a> with overlay capabilities, using just HTML and JS. Your own desktop app, desktop icon, auto updates, anti-cheat compatibility and the works... we do it all for you
           </SdkItem>
-          <SdkItem className="reversed" config={siteConfig} imgSrc="img/events.svg">
+          <SdkItem className="reversed" config={siteConfig} imgSrc="img/events.png">
             <a href={`${baseUrl}docs/api/overwolf-games-events`}>Get access to real-time game events</a> for leading games and make your app as if it were integrated directly with the game itself
           </SdkItem>
-          <SdkItem config={siteConfig} classNameImg="extra-padding-on-desktop" imgSrc="img/monetize.svg">
+          <SdkItem config={siteConfig} classNameImg="extra-padding-on-desktop" imgSrc="img/monetize.png">
             <a href={`${baseUrl}docs/start/monetization-overview`}>Monetize your app</a> and make money by showing forgivable ads (= ads on loading screens, when gamers don’t have anything better to do anyway). It’s easier than implementing AdSense, not affected by ad blockers, not obtrusive and our team will optimize the experience with you
           </SdkItem>
         </ul>

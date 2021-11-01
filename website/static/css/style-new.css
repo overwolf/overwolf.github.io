@@ -7,10 +7,10 @@
 	transition: color .2s
 }
 .mainContainer .post a {
-  color: #E6004C;
+  color: var(--color-website-red);
 }
 .mainContainer .post a:hover {
-	color: #FF0055
+	color: var(--color-primary-hover)
 }
 
 .fixedHeaderContainer {
@@ -401,7 +401,7 @@ button.button-sso-login {
   width: 130px;
   height: 36px;
   line-height: 36px;
-	background: #E6004C;
+	background: var(--color-website-red);
 	text-align: center;
   color: var(--color-grey-light) !important;
   text-decoration: none;
@@ -409,7 +409,7 @@ button.button-sso-login {
 }
 
 button.button-sso-login:hover {
-	background: #FF0055
+	background: var(--color-primary-hover)
 }
 
 .wrapper {

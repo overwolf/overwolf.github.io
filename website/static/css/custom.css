@@ -92,7 +92,7 @@
 
 .admonition-important {
   background-color: #D3CFE5;
-  border-left: 2px solid #E6004C;
+  border-left: 2px solid var(--color-website-red);
 }
 
 .admonition-important h5 {
@@ -121,7 +121,7 @@
 /* brute-force make all blocks look the same */
 .admonition {
   /* background-color: #D3CFE5 !important; */
-  /* border-left: 4px solid #E6004C !important; */
+  /* border-left: 4px solid var(--color-website-red) !important; */
   color: #484266 !important;
 }
 

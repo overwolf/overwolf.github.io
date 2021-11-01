@@ -1,7 +1,7 @@
 
 .btn-pink,
 .mainContainer .post a.btn-pink {
-	background: #E6004C;
+	background: var(--color-website-red);
 	display: inline-block;
 	font-size: 16px;
 	line-height: 145%;
@@ -12,7 +12,7 @@
 
 .btn-pink:hover,
 .mainContainer .post a.btn-pink:hover {
-	background: #FF0055;
+	background: var(--color-primary-hover);
 	color: white;
 }
 
@@ -46,7 +46,7 @@
 }
 
 .getting-started-container h1 {
-	font-family: 'madera', sans-serif;
+	font-family: Madera,sans-serif;
 	font-weight: 300;
 	line-height: 36px;
 	font-size: 32px;

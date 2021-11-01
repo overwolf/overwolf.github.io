@@ -43,7 +43,6 @@ font-family: Madera,sans-serif;
 	outline: none;
 	vertical-align: baseline;
 	color: inherit;
-	background: transparent;
 	background-repeat: no-repeat;
 	font-size: inherit;
 	font-family: inherit;
@@ -142,8 +141,8 @@ html {
 body {
 	/* overflow: hidden; */
 	line-height: 1.5;
-	color: #0D0A1A;
-	background: #ffffff;
+	color: var(--color-bg);
+	background:  var(--light-mode-bg);
 	font-family: 'Lato', sans-serif;
 	font-size: 16px
 }
@@ -151,10 +150,14 @@ body {
 .body {
 	overflow: hidden;
 	line-height: 1.5;
-	color: #0D0A1A;
-	background: #ffffff;
+	color: var(--color-bg);
+	background:  var(--light-mode-bg);
 	font-family: 'Lato', sans-serif;
 	font-size: 16px
+}
+
+.docMainWrapper, .main-content {
+	color: var(--color-bg);
 }
 
 .body.admin-bar {
@@ -236,7 +239,7 @@ use {
 	line-height: 32px;
 	color: #d3eaed;
 	font-size: 24px;
-	font-family: 'madera', sans-serif;
+	font-family: Madera,sans-serif;
 	font-weight: 300
 }
 
@@ -804,12 +807,16 @@ use {
 .main-content h3,
 .main-content h4 {
 	margin-bottom: 5px;
-	color: #d3eaed
+	font-family: Madera,sans-serif;
+	font-weight: 700;
 }
 
 .main-content h1 {
 	font-size: 36px;
-	color: #0D0A1A
+	text-align: center;
+	font-size: 42px;
+	line-height: 50px;
+	margin: 0;
 }
 
 .main-content h2 {
@@ -863,12 +870,12 @@ use {
 }
 
 .main-content a {
-	color: #E6004C;
+	color: var(--color-website-red);
 	transition: color .2s
 }
 
 .main-content a:hover {
-	color: #FF0055
+	color: var(--color-primary-hover)
 }
 
 .main-content pre {
@@ -999,9 +1006,13 @@ use {
 .body.home .main-content .subtitle {
 	font-size: 24px;
 	line-height: 28px;
-	color: #0D0A1A;
-	font-family: 'madera', sans-serif;
-	font-weight: 300
+	font-family: Madera,sans-serif;
+	font-weight: 600;
+	font-size: 22px;
+	line-height: 26px;
+	text-align: center;
+	letter-spacing: 0.2em;
+	text-transform: uppercase;
 }
 
 .body.home .main-content ul {
@@ -1035,7 +1046,7 @@ use {
 .body.home .main-content section.easily .container header {
 	color: var(--color-headline);
 	font-size: 48px;
-	font-family: 'madera', sans-serif;
+	font-family: Madera,sans-serif;
 	font-weight: 700;
     line-height: 60px;
     max-width: 490px;
@@ -1070,55 +1081,51 @@ use {
 }
 
 .body.home .main-content section.tiles {
-  background: rgba(211, 207, 229, 0.5);
+ 
 }
 
 .body.home .main-content section.tiles ul {
 	display: flex;
 	justify-content: space-between;
-	padding: 20px 0;
-	min-width: 1220px
+	padding: 120px 0;
+	min-width: 1220px;
+	margin: 0;
 }
 
 .body.home .main-content section.tiles ul li>a {
-	display: grid;
-	grid-template-columns: auto 1fr;
-	grid-template-rows: auto 1fr;
-	grid-column-gap: 10px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
 	width: 380px;
-	height: 330px;
-	padding: 115px 50px;
+	height: 434px;
+	padding: 54px 75px;
 	color: inherit;
+	background: var(--color-headline);
 	transition: background .2s
 }
 
 .body.home .main-content section.tiles ul li>a:hover {
-	background: rgba(211, 207, 229, 1);
+	background: var(--card-hover);
 }
 
 .body.home .main-content section.tiles ul li>a .icon {
-	width: 100px;
-	height: 100px;
-	grid-row: 1 / 3;
-	grid-column: 1
+	width: 170px;
+	height: 170px;
 }
 
 .body.home .main-content section.tiles ul li>a header {
-	grid-column: 2;
-	grid-row: 1;
-	padding: 10px 0
+	padding: 30px 0 24px;
 }
 
 .body.home .main-content section.tiles ul li>a p {
-	grid-column: 2;
-	grid-row: 2;
-	margin: 0
+	font-size: 18px;
+	line-height: 30px;
+	letter-spacing: 0.01em;
 }
 
 .body.home .main-content section.sdk {
-	background: var(--color-headline);
-  padding-top: 50px;
-  padding-bottom: 50px;
+	padding-top: 70px;
 }
 
 .body.home .main-content section.sdk ul {
@@ -1132,16 +1139,25 @@ use {
 }
 
 .body.home .main-content section.sdk li:not(:last-child) {
-	border-bottom: 1px solid #0b181a
+	border-bottom: 1px solid var(--color-900)
 }
 
 .body.home .main-content section.sdk li p {
 	flex: 1;
-	padding: 0 20px 0 0
+	padding: 0 20px 0 0;
+	font-size: 18px;
+	line-height: 30px;
+	letter-spacing: 0.01em;
 }
 
-.body.home .main-content section.sdk li p .highlighted {
-	color: #00bcd4
+
+.body.home .main-content section.sdk li p a {
+	font-weight: 700;
+	color: var(--color-bg);
+}
+
+.body.home .main-content section.sdk li p a:hover {
+	text-decoration: underline;
 }
 
 .body.home .main-content section.sdk li.reversed {
@@ -1356,11 +1372,11 @@ use {
 
 .body.search .main-content h1 strong,
 .body.search .main-content h2 strong {
-	color: #00bcd4
+
 }
 
 .body.search .main-content p strong.search-highlight {
-	color: #d3eaed
+	
 }
 
 .body.search .main-content>header,
@@ -2621,7 +2637,7 @@ form.slack-invite {
 form.slack-invite .join {
 	margin-bottom: 5px;
 	font-size: 24px;
-	font-family: 'madera', sans-serif;
+	font-family: Madera,sans-serif;
 	font-weight: 300;
 	color: inherit;
 	text-align: left;
