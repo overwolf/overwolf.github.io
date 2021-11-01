@@ -1,27 +1,34 @@
 @font-face {
-	font-family: 'Klavika';
-	src: url("../fonts/klavika/KlavikaWebBasicLight.woff") format("woff");
+	font-family: 'madera';
+	src: url("../fonts/madera/Madera-UltraLight.woff") format("woff");
+	font-weight: 200;
+	font-style: normal
+}
+
+@font-face {
+	font-family: 'madera';
+	src: url("../fonts/madera/Madera-Light.woff") format("woff");
 	font-weight: 300;
 	font-style: normal
 }
 
 @font-face {
-  font-family: 'Klavika';
-	src: url("../fonts/klavika/KlavikaWebBasicRegular.woff") format("woff");
+  font-family: 'madera';
+	src: url("../fonts/madera/Madera-Regular.woff") format("woff");
 	font-weight: 400;
 	font-style: normal
 }
 
 @font-face {
-  font-family: 'Klavika';
-	src: url("../fonts/klavika/KlavikaWebBasicMedium.woff") format("woff");
+  font-family: 'madera';
+	src: url("../fonts/madera/Madera-Medium.woff") format("woff");
 	font-weight: 500;
 	font-style: normal
 }
 
 @font-face {
-  font-family: 'Klavika';
-	src: url("../fonts/klavika/KlavikaWebBasicBold.woff") format("woff");
+  font-family: 'madera';
+	src: url("../fonts/madera/Madera-Bold.woff") format("woff");
 	font-weight: 700;
 	font-style: normal
 }
@@ -176,7 +183,7 @@ th {
 
 h1,
 h2 {
-	font-family: 'Lato', 'Klavika', sans-serif;
+	font-family: 'Lato', 'madera', sans-serif;
 	font-weight: 300
 }
 
@@ -229,7 +236,7 @@ use {
 	line-height: 32px;
 	color: #d3eaed;
 	font-size: 24px;
-	font-family: 'Klavika', sans-serif;
+	font-family: 'madera', sans-serif;
 	font-weight: 300
 }
 
@@ -986,7 +993,7 @@ use {
 	font-size: 24px;
 	line-height: 28px;
 	color: #0D0A1A;
-	font-family: 'Klavika', sans-serif;
+	font-family: 'madera', sans-serif;
 	font-weight: 300
 }
 
@@ -1017,7 +1024,7 @@ use {
 .body.home .main-content section.easily .container header {
 	color: #F4F2FF;
 	font-size: 50px;
-	font-family: 'Klavika', sans-serif;
+	font-family: 'madera', sans-serif;
 	font-weight: 300;
 	line-height: 59px;
 	max-width: 374px;
@@ -2601,7 +2608,7 @@ form.slack-invite {
 form.slack-invite .join {
 	margin-bottom: 5px;
 	font-size: 24px;
-	font-family: 'Klavika', sans-serif;
+	font-family: 'madera', sans-serif;
 	font-weight: 300;
 	color: inherit;
 	text-align: left;

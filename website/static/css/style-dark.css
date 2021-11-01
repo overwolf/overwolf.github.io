@@ -209,12 +209,12 @@
 	display: block;
 	position: absolute;
 	top: 2px;
-	left: 200px;
+	left: 275px;
 	bottom: 0;
 	margin: auto 0;
 	z-index: 2;
-	width: 40px;
-	height: 20px;
+	width: 48px;
+	height: 21px;
 	cursor: pointer;
 }
 @media only screen and (max-width: 1150px) {
@@ -235,10 +235,10 @@
 .dark-mode-switch span {
 	display: block;
 	position: relative;
-	margin-top: 3px;
-	width: 40px;
-	height: 14px;
-	background: var(--color-700);
+	width: 48px;
+	height: 21px;
+	background: var(--color-800);
+	border: 1px solid var(--color-800);
 	border-radius: 14px;
 	line-height: 0;
 	font-size: 0;
@@ -247,22 +247,23 @@
 	pointer-events: none;
 }
 .dark-mode-switch input:checked + span {
-	background: var(--color-400);
+	background: var(--color-bg);
 }
 .dark-mode-switch span:before {
 	content: '';
 	display: block;
 	position: absolute;
-	top: -3px;
-	left: 0;
-	width: 20px;
-	height: 20px;
-	background: url('../img/dark-switch-off.svg') 0 0 no-repeat;
+	top: -1px;
+	left: -1px;
+	width: 19px;
+	height: 19px;
+	background: var(--color-bg);
+	border: 1px solid var(--color-800);
+	border-radius: 50%;
 	transition:
 		left .12s ease-in-out,
 		background-image .12s ease-in-out;
 }
 .dark-mode-switch input:checked + span:before {
-	left: 20px;
-	background-image: url('../img/dark-switch-on.svg');
+	left: 26px;
 }

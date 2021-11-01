@@ -41,6 +41,11 @@
   .navigationSlider .slidingNav ul li {
     margin-right: 42px;
   }
+
+  .navigationSlider .slidingNav ul li:last-child {
+    margin-right: 0px;
+  }
+
   .navigationSlider .slidingNav ul li a {
     color: var(--color-txt);
     padding: 0;
@@ -178,6 +183,9 @@ table th {
 .navigationSlider .slidingNav ul li a {
   color: var(--color-txt);
   background-color: transparent;
+  font-size: 15px;
+  font-family: 'madera';
+  padding-top: 5px;
 }
 
 .navigationSlider .slidingNav ul li a:hover {
@@ -202,10 +210,21 @@ input::placeholder {
   color: #797399;
 }
 
-input#search_input_react {
-  color: #797399;
+.reactNavSearchWrapper input#search_input_react {
+  color: var(--color-white);
   background: transparent;
+  width: 164px;
+  height: 23px;
+  font-size: 15px;
+  border: 1px solid var(--color-800);
+  border-radius: 0;
+  padding: 0 0 0 38px;
 }
+
+input#search_input_react::placeholder {
+  color: var(--color-800);
+}
+
 
 input#search_input_react:focus,
 input#search_input_react:active {
@@ -213,21 +232,35 @@ input#search_input_react:active {
   width: 170px;
 }
 
+
+/* @media only screen and (max-width: 1024px) {
+
+} */
+
+.navSearchWrapper {
+  padding-left: 0;
+}
+
 .navSearchWrapper::before {
-  border-color: #958FB2;
+  border-color: var(--color-txt);
   border-width: 2px;
-  width: 9px;
-  height: 9px;
+  width: 8px;
+  height: 8px;
+  left: 4px;
+  top: 11px;
 }
 
 .navSearchWrapper::after {
-  background: #958FB2;
-  height: 8px;
-  width: 2px;
+  background: var(--color-txt);
+  height: 6px; 
+  width: 2px; 
+  left: 15px; 
+  top: 12px; 
+  transform: rotate(-58deg);
 }
 
 .navSearchWrapper:hover::before {
-  border-color: #D3CFE5;
+  border-color: var(--color-grey-light);
 }
 
 .navSearchWrapper:hover::after {
@@ -235,11 +268,11 @@ input#search_input_react:active {
 }
 
 .navSearchWrapper:focus-within::before {
-  border-color: #D3CFE5;
+  border-color: var(--color-grey-light);
 }
 
 .navSearchWrapper:focus-within::after {
-  background: #D3CFE5;
+  background: var(--color-grey-light);
 }
 
 #blogHeader {
@@ -380,5 +413,14 @@ button.button-sso-login:hover {
 }
 
 .wrapper {
-  max-width: 1294px;
+  max-width: 1334px;
+}
+
+.fixedHeaderContainer header .headerTitleWithLogo {
+  display: none;
+}
+
+.fixedHeaderContainer header img {
+  width: 228px;
+  height: 50px;
 }
