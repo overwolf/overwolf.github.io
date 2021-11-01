@@ -17,8 +17,7 @@ function start() {
     } else {
         hljsStylesheetDark.disabled = true;
     }
-
-    setDarkMode(true);
+    
 }
 
 function onStorageEvent(e) {
@@ -38,7 +37,7 @@ function setupModeSwitchButton() {
 
     darkModeCheckbox.type = 'checkbox';
 
-    darkModeCheckbox.checked = true;
+    darkModeCheckbox.checked = localStorage.darkMode === '1';
 
     cont.appendChild(darkModeCheckbox);
 
