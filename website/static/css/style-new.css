@@ -16,6 +16,9 @@
 .fixedHeaderContainer {
   padding: 0.7%;
   box-shadow: 0 2px 4px -1px rgba(0,0,0,0.25);
+  background: var(--color-bg);
+  min-height: 76px;
+  padding-top: 22px;
 }
 
 .docMainWrapper,
@@ -35,14 +38,18 @@
       top: 60px;
   }
 
+  .navigationSlider .slidingNav ul li {
+    margin-right: 42px;
+  }
   .navigationSlider .slidingNav ul li a {
-    color: #B2ADCC;
+    color: var(--color-txt);
+    padding: 0;
   }
 
   .navigationSlider .slidingNav ul li a:hover,
   .navigationSlider .slidingNav ul li.siteNavItemActive a,
   .navigationSlider .slidingNav ul li.siteNavGroupActive a {
-    color: #F4F2FF;
+    color: var(--color-grey-light);
   }
 }
 
@@ -55,8 +62,14 @@
 }
 
 .navPusher {
-  background: #F4F2FF;
+  background: var(--color-grey-light);
   /* margin-top: 10px; */
+}
+
+@media only screen and (min-width: 1024px) {
+	.navPusher {
+    padding-top: 76px;
+	}
 }
 
 nav.toc {
@@ -163,7 +176,12 @@ table th {
 }
 
 .navigationSlider .slidingNav ul li a {
-  color: #B2ADCC;
+  color: var(--color-txt);
+  background-color: transparent;
+}
+
+.navigationSlider .slidingNav ul li a:hover {
+  background-color: transparent;
 }
 
 .box {
@@ -310,7 +328,7 @@ blockquote {
 
 /* Color for inactive dots in slick gallery */
 .slick-dots li button:before {
-  color: #B2ADCC !important;
+  color: var(--color-txt) !important;
 }
 
 /* Bottom margin for slick gallery */
@@ -352,11 +370,15 @@ button.button-sso-login {
   line-height: 36px;
 	background: #E6004C;
 	text-align: center;
-  color: #F4F2FF !important;
+  color: var(--color-grey-light) !important;
   text-decoration: none;
 	transition: background .2s
 }
 
 button.button-sso-login:hover {
 	background: #FF0055
+}
+
+.wrapper {
+  max-width: 1294px;
 }
