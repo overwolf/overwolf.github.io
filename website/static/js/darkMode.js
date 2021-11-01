@@ -32,7 +32,7 @@ function setupModeSwitchButton() {
     var cont = document.createElement('label');
 
     cont.classList.add('dark-mode-switch');
-    cont.title = 'Toggle dark mode';
+    cont.title = 'Toggle dark/light mode';
 
     darkModeCheckbox = document.createElement('input');
 
@@ -44,7 +44,7 @@ function setupModeSwitchButton() {
 
     var block = document.createElement('span');
 
-    block.innerText = 'Toggle dark mode';
+    block.innerText = 'Toggle dark/light mode';
 
     cont.appendChild(block);
 

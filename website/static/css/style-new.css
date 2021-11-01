@@ -177,14 +177,14 @@ table th {
 }
 
 .medium-widget {
-  padding: 0;
+  padding: 0; 
 }
 
 .navigationSlider .slidingNav ul li a {
   color: var(--color-txt);
   background-color: transparent;
   font-size: 15px;
-  font-family: 'madera';
+font-family: Madera,sans-serif;
   padding-top: 5px;
 }
 

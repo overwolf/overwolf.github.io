@@ -1,33 +1,33 @@
 @font-face {
-	font-family: 'madera';
+	font-family: Madera,sans-serif;
 	src: url("../fonts/madera/Madera-UltraLight.woff") format("woff");
 	font-weight: 200;
 	font-style: normal
 }
 
 @font-face {
-	font-family: 'madera';
+	font-family: Madera,sans-serif;
 	src: url("../fonts/madera/Madera-Light.woff") format("woff");
 	font-weight: 300;
 	font-style: normal
 }
 
 @font-face {
-  font-family: 'madera';
+font-family: Madera,sans-serif;
 	src: url("../fonts/madera/Madera-Regular.woff") format("woff");
 	font-weight: 400;
 	font-style: normal
 }
 
 @font-face {
-  font-family: 'madera';
+font-family: Madera,sans-serif;
 	src: url("../fonts/madera/Madera-Medium.woff") format("woff");
 	font-weight: 500;
 	font-style: normal
 }
 
 @font-face {
-  font-family: 'madera';
+font-family: Madera,sans-serif;
 	src: url("../fonts/madera/Madera-Bold.woff") format("woff");
 	font-weight: 700;
 	font-style: normal
@@ -168,7 +168,7 @@ body {
 }
 
 td {
-	background: #F4F2FF;
+	background: var(--color-headline);
 	padding: 5px 20px
 }
 
@@ -717,7 +717,7 @@ use {
 .site-footer li:first-child {
 	margin-bottom: 10px;
 	font-size: 14px;
-	color: #F4F2FF
+	color: var(--color-headline)
 }
 
 .site-footer li:first-child a,
@@ -731,7 +731,7 @@ use {
 }
 
 .site-footer a:hover {
-	color: #f4f2ff
+	color: var(--color-headline)
 }
 
 .main-content {
@@ -975,18 +975,25 @@ use {
 }
 
 .body.home .main-content a.btn {
-	display: inline-block;
-	min-width: 130px;
-	background: #E6004C;
-	padding: 6.5px 10px;
-	font-size: 18px;
-	text-align: center;
-	color: #F4F2FF;
-	transition: background .2s
+	font-family: Madera,sans-serif;
+    letter-spacing: 0.3px;
+    border: 1px solid var(--color-grey-4);
+    color: var(--color-txt);
+    padding: 16px 32px;
+    line-height: 17px;
+    height: 50px;
+    white-space: nowrap;
+    cursor: pointer;
+    display: inline-block;
+    text-decoration: none;
+    font-weight: 500;
+    background: none;
 }
 
 .body.home .main-content a.btn:hover {
-	background: #FF0055
+	border-color: var(--color-website-red);
+    background-color: var(--color-website-red);
+    color: var(--color-grey-light);
 }
 
 .body.home .main-content .subtitle {
@@ -1011,30 +1018,36 @@ use {
 }
 
 .body.home .main-content section.easily {
-	background: #161326;
+	background-image: url(../img/ow2021bg.jpg);
+	background-repeat: no-repeat;
+	background-position: bottom center;
+	height: calc(700px - 76px);
 	position: relative
 }
 
 .body.home .main-content section.easily .container {
-	padding: 125px 0;
+	padding: 166px 0;
 	position: relative;
-	z-index: 2
+	z-index: 2;
+	width: 100%; 
 }
 
 .body.home .main-content section.easily .container header {
-	color: #F4F2FF;
-	font-size: 50px;
+	color: var(--color-headline);
+	font-size: 48px;
 	font-family: 'madera', sans-serif;
-	font-weight: 300;
-	line-height: 59px;
-	max-width: 374px;
+	font-weight: 700;
+    line-height: 60px;
+    max-width: 490px;
 	padding-bottom: 30px
 }
 
 .body.home .main-content section.easily .container p {
-	max-width: 353px;
-  margin-bottom: 40px;
-  color: #958FB2;
+	max-width: 470px;
+	margin-bottom: 32px;
+	font-size: 18px;
+	line-height: 30px;
+	color: var(--color-txt);
 }
 
 .body.home .main-content section.easily .lightning {
@@ -1103,7 +1116,7 @@ use {
 }
 
 .body.home .main-content section.sdk {
-	background: #F4F2FF;
+	background: var(--color-headline);
   padding-top: 50px;
   padding-bottom: 50px;
 }
@@ -1166,7 +1179,7 @@ use {
 }
 
 .body.home .main-content section.blog {
-	background: #F4F2FF;
+	background: var(--color-headline);
   /* padding: 65px 0 */
   padding-top: 65px;
   padding-bottom: 65px;
@@ -2980,7 +2993,7 @@ form.slack-invite .result.success {
 	position: relative;
 	margin: 0;
 	width: 100%;
-	border-top: 1px solid #F4F2FF;
+	border-top: 1px solid var(--color-headline);
 	padding: 11px 0 12px 45px;
 	line-height: 18px;
 	font-size: 14px;

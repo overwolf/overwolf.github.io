@@ -264,6 +264,10 @@
 		left .12s ease-in-out,
 		background-image .12s ease-in-out;
 }
+
+.dark-mode-switch:hover span:before {
+	background: var(--color-primary); 
+}
 .dark-mode-switch input:checked + span:before {
 	left: 26px;
 }
