@@ -280,6 +280,7 @@ Possible Scene values:
 * "Ascent" - Ascent map
 * "Port" - Icebox map
 * "Foxtrot" - Breeze map
+* "Canyon" - Fracture map
 * "Range" - Practice Range map
 * "CharacterSelectPersistentLevel" - Character Selection
 
