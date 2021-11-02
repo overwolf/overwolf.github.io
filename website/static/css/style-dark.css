@@ -266,7 +266,7 @@
 }
 
 .dark-mode-switch:hover span:before {
-	background: var(--color-primary); 
+	background: var(--color-500); 
 }
 .dark-mode-switch input:checked + span:before {
 	left: 26px;

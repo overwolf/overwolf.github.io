@@ -1,7 +1,3 @@
-.site-footer a:active, .site-footer a:focus {
-  color: #958fb2 !important;
-}
-
 .mainContainer a {
   text-decoration-line: underline;
 	transition: color .2s
@@ -66,10 +62,6 @@
   transform: none;
 }
 
-.navPusher {
-  background: var(--color-grey-light);
-  /* margin-top: 10px; */
-}
 
 @media only screen and (min-width: 1024px) {
 	.navPusher {
@@ -184,7 +176,7 @@ table th {
   color: var(--color-txt);
   background-color: transparent;
   font-size: 15px;
-font-family: Madera,sans-serif;
+font-family: 'Madera', sans-serif;
   padding-top: 5px;
 }
 
@@ -311,7 +303,7 @@ input#search_input_react:active {
 .medium-widget-article__title {
   color: var(	--color-bg) !important;
   order: 1;
-  font-family: Madera,sans-serif;
+  font-family: 'Madera', sans-serif;
   font-size: 20px;
   line-height: 23px;
   margin: 0 0 24px !important;
@@ -453,4 +445,12 @@ button.button-sso-login:hover {
 .fixedHeaderContainer header img {
   width: 228px;
   height: 50px;
+}
+
+#back-to-top {
+  background: var(--color-150);
+}
+
+#back-to-top:hover {
+  background: var(--color-200);
 }
