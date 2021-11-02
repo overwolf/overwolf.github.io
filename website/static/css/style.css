@@ -185,13 +185,11 @@ th {
 }
 
 h1,
-h2 {
-	font-family: 'Lato', 'madera', sans-serif;
-	font-weight: 300
+h2, h3, h4, h5 {
+	font-family: Madera,sans-serif;
 }
 
 article h2 {
-  font-family: 'Lato';
   font-style: normal;
   font-weight: normal;
   font-size: 24px;
@@ -816,7 +814,7 @@ use {
 	text-align: center;
 	font-size: 42px;
 	line-height: 50px;
-	margin: 0;
+	margin: 0 0 50px 0;
 }
 
 .main-content h2 {
@@ -1025,7 +1023,7 @@ use {
 }
 
 .body.home .main-content section .container {
-	width: 80%
+	width: 92%;
 }
 
 .body.home .main-content section.easily {
@@ -1033,7 +1031,8 @@ use {
 	background-repeat: no-repeat;
 	background-position: bottom center;
 	height: calc(700px - 76px);
-	position: relative
+	position: relative;
+	background-color: var(--color-bg);
 }
 
 .body.home .main-content section.easily .container {
@@ -1126,6 +1125,7 @@ use {
 
 .body.home .main-content section.sdk {
 	padding-top: 70px;
+	padding-bottom: 142px;
 }
 
 .body.home .main-content section.sdk ul {
@@ -1148,6 +1148,7 @@ use {
 	font-size: 18px;
 	line-height: 30px;
 	letter-spacing: 0.01em;
+	flex-basis: 88px;
 }
 
 
@@ -1195,10 +1196,9 @@ use {
 }
 
 .body.home .main-content section.blog {
-	background: var(--color-headline);
-  /* padding: 65px 0 */
-  padding-top: 65px;
-  padding-bottom: 65px;
+	background: var(--color-grey-light);
+  padding-top: 128px;
+  padding-bottom: 128px;
 }
 
 .body.home .main-content section.blog .container {

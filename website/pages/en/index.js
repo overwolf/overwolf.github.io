@@ -107,7 +107,7 @@ function BlogSection(props) {
   return (
     <section className="blog">
       <div className="container">
-        <header className="subtitle" id="blogHeader">The latest from our blog</header>
+        <h3 id="blogHeader">The latest from our blog</h3>
         <div id="medium-widget"></div>
         <script src="https://medium-widget.pixelpoint.io/widget.js"></script>
         <script src="js/blog.js"></script>
@@ -125,8 +125,8 @@ class Index extends React.Component {
           <EasilySection config={siteConfig}></EasilySection>
           <TilesSection config={siteConfig}></TilesSection>
           <SdkSection config={siteConfig}></SdkSection>
-          <GameDevSection config={siteConfig}></GameDevSection>
           <BlogSection></BlogSection>
+          <GameDevSection config={siteConfig}></GameDevSection>
         </main>
       </div>
     );
