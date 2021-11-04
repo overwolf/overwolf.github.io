@@ -30,7 +30,7 @@ os-theme-overwolf
   content: '';
   display: block;
   position: absolute;
-  background: #797399;
+  background: var(--color-600);
 }
 .os-theme-overwolf > .os-scrollbar-horizontal > .os-scrollbar-track:before {
   left: 5px;
@@ -81,14 +81,14 @@ os-theme-overwolf
   bottom: 4px;
   left: 4px;
   right: 4px;
-  background: #958FB2;
+  background: var(--color-600);
 }
 .os-theme-overwolf.os-host-scrolling > .os-scrollbar > .os-scrollbar-track > .os-scrollbar-handle:before {
-  background: #958FB2;
+  background: var(--color-600);
 }
 .os-theme-overwolf > .os-scrollbar > .os-scrollbar-track > .os-scrollbar-handle:hover:before,
 .os-theme-overwolf > .os-scrollbar > .os-scrollbar-track > .os-scrollbar-handle.active:before {
-  background: #B2ADCC;
+  background: var(--color-600);;
 }
 .os-theme-overwolf > .os-scrollbar-horizontal > .os-scrollbar-track > .os-scrollbar-handle {
   height: 100%;
@@ -104,3 +104,8 @@ os-theme-overwolf
 .os-theme-overwolf.os-host-transition > .os-scrollbar > .os-scrollbar-track:before {
   transition: margin 0.3s, height 0.3s, width 0.3s, top 0.3s, right 0.3s, bottom 0.3s, left 0.3s;
 }
+
+
+/* .docMainWrapper.wrapper {
+  max-width: 1512px;
+} */

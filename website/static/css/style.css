@@ -191,11 +191,17 @@ h2, h3, h4, h5 {
 
 article h2 {
   font-style: normal;
-  font-weight: normal;
-  font-size: 24px;
-  line-height: 29px;
-  color: #161326;
+  font-size: 20px;
+  line-height: 23px;
 }
+
+article p {
+	font-size: 18px;
+	line-height: 23px;
+	line-height: 30px;
+	letter-spacing: 0.01em;
+	margin-bottom: 30px;
+  }
 
 ::-moz-focus-inner {
 	padding: 0;
@@ -989,8 +995,9 @@ use {
 	display: flex;
 	justify-content: space-between;
 	padding: 120px 0;
-	min-width: 1220px;
+	min-width: 1280px;
 	margin: 0;
+	gap: 70px;
 }
 
 .body.home .main-content section.tiles ul li>a {

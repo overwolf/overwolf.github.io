@@ -1,3 +1,20 @@
+.theme-dark .body {
+    color: var(--color-txt);
+    background: var(--color-bg);
+}
+
+.theme-dark .body.home .main-content section.sdk li p, .theme-dark .body.home .main-content section.game-dev p {
+	color: var(--color-txt);
+}
+
+.theme-dark .body.home .main-content a.btn {
+	color: var(--color-grey);
+}
+
+.theme-dark .body.home .main-content section.sdk li p a {
+	color: var(--color-headline);
+}
+
 .theme-dark .navPusher {
 	background: var(--color-100);
 }
@@ -6,25 +23,6 @@
 .theme-dark .main-content,
 .theme-dark .getting-started-container p {
 	color: var(--color-800);
-}
-
-.theme-dark::-webkit-scrollbar-track,
-.theme-dark ::-webkit-scrollbar-track,
-.theme-dark::-webkit-scrollbar-button,
-.theme-dark ::-webkit-scrollbar-button {
-	background-color: var(--color-100);
-}
-.theme-dark::-webkit-scrollbar-thumb,
-.theme-dark ::-webkit-scrollbar-thumb {
-	background-color: var(--color-600);
-}
-.theme-dark::-webkit-scrollbar-thumb:hover,
-.theme-dark ::-webkit-scrollbar-thumb:hover {
-	background-color: var(--color-700);
-}
-
-.theme-dark {
-	scrollbar-color: var(--color-600) var(--color-100);
 }
 
 @media only screen and (min-width: 1024px) {
@@ -58,11 +56,11 @@
 .theme-dark .mainContainer .post a.btn-pink { color: white; }
 .theme-dark .main-content a { color: #8E7CBF; }
 .theme-dark .main-content a:hover { color: #B2A1E5; }
+
 .theme-dark .mainContainer h1,
 .theme-dark .mainContainer h2,
 .theme-dark .mainContainer h3,
 .theme-dark .mainContainer h4,
-.theme-dark .main-content h1,
 .theme-dark .main-content h2,
 .theme-dark .main-content h3,
 .theme-dark .main-content h4,
@@ -70,8 +68,13 @@
 .theme-dark .getting-started-container h2,
 .theme-dark .getting-started-container h3,
 .theme-dark .getting-started-container .icons-list li h3 {
-	color: var(--color-900);
+	color: var(--color-headline);
 }
+
+.theme-dark .main-content h1 {
+	color: var(--color-grey-light);
+}
+
 .theme-dark th,
 .theme-dark td {
 	border-color: var(--color-100);
@@ -96,34 +99,35 @@
 	fill: var(--color-900)
 }
 
-.theme-dark .body.home .main-content section.tiles {
-	background: var(--color-200);
+.theme-dark .body.home .main-content section.tiles ul li>a {
+	background: var(--card-black);
 }
+
 .theme-dark .body.home .main-content section.tiles ul li>a:hover {
-	background: var(--color-300);
-}
-.theme-dark .body.home .main-content .subtitle {
-	color: var(--color-900);
-}
-.theme-dark .body.home .main-content section.sdk {
-	background: var(--color-100);
-}
-.theme-dark .body.home .main-content section.game-dev {
 	background: var(--color-200);
+}
+.theme-dark .body.home .main-content .subtitle, .theme-dark .body.home .main-content section.tiles ul li>a p {
+	color: var(--color-grey-light-2);
+}
+
+.theme-dark .body.home .main-content section.game-dev {
+	background: var(--color-100);
 }
 .theme-dark .body.home .main-content section.blog {
-	background: var(--color-100);
+	background: var(--color-200);
 }
 .theme-dark .body.home .main-content section.sdk li:not(:last-child) {
-	border-bottom-color: var(--color-500);
+	border-bottom-color: var(--color-800);
 }
 .theme-dark #blogHeader,
 .theme-dark .medium-widget-article__title {
+	color: var(--color-grey-light-2) !important;
+}
+.theme-dark .medium-widget-article__date {
 	color: var(--color-900) !important;
 }
-.theme-dark .medium-widget-article__description,
-.theme-dark .medium-widget-article__date {
-	color: var(--color-600) !important;
+.theme-dark .medium-widget-article__description{
+	color: var(--color-txt) !important;
 }
 
 .theme-dark .docs-prevnext .button {

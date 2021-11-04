@@ -51,6 +51,7 @@
   .navigationSlider .slidingNav ul li.siteNavItemActive a,
   .navigationSlider .slidingNav ul li.siteNavGroupActive a {
     color: var(--color-grey-light);
+    background-color: transparent;
   }
 }
 
@@ -85,11 +86,18 @@ nav.toc {
 }
 
 .toc .toggleNav .navGroup .navGroupCategoryTitle {
-  border-left: 4px solid transparent;
-  padding: 5px 0px 5px 21px;
-  color: #332E4D;
+  border-left: 7px solid transparent;
+  padding: 5px 0px 5px 12px;
+  color: var(--color-500);
   font-size: 16px;
 }
+
+.toc .toggleNav .navGroup .navGroupCategoryTitle.is-active {
+  border-left: 7px solid var(--color-primary);
+  color: var(--color-bg);
+  font-weight: 700;
+}
+
 .toc .toggleNav .navGroup .navGroupCategoryTitle:hover {
   color: #161326;
 }

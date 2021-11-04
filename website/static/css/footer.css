@@ -18,7 +18,7 @@
   margin-left: -22px;
   margin-top: 0;
   margin-right: 152px;
-  color: var(--color-950);
+  color: var(--color-grey);
 }
 
 .site-footer .site-footer-nav nav {
@@ -37,7 +37,7 @@
 .site-footer .site-footer-nav nav > ul h5 {
   font-size: 16px;
   line-height: 24px;
-  color: var(--color-950);
+  color: var(--color-grey);
   font-weight: bold;
 }
 
@@ -92,6 +92,7 @@
   display: flex;
   padding: 0;
   list-style: none;
+  margin: 0;
 }
 
 .site-footer .site-footer-social .social-links li + li {

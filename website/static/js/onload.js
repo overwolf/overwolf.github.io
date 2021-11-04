@@ -3,7 +3,7 @@ function addSiderbarHighlight() {
   if (!selectedListItem) return;
   const listParent = selectedListItem.parents('ul').last().parent();
   const categoryTitle = listParent.children('.navGroupCategoryTitle').last();
-  categoryTitle.css('border-left', '4px solid #E5004C');
+  categoryTitle.addClass('is-active');
 }
 
 function moveEditButton() {
