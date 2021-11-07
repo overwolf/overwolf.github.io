@@ -140,6 +140,7 @@ a.edit-page-link {
   border-radius: 0px;
   text-align: center;
   font-weight: 600;
+  margin-left: 22px;
 }
 
 a.edit-page-link:hover {
@@ -151,6 +152,27 @@ a.edit-page-link:hover {
 
 a.active-highlight {
   color: var(--color-bg) !important
+}
+
+.onPageNav {
+  position: relative;
+  top: 50px;
+  overflow-y: unset;
+}
+
+.onPageNav > .toc-headings {
+  border: none;
+  padding-left: 22px;
+}
+
+.onPageNav::before {
+  content: '';
+	position: absolute;
+	height: 120%;
+	width: 1px;
+  left: 0;
+  top: 5px;
+	background-color: var(--color-600);
 }
 
 .onPageNav a {

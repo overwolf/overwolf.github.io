@@ -3381,3 +3381,17 @@ form.slack-invite .result.success {
 .body.admin-bar .owdev-var {
 	display: block
 }
+
+.docMainWrapper .mainContainer {
+	position: relative;
+}
+
+.docMainWrapper .mainContainer::before {
+	content: '';
+	position: absolute;
+	height: 95%;
+	width: 1px;
+	left: -31px;
+	top: 50px;
+	background-color: var(--color-600);
+}
