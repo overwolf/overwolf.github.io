@@ -135,7 +135,8 @@ samp {
 html {
 	position: relative;
 	overflow-y: scroll;
-	min-height: 100vh
+	min-height: 100vh;
+	scroll-behavior: smooth;
 }
 
 body {
@@ -202,6 +203,30 @@ article p {
 	letter-spacing: 0.01em;
 	margin-bottom: 30px;
   }
+
+article ul {
+    list-style: none;
+    padding-top: 12px;
+    padding-bottom: 12px;
+	padding-left: 24px;
+}
+
+article ul li {
+    position: relative;
+	font-size: 18px;
+	line-height: 30px;
+}
+
+article ul li:before {
+    content: "";
+    background-color: var(--color-primary);
+    width: 8px;
+    height: 8px;
+    position: absolute;
+    border-radius: 50%;
+    left: -24px;
+    top: 10px;
+}
 
 ::-moz-focus-inner {
 	padding: 0;

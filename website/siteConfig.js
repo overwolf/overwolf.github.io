@@ -60,8 +60,8 @@ const siteConfig = {
 
   /* Colors for website */
   colors: {
-    primaryColor: '#201C33',
-    secondaryColor: '#201C33',
+    primaryColor: '#060606',
+    secondaryColor: '#606060',
   },
 
 //  Google Analytics tracking ID to track page views:

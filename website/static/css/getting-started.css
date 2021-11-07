@@ -50,7 +50,7 @@
 	font-weight: 300;
 	line-height: 36px;
 	font-size: 32px;
-	color: #161326;
+	color: var(--color-bg);
 }
 
 .getting-started-container h2 {
@@ -58,7 +58,7 @@
 	font-weight: 400;
 	font-size: 24px;
 	line-height: 29px;
-	color: #161326;
+	color: var(--color-bg);
 }
 
 @media (max-width: 1024px) {

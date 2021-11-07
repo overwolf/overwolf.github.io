@@ -105,7 +105,7 @@ nav.toc {
 }
 
 .toc .toggleNav .navGroup .navGroupCategoryTitle:hover {
-  color: #161326;
+  color: var(--color-bg);
 }
 
 .collapsible  {
@@ -122,35 +122,53 @@ nav.toc {
 }
 
 a.edit-page-link {
+  font-family: 'Madera', sans-serif;
   float: none;
-  font-size: 10px;
-  font-weight: normal;
-  margin-left: 15px;
-  margin-top: 3px;
   text-decoration: none;
-  padding: 8px 32px;
-  font-family: 'Lato';
-  font-size: 16px;
-  font-style: normal;
-  font-weight: normal;
   text-transform: none;
-  border: 1px solid #797399;
   box-sizing: border-box;
-  color: #0D0A1A;
   border-radius: 0px;
   display: none;
+  font-size: 16px;
+  text-decoration: none;
+  border: 1px solid var(--color-600);
+  padding: 5px 16px;
+  min-width: 65px;
+  min-height: 32px;
+  box-sizing: border-box;
+  color: var(--color-600);
+  border-radius: 0px;
+  text-align: center;
+  font-weight: 600;
 }
 
 a.edit-page-link:hover {
-  background: #797399;
+  border: 1px solid var(--color-bg);
+  color: var(--color-600);
+  background-color: transparent;
+  font-weight: 600;
 }
 
 a.active-highlight {
-  color: #161326 !important
+  color: var(--color-bg) !important
 }
 
 .onPageNav a {
-  color: #958FB2;
+  color: var(--color-600);
+  font-size: 14px;
+  line-height: 144%;  
+  font-family: 'Madera', sans-serif;
+}
+
+.onPageNav .toc-headings > li > a.active {
+  font-size: 14px;
+  line-height: 24px;
+  color: var(--color-bg);
+  font-weight: normal;
+}
+
+.onPageNav a:hover {
+  color: var(--color-bg);
 }
 
 .hash-link-icon {
@@ -213,15 +231,15 @@ font-family: 'Madera', sans-serif;
 }
 
 input::-webkit-input-placeholder {
-  color: #797399;
+  color: var(--color-300);
 }
 
 input::-moz-placeholder {
-  color: #797399;
+  color: var(--color-300);
 }
 
 input::placeholder {
-  color: #797399;
+  color: var(--color-300);
 }
 
 .reactNavSearchWrapper input#search_input_react {
@@ -347,19 +365,23 @@ input#search_input_react:active {
 
 .docs-prevnext .button {
   border: none;
-  color: #797399;
+  color: var(--color-600);
   text-transform: none;
   transition: color .3s ease-in-out;
 }
 
 .docs-prevnext .button:hover {
   background: none;
-  color: #332E4D;
+  color: var(--color-bg);
 }
 
 .docs-prevnext {
-  border-top: 1px solid #797399;
+  border-top: 1px solid var(--color-300);
   padding-top: 20px;
+}
+
+.docLastUpdate {
+  color: var(--color-600);
 }
 
 i.arrow {
@@ -414,7 +436,7 @@ blockquote {
 }
 
 .slick-slider a {
-  color: #797399;
+  color: var(--color-300);
   font-size: 14px;
   font-family: 'Lato';
   line-height: 40px;
