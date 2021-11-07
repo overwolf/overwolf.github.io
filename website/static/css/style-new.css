@@ -141,6 +141,7 @@ a.edit-page-link {
   text-align: center;
   font-weight: 600;
   margin-left: 22px;
+  transition: all 150ms ease;
 }
 
 a.edit-page-link:hover {
