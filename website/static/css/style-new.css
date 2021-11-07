@@ -1,9 +1,10 @@
 .mainContainer a {
   text-decoration-line: underline;
-	transition: color .2s
+	transition: color .2s;
 }
 .mainContainer .post a {
   color: var(--color-website-red);
+  color: var(--color-bg);
 }
 .mainContainer .post a:hover {
 	color: var(--color-primary-hover)
@@ -75,14 +76,18 @@ nav.toc {
 }
 
 .toc .toggleNav ul li a {
-  color: #797399;
-  padding-left: 22px;
-  font-size: 14px;
+  color: var(--color-600);
+  padding: 0px 0px 4px 30px;
+  font-size: 16px;
+  letter-spacing: 0.01em;
 }
 
-.toc .toggleNav ul li a:hover,
+.toc .toggleNav ul li a:hover {
+  color: var(--color-primary);
+}
+
 .toc .toggleNav ul li.navListItemActive a {
-  color: #161326;
+  color: var(--color-primary);
 }
 
 .toc .toggleNav .navGroup .navGroupCategoryTitle {
@@ -90,6 +95,7 @@ nav.toc {
   padding: 5px 0px 5px 12px;
   color: var(--color-500);
   font-size: 16px;
+  letter-spacing: 0.01em;
 }
 
 .toc .toggleNav .navGroup .navGroupCategoryTitle.is-active {
@@ -100,6 +106,14 @@ nav.toc {
 
 .toc .toggleNav .navGroup .navGroupCategoryTitle:hover {
   color: #161326;
+}
+
+.collapsible  {
+	fill: var(--color-500);
+}
+
+.toc .toggleNav .navGroup .navGroupCategoryTitle.is-active .arrow svg path[fill="#565656"] {
+  fill: var(--color-bg);
 }
 
 .toc .toggleNav .navGroup .navGroupSubcategoryTitle {
