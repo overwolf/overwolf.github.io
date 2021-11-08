@@ -231,15 +231,15 @@ a.active-highlight {
 }
 
 html:not(.theme-dark) .hljs {
-  background: #D3CFE5;
+  background: var(--card-hover);
 }
 
 code:not(.hljs) {
-  background-color: #D3CFE5;
+  background-color: var(--card-hover);
 }
 code,
 .hljs {
-  color: #484266;
+  color: var(--color-bg);
 }
 
 code a {
@@ -247,7 +247,11 @@ code a {
 }
 
 table th {
-  background: #D3CFE5;
+  background: var(--color-txt);
+}
+
+table th, table td {
+  border-color: var(--color-grey);
 }
 
 .gep-game .search-game .search-submit img {
@@ -260,7 +264,7 @@ table th {
   margin: auto;
   width: 30px;
   height: 30px;
-  fill: currentColor;
+  filter: grayscale(100%);
 }
 
 .medium-widget {
@@ -459,30 +463,15 @@ i.arrow {
 }
 
 blockquote {
-  background-color: #D3CFE5;
-  border-left: 2px solid #FF3434;
+  background-color: var(--card-hover);
+  border-left: 2px solid var(--color-800);;
   padding: 15px 30px 15px 15px;
-  color: #484266;
+  color: var(--color-bg);
 }
 
 /* Make space between images */
 .slick-slide {
   margin-right: 10px;
-}
-
-/* Color for slick gallery prev/next arrows */
-.slick-prev:before, .slick-next:before {
-  color: #958FB2 !important;
-}
-
-/* Color for active dot in slick gallery */
-.slick-dots li.slick-active button:before {
-  color: #958FB2 !important;
-}
-
-/* Color for inactive dots in slick gallery */
-.slick-dots li button:before {
-  color: var(--color-txt) !important;
 }
 
 /* Bottom margin for slick gallery */

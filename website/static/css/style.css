@@ -211,10 +211,19 @@ article ul {
 	padding-left: 24px;
 }
 
+article ul p {
+	margin-top: 0;
+	margin-bottom: 10px;
+}
+
 article ul li {
-    position: relative;
+  position: relative;
 	font-size: 18px;
 	line-height: 30px;
+}
+
+article ul li ol li::before {
+	display: none;
 }
 
 article ul li:before {
@@ -2693,6 +2702,10 @@ form.slack-invite .result.success {
 	margin: 0 0 20px
 }
 
+.gep-games-list ul.list li::before, .gep-games-list ul.legend li::before  {
+	display: none;
+}
+
 @media (min-width: 650px) {
 	.gep-games-list ul.list li {
 		width: calc(50% - 15px)
@@ -2716,7 +2729,7 @@ form.slack-invite .result.success {
 	position: relative;
 	padding: 14px 35px 16px 55px;
 	color: inherit;
-	background: #D3CFE5;
+	background: var(--card-hover);
 	text-decoration: none;
 	/* box-shadow: 0px 0px 20px #050c0d; */
 	transition: all .15s ease
@@ -2728,7 +2741,7 @@ form.slack-invite .result.success {
 }
 
 .gep-games-list ul.list li a:hover {
-	background: #B2ADCC
+	background: var(--color-1000);
 }
 
 .gep-games-list ul.list li a:before {
@@ -2891,7 +2904,7 @@ form.slack-invite .result.success {
 
 .gep-game .search-game:hover .search-input,
 .gep-game .search-game .search-input:focus {
-	background: #B2ADCC
+	background: var(--card-hover)
 }
 
 .gep-game .search-game .search-submit {
@@ -2947,7 +2960,7 @@ form.slack-invite .result.success {
 .gep-game .game-data h4 {
 	margin: 0;
 	padding: 20px 0 15px 20px;
-	background: #D3CFE5;
+	background: var(--card-hover);
 	font-weight: 400;
 	font-size: 18px
 }
@@ -2956,7 +2969,7 @@ form.slack-invite .result.success {
 	display: flex;
 	flex-direction: column;
 	padding: 0;
-	background: #D3CFE5
+	background: var(--card-hover);
 }
 
 .gep-game .game-data li {
@@ -2964,7 +2977,7 @@ form.slack-invite .result.success {
 	position: relative;
 	margin: 0;
 	width: 100%;
-	border-top: 1px solid var(--color-headline);
+	border-top: 1px solid var(--color-1000);
 	padding: 11px 0 12px 45px;
 	line-height: 18px;
 	font-size: 14px;
@@ -3292,6 +3305,10 @@ form.slack-invite .result.success {
 	cursor: pointer
 }
 
+.slick-dots li:before {
+	display: none;
+}
+
 .slick-dots li button {
 	border: 0;
 	background: transparent;
@@ -3333,7 +3350,7 @@ form.slack-invite .result.success {
 }
 
 .slick-dots li.slick-active button:before {
-	color: red;
+	color: var(--color-primary);
 	opacity: .75
 }
 

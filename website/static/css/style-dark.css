@@ -87,6 +87,23 @@
   background-color: var(--color-300);
 }
 
+.theme-dark pre .btnIcon {
+	color: var(--color-grey);
+}
+
+.theme-dark .mainContainer .admonition-content p a {
+  color: var(--color-300);
+}
+
+.theme-dark .mainContainer ul, .theme-dark .mainContainer ol, .theme-dark .mainContainer pre{
+	color: var(--color-txt);
+}
+
+.theme-dark .slick-prev:before,
+.theme-dark .slick-next:before {
+	color: var(--color-primary-hover)
+}
+
 .theme-dark .mainContainer .post a { color: var(--color-headline); }
 .theme-dark .mainContainer .post a:hover { color: var(--color-primary-hover); }
 .theme-dark .slick-slider a:hover {	color: var(--color-primary-hover); }
@@ -122,10 +139,12 @@
 }
 .theme-dark td {
 	background: var(--color-200);
+	color: var(--color-txt);
 }
+
 .theme-dark code:not(.hljs) {
-	color: var(--color-900);
-	background-color: var(--color-300);
+	color: var(--color-300);
+	background-color: var(--color-grey);
 }
 .theme-dark .hljs {
 	color: var(--color-600);
@@ -174,12 +193,12 @@
 }
 
 .theme-dark .gep-games-list ul.list li a {
-	color: var(--color-600);
+	color: var(--color-grey);
 	background: var(--color-200);
 }
 .theme-dark .gep-games-list ul.list li a:hover {
 	color: var(--color-900);
-	background: #332E4C;
+	background: var(--color-300);
 }
 .theme-dark .gep-game .search-game {
 	color: var(--color-500);
