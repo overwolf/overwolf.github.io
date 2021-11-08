@@ -12,7 +12,7 @@ class GettingStarted extends React.Component {
           <article className="getting-started-article">
 
             <div className="video-outer-area">
-                <h2>Overview</h2>
+                <h2>An introduction to Overwolf apps</h2>
 
                 <p>Overwolf apps are in-game apps created by independent creators or teams, improving the game experience of the biggest games out there. Overwolf overlay apps help gamers play smarter and have more fun by making useful information and tools available in-game</p>
                 {/*
@@ -69,7 +69,7 @@ class GettingStarted extends React.Component {
             <h2>Where apps live</h2>
             <p className="what-can-apps-do-intro">Apps can run in multiple modes which you should keep in mind when thinking about your concept:</p>
 
-            <ul className="icons-list what-apps-do-list">
+            <ul className="icons-list were-apps-live-list">
                 <li className="in-game">
                     <h3>In-game</h3>
                     <p>Apps can appear during loading times, in the lobby, during respawn timers or otherwise when the player is free and not busy playing.<br/> A hotkey enables or disables in-game apps whenever the user wishes it.</p>
