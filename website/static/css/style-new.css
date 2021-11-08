@@ -1,3 +1,21 @@
+img[alt*="light-theme"], img[alt*="dark-theme"] {
+  margin: inherit;
+}
+
+.theme-dark img[alt*="light-theme"], img[alt*="dark-theme"] {
+  display: none;
+}
+
+.theme-dark img[alt*="dark-theme"] {
+  display: block;
+}
+
+div#docsNav .os-scrollbar-track-off {
+  width: 12px;
+  position: fixed;
+  top: 122px;
+}
+
 .mainContainer a {
   text-decoration-line: underline;
 	transition: color .2s;
@@ -156,14 +174,28 @@ a.active-highlight {
 }
 
 .onPageNav {
-  position: relative;
-  top: 50px;
+  position: sticky;
+  top: 128px;
   overflow-y: unset;
 }
 
 .onPageNav > .toc-headings {
   border: none;
   padding-left: 22px;
+  overflow-y: auto;
+  height: calc(100vh - 390px);
+}
+
+.onPageNav > .toc-headings::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+  background-color: var(--color-txt);
+}
+
+.onPageNav > .toc-headings::-webkit-scrollbar-thumb {
+  border-width: 0;
+  background-color: var(--color-800);
+  background-clip: padding-box;
 }
 
 .onPageNav::before {

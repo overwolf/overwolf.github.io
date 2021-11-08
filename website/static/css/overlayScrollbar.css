@@ -30,7 +30,7 @@ os-theme-overwolf
   content: '';
   display: block;
   position: absolute;
-  background: var(--color-600);
+  background: var(--color-800);
 }
 .os-theme-overwolf > .os-scrollbar-horizontal > .os-scrollbar-track:before {
   left: 5px;
@@ -39,13 +39,13 @@ os-theme-overwolf
   top: 50%;
   margin-top: -1px;
 }
-.os-theme-overwolf > .os-scrollbar-vertical > .os-scrollbar-track:before {
+/* .os-theme-overwolf > .os-scrollbar-vertical > .os-scrollbar-track:before {
   top: 5px;
   bottom: 3px;
   width: 1px;
   left: 50%;
   margin-left: -1px;
-}
+} */
 .os-theme-overwolf > .os-scrollbar-horizontal:hover > .os-scrollbar-track:before,
 .os-theme-overwolf > .os-scrollbar-horizontal.active > .os-scrollbar-track:before {
   left: 0;

@@ -17,4 +17,19 @@ function moveEditButton() {
 window.onload = function () {
   addSiderbarHighlight();
   moveEditButton();
+  setNavScrollbarPosition();
+  window.addEventListener("resize", setNavScrollbarPosition);
 };
+
+//position navbar scrollbar 
+
+function setNavScrollbarPosition() {
+  const NavScrollBar = document.querySelector('#docsNav > div.os-scrollbar.os-scrollbar-vertical > div');
+  let pageOffsetLeft = document.querySelector('.docMainWrapper.wrapper').offsetLeft;
+  let menuWidth = document.querySelector('#docsNav > div.os-padding > div').offsetWidth;
+  if(NavScrollBar) {
+    NavScrollBar.style.left = `${(pageOffsetLeft + menuWidth) + 14}px`;
+
+  }
+
+}

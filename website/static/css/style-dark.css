@@ -23,11 +23,6 @@
 	background: var(--color-100);
 }
 
-.theme-dark .docMainWrapper,
-.theme-dark .main-content,
-.theme-dark .getting-started-container p {
-	color: var(--color-800);
-}
 
 @media only screen and (min-width: 1024px) {
 	.theme-dark .onPageNav > .toc-headings {
@@ -77,10 +72,24 @@
 .theme-dark .collapsible .arrow svg path[fill="#565656"] {
 	fill: var(--color-800);
 }
+
+.theme-dark .mainContainer .post a.btn-pink {
+	border: 1px solid var(--color-grey);
+	color: var(--color-grey);
+}
+
+.theme-dark  .onPageNav > .toc-headings::-webkit-scrollbar {
+  background-color: var(--color-200);
+}
+
+.theme-dark  .onPageNav > .toc-headings::-webkit-scrollbar-thumb, .os-theme-overwolf > .os-scrollbar-horizontal > .os-scrollbar-track:before,
+.os-theme-overwolf > .os-scrollbar-vertical > .os-scrollbar-track:before {
+  background-color: var(--color-300);
+}
+
 .theme-dark .mainContainer .post a { color: var(--color-headline); }
 .theme-dark .mainContainer .post a:hover { color: var(--color-primary-hover); }
 .theme-dark .slick-slider a:hover {	color: var(--color-primary-hover); }
-.theme-dark .mainContainer .post a.btn-pink { color: white; }
 .theme-dark .main-content a { color: var(--color-headline); }
 .theme-dark .main-content a:hover { color: var(--color-primary-hover); }
 
@@ -297,4 +306,8 @@
 }
 .dark-mode-switch input:checked + span:before {
 	left: 26px;
+}
+
+.theme-dark .docLastUpdate {
+	color: var(--color-800);
 }
