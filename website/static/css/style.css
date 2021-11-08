@@ -969,7 +969,7 @@ use {
 }
 
 .body.home .main-content section .container {
-	width: 75%;
+	max-width: 1280px;
 }
 
 .body.home .main-content section.easily {
@@ -1071,6 +1071,10 @@ use {
 	padding-bottom: 142px;
 }
 
+.body.home .main-content section.sdk .container {
+	max-width: 1280px;
+}
+
 .body.home .main-content section.sdk ul {
 	padding: 0
 }
@@ -1111,6 +1115,10 @@ use {
 .body.home .main-content section.sdk li.reversed img {
 	margin-right: 0px;
 }
+
+.body.home .main-content section.sdk li.reversed img.mobile {
+	display: none;
+} 
 
 .body.home .main-content section.sdk li.reversed {
 	flex-direction: row-reverse
@@ -1197,29 +1205,72 @@ use {
 
 @media (max-width: 1180px) {
 
+	.body.home .main-content section.sdk {
+		background-color: white;
+		padding: 60px 20px;
+	}
+
+	.theme-dark .body.home .main-content section.sdk {
+		background-color: var(--color-bg);
+		padding: 60px 20px;
+	}
+
+	.theme-dark .body.home .main-content section.tiles {
+		background-color: var(--color-150);
+	}
+
 	.body.home .main-content section.tiles ul {
 		flex-direction: column;
 		width: auto;
-		min-width: auto
+		min-width: auto;
+		padding: 0;
+		gap: 0;
+		padding-bottom: 40px;
 	}
-	.body.home .main-content section.tiles ul li>a {
-		width: 310px;
-		height: 170px;
-		padding: 35px 15px
+	.body.home .main-content section.tiles ul li>a, .theme-dark .body.home .main-content section.tiles ul li>a {
+		background: none;
+		padding-bottom: 0;
+		height: inherit;
+	}
+	.body.home .main-content section.tiles ul li>a:hover, .theme-dark .body.home .main-content section.tiles ul li>a:hover {
+		background: none;
 	}
 	.body.home .main-content section.sdk li {
-		flex-direction: column;
-		padding: 40px 0;
-		align-items: stretch
+		flex-direction: column-reverse;
+		padding: 0 0 60px;
+		align-items: stretch;
+	}
+
+	.body.home .main-content section.sdk li:not(:last-child) {
+		border: none;
+	}
+	.body.home .main-content section.sdk li img {
+		padding: 0;
+		margin: 0 auto;
+		float: unset;
+		width: 336px;
+	}
+
+	.body.home .main-content section.sdk li.reversed img {
+		display: none;
+	}
+
+
+	.body.home .main-content section.sdk li.reversed img.mobile {
+		display: block;
+		margin: 0 auto 60px auto;
 	}
 	.body.home .main-content section.sdk li p {
-		padding: 0
+		padding: 0;
+		margin-top: 60px;
+		margin-bottom: 0 ;
 	}
 	.body.home .main-content section.sdk li.reversed {
-		flex-direction: column
+		flex-direction: column-reverse
 	}
 	.body.home .main-content section.sdk li.reversed p {
-		padding: 0
+		padding: 0;
+		margin: 0;
 	}
 	.body.home .main-content section.sdk li:last-child {
 		padding-bottom: 0
@@ -1236,9 +1287,19 @@ use {
 }
 
 @media (max-width: 1250px) {
+
+	.fixedHeaderContainer {
+		padding: 21px 16px;
+	}
+
+	.headerWrapper.wrapper {
+		padding: 0;
+	}
+
 	.fixedHeaderContainer header img {
 		width: 158px;
 	}
+	
 }
 
 @media (max-width: 600px) {
@@ -1253,7 +1314,54 @@ use {
 
 	.body.home .main-content section.easily .container {
 		padding: 48px 20px;
+		background: white;
+		text-align: center;
+	}
+
+	.theme-dark .body.home .main-content section.easily .container {
 		background: var(--color-bg);
+	}
+
+	.body.home .main-content section.easily .container header {
+		font-size: 36px;
+	  line-height: 48px;
+		max-width: unset;
+		color: var(--color-bg);
+	}
+
+	.body.home .main-content section.easily .container p {
+		font-size: 16px;
+		line-height: 150%;
+		max-width: unset;
+		color: var(--color-bg);
+	}
+
+	
+	.theme-dark .body.home .main-content section.easily .container header {
+		color: var(--color-headline);
+	}
+
+	.theme-dark .body.home .main-content section.easily .container p {
+    color: var(--color-txt);
+	}
+
+	.body.home .main-content section.easily .container a.btn {
+		color: var(--color-400);
+		border-color: var(--color-400);
+	}
+
+	.body.home .main-content section.easily .container a.btn:hover {
+		color: white;
+		border-color: var(--color-primary);
+	}
+
+	.theme-dark .body.home .main-content section.easily .container a.btn {
+		border: 1px solid var(--color-grey-4);
+    color: var(--color-txt);
+	}
+
+	.theme-dark .body.home .main-content section.easily .container a.btn:hover {
+		border-color: var(--color-primary);
 	}
 
 }

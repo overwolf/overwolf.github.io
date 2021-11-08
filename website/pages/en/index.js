@@ -61,7 +61,9 @@ function SdkSection(props) {
             <a href={`${baseUrl}docs/start/sdk-introduction`}>Easily create a desktop app</a> with overlay capabilities, using just HTML and JS. Your own desktop app, desktop icon, auto updates, anti-cheat compatibility and the works... we do it all for you
           </SdkItem>
           <SdkItem className="reversed" config={siteConfig} imgSrc="img/events.png">
+          <img className="mobile" src="img/events-mobile.png" />
             <a href={`${baseUrl}docs/api/overwolf-games-events`}>Get access to real-time game events</a> for leading games and make your app as if it were integrated directly with the game itself
+            
           </SdkItem>
           <SdkItem config={siteConfig} classNameImg="extra-padding-on-desktop" imgSrc="img/monetize.png">
             <a href={`${baseUrl}docs/start/monetization-overview`}>Monetize your app</a> and make money by showing forgivable ads (= ads on loading screens, when gamers don’t have anything better to do anyway). It’s easier than implementing AdSense, not affected by ad blockers, not obtrusive and our team will optimize the experience with you

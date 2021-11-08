@@ -41,7 +41,15 @@ div#docsNav .os-scrollbar-track-off {
   color: #332E4D;
 }
 
+
+@media only screen and (max-width: 1024px) {
+  .navigationSlider .slidingNav ul {
+    margin-top: 76px;
+  }
+}
+
 @media only screen and (min-width: 1024px) {
+  
   .docsNavContainer {
       height: calc(100vh - 60px);
       top: 60px;
