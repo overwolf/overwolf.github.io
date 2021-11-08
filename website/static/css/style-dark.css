@@ -272,7 +272,7 @@
 	height: 21px;
 	cursor: pointer;
 }
-@media only screen and (max-width: 1150px) {
+@media only screen and (max-width: 1250px) {
 	.dark-mode-switch {
 		left: 170px;
 	}

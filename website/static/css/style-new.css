@@ -41,12 +41,6 @@ div#docsNav .os-scrollbar-track-off {
   color: #332E4D;
 }
 
-@media (min-width: 1500px) {
-	section {
-		padding: 0 320px;
-	}
-}
-
 @media only screen and (min-width: 1024px) {
   .docsNavContainer {
       height: calc(100vh - 60px);
