@@ -84,7 +84,7 @@
 
 .theme-dark  .onPageNav > .toc-headings::-webkit-scrollbar-thumb, .os-theme-overwolf > .os-scrollbar-horizontal > .os-scrollbar-track:before,
 .os-theme-overwolf > .os-scrollbar-vertical > .os-scrollbar-track:before {
-  background-color: var(--color-300);
+  background-color: var(--color-600);
 }
 
 .theme-dark pre .btnIcon {

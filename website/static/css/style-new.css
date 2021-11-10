@@ -75,13 +75,18 @@ div#docsNav .os-scrollbar-track-off {
     padding: 0 10px 0 13px; 
     height: 48px;
     letter-spacing: .05em;
-    border-left: 7px solid #101010;
+    border-left: 7px solid var(--color-100);
     font-size: 16px !important;
     line-height: 24px;
   }
 
+  .slidingNav ul li.siteNavGroupActive > a {
+    background-color: transparent !important;
+    border-left: 7px solid var(--color-primary);
+  }
+
   .navigationSlider .slidingNav {
-    background-color: #101010;
+    background-color: var(--color-100);
     text-align: center;
     width: 312px;
     overflow: overlay;
@@ -95,6 +100,25 @@ div#docsNav .os-scrollbar-track-off {
 
   .navigationSlider .slidingNav.is-open {
     left: 0;
+  }
+
+  .navigationSlider .slidingNav::after {
+    content: ''; 
+    height: 100vh ; 
+    width: 100%;
+    background-color: #101010e8; 
+    position: fixed; 
+    right: 0px; 
+    z-index: 0;
+    top: 75px ;
+    transition: opacity 300ms ease-in;
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  .navigationSlider .slidingNav.is-open::after {
+    opacity: 1;
+    width: calc(100vw - 309px); 
   }
 }
 
