@@ -1,13 +1,25 @@
-img[alt*="light-theme"], img[alt*="dark-theme"] {
+img[alt*="light-theme"], img[alt*="dark-theme"], img[alt*="mobile-light"], img[alt*="mobile-dark"] {
   margin: inherit;
 }
 
-.theme-dark img[alt*="light-theme"], img[alt*="dark-theme"] {
+.theme-dark img[alt*="light-theme"], img[alt*="dark-theme"], img[alt*="mobile-light"], img[alt*="mobile-dark"] {
   display: none;
 }
 
 .theme-dark img[alt*="dark-theme"] {
   display: block;
+}
+
+@media (max-width: 1180px) {
+  .theme-dark img[alt*="dark-theme"], img[alt*="light-theme"], .theme-dark img[alt*="mobile-light"] {
+    display: none;
+  }
+
+  .theme-dark img[alt*="mobile-dark"], img[alt*="mobile-light"] {
+    display: block;
+    margin: auto;
+  }
+
 }
 
 div#docsNav .os-scrollbar-track-off {
@@ -34,6 +46,7 @@ div#docsNav .os-scrollbar-track-off {
   background: var(--color-bg);
   min-height: 76px;
   padding-top: 22px;
+  z-index: 100;
 }
 
 .docMainWrapper,
@@ -44,8 +57,58 @@ div#docsNav .os-scrollbar-track-off {
 
 @media only screen and (max-width: 1024px) {
   .navigationSlider .slidingNav ul {
+    margin-top: 50px;
+    flex-direction: column;
+    background-color: transparent;
+  }
+
+  .navSearchWrapper {
+    width: 90%;
+  }
+
+  .navigationSlider .slidingNav ul li.reactNavSearchWrapper {
+    top: 19px;
+    }
+
+  .navigationSlider .slidingNav ul li a {
+    justify-content: flex-start;
+    padding: 0 10px 0 13px; 
+    height: 48px;
+    letter-spacing: .05em;
+    border-left: 7px solid #101010;
+    font-size: 16px !important;
+    line-height: 24px;
+  }
+
+  .navigationSlider .slidingNav {
+    background-color: #101010;
+    text-align: center;
+    width: 312px;
+    overflow: overlay;
+    height: 100vh;
+    padding-bottom: 80px;
+    z-index: 99;
+    left: -312px;
+    transition: all 300ms ease;
     margin-top: 76px;
   }
+
+  .navigationSlider .slidingNav.is-open {
+    left: 0;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .navPusher {
+    padding-top: 76px;
+  }
+
+  .docMainWrapper.wrapper {
+    margin-top: 40px;
+}
+  .docsNavContainer{
+    top: 76px;
+  } 
 }
 
 @media only screen and (min-width: 1024px) {
@@ -86,6 +149,12 @@ div#docsNav .os-scrollbar-track-off {
 
 
 @media only screen and (min-width: 1024px) {
+	.navPusher {
+    padding-top: 76px;
+	}
+}
+
+@media only screen and (max-width: 800px) {
 	.navPusher {
     padding-top: 76px;
 	}
@@ -383,6 +452,7 @@ input#search_input_react:active {
 .medium-widget-article__row {
   gap: 100px;
   margin: 0 !important;
+  flex-wrap: wrap;
 }
 
 .medium-widget-article__content {
@@ -543,4 +613,70 @@ button.button-sso-login:hover {
 
 #back-to-top:hover {
   background: var(--color-200);
+}
+
+
+
+.hamburger-menu-button {
+  display: none;
+}
+
+
+
+@media only screen and (max-width: 800px) {
+  .hamburger-menu-button {
+    position: fixed;
+    z-index: 101;
+    display: block;
+    background: transparent;
+    width: 32px;
+    height: 32px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    right: 11px; 
+    top: 21px;
+  }
+  .hamburger-menu-button > div {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    transition: 0.4s ease-in-out;
+  }
+  .hamburger-menu-button > div span {
+    background: #b5b5b5;
+    display: block;
+    width: 100%;
+    height: 2px;
+    position: absolute;
+    transition: 0.4s ease-in-out;
+    border-radius: 1px;
+  }
+  .hamburger-menu-button > div span:first-child {
+    top: 0;
+    left: 0;
+  }
+  .hamburger-menu-button > div span:nth-child(2) {
+    top: 8px;
+    left: 0;
+  }
+  .hamburger-menu-button > div span:nth-child(3) {
+    top: 16px;
+    left: 0;
+  }
+  .hamburger-menu-button.close > div {
+    transform: rotate(-180deg);
+  }
+  .hamburger-menu-button.close > div span:first-child {
+    transform: translateY(8px) rotate(45deg);
+  }
+  .hamburger-menu-button.close > div span:nth-child(2) {
+    transform: scaleX(0);
+  }
+  .hamburger-menu-button.close > div span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
 }

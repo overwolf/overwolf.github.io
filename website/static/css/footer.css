@@ -120,3 +120,15 @@
   width: 24px;
   height: 24px;
 }
+
+@media (max-width: 1180px) { 
+  .site-footer .site-footer-nav {
+    padding-top: 72px;
+    flex-direction: column;
+  }
+
+  .site-footer .site-footer-nav .logo {
+    margin-left: 0px;
+  }
+
+}

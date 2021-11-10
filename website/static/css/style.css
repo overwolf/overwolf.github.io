@@ -1205,6 +1205,45 @@ use {
 
 @media (max-width: 1180px) {
 
+	#back-to-top {
+		background: var(--color-150);
+		bottom: 70px;
+	}
+
+	.body.home .main-content section.game-dev {
+		padding: 52px 20px;
+		background: var(--color-100);
+	}
+
+	.body.home .main-content section.game-dev h1 {
+		color: var(--color-grey-light);
+		font-size: 32px;
+		line-height: 42px;
+		margin-bottom: 18px;
+	}
+
+	.body.home .main-content section.game-dev p {
+		color: var(--color-txt);
+		font-size: 16px;
+		line-height: 150%;
+	}
+
+	.body.home .main-content section.game-dev a {
+		color: var(--color-grey);
+		border-color: var(--color-grey);
+	}
+
+	.medium-widget-article__row {
+		flex-direction: column !important;
+		padding: 0 20px;
+		gap: 40px;
+	}
+
+	#blogHeader {
+		margin-top: 20px;
+		margin-bottom: 40px;
+	}
+
 	.body.home .main-content section.sdk {
 		background-color: white;
 		padding: 60px 20px;
@@ -1244,11 +1283,11 @@ use {
 	.body.home .main-content section.sdk li:not(:last-child) {
 		border: none;
 	}
-	.body.home .main-content section.sdk li img {
+	.body.home .main-content section.sdk li:not(.reversed) img {
 		padding: 0;
 		margin: 0 auto;
 		float: unset;
-		width: 336px;
+		width: 286px;
 	}
 
 	.body.home .main-content section.sdk li.reversed img {
@@ -1276,7 +1315,8 @@ use {
 		padding-bottom: 0
 	}
 	.body.home .main-content section.blog {
-		padding: 40px 0
+		padding: 40px 0;
+		background: var(--color-headline);
 	}
 	.body.home .main-content section.blog li {
 		flex-direction: column

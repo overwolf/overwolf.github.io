@@ -19,6 +19,7 @@ window.onload = function () {
   moveEditButton();
   setNavScrollbarPosition();
   window.addEventListener("resize", setNavScrollbarPosition);
+  addMobileButton();
 
 
   let navButtons = document.querySelectorAll(".toc .toggleNav .navGroup .navGroupCategoryTitle");
@@ -43,4 +44,32 @@ function setNavScrollbarPosition() {
 
   }
 
+}
+
+function addMobileButton() {
+  const mobileBtnElement = `
+  <button id="hamburger-menu-button" class="hamburger-menu-button" onclick="openCloseMobileNavMenu()">
+    <div>
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </button>`
+
+  document.querySelector('.fixedHeaderContainer').insertAdjacentHTML('afterbegin', mobileBtnElement);
+
+}
+
+function openCloseMobileNavMenu() {
+  console.log('click')
+  const navMenu = document.querySelector('.navigationSlider .slidingNav');
+  if(navMenu.classList.contains('is-open')){
+    navMenu.classList.remove('is-open');
+    document.querySelector('#hamburger-menu-button').classList.remove('close');
+    document.body.style.overflow = "";
+  } else {
+    navMenu.classList.add('is-open');
+    document.querySelector('#hamburger-menu-button').classList.add('close');
+    document.body.style.overflow = "hidden";
+  }
 }
