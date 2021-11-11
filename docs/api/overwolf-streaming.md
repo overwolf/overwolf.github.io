@@ -916,7 +916,7 @@ Defines the configuration for an x264 encoder.
 | Name          | Type  | Description                                                                    | Since |
 |---------------| ------|--------------------------------------------------------------------------------| ----- |
 | enable        | bool  |  Defines if to capture the desktop while game is not running or not in focus   | 0.78  |
-| monitor_id    | uint  |  Defines which monitor to stream when streaming desktop                        | 0.78  |
+| monitor_id    | uint  |  Defines which monitor to stream when streaming desktop. Use the index of the requested monitor in the monitor's array that returned from [overwolf.utils.getMonitorList()](overwolf-utils#getmonitorslistcallback).   | 0.78  |
 | force_capture | bool  | Defines if to force desktop streaming even when a game is in foreground        | 0.78  |
 
 ## StreamAudioOptions Object
