@@ -174,6 +174,7 @@ select_weapon| Weapon code  | Local player selects weapon in character selection
 team_character| Ally, Character code  | Ally player selects character in character selection. | See [notes](#team_character-note) | 148.0  |
 team_weapon| Weapon code  | Ally player selects weapon in character selection. | See [notes](#team_weapon-note) | 148.0  |
 select_route| Target items, Target regions  | Local player selects plan in character selection. | See [notes](#select_route-note) | 148.0  |
+select_trait| SelectedTraits  | Local player selects trait for the character. | See [notes](#select_trait-note) | 148.0  |
 select_starting_point| Area code  | Local player selects starting point in character selection. | See [notes](#select_starting_point-note) | 148.0  |
 ally_starting_point| Area code, Area code  | Ally player selects starting point in character selection. | See [notes](#ally_starting_point-note) | 148.0  |
 
@@ -234,6 +235,18 @@ Data Example:
 The 'items' array consists of 6 items, each representing the item code. See [item_code](#item_code-note) for more info.<br>
 The 'regions' array is the area code in order of index. See [area_code](#area_code-note) for more info.<br>
 eg) Local player's saved plan visits area 11, 3, 8, and 5 in written order.
+
+#### *select_trait* note
+
+Data Example:
+
+```json
+{"event":"select_trait","data":{"trait" : [122232, 144244, 155255, 152525, 155555]}}
+```
+
+This feature will be effective after December 9th, 2021.<br>
+The trait data will include 5 integers that represent the trait code.<br>
+See [trait](#trait-note) for more info.
 
 
 #### *select_starting_point* note
@@ -892,6 +905,7 @@ Localized text can also be searched using the key "MasteryType/Name/{mastery_typ
 * 21 : Rapier
 * 22 : Guitar
 * 23 : Camera
+* 24 : Arcana
 * 101 : Trap
 * 102 : Craft
 * 103 : Search
@@ -929,6 +943,7 @@ Localized text can also be searched using the key "WeaponType/Name/{weapon_type}
 * 21 : Rapier
 * 22 : Guitar
 * 23 : Camera
+* 24 : Arcana
 
 
 #### *skill_group* note
@@ -955,3 +970,20 @@ Localized text can also be searched using the key "Monster/Name/{monster_code}" 
 * 7 : Wickeline
 * 8 : Alpha
 * 9 : Omega
+
+#### *trait* note
+The most updated trait data will be available via ER Open API.<br>
+Localized text can also be searched using the key "Trait/Name/{trait_code}" in the ER L10N file.
+<br>
+Following are the current trait groups.<br>
+Trait groups can be distinguished by the 2nd digit. (However, this may not always be true.)
+* Havoc : #0#####
+* Fortification : #1#####
+* Support : #2#####
+<br>
+Following are the current trait types.<br>
+Trait types can be distinguished by the 3rd digit.
+* Core : ##0####
+* Sub : ##1####
+<br>
+
