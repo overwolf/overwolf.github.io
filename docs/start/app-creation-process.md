@@ -18,7 +18,10 @@ Want to change how gamers play their favorite games? Have a cool idea for one of
 
 ## How does it work?
 <br/>
-![alt-text](assets/app-creation-process.svg)
+![light-theme](../assets/app-creation/light-app-creation-process.png)
+![dark-theme](../assets/app-creation/dark-app-creation-process.png)
+![mobile-light](../assets/app-creation/mobile-light-app-creation-process.png)
+![mobile-dark](../assets/app-creation/mobile-dark-app-creation-process.png)
 
 ### 1. Pitch Your Concept
 

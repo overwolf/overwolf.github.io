@@ -1,83 +1,49 @@
+.getting-started-article::before {
+	display: none;
+}
 
 .btn-pink,
 .mainContainer .post a.btn-pink {
-	background: #E6004C;
-	display: inline-block;
-	font-size: 16px;
-	line-height: 145%;
-	color: white;
-	padding: 7px 16px;
-	text-decoration: none;
+	font-family: 'Madera', sans-serif;
+    letter-spacing: 0.3px;
+	border: 1px solid var(--color-400);
+    color: var(--color-400);
+    padding: 16px 32px;
+    line-height: 17px;
+    height: 50px;
+    white-space: nowrap;
+    cursor: pointer;
+    display: inline-block;
+    text-decoration: none;
+    font-weight: 500;
+    background: none;
+	transition: all 150ms ease;
 }
 
 .btn-pink:hover,
 .mainContainer .post a.btn-pink:hover {
-	background: #FF0055;
-	color: white;
+	border-color: var(--color-website-red);
+    background-color: var(--color-website-red);
+    color: var(--color-grey-light);
 }
 
-.getting-started-container {
-  padding-top: 0px;
-  padding-right: 0px;
-  padding-bottom: 0px;
-  padding-left: 0px;
-	max-width: 784px;
-}
-
-@media (max-width: 1024px) {
-	.getting-started-container {
-		max-width: 655px;
-		margin: auto;
-	}
-}
-
-@media (max-width: 760px) {
-	.getting-started-container {
-		max-width: 100%;
-		padding: 40px 45px;
-	}
-}
-
-.getting-started-container h1,
-.getting-started-container h2,
-.getting-started-container p {
-	padding: 0;
-	margin: 0px 0px 30px 0px;
-}
-
-.getting-started-container h1 {
-	font-family: 'Klavika', sans-serif;
-	font-weight: 300;
-	line-height: 36px;
-	font-size: 32px;
-	color: #161326;
-}
-
-.getting-started-container h2 {
-	font-family: Lato;
-	font-weight: 400;
+.getting-started-article h2 {
 	font-size: 24px;
-	line-height: 29px;
-	color: #161326;
+	line-height: 28px;
 }
 
-@media (max-width: 1024px) {
-	.getting-started-container h2 {
-		margin-bottom: 20px;
-	}
-}
-
-.getting-started-container p {
-	font-family: Lato;
-	font-size: 16px;
-	line-height: 25px;
-	color: #332E4D;
+.getting-started-article h3 {
+	font-size: 18px;
 }
 
 .getting-started-container ul {
 	list-style: none;
 	padding: 0px;
 	margin: 0px;
+}
+
+p.what-can-apps-do-intro {
+	margin-bottom: 44px;
 }
 
 @media (max-width: 760px) {
@@ -101,7 +67,7 @@
 
 .getting-started-container .video-outer-area .video-container {
 	width: 100%;
-	padding: 40px 0px;
+	padding: 30px 0 20px ;
 }
 
 @media (max-width: 1024px) {
@@ -155,16 +121,6 @@
 	position: relative;
 }
 
-.getting-started-container .icons-list li h3 {
-	font-family: Lato;
-	font-weight: 600;
-	font-size: 16px;
-	line-height: 25px;
-	margin: 0;
-	padding: 10px 0px 0px 0px;
-	color: #332E4D;
-}
-
 @media (max-width: 760px) {
 	.getting-started-container .icons-list li p {
 		margin-bottom: 25px;
@@ -181,6 +137,14 @@
 	padding-left: 88px;
 }
 
+.getting-started-container .icons-list.what-apps-do-list li p {
+	margin-top: 0;
+}
+
+.getting-started-container .icons-list.what-apps-do-list li h3 {
+	margin-bottom: 10px;
+}
+
 @media (max-width: 760px) {
 	.getting-started-container .icons-list.what-apps-do-list li {
 		padding-left: 63px;
@@ -194,33 +158,43 @@
 	position: absolute;
 	width: 48px;
 	height: 48px;
-	top: 13px;
+	top: 0px;
 	left: 0;
+	background-color: transparent;
+	border-radius: unset;
 }
 
 .getting-started-container .icons-list.what-apps-do-list li.highlights::before {
-	background-image: url(../img/getting-started/apps-do-list/video.svg);
+	background-image: url(../img/getting-started/apps-do-list/video.png);
 }
 
 .getting-started-container .icons-list.what-apps-do-list li.game-stats::before {
-	background-image: url(../img/getting-started/apps-do-list/stats.svg);
+	background-image: url(../img/getting-started/apps-do-list/stats.png);
 }
 
 .getting-started-container .icons-list.what-apps-do-list li.build-recommendations::before {
-	background-image: url(../img/getting-started/apps-do-list/helmet.svg);
+	background-image: url(../img/getting-started/apps-do-list/helmet.png);
 }
 
 .getting-started-container .icons-list.what-apps-do-list li.tournaments::before {
-	background-image: url(../img/getting-started/apps-do-list/trophy.svg);
+	background-image: url(../img/getting-started/apps-do-list/trophy.png);
 }
 
 .getting-started-container .icons-list.what-apps-do-list li.easy-integration::before {
-	background-image: url(../img/getting-started/apps-do-list/tetris.svg);
+	background-image: url(../img/getting-started/apps-do-list/tetris.png);
 }
 
 .getting-started-container .icons-list.were-apps-live-list {
 	max-width: 600px;
-	padding-bottom: 60px;
+	padding-bottom: 10px;
+}
+
+.getting-started-container .icons-list.were-apps-live-list p {
+	margin-top: 0;
+}
+
+.getting-started-container .icons-list.were-apps-live-list h3 {
+	margin-bottom: 5px;
 }
 
 @media (max-width: 1024px) {
@@ -237,7 +211,7 @@
 }
 
 .getting-started-container .icons-list.were-apps-live-list li {
-	padding-left: 260px;
+	padding-left: 228px;
 }
 
 @media (max-width: 760px) {
@@ -254,8 +228,10 @@
 	position: absolute;
 	width: 201px;
 	height: 123px;
-	top: 18px;
-	left: 10px;
+	top: 0px;
+	left: -19px;
+	background-color: transparent;
+	border-radius: unset;
 }
 
 @media (max-width: 760px) {
@@ -266,15 +242,15 @@
 }
 
 .getting-started-container .icons-list.were-apps-live-list li.in-game::before {
-	background-image: url(../img/getting-started/apps-live-list/ingame.svg);
+	background-image: url(../img/getting-started/apps-live-list/ingame.png);
 }
 
 .getting-started-container .icons-list.were-apps-live-list li.desktop::before {
-	background-image: url(../img/getting-started/apps-live-list/desktop.svg);
+	background-image: url(../img/getting-started/apps-live-list/desktop.png);
 }
 
 .getting-started-container .icons-list.were-apps-live-list li.twitch-extension::before {
-	background-image: url(../img/getting-started/apps-live-list/twitch.svg);
+	background-image: url(../img/getting-started/apps-live-list/twitch.png);
 }
 
 @media (max-width: 760px) {
@@ -285,7 +261,7 @@
 
 .getting-started-container .icons-list.were-apps-live-list li.companion-screen::before {
 	top: 28px;
-	background-image: url(../img/getting-started/apps-live-list/companion.svg);
+	background-image: url(../img/getting-started/apps-live-list/companion.png);
 }
 
 @media (max-width: 760px) {
@@ -300,14 +276,18 @@
 	align-items: center;
 	justify-content: center;
 	padding-top: 30px;
-	padding-bottom: 70px;
+	padding-bottom: 60px;
 	flex-direction:column;
 }
 
 
 .start-build-footer-btn p {
-	padding-top: 15px;
-	font-size: 14px;
+	padding-top: 42px;
+	margin: 0;
+}
+
+.start-build-footer-btn p a {
+	font-weight: 600;
 }
 
 

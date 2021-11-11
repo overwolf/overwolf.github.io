@@ -54,10 +54,10 @@ Note that you do not have to own a registered business or company to work on Ove
 
 We will review your concept internally and reach back within 4 business days to provide feedback - including whether Overwolf approves or rejects your app for the appstore.
 
-* Approved app proposals:
+* **Approved app proposals:**
 
 Great job! We think it’ll be a great fit for the Overwolf Appstore. Now the real fun begins! Dive into our documentation and start working on your app - we are here to lend a hand, spare some advice or provide services you need for your project.
 
-* Rejected app proposals:
+* **Rejected app proposals:**
 
 Assuming your concept wasn't fleshed enough initially, we might suggest trying for a different concept. As it is, this app won't fit our Appstore because X Y Z, but we appreciate the solid proposal and are looking forward to seeing more ideas from you soon! You won’t be able to submit this app again, but we encourage you to let us know if you have another idea that might be a better fit.
