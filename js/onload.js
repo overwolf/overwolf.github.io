@@ -40,7 +40,7 @@ function setNavScrollbarPosition() {
   if(NavScrollBar) {
     let pageOffsetLeft = document.querySelector('.docMainWrapper.wrapper').offsetLeft;
     let menuWidth = document.querySelector('#docsNav > div.os-padding > div').offsetWidth;
-    NavScrollBar.style.left = `${(pageOffsetLeft + menuWidth) + -1}px`;
+    NavScrollBar.style.left = `${(pageOffsetLeft + menuWidth) + 14}px`;
 
   }
 
