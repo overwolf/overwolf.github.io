@@ -272,6 +272,7 @@ a.active-highlight {
   position: sticky;
   top: 128px;
   overflow-y: unset;
+  z-index: -1;
 }
 
 .onPageNav > .toc-headings {
@@ -371,7 +372,7 @@ table th, table td {
   background-color: transparent;
   font-size: 15px;
 font-family: 'Madera', sans-serif;
-  padding-top: 5px;
+  padding-top: 3px;
 }
 
 .navigationSlider .slidingNav ul li a:hover {
@@ -400,11 +401,11 @@ input::placeholder {
   color: var(--color-white);
   background: transparent;
   width: 164px;
-  height: 23px;
+  height: 27px;
   font-size: 15px;
   border: 1px solid var(--color-800);
   border-radius: 0;
-  padding: 0 0 0 38px;
+  padding: 0 0 0 28px;
 }
 
 input#search_input_react::placeholder {
@@ -432,16 +433,16 @@ input#search_input_react:active {
   border-width: 2px;
   width: 8px;
   height: 8px;
-  left: 4px;
-  top: 11px;
+  left: 6px;
+  top: 13px;
 }
 
 .navSearchWrapper::after {
   background: var(--color-txt);
   height: 6px; 
   width: 2px; 
-  left: 15px; 
-  top: 12px; 
+  left: 17px; 
+  top: 15px; 
   transform: rotate(-58deg);
 }
 
