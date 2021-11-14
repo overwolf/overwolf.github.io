@@ -1310,6 +1310,8 @@ use {
 	.body.home .main-content section.sdk li.reversed p {
 		padding: 0;
 		margin: 0;
+		display: flex;
+		flex-direction: column;
 	}
 	.body.home .main-content section.sdk li:last-child {
 		padding-bottom: 0

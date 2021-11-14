@@ -10,6 +10,8 @@
   display: flex;
   padding: 109px 20px 0px;
   justify-content: space-between;
+  position: relative;
+  z-index: 0;
 }
 
 .site-footer .site-footer-nav .logo {
