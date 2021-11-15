@@ -8,20 +8,17 @@ Follow this entry for ongoing updates and changes to the project or tools.
 
 Here you can find our [Developers Roadmap](https://trello.com/b/1V10E4IB/overwolf-roadmap).
 
-## Version 0.184 (In-Progress)
+## Version 0.185 (In-Progress)
 
 * Note that the work on the documentation for this version is still in-progress.
-* Note that iterations 182 to 184 were combined into a single iteration. 
 
 #### Docs
 
-* A new I/O sample app in our [APIs sample apps repository](https://github.com/overwolf/apis-sample-apps). Demonstrates how to open and load a file to your app, Display it, Add some content, and Write it back to the file.
-* As for now, the [basic sample](../start/sample-app-overview#docsNav) app was built only for Fortnite. In the new version of the sample app, we added support for 14 more games to ease your learning:
-League of Legends, Valorant, Minecraft, CSGO, Escape From Tarkov, Overwatch, PUBG, Rainbow Six Siege, Splitgate: Arena Warfare, Path of Exile, Dota 2, Call of Duty: Warzone, and Warframe.
+* Soon.
 
 #### API
 
-* Warframe game events support is back.
+* Soon.
 
 #### Platform
 
@@ -33,7 +30,23 @@ League of Legends, Valorant, Minecraft, CSGO, Escape From Tarkov, Overwatch, PUB
 
 #### Bug fixes
 
-* Soon.
+* Fixed bug with OW overlay in Win 11:  
+  Clicking an icon on the taskbar while in-game didn't shift the focus from the game to the window that opened. Instead, the window was left behind the game.
+
+
+## Version 0.184 (Nov 2021)
+
+* Note that iterations 182 to 184 were combined into a single iteration. 
+
+#### Docs
+
+* A new I/O sample app in our [APIs sample apps repository](https://github.com/overwolf/apis-sample-apps). Demonstrates how to open and load a file to your app, Display it, Add some content, and Write it back to the file.
+* As for now, the [basic sample](../start/sample-app-overview#docsNav) app was built only for Fortnite. In the new version of the sample app, we added support for 14 more games to ease your learning:
+League of Legends, Valorant, Minecraft, CSGO, Escape From Tarkov, Overwatch, PUBG, Rainbow Six Siege, Splitgate: Arena Warfare, Path of Exile, Dota 2, Call of Duty: Warzone, and Warframe.
+
+#### API
+
+* Warframe game events support is back.
 
 ## Version 0.181 (Oct 2021)
 
