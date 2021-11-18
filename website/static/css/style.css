@@ -1,33 +1,33 @@
 @font-face {
-	font-family: 'Madera', sans-serif;
+	font-family: "Madera";
 	src: url("../fonts/madera/Madera-UltraLight.woff") format("woff");
 	font-weight: 200;
 	font-style: normal
 }
 
 @font-face {
-	font-family: 'Madera', sans-serif;
+	font-family: "Madera";
 	src: url("../fonts/madera/Madera-Light.woff") format("woff");
 	font-weight: 300;
 	font-style: normal
 }
 
 @font-face {
-font-family: 'Madera', sans-serif;
+	font-family: "Madera";
 	src: url("../fonts/madera/Madera-Regular.woff") format("woff");
 	font-weight: 400;
 	font-style: normal
 }
 
 @font-face {
-font-family: 'Madera', sans-serif;
+	font-family: "Madera";
 	src: url("../fonts/madera/Madera-Medium.woff") format("woff");
 	font-weight: 500;
 	font-style: normal
 }
 
 @font-face {
-font-family: 'Madera', sans-serif;
+	font-family: "Madera";
 	src: url("../fonts/madera/Madera-Bold.woff") format("woff");
 	font-weight: 700;
 	font-style: normal
@@ -1028,7 +1028,7 @@ use {
 .body.home .main-content section.tiles ul {
 	display: flex;
 	justify-content: space-between;
-	padding: 120px 0;
+	padding: 100px 0;
 	min-width: 1280px;
 	margin: 0;
 	gap: 70px;
@@ -1041,7 +1041,7 @@ use {
 	text-align: center;
 	width: 380px;
 	height: 434px;
-	padding: 54px 75px;
+	padding: 54px 40px;
 	color: inherit;
 	background: var(--color-headline);
 	transition: background .2s
@@ -1237,11 +1237,6 @@ use {
 		flex-direction: column !important;
 		padding: 0 20px;
 		gap: 40px;
-	}
-
-	#blogHeader {
-		margin-top: 20px;
-		margin-bottom: 40px;
 	}
 
 	.body.home .main-content section.sdk {

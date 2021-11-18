@@ -21,10 +21,10 @@ function TilesSection(props) {
     <section className="tiles">
       <ul className="container">
         <Tile config={siteConfig} href={`${baseUrl}docs/start/app-creation-process`} header="Tutorials" imgSrc="img/tutorials.png">
-          Newbie and pro web devs should start here
+        Noob and pro web devs<br /> should start here
         </Tile>
         <Tile config={siteConfig} href={`https://www.overwolf.com/appstore`} header="Get inspired" imgSrc="img/posion.png" target="_blank">
-          See what others crafted
+        See what apps other creators<br /> have crafted
         </Tile>
         <Tile config={siteConfig} href={`${baseUrl}docs/topics/best-practices-overview`} header="Read our scrolls" imgSrc="img/scroll.png">
           Documentation, API and<br /> stuff you can use

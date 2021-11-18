@@ -143,6 +143,7 @@ p.what-can-apps-do-intro {
 
 .getting-started-container .icons-list.what-apps-do-list li h3 {
 	margin-bottom: 10px;
+	font-family: 'Lato', sans-serif;
 }
 
 @media (max-width: 760px) {
@@ -195,6 +196,7 @@ p.what-can-apps-do-intro {
 
 .getting-started-container .icons-list.were-apps-live-list h3 {
 	margin-bottom: 5px;
+	font-family: 'Lato', sans-serif;
 }
 
 @media (max-width: 1024px) {
