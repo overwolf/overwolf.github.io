@@ -20,8 +20,8 @@
 	transition: all 150ms ease;
 }
 
-.btn-pink:hover,
-.mainContainer .post a.btn-pink:hover {
+.btn-pink:hover, .theme-dark .btn-pink:hover,
+.mainContainer .post a.btn-pink:hover, .theme-dark .mainContainer .post a.btn-pink:hover {
 	border-color: var(--color-website-red);
     background-color: var(--color-website-red);
     color: var(--color-grey-light);
