@@ -18,7 +18,8 @@ Here you can find our [Developers Roadmap](https://trello.com/b/1V10E4IB/overwol
 
 #### API
 
-* Soon.
+* Added support for file:// URI scheme in [overwolf.media.videoscreateVideoComposition()](https://overwolf.github.io/docs/api/overwolf-media-videos#createvideocompositionsourcevideourl-segments-callback).  
+  Note that it only allows paths under the extension folder (`%localappdata%/overwolf/extensions/…`) or extension videos folder (`overwolf/videos/…`).
 
 #### Platform
 

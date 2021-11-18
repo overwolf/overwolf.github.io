@@ -136,7 +136,6 @@ html {
 	position: relative;
 	overflow-y: scroll;
 	min-height: 100vh;
-	scroll-behavior: smooth;
 }
 
 body {
