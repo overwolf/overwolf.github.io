@@ -294,8 +294,8 @@
 	width: 40px;
 	height: 22px;
 	
-	background: var(--color-800);
-	border: 1px solid var(--color-800);
+	background: var(--color-500);
+	border: 1px solid var(--color-500);
 	border-radius: 14px;
 	line-height: 0;
 	font-size: 0;
@@ -304,8 +304,8 @@
 	pointer-events: none;
 }
 .dark-mode-switch input:checked + span {
-	background: var(--color-300);
-	border: 1px solid var(--color-300);
+	background: var(--color-800);
+	border: 1px solid var(--color-800);
 }
 .dark-mode-switch span:before {
 	content: '';

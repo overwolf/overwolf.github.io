@@ -167,6 +167,9 @@ div#docsNav .os-scrollbar-track-off {
 
 .collapsible .arrow {
   transform: rotate(180deg);
+  position: absolute;
+  top: 5px;
+  right: -4px;
 }
 
 .collapsible .arrow.rotate {
@@ -211,6 +214,7 @@ nav.toc {
   color: var(--color-500);
   font-size: 16px;
   letter-spacing: 0.01em;
+  position: relative;
 }
 
 .toc .toggleNav .navGroup .navGroupCategoryTitle.is-active {
