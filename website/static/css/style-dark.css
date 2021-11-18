@@ -249,8 +249,8 @@
 	background-color: var(--color-grey) ;  
   }
 
-.theme-dark .admonition h5, .theme-dark .admonition p {
-	color: var(--color-300);
+.theme-dark .admonition h5, .theme-dark .admonition p, .theme-dark .admonition ul li, .theme-dark .admonition ul li a {
+	color: var(--color-300) !important;
 }
 
 .theme-dark blockquote {
