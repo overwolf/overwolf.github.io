@@ -253,6 +253,11 @@
 	color: var(--color-300) !important;
 }
 
+.theme-dark summary {
+    color: var(--color-txt);
+	cursor: pointer;
+}
+
 .theme-dark blockquote {
     background-color: var(--color-300) !important; 
     border-left: 2px solid #FF3434;
