@@ -298,7 +298,7 @@ a.active-highlight {
 .onPageNav::before {
   content: '';
 	position: absolute;
-	height: 120%;
+	height: 106%;
 	width: 1px;
   left: 0;
   top: 5px;
