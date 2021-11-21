@@ -33,11 +33,16 @@ div#docsNav .os-scrollbar-track-off {
   text-decoration-line: underline;
 	transition: color .2s;
 }
+
 .mainContainer .post a {
   color: var(--color-website-red);
   color: var(--color-bg);
 }
 .mainContainer .post a:hover {
+	color: var(--color-primary-hover)
+}
+
+.mainContainer .post a:hover code {
 	color: var(--color-primary-hover)
 }
 

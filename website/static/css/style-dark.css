@@ -104,8 +104,16 @@
 	color: var(--color-primary-hover)
 }
 
-.theme-dark .mainContainer .post a { color: var(--color-headline); }
-.theme-dark .mainContainer .post a:hover { color: var(--color-primary-hover); }
+.theme-dark .mainContainer .post a { 
+	color: var(--color-headline); 
+	text-decoration-color: var(--color-grey);
+}
+
+.theme-dark .mainContainer .post a:hover { 
+	color: var(--color-primary-hover); 
+	text-decoration-color: var(--color-primary-hover);
+}
+
 .theme-dark .slick-slider a:hover {	color: var(--color-primary-hover); }
 .theme-dark .main-content a { color: var(--color-headline); }
 .theme-dark .main-content a:hover { color: var(--color-primary-hover); }
