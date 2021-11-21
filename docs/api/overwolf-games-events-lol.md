@@ -1551,6 +1551,6 @@ Possible Values:
 Data Example:
 
 ```json
-{"info":{"jungle_camp_7":{"camp_name":"jungle_camp_7","alive":"false","vision":"true"}},"feature":"game_info"}
-{"info":{"jungle_camp_14":{"camp_name":"jungle_camp_14","alive":"true","vision":"true"}},"feature":"game_info"}
+{"info":{"jungle_camps":{"jungle_camp_4":"{"name":"monsterCamp_4","alive":false,"vision":true}"}},"feature":"jungle_camps"}
+{"info":{"jungle_camps":{"jungle_camp_14":"{"name":"monsterCamp_14","alive":true,"vision":true}"}},"feature":"jungle_camps"}
 ```
