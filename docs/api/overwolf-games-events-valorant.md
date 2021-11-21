@@ -108,6 +108,7 @@ Possible agent values:
 * "Stealth_PC_C" = Yoru
 * "Rift_PC_C" = Astra
 * "Grenadier_PC_C" = KAY/O
+* "Deadeye_PC_C" = Chamber
 
 ## `match_info`
 
