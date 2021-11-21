@@ -75,8 +75,6 @@ Data Example:
                     "sideboard_cards": "{"
                     cards ":[{"
                     card_id ":71208,"
-                    card_name ":"
-                    Yidaro,
                     Wandering Monster ","
                     card_amount ":1}]}"
                 }
@@ -90,14 +88,7 @@ Data Example:
 Data Example:
 
 ```json
-{
-  "info": {
-    "game_info": {
-      "main_deck_cards": "{"cards":[{"card_id":71208,"card_name":"Yidaro, Wandering Monster","card_amount":0},{"card_id":71299,"card_name":"Yorion, Sky Nomad","card_amount":1},{"card_id":71177,"card_name":"Cathartic Reunion","card_amount":1},{"card_id":71099,"card_name":"Splendor Mare","card_amount":1}]}"
-    }
-  },
-  "feature": "game_info"
-}
+{"info":{"game_info":{"main_deck_cards":"{"cards":[{"card_id":75487","card_amount":4},{"card_id":75498","card_amount":2},{"card_id":75504","card_amount":2},{"card_id":75488","card_amount":1},{"card_id":75490","card_amount":2},{"card_id":75492","card_amount":3},{"card_id":75505","card_amount":3},{"card_id":75506","card_amount":2},{"card_id":75493","card_amount":3},{"card_id":75494","card_amount":4},{"card_id":75499","card_amount":4},{"card_id":75502","card_amount":3},{"card_id":75501","card_amount":2},{"card_id":75503","card_amount":2},{"card_id":75486","card_amount":2},{"card_id":75495","card_amount":2},{"card_id":75489","card_amount":3},{"card_id":75557","card_amount":25}]}"}},"feature":"game_info"}
 ```
 
 #### *game_mode* note
@@ -167,44 +158,34 @@ Data Example:
                     id ":71319, "
                     name ":"
                     Rugged Highlands "}, {
-                        "id": 71196,
-                        "name": "Prickly Marmoset"
+                        "id": 71196
                     },
                     {
-                        "id": 71219,
-                        "name": "Fertilid"
+                        "id": 71219
                     },
                     {
-                        "id": 71090,
-                        "name": "Maned Serval"
+                        "id": 71090
                     },
                     {
-                        "id": 71307,
-                        "name": "Sleeper Dart"
+                        "id": 71307
                     },
                     {
-                        "id": 71162,
-                        "name": "MemoryLeak"
+                        "id": 71162
                     },
                     {
-                        "id": 71098,
-                        "name": "Solid Footing"
+                        "id": 71098
                     },
                     {
-                        "id": 71143,
-                        "name": "Boot Nipper"
+                        "id": 71143
                     },
                     {
-                        "id": 71309,
-                        "name": "Zagoth Crystal"
+                        "id": 71309
                     },
                     {
-                        "id": 71199,
-                        "name": "Reptilian Reflection"
+                        "id": 71199
                     },
                     {
-                        "id": 71215,
-                        "name": "Colossification"
+                        "id": 71215
                     }]
             }
             "}},
@@ -222,7 +203,6 @@ Data Example:
                 "match_info": {
                     "draft_picked_card": "{"
                     picked_card_id ":71073 , "
-                    picked_card_name ":"
                     Coordinated Charge "}"
                 }
             },
