@@ -38,6 +38,7 @@ Note that you can also use the LOL game launcher events. Read more [here](overwo
 * [counters](#counters)
 * [damage](#damage)
 * [heal](#heal)
+* [jungle_camps](#jungle_camps)
 
 
 ## Game events status
@@ -1513,4 +1514,43 @@ Data Example:
 
 ```json
 {"info":{"heal":{"total_units_healed":"1.0"}},"feature":"heal"}
+```
+
+## `jungle_camps`
+
+### Info Updates
+
+key  | Category    | Values                                     | Notes  | Since GEP Ver. |
+-----| ------------| -------------------------------------------| ------ | ------------- |
+jungle_camp_xx | jungle_camps | Numerical, representing each jungle camp. |See [notes](#jungle_camp-note)|    186.0      |
+
+#### *jungle_camp* note:
+
+Boolean values - vision true / false representing whether we have vision on the camp in question and true / false representing whether they are alive or dead (this information is true whether it is killed by an enemy or an ally).
+
+Possible Values:
+
+* Camp 1 = Blue West
+* Camp 7 = Blue East
+* Camp 2 = Wolves West
+* Camp 8 = Wolves East
+* Camp 3 = Raptors West
+* Camp 9 = Raptors East
+* Camp 4 = Red West 
+* Camp 10 = Red East
+* Camp 5 = Krug West
+* Camp 11 = Krug East
+* Camp 6 = Dragon
+* Camp 12 = Baron
+* Camp 13 = Gromp West
+* Camp 14 = Gromp East
+* Camp 15 = Scuttle Crab River Bot side
+* Camp 16 = Scuttle Crab River Top side
+* Camp 17 = Rift Herald
+
+Data Example:
+
+```json
+{"info":{"jungle_camps":{"jungle_camp_4":"{"name":"monsterCamp_4","alive":false,"vision":true}"}},"feature":"jungle_camps"}
+{"info":{"jungle_camps":{"jungle_camp_14":"{"name":"monsterCamp_14","alive":true,"vision":true}"}},"feature":"jungle_camps"}
 ```
