@@ -1527,8 +1527,9 @@ jungle_camp_xx | jungle_camps | Numerical, representing each jungle camp. |See [
 #### *jungle_camp* note:
 
 Boolean values:
-* vision - true / false representing whether we have vision on the camp in question and 
+
 * alive - true / false representing whether they are alive or dead (this information is true whether it is killed by an enemy or an ally).
+* vision - true / false representing whether we have vision on the camp in question (vision is being updated once the alive state changes).
 
 Possible Values:
 
