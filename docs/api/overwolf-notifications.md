@@ -16,7 +16,7 @@ Toast notifications are a combination of some data properties like header, visua
 
 ## Events Reference
 
-* [overwolf.onToastNotification](#ontoastnotification)
+* [overwolf.onToastInteraction](#ontoastinteraction)
 
 ## Types Reference
 
@@ -141,7 +141,7 @@ Default   |  "Default"   | Cropping uses the default behavior of the renderer.  
 None      |  "None"      | Image is not cropped.                                  |
 Circle    |  "Circle"    | Image is cropped to a circle shape.                    |
 
-## onToastNotification
+## onToastInteraction
 #### Version added: 0.176
 
 > Fired when a user tapped on the body of a toast notification or performed an action inside a toast notification, with the following structure: [ToastNotificationEvent](#toastnotificationevent-object) Object.
