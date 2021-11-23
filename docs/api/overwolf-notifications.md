@@ -9,6 +9,7 @@ Use this API to send toast notifications from your OW app.
 Toast are interactive OS notifications that lets you create flexible "reminders" with text, images, and buttons/inputs.
 Toast notifications are a combination of some data properties like header, visual (hero image, inline image, app logo) and the toast content.
 
+**Note that currently using toast on an unpacked app does NOT work.**
 
 ## Methods Reference
 
