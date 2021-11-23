@@ -17,6 +17,10 @@ Here you can find our [Developers Roadmap](https://trello.com/b/1V10E4IB/overwol
 * [League of Legends](overwolf-games-events-lol)
   * New feature:
     * jungle_camps
+* [Rocket League](overwolf-games-events-rocket-league)
+  * New info updates:
+    * car_look_inventory
+    * trade_my_inventory
 
 #### API
 
@@ -29,7 +33,7 @@ Here you can find our [Developers Roadmap](https://trello.com/b/1V10E4IB/overwol
 
 #### Dev Console
 
-* Soon.
+* Added internal release notes to uploaded OPKs
 
 #### Bug fixes
 
