@@ -20,6 +20,20 @@ All events and info updates can be target to changes.
 * [gep_internal](#gep_internal)
 * [me](#me)
 * [match_info](#match_info)
+* [matching](#matching)
+* [character_selection](#character_selection)
+* [kills](#kills)
+* [announces](#announces)
+* [game_objects](#game_objects)
+* [day_change](#day_change)
+* [move_regions](#move_regions)
+* [scoreboards](#scoreboards)
+* [damages](#damages)
+* [level_ups](#level_ups)
+* [routes](#routes)
+* [equipments](#equipments)
+* [restriction_timers](#restriction_timers)
+* [match_ends](#match_ends)
 
 ## Game event status
 
