@@ -2,6 +2,7 @@
 id: eternal-return
 title: Game events status
 sidebar_label: Eternal Return
+<!-- Comment: Game Logo doesn't seem to be right -->
 ---
 
 <meta http-equiv="Content-Type" content="text/html charset=utf-8"/>
