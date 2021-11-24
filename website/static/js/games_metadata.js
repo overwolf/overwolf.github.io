@@ -228,6 +228,6 @@ const GamesMetadata = {
     path: "/docs/status/eternal-return",
     iconUrl: "/docs/assets/games-logos/eternal-return.png",
     iconLargeUrl: "/docs/assets/games-logos/large/eternal-return.png",
-    name: "Eeternal Return"
+    name: "Eternal Return"
   }
 }
