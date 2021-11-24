@@ -21,6 +21,8 @@ Here you can find our [Developers Roadmap](https://trello.com/b/1V10E4IB/overwol
   * New info updates:
     * car_look_inventory
     * trade_my_inventory
+* [Warframe](overwolf-games-events-warframe)
+  * Temporarily disabled `inventory`
 
 #### API
 
