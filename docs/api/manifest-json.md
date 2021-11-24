@@ -136,7 +136,14 @@ Note that not all flags are mandatory - we included all available flags for docu
         //If set to true, app local data will not be cleaned up after app uninstallation
         "<a href="#disable_cleanup">disable_cleanup</a>": true,
         "<a href="#process_name">process_name</a>": "my sample app",
-        "<a href="#url_protocol">url_protocol</a>": {"scheme": "testscheme"}
+        "<a href="#url_protocol">url_protocol</a>": {"scheme": "testscheme"},
+        "<a href="#uninstall_window">uninstall_window</a>": {
+        //if exists, the client will run this window in the background for the required time before actually uninstalling an app.
+            "<a href="#uninstall_window">file</a>": "name.html",
+            //exactly as other overwolf windows. this window should not display UI as it runs in the background.
+            "<a href="#uninstall_window">required_runtime</a>": 1000,
+            //if not defined, the default is 10 seconds. valid up to 60000 (1 minute).
+        }
 
     }
 }
@@ -243,6 +250,10 @@ Note that not all flags are mandatory - we included all available flags for docu
         "<a href="#disable_cleanup">disable_cleanup</a>": true,
         "<a href="#process_name">process_name</a>": "my sample app",
         "<a href="#url_protocol">url_protocol</a>": {"scheme": "testscheme"}
+        "<a href="#uninstall_window">uninstall_window</a>": {
+            "<a href="#uninstall_window">file</a>": "name.html",
+            "<a href="#uninstall_window">required_runtime</a>": 1000,
+        }
             
 }
 </code></pre>
@@ -346,6 +357,7 @@ A list of additional settings for the app.
 | <a class="anchor" aria-hidden="true" id="process_name"></a>process_name | string |  Overrides the default (OverwolfBrowser.exe) process name in task manager. </br> **Please read our [notes](#process_name-notes)** | 0.153  |
 | <a class="anchor" aria-hidden="true" id="max_rotation_log_files"></a>max_rotation_log_files | number | Increase the app's log file rotation (defaults to 10, max is 40). | 0.154  |
 | <a class="anchor" aria-hidden="true" id="url_protocol"></a>url_protocol | [url_protocol](#url_protocol-object) object | Ability to open an application from a browser using a link. | 0.158  |
+| <a class="anchor" aria-hidden="true" id="uninstall_window"></a>uninstall_window | [uninstall_window](#uninstall_window-object) object|  Additional setting for the uninstall window. |0.187  |
 
 #### user_agent Notes
 
@@ -754,4 +766,29 @@ If an extra params has been sent (e.g. "outplayed://something/null"), the [onApp
 
 ```json
 {origin: "urlscheme", parameter: "outplayed%3a%2f%2fsomething%null"}
+```
+
+## uninstall_window object
+
+Additional setting for the uninstall window object.
+
+* If the app is uninstalled, the client will run this window in the background for the required time before actually uninstalling the app.
+* If overwolf client is uninstalled, the uninstaller will first let the client run all uninstall windows before actually uninstalling overwolf.
+
+:::note Note
+This window is running in the background mainly for cleaning and post-uninstall tasks of the app. Do not add any UI element, links that open the user's browser, etc. 
+:::
+
+| Name                      | Type   | Description                                                                                                               | Since |
+|---------------------------| ------ |---------------------------------------------------------------------------------------------------------------------------|------ |
+| file                      | string | Points to a local HTML file to be loaded inside the window                                                                | 0.187 |
+| required_runtime          | int    | Valid up to 60000 (1 minute).  </br>*default value is 10000 milliseconds (10 seconds)*                                    | 0.187 |
+
+Code Example:
+
+```json
+"uninstall_window": {
+    "file": "name.html",
+    "required_runtime": 20000, 
+}
 ```
