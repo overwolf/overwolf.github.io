@@ -8,9 +8,35 @@ Follow this entry for ongoing updates and changes to the project or tools.
 
 Here you can find our [Developers Roadmap](https://trello.com/b/1V10E4IB/overwolf-roadmap).
 
-## Version 0.185 (In-Progress)
+## Version 0.187 (In-Progress)
 
 * Note that the work on the documentation for this version is still in-progress.
+
+#### Docs
+
+* Soon.
+
+#### API
+
+* New manifest flag (under "data"): [uninstall_window](manifest-json#uninstall_window-object) - when set, this window will in the background mainly for cleaning and post-uninstall tasks of the app.
+  * If the app is uninstalled, the client will run this window in the background for the required time before actually uninstalling the app.  
+    The default is 10 seconds. valid up to 60000 (1 minute).  
+  * If the Overwolf client is uninstalled, the uninstaller will first let the client run all uninstall windows before actually uninstalling overwolf.
+  * Do not add any UI element, links that open the user's browser, etc. 
+
+#### Platform
+
+* Soon.
+
+#### Dev Console
+
+* Soon.
+
+#### Bug fixes
+
+* Soon.
+
+## Version 0.185 (Dec 21)
 
 #### Docs
 
@@ -28,10 +54,6 @@ Here you can find our [Developers Roadmap](https://trello.com/b/1V10E4IB/overwol
 
 * Added support for file:// URI scheme in [overwolf.media.videoscreateVideoComposition()](https://overwolf.github.io/docs/api/overwolf-media-videos#createvideocompositionsourcevideourl-segments-callback).  
   Note that it only allows paths under the extension folder (`%localappdata%/overwolf/extensions/…`) or extension videos folder (`overwolf/videos/…`).
-
-#### Platform
-
-* Soon.
 
 #### Dev Console
 
