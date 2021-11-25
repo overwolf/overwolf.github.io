@@ -36,7 +36,7 @@ Here you can find our [Developers Roadmap](https://trello.com/b/1V10E4IB/overwol
 
 * Soon.
 
-## Version 0.185 (Dec 21)
+## Version 0.185 (Dec 2021)
 
 #### Docs
 
