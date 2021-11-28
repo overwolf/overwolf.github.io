@@ -14,9 +14,7 @@ Here you can find our [Developers Roadmap](https://trello.com/b/1V10E4IB/overwol
 
 #### Docs
 
-* [Rainbow Six](overwolf-games-events-rainbow-six)
-  * New info updates:
-    * match_info
+* Soon.
 
 #### API
 
@@ -51,6 +49,9 @@ Soon.
     * trade_my_inventory
 * [Warframe](overwolf-games-events-warframe)
   * Temporarily disabled `inventory`
+* [Rainbow Six](overwolf-games-events-rainbow-six)
+  * New info updates:
+    * match_info
 
 #### API
 
