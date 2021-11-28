@@ -92,6 +92,30 @@ Types of errors that can occur:
 * UnsupportedFile (trying to share an unsupported format)
 * ExceedsMaxSize (the file is too large: > 8 MB for images, > 100 MBfor videos)
 
+#### Code Example
+
+Note: you should perform login to Discord before calling the share function: overwolf.social.discord.performUserLogin().
+
+```js
+let settingsLocalFile=
+    {  
+       "file":"C:\\Users\\astaroth\\Videos\\Overwolf\\test.mp4", //change the file name to an existing file
+       "message":"Check out my video! #LeagueofLegends | Captured by #Overwolf",
+       "events":[  
+          "death"
+       ],
+       "gameClassId":5426,
+       "gameTitle":"League of Legends",
+       "channelId":"544173576018722867",  //change the "channelId" right click the discord channel you would like to share to and click "copy id"
+       "metadata":{  
+          "champion":"Urgot",
+          "win":"Win"
+       }
+    }
+
+overwolf.social.discord.share(settingsLocalFile, console.log)
+```
+
 ## onLoginStateChanged
 #### Version added: 0.115
 
