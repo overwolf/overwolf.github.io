@@ -14,7 +14,9 @@ Here you can find our [Developers Roadmap](https://trello.com/b/1V10E4IB/overwol
 
 #### Docs
 
-* Soon.
+* [Rainbow Six](overwolf-games-events-rainbow-six)
+  * New info updates:
+    * match_info
 
 #### API
 
@@ -30,8 +32,8 @@ Here you can find our [Developers Roadmap](https://trello.com/b/1V10E4IB/overwol
 
 #### Dev Console
 
-* Soon.
-
+Soon.
+    
 #### Bug fixes
 
 * Soon.
