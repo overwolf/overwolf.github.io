@@ -46,10 +46,11 @@ disabled_services | string[]                                   |                
 ## GetUserInfoResult Object	
 #### Version added: 0.128	
 
-> Container for get user info result.	
-Parameter         | Type          | Description             |	
-------------------| --------------| ----------------------- |	
-userInfo          | object        |                         | 	
+> Container for get user info result.
+
+Parameter         | Type                                       | Description             |
+------------------| -------------------------------------------| ----------------------- |
+userInfo          | object                                     |                         | 
 
 #### Example data: Reddit / Youtube / Twitter / Gfycat	
 
