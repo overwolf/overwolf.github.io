@@ -80,14 +80,13 @@ callback  | function                   | Returns the channels of the given guild
 
 > If the user is currently logged into Discord, this will perform the video share.
 
-|discordShareParams| is of type  errors that can occur:- Disconnected (user isn’t signed in)- MissingFile (trying to share a missing file)- UnsupportedFile (trying to share an unsupported format)
-
 Parameter             | Type                       | Description                                                           |
 --------------------- | ---------------------------| --------------------------------------------------------------------- |
 discordShareParams    | [DiscordShareParameters](#discordshareparameters-object) Object        | The share parameters       |
 callback  | (Result) => void   | A callback function which will be called with the status of the request |
 
 Types of errors that can occur:
+
 * Disconnected (user isn't signed in)
 * MissingFile (trying to share a missing file)
 * UnsupportedFile (trying to share an unsupported format)
