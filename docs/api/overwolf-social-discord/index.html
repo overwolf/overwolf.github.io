@@ -177,6 +177,26 @@ Otherwise, an error is returned.</p>
 <li>UnsupportedFile (trying to share an unsupported format)</li>
 <li>ExceedsMaxSize (the file is too large: &gt; 8 MB for images, &gt; 100 MBfor videos)</li>
 </ul>
+<h4><a class="anchor" aria-hidden="true" id="code-example"></a><a href="#code-example" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Code Example</h4>
+<p>Note: you should perform login to Discord before calling the share function: overwolf.social.discord.performUserLogin().</p>
+<pre><code class="hljs css language-js"><span class="hljs-keyword">let</span> settingsLocalFile=
+    {  
+       <span class="hljs-string">"file"</span>:<span class="hljs-string">"C:\\Users\\astaroth\\Videos\\Overwolf\\test.mp4"</span>, <span class="hljs-comment">//change the file name to an existing file</span>
+       <span class="hljs-string">"message"</span>:<span class="hljs-string">"Check out my video! #LeagueofLegends | Captured by #Overwolf"</span>,
+       <span class="hljs-string">"events"</span>:[  
+          <span class="hljs-string">"death"</span>
+       ],
+       <span class="hljs-string">"gameClassId"</span>:<span class="hljs-number">5426</span>,
+       <span class="hljs-string">"gameTitle"</span>:<span class="hljs-string">"League of Legends"</span>,
+       <span class="hljs-string">"channelId"</span>:<span class="hljs-string">"544173576018722867"</span>,  <span class="hljs-comment">//change the "channelId" right click the discord channel you would like to share to and click "copy id"</span>
+       <span class="hljs-string">"metadata"</span>:{  
+          <span class="hljs-string">"champion"</span>:<span class="hljs-string">"Urgot"</span>,
+          <span class="hljs-string">"win"</span>:<span class="hljs-string">"Win"</span>
+       }
+    }
+
+overwolf.social.discord.share(settingsLocalFile, <span class="hljs-built_in">console</span>.log)
+</code></pre>
 <h2><a class="anchor" aria-hidden="true" id="onloginstatechanged"></a><a href="#onloginstatechanged" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>onLoginStateChanged</h2>
 <h4><a class="anchor" aria-hidden="true" id="version-added-0115-6"></a><a href="#version-added-0115-6" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Version added: 0.115</h4>
 <blockquote>
