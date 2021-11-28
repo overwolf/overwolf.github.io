@@ -287,13 +287,14 @@
 }
 @media only screen and (max-width: 1250px) {
 	.dark-mode-switch {
-		left: 170px;
+		left: 208px;
 	}
 }
 @media only screen and (max-width: 480px) {
 	.dark-mode-switch {
-		left: 176px;
-		top: -1px;
+    left: 190px;
+    top: -1px;
+    transform: scale(0.7);
 	}
 }
 
