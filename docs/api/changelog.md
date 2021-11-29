@@ -51,7 +51,18 @@ Soon.
   * Temporarily disabled `inventory`
 * [Rainbow Six](overwolf-games-events-rainbow-six)
   * New info updates:
-    * match_info
+     * game_mode_log	
+     * general_log
+     * match_start_log
+     * round_start_log
+     * round_end_log
+     * move_log
+     * score_log
+     * kill_log
+     * ko_log
+     * death_log
+     * match_end_log
+     * account_id_log
 
 #### API
 
