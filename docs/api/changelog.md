@@ -18,11 +18,10 @@ Here you can find our [Developers Roadmap](https://trello.com/b/1V10E4IB/overwol
 
 #### API
 
-* New manifest flag (under "data"): [uninstall_window](manifest-json#uninstall_window-object) - when set, this window will in the background mainly for cleaning and post-uninstall tasks of the app.
-  * If the app is uninstalled, the client will run this window in the background for the required time before actually uninstalling the app.  
-    The default is 10 seconds. valid up to 60000 (1 minute).  
-  * If the Overwolf client is uninstalled, the uninstaller will first let the client run all uninstall windows before actually uninstalling overwolf.
-  * Do not add any UI element, links that open the user's browser, etc. 
+* New manifest flag for running background tasks when a user uninstalls an app like removing files DLLs, logs, images, and other files injected into the user's machine.
+  * You can set the new manifest flag (under "data"):  
+    `"uninstall_window": { "file": "name.html", "required_runtime": 20000 }`
+  * More info [here](manifest-json#uninstall_window-object).
 
 #### Platform
 
