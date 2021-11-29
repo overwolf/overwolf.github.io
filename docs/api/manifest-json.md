@@ -778,7 +778,7 @@ Use it for running uninstall background actions like removing DLLs, logs, images
 * If the overwolf client is uninstalled, the uninstaller will let the client run all uninstall windows before actually uninstalling overwolf.
 
 :::important
-The uninstall window is running in the background. Do not add any UI element, links that open the user's browser, etc. 
+The uninstall window is running in the background. Do not add any UI element or links that opens other windows, user browser, etc.
 :::
 
 | Name                      | Type   | Description                                                                                                               | Since |
