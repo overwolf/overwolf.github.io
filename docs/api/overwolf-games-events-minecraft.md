@@ -97,7 +97,9 @@ facing       | match_info  | The current direction the player is facing. |See [n
 Event        | Event Data        | Fired When        | Notes              | Since GEP Ver. |
 -------------| ------------------| ----------------- | ------------------ | ---------------|
 match_start  | null              | When loading into map.|See [notes](#match_start-note)|   153.0  |
-match_end    | null              | When disconnecting from map.|See [notes](#match_end-note)|   153.0  |
+match_end    | null              | When disconnecting from map. |See [notes](#match_end-note)|   153.0  |
+chat         | text              | When chat window is updated. |See [notes](#chat-note)|   187.0  |
+
 
 #### *server* note
 
@@ -184,7 +186,6 @@ Data Example:
 
 ```json
 {"events":[{"name":"match_start","data":"null"}]}
-
 ```
 
 #### *match_end* note
@@ -193,4 +194,12 @@ Data Example:
 
 ```json
 {"events":[{"name":"match_end","data":"null"}]}
+```
+
+#### *chat* note
+
+Data Example:
+
+```json
+{"events":[{"name":"chat","data":"§7overwolfqa§7: hello"}]}
 ```
