@@ -62,6 +62,9 @@ Soon.
      * death_log
      * match_end_log
      * account_id_log
+ * [Minecraft](overwolf-games-events-minecraft)
+   * New event:
+     * chat
 
 #### API
 
