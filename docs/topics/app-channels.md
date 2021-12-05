@@ -58,6 +58,10 @@ After uploading the OPK to the custom channel, you get get a custom link for dow
 
 ![production-and-testing](../assets/dev-console/app-channels/copy-link.png)
 
+:::note
+The "start rollout to production" button will roll out the current version to the beta channel and not to your public/production main channel.
+:::
+
 After releasing a version to your new channel, you can go back to the channels list page and see which version is the "public" version of each channel. In our case, v3.0.9 is the released/public version of the "Beta" channel:
 
 ![channels-list-with-version](../assets/dev-console/app-channels/channels-list-with-version.png)
