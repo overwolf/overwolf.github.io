@@ -11,7 +11,7 @@ Please read the [overwolf.games.events](overwolf-games-events) documentation pag
 :::
 
 ## Sample Apps
-* [Rocket League game events sample app](https://github.com/overwolf/rocket-league-events-sample-app)
+* [Rocket League game events sample app](https://github.com/overwolf/events-sample-apps)
 
 ## Available Features
 
