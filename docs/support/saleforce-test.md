@@ -13,8 +13,8 @@ sidebar_label: Saleforce Test
 <script src=" https://unpkg.com/babel-standalone@6/babel.min.js"></script>
 <!-- importing the remarkable plugin -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/remarkable/1.7.1/remarkable.js"></script>
-<!-- importing getting started page custom css file -->
-<link href="/css/getting-started.css" rel="stylesheet">
+<!-- importing salesforce form custom css file -->
+<link href="/css/salesforce-form.css" rel="stylesheet">
 
 <div id="salesForceTestForm">
   <script type="text/jsx" src="/jsx/salesForceTestForm.jsx"></script>
