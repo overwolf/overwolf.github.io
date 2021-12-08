@@ -14,7 +14,9 @@ Here you can find our [Developers Roadmap](https://trello.com/b/1V10E4IB/overwol
 
 #### Docs
 
-* Soon.
+* [League of Legends](overwolf-games-events-lol)
+  * New feature in:
+    * jungle_camps
 
 #### API
 
