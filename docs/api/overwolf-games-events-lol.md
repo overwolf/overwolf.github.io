@@ -1531,6 +1531,12 @@ Boolean values:
 * alive - true / false representing whether they are alive or dead (this information is true whether it is killed by an enemy or an ally).
 * vision - true / false representing whether we have vision on the camp in question (vision is being updated once the alive state changes).
 
+Icon values:
+
+* 0 - Means there is no icon indicator in the minimap for relevant camp.
+* 1 - Displaying silver icon (long respawn indicator) for relevant camp.
+* 2 - Displaying gold icon (short respawn indicator) for relevant camp.
+
 Possible Values:
 
 * Camp 1 = Blue West
@@ -1554,6 +1560,7 @@ Possible Values:
 Data Example:
 
 ```json
-{"info":{"jungle_camps":{"jungle_camp_4":"{"name":"monsterCamp_4","alive":false,"vision":true}"}},"feature":"jungle_camps"}
-{"info":{"jungle_camps":{"jungle_camp_14":"{"name":"monsterCamp_14","alive":true,"vision":true}"}},"feature":"jungle_camps"}
+{"info":{"jungle_camps":{"jungle_camp_4":"{"name":"monsterCamp_4","alive":true,"vision":true,"icon_status":"0"}"}},"feature":"jungle_camps"}
+{"info":{"jungle_camps":{"jungle_camp_4":"{"name":"monsterCamp_4","alive":false,"vision":true,"icon_status":"1"}"}},"feature":"jungle_camps"}
+{"info":{"jungle_camps":{"jungle_camp_4":"{"name":"monsterCamp_4","alive":false,"vision":true,"icon_status":"2"}"}},"feature":"jungle_camps"}
 ```
