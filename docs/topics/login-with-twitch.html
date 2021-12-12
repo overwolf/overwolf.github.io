@@ -121,7 +121,7 @@ As Twitch doesn't accept URIs where the top domain is not HTTP, <strong>you can'
 <p>Redirect back to your app login page:</p>
 <pre><code class="hljs css language-js"><span class="hljs-built_in">window</span>.location.replace(<span class="hljs-string">`overwolf-extension://[EXTENSION-ID]/dist/login/login.html<span class="hljs-subst">${location.hash}</span>`</span>);
 </code></pre>
-<p>To enable the browser to open this custom handler using the user's browser, we will later add the <a href="#set-url_protocol">url_protocol</a> to the app's manifest.</p>
+<p>To enable the user's browser to open this custom handler, we will later add the <a href="#set-url_protocol">url_protocol</a> to the app's manifest.</p>
 <p>In addition, replace the [EXTENSION-ID] with your extension's id.</p>
 <p>The <a href="https://www.w3schools.com/jsref/prop_loc_hash.asp">URL hash</a> is the Twitch auth token sent back to the app.</p>
 <p>Now that you have a live static login page on your server, <a href="#register-your-app-on-twitch">go back</a> and set the Twitch redirect URI.</p>
