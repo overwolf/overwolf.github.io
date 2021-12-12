@@ -27,7 +27,8 @@ Here you can find our [Developers Roadmap](https://trello.com/b/1V10E4IB/overwol
 
 #### Platform
 
-* Soon.
+* Links open in default browser - All links existing in the store now open in the users’ default browser.
+* Analytics - When installing apps from the store’s carousel we specify it was from the carousel in the InstalledApp analytic.
 
 #### Dev Console
 
@@ -35,7 +36,9 @@ Soon.
     
 #### Bug fixes
 
-* Soon.
+* Fixed an issue where CEF wouldn’t receive the real window size in some cases when restoring native windows.
+* Fixed cases where Overwolf would freeze when turning on Replays with a webcam and closing a game.
+* Fixed an issue where users wouldn’t be able to resize the game window if Overwolf was running as Admin.
 
 ## Version 0.185 (Dec 2021)
 
