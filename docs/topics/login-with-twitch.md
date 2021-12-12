@@ -83,7 +83,9 @@ Redirect back to your app login page:
 window.location.replace(`overwolf-extension://[EXTENSION-ID]/dist/login/login.html${location.hash}`);
 ```
 
-Replace the [EXTENSION-ID] with your extension's id.  
+To enable the browser to open this custom handler using the user's browser, we will later add the [url_protocol](#set-url_protocol) to the app's manifest.
+
+In addition, replace the [EXTENSION-ID] with your extension's id.  
 
 The [URL hash](https://www.w3schools.com/jsref/prop_loc_hash.asp) is the Twitch auth token sent back to the app.
 
@@ -117,6 +119,17 @@ Add to your app manifest the [externally_connectable](../api/manifest-json#exter
     "http://*.twitch.tv", //make sure that the end of URL is WITHOUT any slash/backslash
     "https://*.twitch.tv"
     ]
+}
+```
+
+### Set url_protocol
+
+Register the [custom handler](../api/manifest-json#url_protocol-object) to support opening an OW application from a browser using a link:
+
+```json
+
+"url_protocol": {
+    "scheme": "overwolf-extension"
 }
 ```
 
