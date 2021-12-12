@@ -1,7 +1,7 @@
 ---
 id: saleforce-test
-title: Saleforce Test
-sidebar_label: Saleforce Test
+title: Salesforce Test
+sidebar_label: Salesforce Test
 ---
 
 <meta http-equiv="Content-Type" content="text/html charset=utf-8"/>
