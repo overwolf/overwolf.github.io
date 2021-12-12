@@ -83,7 +83,7 @@ Redirect back to your app login page:
 window.location.replace(`overwolf-extension://[EXTENSION-ID]/dist/login/login.html${location.hash}`);
 ```
 
-To enable the browser to open this custom handler using the user's browser, we will later add the [url_protocol](#set-url_protocol) to the app's manifest.
+To enable the user's browser to open this custom handler, we will later add the [url_protocol](#set-url_protocol) to the app's manifest.
 
 In addition, replace the [EXTENSION-ID] with your extension's id.  
 
