@@ -112,7 +112,7 @@ Data Example:
 Data Example:
 
 ```json
-{"info":{"game_info":{"inventory_stats":"[{"WcCommon":35,"WcUncommon":34,"WcRare":10,"WcMythic":7,"Gold":5150,"Gems":1020,"WcTrack":15,"VaultProgress":1717986918,"DraftTokens":0,"SealedTones":0}]"}},"feature":"match_info"}
+{"info":{"game_info":{"inventory_stats":"[{"WcCommon":35,"WcUncommon":34,"WcRare":10,"WcMythic":7,"Gold":5150,"Gems":1020,"WcTrack":15,"VaultProgress":1717986918}]"}},"feature":"match_info"}
 ```
 
 ## `match_info`
