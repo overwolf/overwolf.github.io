@@ -17,6 +17,9 @@ Here you can find our [Developers Roadmap](https://trello.com/b/1V10E4IB/overwol
 * [League of Legends](overwolf-games-events-lol)
   * New feature in:
     * jungle_camps
+* [MTGA](overwolf-games-events-mtga)
+  * Removed draft token and sealed token from:
+    * inventory stats info update.
 
 #### API
 

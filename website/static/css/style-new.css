@@ -211,6 +211,7 @@ nav.toc {
 
 .toc .toggleNav ul li.navListItemActive a {
   color: var(--color-primary);
+  font-weight: 600;
 }
 
 .toc .toggleNav .navGroup .navGroupCategoryTitle {
