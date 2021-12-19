@@ -21,7 +21,7 @@ Here you can find our [Developers Roadmap](https://trello.com/b/1V10E4IB/overwol
   * Removed draft token and sealed token from:
     * inventory stats info update.
 * [Rainbow Six: Siege](overwolf-games-events-rainbow-six)
-  * Starting december 2021 patch - the blue team will always be the team that started as defender (regardless of the color you see on the screen, due to a change in the game logic).
+  * Since december 2021 patch - team colors provided by GEP do not correspond to the game's UI team color (the local player is always blue in the game's UI). The local player's score, team score and roster regarding to his color are still consistent.
 
 #### API
 
