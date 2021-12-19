@@ -20,6 +20,8 @@ Here you can find our [Developers Roadmap](https://trello.com/b/1V10E4IB/overwol
 * [MTGA](overwolf-games-events-mtga)
   * Removed draft token and sealed token from:
     * inventory stats info update.
+* [Rainbow Six: Siege](overwolf-games-events-rainbow-six)
+  * Starting december 2021 patch - the blue team will always be the team that started as defender (regardless of the color you see on the screen, due to a change in the game logic).
 
 #### API
 
