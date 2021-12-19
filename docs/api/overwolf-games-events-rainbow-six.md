@@ -293,7 +293,7 @@ key          | Category    | Values                    | Notes                 |
 roster_XX | players | Provides info for the currently active players (10 players). See [notes](#roster_xx-notes) below |   |   123.0 |
 team | players | Player’s current team – Orange/Blue/Spectator  |   |   123.0 |
 health | players | Player’s current health – (0-100) or `null`</br>`{"player":{"health":"70"}}` |   |   123.0 |
-score | players | Player’s current score or `null`</br>`{"player":{"score":"335"}}` |   |   123.0 |
+score | players | Player’s current score or `null`</br>`{"player":{"score":"335"}}` | See [notes](#score-notes) |   123.0 |
 kills | players | Total number of kills by the player or `null`</br>`{"player":{"kills":"0"}}` |   |   123.0 |
 deaths | players | Total number of player's deaths or `null`</br>`{"player":{"deaths":"1"}}` |   |   123.0 |
 operator | players | The numeric ID of the chosen operator.<br>`{"player":{"operator":"514"}}` |  |   151.0 |
@@ -343,6 +343,10 @@ When one of the players leaves the match, the relevant “roster_ XX” object w
 `{"players":{"roster_3":null}}`
 
 If a new player replaces a leaver, a new “roster_XX” object will be assigned to the new player who joined.
+
+#### *score* note
+
+Starting december 2021 patch - the blue team will always be the team that started as defender (regardless of the color you see on the screen, due to a change in the game logic).
 
 ## `kill`
 
