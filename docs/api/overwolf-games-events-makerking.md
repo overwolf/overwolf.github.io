@@ -7,7 +7,7 @@ sidebar_label: MakerKing
 Please read the [overwolf.games.events](overwolf-games-events) documentation page to learn how to use Overwolf game events.
 
 :::important Game ID
-123456
+21850
 :::
 
 ## Sample Apps
@@ -17,6 +17,9 @@ Please read the [overwolf.games.events](overwolf-games-events) documentation pag
 ## Available Features
 
 * [gep_internal](#gep_internal)
+* [level](#level)
+* [user](#user)
+* [race](#race)
 
 ## Game event status
 
@@ -40,66 +43,237 @@ Data Example:
 {"info":{"gep_internal":{"version_info":"{"local_version":"157.0.1","public_version":"157.0.1","is_updated":true}"}},"feature":"gep_internal"}
 ```
 
-
-
-key          | Category    | Values                    | Notes                 | Since GEP Ver. |
------------- | ------------| ------------------------- | --------------------- | ------------- | 
-map          | match_info  | Name of selected map.     | See [notes](#map-note)|   148.0       |
-
-#### *map* note
-
-Data Example:
-
-```json
-{"info":{"match_info":{"map":"woods"}},"feature":"match_info"}
-```
-
-
-Event       | Event Data   | Fired When    | Notes              | Since GEP Ver. |
-------------| -------------| --------------| ------------------ | --------------|
-match_start | null         | Match is found and about to start. | See [notes](#match_start-note) | 148.0  |
-match_end   | null         | Match has ended.                   | See [notes](#match_end-note)   | 148.0  |
-
-#### *match_start* note
-
-Data Example:
-
-```json
-{“event”:”match_start”,“data”:”null”}
-```
-
-#### *match_end* note
-
-Data Example:
-
-```json
-{“event”:”match_end”,“data”:”null”}
-```
-
-## `game_info`
+## `level`
 
 ### Info Updates
 
-key          | Category    | Values                    | Notes                 | Since GEP Ver. |
------------- | ------------| ------------------------- | --------------------- | ------------- | 
-phase        | game_info   | Current game state.       | See [notes](#phase-note)|   148.0       |
+key          | Category    | Values                          | Notes                 | Since GEP Ver. |
+------------ | ------------| ------------------------------- | --------------------- | ------------- | 
+level        | level       | All data about current level    | See [notes](#level-note)|   ?       |
 
-#### *phase* note
+#### *level* note
 
 Data Example:
 
 ```json
-{"info":{"game_info":{"phase":"scene_Login"}},"feature":"game_info"}
+???
 ```
+
+
+### Events
+
+Event      | Event Data  | Fired When          | Notes              | Since GEP Ver. |
+-----------| ------------| ------------------- | ------------------ | --------------|
+loading_level         | Level ID and whether loading is for editor or game        | The local player makes an attempt to join a level for play or edition |   |  ?       | 
+joined_level          | Level that has been joined                                |  Level is fully loaded and ready to be played                         |   |  ?       | 
+reached_checkpoint    | Position of the checkpoint within the game world          |  The local player reaches a checkpoint in the level they are playing 	|   |  ?       | 
+cleared_level         | null                                                      |  The local player reaches the end of the level they are playing       |   |  ?       | 
+level_reset           | null                                                      |  The local player either dies or restarts                             |   |  ?       | 
+joined_editor         | Level that has been opened in the editor                  |  Level is fully loaded and ready to be edited                         |   |  ?       |
+started_playtest      | null                                                      |  Local player has started playtesting edited level                    |   |  ?       | 
+ended_playtest        | null                                                      |  Local player ended playtesting level                                 |   |  ?       |  
+opened_replay         | null                                                      |  Local player opened and is now watching a replay                     |   |  ?       |  
+closed_replay         | null                                                      |  Local player closed the replay they were watching                    |   |  ?       |  
+
+
+#### *loading_level* note
+
+Data Example:
+
 ```json
-{"info":{"game_info":{"phase":"scene_ExitRaid"}},"feature":"game_info"}
+{“event”:”joined_level”,“data”:”FILL level ID + boolean editing”}
 ```
+
+#### *joined_level* note
+
+Data Example:
+
 ```json
-{"info":{"game_info":{"phase":"scene_BattleUI"}},"feature":"game_info"}
+{“event”:”joined_level”,“data”:”FILL level”}
 ```
+
+
+#### *reached_checkpoint* note
+
+Data Example:
+
 ```json
-{"info":{"game_info":{"phase":"scene_SelectRaidSide"}},"feature":"game_info"}
+{“event”:”reached_checkpoint”,“data”:”FILL position”}
 ```
+
+
+#### *cleared_level* note
+
+Data Example:
+
 ```json
-{"info":{"game_info":{"phase":"scene_SelectLocation"}},"feature":"game_info"}
+{“event”:”cleared_level”,“data”:”null”}
+```
+
+
+#### *level_reset* note
+
+Data Example:
+
+```json
+{“event”:”level_reset”,“data”:”null”}
+```
+
+
+#### *joined_editor* note
+
+Data Example:
+
+```json
+{“event”:”joined_editor”,“data”:”FILL level”}
+```
+
+
+#### *started_playtest* note
+
+Data Example:
+
+```json
+{“event”:”started_playtest”,“data”:”null”}
+```
+
+
+
+#### *ended_playtest* note
+
+Data Example:
+
+```json
+{“event”:”ended_playtest”,“data”:”null”}
+```
+
+
+#### *opened_replay* note
+
+Data Example:
+
+```json
+{“event”:”opened_replay”,“data”:”null”}
+```
+
+
+#### *closed_replay* note
+
+Data Example:
+
+```json
+{“event”:”closed_replay”,“data”:”null”}
+```
+
+## `user`
+
+### Info Updates
+
+key          | Category    | Values                          | Notes                 | Since GEP Ver. |
+------------ | ------------| ------------------------------- | --------------------- | ------------- | 
+account        | user       | Username and player Id of current user    | See [notes](#account-note)|   ?       |
+settings       | user       | All game settings of current user    | See [notes](#settings-note)|   ?       |
+
+#### *account* note
+
+Data Example:
+
+```json
+???
+```
+
+### *settings* note
+
+
+Data Example:
+
+```json
+???
+```
+
+
+### Events
+
+Event      | Event Data  | Fired When          | Notes              | Since GEP Ver. |
+-----------| ------------| ------------------- | ------------------ | --------------|
+game_open            | null                      | The game has finished loading and is fully open                         |   |  ?       | 
+settings_changed     | New settings              | Settings for the game has been changed by the local player (either logged or not) 	|   |  ?       | 
+logged_in            | Account of logged in user | The local player has logged in into their account       |   |  ?       | 
+logged_out           | null                      | The local player has logged off of their account                |   |  ?       | 
+entered_offline_menu | null                      | The local player decided to play offlne and entered the offline menu |   |  ?       | 
+
+#### *game_open* note
+
+Data Example:
+
+```json
+{“event”:”game_open”,“data”:”null”}
+```
+
+#### *settings_changed* note
+
+Data Example:
+
+```json
+{“event”:”settings_changed”,“data”:”FILL settings”}
+```
+
+#### *logged_in* note
+
+Data Example:
+
+```json
+{“event”:”logged_in”,“data”:”FILL account”}
+```
+
+#### *logged_out* note
+
+Data Example:
+
+```json
+{“event”:”logged_out”,“data”:”null”}
+```
+
+#### *entered_offline_menu* note
+
+Data Example:
+
+```json
+{“event”:”entered_offline_menu”,“data”:”null”}
+```
+
+
+## `race`
+
+
+### Events
+
+Event      | Event Data  | Fired When          | Notes              | Since GEP Ver. |
+-----------| ------------| ------------------- | ------------------ | --------------|
+joined_race      | null                      | The local player joins a race |   |  ?       | 
+started_race     | null                      | The race the player had joined starts 	|   |  ?       | 
+left_race        | null                      | The local player finishes or leaves a race       |   |  ?       | 
+
+#### *joined_race* note
+
+Data Example:
+
+```json
+{“event”:”joined_race”,“data”:”null”}
+```
+
+#### *started_race* note
+
+Data Example:
+
+```json
+{“event”:”started_race”,“data”:”null”}
+```
+
+#### *left_race* note
+
+Data Example:
+
+```json
+{“event”:”left_race”,“data”:”null”}
 ```
