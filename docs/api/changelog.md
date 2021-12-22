@@ -17,6 +17,7 @@ Here you can find our [Developers Roadmap](https://trello.com/b/1V10E4IB/overwol
 * [League of Legends](overwolf-games-events-lol)
   * New feature in:
     * jungle_camps
+    * baron & rift_herald icon_status remains at zero value at all times.
 * [MTGA](overwolf-games-events-mtga)
   * Removed draft token and sealed token from:
     * inventory stats info update.
