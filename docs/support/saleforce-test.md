@@ -1,7 +1,7 @@
 ---
 id: saleforce-test
-title: Salesforce Test
-sidebar_label: Salesforce Test
+title: Overwolf App Proposal
+sidebar_label: Overwolf App Proposal
 ---
 
 <meta http-equiv="Content-Type" content="text/html charset=utf-8"/>
