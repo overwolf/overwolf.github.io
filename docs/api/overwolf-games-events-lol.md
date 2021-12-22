@@ -1550,12 +1550,12 @@ Possible Values:
 * Camp 5 = Krug West
 * Camp 11 = Krug East
 * Camp 6 = Dragon
-* Camp 12 = Baron
+* Camp 12 = Baron (icon_status always remains zero).
 * Camp 13 = Gromp West
 * Camp 14 = Gromp East
 * Camp 15 = Scuttle Crab River Bot side
 * Camp 16 = Scuttle Crab River Top side
-* Camp 17 = Rift Herald
+* Camp 17 = Rift Herald (icon_status always remains zero).
 
 Data Example:
 
