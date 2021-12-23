@@ -70,6 +70,8 @@ callback       | [(Result: FileResult)](overwolf-media#fileresult-object) => voi
 
 > Gets a list of all of the videos created by this app.
 
+Note that getVideos() returns only the files located in the current OW video folder, without files from different/past locations, if they exist. 
+
 Parameter      | Type                                | Description                                                                                             |
 -------------- | ------------------------------------| ------------------------------------------------------------------------------------------------------- |
 callback       | [(Result: GetVideosResult)](#getvideosresult-object) => void  | Called with the status of the request                                         |
