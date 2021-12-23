@@ -933,7 +933,8 @@ Defines the configuration for an x264 encoder.
 
 #### separate_tracks notes
 
-When this flag is enabled, it is possible to record videos that support multiple audio tracks.  
+When disabled (default), the video (mp4) will be created with a single track.
+When enabled, it is possible to record videos that support multiple audio tracks:  
 The Video will be created with three different audio tracks (when both Mic + Desktop is enabled):
 
 * Track 1: Microphone + Desktop
