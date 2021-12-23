@@ -34,7 +34,7 @@ Please read all the info about app subscriptions [here](../start/subscriptions-o
 
 In our [APIs sample apps repository](https://github.com/overwolf/apis-sample-apps), you can find and download a  sample app that demonstrate the usage in the subscriptions and Ads API: 
 
-* The `subscriptions-sample` - Demonstrates how to display an ad and how to purchase a subscription that removes the ad. 
+* The `subscriptions-sample` - Demonstrates how to purchase a subscription that removes an ad. 
 
 It's a great place to get started - All the samples in this repository are built with JS code and demonstrate primary usage in the API.
 
