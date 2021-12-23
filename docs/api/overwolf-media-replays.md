@@ -215,7 +215,7 @@ If you want to stop the capture manually, you can use [startCapture()](#startcap
 Parameter               | Type                  | Description                                                                                                      |
 ----------------------- | ----------------------| ---------------------------------------------------------------------------------------------------------------- |
 replayType              | [ReplayType](#replaytype-enum) enum  | The type of replay to capture                                                                     |
-pastDuration	        | int                                  | The video length, in milliseconds to include prior to the time of this call                        |
+pastDuration	          | int               | The video length, in milliseconds to include prior to the time of this call (up to 600000 ms).                        |
 futureDuration          | int        | The video length, in milliseconds to include after the time of this call. To ignore it, simply give it a non-positive value  |
 captureFinishedCallback	| [(Result: ReplayResult)](#replayresult-object) => void   |A callback function which will be called when capturing is finished, at the end of the future duration supplied to this call |
 callback                | (Result) => void | Reports success or failure                                                               |
@@ -235,7 +235,7 @@ If you want to stop the capture manually, you can use [startCapture()](#startcap
 
 Parameter               | Type                  | Description                                                                                                      |
 ----------------------- | ----------------------| ---------------------------------------------------------------------------------------------------------------- |
-pastDuration	        | int                                  | The video length, in milliseconds to include prior to the time of this call                        |
+pastDuration	        | int           | The video length, in milliseconds to include prior to the time of this call (up to 600000 ms)                       |
 futureDuration          | int        | The video length, in milliseconds to include after the time of this call. To ignore it, simply give it a non-positive value  |
 captureFinishedCallback	| [(Result: ReplayResult)](#replayresult-object) => void   |A callback function which will be called when capturing is finished, at the end of the future duration supplied to this call |
 callback                | (Result) => void                             | A callback function which will be called with the status of the request                           |
