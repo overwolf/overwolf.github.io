@@ -91,10 +91,6 @@
 	color: var(--color-grey);
 }
 
-.theme-dark .mainContainer .admonition-content p a {
-  color: var(--color-300);
-}
-
 .theme-dark .mainContainer ul, .theme-dark .mainContainer ol, .theme-dark .mainContainer pre{
 	color: var(--color-txt);
 }
@@ -369,4 +365,9 @@
 
 .theme-dark .docLastUpdate {
 	color: var(--color-800);
+}
+
+.theme-dark .mainContainer .admonition-content p a, .theme-dark .mainContainer .admonition-content a {
+  text-decoration: underline;
+  color: var(--color-300);
 }

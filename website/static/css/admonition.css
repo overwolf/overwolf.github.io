@@ -32,10 +32,14 @@
   display: none;
 }
 
-.admonition-content p  {
+.admonition-content p, .admonition-content ol li, .admonition-content p ul li  {
   margin-bottom: 0;
   font-size: 18px;
   line-height: 30px;
+  color: var(--color-300);
+}
+
+.admonition-content a {
   color: var(--color-300);
 }
 
@@ -53,11 +57,11 @@
   background-image: url(../img/icons/tip.svg);
 }
 
-.admonition-note {
+.admonition-notes {
   border-left: 7px solid var(--color-600);
 }
 
-.admonition-note h5::before {
+.admonition-notes h5::before {
   width: 46px;
   height: 52px;
   left: -8px;
