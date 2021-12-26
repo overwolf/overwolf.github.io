@@ -90,7 +90,6 @@ function onWindowStateChanged(state) {
 }
 
 // call the overwolf api
-const onWindowStateChangedHandler = this.onWindowStateChanged.bind(this);
-overwolf.windows.onStateChanged.removeListener(onWindowStateChangedHandler);
-overwolf.windows.onStateChanged.addListener(onWindowStateChangedHandler);
+overwolf.windows.onStateChanged.removeListener(onWindowStateChanged);
+overwolf.windows.onStateChanged.addListener(onWindowStateChanged);
 ```
