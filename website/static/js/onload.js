@@ -14,7 +14,7 @@ function moveEditButton() {
   button.style.display = "inline-block";
 }
 
-window.onload = function () {
+window.addEventListener('load', function() {
   addSiderbarHighlight();
   moveEditButton();
   setNavScrollbarPosition();
@@ -28,12 +28,10 @@ window.onload = function () {
     btn.addEventListener("click", function(e) {
       setNavScrollbarPosition();
     });
+  });
 });
 
-
-};
-
-//position navbar scrollbar 
+//position navbar scrollbar
 
 function setNavScrollbarPosition() {
   const NavScrollBar = document.querySelector('#docsNav > div.os-scrollbar.os-scrollbar-vertical > div');
