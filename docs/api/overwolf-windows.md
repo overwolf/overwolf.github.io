@@ -386,7 +386,7 @@ callback            | [(Result: GetWindowStateResult)](#getwindowstateresult-obj
 
 Parameter           | Type       | Description                                                                                    |
 --------------------| -----------| -----------------------------------------------------------------------------------------------|
-callback            | [(Result: GetWindowStatesResult)](#getwindowstatesresult-object) => void   | Called with an array containing the states of the windows     |
+callback            | [(Result: GetWindowStateResult)](#getwindowstateresult-object) => void   | Called with an array containing the states of the windows     |
 
 ## openOptionsPage(callback)
 #### Version added: 0.89
