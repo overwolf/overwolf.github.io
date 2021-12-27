@@ -23,7 +23,7 @@ The `ads-sample` Demonstrates the usage in the Ads API, how to display an ad in 
 
 The following scenarios and principles are demonstrated in the Ads sample app:
 
-* Position and Dimentions:  
+* Position and Dimensions:  
   * Ads box is implemented in the top-level component with absolute positioning.
   * Ad container is <= container div, so the ad won't cut.
   * Ad box is fixed and without scroll bar.
