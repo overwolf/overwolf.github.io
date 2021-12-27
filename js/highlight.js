@@ -1,3 +1,3 @@
-$(document).ready(function () {
-  hljs.initHighlightingOnLoad();
+window.addEventListener('load', function() {
+  hljs.initHighlighting();
 });
