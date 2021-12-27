@@ -16,8 +16,7 @@ Note that not all flags are mandatory - we included all available flags for docu
 
 *Use this manifest with Overwolf client version 0.141 and above*
 
-<pre><code class="json">
-{
+<pre><code class="json">{
     //Mandatory
     "<a href="#manifest_version">manifest_version</a>": 1,
     "<a href="#type">type</a>": "WebApp",
@@ -30,7 +29,7 @@ Note that not all flags are mandatory - we included all available flags for docu
         "<a href="#meta-minimum-gep">minimum-gep-version</a>": "128.0.0.1",
         "<a href="#meta-minimum-gs">minimum-gs-version</a>": "128.0.0.1",
         "<a href="#meta-description">description</a>": "A plain text description",
-        "<a href="#meta-dock">dock_button_title</a>": "Short name of your app",    
+        "<a href="#meta-dock">dock_button_title</a>": "Short name of your app",
         "<a href="#meta-mouse-over">icon</a>": "iconMouseOver.png",
         "<a href="#meta-gray_icon">icon_gray</a>": "iconMouseNormal.png",
         "<a href="#meta-launcher_icon">launcher_icon</a>": "icon.ico",
@@ -92,7 +91,7 @@ Note that not all flags are mandatory - we included all available flags for docu
                 "<a href="#debug_url">debug_url</a>": "http://localhost:3000",
                 "<a href="#optimize_accelerate_rendering">optimize_accelerate_rendering</a>": false, //Use directly shared texture rendering in game (only DX11)
                 "<a href="#disable_auto_dpi_sizing">disable_auto_dpi_sizing</a>": false, //disable the DPI Aware behavior of native windows
-                "<a href="#restrict_to_game_bounds">restrict_to_game_bounds</a>": false //Restrict window to game client (window) area. 
+                "<a href="#restrict_to_game_bounds">restrict_to_game_bounds</a>": false, //Restrict window to game client (window) area.
                 "<a href="#disable_hardware_acceleration">disable_hardware_acceleration</a>": false // disable GPU hardware acceleration. Relevant only to native windows
             },
         },
@@ -131,7 +130,7 @@ Note that not all flags are mandatory - we included all available flags for docu
                 //Reload delay (in ms) when detecting file changes (for multiple change)default is 1000 (1 second)
                 "<a href="#developer-game-settings">reload_delay</a>": 1000,
                 //Filter files which will be tracked.e.g (*.js;*.html)Default: all files (*.*)
-                "<a href="#developer-game-settings">filter</a>": <span style="font-weight: 400;">"*.json;*.html"</span><span style="font-weight: 400;"> 
+                "<a href="#developer-game-settings">filter</a>": "*.json;*.html"
             },
         //If set to true, app local data will not be cleaned up after app uninstallation
         "<a href="#disable_cleanup">disable_cleanup</a>": true,
@@ -144,7 +143,6 @@ Note that not all flags are mandatory - we included all available flags for docu
             "<a href="#uninstall_window">required_runtime</a>": 1000,
             //if not defined, the default is 10 seconds. valid up to 60000 (1 minute).
         }
-
     }
 }
 </code></pre>
@@ -156,8 +154,7 @@ Note that not all flags are mandatory - we included all available flags for docu
 
 *Use this manifest with Overwolf client version 0.141 and above*
 
-<pre><code class="json">
-{
+<pre><code class="json">{
     "<a href="#manifest_version">manifest_version</a>": 1,
     "<a href="#type">type</a>": "WebApp",
     "<a href="#meta-object">meta</a>": {
@@ -168,7 +165,7 @@ Note that not all flags are mandatory - we included all available flags for docu
         "<a href="#meta-object">minimum-gep-version</a>": "128.0.0.1",
         "<a href="#meta-object">minimum-gs-version</a>": "128.0.0.1",
         "<a href="#meta-object">description</a>": "A plain text description",
-        "<a href="#meta-object">dock_button_title</a>": "Short name of your app",    
+        "<a href="#meta-object">dock_button_title</a>": "Short name of your app",
         "<a href="#meta-object">icon</a>": "iconMouseOver.png",
         "<a href="#meta-object">icon_gray</a>": "iconMouseNormal.png",
         "<a href="#meta-object">launcher_icon</a>": "icon.ico",
@@ -198,7 +195,7 @@ Note that not all flags are mandatory - we included all available flags for docu
                 "<a href="#windows-desktop_only">desktop_only</a>": false,
                 "<a href="#windows-disable_restore_animation">disable_restore_animation</a>": false,
                 "<a href="#windows-grab_keyboard_focus">grab_keyboard_focus</a>": false,
-                "<a href="#windows-grab_focus_on_desktop">grab_focus_on_desktop</a>": false,                
+                "<a href="#windows-grab_focus_on_desktop">grab_focus_on_desktop</a>": false,
                 "<a href="#windows-size">size</a>": {...},
                 "<a href="#windows-min_size">min_size</a>": {...},
                 "<a href="#windows-max_size">max_size</a>": {...},
@@ -241,20 +238,19 @@ Note that not all flags are mandatory - we included all available flags for docu
         "<a href="#launch_events">launch_events</a>": [{"event": "GameLaunch", "event_data":{"game_ids": [1136]}, "start_minimized": true}],
         "<a href="#user_agent">user_agent</a>": "...",
         "<a href="#disable_dt">disable_dt</a>": false,
-         "<a href="#service_providers">service_providers</a>": {"nafihghfcpikebhfhdhljejkcifgbdahdhngepfb": {"whatever": "value"}},
+        "<a href="#service_providers">service_providers</a>": {"nafihghfcpikebhfhdhljejkcifgbdahdhngepfb": {"whatever": "value"}},
         "<a id="developer-manifest" href="#developer-game-settings">developer</a>": {
                 "<a href="#developer-game-settings">enable_auto_refresh</a>": true,
                 "<a href="#developer-game-settings">reload_delay</a>": 1000,
-                "<a href="#developer-game-settings">filter</a>": <span style="font-weight: 400;">"*.json;*.html"</span><span style="font-weight: 400;"> 
+                "<a href="#developer-game-settings">filter</a>": "*.json;*.html"
             },
         "<a href="#disable_cleanup">disable_cleanup</a>": true,
         "<a href="#process_name">process_name</a>": "my sample app",
-        "<a href="#url_protocol">url_protocol</a>": {"scheme": "testscheme"}
+        "<a href="#url_protocol">url_protocol</a>": {"scheme": "testscheme"},
         "<a href="#uninstall_window">uninstall_window</a>": {
             "<a href="#uninstall_window">file</a>": "name.html",
             "<a href="#uninstall_window">required_runtime</a>": 1000,
         }
-            
 }
 </code></pre>
 </details>
@@ -273,44 +269,44 @@ You can read the manifest JSON from your app's code using the [overwolf.extensio
 ## Top manifest objects
 There are many features enabled through this file. Some are mandatory (marked accordingly), others optional. Below is a description of features you can activate through the manifest.json :
 
-| Name                                                                                    | Type                         | Description                               |   
+| Name                                                                                    | Type                         | Description                               |
 | ----------------------------------------------------------------------------------------|------------------------------| ------------------------------------------|
 | <a name="manifest_version" a class="anchor" aria-hidden="true"></a>manifest_version     | integer | Mandatory. Targets the manifest version you are working on. Currently there is only one version, therefore this value is always "1" |
 | <a class="anchor" aria-hidden="true" id="type"></a>type                                 | string  | Mandatory. Declares the type of application. Can only be "WebApp"  |
-| <a class="anchor" aria-hidden="true" id="meta"></a> meta                                | [meta](#meta-object) Object   | Mandatory. The app metadata  |  
+| <a class="anchor" aria-hidden="true" id="meta"></a> meta                                | [meta](#meta-object) Object   | Mandatory. The app metadata  |
 | <a id="permissions">permissions</a>                                                     | [permissions[]](#permissions-array)     | An array of permissions that the app requires  |
 | <a class="anchor" aria-hidden="true" id="data"></a>data                                 | [webapp settings](#webapp-settings-object) Object  | Mandatory. App data. Changes between different apps types. Currently can only be from type webapp settings |
 
 ## Permissions array
-To use most overwolf.* APIs, your Overwolf app must declare relevant permissions in the relevant manifest.json field. It's an array of permissions that the app requires:  
+To use most overwolf.* APIs, your Overwolf app must declare relevant permissions in the relevant manifest.json field. It's an array of permissions that the app requires:
 <pre><code class="json">"permissions": ["Streaming","Hotkeys","GameInfo"]</pre></code>
 
 | Permission             | Description                                                                                                       |
-| ---------------------  |-------------------------------------------------------------------------------------------------------------------| 
-| "Camera"               | Access webcam                                                                                                     | 
-| "Microphone"           | Access microphone                                                                                                 | 
-| "Logging"              | Access [overwolf.log](overwolf-log) API                                                                           | 
-| "Extensions"           | Run or get information about other apps                                                                           | 
-| "Streaming"            | Enable game streaming                                                                                             | 
-| "DesktopStreaming"     | Enable desktop streaming                                                                                          | 
-| "Profile"              | Access profile information and perform actions such as login and modifications                                    | 
-| "Clipboard"            | Access clipboard                                                                                                  | 
-| "Hotkeys"              | Get hotkey information for the current app                                                                        | 
-| "Media"                | Access media library                                                                                              | 
-| "GameInfo"             | Access current game information                                                                                   | 
-| "GameControl"          | Allows to send key strokes to the game by using [overwolf.utils.sendKeyStroke()](overwolf-utils)                  | 
-| "FileSystem"           | Allows accessing files from the local file system. </br>*Note: This is the only permission we currently enforce*  | 
-| "LogitechLed"          | Allows accessing [overwolf.logitech.led](overwolf-logitech-led) API                                               | 
-| "LogitechArx"          | Allows accessing [overwolf.logitech.arx](overwolf-logitech-arx) API                                               | 
-| "VideoCaptureSettings" | Appear as a video capture extension in the capture settings + allows setting video capture settings                                                                             | 
-| "Web"                  | access to the [overwolf.web](overwolf-web) API                                                                    | 
-| "Tray"                 | Access to creating tray icons                                                                                     | 
+| ---------------------  |-------------------------------------------------------------------------------------------------------------------|
+| "Camera"               | Access webcam                                                                                                     |
+| "Microphone"           | Access microphone                                                                                                 |
+| "Logging"              | Access [overwolf.log](overwolf-log) API                                                                           |
+| "Extensions"           | Run or get information about other apps                                                                           |
+| "Streaming"            | Enable game streaming                                                                                             |
+| "DesktopStreaming"     | Enable desktop streaming                                                                                          |
+| "Profile"              | Access profile information and perform actions such as login and modifications                                    |
+| "Clipboard"            | Access clipboard                                                                                                  |
+| "Hotkeys"              | Get hotkey information for the current app                                                                        |
+| "Media"                | Access media library                                                                                              |
+| "GameInfo"             | Access current game information                                                                                   |
+| "GameControl"          | Allows to send key strokes to the game by using [overwolf.utils.sendKeyStroke()](overwolf-utils)                  |
+| "FileSystem"           | Allows accessing files from the local file system. </br>*Note: This is the only permission we currently enforce*  |
+| "LogitechLed"          | Allows accessing [overwolf.logitech.led](overwolf-logitech-led) API                                               |
+| "LogitechArx"          | Allows accessing [overwolf.logitech.arx](overwolf-logitech-arx) API                                               |
+| "VideoCaptureSettings" | Appear as a video capture extension in the capture settings + allows setting video capture settings                                                                             |
+| "Web"                  | access to the [overwolf.web](overwolf-web) API                                                                    |
+| "Tray"                 | Access to creating tray icons                                                                                     |
 
 ## Meta object
 Includes app metadata:
 
 | Name                                        | Type     |  Description                                                                                               | Since |
-|---------------------------------------------|----------| -----------------------------------------------------------------------------------------------------------| ----- | 
+|---------------------------------------------|----------| -----------------------------------------------------------------------------------------------------------| ----- |
 | <a class="anchor" aria-hidden="true" id="meta-name"></a>name                  | string   |  Mandatory. Name of your app. *See [note](#meta-note).*                                                    | 0.78  |
 | <a class="anchor" aria-hidden="true" id="meta-author"></a>author              | string   |  Mandatory. The app's developer. *See [note](#meta-note).*                                               | 0.78  |
 | <a class="anchor" aria-hidden="true" id="meta-version"></a>version            | string   |  Mandatory. Up to four dot-separated integers identifying the current app version.</br>Needs to be in the format of X.X.X where the X’s are numbers.</br>Here are some examples of valid versions: </br> ["version": "1", "version": "1.0", "version": "2.11.3", "version": "4.1.2.345"]                                          | 0.78  |
@@ -333,7 +329,7 @@ Includes app metadata:
 A list of additional settings for the app.
 
 | Name                              | Type     |  Description                                                                                               | Since |
-|-----------------------------------|--------------------------------------------| -------------------------------------------------------------------------| ----- | 
+|-----------------------------------|--------------------------------------------| -------------------------------------------------------------------------| ----- |
 | <a class="anchor" aria-hidden="true" id="game_targeting"></a>game_targeting              | [GameTargeting](#gametargeting-object) Object   |  An app can declare itself as targeted for one game or more.                  | 0.78  |
 | <a class="anchor" aria-hidden="true" id="start_window"></a>start_window   | string     |  Mandatory. The name of the window (from the “windows” list) to initially load when the app starts.        | 0.78  |
 | <a class="anchor" aria-hidden="true" id="enable_top_isolation"></a>enable_top_isolation    | bool       | Enable iframe isolation: runs it in a different process, so if some iframe is misbehaving (e.g. memory leak, etc.) it   won’t crash your app and will only crash the iframe process. </br>useful with Overwolf ads that run in an iframe.</br>*Default value is true*                       | 0.110  |
@@ -361,8 +357,8 @@ A list of additional settings for the app.
 
 #### user_agent Notes
 
-* Don’t use this property if your app serves ads.  
-  In case you have to use it, consult with us before. 
+* Don’t use this property if your app serves ads.
+  In case you have to use it, consult with us before.
 
 * using ‘navigator.userAgent’ will not return the custom user agent, but the default one.
 
@@ -445,7 +441,7 @@ A list of settings for the app windows.
 
 
 ## ExternallyConnectable object
-A definition of external URLs the web app should be able to access. Read more [here](http://en.wikipedia.org/wiki/Cross-origin_resource_sharing).  
+A definition of external URLs the web app should be able to access. Read more [here](http://en.wikipedia.org/wiki/Cross-origin_resource_sharing).
 
 Using "externally_connectable" will allow your local app to be able to communicate with an iframe within the app (via [postMessage](https://developer.mozilla.org/en-US/docs/Web/API/Window/postMessage)).
 
@@ -473,9 +469,9 @@ Example code:
 ```
 
 ## ProtocolOverrideDomains object
-Overwolf apps run under a custom url protocol and domain (overwolf-extension://[app-id]). 
-This means that protocol-relative urls (//ajax.googleapis.com…) will try to load from a the overwolf-app protocol. 
-Unless you want this to happen, you can use protocol_override_domains to override the relative protocol with a preferred one (e.g. https/http). 
+Overwolf apps run under a custom url protocol and domain (overwolf-extension://[app-id]).
+This means that protocol-relative urls (//ajax.googleapis.com…) will try to load from a the overwolf-app protocol.
+Unless you want this to happen, you can use protocol_override_domains to override the relative protocol with a preferred one (e.g. https/http).
 
 | Name                      | Type   |  Description                        | Since |
 |---------------------------|--------| ----------------------------------- |------ |
@@ -502,8 +498,8 @@ Example code:
 
 ## game_events array
  A list of game ids for which game events are required.
- The full list of games that Overwolf supports real time event listening can be found [here](games-ids).  
- 
+ The full list of games that Overwolf supports real time event listening can be found [here](games-ids).
+
 | Name        | Type  |  Description                          | Since |
 |-------------|-------| ------------------------------------- |------ |
 | game_events | int[] | The games IDs that your app targets.  | 0.92  |
@@ -516,7 +512,7 @@ Example code:
 ```
 
 :::important
-* Wildcards are not supported- even if your game is targeted to all games, you should specify all the relevant game ids.  
+* Wildcards are not supported- even if your game is targeted to all games, you should specify all the relevant game ids.
 * In addition to this flag, don't forget to set the [GameTargeting](#gametargeting-object) object, which configures the overlay permissions.
 :::
 
@@ -531,12 +527,12 @@ Allows the access of custom plugin dlls. For more info see https://github.com/ov
 
 Example code:
 ```json
-"extra-objects":{  
-    "my-plugin":{  
+"extra-objects":{
+    "my-plugin":{
         "file":"plugins/my_plugin.dll",
         "class":"MyPlugin.EntryPoint"
     },
-    "simple-io-plugin":{  
+    "simple-io-plugin":{
         "file":"plugins/simple-io-plugin.dll",
         "class":"overwolf.plugins.simpleio.SimpleIOPlugin"
     }
@@ -567,7 +563,7 @@ Example code:
 
 ```json
 "hotkeys": {
-    "show_YourAppName": { 
+    "show_YourAppName": {
         "title": "Show Player",
         "action-type": "custom",
         "default": "Shift+F9",
@@ -583,7 +579,7 @@ Example code:
 ```
 
 ## content_scripts Array
-A list of content scripts to be loaded for specific windows.   
+A list of content scripts to be loaded for specific windows.
 
 | Name    | Type     | Description                                                 | Since |
 |---------| ---------|-------------------------------------------------------------|------ |
@@ -604,13 +600,13 @@ In this example, when loading the index window, myscript.js will be loaded and w
 *Note: it also work for any iframes the app is hosting in an Overwolf window (not just the main page).*
 
 ## launch_event_settings array
-A list of events causing the app to launch. It's enough that one of the events occurs to launch the app.  
+A list of events causing the app to launch. It's enough that one of the events occurs to launch the app.
 
 | Name              | Type   | Description                                                                             | Since |
 |-------------------| -------|-----------------------------------------------------------------------------------------|------ |
 | event             | enum   | The type name of the event. </br>**["GameLaunch", "AllGamesLaunch", "LaunchWithOverwolf"]**                   | 0.82  |
 | event_data        |  [launch_event](#launch_event-object) object | The list of game class IDs for which the app will launch.    | 0.82  |
-| tracked           | bool   | Launch App when gameid is detected (even when not injected). Only works for supported games.                            | 0.132  
+| tracked           | bool   | Launch App when gameid is detected (even when not injected). Only works for supported games.                            | 0.132
 | start_minimized   | bool   | The app’s main window will start minimized.                                             | 0.82  |
 | include_launchers | bool   | The app will be launched when game launcher is detected.                                | 0.103 |
 
@@ -685,7 +681,7 @@ Code Example:
 ```json
 "developer": {
     "enable_auto_refresh": true,
-    "reload_delay": 1000, 
+    "reload_delay": 1000,
     "filter": "*.json;*.html"
 }
 ```
@@ -760,9 +756,9 @@ You can use this link on a webpage or OW app to open your OW app. It will open y
 
 * For a closed app, a click on a custom link launches the app.
 * For a closed OW client, a click on a custom link launches OW + the app.
-* For an open app, a click on a custom link opens the app and fire the [onAppLaunchTriggered](overwolf-extensions#onapplaunchtriggered) event with a "urlscheme" origin.  
+* For an open app, a click on a custom link opens the app and fire the [onAppLaunchTriggered](overwolf-extensions#onapplaunchtriggered) event with a "urlscheme" origin.
 
-If an extra params has been sent (e.g. "outplayed://something/null"), the [onAppLaunchTriggered](overwolf-extensions#onapplaunchtriggered) event callback will show them under the "parameter" field: 
+If an extra params has been sent (e.g. "outplayed://something/null"), the [onAppLaunchTriggered](overwolf-extensions#onapplaunchtriggered) event callback will show them under the "parameter" field:
 
 ```json
 {origin: "urlscheme", parameter: "outplayed%3a%2f%2fsomething%null"}
