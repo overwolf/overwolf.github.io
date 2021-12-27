@@ -85,7 +85,7 @@ Please make sure to read our guide on [how to use Overwolf windows](../topics/us
 * [overwolf.windows.DragResizeResult](#dragresizeresult-object) Object
 * [overwolf.windows.WindowIdResult](#windowidresult-object) Object
 * [overwolf.windows.GetWindowStateResult](#getwindowstateresult-object) Object
-* [overwolf.windows.GetWindowStatesResult](#getwindowstatesresult-object) Object
+* [overwolf.windows.GetWindowStatesResult](#getwindowsstatesresult-object) Object
 * [overwolf.windows.IsMutedResult](#ismutedresult-object) Object
 * [overwolf.windows.IsWindowVisibleToUserResult](#iswindowvisibletouserresult-object) Object
 * [overwolf.windows.DisplayMessageBoxResult](#displaymessageboxresult-object) Object
@@ -386,7 +386,7 @@ callback            | [(Result: GetWindowStateResult)](#getwindowstateresult-obj
 
 Parameter           | Type       | Description                                                                                    |
 --------------------| -----------| -----------------------------------------------------------------------------------------------|
-callback            | [(Result: GetWindowStateResult)](#getwindowstateresult-object) => void   | Called with an array containing the states of the windows     |
+callback            | [(Result: GetWindowsStatesResult)](#getwindowsstatesresult-object) => void   | Called with an array containing the states of the windows     |
 
 ## openOptionsPage(callback)
 #### Version added: 0.89
@@ -1120,6 +1120,27 @@ window_state_ex   |  [WindowStateEx](#windowstateex-enum) enum        |         
    "window_id": "Window_Extension_onemchifcjibofkgemelmnjeialamgnigfpomeih",
    "window_state": "minimized", //deprecated and kept only for backward compatibility
    "window_state_ex": "hidden" //always use this param to get the state of the window.
+}
+```
+
+## GetWindowsStatesResult Object
+   
+#### Version added: 0.149
+
+> Container for the windows states array.
+
+Parameter         | Type          | Description             |
+------------------| --------------| ----------------------- |
+result            | Dictionary< string > |                    | 
+resultV2          | Dictionary<[WindowStateEx](#windowstateex-enum)>   |     | 
+
+#### Example data: Success
+
+```json
+{
+  "success": true,
+  "result": "{background:`minimized`, desktop:`normal`, overlay:`normal`}",
+  "resultV2": "{background:`hidden`, desktop:`normal`, overlay:`normal`}"
 }
 ```
 
