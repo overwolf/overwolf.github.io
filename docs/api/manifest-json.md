@@ -238,7 +238,7 @@ Note that not all flags are mandatory - we included all available flags for docu
         "<a href="#launch_events">launch_events</a>": [{"event": "GameLaunch", "event_data":{"game_ids": [1136]}, "start_minimized": true}],
         "<a href="#user_agent">user_agent</a>": "...",
         "<a href="#disable_dt">disable_dt</a>": false,
-         "<a href="#service_providers">service_providers</a>": {"nafihghfcpikebhfhdhljejkcifgbdahdhngepfb": {"whatever": "value"}},
+        "<a href="#service_providers">service_providers</a>": {"nafihghfcpikebhfhdhljejkcifgbdahdhngepfb": {"whatever": "value"}},
         "<a id="developer-manifest" href="#developer-game-settings">developer</a>": {
                 "<a href="#developer-game-settings">enable_auto_refresh</a>": true,
                 "<a href="#developer-game-settings">reload_delay</a>": 1000,
@@ -246,7 +246,7 @@ Note that not all flags are mandatory - we included all available flags for docu
             },
         "<a href="#disable_cleanup">disable_cleanup</a>": true,
         "<a href="#process_name">process_name</a>": "my sample app",
-        "<a href="#url_protocol">url_protocol</a>": {"scheme": "testscheme"}
+        "<a href="#url_protocol">url_protocol</a>": {"scheme": "testscheme"},
         "<a href="#uninstall_window">uninstall_window</a>": {
             "<a href="#uninstall_window">file</a>": "name.html",
             "<a href="#uninstall_window">required_runtime</a>": 1000,
