@@ -82,38 +82,38 @@
 <h2><a class="anchor" aria-hidden="true" id="sample-app"></a><a href="#sample-app" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Sample app</h2>
 <p>In our <a href="https://github.com/overwolf/apis-sample-apps">APIs sample apps repository</a>, you can find and download a  sample app.</p>
 <p>The <code>ads-sample</code> Demonstrates the usage in the Ads API, how to display an ad in an in-game window and desktop window, when to hide it, when to restore it, etc.</p>
-<p>The following scenarios and principals are demonstrated in the Ads sample app:</p>
+<p>The following scenarios and principles are demonstrated in the Ads sample app:</p>
 <ul>
 <li>Position and Dimentions:
 <ul>
-<li>Ads box is implemented in the top level component with an absolute positioning.</li>
-<li>Ad container is &lt;= container div, so the ad won't get cut.</li>
+<li>Ads box is implemented in the top-level component with absolute positioning.</li>
+<li>Ad container is &lt;= container div, so the ad won't cut.</li>
 <li>Ad box is fixed and without scroll bar.</li>
 <li>Ads box is not refreshed when navigating components inside the same window.</li>
 <li>The ad placement area is not scrollable.</li>
-<li>Tabs: Ads box is not refreshed when switching tabs and it position is always kept.</li>
+<li>Tabs: Ads box is not refreshed when switching tabs, and its position is permanently kept.</li>
 <li>No menus or pop-up windows on top of the ad.</li>
 <li>Ad placement dimensions are being kept while resizing the app window.</li>
 </ul></li>
 <li>Clickable:
 <ul>
-<li>Ads are clickable and clicking on an Ad will open the pre-defined browser (OW or user browser, as set in the manifest).</li>
+<li>Ads are clickable, and clicking on an Ad will open the pre-defined browser (OW or user browser, as set in the manifest).</li>
 </ul></li>
 <li>Focus:
 <ul>
-<li>There is no ad refresh when losing focus (clicking on a different spot in the app, the game or outside the app).</li>
-<li>When game gain focus, the Ad is not loaded if the app window was previously minimized and not restored.</li>
+<li>There is no ad refresh when losing focus (clicking on a different spot in the app, the game, or outside the app).</li>
+<li>When the game gain focus, the Ad is not loaded if the app window was previously minimized and not restored.</li>
 </ul></li>
 <li>DPI:
 <ul>
-<li>The app looks good and ads dimensions are not cut on 125% and 150% and resolutions.</li>
+<li>The app looks good, and ads dimensions are not cut on 125% and 150% and resolutions.</li>
 </ul></li>
 <li>Minimize / Restore / Closing:
 <ul>
-<li>Ad is removed when the user press on Win Key + D and refreshed on restore.</li>
-<li>Ad is removed when the user minimized the app through the &quot;_&quot; button and reshreshed on restore.</li>
+<li>Ad is removed when the user presses Win Key + D and refreshes on restore.</li>
+<li>Ad is removed when the user minimized the app through the &quot;_&quot; button and refreshed on restore.</li>
 <li>Ad is removed when the user minimized the app through the in-game hotkeys (if defined) and refreshed on restore.  Note that on the current version of this sample app, no hotkeys are implemented yet.</li>
-<li>Ad is removed then the user close the app.</li>
+<li>Ad is removed, then the user closes the app.</li>
 </ul></li>
 </ul>
 <p>It's a great place to get started - All the samples in this repository are built with JS code and demonstrate primary usage in the API.</p>
