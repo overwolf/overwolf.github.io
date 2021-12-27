@@ -28,7 +28,11 @@ Here you can find our [Developers Roadmap](https://trello.com/b/1V10E4IB/overwol
 
 #### Platform
 
-* Soon.
+* Signing "All" Apps.  
+  Starting with iteration 188, Overwolf will validate the contents of OPKs, which will ensure that your users will use the App that you have designed as intended without the ability to tweak your code once it's in their hands. This also means that you can no longer load an OPK without first uploading it to console.overwolf.com. However, you can still load it as an unpacked extension.  
+  If a user tries to install an "unsigned" OPK, he will get an error notification ("You're trying to install an app from an unauthorized source...").
+* Updated 3rd Party DLL Libraries - We updated the 3rd party DLL libraries that Overwolf uses.  
+  If your app is using any type of plugin (for example: Newtonsoft.Json.dll) then this is doubly important. We’ve already found apps that also require an update due to this change and contacted the relevant Creators. This is important - `please test your app once the iteration becomes available to you`.
 
 #### Dev Console
 
