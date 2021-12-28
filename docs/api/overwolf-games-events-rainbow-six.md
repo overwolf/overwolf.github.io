@@ -115,9 +115,10 @@ While the possible values are:
 * Player vs. AI > Training Grounds Lonewolf: `MATCHMAKING_PVE_LONEWOLF`
 * Player vs. AI > Training Grounds with Squad only: `MATCHMAKING_PVE_PARTY`
 * Player vs. AI > Training Grounds Online: `MATCHMAKING_PVE`
+* Match Replay > Watching the replay of a previous match: `MATCHREPLAY`
 * Tutorials: It’s just a video tutorial, not a game mode.
 
-*Note that on custom games or vs. AI, there is no support in Overwolf real time game events*
+*Note that in Custom games, Training Grounds, or in Match Replay, there is no support for Overwolf real time game events*
 
 #### *game_mode_log* note
 
