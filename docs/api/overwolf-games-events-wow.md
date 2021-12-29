@@ -20,6 +20,7 @@ If you have further requests for events that you require please contact us at de
 
 * [gep_internal](#gep_internal)
 * [game_info](#game_info)
+* [addons](#addons)
 
 ## `gep_internal`
 
@@ -97,3 +98,26 @@ Possible values for `class`:
 * Monk = 10
 * Druid = 11
 * Demon Hunter = 12
+
+## `addons`
+
+### Info Updates
+
+key            | Category         | Values                               | Notes                            | Since GEP Ver. |
+-------------- | -----------------| ------------------------------------ | -------------------------------- | -------------  | 
+addons         | addons           | Name, version number (if exists), and status of addon. | See [notes](#addons-note)   | 189.0 |
+
+#### *addons* note
+
+Data Example:
+
+Possible values:
+
+* 0 - Loading
+* 1 - Loaded
+* 2 - Disabled
+* 3 - Unknown
+
+```json
+{"info":{"addons":{"addon_10":"{"name":"DBM-StatusBarTimers","version":"8110645","status":"1"}"}},"feature":"addons"}
+```
