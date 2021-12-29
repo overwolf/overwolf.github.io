@@ -55,6 +55,9 @@ Here you can find our [Developers Roadmap](https://trello.com/b/1V10E4IB/overwol
     * inventory stats info update.
 * [Rainbow Six: Siege](overwolf-games-events-rainbow-six)
   * Since december 2021 patch - team colors provided by GEP do not correspond to the game's UI team color (the local player is always blue in the game's UI). The local player's score, team score and roster regarding to his color are still consistent.
+* [World of Warcraft](overwolf-games-events-wow)
+  * New feature in:
+    * addons
 
 #### API
 
