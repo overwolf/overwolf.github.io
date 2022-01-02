@@ -41,6 +41,8 @@ If you manage an external website, please do not implement 3rd party iframes wit
 
 **Use Forgivable Ads.** In some more words, don’t create ad experiences that you would not stand for as a gamer. Ads present a challenge and tend to provoke negative responses, but they are critical to our economy and our ability to create great apps. In general, talk to us if you're worried or unsure about your app's experience. 
 
+Do not present two video placements at the same time (also applies to two different app windows running at the same time)
+
 Advertisers need to get continuous value from advertising on Overwolf, so to keep the CPMs high and to get more advertisers on the platform we need to provide a high-quality experience. With time, we found that it's not only about the [right time and place](https://medium.com/overwolf/a-new-way-for-brands-to-engage-with-gamers-ca4cfafc5d41), but also about advertising in a balanced way.
 
 To get a more general idea, we follow the industry Standards, Guidelines & Best Practices which are provided by the IAB. We also constantly scan our traffic with 3rd party anti-fraud tools to monitor quality and spot issues.
@@ -54,6 +56,7 @@ To get a more general idea, we follow the industry Standards, Guidelines & Best 
 * Advertisers want to engage with the user and use their advertising budgets smartly to get maximum value. One of the ways to measure that is completion rate, which represents the number of users that watched 100% of the video ad out of the total number of users who saw the ad showing up. A good, high Completion rate is 70% or higher.
 * While developing your app, put yourself in the user’s shoes. As the developer, you should find the best timing to present ads. Most games have “Dead” moments where nothing happens (Client Loading, Match Loading, post-game victory screen, etc.) so the ad won’t interrupt gameplay.
 * Ads cannot be placed on the following: signup/login windows, error windows, pop-up windows that only show an ad, auto-closed windows and empty windows
+* In case you wish to have two ad placements on the same app window, make sure one of them is a pure display placement (160x600, 728x90).
 
 ### Ad size
 
@@ -61,7 +64,7 @@ Video Players come in different sizes. Our recommendation is to use the strandar
 
 ### Demographics
 
-* Advertising budgets are more significant for Tier 1 countries: US, UK, CA, AU, DE, FR.
+* Advertising budgets are more significant for Tier 1 countries: US, UK, CA, AU, DE.
 * If most of your app's users originate from Tier 1 countries, it’s likely that your CPM and yield will be higher.
 * We monetize ads in lower tier countries too, but our recommendation is to focus your marketing efforts on Tier 1 countries to maximize your revenues.
 
