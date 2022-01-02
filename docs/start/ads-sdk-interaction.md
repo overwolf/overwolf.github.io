@@ -21,6 +21,7 @@ This object has the following functions you can call on-demand:
 
 ### Notes
 
+When calling a **new OwAd()**, please do not use **refreshAd()**.
 On minimizing/hiding an OW window with Ads, no need to delete or destroy the **owAd** object.  
 Instead, call the **removeAd()** method.  
 When the window is restored, call the same **owAd** instance’s **refreshAd()** method.
@@ -35,7 +36,7 @@ The following events are supported:
 | -------------       | -------------
 | player_loaded	      | Ad video player successfully loaded on page*
 | display_ad_loaded   | Display ad was served instead of a video ad    
-| play                | Ad started playing
+| play                | Ad started playing / Display ad presented
 |impression	          | Video “impression” – Depends on the advertiser, the impression event gets triggered after 0-6 seconds *
 |complete             | Video ad played fully until completed *
 |error                | Error occurred while trying to load ad *
