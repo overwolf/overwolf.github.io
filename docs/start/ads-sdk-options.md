@@ -21,16 +21,18 @@ The following configuration options are supported:
 
 ### *Size* description
 
-* Sets the dimensions of the ad displayed. This should be a JSON object with two properties: **width** & **height**.  
+* Sets the dimensions of the ad displayed based on the supported placements below. This should be a JSON object with two properties: **width** & **height**.  
 Example: `{width: 400, height:300}`
 * Alternatively, you can input an array of JSON objects to allow for multiple formats of ads. Example: `[{width:400, height:300}, {width:300, height:250}]` will enable ads in both size formats for that container.
 
-* Currently supported formats:
-  1. 400×300 Video
-  2. 300x250 Video & Banner
-  3. 728x90 Banner
-  4. 300x600 Banner
-  5. 160x600 Banner
+* Currently supported placements:
+  1. 400×300 - Contains 400x300 & 300x250 (Video),  300x250 / 336x280 / 250x250 (Display banners)
+  2. 300x250 - Contains 300x250 (Video), 300x250 / 250x250 (Display banners)
+  3. 400x600 - Contains 400x300 & 300x250 (Video), 300x600 / 300x250 / 336x280 / 250x250 (Display banners)
+  4. 160x600 - Contains 160x600 / 120x600 (Display banner)
+  5. 728x90
+
+* For 400x600 ad placement, please use the following: `[{width:400, height:600}, {width:400, height:300}]`
 
 :::warning
 Make sure to only enter values that are supported by Overwolf. Entering an unsupported value will result in no ads showing.
