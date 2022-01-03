@@ -26,7 +26,7 @@ You can find a [video tutorial](../topics/creators-content#video-tutorials) that
 
 ## Sample App Functionality
 
-For demonstration purposes, the sample app has been configured for the one of the supported games that listed above. It loads when Fortnite starts and reads Fortnite in-game events. You can easily customize this example to fit other games.
+For demonstration purposes, the sample app has been configured for one of the supported games listed above. It loads when Fortnite starts and reads Fortnite in-game events. You can easily customize this example to fit other games.
 
 The basic functions our sample app demonstrates:
 
