@@ -4,9 +4,9 @@ title: Overwolf Basic Sample App
 sidebar_label: The Basic Sample App
 ---
 
-In this article, we'll use an example in order to learn how to build Overwolf apps that respond to real time game events and display content in an overlay while playing. If you are new to the concept of Overwolf apps, this is a great place to get started, and you can use it as a base for your own project.
+In this article, we'll use an example in order to learn how to build Overwolf (OW) apps that respond to real time game events and display content in an overlay while playing. If you are new to the concept of Overwolf apps, this is a great place to get started, and you can use it as a base for your own project.
 
-The sample app's functionality is pretty straightforward: It auto-launches when the user launches one of the supported games: 
+The sample app's functionality is pretty straightforward, it auto-launches when the user launches one of the supported games: 
 * Fortnite, CSGO, League of Legends, Escape From Tarkov, Minecraft, Overwatch, PUBG, Rainbow Six Siege, Splitgate: Arena Warfare, Path of Exile, Valorant, Dota 2, Call of Duty: Warzone or Warframe.
 
 The app reads all real time game events as you play. To demonstrate overlay features, the sample app prints all in-game event data collected into an overlay-based component.
@@ -14,7 +14,7 @@ The app reads all real time game events as you play. To demonstrate overlay feat
 The sample app is built with JS code and TypeScript. An official Vue, React, and Angular version will be added soon. Until then, check our [community snippets](../topics/snippets) page for an unofficial Vue version and other code samples, like React boilerplate for Overwolf apps and more.
 
 :::note Download
-It's highly recommended to follow the below steps for setting up the sample app, including download the source code and built it manually. 
+It's highly recommended to follow the below steps for setting up the sample app, including download the source code and building it manually. 
 
 For those who need it, here is a direct download link to the latest version:  
 [Download here](https://www.overwolf.com/app/Overwolf-Sample_App).  
@@ -26,13 +26,13 @@ You can find a [video tutorial](../topics/creators-content#video-tutorials) that
 
 ## Sample App Functionality
 
-For demonstration purposes, the sample app is configured for the one of the supported games that listed above. It loads when Fortnite starts and reads Fortnite in-game events. You can easily customize this example to fit other games.
+For demonstration purposes, the sample app has been configured for the one of the supported games that listed above. It loads when Fortnite starts and reads Fortnite in-game events. You can easily customize this example to fit other games.
 
 The basic functions our sample app demonstrates:
 
 * Automatically launch when the game is loaded.
 
-* After registering to the overwolf.games.events API, the app can receive real time events from the game.
+* After registering to the `overwolf.games.events` API, the app can receive real time events from the game.
 
 * Identify specific events and respond as defined.
 
@@ -40,7 +40,7 @@ The basic functions our sample app demonstrates:
 
 * Interact between app windows.
 
-* Background controller that manages data transfers.
+* Background controller that manages data transfer.
 
 ## Setting up
 
@@ -81,9 +81,9 @@ npm run build //create a "dist" folder with the compiled components
 ### 5. Install the app as "unpacked extension"
 
 Usually, all the apps in the Overwolf app store are OPK packages that can be installed with a double-click.
-Unlike that, while you are developing an app, you want to load the unpacked code, change it, and test it regularly.  
+Unlike OPK Packages, while you are developing an app, you want to load the unpacked code, change it, and test it regularly.  
 
-For this reason, in addition to the OPK installation, you can load the app as "unpacked extension":  
+For this reason, in addition to the OPK installation, you can load the app as an "unpacked extension":  
 (Note that to do that you have to **[whitelist](sdk-introduction#whitelist-as-a-developer)** your OW username as a developer).
 
 * Open the Overwolf desktop client settings (by right-clicking the client and selecting "Packages"  
@@ -91,7 +91,7 @@ For this reason, in addition to the OPK installation, you can load the app as "u
 
 * Click on "Development options".
 
-* In the opened window, click on "Load unpacked extension" and select the extracted 'ts/dist' folder.  
+* In the opened window, click on "Load unpacked extension" and select the extracted `ts/dist` folder.  
   This will add the app to your Overwolf dock.  
   
 * **Make sure you are logged in to the OW client**. Otherwise, you will get an "Unauthorized App" error message. (Click on the "Appstore" icon in the OW dock to login to the OW client).
