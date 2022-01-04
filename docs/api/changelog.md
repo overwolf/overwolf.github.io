@@ -16,6 +16,9 @@ Here you can find our [Developers Roadmap](https://trello.com/b/1V10E4IB/overwol
 
 * A new Ads sample app in our [APIs sample apps repository](https://github.com/overwolf/apis-sample-apps).  
   With the Ads sample app it you'll be able to demonstrate how to display an ad, in an in-game window or desktop window, when to hide it, when to restore it, etc.
+* [Football Manager 2022](overwolf-games-events-fm2022)
+  * New info update in:
+    * notable (assist)
 
 #### API
 
