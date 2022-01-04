@@ -58,4 +58,5 @@ Data Example:
 ```json
 {"info":{"match_info":{"key":"notable","value":"{"player" : "D. Branković","action" : "YELLOW_CARD","time" : "17'"}"}},"feature":"match_info"}
 {"info":{"match_info":{"key":"notable","value":"{"player" : "D. Branković","action" : "YELLOW_CARD","time" : "17'"},{"player" : "M. Jolović","action" : "YELLOW_CARD","time" : "29'"},{"player" : "N. Glišić","action" : "GOAL","time" : "47'"},{"player" : "N. Glišić","action" : "GOAL","time" : "58'"}},"feature":"match_info"}"}
+{"info":{"match_info":{"key":"notable","value":"{"player" : "D. Branković","action" : "YELLOW_CARD","time" : "17'"},{"player" : "M. Jolović","action" : "YELLOW_CARD","time" : "29'"},{"player" : "N. Glišić","action" : "ASSIST","time" : "47'"},{"player" : "N. Glišić","action" : "ASSIST","time" : "58'"}},"feature":"match_info"}"}
 ```
