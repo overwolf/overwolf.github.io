@@ -46,8 +46,8 @@ Data Example:
 
 key          | Category    | Values                    | Notes                 | Since GEP Ver. |
 ------------ | ------------| ------------------------- | --------------------- | ------------- | 
-score | match_info | Numeric value for team 1/2 game score. |See [notes](#score-note) |   175.1       |
-notable | match_info | Any notable event (Yellow card / Red card / Goal) happening in-game, including player information & timestamp. |See [notes](#notable-note) |   175.1       |
+score | match_info | Numeric value for team 1/2 game score. |See [notes](#score-note) |   188.0       |
+notable | match_info | Any notable event (Yellow card / Red card / Goal) happening in-game, including player information & timestamp. |See [notes](#notable-note) |   188.0       |
 
 #### *score* note
 
