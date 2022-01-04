@@ -18,6 +18,12 @@ Please read the [overwolf.games.events](overwolf-games-events) documentation pag
 * [gep_internal](#gep_internal)
 * [match_info](#match_info)
 
+## Game event status
+
+It is highly recommended to communicate errors and warnings to app users. 
+
+Check the current game event status [here](../status/all). Alternately, you can easily check that status from your app itself, [using our API](../topics/howto-check-events-status-from-app).
+
 ## `gep_internal`
 
 ### Info Updates
