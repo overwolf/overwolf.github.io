@@ -216,8 +216,8 @@ const GamesMetadata = {
     iconLargeUrl: "/docs/assets/games-logos/large/fm2021.png",
     name: "Football Manager 2021"
   },
-  218561: {
-    id: 218561,
+  21856: {
+    id: 21856,
     path: "/docs/status/fm2022",
     iconUrl: "/docs/assets/games-logos/fm2022.png",
     iconLargeUrl: "/docs/assets/games-logos/large/fm2022.png",

@@ -7,7 +7,7 @@ sidebar_label: Football Manager 2022
 Please read the [overwolf.games.events](overwolf-games-events) documentation page to learn how to use Overwolf game events.
 
 :::important Game ID
-218561
+21856
 :::
 
 ## Sample Apps
