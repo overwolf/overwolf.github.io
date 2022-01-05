@@ -15,7 +15,7 @@ Here you can find our [Developers Roadmap](https://trello.com/b/1V10E4IB/overwol
   intended.
 - **Updated 3rd party DLLs** - We updated most of our 3rd party DLLs, The
   following DLLs were updated to the following versions:
-  ```
+  ```text
   Newtonsoft.Json.dll - 13.0.1.25517
   CommandLine.dll - 2.8.0.0
   log4net.dll - 2.0.13.0
@@ -29,7 +29,7 @@ Here you can find our [Developers Roadmap](https://trello.com/b/1V10E4IB/overwol
 ever_ - In this sequel, `overwolf.games.getRunningGameInfo2` no longer returns 
 just `null` when it's being called while there's no game running.
 Now it returns: 
-  ```
+  ```JavaScript
     {
         gameInfo: null,
         success: true
