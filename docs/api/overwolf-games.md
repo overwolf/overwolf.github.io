@@ -18,6 +18,7 @@ These events are not related to real-time game events (kill, death, start/end ma
 * [overwolf.games.getGameDBInfo()](#getgamedbinfogameclassidcallback)
 * [overwolf.games.getRecentlyPlayedGames()](#getrecentlyplayedgamesmaxnumofgames-callback)
 * [overwolf.games.getLastRunningGameInfo()](#getlastrunninggameinfocallback)
+* [overwolf.games.getRunningGameInfo2()](#getrunninggameinfocallback)
 
 ## Events Reference
 
@@ -42,6 +43,33 @@ These events are not related to real-time game events (kill, death, start/end ma
 * [overwolf.games.GameInfoChangeReason](#gameinfochangereason-enum) Enum
 * [overwolf.games.KnownOverlayCoexistenceApps](#knownoverlaycoexistenceapps-enum) Enum
 * [overwolf.games.GameInfoType](#gameinfotype-enum) Enum
+
+## getRunningGameInfo2(callback)
+
+#### Version added: 0.188 
+
+> Returns an object with information about the currently running game, if no game is runing, returns the following object: 
+  ```javascript
+  {
+      gameInfo: null,
+      success: true
+  }
+ ```
+Note: In a scenario when more than one game is running, we'll display information only from the latest one that was launched.
+
+Parameter | Type     | Description                                                              |
+----------| -------- | ------------------------------- |
+callback  | [(Result:GetRunningGameInfoResult)](#getrunninggameinforesult-object) => void | Returns info about the currently running game |
+
+#### Usage Example
+
+```javascript
+overwolf.games.getRunningGameInfo2(console.log)
+```
+
+:::warning OBSOLETE
+This function is obsolete - please use `getRunningGameInfo2` instead.
+:::
 
 ## getRunningGameInfo(callback)
 
