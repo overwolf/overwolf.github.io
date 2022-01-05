@@ -8,42 +8,46 @@ Follow this entry for ongoing updates and changes to the project or tools.
 
 Here you can find our [Developers Roadmap](https://trello.com/b/1V10E4IB/overwolf-roadmap).
 
-## Version 0.188 (In-Progress)
+## Iteration 188
 
-* Note that the work on the documentation for this version is still in-progress.
+- **App Validations** - Each and every app that a user downloads now gets 
+  validated to make sure it includes only the content the App Creator has 
+  intended.
+- **Updated 3rd party DLLs** - We updated most of our 3rd party DLLs, The
+  following DLLs were updated to the following versions:
+  ```
+  Newtonsoft.Json.dll - 13.0.1.25517
+  CommandLine.dll - 2.8.0.0
+  log4net.dll - 2.0.13.0
+  Ionic.Zip.Reduced.dll was replaced with DotNetZip.dll - 1.6.0.0
+  ```
+- **Longer Replays** - The Replay API can now record up to 10 minutes unlike the
+ 3 minutes it was able to record before. Please use this wisely as it can affect
+ memory usage, CPU and the time which it takes Overwolf to create the replay 
+ video file.
+- **getRunningGameInfo2** - _`getRunningGameInfo` is back and he's angrier than 
+ever_ - In this sequel, `overwolf.games.getRunningGameInfo2` no longer returns 
+just `null` when it's being called while there's no game running.
+Now it returns: 
+  ```
+    {
+        gameInfo: null,
+        success: true
+    }
+  ```
+- **Media Folder Access** - `overwolf.media.videos` namespace now has access to 
+previously chosen video folders (so if a user has changed the video folder, 
+you'll now also have access to the previous folder when using that API).
 
-#### Docs
-
-* A new Ads sample app in our [APIs sample apps repository](https://github.com/overwolf/apis-sample-apps).  
-  With the Ads sample app it you'll be able to demonstrate how to display an ad, in an in-game window or desktop window, when to hide it, when to restore it, etc.
-* [Football Manager 2022](overwolf-games-events-fm2022)
-  * New info update in:
-    * notable (assist)
-
-#### API
-
-* [overwolf.media.replays.capture()](overwolf-media-replays#capturepastduration-futureduration-capturefinishedcallback-callback) - Allow > 180 sec buffer.
-  Until now, calling capture with a `pastDuration` > 180000 ms doesn’t work. We increased the buffer from 3 min to 10 minutes. (now you can set pastDuration to 600000ms max).
-
-* Media folder acess - Until now, when the OW video folder changed, your video capture app lost access to the old files. So playing these videos in your app was not possible. We fixed it, and from now on, your app will still gain access to the old files, even if they are located outside the current OW video folder.
-
-* [overwolf.games.getRunningGameInfo2](overwolf-games#getrunninggameinfocallback) now return object insead `null` when no game is running.
-
-#### Platform
-
-* Signing "All" Apps.  
-  Starting with iteration 188, Overwolf will validate the contents of OPKs, which will ensure that your users will use the App that you have designed as intended without the ability to tweak your code once it's in their hands. This also means that you can no longer load an OPK without first uploading it to console.overwolf.com. However, you can still load it as an unpacked extension.  
-  If a user tries to install an "unsigned" OPK, he will get an error notification ("You're trying to install an app from an unauthorized source...").
-* Updated 3rd Party DLL Libraries - We updated the 3rd party DLL libraries that Overwolf uses.  
-  If your app is using any type of plugin (for example: Newtonsoft.Json.dll) then this is doubly important. We’ve already found apps that also require an update due to this change and contacted the relevant Creators. This is important - `please test your app once the iteration becomes available to you`.
-
-#### Dev Console
-
-* Soon.
-    
-#### Bug fixes
-
-* Soon.
+**Bug Fixes:**
+- Fixed a bug that caused an app window to become invisible after resizing.
+- Fixed an issue that created an offset issue when using multiple monitors with
+  different DPIs.
+- Fixed a small memory leak with certain OpenGL games.
+- Uninstalling multiple apps from the Overwolf Uninstaller while Overwolf is
+closed now works as intended.
+- Fixed possible memory leak when using `overwolf.extensions.io.readTextFile`
+  or `overwolf.extensions.io.writeTextFile` for extremely large files.
 
 ## Version 0.187 (Dec 2021)
 
