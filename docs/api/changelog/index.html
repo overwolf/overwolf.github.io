@@ -77,10 +77,10 @@ validated to make sure it includes only the content the App Creator has
 intended.</li>
 <li><strong>Updated 3rd party DLLs</strong> - We updated most of our 3rd party DLLs, The
 following DLLs were updated to the following versions:
-<pre><code class="hljs"><span class="hljs-selector-tag">Newtonsoft</span><span class="hljs-selector-class">.Json</span><span class="hljs-selector-class">.dll</span> <span class="hljs-selector-tag">-</span> 13<span class="hljs-selector-class">.0</span><span class="hljs-selector-class">.1</span><span class="hljs-selector-class">.25517</span>
-<span class="hljs-selector-tag">CommandLine</span><span class="hljs-selector-class">.dll</span> <span class="hljs-selector-tag">-</span> 2<span class="hljs-selector-class">.8</span><span class="hljs-selector-class">.0</span><span class="hljs-selector-class">.0</span>
-<span class="hljs-selector-tag">log4net</span><span class="hljs-selector-class">.dll</span> <span class="hljs-selector-tag">-</span> 2<span class="hljs-selector-class">.0</span><span class="hljs-selector-class">.13</span><span class="hljs-selector-class">.0</span>
-<span class="hljs-selector-tag">Ionic</span><span class="hljs-selector-class">.Zip</span><span class="hljs-selector-class">.Reduced</span><span class="hljs-selector-class">.dll</span> <span class="hljs-selector-tag">was</span> <span class="hljs-selector-tag">replaced</span> <span class="hljs-selector-tag">with</span> <span class="hljs-selector-tag">DotNetZip</span><span class="hljs-selector-class">.dll</span> <span class="hljs-selector-tag">-</span> 1<span class="hljs-selector-class">.6</span><span class="hljs-selector-class">.0</span><span class="hljs-selector-class">.0</span>
+<pre><code class="hljs css language-text">Newtonsoft.Json.dll - 13.0.1.25517
+CommandLine.dll - 2.8.0.0
+log4net.dll - 2.0.13.0
+Ionic.Zip.Reduced.dll was replaced with DotNetZip.dll - 1.6.0.0
 </code></pre></li>
 <li><strong>Longer Replays</strong> - The Replay API can now record up to 10 minutes unlike the
 3 minutes it was able to record before. Please use this wisely as it can affect
@@ -90,10 +90,10 @@ video file.</li>
 ever</em> - In this sequel, <code>overwolf.games.getRunningGameInfo2</code> no longer returns
 just <code>null</code> when it's being called while there's no game running.
 Now it returns:
-<pre><code class="hljs">  <span class="hljs-string">{</span>
-      <span class="hljs-attr">gameInfo:</span> <span class="hljs-literal">null</span><span class="hljs-string">,</span>
-      <span class="hljs-attr">success:</span> <span class="hljs-literal">true</span>
-  <span class="hljs-string">}</span>
+<pre><code class="hljs css language-JavaScript">  {
+      <span class="hljs-attr">gameInfo</span>: <span class="hljs-literal">null</span>,
+      <span class="hljs-attr">success</span>: <span class="hljs-literal">true</span>
+  }
 </code></pre></li>
 <li><strong>Media Folder Access</strong> - <code>overwolf.media.videos</code> namespace now has access to
 previously chosen video folders (so if a user has changed the video folder,
