@@ -67,40 +67,46 @@ Note that the [RunningGameInfo object](overwolf-games#runninggameinfo-object) al
 ## Top 30 Game IDs
 
 <details open>
-<summary>Listed here are the top 30 game ID's (this list might outdated)</summary>
+<summary>Listed here are games that support game events</summary>
 
-| #   | Game Title                                               | Game ID       |
-------| ---------------------------------------------------------| --------------|
-| 1   | League of Legends                                        |  5426         |
-| 2   | Hearthstone: Heroes of Warcraft                          |  9898         |
-| 3   | Counter-Strike: Global Offensive                         |  7764         |
-| 4   | Minecraft                                                |  8032         |
-| 5   | PUBG                                                     |  10906        |
-| 6   | Overwatch                                                |  10844        |
-| 7   | World of Warcraft                                        |  765          |
-| 8   | Grand Theft Auto V                                       |  10760        |
-| 9   | Rocket League                                            |  10798        |
-| 10  | World Of Tanks                                           |  6365         |
-| 11  | Tom Clancy’s Rainbow Six: Siege                          |  10826        |
-| 12  | Diablo III                                               |  7152         |
-| 13  | Garry’s Mod                                              |  1406         |
-| 14  | Heroes of the Storm                                      |  10624        |
-| 15  | Dota 2                                                   |  7314         |
-| 16  | Blocks That Matter                                       |  12018        |
-| 17  | 8BitMMO                                                  |  11018        |
-| 18  | Paladins                                                 |  10872        |
-| 19  | Grand Theft Auto: San Andreas Multiplayer                |  1340         |
-| 20  | Unturned                                                 |  10470        |
-| 21  | Apex Legends                                             |  21566        |
-| 22  | Euro Truck Simulator 2                                   |  8584         |
-| 23  | ARMA 3                                                   |  9208         |
-| 24  | PAYDAY 2                                                 |  9694         |
-| 25  | Rust                                                     |  10156        |
-| 26  | Team Fortress 2                                          |  3026         |
-| 27  | ARK: Survival Evolved                                    |  10778        |
-| 28  | Battlefield 1                                            |  10876        |
-| 29  | Warframe                                                 |  8954         |
-| 30  | Fortnite                                                 |  21216        |
+| # | Game Title | Game ID |
+| --- | --- | --- |
+| 1 | Ancestors Legacy | 21236 |
+| 2 | Apex Legends | 21566 |
+| 3 | Battlerite Royale | 21450 |
+| 4 | Call of Duty: Modern Warfare | 21626 |
+| 5 | Counter-Strike: Global Offensive | 7764 |
+| 6 | Dauntless | 21214 |
+| 7 | Dota 2 | 7314 |
+| 8 | Dota Underlords | 21586 |
+| 9 | Escape From Tarkov | 21634 |
+| 10 | Final Fantasy | 6350 |
+| 11 | Football Manager 2021 | 21666 |
+| 12 | Football Manager 2022 | 21856 |
+| 13 | Fortnite | 21216 |
+| 14 | Hearthstone: Heroes of Warcraft | 9898 |
+| 15 | Heroes of the Storm | 10624 |
+| 16 | League of Legends | 5426 |
+| 17 | Legends of Runeterra | 21620 |
+| 18 | Magic the Gathering | 21308 |
+| 19 | Minecraft | 8032 |
+| 20 | New World | 21816 |
+| 21 | Overwatch | 10844 |
+| 22 | Path of Exile | 7212 |
+| 23 | PUBG | 10906 |
+| 24 | PUBG lite | 21598 |
+| 25 | Rocket League | 10798 |
+| 26 | Smite | 8134 |
+| 27 | Splitgate | 21404 |
+| 28 | StarCraft II | 5855 |
+| 29 | Tom Clancy’s Rainbow Six: Siege | 10826 |
+| 30 | Valheim | 21668 |
+| 31 | VALORANT | 21640 |
+| 32 | Warface | 7784 |
+| 33 | Warframe | 8954 |
+| 34 | World Of Tanks | 6365 |
+| 35 | World of Warcraft | 765 |
+| 36 | World of Warships | 10746 |
 
 </details>
 
