@@ -9,7 +9,7 @@ Follow this entry for ongoing updates and changes to the project or tools.
 
 Here you can find our [Developers Roadmap](https://trello.com/b/1V10E4IB/overwolf-roadmap).
 
-## Iteration 188
+## Version 0.188 (Jan 2022)
 
 - **App Validations** - Each and every app that a user downloads now gets 
   validated to make sure it includes only the content the App Creator has 
