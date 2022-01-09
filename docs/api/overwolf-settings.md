@@ -177,7 +177,7 @@ overwolf.settings.registerHotKey(
 > Returns the current language overwolf is set to in a two letter ISO name format.
 
 :::warning OBSOLETE
-This function is obsolete.  Instead, please use [overwolf.settings.language]() API.
+This function is obsolete.  Instead, please use [overwolf.settings.language](overwolf-settings-language) API.
 :::
 
 Parameter | Type                  | Description                                                             |
