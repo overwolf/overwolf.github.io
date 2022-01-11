@@ -14,266 +14,276 @@ Please read the [overwolf.games.events](overwolf-games-events) documentation pag
 
 * [MakerKing game events sample app](https://github.com/overwolf/events-sample-apps)
 
-## Available Features
 
-* [gep_internal](#gep_internal)
-* [level](#level)
-* [user](#user)
-* [race](#race)
+## Launching MakerKing in Beta
 
-## Game event status
+To access MakerKing's event system you will need to use the beta branch of the game on Steam:
 
-It is highly recommended to communicate errors and warnings to app users. 
+![Beta branch](https://user-images.githubusercontent.com/8527540/145293541-052091a5-6db4-40be-a08c-cad2dd142d0f.png)
 
-Check the current game event status [here](../status/all). Alternately, you can easily check that status from your app itself, [using our API](../topics/howto-check-events-status-from-app).
+To have this access you will need to add one of the Steam key I provided on Slack.
 
-## `gep_internal`
+Note that this version of the game connects to the test server which is a copy of the current game server but in which there is no one else logged and you may do anything you want. Feel free to create any number of fake acounts or test levels as your testing requires.
 
-### Info Updates
 
-key          | Category    | Values                    | Notes                 | Since GEP Ver. |
------------- | ------------| ------------------------- | --------------------- | ------------- | 
-gep_internal | gep_internal| Local + Public version number|See [notes](#gep_internal-note)|   143.0       |
+## Connecting to the WebSocket
 
-#### *gep_internal* note
+To connect, simply open a WebSocket client at `ws://localhost:1770` on the 
+client machine. 1770 is the port and cannot be changed at the moment. If there 
+is a use for this I can add a configuration file that would let you change the
+port.
 
-Data Example:
+Using the [Java-WebSocket](https://github.com/TooTallNate/Java-WebSocket) 
+library, here is a very simple Java program that lets you debug the event
+functionality for the game. I imagine the WebSocket implementation is relatively
+similar (and involves probably even less code) in JavaScript.
 
-```json
-{"info":{"gep_internal":{"version_info":"{"local_version":"157.0.1","public_version":"157.0.1","is_updated":true}"}},"feature":"gep_internal"}
+```java
+public class EventTesterClient extends WebSocketClient {
+	public static void main(String[] args) throws URISyntaxException {
+		EventTesterClient client = new EventTesterClient(new URI("ws://localhost:1770"));
+		client.connect();
+	}
+
+	public EventTesterClient(URI serverUri) {
+		super(serverUri);
+	}
+
+	@Override
+	public void onOpen(ServerHandshake handshakedata) {
+		System.out.println("onOpen");
+	}
+
+	@Override
+	public void onMessage(String message) {
+		System.out.println("onMessage " + message);
+	}
+
+	@Override
+	public void onClose(int code, String reason, boolean remote) {
+		System.out.println("onClose " + reason);
+	}
+
+	@Override
+	public void onError(Exception ex) {
+		System.out.println("onError");
+		ex.printStackTrace();
+	}
+}
 ```
 
-## `level`
+## Current game data
 
-### Info Updates
-
-key          | Category    | Values                          | Notes                 | Since GEP Ver. |
------------- | ------------| ------------------------------- | --------------------- | ------------- | 
-level        | level       | All data about current level    | See [notes](#level-note)|   ?       |
-
-#### *level* note
-
-Data Example:
+Upon connecting to the web socket for the game, the current game data is dumped in the following 
+format:
 
 ```json
-???
+{
+  "currentUser": { // set to null when there is no logged user (playing offline or in titlescreen)
+    "userId": 1,
+    "username": "Winter"
+  },
+  "currentScreen": "OnlineGameScreen", // Current screen of the game, possible values are OnlineGameScreen, LocalGameScreen, EditorScreen, TitleScreen, AssetLoadingScreen, TransitionScreen, ReplayScreen and OfflineMenuScreen 
+  "currentLevel": { // set to null when there is no current level (screen may be TransitionScreen or another screen without a level)
+    "levelId": 23,
+    "levelName": "Lost the key to my house!",
+    "authorId": 1, // player id of author
+    "authorName": "Winter",
+    "levelType": "hub", // hub or race, the 2 types of levels
+    "levelState": "online", // online, offline, new, workingcopy or finished
+    "levelTags": ["puzzle"], // a list of level tags among exploration, puzzle, troll, kaizo, practice, auto, speed_challenge or escape_room 
+    "music": {
+      "type": "external", // either builtin or external, external being for songs with link URLS 
+      "trackName": "Air Biscuits",
+      "trackAuthor": "Tippermusic", 
+      "urls": [ // this whole section is excluded from the json when type = builtin
+		{
+		  "url": "https://soundcloud.com/tippermusic/1-air-biscuits?in=tippermusic/sets/insolito",
+		  "provider": "soundcloud" // either soundcloud or bandcamp at the moment but could be more eventually (like youtube)
+		}
+	  ]
+    }
+  },
+  "currentSettings": { // dump of the current game settings for the player
+    "musicVolume": "0.0",
+    "soundVolume": "0.48999998",
+    "language": "en",
+    "replayFolder": "/home/winter/MakerKingReplays",
+    "screenshotFolder": "/home/winter/MakerKingScreenshots",
+    "invertSprint": "true",
+    "unlockedOffline": "true",
+    "vSyncEnabled": "true",
+    "fullscreen": "false",
+    "fpsMode": "DETAILED",
+    "msaaSamples": "2",
+    "fullscreenMode": "WINDOWED_BORDERLESS",
+    "textureQuality": "HIGH",
+    "screenShakeEnabled": "true",
+    "useParallax": "true",
+    "lightingEnabled": "true",
+    "editorLightingEnabled": "true",
+    "lightColorEnabled": "true",
+    "lightingQuality": "HIGH",
+    "particlesEnabled": "true",
+    "biomeTransitionEnabled": "true",
+    "iceReflectionEnabled": "true",
+    "hidePlayers": "false",
+    "editorHideLiquids": "false",
+    "editorAutoBack": "false",
+    "editorOverwriteBlocks": "false",
+    "disableExternalMusic": "false",
+    "disableOverwolf": "false",
+    "externalMusicReplacement": "CODEMANU_GRASSLANDS_THEME",
+    "editorMusic": "ORIGINAL_EDITORMUSIC",
+    "editorMusicInPlaytest": "true",
+    "disableEditorMusic": "false",
+    "randomizeEditorMusic": "false"
+  }
+}
 ```
 
+## Game events
 
-### Events
-
-Event      | Event Data  | Fired When          | Notes              | Since GEP Ver. |
------------| ------------| ------------------- | ------------------ | --------------|
-loading_level         | Level ID and whether loading is for editor or game        | The local player makes an attempt to join a level for play or edition |   |  ?       | 
-joined_level          | Level that has been joined                                |  Level is fully loaded and ready to be played                         |   |  ?       | 
-reached_checkpoint    | Position of the checkpoint within the game world          |  The local player reaches a checkpoint in the level they are playing 	|   |  ?       | 
-cleared_level         | null                                                      |  The local player reaches the end of the level they are playing       |   |  ?       | 
-level_reset           | null                                                      |  The local player either dies or restarts                             |   |  ?       | 
-joined_editor         | Level that has been opened in the editor                  |  Level is fully loaded and ready to be edited                         |   |  ?       |
-started_playtest      | null                                                      |  Local player has started playtesting edited level                    |   |  ?       | 
-ended_playtest        | null                                                      |  Local player ended playtesting level                                 |   |  ?       |  
-opened_replay         | null                                                      |  Local player opened and is now watching a replay                     |   |  ?       |  
-closed_replay         | null                                                      |  Local player closed the replay they were watching                    |   |  ?       |  
-
-
-#### *loading_level* note
-
-Data Example:
+After this initial message is sent, the game is going to send additional 
+messages for any event that happens. Those will be in the following format:
 
 ```json
-{“event”:”joined_level”,“data”:”FILL level ID + boolean editing”}
+{
+  "eventType": "TYPE",
+    // ... additional data relative to event, sometimes events contain no data
+}
 ```
 
-#### *joined_level* note
+### Event list
 
-Data Example:
+Here is the full list of events, followed by the list of json fields it includes
+as its data. As you can see most of the events do not contain extra data.
 
-```json
-{“event”:”joined_level”,“data”:”FILL level”}
+
+```
+loading_game
+game_open
+settings_changed "settings"
+entered_offline_menu 
+logged_in "account"
+logged_out
+loading_level "levelid", "editing"
+joined_level "level"
+reached_checkpoint "position"
+cleared_level
+level_reset
+joined_editor "level"
+started_playtest
+ended_playtest
+opened_replay
+closed_replay
+joined_race
+started_race
+left_race
 ```
 
-
-#### *reached_checkpoint* note
-
-Data Example:
-
-```json
-{“event”:”reached_checkpoint”,“data”:”FILL position”}
-```
-
-
-#### *cleared_level* note
-
-Data Example:
+Here are one example of each event that has that extra data. You may notice
+things like the format of levels and settings are consistent and you can assume
+they will remain this way. 
 
 ```json
-{“event”:”cleared_level”,“data”:”null”}
-```
-
-
-#### *level_reset* note
-
-Data Example:
-
-```json
-{“event”:”level_reset”,“data”:”null”}
-```
-
-
-#### *joined_editor* note
-
-Data Example:
-
-```json
-{“event”:”joined_editor”,“data”:”FILL level”}
-```
-
-
-#### *started_playtest* note
-
-Data Example:
-
-```json
-{“event”:”started_playtest”,“data”:”null”}
-```
-
-
-
-#### *ended_playtest* note
-
-Data Example:
-
-```json
-{“event”:”ended_playtest”,“data”:”null”}
-```
-
-
-#### *opened_replay* note
-
-Data Example:
-
-```json
-{“event”:”opened_replay”,“data”:”null”}
-```
-
-
-#### *closed_replay* note
-
-Data Example:
-
-```json
-{“event”:”closed_replay”,“data”:”null”}
-```
-
-## `user`
-
-### Info Updates
-
-key          | Category    | Values                          | Notes                 | Since GEP Ver. |
------------- | ------------| ------------------------------- | --------------------- | ------------- | 
-account        | user       | Username and player Id of current user    | See [notes](#account-note)|   ?       |
-settings       | user       | All game settings of current user    | See [notes](#settings-note)|   ?       |
-
-#### *account* note
-
-Data Example:
-
-```json
-???
-```
-
-### *settings* note
-
-
-Data Example:
-
-```json
-???
-```
-
-
-### Events
-
-Event      | Event Data  | Fired When          | Notes              | Since GEP Ver. |
------------| ------------| ------------------- | ------------------ | --------------|
-game_open            | null                      | The game has finished loading and is fully open                         |   |  ?       | 
-settings_changed     | New settings              | Settings for the game has been changed by the local player (either logged or not) 	|   |  ?       | 
-logged_in            | Account of logged in user | The local player has logged in into their account       |   |  ?       | 
-logged_out           | null                      | The local player has logged off of their account                |   |  ?       | 
-entered_offline_menu | null                      | The local player decided to play offlne and entered the offline menu |   |  ?       | 
-
-#### *game_open* note
-
-Data Example:
-
-```json
-{“event”:”game_open”,“data”:”null”}
-```
-
-#### *settings_changed* note
-
-Data Example:
-
-```json
-{“event”:”settings_changed”,“data”:”FILL settings”}
-```
-
-#### *logged_in* note
-
-Data Example:
-
-```json
-{“event”:”logged_in”,“data”:”FILL account”}
-```
-
-#### *logged_out* note
-
-Data Example:
-
-```json
-{“event”:”logged_out”,“data”:”null”}
-```
-
-#### *entered_offline_menu* note
-
-Data Example:
-
-```json
-{“event”:”entered_offline_menu”,“data”:”null”}
+{
+  "eventType": "settings_changed",
+  "settings": { // same format for settings as in the current data dump 
+    "musicVolume": "0.29999998",
+    "soundVolume": "0.48999998",
+    "language": "en",
+    "replayFolder": "/home/winter/MakerKingReplays",
+    "screenshotFolder": "/home/winter/MakerKingScreenshots",
+    "invertSprint": "true",
+    "unlockedOffline": "true",
+    "vSyncEnabled": "true",
+    "fullscreen": "false",
+    "fpsMode": "DETAILED",
+    "msaaSamples": "2",
+    "fullscreenMode": "WINDOWED_BORDERLESS",
+    "textureQuality": "HIGH",
+    "screenShakeEnabled": "true",
+    "useParallax": "true",
+    "lightingEnabled": "true",
+    "editorLightingEnabled": "true",
+    "lightColorEnabled": "true",
+    "lightingQuality": "HIGH",
+    "particlesEnabled": "true",
+    "biomeTransitionEnabled": "true",
+    "iceReflectionEnabled": "true",
+    "hidePlayers": "false",
+    "editorHideLiquids": "false",
+    "editorAutoBack": "false",
+    "editorOverwriteBlocks": "false",
+    "disableExternalMusic": "false",
+    "disableOverwolf": "false",
+    "externalMusicReplacement": "CODEMANU_GRASSLANDS_THEME",
+    "editorMusic": "ORIGINAL_EDITORMUSIC",
+    "editorMusicInPlaytest": "true",
+    "disableEditorMusic": "false",
+    "randomizeEditorMusic": "false"
+  }
+}
 ```
 
 
-## `race`
-
-
-### Events
-
-Event      | Event Data  | Fired When          | Notes              | Since GEP Ver. |
------------| ------------| ------------------- | ------------------ | --------------|
-joined_race      | null                      | The local player joins a race |   |  ?       | 
-started_race     | null                      | The race the player had joined starts 	|   |  ?       | 
-left_race        | null                      | The local player finishes or leaves a race       |   |  ?       | 
-
-#### *joined_race* note
-
-Data Example:
-
 ```json
-{“event”:”joined_race”,“data”:”null”}
+{
+  "eventType": "loading_level",
+  "levelId": "23",
+  "editing": "false" // true or false, true meaning the editor is opening and false meaning the level is about to be played
+}
 ```
 
-#### *started_race* note
-
-Data Example:
 
 ```json
-{“event”:”started_race”,“data”:”null”}
+{
+  "eventType": "joined_level",
+  "level": { // same format as currentLevel in the current data dump except here level is never null
+    "levelId": 23,
+    "levelName": "Lost the key to my house!",
+    "authorId": 1,
+    "authorName": "Winter",
+    "levelType": "hub",
+    "levelState": "online",
+    "levelTags": [],
+    "music": {
+      "type": "builtin",
+      "trackName": "Intro Theme",
+      "trackAuthor": "CodeManu"
+    }
+  }
+}
 ```
 
-#### *left_race* note
+```json
+{
+  "eventType": "reached_checkpoint",
+  "position": [ // this is 2D game world position
+    -10750, // x
+    -4250 // y
+  ]
+}
+```
 
-Data Example:
 
 ```json
-{“event”:”left_race”,“data”:”null”}
+{
+  "eventType": "joined_editor",
+  "level": {
+    "levelId": -1,
+    "levelName": "Untitled",
+    "authorId": 1,
+    "authorName": "Winter",
+    "levelType": "race",
+    "levelState": "new",
+    "levelTags": [],
+    "music": {
+      "type": "builtin",
+      "trackName": "Intro Theme",
+      "trackAuthor": "CodeManu"
+    }
+  }
+}
 ```
