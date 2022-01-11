@@ -10,11 +10,6 @@ Please read the [overwolf.games.events](overwolf-games-events) documentation pag
 21850
 :::
 
-## Sample Apps
-
-* [MakerKing game events sample app](https://github.com/overwolf/events-sample-apps)
-
-
 ## Launching MakerKing in Beta
 
 To access MakerKing's event system you will need to use the beta branch of the game on Steam:
