@@ -10,63 +10,6 @@ Please read the [overwolf.games.events](overwolf-games-events) documentation pag
 21850
 :::
 
-## Launching MakerKing in Beta
-
-To access MakerKing's event system you will need to use the beta branch of the game on Steam:
-
-![Beta branch](https://user-images.githubusercontent.com/8527540/145293541-052091a5-6db4-40be-a08c-cad2dd142d0f.png)
-
-To have this access you will need to add one of the Steam key I provided on Slack.
-
-Note that this version of the game connects to the test server which is a copy of the current game server but in which there is no one else logged and you may do anything you want. Feel free to create any number of fake acounts or test levels as your testing requires.
-
-
-## Connecting to the WebSocket
-
-To connect, simply open a WebSocket client at `ws://localhost:1770` on the 
-client machine. 1770 is the port and cannot be changed at the moment. If there 
-is a use for this I can add a configuration file that would let you change the
-port.
-
-Using the [Java-WebSocket](https://github.com/TooTallNate/Java-WebSocket) 
-library, here is a very simple Java program that lets you debug the event
-functionality for the game. I imagine the WebSocket implementation is relatively
-similar (and involves probably even less code) in JavaScript.
-
-```java
-public class EventTesterClient extends WebSocketClient {
-	public static void main(String[] args) throws URISyntaxException {
-		EventTesterClient client = new EventTesterClient(new URI("ws://localhost:1770"));
-		client.connect();
-	}
-
-	public EventTesterClient(URI serverUri) {
-		super(serverUri);
-	}
-
-	@Override
-	public void onOpen(ServerHandshake handshakedata) {
-		System.out.println("onOpen");
-	}
-
-	@Override
-	public void onMessage(String message) {
-		System.out.println("onMessage " + message);
-	}
-
-	@Override
-	public void onClose(int code, String reason, boolean remote) {
-		System.out.println("onClose " + reason);
-	}
-
-	@Override
-	public void onError(Exception ex) {
-		System.out.println("onError");
-		ex.printStackTrace();
-	}
-}
-```
-
 ## Current game data
 
 Upon connecting to the web socket for the game, the current game data is dumped in the following 
