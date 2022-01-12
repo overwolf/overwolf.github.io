@@ -25,9 +25,7 @@ Please read the [overwolf.games.events](overwolf-games-events) documentation pag
 ## Game event status
 
 It is highly recommended to communicate errors and warnings to app users. 
-
 Check the current game event status [here](../status/all). Alternately, you can easily check that status from your app itself, [using our API](../topics/howto-check-events-status-from-app).
-
 
 ## `gep_internal`
 
@@ -37,7 +35,7 @@ key          | Category    | Values                    | Notes                 |
 ------------ | ------------| ------------------------- | --------------------- | ------------- | 
 gep_internal | gep_internal| Local + Public version number|See [notes](#gep_internal-note)|   143.0       |
 
-#### *gep_internal* note
+#### *gep_internal*  note
 
 Data Example:
 
@@ -45,7 +43,7 @@ Data Example:
 {"info":{"gep_internal":{"version_info":"{"local_version":"157.0.1","public_version":"157.0.1","is_updated":true}"}},"feature":"gep_internal"}
 ```
 
-## game_info
+## `game_info`
 
 ### Info Updates
 
@@ -59,12 +57,15 @@ Data Example:
 
 ```json
 {"info":{"game_info":{"scene":"lobby"}},"feature":"game_info"}
-{"info":{"game_info":{"scene":"loading"}},"feature":"game_info"}
-{"info":{"game_info":{"scene":"match_start_countdown"}},"feature":"game_info"}
-{"info":{"game_info":{"scene":"ingame"}},"feature":"game_info"}
 ```
+List of possible values:
+* intro
+* transfer_to_lobby
+* lobby
+* match_start_countdown
+* loading
 
-## match_info
+## `match_info`
 
 ### Info Updates
 
@@ -73,7 +74,7 @@ key          | Category    | Values                    | Notes                 |
 local_player_stats | match_info  | A variety of in-game stats for local player. |See [notes](#local_player_stats-note)|   190.0       |
 
 
-#### *local_player_stats* note
+#### *local_player_stats*  note
 
 Data Example:
 
@@ -91,7 +92,7 @@ Event        | Event Data        | Fired When        | Notes              | Sinc
 match_start  | null              | When loading into map.|See [notes](#match_start-note)|   190.0  |
 match_end    | null              | When disconnecting from map. |See [notes](#match_end-note)|   190.0  |
 
-#### *match_start* note
+#### *match_start*  note
 
 Data Example:
 
@@ -99,7 +100,7 @@ Data Example:
 {"events":[{"name":"match_start","data":"null"}]}
 ```
 
-#### *match_end* note
+#### *match_end*  note
 
 Data Example:
 
@@ -107,7 +108,7 @@ Data Example:
 {"events":[{"name":"match_end","data":"null"}]}
 ```
 
-## kill
+## `kill`
 
 ### Events
 
@@ -115,7 +116,7 @@ Event        | Event Data        | Fired When        | Notes              | Sinc
 -------------| ------------------| ----------------- | ------------------ | ---------------|
 kill         | Integer           | Killing an opponent. |See [notes](#kill-note)|   190.0  |
 
-#### *kill* note
+#### *kill*  note
 
 Data Example:
 
@@ -123,7 +124,7 @@ Data Example:
 {"events":[{"name":"kill","data":"1"}]}
 ```
 
-## assist
+## `assist`
 
 ### Events
 
@@ -131,7 +132,7 @@ Event        | Event Data        | Fired When        | Notes              | Sinc
 -------------| ------------------| ----------------- | ------------------ | ---------------|
 assist         | Integer           | Assist in killing an opponent. |See [notes](#assist-note)|   190.0  |
 
-#### *assist* note
+#### *assist*  note
 
 Data Example:
 
@@ -139,7 +140,7 @@ Data Example:
 {"events":[{"name":"assist","data":"1"}]}
 ```
 
-## death
+## `death`
 
 ### Events
 
@@ -147,7 +148,7 @@ Event        | Event Data        | Fired When        | Notes              | Sinc
 -------------| ------------------| ----------------- | ------------------ | ---------------|
 death        | Integer           | Dying to an opponent. |See [notes](#death-note)|   190.0  |
 
-#### *death* note
+#### *death*  note
 
 Data Example:
 
