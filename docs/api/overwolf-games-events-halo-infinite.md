@@ -7,7 +7,7 @@ sidebar_label: Halo Infinite
 Please read the [overwolf.games.events](overwolf-games-events) documentation page to learn how to use Overwolf game events.
 
 :::important Game ID
-218541
+21854
 :::
 
 ## Sample Apps
