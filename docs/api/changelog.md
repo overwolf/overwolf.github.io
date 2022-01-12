@@ -66,6 +66,8 @@ closed now works as intended.
 * [World of Warcraft](overwolf-games-events-wow)
   * New feature in:
     * addons
+* [Halo Infinite](overwolf-games-events-halo-infinite)
+  * New supported game.
 
 #### API
 
