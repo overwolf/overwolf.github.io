@@ -1,7 +1,7 @@
 (function(){
 var
-    hljsStylesheetBright = getStylesheetByHref('https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/default.min.css'),
-    hljsStylesheetDark = getStylesheetByHref('https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/atelier-cave-dark.min.css'),
+    // hljsStylesheetBright = getStylesheetByHref('https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/default.min.css'),
+    // hljsStylesheetDark = getStylesheetByHref('https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/atelier-cave-dark.min.css'),
     darkModeCheckbox;
 
 function start() {
@@ -11,11 +11,11 @@ function start() {
     if ( window.matchMedia && localStorage.darkMode === undefined && window.matchMedia('(prefers-color-scheme: dark)').matches )
         localStorage.darkMode = '1';
 
-    if ( localStorage.darkMode === '1' ) {
+    if ( localStorage.darkMode === '1' || localStorage.darkMode === undefined) {
         setDarkMode(true);
-        hljsStylesheetBright.disabled = true;
+        // hljsStylesheetBright.disabled = true;
     } else {
-        hljsStylesheetDark.disabled = true;
+        // hljsStylesheetDark.disabled = true;
     }
     
 }
@@ -38,6 +38,10 @@ function setupModeSwitchButton() {
     darkModeCheckbox.type = 'checkbox';
 
     darkModeCheckbox.checked = localStorage.darkMode === '1';
+
+    if ( localStorage.darkMode === '1' || localStorage.darkMode === undefined) {
+        darkModeCheckbox.checked = true;
+    }
 
     cont.appendChild(darkModeCheckbox);
 
@@ -64,12 +68,12 @@ function setupModeSwitchButton() {
 
 function setDarkMode(enable) {
     if ( enable ) {
-        hljsStylesheetBright.disabled = true;
-        hljsStylesheetDark.disabled = false;
+        // hljsStylesheetBright.disabled = true;
+        // hljsStylesheetDark.disabled = false;
         document.documentElement.classList.add('theme-dark');
     } else {
-        hljsStylesheetBright.disabled = false;
-        hljsStylesheetDark.disabled = true;
+        // hljsStylesheetBright.disabled = false;
+        // hljsStylesheetDark.disabled = true;
         document.documentElement.classList.remove('theme-dark');
     }
 }
