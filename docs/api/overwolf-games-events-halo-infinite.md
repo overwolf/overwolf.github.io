@@ -18,6 +18,9 @@ Please read the [overwolf.games.events](overwolf-games-events) documentation pag
 * [gep_internal](#gep_internal)
 * [game_info](#game_info)
 * [match_info](#match_info)
+* [kill](#kill)
+* [assist](#assist)
+* [death](#death)
 
 ## Game event status
 
@@ -102,4 +105,52 @@ Data Example:
 
 ```json
 {"events":[{"name":"match_end","data":"null"}]}
+```
+
+## kill
+
+### Events
+
+Event        | Event Data        | Fired When        | Notes              | Since GEP Ver. |
+-------------| ------------------| ----------------- | ------------------ | ---------------|
+kill         | Integer           | Killing an opponent. |See [notes](#kill-note)|   190.0  |
+
+#### *kill* note
+
+Data Example:
+
+```json
+{"events":[{"name":"kill","data":"1"}]}
+```
+
+## assist
+
+### Events
+
+Event        | Event Data        | Fired When        | Notes              | Since GEP Ver. |
+-------------| ------------------| ----------------- | ------------------ | ---------------|
+assist         | Integer           | Assist in killing an opponent. |See [notes](#assist-note)|   190.0  |
+
+#### *assist* note
+
+Data Example:
+
+```json
+{"events":[{"name":"assist","data":"1"}]}
+```
+
+## death
+
+### Events
+
+Event        | Event Data        | Fired When        | Notes              | Since GEP Ver. |
+-------------| ------------------| ----------------- | ------------------ | ---------------|
+death        | Integer           | Dying to an opponent. |See [notes](#death-note)|   190.0  |
+
+#### *death* note
+
+Data Example:
+
+```json
+{"events":[{"name":"death","data":"1"}]}
 ```
