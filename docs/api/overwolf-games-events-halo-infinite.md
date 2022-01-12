@@ -85,8 +85,8 @@ Some of the stat parameters at the moment don't return any values (KDA, Accuracy
 
 Event        | Event Data        | Fired When        | Notes              | Since GEP Ver. |
 -------------| ------------------| ----------------- | ------------------ | ---------------|
-match_start  | null              | When loading into map.|See [notes](#match_start-note)|   153.0  |
-match_end    | null              | When disconnecting from map. |See [notes](#match_end-note)|   153.0  |
+match_start  | null              | When loading into map.|See [notes](#match_start-note)|   190.0  |
+match_end    | null              | When disconnecting from map. |See [notes](#match_end-note)|   190.0  |
 
 #### *match_start* note
 
