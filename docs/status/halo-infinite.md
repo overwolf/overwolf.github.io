@@ -20,4 +20,3 @@ sidebar_label: Halo Infinite
   <script> const GameID = 21854; const DocsLink = "../api/overwolf-games-events-halo-infinite";</script>
   <script type="text/jsx" src="/jsx/specificGameEventsStatus.jsx"></script>
 </div>
-

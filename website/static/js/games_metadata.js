@@ -240,8 +240,8 @@ const GamesMetadata = {
   21854: {
     id: 21854,
     path: "/docs/status/halo-infinite",
-    iconUrl: "/docs/assets/games-logos/eternal-return.png",
-    iconLargeUrl: "/docs/assets/games-logos/large/eternal-return.png",
+    iconUrl: "/docs/assets/games-logos/halo-infinite.png",
+    iconLargeUrl: "/docs/assets/games-logos/large/halo-infinite.png",
     name: "Halo Infinite"
   }
 }
