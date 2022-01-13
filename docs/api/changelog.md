@@ -9,24 +9,36 @@ Follow this entry for ongoing updates and changes to the project or tools.
 
 Here you can find our [Developers Roadmap](https://trello.com/b/1V10E4IB/overwolf-roadmap).
 
+## Version 0.190 (in-progress)
+
+* Note that iterations 189 to 190 were combined into a single iteration.
+* Note that the documentation is still in progress.
+
+#### Docs
+
+* Soon.
+
+#### API
+
+* Soon.
+
+#### Platform
+
+* Soon.
+
+#### Bug fixes
+
+* Soon.
+
 ## Version 0.188 (Jan 2022)
 
-- **App Validations** - Each and every app that a user downloads now gets 
-  validated to make sure it includes only the content the App Creator has 
-  intended.
-- **Updated 3rd party DLLs** - We updated most of our 3rd party DLLs, The
-  following DLLs were updated to the following versions:
-  ```text
-  Newtonsoft.Json.dll - 13.0.1.25517
-  CommandLine.dll - 2.8.0.0
-  log4net.dll - 2.0.13.0
-  Ionic.Zip.Reduced.dll was replaced with DotNetZip.dll - 1.6.0.0
-  ```
-- **Longer Replays** - The Replay API can now record up to 10 minutes unlike the
+#### API
+
+* **Longer Replays** - The Replay API can now record up to 10 minutes unlike the
  3 minutes it was able to record before. Please use this wisely as it can affect
  memory usage, CPU and the time which it takes Overwolf to create the replay 
  video file.
-- **getRunningGameInfo2** - _`getRunningGameInfo` is back and he's angrier than 
+* **getRunningGameInfo2** - _`getRunningGameInfo` is back and he's angrier than 
 ever_ - In this sequel, `overwolf.games.getRunningGameInfo2` no longer returns 
 just `null` when it's being called while there's no game running.
 Now it returns: 
@@ -36,19 +48,31 @@ Now it returns:
         success: true
     }
   ```
-- **Media Folder Access** - `overwolf.media.videos` namespace now has access to 
+* **Media Folder Access** - `overwolf.media.videos` namespace now has access to 
 previously chosen video folders (so if a user has changed the video folder, 
 you'll now also have access to the previous folder when using that API).
 
-**Bug Fixes:**
-- Fixed a bug that caused an app window to become invisible after resizing.
-- Fixed an issue that created an offset issue when using multiple monitors with
+#### Platform
+
+* **App Validations** - Each and every app that a user downloads now gets 
+  validated to make sure it includes only the content the App Creator has 
+  intended.
+* **Updated 3rd party DLLs** - We updated most of our 3rd party DLLs, The
+  following DLLs were updated to the following versions:
+  ```text
+  Newtonsoft.Json.dll - 13.0.1.25517
+  CommandLine.dll - 2.8.0.0
+  log4net.dll - 2.0.13.0
+  Ionic.Zip.Reduced.dll was replaced with DotNetZip.dll - 1.6.0.0
+  ```
+#### Bug fixes
+
+* Fixed a bug that caused an app window to become invisible after resizing.
+* Fixed an issue that created an offset issue when using multiple monitors with
   different DPIs.
-- Fixed a small memory leak with certain OpenGL games.
-- Uninstalling multiple apps from the Overwolf Uninstaller while Overwolf is
-closed now works as intended.
-- Fixed possible memory leak when using `overwolf.extensions.io.readTextFile`
-  or `overwolf.extensions.io.writeTextFile` for extremely large files.
+* Fixed a small memory leak with certain OpenGL games.
+* Uninstalling multiple apps from the Overwolf Uninstaller while Overwolf is closed now works as intended.
+* Fixed possible memory leak when using `overwolf.extensions.io.readTextFile` or `overwolf.extensions.io.writeTextFile` for extremely large files.
 
 ## Version 0.187 (Dec 2021)
 
@@ -81,10 +105,6 @@ closed now works as intended.
 * Links open in default browser - All links existing in the store now open in the users’ default browser.
 * Analytics - When installing apps from the store’s carousel we specify it was from the carousel in the InstalledApp analytic.
 
-#### Dev Console
-
-Soon.
-    
 #### Bug fixes
 
 * Fixed an issue where CEF wouldn’t receive the real window size in some cases when restoring native windows.
