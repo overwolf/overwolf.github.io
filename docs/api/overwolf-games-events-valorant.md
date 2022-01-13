@@ -109,6 +109,7 @@ Possible agent values:
 * "Rift_PC_C" = Astra
 * "Grenadier_PC_C" = KAY/O
 * "Deadeye_PC_C" = Chamber
+* "Sprinter_PC_C" = Neon
 
 ## `match_info`
 
