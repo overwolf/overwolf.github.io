@@ -14,6 +14,19 @@ Here you can find our [Developers Roadmap](https://trello.com/b/1V10E4IB/overwol
 * Note that iterations 189 to 190 were combined into a single iteration.
 * Note that the documentation is still in progress.
 
+#### Game events
+* [Halo Infinite](overwolf-games-events-halo-infinite)
+  * Update new events & info:
+    * local_player_stats
+    * scene
+    * match_start, match_end
+    * kill, death, assit
+
+ * [Minecraft](overwolf-games-events-minecraft)
+   * New info_update
+     * addon 
+   * Supported in minecraft versions 1.12 to 1.18 
+
 #### Docs
 
 * Soon.
