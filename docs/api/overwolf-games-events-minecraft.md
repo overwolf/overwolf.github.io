@@ -18,6 +18,7 @@ Please read the [overwolf.games.events](overwolf-games-events) documentation pag
 * [gep_internal](#gep_internal)
 * [game_info](#game_info)
 * [match_info](#match_info)
+* [mods](#mods)
 
 ## Game event status
 
@@ -34,7 +35,7 @@ The events are currently available only to the standard game. We do not support 
 * 1.12.2
 * 1.16 & 1.16.1 versions are NOT supported.
 * 1.16.2 - present.
-
+* addons supported from versions 1.8 to 1.18 
 
 ## `gep_internal`
 
@@ -52,7 +53,7 @@ Data Example:
 {"info":{"gep_internal":{"version_info":"{"local_version":"157.0.1","public_version":"157.0.1","is_updated":true}"}},"feature":"gep_internal"}
 ```
 
-## game_info
+## `game_info`
 
 ### Info Updates
 
@@ -78,7 +79,7 @@ Data Example:
 {"info":{"game_info":{"name":"OverwoldDeBest"}},"feature":"game_info"}
 ```
 
-## match_info
+## `match_info`
 
 ### Info Updates
 
@@ -202,4 +203,47 @@ Data Example:
 
 ```json
 {"events":[{"name":"chat","data":"§7overwolfqa§7: hello"}]}
+```
+## `game_info`
+
+### Info Updates
+
+key          | Category    | Values                    | Notes                 | Since GEP Ver. |
+------------ | ------------| ------------------------- | --------------------- | ------------- | 
+scene        | game_info   | The name of the current scene. |See [notes](#scene-note)|   153.0       |
+name         | game_info   | The name of the local player. |See [notes](#name-note)|   153.0       |
+
+#### *scene* note
+
+Data Example:
+
+```json
+{"info":{"game_info":{"scene":"Title Screen"}},"feature":"game_info"}
+{"info":{"game_info":{"scene":"Select World"}},"feature":"game_info"}
+```
+
+#### *name* note
+
+Data Example:
+
+```json
+{"info":{"game_info":{"name":"OverwoldDeBest"}},"feature":"game_info"}
+```
+
+## `mods`
+
+### Info Updates
+
+key          | Category    | Values                    | Notes                 | Since GEP Ver. |
+------------ | ------------| ------------------------- | --------------------- | ------------- | 
+addon_xxx        |  mods  | Addons list used by the player |See [notes](#addon_xxx-note)|   190.0       |
+
+#### *addon_xxx* note
+
+Supported from versions 1.8 to 1.18 
+
+Data Example:
+
+```json
+{"info":{"mods":{"addon_153":"{"name":"xpbook","display_name":"XP Tome","version":"2.1.3"}"}},"feature":"mods"}
 ```
