@@ -15,13 +15,13 @@ Here you can find our [Developers Roadmap](https://trello.com/b/1V10E4IB/overwol
 * Note that the documentation is still in progress.
 
 #### Game events
+
 * [Halo Infinite](overwolf-games-events-halo-infinite)
   * Update new events & info:
     * local_player_stats
     * scene
     * match_start, match_end
     * kill, death, assit
-
  * [Minecraft](overwolf-games-events-minecraft)
    * New info_update
      * addon 
@@ -31,17 +31,20 @@ Here you can find our [Developers Roadmap](https://trello.com/b/1V10E4IB/overwol
 
 * Soon.
 
-### API
+#### API
+
  * We are removing the following APIs that have been obsolete for a several  months:
    * `overwolf.settings.OverOnHotKeyChanged()`
    * `overwolf.settings.getHotKey()`
    * `overwolf.settings.setFpsSettings()`
    * `overwolf.settings.RegisterHotkey()`
 
-### Platform
+#### Platform
+
  * Added the "`path`" property to the File object when using the [HTML5 drag & drop feature.](https://developer.mozilla.org/en-US/docs/Web/API/DataTransfer/files)
 
-### Bug fixes
+#### Bug fixes
+
 * Fixed a bug where the Task Bar icon would show the shortcut icon instead of the window icon.
 * Fixed an issue with Auto highlights where `match_start_time` could be a negative value if the match closed before the highlight has finished capturing.
 * Toast notifications now also work when loading an extension as "unpacked".
