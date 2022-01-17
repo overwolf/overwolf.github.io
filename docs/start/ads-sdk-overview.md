@@ -15,11 +15,10 @@ See [here](how-to-test-your-app#ads) how to test ad implementation with a placeh
 
 If you have encountered problems with the advertising SDK, please let us know by contacting developers@overwolf.com, or just message us directly over the [Developers Slack](http://overwolfdevs.slack.com).
 
-## Sample app
-
+:::tip Sample app
+The ads-sample Demonstrates the usage in the Ads API, how to display an ad in an in-game window and desktop window, when to hide it, when to restore it, etc.
 In our [APIs sample apps repository](https://github.com/overwolf/apis-sample-apps), you can find and download a  sample app.
-
-The `ads-sample` Demonstrates the usage in the Ads API, how to display an ad in an in-game window and desktop window, when to hide it, when to restore it, etc.
+:::
 
 The following scenarios and principles are demonstrated in the Ads sample app:
 
