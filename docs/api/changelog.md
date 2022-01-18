@@ -24,8 +24,8 @@ Here you can find our [Developers Roadmap](https://trello.com/b/1V10E4IB/overwol
     * kill, death, assit
  * [Minecraft](overwolf-games-events-minecraft)
    * New info_update
-     * addons_xxx (mods) - supported from Minecraft versions 1.8 to 1.18 for both Forge and Fabric  
-   * Supported in minecraft versions 1.8 to 1.18 
+     * addons_xxx (mods)  
+   * supported from Minecraft versions 1.8 to 1.18 for both Forge and Fabric 
 * [Hunt: Showdown](overwolf-games-events-hunt-showdown)
   * New supported game
   * New game_info:
