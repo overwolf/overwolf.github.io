@@ -1,7 +1,7 @@
 ---
 id: overwolf-games-events-hunt-showdown
 title: Hunt Showdown Game Events
-sidebar_label: Hunt Showdown
+sidebar_label: Hunt: Showdown
 ---
 
 Please read the [overwolf.games.events](overwolf-games-events) documentation page to learn how to use Overwolf game events.
@@ -11,12 +11,12 @@ Please read the [overwolf.games.events](overwolf-games-events) documentation pag
 :::
 
 ## Sample Apps
-* [Football Manager 2022 game events sample app](https://github.com/overwolf/events-sample-apps)
+* [Hunt Showdown game events sample app](https://github.com/overwolf/events-sample-apps)
 
 ## Available Features
 
 * [gep_internal](#gep_internal)
-* [match_info](#match_info)
+* [game_info](#game_info)
 
 ## Game event status
 
@@ -40,29 +40,24 @@ Data Example:
 {"info":{"gep_internal":{"version_info":"{"local_version":"157.0.1","public_version":"157.0.1","is_updated":true}"}},"feature":"gep_internal"}
 ```
 
-## `match_info`
+## `game_info`
 
 ### Info Updates
 
 key          | Category    | Values                    | Notes                 | Since GEP Ver. |
 ------------ | ------------| ------------------------- | --------------------- | ------------- | 
-score | match_info | Numeric value for team 1/2 game score. |See [notes](#score-note) |   188.0       |
-notable | match_info | Any notable event (Yellow card / Red card / Goal) happening in-game, including player information & timestamp. |See [notes](#notable-note) |   188.0       |
+scene | game_info | The name of the current scene. |See [notes](#scene-note) |   190.0       |
 
-#### *score* note
-
-Data Example:
-
-```json
-{"info":{"match_info":{"score","value":"{"team1" : 1,"team2" : 3}"}},"feature":"match_info"}
-```
-
-#### *notable* note
+#### *scene* note
 
 Data Example:
 
 ```json
-{"info":{"match_info":{"key":"notable","value":"{"player" : "D. Branković","action" : "YELLOW_CARD","time" : "17'"}"}},"feature":"match_info"}
-{"info":{"match_info":{"key":"notable","value":"{"player" : "D. Branković","action" : "YELLOW_CARD","time" : "17'"},{"player" : "M. Jolović","action" : "YELLOW_CARD","time" : "29'"},{"player" : "N. Glišić","action" : "GOAL","time" : "47'"},{"player" : "N. Glišić","action" : "GOAL","time" : "58'"}},"feature":"match_info"}"}
-{"info":{"match_info":{"key":"notable","value":"{"player" : "D. Branković","action" : "YELLOW_CARD","time" : "17'"},{"player" : "M. Jolović","action" : "YELLOW_CARD","time" : "29'"},{"player" : "N. Glišić","action" : "ASSIST","time" : "47'"},{"player" : "N. Glišić","action" : "ASSIST","time" : "58'"}},"feature":"match_info"}"}
+{"feature":"game_info","category":"game_info","key":"scene","value":"Lobby"}
 ```
+List of possible values:
+* OfflineLobby
+* Lobby
+* Leaving
+* Loading
+* Game
