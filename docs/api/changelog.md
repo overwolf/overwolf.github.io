@@ -42,6 +42,7 @@ Here you can find our [Developers Roadmap](https://trello.com/b/1V10E4IB/overwol
 #### Platform
 
  * Added the "`path`" property to the File object when using the [HTML5 drag & drop feature.](https://developer.mozilla.org/en-US/docs/Web/API/DataTransfer/files)
+ * When launching games, in-game app windows now hide themselves for games that aren't defined in the `game_targeting` property in the `manifest.json` file.
 
 #### Bug fixes
 
