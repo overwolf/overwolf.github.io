@@ -21,7 +21,7 @@ Here you can find our [Developers Roadmap](https://trello.com/b/1V10E4IB/overwol
     * local_player_stats
     * scene
     * match_start, match_end
-    * kill, death, assit
+    * kill, death, assist
  * [Minecraft](overwolf-games-events-minecraft)
    * New info_update
      * addon 
