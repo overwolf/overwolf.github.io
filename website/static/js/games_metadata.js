@@ -243,5 +243,12 @@ const GamesMetadata = {
     iconUrl: "/docs/assets/games-logos/halo-infinite.png",
     iconLargeUrl: "/docs/assets/games-logos/large/halo-infinite.png",
     name: "Halo Infinite"
+  },
+  21328: {
+    id: 21328,
+    path: "/docs/status/hunt-showdown",
+    iconUrl: "/docs/assets/games-logos/halo-infinite.png",
+    iconLargeUrl: "/docs/assets/games-logos/large/halo-infinite.png",
+    name: "Hunt Showdown"
   }
 }
