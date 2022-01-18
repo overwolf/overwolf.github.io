@@ -35,7 +35,7 @@ The events are currently available only to the standard game. We do not support 
 * 1.12.2
 * 1.16 & 1.16.1 versions are NOT supported.
 * 1.16.2 - present.
-* addons supported from versions 1.8 to 1.18 
+* addons (mods) supported from Minecraft versions 1.8 to 1.18 for both Forge and Fabric 
 
 ## `gep_internal`
 
@@ -240,7 +240,7 @@ addon_xxx        |  mods  | Addons list used by the player |See [notes](#addon_x
 
 #### *addon_xxx* note
 
-Supported from versions 1.8 to 1.18 
+* addons (mods) supported from Minecraft versions 1.8 to 1.18 for both Forge and Fabric 
 
 Data Example:
 
