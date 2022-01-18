@@ -29,7 +29,6 @@ In addition, the [simple I/O plugin](../topics/simple-io-plugin) offers several 
 * [overwolf.io.enums.eEncoding](#eencoding-enum) enum
 * [overwolf.io.enums.encoding](#encoding-enum) enum
 * [overwolf.io.enums.fileListenerState](#filelistenerstate-enum) enum
-* [overwolf.io.enums.fileListenerState](#filelistenerstate-enum) enum
 * [overwolf.io.ReadFileOptions](#readfileoptions-object) Object
 * [overwolf.io.ListenFileOptions](#listenfileoptions-object) Object
 * [overwolf.io.DirResult](#dirresult-object) Object
@@ -373,6 +372,7 @@ Parameter        | Type                          | Description                  
 ---------------- | ------------------------------| ---------------------------------- |
 success          | boolean                       | Inherited from the "Result" Object |
 error            | string                        | Inherited from the "Result" Object |
+state            | string                        | current callback state. valid only when 'success' is true [overwolf.io.enums.fileListenerState](#filelistenerstate-enum)|
 content          | string                        | string with the taraget line content   |
 
 #### Example data
