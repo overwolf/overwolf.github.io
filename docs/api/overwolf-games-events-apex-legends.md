@@ -53,7 +53,7 @@ Data Example:
 {"info":{"gep_internal":{"version_info":"{"local_version":"157.0.1","public_version":"157.0.1","is_updated":true}"}},"feature":"gep_internal"}
 ```
 
-## me
+## `me`
 
 ### Info Updates
 
@@ -78,7 +78,7 @@ Data Example:
 {"info":{"me":{"ultimate_cooldown":"{"ultimate_cooldown":"20"}"}},"feature":"me"}
 ```
 
-## match_info
+## `match_info`
 
 ### Info Updates
 
@@ -114,7 +114,7 @@ Data Example:
 {"info":{"match_info":{"tabs":"{"kills":1,"spectators":0,"teams":11,"players":30,"damage":394,"cash":0}"}},"feature":"match_info"}
 ```
 
-## match_state
+## `match_state`
 
 ### Info Updates
 
@@ -151,7 +151,7 @@ Data Example:
 Currently we have a special case where if someone in your team got a yellow knockdown shield (the one that allows you to self-revive), and your entire team was knocked out, the match end will still fire despite no one reaching a death-state.
 This is a very rare case that does not commonly happen in the game, however we're still working on fixing it.
 
-## team
+## `team`
 
 ### Info Updates
 
@@ -196,7 +196,7 @@ As you can see, this object includes:
 * Legend name
 * Jumpmaster - Bool True/False
 
-## roster
+## `roster`
 
 ### Info Updates
 
@@ -225,7 +225,7 @@ Possible platform values:
 * `"platform_hw":2,"platform_sw":7` = PC/Steam
 * `"platform_hw":1,"platform_sw":1` = PS4
 
-## location
+## `location`
 
 ### Info Updates
 
@@ -246,7 +246,7 @@ location  | match_info | See example below  |             |  130.0        |
 {"info":{"match_info":{"location":"{"x":"93","y":"305","z":"49"}"}},"feature":"location"}
 ```
 
-## rank
+## `rank`
 
 ### Info Updates
 
@@ -263,7 +263,7 @@ Data Example:
 {"info":{"match_info":{"victory":"true"}},"feature":"rank"}
 ```
 
-## match_summary
+## `match_summary`
 
 ### Info Updates
 
@@ -284,7 +284,7 @@ After a match, this will return:
 {"info":{"match_info":{"match_summary":"{"rank":"12","teams":"20","squadKills":"5"}"}},"feature":"match_summary"}
 ```
 
-## damage
+## `damage`
 
 ### Info Updates
 
@@ -324,7 +324,7 @@ The following properties are provided:
 {"targetName": "Fortiziak","damageAmount": "25.000000","armor": "true","headshot": "true"}
 ```
 
-## inventory
+## `inventory`
 
 ### Info Updates
 
@@ -350,7 +350,7 @@ Data Example:
 {"info":{"me":{"inUse":"{"inUse":"R-99"}"}},"feature":"inventory"}
 ```
 
-## kill
+## `kill`
 
 ### Events
 
@@ -387,7 +387,7 @@ Data Example:
 {"events":[{"name":"assist","data":"{  "victimName": "kazikov.qwerty",  "type": "elimination"}"}]}
 ```
 
-## revive
+## `revive`
 
 ### Events
 
@@ -412,7 +412,7 @@ Data Example:
 {"events":[{"name":"respawn","data":null}]}
 ```
 
-## death
+## `death`
 
 ### Events
 
@@ -437,7 +437,7 @@ Data Example:
 {"events":[{"name":"death","data":null}]}
 ```
 
-## kill_feed
+## `kill_feed`
 
 ### Events
 
