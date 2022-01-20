@@ -84,29 +84,31 @@ Note that the [RunningGameInfo object](overwolf-games#runninggameinfo-object) al
 | 11 | Football Manager 2021 | 21666 |
 | 12 | Football Manager 2022 | 21856 |
 | 13 | Fortnite | 21216 |
-| 14 | Hearthstone: Heroes of Warcraft | 9898 |
-| 15 | Heroes of the Storm | 10624 |
-| 16 | League of Legends | 5426 |
-| 17 | Legends of Runeterra | 21620 |
-| 18 | Magic the Gathering | 21308 |
-| 19 | Minecraft | 8032 |
-| 20 | New World | 21816 |
-| 21 | Overwatch | 10844 |
-| 22 | Path of Exile | 7212 |
-| 23 | PUBG | 10906 |
-| 24 | PUBG lite | 21598 |
-| 25 | Rocket League | 10798 |
-| 26 | Smite | 8134 |
-| 27 | Splitgate | 21404 |
-| 28 | StarCraft II | 5855 |
-| 29 | Tom Clancy’s Rainbow Six: Siege | 10826 |
-| 30 | Valheim | 21668 |
-| 31 | VALORANT | 21640 |
-| 32 | Warface | 7784 |
-| 33 | Warframe | 8954 |
-| 34 | World Of Tanks | 6365 |
-| 35 | World of Warcraft | 765 |
-| 36 | World of Warships | 10746 |
+| 14 | Halo Infinite | 21854 |
+| 15 | Hearthstone: Heroes of Warcraft | 9898 |
+| 16 | Heroes of the Storm | 10624 |
+| 17 | Hunt: Showdown | 21328 |
+| 18 | League of Legends | 5426 |
+| 19 | Legends of Runeterra | 21620 |
+| 20 | Magic the Gathering | 21308 |
+| 21 | Minecraft | 8032 |
+| 22 | New World | 21816 |
+| 23 | Overwatch | 10844 |
+| 24 | Path of Exile | 7212 |
+| 25 | PUBG | 10906 |
+| 26 | PUBG lite | 21598 |
+| 27 | Rocket League | 10798 |
+| 28 | Smite | 8134 |
+| 29 | Splitgate | 21404 |
+| 30 | StarCraft II | 5855 |
+| 31 | Tom Clancy’s Rainbow Six: Siege | 10826 |
+| 32 | Valheim | 21668 |
+| 33 | VALORANT | 21640 |
+| 34 | Warface | 7784 |
+| 35 | Warframe | 8954 |
+| 36 | World Of Tanks | 6365 |
+| 37 | World of Warcraft | 765 |
+| 38 | World of Warships | 10746 |
 
 </details>
 
