@@ -16,7 +16,7 @@ See [here](how-to-test-your-app#ads) how to test ad implementation with a placeh
 If you have encountered problems with the advertising SDK, please let us know by contacting developers@overwolf.com, or just message us directly over the [Developers Slack](http://overwolfdevs.slack.com).
 
 :::tip Sample app
-The ads-sample Demonstrates the usage in the Ads API, how to display an ad in an in-game window and desktop window, when to hide it, when to restore it, etc.
+The ads-sample demonstrates the usage in the ads API, how to display an ad in an in-game window and desktop window, when to hide it, when to restore it, etc.
 In our [APIs sample apps repository](https://github.com/overwolf/apis-sample-apps), you can find and download a  sample app.
 :::
 
@@ -32,15 +32,15 @@ The following scenarios and principles are demonstrated in the Ads sample app:
   * No menus or pop-up windows on top of the ad.
   * Ad placement dimensions are being kept while resizing the app window. 
 * Clickable:
-  * Ads are clickable, and clicking on an Ad will open the pre-defined browser (OW or user browser, as set in the manifest).
+  * Ads are clickable, and clicking on an ad will open the pre-defined browser (OW or user browser, as set in the manifest).
 * Focus:
   * There is no ad refresh when losing focus (clicking on a different spot in the app, the game, or outside the app).
-  * When the game gain focus, the Ad is not loaded if the app window was previously minimized and not restored.
+  * When the game gain focus, the ad is not loaded if the app window was previously minimized and not restored.
 * DPI: 
-  * The app looks good, and ads dimensions are not cut on 125% and 150% and resolutions.
+  * The app proportions, and ads dimensions are not cut on DPI 125% / 150% and resolutions.
 * Minimize / Restore / Closing:
   * Ad is removed when the user presses Win Key + D and refreshes on restore.
-  * Ad is removed when the user minimized the app through the "_" button and refreshed on restore.
+  * Ad is removed when the user minimized the app through the app minimize "_" button and refreshed on restore.
   * Ad is removed when the user minimized the app through the in-game hotkeys (if defined) and refreshed on restore.  Note that on the current version of this sample app, no hotkeys are implemented yet.
   * Ad is removed, then the user closes the app.
 
