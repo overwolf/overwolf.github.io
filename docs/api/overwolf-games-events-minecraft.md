@@ -87,7 +87,7 @@ key          | Category    | Values                    | Notes                 |
 ------------ | ------------| ------------------------- | --------------------- | ------------- | 
 server       | match_info  | The full id of the server. |See [notes](#server-note)|   153.0       |
 general_stats| match_info  | All of the current general statistics. |See [notes](#general_stats-note)|   153.0       |
-item_stats   | match_info  | All of the current item statistics. |See [notes](#item_stats-note)|   153.0       |
+items_stats   | match_info  | All of the current item statistics. |See [notes](#items_stats-note)|   153.0       |
 mobs_stats   | match_info  | All of the current mob statistics. |See [notes](#mobs_stats-note)|   153.0       |
 location     | match_info  | Current player's location in the game. |See [notes](#location-note)|   157.0       |
 facing       | match_info  | The current direction the player is facing. |See [notes](#facing-note)|   157.0       |
@@ -139,7 +139,7 @@ Data Example:
                 "feature":"match_info"}
 ```
 
-#### *item_stats* note
+#### *items_stats* note
 
 Data Example:
 
