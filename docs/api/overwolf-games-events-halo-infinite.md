@@ -64,6 +64,7 @@ List of possible values:
 * lobby
 * match_start_countdown
 * loading
+* ingame
 
 ## `match_info`
 
