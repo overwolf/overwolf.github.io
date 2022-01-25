@@ -22,6 +22,7 @@ Here you can find our [Developers Roadmap](https://trello.com/b/1V10E4IB/overwol
     * scene
     * match_start, match_end
     * kill, death, assit
+    * roster
  * [Minecraft](overwolf-games-events-minecraft)
    * New info_update
      * addons_xxx (mods)  
