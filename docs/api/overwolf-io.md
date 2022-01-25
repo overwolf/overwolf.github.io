@@ -372,7 +372,7 @@ Parameter        | Type                          | Description                  
 ---------------- | ------------------------------| ---------------------------------- |
 success          | boolean                       | Inherited from the "Result" Object |
 error            | string                        | Inherited from the "Result" Object |
-state            | string                        | Current callback state. Only valid only when "success" is true [overwolf.io.enums.fileListenerState](#filelistenerstate-enum)|v
+state            | string                        | Current callback state. Only valid only when "success" is true [overwolf.io.enums.fileListenerState](#filelistenerstate-enum) |
 content          | string                        | string with the taraget line content   |
 
 #### Example data
