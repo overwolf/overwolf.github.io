@@ -21,6 +21,7 @@ Please read the [overwolf.games.events](overwolf-games-events) documentation pag
 * [kill](#kill)
 * [assist](#assist)
 * [death](#death)
+* [roster](#roster)
 
 ## Game event status
 
@@ -155,4 +156,31 @@ Data Example:
 
 ```json
 {"events":[{"name":"death","data":"1"}]}
+```
+
+## `roster`
+
+### Info Updates
+key       | Category        | Values                                         | Notes                                                   | Since GEP Ver. |
+----------| ----------------| -----------------------------------------------| ------------------------------------------------------- | ------------- |
+roster_XX        | match_info   | This feature provides the entire list of players. See [notes below](#roster_xx-notes)  |    | 190.0   |
+
+#### `roster_XX` notes
+
+This feature provides the entire list of players.
+
+```json
+{"feature":"match_info","category":"match_info","key":"roster_0","value":{"name":"Cocotte7425","team":1,"local":false}}
+```
+
+As you can see, this object includes:
+* **name** – Player's name
+* **team** – The team of the player.
+* **local** - “true” when the player is the local player that play, "false” when it's another player in the game.
+ 
+When a player “leaves” the match the roster will be updated with the player in the match
+When the match end, the roster value is returned empty, example: 
+
+```json
+{"feature":"match_info","category":"match_info","key":"roster_0","value":{}}
 ```
