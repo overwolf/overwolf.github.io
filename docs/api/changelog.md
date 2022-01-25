@@ -38,7 +38,7 @@ Here you can find our [Developers Roadmap](https://trello.com/b/1V10E4IB/overwol
 #### API
 
  * We are removing the following APIs that have been obsolete for a several  months:
-   * `overwolf.settings.OverOnHotKeyChanged()`
+   * `overwolf.settings.OnHotKeyChanged()`
    * `overwolf.settings.getHotKey()`
    * `overwolf.settings.setFpsSettings()`
    * `overwolf.settings.RegisterHotkey()`
