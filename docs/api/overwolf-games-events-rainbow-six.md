@@ -329,7 +329,7 @@ Backslashes omitted for legibility.
 As you can see, this object includes:
 
 * name - player's name <br>
-Important note - "name" is the player's username or, if the player use a nickname set in the privacy menu in the game, "name" will show his nickname and not his username
+Important note - "name" is the player's username or nickname if enabled
 
 * team - Blue/Orange/Spectator
 
@@ -382,13 +382,12 @@ account_id_log   | me          | Local player's account ID information and priva
 
 #### *name* note
 
-This update is currently not available. You may workaround this by finding the local player via the roster update.
-
 Data Example:
 
 ```json
 {"info":{"me":{"name":"WolfOnTop.top"}},"feature":"me"}
 ```
+Important note - "name" is the player's username or nickname if enabled
 
 #### *account_id* note
 
@@ -406,9 +405,8 @@ Data Example:
 {"info":{"me":{"account_id_log":"{"message":{"params":{"clearance_level":"50","nickname":"mrtest123","nickname_enabled":"1","sender":"7e909880-5b34-4757-b826-31614ba76186","two_factor_auth_enabled":"0"},"type":3}}"}},"feature":"me"}
 
 Privacy mode:
-2 new fields are added to account_id_log:
-* nickname_enable - 0 if the local player disable nickname, 1 if the local player enbale it
-* nickname - if nickname_enable is set to 1 nickname will show the player nickname, if 0 the value will be an empty string 
+* nickname_enabled - 0/1 if nickname is disabled/enabled
+* nickname - if enabled will show the nickname else the username
 
 ```
 
