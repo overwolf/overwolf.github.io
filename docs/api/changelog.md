@@ -31,6 +31,8 @@ Here you can find our [Developers Roadmap](https://trello.com/b/1V10E4IB/overwol
   * New supported game
   * New game_info:
     * scene
+* [Rainbow Six Siege](overwolf-games-events-rainbow-six)
+  * Add new privacy information about the local player - [event "me"](overwolf-games-events-rainbow-six#me)
 
 #### Docs
 
