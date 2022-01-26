@@ -403,12 +403,11 @@ Data Example:
 
 ```json
 {"info":{"me":{"account_id_log":"{"message":{"params":{"clearance_level":"50","nickname":"mrtest123","nickname_enabled":"1","sender":"7e909880-5b34-4757-b826-31614ba76186","two_factor_auth_enabled":"0"},"type":3}}"}},"feature":"me"}
-
+```
 Privacy mode:
 * nickname_enabled - 0/1 if nickname is disabled/enabled
 * nickname - if enabled will show the nickname else the username
 
-```
 
 ## `defuser`
 
