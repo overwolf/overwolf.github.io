@@ -328,7 +328,9 @@ Backslashes omitted for legibility.
 
 As you can see, this object includes:
 
-* name - player's name
+* name - player's name <br>
+Important note - "name" is the player's username or, if the player use a nickname set in the privacy menu in the game, "name" will show his nickname and not his username
+
 * team - Blue/Orange/Spectator
 
 As of version 159, you may detect the local player as a spectator when creating a custom match (Example: `{"info":{"player":{"team":"Spectator"}},"feature":"roster"}`).
@@ -376,7 +378,7 @@ key          | Category    | Values                            | Notes          
 ------------ | ------------| --------------------------------- | --------------------- | ------------- |
 name         | me          | Local player's in-game name.      | See [notes](#name-note)     |   148.0  |
 account_id   | me          | Local player's account ID.        |See [notes](#account_id-note)|   148.0  |
-account_id_log   | me          | Local player's account ID information.        |See [notes](#account_id_log-note)|   186.0  |
+account_id_log   | me          | Local player's account ID information and privacy information       |See [notes](#account_id_log-note)|   186.0  |
 
 #### *name* note
 
@@ -401,7 +403,13 @@ Data Example:
 Data Example:
 
 ```json
-{"info":{"me":{"account_id_log":"{"message":{"params":{"clearance_level":"48","sender":"1b810848-34df-4834-aa26-61c838059a37","two_factor_auth_enabled":"0"},"type":3}}"}},"feature":"me"}
+{"info":{"me":{"account_id_log":"{"message":{"params":{"clearance_level":"50","nickname":"mrtest123","nickname_enabled":"1","sender":"7e909880-5b34-4757-b826-31614ba76186","two_factor_auth_enabled":"0"},"type":3}}"}},"feature":"me"}
+
+Privacy mode:
+2 new fields are added to account_id_log:
+* nickname_enable - 0 if the local player disable nickname, 1 if the local player enbale it
+* nickname - if nickname_enable is set to 1 nickname will show the player nickname, if 0 the value will be an empty string 
+
 ```
 
 ## `defuser`
