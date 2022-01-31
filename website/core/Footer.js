@@ -76,7 +76,7 @@ class Footer extends React.Component {
         <div className="site-footer-social">
         <div className="site-footer-social-inner">
           <div className="copyright">
-            <span>Overwolf 2021</span>
+            <span>Overwolf 2022</span>
             <ul className="social-links">
             <li><a href="https://discord.gg/7256qS2" title="Discord" target="_blank">
               <svg viewBox="0 0 24 24">
