@@ -1,3 +1,9 @@
+---
+id: app-marketing-promotions
+title: Long-term Marketing Promotion
+sidebar_label: Long-term Marketing Promotion
+---
+
 ## Promotion Basics
 Once your app has been adopted well by the community, and you see strong indicators of product-market fit (mainly good retention), it’s a good time to get some new blood to join the fun! Most creators promote their apps within their game communities and relevant social media channels independently, and that’s fantastic and quite effective. However, when an extra push is needed - our talented marketing team is dedicated to helping you grow.
 
