@@ -302,8 +302,9 @@ callback    | [Result:ClientUpdateStatusResult](#clientupdateresult-object)  | A
   overwolf
   .extensions
   .launch("bebanicmemnmpcomjjlnjkeionhgkkdgfdocgdam","location=about#check_for_updates;
-  ```
+  
   Please note that if Overwolf updates while it is in-game, it will not show in-game until the game has been restarted.
+  ```
 
 
 ## checkForClientUpdates(callback)
