@@ -26,6 +26,7 @@ Here you can find our [Developers Roadmap](https://trello.com/b/1V10E4IB/overwol
  * [Minecraft](overwolf-games-events-minecraft)
    * New info_update
      * addons_xxx (mods)  
+     * counters - ping
    * supported from Minecraft versions 1.8 to 1.18 for both Forge and Fabric 
 * [Hunt: Showdown](overwolf-games-events-hunt-showdown)
   * New supported game
