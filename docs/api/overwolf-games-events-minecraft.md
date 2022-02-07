@@ -19,6 +19,7 @@ Please read the [overwolf.games.events](overwolf-games-events) documentation pag
 * [game_info](#game_info)
 * [match_info](#match_info)
 * [mods](#mods)
+* [counters](#counters)
 
 ## Game event status
 
@@ -246,4 +247,19 @@ Data Example:
 
 ```json
 {"info":{"mods":{"addon_153":"{"name":"xpbook","display_name":"XP Tome","version":"2.1.3"}"}},"feature":"mods"}
+```
+## `counters`
+
+### Info Updates
+
+key               | Category    | Values                    | Notes                 | Since GEP Ver. |
+----------------- | ------------| ------------------------- | --------------------- | ------------- |
+ping             | performance  |Latency changes of the local player in the current game.	| See [notes](#ping-note)|  191.0       |
+
+#### *ping* note
+
+Data Example:
+
+```json
+{"feature":"counters","category":"performance","key":"ping","value":"157"}
 ```
