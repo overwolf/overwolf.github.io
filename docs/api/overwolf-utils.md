@@ -297,14 +297,14 @@ callback    | [Result:ClientUpdateStatusResult](#clientupdateresult-object)  | A
 
 :::important
  If you choose to inform the user that an update is available. you can use the following snippet to open the Overwolf Settings and initiliaze an update:
-:::
+
   ```javascript
   overwolf
   .extensions
   .launch("bebanicmemnmpcomjjlnjkeionhgkkdgfdocgdam","location=about#check_for_updates;
   
   Please note that if Overwolf updates while it is in-game, it will not show in-game until the game has been restarted.
-  ```
+  :::
 
 
 ## checkForClientUpdates(callback)
