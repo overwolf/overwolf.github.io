@@ -34,7 +34,7 @@ Common use cases:
 * [overwolf.utils.openStore()](#openstoreparam)
 * [overwolf.utils.isMouseLeftButtonPressed()](#ismouseleftbuttonpressedcallback)
 * [overwolf.utils.uploadClientLogs()](#uploadclientlogscallback)
-
+* [overwolf.utils.checkForClientUpdates()](#uploadclientlogscallback)
 ## Types Reference
 
 * [overwolf.utils.enums.eStorePage](#estorepage-enum) enum
@@ -53,6 +53,7 @@ Common use cases:
 * [overwolf.utils.IsTouchDeviceResult](#istouchdeviceresult-object) Object
 * [overwolf.utils.GetPeripheralsResult](#getperipheralsresult-object) Object
 * [overwolf.utils.IsMouseLeftButtonPressedResult](#ismouseleftbuttonpressedresult-object) Object
+* [overwolf.utils.Result:ClientUpdateStatusResult](#clientupdateresult-object) Object
 
 ## placeOnClipboard(data)
 #### Version added: 0.80
@@ -288,13 +289,30 @@ callback  |  ([Result: IsMouseLeftButtonPressedResult](#ismouseleftbuttonpressed
 
 > Upload Overwolf client logs to Overwolf servers for the current calling app
 
-:::warning
-This is an experimental function and shouldn’t be used without Overwolf’s permission
+
+
+Parameter   | Type     | Description                                 |
+----------- | ---------| --------------------------------------------|
+callback    | [Result:ClientUpdateStatusResult](#clientupdateresult-object)  | A callback function which will be called with the status of the request |
+
+:::important
+ If you choose to inform the user that an update is available. you can use the following snippet to open the Overwolf Settings and initiliaze an update:
+
+  ```javascript
+  overwolf.extensions.launch("bebanicmemnmpcomjjlnjkeionhgkkdgfdocgdam","location=about#check_for_updates")
+  ```
+  Please note that if Overwolf updates while it is in-game, it will not show in-game until the game has been restarted.
 :::
+
+## checkForClientUpdates(callback)
+#### Version added: 0.111
+
+> Checks whether an Overwolf client update is available.
 
 Parameter   | Type     | Description                                 |
 ----------- | ---------| --------------------------------------------|
 callback    | (Result) => void   | A callback function which will be called with the status of the request |
+
 
 ## eStorePage enum
 
@@ -711,3 +729,16 @@ Parameter          | Type     | Description                                 |
 *success*          | boolean  | inherited from the "Result" Object          |
 *error*            | string   | inherited from the "Result" Object          |
 pressed            | boolean  |                              |
+
+
+## ClientUpdateResult Object
+
+Parameter          | Type     | Description                                 |
+-------------------| ---------| ------------------------------------------- |
+*success*          | boolean  | inherited from the "Result" Object          |
+*error*            | string   | Only returns in cases where "success" is false|
+channel            | string   | The channel the user is currently on         |
+currentVersion     | string   | The Overwolf version currently installed |
+hasUpdate          | boolean  | True if there's an update available |   
+newVersion         | string   | The new available version, null if no update is available.|
+updatesDisabled    | bool     | In cases where the user has disabled their Overwolf updates|
