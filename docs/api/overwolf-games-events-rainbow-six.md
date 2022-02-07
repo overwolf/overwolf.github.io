@@ -366,9 +366,31 @@ headshot | null | Local player killed an enemy with a headshot |   |   123.0    
 
 Event  | Event Data                                       |               Fired When                  | Notes     | Since GEP Ver. |
 -------| -------------------------------------------------| ----------------------------------------- | --------- | --------------|
-knockedout | null | Local player’s hp reaches 20. | See [notes](#death-notes) |   123.0     |
-death | null |  Local player dies |                  |   123.0     |
-killer | Killer name</br>`{"name":"killer","data":"Pickyuser18857"}` |  The local player was killed by an enemy |                  |   123.0     |
+knockedout | null | Local player is knockedout | See [notes](#knockedout-notes) |   123.0     |
+death | null |  Local player dies |  See [notes](#death-notes) |   123.0     |
+killer | Killer name|  The local player was killed by an enemy | See [notes](#killer-notes)                 |   123.0     |
+
+#### *knockedout* note
+
+Data Example:
+
+```json
+{"name":"knockedout","data":""}
+```
+#### *death* note
+
+Data Example:
+
+```json
+{"name":"death","data":""}
+```
+#### *killer* note
+
+Data Example:
+
+```json
+{"name":"killer","data":"Pickyuser18857"}
+```
 
 ## `me`
 
