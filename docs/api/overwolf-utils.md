@@ -295,6 +295,10 @@ Parameter   | Type     | Description                                 |
 ----------- | ---------| --------------------------------------------|
 callback    | [Result:ClientUpdateStatusResult](#clientupdateresult-object)  | A callback function which will be called with the status of the request |
 
+
+## checkForClientUpdates(callback)
+#### Version added: 0.111
+
 :::important
  If you choose to inform the user that an update is available. you can use the following snippet to open the Overwolf Settings and initiliaze an update:
 
@@ -306,10 +310,6 @@ callback    | [Result:ClientUpdateStatusResult](#clientupdateresult-object)  | A
   ```
   Please note that if Overwolf updates while it is in-game, it will not show in-game until the game has been restarted.
   :::
-
-
-## checkForClientUpdates(callback)
-#### Version added: 0.111
 
 > Checks whether an Overwolf client update is available.
 
