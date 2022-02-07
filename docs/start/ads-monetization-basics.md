@@ -60,7 +60,7 @@ To get a more general idea, we follow the industry Standards, Guidelines & Best 
 
 ### Ad size
 
-Video Players come in different sizes. Our recommendation is to use the strandard 400×300 size, which should have higher fill rates as well as higher CPM.
+Video Players come in different sizes. Our recommendation is to use the standard 400×300 size, which should have higher fill rates as well as higher CPM.
 
 ### Demographics
 
