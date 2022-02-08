@@ -52,7 +52,7 @@ Data Example:
 
 key          | Category    | Values                    | Notes                 | Since GEP Ver. |
 ------------ | ------------| ------------------------- | --------------------- | ------------- |
-phase | game_info   | The current game scene/phase. See [notes](#phase-notes) below |                       |   123.0  |
+phase | game_info   | The current game scene/phase. |   See [notes](#phase-notes)|   123.0  |
 
 #### `phase` notes
 
@@ -76,21 +76,21 @@ Example:
 key          | Category    | Values                    | Notes                 | Since GEP Ver. |
 --------------- | -----------| ------------------------------------------------------------------------------------ | ------------------------------------ | ------------- |
 pseudo_match_id | match_info | The current match’s ID code. Example:</br> `0c0ea3df-97ea-4d3a-b1f6-f8e34042251f`  |  This is an internal Overwolf-generated code. |   130.0 |
-game_mode | match_info   | The current type of game mode. |See [notes](#game_mode-note) below for possible values|   134.0  |
-game_mode_log | match_info   | Game mode information. |See [notes](#game_mode_log-note) below for possible values|   186.0  |
-match_id | match_info   | The current match's ID. |See [notes](#match_id-note) below for possible values|   162.1  |
-map_id | match_info   | The currently played map. |See [notes](#map_id-note) below for possible values|   162.1  |
-round_outcome_type | match_info   | The type of win/loss of the last-played round. |See [notes](#round_outcome_type-note) below for possible values|   165.0  |
-general_log | match_info   | General information regarding current created-match. |See [notes](#general_log-note) below for possible values|   186.0  |
-match_start_log | match_info   | Information regarding start of the match. |See [notes](#match_start_log-note) below for possible values|   186.0  |
-round_start_log | match_info   | Information regarding start of the round. |See [notes](#round_start_log-note) below for possible values|   186.0  |
-round_end_log | match_info   | Information regarding end of the round. |See [notes](#round_end_log-note) below for possible values|   186.0  |
-move_log | match_info   | Information regarding movement. |See [notes](#move_log-note) below for possible values|   186.0  |
-score_log | match_info   | Information regarding score. |See [notes](#score_log-note) below for possible values|   186.0  |
-kill_log | match_info   | Information regarding kills. |See [notes](#kill_log-note) below for possible values|   186.0  |
-ko_log | match_info   | Information regarding knockout. |See [notes](#ko_log-note) below for possible values|   186.0  |
-death_log | match_info   | Information regarding death. |See [notes](#death_log-note) below for possible values|   186.0  |
-match_end_log | match_info   | Information regarding end of match. |See [notes](#match_end_log-note) below for possible values|   186.0  |
+game_mode | match_info   | The current type of game mode. |See [notes](#game_mode-note) for possible values|   134.0  |
+game_mode_log | match_info   | Game mode information. |See [notes](#game_mode_log-note) for possible values|   186.0  |
+match_id | match_info   | The current match's ID. |See [notes](#match_id-note) for possible values|   162.1  |
+map_id | match_info   | The currently played map. |See [notes](#map_id-note) for possible values|   162.1  |
+round_outcome_type | match_info   | The type of win/loss of the last-played round. |See [notes](#round_outcome_type-note) for possible values|   165.0  |
+general_log | match_info   | General information regarding current created-match. |See [notes](#general_log-note) for possible values|   186.0  |
+match_start_log | match_info   | Information regarding start of the match. |See [notes](#match_start_log-note) for possible values|   186.0  |
+round_start_log | match_info   | Information regarding start of the round. |See [notes](#round_start_log-note) for possible values|   186.0  |
+round_end_log | match_info   | Information regarding end of the round. |See [notes](#round_end_log-note) for possible values|   186.0  |
+move_log | match_info   | Information regarding movement. |See [notes](#move_log-note) for possible values|   186.0  |
+score_log | match_info   | Information regarding score. |See [notes](#score_log-note) for possible values|   186.0  |
+kill_log | match_info   | Information regarding kills. |See [notes](#kill_log-note) for possible values|   186.0  |
+ko_log | match_info   | Information regarding knockout. |See [notes](#ko_log-note) for possible values|   186.0  |
+death_log | match_info   | Information regarding death. |See [notes](#death_log-note) for possible values|   186.0  |
+match_end_log | match_info   | Information regarding end of match. |See [notes](#match_end_log-note) for possible values|   186.0  |
 
 #### *game_mode* note
 
@@ -291,13 +291,14 @@ matchOutcome | victory / defeat</br>`{"name":"matchOutcome","data":"defeat"}` | 
 
 key          | Category    | Values                    | Notes                 | Since GEP Ver. |
 --------------- | -----------| ------------------------------------------------------------------------------------ | ------------------------------------ | ------------- |
-roster_XX | players | Provides info for the currently active players (10 players). See [notes](#roster_xx-notes) below |   |   123.0 |
+roster_XX | players | Provides info for the currently active players (10 players). |  See [notes](#roster_xx-notes) |   123.0 |
 team | players | Player’s current team – Orange/Blue/Spectator  |   |   123.0 |
 health | players | Player’s current health – (0-100) or `null`</br>`{"player":{"health":"70"}}` |   |   123.0 |
 score | players | Player’s current score or `null`</br>`{"player":{"score":"335"}}` | See [notes](#score-notes) |   123.0 |
 kills | players | Total number of kills by the player or `null`</br>`{"player":{"kills":"0"}}` |   |   123.0 |
 deaths | players | Total number of player's deaths or `null`</br>`{"player":{"deaths":"1"}}` |   |   123.0 |
 operator | players | The numeric ID of the chosen operator.<br>`{"player":{"operator":"514"}}` |  |   151.0 |
+player_id | players | The player's ID number `{"player":{"player_id":"34243242342343424234"}}` |  |   151.0 |
 
 
 #### `roster_XX` notes
@@ -311,6 +312,7 @@ Backslashes omitted for legibility.
     "players":{
       "roster_0": "{
         "name": "WolfOnTop.top",
+        "player_id": "34243242342343424234",
         "is_local": true,
         "team": 1,
         "operator": 0,
@@ -340,6 +342,8 @@ As of version 159, you may detect the local player as a spectator when creating 
 * deaths - Total amount of deaths (<b>Important</b>: Death score is being reset between rounds).
 * score - Player score in the current round (<b>Important</b>: Score is being reset between rounds).
 * health - Current health of the player (available for team members only)
+As of version 191:
+* player_id - each player in the rosteer will have his unique player_id
 
 When one of the players leaves the match, the relevant “roster_ XX” object will be updated to:
 
