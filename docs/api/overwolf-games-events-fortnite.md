@@ -105,7 +105,7 @@ Data Example:
 
 Event       | Event Data   | Fired When    | Notes              | Since GEP Ver. |
 ------------| -------------| --------------| ------------------ | --------------|
-killed      | The name of the killed player. See [notes](#killed-note)| The local player killed another player | |  117.0  |
+killed      | The name of the killed player. | The local player killed another player |See [notes](#killed-note) |  117.0  |
 
 #### *killed* note
 
@@ -121,7 +121,7 @@ Data Example:
 
 Event       | Event Data   | Fired When    | Notes              | Since GEP Ver. |
 ------------| -------------| --------------| ------------------ | --------------|
-killer      | Name of the killer. See [notes](#killer-note) | The local player was killed | |  117.0  |
+killer      | Name of the killer.  | The local player was killed |See [notes](#killer-note) |  117.0  |
 
 #### *killer* note
 
@@ -154,7 +154,7 @@ Data Example:
 Event      | Event Data                                                              | Fired When                      | Notes              | Since GEP Ver. |
 -----------| ------------------------------------------------------------------------| --------------------------------| ------------------ | --------------|
 death      | null                                                                    | The local player died           | See [notes](#death-note) |  110.0        |
-knockedout | The name of the player who knocked you out. See [note](#knockedout-note)| The local player is knocked-out | See [notes](#knockedout-note) |  118.1        |
+knockedout | The name of the player who knocked you out.| The local player is knocked-out | See [notes](#knockedout-note) |  118.1        |
 
 #### *death* note
 
@@ -235,12 +235,12 @@ Data Example:
 
 key               | Category    | Values                    | Notes                 | Since GEP Ver. |
 ----------------- | ------------| ------------------------- | --------------------- | ------------- |
-pseudo_match_id   | match_info  |The current match’s ID code. See [notes](#pseudo_match_id-note)|                       |  130.2  |
-sessionID   | match_info  |The current session’s ID code. See [notes](#sessionID-note)|                       |  132.0  |
-matchID   | match_info  |The current match’s ID. See [notes](#matchID-note)|                       |  132.0  |
-userID   | match_info  |The current user’s ID code. See [notes](#userID-note)|                       |  132.0  |
-ticketID   | match_info  |The current ticket’s ID code. See [notes](#ticketID-note)|                       |  132.0  |
-partyID   | match_info  |The current party’s ID code. See [notes](#partyID-note)|                       |  132.0  |
+pseudo_match_id   | match_info  |The current match’s ID code. |                       |  130.2  |
+sessionID   | match_info  |The current session’s ID code. See [notes](#sessionID-note)|       See [notes](#pseudo_match_id-note)|  132.0  |
+matchID   | match_info  |The current match’s ID. |   See [notes](#matchID-note)|  132.0  |
+userID   | match_info  |The current user’s ID code. |   See [notes](#userID-note)|  132.0  |
+ticketID   | match_info  |The current ticket’s ID code. |  See [notes](#ticketID-note)|  132.0  |
+partyID   | match_info  |The current party’s ID code. |  See [notes](#partyID-note)|  132.0  |
 
 ### Events
 
@@ -351,11 +351,11 @@ This is a dynamic variable that is being updated every time a player joins, leav
 
 key          | Category    | Values                    | Notes                 | Since GEP Ver. |
 ------------ | ------------| ------------------------- | --------------------- | ------------- |
-name         | me          |   The player’s nickname. See [notes](#name-notes) |    |   110.0       |
-health       | me  |The player’s current health % (100-0). See [notes](#health-notes)| |   110.0       |
-accuracy     | me  |The local player’s current accuracy (hits/total shots). See [notes](#accuracy-note)|   |   110.0       |
-shield       | me  |The amount of shield the local player currently has. See [notes](#shield-notes)|         |   110.0       |
-total_shots  | me  |The amount of times the local player shot (not including grenades). See [notes](#total_shots-notes)|         |   157.0       |
+name         | me          |   The player’s nickname.  | See [notes](#name-notes)   |   110.0       |
+health       | me  |The player’s current health % (100-0). |See [notes](#health-notes) |   110.0       |
+accuracy     | me  |The local player’s current accuracy (hits/total shots). |See [notes](#accuracy-note)   |   110.0       |
+shield       | me  |The amount of shield the local player currently has. | See [notes](#shield-notes)        |   110.0       |
+total_shots  | me  |The amount of times the local player shot (not including grenades). | See [notes](#total_shots-notes)        |   157.0       |
 
 #### *name* note
 
@@ -411,7 +411,7 @@ phase        | game_info   |The game’s current state, can be one of the follow
 
 key          | Category    | Values                    | Notes                 | Since GEP Ver. |
 ------------ | ------------| ------------------------- | --------------------- | ------------- |
-location     | game_info   |Player’s current grid location, represented by (x,y,z).<ul><li>Top left corner of the map is (0,0,z)</li><li>Bottom right corner of the map is (2500,2500,z). See [notes](#location-note)|    |   114.1       |
+location     | game_info   |Player’s current grid location, represented by (x,y,z).<ul><li>Top left corner of the map is (0,0,z)</li><li>Bottom right corner of the map is (2500,2500,z).|  See [notes](#location-note)   |   114.1       |
   
 #### *location* note
 
@@ -427,7 +427,7 @@ Data Example:
 
 key          | Category    | Values                    | Notes                 | Since GEP Ver. |
 ------------ | ------------| ------------------------- | --------------------- | ------------- |
-nicknames    | match_info  | Names of the players in the user’s team. See [notes](#nicknames-note) |    |   170.0       |
+nicknames    | match_info  | Names of the players in the user’s team.  |  See [notes](#nicknames-note)  |   170.0       |
 
 #### *nicknames* note
 
@@ -449,10 +449,10 @@ Data Example:
 
 key          | Category    | Values                    | Notes                 | Since GEP Ver. |
 ------------ | ------------| ------------------------- | --------------------- | ------------- |
-item_X       | inventory   |Current inventory of the local player. See [notes](#item_x-note) |    |   119.2       |
-selected_slot|selected_slot|Currently selected slot in the quickbar. See [notes](#selected_slot-note) |    |   119.2       |
-quickbar_X   | quickbar    |Display names of the items in the primary quickbar. See [notes](#quickbar_x-note) |    |   119.2       |
-selected_material| selected_material  | The currently selected building material. See [notes](#selected_material-note) |    |   119.2 |
+item_X       | inventory   |Current inventory of the local player.  | See [notes](#item_x-note)   |   119.2       |
+selected_slot|selected_slot|Currently selected slot in the quickbar.  | See [notes](#selected_slot-note)   |   119.2       |
+quickbar_X   | quickbar    |Display names of the items in the primary quickbar.  | See [notes](#quickbar_x-note)   |   119.2       |
+selected_material| selected_material  | The currently selected building material.  |See [notes](#selected_material-note)    |   119.2 |
 
 #### *item_X* note
 
