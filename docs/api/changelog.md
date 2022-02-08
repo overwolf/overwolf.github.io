@@ -5,14 +5,37 @@ sidebar_label: Changelog
 ---
 
 Follow this entry for ongoing updates and changes to the project or tools.
-
-
 Here you can find our [Developers Roadmap](https://trello.com/b/1V10E4IB/overwolf-roadmap).
 
-## Version 0.190 (in-progress)
+## Version 0.191 (In progress)
+
+* Note that the documentation is still in progress.
+
+#### Game events
+
+ * [Minecraft](overwolf-games-events-minecraft)
+   * New info_update
+     * counters - ping
+
+#### Docs
+
+* Soon.
+
+#### API
+
+* Soon.
+
+#### Platform
+
+* Soon.
+
+#### Bug fixes
+
+* Soon.
+
+## Version 0.190 (Jan 2022)
 
 * Note that iterations 189 to 190 were combined into a single iteration.
-* Note that the documentation is still in progress.
 
 #### Game events
 
@@ -34,10 +57,6 @@ Here you can find our [Developers Roadmap](https://trello.com/b/1V10E4IB/overwol
     * scene
 * [Rainbow Six Siege](overwolf-games-events-rainbow-six)
   * Add new privacy information about the local player - [event "me"](overwolf-games-events-rainbow-six#me)
-
-#### Docs
-
-* Soon.
 
 #### API
 
