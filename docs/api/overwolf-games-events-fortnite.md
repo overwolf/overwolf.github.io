@@ -73,7 +73,7 @@ Event       | Event Data   | Fired When    | Notes              | Since GEP Ver.
 ------------| -------------| --------------| ------------------ | --------------|
 kill        | totalKills – total kills for player in match         | The local player killed another player |See [notes](#kill-note)|  110.0.0  |
 knockout    | null     | The local player knocked out another player |See [notes](#knockout-note)| 110.0.0  |
-hit         | isHeadshot – bool(“true” when the hit is a “headshot”)| The local player hits an enemy with a weapon (hits with a pickaxe are not counted) See [notes](#hit-note) |                    |     110.0.0     |
+hit         | isHeadshot – bool(“true” when the hit is a “headshot”)| The local player hits an enemy with a weapon (hits with a pickaxe are not counted)  |  See [notes](#hit-note)                  |     110.0.0     |
 
 #### *kill* note
 
@@ -235,8 +235,8 @@ Data Example:
 
 key               | Category    | Values                    | Notes                 | Since GEP Ver. |
 ----------------- | ------------| ------------------------- | --------------------- | ------------- |
-pseudo_match_id   | match_info  |The current match’s ID code. |                       |  130.2  |
-sessionID   | match_info  |The current session’s ID code. See [notes](#sessionID-note)|       See [notes](#pseudo_match_id-note)|  132.0  |
+pseudo_match_id   | match_info  |The current match’s ID code. | See [notes](#pseudo_match_id-note)                      |  130.2  |
+sessionID   | match_info  |The current session’s ID code. | See [notes](#sessionID-note)      |  132.0  |
 matchID   | match_info  |The current match’s ID. |   See [notes](#matchID-note)|  132.0  |
 userID   | match_info  |The current user’s ID code. |   See [notes](#userID-note)|  132.0  |
 ticketID   | match_info  |The current ticket’s ID code. |  See [notes](#ticketID-note)|  132.0  |
