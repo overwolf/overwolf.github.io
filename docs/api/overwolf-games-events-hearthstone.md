@@ -49,7 +49,7 @@ Data Example:
 
 key               | Category    | Values                    | Notes                 | Since GEP Ver. |
 ----------------- | ------------| ------------------------- | --------------------- | ------------- |
-collection        | game_info   | Current card collection of the local player. See [notes](#collection-note) |     |   117.1 |
+collection        | game_info   | Current card collection of the local player.  | See [notes](#collection-note)    |   117.1 |
 
 #### *collection* note
 
@@ -86,7 +86,7 @@ Example for cards "collection":
 
 key               | Category    | Values                    | Notes                 | Since GEP Ver. |
 ----------------- | ------------| ------------------------- | --------------------- | ------------- |
-scene_state | game_info   |  Current game scene. See [notes](#scene_state-note) |     |   117.1 |
+scene_state | game_info   |  Current game scene.  | See [notes](#scene_state-note)    |   117.1 |
 
 #### *scene_state* note
 
