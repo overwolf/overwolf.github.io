@@ -163,11 +163,12 @@ Data Example:
 ### Info Updates
 key       | Category        | Values                                         | Notes                                                   | Since GEP Ver. |
 ----------| ----------------| -----------------------------------------------| ------------------------------------------------------- | ------------- |
-roster_XX        | match_info   | This feature provides the entire list of players. See [notes below](#roster_xx-notes)  |    | 190.0   |
+roster_XX        | match_info   | This feature provides the entire list of players.   | See [notes](#roster_xx-notes)   | 190.0   |
 
 #### `roster_XX` notes
-
 This feature provides the entire list of players.
+
+Data Example:
 
 ```json
 {"feature":"match_info","category":"match_info","key":"roster_0","value":{"name":"Cocotte7425","team":1,"local":false}}
@@ -181,6 +182,7 @@ As you can see, this object includes:
 When a player “leaves” the match the roster will be updated with the player in the match
 When the match end, the roster value is returned empty, example: 
 
+Data Example:
 ```json
 {"feature":"match_info","category":"match_info","key":"roster_0","value":{}}
 ```
