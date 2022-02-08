@@ -298,7 +298,7 @@ score | players | Player’s current score or `null`</br>`{"player":{"score":"33
 kills | players | Total number of kills by the player or `null`</br>`{"player":{"kills":"0"}}` |   |   123.0 |
 deaths | players | Total number of player's deaths or `null`</br>`{"player":{"deaths":"1"}}` |   |   123.0 |
 operator | players | The numeric ID of the chosen operator.<br>`{"player":{"operator":"514"}}` |  |   151.0 |
-player_id | players | The player's ID number `{"player":{"player_id":"34243242342343424234"}}` |  |   151.0 |
+player_id | players | The player's ID number `{"player":{"player_id":"1b810848-34df-4834-aa26-61c838059a37"}}` |  |   191.0 |
 
 
 #### `roster_XX` notes
@@ -312,7 +312,7 @@ Backslashes omitted for legibility.
     "players":{
       "roster_0": "{
         "name": "WolfOnTop.top",
-        "player_id": "34243242342343424234",
+        "player_id": "1b810848-34df-4834-aa26-61c838059a37",
         "is_local": true,
         "team": 1,
         "operator": 0,
@@ -333,8 +333,7 @@ As you can see, this object includes:
 * name - player's name <br>
 Important note - "name" is the player's username or nickname if enabled
 
-* team - Blue/Orange/Spectator
-
+* team - Blue/Orange/Spectator <br>
 As of version 159, you may detect the local player as a spectator when creating a custom match (Example: `{"info":{"player":{"team":"Spectator"}},"feature":"roster"}`).
 * is_local - local player or not (Boolean)
 * [operator](https://github.com/overwolf/community-gists/blob/master/siege_operator_ids.json) - The ID of the selected operator (available for team members only)
@@ -342,8 +341,8 @@ As of version 159, you may detect the local player as a spectator when creating 
 * deaths - Total amount of deaths (<b>Important</b>: Death score is being reset between rounds).
 * score - Player score in the current round (<b>Important</b>: Score is being reset between rounds).
 * health - Current health of the player (available for team members only)
-As of version 191:
-* player_id - each player in the rosteer will have his unique player_id
+* player_id - each player in the roster will have his unique player_id <br>
+As of version 191 the Ubisoft user ID is provided. This may not be used to circumvent Nicknames set through Privacy Mode.
 
 When one of the players leaves the match, the relevant “roster_ XX” object will be updated to:
 
