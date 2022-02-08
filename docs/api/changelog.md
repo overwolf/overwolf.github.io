@@ -16,7 +16,8 @@ Here you can find our [Developers Roadmap](https://trello.com/b/1V10E4IB/overwol
  * [Minecraft](overwolf-games-events-minecraft)
    * New info_update
      * counters - ping
-
+ * [Rainbow Six Siege](overwolf-games-events-rainbow-six)
+   * Add player_id in roster - [here](overwolf-games-events-rainbow-six#roster)
 #### Docs
 
 * Soon.
