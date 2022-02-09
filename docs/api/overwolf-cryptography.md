@@ -22,7 +22,7 @@ Use this API to encrypt and decrypt ciphertext and secure app data and variables
 
 > Returns encrypted ciphertext.
 
-**Note that the generated hash is unique per OW user.**
+**Note that the generated hash is unique per Windows current user.**
 
 Parameter | Type     | Description                                                              |
 ----------| -------- | ------------------------------------------------------------------------ |
