@@ -402,7 +402,7 @@ Data Example:
 key          | Category    | Values                            | Notes                 | Since GEP Ver. |
 ------------ | ------------| --------------------------------- | --------------------- | ------------- |
 name         | me          | Local player's in-game name.      | See [notes](#name-note)     |   148.0  |
-account_id   | me          | Local player's account ID.        |See [notes](#account_id-note)|   148.0  |
+account_id   | me          | OBSOLETE        |See [notes](#account_id-note)|   148.0  |
 account_id_log   | me          | Local player's account ID information and privacy information       |See [notes](#account_id_log-note)|   186.0  |
 
 #### *name* note
@@ -415,12 +415,10 @@ Data Example:
 Important note - "name" is the player's username or nickname if enabled
 
 #### *account_id* note
-
-Data Example:
-
-```json
-{"info":{"me":{"account_id":"1b810848-34df-4834-aa26-61c838059a37"}},"feature":"me"}
-```
+:::warning OBSOLETE
+This event is currently NOT supported.
+Please use account_id_log instead
+:::
 
 #### *account_id_log* note
 
