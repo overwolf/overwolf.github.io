@@ -959,6 +959,8 @@ Defines a device volume and enablement settings.
 
 Stream capture options for peripheral devices.
 
+Note: To turn off `capture_mouse_cursor`, set `peripherals` to `null`
+
 | Name                 | Type                                                                                               | Description                                                     | Since |
 |----------------------| -------------------------------------------------------------------------------------------------- |-----------------------------------------------------------------| ----- |
 | capture_mouse_cursor | [overwolf.streaming.enums.StreamMouseCursor](#streammousecursor-enum) enum   |  Defines when to capture the mouse cursor while streaming is on | 0.83  |
