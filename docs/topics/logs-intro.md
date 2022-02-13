@@ -31,6 +31,7 @@ In the trace logs you will find the following information:
 * If Hardware Accelerated GPU Scheduling is enabled
 * If the overlay is enabled
 * If Overwolf helpers launched correctly
+* The game score
 * Which extensions are running
 * Which Overwolf processes are running & when Overwolf processes have closed
 * Other processes currently running on the computer
