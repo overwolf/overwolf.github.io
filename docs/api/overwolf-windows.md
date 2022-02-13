@@ -17,6 +17,7 @@ Please make sure to read our guide on [how to use Overwolf windows](../topics/us
 * [overwolf.windows.obtainDeclaredWindow()](#obtaindeclaredwindowwindowname-callback)
 * [overwolf.windows.obtainDeclaredWindow()](#obtaindeclaredwindowwindowname-overridesetting-callback)
 * [overwolf.windows.obtainDeclaredWindow()](#obtaindeclaredwindowwindowname-usedefaultsizeandlocation-callback)
+* [overwolf.windows.getWindow()](#getwindowwindowname-callback)
 * [overwolf.windows.dragMove()](#dragmovewindowid-callback)
 * [overwolf.windows.dragResize()](#dragresizewindowid-edge)
 * [overwolf.windows.dragResize()](#dragresizewindowid-edge-contentrect)
@@ -172,6 +173,27 @@ overwolf.windows.obtainDeclaredWindow("main", {useDefaultSizeAndLocation: true},
 * If the window does not exist - the function return null in the sizes.
 * If the window exists - the sizes returned in the callback already consider the DPI scaling (to be fixed by version 0.170).
 
+## getWindow(windowName, callback)
+#### Version added: 0.191
+
+> Returns [WindowResult](#windowresult-object) object for a specific open window.
+
+Parameter                 | Type                                                | Description                                                                            |
+------------------------- | ----------------------------------------------------| -------------------------------------------------------------------------------------- |
+windowName                | string                                              | The name of the window that was declared in the data.windows section in the manifest   |
+callback                  | [(Result: WindowResult)](#windowresult-object) => void | Callback will be invoked with the [WindowResult](#windowresult-object) object. |
+
+
+#### Usage example
+
+```js
+overwolf.windows.getWindow("main", console.log)
+```
+
+#### Notes
+
+* If the window does not exist - returns an error.
+
 ## dragMove(windowId, callback)
 #### Version added: 0.78
 
@@ -187,6 +209,7 @@ callback (Optional)  | [(Result: DragMovedResult)](#dragmovedresult-object) => v
 
 * When you dragMove a **native window** between monitors with different DPIs, the window will automatically resize according to the new DPI.
 * When you quickly Click / DoubleClick a window that has dragMove(), without moving it at all - a **"Left mouse released"** error is thrown.
+
 
 ## dragResize(windowId, edge)
 #### Version added: 0.100
@@ -898,9 +921,16 @@ automatic       |  Turns off automatically when the window regains focus. Does n
 on              |  Turns flashing on   |
 off             |  Turns flashing off  |
 
-#### automatic note
+## WindowType enum
+#### Version added: 0.191
 
-The right way to test the **automatic** behavior, is to open the debug URL http://localhost:54284/, open the dev console from there, and than call the **flash()** function. 
+> Window Type
+
+Option          | Description          |
+--------------- | ---------------------|
+Background           |  Background window    |
+Desktop              |  Desktop window   |
+OffScreen            |  Offscreen (in-game) window  |
 
 ## onScreenPropertyChangedEvent Object
 
@@ -1007,6 +1037,7 @@ state           | string        | deprecated and kept only for backward compatib
 stateEx         | [WindowStateEx](#windowstateex-enum) enum | always use this param to get the state of the window | 
 monitorId       | string        | return monitorId (If the Window is not opened already) - allowing one window (background) to know on which monitor another window exists.  |
 Parent          | string        | The parent window id    |
+type            | string        | [WindowType](#windowtype-enum) object (version added: 0.191)  
 
 
 ```json
