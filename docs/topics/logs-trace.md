@@ -53,6 +53,33 @@ In this section you can see the Overwolf overlay starting up:
 2021-07-20 10:21:01,727 (INFO) [OverlayService ID 15][23824] OverlayService - Starting OWServer
 ```
 
+## Game score
+
+In this section you can see the Game Score which determines if the game is supported by Overwolf:
+```
+2022-01-19 05:34:33,552 (INFO) [OverlayService ID 16][4024]  ProcessManager - SetProcessUsage for 'H:\Genshin Impact\launcher.exe' with value 'NoUsage' 
+2022-01-19 05:34:38,629 (INFO) [OverlayService ID 16][4024]  GameInjectionScoringHelper - Potential game found: 216561 - Genshin Impact - Decision: Supported - Score: 10
+2022-01-19 05:34:38,630 (INFO) [OverlayService ID 16][4024]  ProcessManager - SetProcessUsage for 'H:\Genshin Impact\Genshin Impact game\GenshinImpact.exe' with value 'Manual' [command line: "" ]
+2022-01-19 05:34:39,138 (INFO) [OverlayService ID 16][4024]  ProcessManager - Process state changed. Process: 'H:\Genshin Impact\Genshin Impact game\GenshinImpact.exe' [35392], state: Entered
+2022-01-19 05:34:39,139 (INFO) [OverlayService ID 16][4024]  GamesSettingsManager - New detected game added to game settings storage: 21656
+2022-01-19 05:34:39,154 (INFO) [OverlayService ID 16][4024]  GamesManager - Recently played game added to list: 216561
+```
+
+For example, Discord is recognized by Overwolf but is not a supported game:
+```
+2022-01-19 04:00:50,680 (INFO) [OverlayService ID 16][4024]  ProcessManager - SetProcessUsage for 'C:\Program Files\Mozilla Firefox\firefox.exe' with value 'NoUsage' 
+2022-01-19 04:00:50,682 (INFO) [OverlayService ID 16][4024]  ProcessManager - SetProcessUsage for 'C:\Program Files (x86)\Razer\Synapse3\UserProcess\Razer Synapse Service Process.exe' with value 'NoUsage' 
+2022-01-19 04:00:50,692 (INFO) [OverlayService ID 16][4024]  GameInjectionScoringHelper - Potential game found: 215761 - Discord - Decision: NotSupported - Score: 2
+```
+
+If the game is supported by Overwolf but the overlay is disabled (Either due to the user manually disabling the overlay or due to a technical issue.) it will be shown in the logs as follows:
+```
+2022-01-31 11:06:44,612 (INFO) [OverlayService ID 17][7964] ProcessManager - Process state changed. Process: 'I:\SteamLibrary\steamapps\common\Apex Legends\r5apex.exe' [25164], state: Entered
+2022-01-31 11:06:44,613 (INFO) [OverlayService ID 17][7964] GamesSettingsManager - New detected game added to game settings storage: 21566
+2022-01-31 11:06:44,623 (INFO) [UI][7496] ExtensionWebApp - Launching app: ppagiehdogdjlomggmoejfamedbjggdggnjbilhe [Overwolf Remote Configurations - 1.188.1]. caller: gamelaunchevent. launchEvent: AllGamesLaunch
+2022-01-31 11:06:44,624 (INFO) [OverlayService ID 17][7964] GamesManager - Not injecting into: 215661 because Overlay is disabled for this game under the game settings
+```
+
 ## extensions info
 
 In this section you can see the amount of extensions the user has, which extensions are loading (According to their unique ID) and if there are any issues in loading the extensions:
