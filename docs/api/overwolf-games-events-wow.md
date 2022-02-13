@@ -105,7 +105,7 @@ Possible values for `class`:
 
 key            | Category         | Values                               | Notes                            | Since GEP Ver. |
 -------------- | -----------------| ------------------------------------ | -------------------------------- | -------------  | 
-addons         | addons           | Name, version number (if exists), and status of addon. | See [notes](#addons-note)   | 189.0 |
+addon_xx      | addons           | Name, version number (if exists), and status of addon. | See [notes](#addons-note)   | 189.0 |
 
 #### *addons* note
 
