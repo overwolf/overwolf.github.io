@@ -105,9 +105,10 @@ Possible values for `class`:
 
 key            | Category         | Values                               | Notes                            | Since GEP Ver. |
 -------------- | -----------------| ------------------------------------ | -------------------------------- | -------------  | 
-addon_xx      | addons           | Name, version number (if exists), and status of addon. | See [notes](#addons-note)   | 189.0 |
+addon_xx      | addons           | Name, version number (if exists), and status of addon. | See [notes](#addon-note)   | 189.0 |
+var_addon_xx      | addons           | varaibles sent by addons. | See [notes](#var_addon-note)   | 191.0 |
 
-#### *addons* note
+#### *addon* note
 
 Data Example:
 
@@ -120,4 +121,22 @@ Possible values:
 
 ```json
 {"info":{"addons":{"addon_10":"{"name":"DBM-StatusBarTimers","version":"8110645","status":"1"}"}},"feature":"addons"}
+```
+
+#### *var_addon* note
+
+* This info-update should be used by addon creators who wish to integrate their WoW addon with an Overwolf app.
+* Use case example:
+   * WoW addon that monitors real-time damage, healing, etc. sends this data to an Overwolf application that displays a game summary screen with interesting stats, video highlights and more.
+* How it works?
+   * Sample addon (link)
+   * In the addon .toc file - Define new variables named “owf_varX” where X is 1-255.
+   * The addon LUA file should update these variables with the relevant data the Overwolf app should consume.  
+   * Each of these vars will update Overwolf with their current value during the game.
+   * The Overwolf application reads these values in real time and displays the relevant information to the user, or performs certain actions (e.g. recording an interesting video highlight).
+
+Data Example:
+
+```json
+{"feature":"addons","category":"addons","key":"var_addon_1","value":"{\"owf_var2\":\"test 123\",\"owf_var5\":\"123 test\",\"owf_var6\":\"55\"}"}
 ```
