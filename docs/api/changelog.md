@@ -7,7 +7,7 @@ sidebar_label: Changelog
 Follow this entry for ongoing updates and changes to the project or tools.
 Here you can find our [Developers Roadmap](https://trello.com/b/1V10E4IB/overwolf-roadmap).
 
-## Version 0.191 (In progress)
+## Version 0.191
 
 * This patch includes a bunch of under the hood changes for some upcoming APIs.
 
