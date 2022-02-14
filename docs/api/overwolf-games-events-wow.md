@@ -134,6 +134,11 @@ Possible values:
    * The addon LUA file should update these variables with the relevant data the Overwolf app should consume.  
    * Each of these vars will update Overwolf with their current value during the game.
    * The Overwolf application reads these values in real time and displays the relevant information to the user, or performs certain actions (e.g. recording an interesting video highlight).
+* Supported variable types are:
+  * LUA_TSTRING
+  * LUA_TNUMBER
+  * LUA_TBOOLEAN
+  * LUA_TNIL
 
 Data Example:
 
