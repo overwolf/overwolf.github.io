@@ -129,7 +129,7 @@ Possible values:
 * Use case example:
    * WoW addon that monitors real-time damage, healing, etc. sends this data to an Overwolf application that displays a game summary screen with interesting stats, video highlights and more.
 * How it works?
-   * You can use the sample app addon [here](https://github.com/overwolf/events-sample-apps/tree/master/wow-addon-variables-sample-app)
+   * You can use the sample app addon <a href="https://github.com/overwolf/events-sample-apps/tree/master/wow-addon-variables-sample-apphttps://github.com/overwolf/events-sample-apps/tree/master/wow-addon-variables-sample-app" target="_blank">here</a>
    * In the addon .toc file - Define new variables named “owf_varX” where X is 1-255.
    * The addon LUA file should update these variables with the relevant data the Overwolf app should consume.  
    * Each of these vars will update Overwolf with their current value during the game.
