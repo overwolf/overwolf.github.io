@@ -198,6 +198,13 @@ If you have further requests for events that you require please contact us at <a
 <li>Each of these vars will update Overwolf with their current value during the game.</li>
 <li>The Overwolf application reads these values in real time and displays the relevant information to the user, or performs certain actions (e.g. recording an interesting video highlight).</li>
 </ul></li>
+<li>Supported variable types are:
+<ul>
+<li>LUA_TSTRING</li>
+<li>LUA_TNUMBER</li>
+<li>LUA_TBOOLEAN</li>
+<li>LUA_TNIL</li>
+</ul></li>
 </ul>
 <p>Data Example:</p>
 <pre><code class="hljs css language-json">{<span class="hljs-attr">"feature"</span>:<span class="hljs-string">"addons"</span>,<span class="hljs-attr">"category"</span>:<span class="hljs-string">"addons"</span>,<span class="hljs-attr">"key"</span>:<span class="hljs-string">"var_addon_1"</span>,<span class="hljs-attr">"value"</span>:<span class="hljs-string">"{\"owf_var2\":\"test 123\",\"owf_var5\":\"123 test\",\"owf_var6\":\"55\"}"</span>}
