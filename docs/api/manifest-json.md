@@ -92,6 +92,7 @@ Note that not all flags are mandatory - we included all available flags for docu
                 "<a href="#disable_auto_dpi_sizing">disable_auto_dpi_sizing</a>": false, //disable the DPI Aware behavior of native windows
                 "<a href="#restrict_to_game_bounds">restrict_to_game_bounds</a>": false, //Restrict window to game client (window) area.
                 "<a href="#disable_hardware_acceleration">disable_hardware_acceleration</a>": false // disable GPU hardware acceleration. Relevant only to native windows
+                "<a href="#open_dev_tools_window">open_dev_tools</a>": true //Used for debugging, automatically opens the dev tools when the app window opens
             },
         },
         //Toggle printing of ads log to the console
@@ -142,9 +143,9 @@ Note that not all flags are mandatory - we included all available flags for docu
             "<a href="#uninstall_window">required_runtime</a>": 1000,
             //if not defined, the default is 10 seconds. valid up to 60000 (1 minute).
         },
-        "<a href=#auto_relaunch_on_crash>auto_relaunch_on_crash</a>": true 
+        "<a href="#auto_relaunch_on_crash">auto_relaunch_on_crash</a>": true 
         //Automatically relaunches the app if it crashes up to 5 times.
-        "<a href=#open_dev_tools>open_dev_tools</a>": true 
+        "<a href="#open_dev_tools_data">open_dev_tools</a>": true 
         //Used for debugging, automatically opens the dev tools when an app window opens
     }
 }
@@ -356,7 +357,7 @@ A list of additional settings for the app.
 | <a class="anchor" aria-hidden="true" id="url_protocol"></a>url_protocol | [url_protocol](#url_protocol-object) object | Ability to open an application from a browser using a link. | 0.158  |
 | <a class="anchor" aria-hidden="true" id="uninstall_window"></a>uninstall_window | [uninstall_window](#uninstall_window-object) object|  triggers the client to run a window on app uninstall for a required time set. </br>Use it for running uninstall background actions like removing DLLs, logs, images, and other files injected by the app to the user's machine. |0.187  |
 | <a class="anchor" aria-hidden="true" id="auto_relaunch_on_crash"></a>auto_relaunch_on_crash | bool |  Causes apps to automatically relaunch if their process has crashed. if the app crashes 5 times consecutively, it will stop trying to relaunch.  | 0.191  |
-| <a class="anchor" aria-hidden="true" id="open_dev_tools"></a>open_dev_tools | bool |  Used for debugging. Automatically opens the dev tools window when opening an app window. *Note: it's possible to set this behavior on a per window basis if by adding this property to a specific window in the <a href="#window-data">Window object</a> | 0.191  |
+| <a class="anchor" aria-hidden="true" id="open_dev_tools_data"></a>open_dev_tools | bool |  Used for debugging. Automatically opens the dev tools window when opening an app window. *Note: it's possible to set this behavior on a per window basis if by adding this property to a specific window in the <a href="#open_dev_tools_window">Window object</a> | 0.191  |
 
 #### user_agent Notes
 
@@ -441,6 +442,7 @@ A list of settings for the app windows.
 | <a class="anchor" aria-hidden="true" id="disable_auto_dpi_sizing"></a>disable_auto_dpi_sizing | bool |  Relevant only for native windows. Disable the DPI Aware behavior of native windows. [overwolf.windows.changeSize()](overwolf-windows#changesizechangesizeparams-callback) can Overwrite this flag in runtime. | 0.148  |
 | <a class="anchor" aria-hidden="true" id="restrict_to_game_bounds"></a>restrict_to_game_bounds | bool |  A window will always stay inside the game window while dragging.| 0.158  |
 | <a class="anchor" aria-hidden="true" id="disable_hardware_acceleration"></a>disable_hardware_acceleration | bool |  Disable GPU hardware acceleration, per window. Relevant only to native windows. </br>*Notes: Use this flag mainly for native windows that run as a second-screen with fps intensive games. It improves the performance of the game by reducing usage of the GPU while you are playing.*| 0.159  |
+| <a class="anchor" aria-hidden="true" id="open_dev_tools_window"></a>open_dev_tools | bool |  Used for debugging. Automatically opens the dev tools window when opening the app window</a> | 0.191  |
 
 
 ## ExternallyConnectable object
