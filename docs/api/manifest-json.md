@@ -4,6 +4,7 @@ title: manifest.json
 sidebar_label: manifest.json
 ---
 
+
 ## Welcome to the manifest.json file
 
 This [JSON](http://www.json.org/) formatted file is responsible for describing aspects of your app. This includes your app's name, window size, tranparency settings and more basic settings for how your app operates. This is a mandatory file which has to exist in the root folder for your app.
