@@ -9,7 +9,7 @@ Here you can find our [Developers Roadmap](https://trello.com/b/1V10E4IB/overwol
 
 ## Version 0.191 (In progress)
 
-* Note that the documentation is still in progress.
+* This patch includes a bunch of under the hood changes for some upcoming APIs.
 
 #### Game events
 
@@ -24,19 +24,43 @@ Here you can find our [Developers Roadmap](https://trello.com/b/1V10E4IB/overwol
 
 #### Docs
 
-* Soon.
+* No changes.
 
 #### API
-
-* Soon.
+- [`overwolf.utils.checkForClientUpdates()`](https://overwolf.github.io/docs/api/overwolf-utils#checkforclientupdatescallback) - This new method can be used to check whether an Overwolf update is available.  
+ Example of the returned callback: 
+    ```
+      channel: "Developers"
+      currentVersion: "0.191.0.4"
+      hasUpdate: false
+      newVersion: null
+      success: true
+      updatesDisabled: false
+    ```
+    Please note that Overwolf will stop displaying the overlay in-game if it was updated while the game was running.
+ -   [`overwolf.windows.getWindow()`](https://overwolf.github.io/docs/api/overwolf-windows#getwindowwindowname-callback) - This methods returns 
+ the WindowInfo object for any window that has been called with `overwolf.windows.obtainDeclaredWindow`. It's better to use this method instead of using 
+ `obtaintDeclaredWindow` if the the window you are refering to has already
+been declared.
 
 #### Platform
+New `manifest.json` properties:
+ - [`auto_relaunch_on_crash`](https://overwolf.github.io/docs/api/manifest-json#auto_relaunch_on_crash)
+   - Relaunches an app if it crashes.
+   - If the app crashes consecutively more than 5 times, we will stop trying to relaunch it.
+ - [`open_dev_tools`](https://overwolf.github.io/docs/api/manifest-json#open_dev_tools)
+   - Used for debugging, automatically opens the dev tools when an app window opens. 
 
-* Soon.
-
-#### Bug fixes
-
-* Soon.
+#### Bug Fixes
+- `overwolf.media.videos.createVideoCompositionFiles()` - Fixed a possible audio
+syncing issue when composing more than 2 files.
+- `overwolf.media.videos.createVideoComposition()` - Fixed a possible error when
+having more than two segments.
+- Reduced internal cache when checking for a possible app update when using 
+"test" channels. This will hopefully reduce the time frame from the moment a developer updates
+the "test" channel until the update reaches the users.
+- Fixed a descrepency in the storage paths when an app's display name was added.
+- Fixed an issue where non-developers were able to load extensions as unpacked.
 
 ## Version 0.190 (Jan 2022)
 
