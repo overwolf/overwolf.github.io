@@ -151,6 +151,7 @@ Note that not all flags are mandatory - we included all available flags for docu
                 "<a href="#disable_auto_dpi_sizing">disable_auto_dpi_sizing</a>": false, //disable the DPI Aware behavior of native windows
                 "<a href="#restrict_to_game_bounds">restrict_to_game_bounds</a>": false, //Restrict window to game client (window) area.
                 "<a href="#disable_hardware_acceleration">disable_hardware_acceleration</a>": false // disable GPU hardware acceleration. Relevant only to native windows
+                "<a href="#open_dev_tools_window">open_dev_tools</a>": true //Used for debugging, automatically opens the dev tools when the app window opens
             },
         },
         //Toggle printing of ads log to the console
@@ -201,9 +202,9 @@ Note that not all flags are mandatory - we included all available flags for docu
             "<a href="#uninstall_window">required_runtime</a>": 1000,
             //if not defined, the default is 10 seconds. valid up to 60000 (1 minute).
         },
-        "<a href=#auto_relaunch_on_crash>auto_relaunch_on_crash</a>": true 
+        "<a href="#auto_relaunch_on_crash">auto_relaunch_on_crash</a>": true 
         //Automatically relaunches the app if it crashes up to 5 times.
-        "<a href=#open_dev_tools>open_dev_tools</a>": true 
+        "<a href="#open_dev_tools_data">open_dev_tools</a>": true 
         //Used for debugging, automatically opens the dev tools when an app window opens
     }
 }
@@ -418,7 +419,7 @@ Note that not all flags are mandatory - we included all available flags for docu
 <tr><td><a class="anchor" aria-hidden="true" id="url_protocol"></a>url_protocol</td><td><a href="#url_protocol-object">url_protocol</a> object</td><td>Ability to open an application from a browser using a link.</td><td>0.158</td></tr>
 <tr><td><a class="anchor" aria-hidden="true" id="uninstall_window"></a>uninstall_window</td><td><a href="#uninstall_window-object">uninstall_window</a> object</td><td>triggers the client to run a window on app uninstall for a required time set. </br>Use it for running uninstall background actions like removing DLLs, logs, images, and other files injected by the app to the user's machine.</td><td>0.187</td></tr>
 <tr><td><a class="anchor" aria-hidden="true" id="auto_relaunch_on_crash"></a>auto_relaunch_on_crash</td><td>bool</td><td>Causes apps to automatically relaunch if their process has crashed. if the app crashes 5 times consecutively, it will stop trying to relaunch.</td><td>0.191</td></tr>
-<tr><td><a class="anchor" aria-hidden="true" id="open_dev_tools"></a>open_dev_tools</td><td>bool</td><td>Used for debugging. Automatically opens the dev tools window when opening an app window. *Note: it's possible to set this behavior on a per window basis if by adding this property to a specific window in the <a href="#window-data">Window object</a></td><td>0.191</td></tr>
+<tr><td><a class="anchor" aria-hidden="true" id="open_dev_tools_data"></a>open_dev_tools</td><td>bool</td><td>Used for debugging. Automatically opens the dev tools window when opening an app window. *Note: it's possible to set this behavior on a per window basis if by adding this property to a specific window in the <a href="#open_dev_tools_window">Window object</a></td><td>0.191</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="user_agent-notes"></a><a href="#user_agent-notes" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>user_agent Notes</h4>
@@ -507,6 +508,7 @@ In case you have to use it, consult with us before.</p></li>
 <tr><td><a class="anchor" aria-hidden="true" id="disable_auto_dpi_sizing"></a>disable_auto_dpi_sizing</td><td>bool</td><td>Relevant only for native windows. Disable the DPI Aware behavior of native windows. <a href="overwolf-windows#changesizechangesizeparams-callback">overwolf.windows.changeSize()</a> can Overwrite this flag in runtime.</td><td>0.148</td></tr>
 <tr><td><a class="anchor" aria-hidden="true" id="restrict_to_game_bounds"></a>restrict_to_game_bounds</td><td>bool</td><td>A window will always stay inside the game window while dragging.</td><td>0.158</td></tr>
 <tr><td><a class="anchor" aria-hidden="true" id="disable_hardware_acceleration"></a>disable_hardware_acceleration</td><td>bool</td><td>Disable GPU hardware acceleration, per window. Relevant only to native windows. </br><em>Notes: Use this flag mainly for native windows that run as a second-screen with fps intensive games. It improves the performance of the game by reducing usage of the GPU while you are playing.</em></td><td>0.159</td></tr>
+<tr><td><a class="anchor" aria-hidden="true" id="open_dev_tools_window"></a>open_dev_tools</td><td>bool</td><td>Used for debugging. Automatically opens the dev tools window when opening the app window</a></td><td>0.191</td></tr>
 </tbody>
 </table>
 <h2><a class="anchor" aria-hidden="true" id="externallyconnectable-object"></a><a href="#externallyconnectable-object" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>ExternallyConnectable object</h2>
