@@ -297,7 +297,9 @@ callback    | [Result:ClientUpdateStatusResult](#clientupdateresult-object)  | A
 
 
 ## checkForClientUpdates(callback)
-#### Version added: 0.111
+#### Version added: 0.191
+
+> Checks whether an Overwolf client update is available.
 
 :::important
  If you choose to inform the user that an update is available. you can use the following snippet to open the Overwolf Settings and initiliaze an update:
@@ -311,7 +313,7 @@ callback    | [Result:ClientUpdateStatusResult](#clientupdateresult-object)  | A
   Please note that if Overwolf updates while it is in-game, it will not show in-game until the game has been restarted.
   :::
 
-> Checks whether an Overwolf client update is available.
+
 
 Parameter   | Type     | Description                                 |
 ----------- | ---------| --------------------------------------------|
