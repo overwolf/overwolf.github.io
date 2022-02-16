@@ -107,6 +107,7 @@ Data Example:
 ```
 {"feature":"match_info","category":"match_info","key":"playlist","value":"bot_bootcamp"}
 ```
+Important - This info-update change only if the user change playlist
 
 #### *game_type*  note
 
@@ -120,6 +121,7 @@ Data Example:
 ```
 {"feature":"match_info","category":"match_info","key":"game_type","value":"arena"}
 ```
+Important - This info-update change only if the user change game type
 
 #### *game_mode*  note
 
