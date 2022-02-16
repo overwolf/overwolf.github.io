@@ -127,7 +127,7 @@ In this section you can see the amount of extensions the user has, which extensi
 
 ## OW Helpers info
 
-In this section you can see the Overwolf Helpers starting (Hyperlink to the section about helpers)
+In this section you can see the Overwolf Helpers starting:
 
 ```
 2021-07-20 10:21:05,728 (INFO) [26][7788]  OverwolfHelpersProcesesManager - Launching helper OverwolfHelper.exe: 0
