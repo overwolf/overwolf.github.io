@@ -74,7 +74,9 @@ List of possible values:
 key          | Category    | Values                    | Notes                 | Since GEP Ver. |
 ------------ | ------------| ------------------------- | --------------------- | ------------- | 
 local_player_stats | match_info  | A variety of in-game stats for local player. |See [notes](#local_player_stats-note)|   190.0       |
-
+playlist | match_info  | The playlist the player selected. |See [notes](#playlist-note)|   191.0       |
+game_type | match_info  | The selected game type, important only for non custm games |See [notes](#game_type-note)|   191.0       |
+game_mode | match_info  | The selected game mode |See [notes](#game_mode-note)|   191.0       |
 
 #### *local_player_stats*  note
 
@@ -86,6 +88,73 @@ Data Example:
 
 Important note:
 Some of the stat parameters at the moment don't return any values (KDA, AccuracyPercentage, ShotsHit, DamageDone, DamageTaken, ShotsFired, AverageLifeDuration and more).
+
+#### *playlist*  note
+
+Possible values are:
+* quick_play
+* bot_bootcamp
+* btb
+* fiesta
+* ffa_slayer
+* tactical_slayer
+* team_slayer
+* ranked_arena_open
+* ranked_arena_soloduo
+* custom
+
+Data Example:
+```
+{"feature":"match_info","category":"match_info","key":"playlist","value":"bot_bootcamp"}
+```
+
+#### *game_type*  note
+
+Possible values are:
+* arena
+* btb
+* academy
+* campaign
+
+Data Example:
+```
+{"feature":"match_info","category":"match_info","key":"game_type","value":"arena"}
+```
+
+#### *game_mode*  note
+
+If the player uses a non-custom game use game_type to understand what type of game the player has selected.
+In this case the possible values are:
+* oddball
+* ctf
+* btb
+* slayer
+* ctf
+* stockpile
+* total_control
+* strongholds
+
+If the player created a custom game you will get one of the values in the list, it that case you can ignore game_type
+In this case the possible values are:
+* arena:ctf
+* arena:ffa 
+* arena:oddball
+* arena:onectf
+* arena:slayer
+* arena:strongholds
+* btb:slayer
+* fiesta:slayer
+* ranked:ctf
+* ranked:oddball
+* ranked:slayer
+* ranked:strongholds
+
+Data Example:
+```
+{"feature":"match_info","category":"match_info","key":"game_mode","value":"ctf"}
+OR
+{"feature":"match_info","category":"match_info","key":"game_mode","value":"btb:ctf"}
+```
 
 ### Events
 
