@@ -170,7 +170,7 @@ you'll now also have access to the previous folder when using that API).
 
 #### API
 
-* New manifest flag for running background tasks when a user uninstalls an app like removing files DLLs, logs, images, and other files injected into the user's machine.
+* New manifest flag for running background tasks when a user uninstalls an app like removing files, logs, images, etc...
   * You can set the new manifest flag (under "data"):  
     `"uninstall_window": { "file": "name.html", "required_runtime": 20000 }`
   * More info [here](manifest-json#uninstall_window-object).
