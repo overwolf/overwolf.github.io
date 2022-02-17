@@ -61,11 +61,11 @@ Data Example:
 ```
 List of possible values:
 * intro
-* transfer_to_lobby
 * lobby
 * match_start_countdown
 * loading
 * ingame
+* transfer_to_lobby
 
 ## `match_info`
 
@@ -145,6 +145,9 @@ In this case the possible values are:
 * arena:slayer
 * arena:strongholds
 * btb:slayer
+* btb:ctf
+* btb:stockpile
+* btb:total_control
 * fiesta:slayer
 * ranked:ctf
 * ranked:oddball
