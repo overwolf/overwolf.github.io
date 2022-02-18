@@ -19,8 +19,8 @@ Here you can find our [Developers Roadmap](https://trello.com/b/1V10E4IB/overwol
  * [Rainbow Six Siege](overwolf-games-events-rainbow-six)
    * Add player_id in roster - [here](overwolf-games-events-rainbow-six#roster)
 
- * [World of Warcraft](overwolf-games-events-wow)
-   * Add new event for Addons varaibles var_addon_xx
+ <!--* [World of Warcraft](overwolf-games-events-wow)
+   * Add new event for Addons varaibles var_addon_xx-->
 
  * [Halo Infinite](overwolf-games-events-halo-infinite)
    * Add new info updates
