@@ -106,7 +106,7 @@ Possible values for `class`:
 key            | Category         | Values                               | Notes                            | Since GEP Ver. |
 -------------- | -----------------| ------------------------------------ | -------------------------------- | -------------  | 
 addon_xx      | addons           | Name, version number (if exists), and status of addon. | See [notes](#addon-note)   | 189.0 |
-var_addon_xx      | addons           | varaibles sent by addons. | See [notes](#var_addon-note)   | 191.0 |
+<!--var_addon_xx      | addons           | varaibles sent by addons. | See [notes](#var_addon-note)   | 191.0 |-->
 
 #### *addon* note
 
@@ -123,7 +123,7 @@ Possible values:
 {"info":{"addons":{"addon_10":"{"name":"DBM-StatusBarTimers","version":"8110645","status":"1"}"}},"feature":"addons"}
 ```
 
-#### *var_addon* note
+<!--#### *var_addon* note
 
 * This info-update should be used by addon creators who wish to integrate their WoW addon with an Overwolf app.
 * The event is not fired everytime but occurs only if the value of the variable has changed.
@@ -147,3 +147,4 @@ Data Example:
 ```json
 {"feature":"addons","category":"addons","key":"var_addon_1","value":"{\"owf_var2\":\"test 123\",\"owf_var5\":\"123 test\",\"owf_var6\":\"55\"}"}
 ```
+-->
