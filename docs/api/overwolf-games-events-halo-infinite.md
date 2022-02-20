@@ -253,7 +253,7 @@ As you can see, this object includes:
 * **team** – The team of the player.
 * **local** - “true” when the player is the local player that play, "false” when it's another player in the game.
  
-When a player “leaves” the match the roster will be updated with the player in the match
+When a player “leaves” the match, the roster will be updated with another player that is in the match.
 When the match end, the roster value is returned empty, example: 
 
 Data Example:
