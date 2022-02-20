@@ -62,7 +62,7 @@ key          | Category    | Values                    | Notes                 |
 ------------ | ------------| ------------------------- | --------------------- | ------------- | 
 scene        | game_info   | The name of the current scene. |See [notes](#scene-note)|   153.0       |
 name         | game_info   | The name of the local player. |See [notes](#name-note)|   153.0       |
-player_X         | game_info   | The list of players in the current game. |See [notes](#player_X-note)|   153.0       |
+player_X         | game_info   | The list of players in the current game. |See [notes](#player_X-note)|   191.0       |
 
 #### *scene* note
 
