@@ -877,7 +877,9 @@ This event is currently NOT supported.
 Event      | Event Data  | Fired When          | Notes              | Since GEP Ver. |
 -----------| ------------| ------------------- | ------------------ | --------------|
 matchStart | null        | Match has started   |  Match has started |   140.0       |
-matchEnd   | null        |  Match has ended     |  Match is ended    |   140.0       |
+matchEnd   | null        |       |  deprecated    |         |
+
+* matchEnd is deprecated, you can use the [annoncer](#announcer) DEFEAT/VICTORY insted or the launcher game flow [here](overwolf-games-launchers-events-lol#game_flow)
 
 ## `match_info`
 
