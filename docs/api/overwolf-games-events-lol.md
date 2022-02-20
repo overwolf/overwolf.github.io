@@ -879,7 +879,7 @@ Event      | Event Data  | Fired When          | Notes              | Since GEP 
 matchStart | null        | Match has started   |  Match has started |   140.0       |
 matchEnd   | null        |       |  deprecated    |         |
 
-* matchEnd is deprecated, you can use the [annoncer](#announcer) DEFEAT/VICTORY insted or the launcher game flow [here](overwolf-games-launchers-events-lol#game_flow)
+* matchEnd is deprecated, you can use the [announcer](#announcer) DEFEAT/VICTORY insted or the launcher game flow [here](overwolf-games-launchers-events-lol#game_flow)
 
 ## `match_info`
 
