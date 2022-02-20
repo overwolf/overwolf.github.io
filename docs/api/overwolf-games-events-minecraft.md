@@ -62,6 +62,7 @@ key          | Category    | Values                    | Notes                 |
 ------------ | ------------| ------------------------- | --------------------- | ------------- | 
 scene        | game_info   | The name of the current scene. |See [notes](#scene-note)|   153.0       |
 name         | game_info   | The name of the local player. |See [notes](#name-note)|   153.0       |
+player_X         | game_info   | The list of players in the current game. |See [notes](#player_X-note)|   153.0       |
 
 #### *scene* note
 
@@ -78,6 +79,18 @@ Data Example:
 
 ```json
 {"info":{"game_info":{"name":"OverwoldDeBest"}},"feature":"game_info"}
+```
+
+#### *player_X* note
+
+* A full players list is sent each time a player get in or out from the game
+* The position of each player in the list can vary from time to time 
+* In case "players visibility toggle" is turned on, this info update will not send values
+
+Data Example:
+
+```json
+{"feature":"game_info","category":"game_info","key":"player_3","value":"Nor555"}
 ```
 
 ## `match_info`
