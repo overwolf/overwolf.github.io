@@ -780,7 +780,6 @@ Data Example:
 key               | Category    | Values                    | Notes                 | Since GEP Ver. |
 ----------------- | ------------| ------------------------- | --------------------- | ------------- |
 ping              | performance | Latency to server         |                       |               |
-
 -->
   
 ## `mvp`
