@@ -4,8 +4,6 @@ title: CLI
 sidebar_label: CLI
 ---
 
-This article will Comming soon
+The Overwolf CLI is a tool to help you manage your Overwolf Applications. It's currently in early development, and we'll be adding more and more features over time.
 
-## Comming soon
-
-Comming soon
+[`Overwolf CLI and documentation`](https://www.npmjs.com/package/@overwolf/ow-cli)
