@@ -57,6 +57,21 @@ Data Example:
 {"info":{"match_info":{"map":"woods"}},"feature":"match_info"}
 ```
 
+Possible map values:
+* "laboratory" = The Lab
+* "Tarkov Streets" = Streets of Tarkov
+* "Suburbs" = Suburbs
+* "Interchange" = Interchange
+* "bigmap" = Customs
+* "factory4_day" = Factory (day)
+* "factory4_night" = Factory (night)
+* "Woods" = Woods
+* "Town" = Town
+* "RezervBase" = Reserve
+* "Lighthouse" = Lighthouse
+* "Shoreline" = Shoreline
+* "Terminal" = Terminal
+
 ### Events
 
 Event       | Event Data   | Fired When    | Notes              | Since GEP Ver. |
