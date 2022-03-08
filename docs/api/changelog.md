@@ -11,6 +11,9 @@ Here you can find our [Developers Roadmap](https://trello.com/b/1V10E4IB/overwol
 
 * This patch includes a bunch of under the hood changes for some upcoming APIs.
 
+#### Dev Console
+* [`CLI`](https://www.npmjs.com/package/@overwolf/ow-cli) - A new tool to help you manage your Overwolf app
+
 #### Game events
 
  * [Minecraft](overwolf-games-events-minecraft)
