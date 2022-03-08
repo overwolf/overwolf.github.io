@@ -772,14 +772,14 @@ If an extra params has been sent (e.g. "outplayed://something/null"), the [onApp
 ## uninstall_window object
 
 This manifest flag triggers the client to run a window on app uninstall for a required time set.
-Use it for running uninstall background actions like removing DLLs, logs, images, and other files injected by the app to the user's machine.
+Use it for running uninstall background actions like removing DLLs, logs, images, and other files injected by the app to the user's machine. You can also use it for showing an uninstall survey (in the user's default browser).
 
 * If it exists, the client will run this window in the background for the required time (or 10 seconds by default. Valid up to 1 minute) before actually uninstalling an app.
-* When the flag is set, the OW client will run this window in the background right BEFORE the app is removed.
-* If the overwolf client is uninstalled, the uninstaller will let the client run all uninstall windows before actually uninstalling overwolf.
+* When the flag is set, the Overwolf client will run this window in the background right BEFORE the app is removed.
+* If the Overwolf client is uninstalled, the uninstaller will let the client run all uninstall windows before actually uninstalling overwolf.
 
 :::important
-The uninstall window is running in the background. Do not add any UI element or links that opens other windows, user browser, etc.
+The uninstall window is running in the background, you shouldn't open any Overwolf app window while it's running. You can open the user's default browser (for uninstall survey for example).
 :::
 
 | Name                      | Type   | Description                                                                                                               | Since |
