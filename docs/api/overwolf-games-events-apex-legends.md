@@ -209,7 +209,7 @@ roster_XX  | match_info  | Provides the entire list of players in a match (~60 p
 Each player joining the game will be reported in the following way:
 
 ```json
-{"info":{"match_info":{"roster_13":"{"name":"ilgaru88","isTeammate":true,"team_id":12,"platform_hw":2,"platform_sw":2,"state":"alive"}"}},"feature":"roster"}
+{"info":{"match_info":{"roster_13":"{"name":"ilgaru88","isTeammate":true,"is_local":1,"team_id":12,"platform_hw":2,"platform_sw":2,"state":"alive"}"}},"feature":"roster"}
 ```
 
 As you can see, this object includes:
@@ -218,6 +218,7 @@ As you can see, this object includes:
 * `isTeammate` (Bool) - Player is/isn't a squad member
 * `team_id` - Numerical value for each squad in-game.
 * `platform` - The platform which the player plays on currently.
+* `is_local` - where 1 is the local player else 0.
 
 Possible platform values:
 
@@ -454,6 +455,22 @@ The following properties are provided:
 * victimName
 * weaponName
 * action
+
+Action possible values:
+
+* kill
+* headshot_kill
+* knockdown
+* knockdown
+* Bleed_out
+* Finisher
+* Melee
+* Smoke Launcher
+* Creeping Barrage
+* Caustic Gas
+* Kunai Melee
+* Perimeter Security
+* Defensive Bombardment
 
 #### Event data example
 
