@@ -11,7 +11,9 @@ Please read the [overwolf.games.events](overwolf-games-events) documentation pag
 :::
 
 :::note Game State Integration
-Due to a recent update in Dota 2 in order for Overwolf apps to work correctly you will need to add an additional launch command [More details here](https://support.overwolf.com/en/support/solutions/articles/9000212745-how-to-enable-game-state-integration-for-dota-2)
+Due to a recent update in Dota 2 in order for Overwolf apps to work correctly you will need to inform your users to add under Launch Options the following command line: 
+-gamestateintegration - [More details here](https://support.overwolf.com/en/support/solutions/articles/9000212745-how-to-enable-game-state-integration-for-dota-2)
+In order to know which user is already using this command line param you should use getGameInfo API there you will get this parameter in the result under LauncherCommandLineParams - [More details here](/overwolf-games#getgameinforesult-object)
 :::
 
 ## Sample Apps
