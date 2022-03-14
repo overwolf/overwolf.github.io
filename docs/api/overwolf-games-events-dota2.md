@@ -10,6 +10,10 @@ Please read the [overwolf.games.events](overwolf-games-events) documentation pag
 7314
 :::
 
+:::note Game State Integration
+Due to a recent update in Dota 2 in order for Overwolf apps to work correctly you will need to add an additional launch command [More details here](https://support.overwolf.com/en/support/solutions/articles/9000212745-how-to-enable-game-state-integration-for-dota-2)
+:::
+
 ## Sample Apps
 * [Dota2 game events sample app](https://github.com/overwolf/events-sample-apps/tree/master/dota-events-sample-app-master)
 
