@@ -1027,10 +1027,10 @@ Parameter       | Type          | Description             |
 ----------------| --------------| ----------------------- |
 id              | string        |                         |
 name            | string        |                         |
-width           | number        |                         | 
-height          | number        |                         | 
-top             | number        |                         | 
-left            | number        |                         | 
+width           | number        | with DPI conversion     | 
+height          | number        | with DPI conversion     | 
+top             | number        | with DPI conversion     | 
+left            | number        | with DPI conversion     | 
 monitorId       | string        |                         | 
 isVisible       | boolean       |                         | 
 state           | string        | deprecated and kept only for backward compatibility  |
