@@ -124,7 +124,45 @@ In this section you can see the amount of extensions the user has, which extensi
 2021-07-20 10:21:04,955 (INFO) [UI][12564] ExtensionDataManager - Loading extension fiekjlgoffmlmgfmggnoeoljkmfkcapcdmcgcfgm silently...
 2021-07-20 10:21:05,100 (INFO) [UI][12564] ExtensionDataManager - Collecting uninstalled extensions from extension installation folder...
 ```
+## User Settings
 
+In this section you can view the setting of each Overwolf app from the Overwolf settings such as if the app is set to auto-launch and hotkeys associated with the app:
+
+```
+================ USER SETTINGS ================
+2022-03-01 14:51:55,693 (INFO) [20][23684] UserInformationLog - Installed apps:
+Game Capture (lnhebboianabbebhnpoodokcdcnmikacoeijpjfe) - autolaunch:
+(Start/Stop video capturing, Shift+F10), (Take a screenshot, Shift+F11), (Show/Hide My Videos, Unassigned), (Show/Hide Game Capture app, Unassigned)
+9898: (Start/Stop video capturing, Back), (Show/hide main window, Alt+C), (Show/hide battlegrounds window, Alt+B), (Show HearthArena Companion Full-App, Ctrl+R), (Show live information (only BG for now), Tab)
+TFTactics (delfmdadipjjmpajblkalfkbebcbldbknecigjpc) - autolaunch: 5426
+5426: (In-Game, Ctrl+T), (Database, Ctrl+G), (Lobby, Unassigned), (Show/Hide In-Game Window, Ctrl+H), (Next Page Second Screen Window, Unassigned), (Toggle monitor, Ctrl+Up), (Show/Hide, Ctrl+X), (Send ingame window to another screen, Ctrl+Shift+X), (Show/Hide Secondary, Alt+X), (Show/Hide Live Stats Overlay, Alt+Shift+X)
+Trophy Hunter (hgiobbchekblfkiionmkcedlnhbkpdkekmcnceki) - autolaunch: 5426,10902
+5426: (In-Game, Ctrl+T), (Database, Ctrl+G), (Lobby, Unassigned), (Show/Hide In-Game Window, Ctrl+H), (Next Page Second Screen Window, Unassigned), (Toggle monitor, Ctrl+Up), (Show/Hide, Ctrl+X), (Send ingame window to another screen, Ctrl+Shift+X), (Show/Hide Secondary, Alt+X), (Show/Hide Live Stats Overlay, Alt+Shift+X)
+CurseForge (cchhcaiapeikjbdbpfplgmpobbcdkdaphclbmkbj) - autolaunch:
+Firestone (lnknbakkpommmjjdnelmfbjjdbocfpnpbkijjnob) - autolaunch:
+9898: (Start/Stop video capturing, Back), (Show/hide main window, Alt+C), (Show/hide battlegrounds window, Alt+B), (Show HearthArena Companion Full-App, Ctrl+R), (Show live information (only BG for now), Tab)
+Porofessor.gg (pibhbkkgefgheeglaeemkkfjlhidhcedalapdggh) - autolaunch:
+21620: (Show/Hide, Ctrl+X), (Send ingame window to another screen, Ctrl+Shift+X), (Show/Hide Secondary, Alt+X), (Show/Hide Live Stats Overlay, Alt+Shift+X)
+5426: (In-Game, Ctrl+T), (Database, Ctrl+G), (Lobby, Unassigned), (Show/Hide In-Game Window, Ctrl+H), (Next Page Second Screen Window, Unassigned), (Toggle monitor, Ctrl+Up), (Show/Hide, Ctrl+X), (Send ingame window to another screen, Ctrl+Shift+X), (Show/Hide Secondary, Alt+X), (Show/Hide Live Stats Overlay, Alt+Shift+X)
+HearthArena (eldaohcjmecjpkpdhhoiolhhaeapcldppbdgbnbc) - autolaunch:
+9898: (Start/Stop video capturing, Back), (Show/hide main window, Alt+C), (Show/hide battlegrounds window, Alt+B), (Show HearthArena Companion Full-App, Ctrl+R), (Show live information (only BG for now), Tab)
+Outplayed (cghphpbjeabdkomiphingnegihoigeggcfphdofo) - autolaunch: all except 10624, 10746, 10760, 10774, 10798, 10826, 10844, 10868, 10872, 10874, 10878, 10880, 10894, 15148, 21204, 21214, 21220, 21308, 21404, 21480, 21570, 21586, 21616, 21620, 21624, 21626, 21630, 21634, 21648, 21650, 21652, 21656, 21666, 21782, 21800, 21854, 3026, 3683, 4688, 5855, 6365, 7212, 7314, 765, 7764, 7784, 8032, 8134, 8584, 8954, 9898
+(Start/stop recording, Ctrl+F4), (Record a Replay, Ctrl+F3), (Take a Screenshot, Ctrl+F2), (Show/hide Outplayed in-game, Ctrl+O)
+Intel Gaming Access (acibipjmghoeafghadnbbjdpofabgdicbjppneee) - autolaunch: all
+2022-03-01 14:51:55,695 (INFO) [20][23684] UserInformationLog - |General settings
+2022-03-01 14:51:55,695 (INFO) [20][23684] UserInformationLog - | startup launch: True
+2022-03-01 14:51:55,696 (INFO) [20][23684] UserInformationLog - | dock keep visible: True, MouseOver
+2022-03-01 14:51:55,696 (INFO) [20][23684] UserInformationLog - | hardware acceleration: True
+2022-03-01 14:51:55,700 (INFO) [20][23684] UserInformationLog - |Capture settings
+2022-03-01 14:51:55,700 (INFO) [20][23684] UserInformationLog - | shared texture compatibility: False
+2022-03-01 14:51:55,701 (INFO) [20][23684] UserInformationLog - | screenshots folder: C:\Users\orman\Pictures\Overwolf
+2022-03-01 14:51:55,701 (INFO) [20][23684] UserInformationLog - | videos folder: E:\סרטונים\Game capture
+2022-03-01 14:51:55,701 (INFO) [20][23684] UserInformationLog - | frame rate: 60
+2022-03-01 14:51:55,701 (INFO) [20][23684] UserInformationLog - | encoding codec: NVIDIA_NVENC_NEW
+2022-03-01 14:51:55,702 (INFO) [20][23684] UserInformationLog - | encoding preset: AUTOMATIC
+2022-03-01 14:51:55,702 (INFO) [20][23684] UserInformationLog -
+================ |END USER SETTINGS ================
+```
 ## OW Helpers info
 
 In this section you can see the Overwolf Helpers starting:
