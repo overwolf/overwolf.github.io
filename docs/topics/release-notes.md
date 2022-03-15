@@ -4,7 +4,7 @@ title: Release notes
 sidebar_label: Release notes
 ---
 
-This article explains how to use public and internal release notes for each of your app versions.
+This article explains how to publish and display public release notes for each of your app versions.
 
 ## Public release notes
 
