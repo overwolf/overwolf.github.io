@@ -27,10 +27,17 @@ Here you can find our [Developers Roadmap](https://trello.com/b/1V10E4IB/overwol
 * Soon
 
 #### Platform
-* Soon
+- Improved Overwolf's memory footprint.
+- New `manifest.json`:
+  - `author_display` - located under the `meta` object. Changes the author
+  name without changing the app's UID.
 
 #### Bug Fixes
-* Soon
+- Fixed an [issue](https://discuss.overwolf.com/t/monitorhandle-value-does-not-always-match-monitor-list-handle-values/2484) with `overwolf.utils.getMonitorsList`.
+- Fixed an [issue](https://discuss.overwolf.com/t/recording-not-stopping-when-game-is-closed-cs-go-cod-warzone/2465) where the Overwolf recording process wouldn't shut down when exiting the game.
+- Created a recovery mechanism when Overwolf apps fail validation.
+- Fixed cases of Overwolf not detecting processes sometimes, such as the
+*League of Legends launcher*.
 
 ## Version 0.191 (Feb 2022)
 
