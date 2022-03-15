@@ -13,7 +13,7 @@ This article explains how to use public and internal release notes for each of y
 1. Upload a new OPK to the production environment on the Developers Console.
 2. Click on the "Add release notes" button.
 3. Enter your release notes for this version in the markdown format (you can also use the predefined headers: `(new)`, `(improved)` and `(bugs)`)
-4. Preview your release notes by clicking on the "Preview" tab.
+4. Preview your release notes by clicking the "Preview" button.
 5. Make sure that the "Publish" switch is on.
 6. Save 
 
