@@ -17,8 +17,8 @@ Here you can find our [Developers Roadmap](https://trello.com/b/1V10E4IB/overwol
 
 #### Game events
 
-* [Dota](/overwolf-games-events-dota2)
-  * Due to a recent game update that disable GSI (Game State Integration) and in order for Overwolf apps to work correctly please read the note [here](/overwolf-games-events-dota2)
+* [Dota](overwolf-games-events-dota2)
+  * Due to a recent game update that disable GSI (Game State Integration) and in order for Overwolf apps to work correctly please read the note [here](overwolf-games-events-dota2)
 
 #### Docs
 * Soon
