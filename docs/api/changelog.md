@@ -7,6 +7,31 @@ sidebar_label: Changelog
 Follow this entry for ongoing updates and changes to the project or tools.
 Here you can find our [Developers Roadmap](https://trello.com/b/1V10E4IB/overwolf-roadmap).
 
+## Version 0.194 (In progress)
+
+* Note that iterations 192 to 194 were combined into a single iteration. 
+* Please note that this version is still in progress 
+
+#### Dev Console
+* Soon
+
+#### Game events
+
+* [Dota](/overwolf-games-events-dota2)
+  * Due to a recent game update that disable GSI (Game State Integration) and in order for Overwolf apps to work correctly please read the note [here](/overwolf-games-events-dota2)
+
+#### Docs
+* Soon
+
+#### API
+* Soon
+
+#### Platform
+* Soon
+
+#### Bug Fixes
+* Soon
+
 ## Version 0.191 (Feb 2022)
 
 * This patch includes a bunch of under the hood changes for some upcoming APIs.
