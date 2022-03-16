@@ -75,7 +75,7 @@
     },
 	"service": {
         "Games Events Status": 
-			["status/all", "status/apex", "status/csgo", "status/dota2", "status/ff-xiv","status/underlords", "status/escape-from-tarkov", "status/eternal-return", "status/fm2021","status/fm2022", "status/fortnite", "status/halo-infinite", "status/hearthstone", "status/heroes-of-the-storm", "status/hunt-showdown", "status/lor", "status/lol", "status/lol-launcher", "status/minecraft", "status/mtga", "status/new-world", "status/overwatch", "status/path-of-exile", "status/pubg", "status/pubg-lite", "status/rainbow-six-siege", "status/rocket-league", "status/sc2","status/splitgate", "status/teamfight-tactics", "status/valheim", "status/valorant", "status/world-of-tanks","status/world-of-warcraft","status/world-of-warships","status/warframe","status/warzone"]
+			["status/all", "status/apex", "status/warzone", "status/csgo", "status/dota2", "status/underlords", "status/escape-from-tarkov", "status/eternal-return", "status/ff-xiv","status/fm2021","status/fm2022", "status/fortnite", "status/halo-infinite", "status/hearthstone", "status/heroes-of-the-storm", "status/hunt-showdown", "status/lor", "status/lol", "status/lol-launcher", "status/minecraft", "status/mtga", "status/new-world", "status/overwatch", "status/path-of-exile", "status/pubg", "status/pubg-lite", "status/rainbow-six-siege", "status/rocket-league", "status/sc2","status/splitgate", "status/teamfight-tactics", "status/valheim", "status/valorant", "status/world-of-tanks","status/world-of-warcraft","status/world-of-warships","status/warframe"]
 		},
 	"support": {
         "Support": 
