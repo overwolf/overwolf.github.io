@@ -109,6 +109,7 @@ While the possible values are:
 * Multiplayer > Arcade Playlist: `MATCHMAKING_PVP_EVENT`
 * Multiplayer > Unranked: `MATCHMAKING_PVP_UNRANKED`
 * Multiplayer > Ranked: `MATCHMAKING_PVP_RANKED`
+* Multiplayer > Deathmatch: 'MATCHMAKING_PVP_WARMUP'
 * Multiplayer > Custom game > Local: `CUSTOMGAME_PVP`
 * Multiplayer > Custom game > Online: `CUSTOMGAME_PVP_DEDICATED`
 * Player vs. AI > Situations: `OPERATIONS`
