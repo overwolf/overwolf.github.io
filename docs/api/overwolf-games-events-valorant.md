@@ -211,6 +211,8 @@ Data Example:
 <b>*Important:*</b> If players (or local player) in the match activate the option to hide their names from players outside their party, the output you will see will be the name of the agent (like `Jett` or in the case of the local player it will be `Me`) instead.
 It is language dependant, so that is also important to take into account.
 
+<b>*Important:*</b> Roster is not supported in game mode "escalation" 
+
 Data Example:
 
 ```json
