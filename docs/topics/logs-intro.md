@@ -92,4 +92,4 @@ In the Overlay game HTML you will find:
 * If the hotkeys were sent and received by Overwolf 
 * If the game ended properly or crashes
 
-Read more about the OverwolfPerf log [here](logs-html).
+Read more about the Overlay game HTML [here](logs-html).
