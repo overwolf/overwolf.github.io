@@ -20,6 +20,9 @@ Here you can find our [Developers Roadmap](https://trello.com/b/1V10E4IB/overwol
 * [Dota](overwolf-games-events-dota2)
   * Due to a recent game update that disable GSI (Game State Integration) and in order for Overwolf apps to work correctly please read the note [here](overwolf-games-events-dota2)
 
+* [League of Legends](overwolf-games-events-lol)
+  * Add new event "team_frames" for the counter of the ultimate cooldown of the players in the game
+
 #### Docs
 * Soon
 
