@@ -39,6 +39,7 @@ Note that you can also use the LOL game launcher events. Read more [here](overwo
 * [damage](#damage)
 * [heal](#heal)
 * [jungle_camps](#jungle_camps)
+* [team_frames](#team_frames)
 
 
 ## Game events status
@@ -1567,4 +1568,22 @@ Data Example:
 {"info":{"jungle_camps":{"jungle_camp_4":"{"name":"monsterCamp_4","alive":true,"vision":true,"icon_status":"0"}"}},"feature":"jungle_camps"}
 {"info":{"jungle_camps":{"jungle_camp_4":"{"name":"monsterCamp_4","alive":false,"vision":true,"icon_status":"1"}"}},"feature":"jungle_camps"}
 {"info":{"jungle_camps":{"jungle_camp_4":"{"name":"monsterCamp_4","alive":false,"vision":true,"icon_status":"2"}"}},"feature":"jungle_camps"}
+```
+
+## `team_frames`
+
+### Info Updates
+
+key  | Category    | Values                                     | Notes  | Since GEP Ver. |
+-----| ------------| -------------------------------------------| ------ | ------------- |
+team_frames_x | game_info | Cooldown timer of the ultimate of the players in seconds. |See [notes](#team_frames)|    193.0      |
+
+#### *team_frames* note:
+
+This info update is showing the cooldown timer of the ultimate ability of each player in seconds.<br>
+Value in "team_frames_0" is the player to the left until "team_frames_3" to the last player to the right.<br>
+The value in ult_cd stands for ultimate dooldown and it is in seconds.
+
+```json
+{"info":{"game_info":{"team_frames_1":"{\"ult_cd\":47}"}},"feature":"team_frames"}
 ```
