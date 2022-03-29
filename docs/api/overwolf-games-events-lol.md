@@ -1582,7 +1582,7 @@ team_frames_x | game_info | Cooldown timer of the ultimate of the players in sec
 
 This info update is showing the cooldown timer of the ultimate ability of each player in seconds.<br>
 Value in "team_frames_0" is the player to the left until "team_frames_3" to the last player to the right.<br>
-The value in ult_cd stands for ultimate dooldown and it is in seconds.
+The value in ult_cd stands for ultimate cooldown in seconds.
 
 ```json
 {"info":{"game_info":{"team_frames_1":"{\"ult_cd\":47}"}},"feature":"team_frames"}
