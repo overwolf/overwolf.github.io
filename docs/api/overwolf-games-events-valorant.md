@@ -213,6 +213,33 @@ It is language dependant, so that is also important to take into account.
 
 <b>*Important:*</b> Roster is not supported in game mode "escalation" 
 
+<details open>
+<summary>Rank value in roster can be translated using this list (Apr. 2022)</summary>
+* 0 - Unranked
+* 3 - Iron_01
+* 4 - Iron_02
+* 5 - Iron_03
+* 6 - Bronze_01  
+* 7 - Bronze_02
+* 8 - Bronze_03
+* 9 - Silver_01
+* 10 - Silver_02
+* 11 - Silver_03
+* 12 - Gold_01
+* 13 - Gold_02
+* 14 - Gold_03
+* 15 - Platinum_01
+* 16 - Platinum_02
+* 17 - Platinum_03
+* 18 - Diamond_01
+* 19 - Diamond_02
+* 20 - Diamond_03
+* 21 - Immortal_01
+* 22 - Immortal_02
+* 23 - Immortal_03
+* 24 - Radiant
+</details>
+
 Data Example:
 
 ```json
