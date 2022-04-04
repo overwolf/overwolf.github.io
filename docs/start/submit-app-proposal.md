@@ -38,6 +38,10 @@ To help you prepare a kick-ass proposal, here’s what we recommend you do first
 
 Whether you’re new to Overwolf or a returning developer, it’s imperative you go over our documentation. We’re constantly updating our documentation with current features, so this is the best way for you to remain updated about all the tools and features you can harness.
 
+:::note Whitelist as a developer
+Only whitelisted Overwolf developer accounts can load or install apps that not available on the Overwolf store, including unreleased beta versions. If you are not whitelisted you will not be able to run or install such apps, which means testing your work in progress will be hard.
+:::
+
 ### Prepare your proposal
 
 Submitting your app concept for review is easy, and we’re not looking for a complete set of technical documents at this point. Instead, the goal at this stage is creating a clear, concise description of what the app is and how it will work for gamers. We also want to see a mockup of your planned User Interface. This proposal (and the app itself) must be in English, although you may freely support more languages in the final app.
