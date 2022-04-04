@@ -89,7 +89,12 @@ All major browsers except Safari currently support IndexedDB.
 Use the [IndexedDB API](http://www.w3.org/TR/IndexedDB/) to set and get data:
 
 ```js
+var db; // create empty variable to hold database if opening succeeds
 var request = indexedDB.open("myDatabase"); //the first step is to open a database
+
+request.onsuccess = (event) => {
+  db = request.result; // if things go well, we will get the db in the `result` property of our request
+}
 
 //create an object store (which is something very much like a table)
 var objectStore = db.createObjectStore("players", {keyPath: "id"}); 
@@ -98,6 +103,8 @@ objectStore.add(customerData[i]); //add data
 ```
 
 IndexedDB is the way to go if you're building an application that needs to store structured data. Just be aware of the steep learning curve when you're getting started.
+
+IndexedDB learning curve can be steep, but this very simple app can be a good place to start: [TODO-notifications sample app](https://github.com/mdn/to-do-notifications)
 
 ## Application Cache
 
