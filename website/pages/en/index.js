@@ -63,7 +63,7 @@ function SdkSection(props) {
           <SdkItem className="reversed" config={siteConfig} imgSrc="img/events.png">
           <img className="mobile" src="img/events-mobile.png" />
             <a href={`${baseUrl}docs/api/overwolf-games-events`}>Get access to real-time game events</a> for leading games and make your app as if it were integrated directly with the game itself
-            
+
           </SdkItem>
           <SdkItem config={siteConfig} classNameImg="extra-padding-on-desktop" imgSrc="img/monetize.png">
             <a href={`${baseUrl}docs/start/monetization-overview`}>Monetize your app</a> and make money by showing forgivable ads (= ads on loading screens, when gamers don’t have anything better to do anyway). It’s easier than implementing AdSense, not affected by ad blockers, not obtrusive and our team will optimize the experience with you
@@ -105,18 +105,18 @@ function GameDevSection(props) {
   );
 }
 
-function BlogSection(props) {
-  return (
-    <section className="blog">
-      <div className="container">
-        <h3 id="blogHeader">The latest from our blog</h3>
-        <div id="medium-widget"></div>
-        <script src="https://medium-widget.pixelpoint.io/widget.js"></script>
-        <script src="js/blog.js"></script>
-      </div>
-    </section>
-  );
-}
+// function BlogSection(props) {
+//   return (
+//     <section className="blog">
+//       <div className="container">
+//         <h3 id="blogHeader">The latest from our blog</h3>
+//         <div id="medium-widget"></div>
+//         <script src="https://medium-widget.pixelpoint.io/widget.js"></script>
+//         <script src="js/blog.js"></script>
+//       </div>
+//     </section>
+//   );
+// }
 
 class Index extends React.Component {
   render() {
@@ -127,7 +127,7 @@ class Index extends React.Component {
           <EasilySection config={siteConfig}></EasilySection>
           <TilesSection config={siteConfig}></TilesSection>
           <SdkSection config={siteConfig}></SdkSection>
-          <BlogSection></BlogSection>
+          {/* <BlogSection></BlogSection> */}
           <GameDevSection config={siteConfig}></GameDevSection>
         </main>
       </div>
