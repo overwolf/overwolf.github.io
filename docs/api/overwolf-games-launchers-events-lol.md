@@ -194,6 +194,7 @@ key   | Category    | Values                    | Notes                 | Since 
 ------| ------------| ------------------------- | --------------------- | ------------- |
 tft_end_game_stats | end_game_tft| See [notes](#tft_end_game_stats-note) |                |   134.0       |
 lol_end_game_stats | end_game_lol| See [notes](#lol_end_game_stats-note) |                |   137.0       |
+league_points | end_game_lol| See [notes](#league_points_stats-note) |                |   194.0       |
 
 #### *tft_end_game_stats* note
 
@@ -543,6 +544,15 @@ Data includes information such as:
 
 </details>
 
+#### *league_points_stats* note
+
+Total league points earned in the last game
+
+Data Example:
+
+```json
+{"feature":"end_game","category":"end_game_lol","key":"league_points","value":56}
+```
 
 ## `lcu_info`
 
