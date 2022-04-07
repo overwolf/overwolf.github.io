@@ -307,7 +307,7 @@ callback    | UploadClientLogsResult  | A callback function which will be called
 
 Parameter   | Type     | Description                                 |
 ----------- | ---------| --------------------------------------------|
-UploadClientLogsOptions | [UploadClientLogsOptions](#uploadclientlogsoptions-object) Object | Options 
+UploadClientLogsOptions | [UploadClientLogsOptions](#uploadclientlogsoptions-object) Object | Options object you can pass when calling the function
 callback    | UploadClientLogsResult  | A callback function which will be called with the status of the request |
 
 ## UploadClientLogsOptions Object
