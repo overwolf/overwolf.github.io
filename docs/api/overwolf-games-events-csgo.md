@@ -779,7 +779,7 @@ Data Example:
 
 key               | Category    | Values                    | Notes                 | Since GEP Ver. |
 ----------------- | ------------| ------------------------- | --------------------- | ------------- |
-ping              | performance | Latency to server         |                       |               |
+ping              | performance | Latency to server         |                       |       197.0        |
 
 ```json
 {"info":{"performance":{"ping":"68"}},"feature":"counters"}
