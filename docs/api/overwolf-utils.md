@@ -55,6 +55,7 @@ Common use cases:
 * [overwolf.utils.GetPeripheralsResult](#getperipheralsresult-object) Object
 * [overwolf.utils.IsMouseLeftButtonPressedResult](#ismouseleftbuttonpressedresult-object) Object
 * [overwolf.utils.Result:ClientUpdateStatusResult](#clientupdateresult-object) Object
+* [overwolf.utils.UploadClientLogsOptions](#uploadclientlogsoptions-object) Object
 
 ## placeOnClipboard(data)
 #### Version added: 0.80
@@ -296,6 +297,7 @@ Parameter   | Type     | Description                                 |
 ----------- | ---------| --------------------------------------------|
 callback    | UploadClientLogsResult  | A callback function which will be called with the status of the request |
 
+
 ## uploadClientLogs(UploadClientLogsOptions, callback)
 #### Version added: 0.194
 
@@ -305,8 +307,19 @@ callback    | UploadClientLogsResult  | A callback function which will be called
 
 Parameter   | Type     | Description                                 |
 ----------- | ---------| --------------------------------------------|
-options     | UploadClientLogsOptions | Options 
+UploadClientLogsOptions | [UploadClientLogsOptions](#uploadclientlogsoptions-object) Object | Options 
 callback    | UploadClientLogsResult  | A callback function which will be called with the status of the request |
+
+## UploadClientLogsOptions Object
+#### Version added: 0.194
+
+> Additional options when using the UploadClientLogs API
+
+
+Parameter                 | Type     | Description                   |
+------------------------- | ---------| ----------------------------- |
+filePrefix  | string  | This property allows you to choose the prefix of the uploaded log file.  |
+
 
 
 ## checkForClientUpdates(callback)
