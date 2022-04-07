@@ -33,6 +33,7 @@ Common use cases:
 * [overwolf.utils.openStoreOneAppPage()](#openstoreoneapppageappid)
 * [overwolf.utils.openStore()](#openstoreparam)
 * [overwolf.utils.isMouseLeftButtonPressed()](#ismouseleftbuttonpressedcallback)
+* [overwolf.utils.uploadClientLogs()](#uploadclientlogsuploadclientlogsoptions-callback)
 * [overwolf.utils.uploadClientLogs()](#uploadclientlogscallback)
 * [overwolf.utils.checkForClientUpdates()](#checkforclientupdatescallback)
 ## Types Reference
@@ -293,6 +294,18 @@ callback  |  ([Result: IsMouseLeftButtonPressedResult](#ismouseleftbuttonpressed
 
 Parameter   | Type     | Description                                 |
 ----------- | ---------| --------------------------------------------|
+callback    | UploadClientLogsResult  | A callback function which will be called with the status of the request |
+
+## uploadClientLogs(UploadClientLogsOptions, callback)
+#### Version added: 0.194
+
+> Upload Overwolf client logs to Overwolf servers for the current calling app
+
+
+
+Parameter   | Type     | Description                                 |
+----------- | ---------| --------------------------------------------|
+options     | UploadClientLogsOptions | Options 
 callback    | UploadClientLogsResult  | A callback function which will be called with the status of the request |
 
 
