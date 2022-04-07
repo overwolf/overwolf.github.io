@@ -310,17 +310,6 @@ Parameter   | Type     | Description                                 |
 UploadClientLogsOptions | [UploadClientLogsOptions](#uploadclientlogsoptions-object) Object | Options object you can pass when calling the function
 callback    | UploadClientLogsResult  | A callback function which will be called with the status of the request |
 
-## UploadClientLogsOptions Object
-#### Version added: 0.194
-
-> Additional options when using the UploadClientLogs API
-
-
-Parameter                 | Type     | Description                   |
-------------------------- | ---------| ----------------------------- |
-filePrefix  | string  | This property allows you to choose the prefix of the uploaded log file.  |
-
-
 
 ## checkForClientUpdates(callback)
 #### Version added: 0.191
@@ -684,6 +673,16 @@ Right now "skip_in_game_notification" is the only option.
 Parameter                 | Type     | Description                   |
 ------------------------- | ---------| ----------------------------- |
 skip_in_game_notification | boolean  | When set to true,  Do not display the pop-up warning for the user if in-game  |
+
+## UploadClientLogsOptions Object
+#### Version added: 0.194
+
+> Additional options when using the UploadClientLogs API
+
+
+Parameter                 | Type     | Description                   |
+------------------------- | ---------| ----------------------------- |
+filePrefix  | string  | This property allows you to choose the prefix of the uploaded log file.  |
 
 ## OpenFolderPickerResult Object
 
