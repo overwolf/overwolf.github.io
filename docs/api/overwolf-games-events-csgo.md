@@ -781,6 +781,9 @@ key               | Category    | Values                    | Notes             
 ----------------- | ------------| ------------------------- | --------------------- | ------------- |
 ping              | performance | Latency to server         |                       |               |
 
+```json
+{"info":{"performance":{"ping":"68"}},"feature":"counters"}
+```
   
 ## `mvp`
 
