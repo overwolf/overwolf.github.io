@@ -26,6 +26,10 @@ Here you can find our [Developers Roadmap](https://trello.com/b/1V10E4IB/overwol
 * [LEP - lol launcher](overwolf-games-launchers-events-lol)
   * Add new info update at the end of each game with the total "league points" (LP) earned in the last game, see notes [here](overwolf-games-launchers-events-lol#league_points_stats-note)
 
+* [CS:GO](overwolf-games-events-csgo)
+  * Add ping event
+  * Add nickname and ping parameters to the scoreboard - see notes [here](overwolf-games-events-csgo#scoreboard)
+
 #### Docs
 * Soon
 
