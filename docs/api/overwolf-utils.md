@@ -34,7 +34,7 @@ Common use cases:
 * [overwolf.utils.openStore()](#openstoreparam)
 * [overwolf.utils.isMouseLeftButtonPressed()](#ismouseleftbuttonpressedcallback)
 * [overwolf.utils.uploadClientLogs()](#uploadclientlogscallback)
-* [overwolf.utils.checkForClientUpdates()](#uploadclientlogscallback)
+* [overwolf.utils.checkForClientUpdates()](#checkforclientupdatescallback)
 ## Types Reference
 
 * [overwolf.utils.enums.eStorePage](#estorepage-enum) enum
