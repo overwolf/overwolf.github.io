@@ -228,7 +228,7 @@ storeapi         | Launched from the store                                      
 odk              | Launched with the overwolf.extensions.launch API                             |
 commandline      | Launched from the command line using overwolf.exe -launchapp [extension id]  |
 tray             | Launched from the tray                                                       |
-startup          | Launched upon startup (like remote configurations)                           |
+startup          | Launched upon startup                           |
 after-install    | Auto-launched after installation                                             |
 overwolfstartlaunchevent | Auto-launched with the client launch (when [app auto-launch with Overwolf](manifest-json#enable-app-auto-launch-with-overwolf) is enabled) |
 urlscheme        | Launched from custom link. See the [process_name](manifest-json#process_name) manifest flag   |
