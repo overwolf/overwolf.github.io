@@ -7,7 +7,7 @@ sidebar_label: Changelog
 Follow this entry for ongoing updates and changes to the project or tools.
 Here you can find our [Developers Roadmap](https://trello.com/b/1V10E4IB/overwolf-roadmap).
 
-## Version 0.194 (In progress)
+## Version 0.194
 
 * Note that iterations 192 to 194 were combined into a single iteration. 
 * Please note that this version is still in progress 
@@ -29,12 +29,6 @@ Here you can find our [Developers Roadmap](https://trello.com/b/1V10E4IB/overwol
 * [CS:GO](overwolf-games-events-csgo)
   * Add ping event
   * Add nickname and ping parameters to the scoreboard - see notes [here](overwolf-games-events-csgo#scoreboard)
-
-#### Docs
-* Soon
-
-#### API
-* Soon
 
 #### Platform
 - Improved Overwolf's memory footprint.
