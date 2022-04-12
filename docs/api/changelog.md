@@ -7,10 +7,32 @@ sidebar_label: Changelog
 Follow this entry for ongoing updates and changes to the project or tools.
 Here you can find our [Developers Roadmap](https://trello.com/b/1V10E4IB/overwolf-roadmap).
 
+## Version 0.195 (In progress)
+
+#### Dev Console
+- Soon
+
+#### Game events
+- Soon
+  
+#### Docs
+- Soon
+
+#### API
+- New API: `overwolf.games.tracked.onUnsupportedExecuted` - a listener function that will trigger when a process that is defined as "Unsupported" in the Gameslist launches. It's important to note that it will only trigger if the app has defined `"track_all_games":true` in the `manifest.json`.
+
+#### Platform
+- Ssoon.
+
+#### Bug Fixes
+
+- Hotkeys will now work on first launch when loading extension as unpacked.
+- Fixed an issue with video composition if the file path has a quote ( ` ) char
+- It's now possible to share to YouTube via the Overwolf API for files larger than 100MB 
+
 ## Version 0.194
 
 * Note that iterations 192 to 194 were combined into a single iteration. 
-* Please note that this version is still in progress 
 
 #### Dev Console
 * Soon
@@ -35,6 +57,9 @@ Here you can find our [Developers Roadmap](https://trello.com/b/1V10E4IB/overwol
 - New `manifest.json`:
   - `author_display` - located under the `meta` object. Changes the author
   name without changing the app's UID.
+  
+#### Recording Engine
+ - OW-OBS is now using OBS version 27.2.3
 
 #### Bug Fixes
 - Fixed an [issue](https://discuss.overwolf.com/t/monitorhandle-value-does-not-always-match-monitor-list-handle-values/2484) with `overwolf.utils.getMonitorsList`.
