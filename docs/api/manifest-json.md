@@ -611,7 +611,8 @@ A list of events causing the app to launch. It's enough that one of the events o
 |-------------------| -------|-----------------------------------------------------------------------------------------|------ |
 | event             | enum   | The type name of the event. </br>**["GameLaunch", "AllGamesLaunch", "LaunchWithOverwolf"]**                   | 0.82  |
 | event_data        |  [launch_event](#launch_event-object) object | The list of game class IDs for which the app will launch.    | 0.82  |
-| tracked           | bool   | Launch App when gameid is detected (even when not injected). Only works for supported games.                            | 0.132
+| tracked           | bool   | Launch App when gameid is detected (even when not injected). Only works for supported launchers.                            | 0.132
+| track_all_games   | bool   | Only applicable when the 'tracked' property is set to true. Launches the app for all instances defined in the Gameslist, even those who are defined as "Unsuppported".                           | 0.195
 | start_minimized   | bool   | The app’s main window will start minimized.                                             | 0.82  |
 | include_launchers | bool   | The app will be launched when game launcher is detected.                                | 0.103 |
 
