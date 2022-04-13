@@ -22,13 +22,17 @@ Here you can find our [Developers Roadmap](https://trello.com/b/1V10E4IB/overwol
 - New API: `overwolf.games.tracked.onUnsupportedExecuted` - a listener function that will trigger when a process that is defined as "Unsupported" in the Gameslist launches. It's important to note that it will only trigger if the app has defined `"track_all_games":true` in the `manifest.json`.
 
 #### Platform
-- Ssoon.
+- New `manifest.json` flag:
+  - `track_all_games` is a new optional manifest flag located under the `launch_events` property, 
+	 It can only be used in conjuction when the "tracked" property is set to true.
+	 This flag will cause the app to launch whenever a process defined in the Gameslist launches, regardless of whether it has overlay support or not.
 
 #### Bug Fixes
-
 - Hotkeys will now work on first launch when loading extension as unpacked.
 - Fixed an issue with video composition if the file path has a quote ( ` ) char
 - It's now possible to share to YouTube via the Overwolf API for files larger than 100MB 
+- Fixed cases when calling `bringToFront` changes the window maximized state. 
+- Resolved a case where we grabbed window focus upon creation of native windows, if the window was created as soon as a game was launched.
 
 ## Version 0.194
 
