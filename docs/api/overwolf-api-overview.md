@@ -14,6 +14,7 @@ Overwolf APIs are global components that allow interaction with various Overwolf
 * [overwolf.extensions](#overwolfextensions)
 * [overwolf.games](#overwolfgames)
 * [overwolf.games.events](#overwolfgamesevents)
+* [overwolf.games.tracked](#overwolfgamestracked)
 * [overwolf.io](#overwolfio)
 * [overwolf.log](#overwolflog)
 * [overwolf.logitech](#overwolflogitech)
@@ -79,6 +80,11 @@ Common use cases:
 ## overwolf.games.events
 
 > Use the [overwolf.games.events](overwolf-games-events) API to get notified when certain interesting events happens while playing in a certain game. This could be a death, a kill, an item purchase or anything else we're able to log from that game (see the Available Game Events list for more ideas).
+
+## overwolf.games.tracked
+
+> Use the [overwolf.games.tracked](overwolf-games-tracked) API to receive basic game information for games that are defined as unsupported in the gameslist.
+The usage of this API requires you to use the `tracked` property under the [launch_events](../api/manifest-json#launch_event_settings-array) property in the `manifest.json` 
 
 ## overwolf.io
 
