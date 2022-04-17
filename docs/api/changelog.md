@@ -19,7 +19,7 @@ Here you can find our [Developers Roadmap](https://trello.com/b/1V10E4IB/overwol
 - Soon
 
 #### API
-- New API: `overwolf.games.tracked.onUnsupportedExecuted` - a listener function that will trigger when a process that is defined as "Unsupported" in the Gameslist launches. It's important to note that it will only trigger if the app has defined `"track_all_games":true` in the `manifest.json`.
+- New API: [`overwolf.games.tracked.onUnsupportedExecuted`](../api/overwolf-games-events-tracked#onunsupportedexecuted) - a listener function that will trigger when a process that is defined as "Unsupported" in the Gameslist launches. It's important to note that it will only trigger if the app has defined `"track_all_games":true` in the `manifest.json`.
 
 #### Platform
 - New `manifest.json` flag:
