@@ -23,7 +23,7 @@ Here you can find our [Developers Roadmap](https://trello.com/b/1V10E4IB/overwol
 
 #### Platform
 - New `manifest.json` flag:
-  - `track_all_games` is a new optional manifest flag located under the `launch_events` property, 
+  - `track_all_games` is a new optional manifest flag located under the [`launch_events`](../api/manifest-json#launch_event_settings-array) property, 
 	 It can only be used in conjuction when the "tracked" property is set to true.
 	 This flag will cause the app to launch whenever a process defined in the Gameslist launches, regardless of whether it has overlay support or not.
 
