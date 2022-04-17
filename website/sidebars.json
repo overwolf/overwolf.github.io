@@ -50,7 +50,7 @@
 			"overwolf.extensions":
 			["api/overwolf-extensions", "api/overwolf-extensions-current", "api/overwolf-extensions-sharedData","api/overwolf-extensions-io"],
 			"overwolf.games":
-			["api/overwolf-games", "api/overwolf-games-events","overwolf-games-tracked", "api/overwolf-games-inputTracking","api/overwolf-games-launchers", "api/overwolf-games-launchers-events"],
+			["api/overwolf-games", "api/overwolf-games-events","api/overwolf-games-tracked", "api/overwolf-games-inputTracking","api/overwolf-games-launchers", "api/overwolf-games-launchers-events"],
 			"overwolf.io":
 			["api/overwolf-io","api/overwolf-io-paths"],
 			"overwolf.logitech":
