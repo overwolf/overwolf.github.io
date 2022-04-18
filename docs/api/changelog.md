@@ -30,7 +30,7 @@ Here you can find our [Developers Roadmap](https://trello.com/b/1V10E4IB/overwol
 #### Bug Fixes
 - Hotkeys will now work on first launch when loading extension as unpacked.
 - Fixed an issue with video composition if the file path has a quote ( ` ) char
-- It's now possible to share to YouTube via the Overwolf API for files larger than 100MB 
+- Fixed an out of memory issue when using our API to share large videos on YouTube.
 - Fixed cases when calling `bringToFront` changes the window maximized state. 
 - Resolved a case where we grabbed window focus upon creation of native windows, if the window was created as soon as a game was launched.
 
