@@ -34,7 +34,7 @@ Here you can find our [Developers Roadmap](https://trello.com/b/1V10E4IB/overwol
 - Fixed cases when calling `bringToFront` changes the window maximized state. 
 - Resolved a case where we grabbed window focus upon creation of native windows, if the window was created as soon as a game was launched.
 
-## Version 0.194
+## Version 0.194 (March 2022)
 
 * Note that iterations 192 to 194 were combined into a single iteration. 
 
