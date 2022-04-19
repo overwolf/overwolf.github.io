@@ -807,14 +807,14 @@ Data Example:
 
 key               | Category    | Values                    | Notes                 | Since GEP Ver. |
 ----------------- | ------------| ------------------------- | --------------------- | ------------- |
-scoreboard_xx     | game_info   | Possible values:<br><ul><li>Nickname</li><li>Steam ID</li><li>Team</li><li>Amount of money</li><li>Amount of kills</li><li>Assists</li><li>Deaths</li><li>Mvps</li><li>Score</li><li>Enemy flash</li><li>Utility damage</li><li>Average damage round</li><li>Ping</li></ul> |See [notes](#scoreboard_xx-note)|    148.0       |
+scoreboard_xx     | game_info   | Possible values:<br><ul><li>Nickname</li><li>Steam ID</li><li>Team</li><li>Amount of money</li><li>Amount of kills</li><li>Assists</li><li>Deaths</li><li>Mvps</li><li>Score</li><li>Enemy flash</li><li>Utility damage</li><li>Average damage round</li><li>Ping</li><li>local_player</li></ul> |See [notes](#scoreboard_xx-note)|    148.0       |
 
 #### *scoreboard_xx* note
 
 Data Examples:
 
 ```json
-{"info":{"game_info":{"scoreboard_17":"{\"nickname\":\"Jenssen\",\"steamid\":76561199237064949,\"team\":\"T\",\"money\":2700,\"kills\":0,\"assists\":0,\"deaths\":0,\"mvps\":0,\"score\":0,\"adr\":0,\"ud\":0,\"ef\":0,\"ping\":80}\n"}},"feature":"scoreboard"}
+{"info":{"game_info":{"scoreboard_17":"{\"nickname\":\"Jenssen\",\"steamid\":76561199237064949,\"team\":\"T\",\"money\":2700,\"kills\":0,\"assists\":0,\"deaths\":0,\"mvps\":0,\"score\":0,\"adr\":0,\"ud\":0,\"ef\":0,\"ping\":80,\"local_player\":0}\n"}},"feature":"scoreboard"}
 ```
 
 ## `kill_feed`
