@@ -122,3 +122,6 @@ Data Example:
 ```json
 {"info":{"game_info":{"phase":"scene_SelectLocation"}},"feature":"game_info"}
 ```
+```json
+{"info":{"game_info":{"phase":"scene_TimeHasCome"}},"feature":"game_info"}
+```
