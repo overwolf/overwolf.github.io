@@ -706,7 +706,7 @@ Data Example:
 
 ## `roster`
 
-### Events
+### Info Updates
 
 key               | Category    | Values                    | Notes                 | Since GEP Ver. |
 ----------------- | ------------| ------------------------- | --------------------- | ------------- |
