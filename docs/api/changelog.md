@@ -13,7 +13,8 @@ Here you can find our [Developers Roadmap](https://trello.com/b/1V10E4IB/overwol
 - Soon
 
 #### Game events
-- Soon
+* [Teamfight Tactics](overwolf-games-events-tft)
+  * Add new info update "augments" for the list of available augments feature in the match - see notes [here](overwolf-games-events-tft#me)
   
 #### Docs
 - Soon
@@ -37,9 +38,6 @@ Here you can find our [Developers Roadmap](https://trello.com/b/1V10E4IB/overwol
 ## Version 0.194 (March 2022)
 
 * Note that iterations 192 to 194 were combined into a single iteration. 
-
-#### Dev Console
-* Soon
 
 #### Game events
 
