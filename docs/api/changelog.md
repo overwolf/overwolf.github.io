@@ -52,7 +52,7 @@ Here you can find our [Developers Roadmap](https://trello.com/b/1V10E4IB/overwol
 
 * [CS:GO](overwolf-games-events-csgo)
   * Add ping event
-  * Add nickname and ping parameters to the scoreboard - see notes [here](overwolf-games-events-csgo#scoreboard)
+  * Add nickname, ping and local_player parameters to the scoreboard - see notes [here](overwolf-games-events-csgo#scoreboard)
 
 #### Platform
 - Improved Overwolf's memory footprint.
