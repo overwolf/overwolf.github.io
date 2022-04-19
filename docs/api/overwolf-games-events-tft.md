@@ -161,6 +161,7 @@ xp                  | me            | Current player level, xp points, and xp po
 health              | me            | Current amount of health points of the player |  See [notes](#health-notes) |   133.0       |
 rank                | me            | Current standing of the player        |   See [notes](#rank-notes)  |   133.0       |
 gold                | me             | Player's spare gold in hand   | See [notes](#gold-notes) |   133.0       |
+augments                | me             | Augments list available   | See [notes](#augments-notes) |   197.1       |
 
 #### *summoner_name* notes
 
@@ -195,6 +196,12 @@ Meaning 1st place/8th place, etc.
 Data example:
 
 `{"info":{"me":{"gold":"1"}},"feature":"me"}`
+
+#### *augments* notes
+
+Data example:
+
+`{"feature":"augments","category":"me","key":"me","value":"{\"augment_1\":{\"name\":\"TFT6_Augment_CyberneticShell1\"}, \"augment_2\":{\"name\":\"TFT6_Augment_Dominance\"}, \"augment_3\":{\"name\":\"TFT6_Augment_BruteTrait\"}, }"}`
 
 ## `match_info`
 
