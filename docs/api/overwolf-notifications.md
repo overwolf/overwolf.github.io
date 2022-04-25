@@ -13,22 +13,22 @@ Toast notifications are a combination of some data properties like header, visua
 
 ## Methods Reference
 
-* [overwolf.showToastNotification()](#showtoastnotificationargs-callback)
+* [overwolf.notifications.showToastNotification()](#showtoastnotificationargs-callback)
 
 ## Events Reference
 
-* [overwolf.onToastInteraction](#ontoastinteraction)
+* [overwolf.notifications.onToastInteraction](#ontoastinteraction)
 
 ## Types Reference
 
-* [overwolf.ToastNotificationParams](#toastnotificationparams-object) Object
-* [overwolf.ShowToastNotificationResult](#showtoastnotificationresult-object) Object
-* [overwolf.LogoOverride](#logooverride-object) Object
-* [overwolf.ToastNotificationButton](#toastnotificationbutton-object) Object
-* [overwolf.ToastNotificationEvent](#toastnotificationevent-object) Object
-* [overwolf.enums.AppLogoCrop](#applogocrop-enum) enum
-* [overwolf.enums.ToastEventType](#toatseventtype-enum) enum
-* [overwolf.enums.ToastEventError](#toasteventerror-enum) enum
+* [ToastNotificationParams](#toastnotificationparams-object) Object
+* [ShowToastNotificationResult](#showtoastnotificationresult-object) Object
+* [LogoOverride](#logooverride-object) Object
+* [ToastNotificationButton](#toastnotificationbutton-object) Object
+* [ToastNotificationEvent](#toastnotificationevent-object) Object
+* [overwolf.notifications.enums.AppLogoCrop](#applogocrop-enum) enum
+* [overwolf.notifications.enums.ToastEventType](#toatseventtype-enum) enum
+* [overwolf.notifications.enums.ToastEventError](#toasteventerror-enum) enum
 
 
 ## showToastNotification(args, callback)
