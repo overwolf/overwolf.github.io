@@ -113,6 +113,7 @@ const siteConfig = {
   ],
   separateCss: [
     '/html/submission-form/style.css',
+    '/html/submission-form/select2.css',
   ],
 
   // On page navigation for the current documentation page.
