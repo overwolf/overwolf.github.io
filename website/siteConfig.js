@@ -111,6 +111,9 @@ const siteConfig = {
     'https://cdnjs.cloudflare.com/ajax/libs/overlayscrollbars/1.8.0/css/OverlayScrollbars.min.css',
     '/css/code-block-buttons.css',
   ],
+  separateCss: [
+    '/html/submission-form/style.css',
+  ],
 
   // On page navigation for the current documentation page.
   onPageNav: 'separate',

@@ -4,7 +4,7 @@ title: Submitting an app proposal
 sidebar_label:  Submit app proposal
 ---
 
-## Overview 
+## Overview
 
 So, you have a great idea for an Overwolf application. What's next?
 
@@ -13,7 +13,7 @@ We find that apps turn out much better with a bit of planning, and are here to h
 The goal here is sharing what your app is about before you invest too much time and effort into development- changes are easy early on and hard to do down the road. By looping us into your process you can enjoy our experience and technical expertise to spot and solve issues before they ever appear to gamers.
 
 :::tip note
-It's not required to have a registered business to work on an Overwolf app, apply for funding or collect revenues from your app.  
+It's not required to have a registered business to work on an Overwolf app, apply for funding or collect revenues from your app.
 The Overwolf platform welcomes creators of all types and sizes, from indie devs working alone to companies with large teams.
 :::
 
@@ -22,7 +22,7 @@ The Overwolf platform welcomes creators of all types and sizes, from indie devs 
 If you're just looking to explore Overwolf’s framework - no worries, we got you.
 
 Go check out our Javascript and Typescript based [Sample App](https://overwolf.github.io/docs/start/sample-app-overview#docsNav). It doesn't require you to be whitelisted, and it works for all the games that we support.
-You might not be able to distribute it, but It's a great way to start your journey in becoming a legendary in-game creator. 
+You might not be able to distribute it, but It's a great way to start your journey in becoming a legendary in-game creator.
 
 Still have some questions? Join [the developers community](https://discord.gg/overwolf-developers) where you can get help from experts in the community.
 
@@ -52,7 +52,7 @@ Before submitting your proposal, please read the [developer](https://overwolf.gi
 
 <iframe src="https://forms.monday.com/forms/embed/9c8c6385757e9f7b378182bf402f5c13" width="100%" height="1600px"> </iframe>
 
-Note that you do not have to own a registered business or company to work on Overwolf apps or collect revenues - Overwolf is open to independent developers and companies alike. 
+Note that you do not have to own a registered business or company to work on Overwolf apps or collect revenues - Overwolf is open to independent developers and companies alike.
 
 ## What happens next?
 
