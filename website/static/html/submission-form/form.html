@@ -124,23 +124,23 @@
       }
     }
 
-    $(document).ready(() => {
-      $('#submission-games').select2({
-        width: '100%'
-      });
+    function onGamesChanged(enabled) {
+      const selected = $('#submission-games').val();
 
-      $('#submission-games').on('change', e => {
-        const selected = $('#submission-games').val();
+      if (selected && selected.length && selected.includes('Other')) {
+        setOtherGames(true);
+      } else {
+        setOtherGames(false);
+      }
+    }
 
-        if (selected && selected.length && selected.includes('Other')) {
-          setOtherGames(true);
-        } else {
-          setOtherGames(false);
-        }
-      });
-
-      setOtherGames(false);
+    $('#submission-games').select2({
+      width: '100%'
     });
+
+    $('#submission-games').on('change', onGamesChanged);
+
+    onGamesChanged();
   </script>
 </body>
 
