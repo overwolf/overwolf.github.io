@@ -23,12 +23,12 @@
     <div class="inline-fields">
       <div class="field inline">
         <label for="submission-first-name">First Name</label>
-        <input id="submission-first-name" maxLength="40" name="first_name" type="text" required />
+        <input id="submission-first-name" maxlength="40" name="first_name" type="text" required />
       </div>
 
       <div class="field inline">
         <label for="submission-last-name">Last Name</label>
-        <input id="submission-last-name" maxLength="80" name="last_name" type="text" required />
+        <input id="submission-last-name" maxlength="80" name="last_name" type="text" required />
       </div>
     </div>
 
@@ -42,14 +42,14 @@
           </div>
         </div>
       </label>
-      <input id="submission-email" maxLength="80" name="email" type="email" required />
+      <input id="submission-email" maxlength="80" name="email" type="email" required />
     </div>
 
     <div class="field">
       <label for="submission-url">
         Website <small>(Optional)</small>
       </label>
-      <input id="submission-url" maxLength="80" name="url" type="text" />
+      <input id="submission-url" maxlength="80" name="url" type="text" />
     </div>
 
     <div class="field select">
@@ -88,6 +88,11 @@
       </select>
     </div>
 
+    <div class="field other-games">
+      <label for="submission-other-games">Other Supported Games</label>
+      <input id="submission-other-games" maxlength="80" name="00N5e00000cOtey" type="text" />
+    </div>
+
     <div class="field">
       <label for="submission-idea">Tell us about your app idea</label>
       <textarea id="submission-idea" name="00N5e00000Yv0u4" type="text" wrap="soft" required></textarea>
@@ -107,10 +112,34 @@
   <script>
     document.addEventListener('invalid', e => e.preventDefault(), true);
 
+    function setOtherGames(enabled) {
+      $('#submission-other-games').val('');
+
+      if (enabled) {
+        $('.other-games').show();
+        $('#submission-other-games').prop('required', true);
+      } else {
+        $('.other-games').hide();
+        $('#submission-other-games').prop('required', false);
+      }
+    }
+
     $(document).ready(() => {
       $('#submission-games').select2({
         width: '100%'
       });
+
+      $('#submission-games').on('change', e => {
+        const selected = $('#submission-games').val();
+
+        if (selected && selected.length && selected.includes('Other')) {
+          setOtherGames(true);
+        } else {
+          setOtherGames(false);
+        }
+      });
+
+      setOtherGames(false);
     });
   </script>
 </body>

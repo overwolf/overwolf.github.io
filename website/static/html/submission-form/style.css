@@ -149,8 +149,8 @@ body {
 .submission-success {
   width: 100%;
   max-width: 645px;
-  min-height: 766px;
-  padding: 50px 53px 50px 57px;
+  min-height: 820px;
+  padding: 50px 53px 0 57px;
   background: #262626;
 }
 
@@ -159,6 +159,7 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  padding: 0 53px 0 57px;
   color: #E5E5E5;
   font-size: 16px;
   text-align: center;
@@ -201,7 +202,7 @@ small {
 }
 
 h1 {
-  margin-bottom: 20px;
+  margin-bottom: 19px;
   line-height: 42px;
   font-family: Madera, sans-serif;
   font-weight: 700;
@@ -272,7 +273,7 @@ h1 {
 
 .field input[type="text"],
 .field input[type="email"],
-.field textarea {
+.field>textarea {
   width: 100%;
   padding: 7px 10px;
   line-height: 20px;
@@ -291,17 +292,22 @@ h1 {
 
 .field input[type="text"]:focus,
 .field input[type="email"]:focus,
-.field textarea:focus {
+.field>textarea:focus {
   outline-color: #F2F2F2;
 }
 
-.field textarea {
+.field>textarea {
+  display: block;
   height: 135px;
   padding: 7px 10px;
 }
 
 .field.select label {
   display: block;
+}
+
+.field .select2-container--open {
+  z-index: 10000;
 }
 
 .field.checkbox {
