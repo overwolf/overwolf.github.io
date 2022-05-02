@@ -6,9 +6,9 @@ sidebar_label: SDK Introduction
 
 Overwolf's SDK unlocks in-game app development, and the documents listed in the left-hand side navigation bar have all the information you need to create apps using Overwolf’s diverse [APIs](../api/overwolf-api-overview). To get you started, here are some important basics:
 
-## Whitelist as a developer
+## Get whitelisted as a developer
 
-Only whitelisted Overwolf developer accounts can load or install apps that not available on the Overwolf store, including unreleased beta versions. If you are not whitelisted you will not be able to run or install such apps, which means testing your work in progress will be hard. Therefore, start by [submitting your app proposal](https://overwolf.github.io/docs/start/submit-app-proposal#legal) in order to get whitelisted.
+Only whitelisted Overwolf developer accounts can load or install apps that are not available on the Overwolf store, including unreleased beta versions. If you are not whitelisted, you will not be able to run or install such apps, which means that testing your work in progress will be difficult. Therefore, start by [submitting your app proposal](https://overwolf.github.io/docs/start/submit-app-proposal#legal) in order to get whitelisted.
 
 ## App architecture
 
@@ -28,12 +28,13 @@ If you know what you're doing and are looking for a workaround, find the control
 
 :::
 
-To build Overwolf apps, you need to download the Overwolf client.
+To build Overwolf apps, you first need to download the Overwolf client.
 You can find the latest developer client version [Here](https://download.overwolf.com/install/Download?Channel=developers).
 
 ### Manifest file
 
-This mandatory file describes the different aspects of your app, it has to be present in your app's root folder for it to function.
+This mandatory file describes the different aspects of your app, and has to be present in your app's root folder for it to function.
+Its goal is to define your app's general behaviour, the features it will be using, and any other "meta-data" Overwolf will need to run your app exactly the way you want it to.
 
 You can read more in the [Manifest.json](../api/manifest-json) section and learn what more you can do to make your app even more awesome.
 
@@ -78,7 +79,7 @@ An example of a basic manifest file:
 
 ### HTML/JS source files
 
-In the sample manifest above, the app contains a single window. The source file of this window is `index.html`. Here's a sample HTML  window source file that could be referred to in the manifest:
+In the sample manifest above, the app contains a single window. The source file of this window is `index.html`. Attached is an example HTML  window source file that could be referred to in the manifest:
 
 ```html
 <!DOCTYPE html>
@@ -94,13 +95,13 @@ In the sample manifest above, the app contains a single window. The source file 
 
 ### Assets
 
-You can use images and assets like in any other web app. The only mandatory assets that every Overwolf app needs are icons. For example, in the sample manifest above all mandatory icons have been configured: [icon](../api/manifest-json#meta-mouse-over), [icon_gray](../api/manifest-json#meta-gray_icon) and [launcher_icon](../api/manifest-json#meta-launcher_icon).
+Your app can use images and assets like in any other web app. However, there are several mandatory assets that every Overwolf app needs. In the sample manifest above, all mandatory icons have been configured: [icon](../api/manifest-json#meta-mouse-over), [icon_gray](../api/manifest-json#meta-gray_icon) and [launcher_icon](../api/manifest-json#meta-launcher_icon).
 
 ### OPK package
 
-After you finish building your app, you need to pack everything including the manifest, source files and assets into a single Overwolf app installer, called an `OPK` package.
+After you finish building your app, you need to pack everything; the manifest, source files, and assets into a single Overwolf app installer, called an `OPK` package.
 
-An OPK package is actually a ZIP package:  To create it, just ZIP all your files together, then manually change the file extension from ZIP to OPK. Double clicking an OPK will install the package.
+An OPK package is actually a ZIP package:  To create it, just ZIP all of your files together, and then manually change the file extension from ZIP to OPK. Double clicking an OPK will install the package in the Overwolf app.
 
 We remind you that only [whitelisted](#whitelist-as-a-developer) developers can install OPKs that were not downloaded from the store.
 
@@ -112,13 +113,13 @@ Protecting our community of gamers is a top priority, and we work hard to ensure
 2. Each app is hosted separately in its own web browser, and each web browser runs as a separate process.
 3. Each app is being run from a different virtual directory.
 
-These measures support security, separation and encapsulation: An app does not have access to the user’s local files, an app can’t interfere with other apps and if an app crashes or breaks, it doesn’t affect the rest of the system.
+These measures support security, separation and encapsulation: An app does not have access to the user’s local files, an app cannot directly interfere with other apps, and if an app crashes or breaks, it doesn’t affect the rest of the system.
 
 ## API
 
 You can build some awesome things with web technologies. Our way to make apps even better is using in-game real time information and events to fuel app functions. With [our JavaScript API](../api/overwolf-api-overview) you can unlock features that read and interact with in-game events.
 
-To get some ideas for in-game events you can use - from basics like kills, deaths, victories and similar key events, through taking a screenshot or recording a video of the game, changing window size, analyzing in-game stats to display tips and more.. We are constantly developing new tools and features that you can use to build your dream app, if there's a feature you cannot find, suggest it!
+Some ideas for in-game events you can use - from basics like kills, deaths, victories and similar key events, through taking a screenshot or recording a video of the game, changing window size, analyzing in-game stats to display tips and more. We are constantly developing new tools and features that you can use to build your dream app, if there's a feature you cannot find, suggest it!
 
 ## Overwolf Plugins
 
@@ -130,5 +131,5 @@ For more details, you can review the [Overwolf Plugins](../topics/plugins-overvi
 
 ## Real world sample app
 
-To learn how to build an app that actually pulls in-game events, pops notifications, displays in-game overlays and more - please continue our official [sample app showcasing](sample-app-overview).
+To learn how to build an app that actually pulls in-game events, pops notifications, displays in-game overlays and more - please check out our [sample app showcasing](sample-app-overview).
 
