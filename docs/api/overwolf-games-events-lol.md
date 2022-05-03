@@ -881,7 +881,7 @@ matchStart | null        | Match has started   |  Match has started |   140.0   
 matchEnd   | null        |       |  deprecated    |         |
 
 :::tip
-matchEnd is deprecated, you can use the [announcer](#announcer) DEFEAT/VICTORY insted or the launcher game flow [here](overwolf-games-launchers-events-lol#game_flow)
+matchEnd is deprecated, you can use the [announcer](#announcer) DEFEAT/VICTORY instead or the launcher game flow [here](overwolf-games-launchers-events-lol#game_flow)
 :::
 
 ## `match_info`
