@@ -15,7 +15,9 @@ Here you can find our [Developers Roadmap](https://trello.com/b/1V10E4IB/overwol
 #### Game events
 * [Teamfight Tactics](overwolf-games-events-tft)
   * Add new info update "augments" for the list of available augments feature in the match - see notes [here](overwolf-games-events-tft#me)
-  
+* [Fortnite](overwolf-games-events-fortnite)
+  * Add new info update for ping and skirmish data - see notes [here](overwolf-games-events-fortnite)
+
 #### Docs
 - Soon
 
