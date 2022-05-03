@@ -787,7 +787,7 @@ overwolf.windows.onMessageReceived.addListener((message)=>{
 ## onAltF4Blocked
 #### Version added: 0.85
 
-> Fired when the user was prevented from closing a window using Alt+F4, with the following structure: [AltF4BlockedEvent](#altf4blockedevent-object) Object
+> Fired on all app windows when the user was prevented from closing a window using Alt+F4, with the following structure: [AltF4BlockedEvent](#altf4blockedevent-object) Object
 
 ## onScreenPropertyChanged
 #### Version added: 0.143
@@ -1257,12 +1257,14 @@ content                  |  string        | the message content        |        
 Parameter                | Type           | Description                | Notes                     |
 -------------------------| ---------------|--------------------------- | --------------------------|
 id                       |  string        | the window ID              |                           |                           
+name                       |  string        | the window name              |                           |                           
 
 #### Event data example: Success
 
 ```json
 {
   "id": "1",
+  "name": "index"
 }
 ```
 

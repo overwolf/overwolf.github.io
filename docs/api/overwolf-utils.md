@@ -19,6 +19,7 @@ Common use cases:
 * [overwolf.utils.getFromClipboard()](#getfromclipboardcallback)
 * [overwolf.utils.getMonitorsList()](#getmonitorslistcallback)
 * [overwolf.utils.getWindowDPI()](#getwindowdpicallback)
+* [overwolf.utils.getClientInfo()](#getclientinfocallback)
 * [overwolf.utils.sendKeyStroke()](#sendkeystrokekeystring)
 * [overwolf.utils.openFilePicker()](#openfilepickerfilter-callback)
 * [overwolf.utils.openFilePicker()](#openfilepickerfilter-initialpath-callback)
@@ -100,6 +101,25 @@ We removed this function from our API. Instead, please use [Window.devicePixelRa
 Parameter | Type     | Description                                  |
 --------- | ---------| -------------------------------------------- |
 callback  | function | Called with the DPI info                     |
+
+## getClientInfo(callback)
+#### Version added: 0.198
+
+> Returns the time in epoch when Overwolf was installed, as well as the amount of seconds the client has been running for.
+
+Parameter | Type     | Description                                  |
+--------- | ---------| -------------------------------------------- |
+callback  | (Result) => void | Called with the detailed info                     |
+
+An example return value
+
+```js
+result: 
+{ 
+    "installTime": 1651496699,
+    "uptimeSeconds": 100
+}
+```
 
 #### Callback argument: Success
 

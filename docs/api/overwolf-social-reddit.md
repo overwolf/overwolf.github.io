@@ -17,6 +17,8 @@ You can use [overwolf.social.getDisabledServices()](overwolf-social#getdisableds
 * [overwolf.social.reddit.getUserInfo()](#getuserinfocallback)
 * [overwolf.social.reddit.searchSubreddits()](#searchsubredditsquery-callback)
 * [overwolf.social.reddit.share()](#shareredditshareparameters-callback)
+* [overwolf.social.reddit.shareEx()](#shareexredditshareparameters-callback-callback)
+* [overwolf.social.reddit.cancelShare()](#cancelsharestring-callback)
 * [overwolf.social.reddit.getSubredditFlairs()](#getsubredditflairssubredditname-callback)
 
 ## Events Reference
@@ -27,6 +29,8 @@ You can use [overwolf.social.getDisabledServices()](overwolf-social#getdisableds
 ## Types Reference
 
 * [overwolf.social.reddit.RedditShareParameters](#redditshareparameters-object) Object
+* [overwolf.social.reddit.SocialShareResult](#socialshareresult-object) Object
+* [overwolf.social.reddit.SocialShareProgress](#socialshareprogress-object)) Object
 * [overwolf.social.reddit.Subreddit](#subreddit-object) Object
 * [overwolf.social.reddit.RedditAllowedPostTypes](#redditallowedposttypes-object) Object
 * [overwolf.social.reddit.SearchSubredditsResult](#searchsubredditsresult-object) Object
@@ -70,7 +74,7 @@ query     | string                     | The search string                      
 callback  |  [(Result: SearchSubredditsResult)](#searchsubredditsresult-object) => void   | Will contain an array of subreddits that match the search string  |
 
 
-## share(redditShareParameters, callback)
+## share(RedditShareParameters, callback)
 #### Version added: 0.128
 
 > If the user is currently logged into reddit, this will perform the video share.
@@ -85,6 +89,43 @@ Types of errors that can occur:
 * Disconnected (user isn't signed in)
 * MissingFile (trying to share a missing file)
 * UnsupportedFile (trying to share an unsupported format)
+
+
+## shareEx(RedditShareParameters, callback, callback)
+#### Version added: 0.198
+
+> If the user is currently logged into Reddit, this will perform the video share.
+
+Parameter             | Type                       | Description                                                           |
+--------------------- | ---------------------------| --------------------------------------------------------------------- |
+redditShareParams    | [RedditShareParameters](#redditshareparameters-object) Object        | The share parameters       |
+resultCallback    | ([SocialShareResult](#socialshareresult-object)) => void        | A callback function which will be called with the resulting status of the request         |
+progressCallback  | ([socialShareProgress](#socialshareprogress-object)) => void   | A callback function which will be called whenever share progress is made |
+
+Types of errors that can occur:
+
+* Disconnected (user isn't signed in)
+* MissingFile (trying to share a missing file)
+* UnsupportedFile (trying to share an unsupported format)
+* ExceedsMaxSize (the file is too large: > 8 MB for images, > 100 MBfor videos)
+
+
+## cancelShare(string, callback)
+#### Version added: 0.198
+
+> cancels an ongoing share request with the given id, if valid. Callback will be invoked with success if such a request was found and a cancellation order was executed (may take a while)
+
+Parameter             | Type                       | Description                                                           |
+--------------------- | ---------------------------| --------------------------------------------------------------------- |
+id    | string        | The request ID       |
+callback    | (Result) => void        | Called with the result of the cancellation       |
+
+
+```js
+overwolf.social.reddit.cancelShare("2", console.log)
+```
+
+
 
 ## getSubredditFlairs(subredditName, callback)
 #### Version added: 0.160
@@ -109,11 +150,13 @@ callback      | (Result) => void   | A callback function which will be called wi
 ## RedditShareParameters Object
 #### Version added: 0.128
 
-> This object defines all parameters that can/should be passed to theReddit |share| function.
+> This object defines all parameters that can/should be passed to the Reddit [Share()](#shareredditshareparameters-callback) and [shareEx()](#shareexredditshareparameters-callback-callback) methods.
 
 Parameter              | Type    | Description                                                                 |
 ---------------------- | --------| --------------------------------------------------------------------------- |
 file                   | string  | The file to share                                                           |
+id              | string  | The ID for the current share request. See [note](#id-note)                              |
+useOverwolfNotifications              | boolean  | Whether or not overwolf notifications should be used. See [note](#useoverwolfnotifications-note)                              |
 subreddit              | string  | The subreddit to which the file will be shared                              |
 title                  | string  | The shared video's title                                                    |
 description            | string  | The shared video's description                                              |
@@ -124,11 +167,24 @@ gameTitle (Optional)   | string  | The associated game's title                  
 metadata (Optional)    | object  | Extra information about the game session                                    |
 flair_id (Optional)    | [Flair](#flair-object) object  |                                                                   |
 
+#### id note
+
+When calling [overwolf.social.reddit.shareEx()](#shareexredditshareparameters-callback-callback), it is required to supply it with a request ID. This ID will also be used in case you wish to cancel this share using [overwolf.social.reddit.cancelShare()](#cancelsharestring-callback).
+
+#### useOverwolfNotifications note
+
+When calling [overwolf.social.reddit.share()](#shareredditshareparameters-callback), this will default to true.
+When calling [overwolf.social.reddit.shareEx()](#shareexredditshareparameters-callback-callback), this will default to false.
+
+
+
 #### Data example
 
 ```json
 {
   "file": "file://D:\\Videos\\Overwolf\\Outplayed\\League of Legends/League of Legends_8-16-2020_2-6-20-576\\League of Legends 08-16-2020_2-06-22-522.mp4",
+  "id": "5",
+  "useOverwolfNotifications": false,
   "tags": [
     "PvP Round"
   ],
@@ -143,6 +199,49 @@ flair_id (Optional)    | [Flair](#flair-object) object  |                       
   "metadata": {
     "mode": "tft"
   }
+}
+```
+
+## SocialShareResult Object
+#### Version added: 0.198
+
+> Container for the url shared in a successful share.
+
+Parameter         | Type          | Description             |
+------------------| --------------| ----------------------- |
+url              | string        | The url of the generated result                         | 
+
+
+#### Example data
+
+```json
+{
+  "url": "https://v.redd.it/z08avb339n801/DASH_1_2_M"
+}
+```
+
+## SocialShareProgress Object
+#### Version added: 0.198
+
+> Container for the url shared in a successful share.
+
+Parameter         | Type          | Description             |
+------------------| --------------| ----------------------- |
+progress              | int        | The current precentage of upload progress                         | 
+id              | string        | The id of the share request                         | 
+state              | string        | The current state of the share request                         | 
+
+* "Started" - The request has just started
+* "Uploading" - The request is currently uploading
+* "Finished" - The request has finished uploading
+
+#### Example data
+
+```json
+{
+  "progress": 56,
+  "id": "1",
+  "state": "Uploading"
 }
 ```
 
