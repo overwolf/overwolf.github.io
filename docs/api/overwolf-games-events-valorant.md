@@ -110,6 +110,7 @@ Possible agent values:
 * "Grenadier_PC_C" = KAY/O
 * "Deadeye_PC_C" = Chamber
 * "Sprinter_PC_C" = Neon
+* "BountyHunter_PC_C" = Fade
 
 ## `match_info`
 
