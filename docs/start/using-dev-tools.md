@@ -118,6 +118,10 @@ Clicking on a link will open a remote debugger tab.
 
 For local-server debugging (like react apps) you can use the [debug_url](../api/manifest-json#debug_url) flag.
 
+## Enabling automation testing with automation flag
+
+To use a testing framework with your application, run the Overwolf App (overwolf.exe) with the flag "--enable-automation".
+
 ### Run your React app locally
 
 Runs on a node.js server.
