@@ -27,7 +27,7 @@ You can use [overwolf.social.getDisabledServices()](overwolf-social#getdisableds
 
 * [overwolf.social.gfycat.gfycatShareParameters](#gfycatshareparameters-object) Object
 * [overwolf.social.gfycat.SocialShareResult](#socialshareresult-object) Object
-* [overwolf.social.gfycat.SocialShareProgress](#socialshareprogress-object)) Object
+* [overwolf.social.gfycat.SocialShareProgress](#socialshareprogress-object) Object
 
 ## performUserLogin()
 #### Version added: 0.128
@@ -113,7 +113,7 @@ overwolf.social.gfycat.cancelShare("2", console.log)
 ## GfycatShareParameters Object
 #### Version added: 0.125
 
-> This object defines all parameters that can/should be passed to the Gfycat [Share()](#sharegfycatshareparameters-callback) and [shareEx()](#shareexgfycatshareparameters-callback-callback) methods.
+> This object defines all parameters that can/should be passed to the Gfycat [`Share()`](#sharegfycatshareparameters-callback) and [`shareEx()`](#shareexgfycatshareparameters-callback-callback) methods.
 
 Parameter              | Type    | Description                                                                 |
 ---------------------- | --------| --------------------------------------------------------------------------- |
@@ -130,12 +130,12 @@ metadata (Optional)    | Object  | Extra information about the game session     
 
 #### id note
 
-When calling [overwolf.social.gfycat.shareEx()](#shareexgfycatshareparameters-callback-callback), it is required to supply it with a request ID. This ID will also be used in case you wish to cancel this share using [overwolf.social.gfycat.cancelShare()](#cancelsharestring-callback).
+When calling [`overwolf.social.gfycat.shareEx()`](#shareexgfycatshareparameters-callback-callback), it is required to supply it with a request ID. This ID will also be used in case you wish to cancel this share using [`overwolf.social.gfycat.cancelShare()`](#cancelsharestring-callback).
 
 #### useOverwolfNotifications note
 
-When calling [overwolf.social.gfycat.share()](#sharegfycatshareparameters-callback), this will default to true.
-When calling [overwolf.social.gfycat.shareEx()](#shareexgfycatshareparameters-callback-callback), this will default to false.
+When calling [`overwolf.social.gfycat.share()`](#sharegfycatshareparameters-callback), this will default to true.
+When calling [`overwolf.social.gfycat.shareEx()`](#shareexgfycatshareparameters-callback-callback), this will default to false.
 
 
 ## SocialShareResult Object
