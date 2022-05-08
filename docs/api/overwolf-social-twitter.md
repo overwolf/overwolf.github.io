@@ -7,7 +7,7 @@ sidebar_label: overwolf.social.twitter
 Provides access to the Twitter social provider.
 
 :::tip
-You can use [overwolf.social.getDisabledServices()](overwolf-social#getdisabledservicescallback) method to check if the service is available.
+You can use [`overwolf.social.getDisabledServices()`](overwolf-social#getdisabledservicescallback) method to check if the service is available.
 :::
 
 ## Methods Reference
