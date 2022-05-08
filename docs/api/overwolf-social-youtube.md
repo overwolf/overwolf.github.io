@@ -7,7 +7,7 @@ sidebar_label: overwolf.social.youtube
 Provides access to the YouTube social provider.
 
 :::tip
-You can use [overwolf.social.getDisabledServices()](overwolf-social#getdisabledservicescallback) method to check if the service is available.
+You can use [`verwolf.social.getDisabledServices()`](overwolf-social#getdisabledservicescallback) method to check if the service is available.
 :::
 
 ## Methods Reference
