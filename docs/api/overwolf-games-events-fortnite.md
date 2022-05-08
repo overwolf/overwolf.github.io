@@ -241,6 +241,7 @@ matchID   | match_info  |The current match’s ID. |   See [notes](#matchID-note
 userID   | match_info  |The current user’s ID code. |   See [notes](#userID-note)|  132.0  |
 ticketID   | match_info  |The current ticket’s ID code. |  See [notes](#ticketID-note)|  132.0  |
 partyID   | match_info  |The current party’s ID code. |  See [notes](#partyID-note)|  132.0  |
+skirmish   | match_info  |The skirmish data is the enemy gunfire indicator on the compass |  See [notes](#skirmish-note)|  195.0  |
 
 ### Events
 
@@ -298,6 +299,21 @@ Data Example:
 {"info":{"match_info":{"partyID":"24f122daf9c446199e59f1f6841cacfe"}},"feature":"match"}
 ```
 
+#### *skirmish* note
+
+The skirmish data array is the enemy gunfire indicator on the compass for each enemy and includes these parameters
+  * time -  time in seconds since the beginning of the game
+  * strength strength of the gunfire from 1 the weakest to maximum 99
+  * compass_angle - the angle that the local player is looking on. 0 - 360 deg
+  * red_dot_angle - the angle where the gunfire came from. 0 - 360 deg
+
+Data Example:
+
+```json
+{"feature":"match_info","category":"match_info","key":"skirmish","value":"{\"skirmish_data\":[{\"index\":1,\"time\":165,\"strength\":18,\"compass_angle\":96,\"red_dot_angle\":57},{\"index\":2,\"time\":166,\"strength\":99,\"compass_angle\":96,\"red_dot_angle\":113}]}"}
+```
+
+  
 #### *generic* note
 
 These are general events provided by the game client.
@@ -522,4 +538,11 @@ Data Example:
 
 key               | Category    | Values                    | Notes                 | Since GEP Ver. |
 ----------------- | ------------| ------------------------- | --------------------- | ------------- |
-ping             | performance  |Latency changes of the local player in the current match.	| This feature is currently disabled.|  128.0       |
+ping             | performance  |Latency changes of the local player in the current match.	| See [notes](#ping-note)|  195.0       |
+  
+#### *ping* note
+Data Example:
+
+```json
+{"feature":"counters","category":"performance","key":"ping","value":61}
+```

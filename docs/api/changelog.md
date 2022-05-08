@@ -7,7 +7,35 @@ sidebar_label: Changelog
 Follow this entry for ongoing updates and changes to the project or tools.
 Here you can find our [Developers Roadmap](https://trello.com/b/1V10E4IB/overwolf-roadmap).
 
-## Version 0.195 (In progress)
+## Version 0.198 (In progress)
+
+* Note that iterations 196 to 198 were combined into a single iteration. 
+  
+#### Docs
+- Soon
+
+#### API
+- New API: A new and improved share method, giving feedback of upload progress (to allow for custom notification behaviour), and allowing cancellation of uploads midway, for all supported social media. To get started, check the relevant network's api documentation for the following methods:
+
+  Where * is the specific social media you wish to work with (e.g. discord).
+    * `overwolf.social.*.shareEx()`
+    * `overwolf.social.*.cancelShare()`
+
+  And the objects:
+    * `overwolf.social.*.*ShareParameters` - Two new parameters: `id` and `useOverwolfNotifications` have been added for the new API.
+    * `overwolf.social.*.SocialShareResult`
+    * `overwolf.social.*.SocialShareProgress`
+
+- New API: [`overwolf.utils.getClientInfo`](../api/overwolf-utils#getclientinfocallback) - a method for obtaining the Overwolf client's uptime, as well as install date.
+- Updated API: [`overwolf.windows.onAltF4Blocked`](../api/overwolf-windows#onaltf4blocked) - is now invoked for all windows in the app as soon as it occursed on any window. Event result now also contains the name of the window that caused the invocation.
+
+
+#### Bug Fixes
+- Overwolf windows no longer have visual artifacts when running Fortnite using DirectX 12 on AMD Graphics Cards.
+
+
+
+## Version 0.195 (April 2022)
 
 #### Dev Console
 - Soon
@@ -15,7 +43,9 @@ Here you can find our [Developers Roadmap](https://trello.com/b/1V10E4IB/overwol
 #### Game events
 * [Teamfight Tactics](overwolf-games-events-tft)
   * Add new info update "augments" for the list of available augments feature in the match - see notes [here](overwolf-games-events-tft#me)
-  
+* [Fortnite](overwolf-games-events-fortnite)
+  * Add new info update for ping and skirmish data - see notes [here](overwolf-games-events-fortnite)
+
 #### Docs
 - Soon
 

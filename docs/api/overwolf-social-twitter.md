@@ -15,7 +15,10 @@ You can use [overwolf.social.getDisabledServices()](overwolf-social#getdisableds
 * [overwolf.social.twitter.performUserLogin()](#performuserlogin)
 * [overwolf.social.twitter.performLogout()](#performlogoutcallback)
 * [overwolf.social.twitter.getUserInfo()](#getuserinfocallback)
-* [overwolf.social.twitter.share()](#sharetwittershareparams-callback)
+* [overwolf.social.twitter.share()](#sharetwittershareparameters-callback)
+* [overwolf.social.twitter.shareEx()](#shareextwittershareparameters-callback-callback)
+* [overwolf.social.twitter.cancelShare()](#cancelsharestring-callback)
+
 
 ## Events Reference
 
@@ -24,6 +27,8 @@ You can use [overwolf.social.getDisabledServices()](overwolf-social#getdisableds
 ## Types Reference
 
 * [overwolf.social.twitter.TwitterShareParameters](#twittershareparameters-object) Object
+* [overwolf.social.twitter.SocialShareResult](#socialshareresult-object) Object
+* [overwolf.social.twitter.SocialShareProgress](#socialshareprogress-object)) Object
 
 ## performUserLogin()
 #### Version added: 0.128
@@ -50,12 +55,10 @@ Parameter | Type                       | Description                            
 --------- | ---------------------------| ----------------------------------------------------------------------- |
 callback  | [(Result: GetUserInfoResult)](overwolf-social#getuserinforesult-object) => void   | A callback function which will be called with the status of the request |
 
-## share(twitterShareParams	, callback)
+## share(TwitterShareParameters, callback)
 #### Version added: 0.125
 
 > If the user is currently logged into YouTube, this will perform the video share.
-
-|twitterShareParams| is of type  errors that can occur:- Disconnected (user isn’t signed in)- MissingFile (trying to share a missing file)- UnsupportedFile (trying to share an unsupported format)
 
 Parameter             | Type                       | Description                                                           |
 --------------------- | ---------------------------| --------------------------------------------------------------------- |
@@ -67,6 +70,42 @@ Types of errors that can occur:
 * MissingFile (trying to share a missing file)
 * UnsupportedFile (trying to share an unsupported format)
 
+
+## shareEx(TwitterShareParameters, callback, callback)
+#### Version added: 0.198
+
+> If the user is currently logged into Twitter, this will perform the video share.
+
+Parameter             | Type                       | Description                                                           |
+--------------------- | ---------------------------| --------------------------------------------------------------------- |
+twitterShareParams    | [TwitterShareParameters](#twittershareparameters-object) Object        | The share parameters       |
+resultCallback    | ([SocialShareResult](#socialshareresult-object)) => void        | A callback function which will be called with the resulting status of the request         |
+progressCallback  | ([socialShareProgress](#socialshareprogress-object)) => void   | A callback function which will be called whenever share progress is made |
+
+Types of errors that can occur:
+
+* Disconnected (user isn't signed in)
+* MissingFile (trying to share a missing file)
+* UnsupportedFile (trying to share an unsupported format)
+* ExceedsMaxSize (the file is too large: > 8 MB for images, > 100 MBfor videos)
+
+
+## cancelShare(string, callback)
+#### Version added: 0.198
+
+> cancels an ongoing share request with the given id, if valid. Callback will be invoked with success if such a request was found and a cancellation order was executed (may take a while)
+
+Parameter             | Type                       | Description                                                           |
+--------------------- | ---------------------------| --------------------------------------------------------------------- |
+id    | string        | The request ID       |
+callback    | (Result) => void        | Called with the result of the cancellation       |
+
+
+```js
+overwolf.social.twitter.cancelShare("2", console.log)
+```
+
+
 ## onLoginStateChanged
 #### Version added: 0.125
 
@@ -75,14 +114,62 @@ Types of errors that can occur:
 ## TwitterShareParameters Object
 #### Version added: 0.125
 
-> This object defines all parameters that can/should be passed to Twitter |share| function.
+> This object defines all parameters that can/should be passed to the Twitter [Share()](#sharetwittershareparameters-callback) and [shareEx()](#shareextwittershareparameters-callback-callback) methods.
 
 Parameter              | Type    | Description                                                                 |
 ---------------------- | --------| --------------------------------------------------------------------------- |
 file                   | string  | The file to share                                                           |
+id              | string  | The ID for the current share request. See [note](#id-note)                              |
+useOverwolfNotifications              | boolean  | Whether or not overwolf notifications should be used. See [note](#useoverwolfnotifications-note)                              |
 message                | string  | The message to include with the shared file                                 |
 trimming (Optional)    | [VideoCompositionSegment](overwolf-media-videos#videocompositionsegment-object)  | An object containing start time and end time for the desired VideoCompositionSegment                                        |
 tags (Optional)        | string  | An array of chronological events that occurred during the capture           |
 gameClassId (Optional) | int     | The associated game's class ID                                              |
 gameTitle (Optional)   | string  | The associated game's title                                                 |
 metadata (Optional)    | Object  | Extra information about the game session                                    |
+
+
+#### id note
+
+When calling [overwolf.social.twitter.shareEx()](#shareextwittershareparameters-callback-callback), it is required to supply it with a request ID. This ID will also be used in case you wish to cancel this share using [overwolf.social.twitter.cancelShare()](#cancelsharestring-callback).
+
+#### useOverwolfNotifications note
+
+When calling [overwolf.social.twitter.share()](#sharetwittershareparameters-callback), this will default to true.
+When calling [overwolf.social.twitter.shareEx()](#shareextwittershareparameters-callback-callback), this will default to false.
+
+
+## SocialShareResult Object
+#### Version added: 0.198
+
+> Container for the url shared in a successful share.
+
+Parameter         | Type          | Description             |
+------------------| --------------| ----------------------- |
+url              | string        | The url of the generated result                         | 
+
+
+## SocialShareProgress Object
+#### Version added: 0.198
+
+> Container for the url shared in a successful share.
+
+Parameter         | Type          | Description             |
+------------------| --------------| ----------------------- |
+progress              | int        | The current precentage of upload progress                         | 
+id              | string        | The id of the share request                         | 
+state              | string        | The current state of the share request                         | 
+
+* "Started" - The request has just started
+* "Uploading" - The request is currently uploading
+* "Finished" - The request has finished uploading
+
+#### Example data
+
+```json
+{
+  "progress": 78,
+  "id": "3",
+  "state": "Uploading"
+}
+```
