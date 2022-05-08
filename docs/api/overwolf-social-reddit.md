@@ -7,7 +7,7 @@ sidebar_label: overwolf.social.reddit
 Provides access to the Reddit social provider.
 
 :::tip
-You can use [overwolf.social.getDisabledServices()](overwolf-social#getdisabledservicescallback) method to check if the service is available.
+You can use [`overwolf.social.getDisabledServices()`](overwolf-social#getdisabledservicescallback) method to check if the service is available.
 :::
 
 ## Methods Reference
@@ -30,7 +30,7 @@ You can use [overwolf.social.getDisabledServices()](overwolf-social#getdisableds
 
 * [overwolf.social.reddit.RedditShareParameters](#redditshareparameters-object) Object
 * [overwolf.social.reddit.SocialShareResult](#socialshareresult-object) Object
-* [overwolf.social.reddit.SocialShareProgress](#socialshareprogress-object)) Object
+* [overwolf.social.reddit.SocialShareProgress](#socialshareprogress-object) Object
 * [overwolf.social.reddit.Subreddit](#subreddit-object) Object
 * [overwolf.social.reddit.RedditAllowedPostTypes](#redditallowedposttypes-object) Object
 * [overwolf.social.reddit.SearchSubredditsResult](#searchsubredditsresult-object) Object
@@ -145,12 +145,12 @@ callback      | (Result) => void   | A callback function which will be called wi
 ## onShareFailed
 #### Version added: 0.128
 
-> Fired when an error is returned from Reddit, with the following structure: [ShareFailedEvent](#sharefailedevent-object) Object.
+> Fired when an error is returned from Reddit, with the following structure: [`ShareFailedEvent`](#sharefailedevent-object) Object.
 
 ## RedditShareParameters Object
 #### Version added: 0.128
 
-> This object defines all parameters that can/should be passed to the Reddit [Share()](#shareredditshareparameters-callback) and [shareEx()](#shareexredditshareparameters-callback-callback) methods.
+> This object defines all parameters that can/should be passed to the Reddit [`Share()`](#shareredditshareparameters-callback) and [`shareEx()`](#shareexredditshareparameters-callback-callback) methods.
 
 Parameter              | Type    | Description                                                                 |
 ---------------------- | --------| --------------------------------------------------------------------------- |
@@ -169,12 +169,12 @@ flair_id (Optional)    | [Flair](#flair-object) object  |                       
 
 #### id note
 
-When calling [overwolf.social.reddit.shareEx()](#shareexredditshareparameters-callback-callback), it is required to supply it with a request ID. This ID will also be used in case you wish to cancel this share using [overwolf.social.reddit.cancelShare()](#cancelsharestring-callback).
+When calling [`overwolf.social.reddit.shareEx()`](#shareexredditshareparameters-callback-callback), it is required to supply it with a request ID. This ID will also be used in case you wish to cancel this share using [`overwolf.social.reddit.cancelShare()`](#cancelsharestring-callback).
 
 #### useOverwolfNotifications note
 
-When calling [overwolf.social.reddit.share()](#shareredditshareparameters-callback), this will default to true.
-When calling [overwolf.social.reddit.shareEx()](#shareexredditshareparameters-callback-callback), this will default to false.
+When calling [`overwolf.social.reddit.share()`](#shareredditshareparameters-callback), this will default to true.
+When calling [`overwolf.social.reddit.shareEx()`](#shareexredditshareparameters-callback-callback), this will default to false.
 
 
 
