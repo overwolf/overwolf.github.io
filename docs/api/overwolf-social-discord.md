@@ -7,7 +7,7 @@ sidebar_label: overwolf.social.discord
 Provides access to the Discord social provider.
 
 :::tip
-You can use [overwolf.social.getDisabledServices()](overwolf-social#getdisabledservicescallback) method to check if the service is available.
+You can use [`overwolf.social.getDisabledServices()`](overwolf-social#getdisabledservicescallback) method to check if the service is available.
 :::
 
 ## Methods Reference
