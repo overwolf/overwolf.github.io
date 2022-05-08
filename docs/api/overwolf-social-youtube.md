@@ -28,7 +28,7 @@ You can use [overwolf.social.getDisabledServices()](overwolf-social#getdisableds
 
 * [overwolf.social.youtube.YouTubeShareParameters](#youtubeshareparameters-object) Object
 * [overwolf.social.youtube.SocialShareResult](#socialshareresult-object) Object
-* [overwolf.social.youtube.SocialShareProgress](#socialshareprogress-object)) Object
+* [overwolf.social.youtube.SocialShareProgress](#socialshareprogress-object) Object
 
 
 ## performUserLogin()
@@ -116,7 +116,7 @@ overwolf.social.youtube.cancelShare("2", console.log)
 ## YouTubeShareParameters Object
 #### Version added: 0.125
 
-> This object defines all parameters that can/should be passed to the Youtube [Share()](#shareyoutubeshareparameters-callback) and [shareEx()](#shareexyoutubeshareparameters-callback-callback) methods.
+> This object defines all parameters that can/should be passed to the Youtube [`Share()`](#shareyoutubeshareparameters-callback) and [`shareEx()`](#shareexyoutubeshareparameters-callback-callback) methods.
 
 Parameter              | Type    | Description                                                                 |
 ---------------------- | --------| --------------------------------------------------------------------------- |
@@ -132,12 +132,12 @@ gameTitle (Optional)   | string  | The associated game's title                  
 
 #### id note
 
-When calling [overwolf.social.youtube.shareEx()](#shareexyoutubeshareparameters-callback-callback), it is required to supply it with a request ID. This ID will also be used in case you wish to cancel this share using [overwolf.social.youtube.cancelShare()](#cancelsharestring-callback).
+When calling [`overwolf.social.youtube.shareEx()`](#shareexyoutubeshareparameters-callback-callback), it is required to supply it with a request ID. This ID will also be used in case you wish to cancel this share using [`overwolf.social.youtube.cancelShare()`](#cancelsharestring-callback).
 
 #### useOverwolfNotifications note
 
-When calling [overwolf.social.youtube.share()](#shareyoutubeshareparameters-callback), this will default to true.
-When calling [overwolf.social.youtube.shareEx()](#shareexyoutubeshareparameters-callback-callback), this will default to false.
+When calling [`overwolf.social.youtube.share()`](#shareyoutubeshareparameters-callback), this will default to true.
+When calling [`overwolf.social.youtube.shareEx()`](#shareexyoutubeshareparameters-callback-callback), this will default to false.
 
 
 ## SocialShareResult Object
