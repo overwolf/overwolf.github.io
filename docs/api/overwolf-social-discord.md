@@ -98,7 +98,7 @@ Types of errors that can occur:
 
 #### Code Example
 
-Note: you should perform login to Discord before calling the share function: [overwolf.social.discord.performUserLogin()](#performuserlogin).
+Note: you should perform login to Discord before calling the share function: [`overwolf.social.discord.performUserLogin()`](#performuserlogin).
 
 ```js
 let settingsLocalFile=
