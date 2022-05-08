@@ -169,10 +169,10 @@ Data Example:
 
 Possible Values:
 
-* 150 (solo, duo & trio)
-* 152 (quads)
-* 24 (training)
-* 100 (plunder)
+* 1 - lobby
+* 140 - solo, duo, quads
+* 139 - trio
+* 24 - training
 
 #### *game_map* note
 
