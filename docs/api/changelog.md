@@ -13,6 +13,7 @@ Here you can find our [Developers Roadmap](https://trello.com/b/1V10E4IB/overwol
   
 #### Docs
 - Updated the documentation to reflect the new API changes listed below
+- Added documentation of the [`automation`](../start/using-dev-tools#enabling-automation-testing-with-automation-flag) flag.
 
 #### API
 - New API: A new and improved share method, giving feedback of upload progress (to allow for custom notification behaviour), and allowing cancellation of uploads midway, for all supported social media. To get started, check the relevant network's api documentation for the following methods by replacing * with the specific network you wish to work with (e.g. discord):
