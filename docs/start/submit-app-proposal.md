@@ -50,7 +50,8 @@ Submitting your app concept for review is easy, and we’re not looking for a co
 
 Before submitting your proposal, please read the [developer](https://overwolf.github.io/docs/topics/legal-developers-terms) & [app](https://overwolf.github.io/docs/topics/legal-app-terms) terms of service.
 
-<iframe src="https://forms.monday.com/forms/embed/9c8c6385757e9f7b378182bf402f5c13" width="100%" height="1600px"> </iframe>
+<iframe src="/html/submission-form/form.html" width="100%" height="820px" style="margin-bottom: 30px"></iframe>
+<!-- <iframe src="https://forms.monday.com/forms/embed/9c8c6385757e9f7b378182bf402f5c13" width="100%" height="1600px"> </iframe> -->
 
 Note that you do not have to own a registered business or company to work on Overwolf apps or collect revenues - Overwolf is open to independent developers and companies alike.
 
