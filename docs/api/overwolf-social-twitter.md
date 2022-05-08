@@ -28,7 +28,7 @@ You can use [overwolf.social.getDisabledServices()](overwolf-social#getdisableds
 
 * [overwolf.social.twitter.TwitterShareParameters](#twittershareparameters-object) Object
 * [overwolf.social.twitter.SocialShareResult](#socialshareresult-object) Object
-* [overwolf.social.twitter.SocialShareProgress](#socialshareprogress-object)) Object
+* [overwolf.social.twitter.SocialShareProgress](#socialshareprogress-object) Object
 
 ## performUserLogin()
 #### Version added: 0.128
@@ -114,7 +114,7 @@ overwolf.social.twitter.cancelShare("2", console.log)
 ## TwitterShareParameters Object
 #### Version added: 0.125
 
-> This object defines all parameters that can/should be passed to the Twitter [Share()](#sharetwittershareparameters-callback) and [shareEx()](#shareextwittershareparameters-callback-callback) methods.
+> This object defines all parameters that can/should be passed to the Twitter [`Share()`](#sharetwittershareparameters-callback) and [`shareEx()`](#shareextwittershareparameters-callback-callback) methods.
 
 Parameter              | Type    | Description                                                                 |
 ---------------------- | --------| --------------------------------------------------------------------------- |
@@ -131,12 +131,12 @@ metadata (Optional)    | Object  | Extra information about the game session     
 
 #### id note
 
-When calling [overwolf.social.twitter.shareEx()](#shareextwittershareparameters-callback-callback), it is required to supply it with a request ID. This ID will also be used in case you wish to cancel this share using [overwolf.social.twitter.cancelShare()](#cancelsharestring-callback).
+When calling [`overwolf.social.twitter.shareEx()`](#shareextwittershareparameters-callback-callback), it is required to supply it with a request ID. This ID will also be used in case you wish to cancel this share using [`overwolf.social.twitter.cancelShare()`](#cancelsharestring-callback).
 
 #### useOverwolfNotifications note
 
-When calling [overwolf.social.twitter.share()](#sharetwittershareparameters-callback), this will default to true.
-When calling [overwolf.social.twitter.shareEx()](#shareextwittershareparameters-callback-callback), this will default to false.
+When calling [`overwolf.social.twitter.share()`](#sharetwittershareparameters-callback), this will default to true.
+When calling [`overwolf.social.twitter.shareEx()`](#shareextwittershareparameters-callback-callback), this will default to false.
 
 
 ## SocialShareResult Object
