@@ -12,7 +12,7 @@ Here you can find our [Developers Roadmap](https://trello.com/b/1V10E4IB/overwol
 * Note that iterations 196 to 198 were combined into a single iteration. 
   
 #### Docs
-- Soon
+- Updated the documentation to reflect the new API changes listed below
 
 #### API
 - New API: A new and improved share method, giving feedback of upload progress (to allow for custom notification behaviour), and allowing cancellation of uploads midway, for all supported social media. To get started, check the relevant network's api documentation for the following methods:
