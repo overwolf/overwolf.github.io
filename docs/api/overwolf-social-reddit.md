@@ -150,7 +150,7 @@ callback      | (Result) => void   | A callback function which will be called wi
 ## RedditShareParameters Object
 #### Version added: 0.128
 
-> This object defines all parameters that can/should be passed to the Reddit [`Share()`](#shareredditshareparameters-callback) and [shareEx()](#shareexredditshareparameters-callback-callback) methods.
+> This object defines all parameters that can/should be passed to the Reddit [`Share()`](#shareredditshareparameters-callback) and [`shareEx()`](#shareexredditshareparameters-callback-callback) methods.
 
 Parameter              | Type    | Description                                                                 |
 ---------------------- | --------| --------------------------------------------------------------------------- |
