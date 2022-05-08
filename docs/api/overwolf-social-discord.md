@@ -7,7 +7,7 @@ sidebar_label: overwolf.social.discord
 Provides access to the Discord social provider.
 
 :::tip
-You can use [overwolf.social.getDisabledServices()](overwolf-social#getdisabledservicescallback) method to check if the service is available.
+You can use [`overwolf.social.getDisabledServices()`](overwolf-social#getdisabledservicescallback) method to check if the service is available.
 :::
 
 ## Methods Reference
@@ -29,7 +29,7 @@ You can use [overwolf.social.getDisabledServices()](overwolf-social#getdisableds
 
 * [overwolf.social.discord.DiscordShareParameters](#discordshareparameters-object) Object
 * [overwolf.social.discord.SocialShareResult](#socialshareresult-object) Object
-* [overwolf.social.discord.SocialShareProgress](#socialshareprogress-object)) Object
+* [overwolf.social.discord.SocialShareProgress](#socialshareprogress-object) Object
 * [overwolf.social.discord.GetGuildsResult](#getguildsresult-object) Object
 * [overwolf.social.discord.Role](#role-object) Object
 * [overwolf.social.discord.Guild](#guild-object) Object
@@ -98,7 +98,7 @@ Types of errors that can occur:
 
 #### Code Example
 
-Note: you should perform login to Discord before calling the share function: [overwolf.social.discord.performUserLogin()](#performuserlogin).
+Note: you should perform login to Discord before calling the share function: [`overwolf.social.discord.performUserLogin()`](#performuserlogin).
 
 ```js
 let settingsLocalFile=
@@ -140,10 +140,10 @@ Types of errors that can occur:
 
 #### Code Example
 
-Note: you should perform login to Discord before calling the share function: [overwolf.social.discord.performUserLogin()](#performuserlogin).
+Note: you should perform login to Discord before calling the share function: [`overwolf.social.discord.performUserLogin()`](#performuserlogin).
 
 ```js
-let settingsLocalFile=
+let settingsLocalFile =
     {  
        "file":"C:\\Users\\astaroth\\Videos\\Overwolf\\test.mp4", //change the file name to an existing file
        "message":"Check out my video! #LeagueofLegends | Captured by #Overwolf",
@@ -182,12 +182,12 @@ overwolf.social.discord.cancelShare("2", console.log)
 ## onLoginStateChanged
 #### Version added: 0.115
 
-> Fired when the user’s login state changes, with the following structure: [LoginStateChangedEvent](overwolf-social#loginstatechangedevent-object) Object.
+> Fired when the user’s login state changes, with the following structure: [`LoginStateChangedEvent`](overwolf-social#loginstatechangedevent-object) Object.
 
 ## DiscordShareParameters Object
 #### Version added: 0.115
 
-> This object defines all parameters that can/should be passed to the Discord [Share()](#sharediscordshareparameters-callback) and [shareEx()](#shareexdiscordshareparameters-callback-callback) methods.
+> This object defines all parameters that can/should be passed to the Discord [`Share()`](#sharediscordshareparameters-callback) and [`shareEx()`](#shareexdiscordshareparameters-callback-callback) methods.
 
 Parameter              | Type    | Description                                                                 |
 ---------------------- | --------| --------------------------------------------------------------------------- |
@@ -204,16 +204,16 @@ metadata (Optional)    | Object  | Extra information about the game session     
 
 #### file note
 
-Since version 0.153, the "file" param is optional when calling [overwolf.social.discord.share()](#sharediscordshareparameters-callback). Instead, you can use the "message" param to include a URL of a file that you want to share.
+Since version 0.153, the "file" param is optional when calling [`overwolf.social.discord.share()`](#sharediscordshareparameters-callback). Instead, you can use the "message" param to include a URL of a file that you want to share.
 
 #### id note
 
-When calling [overwolf.social.discord.shareEx()](#shareexdiscordshareparameters-callback-callback), it is required to supply it with a request ID. This ID will also be used in case you wish to cancel this share using [overwolf.social.discord.cancelShare()](#cancelsharestring-callback).
+When calling [`overwolf.social.discord.shareEx()`](#shareexdiscordshareparameters-callback-callback), it is required to supply it with a request ID. This ID will also be used in case you wish to cancel this share using [`overwolf.social.discord.cancelShare()`](#cancelsharestring-callback).
 
 #### useOverwolfNotifications note
 
-When calling [overwolf.social.discord.share()](#sharediscordshareparameters-callback), this will default to true.
-When calling [overwolf.social.discord.shareEx()](#shareexdiscordshareparameters-callback-callback), this will default to false.
+When calling [`overwolf.social.discord.share()`](#sharediscordshareparameters-callback), this will default to true.
+When calling [`overwolf.social.discord.shareEx()`](#shareexdiscordshareparameters-callback-callback), this will default to false.
 
 
 ## SocialShareResult Object
