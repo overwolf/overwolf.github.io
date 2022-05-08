@@ -123,6 +123,10 @@ For local-server debugging (like with react apps) you can use the [`debug_url`](
 
 It is possible to use a testing framework (e.g. Selenium) with your application. More details [here](app-automation).
 
+## Enabling automation testing with automation flag
+
+To use a testing framework with your application, run the Overwolf App (overwolf.exe) with the flag "--enable-automation".
+
 ### Run your React app locally
 
 Runs on a node.js server.
