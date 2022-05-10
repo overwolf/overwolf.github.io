@@ -130,6 +130,15 @@ Data Example:
 
 #### *opened_page* note
 
+Possible values: 
+* inventory
+* passive_tree
+* character_sheet
+* stash
+* map_device
+* pantheon
+* crafting_bench
+
 Data Example:
 
 ```json
