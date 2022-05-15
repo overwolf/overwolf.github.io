@@ -150,7 +150,7 @@ Data Example:
 
 Event        | Event Data        | Fired When   | Notes              | Since GEP Ver. |
 -------------| ------------------| ------------ | ------------------ | ---------------|
-kill         | null              | Local player has performed a kill.| See [notes](#kill-note)     | 198.1 |
+kill         | null              | Local player has performed a kill.| See [notes](#kill-note)     | 198.0 |
 
 
 #### *kill* note
@@ -167,7 +167,7 @@ Data Example:
 
 Event        | Event Data        | Fired When   | Notes              | Since GEP Ver. |
 -------------| ------------------| ------------ | ------------------ | ---------------|
-death        | null              | Local player has died.| See [notes](#death-note)     | 198.1 |
+death        | null              | Local player has died.| See [notes](#death-note)     | 198.0 |
 
 #### *death* note
 
