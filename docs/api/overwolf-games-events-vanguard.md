@@ -12,6 +12,8 @@ Please read the [overwolf.games.events](overwolf-games-events) documentation pag
 
 :::warning
 
+Support for these events is for for English only and for 16:9 and 16:10 screen resolutions, the game window must be visible and should run with native screen resolution. 
+
 This game requires enabling exclusive mode on your OW app's windows. Read more about OW [exclusive mode](../topics/exclusive-mode).
 
 In addition, when developing your app, you must comply with Activision’s Call of Duty:Vanguard terms and conditions. Supporting que dodging, interfering with matchmaking or any such behavior is strictly prohibited, and will not be approved. If you have any doubt, please contact us directly before starting development.

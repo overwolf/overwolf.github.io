@@ -16,6 +16,8 @@ Here you can find our [Developers Roadmap](https://trello.com/b/1V10E4IB/overwol
   * New info update team_score with the score of each team during the game more info [here](overwolf-games-events-dota2)
 * [Rocket League](overwolf-games-events-rocket-league)
   * Support dropshot game mode
+* [Call of duty - Vanguard](overwolf-games-events-vanguard)
+  * Add support and new events for Call of Duty: Vanguard
 
 #### Docs
 - Updated the documentation to reflect the new API changes listed below
