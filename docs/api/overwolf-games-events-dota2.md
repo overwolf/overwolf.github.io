@@ -695,7 +695,7 @@ Data Example:
 
 `0c0ea3df-97ea-4d3a-b1f6-f8e34042251f`
 
-##### *game_mode* note
+#### *game_mode* note
 
 Data Example:
 
@@ -705,7 +705,7 @@ Data Example:
 {"info":{"match_info":{"game_mode":"{"lobby_type": "DOTA_lobby_type_name_custom_lobby" , "game_mode" : "GameMode_Turbo"}"}},"feature":"match_info"}
 ```
  
-##### *team_score* note
+#### *team_score* note
 
 Data Example:
 
