@@ -1,0 +1,180 @@
+---
+id: overwolf-games-events-vanguard
+title: Call of Duty: Vanguard
+sidebar_label: Call of Duty: Vanguard
+---
+
+Please read the [overwolf.games.events](overwolf-games-events) documentation page to learn how to use Overwolf game events.
+
+:::important Game ID
+21876
+:::
+
+:::warning
+
+Support for these events is for for English only and for 16:9 and 16:10 screen resolutions, the game window must be visible and should run with native screen resolution. 
+
+This game requires enabling exclusive mode on your OW app's windows. Read more about OW [exclusive mode](../topics/exclusive-mode).
+
+In addition, when developing your app, you must comply with Activision’s Call of Duty:Vanguard terms and conditions. Supporting que dodging, interfering with matchmaking or any such behavior is strictly prohibited, and will not be approved. If you have any doubt, please contact us directly before starting development.
+
+For more information check our [Game compliance principles](https://overwolf.github.io/docs/start/game-compliance-guiding-principles)
+
+:::
+
+## Sample Apps
+* [Vanguard game events sample app](https://github.com/overwolf/events-sample-apps)
+
+## Available Features
+
+* [gep_internal](#gep_internal)
+* [match_info](#match_info)
+* [game_info](#game_info)
+* [me](#me)
+* [kill](#kill)
+* [death](#death)
+
+## Game event status
+
+It is highly recommended to communicate errors and warnings to app users. 
+
+Check the current game event status [here](../status/all). Alternately, you can easily check that status from your app itself, [using our API](../topics/howto-check-events-status-from-app).
+
+## gep_internal
+
+### Info Updates
+
+key          | Category    | Values                    | Notes                 | Since GEP Ver. |
+------------ | ------------| ------------------------- | --------------------- | ------------- | 
+gep_internal | gep_internal| Local + Public version number|See [notes](#gep_internal-note)|   198.0       |
+
+#### *gep_internal* note
+
+Data Example:
+
+```json
+{"info":{"gep_internal":{"version_info":"{"local_version":"198.0.0","public_version":"198.0.0","is_updated":true}"}},"feature":"gep_internal"}
+```
+
+## match_info
+
+### Events
+
+Event        | Event Data        | Fired When   | Notes              | Since GEP Ver. |
+-------------| ------------------| ------------ | ------------------ | ---------------|
+match_start  | null              | Match started.| See [notes](#match_start-note)     | 198.0 |
+match_end    | null              | Match ended. | See [notes](#match_end-note)        | 198.0 |
+round_outcome    | null              | Current round result. | See [notes](#round_outcome -note)        | 198.0 |
+
+
+#### *match_start* note
+
+Data Example:
+
+```json
+{"events":[{"name":"match_start","data":null}]}
+```
+
+#### *match_end* note
+
+Data Example:
+
+```json
+{"events":[{"name":"match_end","data":null}]}
+```
+
+#### *round_outcome* note
+
+Data Example:
+
+```json
+{"name":"round_outcome","data":"defeat"}
+{"name":"round_outcome","data":"victory"}
+```
+
+## game_info
+
+### Info Updates
+
+key          | Category    | Values                    | Notes                 | Since GEP Ver. |
+------------ | ------------| ------------------------- | --------------------- | ------------- | 
+scene| game_info   | current player's scene. |See [notes](#scene-note)|   198.0       |
+game_mode| game_info   | current game mode selected by the player. |See [notes](#game_mode-note)|   198.0       |
+
+#### *scene* note
+Possible values:
+* lobby
+* inGame
+* spectating
+
+Data Example:
+
+```json
+{"feature":"game_info","category":"game_info","key":"scene","value":"lobby"}
+```
+
+#### *game_mode* note
+Possible values:
+* free_for_all 
+* team_deathmatch 
+* kill_confirmed 
+* domination 
+* search_destroy 
+* hardpoint 
+* control 
+* patrol 
+* champion_hill 
+
+Data Example:
+
+```json
+{"feature":"game_info","category":"game_info","key":"game_mode","value":"domination"}
+```
+
+## me
+
+### Info Updates
+
+key          | Category    | Values                    | Notes                 | Since GEP Ver. |
+------------ | ------------| ------------------------- | --------------------- | ------------- | 
+player_name| me   | current player's name. |See [notes](#player_name-note)|   198.0       |
+
+#### *player_name* note
+Data Example:
+
+```json
+{"feature":"me","category":"me","key":"player_name","value":"someUser"}
+```
+
+## kill
+
+### Events
+
+Event        | Event Data        | Fired When   | Notes              | Since GEP Ver. |
+-------------| ------------------| ------------ | ------------------ | ---------------|
+kill         | null              | Local player has performed a kill.| See [notes](#kill-note)     | 198.0 |
+
+
+#### *kill* note
+
+Data Example:
+
+```json
+{"events":[{"name":"kill","data":null}]}
+```
+
+## death
+
+### Events
+
+Event        | Event Data        | Fired When   | Notes              | Since GEP Ver. |
+-------------| ------------------| ------------ | ------------------ | ---------------|
+death        | null              | Local player has died.| See [notes](#death-note)     | 198.0 |
+
+#### *death* note
+
+Data Example:
+
+```json
+{"events":[{"name":"death","data":null}]}
+```

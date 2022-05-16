@@ -10,7 +10,15 @@ Here you can find our [Developers Roadmap](https://trello.com/b/1V10E4IB/overwol
 ## Version 0.198 (In progress)
 
 * Note that iterations 196 to 198 were combined into a single iteration. 
-  
+
+#### Game events
+* [Dota](overwolf-games-events-dota2)
+  * New info update team_score with the score of each team during the game more info [here](overwolf-games-events-dota2)
+* [Rocket League](overwolf-games-events-rocket-league)
+  * Support dropshot game mode
+* [Call of duty - Vanguard](overwolf-games-events-vanguard)
+  * Add support and new events for Call of Duty: Vanguard
+
 #### Docs
 - Updated the documentation to reflect the new API changes listed below
 - Added documentation of the [`automation`](../start/using-dev-tools#enabling-automation-testing-with-automation-flag) flag.
@@ -44,9 +52,6 @@ Here you can find our [Developers Roadmap](https://trello.com/b/1V10E4IB/overwol
   * Add new info update "augments" for the list of available augments feature in the match - see notes [here](overwolf-games-events-tft#me)
 * [Fortnite](overwolf-games-events-fortnite)
   * Add new info update for ping and skirmish data - see notes [here](overwolf-games-events-fortnite)
-
-#### Docs
-- Soon
 
 #### API
 - New API: [`overwolf.games.tracked.onUnsupportedExecuted`](../api/overwolf-games-tracked#onunsupportedexecuted) - a listener function that will trigger when a process that is defined as "Unsupported" in the Gameslist launches. It's important to note that it will only trigger if the app has defined `"track_all_games":true` in the `manifest.json`.
