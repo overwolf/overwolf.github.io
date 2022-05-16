@@ -250,5 +250,12 @@ const GamesMetadata = {
     iconUrl: "/docs/assets/games-logos/hunt-showdown.png",
     iconLargeUrl: "/docs/assets/games-logos/large/hunt-showdown.png",
     name: "Hunt Showdown"
+  },
+  21876: {
+    id: 21876,
+    path: "/docs/status/vanguard",
+    iconUrl: "/docs/assets/games-logos/vanguard.png",
+    iconLargeUrl: "/docs/assets/games-logos/large/vanguard.png",
+    name: "Call of Duty: Vanguard"
   }
 }
