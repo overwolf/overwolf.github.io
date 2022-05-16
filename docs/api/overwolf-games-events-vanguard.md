@@ -125,7 +125,8 @@ Possible values:
 * hardpoint 
 * control 
 * patrol 
-* champion_hill 
+* champion_hill
+* arms_race
 
 Data Example:
 
