@@ -1,0 +1,97 @@
+---
+id: app_automation
+title: App Automation
+sidebar_label: App Automation
+---
+
+This article explains how to enable and set up Overwolf app automation in Node.js using `ChromeDriver` and [`selenium-webdriver`](https://www.npmjs.com/package/selenium-webdriver) / [`webdriverio`](https://webdriver.io/).
+
+### Requirements:
+
+- [Download](https://chromedriver.storage.googleapis.com/87.0.4280.88/chromedriver_win32.zip) `chromedriver.exe` and place it in a folder of your choice (i.e. `C:/webdrivers`).
+  - Add that folder to your system's PATH:
+    1. Start menu
+    2. Type `Path`
+    3. Click `Edit the system environment variables`
+    4. Click `Environment Variables`
+    5. Click on `Path` and then `Edit`
+    6. Add your chosen folder to the list and click `OK` on all windows
+- Run Overwolf with the command line flag `--enable-automation`.
+- For the examples below: install and launch Replay HUD.
+
+### To run WebDriver with `selenium-webdriver` package:
+
+- Run `npm install selenium-webdriver` in your node project.
+- Install and launch your app.
+- Take note of your app's window title.
+- Create a driver instance according to the following example:
+
+  ```js
+  // ReplayHUD automation with selenium-webdriver
+  const { Builder, By, Key, until } = require("selenium-webdriver");
+  const chrome = require("selenium-webdriver/chrome");
+
+  const options = new chrome.Options();
+  options.options_["debuggerAddress"] = "localhost:54284"; // Overwolf Remote Debugger
+
+  const xpath = "/html/body/ng-include/div/div[5]/div[2]/div[1]/article[4]/div";
+
+  (async function example() {
+    let driver = await new Builder()
+      .forBrowser("chrome")
+      .setChromeOptions(options)
+      .build();
+
+    try {
+      // Find and switch to your app's window
+      const handles = await driver.getAllWindowHandles();
+      for (let handle of handles) {
+        await driver.switchTo().window(handle);
+        if ((await driver.getTitle()) === "Replay HUD") {
+          break;
+        }
+      }
+      // Enjoy
+      const element = await driver.wait(
+        until.elementLocated(By.xpath(xpath)),
+        30
+      );
+      await element.click();
+    } finally {
+      await driver.quit();
+    }
+  })();
+  ```
+
+### To run WebDriver with `webdriverio` in Standalone Mode:
+
+> If you want to run `webdriverio` in Testrunner Mode (and you likely do, if you're using this package for testing) you should check out its [documentation](https://webdriver.io/docs/gettingstarted). The configuration file (`wdio.conf.js`) should include the options used in the Standalone Mode example below.
+
+- Run `npm install webdriverio` in your node project.
+- Create a browser session according to the following example:
+
+  ```js
+  // ReplayHUD automation with webdriverio in Standalone Mode
+  const { remote } = require("webdriverio");
+
+  const xpath = "/html/body/ng-include/div/div[5]/div[2]/div[1]/article[4]/div";
+
+  (async () => {
+    const browser = await remote({
+      automationProtocol: "devtools",
+      browserName: "chrome",
+      capabilities: {
+        "goog:chromeOptions": {
+          debuggerAddress: "localhost:54284",
+        },
+      },
+    });
+
+    await browser.switchWindow("Replay HUD");
+
+    const button = await browser.$(xpath);
+    await button.waitForClickable({ timeout: 3000 });
+    await button.click();
+    await browser.deleteSession();
+  })();
+  ```
