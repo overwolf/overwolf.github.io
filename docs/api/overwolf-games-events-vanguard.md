@@ -111,7 +111,6 @@ game_mode| game_info   | current game mode selected by the player. |See [notes](
 Possible values:
 * lobby
 * inGame
-* spectating
 
 Data Example:
 
