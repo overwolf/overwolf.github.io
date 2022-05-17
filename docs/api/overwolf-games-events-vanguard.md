@@ -65,7 +65,7 @@ Data Example:
 Event        | Event Data        | Fired When   | Notes              | Since GEP Ver. |
 -------------| ------------------| ------------ | ------------------ | ---------------|
 match_start  | null              | Match started.| See [notes](#match_start-note)     | 198.0 |
-match_end    | null              | Match ended. | See [notes](#match_end-note)        | 198.0 |
+match_end    | null              | Match ended and also data about the match outcome. | See [notes](#match_end-note)        | 198.0 |
 round_outcome    | null              | Current round result. | See [notes](#round_outcome-note)        | 198.0 |
 
 
@@ -78,11 +78,15 @@ Data Example:
 ```
 
 #### *match_end* note
+Match end event include the match outcome</br>
+Possible values:
+* victory
+* defeat
 
 Data Example:
 
 ```json
-{"events":[{"name":"match_end","data":null}]}
+{"events":[{"name":"match_end","data":victory}]}
 ```
 
 #### *round_outcome* note
