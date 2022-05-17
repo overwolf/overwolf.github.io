@@ -66,7 +66,7 @@ Event        | Event Data        | Fired When   | Notes              | Since GEP
 -------------| ------------------| ------------ | ------------------ | ---------------|
 match_start  | null              | Match started.| See [notes](#match_start-note)     | 198.0 |
 match_end    | null              | Match ended. | See [notes](#match_end-note)        | 198.0 |
-round_outcome    | null              | Current round result. | See [notes](#round_outcome -note)        | 198.0 |
+round_outcome    | null              | Current round result. | See [notes](#round_outcome-note)        | 198.0 |
 
 
 #### *match_start* note
