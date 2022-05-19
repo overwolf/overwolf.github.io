@@ -105,7 +105,7 @@ callback  | function | Called with the DPI info                     |
 ## getClientInfo(callback)
 #### Version added: 0.198
 
-> Returns the time in epoch when Overwolf was installed, as well as the amount of seconds the client has been running for.
+> Returns the ([UNIX](https://en.wikipedia.org/wiki/Unix_time)) time, of when Overwolf was installed, as well as the amount of seconds the client has been running for.
 
 Parameter | Type     | Description                                  |
 --------- | ---------| -------------------------------------------- |
@@ -115,7 +115,7 @@ An example return value
 
 ```js
 result: 
-{ 
+{
     "installTime": 1651496699,
     "uptimeSeconds": 100
 }
