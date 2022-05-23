@@ -81,7 +81,7 @@ Note: In a scenario when more than one game is running, we'll display informatio
 
 Parameter | Type     | Description                                                              |
 ----------| -------- | ------------------------------------------------------------------------ |
-callback  | [(Result:GetRunningGameInfoResult)](#getrunninggameinforesult-object) => void | Returns info about the currently running game |
+callback  | [(Result: GetRunningGameInfoResult)](#getrunninggameinforesult-object) => void | Returns info about the currently running game |
 
 #### Usage Example
 

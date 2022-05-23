@@ -7,7 +7,31 @@ sidebar_label: Changelog
 Follow this entry for ongoing updates and changes to the project or tools.
 Here you can find our [Developers Roadmap](https://trello.com/b/1V10E4IB/overwolf-roadmap).
 
-## Version 0.198 (In progress)
+
+## Version 0.199 (In progress)
+#### Game events
+* Coming soon
+
+#### Docs
+- Updated the documentation to reflect the new API changes listed below.
+
+#### API
+- Updated API: [`overwolf.streaming`](../api/overwolf-streaming):
+  - [`overwolf.streaming.getCapabilities`](../api/overwolf-streaming#getcapabilitiescallback) - New method for obtaining all streaming capabilities in one place.
+    - Returns a callback with [`overwolf.streaming.StreamingCapabilities`](../api/overwolf-streaming#streamingcapabilities-object).
+  - [`overwolf.streaming.StreamAudioOptions`](../api/overwolf-streaming#gameaudiodevice-object) has been renamed to [`overwolf.streaming.GameAudioDevice`](../api/overwolf-streaming#gameaudiodevice-object). The new field `filtered_capture` has been added as well.
+
+- New API: [`overwolf.games.tracked.getRunningGameInfo`](../api/overwolf-games-tracked#getrunninggameinfocallback) - New method for obtaining game info from tracked games, similar to [`overwolf.games.getRunningGameInfo`](../api/overwolf-games#getrunninggameinfocallback).
+  - Keep in mind that an untracked game that was detected is still not necessarily supported, so be sure to test that it works for your specific use case!
+
+#### Platform
+- Several improvements to Overwolf dll stability.
+
+#### Bug Fixes
+- [`overwolf.games.getRunningGameInfo`](../api/overwolf-games#getrunninggameinfocallback) will no longer return a monitor handle of 0 in certain edge cases.
+
+
+## Version 0.198 (May 2022)
 
 * Note that iterations 196 to 198 were combined into a single iteration. 
 
@@ -21,7 +45,7 @@ Here you can find our [Developers Roadmap](https://trello.com/b/1V10E4IB/overwol
   * The implementation of this game's GEP is experimental and is considered a Beta version
 
 #### Docs
-- Updated the documentation to reflect the new API changes listed below
+- Updated the documentation to reflect the new API changes listed below.
 - Added documentation of the [`automation`](../start/using-dev-tools#enabling-automation-testing-with-automation-flag) flag.
 
 #### API
