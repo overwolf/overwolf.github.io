@@ -12,7 +12,7 @@ Many gamers have a second screen which is usually unused while they play and foc
 
 * Second screen windows should have easy ways to close them - at least a hotkey and an X button at the top.
 
-* The second screen launcher should default in full screen but have the ability to scale/restore down.
+* The second screen launcher should default in the original sized screen but have the ability to scale/restore down.
 
 * If you don’t know the exact resolution of the second screen, use 1920X1080 which is the most common one. 
 

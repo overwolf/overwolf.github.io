@@ -154,8 +154,8 @@ match_id | match_info | The current match ID code.</br>Example:</br>`match.bro.o
 
 Event      | Event Data  | Fired When          | Notes              | Since GEP Ver. |
 -----------| ------------| ------------------- | ------------------ | --------------|
-matchStart | null        | Match started |   |   90.0       | 
-matchEnd | null        | Match ended. See [notes](#matchend-notes) below |   |   90.0       | 
+matchStart | null        | Match started |See [notes](#matchStart-notes)   |   90.0       | 
+matchEnd | null        | Match ended.  |See [notes](#matchend-notes)  |   90.0       | 
 matchSummary | null        | The match summary screen (with the user’s rank) is shown</br>`{"name":"matchSummary","data":""}` |   |   120.0      |
 
 #### `matchStart` notes
@@ -223,16 +223,16 @@ ping   | performance | The local player’s latency                | Example: `{
 
 key                 | Category  | Values                                                     | Notes                                           | Since GEP Ver. |
 ------------------- | ----------| ---------------------------------------------------------- | ----------------------------------------------  | ------------- |
-location            | game_info | The player’s current grid location (x,y,z).                | See example [below](#location-notes)            |   0.116       |
-safe_zone           | game_info | The location of the white circle and its radius            | See example [below](#zones-notes)               |   0.133       |
-blue_zone           | game_info | The location of the blue circle and its radius             | See example [below](#zones-notes)               |   0.133       |
-red_zone            | game_info | The location of the red  circle and its radius             | See example [below](#zones-notes)               |   0.133       |
+location            | game_info | The player’s current grid location (x,y,z).                | See [notes](#location-notes)            |   0.116       |
+safe_zone           | game_info | The location of the white circle and its radius            | See [notes](#zones-notes)               |   0.133       |
+blue_zone           | game_info | The location of the blue circle and its radius             | See [notes](#zones-notes)               |   0.133       |
+red_zone            | game_info | The location of the red  circle and its radius             | See [notes](#zones-notes)               |   0.133       |
 
 ### Events
 
 Event      | Event Data  | Fired When          | Notes              | Since GEP Ver. |
 -----------| ------------| ------------------- | ------------------ | --------------|
-time_to_next_circle | Amount of seconds left to next safe zone | From the moment the first safe zone is formed. | See example [below](#time-to-next-circle-notes)  |   0.133       | 
+time_to_next_circle | Amount of seconds left to next safe zone | From the moment the first safe zone is formed. | See [notes](#time-to-next-circle-notes)  |   0.133       | 
 
 #### `location` notes
 
@@ -349,7 +349,21 @@ Data Example:
 
 key    | Category    | Values                          | Notes                 | Since GEP Ver. |
 -------| ------------| --------------------------------| --------------------- | ------------- | 
-phase   | game_info   | The game’s current state, can be one of the following:<ul><li>‘lobby’</li><li>‘loading_screen’</li><li>‘airfield’</li><li>‘aircraft’</li><li>‘freefly’</li><li>‘landed’  |                       |  90.0         |
+phase   | game_info   | The game’s current state  |  See [notes](#phase-notes)|  90.0         |
+
+#### `phase` notes
+Possible values:
+* lobby
+* loading_screen
+* airfield
+* aircraft
+* freefly
+* landed
+  
+Data example:  
+```json
+{"feature":"phase","category":"game_info","key":"phase","value":"lobby"}
+```
 
 ## `map`
 
@@ -357,14 +371,14 @@ phase   | game_info   | The game’s current state, can be one of the following:
 
 key                | Category    | Values                                         | Notes  | Since GEP Ver. |
 -------------------| ------------| -----------------------------------------------| ------ | ------------- |
-map    | match_info   | The current map name</br>`{"map":"Erangel_Main"}`   | [map names mapping](https://github.com/pubg/api-assets/blob/master/dictionaries/telemetry/mapName.json) |    0.90       |
+map    | match_info   | The current map name</br>`{"map":"Erangel_Main"}`   | See [map names](https://github.com/pubg/api-assets/blob/master/dictionaries/telemetry/mapName.json) |    0.90       |
 
 ## `roster`
 
 ### Info Updates
 key       | Category        | Values                                         | Notes                                                   | Since GEP Ver. |
 ----------| ----------------| -----------------------------------------------| ------------------------------------------------------- | ------------- |
-roster_XX        | match_info   | This feature provides the entire list of players </br>(~99 players). See [notes below](#roster_xx-notes)  |    | 119.1   |
+roster_XX        | match_info   | This feature provides the entire list of players </br>(~99 players). See [notes](#roster_xx-notes)  |    | 119.1   |
 
 #### `roster_XX` notes
 

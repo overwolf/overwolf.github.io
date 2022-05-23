@@ -12,11 +12,13 @@ Please read the [overwolf.games.events](overwolf-games-events) documentation pag
 
 :::warning
 
-Support for these events is for for English only and for 16:9 and 16:10 screen resolutions, the game window must be visible and should run with native screen resolution. 
+* The implementation of this game's GEP is experimental and is considered a Beta version
 
-This game requires enabling exclusive mode on your OW app's windows. Read more about OW [exclusive mode](../topics/exclusive-mode).
+* Support for these events is for English only and for 16:9 and 16:10 screen resolutions, the game window must be visible and should run with native screen resolution. 
 
-In addition, when developing your app, you must comply with Activision’s Call of Duty:Vanguard terms and conditions. Supporting que dodging, interfering with matchmaking or any such behavior is strictly prohibited, and will not be approved. If you have any doubt, please contact us directly before starting development.
+* This game requires enabling exclusive mode on your OW app's windows. Read more about OW [exclusive mode](../topics/exclusive-mode).
+
+* In addition, when developing your app, you must comply with Activision’s Call of Duty:Vanguard terms and conditions. Supporting que dodging, interfering with matchmaking or any such behavior is strictly prohibited, and will not be approved. If you have any doubt, please contact us directly before starting development.
 
 For more information check our [Game compliance principles](https://overwolf.github.io/docs/start/game-compliance-guiding-principles)
 
@@ -63,8 +65,8 @@ Data Example:
 Event        | Event Data        | Fired When   | Notes              | Since GEP Ver. |
 -------------| ------------------| ------------ | ------------------ | ---------------|
 match_start  | null              | Match started.| See [notes](#match_start-note)     | 198.0 |
-match_end    | null              | Match ended. | See [notes](#match_end-note)        | 198.0 |
-round_outcome    | null              | Current round result. | See [notes](#round_outcome -note)        | 198.0 |
+match_end    | null              | Match ended and also data about the match outcome. | See [notes](#match_end-note)        | 198.0 |
+round_outcome    | null              | Current round result. | See [notes](#round_outcome-note)        | 198.0 |
 
 
 #### *match_start* note
@@ -76,11 +78,15 @@ Data Example:
 ```
 
 #### *match_end* note
+Match end event include the match outcome</br>
+Possible values:
+* victory
+* defeat
 
 Data Example:
 
 ```json
-{"events":[{"name":"match_end","data":null}]}
+{"events":[{"name":"match_end","data":victory}]}
 ```
 
 #### *round_outcome* note
@@ -105,7 +111,6 @@ game_mode| game_info   | current game mode selected by the player. |See [notes](
 Possible values:
 * lobby
 * inGame
-* spectating
 
 Data Example:
 
@@ -123,7 +128,8 @@ Possible values:
 * hardpoint 
 * control 
 * patrol 
-* champion_hill 
+* champion_hill
+* arms_race
 
 Data Example:
 
