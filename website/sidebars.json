@@ -5,7 +5,7 @@
 			"Build Your First App":
 			["start/sample-app-overview", "start/sample-app-components",  "start/sample-app-front-app", "start/sample-app-ui-components"],
 			"Test Your App":
-			["start/how-to-test-your-app", "start/technical-checklist", "start/product-checklist", "start/marketing-checklist", "start/community-alphas"],
+			["start/how-to-test-your-app", "start/app-automation", "start/technical-checklist", "start/product-checklist", "start/marketing-checklist", "start/community-alphas"],
 			"Submit Your App":
 			["start/submit-your-app-to-the-store", "start/custom-installer-for-your-app"],
 			"Monetize with Ads":
