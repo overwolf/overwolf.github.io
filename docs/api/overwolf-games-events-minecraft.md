@@ -218,31 +218,6 @@ Data Example:
 ```json
 {"events":[{"name":"chat","data":"§7overwolfqa§7: hello"}]}
 ```
-## `game_info`
-
-### Info Updates
-
-key          | Category    | Values                    | Notes                 | Since GEP Ver. |
------------- | ------------| ------------------------- | --------------------- | ------------- | 
-scene        | game_info   | The name of the current scene. |See [notes](#scene-note)|   153.0       |
-name         | game_info   | The name of the local player. |See [notes](#name-note)|   153.0       |
-
-#### *scene* note
-
-Data Example:
-
-```json
-{"info":{"game_info":{"scene":"Title Screen"}},"feature":"game_info"}
-{"info":{"game_info":{"scene":"Select World"}},"feature":"game_info"}
-```
-
-#### *name* note
-
-Data Example:
-
-```json
-{"info":{"game_info":{"name":"OverwoldDeBest"}},"feature":"game_info"}
-```
 
 ## `mods`
 
