@@ -16,12 +16,15 @@ Here you can find our [Developers Roadmap](https://trello.com/b/1V10E4IB/overwol
 - Updated the documentation to reflect the new API changes listed below.
 
 #### API
-- Updated API: [`overwolf.streaming`](../api/overwolf-streaming):
-  - [`overwolf.streaming.getCapabilities`](../api/overwolf-streaming#getcapabilitiescallback) - New method for obtaining all streaming capabilities in one place.
+- Updated API: [`overwolf.streaming`](../api/overwolf-streaming) [EXPERIMENTAL]:
+  - ABSTRACT - It is now possible to choose to capture audio from a game and other specific audio processes, rather than only the entire desktop's audio.
+  - [`overwolf.streaming.getCapabilities`](../api/overwolf-streaming#getcapabilitiescallback) - New method for obtaining all streaming capabilities in one place, for both video and audio.
     - Returns a callback with [`overwolf.streaming.StreamingCapabilities`](../api/overwolf-streaming#streamingcapabilities-object).
-  - [`overwolf.streaming.StreamAudioOptions`](../api/overwolf-streaming#gameaudiodevice-object) has been renamed to [`overwolf.streaming.GameAudioDevice`](../api/overwolf-streaming#gameaudiodevice-object). The new field `filtered_capture` has been added as well.
+    - Of particular note is the new `audioProcessCaptureSupported` flag, that lets us know if `filtered_capture` can be enabled.
+  - [`overwolf.streaming.StreamAudioOptions`](../api/overwolf-streaming#gameaudiodevice-object) has been renamed to [`overwolf.streaming.GameAudioDevice`](../api/overwolf-streaming#gameaudiodevice-object). The new field `filtered_capture` has been added as well, and can be used if `audioProcessCaptureSupported` returned true (this depends on the machine running the app, so make sure to always check it!).
 
 - New API: [`overwolf.games.tracked.getRunningGameInfo`](../api/overwolf-games-tracked#getrunninggameinfocallback) - New method for obtaining game info from tracked games, similar to [`overwolf.games.getRunningGameInfo`](../api/overwolf-games#getrunninggameinfocallback).
+  - This method will only work if `tracked` is tracking this specific game, and `track_all_games` (inclue unsupported games) is enabled in the [app manifest](../api/manifest-json#launch_event_settings-array).
   - Keep in mind that an untracked game that was detected is still not necessarily supported, so be sure to test that it works for your specific use case!
 
 #### Platform

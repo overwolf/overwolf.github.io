@@ -982,7 +982,8 @@ Defines the configuration for an x264 encoder.
 | mic         | [StreamDeviceVolume](#streamdevicevolume-object)  |  Defines the microphone volume as applied to the stream                        | 0.83  |
 | game        | [StreamDeviceVolume](#streamdevicevolume-object)  | Defines the game volume as applied to the stream                               | 0.83  |
 | separate_tracks | bool                                          | Enable multiple audio tracks. See [notes](#separate_tracks-notes)              | 0.156 |
-| filtered_capture | [GameCaptureOptions](#gamecaptureoptions-object) | An array of extra processes to filter audio from              | 0.199 |
+| filtered_capture | [GameCaptureOptions](#gamecaptureoptions-object) | If enabled, only audio from the game and the specifically marked processes will be captured. See [notes]()             | 0.199 |
+
 
 #### separate_tracks notes
 
@@ -993,6 +994,12 @@ The Video will be created with three different audio tracks (when both Mic + Des
 * Track 1: Microphone + Desktop
 * Track 2: Desktop output
 * Track 3: Microphone input
+
+#### filtered_capture
+
+:::warning
+This feature is experintal, proceed with caution!
+:::
 
 ## StreamDeviceVolume Object
 
@@ -1012,7 +1019,7 @@ Defines a device volume and enablement settings.
 
 #### Version added: 0.199
 
-Defines an array of processes to enable/disable capture on selectively
+If enabled, only audio from the current game, as well as from any strictly specified process in this list, will be captured. Requires [audioProcessCaptureSupported](#getcapabilitiescallback) to return true in `audioProcessCaptureSupported` (this depends on the running machine, so make sure to verify it!)
 
 | Name      | Type   | Description                                          | Since |
 |-----------| ------ |------------------------------------------------------| ----- |

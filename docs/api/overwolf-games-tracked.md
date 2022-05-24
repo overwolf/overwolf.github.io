@@ -24,7 +24,12 @@ Requires `tracked` under the [launch_events](../api/manifest-json#launch_event_s
 
 #### Version added: 0.199
 
-> If `track_all_games` is set to true, returns an object with information about the currently running untracked game
+:::warning
+Unsupported games will not necessarily be detected as expected, and are by their very nature unsupported by default. Please make sure to test this for the specific game before using it in production!
+:::
+
+
+> If `track_all_games` is set to true in the manifest, and `tracked` is aimed at the currently running unsupported game, returns an object with information about the currently running untracked game, similarly to [overwolf.games.getRunningGameInfo()](overwolf-games#getrunninggameinfocallback).
 
 Note: In a scenario when more than one game is running, we'll display information only from the latest one that was launched.
 
