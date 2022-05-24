@@ -242,6 +242,7 @@ userID   | match_info  |The current user’s ID code. |   See [notes](#userID-no
 ticketID   | match_info  |The current ticket’s ID code. |  See [notes](#ticketID-note)|  132.0  |
 partyID   | match_info  |The current party’s ID code. |  See [notes](#partyID-note)|  132.0  |
 skirmish   | match_info  |The skirmish data is the enemy gunfire indicator on the compass |  See [notes](#skirmish-note)|  195.0  |
+roster   | match_info  |This feature provides the entire list of players |  See [notes](#roster-note)|  198.0  |
 
 ### Events
 
@@ -313,7 +314,19 @@ Data Example:
 {"feature":"match_info","category":"match_info","key":"skirmish","value":"{\"skirmish_data\":[{\"index\":1,\"time\":165,\"strength\":18,\"compass_angle\":96,\"red_dot_angle\":57},{\"index\":2,\"time\":166,\"strength\":99,\"compass_angle\":96,\"red_dot_angle\":113}]}"}
 ```
 
-  
+#### *roster* note
+
+This feature provides the entire list of players
+  * player -  the player name. If anonymous is activated the value will be anonymous
+  * team_id - the ID of the player's team
+  * is_local - if the player is the local player the value will be true in not the value will be false
+
+Data Example:
+
+```json
+{"feature":"match_info","category":"match_info","key":"roster_99","value":"{\"player\":\"Mefe76\",\"team_id\":102,\"is_local\":false}"}
+``` 
+
 #### *generic* note
 
 These are general events provided by the game client.
