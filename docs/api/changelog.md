@@ -46,6 +46,9 @@ Here you can find our [Developers Roadmap](https://trello.com/b/1V10E4IB/overwol
 * [Call of duty - Vanguard](overwolf-games-events-vanguard)
   * Add support and new events for Call of Duty: Vanguard
   * The implementation of this game's GEP is experimental and is considered a Beta version
+* [Fortnite](overwolf-games-events-fortnite)
+  * Add new info update of roster - see notes [here](overwolf-games-events-fortnite#roster-note)
+  * Add the name of the knocked out player in knockout event- see notes [here](overwolf-games-events-fortnite#knockout-note)
 
 #### Docs
 - Updated the documentation to reflect the new API changes listed below.
