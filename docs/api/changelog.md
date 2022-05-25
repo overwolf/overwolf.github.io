@@ -14,6 +14,7 @@ Here you can find our [Developers Roadmap](https://trello.com/b/1V10E4IB/overwol
 
 #### Docs
 - Updated the documentation to reflect the new API changes listed below.
+- Added documentation of the [overwolf.games.GameInfoType](../api/overwolf-games#gameinfotype-enum) Enum.
 
 #### API
 - Updated API: [`overwolf.streaming`](../api/overwolf-streaming) [EXPERIMENTAL]:
