@@ -8,10 +8,43 @@ sidebar_label: overwolf.games.tracked
 Requires `tracked` under the [launch_events](../api/manifest-json#launch_event_settings-array) property in the `manifest.json`
 :::
 
+
+## Methods Reference
+
+* [overwolf.games.tracked.getRunningGameInfo()](#getrunninggameinfocallback)
+
 ## Events Reference
 
 * [overwolf.games.tracked.onUnsupportedExecuted()](#onunsupportedexecuted)
 * [overwolf.games.tracked.onTermiated()](#onterminated) 
+
+## Types Reference
+
+* [overwolf.games.tracked.GetRunningGameInfoResult](#getrunninggameinforesult-object) Object
+* [overwolf.games.tracked.GameInfoType](#gameinfotype-enum) Enum
+
+
+## getRunningGameInfo(callback)
+
+#### Version added: 0.199
+
+:::warning
+Unsupported games will not necessarily be detected as expected, and are by their very nature unsupported by default. Please make sure to test this for the specific game before using it in production!
+:::
+
+:::warning
+This method will only work for games with a [GameInfoType](#gameinfotype-enum) of type "game"!
+:::
+
+> If both `tracked` and `track_all_games` are set to true in the [manifest](../api/manifest-json#launch_event_settings-array), returns an object with information about the most recently launched game, similarly to the way [overwolf.games.getRunningGameInfo()](overwolf-games#getrunninggameinfocallback) works.
+
+Note: In a scenario when more than one game is running, we'll display information only from the latest one that was launched, including both "unsupported" **and** "supported" games.
+
+
+
+Parameter | Type     | Description                                                              |
+----------| -------- | ------------------------------------------------------------------------ |
+callback  | [(Result: GetRunningGameInfoResult)](#getrunninggameinforesult-object) => void | Returns info about the currently running game |
 
 
 ## onUnsupportedExecuted
@@ -28,4 +61,78 @@ Requires `tracked` and `track_all_games` under the [launch_events](../api/manife
 :::important
 Requires `tracked` under the [launch_events](../api/manifest-json#launch_event_settings-array) property in the `manifest.json`
 :::
-> Fired when an unsupported game process has terminated. 
+> Fired when an unsupported game process has terminated.
+
+
+## GetRunningGameInfoResult Object
+
+Parameter            | Type     | Description                                                                                         | 
+---------------------| ---------| --------------------------------------------------------------------------------------------------- | 
+| success            | boolean  |                                                                                                     |  
+| error              | string   | null if success is true                                                                             |
+| isInFocus          | bool     | Returns whether the game is currently in focus                                                      |
+| isRunning          | bool     | Returns whether the game is currently running                                                       | 
+| allowsVideoCapture | bool     | Returns whether the game allows video to be captured                                                | 
+| title              | string   | Returns the title of the game                                                                       | 
+| id                 | int      | Returns the game ID concatenated with the Instance ID of the game. Divide it by 10 and round down to get the game ID |
+| classId            | int      | Returns the game ID                                                                                 |
+| width              | int      | Returns the pixel width of the game window                                                          | 
+| height             | int      | Returns the pixel height of the game window                                                         | 
+| logicalWidth       | int      | Returns the game-reported (logical) pixel width of the game window                                  | 
+| logicalHeight      | int      | Returns the game-reported (logical) pixel height of the game window                                 | 
+| processId          | int      | Returns the current process id of the running game                                                  | 
+| renderers          | string[] | Returns an array of the rendering technology names supported by the running game                    | 
+| detectedRenderer   | string   | Returns the rendering technology detected by the running game                                       | 
+| commandLine        | string   | Returns the game process commandline                                                                | 
+| type               | int      | Returns the process type as a number. See [notes](#infotype-note-1)                                 | 
+| typeAsString       | string   | Returns the process type as a string. See [notes](#infotype-note-1)                                 | 
+| windowHandle       | object   | Returns the current game window handle                                                              | 
+| monitorHandle      | object   | Returns the current monitor handle                                                                  |
+| overlayInfo        | [OverlayInfo](#overlayinfo-object) Object  | Returns info about the the running out of process overlays        | 
+
+
+#### Example data: Success
+
+```json
+{
+    "success":true,
+    "isInFocus":false,
+    "isRunning":true,
+    "allowsVideoCapture":true,
+    "title":"Guild Wars",
+    "displayName":"",
+    "shortTitle":"",
+    "id":11361,
+    "classId":1136,
+    "width":1920,
+    "height":1080,
+    "logicalWidth":1920,
+    "logicalHeight":1080,
+    "processId": 3840,
+    "renderers":[
+        "D3D9"
+    ],
+    "detectedRenderer":"Unknown",
+    "executionPath":"D:/Games/Guild Wars/Gw.exe",
+    "sessionId":"3ced63b755724fd4ab1d3d2a210aa764",
+    "commandLine":"\"D:/Games/Guild Wars/Gw.exe\"",
+    "type":0,
+    "typeAsString":"Game",
+    "windowHandle":{
+        "value":0
+    },
+    "monitorHandle":{
+        "value":0
+    }
+}
+```
+
+## GameInfoType enum
+
+The type value for a process is determined by the [gamelist](games-ids#the-gamelistxml-file) entry for it.
+
+Option                          | Description   |
+--------------------------------| --------------|
+Game                            |      This is a Game        |
+Launcher                        |      This is a launcher    |
+Application                     |      This is an app        |
