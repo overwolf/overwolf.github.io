@@ -24,8 +24,8 @@ Here you can find our [Developers Roadmap](https://trello.com/b/1V10E4IB/overwol
   - [`overwolf.streaming.StreamAudioOptions`](../api/overwolf-streaming#gameaudiodevice-object) has been renamed to [`overwolf.streaming.GameAudioDevice`](../api/overwolf-streaming#gameaudiodevice-object). The new field `filtered_capture` has been added as well, and can be used if `audioProcessCaptureSupported` returned true (this depends on the machine running the app, so make sure to always check it!).
 
 - New API: [`overwolf.games.tracked.getRunningGameInfo`](../api/overwolf-games-tracked#getrunninggameinfocallback) - New method for obtaining game info from tracked games, similar to [`overwolf.games.getRunningGameInfo`](../api/overwolf-games#getrunninggameinfocallback).
-  - This method will only work if `tracked` is tracking this specific game, and `track_all_games` (inclue unsupported games) is enabled in the [app manifest](../api/manifest-json#launch_event_settings-array).
-  - Keep in mind that an untracked game that was detected is still not necessarily supported, so be sure to test that it works for your specific use case!
+  - This method will only work if `tracked` and `track_all_games` are both set to true in the [app manifest](../api/manifest-json#launch_event_settings-array), but it will work on **all** games, regardless of whether they're supported or not.
+  - Keep in mind that an unsupported game that was tracked still won't necessarily work as intended, so be sure to test that it works for your specific use case!
 
 #### Platform
 - Several improvements to Overwolf dll stability.

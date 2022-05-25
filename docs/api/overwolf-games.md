@@ -483,6 +483,8 @@ Parameter            | Type     | Description                                   
 | renderers          | string[] | Returns an array of the rendering technology names supported by the running game                    | 
 | detectedRenderer   | string   | Returns the rendering technology detected by the running game                                       | 
 | commandLine        | string   | Returns the game process commandline                                                                | 
+| type               | int      | Returns the process type as a number. See [notes](#infotype-note)                                   | 
+| typeAsString       | string   | Returns the process type as a string. See [notes](#infotype-note)                                   | 
 | monitorHandle      | object   | Returns the current monitor handle                                                                  | 
 | windowHandle       | object   | Returns the current app window handle                                                               | 
 | processId          | int      | Returns the current process id of the running game                                                  | 
@@ -523,6 +525,11 @@ Parameter            | Type     | Description                                   
 }
 ```
 
+#### InfoType Note
+
+Both of these type fields correspond to a certain [GameInfoType](#gameinfotype-enum) value, which is the value defined for this process in the [gamelist](games-ids#the-gamelistxml-file).
+
+
 ## InstalledGameInfo Object
 
 Parameter                       | Type     | Description                                                              |
@@ -559,7 +566,7 @@ Parameter            | Type     | Description                                   
 ---------------------| ---------| --------------------------------------------------------------------------------------------------- | 
 | success            | boolean  |                                                                                                     |  
 | error              | string   | null if success is true                                                                             |
-| isInFocus          | bool     | Returns whether the game is currently in focus                                                      | 
+| isInFocus          | bool     | Returns whether the game is currently in focus                                                      |
 | isRunning          | bool     | Returns whether the game is currently running                                                       | 
 | allowsVideoCapture | bool     | Returns whether the game allows video to be captured                                                | 
 | title              | string   | Returns the title of the game                                                                       | 
@@ -569,12 +576,14 @@ Parameter            | Type     | Description                                   
 | height             | int      | Returns the pixel height of the game window                                                         | 
 | logicalWidth       | int      | Returns the game-reported (logical) pixel width of the game window                                  | 
 | logicalHeight      | int      | Returns the game-reported (logical) pixel height of the game window                                 | 
+| processId          | int      | Returns the current process id of the running game                                                  | 
 | renderers          | string[] | Returns an array of the rendering technology names supported by the running game                    | 
 | detectedRenderer   | string   | Returns the rendering technology detected by the running game                                       | 
 | commandLine        | string   | Returns the game process commandline                                                                | 
-| monitorHandle      | object   | Returns the current monitor handle                                                                  | 
+| type               | int      | Returns the process type as a number. See [notes](#infotype-note-1)                                 | 
+| typeAsString       | string   | Returns the process type as a string. See [notes](#infotype-note-1)                                 | 
 | windowHandle       | object   | Returns the current game window handle                                                              | 
-| processId          | int      | Returns the current process id of the running game                                                  | 
+| monitorHandle      | object   | Returns the current monitor handle                                                                  |
 | overlayInfo        | [OverlayInfo](#overlayinfo-object) Object  | Returns info about the the running out of process overlays        | 
 
 
@@ -613,6 +622,11 @@ Parameter            | Type     | Description                                   
     }
 }
 ```
+
+#### InfoType Note
+
+Both of these type fields correspond to a certain [GameInfoType](#gameinfotype-enum) value, which is the value defined for this process in the [gamelist](games-ids#the-gamelistxml-file).
+
 
 ## GetGameInfoResult Object
 
@@ -861,10 +875,13 @@ gameWindowDataChanged           |               |
 
 ## GameInfoType enum
 
+The type value for a process is determined by the [gamelist](games-ids#the-gamelistxml-file) entry for it.
+
 Option                          | Description   |
 --------------------------------| --------------|
-Game                            |      0        |
-Launcher                        |      1        |
+Game                            |      This is a Game        |
+Launcher                        |      This is a launcher    |
+Application                     |      This is an app        |
 
 ## KnownOverlayCoexistenceApps enum
 
