@@ -224,7 +224,9 @@ Possible platform values:
 
 * `"platform_hw":2,"platform_sw":2` = PC/Origin
 * `"platform_hw":2,"platform_sw":7` = PC/Steam
-* `"platform_hw":1,"platform_sw":1` = PS4
+* `"platform_hw":1,"platform_sw":1` = PS4 / PS5
+* `"platform_hw":9,"platform_sw":9` = OG Switch
+* `"platform_hw":0,"platform_sw":0` = Xbox one X
 
 ## `location`
 
