@@ -611,7 +611,7 @@ A list of events causing the app to launch. It's enough that one of the events o
 |-------------------| -------|-----------------------------------------------------------------------------------------|------ |
 | event             | enum   | The type name of the event. </br>**["GameLaunch", "AllGamesLaunch", "LaunchWithOverwolf"]**                   | 0.82  |
 | event_data        |  [launch_event](#launch_event-object) object | The list of game class IDs for which the app will launch.    | 0.82  |
-| include_launchers | bool   | The app will be launched when a game launcher is detected.                                | 0.103 |
+| include_launchers | bool   | The app will be launched when **any** game launcher is detected (Requires "AllGamesLaunch" to work).                                | 0.103 |
 | tracked           | bool   | Launch App when gameid is detected (even when not injected). Only works for supported launchers.                            | 0.132
 | track_all_games   | bool   | Only applicable when the 'tracked' property is set to true. Launches the app for all instances defined in the Gameslist, even those who are defined as "Unsuppported".                           | 0.195
 | start_minimized   | bool   | The app’s main window will start minimized.                                             | 0.82  |
@@ -639,7 +639,7 @@ You can launch your app when a certain event occurs, by setting `event` to these
 * When a listed game launches: "GameLaunch".
 * When any game launches: "AllGamesLaunch".
 
-By setting `include_launchers` to true, the app will also launch if it detects a launcher (either by its direct ID, or by having AllGamesLaunch as the `event` property).
+By setting `include_launchers` to true, the app will also launch if it detects a launcher while having AllGamesLaunch as the `event` property. **Launchers can still be detected without this flag, using their direct app id**
 
 If the app would have been launched by any of these behaviours, but it is already open, [onAppLaunchTriggered](overwolf-extensions#onapplaunchtriggered] is fired.
 
