@@ -107,7 +107,6 @@ Types of errors that can occur:
 * Disconnected (user isn't signed in)
 * MissingFile (trying to share a missing file)
 * UnsupportedFile (trying to share an unsupported format)
-* ExceedsMaxSize (the file is too large: > 8 MB for images, > 100 MBfor videos)
 
 
 ## cancelShare(string, callback)
