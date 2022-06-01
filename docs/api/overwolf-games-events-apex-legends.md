@@ -111,7 +111,7 @@ Note that we get these values from the game, so they might be changed from seaso
 Data Example:
 
 ```json
-{"info":{"match_info":{"tabs":"{"kills":1,"spectators":0,"teams":11,"players":30,"damage":394,"cash":0}"}},"feature":"match_info"}
+{"info":{"match_info":{"tabs":"{\"kills\":2,\"assists\":0,\"teams\":16,\"players\":27,\"damage\":259,\"cash\":35}"}}
 ```
 
 ## `match_state`
@@ -224,7 +224,9 @@ Possible platform values:
 
 * `"platform_hw":2,"platform_sw":2` = PC/Origin
 * `"platform_hw":2,"platform_sw":7` = PC/Steam
-* `"platform_hw":1,"platform_sw":1` = PS4
+* `"platform_hw":1,"platform_sw":1` = PS4 / PS5
+* `"platform_hw":9,"platform_sw":9` = OG Switch
+* `"platform_hw":0,"platform_sw":0` = Xbox one X
 
 ## `location`
 
@@ -460,7 +462,6 @@ Action possible values:
 
 * kill
 * headshot_kill
-* knockdown
 * knockdown
 * Bleed_out
 * Finisher

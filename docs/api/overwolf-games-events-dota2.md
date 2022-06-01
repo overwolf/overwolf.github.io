@@ -686,6 +686,7 @@ key               | Category    | Values                    | Notes             
 ----------------- | ------------| ------------------------- | --------------------- | ------------- |
 pseudo_match_id   | match_info  | The current match’s ID code.|See [notes](#pseudo_match_id-note)|  130.0   |
 game_mode   | match_info  | Type of mode that is currently played |See [notes](#game_mode-note)|  171.1   |
+team_score   | team_score  | Score of each team during the game |See [notes](#team_score-note)|  198.1   |
 
 
 #### *pseudo_match_id* note
@@ -694,7 +695,7 @@ Data Example:
 
 `0c0ea3df-97ea-4d3a-b1f6-f8e34042251f`
 
-##### *game_mode* note
+#### *game_mode* note
 
 Data Example:
 
@@ -702,6 +703,14 @@ Data Example:
 {"info":{"match_info":{"game_mode":"{"lobby_type": "DOTA_lobby_type_name_custom_lobby" , "game_mode" : "NONE"}"}},"feature":"match_info"}
 {"info":{"match_info":{"game_mode":"{"lobby_type": "DOTA_lobby_type_name_custom_lobby" , "game_mode" : "GameMode_AllPick"}"}},"feature":"match_info"}
 {"info":{"match_info":{"game_mode":"{"lobby_type": "DOTA_lobby_type_name_custom_lobby" , "game_mode" : "GameMode_Turbo"}"}},"feature":"match_info"}
+```
+ 
+#### *team_score* note
+
+Data Example:
+
+```json
+{"feature":"match_info","category":"team_score","key":"{\"radiant\":12,\"dire\":13}"}
 ```
 
 ## `roster`

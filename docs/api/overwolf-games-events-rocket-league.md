@@ -119,7 +119,6 @@ Comments:
 Encoded stringified JSON containing the properties. Need to do a decodeURI() on the value and the JSON.parse() on the result
 
 Data Example:
-
 ```json
 {"info":{"me":{"team_score":"0"}},"feature":"me"}
 {"info":{"teamsScore":{"team1_score":"0"}},"feature":"roster"}
@@ -138,7 +137,6 @@ teamGoal    | null         |When the local player’s team has scored a goal|See
 #### *teamGoal* note
 
 Data Example:
-
 ```json
 {"events":[{"name":"teamGoal","data":"{"steamId":"2535424769966317","score":126,"goals":"1","name":"JteRushencroks0","state":"0","team_score":2,"team":"1","index":4}"}]}
 ```
@@ -154,7 +152,6 @@ opposingTeamGoal| null     |When the opposing team has scored a goal|See [notes]
 #### *opposingTeamGoal* note
 
 Data Example:
-
 ```json
 {"events":[{"name":"opposingTeamGoal","data":"{"steamId":"2535461211167231","score":128,"goals":"1","name":"JaffaCake200015","state":"0","team_score":1,"team":"1","index":2}"}]}
 ```
@@ -176,12 +173,13 @@ gameType     | matchInfo   | Current game type           |                      
 
 #### *matchType* note
 
+Possible values:
+* Lobby
+* Private
+* Online
+* Offline
+
 Data Example:
-
-`["Lobby" | "Private" | "Online" | "Offline"]`
-
-Data Example:
-
 ```json
 {"info":{"matchInfo":{"matchType":"Online"}},"feature":"match"}
 ```
@@ -198,16 +196,32 @@ Data Example:
 
 #### *gameMode* note
 
+Possible values:
+* Soccar
+* Breakout (Dropshot)
+* Basketball
+* Hockey
+* Items
+* Unknown
+
 Data Example:
-
-`["Soccar" | "Basketball" | "Hockey" | "Items" | "Breakout" | "Unknown"]`
-
+```json
+{"feature":"match","category":"matchInfo","key":"gameMode","value":"Soccar"}
+```
 #### *gameState* note
 
+Possible values:
+* WaitingForPlayers
+* Countdown
+* Active
+* PostGoalScored
+* ReplayPlayback
+* PrePodiumSpotlight
+* Finished
+* Unknown
+* PodiumSpotlight
+
 Data Example:
-
-`["WaitingForPlayers" | "Countdown | "Active" | "PostGoalScored" | "ReplayPlayback" | "PrePodiumSpotlight" | "Finished" | "Unknown" | "PodiumSpotlight"]`
-
 ```json
 {"info":{"matchInfo":{"gameState":"WaitingForPlayers"}},"feature":"match"}
 ```

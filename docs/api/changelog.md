@@ -7,12 +7,53 @@ sidebar_label: Changelog
 Follow this entry for ongoing updates and changes to the project or tools.
 Here you can find our [Developers Roadmap](https://trello.com/b/1V10E4IB/overwolf-roadmap).
 
-## Version 0.198 (In progress)
+
+## Version 0.199 (In progress)
+#### Game events
+* Coming soon
+
+#### Docs
+- Updated the documentation to reflect the new API changes listed below.
+- Added documentation of the [overwolf.games.GameInfoType](../api/overwolf-games#gameinfotype-enum) Enum.
+
+#### API
+- Updated API: [`overwolf.streaming`](../api/overwolf-streaming) [EXPERIMENTAL]:
+  - ABSTRACT - It is now possible to choose to capture audio from a game and other specific audio processes, rather than only the entire desktop's audio.
+  - [`overwolf.streaming.getCapabilities`](../api/overwolf-streaming#getcapabilitiescallback) - New method for obtaining all streaming capabilities in one place, for both video and audio.
+    - Returns a callback with [`overwolf.streaming.StreamingCapabilities`](../api/overwolf-streaming#streamingcapabilities-object).
+    - Of particular note is the new `audioProcessCaptureSupported` flag, that lets us know if `filtered_capture` can be enabled.
+  - [`overwolf.streaming.StreamAudioOptions`](../api/overwolf-streaming#gameaudiodevice-object) has been renamed to [`overwolf.streaming.GameAudioDevice`](../api/overwolf-streaming#gameaudiodevice-object). The new field `filtered_capture` has been added as well, and can be used if `audioProcessCaptureSupported` returned true (this depends on the machine running the app, so make sure to always check it!).
+
+- New API: [`overwolf.games.tracked.getRunningGameInfo`](../api/overwolf-games-tracked#getrunninggameinfocallback) - New method for obtaining game info from tracked games, similar to [`overwolf.games.getRunningGameInfo`](../api/overwolf-games#getrunninggameinfocallback).
+  - This method will only work if `tracked` and `track_all_games` are both set to true in the [app manifest](../api/manifest-json#launch_event_settings-array), but it will work on **all** games, regardless of whether they're supported or not.
+  - Keep in mind that an unsupported game that was tracked still won't necessarily work as intended, so be sure to test that it works for your specific use case!
+
+#### Platform
+- Several improvements to Overwolf dll stability.
+
+#### Bug Fixes
+- [`overwolf.games.getRunningGameInfo`](../api/overwolf-games#getrunninggameinfocallback) will no longer return a monitor handle of 0 in certain edge cases.
+
+
+## Version 0.198 (May 2022)
 
 * Note that iterations 196 to 198 were combined into a single iteration. 
-  
+
+#### Game events
+* [Dota](overwolf-games-events-dota2)
+  * New info update team_score with the score of each team during the game more info [here](overwolf-games-events-dota2)
+* [Rocket League](overwolf-games-events-rocket-league)
+  * Support dropshot game mode
+* [Call of duty - Vanguard](overwolf-games-events-vanguard)
+  * Add support and new events for Call of Duty: Vanguard
+  * The implementation of this game's GEP is experimental and is considered a Beta version
+* [Fortnite](overwolf-games-events-fortnite)
+  * Add new info update of roster - see notes [here](overwolf-games-events-fortnite#roster-note)
+  * Add the name of the knocked out player in knockout event- see notes [here](overwolf-games-events-fortnite#knockout-note)
+
 #### Docs
-- Updated the documentation to reflect the new API changes listed below
+- Updated the documentation to reflect the new API changes listed below.
+- Added documentation of the [`automation`](../start/using-dev-tools#enabling-automation-testing-with-automation-flag) flag.
 
 #### API
 - New API: A new and improved share method, giving feedback of upload progress (to allow for custom notification behaviour), and allowing cancellation of uploads midway, for all supported social media. To get started, check the relevant network's api documentation for the following methods by replacing * with the specific network you wish to work with (e.g. discord):
@@ -43,9 +84,6 @@ Here you can find our [Developers Roadmap](https://trello.com/b/1V10E4IB/overwol
   * Add new info update "augments" for the list of available augments feature in the match - see notes [here](overwolf-games-events-tft#me)
 * [Fortnite](overwolf-games-events-fortnite)
   * Add new info update for ping and skirmish data - see notes [here](overwolf-games-events-fortnite)
-
-#### Docs
-- Soon
 
 #### API
 - New API: [`overwolf.games.tracked.onUnsupportedExecuted`](../api/overwolf-games-tracked#onunsupportedexecuted) - a listener function that will trigger when a process that is defined as "Unsupported" in the Gameslist launches. It's important to note that it will only trigger if the app has defined `"track_all_games":true` in the `manifest.json`.

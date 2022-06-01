@@ -102,6 +102,7 @@ Possible values are:
 * ranked_arena_open
 * ranked_arena_soloduo
 * custom
+* entrenched
 
 Data Example:
 ```
@@ -116,6 +117,7 @@ Possible values are:
 * btb
 * academy
 * campaign
+* landgrab
 
 Data Example:
 ```
@@ -144,6 +146,7 @@ In this case the possible values are:
 * arena:onectf
 * arena:slayer
 * arena:strongholds
+* arena:landgrab
 * btb:slayer
 * btb:ctf
 * btb:stockpile

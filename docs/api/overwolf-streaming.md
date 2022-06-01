@@ -19,6 +19,7 @@ Please read all the info about streaming usage and options on our [video capture
 
 * [overwolf.streaming.start()](#startsettings-callback)
 * [overwolf.streaming.stop()](#stopstreamid-callback)
+* [overwolf.streaming.getCapabilities()](#getcapabilitiescallback)
 * [overwolf.streaming.split()](#splitstreamid-callback)
 * [overwolf.streaming.changeVolume()](#changevolumestreamid-audiooptions-callback)
 * [overwolf.streaming.setWatermarkSettings()](#setwatermarksettingssettings-callback)
@@ -45,6 +46,7 @@ Please read all the info about streaming usage and options on our [video capture
 
 ## Types Reference
 
+* [overwolf.streaming.StreamingCapabilities](#streamingcapabilities-object) Object
 * [overwolf.streaming.StreamSettings](#streamsettings-object) Object
 * [overwolf.streaming.enums.StreamingProvider](#overwolfstreamingenumsstreamingprovider-enum) Enum
 * [overwolf.streaming.StreamParams](#streamparams-object) Object
@@ -64,8 +66,9 @@ Please read all the info about streaming usage and options on our [video capture
 * [overwolf.streaming.enums.StreamEncoderPreset_AMD_AMF](#overwolfstreamingenumsstreamencoderpreset_amd_amf-enum) Enum
 * [overwolf.streaming.enums.StreamEncoderRateControl_AMD_AMF](#overwolfstreamingenumsstreamencoderratecontrol_amd_amf-enum) Enum
 * [overwolf.streaming.StreamDesktopCaptureOptions](#streamdesktopcaptureoptions-object) Object
-* [overwolf.streaming.StreamAudioOptions](#streamaudiooptions-object) Object
+* [overwolf.streaming.GameAudioDevice](#gameaudiodevice-object) Object
 * [overwolf.streaming.StreamDeviceVolume](#streamdevicevolume-object) Object
+* [overwolf.streaming.GameCaptureOptions](#gamecaptureoptions-object) Object
 * [overwolf.streaming.StreamPeripheralsCaptureOptions](#streamperipheralscaptureoptions-object) Object
 * [overwolf.streaming.StreamPeripheralsCaptureOptions](#streamperipheralscaptureoptions-object) Object
 * [overwolf.streaming.enums.StreamMouseCursor](#streammousecursor-enum) Enum
@@ -298,6 +301,17 @@ Parameter | Type        | Description                    |
 streamId  | int         | The id of the stream to stop   |
 callback  |  ([Result: StopStreamingResult](#stopstreamingresult-object)) => void | Returns with the result  |
 
+
+## getCapabilities(callback)
+#### Version added: 0.199
+
+> Returns all different streaming capabilities
+
+Parameter              | Type    | Description                                                                 |
+---------------------- | --------| --------------------------------------------------------------------------- |
+callback | ([Result: StreamingCapabilities](#streamingcapabilities-object])) => void | The streaming capabilities |
+
+
 ## split(streamId, callback)
 
 #### Version added: 0.141
@@ -325,7 +339,7 @@ callback  | ([Result: SplitResult](#splitresult-object)) => void       | Returns
 Parameter     | Type                                                    | Description                                           |
 ------------- | --------------------------------------------------------| ----------------------------------------------------- |
 streamId      | int                                                     | The id of the stream on which the volume is changed   |
-audioOptions  | [StreamAudioOptions](#streamaudiooptions-object) Object | The new volumes encapsulated in an object             |
+audioOptions  | [GameAudioDevice](#gameaudiodevice-object) Object | The new volumes encapsulated in an object             |
 callback      | (Result) => void                                        | Returns with the result                               |
 
 ## setWatermarkSettings(settings, callback)
@@ -535,6 +549,44 @@ overwolf.streaming.onStreamingWarning.addListener(function(result) {
 
 > Fired upon support encoder list updated, with the following structure: [SupportedEncodersUpdatedEvent](#supportedencodersupdatedevent-object) Object.
 
+
+## StreamingCapabilities Object
+
+#### Version added: 0.199
+
+Stream settings container.
+
+| Name      | Type                                                                                             | Description                              | Since |
+|-----------| -------------------------------------------------------------------------------------------------|------------------------------------------|------ |
+| success  | bool | The stream provider name | 0.199  |
+| error  | string | *Optional* error if any occured | 0.199  |
+| video  | [EncoderData[]](#encoderdata-object) | Array of available video encoders | 0.199  |
+| audio  | [EncoderData[]](#encoderdata-object) | Array of available audio devices | 0.199  |
+| audioProcessCaptureSupported | bool | Is game sound capturing supported? | 0.199  |
+
+#### Object data example
+
+```json
+"settings": {
+  "success": true,
+	"video": {
+    {
+      "display_name" : "Speakers (USB Ear-Microphone)",
+      "display_id" : "{0.0.0.00000000}.{ec2a6c4b-f750-4045-bb93-d745ecc76937}",
+      "device_state" : "Active",
+      "can_record" : false,
+      "can_playback" : true
+    },
+  }
+  "audio": {
+    {
+      ...
+    }
+  }
+  "audioProcessCaptureSupported": true
+} 
+```
+
 ## StreamSettings Object
 
 #### Version added: 0.78
@@ -590,7 +642,7 @@ Represents the settings required to start a stream.
 
 | Name         | Type                                                                              | Description                              | Since |
 |--------------| ----------------------------------------------------------------------------------|------------------------------------------|------ |
-| audio        | [StreamAudioOptions](#streamaudiooptions-object) Object                           | Stream audio options                     | 0.78  |
+| audio        | [GameAudioDevice](#gameaudiodevice-object) Object                           | Stream audio options                     | 0.78  |
 | peripherals  | [StreamPeripheralsCaptureOptions](#streamperipheralscaptureoptions-object) Object | Defines how peripherals (i.e. mouse cursor) are streamed.</br>**Permissions required: DesktopStreaming**                                                                                                 | 0.78  |
 | max_quota_gb | double                                                                            | Max media folder size in GB. </br>  **deprecated**  | 0.78  |
 | quota        | [StreamQuotaParams](#streamquotaparams-object) object                             | Parameters for limiting disk space allocation. | 0.147  |
@@ -919,8 +971,8 @@ Defines the configuration for an x264 encoder.
 | monitor_id    | uint  |  Defines which monitor to stream when streaming desktop. Use the index of the requested monitor in the monitor's array that returned from [overwolf.utils.getMonitorList()](overwolf-utils#getmonitorslistcallback).   | 0.78  |
 | force_capture | bool  | Defines if to force desktop streaming even when a game is in foreground        | 0.78  |
 
-## StreamAudioOptions Object
 
+## GameAudioDevice Object
 #### Version added: 0.83
 
 Defines the configuration for an x264 encoder.
@@ -930,6 +982,8 @@ Defines the configuration for an x264 encoder.
 | mic         | [StreamDeviceVolume](#streamdevicevolume-object)  |  Defines the microphone volume as applied to the stream                        | 0.83  |
 | game        | [StreamDeviceVolume](#streamdevicevolume-object)  | Defines the game volume as applied to the stream                               | 0.83  |
 | separate_tracks | bool                                          | Enable multiple audio tracks. See [notes](#separate_tracks-notes)              | 0.156 |
+| filtered_capture | [GameCaptureOptions](#gamecaptureoptions-object) | If enabled, only audio from the game and the specifically marked processes will be captured. See [notes]()             | 0.199 |
+
 
 #### separate_tracks notes
 
@@ -940,6 +994,12 @@ The Video will be created with three different audio tracks (when both Mic + Des
 * Track 1: Microphone + Desktop
 * Track 2: Desktop output
 * Track 3: Microphone input
+
+#### filtered_capture
+
+:::warning
+This feature is experintal, proceed with caution!
+:::
 
 ## StreamDeviceVolume Object
 
@@ -952,6 +1012,20 @@ Defines a device volume and enablement settings.
 | enable    | bool   |  Defines if the device is enabled                    | 0.78  |
 | volume    | int    |  Defines the device volume in the range of 0 to 100  | 0.78  |
 | device_id | string | Defines the device ID to use                         | 0.78  |
+
+
+
+## GameCaptureOptions Object
+
+#### Version added: 0.199
+
+If enabled, only audio from the current game, as well as from any strictly specified process in this list, will be captured. Requires [audioProcessCaptureSupported](#getcapabilitiescallback) to return true in `audioProcessCaptureSupported` (this depends on the running machine, so make sure to verify it!)
+
+| Name      | Type   | Description                                          | Since |
+|-----------| ------ |------------------------------------------------------| ----- |
+| enable    | bool   |  Defines if capture is enabled                    | 0.199  |
+| additional_process_names    | string[]    |  The array of process names to be affected   | 0.199  |
+
 
 ## StreamPeripheralsCaptureOptions Object
 

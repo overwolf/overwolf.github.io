@@ -10,6 +10,10 @@ Provides access to the YouTube social provider.
 You can use [`verwolf.social.getDisabledServices()`](overwolf-social#getdisabledservicescallback) method to check if the service is available.
 :::
 
+:::warning
+The youtube API is currently disabled. We are working on a fix, and will update this warning once it's live again!
+:::
+
 ## Methods Reference
 
 * [overwolf.social.youtube.performUserLogin()](#performuserlogin)
@@ -29,6 +33,7 @@ You can use [`verwolf.social.getDisabledServices()`](overwolf-social#getdisabled
 * [overwolf.social.youtube.YouTubeShareParameters](#youtubeshareparameters-object) Object
 * [overwolf.social.youtube.SocialShareResult](#socialshareresult-object) Object
 * [overwolf.social.youtube.SocialShareProgress](#socialshareprogress-object) Object
+* [overwolf.social.youtube.Privacy](#privacy-enum) Enum
 
 
 ## performUserLogin()
@@ -61,7 +66,6 @@ callback  | [(Result: GetUserInfoResult)](overwolf-social#getuserinforesult-obje
 
 > If the user is currently logged into YouTube, this will perform the video share.
 
-|youTubeShareParams| is of type  errors that can occur:- Disconnected (user isn’t signed in)- MissingFile (trying to share a missing file)- UnsupportedFile (trying to share an unsupported format)
 
 Parameter             | Type                       | Description                                                           |
 --------------------- | ---------------------------| --------------------------------------------------------------------- |
@@ -72,6 +76,7 @@ Types of errors that can occur:
 * Disconnected (user isn't signed in)
 * MissingFile (trying to share a missing file)
 * UnsupportedFile (trying to share an unsupported format)
+* Forbidden (user did not give overwolf permissions to upload videos)
 
 ## shareEx(YouTubeShareParameters, callback, callback)
 #### Version added: 0.198
@@ -89,7 +94,7 @@ Types of errors that can occur:
 * Disconnected (user isn't signed in)
 * MissingFile (trying to share a missing file)
 * UnsupportedFile (trying to share an unsupported format)
-* ExceedsMaxSize (the file is too large: > 8 MB for images, > 100 MBfor videos)
+* Forbidden (user did not give overwolf permissions to upload videos)
 
 
 ## cancelShare(string, callback)
@@ -126,6 +131,7 @@ useOverwolfNotifications              | boolean  | Whether or not overwolf notif
 title                  | string  | The shared video's title                                                    |
 description            | string  | The shared video's description                                              |
 trimming (Optional)    | [VideoCompositionSegment](overwolf-media-videos#videocompositionsegment-object)  | An object containing start time and end time for the desired VideoCompositionSegment                                        |
+privacy  | [Privacy](#privacy-enum) | The privacy policy of the uploaded video, defaults to public                                        |
 tags (Optional)        | string  | An array of chronological events that occurred during the capture           |
 gameClassId (Optional) | int     | The associated game's class ID                                              |
 gameTitle (Optional)   | string  | The associated game's title                                                 |
@@ -182,3 +188,16 @@ state              | string        | The current state of the share request     
   "state": "Uploading"
 }
 ```
+
+## Privacy enum
+#### version added: 0.198
+
+> The listing status of the uplaoded video.
+
+Option         | Description |
+------------------| --------------|
+Public              | The video will be public |   
+Unlisted              | The video will be unlisted     |
+Private              | The video will be private     |
+id              | string       |
+state              | string        | The current state of the share request                         | 

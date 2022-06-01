@@ -42,7 +42,7 @@ When running this game in trusted mode (without any launch parameters), OW can't
 * [player_activity_change](#player_activity_change)
 * [team_set](#team_set)
 * [replay](#replay)
-<!--* [counters](#counters)-->
+* [counters](#counters)
 * [mvp](#mvp)
 * [scoreboard](#scoreboard)
 * [kill_feed](#kill_feed)
