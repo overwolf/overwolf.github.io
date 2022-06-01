@@ -23,10 +23,6 @@ Many times you would like to offer your premium users that purchased a subscript
 
 Besides, you can use this feature to do whatever you like: enable your users to use single sign-on without the need for a separate account, display synced info from your server (info that gathered using your OW apps and now can be displayed on your website too), etc.
 
-:::note
-This feature (get info about active subscriptions) will be released soon. We will update this page accordingly. 
-:::
-
 ## Login flow overview
 
 This flow is for web browser only, we do not currently offer a client SDK that supports API-based authentication.
