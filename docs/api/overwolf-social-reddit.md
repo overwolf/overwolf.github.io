@@ -164,7 +164,6 @@ tags (Optional)        | string  | An array of chronological events that occurre
 gameClassId (Optional) | int     | The associated game's class ID                                              |
 gameTitle (Optional)   | string  | The associated game's title                                                 |
 metadata (Optional)    | object  | Extra information about the game session                                    |
-metadata (Optional)    | Object  | Extra information about the game session                                    |
 flair_id (Optional)    | [Flair](#flair-object) object  |                                                                   |
 
 
