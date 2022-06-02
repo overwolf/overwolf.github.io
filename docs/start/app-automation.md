@@ -1,5 +1,5 @@
 ---
-id: app_automation
+id: app-automation
 title: App Automation
 sidebar_label: App Automation
 ---
