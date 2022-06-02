@@ -118,7 +118,7 @@ overwolf.social.gfycat.cancelShare("2", console.log)
 Parameter              | Type    | Description                                                                 |
 ---------------------- | --------| --------------------------------------------------------------------------- |
 file                   | string  | The file to share                                                           |
-id              | string  | The ID for the current share request. See [note](#id-note)                              |
+id (Optional)             | string  | The ID for the current share request. See [note](#id-note)                              |
 useOverwolfNotifications              | boolean  | Whether or not overwolf notifications should be used. See [note](#useoverwolfnotifications-note)                              |
 trimming (Optional)    | [VideoCompositionSegment](overwolf-media-videos#videocompositionsegment-object)  | An object containing start time and end time for the desired VideoCompositionSegment                                        |
 title                  | string  | The message to include with the shared file                                 |
