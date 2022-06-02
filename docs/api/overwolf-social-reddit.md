@@ -154,7 +154,7 @@ callback      | (Result) => void   | A callback function which will be called wi
 Parameter              | Type    | Description                                                                 |
 ---------------------- | --------| --------------------------------------------------------------------------- |
 file                   | string  | The file to share                                                           |
-id              | string  | The ID for the current share request. See [note](#id-note)                              |
+id (Optional)              | string  | The ID for the current share request. See [note](#id-note)                              |
 useOverwolfNotifications              | boolean  | Whether or not overwolf notifications should be used. See [note](#useoverwolfnotifications-note)                              |
 subreddit              | string  | The subreddit to which the file will be shared                              |
 title                  | string  | The shared video's title                                                    |
@@ -164,7 +164,9 @@ tags (Optional)        | string  | An array of chronological events that occurre
 gameClassId (Optional) | int     | The associated game's class ID                                              |
 gameTitle (Optional)   | string  | The associated game's title                                                 |
 metadata (Optional)    | object  | Extra information about the game session                                    |
+metadata (Optional)    | Object  | Extra information about the game session                                    |
 flair_id (Optional)    | [Flair](#flair-object) object  |                                                                   |
+
 
 #### id note
 
