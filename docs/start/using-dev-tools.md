@@ -121,7 +121,7 @@ For local-server debugging (like with react apps) you can use the [`debug_url`](
 
 ## Enabling automation testing with automation flag
 
-It is possible to use a testing framework (e.g. Selenium) with your application. More details [here](app_automation).
+It is possible to use a testing framework (e.g. Selenium) with your application. More details [here](app-automation).
 
 ### Run your React app locally
 
