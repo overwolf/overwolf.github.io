@@ -126,7 +126,7 @@ overwolf.social.youtube.cancelShare("2", console.log)
 Parameter              | Type    | Description                                                                 |
 ---------------------- | --------| --------------------------------------------------------------------------- |
 file                   | string  | The file to share                                                           |
-id              | string  | The ID for the current share request. See [note](#id-note)                              |
+id (Optional)          | string  | The ID for the current share request. See [note](#id-note)                              |
 useOverwolfNotifications              | boolean  | Whether or not overwolf notifications should be used. See [note](#useoverwolfnotifications-note)                              |
 title                  | string  | The shared video's title                                                    |
 description            | string  | The shared video's description                                              |
@@ -135,6 +135,7 @@ privacy  | [Privacy](#privacy-enum) | The privacy policy of the uploaded video, 
 tags (Optional)        | string  | An array of chronological events that occurred during the capture           |
 gameClassId (Optional) | int     | The associated game's class ID                                              |
 gameTitle (Optional)   | string  | The associated game's title                                                 |
+metadata (Optional)    | Object  | Extra information about the game session                                    |
 
 #### id note
 
