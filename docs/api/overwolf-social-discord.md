@@ -193,7 +193,7 @@ Parameter              | Type    | Description                                  
 ---------------------- | --------| --------------------------------------------------------------------------- |
 file                   | string  | **Optional**. The file to share. See [note](#file-note)                                   |
 channelId              | string  | The channel ID that the file will be shared to                              |
-id              | string  | The ID for the current share request. See [note](#id-note)                              |
+id (Optional)              | string  | The ID for the current share request. See [note](#id-note)                              |
 useOverwolfNotifications              | boolean  | Whether or not overwolf notifications should be used. See [note](#useoverwolfnotifications-note)                              |
 message                | string  | The message to include with the shared file. See [note](#file-note)                   |
 trimming (Optional)    | [VideoCompositionSegment](overwolf-media-videos#videocompositionsegment-object)  | An object containing start time and end time for the desired VideoCompositionSegment                                        |
