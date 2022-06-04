@@ -1315,7 +1315,7 @@ Parameter          | Type     | Description                                 |
 -------------------| ---------| ------------------------------------------- |
 *success*          | boolean  | inherited from the "Result" Object          |
 *error*            | string   | inherited from the "Result" Object          |
-encoders           | [EncoderData](#encoderdata-object)[]   |                                 |
+devices           | [EncoderData](#encoderdata-object)[]   |                                 |
 
 #### Callback argument: Success
 
