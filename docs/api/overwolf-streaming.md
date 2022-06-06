@@ -311,7 +311,7 @@ callback  |  ([Result: StopStreamingResult](#stopstreamingresult-object)) => voi
 
 Parameter              | Type    | Description                                                                 |
 ---------------------- | --------| --------------------------------------------------------------------------- |
-callback | ([Result: StreamingCapabilities](#streamingcapabilities-object])) => void | The streaming capabilities |
+callback | ([Result: StreamingCapabilities](#streamingcapabilities-object)) => void | The streaming capabilities |
 
 
 ## split(streamId, callback)
@@ -597,7 +597,7 @@ Audio devices container.
 | Name      | Type                                                                                             | Description                              | Since |
 |-----------| -------------------------------------------------------------------------------------------------|------------------------------------------|------ |
 | devices | [AudioDeviceData](#audiodevicedata-object)[] | Array of available audio devices | 0.199 |
-| audioProcessCaptureSupported | bool | Is game sound capturing supported? | 0.199 |
+| audioProcessCaptureSupported | bool | Is filtered sound capturing supported? | 0.199 |
 
 ## VideoCapabilities Object
 
@@ -1004,7 +1004,7 @@ Defines the configuration for an x264 encoder.
 | mic         | [StreamDeviceVolume](#streamdevicevolume-object)  |  Defines the microphone volume as applied to the stream                        | 0.83  |
 | game        | [StreamDeviceVolume](#streamdevicevolume-object)  | Defines the game volume as applied to the stream                               | 0.83  |
 | separate_tracks | bool                                          | Enable multiple audio tracks. See [notes](#separate_tracks-notes)              | 0.156 |
-| filtered_capture | [GameCaptureOptions](#gamecaptureoptions-object) | If enabled, only audio from the game and the specifically marked processes will be captured. See [notes]()             | 0.199 |
+| filtered_capture | [GameCaptureOptions](#gamecaptureoptions-object) | If enabled, only audio from the game and the specifically marked processes will be captured. See [notes](#filtered_capture)             | 0.199 |
 
 
 #### separate_tracks notes
@@ -1022,6 +1022,8 @@ The Video will be created with three different audio tracks (when both Mic + Des
 :::warning
 This feature is experintal, proceed with caution!
 :::
+
+When enabling `filtered_capture`, only audio from the currently detected game, and from any other process in the specific list of processes defined under `additional_process_names`, will be captured.
 
 ## StreamDeviceVolume Object
 
@@ -1045,7 +1047,7 @@ If enabled, only audio from the current game, as well as from any strictly speci
 
 | Name      | Type   | Description                                          | Since |
 |-----------| ------ |------------------------------------------------------| ----- |
-| enable    | bool   |  Defines if capture is enabled                    | 0.199  |
+| enable    | bool   |  Defines if filtered capture is enabled                    | 0.199  |
 | additional_process_names    | string[]    |  The array of process names to be affected   | 0.199  |
 
 
