@@ -87,6 +87,8 @@ Please read all the info about streaming usage and options on our [video capture
 * [overwolf.streaming.GetWatermarkSettingsResult](#getwatermarksettingsresult-object) Object
 * [overwolf.streaming.GetWindowStreamingModeResult](#getwindowstreamingmoderesult-object) Object
 * [overwolf.streaming.GetStreamEncodersResult](#getstreamencodersresult-object) Object
+* [overwolf.streaming.EncoderData](#encoderdata-object) Object
+* [overwolf.streaming.AudioDeviceData](#audiodevicedata-object) Object
 * [overwolf.streaming.GetAudioDevicesResult](#getaudiodevicesresult-object) Object
 * [overwolf.streaming.StreamingSourceImageChangedEvent](#streamingsourceimagechangedevent-object) Object
 * [overwolf.streaming.VideoFileSplitedEvent](#videofilesplitedevent-object) Object
@@ -309,7 +311,7 @@ callback  |  ([Result: StopStreamingResult](#stopstreamingresult-object)) => voi
 
 Parameter              | Type    | Description                                                                 |
 ---------------------- | --------| --------------------------------------------------------------------------- |
-callback | ([Result: StreamingCapabilities](#streamingcapabilities-object])) => void | The streaming capabilities |
+callback | ([Result: StreamingCapabilities](#streamingcapabilities-object)) => void | The streaming capabilities |
 
 
 ## split(streamId, callback)
@@ -560,9 +562,8 @@ Stream settings container.
 |-----------| -------------------------------------------------------------------------------------------------|------------------------------------------|------ |
 | success  | bool | The stream provider name | 0.199  |
 | error  | string | *Optional* error if any occured | 0.199  |
-| video  | [EncoderData[]](#encoderdata-object) | Array of available video encoders | 0.199  |
-| audio  | [EncoderData[]](#encoderdata-object) | Array of available audio devices | 0.199  |
-| audioProcessCaptureSupported | bool | Is game sound capturing supported? | 0.199  |
+| video  | [EncoderData](#encoderdata-object)[] | Array of available video encoders | 0.199  |
+| audio  | [AudioDeviceData](#audiodevicedata-object)[] | Array of available audio devices | 0.199  |
 
 #### Object data example
 
@@ -586,6 +587,27 @@ Stream settings container.
   "audioProcessCaptureSupported": true
 } 
 ```
+
+## AudioCapabilities Object
+
+#### Version added: 0.199
+
+Audio devices container.
+
+| Name      | Type                                                                                             | Description                              | Since |
+|-----------| -------------------------------------------------------------------------------------------------|------------------------------------------|------ |
+| devices | [AudioDeviceData](#audiodevicedata-object)[] | Array of available audio devices | 0.199 |
+| audioProcessCaptureSupported | bool | Is filtered sound capturing supported? | 0.199 |
+
+## VideoCapabilities Object
+
+#### Version added: 0.199
+
+Video capabilities container.
+
+| Name      | Type                                                                                             | Description                              | Since |
+|-----------| -------------------------------------------------------------------------------------------------|------------------------------------------|------ |
+| encoders  | [EncoderData](#encoderdata-object)[] | Array of available video encoders | 0.199 |
 
 ## StreamSettings Object
 
@@ -982,7 +1004,7 @@ Defines the configuration for an x264 encoder.
 | mic         | [StreamDeviceVolume](#streamdevicevolume-object)  |  Defines the microphone volume as applied to the stream                        | 0.83  |
 | game        | [StreamDeviceVolume](#streamdevicevolume-object)  | Defines the game volume as applied to the stream                               | 0.83  |
 | separate_tracks | bool                                          | Enable multiple audio tracks. See [notes](#separate_tracks-notes)              | 0.156 |
-| filtered_capture | [GameCaptureOptions](#gamecaptureoptions-object) | If enabled, only audio from the game and the specifically marked processes will be captured. See [notes]()             | 0.199 |
+| filtered_capture | [GameCaptureOptions](#gamecaptureoptions-object) | If enabled, only audio from the game and the specifically marked processes will be captured. See [notes](#filtered_capture)             | 0.199 |
 
 
 #### separate_tracks notes
@@ -1000,6 +1022,8 @@ The Video will be created with three different audio tracks (when both Mic + Des
 :::warning
 This feature is experintal, proceed with caution!
 :::
+
+When enabling `filtered_capture`, only audio from the currently detected game, and from any other process in the specific list of processes defined under `additional_process_names`, will be captured.
 
 ## StreamDeviceVolume Object
 
@@ -1023,7 +1047,7 @@ If enabled, only audio from the current game, as well as from any strictly speci
 
 | Name      | Type   | Description                                          | Since |
 |-----------| ------ |------------------------------------------------------| ----- |
-| enable    | bool   |  Defines if capture is enabled                    | 0.199  |
+| enable    | bool   |  Defines if filtered capture is enabled                    | 0.199  |
 | additional_process_names    | string[]    |  The array of process names to be affected   | 0.199  |
 
 
@@ -1291,8 +1315,6 @@ A callback function which will be called with the status of the request
 
 Parameter          | Type     | Description                                 |
 -------------------| ---------| ------------------------------------------- |
-*success*          | boolean  | inherited from the "Result" Object          |
-*error*            | string   | inherited from the "Result" Object          |
 name               | string   |                                             |
 display_name       | string   |                                             |
 enabled            | boolean  |                                             |
@@ -1309,13 +1331,26 @@ For each encoder in the list, a preset enum returns. For example:
 2. The X264 encoder returns [StreamEncoderPreset_x264](#overwolfstreamingenumsstreamencoderpreset_x264-enum) enum.
 3. The AMD encoder returns [StreamEncoderPreset_AMD_AMF](#overwolfstreamingenumsstreamencoderpreset_amd_amf-enum) enum.
 
+## AudioDeviceData Object
+
+Parameter          | Type     | Description                                 |
+-------------------| ---------| ------------------------------------------- |
+display_name               | string   | The display name of the device |
+device_id       | string   | The device ID |
+can_record            | boolean  | Can the device record |
+can_playback            | boolean | Can the device play a playback |
+device_state              | string  | The device's state |
+device_setting_id       | string   |  |
+
 ## GetAudioDevicesResult Object
 
 Parameter          | Type     | Description                                 |
 -------------------| ---------| ------------------------------------------- |
 *success*          | boolean  | inherited from the "Result" Object          |
 *error*            | string   | inherited from the "Result" Object          |
-devices           | [EncoderData](#encoderdata-object)[]   |                                 |
+devices           | [AudioDeviceData](#audiodevicedata-object)[]   | An array of connected audio devices |
+default_recording_device_id           | [AudioDeviceData](#audiodevicedata-object)   | The default recording device |
+default_playback_device_id           | [AudioDeviceData](#audiodevicedata-object)   | The default playback device |
 
 #### Callback argument: Success
 
@@ -1338,6 +1373,7 @@ A callback function which will be called with the status of the request
     "default_playback_device_id": "{0.0.1.00000000}.{39da502b-2b96-4b76-83ae-9841f0b46570}"
 }
 ```
+
 
 ## StreamingSourceImageChangedEvent Object
 
