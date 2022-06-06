@@ -167,10 +167,6 @@ Once the POST completed, you will get the following auth token details:
 * scope
 * token_type
 
-:::info Active Subscriptions
-This feature (get info about active subscriptions) will be released soon. We will update this page accordingly. 
-:::
-
 ### Get user info from token
 
 Once you have the encrypted JWT token, you can easily decode/decrypt it on your server side code using one of the [available JWT libraries](https://jwt.io/) and get some additional user info: 
