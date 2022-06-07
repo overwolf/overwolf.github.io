@@ -1,10 +1,8 @@
 ---
-id: rainbow-six-siege-privacy-test
-title: Rainbow 6 Siege Privacy
-sidebar_label: Rainbow 6 Siege Privacy
+id: rainbow-six-siege-compliance
+title: Rainbow 6 Siege Game Compliance Guidelines
+sidebar_label: Rainbow 6 Siege Game compliance Guidelines
 ---
-
-# Guidelines
 
 Competitive integrity is one of our core values, and we work tirelessly to enforce this value, both in-house and with the cooperation of game developers. Ever since the release of Year 7 Season 2 in Rainbow 6 Siege, there have been changes to the guidelines as a result of the addition of the new Privacy Mode. In the case that users enable this mode, apps should follow these guidelines:
 ### Private Mode Detection:

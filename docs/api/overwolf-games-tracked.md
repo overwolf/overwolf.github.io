@@ -16,7 +16,7 @@ Requires `tracked` under the [launch_events](../api/manifest-json#launch_event_s
 ## Events Reference
 
 * [overwolf.games.tracked.onUnsupportedExecuted()](#onunsupportedexecuted)
-* [overwolf.games.tracked.onTermiated()](#onterminated) 
+* [overwolf.games.tracked.onTerminated()](#onterminated) 
 
 ## Types Reference
 
@@ -56,7 +56,7 @@ Requires `tracked` and `track_all_games` under the [launch_events](../api/manife
 > Fired when an unsupported game process has launched.
 
 
-## onTermiated
+## onTerminated
 #### Version added: 0.83
 :::important
 Requires `tracked` under the [launch_events](../api/manifest-json#launch_event_settings-array) property in the `manifest.json`
