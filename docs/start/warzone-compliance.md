@@ -1,5 +1,5 @@
 ---
-id: warzone-game-compliance-guiding-principles
+id: warzone-compliance
 title: Warzone Game Compliance Guidelines
 sidebar_label:  Warzone Game Compliance Guidelines
 ---
