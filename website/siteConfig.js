@@ -139,8 +139,9 @@ const siteConfig = {
    docsSideNavCollapsible: true,
 
    algolia: {
-     apiKey: 'fe54eceb2ea7e0780cc7030fcd4020d4',
+     apiKey: 'cc7909d516aa0fbd71371ad4b3769c7e',
      indexName: 'overwolf',
+     appId: '4YSGJ6Z1HG',
      algoliaOptions: {} // https://www.algolia.com/doc/api-reference/api-parameters/
    }
    // algolia stylings: https://community.algolia.com/docsearch/styling.html
