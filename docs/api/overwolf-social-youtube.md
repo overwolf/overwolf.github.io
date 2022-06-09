@@ -10,10 +10,6 @@ Provides access to the YouTube social provider.
 You can use [`verwolf.social.getDisabledServices()`](overwolf-social#getdisabledservicescallback) method to check if the service is available.
 :::
 
-:::warning
-The youtube API is currently disabled. We are working on a fix, and will update this warning once it's live again!
-:::
-
 ## Methods Reference
 
 * [overwolf.social.youtube.performUserLogin()](#performuserlogin)
