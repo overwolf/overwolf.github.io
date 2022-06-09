@@ -33,6 +33,7 @@ The youtube API is currently disabled. We are working on a fix, and will update 
 * [overwolf.social.youtube.YouTubeShareParameters](#youtubeshareparameters-object) Object
 * [overwolf.social.youtube.SocialShareResult](#socialshareresult-object) Object
 * [overwolf.social.youtube.SocialShareProgress](#socialshareprogress-object) Object
+* [overwolf.social.youtube.enums.ShareState](#sharestate-enum) Enum
 * [overwolf.social.youtube.Privacy](#privacy-enum) Enum
 
 
@@ -168,17 +169,13 @@ url              | string        | The url of the generated result              
 ## SocialShareProgress Object
 #### Version added: 0.198
 
-> Container for the url shared in a successful share.
+> The current progress of the share request
 
 Parameter         | Type          | Description             |
 ------------------| --------------| ----------------------- |
 progress              | int        | The current precentage of upload progress                         | 
 id              | string        | The id of the share request                         | 
-state              | string        | The current state of the share request                         | 
-
-* "Started" - The request has just started
-* "Uploading" - The request is currently uploading
-* "Finished" - The request has finished uploading
+state              | [ShareState](#sharestate-enum)  | The current state of the share request                         | 
 
 #### Example data
 
@@ -189,6 +186,17 @@ state              | string        | The current state of the share request     
   "state": "Uploading"
 }
 ```
+
+## ShareState Enum
+#### Version added: 0.198
+
+> The current state of the [`overwolf.social.youtube.shareEx()`](#shareexyoutubeshareparameters-callback-callback) operation.
+
+| Options      | Description                                                                                                         |
+|--------------| --------------------------------------------------------------------------------------------------------------------|
+| Started  | The upload has started |
+| Uploading      | The upload is in progress |
+| Finished        | The upload has finished |
 
 ## Privacy enum
 #### version added: 0.198

@@ -31,6 +31,7 @@ You can use [`overwolf.social.getDisabledServices()`](overwolf-social#getdisable
 * [overwolf.social.reddit.RedditShareParameters](#redditshareparameters-object) Object
 * [overwolf.social.reddit.SocialShareResult](#socialshareresult-object) Object
 * [overwolf.social.reddit.SocialShareProgress](#socialshareprogress-object) Object
+* [overwolf.social.reddit.enums.ShareState](#sharestate-enum) Enum
 * [overwolf.social.reddit.Subreddit](#subreddit-object) Object
 * [overwolf.social.reddit.RedditAllowedPostTypes](#redditallowedposttypes-object) Object
 * [overwolf.social.reddit.SearchSubredditsResult](#searchsubredditsresult-object) Object
@@ -220,20 +221,17 @@ url              | string        | The url of the generated result              
 }
 ```
 
+
 ## SocialShareProgress Object
 #### Version added: 0.198
 
-> Container for the url shared in a successful share.
+> The current progress of the share request
 
 Parameter         | Type          | Description             |
 ------------------| --------------| ----------------------- |
 progress              | int        | The current precentage of upload progress                         | 
 id              | string        | The id of the share request                         | 
-state              | string        | The current state of the share request                         | 
-
-* "Started" - The request has just started
-* "Uploading" - The request is currently uploading
-* "Finished" - The request has finished uploading
+state              | [ShareState](#sharestate-enum)  | The current state of the share request                         | 
 
 #### Example data
 
@@ -244,6 +242,17 @@ state              | string        | The current state of the share request     
   "state": "Uploading"
 }
 ```
+
+## ShareState Enum
+#### Version added: 0.198
+
+> The current state of the [`overwolf.social.reddit.shareEx()`](#shareexredditshareparameters-callback-callback) operation.
+
+| Options      | Description                                                                                                         |
+|--------------| --------------------------------------------------------------------------------------------------------------------|
+| Started  | The upload has started |
+| Uploading      | The upload is in progress |
+| Finished        | The upload has finished |
 
 ## SearchSubredditsResult Object
 #### Version added: 0.128

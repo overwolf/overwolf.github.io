@@ -30,6 +30,7 @@ You can use [`overwolf.social.getDisabledServices()`](overwolf-social#getdisable
 * [overwolf.social.discord.DiscordShareParameters](#discordshareparameters-object) Object
 * [overwolf.social.discord.SocialShareResult](#socialshareresult-object) Object
 * [overwolf.social.discord.SocialShareProgress](#socialshareprogress-object) Object
+* [overwolf.social.discord.enums.ShareState](#sharestate-enum) Enum
 * [overwolf.social.discord.GetGuildsResult](#getguildsresult-object) Object
 * [overwolf.social.discord.Role](#role-object) Object
 * [overwolf.social.discord.Guild](#guild-object) Object
@@ -191,7 +192,7 @@ overwolf.social.discord.cancelShare("2", console.log)
 
 Parameter              | Type    | Description                                                                 |
 ---------------------- | --------| --------------------------------------------------------------------------- |
-file                   | string  | **Optional**. The file to share. See [note](#file-note)                                   |
+file (optional)                   | string  | The file to share. See [note](#file-note)                                   |
 channelId              | string  | The channel ID that the file will be shared to                              |
 id (Optional)              | string  | The ID for the current share request. See [note](#id-note)                              |
 useOverwolfNotifications              | boolean  | Whether or not overwolf notifications should be used. See [note](#useoverwolfnotifications-note)                              |
@@ -204,7 +205,7 @@ metadata (Optional)    | Object  | Extra information about the game session     
 
 #### file note
 
-Since version 0.153, the "file" param is optional when calling [`overwolf.social.discord.share()`](#sharediscordshareparameters-callback). Instead, you can use the "message" param to include a URL of a file that you want to share.
+Since version 0.153, the "file" param is optional when calling [`overwolf.social.discord.share()`](#sharediscordshareparameters-callback) or [`overwolf.social.discord.shareEx()`](#shareexdiscordshareparameters-callback-callback). Instead, you can use the "message" param to include a URL of a file that you want to share.
 
 #### id note
 
@@ -237,17 +238,13 @@ url              | string        | The url of the generated result              
 ## SocialShareProgress Object
 #### Version added: 0.198
 
-> Container for the url shared in a successful share.
+> The current progress of the share request
 
 Parameter         | Type          | Description             |
 ------------------| --------------| ----------------------- |
 progress              | int        | The current precentage of upload progress                         | 
 id              | string        | The id of the share request                         | 
-state              | string        | The current state of the share request                         | 
-
-* "Started" - The request has just started
-* "Uploading" - The request is currently uploading
-* "Finished" - The request has finished uploading
+state              | [ShareState](#sharestate-enum)  | The current state of the share request                         | 
 
 #### Example data
 
@@ -258,6 +255,17 @@ state              | string        | The current state of the share request     
   "state": "Uploading"
 }
 ```
+
+## ShareState Enum
+#### Version added: 0.198
+
+> The current state of the [`overwolf.social.discord.shareEx()`](#shareexdiscordshareparameters-callback-callback) operation.
+
+| Options      | Description                                                                                                         |
+|--------------| --------------------------------------------------------------------------------------------------------------------|
+| Started  | The upload has started |
+| Uploading      | The upload is in progress |
+| Finished        | The upload has finished |
 
 
 ## GetGuildsResult Object
