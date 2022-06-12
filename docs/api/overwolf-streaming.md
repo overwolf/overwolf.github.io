@@ -66,8 +66,9 @@ Please read all the info about streaming usage and options on our [video capture
 * [overwolf.streaming.enums.StreamEncoderPreset_AMD_AMF](#overwolfstreamingenumsstreamencoderpreset_amd_amf-enum) Enum
 * [overwolf.streaming.enums.StreamEncoderRateControl_AMD_AMF](#overwolfstreamingenumsstreamencoderratecontrol_amd_amf-enum) Enum
 * [overwolf.streaming.StreamDesktopCaptureOptions](#streamdesktopcaptureoptions-object) Object
-* [overwolf.streaming.GameAudioDevice](#gameaudiodevice-object) Object
+* [overwolf.streaming.StreamAudioOptions](#streamaudiooptions-object) Object
 * [overwolf.streaming.StreamDeviceVolume](#streamdevicevolume-object) Object
+* [overwolf.streaming.GameAudioDevice](#gameaudiodevice-object) Object
 * [overwolf.streaming.GameCaptureOptions](#gamecaptureoptions-object) Object
 * [overwolf.streaming.StreamPeripheralsCaptureOptions](#streamperipheralscaptureoptions-object) Object
 * [overwolf.streaming.StreamPeripheralsCaptureOptions](#streamperipheralscaptureoptions-object) Object
@@ -341,7 +342,7 @@ callback  | ([Result: SplitResult](#splitresult-object)) => void       | Returns
 Parameter     | Type                                                    | Description                                           |
 ------------- | --------------------------------------------------------| ----------------------------------------------------- |
 streamId      | int                                                     | The id of the stream on which the volume is changed   |
-audioOptions  | [GameAudioDevice](#gameaudiodevice-object) Object | The new volumes encapsulated in an object             |
+audioOptions  | [StreamAudioOptions](#streamaudiooptions-object) Object | The new volumes encapsulated in an object             |
 callback      | (Result) => void                                        | Returns with the result                               |
 
 ## setWatermarkSettings(settings, callback)
@@ -664,7 +665,7 @@ Represents the settings required to start a stream.
 
 | Name         | Type                                                                              | Description                              | Since |
 |--------------| ----------------------------------------------------------------------------------|------------------------------------------|------ |
-| audio        | [GameAudioDevice](#gameaudiodevice-object) Object                           | Stream audio options                     | 0.78  |
+| audio        | [StreamAudioOptions](#streamaudiooptions-object) Object                           | Stream audio options                     | 0.78  |
 | peripherals  | [StreamPeripheralsCaptureOptions](#streamperipheralscaptureoptions-object) Object | Defines how peripherals (i.e. mouse cursor) are streamed.</br>**Permissions required: DesktopStreaming**                                                                                                 | 0.78  |
 | max_quota_gb | double                                                                            | Max media folder size in GB. </br>  **deprecated**  | 0.78  |
 | quota        | [StreamQuotaParams](#streamquotaparams-object) object                             | Parameters for limiting disk space allocation. | 0.147  |
@@ -994,7 +995,7 @@ Defines the configuration for an x264 encoder.
 | force_capture | bool  | Defines if to force desktop streaming even when a game is in foreground        | 0.78  |
 
 
-## GameAudioDevice Object
+## StreamAudioOptions Object
 #### Version added: 0.83
 
 Defines the configuration for an x264 encoder.
@@ -1002,10 +1003,8 @@ Defines the configuration for an x264 encoder.
 | Name        | Type                                              | Description                                                                    | Since |
 |-------------| --------------------------------------------------|--------------------------------------------------------------------------------| ----- |
 | mic         | [StreamDeviceVolume](#streamdevicevolume-object)  |  Defines the microphone volume as applied to the stream                        | 0.83  |
-| game        | [StreamDeviceVolume](#streamdevicevolume-object)  | Defines the game volume as applied to the stream                               | 0.83  |
+| game        | [GameAudioDevice](#gameaudiodevice-object)  | Defines the game volume as applied to the stream                               | 0.83  |
 | separate_tracks | bool                                          | Enable multiple audio tracks. See [notes](#separate_tracks-notes)              | 0.156 |
-| filtered_capture | [GameCaptureOptions](#gamecaptureoptions-object) | If enabled, only audio from the game and the specifically marked processes will be captured. See [notes](#filtered_capture)             | 0.199 |
-
 
 #### separate_tracks notes
 
@@ -1017,13 +1016,6 @@ The Video will be created with three different audio tracks (when both Mic + Des
 * Track 2: Desktop output
 * Track 3: Microphone input
 
-#### filtered_capture
-
-:::warning
-This feature is experintal, proceed with caution!
-:::
-
-When enabling `filtered_capture`, only audio from the currently detected game, and from any other process in the specific list of processes defined under `additional_process_names`, will be captured.
 
 ## StreamDeviceVolume Object
 
@@ -1035,9 +1027,29 @@ Defines a device volume and enablement settings.
 |-----------| ------ |------------------------------------------------------| ----- |
 | enable    | bool   |  Defines if the device is enabled                    | 0.78  |
 | volume    | int    |  Defines the device volume in the range of 0 to 100  | 0.78  |
-| device_id | string | Defines the device ID to use                         | 0.78  |
+| device_id | string |  Defines the device ID to use                        | 0.78  |
+
+## GameAudioDevice Object
+
+#### Version added: 0.199
+
+Defines a game's volume and enablement settings.
+
+| Name      | Type   | Description                                          | Since |
+|-----------| ------ |------------------------------------------------------| ----- |
+| enable    | bool   |  Defines if game audio is enabled                    | 0.78  |
+| volume    | int    |  Defines the game's volume in the range of 0 to 100  | 0.78  |
+| device_id | string |  Defines the device ID to use                        | 0.78  |
+| filtered_capture | [GameCaptureOptions](#gamecaptureoptions-object) | If enabled, only audio from the game and the specifically marked processes will be captured. See [notes](#filtered_capture-notes)             | 0.199 |
 
 
+#### filtered_capture notes
+
+:::warning
+This feature is experintal, proceed with caution!
+:::
+
+When enabling `filtered_capture`, only audio from the currently detected game, and from any other process in the specific list of processes defined under `additional_process_names`, will be captured.
 
 ## GameCaptureOptions Object
 
