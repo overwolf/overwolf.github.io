@@ -2,7 +2,7 @@ module.exports={
   title: "Overwolf",
   tagline: "Easily create apps for PC games on the Overwolf framework",
   url: "https://overwolf.github.io",
-  baseUrl: "/V2TestFixed/",
+  baseUrl: "/",
   trailingSlash: false,
   organizationName: "overwolf",
   projectName: "overwolf.github.io",
