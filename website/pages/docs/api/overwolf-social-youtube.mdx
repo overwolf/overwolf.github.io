@@ -30,7 +30,7 @@ You can use [`verwolf.social.getDisabledServices()`](overwolf-social#getdisabled
 * [overwolf.social.youtube.SocialShareResult](#socialshareresult-object) Object
 * [overwolf.social.youtube.SocialShareProgress](#socialshareprogress-object) Object
 * [overwolf.social.youtube.enums.ShareState](#sharestate-enum) Enum
-* [overwolf.social.youtube.Privacy](#privacy-enum) Enum
+* [overwolf.social.youtube.YouTubePrivacy](#youtubeprivacy-enum) Enum
 
 
 ## performUserLogin()
@@ -128,7 +128,7 @@ useOverwolfNotifications              | boolean  | Whether or not overwolf notif
 title                  | string  | The shared video's title                                                    |
 description            | string  | The shared video's description                                              |
 trimming (Optional)    | [VideoCompositionSegment](overwolf-media-videos#videocompositionsegment-object)  | An object containing start time and end time for the desired VideoCompositionSegment                                        |
-privacy  | [Privacy](#privacy-enum) | The privacy policy of the uploaded video, defaults to public                                        |
+privacy  | [YouTubePrivacy](#youtubeprivacy-enum) | The privacy policy of the uploaded video, defaults to public                                        |
 tags (Optional)        | string  | An array of chronological events that occurred during the capture           |
 gameClassId (Optional) | int     | The associated game's class ID                                              |
 gameTitle (Optional)   | string  | The associated game's title                                                 |
@@ -194,7 +194,7 @@ state              | [ShareState](#sharestate-enum)  | The current state of the 
 | Uploading      | The upload is in progress |
 | Finished        | The upload has finished |
 
-## Privacy enum
+## YouTubePrivacy Enum
 #### version added: 0.198
 
 > The listing status of the uplaoded video.
