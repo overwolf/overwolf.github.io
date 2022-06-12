@@ -62,7 +62,7 @@ module.exports={
   },
   onBrokenLinks: "log",
   onBrokenMarkdownLinks: "log",
-  plugins: ['docusaurus-plugin-sass'],
+  plugins: ['docusaurus-plugin-sass', 'docusaurus-plugin-clarity'],
   presets: [
     [
       "@docusaurus/preset-classic",
@@ -85,6 +85,9 @@ module.exports={
     ]
   ],
   themeConfig: {
+    clarity: {
+      ID: "btoodir3td",
+    },
     colorMode: {
       defaultMode: 'dark',
       disableSwitch: false,
