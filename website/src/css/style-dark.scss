@@ -147,6 +147,12 @@ div[class^="toggle"] {
       .DocSearch-MagnifierLabel, .DocSearch-Reset {
         color: white;
       }
+
+			.DocSearch-Input {
+				&::placeholder {
+					color: var(--color-600);
+				}
+			}
     }
   }
 
