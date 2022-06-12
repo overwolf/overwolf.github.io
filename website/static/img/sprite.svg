@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+
+
+  <symbol id="prev" viewBox="0 0 36 36">
+    <path d="M20.9999 27L23.1099 24.89L16.2399 18L23.1099 11.11L20.9999 9L11.9999 18L20.9999 27Z" fill="currentColor" />
+  </symbol>
+
+  <symbol id="next" viewBox="0 0 36 36">
+    <path d="M14.9999 9L12.8899 11.11L19.7599 18L12.8899 24.89L14.9999 27L23.9999 18L14.9999 9Z" fill="currentColor" />
+  </symbol>
+
+  <symbol id="closeModal" viewBox="0 0 32 32">
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M19.9799 12.4252L19.182 11.6273L15.9899 14.8193L12.7982 11.6276L12.0002 12.4256L15.1919 15.6173L12.0003 18.8089L12.7983 19.6069L15.9899 16.4152L19.1819 19.6072L19.9798 18.8092L16.7879 15.6173L19.9799 12.4252Z" fill="currentColor"/>
+  </symbol>
+
+
+</svg>

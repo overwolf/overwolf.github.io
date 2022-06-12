@@ -1,32 +1,31 @@
-# If you only want circle to run on direct commits to master, you can uncomment this out
+# If you only want the circle to run on direct commits to master, you can uncomment this out
 # and uncomment the filters: *filter-only-master down below too
 #
 aliases:
- - &filter-only-source
-   branches:
-     only:
-       - source
+  - &filter-only-source
+    branches:
+      only:
+        - source
 
 version: 2
 jobs:
   deploy-website:
     docker:
       # specify the version you desire here
-      - image: circleci/node:10.15.3
+      - image: cimg/node:16.15.0
 
     steps:
       - checkout
       - run:
           name: Deploying to GitHub Pages
           command: |
-            git config --global user.email "adircoh@users.noreply.github.com"
-            git config --global user.name "adircohv"
-            echo "machine github.com login adircoh password $GITHUB_TOKEN" > ~/.netrc
-            cd website && yarn install && GIT_USER=adircoh CURRENT_BRANCH=source yarn run publish-gh-pages
-
+            git config --global user.email "OdedItkinOW@overwolf.com"
+            git config --global user.name "Oded Itkin"
+            
+            cd website && yarn install && GIT_USER=OdedItkinOW CURRENT_BRANCH=source yarn clear && yarn deploy
 workflows:
   version: 2
   build_and_deploy:
     jobs:
       - deploy-website:
-         filters: *filter-only-source
+          filters: *filter-only-source

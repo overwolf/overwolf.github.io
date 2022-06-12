@@ -5,7 +5,7 @@
 			"Build Your First App":
 			["start/sample-app-overview", "start/sample-app-components",  "start/sample-app-front-app", "start/sample-app-ui-components"],
 			"Test Your App":
-			["start/how-to-test-your-app", "start/app-automation", "start/technical-checklist", "start/product-checklist", "start/marketing-checklist", "start/community-alphas"],
+			["start/how-to-test-your-app", "start/technical-checklist", "start/product-checklist", "start/marketing-checklist", "start/community-alphas"],
 			"Submit Your App":
 			["start/submit-your-app-to-the-store", "start/custom-installer-for-your-app"],
 			"Monetize with Ads":
@@ -13,13 +13,11 @@
 			"Monetize with Subs":
 			["start/subscriptions-overview", "start/subscriptions-flow", "start/subscriptions-integration", "start/subscriptions-request-form"],
 			"Maintain Your App":
-			["start/submit-an-app-update", "start/update-your-app-status", "start/support-your-users", "start/add-a-knowledge-base-to-app"],
-			"Game Compliance":
-			["start/warzone-compliance", "start/rainbow-six-siege-compliance"]
+			["start/submit-an-app-update", "start/update-your-app-status", "start/support-your-users", "start/add-a-knowledge-base-to-app"]
 	},
     "docs": {
 		"Best Practices":
-			["topics/best-practices-overview", "topics/app-specific-experience", "topics/first-time-user-experience", "topics/user-flow-error-handling", "topics/launch-time-performance", "topics/communication-guidelines", "topics/user-flow-and-error-handling","topics/games-settings", "topics/hotkeys-best-practices", "topics/second-monitor", "topics/data-persistence", "topics/reduce-opk-size", "topics/using-tab", "topics/type-definition-file", "topics/create-download-link", "topics/video-capture", "topics/enable-dev-tools", "topics/exclusive-mode", "topics/electron-migration"],
+			["topics/best-practices-overview", "topics/app-specific-experience", "topics/first-time-user-experience", "topics/launch-time-performance", "topics/communication-guidelines", "topics/user-flow-and-error-handling","topics/games-settings", "topics/hotkeys-best-practices", "topics/second-monitor", "topics/data-persistence", "topics/reduce-opk-size", "topics/using-tab", "topics/type-definition-file", "topics/create-download-link", "topics/video-capture", "topics/enable-dev-tools", "topics/exclusive-mode", "topics/electron-migration"],
 		"Using Windows API":
 			["topics/using-overwolf-windows", "topics/communicating-between-windows", "topics/windows-types", "topics/windows-resolution-size-position", "topics/windows-tips"],
 		"Understanding OW logs":
@@ -41,10 +39,10 @@
     },
     "api": {
 			"API Reference": 
-			["api/changelog","api/overwolf-api-overview"],
+			["api/overwolf-api-overview", "api/changelog"],
 			"App Manifest": 
 			["api/manifest-json", "api/validate-your-manifest"],
-			"Available Game Events": ["api/games-ids", "api/overwolf-games-events-apex-legends", "api/overwolf-games-events-vanguard", "api/overwolf-games-events-warzone","api/overwolf-games-events-csgo", "api/overwolf-games-events-dota2", "api/overwolf-games-events-underlords", "api/overwolf-games-events-escape-from-tarkov", "api/overwolf-games-events-eternal-return","api/overwolf-games-events-ff-xiv", "api/overwolf-games-events-fm2021","api/overwolf-games-events-fm2022", "api/overwolf-games-events-fortnite", "api/overwolf-games-events-halo-infinite", "api/overwolf-games-events-hearthstone", "api/overwolf-games-events-hots", "api/overwolf-games-events-hunt-showdown", "api/overwolf-games-events-lor", "api/overwolf-games-events-lol", "api/overwolf-games-events-makerking", "api/overwolf-games-events-minecraft", "api/overwolf-games-events-mtga", "api/overwolf-games-events-new-world", "api/overwolf-games-events-overwatch", "api/overwolf-games-events-path-of-exile", "api/overwolf-games-events-pubg", "api/overwolf-games-events-rainbow-six", "api/overwolf-games-events-rocket-league", "api/overwolf-games-events-sc2", "api/overwolf-games-events-splitgate", "api/overwolf-games-events-tft", "api/overwolf-games-events-valheim", "api/overwolf-games-events-valorant", "api/overwolf-games-events-wot", "api/overwolf-games-events-wow","api/overwolf-games-events-wows","api/overwolf-games-events-warframe", "api/games-external-apis"],
+			"Available Game Events": ["api/games-ids", "api/overwolf-games-events-apex-legends", "api/overwolf-games-events-warzone","api/overwolf-games-events-csgo", "api/overwolf-games-events-dota2", "api/overwolf-games-events-underlords", "api/overwolf-games-events-escape-from-tarkov", "api/overwolf-games-events-eternal-return","api/overwolf-games-events-ff-xiv", "api/overwolf-games-events-fm2021","api/overwolf-games-events-fm2022", "api/overwolf-games-events-fortnite", "api/overwolf-games-events-halo-infinite", "api/overwolf-games-events-hearthstone", "api/overwolf-games-events-hots", "api/overwolf-games-events-hunt-showdown", "api/overwolf-games-events-lor", "api/overwolf-games-events-lol", "api/overwolf-games-events-makerking", "api/overwolf-games-events-minecraft", "api/overwolf-games-events-mtga", "api/overwolf-games-events-new-world", "api/overwolf-games-events-overwatch", "api/overwolf-games-events-path-of-exile", "api/overwolf-games-events-pubg", "api/overwolf-games-events-rainbow-six", "api/overwolf-games-events-rocket-league", "api/overwolf-games-events-sc2", "api/overwolf-games-events-splitgate", "api/overwolf-games-events-tft", "api/overwolf-games-events-valheim", "api/overwolf-games-events-valorant", "api/overwolf-games-events-wot", "api/overwolf-games-events-wow","api/overwolf-games-events-wows","api/overwolf-games-events-warframe", "api/games-external-apis"],
 			"Game Launchers Events": ["api/launchers-ids","api/overwolf-games-launchers-events-lol"],
 			"overwolf.benchmarking": ["api/overwolf-benchmarking"],
 			"overwolf.campaigns": ["api/overwolf-campaigns-crossapp"],
@@ -77,7 +75,7 @@
     },
 	"service": {
         "Games Events Status": 
-			["status/all", "status/apex", "status/vanguard", "status/warzone", "status/csgo", "status/dota2", "status/underlords", "status/escape-from-tarkov", "status/eternal-return", "status/ff-xiv","status/fm2021","status/fm2022", "status/fortnite", "status/halo-infinite", "status/hearthstone", "status/heroes-of-the-storm", "status/hunt-showdown", "status/lor", "status/lol", "status/lol-launcher", "status/minecraft", "status/mtga", "status/new-world", "status/overwatch", "status/path-of-exile", "status/pubg", "status/pubg-lite", "status/rainbow-six-siege", "status/rocket-league", "status/sc2","status/splitgate", "status/teamfight-tactics", "status/valheim", "status/valorant", "status/world-of-tanks","status/world-of-warcraft","status/world-of-warships","status/warframe"]
+			["status/all", "status/apex", "status/warzone", "status/csgo", "status/dota2", "status/underlords", "status/escape-from-tarkov", "status/eternal-return", "status/ff-xiv","status/fm2021","status/fm2022", "status/fortnite", "status/halo-infinite", "status/hearthstone", "status/heroes-of-the-storm", "status/hunt-showdown", "status/lor", "status/lol", "status/lol-launcher", "status/minecraft", "status/mtga", "status/new-world", "status/overwatch", "status/path-of-exile", "status/pubg", "status/rainbow-six-siege", "status/rocket-league", "status/sc2","status/splitgate", "status/teamfight-tactics", "status/valheim", "status/valorant", "status/world-of-tanks","status/world-of-warcraft","status/world-of-warships","status/warframe"]
 		},
 	"support": {
         "Support": 

@@ -1,0 +1,295 @@
+.start-build-container-btn {
+	text-align: center;
+	margin-bottom: 30px;
+}
+
+.btn-pink,
+.mainContainer .post a.btn-pink {
+	font-family: 'Madera', sans-serif;
+    letter-spacing: 0.3px;
+	border: 1px solid var(--color-400);
+    color: var(--color-400);
+    padding: 16px 32px;
+    line-height: 17px;
+    height: 50px;
+    white-space: nowrap;
+    cursor: pointer;
+    display: inline-block;
+    text-decoration: none;
+    font-weight: 500;
+    background: none;
+	transition: all 150ms ease;
+}
+
+.btn-pink:hover, .theme-dark .btn-pink:hover,
+.mainContainer .post a.btn-pink:hover, .theme-dark .mainContainer .post a.btn-pink:hover {
+	border-color: var(--color-website-red);
+  background-color: var(--color-website-red);
+  color: var(--color-grey-light);
+  text-decoration: none;
+}
+
+.getting-started-article h2 {
+	font-size: 24px;
+	line-height: 28px;
+}
+
+.getting-started-article h3 {
+	font-size: 18px;
+}
+
+.getting-started-container ul {
+	list-style: none;
+	padding: 0px;
+	margin: 0px;
+}
+
+p.what-can-apps-do-intro {
+	margin-bottom: 44px;
+}
+
+@media (max-width: 760px) {
+	.getting-started-container .video-outer-area {
+		display: flex;
+		flex-direction: column;
+	}
+}
+
+@media (max-width: 760px) {
+	.getting-started-container .video-outer-area h2 {
+		order: 2;
+	}
+}
+
+@media (max-width: 760px) {
+	.getting-started-container .video-outer-area p {
+		order: 3;
+	}
+}
+
+.getting-started-container .icons-list {
+	padding-bottom: 20px;
+}
+
+@media (max-width: 760px) {
+	.getting-started-container .icons-list {
+		padding-bottom: 5px;
+	}
+}
+
+.getting-started-container .icons-list li {
+	position: relative;
+}
+
+@media (max-width: 760px) {
+	.getting-started-container .icons-list li p {
+		margin-bottom: 25px;
+	}
+}
+
+@media (max-width: 320px) {
+	.getting-started-container .icons-list li p {
+		margin-bottom: 15px;
+	}
+}
+
+.getting-started-container .icons-list.what-apps-do-list li {
+	padding-left: 88px;
+}
+
+.getting-started-container .icons-list.what-apps-do-list li p {
+	margin-top: 0;
+}
+
+.getting-started-container .icons-list.what-apps-do-list li h3 {
+	margin-bottom: 10px;
+	font-family: 'Lato', sans-serif;
+}
+
+@media (max-width: 760px) {
+	.getting-started-container .icons-list.what-apps-do-list li {
+		padding-left: 63px;
+	}
+}
+
+.getting-started-container .icons-list.what-apps-do-list li::before {
+	content: '';
+	background-size: 48px;
+	background-repeat: no-repeat;
+	position: absolute;
+	width: 48px;
+	height: 48px;
+	top: 0px;
+	left: 0;
+	background-color: transparent;
+	border-radius: unset;
+}
+
+.getting-started-container .icons-list.what-apps-do-list li.highlights::before {
+	background-image: url(/img/getting-started/apps-do-list/video.png);
+}
+
+.getting-started-container .icons-list.what-apps-do-list li.game-stats::before {
+	background-image: url(/img/getting-started/apps-do-list/stats.png);
+}
+
+.getting-started-container .icons-list.what-apps-do-list li.build-recommendations::before {
+	background-image: url(/img/getting-started/apps-do-list/helmet.png);
+}
+
+.getting-started-container .icons-list.what-apps-do-list li.tournaments::before {
+	background-image: url(/img/getting-started/apps-do-list/trophy.png);
+}
+
+.getting-started-container .icons-list.what-apps-do-list li.easy-integration::before {
+	background-image: url(/img/getting-started/apps-do-list/tetris.png);
+}
+
+.getting-started-container .icons-list.were-apps-live-list {
+	max-width: 600px;
+	padding-bottom: 10px;
+}
+
+.getting-started-container .icons-list.were-apps-live-list p {
+	margin-top: 0;
+}
+
+.getting-started-container .icons-list.were-apps-live-list h3 {
+	margin-bottom: 5px;
+	font-family: 'Lato', sans-serif;
+}
+
+@media (max-width: 1024px) {
+	.getting-started-container .icons-list.were-apps-live-list {
+		max-width: 640px;
+		padding-bottom: 40px;
+	}
+}
+
+@media (max-width: 760px) {
+	.getting-started-container .icons-list.were-apps-live-list {
+		padding-bottom: 10px;
+	}
+}
+
+.getting-started-container .icons-list.were-apps-live-list li {
+	padding-left: 228px;
+}
+
+@media (max-width: 760px) {
+	.getting-started-container .icons-list.were-apps-live-list li {
+		padding-left: 0px;
+		padding-top: 140px;
+	}
+}
+
+.getting-started-container .icons-list.were-apps-live-list li::before {
+	content: '';
+	background-size: 201px;
+	background-repeat: no-repeat;
+	position: absolute;
+	width: 201px;
+	height: 123px;
+	top: 0px;
+	left: -19px;
+	background-color: transparent;
+	border-radius: unset;
+}
+
+@media (max-width: 760px) {
+	.getting-started-container .icons-list.were-apps-live-list li::before {
+		top: 8px;
+		left: -10px;
+	}
+}
+
+.getting-started-container .icons-list.were-apps-live-list li.in-game::before {
+	background-image: url(/img/getting-started/apps-live-list/ingame.png);
+}
+
+.getting-started-container .icons-list.were-apps-live-list li.desktop::before {
+	background-image: url(/img/getting-started/apps-live-list/desktop.png);
+}
+
+.getting-started-container .icons-list.were-apps-live-list li.twitch-extension::before {
+	background-image: url(/img/getting-started/apps-live-list/twitch.png);
+}
+
+@media (max-width: 760px) {
+	.getting-started-container .icons-list.were-apps-live-list li.companion-screen {
+		padding-top: 80px;
+	}
+}
+
+.getting-started-container .icons-list.were-apps-live-list li.companion-screen::before {
+	top: 28px;
+	background-image: url(/img/getting-started/apps-live-list/companion.png);
+}
+
+@media (max-width: 760px) {
+	.getting-started-container .icons-list.were-apps-live-list li.companion-screen::before {
+		top: -20px;
+		left: 0;
+	}
+}
+
+.getting-started-container .start-build-footer-btn {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding-top: 30px;
+	padding-bottom: 60px;
+	flex-direction:column;
+}
+
+
+.start-build-footer-btn p {
+	padding-top: 42px;
+	margin: 0;
+}
+
+.start-build-footer-btn p a {
+	font-weight: 600;
+}
+
+
+
+@media (max-width: 1024px) {
+	.getting-started-container .start-build-footer-btn {
+		padding-top: 10px;
+	}
+}
+
+@media (max-width: 760px) {
+	.getting-started-container .start-build-footer-btn {
+		padding-top: 20px;
+	}
+}
+
+@media (max-width: 760px) {
+	.getting-started-container .what-can-apps-do-intro {
+		margin-bottom: 20px;
+	}
+}
+
+@media (max-width: 760px) {
+	.getting-started-container .were-apps-live-intro {
+		margin-bottom: 25px;
+	}
+}
+
+@media (max-width: 320px) {
+	.getting-started-container .were-apps-live-intro {
+		margin-bottom: 15px;
+	}
+}
+
+@media (max-width: 600px) {
+	.video-container iframe {
+	   height: 155px;
+	}
+}
+
+.center-text {
+	text-align: center;
+ }

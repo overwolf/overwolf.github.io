@@ -5,7 +5,7 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-const React = require('react');
+ import React from 'react';
 
 class Footer extends React.Component {
   docUrl(doc, language) {
@@ -66,8 +66,8 @@ class Footer extends React.Component {
                   <li><a href="http://www.overwolf.com/careers/">Careers</a></li>
                   <li><a href="https://overwolf.com/fund" target="_blank">Fund</a></li>
                   <li><a href="https://medium.com/overwolf" target="_blank">Developers Blog</a></li>
-                  <li><a href="https://www.overwolf.com/appstore" target="_blank">Overwolf Appstore</a></li>        
-                  <li><a href="https://brands.overwolf.com/" target="_blank">Advertise on Overwolf</a></li>        
+                  <li><a href="https://www.overwolf.com/appstore" target="_blank">Overwolf Appstore</a></li>
+                  <li><a href="https://brands.overwolf.com/" target="_blank">Advertise on Overwolf</a></li>
                 </ul>
               </li>
             </ul>
@@ -107,4 +107,4 @@ class Footer extends React.Component {
   }
 }
 
-module.exports = Footer;
+export default Footer;
