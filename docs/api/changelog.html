@@ -90,7 +90,7 @@ Here you can find our <a href="https://trello.com/b/1V10E4IB/overwolf-roadmap">D
 <li>Returns a callback with <a href="../api/overwolf-streaming#streamingcapabilities-object"><code>overwolf.streaming.StreamingCapabilities</code></a>.</li>
 <li>Of particular note is the new <code>audioProcessCaptureSupported</code> flag, that lets us know if <code>filtered_capture</code> can be enabled.</li>
 </ul></li>
-<li><a href="../api/overwolf-streaming#gameaudiodevice-object"><code>overwolf.streaming.StreamAudioOptions.game</code></a> has been changed to <a href="../api/overwolf-streaming#gameaudiodevice-object"><code>overwolf.streaming.GameAudioDevice</code></a>. The new field <code>filtered_capture</code> has been added, and can be used if <code>audioProcessCaptureSupported</code> returned true (this depends on the machine running the app, so make sure to always check it!).</li>
+<li><a href="../api/overwolf-streaming#streamaudiooptions-object"><code>overwolf.streaming.StreamAudioOptions.game</code></a> has been changed to <a href="../api/overwolf-streaming#gameaudiodevice-object"><code>overwolf.streaming.GameAudioDevice</code></a>. The new field <code>filtered_capture</code> has been added, and can be used if <code>audioProcessCaptureSupported</code> returned true (this depends on the machine running the app, so make sure to always check it!).</li>
 </ul></li>
 <li><p>New API: <a href="../api/overwolf-games-tracked#getrunninggameinfocallback"><code>overwolf.games.tracked.getRunningGameInfo</code></a> - New method for obtaining game info from tracked games, similar to <a href="../api/overwolf-games#getrunninggameinfocallback"><code>overwolf.games.getRunningGameInfo</code></a>.</p>
 <ul>
