@@ -153,8 +153,8 @@ Here you can find our [Developers Roadmap](https://trello.com/b/1V10E4IB/overwol
  * [Rainbow Six Siege](overwolf-games-events-rainbow-six)
    * Add player_id in roster - [here](overwolf-games-events-rainbow-six#roster)
 
-{/* * [World of Warcraft](overwolf-games-events-wow) */
-  /* * Add new event for Addons varaibles var_addon_xx */}
+<div>{/* * [World of Warcraft](overwolf-games-events-wow)
+  * Add new event for Addons varaibles var_addon_xx */} </div>
 
  * [Halo Infinite](overwolf-games-events-halo-infinite)
    * Add new info updates
@@ -795,7 +795,7 @@ only then updating to the new version (which was the case until now).
     * map_id
     * round_outcome_type
    * 'name' update is currently unavailable.
-* [Apex Legends](overwolf-games-events-apex)
+* [Apex Legends](overwolf-games-events-apex-legends)
   * New addition to update:
     * roster
     
@@ -933,7 +933,7 @@ Note that iterations 160 to 162 were combined into a single iteration.
     * death
     * assist
   
-* [Final Fantasy XIV](overwolf-games-events-ffxiv)
+* [Final Fantasy XIV](overwolf-games-events-ff-xiv)
   * New info update under:
     * match_info
 
@@ -1143,7 +1143,7 @@ Note that iterations 150 to 153 were combined into a single iteration.
 * [MTGA](overwolf-games-events-mtga)
   * New updates under:
     * game_info
-* [LoL Launcher](overwolf-games-events-launchers-events-lol)
+* [LoL Launcher](overwolf-games-launchers-events-lol)
   * New updates under:
     * clash
 
@@ -1220,7 +1220,7 @@ Note that iteration 146 and 147 were combined into a single iteration.
 
 #### Game events
 
-* [PUBG Lite](overwolf-games-events-pubglite)
+* PUBG Lite
   * New event:
     * team_feed
     * knockout
@@ -1272,7 +1272,7 @@ Note that iteration 144 and 145 were combined into a single iteration.
 
 #### Game events
 
-* [PUBG Lite game events](overwolf-games-events-pubg-lite)
+* PUBG Lite game events
   * New supported game
 * [Legends of Runeterra game events](overwolf-games-events-lor)
   * New supported game
@@ -1288,7 +1288,7 @@ Note that iteration 144 and 145 were combined into a single iteration.
 
 #### API and Platform
 
-* New API - [overwolf.settings.hotkeys](overwolf-settings-hotkey).  
+* New API - [overwolf.settings.hotkeys](overwolf-settings-hotkeys).  
   Returns an object with hotkeys methods and events.
   * New manifest flag: `hold`: Will be added to the [hotkeys object](manifest-json#hotkeys).  
     Defines a new type of hotkey - hotkey that works only while you are holding the key.  
@@ -1314,7 +1314,7 @@ Note that iteration 144 and 145 were combined into a single iteration.
 * [League of Legends Events](overwolf-games-events-lol)
   * New event & info:
     * live_client_data
-* [Path of Exile game events](games-events-path-of-exile)
+* [Path of Exile game events](overwolf-games-events-path-of-exile)
   * New events & info
     * kill
     * death
@@ -1401,7 +1401,7 @@ This means no more if (!result || !result.status ...) checks. Instead, this shou
 * [League of Legends Events](overwolf-games-events-lol)
   * New event:
     * match_clock
-* [Dota 2 Events](overwolf-games-launchers-events-dota2#docsNav)
+* Dota 2 Events
   * New info-update:
     * role
     * hero_pool
@@ -1415,7 +1415,7 @@ This means no more if (!result || !result.status ...) checks. Instead, this shou
      * detailed_logs_enabled
    * New event:
      * match_outcome
-* [WOT Events](overwolf-games-launchers-events-wot#docsNav)
+* WOT Events
   * New event:
     * match_outcome
 * New doc about our [Game Events Simulator app](../topics/using-events-simulator).
@@ -1423,7 +1423,7 @@ This means no more if (!result || !result.status ...) checks. Instead, this shou
 * New manifest flag: [minimum-gs-version](manifest-json#meta-minimum-gs) - Allows extensions (apps) to set a minimum game summary app version in the manifest, this works similarly to minimum-overwolf-version and relevant only for apps thay using the game summary pannel.
 * New manifest flag: [service_providers](manifest-json#service_providers) - you can use this flag to set different parameters that are relevant for a service provider app. Use the new API function [overwolf.extensions.getServiceConsumers()](overwolf-extensions#getserviceconsumerscallback) to read the flag value.
 * New API function: [overwolf.utils.openStore()](overwolf-utils#openstoreparam) - Opens the requested app’s profile/login/subscription page in the Overwolf Appstore.
-* New API namespace: [overwolf.extensions.shareddata](overwolf-extension-sharedData) - a new namespace that allows any app to share data with another app. the plan is to use it for the Game Summary tabs.
+* New API namespace: [overwolf.extensions.shareddata](overwolf-extensions-sharedData) - a new namespace that allows any app to share data with another app. the plan is to use it for the Game Summary tabs.
 * New plugin: The [Process Manager plugin](../topics/process-manager-plugin) that allow OW apps to run executable (for example, run a game when you launch an OW app). 
 
 

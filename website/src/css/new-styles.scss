@@ -505,6 +505,10 @@ a.menu__link.menu__link--sublist.menu__link--sublist-caret.menu__link--active {
   letter-spacing: 0.3px;
 }
 
+div[class^="searchLogoColumn"] {
+  opacity: 0;
+}
+
 div[class^="searchBox"] {
 
   .DocSearch-Button {

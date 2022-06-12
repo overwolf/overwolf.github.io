@@ -147,7 +147,63 @@ div[class^="toggle"] {
       .DocSearch-MagnifierLabel, .DocSearch-Reset {
         color: white;
       }
+
+			.DocSearch-Input {
+				&::placeholder {
+					color: var(--color-600);
+				}
+			}
     }
+
+		.DocSearch-Prefill {
+			color: var(--color-primary);
+		}
+		
+		.DocSearch-HitsFooter a {
+			color: white;
+
+			&:hover {
+				color: var(--color-primary);
+			}
+		}
+
+		.DocSearch-Dropdown-Container {
+
+			.DocSearch-Hits {
+
+				.DocSearch-Hit-source {
+					background-color: transparent;
+					color: white;
+				}
+
+				.DocSearch-Hit a {
+					background: var(--color-200);
+
+					&:hover {
+						background: var(--color-100);
+
+						mark {
+							color: var(--color-primary) !important;
+							
+						}
+
+						.DocSearch-Hit-path {
+							color: var(--color-700) !important;
+						}
+					}
+
+					.DocSearch-Hit-path {
+						color: var(--color-700) !important;
+					}
+
+					mark, .DocSearch-Hit[aria-selected=true] mark {
+						color: var(--color-primary) !important;
+						text-decoration: none !important;
+					}
+				}
+
+			}
+		}
   }
 
   .DocSearch-Screen-Icon svg {
