@@ -15,7 +15,7 @@
 			"Maintain Your App":
 			["start/submit-an-app-update", "start/update-your-app-status", "start/support-your-users", "start/add-a-knowledge-base-to-app"],
 			"Game Compliance":
-			["start/warzone-compliance, start/rainbow-six-siege-compliance"]
+			["start/warzone-compliance", "start/rainbow-six-siege-compliance"]
 	},
     "docs": {
 		"Best Practices":
