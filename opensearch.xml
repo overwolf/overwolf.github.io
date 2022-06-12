@@ -4,8 +4,8 @@
   <ShortName>Overwolf</ShortName>
   <Description>Search Overwolf</Description>
   <InputEncoding>UTF-8</InputEncoding>
-  <Image width="16" height="16" type="image/x-icon">https://overwolf.github.io/V2TestFixed/img/ow-favicon.ico</Image>
-  <Url type="text/html" method="get" template="https://overwolf.github.io/V2TestFixed/search?q={searchTerms}"/>
-  <Url type="application/opensearchdescription+xml" rel="self" template="https://overwolf.github.io/V2TestFixed/opensearch.xml" />
-  <moz:SearchForm>https://overwolf.github.io/V2TestFixed/</moz:SearchForm>
+  <Image width="16" height="16" type="image/x-icon">https://overwolf.github.io/img/ow-favicon.ico</Image>
+  <Url type="text/html" method="get" template="https://overwolf.github.io/search?q={searchTerms}"/>
+  <Url type="application/opensearchdescription+xml" rel="self" template="https://overwolf.github.io/opensearch.xml" />
+  <moz:SearchForm>https://overwolf.github.io/</moz:SearchForm>
 </OpenSearchDescription>
