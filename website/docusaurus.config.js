@@ -70,8 +70,8 @@ module.exports={
         docs: {
           showLastUpdateAuthor: true,
           showLastUpdateTime: true,
-          editUrl: "https://github.com/overwolf/overwolf.github.io/tree/source/website/pages/",
-          path: "docs",
+          editUrl: "https://github.com/overwolf/overwolf.github.io/tree/source/website/",
+          path: "pages/docs",
           sidebarPath: "sidebars.json",
         },
         blog: {},
