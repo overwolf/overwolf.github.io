@@ -411,8 +411,6 @@ meteorite_prep | Area code | 1 minute before meteorite is about to spawn.(Announ
 meteorite_appear| Boolean | Meteorite has spawned.(Announcement) | See [notes](#meteorite_appear-note) | 148.0  |
 tree_of_life_prep | Area code | 1 minute before tree of life is about to spawn.(Announcement) | See [notes](#tree_of_life_prep-note) | 148.0  |
 tree_of_life_appear| Boolean | Tree of life has spawned.(Announcement) | See [notes](#tree_of_life_appear-note) | 148.0  |
-android_prep | Area code, Android name | 1 minute before Android Alpha/Omega is about to spawn.(Announcement) | See [notes](#android_prep-note) | 148.0  |
-android_appear| Boolean | Android Alpha/Omega has spawned.(Announcement) | See [notes](#android_appear-note) | 148.0  |
 
 
 #### *wickeline_prep* note

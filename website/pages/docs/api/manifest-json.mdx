@@ -614,10 +614,10 @@ A list of events causing the app to launch. It's enough that one of the events o
 |-------------------| -------|-----------------------------------------------------------------------------------------|------ |
 | event             | enum   | The type name of the event. <br/>**["GameLaunch", "AllGamesLaunch", "LaunchWithOverwolf"]**                   | 0.82  |
 | event_data        |  [launch_event](#launch_event-object) object | The list of game class IDs for which the app will launch.    | 0.82  |
+| include_launchers | bool   | The app will be launched when **any** game launcher is detected (Requires "AllGamesLaunch" to work).                                | 0.103 |
 | tracked           | bool   | Launch App when gameid is detected (even when not injected). Only works for supported launchers.                            | 0.132
 | track_all_games   | bool   | Only applicable when the 'tracked' property is set to true. Launches the app for all instances defined in the Gameslist, even those who are defined as "Unsuppported".                           | 0.195
 | start_minimized   | bool   | The app’s main window will start minimized.                                             | 0.82  |
-| include_launchers | bool   | The app will be launched when game launcher is detected.                                | 0.103 |
 
 Code Example:
 
@@ -637,7 +637,14 @@ Code Example:
 
 #### Enable app auto-launch with Overwolf
 
-Along with the option to launch your app when a specific game is started (or launch with all games), you can launch your app when the OW client launches: just set the event name to "LaunchWithOverwolf" like in the below example. (other options are "GameLaunch" and "AllGamesLaunch")
+You can launch your app when a certain event occurs, by setting `event` to these values:
+* When the OW client launches: "LaunchWithOverwolf".
+* When a listed game launches: "GameLaunch".
+* When any game launches: "AllGamesLaunch".
+
+By setting `include_launchers` to true, the app will also launch if it detects a launcher while having AllGamesLaunch as the `event` property. **Launchers can still be detected without this flag, using their direct app id**
+
+If the app would have been launched by any of these behaviours, but it is already open, [onAppLaunchTriggered](overwolf-extensions#onapplaunchtriggered] is fired.
 
 Notes:
 

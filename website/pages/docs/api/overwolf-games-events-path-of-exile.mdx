@@ -125,7 +125,7 @@ match_outcome| victory/defeat  | Boss killed/You died.|See [notes](#match_outcom
 Data Example:
 
 ```json
-{"info":{"match_info":{"current_zone":""Lioneye's Watch""}},"feature":"match_info"}
+{"info":{"match_info":{"current_zone":"Lioneye's Watch"}},"feature":"match_info"}
 ```
 
 #### *opened_page* note
