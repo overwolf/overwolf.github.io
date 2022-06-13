@@ -254,6 +254,13 @@ import SpecificGameEventsStatus from '@site/src/components/game-events-status/sp
       iconUrl: "../../img/games-logos/hunt-showdown.png",
       iconLargeUrl: "../../img/games-logos/large/hunt-showdown.png",
       name: "Hunt Showdown"
+    },
+    21876: {
+      id: 21876,
+      path: "../status/vanguard",
+      iconUrl: "../../img/games-logos/vanguard.png",
+      iconLargeUrl: "../../img/games-logos/large/vanguard.png",
+      name: "Call of Duty: Vanguard"
     }
   }
 
