@@ -254,7 +254,7 @@ module.exports={
       apiKey: 'cc7909d516aa0fbd71371ad4b3769c7e',
       indexName: 'overwolf',
       appId: '4YSGJ6Z1HG',
-      contextualSearch: true,
+      contextualSearch: false,
       algoliaOptions: {}
     }
   }
