@@ -295,6 +295,13 @@ body, .body {
   height: auto;
 }
 
+blockquote {
+  background-color: var(--card-hover);
+  border-left: 2px solid var(--color-800);;
+  padding: 15px 30px 15px 15px;
+  color: var(--color-bg);
+}
+
 @import './legacy-style';
 @import './getting-started';
 @import './admonition';

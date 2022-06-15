@@ -1,0 +1,148 @@
+
+.gep-games-list {
+	padding-bottom: 30px
+}
+
+.gep-games-list ul.list {
+	display: flex;
+	flex-wrap: wrap;
+	text-align: left;
+	margin: 35px 0 30px;
+	padding: 0;
+	justify-content: space-between
+}
+
+.gep-games-list ul.list li {
+	display: block;
+	width: calc(100%);
+	margin: 0 0 20px
+}
+
+.gep-games-list ul.list li::before, .gep-games-list ul.legend li::before  {
+	display: none;
+}
+
+@media (min-width: 650px) {
+	.gep-games-list ul.list li {
+		width: calc(50% - 15px)
+	}
+}
+
+@media (min-width: 1024px) {
+	.gep-games-list ul.list li {
+		width: calc(75% - 15px)
+	}
+}
+
+@media (min-width: 1200px) {
+	.gep-games-list ul.list li {
+		width: calc(50% - 15px)
+	}
+}
+
+.gep-games-list ul.list li a {
+	display: block;
+	position: relative;
+	padding: 14px 35px 16px 55px;
+	color: inherit;
+	background: var(--card-hover);
+	text-decoration: none;
+	/* box-shadow: 0px 0px 20px #050c0d; */
+	transition: all .15s ease
+}
+
+.gep-games-list ul.list li a,
+.gep-games-list ul.list li a:hover {
+	color: inherit
+}
+
+.gep-games-list ul.list li a:hover {
+	background: var(--color-1000);
+}
+
+.gep-games-list ul.list li a:before {
+	content: '';
+	position: absolute;
+	display: block;
+	top: 0;
+	bottom: 0;
+	right: 30px;
+	width: 1px;
+	/* background: #0b181a */
+}
+
+.gep-games-list ul.list li a:after {
+	content: '';
+	position: absolute;
+	display: block;
+	top: 50%;
+	right: 20px;
+	margin-top: -5px;
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	background: white
+}
+
+.gep-games-list ul.list li.good a:after {
+	background: #3bb447
+}
+
+.gep-games-list ul.list li.medium a:after {
+	background: #b2b43b
+}
+
+.gep-games-list ul.list li.bad a:after {
+	background: #b43b3b
+}
+
+.gep-games-list ul.list li img {
+	display: block;
+	position: absolute;
+  margin: auto;
+	left: 10px
+}
+
+.gep-games-list ul.legend {
+	display: flex;
+	justify-content: center;
+	background: transparent;
+	padding: 9px 0
+}
+
+@media (max-width: 650px) {
+	.gep-games-list ul.legend {
+		flex-direction: column
+	}
+}
+
+.gep-games-list ul.legend li {
+	display: block;
+	position: relative;
+	margin: 0 10px;
+	padding-left: 20px
+}
+
+.gep-games-list ul.legend li:after {
+	content: '';
+	position: absolute;
+	display: block;
+	top: 8px;
+	left: 0;
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	background: white
+}
+
+.gep-games-list ul.legend li.good:after {
+	background: #3bb447
+}
+
+.gep-games-list ul.legend li.medium:after {
+	background: #b2b43b
+}
+
+.gep-games-list ul.legend li.bad:after {
+	background: #b43b3b
+}

@@ -1,4 +1,5 @@
 import React from 'react';
+import './gep-game-list.scss'
 
 function GameTitle(props) {
   const { className, imgSrc, name, href} = props;
@@ -26,7 +27,7 @@ function SearchBar(props) {
 function filterEvents(e) {
 
   const searchInputTarget = e.target
-  
+
   const list = document.querySelectorAll('.game-data ul li');
   let search = searchInputTarget.value.toLowerCase();
 
