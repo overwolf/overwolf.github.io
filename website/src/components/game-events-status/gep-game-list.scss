@@ -1,0 +1,253 @@
+
+.gep-game {
+	text-align: left
+}
+
+.gep-game .game-title {
+	position: relative;
+	margin: 0 10px 30px;
+	padding-left: 110px;
+	padding-top: 10px;
+	line-height: 46px;
+	font-size: 34px;
+  color: #0D0A1A;
+  font-weight: 400;
+}
+
+.gep-game .game-title img {
+	display: block;
+	position: absolute;
+	left: 30px;
+	top: 0;
+	width: 60px;
+	height: 60px
+}
+
+.gep-game .game-title a {
+	display: block;
+	font-size: 16px;
+}
+
+.gep-game .game-title:before {
+	content: '';
+	position: absolute;
+	display: block;
+	top: 30px;
+	left: 0;
+	width: 13px;
+	height: 13px;
+	border-radius: 50%;
+	background: white
+}
+
+.gep-game .game-title.good:before {
+	background: #3bb447
+}
+
+.gep-game .game-title.medium:before {
+	background: #b2b43b
+}
+
+.gep-game .game-title.bad:before {
+	background: #b43b3b
+}
+
+.gep-game .search-game {
+	position: relative;
+	margin: 0 10px 20px;
+	height: 40px;
+	color: #8a9ea1;
+	background: #D3CFE5
+}
+
+.gep-game .search-game .search-input {
+	display: block;
+	width: 100%;
+	line-height: 40px;
+	padding-left: 45px;
+	height: 40px;
+	font-weight: 300;
+  transition: all .15s ease;
+  background-color: #fff;
+
+  &:hover {
+    &::placeholder {
+      color: #ccc;
+    }
+  }
+
+
+&::-webkit-search-cancel-button {
+  display: none;
+}
+}
+
+.gep-game .search-game:hover .search-input,
+.gep-game .search-game .search-input:focus {
+	background: var(--card-hover)
+}
+
+.gep-game .search-game .search-submit {
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	width: 40px;
+	padding: 0;
+	transition: all .15s ease;
+	min-width: auto;
+	background: transparent;
+	color: #8a9ea1
+}
+
+.gep-game .search-game .search-submit svg {
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin: auto;
+	width: 30px;
+	height: 30px;
+	fill: currentColor
+}
+
+.gep-game .search-game:hover .search-submit,
+.gep-game .search-game .search-input:focus~.search-submit {
+	color: #D3EAED
+}
+
+@media (min-width: 400px) {
+	.gep-game .game-events-info {
+		display: flex
+	}
+}
+
+.gep-game .game-data {
+	display: block;
+	margin: 0 10px 20px
+}
+
+@media (min-width: 400px) {
+	.gep-game .game-data {
+		width: 50%;
+		width: calc(50% - 20px)
+	}
+}
+
+.gep-game .game-data h4 {
+	margin: 0;
+	padding: 20px 0 15px 20px;
+	background: var(--card-hover);
+	font-weight: 400;
+	font-size: 18px
+}
+
+.gep-game .game-data ul {
+	display: flex;
+	flex-direction: column;
+	padding: 0;
+	background: var(--card-hover);
+}
+
+.gep-game .game-data li {
+	display: block;
+	position: relative;
+	margin: 0;
+	width: 100%;
+	border-top: 1px solid var(--color-1000);
+	padding: 11px 0 12px 45px;
+	line-height: 18px;
+	font-size: 14px;
+	order: 1;
+	transition: all .15s ease
+}
+
+.gep-game .game-data li.fav {
+	order: 0
+}
+
+.gep-game .game-data li:before {
+	content: '';
+	position: absolute;
+	display: block;
+	top: 50%;
+	left: 20px;
+	margin-top: -5px;
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	background: white
+}
+
+.gep-game .game-data li.good:before {
+	background: #3bb447
+}
+
+.gep-game .game-data li.medium:before {
+	background: #b2b43b
+}
+
+.gep-game .game-data li.bad:before {
+	background: #b43b3b
+}
+
+.gep-game .game-data li.coming-soon:before {
+	background: #3F494B
+}
+
+.gep-game .game-data li .star {
+	position: absolute;
+	display: block;
+	top: 50%;
+	right: 15px;
+	margin-top: -15px;
+	width: 30px;
+	height: 30px;
+	color: #282f30;
+	transition: color .15s;
+	min-width: auto;
+	background: transparent;
+	color: #8a9ea1
+}
+
+.gep-game .game-data li .star svg {
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin: auto;
+	width: 18px;
+	height: 19px;
+	fill: currentColor
+}
+
+.gep-game .game-data li .star:hover {
+	color: #3F494B
+}
+
+.gep-game .game-data li.fav .star {
+	color: #008C9E
+}
+
+.gep-game .game-data li.fav .star:hover {
+	color: #00BCD4
+}
+
+
+.gep-game .search-game .search-submit img {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  width: 30px;
+  height: 30px;
+  filter: grayscale(100%);
+}

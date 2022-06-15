@@ -1,0 +1,33 @@
+
+
+.sso-demo {
+  margin-bottom: 16px;
+}
+.sso-demo code {
+  display: block;
+  margin-bottom: 16px;
+  padding: 1.25rem 1.5rem;
+  color: #484266;
+  background: #D3CFE5;
+  font-size: 85%;
+}
+.theme-dark .sso-demo code {
+	color: #958FB2;
+	background-color: #0D0A1A;
+}
+
+button.button-sso-login {
+  display: block;
+  width: 130px;
+  height: 36px;
+  line-height: 36px;
+	background: var(--color-website-red);
+	text-align: center;
+  color: var(--color-grey-light) !important;
+  text-decoration: none;
+	transition: background .2s
+}
+
+button.button-sso-login:hover {
+	background: var(--color-primary-hover)
+}

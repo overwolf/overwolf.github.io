@@ -158,7 +158,7 @@ div[class^="toggle"] {
 		.DocSearch-Prefill {
 			color: var(--color-primary);
 		}
-		
+
 		.DocSearch-HitsFooter a {
 			color: white;
 
@@ -184,7 +184,7 @@ div[class^="toggle"] {
 
 						mark {
 							color: var(--color-primary) !important;
-							
+
 						}
 
 						.DocSearch-Hit-path {
@@ -354,12 +354,16 @@ td {
 }
 th {
 	border-color: var(--color-100);
-	color: var(--color-900);
+	color: white;
 	background: var(--color-300);
 }
 td {
 	background: var(--color-200);
 	color: var(--color-txt);
+}
+
+table thead tr {
+  border-bottom: var(--color-100);
 }
 
 // code:not(.hljs) {

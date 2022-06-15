@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import './sso-demo.scss';
 
 function SSODemo(props) {
 
@@ -38,11 +39,11 @@ function SSODemo(props) {
         setToken(null);
 
     }
-   
+
 
 
    // ---------------------------------------------------------------------------
-   
+
      return (
          <>
 					{ token &&
@@ -60,8 +61,8 @@ function SSODemo(props) {
 					}
         </>
      );
-   
+
    }
-   
+
    export default SSODemo;
 

@@ -1,5 +1,6 @@
 import React from 'react';
 import Layout from '@theme/Layout';
+import '../css/home-page.scss'
 
 function EasilySection(props) {
   const {config: siteConfig} = props;

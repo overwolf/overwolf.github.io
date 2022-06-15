@@ -1,4 +1,5 @@
 import React from 'react';
+import './game-list.scss';
 // import { GamesMetadata } from './games_metadata'
 
 function GamesList(props) {
@@ -60,7 +61,7 @@ class GameEventsStatus extends React.Component {
 
   render() {
 
- 
+
     const list = this.state.games.map(game => {
       let className = 'game ';
       switch (game.state) {
