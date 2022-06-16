@@ -157,6 +157,7 @@
 .body.home .main-content section.sdk li {
 	display: flex;
 	align-items: center;
+  justify-content: space-between;
 	padding: 80px 0
 }
 
@@ -170,7 +171,7 @@
 	font-size: 18px;
 	line-height: 30px;
 	letter-spacing: 0.01em;
-	flex-basis: 10px;
+  max-width: 540px;
 }
 
 
@@ -183,8 +184,13 @@
 	text-decoration: underline;
 }
 
+.body.home .main-content section.sdk h1 {
+  text-align: center;
+}
+
+
 .body.home .main-content section.sdk li img {
-	margin-right: 210px;
+	// margin-right: 210px;
 }
 
 .body.home .main-content section.sdk li.reversed img {
@@ -205,8 +211,9 @@
 }
 
 .body.home .main-content section.sdk .sdk-graphic {
-	flex: 2
+
 }
+
 
 .body.home .main-content section.game-dev {
 	background: var(--color-txt);
