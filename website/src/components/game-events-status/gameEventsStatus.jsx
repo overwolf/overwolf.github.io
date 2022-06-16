@@ -1,15 +1,7 @@
 import React from 'react';
 import './game-list.scss';
-// import { GamesMetadata } from './games_metadata'
 
-function GamesList(props) {
-  return (
-    <ul className="list">
-      {props.children}
-    </ul>
-  );
-}
-
+// ---------------------------------------------------------------------------
 function GameListItem(props) {
   const { className, path, imgSrc, text } = props;
   return (
@@ -21,89 +13,65 @@ function GameListItem(props) {
     </li>
   );
 }
+// ---------------------------------------------------------------------------
 
-class GameEventsStatus extends React.Component {
-  constructor(props) {
-    super(props);
+function renderGameList(gameListData) {
 
-    this.state = { games: props.gameListData };
+  const gameListItems = gameListData.map(game => {
+    let className = 'game ';
+    switch (game.state) {
+      case 1:
+        className += 'good';
+        break;
+      case 2:
+        className += 'medium';
+        break;
+      case 3:
+        className += 'bad';
+        break;
+    }
 
-  }
+    return <GameListItem
+      key={game.id}
+      className={className}
+      path={game.path}
+      imgSrc={game.iconUrl}
+      text={game.name}
+    />
+  });
 
-  // componentDidMount() {
-  //   // const script = document.createElement("script");
+  return gameListItems;
 
-  //   // script.src = "../../js/games_metadata.js";
-  //   // script.async = true;
+}
+// ---------------------------------------------------------------------------
 
-  //   // document.head.appendChild(script);
-  //   // console.log(this.state.metaData)
-  //   fetch('https://game-events-status.overwolf.com/all_prod.json')
-  //     .then(response => response.json())
-  //     .then(response => {
-  //       const games = [];
+function GameEventsStatus(props) {
+  const { gameListData } = props;
 
-  //       for (let game of response) {
+  const gameList = renderGameList(gameListData);
 
-  //         // Ignore state 0 (unsupported)
-  //         if (game.state == 0) continue;
+  gameList.sort((a, b) => {
+    return a.props.text < b.props.text ? -1 : 1;
+  })
 
-  //         if (!this.state.metaData[game.game_id]) continue;
+  // ---------------------------------------------------------------------------
+  return (
+    <article className="hentry">
+      <div className="gep-games-list">
+        <ul className="list">
+          {gameList}
+        </ul>
 
-  //         this.state.metaData[game.game_id].state = game.state;
-  //         games.push(this.state.metaData[game.game_id]);
-  //       }
+        <ul className="legend">
+          <li className="good">Good to go</li>
+          <li className="medium">Some game events may be unavailable</li>
+          <li className="bad">Game events are currently unavailable</li>
+        </ul>
+      </div>
+    </article>
+  );
 
-  //       this.setState({ games });
-  //     })
-  // }
-
-
-  render() {
-
-
-    const list = this.state.games.map(game => {
-      let className = 'game ';
-      switch (game.state) {
-        case 1:
-          className += 'good';
-          break;
-        case 2:
-          className += 'medium';
-          break;
-        case 3:
-          className += 'bad';
-          break;
-      }
-
-      return <GameListItem
-        key={game.id}
-        className={className}
-        path={game.path}
-        imgSrc={game.iconUrl}
-        text={game.name}
-      />
-    });
-
-    list.sort((a, b) => {
-      return a.props.text < b.props.text ? -1 : 1;
-    })
-
-    return (
-      <article className="hentry">
-        <div className="gep-games-list">
-          <GamesList>
-            {list}
-          </GamesList>
-          <ul className="legend">
-            <li className="good">Good to go</li>
-            <li className="medium">Some game events may be unavailable</li>
-            <li className="bad">Game events are currently unavailable</li>
-          </ul>
-        </div>
-      </article>
-    );
-  }
 }
 
 export default GameEventsStatus;
+
