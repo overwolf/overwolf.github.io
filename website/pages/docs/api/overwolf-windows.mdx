@@ -689,6 +689,20 @@ Parameter              | Type                                              | Des
 messageParams		       | [MessageBoxParams](#messageboxparams-object) Object  | The type and texts that the message prompt will have                      |
 callback               | [(Result: DisplayMessageBoxResult)](#displaymessageboxresult-object) => void    | Returns the user's action (confirmed = true / false)   |
 
+#### Usage Example
+
+Using the following code will create a pop up message for your app:
+
+```javascript
+overwolf.windows.displayMessageBox({
+    message_title: "title_text",
+    message_body: "body_text",
+    confirm_button_text: "Confirm",
+    cancel_button_text: "Cancel",
+    message_box_icon:  overwolf.windows.enums.MessagePromptIcon.ExclamationMark
+},console.log) 
+```
+
 ## isAccelreatedOSR(callback)
 #### Version added: 0.126
 
