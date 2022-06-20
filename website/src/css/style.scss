@@ -36,7 +36,7 @@
 	--color-bg: #060606;
 	--color-light-bg: #0F0F0F;
 	--color-black: #000000;
-    --light-mode-bg: #F4F4F4;
+  --light-mode-bg: #F4F4F4;
 
 	--color-error: #F12717;
 	--color-primary: #D34037; /* primary */
@@ -302,7 +302,6 @@ blockquote {
   color: var(--color-bg);
 }
 
-@import './legacy-style';
 @import './getting-started';
 @import './admonition';
 @import './new-styles';

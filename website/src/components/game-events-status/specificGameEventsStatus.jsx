@@ -1,18 +1,6 @@
 import React from 'react';
 import './gep-game-list.scss'
 
-function GameTitle(props) {
-  const { className, imgSrc, name, href} = props;
-  return (
-      <h3 className={`game-title ${className}`}>
-        <img src={imgSrc}  />
-        {name}
-        <a href={`${href}`} title="full API docs">Go to the API docs page</a>
-      </h3>
-  );
-}
-
-
 function SearchBar(props) {
   return (
     <form role="search" method="get" className="search-game" action="#" autoComplete="off" onSubmit={(e) => {e.preventDefault()}}>
@@ -23,6 +11,7 @@ function SearchBar(props) {
     </form>
   );
 }
+// ---------------------------------------------------------------------------
 
 function filterEvents(e) {
 
@@ -49,65 +38,14 @@ function filterEvents(e) {
   }
 
 }
+// ---------------------------------------------------------------------------
 
-function EventsList(props) {
-  const { title, events } = props;
-  return (
-    <div className="game-data">
-      <h4>{title}</h4>
-      <ul>
-        {events}
-      </ul>
-    </div>
-  );
-}
+function SpecificGameEventsStatus(props) {
 
-function Lists(props) {
-  return (
-    <div className="game-events-info">
-      <EventsList title="Events" events={props.events}></EventsList>
-      <EventsList title="Info updates" events={props.updates}></EventsList>
-  </div>
-  )
-}
+  const { gameStatusData, gamesMetaData, gameID, docsPath } = props;
+  // ---------------------------------------------------------------------------
 
-class SpecificGameEventsStatus extends React.Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      status: props.gameStatusData,
-      gamesMetadata: props.gamesMetaData,
-      id: props.gameID,
-      apiLink: props.docsPath,
-    };
-  }
-
-  // componentDidMount() {
-  //   // const script = document.createElement("script");
-
-  //   // script.src = "../../js/games_metadata.js";
-  //   // script.async = true;
-
-  //   // document.head.appendChild(script);
-
-  //   fetch(`https://game-events-status.overwolf.com/${this.state.id}_prod.json`)
-  //     .then(response => response.json())
-  //     .then(status => {
-  //       this.setState({ status });
-  //     })
-  // }
-
-  // loadSearchScript() {
-  //   const script = document.createElement("script");
-
-  //   script.src = "/js/game-events-status.js";
-  //   script.async = true;
-
-  //   document.body.appendChild(script);
-  // }
-
-  stateToCss(state) {
+  const stateToCss = (state) => {
     let css = '';
     switch (state) {
       case 1:
@@ -122,22 +60,22 @@ class SpecificGameEventsStatus extends React.Component {
     }
     return css;
   }
+  // ---------------------------------------------------------------------------
 
-  getEventsByType(type) {
-    const { status } = this.state;
-    const { features } = status;
-    if (!features  || features.length === 0) {
+  const getEventsByType = (type) => {
+
+    if (!gameStatusData.features  || gameStatusData.features.length === 0) {
       return (<li className="coming-soon">Coming soon</li>)
     }
 
     let idx = 0;
     const list = []
 
-    for (let feature of features) {
+    for (let feature of gameStatusData.features) {
       for (let key of feature.keys) {
         if (key.type == type) {
           list.push(
-            <li className={this.stateToCss(key.state)} key={idx++}>
+            <li className={stateToCss(key.state)} key={idx++}>
               {key.name}
             </li>
           );
@@ -147,28 +85,51 @@ class SpecificGameEventsStatus extends React.Component {
 
     return list;
   }
+  // ---------------------------------------------------------------------------
 
-  render() {
-    const events = this.getEventsByType(0);
-    const updates = this.getEventsByType(1);
-    const stateCss = this.stateToCss(this.state.status.state);
-    const imgSrc = this.state.gamesMetadata[this.state.id].iconLargeUrl;
-    const name = this.state.gamesMetadata[this.state.id].name;
+  const events = getEventsByType(0);
+  const updates = getEventsByType(1);
+  const stateCss = stateToCss(gameStatusData.state);
+  const imgSrc = gamesMetaData[gameID].iconLargeUrl;
+  const name = gamesMetaData[gameID].name;
+  // ---------------------------------------------------------------------------
 
-    return (
-      <article className="hentry">
-        <div className="entry-content">
-          <div className="gep-game">
-            <GameTitle className={stateCss} name={name} imgSrc={imgSrc} href={this.state.apiLink}></GameTitle>
-            <SearchBar href={name}></SearchBar>
-            <Lists events={events} updates={updates}></Lists>
+  return (
+    <article className="hentry">
+      <div className="entry-content">
+        <div className="gep-game">
+
+          <h3 className={`game-title ${stateCss}`}>
+            <img src={imgSrc}  />
+            {name}
+            <a href={`${docsPath}`} title="full API docs">Go to the API docs page</a>
+          </h3>
+
+          <SearchBar></SearchBar>
+
+          <div className="game-events-info">
+
+            <div className="game-data">
+              <h4>Events</h4>
+              <ul>
+                {events}
+              </ul>
+            </div>
+
+            <div className="game-data">
+              <h4>Info updates</h4>
+              <ul>
+                {updates}
+              </ul>
+            </div>
+
           </div>
+
         </div>
-      </article>
-    );
+      </div>
+    </article>
+  );
 
-
-  }
 }
 
 export default SpecificGameEventsStatus;

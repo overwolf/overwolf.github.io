@@ -251,3 +251,30 @@
   height: 30px;
   filter: grayscale(100%);
 }
+
+
+
+
+html[data-theme="dark"]{
+
+  .gep-game .game-title {
+    color: var(--color-headline);
+  }
+
+  .gep-game .search-game {
+    color: var(--color-500);
+    background: var(--color-200);
+  }
+  .gep-game .search-game:hover .search-input,
+  .gep-game .search-game .search-input:focus {
+    color: var(--color-900);
+    background: transparent;
+  }
+  .gep-game .game-data h4,
+  .gep-game .game-data ul {
+    background: var(--color-200);
+  }
+  .gep-game .game-data li {
+    border-top-color: var(--color-black);
+  }
+}
