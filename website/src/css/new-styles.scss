@@ -110,7 +110,6 @@ div[class^="tableOfContents"] {
   top: 110px !important;
 }
 
-
 .table-of-contents {
 
   + a {
@@ -597,3 +596,87 @@ div[class^="toggleButton"] {
     background: #616161 !important;
   }
 }
+
+html[data-theme="dark"]{
+  @media screen and (min-width: 997px){
+    img[src*="mobile"]{
+      display: none;
+    }
+    .center-text-desktop{
+      text-align: center;
+    }
+  }
+  img[src*="light"]{
+    display: none;
+  }
+  @media screen and (max-width: 996px) {
+    img[src*="desktop"]{
+      display: none;
+    }
+    img[src*="mobile"]{
+      margin: auto;
+    }
+    .center-text-mobile{
+      text-align: center;
+    }
+  }
+
+}
+
+
+
+html[data-theme="light"]{
+  @media screen and (min-width: 997px){
+    img[src*="mobile"]{
+      display: none;
+    }
+    .center-text-desktop{
+      text-align: center;
+    }
+  }
+  img[src*="dark"]{
+    display: none;
+  }
+  @media screen and (max-width: 996px) {
+    img[src*="desktop"]{
+      display: none;
+    }
+
+    img[src*="mobile"]{
+      margin: auto;
+    }
+    .center-text-mobile{
+      text-align: center;
+    }
+  }
+}
+
+.center-text{
+  text-align: center;
+}
+
+img[alt*="light-theme"], img[alt*="dark-theme"], img[alt*="mobile-light"], img[alt*="mobile-dark"] {
+  margin: inherit;
+  margin-bottom: 80px;
+}
+
+.theme-dark img[alt*="light-theme"], img[alt*="dark-theme"], img[alt*="mobile-light"], img[alt*="mobile-dark"] {
+  display: none;
+}
+
+.theme-dark img[alt*="dark-theme"] {
+  display: block;
+}
+
+@media (max-width: 1180px) {
+  .theme-dark img[alt*="dark-theme"], img[alt*="light-theme"], .theme-dark img[alt*="mobile-light"] {
+    display: none;
+  }
+
+  .theme-dark img[alt*="mobile-dark"], img[alt*="mobile-light"] {
+    display: block;
+    margin: auto;
+  }
+
+}
+
