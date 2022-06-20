@@ -84,6 +84,13 @@ div[class^="codeBlockLines"] {
 
 }
 
+div[class^="sidebar"] {
+
+  &::before {
+    background-color: var(--color-100);
+  }
+}
+
 .theme-doc-sidebar-container .theme-doc-sidebar-item-category .menu__list li a.menu__link {
 	color: var(--color-800);
 

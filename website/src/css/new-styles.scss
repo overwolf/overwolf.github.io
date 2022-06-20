@@ -29,6 +29,10 @@
     .navbar__items {
       gap: 18px;
 
+      @media (max-width: 1200px) {
+        gap: 0;
+      }
+
       .navbar__link {
         color: var(--color-txt);
         background-color: transparent;
@@ -87,6 +91,17 @@ aside {
 
 div[class^="sidebar"] {
   top: 42px !important;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 1px;
+    height: 26px;
+    z-index: 1;
+    right: 0;
+    top: 34px;
+    background-color: var(--light-mode-bg);
+  }
 }
 
 div[class^="tableOfContents"] {
@@ -431,6 +446,10 @@ div[class^="toggle"] {
   position: relative;
   right: -18px;
   top: -2px;
+
+  @media (max-width: 1200px) {
+    right: -4px;
+  }
 
   button:hover {
     svg {
