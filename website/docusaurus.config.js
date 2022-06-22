@@ -85,6 +85,12 @@ module.exports={
     ]
   ],
   themeConfig: {
+    metadata: [
+      {
+        name:"google-site-verification",
+        content:"EWs1HNaDLCjSSyCLv5WSFYAd1H2JU-yXjFjesu5nW8g"
+      }
+    ],
     clarity: {
       ID: "btoodir3td",
     },
