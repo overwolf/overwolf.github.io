@@ -257,5 +257,12 @@ export const GamesMetadata = {
     iconUrl: "../../img/games-logos/vanguard.png",
     iconLargeUrl: "../../img/games-logos/large/vanguard.png",
     name: "Call of Duty: Vanguard"
+  },
+  21960: {
+    id: 21960,
+    path: "../status/axie",
+    iconUrl: "../../img/games-logos/axie.png",
+    iconLargeUrl: "../../img/games-logos/large/axie.png",
+    name: "Axie Infinity Origin"
   }
 }
