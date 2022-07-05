@@ -47,6 +47,9 @@ Known website issues:
 - Sharing Quick Sync videos recorded with overwolf to twitter now works with videos recorded on up to 30 fps.
 - Fixed missing notification when sharing an image to reddit.
 - Fixed issue where [`overwolf.utils.openUriInDefaultBrowser('ms-settings:display-advancedgraphics')`](../api/overwolf-utils#openurlindefaultbrowserurl) would not open the Microsoft Display settings.
+- Fixed a bug involving [`overwolf.windows.flash()`](../api/overwolf-windows#flashwindowid-behaviorcallback).
+- Fixed a bug where opening a native window would cause games to lose focus.
+- Fixed a bug where calling [`overwolf.windows.bringToFront(false, callback)`](../api/overwolf-windows#bringtofrontgrabfocus-callback) or [`overwolf.windows.bringToFront(windowId, false, callback)`](../api/overwolf-windows#bringtofrontwindowid-grabfocus-callback) would cause a game to lose focus.
 
 
 ## Version 0.199 (June 2022)
