@@ -5,6 +5,7 @@ import ImageSlider from '@site/src/components/image-slider/image-slider';
 import ImageBoxModal from '@site/src/components/image-box-modal/image-box-modal';
 import VideoBox from '@site/src/components/video-box/video-box';
 import GameInfo from '@site/src/components/game-info/game-info';
+import HideMeSkippy from '@site/src/components/hide-me/hide-me';
 
 export default {
   // Re-use the default mapping
@@ -15,4 +16,5 @@ export default {
   ImageBoxModal: ImageBoxModal,
   VideoBox: VideoBox,
   GameInfo: GameInfo,
+  HideMeSkippy: HideMeSkippy,
 };
