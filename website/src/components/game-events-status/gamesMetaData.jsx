@@ -264,5 +264,12 @@ export const GamesMetadata = {
     iconUrl: "../../img/games-logos/axie.png",
     iconLargeUrl: "../../img/games-logos/large/axie.png",
     name: "Axie Infinity Origin"
+  },
+  21848: {
+    id: 21848,
+    path: "../status/diablo2",
+    iconUrl: "../../img/games-logos/diablo2.png",
+    iconLargeUrl: "../../img/games-logos/large/diablo2.png",
+    name: "Diablo 2"
   }
 }
