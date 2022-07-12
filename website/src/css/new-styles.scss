@@ -33,12 +33,16 @@
         gap: 0;
       }
 
+      .clean-btn {
+        margin-top: 2px;
+      }
+
       .navbar__link {
         color: var(--color-txt);
         background-color: transparent;
         font-size: 15px;
         font-family: Madera,sans-serif;
-        padding-top: 4px;
+        padding-top: 9px;
         font-weight: 300;
 
         svg {
@@ -532,16 +536,21 @@ div[class^="searchBox"] {
   .DocSearch-Button {
     border-radius: unset;
     background: var(--color-bg);
-    border: 1px solid var(--color-800);
-    color: var(--color-800);
+    border: 1px solid var(--color-500);
+    border-radius: 3px;
+    color: var(--color-txt);
+    font-size: 14px;
+    height: 32px;
+    padding-right: 0;
 
     @media (max-width: 760px) {
       border: none;
     }
 
     .DocSearch-Search-Icon {
-      color: var(--color-800);
+      color: var(--color-txt);
       transition: all 150ms ease;
+      width: 16px;
       @media (max-width: 760px) {
         color: white;
       }
@@ -563,6 +572,11 @@ div[class^="searchBox"] {
     background: #292929;
     box-shadow: inset 0 -2px 0 0 #505050, inset 0 0 1px 1px #393939, 0 2px 2px 0 #0304094d;
     color: #fff;
+    top: 0px;
+  }
+
+  .DocSearch-Button-Placeholder {
+    font-size: 14px;
   }
 }
 
@@ -592,6 +606,7 @@ div[class^="searchBox"] {
 }
 
 div[class^="toggleButton"] {
+
   &:hover {
     background: #616161 !important;
   }
