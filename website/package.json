@@ -4,11 +4,11 @@
   "private": true,
   "scripts": {
     "docusaurus": "docusaurus",
-    "start": "cd ../generators && node generate.js && cd ../website && docusaurus start",
-    "build": "cd ../generators && node generate.js && cd ../website && docusaurus build",
+    "start": "cd ../scripts && node generate.js && cd ../website && docusaurus start",
+    "build": "cd ../scripts && node generate.js && cd ../website && docusaurus build",
     "swizzle": "docusaurus swizzle",
-    "deploy": "cd ../generators && node generate.js && cd ../website && docusaurus deploy",
-    "clear": "cd ../generators && node clear.js && cd ../website && docusaurus start",
+    "deploy": "cd ../scripts && node generate.js && cd ../website && docusaurus deploy",
+    "clear": "cd ../scripts && node clear.js && cd ../website && docusaurus start",
     "serve": "docusaurus serve",
     "write-translations": "docusaurus write-translations",
     "write-heading-ids": "docusaurus write-heading-ids"

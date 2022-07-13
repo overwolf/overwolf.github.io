@@ -6,7 +6,7 @@ function GameInfoListItem(props) {
   return (
     <a href={`${pathUrl}`}>
       <svg>
-        <use href="../../img/sprite.svg#urlIcon" />
+        <use href="/img/sprite.svg#urlIcon" />
       </svg>
       {name}
     </a>
