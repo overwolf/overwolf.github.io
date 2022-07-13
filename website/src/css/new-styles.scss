@@ -211,7 +211,26 @@ div[class^="tableOfContents"] {
   }
 }
 
+
 .theme-doc-sidebar-container {
+
+  .theme-doc-sidebar-item-link-level-1 {
+    a.menu__link {
+      border-left: 7px solid transparent;
+      font-size: 16px;
+      color: var(--color-500);
+      letter-spacing: .01em;
+      position: relative;
+      border-radius: unset;
+      font-family: Madera,sans-serif;
+
+      &.menu__link--active {
+        border-left: 7px solid var(--color-primary);
+        color: var(--color-bg);
+        font-weight: 700;
+      }
+    }
+  }
 
   .theme-doc-sidebar-item-category {
 
@@ -231,6 +250,21 @@ div[class^="tableOfContents"] {
           border-left: 7px solid var(--color-primary);
           color: var(--color-bg);
           font-weight: 700;
+        }
+      }
+    }
+
+    &.theme-doc-sidebar-item-category-level-2 {
+
+      .menu__list-item-collapsible {
+        &:hover {
+          background: transparent;
+        }
+        .menu__link--sublist {
+          padding: 0 14px 4px;
+          &:hover {
+            color: white;
+          }
         }
       }
     }
