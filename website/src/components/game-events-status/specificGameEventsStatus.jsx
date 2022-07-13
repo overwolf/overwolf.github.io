@@ -1,12 +1,14 @@
 import React from 'react';
-import './gep-game-list.scss'
+import GameInfo from '../game-info/game-info';
+import { stateToCss } from './events-utils/events-utils';
+import './gep-game-list.scss';
 
 function SearchBar(props) {
   return (
     <form role="search" method="get" className="search-game" action="#" autoComplete="off" onSubmit={(e) => {e.preventDefault()}}>
       <input type="search" name="search" className="search-input" placeholder="Search for game events, e.g. “kill”" onKeyUp={(e) => {filterEvents(e)}} />
       <button type="submit" className="search-submit" title="Search">
-        <img src="../../img/search.svg"  />
+        <svg className='games-icon'><use href="../../img/sprite.svg#searchIcon" /></svg>
       </button>
     </form>
   );
@@ -42,29 +44,12 @@ function filterEvents(e) {
 
 function SpecificGameEventsStatus(props) {
 
-  const { gameStatusData, gamesMetaData, gameID, docsPath } = props;
-  // ---------------------------------------------------------------------------
-
-  const stateToCss = (state) => {
-    let css = '';
-    switch (state) {
-      case 1:
-        css = 'good';
-        break;
-      case 2:
-        css = 'medium';
-        break;
-      case 3:
-        css = 'bad';
-        break;
-    }
-    return css;
-  }
+  const { gameStatusData, gameID, docsPath } = props;
   // ---------------------------------------------------------------------------
 
   const getEventsByType = (type) => {
 
-    if (!gameStatusData.features  || gameStatusData.features.length === 0) {
+    if (!gameStatusData.features || gameStatusData.features.length === 0) {
       return (<li className="coming-soon">Coming soon</li>)
     }
 
@@ -89,21 +74,15 @@ function SpecificGameEventsStatus(props) {
 
   const events = getEventsByType(0);
   const updates = getEventsByType(1);
-  const stateCss = stateToCss(gameStatusData.state);
-  const imgSrc = gamesMetaData[gameID].iconLargeUrl;
-  const name = gamesMetaData[gameID].name;
+
   // ---------------------------------------------------------------------------
 
   return (
-    <article className="hentry">
+    <article>
       <div className="entry-content">
         <div className="gep-game">
 
-          <h3 className={`game-title ${stateCss}`}>
-            <img src={imgSrc}  />
-            {name}
-            <a href={`${docsPath}`} title="full API docs">Go to the API docs page</a>
-          </h3>
+          <GameInfo gameID={gameID} showStatus={false} />
 
           <SearchBar></SearchBar>
 

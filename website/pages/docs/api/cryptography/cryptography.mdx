@@ -1,0 +1,97 @@
+---
+id: cryptography
+title: overwolf.cryptography API
+sidebar_label: overwolf.cryptography
+---
+
+Use this API to encrypt and decrypt ciphertext and secure app data and variables. e.g., localStorage that stores auth-tokens, etc.
+
+## Methods Reference
+
+* [overwolf.cryptography.encryptForCurrentUser()](#encryptforcurrentuserplaintext-callback)
+* [overwolf.cryptography.decryptForCurrentUser()](#decryptforcurrentuserciphertext-callback)
+
+## Types Reference
+
+* [overwolf.cryptography.EncryptedDataResult](#encrypteddataresult-object) Object
+* [overwolf.cryptography.DecryptedDataResult](#decrypteddataresult-object) Object
+
+## encryptForCurrentUser(plaintext, callback))
+
+#### Version added: 0.160 
+
+> Returns encrypted ciphertext.
+
+**Note that the generated hash is unique per Windows current user.**
+
+Parameter | Type     | Description                                                              |
+----------| -------- | ------------------------------------------------------------------------ |
+plaintext | string   | The plain text to encrypt                                                |
+callback  | [(Result:EncryptedDataResult)](#encrypteddataresult-object) => void | Returns info about the currently running game |
+
+#### Usage Example
+
+```javascript
+overwolf.cryptography.encryptForCurrentUser('test123',console.log)
+```
+
+## decryptForCurrentUser(ciphertext, callback))
+
+#### Version added: 0.160 
+
+> Returns decrypted plaintext.
+
+Parameter | Type     | Description                                                              |
+----------| -------- | ------------------------------------------------------------------------ |
+ciphertext| string   | The cipher text to decryptd                                              |
+callback  | [(Result:DecryptedDataResult)](#decrypteddataresult-object) => void | Returns info about the currently running game |
+
+#### Usage Example
+
+```javascript
+overwolf.cryptography.decryptForCurrentUser(<paste hashed string here>,console.log)
+```
+
+## EncryptedDataResult Object
+
+Parameter          | Type                                                   | Description                         |
+-------------------| -------------------------------------------------------| ------------------------------------|
+*success*          | boolean                                                | inherited from the "Result" Object  |
+*error*            | string                                                 | inherited from the "Result" Object  |
+ciphertext         | string                                                 | The encrypted ciphertext            |
+
+
+#### Example data: Success
+
+```json
+{
+   "success":true,
+   "ciphertext": "AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAALUGXOFJUAE+tTxx0B2…FNYoUDbjKgdMDGuYhZbyfdGBkmGoaIxZk4qybUWBpu0iX4xM="
+}
+```
+
+#### Example data: Failure
+
+```json
+{"plaintext": null, "success": false, "error": "Failed to encrypt"}
+```
+
+## DecryptedDataResult Object
+
+Parameter          | Type                                                   | Description                         |
+-------------------| -------------------------------------------------------| ------------------------------------|
+*success*          | boolean                                                | inherited from the "Result" Object  |
+*error*            | string                                                 | inherited from the "Result" Object  |
+plaintext          | string                                                 | The decrypted plaintext             |
+
+#### Example data: Success
+
+```json
+{"plaintext": "test123", "success": true}
+```
+
+#### Example data: Failure
+
+```json
+{"plaintext": null, "success": false, "error": "Failed to decrypt"}
+```

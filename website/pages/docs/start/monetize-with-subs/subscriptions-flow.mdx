@@ -1,0 +1,54 @@
+---
+id: subscriptions-flow
+title: Subscriptions user flow
+sidebar_label: Subscriptions user flow
+---
+
+## Subscribing from the app's page
+
+The easiest way for a user to subscribe is going to that app’s page in the Appstore and clicking the "Subscribe" button.
+
+<ImageBoxModal>
+  <img src={require('/assets/subs-user-flow/one-app.jpg').default} alt="One App page - Unsubscribed" />
+</ImageBoxModal>
+
+## Subscribing using the in-app button
+
+Developers can choose to implement an in-app subscribe button leading directly to the subscription flow.
+
+<ImageBoxModal>
+  <img src={require('/assets/subs-user-flow/outplayed.jpg').default} alt="outplayed" />
+</ImageBoxModal>
+
+## Features screen and Checkout flow
+
+After clicking "Subscribe", the user reaches a detailed plan page that breaks down all plan features.
+Currently, each app can only have one plan, but in the future multiple plans will be possible, each with different own feature sets.
+
+<ImageSlider>
+  <img src={require('/assets/subs-user-flow/features.jpg').default} alt="Subscription features page" />
+  <img src={require('/assets/subs-user-flow/payments.jpg').default} alt="Checkout flow" />
+  <img src={require('/assets/subs-user-flow/receipt.jpg').default} alt="On-screen purchase confirmation" />
+  <img src={require('/assets/subs-user-flow/one-app-subscribed.jpg').default} alt="One App page - Subscribed" />
+  <img src={require('/assets/subs-user-flow/subscription-mail.jpg').default} alt="Email purchase confirmation" />
+</ImageSlider>
+
+## Manage active subscriptions
+
+Subbed apps appear in a new settings page where users can easily monitor or cancel their subscriptions as they please. Cancellation takes place at the end of the current subscription period.
+
+<ImageBoxModal>
+  <img src={require('/assets/subs-user-flow/settings-active-subs.jpg').default} alt="settings-active-subs" />
+</ImageBoxModal>
+
+
+## Uninstall / Cancel subscriptions
+
+When a user begins to uninstall Overwolf, they will get a notification warning them about active subscriptions that they might want to cancel for that app.
+
+<ImageSlider miniSlides={true}>
+  <img src={require('/assets/subs-user-flow/uninstall-subs-notification.jpg').default} alt="uninstall-subs-notification" />
+  <img src={require('/assets/subs-user-flow/uninstall-subs-notification-popup.jpg').default} alt="uninstall-subs-notification-popup" />
+  <img src={require('/assets/subs-user-flow/cancellation-mail.jpg').default} alt="cancellation-mail" />
+</ImageSlider>
+

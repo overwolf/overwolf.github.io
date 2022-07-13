@@ -1,0 +1,270 @@
+---
+id: media-player-element
+title: overwolf.windows.mediaPlayerElement API
+sidebar_label: overwolf.windows.mediaPlayerElement
+---
+
+Use this API to allows adding a media player element to a window to play video files.
+
+## Methods Reference
+
+* [overwolf.windows.mediaPlayerElement.create()](#createx-y-width-height-callback)
+* [overwolf.windows.mediaPlayerElement.removeAllPlayers()](#removeallplayers)
+* [overwolf.windows.mediaPlayerElement.setBounds()](#setboundsid-x-y-width-height-callback)
+* [overwolf.windows.mediaPlayerElement.setVideo()](#setvideoid-videourl-callback)
+* [overwolf.windows.mediaPlayerElement.play()](#playid-callback)
+* [overwolf.windows.mediaPlayerElement.pause()](#pauseid-callback)
+* [overwolf.windows.mediaPlayerElement.resume()](#resumeid-callback)
+* [overwolf.windows.mediaPlayerElement.setVolume()](#setvolumeid-volume-callback)
+* [overwolf.windows.mediaPlayerElement.stop()](#stopid-callback)
+* [overwolf.windows.mediaPlayerElement.seek()](#seekid-seconds-callback)
+* [overwolf.windows.mediaPlayerElement.getProgress()](#getprogressid-callback)
+* [overwolf.windows.mediaPlayerElement.setPlaybackSpeed()](#setplaybackspeedid-speedratio-callback)
+* [overwolf.windows.mediaPlayerElement.toFront()](#tofrontid-callback)
+* [overwolf.windows.mediaPlayerElement.toBack()](#tobackid-callback)
+* [overwolf.windows.mediaPlayerElement.setStretchMode()](#setstretchmodeid-stretchmode-callback)
+* [overwolf.windows.mediaPlayerElement.setTobiiLayer()](#settobiilayerid-param-callback)
+* [overwolf.windows.mediaPlayerElement.TobiiLayerParams()](#tobiilayerparamsparam-callback)
+
+## Events Reference
+
+* [overwolf.windows.mediaPlayerElement.onPlaybackStarted()](#onplaybackstarted)
+* [overwolf.windows.mediaPlayerElement.onPlaybackPaused()](#onplaybackpaused)
+* [overwolf.windows.mediaPlayerElement.onPlaybackStopped()](#onplaybackstopped)
+* [overwolf.windows.mediaPlayerElement.onPlaybackEnded()](#onplaybackended)
+* [overwolf.windows.mediaPlayerElement.onPlaybackError()](#onplaybackerror)
+
+## Types Reference
+
+* [`overwolf.media.enums.eStretch`](#estretch-enum) enum
+
+## create(x, y, width, height, callback)
+#### Version added: 0.78
+
+> Creates a media player and places it in the given location with given dimensions.
+
+Parameter | Type         | Description                                                                                      |
+--------- | -------------| ------------------------------------------------------------------------------------------------ |
+x         | int          | The top position of the player                                                                   |
+y         | int          | The left position of the player                                                                  |
+width	  | int          | The width of the player                                                                          |
+height    | int          | The height of the player                                                                         |
+callback  | function     | A callback function which will be called with the status of the request                          |
+
+#### Callback argument: Success
+
+A callback function which will be called with the status of the request  and the given player id
+
+```json
+{ "status": "success", "id": 3 }
+```
+
+## removeAllPlayers()
+#### Version added: 0.78
+
+> Remove all media players created for this window.
+
+## setBounds(id, x, y, width, height, callback)
+#### Version added: 0.78
+
+> Creates a media player and places it in the given location with given dimensions.
+
+Parameter | Type         | Description                                                                                      |
+--------- | -------------| ------------------------------------------------------------------------------------------------ |
+id        | int          | The id of the player                                                                             |
+x         | int          | The top position of the player                                                                   |
+y         | int          | The left position of the player                                                                  |
+width	  | int          | The width of the player                                                                          |
+height    | int          | The height of the player                                                                         |
+callback  | function     | A callback function which will be called with the status of the request                          |
+
+#### Callback argument: Success
+
+A callback function which will be called with the status of the request
+
+```json
+{ "status": "success" }
+```
+
+## setVideo(id, videoUrl, callback)
+#### Version added: 0.78
+
+> Sets the current video to be played.
+
+Parameter | Type         | Description                                                                                      |
+--------- | -------------| ------------------------------------------------------------------------------------------------ |
+id        | int          | The id of the player                                                                             |
+videoUrl  | string       | An url to the video                                                                              |
+callback  | function     | A callback function which will be called with the status of the request                          |
+
+## play(id, callback)
+#### Version added: 0.78
+
+> Plays the current video.
+
+Parameter | Type         | Description                                                                                      |
+--------- | -------------| ------------------------------------------------------------------------------------------------ |
+id        | int          | The id of the player                                                                             |
+callback  | function     | A callback function which will be called with the status of the request                          |
+
+## pause(id, callback)
+#### Version added: 0.78
+
+> Pauses the current video.
+
+Parameter | Type         | Description                                                                                      |
+--------- | -------------| ------------------------------------------------------------------------------------------------ |
+id        | int          | The id of the player                                                                             |
+callback  | function     | A callback function which will be called with the status of the request                          |
+
+## resume(id, callback)
+#### Version added: 0.78
+
+> Resumes the current video.
+
+Parameter | Type         | Description                                                                                      |
+--------- | -------------| ------------------------------------------------------------------------------------------------ |
+id        | int          | The id of the player                                                                             |
+callback  | function     | A callback function which will be called with the status of the request                          |
+
+## setVolume(id, volume, callback)
+#### Version added: 0.78
+
+> Sets the volume.
+
+Parameter | Type         | Description                                                                                      |
+--------- | -------------| ------------------------------------------------------------------------------------------------ |
+id        | int          | The id of the player                                                                             |
+volume	  | int          | A volume between 0 and 100 (inclusive)                                                           |
+callback  | function     | A callback function which will be called with the status of the request                          |
+
+## stop(id, callback)
+#### Version added: 0.78
+
+> Stops the current video.
+
+Parameter | Type         | Description                                                                                      |
+--------- | -------------| ------------------------------------------------------------------------------------------------ |
+id        | int          | The id of the player                                                                             |
+callback  | function     | A callback function which will be called with the status of the request                          |
+
+## seek(id, seconds, callback)
+#### Version added: 0.78
+
+> Seeks the current video to the given number of seconds.
+
+Parameter | Type         | Description                                                                                      |
+--------- | -------------| ------------------------------------------------------------------------------------------------ |
+id        | int          | The id of the player                                                                             |
+seconds	  | int          | The numbers of seconds to seek to                                                                |
+callback  | function     | A callback function which will be called with the status of the request                          |
+
+## getProgress(id, callback)
+#### Version added: 0.78
+
+> Gets the current progress, in seconds, of the playback.
+
+Parameter | Type         | Description                                                                                      |
+--------- | -------------| ------------------------------------------------------------------------------------------------ |
+id        | int          | The id of the player                                                                             |
+callback  | function     | A callback function which will be called with the status of the request                          |
+
+## setPlaybackSpeed(id, speedRatio, callback)
+#### Version added: 0.78
+
+> Sets the speed ratio of the playback.
+
+Parameter | Type         | Description                                                                                      |
+--------- | -------------| ------------------------------------------------------------------------------------------------ |
+id        | int          | The id of the player                                                                             |
+speedRatio| double       | The speed ratio of the playback. A double between 0 and 16 (inclusive)                           |
+callback  | function     | A callback function which will be called with the status of the request                          |
+
+## toFront(id, callback)
+#### Version added: 0.78
+
+> Sends the media player to the front of the window.
+
+Parameter | Type         | Description                                                                                      |
+--------- | -------------| ------------------------------------------------------------------------------------------------ |
+id        | int          | The id of the player                                                                             |
+callback  | function     | A callback function which will be called with the status of the request                          |
+
+## toBack(id, callback)
+#### Version added: 0.78
+
+> Sends the media player to the back of the window.
+
+Parameter | Type         | Description                                                                                      |
+--------- | -------------| ------------------------------------------------------------------------------------------------ |
+id        | int          | The id of the player                                                                             |
+callback  | function     | A callback function which will be called with the status of the request                          |
+
+## setStretchMode(id, stretchMode, callback)
+#### Version added: 0.78
+
+> Sets the stretch mode of the player.
+
+Parameter   | Type                             | Description                                                                                      |
+----------- | ---------------------------------| ------------------------------------------------------------------------------------------------ |
+id          | int                              | The id of the player                                                                             |
+stretchMode	| [eStretch](#estretch-enum) enum  | The desired stretch mode                                                                         |
+callback    | function                         | A callback function which will be called with the status of the request                          |
+
+## setTobiiLayer(id, param, callback)
+#### Version added: 0.78
+
+> Set Tobii replay layer params.
+
+Parameter | Type         | Description                                                                                      |
+--------- | -------------| ------------------------------------------------------------------------------------------------ |
+id        | int          | The id of the player                                                                             |
+param	  | [TobiiLayerParams](../deprecated/tobii#tobiilayerparams-object) Object  |The Tobii layer params                      |
+callback  | function     | A callback function which will be called with the status of the request                          |
+
+## TobiiLayerParams(param, callback)
+#### Version added: 0.78
+
+> Set Tobii replay layer params for the default player.
+
+Parameter | Type         | Description                                                                                      |
+--------- | -------------| ------------------------------------------------------------------------------------------------ |
+param	  | [TobiiLayerParams](../deprecated/tobii#tobiilayerparams-object) Object  | The Tobii layer params                     |
+callback  | function     | A callback function which will be called with the status of the request                          |
+
+## onPlaybackStarted
+#### Version added: 0.78
+
+> Fired when playback is starting/resuming.
+
+## onPlaybackPaused
+#### Version added: 0.78
+
+> Fired when playback is paused.
+
+## onPlaybackStopped
+#### Version added: 0.78
+
+> Fired when playback is stopped.
+
+## onPlaybackEnded
+#### Version added: 0.78
+
+> Fired when playback ends.
+
+## onPlaybackError
+#### Version added: 0.78
+
+> Fired when there was an error while trying to open a video.
+
+## eStretch enum
+#### Version added: 0.78
+
+> The stretch mode to use.
+
+Option        | Description  |
+------------- | -------------|
+None          |              |
+Fill          |              |
+Uniform       |              |
+UniformToFill |              |

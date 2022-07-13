@@ -1,0 +1,102 @@
+[
+    {
+        "title": "Legal",
+        "items": [
+            {
+                "label": "Terms Overview",
+                "to": "/topics/legal/legal-overview"
+            },
+            {
+                "label": "Developer's Terms",
+                "to": "/topics/legal/legal-developers-terms"
+            },
+            {
+                "label": "App Terms",
+                "to": "/topics/legal/legal-app-terms"
+            },
+            {
+                "label": "Overwolf Terms",
+                "to": "http://www.overwolf.com/legal/"
+            },
+            {
+                "label": "Overwolf Privacy Policy",
+                "to": "http://www.overwolf.com/legal/#Privacy-policy"
+            }
+        ]
+    },
+    {
+        "title": "Support",
+        "items": [
+            {
+                "label": "Questions and Answers",
+                "to": "https://discuss.overwolf.com/"
+            },
+            {
+                "label": "Discord",
+                "to": "https://discord.gg/overwolf-developers"
+            },
+            {
+                "label": "Slack",
+                "to": "/support/contact-us#join-our-slack"
+            },
+            {
+                "label": "Facebook",
+                "to": "https://www.facebook.com/OverwolfDevs"
+            },
+            {
+                "label": "Twitter",
+                "to": "https://twitter.com/OverwolfDevs"
+            }
+        ]
+    },
+    {
+        "title": "Documentation",
+        "items": [
+            {
+                "label": "Changelog",
+                "to": "/api/changelog"
+            },
+            {
+                "label": "API",
+                "to": "/api"
+            },
+            {
+                "label": "App Creation Process",
+                "to": "/start/getting-started/app-creation-process"
+            },
+            {
+                "label": "Best Practices",
+                "to": "/topics/best-practices"
+            },
+            {
+                "label": "Game Events Status",
+                "to": "/status/all"
+            }
+        ]
+    },
+    {
+        "title": "Information",
+        "items": [
+            {
+                "label": "Careers",
+                "to": "http://www.overwolf.com/careers/"
+            },
+            {
+                "label": "Fund",
+                "to": "https://overwolf.com/fund"
+            },
+            {
+                "label": "Developers Blog",
+                "to": "https://medium.com/overwolf"
+            },
+            {
+                "label": "Overwolf Appstore",
+                "to": "https://www.overwolf.com/appstore"
+            },
+            {
+                "label": "Advertise on Overwolf",
+                "to": "https://brands.overwolf.com/"
+            }
+        ]
+    }
+]

@@ -1,0 +1,223 @@
+---
+id: audio
+title: overwolf.media.audio API
+sidebar_label: overwolf.media.audio
+---
+
+A set of functions for playback of audio files. Currently supports MP3 and WAV files.
+
+:::warning obsolete
+The overwolf.media.audio API is deprecated. Use the html5 [audio](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/audio) tag instead.
+:::
+
+## Methods Reference
+
+* [overwolf.media.audio.create()](#createurl-callback)
+* [overwolf.media.audio.play()](#playid-callback)
+* [overwolf.media.audio.stop()](#stopcallback)
+* [overwolf.media.audio.stopById()](#stopbyidid-callback)
+* [overwolf.media.audio.pause()](#pausecallback)
+* [overwolf.media.audio.pauseById()](#pausebyidid-callback)
+* [overwolf.media.audio.resume()](#resumecallback)
+* [overwolf.media.audio.resumeById()](#resumebyidid-callback)
+* [overwolf.media.audio.setVolume()](#setvolumevolume-callback)
+* [overwolf.media.audio.setVolumeById()](#setvolumebyidid-volume-callback)
+
+## Events Reference
+
+* [overwolf.media.audio.onPlayStateChanged](#onplaystatechanged)
+
+## create(url, callback)
+#### Version added: 0.84
+
+> Creates an audio file from local path, extension local path or a remote Url.
+
+Parameter | Type                  | Description                                                             |
+--------- | ----------------------| ----------------------------------------------------------------------- |
+url	      | string                | The path of a local audio file, a url to a remote one or an extension url `overwolf-extension://app-id/file`. Notice that if the url doesn’t contain a file extension, mp3 will be assumed as the extension                                                     |
+callback  | function              | A callback function which will be called with the ID of the created audio file |
+
+#### Callback argument: Success
+
+A callback function which will be called with the status of the request and the ID of the created audio file:
+
+```json
+{
+    "status": "success",
+    "id": "1086e4469a5fb242e81223ce627e3747"
+}
+```
+
+## play(id, callback)
+#### Version added: 0.84
+
+> Plays the audio file matching the supplied ID.
+
+Parameter | Type                  | Description                                                                  |
+--------- | ----------------------| ---------------------------------------------------------------------------- |
+id        | string                | The ID of the audio file to be played                                        |
+callback  | function              | A callback function which will be called with the status of the play request |
+
+#### Callback argument: Success
+
+```json
+{
+    "status": "success"
+}
+```
+
+## stop(callback)
+#### Version added: 0.84
+
+> Stops the playback.
+
+Parameter | Type                  | Description                                                                  |
+--------- | ----------------------| ---------------------------------------------------------------------------- |
+callback  | function              | A callback function which will be called with the status of the stop request |
+
+#### Callback argument: Success
+
+```json
+{
+    "status": "success"
+}
+```
+
+## stopById(id, callback)
+#### Version added: 0.84
+
+> Stops the playback.
+
+Parameter | Type                  | Description                                                                  |
+--------- | ----------------------| ---------------------------------------------------------------------------- |
+id	      | string                | The ID of the audio file                                                     |
+callback  | function              | A callback function which will be called with the status of the stop request |
+
+#### Callback argument: Success
+
+```json
+{
+    "status": "success"
+}
+```
+
+## pause(callback)
+#### Version added: 0.84
+
+> Pauses the playback.
+
+Parameter | Type                  | Description                                                                   |
+--------- | ----------------------| ----------------------------------------------------------------------------- |
+callback  | function              | A callback function which will be called with the status of the pause request |
+
+#### Callback argument: Success
+
+```json
+{
+    "status": "success"
+}
+```
+
+## pauseById(id, callback)
+#### Version added: 0.84
+
+> Pauses the playback.
+
+Parameter | Type                  | Description                                                                   |
+--------- | ----------------------| ----------------------------------------------------------------------------- |
+id	      | string                | The ID of the audio file                                                      |
+callback  | function              | A callback function which will be called with the status of the pause request | 
+
+#### Callback argument: Success
+
+```json
+{
+    "status": "success"
+}
+```
+
+## resume(callback)
+#### Version added: 0.84
+
+> Resumes the playback.
+
+Parameter | Type                  | Description                                                                    |
+--------- | ----------------------| ------------------------------------------------------------------------------ |
+callback  | function              | A callback function which will be called with the status of the resume request |
+
+#### Callback argument: Success
+
+```json
+{
+    "status": "success"
+}
+```
+
+## resumeById(id, callback)
+#### Version added: 0.84
+
+> Resumes the playback.
+
+Parameter | Type                  | Description                                                                   |
+--------- | ----------------------| ----------------------------------------------------------------------------- |
+id	      | string                | The ID of the audio file                                                      |
+callback  | function              | A callback function which will be called with the status of the resume request|
+
+#### Callback argument: Success
+
+```json
+{
+    "status": "success"
+}
+```
+
+## setVolume(volume, callback)
+#### Version added: 0.84
+
+> Sets the playback volume.
+
+Parameter | Type                  | Description                                                                       |
+--------- | ----------------------| --------------------------------------------------------------------------------- |
+volume	  | int                   | The desired volume. The volume range is 0 – 100 where a volume of 0 means mute    |
+callback  | function              | A callback function which will be called with the status of the setVolume request |
+
+#### Callback argument: Success
+
+```json
+{
+    "status": "success"
+}
+```
+
+## setVolumeById(id, volume, callback)
+#### Version added: 0.84
+
+> Sets the playback volume.
+
+Parameter | Type                  | Description                                                                       |
+--------- | ----------------------| --------------------------------------------------------------------------------- |
+id	      | string                | The ID of the audio file                                                          |
+volume	  | int                   | The desired volume. The volume range is 0 – 100 where a volume of 0 means mute    |
+callback  | function              | A callback function which will be called with the status of the setVolume request |
+
+#### Callback argument: Success
+
+```json
+{
+    "status": "success"
+}
+```
+
+## onPlayStateChanged
+#### Version added: 0.84
+
+> Fired when the state of the playback is changed.
+
+#### Event Data Example: Success
+
+```json
+{
+    "id": "1086e4469a5fb242e81223ce627e3747",
+    "playback_state": "paused"
+}
+```

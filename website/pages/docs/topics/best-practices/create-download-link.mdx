@@ -1,0 +1,43 @@
+---
+id: create-download-link
+title: Creating an App Download Link with referral ID
+sidebar_label:   Download Link with referral ID
+---
+
+The Overwolf API allows you to include some info in the OW app store’s download link. You can use this feature for different purposes, however, the most common one is to add a unique referral ID to track your download link. This ID allows you to track installations and know exactly which users came from which channel.
+
+You can also allow your users to create shareable download links for their friends, and track how many friends each user has recruited for reward purposes.
+
+## Getting a Download Link
+
+The download link format for all apps bundled with the Overwolf client installation looks like this:
+
+```html
+https://download.overwolf.com/install/Download?Name=name&ExtensionId=123123123123&Channel=website
+```
+You can get your personalized download link by copying the link’s address from the Download button in the store:
+
+![alt-text](/assets/download-link-with-referralID/appstore-right-click.png)
+
+## Add Referral ID to the Download Link
+
+Once you have the base download link, you can concatenate your referral ID in the `utm_campaign` parameter, for example:
+
+```html
+https://download.overwolf.com/install/Download?Name=BUFF&ExtensionId=caboggillkkpgkiokbjmgldfkedbfnpkgadakcdl&Channel=website&utm_campaign=[REFERRAL_ID]
+```
+
+:::important
+* utm_campaign data will be saved to the OW database for new and existing OW installations. If the user that uses the download link already has the OW client installed, the link will update the app if necessary, band save the data in `utm_campaign` to the OW Database.
+* For security and privacy reasons, the app sees only its context. Meaning, Your app will not be able to read other app's UTM params. You will get empty strings.
+:::
+
+## Extract referral data using API
+
+In order to extract the data, you can use the [overwolf.profile.getCurrentUser()](/api/profile#getcurrentusercallback) API.
+
+This function’s callback will return with an installParams object, including the `utm_campaign` for this client:
+
+![alt-text](/assets/download-link-with-referralID/console.png)
+
+Once data is extracted, you can identify what the origin (the source) of the current installation is, and do whatever you like with it. For example, send it back to your servers or analysis software.

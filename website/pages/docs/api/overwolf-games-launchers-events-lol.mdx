@@ -4,11 +4,13 @@ title: League of Legends Launcher Events
 sidebar_label: LOL Launcher
 ---
 
+<GameInfo gameID={10902} showLauncherDocs={false}/>
+
 Please read the [overwolf.games.launchers.events](overwolf-games-launchers-events#how-to-register-for-features) documentation page to learn how to use Overwolf game launchers events.
 
-:::important Game Launcher ID
+<!-- :::important Game Launcher ID
 10902
-:::
+::: -->
 
 :::tip
 if the  game launcher wasn't closed by the user, it is possible to access game launcher methods while being in-game.
@@ -105,7 +107,7 @@ And much more.
 ```json
 {
   "actions": [
-    
+
   ],
   "allowBattleBoost": false,
   "allowDuplicatePicks": false,
@@ -114,15 +116,15 @@ And much more.
   "allowSkinSelection": true,
   "bans": {
     "myTeamBans": [
-      
+
     ],
     "numBans": 0,
     "theirTeamBans": [
-      
+
     ]
   },
   "benchChampionIds": [
-    
+
   ],
   "benchEnabled": false,
   "boostableSkinCount": 1,
@@ -134,7 +136,7 @@ And much more.
   "entitledFeatureState": {
     "additionalRerolls": 0,
     "unlockedSkinIds": [
-      
+
     ]
   },
   "hasSimultaneousBans": false,
@@ -143,12 +145,12 @@ And much more.
   "localPlayerCellId": -1,
   "lockedEventIndex": -1,
   "myTeam": [
-    
+
   ],
   "rerollsRemaining": 0,
   "skipChampionSelect": false,
   "theirTeam": [
-    
+
   ],
   "timer": {
     "adjustedTimeLeftInPhase": 0,
@@ -161,7 +163,7 @@ And much more.
     "totalTimeInPhase": 0
   },
   "trades": [
-    
+
   ]
 }
 ```
@@ -182,7 +184,7 @@ The queueID of the currently chosen game mode. Example:
 
 `{"feature":"lobby_info","category":"lobby_info","key":"queueId","value":1090}`
 
-* You can find here a [list of possible queue ids](https://developer.riotgames.com/game-constants.html). 
+* You can find here a [list of possible queue ids](https://developer.riotgames.com/game-constants.html).
 * 1090 is the queueID of TFT regular match.
 * 1100 is the queueID of TFT ranked match.
 
@@ -205,7 +207,7 @@ Data Example:
    "launcherClassId": 10902,
    "feature": "end_game",
    "info": {
-      "end_game_tft": 
+      "end_game_tft":
       {
          "tft_end_game_stats":
          "{"gameId":4156875865,"gameLength":1983,"isRanked":false,"localPlayer": {"boardPieces":[{"icon":"/lol-game-data/assets/v1/champion-icons/10.png","level":2,"name":"Kayle","price":5} ,{"icon":"/lol-game-data/assets/v1/champion-icons/222.png","level":2,"name":"Jinx","price":4}, {"icon":"/lol-game-data/assets/v1/champion-icons/89.png","level":2,"name":"Leona","price":4}, {"icon":"/lol-game-data/assets/v1/champion-icons/254.png","level":2,"name":"Vi","price":3}, {"icon":"/lol-game-data/assets/v1/champion-icons/236.png","level":2,"name":"Lucian","price":2}, {"icon":"/lol-game-data/assets/v1/champion-icons/114.png","level":2,"name":"Fiora","price":1}, {"icon":"/lol-game-data/assets/v1/champion-icons/86.png","level":2,"name":"Garen","price":1}, {"icon":"/lol-game-data/assets/v1/champion-icons/67.png","level":2,"name":"Vayne","price":1}],"companion":{"colorName":"","icon":"lol-game-data/assets/ASSETS/Loadouts/Companions/Tooltip_MiniGolem_Grey_Tier1.Companions.png","speciesName":"Runespirit"} ,"ffaStanding":0,"health":13,"iconId":3552,"isLocalPlayer":true,"puuid":"4379f318-5717-5891-8c29-29d703729921","rank":2,"summonerId":57427695,"summonerName":"PoSeiDonProX1"}
@@ -216,7 +218,7 @@ Data Example:
 
 #### *lol_end_game_stats* note
 
-Provides a variety of data regarding the previous game.  
+Provides a variety of data regarding the previous game.
 Data includes information such as:
 
 * Damage Dealt
@@ -276,7 +278,7 @@ Data includes information such as:
   "missionsXpEarned": 0,
   "myTeamStatus": "",
   "newSpells": [
-    
+
   ],
   "nextLevelXp": 144,
   "odinBonusIp": 0,
@@ -313,7 +315,7 @@ Data includes information such as:
   "teams": [
     {
       "championBans": [
-        
+
       ],
       "fullId": "",
       "isBottomTeam": true,
@@ -521,7 +523,7 @@ Data includes information such as:
     },
     {
       "championBans": [
-        
+
       ],
       "fullId": "",
       "isBottomTeam": false,
@@ -530,7 +532,7 @@ Data includes information such as:
       "memberStatusString": "",
       "name": "",
       "players": [
-        
+
       ],
       "stats": null,
       "tag": "",

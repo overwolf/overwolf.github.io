@@ -1,0 +1,158 @@
+---
+id: tray
+title: overwolf.os.tray API
+sidebar_label: overwolf.os.tray
+---
+
+Use this API for windows system tray related functionalities.
+
+## Methods Reference
+
+* [overwolf.os.tray.setMenu()](#setmenumenu-callback)
+* [overwolf.os.tray.destroy()](#destroy)
+
+
+## Events Reference
+
+* [overwolf.os.tray.onMenuItemClicked](#onmenuitemclicked)
+* [overwolf.os.tray.onTrayIconClicked](#ontrayiconclicked)
+* [overwolf.os.tray.onTrayIconDoubleClicked](#ontrayicondoubleclicked)
+
+## Types Reference
+
+* [ExtensionTrayMenu](#extensiontraymenu-object) Object
+* [overwolf.os.tray.onMenuItemClickedEvent](#onmenuitemclickedevent-object) Object
+* [overwolf.os.tray.menu_item](#menu_item-object) Object
+
+
+## setMenu(menu, callback)
+#### Version added: 0.131
+#### Permissions required: Tray
+
+> Create a tray icon for the calling extension with the supplied context menu object.
+
+Parameter | Type                                                    | Description             |
+--------- | --------------------------------------------------------| ----------------------- |
+menu      | [ExtensionTrayMenu](#extensiontraymenu-object) object   | The menu object         |
+callback  | (Result) => void                                        | Returns with the result |
+
+#### Usage Example
+
+```js
+const trayMenu = {
+    "menu_items": [{
+            "label": "View main window",
+            "id": "view_window"
+        }
+    ]
+}
+
+overwolf.os.tray.setMenu(trayMenu, (res) => {
+	console.log("setMenu -> res", res) 
+});
+```
+
+#### Notes
+
+* A [launcher_icon](../manifest#meta-launcher_icon) must be set in the manifest.
+* Calling setMenu() is mandatory to get a tray icon.
+
+## destroy()
+#### Version added: 0.173
+#### Permissions required: Tray
+
+> Destroys the tray icon immediately.
+
+Parameter | Type                                                    | Description             |
+--------- | --------------------------------------------------------| ----------------------- |
+none      | none                                                    | no params               |
+
+## ExtensionTrayMenu Object
+
+A container object for a menu.
+
+Parameter          | Type                              | Description                                 |
+-------------------| ----------------------------------| ------------------------------------------- |
+menu_items         | [menu_item](#menu_item-object)[]  |  array of menu items                        |
+
+An example for a menu with sub items:
+
+```json
+
+{
+	"menu_items": [{
+			"label": "View main window",
+			"id": "view_window"
+		},
+		{
+			"label": "More...",
+			"enabled": true,
+			"sub_items": [{
+				"label": "Version 1.0.0",
+				"id": "more_version",
+				"enabled": false
+			}]
+		},
+		{
+			"label": "-"
+		},
+		{
+			"label": "Visit website",
+			"id": "more_website"
+		}
+
+	]
+}
+```
+
+## menu_item Object
+
+A container object for a menu item.
+
+Parameter          | Type         | Description                                                                                      |
+-------------------| -------------| ------------------------------------------------------------------------------------------------ |
+id                 | string       |  must be set for items without "sub_items". (Separators and items with sub_items don't need ids) |
+label              | string       |  in order to create a separator, use the label "-"                                               |
+enabled            | boolean      |  set to true by default                                                                          |
+sub_items          | menu_item[]  |  you can nest an array of menu items under this item                                             |
+
+An example of a menu objects with sub items:
+
+```json
+{
+	"label": "More...",
+	"enabled": true,
+	"sub_items": [{
+		"label": "Version 1.0.0",
+		"id": "more_version",
+		"enabled": false
+	}]
+}
+```
+
+## onMenuItemClicked
+#### Version added: 0.131
+
+> Fired when an item from the tray icon’s context menu is selected, with the following structure: [onMenuItemClickedEvent](#onmenuitemclickedevent-object) Object
+
+#### Event data example
+
+```json
+{ "item": "id" }
+```
+
+## onTrayIconClicked
+#### Version added: 0.131
+
+> Fired when the tray icon is left clicked.
+
+## onTrayIconDoubleClicked
+#### Version added: 0.131
+
+> Fired when the tray icon is double clicked.
+
+## onMenuItemClickedEvent Object
+
+Parameter   | Type                              | Description           |
+------------| ----------------------------------|---------------------- |
+item        |  string                           |                       | 

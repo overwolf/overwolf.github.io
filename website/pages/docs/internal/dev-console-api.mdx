@@ -1,0 +1,64 @@
+---
+id: dev-console-api
+title: Dev Console API
+---
+
+Our API is currently in pre-release, includes limited features, and doesn't promise backwards compatibility.
+We plan on expanding our support and create a dedicated CLI tool in the future.
+
+## OPK Uploads 
+
+The first feature we support is OPK uploads: 
+
+Instead of uploading your OPK using the Dev Console's Release Management page, you can upload it via POST request to this endpoint:
+
+`https://console-api.overwolf.com/api/applications/[your app ID here]/versions`.
+
+Let's see all the required steps:
+
+### Generate an API key
+
+First, you must generate an API key. To do so, navigate to the Dev Console's [Dev Setup Page](https://console.overwolf.com/#/dev-setup) and login if prompted.
+
+In the page, click on the button labled "Revoke And Get New Key". You will be warned that this invalidates existing keys. Since this is your first time generating an API key you don't have to worry about it, but keep it in mind for the future. 
+
+For security concerns, the key is available *ONCE* and once only, and *CANNOT BE RETRIEVED*, not even by us. So keep it safe.
+Of course, your API key is generated and working only for YOUR app. For each app, you have to generate a different key.
+
+### Generate a POST request
+
+Place in the Authorization header of your request in this format (without the square brackets, obviously):
+
+```
+Authorization: [your email here]:[your key here]
+```
+
+And place in your message body the absolute path to the OPK that you want to upload. Here is an example:
+
+```bash
+curl -X POST https://console-api-test.overwolf.com/api/applications/npijmgiaiiemcnijaljcfddgeihxbifdbhpffihs/versions -H 'Authorization: hello@world.gg:my_awesome_secret_key' -F file=@/C:/app.opk
+```
+
+Successful response example:
+
+```json
+{
+    "application_id": "npijmgiaiiemcnijaljcfddgeihxbifdbhpffihs",
+    "version": "0.0.27",
+    "channelId": 0,
+    "min_ow_version": "0.96.1.0",
+    "md5_checksum": "87355a7657030c13444ae2cd4bb4c2ca",
+    "size_in_bytes": 70603,
+    "state": "uploaded",
+    "dock_button_title": null,
+    "id": 272,
+    "created_at": "2021-03-21T16:36:35.444Z",
+    "installs": 0,
+    "activeUsers": 0
+}
+```
+
+### Notes 
+
+* The uploaded OPK will override any current draft, if any.
+* Currently, the OPK is uploaded as a draft without an option to release it through the API. You will have to do the phasing manually.

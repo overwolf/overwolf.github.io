@@ -1,0 +1,1284 @@
+---
+id: windows
+title: overwolf.windows API
+sidebar_label: overwolf.windows
+---
+
+Use this API to create, interact with and modify your app’s windows.
+
+:::important
+Please make sure to read our guide on [how to use Overwolf windows](/topics/using-windows-api/using-overwolf-windows/), to learn everything about Overwolf app windows, and how to use them properly and efficiently in your app.
+:::
+
+## Methods Reference
+
+* [overwolf.windows.getMainWindow()](#getmainwindow)
+* [overwolf.windows.getCurrentWindow()](#getcurrentwindowcallback)
+* [overwolf.windows.obtainDeclaredWindow()](#obtaindeclaredwindowwindowname-callback)
+* [overwolf.windows.obtainDeclaredWindow()](#obtaindeclaredwindowwindowname-overridesetting-callback)
+* [overwolf.windows.obtainDeclaredWindow()](#obtaindeclaredwindowwindowname-usedefaultsizeandlocation-callback)
+* [overwolf.windows.getWindow()](#getwindowwindowname-callback)
+* [overwolf.windows.dragMove()](#dragmovewindowid-callback)
+* [overwolf.windows.dragResize()](#dragresizewindowid-edge)
+* [overwolf.windows.dragResize()](#dragresizewindowid-edge-contentrect)
+* [overwolf.windows.dragResize()](#dragresizewindowid-edge-rect-callback)
+* [overwolf.windows.changeSize()](#changesizewindowid-width-height-callback)
+* [overwolf.windows.changeSize()](#changesizechangesizeparams-callback)
+* [overwolf.windows.changePosition()](#changepositionwindowid-left-top-callback)
+* [overwolf.windows.close()](#closewindowid-callback)
+* [overwolf.windows.minimize()](#minimizewindowid-callback)
+* [overwolf.windows.maximize()](#maximizewindowid-callback)
+* [overwolf.windows.restore()](#restorewindowid-callback)
+* [overwolf.windows.restore()](#restorewindowname-callback)
+* [overwolf.windows.hide()](#hidewindowid-callback)
+* [overwolf.windows.getWindowState()](#getwindowstatewindowid-callback)
+* [overwolf.windows.getWindowsStates()](#getwindowsstatescallback)
+* [overwolf.windows.openOptionsPage()](#openoptionspagecallback)
+* [overwolf.windows.setDesktopOnly()](#setdesktoponlywindowid-shouldbedesktoponly-callback)
+* [overwolf.windows.setRestoreAnimationsEnabled()](#setrestoreanimationsenabledwindowid-shouldenableanimations-callback)
+* [overwolf.windows.setTopmost()](#settopmostwindowid-shouldbetopmost-callback)
+* [overwolf.windows.sendToBack()](#sendtobackwindowid-callback)
+* [overwolf.windows.sendMessage()](#sendmessagewindowid-messageid-messagecontent-callback)
+* [overwolf.windows.setWindowStyle()](#setwindowstylewindowid-style-callback)
+* [overwolf.windows.removeWindowStyle()](#removewindowstylewindowid-style-callback)
+* [overwolf.windows.getOpenWindows()](#getopenwindowscallback)
+* [overwolf.windows.setMute()](#setmutemute-callback)
+* [overwolf.windows.muteAll()](#muteallcallback)
+* [overwolf.windows.isMuted()](#ismutedcallback)
+* [overwolf.windows.isWindowVisibleToUser()](#iswindowvisibletousercallback)
+* [overwolf.windows.bringToFront()](#bringtofrontwindowid-callback)
+* [overwolf.windows.bringToFront()](#bringtofrontcallback)
+* [overwolf.windows.bringToFront()](#bringtofrontgrabfocus-callback)
+* [overwolf.windows.bringToFront()](#bringtofrontwindowid-grabfocus-callback)
+* [overwolf.windows.setPosition()](#setpositionproperties-callback)
+* [overwolf.windows.setPosition()](#setpositionwindowid-properties-callback)
+* [overwolf.windows.displayMessageBox()](#displaymessageboxmessageparams-callback)
+* [overwolf.windows.isAccelreatedOSR()](#isaccelreatedosrcallback)
+* [overwolf.windows.setMinSize()](#setminsizewindowid-width-height-callback)
+* [overwolf.windows.flash()](#flashwindowid-behaviorcallback)
+* [overwolf.windows.setZoom()](#setzoomwinzoomfactorowid-windowid)
+
+## Events Reference
+
+* [overwolf.windows.onMainWindowRestored](#onmainwindowrestored)
+* [overwolf.windows.onStateChanged](#onstatechanged)
+* [overwolf.windows.onMessageReceived](#onmessagereceived)
+* [overwolf.windows.onAltF4Blocked](#onaltf4blocked)
+* [overwolf.windows.onScreenPropertyChanged](#onscreenpropertychanged)
+
+## Types Reference
+
+* [overwolf.windows.WindowProperties](#windowproperties-object) Object
+* [overwolf.windows.RelativeTo](#relativeto-object) Object
+* [overwolf.windows.SetWindowPositionProperties](#setwindowpositionproperties-object) Object
+* [overwolf.windows.MessageBoxParams](#messageboxparams-object) Object
+* [overwolf.windows.ODKRect](#odkrect-object) Object
+* [overwolf.windows.enums.MessagePromptIcon](#messageprompticon-enum) Enum
+* [overwolf.windows.enums.WindowDragEdge](#windowdragedge-enum) Enum
+* [overwolf.windows.enums.WindowStyle](#windowstyle-enum) Enum
+* [overwolf.windows.enums.FlashBehavior](#flashbehavior-enum) Enum
+* [overwolf.windows.onScreenPropertyChangedEvent](#onscreenpropertychangedevent-object) Object
+* [overwolf.windows.WindowStateChangedEvent](#windowstatechangedevent-object) Object
+* [overwolf.windows.WindowResult](#windowresult-object) Object
+* [overwolf.windows.WindowInfo](#windowinfo-object) Object
+* [overwolf.windows.enums.WindowStateEx](#windowstateex-enum) Enum
+* [overwolf.windows.DragMovedResult](#dragmovedresult-object) Object
+* [overwolf.windows.DragResizeResult](#dragresizeresult-object) Object
+* [overwolf.windows.WindowIdResult](#windowidresult-object) Object
+* [overwolf.windows.GetWindowStateResult](#getwindowstateresult-object) Object
+* [overwolf.windows.GetWindowStatesResult](#getwindowsstatesresult-object) Object
+* [overwolf.windows.IsMutedResult](#ismutedresult-object) Object
+* [overwolf.windows.IsWindowVisibleToUserResult](#iswindowvisibletouserresult-object) Object
+* [overwolf.windows.DisplayMessageBoxResult](#displaymessageboxresult-object) Object
+* [overwolf.windows.MessageReceivedEvent](#messagereceivedevent-object) Object
+* [overwolf.windows.AltF4BlockedEvent](#altf4blockedevent-object) Object
+
+## getMainWindow()
+#### Version added: 0.113
+
+> Returns a window object of the index page.
+
+This function allows you to get direct access to your main index page (which should be a controller/background page) and it’s HTML Window object (and thus any JS function or DOM element), which is also guaranteed to exist when calling this method from any other window (unlike the [getOpenWindows()](#getopenwindowscallback)).  
+
+If you hold one global "manager" object in your background, then all other windows have a single object to interact with.
+This is why we recommend the getMainWindow() approach.  
+
+[overwolf.windows.sendMessage](#sendmessagewindowid-messageid-messagecontent-callback) performs object copying, so it might be a bit less efficient - depending on your use-case
+
+Read more in the ["Communication between windows"](/topics/using-windows-api/communicating-between-windows) section.
+
+## getCurrentWindow(callback)
+#### Version added: 0.78.  updated: 0.153
+
+> Calls the given callback function with the current window object as a parameter.
+
+Parameter | Type                                                     | Description             |
+--------- | ---------------------------------------------------------| ------------------------|
+callback  | [(Result: WindowResult)](#windowresult-object) => void   | A callback function which will be called with the current window object as a parameter |
+
+#### Note
+
+* The sizes returned in the callback already consider the DPI scaling (to be fixed by version 0.170).
+
+## obtainDeclaredWindow(windowName, callback)
+#### Version added: 0.78
+
+> Creates an instance of your window (the window’s name has to be declared in the manifest.json) or returns a window by the window name.
+
+Parameter | Type                       | Description                                                                            |
+--------- | ---------------------------| -------------------------------------------------------------------------------------- |
+windowName| string                     | The name of the window that was declared in the data.windows section in the manifest   |
+callback  | [(Result: WindowResult)](#windowresult-object) => void | A callback function which will be called with the current window object as a parameter |
+
+#### Notes
+
+* If the window does not exist - the function return null in the sizes.
+* If the window exists - the sizes returned in the callback already consider the DPI scaling (to be fixed by version 0.170).
+
+## obtainDeclaredWindow(windowName, overrideSetting, callback)
+#### Version added: 0.78
+
+> Creates an instance of your window (the window’s name has to be declared in the manifest.json) or returns a window by the window name.
+
+Parameter       | Type                                                | Description                                                                            |
+--------------- | ----------------------------------------------------| -------------------------------------------------------------------------------------- |
+windowName      | string                                              | The name of the window that was declared in the data.windows section in the manifest   |
+overrideSetting	| [WindowProperties](#windowproperties-object) Object | Override manifest settings                                                             |
+callback        | [(Result: WindowResult)](#windowresult-object) => void | A callback function which will be called with the current window object as a parameter |
+
+#### Notes
+
+* If the window does not exist - the function return null in the sizes.
+* If the window exists - the sizes returned in the callback already consider the DPI scaling (to be fixed by version 0.170).
+
+## obtainDeclaredWindow(windowName, useDefaultSizeAndLocation, callback)
+#### Version added: 0.136
+
+> Creates an instance of your window (the window’s name has to be declared in the manifest.json) or returns a window by the window name.
+
+Parameter                 | Type                                                | Description                                                                            |
+------------------------- | ----------------------------------------------------| -------------------------------------------------------------------------------------- |
+windowName                | string                                              | The name of the window that was declared in the data.windows section in the manifest   |
+useDefaultSizeAndLocation	| [DefaultSizeAndLocation](#defaultsizeandlocation-object) Object | Enable the manifest size and position settings                            |
+callback                  | [(Result: WindowResult)](#windowresult-object) => void | A callback function which will be called with the current window object as a parameter |
+
+#### Usage example
+
+```js
+overwolf.windows.obtainDeclaredWindow("main", {useDefaultSizeAndLocation: true}, console.log)
+```
+
+#### Notes
+
+* If the window does not exist - the function return null in the sizes.
+* If the window exists - the sizes returned in the callback already consider the DPI scaling (to be fixed by version 0.170).
+
+## getWindow(windowName, callback)
+#### Version added: 0.191
+
+> Returns [WindowResult](#windowresult-object) object for a specific open window.
+
+Parameter                 | Type                                                | Description                                                                            |
+------------------------- | ----------------------------------------------------| -------------------------------------------------------------------------------------- |
+windowName                | string                                              | The name of the window that was declared in the data.windows section in the manifest   |
+callback                  | [(Result: WindowResult)](#windowresult-object) => void | Callback will be invoked with the [WindowResult](#windowresult-object) object. |
+
+
+#### Usage example
+
+```js
+overwolf.windows.getWindow("main", console.log)
+```
+
+#### Notes
+
+* If the window does not exist - returns an error.
+
+## dragMove(windowId, callback)
+#### Version added: 0.78
+
+> Start dragging a window.
+
+Parameter            | Type        | Description                                           |
+-------------------- | ------------| ------------------------------------------------------|
+windowId	           | string      | The id or name of the window to drag                  |
+callback (Optional)  | function    | A callback which is called when the drag is completed |
+callback (Optional)  | [(Result: DragMovedResult)](#dragmovedresult-object) => void | A callback which is called when the drag is completed  |
+
+#### Notes
+
+* When you dragMove a **native window** between monitors with different DPIs, the window will automatically resize according to the new DPI.
+* When you quickly Click / DoubleClick a window that has dragMove(), without moving it at all - a **"Left mouse released"** error is thrown.
+
+
+## dragResize(windowId, edge)
+#### Version added: 0.100
+
+> Start resizing the window from a specific edge or corner.
+
+Parameter            | Type                                         | Description                                           |
+-------------------- | ---------------------------------------------| ------------------------------------------------------|
+windowId	         | string                                       | The id or name of the window to resize                |
+edge                 | [WindowDragEdge](#windowdragedge-enum) Enum  | The edge or corner from which to resize the window    |
+
+## dragResize(windowId, edge, contentRect)
+#### Version added: 0.100
+
+> Start resizing the window from a specific edge or corner.
+
+Parameter            | Type                                         | Description                                                                    |
+-------------------- | ---------------------------------------------| -------------------------------------------------------------------------------|
+windowId	           | string                                         | The id or name of the window to resize                                       |
+edge                 | [WindowDragEdge](#windowdragedge-enum) Enum  | The edge or corner from which to resize the window                             |
+contentRect	         | [ODKRect](#odkrect-object) Object            | The real content of the window (for the ingame drawing resizing white area)    |
+
+## dragResize(windowId, edge, rect, callback)
+#### Version added: 0.100
+
+> Start resizing the window from a specific edge or corner.
+
+Parameter            | Type                                         | Description                                                                    |
+-------------------- | ---------------------------------------------| -------------------------------------------------------------------------------|
+windowId	           | string                                       | The id or name of the window to resize                                         |
+edge                 | [WindowDragEdge](#windowdragedge-enum) Enum  | The edge or corner from which to resize the window                             |
+rect    	           | [ODKRect](#odkrect-object) Object            | The real content of the window (for the ingame drawing resizing white area)    |
+callback             | [(Result: DragResizeResult)](#dragresizeresult-object) => void | A callback which is called when the resizing process is completed  |
+
+## changeSize(windowId, width, height, callback)
+#### Version added: 0.78
+
+> Changes the window size to the new width and height, in pixels.
+
+:::warning OBSOLETE
+This function is obsolete and doesn't calculate DPI - so you need to pre-calculate DPI before calling it, or, use this signature of  that calculates DPI - so you don't need to calculate it yourself.
+:::
+
+Parameter           | Type       | Description                                                                                  |
+--------------------| -----------| ---------------------------------------------------------------------------------------------|
+windowId	          | string     | The id or name of the window to resize                                                       |
+width	              | int        | The new width to resize the window to                                                        |
+height	    	      | int        | The new height to resize the window to                                                       |
+callback (Optional) | (Result) => void | Reports success or failure when the size change is completed.                          |
+
+
+## changeSize(changeSizeParams, callback)
+#### Version added: 0.149
+
+> Changes the window size to the new width and height, in pixels, including DPI scale when resizing.
+
+#### Notes
+
+* This function calculates DPI, so you don't need to calculate it yourself.
+* This function works for all the [window types](/topics/using-windows-api/windows-types).
+
+Parameter               | Type       | Description                                                                                  |
+------------------------| -----------| ---------------------------------------------------------------------------------------------|
+ChangeWindowSizeParams  | [ChangeWindowSizeParams](#changewindowsizeparams-object) Object | Container for the window settings        |
+callback (Optional) | (Result) => void | Reports success or failure when the size change is completed.                          |
+
+#### Usage example
+
+```js
+let sizeSettings = {
+  "window_id":"Window_Extension_nhmkaollkcmjiecdnnjmgfifjgkfegkljnjjbipp",
+  "width":1000,
+  "height":1000,
+  "auto_dpi_resize":true //relevant only for native windows
+};
+
+overwolf.windows.changeSize(sizeSettings ,console.log);
+
+```
+
+## changePosition(windowId, left, top, callback)
+#### Version added: 0.78
+
+> Changes the window position in pixels from the top left corner.
+
+Note: changePosition() calculates DPI before changing position (so you should pass coordinates without calculating their DPI).
+
+Parameter           | Type       | Description                                                                                    |
+--------------------| -----------| -----------------------------------------------------------------------------------------------|
+windowId	          | string     |The id or name of the window for which to change the position                                   |
+left		            | int        | The new window position on the X axis in pixels from the left                                  |
+top		    	        | int        | The new window position on the Y axis in pixels from the top                                   |
+callback (Optional) | (Result) => void | Reports success or failure when the position change is completed.                          |
+
+## close(windowId, callback)
+#### Version added: 0.78
+
+> Closes the window.
+
+Parameter           | Type       | Description                                                                                    |
+--------------------| -----------| -----------------------------------------------------------------------------------------------|
+windowId	          | string     |The id or name of the window to close                                   |
+callback (Optional) | [(Result: WindowIdResult)](#windowidresult-object) => void   | Called after the window is closed          |
+
+
+## minimize(windowId, callback)
+#### Version added: 0.78
+
+> Minimizes the window.
+
+Parameter           | Type       | Description                                                                                    |
+--------------------| -----------| -----------------------------------------------------------------------------------------------|
+windowId	          | string     | The id or name of the window to minimize                                                       |
+callback (Optional) | [(Result: WindowIdResult)](#windowidresult-object) => void   | Called after the window is minimized         |
+
+**Notes**
+
+* `minimize()` will minimize the targeted window even when the manifest [resizable flag](manifest#windows-resizable) is set to `false`.
+* When minimizing a **native** window, the window object values for `top`,`left`,`width`and `height` are unexpected and shouldn't be regarded.
+
+## maximize(windowId, callback)
+#### Version added: 0.81
+
+> Maximize the window.
+
+Parameter           | Type       | Description                                                                                    |
+--------------------| -----------| -----------------------------------------------------------------------------------------------|
+windowId	          | string     | The id or name of the window to maximize                                                       |
+callback (Optional) | [(Result: WindowIdResult)](#windowidresult-object) => void   | Called after the window is maximized         |
+
+#### Notes
+
+* `maximize()` will maximize the targeted window even when the manifest [resizable flag](manifest#windows-resizable) is set to `false`.
+
+* In order to restore a maximized window to its previous state, call [window.restore()](#restorewindowid-callback). 
+
+
+## restore(windowId, callback)
+#### Version added: 0.78
+
+> Restores a minimized/maximized/hidden window.
+
+Parameter           | Type       | Description                                                                                    |
+--------------------| -----------| -----------------------------------------------------------------------------------------------|
+windowId	          | string     | The id of the window to restore                                                                |
+callback (Optional) | [(Result: WindowIdResult)](#windowidresult-object) => void   | Called after the window is restored          |
+
+#### Notes 
+
+* When restoring a minimized/maximized window, it restores the window to the previous size/position.
+* When restoring a (non-desktop) window that is partly out of the game bounds, it repositions the window so that it fully fits inside the game bounds
+* Read some usage tips [here](/topics/using-windows-api/using-overwolf-windows/#how-to-create-a-new-window).
+
+
+## restore(windowName, callback)
+#### Version added: 0.78
+
+> Restores a minimized/maximize/hidden window.
+
+Parameter           | Type       | Description                                                                                    |
+--------------------| -----------| -----------------------------------------------------------------------------------------------|
+windowName	        | string     | The id of the window to restore                                                                |
+callback (Optional) | [(Result: WindowIdResult)](#windowidresult-object) => void   | Called after the window is restored          |
+
+#### Notes 
+
+* When restoring a minimized/maximized window, it restores the window to the previous size/position.
+* When restoring a (non-desktop) window that is partly out of the game bounds, it repositions the window so that it fully fits inside the game bounds
+* Read some usage tips [here](/topics/using-windows-api/using-overwolf-windows/#how-to-create-a-new-window).
+
+## hide(windowId, callback)
+#### Version added: 0.108
+
+> Hides the window from screen and taskbar.
+
+Note that the [tray icon](os/tray#setmenumenu-callback) (if defined) visibility is not affected by calling this function.
+
+Parameter           | Type       | Description                                                                                    |
+--------------------| -----------| -----------------------------------------------------------------------------------------------|
+windowId	          | string     | The id or name of the window to hide                                                           |
+callback            | [(Result: WindowIdResult)](#windowidresult-object) => void   | Called after the window was hidden           |
+
+## getWindowState(windowId, callback)
+#### Version added: 0.85
+
+> Returns the state of the window (normal/minimized/maximized/closed).
+
+Parameter           | Type       | Description                                                                                    |
+--------------------| -----------| -----------------------------------------------------------------------------------------------|
+windowId	          | string     | The id or name of the window to restore                                                        |
+callback            | [(Result: GetWindowStateResult)](#getwindowstateresult-object) => void   | Called with the window state     |
+
+## getWindowsStates(callback)
+#### Version added: 0.90
+
+> Returns the state of all windows owned by the app (normal/minimized/maximized/closed).
+
+Parameter           | Type       | Description                                                                                    |
+--------------------| -----------| -----------------------------------------------------------------------------------------------|
+callback            | [(Result: GetWindowsStatesResult)](#getwindowsstatesresult-object) => void   | Called with an array containing the states of the windows     |
+
+## openOptionsPage(callback)
+#### Version added: 0.89
+
+> Opens the options page specified in the manifest file. Does nothing if no such page has been specified.
+
+Parameter           | Type             | Description                                         |
+--------------------| -----------------|-----------------------------------------------------|
+callback            | (Result) => void | Reports success or failure                          |
+
+
+## setDesktopOnly(windowId, shouldBeDesktopOnly, callback)
+#### Version added: 0.89
+
+> Sets whether the window should be injected to games or not.
+
+:::warning OBSOLETE
+This function is obsolete.
+:::
+
+If you are using this function on an in-game window while you are in a game, the window will hide, but it will not appear on the desktop automatically.
+Nevertheless, we are always recommending to use different windows for in-game and desktop.  
+
+Parameter           | Type       | Description                                                                                    |
+--------------------| -----------| -----------------------------------------------------------------------------------------------|
+windowId	          | string     | The id or name of the window to set                                                            |
+shouldBeDesktopOnly	| bool       |                                                                                                |
+callback            | [(Result: WindowIdResult)](#windowidresult-object) => void   | Called after the window was hidden           |
+
+## setRestoreAnimationsEnabled(windowId, shouldEnableAnimations, callback)
+#### Version added: 0.89
+
+> Sets whether the window should have minimize/restore animations while in game.
+
+Parameter              | Type       | Description                                                                                    |
+-----------------------| -----------| -----------------------------------------------------------------------------------------------|
+windowId	             | string     | The id or name of the window to set                                                            |
+shouldEnableAnimations | bool       |                                                                                                |
+callback               | [(Result: WindowIdResult)](#windowidresult-object) => void   | Called after the window was hidden           |
+
+## setTopmost(windowId, shouldBeTopmost, callback)
+#### Version added: 0.89
+
+> Change the window’s topmost status. Handle with care as topmost windows can negatively impact user experience.
+
+Parameter              | Type       | Description                                                                                    |
+-----------------------| -----------| -----------------------------------------------------------------------------------------------|
+windowId	             | string     | The id or name of the window to set                                                            |
+shouldBeTopmost	       | bool       |                                                                                                |
+callback               | (Result) => void | Reports success or failure                                                               |
+
+## sendToBack(windowId, callback)
+#### Version added: 0.89
+
+> Sends the window to the back.
+
+Parameter              | Type       | Description                                                                                    |
+-----------------------| -----------| -----------------------------------------------------------------------------------------------|
+windowId	             | string     | The id or name of the window to set                                                            |
+shouldBeTopmost	       | bool       |                                                                                                |
+callback               | (Result) => void | Reports success or failure                                                               |
+
+## sendMessage(windowId, messageId, messageContent, callback)
+#### Version added: 0.92
+
+> Sends a message to an open window.  
+The window receiving the message needs to listen on the [onMessageReceived](#onmessagereceived) event.
+
+:::warning
+Using sendMessage  performs object copying, so it might be a bit less efficient - depending on your use-case. (edited)  is not our suggested choice for communication between windows since it might not work on some occasions (for example, when sending extremely big messages).  
+Read more in the [Windows Communication](/topics/using-windows-api/communicating-between-windows) guide.
+:::
+
+Parameter              | Type       | Description                                                                                    |
+-----------------------| -----------| -----------------------------------------------------------------------------------------------|
+windowId	             | string     | The id or name of the window to send the message to                                            |
+messageId		           | string     | A message id                                                                                   |
+messageContent	       | Object     | The content of the message                                                                     |
+callback               | (Result) => void | Reports success or failure                                                               |
+
+#### Usage example
+
+```js
+overwolf.windows.sendMessage('secondWindow', '1', 'hello second window', ()=>{console.log('Message sent to window "secondWindow"')})
+```
+
+## setWindowStyle(windowId, style, callback)
+#### Version added: 0.98
+
+> Add Window In Game styling (for example, allowing mouse clicks to be passed through the window into the game)
+
+Parameter              | Type                                  | Description                                                               |
+-----------------------| --------------------------------------| --------------------------------------------------------------------------|
+windowId	             | string                                | The id or name of the window to style                                     |
+style			             | [WindowStyle](#windowstyle-enum) Enum | The style to be added                                                     |
+callback               | (Result) => void                      | Reports success or failure                                                |
+
+## removeWindowStyle(windowId, style, callback)
+#### Version added: 0.98
+
+> Remove window style.
+
+Parameter              | Type                                  | Description                                                               |
+-----------------------| --------------------------------------| --------------------------------------------------------------------------|
+windowId	             | string                                | The id or name of the window to style                                     |
+style			             | [WindowStyle](#windowstyle-enum) Enum | The style to be remvoed                                                   |
+callback               | (Result) => void                      | Reports success or failure                                                |
+
+## getOpenWindows(callback)
+#### Version added: 0.92
+
+> Returns an array of all open windows as objects. The objects can be manipulated like any other window.
+
+:::warning
+we highly recommend not to use getOpenWindows() for windows communication.  
+Please read the ["Communicating between windows"](/topics/using-windows-api/communicating-between-windows) section for more info.
+:::
+
+Parameter              | Type                                  | Description                                                                                       |
+-----------------------| --------------------------------------| --------------------------------------------------------------------------------------------------|
+callback               | function                              | A callback function which will be called with a map object of (window-name, Window Object) items  |
+
+## setMute(mute, callback)
+#### Version added: 0.102
+
+> Set the current window mute state (on/off).
+
+Parameter              | Type                                  | Description                                                                                       |
+-----------------------| --------------------------------------| --------------------------------------------------------------------------------------------------|
+mute	                 | bool                                  | Window mute state (true - mute is on, false - mute is off)                                        |
+callback               | (Result) => void                      | Reports success or failure                                                                        |
+
+## muteAll(callback)
+#### Version added: 0.102
+
+> Mutes all sound sources for the current window.
+
+Parameter              | Type                                  | Description                                                                                       |
+-----------------------| --------------------------------------| --------------------------------------------------------------------------------------------------|
+callback               | (Result) => void                      | Called with the result of the request                                                             |
+
+## isMuted(callback)
+#### Version added: 0.102
+
+> Get the window’s mute state (true/false).
+
+Parameter              | Type                                  | Description                                                                                       |
+-----------------------| --------------------------------------| --------------------------------------------------------------------------------------------------|
+callback               | [(Result: IsMutedResult)](#ismutedresult-object) => void   | Called with the result of the request `{"muted": true/false}`                |
+
+## isWindowVisibleToUser(callback)
+#### Version added: 0.102
+
+> Get the Visibility state of the window.
+
+:::warning
+ Used only with windows without a transparent border.
+:::
+
+Parameter              | Type                                  | Description                                                                                       |
+-----------------------| --------------------------------------| --------------------------------------------------------------------------------------------------|
+callback               | [(Result: IsWindowVisibleToUserResult)](#iswindowvisibletouserresult-object) => void  | Called with the result of the request `{"visible": hidden/fully/partial}`    |
+
+## bringToFront(windowId, callback)
+#### Version added: 0.119
+
+> Brings the requested window to the front.
+
+Parameter              | Type                                  | Description                                                               |
+-----------------------| --------------------------------------| --------------------------------------------------------------------------|
+windowId	             | string                                | The id or name of the window                                              |
+callback               | (Result) => void                      | Called with the result of the request                                     |
+
+#### Notes 
+
+* For in-game windows, calling this function will always bring the window to the front. 
+* For desktop/native windows, the behavior depends on the game mode:
+  * Fullscreen game: The window will stay in the background behind the game. If you want to take focus, use the [grabFocus](#bringtofrontgrabfocus-callback) version.
+  * Windowed game: The window will move to the foreground. The game window will not be changed. 
+
+## bringToFront(callback)
+#### Version added: 0.119
+
+> Brings this window to the front.
+
+#### Notes 
+
+* For in-game windows, calling this function will always bring the window to the front. 
+* For desktop/native windows, the behavior depends on the game mode:
+  * Fullscreen game: The window will stay in the background behind the game. If you want to take focus, use the [grabFocus](#bringtofrontgrabfocus-callback) version.
+  * Windowed game: The window will move to the foreground. The game window will not be changed. 
+
+Parameter              | Type                                  | Description                                                               |
+-----------------------| --------------------------------------| --------------------------------------------------------------------------|
+callback               | (Result) => void                      | Called with the result of the request                                     |
+
+## bringToFront(grabFocus, callback)
+#### Version added: 0.124
+
+> Brings this window to the front.
+
+#### Notes 
+
+* For in-game windows, calling this function will always bring the window to the front. 
+* For desktop/native windows, the behavior depends on the game mode AND the grabFocus param:
+  * Fullscreen game + grabFocus:false - The window will stay in the background behind the game.
+  * Fullscreen game + grabFocus:true - The window will move to the foreground and take the focus. The game window will be minimized (use with caution, usually it's a bad UX).
+  * Windowed game + grabFocus:true/false - The window will move to the foreground. The game window will not be changed. 
+
+Parameter              | Type                                  | Description                                                               |
+-----------------------| --------------------------------------| --------------------------------------------------------------------------|
+grabFocus		           | bool                                  | window will take system focus                                             |
+callback               | (Result) => void                      | Called with the result of the request                                     |
+
+## bringToFront(windowId, grabFocus, callback)
+#### Version added: 0.124
+
+> Brings a window to the front.
+
+#### Notes 
+
+* For in-game windows, calling this function will always bring the window to the front. 
+* For desktop/native windows, the behavior depends on the game mode AND the grabFocus param:
+  * Fullscreen game + grabFocus:false - The window will stay in the background behind the game.
+  * Fullscreen game + grabFocus:true - The window will move to the foreground and take the focus. The game window will be minimized (use with caution, usually it's a bad UX).
+  * Windowed game + grabFocus:true/false - The window will move to the foreground. The game window will not be changed. 
+
+Parameter              | Type                                  | Description                                                               |
+-----------------------| --------------------------------------| --------------------------------------------------------------------------|
+windowId	             | string                                | The id or name of the window                                              |
+grabFocus		           | bool                                  | window will take system focus                                             |
+callback               | (Result) => void                      | Called with the result of the request                                     |
+
+## setPosition(properties, callback)
+#### Version added: 0.123
+
+> Change this window location in the opened windows stack.
+
+Parameter              | Type                                  | Description                                                               |
+-----------------------| --------------------------------------| --------------------------------------------------------------------------|
+properties	           | [SetWindowPositionProperties](#setwindowpositionproperties-object) Object  | The desired location in the windows stack    |
+callback               | (Result) => void                      | Called with the result of the request                                     |
+
+#### Usage Example
+
+Using the following code will place your app window in front of League of Legends’ client window:
+
+```javascript
+overwolf.windows.setPosition({
+    "relativeTo": {
+        "processName": "LeagueClientUx",
+        "windowTitle": "League of Legends"
+    },
+    "insertAbove": true,
+    }, 
+    console.log);
+```
+
+## setPosition(windowId, properties, callback)
+#### Version added: 0.123
+
+> Change a window location in the opened windows stack.
+
+Parameter              | Type                                  | Description                                                               |
+-----------------------| --------------------------------------| --------------------------------------------------------------------------|
+windowId	             | string                                | The id or name of the window                                              |
+properties	           | [SetWindowPositionProperties](#setwindowpositionproperties-object) Object  | The desired location in the windows stack    |
+callback               | (Result) => void                      | Called with the result of the request                                     |
+
+## displayMessageBox(messageParams, callback)
+#### Version added: 0.119
+
+> Displays a customized popup message prompt.
+
+Parameter              | Type                                              | Description                                                               |
+-----------------------| --------------------------------------------------| --------------------------------------------------------------------------|
+messageParams		       | [MessageBoxParams](#messageboxparams-object) Object  | The type and texts that the message prompt will have                      |
+callback               | [(Result: DisplayMessageBoxResult)](#displaymessageboxresult-object) => void    | Returns the user's action (confirmed = true / false)   |
+
+#### Usage Example
+
+Using the following code will create a pop up message for your app:
+
+```javascript
+overwolf.windows.displayMessageBox({
+    message_title: "title_text",
+    message_body: "body_text",
+    confirm_button_text: "Confirm",
+    cancel_button_text: "Cancel",
+    message_box_icon:  overwolf.windows.enums.MessagePromptIcon.ExclamationMark
+},console.log) 
+```
+
+## isAccelreatedOSR(callback)
+#### Version added: 0.126
+
+> Is the current window accelerated and is OSR |GPU| acceleration is supported for this machine.
+
+Note that the function name is misspelled. It is kept this way for backwards compatibility.
+
+:::warning OBSOLETE
+The OSR acceleration feature is is no longer supported and maintained. 
+:::
+
+Parameter              | Type                                              | Description                                                               |
+-----------------------| --------------------------------------------------| --------------------------------------------------------------------------|
+callback               | (Result) => void                                  | Called with the result of the request                                     |
+
+#### Callback argument: Success
+
+A callback function which will be called with the status of the request
+
+```json
+{
+  "success": true,
+  "status": "success", //for backward compatibility
+  "accelerated":false,
+  "supported":true,
+  "optimized": true
+}
+```
+
+## setMinSize(windowId, width, height, callback)
+#### Version added: 0.132
+
+> Overrides the window's defined minimum size.
+
+Parameter              | Type                                              | Description                                                               |
+-----------------------| --------------------------------------------------| --------------------------------------------------------------------------|
+windowId		           | string                                            | The id of the window                                                      |
+width		               | int                                               | The new minimum width                                                     |
+height		             | int                                               | The new minimum height                                                    |
+callback               | (Result) => void                                  | Called with the result of the request                                     |
+
+## flash(windowId, behavior,callback)
+#### Version added: 0.146
+
+> Flashes a window.
+
+Parameter              | Type                                              | Description                                                               |
+-----------------------| --------------------------------------------------| --------------------------------------------------------------------------|
+windowId		           | string                                            | The id of the window to flash                                             |
+behavior               | [FlashBehavior](#flashbehavior-enum) enum         | Defines window flashing behavior                                          |
+callback               | (Result) => void                                  | Called with the result of the request                                     |
+
+## setZoom(zoomFactor, windowId)
+#### Version added: 0.154
+
+> Set window zoom level (0.0 for reset).
+
+Parameter              | Type                                              | Description                                                               |
+-----------------------| --------------------------------------------------| --------------------------------------------------------------------------|
+zoomFactor             | double                                            | The new zoom factor. A value of 0 sets the window to its current default zoom factor. Values greater than 0 specify a (possibly non-default) zoom factor for the window.                                                          |
+windowId		           | string                                            | The window id, empty for current window                                   |
+
+## onMainWindowRestored
+#### Version added: 0.85
+
+> Fired when the main window is restored.
+
+## onStateChanged
+#### Version added: 0.85
+
+> Fired when the state of a window is changed, with the following structure: [WindowStateChangedEvent](#windowstatechangedevent-object) Object
+
+The event is being fired for all the declared windows (background,in-game,desktop, etc). If your app has multiple windows listening to this event - you also need to test the window name/id arguments that are passed to the event to see if it is relevant for your window.
+
+#### Notes for Ads users
+
+* If your app displays an ad, you must add some checking in the event handler to make sure that the window with the state change is the window with the ad, and to avoid unnecessary wrong calls to the refreshAd() and removeAd().
+* For in-game windows only, onStateChanged event is not fired when using Win+D for minimizing all windows. So in that case you can't hide/refres ads.
+If you want to handle that scenario you can listen to [onGameInfoUpdated](games#ongameinfoupdated) event and stop the ad if gameInfo.isInFocus is false.
+
+## onMessageReceived
+#### Version added: 0.85
+
+> Fired when this window received a message, with the following structure: [MessageReceivedEvent](#messagereceivedevent-object) Object
+
+#### Usage example
+
+```js
+overwolf.windows.onMessageReceived.addListener((message)=>{
+    if(message.id ===  '1'){
+      console.log('Message received', message.content)
+  }
+})
+```
+
+## onAltF4Blocked
+#### Version added: 0.85
+
+> Fired on all app windows when the user was prevented from closing a window using Alt+F4, with the following structure: [AltF4BlockedEvent](#altf4blockedevent-object) Object
+
+## onScreenPropertyChanged
+#### Version added: 0.143
+
+> Fired when native window (or OSR on desktop) moved to other monitor when current monitor resolution changed, with the following structure: [onScreenPropertyChangedEvent](#onscreenpropertychangedevent-object) Object
+
+#### Notes
+
+* Currently, only the relevant window gets this event - so your background page or other windows doesn't. 
+* From OW v0.156 we are going to fix it: The event is being fired for all the declared windows (background,in-game,desktop, etc). If your app has multiple windows listening to this event - you also need to test the window name/id arguments that are passed to the event to see if it is relevant for your window.
+
+## WindowProperties Object
+#### Version added: 0.118
+
+> An object that allows to override the manifest.json requested window settings.
+
+Parameter           | Type   | Description                                                          |
+------------------- | -------| -------------------------------------------------------------------- |
+nativeWindow        | bool   |                                                                      |
+enablePopupBlocker  | bool   |                                                                      |
+isBottomMost        | bool   | Indicates whether the window will be on bottom of other Overwolf windows  |
+
+## DefaultSizeAndLocation Object
+#### Version added: 0.136
+
+> An object that Enable the manifest size and position settings (default is false).
+
+Parameter                   | Type   | Description                                                          |
+--------------------------- | -------| -------------------------------------------------------------------- |
+useDefaultSizeAndLocation   | bool   |                                                                      |
+
+The default behaviour of OW is to "remember" the last size and position of a window, before it closes.
+When `useDefaultSizeAndLocation` is set to true, the window will be created using the default (manifest) size and location, rather than the saved setting (if one exists).
+
+If there is no "start_position" property (size and position) for a window in the manifest, it will default to 0,0.
+
+
+## MessageBoxParams Object
+#### Version added: 0.119
+
+> Defines parameters required for displaying a message box.
+
+Parameter            | Type                                               | Description                              |
+-------------------- | ---------------------------------------------------| ---------------------------------------- |
+message_title        | string                                             | The message prompt title text            |
+message_body         | string                                             | The message prompt body text             |
+confirm_button_text  | string                                             | The left (confirmation) button’s text    |
+cancel_button_text   | string                                             | The right (cancellation) button’s text   |
+message_box_icon     | [MessagePromptIcon](#messageprompticon-enum) enum  | The icon of the message prompt           |
+
+## RelativeTo Object
+#### Version added: 0.123
+
+> Data to find OS relative window.
+
+Parameter            | Type                              | Description                              |
+-------------------- | ----------------------------------| ---------------------------------------- |
+processName          | string                            | Relative window process name             |
+windowTitle          | string                            | The window title                         |
+
+## SetWindowPositionProperties Object
+#### Version added: 0.123
+
+> Data to find OS relative window.
+
+Parameter            | Type                                    | Description                              |
+-------------------- | ----------------------------------------| ---------------------------------------- |
+relativeTo           | [RelativeTo](#relativeto-object) Object | Relative window data to search for       |
+windowTitle          | string                                  | The window title                         |
+
+## ODKRect Object
+#### Version added: 0.100
+
+> An object that holds information about the real content of the window (for the ingame drawing resizing white area).
+
+Parameter   | Type    | Description    |
+------------| --------| ---------------|
+top         | int     |                |
+left        | int     |                |
+width       | int     |                |
+height      | int     |                |
+
+## WindowStyle enum
+#### Version added: 0.78
+
+> An object which specifies the window style.
+
+Option            | Description                                                                                 |
+----------------- | --------------------------------------------------------------------------------------------|
+InputPassThrough  |  Mouse and keyboard input will pass to the window AND to the game (no input blocking).      |
+BottomMost        |  When set true to a window, it's not possible to drag it over other app's windows.          |
+
+Note: the manifest [clickthrough](manifest#windows-clickthrough) flag has a different behavior - when it's set to `true`, the input passes through the window to the game.  
+
+## MessagePromptIcon enum
+#### Version added: 0.78
+
+> Message prompt icon.
+
+Option          | Description        |
+--------------- | -------------------|
+None            |  No Icon           |
+QuestionMark    |  Question mark     |
+ExclamationMark |  Exclamation mark  |
+
+## WindowDragEdge enum
+#### Version added: 0.78
+
+> Message prompt icon.
+
+Option      |  Description                                              |
+------------| ----------------------------------------------------------|
+None        |  No window edge or corner to drag                         |
+Left        |  Drag the left window edge in order to resize it          |
+Right       |  Drag the right window edge in order to resize it         |
+Top         |  Drag the top window edge in order to resize it           |
+Bottom      |  Drag the bottom window edge in order to resize it        |
+TopLeft     |  Drag the top-left window edge in order to resize it      |
+TopRight    |  Drag the top-right window edge in order to resize it     |
+BottomLeft  |  Drag the bottom-left window edge in order to resize it   |
+BottomRight |  Drag the bottom-right window edge in order to resize it  |
+
+## FlashBehavior enum
+#### Version added: 0.146
+
+> Window flashing behavior.
+
+Option          | Description          |
+--------------- | ---------------------|
+automatic       |  Turns off automatically when the window regains focus. Does not turn on if window is already in focus.  |
+on              |  Turns flashing on   |
+off             |  Turns flashing off  |
+
+## WindowType enum
+#### Version added: 0.191
+
+> Window Type
+
+Option          | Description          |
+--------------- | ---------------------|
+Background           |  Background window    |
+Desktop              |  Desktop window   |
+OffScreen            |  Offscreen (in-game) window  |
+
+## onScreenPropertyChangedEvent Object
+
+Parameter       | Type                                                              | Description     |
+----------------| ------------------------------------------------------------------|---------------- |
+id              |  string                                                           | the window ID   | 
+name            |  string                                                           | the window name |
+monitor         |  [overwolf.utils.Display](utils#display-object) object  | Display info    |
+
+#### Event data example: Success
+
+```json
+{
+  "id": "Window_Extension_anoahjhemlbnmhkljlgbmnfflpnhgjpmfjnhdfoe_desktop",
+  "name": "desktop",
+  "monitor": {"name": "DELL P2319H", "id": "DISPLAY4", "x": 0, "y": 0, "width": 1920, "height": 1080, "is_primary": true}
+}
+```
+
+## WindowStateChangedEvent Object
+
+Parameter                | Type           | Description                | Notes                     |
+-------------------------| ---------------|--------------------------- | --------------------------|
+window_id                |  string        | the window ID              | See [notes](#notes-4).    |                           
+window_state             |  string        | the window state           |  Deprecated. See [notes](#notes-4).   |   
+window_state_ex          |  string        | the window state           |  See [notes](#notes-4).   |   
+window_previous_state    |  string        | the window previous state  |  Deprecated. See [notes](#notes-4).   |   
+window_previous_state_ex |  string        | the window previous state  |  See [notes](#notes-4).   |   
+app_id                   |  string        | the app ID                 | See [notes](#notes-4).    |   
+
+#### Event data example: Success
+
+```json
+{
+    "window_id": "Window_Extension_cghphpbjeabdkomiphingnegihoigeggcfphdofo_index",
+    "window_state_ex": "normal", //use this
+    "window_state": "normal", 
+    "window_previous_state_ex": "closed", //use this
+    "window_previous_state": "minimized", 
+    "app_id": "cghphpbjeabdkomiphingnegihoigeggcfphdofo",
+    "window_name": "index"
+}
+```
+
+#### Notes
+
+* Use ***window_state_ex*** and ***window_previous_state_ex*** that are more accurate than the old *window_state* and *window_previous_state*, left for backward comparability.
+* *window_state_ex* returns one of these states: [closed | minimized | hidden | normal | maximized].
+
+## ChangeWindowSizeParams Object
+#### Version added: 0.149
+
+> Container for the window settings.
+
+Parameter       | Type          | Description             |
+----------------| --------------| ----------------------- |
+window_id       | string        |                         |
+width           | int           |                         |
+height          | int           |                         |
+auto_dpi_resize | boolean       | relevant only for native windows. Overwrite the [disable_auto_dpi_sizing](manifest#disable_auto_dpi_sizing) manifest flag |
+
+```json
+{
+  "window_id":"Window_Extension_nhmkaollkcmjiecdnnjmgfifjgkfegkljnjjbipp",
+  "width":1000,
+  "height":1000,
+  "auto_dpi_resize":true
+}
+```
+
+## WindowResult Object
+#### Version added: 0.149
+
+> Container for the currrent window object.
+
+Parameter       | Type          | Description             |
+----------------| --------------| ----------------------- |
+window          | [WindowInfo](#windowinfo-object) object     |             |
+
+
+```json
+{
+  "success": true,
+  "window": { ... }
+}
+```
+
+## WindowInfo Object
+#### Version added: 0.149
+
+> The current window object.
+
+Parameter       | Type          | Description             |
+----------------| --------------| ----------------------- |
+id              | string        |                         |
+name            | string        |                         |
+width           | number        | with DPI conversion     | 
+height          | number        | with DPI conversion     | 
+top             | number        | with DPI conversion     | 
+left            | number        | with DPI conversion     | 
+monitorId       | string        |                         | 
+isVisible       | boolean       |                         | 
+state           | string        | deprecated and kept only for backward compatibility  |
+stateEx         | [WindowStateEx](#windowstateex-enum) enum | always use this param to get the state of the window | 
+monitorId       | string        | return monitorId (If the Window is not opened already) - allowing one window (background) to know on which monitor another window exists.  |
+Parent          | string        | The parent window id    |
+type            | string        | [WindowType](#windowtype-enum) object (version added: 0.191)  
+
+
+```json
+{
+    "success": true,
+    "window": {
+        "id": "Window_Extension_hffhbjnafafjnehejohpkfhjdenpifhihebpkhni",
+        "name": "index",
+        "width": 600,
+        "height": 600,
+        "top": 153,
+        "left": 417,
+        "monitorId": "\\.\DISPLAY4",
+        "isVisible": true,
+        "state": "Minimized", //deprecated 
+        "stateEx": "hidden", //the state of the window
+        "Parent": null
+    }
+```
+
+## WindowStateEx enum
+#### Version added: 0.149
+
+> Possible windows states.
+
+Option      |  Description  |
+------------| --------------|
+closed      |               |
+minimized   |               |
+hidden      |               |
+normal      |               |
+maximized   |               |
+
+## DragMovedResult Object
+#### Version added: 0.149
+
+> Container for the horizontal and vertical changes after an OW app window dragged or moved.
+
+Parameter         | Type          | Description             |
+------------------| --------------| ----------------------- |
+horizontalChange  | number        |                         | 
+verticalChange    | number        |                         | 
+
+#### Example data: Success
+
+```json
+{
+    "success": true,
+    "horizontalChange": -51,
+    "verticalChange": 6
+}
+```
+
+## DragResizeResult Object
+#### Version added: 0.149
+
+> Container for the width and height changes after an OW app window resized.
+
+Parameter         | Type          | Description             |
+------------------| --------------| ----------------------- |
+id                | string        |                         | 
+width             | number        |                         | 
+height            | number        |                         | 
+
+#### Example data: Success
+
+```json
+{
+    "success": true,
+    "id": "Window_Extension_nhmkaollkcmjiecdnnjmgfifjgkfegkljnjjbipp",
+    "width": 600,
+    "height": 800
+}
+```
+
+## WindowIdResult Object
+#### Version added: 0.149
+
+> Container for the width and height changes after an OW app window resized.
+
+Parameter         | Type          | Description             |
+------------------| --------------| ----------------------- |
+window_id         | string        |                         | 
+
+#### Example data: Success
+
+```json
+{
+    "success": true,
+    "window_id": "Window_Extension_nhmkaollkcmjiecdnnjmgfifjgkfegkljnjjbipp"
+}
+```
+
+## GetWindowStateResult Object
+#### Version added: 0.149
+
+> Container for the window states.
+
+Parameter         | Type          | Description             |
+------------------| --------------| ----------------------- |
+window_id         | string        |                         | 
+window_state      | string        |                         | 
+window_state_ex   |  [WindowStateEx](#windowstateex-enum) enum        |          | 
+
+#### Example data: Success
+
+```json
+{
+   "success": true,
+   "status": "success", //deprecated and kept only for backward compatibility
+   "window_id": "Window_Extension_onemchifcjibofkgemelmnjeialamgnigfpomeih",
+   "window_state": "minimized", //deprecated and kept only for backward compatibility
+   "window_state_ex": "hidden" //always use this param to get the state of the window.
+}
+```
+
+## GetWindowsStatesResult Object
+   
+#### Version added: 0.149
+
+> Container for the windows states array.
+
+Parameter         | Type          | Description             |
+------------------| --------------| ----------------------- |
+result            | Dictionary< string > |                    | 
+resultV2          | Dictionary<[WindowStateEx](#windowstateex-enum)>   |     | 
+
+#### Example data: Success
+
+```json
+{
+  "success": true,
+  "result": "{background:`minimized`, desktop:`normal`, overlay:`normal`}",
+  "resultV2": "{background:`hidden`, desktop:`normal`, overlay:`normal`}"
+}
+```
+
+## IsMutedResult Object
+#### Version added: 0.149
+
+> Container for the mute state.
+
+Parameter         | Type          | Description             |
+------------------| --------------| ----------------------- |
+muted             | boolean       |                         | 
+
+#### Example data: Success
+
+```json
+{
+  "success": true,
+  "status": "success", //deprecated and kept only for backward compatibility
+  "muted": true
+}
+```
+
+## IsWindowVisibleToUserResult Object
+#### Version added: 0.149
+
+> Container for the window visibility states.
+
+Parameter         | Type          | Description             |
+------------------| --------------| ----------------------- |
+visible           | string        |                         | 
+
+* "hidden" – The window is completely hidden.
+* "fully" – The window is fully visible to the user.
+* "partial" – The window is partially visible to the user (and partially covered by other window/s).
+
+#### Example data: Success
+
+```json
+{
+  "success": true,
+  "status": "success", //deprecated and kept only for backward compatibility
+  "hidden": true
+}
+```
+
+## displaymessageboxresult Object
+#### Version added: 0.149
+
+> Container for the window visibility states.
+
+Parameter         | Type          | Description             |
+------------------| --------------| ----------------------- |
+confirmed         | boolean       |                         | 
+
+#### Example data: Success
+
+```json
+{
+  "success": true,
+  "status": "success", //deprecated and kept only for backward compatibility
+  "confirmed": true
+}
+```
+
+## MessageReceivedEvent Object
+
+Parameter                | Type           | Description                | Notes                     |
+-------------------------| ---------------|--------------------------- | --------------------------|
+id                       |  string        | the window ID              |                           |                           
+content                  |  string        | the message content        |                           |   
+
+#### Event data example: Success
+
+```json
+{
+  "id": "1",
+  "content": "hello"
+}
+```
+
+## AltF4BlockedEvent Object
+
+Parameter                | Type           | Description                | Notes                     |
+-------------------------| ---------------|--------------------------- | --------------------------|
+id                       |  string        | the window ID              |                           |                           
+name                       |  string        | the window name              |                           |                           
+
+#### Event data example: Success
+
+```json
+{
+  "id": "1",
+  "name": "index"
+}
+```
+

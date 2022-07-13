@@ -1,4 +1,44 @@
-module.exports={
+function reverseChangelogs(items) {
+  const result = items.map((item) => {
+    if (item.type === 'category') {
+      return { ...item, items: reverseChangelogs(item.items) }
+    }
+    return item;
+  });
+  result.reverse();
+  return result;
+}
+
+
+function enforceSingleSidebars(items) {
+  const result = items.map((item) => {
+    if (item.type === 'category' && item.label == "changelog") {
+      return { ...item, items: reverseChangelogs(item.items) }
+    }
+    if (item.type === 'category') {
+      if (item.label.charAt(0).toUpperCase() != item.label.charAt(0) && !item.label.startsWith("overwolf.")) {
+        const name = item.label;
+        const words = name.split("-").map((word) => {
+          return word.charAt(0).toUpperCase() + word.slice(1)
+        })
+        item.label = words.join(" ");
+      }
+      if (item.items.length === 0)
+        return item.link;
+      else
+        return { ...item, items: enforceSingleSidebars(item.items) }
+    }
+    return item;
+  });
+  return result;
+}
+
+async function sidebarsOverrides({ defaultSidebarItemsGenerator, ...args }) {
+  const sidebarItems = await defaultSidebarItemsGenerator(args);
+  return enforceSingleSidebars(sidebarItems);
+}
+
+module.exports = {
   title: "Overwolf",
   tagline: "Easily create apps for PC games on the Overwolf framework",
   url: "https://overwolf.github.io",
@@ -62,7 +102,15 @@ module.exports={
   },
   onBrokenLinks: "log",
   onBrokenMarkdownLinks: "log",
-  plugins: ['docusaurus-plugin-sass', 'docusaurus-plugin-clarity'],
+  plugins: ['docusaurus-plugin-sass', 'docusaurus-plugin-clarity', ['@docusaurus/plugin-client-redirects',
+    {
+      redirects: require('./hierarchies/redirects.json')
+    }], [
+      require.resolve('docusaurus-gtm-plugin'),
+      {
+        id: 'GTM-NQD72PT',
+      }
+    ]],
   presets: [
     [
       "@docusaurus/preset-classic",
@@ -72,7 +120,9 @@ module.exports={
           showLastUpdateTime: true,
           editUrl: "https://github.com/overwolf/overwolf.github.io/tree/source/website/",
           path: "pages/docs",
-          sidebarPath: "sidebars.json",
+          routeBasePath: "/",
+          sidebarPath: require.resolve("./hierarchies/sidebars.js"),
+          sidebarItemsGenerator: sidebarsOverrides,
         },
         blog: {},
         theme: {
@@ -80,15 +130,15 @@ module.exports={
         },
         googleAnalytics: {
           trackingID: "UA-144253676-1"
-        }
-      }
+        },
+      },
     ]
   ],
   themeConfig: {
     metadata: [
       {
-        name:"google-site-verification",
-        content:"EWs1HNaDLCjSSyCLv5WSFYAd1H2JU-yXjFjesu5nW8g"
+        name: "google-site-verification",
+        content: "EWs1HNaDLCjSSyCLv5WSFYAd1H2JU-yXjFjesu5nW8g"
       }
     ],
     clarity: {
@@ -103,151 +153,14 @@ module.exports={
       style: "dark",
       title: "Overwolf",
       logo: {
-        src: "img/headerIcon.svg"
+        src: "img/headericon.svg"
       },
-      items: [
-        {
-          to: "docs/start/getting-started",
-          label: "Getting Started",
-          position: "left"
-        },
-        {
-          to: "docs/topics/best-practices-overview",
-          label: "Docs",
-          position: "left"
-        },
-        {
-          to: "docs/api/overwolf-api-overview",
-          label: "API",
-          position: "left"
-        },
-        {
-          to: "docs/status/all",
-          label: "Events Status",
-          position: "left"
-        },
-        {
-          href: "https://medium.com/overwolf",
-          label: "Blog",
-          position: "left"
-        },
-        {
-          href: "https://discuss.overwolf.com/",
-          label: "Q&A",
-          position: "left"
-        },
-        {
-          to: "docs/support/contact-us",
-          label: "Support",
-          position: "left"
-        }
-      ]
+      items: require('./hierarchies/headers.json')
     },
     image: "img/ow_share_new.png",
     footer: {
       style: "dark",
-      links: [
-        {
-          title: "Legal",
-          items: [
-            {
-              label: 'Terms Overview',
-              to: '/docs/topics/legal-overview'
-            },
-            {
-              label: 'Developer\'s Terms',
-              to: '/docs/topics/legal-developers-terms'
-            },
-            {
-              label: 'App Terms',
-              to: '/docs/topics/legal-app-terms'
-            },
-            {
-              label: 'Overwolf Terms',
-              to: 'http://www.overwolf.com/legal/'
-            },
-            {
-              label: 'Overwolf Privacy Policy',
-              to: 'http://www.overwolf.com/legal/#Privacy-policy'
-            },
-          ]
-        },
-        {
-          title: "Support",
-          items: [
-            {
-              label: 'Questions and Answers',
-              to: 'https://discuss.overwolf.com/'
-            },
-            {
-              label: 'Discord',
-              to: 'https://discord.gg/overwolf-developers'
-            },
-            {
-              label: 'Slack',
-              to: '/docs/support/contact-us#join-our-slack'
-            },
-            {
-              label: 'Facebook',
-              to: 'https://www.facebook.com/OverwolfDevs'
-            },
-            {
-              label: 'Twitter',
-              to: 'https://twitter.com/OverwolfDevs'
-            },
-          ]
-        },
-        {
-          title: "Documentation",
-          items: [
-            {
-              label: 'Changelog',
-              to: '/docs/api/changelog'
-            },
-            {
-              label: 'API',
-              to: '/docs/api/overwolf-api-overview'
-            },
-            {
-              label: 'App Creation Process',
-              to: '/docs/start/app-creation-process'
-            },
-            {
-              label: 'Best Practices',
-              to: '/docs/topics/best-practices-overview'
-            },
-            {
-              label: 'Game Events Status',
-              to: '/docs/topics/best-practices-overview'
-            },
-          ]
-        },
-        {
-          title: "Information",
-          items: [
-            {
-              label: 'Careers',
-              to: 'http://www.overwolf.com/careers/'
-            },
-            {
-              label: 'Fund',
-              to: 'https://overwolf.com/fund'
-            },
-            {
-              label: 'Developers Blog',
-              to: 'https://medium.com/overwolf'
-            },
-            {
-              label: 'Overwolf Appstore',
-              to: 'https://www.overwolf.com/appstore'
-            },
-            {
-              label: 'Advertise on Overwolf',
-              to: 'https://brands.overwolf.com/'
-            },
-          ]
-        },
-      ],
+      links: require('./hierarchies/footer.json'),
       copyright: "<div class='c-inner'><p>Copyright © 2022 Overwolf</p></div>",
       logo: {
         src: "img/ow-footer.svg"

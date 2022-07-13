@@ -1,0 +1,329 @@
+.game-info-section {
+  margin-bottom: 24px;
+  background-color: var(--card-hover);
+  color: var(--color-300);
+  border-radius: 5px;
+
+  h1, a {
+    color: var(--color-300) !important;
+  }
+
+  .game-info-item {
+    padding: 16px;
+
+    .game-info-title {
+      position: relative;
+      font-size: 28px;
+      display: flex;
+      align-items: center;
+      margin: 0 0 10px 0;
+      line-height: 28px;
+      padding-left: 20px;
+
+      span {
+        padding-top: 8px;
+      }
+
+      img {
+        width: 50px;
+        margin-right: 10px;
+      }
+
+      &:before {
+        content: '';
+        position: absolute;
+        display: block;
+        top: 22px;
+        left: 0;
+        width: 13px;
+        height: 13px;
+        border-radius: 50%;
+        background: white
+      }
+
+      &.good:before {
+        background: #3bb447
+      }
+
+      &.medium:before {
+        background: #b2b43b
+      }
+
+      &.bad:before {
+        background: #b43b3b
+      }
+
+    }
+
+    .launcher-info-list {
+      border-top: 1px solid var(--color-800);
+    }
+
+    .game-info-list, .launcher-info-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      gap: 12px;
+
+      @media (max-width: 650px) {
+        flex-direction: column;
+        gap: 8px;
+      }
+
+      li {
+        margin: 0;
+        font-size: 14px;
+
+        span {
+          font-weight: 700;
+          padding-right: 5px;
+        }
+
+        &:before {
+          display: none;
+        }
+
+        a {
+          display: flex;
+
+          &:hover {
+            color: var(--color-primary) !important;
+          }
+
+          svg {
+            width: 14px;
+            height: 14px;
+            margin-right: 3px;
+            position: relative;
+            bottom: -9px;
+          }
+        }
+      }
+    }
+
+  }
+
+  .expended-launcher-game-list {
+    width: 100%;
+    background-color: var(--color-300);
+    color: white;
+
+    &.is-open {
+        button svg:not(.games-icon) {
+          transform: rotate(180deg);
+        }
+
+        +.legend {
+          border-top: 1px solid var(--color-black);
+        }
+    }
+
+    .expend-btn {
+      display: flex;
+      align-items: center;
+      font-size: 16px;
+      padding: 8px;
+      background-color: transparent;
+      width: 100%;
+      border-bottom: 1px solid var(--color-black);
+      background-color: var(--color-300);
+
+      svg {
+        width: 20px;
+        height: 20px;
+        margin-left: auto;
+        position: relative;
+        bottom: -1px;
+        transition: transform 150ms ease;
+
+        &.games-icon {
+          margin-left: unset;
+          margin-right: 6px;
+        }
+      }
+
+      &:hover {
+        background-color: var(--color-400);
+      }
+    }
+
+    .launcher-game-list-inner {
+      overflow: hidden;
+      position: relative;
+      height: 0;
+      transition: all 300ms ease;
+
+      .hide-button {
+        position: absolute;
+        width: fit-content;
+        bottom: 8px;
+        right: 21px;
+        background-color: transparent;
+        font-size: 12px;
+        color: var(--color-txt);
+
+        &:hover {
+          color: var(--color-primary);
+        }
+      }
+
+      ul {
+        margin: 0;
+        padding: 20px 20px 28px 20px;
+
+        li {
+          font-size: 14px;
+          display: flex;
+          flex-wrap: wrap;
+          align-items: center;
+          column-gap: 16px;
+          border-bottom: 1px solid var(--color-200);
+          margin-bottom: 10px;
+          padding-bottom: 10px;
+
+
+
+          @media (max-width: 650px) {
+            flex-direction: column;
+            align-items: flex-start;
+          }
+
+          &:before {
+            display: none;
+          }
+
+          &:last-child {
+            margin: 0;
+
+          }
+
+          h3 {
+            margin: 0;
+            flex: 1;
+            font-size: 16px;
+            color: white;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            flex-basis: 100%;
+
+            img {
+              width: 32px;
+              margin-right: 10px;
+            }
+
+            span {
+              position: relative;
+              bottom: -1px;
+            }
+          }
+
+          p {
+            margin: 0;
+            font-size: 14px;
+
+            span {
+              color: var(	--color-txt);
+            }
+          }
+
+          a {
+            color: white !important;
+            display: flex;
+
+            &:hover {
+              color: var(--color-primary) !important;
+            }
+
+            svg {
+              width: 14px;
+              height: 14px;
+              margin-right: 3px;
+              position: relative;
+              bottom: -9px;
+            }
+          }
+        }
+      }
+    }
+
+  }
+
+  .legend {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    background: transparent;
+    gap: 10px;
+    padding: 5px 10px;
+    margin: 0;
+    background-color: var(--color-200);
+    border-bottom: 1px solid var(--color-black);
+
+    @media (max-width: 650px) {
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    li {
+      display: block;
+      position: relative;
+      padding-left: 20px;
+      font-size: 14px;
+      line-height: 20px;
+      margin: 0;
+      color: white;
+
+      &::before {
+        display: none;
+      }
+
+      &:after {
+        content: '';
+        position: absolute;
+        display: block;
+        top: 6px;
+        left: 0;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: white;
+      }
+
+      &.good:after {
+        background: #3bb447
+      }
+
+      &.medium:after {
+        background: #b2b43b
+      }
+
+      &.bad:after {
+        background: #b43b3b
+      }
+    }
+  }
+}
+
+
+html[data-theme="light"] {
+
+  .game-info-section .expended-launcher-game-list {
+    background-color: var(--color-600);
+    .expend-btn {
+      background-color: var(--color-700);
+      &:hover {
+        background-color: var(--color-600);
+      }
+    }
+  }
+
+  .game-info-section .legend {
+    background-color: var(--color-1000);
+
+    li {
+      color: inherit;
+    }
+  }
+}

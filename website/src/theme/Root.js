@@ -9,12 +9,8 @@ export default function Root({children}) {
 
   useEffect(() => {
     const script = document.createElement('script');
-
-    if(window.location.href.includes('docs') === true) {
-      script.src = '../../js/ui-logic.js';   
-    } else {
-      script.src = 'js/ui-logic.js';
-    }
+    
+    script.src = '/js/ui-logic.js';
 
     script.async = true;
   

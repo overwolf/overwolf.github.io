@@ -1,0 +1,141 @@
+---
+id: launchers
+title: overwolf.games.launchers API
+sidebar_label: overwolf.games.launchers
+---
+
+Returns an object with events and functions related to game launcher status.
+
+## Methods Reference
+
+* [overwolf.games.launchers.getRunningLaunchersInfo()](#getrunninglaunchersinfocallback)
+
+## Events Reference
+
+* [overwolf.games.launchers.onUpdated](#onupdated)
+* [overwolf.games.launchers.onLaunched](#onlaunched)
+* [overwolf.games.launchers.onTerminated](#onterminated)
+
+## Types Reference
+
+* [overwolf.games.launchers.GetRunningLaunchersInfoResult](#getrunninglaunchersinforesult-object) Object
+* [overwolf.games.launchers.UpdatedEvent](#updatedevent-object) Object
+* [overwolf.games.launchers.LauncherInfo](#launcherinfo-object) Object
+* [overwolf.games.launchers.Position](#position-object) Object
+
+## getRunningLaunchersInfo(callback)
+#### Version added: 0.103
+
+> Returns an object with information about currently running launchers.
+
+Parameter | Type                  | Description                                          |
+--------- | ----------------------| ---------------------------------------------------- |
+callback  | [(Result:GetRunningLaunchersInfoResult)](#getrunninglaunchersinforesult-object) => void | Called with the currently running detected launchers |
+
+## onUpdated
+#### Version added: 0.103
+
+> Fired when launcher info is updated, with the following structure: [UpdatedEvent](#updatedevent-object) Object.
+
+## onLaunched
+#### Version added: 0.103
+
+> Fired when a launcher has launched, with the following structure: [LauncherInfo](#launcherinfo-object) Object.
+
+## onTerminated
+#### Version added: 0.103
+
+> Fired when a launcher is closed, with the following structure: [LauncherInfo](#launcherinfo-object) Object.
+
+## GetRunningLaunchersInfoResult Object
+
+Parameter          | Type     | Description                                 |
+-------------------| ---------| ------------------------------------------- |
+success            | boolean  |                                             |
+error              | string   | null if success is true                     |
+launchers          | [LauncherInfo](#launcherinfo-object)[] | an array of currently running detected launchers |   
+
+#### Example data: Success
+
+```json
+{  
+   "success": true,
+   "launchers":[  
+      {  
+         "title":"League of Legends Launcher",
+         "id":54271,
+         "classId":5427,
+         "isInFocus":false,
+         "position":{  
+            "top":252,
+            "left":2066,
+            "width":1280,
+            "height":720
+         },
+         "handle":329882,
+         "commandLine":"E:/Games/RADS/projects/league_client/releases/0.0.0.65/deploy/LeagueClientUx.exe "--release=0.0.0.35" "--remoting-auth-token=scIN957coAwcbo0WW78nzg" "--rads-product-directory=E:/Games/RADS/solutions/league_client_sln/releases/0.0.0.35/deploy/" "--respawn-command=LeagueClient.exe" "--respawn-display-name=League of Legends" "--app-port=57610" "--install-directory=E:/Games/" "--app-name=LeagueClient" "--ux-name=LeagueClientUx" "--ux-helper-name=LeagueClientUxHelper" "--log-dir=LeagueClient Logs" "--bugsplat-name=league_client_riotgames_com" "--bugsplat-platform-id=EUW1" "--project=LeagueClient" "--app-log-file-path=E:/Games/Logs/LeagueClient Logs/2017-04-20T11-12-28_9576_LeagueClient.log" "--app-pid=9576"",
+         "processId":1468,
+         "path":"E:/Games/RADS/projects/league_client/releases/0.0.0.65/deploy/LeagueClientUx.exe"
+      }
+   ]
+}
+```
+
+## LauncherInfo Object
+
+Parameter          | Type     | Description                                 |
+-------------------| ---------| ------------------------------------------- |
+title              | string   |                                             |
+id                 | number   |                                             |
+classId            | number   |                                             |   
+isInFocus          | boolean  |                                             |   
+position           | [Position](#position-object) object   |                |   
+handle             | number   |                                             |   
+commandLine        | string   |                                             |   
+processId          | number   |                                             |   
+path               | string   |                                             |   
+
+## Position Object
+
+> Returns the launcher’s window position
+
+Parameter          | Type     | Description                                 |
+-------------------| ---------| ------------------------------------------- |
+height             | number   |                                             |
+left               | number   |                                             |
+top                | number   |                                             |   
+width              | number   |                                             |   
+
+## UpdatedEvent Object
+
+Parameter                | Type                                           | Description                | Notes                     |
+-------------------------| -----------------------------------------------|--------------------------- | --------------------------|
+info                     | [LauncherInfo](#launcherinfo-object) Object    | Launcher info data         |                           |
+changeType               | string[]                                       | New game info data         |                           |
+
+
+#### Event data example: Success
+
+```json
+"info":
+   {  
+         "title":"League of Legends Launcher",
+         "id":54271,
+         "classId":5427,
+         "isInFocus":false,
+         "position":{  
+            "top":252,
+            "left":2066,
+            "width":1280,
+            "height":720
+         },
+         "handle":329882,
+         "commandLine":"E:/Games/RADS/projects/league_client/releases/0.0.0.65/deploy/LeagueClientUx.exe",
+         "processId":1468,
+         "path":"E:/Games/RADS/projects/league_client/releases/0.0.0.65/deploy/LeagueClientUx.exe"
+   },
+"changeType":
+   {
+     //including game name, game running, game terminated, game changing focus, etc.
+   }
+```

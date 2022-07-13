@@ -1,0 +1,71 @@
+---
+id: submit-a-new-version
+title: Submit a new version of your app
+sidebar_label: Submit a new version
+---
+
+Alright, so your app is published on the Overwolf Appstore, and it's time to release a new version. That's awesome!  
+In this article we'll go over the process of submitting an updated version of your app using the Overwolf developers console.
+
+:::note
+The process described in this article is only available for apps already published on the Overwolf app store. If you’re looking for guidance on publishing your very first app version, you’re in the wrong place - [try this article](/start/submit-your-app/submit-your-app-to-the-store) instead.
+:::
+
+## Upload new app version
+
+Don't forget to update your manifest [build version](/api/manifest#meta-object), once the version has been changed.
+
+### 1. Create an OPK package
+
+To get started, you first need an OPK file with the latest version you wish to upload.
+
+Please follow the OPK creation process as described [here](/start/submit-your-app/submit-your-app-to-the-store#opk-package-overview).
+
+### 2. Login to the developers console
+
+Once you have a valid OPK with the latest version, to get the update cycle started, upload the new version to [OW developers console](https://console.overwolf.com/).
+
+From the developers console you can:
+
+![welcome-screen](/assets/dev-console/update-version/welcome-screen.png)
+
+1. Choose an OPK and upload it.
+2. See which versions are public and live, and their rollout status.
+3. See the release history of previous versions.
+
+### 3. Upload the new OPK
+
+Drag your OPK to upload it. Once it's ready, you can set the rollout percentage.
+
+![opk-upload](/assets/dev-console/update-version/opk-upload.png)
+
+### 4. Submit your OPK for QA review
+
+Before you can start deploying your new app's version to the production environment (which is the OW app store), you can send your app for an Overwolf QA review.  
+We created a separate guide on [how to submit your OPK for QA review](submit-for-review) by the Overwolf team.
+
+### 5. Set the phasing rate
+
+After uploading a new version of your app, you can choose the phasing (rollout) rate - meaning what percentage of your app's users will get this new version.
+
+We highly recommend starting with a low phasing rate (like 15%), to get some feedback on compatibility issues, bug reports and other issues that you might have missed in your QA process.
+
+![rollout](/assets/dev-console/update-version/rollout.png)
+
+:::note 
+The 'Installs' and 'Active Installs' statistics only update once per day. 
+:::
+
+### 6. Increase or Halt the phasing rate
+
+After the new version was rolled out to production and is working as expected, you can gradually increase the phasing rate until it reaches %100 - meaning all of your users got the new version.
+
+If you find any issues, you can immediately halt the rollout.
+
+![rollout](/assets/dev-console/update-version/increase-phasing.png)
+
+## Release history
+
+You can easily view the release history of all the previous versions:
+
+![rollout](/assets/dev-console/update-version/release-hostory.png)

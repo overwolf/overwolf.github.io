@@ -1,0 +1,30 @@
+---
+id: launch-time-performance
+title: App Launch Performance
+sidebar_label: App launch performance
+---
+
+
+When gamers launch an app, they expect it to load quickly and be responsive immediately when launched. Bad launch performance or an app that takes a while to start working can disappoint or annoy users, not meeting their standards. Naturally, different apps have different requirements, and some apps to take a couple of seconds to load - however, you should do your very best to make your app light and efficient so loading and launch times are as short as possible.
+
+#### Tips for a better launch experience
+
+* Locally store assets used by your app's Home and Notification windows, which are the ones seen by the user on launch. These images, fonts or other assets should be a part of the base .opk file for faster loading times.
+
+* Use long-term caching for resources that do not change often, so your user won't have to redownload materials. For example, League of Legends champion portraits and item visuals can be stored long-term. 
+
+* Compress your app’s JavaScript. For example, comments and whitespace are not needed for code execution, and removing them will reduce file size and speed up script execution times.
+
+* Compress images to the smallest size possible with [JPEGMini](https://www.jpegmini.com/) or [TinyPNG](https://tinypng.com/).
+
+* Remove non-critical JavaScript from your app to reduce transmission times, CPU-intensive compiling and potential memory overhead.
+
+* During runtime, prefer smaller, short running scripts to minimize responsiveness issues. Long-running JavaScript can block the main thread causing pages to become unresponsive.
+
+Our goal is to load any window in under 30ms from the moment the user clicked to open the app from the Overwolf dock or used to hotkey in-game. A loader can be used once the app has been launched.
+
+
+<ImageSlider>
+  <img src={require('/assets/launch-time-performance/th-loader.jpg').default} alt="Trophy Hunter loader" />
+  <img src={require('/assets/launch-time-performance/csgo-scout-loader.png').default} alt="CSGO Scout loader" />
+</ImageSlider>

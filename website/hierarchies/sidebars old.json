@@ -1,0 +1,332 @@
+{
+	"start": {
+		"Getting Started": [
+			"start/getting-started",
+			"start/app-creation-process",
+			"start/sdk-introduction",
+			"start/using-dev-tools",
+			"start/game-compliance-guiding-principles",
+			"start/submit-app-proposal"
+		],
+		"Build Your First App": [
+			"start/sample-app-overview",
+			"start/sample-app-components",
+			"start/sample-app-front-app",
+			"start/sample-app-ui-components"
+		],
+		"Test Your App": [
+			"start/how-to-test-your-app",
+			"start/technical-checklist",
+			"start/product-checklist",
+			"start/marketing-checklist",
+			"start/community-alphas"
+		],
+		"Submit Your App": [
+			"start/submit-your-app-to-the-store",
+			"start/custom-installer-for-your-app"
+		],
+		"Monetize with Ads": [
+			"start/monetization-overview",
+			"start/ads-monetization-basics",
+			"start/ads-sdk-overview",
+			"start/ads-sdk-options",
+			"start/ads-sdk-interaction",
+			"start/ads-sdk-versions"
+		],
+		"Monetize with Subs": [
+			"start/subscriptions-overview",
+			"start/subscriptions-flow",
+			"start/subscriptions-integration",
+			"start/subscriptions-request-form"
+		],
+		"Maintain Your App": [
+			"start/submit-an-app-update",
+			"start/update-your-app-status",
+			"start/support-your-users",
+			"start/add-a-knowledge-base-to-app"
+		],
+		"Game Compliance": [
+			"start/warzone-compliance",
+			"start/rainbow-six-siege-compliance"
+		]
+	},
+	"docs": {
+		"Best Practices": [
+			"topics/best-practices-overview",
+			"topics/app-specific-experience",
+			"topics/first-time-user-experience",
+			"topics/launch-time-performance",
+			"topics/communication-guidelines",
+			"topics/user-flow-and-error-handling",
+			"topics/games-settings",
+			"topics/hotkeys-best-practices",
+			"topics/second-monitor",
+			"topics/data-persistence",
+			"topics/reduce-opk-size",
+			"topics/using-tab",
+			"topics/type-definition-file",
+			"topics/create-download-link",
+			"topics/video-capture",
+			"topics/enable-dev-tools",
+			"topics/exclusive-mode",
+			"topics/electron-migration"
+		],
+		"Using Windows API": [
+			"topics/using-overwolf-windows",
+			"topics/communicating-between-windows",
+			"topics/windows-types",
+			"topics/windows-resolution-size-position",
+			"topics/windows-tips"
+		],
+		"Understanding OW logs": [
+			"topics/logs-intro",
+			"topics/logs-dxdiag",
+			"topics/logs-trace",
+			"topics/logs-obs",
+			"topics/logs-overwolfperf",
+			"topics/logs-html"
+		],
+		"Using Plugins": [
+			"topics/plugins-overview",
+			"topics/how-to-use-plugins-in-your-app",
+			"topics/writing-your-own-plugin",
+			"topics/sample-plugin",
+			"topics/simple-io-plugin",
+			"topics/team-speak-plugin",
+			"topics/downloader-plugin",
+			"topics/process-manager-plugin"
+		],
+		"Using Events": [
+			"topics/events-overview",
+			"topics/using-events",
+			"topics/using-events-simulator",
+			"topics/howto-check-events-status-from-app"
+		],
+		"Developers Console": [
+			"topics/submit-a-new-version",
+			"topics/release-notes",
+			"topics/submit-for-review",
+			"topics/update-store-listing",
+			"topics/manage-subscriptions",
+			"topics/users-and-permissions",
+			"topics/crash-reports",
+			"topics/rating-and-reviews",
+			"topics/app-channels",
+			"topics/cli"
+		],
+		"Integrations": [
+			"topics/app-analytics",
+			"topics/login-with-twitch",
+			"topics/login-with-overwolf",
+			"topics/events-SDK-for-game-developers",
+			"topics/twitch-events-sdk-for-game-developers"
+		],
+		"Request a Service": [
+			"topics/assets-req-marketing",
+			"topics/looking-for-group",
+			"topics/promoting-your-app",
+			"topics/app-recommendations"
+		],
+		"Community Help": [
+			"topics/join-the-community",
+			"topics/webinars",
+			"topics/creators-content",
+			"topics/snippets"
+		],
+		"Legal": [
+			"topics/legal-overview",
+			"topics/legal-app-terms",
+			"topics/legal-developers-terms"
+		]
+	},
+	"api": {
+		"API Reference": [
+			"api/overwolf-api-overview",
+			"api/changelog"
+		],
+		"App Manifest": [
+			"api/manifest-json",
+			"api/validate-your-manifest"
+		],
+		"Available Game Events": [
+			"api/games-ids",
+			"api/overwolf-games-events-apex-legends",
+			"api/overwolf-games-events-vanguard",
+			"api/overwolf-games-events-warzone",
+			"api/overwolf-games-events-csgo",
+			"api/overwolf-games-events-dota2",
+			"api/overwolf-games-events-underlords",
+			"api/overwolf-games-events-escape-from-tarkov",
+			"api/overwolf-games-events-eternal-return",
+			"api/overwolf-games-events-ff-xiv",
+			"api/overwolf-games-events-fm2021",
+			"api/overwolf-games-events-fm2022",
+			"api/overwolf-games-events-fortnite",
+			"api/overwolf-games-events-halo-infinite",
+			"api/overwolf-games-events-hearthstone",
+			"api/overwolf-games-events-hots",
+			"api/overwolf-games-events-hunt-showdown",
+			"api/overwolf-games-events-lor",
+			"api/overwolf-games-events-lol",
+			"api/overwolf-games-events-makerking",
+			"api/overwolf-games-events-minecraft",
+			"api/overwolf-games-events-mtga",
+			"api/overwolf-games-events-new-world",
+			"api/overwolf-games-events-overwatch",
+			"api/overwolf-games-events-path-of-exile",
+			"api/overwolf-games-events-pubg",
+			"api/overwolf-games-events-rainbow-six",
+			"api/overwolf-games-events-rocket-league",
+			"api/overwolf-games-events-sc2",
+			"api/overwolf-games-events-splitgate",
+			"api/overwolf-games-events-tft",
+			"api/overwolf-games-events-valheim",
+			"api/overwolf-games-events-valorant",
+			"api/overwolf-games-events-wot",
+			"api/overwolf-games-events-wow",
+			"api/overwolf-games-events-wows",
+			"api/overwolf-games-events-warframe",
+			"api/games-external-apis"
+		],
+		"Game Launchers Events": [
+			"api/launchers-ids",
+			"api/overwolf-games-launchers-events-lol"
+		],
+		"overwolf.benchmarking": [
+			"api/overwolf-benchmarking"
+		],
+		"overwolf.campaigns": [
+			"api/overwolf-campaigns-crossapp"
+		],
+		"overwolf.cryptography": [
+			"api/overwolf-cryptography"
+		],
+		"overwolf.extensions": [
+			"api/overwolf-extensions",
+			"api/overwolf-extensions-current",
+			"api/overwolf-extensions-sharedData",
+			"api/overwolf-extensions-io"
+		],
+		"overwolf.games": [
+			"api/overwolf-games",
+			"api/overwolf-games-events",
+			"api/overwolf-games-tracked",
+			"api/overwolf-games-inputTracking",
+			"api/overwolf-games-launchers",
+			"api/overwolf-games-launchers-events"
+		],
+		"overwolf.io": [
+			"api/overwolf-io",
+			"api/overwolf-io-paths"
+		],
+		"overwolf.logitech": [
+			"api/overwolf-logitech",
+			"api/overwolf-logitech-arx",
+			"api/overwolf-logitech-led"
+		],
+		"overwolf.media": [
+			"api/overwolf-media",
+			"api/overwolf-media-audio",
+			"api/overwolf-media-replays",
+			"api/overwolf-media-videos",
+			"api/auto-highlights"
+		],
+		"overwolf.notifications": [
+			"api/overwolf-notifications"
+		],
+		"overwolf.os": [
+			"api/overwolf-os",
+			"api/overwolf-os-tray"
+		],
+		"overwolf.profile": [
+			"api/overwolf-profile",
+			"api/overwolf-profile-subscriptions",
+			"api/overwolf-profile-subscriptions-inapp"
+		],
+		"overwolf.settings": [
+			"api/overwolf-settings",
+			"api/overwolf-settings-hotkeys",
+			"api/overwolf-settings-language",
+			"api/overwolf-settings-games"
+		],
+		"overwolf.social": [
+			"api/overwolf-social",
+			"api/overwolf-social-reddit",
+			"api/overwolf-social-youtube",
+			"api/overwolf-social-discord",
+			"api/overwolf-social-gfycat",
+			"api/overwolf-social-twitter"
+		],
+		"overwolf.streaming": [
+			"api/overwolf-streaming"
+		],
+		"overwolf.tobii": [
+			"api/overwolf-tobii"
+		],
+		"overwolf.utils": [
+			"api/overwolf-utils"
+		],
+		"overwolf.web": [
+			"api/overwolf-web",
+			"api/overwolf-web-webserver",
+			"api/overwolf-web-websocket"
+		],
+		"overwolf.windows": [
+			"api/overwolf-windows"
+		]
+	},
+	"service": {
+		"Games Events Status": [
+			"status/all",
+			"status/apex",
+			"status/vanguard",
+			"status/warzone",
+			"status/csgo",
+			"status/dota2",
+			"status/underlords",
+			"status/escape-from-tarkov",
+			"status/eternal-return",
+			"status/ff-xiv",
+			"status/fm2021",
+			"status/fm2022",
+			"status/fortnite",
+			"status/halo-infinite",
+			"status/hearthstone",
+			"status/heroes-of-the-storm",
+			"status/hunt-showdown",
+			"status/lor",
+			"status/lol",
+			"status/lol-launcher",
+			"status/minecraft",
+			"status/mtga",
+			"status/new-world",
+			"status/overwatch",
+			"status/path-of-exile",
+			"status/pubg",
+			"status/rainbow-six-siege",
+			"status/rocket-league",
+			"status/sc2",
+			"status/splitgate",
+			"status/teamfight-tactics",
+			"status/valheim",
+			"status/valorant",
+			"status/world-of-tanks",
+			"status/world-of-warcraft",
+			"status/world-of-warships",
+			"status/warframe"
+		]
+	},
+	"support": {
+		"Support": [
+			"support/contact-us",
+			"support/create-ticket",
+			"support/request-feature"
+		],
+		"FAQ": [
+			"support/FAQ"
+		],
+		"Download": [
+			"support/download-overview"
+		]
+	}
+}

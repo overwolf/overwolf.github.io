@@ -1,0 +1,99 @@
+---
+id: axie-infinity-origin
+title: Axie Infinity Origin Game Events
+sidebar_label: Axie Infinity origin
+---
+
+Please read the [overwolf.games.events](.) documentation page to learn how to use Overwolf game events.
+
+:::important Game ID
+21960
+:::
+
+## Sample Apps
+* [Axie Infinity origin game events sample app](https://github.com/overwolf/events-sample-apps)
+
+## Available Features
+* [match_info](#match_info)
+
+## Game event status
+
+It is highly recommended to communicate errors and warnings to app users. 
+Check the current game event status [here](/status/all). Alternately, you can easily check that status from your app itself, [using our API](/topics/using-events/how-to-check-events-status-from-app).
+
+## `gep_internal`
+
+### Info Updates
+
+key          | Category    | Values                    | Notes                 | Since GEP Ver. |
+------------ | ------------| ------------------------- | --------------------- | ------------- | 
+gep_internal | gep_internal| Local + Public version number|See [notes](#gep_internal-note)|   202.0       |
+
+#### *gep_internal* note
+
+Data Example:
+
+```json
+{"info":{"gep_internal":{"version_info":"{"local_version":"202.0.0","public_version":"202.0.0","is_updated":true}"}},"feature":"gep_internal"}
+```
+
+## `match_info`
+
+### Info Updates
+
+key          | Category    | Values                    | Notes                 | Since GEP Ver. |
+------------ | ------------| ------------------------- | --------------------- | ------------- | 
+player_x | match_info  | Details about the players in the match |See [notes](#player_x-note)|   202.0       |
+battle_state | match_info  | Describe the battle turn number and player's turn |See [notes](#battle_state-note)|   202.0       |
+fighter_x | match_info  | Information about the fighters including cards, runes,  |See [notes](#fighter_x-note)|   202.0       |
+
+### Events
+
+key          | Category    | Values                    | Notes                 | Since GEP Ver. |
+------------ | ------------| ------------------------- | --------------------- | ------------- | 
+match_start |   | match start event ||   203.0       |
+match_end |   | match end event ||   203.0       |
+
+#### *player_x* note
+List of parameters:
+* player_id - The Id of the player
+* name - The name of the player
+* energy - The amount of energy of that player
+* draw - The amount of card draw
+* discard - The amount of cards discard
+* banish - The amount of banish cards
+* is_local - If the current player is the local player the value will be true 
+
+Data Example:
+
+```
+{"feature":"match_info","category":"match_info","key":"player_0","value":"{\"player_id\":\"1ecd046f-481e-69e9-a81e-5c849aacdc1b\",\"name\":\"NanoTaco\",\"energy\":0,\"draw\":8,\"discard\":4,\"banish\":1,\"is_local\":true}"}
+```
+
+#### *battle_state* note
+
+List of parameters:
+turn - the currrent turn in the match
+player_turn - which player is playing now
+
+Data Example:
+```
+{"feature":"match_info","category":"match_info","key":"battle_state","value":"{\"turn\":9,\"player_turn\":0}"}
+```
+
+#### *fighter_x* note
+
+List of parameters:
+* name - axie name
+* ID - axie ID
+* player_belong - team 0/1
+* position - 1 left, 2 middle, 3 right
+* max_health / health - the max health range and the current health of the axie 
+* level - axie level 
+* runes / cards / charms - provides more details about the axie 
+
+Data Example:
+```
+{"feature":"match_info","category":"match_info","key":"fighter_2","value":"{\"name\":\"Puffy\",\"ID\":\"0_3_1ecd046f-481e-69e9-a81e-5c849aacdc1b\",\"player_belong\":0,\"position\":2,\"health\":45,\"max_health\":320,\"alive\":1,\"disabled\":0,\"skill_disabled\":0,\"shield_disabled\":0,\"power_disabled\":0,\"level\":1,\"status\":{"name":"RuneAquaticHybrid1","stacks":1,"is_deactive":0},\"runes\":{\"rune_0\":\"NeutralDefensive1\"},\"cards\":[{\"card_id\":12,\"charm\":\"ecard_aquatic_4001\"},{\"card_id\":13,\"charm\":\"ecard_aquatic_4001\"},{\"card_id\":14,\"charm\":\"ecard_aquatic_4001\"},{\"card_id\":15,\"charm\":\"ecard_aquatic_4001\"},{\"card_id\":16,\"charm\":\"ecard_aquatic_4001\"},{\"card_id\":17,\"charm\":\"ecard_aquatic_4001\"}]}"}
+```
+

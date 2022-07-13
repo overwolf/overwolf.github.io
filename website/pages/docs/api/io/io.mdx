@@ -1,0 +1,502 @@
+---
+id: io
+title: overwolf.io API
+sidebar_label: overwolf.io
+---
+
+Check whether a certain file exists and/or to write content into files.  
+
+:::tip
+For app-related I/O functionalities, use the [overwolf.extensions.io](extensions/io) API.
+In addition, the [simple I/O plugin](/topics/using-plugins/simple-io-plugin) offers several more general I/O features that are not available through the APIs.   
+:::
+
+## Methods Reference
+
+* [overwolf.io.fileExists()](#fileexistsfilepath-callback)
+* [overwolf.io.writeFileContents()](#writefilecontentsfilepath-content-encoding-triggeruacifrequired-callback)
+* [overwolf.io.readFileContents()](#readfilecontentsfilepath-encoding-callback)
+* [overwolf.io.copyFile()](#copyfilesrc-dst-overridefile-reserved-callback)
+* [overwolf.io.dir()](#dirpath-callback)
+* [overwolf.io.readBinaryFile()](#readbinaryfilepath-options-callback)
+* [overwolf.io.readTextFile()](#readtextfilepath-options-callback)
+* [overwolf.io.exist()](#existpath-callback)
+* [overwolf.io.listenOnFile()](#listenonfileid-path-option-callback)
+* [overwolf.io.stopFileListener()](#stopfilelistenerid)
+
+## Types Reference
+
+* [overwolf.io.enums.eEncoding](#eencoding-enum) enum
+* [overwolf.io.enums.encoding](#encoding-enum) enum
+* [overwolf.io.enums.fileListenerState](#filelistenerstate-enum) enum
+* [overwolf.io.ReadFileOptions](#readfileoptions-object) Object
+* [overwolf.io.ListenFileOptions](#listenfileoptions-object) Object
+* [overwolf.io.DirResult](#dirresult-object) Object
+* [overwolf.io.FileExistsResult](#fileexistsresult-object) Object
+* [overwolf.io.ReadFileContentsResult](#readfilecontentsresult-object) Object
+* [overwolf.io.ListenOnFileResult](#listenonfileresult-object) Object
+* [overwolf.io.ExistsResult](#existsresult-object) Object
+* [overwolf.io.ReadBinaryFileResult](#readbinaryfileresult-object) Object
+* [overwolf.io.ReadTextFileResult](#readtextfileresult-object) Object
+* [overwolf.io.FileInfo](#fileinfo-object) Object
+* [overwolf.io.FileInDir](#fileindir-object) Object
+
+## Sample app
+
+In our [APIs sample apps repository](https://github.com/overwolf/apis-sample-apps), you can find and download a sample app that demonstrates the usage in the IO API: 
+
+* The `io-sample` - Demonstrates how to open and load a file to your app, Display it, Add some content, and Write it back to the file.  
+
+It's a great place to get started - All the samples in this repository are built with JS code and demonstrate primary usage in the API.
+
+## fileExists(filePath, callback)
+
+#### Version added: 0.93
+
+> Checks for the existence of a file in a given path.
+
+Parameter | Type | Description |
+------------ | ------------ | ------------ |
+filePath | string | Path to check for |
+callback | function | Returns the result |   
+callback  | [(Result: FileExistsResult)](#fileexistsresult-object) => void | Returns with the result | 
+
+## writeFileContents(filePath, content, encoding, triggerUacIfRequired, callback)
+
+#### Version added: 0.93
+
+#### Permissions required: FileSystem
+
+> Writes content into a target text file.
+
+If the file doesn’t exist, it will be created, along with any required directories along the path. Otherwise, the file’s content will be overwritten.
+
+Parameter            | Type                    | Description                                                                             |
+-------------------- | ----------------------- | --------------------------------------------------------------------------------------- |
+filePath             | string                  | Path to check for                                                                   |
+content              | string                  | Content to write                                                                    |
+encoding             | [eEncoding](#eencoding-enum) enum | Encoding to use                                                               |
+triggerUacIfRequired | bool                    | If additional permissions are required, triggers the Windows UAC dialog |
+callback             | (Result) => void        | Returns with the result                                                                  |   
+   
+## readFileContents(filePath,encoding, callback)
+
+#### Version added: 0.93
+
+#### Permissions required: FileSystem
+
+> Returns a string with the targeted text file’s content.
+
+Parameter | Type | Description |
+------------ | ------------ | ------------ |
+filePath | string | Full path of the targeted file|
+encoding | [eEncoding](#eencoding-enum) enum | Encoding to use |
+callback   | [(Result: ReadFileContentsResult)](#readfilecontentsresult-object) => void       | Returns the result |   
+   
+## copyFile(src, dst, overrideFile, reserved, callback)
+
+#### Version added: 0.93
+
+#### Permissions required: FileSystem
+
+> Copy a file from the local extension directory to a destination in the local machine.
+
+Parameter | Type | Description |
+------------ | ------------ | ------------ |
+src | string | A relative file path from your extension's root folder, or a full overwolf-extension:// URI to the source file |
+dst | string | Destination absolute path to copy to including filename. See usage example below |
+overrideFile | bool | "true" if you want an existing file to be overwritten, "false" otherwise |
+reserved | bool | For future use |
+callback             | (Result) => void        | Returns with the result                                                                 |   
+
+#### Usage example
+
+```js
+overwolf.io.copyFile("Fortnite Battle Royale 03-19-2020 14-10-18-457.mp4","C:/Users/Hal9000/AppData/Local/Overwolf/Extensions/nhmkaollkcmjiecdnnjmgfifjgkfegkljnjjbipp/1.0.18/copy.mp4",false,false,console.log)
+
+```
+
+## dir(path, callback)
+
+#### Version added: 0.141
+
+#### Permissions required: FileSystem
+
+> Lists all files and folder in the target path.
+
+Parameter | Type     | Description             |
+----------| ---------| ----------------------- |
+path      | string   | The target path         |
+callback  | [(Result: DirResult)](#dirresult-object) => void | Returns with the result | 
+
+#### Usage example
+
+```js
+overwolf.io.dir("C:/Users/Hal9000/Videos/Overwolf",console.log)
+```
+
+## readBinaryFile(path, options, callback)
+
+#### Version added: 0.141
+
+#### Permissions required: FileSystem
+
+> Read binary file.
+
+ Reads a file's contents and returns an array of byte values.  
+ This function is extremely slow! Use it only for small files or to get file header info using the [options](#readfileoptions-object) parameter (maxBytesToRead) to limit the amount of data to fetch.
+
+Parameter | Type     | Description             |
+----------| ---------| ----------------------- |
+path      | string   | The target path         |
+options   | [ReadFileOptions](#readfileoptions-object) object |   |
+callback  | [(Result: ReadBinaryFileResult)](#readbinaryfileresult-object) => void | Returns with the result | 
+
+## readTextFile(path, options, callback)
+
+#### Version added: 0.141
+
+#### Permissions required: FileSystem
+
+> Read text file.
+
+Reads a file's contents and returns it as text.
+
+Parameter | Type     | Description             |
+----------| ---------| ----------------------- |
+path      | string   | The target path         |
+options   | [ReadFileOptions](#readfileoptions-object) object |    |
+callback  | [(Result: ReadTextFileResult)](#readtextfileresult-object) => void | Returns with the result | 
+
+## exist(path, callback)
+
+#### Version added: 0.141
+
+#### Permissions required: FileSystem
+
+> Is path exist.
+
+Parameter | Type     | Description             |
+----------| ---------| ----------------------- |
+path      | string   | The target path         |
+callback  | [(Result: ExistsResult)](#existsresult-object) => void | Returns with the result | 
+
+## listenOnFile(id, path, option, callback)
+
+#### Version added: 0.141
+
+#### Permissions required: FileSystem
+
+> Start listening on file.
+
+ Stream a file (text files only), line-by-line, from the local filesystem.
+
+Parameter | Type     | Description             |
+----------| ---------| ----------------------- |
+id        | string   | listen Id               |
+path      | string   | file path               |
+options   | [ListenFileOptions](#listenfileoptions-object) Object   |           |
+callback  | [(Result: ListenOnFileResult)](#listenonfileresult-object) => void | Returns with the result | 
+
+#### Usage example
+
+```js
+overwolf.io.listenOnFile('test.txt','C:\\test\\test.txt', {},console.log)
+```
+
+## stopFileListener(id)
+
+#### Version added: 0.141
+
+#### Permissions required: FileSystem
+
+> Stop listening on file.
+
+Stop streaming a file that you previously passed when calling  [listenOnFile](#listenonfileid-path-option-callback).  
+There are no callbacks - as this will never fail (even if the stream doesn't exist).
+
+Parameter | Type     | Description             |
+----------| ---------| ----------------------- |
+id        | string   | listen Id               |
+
+#### stopFileListener notes
+
+On stop, [listenOnFile](#listenonfileid-path-option-callback) callback will trigger with a "truncated" state:
+
+```json
+{
+    "success" : true, 
+    "error": "", 
+    "state": "truncated" 
+    ...
+}
+```
+
+## fileListenerState enum
+
+File listener state.
+
+Options    | 
+-----------| 
+started    |
+running    | 
+terminated |
+truncated  |
+
+## encoding enum
+
+encoding types.
+
+Options    | 
+-----------| 
+Default    |
+UTF8       | 
+UTF32      |
+Unicode    |
+UTF7       |
+ASCII      |
+BigEndianUnicode |
+
+## eEncoding enum
+
+File encoding.
+
+Options    | 
+-----------| 
+UTF8       | 
+UTF8BOM    |
+Unicode    |
+UnicodeBOM |
+ASCII      |
+
+## ReadFileOptions Object
+#### Version added: 0.141
+
+> Describes the different options to read a file.
+
+Parameter        | Type                          | Description                       |
+---------------- | ------------------------------| --------------------------------- |
+encoding         | [eEncoding](#eencoding-enum) enum  |                              |
+maxBytesToRead   | int                           | default is 0 => read all file     |
+offset           | int                           | start reading point, default is 0 |
+
+## ListenFileOptions Object
+#### Version added: 0.141
+
+> Describes the different options to listen to a file.
+
+Parameter        | Type                          | Description                       |
+---------------- | ------------------------------| --------------------------------- |
+skipToEnd        | bool                          | should skip directly to end of file. default if false  |
+encoding         | [encoding](#encoding-enum) enum| Encoding to use. `Default` is is the default value   |
+
+## DirResult Object
+#### Version added: 0.141
+
+> List of files and folders.
+
+Parameter        | Type                          | Description                        |
+---------------- | ------------------------------| ---------------------------------- |
+success          | boolean                       | Inherited from the "Result" Object |
+error            | string                        | Inherited from the "Result" Object |
+data             | [FileInDir](#fileindir-object)[]   | List of files and folders          |
+
+#### Example data
+
+```json
+{
+   "success":true,
+   "path":"C:/Users/Hal9000/Videos/Overwolf",
+   "data":[
+      {
+         "name":"Fortnite 03-19-2020 17-15-56-087.mp4",
+         "type":"file"
+      },
+      {
+         "name":"Game Events Simulator",
+         "type":"dir"
+      },
+      {
+         "name":"Game Summary",
+         "type":"dir"
+      }
+
+   ]
+}
+```
+
+## FileExistsResult Object
+#### Version added: 0.141
+
+> The result.
+
+Parameter        | Type                          | Description                        |
+---------------- | ------------------------------| ---------------------------------- |
+success          | boolean                       | Inherited from the "Result" Object |
+error            | string                        | Inherited from the "Result" Object |
+found            | boolean                       | Return if the file exist or not    |
+
+#### Example data
+
+```json
+{
+   "success":true,
+   "found":true
+}
+```
+
+## ReadFileContentsResult Object
+#### Version added: 0.141
+
+> the status of the request and the file contect.
+
+Parameter        | Type                          | Description                        |
+---------------- | ------------------------------| ---------------------------------- |
+success          | boolean                       | Inherited from the "Result" Object |
+error            | string                        | Inherited from the "Result" Object |
+content          | string                        | string with the taraget file’s content   |
+
+#### Example data
+
+
+```json
+{"success":true,"content":"Hello World!"}
+```
+
+## ListenOnFileResult Object
+#### Version added: 0.141
+
+> The result.
+
+Parameter        | Type                          | Description                        |
+---------------- | ------------------------------| ---------------------------------- |
+success          | boolean                       | Inherited from the "Result" Object |
+error            | string                        | Inherited from the "Result" Object |
+state            | string                        | Current callback state. Only valid only when "success" is true [overwolf.io.enums.fileListenerState](#filelistenerstate-enum) |
+content          | string                        | string with the taraget line content   |
+
+#### Example data
+
+```json
+{
+    "success" : true, // when false the callback will stop listen
+    "error": "", // valid only when success = false
+    "state": "started|running|terminated|truncated", // valid only when success =true (overwolf.io.enums.fileListenerState) 
+    "content": "" //the line  
+}
+```
+
+#### notes 
+
+* "state" is from type [overwolf.io.enums.fileListenerState](#filelistenerstate-enum).
+* Please read what happens when you call [stopFileListener()](#stopfilelistener-notes).
+
+## ExistsResult Object
+#### Version added: 0.141
+
+> The result.
+
+Parameter        | Type                          | Description                        |
+---------------- | ------------------------------| ---------------------------------- |
+success          | boolean                       | Inherited from the "Result" Object |
+error            | string                        | Inherited from the "Result" Object |
+exist            | boolean                       | Return if the file exist or not    |
+
+#### Example data
+
+```json
+{
+   "success":true,
+   "exist":true
+}
+```
+
+## ReadBinaryFileResult Object
+#### Version added: 0.141
+
+> The result.
+
+Parameter        | Type                          | Description                        |
+---------------- | ------------------------------| ---------------------------------- |
+success          | boolean                       | Inherited from the "Result" Object |
+error            | string                        | Inherited from the "Result" Object |
+content          | string                        | Return with the file content       |
+info             | [FileInfo](#fileinfo-object) object   | Return with the file content       |
+
+#### Example data
+
+```json
+ {
+    "success" : true,
+    "error": "", 
+    "content": byte[], // the file content in bytes
+    "info" : {
+        "eof" : true, // is EOF
+        "totalRead" : 3000, // total read bytes
+        "position" : 3000, // last file position
+        "totalLines" :100, // total read lines
+    }
+}
+```
+
+## ReadTextFileResult Object
+#### Version added: 0.141
+
+> The result.
+
+Parameter        | Type                          | Description                        |
+---------------- | ------------------------------| ---------------------------------- |
+success          | boolean                       | Inherited from the "Result" Object |
+error            | string                        | Inherited from the "Result" Object |
+content          | string                        | Return with the file content       |
+info             | [FileInfo](#fileinfo-object) object   | Return with the file content       |
+
+#### Example data
+
+```json
+ {
+    "success" : true,
+    "error": "", 
+    "content": byte[], // the file content in bytes
+    "info" : {
+        "eof" : true, // is EOF
+        "totalRead" : 3000, // total read bytes
+        "position" : 3000, // last file position
+        "totalLines" :100, // total read lines
+    }
+}
+```
+
+## FileInfo Object
+#### Version added: 0.141
+
+> Container for the file info properties.
+
+Parameter        | Type                          | Description                        |
+---------------- | ------------------------------| ---------------------------------- |
+success          | boolean                       | Inherited from the "Result" Object |
+error            | string                        | Inherited from the "Result" Object |
+eof              | boolean                       |                                    |
+totalRead        | number                        |                                    |
+position         | number                        |                                    |
+totalLines       | number                        |                                    |
+
+## FileInDir Object
+#### Version added: 0.141
+
+> Container for the list of files and folders in a directory.
+
+Parameter        | Type                          | Description                        |
+---------------- | ------------------------------| ---------------------------------- |
+success          | boolean                       | Inherited from the "Result" Object |
+error            | string                        | Inherited from the "Result" Object |
+name             | string                        |                                    |
+type             | string                        |                                    |
+
+#### Example data
+
+```js
+{
+   "name":"Fortnite 03-19-2020 17-15-56-087.mp4",
+   "type":"file"
+}

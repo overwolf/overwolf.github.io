@@ -1,0 +1,79 @@
+---
+id: using-tab
+title: Use Tab as an app Hotkey
+sidebar_label:  Use Tab as an app Hotkey
+---
+
+## Hotkeys - Overview
+
+Overwolf Hotkeys are keystrokes or key combinations that can control your app while in-game. When using a hotkey, your app window is opened, and clicking it again will hide or minimize it. You can allow users to change hotkey combinations from your app’s settings panel by automatically directing the user to the Overwolf settings page.  
+
+You can read all about hotkeys in our [Hotkey best practices](hotkeys-best-practices) guide.
+
+## Binding App Hotkeys to Game Hotkeys
+
+Most games already have built-in hotkeys for common actions. These key combinations are usually bound to the most important actions. Adding new hotkeys for your app makes the lives of players harder, as they needs to remember additional combinations.
+
+We can "hitch a ride" on game hotkeys and provide value in an automated manner. The main advanatage of this approach is that the player doesn't need to remember new hotkeys: We can bind OW hotkeys in parallel to the existing game hotkeys to increase value on existing actions.
+
+## Use Tab as an app Hotkey
+
+One of the most common hotkeys used in many games is the Tab key.
+
+The tab button is a physically large button, easy to use and to reach which makes it comfortable for players. A lot of games use it as a built-in "special" hotkey that displays important information, scoreboards and similar data, sometimes in a "ShowOnHold" manner: It displays the info while the key is held down, and hides it when Tab is released.  
+
+Examples:
+
+* In League of Legends, when a player is pressing TAB to see match statistics, you can provide him with additional stats on top.
+* In CS:GO, when a player buys weapons, you can show the player his new weapon's recoil pattern.
+* In Hearthstone, when a player enters the deck / collection screen, you can tell him which of his prepared decks is closest to a good meta deck and what cards he is missing to complete it.
+
+**"Riding" the Tab key and similar hotkeys, when done right and providing value to your users, is a highly recommended practice.**
+
+A LOL example of the popup that appears while the player is holding the tab key (and hides it on release):
+
+![alt-text](/assets/tab-example-lol.gif)
+
+## Implement "Tabbing" in Your App
+
+Start by spotting the hotkeys that your targeted game uses in this fashion - whether it's Tab or other hotkeys. Break down what happens when that key is pressed - Is a new window launched? Is there a new bit of UI? Maybe the champion is doing something? Once mapped, you can think up ways to add value from your app to these screens and automated functions. 
+
+The [overwolf.settings.hotkeys](/api/settings/hotkeys) API offers some useful events for that purpose.  
+You can find the complete info about hotkeys and how to use them in our [hotkeys best practice](hotkeys-best-practices) guide.
+
+### Set your hotkey in the manifest
+
+Overwolf hotkeys now offer a "ShowOnHold" mode like the tab key does in some games.  
+In order to implement a hotkey which works with an OnHold Tab functionality, we will have to set the hotkey in the manifest as a "hold" hotkey:
+
+```json
+"hotkeys": {
+    "show_YourAppName": { 
+        "title": "Show Player",
+        "action-type": "custom",
+        "default": "Shift+F9",
+        "passthrough": true,
+        "hold": true
+    }
+}
+```
+
+### Register to the onHold event
+
+Custom hotkeys will only work when your app is already running.  
+Using a custom hotkey with the app closed will do nothing.
+
+In addition, when you are using a [hold](#hold-hotkeys) hotkey, you should register to the [overwolf.settings.hotkeys.onHold](/api/settings/hotkeys#onhold) event:
+
+```js
+overwolf.settings.hotkeys.onHold.addListener(console.log)
+```
+
+Note that this event will be fired twice - on key down and on key up:
+
+```json
+{"name": "ges_showhide", "state": "down"}
+{"name": "ges_showhide", "state": "up"}
+```
+
+Once the tab key is released, we can hide/minimize your window.

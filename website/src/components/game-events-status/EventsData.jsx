@@ -58,7 +58,7 @@ import { GamesMetadata } from './gamesMetaData';
         }
 
         { specificGame && gameStatus != null &&
-          <SpecificGameEventsStatus gamesMetaData={GamesMetadata} gameStatusData={gameStatus} gameID={gameID} docsPath={docsPath} />
+          <SpecificGameEventsStatus gameStatusData={gameStatus} gameID={gameID} docsPath={docsPath} />
         }
 
       </>

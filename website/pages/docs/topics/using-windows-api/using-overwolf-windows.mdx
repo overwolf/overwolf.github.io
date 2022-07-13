@@ -1,0 +1,82 @@
+---
+id: using-overwolf-windows
+title: Using Overwolf windows
+sidebar_label: Using Overwolf windows
+---
+
+Every Overwolf app uses Overwolf windows, whether in-game or while on desktop. When you get to work on your own app, the first step is declaring your app’s windows in it's [manifest.json](/api/manifest) file. You will NOT be able to create an Overwolf window without declaring it in the manifest (window.open is not an Overwolf window).  
+
+The idea here is to declare a **window class** with it's properties and later you can create an **instance** of that class.
+It's not currently possible to create multiple instances of a window class - having many windows is discouraged because it might make your app more complicated than required or hurt user experience.
+
+## Declaring windows in manifest.json
+
+Declare your window objects by giving the object a name under the data.windows section and adding [properties](/api/manifest#extension_window_data-object) that you want the window to inherit when created. Properties can include size, starting position, transparency and others.
+
+Here is an example window declaration:
+
+```json
+ "data": {
+        "start_window": "MainWindow",
+        "windows": {
+            "MainWindow": {
+                "file": "Files/index.html",
+                "transparent": true,
+                "resizable": true,
+                "size": {"width": 400, "height": 300},
+                "min_size": {"width": 200, "height": 200},
+                "max_size": {"width": 600, "height": 500}
+            }
+        }
+ }
+```
+
+### Essential window properties
+
+* [`start_window`](/api/manifest#start_window) - Every app always has a default window, a main window which is the first to be shown when your app is launched. A Start Window MUST exist in order for the other windows to exist – if you close your main window (or if the user closes it) all other app windows will be closed as well, factually closing your app.
+
+* [`file`](/api/manifest#window-file) – This is the core HTML file which will be loaded into your window when it's opened. This can only be a local file. If you wish to host your app on a remote web-site, you’ll have to build a local page that redirects to that website (If you do so, make sure that the **block_top_window_navigation** property is set to **false**).
+
+* [`transparent`](/api/manifest#window-transparent) – When this property is set to true, your window will have no borders or background. Any part of your window that has a transparent background ("background: transparent;") will become a see-through area that blends with the game or desktop behind it. If this property is set to false, your window will have the common Overwolf window borders and white background.
+
+* [`grab_keyboard_focus`](/api/manifest#windows-grab_keyboard_focus) – This property is set to false by default, but if set to true, this property means opening your window will automatically take the user's keyboard focus and any keystrokes will be made in the app window rather than the current game the user's seeing. Since some windows open surprisingly or automatically, for example based on a game event or a hotkey pressed, you want to keep this false in most cases and avoid 'stealing' user keyboard focus away. **grab_focus_on_desktop** is the complementary property which describes out-of-game behavior, this is set to True by default because the user is not playing when launching the app in desktop mode.
+
+* [`size`](/api/manifest#windows-size) – Allows you to set the size of your app window when it is first opened. If your window is not resizable, this will be its permanent size. However, if your app is resizable – app size is saved by Overwolf when closed so that the next time it is opened, **it will open with the same size as it was closed with by the user**, this will persist even if the app is uninstalled and reinstalled. More [window size tips](windows-resolution-size-position#window-sizes).
+
+* [`min_size`](/api/manifest#windows-min_size) and [`max_size`](/api/manifest#windows-max_size) - These properties define the smallest and largest your app window can be in pixels.
+
+
+## Accessing your declared windows
+
+There are two ways we identify windows: the `name` and `id` properties.
+
+### Using window.name
+
+When accessing a window by name, you need to use the name value exactly as it appears in your manifest.json window declaration.
+
+> A window name is always a value declared by the developer of the app.
+
+### Using window.id
+
+Accessing a window by id is possible when you already have an instance of your window declared – you can retrieve this id using one of two overwolf.windows functions: 
+
+* [overwolf.windows.obtainDeclaredWindow()](/api/windows#obtaindeclaredwindowwindowname-callback)
+* [overwolf.windows.getCurrentWindow()](/api/windows#getcurrentwindowcallback)
+
+> A window id is set by the Overwolf API. This value is subject to change in future Overwolf versions – so you should avoid using hardcoded values.
+
+Currently we do not support generating multiple instances of the same window class, most functions that use window id will accept window name just the same.
+
+## How to create a new window
+
+### Call obtainDeclaredWindow()
+
+First, you must call [overwolf.windows.obtainDeclaredWindow()](/api/windows#obtaindeclaredwindowwindowname-callback) using the window’s name as declared in your manifest.json. This will create a single instance of your window and return basic window information including id, name, width, height and other base properties.
+
+### Call restore()
+
+Afterwards, you need to call [overwolf.windows.restore()](/api/windows#restorewindowid-callback) using either the window's name or id retrieved from obtainDeclaredWindow.
+
+:::warning
+Skipping obtainDeclaredWindow() and calling restore() with the window’s name will **not work** unless the window is already instantiated and minimized (in which case it will be restored).
+:::

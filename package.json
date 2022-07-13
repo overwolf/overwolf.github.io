@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/overwolf/overwolf.github.io#readme",
   "dependencies": {
+    "async": "^3.2.4",
     "remarkable-admonitions": "^0.2.1"
   }
 }

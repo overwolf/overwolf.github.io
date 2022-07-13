@@ -56,7 +56,7 @@ function GameEventsStatus(props) {
 
   // ---------------------------------------------------------------------------
   return (
-    <article className="hentry">
+    <article>
       <div className="gep-games-list">
         <ul className="list">
           {gameList}

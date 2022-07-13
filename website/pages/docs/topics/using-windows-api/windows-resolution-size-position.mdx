@@ -1,0 +1,126 @@
+---
+id: windows-resolution-size-position
+title: Windows Resolution Size and Position
+sidebar_label: Resolution Size and Position
+---
+
+## Window resolution
+
+Setting window resolution and position whether it's in-game or in desktop requires you to first get the user's current screen resolution. 
+
+### Detecting screen resolution
+
+Users have two relevant resolutions to consider:  
+
+"Screen resolution", which is the operating system's default desktop resolution, and "game resolution" which is the resolution in which they play their game and can be different from the desktop setting.
+
+* Desktop resolution can be detected by using [overwolf.utils.getMonitorsList()](/api/utils).
+
+* Game resolution can be detected by using [overwolf.games.getRunningGameInfo()](/api/games#getrunninggameinfocallback).  
+In addition, it returns also the monitorHandle, which can be used to get the monitor the game runs in.
+
+### Logical resolution
+
+The [GameInfo](/api/games#gameinfo-object) object sent by the getRunningGameInfo() function has, in addition to the expected `width` and `height` fields, two more properties called `logicalWidth` and `logicalHeight`. These fields return the game's reported logical pixel dimensions.  
+If your screen is scaled by a DPI factor, you should work with logical sizes, as the regular sizes will wound up being scaled in proportion, while the logical is not DPI aware.
+
+### Detecting resolution changes
+
+In order to detect whether a user has changed their resolution:
+
+* In-game resolution change – Register to the [overwolf.games.onGameInfoUpdated()](/api/games#ongameinfoupdated) event to get updated in-game resolution.
+
+* Desktop /out-of-game resolution change – There's no way to detect a change in desktop resolution, you’ll have to check each time your app launches by using [getMonitorsList()](/api/utils).
+
+## Window sizes
+
+Correct planning is critical for your app's development process. While Overwolf is handling the huge variety of user specs and screen resolutions, it's still important to pick the optimal size for your app’s windows.  
+
+While the most commonly used window size would be 1366×768, the optimal size would be 1200×700, which better supports a wider variety of resolutions.
+
+You can also do the following when handling window sizes:
+
+### Set default window size
+
+As the [size](/api/manifest#windows-size) flag only applies during the first time you open the window, you can force create the new window using the default size/position. 
+
+you can set [min_size](/api/manifest#windows-min_size) and [max_size](/api/manifest#windows-max_size) to the same values and force your app window to always load with identical dimensions, or you can set the [`useDefaultSizeAndLocation`](/api/windows) to true, when calling the [obtainDeclaredWindow()](/api/windows#obtaindeclaredwindowwindowname-usedefaultsizeandlocation-callback) function.
+
+In addition, if you want to dynamically set your window size according to the [user's desktop resolution](#detecting-screen-resolution) and [DPI](https://developer.mozilla.org/en-US/docs/Web/api/Window/devicePixelRatio), you can use [setMinSize()](/api/windows#setminsizewindowid-width-height-callback).
+
+### Enable user resolution choices
+
+You can allow users to choose their preferred window size in the app's settings. Some Examples for common and optimal window sizes, as well as apps that let the user choose their preferred app window size:
+
+
+<ImageSlider>
+  <img src={require('/assets/size-example-user-custom.jpg').default} alt='Examples for app that let the user choose his preferred app window size:'/>
+  <img src={require('/assets/size-example-screen-1.jpg').default} alt='Examples for common and optimal app window sizes: 1280×775' />
+  <img src={require('/assets/size-example-screen-2.jpg').default} alt='Examples for common and optimal app window sizes: 1366×775' />
+  <img src={require('/assets/size-example-screen-3.jpg').default} alt='Examples for common and optimal app window sizes: 1680×980' />
+</ImageSlider>
+
+### DPI scaling with overwolf windows
+
+This section explains the DPI-related behavior of each of the relevant overwolf.windows API methods.  
+Please note that we will release an improved and more consistent (DPI-wise) window management API soon.
+
+To summarize, these are the main differences between native and non-native windows:
+
+* The `+` means DPI-aware: "width" / "height" returned in the function's callback without DPI scaling.
+* The `-` means not-DPI-aware: "width" / "height" returned in the function's callback already WITH DPI scaling.
+
+function                                | native window            | non-native window             |  notes  |          
+--------------------------------------- | -------------------------| ----------------------------- | ------  |
+[overwolf.windows.getCurrentWindow()](/api/windows#getcurrentwindowcallback)     | +                        | +                             |         |
+[overwolf.windows.obtainDeclaredWindow()](/api/windows#obtaindeclaredwindowwindowname-callback) | -                        | -                             | From 0.170 this function will be DPI-aware  |
+[overwolf.windows.changePosition()](/api/windows#changepositionwindowid-left-top-callback)       | +                        | +                             | Gets the "left"/"top" values and calculates the new required window position based on the screen's DPI. (accepts values as they are returned from getCurrentWindow - without DPI scaling)        |
+[overwolf.windows.changeSize()](/api/windows#changesizechangesizeparams-callback)           | +                        | +                             | gets the "width"/"height" values (via the "ChangeWindowSizeParams" object)  and calculates the new required window size based on the screen’s DPI.  (accepts values as they are returned from getCurrentWindow - without DPI scaling) <br></br><br></br> **Known issue** - For non-native windows the DPI calculations are affected only by the DPI of the primary window, regardless of which monitor you opened the window on. i.e., if the window is on a 100% DPI monitor but the main monitor is 125% - it will resize based on 125%.        |
+[window.screen](https://developer.mozilla.org/en-US/docs/Web/api/Window/screen)                           | -                        | +                             |         |
+HTML element size                       | +                      | +                           |         |
+
+## Window position
+
+### Window coordinates overview
+
+The windows API using X and Y coordinates to define the position of a window.  
+
+#### X note
+X returns the pixel distance of your currently active monitor from your primary monitor.
+For example, if your primary monitor is 1920px wide, and the currently active window is on another monitor located to the left of your primary, X will return 1920 or -1920 based on their relative positions.
+
+#### Y note
+Y returns the pixel distnace of your currently active monitor from your primary monitor.
+For Example, if your primary monitor and secondary monitor are side by side, Y will return 0, if your displays are one on top of the other and the primary monitor is 1200px tall, Y will return 1200 or -1200 based on their relative positions.
+
+### Set a default position
+
+As the [start_position](/api/manifest#windows-start_position) flag only applies the first time you open a windows, you can use [changePosition()](/api/windows#changepositionwindowid-left-top-callback) if you want to change the position of the window dynamically. For example, if you'd like to place the window in the middle of the screen after you [calculate the user's resolution](#detecting-screen-resolution).
+
+### Change window position
+
+In order to position your window in a specific location, you'll first need to [get the current user's screen resolution](#detect-the-resolution). As explained above, there are two types of resolutions – "Screen resolution" (the resolution of the user's OS) and "game resolution" which is the actual in-game resolution used.
+
+* To reposition a desktop window of your app, get the user desktop resolution by using [getMonitorsList()](/api/utils) and calculate the required location in pixels.
+
+* To reposition an in-game window of your app, get the in-game resolution by using [getRunningGameInfo()](/api/games#getrunninggameinfocallback) and calculate the required location in pixels.
+
+Note that for non-native windows the DPI calculations are affected only by the DPI of the primary window, regardless of which monitor you opened the window on. i.e.,  if the window is on a 100% DPI monitor but the main monitor is 125% - it will resize based on 125%.
+
+### Identify when the window is dragged between monitors
+
+To identify if your app window was dragged from one monitor to another, you can follow these steps:
+
+* Identify when the drag is completed using the [dragMove()](/api/windows#dragmovewindowid-callback) function.
+
+* Get the position of the window (window.screenX, window.screenY).
+
+Note that when you move a **native window** between monitors with different DPIs, the window will automatically resize according to the new DPI (can be disabled with the [disable_auto_dpi_sizing](/api/manifest#disable_auto_dpi_sizing) manifest flag). 
+
+Hybrid/non-native windows are not "DPI awarded" and will not auto-resize when moved between monitors with different DPIs.
+
+### determine which monitor the window is displayed
+
+Once you get the X & Y coordinates of a window (at the end of dragMove(), using getCurrentWindow(), etc.), With a simple calculation, you can determine which monitor the window is displayed. (For example, if you know that the 1st monitor has 1080px width, and the current window position start beyond that, it means that the window is displayed on the second monitor, etc.)
+
+Update: now you can get the monitor id of the current window using [overwolf.windows.getCurrentWindow()](/api/windows#getcurrentwindowcallback)

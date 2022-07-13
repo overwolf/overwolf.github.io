@@ -1,0 +1,228 @@
+---
+id: how-to-test-your-app
+title: How to test your App
+sidebar_label:  App testing basics
+---
+
+## Testing Practices
+The Overwolf team will review your app when you submit it for the first time, as well as whenever you would like to update it.  
+Some tests may change depending on your app, as sometimes testing is more effective with specific tests than with the generic ones.
+
+In this article we will share how our testing process works, what we're focused on, and what you should focus on when polishing up your app for submission. Please don’t hesitate to ask us questions over Slack or via email: developers@overwolf.com 
+
+## App Manifest
+
+### Consistent UID
+
+Make sure that the [author and app name](/api/manifest#meta-name) are identical in every version. Changes in these parameters will change the UID of your app and cause issues, so make sure that they remain consistent through every update.
+  
+### Validate your manifest
+
+Make sure to validate your manifest.json syntax:
+
+  1. Copy the contents of the app’s manifest.json and paste it in [jsonlint.com](https://jsonlint.com/).
+  2. Press the "validate" button in jsonlint.com (If you're seeing "valid json", it's clear).
+  3. Make sure you have no errors reported.
+
+### Validate the schema
+
+Ensure that your manifest.json is consistent with our schema:
+
+  1. Copy the contents of the app’s manifest.json and paste it under "Input JSON:" in [jsonschemavalidator.net](https://www.jsonschemavalidator.net/).
+  2. Copy the contents of our [schema](https://raw.githubusercontent.com/overwolf/community-gists/master/overwolf-manifest-schema.json) and paste it under "Select schema:". 
+  3. Make sure you have no errors and that you see a green checkmark with the text "No errors found. JSON validates against the schema".
+
+#### Minimal Overwolf supported version
+
+Examine your app's [Overwolf minimal version](/api/manifest#meta-minimum) and compare it to the previous version's Overwolf Minimal version. Unless your update requires new properties or APIs, these versions should be identical.
+
+#### Verify correct Advertisement flags
+
+1. `"block_top_window_navigation":true` – Means that whenever app users click on an ad, it will open the link in a new window.
+2. `"popup_blocker":true` – This flag prevents ads that will try to create a popup for the user without the user’s consent.
+3. `"mute":true` - Mute sounds in window.
+
+#### Verify the 'launcher_icon' property
+
+1. Make sure `"launcher_icon": "icon.ico"` appears in the “meta” object, `icon.ico` can have any name as long as the icon exists in the app's opk file.
+2. Check that the `icon.ico` file exists in your app folder/opk and its size is smaller than 150KB.
+3. Make sure that you have the following resolutions for it: `16x16, 32x32,48x48, 256x256`.
+
+#### Verify the 'icon' and 'icon_gray' property
+
+1. Make sure `"icon": "IconMouseOver.png"` and `"icon_gray": "IconMouseNormal.png"` appear in the “meta” object, `IconMouseOver.png` and `IconMouseNormal.png` can have any name as long as the icons exist in the app's opk file.
+2. Check that the `IconMouseOver.png` & `IconMouseNormal.png` files exist in your app folder/opk and their size is smaller than 30KB.
+3. Make sure that both .png files are `256x256` in resolution size.
+  
+#### Verify game_targeting flag existence
+
+#### Verify correct launch_events
+
+## Windows
+
+### Resolution Compatibility
+
+1. Before testing, DPI should be set to 100% and window resolution should be 1920 x 1080.
+
+2. Change your screen resolution to the following settings and make sure that the app window stays within the borders of your screen:
+
+    * 1366 x 720 – 100 DPI
+    * 1366 x 768 – 100 DPI
+    * 1920 X 1080 – 125 DPI
+    * 3840 X 2160 – 150 DPI
+    
+### Window states
+
+The following test should demonstrate how your app behaves in-game when in different window states:
+
+1. Launch the game your app supports and test the app in full-screen (game window), make sure everything is in place.
+2. Change to windowed mode and make sure that everything is still in place.
+  
+#### Window behavior when "out of focus"
+
+Overwolf only displays overlays in a game when the game is in focus. That means that whenever your game is alt+tabbed or minimized, no app window should appear anywhere.  
+
+For the following test, you should launch the game your app supports and make sure that the app launched correctly. Then, you should Alt + Tab out of the game and make sure that your app window does not show on desktop.  
+
+When you alt+tab back to the game, the app should work normally.
+ 
+## Overlay
+
+### In-Game Behavior
+
+Test preconditions: The user is now running the game your app supports.
+
+1. Open the app window with your designated hotkey and make sure the overlay appears properly.
+2. Test general app functionality in-game and ensure your features work.
+3. Click the app window in spots where clicks going through to the game would have an effect. For example, click an app button which covers an in-game menu and make sure your clicks only affect the app layer and never that menu.
+4. Any in-game browser links must be opened in overwolf's browser, or if they must be opened in the user's default browser, first prompt a warning to the user and let them know.
+  
+## Hotkeys
+
+### General functionality
+
+1. Use hotkey to launch App and ensure it launches properly.
+
+2. Use hotkey again to minimize your App.
+
+3. Change your app's designated hotkey and make sure the change appears in settings.
+
+4. Use changed hotkey to launch App and ensure it launches properly.
+
+5. Use changed hotkey again to minimize your app.
+
+6. Allow users to change hotkey combinations from inside your app’s settings panel by automatically directing the user to the Overwolf settings page as suggested in our best practices Hotkeys segment. More information about hotkeys can be found in the manifest.json and overwolf.settings API pages – Make sure that when it’s done, the new hotkey is updated automatically in your app without needing to re-launch the app.
+
+7. Launch your app using the dock icon while in-game. The dock icon must provide some form of functionality to the user.
+
+### Test mid-game installation
+
+Preconditions: Uninstall your app to perform the following test.
+
+1. While in-game, open the Overwolf Appstore and install the app, or just use an opk.
+
+2. Use hotkey to launch app and see whether it successfully opens.
+
+3. Use hotkey again to minimize the app.
+
+4. Change the designated hotkey and use it again to launch the app.
+
+5. Used the changed hotkey again to minimize the app.
+
+6. Whenever a user changes their hotkey – make sure that your app changes both functionality and UI.
+
+## Desktop
+
+### Desktop app Behaviour
+
+1. Launch your App while in desktop, test that the app window appears in 30 milliseconds or less - but it's alright if it shows up and then displays a loader until it's ready for use.
+
+2. Test your app's desktop functionality and features.
+
+3. Close Overwolf and launch your app using the desktop icon.
+
+4. Verify all windows are close upon exit, as well as all app-related processes in http://localhost:54284 (except those that are designed to be background processes).
+
+## Game specific apps
+
+If your app supports a specific game only, make sure it runs when you launch that game and doesn't for others.
+
+## Performance
+
+### Memory & CPU Usage
+
+Preconditions: Open Overwolf task manager as well as the Windows task manager.
+
+* Use your app's basic functionality, ensure it doesn't hang, lag or stops responding.
+* Use the app while checking the Overwolf task manager. App memory usage should rise and fall, if it doesn't drop back down after rising - the app might have a memory leak.
+* Click the performance tab in Windows Task manager, keep an eye out for spikes in CPU, memory or network usage while using your app.
+
+### Dock icon size
+
+Dock icons should be .png format files, sized 256×256 pixels and weighing under 30KB. This is true for both greyscale and full color icons.
+
+### Internet access
+
+ 1. Disconnect from the internet and verify your app still launches normally.
+
+ 2. When offline, make sure your app displays a “check your internet connection” type message.
+
+ 3. If the app requires an internet connection to function then it should be clarified for users in the app's window.
+
+ 4. You can detect whether your app is offline or not in a couple of ways. The most straightforward way is to use the [navigator.onLine property](https://stackoverflow.com/questions/16035577/check-if-there-is-an-internet-connection) ,but we recommend to implement more reliable tools, [like this one](https://zen-and-art-of-programming.blogspot.com/2014/04/html-5-offline-application-development.html) for example.
+
+## Ads
+
+In order to get a 400x300 video test ad enabled on your app, please follow these steps:
+
+1. Open app
+2. Paste `localStorage.owAdsForceAdUnit = "Ad_test"` into the console
+3. Press F5 to refresh window
+4. Open http://localhost:54284
+5. Open app
+
+In order to get a 300x250 video test ad enabled on your app, please follow these steps:
+
+1. Open app
+2. Paste `localStorage.owAdsForceAdUnit = "Ad_test_300x250"` into the console
+3. Press F5 to refresh window
+4. Open http://localhost:54284
+5. Open app
+
+### Testing Ad visibility
+
+1. Launch your app.
+
+2. Go over your app screens and look for the ad placements, ensure ads appear properly.
+
+3. Click an ad, it should open the link in a new browser window external to your app.
+
+4. Click on the ad 5 times, make sure five different browsers are launched without crashing Overwolf or harming your app's performance.
+
+### Ad click functionality
+
+1. Launch your app.
+
+2. Click on any element that is hiding ads and make sure the ads do not open and that your element functions as intended.
+  
+### Ads are not hidden
+
+Open Overwolf's developer tools by pressing ctrl + shift + i, and look at the console. No ad processes should be visible if no ads are displayed on screen.
+
+### Ads remove and refresh
+
+Ads should close when your app window is minimized.
+
+  1. Open `http://localhost:54284/` in browser.
+
+  2. Launch your app, navigate to a screen where ads are presented.
+
+  3. Close the app using a hotkey or manually.
+
+  4. No ad process should be found in the localhost.
+
+ ## Pre-Release
+
+ ### App's opk file doesn't warn for any viruses
+ 
+ Before sending any opk file for our approval, make sure that [virustotal.com](https://www.virustotal.com/gui/home/upload) doesn't warn about any viruses for it. Any opk's which virustotal warns about will not be tested.

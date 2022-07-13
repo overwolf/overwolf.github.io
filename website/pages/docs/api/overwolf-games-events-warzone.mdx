@@ -1,14 +1,17 @@
 ---
 id: overwolf-games-events-warzone
 title: "Call of Duty: Warzone"
+hide_title: true
 sidebar_label: "Call of Duty: Warzone"
 ---
 
+<GameInfo gameID={21626} showCompliance={true} showDocs={false}/>
+
 Please read the [overwolf.games.events](overwolf-games-events) documentation page to learn how to use Overwolf game events.
 
-:::important Game ID
+<!-- :::important Game ID
 21626
-:::
+::: -->
 
 :::warning
 * Support for these events is for English only and for 16:9 (1920&#42;1080) and 16:10 (1920&#42;1200) screen resolutions on , the game window must be visible and should run with native screen resolution.
@@ -31,7 +34,7 @@ For more information check our [Game compliance principles](https://overwolf.git
 
 ## Game event status
 
-It is highly recommended to communicate errors and warnings to app users. 
+It is highly recommended to communicate errors and warnings to app users.
 
 Check the current game event status [here](../status/all). Alternately, you can easily check that status from your app itself, [using our API](../topics/howto-check-events-status-from-app).
 
@@ -40,7 +43,7 @@ Check the current game event status [here](../status/all). Alternately, you can 
 ### Info Updates
 
 key          | Category    | Values                    | Notes                 | Since GEP Ver. |
------------- | ------------| ------------------------- | --------------------- | ------------- | 
+------------ | ------------| ------------------------- | --------------------- | ------------- |
 gep_internal | gep_internal| Local + Public version number|See [notes](#gep_internal-note)|   143.0       |
 
 #### *gep_internal* note
@@ -81,7 +84,11 @@ Data Example:
 ### Info Updates
 
 key          | Category    | Values                    | Notes                 | Since GEP Ver. |
+<<<<<<< HEAD
 ------------ | ------------| ------------------------- | --------------------- | ------------- | 
+=======
+------------ | ------------| ------------------------- | --------------------- | ------------- |
+>>>>>>> origin/game-info-component
 battlenet_tag| game_info   | Local player's Battlenet tag. |See [notes](#battlenet_tag-note)|   157.0       |
 
 #### *battlenet_tag* note

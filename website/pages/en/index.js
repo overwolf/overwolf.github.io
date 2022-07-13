@@ -8,7 +8,7 @@ function EasilySection(props) {
       <div className="container">
         <header>Easily create apps for PC gamers</header>
         <p>Overlay, real-time game events, monetization, auto patching, Anti-Cheat compatibility and all that good stuff</p>
-        <a className="btn" href={`${baseUrl}docs/start/getting-started`}>Build an app</a>
+        <a className="btn" href={`${baseUrl}start/getting-started`}>Build an app</a>
       </div>
     </section>
   );

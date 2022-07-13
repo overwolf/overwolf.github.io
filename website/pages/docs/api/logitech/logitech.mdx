@@ -1,0 +1,53 @@
+---
+id: logitech
+title: overwolf.logitech API
+sidebar_label: overwolf.logitech
+---
+
+An API for Logitech features.
+
+## Methods Reference
+
+* [overwolf.logitech.getVersion()](#getversioncallback)
+* [overwolf.logitech.getDevices()](#getdvicescallback)
+
+## Types Reference
+
+* [overwolf.logitech.overwolf.logitech.LogitechData](#overwolflogitechlogitechdata-object) Object
+* [overwolf.logitech.Logitech Device](#logitech-device-object) Object
+
+## getVersion(callback)
+#### Version added: 0.93
+
+> Gets the current version of the Logitech Gaming Software.
+
+Parameter | Type                  | Description                                        |
+--------- | ----------------------| -------------------------------------------------- |
+callback  | function              | Called with the version of LGS currently installed |
+
+## getDevices(callback)
+#### Version added: 0.93
+
+> Gets the currently installed Logitech devices.
+
+Parameter | Type                  | Description                                        |
+--------- | ----------------------| -------------------------------------------------- |
+callback  | function              | Called with the current device information         |
+
+## LogitechData Object
+#### Version added: 0.93
+
+> Container for Logitech data.
+
+Parameter            | Type                                         | Description                                     |
+-------------------- | ---------------------------------------------| ----------------------------------------------- |
+minimal_lgs_version  | version Object (string wrapper)              | Minimal LGS version required for this app |
+arx                  | [LogitechArxData](logitech/led#overwolflogitechledlogitecharxdata-object) Object | The Arx API data  |
+led                  | [LogitechLedData](logitech/led#overwolflogitechledlogitechleddata-object) Object | The LED API data  |
+
+## Logitech Device Object
+#### Version added: 0.93
+
+> Logitech device type.
+
+No further info.
