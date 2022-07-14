@@ -1,0 +1,41 @@
+---
+id: 143
+title: "Version 0.143"
+sidebar_label: "0.143"
+sidebar_position: 143
+---
+
+### Game events
+
+* The Vulkan Graphics API is now supported.
+* From now, whenever you try to use an obsolete API, the dev console will print a warning.  
+  Try: overwolf.setting.getCurrentOverwolfLanguage().
+* New API - [overwolf.settings.language](/api/settings/language).  
+  Returns an object with language methods and events.
+  * [overwolf.settings.language.get()](/api/settings/language#getcallback).
+  * [overwolf.settings.language.onLanguageChanged](/api/settings/language#onlanguagechanged) event.
+* New event: [overwolf.windows.onScreenPropertyChanged](/api/windows#onscreenpropertychanged).  
+  Detect moving window to another monitor.  
+  Triggered if more than 50% of the window has been moved to another monitor.  
+  Returns the new monitor handle.
+* Upgrade OBS to 24.0.5.  
+  * Update FFMpeg version.
+  * Support new NVEC Encoders ("NVEC New").
+* Allow overriding recording indication type and position in API:  
+  Now when calling [overwolf.streaming.start()](/api/streaming#startsettings-callback), [indication_position](/api/streaming#indication_position-enum) and [indication_type](/api/streaming#indication_type-enum) can be set under video settings. (Until now, you could do that only from the OW client UI).
+* HTTPS - "Referrers", "Origins", and "AncestorsOrigin" should now all be using HTTPS instead of HTTP.
+
+### Game events
+
+* PUBG Lite game events
+  * New supported game
+* [Legends of Runeterra game events](/api/games/events/legends-of-runeterra)
+  * New supported game
+* [World of Warcraft game events](/api/games/events/world-of-warcraft)
+  * New supported game
+* [Rocket League game events](/api/games/events/rocket-league)
+  * New info updates:
+    * server_info
+    * mutator_settings
+    * arena
+

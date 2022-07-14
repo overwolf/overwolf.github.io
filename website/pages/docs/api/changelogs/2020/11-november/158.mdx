@@ -1,0 +1,53 @@
+---
+id: 158
+title: "Version 0.158"
+sidebar_label: "0.158"
+sidebar_position: 158
+---
+
+### API
+
+* [disable_hardware_acceleration](/api/manifest#disable_hardware_acceleration) new manifest flag:
+  * Diable GPU hardware acceleration, per window.
+  * Relevant only for native windows.
+  * It should always be used for native windows that are running on the secondary screen. It improves the game's performance by reducing the usage of the GPU while you are playing and fixes a bug where some users encountered FPS drops when using a secondary screen. 
+* New API: [overwolf.games.inputTracking.onMouseWheel](/api/games/input-tracking#onmousewheel): Fired a mouse wheel event.
+* New window manifest flag [restrict_to_game_bounds](/api/manifest#restrict_to_game_bounds):  
+  Restrict window to game client (window) area. A window will always stay inside the game window while dragging.
+* URI protocol: allows apps to open by using a URI protocol that can be passed via the command-line or a web address.  
+  Just add the new [url_protocol](/api/manifest#url_protocol) flag to your app's manifest, to create a link to your app.  
+  For example: "outplayed://something/null".  
+  Then, you can use this link in a webpage or app, and it will open your OW app, with an option to send some additional data to your app. 
+
+### Platform
+
+* Block custom schemas from non extensions urls: make sure that only our schema still work: (overwolf://, fs://, extensions://, folder://)
+* [disable_hardware_acceleration](/api/manifest#disable_hardware_acceleration) new manifest flag:
+  * Diable GPU hardware acceleration, per window.
+  * Relevant only for native windows.
+  * It should always be used for native windows that are running on the secondary screen. It improves the game's performance by reducing the usage of the GPU while you are playing and fixes a bug where some users encountered FPS drops when using a secondary screen. 
+
+### Bug Fixes
+
+* Fix bug that prevets to notify all the apps using highlights when the game was closed during the highlight capture.
+* Removed user token from logs: we used to write the user token after changes to the login state.
+* Improve in-game dragging: Fixes an offset when dragging windows ingame.
+* Taken hotkeys don't appear as unassigned: Fix when the client can’t detect ‘unassigned’ hotkeys when they are already taken.
+
+### Dev Console
+
+* Added the ability to reply to user feedback/review on the app store. 
+
+### Game Events
+
+* [Call of Duty - Warzone](/api/games/events/call-of-duty-warzone)
+  * Auto-highlights support.
+  * New events:
+    * kill
+    * death
+    * assist
+  
+* [Final Fantasy XIV](/api/games/events/final-fantasy-xiv)
+  * New info update under:
+    * match_info
+

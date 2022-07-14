@@ -1,0 +1,71 @@
+---
+id: 191
+title: "Version 0.191"
+sidebar_label: "0.191"
+sidebar_position: 191
+---
+
+* This patch includes a bunch of under the hood changes for some upcoming APIs.
+
+### Dev Console
+* <a href="https://www.npmjs.com/package/@overwolf/ow-cli/" target="_blank">CLI</a> - A new tool to help you manage your Overwolf app
+
+### Game events
+
+ * [Minecraft](/api/games/events/minecraft)
+   * New info_update
+     * counters - ping
+     * player_X - list of active players in the game
+
+ * [Rainbow Six Siege](/api/games/events/rainbow-six-siege)
+   * Add player_id in roster - [here](/api/games/events/rainbow-six-siege#roster)
+
+<div>{/* * [World of Warcraft](/api/games/events/world-of-warcraft)
+  * Add new event for Addons varaibles var_addon_xx */} </div>
+
+ * [Halo Infinite](/api/games/events/halo-infinite)
+   * Add new info updates
+      * playlist
+      * game_type
+      * game_mode
+
+### Docs
+
+* No changes.
+
+### API
+- [`overwolf.utils.checkForClientUpdates()`](/api/utils) - This new method can be used to check whether an Overwolf update is available.  
+ Example of the returned callback: 
+    ```
+      channel: "Developers"
+      currentVersion: "0.191.0.4"
+      hasUpdate: false
+      newVersion: null
+      success: true
+      updatesDisabled: false
+    ```
+    Please note that Overwolf will stop displaying the overlay in-game if it was updated while the game was running.
+ -   [`overwolf.windows.getWindow()`](/api/windows) - This methods returns 
+ the WindowInfo object for any window that has been called with `overwolf.windows.obtainDeclaredWindow`. It's better to use this method instead of using 
+ `obtaintDeclaredWindow` if the the window you are refering to has already
+been declared.
+
+### Platform
+New `manifest.json` properties:
+ - [`auto_relaunch_on_crash`](/api/manifest#auto_relaunch_on_crash)
+   - Relaunches an app if it crashes.
+   - If the app crashes consecutively more than 5 times, we will stop trying to relaunch it.
+ - [`open_dev_tools`](/api/manifest#open_dev_tools)
+   - Used for debugging, automatically opens the dev tools when an app window opens. 
+
+### Bug Fixes
+- `overwolf.media.videos.createVideoCompositionFiles()` - Fixed a possible audio
+syncing issue when composing more than 2 files.
+- `overwolf.media.videos.createVideoComposition()` - Fixed a possible error when
+having more than two segments.
+- Reduced internal cache when checking for a possible app update when using 
+"test" channels. This will hopefully reduce the time frame from the moment a developer updates
+the "test" channel until the update reaches the users.
+- Fixed a descrepency in the storage paths when an app's display name was added.
+- Fixed an issue where non-developers were able to load extensions as unpacked.
+

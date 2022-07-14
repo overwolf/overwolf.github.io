@@ -1,0 +1,44 @@
+---
+id: 198
+title: "Version 0.198"
+sidebar_label: "0.198"
+sidebar_position: 198
+---
+
+* Note that iterations 196 to 198 were combined into a single iteration. 
+
+### Game events
+* [Dota](/api/games/events/dota-2)
+  * New info update team_score with the score of each team during the game more info [here](/api/games/events/dota-2)
+* [Rocket League](/api/games/events/rocket-league)
+  * Support dropshot game mode
+* [Call of duty - Vanguard](/api/games/events/call-of-duty-vanguard)
+  * Add support and new events for Call of Duty: Vanguard
+  * The implementation of this game's GEP is experimental and is considered a Beta version
+* [Fortnite](/api/games/events/fortnite)
+  * Add new info update of roster - see notes [here](/api/games/events/fortnite#roster-note)
+  * Add the name of the knocked out player in knockout event- see notes [here](/api/games/events/fortnite#knockout-note)
+
+### Docs
+- Updated the documentation to reflect the new API changes listed below.
+- Added documentation of the [`automation`](/start/getting-started/using-dev-tools#enabling-automation-testing-with-automation-flag) flag.
+
+### API
+- New API: A new and improved share method, giving feedback of upload progress (to allow for custom notification behaviour), and allowing cancellation of uploads midway, for all supported social media. To get started, check the relevant network's api documentation for the following methods by replacing * with the specific network you wish to work with (e.g. discord):
+    * `overwolf.social.*.shareEx()`
+    * `overwolf.social.*.cancelShare()`
+
+  And the objects:
+    * `overwolf.social.*.*ShareParameters` - Two new parameters: `id` and `useOverwolfNotifications` have been added for the new API.
+    * `overwolf.social.*.SocialShareResult`
+    * `overwolf.social.*.SocialShareProgress`
+
+- New API: [`overwolf.utils.getClientInfo`](/api/utils) - a method for obtaining the Overwolf client's uptime, as well as install date.
+- Updated API: [`overwolf.windows.onAltF4Blocked`](/api/windows) - is now invoked for all windows in the app as soon as it occursed on any window. Event result now also contains the name of the window that caused the invocation.
+
+
+### Bug Fixes
+- Overwolf windows no longer have visual artifacts when running Fortnite using DirectX 12 on AMD Graphics Cards.
+
+
+

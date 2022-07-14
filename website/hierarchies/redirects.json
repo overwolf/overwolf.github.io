@@ -4,7 +4,7 @@
     "from": "/docs/api/auto-highlights"
   },
   {
-    "to": "/api/changelog",
+    "to": "/api/changelogs",
     "from": "/docs/api/changelog"
   },
   {
@@ -68,15 +68,15 @@
     "from": "/docs/api/overwolf-games-events-apex-legends"
   },
   {
-    "to": "/api/games/events/autochess",
+    "to": "/api/games/ids",
     "from": "/docs/api/overwolf-games-events-autochess"
   },
   {
-    "to": "/api/games/events/csgo",
+    "to": "/api/games/events/counter-strike-global-offensive",
     "from": "/docs/api/overwolf-games-events-csgo"
   },
   {
-    "to": "/api/games/events/dota2",
+    "to": "/api/games/events/dota-2",
     "from": "/docs/api/overwolf-games-events-dota2"
   },
   {
@@ -88,15 +88,15 @@
     "from": "/docs/api/overwolf-games-events-eternal-return"
   },
   {
-    "to": "/api/games/events/ff-xiv",
+    "to": "/api/games/events/final-fantasy-xiv",
     "from": "/docs/api/overwolf-games-events-ff-xiv"
   },
   {
-    "to": "/api/games/events/fm2021",
+    "to": "/api/games/events/football-manager-2021",
     "from": "/docs/api/overwolf-games-events-fm2021"
   },
   {
-    "to": "/api/games/events/fm2022",
+    "to": "/api/games/events/football-manager-2022",
     "from": "/docs/api/overwolf-games-events-fm2022"
   },
   {
@@ -112,7 +112,7 @@
     "from": "/docs/api/overwolf-games-events-hearthstone"
   },
   {
-    "to": "/api/games/events/hots",
+    "to": "/api/games/events/heroes-of-the-storm",
     "from": "/docs/api/overwolf-games-events-hots"
   },
   {
@@ -120,15 +120,15 @@
     "from": "/docs/api/overwolf-games-events-hunt-showdown"
   },
   {
-    "to": "/api/games/events/lol",
+    "to": "/api/games/events/league-of-legends",
     "from": "/docs/api/overwolf-games-events-lol"
   },
   {
-    "to": "/api/games/events/lor",
+    "to": "/api/games/events/legends-of-runeterra",
     "from": "/docs/api/overwolf-games-events-lor"
   },
   {
-    "to": "/api/games/events/makerking",
+    "to": "/api/games/events/maker-king",
     "from": "/docs/api/overwolf-games-events-makerking"
   },
   {
@@ -136,7 +136,7 @@
     "from": "/docs/api/overwolf-games-events-minecraft"
   },
   {
-    "to": "/api/games/events/mtga",
+    "to": "/api/games/events/magic-the-gathering-arena",
     "from": "/docs/api/overwolf-games-events-mtga"
   },
   {
@@ -152,7 +152,7 @@
     "from": "/docs/api/overwolf-games-events-path-of-exile"
   },
   {
-    "to": "/api/games/events/pubg",
+    "to": "/api/games/events/player-unknowns-battlegrounds",
     "from": "/docs/api/overwolf-games-events-pubg"
   },
   {
@@ -164,19 +164,19 @@
     "from": "/docs/api/overwolf-games-events-rocket-league"
   },
   {
-    "to": "/api/games/events/sc2",
+    "to": "/api/games/events/starcraft-2",
     "from": "/docs/api/overwolf-games-events-sc2"
   },
   {
-    "to": "/api/games/events/splitgate",
+    "to": "/api/games/events/splitgate-arena-warfare",
     "from": "/docs/api/overwolf-games-events-splitgate"
   },
   {
-    "to": "/api/games/events/tft",
+    "to": "/api/games/events/teamfight-tactics",
     "from": "/docs/api/overwolf-games-events-tft"
   },
   {
-    "to": "/api/games/events/underlords",
+    "to": "/api/games/events/dota-underlords",
     "from": "/docs/api/overwolf-games-events-underlords"
   },
   {
@@ -188,7 +188,7 @@
     "from": "/docs/api/overwolf-games-events-valorant"
   },
   {
-    "to": "/api/games/events/vanguard",
+    "to": "/api/games/events/call-of-duty-vanguard",
     "from": "/docs/api/overwolf-games-events-vanguard"
   },
   {
@@ -196,7 +196,7 @@
     "from": "/docs/api/overwolf-games-events-warframe"
   },
   {
-    "to": "/api/games/events/warzone",
+    "to": "/api/games/events/call-of-duty-warzone",
     "from": "/docs/api/overwolf-games-events-warzone"
   },
   {
@@ -204,11 +204,11 @@
     "from": "/docs/api/overwolf-games-events-wot"
   },
   {
-    "to": "/api/games/events/wow",
+    "to": "/api/games/events/world-of-warcraft",
     "from": "/docs/api/overwolf-games-events-wow"
   },
   {
-    "to": "/api/games/events/wows",
+    "to": "/api/games/events/world-of-warships",
     "from": "/docs/api/overwolf-games-events-wows"
   },
   {
@@ -224,7 +224,7 @@
     "from": "/docs/api/overwolf-games-launchers-events"
   },
   {
-    "to": "/api/games/launchers/events/lol",
+    "to": "/api/games/launchers/events/league-of-legends",
     "from": "/docs/api/overwolf-games-launchers-events-lol"
   },
   {
@@ -492,7 +492,7 @@
     "from": "/docs/start/subscriptions-request-form"
   },
   {
-    "to": "/start/maintain-your-app/support-your-users",
+    "to": "/start/maintain-your-app/support-experience",
     "from": "/docs/start/support-your-users"
   },
   {
@@ -512,27 +512,27 @@
     "from": "/docs/start/using-dev-tools"
   },
   {
-    "to": "/start/game-compliance/cod-warzone",
+    "to": "/start/game-compliance/call-of-duty-warzone",
     "from": "/docs/start/warzone-compliance"
   },
   {
-    "to": "/status/all",
+    "to": "/status",
     "from": "/docs/status/all"
   },
   {
-    "to": "/status/apex",
+    "to": "/status/apex-legends",
     "from": "/docs/status/apex"
   },
   {
-    "to": "/status/auto-chess",
+    "to": "/status",
     "from": "/docs/status/auto-chess"
   },
   {
-    "to": "/status/csgo",
+    "to": "/status/counter-strike-global-offensive",
     "from": "/docs/status/csgo"
   },
   {
-    "to": "/status/dota2",
+    "to": "/status/dota-2",
     "from": "/docs/status/dota2"
   },
   {
@@ -544,15 +544,15 @@
     "from": "/docs/status/eternal-return"
   },
   {
-    "to": "/status/ff-xiv",
+    "to": "/status/final-fantasy-xiv",
     "from": "/docs/status/ff-xiv"
   },
   {
-    "to": "/status/fm2021",
+    "to": "/status/football-manager-2021",
     "from": "/docs/status/fm2021"
   },
   {
-    "to": "/status/fm2022",
+    "to": "/status/football-manager-2022",
     "from": "/docs/status/fm2022"
   },
   {
@@ -576,15 +576,15 @@
     "from": "/docs/status/hunt-showdown"
   },
   {
-    "to": "/status/lol",
+    "to": "/status/league-of-legends",
     "from": "/docs/status/lol"
   },
   {
-    "to": "/status/launchers/lol",
+    "to": "/status/launchers/league-of-legends",
     "from": "/docs/status/lol-launcher"
   },
   {
-    "to": "/status/lor",
+    "to": "/status/legends-of-runeterra",
     "from": "/docs/status/lor"
   },
   {
@@ -592,7 +592,7 @@
     "from": "/docs/status/minecraft"
   },
   {
-    "to": "/status/mtga",
+    "to": "/status/magic-the-gathering-arena",
     "from": "/docs/status/mtga"
   },
   {
@@ -604,7 +604,7 @@
     "from": "/docs/status/overwatch"
   },
   {
-    "to": "/status/past-incidents",
+    "to": "/status",
     "from": "/docs/status/past-incidents"
   },
   {
@@ -612,7 +612,7 @@
     "from": "/docs/status/path-of-exile"
   },
   {
-    "to": "/status/pubg",
+    "to": "/status/player-unknowns-battlegrounds",
     "from": "/docs/status/pubg"
   },
   {
@@ -624,11 +624,11 @@
     "from": "/docs/status/rocket-league"
   },
   {
-    "to": "/status/sc2",
+    "to": "/status/starcraft-2",
     "from": "/docs/status/sc2"
   },
   {
-    "to": "/status/splitgate",
+    "to": "/status/splitgate-arena-warfare",
     "from": "/docs/status/splitgate"
   },
   {
@@ -636,7 +636,7 @@
     "from": "/docs/status/teamfight-tactics"
   },
   {
-    "to": "/status/underlords",
+    "to": "/status/dota-underlords",
     "from": "/docs/status/underlords"
   },
   {
@@ -648,7 +648,7 @@
     "from": "/docs/status/valorant"
   },
   {
-    "to": "/status/vanguard",
+    "to": "/status/call-of-duty-vanguard",
     "from": "/docs/status/vanguard"
   },
   {
@@ -656,7 +656,7 @@
     "from": "/docs/status/warframe"
   },
   {
-    "to": "/status/warzone",
+    "to": "/status/call-of-duty-warzone",
     "from": "/docs/status/warzone"
   },
   {
@@ -680,7 +680,7 @@
     "from": "/docs/support/create-ticket"
   },
   {
-    "to": "/support/client-downloads",
+    "to": "/support/developer-client-downloads",
     "from": "/docs/support/download-overview"
   },
   {

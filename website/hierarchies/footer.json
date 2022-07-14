@@ -53,8 +53,8 @@
         "title": "Documentation",
         "items": [
             {
-                "label": "Changelog",
-                "to": "/api/changelog"
+                "label": "Changelogs",
+                "to": "/api/changelogs"
             },
             {
                 "label": "API",
@@ -70,7 +70,7 @@
             },
             {
                 "label": "Game Events Status",
-                "to": "/status/all"
+                "to": "/status"
             }
         ]
     },

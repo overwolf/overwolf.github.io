@@ -1,0 +1,32 @@
+---
+id: 195
+title: "Version 0.195"
+sidebar_label: "0.195"
+sidebar_position: 195
+---
+
+### Dev Console
+- Soon
+
+### Game events
+* [Teamfight Tactics](/api/games/events/teamfight-tactics)
+  * Add new info update "augments" for the list of available augments feature in the match - see notes [here](/api/games/events/teamfight-tactics#me)
+* [Fortnite](/api/games/events/fortnite)
+  * Add new info update for ping and skirmish data - see notes [here](/api/games/events/fortnite)
+
+### API
+- New API: [`overwolf.games.tracked.onUnsupportedExecuted`](/api/games/tracked#onunsupportedexecuted) - a listener function that will trigger when a process that is defined as "Unsupported" in the Gameslist launches. It's important to note that it will only trigger if the app has defined `"track_all_games":true` in the `manifest.json`.
+
+### Platform
+- New `manifest.json` flag:
+  - `track_all_games` is a new optional manifest flag located under the [`launch_events`](/api/manifest#launch_event_settings-array) property, 
+	 It can only be used in conjuction when the "tracked" property is set to true.
+	 This flag will cause the app to launch whenever a process defined in the Gameslist launches, regardless of whether it has overlay support or not.
+
+### Bug Fixes
+- Hotkeys will now work on first launch when loading extension as unpacked.
+- Fixed an issue with video composition if the file path has a quote ( ` ) char
+- Fixed an out of memory issue when using our API to share large videos on YouTube.
+- Fixed cases when calling `bringToFront` changes the window maximized state. 
+- Resolved a case where we grabbed window focus upon creation of native windows, if the window was created as soon as a game was launched.
+

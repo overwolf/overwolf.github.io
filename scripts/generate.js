@@ -5,11 +5,11 @@ const exec = require('child_process').exec
 
 const async = require('async') // npm install async 
 
-const scriptsFolder = './' // add your scripts to folder named scripts
+const scriptsFolder = './generators/' // add your scripts to folder named scripts
 
 const files = fs.readdirSync(scriptsFolder) // reading files from folders
 const funcs = files.filter(function (file){
-  if(file.endsWith(".js") && file != "generate.js" && file != "clear.js") return true;
+  if(file.endsWith(".js")) return true;
   return false;
 }).map(function(file) {
   return exec.bind(null, `node ${scriptsFolder}${file}`) // execute node command
@@ -30,7 +30,7 @@ function getResults(err, data) {
     }
   })
 
-  return console.log(toClear.replace(/..\/website/gm, 'Generated: '))
+  return console.log(toClear.replace(/\.\.\/website/gm, 'Generated: '))
 }
 // to run your scipts in series use
 async.series(funcs, getResults)

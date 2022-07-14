@@ -1,0 +1,43 @@
+---
+id: 153
+title: "Version 0.153"
+sidebar_label: "0.153"
+sidebar_position: 153
+---
+
+Note that iterations 150 to 153 were combined into a single iteration.  
+
+### API
+
+* [overwolf.utils.openUrlInDefaultBrowser()](/api/utils#openurlindefaultbrowserurlopenurloptions) - Now allows extra behaviour. Right now "skip_in_game_notification" is the only option. When set to true, the alert notifying in-game users that their browser is about to open will not display. 
+* Add to [overwolf.utils.enums.eStorePage](/api/utils#estorepage-enum) - Now you can Open the requested app’s reviews/feedabck page in the Overwolf Appstore.
+* [overwolf.windows.getCurrentWindow()](/api/windows#getcurrentwindowcallback) now returns also the monitor id.  
+  Now you quickly determine which monitor the window is displayed.
+* New manifest flag - [process_name](/api/manifest#process_name-notes).  
+  using one simple flag in the manifest, app developers can now differentiate their own apps from the rest of the OverwolfBrwoser.exe process rubble in the Task Manager.  
+  By adding your custom "process_name" to an app manifest, all the processes related to the app ads are now running with the name given them by this flag.
+* Added extra info to the overwolf.settings.hotkeys.onChanged API, so it’s consistent with the overwolf.settings.hotkeys.get function.
+* The "file" param is now optional when calling overwolf.social.discord.share(). Instead, you can use the "message" param to include a URL of a file that you want to share.
+
+### Platform
+
+* [Disabled Dev Tools as a default](/topics/best-practices/enable-dev-tools#supported-features).  
+  From now on, when clicking Ctrl+Shift+I on a window will NOT open the developer tools. (Even if the [disable_dt](/api/manifest#disable_dt) manifest flag is set to false). The only way to enable it back is by changing a registry key.  
+* Allow pin to the taskbar (and launch the app + app icon):  
+  Now you can pin an open app to the taskbar, and the app icon will not change to the Overwolf icon, and the pinned app can be launched from the taskbar. (even if OW is closed)
+* Non-logged in app installations - We have reverted the need to be logged into Overwolf in order download and install apps.
+
+### Game events
+
+* [Minecraft](/api/games/events/minecraft)
+  * New supported game
+* [LOL](/api/games/events/league-of-legends)
+  * New updates under:
+    * match_info
+* [MTGA](/api/games/events/magic-the-gathering-arena)
+  * New updates under:
+    * game_info
+* [LoL Launcher](/api/games/launchers/events/league-of-legends)
+  * New updates under:
+    * clash
+

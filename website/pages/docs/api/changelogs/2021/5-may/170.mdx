@@ -1,0 +1,53 @@
+---
+id: 170
+title: "Version 0.170"
+sidebar_label: "0.170"
+sidebar_position: 170
+---
+
+### API
+
+* **App Channels:**  
+  Channels are no longer exclusive to the Overwolf client, apps can now also have channels; Creators can set a specific channel to use a specific version, this way they can super easily create and distribute beta versions for their apps.
+  * *Note that testing is still in progress. We will announce that soon for general usage.* 
+  * API: [The overwolf.settings.setExtensionSettings](/api/settings#setextensionsettingsextensionsettings-callback) function now accepts a new property in its [GeneralExtensionSettings](/api/settings#generalextensionsettings-object) object called `channel`, this will set the app to a specific channel.
+* **In-app Subscriptions flow:**  
+  We now give Creators the option to show the subscription modal inside their apps. You will never have to send the users to the store again.
+  * In order for this feature to work, the Creator will need to add `Subscription` to the “Permissions” array in the app’s `manifest.json` file.
+  * New API, [overwolf.profile.subscriptions.inapp](/api/profile/subscriptions/inapp): Allow apps to launch the subscription window inside their app and change subscription through the app (includs new permission: "subscription").
+  * API: New function introduced to return additional details about the subscribed user, such as expiry date and subscription state:  
+    [overwolf.profile.subscriptions.getDetailedActivePlans()](/api/profile/subscriptions#getdetailedactiveplanscallback).
+  *  new enum with the 3 available subscription states: active, cancelled, and revoked: [overwolf.profile.SubscriptionState](/api/profile/subscriptions#subscriptionstate-enum).
+  * [overwolf.profile.getCurrentUser](/api/profile#getcurrentusercallback) - this API now also returns the user’s display name.
+
+### Platform
+
+* .NET 4.8 implementation - we’ve upgraded the .NET version Overwolf uses to 4.8.
+
+### Dev Console
+
+* Subscriptions statistics page was added
+
+### Bug fixes
+
+* Fix [overwolf.utils.openUrlInOverwolfBrowser](/api/utils#openurlinoverwolfbrowserurl): allow to open tab and redirect back to extension when origin URL is at 'externally_connectable' and to tab was open from the same extension.
+* Overwolf no longer reloads apps when a secondary GPU process is being created.
+* Fixed a typo in setRequiredFeatures when getting the “Provider not ready” error, what was once `succedss` is now `success`.
+
+### Game events
+
+* Support for the COD: Warzone game has been disabled temporarily.
+* Support for the PUBG Lite game will be disabled permanently from Apr. 2021 since PUBG Lite will be shut down at that date. In addition, we will remove all the content from our site.
+* * [VALORANT](/api/games/events/valorant)
+  * New supported map - Breeze.
+* [Rocket League](/api/games/events/rocket-league)
+  * New info update under:
+    * game_info
+* [Apex Legends](/api/games/events/apex-legends)
+  * New "Arena" game mode will be enabled in the near future.
+* [Valheim](/api/games/events/valheim)
+  * New updates and events under:
+    * game_info
+    * kill
+
+

@@ -12,7 +12,7 @@ Please read the [overwolf.games.events](.) documentation page to learn how to us
 **Note** that TFT and LOL share the same Game ID.
 
 :::tip
-If you would like to know when the user is going to play TFT (hit the "Play" button), you can listen to the LoL Launcher [lobby_info](../launchers/events/lol#info-updates-3) info-update, and check the `queueID`. If it's 1090 or 1100 - it's TFT.
+If you would like to know when the user is going to play TFT (hit the "Play" button), you can listen to the LoL Launcher [lobby_info](../launchers/events/league-of-legends#info-updates-3) info-update, and check the `queueID`. If it's 1090 or 1100 - it's TFT.
 
 <b>Note:</b> Riot is working on a new TFT mode named "Hyperoll". The mode is currently available in the PBE servers and soon in live servers and can be detected as 1130 in the `queueID`.
 :::
@@ -36,7 +36,7 @@ If you would like to know when the user is going to play TFT (hit the "Play" but
 
 ## Game events status
 
-It's highly recommended to communicate errors to your users. Check game event status [here](/status/all) or easily verify event status directly from your app [using our API](/topics/using-events/how-to-check-events-status-from-app).
+It's highly recommended to communicate errors to your users. Check game event status [here](/status/) or easily verify event status directly from your app [using our API](/topics/using-events/how-to-check-events-status-from-app).
 
 :::important
 Because LOL and TFT share the same GameID, when checking TFTs game event status please use 21570 as the unique GameID for TFT.

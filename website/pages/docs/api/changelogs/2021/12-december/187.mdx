@@ -1,0 +1,42 @@
+---
+id: 187
+title: "Version 0.187"
+sidebar_label: "0.187"
+sidebar_position: 187
+---
+
+### Docs
+
+* [League of Legends](/api/games/events/league-of-legends)
+  * New feature in:
+    * jungle_camps
+      * baron & rift_herald icon_status remains at zero value at all times (Full information [here](https://github.com/overwolf/overwolf.github.io/blob/source/docs/games-events-league-of-legends.md#jungle_camp-note)).
+* [MTGA](/api/games/events/magic-the-gathering-arena)
+  * Removed draft token and sealed token from:
+    * inventory stats info update.
+* [Rainbow Six: Siege](/api/games/events/rainbow-six-siege)
+  * Since december 2021 patch - team colors provided by GEP do not correspond to the game's UI team color (the local player is always blue in the game's UI). The local player's score, team score and roster regarding to his color are still consistent.
+* [World of Warcraft](/api/games/events/world-of-warcraft)
+  * New feature in:
+    * addons
+* [Halo Infinite](/api/games/events/halo-infinite)
+  * New supported game.
+
+### API
+
+* New manifest flag for running background tasks when a user uninstalls an app like removing files, logs, images, etc...
+  * You can set the new manifest flag (under "data"):  
+    `"uninstall_window": { "file": "name.html", "required_runtime": 20000 }`
+  * More info [here](/api/manifest#uninstall_window-object).
+
+### Platform
+
+* Links open in default browser - All links existing in the store now open in the users’ default browser.
+* Analytics - When installing apps from the store’s carousel we specify it was from the carousel in the InstalledApp analytic.
+
+### Bug fixes
+
+* Fixed an issue where CEF wouldn’t receive the real window size in some cases when restoring native windows.
+* Fixed cases where Overwolf would freeze when turning on Replays with a webcam and closing a game.
+* Fixed an issue where users wouldn’t be able to resize the game window if Overwolf was running as Admin.
+

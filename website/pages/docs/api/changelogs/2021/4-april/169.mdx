@@ -1,0 +1,45 @@
+---
+id: 169
+title: "Version 0.169"
+sidebar_label: "0.169"
+sidebar_position: 169
+---
+
+### API
+
+* Improve OBS encoders support detection using the [overrwolf.streaming.getStreamEncoders()](/api/streaming#getstreamencoderscallback) API (we added new error state for unsupported encoders [EncoderData](/api/streaming#encoderdata-object) object).
+* Added the following properties to [overwolf.io.paths](/api/io/paths):
+  * overwolf install dir : 'overwolf.io.paths.overwolfInstallation'.
+  * overwolf install dir with version number : 'overwolf.io.paths.overwolfInstallationWithVersion'.
+  * obs dir : 'overwolf.io.paths.obsBin'.
+* Improved behavior when switching a video to full screen in an Overwolf native window.
+* New event: [overwolf.streaming.onSupportedEncodersUpdated](/api/streaming#supportedencodersupdatedevent-object) -  Fired upon support encoder list updated.
+
+### Platform
+
+* General stability fixes for OBS and uncommon recording failures, Improved error indications when we do fail to record.
+* Added support for overlay above UWP (Universal Windows Platform) games (minecraft, sea of thieves & roblox). some of these games are still not working perfectly, and currently, the plan is to only enable Sea of Thieves for UWP in the near future. 
+
+### Dev Console
+
+* General enhancments for the crash reports section.
+
+### Bug fixes
+
+* Fixed the issue where native windows can be resized greater than their manifest maximum size.
+* Fixed the issue where Video elements "glitched" when switching the app to full-screen mode.
+* Fixed the issue where you got an error that you should update your graphic card drivers only AFTER the game capturing starts. Now, you get this error before the capture starts.
+* Fixed the Rocket league (Epic version) invisible cursor issue.
+* CS:GO’s "Out of Process Overlay" is no longer the only supported overlay mode.
+* We've killed the nameless Overwolf window that would sometimes appear when going in-game.
+
+### Game events
+
+* [Valehim](/api/games/events/valheim)
+  * New supported game
+* [Dota](/api/games/events/dota-2)
+  * New info update
+    * game_mode
+* [TFT](/api/games/events/teamfight-tactics)
+ * Riot is working on a new TFT mode named "Hyperoll". The mode is currently available in the PBE servers and soon in live servers and can be detected as 1130 in the `queueID`.
+

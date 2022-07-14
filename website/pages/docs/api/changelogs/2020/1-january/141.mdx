@@ -1,0 +1,36 @@
+---
+id: 141
+title: "Version 0.141"
+sidebar_label: "0.141"
+sidebar_position: 141
+---
+
+* Manifest flag [enable_top_isolation](/api/manifest#enable_top_isolation) has been "moved up" in the hirarchy:  
+  Now it's per app and not per windows - means, it's under the "data" node and not the "window" node.  
+  Note that it's backward compatible (means that if one of the app windows set this flag in the manifest - it will auto-merge to the entire app).
+* New function: [overwolf.utils.OpenFilePicker](/api/utils#openfilepickerfilter-initialpath-callback).  
+  Now also accepts an initialPath parameter.
+* Logs: now end with the extension "log" (instead of numbers).  
+  In addition, logs file names are now counted where the last number one is the newest file.  
+* New function: [overwolf.streaming.split](/api/streaming#splitstreamid-callback).  
+  Split video files.
+* Implement the main features of the [IO-Pluign](/topics/using-plugins/simple-io-plugin) inside the [overwolf.io](/api/io) API: 
+  * [overwolf.io.dir()](/api/io#dirpath-callback)
+  * [overwolf.io.readBinaryFile()](/api/io#readbinaryfilepath-options-callback)
+  * [overwolf.io.readTextFile()](/api/io#readtextfilepath-options-callback)
+  * [overwolf.io.exist()](/api/io#existpath-callback)
+  * [overwolf.io.listenOnFile()](/api/io#listenonfileid-path-option-callback)
+  * [overwolf.io.stopFileListener()](/api/io#stopfilelistenerid)
+* [League of Legends Launcher Events](/api/games/launchers/events/league-of-legends#docsNav)
+  * New [status page](/status/launchers/league-of-legends) for LOL launcher.
+  * New update:
+    * is_garena_user
+* [Hearthstone game events](/api/games/events/hearthstone#docsNav)
+  * New info updates:
+    * Adventure Deck
+    * adventure_loot_options
+    * battlegrounds_rating
+* All game-events
+  * New update:
+    * gep_internal
+
