@@ -44,10 +44,6 @@ fs.readFile("configs/games-metadata.cfg", 'utf8', function (err, data) {
         if(data.search(tagger) === -1){
             console.error(paths[games != "" ? 1 : 0] + path + ".mdx" + " does not have a proper place for seo tagging")
         }
-        fs.writeFile(paths[games != "" ? 1 : 0] + path + ".mdx", data.replaceAll(tagger, "---\n\n" + seo + "\n\n$1").replaceAll("$tags", tags).replaceAll("$name", name), 'utf8', function err(err) {
-            if (err) {
-                return console.error(err)
-            }
-        })
+        fs.writeFileSync(paths[games != "" ? 1 : 0] + path + ".mdx", data.replaceAll(tagger, "---\n\n" + seo + "\n\n$1").replaceAll("$tags", tags).replaceAll("$name", name), 'utf8')
     }
 })

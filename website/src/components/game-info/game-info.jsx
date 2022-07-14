@@ -36,6 +36,7 @@ function GameInfo(props) {
   const gameOrLauncherName = GamesMetadata[gameID].launcher ? 'Launcher' : 'Game';
   const launcherID = GamesMetadata[gameID].launcherId;
   const launcherGameList = GamesMetadata[gameID].launcher ? GamesMetadata[gameID].launcher.games.length : 0;
+  const IsDisplayOrGameID = GamesMetadata[gameID].displayId ?  GamesMetadata[gameID].displayId : gameID;
 
   // ---------------------------------------------------------------------------
   return (
@@ -54,7 +55,8 @@ function GameInfo(props) {
         <ul className='game-info-list'>
 
           <li>
-            <span>{gameOrLauncherIdName}:</span>{gameID}
+            <span>{gameOrLauncherIdName}:</span>
+            {IsDisplayOrGameID}
           </li>
 
           { GamesMetadata[gameID].path && showStatus &&

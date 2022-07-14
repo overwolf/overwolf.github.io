@@ -10,9 +10,5 @@ fs.readFile("templates/changelogs.mdx", 'utf8', function (err, temp) {
     }
     let dev = logs["dev"]
     let cur = logs["latest"]
-    fs.writeFile(paths[0] + "changelogs.mdx", temp.replaceAll("$latest-ver", cur["name"]).replaceAll("$latest-date", cur["date"]).replaceAll("$latest-path", cur["path"]).replaceAll("$dev-ver", dev["name"]).replaceAll("$dev-date", dev["date"]).replaceAll("$dev-path", dev["path"]), function (err) {
-        if (err) {
-            return console.error(err)
-        }
-    })
+    fs.writeFileSync(paths[0] + "changelogs.mdx", temp.replaceAll("$latest-ver", cur["name"]).replaceAll("$latest-date", cur["date"]).replaceAll("$latest-path", cur["path"]).replaceAll("$dev-ver", dev["name"]).replaceAll("$dev-date", dev["date"]).replaceAll("$dev-path", dev["path"]))
 })

@@ -24,11 +24,7 @@ function getResults(err, data) {
   })
   let toClear = results.join('').trimEnd()
 
-  fs.writeFile("./configs/clear.cfg", toClear, 'utf8', function err(err) {
-    if (err) {
-        return console.error(err)
-    }
-  })
+  fs.writeFileSync("./configs/clear.cfg", toClear, 'utf8')
 
   return console.log(toClear.replace(/\.\.\/website/gm, 'Generated: '))
 }
