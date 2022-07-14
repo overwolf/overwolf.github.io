@@ -80,7 +80,7 @@ module.exports = {
     // "https://cdnjs.cloudflare.com/ajax/libs/overlayscrollbars/1.8.0/css/OverlayScrollbars.min.css",
     // "/css/code-block-buttons.css"
   ],
-  favicon: "img/ow-favicon.ico",
+  favicon: "/img/ow-favicon.ico",
   customFields: {
     wrapPagesHTML: true,
     homepage_title: "The Developers Site",
@@ -153,17 +153,17 @@ module.exports = {
       style: "dark",
       title: "Overwolf",
       logo: {
-        src: "img/headericon.svg"
+        src: "/img/headericon.svg"
       },
       items: require('./hierarchies/headers.json')
     },
-    image: "img/ow_share_new.png",
+    image: "/img/ow_share_new.png",
     footer: {
       style: "dark",
       links: require('./hierarchies/footer.json'),
       copyright: "<div class='c-inner'><p>Copyright © 2022 Overwolf</p></div>",
       logo: {
-        src: "img/ow-footer.svg"
+        src: "/img/ow-footer.svg"
       }
     },
     prism: {
