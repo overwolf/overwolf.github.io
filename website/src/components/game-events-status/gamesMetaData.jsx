@@ -1,6 +1,7 @@
 export const GamesMetadata = {  
   21566: {
     id: 21566,
+    launcherID: ,
     path: "/status/apex-legends",
     docs: "/api/games/events/apex-legends",
     iconUrl: "/img/games-logos/apex-legends.png",
@@ -9,6 +10,7 @@ export const GamesMetadata = {
   },  
   21960: {
     id: 21960,
+    launcherID: ,
     path: "/status/axie-infinity-origin",
     docs: "/api/games/events/axie-infinity-origin",
     iconUrl: "/img/games-logos/axie-infinity-origin.png",
@@ -17,6 +19,7 @@ export const GamesMetadata = {
   },  
   21876: {
     id: 21876,
+    launcherID: ,
     path: "/status/call-of-duty-vanguard",
     docs: "/api/games/events/call-of-duty-vanguard",
     iconUrl: "/img/games-logos/call-of-duty-vanguard.png",
@@ -25,6 +28,7 @@ export const GamesMetadata = {
   },  
   21626: {
     id: 21626,
+    launcherID: ,
     path: "/status/call-of-duty-warzone",
     compliance: "/start/game-compliance/call-of-duty-warzone",
     docs: "/api/games/events/call-of-duty-warzone",
@@ -34,6 +38,7 @@ export const GamesMetadata = {
   },  
   7764: {
     id: 7764,
+    launcherID: ,
     path: "/status/counter-strike-global-offensive",
     docs: "/api/games/events/counter-strike-global-offensive",
     iconUrl: "/img/games-logos/counter-strike-global-offensive.png",
@@ -42,6 +47,7 @@ export const GamesMetadata = {
   },  
   21848: {
     id: 21848,
+    launcherID: ,
     path: "/status/diablo-2-resurrected",
     docs: "/api/games/events/diablo-2-resurrected",
     iconUrl: "/img/games-logos/diablo-2-resurrected.png",
@@ -50,6 +56,7 @@ export const GamesMetadata = {
   },  
   7314: {
     id: 7314,
+    launcherID: ,
     path: "/status/dota-2",
     docs: "/api/games/events/dota-2",
     iconUrl: "/img/games-logos/dota-2.png",
@@ -58,6 +65,7 @@ export const GamesMetadata = {
   },  
   21586: {
     id: 21586,
+    launcherID: ,
     path: "/status/dota-underlords",
     docs: "/api/games/events/dota-underlords",
     iconUrl: "/img/games-logos/dota-underlords.png",
@@ -66,6 +74,7 @@ export const GamesMetadata = {
   },  
   21634: {
     id: 21634,
+    launcherID: ,
     path: "/status/escape-from-tarkov",
     docs: "/api/games/events/escape-from-tarkov",
     iconUrl: "/img/games-logos/escape-from-tarkov.png",
@@ -74,6 +83,7 @@ export const GamesMetadata = {
   },  
   21672: {
     id: 21672,
+    launcherID: ,
     path: "/status/eternal-return",
     docs: "/api/games/events/eternal-return",
     iconUrl: "/img/games-logos/eternal-return.png",
@@ -82,6 +92,7 @@ export const GamesMetadata = {
   },  
   6350: {
     id: 6350,
+    launcherID: ,
     path: "/status/final-fantasy-xiv",
     docs: "/api/games/events/final-fantasy-xiv",
     iconUrl: "/img/games-logos/final-fantasy-xiv.png",
@@ -90,6 +101,7 @@ export const GamesMetadata = {
   },  
   21666: {
     id: 21666,
+    launcherID: ,
     path: "/status/football-manager-2021",
     docs: "/api/games/events/football-manager-2021",
     iconUrl: "/img/games-logos/football-manager-2021.png",
@@ -98,6 +110,7 @@ export const GamesMetadata = {
   },  
   21856: {
     id: 21856,
+    launcherID: ,
     path: "/status/football-manager-2022",
     docs: "/api/games/events/football-manager-2022",
     iconUrl: "/img/games-logos/football-manager-2022.png",
@@ -106,6 +119,7 @@ export const GamesMetadata = {
   },  
   21216: {
     id: 21216,
+    launcherID: ,
     path: "/status/fortnite",
     docs: "/api/games/events/fortnite",
     iconUrl: "/img/games-logos/fortnite.png",
@@ -114,6 +128,7 @@ export const GamesMetadata = {
   },  
   21854: {
     id: 21854,
+    launcherID: ,
     path: "/status/halo-infinite",
     docs: "/api/games/events/halo-infinite",
     iconUrl: "/img/games-logos/halo-infinite.png",
@@ -122,6 +137,7 @@ export const GamesMetadata = {
   },  
   9898: {
     id: 9898,
+    launcherID: ,
     path: "/status/hearthstone",
     docs: "/api/games/events/hearthstone",
     iconUrl: "/img/games-logos/hearthstone.png",
@@ -130,6 +146,7 @@ export const GamesMetadata = {
   },  
   10624: {
     id: 10624,
+    launcherID: ,
     path: "/status/heroes-of-the-storm",
     docs: "/api/games/events/heroes-of-the-storm",
     iconUrl: "/img/games-logos/heroes-of-the-storm.png",
@@ -138,6 +155,7 @@ export const GamesMetadata = {
   },  
   21328: {
     id: 21328,
+    launcherID: ,
     path: "/status/hunt-showdown",
     docs: "/api/games/events/hunt-showdown",
     iconUrl: "/img/games-logos/hunt-showdown.png",
@@ -155,6 +173,7 @@ export const GamesMetadata = {
   },  
   10902: {
     id: 10902,
+    launcherID: ,
     path: "/status/league-of-legends",
     docs: "/api/games/events/league-of-legends",
     iconUrl: "/img/games-logos/league-of-legends.png",
@@ -163,6 +182,7 @@ export const GamesMetadata = {
   },  
   21620: {
     id: 21620,
+    launcherID: ,
     path: "/status/legends-of-runeterra",
     docs: "/api/games/events/legends-of-runeterra",
     iconUrl: "/img/games-logos/legends-of-runeterra.png",
@@ -171,6 +191,7 @@ export const GamesMetadata = {
   },  
   21308: {
     id: 21308,
+    launcherID: ,
     path: "/status/magic-the-gathering-arena",
     docs: "/api/games/events/magic-the-gathering-arena",
     iconUrl: "/img/games-logos/magic-the-gathering-arena.png",
@@ -179,6 +200,7 @@ export const GamesMetadata = {
   },  
   8032: {
     id: 8032,
+    launcherID: ,
     path: "/status/minecraft",
     docs: "/api/games/events/minecraft",
     iconUrl: "/img/games-logos/minecraft.png",
@@ -187,6 +209,7 @@ export const GamesMetadata = {
   },  
   21816: {
     id: 21816,
+    launcherID: ,
     path: "/status/new-world",
     docs: "/api/games/events/new-world",
     iconUrl: "/img/games-logos/new-world.png",
@@ -195,6 +218,7 @@ export const GamesMetadata = {
   },  
   10844: {
     id: 10844,
+    launcherID: ,
     path: "/status/overwatch",
     docs: "/api/games/events/overwatch",
     iconUrl: "/img/games-logos/overwatch.png",
@@ -203,6 +227,7 @@ export const GamesMetadata = {
   },  
   7212: {
     id: 7212,
+    launcherID: ,
     path: "/status/path-of-exile",
     docs: "/api/games/events/path-of-exile",
     iconUrl: "/img/games-logos/path-of-exile.png",
@@ -211,6 +236,7 @@ export const GamesMetadata = {
   },  
   10906: {
     id: 10906,
+    launcherID: ,
     path: "/status/player-unknowns-battlegrounds",
     docs: "/api/games/events/player-unknowns-battlegrounds",
     iconUrl: "/img/games-logos/player-unknowns-battlegrounds.png",
@@ -219,6 +245,7 @@ export const GamesMetadata = {
   },  
   10826: {
     id: 10826,
+    launcherID: ,
     path: "/status/rainbow-six-siege",
     compliance: "/start/game-compliance/rainbow-six-siege",
     docs: "/api/games/events/rainbow-six-siege",
@@ -228,6 +255,7 @@ export const GamesMetadata = {
   },  
   10798: {
     id: 10798,
+    launcherID: ,
     path: "/status/rocket-league",
     docs: "/api/games/events/rocket-league",
     iconUrl: "/img/games-logos/rocket-league.png",
@@ -236,6 +264,7 @@ export const GamesMetadata = {
   },  
   21404: {
     id: 21404,
+    launcherID: ,
     path: "/status/splitgate-arena-warfare",
     docs: "/api/games/events/splitgate-arena-warfare",
     iconUrl: "/img/games-logos/splitgate-arena-warfare.png",
@@ -244,6 +273,7 @@ export const GamesMetadata = {
   },  
   5855: {
     id: 5855,
+    launcherID: ,
     path: "/status/starcraft-2",
     docs: "/api/games/events/starcraft-2",
     iconUrl: "/img/games-logos/starcraft-2.png",
@@ -261,6 +291,7 @@ export const GamesMetadata = {
   },  
   21668: {
     id: 21668,
+    launcherID: ,
     path: "/status/valheim",
     docs: "/api/games/events/valheim",
     iconUrl: "/img/games-logos/valheim.png",
@@ -269,6 +300,7 @@ export const GamesMetadata = {
   },  
   21640: {
     id: 21640,
+    launcherID: ,
     path: "/status/valorant",
     docs: "/api/games/events/valorant",
     iconUrl: "/img/games-logos/valorant.png",
@@ -277,6 +309,7 @@ export const GamesMetadata = {
   },  
   8954: {
     id: 8954,
+    launcherID: ,
     path: "/status/warframe",
     docs: "/api/games/events/warframe",
     iconUrl: "/img/games-logos/warframe.png",
@@ -285,6 +318,7 @@ export const GamesMetadata = {
   },  
   6365: {
     id: 6365,
+    launcherID: ,
     path: "/status/world-of-tanks",
     docs: "/api/games/events/world-of-tanks",
     iconUrl: "/img/games-logos/world-of-tanks.png",
@@ -293,6 +327,7 @@ export const GamesMetadata = {
   },  
   765: {
     id: 765,
+    launcherID: ,
     path: "/status/world-of-warcraft",
     docs: "/api/games/events/world-of-warcraft",
     iconUrl: "/img/games-logos/world-of-warcraft.png",
@@ -301,6 +336,7 @@ export const GamesMetadata = {
   },  
   10746: {
     id: 10746,
+    launcherID: ,
     path: "/status/world-of-warships",
     docs: "/api/games/events/world-of-warships",
     iconUrl: "/img/games-logos/world-of-warships.png",

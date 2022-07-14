@@ -1,16 +1,16 @@
 const fs = require('fs') // filesystem
+const dec = require("./declare");
 const paths = ["../website/pages/docs/status/"] // the paths where the code should run
 
 // generator code
-
-const regex = /id: (\d*).*?(?:launcher: (\d*).*?)?(?:games: \[(\d+(?:,\d+)*?)\].*?)?path: "([\w-]*?)".*?name: "(.*?)"/gms
 const tags = JSON.parse(fs.readFileSync("seo/tags/games.json", 'utf8'))["tags"].join(", ")
 const seo = fs.readFileSync("templates/games-seo.mdx", 'utf8')
 
-fs.readFile("configs/games-metadata.cfg", 'utf8', function (err, data) {
+fs.readFile("configs/games-metadata.json", 'utf8', function (err, data) {
     if (err) {
         return console.error(err)
     }
+    const json = JSON.parse(data)
     temp = fs.readFileSync("templates/status.mdx", 'utf8')
     if (fs.existsSync(paths[0])) {
         fs.rmSync(paths[0], { recursive: true, force: true })
@@ -22,39 +22,18 @@ fs.readFile("configs/games-metadata.cfg", 'utf8', function (err, data) {
         fs.mkdirSync(paths[0] + "launchers/")
     }
 
-    console.log(paths[0])
 
-    // generated with regex101
+    dec.declare(paths[0])
 
-    let m;
-
-    while ((m = regex.exec(data)) !== null) {
-        // This is necessary to avoid infinite loops with zero-width matches
-        if (m.index === regex.lastIndex) {
-            regex.lastIndex++;
-        }
-        let id = 0
-        let path = ""
-        let name = ""
-        let games = ""
-
-        // The result can be accessed through the `m`-variable.
-        m.forEach((match, groupIndex) => {
-            switch (groupIndex) {
-                case 1:
-                    id = match
-                case 3:
-                    if (m[3] != undefined)
-                        games = match
-                case 4:
-                    path = match
-                case 5:
-                    name = match
-            }
-        });
+    json.forEach(function(val) {
+        let id = val["id"]
+        let games = val.hasOwnProperty("games") ? val["games"] : ""
+        let path = val["path"]
+        let name = val["name"]
 
         fs.writeFileSync(paths[0] + (games != "" ? "launchers/" : "") + path + ".mdx", temp.replaceAll("$tags", seo).replaceAll("$tags", tags).replaceAll("$id", id).replaceAll("$path", path).replaceAll("$name", name), 'utf8')
-    }
+    })
+
     temp = fs.readFileSync("templates/status-all.mdx", 'utf8')
     fs.writeFileSync(paths[0] + "status.mdx", temp)
 })
