@@ -1,0 +1,28 @@
+const fs = require('fs') // filesystem
+const paths = ["../website/pages/docs/api/games/events/", "../website/pages/docs/api/games/launchers/events/"] // the paths where the code should run
+
+// generator code
+
+const tags = JSON.parse(fs.readFileSync("seo/tags/games.json", 'utf8'))["tags"].join(", ")
+const tagger = /---\n\n.*?(<GameInfo gameID)/gms
+const seo = fs.readFileSync("templates/games-seo.mdx", 'utf8')
+
+fs.readFile("configs/games-metadata.json", 'utf8', function (err, data) {
+    if (err) {
+        return console.error(err)
+    }
+    const json = JSON.parse(data)
+
+    json.forEach(function (val) {
+        let games = val.hasOwnProperty("games") ? val["games"] : undefined
+        let path = val["path"]
+        let name = val["name"]
+
+        let data = fs.readFileSync(paths[games != undefined ? 1 : 0] + path + ".mdx", 'utf8')
+
+        if (data.search(tagger) === -1) {
+            console.error(paths[games != undefined ? 1 : 0] + path + ".mdx" + " does not have a proper place for seo tagging")
+        }
+        fs.writeFileSync(paths[games != undefined ? 1 : 0] + path + ".mdx", data.replaceAll(tagger, "---\n\n" + seo + "\n\n$1").replaceAll("$tags", tags).replaceAll("$name", name), 'utf8')
+    })
+})

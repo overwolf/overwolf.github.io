@@ -20,15 +20,16 @@ fs.readFile("configs/games-metadata.json", 'utf8', function(err, data) {
 
         json.forEach(function(val) {
             let id = val["id"]
-            let launcher = val.hasOwnProperty("launcher") ? val["launcher"] : ""
-            let games = val.hasOwnProperty("games") ? val["games"] : ""
+            let displayId = val.hasOwnProperty("displayId") ? val["displayId"] : -1
+            let launcher = val.hasOwnProperty("launcher") ? val["launcher"] : -1
+            let games = val.hasOwnProperty("games") ? val["games"] : undefined
             let path = val["path"]
             let name = val["name"]
 
             let compliant = fs.existsSync(compliance + path + ".mdx")
-            let isLauncher = games === undefined
+            let isLauncher = games != undefined
 
-            cont.push(temp.replaceAll("$id", id).replaceAll("$path", path).replaceAll("$name", name).replaceAll(/\$compliant\((.*?)\)/gms, compliant ? "$1" : "").replaceAll(/\$launchers\((.*?)\)/gms, isLauncher ? "$1" : "").replaceAll("$games", games).replaceAll(/\$launched\((.*?)\)/gms, launcher != -1 ? "$1" : "").replaceAll("$launcherID", launcher))
+            cont.push(temp.replaceAll("$id", id).replaceAll("$path", path).replaceAll(/\$display\((.*?)\)/gms, displayId != -1 ? "$1" : "").replaceAll("$displayId", displayId).replaceAll("$name", name).replaceAll(/\$compliant\((.*?)\)/gms, compliant ? "$1" : "").replaceAll(/\$launchers\((.*?)\)/gms, isLauncher ? "$1" : "").replaceAll("$games", games).replaceAll(/\$launched\((.*?)\)/gms, launcher != -1 ? "$1" : "").replaceAll("$launcherID", launcher))
         })
         let contS = cont.join(",")
         first += contS
