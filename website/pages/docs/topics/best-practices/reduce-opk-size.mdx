@@ -28,5 +28,8 @@ These files are proprietary Mac/OSX system files which hold attributes/meta-data
 
 * Remove .git, node_modules etc.
  Remove anything that is not required to run the OW app.
+ 
+* Serve assets through a CDN.
+ If you have a large list of images, for example League of Legends champion tiles, upload them somewhere and make your app download them on demand. If you use AWS, you can upload them to a S3 bucket and set up a CDN using Cloudfront.
 
 If you have more ideas on how to reduce OPK size, please click on the EDIT button on the right, and add it in for everyone's benefit.
