@@ -153,7 +153,7 @@ module.exports = {
       style: "dark",
       title: "Overwolf",
       logo: {
-        src: "img/headericon.svg"
+        src: "img/header-icon.svg"
       },
       items: require('./hierarchies/headers.json')
     },
