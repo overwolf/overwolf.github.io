@@ -1,0 +1,51 @@
+---
+id: 181
+title: "Version 0.181"
+sidebar_label: "0.181"
+sidebar_position: 181
+---
+
+### Docs
+
+* [MTGA](/api/games/events/magic-the-gathering-arena)
+  * New feature under:
+    * game_info
+* [Warzone](/api/games/events/call-of-duty-warzone)
+  * New update & note for:
+    * roster
+* [New World](/api/games/events/new-world)
+  * New supported game.
+* [Eternal Return](/api/games/events/eternal-return)
+  * New supported game.
+* [Hearthstone](/api/games/events/hearthstone)
+  * New info update:
+    * arena
+* Our [official sample app](/start/basic-app/sample-app) now works and auto-launches with a few more games: Fortnite, CSGO, League of Legends, Escape From Tarkov, Minecraft, Overwatch, PUBG, Rainbow Six Siege, Splitgate: Arena Warfare, Path of Exile, Valorant, Dota 2, Call of Duty: Warzone or Warframe.
+* New [IO sample app](/api/io#sample-app): Demonstrates how to open and load a file to your app, Display it, Add some content, and Write it back to the file.
+    
+### API
+
+* New flag for the [OverlayInfo](/api/games#overlayinfo-object) object: [isFullScreenOptimizationDisabled](/api/games#isfullscreenoptimizationdisabled-note). The OW overlay is not visible in full-screen mode for games that require an exclusive mode to interact with the OW app's windows (like Destiny 2, CSGO, and warzone). This indication lets you show the user a desktop notification to switch from full screen to windowed or borderless mode or enable full-screen optimization.
+
+* New low disk space warnings when we are recording: 
+  * If you are using the Streaming API, [onStreamingWarning](/api/streaming#onstreamingwarning) event is fired, with the error text `disk_space_warning`.
+  * If you are using the Replays API,  [onCaptureWarning](/api/media/replays#oncapturewarning) event is fired, with the error text `disk_space_warning`.
+  * It will show in the [obs log](/topics/understanding-ow-logs/logs-obs) as: `On disk space warning...`.
+
+* New [encoding](/api/io#encoding-enum) param to [overwolf.io.listenOnFile()](/api/io#listenonfileid-path-option-callback).
+
+### Platform
+
+* Support capturing rate of up to 120 FPS.  
+  You have the option to either change the FPS in the Overwolf settings or App Creators can use it with our [Streaming API](/api/streaming).
+
+### Dev Console
+
+* Internal enhancments.
+
+### Bug fixes
+
+* Recording Final Fantasy XIV no longer fails.
+* Game Capture no longer hangs when it fails to record.
+* Fixed an issue with the Zoom API.
+

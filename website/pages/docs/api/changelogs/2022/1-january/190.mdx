@@ -1,0 +1,48 @@
+---
+id: 190
+title: "Version 0.190"
+sidebar_label: "0.190"
+sidebar_position: 190
+---
+
+* Note that iterations 189 to 190 were combined into a single iteration.
+
+### Game events
+
+* [Halo Infinite](/api/games/events/halo-infinite)
+  * Update new events & info:
+    * local_player_stats
+    * scene
+    * match_start, match_end
+    * kill, death, assit
+    * roster
+ * [Minecraft](/api/games/events/minecraft)
+   * New info_update
+     * addons_xxx (mods)  
+   * supported from Minecraft versions 1.8 to 1.18 for both Forge and Fabric 
+* [Hunt: Showdown](/api/games/events/hunt-showdown)
+  * New supported game
+  * New game_info:
+    * scene
+* [Rainbow Six Siege](/api/games/events/rainbow-six-siege)
+  * Add new privacy information about the local player - [event "me"](/api/games/events/rainbow-six-siege#me)
+
+### API
+
+ * We are removing the following APIs that have been obsolete for a several  months:
+   * `overwolf.settings.OnHotKeyChanged()`
+   * `overwolf.settings.getHotKey()`
+   * `overwolf.settings.setFpsSettings()`
+   * `overwolf.settings.RegisterHotkey()`
+
+### Platform
+
+ * Added the "`path`" property to the File object when using the [HTML5 drag & drop feature.](https://developer.mozilla.org/en-US/docs/Web/DataTransfer/files)
+ * When launching games, in-game app windows now hide themselves for games that aren't defined in the `game_targeting` property in the `manifest.json` file.
+
+### Bug fixes
+
+* Fixed a bug where the Task Bar icon would show the shortcut icon instead of the window icon.
+* Fixed an issue with Auto highlights where `match_start_time` could be a negative value if the match closed before the highlight has finished capturing.
+* Toast notifications now also work when loading an extension as "unpacked".
+

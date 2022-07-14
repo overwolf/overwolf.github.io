@@ -1,0 +1,29 @@
+---
+id: 180
+title: "Version 0.180"
+sidebar_label: "0.180"
+sidebar_position: 180
+---
+
+### Docs
+
+* None.
+
+### API
+
+* [bottommost](/api/manifest#windows-bottommost) - a new manifest flag. Completely opposite to the [topmost](/api/manifest#windows-topmost) flag. When set true to a window, it's not possible to drag it over other app's windows. Beside the manifest, you can set this flag through the API:
+  * Added to [overwolf.windows.obtainDeclaredWindow()](/api/windows#obtaindeclaredwindowwindowname-overridesetting-callback): overrideSetting { isBottomMost :bool }.
+* * New `keep_game_capture_on_lost_focus` flag added to the video options object of the [streaming](/api/streaming#streamvideooptions-object) and [replays](/api/media/replays#replayvideooptions-object) APIs.
+
+### Platform
+
+* None.
+
+### Dev Console
+
+* None.
+
+### Bug fixes
+
+* None.
+

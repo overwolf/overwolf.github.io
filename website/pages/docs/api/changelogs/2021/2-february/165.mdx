@@ -1,0 +1,56 @@
+---
+id: 165
+title: "Version 0.165"
+sidebar_label: "0.165"
+sidebar_position: 165
+---
+
+Note that iterations 163 to 165 were combined into a single iteration.  
+
+### API
+
+* [overwolf.media.videos.addWatermark()](/api/media/videos#addwatermarksourcevideourl-watermarkurl-watermarkparams-callback) watermark file now supports absolute/local path to a file in the extension directory.  
+* Max recording resolution is now capped at 4K - OBS has issues capturing resolutions higher than that so we are temporarily limiting it until we can find a more permanent fix.
+
+### Platform
+
+* Increase max log file item to upload from 1 Mb to 3Mb (When using [uploadClientLogs()](/api/utils#uploadclientlogscallback)).
+* Increase *.HTML dump limit log size to 5 Mb.
+* Change Extension crash notification Text to: "%APP_NAME% has crashed".
+* Browser inGame dragging: stop the drag when alt+tab from game. Make sure we stop the dragging when OnDragEnd is triggered.
+* New Overlay process: internal changes and enhancements. no further details will be released. Just mentioned here as it includes many internal changes.
+* App Updates - Some major refactoring to how we update our apps mostly in regards to smarter phasing.
+  * When updating apps, it allows Overwolf to only download the part of the app that has changed, Overwolf then updates the app with these changes, saving a lot of time and bandwidth.
+  * Diff didn’t work for apps that were being phased up until this iteration. But now it works.
+  * Downloading Phased Apps From The Store - Users will get the latest app version if they are part of that app’s phasing when downloading it from the Appstore. Instead of getting the previous app version first, and
+only then updating to the new version (which was the case until now).
+* Windows Insider is no longer supported.
+* Updated all the license text files Overwolf uses.
+
+
+### Docs
+
+* [SSO guide](/topics/integrations/login-with-overwolf) - how to implement "login with Overwolf" button on your website.
+
+### Bug fixes
+
+* Fixed: If a hotkey is defined in the manifest with no default key binding, [hotkeys.get()](/api/settings/hotkeys#getcallback)/attempting to set the hotkey would result in an error.
+* The setting exit_overwolf_on_exit (can be set through [overwolf.settings.setExtensionSettings()](/api/settings#setextensionsettingsextensionsettings-callback)) no longer closes Overwolf when an app that was using that setting has crashed, however, it will still close Overwolf if the user has dismissed the crash notification or didn't click on the "Relaunch" button in that same notification.
+* Fixed an issue with the hotkeys API for apps that have their hotkeys defined in the manifest.json, but have no default binding.
+
+### Dev Console
+
+* Soon.
+
+### Game events
+* [Rainbow Six: Siege](/api/games/events/rainbow-six-siege)
+  * New feature & updates:
+    * defuser
+    * match_id
+    * map_id
+    * round_outcome_type
+   * 'name' update is currently unavailable.
+* [Apex Legends](/api/games/events/apex-legends)
+  * New addition to update:
+    * roster
+    

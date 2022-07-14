@@ -1,0 +1,51 @@
+---
+id: 185
+title: "Version 0.185"
+sidebar_label: "0.185"
+sidebar_position: 185
+---
+
+### Docs
+
+* [League of Legends](/api/games/events/league-of-legends)
+  * New feature:
+    * jungle_camps
+* [Rocket League](/api/games/events/rocket-league)
+  * New info updates:
+    * car_look_inventory
+    * trade_my_inventory
+* [Warframe](/api/games/events/warframe)
+  * Temporarily disabled `inventory`
+* [Rainbow Six](/api/games/events/rainbow-six-siege)
+  * New info updates:
+     * game_mode_log	
+     * general_log
+     * match_start_log
+     * round_start_log
+     * round_end_log
+     * move_log
+     * score_log
+     * kill_log
+     * ko_log
+     * death_log
+     * match_end_log
+     * account_id_log
+ * [Minecraft](/api/games/events/minecraft)
+   * New event:
+     * chat
+
+### API
+
+* Added support for file:// URI scheme in [overwolf.media.videoscreateVideoComposition()](/api/media/videos#createvideocompositionsourcevideourl-segments-callback).  
+  Note that it only allows paths under the extension folder (`%localappdata%/overwolf/extensions/…`) or extension videos folder (`overwolf/videos/…`).
+
+### Dev Console
+
+* Added internal release notes to uploaded OPKs
+
+### Bug fixes
+
+* Fixed bug with OW overlay in Win 11:  
+  Clicking an icon on the taskbar while in-game didn't shift the focus from the game to the window that opened. Instead, the window was left behind the game.
+
+

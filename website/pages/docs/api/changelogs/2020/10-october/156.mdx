@@ -1,0 +1,69 @@
+---
+id: 156
+title: "Version 0.156"
+sidebar_label: "0.156"
+sidebar_position: 156
+---
+
+### API
+
+* [overwolf.windows.onScreenPropertyChanged](/api/windows#onscreenpropertychanged) event:  
+  Now the event is being fired for all the declared windows. So you also need to test the window name/id arguments that are passed to the event to see if it is relevant for your window.
+* [overwolf.extensions.current.getExtraObject](/api/extensions/current#getextraobjectname-callback): Improve the robustness of the API. Write to log and return a callback.
+* [overwolf.utils.getSystemInformation](/api/utils#getsysteminformationcallback): return if Windows 10 version 2004 *Hardware-Accelerated GPU Scheduling* is enabled. 
+
+### Platform
+
+* Replay capture accuracy: change replay's timestamp logic: capture replay's with using PTS (Presentation timestamp) and not ETS (Encoding timestamp).
+* Multiple audio tracks: It is now possible to record videos that support more than one audio track, using the new flag for [stream settings](/api/streaming#streamsettings-object): **separate_tracks": bool**.  
+  When disabled (default), create the video source with track1 only.  
+  When enabled, video (mp4) will be created with three different audio tracks:
+  * track1: Microphone + Desktop.
+  * track2: Desktop output.
+  * track3: Microphone input.  
+* Extension logs: Send the isolated relevant's extension logs to server (upon crash/request to send logs).
+
+### Bug Fixes
+
+* Do not launch extension with "LaunchWithOverwolf" launch event when extension is disabled. 
+* overwolf.extensions.current.getExtraObject - Fixed cases where this function wouldn’t return a callback.
+* Fixed a bug with native windows when navigating to a different window.
+* Reaching 50MB of free space no longer causes the OBS process to hang.
+* The video recording UI no longer stays in a pending state if we can’t load ow-graphics-hook32.dll for whatever reason.
+
+### Dev Console
+
+* Soon
+
+### Game events
+* GENERAL
+  * Recently both Path of Exile and Rocket League received an Epic Games version and our events are currently unreliable on those versions. We are adjusting the events and will update in the near future.
+  * Be advised that currently in Apex Legends - the assist event is broken in relation to "knockdown". Only "elimination" is supported.
+* [WARFRAME](/api/games/events/warframe)
+  * New updates and events under:
+    * inventory
+    * username
+* [Call of Duty - Warzone](/api/games/events/call-of-duty-warzone)
+  * New updates and events under:
+    * match_info
+    * game_info
+* [Fortnite](/api/games/events/fortnite)
+  * New update under:
+    * me
+    * match_info
+* [World of Warcraft](/api/games/events/world-of-warcraft)
+  * New update under:
+    * group_applicants
+* [Minecraft](/api/games/events/minecraft)
+  * New update under:
+    * match_info
+* [VALORANT](/api/games/events/valorant)
+  * New updates under:
+    * match_info
+* [Warframe](/api/games/events/warframe)
+  * New updates under:
+    * match_info
+* [APEX LEGENDS](/api/games/events/apex-legends)
+  * New updates under:
+    * match_info
+    

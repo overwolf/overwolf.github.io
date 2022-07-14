@@ -1,0 +1,50 @@
+---
+id: 159
+title: "Version 0.159"
+sidebar_label: "0.159"
+sidebar_position: 159
+---
+
+### API
+
+* [overwolf.windows.obtainDeclaredWindow()](/api/windows#obtaindeclaredwindowwindowname-callback) will now also return monitorId (where applicable) - allowing one window (background) to know on which monitor another window exists. 
+* Remove app indexedDB upon uninstall.
+* [overwolf.streaming.start](/api/streaming#startsettings-callback) now support undefined settings.
+* WebCam support: 
+  * Allow adding a video source (Webcam), to replay's video. (generic obs source + secondary file).
+  * The webcam source can be rendered to a different video file (or not).
+  * Support multiple replay's consumers.
+  * New API to retrieve connected WebCams: [overwolf.media.getWebcams](/api/media#getwebcamscallback).
+* [overwolf.windows.setDesktopOnly()](/api/windows#setdesktoponlywindowid-shouldbedesktoponly-callback) - This function is now obsolete.
+
+### Platform
+
+* Cleanup upon uninstall: Clear IndexedDB.
+* New guide: [App login with Twitch, Discord, Facebook or Google](/topics/integrations/login-with-twitch).
+
+### Bug Fixes
+
+* Call overwolf.media.replays.capture with futureDuration of -1.
+* Remove State 'open' when opening OSR windw.
+* Overwolf windows should no longer be considered as incognito.
+* Twitch login popup window: allow extension popup window to handle OW custom scheme (if origin is match externally connectable regex).
+* Block custom scheme when app ExternallyConnectable is null.
+* Log when blocking Custom overwolf Scheme navigation.
+* Fix overwolf.windows.bringToFront() api for native\desktop only: will move window to top most and will set the window as the foreground window (fullcreen game mode will be minimized).
+
+### Dev Console
+
+* Crash logs are now available on the "Crash reports" section.
+* Comments and Replies - It is now possible for app developers to reply to users' reviews (through the dev console). These replies will be visible to anyone who checks the reviews of the app.
+* Comments Info - While on the subject of comments and reviews, we are now also sending some additional information about users' Overwolf versions and modules and some basic system information such as DPI and resolution. This will help you and us diagnose some issues when they happen.
+* Test Subscription - It is now possible for app developers to see the test subscriptions they made in the Developers console. These will only be visible if the app developer is logged into Overwolf, and will be hidden otherwise, which allows the developer to play around with how the subscription flow looks and feels before adding the subscription feature.
+
+### Game Events
+
+* Valorant.
+  * Added new update: **pseudo_match_id**  under [match_info](/api/games/events/valorant#match_info).
+* COD: Warzone.
+  * Added new update: **pseudo_match_id**  under [match_info](/api/games/events/call-of-duty-warzone#match_info).
+* Overwatch.
+  * Added new update: **pseudo_match_id**  under [match_info](/api/games/events/overwatch#match_info).
+

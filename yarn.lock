@@ -2,12 +2,7 @@
 # yarn lockfile v1
 
 
-"async@^3.2.4":
-  "integrity" "sha512-iAB+JbDEGXhyIUavoDl9WP/Jj106Kz9DEn1DPgYw5ruDn0e3Wgi3sKFm55sASdGBNOQB8F59d9qQ7deqrHA8wQ=="
-  "resolved" "https://registry.npmjs.org/async/-/async-3.2.4.tgz"
-  "version" "3.2.4"
-
-"remarkable-admonitions@^0.2.1":
-  "integrity" "sha512-Uqeye087AIuo+BMUwteuG7e3GhoPqeT8aFjD8DaIqjUk2rn+7T7A6xank7fVlU+GHgbjT49DDC13nHLWwdBxRw=="
-  "resolved" "https://registry.npmjs.org/remarkable-admonitions/-/remarkable-admonitions-0.2.1.tgz"
-  "version" "0.2.1"
+remarkable-admonitions@^0.2.1:
+  version "0.2.1"
+  resolved "https://registry.npmjs.org/remarkable-admonitions/-/remarkable-admonitions-0.2.1.tgz"
+  integrity sha512-Uqeye087AIuo+BMUwteuG7e3GhoPqeT8aFjD8DaIqjUk2rn+7T7A6xank7fVlU+GHgbjT49DDC13nHLWwdBxRw==

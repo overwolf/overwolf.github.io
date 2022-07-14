@@ -1,0 +1,16 @@
+---
+id: 148
+title: "Version 0.148"
+sidebar_label: "0.148"
+sidebar_position: 148
+---
+
+### API and Platform
+
+* "DPI-aware" feature for [native](/topics/using-windows-api/windows-types#native-window) windows:  
+  It means that when you move the native window between monitors with different DPIs for example from 100 DPI to 125 DPI, the window will automatically resize according to the new DPI.  
+  There's also a new manifest flag to disable that behavior if the developer wants none of that: [disable_auto_dpi_sizing](/api/manifest#disable_auto_dpi_sizing).
+* Moved to be part of our internal API and removed from the docs:
+    * event *overwolf.streaming.onRecordingEngineStateChanged*.
+    * function *overwolf.streaming.getRunningRecorders()*.
+

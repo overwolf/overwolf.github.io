@@ -1,0 +1,36 @@
+---
+id: 174
+title: "Version 0.174"
+sidebar_label: "0.174"
+sidebar_position: 174
+---
+
+* Note that iterations 174 to 175 were combined into a single iteration. 
+
+### Docs
+
+* [Porting your Electron app to Overwolf](/topics/best-practices/electron-migration) - new guide.
+* New sample apps to make the OW creators life easier: [login with Twitch/Steam sample app](/topics/integrations/login-with-twitch), [Replays API sample app](/api/media/replays#sample-app), [Streaming API sample app](/api/streaming#sample-app), and [Channels API sample app](/topics/developers-console/app-channels#app-channels-sample-app).
+* How to [get user info](/topics/integrations/login-with-overwolf#get-user-info-from-token) when you integrate the "login with Overwolf" feature in your website.
+
+### API
+ 
+ * New manifest flag: Now you can set the [window style](/api/manifest#windows-style) as `InputPassThrough` through the manifest, and not just with the [overwolf.windows.setWindowStyle()](/api/windows#setwindowstylewindowid-style-callback) function.
+ * New enum: [overwolf.profile.subscriptions.inapp.enums.Theme](/api/profile/subscriptions/inapp#theme-enum), to use with [overwolf.profile.subscriptions.inapp.show()](/api/profile/subscriptions/inapp#showplanid-theme-callback).  
+ * [overwolf.windows.changeSize(windowId, width, height, callback)](/api/windows#changesizewindowid-width-height-callback) is now obsolete, replaced by [overwolf.windows.changeSize(changeSizeParams, callback)](/api/windows#changesizechangesizeparams-callback).
+
+### Platform
+
+* OBS enhancments.
+
+### Dev Console
+
+* Subscriptions - The first asset in the sub plan can be animation or static image, and users can see the asset type above the image.
+
+### Bug fixes
+
+* Fixed store showing logged in state when client does not (after being logged in previously but failing a startup web request).
+* Fixed launch origin (relaunch) when using relaunch to launch apps.
+* Fixed the overwolf.profile.openLoginDialog API in cases where the store was closed.
+* Fixed an issue where failed to start game recording was not fired in some cases, even though we failed to record.
+

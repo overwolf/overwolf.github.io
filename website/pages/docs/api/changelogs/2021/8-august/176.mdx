@@ -1,0 +1,27 @@
+---
+id: 176
+title: "Version 0.176"
+sidebar_label: "0.176"
+sidebar_position: 176
+---
+
+* Note that iterations 176 to 177 were combined into a single iteration. 
+
+### API
+
+* Toast Notification - Overwolf apps can use the newly implemented API, [overwolf.notification](/api/notifications), to show users native Windows notifications (those that pop up on the right bottom side of your screen).
+  * [showToastNotification(ToastNotificationParams, callback)](/api/notifications#showtoastnotificationargs-callback) - This self explanatory function shows the native Windows notification once called.
+  * [onToastNotification](/api/notifications#ontoastnotification) - An event listener that triggers when a notification was interacted with.
+  * New Enums: [AppLogoCrop](/api/notifications#applogocrop-enum), [ToatsEventType](/api/notifications#toatseventtype-enum), [ToastEventError](/api/notifications#toasteventerror-enum).
+* Dedicate video capture option for specific games (CSGO, Warzone, Destiny 2) that requires [exclusive mode](/topics/best-practices/exclusive-mode) to interact with the OW windows: up until now when we recorded these games in windowed mode, it resulted in a recording of the whole desktop. We now provide the option to record only the game window.
+  * This feature is disabled by default, but you can enable it with the new `game_window_capture` property that you can find in the video settings object in the [replays API](/api/media/replays#replayvideooptions-object) or the [streaming API](/api/streaming#game_window_capture-notes).  
+  * New `is_game_window_capture` properties added to [onStartStreaming](/api/streaming#onstartstreaming) and [onReplayServicesStarted](/api/media/replays#onreplayservicesstarted) to inform the app Creator if this new capturing feature was used or not on the current OW window.
+
+### Bug fixes
+
+* Subscription in-app login form fix.
+* Overwolf will no longer crash when merging too many files while using [createVideoCompositionFiles()](/api/media/videos#createvideocompositionfilesfiles-outputfile-callback).
+* Fixed video recording for HyperScape.
+* Implemented a fix aimed at the integrity of the LevelDB.
+* Transparent windows in OpenGL games now get properly repainted.
+

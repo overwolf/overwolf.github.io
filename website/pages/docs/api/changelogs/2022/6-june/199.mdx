@@ -1,0 +1,30 @@
+---
+id: 199
+title: "Version 0.199"
+sidebar_label: "0.199"
+sidebar_position: 199
+---
+
+### Docs
+- Updated the documentation to reflect the new API changes listed below.
+- Added documentation of the [overwolf.games.GameInfoType](/api/games#gameinfotype-enum) Enum.
+
+### API
+- Updated API: [`overwolf.streaming`](/api/streaming) [EXPERIMENTAL]:
+  - ABSTRACT - It is now possible to choose to capture audio from a game and other specific audio processes, rather than only the entire desktop's audio.
+  - [`overwolf.streaming.getCapabilities`](/api/streaming) - New method for obtaining all streaming capabilities in one place, for both video and audio.
+    - Returns a callback with [`overwolf.streaming.StreamingCapabilities`](/api/streaming).
+    - Of particular note is the new `audioProcessCaptureSupported` flag, that lets us know if `filtered_capture` can be enabled.
+  - [`overwolf.streaming.StreamAudioOptions.game`](/api/streaming) has been changed to [`overwolf.streaming.GameAudioDevice`](/api/streaming). The new field `filtered_capture` has been added, and can be used if `audioProcessCaptureSupported` returned true (this depends on the machine running the app, so make sure to always check it!).
+
+- New API: [`overwolf.games.tracked.getRunningGameInfo`](/api/games/tracked#getrunninggameinfocallback) - New method for obtaining game info from tracked games, similar to [`overwolf.games.getRunningGameInfo`](/api/games).
+  - This method will only work if `tracked` and `track_all_games` are both set to true in the [app manifest](/api/manifest#launch_event_settings-array), but it will work on **all** games, regardless of whether they're supported or not.
+  - Keep in mind that an unsupported game that was tracked still won't necessarily work as intended, so be sure to test that it works for your specific use case!
+
+### Platform
+- Several improvements to Overwolf dll stability.
+
+### Bug Fixes
+- [`overwolf.games.getRunningGameInfo`](/api/games) will no longer return a monitor handle of 0 in certain edge cases.
+
+

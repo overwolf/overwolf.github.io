@@ -91,7 +91,7 @@ html[data-theme="dark"]{
     }
   }
 
-  .theme-doc-sidebar-container .theme-doc-sidebar-item-category .menu__list li a.menu__link {
+  .theme-doc-sidebar-container .theme-doc-sidebar-item-category .menu__list li a.menu__link,.theme-doc-sidebar-container .theme-doc-sidebar-item-link-level-1 a.menu__link {
     color: var(--color-800);
 
     &:hover {

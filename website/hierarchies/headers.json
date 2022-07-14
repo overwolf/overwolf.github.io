@@ -15,7 +15,7 @@
         "position": "left"
     },
     {
-        "to": "status/all",
+        "to": "status",
         "label": "Events Status",
         "position": "left"
     },

@@ -1,0 +1,24 @@
+---
+id: 137
+title: "Version 0.137"
+sidebar_label: "0.137"
+sidebar_position: 137
+---
+
+* [MTGA Events](/api/games/events/magic-the-gathering-arena) - New supported game
+   * New info-update:
+     * detailed_logs_enabled
+   * New event:
+     * match_outcome
+* WOT Events
+  * New event:
+    * match_outcome
+* New doc about our [Game Events Simulator app](/topics/using-events/using-events-simulator).
+* New [sample app](/start/basic-app/sample-app) with enhanced UI.
+* New manifest flag: [minimum-gs-version](/api/manifest#meta-minimum-gs) - Allows extensions (apps) to set a minimum game summary app version in the manifest, this works similarly to minimum-version and relevant only for apps thay using the game summary pannel.
+* New manifest flag: [service_providers](/api/manifest#service_providers) - you can use this flag to set different parameters that are relevant for a service provider app. Use the new API function [overwolf.extensions.getServiceConsumers()](/api/extensions#getserviceconsumerscallback) to read the flag value.
+* New API function: [overwolf.utils.openStore()](/api/utils#openstoreparam) - Opens the requested app’s profile/login/subscription page in the Overwolf Appstore.
+* New API namespace: [overwolf.extensions.sharedData](/api/extensions/shared-data) - a new namespace that allows any app to share data with another app. the plan is to use it for the Game Summary tabs.
+* New plugin: The [Process Manager plugin](/topics/using-plugins/process-manager-plugin) that allow OW apps to run executable (for example, run a game when you launch an OW app). 
+
+

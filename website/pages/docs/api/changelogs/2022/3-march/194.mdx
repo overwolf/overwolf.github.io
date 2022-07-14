@@ -1,0 +1,40 @@
+---
+id: 194
+title: "Version 0.194"
+sidebar_label: "0.194"
+sidebar_position: 194
+---
+
+* Note that iterations 192 to 194 were combined into a single iteration. 
+
+### Game events
+
+* [Dota](/api/games/events/dota-2)
+  * Due to a recent game update that disable GSI (Game State Integration) and in order for Overwolf apps to work correctly please read the note [here](/api/games/events/dota-2)
+
+* [League of Legends](/api/games/events/league-of-legends)
+  * Add new event "team_frames" for the counter of the ultimate cooldown of the players in the game
+
+* [LEP - lol launcher](/api/games/launchers/events/league-of-legends)
+  * Add new info update at the end of each game with the total "league points" (LP) earned in the last game, see notes [here](/api/games/launchers/events/league-of-legends#league_points_stats-note)
+
+* [CS:GO](/api/games/events/counter-strike-global-offensive)
+  * Add ping event
+  * Add nickname, ping and local_player parameters to the scoreboard - see notes [here](/api/games/events/counter-strike-global-offensive#scoreboard)
+
+### Platform
+- Improved Overwolf's memory footprint.
+- New `manifest.json`:
+  - `author_display` - located under the `meta` object. Changes the author
+  name without changing the app's UID.
+  
+### Recording Engine
+ - OW-OBS is now using OBS version 27.2.3
+
+### Bug Fixes
+- Fixed an [issue](https://discuss.overwolf.com/t/monitorhandle-value-does-not-always-match-monitor-list-handle-values/2484) with `overwolf.utils.getMonitorsList`.
+- Fixed an [issue](https://discuss.overwolf.com/t/recording-not-stopping-when-game-is-closed-cs-go-cod-warzone/2465) where the Overwolf recording process wouldn't shut down when exiting the game.
+- Created a recovery mechanism when Overwolf apps fail validation.
+- Fixed cases of Overwolf not detecting processes sometimes, such as the
+*League of Legends launcher*.
+

@@ -1,0 +1,52 @@
+---
+id: 147
+title: "Version 0.147"
+sidebar_label: "0.147"
+sidebar_position: 147
+---
+
+Note that iteration 146 and 147 were combined into a single iteration.  
+
+### API and Platform
+
+* New feature: [overwolf.window.flash()](/api/windows#flashwindowid-behaviorcallback)  
+  Flashes a window that is not in focus (for example, minimized to taskbar).  
+  Support either constant pulses or a single flash - the choice is yours. 
+* New manifest flag: [disable_cleanup](/api/manifest#disable_cleanup).  
+  If set to true, app local data will not be cleaned up after app uninstallation.
+* New API: [overwolf.extensions.io](/api/extensions/io)  
+  No need to use the external I/O plugin anymore for your current extension-related I/O functionalities.  
+  Now you can easily create, delete, or update files on your extension's [dedicated storage space](/api/extensions/io#storagespace-enum).   
+* Allow apps to request [opening the hotkey settings](/topics/best-practices/hotkeys-best-practices#reassign-hotkeys) for a specific game. An example:
+  * Current hotkey URL:  
+    `overwolf://settings/hotkeys#hotkey_name_in_manifest`.  
+  * New hotkey URL:  
+    `overwolf://settings/games-overlay?hotkey=hotkey_name_in_manifest&gameId=game_id`.  
+    game_id is optional.
+* Upgrade to OBS 25.0.0 
+  * Update obs-ffmpeg.dll (NVENC encoder).
+    That can affect some devs that are trying to capture videos and get encoders errors and a message that the NVEC driver should be updated.
+* Updates for the streaming and replay APIs: added a [quota object](#streaming):  
+  Allow setting max media folder size in GB, and exclude folders that are not part of this quota.
+* Video recording engine updated, and now it supports Vulkan capturing!
+
+### Game events
+
+* PUBG Lite
+  * New event:
+    * team_feed
+    * knockout
+* [CS: GO](/api/games/events/counter-strike-global-offensive)
+  * New event:
+    * kill_feed
+  * New event:
+    * scoreboard
+* [Rainbow Six: Siege](/api/games/events/rainbow-six-siege)
+  * New feature:
+    * me
+* [Escape From Tarkov](/api/games/events/escape-from-tarkov)
+  * New supported game
+* [VALORANT](/api/games/events/valorant)
+  * New supported game
+* [Auto-highlights](/topics/best-practices/video-capture#auto-highlights-capture) now supports VALORANT "kill", "death" and "assist" events
+

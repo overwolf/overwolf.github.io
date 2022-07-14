@@ -1,0 +1,81 @@
+---
+id: 155
+title: "Version 0.155"
+sidebar_label: "0.155"
+sidebar_position: 155
+---
+
+Note that iterations 154 and 155 were combined into a single iteration.  
+
+### API
+
+* [overwolf.utils.placeOnClipboard()](/api/utils#placeonclipboarddata) and [overwolf.utils.getFromClipboard()](/api/utils#getfromclipboardcallback) reimplemented so that we tackle the coexistence issues with AutoHotKey script.
+
+* [overwolf.games.inputTracking.getActivityInformation()](/api/games/input-tracking#getactivityinformationcallback) - remove the 5 minutes min time for getting a result.  
+  Note that We're still not recording the first 30 characters, and we will send the activity info to our servers only if your sessions is longer than 5 minutes.
+
+* New flag for [replay](/api/media/replays#replayvideooptions-object) \ [streaming](/api/streaming#streamvideooptions-object) video settings object: **use_app_display_name**.  
+  If this flag in on, when creating a video capture folder, it will use the app "short name" as the folder name, instead of using the app name from the manifest. (the app "short name" is defined in the [dock_button_title](/api/manifest#meta-dock) manifest flag).
+
+* it is now possible to change the number of maximum saved log files that
+apps are saving with the new max_rotation_log_file manifest flag
+New manifest flag [max_rotation_log_files](/api/manifest#max_rotation_log_files) - for app Log rotaion control. It allow to increase app log's file rotation (up to 40).
+    
+* New feature: Set window zoom level - [overwolf.window.setZoom()](/api/windows#setzoomwinzoomfactorowid-windowid).  
+  Now you can change the zoom factor of your window through the API (the effect is exactly like changing the zoom in a web browser).
+
+* The [overwolf.media.audio](/api/media/audio) is now considered obsolete, and will display the relevant warning in the console when using it.
+
+* We marked several functions and APIs as **OBSOLETE**. Soon, we altogether remove them from the docs and from the API itself. Note that you should get a warning in your dev console when using one of the obsolete functions.  
+This is the full list of OBSOLETE functions and APIs:
+  * overwolf.media.stopGifBuffer()
+  * overwolf.media.generateGif()
+  * overwolf.media.startGifBuffer()
+  * overwolf.media.replays.turnOff(replyID, callback) - this signature already removed from the docs.
+  * overwolf.media.replays.getState()
+  * overwolf.media.replays.startCapture(replayType, pastDuration, callback)
+  * overwolf.media.replays.stopCapture(ReplayType, replayId, callback)
+  * overwolf.media.replays.capture(replayType, pastDuration, futureDuration, captureFinishedCallback, callback)
+  * overwolf.media.replays.finishCapture() - already removed from the docs.
+  * overwolf.streaming.updateStreamingDesktopOptions()
+  * overwolf.benchmarking (all)
+  * overwolf.tobii (all)
+  * overwolf.media.audio (all)
+  * overwolf.settings.setFpsSettings()
+  * overwolf.settings.getHotKey()
+  * overwolf.settings.registerHotKey()
+  * overwolf.settings.getCurrentOverwolfLanguage()
+  * overwolf.settings.OnHotkeyChanged
+
+### Platform
+
+* WebServer: [overwolf.web.webserver](/api/web/webserver) now allow CORS.  
+  Now the built-in OW webserver sends the correct CORS headers ([Access-Control-Allow-Origin](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Access-Control-Allow-Origin)) to client.  
+  It's useful for case when you need to pass some data (ex: authentication token) from your website to Overwolf app. More info [here](/api/web/webserver).
+* Windows 10 version 2004 *Hardware-Accelerated GPU Scheduling* feature might cause captured videos to be laggy. More info [here](/topics/best-practices/video-capture#windows-10-hardware-accelerated-gpu-scheduling-notice).
+
+### Bug fixes
+
+* On Uninstall, Overwolf now deletes all related registry entries from all users.
+* Fixed a highlights bug where on rare occasions it would record the video, but wouldn't inform the app requesting it.
+* Fixed cases where the video onStop/onStart listeners wouldn't return a callback.
+* Fixed a bug where HTML5 audio would play twice.
+* Fixed a bug with video naming when using the split API and the configuration include_full_size_video was false.
+
+### Dev Console
+ 
+* Now you can edit your subscription plan and manage your subscribers.  
+  We have added to the Dev Console a new tab: "Subscription". When clicked, two options will appear:
+  * Plans - you can edit the subscription plans you already own: title, price, description, period, status, and assets (that'll be shown in Overwolf's app store).  
+    For now, you can only edit current plans. To create one, please ask your dev-rel manager.
+  * Subscribers - you’ll be able to edit each subscriber expiration date and status (active/canceled/revoked/invalid).
+* You can now see your app's URL to the Overwolf store listing directly from the console.
+* To make our apps more transparent to users, we added the option to configure if you have ads, subs, and if the app is free. This will be shown to users on the app store.
+* You can now see which tags are enabled for your app when searching for a game. To add more tags contact your dev-rel manager.
+
+
+### Game events
+
+* [Hearthstone](/api/games/events/hearthstone) - "match_end" now includes a match outcome value.d
+* [League of Legends](/api/games/events/league-of-legends#live_client_data) - new event - "port". Random port that comes from Riot
+

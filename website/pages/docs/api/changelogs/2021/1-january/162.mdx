@@ -1,0 +1,50 @@
+---
+id: 162
+title: "Version 0.162"
+sidebar_label: "0.162"
+sidebar_position: 162
+---
+
+Note that iterations 160 to 162 were combined into a single iteration.  
+
+### API
+
+* Allow apps to add/remove their hotkeys right from the app (using a new API) without opening the OW client UI. You can assign only hotkeys that pre-defined in your manifest.
+  * Use the new [overwolf.settings.hotkeys.assign()](/api/settings/hotkeys#assignhotkey-callback) and  [overwolf.settings.hotkeys.unassign()](/api/settings/hotkeys#unassignhotkey-callback) APIs.
+* Reddit presents new required param for sharing: added a new share param called [Flair](/api/social/reddit#flair-object),  and a new function: [overwolf.social.reddit.getSubredditFlairs()](/api/social/reddit#getsubredditflairssubredditname-callback).
+* Add to [GameInfoUpdatedEvent](/api/games#gameinfoupdatedevent-object):  
+  * A new info change type: **gameOverlayChanged**.  Indicates if OW unable to hook input devices when hooking into a game.
+  * If true, check if **overlayInputHookError** is true as well to identify that there is a hooking issue.
+* Added a new API namespace: [overwolf.cryptography](/api/cryptography).
+  * Currently supports two functions: *encryptForCurrentUser()* and *decryptForCurrentUser()*.
+* Added [overwolf.games.inputTracking.init()](/api/games/input-tracking#initcallback) for using *getMousePosition* without pre-register to events.
+
+### Platform
+ 
+* Security patches:
+  * Block browser from creating iframe to *extensions://*.
+  * Block iframes inside apps from creating an iframe to *extensions://* - unless in externally_connectable
+  * Block app windows that run in a remote address - from creating iframes to *extensions://* - unless in *externally_connectable*.
+* Update to new OBS (141 with sdk 10.0.19041.1).
+* Increase `localstorage` size to ~50MB. Note that localstorage should be used up to 20-25 MB saved data. If you need more than that, you should use other storage.
+* Enable `navigator.storage.persist()` for *extension:\\* scheme.
+
+### Bug Fixes
+
+* FilePicker with multipleSelection splits files with comma in their names.
+
+### Dev Console
+
+* Rates and Reviewes: users can leave reviews and rate your app in Overwolf’s App store, and you can browse these ratings and reviews and reply to users from the dev console.
+
+### Game Events
+
+* [Rocket League](/api/games/events/rocket-league)
+  * New events & updates:
+    * death
+    * action_points
+* [Call of Duty: Warzone](/api/games/events/call-of-duty-warzone)
+  * New events & updates:
+    * game_mode
+    * game_map
+

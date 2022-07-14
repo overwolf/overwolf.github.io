@@ -1,0 +1,38 @@
+---
+id: 149
+title: "Version 0.149"
+sidebar_label: "0.149"
+sidebar_position: 149
+---
+
+### API and Platform
+
+* [overwolf.windows.changeSize()](/api/windows#changesizechangesizeparams-callback).  
+  Accept now a new boolean param whether to automatically account for DPI scale when resizing ("auto_dpi_resize").
+* ["LaunchWithOverwolf"](/api/manifest#enable-app-auto-launch-with-overwolf) - new manifest flag, enable launching app together with the OW client.
+* New API to support enabling/disabling auto-launch with the Overwolf client:  
+  (Apps launched this way will have [origin](/api/extensions#the-origin-string) "overwolfstartlaunchevent") 
+  * [overwolf.settings.setExtensionSettings(extensionSettings, callback)](/api/settings#setextensionsettingsextensionsettings-callback)
+  * [overwolf.settings.getExtensionSettings](/api/settings#getextensionsettingscallback).
+
+### Game events
+
+* [MTGA](/api/games/events/magic-the-gathering-arena)
+  * New updates and events under:
+    * match_info
+    * game_info
+* [VALORANT](/api/games/events/valorant)
+  * New updates and events under:
+    * match_info
+    * kill
+* [OVERWATCH](/api/games/events/overwatch)
+  * New supported game
+  * [Auto-highlights](/api/media/replays/auto-highlights) support
+* [RAINBOW SIX](/api/games/events/rainbow-six-siege)
+  * New updates and events under:
+    * roster
+
+### Docs
+
+* We are now supporting bigger [screenshots](/start/submit-your-app/submit-your-app-to-the-store#3-screenshotxjpg) for your OW app store page: 1200x750 pixels, instead of the old 656X410.
+

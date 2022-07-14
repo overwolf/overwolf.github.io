@@ -1,0 +1,51 @@
+---
+id: 173
+title: "Version 0.173"
+sidebar_label: "0.173"
+sidebar_position: 173
+---
+
+* Note that iterations 171 to 173 were combined into a single iteration. 
+
+### API
+
+* overwolf.utils.openUrlInDefaultBrowser - enhance security by checking the scheme and only allow requests to http/s or protocols allowed in the manifest.  
+  * Manifest example: `"data": {"allowed_protocols": { "protocols": ["mailto", "steam"]}}`
+  * 'file' in the scheme will always be blocked.
+* Added `processId` to [overwolf.games.getRunningGameInfo](/api/games#getrunninggameinfocallback) and [overwolf.games.onGameInfoUpdated](/api/games#ongameinfoupdated).
+* Coexistence API - Event to indicate if there is another overlay library running + if Overwolf doesn't manage to render anything, allow the app to give a relevant notification
+  * Added a new object, [overwolf.games.OverlayInfo](/api/games#overlayinfo-object),  with info about the current out of process overlays.
+  * Added a new [GameInfoChangeReason](/api/games#gameinfochangereason-enum) enum to the [overwolf.games.onGameInfoUpdated](/api/games#ongameinfoupdated) event,with some info about the hooking error reason. (if an hooking error has occurred).
+  * Added a new [KnownOverlayCoexistenceApps](/api/games#knownoverlaycoexistenceapps-enum) enum with a list of known apps causing overlay coexistence issues with OW.
+  * New API: [overwolf.games.getLastRunningGameInfo()](/api/games##getlastrunninggameinfocallback) - returns the last played gameinfo (when no game is currently running). 
+  * new API: [overwolf.settings.games.setAutoLaunchEnabled](/api/settings/games#setautolaunchenabledgameclassid-callback): allows apps to control what games they auto-launch for following user gesture (similar to performUpdate).
+  * New API: [overwolf.os.tray.destroy](/api/os/tray#destroy) - Added a new method for removing an extension tray icon and menu immediately.
+  
+### Platform
+
+* New client settings (Capture => Advanced Settings) with Rate Control and Max Kb/s sliders.
+* Rebranding - we’re releasing almost all of Overwolf’s client modules with a new branding.
+
+### Dev Console
+
+* App Channels - a new feature that enables you to create and distribute different app versions for your users /testers. The first part of this feature [announced already on v0.170](#api-1), and now [the second](/topics/developers-console/app-channels) (and last) part is released - the app channels management tools from the dev console. 
+
+### Bug fixes
+
+* Extension tray icons would get blurry when changing display settings (try changing DPI from 100% to 175%).
+* Replay API - TurnOffResult typo.
+* [GameInfoUpdatedEvent](/api/games#gameinfoupdatedevent-object) Object - fixed the issue that runningChanged is not being updated once a game starts running.
+* Fixed the issue that Video recording won't start if game is minimized.
+* Fixed a bug where subs oneapp page sometimes won't open.
+* New Reddit (new.reddit.com) has an issue with escaped space characters in redirects. This fix ensures space (%20) won't be re-encoded to %2B and break the redirect
+
+### Game events
+
+* overwolf.media.replays TurnOffResult typo.
+* [Football Manager2021](/api/games/events/football-manager-2021)
+  * New supported game with updates and events under:
+    * match_info
+* [Warzone](/api/games/events/call-of-duty-warzone)
+  * New update under:
+    * match_info
+
