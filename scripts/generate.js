@@ -17,7 +17,7 @@ const funcs = files.filter(function (file){
 
 function getResults(err, data) {
   if (err) {
-    return console.log(err)
+    return console.error(err)
   }
   const results = data.map(function(lines){
     return lines.join('') // joining each script lines
@@ -26,7 +26,7 @@ function getResults(err, data) {
 
   fs.writeFile("./configs/clear.cfg", toClear, 'utf8', function err(err) {
     if (err) {
-        return console.log(err)
+        return console.error(err)
     }
   })
 

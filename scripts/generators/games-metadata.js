@@ -6,13 +6,13 @@ const compliance = "../website/pages/docs/start/game-compliance/"
 
 const regex = /id: (\d*).*?(?:launcher: (\d*).*?)?(?:games: \[(\d+(?:,\d+)*?)\].*?)?path: "([\w-]*?)".*?name: "(.*?)"/gms
 
-fs.readFile("configs/games-metadata.cfg", 'utf8', function ret(err, data) {
+fs.readFile("configs/games-metadata.cfg", 'utf8', function(err, data) {
     if (err) {
-        return console.log(err)
+        return console.error(err)
     }
-    fs.readFile("templates/metadata.cfg", 'utf8', function ret(err, temp) {
+    fs.readFile("templates/metadata.cfg", 'utf8', function(err, temp) {
         if (err) {
-            return console.log(err)
+            return console.error(err)
         }
         let first = "const GamesMetaData = {"
         let cont = []
@@ -60,15 +60,15 @@ fs.readFile("configs/games-metadata.cfg", 'utf8', function ret(err, data) {
         first += "\n}\n\nconsole.log('GamesMetadata is loaded locally')"
         second += contS
         second += "\n}"
-        fs.writeFile(paths[0], first, 'utf8', function err(err) {
+        fs.writeFile(paths[0], first, 'utf8', function(err) {
             if (err) {
-                return console.log(err)
+                return console.error(err)
             }
             return console.log(paths[0]);
         })
-        fs.writeFile(paths[1], second, 'utf8', function err(err) {
+        fs.writeFile(paths[1], second, 'utf8', function(err) {
             if (err) {
-                return console.log(err)
+                return console.error(err)
             }
             return console.log(paths[1])
         })

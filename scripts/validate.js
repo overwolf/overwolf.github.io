@@ -19,7 +19,7 @@ const funcs = files.filter(function (file){
 
 function getResults(err, data) {
   if (!enforce && err) {
-    return console.log(err)
+    return console.error(err)
   }
   const results = data.map(function(lines){
     return lines.join('') // joining each script's lines
