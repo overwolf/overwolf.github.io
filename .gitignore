@@ -2,3 +2,6 @@
 website/src/components/game-events-status/gamesMetaData.jsx
 website/src/components/game-events-status/gamesMetaData.jsx
 website/pages/docs/status
+scripts/configs/clear.cfg
+website/src/components/game-events-status/gamesMetaData.jsx
+website/static/js/games_metadata.js
