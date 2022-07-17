@@ -1,6 +1,7 @@
 ---
 id: 0-0-1
 title: WebSockets Game Events Integration 0.0.1
+sidebar_label: 0.0.1
 ---
 
 ## Protocol Component overview
@@ -74,10 +75,11 @@ params | Array of events | No parameters |
 ###### Return value
 ```json
 { 
-   result: {
-        subscribedTo?: string[] - An array of all the events successfully subscribed to
-        subscriptionFailed?: string[] - An array of all the events subscribing to failed
-    success: true
+    "result": {
+        "subscribedTo"?: string[] // An array of all the events successfully subscribed to
+        "subscriptionFailed"?: string[] // An array of all the events subscribing to failed
+    }
+    "success": true
 }
 ```
 
@@ -96,10 +98,11 @@ params | Array of events | No parameters |
 ###### Return value
 ```json
 { 
-   result: {
-        unsubscribedFrom?: string[] - An array of all the events successfully unsubscribed from
-        unsubscriptionFailed?: string[] - An array of all the events unsubscribing from failed
-    success: true
+    "result": {
+        "unsubscribedFrom"?: string[] // An array of all the events successfully unsubscribed from
+        "unsubscriptionFailed"?: string[] // An array of all the events unsubscribing from failed
+    }
+    "success": true
 }
 ```
 
@@ -118,9 +121,10 @@ params | - | No parameters |
 ###### Return value
 ```json
 { 
-   result: {
-        gameState: object - An object containing the current state of all info-events data
-    success: true
+    "result": {
+        "gameState": object // An object containing the current state of all info-events data
+    }
+    "success": true
 }
 ```
 

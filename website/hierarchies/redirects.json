@@ -700,6 +700,10 @@
     "from": "/docs/topics/achievement-rewards-intro"
   },
   {
+    "to": "/internal/websocket-gep/versions/0-0-x/0-0-1",
+    "from": "/internal/websocket-gep/0-0-1"
+  },
+  {
     "to": "/topics/integrations/app-analytics",
     "from": "/docs/topics/app-analytics"
   },

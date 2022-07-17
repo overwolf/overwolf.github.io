@@ -12,7 +12,7 @@ function reverseChangelogs(items) {
 
 function enforceSingleSidebars(items) {
   const result = items.map((item) => {
-    if (item.type === 'category' && item.label == "changelog") {
+    if (item.type === 'category' && (item.label == "changelog" || item.label == "versions")) {
       return { ...item, items: reverseChangelogs(item.items) }
     }
     if (item.type === 'category') {

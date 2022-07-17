@@ -1,0 +1,27 @@
+---
+id: overview
+title: WebSockets Game Events Integration Overview
+sidebar_label: Overview
+sidebar_position: 0
+draft: true
+---
+
+## About
+
+This protocol is meant to serve as a standardized way of exposing game events from a game, for use in external apps.
+
+Important specifications:
+- The protocol operates over [JSON-RPC 2.0](https://www.jsonrpc.org/specification).
+- All jsons sent must be encoded using [utf-8](https://en.wikipedia.org/wiki/UTF-8).
+
+:::note
+It is recommended to use the [Game Events SDK](/topics/integrations/events-sdk-for-game-developers) where possible. This protocol is only intended to be used when using the SDK is not a viable solution.
+:::
+
+## Navigation
+
+Every version of the protocol is a complete definition on its own. As such, the [changelog](changelog) will document the exact changes between each version.
+
+Versions will usually be backwards compatiable. However, in the case that it is not possible to do so, certain versions will be marked as `longterm`. These versions will be considered stable and supported for a lot longer.
+
+For the latest version, click [here](versions/0-0-x/0-0-2).

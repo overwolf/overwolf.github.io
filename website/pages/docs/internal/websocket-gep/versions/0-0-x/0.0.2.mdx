@@ -1,0 +1,166 @@
+---
+id: 0-0-2
+title: WebSockets Game Events Integration 0.0.2
+sidebar_label: 0.0.2
+draft: true
+---
+
+## Protocol Component overview
+The WebSocket Game Events Provider (GEP) solution includes the following components:
+1. Active Games Folder
+2. Game Events Provider (Game)
+3. Game Events Consumer (App)
+
+### Active Games Folder
+A folder located at “%appdata%/GEP/[Your-Game]”, containing .ini files. Each file contains a two key-value pairs:
+- The game’s name -> The game’s websocket’s port.
+- "Protocol-Version" -> The GEP Websocket protocol version.
+
+To keep the hierarchy clean, every game is responsible for deleting its file once the game is closed.
+
+### Game Events Provider (Game)
+Provides events from the game via a local server WebSocket. The game is responsible for opening the socket, detecting when the relevant events occur, and sending them to all connected sockets.
+
+To allow the socket to be detected, once the socket is initialized, the game needs to create a new .ini file under the “Active Games Folder”, detailing the game name, and the socket’s port.
+
+#### Event Types
+##### Game Events
+Game events refer to fleeting changes in the game. An action performed by a player, a certain interaction with the environment, etc.
+
+Game Events do not directly change the overall state of the game.
+
+Example:
+```json title="The player just scored 5 points"
+{
+    "name": "score",
+    "data": {
+        "score": 5
+    }
+}
+```
+
+##### Info Events
+Info update events refer to lasting changes in the game. The player exiting the save, a change in the game’s stage, a change to the player's level, etc.
+
+Info update events directly change the overall state of the game.
+
+Example:
+```json title="A match just started"
+{
+    "info": {
+        "game_info": {
+            "matchStarted":"true",
+        }
+    },
+    "feature": "matchState"
+}
+```
+
+#### Features
+Features describe the grouping of events. At times, there will be a group of changes that occur in the game, potentially taking several events,
+but all describing one core "feature" of the game ("Match started", "Match ended", both parts of "Match state").
+
+Features group events together, for easier and more consistent event subscription and handling on all sides.
+
+#### Event Resetting
+
+
+#### API
+##### sendGameEvent
+Sends a new game event to a specific connection that is subscribed to that event.
+
+This is a notification, and does not expect a response from the consumer. As such, there is no request id.
+
+Field Name          | Value    | Description |
+------------ | ------------| ------------- |
+jsonrpc | 2.0 | The protocol version |
+method | sendGameEvent | The action to perform |
+params | Object containing event name and data | No parameters |
+
+##### sendInfoUpdate
+Sends a new info update event to a specific connection that is subscribed to that update.
+
+This is a notification, and does not expect a response from the consumer. As such, there is no request id.
+
+Field Name          | Value    | Description |
+------------ | ------------| ------------- |
+jsonrpc | 2.0 | The protocol version |
+method | sendInfoUpdate | The action to perform |
+params | Object containing event name and data | No parameters |
+
+### Game Events Consumer (App)
+Consumes events from a game via a local client WebSocket. The app is responsible for connecting to the game’s socket, subscribing to the events it needs, and handling them once they arrive.
+
+To locate potential games to connect to, the app should periodically scan the “Active Games Folder”, attempting to connect to any valid connection it deems important.
+
+#### API
+The consumer may call these methods on the game, using the json-rpc protocol.
+
+##### Subscribe
+Requests to subscribe the current app to new events/features.
+
+Field Name          | Value    | Description |
+------------ | ------------| ------------- |
+jsonrpc | 2.0 | The protocol version |
+id | Unique for each message | The correlation identifier |
+method | subscribe | The action to perform |
+params | Array of events/features | No parameters |
+
+###### Return value
+```json
+{ 
+    "result": {
+        "subscribedTo"?: string[] // An array of all the events/features successfully subscribed to
+        "subscriptionFailed"?: string[] // An array of all the events/features subscribing to failed
+    }
+    "success": true
+}
+```
+
+The “success” parameter is true if at least one event was subscribed to. False otherwise.
+
+##### Unsubscribe
+Requests to subscribe the current app to new events/features.
+
+Field Name          | Value    | Description |
+------------ | ------------| ------------- |
+jsonrpc | 2.0 | The protocol version |
+id | Unique for each message | The correlation identifier |
+method | unsubscribe | The action to perform |
+params | Array of events/features | No parameters |
+
+###### Return value
+```json
+{ 
+    "result": {
+        "unsubscribedFrom"?: string[] // An array of all the events/features successfully unsubscribed from
+        "unsubscriptionFailed"?: string[] // An array of all the events/features unsubscribing from failed
+    }
+    "success": true
+}
+```
+
+The “success” parameter is true if at least one event was unsubscribed from. False otherwise.
+
+##### Sync
+Requests a forced synchronization of the game’s current game-state.
+
+Field Name          | Value    | Description |
+------------ | ------------| ------------- |
+jsonrpc | 2.0 | The protocol version |
+id | Unique for each message | The correlation identifier |
+method | sync | The action to perform |
+params | - | No parameters |
+
+###### Return value
+```json
+{ 
+    "result": {
+        "gameState": object // An object containing the current state of all subscribed info-events data
+    }
+    "success": true
+}
+```
+
+The “success” parameter is true if a gameState was returned. False otherwise.
+On failure, the “result” parameter is null.

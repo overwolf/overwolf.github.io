@@ -1,0 +1,43 @@
+---
+id: 203
+title: "Version 0.203"
+sidebar_label: "0.203"
+sidebar_position: 203
+draft: true
+---
+
+## Version 0.203 (In Progress)
+* Note that iterations 200 and 201 were combined into a single iteration.
+
+#### Game events
+Coming soon
+
+#### Docs
+- Backend cleanup
+- Improved sidebar navigation (EXPERIMENTAL)
+- Cleaner URLs (Older urls will still work!)
+- Improved game-related page navigation
+- Changelogs are now split into separate, easy to navigate pages.
+
+:::note
+If you are using a fork of the website's original repository, you should fetch the new update as soon as possible to avoid losing any changes.
+:::
+
+Known website issues:
+- "view all search results" is sometimes broken
+
+Fixed:
+- Changelogs are now indexed properly when searching.
+
+#### Platform
+- [overwolf.streaming.StreamMouseCursor] now also supports a value of `none`, to never capture the cursor anywhere.
+- New API
+    - **Applies to discord and reddit only.**
+    - [overwolf.social.*.uploadVideo](/api/social/reddit#uploadvideouploadvideoparameters-callback-callback) - Upload a video to the buffer server, getting a link to the raw file.
+    - [overwolf.social.*.cancelUpload](/api/social/reddit#canceluploadid-callback) - Cancel a video's upload using its id.
+    - [overwolf.social.*.post](/api/social/reddit#postredditshareparams-callback) - Make a post to the relevant social network. Using a link to an uploaded video will "embed" it in the post.
+- **[overwolf.social.reddit.RedditShareParameters](/api/social/reddit#redditshareparameters-object) - `description` renamed to `content`**
+
+#### Bug Fixes
+- [overwolf.media.replays.ReplayVideoOptions](/api/media/replays#replayvideooptions-object) is no longer required when empty.
+- Fixed a crash involving windows compatiability mode and overwolf.
