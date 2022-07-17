@@ -248,7 +248,8 @@ Returns 'True' when match starts. Returns 'False' once local player dies or wins
 Data example:
 
 ```json
-{"info":{"match_info":{"match_state":"``{"in_progress":true}"}},"feature":"match_info"}{"info":{"match_info":{"match_state":"{"in_progress":false}"}},"feature":"match_info"}
+{"info":{"match_info":{"match_state":"{"in_progress":true}"}},"feature":"match_info"}
+{"info":{"match_info":{"match_state":"{"in_progress":false}"}},"feature":"match_info"}
 ```
 
 #### *round_type* notes
@@ -259,9 +260,7 @@ Data examples:
 
 ```json
 {"info":{"match_info":{"round_type":"{"stage":"1-1","name":"Carousel","type":null}"}},"feature":"match_info"}
-
 {"info":{"match_info":{"round_type":"{"stage":"1-2","name":"PVE","type":"Minions_1"}"}},"feature":"match_info"}
-
 {"info":{"match_info":{"round_type":"{"stage":"2-1","name":"PVP","type":null}"}},"feature":"match_info"}
 ```
 
@@ -289,8 +288,6 @@ Data example:
 
 ```json
 {"info":{"match_info":{"game_mode":"tft"}},"feature":"match_info"}
-```
-```json
 {"info":{"match_info":{"game_mode":"lol"}},"feature":"match_info"}
 ```
 
@@ -318,39 +315,39 @@ match_end   | null                              | Ending of a TFT match       |S
 #### *round_start* notes
 
 Data example:
-
-`{"events":[{"name":"round_start","data":""}]}`
-
+```json
+{"events":[{"name":"round_start","data":""}]}
+```
 #### *round_end* notes
 
 Data example:
-
-`{"events":[{"name":"round_end","data":""}]}`
-
+```json
+{"events":[{"name":"round_end","data":""}]}
+```
 #### *battle_start* notes
 
 Data example:
-
-`{"events":[{"name":"battle_start","data":"PVE"}]}`
-
+```json
+{"events":[{"name":"battle_start","data":"PVE"}]}
+```
 #### *battle_end* notes
 
 Data example:
 
-`{"events":[{"name":"battle_end","data":""}]}`
-
+{"events":[{"name":"battle_end","data":""}]}
+```
 #### *match_start* notes
 
 Data example:
-
-`{"events":[{"name":"match_start","data":""}]}`
-
+```json
+{"events":[{"name":"match_start","data":""}]}
+```
 #### *match_end* notes
 
 Data example:
-
-`{"events":[{"name":"match_end","data":""}]}`
-
+```json
+{"events":[{"name":"match_end","data":""}]}
+```
 
 ## `roster`
 
@@ -652,5 +649,3 @@ Data Example:
       }      "}},"feature":"carousel"
    }
 ```
-
-<b>Currently "level" and "item" are NOT available/accurate</b>
