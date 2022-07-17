@@ -7,7 +7,7 @@ sidebar_label: overwolf.social.youtube
 Provides access to the YouTube social provider.
 
 :::tip
-You can use [`verwolf.social.getDisabledServices()`](.#getdisabledservicescallback) method to check if the service is available.
+You can use [`verwolf.social.getDisabledServices()`](../social#getdisabledservicescallback) method to check if the service is available.
 :::
 
 ## Methods Reference
@@ -56,7 +56,7 @@ callback  | (Result) => void           | A callback function which will be calle
 
 Parameter | Type                       | Description                                                             |
 --------- | ---------------------------| ----------------------------------------------------------------------- |
-callback  | [(Result: GetUserInfoResult)](.#getuserinforesult-object) => void   | A callback function which will be called with the status of the request |
+callback  | [(Result: GetUserInfoResult)](../social#getuserinforesult-object) => void   | A callback function which will be called with the status of the request |
 
 ## share(YouTubeShareParameters, callback)
 #### Version added: 0.125
@@ -113,7 +113,7 @@ overwolf.social.youtube.cancelShare("2", console.log)
 ## onLoginStateChanged
 #### Version added: 0.125
 
-> Fired when the user’s login state changes, with the following structure: [LoginStateChangedEvent](.#loginstatechangedevent-object) Object.
+> Fired when the user’s login state changes, with the following structure: [LoginStateChangedEvent](../social#loginstatechangedevent-object) Object.
 
 ## YouTubeShareParameters Object
 #### Version added: 0.125

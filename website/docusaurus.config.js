@@ -123,6 +123,8 @@ module.exports = {
           routeBasePath: "/",
           sidebarPath: require.resolve("./hierarchies/sidebars.js"),
           sidebarItemsGenerator: sidebarsOverrides,
+          sidebarCollapsible: true,
+          sidebarCollapsed: true
         },
         blog: {},
         theme: {
@@ -135,6 +137,11 @@ module.exports = {
     ]
   ],
   themeConfig: {
+    docs: {
+      sidebar: {
+        autoCollapseCategories: true
+      }
+    },
     metadata: [
       {
         name: "google-site-verification",

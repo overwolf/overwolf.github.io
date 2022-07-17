@@ -36,7 +36,7 @@ Unsupported games will not necessarily be detected as expected, and are by their
 This method will only work for games with a [GameInfoType](#gameinfotype-enum) of type "game"!
 :::
 
-> If both `tracked` and `track_all_games` are set to true in the [manifest](../manifest#launch_event_settings-array), returns an object with information about the most recently launched game, similarly to the way [overwolf.games.getRunningGameInfo()](.#getrunninggameinfocallback) works.
+> If both `tracked` and `track_all_games` are set to true in the [manifest](../manifest#launch_event_settings-array), returns an object with information about the most recently launched game, similarly to the way [overwolf.games.getRunningGameInfo()](../games#getrunninggameinfocallback) works.
 
 Note: In a scenario when more than one game is running, we'll display information only from the latest one that was launched, including both "unsupported" **and** "supported" games.
 

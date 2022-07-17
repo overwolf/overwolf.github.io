@@ -38,7 +38,7 @@ Parameter      | Type                                                           
 -------------- | ------------------------------------------------------------------| ------------------------------------------------------------------------------------------------------- |
 sourceVideoUrl | string                                                            | The url of the source video in an `overwolf://media` form                                               |
 segments	   | [VideoCompositionSegment[]](#videocompositionsegment-object)      | A JSON containing a list of segments. See [notes below](#segments-notes)                                |
-callback       | [(Result: FileResult)](.#fileresult-object) => void  | Called with the status of the request and the url to the target video                                   |
+callback       | [(Result: FileResult)](../media#fileresult-object) => void  | Called with the status of the request and the url to the target video                                   |
 
 #### `segments` notes
 
@@ -63,7 +63,7 @@ Parameter      | Type                                | Description              
 -------------- | ------------------------------------| ------------------------------------------------------------------------------------------------------- |
 files	       | string[]                            | List of video files (the url of each video is  in the form of `overwolf://media or file://`)            |
 outputFile	   | string                              | The name of the output video file                                                                       |
-callback       | [(Result: FileResult)](.#fileresult-object) => void  | Called with the status of the request and the url to the output video     |
+callback       | [(Result: FileResult)](../media#fileresult-object) => void  | Called with the status of the request and the url to the output video     |
 
 ## getVideos(callback)
 #### Version added: 0.89
@@ -97,7 +97,7 @@ keepNewestXGbs | int                                 | Keep the newest X GBs of 
 callback       | (Result) => void                    | A callback function which will be called with the status of the request                                 |
 
 :::tip
-To delete old gifs you can use [overwolf.media.videos.deleteOldGifs()](.#deleteoldgifskeepnewestxgbs-callback), and to delete old screenshots you can use [overwolf.extensions.io.delete()](../extensions/io#deletespace-path-callback).
+To delete old gifs you can use [overwolf.media.videos.deleteOldGifs()](../media#deleteoldgifskeepnewestxgbs-callback), and to delete old screenshots you can use [overwolf.extensions.io.delete()](../extensions/io#deletespace-path-callback).
 :::
 
 ## deleteVideo(videoUrl, callback)
@@ -132,7 +132,7 @@ Parameter      | Type                                | Description              
 sourceVideoUrl | string                              | The url of the source video in an overwolf://media form.                                                |
 watermarkUrl   | string                              | The url of the watermark video/image. Supports absolute/local path to a file in the extension directory (or an overwolf://media form).      |
 watermarkParams| [WatermarkParams](#watermarkparams-object) object   | use this object to mark the watermark                                                    |
-callback       | [(Result: FileResult)](.#fileresult-object) => void  | Called with the status of the request and the url to the output video     |
+callback       | [(Result: FileResult)](../media#fileresult-object) => void  | Called with the status of the request and the url to the output video     |
 
 #### Usage example
 

@@ -7,7 +7,7 @@ sidebar_label: overwolf.social.discord
 Provides access to the Discord social provider.
 
 :::tip
-You can use [`overwolf.social.getDisabledServices()`](.#getdisabledservicescallback) method to check if the service is available.
+You can use [`overwolf.social.getDisabledServices()`](../social#getdisabledservicescallback) method to check if the service is available.
 :::
 
 ## Methods Reference
@@ -58,7 +58,7 @@ callback  | (Result) => void           | A callback function which will be calle
 
 Parameter | Type                       | Description                                                             |
 --------- | ---------------------------| ----------------------------------------------------------------------- |
-callback  | [(Result: GetUserInfoResult)](.#getuserinforesult-object) => void   | A callback function which will be called with the status of the request |
+callback  | [(Result: GetUserInfoResult)](../social#getuserinforesult-object) => void   | A callback function which will be called with the status of the request |
 
 ## getGuilds(callback)
 #### Version added: 0.115
@@ -183,7 +183,7 @@ overwolf.social.discord.cancelShare("2", console.log)
 ## onLoginStateChanged
 #### Version added: 0.115
 
-> Fired when the user’s login state changes, with the following structure: [`LoginStateChangedEvent`](.#loginstatechangedevent-object) Object.
+> Fired when the user’s login state changes, with the following structure: [`LoginStateChangedEvent`](../social#loginstatechangedevent-object) Object.
 
 ## DiscordShareParameters Object
 #### Version added: 0.115

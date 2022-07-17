@@ -99,7 +99,7 @@ function GameDevSection(props) {
           Community is power and a driver for retention.<br/>
           Give your community tools to create valuable in-game content for your game with the Overwolf SDK
         </p>
-        <a className="btn" href={`topics/integrations/events-SDK-for-game-developers`}>Learn more</a>
+        <a className="btn" href={`topics/integrations/events-sdk-for-game-developers`}>Learn more</a>
       </div>
     </section>
   );
