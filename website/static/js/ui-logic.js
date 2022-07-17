@@ -1,4 +1,8 @@
-if(window.location.href.includes('docs') === true) {
+if(
+  window.location.href.includes('topics') === true ||
+  window.location.href.includes('start') === true ||
+  window.location.href.includes('api') === true
+  ) {
   initializeUiChanges();
 }
 

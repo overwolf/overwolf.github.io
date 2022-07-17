@@ -4,6 +4,7 @@ import { GamesMetadata } from '../game-events-status/gamesMetaData';
 import { stateToCss } from '../game-events-status/events-utils/events-utils';
 import GameInfoListItem from './game-info-list-item';
 import LauncherGamesList from './launcher-games-list';
+import StatusToolTip from './status-tooltip';
 
 function GameInfo(props) {
   const {
@@ -45,11 +46,12 @@ function GameInfo(props) {
 
         <h1
           className={`game-info-title ${gameStatus ? stateToCss(gameStatus.state) : ''}`}>
-
           <img src={GamesMetadata[gameID].iconLargeUrl}/>
-
           <span>{GamesMetadata[gameID].name}</span>
 
+          {gameStatus &&
+            <StatusToolTip gameState={gameStatus.state} />
+          }
         </h1>
 
         <ul className='game-info-list'>
@@ -119,15 +121,17 @@ function GameInfo(props) {
 
       </div>
 
-        {launcherGameList > 0 && 
+        {launcherGameList > 0 &&
           <LauncherGamesList gamesListData={GamesMetadata[gameID].launcher.games} />
         }
 
-      <ul className="legend">
-        <li className="good">Good to go</li>
-        <li className="medium">Some events may be unavailable</li>
-        <li className="bad">Events are currently unavailable</li>
-      </ul>
+        {!showStatus &&
+          <ul className="legend">
+            <li className="good">Good to go</li>
+            <li className="medium">Some events may be unavailable</li>
+            <li className="bad">Events are currently unavailable</li>
+          </ul>
+        }
 
     </section>
   );

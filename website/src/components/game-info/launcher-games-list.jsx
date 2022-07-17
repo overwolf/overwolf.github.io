@@ -64,9 +64,9 @@ function LauncherGamesList(props) {
     <div className={`expended-launcher-game-list ${glIsOpen ? 'is-open' : ''}`}>
 
       <button className='expend-btn' onClick={handleExpandCollapse}>
-        <svg className='games-icon'><use href="../../img/sprite.svg#gamesIcon" /></svg>
+        <svg className='games-icon'><use href="/img/sprite.svg#gamesIcon" /></svg>
         Launcher's supported games list
-        <svg><use href="../../img/sprite.svg#arrowDown" /></svg>
+        <svg><use href="/img/sprite.svg#arrowDown" /></svg>
       </button>
 
       <div className='launcher-game-list-inner'
