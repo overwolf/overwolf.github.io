@@ -216,40 +216,50 @@ div[class^="tableOfContents"] {
 
   .theme-doc-sidebar-item-link-level-1 {
     a.menu__link {
-      border-left: 7px solid transparent;
-      font-size: 16px;
+      border-left: 4px solid transparent;
+      font-size: 14px;
       color: var(--color-500);
       letter-spacing: .01em;
       position: relative;
       border-radius: unset;
       font-family: Madera,sans-serif;
+      padding: 0 12px;
+      min-height: 29px;
 
       &.menu__link--active {
-        border-left: 7px solid var(--color-primary);
+        border-left: 4px solid var(--color-primary);
         color: var(--color-bg);
-        font-weight: 700;
       }
     }
   }
 
   .theme-doc-sidebar-item-category {
 
+    .menu__list {
+      padding-left: 6px;
+    }
+
     .menu__list-item-collapsible {
       border-radius: unset;
 
       a.menu__link {
-        border-left: 7px solid transparent;
-        font-size: 16px;
+        border-left: 4px solid transparent;
+        font-size: 14px;
         color: var(--color-500);
         letter-spacing: .01em;
         position: relative;
         border-radius: unset;
         font-family: Madera,sans-serif;
+        padding: 0 4px 0 12px;
+        min-height: 29px;
+        width: 230px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
 
         &.menu__link--active {
-          border-left: 7px solid var(--color-primary);
+          border-left: 4px solid var(--color-primary);
           color: var(--color-bg);
-          font-weight: 700;
         }
       }
     }
@@ -261,7 +271,8 @@ div[class^="tableOfContents"] {
           background: transparent;
         }
         .menu__link--sublist {
-          padding: 0 14px 4px 12px;
+          padding: 0 14px 0px 12px;
+          font-family: 'lato';
           &:hover {
             color: white;
           }
@@ -276,8 +287,8 @@ div[class^="tableOfContents"] {
 
         a.menu__link {
           color: var(--color-600);
-          padding: 0 0 8px 20px;
-          font-size: 15px;
+          padding: 0 0 4px 14px;
+          font-size: 14px;
           letter-spacing: .01em;
 
           &:hover {
@@ -552,6 +563,16 @@ div[class^="toggle"] {
 
 .menu__link--active {
   color: var(--color-primary);
+}
+
+.menu__caret {
+  padding: 0 6px;
+}
+
+.menu__caret:before, .menu__link--sublist-caret:after {
+  content: '';
+  background: var(--ifm-menu-link-sublist-icon) 50% / 1.5rem 1.5rem;
+  width: 1rem;
 }
 
 a.menu__link.menu__link--sublist.menu__link--sublist-caret.menu__link--active {
