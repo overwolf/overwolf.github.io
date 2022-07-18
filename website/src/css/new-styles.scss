@@ -217,7 +217,7 @@ div[class^="tableOfContents"] {
   .theme-doc-sidebar-item-link-level-1 {
     a.menu__link {
       border-left: 4px solid transparent;
-      font-size: 14px;
+      font-size: 16px;
       color: var(--color-500);
       letter-spacing: .01em;
       position: relative;
@@ -244,7 +244,7 @@ div[class^="tableOfContents"] {
 
       a.menu__link {
         border-left: 4px solid transparent;
-        font-size: 14px;
+        font-size: 16px;
         color: var(--color-500);
         letter-spacing: .01em;
         position: relative;
@@ -288,7 +288,7 @@ div[class^="tableOfContents"] {
         a.menu__link {
           color: var(--color-600);
           padding: 0 0 4px 14px;
-          font-size: 14px;
+          font-size: 16px;
           letter-spacing: .01em;
 
           &:hover {
@@ -298,7 +298,6 @@ div[class^="tableOfContents"] {
 
           &.menu__link--active {
             color: var(--color-primary);
-            font-weight: 600;
             background-color: unset;
           }
         }
