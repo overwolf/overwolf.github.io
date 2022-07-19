@@ -40,9 +40,9 @@ callback  | [(Result: GetDisabledServicesResult)](#getdisabledservicesresult-obj
 
 Parameter | Type                       | Description                                                             |
 --------- | ---------------------------| ----------------------------------------------------------------------- |
-uploadParams  | [UploadVideoParameters](#uploadvideoparams-object) => void  | returns a list of disabled services     |
-resultCallback  | [(Result: GetDisabledServicesResult)](#getdisabledservicesresult-object) => void  | returns a list of disabled services     |
-progressCallback  | [(Result: GetDisabledServicesResult)](#getdisabledservicesresult-object) => void  | returns a list of disabled services     |
+uploadParams  | [VideoUploadParams](#videouploadparams-object) | Parameters for the video being uploaded     |
+resultCallback  | [(Result: VideoUploadResult)](#videouploadresult-object) => void  | A callback function which will be called with the resulting status of the request         |
+progressCallback  | [(Result: VideoUploadProgress)](#videouploadprogress-object) => void  | A callback function which will be called whenever upload progress is made |
 
 
 ## cancelUpload(string, callback)
