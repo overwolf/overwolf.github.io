@@ -19,6 +19,7 @@ You can use [`overwolf.social.getDisabledServices()`](../social#getdisabledservi
 * [overwolf.social.discord.getChannels()](#getchannelsguildid-callback)
 * [overwolf.social.discord.share()](#sharediscordshareparameters-callback)
 * [overwolf.social.discord.shareEx()](#shareexdiscordshareparameters-callback-callback)
+* [overwolf.social.discord.post()](#shareexdiscordpostparameters-callback)
 * [overwolf.social.discord.cancelShare()](#cancelsharestring-callback)
 
 ## Events Reference
@@ -28,6 +29,7 @@ You can use [`overwolf.social.getDisabledServices()`](../social#getdisabledservi
 ## Types Reference
 
 * [overwolf.social.discord.DiscordShareParameters](#discordshareparameters-object) Object
+* [overwolf.social.discord.DiscordPostParameters](#discordpostparameters-object) Object
 * [overwolf.social.discord.SocialShareResult](#socialshareresult-object) Object
 * [overwolf.social.discord.SocialShareProgress](#socialshareprogress-object) Object
 * [overwolf.social.discord.enums.ShareState](#sharestate-enum) Enum
@@ -180,15 +182,41 @@ callback    | (Result) => void        | Called with the result of the cancellati
 overwolf.social.discord.cancelShare("2", console.log)
 ```
 
+## post(DiscordPostParameters, callback)
+#### Version added: 0.203
+
+> If the user is currently logged into Discord, this will send a message.
+
+Parameter             | Type                       | Description                                                           |
+--------------------- | ---------------------------| --------------------------------------------------------------------- |
+discordShareParams    | [DiscordPostParameters](#redditpostparameters-object) Object        | The post parameters       |
+callback  | (Result) => void   | A callback function which will be called with the status of the request |
+
+Types of errors that can occur:
+
+* Disconnected (user isn't signed in)
+
+
 ## onLoginStateChanged
 #### Version added: 0.115
 
 > Fired when the user’s login state changes, with the following structure: [`LoginStateChangedEvent`](../social#loginstatechangedevent-object) Object.
 
+## DiscordPostParameters Object
+#### Version added: 0.203
+
+> This object defines all parameters that should be passed to the Discord [`post()`](#postdiscordpostparameters-callback).
+
+Parameter              | Type    | Description                                                                 |
+---------------------- | --------| --------------------------------------------------------------------------- |
+channelId              | string  | The channel ID that the file will be shared to                              |   |
+message            | string  | The shared message's content                                              |            |
+
+
 ## DiscordShareParameters Object
 #### Version added: 0.115
 
-> This object defines all parameters that can/should be passed to the Discord [`Share()`](#sharediscordshareparameters-callback) and [`shareEx()`](#shareexdiscordshareparameters-callback-callback) methods.
+> This object defines all parameters that can/should be passed to the Discord [`share()`](#sharediscordshareparameters-callback) and [`shareEx()`](#shareexdiscordshareparameters-callback-callback) methods.
 
 Parameter              | Type    | Description                                                                 |
 ---------------------- | --------| --------------------------------------------------------------------------- |

@@ -9,11 +9,16 @@ Provides sharing services to different social networks like Reddit, Twitter, etc
 ## Methods Reference
 
 * [overwolf.social.getDisabledServices()](#getdisabledservicescallback)
+* [overwolf.social.uploadVideo()](#uploadvideouploadparams-callback-callback)
+* [overwolf.social.cancelUpload()](#canceluploadstring-callback)
 
 ## Types Reference
 
 * [GetDisabledServicesResult](#getDisabledServicesResult-object) Object
 * [GetUserInfoResult](#getuserinforesult-object) Object
+* [overwolf.social.VideoUploadParams](#videouploadparams-object) Object
+* [overwolf.social.VideoUploadResult](#videouploadresult-object) Object
+* [overwolf.social.VideoUploadProgress](#videouploadprogress-object) Object
 * [overwolf.social.LoginState](#loginstate-enum) enum
 * [overwolf.social.LoginStateChangedEvent](#loginstatechangedevent-object) Object		
 
@@ -27,6 +32,86 @@ Note: You can’t disable or enable sharing service from your app. It’s done f
 Parameter | Type                       | Description                                                             |
 --------- | ---------------------------| ----------------------------------------------------------------------- |
 callback  | [(Result: GetDisabledServicesResult)](#getdisabledservicesresult-object) => void  | returns a list of disabled services     |
+
+## uploadVideo(uploadParams, resultCallback, progressCallback)
+#### Version added: 0.203
+
+> Upload a video to the buffer server.
+
+Parameter | Type                       | Description                                                             |
+--------- | ---------------------------| ----------------------------------------------------------------------- |
+uploadParams  | [UploadVideoParameters](#uploadvideoparams-object) => void  | returns a list of disabled services     |
+resultCallback  | [(Result: GetDisabledServicesResult)](#getdisabledservicesresult-object) => void  | returns a list of disabled services     |
+progressCallback  | [(Result: GetDisabledServicesResult)](#getdisabledservicesresult-object) => void  | returns a list of disabled services     |
+
+
+## cancelUpload(string, callback)
+#### Version added: 0.203
+
+> Cancels an upload to the buffer server mid-way.
+
+Parameter | Type                       | Description                                                             |
+--------- | ---------------------------| ----------------------------------------------------------------------- |
+id    | string        | The request ID       |
+callback    | (Result) => void        | Called with the result of the cancellation       |
+
+
+## UploadVideoParams Object
+#### Version added: 0.203
+
+> This object defines all parameters that should be passed to the [`overwolf.social.cancelUpload()`](#canceluploadstring-callback).
+
+Parameter              | Type    | Description                                                                 |
+---------------------- | --------| --------------------------------------------------------------------------- |
+id              | string  | The ID for the current upload. See [note](#id-note)                              |
+filePath              | string  | The path to the file to upload                              |
+
+#### id note
+
+When calling [`overwolf.social.uploadVideo()`](#uploadvideouploadparams-callback-callback), it is required to supply it with a request ID. This ID will also be used in case you wish to cancel this share using [`overwolf.social.cancelUpload()`](#canceluploadstring-callback).
+
+
+## UploadVideoResult Object
+#### Version added: 0.203
+
+> Container for the url created in a successful upload.
+
+Parameter         | Type          | Description             |
+------------------| --------------| ----------------------- |
+url              | string        | The url of the generated result                         | 
+
+
+## UploadVideoProgress Object
+#### Version added: 0.203
+
+> The current progress of the share request
+
+Parameter         | Type          | Description             |
+------------------| --------------| ----------------------- |
+progress              | int        | The current precentage of upload progress                         | 
+id              | string        | The id of the share request                         | 
+state              | [ShareState](#sharestate-enum)  | The current state of the share request                         | 
+
+#### Example data
+
+```json
+{
+  "progress": 60,
+  "id": "7",
+  "state": "Uploading"
+}
+```
+
+## ShareState Enum
+#### Version added: 0.203
+
+> The current state of the [`overwolf.social.uploadVideo()`](#uploadvideouploadparams-callback-callback) operation.
+
+| Options      | Description                                                                                                         |
+|--------------| --------------------------------------------------------------------------------------------------------------------|
+| Started  | The upload has started |
+| Uploading      | The upload is in progress |
+| Finished        | The upload has finished |
 
 ## GetDisabledServicesResult Object
 #### Version added: 0.126

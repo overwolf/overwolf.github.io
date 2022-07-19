@@ -18,6 +18,7 @@ You can use [`overwolf.social.getDisabledServices()`](../social#getdisabledservi
 * [overwolf.social.reddit.searchSubreddits()](#searchsubredditsquery-callback)
 * [overwolf.social.reddit.share()](#shareredditshareparameters-callback)
 * [overwolf.social.reddit.shareEx()](#shareexredditshareparameters-callback-callback)
+* [overwolf.social.reddit.post()](#shareexredditpostparameters-callback)
 * [overwolf.social.reddit.cancelShare()](#cancelsharestring-callback)
 * [overwolf.social.reddit.getSubredditFlairs()](#getsubredditflairssubredditname-callback)
 
@@ -29,6 +30,7 @@ You can use [`overwolf.social.getDisabledServices()`](../social#getdisabledservi
 ## Types Reference
 
 * [overwolf.social.reddit.RedditShareParameters](#redditshareparameters-object) Object
+* [overwolf.social.reddit.RedditPostParameters](#redditpostparameters-object) Object
 * [overwolf.social.reddit.SocialShareResult](#socialshareresult-object) Object
 * [overwolf.social.reddit.SocialShareProgress](#socialshareprogress-object) Object
 * [overwolf.social.reddit.enums.ShareState](#sharestate-enum) Enum
@@ -125,6 +127,20 @@ callback    | (Result) => void        | Called with the result of the cancellati
 overwolf.social.reddit.cancelShare("2", console.log)
 ```
 
+## post(RedditPostParameters, callback)
+#### Version added: 0.203
+
+> If the user is currently logged into Reddit, this will perform the video share.
+
+Parameter             | Type                       | Description                                                           |
+--------------------- | ---------------------------| --------------------------------------------------------------------- |
+redditShareParams    | [RedditPostParameters](#redditpostparameters-object) Object        | The post parameters       |
+callback  | (Result) => void   | A callback function which will be called with the status of the request |
+
+Types of errors that can occur:
+
+* Disconnected (user isn't signed in)
+
 
 
 ## getSubredditFlairs(subredditName, callback)
@@ -147,10 +163,27 @@ callback      | (Result) => void   | A callback function which will be called wi
 
 > Fired when an error is returned from Reddit, with the following structure: [`ShareFailedEvent`](#sharefailedevent-object) Object.
 
+## RedditPostParameters Object
+#### Version added: 0.203
+
+> This object defines all parameters that should be passed to the Reddit [`post()`](#postredditpostparameters-callback).
+
+:::note
+Putting a URL in the `content` property will create a Reddit post that is of a link type. Otherwise, it will be a normal "self" reddit post.
+:::
+
+Parameter              | Type    | Description                                                                 |
+---------------------- | --------| --------------------------------------------------------------------------- |
+subreddit              | string  | The subreddit to which the post will be shared                              |
+title                  | string  | The shared post's title                                                    |
+content            | string  | The shared post's content                                              |
+flair_id (Optional)    | [Flair](#flair-object) object  |                                                                   |
+
+
 ## RedditShareParameters Object
 #### Version added: 0.128
 
-> This object defines all parameters that can/should be passed to the Reddit [`Share()`](#shareredditshareparameters-callback) and [`shareEx()`](#shareexredditshareparameters-callback-callback) methods.
+> This object defines all parameters that can/should be passed to the Reddit [`share()`](#shareredditshareparameters-callback) and [`shareEx()`](#shareexredditshareparameters-callback-callback) methods.
 
 Parameter              | Type    | Description                                                                 |
 ---------------------- | --------| --------------------------------------------------------------------------- |
