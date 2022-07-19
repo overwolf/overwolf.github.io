@@ -2,7 +2,6 @@
 id: 0-0-2
 title: WebSockets Game Events Integration 0.0.2
 sidebar_label: 0.0.2
-draft: true
 ---
 
 ## Protocol Component overview
@@ -14,14 +13,21 @@ The WebSocket Game Events Provider (GEP) solution includes the following compone
 ### Active Games Folder
 A folder located at “%appdata%/GEP/[Your-Game]”, containing .ini files. Each file contains a two key-value pairs:
 - The game’s name -> The game’s websocket’s port.
-- "Protocol-Version" -> The GEP Websocket protocol version.
+- "Protocol-Version" -> The supported GEP Websocket protocol version.
+- (Optional) Extra **critical** information required for this game's connection
 
 To keep the hierarchy clean, every game is responsible for deleting its file once the game is closed.
+
+:::note
+Every game should only support one specific protocol version. It is up to the connecting app to ensure that it can support it, and to potentially support several versions from its side.
+:::
 
 ### Game Events Provider (Game)
 Provides events from the game via a local server WebSocket. The game is responsible for opening the socket, detecting when the relevant events occur, and sending them to all connected sockets.
 
-To allow the socket to be detected, once the socket is initialized, the game needs to create a new .ini file under the “Active Games Folder”, detailing the game name, and the socket’s port.
+The game should also keep an updated "game-state" at all times, containing the latest values of anything declared as an ["info update"](#info-updates), to allow an app to synchronize with the game at any point.
+
+To allow the socket to be detected, once the socket is initialized, the game needs to create a new .ini file under its [“Active Games Folder”](active-games-folder), with the structure described above.
 
 #### Event Types
 ##### Game Events
@@ -39,7 +45,7 @@ Example:
 }
 ```
 
-##### Info Events
+##### Info Updates
 Info update events refer to lasting changes in the game. The player exiting the save, a change in the game’s stage, a change to the player's level, etc.
 
 Info update events directly change the overall state of the game.
@@ -61,9 +67,6 @@ Features describe the grouping of events. At times, there will be a group of cha
 but all describing one core "feature" of the game ("Match started", "Match ended", both parts of "Match state").
 
 Features group events together, for easier and more consistent event subscription and handling on all sides.
-
-#### Event Resetting
-
 
 #### API
 ##### sendGameEvent
@@ -106,8 +109,7 @@ id | Unique for each message | The correlation identifier |
 method | subscribe | The action to perform |
 params | Array of events/features | No parameters |
 
-###### Return value
-```json
+```json title="Return Value"
 { 
     "result": {
         "subscribedTo"?: string[] // An array of all the events/features successfully subscribed to
@@ -129,8 +131,7 @@ id | Unique for each message | The correlation identifier |
 method | unsubscribe | The action to perform |
 params | Array of events/features | No parameters |
 
-###### Return value
-```json
+```json title="Return Value"
 { 
     "result": {
         "unsubscribedFrom"?: string[] // An array of all the events/features successfully unsubscribed from
@@ -143,7 +144,7 @@ params | Array of events/features | No parameters |
 The “success” parameter is true if at least one event was unsubscribed from. False otherwise.
 
 ##### Sync
-Requests a forced synchronization of the game’s current game-state.
+Requests a forced synchronization of the game’s current game-state to the app, for all of the info updates the app is subscribed to.
 
 Field Name          | Value    | Description |
 ------------ | ------------| ------------- |
@@ -152,8 +153,7 @@ id | Unique for each message | The correlation identifier |
 method | sync | The action to perform |
 params | - | No parameters |
 
-###### Return value
-```json
+```json title="Return Value"
 { 
     "result": {
         "gameState": object // An object containing the current state of all subscribed info-events data
