@@ -36,6 +36,7 @@ Fixed:
 - New API
     - **Applies to discord and reddit only.**
     - [`overwolf.social.reddit.post`](/api/social/reddit#postredditpostparameters-callback), [`overwolf.social.discord.post`](/api/social/discord#postdiscordpostparameters-callback) - Make a post to the relevant social network. Using a link to an uploaded video will "embed" it in the post.
+- It is now possible to add the `-webkit-app-region: drag` css property to elements, making them drag the entire window with them. **Do note that this behavior takes priority over button presses. If you wish to have working buttons inside an area with this property, you must manually exclude them from it in the css.**
 
 #### Bug Fixes
 - [`overwolf.media.replays.ReplayVideoOptions`](/api/media/replays#replayvideooptions-object) is no longer required inside of [`/api/media/replays#replaystreamparams-object`] when empty.

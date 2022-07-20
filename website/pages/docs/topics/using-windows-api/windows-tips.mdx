@@ -68,3 +68,11 @@ If your app includes a window that will only be visible on desktop but not while
 It will dramatically improve your app performance and help design an efficient, elegant product.
 
  [Read more](windows-types#native-window).
+
+ ## The webkit app region drag property
+
+ It is possible to add the `-webkit-app-region: drag` css property to elements, making them drag the entire window with them.
+
+ :::note
+Do note that this behavior takes priority over button presses. If you wish to have working buttons inside an area with this property, you must manually exclude them from it in the css.
+ :::
