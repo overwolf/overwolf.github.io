@@ -13,8 +13,20 @@ function reverseChangelogs(items) {
 function enforceSingleSidebars(items) {
   const result = items.map((item) => {
     if (item.type === 'category') {
-      if(item.label == "changelogs"){
-        return { ...item, items: item.items.map((item) => reverseChangelogs(item.items))}
+      if(item.label == "Changelogs"){
+        const perYear = item.items.map(element => {
+          if(element.type === 'category'){
+            const totalItems = []
+            element.items.forEach(inner => {
+              inner.items.forEach(innerinner => {
+                totalItems.push(innerinner)
+              })
+            })
+            return {...element, items: totalItems }
+          }
+          return element
+        });
+        return { ...item, items: reverseChangelogs(perYear)}
       }
       if(item.label == "versions"){
         return { ...item, items: reverseChangelogs(item.items) }
