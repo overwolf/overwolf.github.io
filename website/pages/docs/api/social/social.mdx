@@ -9,7 +9,7 @@ Provides sharing services to different social networks like Reddit, Twitter, etc
 ## Methods Reference
 
 * [overwolf.social.getDisabledServices()](#getdisabledservicescallback)
-* [overwolf.social.uploadVideo()](#uploadvideouploadparams-callback-callback)
+* [overwolf.social.uploadVideo()](#uploadvideovideouploadparams-callback-callback)
 * [overwolf.social.cancelUpload()](#canceluploadstring-callback)
 
 ## Types Reference
@@ -33,7 +33,7 @@ Parameter | Type                       | Description                            
 --------- | ---------------------------| ----------------------------------------------------------------------- |
 callback  | [(Result: GetDisabledServicesResult)](#getdisabledservicesresult-object) => void  | returns a list of disabled services     |
 
-## uploadVideo(uploadParams, resultCallback, progressCallback)
+## uploadVideo(VideoUploadParams, callback, callback)
 #### Version added: 0.203
 
 > Upload a video to the buffer server.
@@ -56,7 +56,7 @@ id    | string        | The request ID       |
 callback    | (Result) => void        | Called with the result of the cancellation       |
 
 
-## UploadVideoParams Object
+## VideoUploadParams Object
 #### Version added: 0.203
 
 > This object defines all parameters that should be passed to the [`overwolf.social.cancelUpload()`](#canceluploadstring-callback).
@@ -68,10 +68,10 @@ filePath              | string  | The path to the file to upload                
 
 #### id note
 
-When calling [`overwolf.social.uploadVideo()`](#uploadvideouploadparams-callback-callback), it is required to supply it with a request ID. This ID will also be used in case you wish to cancel this share using [`overwolf.social.cancelUpload()`](#canceluploadstring-callback).
+When calling [`overwolf.social.uploadVideo()`](#uploadvideovideouploadparams-callback-callback), it is required to supply it with a request ID. This ID will also be used in case you wish to cancel this share using [`overwolf.social.cancelUpload()`](#canceluploadstring-callback).
 
 
-## UploadVideoResult Object
+## VideoUploadResult Object
 #### Version added: 0.203
 
 > Container for the url created in a successful upload.
@@ -81,7 +81,7 @@ Parameter         | Type          | Description             |
 url              | string        | The url of the generated result                         | 
 
 
-## UploadVideoProgress Object
+## VideoUploadProgress Object
 #### Version added: 0.203
 
 > The current progress of the share request
@@ -105,7 +105,7 @@ state              | [ShareState](#sharestate-enum)  | The current state of the 
 ## ShareState Enum
 #### Version added: 0.203
 
-> The current state of the [`overwolf.social.uploadVideo()`](#uploadvideouploadparams-callback-callback) operation.
+> The current state of the [`overwolf.social.uploadVideo()`](#uploadvideovideouploadparams-callback-callback) operation.
 
 | Options      | Description                                                                                                         |
 |--------------| --------------------------------------------------------------------------------------------------------------------|

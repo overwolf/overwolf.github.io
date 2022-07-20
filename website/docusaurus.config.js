@@ -12,10 +12,13 @@ function reverseChangelogs(items) {
 
 function enforceSingleSidebars(items) {
   const result = items.map((item) => {
-    if (item.type === 'category' && (item.label == "changelog" || item.label == "versions")) {
-      return { ...item, items: reverseChangelogs(item.items) }
-    }
     if (item.type === 'category') {
+      if(item.label == "changelogs"){
+        return { ...item, items: item.items.map((item) => reverseChangelogs(item.items))}
+      }
+      if(item.label == "versions"){
+        return { ...item, items: reverseChangelogs(item.items) }
+      }
       if (item.label.charAt(0).toUpperCase() != item.label.charAt(0) && !item.label.startsWith("overwolf.")) {
         const name = item.label;
         const words = name.split("-").map((word) => {
