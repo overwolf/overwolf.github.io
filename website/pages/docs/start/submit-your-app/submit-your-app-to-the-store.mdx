@@ -88,6 +88,11 @@ As mentioned above, the OPK package should contain all the app's files and asset
     The difference between the two icons, is that this taskbar icon should be squared, while the other icons are rounded, to fit the OW deck.  
     Similarly, file should be smaller than 30KB and sized 256X256 pixels with at least 72 PPI.
 
+  * tray_icon.ico
+    * If defined in the manifest, will be used as a dedicated tray icon for the app.
+    * The tray icon should look similar to the app's dock icon, to prevent confusion.
+    * The tray icon is a 32x32 transparent .png converted into an .ico file in the following resolutions: 16x16, 32x32.
+ 
 #### The "Files" folder
 
 A folder containing your app's code. 
