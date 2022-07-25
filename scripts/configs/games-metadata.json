@@ -99,7 +99,8 @@
         "id": 10902,
         "games": [
             5426,
-            21570
+            21570,
+            215701
         ],
         "path": "league-of-legends",
         "name": "League of Legends Launcher"
@@ -163,8 +164,17 @@
         "id": 21570,
         "displayId": 5426,
         "launcher": 10902,
+        "mainVariant": 215701,
         "path": "teamfight-tactics",
         "name": "Teamfight Tactics"
+    },
+    {
+        "id": 215701,
+        "displayId": 5426,
+        "launcher": 10902,
+        "subVariant": 21570,
+        "path": "teamfight-tactics-public-beta",
+        "name": "Teamfight Tactics PBE"
     },
     {
         "id": 21668,

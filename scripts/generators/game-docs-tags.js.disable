@@ -26,3 +26,5 @@ fs.readFile("configs/games-metadata.json", 'utf8', function (err, data) {
         fs.writeFileSync(paths[games != undefined ? 1 : 0] + path + ".mdx", data.replaceAll(tagger, "---\n\n" + seo + "\n\n$1").replaceAll("$tags", tags).replaceAll("$name", name), 'utf8')
     })
 })
+
+before enabling this, ensure that it can handle variant games not having docs pages

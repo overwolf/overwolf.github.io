@@ -38,7 +38,8 @@ function GameInfo(props) {
   const launcherID = GamesMetadata[gameID].launcherId;
   const launcherGameList = GamesMetadata[gameID].launcher ? GamesMetadata[gameID].launcher.games.length : 0;
   const IsDisplayOrGameID = GamesMetadata[gameID].displayId ?  GamesMetadata[gameID].displayId : gameID;
-
+  const mainVariant = GamesMetadata[gameID].mainVariant ? GamesMetadata[gameID].mainVariant : 0;
+  const subVariant = GamesMetadata[gameID].subVariant ? GamesMetadata[gameID].subVariant : 0;
   // ---------------------------------------------------------------------------
   return (
     <section className='game-info-section'>
@@ -69,8 +70,17 @@ function GameInfo(props) {
               />
             </li>
           }
+          
+          { GamesMetadata[gameID].path && showStatus && mainVariant != 0 &&
+            <li>
+              <GameInfoListItem
+                name={`${GamesMetadata[mainVariant].name} events status`}
+                pathUrl={GamesMetadata[mainVariant].path}
+              />
+            </li>
+          }
 
-          { GamesMetadata[gameID].docs && showDocs && showLauncherDocs &&
+          { GamesMetadata[gameID].docs && showDocs && showLauncherDocs && subVariant === 0 &&
             <li>
               <GameInfoListItem
                 name={`${gameOrLauncherName} API docs`}
@@ -79,11 +89,29 @@ function GameInfo(props) {
             </li>
           }
 
-          { GamesMetadata[gameID].compliance && showCompliance && gameOrLauncherName == 'Game' &&
+          { GamesMetadata[gameID].docs && showDocs && showLauncherDocs && subVariant != 0 &&
+            <li>
+              <GameInfoListItem
+                name={`${gameOrLauncherName} API docs`}
+                pathUrl={GamesMetadata[subVariant].docs}
+              />
+            </li>
+          }
+
+          { GamesMetadata[gameID].compliance && showCompliance && gameOrLauncherName == 'Game' && subVariant != 0 &&
             <li>
               <GameInfoListItem
                 name={`Game compliance page`}
                 pathUrl={GamesMetadata[gameID].compliance}
+              />
+            </li>
+          }
+          
+          { GamesMetadata[gameID].compliance && showCompliance && gameOrLauncherName == 'Game' && subVariant === 0 &&
+            <li>
+              <GameInfoListItem
+                name={`Game compliance page`}
+                pathUrl={GamesMetadata[subVariant].compliance}
               />
             </li>
           }
