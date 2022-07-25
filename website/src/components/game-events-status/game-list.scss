@@ -1,12 +1,11 @@
 
 .gep-games-list {
 
-
   .list {
     display: grid;
     grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
     gap: 15px;
-    margin: 35px 0 30px;
+    margin: 24px 0 30px;
     padding: 0;
     justify-content: space-between;
 
@@ -21,36 +20,27 @@
 
       img {
         display: block;
-        position: absolute;
-        margin: auto;
-        left: 10px
+        margin-right: 10px;
       }
 
       a {
-        display: block;
+        display: flex;
+        flex-wrap: wrap;
         position: relative;
-        padding: 14px 35px 16px 55px;
+        padding: 16px 10px 10px 28px;
         background: var(--card-hover);
         text-decoration: none;
         transition: all .15s ease;
-
-        &:before {
-          content: '';
-          position: absolute;
-          display: block;
-          top: 0;
-          bottom: 0;
-          right: 30px;
-          width: 1px;
-        }
+        border-radius: 5px;
+        font-size: 16px;
+        font-weight: 600;
 
         &:after {
           content: '';
           position: absolute;
           display: block;
-          top: 50%;
-          right: 20px;
-          margin-top: -5px;
+          top: 25px;
+          left: 10px;
           width: 10px;
           height: 10px;
           border-radius: 50%;
@@ -60,6 +50,20 @@
         &:hover {
           color: inherit;
           background: var(--color-1000);
+        }
+
+        .game-id {
+          flex-basis: 100%;
+          font-size: 14px;
+
+          span {
+            font-weight: normal;
+          }
+        }
+
+        .game-info {
+          display: flex;
+          align-items: center;
         }
       }
 
@@ -83,8 +87,10 @@
     flex-wrap: wrap;
     align-items: center;
     background: transparent;
-    gap: 24px;
+    row-gap: 8px;
+    column-gap: 12px;
     padding: 0;
+    margin: 0;
 
     @media (max-width: 650px) {
       flex-direction: column;
@@ -94,7 +100,7 @@
       display: block;
       position: relative;
       padding-left: 20px;
-      font-size: 16px;
+      font-size: 14px;
       line-height: 20px;
 
       &::before {
@@ -130,11 +136,11 @@
 
 html[data-theme="dark"]{
   .gep-games-list ul.list li a {
-    color: var(--color-grey);
-    background: var(--color-200);
+    color: var(--color-300);
+    // background: var(--color-200);
   }
   .gep-games-list ul.list li a:hover {
-    color: var(--color-900);
-    background: var(--color-300);
+    // color: var(--color-900);
+    // background: var(--color-300);
   }
 }
