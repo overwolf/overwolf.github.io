@@ -28,7 +28,7 @@
         flex-wrap: wrap;
         position: relative;
         padding: 16px 10px 10px 28px;
-        background: var(--card-hover);
+        background: var(--color-grey-light-2);
         text-decoration: none;
         transition: all .15s ease;
         border-radius: 5px;
@@ -49,7 +49,7 @@
 
         &:hover {
           color: inherit;
-          background: var(--color-1000);
+          background: var(--color-txt);
         }
 
         .game-id {
@@ -136,11 +136,11 @@
 
 html[data-theme="dark"]{
   .gep-games-list ul.list li a {
-    color: var(--color-300);
-    // background: var(--color-200);
-  }
-  .gep-games-list ul.list li a:hover {
-    // color: var(--color-900);
-    // background: var(--color-300);
+    // color: var(--color-300);
+    background: var(--color-220);
+
+    &:hover {
+      background: var(--color-120);
+    }
   }
 }
