@@ -35,7 +35,7 @@ function renderGameList(gameListData) {
 
     return <GameListItem
       key={game.id}
-      gameID={game.id}
+      gameID={game.displayId ? game.displayId : game.id}
       className={className}
       path={game.path}
       imgSrc={game.iconUrl}
