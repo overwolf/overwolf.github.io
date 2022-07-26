@@ -161,7 +161,7 @@ const GamesMetaData = {
     iconLargeUrl: "/img/games-logos/large/league-of-legends.png",
     name: "League of Legends Launcher",
     launcher: {
-      games: [5426,21570]
+      games: [5426,21570,215701]
     }
   },  
   21620: {
@@ -257,11 +257,23 @@ const GamesMetaData = {
     id: 21570,
     displayId: 5426,
     launcherID: 10902,
+    mainVariant: 215701,
     path: "/status/teamfight-tactics",
     docs: "/api/games/events/teamfight-tactics",
     iconUrl: "/img/games-logos/teamfight-tactics.png",
     iconLargeUrl: "/img/games-logos/large/teamfight-tactics.png",
     name: "Teamfight Tactics"
+  },  
+  215701: {
+    id: 215701,
+    displayId: 5426,
+    launcherID: 10902,
+    subVariant: 21570,
+    path: "/status/teamfight-tactics-public-beta",
+    docs: "/api/games/events/teamfight-tactics-public-beta",
+    iconUrl: "/img/games-logos/teamfight-tactics-public-beta.png",
+    iconLargeUrl: "/img/games-logos/large/teamfight-tactics-public-beta.png",
+    name: "Teamfight Tactics PBE"
   },  
   21668: {
     id: 21668,
