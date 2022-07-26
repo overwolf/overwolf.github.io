@@ -4,10 +4,17 @@ import SpecificGameEventsStatus from '@site/src/components/game-events-status/sp
 import { GamesMetadata } from './gamesMetaData';
 
   function EventsData(props) {
-    const { allGames, specificGame, gameID, docsPath} = props;
+    const {
+      allGames,
+      specificGame,
+      gameID,
+      docsPath,
+      onlyGames = false,
+      onlyLaunchers = false
+    } = props;
+
     const [gameListData, setGameListData] = useState(null);
     const [gameStatus, setGameStatus] = useState(null);
-
 
     useEffect(() => {
 
@@ -25,7 +32,14 @@ import { GamesMetadata } from './gamesMetaData';
 
               if (!GamesMetadata[game.game_id]) continue;
 
+              //exclude the launchers
+              if(onlyGames && GamesMetadata[game.game_id].launcher) continue;
+
+              //exclude the games
+              if(onlyLaunchers && !GamesMetadata[game.game_id].launcher) continue;
+
               GamesMetadata[game.game_id].state = game.state;
+
               games.push(GamesMetadata[game.game_id]);
             }
 

@@ -3,18 +3,21 @@ id: events
 title: overwolf.games.events API
 sidebar_label: overwolf.games.events
 ---
+import EventsData from '@site/src/components/game-events-status/EventsData';
 
-Notify you when something interesting happens while playing a particular game.  
+Notify you when something interesting happens while playing a particular game.
 
 The full list of supported games with their Game ID’s is always up to date and can be found [here](ids).
 
 **Please read all the info about how to use game events in your app in our [using game events](/topics/using-events) guide.**
 
-:::important The difference between overwolf.games.events to overwolf.games  
+:::important The difference between overwolf.games.events to overwolf.games
 This API enables you to get real-time game events (kill, death, etc.) for [specific games that are defined](/topics/using-events#set-the-relevant-game-events) in your app's manifest, under the "game_events" section.
 
 Regardless, you have the [overwolf.games](../games) API that gives you general "game info" events about the currently running game's state (process name, focus, command line info, and more).
 :::
+
+<EventsData allGames={true} onlyGames={true} />
 
 ## Methods Reference
 
@@ -39,7 +42,7 @@ Regardless, you have the [overwolf.games](../games) API that gives you general "
 
 ## Sample App
 
-You can find an example of overwolf.games.events API usage [here](https://github.com/overwolf/events-sample-apps/tree/master/lol-events-sample-app).  
+You can find an example of overwolf.games.events API usage [here](https://github.com/overwolf/events-sample-apps/tree/master/lol-events-sample-app).
 This one notifies whenever a relevant event has happened in League of Legends.
 
 ## setRequiredFeatures(features, callback)
@@ -76,7 +79,7 @@ overwolf.games.events.setRequiredFeatures(g_interestedInFeatures, function(info)
 ```
 
 :::note
-1. it's important to wait for the **success** status to ensure that required features will be registered and trigger events properly.  
+1. it's important to wait for the **success** status to ensure that required features will be registered and trigger events properly.
 2. If your app uses a [background controller](/topics/using-windows-api/communicating-between-windows#using-a-background-controller), make sure to call the setRequiredFeatures function only from your background controller.
 :::
 
@@ -94,7 +97,7 @@ Example for setting required features and waiting for 'success':
 
       if ( result.success === true ) {
         // make sure our required features were registered
-        return (result.supportedFeatures.length > 0); 
+        return (result.supportedFeatures.length > 0);
       }
 
       // wait 3 sec before retry
@@ -161,7 +164,7 @@ overwolf.games.events.onInfoUpdates2.addListener(function(info) {
 
 ```javascript
 overwolf.games.events.onNewEvents.addListener(function(info) {
-   console.log('EVENT FIRED: ' + JSON.stringify(info));  
+   console.log('EVENT FIRED: ' + JSON.stringify(info));
 });
 ```
 
@@ -171,14 +174,14 @@ Parameter          | Type     | Description                                     
 -------------------| ---------| ------------------------------------------------------------------------ |
 success            | boolean  |                                                                          |
 error              | string   | null if success is true                                                  |
-supportedFeatures  | string[] | all available features for the registered games declared in the manifest |   
+supportedFeatures  | string[] | all available features for the registered games declared in the manifest |
 
 #### Example data: Success
 
 ```json
-{  
+{
    "success":true,
-   "supportedFeatures":[  
+   "supportedFeatures":[
       "summoner_info",
       "teams",
       "kill"
@@ -192,23 +195,23 @@ Parameter          | Type     | Description                                     
 -------------------| ---------| ------------------------------------------------------------------------ |
 success            | boolean  |                                                                          |
 error              | string   | null if success is true                                                  |
-res                | object   | Provides the current game info                                           |   
+res                | object   | Provides the current game info                                           |
 
 #### Example data: Success
 
 The current game's info, registered features, and all available info for the current game session.
 
 ```json
-{  
+{
    "success":true,
-   "res":{  
-      "summoner_info":{  
+   "res":{
+      "summoner_info":{
          "id":"79489298",
          "name":"itaygl",
          "region":"EUW",
          "champion":"Rengar"
       },
-      "game_info":{  
+      "game_info":{
          "match_started":"True",
          "matchStarted":"True",
          "teams":"%5B%7B%22team%22:%22100%22,%22champion%22:%22Rengar%22",
@@ -218,7 +221,7 @@ The current game's info, registered features, and all available info for the cur
          "minions_kills":"5",
          "gold":"1002"
       },
-      "features":{  
+      "features":{
          "kill":"True",
          "assist":"True",
          "minions":"True",
@@ -231,7 +234,7 @@ The current game's info, registered features, and all available info for the cur
          "gameMode":"True",
          "game_mode":"True"
       },
-      "level":{  
+      "level":{
          "level":"3"
       }
    }
@@ -242,7 +245,7 @@ The current game's info, registered features, and all available info for the cur
 
 Parameter                | Type           | Description                | Notes                     |
 -------------------------| ---------------|--------------------------- | --------------------------|
-reason                   |  string        | the error reason           |                           |                           
+reason                   |  string        | the error reason           |                           |
 
 #### Event data example: Success
 
@@ -256,15 +259,15 @@ reason                   |  string        | the error reason           |        
 
 Parameter                | Type           | Description                | Notes                     |
 -------------------------| ---------------|--------------------------- | --------------------------|
-info                     |  string        |                            |                           |                           
-feature                  |  string        |                            |                           |                           
+info                     |  string        |                            |                           |
+feature                  |  string        |                            |                           |
 
 #### Event data example: Success
 
 ```json
-{  
-   "info":{  
-      "game_info":{  
+{
+   "info":{
+      "game_info":{
          "minionKills":"3"
       }
    },
@@ -276,7 +279,7 @@ feature                  |  string        |                            |        
 
 Parameter                | Type           | Description                | Notes                     |
 -------------------------| ---------------|--------------------------- | --------------------------|
-events                   |  [GameEvent](#gameevent-object)[] array |   |                           |                           
+events                   |  [GameEvent](#gameevent-object)[] array |   |                           |
 
 #### Event data example: Success
 
@@ -295,8 +298,8 @@ events                   |  [GameEvent](#gameevent-object)[] array |   |        
 
 Parameter                | Type           | Description                | Notes                     |
 -------------------------| ---------------|--------------------------- | --------------------------|
-name                     |  string        |                            |                           |                           
-data                     |  string        |                            |                           |                           
+name                     |  string        |                            |                           |
+data                     |  string        |                            |                           |
 
 #### Event data example: Success
 
