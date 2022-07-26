@@ -71,7 +71,7 @@ function GameInfo(props) {
             </li>
           }
           
-          { GamesMetadata[gameID].path && showStatus && mainVariant != 0 &&
+          { GamesMetadata[gameID].path && showStatus && (mainVariant != 0) &&
             <li>
               <GameInfoListItem
                 name={`${GamesMetadata[mainVariant].name} events status`}
@@ -80,7 +80,7 @@ function GameInfo(props) {
             </li>
           }
 
-          { GamesMetadata[gameID].docs && showDocs && showLauncherDocs && subVariant === 0 &&
+          { GamesMetadata[gameID].docs && showDocs && showLauncherDocs && (subVariant === 0) &&
             <li>
               <GameInfoListItem
                 name={`${gameOrLauncherName} API docs`}
@@ -89,7 +89,7 @@ function GameInfo(props) {
             </li>
           }
 
-          { GamesMetadata[gameID].docs && showDocs && showLauncherDocs && subVariant != 0 &&
+          { GamesMetadata[gameID].docs && showDocs && showLauncherDocs && (subVariant != 0) &&
             <li>
               <GameInfoListItem
                 name={`${gameOrLauncherName} API docs`}
@@ -98,7 +98,7 @@ function GameInfo(props) {
             </li>
           }
 
-          { GamesMetadata[gameID].compliance && showCompliance && gameOrLauncherName == 'Game' && subVariant != 0 &&
+          { GamesMetadata[gameID].compliance && showCompliance && gameOrLauncherName == 'Game' && (subVariant === 0) &&
             <li>
               <GameInfoListItem
                 name={`Game compliance page`}
@@ -107,7 +107,7 @@ function GameInfo(props) {
             </li>
           }
           
-          { GamesMetadata[gameID].compliance && showCompliance && gameOrLauncherName == 'Game' && subVariant === 0 &&
+          { GamesMetadata[gameID].compliance && showCompliance && gameOrLauncherName == 'Game' && (subVariant != 0) &&
             <li>
               <GameInfoListItem
                 name={`Game compliance page`}
