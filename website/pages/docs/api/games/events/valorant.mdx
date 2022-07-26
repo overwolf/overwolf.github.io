@@ -273,6 +273,7 @@ Data Example:
 List of parameters: 
 * name - the player name
 * character - the character name
+* teammate - is the player in my team or not
 * kills / deaths / assists - The number of kills, deaths and assists suring the game 
 * money - the amount of money during the game for each player
 * is_local - local player or not (Boolean)
@@ -280,7 +281,7 @@ List of parameters:
 Data Example:
 
 ```json
-{"info":{"match_info":{"scoreboard_1":"{\"name\":\"PlayerName #7777\",\"character\":\"Wushu\",\"kills\":15,\"deaths\":13,\"assists\":1,\"money\":4850,\"is_local\":true}"}},"feature":"match_info"}
+{"info":{"match_info":{"scoreboard_1":"{\"name\":\"PlayerName #7777\",\"teammate\":false,\"character\":\"Wushu\",\"kills\":15,\"deaths\":13,\"assists\":1,\"money\":4850,\"is_local\":true}"}},"feature":"match_info"}
 ```
 
 
