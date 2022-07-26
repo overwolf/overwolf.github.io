@@ -15,7 +15,7 @@ sidebar_label: Teamfight Tactics
 
 Please read the [overwolf.games.events](../events) documentation page to learn how to use Overwolf game events.
 
-**Note** that TFT and LOL share the same Game ID.
+**Note** that TFT, TFT PBE and LOL share the same Game ID.
 
 :::tip
 If you would like to know when the user is going to play TFT (hit the "Play" button), you can listen to the LoL Launcher [lobby_info](../launchers/events/league-of-legends#info-updates-3) info-update, and check the `queueID`. If it's 1090 or 1100 - it's TFT.
@@ -31,6 +31,7 @@ If you would like to know when the user is going to play TFT (hit the "Play" but
 ## Available Features
 
 * [gep_internal](#gep_internal)
+* [game_info](#game_info)
 * [live_client_data](#live_client_data)
 * [me](#me)
 * [match_info](#match_info)
@@ -45,7 +46,7 @@ If you would like to know when the user is going to play TFT (hit the "Play" but
 It's highly recommended to communicate errors to your users. Check game event status [here](/status/) or easily verify event status directly from your app [using our API](/topics/using-events/how-to-check-events-status-from-app).
 
 :::important
-Because LOL and TFT share the same GameID, when checking TFTs game event status please use 21570 as the unique GameID for TFT.
+Because LOL and TFT share the same GameID, when checking TFTs game event status please use 21570 as the unique GameID for TFT and 215701 for TFT PBE.
 :::
 
 ## `gep_internal`
@@ -62,6 +63,22 @@ Data Example:
 
 ```json
 {"info":{"gep_internal":{"version_info":"{"local_version":"157.0.1","public_version":"157.0.1","is_updated":true}"}},"feature":"gep_internal"}
+```
+
+## `game_info`
+
+### Info Updates
+
+key          | Category    | Values                    | Notes                 | Since GEP Ver. |
+------------ | ------------| ------------------------- | --------------------- | ------------- |
+is_pbe | game_info | Boolean value if the player is playing in TFT or in TFT PBE mode |See [notes](#is_pbe-note)|   205.0    |
+
+#### *is_pbe* note
+
+Data Example:
+
+```json
+{"feature":"game_info","category":"game_info","key":"is_pbe","value":"true"}
 ```
 
 ## `live_client_data`

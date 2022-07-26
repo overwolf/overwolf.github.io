@@ -132,6 +132,7 @@ match_outcome| match_info  | Victory / Defeat.      |See [notes](#match_outcome-
 round_report | match_info  | * Total Damage<br></br>* Total number of bullets hit.<br></br>* Number of bullets hit on head.<br></br>* Number of hit headshots that killed. |See [notes](#round_report-note)|   150.0       |
 game_mode    | match_info  |* Mode: Bomb / Quick Bomb<br></br>* Ranked: 0 (Practice), 1 (Competitive), 2 (Spike Rush/Other) |See [notes](#game_mode-note)|   151.0       |
 roster    | match_info  | * Player Name<br></br>* Player ID<br></br>* Name of picked character<br></br>* Player's Rank<br></br>* Whether it is the local player<br></br>* If player is a teammate or not. |See [notes](#roster-note)|   151.0       |
+scoreboard    | match_info  | Scoreboard changes and updates during the game |See [notes](#scoreboard-note)|   151.0       |
 
 #### *round_number* note
 
@@ -266,6 +267,22 @@ Data Example:
 {"info":{"match_info":{"roster_9":"{"name":"ImJOWY #2905","player_id":"162ec3aa-0114-554e-839f-fbe276467ece","character":"Clay","rank":0,"teammate":false,"locked":false,"local":false}"}},"feature":"match_info"}
 {"info":{"match_info":{"roster_8":"{"name":"kot #8059","player_id":"4d7d329c-efc4-5400-9910-2a6b76f13c7b","character":"Phoenix","rank":0,"teammate":false,"locked":false,"local":false}"}},"feature":"match_info"}
 ```
+
+#### *scoreboard* note
+
+List of parameters: 
+* name - the player name
+* character - the character name
+* kills / deaths / assists - The number of kills, deaths and assists suring the game 
+* money - the amount of money during the game for each player
+* is_local - local player or not (Boolean)
+
+Data Example:
+
+```json
+{"info":{"match_info":{"scoreboard_1":"{\"name\":\"PlayerName #7777\",\"character\":\"Wushu\",\"kills\":15,\"deaths\":13,\"assists\":1,\"money\":4850,\"is_local\":true}"}},"feature":"match_info"}
+```
+
 
 ### Events
 

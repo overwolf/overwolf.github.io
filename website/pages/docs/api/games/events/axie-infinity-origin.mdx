@@ -50,7 +50,11 @@ key          | Category    | Values                    | Notes                 |
 ------------ | ------------| ------------------------- | --------------------- | ------------- | 
 player_x | match_info  | Details about the players in the match |See [notes](#player_x-note)|   202.0       |
 battle_state | match_info  | Describe the battle turn number and player's turn |See [notes](#battle_state-note)|   202.0       |
-fighter_x | match_info  | Information about the fighters including cards, runes,  |See [notes](#fighter_x-note)|   202.0       |
+fighter_x | match_info  | Information about the fighters including cards, runes |See [notes](#fighter_x-note)|   202.0       |
+match_outcome | match_info  | Final result of the cirrent game |See [notes](#fighter_x-note)|   202.0       |
+cards_hand | cards  | Information about the pile of cards in hand  |See [notes](#cards_hand-note)|   205.0       |
+deck_piles | cards  | Information about the deck pile including list of cards in the draw_pile, banish_pile, disscard_pile and transform pile |See [notes](#deck_piles-note)|   205.0       |
+last_card_played | cards  | Information about the played card  |See [notes](#last_card_played-note)|   205.0       |
 
 ### Events
 
@@ -83,7 +87,7 @@ player_turn - which player is playing now
 
 Data Example:
 ```
-{"feature":"match_info","category":"match_info","key":"battle_state","value":"{\"turn\":9,\"player_turn\":0}"}
+{"feature":"match_info","category":"match_info","key":"battle_state","value":"{\"battleid\":\"c9c46561-a252-443a-8174-51d763ea11c7\",\"turn\":9,\"player_turn\":0}"}
 ```
 
 #### *fighter_x* note
@@ -100,5 +104,44 @@ List of parameters:
 Data Example:
 ```
 {"feature":"match_info","category":"match_info","key":"fighter_2","value":"{\"name\":\"Puffy\",\"ID\":\"0_3_1ecd046f-481e-69e9-a81e-5c849aacdc1b\",\"player_belong\":0,\"position\":2,\"health\":45,\"max_health\":320,\"alive\":1,\"disabled\":0,\"skill_disabled\":0,\"shield_disabled\":0,\"power_disabled\":0,\"level\":1,\"status\":{"name":"RuneAquaticHybrid1","stacks":1,"is_deactive":0},\"runes\":{\"rune_0\":\"NeutralDefensive1\"},\"cards\":[{\"card_id\":12,\"charm\":\"ecard_aquatic_4001\"},{\"card_id\":13,\"charm\":\"ecard_aquatic_4001\"},{\"card_id\":14,\"charm\":\"ecard_aquatic_4001\"},{\"card_id\":15,\"charm\":\"ecard_aquatic_4001\"},{\"card_id\":16,\"charm\":\"ecard_aquatic_4001\"},{\"card_id\":17,\"charm\":\"ecard_aquatic_4001\"}]}"}
+```
+
+#### *match_outcome* note
+
+Possible values:
+* Victory
+* Defeat
+* Surrendered (if the player leave in the midle of a match)
+
+Data Example:
+```
+{"feature":"match_info","category":"match_info","key":"match_outcome","value":"Defeat"}
+```
+
+#### *cards_hand* note
+
+Data Example:
+```
+{"feature":"match_info","category":"cards","key":"cards_hand","value":"{\"card_id\":\"aquatic-eyes-01\",\"disabled\":0,\"charm\":\"\"},{\"card_id\":\"beast-tail-03\",\"disabled\":0,\"charm\":\"\"},{\"card_id\":\"reptile-ears-03\",\"disabled\":0,\"charm\":\"\"},{\"card_id\":\"plant-tail-01\",\"disabled\":0,\"charm\":\"\"}"}
+```
+
+#### *deck_piles* note
+
+ Information about the deck pile including list of cards in the:
+ * draw_pile
+ * banish_pile
+ * disscard_pile
+ * transform pile
+
+Data Example:
+```
+{"feature":"match_info","category":"cards","key":"deck_piles","value":"{\"draw_pile\":[{\"card_id\":\"beast-eyes-03\",\"disabled\":0,\"charm\":\"\"},{\"card_id\":\"beast-ears-03\",\"disabled\":0,\"charm\":\"\"},{\"card_id\":\"beast-mouth-01\",\"disabled\":0,\"charm\":\"\"},{\"card_id\":\"plant-horn-01\",\"disabled\":0,\"charm\":\"\"},{\"card_id\":\"plant-back-03\",\"disabled\":0,\"charm\":\"\"},{\"card_id\":\"beast-mouth-03\",\"disabled\":0,\"charm\":\"\"},{\"card_id\":\"plant-eyes-01\",\"disabled\":0,\"charm\":\"\"},{\"card_id\":\"aquatic-horn-01\",\"disabled\":0,\"charm\":\"\"},{\"card_id\":\"plant-mouth-01\",\"disabled\":0,\"charm\":\"\"},{\"card_id\":\"mech-horn-03\",\"disabled\":0,\"charm\":\"\"},{\"card_id\":\"plant-back-01\",\"disabled\":0,\"charm\":\"\"},{\"card_id\":\"aquatic-ears-01\",\"disabled\":0,\"charm\":\"\"},{\"card_id\":\"aquatic-tail-01\",\"disabled\":0,\"charm\":\"\"}],\"banish_pile\":{},\"discard_pile\":{},\"transform_pile\":{}}"}
+```
+
+#### *last_card_played* note
+
+Data Example:
+```
+{"feature":"match_info","category":"cards","key":"last_card_played","value":"reptile-back-03"}
 ```
 
