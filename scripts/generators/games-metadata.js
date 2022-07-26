@@ -27,7 +27,6 @@ fs.readFile("configs/games-metadata.json", 'utf8', function(err, data) {
             let games = val.hasOwnProperty("games") ? val["games"] : undefined
             let mainVariant = val.hasOwnProperty("mainVariant") ? val["mainVariant"] : -1
             let subVariant = val.hasOwnProperty("subVariant") ? val["subVariant"] : -1
-            let docsPath = val.hasOwnProperty("docsPath") ? val["docsPath"] : path
 
             let compliant = fs.existsSync(compliance + path + ".mdx")
             let isLauncher = games != undefined
@@ -47,7 +46,6 @@ fs.readFile("configs/games-metadata.json", 'utf8', function(err, data) {
             .replaceAll("$mvariant", mainVariant)
             .replaceAll(/\$svar\((.*?)\)/gms, subVariant != -1 ? "$1" : "")
             .replaceAll("$svariant", subVariant)
-            .replaceAll("$docsPath", docsPath)
             )
         })
         let contS = cont.join(",")
