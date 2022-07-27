@@ -301,7 +301,7 @@ key          | Category    | Values                    | Notes                 |
 --------------- | -----------| ------------------------------------------------------------------------------------ | ------------------------------------ | ------------- |
 roster_XX | players | Provides info for the currently active players (10 players). |  See [notes](#roster_xx-notes) |   123.0 |
 team | players | Player’s current team – Orange/Blue/Spectator  |   |   123.0 |
-health | players | Player’s current health – (0-100) or `null` | See [notes](#health-notes)  |   123.0 |
+health | players | Player’s current health | See [notes](#health-notes)  |   123.0 |
 score | players | Player’s current score or `null`<br></br>`{"player":{"score":"335"}}` | See [notes](#score-notes) |   123.0 |
 kills | players | Total number of kills by the player or `null`<br></br>`{"player":{"kills":"0"}}` |   |   123.0 |
 deaths | players | Total number of player's deaths or `null`<br></br>`{"player":{"deaths":"1"}}` |   |   123.0 |
@@ -366,7 +366,7 @@ Current health of the player
 Important! - health always include 20 points for the knockout stage, so the event will always add 20 health points more then the game
 
 ```json
-{"player":{"health":"70"}}
+{"info":{"player":{"health":"41"}},"feature":"roster"}
 ```
 
 #### *score* note
