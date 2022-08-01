@@ -1,0 +1,27 @@
+{
+    "overrides": {
+        "categories": [
+            {
+                "id": "api/changelogs/\\d*",
+                "reverse": true
+            },
+            {
+                "id": "api/",
+                "matcher": "^.*?\\.(\\w*?) API$",
+                "replacer": "$1",
+                "implicit": true,
+                "capitalize": true,
+                "acronymSize": 2,
+                "defaultOrder": 0
+            }
+        ]
+    },
+    "plasters": {
+        "categories": [
+            {
+                "id": "api/changelogs/changelogs",
+                "flattenChildren": 1
+            }
+        ]
+    }
+}
