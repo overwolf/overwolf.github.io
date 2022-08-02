@@ -63,6 +63,17 @@ key          | Category    | Values                    | Notes                 |
 match_start |   | match start event ||   203.0       |
 match_end |   | match end event ||   203.0       |
 
+#### *match_start* note
+Data Example:
+```
+{"events":[{"name":"match_start","data":""}]}
+```
+#### *match_end* note
+Data Example:
+```
+"events":[{"name":"match_end","data":""}]}
+```
+
 #### *player_x* note
 List of parameters:
 * player_id - The Id of the player
@@ -76,7 +87,7 @@ List of parameters:
 Data Example:
 
 ```
-{"feature":"match_info","category":"match_info","key":"player_0","value":"{\"player_id\":\"1ecd046f-481e-69e9-a81e-5c849aacdc1b\",\"name\":\"NanoTaco\",\"energy\":0,\"draw\":8,\"discard\":4,\"banish\":1,\"is_local\":true}"}
+{"info":{"match_info":{"player_0":"{\"player_id\":\"1ecf1358-01c4-6c66-96d8-a43722dd784f\",\"name\":\"Jacks\",\"energy\":1,\"draw\":15,\"discard\":0,\"banish\":0,\"is_local\":true}"}},"feature":"match_info"}
 ```
 
 #### *battle_state* note
@@ -87,7 +98,7 @@ player_turn - which player is playing now
 
 Data Example:
 ```
-{"feature":"match_info","category":"match_info","key":"battle_state","value":"{\"battleid\":\"c9c46561-a252-443a-8174-51d763ea11c7\",\"turn\":9,\"player_turn\":0}"}
+{"info":{"match_info":{"battle_state":"{\"battleid\":\"5ed053a0-5ca7-444a-8b0f-b01680202b8b\",\"turn\":11,\"player_turn\":0}"}},"feature":"match_info"}
 ```
 
 #### *fighter_x* note
@@ -103,7 +114,7 @@ List of parameters:
 
 Data Example:
 ```
-{"feature":"match_info","category":"match_info","key":"fighter_2","value":"{\"name\":\"Puffy\",\"ID\":\"0_3_1ecd046f-481e-69e9-a81e-5c849aacdc1b\",\"player_belong\":0,\"position\":2,\"health\":45,\"max_health\":320,\"alive\":1,\"disabled\":0,\"skill_disabled\":0,\"shield_disabled\":0,\"power_disabled\":0,\"level\":1,\"status\":{"name":"RuneAquaticHybrid1","stacks":1,"is_deactive":0},\"runes\":{\"rune_0\":\"NeutralDefensive1\"},\"cards\":[{\"card_id\":12,\"charm\":\"ecard_aquatic_4001\"},{\"card_id\":13,\"charm\":\"ecard_aquatic_4001\"},{\"card_id\":14,\"charm\":\"ecard_aquatic_4001\"},{\"card_id\":15,\"charm\":\"ecard_aquatic_4001\"},{\"card_id\":16,\"charm\":\"ecard_aquatic_4001\"},{\"card_id\":17,\"charm\":\"ecard_aquatic_4001\"}]}"}
+{"info":{"match_info":{"fighter_1":"{\"name\":\"Olek\",\"ID\":\"0_2_1ecf1358-01c4-6c66-96d8-a43722dd784f\",\"player_belong\":0,\"position\":0,\"health\":264,\"max_health\":324,\"alive\":1,\"disabled\":0,\"skill_disabled\":0,\"shield_disabled\":0,\"power_disabled\":0,\"level\":1,\"status\":[{\"name\":\"HpRecover\",\"stacks\":4,\"is_deactive\":0}],\"runes\":[{\"rune_0\":\"NeutralUtility1\"}],\"cards\":[{\"card_id\":\"plant-eyes-01\",\"charm\":\"\"},{\"card_id\":\"reptile-ears-03\",\"charm\":\"\"},{\"card_id\":\"plant-mouth-01\",\"charm\":\"ecard_neutral_1001\"},{\"card_id\":\"mech-horn-03\",\"charm\":\"\"},{\"card_id\":\"plant-back-01\",\"charm\":\"\"},{\"card_id\":\"plant-tail-01\",\"charm\":\"\"}]}"}},"feature":"match_info"}001\"},{\"card_id\":17,\"charm\":\"ecard_aquatic_4001\"}]}"}
 ```
 
 #### *match_outcome* note
@@ -115,16 +126,15 @@ Possible values:
 
 Data Example:
 ```
-{"feature":"match_info","category":"match_info","key":"match_outcome","value":"Defeat"}
+{"info":{"match_info":{"match_outcome":"Victory"}},"feature":"match_info"}
 ```
 
 #### *cards_hand* note
 
 Data Example:
 ```
-{"feature":"match_info","category":"cards","key":"cards_hand","value":"{\"card_id\":\"aquatic-eyes-01\",\"disabled\":0,\"charm\":\"\"},{\"card_id\":\"beast-tail-03\",\"disabled\":0,\"charm\":\"\"},{\"card_id\":\"reptile-ears-03\",\"disabled\":0,\"charm\":\"\"},{\"card_id\":\"plant-tail-01\",\"disabled\":0,\"charm\":\"\"}"}
+{"info":{"cards":{"cards_hand":"{\"card_id\":\"beast-mouth-01\",\"fighter_id\":\"0_1_1ecf1358-01c4-6c66-96d8-a43722dd784f\",\"disabled\":0,\"charm\":\"\"}"}},"feature":"match_info"}
 ```
-
 #### *deck_piles* note
 
  Information about the deck pile including list of cards in the:
@@ -134,14 +144,15 @@ Data Example:
  * transform pile
 
 Data Example:
+
 ```
-{"feature":"match_info","category":"cards","key":"deck_piles","value":"{\"draw_pile\":[{\"card_id\":\"beast-eyes-03\",\"disabled\":0,\"charm\":\"\"},{\"card_id\":\"beast-ears-03\",\"disabled\":0,\"charm\":\"\"},{\"card_id\":\"beast-mouth-01\",\"disabled\":0,\"charm\":\"\"},{\"card_id\":\"plant-horn-01\",\"disabled\":0,\"charm\":\"\"},{\"card_id\":\"plant-back-03\",\"disabled\":0,\"charm\":\"\"},{\"card_id\":\"beast-mouth-03\",\"disabled\":0,\"charm\":\"\"},{\"card_id\":\"plant-eyes-01\",\"disabled\":0,\"charm\":\"\"},{\"card_id\":\"aquatic-horn-01\",\"disabled\":0,\"charm\":\"\"},{\"card_id\":\"plant-mouth-01\",\"disabled\":0,\"charm\":\"\"},{\"card_id\":\"mech-horn-03\",\"disabled\":0,\"charm\":\"\"},{\"card_id\":\"plant-back-01\",\"disabled\":0,\"charm\":\"\"},{\"card_id\":\"aquatic-ears-01\",\"disabled\":0,\"charm\":\"\"},{\"card_id\":\"aquatic-tail-01\",\"disabled\":0,\"charm\":\"\"}],\"banish_pile\":{},\"discard_pile\":{},\"transform_pile\":{}}"}
+{"info":{"cards":{"deck_piles":"{\"draw_pile\":[{\"card_id\":\"beast-eyes-03\",\"fighter_id\":\"0_1_1ecf1358-01c4-6c66-96d8-a43722dd784f\",\"disabled\":0,\"charm\":\"\"},{\"card_id\":\"plant-back-03\",\"fighter_id\":\"0_1_1ecf1358-01c4-6c66-96d8-a43722dd784f\",\"disabled\":0,\"charm\":\"\"},{\"card_id\":\"plant-tail-01\",\"fighter_id\":\"0_2_1ecf1358-01c4-6c66-96d8-a43722dd784f\",\"disabled\":0,\"charm\":\"\"},{\"card_id\":\"plant-horn-01\",\"fighter_id\":\"0_1_1ecf1358-01c4-6c66-96d8-a43722dd784f\",\"disabled\":0,\"charm\":\"\"},{\"card_id\":\"aquatic-tail-01\",\"fighter_id\":\"0_3_1ecf1358-01c4-6c66-96d8-a43722dd784f\",\"disabled\":0,\"charm\":\"\"}],\"banish_pile\":{},\"discard_pile\":[{\"card_id\":\"aquatic-ears-01\",\"disabled\":0,\"charm\":\"\"},{\"card_id\":\"reptile-back-03\",\"disabled\":0,\"charm\":\"\"},{\"card_id\":\"beast-tail-03\",\"disabled\":0,\"charm\":\"\"},{\"card_id\":\"plant-eyes-01\",\"disabled\":0,\"charm\":\"\"},{\"card_id\":\"mech-horn-03\",\"disabled\":0,\"charm\":\"\"},{\"card_id\":\"aquatic-horn-01\",\"disabled\":0,\"charm\":\"\"},{\"card_id\":\"plant-mouth-01\",\"disabled\":0,\"charm\":\"ecard_neutral_1001\"}],\"transform_pile\":{}}"}},"feature":"match_info"}
 ```
 
 #### *last_card_played* note
 
 Data Example:
 ```
-{"feature":"match_info","category":"cards","key":"last_card_played","value":"reptile-back-03"}
+{"info":{"cards":{"last_card_played":"{\"card\":\"reptile-tail-02\"},{\"fighter_id\":\"1_5315200_1ec9eb73-a8cf-626f-a60c-26ccdce180af\"}"}},"feature":"match_info"}
 ```
 
