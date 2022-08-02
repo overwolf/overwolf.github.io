@@ -1,52 +1,52 @@
-function reverseChangelogs(items) {
-  const result = items.map((item) => {
-    if (item.type === 'category') {
-      return { ...item, items: reverseChangelogs(item.items) }
-    }
-    return item;
-  });
-  result.reverse();
-  return result;
-}
+// function reverseChangelogs(items) {
+//   const result = items.map((item) => {
+//     if (item.type === 'category') {
+//       return { ...item, items: reverseChangelogs(item.items) }
+//     }
+//     return item;
+//   });
+//   result.reverse();
+//   return result;
+// }
 
 
-function enforceSingleSidebars(items) {
-  const result = items.map((item) => {
-    if (item.type === 'category') {
-      if (item.label == "Changelogs") {
-        const perYear = item.items.map(element => {
-          if (element.type === 'category') {
-            const totalItems = []
-            element.items.forEach(inner => {
-              inner.items.forEach(innerinner => {
-                totalItems.push(innerinner)
-              })
-            })
-            return { ...element, items: totalItems }
-          }
-          return element
-        });
-        return { ...item, items: reverseChangelogs(perYear) }
-      }
-      if (item.label == "versions") {
-        return { ...item, items: reverseChangelogs(item.items) }
-      }
-      if (item.label.charAt(0).toUpperCase() != item.label.charAt(0) && !item.label.startsWith("overwolf.")) {
-        const name = item.label;
-        const words = name.split("-").map((word) => {
-          return word.charAt(0).toUpperCase() + word.slice(1)
-        })
-        item.label = words.join(" ");
-      }
-      if (item.items.length === 0)
-        return item.link;
-      else
-        return { ...item, items: enforceSingleSidebars(item.items) }
-    }
-    return item;
-  });
-  return result;
-}
+// function enforceSingleSidebars(items) {
+//   const result = items.map((item) => {
+//     if (item.type === 'category') {
+//       if (item.label == "Changelogs") {
+//         const perYear = item.items.map(element => {
+//           if (element.type === 'category') {
+//             const totalItems = []
+//             element.items.forEach(inner => {
+//               inner.items.forEach(innerinner => {
+//                 totalItems.push(innerinner)
+//               })
+//             })
+//             return { ...element, items: totalItems }
+//           }
+//           return element
+//         });
+//         return { ...item, items: reverseChangelogs(perYear) }
+//       }
+//       if (item.label == "versions") {
+//         return { ...item, items: reverseChangelogs(item.items) }
+//       }
+//       if (item.label.charAt(0).toUpperCase() != item.label.charAt(0) && !item.label.startsWith("overwolf.")) {
+//         const name = item.label;
+//         const words = name.split("-").map((word) => {
+//           return word.charAt(0).toUpperCase() + word.slice(1)
+//         })
+//         item.label = words.join(" ");
+//       }
+//       if (item.items.length === 0)
+//         return item.link;
+//       else
+//         return { ...item, items: enforceSingleSidebars(item.items) }
+//     }
+//     return item;
+//   });
+//   return result;
+// }
 
 const sidebarOverrides = require("./hierarchies/sidebaroverrides.json")
 
@@ -94,32 +94,34 @@ function applyOverrides(items) {
   })
 }
 
-function applyOverridePlasters(items, flattenCount) {
+function applyOverridePlasters(items, flattenCount, inverted) {
   const result = []
   if (flattenCount != undefined) flattenCount--
-  sidebarOverrides["plasters"]["categories"].forEach(element => {
-    if (id = propExists(element, "id")) {
-      console.log(item)
-      if (item.link && (match = (item.link.id).match(new RegExp(id)))) {
-        console.log(item.label)
-        if ((layers = propExists(element, "flattenChildren")) != undefined) {
-          flattenCount = layers
-          console.log(layers)
-        }
-      }
-    }
-  });
   items.forEach(item => {
-    if(item.type === "category"){
-      if(item.items.length === 0) result.push(item.link)
-      else if (flattenCount < 0) {
-        applyOverridePlasters(item.items, flattenCount).forEach((item) => result.push(item))
+    var thisInvert = inverted
+    var thisFlatten = flattenCount
+    if (item.type === "category") {
+      sidebarOverrides["plasters"]["categories"].forEach(element => {
+        if (id = propExists(element, "id")) {
+          if (item.link && (match = (item.link.id).match(new RegExp(id)))) {
+            if ((layers = propExists(element, "flattenChildren")) != undefined) {
+              thisFlatten = layers
+            }
+            if (propExists(element, "reverseChildren")) {
+              thisInvert = !inverted
+            }
+          }
+        }
+      });
+      if (item.items.length === 0) result.push(item.link)
+      else if (thisFlatten < 0) {
+        applyOverridePlasters(item.items, thisFlatten, thisInvert).forEach((item) => result.push(item))
       } else {
-        result.push({ ...item, items: applyOverridePlasters(item.items, flattenCount) })
+        result.push({ ...item, items: applyOverridePlasters(item.items, thisFlatten, thisInvert) })
       }
     } else result.push(item)
   })
-  return result
+  return inverted ? result.reverse() : result
 }
 
 async function sidebarsOverrides({ defaultSidebarItemsGenerator, ...args }) {
@@ -130,7 +132,7 @@ async function sidebarsOverrides({ defaultSidebarItemsGenerator, ...args }) {
       }
     }
   }
-  return applyOverridePlasters(await defaultSidebarItemsGenerator(args), undefined)
+  return applyOverridePlasters(await defaultSidebarItemsGenerator(args), undefined, false)
 }
 
 function propExists(object, prop) {

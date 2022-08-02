@@ -20,7 +20,8 @@
         "categories": [
             {
                 "id": "api/changelogs/changelogs",
-                "flattenChildren": 1
+                "flattenChildren": 1,
+                "reverseChildren": true
             }
         ]
     }
