@@ -191,6 +191,7 @@ export const GamesMetadata = {
   21816: {
     id: 21816,
     path: "/status/new-world",
+    compliance: "/start/game-compliance/new-world",
     docs: "/api/games/events/new-world",
     iconUrl: "/img/games-logos/new-world.png",
     iconLargeUrl: "/img/games-logos/large/new-world.png",
