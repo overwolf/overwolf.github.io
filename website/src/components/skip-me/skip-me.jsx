@@ -2,7 +2,7 @@ import React, { Children } from 'react';
 import * as ReactDOMServer from 'react-dom/server';
 
 
-function HideMeSkippy(props) {
+function SkipMe(props) {
  const { children } = props;
 
  const markup = ReactDOMServer.renderToStaticMarkup(children);
@@ -18,4 +18,4 @@ function HideMeSkippy(props) {
 
 }
 
-export default HideMeSkippy;
+export default SkipMe;
