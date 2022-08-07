@@ -50,6 +50,64 @@
 
 const sidebarOverrides = require("./hierarchies/sidebaroverrides.json")
 
+/* Loads the sidebars override file. This file currently supports the following schema:
+
+{
+  // sidebars argument manipulation
+  "overrides": {
+    // category manipulation
+    "categories": [
+      {
+        // category identifier, matching on the item.unversionedId, aka the raw path link
+        "id": regex,
+        // when used, renames items with a certain rule, using .replace
+        "rename"?: {
+          // regex used to match with the item's label. can utilize capture groups to avoid erasing parts of the pattern
+          "matcher": regex,
+          // the replace regex used to replace the items' labels
+          "replacer": regexReplace "$1",
+        }
+        // whether or not the sidebar label should be inferred from the page title. if implicit is marked, and the sidebar has an explicit title, this returns early
+        "implicit"?: bool,
+        // whether or not the sidebar's title should be automatically capitalized for every word
+        "capitalize"?: bool,
+        // defines the length of a sidebar title that will be inferred to be an acronym. sidebar titles with this length or less are considered acronyms, and are forcefully fully capitalized
+        "acronymSize"?: number,
+        // defines the default sidebar position for any item that doesn't have one defined
+        "defaultOrder"?: number
+        // defined whether or not items matched with this `id` should have their sidebar position reversed or not
+        "reverse"?: bool
+        }
+    ]
+  }
+  // generated sidebars manipulation
+  "plasters": {
+    // category manipulation
+    "categories": [
+      {
+        // category identifier, matching on the item.link.id property, aka the link this category points to
+        "id": regex,
+        // how many layers of categories should be skipped before flattening all children. a value of 1 corresponds to item[subItem1[children...], subItem2[children...]]
+        "flattenChildren"?: number,
+        // should the children of this element be reversed (recursive per category). **has weird artifacts when used with flatten children, enable `sortChildren` to fix those
+        "reverseChildren"?: bool,
+        // should the flattened children be sorted forcefully after all their individual code is ran. sorts alphabetically by label
+        "sortChildren"?: bool,
+        // when used, forcefully renames sub-items with a certain rule, using .replaceAll
+        "subset"?: 
+        {
+          // regex used to match with the item's label. runs recursively on all items contained by this category. can utilize capture groups to avoid erasing parts of the pattern
+          "subsetRegex": regex,
+          // the replace regex used to replace the items' labels
+          "subsetRename": regexReplace
+        }
+      }
+    ]
+  }
+}
+
+*/
+
 function applyOverrides(items) {
   return items.map((item) => {
     sidebarOverrides["overrides"]["categories"].forEach(element => {
@@ -75,7 +133,9 @@ function applyOverrides(items) {
             if (item.frontMatter.sidebar_label != undefined) return
             item.frontMatter.sidebar_label = item.frontMatter.title
           }
-          if ((matcher = propExists(element, "matcher")) && (replacer = propExists(element, "replacer")) && (true)) {
+          if (rename = propExists(element, "rename")){
+            var matcher = rename["matcher"]
+            var replacer = rename["replacer"]
             item.frontMatter.sidebar_label = item.frontMatter.sidebar_label.replace(new RegExp(matcher), replacer)
           }
           if (size = propExists(element, "acronymSize")) {
@@ -94,30 +154,46 @@ function applyOverrides(items) {
   })
 }
 
-function applyOverridePlasters(items, flattenCount, inverted) {
-  const result = []
+function applyOverridePlasters(items, flattenCount, inverted, subsetReg, subsetRename, sort) {
+  var result = []
   if (flattenCount != undefined) flattenCount--
   items.forEach(item => {
     var thisInvert = inverted
     var thisFlatten = flattenCount
+    var thisSubsetReg = subsetReg
+    var thisSubsetRename = subsetRename
+    var thisSort = sort
     if (item.type === "category") {
       sidebarOverrides["plasters"]["categories"].forEach(element => {
         if (id = propExists(element, "id")) {
-          if (item.link && (match = (item.link.id).match(new RegExp(id)))) {
+          if (item.link && item.link.id.match(new RegExp(id))) {
             if ((layers = propExists(element, "flattenChildren")) != undefined) {
               thisFlatten = layers
             }
             if (propExists(element, "reverseChildren")) {
               thisInvert = !inverted
             }
+            if (propExists(element, "sortChildren")){
+              thisSort = true
+            }
+            if(temp = propExists(element, "subset")){
+              thisSubsetReg = temp["subsetRegex"]
+              thisSubsetRename = temp["subsetRename"]
+            }
           }
         }
       });
+      if(thisSubsetReg && thisSubsetRename){
+        item.label = item.label.replaceAll(new RegExp(thisSubsetReg, 'g'), thisSubsetRename)
+      }
       if (item.items.length === 0) result.push(item.link)
       else if (thisFlatten < 0) {
-        applyOverridePlasters(item.items, thisFlatten, thisInvert).forEach((item) => result.push(item))
+        applyOverridePlasters(item.items, thisFlatten, thisInvert, thisSubsetReg, thisSubsetRename, thisSort).forEach((item) => result.push(item))
+        if(sort){
+          result = result.sort((a, b) => a.label.localeCompare(b.label))
+        }
       } else {
-        result.push({ ...item, items: applyOverridePlasters(item.items, thisFlatten, thisInvert) })
+        result.push({ ...item, items: applyOverridePlasters(item.items, thisFlatten, thisInvert, thisSubsetReg, thisSubsetRename, thisSort) })
       }
     } else result.push(item)
   })
@@ -132,7 +208,7 @@ async function sidebarsOverrides({ defaultSidebarItemsGenerator, ...args }) {
       }
     }
   }
-  return applyOverridePlasters(await defaultSidebarItemsGenerator(args), undefined, false)
+  return applyOverridePlasters(await defaultSidebarItemsGenerator(args), undefined, false, undefined, undefined, false)
 }
 
 function propExists(object, prop) {
