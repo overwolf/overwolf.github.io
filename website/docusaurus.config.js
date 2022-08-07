@@ -48,9 +48,13 @@
 //   return result;
 // }
 
+
+
+// loads the sidebars override file
+
 const sidebarOverrides = require("./hierarchies/sidebaroverrides.json")
 
-/* Loads the sidebars override file. This file currently supports the following schema:
+/* this file currently supports the following schema:
 
 {
   // sidebars argument manipulation
