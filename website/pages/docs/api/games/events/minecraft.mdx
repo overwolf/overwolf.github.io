@@ -41,7 +41,7 @@ The events are currently available only to the standard game. We do not support 
     * 1.12.2 - support for events - name, server ip and ping
     * 1.16 - 1.16.1 - support all events except chat and statistics
     * 1.16.2 - support all events except chat
-    * 1.17 - 1.19.2 - full support
+    * 1.17 - 1.19 - full support
 * addons (mods) event is supported from Minecraft versions 1.8 to 1.19 for both Forge and Fabric 
 
 ## `gep_internal`
@@ -69,7 +69,7 @@ key          | Category    | Values                    | Notes                 |
 scene        | game_info   | The name of the current scene. |See [notes](#scene-note)|   153.0       |
 name         | game_info   | The name of the local player. |See [notes](#name-note)|   153.0       |
 player_X         | game_info   | The list of players in the current game. |See [notes](#player_X-note)|   191.0       |
-mc_version         | game_info   | The current Minecraftt version played. |See [notes](#mc_version-note)|   205.0       |
+<!-- mc_version         | game_info   | The current Minecraftt version played. |See [notes](#mc_version-note)|   205.0       |-->
 
 #### *scene* note
 
@@ -100,14 +100,14 @@ Data Example:
 {"feature":"game_info","category":"game_info","key":"player_3","value":"Nor555"}
 ```
 
-#### *mc_version* note
+<!--#### *mc_version* note
 
 Data Example:
 
 ```json
 {"info":{"game_info":{"mc_version":"1.18.2"}},"feature":"game_info"}
 ```
-
+-->
 ## `match_info`
 
 ### Info Updates
