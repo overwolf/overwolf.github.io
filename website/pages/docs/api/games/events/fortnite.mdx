@@ -34,6 +34,7 @@ Please read the [overwolf.games.events](../events) documentation page to learn h
 * [team](#team)
 * [items](#items)
 * [counters](#counters)
+* [map](#map)
 
 ## Game events status
 
@@ -562,4 +563,19 @@ Data Example:
 
 ```json
 {"feature":"counters","category":"performance","key":"ping","value":61}
+```
+## `map`
+
+### Info Updates
+
+key          | Category    | Values                    | Notes                 | Since GEP Ver. |
+------------ | ------------| ------------------------- | --------------------- | ------------- |
+map   | match_info  |Name of the current played map.  |  See [notes](#map-note)  |         |
+
+#### *map* note
+
+Data Example:
+
+```json
+{"feature":"map","category":"match_info","key":"map","value":"Creative_NoApollo_Terrain"}
 ```
