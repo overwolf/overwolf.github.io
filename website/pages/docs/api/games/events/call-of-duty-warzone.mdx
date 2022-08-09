@@ -32,6 +32,7 @@ For more information check our [Game compliance principles](/start/getting-start
 * [match_info](#match_info)
 * [game_info](#game_info)
 * [kill](#kill)
+* [assist](#assist)
 * [death](#death)
 
 ## Game event status
@@ -112,7 +113,23 @@ Data Example:
 ```json
 {"events":[{"name":"kill","data":null}]}
 ```
+## assist
 
+### Events
+
+Event        | Event Data        | Fired When   | Notes              | Since GEP Ver. |
+-------------| ------------------| ------------ | ------------------ | ---------------|
+assist    | null              | Local player has performed an assist.| See [notes](#assist-note)     | 205.0 |
+
+#### *assist* note
+
+Assist is only available for 1920:1080 resolniotn (16:9) and 1920:1200 (16:10).
+
+Data Example:
+
+```json
+{"events":[{"name":"assist","data":""}]}
+```
 ## death
 
 ### Events
