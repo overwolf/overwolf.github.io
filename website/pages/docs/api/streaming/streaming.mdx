@@ -30,7 +30,6 @@ Please read all the info about streaming usage and options on our [video capture
 * [overwolf.streaming.getStreamEncoders()](#getstreamencoderscallback)
 * [overwolf.streaming.getAudioDevices()](#getaudiodevicescallback)
 * [overwolf.streaming.updateStreamingDesktopOptions()](#updatestreamingdesktopoptionsstreamid-newoptions-mousecursorstreamingmethod-callback)
-* [overwolf.streaming.updateTobiiSetting()](#updatetobiisettingstreamid-param-callback)
 
 ## Events Reference
 
@@ -462,18 +461,6 @@ newOptions	               | [StreamDesktopCaptureOptions](#streamdesktopcaptureo
 mouseCursorStreamingMethod | [streamMouseCursor](#streammousecursor-enum) enum  | The updated value of the mouse cursor streaming method           |
 callback                   | (Result) => void      | Reports success or failure                                              |
 
-## updateTobiiSetting(streamId, param, callback)
-
-#### Version added: 0.97
-
-> Update Tobii streaming layer.
-
-Parameter | Type             | Description                                                     |
-----------| -----------------| ----------------------------------------------------------------|
-streamId  | int              | The id of the stream                                            |
-param     | TobiiLayerParams | The Tobii layer visibility param                                |
-callback          | (Result) => void      | Reports success or failure                                              |
-
 ## onStreamingSourceImageChanged
 
 #### Version added: 0.78
@@ -738,7 +725,6 @@ Stream video options.
 | notify_dropped_frames_ratio| double | The ratio of dropped to non-dropped frames for which to issue a notification | 0.92  |
 | sub_folder_name| string | Defines Sub folder for video file path destination (See note below this table) | 0.103  |
 | override_overwolf_setting| bool | Do not use Overwolf capture setting.  | 0.103  |
-| tobii| [TobiiLayerParams](deprecated/tobii) Object | Tobii Replay layer setting | 0.97  |
 | max_file_size_bytes| uint | Defines file maximum size. when video reach {max_file_size_bytes}, the recorder will flush the video file and stat a new video file. [onVideoFileSplited](#onvideofilesplited) event will be fired | 0.103  |
 | enable_on_demand_split| bool | Enable video file splitting on demand. See [notes](#enable_on_demand_split-notes). | 0.141  |
 | include_full_size_video| bool | in case max_file_size_bytes is onfull video will be recorded to disk parallel to splits videos.  | 0.105  |

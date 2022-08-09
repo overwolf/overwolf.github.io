@@ -9,7 +9,7 @@ Overwolf APIs are global components that allow interaction with various Overwolf
 
 ## API's Reference
 
-* [overwolf.benchmarking](#overwolfdeprecated/benchmarking)
+* [overwolf.benchmarking](#overwolfbenchmarking)
 * [overwolf.campaigns](#overwolfcampaigns)
 * [overwolf.cryptography](#overwolfcryptography)
 * [overwolf.extensions](#overwolfextensions)
@@ -17,7 +17,6 @@ Overwolf APIs are global components that allow interaction with various Overwolf
 * [overwolf.games.events](#overwolfgamesevents)
 * [overwolf.games.tracked](#overwolfgamestracked)
 * [overwolf.io](#overwolfio)
-* [overwolf.log](#overwolflog)
 * [overwolf.logitech](#overwolflogitech)
 * [overwolf.media](#overwolfmedia)
 * [overwolf.notifications](#overwolfnotifications)
@@ -27,12 +26,15 @@ Overwolf APIs are global components that allow interaction with various Overwolf
 * [overwolf.settings](#overwolfsettings)
 * [overwolf.social](#overwolfsocial)
 * [overwolf.streaming](#overwolfstreaming)
-* [overwolf.tobii](#overwolftobii)
 * [overwolf.utils](#overwolfutils)
 * [overwolf.web](#overwolfweb)
 * [overwolf.windows](#overwolfwindows)
 
 ## overwolf.benchmarking
+
+:::warning
+This API is deprecated, and is not guaranteed to work perfectly!
+:::
 
 > Use the [overwolf.benchmarking](api/deprecated/benchmarking) API to query system stats and benchmarks.
 
@@ -91,10 +93,6 @@ The usage of this API requires you to use the `tracked` property under the [laun
 
 > Use the [overwolf.io](api/io) API to check whether a certain file exists or in order to write content in a file. For more I/O functionalities, please use our [simple I/O plugin](/topics/using-plugins/simple-io-plugin).
 
-## overwolf.log
-
-> Use the [overwolf.log](api/deprecated/obsolete/log) API to write different messages including info, warnings, errors, critical errors and others to the common log.
-
 ## overwolf.logitech
 
 > Use the [overwolf.logitech](api/logitech) as an interface for Logitech hardware such as Logitech ARX and Logitech LED keyboards.
@@ -150,10 +148,6 @@ Common use cases:
 ## overwolf.streaming
 
 > Use the [overwolf.streaming](api/streaming) API to capture a video of the current game, or stream the current game directly to [Twitch.tv](https://www.twitch.tv/)
-
-## overwolf.tobii
-
-> [overwolf.tobii](api/deprecated/tobii) provides an API for Overwolf Tobii.
 
 ## overwolf.utils
 

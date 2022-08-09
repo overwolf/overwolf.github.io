@@ -340,8 +340,8 @@
     "from": "/docs/api/overwolf-streaming"
   },
   {
-    "to": "/api/deprecated/tobii",
-    "from": "/docs/api/overwolf-tobii"
+    "to": "/api/deprecated/obsolete/tobii",
+    "from": ["/docs/api/overwolf-tobii", "/api/deprecated/tobii"]
   },
   {
     "to": "/api/utils",

@@ -22,8 +22,6 @@ Use this API to allows adding a media player element to a window to play video f
 * [overwolf.windows.mediaPlayerElement.toFront()](#tofrontid-callback)
 * [overwolf.windows.mediaPlayerElement.toBack()](#tobackid-callback)
 * [overwolf.windows.mediaPlayerElement.setStretchMode()](#setstretchmodeid-stretchmode-callback)
-* [overwolf.windows.mediaPlayerElement.setTobiiLayer()](#settobiilayerid-param-callback)
-* [overwolf.windows.mediaPlayerElement.TobiiLayerParams()](#tobiilayerparamsparam-callback)
 
 ## Events Reference
 
@@ -209,27 +207,6 @@ Parameter   | Type                             | Description                    
 id          | int                              | The id of the player                                                                             |
 stretchMode	| [eStretch](#estretch-enum) enum  | The desired stretch mode                                                                         |
 callback    | function                         | A callback function which will be called with the status of the request                          |
-
-## setTobiiLayer(id, param, callback)
-#### Version added: 0.78
-
-> Set Tobii replay layer params.
-
-Parameter | Type         | Description                                                                                      |
---------- | -------------| ------------------------------------------------------------------------------------------------ |
-id        | int          | The id of the player                                                                             |
-param	  | [TobiiLayerParams](../deprecated/tobii#tobiilayerparams-object) Object  |The Tobii layer params                      |
-callback  | function     | A callback function which will be called with the status of the request                          |
-
-## TobiiLayerParams(param, callback)
-#### Version added: 0.78
-
-> Set Tobii replay layer params for the default player.
-
-Parameter | Type         | Description                                                                                      |
---------- | -------------| ------------------------------------------------------------------------------------------------ |
-param	  | [TobiiLayerParams](../deprecated/tobii#tobiilayerparams-object) Object  | The Tobii layer params                     |
-callback  | function     | A callback function which will be called with the status of the request                          |
 
 ## onPlaybackStarted
 #### Version added: 0.78

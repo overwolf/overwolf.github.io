@@ -23,7 +23,6 @@ Please read all the info about video capture usage and options on our [video cap
 * [overwolf.media.replays.startCapture()](#startcapturepastduration-callback)
 * [overwolf.media.replays.stopCapture()](#stopcapturereplaytype-replayid-callback)
 * [overwolf.media.replays.stopCapture()](#stopcapturereplayid-callback)
-* [overwolf.media.replays.updateTobiiSetting()](#updatetobiisettingparam-callback)
 * [overwolf.media.replays.getHighlightsFeatures()](#gethighlightsfeaturesgameid-callback)
 * overwolf.media.replays.turnOff() - Obsolete.
 
@@ -128,10 +127,6 @@ callback    | [(Result: TurnOnResult)](#turnonresult-object) => void   | A callb
         "buffer_length": bufferLength,
         "base_frame_size_source" : ["Setting","Auto"] , // if not set, "Setting" is the default
         "frame_size_method": ["Original", "ExactOrKeepRatio", "ExactOrClosestResolution"] , // // Original
-        "tobii": {
-        "visible": tobiiService.getTobiiIsOn(), //false
-        "effect": tobiiService.getEffectSetting() //inverted,
-        },
         "override_overwolf_setting" : false, 
         "fps" :30,
         "width" :1920,
@@ -319,49 +314,6 @@ callback                | [(Result: ReplayResult)](#replayresult-object) => void
 
 The replayId is returned in the [callback of the startCapture()](#callback-argument-success-5), as the last part of the file name.   
 
-
-## updateTobiiSetting(param, callback)
-#### Version added: 0.110
-
-> Update Tobii streaming layer.
-
-:::warning OBSOLETE
-This function is obsolete.
-:::
-
-* You can only call this method if replay mode is on and using a valid id of a replay being captured to a file.
-
-Parameter               | Type                                 | Description                                                                                      |
------------------------ | -------------------------------------| ------------------------------------------------------------------------------------------------ |
-param			        | [TobiiLayerParams](../deprecated/tobii#tobiilayerparams-object) | The Tobii layer visibility param                                           |
-callback                | function                             | A callback function which will be called with the status of the request                          |
-
-#### Callback argument: Success
-
-A function that will be called with a JSON containing the status and the stream id if successful:
-
-```json
-{"status": "success","stream_id": 1}
-```
-
-#### Callback argument: Failure
-
-A callback function which  an error message:
-
-```json
-{"status": "error", "something went wrong..."}
-```
-
-#### Usage Example
-
-```javascript
-overwolf.media.replays.updateTobiiSetting({
-    visible: true,
-    effect: overwolf.streaming.enums.eTobiiEffectType.Bubble},
-    function(res) {
-       if (res.status == 'success') { }
-    });
-```
 
 ## getHighlightsFeatures(gameId, callback)
 #### Version added: 0.130
@@ -577,7 +529,6 @@ Replay video options.
 | notify_dropped_frames_ratio| double | The ratio of dropped to non-dropped frames for which to issue a notification | 0.92  |
 | sub_folder_name| string | Defines Sub folder for video file path destination (See note below this table) | 0.103  |
 | override_overwolf_setting| bool | Do not use Overwolf capture setting. | 0.103  |
-| tobii| [TobiiLayerParams](../deprecated/tobii) Object | Tobii Replay layer setting | 0.97  |
 | max_file_size_bytes| uint | Defines file maximum size. when video reach {max_file_size_bytes}, the recorder will flush the video file and stat a new video file.  | 0.103  |
 | include_full_size_video| bool | in case max_file_size_bytes is onfull video will be recorded to disk parallel to splits videos.  | 0.105  |
 | disable_when_sht_not_supported| bool | Do not start video replay service in case shared texture is not supported.  | 0.105  |
