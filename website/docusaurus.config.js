@@ -318,7 +318,7 @@ module.exports = {
       },
       items: require('./hierarchies/headers.json')
     },
-    image: "/img/ow_share_new.png",
+    image: "img/embed/dev.jpg",
     footer: {
       style: "dark",
       links: require('./hierarchies/footer.json'),

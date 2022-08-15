@@ -28,10 +28,11 @@ fs.readFile("configs/games-metadata.json", 'utf8', function (err, data) {
     json.forEach(function(val) {
         let id = val["id"]
         let games = val.hasOwnProperty("games") ? val["games"] : ""
+        let launcher = games != ""
         let path = val["path"]
         let name = val["name"]
 
-        fs.writeFileSync(paths[0] + (games != "" ? "launchers/" : "") + path + ".mdx", temp.replaceAll("$tags", seo).replaceAll("$tags", tags).replaceAll("$id", id).replaceAll("$path", path).replaceAll("$name", name), 'utf8')
+        fs.writeFileSync(paths[0] + (launcher ? "launchers/" : "") + path + ".mdx", temp.replaceAll("$tags", seo).replaceAll("$tags", tags).replaceAll("$id", id).replaceAll("$path", path).replaceAll("$name", name).replaceAll("$imagePath", (launcher ? "launchers/" : "") + path), 'utf8')
     })
 
     temp = fs.readFileSync("templates/status-all.mdx", 'utf8')
