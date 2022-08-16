@@ -157,8 +157,8 @@ export const GamesMetadata = {
     id: 10902,
     path: "/status/launchers/league-of-legends",
     docs: "/api/games/launchers/events/league-of-legends",
-    iconUrl: "/img/games-logos/league-of-legends.png",
-    iconLargeUrl: "/img/games-logos/large/league-of-legends.png",
+    iconUrl: "/img/games-logos/launchers/league-of-legends.png",
+    iconLargeUrl: "/img/games-logos/large/launchers/league-of-legends.png",
     name: "League of Legends Launcher",
     launcher: {
       games: [5426,21570,215701]
