@@ -780,7 +780,7 @@ The event is being fired for all the declared windows (background,in-game,deskto
 #### Notes for Ads users
 
 * If your app displays an ad, you must add some checking in the event handler to make sure that the window with the state change is the window with the ad, and to avoid unnecessary wrong calls to the refreshAd() and removeAd().
-* For in-game windows only, onStateChanged event is not fired when using Win+D for minimizing all windows. So in that case you can't hide/refres ads.
+* For in-game windows only, onStateChanged event is not fired when using Win+D for minimizing all windows. So in that case you can't hide/refresh ads.
 If you want to handle that scenario you can listen to [onGameInfoUpdated](games#ongameinfoupdated) event and stop the ad if gameInfo.isInFocus is false.
 
 ## onMessageReceived
@@ -968,12 +968,12 @@ monitor         |  [overwolf.utils.Display](utils#display-object) object  | Disp
 
 Parameter                | Type           | Description                | Notes                     |
 -------------------------| ---------------|--------------------------- | --------------------------|
-window_id                |  string        | the window ID              | See [notes](#notes-4).    |                           
-window_state             |  string        | the window state           |  Deprecated. See [notes](#notes-4).   |   
-window_state_ex          |  string        | the window state           |  See [notes](#notes-4).   |   
-window_previous_state    |  string        | the window previous state  |  Deprecated. See [notes](#notes-4).   |   
-window_previous_state_ex |  string        | the window previous state  |  See [notes](#notes-4).   |   
-app_id                   |  string        | the app ID                 | See [notes](#notes-4).    |   
+window_id                |  string        | the window ID              | See [notes](#state-change-notes).    |                           
+window_state             |  string        | the window state           |  Deprecated. See [notes](#state-change-notes).   |   
+window_state_ex          |  string        | the window state           |  See [notes](#state-change-notes).   |   
+window_previous_state    |  string        | the window previous state  |  Deprecated. See [notes](#state-change-notes).   |   
+window_previous_state_ex |  string        | the window previous state  |  See [notes](#state-change-notes).   |   
+app_id                   |  string        | the app ID                 | See [notes](#state-change-notes).    |   
 
 #### Event data example: Success
 
@@ -989,7 +989,7 @@ app_id                   |  string        | the app ID                 | See [no
 }
 ```
 
-#### Notes
+#### State Change Notes
 
 * Use ***window_state_ex*** and ***window_previous_state_ex*** that are more accurate than the old *window_state* and *window_previous_state*, left for backward comparability.
 * *window_state_ex* returns one of these states: [closed | minimized | hidden | normal | maximized].
