@@ -6,6 +6,7 @@ import ImageBoxModal from '@site/src/components/image-box-modal/image-box-modal'
 import VideoBox from '@site/src/components/video-box/video-box';
 import GameInfo from '@site/src/components/game-info/game-info';
 import SkipMe from '@site/src/components/skip-me/skip-me';
+import Tagger from '../components/tagging/Tagger';
 
 export default {
   // Re-use the default mapping
@@ -17,4 +18,5 @@ export default {
   VideoBox: VideoBox,
   GameInfo: GameInfo,
   SkipMe: SkipMe,
+  Tagger: Tagger
 };

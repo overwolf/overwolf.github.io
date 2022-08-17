@@ -1,55 +1,3 @@
-// function reverseChangelogs(items) {
-//   const result = items.map((item) => {
-//     if (item.type === 'category') {
-//       return { ...item, items: reverseChangelogs(item.items) }
-//     }
-//     return item;
-//   });
-//   result.reverse();
-//   return result;
-// }
-
-
-// function enforceSingleSidebars(items) {
-//   const result = items.map((item) => {
-//     if (item.type === 'category') {
-//       if (item.label == "Changelogs") {
-//         const perYear = item.items.map(element => {
-//           if (element.type === 'category') {
-//             const totalItems = []
-//             element.items.forEach(inner => {
-//               inner.items.forEach(innerinner => {
-//                 totalItems.push(innerinner)
-//               })
-//             })
-//             return { ...element, items: totalItems }
-//           }
-//           return element
-//         });
-//         return { ...item, items: reverseChangelogs(perYear) }
-//       }
-//       if (item.label == "versions") {
-//         return { ...item, items: reverseChangelogs(item.items) }
-//       }
-//       if (item.label.charAt(0).toUpperCase() != item.label.charAt(0) && !item.label.startsWith("overwolf.")) {
-//         const name = item.label;
-//         const words = name.split("-").map((word) => {
-//           return word.charAt(0).toUpperCase() + word.slice(1)
-//         })
-//         item.label = words.join(" ");
-//       }
-//       if (item.items.length === 0)
-//         return item.link;
-//       else
-//         return { ...item, items: enforceSingleSidebars(item.items) }
-//     }
-//     return item;
-//   });
-//   return result;
-// }
-
-
-
 // loads the sidebars override file
 
 const sidebarOverrides = require("./hierarchies/sidebaroverrides.json")
@@ -111,6 +59,8 @@ const sidebarOverrides = require("./hierarchies/sidebaroverrides.json")
 }
 
 */
+
+// @ts-check
 
 function applyOverrides(items) {
   return items.map((item) => {
@@ -219,7 +169,12 @@ function propExists(object, prop) {
   return object.hasOwnProperty(prop) ? object[prop] : undefined
 }
 
-module.exports = {
+const codeComponentTagger = require("./src/plugins/tagging/codeComponentTagger.js").default;
+
+/** @type {import('@docusaurus/types').Config} */
+async function config(){
+  
+  return {
   title: "Overwolf",
   tagline: "Easily create apps for PC games on the Overwolf framework",
   url: "https://overwolf.github.io",
@@ -270,6 +225,7 @@ module.exports = {
       "@docusaurus/preset-classic",
       {
         docs: {
+          remarkPlugins: [codeComponentTagger],
           showLastUpdateAuthor: true,
           showLastUpdateTime: true,
           editUrl: "https://github.com/overwolf/overwolf.github.io/tree/source/website/",
@@ -339,3 +295,6 @@ module.exports = {
     }
   }
 }
+}
+
+module.exports = config();

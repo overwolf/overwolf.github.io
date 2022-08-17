@@ -4,10 +4,10 @@
   "private": true,
   "scripts": {
     "docusaurus": "docusaurus",
-    "start": "cd ../scripts && node generate.js && cd ../website && docusaurus start",
-    "build": "cd ../scripts && node generate.js && cd ../website && docusaurus build",
+    "start": "cd ../scripts && node generate.js && cd ../website && yarn tsc && docusaurus start",
+    "build": "cd ../scripts && node generate.js && cd ../website && yarn tsc && docusaurus build",
     "swizzle": "docusaurus swizzle",
-    "deploy": "cd ../scripts && node generate.js && cd ../website && docusaurus deploy",
+    "deploy": "cd ../scripts && node generate.js && cd ../website && yarn tsc && docusaurus deploy",
     "clear": "cd ../scripts && node clear.js && cd ../website && docusaurus clear",
     "serve": "docusaurus serve",
     "write-translations": "docusaurus write-translations",
@@ -31,7 +31,9 @@
     "sass": "^1.52.1"
   },
   "devDependencies": {
-    "@docusaurus/module-type-aliases": "2.0.0-beta.20"
+    "@docusaurus/module-type-aliases": "^2.0.1",
+    "@tsconfig/docusaurus": "^1.0.6",
+    "typescript": "^4.7.4"
   },
   "browserslist": {
     "production": [
