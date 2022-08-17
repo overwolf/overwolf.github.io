@@ -53,6 +53,7 @@ Please read all the info about video capture usage and options on our [video cap
 * [overwolf.media.replays.CaptureWarningEvent](#capturewarningevent-object) Object
 * [overwolf.media.replays.ReplayServicesStartedEvent](#replayservicesstartedevent-object) Object
 * [overwolf.media.replays.VideoSource](#videosource-object) Object
+* [overwolf.media.replays.WebCamParam](#webcamparam-object) Object
 * [overwolf.media.replays.GameWindowCapture](#gamewindowcapture-object) Object
 
 ## Sample app
@@ -596,14 +597,18 @@ The app "short name" is defined in the [dock_button_title](../manifest#meta-dock
 ## VideoSource Object
 #### Version added: 0.159
 
-> Container for the video source settings.
+> Container for secondary video sources' settings.
 
 Parameter         | Type                                        | Description             |
 ------------------| --------------------------------------------| ----------------------- |
-source_type       | [overwolf.media.enums.eSourceType](../media#esourcetype-enum)            |                         | 
-name              | string                                      |                         | 
-secondary_file    | boolean        | source will be create on secondry video file(i.e another ow-obs.exe process will be createdw ith the same setting as the original one.   | 
-transform         | [overwolf.media.enums.eVideoSourceTransform](../media#evideosourcetransform-enum)  |                         | 
+source_type       | [overwolf.media.enums.eSourceType](../media#esourcetype-enum)            | The video source type (currently, only "Webcam" is supported)                        | 
+name              | string                                      | The name of the source                        | 
+secondary_file    | boolean        | Source will be saved to a secondary video file (i.e another ow-obs.exe process will be created with the same settings as the original one.   | 
+transform         | [overwolf.media.enums.eVideoSourceTransform](../media#evideosourcetransform-enum)  | How should the video's source be transformed to fit the declared size                        | 
+parameters         | [overwolf.media.replays.WebCamParam](#webcamparam-object)  | Parameters specific to the selected `source_type`. Currently only "WebCam" is supported                        | 
+position         | 2DPoint{x, y}  | The position (in pixels) of the secondary source in the video                        | 
+size_scale         | 2DPoint{x, y}  | The size of the video source in the final video (on a scale of 0-1, relative to the screen size)                        | 
+
 
 ```json
 {
@@ -611,11 +616,9 @@ transform         | [overwolf.media.enums.eVideoSourceTransform](../media#evideo
   "name":"webcam",
   "secondary_file": true,
   "transform": "overwolf.media.replays.enums.eVideoSourceTransform.Stretch",
-  "parameters": { 
-          "device_id" : "default" },
-          "position": {x:200,y:200} // offset is pixel relative to dock position (transform)
-          "size_scale" : {x:0.25,y:0.25}// render size the source in stream (relative to video size), valid only when transform != eVideoSourceTransform.Stretch
-        }
+  "parameters": { "device_id" : "default" },
+  "position": { "x": 200, "y": 200 }, // offset is pixel relative to dock position (transform)
+  "size_scale" : {"x": 0.25, "y": 0.25 } // render size the source in stream (relative to video size), valid only when transform != eVideoSourceTransform.Stretch
 }
 ```
 
@@ -632,8 +635,8 @@ let settings = {
       "secondary_file": true,
       "transform": overwolf.media.replays.enums.eVideoSourceTransform.Stretch,
       "parameters": { "device_id" : "default" },
-      "position": {x:200,y:200} // offset is pixel relative to dock position (transform)
-      "size_scale" : {x:0.25,y:0.25}// render size the source in stream (relative to video size), valid only when transform != eVideoSourceTransform.Stretch
+      "position": { x: 200, y: 200 } // offset is pixel relative to dock position (transform)
+      "size_scale" : { x: 0.25, y: 0.25 }// render size the source in stream (relative to video size), valid only when transform != eVideoSourceTransform.Stretch
     }]
   }
 };
@@ -646,6 +649,16 @@ overwolf.media.replays.turnOn({
     }
 }, callback);
 ```
+
+## WebCamParam Object
+#### Version added: 0.159
+
+> Parameters for a VideoSource's webcam
+
+Parameter         | Type                                        | Description             |
+------------------| --------------------------------------------| ----------------------- |
+device_id       | string            | The device id for the selected webcam                       | 
+
 
 ## ReplayType enum
 #### Version added: 0.78
