@@ -14,7 +14,7 @@ Use this API to open a local HTTP web-server and a WebSocket.
 
 ## Types Reference
 
-* [overwolf.web.WebSockcetConnectionParams](#websockcetconnectionparams-object) Object
+* [overwolf.web.WebSocketConnectionParams](#websocketconnectionparams-object) Object
 * [overwolf.web.enums.HttpRequestMethods](#httprequestmethods-enum) enum
 * [overwolf.web.enums.MessageType](#messagetype-enum) enum
 * [overwolf.web.FetchHeader](#fetchheader-object) Object
@@ -96,7 +96,7 @@ An example of [FetchHeader](#fetchheader-object) objects array:  `[{ key: "Conte
 
 Parameter        | Type                                                   | Description                                                             |
 ---------------- | -------------------------------------------------------| ----------------------------------------------------------------------- |
-connectionParams | [WebSockcetConnectionParams](#websockcetconnectionparams-object) Object  |  connection params. See [notes](#connectionparams-notes) below   |
+connectionParams | [WebSocketConnectionParams](#websocketconnectionparams-object) Object  |  connection params. See [notes](#connectionparams-notes) below   |
 callback         | [CreateWebSocketResult](#createwebsocketresult-object) Object                                               | A callback function which will be called with the status of the request |
 
 #### `connectionParams` notes
@@ -115,7 +115,7 @@ An example:
 }
 ```
 
-## WebSockcetConnectionParams Object
+## WebSocketConnectionParams Object
 #### Version added: 0.129
 
 > Container for the connection params.
