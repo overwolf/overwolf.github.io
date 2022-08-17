@@ -1046,9 +1046,16 @@ If enabled, only audio from the current game, as well as from any strictly speci
 
 | Name      | Type   | Description                                          | Since |
 |-----------| ------ |------------------------------------------------------| ----- |
-| enable    | bool   |  Defines if filtered capture is enabled                    | 0.199  |
+| enable    | bool   |  Defines if filtered capture is enabled. See [note](#filtered-capture-notes)                    | 0.199  |
 | additional_process_names    | string[]    |  The array of process names to be affected   | 0.199  |
 
+#### filtered capture notes
+
+In order for [`filtered_capture`](gameaudiodevice-object) to work, the user must be running one of the following:
+- windows 11
+- windows 10 2004 (released 2020-05-27) or later
+
+`enable` Checks whether or not [`filtered_capture`](gameaudiodevice-object) is supporetd on this system.
 
 ## StreamPeripheralsCaptureOptions Object
 
