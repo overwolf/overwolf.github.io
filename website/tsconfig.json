@@ -23,5 +23,6 @@
     },
     "skipLibCheck": true
   },
-  "include": ["src/plugins/**/*"]
+  "include": ["src/**/*"],
+  "exclude": ["src/**/*.js", "src/**/*.jsx"]
 }
