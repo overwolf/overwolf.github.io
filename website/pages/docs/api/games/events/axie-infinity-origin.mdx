@@ -20,6 +20,7 @@ Please read the [overwolf.games.events](../events) documentation page to learn h
 * [Axie Infinity origin game events sample app](https://github.com/overwolf/events-sample-apps)
 
 ## Available Features
+* [game_info](#game_info)
 * [match_info](#match_info)
 
 ## Game event status
@@ -42,7 +43,20 @@ Data Example:
 ```json
 {"info":{"gep_internal":{"version_info":"{"local_version":"202.0.0","public_version":"202.0.0","is_updated":true}"}},"feature":"gep_internal"}
 ```
+## `game_info`
 
+### Info Updates
+key          | Category    | Values                    | Notes                 | Since GEP Ver. |
+------------ | ------------| ------------------------- | --------------------- | ------------- | 
+ronin_address | inventory| The local player's ronin wallet address|See [notes](#ronin_address-note)|   205.3.6       |
+
+#### *ronin_address* note
+
+Data Example:
+
+```json
+{"feature":"game_info","category":"inventory","key":"ronin_address","value":"0xdeff4aa81687b1ad37f1575202bb419373fa0142"}
+```
 ## `match_info`
 
 ### Info Updates
