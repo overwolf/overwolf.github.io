@@ -140,7 +140,7 @@ Basic usage flow:
    * Get the available stream encoders: Call [getStreamEncoders()](/api/streaming).  
      (You can also call [getAudioDevices()](/api/streaming) and choose a specific audio device).
    * This returns a list of all possible encoders and audio devices – you can then use this list to let users select their preferred encoder/device.
-   * In terms of encoder priorities – we recommend: NVIDIA > AMD > INTEL > x264.
+   * In terms of encoder priorities – we recommend: NVIDIA > AMD > INTEL > x264. (This is also the order used to select the default encoder)
    * As long as the "enabled" encoder's property is set to true, you can offer users to use this encoder.
    * Note that you don't have to set the Encoder explicitly. Instead, the API will automatically use the default encoder for this machine.   
    * More info can be found in the [Choosing the right Encoder](#choosing-the-right-encoder) section above. 
