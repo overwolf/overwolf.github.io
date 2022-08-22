@@ -4,7 +4,7 @@ image: "/img/embed/api-docs.jpg"
 title: overwolf.media API
 ---
 
-Use this API to capture a screenshot or create a GIF of the currently running game.
+Use this API to capture a screenshot of the currently running game.
 
 **Permissions required: Media**
 
@@ -19,20 +19,20 @@ Use this API to capture a screenshot or create a GIF of the currently running ga
 * [overwolf.media.getScreenshotUrl()](#getscreenshoturlscreenshotparams-callback)
 * [overwolf.media.shareImage()](#shareimageimage-description-callback)
 * [overwolf.media.postMediaEvent()](#postmediaeventmediatype-jsoninfo-callback)
-* [overwolf.media.deleteOldGifs()](#deleteoldgifskeepnewestxgbs-callback)
-* [overwolf.media.getGifsSize()](#getgifssizecallback)
 * [overwolf.media.getAppVideoCaptureFolderSize()](#getappvideocapturefoldersizecallback)
 * [overwolf.media.getAppScreenCaptureFolderSize()](#getappscreencapturefoldersizecallback)
 * [overwolf.media.getWebcams()](#getwebcamscallback)
 * overwolf.media.startGifBuffer() - Obsolete
 * overwolf.media.stopGifBuffer() - Obsolete
 * overwolf.media.generateGif() - Obsolete
+* overwolf.media.deleteOldGifs() - Obsolete
+* overwolf.media.getGifsSize() - Obsolete
 
 ## Events Reference
 
 * [overwolf.media.onMediaEvent](#onmediaevent)
 * [overwolf.media.onScreenshotTaken](#onscreenshottaken)
-* [overwolf.media.onSconGifGenerationError](#ongifgenerationerror)
+* overwolf.media.onSconGifGenerationError - Obsolete
 
 ## Types Reference
 
@@ -45,9 +45,9 @@ Use this API to capture a screenshot or create a GIF of the currently running ga
 * [overwolf.media.FileResult](#fileresult-object) Object
 * [overwolf.media.GetAppVideoCaptureFolderSizeResult](#getappvideocapturefoldersizeresult-object) Object
 * [overwolf.media.ScreenshotTakenEvent](#screenshottakenevent-object) Object
-* [overwolf.media.GifGenerationErrorEvent](#gifgenerationerrorevent-object) Object
 * [overwolf.media.GetWebcamsResult](#getwebcamsresult-object) Object
 * [overwolf.media.Webcam](#webcam-object) Object
+* overwolf.media.GifGenerationErrorEvent - Obsolete
 
 ## In-memory screenshot overview
 
@@ -203,30 +203,6 @@ mediaType		    | [eMediaType](#emediatype-enum) enum  | The type of the event   
 jsonInfo		    | JObject                              | A json with additional info about the events               |
 callback            | (Result) => void                     | Reports success or failure                                 |
 
-## deleteOldGifs(keepNewestXGbs, callback)
-#### Version added: 0.91
-
-> Deletes all gifs created by this app with an option to keep the newest X GBs (use with care).
-
-Parameter         | Type                  | Description                                                             |
-------------------| ----------------------| ----------------------------------------------------------------------- |
-keepNewestXGbs	  | int                   | Keep the newest X GBs of gifs. Pass 0 to delete all gifs                |
-callback          | (Result) => void      | Reports success or failure                                              |
-
-:::tip
-To delete old videos you can use [overwolf.media.videos.deleteOldVideos()](media/videos#deleteoldvideoskeepnewestxgbs-callback), and to delete old screenshots you can use [overwolf.extensions.io.delete()](extensions/io#deletespace-path-callback).
-:::
-
-## getGifsSize(callback)
-#### Version added: 0.91
-
-> Returns the total size of the gif files created by this app in gigabytes.
-
-Parameter         | Type                  | Description                                                             |
-------------------| ----------------------| ----------------------------------------------------------------------- |
-keepNewestXGbs	  | int                   | Keep the newest X GBs of gifs. Pass 0 to delete all gifs                |
-callback          | (Result) => void      | Reports success or failure                                              |
-
 ## getAppVideoCaptureFolderSize(callback)
 #### Version added: 0.106
 
@@ -294,12 +270,6 @@ callback          | [(Result: GetWebcamsResult)](#getwebcamsresult-object) => vo
 #### Version added: 0.78
 
 > Fired when a screenshot was taken, with the following structure: [ScreenshotTakenEvent](#ScreenshotTakenEvent-object) Object
-
-## onGifGenerationError
-
-#### Version added: 0.91
-
-> Fired when there’s an error with the gif generation buffer, with the following structure: [GifGenerationErrorEvent](#gifgenerationerrorevent-object) Object
 
 ## MemoryScreenshotParams Object
 #### Version added: 0.78
@@ -495,20 +465,5 @@ url             |  string                                                       
 {
   "success": true,
   "url": ""
-}
-```
-
-## GifGenerationErrorEvent Object
-
-Parameter       | Type                                                              | Description     |
-----------------| ------------------------------------------------------------------|---------------- |
-reason          |  string                                                           |                 | 
-
-#### Event data example: Success
-
-```json
-{
-  "success": true,
-  "reason": ""
 }
 ```

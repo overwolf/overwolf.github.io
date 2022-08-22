@@ -260,8 +260,8 @@
     "from": "/docs/api/overwolf-media"
   },
   {
-    "to": "/api/media/audio",
-    "from": "/docs/api/overwolf-media-audio"
+    "to": "/api/deprecated/audio",
+    "from": ["/docs/api/overwolf-media-audio", "/api/media/audio"]
   },
   {
     "to": "/api/media/replays",

@@ -662,7 +662,6 @@ Represents the settings required to start a stream.
 | video        | [StreamVideoOptions](#streamvideooptions-object) Object                           | Stream video options                     | 0.78  |
 | ingest_server| [StreamIngestServer](#streamingestserver-object) Object        | Information on the server that is being streamed to | 0.78  |
 | replay_type  | [ReplayType](media/replays#replaytype-enum) enum                         | The replay type to use                   | 0.78  |
-| gif_as_video | bool                                                                              | Create gif as video (Gif Replay Type only) | 0.78  |
 
 ## StreamQuotaParams Object
 
@@ -721,7 +720,6 @@ Stream video options.
 | buffer_length| int | Defines the length of the buffer to be recorded in millisenconds (max 40 seconds) | 0.83  |
 | encoder|  [StreamingVideoEncoderSettings](#streamingvideoencodersettings-object) Object |Defines the video encoder settings to use | 0.83  |
 | capture_desktop|  [StreamDesktopCaptureOptions](#streamdesktopcaptureoptions-object) Object |Defines the desktop streaming options.<br/>Permissions required: DesktopStreaming | 0.83  |
-| frame_interval| int | Interval between frames when creating gifs | 0.83  |
 | test_drop_frames_interval | uint | The interval, in milliseconds, in which to test for dropped frames | 0.92  |
 | notify_dropped_frames_ratio| double | The ratio of dropped to non-dropped frames for which to issue a notification | 0.92  |
 | sub_folder_name| string | Defines Sub folder for video file path destination (See note below this table) | 0.103  |

@@ -17,7 +17,9 @@ export const DefaultTaggerOptions: TaggerOptions = {
     'Function',
     'Object',
     'Enum',
-    'Event'
+    'Event',
+    'GameEvent',
+    'InfoUpdate'
   ],
 };
 
