@@ -50,7 +50,6 @@ key          | Category    | Values                    | Notes                 |
 scene | game_info   | Current state (screen) of the game | See [notes](#scene-note) |     150.0      |
 sideboard_cards | game_info   | Cards that are currently held in the sideboard. | See [notes](#sideboard_cards-note) |     150.0      |
 main_deck_cards | game_info   | Cards that are currently in your main deck. | See [notes](#main_deck_cards-note) |     150.0      |
-game_mode     | game_info   | The currently played game-mode. | See [notes](#game_mode-note) |     150.0      |
 inventory_cards | game_info | Card ID + Quantity. | See [notes](#inventory_cards-note) |     180.0      |
 inventory_stats | game_info | Current statistic and information of the local player's profile. | See [notes](#inventory_stats-note) |     180.0      |
 
@@ -95,14 +94,6 @@ Data Example:
 
 ```json
 {"info":{"game_info":{"main_deck_cards":"{"cards":[{"card_id":75487","card_amount":4},{"card_id":75498","card_amount":2},{"card_id":75504","card_amount":2},{"card_id":75488","card_amount":1},{"card_id":75490","card_amount":2},{"card_id":75492","card_amount":3},{"card_id":75505","card_amount":3},{"card_id":75506","card_amount":2},{"card_id":75493","card_amount":3},{"card_id":75494","card_amount":4},{"card_id":75499","card_amount":4},{"card_id":75502","card_amount":3},{"card_id":75501","card_amount":2},{"card_id":75503","card_amount":2},{"card_id":75486","card_amount":2},{"card_id":75495","card_amount":2},{"card_id":75489","card_amount":3},{"card_id":75557","card_amount":25}]}"}},"feature":"game_info"}
-```
-
-#### *game_mode* note
-
-Data Example:
-
-```json
-{"info":{"game_info":{"game_mode":"AIBotMatch"}},"feature":"game_info"}
 ```
 
 #### *inventory_cards* note
