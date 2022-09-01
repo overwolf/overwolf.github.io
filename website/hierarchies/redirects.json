@@ -708,8 +708,8 @@
     "from": "/docs/topics/app-analytics"
   },
   {
-    "to": "/topics/developers-console/app-channels",
-    "from": "/docs/topics/app-channels"
+    "to": "/tools/developers-console/app-channels",
+    "from": ["/docs/topics/app-channels", "/topics/developers-console/app-channels"]
   },
   {
     "to": "/topics/request-a-service/app-marketing-promotions",
@@ -732,8 +732,8 @@
     "from": "/docs/topics/best-practices-overview"
   },
   {
-    "to": "/topics/developers-console/cli",
-    "from": "/docs/topics/cli"
+    "to": "/tools/developers-console/cli",
+    "from": ["/docs/topics/cli", "/topics/developers-console/cli", "/docs/topics/dev-console-api", "/internal/dev-console-api"]
   },
   {
     "to": "/topics/using-windows-api/communicating-between-windows",
@@ -744,8 +744,8 @@
     "from": "/docs/topics/communication-guidelines"
   },
   {
-    "to": "/topics/developers-console/crash-reports",
-    "from": "/docs/topics/crash-reports"
+    "to": "/tools/developers-console/crash-reports",
+    "from": ["/docs/topics/crash-reports", "/topics/developers-console/crash-reports"]
   },
   {
     "to": "/topics/best-practices/create-download-link",
@@ -762,10 +762,6 @@
   {
     "to": "/topics/best-practices/data-persistence",
     "from": "/docs/topics/data-persistence"
-  },
-  {
-    "to": "/internal/dev-console-api",
-    "from": "/docs/topics/dev-console-api"
   },
   {
     "to": "/topics/using-plugins/downloader-plugin",
@@ -868,8 +864,8 @@
     "from": "/docs/topics/looking-for-group"
   },
   {
-    "to": "/topics/developers-console/manage-subscriptions",
-    "from": "/docs/topics/manage-subscriptions"
+    "to": "/tools/developers-console/manage-subscriptions",
+    "from": ["/docs/topics/manage-subscriptions", "/topics/developers-console/manage-subscriptions"]
   },
   {
     "to": "/topics/using-plugins/plugins-overview",
@@ -884,16 +880,16 @@
     "from": "/docs/topics/promoting-your-app"
   },
   {
-    "to": "/topics/developers-console/rating-and-reviews",
-    "from": "/docs/topics/rating-and-reviews"
+    "to": "/tools/developers-console/rating-and-reviews",
+    "from": ["/docs/topics/rating-and-reviews", "/topics/developers-console/rating-and-reviews"]
   },
   {
     "to": "/topics/best-practices/reduce-opk-size",
     "from": "/docs/topics/reduce-opk-size"
   },
   {
-    "to": "/topics/developers-console/release-notes",
-    "from": "/docs/topics/release-notes"
+    "to": "/tools/developers-console/release-notes",
+    "from": ["/docs/topics/release-notes", "/topics/developers-console/release-notes"]
   },
   {
     "to": "/topics/using-plugins/sample-plugin",
@@ -912,12 +908,12 @@
     "from": "/docs/topics/snippets"
   },
   {
-    "to": "/topics/developers-console/submit-a-new-version",
-    "from": "/docs/topics/submit-a-new-version"
+    "to": "/tools/developers-console/submit-a-new-version",
+    "from": ["/docs/topics/submit-a-new-version", "/topics/developers-console/submit-a-new-version"]
   },
   {
-    "to": "/topics/developers-console/submit-for-review",
-    "from": "/docs/topics/submit-for-review"
+    "to": "/tools/developers-console/submit-for-review",
+    "from": ["/docs/topics/submit-for-review", "/topics/developers-console/submit-for-review"]
   },
   {
     "to": "/topics/using-plugins/team-speak-plugin",
@@ -932,16 +928,16 @@
     "from": "/docs/topics/type-definition-file"
   },
   {
-    "to": "/topics/developers-console/update-store-listing",
-    "from": "/docs/topics/update-store-listing"
+    "to": "/tools/developers-console/update-store-listing",
+    "from": ["/docs/topics/update-store-listing", "/topics/developers-console/update-store-listing"]
   },
   {
     "to": "/topics/best-practices/user-flow-and-error-handling",
     "from": "/docs/topics/user-flow-and-error-handling"
   },
   {
-    "to": "/topics/developers-console/users-and-permissions",
-    "from": "/docs/topics/users-and-permissions"
+    "to": "/tools/developers-console/users-and-permissions",
+    "from": ["/docs/topics/users-and-permissions", "/topics/developers-console/users-and-permissions"]
   },
   {
     "to": "/topics/using-events",

@@ -1,0 +1,106 @@
+---
+id: release-management
+image: "/img/embed/api-best-practices.jpg"
+title: Release Management
+---
+
+This section of the console allows you to manage your app's releases, which are based on the "Release Channels" model.
+![The Release Management Tab](/assets/tools/developers-console/release-management/index.jpg)
+
+## What are Release Channels
+
+The Release Channels model allow for the deployment of multiple different versions of your code, with minimal overhead for both developers and users.
+
+We can take the [overwolf client](/support/developer-client-downloads) as an example:
+- The public channel (used when the channel name is empty), serves as the public "version". Users will default to this channel.
+- The developer's channel (used when the channel name is `Developers`), is the "version" aimed at developers, getting new releases before they reach the public channel, so developers can adapt their apps to them.
+
+Similarly to that, the developers console allows you to create and manage your own app's release channels, or **App Channels** for short.
+
+## App Channel features
+
+App Channels allow you to control several aspects of your deployment:
+- Phasing - You can release new updates to a % of the users on a channel at a time.
+- Automatic deployment - No need for update checks, manual updating, etc. As long as it's set in the console, overwolf will take care of the rest.
+- One place for everything - For every version in a channel, you can view the download counts, active user counts, phasing history, internal and external changelogs, and even download the actual opk file.
+
+## The "Production" and "Testing" Environments
+
+For an overwolf app, channels are split into two groups, that operate similarly:
+- [`Production`](release-management/production) - Your app's public channel
+- [`Testing`](release-management/testing) - Your app's testing channels
+
+## Manage An App Channel
+
+Every App Channel, once entered, will contain these three sections:
+* [New Release](#new-release) - Upload a new app version
+* [Public Releases](#public-releases) - Manage the currently live versions in the channel
+* [Release History](#release-history) - Manage past app versions
+
+![App Release Channel](/assets/tools/developers-console/release-management/app-channel.jpg)
+
+### New Release
+
+This is where you can upload a new version of your app. Before we get started, make sure you have a valid `.opk` file for the new version. You can learn more about creating a new `.opk` file [here](/start/submit-your-app#how-to-create-an-opk-package).
+
+![New Release](/assets/tools/developers-console/release-management/production/new-release.jpg)
+
+By dragging an `.opk` file (or clicking `Upload` and selecting one), we can begin a new version release "draft".
+
+![Processing New Release](/assets/tools/developers-console/release-management/production/new-release-processing.jpg)
+
+Once the file is done processing, assuming that everything went right, we will be greeted by the following screen:
+
+![Review New Release](/assets/tools/developers-console/release-management/production/new-release-review.jpg)
+
+In here, we will need to add the internal [release notes](#release-notes) for this version by pressing `Add internal notes`. **These release notes will only be viewable by your app's team, and the Overwolf team.**
+
+Once the release notes are added, the screen will change, and allow us to send the new version for [review](/start/maintain-your-app/submit-an-app-update#app-version-review).
+
+![Review New Release With Notes](/assets/tools/developers-console/release-management/production/new-release-review-noted.jpg)
+
+Once we press `Submit`, the app will be sent for review by the Overwolf team, and the screen will change. If at any point, we wish to pull the review back, we can cancel it by pressing `Cancel Request`.
+
+![Reviewing New Release](/assets/tools/developers-console/release-management/production/new-release-reviewing.jpg)
+
+Once our version gets approved, the screen will change, and we will be able to start releasing the version.
+
+![New Release Approved](/assets/tools/developers-console/release-management/production/new-release-reviewed.jpg)
+
+From here, we can (**and should**) add public release notes under `Add release notes`, and we can start specifying the [rollout %](.#rollout) in the relevant textbox, and save it by clicking on `Start rollout`.
+
+![New Release Confirmation](/assets/tools/developers-console/release-management/production/new-release-confirmation.jpg)
+
+Once we click `Confirm`, the release will come out of "draft" mode, and become a full release, sitting under [Public Releases](#public-releases).
+
+:::tip Deleting A Version "Draft"
+If at any point throughout the process, we decide that we wish to discard this version's draft, we can always click on the red `Discard release` text in the top right.
+
+![New Release Discard](/assets/tools/developers-console/release-management/production/new-release-discard.jpg)
+
+Then, once we click `Confirm`, the draft will be deleted.
+:::
+
+:::note Version Review
+As mentioned under [App Version Review](/start/maintain-your-app/submit-an-app-update#app-version-review),
+after enough releases, an app can start releasing new versions without review. In that case, the entire version review section
+will become optional. **However, it is still recommended to use it for major versions!**
+:::
+
+### Public Releases
+
+
+
+
+### Release History
+
+
+
+
+
+
+
+
+## Release Notes
+
+
