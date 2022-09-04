@@ -214,7 +214,8 @@ async function config(){
   plugins: ['docusaurus-plugin-sass', 'docusaurus-plugin-clarity', ['@docusaurus/plugin-client-redirects',
     {
       redirects: require('./hierarchies/redirects.json')
-    }], [
+    }],
+    [
       require.resolve('docusaurus-gtm-plugin'),
       {
         id: 'GTM-NQD72PT',

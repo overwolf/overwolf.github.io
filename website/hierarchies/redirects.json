@@ -472,8 +472,8 @@
     "from": "/docs/start/submit-app-proposal"
   },
   {
-    "to": "/start/submit-your-app/submit-your-app-to-the-store",
-    "from": "/docs/start/submit-your-app-to-the-store"
+    "to": "/start/submit-your-app",
+    "from": ["/docs/start/submit-your-app-to-the-store", "/start/submit-your-app/submit-your-app-to-the-store"]
   },
   {
     "to": "/start/monetize-with-subs/subscriptions-flow",
@@ -504,8 +504,8 @@
     "from": "/docs/start/thank-you"
   },
   {
-    "to": "/start/maintain-your-app/update-your-app-status",
-    "from": "/docs/start/update-your-app-status"
+    "to": "/start/maintain-your-app/submit-an-app-update",
+    "from": ["/docs/start/update-your-app-status", "/start/maintain-your-app/update-your-app-status"]
   },
   {
     "to": "/start/getting-started/using-dev-tools",
@@ -708,7 +708,7 @@
     "from": "/docs/topics/app-analytics"
   },
   {
-    "to": "/tools/developers-console/app-channels",
+    "to": "/tools/developers-console/application/release-management",
     "from": ["/docs/topics/app-channels", "/topics/developers-console/app-channels"]
   },
   {
@@ -732,7 +732,7 @@
     "from": "/docs/topics/best-practices-overview"
   },
   {
-    "to": "/tools/developers-console/cli",
+    "to": "/tools/ow-cli",
     "from": ["/docs/topics/cli", "/topics/developers-console/cli", "/docs/topics/dev-console-api", "/internal/dev-console-api"]
   },
   {

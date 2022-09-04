@@ -26,7 +26,7 @@ If you have any questions, or wish to create and distribute test versions of you
 
 When possible, we also recommend completing as many of the following steps as you can, to ensure a smoother app launch:
 - [Reduce your OPK size](/topics/best-practices/reduce-opk-size) - Smaller file sizes are important.
-- Create a [customer support page](../maintain-your-app/add-a-knowledge-base-to-app) - This will help your users deal with common issues more easily, giving you more time to focus on the things that matter.
+- Create a [customer support page](maintain-your-app/add-a-knowledge-base-to-app) - This will help your users deal with common issues more easily, giving you more time to focus on the things that matter.
 
 
 ### OPK package overview
@@ -101,34 +101,36 @@ Just make sure it makes sense to you, and that the paths in your manifest.json f
   - A hierarchy containing your code and assets.
     - Make sure the paths in your manifest linking to these are correct.
 
-### Prepare your store assets 
+### Prepare your store assets
 
-After submitting your OPK to the store for the first time, you will get access to the OW dev console.
-Through the console, you will be able to upload a new app version and [update your store listing page](/tools/developers-console/update-store-listing), with all of your app's information, like screenshots, description, etc.
+After submitting your OPK to the store for the first time, you should get access to the [Overwolf Developer's Console](https://console.overwolf.com).
 
-Here is the list of the required store assets before an app can be launched:
+Through the console, you will be able to upload new app versions and [update your store listing page](/tools/developers-console/update-store-listing),
+with all of your app's information, including screenshots, description, etc.
+
+The following is a list of the store assets required before an app can be launched:
 
 - Tile.jpg - The Appstore tile asset for your app.
   - It should be a JPG format image sized 258X198 at 72PPI.
-    ![](/assets/submit-your-app-to-the-store/tile.jpg)
+    ![Example Tile](/assets/submit-your-app-to-the-store/tile.jpg)
 
 - Icon.png - The icon used to represent your app in the Overwolf appstore.
   - It must be in PNG format and sized 55X55 pixels.
   - Please make sure your chosen icon looks great on both dark and bright backgrounds.
-    ![](/assets/submit-your-app-to-the-store/sub-icon.png)
+    ![Example Icon](/assets/submit-your-app-to-the-store/sub-icon.png)
 
 - ScreenshotX.jpg - Screenshots of your app
   - Providing more than one attractive screenshots increases your app’s chances of getting noticed and winning hearts.
   - Include at least one screenshot of your app (up to 5).
   - Screenshots must be in JPG format, sized 1200x750 pixels, and a max of 100Kb for each.
   - Please choose screenshots that remain clear, and where features can be spotted in that resolution.  
-    ![](/assets/submit-your-app-to-the-store/sub-screenshot-1.png)
+    ![Example Screenshot](/assets/submit-your-app-to-the-store/sub-screenshot-1.png)
 
 - Store description - The full Appstore description of your app
   - The full Appstore description of your app, which will appear when users click on your app's store tile.
   - This description can be edited using the markdown format,
   - The maximum length for an appstore description is 2000 characters including spaces.
-    ![](/assets/submit-your-app-to-the-store/sub-description.png)
+    ![Example Description](/assets/submit-your-app-to-the-store/sub-description.png)
 :::warning
 **This is different from the store tile description**, which is included in the app's [manifest.json](/api/manifest#meta-description)
 :::

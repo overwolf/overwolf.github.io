@@ -4,27 +4,56 @@ image: "/img/embed/api-best-practices.jpg"
 title: "The Developer's Console"
 ---
 
-The **Developer's Console** (also sometimes known as the **Dev Console**), serves as the go to place for managing your application.
+The **Developer's Console** (also sometimes known as the **Dev Console**), serves as the go to place for managing your applications.
 
-Using it, you can interact with many things, including:
-- App [Dashboards](developers-console/dashboard), showing your app's performance statistics.
-- [App releases](developers-console/dashboard/release-management), based on the Release Channels model.
-    - Control your app's [Production](developers-console/dashboard/release-management/production) version.
-    - Create and manage your app's [Testing](developers-console/dashboard/release-management/testing) versions.
-- The [Store listing](developers-console/dashboard/store-listing) for your app.
-- User [Crash reports](developers-console/dashboard/crash-reports), which you can use to debug issues as they occur in the wild.
-- Manage [App's Subscriptions](developers-console/app-subscriptions).
-    - View app subscription [Statistics](developers-console/app-subscriptions/statistics).
-    - Manage your app's [Subscription plans](developers-console/app-subscriptions/subscription-plans).
-    - View and manage your app's active [Subscribers](developers-console/app-subscriptions/subscribers).
-- View all of your app's [Reviews](developers-console/user-feedback/reviews).
-- Manage your developer's console [profile](developers-console/profile).
+:::note
+An application does not have to be "public" in order to be accessible on the console. It can exist in "hidden" mode, where it can only be
+downloaded by users with a direct download link to the app. For more details, feel free to contact your dev-rel manager
+(or just [contact us](/support/contact-us) if you do not yet have a dev-rel manager)
+:::
 
-- [Crash Reports](developers-console/crash-reports)
-- [App Channels](developers-console/app-channels)
-- [Ratings and Reviews](developers-console/ratings-and-reviews)
-- [Release Notes](developers-console/release-notes)
-- [App Versions](developers-console/manage-subscriptions)
-- [The Version Review Process](developers-console/manage-subscriptions)
-- [The App's Store Listing](developers-console/manage-subscriptions)
-- [Team Permissions](developers-console/manage-subscriptions)
+Using the developer's console, you can interact with many things, including:
+- An overview of [all apps you are part of](developers-console/all-applications). For each app, you can then also interact with:
+    - App [Dashboards](developers-console/all-applications/dashboard), showing your app's performance statistics.
+    - [App releases](developers-console/all-applications/release-management), based on the Release Channels model.
+        - Control your app's [Production](developers-console/all-applications/release-management/production) version.
+        - Create and manage your app's [Testing](developers-console/all-applications/release-management/testing) versions.
+    - The [Store listing](developers-console/all-applications/store-listing) for your app.
+    - User [Crash reports](developers-console/all-applications/crash-reports), which you can use to debug issues as they occur in the wild.
+    - Manage [App's Subscriptions](developers-console/all-applications/subscriptions).
+        - View app subscription [Statistics](developers-console/all-applications/subscriptions/statistics).
+        - Manage your app's [Subscription plans](developers-console/all-applications/subscriptions/subscription-plans).
+        - View and manage your app's active [Subscribers](developers-console/all-applications/subscriptions/subscribers).
+    - View all of your app's [Reviews](developers-console/all-applications/user-feedback/reviews).
+- You can also manage your developer's console account under [settings](developers-console/settings).
+    - View and edit details about your [profile](developers-console/settings/profile).
+
+:::tip Integrations
+The console also:
+- Works with the [ow-cli](/tools/ow-cli) tool.
+- Exposes an app's public release notes through a [public endpoint](developers-console/all-applications/release-management#release-notes-endpoint).
+
+When you first open the console, you will be greeted by a log-in page.
+![Log-In Page](/assets/tools/developers-console/index.jpg)
+
+Once you log-in, using your google account, you will be moved to the console's home-page.
+![The All Applications Tab](/assets/tools/developers-console/all-applications/index.jpg)
+
+From here, you will be able to freely navigate the console.
+
+## The Header Toolbar
+
+![Console Header Toolbar](/assets/tools/developers-console/header.jpg)
+The header toolbar allows you to do several things:
+- Using the "burget menu" in the left, you can collapse or expand the sidebar.
+- By clicking on the `Overwolf {dev}` icon, you will be taken back to the console's [homepage](developers-console/all-applications).
+- By clicking on the circular arrow, you can refresh the console's data in real-time, without refreshing the page.
+- By clicking on your user's icon, you can choose to log out from the console.
+
+## The Footer Toolbar
+
+![Console Footer Toolbar](/assets/tools/developers-console/footer.jpg)
+The footer toolbar shows up in pages where there are edit-able fields.
+Using it, you can:
+- Save any changes made since the last edit, by clicking `Save`.
+- Revert any changes made since the last edit, by clicking `Discard changes`.

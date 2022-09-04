@@ -2,8 +2,7 @@ import React, { Children } from 'react';
 
 
 function Tagger(props) {
-  console.log("bonjour")
- console.log("hi")
+
 
 // ---------------------------------------------------------------------------
 
