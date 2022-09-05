@@ -134,9 +134,146 @@ Then, once we click `Confirm`, the draft will be deleted.
 
 ### Release Notes Endpoint
 
-https://console-api.overwolf.com/v1/apps/npijmgiaiiemcnijaljcfddgeihcbifdbhpffihe/versions/6.0.71/release-notes/1
+The developer's console exposes the pubic release notes of every app, through the following api endpoint:
+```js
+`https://console-api.overwolf.com/v1/apps/${app-id}/versions/${version}/release-notes/${page}`
+```
 
+Where:
+- `app-id` - your app's unique id.
+- `version` - The most recent version you wish to display.
+- `page` - The changelogs page number. Every page contains up to three changelogs.
 
+The endpoint will then return the following json:
+
+```json
+{
+  "versions": [
+    {
+      "important": boolean,
+      "version": string,
+      "html": string,
+      "timestamp": number
+    }
+  ],
+  "meta": {
+    "perPage": number
+  }
+}
+```
+
+Any version without a published public changelog will be skipped.
+
+The `versions` array will display **up to** three versions. If it runs out of versions to display before then,
+it will only be filled by the remaining versions. In the next page after that, it will then be completely empty.
+
+:::note Page Numbering
+Changelog page numbers start from 1. If you check for page 0, it will just be treated as page 1.
+:::
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+<details>
+<summary>Example Values</summary>
+
+For this example, we will use use Workflowy. As such:
+- `app-id` - `npijmgiaiiemcnijaljcfddgeihcbifdbhpffihe`
+- `version` - `6.0.71`
+
+The link will then be:
+
+```js
+`https://console-api.overwolf.com/v1/apps/npijmgiaiiemcnijaljcfddgeihcbifdbhpffihe/versions/6.0.71/release-notes/${page}`
+```
+
+At the time of writing, this will include three versions with release notes.
+
+<Tabs>
+<TabItem value="page-0" label="Page 0">
+
+The result for page 0 would be:
+```json
+{
+   "versions":[
+      {
+         "important":true,
+         "version":"6.0.69",
+         "html":"<p>test</p>",
+         "timestamp":1662018568162
+      },
+      {
+         "important":true,
+         "version":"3.1.5",
+         "html":"<figure><img src='http://content.overwolf.com/outplayed/release-notes/069/release-notes-hero.webp'></figure>\n<p><strong>All versions great and small.</strong> This version might be small, but still bright and beautiful.</p>\n<h2 class='new'>New</h2>\n<ul>\n<li><strong>5 new games are now supported</strong> - Rayman Origins, Post Scriptum, South Park: The Stick of Truth, Shadow Tactics: Blades of the Shogun, and Firewatch. Want us to add your favorite game? Let us know on our <a href=\"https://ideas.outplayed.tv/\">Ideas portal</a>.</li>\n<li><strong>Capture mode notification</strong> - An option to turn capture OFF was added. If this option is selected, Outplayed will be disabled for this game, choose wisely (you can always enable it back from the settings).</li>\n</ul>\n<h2 class='improved'>Better</h2>\n<ul>\n<li><strong>Missing backgrounds</strong> - Remnant: From the Ashes and Project Zomboid artwork was added.</li>\n<li><strong>Settings in-game</strong> - Did you know that changing settings while in-game will only take effect after restarting the game? A big yellow alert was added to make sure you know.</li>\n</ul>\n<h2 class='bugs'>Fixed</h2>\n<ul>\n<li><strong>Capture mode notification</strong> - Allow using numeric keypad in the notification hotkeys. We like hotkeys, especially in the winter.</li>\n<li><strong>Video editor</strong> - Videos with aspect ratios different than project settings were stretched to fit. Although stretching is good for your health, we fixed it.</li>\n</ul>\n<p>Have a great idea for Outplayed? Let us know on our <a href=\"https://ideas.outplayed.tv/\">Ideas portal</a>, or talk to us directly on our <a href=\"https://discord.gg/MatrVYK\">Discord server</a>.</p>\n<p><strong>See you in the next version,<br>\nThe Outplayed team</strong></p>",
+         "timestamp":1643024580643
+      },
+      {
+         "important":false,
+         "version":"3.0.33",
+         "html":"<p>3.0.33 release notessssssss</p>",
+         "timestamp":1643036589211
+      }
+   ],
+   "meta":{
+      "perPage":3
+   }
+}
+```
+Which is the same as the result for page 1.
+
+</TabItem>
+<TabItem value="page-1" label="Page 1" default>
+
+The result for page 1 would be:
+```json
+{
+   "versions":[
+      {
+         "important":true,
+         "version":"6.0.69",
+         "html":"<p>test</p>",
+         "timestamp":1662018568162
+      },
+      {
+         "important":true,
+         "version":"3.1.5",
+         "html":"<figure><img src='http://content.overwolf.com/outplayed/release-notes/069/release-notes-hero.webp'></figure>\n<p><strong>All versions great and small.</strong> This version might be small, but still bright and beautiful.</p>\n<h2 class='new'>New</h2>\n<ul>\n<li><strong>5 new games are now supported</strong> - Rayman Origins, Post Scriptum, South Park: The Stick of Truth, Shadow Tactics: Blades of the Shogun, and Firewatch. Want us to add your favorite game? Let us know on our <a href=\"https://ideas.outplayed.tv/\">Ideas portal</a>.</li>\n<li><strong>Capture mode notification</strong> - An option to turn capture OFF was added. If this option is selected, Outplayed will be disabled for this game, choose wisely (you can always enable it back from the settings).</li>\n</ul>\n<h2 class='improved'>Better</h2>\n<ul>\n<li><strong>Missing backgrounds</strong> - Remnant: From the Ashes and Project Zomboid artwork was added.</li>\n<li><strong>Settings in-game</strong> - Did you know that changing settings while in-game will only take effect after restarting the game? A big yellow alert was added to make sure you know.</li>\n</ul>\n<h2 class='bugs'>Fixed</h2>\n<ul>\n<li><strong>Capture mode notification</strong> - Allow using numeric keypad in the notification hotkeys. We like hotkeys, especially in the winter.</li>\n<li><strong>Video editor</strong> - Videos with aspect ratios different than project settings were stretched to fit. Although stretching is good for your health, we fixed it.</li>\n</ul>\n<p>Have a great idea for Outplayed? Let us know on our <a href=\"https://ideas.outplayed.tv/\">Ideas portal</a>, or talk to us directly on our <a href=\"https://discord.gg/MatrVYK\">Discord server</a>.</p>\n<p><strong>See you in the next version,<br>\nThe Outplayed team</strong></p>",
+         "timestamp":1643024580643
+      },
+      {
+         "important":false,
+         "version":"3.0.33",
+         "html":"<p>3.0.33 release notessssssss</p>",
+         "timestamp":1643036589211
+      }
+   ],
+   "meta":{
+      "perPage":3
+   }
+}
+```
+Which is the same as the result for page 0.
+
+</TabItem>
+<TabItem value="page-2" label="Page 2">
+
+The result for page 2 would be:
+```json
+{
+   "versions":[
+      
+   ],
+   "meta":{
+      "perPage":3
+   }
+}
+```
+Which is empty, since there are only 3 published release notes from this version.
+
+</TabItem>
+</Tabs>
+</details>
 
 ## The App Channels API
 
