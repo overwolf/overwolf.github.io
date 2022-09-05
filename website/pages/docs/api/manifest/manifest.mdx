@@ -120,8 +120,6 @@ Note that not all flags are mandatory - we included all available flags for docu
         "content_scripts": [{ "windows": [ "index" ], "js": [ "myscript.js" ] }],
         //A list of events causing the app to launch
         "launch_events": [{"event": "GameLaunch", "event_data":{"game_ids": [1136]}, "start_minimized": true}],
-        //A custom user agent for the app to use when creating http requests. Don’t use this property if your app serves ads.
-        "user_agent": "...",
         //Disable opening of the developer tools for the app
         "disable_dt": false,
         //hosting app flexible data
@@ -243,7 +241,6 @@ Note that not all flags are mandatory - we included all available flags for docu
         "hotkeys":{"save_YourAppName": {"title": "Save Replay for later", "action-type":"custom", "default":"Ctrl+Shift+F9"}},
         "content_scripts": [{ "windows": [ "index" ], "js": [ "myscript.js" ] }],
         "launch_events": [{"event": "GameLaunch", "event_data":{"game_ids": [1136]}, "start_minimized": true}],
-        "user_agent": "...",
         "disable_dt": false,
         "service_providers": {"nafihghfcpikebhfhdhljejkcifgbdahdhngepfb": {"whatever": "value"}},
         "<a id="developer-manifest" href="#developer-game-settings">developer": {
@@ -355,7 +352,6 @@ A list of additional settings for the app.
 | <a className="anchor" aria-hidden="true" id="hotkeys"></a>hotkeys     | [hotkeys](#hotkeys-object) Object   |  Shortcut keys that trigger an app action.  | 0.78  |
 | <a className="anchor" aria-hidden="true" id="content_scripts"></a>content_scripts | [content_scripts[]](#content_scripts-array) |  A list of content scripts to be loaded for specific windows. |0.78  |
 | <a className="anchor" aria-hidden="true" id="launch_events"></a>launch_events | [launch_event_settings[]](#launch_event_settings-array) |  A list of events causing the app to launch. |0.82  |
-| <a className="anchor" aria-hidden="true" id="user_agent"></a>user_agent | string |  A custom user agent for the app to use when creating http requests. <br/> **Please read our [notes](#user_agent-notes)** |0.86  |
 | <a className="anchor" aria-hidden="true" id="disable_dt"></a>disable_dt | bool |  Disable opening of the developer tools for the app (with Ctrl+shift+I). <br/>*Default value – “false”* |0.118  |
 | <a className="anchor" aria-hidden="true" id="service_providers"></a>service_providers | [service_providers](#service_providers-object) object |  Extra data to external service providers |0.137  |
 | <a className="anchor" aria-hidden="true" id="developer-game-settings"></a>developer | [developer setting](#developer-settings-object) object|  Additional setting for developers. |0.127  |
@@ -366,13 +362,6 @@ A list of additional settings for the app.
 | <a className="anchor" aria-hidden="true" id="uninstall_window"></a>uninstall_window | [uninstall_window](#uninstall_window-object) object|  triggers the client to run a window on app uninstall for a required time set. <br/>Use it for running uninstall background actions like removing DLLs, logs, images, and other files injected by the app to the user's machine. |0.187  |
 | <a className="anchor" aria-hidden="true" id="auto_relaunch_on_crash"></a>auto_relaunch_on_crash | bool |  Causes apps to automatically relaunch if their process has crashed. if the app crashes 5 times consecutively, it will stop trying to relaunch.  | 0.191  |
 | <a className="anchor" aria-hidden="true" id="open_dev_tools_data"></a>open_dev_tools | bool |  Used for debugging. Automatically opens the dev tools window when opening an app window. *Note: it's possible to set this behavior on a per window basis if by adding this property to a specific window in the <a href="#open_dev_tools_window">Window object</a> | 0.191  |
-
-#### user_agent Notes
-
-* Don’t use this property if your app serves ads.
-  In case you have to use it, consult with us before.
-
-* using ‘navigator.userAgent’ will not return the custom user agent, but the default one.
 
 #### process_name Notes
 

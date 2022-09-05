@@ -349,7 +349,7 @@ Data Example:
 Event        | Event Data   | Fired When    | Notes              | Since GEP Ver. |
 -------------| -------------| --------------| ------------------ | --------------|
 match_start  | Wild / Standard | match starts	| See [notes](#match_start-note) | 123.0  |
-match_end    | "win"/"lose"/"tie" | match ends      | See [notes](#match_end-note) | 123.0  |
+match_end    | "win"/"lose"/"tie"/Battlegrounds rank  | match ends      | See [notes](#match_end-note) | 123.0  |
 match_outcome| "WON" / "LOST"     | match concludes | This event is not reliable on some rare scenarios, please use `"match_end"` event data instead  | 134.0  |
 
 #### *match_start* note
@@ -369,6 +369,7 @@ Data Example:
 {"events":[{"name":"match_end","data":"win"}]}
 {"events":[{"name":"match_end","data":"lose"}]}
 {"events":[{"name":"match_end","data":"tie"}]}
+{"events":[{"name":"match_end","data":"7"}]}
 ```
 
 #### *match_outcome* note
