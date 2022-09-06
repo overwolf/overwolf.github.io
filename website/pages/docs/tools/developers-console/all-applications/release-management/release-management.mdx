@@ -5,6 +5,9 @@ title: Release Management
 sidebar_position: 10
 ---
 
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 This section of the console allows you to manage your app's releases, which are based on the "Release Channels" model.
 ![The Release Management Tab](/assets/tools/developers-console/all-applications/release-management/index.jpg)
 
@@ -21,9 +24,10 @@ Similarly to that, the developers console allows you to create and manage your o
 ## App Channel features
 
 App Channels allow you to control several aspects of your deployment:
-- Phasing - You can release new updates to a % of the users on a channel at a time.
+- [Phasing (Rollout)](#rolloutphasing) - You can release new updates to a % of the users on a channel at a time.
 - Automatic deployment - No need for update checks, manual updating, etc. As long as it's set in the console, overwolf will take care of the rest.
 - One place for everything - For every version in a channel, you can view the download counts, active user counts, phasing history, internal and external changelogs, and even download the actual opk file.
+- Automatic version diffs - The developers console will maintain version "diff" files a few versions back on every channel, significantly reducing the file size for app updates.
 
 ## The "Production" and "Testing" Environments
 
@@ -49,6 +53,32 @@ After downloading the custom app version or changing the app channel, you will h
 2. Wait up to four hours for the auto-update process to initiate.
 3. Update the app through the API and relaunch it, using the recommended [extension update flow](/api/extensions#recommended-extension-update-flow).
 
+## Rollout/Phasing
+
+Phasing allows you to gradually deploy new app versions to their channels.
+
+This works by having **up to** two "active" versions of the app per channel.
+- The channel's "live" version. It is fully rolled out, and users will default to it.
+   - For test channels, if there is no "live" version, the production channel's "live" version will be used instead.
+- The channel's "phased" version. It is partially rolled out. **This version only exists during phasing of a new version.**
+
+Users subscribed to the channel will then be chosen at random to download the phased version.
+
+The portion of users chosen corresponds to the phasing % for the version. As the phasing increases, new users will
+be chosen to download the version.
+- A "phased" version's phasing cannot be decreased. It can only be increased.
+- The "phased" version's phasing can be `Halted`. Once `Halted`, no new downloads of the version will occur, even to users
+that were chosen to be phased to.
+   - The "phasing" can then be `Resumed`, at which point, it will return to acting the way that it should.
+- If a new version begins rollout, it will **replace** the "phasing" version if it exists.
+   - When that happens, the old "phased" version's rollout will be considered `Halted`.
+   - **Users on the old "phased" version will stay on that version as their "live" version. They will not be rolled back.**
+   - New users from this point onwards will only be split between the "live" version and the new "phased" version.
+   - Keep in mind that the new "phased" version will randomly choose a different set of users.
+   
+   In order to guarantee a move of all users on the old "phased" version, you will need to release a newer version, and roll it out fully.
+- Once the "phased" version's phasing becomes 100%, it will replace the "live" version.
+
 ## Manage An App Channel
 
 Every App Channel, once entered, will contain these three sections:
@@ -62,16 +92,16 @@ Every App Channel, once entered, will contain these three sections:
 #### Ready for release
 This is where you can upload a new version of your app. Before we get started, make sure you have a valid `.opk` file for the new version. You can learn more about creating a new `.opk` file [here](/start/submit-your-app#how-to-create-an-opk-package).
 
-![New Release](/assets/tools/developers-console/all-applications/release-management/production/new-release.jpg)
+![New Release](/assets/tools/developers-console/all-applications/release-management/new-release.jpg)
 
 By dragging an `.opk` file (or clicking `Upload` and selecting one), we can begin a new version release "draft".
 
-![Processing New Release](/assets/tools/developers-console/all-applications/release-management/production/new-release-processing.jpg)
+![Processing New Release](/assets/tools/developers-console/all-applications/release-management/new-release-processing.jpg)
 
 Once the file is done processing, assuming that everything went right, we will be greeted by the following screen:
 
 #### Review
-![Review New Release](/assets/tools/developers-console/all-applications/release-management/production/new-release-review.jpg)
+![Review New Release](/assets/tools/developers-console/all-applications/release-management/new-release-review.jpg)
 
 :::note Version Review
 As mentioned under [App version review](/start/maintain-your-app/submit-an-app-update#app-version-review),
@@ -86,55 +116,188 @@ In here, we will need to add the internal [release notes](#release-notes) for th
 
 Once the release notes are added, the screen will change, and allow us to send the new version for [review](/start/maintain-your-app/submit-an-app-update#app-version-review).
 
-![Review New Release With Notes](/assets/tools/developers-console/all-applications/release-management/production/new-release-review-noted.jpg)
+![Review New Release With Notes](/assets/tools/developers-console/all-applications/release-management/new-release-review-noted.jpg)
 
 Once we press `Submit`, the app will be sent for review by the Overwolf team, and the screen will change. If at any point, we wish to pull the review back, we can cancel it by pressing `Cancel Request`.
 
-![Reviewing New Release](/assets/tools/developers-console/all-applications/release-management/production/new-release-reviewing.jpg)
+![Reviewing New Release](/assets/tools/developers-console/all-applications/release-management/new-release-reviewing.jpg)
 
 Once our version gets approved, the screen will change, and we will be able to start releasing the version.
 
 #### Production
-![New Release Approved](/assets/tools/developers-console/all-applications/release-management/production/new-release-reviewed.jpg)
+![New Release Approved](/assets/tools/developers-console/all-applications/release-management/new-release-reviewed.jpg)
 
-From here, we can (**and should**) add public release notes under `Add release notes`, and we can start specifying the [rollout %](.#rollout) in the relevant textbox, and save it by clicking on `Start rollout`.
+From here, we can (**and should**) add public [release notes](#release-notes) under `Add release notes`, and we can start specifying the [rollout %](#rolloutphasing) in the relevant textbox, and save it by clicking on `Start rollout`.
 
-![New Release Confirmation](/assets/tools/developers-console/all-applications/release-management/production/new-release-confirmation.jpg)
+![New Release Confirmation](/assets/tools/developers-console/all-applications/release-management/new-release-confirmation.jpg)
 
 Once we click `Confirm`, the release will come out of "draft" mode, and become a full release, sitting under [Public Releases](#public-releases).
 
 :::tip Deleting A Version "Draft"
 If at any point throughout the process, we decide that we wish to discard this version's draft, we can always click on the red `Discard release` text in the top right.
 
-![New Release Discard](/assets/tools/developers-console/all-applications/release-management/production/new-release-discard.jpg)
+![New Release Discard](/assets/tools/developers-console/all-applications/release-management/new-release-discard.jpg)
 
 Then, once we click `Confirm`, the draft will be deleted.
 :::
 
 ### Public Releases
 
+Under Public Releases, you can manage the currently [active](#rolloutphasing) [versions](version-overview).
 
+<Tabs>
+<TabItem value="opened" label="Opened" default>
+
+![Public Releases Opened](/assets/tools/developers-console/all-applications/release-management/public-releases-open.jpg)
+
+</TabItem>
+<TabItem value="closed" label="Closed">
+
+![Public Releases Closed](/assets/tools/developers-console/all-applications/release-management/public-releases-closed.jpg)
+
+</TabItem>
+</Tabs>
 
 
 ### Release History
 
+Under Release History, you can manage historical [versions](version-overview).
 
+<Tabs>
+<TabItem value="opened" label="Opened">
 
+![Release History Opened](/assets/tools/developers-console/all-applications/release-management/release-history-open.jpg)
 
+</TabItem>
+<TabItem value="closed" label="Closed" default>
 
+![Release History Closed](/assets/tools/developers-console/all-applications/release-management/release-history-closed.jpg)
+Here, you can
+- Browse the different pages of older releases (in the bottom right)
+- See a total of all versions, and change the amount displayed per page (in the bottom left)
 
+</TabItem>
+</Tabs>
+
+### Version Overview
+
+![Version Details](/assets/tools/developers-console/all-applications/release-management/version-details.jpg)
+
+Information about a specific version. Includes:
+- Version - The app version associated with this version.
+- Uploaded - When was this version uploaded.
+- Rollout (Only shows up on [active versions](#rolloutphasing)) - What is the current rollout status of this version. Possible values include:
+   - x% - The current rollout %. Only exists on the ["phased"](#rolloutphasing) version.
+   - HALTED - This version's rollout is currently halted. Only exists on the ["phased"](#rolloutphasing) version.
+   - Full rollout - This is the ["live"](#rolloutphasing) version, and it is fully rolled out.
+- Download size - The size of the raw opk file for this version.
+- Installs - How many (non-unique) installations of this version have ever occured.
+- Active Installs - How many active installations exist for this version. This means installations that were active in the last 30 days.
+
+### Notes
+
+<Tabs>
+<TabItem value="empty" label="Empty" default>
+
+![Version Notes Empty](/assets/tools/developers-console/all-applications/release-management/release-notes-empty.jpg)
+Using these two buttons, it is possible to edit this version's [`internal`](#edit-release-notes) and [`public`](#edit-release-notes) release notes respectively.
+
+</TabItem>
+<TabItem value="filled" label="Filled">
+
+![Version Notes Filled](/assets/tools/developers-console/all-applications/release-management/release-notes-full.jpg)
+Even after this version's [`internal`](#edit-release-notes) and [`public`](#edit-release-notes) release notes are filled in, it is still possible to re-edit them.
+
+</TabItem>
+</Tabs>
+
+### Release rollout percentage
+:::note Phasing Version
+This section only appears on the ["phasing"](#rolloutphasing) version. If will not appear on **any** other version.
+:::
+
+<details>
+<summary>Release rollout percentage</summary>
+<Tabs>
+<TabItem value="active" label="Active" default>
+
+![Version Phasing Active](/assets/tools/developers-console/all-applications/release-management/release-rollout-active.jpg)
+In this section, it is possible to edit a "phased" version's [rollout %](#rolloutphasing), as well as to `Halt` its rollout.
+
+</TabItem>
+<TabItem value="halted" label="Halted">
+
+![Version Phasing Halted](/assets/tools/developers-console/all-applications/release-management/release-rollout-halted.jpg)
+In this section, it is possible to edit a "phased" version's [rollout %](#rolloutphasing), as well as `Resume` its rollout.
+
+</TabItem>
+</Tabs>
+</details>
+
+### Rollout History
+
+![Version Rollout History](/assets/tools/developers-console/all-applications/release-management/rollout-history.jpg)
+A list of all [rollout](#rolloutphasing) changes for this version, including:
+- Date - When was the change made.
+- Rollout - How much was the rollout increased to.
+- Halted or not - Is the version halted (for changes before the latest, this will count whether or not they were halted
+when changed to the next %).
 
 
 ## Release Notes
 
+There are two kinds of version release notes:
+- "Internal release notes" - These are used for documenting **all** changes done to the app over time.
+**They can only be viewed by your app's staff and the overwolf team**.
+- "(Public) release notes" - These are your app's public release notes, for documenting public changes to the app.
+**They can be viewed by anyone, even [outside of the developer's console](#release-notes-endpoint)**,
+and it is recommended to use them to manage your app's public "changelog" for new versions.
 
+### Edit Release Notes
 
+Release notes are edited using [CommonMark](https://commonmark.org/), with a rich text editor.
 
+<details>
+<summary>Release Notes Editor</summary>
+<Tabs>
+<TabItem value="edit" label="Edit" default>
 
+The text editor has a `Preview` button, which, when pressed, will switch the release notes into preview mode.
+![Internal Release Notes Edit](/assets/tools/developers-console/all-applications/release-management/release-notes-internal-edit.jpg)
+
+</TabItem>
+<TabItem value="preview" label="Preview">
+
+The preview mode has an `Edit` button, which, when pressed, will switch the release notes back into edit mode.
+![Internal Release Notes Preview](/assets/tools/developers-console/all-applications/release-management/release-notes-internal-preview.jpg)
+
+</TabItem>
+</Tabs>
+</details>
+
+At any point, you can use the `Cancel` and `Save` buttons inside of the release notes editor, which correspond to the `Discard changes` and `Save` buttons of [The Footer Toolbar](../#the-footer-toolbar).
+
+Public release notes also contain two extra toggles:
+- `Publish` - Whether the release notes should be `published`.
+   - When turned off, you can use the release notes editor to create a "draft" for your new version. For release notes you
+   wish to keep internal, use the `Internal release notes` instead.
+   - When turned on, your notes, and any changes made to them, will be available for [everyone to read](#release-notes-endpoint).
+- `Important` - Whether this version is considered `important`. Use this to mark major versions or time-critical updates.
+
+<details>
+<summary>Public Release Notes Preview</summary>
+
+![Internal Release Notes Preview](/assets/tools/developers-console/all-applications/release-management/release-notes-external-preview.jpg)
+
+</details>
+
+:::note Release Notes Delay
+Keep in mind that changes made to the public release notes of an app will take approximately ~5 minutes to update on the [endpoint](#release-notes-endpoint).
+:::
 
 ### Release Notes Endpoint
 
-The developer's console exposes the pubic release notes of every app, through the following api endpoint:
+The developer's console exposes the "compiled html" of pubic release notes of every app, through the following api endpoint:
 ```js
 `https://console-api.overwolf.com/v1/apps/${app-id}/versions/${version}/release-notes/${page}`
 ```
@@ -146,7 +309,7 @@ Where:
 
 The endpoint will then return the following json:
 
-```json
+```js
 {
   "versions": [
     {
@@ -162,7 +325,7 @@ The endpoint will then return the following json:
 }
 ```
 
-Any version without a published public changelog will be skipped.
+Any version without a `published` public changelog will be skipped.
 
 The `versions` array will display **up to** three versions. If it runs out of versions to display before then,
 it will only be filled by the remaining versions. In the next page after that, it will then be completely empty.
@@ -170,9 +333,6 @@ it will only be filled by the remaining versions. In the next page after that, i
 :::note Page Numbering
 Changelog page numbers start from 1. If you check for page 0, it will just be treated as page 1.
 :::
-
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
 
 <details>
 <summary>Example Values</summary>
