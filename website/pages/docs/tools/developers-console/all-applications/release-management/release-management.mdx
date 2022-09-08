@@ -5,9 +5,6 @@ title: Release Management
 sidebar_position: 10
 ---
 
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
-
 This section of the console allows you to manage your app's releases, which are based on the "Release Channels" model.
 ![The Release Management Tab](/assets/tools/developers-console/all-applications/release-management/index.jpg)
 
@@ -21,7 +18,7 @@ We can take the [overwolf client](/support/developer-client-downloads) as an exa
 
 Similarly to that, the developers console allows you to create and manage your own app's release channels, or **App Channels** for short.
 
-## App Channel features
+### App Channel features
 
 App Channels allow you to control several aspects of your deployment:
 - [Phasing (Rollout)](#rolloutphasing) - You can release new updates to a % of the users on a channel at a time.
@@ -29,13 +26,13 @@ App Channels allow you to control several aspects of your deployment:
 - One place for everything - For every version in a channel, you can view the download counts, active user counts, phasing history, internal and external changelogs, and even download the actual opk file.
 - Automatic version diffs - The developers console will maintain version "diff" files a few versions back on every channel, significantly reducing the file size for app updates.
 
-## The "Production" and "Testing" Environments
+### The "Production" and "Testing" Environments
 
 For an overwolf app, channels are split into two groups, that operate similarly:
 - [`Production`](release-management/production) - Your app's public channel
 - [`Testing`](release-management/testing) - Your app's testing channels
 
-## Changing App Channels
+### Changing App Channels
 
 There are two ways that your testers/users can get the custom app version from a specific channel:
 
@@ -45,7 +42,7 @@ There are two ways that your testers/users can get the custom app version from a
 2. **API** - Use the overwolf API as [explained below](#the-app-channels-api) to change the current app channel, enabling you to integrate this feature into your app.
 For example, you can display a combo box that enables your app users to change the channel from the app's UI.
 
-## Apply the channel change
+### Apply the channel change
 
 After downloading the custom app version or changing the app channel, you will have to do ONE of the following to apply the change:
 
@@ -53,7 +50,7 @@ After downloading the custom app version or changing the app channel, you will h
 2. Wait up to four hours for the auto-update process to initiate.
 3. Update the app through the API and relaunch it, using the recommended [extension update flow](/api/extensions#recommended-extension-update-flow).
 
-## Rollout/Phasing
+### Rollout/Phasing
 
 Phasing allows you to gradually deploy new app versions to their channels.
 
