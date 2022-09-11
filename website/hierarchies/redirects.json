@@ -261,7 +261,10 @@
   },
   {
     "to": "/api/deprecated/audio",
-    "from": ["/docs/api/overwolf-media-audio", "/api/media/audio"]
+    "from": [
+      "/docs/api/overwolf-media-audio",
+      "/api/media/audio"
+    ]
   },
   {
     "to": "/api/media/replays",
@@ -341,7 +344,10 @@
   },
   {
     "to": "/api/deprecated/obsolete/tobii",
-    "from": ["/docs/api/overwolf-tobii", "/api/deprecated/tobii"]
+    "from": [
+      "/docs/api/overwolf-tobii",
+      "/api/deprecated/tobii"
+    ]
   },
   {
     "to": "/api/utils",
@@ -473,7 +479,10 @@
   },
   {
     "to": "/start/submit-your-app",
-    "from": ["/docs/start/submit-your-app-to-the-store", "/start/submit-your-app/submit-your-app-to-the-store"]
+    "from": [
+      "/docs/start/submit-your-app-to-the-store",
+      "/start/submit-your-app/submit-your-app-to-the-store"
+    ]
   },
   {
     "to": "/start/monetize-with-subs/subscriptions-flow",
@@ -505,7 +514,10 @@
   },
   {
     "to": "/start/maintain-your-app/submit-an-app-update",
-    "from": ["/docs/start/update-your-app-status", "/start/maintain-your-app/update-your-app-status"]
+    "from": [
+      "/docs/start/update-your-app-status",
+      "/start/maintain-your-app/update-your-app-status"
+    ]
   },
   {
     "to": "/start/getting-started/using-dev-tools",
@@ -708,8 +720,17 @@
     "from": "/docs/topics/app-analytics"
   },
   {
-    "to": "/tools/developers-console/application/release-management",
-    "from": ["/docs/topics/app-channels", "/topics/developers-console/app-channels"]
+    "to": "/tools/developers-console/all-applications/release-management",
+    "from": [
+      "/docs/topics/app-channels",
+      "/topics/developers-console/app-channels",
+      "/docs/topics/release-notes",
+      "/topics/developers-console/release-notes",
+      "/docs/topics/submit-a-new-version",
+      "/topics/developers-console/submit-a-new-version",
+      "/docs/topics/submit-for-review",
+      "/topics/developers-console/submit-for-review"
+    ]
   },
   {
     "to": "/topics/request-a-service/app-marketing-promotions",
@@ -733,7 +754,12 @@
   },
   {
     "to": "/tools/ow-cli",
-    "from": ["/docs/topics/cli", "/topics/developers-console/cli", "/docs/topics/dev-console-api", "/internal/dev-console-api"]
+    "from": [
+      "/docs/topics/cli",
+      "/topics/developers-console/cli",
+      "/docs/topics/dev-console-api",
+      "/internal/dev-console-api"
+    ]
   },
   {
     "to": "/topics/using-windows-api/communicating-between-windows",
@@ -744,8 +770,11 @@
     "from": "/docs/topics/communication-guidelines"
   },
   {
-    "to": "/tools/developers-console/crash-reports",
-    "from": ["/docs/topics/crash-reports", "/topics/developers-console/crash-reports"]
+    "to": "/tools/developers-console/all-applications/crash-reports",
+    "from": [
+      "/docs/topics/crash-reports",
+      "/topics/developers-console/crash-reports"
+    ]
   },
   {
     "to": "/topics/best-practices/create-download-link",
@@ -864,8 +893,11 @@
     "from": "/docs/topics/looking-for-group"
   },
   {
-    "to": "/tools/developers-console/manage-subscriptions",
-    "from": ["/docs/topics/manage-subscriptions", "/topics/developers-console/manage-subscriptions"]
+    "to": "/tools/developers-console/all-applications/subscriptions",
+    "from": [
+      "/docs/topics/manage-subscriptions",
+      "/topics/developers-console/manage-subscriptions"
+    ]
   },
   {
     "to": "/topics/using-plugins/plugins-overview",
@@ -880,16 +912,15 @@
     "from": "/docs/topics/promoting-your-app"
   },
   {
-    "to": "/tools/developers-console/rating-and-reviews",
-    "from": ["/docs/topics/rating-and-reviews", "/topics/developers-console/rating-and-reviews"]
+    "to": "/tools/developers-console/all-applications/user-feedback/reviews",
+    "from": [
+      "/docs/topics/rating-and-reviews",
+      "/topics/developers-console/rating-and-reviews"
+    ]
   },
   {
     "to": "/topics/best-practices/reduce-opk-size",
     "from": "/docs/topics/reduce-opk-size"
-  },
-  {
-    "to": "/tools/developers-console/release-notes",
-    "from": ["/docs/topics/release-notes", "/topics/developers-console/release-notes"]
   },
   {
     "to": "/topics/using-plugins/sample-plugin",
@@ -908,14 +939,6 @@
     "from": "/docs/topics/snippets"
   },
   {
-    "to": "/tools/developers-console/submit-a-new-version",
-    "from": ["/docs/topics/submit-a-new-version", "/topics/developers-console/submit-a-new-version"]
-  },
-  {
-    "to": "/tools/developers-console/submit-for-review",
-    "from": ["/docs/topics/submit-for-review", "/topics/developers-console/submit-for-review"]
-  },
-  {
     "to": "/topics/using-plugins/team-speak-plugin",
     "from": "/docs/topics/team-speak-plugin"
   },
@@ -928,16 +951,22 @@
     "from": "/docs/topics/type-definition-file"
   },
   {
-    "to": "/tools/developers-console/update-store-listing",
-    "from": ["/docs/topics/update-store-listing", "/topics/developers-console/update-store-listing"]
+    "to": "/tools/developers-console/all-applications/store-listing",
+    "from": [
+      "/docs/topics/update-store-listing",
+      "/topics/developers-console/update-store-listing"
+    ]
   },
   {
     "to": "/topics/best-practices/user-flow-and-error-handling",
     "from": "/docs/topics/user-flow-and-error-handling"
   },
   {
-    "to": "/tools/developers-console/users-and-permissions",
-    "from": ["/docs/topics/users-and-permissions", "/topics/developers-console/users-and-permissions"]
+    "to": "/tools/developers-console/settings/users-and-permissions",
+    "from": [
+      "/docs/topics/users-and-permissions",
+      "/topics/developers-console/users-and-permissions"
+    ]
   },
   {
     "to": "/topics/using-events",
