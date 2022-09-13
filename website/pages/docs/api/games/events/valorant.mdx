@@ -134,6 +134,7 @@ round_report | match_info  | * Total Damage<br></br>* Total number of bullets hi
 game_mode    | match_info  |* Mode: Bomb / Quick Bomb<br></br>* Ranked: 0 (Practice), 1 (Competitive), 2 (Spike Rush/Other) |See [notes](#game_mode-note)|   151.0       |
 roster    | match_info  | * Player Name<br></br>* Player ID<br></br>* Name of picked character<br></br>* Player's Rank<br></br>* Whether it is the local player<br></br>* If player is a teammate or not. |See [notes](#roster-note)|   151.0       |
 scoreboard    | match_info  | Scoreboard changes and updates during the game |See [notes](#scoreboard-note)|   151.0       |
+kill_feed    | match_info  | kill feed updates during the game |See [notes](#kill_feed-note)|   209.0       |
 
 #### *round_number* note
 
@@ -243,10 +244,13 @@ It is language dependant, so that is also important to take into account.
 * 18 - Diamond_01
 * 19 - Diamond_02
 * 20 - Diamond_03
-* 21 - Immortal_01
-* 22 - Immortal_02
-* 23 - Immortal_03
-* 24 - Radiant
+* 21 - Ascendant_1
+* 22 - Ascendant_2
+* 23 - Ascendant_3
+* 24 - Immortal_01
+* 25 - Immortal_02
+* 26 - Immortal_03
+* 27 - Radiant
 
 </details>
 
@@ -278,13 +282,20 @@ List of parameters:
 * kills / deaths / assists - The number of kills, deaths and assists suring the game 
 * money - the amount of money during the game for each player
 * is_local - local player or not (Boolean)
+* alive - if the player is alive true / false
 
 Data Example:
 
 ```json
-{"info":{"match_info":{"scoreboard_1":"{\"name\":\"PlayerName #7777\",\"teammate\":false,\"character\":\"Wushu\",\"kills\":15,\"deaths\":13,\"assists\":1,\"money\":4850,\"is_local\":true}"}},"feature":"match_info"}
+{"info":{"match_info":{"scoreboard_0":"{\"name\":\"jaxxx #7934\",\"character\":\"\",\"teammate\":false,\"alive\":true,\"kills\":0,\"deaths\":4,\"assists\":0,\"money\":99999,\"is_local\":true}"}},"feature":"match_info"}
 ```
 
+#### *kill_feed* note
+Data Example:
+
+```json
+{"info":{"match_info":{"kill_feed":"{\"attacker\":\"shyni\",\"victim\":\"VINn\",\"weapon\":\"TX_Hud_Operator\",\"ult\":0,\"assist1\":\"TX_Killfeed_Brimstone\",\"assist2\":\"\",\"assist3\":\"\",\"assist4\":\"\",\"headshot\":false,\"assist\":null}"}},"feature":"match_info"}
+```
 
 ### Events
 
