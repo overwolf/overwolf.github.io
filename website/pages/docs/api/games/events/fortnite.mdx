@@ -572,6 +572,7 @@ Data Example:
 key          | Category    | Values                    | Notes                 | Since GEP Ver. |
 ------------ | ------------| ------------------------- | --------------------- | ------------- |
 map   | match_info  |Name of the current played map.  |  See [notes](#map-note)  |         |
+creative_map   | match_info  |Details about the creative map.  |  See [notes](#creative_map-note)  |         |
 
 #### *map* note
 
@@ -579,4 +580,12 @@ Data Example:
 
 ```json
 {"feature":"map","category":"match_info","key":"map","value":"Creative_NoApollo_Terrain"}
+```
+
+#### *creative_map* note
+
+Data Example:
+
+```json
+{"feature":"map","category":"match_info","key":"creative_map","value":"{\"map_id\":\"0353-9713-7218\",\"title\":\"Cyber_Dragon_Hub\",\"account_id\":\"7f1f209123164b1bbf905ad1ef9990de\",\"version\":\"2\"}"}
 ```
