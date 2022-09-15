@@ -291,10 +291,23 @@ Data Example:
 ```
 
 #### *kill_feed* note
+
+List of parameters: 
+* attacker - name of the killing player
+* victim  - name of the killed player
+* assist 1/2/3/4 - name of the characters who assisted in the kill 
+* weapon - name of the weapon/ability/ultimate used by the killing player or spike/fall damage 
+* ult - name of the ultimate used, reserved for a non lethal ultimate such as Sage's resurrection 
+
 Data Example:
 
 ```json
-{"info":{"match_info":{"kill_feed":"{\"attacker\":\"shyni\",\"victim\":\"VINn\",\"weapon\":\"TX_Hud_Operator\",\"ult\":0,\"assist1\":\"TX_Killfeed_Brimstone\",\"assist2\":\"\",\"assist3\":\"\",\"assist4\":\"\",\"headshot\":false,\"assist\":null}"}},"feature":"match_info"}
+{"info":{"match_info":{"kill_feed":"{\"attacker\":\"YTDestruct28\",\"victim\":\"Ghostblade\",\"weapon\":\"TX_Hud_Volcano\",\"ult\":\"\",\"assist1\":\"TX_Killfeed_Sage1\",\"assist2\":\"\",\"assist3\":\"\",\"assist4\":\"\",\"headshot\":false}"}},"feature":"match_info"}
+```
+None lethal ultimate example: 
+
+```json
+{"info":{"match_info":{"kill_feed":"{\"attacker\":\"JacksAtWork\",\"victim\":\"jaxxxsosparrow\",\"weapon\":\"\",\"ult\":\"TX_Thorne_Heal\",\"assist1\":\"\",\"assist2\":\"\",\"assist3\":\"\",\"assist4\":\"\",\"headshot\":false}"}},"feature":"match_info"}
 ```
 
 ### Events
