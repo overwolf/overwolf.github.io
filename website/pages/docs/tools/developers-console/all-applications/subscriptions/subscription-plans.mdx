@@ -4,3 +4,59 @@ image: "/img/embed/api-best-practices.jpg"
 title: Subscription Plans
 sidebar_position: 50
 ---
+
+![The Subscription Plans Tab](/assets/tools/developers-console/all-applications/subscriptions/subscription-plans/index.jpg)
+This section of the console gives you a detailed overview of your app's subscription plans, allowing you to filter them by plan name. 
+
+Every subscription plan contains:
+- The subscription's `Plan title`.
+- The subscription plan's `Price (USD)`.
+- The subscription plan's `Period(month)`.
+- The subscription plan's `Status`.
+- A button for editing the subscription plan
+
+The active subscriptions are split into pages, using [The Paging Footer](../../#the-footer-toolbar).
+
+## Editing a subscription plan
+
+By clicking the edit button on a plan, you can edit the different parts of that plan, by utilizing [The Footer Toolbar](../../#the-footer-toolbar).
+![Edit Subscription Plan](/assets/tools/developers-console/all-applications/subscriptions/subscription-plans/edit-plan.jpg)
+
+## Plan details
+
+You can edit the subscription's basic details here. This includes:
+- The subscription plan's `Title`.
+- The subscription plan's `Price (USD)`.
+- The subscription plan's `Period (months`.
+- The subscription plan's `Status`.
+
+You can also view the subscription's ID, which will be used when interacting with the [subscriptions API](/api/profile/subscriptions).
+
+### Customizing
+
+#### Customize plan page
+
+Subscriptions have a "landing page", that the user sees before being redirected to the exact payment page.
+This page can be customized, in order to help the users understand why they might want this subscription.
+![Customize Plan Page](/assets/tools/developers-console/all-applications/subscriptions/subscription-plans/customize-plan-page.jpg)
+
+The aforementioned page's Icon will be the app's Icon.
+
+Apart from that, there will be 3 "tiles", that contain an image, a title, and a short description.
+These can be edited directly below the previous section. For example, here is the first section's editable area:
+
+![Subscription Plan Tile](/assets/tools/developers-console/all-applications/subscriptions/subscription-plans/plan-tile.jpg)
+Each section's title and description can be edited, as long as they contain less than 50 and 80 characters respectively.
+
+Each image can also be changed:
+- It can be set to be a static image, in which case, the resolution should be exactly 150X96 pixels.
+- It can be set to a "sprite-sheet", in which case, the image's resolution should be exactly 2250X96 pixels,
+with each "frame" that will be cycled through being exactly 150X96 pixels (without any padding). For example:
+![Sprite Sheet Example](/assets/tools/developers-console/all-applications/subscriptions/subscription-plans/plan-sprite-sheet.png)
+
+#### Customize the Xsolla payment page
+
+It is also possible to customize the background image that will be shown to the user, once they open the Xsolla payment page.
+![Customize Xsolla Page](/assets/tools/developers-console/all-applications/subscriptions/subscription-plans/customize-xsolla.jpg)
+
+To do so, simply upload a valid picture, with a resolution of 1920x1080, that is also smaller than 200Kb.

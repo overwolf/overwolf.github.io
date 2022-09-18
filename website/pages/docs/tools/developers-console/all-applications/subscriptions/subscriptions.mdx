@@ -5,74 +5,22 @@ title: Subscriptions
 sidebar_position: 40
 ---
 
-In this article, we'll go over the process of updating the different aspects of your app’s subscription plan.
+This section of the console allows you to manage your app's active subscriptions and subscription plans.
+![The Subscriptions Tab](/assets/tools/developers-console/all-applications/subscriptions/index.jpg)
 
 If you don’t yet have a subscription plan enabled, follow [our guide first](/start/monetize-with-subs/subscriptions-overview).
 
-## Log in to the developers console
+Inside this tab, you will find:
+- Subscription [Statistics](subscriptions/statistics).
+- [Subscription Plans](subscriptions/subscription-plans) listing.
+- [Subscribers](subscriptions/subscribers) listing.
 
-After logging in to the Overwolf developers console, navigate to the subscriptions tab.
+:::note Plan Activity
+Your app can have several different subscription plans, and each user can have several different active subscriptions.
 
-2 new tabs will then be shown in the dropdown menu:
+However, only one subscription plan can be "Activated" at any point. This plan, marked as "Active" in its status, will be the plan
+that any user attempting to purchase a subscription to the app will be pointed to.
 
-- Plans
-- Subscribers
-
-![subs_tab](/assets/tools/developers-console/manage-subs/subs_tab.png)
- 
-## Plans Tab
-
-In this tab you can edit the subscription plans you already own: title, price, description, period, status and assets (that will be shown in the Overwolf app store).
-
-![plans_tab](/assets/tools/developers-console/manage-subs/plans_tab.png)
-
-To edit your plan, simply press the “EDIT” button for your plan.
-
-## Title, ID, Price, Period, Status
-
-- Title: How your subscriptions plan will be called on the dev console - this is not visible to users on the app store
-- ID: Your plan’s ID number. This is a read-only item and cannot be changed.
-- Price: in USD, can be edited.
-- Period (Months): The recurrence of the subscription plan. Can be edited.
-- Status: Configure whether your app subscription plan is Disabled, in Test mode, or Active on the app store.
-
-![plan_details](/assets/tools/developers-console/manage-subs/plan_details.png)
-
-## Customize the app’s subscription listing in the app store
-
-Control the assets you’d like to be shown on the app’s subscription listing in the app store.
-
-*Note: The minimum requirement is to have 1 plan title, 1 plan description and 1 plan image.
-
-- Title: Short and concise, up to 50 characters.
-- Description: What will this subscription offer the app’s users. Up to 200 characters.
-- Image: 
-   - Size must be 2250x96 pixels
-   - Must include 15 frames
-   - Frame size should be 150x96 (no padding)
-
-![plan_details2](/assets/tools/developers-console/manage-subs/plan_details2.png)
-
-*Example for an image:
-
-![plan_ad](/assets/tools/developers-console/manage-subs/plan_ad.png)
-
-## Subscribers tab
-
-Control and monitor you app's subscribers through this tab.
-
-![subscriber_tab](/assets/tools/developers-console/manage-subs/subscriber_tab.png)
-
-For each subscriber, you’ll be able to see their user name, which plan is activated for this user, what is the status of their subscription and the expiration date for this subscriber.
-
-You will also be able to edit the users subscription and monitor their activity through the “EDIT” button: 
-
-![subscriber_details](/assets/tools/developers-console/manage-subs/subscriber_details.png)
-
-In the EDIT section you’ll be able to change the user’s subscription expiration date and the status of the user’s subscription: 
-
-- Active: The subscription is currently enabled.
-- Cancelled: The subscription is either cancelled by the user or expired.
-- Revoked: The subscription is cancelled by the dev (e.g in order to refund the account).
-- Invalid: The Subscription is cancelled due to a transaction error (failed to recharge).
-
+**A user can have an active subscription to an inactive plan, and even renew it automatically through Xsolla!**
+**As such, changing the active subscription plan will not affect existing subscribers!**
+:::
