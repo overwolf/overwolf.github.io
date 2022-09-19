@@ -1,0 +1,462 @@
+---
+id: release-management
+image: "/img/embed/dev-tools.jpg"
+title: Release Management
+sidebar_position: 10
+---
+
+This section of the console allows you to manage your app's releases, which are based on the "Release Channels" model.
+![The Release Management Tab](/assets/tools/developers-console/all-applications/release-management/index.jpg)
+
+## What are Release Channels
+
+The Release Channels model allow for the deployment of multiple different versions of your code, with minimal overhead for both developers and users.
+
+We can take the [overwolf client](/support/developer-client-downloads) as an example:
+- The public channel (used when the channel name is empty), serves as the public "version". Users will default to this channel.
+- The developer's channel (used when the channel name is `Developers`), is the "version" aimed at developers, getting new releases before they reach the public channel, so developers can adapt their apps to them.
+
+Similarly to that, the developers console allows you to create and manage your own app's release channels, or **App Channels** for short.
+
+### App Channel features
+
+App Channels allow you to control several aspects of your deployment:
+- [Phasing (Rollout)](#rolloutphasing) - You can release new updates to a % of the users on a channel at a time.
+- Automatic deployment - No need for update checks, manual updating, etc. As long as it's set in the console, overwolf will take care of the rest.
+- One place for everything - For every version in a channel, you can view the download counts, active user counts, phasing history, internal and external changelogs, and even download the actual opk file.
+- Automatic version diffs - The developers console will maintain version "diff" files a few versions back on every channel, significantly reducing the file size for app updates.
+
+### The "Production" and "Testing" Environments
+
+For an overwolf app, channels are split into two groups, that operate similarly:
+- [`Production`](release-management/production) - Your app's public channel
+- [`Testing`](release-management/testing) - Your app's testing channels
+
+### Changing App Channels
+
+There are two ways that your testers/users can get the custom app version from a specific channel:
+
+1. **Custom download link** - Get the custom download link from the dev console.
+    - For the [Production](release-management/production) channel, this will be the app's unique download link.
+    - For [Testing](release-management/testing) channels, this will be the channel's unique download link.
+2. **API** - Use the overwolf API as [explained below](#the-app-channels-api) to change the current app channel, enabling you to integrate this feature into your app.
+For example, you can display a combo box that enables your app users to change the channel from the app's UI.
+
+### Apply the channel change
+
+After downloading the custom app version or changing the app channel, you will have to do ONE of the following to apply the change:
+
+1. Restart the Overwolf client.
+2. Wait up to four hours for the auto-update process to initiate.
+3. Update the app through the API and relaunch it, using the recommended [extension update flow](/api/extensions#recommended-extension-update-flow).
+
+### Rollout/Phasing
+
+Phasing allows you to gradually deploy new app versions to their channels.
+
+This works by having **up to** two "active" versions of the app per channel.
+- The channel's "live" version. It is fully rolled out, and users will default to it.
+   - For test channels, if there is no "live" version, the production channel's "live" version will be used instead.
+- The channel's "phased" version. It is partially rolled out. **This version only exists during phasing of a new version.**
+
+Users subscribed to the channel will then be chosen at random to download the phased version.
+
+The portion of users chosen corresponds to the phasing % for the version. As the phasing increases, new users will
+be chosen to download the version.
+- A "phased" version's phasing cannot be decreased. It can only be increased.
+- The "phased" version's phasing can be `Halted`. Once `Halted`, no new downloads of the version will occur, even to users
+that were chosen to be phased to.
+   - The "phasing" can then be `Resumed`, at which point, it will return to acting the way that it should.
+- If a new version begins rollout, it will **replace** the "phasing" version if it exists.
+   - When that happens, the old "phased" version's rollout will be considered `Halted`.
+   - **Users on the old "phased" version will stay on that version as their "live" version. They will not be rolled back.**
+   - New users from this point onwards will only be split between the "live" version and the new "phased" version.
+   - Keep in mind that the new "phased" version will randomly choose a different set of users.
+   
+   In order to guarantee a move of all users on the old "phased" version, you will need to release a newer version, and roll it out fully.
+- Once the "phased" version's phasing becomes 100%, it will replace the "live" version.
+
+## Manage An App Channel
+
+Every App Channel, once entered, will contain these three sections:
+* [New Release](#new-release) - Upload a new app version
+* [Public Releases](#public-releases) - Manage the currently live versions in the channel
+* [Release History](#release-history) - Manage past app versions
+
+![App Release Channel](/assets/tools/developers-console/all-applications/release-management/app-channel.jpg)
+
+### New Release
+#### Ready for release
+This is where you can upload a new version of your app. Before we get started, make sure you have a valid `.opk` file for the new version. You can learn more about creating a new `.opk` file [here](/start/submit-your-app#how-to-create-an-opk-package).
+
+![New Release](/assets/tools/developers-console/all-applications/release-management/new-release.jpg)
+
+By dragging an `.opk` file (or clicking `Upload` and selecting one), we can begin a new version release "draft".
+
+![Processing New Release](/assets/tools/developers-console/all-applications/release-management/new-release-processing.jpg)
+
+Once the file is done processing, assuming that everything went right, we will be greeted by the following screen:
+
+#### Review
+![Review New Release](/assets/tools/developers-console/all-applications/release-management/new-release-review.jpg)
+
+:::note Version Review
+As mentioned under [App version review](/start/maintain-your-app/submit-an-app-update#app-version-review),
+after enough releases, an app can start releasing new versions without review. In that case, the [Review](#review) step becocmes optional,
+and we can skip directly to the [Production](#production) step.
+- [Test Channels](release-management/testing) are always exempt from **mandatory** version reviews!
+
+**It is recommended to submit major versions for review, even if reviews are no longer mandatory!**
+:::
+
+In here, we will need to add the internal [release notes](#release-notes) for this version by pressing `Add internal notes`. **These release notes will only be viewable by your app's team, and the Overwolf team.**
+
+Once the release notes are added, the screen will change, and allow us to send the new version for [review](/start/maintain-your-app/submit-an-app-update#app-version-review).
+
+![Review New Release With Notes](/assets/tools/developers-console/all-applications/release-management/new-release-review-noted.jpg)
+
+Once we press `Submit`, the app will be sent for review by the Overwolf team, and the screen will change. If at any point, we wish to pull the review back, we can cancel it by pressing `Cancel Request`.
+
+![Reviewing New Release](/assets/tools/developers-console/all-applications/release-management/new-release-reviewing.jpg)
+
+Once our version gets approved, the screen will change, and we will be able to start releasing the version.
+
+#### Production
+![New Release Approved](/assets/tools/developers-console/all-applications/release-management/new-release-reviewed.jpg)
+
+From here, we can (**and should**) add public [release notes](#release-notes) under `Add release notes`, and we can start specifying the [rollout %](#rolloutphasing) in the relevant textbox, and save it by clicking on `Start rollout`.
+
+![New Release Confirmation](/assets/tools/developers-console/all-applications/release-management/new-release-confirmation.jpg)
+
+Once we click `Confirm`, the release will come out of "draft" mode, and become a full release, sitting under [Public Releases](#public-releases).
+
+:::tip Deleting A Version "Draft"
+If at any point throughout the process, we decide that we wish to discard this version's draft, we can always click on the red `Discard release` text in the top right.
+
+![New Release Discard](/assets/tools/developers-console/all-applications/release-management/new-release-discard.jpg)
+
+Then, once we click `Confirm`, the draft will be deleted.
+:::
+
+### Public Releases
+
+Under Public Releases, you can manage the currently [active](#rolloutphasing) [versions](#version-overview).
+
+<Tabs>
+<TabItem value="opened" label="Opened" default>
+
+![Public Releases Opened](/assets/tools/developers-console/all-applications/release-management/public-releases-open.jpg)
+
+</TabItem>
+<TabItem value="closed" label="Closed">
+
+![Public Releases Closed](/assets/tools/developers-console/all-applications/release-management/public-releases-closed.jpg)
+
+</TabItem>
+</Tabs>
+
+
+### Release History
+
+Under Release History, you can get an overview of historical [versions](#version-overview).
+
+Historical versions are split into pages, using [The Paging Footer](../#the-footer-toolbar).
+
+<Tabs>
+<TabItem value="opened" label="Opened">
+
+![Release History Opened](/assets/tools/developers-console/all-applications/release-management/release-history-open.jpg)
+
+</TabItem>
+<TabItem value="closed" label="Closed" default>
+
+![Release History Closed](/assets/tools/developers-console/all-applications/release-management/release-history-closed.jpg)
+Here, you can
+- Browse the different pages of older releases (in the bottom right)
+- See a total of all versions, and change the amount displayed per page (in the bottom left)
+
+</TabItem>
+</Tabs>
+
+### Version Overview
+
+![Version Details](/assets/tools/developers-console/all-applications/release-management/version-details.jpg)
+
+Information about a specific version. Includes:
+- Version - The app version associated with this version.
+- Uploaded - When was this version uploaded.
+- Rollout (Only shows up on [active versions](#rolloutphasing)) - What is the current rollout status of this version. Possible values include:
+   - x% - The current rollout %. Only exists on the ["phased"](#rolloutphasing) version.
+   - HALTED - This version's rollout is currently halted. Only exists on the ["phased"](#rolloutphasing) version.
+   - Full rollout - This is the ["live"](#rolloutphasing) version, and it is fully rolled out.
+- Download size - The size of the raw opk file for this version.
+- Installs - How many (non-unique) installations of this version have ever occured.
+- Active Installs - How many active installations exist for this version. This means installations that were active in the last 30 days.
+
+### Notes
+
+<Tabs>
+<TabItem value="empty" label="Empty" default>
+
+![Version Notes Empty](/assets/tools/developers-console/all-applications/release-management/release-notes-empty.jpg)
+Using these two buttons, it is possible to edit this version's [`internal`](#edit-release-notes) and [`public`](#edit-release-notes) release notes respectively.
+
+</TabItem>
+<TabItem value="filled" label="Filled">
+
+![Version Notes Filled](/assets/tools/developers-console/all-applications/release-management/release-notes-full.jpg)
+Even after this version's [`internal`](#edit-release-notes) and [`public`](#edit-release-notes) release notes are filled in, it is still possible to re-edit them.
+
+</TabItem>
+</Tabs>
+
+### Release rollout percentage
+:::note Phasing Version
+This section only appears on the ["phasing"](#rolloutphasing) version. If will not appear on **any** other version.
+:::
+
+<details>
+<summary>Release rollout percentage</summary>
+<Tabs>
+<TabItem value="active" label="Active" default>
+
+![Version Phasing Active](/assets/tools/developers-console/all-applications/release-management/release-rollout-active.jpg)
+In this section, it is possible to edit a "phased" version's [rollout %](#rolloutphasing), as well as to `Halt` its rollout.
+
+</TabItem>
+<TabItem value="halted" label="Halted">
+
+![Version Phasing Halted](/assets/tools/developers-console/all-applications/release-management/release-rollout-halted.jpg)
+In this section, it is possible to edit a "phased" version's [rollout %](#rolloutphasing), as well as `Resume` its rollout.
+
+</TabItem>
+</Tabs>
+</details>
+
+### Rollout History
+
+![Version Rollout History](/assets/tools/developers-console/all-applications/release-management/rollout-history.jpg)
+A list of all [rollout](#rolloutphasing) changes for this version, including:
+- Date - When was the change made.
+- Rollout - How much was the rollout increased to.
+- Halted or not - Is the version halted (for changes before the latest, this will count whether or not they were halted
+when changed to the next %).
+
+
+## Release Notes
+
+There are two kinds of version release notes:
+- "Internal release notes" - These are used for documenting **all** changes done to the app over time.
+**They can only be viewed by your app's staff and the overwolf team**.
+- "(Public) release notes" - These are your app's public release notes, for documenting public changes to the app.
+**They can be viewed by anyone, even [outside of the developer's console](#release-notes-endpoint)**,
+and it is recommended to use them to manage your app's public "changelog" for new versions.
+
+### Edit Release Notes
+
+Release notes are edited using [CommonMark](https://commonmark.org/), with a rich text editor.
+
+<details>
+<summary>Release Notes Editor</summary>
+<Tabs>
+<TabItem value="edit" label="Edit" default>
+
+The text editor has a `Preview` button, which, when pressed, will switch the release notes into preview mode.
+![Internal Release Notes Edit](/assets/tools/developers-console/all-applications/release-management/release-notes-internal-edit.jpg)
+
+</TabItem>
+<TabItem value="preview" label="Preview">
+
+The preview mode has an `Edit` button, which, when pressed, will switch the release notes back into edit mode.
+![Internal Release Notes Preview](/assets/tools/developers-console/all-applications/release-management/release-notes-internal-preview.jpg)
+
+</TabItem>
+</Tabs>
+</details>
+
+At any point, you can use the `Cancel` and `Save` buttons inside of the release notes editor, which correspond to the `Discard changes` and `Save` buttons of [The Footer Toolbar](../#the-footer-toolbar).
+
+Public release notes also contain two extra toggles:
+- `Publish` - Whether the release notes should be `published`.
+   - When turned off, you can use the release notes editor to create a "draft" for your new version. For release notes you
+   wish to keep internal, use the `Internal release notes` instead.
+   - When turned on, your notes, and any changes made to them, will be available for [everyone to read](#release-notes-endpoint).
+- `Important` - Whether this version is considered `important`. Use this to mark major versions or time-critical updates.
+
+<details>
+<summary>Public Release Notes Preview</summary>
+
+![Internal Release Notes Preview](/assets/tools/developers-console/all-applications/release-management/release-notes-external-preview.jpg)
+
+</details>
+
+:::note Release Notes Delay
+Keep in mind that changes made to the public release notes of an app will take approximately ~5 minutes to update on the [endpoint](#release-notes-endpoint).
+:::
+
+### Release Notes Endpoint
+
+The developer's console exposes the "compiled html" of pubic release notes of every app, through the following api endpoint:
+```js
+`https://console-api.overwolf.com/v1/apps/${app-id}/versions/${version}/release-notes/${page}`
+```
+
+Where:
+- `app-id` - your app's unique id.
+- `version` - The most recent version you wish to display.
+- `page` - The changelogs page number. Every page contains up to three changelogs.
+
+The endpoint will then return the following json:
+
+```js
+{
+  "versions": [
+    {
+      "important": boolean,
+      "version": string,
+      "html": string,
+      "timestamp": number
+    }
+  ],
+  "meta": {
+    "perPage": number
+  }
+}
+```
+
+Any version without a `published` public changelog will be skipped.
+
+The `versions` array will display **up to** three versions. If it runs out of versions to display before then,
+it will only be filled by the remaining versions. In the next page after that, it will then be completely empty.
+
+:::note Page Numbering
+Changelog page numbers start from 1. If you check for page 0, it will just be treated as page 1.
+:::
+
+<details>
+<summary>Example Values</summary>
+
+For this example, we will use use Workflowy. As such:
+- `app-id` - `npijmgiaiiemcnijaljcfddgeihcbifdbhpffihe`
+- `version` - `6.0.71`
+
+The link will then be:
+
+```js
+`https://console-api.overwolf.com/v1/apps/npijmgiaiiemcnijaljcfddgeihcbifdbhpffihe/versions/6.0.71/release-notes/${page}`
+```
+
+At the time of writing, this will include three versions with release notes.
+
+<Tabs>
+<TabItem value="page-0" label="Page 0">
+
+The result for page 0 would be:
+```json
+{
+   "versions":[
+      {
+         "important":true,
+         "version":"6.0.69",
+         "html":"<p>test</p>",
+         "timestamp":1662018568162
+      },
+      {
+         "important":true,
+         "version":"3.1.5",
+         "html":"<figure><img src='http://content.overwolf.com/outplayed/release-notes/069/release-notes-hero.webp'></figure>\n<p><strong>All versions great and small.</strong> This version might be small, but still bright and beautiful.</p>\n<h2 class='new'>New</h2>\n<ul>\n<li><strong>5 new games are now supported</strong> - Rayman Origins, Post Scriptum, South Park: The Stick of Truth, Shadow Tactics: Blades of the Shogun, and Firewatch. Want us to add your favorite game? Let us know on our <a href=\"https://ideas.outplayed.tv/\">Ideas portal</a>.</li>\n<li><strong>Capture mode notification</strong> - An option to turn capture OFF was added. If this option is selected, Outplayed will be disabled for this game, choose wisely (you can always enable it back from the settings).</li>\n</ul>\n<h2 class='improved'>Better</h2>\n<ul>\n<li><strong>Missing backgrounds</strong> - Remnant: From the Ashes and Project Zomboid artwork was added.</li>\n<li><strong>Settings in-game</strong> - Did you know that changing settings while in-game will only take effect after restarting the game? A big yellow alert was added to make sure you know.</li>\n</ul>\n<h2 class='bugs'>Fixed</h2>\n<ul>\n<li><strong>Capture mode notification</strong> - Allow using numeric keypad in the notification hotkeys. We like hotkeys, especially in the winter.</li>\n<li><strong>Video editor</strong> - Videos with aspect ratios different than project settings were stretched to fit. Although stretching is good for your health, we fixed it.</li>\n</ul>\n<p>Have a great idea for Outplayed? Let us know on our <a href=\"https://ideas.outplayed.tv/\">Ideas portal</a>, or talk to us directly on our <a href=\"https://discord.gg/MatrVYK\">Discord server</a>.</p>\n<p><strong>See you in the next version,<br>\nThe Outplayed team</strong></p>",
+         "timestamp":1643024580643
+      },
+      {
+         "important":false,
+         "version":"3.0.33",
+         "html":"<p>3.0.33 release notessssssss</p>",
+         "timestamp":1643036589211
+      }
+   ],
+   "meta":{
+      "perPage":3
+   }
+}
+```
+Which is the same as the result for page 1.
+
+</TabItem>
+<TabItem value="page-1" label="Page 1" default>
+
+The result for page 1 would be:
+```json
+{
+   "versions":[
+      {
+         "important":true,
+         "version":"6.0.69",
+         "html":"<p>test</p>",
+         "timestamp":1662018568162
+      },
+      {
+         "important":true,
+         "version":"3.1.5",
+         "html":"<figure><img src='http://content.overwolf.com/outplayed/release-notes/069/release-notes-hero.webp'></figure>\n<p><strong>All versions great and small.</strong> This version might be small, but still bright and beautiful.</p>\n<h2 class='new'>New</h2>\n<ul>\n<li><strong>5 new games are now supported</strong> - Rayman Origins, Post Scriptum, South Park: The Stick of Truth, Shadow Tactics: Blades of the Shogun, and Firewatch. Want us to add your favorite game? Let us know on our <a href=\"https://ideas.outplayed.tv/\">Ideas portal</a>.</li>\n<li><strong>Capture mode notification</strong> - An option to turn capture OFF was added. If this option is selected, Outplayed will be disabled for this game, choose wisely (you can always enable it back from the settings).</li>\n</ul>\n<h2 class='improved'>Better</h2>\n<ul>\n<li><strong>Missing backgrounds</strong> - Remnant: From the Ashes and Project Zomboid artwork was added.</li>\n<li><strong>Settings in-game</strong> - Did you know that changing settings while in-game will only take effect after restarting the game? A big yellow alert was added to make sure you know.</li>\n</ul>\n<h2 class='bugs'>Fixed</h2>\n<ul>\n<li><strong>Capture mode notification</strong> - Allow using numeric keypad in the notification hotkeys. We like hotkeys, especially in the winter.</li>\n<li><strong>Video editor</strong> - Videos with aspect ratios different than project settings were stretched to fit. Although stretching is good for your health, we fixed it.</li>\n</ul>\n<p>Have a great idea for Outplayed? Let us know on our <a href=\"https://ideas.outplayed.tv/\">Ideas portal</a>, or talk to us directly on our <a href=\"https://discord.gg/MatrVYK\">Discord server</a>.</p>\n<p><strong>See you in the next version,<br>\nThe Outplayed team</strong></p>",
+         "timestamp":1643024580643
+      },
+      {
+         "important":false,
+         "version":"3.0.33",
+         "html":"<p>3.0.33 release notessssssss</p>",
+         "timestamp":1643036589211
+      }
+   ],
+   "meta":{
+      "perPage":3
+   }
+}
+```
+Which is the same as the result for page 0.
+
+</TabItem>
+<TabItem value="page-2" label="Page 2">
+
+The result for page 2 would be:
+```json
+{
+   "versions":[
+      
+   ],
+   "meta":{
+      "perPage":3
+   }
+}
+```
+Which is empty, since there are only 3 published release notes from this version.
+
+</TabItem>
+</Tabs>
+</details>
+
+## The App Channels API
+
+As mentioned above, you can implement the channels feature directly into your app using the app channels API.
+
+You can read the currently installed channel of your app using [overwolf.settings.getExtensionSettings()](/api/settings#getextensionsettingscallback).
+
+```js
+overwolf.settings.getExtensionSettings(console.log) //{"settings":{"channel":"beta"},"success":true}
+```
+
+You can change the current channel using [overwolf.settings.setExtensionSettings()](/api/settings#setextensionsettingsextensionsettings-callback).
+
+```js
+overwolf.settings.setExtensionSettings({ channel: "beta" })
+```
+
+:::note Production Channel Name
+While testing channels each have their own unique name, the production channel does not.
+
+In order to reference the production app channel, use `channel: ""`
+:::
+
+## App Channels Sample App
+
+For a full example of how to utilize app channels, you can download our [App Channels sample app](https://github.com/overwolf/api/s-sample-apps/tree/master),
+which demonstrates how to use the app channels feature and API.

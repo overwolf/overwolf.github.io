@@ -1,0 +1,41 @@
+---
+id: testing
+image: "/img/embed/dev-tools.jpg"
+title: Testing
+---
+
+Here, you can get an overview the testing channels of your app. These are custom channels,
+and can only be downloaded from using a direct link. If a user downloads your app from the store,
+they will instead be subscribed to the [Production Channel](./production).
+![The Testing Tab](/assets/tools/developers-console/all-applications/release-management/testing/index.jpg)
+
+Under this tab, you can set up custom [**App Channels**](.#what-are-release-channels). These allow you to deploy different versions of your app to specific, hand-picked users.
+For example:
+- `Dev` - A "latest version" channel, that allows anyone in your team to test the latest development builds, for a faster development loop.
+- `QA` - A channel for your QA team to thoroughly check the functionality and stability of new features.
+- `Beta` - a channel for your app's beta testers, to get real feedback from trusted users about new features before releasing them to your entire userbase.
+
+You can also set up "testing channels", in case you suspect a bug might have slipped in during a recent version, and wish to check if it exists on an older version.
+
+## Creating a new App Channel
+
+In order to create a new channel, simply click on the `Create channel` button at the top right of the screen. You will then be greeted by the following prompt.
+
+![Create New Channel](/assets/tools/developers-console/all-applications/release-management/testing/new-channel.jpg)
+
+Then, pick a name for the new channel, and click `Save`. The new channel will now show up on the list.
+
+![New Channel In List](/assets/tools/developers-console/all-applications/release-management/testing/active-channels.jpg)
+
+Now, if we go into any of these channels, by pressing `Manage` on its row, we will be greeted by a familiar screen.
+
+![Channel 'new'](/assets/tools/developers-console/all-applications/release-management/testing/channel-new.jpg)
+
+Under "Channel details", we can see and edit the name of the channel.
+We can also copy the URL required to download from this channel, by clicking on `Copy link` under `URL`.
+
+The rest of the window allows us to [manage the channel](.#manage-an-app-channel) like any other channel.
+
+:::tip Test Channel Version Review
+Test channels are always exempt from **mandatory** version review. However, you can still choose to request a review if you wish.
+:::

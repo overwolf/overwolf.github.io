@@ -1,0 +1,61 @@
+---
+id: subscribers
+image: "/img/embed/dev-tools.jpg"
+title: Subscribers
+sidebar_position: 100
+---
+
+![The Subscribers Tab](/assets/tools/developers-console/all-applications/subscriptions/subscribers/index.jpg)
+This section of the console gives you a detailed overview of your app's subscribers, allowing you to sort them by:
+- Subscription `Username` - The user's Overwolf username.
+- Subscription `Plan` name - The name of the subscription plan.
+- Current subscription `State` - The current state of the subscription.
+
+Every subscription entry itself contains:
+- The users' `User name`.
+- The `Plan`'s name.
+- The subscription's `State`.
+- The `Expiration date` of the subscription.
+- A button to edit the subscription.
+
+The active subscriptions are split into pages, using [The Paging Footer](../../#the-footer-toolbar).
+
+## Interacting with subscriptions
+
+### Adding a new subscriber
+
+You can add a new subscriber for your app manually, using the `Add subscriber` button in the top right. There, you can choose their username, as well as the plan to add them to.
+
+:::note Manual Subscriptions
+It is important to remember that when you add a user manually, the user will not be:
+- Charged for renewing the subscription automatically once done.
+- Counted for subscription statistics under [Statistics](./statistics).
+:::
+
+### Editing active subscriptions
+
+:::warning Handle With Care
+While you physically can edit the subscriptions of your users, make sure to do so responsibly, and to communicate it with your DevRel.
+:::
+
+You can edit a subscription manually by clicking its edit button (in its specific row). That way, you can change:
+- The subscription's current state:
+    - Active: The subscription is currently enabled.
+    - Cancelled: The subscription was either cancelled by the user or expired.
+    - Revoked: The subscription was cancelled by the dev.
+    - Invalid: The Subscription was cancelled due to a transaction error (failed to recharge).
+- The subscription's expiration date.
+![Edit Subscription Details](/assets/tools/developers-console/all-applications/subscriptions/subscribers/plan-details.jpg)
+
+You can also view the entire action history of that specific subscription, and even filter it by dates.
+
+![Subscription Details History](/assets/tools/developers-console/all-applications/subscriptions/subscribers/activity-log.jpg)
+Inside of each log entry, you can also see some additional information, if there is any.
+
+Specifically, inside of `Payment` entries, you can see the exact price paid, and the `Transaction ID` for the specific payment.
+
+:::tip Refunding A Subscription
+It is possible to refund and cancel a subscription's latest payment, by clicking `refund & cancel` in its latest `Payment` entry's additional information.
+
+**This is an irreversible action!**
+:::

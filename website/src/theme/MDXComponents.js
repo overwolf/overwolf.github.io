@@ -7,6 +7,8 @@ import VideoBox from '@site/src/components/video-box/video-box';
 import GameInfo from '@site/src/components/game-info/game-info';
 import SkipMe from '@site/src/components/skip-me/skip-me';
 import Tagger from '../components/tagging/Tagger';
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
 
 export default {
   // Re-use the default mapping
@@ -18,5 +20,7 @@ export default {
   VideoBox: VideoBox,
   GameInfo: GameInfo,
   SkipMe: SkipMe,
-  Tagger: Tagger
+  Tagger: Tagger,
+  Tabs: Tabs,
+  TabItem: TabItem
 };

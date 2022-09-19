@@ -1,0 +1,119 @@
+---
+id: reviews
+image: "/img/embed/dev-tools.jpg"
+title: Reviews
+---
+
+Using this tab, you can see and respond to user reviews left on your app, as well as view your app's rating statistics.
+![The Reviews Tab](/assets/tools/developers-console/all-applications/user-feedback/reviews/index.jpg)
+
+## Why is this important 
+
+Replying to reviews engages your users and makes them feel valued, further building loyalty.
+- Properly replying to positive reviews will help the user feel like someone cares about their feedback.
+- Properly replying to negative reviews can help change the user's mind, as well as show potential users that you value criticism.
+
+:::tip Responding Correctly
+More information and general guidelines about responding to specific reviews can be found [here](#responding-to-reviews).
+If this does not cover your specific case, feel free to [reach out](/support/contact-us) to us,
+or talk directly with your DevRel manager.
+:::
+
+## App Score
+
+![App Score Overview](/assets/tools/developers-console/all-applications/user-feedback/reviews/app-score.jpg)
+At the top of the page, you can see a summary of your app's ratings, including:
+- `Overwolf Appstore rating` - Your app's current appstore rating. This is a simple average of all review scores for the app.
+- `Total ratings` - The total amount of reviews ever left on your app.
+
+## Reviews List
+
+It is possible to filter the app reviews being shown by several things:
+- `Ratings` - "Only show reviews that gave x stars" (Can choose multiple).
+- `Add filter` -> `Date` - "Only show reviews written after time x and/or before time y".
+![List Of App Reviews](/assets/tools/developers-console/all-applications/user-feedback/reviews/reviews-listing.jpg)
+
+App reviews are also split into pages, using [The Paging Footer](../../#the-footer-toolbar).
+
+### App Reviews
+
+Here, you can see the individual reviews left by users.
+
+Reviews will always contain the following:
+- The reviewer's username.
+- The date that the review was made on.
+- The score given by the review (on a scale of 1 to 5 stars).
+- Information of the user's client at the time of the review (**only for use in providing context for the review**), including:
+    - `App version`.
+    - `Overwolf version`.
+    - `GEP version`.
+    - `Operating system` (When expanded).
+    - `Main screen size` && `Main screen DPI` (When expanded).
+    - (If the user has a secondary screen) - `Seconday screen size` && `Secondary screen DPI` (When expanded).
+- An overview of your team's **public** reply to the review (if there is any), including:
+    - Responder email.
+    - Date of the original reply.
+    - The reply's contents (editable).
+
+When editing your team's reply to a review, you can use the `Discard` and `Update reply`, which correspond to the `Discard changes` and `Save` buttons of [The Footer Toolbar](../../#the-footer-toolbar).
+
+Reviews will also often (but not always) contain text. when they do, it will also be shown inside the review's overview.
+
+<Tabs>
+<TabItem value="review-closed" label="Review" default>
+
+An example app review. The "Client information" section at the bottom is closed, and so we only see some of the details.
+![App Review](/assets/tools/developers-console/all-applications/user-feedback/reviews/review-closed.jpg)
+
+</TabItem>
+<TabItem value="review-opened" label="Expanded Review">
+
+An example app review. The "Client information" section at the bottom is open, and so we see all client details.
+![Expanded App Review](/assets/tools/developers-console/all-applications/user-feedback/reviews/review-expanded.jpg)
+
+</TabItem>
+<TabItem value="review-no-response" label="Review Without Response">
+
+An example app review. As there is no response to the review, we are prompted with a text field for the response.
+![App Review Without Response](/assets/tools/developers-console/all-applications/user-feedback/reviews/review-no-response.jpg)
+
+Once we start typing, the `Discard` and `Public reply` buttons will appear, allowing us to discard or publish this response.
+![App Review With Response Draft](/assets/tools/developers-console/all-applications/user-feedback/reviews/review-response-draft.jpg)
+
+</TabItem>
+<TabItem value="review-deleted" label="Deleted Review">
+
+Sometimes, a review will be deleted, due to external reasons. In that case, you will be able to see the review's delete date
+under `Deleted at`, and while you will be able to see the original review, you will not be able to interact with it, and it will
+not affect your app's score.
+![Deleted App Review](/assets/tools/developers-console/all-applications/user-feedback/reviews/review-deleted.jpg)
+
+</TabItem>
+</Tabs>
+
+
+## Responding To Reviews
+
+Responding to reviews can be somewhat emotional. However, what feels right to say might not always actually be what's right.
+
+Because of that, we have compiled a list of best practices for responding to reviews.
+
+- When responding, stay concise and clear when addressing any feedback.
+- Strive for a friendly tone that’s consistent with the voice of your brand, keeping the right level of professionalism.
+- Remain positive and respectful, even if it seems the user is attacking. You can start with something similar to
+"Thanks, your feedback helps us improve our app". Always clearly acknowledge the reviewer's feedback,
+and let them know if you’re working on taking care of the issue.
+Something in the lines of, "This is a known issue, and we are doing our best to fix it" can go a long way.
+- Use proper grammar and spelling. We recommend using tools like [Grammarly](https://app.grammarly.com/). 
+- Personalizing your responses rather than using generic responses for similar reviews (e.g. "Hey Alex, thanks for your feedback.").
+- When you release an app update that fixes issues mentioned in older reviews, consider replying to relevant reviews to tell these users about the fix.
+    - Also make sure to update any reviews where you mentioned that you will be fixing this issue.
+
+:::tip Keep in mind
+
+- You can only send one reply per review. This means that after adding your response, you can edit it - but not add another reply.
+- Users can't respond to your reply, nor can they create a thread/discussion, etc. They can, however, edit their own review.
+- Users do not receive any notification when you reply to their review. 
+
+In future versions, we might add more features, such as notifying users when someone replies to their review. Feel free to request those in our [faq](/support/faq).
+:::

@@ -304,6 +304,10 @@ blockquote {
   color: var(--color-bg);
 }
 
+.tabs li:before{
+	content: none;
+}
+
 @import './getting-started';
 @import './admonition';
 @import './new-styles';

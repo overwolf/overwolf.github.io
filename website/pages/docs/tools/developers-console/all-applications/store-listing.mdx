@@ -1,0 +1,40 @@
+---
+id: store-listing
+image: "/img/embed/dev-tools.jpg"
+title: Store Listing
+sidebar_position: 20
+---
+
+![The Store Listing Tab](/assets/tools/developers-console/all-applications/store-listing/index.jpg)
+This section of the console allows you to manage everything involving your app's store listing.
+
+This page utilizes the [Footer Toolbar](../#the-footer-toolbar) in order to manage changes made to any fields.
+
+## App details
+
+![App Details](/assets/tools/developers-console/all-applications/store-listing/app-details.jpg)
+
+Under App details, you can view and edit several parts of your apps' store listing:
+- App Name - The name that will be displayed for your app in the store. **This can be different from the app's manifest [`name`](/api/manifest#meta-name)!**
+- Author - The name that will be displayed for the app's author in the store. Uses [`author_display`](/api/manifest#meta-author-display), defaulting to [`author`](/api/manifest#meta-author) if it does not exist.
+- App URL - Your app's unique store page URL.
+- Monetization - A quick summary of the app's currently supported and enabled monetization (free? has ads? has subscription?).
+- Short description - A **plain-text** short description for your app, displayed on your app's preview in the store.
+- Full description - A full description for your app, displayed on your app's store page. Supports [CommonMark](https://commonmark.org/).
+  - Similarly to [Release Notes](release-management#edit-release-notes), there is a `Preview` button to see how the final description looks.
+  Make sure to check that your description looks exactly like you want it to before submitting it.
+
+
+## Graphic assets
+
+![Graphic Assets](/assets/tools/developers-console/all-applications/store-listing/graphic-assets.jpg)
+
+Under Graphic assets, you can change your app's store listing assets:
+- App icon - The icon used for the app in the store.
+- Tile image - The image used for your app's store tile.
+- Screenshots - Between 1 and 5 screenshots representing your app.
+
+:::note Image Sizes
+Keep in mind that all app assets have their own strict size and format requirements. For further reading, refer to the
+`?` icons near each image section in the console, and to [Prepare your store assets](/start/submit-your-app#prepare-your-store-assets).
+:::
