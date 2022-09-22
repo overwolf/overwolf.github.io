@@ -23,6 +23,8 @@ In addition, the [simple I/O plugin](/topics/using-plugins/simple-io-plugin) off
 * [overwolf.io.exist()](#existpath-callback)
 * [overwolf.io.listenOnFile()](#listenonfileid-path-option-callback)
 * [overwolf.io.stopFileListener()](#stopfilelistenerid)
+* [overwolf.io.watchFile()](#watchfilefilepath-callback)
+* [overwolf.io.stopWatchingFile()](#stopwatchingfilefilepath-callback)
 
 ## Types Reference
 
@@ -35,6 +37,8 @@ In addition, the [simple I/O plugin](/topics/using-plugins/simple-io-plugin) off
 * [overwolf.io.FileExistsResult](#fileexistsresult-object) Object
 * [overwolf.io.ReadFileContentsResult](#readfilecontentsresult-object) Object
 * [overwolf.io.ListenOnFileResult](#listenonfileresult-object) Object
+* [overwolf.io.WatchedFileChanged](#watchedfilechanged-object) Object
+* [overwolf.io.enums.WatchEventType](#watcheventtype-enum) enum
 * [overwolf.io.ExistsResult](#existsresult-object) Object
 * [overwolf.io.ReadBinaryFileResult](#readbinaryfileresult-object) Object
 * [overwolf.io.ReadTextFileResult](#readtextfileresult-object) Object
@@ -232,6 +236,34 @@ On stop, [listenOnFile](#listenonfileid-path-option-callback) callback will trig
 }
 ```
 
+## watchFile(filePath, callback)
+#### Version added: 0.208
+
+> Watches a file for **any** changes that occur to its content.
+
+Parameter | Type     | Description             |
+----------| ---------| ----------------------- |
+filePath        | string   | Path to the file to watch               |
+callback        | [(Result: WatchedFileChanged)](#watchedfilechanged-object) => void  | Callback that is called upon registering, and on every subsequent file change               |
+
+#### Note
+
+File changes will be listened to forever, unless:
+- The file is renamed/deleted. In which case, the listener will be notified of the change, and will then stop.
+- File watching on this file is closed, via [`overwolf.io.stopWatchingFile()`](#stopwatchingfilefilepath-callback)
+
+
+## stopWatchingFile(filePath, callback)
+#### Version added: 0.208
+
+> Stops watching the specified file
+
+Parameter | Type     | Description             |
+----------| ---------| ----------------------- |
+filePath        | string   | Path to the file to stop watching               |
+callback        | (Reuslt) => void  | Callback that is called with the result of the stop operation               |
+
+
 ## fileListenerState enum
 
 File listener state.
@@ -289,6 +321,39 @@ Parameter        | Type                          | Description                  
 ---------------- | ------------------------------| --------------------------------- |
 skipToEnd        | bool                          | should skip directly to end of file. default if false  |
 encoding         | [encoding](#encoding-enum) enum| Encoding to use. `Default` is is the default value   |
+
+## ListenOnFileResult Object
+#### Version added: 0.141
+
+> Returned when subscribing to listen to a file.
+
+Parameter        | Type                          | Description                       |
+---------------- | ------------------------------| --------------------------------- |
+content | string | The current content of the file |
+
+
+## WatchedFileChanged Object
+#### Version added: 0.208
+
+> Returned when a watched file is changed (as well as when subscribing).
+
+Parameter        | Type                          | Description                       |
+---------------- | ------------------------------| --------------------------------- |
+eventType | [WatchEventType](#watcheventtype) | The type of change that occured |
+path | string | The current path of the file |
+newPath (optional) | string | The new file path. Only returned when `eventType` is `Renamed`. |
+
+## WatchEventType Enum
+#### Version added: 0.208
+
+> The type of change observed on a watched file.
+
+Options    | 
+-----------| 
+Registered       | 
+Changed    |
+Renamed    |
+Deleted |
 
 ## DirResult Object
 #### Version added: 0.141

@@ -1,0 +1,29 @@
+---
+id: 208
+image: "/img/embed/changelogs.jpg"
+title: "Version 0.208"
+sidebar_label: "0.208"
+sidebar_position: 208
+---
+
+* Note that iterations 205 to 208 were combined into a single iteration.
+
+### Docs
+- Added more page preview images
+- New section on the website - `Tools`. Overwolf tools 
+- Dev console docs have been updated to refelect the facelift, and can be found [here](/tools/develeopers-console).
+
+### Platform
+- App [`process_name`](/api/manifest#process_name) now defaults to the app's [`name`](/api/manifest#meta-name).
+
+### API
+- New API - [`changeIcon`](/api/os/tray/changeiconpath-callback), [`restoreIcon`](/api/os/tray/restoreicon-callback):
+    - Allows an app to temporarily change its tray icon (repeatedly). Using [`restoreIcon`](/api/os/tray/restoreicon-callback) will restore it back to its original [`tray_icon`](/api/manifest#meta-tray_icon).
+    - **Requires a tray item to already be created ([`overwolf.os.tray.setMenu()`](/api/os/tray/setmenumenu-callback))!**
+- New API - [`watchFile`](/api/io#watchfilefilepath-callback), [`overwolf.io.stopWatchingFile`](/api/io#stopwatchingfilefilepath-callback):
+    - Allows an app to listen to **changes** occuring on a file, rather than just listening to additions/removals from its end.
+    - The listener will stop if the file is renamed or deleted, or if [`overwolf.io.stopWatchingFile`](/api/io#stopwatchingfilefilepath-callback) is called.
+
+### Bug Fixes
+- Fixed an issue affecting app tray icons on the first install of the app.
+- Fixed an issue where [`overwolf.utils.openFilePicker()`](/api/utils/#openfilepickerfilter-initialpath-callback) would throw an error when passed an  `initialPath`.

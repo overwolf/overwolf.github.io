@@ -8,7 +8,7 @@ sidebar_position: 203
 
 * Note that iterations 202 and 203 were combined into a single iteration.
 
-#### Game events
+### Game events
 * [TFT](/api/games/events/teamfight-tactics)
   * Support for all the events in TFT PBE
 * [Valorant](/api/games/events/valorant)
@@ -19,7 +19,7 @@ sidebar_position: 203
 * [Minecraft](/api/games/events/minecraft)
   * Add new event mc_version - the current Minecraft played version
 
-#### Docs
+### Docs
 - Backend cleanup
 - Improved sidebar navigation (EXPERIMENTAL)
 - Cleaner URLs (Older urls will still work!)
@@ -36,7 +36,7 @@ Known website issues:
 Fixed:
 - Changelogs are now indexed properly when searching.
 
-#### Platform
+### Platform
 - [`overwolf.streaming.enums.StreamMouseCursor`](/api/streaming#streammousecursor-enum) now also supports a value of `none`, to never capture the cursor anywhere.
 - New API
     - [`overwolf.social.uploadVideo`](/api/social#uploadvideovideouploadparams-callback-callback) - Upload a video to the buffer server, getting a link to the raw file.
@@ -46,7 +46,7 @@ Fixed:
     - [`overwolf.social.reddit.post`](/api/social/reddit#postredditpostparameters-callback), [`overwolf.social.discord.post`](/api/social/discord#postdiscordpostparameters-callback) - Make a post to the relevant social network. Using a link to an uploaded video will "embed" it in the post.
 - It is now possible to add the `-webkit-app-region: drag` css property to elements, making them drag the entire window with them. **Do note that this behavior takes priority over button presses. If you wish to have working buttons inside an area with this property, you must manually exclude them from it in the css.**
 
-#### Bug Fixes
+### Bug Fixes
 - [`overwolf.media.replays.ReplayVideoOptions`](/api/media/replays#replayvideooptions-object) is no longer required inside of [`overwolf.media.replays.ReplayStreamParams`](/api/media/replays#replaystreamparams-object) when empty.
 - Fixed a crash involving windows compatibility mode and overwolf.
 - Fixed a bug involving the dragging of native overwolf windows.

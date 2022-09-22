@@ -9,8 +9,10 @@ Use this API for windows system tray related functionalities.
 ## Methods Reference
 
 * [overwolf.os.tray.setMenu()](#setmenumenu-callback)
+* [overwolf.os.tray.changeIcon()](#changeiconpath-callback)
+* [overwolf.os.tray.changeIcon()](#changeiconspace-path-callback)
+* [overwolf.os.tray.restoreIcon()](#restoreiconcallback)
 * [overwolf.os.tray.destroy()](#destroy)
-
 
 ## Events Reference
 
@@ -56,6 +58,49 @@ overwolf.os.tray.setMenu(trayMenu, (res) => {
 
 * A [launcher_icon](../manifest#meta-launcher_icon) must be set in the manifest.
 * Calling setMenu() is mandatory to get a tray icon.
+
+## changeIcon(path, callback)
+#### Version added: 0.208
+
+:::warning Requires an app menu
+An app's tray icon cannot be changed before it has one. You must call [overwolf.os.tray.setMenu()](#setmenumenu-callback) before you can use this method!
+:::
+
+> Changes the tray icon for the app temporarily.
+
+Parameter | Type                                                    | Description             |
+--------- | --------------------------------------------------------| ----------------------- |
+path      | string   | Path for the new tray icon, relative to the app's install directory.         |
+callback  | (Result) => void                                        | Returns with the result of the operation |
+
+
+## changeIcon(space, path, callback)
+#### Version added: 0.208
+
+:::warning Requires an app menu
+An app's tray icon cannot be changed before it has one. You must call [overwolf.os.tray.setMenu()](#setmenumenu-callback) before you can use this method!
+:::
+
+> Changes the tray icon for the app temporarily, using a [StorageSpace](/api/extensions/io#storagespace-enum) enum.
+
+Parameter | Type                                                    | Description             |
+--------- | --------------------------------------------------------| ----------------------- |
+space      | [StorageSpace](/api/extensions/io#storagespace-enum) enum   | Space to look for the new icon.         |
+path      | string   | Path for the new tray icon, relative to `space`.         |
+callback  | (Result) => void                                        | Returns with the result of the operation |
+
+## restoreIcon(callback)
+#### Version added: 0.208
+
+:::warning Requires an app menu
+An app's tray icon cannot be changed before it has one. You must call [overwolf.os.tray.setMenu()](#setmenumenu-callback) before you can use this method!
+:::
+
+> Reverts the temporariy app tray icon back to the manifest-defined [`tray_icon`](/api/manifest#meta-tray_icon).
+
+Parameter | Type                                                    | Description             |
+--------- | --------------------------------------------------------| ----------------------- |
+callback  | (Result) => void                                        | Returns with the result of the operation |
 
 ## destroy()
 #### Version added: 0.173
