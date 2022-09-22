@@ -21,7 +21,7 @@ sidebar_position: 208
     - Allows an app to temporarily change its tray icon (repeatedly). Using [`restoreIcon`](/api/os/tray/restoreicon-callback) will restore it back to its original [`tray_icon`](/api/manifest#meta-tray_icon).
     - **Requires a tray item to already be created ([`overwolf.os.tray.setMenu()`](/api/os/tray/setmenumenu-callback))!**
 - New API - [`watchFile`](/api/io#watchfilefilepath-callback), [`overwolf.io.stopWatchingFile`](/api/io#stopwatchingfilefilepath-callback):
-    - Allows an app to listen to **changes** occuring on a file, rather than just listening to additions/removals from its end.
+    - Allows an app to listen to **changes** occurring on a file, rather than just listening to additions/removals from its end.
     - The listener will stop if the file is renamed or deleted, or if [`overwolf.io.stopWatchingFile`](/api/io#stopwatchingfilefilepath-callback) is called.
 
 ### Bug Fixes
