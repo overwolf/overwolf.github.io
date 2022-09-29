@@ -45,6 +45,7 @@ Please read all the info about video capture usage and options on our [video cap
 * [overwolf.media.replays.TurnOffResult](#turnoffresult-object) Object
 * [overwolf.media.replays.GetStateResult](#getstateresult-object) Object
 * [overwolf.media.replays.ReplayResult](#replayresult-object) Object
+* [overwolf.media.replays.StartReplayResult](#startreplayresult-object) Object
 * [overwolf.media.replays.GetHighlightsFeaturesResult](#gethighlightsfeaturesresult-object) Object
 * [overwolf.media.replays.raw_events](#raw_events-object) Object
 * [overwolf.media.replays.HighlightsCapturedEvent](#highlightscapturedevent-object) Object
@@ -235,7 +236,7 @@ Parameter               | Type                  | Description                   
 pastDuration	        | int           | The video length, in milliseconds to include prior to the time of this call (up to 600000 ms)                       |
 futureDuration          | int        | The video length, in milliseconds to include after the time of this call. To ignore it, simply give it a non-positive value  |
 captureFinishedCallback	| [(Result: ReplayResult)](#replayresult-object) => void   |A callback function which will be called when capturing is finished, at the end of the future duration supplied to this call |
-callback                | (Result) => void                             | A callback function which will be called with the status of the request                           |
+callback                | [(Result: StartReplayResult)](#startreplayresult-object) => void                             | A callback function which will be called with the status of the request                           |
 
 ## startCapture(replayType, pastDuration, callback)
 #### Version added: 0.78
@@ -748,8 +749,8 @@ path          | string        |                         |
 encodedPath   | string        |                         | 
 duration      | number        |                         | 
 thumbnail_url | string        |                         | 
-thumbnail_path| string        |                         | 
-thumbnail_encoded_path| string        |                         | 
+thumbnail_path | string        |                         | 
+thumbnail_encoded_path | string        |                         | 
 start_time    | number        |                         | 
 
 
@@ -767,6 +768,21 @@ start_time    | number        |                         |
    "start_time": "1467125753892"
 }
 ```
+
+## StartReplayResult Object
+#### Version added: 0.208
+
+Parameter     | Type          | Description             |
+--------------| --------------| ----------------------- |
+status    | string        | Result status, kept for backwards compatibility | 
+description     | string        | Description of the underlying OBS error if any occured                       | 
+metadata    | string        |                         | 
+mediaFolder     | string        |   The folder where the replay will be saved                      | 
+osVersion    | string        |   The OS version of the local machine                      | 
+osBuild     | string        |   The OS build of the local machine                      | 
+isGameWindowCapture     | bool        |   [`is_game_window_capture`](/api/streaming#game_window_capture-notes)                      | 
+errorCode    | [CaptureErrorCode](/api/streaming#captureerrorcode)        |   The error code of any error encountered during recording                      | 
+errorDescription     | string        |   The description of any error encountered during recording                     | 
 
 ## GetHighlightsFeaturesResult Object
 #### Version added: 0.149

@@ -48,6 +48,7 @@ Please read all the info about streaming usage and options on our [video capture
 * [overwolf.streaming.StreamingCapabilities](#streamingcapabilities-object) Object
 * [overwolf.streaming.StreamSettings](#streamsettings-object) Object
 * [overwolf.streaming.enums.StreamingProvider](#streamingprovider-enum) Enum
+* [overwolf.streaming.enums.CaptureErrorCode](#captureerrorcode-enum) Enum
 * [overwolf.streaming.StreamParams](#streamparams-object) Object
 * [overwolf.streaming.StreamInfo](#streaminfo-object) Object
 * [overwolf.streaming.StreamAuthParams](#streamauthparams-object) Object
@@ -645,6 +646,27 @@ Stream settings container.
 | VideoRecorder |                                                 |
 | RTMP          | Stream to YouTube, Facebook, smashcast.tv, etc. |
 
+
+## CaptureErrorCode Enum
+#### Version added: 0.208
+
+| Options       | Description                                     |
+|---------------| ------------------------------------------------|
+| Success | 0 |
+| FolderCreation | 1 |
+| RansomwareProtection | 2 |
+| AlreadyStreaming | 3 |
+| MissingSetting | 4 |
+| SettingError | 5 |
+| InternalOBSError | 6 |
+| NotAllowedInGame | 7 |
+| HighPerformanceCaptureNotSupported | 8 |
+| NotInGame | 9 |
+| Unknown | 1000 |
+
+#### RansomwareProtection Note
+If Windows ransomware protection on folders is turned on, writing to the capture folder path is blocked, and as such, the stream returns an error. More information can be found [here](https://docs.microsoft.com/en-us/microsoft-365/security/defender-endpoint/controlled-folders?view=o365-worldwide#windows-system-folders-are-protected-by-default)
+
 ## StreamParams Object
 
 #### Version added: 0.78
@@ -1159,7 +1181,8 @@ Parameter          | Type     | Description                                 |
 *success*          | boolean  | inherited from the "Result" Object          |
 *error*            | string   | inherited from the "Result" Object          |
 stream_id          | number   | optional                                    |
-SubErrorMessage    | string   | optional                                    |
+errorCode    | [CaptureErrorCode](#captureerrorcode)        |                         | 
+errorDescription     | string        |                         | 
 
 #### Example data: Success
 
