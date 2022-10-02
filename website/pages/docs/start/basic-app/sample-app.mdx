@@ -45,7 +45,9 @@ The basic functions our sample app demonstrates:
 
 ## Setting up
 
-In order to run the app, you must first complete several steps.
+The overwolf sample app has two variants:
+- "Native" - This sample app is just made up of plain, vanilla javascript. This sample app can be loaded as unpacked directly, meaning that you can skip to [this section](5-install-the-app-as-unpacked-extension).
+- "Typescript" - This sample app is built with typescript/webpack. In order to load it, you must first build it, as described in the following steps.
 
 ### 1. Install Overwolf Client
 
@@ -79,29 +81,27 @@ npm install //install all modules listed as dependencies in package.json
 npm run build //create a "dist" folder with the compiled components
 ```
 
-### 5. Install the app as "unpacked extension"
+### 5. Load the app as "unpacked extension"
 
 Usually, all the apps in the Overwolf app store are OPK packages that can be installed with a double-click.
 Unlike OPK Packages, while you are developing an app, you want to load the unpacked code, change it, and test it regularly.  
 
-For this reason, in addition to the OPK installation, you can load the app as an "unpacked extension":  
-(Note that to do that you have to **[whitelist](../getting-started/sdk-introduction#whitelist-as-a-developer)** your OW username as a developer).
+For this reason, in addition to the OPK installation, you can load the app as an "unpacked extension":
 
 * Open the Overwolf desktop client settings (by right-clicking the client and selecting "Packages"  
   Or by clicking on the wrench icon in the dock and going to the "About" tab => "Development Options").
 
 * Click on "Development options".
 
-* In the opened window, click on "Load unpacked extension" and select the extracted `ts/dist` folder.  
+* In the opened window, click on "Load unpacked extension" and select the app's root folder (for typescript - 'ts/dist', for native - 'native').
   This will add the app to your Overwolf dock.  
   
 * **Make sure you are logged in to the OW client**. Otherwise, you will get an "Unauthorized App" error message. (Click on the "Appstore" icon in the OW dock to login to the OW client).
 
 * Click on the app's icon in your OW dock to run the app.
 
-:::important
-Each app has a unique id (UID) that is generated using the "name" and "author" strings. Once an app is published on the Appstore, its UID can't be changed.
-The same goes for the sample app, so make sure not to edit the author or app name in the manifest. It will prevent loading the app as an unpacked app. 
+:::note
+To load an app as unpacked, your OW account has to be **[whitelisted](../getting-started/sdk-introduction#whitelist-as-a-developer)** as a developer.
 :::
 
 ## Screenshots
