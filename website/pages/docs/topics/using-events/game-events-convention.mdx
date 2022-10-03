@@ -53,7 +53,7 @@ Example:
 Info updates are events. However, they are not fired by in-game events. They are fired when the game's state directly changes.
 
 As such, in order to ensure that these events fire, even if the information when it should, even if the data might not have changed, event "resets" are used.
-This is done by temporarily changing the value to a clearly invalid value (usually `null`), and then changing it back to its current state.
+This is done by temporarily changing the value to a clearly invalid value (usually `null` or `""`), and then changing it back to its current state.
 
 The reset can then be ignored by the app as a clearly invalid value, and then the new value can be handled as a fresh update.
 
