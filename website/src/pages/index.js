@@ -10,6 +10,9 @@ function EasilySection(props) {
         <header>Easily create apps for PC gamers</header>
         <p>Overlay, real-time game events, monetization, auto patching, Anti-Cheat compatibility and all that good stuff</p>
         <a className="btn" href={`start/getting-started`}>Build an app</a>
+        <p style={{marginTop: 32}} className='click-hover'>
+          <b style={{fontWeight: 700}}>Game Developer?</b> <a href={`topics/integrations/events-sdk-for-game-developers`} style={{textDecoration: 'underline'}}>Start here</a>
+        </p>
       </div>
     </section>
   );

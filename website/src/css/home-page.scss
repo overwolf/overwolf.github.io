@@ -188,10 +188,13 @@
   text-align: center;
 }
 
-
-.body.home .main-content section.sdk li img {
-	// margin-right: 210px;
+.click-hover a:hover {
+	--ifm-link-hover-color: #FFFFFF
 }
+
+// .body.home .main-content section.sdk li img {
+ 	// margin-right: 210px;
+// }
 
 .body.home .main-content section.sdk li.reversed img {
 	margin-right: 0px;
@@ -210,9 +213,9 @@
 	flex-basis: 40px;
 }
 
-.body.home .main-content section.sdk .sdk-graphic {
+// .body.home .main-content section.sdk .sdk-graphic {
 
-}
+// }
 
 
 .body.home .main-content section.game-dev {
