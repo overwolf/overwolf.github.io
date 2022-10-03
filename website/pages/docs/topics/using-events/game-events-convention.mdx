@@ -1,0 +1,110 @@
+---
+id: game-events-convention
+image: "/img/embed/api-best-practices.jpg"
+title: Game Events Convention
+---
+
+Game events allow applications to truly understand what is happening in a game, which in turn lets them deliver a significantly more accurate and adaptive experience.
+
+## Event Types
+### Game Events
+Game events refer to fleeting changes in the game, and are rarely relevant past the exact moment they occur. Common examples include:
+- Player kill
+- Player assist
+- Item obtained
+- Achievement unlocked
+
+**Game Events do not describe a change in the overall state of the game.**
+
+Example:
+```json title="The player just scored 5 points"
+{
+    "name": "score",
+    "data": {
+        "score": 5
+    }
+}
+```
+
+### Info Updates
+Info update events refer to lasting changes in the game's state. Common examples include:
+- Player name
+- Player health
+- Player inventory
+- Current match
+
+Info update events fire when a change occures to the overall state of the game.
+
+The most recent game state is stored in a dictionary-like object, accessible to applications through the [`overwolf.games.events.getInfo()`](/api/games/events#getinfocallback) method.
+
+Example:
+```json title="A match just started, updating the match_state info"
+{
+    "game_info": {
+        "match_state": {
+            "in_progress": true
+        }
+    }
+}
+```
+
+### Info Resetting
+
+Info updates are events. However, they are not fired by in-game events. They are fired when the game's state directly changes.
+
+As such, in order to ensure that these events fire, even if the information when it should, even if the data might not have changed, event "resets" are used.
+This is done by temporarily changing the value to a clearly invalid value (usually `null`), and then changing it back to its current state.
+
+The reset can then be ignored by the app as a clearly invalid value, and then the new value can be handled as a fresh update.
+
+## Features
+
+:::note Game Events SDK and Features
+Currently, the [game events SDK](/topics/integrations/events-sdk-for-game-developers) does not natively support features.
+
+For game developers - This means that this section is redundant.
+
+For app developers - This means that SDK games will fire **all** game events, meaning that you can skip the [`setRequiredFeatures()`](/api/games/events#setrequiredfeaturesfeatures-callback) step.
+:::
+
+All events are grouped into `features`. Features serve as a way to group events based on their purpose. For example:
+- `match_info` - Information about the current match.
+- `death` - Death counters + Player death event.
+- `abilities` - Events fired when the player uses an ability + Current ability levels.
+
+An application then subscribes to the specific features it needs, and is only notified of those events.
+
+:::tip
+Info updates contain the feature they're a part of, meaning that it is safe to have several info updates that share the same name.
+(however, it is not always recommended. More on that in [naming convention](#naming-convention)).
+:::
+
+## Events Convention
+
+In order to ensure that events stay consistent accross games, we have set a few guidelines in place.
+These guidelines serve as the baseline for any new events introduced from now on.
+
+### Naming Convention
+
+> All events names should contain only lower-case letters, with underscores for word separation.
+
+
+
+
+### Types Convention
+
+:::note
+This section is only relevant for game developers, as it discusses the exact formats for sending game data.
+:::
+
+In order to ensure a smoother integration for all sides involved, we have compiled a list of different data types and their preferred formats:
+
+Raw Type            | Serialized Format | Note                |
+--------------------| ------------------| --------------------|
+boolean             | boolean           |                     |
+number              | integer           |                     |
+aplhanumeric values | string            | Values like internal names |
+user-generated text | string (base64)   | Usernames, chat, and anything else that could include complex characters |
+array[]             | array[]           | Arrays should be kept as arrays, and the contained values comply with the convention |
+object              | object            | Objects should be kept as they are where logical, as long as their fields comply with the convention |
+
