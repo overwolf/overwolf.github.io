@@ -94,7 +94,9 @@ Available maps: Olympus, Outpost, Helix, Silo, Pantheon, Highwind, Atlantis, Sta
 
 Data Example:
 
-`{"match_info":{"mapName":"Olympus"}}`
+```json
+{"match_info":{"mapName":"Olympus"}}
+```
 
 #### *mode* note
 
@@ -126,25 +128,33 @@ Possible values:
 
 Data Example:
 
-`{"match_info":{"mode":"TDM"}}`
+```json
+{"match_info":{"mode":"TDM"}}
+```
 
 #### *state* note
 
 Data Example:
 
-`{"match_info":{"state":"active"}}`
+```json
+{"match_info":{"state":"active"}}
+```
 
 #### *timer* note
 
 Data Example:
 
-`{"match_info":{"timer":"476"}}`
+```json
+{"match_info":{"timer":"476"}}
+```
 
 #### *score* note
 
 Data Example:
 
-`{"score":"{"alpha": 6, "bravo": 9}"}`
+```json
+{"score":"{"alpha": 6, "bravo": 9}"}
+```
 
 #### *type* note
 
@@ -183,133 +193,177 @@ teabags              | player_info   |	Local player tea-bagged	enemy  |See [note
 
 Data Example:
 
-`{"player_info":{"name":"csgostatsmarket"}}`
+```json
+{"player_info":{"name":"csgostatsmarket"}}
+```
 
 #### *health* note
 
 Data Example:
 
-`{"player_info":{"health":"88"}`
+```json
+{"player_info":{"health":"88"}
+```
 
 #### *team* note
 
 Data Example:
 
-`{"player_info":{"team":"alpha"}}`
+```json
+{"player_info":{"team":"alpha"}}
+```
 
 #### *kills* note
 
 Data Example:
 
-`{"kills", 4 },`
+```json
+{"kills", 4 },
+```
 
 #### *deaths* note
 
 Data Example:
 
-` {"deaths", 4 },`
+```json
+{"deaths", 4 },
+```
 
 #### *assists* note
 
 Data Example:
 
-`{"assists", 4 },`
+```json
+{"assists", 4 },
+```
 
 #### *doubleKills* note
 
 Data Example:
 
-`{"doubleKills", 4 },`
+```json
+{"doubleKills", 4 },
+```
 
 #### *tripleKills* note
 
 Data Example:
 
-`{"tripleKills", 4 },`
+```json
+{"tripleKills", 4 },
+```
 
 #### *quadKills* note
 
 Data Example:
 
-`{"quadKills", 4 },`
+```json
+{"quadKills", 4 },
+```
 
 #### *quintKills* note
 
 Data Example:
 
-`{"quintKills", 4 },`
+```json
+{"quintKills", 4 },
+```
 
 #### *sexKills* note
 
 Data Example:
 
-`{"sexKills", 4 },`
+```json
+{"sexKills", 4 },
+```
 
 #### *killstreak1* note
 
 Data Example:
 
-`{"killstreak1", 4 },`
+```json
+{"killstreak1", 4 },
+```
 
 #### *killstreak2* note
 
 Data Example:
 
-`{"killstreak2", 4 },`
+```json
+{"killstreak2", 4 },
+```
 
 #### *killstreak3* note
 
 Data Example:
 
-`{"killstreak3", 4 },`
+```json
+{"killstreak3", 4 },
+```
 
 #### *killstreak4* note
 
 Data Example:
 
-`{"killstreak4", 4 },`
+```json
+{"killstreak4", 4 },
+```
 
 #### *killstreak5* note
 
 Data Example:
 
-`{"killstreak5", 4 },`
+```json
+{"killstreak5", 4 },
+```
 
 #### *killstreak6* note
 
 Data Example:
 
-`{"killstreak6", 4 },`
+```json
+{"killstreak6", 4 },
+```
 
 #### *headshotKills* note
 
 Data Example:
 
-`{"headshotKills", 4 },`
+```json
+{"headshotKills", 4 },
+```
 
 #### *meleeKills* note
 
 Data Example:
 
-`{"meleeKills", 4 },`
+```json
+{"meleeKills", 4 },
+```
 
 #### *portalKills* note
 
 Data Example:
 
-`{"portalKills", 4 },`
+```json
+{"portalKills", 4 },
+```
 
 #### *killsThroughPortal* note
 
 Data Example:
 
-`{"killsThroughPortal", 4},`
+```json
+{"killsThroughPortal", 4},
+```
 
 #### *teabags* note
 
 Data Example:
 
-`{"teabags", 4 }`
+```json
+{"teabags", 4 }
+```
 
 ## `location`
 
@@ -323,7 +377,9 @@ location          | game_info   |	Current location of local player (x,y,z) |See 
 
 Data Example:
 
-`{"game_info":{"location":"{"x": 108,"y": 3542,"z": 179}"}}`
+```json
+{"game_info":{"location":"{"x": 108,"y": 3542,"z": 179}"}}
+```
 
 ## `match`
 
@@ -339,19 +395,25 @@ matchEnd    | null         |Match has ended|See [notes](#matchend-note)|     123
 
 Data Example:
 
-`{"name":"matchOutcome","data":"lost"}`
+```json
+{"name":"matchOutcome","data":"lost"}
+```
 
 #### *matchStart* note
 
 Data Example:
 
-`{"name":"matchStart","data":""}`
+```json
+{"name":"matchStart","data":""}
+```
 
 #### *matchEnd* note
 
 Data Example:
 
-`{"name":"matchEnd","data":""}`
+```json
+{"name":"matchEnd","data":""}
+```
 
 ## `feed`
 
@@ -365,7 +427,9 @@ killFeed    |<ul><li>Killer name</li><li>Weapon</li><li>Victim name</li></ul>|Pl
 
 Data Example:
 
-`{"name":"killFeed","data":"{"killer": "FinalCountDown","weapon": "Assault Rifle","victim": "Sicktattoo"}"}`
+```json
+{"name":"killFeed","data":"{"killer": "FinalCountDown","weapon": "Assault Rifle","victim": "Sicktattoo"}"}
+```
 
 ## `connection`
 
@@ -400,14 +464,17 @@ teabag      | null         | Local player tea-bagged an enemy|          |     13
 
 Data Example:
 
-`{"name":"kill","data":""}
-{"name":"kill","data":"Triple Kill"}`
+```{"name":"kill","data":""}
+{"name":"kill","data":"Triple Kill"}
+```
 
 #### *victim* note
 
 Data Example:
 
-`{"name":"victim","data":"flying_low"}`
+```json
+{"name":"victim","data":"flying_low"}
+```
 
 ## `assist`
 
@@ -421,7 +488,9 @@ assist        |  Kill type   | Local player assisted in killing an enemy|See [no
 
 Data Example:
 
-`{"name":"assist","data":""}`
+```json
+{"name":"assist","data":""}
+```
 
 ## `death`
 
@@ -436,13 +505,17 @@ killer        |  Killer name   |  Local player was killed|See [notes](#killer-no
 
 Data Example:
 
-`{"name":"death","data":""}`
+```json
+{"name":"death","data":""}
+```
 
 #### *killer* note
 
 Data Example:
 
-`{"name":"killer","data":"Dave Bunnett"}`
+```json
+{"name":"killer","data":"Dave Bunnett"}
+```
 
 ## `portal`
 

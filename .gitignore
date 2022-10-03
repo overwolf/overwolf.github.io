@@ -5,3 +5,8 @@ website/pages/docs/status
 scripts/configs/clear.cfg
 website/src/components/game-events-status/gamesMetaData.jsx
 website/static/js/games_metadata.js
+website/src/components/game-events-status/gamesMetaData.jsx
+website/static/js/games_metadata.js
+scripts/configs/clear.cfg
+website/pages/docs/api/changelogs/changelogs.mdx
+website/src/plugins/tagging/codeComponentTagger.js
