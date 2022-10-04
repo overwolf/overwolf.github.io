@@ -401,9 +401,9 @@ PendingRestart  | The extension just updated, and it's waiting for a relaunch | 
 
 This is the recommended flow for a manual update of Overwolf extensions.
 
-Note that a call to [checkForExtensionUpdate()](#checkforextensionupdatecallback) will not work when the extension was loaded unpacked.
+> **NOTE:** The call to [checkForExtensionUpdate()](#checkforextensionupdatecallback) will not work when the extension was loaded unpacked.
 
-Note that regardless, the auto-update mechanism will automatically fetch available updates from Overwolf servers every few hours, 
+> **NOTE:** that regardless, the auto-update mechanism will automatically fetch available updates from Overwolf servers every few hours, 
 or once the Overwolf client is restarted. (that includes upgrades for all the available components: extensions, GEP, Client).
 
 TL;DR The flow is `UpdateAvailable => updateExtension() => relaunch()`.
