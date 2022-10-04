@@ -83,6 +83,7 @@ local_player_stats | match_info  | A variety of in-game stats for local player. 
 playlist | match_info  | The playlist the player selected. |See [notes](#playlist-note)|   191.0       |
 game_type | match_info  | The selected game type, important only for non custm games |See [notes](#game_type-note)|   191.0       |
 game_mode | match_info  | The selected game mode |See [notes](#game_mode-note)|   191.0       |
+match_outcome | match_info  | The final march outcome victory / defeat |See [notes](#match_outcome-note)|   210.0       |
 
 #### *local_player_stats*  note
 
@@ -172,6 +173,17 @@ Data Example:
 {"feature":"match_info","category":"match_info","key":"game_mode","value":"ctf"}
 OR
 {"feature":"match_info","category":"match_info","key":"game_mode","value":"btb:ctf"}
+```
+#### *match_outcome*  note
+Match outcome at the end of the match 
+Possible values:
+* victory
+* defeat
+* tie
+
+Data Example:
+```
+{"feature":"match_info","category":"match_info","key":"match_outcome","value":"victory"}
 ```
 
 ### Events
