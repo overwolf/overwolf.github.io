@@ -148,9 +148,8 @@ Now, when the next match will start, score will change from null to 0, causing a
 :::note Game Events SDK and Features
 Currently, the [game events SDK](/topics/integrations/events-sdk-for-game-developers) does not natively support features.
 
-For game developers - This means that this section is redundant.
-
-For app developers - This means that SDK games will fire **all** game events, meaning that you can skip the [`setRequiredFeatures()`](/api/games/events#setrequiredfeaturesfeatures-callback) step.
+- For game developers using the SDK - This means that this section is redundant.
+- For app developers - This means that SDK games will fire **all** game events, meaning that you can skip the [`setRequiredFeatures()`](/api/games/events#setrequiredfeaturesfeatures-callback) step.
 :::
 
 Both Game Events and Game Info are grouped into `features`. Features serve as a way to group events based on their purpose. For example:
@@ -179,7 +178,7 @@ for the forseeable future.
 Event/Feature naming should always follow these guidelines:
 
 <details>
-<summary>All events names should contain only lower-case letters, with underscores for word separation</summary>
+<summary>All event and inner variable names should be written in snake_casing</summary>
 
 - Do's:
     - `player`
@@ -192,6 +191,8 @@ Event/Feature naming should always follow these guidelines:
     - `teamRoundWin`
     - `team_Set`
     - `Score_board`
+
+You can read more [here](https://en.wikipedia.org/wiki/Snake_case).
 
 </details>
 
@@ -231,8 +232,7 @@ Raw Type            | Serialized Format | Note                |
 --------------------| ------------------| --------------------|
 boolean             | boolean           |                     |
 number              | integer           |                     |
-aplhanumeric values | string            | Values like internal names |
+aplhanumeric values | string            | Enums or other constant values that include letters |
 user-generated text | string (base64)   | Usernames, chat, and anything else that could include complex characters |
-array[]             | array[]           | Arrays should be kept as arrays, and the contained values comply with the convention |
-object              | object            | Objects should be kept as they are where logical, as long as their fields comply with the convention |
-
+array[]             | array[]           | Arrays should be kept as arrays, while their values should all recursively comply with the convention |
+object              | object            | Objects should be kept the same where possible, and their values should all recursively comply with both the naming and the value convention |
