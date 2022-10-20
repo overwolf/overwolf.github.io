@@ -34,7 +34,7 @@ Game Info refers to a persistent game state. Common examples include:
 - Player inventory
 - Current match
 
-Info update events fire when a change occures to a certain Game Info.
+Info update events fire when a change occures to a certain Game Info, with the new value of that specific Game Info.
 
 Game Info is stored in categories, that are then stored in a dictionary-like object, accessible to applications via the [`overwolf.games.events.getInfo()`](/api/games/events#getinfocallback) method.
 Every Game Info item exists inside of a single category, and categories cannot be nested.
@@ -51,7 +51,7 @@ Example:
 }
 ```
 
-```json title="The player's coin count increased to 5, updating the coins info inside of the player_inventory category"
+```json title="The player's coin count changed to 5, updating the coins info inside of the player_inventory category"
 {
     "player_inventory": {
         "coins": 5
@@ -63,10 +63,45 @@ Example:
 
 Info updates are events. However, they are not fired by in-game events. They are fired when their specific Game Info changes.
 
-As such, in order to ensure that these events fire properly, even if if the data might not have changed, event "resets" are used.
-This is done by temporarily changing the value to a consistent clearly invalid value (usually `null`), and then changing it back to its current state.
+As such, in order to ensure that these events fire properly, even if the exact value might not have changed, event "resets" are used.
+This is done by changing the value to a consistent, clearly invalid value (usually `null`), as soon as it becomes invalid.
+Then, once the new value should be set, it is set, and a new event is fired.
 
 The reset can then be ignored by the app, by being detected as a reset, and then the new value can be handled as a fresh update.
+
+<details>
+<summary>Example Reset</summary>
+
+Assume that we have a `score`` Info Value. This value starts at 0 at the start of every match.
+
+```json title="First match just started, score was set to 0"
+...
+    "score": 0
+...
+```
+
+Now, it could be possible that a match will end with `score` still being set to 0. As a result, when the next match starts,
+setting `score` to 0 will not fire an event.
+
+To stop that from happening, when the match ends, we set `score`, and any other match-specific data, to null:
+
+```json title="First match just ended, score is set to null"
+...
+    "score": null
+...
+```
+
+Now, when the next match will start, score will change from null to 0, causing an event to fire.
+
+```json title="Second match just started, score is set to 0"
+...
+    "score": null
+...
+```
+
+</details>
+
+
 
 ## Features
 
