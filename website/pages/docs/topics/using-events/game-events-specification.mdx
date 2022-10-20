@@ -1,22 +1,30 @@
 ---
-id: game-events-convention
+id: game-events-specification
 image: "/img/embed/api-best-practices.jpg"
-title: Game Events Convention
+title: Game Events Specification
 ---
 
-Game events allow applications to truly understand what is happening in a game, which in turn lets them deliver a significantly more accurate and adaptive experience.
+Game events allow applications to truly understand what is happening in a game,
+which in turn lets them deliver a significantly more accurate and adaptive experience.
 
-## Event Types
-### Game Events
-Game events refer to the moment at which a fleeting change occures in the game, and are rarely relevant past the exact moment they occur. Common examples include:
+There are two different forms of data that are referred to as `events`:
+- [Game Events](#game-events) - Specific events that happen in the game.
+- [Game Information](#game-info) (Game Info for short) - The current state of specific parts of the game.
+
+When a Game Event occurs, or a Game Info changes, an event is fired, letting the app know of it.
+
+## Game Events
+
+Game events refer to the moment at which a notable event occures in the game,
+and are rarely relevant for more than a few seconds after they occur. Common examples include:
 - Player kill
 - Player assist
 - Item obtained
 - Achievement unlocked
 
-**Game Events do not describe a change in the overall state of the game.**
+<details>
+<summary>Example Event</summary>
 
-Example:
 ```json title="A player just scored 5 points"
 {
     "name": "score",
@@ -27,19 +35,51 @@ Example:
 }
 ```
 
-### Info Updates
+</details>
+
+## Game Info
+
 Game Info refers to a persistent game state. Common examples include:
 - Player name
 - Player health
 - Player inventory
 - Current match
 
-Info update events fire when a change occures to a certain Game Info, with the new value of that specific Game Info.
-
 Game Info is stored in categories, that are then stored in a dictionary-like object, accessible to applications via the [`overwolf.games.events.getInfo()`](/api/games/events#getinfocallback) method.
 Every Game Info item exists inside of a single category, and categories cannot be nested.
 
-Example:
+<details>
+<summary>Example Game Info Layout</summary>
+
+```json title="An example Game Info layout, containing 3 categories, and 5 total Game Info items"
+{
+    "category_1": {
+        "item_info": "Example string",
+        "reset_info": null
+    },
+    "category_2": {
+        "number_info": 125,
+        "object_info": {
+            "inner_foo": "value",
+            "inner_bar": true
+        }
+    },
+    "player_inventory": {
+        "coins": 55
+    }
+}
+
+```
+
+</details>
+
+### Info Updates
+
+Info Update events fire when a change occures in a certain Game Info, with the new value of that specific Game Info.
+
+<details>
+<summary>Example Info Updates</summary>
+
 ```json title="A match just started, updating the match_state game info inside of the match_info category"
 {
     "match_info": {
@@ -59,12 +99,14 @@ Example:
 }
 ```
 
+</details>
+
 ### Info Resetting
 
-Info updates are events. However, they are not fired by in-game events. They are fired when their specific Game Info changes.
+Info updates are events. However, they are not fired directly. They are fired when their specific Game Info changes.
 
 As such, in order to ensure that these events fire properly, even if the exact value might not have changed, event "resets" are used.
-This is done by changing the value to a consistent, clearly invalid value (usually `null`), as soon as it becomes invalid.
+This is done by changing the value to a consistent, clearly invalid value (usually `null`), as soon as it becomes irrelevant.
 Then, once the new value should be set, it is set, and a new event is fired.
 
 The reset can then be ignored by the app, by being detected as a reset, and then the new value can be handled as a fresh update.
@@ -72,7 +114,7 @@ The reset can then be ignored by the app, by being detected as a reset, and then
 <details>
 <summary>Example Reset</summary>
 
-Assume that we have a `score`` Info Value. This value starts at 0 at the start of every match.
+Assume that we have a `score`` Game Info. This value is set to 0 at the start of every match.
 
 ```json title="First match just started, score was set to 0"
 ...
@@ -95,13 +137,11 @@ Now, when the next match will start, score will change from null to 0, causing a
 
 ```json title="Second match just started, score is set to 0"
 ...
-    "score": null
+    "score": 0
 ...
 ```
 
 </details>
-
-
 
 ## Features
 
@@ -113,26 +153,71 @@ For game developers - This means that this section is redundant.
 For app developers - This means that SDK games will fire **all** game events, meaning that you can skip the [`setRequiredFeatures()`](/api/games/events#setrequiredfeaturesfeatures-callback) step.
 :::
 
-All events are grouped into `features`. Features serve as a way to group events based on their purpose. For example:
+Both Game Events and Game Info are grouped into `features`. Features serve as a way to group events based on their purpose. For example:
 - `match_info` - Information about the current match.
 - `death` - Death counters + Player death event.
 - `abilities` - Events fired when the player uses an ability + Current ability levels.
 
-An application then subscribes to the specific features it needs, and is only notified of those events.
+An application then subscribes to the specific features it needs using [`setRequiredFeatures()`](/api/games/events#setrequiredfeaturesfeatures-callback), and is only notified of those events.
 
+:::tip Game Info And Features
 Game Info category names will always correspond to the relevant feature's name.
+:::
 
 ## Events Convention
 
 In order to ensure that events stay consistent accross games, we have set a few guidelines in place.
-These guidelines serve as the baseline for any new events introduced from now on.
+These guidelines serve as the baseline for any new events introduced from now on, regardless of their origin.
+
+:::note Older Events
+In order to ensure backwards compatiability is maintained, any events published before this document will stay as they are
+for the forseeable future.
+:::
 
 ### Naming Convention
 
-> All events names should contain only lower-case letters, with underscores for word separation.
+Event/Feature naming should always follow these guidelines:
+
+<details>
+<summary>All events names should contain only lower-case letters, with underscores for word separation</summary>
+
+- Do's:
+    - `player`
+    - `match_info`
+    - `team_round_win`
+    - `roster`
+- Don't do's:
+    - `Player`
+    - `matchinfo`
+    - `teamRoundWin`
+    - `team_Set`
+    - `Score_board`
+
+</details>
+
+<details>
+<summary>Events names should be informative</summary>
+
+- Do's:
+    - `abilities`
+    - `roster`
+    - `local_player`
+- Don't Do's:
+    - `used`
+    - `connected`
+    - `me`
+
+</details>
+
+<details>
+<summary>Event names should use existing names where appropriate</summary>
+
+There are many events that occur in a similar way across many different games.
+In order to keep a unified workflow, the same names should be used to describe the same workflows, where possible.
 
 
 
+</details>
 
 ### Types Convention
 
