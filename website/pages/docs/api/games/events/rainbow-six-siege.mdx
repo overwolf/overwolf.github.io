@@ -98,6 +98,13 @@ ko_log | match_info   | Information regarding knockout. |See [notes](#ko_log-not
 death_log | match_info   | Information regarding death. |See [notes](#death_log-note) for possible values|   186.0  |
 match_end_log | match_info   | Information regarding end of match. |See [notes](#match_end_log-note) for possible values|   186.0  |
 
+### Events
+
+Event        | Event Data        | Fired When        | Notes              | Since GEP Ver. |
+-------------| ------------------| ----------------- | ------------------ | ---------------|
+match_start  | null              | When a match start.|See [notes](#match_start-note)|   211.0  |
+match_end    | null              | When a match ends. |See [notes](#match_end-note)|   211.0  |
+
 #### *game_mode* note
 
 The `game_mode` returns on this format:
@@ -274,6 +281,22 @@ Data Example:
 
 ```json
 {"info":{"match_info":{"match_end_log":"{"MAP":"0000002E8679C826","ENDREASON":"MatchOver","ROUNDSPLAYED":5,"ISJIP":false,"PARTY":1,"MATCHWON":"false","DATACENTER":"playfab/westeurope","LEAVEREASON":27,"WIRELESS":false,"TEAM":"0","WINTEAM":"1","PLAYERSCORE":1220,"VSETTING":"PushToTalk","VNUM":0,"SKILLRANK":0,"SKILLMEAN":17.339664,"SKILLSTDEV":4.017635,"SKILLMMR":1734.0,"AlphaPackDropRate":550,"AlphaPackDropIncrease":150,"AlphaPackHasDropped":false,"MULTIPLIER":100,"MTYPE":"00000000138BDF6E"}"}},"feature":"match_info"}
+```
+
+#### *match_start* note
+
+Data Example:
+
+```json
+{"events":[{"name":"match_start","data":""}]}
+```
+
+#### *match_end* note
+
+Data Example:
+
+```json
+{"events":[{"name":"match_end","data":""}]}
 ```
 
 ## `match`
