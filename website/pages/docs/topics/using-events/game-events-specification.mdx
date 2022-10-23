@@ -9,9 +9,9 @@ which in turn lets them deliver a significantly more accurate and adaptive exper
 
 There are two different forms of data that are referred to as `events`:
 - [Game Events](#game-events) - Specific events that happen in the game.
-- [Game Information](#game-info) (Game Info for short) - The current state of specific parts of the game.
+- [Game Information](#game-info) (Game Info for short, formerly referred to as part of Info Updates) - The current state of specific parts of the game.
 
-When a Game Event occurs, or a Game Info changes, an event is fired, letting the app know of it.
+When a Game Event occurs, or a Game Info changes, an event or info update is fired respectively, letting the app know of it.
 
 ## Game Events
 
@@ -230,9 +230,13 @@ In order to ensure a smoother integration for all sides involved, we have compil
 
 Raw Type            | Serialized Format | Note                |
 --------------------| ------------------| --------------------|
+[resets](info-resetting) | null         |                     |
 boolean             | boolean           |                     |
-number              | integer           |                     |
-aplhanumeric values | string            | Enums or other constant values that include letters |
+integers            | integer           |                     |
+floats              | TBD               |                     |
+time                | unix timestamp (with milliseconds) | Timetamps that are only really relevant for up to a day after being sent |
+date                | unix timestamp    | Date timestamps                    |
+aplhanumeric values | string            | Enum names or other constant values that include letters |
 user-generated text | string (base64)   | Usernames, chat, and anything else that could include complex characters |
 array[]             | array[]           | Arrays should be kept as arrays, while their values should all recursively comply with the convention |
 object              | object            | Objects should be kept the same where possible, and their values should all recursively comply with both the naming and the value convention |
