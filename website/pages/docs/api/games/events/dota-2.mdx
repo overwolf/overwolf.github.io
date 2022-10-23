@@ -28,6 +28,7 @@ In order to know which user is already using this command line parameter, you sh
 ## Available Features
 
 * [gep_internal](#gep_internal)
+* [game_state](#game_state)
 * [game_state_changed](#game_state_changed)
 * [match_state_changed](#match_state_changed)
 * [match_detected](#match_detected)
@@ -87,6 +88,30 @@ Data Example:
 
 ```json
 {"info":{"gep_internal":{"version_info":"{"local_version":"157.0.1","public_version":"157.0.1","is_updated":true}"}},"feature":"gep_internal"}
+```
+
+## `game_state`
+
+### Events
+
+Event       | Event Data   | Fired When    | Notes              | Since GEP Ver. |
+------------| -------------| --------------| ------------------ | --------------|
+new_game | null         | Match started |See [notes](#new_game-note)|   77.3     |
+game_over  | null         | Match ended   |See [notes](#game_over-note)|    77.3      |
+
+#### *new_game* note
+
+Data Example:
+
+```json
+{"events":[{"name":"new_game","data":""}]}
+```
+#### *game_over* note
+
+Data Example:
+
+```json
+{"events":[{"name":"game_over","data":""}]}
 ```
 
 ## `game_state_changed`
