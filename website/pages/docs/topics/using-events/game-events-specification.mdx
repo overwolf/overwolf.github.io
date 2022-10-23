@@ -160,7 +160,7 @@ Both Game Events and Game Info are grouped into `features`. Features serve as a 
 An application then subscribes to the specific features it needs using [`setRequiredFeatures()`](/api/games/events#setrequiredfeaturesfeatures-callback), and is only notified of those events.
 
 :::tip Game Info And Features
-Game Info category names will always correspond to the relevant feature's name.
+Game Info category names will usually correspond to the relevant feature's name.
 :::
 
 ## Events Convention
@@ -216,7 +216,97 @@ You can read more [here](https://en.wikipedia.org/wiki/Snake_case).
 There are many events that occur in a similar way across many different games.
 In order to keep a unified workflow, the same names should be used to describe the same workflows, where possible.
 
+### Game Events
 
+<details open>
+<summary>match_start/match_end</summary>
+
+**Game Events** denoting the start/end of a match, with any relevant data (information about the current match/the match's result).
+
+A match in this context, is defined as a game between any number of set teams or individuals, without any breaks that take the players
+out of the game.
+
+For example:
+- A best of 5 game of control points is a single match.
+- However, if in between every one of those games, the players were taken out of the game, to the game's launcher,
+each one of those games would be one match.
+
+</details>
+
+<details open>
+<summary>round_start/round_end</summary>
+
+**Game Events** denoting the start/end of a round, with any relevant data (information about the current round/the round's result).
+
+A round in this context, is defined as a subset of a match, as defined above.
+
+For example:
+- A best of 5 game of control points will include up to five matches.
+- However, if in between every one of those games, the players were taken out of the game, to the game's launcher,
+there would be no round event.
+
+</details>
+
+<details open>
+<summary>scene</summary>
+
+
+
+</details>
+
+<details open>
+<summary>kill</summary>
+
+
+
+</details>
+
+<details open>
+<summary>assist</summary>
+
+
+
+</details>
+
+<details open>
+<summary>death</summary>
+
+
+
+</details>
+
+<details open>
+<summary>game_mode</summary>
+
+
+
+</details>
+
+<details open>
+<summary>damage</summary>
+
+
+
+</details>
+
+### Game Info
+
+<details open>
+<summary>roster</summary>
+
+A roster **Game Info** will contain all of the information about all of the players in the match that is known to the local client.
+
+This can include any of the following (depending on the use-case):
+- Array of players (either current, initial, total, or "discovered") that each details:
+    - `username` - The player's username
+    - `team_identifier` - An identifier of the player's team
+    - `class`/`role` - The player's class/role details
+    - `is_local` - Is this the local player
+    - Any other player-specific data
+- `current_player_count` - Amount of currently "active" players in the match
+- `initial_player_count` - Amount of players that were initially active in the match
+
+</details>
 
 </details>
 
@@ -234,8 +324,7 @@ Raw Type            | Serialized Format | Note                |
 boolean             | boolean           |                     |
 integers            | integer           |                     |
 floats              | TBD               |                     |
-time                | unix timestamp (with milliseconds) | Timetamps that are only really relevant for up to a day after being sent |
-date                | unix timestamp    | Date timestamps                    |
+real-world time     | unix timestamp in milliseconds | Timestamps for real-world times |
 aplhanumeric values | string            | Enum names or other constant values that include letters |
 user-generated text | string (base64)   | Usernames, chat, and anything else that could include complex characters |
 array[]             | array[]           | Arrays should be kept as arrays, while their values should all recursively comply with the convention |
