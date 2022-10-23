@@ -113,6 +113,28 @@ Data Example:
 ```json
 {"events":[{"name":"game_state_changed","data":"{"game_state": "playing",  "match_state": "DOTA_GAMERULES_STATE_INIT",  "match_id": "0",  "player_steam_id": "76561197971316549",  "player_team": "radiant"}"}]}
 ```
+Event       | Event Data   | Fired When    | Notes              | Since GEP Ver. |
+------------| -------------| --------------| ------------------ | --------------|
+new_game | null         | Match started |See [notes](#new_game-note)|        | 
+game_over  | null         | Match ended   |See [notes](#game_over-note)|          | 
+
+#### *new_game* note
+
+Data Example:
+
+```json
+{"events":[{"name":"new_game","data":""}]}
+```
+
+#### *game_over* note
+
+Data Example:
+
+```json
+{"events":[{"name":"game_over","data":""}]}
+```
+
+
 
 ## `match_state_changed`
 
