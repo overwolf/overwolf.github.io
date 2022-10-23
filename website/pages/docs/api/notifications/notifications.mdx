@@ -44,23 +44,24 @@ callback             | [(Result: ShowToastNotificationResult)](#showtoastnotific
 #### Usage example
 
 ```js
+// Replace {EXTENSION-ID} with your extension's id, and the image paths with paths to the actual images you wish to display
 overwolf.notifications.showToastNotification({
   header: "Header",
   texts: ["text1", "text2", "text3"],
   logoOverride: {
-    url: "overwolf-extension://cchhcaiapeikjbdbpfplgmpobbcdkdaphclbmkbj/84x84.png",
+    url: "overwolf-extension://{EXTENSION-ID}/84x84.png",
     cropType: overwolf.notifications.enums.AppLogoCrop.Default
   },
-  heroImage: "overwolf-extension://cchhcaiapeikjbdbpfplgmpobbcdkdaphclbmkbj/logo_364x180.png",
-  inlineImage: "overwolf-extension://cchhcaiapeikjbdbpfplgmpobbcdkdaphclbmkbj/logo_364x180.png",
+  heroImage: "overwolf-extension://{EXTENSION-ID}/logo_364x180.png",
+  inlineImage: "overwolf-extension://{EXTENSION-ID}/logo_364x180.png",
   attribution: "sent from an app",
   buttons: [
     {
-      id: about
+      id: "button_1",
       text: "button 1"
     },
     {
-      id: about
+      id: "button_2",
       text: "button 2"
     }
   ]
