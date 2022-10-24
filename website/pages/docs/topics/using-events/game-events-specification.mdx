@@ -15,7 +15,7 @@ When a Game Event occurs, or a Game Info changes, an event or info update is fir
 
 ## Game Events
 
-Game events refer to the moment at which a notable event occures in the game,
+Game events refer to the moment at which a notable event occurs in the game,
 and are rarely relevant for more than a few seconds after they occur. Common examples include:
 - Player kill
 - Player assist
@@ -75,7 +75,7 @@ Every Game Info item exists inside of a single category, and categories cannot b
 
 ### Info Updates
 
-Info Update events fire when a change occures in a certain Game Info, with the new value of that specific Game Info.
+Info Update events fire when a change occurs in a certain Game Info, with the new value of that specific Game Info.
 
 <details>
 <summary>Example Info Updates</summary>
@@ -211,24 +211,44 @@ You can read more [here](https://en.wikipedia.org/wiki/Snake_case).
 </details>
 
 <details>
-<summary>Event names should use existing names where appropriate</summary>
+<summary>Event names should use existing names and structures where appropriate</summary>
 
 There are many events that occur in a similar way across many different games.
 In order to keep a unified workflow, the same names should be used to describe the same workflows, where possible.
 
-### Game Events
+Furthermore, in many cases, the same event structure can be used for several different events.
+
+<details>
+<summary>Example of multiple similar events</summary>
+
+The `killed` event structure can be used:
+- For player vs player battles, where one player is killed by another player.
+- For when a mob monster is killed (by a player, or another mob monster).
+- Or for any other case where one entity is killed by another entity.
+
+In that case, there would be several different events, all based on the `killed` event structure:
+- `player_kill` - A player was killed.
+- `monster_kill` - A monster was killed.
+- Any other event in which a distinct entity type who's death should be tracked was killed.
+
+The exact distinction naming scheme will depend on the event "recipe", as well as the individual case.
+
+</details>
+
+<details open>
+<summary>Common Game Events</summary>
 
 <details open>
 <summary>match_start/match_end</summary>
 
-**Game Events** denoting the start/end of a match, with any relevant data (information about the current match/the match's result).
+Game Events denoting the start/end of a match, with any relevant data (information about the current match/the match's result).
 
 A match in this context, is defined as a game between any number of set teams or individuals, without any breaks that take the players
 out of the game.
 
 For example:
 - A best of 5 game of control points is a single match.
-- However, if in between every one of those games, the players were taken out of the game, to the game's launcher,
+- However, if in between every one of those games, the players were taken out of the game, to the game's launcher, for a potentially unknown amount of time,
 each one of those games would be one match.
 
 </details>
@@ -236,75 +256,98 @@ each one of those games would be one match.
 <details open>
 <summary>round_start/round_end</summary>
 
-**Game Events** denoting the start/end of a round, with any relevant data (information about the current round/the round's result).
+Game Events denoting the start/end of a round, with any relevant data (information about the current round/the round's result).
 
 A round in this context, is defined as a subset of a match, as defined above.
 
 For example:
 - A best of 5 game of control points will include up to five matches.
-- However, if in between every one of those games, the players were taken out of the game, to the game's launcher,
+- However, if in between every one of those games, the players were taken out of the game, to the game's launcher, for a potentially unknown amount of time,
 there would be no round event.
 
 </details>
 
 <details open>
-<summary>scene</summary>
+<summary>killed</summary>
 
+Game Event fired when an entity is killed by another entity, with any potential number of assisting entities.
 
-
-</details>
-
-<details open>
-<summary>kill</summary>
-
-
-
-</details>
-
-<details open>
-<summary>assist</summary>
-
-
-
-</details>
-
-<details open>
-<summary>death</summary>
-
-
+This can include any of the following (depending on the use-case), as well as any extra information required:
+- `killer` - An object containing:
+    - `id` - Identifier of the main killer
+    - `method` - Information about the method used for the kill by the main killer
+- `assist` - An array of any number of objects containing:
+    - `id` - Identifier of the assisting entity
+    - `method` - Information about the method used for the assist
+- `killed` - An object containing:
+    - `id` - Identifier of the killed entity
 
 </details>
 
 <details open>
 <summary>game_mode</summary>
 
-
+//TODO
 
 </details>
 
 <details open>
 <summary>damage</summary>
 
-
+//TODO
 
 </details>
 
-### Game Info
+</details>
+
+<details open>
+<summary>Game Info</summary>
 
 <details open>
 <summary>roster</summary>
 
-A roster **Game Info** will contain all of the information about all of the players in the match that is known to the local client.
+The roster **category** contains all of the information about all of the players in the match that is known to the local client.
 
-This can include any of the following (depending on the use-case):
-- Array of players (either current, initial, total, or "discovered") that each details:
-    - `username` - The player's username
-    - `team_identifier` - An identifier of the player's team
-    - `class`/`role` - The player's class/role details
-    - `is_local` - Is this the local player
-    - Any other player-specific data
+<details open>
+<summary>roster_&#123;id&#125;</summary>
+
+A single entry per player in the match (either current, initial, total, or "discovered"), with each entry using the player's unique {id} in its entry name.
+Each entry can then include any of the following (depending on the use-case):
+- `username` - The player's username
+- `team_identifier` - An identifier of the player's team
+- `class`/`role` - The player's class/role details
+- `is_local` - Is this the local player
+- Any other player-specific data
+
+</details>
+
+- `players` - An array of all player ids that currently have an info entry in the roster category
 - `current_player_count` - Amount of currently "active" players in the match
 - `initial_player_count` - Amount of players that were initially active in the match
+
+</details>
+
+<details open>
+<summary>game_info</summary>
+
+The `game_info` category contains general information about the game as a whole.
+
+<details open>
+<summary>scene</summary>
+
+The scene Game Info contains general information about the current scene of the game/that the local player is in.
+
+This is usually just a simple string name of the current scene. Common example values include:
+- loading - Loading the game
+- main_menu - The main menu
+- lobby - In a lobby
+- loading_match - Loading the specific match
+- in_match - Inside a match
+- post_match - Post match scene, while potentially transferring back to the lobby
+
+</details>
+
+</details>
 
 </details>
 
