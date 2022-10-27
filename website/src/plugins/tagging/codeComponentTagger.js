@@ -102,8 +102,6 @@ var codeComponentTagger = function plugin(optionsInput) {
     }
     // add tokenizer to parser after fenced code blocks
     var Parser = this.Parser.prototype;
-    console.log("test");
-    console.log(Object.keys(Parser));
     Parser.blockTokenizers.Tagger = blockTokenizer;
     Parser.blockMethods.splice(Parser.blockMethods.indexOf('admonition') + 1, 0, taggerNodeType);
     return function (root) {
