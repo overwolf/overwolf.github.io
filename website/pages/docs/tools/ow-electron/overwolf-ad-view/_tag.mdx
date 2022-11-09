@@ -1,0 +1,27 @@
+:::note Ad Enablement
+In order for your app to be able to display ads, we first have to set up our backend to support your [app's uid](#unique-app-id).
+Please contact us for further details [here](/support/contact-us).
+
+To enable ads for users in areas with more strict data collection regulations, it is also required to fully follow our [CMP Implementation Guidelines](/tools/ow-electron/consent-management-platform).
+:::
+
+The `<owadview/>` tag, which is based on the Electron [`<webview/>`](https://www.electronjs.org/docs/latest/api/webview-tag) tag, automatically hosts and manages ads in your app.
+
+To use it, place the `<owadview/>` tag (no attributes required) inside a `<div>` tag, with the size of the standard IAB ad unit you wish to display.
+
+For more information about supported ad units + General ads guidelines, go [here](/start/monetize-with-ads/ads-monetization-basics).
+(While that article was originally aimed at Overwolf platform apps, the general ad details are also relevant for ow-electron apps).
+
+```html
+<div style="width: 400px; height: 300px; background: transparent;">
+  <owadview />
+</div>
+```
+
+:::note Transparent Background
+We use `background: transparent`, in order to allow your app to show a background image as a fallback when there is no ads inventory to display.
+:::
+
+Other things to keep in mind:
+- The `<owadview/>` tag starts muted by default. This can be [changed](https://www.electronjs.org/docs/latest/api/webview-tag#webviewsetaudiomutedmuted).
+- The `<owadview/>` tag is automatically managed, so it will already handle any issues involving ad visibility or crashes.

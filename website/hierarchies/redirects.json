@@ -12,10 +12,6 @@
     "from": "/docs/api/games-external-apis"
   },
   {
-    "to": "/api/games/ids",
-    "from": "/docs/api/games-ids"
-  },
-  {
     "to": "/api/games/launchers/ids",
     "from": "/docs/api/launchers-ids"
   },
@@ -69,7 +65,10 @@
   },
   {
     "to": "/api/games/ids",
-    "from": "/docs/api/overwolf-games-events-autochess"
+    "from": [
+      "/docs/api/overwolf-games-events-autochess",
+      "/docs/api/games-ids"
+    ]
   },
   {
     "to": "/api/games/events/counter-strike-global-offensive",
@@ -414,10 +413,6 @@
     "from": "/docs/start/community-alphas"
   },
   {
-    "to": "/start/basic-app",
-    "from": "/docs/start/creating-demo-app"
-  },
-  {
     "to": "/start/submit-your-app/custom-installer-for-your-app",
     "from": "/docs/start/custom-installer-for-your-app"
   },
@@ -459,7 +454,10 @@
   },
   {
     "to": "/start/basic-app",
-    "from": "/docs/start/sample-app-overview"
+    "from": [
+      "/docs/start/sample-app-overview",
+      "/docs/start/creating-demo-app"
+    ]
   },
   {
     "to": "/start/basic-app/ui-components",
@@ -468,10 +466,6 @@
   {
     "to": "/start/getting-started/sdk-introduction",
     "from": "/docs/start/sdk-introduction"
-  },
-  {
-    "to": "/start/maintain-your-app/submit-an-app-update",
-    "from": "/docs/start/submit-an-app-update"
   },
   {
     "to": "/start/getting-started/submit-app-proposal",
@@ -516,7 +510,8 @@
     "to": "/start/maintain-your-app/submit-an-app-update",
     "from": [
       "/docs/start/update-your-app-status",
-      "/start/maintain-your-app/update-your-app-status"
+      "/start/maintain-your-app/update-your-app-status",
+      "/docs/start/submit-an-app-update"
     ]
   },
   {
@@ -528,16 +523,8 @@
     "from": "/docs/start/warzone-compliance"
   },
   {
-    "to": "/status",
-    "from": "/docs/status/all"
-  },
-  {
     "to": "/status/apex-legends",
     "from": "/docs/status/apex"
-  },
-  {
-    "to": "/status",
-    "from": "/docs/status/auto-chess"
   },
   {
     "to": "/status/counter-strike-global-offensive",
@@ -617,7 +604,11 @@
   },
   {
     "to": "/status",
-    "from": "/docs/status/past-incidents"
+    "from": [
+      "/docs/status/auto-chess",
+      "/docs/status/all",
+      "/docs/status/past-incidents"
+    ]
   },
   {
     "to": "/status/path-of-exile",
@@ -1003,6 +994,202 @@
   {
     "to": "/topics/using-windows-api/windows-types",
     "from": "/docs/topics/windows-types"
+  },
+  {
+    "to": "/api/changelogs/overwolf-platform/2019/august/134",
+    "from": "/api/changelogs/2019/august/134"
+  },
+  {
+    "to": "/api/changelogs/overwolf-platform/2019/december/139",
+    "from": "/api/changelogs/2019/december/139"
+  },
+  {
+    "to": "/api/changelogs/overwolf-platform/2019/december/140",
+    "from": "/api/changelogs/2019/december/140"
+  },
+  {
+    "to": "/api/changelogs/overwolf-platform/2019/july/132",
+    "from": "/api/changelogs/2019/july/132"
+  },
+  {
+    "to": "/api/changelogs/overwolf-platform/2019/july/133",
+    "from": "/api/changelogs/2019/july/133"
+  },
+  {
+    "to": "/api/changelogs/overwolf-platform/2019/june/131",
+    "from": "/api/changelogs/2019/june/131"
+  },
+  {
+    "to": "/api/changelogs/overwolf-platform/2019/november/137",
+    "from": "/api/changelogs/2019/november/137"
+  },
+  {
+    "to": "/api/changelogs/overwolf-platform/2019/november/138",
+    "from": "/api/changelogs/2019/november/138"
+  },
+  {
+    "to": "/api/changelogs/overwolf-platform/2019/october/136",
+    "from": "/api/changelogs/2019/october/136"
+  },
+  {
+    "to": "/api/changelogs/overwolf-platform/2019/september/135",
+    "from": "/api/changelogs/2019/september/135"
+  },
+  {
+    "to": "/api/changelogs/overwolf-platform/2020/april/145",
+    "from": "/api/changelogs/2020/april/145"
+  },
+  {
+    "to": "/api/changelogs/overwolf-platform/2020/august/153",
+    "from": "/api/changelogs/2020/august/153"
+  },
+  {
+    "to": "/api/changelogs/overwolf-platform/2020/december/159",
+    "from": "/api/changelogs/2020/december/159"
+  },
+  {
+    "to": "/api/changelogs/overwolf-platform/2020/february/142",
+    "from": "/api/changelogs/2020/february/142"
+  },
+  {
+    "to": "/api/changelogs/overwolf-platform/2020/january/141",
+    "from": "/api/changelogs/2020/january/141"
+  },
+  {
+    "to": "/api/changelogs/overwolf-platform/2020/july/149",
+    "from": "/api/changelogs/2020/july/149"
+  },
+  {
+    "to": "/api/changelogs/overwolf-platform/2020/june/148",
+    "from": "/api/changelogs/2020/june/148"
+  },
+  {
+    "to": "/api/changelogs/overwolf-platform/2020/march/143",
+    "from": "/api/changelogs/2020/march/143"
+  },
+  {
+    "to": "/api/changelogs/overwolf-platform/2020/may/147",
+    "from": "/api/changelogs/2020/may/147"
+  },
+  {
+    "to": "/api/changelogs/overwolf-platform/2020/november/157",
+    "from": "/api/changelogs/2020/november/157"
+  },
+  {
+    "to": "/api/changelogs/overwolf-platform/2020/november/158",
+    "from": "/api/changelogs/2020/november/158"
+  },
+  {
+    "to": "/api/changelogs/overwolf-platform/2020/october/156",
+    "from": "/api/changelogs/2020/october/156"
+  },
+  {
+    "to": "/api/changelogs/overwolf-platform/2020/september/155",
+    "from": "/api/changelogs/2020/september/155"
+  },
+  {
+    "to": "/api/changelogs/overwolf-platform/2021/april/168",
+    "from": "/api/changelogs/2021/april/168"
+  },
+  {
+    "to": "/api/changelogs/overwolf-platform/2021/april/169",
+    "from": "/api/changelogs/2021/april/169"
+  },
+  {
+    "to": "/api/changelogs/overwolf-platform/2021/august/176",
+    "from": "/api/changelogs/2021/august/176"
+  },
+  {
+    "to": "/api/changelogs/overwolf-platform/2021/august/178",
+    "from": "/api/changelogs/2021/august/178"
+  },
+  {
+    "to": "/api/changelogs/overwolf-platform/2021/december/185",
+    "from": "/api/changelogs/2021/december/185"
+  },
+  {
+    "to": "/api/changelogs/overwolf-platform/2021/december/187",
+    "from": "/api/changelogs/2021/december/187"
+  },
+  {
+    "to": "/api/changelogs/overwolf-platform/2021/february/165",
+    "from": "/api/changelogs/2021/february/165"
+  },
+  {
+    "to": "/api/changelogs/overwolf-platform/2021/january/162",
+    "from": "/api/changelogs/2021/january/162"
+  },
+  {
+    "to": "/api/changelogs/overwolf-platform/2021/july/174",
+    "from": "/api/changelogs/2021/july/174"
+  },
+  {
+    "to": "/api/changelogs/overwolf-platform/2021/june/173",
+    "from": "/api/changelogs/2021/june/173"
+  },
+  {
+    "to": "/api/changelogs/overwolf-platform/2021/march/166",
+    "from": "/api/changelogs/2021/march/166"
+  },
+  {
+    "to": "/api/changelogs/overwolf-platform/2021/may/170",
+    "from": "/api/changelogs/2021/may/170"
+  },
+  {
+    "to": "/api/changelogs/overwolf-platform/2021/november/184",
+    "from": "/api/changelogs/2021/november/184"
+  },
+  {
+    "to": "/api/changelogs/overwolf-platform/2021/october/181",
+    "from": "/api/changelogs/2021/october/181"
+  },
+  {
+    "to": "/api/changelogs/overwolf-platform/2021/september/180",
+    "from": "/api/changelogs/2021/september/180"
+  },
+  {
+    "to": "/api/changelogs/overwolf-platform/2022/april/195",
+    "from": "/api/changelogs/2022/april/195"
+  },
+  {
+    "to": "/api/changelogs/overwolf-platform/2022/august/204",
+    "from": "/api/changelogs/2022/august/204"
+  },
+  {
+    "to": "/api/changelogs/overwolf-platform/2022/february/191",
+    "from": "/api/changelogs/2022/february/191"
+  },
+  {
+    "to": "/api/changelogs/overwolf-platform/2022/january/188",
+    "from": "/api/changelogs/2022/january/188"
+  },
+  {
+    "to": "/api/changelogs/overwolf-platform/2022/january/190",
+    "from": "/api/changelogs/2022/january/190"
+  },
+  {
+    "to": "/api/changelogs/overwolf-platform/2022/july/201",
+    "from": "/api/changelogs/2022/july/201"
+  },
+  {
+    "to": "/api/changelogs/overwolf-platform/2022/july/203",
+    "from": "/api/changelogs/2022/july/203"
+  },
+  {
+    "to": "/api/changelogs/overwolf-platform/2022/june/199",
+    "from": "/api/changelogs/2022/june/199"
+  },
+  {
+    "to": "/api/changelogs/overwolf-platform/2022/march/194",
+    "from": "/api/changelogs/2022/march/194"
+  },
+  {
+    "to": "/api/changelogs/overwolf-platform/2022/may/198",
+    "from": "/api/changelogs/2022/may/198"
+  },
+  {
+    "to": "/api/changelogs/overwolf-platform/2022/september/208",
+    "from": "/api/changelogs/2022/september/208"
   },
   {
     "to": "/topics/using-plugins/writing-your-own-plugin",

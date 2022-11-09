@@ -1,0 +1,4 @@
+label: 'package.json'
+customProps:
+  overwolf_platform: false
+  electron_platform: true

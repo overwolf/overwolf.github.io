@@ -1,0 +1,4 @@
+label: 'launchers'
+customProps:
+  overwolf_platform: true
+  electron_platform: false

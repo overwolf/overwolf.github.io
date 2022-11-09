@@ -171,6 +171,28 @@ div[class^="tableOfContents"] {
   }
 }
 
+// .electron {
+//   .menu__list-item-collapsible {
+//     button {
+//     &::after{
+
+//       content: url('/img/platforms/electron-platform/electron-sidebar.png');
+//     }
+//   }
+//   }
+// }
+
+// .platform {
+//   .menu__list-item-collapsible {
+//     button {
+//     &::before{
+
+//       content: url('/img/platforms/overwolf-platform/overwolf-sidebar.png');
+//     }
+//   }
+//   }
+// }
+
 .theme-doc-breadcrumbs {
   .breadcrumbs {
     .breadcrumbs__item {

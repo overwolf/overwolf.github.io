@@ -1,0 +1,24 @@
+Every Overwolf application (ow-electron or Overwolf platform), has a unique app id. This unique id is automatically generated, and is based on the app's name,
+and the app's author's name.
+
+In ow-electron, these fields correspond to the following fields in the package.json file:
+- App name - The `productName` or `name` properties
+- App author - The `name` field under the `author` field.
+
+```js title="Partial package.json with the relevant fields"
+{
+  ...
+  "name": "ow-electron-sample-app",
+  ...
+  "author": {
+    "name": "Overwolf"
+  },
+  ...
+  "build": {
+    ...
+    "productName": "ow-electron-sample-app",
+    ...
+  }
+  ...
+}
+```

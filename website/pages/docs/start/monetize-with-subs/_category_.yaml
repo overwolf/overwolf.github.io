@@ -1,0 +1,4 @@
+label: 'monetize-with-subs'
+customProps:
+  overwolf_platform: true
+  electron_platform: false

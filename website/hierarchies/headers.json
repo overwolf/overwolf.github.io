@@ -15,6 +15,11 @@
         "position": "left"
     },
     {
+        "to": "tools/ow-electron",
+        "label": "ow-electron",
+        "position": "left"
+    },
+    {
         "to": "tools/developers-console",
         "label": "Tools",
         "position": "left"

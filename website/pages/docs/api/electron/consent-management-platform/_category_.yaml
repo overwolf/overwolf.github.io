@@ -1,0 +1,4 @@
+label: 'CMP'
+customProps:
+  overwolf_platform: false
+  electron_platform: true

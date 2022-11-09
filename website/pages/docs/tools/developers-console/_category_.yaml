@@ -1,0 +1,4 @@
+label: 'developers-console'
+customProps:
+  overwolf_platform: true
+  electron_platform: false

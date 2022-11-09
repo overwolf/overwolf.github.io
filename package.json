@@ -18,5 +18,6 @@
   "homepage": "https://github.com/overwolf/overwolf.github.io#readme",
   "dependencies": {
     "remarkable-admonitions": "^0.2.1"
-  }
+  },
+  "type": "commonjs"
 }

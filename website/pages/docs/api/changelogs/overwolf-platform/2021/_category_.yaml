@@ -1,0 +1,5 @@
+position: -2021
+label: '2021'
+customProps:
+  overwolf_platform: true
+  electron_platform: false

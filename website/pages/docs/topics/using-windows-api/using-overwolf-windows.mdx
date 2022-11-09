@@ -3,6 +3,9 @@ id: using-overwolf-windows
 image: "/img/embed/api-best-practices.jpg"
 title: Using Overwolf windows
 sidebar_label: Using Overwolf windows
+sidebar_custom_props:
+  overwolf_platform: true
+  electron_platform: false
 ---
 
 Every Overwolf app uses Overwolf windows, whether in-game or while on desktop. When you get to work on your own app, the first step is declaring your app’s windows in it's [manifest.json](/api/manifest) file. You will NOT be able to create an Overwolf window without declaring it in the manifest (window.open is not an Overwolf window).  

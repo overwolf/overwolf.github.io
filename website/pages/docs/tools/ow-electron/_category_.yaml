@@ -1,0 +1,4 @@
+label: 'ow-electron'
+customProps:
+  overwolf_platform: false
+  electron_platform: true

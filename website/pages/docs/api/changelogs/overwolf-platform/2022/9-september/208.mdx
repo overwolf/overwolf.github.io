@@ -1,0 +1,41 @@
+---
+id: 208
+image: "/img/embed/changelogs.jpg"
+title: "Version 0.208"
+sidebar_label: "0.208"
+sidebar_position: 208
+sidebar_custom_props:
+  overwolf_platform: true
+  electron_platform: false
+---
+
+* Note that iterations 205 to 208 were combined into a single iteration.
+
+### Docs
+- Added more page preview images
+- New section on the website - `Tools`. Overwolf tools 
+- Dev console docs have been updated to reflect the facelift, and can be found [here](/tools/developers-console).
+
+### Platform
+- App [`process_name`](/api/manifest#process_name) now defaults to the app's [`name`](/api/manifest#meta-name).
+- Enabled the CSS flag [`--aspect-ratio`](https://developer.mozilla.org/en-US/docs/Web/CSS/aspect-ratio) as experimental.
+
+### API
+- New API - [`changeIcon`](/api/os/tray#changeiconpath-callback), [`restoreIcon`](/api/os/tray#restoreicon-callback):
+    - Allows an app to temporarily change its tray icon (repeatedly). Using [`restoreIcon`](/api/os/tray#restoreicon-callback) will restore it back to its original [`tray_icon`](/api/manifest#meta-tray_icon).
+    - **Requires a tray item to already be created ([`overwolf.os.tray.setMenu()`](/api/os/tray#setmenumenu-callback))!**
+- New API - [`watchFile`](/api/io#watchfilefilepath-callback), [`overwolf.io.stopWatchingFile`](/api/io#stopwatchingfilefilepath-callback):
+    - Allows an app to listen to **changes** occurring on a file, rather than just listening to additions/removals from its end.
+    - The listener will stop if the file is renamed or deleted, or if [`overwolf.io.stopWatchingFile`](/api/io#stopwatchingfilefilepath-callback) is called.
+- Updated API - Improved [`overwolf.media.replays`](/api/media/replays) and [`overwolf.streaming`](/api/streaming) error feedback:
+    - [`overwolf.media.replays.capture()`](/api/media/replays#capturepastduration-futureduration-capturefinishedcallback-callback) and [`overwolf.streaming.start()`](/api/streaming#startsettings-callback) will now return the new parameters `errorCode` and `errorDescription`.
+    - [`overwolf.streaming.StreamResult`](/api/streaming#streamResult-object) now returns the `streamId` of the corresponding OBS stream.
+    - [`overwolf.media.replays.capture()`](/api/media/replays#capturepastduration-futureduration-capturefinishedcallback-callback) now returns [`overwolf.media.replays.StartReplayResult`](/api/media/replays#replayresult-object) to its callback, with more information about the capture.
+    - Added [`overwolf.streaming.enums.CaptureErrorCode`](/api/streaming#captureerrorcode-enum), an enum of error codes returned when a capture fails. Of particular note is the [`overwolf.streaming.enums.CaptureErrorCode.RansomwareProtection`](/api/streaming#ransomwareprotection-note) code,
+    which signals that Windows ransomware protection on folders is turned on and stopping overwolf from writing to the capture folder. More information can be found [here](https://learn.microsoft.com/en-us/microsoft-365/security/defender-endpoint/controlled-folders?view=o365-worldwide#windows-system-folders-are-protected-by-default).
+
+### Bug Fixes
+- Fixed an issue affecting app tray icons on the first install of the app.
+- Fixed an issue where [`overwolf.utils.openFilePicker()`](/api/utils/#openfilepickerfilter-initialpath-callback) would throw an error when passed an  `initialPath`.
+- Fixed an issue where pressing a `press` hotkey would interrupt an active `hold` hotkey, resulting in `state: "up"` never firing.
+- When an app is un-installed, its individual app channel setting will also get removed.

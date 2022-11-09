@@ -1,0 +1,4 @@
+label: 'overwolf-ad-view'
+customProps:
+  overwolf_platform: false
+  electron_platform: true

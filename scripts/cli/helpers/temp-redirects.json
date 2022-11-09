@@ -1,0 +1,1002 @@
+{
+    "to": {
+        "/api/media/replays/auto-highlights": [
+            "/docs/api/auto-highlights"
+        ],
+        "/api/changelogs": [
+            "/docs/api/changelog"
+        ],
+        "/api/games/external-apis": [
+            "/docs/api/games-external-apis"
+        ],
+        "/api/games/launchers/ids": [
+            "/docs/api/launchers-ids"
+        ],
+        "/api/manifest": [
+            "/docs/api/manifest-json"
+        ],
+        "/api": [
+            "/docs/api/overwolf-api-overview"
+        ],
+        "/api/deprecated/benchmarking": [
+            "/docs/api/overwolf-benchmarking"
+        ],
+        "/api/campaigns/crossapp": [
+            "/docs/api/overwolf-campaigns-crossapp"
+        ],
+        "/api/cryptography": [
+            "/docs/api/overwolf-cryptography"
+        ],
+        "/api/extensions": [
+            "/docs/api/overwolf-extensions"
+        ],
+        "/api/extensions/current": [
+            "/docs/api/overwolf-extensions-current"
+        ],
+        "/api/extensions/io": [
+            "/docs/api/overwolf-extensions-io"
+        ],
+        "/api/extensions/shared-data": [
+            "/docs/api/overwolf-extensions-sharedData"
+        ],
+        "/api/games": [
+            "/docs/api/overwolf-games"
+        ],
+        "/api/games/events": [
+            "/docs/api/overwolf-games-events"
+        ],
+        "/api/games/events/apex-legends": [
+            "/docs/api/overwolf-games-events-apex-legends"
+        ],
+        "/api/games/ids": [
+            "/docs/api/overwolf-games-events-autochess",
+            "/docs/api/games-ids"
+        ],
+        "/api/games/events/counter-strike-global-offensive": [
+            "/docs/api/overwolf-games-events-csgo"
+        ],
+        "/api/games/events/dota-2": [
+            "/docs/api/overwolf-games-events-dota2"
+        ],
+        "/api/games/events/escape-from-tarkov": [
+            "/docs/api/overwolf-games-events-escape-from-tarkov"
+        ],
+        "/api/games/events/eternal-return": [
+            "/docs/api/overwolf-games-events-eternal-return"
+        ],
+        "/api/games/events/final-fantasy-xiv": [
+            "/docs/api/overwolf-games-events-ff-xiv"
+        ],
+        "/api/games/events/football-manager-2021": [
+            "/docs/api/overwolf-games-events-fm2021"
+        ],
+        "/api/games/events/football-manager-2022": [
+            "/docs/api/overwolf-games-events-fm2022"
+        ],
+        "/api/games/events/fortnite": [
+            "/docs/api/overwolf-games-events-fortnite"
+        ],
+        "/api/games/events/halo-infinite": [
+            "/docs/api/overwolf-games-events-halo-infinite"
+        ],
+        "/api/games/events/hearthstone": [
+            "/docs/api/overwolf-games-events-hearthstone"
+        ],
+        "/api/games/events/heroes-of-the-storm": [
+            "/docs/api/overwolf-games-events-hots"
+        ],
+        "/api/games/events/hunt-showdown": [
+            "/docs/api/overwolf-games-events-hunt-showdown"
+        ],
+        "/api/games/events/league-of-legends": [
+            "/docs/api/overwolf-games-events-lol"
+        ],
+        "/api/games/events/legends-of-runeterra": [
+            "/docs/api/overwolf-games-events-lor"
+        ],
+        "/api/games/events/maker-king": [
+            "/docs/api/overwolf-games-events-makerking"
+        ],
+        "/api/games/events/minecraft": [
+            "/docs/api/overwolf-games-events-minecraft"
+        ],
+        "/api/games/events/magic-the-gathering-arena": [
+            "/docs/api/overwolf-games-events-mtga"
+        ],
+        "/api/games/events/new-world": [
+            "/docs/api/overwolf-games-events-new-world"
+        ],
+        "/api/games/events/overwatch": [
+            "/docs/api/overwolf-games-events-overwatch"
+        ],
+        "/api/games/events/path-of-exile": [
+            "/docs/api/overwolf-games-events-path-of-exile"
+        ],
+        "/api/games/events/player-unknowns-battlegrounds": [
+            "/docs/api/overwolf-games-events-pubg"
+        ],
+        "/api/games/events/rainbow-six-siege": [
+            "/docs/api/overwolf-games-events-rainbow-six"
+        ],
+        "/api/games/events/rocket-league": [
+            "/docs/api/overwolf-games-events-rocket-league"
+        ],
+        "/api/games/events/starcraft-2": [
+            "/docs/api/overwolf-games-events-sc2"
+        ],
+        "/api/games/events/splitgate-arena-warfare": [
+            "/docs/api/overwolf-games-events-splitgate"
+        ],
+        "/api/games/events/teamfight-tactics": [
+            "/docs/api/overwolf-games-events-tft"
+        ],
+        "/api/games/events/dota-underlords": [
+            "/docs/api/overwolf-games-events-underlords"
+        ],
+        "/api/games/events/valheim": [
+            "/docs/api/overwolf-games-events-valheim"
+        ],
+        "/api/games/events/valorant": [
+            "/docs/api/overwolf-games-events-valorant"
+        ],
+        "/api/games/events/call-of-duty-vanguard": [
+            "/docs/api/overwolf-games-events-vanguard"
+        ],
+        "/api/games/events/warframe": [
+            "/docs/api/overwolf-games-events-warframe"
+        ],
+        "/api/games/events/call-of-duty-warzone": [
+            "/docs/api/overwolf-games-events-warzone"
+        ],
+        "/api/games/events/world-of-tanks": [
+            "/docs/api/overwolf-games-events-wot"
+        ],
+        "/api/games/events/world-of-warcraft": [
+            "/docs/api/overwolf-games-events-wow"
+        ],
+        "/api/games/events/world-of-warships": [
+            "/docs/api/overwolf-games-events-wows"
+        ],
+        "/api/games/input-tracking": [
+            "/docs/api/overwolf-games-inputTracking"
+        ],
+        "/api/games/launchers": [
+            "/docs/api/overwolf-games-launchers"
+        ],
+        "/api/games/launchers/events": [
+            "/docs/api/overwolf-games-launchers-events"
+        ],
+        "/api/games/launchers/events/league-of-legends": [
+            "/docs/api/overwolf-games-launchers-events-lol"
+        ],
+        "/api/games/tracked": [
+            "/docs/api/overwolf-games-tracked"
+        ],
+        "/api/io": [
+            "/docs/api/overwolf-io"
+        ],
+        "/api/io/paths": [
+            "/docs/api/overwolf-io-paths"
+        ],
+        "/api/deprecated/obsolete/log": [
+            "/docs/api/overwolf-log"
+        ],
+        "/api/logitech": [
+            "/docs/api/overwolf-logitech"
+        ],
+        "/api/logitech/arx": [
+            "/docs/api/overwolf-logitech-arx"
+        ],
+        "/api/logitech/led": [
+            "/docs/api/overwolf-logitech-led"
+        ],
+        "/api/media": [
+            "/docs/api/overwolf-media"
+        ],
+        "/api/deprecated/audio": [
+            "/docs/api/overwolf-media-audio",
+            "/api/media/audio"
+        ],
+        "/api/media/replays": [
+            "/docs/api/overwolf-media-replays"
+        ],
+        "/api/media/videos": [
+            "/docs/api/overwolf-media-videos"
+        ],
+        "/api/notifications": [
+            "/docs/api/overwolf-notifications"
+        ],
+        "/api/os": [
+            "/docs/api/overwolf-os"
+        ],
+        "/api/os/tray": [
+            "/docs/api/overwolf-os-tray"
+        ],
+        "/api/profile": [
+            "/docs/api/overwolf-profile"
+        ],
+        "/api/profile/subscriptions": [
+            "/docs/api/overwolf-profile-subscriptions"
+        ],
+        "/api/profile/subscriptions/inapp": [
+            "/docs/api/overwolf-profile-subscriptions-inapp"
+        ],
+        "/api/settings": [
+            "/docs/api/overwolf-settings"
+        ],
+        "/api/settings/games": [
+            "/docs/api/overwolf-settings-games"
+        ],
+        "/api/settings/hotkeys": [
+            "/docs/api/overwolf-settings-hotkeys"
+        ],
+        "/api/settings/language": [
+            "/docs/api/overwolf-settings-language"
+        ],
+        "/api/social": [
+            "/docs/api/overwolf-social"
+        ],
+        "/api/social/discord": [
+            "/docs/api/overwolf-social-discord"
+        ],
+        "/api/social/gfycat": [
+            "/docs/api/overwolf-social-gfycat"
+        ],
+        "/api/social/reddit": [
+            "/docs/api/overwolf-social-reddit"
+        ],
+        "/api/social/twitter": [
+            "/docs/api/overwolf-social-twitter"
+        ],
+        "/api/social/youtube": [
+            "/docs/api/overwolf-social-youtube"
+        ],
+        "/api/streaming": [
+            "/docs/api/overwolf-streaming"
+        ],
+        "/api/deprecated/obsolete/tobii": [
+            "/docs/api/overwolf-tobii",
+            "/api/deprecated/tobii"
+        ],
+        "/api/utils": [
+            "/docs/api/overwolf-utils"
+        ],
+        "/api/web": [
+            "/docs/api/overwolf-web"
+        ],
+        "/api/web/webserver": [
+            "/docs/api/overwolf-web-webserver"
+        ],
+        "/api/web/websocket": [
+            "/docs/api/overwolf-web-websocket"
+        ],
+        "/api/windows": [
+            "/docs/api/overwolf-windows"
+        ],
+        "/api/windows/media-player-element": [
+            "/docs/api/overwolf-windows-mediaPlayerElement"
+        ],
+        "/api/manifest/validate-your-manifest": [
+            "/docs/api/validate-your-manifest"
+        ],
+        "/start/maintain-your-app/add-a-knowledge-base-to-app": [
+            "/docs/start/add-a-knowledge-base-to-app"
+        ],
+        "/start/monetize-with-ads/ads-monetization-basics": [
+            "/docs/start/ads-monetization-basics"
+        ],
+        "/start/monetize-with-ads/ads-sdk-interaction": [
+            "/docs/start/ads-sdk-interaction"
+        ],
+        "/start/monetize-with-ads/ads-sdk-options": [
+            "/docs/start/ads-sdk-options"
+        ],
+        "/start/monetize-with-ads/ads-sdk-overview": [
+            "/docs/start/ads-sdk-overview"
+        ],
+        "/start/monetize-with-ads/ads-sdk-versions": [
+            "/docs/start/ads-sdk-versions"
+        ],
+        "/start/test-your-app/app-automation": [
+            "/docs/start/app-automation"
+        ],
+        "/start/getting-started/app-creation-process": [
+            "/docs/start/app-creation-process"
+        ],
+        "/start/test-your-app/community-alphas": [
+            "/docs/start/community-alphas"
+        ],
+        "/start/submit-your-app/custom-installer-for-your-app": [
+            "/docs/start/custom-installer-for-your-app"
+        ],
+        "/start/getting-started/game-compliance": [
+            "/docs/start/game-compliance-guiding-principles"
+        ],
+        "/start/getting-started": [
+            "/docs/start/getting-started"
+        ],
+        "/start/test-your-app/how-to-test-your-app": [
+            "/docs/start/how-to-test-your-app"
+        ],
+        "/start/test-your-app/marketing-checklist": [
+            "/docs/start/marketing-checklist"
+        ],
+        "/start/monetize-with-ads/monetization-overview": [
+            "/docs/start/monetization-overview"
+        ],
+        "/start/test-your-app/product-checklist": [
+            "/docs/start/product-checklist"
+        ],
+        "/start/game-compliance/rainbow-six-siege": [
+            "/docs/start/rainbow-six-siege-compliance"
+        ],
+        "/start/basic-app/components": [
+            "/docs/start/sample-app-components"
+        ],
+        "/start/basic-app/front-app": [
+            "/docs/start/sample-app-front-app"
+        ],
+        "/start/basic-app": [
+            "/docs/start/sample-app-overview",
+            "/docs/start/creating-demo-app"
+        ],
+        "/start/basic-app/ui-components": [
+            "/docs/start/sample-app-ui-components"
+        ],
+        "/start/getting-started/sdk-introduction": [
+            "/docs/start/sdk-introduction"
+        ],
+        "/start/getting-started/submit-app-proposal": [
+            "/docs/start/submit-app-proposal"
+        ],
+        "/start/submit-your-app": [
+            "/docs/start/submit-your-app-to-the-store",
+            "/start/submit-your-app/submit-your-app-to-the-store"
+        ],
+        "/start/monetize-with-subs/subscriptions-flow": [
+            "/docs/start/subscriptions-flow"
+        ],
+        "/start/monetize-with-subs/subscriptions-integration": [
+            "/docs/start/subscriptions-integration"
+        ],
+        "/start/monetize-with-subs/subscriptions-overview": [
+            "/docs/start/subscriptions-overview"
+        ],
+        "/start/monetize-with-subs/subscriptions-request-form": [
+            "/docs/start/subscriptions-request-form"
+        ],
+        "/start/maintain-your-app/support-experience": [
+            "/docs/start/support-your-users"
+        ],
+        "/start/test-your-app/technical-checklist": [
+            "/docs/start/technical-checklist"
+        ],
+        "/": [
+            "/docs/start/thank-you"
+        ],
+        "/start/maintain-your-app/submit-an-app-update": [
+            "/docs/start/update-your-app-status",
+            "/start/maintain-your-app/update-your-app-status",
+            "/docs/start/submit-an-app-update"
+        ],
+        "/start/getting-started/using-dev-tools": [
+            "/docs/start/using-dev-tools"
+        ],
+        "/start/game-compliance/call-of-duty-warzone": [
+            "/docs/start/warzone-compliance"
+        ],
+        "/status/apex-legends": [
+            "/docs/status/apex"
+        ],
+        "/status/counter-strike-global-offensive": [
+            "/docs/status/csgo"
+        ],
+        "/status/dota-2": [
+            "/docs/status/dota2"
+        ],
+        "/status/escape-from-tarkov": [
+            "/docs/status/escape-from-tarkov"
+        ],
+        "/status/eternal-return": [
+            "/docs/status/eternal-return"
+        ],
+        "/status/final-fantasy-xiv": [
+            "/docs/status/ff-xiv"
+        ],
+        "/status/football-manager-2021": [
+            "/docs/status/fm2021"
+        ],
+        "/status/football-manager-2022": [
+            "/docs/status/fm2022"
+        ],
+        "/status/fortnite": [
+            "/docs/status/fortnite"
+        ],
+        "/status/halo-infinite": [
+            "/docs/status/halo-infinite"
+        ],
+        "/status/hearthstone": [
+            "/docs/status/hearthstone"
+        ],
+        "/status/heroes-of-the-storm": [
+            "/docs/status/heroes-of-the-storm"
+        ],
+        "/status/hunt-showdown": [
+            "/docs/status/hunt-showdown"
+        ],
+        "/status/league-of-legends": [
+            "/docs/status/lol"
+        ],
+        "/status/launchers/league-of-legends": [
+            "/docs/status/lol-launcher"
+        ],
+        "/status/legends-of-runeterra": [
+            "/docs/status/lor"
+        ],
+        "/status/minecraft": [
+            "/docs/status/minecraft"
+        ],
+        "/status/magic-the-gathering-arena": [
+            "/docs/status/mtga"
+        ],
+        "/status/new-world": [
+            "/docs/status/new-world"
+        ],
+        "/status/overwatch": [
+            "/docs/status/overwatch"
+        ],
+        "/status": [
+            "/docs/status/auto-chess",
+            "/docs/status/all",
+            "/docs/status/past-incidents"
+        ],
+        "/status/path-of-exile": [
+            "/docs/status/path-of-exile"
+        ],
+        "/status/player-unknowns-battlegrounds": [
+            "/docs/status/pubg"
+        ],
+        "/status/rainbow-six-siege": [
+            "/docs/status/rainbow-six-siege"
+        ],
+        "/status/rocket-league": [
+            "/docs/status/rocket-league"
+        ],
+        "/status/starcraft-2": [
+            "/docs/status/sc2"
+        ],
+        "/status/splitgate-arena-warfare": [
+            "/docs/status/splitgate"
+        ],
+        "/status/teamfight-tactics": [
+            "/docs/status/teamfight-tactics"
+        ],
+        "/status/dota-underlords": [
+            "/docs/status/underlords"
+        ],
+        "/status/valheim": [
+            "/docs/status/valheim"
+        ],
+        "/status/valorant": [
+            "/docs/status/valorant"
+        ],
+        "/status/call-of-duty-vanguard": [
+            "/docs/status/vanguard"
+        ],
+        "/status/warframe": [
+            "/docs/status/warframe"
+        ],
+        "/status/call-of-duty-warzone": [
+            "/docs/status/warzone"
+        ],
+        "/status/world-of-tanks": [
+            "/docs/status/world-of-tanks"
+        ],
+        "/status/world-of-warcraft": [
+            "/docs/status/world-of-warcraft"
+        ],
+        "/status/world-of-warships": [
+            "/docs/status/world-of-warships"
+        ],
+        "/support/contact-us": [
+            "/docs/support/contact-us"
+        ],
+        "/support/report-a-bug": [
+            "/docs/support/create-ticket"
+        ],
+        "/support/developer-client-downloads": [
+            "/docs/support/download-overview"
+        ],
+        "/support/faq": [
+            "/docs/support/FAQ"
+        ],
+        "/support/request-a-feature": [
+            "/docs/support/request-feature"
+        ],
+        "/internal/achievement-rewards/integration": [
+            "/docs/topics/achievement-rewards-integration"
+        ],
+        "/internal/achievement-rewards": [
+            "/docs/topics/achievement-rewards-intro"
+        ],
+        "/internal/websocket-gep/versions/0-0-x/0-0-1": [
+            "/internal/websocket-gep/0-0-1"
+        ],
+        "/topics/integrations/app-analytics": [
+            "/docs/topics/app-analytics"
+        ],
+        "/tools/developers-console/all-applications/release-management": [
+            "/docs/topics/app-channels",
+            "/topics/developers-console/app-channels",
+            "/docs/topics/release-notes",
+            "/topics/developers-console/release-notes",
+            "/docs/topics/submit-a-new-version",
+            "/topics/developers-console/submit-a-new-version",
+            "/docs/topics/submit-for-review",
+            "/topics/developers-console/submit-for-review"
+        ],
+        "/topics/request-a-service/app-marketing-promotions": [
+            "/docs/topics/app-marketing-promotions"
+        ],
+        "/topics/request-a-service/app-recommendations": [
+            "/docs/topics/app-recommendations"
+        ],
+        "/topics/best-practices/app-specific-experience": [
+            "/docs/topics/app-specific-experience"
+        ],
+        "/topics/request-a-service/assets-req-marketing": [
+            "/docs/topics/assets-req-marketing"
+        ],
+        "/topics/best-practices/": [
+            "/docs/topics/best-practices-overview"
+        ],
+        "/tools/ow-cli": [
+            "/docs/topics/cli",
+            "/topics/developers-console/cli",
+            "/docs/topics/dev-console-api",
+            "/internal/dev-console-api"
+        ],
+        "/topics/using-windows-api/communicating-between-windows": [
+            "/docs/topics/communicating-between-windows"
+        ],
+        "/topics/best-practices/communication-guidelines": [
+            "/docs/topics/communication-guidelines"
+        ],
+        "/tools/developers-console/all-applications/crash-reports": [
+            "/docs/topics/crash-reports",
+            "/topics/developers-console/crash-reports"
+        ],
+        "/topics/best-practices/create-download-link": [
+            "/docs/topics/create-download-link"
+        ],
+        "/topics/community-help/creators-content": [
+            "/docs/topics/creators-content"
+        ],
+        "/internal/curseforge-core-terms": [
+            "/docs/topics/curseforge-core-terms"
+        ],
+        "/topics/best-practices/data-persistence": [
+            "/docs/topics/data-persistence"
+        ],
+        "/topics/using-plugins/downloader-plugin": [
+            "/docs/topics/downloader-plugin"
+        ],
+        "/topics/best-practices/electron-migration": [
+            "/docs/topics/electron-migration"
+        ],
+        "/topics/best-practices/enable-dev-tools": [
+            "/docs/topics/enable-dev-tools"
+        ],
+        "/topics/using-events/events-overview": [
+            "/docs/topics/events-overview"
+        ],
+        "/topics/integrations/events-sdk-for-game-developers": [
+            "/docs/topics/events-SDK-for-game-developers"
+        ],
+        "/topics/best-practices/exclusive-mode": [
+            "/docs/topics/exclusive-mode"
+        ],
+        "/topics/best-practices/first-time-user-experience": [
+            "/docs/topics/first-time-user-experience"
+        ],
+        "/topics/best-practices/games-settings": [
+            "/docs/topics/games-settings"
+        ],
+        "/topics/best-practices/hotkeys-best-practices": [
+            "/docs/topics/hotkeys-best-practices"
+        ],
+        "/topics/using-plugins/how-to-use-plugins-in-your-app": [
+            "/docs/topics/how-to-use-plugins-in-your-app"
+        ],
+        "/topics/using-events/how-to-check-events-status-from-app": [
+            "/docs/topics/howto-check-events-status-from-app"
+        ],
+        "/topics/community-help/join-the-community": [
+            "/docs/topics/join-the-community"
+        ],
+        "/topics/best-practices/launch-time-performance": [
+            "/docs/topics/launch-time-performance"
+        ],
+        "/topics/legal/legal-app-terms": [
+            "/docs/topics/legal-app-terms"
+        ],
+        "/topics/legal/legal-developers-terms": [
+            "/docs/topics/legal-developers-terms"
+        ],
+        "/topics/legal/legal-overview": [
+            "/docs/topics/legal-overview"
+        ],
+        "/topics/integrations/login-with-overwolf": [
+            "/docs/topics/login-with-overwolf"
+        ],
+        "/topics/integrations/login-with-twitch": [
+            "/docs/topics/login-with-twitch"
+        ],
+        "/topics/understanding-ow-logs/logs-dxdiag": [
+            "/docs/topics/logs-dxdiag"
+        ],
+        "/topics/understanding-ow-logs/logs-html": [
+            "/docs/topics/logs-html"
+        ],
+        "/topics/understanding-ow-logs/logs-intro": [
+            "/docs/topics/logs-intro"
+        ],
+        "/topics/understanding-ow-logs/logs-obs": [
+            "/docs/topics/logs-obs"
+        ],
+        "/topics/understanding-ow-logs/logs-overwolfperf": [
+            "/docs/topics/logs-overwolfperf"
+        ],
+        "/topics/understanding-ow-logs/logs-trace": [
+            "/docs/topics/logs-trace"
+        ],
+        "/topics/request-a-service/looking-for-group": [
+            "/docs/topics/looking-for-group"
+        ],
+        "/tools/developers-console/all-applications/subscriptions": [
+            "/docs/topics/manage-subscriptions",
+            "/topics/developers-console/manage-subscriptions"
+        ],
+        "/topics/using-plugins/plugins-overview": [
+            "/docs/topics/plugins-overview"
+        ],
+        "/topics/using-plugins/process-manager-plugin": [
+            "/docs/topics/process-manager-plugin"
+        ],
+        "/topics/request-a-service/promoting-your-app": [
+            "/docs/topics/promoting-your-app"
+        ],
+        "/tools/developers-console/all-applications/user-feedback/reviews": [
+            "/docs/topics/rating-and-reviews",
+            "/topics/developers-console/rating-and-reviews"
+        ],
+        "/topics/best-practices/reduce-opk-size": [
+            "/docs/topics/reduce-opk-size"
+        ],
+        "/topics/using-plugins/sample-plugin": [
+            "/docs/topics/sample-plugin"
+        ],
+        "/topics/best-practices/second-monitor": [
+            "/docs/topics/second-monitor"
+        ],
+        "/topics/using-plugins/simple-io-plugin": [
+            "/docs/topics/simple-io-plugin"
+        ],
+        "/topics/community-help/snippets": [
+            "/docs/topics/snippets"
+        ],
+        "/topics/using-plugins/team-speak-plugin": [
+            "/docs/topics/team-speak-plugin"
+        ],
+        "/topics/integrations/twitch-events-sdk-for-game-developers": [
+            "/docs/topics/twitch-events-sdk-for-game-developers"
+        ],
+        "/topics/best-practices/type-definition-file": [
+            "/docs/topics/type-definition-file"
+        ],
+        "/tools/developers-console/all-applications/store-listing": [
+            "/docs/topics/update-store-listing",
+            "/topics/developers-console/update-store-listing"
+        ],
+        "/topics/best-practices/user-flow-and-error-handling": [
+            "/docs/topics/user-flow-and-error-handling"
+        ],
+        "/tools/developers-console/settings/users-and-permissions": [
+            "/docs/topics/users-and-permissions",
+            "/topics/developers-console/users-and-permissions"
+        ],
+        "/topics/using-events": [
+            "/docs/topics/using-events"
+        ],
+        "/topics/using-events/using-events-simulator": [
+            "/docs/topics/using-events-simulator"
+        ],
+        "/topics/using-windows-api/using-overwolf-windows": [
+            "/docs/topics/using-overwolf-windows"
+        ],
+        "/topics/best-practices/using-tab": [
+            "/docs/topics/using-tab"
+        ],
+        "/topics/best-practices/video-capture": [
+            "/docs/topics/video-capture"
+        ],
+        "/topics/community-help/webinars": [
+            "/docs/topics/webinars"
+        ],
+        "/topics/using-windows-api/windows-resolution-size-position": [
+            "/docs/topics/windows-resolution-size-position"
+        ],
+        "/topics/using-windows-api/windows-tips": [
+            "/docs/topics/windows-tips"
+        ],
+        "/topics/using-windows-api/windows-types": [
+            "/docs/topics/windows-types"
+        ],
+        "/topics/using-plugins/writing-your-own-plugin": [
+            "/docs/topics/writing-your-own-plugin"
+        ]
+    },
+    "from": {
+        "/docs/api/auto-highlights": "/api/media/replays/auto-highlights",
+        "/docs/api/changelog": "/api/changelogs",
+        "/docs/api/games-external-apis": "/api/games/external-apis",
+        "/docs/api/launchers-ids": "/api/games/launchers/ids",
+        "/docs/api/manifest-json": "/api/manifest",
+        "/docs/api/overwolf-api-overview": "/api",
+        "/docs/api/overwolf-benchmarking": "/api/deprecated/benchmarking",
+        "/docs/api/overwolf-campaigns-crossapp": "/api/campaigns/crossapp",
+        "/docs/api/overwolf-cryptography": "/api/cryptography",
+        "/docs/api/overwolf-extensions": "/api/extensions",
+        "/docs/api/overwolf-extensions-current": "/api/extensions/current",
+        "/docs/api/overwolf-extensions-io": "/api/extensions/io",
+        "/docs/api/overwolf-extensions-sharedData": "/api/extensions/shared-data",
+        "/docs/api/overwolf-games": "/api/games",
+        "/docs/api/overwolf-games-events": "/api/games/events",
+        "/docs/api/overwolf-games-events-apex-legends": "/api/games/events/apex-legends",
+        "/docs/api/overwolf-games-events-autochess": "/api/games/ids",
+        "/docs/api/games-ids": "/api/games/ids",
+        "/docs/api/overwolf-games-events-csgo": "/api/games/events/counter-strike-global-offensive",
+        "/docs/api/overwolf-games-events-dota2": "/api/games/events/dota-2",
+        "/docs/api/overwolf-games-events-escape-from-tarkov": "/api/games/events/escape-from-tarkov",
+        "/docs/api/overwolf-games-events-eternal-return": "/api/games/events/eternal-return",
+        "/docs/api/overwolf-games-events-ff-xiv": "/api/games/events/final-fantasy-xiv",
+        "/docs/api/overwolf-games-events-fm2021": "/api/games/events/football-manager-2021",
+        "/docs/api/overwolf-games-events-fm2022": "/api/games/events/football-manager-2022",
+        "/docs/api/overwolf-games-events-fortnite": "/api/games/events/fortnite",
+        "/docs/api/overwolf-games-events-halo-infinite": "/api/games/events/halo-infinite",
+        "/docs/api/overwolf-games-events-hearthstone": "/api/games/events/hearthstone",
+        "/docs/api/overwolf-games-events-hots": "/api/games/events/heroes-of-the-storm",
+        "/docs/api/overwolf-games-events-hunt-showdown": "/api/games/events/hunt-showdown",
+        "/docs/api/overwolf-games-events-lol": "/api/games/events/league-of-legends",
+        "/docs/api/overwolf-games-events-lor": "/api/games/events/legends-of-runeterra",
+        "/docs/api/overwolf-games-events-makerking": "/api/games/events/maker-king",
+        "/docs/api/overwolf-games-events-minecraft": "/api/games/events/minecraft",
+        "/docs/api/overwolf-games-events-mtga": "/api/games/events/magic-the-gathering-arena",
+        "/docs/api/overwolf-games-events-new-world": "/api/games/events/new-world",
+        "/docs/api/overwolf-games-events-overwatch": "/api/games/events/overwatch",
+        "/docs/api/overwolf-games-events-path-of-exile": "/api/games/events/path-of-exile",
+        "/docs/api/overwolf-games-events-pubg": "/api/games/events/player-unknowns-battlegrounds",
+        "/docs/api/overwolf-games-events-rainbow-six": "/api/games/events/rainbow-six-siege",
+        "/docs/api/overwolf-games-events-rocket-league": "/api/games/events/rocket-league",
+        "/docs/api/overwolf-games-events-sc2": "/api/games/events/starcraft-2",
+        "/docs/api/overwolf-games-events-splitgate": "/api/games/events/splitgate-arena-warfare",
+        "/docs/api/overwolf-games-events-tft": "/api/games/events/teamfight-tactics",
+        "/docs/api/overwolf-games-events-underlords": "/api/games/events/dota-underlords",
+        "/docs/api/overwolf-games-events-valheim": "/api/games/events/valheim",
+        "/docs/api/overwolf-games-events-valorant": "/api/games/events/valorant",
+        "/docs/api/overwolf-games-events-vanguard": "/api/games/events/call-of-duty-vanguard",
+        "/docs/api/overwolf-games-events-warframe": "/api/games/events/warframe",
+        "/docs/api/overwolf-games-events-warzone": "/api/games/events/call-of-duty-warzone",
+        "/docs/api/overwolf-games-events-wot": "/api/games/events/world-of-tanks",
+        "/docs/api/overwolf-games-events-wow": "/api/games/events/world-of-warcraft",
+        "/docs/api/overwolf-games-events-wows": "/api/games/events/world-of-warships",
+        "/docs/api/overwolf-games-inputTracking": "/api/games/input-tracking",
+        "/docs/api/overwolf-games-launchers": "/api/games/launchers",
+        "/docs/api/overwolf-games-launchers-events": "/api/games/launchers/events",
+        "/docs/api/overwolf-games-launchers-events-lol": "/api/games/launchers/events/league-of-legends",
+        "/docs/api/overwolf-games-tracked": "/api/games/tracked",
+        "/docs/api/overwolf-io": "/api/io",
+        "/docs/api/overwolf-io-paths": "/api/io/paths",
+        "/docs/api/overwolf-log": "/api/deprecated/obsolete/log",
+        "/docs/api/overwolf-logitech": "/api/logitech",
+        "/docs/api/overwolf-logitech-arx": "/api/logitech/arx",
+        "/docs/api/overwolf-logitech-led": "/api/logitech/led",
+        "/docs/api/overwolf-media": "/api/media",
+        "/docs/api/overwolf-media-audio": "/api/deprecated/audio",
+        "/api/media/audio": "/api/deprecated/audio",
+        "/docs/api/overwolf-media-replays": "/api/media/replays",
+        "/docs/api/overwolf-media-videos": "/api/media/videos",
+        "/docs/api/overwolf-notifications": "/api/notifications",
+        "/docs/api/overwolf-os": "/api/os",
+        "/docs/api/overwolf-os-tray": "/api/os/tray",
+        "/docs/api/overwolf-profile": "/api/profile",
+        "/docs/api/overwolf-profile-subscriptions": "/api/profile/subscriptions",
+        "/docs/api/overwolf-profile-subscriptions-inapp": "/api/profile/subscriptions/inapp",
+        "/docs/api/overwolf-settings": "/api/settings",
+        "/docs/api/overwolf-settings-games": "/api/settings/games",
+        "/docs/api/overwolf-settings-hotkeys": "/api/settings/hotkeys",
+        "/docs/api/overwolf-settings-language": "/api/settings/language",
+        "/docs/api/overwolf-social": "/api/social",
+        "/docs/api/overwolf-social-discord": "/api/social/discord",
+        "/docs/api/overwolf-social-gfycat": "/api/social/gfycat",
+        "/docs/api/overwolf-social-reddit": "/api/social/reddit",
+        "/docs/api/overwolf-social-twitter": "/api/social/twitter",
+        "/docs/api/overwolf-social-youtube": "/api/social/youtube",
+        "/docs/api/overwolf-streaming": "/api/streaming",
+        "/docs/api/overwolf-tobii": "/api/deprecated/obsolete/tobii",
+        "/api/deprecated/tobii": "/api/deprecated/obsolete/tobii",
+        "/docs/api/overwolf-utils": "/api/utils",
+        "/docs/api/overwolf-web": "/api/web",
+        "/docs/api/overwolf-web-webserver": "/api/web/webserver",
+        "/docs/api/overwolf-web-websocket": "/api/web/websocket",
+        "/docs/api/overwolf-windows": "/api/windows",
+        "/docs/api/overwolf-windows-mediaPlayerElement": "/api/windows/media-player-element",
+        "/docs/api/validate-your-manifest": "/api/manifest/validate-your-manifest",
+        "/docs/start/add-a-knowledge-base-to-app": "/start/maintain-your-app/add-a-knowledge-base-to-app",
+        "/docs/start/ads-monetization-basics": "/start/monetize-with-ads/ads-monetization-basics",
+        "/docs/start/ads-sdk-interaction": "/start/monetize-with-ads/ads-sdk-interaction",
+        "/docs/start/ads-sdk-options": "/start/monetize-with-ads/ads-sdk-options",
+        "/docs/start/ads-sdk-overview": "/start/monetize-with-ads/ads-sdk-overview",
+        "/docs/start/ads-sdk-versions": "/start/monetize-with-ads/ads-sdk-versions",
+        "/docs/start/app-automation": "/start/test-your-app/app-automation",
+        "/docs/start/app-creation-process": "/start/getting-started/app-creation-process",
+        "/docs/start/community-alphas": "/start/test-your-app/community-alphas",
+        "/docs/start/custom-installer-for-your-app": "/start/submit-your-app/custom-installer-for-your-app",
+        "/docs/start/game-compliance-guiding-principles": "/start/getting-started/game-compliance",
+        "/docs/start/getting-started": "/start/getting-started",
+        "/docs/start/how-to-test-your-app": "/start/test-your-app/how-to-test-your-app",
+        "/docs/start/marketing-checklist": "/start/test-your-app/marketing-checklist",
+        "/docs/start/monetization-overview": "/start/monetize-with-ads/monetization-overview",
+        "/docs/start/product-checklist": "/start/test-your-app/product-checklist",
+        "/docs/start/rainbow-six-siege-compliance": "/start/game-compliance/rainbow-six-siege",
+        "/docs/start/sample-app-components": "/start/basic-app/components",
+        "/docs/start/sample-app-front-app": "/start/basic-app/front-app",
+        "/docs/start/sample-app-overview": "/start/basic-app",
+        "/docs/start/creating-demo-app": "/start/basic-app",
+        "/docs/start/sample-app-ui-components": "/start/basic-app/ui-components",
+        "/docs/start/sdk-introduction": "/start/getting-started/sdk-introduction",
+        "/docs/start/submit-app-proposal": "/start/getting-started/submit-app-proposal",
+        "/docs/start/submit-your-app-to-the-store": "/start/submit-your-app",
+        "/start/submit-your-app/submit-your-app-to-the-store": "/start/submit-your-app",
+        "/docs/start/subscriptions-flow": "/start/monetize-with-subs/subscriptions-flow",
+        "/docs/start/subscriptions-integration": "/start/monetize-with-subs/subscriptions-integration",
+        "/docs/start/subscriptions-overview": "/start/monetize-with-subs/subscriptions-overview",
+        "/docs/start/subscriptions-request-form": "/start/monetize-with-subs/subscriptions-request-form",
+        "/docs/start/support-your-users": "/start/maintain-your-app/support-experience",
+        "/docs/start/technical-checklist": "/start/test-your-app/technical-checklist",
+        "/docs/start/thank-you": "/",
+        "/docs/start/update-your-app-status": "/start/maintain-your-app/submit-an-app-update",
+        "/start/maintain-your-app/update-your-app-status": "/start/maintain-your-app/submit-an-app-update",
+        "/docs/start/submit-an-app-update": "/start/maintain-your-app/submit-an-app-update",
+        "/docs/start/using-dev-tools": "/start/getting-started/using-dev-tools",
+        "/docs/start/warzone-compliance": "/start/game-compliance/call-of-duty-warzone",
+        "/docs/status/apex": "/status/apex-legends",
+        "/docs/status/csgo": "/status/counter-strike-global-offensive",
+        "/docs/status/dota2": "/status/dota-2",
+        "/docs/status/escape-from-tarkov": "/status/escape-from-tarkov",
+        "/docs/status/eternal-return": "/status/eternal-return",
+        "/docs/status/ff-xiv": "/status/final-fantasy-xiv",
+        "/docs/status/fm2021": "/status/football-manager-2021",
+        "/docs/status/fm2022": "/status/football-manager-2022",
+        "/docs/status/fortnite": "/status/fortnite",
+        "/docs/status/halo-infinite": "/status/halo-infinite",
+        "/docs/status/hearthstone": "/status/hearthstone",
+        "/docs/status/heroes-of-the-storm": "/status/heroes-of-the-storm",
+        "/docs/status/hunt-showdown": "/status/hunt-showdown",
+        "/docs/status/lol": "/status/league-of-legends",
+        "/docs/status/lol-launcher": "/status/launchers/league-of-legends",
+        "/docs/status/lor": "/status/legends-of-runeterra",
+        "/docs/status/minecraft": "/status/minecraft",
+        "/docs/status/mtga": "/status/magic-the-gathering-arena",
+        "/docs/status/new-world": "/status/new-world",
+        "/docs/status/overwatch": "/status/overwatch",
+        "/docs/status/auto-chess": "/status",
+        "/docs/status/all": "/status",
+        "/docs/status/past-incidents": "/status",
+        "/docs/status/path-of-exile": "/status/path-of-exile",
+        "/docs/status/pubg": "/status/player-unknowns-battlegrounds",
+        "/docs/status/rainbow-six-siege": "/status/rainbow-six-siege",
+        "/docs/status/rocket-league": "/status/rocket-league",
+        "/docs/status/sc2": "/status/starcraft-2",
+        "/docs/status/splitgate": "/status/splitgate-arena-warfare",
+        "/docs/status/teamfight-tactics": "/status/teamfight-tactics",
+        "/docs/status/underlords": "/status/dota-underlords",
+        "/docs/status/valheim": "/status/valheim",
+        "/docs/status/valorant": "/status/valorant",
+        "/docs/status/vanguard": "/status/call-of-duty-vanguard",
+        "/docs/status/warframe": "/status/warframe",
+        "/docs/status/warzone": "/status/call-of-duty-warzone",
+        "/docs/status/world-of-tanks": "/status/world-of-tanks",
+        "/docs/status/world-of-warcraft": "/status/world-of-warcraft",
+        "/docs/status/world-of-warships": "/status/world-of-warships",
+        "/docs/support/contact-us": "/support/contact-us",
+        "/docs/support/create-ticket": "/support/report-a-bug",
+        "/docs/support/download-overview": "/support/developer-client-downloads",
+        "/docs/support/FAQ": "/support/faq",
+        "/docs/support/request-feature": "/support/request-a-feature",
+        "/docs/topics/achievement-rewards-integration": "/internal/achievement-rewards/integration",
+        "/docs/topics/achievement-rewards-intro": "/internal/achievement-rewards",
+        "/internal/websocket-gep/0-0-1": "/internal/websocket-gep/versions/0-0-x/0-0-1",
+        "/docs/topics/app-analytics": "/topics/integrations/app-analytics",
+        "/docs/topics/app-channels": "/tools/developers-console/all-applications/release-management",
+        "/topics/developers-console/app-channels": "/tools/developers-console/all-applications/release-management",
+        "/docs/topics/release-notes": "/tools/developers-console/all-applications/release-management",
+        "/topics/developers-console/release-notes": "/tools/developers-console/all-applications/release-management",
+        "/docs/topics/submit-a-new-version": "/tools/developers-console/all-applications/release-management",
+        "/topics/developers-console/submit-a-new-version": "/tools/developers-console/all-applications/release-management",
+        "/docs/topics/submit-for-review": "/tools/developers-console/all-applications/release-management",
+        "/topics/developers-console/submit-for-review": "/tools/developers-console/all-applications/release-management",
+        "/docs/topics/app-marketing-promotions": "/topics/request-a-service/app-marketing-promotions",
+        "/docs/topics/app-recommendations": "/topics/request-a-service/app-recommendations",
+        "/docs/topics/app-specific-experience": "/topics/best-practices/app-specific-experience",
+        "/docs/topics/assets-req-marketing": "/topics/request-a-service/assets-req-marketing",
+        "/docs/topics/best-practices-overview": "/topics/best-practices/",
+        "/docs/topics/cli": "/tools/ow-cli",
+        "/topics/developers-console/cli": "/tools/ow-cli",
+        "/docs/topics/dev-console-api": "/tools/ow-cli",
+        "/internal/dev-console-api": "/tools/ow-cli",
+        "/docs/topics/communicating-between-windows": "/topics/using-windows-api/communicating-between-windows",
+        "/docs/topics/communication-guidelines": "/topics/best-practices/communication-guidelines",
+        "/docs/topics/crash-reports": "/tools/developers-console/all-applications/crash-reports",
+        "/topics/developers-console/crash-reports": "/tools/developers-console/all-applications/crash-reports",
+        "/docs/topics/create-download-link": "/topics/best-practices/create-download-link",
+        "/docs/topics/creators-content": "/topics/community-help/creators-content",
+        "/docs/topics/curseforge-core-terms": "/internal/curseforge-core-terms",
+        "/docs/topics/data-persistence": "/topics/best-practices/data-persistence",
+        "/docs/topics/downloader-plugin": "/topics/using-plugins/downloader-plugin",
+        "/docs/topics/electron-migration": "/topics/best-practices/electron-migration",
+        "/docs/topics/enable-dev-tools": "/topics/best-practices/enable-dev-tools",
+        "/docs/topics/events-overview": "/topics/using-events/events-overview",
+        "/docs/topics/events-SDK-for-game-developers": "/topics/integrations/events-sdk-for-game-developers",
+        "/docs/topics/exclusive-mode": "/topics/best-practices/exclusive-mode",
+        "/docs/topics/first-time-user-experience": "/topics/best-practices/first-time-user-experience",
+        "/docs/topics/games-settings": "/topics/best-practices/games-settings",
+        "/docs/topics/hotkeys-best-practices": "/topics/best-practices/hotkeys-best-practices",
+        "/docs/topics/how-to-use-plugins-in-your-app": "/topics/using-plugins/how-to-use-plugins-in-your-app",
+        "/docs/topics/howto-check-events-status-from-app": "/topics/using-events/how-to-check-events-status-from-app",
+        "/docs/topics/join-the-community": "/topics/community-help/join-the-community",
+        "/docs/topics/launch-time-performance": "/topics/best-practices/launch-time-performance",
+        "/docs/topics/legal-app-terms": "/topics/legal/legal-app-terms",
+        "/docs/topics/legal-developers-terms": "/topics/legal/legal-developers-terms",
+        "/docs/topics/legal-overview": "/topics/legal/legal-overview",
+        "/docs/topics/login-with-overwolf": "/topics/integrations/login-with-overwolf",
+        "/docs/topics/login-with-twitch": "/topics/integrations/login-with-twitch",
+        "/docs/topics/logs-dxdiag": "/topics/understanding-ow-logs/logs-dxdiag",
+        "/docs/topics/logs-html": "/topics/understanding-ow-logs/logs-html",
+        "/docs/topics/logs-intro": "/topics/understanding-ow-logs/logs-intro",
+        "/docs/topics/logs-obs": "/topics/understanding-ow-logs/logs-obs",
+        "/docs/topics/logs-overwolfperf": "/topics/understanding-ow-logs/logs-overwolfperf",
+        "/docs/topics/logs-trace": "/topics/understanding-ow-logs/logs-trace",
+        "/docs/topics/looking-for-group": "/topics/request-a-service/looking-for-group",
+        "/docs/topics/manage-subscriptions": "/tools/developers-console/all-applications/subscriptions",
+        "/topics/developers-console/manage-subscriptions": "/tools/developers-console/all-applications/subscriptions",
+        "/docs/topics/plugins-overview": "/topics/using-plugins/plugins-overview",
+        "/docs/topics/process-manager-plugin": "/topics/using-plugins/process-manager-plugin",
+        "/docs/topics/promoting-your-app": "/topics/request-a-service/promoting-your-app",
+        "/docs/topics/rating-and-reviews": "/tools/developers-console/all-applications/user-feedback/reviews",
+        "/topics/developers-console/rating-and-reviews": "/tools/developers-console/all-applications/user-feedback/reviews",
+        "/docs/topics/reduce-opk-size": "/topics/best-practices/reduce-opk-size",
+        "/docs/topics/sample-plugin": "/topics/using-plugins/sample-plugin",
+        "/docs/topics/second-monitor": "/topics/best-practices/second-monitor",
+        "/docs/topics/simple-io-plugin": "/topics/using-plugins/simple-io-plugin",
+        "/docs/topics/snippets": "/topics/community-help/snippets",
+        "/docs/topics/team-speak-plugin": "/topics/using-plugins/team-speak-plugin",
+        "/docs/topics/twitch-events-sdk-for-game-developers": "/topics/integrations/twitch-events-sdk-for-game-developers",
+        "/docs/topics/type-definition-file": "/topics/best-practices/type-definition-file",
+        "/docs/topics/update-store-listing": "/tools/developers-console/all-applications/store-listing",
+        "/topics/developers-console/update-store-listing": "/tools/developers-console/all-applications/store-listing",
+        "/docs/topics/user-flow-and-error-handling": "/topics/best-practices/user-flow-and-error-handling",
+        "/docs/topics/users-and-permissions": "/tools/developers-console/settings/users-and-permissions",
+        "/topics/developers-console/users-and-permissions": "/tools/developers-console/settings/users-and-permissions",
+        "/docs/topics/using-events": "/topics/using-events",
+        "/docs/topics/using-events-simulator": "/topics/using-events/using-events-simulator",
+        "/docs/topics/using-overwolf-windows": "/topics/using-windows-api/using-overwolf-windows",
+        "/docs/topics/using-tab": "/topics/best-practices/using-tab",
+        "/docs/topics/video-capture": "/topics/best-practices/video-capture",
+        "/docs/topics/webinars": "/topics/community-help/webinars",
+        "/docs/topics/windows-resolution-size-position": "/topics/using-windows-api/windows-resolution-size-position",
+        "/docs/topics/windows-tips": "/topics/using-windows-api/windows-tips",
+        "/docs/topics/windows-types": "/topics/using-windows-api/windows-types",
+        "/docs/topics/writing-your-own-plugin": "/topics/using-plugins/writing-your-own-plugin"
+    }
+}

@@ -1,0 +1,4 @@
+label: '0-0-x'
+customProps:
+  overwolf_platform: true
+  electron_platform: false

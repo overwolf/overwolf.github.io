@@ -1,0 +1,5 @@
+position: 10000
+label: 'Deprecated'
+customProps:
+  overwolf_platform: true
+  electron_platform: false

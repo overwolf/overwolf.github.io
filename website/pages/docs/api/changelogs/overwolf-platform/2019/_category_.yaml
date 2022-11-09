@@ -1,0 +1,5 @@
+position: -2019
+label: '2019'
+customProps:
+  overwolf_platform: true
+  electron_platform: false
