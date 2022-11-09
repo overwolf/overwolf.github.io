@@ -1,0 +1,37 @@
+---
+id: league-of-legends
+image: "/img/embed/getting-started.jpg"
+title: "League of Legends Game Compliance Guidelines"
+sidebar_label: "League of Legends"
+sidebar_custom_props:
+  overwolf_platform: true
+  electron_platform: false
+---
+
+<GameInfo gameID={5426} showCompliance={false} showDocs={true}/>
+
+Competitive integrity is one of our core values, and we work tirelessly to enforce this value, both in-house and with the cooperation of game developers.
+
+## Riot Games app approval
+
+If you wish to integrate your app with any of Riot’s games,
+you are required to seek their approval through their 3rd party [application process](https://developer.riotgames.com/docs/portal#_getting-started).
+
+:::tip
+These guidelines hold even if you do not intend to use the Riot API itself.
+Do note that apps which reach the publication phase and do not yet possess a Riot approval, will be asked to provide one before proceeding.
+:::
+
+## Champion Select Anonymity
+
+Riot Games is working to prevent metagaming and queue dodging (among other things). As such apps should make sure that
+Summoner Names in `Ranked Solo/Duo` champion select should be obfuscated. More specifically:
+- All instances of non-party Summoner Names in Champion Select should be replaced with `Ally #` (`Ally 1`, `Ally 2` and so on). This includes:
+    - In-lobby text chat.
+    - Summoner names displayed inside the draft area.
+- Player designations should be consistent for all players in the lobby. (`Ally 1` should refer to the same player on all clients).
+
+Do note that this only applies during Champion Select, and only to players who are not a part of your party. More specifically:
+- Your own name is not anonymous to yourself.
+- Players who queued in the same party are de-anonymized to each other.
+- Once in the loading screen, players will be able to see summoner names.
