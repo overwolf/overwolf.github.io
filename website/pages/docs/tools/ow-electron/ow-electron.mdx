@@ -2,7 +2,6 @@
 id: ow-electron
 image: "/img/embed/dev-tools.jpg"
 title: ow-electron
-draft: true
 sidebar_custom_props:
   overwolf_platform: false
   electron_platform: true
@@ -10,65 +9,6 @@ sidebar_custom_props:
 
 ow-electron is a solution built on top of [electron](https://www.electronjs.org/), aimed at allowing electron apps access to Overwolf APIs.
 
-- [@overwolf/ow-electron](https://www.npmjs.com/package/@overwolf/ow-electron) is a package based on the
-[electron](https://www.npmjs.com/package/electron) package, adding several new features to it.
-- [@overwolf/ow-electron-builder](https://www.npmjs.com/package/@overwolf/ow-electron-builder) is a package based on the 
-[electron-builder](https://www.npmjs.com/package/electron-builder) package, which supports building ow-electron apps.
-- [@overwolf/electron-is-overwolf](https://www.npmjs.com/package/@overwolf/electron-is-overwolf) - similar to the
-[electron-is-dev](https://www.npmjs.com/package/electron-is-dev) package, allows your app to check whether it's currently running as ow-electron, or as a non-overwolf electron app.
+import ReadMe from "./_readme.mdx"
 
-There is no problem with running both ow-electron and electron side-by-side on the same project. In order to run your app with ow-electron,
-you only need to add new start and build scripts in your package.json file:
-
-import StartAndBuild from '../../api/electron/package/_build-and-start.mdx'
-
-<StartAndBuild/>
-
-## Unique App ID
-
-import AppAndAuthorName from '../../api/electron/package/_app-and-author-name.mdx'
-
-<AppAndAuthorName/>
-
-Unique app ids are used for ads optimizations, as well as for optional [anonymous analytics](#anonymous-analytics) reports that you may review on our developer's console.
-
-:::note Referring To App ID In Your app
-Once the `app.whenReady` promise resolves, your app's uid will be available, using the `OVERWOLF_APP_UID` environment variable (`process.env.OVERWOLF_APP_UID`).
-However, note that if you try to access it before the app is ready, the variable simply won't exist.
-:::
-
-## The owadview tag
-
-import OverwolfAdView from './overwolf-ad-view/_tag.mdx'
-
-<OverwolfAdView/>
-
-## Anonymous Analytics
-
-In order to generate usage reports for your ow-electron app, we collect a small number of anonymous analytics (such as when the app is launched,
-and when a certain app's window is shown).
-
-You can disable these analytics with the following piece of code:
-
-```js
-import { app } from 'electron';
-
-app.overwolf.disableAnonymousAnalytics();
-
-...
-
-app.whenReady().then(...)
-```
-
-:::note Disabling Analytics
-App analytics are disabled on a per-session basis. If you wish to completely disable them, you must do so before every app start, when initailizing your app.
-:::
-
-## Consent Management Platform (CMP)
-
-
-import CMPIntro from "./consent-management-platform/_introduction.mdx"
-
-<CMPIntro/>
-
-For more infromation about the CMP and how to work with it, refer to [Consent-Management-Platform](ow-electron/consent-management-platform).
+<ReadMe/>
