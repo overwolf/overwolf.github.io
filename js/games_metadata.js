@@ -148,6 +148,7 @@ const GamesMetaData = {
     id: 5426,
     launcherID: 10902,
     path: "/status/league-of-legends",
+    compliance: "/start/game-compliance/league-of-legends",
     docs: "/api/games/events/league-of-legends",
     iconUrl: "/img/games-logos/league-of-legends.png",
     iconLargeUrl: "/img/games-logos/large/league-of-legends.png",
@@ -156,6 +157,7 @@ const GamesMetaData = {
   10902: {
     id: 10902,
     path: "/status/launchers/league-of-legends",
+    compliance: "/start/game-compliance/league-of-legends",
     docs: "/api/games/launchers/events/league-of-legends",
     iconUrl: "/img/games-logos/launchers/league-of-legends.png",
     iconLargeUrl: "/img/games-logos/large/launchers/league-of-legends.png",
