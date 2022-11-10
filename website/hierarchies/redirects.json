@@ -1204,10 +1204,6 @@
     "from": "/internal/tools/consent-management-platform"
   },
   {
-    "to": "/tools/ow-electron/package",
-    "from": "/internal/tools/ow-electron/package"
-  },
-  {
     "to": "/tools/ow-electron/overwolf-ad-view",
     "from": "/internal/tools/ow-electron/overwolf-ad-view"
   }
