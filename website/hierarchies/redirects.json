@@ -1194,5 +1194,21 @@
   {
     "to": "/topics/using-plugins/writing-your-own-plugin",
     "from": "/docs/topics/writing-your-own-plugin"
+  },
+  {
+    "to": "/tools/ow-electron",
+    "from": "internal/tools/ow-electron"
+  },
+  {
+    "to": "/tools/ow-electron/consent-management-platform",
+    "from": "internal/tools/consent-management-platform"
+  },
+  {
+    "to": "/tools/ow-electron/package",
+    "from": "internal/tools/ow-electron/package"
+  },
+  {
+    "to": "/tools/ow-electron/overwolf-ad-view",
+    "from": "internal/tools/ow-electron/overwolf-ad-view"
   }
 ]
