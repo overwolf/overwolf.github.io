@@ -11,5 +11,8 @@ await app.overwolf.isCMPRequired();
 > Opens the built-in CMP window.
 
 ```js
-app.overwolf.openCMPWindow();
+app.overwolf.openCMPWindow({
+    // defaults to purposes if not defined
+    tab?: ['purposes' | 'features' | 'vendors']
+});
 ```
