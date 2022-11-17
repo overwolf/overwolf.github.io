@@ -15,6 +15,7 @@ Please read all the info about hotkeys and how to use them in our [hotkeys best 
 
 ## Methods Reference
 
+* [overwolf.settings.hotkeys.update()](#updatehotkey-callback)
 * [overwolf.settings.hotkeys.get()](#getcallback)
 * [overwolf.settings.hotkeys.assign()](#assignhotkey-callback)
 * [overwolf.settings.hotkeys.unassign()](#unassignhotkey-callback)
@@ -32,9 +33,28 @@ Please read all the info about hotkeys and how to use them in our [hotkeys best 
 * [overwolf.settings.hotkeys.OnHoldEvent](#onholdevent-object) Object
 * [overwolf.settings.hotkeys.OnPressedEvent](#onpressedevent-object) Object
 * [overwolf.settings.hotkeys.OnChangedEvent](#onchangedevent-object) Object
+* [overwolf.settings.hotkeys.UpdateHotkeyObject](#updatehotkeyobject-object) Object
 * [overwolf.settings.hotkeys.AssignHotkeyObject](#assignhotkeyobject-object) Object
 * [overwolf.settings.hotkeys.UnassignHotkeyObject](#unassignhotkeyobject-object) Object
 * [overwolf.settings.hotkeys.HotkeyModifiers](#hotkeymodifiers-object) Object
+
+
+
+## update(hotkey, callback)
+#### Version added: 0.208
+#### Permissions required: Hotkeys
+
+> Update a hotkey for the current extension.
+
+#### Notes
+* You can only update hotkeys that pre-defined in your manifest.
+  Please read all the info in our [hotkeys best practice](/topics/best-practices/hotkeys-best-practices#set-through-the-manifest) guide.
+
+Parameter     | Type                  | Description                                                             |
+------------- | ----------------------| ----------------------------------------------------------------------- |
+hotkey        | [UpdateHotkeyObject](#updatehotkeyobject-object) object    | The hotkey to update       |
+callback      | (Result) => void      | Reports success or failure                                              |
+
 
 ## assign(hotkey, callback)
 #### Version added: 0.160
@@ -324,6 +344,18 @@ binding       |  string                                                         
    "binding":"Shift+F4" //the new hotkey
 }
 ```
+
+## AssignHotkeyObject Object
+#### Version added: 0.208
+
+> Container for updated hotkey properties.
+
+Parameter       | Type                       | Description             |
+----------------| ---------------------------| ----------------------- |
+ name           | string                     | Name of the hotkey                        |
+ gameId         | number                     | Optional id of the game the hotkey is for |
+ customModifierKeyCode | number              | Optional code for the optional custom modifier key used for this key |
+ isPassThrough  | boolean                    | Optional new value for whether or not the keybind should allow passthrough |
 
 ## AssignHotkeyObject Object
 #### Version added: 0.160

@@ -127,7 +127,7 @@ Note that not all flags are mandatory - we included all available flags for docu
         //hosting app flexible data
         "service_providers": {"nafihghfcpikebhfhdhljejkcifgbdahdhngepfb": {"whatever": "value"}},
         //Additional setting for developers (only when the app is in dev mode)
-        "<a id="developer-manifest" href="#developer-game-settings">developer": {
+        "developer": {
                 //Enable auto App reloading when detecting local files changes.True by Default
                 "enable_auto_refresh": true,
                 //Reload delay (in ms) when detecting file changes (for multiple change)default is 1000 (1 second)
@@ -246,7 +246,7 @@ Note that not all flags are mandatory - we included all available flags for docu
         "launch_events": [{"event": "GameLaunch", "event_data":{"game_ids": [1136]}, "start_minimized": true}],
         "disable_dt": false,
         "service_providers": {"nafihghfcpikebhfhdhljejkcifgbdahdhngepfb": {"whatever": "value"}},
-        "<a id="developer-manifest" href="#developer-game-settings">developer": {
+        "developer": {
                 "enable_auto_refresh": true,
                 "reload_delay": 1000,
                 "filter": "*.json;*.html"
@@ -567,6 +567,7 @@ The map between the hotkey feature name and its settings:
 | action-type | enum   |  Defines the behavior of the hotkey: **["toggle", "custom"]**                   | 0.78  |
 | default     | string |  The default key combination.                                                        | 0.78  |
 | passthrough | bool   |  The hotkey will not block keys from the game.                                       | 0.78  |
+| custom_modifier_key | bool   |  Optional arbitrary modifier key for this keybind                                      | 0.208  |
 | hold        | bool   |  Defines whether this hotkey is meant to invoke an action while being held.          | 0.142 |
 
 Example code:
@@ -578,6 +579,7 @@ Example code:
         "action-type": "custom",
         "default": "Shift+F9",
         "passthrough": true,
+        "custom_modifier_key": 192,
         "hold": true
     },
     "save_YourAppName": {

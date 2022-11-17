@@ -19,8 +19,13 @@ sidebar_custom_props:
 ### Platform
 - App [`process_name`](/api/manifest#process_name) now defaults to the app's [`name`](/api/manifest#meta-name).
 - Enabled the CSS flag [`--aspect-ratio`](https://developer.mozilla.org/en-US/docs/Web/CSS/aspect-ratio) as experimental.
+- Added the [`custom_modifier_key`](/api/manifest#hotkeys-object) property to keybinds, allowing keybinds to utilize an extra, arbitrary, modifier key.
 
 ### API
+- New API - [`overwolf.settings.hotkeys.update()`](/api/settings/hotkeys#updatehotkey-callback):
+    - Allows an app to update certain properties of keybinds during runtime. Specifically:
+        - `isPassThrough` - Whether or not this keybind should allow passthrough.
+        - `customModifierKeyCode` - This keybind's (optional) arbitrary modifier key.
 - New API - [`changeIcon`](/api/os/tray#changeiconpath-callback), [`restoreIcon`](/api/os/tray#restoreicon-callback):
     - Allows an app to temporarily change its tray icon (repeatedly). Using [`restoreIcon`](/api/os/tray#restoreicon-callback) will restore it back to its original [`tray_icon`](/api/manifest#meta-tray_icon).
     - **Requires a tray item to already be created ([`overwolf.os.tray.setMenu()`](/api/os/tray#setmenumenu-callback))!**
@@ -39,3 +44,4 @@ sidebar_custom_props:
 - Fixed an issue where [`overwolf.utils.openFilePicker()`](/api/utils/#openfilepickerfilter-initialpath-callback) would throw an error when passed an  `initialPath`.
 - Fixed an issue where pressing a `press` hotkey would interrupt an active `hold` hotkey, resulting in `state: "up"` never firing.
 - When an app is un-installed, its individual app channel setting will also get removed.
+- Fixed an issue where lifting a held hotkey was not properly detected if its modifier key was released first.
