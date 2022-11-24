@@ -21,47 +21,31 @@ var __spreadArray = (this && this.__spreadArray) || function (to, from, pack) {
     return to.concat(ar || Array.prototype.slice.call(from));
 };
 exports.__esModule = true;
-exports.DefaultTaggerOptions = void 0;
+exports.DefaultVariableOptions = void 0;
 var visit = require('unist-util-visit');
 var NEWLINE = '\n';
-// Default tagger options
-exports.DefaultTaggerOptions = {
-    tag: '@@',
-    keywords: [
-        'Function',
-        'Object',
-        'Enum',
-        'Event',
-        'GameEvent',
-        'InfoUpdate',
-        'Endpoint'
-    ]
+exports.DefaultVariableOptions = {
+    tag: '!$_var'
 };
-// Cleaner method for the options passed to this plugin, to ensure that anything left empty is filled by the default options
 function normalizeOptions(options) {
-    return __assign(__assign({}, exports.DefaultTaggerOptions), options);
+    return __assign(__assign({}, exports.DefaultVariableOptions), options);
 }
-// Identifier for this node type in the AST
-var taggerNodeType = "Tagger";
-// Plugin method
-var codeComponentTagger = function plugin(optionsInput) {
+// This string value does not matter much
+// It is ignored because nodes are using hName/hProperties coming from HAST
+var varsNodeType = "Var";
+var variablesReplacer = function plugin(optionsInput) {
     if (optionsInput === void 0) { optionsInput = {}; }
-    // Clean up options
     var options = normalizeOptions(optionsInput);
-    // Bundle up keywords as a list of a|b|c|d for the regex
-    var keywords = Object.values(options.keywords).join('|');
-    // Create entry regex, to detect when we should enter a block
-    var regex = new RegExp("".concat(options.tag, "(").concat(keywords, ")(\\s*)?\n"));
-    // Create exit regex, to detect when we should close a block
-    var escapeTag = new RegExp("\\".concat(options.tag), 'g');
-    // The tokenizer is called on blocks to determine if there is a tag
+    var regex = new RegExp("".concat(options.tag, "(\\w+)"));
+    // The tokenizer is called on blocks to determine if there is an admonition
+    // present and create tags for it
     function blockTokenizer(eat, value, silent) {
-        // Stop if the section does not start with the tag
+        // Stop if no match or match does not start at beginning of line
         var match = regex.exec(value);
         if (!match || match.index !== 0) {
             return false;
         }
-        // If we got here, and we're running in silent, return that there IS a tag
+        // If silent return the match
         if (silent) {
             return true;
         }
@@ -72,32 +56,19 @@ var codeComponentTagger = function plugin(optionsInput) {
         var newValue = value;
         // consume lines until a closing tag
         var idx = newValue.indexOf(NEWLINE);
-        while (idx !== -1) {
-            // grab this line and eat it
-            var next = newValue.indexOf(NEWLINE, idx + 1);
-            var line = next !== -1 ? newValue.slice(idx + 1, next) : newValue.slice(idx + 1);
-            food.push(line);
-            newValue = newValue.slice(idx + 1);
-            // the closing tag is NOT part of the content
-            if (line.startsWith(options.tag)) {
-                break;
-            }
-            content.push(line);
-            idx = newValue.indexOf(NEWLINE);
-        }
         // consume the processed tag and replace escape sequences
-        var contentString = content.join(NEWLINE).replace(escapeTag, options.tag);
+        var contentString = content.join(NEWLINE);
         var add = eat(opening + food.join(NEWLINE));
         // parse the content in block mode
         var exit = this.enterBlock();
         var contentNodes = this.tokenizeBlock(contentString, now);
         exit();
         var element = {
-            type: taggerNodeType,
+            type: varsNodeType,
             data: {
                 // hName/hProperties come from HAST
                 // See https://github.com/syntax-tree/mdast-util-to-hast#fields-on-nodes
-                hName: taggerNodeType,
+                hName: varsNodeType,
                 hProperties: {
                     type: keyword
                 }
@@ -108,8 +79,17 @@ var codeComponentTagger = function plugin(optionsInput) {
     }
     // add tokenizer to parser after fenced code blocks
     var Parser = this.Parser.prototype;
-    Parser.blockTokenizers[taggerNodeType] = blockTokenizer;
-    Parser.blockMethods.splice(Parser.blockMethods.indexOf("list"), 0, taggerNodeType);
-    return;
+    Parser.inlineTokenizers[varsNodeType] = blockTokenizer;
+    Parser.inlineMethods.push(varsNodeType);
+    return function (root) {
+        // escape everything except admonitionHTML nodes
+        visit(root, function (node) {
+            return (node === null || node === void 0 ? void 0 : node.type) !== varsNodeType;
+        }, function (node) {
+            if (node.value) {
+                // node.value = node.value.replace(escapeTag, options.tag);
+            }
+        });
+    };
 };
-exports["default"] = codeComponentTagger;
+exports["default"] = variablesReplacer;
