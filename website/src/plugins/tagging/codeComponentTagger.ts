@@ -1,16 +1,16 @@
 // This code is loosely based on https://github.com/facebook/docusaurus/blob/main/packages/docusaurus-mdx-loader/src/remark/admonitions/index.ts
 
-const visit = require('unist-util-visit');
 import type {Transformer, Processor, Plugin} from 'unified';
-import type {Literal} from 'mdast';
 
 const NEWLINE = '\n';
 
+// Definition of supported tagger options
 export type TaggerOptions = {
   tag: string;
   keywords: string[];
 };
 
+// Default tagger options
 export const DefaultTaggerOptions: TaggerOptions = {
   tag: '@@',
   keywords: [
@@ -19,39 +19,44 @@ export const DefaultTaggerOptions: TaggerOptions = {
     'Enum',
     'Event',
     'GameEvent',
-    'InfoUpdate'
+    'InfoUpdate',
+    'Endpoint'
   ],
 };
 
+// Clean-up method for the options passed to this plugin, to ensure that anything left empty is filled by the default options
 function normalizeOptions(
   options: Partial<TaggerOptions>,
 ): TaggerOptions {
   return {...DefaultTaggerOptions, ...options};
 }
 
-// This string value does not matter much
-// It is ignored because nodes are using hName/hProperties coming from HAST
+// Identifier for this node type in the AST
 const taggerNodeType = "Tagger";
 
+// Plugin method
 const codeComponentTagger: Plugin = function plugin(
   this: Processor,
   optionsInput: Partial<TaggerOptions> = {},
 ): Transformer {
+  // Clean up options
   const options = normalizeOptions(optionsInput);
 
+  // Bundle up keywords as a list of a|b|c|d for the regex
   const keywords = Object.values(options.keywords).join('|');
+  // Create entry regex, to detect when we should enter a block
   const regex = new RegExp(`${options.tag}(${keywords})(\\s*)?\n`);
+  // Create exit regex, to detect when we should close a block
   const escapeTag = new RegExp(`\\${options.tag}`, 'g');
 
-  // The tokenizer is called on blocks to determine if there is an admonition
-  // present and create tags for it
+  // The tokenizer is called on blocks to determine if there is a tag
   function blockTokenizer(this: any, eat: any, value: string, silent: boolean) {
-    // Stop if no match or match does not start at beginning of line
+    // Stop if the section does not start with the tag
     const match = regex.exec(value);
     if (!match || match.index !== 0) {
       return false;
     }
-    // If silent return the match
+    // If we got here, and we're running in silent, return that there IS a tag
     if (silent) {
       return true;
     }
@@ -110,26 +115,10 @@ const codeComponentTagger: Plugin = function plugin(
 
   // add tokenizer to parser after fenced code blocks
   const Parser = this.Parser.prototype;
-  Parser.blockTokenizers.Tagger = blockTokenizer;
-  Parser.blockMethods.splice(
-    Parser.blockMethods.indexOf('admonition') + 1,
-    0,
-    taggerNodeType,
-  );
+  Parser.blockTokenizers[taggerNodeType] = blockTokenizer;
+  Parser.blockMethods.splice(Parser.blockMethods.indexOf("list"), 0, taggerNodeType);
 
-  return (root) => {
-    // escape everything except admonitionHTML nodes
-    visit(
-      root,
-      (node: unknown): node is Literal =>
-        (node as Literal | undefined)?.type !== taggerNodeType,
-      (node: Literal) => {
-        if (node.value) {
-          node.value = node.value.replace(escapeTag, options.tag);
-        }
-      },
-    );
-  };
+  return;
 };
 
 export default codeComponentTagger;

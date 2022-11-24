@@ -11,7 +11,7 @@ export type VariableOptions = {
 };
 
 export const DefaultVariableOptions: VariableOptions = {
-  tag: '!$'
+  tag: '!$_var'
 };
 
 function normalizeOptions(
@@ -85,26 +85,10 @@ const variablesReplacer: Plugin = function plugin(
 
   // add tokenizer to parser after fenced code blocks
   const Parser = this.Parser.prototype;
-  Parser.blockTokenizers.Vars = blockTokenizer;
-  Parser.blockMethods.splice(
-    Parser.blockMethods.indexOf('Tagger') + 1,
-    0,
-    varsNodeType,
-  );
+  Parser.inlineTokenizers[varsNodeType] = blockTokenizer;
+  Parser.inlineMethods.push(varsNodeType);
 
-  return (root) => {
-    // escape everything except admonitionHTML nodes
-    visit(
-      root,
-      (node: unknown): node is Literal =>
-        (node as Literal | undefined)?.type !== varsNodeType,
-      (node: Literal) => {
-        if (node.value) {
-          node.value = node.value.replace(escapeTag, options.tag);
-        }
-      },
-    );
-  };
+  return;
 };
 
 export default variablesReplacer;
