@@ -1,7 +1,8 @@
 // loads the sidebars override file
 
-const sidebarOverrides = require("./hierarchies/sidebaroverrides.json")
-
+const sidebarOverrides = require("./hierarchies/sidebaroverrides.json");
+const path = require('path');
+console.log(path.resolve(__dirname, "pages/docs"));
 /* this file currently supports the following schema:
 
 {
@@ -240,7 +241,8 @@ async function config() {
         {
           id: 'GTM-NQD72PT',
         }
-      ]],
+      ],
+    ],
     presets: [
       [
         "@docusaurus/preset-classic",

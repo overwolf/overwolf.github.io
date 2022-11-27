@@ -52,6 +52,7 @@
   },
   "packageManager": "yarn@3.2.4",
   "resolutions": {
-    "@docusaurus/plugin-content-docs@2.1.0": "patch:@docusaurus/plugin-content-docs@npm%3A2.1.0#./.yarn/patches/@docusaurus-plugin-content-docs-npm-2.1.0-e33a6bac60.patch"
+    "@docusaurus/plugin-content-docs@2.1.0": "patch:@docusaurus/plugin-content-docs@npm%3A2.1.0#./.yarn/patches/@docusaurus-plugin-content-docs-npm-2.1.0-e33a6bac60.patch",
+    "docusaurus-plugin-module-alias@^0.0.2": "patch:docusaurus-plugin-module-alias@npm%3A0.0.2#./.yarn/patches/docusaurus-plugin-module-alias-npm-0.0.2-6685246d76.patch"
   }
 }
