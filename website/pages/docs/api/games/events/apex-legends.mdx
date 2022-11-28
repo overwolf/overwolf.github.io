@@ -84,7 +84,7 @@ Data Example:
 Data Example:
 
 ```json
-{"info":{"me":{"ultimate_cooldown":"{"ultimate_cooldown":"20"}"}},"feature":"me"}
+{"info":{"me":{"ultimate_cooldown":"{\"ultimate_cooldown\":\"15\"}"}},"feature":"me"}
 ```
 
 ## `match_info`
@@ -102,7 +102,7 @@ tabs            | match_info | The current amount of squads, players, cash, and 
 Data Example:
 
 ```json
-{"info":{"match_info":{"game_mode":"#PL_CAN_TRIO"}},"feature":"match_info"}
+{"info":{"match_info":{"game_mode":"#PL_TRIO"}},"feature":"match_info"}
 ```
 Possible values:
 
@@ -168,17 +168,18 @@ key          | Category    | Values                                             
 ------------ | ------------| ----------------------------------------------------------------------------------------------------------- | ------- | ------------- | 
 teammate_X   | match_info  | This feature provides the list of your squad members.                                                       |         |  128.0       |
 legendSelect_X| match_info | The name of the legend & order of selection for every member in the team, including noting who the jump-master is. |         |  128.0       |
-team_info| match_info | The current status of the local player’s team. |         |  128.0       |
+
+| match_info | The current status of the local player’s team. |         |  128.0       |
 
 #### *teammate_X* notes
 
 Each squad member joining the game will be reported in the following way: 
 
 ```json
-{"info":{"match_info":{"teammate_0":"{"name":"Sh4rgaas","state":"alive"}"}},"feature":"team"}
+{"info":{"match_info":{"teammate_0":"{\"name\":\"JacksAtWork\",\"state\":\"knocked_out\"}"}},"feature":"team"}
 ```
 
-As  youcan see, this object includes:
+As you can see, this object includes:
 
 * `player` – Player name
 * `state` – alive/death/knocked out
@@ -196,7 +197,7 @@ Every team member, including the jump-master will be reported in the following w
 The current status of the local player’s team ("active" or "eliminated").
 
 ```json
-{"team_state":"active"}
+{"info":{"match_info":{"team_info":"{\"team_state\":\"active\"}"}},"feature":"team"}
 ```
 
 As you can see, this object includes:
@@ -218,7 +219,7 @@ roster_XX  | match_info  | Provides the entire list of players in a match (~60 p
 Each player joining the game will be reported in the following way:
 
 ```json
-{"info":{"match_info":{"roster_13":"{"name":"ilgaru88","isTeammate":true,"is_local":1,"team_id":12,"platform_hw":2,"platform_sw":2,"state":"alive"}"}},"feature":"roster"}
+{"info":{"match_info":{"roster_47":"{\"name\":\"JacksAtWork\",\"isTeammate\":true,\"team_id\":12,\"platform_hw\":2,\"platform_sw\":7,\"state\":\"knocked_out\",\"is_local\":\"1\"}"}},"feature":"roster"}
 ```
 
 As you can see, this object includes:
