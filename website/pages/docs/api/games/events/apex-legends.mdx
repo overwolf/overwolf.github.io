@@ -312,7 +312,7 @@ Note that the game does not count damage that is inflicted on Armor, only Health
 #### Event data example
 
 ```json
-{"info":{"me":{"totalDamageDealt":668}},"feature":"damage"}
+{"info":{"me":{"totalDamageDealt":"115"}},"feature":"damage"}
 ```
 
 ### Events
@@ -334,7 +334,7 @@ The following properties are provided:
 #### Event data example
 
 ```json
-{"targetName": "Fortiziak","damageAmount": "25.000000","armor": "true","headshot": "true"}
+{"events":[{"name":"damage","data":"{\r\n  \"targetName\": \"TMW_JayJay\",\r\n  \"damageAmount\": \"15.000000\",\r\n  \"armor\": \"true\",\r\n  \"headshot\": \"false\"\r\n}"}]}
 ```
 
 ## `inventory`
@@ -352,7 +352,7 @@ inUse | me   | Items <b>currently used</b> by the local player.<br></br>Example:
 Data Example:
 
 ```json
-{"info":{"me":{"weapons":"{"weapon0":"P2020"}"}},"feature":"inventory"}
+{"info":{"me":{"weapons":"{\"weapon0\":\"R-99\",\"weapon1\":\"Melee\"}"}},"feature":"inventory"}
 ```
 
 #### *inUse* note
@@ -360,7 +360,7 @@ Data Example:
 Data Example:
 
 ```json
-{"info":{"me":{"inUse":"{"inUse":"R-99"}"}},"feature":"inventory"}
+{"info":{"me":{"inUse":"{\"inUse\":\"R-99\"}"}},"feature":"inventory"}
 ```
 
 ## `kill`
