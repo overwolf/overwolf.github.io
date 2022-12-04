@@ -95,7 +95,6 @@ key               | Category    | Values                    | Notes             
 ----------------- | ------------| ------------------------- | --------------------- | ------------- |
 act   | match_info  | The current played act|See [notes](#act-note)|  204.0   |
 item_x   | match_info  | List of owned items |See [notes](#item_x-note)|  204.1   |
-dropped_item | match_info  | List of items dropped on the ground |See [notes](#dropped_item-note) | 210.0 |
 character_name   | match_info  | The name of the character |See [notes](#character_name-note)|  205.0   |
 player_stats   | match_info  | List of statistics about the local player |See [notes](#player_stats-note)|  205.0   |
 
@@ -107,6 +106,7 @@ match_start |   | In the beginning of each match              | See [notes](#mat
 match_end |   | At the end of each match              | See [notes](#match_end-note) |      204.0      |
 player_spawn |   | In the beginning of each match and respawn after teadh            | See [notes](#player_spawn-note) |      204.0      |
 player_died |   | Once the player died              | See [notes](#player_died-note) |      204.0      |
+dropped_item |   | List of items dropped on the ground |See [notes](#dropped_item-note) | 210.0 |
 
 #### *act* note
 
@@ -126,14 +126,6 @@ Data Example:
 
 ```json
 {"feature":"match_info","category":"match_info","key":"item_19","value":"{"id":823142142,"name":"Cap","quality":"LOW","is_identified":"1","req_lvl":0,"req_str":0,"req_dex":0,"low_quality":"Cracked","body_loc":"NONE","inv_page":"INVENTORY","parent_id":0,"stats" : [{"idx" : "31","idx_name" : "armorclass","sub_idx" : "0","sub_idx_name" : "","value" : "3"},{"idx" : "73","idx_name" : "maxdurability","sub_idx" : "0","sub_idx_name" : "","value" : "3"}]}"}
-```
-
-#### *dropped_item* note
-
-Data Example:
-
-```json
-{"info":{"match_info":{"dropped_item":"{\"id\":826315900,\"name\":\"Short Sword\",\"quality\":\"LOW\",\"is_identified\":\"1\",\"req_lvl\":0,\"req_str\":0,\"req_dex\":0,\"low_quality\":\"Damaged\",\"body_loc\":\"NONE\",\"inv_page\":\"ONGROUND\",\"parent_id\":0,\"stats\" : [{\"idx\" : \"21\",\"idx_name\" : \"mindamage\",\"sub_idx\" : \"0\",\"sub_idx_name\" : \"\",\"value\" : \"1\"},{\"idx\" : \"22\",\"idx_name\" : \"maxdamage\",\"sub_idx\" : \"0\",\"sub_idx_name\" : \"\",\"value\" : \"5\"},{\"idx\" : \"72\",\"idx_name\" : \"durability\",\"sub_idx\" : \"0\",\"sub_idx_name\" : \"\",\"value\" : \"5\"},{\"idx\" : \"73\",\"idx_name\" : \"maxdurability\",\"sub_idx\" : \"0\",\"sub_idx_name\" : \"\",\"value\" : \"7\"}]}"}},"feature":"match_info"}
 ```
 
 #### *character_name* note
@@ -194,4 +186,10 @@ Data Example:
 ```json
 {"events":[{"name":"player_died","data":""}]}
 ```
+#### *dropped_item* note
 
+Data Example:
+
+```json
+{"events":[{"name":"dropped_item","data":"{\"id\":119,\"name\":\"Short Staff\",\"quality\":\"NORMAL\",\"is_identified\":\"1\",\"req_lvl\":0,\"req_str\":0,\"req_dex\":0,\"body_loc\":\"NONE\",\"inv_page\":\"ONGROUND\",\"parent_id\":0,\"stats\" : [{\"idx\" : \"23\",\"idx_name\" : \"secondary_mindamage\",\"sub_idx\" : \"0\",\"sub_idx_name\" : \"\",\"value\" : \"1\"},{\"idx\" : \"24\",\"idx_name\" : \"secondary_maxdamage\",\"sub_idx\" : \"0\",\"sub_idx_name\" : \"\",\"value\" : \"5\"},{\"idx\" : \"68\",\"idx_name\" : \"attackrate\",\"sub_idx\" : \"0\",\"sub_idx_name\" : \"\",\"value\" : \"10\"},{\"idx\" : \"72\",\"idx_name\" : \"durability\",\"sub_idx\" : \"0\",\"sub_idx_name\" : \"\",\"value\" : \"16\"},{\"idx\" : \"73\",\"idx_name\" : \"maxdurability\",\"sub_idx\" : \"0\",\"sub_idx_name\" : \"\",\"value\" : \"20\"}]}"}]}
+```
