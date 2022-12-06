@@ -10,6 +10,3 @@ website/static/js/games_metadata.js
 scripts/configs/clear.cfg
 website/pages/docs/api/changelogs/changelogs.mdx
 website/src/plugins/tagging/codeComponentTagger.js
-website/.yarn
-website/.yarnrc.yml
-website/yarn.lock
