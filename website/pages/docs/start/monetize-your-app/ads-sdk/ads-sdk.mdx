@@ -4,94 +4,73 @@ image: "/img/embed/getting-started.jpg"
 title: Ads SDK
 sidebar_custom_props:
   overwolf_platform: true
-  electron_platform: false
+  electron_platform: true
 ---
 
-The Overwolf advertising SDK, is a JavaScript library that allows app developers to show Ads inside their applications.
+:::tip About Ads
+This page discusses the Overwolf Ads SDK and its specific implementation details.
+If you haven't already, do also check out [**Working with Ads**][working-with-ads], for an overview
+of what working with Ads entails on the app design level.
+:::
+
+The Overwolf Ads SDK, is a JavaScript library that allows app developers to show Ads inside their applications.
 Overwolf manages, filters, and hosts these ads, which are then served in the app through the SDK.
 
 ## Getting Started
 
 :::info Ad Enablement
 Ads will be served to your app only after Overwolf enables them for you.
-To get started with implementing and enabling ads, [contact us](/support/contact-us).
+To get started with implementing and enabling ads, please follow our [working with Ads][working-with-ads] guidelines.
 
 Before Ads are enabled for your app, you still can (and should) test their behavior in your app.
 You can find more details about using a placeholder Ad for testing [here](../test-your-app/how-to-test-your-app#ads).
 :::
-
-<Tabs groupId="platform">
-<TabItem value="ow-platform" label="Overwolf App">
-
-The Ads SDK works by linking an instance of `OwAd` to specific elements, that then become managed Ad containers.
-
-</TabItem>
-<TabItem value="ow-electron" label="ow-electron App">
-
-The Ads SDK works by simply displaying an `<owadview/>` component, which then acts as a managed Ad container.
-
-</TabItem>
-</Tabs>
 
 import Setup from "@site/pages/docs/api/general/ads-sdk/_setup.mdx"
 
 <Setup/>
 
 
-#### Notes regarding the snippet above
-
-* As you can see, the script tag is added with an `async` attribute. This means that the script is loaded asynchronously and will not interfere with your app functions nor slow down it’s loading time. The downside for this is that the script may take time to load and be ready, and may not be immediately available. To overcome this, we are using the `onload` attribute and providing it with the name of a function to be called when the script has finished loading. In the above example it is called `onOwAdReady`.
-
-*   When calling a new `OwAd()` we provide it with a DOM element. In this example we are getting the instance of the element by calling `document.getElementById`. However, you may use any other way to get the DOM element. You may use `document.querySelector`,  jQuery or any other framework you wish. It will work as long as the provided element is an HTML element available at the DOM. If the element does not have an ID, it will automatically be assigned one.
-
-## Changes to your app’s manifest.json
-
-### Set permissions
-
-The Overwolf Advertising library uses Overwolf APIs to improve ad targeting for users. Therefore you should add the following permissions to your app’s manifest.json file:
-
-```json
-"permissions": ["Extensions", "Streaming", "Profile", "GameInfo"]
- ```
-### Enable Google’s syndication
-
-In order to get impression tracking to work, you will also need to enable a work-around that allows requests to Google’s syndication servers. This is done by setting `"protocol_override_domains" : {"googlesyndication" : "http"}`, under the manifest.json "data" property:
- 
-```json
- "data": {    
-    "protocol_override_domains" : {"googlesyndication" : "http"}
-    }
- ```
-
-### Set manifest flags
-
-The following App Window Data flags should be set to `true`:
-
-* [block_top_window_navigation](/api/manifest#windows-block_top_window_navigation) -  Stop non `_blank <a>` ads from "taking-over" the entire app’s window.
-* [popup_blocker](/api/manifest#popup_blocker) – Prevents new browser windows from being opened automatically using scripts.
-* [mute](/api/manifest#windows-mute) - Mute sounds in window.
-
 ## Guidelines for ad integration
 
-Unfortunately the advertising industry is still mostly designed to work with normal web pages, and not single page apps like your Overwolf app. This means that we are often limited in how we can interact or display ads. 
+Unfortunately, the advertising industry is still mostly designed to work with normal web pages, rather than
+single page desktop apps. This means that we are often limited in how we can interact with, or display ads.
 
-For example, app behavior is at risk of flagging fraud protection solutions our advertising partners use. To prevent this from happening make sure:
+For example, app behavior is at risk of flagging fraud protection solutions used by our advertising
+partners. To prevent this from happening, make sure:
 
-1) Your ad container is ALWAYS visible in the app screen. Invisible or hidden ad containers increase your risk. 
-2) Once a new OwAd object is configured, do not modify it's properties including dimensions, visibility, opacity, display style, z-index or anything else. Changing containers can cause ads to stop displaying properly or even being flagged for fraud. 
+- Your Ad container is ALWAYS visible in the app screen. Invisible, hidden, or cut-off Ad containers increase your app's risk. 
+  - _For specific cases where you wish to **temporarily** stop displaying ads, you can set the `visibility` css property of the ads_
+    _ parent div to 0. This will stop the container from displaying ads, until it is made visible again._
+- Your Ad container's position is static and absolute, and does not move under any circumstances in its window.
+- Your Ad container does not change/move when moving between different menus/pages of the app's window that both have a similar container.
+- Your Ad container has no scrollbar, and is not scrollable.
+- Once a new OwAd object is created, you should **NEVER** modify any of its containers' CSS properties. Changing container properties can
+cause ads to stop displaying properly, or even be flagged for fraud. This mainly includes (but is not limited to):
+  - Dimensions
+  - Opacity
+  - Display style
+  - Z-Index
 
-If you encounter any issues or need advice in setting up effective, compliant ad experiences - talk to us!
+
+:::info Feel free to reach out
+If you encounter any issues with, or need advice on setting up effective, compliant ad experiences, [contact us](/support/contact-us)!
+:::
 
 
+
+
+
+
+
+# Skippy's temp docs cache:
 
 #### Getting help and reporting bugs
 
-If you have encountered problems with the advertising SDK, please let us know by contacting developers@overwolf.com, or just message us directly over the [Developers Slack](https://overwolfdevs.slack.com).
-
-:::tip Sample app
+{/* :::tip Sample app
 The ads-sample demonstrates the usage in the ads API, how to display an ad in an in-game window and desktop window, when to hide it, when to restore it, etc.
 In our [APIs sample apps repository](https://github.com/overwolf/apis-sample-apps), you can find and download a  sample app.
-:::
+::: */}
 
 The following scenarios and principles are demonstrated in the Ads sample app:
 
@@ -106,15 +85,8 @@ The following scenarios and principles are demonstrated in the Ads sample app:
   * Ad placement dimensions are being kept while resizing the app window. 
 * Clickable:
   * Ads are clickable, and clicking on an ad will open the pre-defined browser (OW or user browser, as set in the manifest).
-* Focus:
-  * There is no ad refresh when losing focus (clicking on a different spot in the app, the game, or outside the app).
-  * When the game gain focus, the ad is not loaded if the app window was previously minimized and not restored.
 * DPI: 
   * The app proportions, and ads dimensions are not cut on DPI 125% / 150% and resolutions.
-* Minimize / Restore / Closing:
-  * Ad is removed when the user presses Win Key + D and refreshes on restore.
-  * Ad is removed when the user minimized the app through the app minimize "_" button and refreshed on restore.
-  * Ad is removed when the user minimized the app through the in-game hotkeys (if defined) and refreshed on restore.  Note that on the current version of this sample app, no hotkeys are implemented yet.
-  * Ad is removed, then the user closes the app.
 
-It's a great place to get started - All the samples in this repository are built with JS code and demonstrate primary usage in the API.
+
+[working-with-ads]: ads-sdk/working-with-ads

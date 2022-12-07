@@ -1,18 +1,45 @@
-### Setting up the Ads SDK
+import PlatformSetupSnippet from "./overwolf-platform/_setup-snippet.mdx";
+import PlatformSetupManifest from "./overwolf-platform/_setup-manifest.mdx";
 
-import PlatformSetup from "./overwolf-platform/_setup.mdx";
+The Ads SDK works by creating a simple Managed Ads Container, which is then controlled by the SDK with minimal
+intervention from the app.
+
+### Creating a Managed Ads Container
 
 <Tabs groupId="platform">
 <TabItem value="ow-platform" label="Overwolf App">
 
-In order to use the Ads SDK within an Overwolf app, you must embed the following snippet in every page that should display Ads:
+The app must first [set up](#setting-up-the-ads-sdk) the Ads SDK. This will then define the [`OwAd`][owad] variable,
+which can then be instantiated. Instantiating an [`OwAd`][owad] will link it to a specific DOM element,
+which will then become a Managed Ads Container.
 
-<PlatformSetup/>
+:::info Multiple Ad containers
+If you wish to show more than one ad in your app, you can easily do so by creating multiple instances
+of [`OwAd`][owad]. Just make sure you pass a different container element for each instance,
+and that you properly comply with our [acceptable Ads policy][acceptable-ads].
+:::
+
+### Setting up the Ads SDK
+
+<PlatformSetupSnippet/>
+
+<PlatformSetupManifest/>
 
 </TabItem>
 <TabItem value="ow-electron" label="ow-electron App">
 
-When using the ow-electron package, no further setup in the app is required to display ads.
+The Ads SDK comes built into the [ow-electron](/tools/ow-electron) package. As such, the app only needs
+to create an `<owadview/>` component, which then acts as a managed Ad container.
+
+:::info Multiple Ad containers
+If you wish to show more than one ad in your app, you can easily do so by creating multiple instances
+of the `<owadview/>` component. Just make sure that you properly comply with our [acceptable Ads policy][acceptable-ads].
+:::
 
 </TabItem>
 </Tabs>
+
+
+
+[acceptable-ads]: /start/monetize-your-app/ads-sdk/ads-monetization-basics
+[owad]: /api/general/ads-sdk/overwolf-platform/owad

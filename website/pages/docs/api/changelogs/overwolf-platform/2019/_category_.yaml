@@ -1,5 +1,6 @@
 position: -2019
 label: '2019'
 customProps:
+  reverse_items: true
   overwolf_platform: true
   electron_platform: false

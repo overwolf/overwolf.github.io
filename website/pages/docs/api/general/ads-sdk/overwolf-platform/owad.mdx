@@ -1,0 +1,72 @@
+---
+id: owad
+image: "/img/embed/api-docs.jpg"
+title: OwAd
+sidebar_custom_props:
+  overwolf_platform: true
+  electron_platform: false
+---
+
+:::note
+`OwAd` is an instance of an Overwolf Managed Ads Container.
+These can be created using the [overwolf Ads SDK](/api/general/ads-sdk/overwolf-platform).
+:::
+
+
+## Methods Reference
+
+* [OwAd.addEventListener()](#addeventlistenerevent-callback)
+* [OwAd.shutdown()](#shutdown)
+
+## Events Reference
+
+:::info Subscribing To Events
+Unlike with "native" overwolf apis, subscribing to events in the Ads SDK is done using the
+[OwAd.addEventListener()](#addeventlistenerevent-callback) method on the specific `OwAd` instance.
+:::
+
+* [OWAd.player_loaded](#player_loaded) (Video Only)
+* [OWAd.display_ad_loaded](#display_ad_loaded)
+* [OWAd.play](#play)
+* [OWAd.impression](#impression) (Video Only)
+* [OWAd.complete](#complete) (Video Only)
+* [OWAd.error](#error) (Video Only)
+
+
+## addEventListener(event, callback)
+
+> Adds a listener to a certain Ad event.
+
+Parameter | Type   | Description                                  |
+--------- | -------| -------------------------------------------- |
+event     | string | The name of the event to listen to           |
+callback  | (Result) => void | The callback that will be called when this event occurs |
+
+
+## shutdown()
+
+> Shuts down the Ads container completely.
+
+## player_loaded (Video Only) {#player_loaded}
+
+> Fires when a Video Ad's player is successfully loaded into the page.
+
+## display_ad_loaded {#display_ad_loaded}
+
+> Fires when a Display Ad was served to the container.
+
+## play {#play}
+
+> Fires when an Ad started "playing" (Video Ad started playing, or display Ad was presented).
+
+## impression (Video Only) {#impression}
+
+> Fires when a Video Ad triggered an Impression. This happens at different intervals depending on the advertiser.
+
+## complete (Video Only) {#complete}
+
+> Fires when a Video Ad completely finished playing.
+
+## error (Video Only) {#error}
+
+> Fires if an error occured while loading a Video Ad.

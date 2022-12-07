@@ -1,0 +1,26 @@
+### Changes to your app’s manifest.json
+
+#### Set permissions
+
+The Overwolf Advertising library uses Overwolf APIs to improve ad targeting for users. Therefore you should add the following permissions to your app’s manifest.json file:
+
+```json
+"permissions": ["Extensions", "Streaming", "Profile", "GameInfo"]
+ ```
+#### Enable Google’s syndication
+
+In order to get impression tracking to work, you will also need to enable a work-around that allows requests to Google’s syndication servers. This is done by setting `"protocol_override_domains" : {"googlesyndication" : "http"}`, under the manifest.json "data" property:
+ 
+```json
+ "data": {    
+    "protocol_override_domains" : {"googlesyndication" : "http"}
+    }
+ ```
+
+#### Set manifest flags
+
+The following App Window Data flags should be set to `true`:
+
+* [block_top_window_navigation](/api/manifest#windows-block_top_window_navigation) -  Stop non `_blank <a>` ads from "taking-over" the entire app’s window.
+* [popup_blocker](/api/manifest#popup_blocker) – Prevents new browser windows from being opened automatically using scripts.
+* [mute](/api/manifest#windows-mute) - Mute sounds in window.
