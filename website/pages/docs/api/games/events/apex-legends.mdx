@@ -32,6 +32,7 @@ Please read the [overwolf.games.events](../events) documentation page to learn h
 * [death](#death)
 * [revive](#revive)
 * [match_state](#match_state)
+* [game_info](#game_info)
 * [match_info](#match_info)
 * [inventory](#inventory)
 * [location](#location)
@@ -86,6 +87,39 @@ Data Example:
 ```json
 {"info":{"me":{"ultimate_cooldown":"{\"ultimate_cooldown\":\"15\"}"}},"feature":"me"}
 ```
+## `game_info`
+
+### Info Updates
+
+key          | Category    | Values                    | Notes                 | Since GEP Ver. |
+--------------- | -----------| --------------------------------------------- - | ------------- | 
+phase | game_info | The current phase during the game  |  List of values See [notes](#phase-note)  |   215.0 |
+
+#### *phase* note
+
+Possible values:
+Battle Royale - 
+- "lobby"
+- "loading_screen"
+- "legend_selection"
+- "aircraft"
+- "freefly"
+- "landed"
+- "match_summary"
+
+Arena - 
+- "lobby"
+- "loading_screen"
+- "legend_selection"
+- "shopping"
+- "combat"
+
+Data Example:
+
+```json
+{"info":{"game_info":{"phase":"combat"}},"feature":"game_info"}
+```
+
 
 ## `match_info`
 
@@ -96,6 +130,8 @@ key          | Category    | Values                    | Notes                 |
 pseudo_match_id | match_info | The current match’s ID code.<br></br><br></br>Example:<br></br><br></br> `0c0ea3df-97ea-4d3a-b1f6-f8e34042251f`  |  This is an Overwolf-generated code, unrelated to Respawn.  |   130.0 |
 game_mode      | match_info | The currently selected game mode. | See [notes](#game_mode-note) |   158.0 |
 tabs            | match_info | The current amount of squads, players, cash, and kills of the match (in relation to local player).| See [notes](#tabs-note) |   158.0 |
+map_id            | match_info | The current played map Id.| See [notes](#map_id-note) |   215.0 |
+arena_score         | match_info | The current match score.| See [notes](#arena_score-note) |   215.0 |
 
 #### *game_mode* note
 
@@ -105,7 +141,6 @@ Data Example:
 {"info":{"match_info":{"game_mode":"#PL_TRIO"}},"feature":"match_info"}
 ```
 Possible values:
-
 - "#PL_FIRINGRANGE"
 - "#PL_TRAINING"
 - "#PL_DUO"
@@ -123,6 +158,38 @@ Data Example:
 {"info":{"match_info":{"tabs":"{\"kills\":2,\"assists\":1,\"teams\":4,\"players\":10,\"damage\":440,\"cash\":10}"}},"feature":"match_info"}
 ```
 
+#### *map_id* note
+
+Possible values:
+Battle Royale - 
+- "mp_rr_canyonlands_hu" - King canyon
+- "mp_rr_tropic_island_mu1" - Storm point
+- "mp_rr_desertlands_mu3" - World's edge
+- "mp_rr_olympus_mu2" - Olympus
+- "mp_rr_divided_moon" - Broken Moon
+
+Arena - 
+- "mp_rr_arena_habitat" - Habitat 4
+- "mp_rr_aqueduct" - Overflow 
+- "mp_rr_party_crasher" - Party crasher
+- "mp_rr_arena_phase_runner" - Phase runner
+- "mp_rr_arena_composite" - Drop off
+- "mp_rr_arena_skygarden " - Encore
+
+Data Example:
+
+```json
+{"info":{"match_info":{"map_id":"mp_rr_canyonlands_staging"}},"feature":"match_info"}
+```
+
+#### *arena_score* note
+
+Data Example:
+
+```json
+{"info":{"match_info":{"arena_score":"1 : 2"}},"feature":"match_info"}
+```
+
 ## `match_state`
 
 ### Info Updates
@@ -137,6 +204,8 @@ Event       | Event Data   | Fired When    | Notes              | Since GEP Ver.
 ------------| -------------| --------------| ------------------ | --------------|
 match_start | null         | Match started |See [notes](#match_start-note)|     128.0     | 
 match_end   | null         | Match ended   |See [notes](#match_end-note)|     128.0     | 
+round_start | null         | Round started |See [notes](#round_start-note)|     215.0     | 
+round_end | null         | Round ended |See [notes](#round_end-note)|     215.0     | 
 
 #### *match_state* note
 
@@ -159,6 +228,22 @@ Data Example:
 
 Currently we have a special case where if someone in your team got a yellow knockdown shield (the one that allows you to self-revive), and your entire team was knocked out, the match end will still fire despite no one reaching a death-state.
 This is a very rare case that does not commonly happen in the game, however we're still working on fixing it.
+
+#### *round_start* note
+
+Data Example:
+
+```json
+{"events":[{"name":"round_start","data":""}]}
+```
+
+#### *round_end* note
+
+Data Example:
+
+```json
+{"events":[{"name":"round_end","data":""}]}
+```
 
 ## `team`
 
@@ -219,7 +304,7 @@ roster_XX  | match_info  | Provides the entire list of players in a match (~60 p
 Each player joining the game will be reported in the following way:
 
 ```json
-{"info":{"match_info":{"roster_47":"{\"name\":\"JacksAtWork\",\"isTeammate\":true,\"team_id\":12,\"platform_hw\":2,\"platform_sw\":7,\"state\":\"knocked_out\",\"is_local\":\"1\"}"}},"feature":"roster"}
+{"info":{"match_info":{"roster_1":"{\"name\":\"HelloWork\",\"isTeammate\":true,\"team_id\":3,\"platform_hw\":2,\"platform_sw\":7,\"state\":\"knocked_out\",\"is_local\":\"1\",\"platform_id\":\"7656119934534254\"}"}},"feature":"roster"}
 ```
 
 As you can see, this object includes:
@@ -228,6 +313,7 @@ As you can see, this object includes:
 * `isTeammate` (Bool) - Player is/isn't a squad member
 * `team_id` - Numerical value for each squad in-game.
 * `platform` - The platform which the player plays on currently.
+* `platform_id` - The player Id in the current used platform.
 * `is_local` - where 1 is the local player else 0.
 
 Possible platform values:
