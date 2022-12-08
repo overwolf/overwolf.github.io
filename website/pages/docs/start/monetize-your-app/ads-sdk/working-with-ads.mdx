@@ -2,6 +2,7 @@
 id: working-with-ads
 image: "/img/embed/getting-started.jpg"
 title: Working with Ads
+sidebar_position: 0
 sidebar_custom_props:
   overwolf_platform: true
   electron_platform: true
@@ -24,7 +25,7 @@ While this can be very useful as a developer, there are some constraints to the 
 In this page, we will take a deeper look at how to keep these two conflicting notions in check.
 
 ## Ads in desktop apps
-[tl;dr](#ad-placement-guidelines)
+[tl;dr][ad-guidelines]
 
 In order to display Ads in an app, first you need to define one (or several) places where Ads will be shown.
 This is where the first conflict between app design constraints comes.
@@ -37,7 +38,7 @@ Ideally, we want to use any dead space in the app's screens to display Ads:
 - Areas often hidden by other windows.
 - etc.
 
-### From a regulation perspective
+### From an advertiser perspective
 
 Ads come with many rigid constraints, to ensure that advertisers get a good return on their investment.
 These most often dictate that:
@@ -46,10 +47,13 @@ These most often dictate that:
 - Ads must not actively compete with eachother.
 - Ads must either be fully visible, or not visible at all.
 
-As a result, we have devised a basic set of rules, to help you implement Ads into your app properly,
-while keeping both sides as satisfied as can be.
+There are also several further constraints placed by Overwolf on Ads displayed through the SDK, in order to maintain an ideal
+environment for advertisers. You can read those [here](./advertising-policy).
 
-### Ad placement guidelines
+As a result of all those constraints, we have devised a basic set of rules, to help you implement Ads into your app properly,
+while keeping all sides as satisfied as can be.
+
+### Ad planning guidelines
 
 First, if you haven't already, review the available [Ad Sizes][ad-sizes].
 
@@ -63,30 +67,26 @@ Now, with this list in mind, you should select the locations in the app where th
   - There is nothing wrong with using Ads. However, too many Ads, or parts of the app that feel like
   they are only there to show more Ads, are the main causes of friction with user experience when using Ads.
 - The amount of Ad containers you can use is limited. **Use it wisely**. More specifically:
-  - With video Ads, you may only have one active video placement at any moment **per app window**.
-  - Each app window may only have 3 active Ad containers at any given moment (both video and display Ads count towards that limit).
-  - You may use as many display Ad placements as you want, **as long as the total amount of Ad containers in the window stays below 3.**
+  - With video Ads, you may only have one active video Ad container at any moment **per app window**.
+  - Each app window may only have up to (**or exactly**) 3 active Ad containers at any given moment (both video and display Ads count towards that limit).
+  - You may use as many display Ad containers as you want, **as long as the total amount of Ad containers in the window stays at 3 or less.**
 - If a certain app window has several views, try to make sure Ad locations do not change when moving between views.
-(This ensures that the containers can stay active, regardless of the current view)
+(This ensures that the containers can stay active, regardless of the current view).
 - Ads should be placed where they won't be hidden. If your app utilizes pop-ups, try to make sure that these do not block any Ad containers.
 - Ads should be placed where they will be seen for more than a short moment.
   - This can often be achieved by using "dead" moments in games (i.e. loading screens, post-game screens, respawn timers, etc.).
-- When using video Ads, try to keep the continous time the Ad is opened for high, to ensure higher completion rates.
+- When using video Ad containers, try to keep the container's continuous visibility duration high, to ensure higher completion rates.
   - A good average open time for video Ads is 30 seconds.
   - A good average completion rate for video Ads (the rate of video Ads that were watched 100% of the way) is 70%.
 
 :::info Unsure? Contact Us!
-Ad placement can be a tricky thing. If you're uncertain about any part of it, or just have any questions about it,
-[contact us][contact-us], and we will gladly help you with implementing Ads in your app.
+Ad planning can be a tricky thing. If you're uncertain about any part of it, or just have any questions about it,
+[contact us][contact-us], and we will gladly help you with implementing Ads in your app!
 :::
 
 ## Implementing Ads with the Ads SDK
 
-:::info Ads SDK Terms
-TODO IGNORE ME
-:::
-
-Once you have finished going over the [Ad placement guidelines](#ad-placement-guidelines), and have selected
+Once you have finished going over the [Ad planning guidelines][ad-guidelines], and have selected
 where you want Ads to appear in your app, there are a few more steps you need to take until you can show live Ads in your app.
 
 1. If you haven't already, please check out the [Overwolf Ads SDK][ads-sdk], and begin implementing it in the app.
@@ -101,28 +101,13 @@ Once Ads are enabled for your app, Ad-related data will show up in your app's [d
 :::
 
 
-### Advertising policy - TODO IGNORE ME
+## List of Ad Sizes
 
-1. Overwolf requires that only advertisements displayed or distributed through Overwolf’s proprietary advertising platform may be displayed or distributed through Overwolf applications.
-If you manage an external website, you may not implement 3rd party iframes with Ads inside the Overwolf application.
+import AdSizes from "@site/pages/docs/api/general/ads-sdk/_ad-sizes.mdx"
 
-2. **Use Forgivable Ads.** In some more words, don’t create ad experiences that you would not stand for as a gamer.
-Ads present a challenge and tend to provoke negative responses, but they are critical to our economy and our ability to create great apps.
-In general, talk to us if you're worried or unsure about your app's experience. 
+<AdSizes/>
 
-Advertisers need to get continuous value from advertising on Overwolf,
-so to keep the CPMs high and to get more advertisers on the platform we need to provide a high-quality
-experience. With time, we found that it's not only about the [right time and place](https://medium.com/overwolf/a-new-way-for-brands-to-engage-with-gamers-ca4cfafc5d41),
-but also about advertising in a balanced way.
-
-To get a more general idea, we follow the industry Standards, Guidelines & Best Practices which are provided by the IAB. We also constantly scan our traffic with 3rd party anti-fraud tools to monitor quality and spot issues.
-
-
-## List of Ad Sizes - TODO {list-of-ad-sizes}
-
-* Video ads are available in 400×300 and 300×250 sizes, **we strongly recommend 400×300**.
-* Display banners are available in 300×250, 728x90, 300x600 and 160x600 sizes.
-
+Below are some examples of Ad placements in different apps:
 
 <ImageSlider>
   <img src={require('/assets/lb-400x300.png').default} alt="Legendary Builds"/>
@@ -130,14 +115,14 @@ To get a more general idea, we follow the industry Standards, Guidelines & Best 
 </ImageSlider>
 
 
-### Demographics
-
+:::info Demographics
 * Advertising budgets are more significant for Tier 1 countries: US, UK, CA, AU, DE.
 * If most of your app's users originate from Tier 1 countries, it’s likely that your CPM and yield will be higher.
-* We monetize ads in lower tier countries too, but our recommendation is to focus your marketing efforts on Tier 1 countries to maximize your revenues.
-
-
+* We monetize ads in lower tier countries too, but from a revenue perspective, 
+our recommendation is to focus your **marketing** efforts on Tier 1 countries to maximize your revenues.
+:::
 
 [ad-sizes]: #list-of-ad-sizes
+[ad-guidelines]: #ad-planning-guidelines
 [ads-sdk]: ./
 [contact-us]: /support/contact-us

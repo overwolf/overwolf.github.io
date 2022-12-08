@@ -15,6 +15,7 @@ These can be created using the [overwolf Ads SDK](/api/general/ads-sdk/overwolf-
 
 ## Methods Reference
 
+* [new OwAd()](#new-owadcontainer-settings)
 * [OwAd.addEventListener()](#addeventlistenerevent-callback)
 * [OwAd.shutdown()](#shutdown)
 
@@ -33,19 +34,42 @@ Unlike with "native" overwolf apis, subscribing to events in the Ads SDK is done
 * [OWAd.error](#error) (Video Only)
 
 
+## Types Reference
+
+* [OwAd.ContainerSettings](#containersettings-object) Object
+* [OwAd.ContainerSize](#containersize-object) Object
+
+
+## new OwAd(container, settings)
+
+> Creates a new instance of OwAd.
+
+Parameter | Type   | Description                                  | Required |
+--------- | -------| -------------------------------------------- | -------- |
+container | DOM Element | The Ad's container element | Yes |
+settings  | [ContainerSettings](#containersettings-object) | The container's desired size configuration(s) | No (defaults to a 400x300 Ad container if left empty) |
+
+### Code Example
+
+```js title="Creates a new OwAd, with the element ad-div as its container, with a container size of 400x300"
+let owAd = new OwAd(document.getElementById("ad-div"), {size: {width: 400, height: 300}});
+```
+
 ## addEventListener(event, callback)
 
 > Adds a listener to a certain Ad event.
 
-Parameter | Type   | Description                                  |
---------- | -------| -------------------------------------------- |
-event     | string | The name of the event to listen to           |
-callback  | (Result) => void | The callback that will be called when this event occurs |
+Parameter | Type   | Description                                  | Required |
+--------- | ------ | -------------------------------------------- | -------- |
+event     | string | The name of the event to listen to           | Yes |
+callback  | (Result) => void | The callback that will be called when this event occurs | Yes |
 
 
 ## shutdown()
 
 > Shuts down the Ads container completely.
+
+For specific use cases, please refer to [Guidelines for ad integration](/start/monetize-your-app/ads-sdk#guidelines-for-ad-integration).
 
 ## player_loaded (Video Only) {#player_loaded}
 
@@ -70,3 +94,27 @@ callback  | (Result) => void | The callback that will be called when this event 
 ## error (Video Only) {#error}
 
 > Fires if an error occured while loading a Video Ad.
+
+
+## ContainerSettings Object
+
+List of settings that can be used when setting up an OwAd instance.
+
+Parameter          | Type                            | Description                                       |
+-------------------| --------------------------------| ------------------------------------------------- |
+size               | [ContainerSize](#containersize-object) \| [ContainerSize](#containersize-object)[] | The size(s) of Ad containers that this Ad container can become. See [Available Ad Sizes](#available-ad-sizes) |
+
+## ContainerSize Object
+
+Width/height settings of an Ads container.
+
+Parameter          | Type                            | Description                                       |
+-------------------| --------------------------------| ------------------------------------------------- |
+width              | number                          | Width of the target Ad container size             |
+height             | number                          | Height of the target Ad container size            |
+
+### Available Ad sizes:
+
+import AdSizes from "@site/pages/docs/api/general/ads-sdk/_ad-sizes.mdx"
+
+<AdSizes/>

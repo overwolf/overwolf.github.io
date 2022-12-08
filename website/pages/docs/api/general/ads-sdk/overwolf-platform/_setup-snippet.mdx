@@ -1,27 +1,31 @@
-In order to use the Ads SDK within an Overwolf app, you must first fetch it from a [constant endpoint](https://content.overwolf.com/libs/ads/latest/owads.min.js).
+In order to use the Ads SDK within an Overwolf app, you must first fetch it from a [constant endpoint](https://content.overwolf.com/libs/ads/latest/owads.min.js) - `https://content.overwolf.com/libs/ads/latest/owads.min.js`.
 Attached is a short example snippet that fetches the SDK, as well as setting up a basic `OwAd` instance:
 
 ```html title="Fetch the latest version of the Ads-SDK, and make sure it loaded"
 <script src="https://content.overwolf.com/libs/ads/latest/owads.min.js" async onload="onAdsSDKReady()"></script>
 <script>
-    // Set a timeout to check that onAdsSDKReady() was called.
+    // Wether or not the script was loaded yet
+    let loaded = false;
+    // Set a timeout, to ensure that we also handle a case where onAdsSDKReady() was not called after a while.
     // If this is reached first, something probably went wrong with loading the owads.min.js script.
     setTimeout(() => {
-        if (!OwAd) {
+        if (!loaded && !OwAd) {
             // Reached if the SDK's script took too long to load.
-            // If this happens, it is up to the app to decide how to proceed.
             console.error("Couldn't load owads.min.js!");
+            // If this happens, it is up to the app to decide how to proceed.
         }
     }, 20000);
 
     function onAdsSDKReady() {
+        loaded = true;
         if (!OwAd) {
             // Reached if the SDK's script failed to properly load.
             // If this happens, it is up to the app to decide how to proceed.
             return;
         }
+        // Reached if the script loaded properly.
         // You can now create however many ad containers you need for this window.
-        let adContainer = new OwAd(document.getElementById(/*Insert ad container Id here*/));
+        let adContainer = new OwAd(document.getElementById(/*Insert ad container Id here*/), {/*Mandatory Ad settings*/});
     }
 
 </script>
@@ -30,18 +34,18 @@ Attached is a short example snippet that fetches the SDK, as well as setting up 
 #### Notes regarding the snippet above
 
 * As you can see, the script tag is added with an `async` attribute.
-This means that the script should be loaded asynchronously, so that it will not interfere
+This is because the script should be loaded asynchronously, so that it will not interfere
 with the rest of the page's loading.
-The downside for this is that the script may take time to load and be ready,
-and may not be immediately available. To overcome this, you should use the `onload`
-attribute of it, and privde it with the name of a function to be called when the script
-has finished loading. In the above example, this is done in `onAdsSDKReady()`.
+The downside to this approach, is that the script may take time to load and be ready,
+which could cause a race condition. To overcome this, you should use the `onload`
+attribute of the script, and provde it with the name of a function to be called when the script
+has finished loading. In the above example, this is done with `onAdsSDKReady()`.
 
-* When creating a new `OwAd()`, we provide it with a DOM element, which will serve as its container.
+* When creating a new `OwAd`, we provide it with two parameters: A DOM element, and the **required** Ad settings.
 In this example we are getting the instance of the element by calling `document.getElementById()`.
 However, you may use any other way to get the DOM element. You may use `document.querySelector`,
 jQuery, or any other framework you wish. As long as the provided element is an HTML element available
 at the DOM, it will work.
-:::tip
-If the container does not have an ID, it will automatically be assigned one.
+:::tip Container Identification
+If the Ad container did not already have an element ID defined, it will automatically be assigned one.
 :::
