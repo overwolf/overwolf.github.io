@@ -195,8 +195,8 @@
     "from": "/docs/api/overwolf-games-events-warframe"
   },
   {
-    "to": "/api/games/events/call-of-duty-warzone",
-    "from": "/docs/api/overwolf-games-events-warzone"
+    "to": "/api/games/events/call-of-duty-warzone-caldera",
+    "from": ["/docs/api/overwolf-games-events-warzone", "/api/games/events/call-of-duty-warzone"]
   },
   {
     "to": "/api/games/events/world-of-tanks",
@@ -519,8 +519,8 @@
     "from": "/docs/start/using-dev-tools"
   },
   {
-    "to": "/start/game-compliance/call-of-duty-warzone",
-    "from": "/docs/start/warzone-compliance"
+    "to": "/start/game-compliance/call-of-duty-warzone-caldera",
+    "from": ["/docs/start/warzone-compliance", "/start/game-compliance/call-of-duty-warzone"]
   },
   {
     "to": "/status/apex-legends",
@@ -659,8 +659,8 @@
     "from": "/docs/status/warframe"
   },
   {
-    "to": "/status/call-of-duty-warzone",
-    "from": "/docs/status/warzone"
+    "to": "/status/call-of-duty-warzone-caldera",
+    "from": ["/docs/status/warzone", "/status/call-of-duty-warzone"]
   },
   {
     "to": "/status/world-of-tanks",
