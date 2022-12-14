@@ -10,12 +10,16 @@ sidebar_custom_props:
 
 ## Overview
 
-This utility service can simulate events and updates for all Overwolf game events in any event-enabled game including: Fortnite, LOL, CS:GO, and the rest of the [list](/status/). When the app identifies that one of the supported game is running, it automatically pulls the full list of features and events for that game from the Overwolf servers. 
+This utility service can simulate events and updates for all Overwolf game events in any event-enabled game including: Fortnite, LOL, CS:GO, and the rest of the [list](/status/). When the app identifies that one of the supported game is running, it automatically pulls the full list of features and events for that game from the Overwolf servers.
 
 You can then simulate events and info updates of any sort you want to test and send it to your app using the Event Simulator.
 
-:::important
-The Overwolf Event Simulator is supported in Overwolf version 0.135 or higher. To download the current version, please [contact us](/support/contact-us).
+:::important Using The Game Events Simulator
+Using the GEP simulator is relatively simple. However, there are a few things you should keep in mind before proceeding:
+- **The GEP simulator utilizes internal Overwolf APIs, to give you greater testing capabilities. However, the simulator should only be used during the *active development* of your app!**
+- In order for the simulator to work, you must not change any of the `meta' fields in its manifest, apart from 'version'.
+
+To download the latest version of the game events simulator, simply clone its [repository](https://github.com/overwolf/gep-sim).
 :::
 
 ## Roadmap

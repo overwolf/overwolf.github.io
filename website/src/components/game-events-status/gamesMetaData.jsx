@@ -25,12 +25,12 @@ export const GamesMetadata = {
   },  
   21626: {
     id: 21626,
-    path: "/status/call-of-duty-warzone",
-    compliance: "/start/game-compliance/call-of-duty-warzone",
-    docs: "/api/games/events/call-of-duty-warzone",
-    iconUrl: "/img/games-logos/call-of-duty-warzone.png",
-    iconLargeUrl: "/img/games-logos/large/call-of-duty-warzone.png",
-    name: "Call of Duty: Warzone"
+    path: "/status/call-of-duty-warzone-caldera",
+    compliance: "/start/game-compliance/call-of-duty-warzone-caldera",
+    docs: "/api/games/events/call-of-duty-warzone-caldera",
+    iconUrl: "/img/games-logos/call-of-duty-warzone-caldera.png",
+    iconLargeUrl: "/img/games-logos/large/call-of-duty-warzone-caldera.png",
+    name: "Call of Duty: Warzone Caldera"
   },  
   7764: {
     id: 7764,
