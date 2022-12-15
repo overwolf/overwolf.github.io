@@ -76,7 +76,8 @@ Just make sure it makes sense to you, and that the paths in your manifest.json f
     - A colored version of IconMouseNormal.png, for when the app button is selected or mouse-overed. Similarly, file should be smaller than 30KB and sized at 256X256 pixels with at least 72 PPI.
       ![](/assets/submit-your-app-to-the-store/sub-icon-mouse-over.png)
 
-  - launcher_icon.ico **(OPTIONAL)**
+  - launcher_icon.ico **(OPTIONAL *)**
+    - *** While not strictly required for the app to load, an app MUST have an icon to be published to the store!**
     - A custom icon for your app's desktop shortcut.
     - Requires the [`launcher_icon`](/api/manifest#meta-launcher_icon) property in your app's manifest.json file.
     - Requires an app icon asset in your app’s folder.
@@ -85,7 +86,7 @@ Just make sure it makes sense to you, and that the paths in your manifest.json f
       - In order to create a multi-layer .ico file, you can use a third-party service. We recommend [convertico](https://convertico.com).
       - **Please make sure that your icon's layer sizes include the above sizes (16×16, 32×32, 48×48, 256×256)**.
     - The launcher icon should weigh less than 150Kb.
-    - **Contact us if you want to update your installer icon** with the ICO file (the installer is the EXE bundle icon that the users downloads from the OW app store).
+    - **Contact us if you want to update your installer icon** with the ICO file (the installer is the .EXE bundle icon that the users downloads from the OW app store).
 
   - WindowIcon.png **(OPTIONAL)**
     - A colored icon for the window task bar icon \ window header. If not defined, **IconMouseOver.png** will be taken.
