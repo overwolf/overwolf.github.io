@@ -8,108 +8,196 @@ Game events allow applications to truly understand what is happening in a game,
 which in turn lets them deliver a significantly more accurate and adaptive experience.
 
 There are two different forms of data that are referred to as `events`:
-- [Game Events](#game-events) - Specific events that happen in the game.
-- [Game Information](#game-info) (Game Info for short, formerly referred to as part of Info Updates) - The current state of specific parts of the game.
+- [Game Events][game-events] - Specific events that happen in the game.
+- [Game Information][game-info] (Game Info for short, also referred to as part of Info Updates) - The current state of specific parts of the game.
 
-When a Game Event/Game Info occurs/changes, an event/info update is fired respectively, letting the app know of it.
+When a Game Event/Info occurs/changes, an event/info update is fired respectively, letting the app know of it.
+
+However, in order to make this data easy to expose and use, we have created the following specification.
+
+:::tip TL;DR
+The most important take-away from this specification is the following:
+- This spec is a general guideline for any Game Event implementations from now on to follow. Due to technical limitations, some implementations might stray away from it.
+- Game Events should mostly be used to notify of important momentary changes and their UID.
+- Game Info should mostly be used for exposing any data of actual importance from the game.
+    - Game Info should be used to expose the data related to specific Game Events.
+    - Game Info exposing data of specific Game Events should be occassionally, when a predefined set of declared conditions occur, in order to avoid clutter/resource hogging.
+- Not all game data should be exposed as events, but events **can** be used to notify an app of external data sources (files, external APIs, etc).
+- Events planning can be tricky, with many different approaches being valid. As such, do not hesitate to [contact us](/support/contact-us) for help with it.
+:::
 
 ## Game Events
 
 Game events refer to the moment at which a notable event occurs in the game,
-and are rarely relevant for more than a few seconds after they occur. Common examples include:
-- Player kill
-- Player assist
-- Item obtained
-- Achievement unlocked
+and are meant to notify an app of its exact moment. Common examples include:
+- Entity `killed`
+- Item `obtained`
+- Achievement `unlocked`
+- Scene `changed`
+
+Game events offer a way for an app to know the exact moment at which something happened, even before all of its data is ready/exposed to the app/player.
+
+### Event Contents
+
+Game events should rarely contain any concrete data. Instead, they should contain a Unique Identifier (UID) of the specific event, which will be used
+to correlate it to a specific [Game Info][game-info].
+
+- For apps, this makes it possible to initialize mid-match and still have data, even for things like .
+- For games, this makes it possible to easily expose new information about old occurances as it becomes available to the player.
+
+:::tip Game Event UID
+A "full" Game Event Unique ID is made up of two parts:
+- The event's type - `event_name`
+- A unique ID for this specific event - `uid`
+
+As a result, every ID'd event only needs to send the event's `uid` inside of its data.
+
+The event `uid` should be consistently formatted throughout the entire game where possible, and should always follow one of the following patterns:
+
+```js title="Event UID Schemas ((${event_name}-) added to results for readability)"
+// When exposing the exact event count + order easily is desirable
+`${numerical_index}` = '(scored-)0', '(round_phase-)4'
+/* When exposing the exact event count + order is not desirable, the index will simply
+be randomized for every event, while ensuring it is unique among the currently stored events */
+`${random_index}` = '(scored-)1261125', '(round_phase-)215192'
+/* When exposing the event order is desirable, but not the count, the index will simply
+be randomized every time an **in-game** event occurs, and the event fired once it should be */
+`${randomly_incrementing_index}` = '(scored-)126125', '(round_phase-)215192'
+// When further splitting of the event id is desirable, but the event itself should not be split
+`${filter}-${some_indexing}` = '(scored-)blue-0', '(round_phase-)build-12412582'
+```
+:::
 
 <details>
 <summary>Example Event</summary>
 
-```json title="A player just scored 5 points"
+```json title="A player just scored the first point in the game"
 {
-    "name": "score",
+    "name": "scored",
     "data": {
-        "score": 5,
-        "player": "User123"
+        "event_id": "scored_0"
     }
 }
 ```
 
 </details>
 
+:::info Event Data
+While usually undesirable, game events **can** contain concrete data directly, without using an ID and a Game Info.
+
+This should usually be avoided, for several reasons:
+- It adds a different method of data access/processing compared to the rest of the specification, complicating the code for both apps and games.
+- It makes any app that misses the event for one reason or another (mostly due to connecting after it occurs) unable to access this data at all.
+- It makes it impossible to update this information easily in the future (with new/different data).
+
+As such, the main use-cases for it include:
+- Meta notifications - An external resource the app might cache has changed/is about to change (ie. game API keys, game files, etc).
+- Fleeting unimportant (for apps) occurances - Cutscene started, player interacted with cosmetic environment, etc.
+:::
+
 ## Game Info
 
-Game Info refers to a persistent game state. Common examples include:
-- Player name
-- Player health
-- Player inventory
-- Current match
+Game Info refers to an object-like piece of exposed game data. Common examples include:
+- `player` data
+- `killed` data
+- Game meta-data (game version, game platform, game server)
 
-Game Info is stored in categories, that are then stored in a dictionary-like object, accessible to applications via the [`overwolf.games.events.getInfo()`](/api/games/events#getinfocallback) method.
-Every Game Info item exists inside of a single category, and categories cannot be nested.
+Game Info offers a way for an app to access a read-only version of exposed hierarchical game data, checking it at will, and being notified when it changes.
+
+### Game Info Contents
+
+Game Info is stored inside of categories (dictionaries), that are then all stored in the GameInfo dictionary, accessible to applications via the [`overwolf.games.events.getInfo()`](/api/games/events#getinfocallback) method.
+Every Game Info item exists only inside of a single category, and categories cannot be nested.
+
+Game Info items are split into two types, and will always follow their type's structure format:
+- Game Event data - For Game Info that corresponds to a certain Game Event:
+    - The category name will always be the exact event name of the original event.
+    - The Game Info name will always correspond to the remaining "tail" of the event UID.
+    - The Game Info will always contain the reserved `initial_timestamp` field, containing the computer-local [timestamp (in milliseconds)](https://currentmillis.com/) the event was initially fired.
+    - The Game Info will always contain the reserved `final` field, indicating whether or not the Game Info has been finalized (meaning that it will not be changed anymore).
+- General Game Info - For general Game Info that is not related to any specific Game Event.
+    - The category name will always be either the Feature name, or part of a list of [reserved category names][reserved-categories].
+    - The Game Info name will always correspond to the Game Info name given to it under its relevant feature.
 
 <details>
 <summary>Example Game Info Layout</summary>
 
 ```json title="An example Game Info layout, containing 3 categories, and 5 total Game Info items"
 {
-    "category_1": {
-        "item_info": "Example string",
-        "reset_info": null
+    "category": { // category 1
+        "item_info": "Example string", // info 1
+        "reset_info": null // info 2
     },
-    "category_2": {
-        "number_info": 125,
-        "object_info": {
+    "game_event": { // category 2
+        "event_info": { // info 3
+            "final": false,
+            "initial_timestamp": 1671096768164,
             "inner_foo": "value",
             "inner_bar": true
         }
     },
-    "player_inventory": {
-        "coins": 55
+    "local_player": { // category 3
+        "number_info": 125 // info 4
+        "boolean_info": true // info 5
     }
 }
-
 ```
 
 </details>
 
 ### Info Updates
 
-Info Update events fire when a change occurs in a certain Game Info, with the new value of that specific Game Info.
+Info Updates (Game Info change events) fire when a change occurs in a certain Game Info, and contain the new value of that specific Game Info.
 
 <details>
 <summary>Example Info Updates</summary>
 
-```json title="A match just started, updating the match_state game info inside of the match_info category"
+```json title="The blue team has just scored 5 points, making this the 3rd time they have scored in the game"
 {
-    "match_info": {
-        "match_state": {
-            "in_progress": true,
-            "match_id": 12512
+    "scored": {
+        "blue-3": {
+            "initial_timestamp": 1671097454324,
+            "final": true,
+            ...
         }
     }
 }
 ```
 
-```json title="The player's coin count changed to 5, updating the coins info inside of the player_inventory category"
+```json title="The blue team has just scored 5 points, increasing their score count from 8 to 13, while red is still at 18"
 {
-    "player_inventory": {
-        "coins": 5
+    "match_info": {
+        "score": {
+            "blue": 13,
+            "red": 18
+        }
     }
 }
 ```
 
 </details>
 
-### Info Resetting
+### Game Event Data Clearing
+
+Game Event Data, by its definition, will slowly accumulate with every new Game Event with data that fires.
+
+As such, in order to ensure that this is stopped before a serious performance impact is reached, older Game Event Data occassionally has to be removed from its dictionary.
+The conditions for clearing should always be included in the specification for those Game Events. Common examples include:
+- Only the last x (=50|100|7|...) Game Event Data of a certain Game Event (like `killed`) is kept, and the rest of the data for that Game event will be automatically discarded.
+- Game Event Data for a certain Game Event (like `score`) is cleared every time a certain Game Event is fired (like `match_end`)
+
+This way, even if data will be cleared, apps can know exactly when it will be cleared, and can make sure to copy parts of it that they require.
+
+### Game Info Resetting
 
 Info updates are events. However, they are not fired directly. They are fired when their specific Game Info changes.
 
-As such, in order to ensure that these events fire properly, even if the exact value might not have changed, event "resets" are used.
+As such, in order to ensure that these events fire properly, even if the exact value represented might not have changed, event "resets" are used.
 This is done by changing the value to a consistent, clearly invalid value (usually `null`), as soon as it becomes irrelevant.
 Then, once the new value should be set, it is set, and a new event is fired.
 
-The reset can then be ignored by the app, by being detected as a reset, and then the new value can be handled as a fresh update.
+Every General Game Info that can be reset then includes the cases, as well as the values, of its resets.
+The resets can then be detected and ignored by apps, and then the new value can be handled as a fresh update.
 
 <details>
 <summary>Example Reset</summary>
@@ -146,21 +234,26 @@ Now, when the next match will start, score will change from null to 0, causing a
 ## Features
 
 :::note Game Events SDK and Features
-Currently, the [game events SDK](/topics/integrations/events-sdk-for-game-developers) does not natively support features.
+Currently, the [game events SDK](/topics/integrations/events-sdk-for-game-developers) does not natively support `features`.
 
 - For game developers using the SDK - This means that this section is redundant.
 - For app developers - This means that SDK games will fire **all** game events, meaning that you can skip the [`setRequiredFeatures()`](/api/games/events#setrequiredfeaturesfeatures-callback) step.
 :::
 
-Both Game Events and Game Info are grouped into `features`. Features serve as a way to group events based on their purpose. For example:
-- `match_info` - Information about the current match.
+Both Game Events and Game Info are part of `features`. Features serve as a way to group events based on their purpose. For example:
+- `match_info` - All events related to information about the current match.
+- `score` - All information related to a match's score, including when someone `scored`.
 - `death` - Death counters + Player death event.
 - `abilities` - Events fired when the player uses an ability + Current ability levels.
 
 An application then subscribes to the specific features it needs using [`setRequiredFeatures()`](/api/games/events#setrequiredfeaturesfeatures-callback), and is only notified of those events.
 
 :::tip Game Info And Features
-Game Info category names will usually correspond to the relevant feature's name.
+Game Info category names interact with features in two ways:
+- For Game Info corresponding to a Game Event, the category name will be that of the original event, not the feature.
+- For General Game Info, depneding on the type of information, it will sit under either:
+    - A category named after the relevant feature.
+    - One of the few [reserved category names][reserved-categories].
 :::
 
 ## Events Convention
@@ -175,7 +268,7 @@ for the forseeable future.
 
 ### Naming Convention
 
-Event/Feature naming should always follow these guidelines:
+Event/Feature naming should always comply with the following guidelines:
 
 <details>
 <summary>All event and inner variable names should be written in snake_casing</summary>
@@ -191,6 +284,8 @@ Event/Feature naming should always follow these guidelines:
     - `teamRoundWin`
     - `team_Set`
     - `Score_board`
+    - `MaTcHeNd`
+    - ...
 
 You can read more [here](https://en.wikipedia.org/wiki/Snake_case).
 
@@ -227,11 +322,13 @@ The `killed` event structure can be used:
 - Or for any other case where one entity is killed by another entity.
 
 In that case, there would be several different events, all based on the `killed` event structure:
-- `player_kill` - A player was killed.
-- `monster_kill` - A monster was killed.
-- Any other event in which a distinct entity type who's death should be tracked was killed.
+- `player_killed` - A player was killed.
+- `monster_killed` - A monster was killed.
+- Any other event in which a distinct entity type who's death should be tracked individually was killed.
 
-The exact distinction naming scheme will depend on the event "recipe", as well as the individual case.
+In cases where multiple event variants exist of a single event structure, they should all be named as follows:
+
+`${distinguishing_factor}_${event_structure_name}`
 
 </details>
 
@@ -372,3 +469,11 @@ aplhanumeric values | string            | Enum names or other constant values th
 user-generated text | string (base64)   | Usernames, chat, and anything else that could include complex characters |
 array[]             | array[]           | Arrays should be kept as arrays, while their values should all recursively comply with the convention |
 object              | object            | Objects should be kept the same where possible, and their values should all recursively comply with both the naming and the value convention |
+
+
+
+
+
+[game-events]: #game-events
+[game-info]: #game-info
+[reserved-categories]: TODO
