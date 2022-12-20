@@ -381,7 +381,7 @@ match_end   | null         | Match ended.   | See [notes](#match_end-note) | 148
 Data Example:
 
 ```json
-{"event":"match_start","data":null}
+{"events":[{"name": "match_start","data":null}]}
 ```
 
 #### *match_end* note
@@ -391,7 +391,7 @@ Please note that `match_end` does not work on custom matches nor training.
 Data Example:
 
 ```json
-{"event":"match_end","data":null}
+{"events":[{"name": "match_end","data":null}]}
 ```
 
 ## `game_info`
