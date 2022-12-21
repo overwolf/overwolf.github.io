@@ -289,15 +289,9 @@ div[class^="tableOfContents"] {
     &.theme-doc-sidebar-item-category-level-2 {
 
       .menu__list-item-collapsible {
-        &:hover {
-          background: transparent;
-        }
         .menu__link--sublist {
           padding: 0 14px 0px 12px;
           font-family: 'lato';
-          &:hover {
-            color: white;
-          }
         }
       }
     }
