@@ -201,11 +201,12 @@ Data Example:
 
 Current values:
 
-* Bomb = Regular game (Unrated).
-* Quick Bomb = Spike Rush.
-* Ranked = 1 = Competitive.
+* Bomb = Regular game (Unrated)
+* Quick Bomb = Spike Rush
+* Ranked = 1 = Competitive
 * Deathmatch = Deathmatch
 * Escalation = Escalation
+* Swift = Swiftplay
 
 Both of these values also have "custom" value which is identified as a Boolean, either "True" or "False".<br></br>
 True meaning that the current game is custom made, and false being an online game which is not custom.<br></br>
@@ -280,6 +281,7 @@ Data Example:
 #### *scoreboard* note
 
 List of parameters: 
+* player_id - the id of the player
 * name - the player name
 * character - the character name
 * teammate - is the player in my team or not
@@ -291,7 +293,7 @@ List of parameters:
 Data Example:
 
 ```json
-{"info":{"match_info":{"scoreboard_0":"{\"name\":\"jaxxx #7934\",\"character\":\"\",\"teammate\":false,\"alive\":true,\"kills\":0,\"deaths\":4,\"assists\":0,\"money\":99999,\"is_local\":true}"}},"feature":"match_info"}
+{"info":{"match_info":{"scoreboard_0":"{\"player_id\":\"11909ad6-77c8-5f70-06234a1eb22a\",\"name\":\"jaxxx #7934\",\"character\":\"\",\"teammate\":false,\"alive\":true,\"kills\":0,\"deaths\":4,\"assists\":0,\"money\":99999,\"is_local\":true}"}},"feature":"match_info"}
 ```
 
 #### *kill_feed* note
