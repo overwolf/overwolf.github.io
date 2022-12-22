@@ -5,7 +5,7 @@ import NavbarItem from '../../theme/NavbarItem';
 export default function TaggedSidebarLink(props) {
   return (
     <>
-    {console.log(props)}
+    {/* {console.log(props)} */}
       <NavbarItemComponent {...props} />
     </>
   );
