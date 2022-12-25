@@ -152,7 +152,7 @@
   },
   {
     "to": "/api/games/events/player-unknowns-battlegrounds",
-    "from": "/docs/api/overwolf-games-events-pubg"
+    "from": ["/docs/api/overwolf-games-events-pubg", "/docs/api/overwolf-games-events-pubg-lite"]
   },
   {
     "to": "/api/games/events/rainbow-six-siege",
@@ -994,6 +994,10 @@
   {
     "to": "/topics/using-windows-api/windows-types",
     "from": "/docs/topics/windows-types"
+  },
+  {
+    "to": "/api/changelogs",
+    "from": ["/api/changelogs/ow-electron/electron", "/api/changelogs/documentation/2022/november"]
   },
   {
     "to": "/api/changelogs/overwolf-platform/2019/august/134",
