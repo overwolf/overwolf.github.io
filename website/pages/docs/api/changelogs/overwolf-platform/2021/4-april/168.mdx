@@ -14,7 +14,7 @@ Note that iterations 167 to 168 were combined into a single iteration.
 ### API
 
 * You can now detect if the [Windows 10 Hardware-Accelerated GPU Scheduling](/topics/best-practices/video-capture#windows-10-hardware-accelerated-gpu-scheduling-notice) feature is enabled by calling [overwolf.utils.getSystemInformation()](/api/utils). The callback object contains the **HAGSEnabled** property that can be true or false.  Note that the user can set the HA feature on or off therough the client settings.
-* Close overwolf when closing an app: apps can now add the new 'Shutdown' permissions to it's manifest, then call [overwolf.settings.setExtensionSettings()](/api/settings#setextensionsettingsextensionsettings-callback) with "exit_overwolf_on_exit: true".
+* Close Overwolf when closing an app: apps can now add the new 'Shutdown' permissions to it's manifest, then call [overwolf.settings.setExtensionSettings()](/api/settings#setextensionsettingsextensionsettings-callback) with "exit_overwolf_on_exit: true".
   * **Note: This option shouldn’t be used without Overwolf’s permission**.
 * Social API: [overwolf.social.youtube.performLogin()](/api/social/youtube#performlogoutcallback) now opens in default browser and using pubsub to update client.
 * [overwolf.util.openFilePicker()](/api/utils#openfilepickerfilter-callback): now returns both url and path to file.  
@@ -29,7 +29,7 @@ Note that iterations 167 to 168 were combined into a single iteration.
 * OW browser redirects: allow to open tab and redirect back to extension when origin URL is at 'externally_connectable' and to tab was open from the same extension. See more details in our [OAuth integration guide](/topics/integrations/login-with-twitch).
 * App UTM params: Until now, UTM params tagged with the installer were saved to the OW database only for new OW installations.
 Now, they are saved to the DB in an app context, also for existing installations. (should be sent with 'InstalledApp' analytic). 
-  * The parameters will be passed as command-line arguments in case overwolf is installed - more info about UTM params on our [Referral ID Guide](/topics/best-practices/create-download-link).
+  * The parameters will be passed as command-line arguments in case Overwolf is installed - more info about UTM params on our [Referral ID Guide](/topics/best-practices/create-download-link).
   * In addition, for security and privacy reasons, the app sees only its context. Meaning, Your app will not be able to read other app's UTM params. You will get empty strings.
 
 
