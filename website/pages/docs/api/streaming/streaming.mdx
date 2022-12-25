@@ -557,13 +557,14 @@ Stream settings container.
 | error  | string | *Optional* error if any occured | 0.199  |
 | video  | [EncoderData](#encoderdata-object)[] | Array of available video encoders | 0.199  |
 | audio  | [AudioDeviceData](#audiodevicedata-object)[] | Array of available audio devices | 0.199  |
+| audioProcessCaptureSupported | bool | Is filtered sound capturing supported? | 0.199 |
 
 #### Object data example
 
 ```json
 "settings": {
   "success": true,
-	"video": {
+	"video": [
     {
       "display_name" : "Speakers (USB Ear-Microphone)",
       "display_id" : "{0.0.0.00000000}.{ec2a6c4b-f750-4045-bb93-d745ecc76937}",
@@ -571,12 +572,12 @@ Stream settings container.
       "can_record" : false,
       "can_playback" : true
     },
-  }
-  "audio": {
+  ]
+  "audio": [
     {
       ...
     }
-  }
+  ],
   "audioProcessCaptureSupported": true
 } 
 ```
