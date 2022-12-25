@@ -1,4 +1,4 @@
 label: 'all-applications'
 customProps:
   overwolf_platform: true
-  electron_platform: false
+  electron_platform: true
