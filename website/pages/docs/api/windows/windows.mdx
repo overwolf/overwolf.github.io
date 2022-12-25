@@ -121,7 +121,7 @@ callback  | [(Result: WindowResult)](#windowresult-object) => void   | A callbac
 
 #### Note
 
-* The sizes returned in the callback already consider the DPI scaling (to be fixed by version 0.170).
+* The sizes returned in the callback already consider the DPI scaling.
 
 ## obtainDeclaredWindow(windowName, callback)
 #### Version added: 0.78
@@ -136,7 +136,7 @@ callback  | [(Result: WindowResult)](#windowresult-object) => void | A callback 
 #### Notes
 
 * If the window does not exist - the function return null in the sizes.
-* If the window exists - the sizes returned in the callback already consider the DPI scaling (to be fixed by version 0.170).
+* If the window exists - the sizes returned in the callback already consider the DPI scaling.
 
 ## obtainDeclaredWindow(windowName, overrideSetting, callback)
 #### Version added: 0.78
@@ -152,7 +152,7 @@ callback        | [(Result: WindowResult)](#windowresult-object) => void | A cal
 #### Notes
 
 * If the window does not exist - the function return null in the sizes.
-* If the window exists - the sizes returned in the callback already consider the DPI scaling (to be fixed by version 0.170).
+* If the window exists - the sizes returned in the callback already consider the DPI scaling.
 
 ## obtainDeclaredWindow(windowName, useDefaultSizeAndLocation, callback)
 #### Version added: 0.136
@@ -174,7 +174,7 @@ overwolf.windows.obtainDeclaredWindow("main", {useDefaultSizeAndLocation: true},
 #### Notes
 
 * If the window does not exist - the function return null in the sizes.
-* If the window exists - the sizes returned in the callback already consider the DPI scaling (to be fixed by version 0.170).
+* If the window exists - the sizes returned in the callback already consider the DPI scaling.
 
 ## getWindow(windowName, callback)
 #### Version added: 0.191
