@@ -1,0 +1,11 @@
+When creating an Ad container, apps must also handle cases where no Ad will be shown.
+
+As a best practice, our recommendation is to create a simple placeholder image, surrounded by empty space. More specifically:
+- Place an image (e.g. The app's logo, your company's logo, or even a mascot) **underneath** the Ad container, alongside text/any other details you want.
+  - Make sure that the image does not stick out from the rest of the app.
+  - The image + any other graphics should fit within a centered rectangle, and be no bigger than 250x250 pixels.
+  - The remaining placeholder must be flatly colored.
+- The entire placeholder must be at the exact size of the Ad container, and must **always** sit exactly behind it, making it visible only when no Ads are loaded.
+
+> Example of a properly placed/sized placeholder:
+![Ad Container Placeholder](/assets/start/monetize-your-app/ads-sdk/_partials/_ad-container-placeholder.png)

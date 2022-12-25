@@ -1,0 +1,127 @@
+---
+id: working-with-ads
+image: "/img/embed/getting-started.jpg"
+title: Working with Ads
+sidebar_position: 0
+sidebar_custom_props:
+  overwolf_platform: true
+  electron_platform: true
+---
+
+:::tip About The Ads SDK
+This page discusses general information about working with Ads.
+Once you are done, do also check out the [**Ads SDK**][ads-sdk], for an overview of the Overwolf Ads SDK.
+:::
+
+> "Ads offer a way to monetize your app seamlessly, without compromising user experience."
+ 
+More specifically, Ads allow you to take unused visual space in your app, and "auction" it off to advertisers,
+who will then use it in order to advance their products.
+
+While this can be very useful as a developer, there are some constraints to the app's design that come with Ads. Mainly:
+- Ads cannot compromise the app's usability/design too much, otherwise user experience will be hurt.
+- Ads must follow many rigid rules, set forth by the advertising industry.
+
+As such, we have compiled a set of guidelines, to help you integrate Ads into your app's design, with a minimal impact on everything else.
+
+### Ad planning guidelines
+
+:::info Where Do These Guidelines Come From?
+To better understand the reasoning for these guidelines, and the thinking behind them, see [Ads and desktop apps](#ads-and-desktop-apps).
+:::
+
+First, if you haven't already, please review the available [Ad Sizes][ad-sizes].
+
+Now, with this list in mind, you should select the locations in the app where these Ad containers will be displayed. Keep in mind:
+- **Any window containing an Ad container, should also have real, tangible and continous value for the user.**
+  :::warning Some examples of where Ads must **NEVER** be displayed
+    - App signup/login windows.
+    - App error windows.
+    - Windows displaying just the Ad container.
+  :::
+- Try to keep the Ads as acceptable and non-invasive to the app's overall experience as possible.
+  - There is nothing wrong with using Ads. However, too many Ads, or parts of the app that feel like
+  they are only there to show more Ads, are the main causes of friction with user experience when using Ads.
+- The amount of Ad containers you can use is limited. **Use it wisely**. More specifically:
+  - With video Ad containers, you may only have one active video Ad container at any moment **per app window**.
+  - Each app window may only have up to (**or exactly**) 3 active Ad containers at any given moment (both video and display Ads count towards that limit).
+  - You may use as many display Ad containers as you want, **as long as the total amount of Ad containers in the window stays at 3 or less.**
+- If a certain app window has several views, try to make sure Ad locations do not change when moving between views.
+(This ensures that the containers can stay active, regardless of the current view).
+- Ad containers should be placed where they won't be hidden. If your app utilizes pop-ups, try to make sure that these do not block any Ad containers.
+- Ad containers should be placed where they will be seen for more than a short moment.
+  - This can often be achieved by using "dead" moments in games (i.e. loading screens, post-game screens, respawn timers, etc.).
+- When using video Ad containers, try to keep the container's continuous visibility duration high, to ensure higher completion rates.
+  - A good average open time for video Ads is 30 seconds.
+  - A good average completion rate for video Ads (the rate of video Ads that were watched 100% of the way) is 70%.
+
+:::info Unsure? Contact Us!
+Ad planning can be a tricky thing. If you're uncertain about any part of it, or just have any questions about it,
+[contact us][contact-us], and we will gladly help you with planning and implementing Ads in your app!
+:::
+
+## List of Ad Sizes
+
+[Back to guidelines][ad-guidelines]
+
+import AdSizes from "@site/pages/docs/api/general/ads-sdk/_ad-sizes.mdx"
+
+<AdSizes/>
+
+Below are some examples of Ad placements in different apps:
+
+<ImageSlider>
+  <img src={require('/assets/lb-400x300.png').default} alt="Legendary Builds"/>
+  <img src={require('/assets/dota-2-400x300.png').default} alt="DotaPlus"/>
+</ImageSlider>
+
+## Ads and desktop apps
+
+:::info Further Reading
+The remaining part of this page explains the limitations, as well as reasoning, that make up the above guidelines. As such, it is not actually required
+for Ad implementation.
+
+[Back to guidelines][ad-guidelines].
+:::
+
+Displaying Ads in a desktop app brings with it a challenge:
+- On the one hand, more Ads in more places would mean a higher revenue.
+- On the other hand, both users and advertisers have their limits:
+  - For users, too many Ads/Ads that interfere with the app's basic functions will significantly hurt the app's usability, causing the users to leave.
+  - For advertisers, too many low-performing Ads would simply drive them away, along with their advertising budgets.
+
+As such, while ideally in order to display Ads in an app, you would simply define one (or several) places where Ads will be shown and everything else
+would work itself out, you have to keep the different involved parties in mind.
+
+### From a user experience perspective
+
+Ideally, we would want to use any bit of dead space in the app's screens to display Ads,
+so that we can use the important space more effectively for the app's features, and users wouldn't feel like their experience was hurt.
+This would include the usage of:
+- Unused margins.
+- Empty corners.
+- Areas often hidden by other windows.
+- etc.
+
+### From an advertising perspective
+
+Ads come with many rigid constraints, to ensure that advertisers get a good return on their investment.
+These most often dictate that:
+- Ads must come in one of several [preset container sizes][ad-sizes].
+- Ads must not move while playing.
+- Ads must not actively compete with each other for the user's attention.
+- Ads must always be fully visible.
+
+### Bridging the gaps
+
+These constraints, while already conflicted, still don't even fully cover everything that would affect the app's Ad/general performance when integrating Ads.
+As such, Overwolf also places an extra set of contraints on Ads displayed through the SDK, in order to maintain a healthy environment for advertisers,
+users, and app developers alike. You can read more about that [here](advertising-policy).
+
+All of those rules, when combined, make up the [Ad planning guidelines][ad-guidelines], a set of simple rules designed to help you implement
+Ads into your app properly, while keeping the different constraints in mind.
+
+[ad-sizes]: #list-of-ad-sizes
+[ad-guidelines]: #ad-planning-guidelines
+[ads-sdk]: ads-sdk
+[contact-us]: /support/contact-us

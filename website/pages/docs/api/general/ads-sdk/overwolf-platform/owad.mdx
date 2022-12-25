@@ -16,8 +16,8 @@ These can be created using the [overwolf Ads SDK](/api/general/ads-sdk/overwolf-
 ## Methods Reference
 
 * [new OwAd()](#new-owadcontainer-settings)
-* [OwAd.addEventListener()](#addeventlistenerevent-callback)
 * [OwAd.shutdown()](#shutdown)
+* [OwAd.addEventListener()](#addeventlistenerevent-callback)
 
 ## Events Reference
 
@@ -55,6 +55,22 @@ settings  | [ContainerSettings](#containersettings-object) | The container's des
 let owAd = new OwAd(document.getElementById("ad-div"), {size: {width: 400, height: 300}});
 ```
 
+## shutdown()
+
+> Shuts down the Ads container completely.
+
+For specific use cases, please refer to [Guidelines for ad integration](/start/monetize-your-app/ads-sdk#guidelines-for-ad-integration).
+
+### Code Example
+
+```js title="Shut Down an existing OwAd instance"
+let owAd = new OwAd(...);
+...
+
+owAd.shutdown();
+```
+
+
 ## addEventListener(event, callback)
 
 > Adds a listener to a certain Ad event.
@@ -64,12 +80,14 @@ Parameter | Type   | Description                                  | Required |
 event     | string | The name of the event to listen to           | Yes |
 callback  | (Result) => void | The callback that will be called when this event occurs | Yes |
 
+### Code Example
 
-## shutdown()
+```js title="Add an event listener to an OwAd"
+let owAd = new OwAd(...);
+...
 
-> Shuts down the Ads container completely.
-
-For specific use cases, please refer to [Guidelines for ad integration](/start/monetize-your-app/ads-sdk#guidelines-for-ad-integration).
+owAd.addEventListener("player_loaded", (name, ...) => {...});
+```
 
 ## player_loaded (Video Only) {#player_loaded}
 
