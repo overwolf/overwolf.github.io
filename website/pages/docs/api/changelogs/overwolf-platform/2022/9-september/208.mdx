@@ -13,7 +13,7 @@ sidebar_custom_props:
 
 ### Docs
 - Added more page preview images
-- New section on the website - `Tools`. Overwolf tools 
+- New section on the website - `Tools`, documenting the different tools provided by overwolf (ow-electron, ow-cli, Developer's console, etc).
 - Dev console docs have been updated to reflect the facelift, and can be found [here](/tools/developers-console).
 
 ### Platform
@@ -37,7 +37,7 @@ sidebar_custom_props:
     - [`overwolf.streaming.StreamResult`](/api/streaming#streamResult-object) now returns the `streamId` of the corresponding OBS stream.
     - [`overwolf.media.replays.capture()`](/api/media/replays#capturepastduration-futureduration-capturefinishedcallback-callback) now returns [`overwolf.media.replays.StartReplayResult`](/api/media/replays#replayresult-object) to its callback, with more information about the capture.
     - Added [`overwolf.streaming.enums.CaptureErrorCode`](/api/streaming#captureerrorcode-enum), an enum of error codes returned when a capture fails. Of particular note is the [`overwolf.streaming.enums.CaptureErrorCode.RansomwareProtection`](/api/streaming#ransomwareprotection-note) code,
-    which signals that Windows ransomware protection on folders is turned on and stopping overwolf from writing to the capture folder. More information can be found [here](https://learn.microsoft.com/en-us/microsoft-365/security/defender-endpoint/controlled-folders?view=o365-worldwide#windows-system-folders-are-protected-by-default).
+    which signals that Windows ransomware protection on folders is turned on and stopping Overwolf from writing to the capture folder. More information can be found [here](https://learn.microsoft.com/en-us/microsoft-365/security/defender-endpoint/controlled-folders?view=o365-worldwide#windows-system-folders-are-protected-by-default).
 
 ### Bug Fixes
 - Fixed an issue affecting app tray icons on the first install of the app.
