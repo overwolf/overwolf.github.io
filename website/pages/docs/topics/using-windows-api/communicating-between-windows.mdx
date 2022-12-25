@@ -34,7 +34,7 @@ Using sendMessage is not our best practice since it might not work on some occas
 
 ## Communication channels using an iframe inside an Overwolf window
 
-The recommended way to access the overwolf object from an online web page loaded inside an iframe is to set up a communication channel using the [postMessage](https://developer.mozilla.org/en-US/docs/Web/api/Window/postMessage) method.  
+The recommended way to access the Overwolf object from an online web page loaded inside an iframe is to set up a communication channel using the [postMessage](https://developer.mozilla.org/en-US/docs/Web/api/Window/postMessage) method.  
 
 To do so, allow your app to load and communicate with your domain via [externally_connectable](/api/manifest#externally_connectable) configuration in the manifest.  
 
