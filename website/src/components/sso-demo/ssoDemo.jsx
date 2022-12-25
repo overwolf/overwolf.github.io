@@ -14,7 +14,7 @@ function SSODemo(props) {
     }, []);
 
   const handleStorageEvent = (e) => {
-  // console.log('handleStorageEvent()', e);
+  console.log('handleStorageEvent()', e);
 
       if ( e.key === 'ssoDemoAccessToken' )
           setToken(e.newValue);
@@ -26,7 +26,7 @@ function SSODemo(props) {
           '_blank'
       );
 
-      // console.log('openLoginWindow()', { loginWindow });
+      console.log('openLoginWindow()', { loginWindow });
 
       loginWindow.onbeforeunload = () => setLoginWindow(null);
       setLoginWindow(loginWindow)
