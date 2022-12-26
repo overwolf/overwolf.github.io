@@ -1,4 +1,5 @@
 label: 'ow-electron'
+position: -2 # float position is supported
 customProps:
   overwolf_platform: false
   electron_platform: true
