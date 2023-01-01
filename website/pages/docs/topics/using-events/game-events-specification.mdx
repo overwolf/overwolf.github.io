@@ -7,6 +7,12 @@ title: Game Events Specification
 Game events allow applications to truly understand what is happening in a game,
 which in turn lets them deliver a significantly more accurate and adaptive experience.
 
+<SkipMe>
+### Note for anyone reading this
+This spec is a WIP, and as such, some parts of it are "commented out" for now, in the SkipMe components.
+Anything you see under it is not necessarily going to make it into the final thing, and might just be remnants of older versions!
+</SkipMe>
+
 There are two different forms of data that are referred to as `events`:
 - [Game Events][game-events] - Specific events that happen in the game.
 - [Game Information][game-info] (Game Info for short, also referred to as part of Info Updates) - The current state of specific parts of the game.
@@ -15,16 +21,22 @@ When a Game Event/Info occurs/changes, an event/info update is fired respectivel
 
 However, in order to make this data easy to expose and use, we have created the following specification.
 
+<SkipMe>
 :::tip TL;DR
 The most important take-away from this specification is the following:
-- This spec is a general guideline for any Game Event implementations from now on to follow. Due to technical limitations, some implementations might stray away from it.
+- This spec is a general guideline for any Game Event implementations from the moment of its full adoption. However, due to technical limitations, some implementations might have to stray away from it.
+In those cases, they will detail the difference in their documentation.
 - Game Events should mostly be used to notify of important momentary changes and their UID.
 - Game Info should mostly be used for exposing any data of actual importance from the game.
     - Game Info should be used to expose the data related to specific Game Events.
-    - Game Info exposing data of specific Game Events should be occassionally, when a predefined set of declared conditions occur, in order to avoid clutter/resource hogging.
-- Not all game data should be exposed as events, but events **can** be used to notify an app of external data sources (files, external APIs, etc).
-- Events planning can be tricky, with many different approaches being valid. As such, do not hesitate to [contact us](/support/contact-us) for help with it.
+    - Game Info exposing data of specific Game Events should be occassionally deleted, when a predefined set of declared conditions occur,
+    in order to avoid clutter/resource hogging.
+- Not all game data should be exposed as events, but events **can** be used to notify an app of external data sources (files, external API keys, etc).
+- Events planning can be tricky, with many different approaches being valid, and many potential pitfalls along the way.
+As such, do not hesitate to [contact us](/support/contact-us) for help with the design process.
 :::
+
+</SkipMe>
 
 ## Game Events
 
@@ -35,24 +47,43 @@ and are meant to notify an app of its exact moment. Common examples include:
 - Achievement `unlocked`
 - Scene `changed`
 
-Game events offer a way for an app to know the exact moment at which something happened, even before all of its data is ready/exposed to the app/player.
+Game events offer a way for an app to detect the exact moment at which something happened, even before all of its data (if any) is ready/exposed to the app/player.
 
 ### Event Contents
 
-Game events should rarely contain any concrete data. Instead, they should contain a Unique Identifier (UID) of the specific event, which will be used
-to correlate it to a specific [Game Info][game-info].
+<SkipMe>
+All Game Events will always contain the following reserved fields:
+- `momentary` - Whether this is a `Momentary Game Event`, or a `Deferred Game Event`.
+- 'initial_timestamp' - The computer-local [timestamp (in milliseconds)](https://currentmillis.com/) when the event was initially fired.
+</SkipMe>
 
-- For apps, this makes it possible to initialize mid-match and still have data, even for things like .
-- For games, this makes it possible to easily expose new information about old occurances as it becomes available to the player.
+There are two types of Game Events, each with their own kinds of data:
+- Momentary Game Event - For momentary Game Events, where no follow-up is desried, and there is absolutely no use for keeping a log.
+<SkipMe>
+    - The Game Event will always set the reserved `momentary` field to true. 
+    - The Game Event will contain the rest of its data under the `data` property.
+</SkipMe>
+- Deferred Game Event - For deferred Game Events, where follow-up can happen, or there is a use for keeping a log:
+    - The Game Event's `data` property will contain the field `id`, which is equal to a Unique Identifier ([`uid`](#game-event-uid)) of the event.
 
-:::tip Game Event UID
-A "full" Game Event Unique ID is made up of two parts:
+<SkipMe>
+    - The Game Event will always set the reserved `momentary` field to false.
+</SkipMe>
+
+By doing that, it makes it possible:
+- For apps to have a "moving window" of relevant past events, rather than needing to keep a copy of every fired event.
+- For games to easily expose new information about old occurances as it becomes available to the player, while keeping the entire thing cleanly linked together, using familiar workflows.
+
+#### Game Event UID
+
+A "complete" Deferred Game Event Unique ID (`uid`) is made up of two parts:
 - The event's type - `event_name`
-- A unique ID for this specific event - `uid`
+- An ID for this specific event, unique from within this type of event - `id`
 
-As a result, every ID'd event only needs to send the event's `uid` inside of its data.
+As a result, every Deferred Game Event only needs to send the event's `uid` as its data.
 
-The event `uid` should be consistently formatted throughout the entire game where possible, and should always follow one of the following patterns:
+The event `uid` should be consistently formatted throughout the entire game where possible (although more than one format can be used if necessary),
+and should always use one of the following `uid` patterns:
 
 ```js title="Event UID Schemas ((${event_name}-) added to results for readability)"
 // When exposing the exact event count + order easily is desirable
@@ -66,34 +97,21 @@ be randomized every time an **in-game** event occurs, and the event fired once i
 // When further splitting of the event id is desirable, but the event itself should not be split
 `${filter}-${some_indexing}` = '(scored-)blue-0', '(round_phase-)build-12412582'
 ```
-:::
+
 
 <details>
 <summary>Example Event</summary>
 
-```json title="A player just scored the first point in the game"
+```json title='A player was just killed, with the kill id of "9"'
 {
-    "name": "scored",
+    "name": "player_killed",
     "data": {
-        "event_id": "scored_0"
+        "id": "9"
     }
 }
 ```
 
 </details>
-
-:::info Event Data
-While usually undesirable, game events **can** contain concrete data directly, without using an ID and a Game Info.
-
-This should usually be avoided, for several reasons:
-- It adds a different method of data access/processing compared to the rest of the specification, complicating the code for both apps and games.
-- It makes any app that misses the event for one reason or another (mostly due to connecting after it occurs) unable to access this data at all.
-- It makes it impossible to update this information easily in the future (with new/different data).
-
-As such, the main use-cases for it include:
-- Meta notifications - An external resource the app might cache has changed/is about to change (ie. game API keys, game files, etc).
-- Fleeting unimportant (for apps) occurances - Cutscene started, player interacted with cosmetic environment, etc.
-:::
 
 ## Game Info
 
@@ -110,14 +128,21 @@ Game Info is stored inside of categories (dictionaries), that are then all store
 Every Game Info item exists only inside of a single category, and categories cannot be nested.
 
 Game Info items are split into two types, and will always follow their type's structure format:
-- Game Event data - For Game Info that corresponds to a certain Game Event:
-    - The category name will always be the exact event name of the original event.
-    - The Game Info name will always correspond to the remaining "tail" of the event UID.
-    - The Game Info will always contain the reserved `initial_timestamp` field, containing the computer-local [timestamp (in milliseconds)](https://currentmillis.com/) the event was initially fired.
-    - The Game Info will always contain the reserved `final` field, indicating whether or not the Game Info has been finalized (meaning that it will not be changed anymore).
 - General Game Info - For general Game Info that is not related to any specific Game Event.
     - The category name will always be either the Feature name, or part of a list of [reserved category names][reserved-categories].
-    - The Game Info name will always correspond to the Game Info name given to it under its relevant feature.
+    - The Game Info name will always correspond to the Game Info name given to it under its relevant [feature](#features).
+- Game Event Data - For Game Info that corresponds to a certain Game Event:
+    - The category name will always be the exact event name of the original event.
+    - The Game Info name will always correspond to one of three values (see example event data):
+        - The full `uid` of the [Game Event UID](#game-event-uid).
+        - The reserved name `log`, and contain a dictionary of `uid` -> values.
+        - The first section of the `uid`, and contain a dictionary of the remaining `uid` parts -> values.
+
+<SkipMe>
+    - The Game Info will always contain the reserved `initial_timestamp` field, containing the computer-local [timestamp (in milliseconds)](https://currentmillis.com/) the event was initially fired.
+    - The Game Info will always contain the reserved `final` field, indicating whether or not the Game Info has been finalized (meaning that it will not be changed anymore).
+</SkipMe>
+
 
 <details>
 <summary>Example Game Info Layout</summary>
@@ -125,20 +150,26 @@ Game Info items are split into two types, and will always follow their type's st
 ```json title="An example Game Info layout, containing 3 categories, and 5 total Game Info items"
 {
     "category": { // category 1
-        "item_info": "Example string", // info 1
-        "reset_info": null // info 2
+        "item_info": "Example string", // info 1 - General Game Info
+        "reset_info": null // info 2 - General Game Info
     },
-    "game_event": { // category 2
-        "event_info": { // info 3
-            "final": false,
-            "initial_timestamp": 1671096768164,
+    "game_event": { // category 2 - the different forms of deferred event data
+        "9": { // info 3 - Game Event Data, of event uid = 9
             "inner_foo": "value",
             "inner_bar": true
-        }
+        },
+        "log": { // info 4 - Game Event Data, containing uids = [10, 11]
+            "10": "value",
+            "11": true
+        },
+        "blue": { // info 3 - Game Event Data, containing uids = [blue-12, blue-13]
+            "12": "value",
+            "13": true
+        },
     },
     "local_player": { // category 3
-        "number_info": 125 // info 4
-        "boolean_info": true // info 5
+        "number_info": 125 // info 4 - General Game Info
+        "boolean_info": true // info 5 - General Game Info
     }
 }
 ```
@@ -152,24 +183,24 @@ Info Updates (Game Info change events) fire when a change occurs in a certain Ga
 <details>
 <summary>Example Info Updates</summary>
 
-```json title="The blue team has just scored 5 points, making this the 3rd time they have scored in the game"
-{
-    "scored": {
-        "blue-3": {
-            "initial_timestamp": 1671097454324,
-            "final": true,
-            ...
-        }
-    }
-}
-```
-
-```json title="The blue team has just scored 5 points, increasing their score count from 8 to 13, while red is still at 18"
+```json title="Example General Game Info - The blue team has just scored 5 points, increasing their score count from 8 to 13, while red is still at 18"
 {
     "match_info": {
         "score": {
             "blue": 13,
             "red": 18
+        }
+    }
+}
+```
+
+```json title="Example Game Event Data - The blue team has just scored 5 points, making this the 3rd time they have scored in the game"
+{
+    "scored": {
+        "blue-3": {
+            ...
+            "scorer": "player_1"
+            ...
         }
     }
 }
