@@ -5,7 +5,7 @@ title: Release Management
 sidebar_position: 10
 sidebar_custom_props:
   overwolf_platform: true
-  electron_platform: false
+  electron_platform: true
 ---
 
 This section of the console allows you to manage your app's releases, which are based on the "Release Channels" model.
@@ -25,7 +25,7 @@ Similarly to that, the developers console allows you to create and manage your o
 
 App Channels allow you to control several aspects of your deployment:
 - [Phasing (Rollout)](#rolloutphasing) - You can release new updates to a % of the users on a channel at a time.
-- Automatic deployment - No need for update checks, manual updating, etc. As long as it's set in the console, overwolf will take care of the rest.
+- Automatic deployment - No need for update checks, manual updating, etc. As long as it's set in the console, Overwolf will take care of the rest.
 - One place for everything - For every version in a channel, you can view the download counts, active user counts, phasing history, internal and external changelogs, and even download the actual opk file.
 - Automatic version diffs - The developers console will maintain version "diff" files a few versions back on every channel, significantly reducing the file size for app updates.
 
@@ -35,7 +35,7 @@ Keep in mind that app channels can take a few minutes from the moment a version 
 
 ### The "Production" and "Testing" Environments
 
-For an overwolf app, channels are split into two groups, that operate similarly:
+For an Overwolf app, channels are split into two groups, that operate similarly:
 - [`Production`](release-management/production) - Your app's public channel
 - [`Testing`](release-management/testing) - Your app's testing channels
 
@@ -46,7 +46,7 @@ There are two ways that your testers/users can get the custom app version from a
 1. **Custom download link** - Get the custom download link from the dev console.
     - For the [Production](release-management/production) channel, this will be the app's unique download link.
     - For [Testing](release-management/testing) channels, this will be the channel's unique download link.
-2. **API** - Use the overwolf API as [explained below](#the-app-channels-api) to change the current app channel, enabling you to integrate this feature into your app.
+2. **API** - Use the Overwolf API as [explained below](#the-app-channels-api) to change the current app channel, enabling you to integrate this feature into your app.
 For example, you can display a combo box that enables your app users to change the channel from the app's UI.
 
 ### Apply the channel change
@@ -254,7 +254,7 @@ when changed to the next %).
 
 There are two kinds of version release notes:
 - "Internal release notes" - These are used for documenting **all** changes done to the app over time.
-**They can only be viewed by your app's staff and the overwolf team**.
+**They can only be viewed by your app's staff and the Overwolf team**.
 - "(Public) release notes" - These are your app's public release notes, for documenting public changes to the app.
 **They can be viewed by anyone, even [outside of the developer's console](#release-notes-endpoint)**,
 and it is recommended to use them to manage your app's public "changelog" for new versions.

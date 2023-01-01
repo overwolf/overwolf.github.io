@@ -15,7 +15,6 @@ export default function DocSidebarItemLink({
   index,
   ...props
 }) {
-  console.log(item, activePath, level, index, props)
   const {href, label, className, autoAddBaseUrl} = item;
   const isActive = isActiveSidebarItem(item, activePath);
   const isInternalLink = isInternalUrl(href);

@@ -1,4 +1,0 @@
-label: 'Electron'
-customProps:
-  overwolf_platform: false
-  electron_platform: true

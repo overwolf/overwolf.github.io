@@ -11,6 +11,11 @@ fs.readFile("templates/changelogs.mdx", 'utf8', function (err, temp) {
     }
     let dev = logs["dev"]
     let cur = logs["latest"]
-    fs.writeFileSync(paths[0] + "changelogs.mdx", temp.replaceAll("$latest-ver", cur["name"]).replaceAll("$latest-date", cur["date"]).replaceAll("$latest-path", cur["path"]).replaceAll("$dev-ver", dev["name"]).replaceAll("$dev-date", dev["date"]).replaceAll("$dev-path", dev["path"]))
+    let electron = logs["ow-electron"]
+    fs.writeFileSync(paths[0] + "changelogs.mdx",temp
+    .replaceAll("$latest-ver", cur["name"]).replaceAll("$latest-date", cur["date"]).replaceAll("$latest-path", cur["path"])
+    .replaceAll("$dev-ver", dev["name"]).replaceAll("$dev-date", dev["date"]).replaceAll("$dev-path", dev["path"])
+    .replaceAll("$ow-electron-ver", electron["name"]).replaceAll("$ow-electron-date", electron["date"]).replaceAll("$ow-electron-path", electron["path"])
+    )
     dec.declare(paths[0] + "changelogs.mdx")
 })

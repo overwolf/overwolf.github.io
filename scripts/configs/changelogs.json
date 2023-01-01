@@ -1,12 +1,17 @@
 {
     "latest": {
-        "date": "november/2022",
-        "path": "2022/november",
-        "name": "212"
-    },
-    "dev": {
-        "date": "december/2022",
+        "date": "december 2022",
         "path": "2022/december",
         "name": "215"
+    },
+    "dev": {
+        "date": "december 2022",
+        "path": "2022/december",
+        "name": "215"
+    },
+    "ow-electron": {
+        "date": "december 2022",
+        "path": "v19.x",
+        "name": "19.1.8-1"
     }
 }

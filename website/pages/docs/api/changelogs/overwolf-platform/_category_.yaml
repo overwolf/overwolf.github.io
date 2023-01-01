@@ -1,4 +1,5 @@
-label: 'Overwolf'
+position: -1 # float position is supported
+label: 'Overwolf Platform'
 customProps:
   overwolf_platform: false
   electron_platform: true
