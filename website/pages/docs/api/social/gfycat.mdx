@@ -84,7 +84,7 @@ Parameter             | Type                       | Description                
 --------------------- | ---------------------------| --------------------------------------------------------------------- |
 gfycatShareParams    | [GfycatShareParameters](#gfycatshareparameters-object) Object        | The share parameters       |
 resultCallback    | ([SocialShareResult](#socialshareresult-object)) => void        | A callback function which will be called with the resulting status of the request         |
-progressCallback  | ([socialShareProgress](#socialshareprogress-object)) => void   | A callback function which will be called whenever share progress is made |
+progressCallback  | ([socialShareProgress](#socialshareprogress-object)) => void   | A callback function which will be called whenever share progress is made. See [note](#progress-note) |
 
 Types of errors that can occur:
 
@@ -92,6 +92,13 @@ Types of errors that can occur:
 * MissingFile (trying to share a missing file)
 * UnsupportedFile (trying to share an unsupported format)
 * ExceedsMaxSize (the file is too large: > 8 MB for images, > 100 MBfor videos)
+
+#### Progress Note
+
+This callback will only be called when uploading a video.
+
+Videos will be uploaded in uniforamlly sized chunks (except for the last chunk). The callback will be called every time another chunk was successfully uploaded.
+
 
 ## cancelShare(string, callback)
 #### Version added: 0.198
