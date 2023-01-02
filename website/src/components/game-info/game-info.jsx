@@ -35,7 +35,7 @@ function GameInfo(props) {
 
   const gameOrLauncherIdName = GamesMetadata[gameID].launcher ? 'Game Launcher ID' : 'Game ID';
   const gameOrLauncherName = GamesMetadata[gameID].launcher ? 'Launcher' : 'Game';
-  const launcherID = GamesMetadata[gameID].launcherId;
+  const launcherID = GamesMetadata[gameID].launcherID;
   const launcherGameList = GamesMetadata[gameID].launcher ? GamesMetadata[gameID].launcher.games.length : 0;
   const IsDisplayOrGameID = GamesMetadata[gameID].displayId ?  GamesMetadata[gameID].displayId : gameID;
   const mainVariant = GamesMetadata[gameID].mainVariant ? GamesMetadata[gameID].mainVariant : 0;
