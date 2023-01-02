@@ -5,6 +5,7 @@ import { stateToCss } from '../game-events-status/events-utils/events-utils';
 import GameInfoListItem from './game-info-list-item';
 import LauncherGamesList from './launcher-games-list';
 import StatusToolTip from './status-tooltip';
+import Preloader from '../preloader/preloader';
 
 function GameInfo(props) {
   const {
@@ -41,7 +42,7 @@ function GameInfo(props) {
   const mainVariant = GamesMetadata[gameID].mainVariant ? GamesMetadata[gameID].mainVariant : 0;
   const subVariant = GamesMetadata[gameID].subVariant ? GamesMetadata[gameID].subVariant : 0;
   // ---------------------------------------------------------------------------
-  return (
+  return gameStatus != null ? (
     <section className='game-info-section'>
       <div className="game-info-item">
 
@@ -70,7 +71,7 @@ function GameInfo(props) {
               />
             </li>
           }
-          
+
           { GamesMetadata[gameID].path && showStatus && (mainVariant != 0) &&
             <li>
               <GameInfoListItem
@@ -106,7 +107,7 @@ function GameInfo(props) {
               />
             </li>
           }
-          
+
           { GamesMetadata[gameID].compliance && showCompliance && gameOrLauncherName == 'Game' && (subVariant != 0) &&
             <li>
               <GameInfoListItem
@@ -162,6 +163,8 @@ function GameInfo(props) {
         }
 
     </section>
+  ) : (
+    <Preloader small={true}/>
   );
 
 }

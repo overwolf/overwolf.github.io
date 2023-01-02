@@ -1,0 +1,29 @@
+
+.preloader {
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+
+
+  &.small {
+    min-height: 146px;
+  }
+
+  span {
+    margin-right: -8px;
+  }
+
+  svg {
+    animation: 0.75s linear rotating infinite;
+  }
+
+  @keyframes rotating {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+}
+
