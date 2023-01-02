@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import GameEventsStatus from '@site/src/components/game-events-status/gameEventsStatus';
 import SpecificGameEventsStatus from '@site/src/components/game-events-status/specificGameEventsStatus';
 import { GamesMetadata } from './gamesMetaData';
+import Preloader from '../preloader/preloader';
 
   function EventsData(props) {
     const {
@@ -64,7 +65,7 @@ import { GamesMetadata } from './gamesMetaData';
 
     }, []);
 
-    return (
+    return gameListData != null || gameStatus != null ? (
       <>
 
         { allGames && gameListData != null &&
@@ -76,6 +77,8 @@ import { GamesMetadata } from './gamesMetaData';
         }
 
       </>
+    ) : (
+      <Preloader />
     );
   }
 
