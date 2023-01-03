@@ -683,8 +683,8 @@
     "from": "/docs/support/create-ticket"
   },
   {
-    "to": "/support/developer-client-downloads",
-    "from": "/docs/support/download-overview"
+    "to": "/support/setting-up-dev-environment",
+    "from": ["/docs/support/download-overview", "/support/developer-client-downloads"]
   },
   {
     "to": "/support/faq",
