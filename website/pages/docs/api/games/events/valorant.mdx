@@ -139,6 +139,7 @@ game_mode    | match_info  |* Mode: Bomb / Quick Bomb<br></br>* Ranked: 0 (Pract
 roster    | match_info  | * Player Name<br></br>* Player ID<br></br>* Name of picked character<br></br>* Player's Rank<br></br>* Whether it is the local player<br></br>* If player is a teammate or not. |See [notes](#roster-note)|   151.0       |
 scoreboard    | match_info  | Scoreboard changes and updates during the game |See [notes](#scoreboard-note)|   151.0       |
 kill_feed    | match_info  | kill feed updates during the game |See [notes](#kill_feed-note)|   209.0       |
+map    | match_info  | Current played map name |See [notes](#map-note)|   217.0       |
 
 #### *round_number* note
 
@@ -369,6 +370,26 @@ None lethal ultimate example:
 
 ```json
 {"info":{"match_info":{"kill_feed":"{\"attacker\":\"JacksAtWork\",\"victim\":\"jaxxxsosparrow\",\"weapon\":\"\",\"ult\":\"TX_Thorne_Heal\",\"assist1\":\"\",\"assist2\":\"\",\"assist3\":\"\",\"assist4\":\"\",\"headshot\":false}"}},"feature":"match_info"}
+```
+
+#### *map* note
+
+Possible values:
+
+* "Triad" - Haven map
+* "Duality" - Bind map
+* "Bonsai" - Split map
+* "Ascent" - Ascent map
+* "Port" - Icebox map
+* "Foxtrot" - Breeze map
+* "Canyon" - Fracture map
+* "Pitt" - Pearl map
+* "Range" - Practice Range map
+
+Data Example:
+
+```json
+{"info":{"match_info":{"map":"Foxtrot"}},"feature":"match_info"}
 ```
 
 ### Events
