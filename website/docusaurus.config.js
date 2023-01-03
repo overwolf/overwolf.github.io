@@ -46,7 +46,7 @@ const sidebarOverrides = require("./hierarchies/sidebaroverrides.json")
         // should the flattened children be sorted forcefully after all their individual code is ran. sorts alphabetically by label
         "sortChildren"?: bool,
         // when used, forcefully renames sub-items with a certain rule, using .replaceAll
-        "subset"?: 
+        "subset"?:
         {
           // regex used to match with the item's label. runs recursively on all items contained by this category. can utilize capture groups to avoid erasing parts of the pattern
           "subsetRegex": regex,
@@ -133,7 +133,7 @@ function applyOverridePlasters(items, flattenCount, inverted, subsetReg, subsetR
       {
         if(item.className) className = `${item.className} ${className}`
         item.className = className;
-      } 
+      }
     }
     if (item.type === "category") {
       sidebarOverrides["plasters"]["categories"].forEach(element => {
@@ -204,7 +204,10 @@ async function config() {
     projectName: "overwolf.github.io",
     deploymentBranch: 'gh-pages',
     scripts: [
-
+      {
+        src: 'https://www.overwolf.com/system/modules/com.overwolf.store/resources/cookiebar.min.js',
+        async: true,
+      },
     ],
     stylesheets: [
       "https://fonts.googleapis.com/css?family=Lato%3A400%2C400i%2C700%2C900&ver=4.5.3",
