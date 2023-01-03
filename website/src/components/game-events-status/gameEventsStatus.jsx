@@ -17,7 +17,7 @@ function GameListItem(props) {
 }
 // ---------------------------------------------------------------------------
 
-function renderGameList(gameListData) {
+function renderGameList(gameListData, urlAsDocsPath) {
 
   const gameListItems = gameListData.map(game => {
     let className = 'game ';
@@ -37,7 +37,7 @@ function renderGameList(gameListData) {
       key={game.id}
       gameID={game.displayId ? game.displayId : game.id}
       className={className}
-      path={game.path}
+      path={urlAsDocsPath ? game.docs : game.path}
       imgSrc={game.iconUrl}
       text={game.name}
     />
@@ -49,9 +49,9 @@ function renderGameList(gameListData) {
 // ---------------------------------------------------------------------------
 
 function GameEventsStatus(props) {
-  const { gameListData } = props;
+  const { gameListData, urlAsDocsPath } = props;
 
-  const gameList = renderGameList(gameListData);
+  const gameList = renderGameList(gameListData, urlAsDocsPath);
 
   gameList.sort((a, b) => {
     return a.props.text < b.props.text ? -1 : 1;
