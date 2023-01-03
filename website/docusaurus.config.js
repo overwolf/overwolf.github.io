@@ -193,6 +193,7 @@ const codeComponentTagger = require("./src/plugins/tagging/codeComponentTagger.j
 
 /** @type {import('@docusaurus/types').Config} */
 async function config() {
+  let devMode = process.env.NODE_ENV === "development";
 
   return {
     title: "Overwolf",
@@ -203,7 +204,7 @@ async function config() {
     organizationName: "overwolf",
     projectName: "overwolf.github.io",
     deploymentBranch: 'gh-pages',
-    scripts: [
+    scripts: devMode ? [] : [
       {
         src: 'https://www.overwolf.com/system/modules/com.overwolf.store/resources/cookiebar.min.js',
         async: true,
