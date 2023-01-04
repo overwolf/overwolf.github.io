@@ -1,8 +1,122 @@
 .services-section {
   background: linear-gradient(180deg, #000000 0%, #131313 100%);
-  padding: 0 80px 16px;
+  padding: 0 0 80px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .services-inner {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 88px;
+
+    .service-item {
+      max-width: 512px;
+
+      .assets {
+        position: relative;
+        overflow: hidden;
+
+        @media (max-width: 600px) {
+          height: 280px;
+        }
+
+      .bg {
+        @media (max-width: 600px) {
+          position: absolute;
+          width: 512px;
+          right: -60px;
+          max-width: unset;
+        }
+      }
+
+      .symbol {
+          position: absolute;
+          left: 0;
+          right: 0;
+          margin: auto;
+
+          &.platform-app {
+            width: 250px;
+            height: 233px;
+            top: 29px;
+          }
+
+          &.electron-app {
+            width: 154px;
+            height: 152px;
+            top: 64px;
+          }
+        }
+      }
+
+      .info {
+        text-align: center;
+        padding: 0 16px;
+
+        h2 {
+          font-size: 40px;
+          line-height: 60px;
+          color: var(--color-txt);
+          margin-bottom: 8px;
+
+          @media (max-width: 600px) {
+            font-size: 32px;
+            line-height: 48px;
+          }
+        }
+
+        p {
+          letter-spacing: 0.02em;
+          font-size: 18px;
+          line-height: 28px;
+          max-width: 400px;
+          margin: 0 auto 32px;
+          // color: var(--color-999);
+        }
+
+        .app-info-list {
+          text-align: left;
+          max-width: 400px;
+          margin: auto;
+          padding-top: 40px;
+
+          li {
+            display: flex;
+            gap: 8px ;
+            padding: 12px 0;
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 24px;
+            color: var(--color-txt);
+
+            &:not(:last-of-type) {
+              border-bottom: 1px solid var(--color-333);
+            }
+
+            span {
+              color: var(--color-999);
+              font-weight: 400;
+            }
+
+            svg {
+              width: 24px;
+              height: 24px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+html[data-theme=dark] {
+
 }

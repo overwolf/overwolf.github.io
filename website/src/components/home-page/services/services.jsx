@@ -11,8 +11,8 @@ const Services = (props) => {
       <ul className='services-inner'>
         <li className='service-item'>
           <div className='assets'>
-            <img src='/img/home-2023/platform-app-bg.webp' alt='Overwolf Platform App'/>
-            <img src='/img/home-2023/platform-app.webp' alt='Overwolf Platform App'  />
+            <img src='/img/home-2023/platform-app-bg.webp' alt='Overwolf Platform App' className='bg'/>
+            <img src='/img/home-2023/platform-app.webp' alt='Overwolf Platform App' className='platform-app symbol' />
           </div>
           <div className='info'>
             <h2>Overwolf Platform App</h2>
@@ -37,8 +37,8 @@ const Services = (props) => {
 
         <li className='service-item'>
           <div className='assets'>
-            <img src='/img/home-2023/electron-app-bg.webp' alt='Overwolf Electron App' />
-            <img src='/img/home-2023/electron-app.webp' alt='Overwolf Electron App' />
+            <img src='/img/home-2023/electron-app-bg.webp' alt='Overwolf Electron App' className='bg' />
+            <img src='/img/home-2023/electron-app.webp' alt='Overwolf Electron App' className='electron-app symbol' />
           </div>
           <div className='info'>
             <h2>Overwolf Electron App</h2>
