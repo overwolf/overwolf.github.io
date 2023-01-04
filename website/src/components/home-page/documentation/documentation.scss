@@ -2,7 +2,7 @@
   padding: 80px 16px;
 
   @media (max-width: 600px) {
-
+    padding: 40px 16px;
   }
 
   h3 {
@@ -12,7 +12,9 @@
     margin-bottom: 40px;
 
     @media (max-width: 600px) {
-
+      font-size: 32px;
+      line-height: 48px;
+      margin-bottom: 24px;
     }
   }
 
@@ -23,8 +25,7 @@
     list-style: none;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    column-gap: 24px;
-    row-gap: 80px;
+    gap: 24px;
 
     li {
       a {
@@ -33,6 +34,8 @@
         justify-content: center;
         background-color: var(--color-120);
         padding: 24px;
+        width: 260px;
+        margin: auto;
         text-decoration: none;
 
         &:hover {
