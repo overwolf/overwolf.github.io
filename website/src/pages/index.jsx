@@ -6,7 +6,7 @@ import Documentation from '../components/home-page/documentation/documentation';
 import Community from '../components/home-page/community/community';
 
 const Index = (props) => {
-  const {config: siteConfig} = props;
+  const {} = props;
 
   return (
     <Layout title="Easily create apps for PC games on the Overwolf framework" description="Easily create apps for PC games on the Overwolf framework">
