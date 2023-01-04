@@ -1,4 +1,4 @@
-label: 'community-help'
+label: 'Community Help'
 customProps:
   overwolf_platform: true
   electron_platform: false

@@ -1,4 +1,4 @@
-label: 'submit-your-app'
+label: 'Submit Your App'
 customProps:
   overwolf_platform: true
   electron_platform: false

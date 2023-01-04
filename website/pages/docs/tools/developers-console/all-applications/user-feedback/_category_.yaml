@@ -1,4 +1,4 @@
-label: 'user-feedback'
+label: 'User Feedback'
 customProps:
   overwolf_platform: true
   electron_platform: false
