@@ -26,6 +26,7 @@ Please read the [overwolf.games.events](../events) documentation page to learn h
 
 * [gep_internal](#gep_internal)
 * [me](#me)
+* [localization](#localization)
 * [team](#team)
 * [kill](#kill)
 * [damage](#damage)
@@ -87,6 +88,39 @@ Data Example:
 ```json
 {"info":{"me":{"ultimate_cooldown":"{\"ultimate_cooldown\":\"15\"}"}},"feature":"me"}
 ```
+
+## `localization`
+
+### Info Updates
+
+key               | Category    | Values                    | Notes                 | Since GEP Ver. |
+----------------- | ------------| ------------------------- | --------------------- | -------------  | 
+language              | game_info   | Curent played language         |  See [notes](#language-note) |  114.0         |
+
+#### *language* note
+
+Possible values:
+
+* english - English
+* french - French
+* german - German
+* italian - Italian
+* japanese - Japanese
+* korean - Korean
+* polish - ploish
+* portuguese - Portuguese
+* russian - Russian
+* schinese - Simplified Chinese
+* spanish - Spanish
+* mspanish - Latin American Spanish
+* tchinese - Traditional Chinese
+
+Data Example:
+
+```json
+{"info":{"game_info":{"language":"english"}},"feature":"localization"}
+```
+
 ## `game_info`
 
 ### Info Updates
@@ -564,12 +598,6 @@ Action possible values:
 * Bleed_out
 * Finisher
 * Melee
-* Smoke Launcher
-* Creeping Barrage
-* Caustic Gas
-* Kunai Melee
-* Perimeter Security
-* Defensive Bombardment
 
 #### Event data example
 
