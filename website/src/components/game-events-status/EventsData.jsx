@@ -10,6 +10,7 @@ import Preloader from '../preloader/preloader';
       specificGame,
       gameID,
       docsPath,
+      urlAsDocsPath = false,
       onlyGames = false,
       onlyLaunchers = false
     } = props;
@@ -69,7 +70,7 @@ import Preloader from '../preloader/preloader';
       <>
 
         { allGames && gameListData != null &&
-          <GameEventsStatus gameListData={gameListData} />
+          <GameEventsStatus gameListData={gameListData} urlAsDocsPath={urlAsDocsPath} />
         }
 
         { specificGame && gameStatus != null &&

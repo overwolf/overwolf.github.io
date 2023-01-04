@@ -85,8 +85,7 @@ Example:
 key          | Category    | Values                    | Notes                 | Since GEP Ver. |
 --------------- | -----------| ------------------------------------------------------------------------------------ | ------------------------------------ | ------------- |
 pseudo_match_id | match_info | The current match’s ID code. Example:<br></br> `0c0ea3df-97ea-4d3a-b1f6-f8e34042251f`  |  This is an internal Overwolf-generated code. |   130.0 |
-game_mode | match_info   | The current type of game mode. |See [notes](#game_mode-note) for possible values|   134.0  |
-game_mode_log | match_info   | Game mode information. |See [notes](#game_mode_log-note) for possible values|   186.0  |
+game_mode_log | match_info   | The current type of game mode. |See [notes](#game_mode_log-note) for possible values|   186.0  |
 match_id | match_info   | The current match's ID. |See [notes](#match_id-note) for possible values|   162.1  |
 map_id | match_info   | The currently played map. |See [notes](#map_id-note) for possible values|   162.1  |
 round_outcome_type | match_info   | The type of win/loss of the last-played round. |See [notes](#round_outcome_type-note) for possible values|   165.0  |
@@ -108,17 +107,16 @@ Event        | Event Data        | Fired When        | Notes              | Sinc
 match_start  | null              | When a match start.|See [notes](#match_start-note)|   211.0  |
 match_end    | null              | When a match ends. |See [notes](#match_end-note)|   211.0  |
 
-#### *game_mode* note
+#### *game_mode_log* note
 
-The `game_mode` returns on this format:
+Data Example:
 
 ```json
-{"info":{"match_info":{"game_mode":"THE_SELECTED_GAME_MODE"}},"feature":"match_info"}
+{"info":{"match_info":{"game_mode_log":"{"GameModes":7,"MatchType":"MATCHMAKING_PVP"}"}},"feature":"match_info"}
 ```
 
 While the possible values are:
 
-* No mode was selected: `NONE`
 * Multiplayer > Newcomer: `MATCHMAKING_PVP_NEWCOMER`
 * Multiplayer > Quick Match: `MATCHMAKING_PVP`
 * Multiplayer > Special Event: `MATCHMAKING_PVP_EVENT`
@@ -126,8 +124,6 @@ While the possible values are:
 * Multiplayer > Unranked: `MATCHMAKING_PVP_UNRANKED`
 * Multiplayer > Ranked: `MATCHMAKING_PVP_RANKED`
 * Multiplayer > Deathmatch: `MATCHMAKING_PVP_WARMUP`
-* Multiplayer > Custom game > Local: `CUSTOMGAME_PVP`
-* Multiplayer > Custom game > Online: `CUSTOMGAME_PVP_DEDICATED`
 * Player vs. AI > Situations: `OPERATIONS`
 * Player vs. AI > Training Grounds Lonewolf: `MATCHMAKING_PVE_LONEWOLF`
 * Player vs. AI > Training Grounds with Squad only: `MATCHMAKING_PVE_PARTY`
@@ -135,15 +131,17 @@ While the possible values are:
 * Match Replay > Watching the replay of a previous match: `MATCHREPLAY`
 * Tutorials: It’s just a video tutorial, not a game mode.
 
+:::info
+
+Custom matches are not supported in game_mode_log. 
+To detect a custom match use "contextName":"CUSTOMGAME_PVP_DEDICATED" for online or "contextName":"CUSTOMGAME_PVP" for LAN, inside of general_log.
+
+:::
+
 *Note that in Custom games, Training Grounds, or in Match Replay, there is no support for Overwolf real time game events*
 
-#### *game_mode_log* note
 
-Data example:
 
-```json
-{"info":{"match_info":{"game_mode_log":"{"GameModes":7,"MatchType":"MATCHMAKING_PVP"}"}},"feature":"match_info"}
-```
 
 #### *match_id* note
 

@@ -1,4 +1,4 @@
-label: 'using-plugins'
+label: 'Using Plugins'
 customProps:
   overwolf_platform: true
   electron_platform: false

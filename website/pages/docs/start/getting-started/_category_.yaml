@@ -1,4 +1,4 @@
-label: 'getting-started'
+label: 'Getting Started'
 customProps:
   overwolf_platform: true
   electron_platform: false

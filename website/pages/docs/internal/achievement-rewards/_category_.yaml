@@ -1,4 +1,4 @@
-label: 'achievement-rewards'
+label: 'Achievement Rewards'
 customProps:
   overwolf_platform: true
   electron_platform: false

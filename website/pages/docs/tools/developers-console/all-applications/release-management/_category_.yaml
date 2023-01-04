@@ -1,4 +1,4 @@
-label: 'release-management'
+label: 'Release Management'
 customProps:
   overwolf_platform: true
   electron_platform: true

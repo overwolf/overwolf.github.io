@@ -481,7 +481,7 @@ callback               | (Result) => void | Reports success or failure          
 The window receiving the message needs to listen on the [onMessageReceived](#onmessagereceived) event.
 
 :::warning
-Using sendMessage  performs object copying, so it might be a bit less efficient - depending on your use-case. (edited)  is not our suggested choice for communication between windows since it might not work on some occasions (for example, when sending extremely big messages).  
+Using sendMessage  performs object copying, so it might be a bit less efficient - depending on your use-case. It is not our suggested choice for communication between windows since it might not work on some occasions (for example, when sending extremely big messages).  
 Read more in the [Windows Communication](/topics/using-windows-api/communicating-between-windows) guide.
 :::
 

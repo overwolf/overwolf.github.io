@@ -14,3 +14,4 @@ website/.yarn
 website/.yarnrc.yml
 website/yarn.lock
 yarn.lock
+website/pages/docs/api/changelogs/changelogs.mdx
