@@ -7,8 +7,6 @@ if(
 }
 
 function initializeUiChanges() {
-  console.log('initializeUiChanges')
-
   //add edit button under the table of content
   const editBtn = document.querySelector('article footer .theme-edit-this-page');
   const tableOfContent = document.querySelector('.table-of-contents');
