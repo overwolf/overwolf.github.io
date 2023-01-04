@@ -6,6 +6,10 @@
   justify-content: center;
   align-items: center;
 
+  @media (max-width: 600px) {
+    padding-bottom: 40px;
+  }
+
   ul {
     list-style: none;
     padding: 0;
@@ -64,7 +68,7 @@
         h2 {
           font-size: 40px;
           line-height: 60px;
-          color: var(--color-txt);
+          color: var(--color-headline);
           margin-bottom: 8px;
 
           @media (max-width: 600px) {

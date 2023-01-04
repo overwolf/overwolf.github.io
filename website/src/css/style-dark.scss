@@ -1,5 +1,9 @@
 html[data-theme="dark"]{
 
+  .main-content {
+    background-color: black;
+  }
+
   body, .body {
       color: var(--color-txt);
       background: var(--color-100) !important;

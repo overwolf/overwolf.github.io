@@ -21,7 +21,7 @@
     line-height: 72px;
     margin: 0;
     text-align: center;
-    color: var(--color-txt);
+    color: var(--color-headline);
 
     @media (max-width: 600px) {
       font-size: 40px;
@@ -47,7 +47,7 @@
 }
 
 html[data-theme=dark] {
-  .hero-section h1 {
-    color: var(--color-txt);
-  }
+  // .hero-section h1 {
+  //   color: var(--color-txt);
+  // }
 }

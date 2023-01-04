@@ -31,7 +31,7 @@
 	--color-grey-5: #D5D5D5;
 	--color-txt: #CCCCCC;
 
-	--color-headline: #E2E2E2;
+	--color-headline: #f2f2f2;
 	--color-dark-text: #636363;
 	--color-title-light: #f2f2f2;
 	--color-white: #fff;
@@ -308,6 +308,10 @@ blockquote {
 
 .tabs li:before{
 	content: none;
+}
+
+.main-content {
+  background-color: white;
 }
 
 .btn-primary {
