@@ -10,6 +10,7 @@
 	--color-300: #303030;
 	--color-333: #333333;
 	--color-400: #404040;
+	--color-450: #4D4D4D;
 	--color-500: #505050;
 	--color-600: #606060;
 	--color-700: #707070;
@@ -29,6 +30,7 @@
 
 	--color-grey-4: #BDBDBD;
 	--color-grey-5: #D5D5D5;
+  --color-grey-9: #D9D9D9;
 	--color-txt: #CCCCCC;
 
 	--color-headline: #E2E2E2;
@@ -185,7 +187,7 @@ th {
 h1,
 h2, h3, h4, h5 {
 	font-family: 'Madera', sans-serif;
-  color: black;
+  color: var(--color-220);
 }
 
 article {
@@ -292,7 +294,7 @@ html {
 body, .body {
 	/* overflow: hidden; */
 	line-height: 1.5;
-	color: var(--color-bg);
+	color: var(--color-220);
 	background:  var(--light-mode-bg);
 	font-family: 'Lato', sans-serif;
 	font-size: 16px;
@@ -343,24 +345,27 @@ blockquote {
 }
 
 .btn-secondary {
-  font-family: 'Madera', sans-serif;
-  border: 1px solid var(--color-999);
-  color: var(--color-999);
+  border: 1px solid var(--color-450);
+  color: var(--color-220);
   text-decoration: none;
-  font-weight: 500;
-  padding: 16px 32px;
-  font-size: 18px;
-  line-height: 18px;
-  height: 50px;
+  font-weight: 600;
+  padding: 12px 32px;
+  font-size: 16px;
+  letter-spacing: 0.04em;
+  line-height: 21px;
+  height: 48px;
+  min-width: 160px;
   white-space: nowrap;
   cursor: pointer;
   background-color: transparent;
   display: inline-block;
-  text-transform: uppercase;
+  text-align: center;
 
   &:hover {
-    background-color: white;
-    color: black;
+    background-color: var(--color-120);
+    border-color: var(--color-120);
+    text-decoration: none;
+    color: white;
   }
 
   @media (max-width: 600px) {

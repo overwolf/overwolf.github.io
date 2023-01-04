@@ -1,5 +1,16 @@
 html[data-theme="dark"]{
 
+  .btn-secondary {
+    border: 1px solid var(--color-999);
+    color: var(--color-999);
+
+    &:hover {
+      background-color: var(--color-grey-light-2);
+      border-color: var(--color-grey-light-2);
+      color: black;
+    }
+  }
+
   .main-content {
     background-color: black;
   }
