@@ -1,5 +1,10 @@
 .community-section {
-  padding: 0 16px;
+  padding: 0 16px 100px;
+  overflow: hidden;
+
+  @media (max-width: 600px) {
+   padding-bottom: 20px;
+  }
 
   > div {
     max-width: 1112px;
@@ -87,34 +92,59 @@
   }
 
   .game-developer {
-    display: flex;
-    align-items: center;
+    position: relative;
 
     @media (max-width: 800px) {
+      display: flex;
       flex-direction: column-reverse;
       text-align: center;
     }
 
     .assets {
-      position: relative;
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+
+      @media (max-width: 800px) {
+        position: unset;
+      }
 
       .mobile {
         display: none;
 
         @media (max-width: 800px) {
           display: block;
+          position: relative;
+          right: -50px;
+        }
+      }
+
+      .smoke {
+        position: absolute;
+        top: -90px;
+        right: -160px;
+        width: 718px;
+        height: 480px;
+
+        @media (max-width: 800px) {
+          display: none;
         }
       }
 
       .compass-video {
         position: absolute;
-        left: 30px;
-        top: -58px;
+        right: 40px;
+        top: 10px;
         z-index: 3;
 
         @media (max-width: 1024px) {
+          width: 370px;
+        }
+
+        @media (max-width: 960px) {
           width: 270px;
-          left: 30px;
         }
 
         @media (max-width: 800px) {
@@ -122,11 +152,6 @@
         }
       }
       
-      .smoke {
-        @media (max-width: 800px) {
-          display: none;
-        }
-      }
       
     }
   }
