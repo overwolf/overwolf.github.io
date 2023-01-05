@@ -4,9 +4,14 @@ import './footer.scss';
 const Footer = (props) => {
  const {} = props;
 
+  const handleBackToTop = (event) => {
+    event.preventDefault();
+    window.scrollTo(0, 0);
+  }
+
   return (
     <footer className="site-footer">
-      <a href="#" className="back-to-top">
+      <a href="#" className="back-to-top" onClick={handleBackToTop}>
         <svg><use href="/img/sprite.svg#arrow-up-big"></use></svg>
         back to top
       </a>
