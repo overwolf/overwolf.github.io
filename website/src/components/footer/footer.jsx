@@ -28,10 +28,22 @@ const Footer = (props) => {
             <li>
               <h5>Support</h5>
               <ul>
-                <li><a href="https://discord.gg/overwolf-developers" target="_blank">Discord</a></li>
-                <li><a href="/support/contact-us#join-our-slack" target="_blank">Slack</a></li>
-                <li><a href="https://www.facebook.com/OverwolfDevs" target="_blank">Facebook</a></li>
-                <li><a href="https://twitter.com/OverwolfDevs" target="_blank">Twitter</a></li>
+                <li>
+                  <svg><use href="/img/sprite.svg#discord-icon"></use></svg>
+                  <a href="https://discord.gg/overwolf-developers" target="_blank">Discord</a>
+                </li>
+                <li>
+                  <svg><use href="/img/sprite.svg#slack-icon"></use></svg>
+                  <a href="/support/contact-us#join-our-slack" target="_blank">Slack</a>
+                </li>
+                <li>
+                  <svg><use href="/img/sprite.svg#facebook-icon"></use></svg>
+                  <a href="https://www.facebook.com/OverwolfDevs" target="_blank">Facebook</a>
+                  </li>
+                <li>
+                  <svg><use href="/img/sprite.svg#twitter-icon"></use></svg>
+                  <a href="https://twitter.com/OverwolfDevs" target="_blank">Twitter</a>
+                  </li>
               </ul>
             </li>
             <li>
