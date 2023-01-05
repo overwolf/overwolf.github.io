@@ -3,6 +3,9 @@
 export const stateToCss = (state) => {
   let css = '';
   switch (state) {
+    case 0:
+      css = "coming-soon";
+      break;
     case 1:
       css = 'good';
       break;

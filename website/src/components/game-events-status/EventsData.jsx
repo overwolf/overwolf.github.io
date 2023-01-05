@@ -30,7 +30,7 @@ import Preloader from '../preloader/preloader';
             for (let game of response) {
 
               // Ignore state 0 (unsupported)
-              if (game.state == 0) continue;
+              // if (game.state == 0) continue;
 
               if (!GamesMetadata[game.game_id]) continue;
 
