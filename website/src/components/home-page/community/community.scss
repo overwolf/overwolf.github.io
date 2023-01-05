@@ -48,6 +48,42 @@
         margin: 0 auto 16px;
       }
     }
+
+    .assets {
+      position: relative;
+
+      .mobile {
+        display: none;
+
+        @media (max-width: 800px) {
+          display: block;
+        }
+      }
+
+      .sign-video {
+        position: absolute;
+        left: 90px;
+        top: 40px;
+        z-index: 3;
+
+        @media (max-width: 1024px) {
+          width: 270px;
+          left: 30px;
+        }
+
+        @media (max-width: 800px) {
+          display: none;
+        }
+      }
+      
+      .sparks {
+        @media (max-width: 800px) {
+          display: none;
+        }
+      }
+      
+    }
+    
   }
 
   .game-developer {
@@ -57,6 +93,41 @@
     @media (max-width: 800px) {
       flex-direction: column-reverse;
       text-align: center;
+    }
+
+    .assets {
+      position: relative;
+
+      .mobile {
+        display: none;
+
+        @media (max-width: 800px) {
+          display: block;
+        }
+      }
+
+      .compass-video {
+        position: absolute;
+        left: 30px;
+        top: -58px;
+        z-index: 3;
+
+        @media (max-width: 1024px) {
+          width: 270px;
+          left: 30px;
+        }
+
+        @media (max-width: 800px) {
+          display: none;
+        }
+      }
+      
+      .smoke {
+        @media (max-width: 800px) {
+          display: none;
+        }
+      }
+      
     }
   }
 

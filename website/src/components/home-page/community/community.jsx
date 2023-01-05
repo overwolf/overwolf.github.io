@@ -16,7 +16,12 @@ const Community = (props) => {
           <a href='https://discord.com/invite/overwolf-developers' target={"_blank"} className='btn-secondary'>Join</a>
         </div>
         <div className='assets'>
-          <img src='/img/home-2023/community-poster.webp' alt='' className='bg'/>
+          <video className="sign-video" autoPlay loop muted playsInline poster="/img/home-2023/community-poster.webp">
+            <source src="/img/home-2023/video/sign.webm" type="video/webm" />
+          </video>
+          <img src='/img/home-2023/community-poster.webp' alt='' className='mobile'/>
+          {/* <img src='/img/home-2023/smoke.webp' alt='' className='smoke'/> */}
+          <img src='/img/home-2023/sparks.webp' alt='' className='sparks'/>
         </div>
       </div>
 
@@ -30,7 +35,11 @@ Give your community tools to create valuable in-game content for your game with 
         </div>
 
         <div className='assets'>
-          <img src='/img/home-2023/compass-poster.webp' alt='' className='bg'/>
+          <video className="compass-video" autoPlay loop muted playsInline poster="/img/home-2023/compass-poster.webp">
+            <source src="/img/home-2023/video/compass.webm" type="video/webm" />
+          </video>
+          <img src='/img/home-2023/compass-poster.webp' alt='' className='mobile'/>
+          <img src='/img/home-2023/smoke2.webp' alt='' className='smoke'/>
         </div>
 
       </div>
