@@ -300,14 +300,14 @@ async function config() {
         items: require('./hierarchies/headers.json')
       },
       image: "img/embed/dev.jpg",
-      footer: {
-        style: "dark",
-        links: require('./hierarchies/footer.json'),
-        copyright: "<div class='c-inner'><p>Copyright © 2022 Overwolf</p></div>",
-        logo: {
-          src: "/img/ow-footer.svg"
-        }
-      },
+      // footer: {
+      //   style: "dark",
+      //   links: require('./hierarchies/footer.json'),
+      //   copyright: "<div class='c-inner'><p>Copyright © 2022 Overwolf</p></div>",
+      //   logo: {
+      //     src: "/img/ow-footer.svg"
+      //   }
+      // },
       prism: {
         additionalLanguages: ['powershell'],
       },
