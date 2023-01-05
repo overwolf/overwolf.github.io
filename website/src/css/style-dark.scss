@@ -146,16 +146,6 @@ html[data-theme="dark"]{
     }
   }
 
-  div[class^="toggle"] {
-
-    button:hover {
-      svg {
-        color: white;
-      }
-    }
-
-  }
-
   .prism-code span.token.punctuation {
     color: var(--color-txt)!important;
   }

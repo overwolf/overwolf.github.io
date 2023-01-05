@@ -1,62 +1,184 @@
 .navbar {
   box-shadow: 0 2px 4px -1px rgb(0 0 0 / 25%);
-  background: var(--color-bg);
+  background: var(--color-120);
   min-height: 76px;
   padding: 0 20px;
   z-index: 100;
+  position: relative;
+
+  @media (max-width: 600px) {
+    min-height: 64px;
+  }
 
   .navbar__inner {
-    max-width: 1400px;
-    margin: auto;
+    justify-content: center;
+
+    @media (max-width: 997px) {
+      justify-content: flex-start;
+    }
 
     .navbar__brand {
-      margin-right: auto;
+      position: absolute;
+      left: 20px;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+
+      @media (max-width: 997px) {
+        left: 0;
+        right: 0;
+        width: 160px;
+      }
 
       .navbar__title {
         display: none;
       }
 
       .navbar__logo {
-        height: 50px;
+        height: 40px;
 
         img {
-          width: 228px;
-          height: 50px;
+          width: 171px;
+          height: 40px;
+
+          @media (max-width: 997px) {
+            width: 160px;
+          }
         }
+
       }
     }
 
     .navbar__items {
-      gap: 18px;
+      gap: 56px;
+      flex: unset;
 
-      @media (max-width: 1200px) {
-        gap: 0;
+      @media (max-width: 1340px) {
+        gap: 16px;
+      }
+
+      &.navbar__items--right {
+        position: absolute;
+        right: 20px;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        gap: 20px;
+        flex-direction: row-reverse;
+
+        @media (max-width: 1340px) {
+          gap: 16px;
+        }
       }
 
       .clean-btn {
         margin-top: 2px;
+        color: var(--color-txt);
+
+        &:hover {
+          background-color: var(--color-grey-light-2);
+          color: var(--color-220);
+        }
       }
 
       .navbar__link {
         color: var(--color-txt);
         background-color: transparent;
-        font-size: 15px;
-        font-family: Madera,sans-serif;
-        padding-top: 9px;
-        font-weight: 300;
+        font-size: 16px;
+        padding: 0;
+        letter-spacing: 0.02em;
+        position: relative;
+
+        &:before {
+          content: "";
+          width: 0;
+          height: 2px;
+          background-color: #d34037;
+          position: absolute;
+          bottom: -6px;
+          left: 0;
+          transition: width 150ms ease;
+      }
 
         svg {
           display: none;
         }
 
         &:hover, &.navbar__link--active {
-          color: white;
+          // color: white;
+
+          &:before { 
+            width: 100%;
+          }
         }
       }
     }
 
 
   }
+}
+
+.navbar-sidebar {
+
+  .navbar-sidebar__brand {
+    background-color: var(--color-120);
+
+    .navbar-sidebar__close {
+      order: 0;
+      margin: 0 16px 0 0;
+      transform: scale(0.8);
+    }
+
+    .navbar__brand {
+      order: 2;
+
+      .navbar__title {
+        display: none;
+      }
+
+    }
+
+    .margin-right--md {
+      order: 3;
+      margin: 0 0 0 auto !important;
+    }
+  }
+
+  .navbar-sidebar__items {
+    background-color: var(--color-220);
+
+    .navbar-sidebar__item {
+      padding: 0;
+
+      .clean-btn {  
+        top: 0;
+        margin: 0;
+        padding: 10px;
+      }
+    }
+
+    .menu__list {
+
+      .menu__list-item {
+        margin: 0;
+        border-radius: none;
+
+        .menu__link {
+          padding: 12px 16px;
+          font-size: 16px;
+          line-height: 24px;
+          letter-spacing: 0.02em;
+          color: var(--color-txt);
+          border-radius: none;
+
+          &:hover {
+            background-color: var(--color-333);
+          }
+        }
+      }
+    }
+  }
+
 }
 
 aside {
@@ -507,11 +629,11 @@ div[class^="codeBlock"] {
 
 div[class^="toggle"] {
   position: relative;
-  right: -18px;
+  // right: -18px;
   top: -2px;
 
   @media (max-width: 1200px) {
-    right: -4px;
+    // right: -4px;
   }
 
   button:hover {
@@ -605,16 +727,21 @@ div[class^="searchBox"] {
 
   .DocSearch-Button {
     border-radius: unset;
-    background: var(--color-bg);
-    border: 1px solid var(--color-500);
-    border-radius: 3px;
+    background: var(--color-120);
+    border: 1px solid var(--color-999);
+    border-radius: 0px;
     color: var(--color-txt);
     font-size: 14px;
     height: 32px;
+    width: 160px;
     padding-right: 0;
 
     @media (max-width: 760px) {
       border: none;
+      width: unset;
+      position: relative;
+      right: -10px;
+      top: 1px;
     }
 
     .DocSearch-Search-Icon {
@@ -627,9 +754,8 @@ div[class^="searchBox"] {
     }
 
     &:hover {
-      color: white;
       box-shadow: unset;
-      background-color: transparent;
+      background: rgba(255, 255, 255, 0.16);
 
       .DocSearch-Search-Icon {
         color: white;
@@ -639,10 +765,13 @@ div[class^="searchBox"] {
   }
 
   .DocSearch-Button-Key {
-    background: #292929;
-    box-shadow: inset 0 -2px 0 0 #505050, inset 0 0 1px 1px #393939, 0 2px 2px 0 #0304094d;
-    color: #fff;
+    background: var(--color-grey-9);
+    box-shadow: none;
+    color: var(--color-120);
     top: 0px;
+    padding: 0 6px 0px;
+    width: fit-content;
+    font-weight: 800;
   }
 
   .DocSearch-Button-Placeholder {
