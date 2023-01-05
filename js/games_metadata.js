@@ -325,6 +325,14 @@ const GamesMetaData = {
     iconUrl: "/img/games-logos/world-of-warships.png",
     iconLargeUrl: "/img/games-logos/large/world-of-warships.png",
     name: "World of Warships"
+  },  
+  21864: {
+    id: 21864,
+    path: "/status/lost-ark",
+    docs: "/api/games/events/lost-ark",
+    iconUrl: "/img/games-logos/lost-ark.png",
+    iconLargeUrl: "/img/games-logos/large/lost-ark.png",
+    name: "Lost Ark"
   }
 }
 
