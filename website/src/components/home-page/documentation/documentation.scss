@@ -65,10 +65,11 @@
         .anim-icon {
           width: 104px;
           height: 104px;
+          margin-left: auto;
 
           svg {
-            height: 104px !important;
-            width: 104px !important;
+            height: 104px;
+            width: 104px;
           }
 
           &:empty {
@@ -82,6 +83,31 @@
           + img {
             display: none;
           }
+          
+          &#prepare {
+            position: relative;
+            bottom: -18px;
+            right: -12px;
+          }
+
+          &#build {
+            position: relative;
+            bottom: -8px;
+            right: -20px;
+          }
+
+          &#release {
+            position: relative;
+            right: -19px;
+            bottom: -11px;
+          }
+
+          &#growth {
+            position: relative;
+            right: -9px;
+            bottom: -12px;
+          }
+
         }
       }
     }
