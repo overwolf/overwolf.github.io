@@ -205,5 +205,10 @@
         "id": 10746,
         "path": "world-of-warships",
         "name": "World of Warships"
+    },
+    {
+        "id": 21864,
+        "path": "lost-ark",
+        "name": "Lost Ark"
     }
 ]
