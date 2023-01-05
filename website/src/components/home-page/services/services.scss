@@ -51,12 +51,26 @@
             width: 250px;
             height: 233px;
             top: 29px;
+            animation: float 6s ease-in-out infinite;
           }
 
           &.electron-app {
             width: 154px;
             height: 152px;
             top: 64px;
+            animation: float 6s ease-in-out infinite;
+          }
+
+          @keyframes float {
+            0% {
+              transform: translatey(0px);
+            }
+            50% {
+              transform: translatey(-20px);
+            }
+            100% {
+              transform: translatey(0px);
+            }
           }
         }
       }
