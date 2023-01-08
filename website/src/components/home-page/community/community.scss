@@ -63,14 +63,14 @@
       left: -174px;
       width: 814px;
       height: 562px;
-      background-image: url(/img/home-2023/smoke.webp);
+      background-image: url(/img/home-2023/smoke-light.webp);
       background-position: center center;
       background-repeat: no-repeat;
       background-size: contain;
 
       @media (max-width: 960px) { 
         position: unset;
-        background-image: url(/img/home-2023/community-poster.webp);
+        background-image: url(/img/home-2023/community-poster-light.webp);
         width: 550px;
         height: 356px;
         background-position: left 30px center;
@@ -126,14 +126,14 @@
       right: -130px;
       width: 814px;
       height: 480px;
-      background-image: url(/img/home-2023/smoke2.webp);
+      background-image: url(/img/home-2023/smoke2-light.webp);
       background-position: center center;
       background-repeat: no-repeat;
       background-size: contain;
 
       @media (max-width: 800px) { 
         position: unset;
-        background-image: url(/img/home-2023/compass-poster.webp);
+        background-image: url(/img/home-2023/compass-poster-light.webp);
         width: 550px;
         height: 356px;
         background-position: left 40px center;
@@ -144,7 +144,7 @@
         height: 356px;
         width: 360px;
         background-size: 500px;
-        background-position: left -10px center;
+        background-position: left -40px center;
       }
 
       @media (max-width: 400px) { 
@@ -178,7 +178,39 @@
 }
 
 html[data-theme=dark] {
-  .community-section .info svg {
-    color: white;
+
+  .community-section {
+
+    .info svg {
+      color: white;
+    }
+  
+    .discord-community {
+
+      .assets {
+        background-image: url(/img/home-2023/smoke.webp);
+  
+        @media (max-width: 960px) { 
+          background-image: url(/img/home-2023/community-poster.webp);
+        }
+  
+      }
+      
+    }
+  
+    .game-developer {
+
+      .assets {
+        background-image: url(/img/home-2023/smoke2.webp);
+
+        @media (max-width: 800px) { 
+          background-image: url(/img/home-2023/compass-poster.webp);
+          background-position: left -10px center;
+        }
+
+      }
+    }
+  
   }
+
 }
