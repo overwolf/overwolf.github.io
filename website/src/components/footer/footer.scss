@@ -89,6 +89,7 @@
               display: flex;
               align-items: center;
               gap: 8px;
+              width: fit-content;
 
               & + li {
                 margin-top: 16px;
@@ -99,6 +100,17 @@
                 height: 24px;
                 color: var(--color-999);
               }
+
+              &:hover {
+                a {
+                  color: var(--color-txt);
+                  text-decoration: underline;
+                }
+
+                svg {
+                  color: var(--color-txt);
+                }
+              }
   
               a {
                 font-size: 16px;
@@ -108,11 +120,6 @@
                 text-underline-offset: 3px;
                 letter-spacing: 0.02em;
   
-                &:hover {
-                  // color: var(--color-headline);
-                  text-decoration: underline;
-                }
-          
                  &.is-active {
                   color: var(--color-headline);
                   text-decoration: underline;
