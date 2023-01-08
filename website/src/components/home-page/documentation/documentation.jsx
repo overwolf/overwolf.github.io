@@ -122,7 +122,7 @@ const Documentation = (props) => {
         </li>
         <li>
           <a href="#">
-            <h4>Growth</h4>
+            <h4>Grow</h4>
             <p>Here will be an explanation text about stages of this process.</p>
             <div className="anim-icon" id="growth"></div>
             <img src="/img/home-2023/trophy.svg" loading="lazy" alt="Growth"/>
