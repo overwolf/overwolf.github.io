@@ -24,11 +24,13 @@
     .service-item {
       max-width: 512px;
 
-      &:hover {
+      &.btn-hover {
         .symbol {
           transform: translateY(-10px);
         }
+      }
 
+      &:hover {
         .assets {
           img {
             filter: brightness(1.2);
