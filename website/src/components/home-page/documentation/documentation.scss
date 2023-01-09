@@ -1,5 +1,8 @@
 .documentation-section {
   padding: 80px 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 
   @media (max-width: 600px) {
     padding: 40px 16px;
@@ -26,6 +29,14 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     gap: 24px;
+
+    @media (max-width: 1130px) {
+      grid-template-columns: repeat(2, 260px);
+    }
+
+    @media (max-width: 600px) {
+      grid-template-columns: repeat(1, 260px);
+    }
 
     li {
       a {

@@ -12,12 +12,13 @@ div[class^="searchBox"] {
     padding-right: 0;
 
     @media (max-width: 760px) {
-      border: none;
+      border: none !important;
       width: unset;
       position: relative;
       right: -10px;
       top: 1px;
     }
+
 
     .DocSearch-Search-Icon {
       color: var(--color-220);

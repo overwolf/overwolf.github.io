@@ -19,6 +19,7 @@
   .services-inner {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     column-gap: 88px;
 
     .service-item {
