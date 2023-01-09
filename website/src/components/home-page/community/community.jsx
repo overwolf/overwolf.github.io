@@ -25,7 +25,7 @@ const Community = (props) => {
 
   return (
     <section className="community-section">
-      <div className='discord-community' onMouseEnter={handlePlaySignVideo}>היי
+      <div className='discord-community' onMouseEnter={handlePlaySignVideo}>
         <div className='info'>
           <svg><use href="/img/sprite.svg#discord-big" /></svg>
           <h4>Join our community</h4>
