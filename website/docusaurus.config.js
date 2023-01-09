@@ -295,7 +295,9 @@ async function config() {
         style: "dark",
         title: "Overwolf",
         logo: {
-          src: "img/header-icon.svg"
+          alt: "Overwolf Developers",
+          src: "img/ow-logo-light.svg",
+          srcDark: 'img/ow-logo-dark.svg',
         },
         items: require('./hierarchies/headers.json')
       },
