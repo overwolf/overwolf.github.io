@@ -8,7 +8,7 @@ const Services = (props) => {
  const [appBtn, seAppBtn] = useState(false);
  const [electronAppBtn, seElectronAppBtn] = useState(false);
 
-// --------------------------------------------------------------------------- 
+// ---------------------------------------------------------------------------
 
   const handleToggleApp = () => {
     seAppBtn(current => !current);
@@ -27,10 +27,10 @@ const Services = (props) => {
             <img src='/img/home-2023/platform-app.webp' alt='Overwolf Platform App' className='platform-app symbol' />
           </div>
           <div className='info'>
-            <h2>Overwolf Platform App</h2>
+            <h2>Overwolf Platform</h2>
             <p>Create powerful desktop apps and overlays for AAA games, using basic HTML and Javascript</p>
-            <a href='/start/getting-started' 
-              className='btn-primary' 
+            <a href='/start/getting-started'
+              className='btn-primary'
               onMouseEnter={handleToggleApp}
               onMouseLeave={handleToggleApp}>
               Explore</a>
@@ -57,10 +57,10 @@ const Services = (props) => {
             <img src='/img/home-2023/electron-app.webp' alt='Overwolf Electron App' className='electron-app symbol' />
           </div>
           <div className='info'>
-            <h2>Overwolf Electron App</h2>
+            <h2>Overwolf Electron</h2>
             <p>Build cross-platform desktop apps with JavaScript, HTML, and CSS</p>
-            <a href='/tools/ow-electron'            
-              className='btn-primary' 
+            <a href='/tools/ow-electron'
+              className='btn-primary'
               onMouseEnter={handleToggleElectronApp}
               onMouseLeave={handleToggleElectronApp}>
               Explore</a>
