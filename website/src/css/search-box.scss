@@ -2,10 +2,10 @@ div[class^="searchBox"] {
 
   .DocSearch-Button {
     border-radius: unset;
-    // background: var(--color-120);
-    // border: 1px solid var(--color-999);
+    background: var(--color-grey-light-2);
+    border: 1px solid var(--color-450);
     border-radius: 0px;
-    // color: var(--color-txt);
+    color: var(--color-220);
     font-size: 14px;
     height: 32px;
     width: 140px;
@@ -20,7 +20,7 @@ div[class^="searchBox"] {
     }
 
     .DocSearch-Search-Icon {
-      // color: var(--color-txt);
+      color: var(--color-220);
       transition: all 150ms ease;
       width: 16px;
       @media (max-width: 760px) {
@@ -30,7 +30,7 @@ div[class^="searchBox"] {
 
     &:hover {
       box-shadow: unset;
-      // background: rgba(255, 255, 255, 0.16);
+      background: rgba(0, 0, 0, 0.16);
 
       .DocSearch-Search-Icon {
         // color: white;
@@ -40,9 +40,9 @@ div[class^="searchBox"] {
   }
 
   .DocSearch-Button-Key {
-    // background: var(--color-grey-9);
+    background: var(--color-450);
     box-shadow: none;
-    // color: var(--color-120);
+    color: white;
     top: 0px;
     padding: 0 6px 0px;
     width: fit-content;
@@ -108,7 +108,7 @@ html[data-theme=dark] {
     }
 
     .DocSearch-Button-Key {
-      background: var(--color-grey-9);
+      background: var(--color-999);
       box-shadow: none;
       color: var(--color-120);
     }
