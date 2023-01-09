@@ -25,7 +25,7 @@ const Community = (props) => {
 
   return (
     <section className="community-section">
-      <div className='discord-community' onMouseEnter={handlePlaySignVideo}>
+      <div className='discord-community' onMouseEnter={handlePlaySignVideo}>היי
         <div className='info'>
           <svg><use href="/img/sprite.svg#discord-big" /></svg>
           <h4>Join our community</h4>
@@ -44,7 +44,7 @@ const Community = (props) => {
         <div className='info'>
           <h4>Game developer?</h4>
           <p>Community is power and a driver for retention.
-Give your community tools to create valuable in-game content for your game with the Overwolf SDK.</p>
+Give your community tools to create valuable in-game content for your game with the Overwolf Game Events SDK.</p>
           <a href='/topics/integrations/events-sdk-for-game-developers' className='btn-secondary'>Learn more</a>
         </div>
 

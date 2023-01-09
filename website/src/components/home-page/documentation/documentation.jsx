@@ -99,7 +99,7 @@ const Documentation = (props) => {
         <li>
           <a href="/start/getting-started">
             <h4>Prepare</h4>
-            <p>Here will be an explanation text about stages of this process.</p>
+            <p>App creation is a journey. And every journey starts with a plan.</p>
             <div className="anim-icon" id="prepare"></div>
             <img src="/img/home-2023/server.svg" loading="lazy" alt="Prepare"/>
           </a>
@@ -107,7 +107,7 @@ const Documentation = (props) => {
         <li>
           <a href="/start/getting-started/app-creation-process#build">
             <h4>Build</h4>
-            <p>Here will be an explanation text about stages of this process.</p>
+            <p>With a plan in hand, you are now ready to start building your app.</p>
             <div className="anim-icon" id="build"></div>
             <img src="/img/home-2023/anvil.svg" loading="lazy" alt="Build"/>
           </a>
@@ -115,7 +115,7 @@ const Documentation = (props) => {
         <li>
           <a href="/start/getting-started/app-creation-process#release">
             <h4>Release</h4>
-            <p>Here will be an explanation text about stages of this process.</p>
+            <p>Your app is ready, and so are you. Now, it is time to share it with the world!</p>
             <div className="anim-icon" id="release"></div>
             <img src="/img/home-2023/flag.svg" loading="lazy" alt="Release"/>
           </a>
@@ -123,7 +123,7 @@ const Documentation = (props) => {
         <li>
           <a href="/start/getting-started/app-creation-process#grow">
             <h4>Grow</h4>
-            <p>Here will be an explanation text about stages of this process.</p>
+            <p>Your app is released, but the journey has only just begun!</p>
             <div className="anim-icon" id="growth"></div>
             <img src="/img/home-2023/trophy.svg" loading="lazy" alt="Growth"/>
           </a>

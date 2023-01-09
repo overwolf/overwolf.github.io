@@ -374,6 +374,10 @@ blockquote {
   }
 }
 
+.underline-patch a{
+	text-decoration-color: initial;
+}
+
 @import './getting-started';
 // @import './admonition';
 @import './navbar';

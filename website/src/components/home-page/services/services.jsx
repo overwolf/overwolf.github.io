@@ -32,7 +32,7 @@ const Services = (props) => {
           </div>
           <div className='info'>
             <h2>Overwolf Platform</h2>
-            <p>Create powerful desktop apps and overlays for AAA games, using basic HTML and Javascript</p>
+            <p>Create powerful desktop apps and game overlays, built with 100% pure JavaScript.</p>
             <a href='/start/getting-started'
               className='btn-primary'
               onMouseEnter={handleToggleApp}
@@ -66,7 +66,7 @@ const Services = (props) => {
           </div>
           <div className='info'>
             <h2>Overwolf Electron</h2>
-            <p>Build cross-platform desktop apps with JavaScript, HTML, and CSS</p>
+            <p>Leverage an empowered <a target="_blank" href='https://www.electronjs.org/'>Electron.js</a> framework, to make your existing apps even better!</p>
             <a href='/tools/ow-electron'
               className='btn-primary'
               onMouseEnter={handleToggleElectronApp}
