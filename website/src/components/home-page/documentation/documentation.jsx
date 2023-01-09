@@ -88,7 +88,7 @@ const Documentation = (props) => {
 
   useEffect(() => {
     startLottieAnimatedIcons();
-    }, []); 
+    }, []);
 
 // ---------------------------------------------------------------------------
 
@@ -105,7 +105,7 @@ const Documentation = (props) => {
           </a>
         </li>
         <li>
-          <a href="#">
+          <a href="/start/getting-started/app-creation-process#build">
             <h4>Build</h4>
             <p>Here will be an explanation text about stages of this process.</p>
             <div className="anim-icon" id="build"></div>
@@ -113,7 +113,7 @@ const Documentation = (props) => {
           </a>
         </li>
         <li>
-          <a href="#">
+          <a href="/start/getting-started/app-creation-process#release">
             <h4>Release</h4>
             <p>Here will be an explanation text about stages of this process.</p>
             <div className="anim-icon" id="release"></div>
@@ -121,7 +121,7 @@ const Documentation = (props) => {
           </a>
         </li>
         <li>
-          <a href="#">
+          <a href="/start/getting-started/app-creation-process#grow">
             <h4>Grow</h4>
             <p>Here will be an explanation text about stages of this process.</p>
             <div className="anim-icon" id="growth"></div>
