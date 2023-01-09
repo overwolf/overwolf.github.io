@@ -108,6 +108,10 @@
         background: #b43b3b
       }
 
+      &.coming-soon:before {
+        background: #3F494B
+      }
+
     }
 
     .launcher-info-list {
@@ -356,6 +360,10 @@
 
       &.bad:after {
         background: #b43b3b
+      }
+
+      &.coming-soon:after {
+        background: #3F494B
       }
     }
   }

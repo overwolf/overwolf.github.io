@@ -1,4 +1,3 @@
-label: 'consent-management-platform'
 customProps:
   overwolf_platform: false
   electron_platform: true

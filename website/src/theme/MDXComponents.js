@@ -9,6 +9,7 @@ import SkipMe from '@site/src/components/skip-me/skip-me';
 import Tagger from '../components/tagging/Tagger';
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import SimpleTab from '../components/simple-tab/simple-tab';
 
 export default {
   // Re-use the default mapping
@@ -22,5 +23,6 @@ export default {
   SkipMe: SkipMe,
   Tagger: Tagger,
   Tabs: Tabs,
-  TabItem: TabItem
+  TabItem: TabItem,
+  SimpleTab: SimpleTab
 };

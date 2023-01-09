@@ -3,6 +3,9 @@ import React, { useState } from 'react';
 const stateToTxt = (state) => {
   let txt = '';
   switch (state) {
+    case 0:
+      txt = 'Coming soon';
+      break;
     case 1:
       txt = 'Good to go';
       break;

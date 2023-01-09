@@ -8,19 +8,15 @@ sidebar_custom_props:
   electron_platform: false
 ---
 
-## Overview
+So, you want to build an Overwolf app? Great! We're here to help!
 
-If you are a pro developer, and you have an idea for an app that will provide great value for gamers, you’ve come to the right place!
+This includes not just the infrastructure required to create and publish your app either! We are always glad to help in every step along the way.  
+From polishing your concept, to constant feedback and insights during development, all the way to launching the first version,
+with a marketing campaign and plan for the future all lined up.
 
-We believe that in order to create a truly valuable application, a meeting of the minds is required. You have a great app idea, and we provide the resources and insights needed to set you up for success and build your community. By collaborating during your creation process, we can support you much better and provide the feedback and expertise needed to create an awesome gaming app.
+After all, creating a great app takes a lot of time and effort - let us save you some of it, so you can focus on delivering the best app possible.
 
-This website and our staff are here to support you through every step of the process - from polishing your initial concept to launching the finished product with a well built marketing campaign. We know that creating a great product takes a time and effort - let us save you some so you can focus on your concept itself.
-
-## Get inspired
-
-Want to change how gamers play their favorite games? Have a cool idea for one of the games you love? Need a little inspiration to get started? Take a look at our [app showcase!](https://www.overwolf.com/appstore) It’s the perfect place to check out awesome Overwolf apps, learn about their journey and get a clear direction for what you would like to build.
-
-## How does it work?
+## So how does it work?
 <div className='center-text-mobile'>
 
 ![](/assets/app-creation/desktop-light-app-creation-process.png)
@@ -30,25 +26,90 @@ Want to change how gamers play their favorite games? Have a cool idea for one of
 
 </div>
 
-### 1. Pitch Your Concept
+### Prepare
 
-Once you're ready, talk to us about your app - starting is as easy as [submitting an app proposal](submit-app-proposal). We’ll take a look and share our feedback, thoughts and recommendations before you dive into development. If we're aligned and happy with the concept - we’ll provide you with everything you need to get your app out into our Appstore.
+The journey ahead may be long. As such, it's important to prepare first.  
+We have prepared a short pre-flight check-list, to help you get your bearing:
+- Do you have an idea?
+- Is this an idea you can see, at least to a certain degree, a way to approach programatically?
+  - It's impmortant to take time and research this part, especially for your idea's core parts!
+- Take a look around this website - Can you spot the things you may need?
+  - If your idea involves integration with real-time events in a specific game - Have you made sure that there are [events](/api/games/events) for that game, exposing the relevant data?
 
-### 2. Build It - They Will Come
+:::tip Find inspiration
+Want to improve how gamers play their favorite games?
+Have a cool idea for one of the games you love?
+Need a little inspiration to get started?  
+Take a look at our [App Store](https://www.overwolf.com/appstore)!
+It’s the perfect place to check out awesome Overwolf apps, learn about their journey and get a clear direction for what you would like to build.
+:::
 
-Concept approved? Let's go! Now it's time to start developing your app, and the real fun begins! 
-Development can be challenging, but our product team is available for you to consult with in every step of the way. We will provide feedback for each feature and screen of your app, assist in getting extra resources or tools you might need, and make sure that other teams are aligned and ready to boost your app's success on release. 
+<Tabs groupId="frameworks">
+<TabItem value="overwolf-platform" label="Overwolf Platform">
 
-### 3. Publish
+Once you've answered these questions, you are ready to go through your first obstacle - [Submitting your idea](submit-app-proposal).  
 
-After development is complete and you are happy with your app, you will officially become a part of the Overwolf pack! We’ll [publish your app](../submit-your-app) to the Overwolf Appstore, promote it online, and do our best to communicate its value to gamers everywhere. This is when you can start sharing your app with the world and engage some gamers!
+:::note Idea Submittion
+You don't need to check every single point yet - if you are unsure about any part, simply let us know about it in your submition, and we will do our best to help!
+:::
 
-### 4. Promote
-While Overwolf promotes all apps in both the appstore and the desktop client, you can have many more gamers join your community by actively promoting the app over social media, Youtube, Twitch or other channels. If your app is stable and the main challenge now is getting it out there, talk to us and our marketing team will figure out the best ways to boost your signal and bring new users in.  
-[Click here to find out more.](/topics/request-a-service/promoting-your-app)
+</TabItem>
+<TabItem value="electron-platform" label="Overwolf Electron">
 
-## Updates and Maintenance
+Once you're satisfied with your answers to these questions, you are ready to proceed to the next step in your journey - [Building](#build) your app.
 
-Getting your app in the Appstore isn’t the end of the road. Once your app is live, you’ll want to drive more users to check it out. It’s vital to fix bugs and sometimes add new features to your app, to keep it [up to date](../maintain-your-app/submit-an-app-update) and in demand.
+:::note Idea Feedback
+Unlike Overwolf Platform apps, you do not have to submit your app idea for review. However, you are still more than welcome to [contact us](/support/contact-us) for feedback,
+and we will gladly take a look!
+:::
 
-We can’t wait to see the awesome, innovative and game-changing apps you have in mind. Good luck!
+</TabItem>
+</Tabs>
+
+### Build
+
+<SimpleTab groupId="frameworks" choices={
+  {
+    "overwolf-platform": "Was your submition approved? First of all, congratulations!",
+    "electron-platform": ""
+  }
+}/>
+
+Now, it's time to get started building your app. For now, don't aim for the sun. Instead, make sure you have the basics down:
+- Experiment with the different [APIs](/api) you plan to use.
+- Experiment with mockups of the different features you have planned.
+- Read up on the other [APIs](/api) and [docs](/topics/best-practices) on this site.
+- Try to create a minimal working version of your app.
+- Make sure you have a basic plan of action from here on out.
+
+:::tip Need Feedback?
+Join our [developer's discord](https://discord.gg/overwolf-developers)! The community is always glad to help each other out!
+:::
+
+And don't forget - our team is always here to help. Don't be afraid to [reach out](/support/contact-us) at any point, for any question or request you might have.
+
+#### Preparing the first app submission
+
+Once you feel that you have created a simple, fully fledged version of your app, you may [submit][submit] it for initial review, or continue developing and improving it first.  
+Once you do submit your first build, our team will then go over it, and let you know of any feedback they have.
+
+After you take care of any serious issues the team might have found, you will receive access to the [Developer's Console](/tools/developers-console), where you may begin the [Publishing](#publish) process.
+
+### Publish
+
+So, you're ready to publish your app? That's great!  
+_If you haven't already, please make sure to [submit][submit] your app for an initial review._
+
+Once you have passed the basic submission process, you will also be assigned a DevRel manager. If you are ready to publish, simply let them know which version you wish to go public with.  
+They will then pass it to the team for one final review cycle. Once all of (if any) the critical issues found are resolved, you will be able to ask your DevRel to publish your app to the store, for the whole world to see and use!
+
+But remember, the journey doesn't end once you're ready to go live. In fact, this is merely the beginning of your app's [Growth](#grow)!
+
+### Grow
+
+Now that your app has is ready for release, there are many things you can do from here:
+- Improve your app - More features, more improvements, better UX, better monetization, improved stability, better usability, the sky's the limit!
+- Build and grow your community - You know what's better than one user? A whole community of users, all of which are invested in your app!
+- Promote your app - No matter how great your app is, it would be sad if nobody knew about it. We can help you fix that, be it through planning and advice, or even [advertising it directly](/topics/request-a-service/promoting-your-app)!
+
+[submit]: /start/submit-your-app

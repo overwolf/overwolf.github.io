@@ -22,6 +22,9 @@ function renderGameList(gameListData, urlAsDocsPath) {
   const gameListItems = gameListData.map(game => {
     let className = 'game ';
     switch (game.state) {
+      case 0:
+        className += 'coming-soon'
+        break;
       case 1:
         className += 'good';
         break;
