@@ -106,7 +106,7 @@
         &:hover, &.navbar__link--active {
           // color: white;
 
-          &:before { 
+          &:before {
             width: 100%;
           }
         }
@@ -149,7 +149,7 @@
     .navbar-sidebar__item {
       padding: 0;
 
-      .clean-btn {  
+      .clean-btn {
         top: 0;
         margin: 0;
         padding: 10px;
@@ -732,7 +732,7 @@ div[class^="searchBox"] {
     color: var(--color-txt);
     font-size: 14px;
     height: 32px;
-    width: 160px;
+    width: 140px;
     padding-right: 0;
 
     @media (max-width: 760px) {
@@ -771,10 +771,13 @@ div[class^="searchBox"] {
     padding: 0 6px 0px;
     width: fit-content;
     font-weight: 800;
+    border-radius: 2px;
   }
 
   .DocSearch-Button-Placeholder {
     font-size: 14px;
+    position: relative;
+    top: -1px;
   }
 }
 
