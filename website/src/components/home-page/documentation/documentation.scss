@@ -35,6 +35,7 @@
         background-color: var(--color-120);
         padding: 24px;
         width: 260px;
+        height: 100%;
         margin: auto;
         text-decoration: none;
 
@@ -83,7 +84,7 @@
           + img {
             display: none;
           }
-          
+
           &#prepare {
             position: relative;
             bottom: -18px;

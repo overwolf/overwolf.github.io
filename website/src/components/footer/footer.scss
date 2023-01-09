@@ -1,4 +1,4 @@
-  
+
   .site-footer {
     width: 100%;
     padding-top: 60px;
@@ -6,13 +6,13 @@
     background-image: url(/img/home-2023/footer-bg.webp);
     background-repeat: repeat-x;
     background-position: top 60px center;
-  
+
     @media (max-width: 800px){
       background-size: auto;
       background-color: #030303;
     }
-  
-  
+
+
     .back-to-top {
       display: flex;
       align-items: center;
@@ -25,66 +25,66 @@
       color: #B5B5B5;
       text-decoration: none;
       margin-bottom: 12px;
-  
+
       svg {
         color: #E9E9E9;
         width: 24px;
         height: 24px;
 
       }
-  
+
       &:hover, &:hover svg {
         color: var(--color-primary-hover);
       }
     }
-  
+
     .ow-shield {
       width: fit-content;
       display: block;
       margin: auto;
     }
-  
+
     .site-footer-nav {
       max-width: 1190px;
       margin: 0 auto 60px;
       display: flex;
       padding: 180px 20px 0px;
       justify-content: space-between;
-  
+
       @media (max-width: 800px){
         flex-direction: column;
         margin-bottom: 40px;
       }
-   
+
       nav {
         flex: 1;
-  
+
         & > ul {
           display: grid;
           grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
           gap: 52px 10%;
           margin: 0;
-  
-  
+
+
           @media (max-width: 800px) {
             gap: 52px 30px;
           }
-  
+
           padding: 0;
           list-style: none;
-  
+
           h5 {
             font-size: 16px;
             line-height: 24px;
             color: var(--color-txt);
             font-weight: bold;
           }
-  
+
           & ul {
             margin: 16px 0 0;
             padding: 0;
             list-style: none;
-  
+
             li {
               display: flex;
               align-items: center;
@@ -111,7 +111,7 @@
                   color: var(--color-txt);
                 }
               }
-  
+
               a {
                 font-size: 16px;
                 line-height: 24px;
@@ -119,7 +119,7 @@
                 text-decoration: none;
                 text-underline-offset: 3px;
                 letter-spacing: 0.02em;
-  
+
                  &.is-active {
                   color: var(--color-headline);
                   text-decoration: underline;
@@ -130,18 +130,18 @@
         }
       }
     }
-  
+
     .site-footer-social {
       background-color: var(--color-120);
-  
+
       .site-footer-social-inner {
-        padding: 12px 24px; 
-  
+        padding: 12px 24px;
+
         @media (max-width: 800px){
-          padding: 14px 20px 12px 20px; 
+          padding: 14px 20px 12px 20px;
         }
       }
-    
+
       .copyright {
         width: 100%;
 
@@ -155,5 +155,21 @@
         }
       }
 
+    }
+  }
+
+  html[data-theme=dark] {
+    .site-footer {
+
+      .site-footer-social {
+        background-color: var(--color-120);
+
+        .copyright {
+          span {
+            color: var(--color-txt);
+          }
+        }
+
+      }
     }
   }
