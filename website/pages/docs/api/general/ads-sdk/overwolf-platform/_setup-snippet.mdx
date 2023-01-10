@@ -1,0 +1,45 @@
+In order to use the Ads SDK within an Overwolf app, you must first fetch it from a [constant endpoint](https://content.overwolf.com/libs/ads/latest/owads.min.js) - `https://content.overwolf.com/libs/ads/latest/owads.min.js`.
+Attached is a short example snippet that fetches the SDK, as well as setting up a basic [`OwAd`][owad] instance:
+
+```html title="Fetch the latest version of the Ads-SDK, and make sure it loaded"
+<script src="https://content.overwolf.com/libs/ads/latest/owads.min.js" async onerror="onAdsSDKNotLoaded()" onload="onAdsSDKReady()"></script>
+<script>
+    // Reached if the SDK's script failed to load (took too long, couldn't be found, etc)
+    function onAdsSDKNotLoaded() {
+        // If this happens, it is up to the app to decide how to proceed.
+        console.error("Couldn't load owads.min.js!");
+    }
+
+    function onAdsSDKReady() {
+        if (!OwAd) {
+            // Reached if the SDK's script failed to properly load.
+            // If this happens, it is up to the app to decide how to proceed.
+            // onAdsSDKNotLoaded();
+            return;
+        }
+        // Reached if the script loaded properly.
+        // You can now create however many ad containers you need for this window, granted that they follow the implementation guidelines.
+        let adContainer = new OwAd(document.getElementById(/*Insert ad container Id here*/), {/*Mandatory Ad settings*/});
+    }
+
+</script>
+```
+
+#### Notes regarding the snippet above
+
+* As you can see, the script tag is added with an `async` attribute.
+This is because the script should be loaded asynchronously, so that it will not interfere
+with the rest of the page's loading.
+The downside to this approach, is that the script may take time to load and be ready.  
+To overcome this, you should use the `onload` and `onerror` callbacks from the script tag, to be notified as soon as the load succeeded/failed.
+
+* When creating a new [`OwAd`][owad], we provide it with two parameters: A DOM element, and the **required** Ad settings.
+In this example we are getting the instance of the element by calling `document.getElementById()`.
+However, you may use any other way to get the DOM element. You may use `document.querySelector`,
+[jQuery](https://jquery.com/), or any other method you wish - as long as the provided element is an HTML element available
+at the DOM, it will work.
+:::tip Container Identification
+If the Ad container did not already have an element ID defined, it will automatically be assigned one.
+:::
+
+[owad]: /api/general/ads-sdk/overwolf-platform/owad

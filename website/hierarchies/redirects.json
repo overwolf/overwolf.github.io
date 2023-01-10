@@ -381,24 +381,20 @@
     "from": "/docs/start/add-a-knowledge-base-to-app"
   },
   {
-    "to": "/start/monetize-with-ads/ads-monetization-basics",
-    "from": "/docs/start/ads-monetization-basics"
+    "to": "/start/monetize-your-app/advertising/working-with-ads",
+    "from": ["/docs/start/ads-monetization-basics", "/start/monetize-with-ads/ads-monetization-basics", "/docs/start/ads-sdk-options", "/start/monetize-with-ads/ads-sdk-options"]
   },
   {
-    "to": "/start/monetize-with-ads/ads-sdk-interaction",
-    "from": "/docs/start/ads-sdk-interaction"
+    "to": "/api/general/ads-sdk/overwolf-platform/owad",
+    "from": ["/docs/start/ads-sdk-interaction", "/start/monetize-with-ads/ads-sdk-interaction"]
   },
   {
-    "to": "/start/monetize-with-ads/ads-sdk-options",
-    "from": "/docs/start/ads-sdk-options"
+    "to": "/start/monetize-your-app/advertising",
+    "from": ["/docs/start/ads-sdk-overview", "/start/monetize-with-ads/ads-sdk-overview"]
   },
   {
-    "to": "/start/monetize-with-ads/ads-sdk-overview",
-    "from": "/docs/start/ads-sdk-overview"
-  },
-  {
-    "to": "/start/monetize-with-ads/ads-sdk-versions",
-    "from": "/docs/start/ads-sdk-versions"
+    "to": "/start/monetize-your-app/advertising/ads-sdk",
+    "from": ["/docs/start/ads-sdk-versions", "/start/monetize-with-ads/ads-sdk-versions"] 
   },
   {
     "to": "/start/test-your-app/app-automation",
@@ -433,8 +429,8 @@
     "from": "/docs/start/marketing-checklist"
   },
   {
-    "to": "/start/monetize-with-ads/monetization-overview",
-    "from": "/docs/start/monetization-overview"
+    "to": "/start/monetize-your-app",
+    "from": ["/docs/start/monetization-overview", "/start/monetize-with-ads/monetization-overview"]
   },
   {
     "to": "/start/test-your-app/product-checklist",

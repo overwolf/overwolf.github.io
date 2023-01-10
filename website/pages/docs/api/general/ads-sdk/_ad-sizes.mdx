@@ -1,0 +1,15 @@
+The following Ad container sizes are currently supported by the Ads SDK:
+
+| Container size            | Supported video Ads         | Supported banner Ads                  | (ow-plat) Size value snippet                                 | (ow-electron) Container min size snippet |
+| ------------------------- | --------------------------- | ------------------------------------- | ------------------------------------------------------------ | ---------------------------------------- |
+| 400x300                   | 400x300 / 300x250           | 336x280 / 300x250 / 250x250           | `{ width: 400, height: 300 }`                                | `min-width: 400px;` `min-height: 300px;`   |
+| 400x600                   | 400x300 / 300x250           | 336x280 / 300x600 / 300x250 / 250x250 | `[{ width: 400, height: 600 }, { width: 400, height: 300 }]` |  `min-width: 400px;` `min-height: 600px;`   |
+| 300x250                   | N/A                         | 300x250 / 250x250                     | `{ width: 300, height: 250 }`                                | `min-width: 300px;` `min-height: 250px;`   |
+| 160x600                   | N/A                         | 160x600 / 120x600                     | `{ width: 160, height: 600 }`                                | `min-width: 160px;` `min-height: 600px;`   |
+| 728x90                    | N/A                         | 728x90                                | `{ width: 728, height: 90 }`                                 | `min-width: 728px;` `min-height: 90px;`    |
+
+:::warning Ad Sizes Are Precise!
+Make sure to only enter values from a single line of the `Size value snippet`! Any unsupported values will potentially cause no ads to show!
+
+For specific edge-cases, or if you wish to use several different sizes in a single container, [contact us](/support/contact-us).
+:::
