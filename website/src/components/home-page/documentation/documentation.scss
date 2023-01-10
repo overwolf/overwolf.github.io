@@ -1,0 +1,136 @@
+.documentation-section {
+  padding: 80px 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  @media (max-width: 600px) {
+    padding: 40px 16px;
+  }
+
+  h3 {
+    font-size: 40px;
+    line-height: 48px;
+    text-align: center;
+    margin-bottom: 8px;
+
+    @media (max-width: 600px) {
+      font-size: 32px;
+      line-height: 48px;
+    }
+
+    + p {
+      font-size: 18px;
+      line-height: 28px;
+      text-align: center;
+      letter-spacing: 0.02em;
+      margin-bottom: 40px;
+    }
+  }
+
+  .documentation-list {
+    max-width: 1112px;
+    margin: 0 auto;
+    padding: 0;
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 24px;
+
+    @media (max-width: 1130px) {
+      grid-template-columns: repeat(2, 260px);
+    }
+
+    @media (max-width: 600px) {
+      grid-template-columns: repeat(1, 260px);
+    }
+
+    li {
+      a {
+        display: flex;
+        flex-direction: column;
+
+        background-color: var(--color-120);
+        padding: 24px;
+        width: 260px;
+        height: 100%;
+        min-height: 352px;
+        margin: auto;
+        text-decoration: none;
+
+        &:hover {
+          background: var(--color-220);
+        }
+
+        h4 {
+          font-size: 32px;
+          line-height: 48px;
+          margin-bottom: 8px;
+          color: var(--color-primary);
+        }
+
+        p {
+          font-size: 16px;
+          line-height: 24px;
+
+          color: var(--color-txt);
+        }
+
+        img {
+          height: 104px;
+          width: 104px;
+          margin-left: auto;
+        }
+
+        .anim-icon {
+          width: 104px;
+          height: 104px;
+          margin-left: auto;
+          margin-top: auto;
+
+          svg {
+            height: 104px;
+            width: 104px;
+          }
+
+          &:empty {
+            display: none;
+
+            + img {
+              display: block;
+            }
+          }
+
+          + img {
+            display: none;
+          }
+
+          &#prepare {
+            position: relative;
+            bottom: -18px;
+            right: -12px;
+          }
+
+          &#build {
+            position: relative;
+            bottom: -8px;
+            right: -20px;
+          }
+
+          &#release {
+            position: relative;
+            right: -19px;
+            bottom: -11px;
+          }
+
+          &#growth {
+            position: relative;
+            right: -9px;
+            bottom: -12px;
+          }
+
+        }
+      }
+    }
+  }
+}

@@ -1,5 +1,46 @@
 html[data-theme="dark"]{
 
+  .tabs-container {
+    background-color: #1A1A1A;
+    padding: 0 24px 32px;
+
+    .tabs {
+      border-bottom: 1px solid #333333;
+      .tabs__item {
+        color: #999999;
+
+        &:hover {
+
+          &:after {
+            color: #ccc;
+          }
+        }
+
+        &.tabs__item--active {
+          color: #ccc;
+        }
+      }
+    }
+
+  }
+
+
+
+  .btn-secondary {
+    border: 1px solid var(--color-999);
+    color: var(--color-999);
+
+    &:hover {
+      background-color: var(--color-grey-light-2);
+      border-color: var(--color-grey-light-2);
+      color: black;
+    }
+  }
+
+  .main-content {
+    background-color: black;
+  }
+
   body, .body {
       color: var(--color-txt);
       background: var(--color-100) !important;
@@ -129,16 +170,6 @@ html[data-theme="dark"]{
         }
       }
     }
-  }
-
-  div[class^="toggle"] {
-
-    button:hover {
-      svg {
-        color: white;
-      }
-    }
-
   }
 
   .prism-code span.token.punctuation {

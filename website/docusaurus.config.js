@@ -295,19 +295,21 @@ async function config() {
         style: "dark",
         title: "Overwolf",
         logo: {
-          src: "img/header-icon.svg"
+          alt: "Overwolf Developers",
+          src: "img/ow-logo-light.svg",
+          srcDark: 'img/ow-logo-dark.svg',
         },
         items: require('./hierarchies/headers.json')
       },
       image: "img/embed/dev.jpg",
-      footer: {
-        style: "dark",
-        links: require('./hierarchies/footer.json'),
-        copyright: "<div class='c-inner'><p>Copyright © 2022 Overwolf</p></div>",
-        logo: {
-          src: "/img/ow-footer.svg"
-        }
-      },
+      // footer: {
+      //   style: "dark",
+      //   links: require('./hierarchies/footer.json'),
+      //   copyright: "<div class='c-inner'><p>Copyright © 2022 Overwolf</p></div>",
+      //   logo: {
+      //     src: "/img/ow-footer.svg"
+      //   }
+      // },
       prism: {
         additionalLanguages: ['powershell'],
       },

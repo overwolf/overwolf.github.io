@@ -1,6 +1,7 @@
 import React from 'react';
 import { useLocation } from "react-router-dom";
 import { useEffect } from 'react';
+import Footer from '../components/footer/footer';
 
 // Default implementation, that you can customize
 export default function Root({children}) {
@@ -24,6 +25,7 @@ export default function Root({children}) {
   return (
     <>
       {children}
+      <Footer />
     </>
   );
 }

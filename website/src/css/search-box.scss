@@ -1,0 +1,117 @@
+div[class^="searchBox"] {
+
+  .DocSearch-Button {
+    border-radius: unset;
+    background: var(--color-grey-light-2);
+    border: 1px solid var(--color-450);
+    border-radius: 0px;
+    color: var(--color-220);
+    font-size: 14px;
+    height: 32px;
+    width: 140px;
+    padding-right: 0;
+
+    @media (max-width: 760px) {
+      border: none !important;
+      width: unset;
+      position: relative;
+      right: -10px;
+      top: 1px;
+    }
+
+
+    .DocSearch-Search-Icon {
+      color: var(--color-220);
+      transition: all 150ms ease;
+      width: 16px;
+      @media (max-width: 760px) {
+        // color: white;
+      }
+    }
+
+    &:hover {
+      box-shadow: unset;
+      background: rgba(0, 0, 0, 0.16);
+
+      .DocSearch-Search-Icon {
+        // color: white;
+
+      }
+    }
+  }
+
+  .DocSearch-Button-Key {
+    background: var(--color-450);
+    box-shadow: none;
+    color: white;
+    top: 0px;
+    padding: 0 6px 0px;
+    width: fit-content;
+    font-weight: 800;
+    border-radius: 2px;
+  }
+
+  .DocSearch-Button-Placeholder {
+    font-size: 14px;
+    position: relative;
+    top: -1px;
+  }
+}
+
+.DocSearch.DocSearch-Container {
+  .DocSearch-Modal {
+    border-radius: 0px;
+
+    .DocSearch-Form {
+      border-radius: 0;
+      box-shadow: unset;
+      border: 2px solid var(--color-800);
+
+      .DocSearch-MagnifierLabel, .DocSearch-Reset {
+        color: var(--color-bg);
+      }
+    }
+  }
+
+  .DocSearch-Screen-Icon svg {
+    margin: auto;
+    color: var(--color-bg);
+  }
+
+  .DocSearch-Cancel {
+    color: var(--color-primary);
+  }
+}
+
+html[data-theme=dark] {
+  div[class^="searchBox"] {
+
+    .DocSearch-Button {
+      background: var(--color-120);
+      border: 1px solid var(--color-999);
+      color: var(--color-txt);
+
+      .DocSearch-Search-Icon {
+        color: var(--color-txt);
+
+        @media (max-width: 760px) {
+          color: white;
+        }
+      }
+
+      &:hover {
+        background: rgba(255, 255, 255, 0.16);
+
+        .DocSearch-Search-Icon {
+          color: white;
+        }
+      }
+    }
+
+    .DocSearch-Button-Key {
+      background: var(--color-999);
+      box-shadow: none;
+      color: var(--color-120);
+    }
+  }
+}
