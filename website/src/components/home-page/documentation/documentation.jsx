@@ -95,6 +95,7 @@ const Documentation = (props) => {
   return (
     <section className="documentation-section">
       <h3>Documentation</h3>
+      <p>Everything you may need in your quest to build great apps</p>
       <ul className="documentation-list">
         <li>
           <a href="/start/getting-started">
