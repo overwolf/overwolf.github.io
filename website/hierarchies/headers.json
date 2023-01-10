@@ -15,11 +15,6 @@
         "position": "left"
     },
     {
-        "to": "tools/ow-electron",
-        "label": "ow-electron",
-        "position": "left"
-    },
-    {
         "to": "tools/developers-console",
         "label": "Tools",
         "position": "left"
@@ -27,11 +22,6 @@
     {
         "to": "status",
         "label": "Events Status",
-        "position": "left"
-    },
-    {
-        "href": "https://discuss.overwolf.com/",
-        "label": "Q&A",
         "position": "left"
     },
     {
