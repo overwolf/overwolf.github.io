@@ -87,6 +87,7 @@
         padding: 0;
         letter-spacing: 0.02em;
         position: relative;
+        transition: all 0ms;
 
         &:before {
           content: "";
@@ -109,7 +110,7 @@
           font-weight: 700;
           position: absolute;
           left: -1px;
-          top: 0;
+          top: 1;
           width: fit-content;
           white-space: nowrap;
 
@@ -122,10 +123,21 @@
           display: none;
         }
 
-        &:hover, &.navbar__link--active {
+        &:hover {
+          color: transparent;
           &:after {
+            color: var(--color-220);
             visibility: visible;
           }
+
+          &:before {
+            width: 100%;
+          }
+        }
+
+        &.navbar__link--active {
+          font-weight: 700;
+          pointer-events: none;
 
           &:before {
             width: 100%;
@@ -237,6 +249,14 @@ html[data-theme=dark] {
 
         .navbar__link {
           color: var(--color-txt);
+
+          &:hover {
+            color: transparent;
+            &:after {
+              color: var(--color-txt);
+            }
+
+          }
 
           &:before {
             background-color: var(--color-primary);
