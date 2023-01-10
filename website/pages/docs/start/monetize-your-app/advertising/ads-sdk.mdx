@@ -44,14 +44,13 @@ Apart from those, there are also certain things you should keep in mind when int
 - Your Ad container should ALWAYS be visible in the app screen.
   - _For specific cases where you wish to **temporarily** stop displaying Ads, you can set the `display` css property of the Ad's_
     _ container to `none`. This will stop the container from displaying Ads, until it is made to display again._
-- Your Ad container's position should be static and absolute, and it should not move **within** the window under any circumstances.
-- If a window has multiple views, make sure its Ads containers do not change/move when moving between different menus/pages/views.
-  - If you must change these containers, **do not recycle them!**. Instead, shut each changed container down, and open a new one in the new target location!
+- If a window has multiple views, make sure its Ads containers do not change/refresh when moving between different menus/pages/views.
+  - If you must specifically change these containers, **do not recycle them!** Instead, shut each changed container down, and open a new one in the new target location!
 - Your Ad container should have no scrollbars, and should not be scrollable.
-- Once a new OwAd object is created, you should **NEVER** modify any of its containers' CSS properties. The only property you **can** change is `display`, as mentioned in bullet 1.
-- If you wish to **remove** an Ad container, **you must call `OwAd.shutdown()`!** Common use cases include:
-  - Needing to "move" the Ad container - Done by shutting down the current one, and then creating a new one.
-  - Needing to remove an Ad container - Done by just shutting down the current one.
+- Once a new OwAd object is created, you should **NEVER** modify any of its containers' CSS properties. The only property you **can** change is `display`, as mentioned in [bullet 4](#:~:text=For%20specific%20cases%20where%20you%20wish%20to%20temporarily%20stop%20displaying%20Ads).
+- If you wish to **remove** an Ad container, **you must call `OwAd.shutdown()`!** This is usually done when:
+  - You need to change the Ad container - Done by shutting down the current one, and then creating a new one with the new settings/location/parent.
+  - You need to remove an Ad container - Done by just shutting down the current one.
 
 
 :::info Feel free to reach out

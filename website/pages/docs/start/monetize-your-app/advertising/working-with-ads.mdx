@@ -13,9 +13,9 @@ This page discusses general information about working with Ads.
 Once you are done, do also check out the [**Ads SDK**][ads-sdk], for an overview of the Overwolf Ads SDK.
 :::
 
-> "Ads offer a way to monetize your app seamlessly, without compromising user experience."
- 
-More specifically, Ads allow you to take unused visual space in your app, and "auction" it off to advertisers,
+> When we talk about Ads on this site, we often say that "Ads offer a way to monetize your app seamlessly, without compromising user experience".
+
+But what exactly does this mean? Well, if we're being more specific - Ads allow you to take unused visual space in your app, and "auction" it off to advertisers,
 who will then use it in order to advance their products.
 
 While this can be very useful as a developer, there are some constraints to the app's design that come with Ads. Mainly:
@@ -36,7 +36,7 @@ Now, with this list in mind, you should select the locations in the app where th
 - **Any window containing an Ad container, should also have real, tangible and continous value for the user.**
   :::warning Some examples of where Ads must **NEVER** be displayed
     - App signup/login windows.
-    - App error windows.
+    - App error/notification windows.
     - Windows displaying just the Ad container.
   :::
 - Try to keep the Ads as acceptable and non-invasive to the app's overall experience as possible.
@@ -46,8 +46,8 @@ Now, with this list in mind, you should select the locations in the app where th
   - With video Ad containers, you may only have one active video Ad container at any moment **per app window**.
   - Each app window may only have up to (**or exactly**) 3 active Ad containers at any given moment (both video and display Ads count towards that limit).
   - You may use as many display Ad containers as you want, **as long as the total amount of Ad containers in the window stays at 3 or less.**
-- If a certain app window has several views, try to make sure Ad locations do not change when moving between views.
-(This ensures that the containers can stay active, regardless of the current view).
+- If a certain app window has several views, try to make sure that Ad containers do not change when moving between views
+  - This ensures that the containers can stay active, regardless of the current view/changes in the view.
 - Ad containers should be placed where they won't be hidden. If your app utilizes pop-ups, try to make sure that these do not block any Ad containers.
 - Ad containers should be placed where they will be seen for more than a short moment.
   - This can often be achieved by using "dead" moments in games (i.e. loading screens, post-game screens, respawn timers, etc.).
@@ -55,7 +55,7 @@ Now, with this list in mind, you should select the locations in the app where th
   - A good average open time for video Ads is 30 seconds.
   - A good average Completion Rate* for video Ads is 70%.
 
-\* Completion Rate - measurement of ad completions out of the total ad views.
+\* *Completion Rate - measurement of ad completions out of the total ad views.*
 
 :::info Unsure? Contact Us!
 Ad planning can be a tricky thing. If you're uncertain about any part of it, or just have any questions about it,
@@ -118,7 +118,7 @@ These most often dictate that:
 
 These constraints, while already conflicted, still don't even fully cover everything that would affect the app's Ad/general performance when integrating Ads.
 As such, Overwolf also places an extra set of contraints on Ads displayed through the SDK, in order to maintain a healthy environment for advertisers,
-users, and app developers alike. You can read more about that [here](advertising-policy).
+users, and app developers alike. You can read more about that [here](policy).
 
 All of those rules, when combined, make up the [Ad planning guidelines][ad-guidelines], a set of simple rules designed to help you implement
 Ads into your app properly, while keeping the different constraints in mind.
