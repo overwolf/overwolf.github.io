@@ -79,11 +79,11 @@ const Services = (props) => {
               </li>
               <li>
                 <svg><use href="/img/sprite.svg#in-game-overlay" /></svg>
-                In-game overlay <span>(coming soon)</span>
+                In-game overlay <span>(Coming soon)</span>
               </li>
               <li>
                 <svg><use href="/img/sprite.svg#real-time-game-events" /></svg>
-                Real time game events <span>(coming soon)</span>
+                Real time game events <span>(Coming soon)</span>
               </li>
             </ul>
           </div>
