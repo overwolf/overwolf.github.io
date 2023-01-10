@@ -5,6 +5,10 @@
     max-width: 1112px;
     margin: auto;
     padding: 56px 0;
+
+    @media (max-width: 600px) {
+      padding: 24px 0;
+     }
   }
 
   .info {
