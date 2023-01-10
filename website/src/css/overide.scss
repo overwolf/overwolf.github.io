@@ -618,10 +618,14 @@ img[alt*="light-theme"], img[alt*="dark-theme"], img[alt*="mobile-light"], img[a
 
 
     .tabs__item {
-      font-size: 14px;
+      font-size: 16px;
       color: #4d4d4d;
       font-weight: 400;
       position: relative;
+
+      @media (max-width: 600px) {
+        font-size: 14px;
+      }
 
       &:after {
         content: attr(data-text);
