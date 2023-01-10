@@ -7,6 +7,11 @@
   border-bottom: 1px solid var(--color-333);
   margin: 32px 0 0;
 
+  @media (max-width: 600px) {
+    row-gap: 48px;
+    margin: 48px 0 0;
+  }
+
   li {
     display: flex;
     flex-direction: row-reverse;
