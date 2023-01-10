@@ -1,6 +1,5 @@
 import React from 'react';
 export default function IconDarkMode(props) {
-  console.log(props)
   return (
     <svg width="24" height="24" {...props} fill="currentColor">
       <path 
