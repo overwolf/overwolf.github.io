@@ -38,7 +38,7 @@ function AppLiveList(props) {
         </div>
         <div className='info'>
           <h3>In-Game Overlays</h3>
-          <p>Using overlays, apps can extend a game's UI, create value in otherwise "dead" moments, or just generally work as seamless extensions of the game.</p>
+          <p>Using overlays, apps can extend a game's UI, create value in otherwise "dead" moments, or just generally work as seamless extensions of the game. Minesweeper during loading screens anyone?</p>
         </div>
       </li>
       <li className="desktop">
