@@ -1,22 +1,29 @@
 html[data-theme="dark"]{
 
-  .tabs {
+  .tabs-container {
+    background-color: #1A1A1A;
+    padding: 0 24px 32px;
 
-    .tabs__item {
-      color: #999999;
+    .tabs {
+      border-bottom: 1px solid #333333;
+      .tabs__item {
+        color: #999999;
 
-      &:hover {
+        &:hover {
 
-        &:after {
+          &:after {
+            color: #ccc;
+          }
+        }
+
+        &.tabs__item--active {
           color: #ccc;
         }
       }
-
-      &.tabs__item--active {
-        color: #ccc;
-      }
     }
+
   }
+
 
 
   .btn-secondary {
