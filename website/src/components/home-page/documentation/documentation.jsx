@@ -123,7 +123,7 @@ const Documentation = (props) => {
         <li>
           <a href="/start/getting-started/app-creation-process#grow">
             <h4>Grow</h4>
-            <p>Your app is released, but the journey has only just begun!<br/><br/></p>
+            <p>Your app is released, but the journey has only just begun!</p>
             <div className="anim-icon" id="growth"></div>
             <img src="/img/home-2023/trophy.svg" loading="lazy" alt="Growth"/>
           </a>
