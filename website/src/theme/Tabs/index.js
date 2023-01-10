@@ -24,7 +24,7 @@ function dispatchChangeEvent({
     newValue,
     window.location.href,
     storage,
-  ); 
+  );
   window.dispatchEvent(event);
 }
 
@@ -109,7 +109,7 @@ function TabsComponent(props) {
     const newTabValue = values[newTabIndex].value;
     if (newTabValue !== selectedValue) {
       blockElementScrollPositionUntilNextRender(newTab);
-      
+
       dispatchChangeEvent({
         key: `docusaurus.tab.${groupId}`,
         oldValue: selectedValue,
@@ -165,6 +165,7 @@ function TabsComponent(props) {
             ref={(tabControl) => tabRefs.push(tabControl)}
             onKeyDown={handleKeydown}
             onClick={handleTabChange}
+            data-text={label}
             {...attributes}
             className={clsx(
               'tabs__item',
