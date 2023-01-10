@@ -18,7 +18,7 @@ class SimpleTab extends React.Component {
         this.choices = choices;
 
         const storageKey = this.getStorageKey(groupId);
-        if (!localStorage[storageKey]) localStorage[storageKey] = Object.values[0];
+        if (!localStorage[storageKey]) localStorage[storageKey] = Object.keys(choices)[0];
 
         this.state = { current: localStorage[storageKey] }
 
