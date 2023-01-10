@@ -5,7 +5,7 @@ import { useState } from 'react';
 
 function AppLiveList(props) {
   const { } = props;
-  const [siteTheme, setSiteTheme] = useState('');
+  const [siteTheme, setSiteTheme] = useState('light');
   // ---------------------------------------------------------------------------
 
   useEffect(() => {
