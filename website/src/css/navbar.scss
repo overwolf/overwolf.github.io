@@ -97,14 +97,35 @@
           bottom: -6px;
           left: 0;
           transition: width 150ms ease;
-      }
+        }
+
+        &:after {
+          content: attr(data-text);
+          content: attr(data-text) / "";
+          height: 0;
+          visibility: hidden;
+          user-select: none;
+          pointer-events: none;
+          font-weight: 700;
+          position: absolute;
+          left: -1px;
+          top: 0;
+          width: fit-content;
+          white-space: nowrap;
+
+          @media speech {
+            display: none;
+          }
+        }
 
         svg {
           display: none;
         }
 
         &:hover, &.navbar__link--active {
-         font-weight: 700;
+          &:after {
+            visibility: visible;
+          }
 
           &:before {
             width: 100%;
