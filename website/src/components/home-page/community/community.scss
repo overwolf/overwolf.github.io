@@ -70,21 +70,21 @@
 
       @media (max-width: 1130px) {
         position: unset;
-        background-image: url(/img/home-2023/community-poster-light.webp);
         width: 550px;
         height: 356px;
+        margin: auto;
         background-position: left 0px center;
       }
 
-      @media (max-width: 600px) {
-        height: 356px;
-        width: 360px;
-        background-size: 500px;
-        background-position: left -80px center;
+      @media (max-width: 960px) {
+        background-image: url(/img/home-2023/community-poster-light.webp);
       }
 
       @media (max-width: 600px) {
-        width: 100%;
+        height: 356px;
+        width: 390px;
+        background-size: 500px;
+        background-position: left -80px center;
       }
 
       .sign-video {
@@ -135,22 +135,21 @@
 
       @media (max-width: 1130px) {
         position: unset;
-        background-image: url(/img/home-2023/compass-poster-light.webp);
         width: 550px;
         height: 356px;
         background-position: left 0px center;
         margin: auto;
       }
 
-      @media (max-width: 600px) {
-        height: 356px;
-        width: 360px;
-        background-size: 500px;
-        background-position: left -40px center;
+      @media (max-width: 960px) {
+        background-image: url(/img/home-2023/compass-poster-light.webp);
       }
 
       @media (max-width: 600px) {
-        width: 100%;
+        height: 356px;
+        width: 390px;
+        background-size: 500px;
+        background-position: right -60px center;
       }
 
       .compass-video {
@@ -189,19 +188,9 @@ html[data-theme=dark] {
       .assets {
         background-image: url(/img/home-2023/smoke.webp);
 
-        @media (max-width: 1130px) {
-          background-position: left 30px center;
-        }
-
         @media (max-width: 960px) {
           background-image: url(/img/home-2023/community-poster.webp);
-          background-position: left -20px center;
         }
-
-        @media (max-width: 400px) {
-          background-position: left -80px center;
-        }
-
       }
 
     }
@@ -211,21 +200,14 @@ html[data-theme=dark] {
       .assets {
         background-image: url(/img/home-2023/smoke2.webp);
 
-        @media (max-width: 1130px) {
-          background-position: left 30px center;
-        }
-
         @media (max-width: 960px) {
           background-image: url(/img/home-2023/compass-poster.webp);
-          background-position: left 50px center;
+          background-position: right -50px center;
         }
 
         @media (max-width: 600px) {
-          background-position: left 80px center;
-        }
-
-        @media (max-width: 400px) {
-          background-position: left -10px center;
+          background-image: url(/img/home-2023/compass-poster.webp);
+          background-position: right -100px center;
         }
 
       }
