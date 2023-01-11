@@ -8,12 +8,15 @@
 	--color-220: #262626;
 	--color-250: #1C1C1C;
 	--color-300: #303030;
+	--color-333: #333333;
 	--color-400: #404040;
+	--color-450: #4D4D4D;
 	--color-500: #505050;
 	--color-600: #606060;
 	--color-700: #707070;
 	--color-800: #808080;
 	--color-900: #909090;
+	--color-999: #999999;
 	--color-1000: #AAAAAA;
 
 	--color-navbar: #121212;
@@ -27,6 +30,7 @@
 
 	--color-grey-4: #BDBDBD;
 	--color-grey-5: #D5D5D5;
+  --color-grey-9: #D9D9D9;
 	--color-txt: #CCCCCC;
 
 	--color-headline: #E2E2E2;
@@ -183,7 +187,7 @@ th {
 h1,
 h2, h3, h4, h5 {
 	font-family: 'Madera', sans-serif;
-  color: black;
+  color: var(--color-220);
 }
 
 article {
@@ -212,7 +216,7 @@ article {
 	}
 
 	p {
-		font-size: 18px;
+		font-size: 16px;
 		line-height: 23px;
 		line-height: 30px;
 		letter-spacing: 0.01em;
@@ -227,7 +231,7 @@ article {
 
 			li {
 				position: relative;
-				font-size: 18px;
+				font-size: 16px;
 				line-height: 30px;
 
 				&:before {
@@ -284,13 +288,14 @@ html {
 	overflow-y: scroll;
 	// min-height: 100vh;
   height: auto !important;
+  //scroll-behavior: smooth; not works well in inner pages
 }
 
 
 body, .body {
 	/* overflow: hidden; */
 	line-height: 1.5;
-	color: var(--color-bg);
+	color: var(--color-220);
 	background:  var(--light-mode-bg);
 	font-family: 'Lato', sans-serif;
 	font-size: 16px;
@@ -308,7 +313,72 @@ blockquote {
 	content: none;
 }
 
-@import './getting-started';
-@import './admonition';
-@import './new-styles';
+.main-content {
+  background-color: white;
+}
+
+.btn-primary {
+  border: none;
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 12px 32px;
+  font-size: 16px;
+  letter-spacing: 0.04em;
+  line-height: 21px;
+  height: 48px;
+  min-width: 160px;
+  white-space: nowrap;
+  cursor: pointer;
+  background-color: var(--color-primary);
+  display: inline-block;
+  text-align: center;
+
+  &:hover {
+    color: white;
+    text-decoration: none;
+    background-color: var(--color-primary-hover);
+  }
+
+  @media (max-width: 600px) {
+    font-size: 16px;
+  }
+}
+
+.btn-secondary {
+  border: 1px solid var(--color-450);
+  color: var(--color-220);
+  text-decoration: none;
+  font-weight: 600;
+  padding: 12px 32px;
+  font-size: 16px;
+  letter-spacing: 0.04em;
+  line-height: 21px;
+  height: 48px;
+  min-width: 160px;
+  white-space: nowrap;
+  cursor: pointer;
+  background-color: transparent;
+  display: inline-block;
+  text-align: center;
+
+  &:hover {
+    background-color: var(--color-120);
+    border-color: var(--color-120);
+    text-decoration: none;
+    color: white;
+  }
+
+  @media (max-width: 600px) {
+    font-size: 16px;
+  }
+}
+
+.underline-patch a{
+	text-decoration-color: initial;
+}
+
+@import './navbar';
+@import './search-box';
+@import './overide';
 @import './style-dark';

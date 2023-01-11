@@ -1,0 +1,222 @@
+.community-section {
+  overflow: hidden;
+
+  > div {
+    max-width: 1112px;
+    margin: auto;
+    padding: 56px 0;
+
+    @media (max-width: 600px) {
+      padding: 24px 0;
+     }
+  }
+
+  .info {
+    max-width: 538px;
+    position: relative;
+    z-index: 1;
+
+    @media (max-width: 1130px) {
+     padding: 0 16px;
+    }
+
+    svg {
+      width: 62px;
+      height: 42px;
+      color: var(--color-220);
+      margin-bottom: 16px;
+    }
+
+    h4 {
+      font-size: 40px;
+      line-height: 48px;
+      margin-bottom: 8px;
+
+      @media (max-width: 1130px) {
+        font-size: 32px;
+        line-height: 48px;
+      }
+    }
+
+    p {
+      font-size: 18px;
+      line-height: 28px;
+      margin-bottom: 24px ;
+    }
+  }
+
+  .discord-community {
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+    position: relative;
+    min-height: 562px;
+
+    @media (max-width: 1130px) {
+      flex-direction: column-reverse;
+      text-align: center;
+
+      svg {
+        margin: 0 auto 16px;
+      }
+    }
+
+    .assets {
+      position: absolute;
+      top: 0;
+      left: -174px;
+      width: 814px;
+      height: 562px;
+      background-image: url(/img/home-2023/smoke-light.webp);
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: contain;
+
+      @media (max-width: 1130px) {
+        position: unset;
+        width: 550px;
+        height: 356px;
+        margin: auto;
+        background-position: left 0px center;
+      }
+
+      @media (max-width: 960px) {
+        background-image: url(/img/home-2023/community-poster-light.webp);
+      }
+
+      @media (max-width: 600px) {
+        height: 356px;
+        width: 390px;
+        background-size: 500px;
+        background-position: left -90px center;
+      }
+
+      .sign-video {
+        position: absolute;
+        left: 290px;
+        top: 50px;
+
+        @media (max-width: 1130px) {
+          width: 300px;
+          margin: auto;
+          right: 0;
+          left: 50px;
+        }
+
+        @media (max-width: 960px) {
+          display: none;
+        }
+      }
+
+
+    }
+
+  }
+
+  .game-developer {
+    position: relative;
+    min-height: 480px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+    @media (max-width: 1130px) {
+      flex-direction: column-reverse;
+      align-items: center;
+      text-align: center;
+    }
+
+    .assets {
+      position: absolute;
+      top: 0;
+      right: -130px;
+      width: 814px;
+      height: 480px;
+      background-image: url(/img/home-2023/smoke2-light.webp);
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: contain;
+
+      @media (max-width: 1130px) {
+        position: unset;
+        width: 550px;
+        height: 356px;
+        background-position: left 0px center;
+        margin: auto;
+      }
+
+      @media (max-width: 960px) {
+        background-image: url(/img/home-2023/compass-poster-light.webp);
+      }
+
+      @media (max-width: 600px) {
+        height: 356px;
+        width: 390px;
+        background-size: 500px;
+        background-position: right -60px center;
+      }
+
+      .compass-video {
+        position: absolute;
+        left: 150px;
+        top: 90px;
+
+        @media (max-width: 1130px) {
+          width: 370px;
+          margin: auto;
+          right: 0;
+          left: 60px;
+        }
+
+        @media (max-width: 960px) {
+          display: none;
+        }
+      }
+
+
+    }
+  }
+
+}
+
+html[data-theme=dark] {
+
+  .community-section {
+
+    .info svg {
+      color: white;
+    }
+
+    .discord-community {
+
+      .assets {
+        background-image: url(/img/home-2023/smoke.webp);
+
+        @media (max-width: 960px) {
+          background-image: url(/img/home-2023/community-poster.webp);
+        }
+      }
+
+    }
+
+    .game-developer {
+
+      .assets {
+        background-image: url(/img/home-2023/smoke2.webp);
+
+        @media (max-width: 960px) {
+          background-image: url(/img/home-2023/compass-poster.webp);
+          background-position: right -50px center;
+        }
+
+        @media (max-width: 600px) {
+          background-image: url(/img/home-2023/compass-poster.webp);
+          background-position: right -100px center;
+        }
+
+      }
+    }
+
+  }
+
+}

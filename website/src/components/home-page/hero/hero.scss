@@ -1,0 +1,47 @@
+
+.hero-section {
+  background-image: url(/img/home-2023/hero-bg.webp);
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 72px 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 24px;
+
+  @media (max-width: 600px) {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+
+  h1 {
+    font-size: 60px;
+    line-height: 72px;
+    margin: 0;
+    text-align: center;
+    color: var(--color-headline);
+
+    @media (max-width: 600px) {
+      font-size: 40px;
+      line-height: 60px;
+    }
+  }
+
+  p {
+    font-family: 'Madera';
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 40px;
+    margin: 0;
+    max-width: 676px;
+    text-align: center;
+    color: var(--color-txt);
+
+    @media (max-width: 600px) {
+      font-size: 18px;
+      line-height: 28px;
+    }
+  }
+}
