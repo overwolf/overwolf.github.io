@@ -137,7 +137,11 @@
 
         &.navbar__link--active {
           font-weight: 700;
-          pointer-events: none;
+          color: var(--color-220);
+          // pointer-events: none;
+          &:after {
+            display: none;
+          }
 
           &:before {
             width: 100%;
@@ -261,6 +265,11 @@ html[data-theme=dark] {
           &:before {
             background-color: var(--color-primary);
           }
+
+          &.navbar__link--active {
+            color: var(--color-txt);
+          }
+
         }
 
       }
