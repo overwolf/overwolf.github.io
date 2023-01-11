@@ -65,6 +65,10 @@
           right: -60px;
           max-width: unset;
         }
+
+        @media (max-width: 380px) {
+          right: -65px;
+        }
       }
 
       .symbol {
