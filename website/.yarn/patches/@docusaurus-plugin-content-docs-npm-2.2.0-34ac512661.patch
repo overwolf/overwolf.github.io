@@ -1,0 +1,42 @@
+diff --git a/lib/sidebars/generator.js b/lib/sidebars/generator.js
+index 511277c48aee0349968e6c6d0b3d85dfdc4e3a59..a06ac60a7cfa89f2453269279afa81fcb1125c5a 100644
+--- a/lib/sidebars/generator.js
++++ b/lib/sidebars/generator.js
+@@ -91,7 +91,7 @@ Available doc IDs:
+      */
+     function generateSidebar(fsModel) {
+         function createDocItem(id, fullPath, fileName) {
+-            const { sidebarPosition: position, frontMatter: { sidebar_label: label, sidebar_class_name: className }, } = getDoc(id);
++            const { sidebarPosition: position, frontMatter: { sidebar_label: label, sidebar_class_name: className, sidebar_custom_props: customProps }} = getDoc(id);
+             return {
+                 type: 'doc',
+                 id,
+@@ -101,6 +101,7 @@ Available doc IDs:
+                 // sidebar
+                 ...(label !== undefined && { label }),
+                 ...(className !== undefined && { className }),
++                ...(customProps !== undefined && {customProps})
+             };
+         }
+         function createCategoryItem(dir, fullPath, folderName) {
+diff --git a/src/sidebars/generator.ts b/src/sidebars/generator.ts
+index 7dc6ece7bedca886c23abe46898e441cafe6761e..e1a4df5ba4db268fc9b09bdd0eeab4a054c4243d 100644
+--- a/src/sidebars/generator.ts
++++ b/src/sidebars/generator.ts
+@@ -138,7 +138,7 @@ Available doc IDs:
+     ): WithPosition<SidebarItemDoc> {
+       const {
+         sidebarPosition: position,
+-        frontMatter: {sidebar_label: label, sidebar_class_name: className},
++        frontMatter: {sidebar_label: label, sidebar_class_name: className, sidebar_custom_props: customProps},
+       } = getDoc(id);
+       return {
+         type: 'doc',
+@@ -149,6 +149,7 @@ Available doc IDs:
+         // sidebar
+         ...(label !== undefined && {label}),
+         ...(className !== undefined && {className}),
++        ...(customProps !== undefined && {customProps})
+       };
+     }
+     function createCategoryItem(
