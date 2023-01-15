@@ -1,4 +1,2 @@
 label: '0-1-x'
-customProps:
-  overwolf_platform: true
-  electron_platform: false
+

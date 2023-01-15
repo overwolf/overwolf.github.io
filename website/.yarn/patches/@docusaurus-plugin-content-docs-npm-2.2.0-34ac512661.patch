@@ -1,5 +1,5 @@
 diff --git a/lib/sidebars/generator.js b/lib/sidebars/generator.js
-index 511277c48aee0349968e6c6d0b3d85dfdc4e3a59..a06ac60a7cfa89f2453269279afa81fcb1125c5a 100644
+index 511277c48aee0349968e6c6d0b3d85dfdc4e3a59..ae53276a2c0a68359b43506090d32747b7f8e2af 100644
 --- a/lib/sidebars/generator.js
 +++ b/lib/sidebars/generator.js
 @@ -91,7 +91,7 @@ Available doc IDs:
@@ -19,8 +19,22 @@ index 511277c48aee0349968e6c6d0b3d85dfdc4e3a59..a06ac60a7cfa89f2453269279afa81fc
              };
          }
          function createCategoryItem(dir, fullPath, folderName) {
+@@ -153,7 +154,12 @@ Available doc IDs:
+             // If a doc is linked, remove it from the category subItems
+             const items = allItems.filter((item) => !(item.type === 'doc' && item.id === categoryLinkedDoc?.id));
+             const className = categoryMetadata?.className ?? categoryLinkedDoc?.className;
+-            const customProps = categoryMetadata?.customProps ?? categoryLinkedDoc?.customProps;
++            const customProps = categoryLinkedDoc?.customProps ?? categoryMetadata?.customProps;
++            if(categoryMetadata?.customProps){
++                Object.keys(categoryMetadata.customProps).forEach((key) => {
++                    customProps[key] = categoryMetadata.customProps[key];
++                })
++            }
+             const { filename, numberPrefix } = numberPrefixParser(folderName);
+             return {
+                 type: 'category',
 diff --git a/src/sidebars/generator.ts b/src/sidebars/generator.ts
-index 7dc6ece7bedca886c23abe46898e441cafe6761e..e1a4df5ba4db268fc9b09bdd0eeab4a054c4243d 100644
+index 7dc6ece7bedca886c23abe46898e441cafe6761e..b65a3cdec35b2aeb6171430f31115231e2b93f4c 100644
 --- a/src/sidebars/generator.ts
 +++ b/src/sidebars/generator.ts
 @@ -138,7 +138,7 @@ Available doc IDs:
@@ -40,3 +54,17 @@ index 7dc6ece7bedca886c23abe46898e441cafe6761e..e1a4df5ba4db268fc9b09bdd0eeab4a0
        };
      }
      function createCategoryItem(
+@@ -228,7 +229,12 @@ Available doc IDs:
+       const className =
+         categoryMetadata?.className ?? categoryLinkedDoc?.className;
+       const customProps =
+-        categoryMetadata?.customProps ?? categoryLinkedDoc?.customProps;
++      categoryLinkedDoc?.customProps ?? categoryMetadata?.customProps;
++      if(categoryMetadata?.customProps){
++          Object.keys(categoryMetadata.customProps).forEach((key) => {
++              customProps[key] = categoryMetadata.customProps[key];
++          })
++      }
+       const {filename, numberPrefix} = numberPrefixParser(folderName);
+ 
+       return {

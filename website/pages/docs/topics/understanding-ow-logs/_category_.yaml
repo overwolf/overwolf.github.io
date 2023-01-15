@@ -1,4 +1,2 @@
 label: 'Understanding Overwolf Logs'
-customProps:
-  overwolf_platform: true
-  electron_platform: false
+

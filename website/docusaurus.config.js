@@ -3,6 +3,15 @@
 const sidebarOverrides = require("./hierarchies/sidebaroverrides.json");
 
 const devMode = process.env.NODE_ENV === "development";
+const mandatorySidebarKeys = [
+  "overwolf_platform",
+  "electron_platform"
+]
+
+const defaultMandatorySidebarValues = {
+  overwolf_platform: false,
+  electron_platform: false
+}
 
 // @ts-check
 
@@ -22,54 +31,107 @@ function versionSplitter(version) {
   return [version.split('.').map((number) => parseInt(number)), parseInt(suffix)];
 }
 
+function sumOnAllChildren(value, items, callback) {
+  items.forEach(element => {
+    value = callback(value, element);
+  });
+  return value;
+}
+
 function applyCustomSidebarProps(items) {
   var result = []
-  items.forEach(item => {
-    var customProps = undefined;
-    if (customProps = item["customProps"]) {
-      if(devMode && customProps["debug"]) console.log(item);
+  items.forEach(mainItem => {
+    // ensure we have custom props
+    if (!mainItem["customProps"]) mainItem["customProps"] = {}
+    // run general cleanup logic assuming we already had it (if we just populated it then these would be irrelevant)
+    else {
+      if (mainItem.customProps["debug"]) {
+        if (devMode) console.log(mainItem);
+        else {
+          console.error(`Tried building item with sidebar debug enabled: ${mainItem}`);
+          delete mainItem.customProps["debug"];
+        }
+      }
+      delete mainItem.customProps["placeholder"];
     }
-    if (item.type === "category") {
-      // if (item.items.length === 0 && item.link) result.push(item.link)
-      var mutatedItem = { ...item, items: applyCustomSidebarProps(item.items) };
 
-      if(customProps && customProps.versioned_items) {
-        // if a is a newer version than b, we want to return a negative, otherwise a positive
-        mutatedItem.items.sort((a, b) => {
+    // is this a category?
+    if (mainItem.type === "category") {
+      // this is a relic for taking a sidebar item OUT of a 2 (or more) deep category with just that one item (aka {{item}}), since docusaurus will not render it by default
+      // it's kept here in case this behavior is needed again
+      // if (item.items.length === 0 && item.link) result.push(item.link)
+
+      // apply custom props on all child elements before we continue
+      mainItem = { ...mainItem, items: applyCustomSidebarProps(mainItem.items) };
+
+      // ensure all mandatory sidebar flags are summed from the children (ie. relevant platforms)
+      mandatorySidebarKeys.forEach(
+        (field) => mainItem.customProps[field] = sumOnAllChildren(
+          defaultMandatorySidebarValues[field],
+          mainItem.items,
+          (value, item) => value || item.customProps[field]
+        )
+      )
+
+      /**
+       * apply version-based item sorting on the page ids. it works based on the following:
+       * (v)?a.b.c.[...]-z
+       * in more words - first it removes the leading v (if it exists) from the version id
+       * then, it splits all items between the dots (major.minor.patch.etc), and sorts from major down
+       * if all of those match, then the version is checked based on a suffix (added as -suffix to the end of the version)
+       */
+      if(mainItem.customProps?.versioned_items) {
+        // if `a` is a newer version than `b`, we want to return a negative, otherwise a positive
+        mainItem.items.sort((a, b) => {
           const [splitA, suffixA] = versionSplitter(a.id);
           const [splitB, suffixB] = versionSplitter(b.id);
           const larger = Math.max(splitA.length, splitB.length)
           for (var i = 0; i < larger; i++) {
-            if (splitA[i] === undefined) return 1;
-            if (splitB[i] === undefined) return -1;
+            if (splitA[i] === undefined || isNaN(splitA[i])) return 1;
+            if (splitB[i] === undefined || isNaN(splitB[i])) return -1;
             if (splitA[i] !== splitB[i]) return splitB[i] - splitA[i];
           }
           if (isNaN(suffixA)) return 1;
           if (isNaN(suffixB)) return -1;
           if (suffixA !== suffixB) return suffixB - suffixA;
         })
-        
       }
 
-      if (customProps && customProps.reverse_items) {
-        mutatedItem.items = mutatedItem.items.reverse();
+      // apply reversing-based item sorting
+      if (mainItem.customProps?.reverse_items) {
+        mainItem.items = mainItem.items.reverse();
       }
-      if(customProps && customProps.maximum_items) {
-        if(!customProps.maximum_items.count) console.error(`Category Maximum Items \`count\` cannot be ${categoryCustoms.maximum_items.count} in item: ${{...mutatedItem, items: "Ommitted"}}`)
-        const newItems = mutatedItem.items.slice(0, customProps.maximum_items.count);
-        const oldItems = mutatedItem.items.slice(customProps.maximum_items.count, undefined);
-        const label = customProps.maximum_items.remaining_label ? customProps.maximum_items.remaining_label : `Old ${mutatedItem.label}`;
-        const oldersItem = { ...mutatedItem, items: oldItems, label};
-        mutatedItem.items = newItems;
-        mutatedItem.items.push(oldersItem);
+
+      // apply a "maximum items" filter, creating a "fake" sidebar item for "viewing more" items (aka "only show the first 20 items in the main sidebar, and show the rest under 'see more'")
+      if(mainItem.customProps?.maximum_items) {
+        if(!mainItem.customProps.maximum_items.count) console.error(`Category Maximum Items \`count\` cannot be ${categoryCustoms.maximum_items.count} in item: ${{...mainItem, items: `Ommitted ${mainItem.items.length} items`}}`)
+        const newItems = mainItem.items.slice(0, mainItem.customProps.maximum_items.count);
+        const oldItems = mainItem.items.slice(mainItem.customProps.maximum_items.count, undefined);
+        const label = mainItem.customProps.maximum_items.remaining_label ? mainItem.customProps.maximum_items.remaining_label : `Old ${mainItem.label}`;
+        const oldersItem = { ...mainItem, items: oldItems, label};
+        mainItem.items = newItems;
+        mainItem.items.push(oldersItem);
       }
-      if (customProps && customProps.skip_layout) {
-        mutatedItem.items.forEach((item) => result.push(item))
-      } else {
-        result.push(mutatedItem);
+
+      // apply layout skipping (aka flattening the item's items into its parent)
+      if (mainItem.customProps?.skip_layout) {
+        mainItem.items.forEach((childItem) => result.push(childItem))
       }
-    } else {
-      result.push(item);
+      // if flattening wasn't applied, apply the item itself into its parent
+      else {
+        result.push(mainItem);
+      }
+    }
+    // is this not a category?
+    else {
+      // apply the item as is
+      result.push(mainItem);
+    }
+
+    // run final custom props validation
+    if((!mainItem.customProps && mandatorySidebarKeys.length > 0) || (mainItem.customProps && mandatorySidebarKeys.filter((value) => mainItem.customProps[value] === undefined).length > 0)) {
+      console.log(`The following sidebar item is missing one of the ${mandatorySidebarKeys} keys:`);
+      console.error(mainItem);
     }
   })
   return result;

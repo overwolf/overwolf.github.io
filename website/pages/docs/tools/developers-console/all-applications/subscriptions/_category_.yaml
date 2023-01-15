@@ -1,3 +1,2 @@
 customProps:
-  overwolf_platform: true
-  electron_platform: false
+  placeholder: true # remove this when this file has properties, it's here to avoid validation errors
