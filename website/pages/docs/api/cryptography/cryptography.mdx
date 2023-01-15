@@ -52,7 +52,7 @@ callback  | [(Result:DecryptedDataResult)](#decrypteddataresult-object) => void 
 #### Usage Example
 
 ```javascript
-overwolf.cryptography.decryptForCurrentUser(<paste hashed string here>,console.log)
+overwolf.cryptography.decryptForCurrentUser(`${paste hashed string here}`,console.log)
 ```
 
 ## EncryptedDataResult Object
@@ -76,7 +76,7 @@ ciphertext         | string                                                 | Th
 #### Example data: Failure
 
 ```json
-{"plaintext": null, "success": false, "error": "Failed to encrypt"}
+{"ciphertext": null, "success": false, "error": "Failed to encrypt"}
 ```
 
 ## DecryptedDataResult Object
