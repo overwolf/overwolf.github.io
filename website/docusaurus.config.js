@@ -4,40 +4,44 @@ const sidebarOverrides = require("./hierarchies/sidebaroverrides.json");
 
 // @ts-check
 
-function classNamer(curName, customProps){
+function classNamer(curName, customProps) {
   var result = []
-  if(curName) result.push(curName);
-  if(customProps.overwolf_platform) result.push("platform")
-  if(customProps.electron_platform) result.push("electron")
+  if (curName) result.push(curName);
+  if (customProps.overwolf_platform) result.push("platform")
+  if (customProps.electron_platform) result.push("electron")
   return result.join(" ");
 }
 
 function applyCustomSidebarProps(items) {
   var result = []
   items.forEach(item => {
-    var hideLayout = false;
-    var reverse = false;
     var customProps = undefined;
-    if(customProps = propExists(item, "customProps")){
-      hideLayout = propExists(customProps, "skip_layout");
-      reverse = propExists(customProps, "reverse_items");
-      // var className = classNamer(item.customProps)
-      // if(className != "")
-      // {
-      //   if(item.className) className = `${item.className} ${className}`
-      //   item.className = className;
-      // }
+    if (customProps = item["customProps"]) {
     }
     if (item.type === "category") {
       // if (item.items.length === 0 && item.link) result.push(item.link)
-      if (hideLayout) {
-        applyCustomSidebarProps(item.items).forEach((item) => result.push(item))
-      } else {
-        var mutatedItem = { ...item, items: applyCustomSidebarProps(item.items) };
-        if(reverse) mutatedItem.items = mutatedItem.items.reverse();
-        result.push(mutatedItem)
+      var mutatedItem = { ...item, items: applyCustomSidebarProps(item.items) };
+
+      if (customProps && customProps.reverse_items) {
+        mutatedItem.items = mutatedItem.items.reverse();
       }
-    } else result.push(item)
+      if(customProps && customProps.maximum_items) {
+        if(!customProps.maximum_items.count) console.error(`Category Maximum Items \`count\` cannot be ${categoryCustoms.maximum_items.count} in item: ${{...mutatedItem, items: "Ommitted"}}`)
+        const newItems = mutatedItem.items.slice(0, customProps.maximum_items.count);
+        const oldItems = mutatedItem.items.slice(customProps.maximum_items.count, undefined);
+        const label = customProps.maximum_items.remaining_label ? customProps.maximum_items.remaining_label : `Old ${mutatedItem.label}`;
+        var oldersItem = { ...mutatedItem, items: oldItems, label};
+        mutatedItem.items = newItems;
+        mutatedItem.items.push(oldersItem);
+      }
+      if (customProps && customProps.skip_layout) {
+        mutatedItem.items.forEach((item) => result.push(item))
+      } else {
+        result.push(mutatedItem);
+      }
+    } else {
+      result.push(item);
+    }
   })
   return result;
 }
@@ -45,10 +49,6 @@ function applyCustomSidebarProps(items) {
 async function sidebarsOverrides({ defaultSidebarItemsGenerator, ...args }) {
   let items = await defaultSidebarItemsGenerator(args);
   return applyCustomSidebarProps(items);
-}
-
-function propExists(object, prop) {
-  return object.hasOwnProperty(prop) ? object[prop] : undefined
 }
 
 const codeComponentTagger = require("./src/plugins/tagging/codeComponentTagger.js").default;

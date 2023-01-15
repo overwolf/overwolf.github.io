@@ -1,6 +1,6 @@
-position: -2022
+position: 2022
 label: '2022'
 customProps:
-  reverse_items: true
+  skip_layout: true
   overwolf_platform: true
   electron_platform: false
