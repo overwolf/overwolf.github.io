@@ -491,14 +491,13 @@ Data Example:
 
 Event        | Event Data                        | Fired When   | Notes              | Since GEP Ver. |
 -------------| ----------------------------------| ----------------------------- | ------------------ | --------------|
-kill | victimName   | Local player killed another player. `{"victimName": "6ewehrw0lf"}` |                    |     130.0      | 
-knockdown | victimName  | Local player knocked out another player. `{"victimName":"J0GUR7"}` |                    |    130.0      | 
-assist | victimName  | Local player participated in a team member’s kill.<br></br><br></br>Provided values:<br></br>1. victimName<br></br>2. type - knockdown / elimination<br></br><br></br>Example:<br></br><br></br>`{"victimName":"VioletAlbicocca","type":"knockdown"}` |                    |    130.0      | 
+kill | victimName   | Local player killed another player. |                    |     130.0      | 
+knockdown | victimName  | Local player knocked out another player.|                    |    130.0      | 
+assist | victimName  | Local player participated in a team member’s kill. |                    |    130.0      | 
 
 #### *kill* note
 
-* Currently performing an execution does not catch a kill event. If you want to correctly count the amount of kills despite this issue, please use the new `tabs` key in the match_info feature.
-* Furthermore, assist in a `knockdown` event currently is not supported, only for `elimination`.
+The data includes the victim name as parameter 
 
 Data Example:
 
@@ -508,6 +507,8 @@ Data Example:
 
 #### *knockdown* note
 
+The data includes the victim name as parameter 
+
 Data Example:
 
 ```json
@@ -515,6 +516,10 @@ Data Example:
 ```
 
 #### *assist* note
+
+The data include values: 
+1. The vcictime name as victimName
+2. Assist type as type elimination
 
 Data Example:
 
