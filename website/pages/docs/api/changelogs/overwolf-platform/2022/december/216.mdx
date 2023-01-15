@@ -1,0 +1,20 @@
+---
+id: 216
+image: "/img/embed/changelogs.jpg"
+title: "Version 0.216"
+sidebar_label: "0.216"
+sidebar_custom_props:
+  overwolf_platform: true
+  electron_platform: false
+---
+
+### Documentation
+Documentation changelogs have been moved to their own [feed](/api/changelogs/documentation/2023)!
+
+### Platform
+- [`overwolf.games.launchers.onUpdated`](/api/games/launchers#onupdatedcallback) now detects when the League of Legends launcher is minimized,
+and will update its position to be -32,000 on both axes. Also applies to [`overwolf.games.launchers.getRunningLaunchersInfo()`](/api/games/launchers#getrunninglaunchersinfocallback).
+
+### Bug Fixes
+- Fixed an issue on windows 11, where focusing a game with overlay enabled could block other windows from being focused.
+- Custom app hotkeys will no longer be blocked when the app is not open.

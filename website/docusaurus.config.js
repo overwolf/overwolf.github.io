@@ -2,6 +2,8 @@
 
 const sidebarOverrides = require("./hierarchies/sidebaroverrides.json");
 
+const devMode = process.env.NODE_ENV === "development";
+
 // @ts-check
 
 function classNamer(curName, customProps) {
@@ -12,15 +14,42 @@ function classNamer(curName, customProps) {
   return result.join(" ");
 }
 
+function versionSplitter(version) {
+  var suffix;
+  version = version.split("/").pop()
+  if (version.startsWith('v')) version = version.substring(1, undefined);
+  [version, suffix] = version.split("-");
+  return [version.split('.').map((number) => parseInt(number)), parseInt(suffix)];
+}
+
 function applyCustomSidebarProps(items) {
   var result = []
   items.forEach(item => {
     var customProps = undefined;
     if (customProps = item["customProps"]) {
+      if(devMode && customProps["debug"]) console.log(item);
     }
     if (item.type === "category") {
       // if (item.items.length === 0 && item.link) result.push(item.link)
       var mutatedItem = { ...item, items: applyCustomSidebarProps(item.items) };
+
+      if(customProps && customProps.versioned_items) {
+        // if a is a newer version than b, we want to return a negative, otherwise a positive
+        mutatedItem.items.sort((a, b) => {
+          const [splitA, suffixA] = versionSplitter(a.id);
+          const [splitB, suffixB] = versionSplitter(b.id);
+          const larger = Math.max(splitA.length, splitB.length)
+          for (var i = 0; i < larger; i++) {
+            if (splitA[i] === undefined) return 1;
+            if (splitB[i] === undefined) return -1;
+            if (splitA[i] !== splitB[i]) return splitB[i] - splitA[i];
+          }
+          if (isNaN(suffixA)) return 1;
+          if (isNaN(suffixB)) return -1;
+          if (suffixA !== suffixB) return suffixB - suffixA;
+        })
+        
+      }
 
       if (customProps && customProps.reverse_items) {
         mutatedItem.items = mutatedItem.items.reverse();
@@ -30,7 +59,7 @@ function applyCustomSidebarProps(items) {
         const newItems = mutatedItem.items.slice(0, customProps.maximum_items.count);
         const oldItems = mutatedItem.items.slice(customProps.maximum_items.count, undefined);
         const label = customProps.maximum_items.remaining_label ? customProps.maximum_items.remaining_label : `Old ${mutatedItem.label}`;
-        var oldersItem = { ...mutatedItem, items: oldItems, label};
+        const oldersItem = { ...mutatedItem, items: oldItems, label};
         mutatedItem.items = newItems;
         mutatedItem.items.push(oldersItem);
       }
@@ -55,8 +84,6 @@ const codeComponentTagger = require("./src/plugins/tagging/codeComponentTagger.j
 
 /** @type {import('@docusaurus/types').Config} */
 async function config() {
-  let devMode = process.env.NODE_ENV === "development";
-
   return {
     title: "Overwolf",
     tagline: "Easily create apps for PC games on the Overwolf framework",
