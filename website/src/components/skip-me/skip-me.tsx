@@ -1,19 +1,21 @@
-import React, { Children } from 'react';
+import React from 'react';
 import * as ReactDOMServer from 'react-dom/server';
 
 
-function SkipMe(props) {
+function SkipMe(props: { children: any; }) {
  const { children } = props;
-
+ const devMode = process.env.NODE_ENV === "development";
  const markup = ReactDOMServer.renderToStaticMarkup(children);
 
 // ---------------------------------------------------------------------------
 
   return (
-    <div dangerouslySetInnerHTML={{ __html: 
+    devMode
+    ? <div dangerouslySetInnerHTML={{ __html: 
       `<!-- hidden by Skippy
         ${markup} 
       -->` }} />
+    : <div/>
   );
 
 }
