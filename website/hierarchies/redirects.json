@@ -1206,5 +1206,9 @@
   {
     "to": "/tools/ow-electron/overwolf-ad-view",
     "from": "/internal/tools/ow-electron/overwolf-ad-view"
+  },
+  {
+    "to": "/api/changelogs/electron-platform/ow-electron/v19.1.8",
+    "from": "/api/changelogs/electron-platform/v19.x"
   }
 ]

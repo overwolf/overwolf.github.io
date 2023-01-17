@@ -13,6 +13,21 @@ const defaultMandatorySidebarValues = {
   electron_platform: false
 }
 
+const months = {
+  january: 1,
+  february: 2,
+  march: 3,
+  april: 4,
+  may: 5,
+  june: 6,
+  july: 7,
+  august: 8,
+  september: 9,
+  october: 10,
+  november: 11,
+  december: 12
+}
+
 // @ts-check
 
 function classNamer(curName, customProps) {
@@ -25,10 +40,24 @@ function classNamer(curName, customProps) {
 
 function versionSplitter(version) {
   var suffix;
-  version = version.split("/").pop()
+  version = fileId(version)
   if (version.startsWith('v')) version = version.substring(1, undefined);
   [version, suffix] = version.split("-");
   return [version.split('.').map((number) => parseInt(number)), parseInt(suffix)];
+}
+
+function monthNumberer(version, months_top) {
+  let newVersion = months[fileId(version)];
+  if(newVersion === undefined){
+    if(months_top) newVersion = -1;
+    else throw new Error(`Page id is not a month! ${version}`)
+  }
+  else if(months_top) throw new Error(`Page has \`months_top\` enabled while having a valid month id! ${version}`)
+  return newVersion;
+}
+
+function fileId(id) {
+  return id.split("/").pop()
 }
 
 function sumOnAllChildren(value, items, callback) {
@@ -48,7 +77,7 @@ function applyCustomSidebarProps(items) {
       if (mainItem.customProps["debug"]) {
         if (devMode) console.log(mainItem);
         else {
-          console.error(`Tried building item with sidebar debug enabled: ${mainItem}`);
+          console.error(`Tried building item with sidebar debug enabled for: ${mainItem}`);
           delete mainItem.customProps["debug"];
         }
       }
@@ -97,6 +126,20 @@ function applyCustomSidebarProps(items) {
         })
       }
 
+      /**
+       * apply month-based item sorting on the page ids. it works by simply matching the ids with the list:
+       * january, february, march, april, may, june, july, august, septbemer, october, november, december
+       * if any of the ids supplied is not in this list, and does not have the `months_top` flag checked, an error will be thrown
+       */
+
+      if(mainItem.customProps?.monthly_items){
+        // if `a` is a more recent month than `b`, we want to return a negative, otherwise a positive
+        mainItem.items.sort((a, b) => 
+          monthNumberer(b.id, b?.customProps?.months_top ?? false) -
+          monthNumberer(a.id, a?.customProps?.months_top ?? false)
+        )
+      }
+
       // apply reversing-based item sorting
       if (mainItem.customProps?.reverse_items) {
         mainItem.items = mainItem.items.reverse();
@@ -130,8 +173,8 @@ function applyCustomSidebarProps(items) {
 
     // run final custom props validation
     if((!mainItem.customProps && mandatorySidebarKeys.length > 0) || (mainItem.customProps && mandatorySidebarKeys.filter((value) => mainItem.customProps[value] === undefined).length > 0)) {
-      console.log(`The following sidebar item is missing one of the ${mandatorySidebarKeys} keys:`);
-      console.error(mainItem);
+      if(devMode) console.error(`The following sidebar item is missing one of the ${mandatorySidebarKeys} keys: ${JSON.stringify({...mainItem, items: mainItem?.items?.length}, undefined, 4)}`);
+      else throw new Error(`The following sidebar item is missing one of the ${mandatorySidebarKeys} keys: ${JSON.stringify({...mainItem, items: mainItem?.items?.length}, undefined, 4)}`);
     }
   })
   return result;

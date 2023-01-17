@@ -1,12 +1,21 @@
 ---
-id: v19.x
+id: v19.1.8
 image: "/img/embed/changelogs.jpg"
-title: "19.x"
-sidebar_position: 19
+title: "Version 19.1.8"
 sidebar_custom_props:
   overwolf_platform: false
   electron_platform: true
 ---
+
+## Platform
+
+- Updated the underlying [electron](https://npmjs.com/package/electron) to version `19.1.8`.
+- Overwolf APIs are now mapped in the `electron.d.ts` file.
+
+## Sub-Version Summary
+
+- [`19.1.8`](https://www.npmjs.com/package/@overwolf/ow-electron/v/19.1.8) - Initial version
+- [`19.1.8-1`](https://www.npmjs.com/package/@overwolf/ow-electron/v/19.1.8-1) - Internal optimizations
 
 ## API
 
@@ -16,7 +25,3 @@ sidebar_custom_props:
   - Checks whether or not the local user must accept the [CMP](/tools/ow-electron/consent-management-platform) in order to use the app.
 - New API - [`app.overwolf.openCMPWindow()`](/api/electron/consent-management-platform):
   - Opens the [CMP settings window](/tools/ow-electron/consent-management-platform) for the user, allowing them to customize their consent settings.
-
-## Platform
-
-- Overwolf APIs are now mapped in the `electron.d.ts` file.
