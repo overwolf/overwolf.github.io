@@ -24,6 +24,6 @@
     "skipLibCheck": true
   },
   "include": ["src/**/*"],
-  "exclude": ["src/**/*.js", "src/**/*.jsx"],
+  "exclude": ["src/**/*.js", "src/**/*.jsx", "src/**/*.tsx"],
   "extends": "@tsconfig/docusaurus/tsconfig.json"
 }
