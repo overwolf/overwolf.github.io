@@ -148,7 +148,7 @@ const GamesMetaData = {
     },
     "10906": {
         "id": 10906,
-        "name": "PlayerUnkown's Battlegrounds",
+        "name": "PlayerUnknown's Battlegrounds",
         "path": "/status/player-unknowns-battlegrounds",
         "docs": "/api/games/events/player-unknowns-battlegrounds",
         "iconUrl": "/img/games-logos/player-unknowns-battlegrounds.png",
