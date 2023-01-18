@@ -1,0 +1,23 @@
+{
+  "name": "developers-site",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/overwolf/developers-site.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/overwolf/overwolf.github.io/issues"
+  },
+  "homepage": "https://github.com/overwolf/overwolf.github.io#readme",
+  "dependencies": {
+    "remarkable-admonitions": "^0.2.1"
+  },
+  "type": "commonjs"
+}
