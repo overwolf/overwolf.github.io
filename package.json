@@ -4,7 +4,22 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "generate": "yarn generate:content && yarn generate:plugins",
+    "generate:content": "cd scripts && node generate.js",
+    "generate:plugins": "cd website && tsc",
+    "docusaurus": "yarn workspace website docusaurus",
+    "validate": "cd scripts && node validators/automatic/empty-temp-redirects.js && node validators/automatic/empty-temp-redirects.js",
+    "prestart": "yarn generate",
+    "start": "yarn workspace website start",
+    "prebuild": "yarn generate",
+    "build": "yarn workspace website docusaurus build",
+    "swizzle": "yarn workspace website docusaurus swizzle",
+    "predeploy": "yarn generate",
+    "deploy": "yarn workspace website docusaurus deploy",
+    "clear": "cd scripts && node clear.js && yarn workspace website docusaurus clear",
+    "serve": "yarn workspace website docusaurus serve",
+    "write-translations": "docusaurus write-translations",
+    "write-heading-ids": "docusaurus write-heading-ids"
   },
   "repository": {
     "type": "git",

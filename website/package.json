@@ -3,20 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "generate": "cd ../scripts && node generate.js && cd ../website && tsc",
-    "docusaurus": "docusaurus",
-    "validate": "cd ../scripts && node validators/automatic/empty-temp-redirects.js && node validators/automatic/empty-temp-redirects.js",
-    "prestart": "yarn generate",
-    "start": "docusaurus start",
-    "prebuild": "yarn generate",
-    "build": "docusaurus build",
-    "swizzle": "docusaurus swizzle",
-    "predeploy": "yarn generate",
-    "deploy": "docusaurus deploy",
-    "clear": "cd ../scripts && node clear.js && cd ../website && docusaurus clear",
-    "serve": "docusaurus serve",
-    "write-translations": "docusaurus write-translations",
-    "write-heading-ids": "docusaurus write-heading-ids"
+    "docusaurus": "docusaurus"
   },
   "dependencies": {
     "@docusaurus/core": "^2.1.0",
