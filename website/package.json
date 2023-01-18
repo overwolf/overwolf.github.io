@@ -52,9 +52,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "packageManager": "yarn@3.2.4",
-  "resolutions": {
-    "@docusaurus/plugin-content-docs@2.2.0": "patch:@docusaurus/plugin-content-docs@npm%3A2.2.0#./.yarn/patches/@docusaurus-plugin-content-docs-npm-2.2.0-34ac512661.patch"
   }
 }
