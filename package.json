@@ -10,6 +10,10 @@
     "type": "git",
     "url": "git+https://github.com/overwolf/developers-site.git"
   },
+  "workspaces" : [
+    "website"
+  ],
+  "private": true,
   "author": "",
   "license": "ISC",
   "bugs": {
