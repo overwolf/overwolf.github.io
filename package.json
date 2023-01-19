@@ -9,7 +9,7 @@
     "generate:plugins": "yarn workspace website tsc",
     "docusaurus": "yarn workspace website docusaurus",
     "validate": "cd scripts && node validators/automatic/empty-temp-redirects.js && node validators/automatic/empty-temp-redirects.js",
-    "start": "yarn generate && yarn workspace website start",
+    "start": "yarn generate && yarn workspace website docusaurus start",
     "build": "yarn workspace website docusaurus build",
     "swizzle": "yarn workspace website docusaurus swizzle",
     "deploy": "yarn generate && yarn workspace website docusaurus deploy",
