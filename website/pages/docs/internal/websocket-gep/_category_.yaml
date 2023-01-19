@@ -1,4 +1,2 @@
 label: 'Websocket GEP'
-customProps:
-  overwolf_platform: true
-  electron_platform: false
+

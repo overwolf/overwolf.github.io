@@ -1,0 +1,70 @@
+diff --git a/lib/sidebars/generator.js b/lib/sidebars/generator.js
+index 511277c48aee0349968e6c6d0b3d85dfdc4e3a59..ae53276a2c0a68359b43506090d32747b7f8e2af 100644
+--- a/lib/sidebars/generator.js
++++ b/lib/sidebars/generator.js
+@@ -91,7 +91,7 @@ Available doc IDs:
+      */
+     function generateSidebar(fsModel) {
+         function createDocItem(id, fullPath, fileName) {
+-            const { sidebarPosition: position, frontMatter: { sidebar_label: label, sidebar_class_name: className }, } = getDoc(id);
++            const { sidebarPosition: position, frontMatter: { sidebar_label: label, sidebar_class_name: className, sidebar_custom_props: customProps }} = getDoc(id);
+             return {
+                 type: 'doc',
+                 id,
+@@ -101,6 +101,7 @@ Available doc IDs:
+                 // sidebar
+                 ...(label !== undefined && { label }),
+                 ...(className !== undefined && { className }),
++                ...(customProps !== undefined && {customProps})
+             };
+         }
+         function createCategoryItem(dir, fullPath, folderName) {
+@@ -153,7 +154,12 @@ Available doc IDs:
+             // If a doc is linked, remove it from the category subItems
+             const items = allItems.filter((item) => !(item.type === 'doc' && item.id === categoryLinkedDoc?.id));
+             const className = categoryMetadata?.className ?? categoryLinkedDoc?.className;
+-            const customProps = categoryMetadata?.customProps ?? categoryLinkedDoc?.customProps;
++            const customProps = categoryLinkedDoc?.customProps ?? categoryMetadata?.customProps;
++            if(categoryMetadata?.customProps){
++                Object.keys(categoryMetadata.customProps).forEach((key) => {
++                    customProps[key] = categoryMetadata.customProps[key];
++                })
++            }
+             const { filename, numberPrefix } = numberPrefixParser(folderName);
+             return {
+                 type: 'category',
+diff --git a/src/sidebars/generator.ts b/src/sidebars/generator.ts
+index 7dc6ece7bedca886c23abe46898e441cafe6761e..b65a3cdec35b2aeb6171430f31115231e2b93f4c 100644
+--- a/src/sidebars/generator.ts
++++ b/src/sidebars/generator.ts
+@@ -138,7 +138,7 @@ Available doc IDs:
+     ): WithPosition<SidebarItemDoc> {
+       const {
+         sidebarPosition: position,
+-        frontMatter: {sidebar_label: label, sidebar_class_name: className},
++        frontMatter: {sidebar_label: label, sidebar_class_name: className, sidebar_custom_props: customProps},
+       } = getDoc(id);
+       return {
+         type: 'doc',
+@@ -149,6 +149,7 @@ Available doc IDs:
+         // sidebar
+         ...(label !== undefined && {label}),
+         ...(className !== undefined && {className}),
++        ...(customProps !== undefined && {customProps})
+       };
+     }
+     function createCategoryItem(
+@@ -228,7 +229,12 @@ Available doc IDs:
+       const className =
+         categoryMetadata?.className ?? categoryLinkedDoc?.className;
+       const customProps =
+-        categoryMetadata?.customProps ?? categoryLinkedDoc?.customProps;
++      categoryLinkedDoc?.customProps ?? categoryMetadata?.customProps;
++      if(categoryMetadata?.customProps){
++          Object.keys(categoryMetadata.customProps).forEach((key) => {
++              customProps[key] = categoryMetadata.customProps[key];
++          })
++      }
+       const {filename, numberPrefix} = numberPrefixParser(folderName);
+ 
+       return {

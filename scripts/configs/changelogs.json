@@ -2,7 +2,7 @@
     "latest": {
         "date": "december 2022",
         "path": "2022/december",
-        "name": "215"
+        "name": "216"
     },
     "dev": {
         "date": "december 2022",
@@ -11,7 +11,17 @@
     },
     "ow-electron": {
         "date": "december 2022",
-        "path": "v19.x",
+        "path": "v19.1.8",
         "name": "19.1.8-1"
+    },
+    "ow-electron-builder": {
+        "date": "january 2023",
+        "path": "v23.6.0",
+        "name": "23.6.0"
+    },
+    "docs": {
+        "date": "january 10th 2023",
+        "path": "2023/january#januray-10th-2023---new-ads-sdk",
+        "name": "New ADS SDK"
     }
 }

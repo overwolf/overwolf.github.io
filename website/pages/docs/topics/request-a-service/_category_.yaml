@@ -1,4 +1,2 @@
 label: 'Request A Service'
-customProps:
-  overwolf_platform: true
-  electron_platform: false
+

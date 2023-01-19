@@ -14,3 +14,5 @@ website/.yarnrc.yml
 website/yarn.lock
 yarn.lock
 website/pages/docs/api/changelogs/changelogs.mdx
+.yarn/cache
+.yarn/install-state.gz
