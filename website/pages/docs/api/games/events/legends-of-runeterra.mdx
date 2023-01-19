@@ -28,6 +28,7 @@ If you have further requests for events that you require please contact us at de
 ## Available Features
 
 * [game_client_data](#game_client_data)
+* [match_info](#match_info)
 
 ## `game_client_data`
 
@@ -88,4 +89,30 @@ Data Example:
 
 ```json
 {"GameID":2,"LocalPlayerWon":false}"}
+```
+
+## `match_info`
+
+### Events
+
+Event      | Event Data  | Fired When          | Notes              | Since GEP Ver. |
+-----------| ------------| ------------------- | ------------------ | --------------|
+match_start |null|When a match started. |See [notes](#match_start-note)         |     218.0      | 
+match_end |null|When a match ended. | See [notes](#match_end-note)        |     218.0      | 
+
+
+#### *match_start* note
+
+Data Example:
+
+```json
+{"events":[{"name":"match_start","data":""}]}
+```
+
+#### *match_end* note
+
+Data Example:
+
+```json
+{"events":[{"name":"match_end","data":""}]}
 ```
