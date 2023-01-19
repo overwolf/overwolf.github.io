@@ -60,10 +60,10 @@ Data Example:
 
 Event      | Event Data  | Fired When          | Notes              | Since GEP Ver. |
 -----------| ------------| ------------------- | ------------------ | --------------|
-kill       |See [notes](#kill-note)| A tank was destroyed |         |     47.0      | 
-one_shot_kill|See [notes](#one_shot_kill-note)| The player’s tank destroyed another tank with a single shot and no ally assistance  |       |     47.0      | 
-damage     |See [notes](#damage-note)| The player’s tank damaged another tank |       |     47.0      | 
-assist     |See [notes](#assist-note)| The player’s tank assisted in destroying another tank |       |     47.0      | 
+kill       |Enemy team| A tank was destroyed |See [notes](#kill-note)         |     47.0      | 
+one_shot_kill|Enemy team| The player’s tank destroyed another tank with a single shot and no ally assistance  | See [notes](#one_shot_kill-note)      |     47.0      | 
+damage     |Enemy team and damage| The player’s tank damaged another tank |See [notes](#damage-note)      |     47.0      | 
+assist     |Enemy team| The player’s tank assisted in destroying another tank |See [notes](#assist-note)       |     47.0      | 
 
 #### *kill* note
 
@@ -112,7 +112,7 @@ true if the event refers to an enemy unit, false if the event refers to an ally 
 Event      | Event Data           | Fired When                      | Notes              | Since GEP Ver. |
 -----------| ---------------------| ------------------------------- | ------------------ | ---------------|
 death      | null                 | The player’s tank was destroyed |                    |     47.0       | 
-hit	       |See [notes](#hit-note)| The player’s tank was damaged   |                    |     47.0       | 
+hit	       |Enemy type and damage| The player’s tank was damaged   |  See [notes](#hit-note) |     47.0       | 
 
 #### *hit* note
 
@@ -176,7 +176,9 @@ Data example
 
 Event      | Event Data  | Fired When          | Notes              | Since GEP Ver. |
 -----------| ------------| ------------------- | ------------------ | --------------|
-match_outcome |victory/defeat|When local player wins/loses.See [notes](#match_outcome-note) |         |     137.0      | 
+match_outcome |victory/defeat|When local player wins/loses. |See [notes](#match_outcome-note)         |     137.0      | 
+match_start |null|When a match started. |See [notes](#match_start-note)         |     218.0      | 
+match_end |null|When a match ended. | See [notes](#match_end-note)        |     218.0      | 
 
 #### *pseudo_match_id* note
 
@@ -193,4 +195,20 @@ Data Example:
 ```json
 {"events":[{"name":"match_outcome","data":"defeat"}]}
 {"events":[{"name":"match_outcome","data":"victory"}]}
+```
+
+#### *match_start* note
+
+Data Example:
+
+```json
+{"events":[{"name":"match_start","data":""}]}
+```
+
+#### *match_end* note
+
+Data Example:
+
+```json
+{"events":[{"name":"match_end","data":""}]}
 ```
