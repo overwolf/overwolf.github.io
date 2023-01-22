@@ -8,16 +8,6 @@ The Overwolf Advertising library uses Overwolf APIs to improve ad targeting for 
    "permissions": ["Extensions", "Streaming", "Profile", "GameInfo"]
 ```
 
-#### Enabling Google’s syndication
-
-In order to get impression tracking to work, you will also need to enable a work-around that allows requests to Google’s syndication servers. This is done using the [`protocol_override_domains`](/api/manifest#protocol_override_domains) property:
- 
-```json
-   "data": {    
-      "protocol_override_domains" : {"googlesyndication" : "https"}
-   }
-```
-
 #### Ad isolation manifest flags
 
 The following [App Window Data](/api/manifest#extension_window_data-object) flags should be set to `true` for every window displaying Ads:
