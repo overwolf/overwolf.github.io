@@ -379,24 +379,28 @@ Note that The flag only affects external processes running, not ones that intera
 **Defaults to the app's `name` if it is not defined!**
 
 ## GameTargeting object
-An app can declare itself as targeted to one or more games (or to all supported games).
+In order for an app to show in-game windows, it must declare its target games. This can be one of three options:
+- `none` - No games
+- `dedicated` - One or more games
+- `all` - All supported games
 
 | Name     | Type   |  Description   | Since |
 |----------|---------------------------------|  ------------------------------------------------------------------- |------ |
-| type     | string |  "all" – All games (e.g voice communication apps).<br/>"dedicated" – Dedicated to a game or several games.<br/> "none" – No games. | 0.78  |
-| game_ids | [game_ids[]](#game_ids-array) |    The game IDs that your app targeted and permitted to display in-game overlay windows on them. | 0.78  |
+| type     | string | Targeting type | 0.78  |
+| game_ids | int[]  | If you chose `dedicated` - The list of games (by game id) that your app can show in-game overlay windows in. | 0.78  |
 
 Example code:
 
 ```json
 "game_targeting": {
-    "type": "all" / "none" / "dedicated",
-    "game_ids": [5426, 7764]  // only if type === "dedicated", wildcard not supported
+    "type": "dedicated",
+    "game_ids": [5426, 7764]  // only if type === "dedicated", wildcard (*) is not supported
 }
 ```
 
 :::important
-In addition to this flag, don't forget to also set the [game_events](#game_events-array) array, which defines from which games it can consume real-time game events.
+- If your app also requires real time [game events](/api/games/events) for any of those games, don't forget to also set the [game_events](#game_events-array) array.
+- If your app should also launch alongside any of those games, don't forget to also set the appropriate [launch_events](#launch_event_settings-array).
 :::
 
 ## extension_window_data object
@@ -494,28 +498,13 @@ Example code:
 ```
 This will swap the overwolf-app protocol with https for ajax.googleapis.com domain requests and with http for domain.com requests.
 
-## game_ids array
- A list of game ids for which game events are required.
- The full list of games that Overwolf supports real time event listening can be found [here](games/ids).
-
-| Name     | Type  |  Description                          | Since |
-|----------|-------| ------------------------------------- |------ |
-| game_ids | int[] |  The games IDs that your app targets. | 0.92  |
-
-Example code:
-```json
-"game_ids": [7764, 5426, 7314]
-```
-
 ## game_events array
- A list of game ids for which game events are required.
- The full list of games that Overwolf supports real time event listening can be found [here](games/ids).
+A list of game ids for which game events are required.
+The full list of games that Overwolf supports real time event listening can be found [here](/api/games/ids).
 
 | Name        | Type  |  Description                          | Since |
 |-------------|-------| ------------------------------------- |------ |
 | game_events | int[] | The games IDs that your app targets.  | 0.92  |
-
-Note: this array is exactly the same as the [game_ids[]](#game-ids-array), and we use it only for backwards compatibility.
 
 Example code:
 ```json
@@ -523,8 +512,9 @@ Example code:
 ```
 
 :::important
-* Wildcards are not supported- even if your game is targeted to all games, you should specify all the relevant game ids.
-* In addition to this flag, don't forget to set the [GameTargeting](#gametargeting-object) object, which configures the overlay permissions.
+- Wildcards are not supported - even if your app targtes every game with events, you must still specify all of the relevant game ids.
+- If your app should also be able to display an overlay on top of any of those games, don't forget to also set the appropriate [GameTargeting](#gametargeting-object).
+- If your app should also launch alongside any of those games, don't forget to also set the appropriate [launch_events](#launch_event_settings-array).
 :::
 
 ## extra-objects object
@@ -639,6 +629,12 @@ Code Example:
     }
 ]
 ```
+
+:::important
+- If your app also requires real time [game events](/api/games/events) for any games, don't forget to also set the [game_events](#game_events-array) array.
+- If your app should also be able to display an overlay on top of any games, don't forget to also set the appropriate [GameTargeting](#gametargeting-object).
+:::
+
 
 #### Enable app auto-launch with Overwolf
 
