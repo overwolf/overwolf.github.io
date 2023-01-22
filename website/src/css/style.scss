@@ -335,7 +335,7 @@ blockquote {
   text-align: center;
 
   &:hover {
-    color: white;
+    color: white !important;
     text-decoration: none;
     background-color: var(--color-primary-hover);
   }
