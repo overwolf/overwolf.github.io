@@ -7,6 +7,7 @@ sidebar_custom_props:
   overwolf_platform: true
   electron_platform: false
 ---
+import SubmitAccountButtons from '@site/src/components/submit-account-buttons/submit-account-buttons';
 
 So, you have a great idea for an Overwolf application. What's next?
 
@@ -61,7 +62,14 @@ Submitting your app concept for review is easy, and we’re not looking for a co
 
 Before submitting your proposal, please read the [developer](/topics/legal/legal-developers-terms) & [app](/topics/legal/legal-app-terms) terms of service.
 
-<iframe src="/html/submission-form/form.html" width="100%" height="820px" style={{"margin-bottom": "30px"}}></iframe>
+<SkipMe>
+  <iframe src="/html/submission-form/form.html" width="100%" height="820px" style={{marginButtom: "30px"}}></iframe>
+</SkipMe>
+
+<SubmitAccountButtons
+  loginUrl={'http://www.overwolf.com/'}
+  createAccountUrl={'http://www.overwolf.com/'}
+ />
 
 Note that you do not have to own a registered business or company to work on Overwolf apps or collect revenues - Overwolf is open to independent developers and companies alike.
 
