@@ -167,7 +167,19 @@ img {
 
 a {
 	color: inherit;
-	text-decoration: none
+	text-decoration: none;
+
+  &.external-icon {
+
+    svg {
+      display: inline;
+      width: 16px;
+      height: 16px;
+      margin-left: 4px;
+      position: relative;
+      bottom: -3px;
+    }
+  }
 }
 
 td {
