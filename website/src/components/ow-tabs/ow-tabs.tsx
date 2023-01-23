@@ -16,18 +16,20 @@ const OWTabs: FC<TabsProps> = props => {
   return (
 
     <section className='tabs-section'>
-      <nav className='tabs'>
-        <button className='is-active' data-tab='tab-name'>
+      <nav className='tabs-nav'>
+        <button className='tabs-nav-item is-active' data-tab='tab-name'>
+          <img src='/img/getting-started/electron-app-icon.svg' alt='Overview' />
           Overview
         </button>
-        <button className='is-active' data-tab='tab-name'>
+        <button className='tabs-nav-item' data-tab='tab-name'>
+          <img src='/img/getting-started/electron-app-icon.svg' alt='Overview' />
           test
         </button>
       </nav>
 
-      <div className='tabs-container'>
-        <section className='tab-name'>{children}</section>
-        <section className='tab-name'></section>
+      <div className='panels-container'>
+        <section className='panel tab-name'>{children}</section>
+        <section className='panel tab-name'></section>
       </div>
 
     </section>
