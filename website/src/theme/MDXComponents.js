@@ -11,6 +11,7 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import SimpleTab from '../components/simple-tab/simple-tab';
 
+
 export default {
   // Re-use the default mapping
   ...MDXComponents,
