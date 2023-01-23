@@ -24,7 +24,7 @@ const SubmitAccountButtons: FC<TabsProps> = props => {
           href={createAccountUrl}
           className='btn-primary has-icon'
           target={"_blank"}>
-          Create an account
+          Create account to submit
           <svg><use href="../../img/sprite.svg#external-url" /></svg>
         </a>
 
