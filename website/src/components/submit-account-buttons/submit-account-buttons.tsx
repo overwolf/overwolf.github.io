@@ -29,7 +29,13 @@ const SubmitAccountButtons: FC<TabsProps> = props => {
         </a>
 
         <p>
-          Already have an account? <a href={loginUrl} target={"_blank"}>Log in</a>
+          Already have an account? <a
+            className='external-icon'
+            href={loginUrl}
+            target={"_blank"}>
+            Log in
+            <svg><use href="../../img/sprite.svg#external-url" /></svg>
+          </a>
         </p>
 
     </section>
