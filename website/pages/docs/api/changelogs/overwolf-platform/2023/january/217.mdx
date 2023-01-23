@@ -9,7 +9,7 @@ sidebar_custom_props:
 ---
 
 ### Platform
-- Added the [`logging`][logging] property to [`data`](/api/manifest#webapp-settings-object) in the [`manifest.json`](/api/manifest), to allow for the filtering of log messages:
+- Added the [`logging`][logging] property to [`data`](/api/manifest#webapp-settings-object) in the app's [`manifest`](/api/manifest) file, to allow for the filtering of log messages:
     - Added the [`allowed_domains`][logging] property to [`logging`][logging]. Any domains within this list will be whitelisted from filtering.
       - Any prints from domains that weren't whitelisted will not be written to the app's log files.
       - The [`content.overwolf.com`](https://content.overwolf.com) and [`google-analytics.com`](https://google-analytics.com) domains cannot be whitelisted in any way.
