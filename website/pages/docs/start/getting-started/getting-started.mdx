@@ -36,7 +36,7 @@ by creating useful information and tools, always just a single click away.
 <SkipMe>
 
 <div className="center-text">
-    <p>Sounds interesting? Then let's <a href="getting-started/app-creation-basics" title="Get Started">Get started!</a></p>
+  <p>Sounds interesting? Then let's <a href="getting-started/app-creation-basics" title="Get Started">Get started!</a></p>
 </div>
 
 </SkipMe>
@@ -44,31 +44,29 @@ by creating useful information and tools, always just a single click away.
 ## Supported Frameworks
 
 <OWTabs>
-
-## Supported Frameworks
-
-test1
-
-</OWTabs>
-
-<Tabs groupId="frameworks">
-<TabItem value="overwolf-platform" label="Overwolf Platform">
+<OWTabItem
+  tabID={'overwolf-platform'}
+  label={'Overwolf Platform'}
+  iconSrc={'/img/getting-started/overwolf-app-icon-dark.svg'}>
 
 Built using simple HTML and javascript, Overwolf Platform Apps run on top of the [Overwolf Desktop App](https://www.overwolf.com/appstore/), using [Overwolf APIs](/api) to bridge the gap between
 web development and desktop applications.
 
 With a powerful API, and C# plugin support, these apps can deliver truly legendary features!
 
-</TabItem>
-<TabItem value="electron-platform" label="Overwolf Electron">
+</OWTabItem>
+<OWTabItem
+  tabID={'electron-platform'}
+  label={'Overwolf Electron'}
+  iconSrc={'/img/getting-started/electron-app-icon.svg'}>
 
 Built on top of the [Electron.js](https://www.electronjs.org/) framework, [Overwolf Electron](/tools/ow-electron) offers an enhanced Electron experience,
 so you can take your app another step forward.
 
 Supporting all Electron capabilities, as well as core Overwolf APIs, these apps can truly reach a whole new level!
 
-</TabItem>
-</Tabs>
+</OWTabItem>
+</OWTabs>
 
 ## What can apps do?
 
@@ -88,3 +86,4 @@ Apps can run in several different environments, which you can always mix and mat
 ## Your next steps
 
 So, if this sounds interesting to you, let's get started! Simply head on over to [App Creation Process](getting-started/app-creation-process) to proceed.
+

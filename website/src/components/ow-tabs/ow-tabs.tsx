@@ -1,5 +1,5 @@
 import './ow-tabs.scss';
-import React, {FC} from 'react';
+import React, {FC, Children} from 'react';
 
 interface TabsProps {
   show: boolean;
@@ -13,25 +13,26 @@ const OWTabs: FC<TabsProps> = props => {
     children
   } = props;
 
+  const tabButtons = Children.map(children, (tabBtn, i) => {
+    if(React.isValidElement(tabBtn)) {
+      return (
+        <button
+          key={i}
+          className='tabs-nav-item'
+          data-tab={tabBtn.props.tabID}
+          >
+          <img src={tabBtn.props.iconSrc} alt={tabBtn.props.label} />
+          {tabBtn.props.label}
+        </button>
+      );
+    }
+    return null
+  })
+
   return (
-
     <section className='tabs-section'>
-      <nav className='tabs-nav'>
-        <button className='tabs-nav-item is-active' data-tab='tab-name'>
-          <img src='/img/getting-started/electron-app-icon.svg' alt='Overview' />
-          Overview
-        </button>
-        <button className='tabs-nav-item' data-tab='tab-name'>
-          <img src='/img/getting-started/electron-app-icon.svg' alt='Overview' />
-          test
-        </button>
-      </nav>
-
-      <div className='panels-container'>
-        <section className='panel tab-name'>{children}</section>
-        <section className='panel tab-name'></section>
-      </div>
-
+      <nav className='tabs-nav'>{tabButtons}</nav>
+      <div className='panels-container'>{children}</div>
     </section>
   );
 };

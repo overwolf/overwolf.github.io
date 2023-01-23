@@ -45,6 +45,12 @@
     }
 
     .panel {
+      display: none;
+
+      &.is-active {
+        display: block;
+      }
+
       > *:last-child {
         margin-bottom: 0px;
       }

@@ -7,6 +7,7 @@ import VideoBox from '@site/src/components/video-box/video-box';
 import GameInfo from '@site/src/components/game-info/game-info';
 import SkipMe from '@site/src/components/skip-me/skip-me';
 import OWTabs from '@site/src/components/ow-tabs/ow-tabs';
+import OWTabItem from '@site/src/components/ow-tabs/ow-tab-item';
 import Tagger from '../components/tagging/Tagger';
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
@@ -23,6 +24,7 @@ export default {
   GameInfo: GameInfo,
   SkipMe: SkipMe,
   OWTabs: OWTabs,
+  OWTabItem: OWTabItem,
   Tagger: Tagger,
   Tabs: Tabs,
   TabItem: TabItem,
