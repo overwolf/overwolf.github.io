@@ -11,7 +11,7 @@
       color: var(--color-220);
       background-color: var(--color-grey-light-2);
       border-bottom: 1px solid var(--color-grey-1);
-      // font-weight: 400;
+      font-weight: 400;
       position: relative;
       padding: 8px;
       display: flex;
@@ -19,18 +19,9 @@
       align-items: center;
       gap: 12px;
 
-      // @media (max-width: 600px) {
-      //   font-size: 14px;
-      // }
-
       &:hover {
         background-color: var(--color-grey-1);
         font-weight: 700;
-
-        &:after {
-          visibility: visible;
-          color: var(--color-450);
-        }
       }
 
       &.is-active {
@@ -56,6 +47,36 @@
     .panel {
       > *:last-child {
         margin-bottom: 0px;
+      }
+    }
+  }
+}
+
+html[data-theme=dark] {
+  .tabs-section {
+    background-color: var(--color-120);
+
+    .tabs-nav {
+      .tabs-nav-item {
+        color: var(--color-999);
+        background-color: var(--color-120);
+        border-color: var(--color-333);
+
+        &:hover {
+          color: var(--color-txt);
+          background-color: var(--color-333);
+        }
+
+        &.is-active {
+          color: var(--color-txt);
+          border-color: var(--color-primary);
+        }
+      }
+    }
+
+    .panels-container {
+      h1, h2, h3, h4, h5, h6, p, a {
+        color: var(--color-txt);
       }
     }
   }
