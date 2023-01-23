@@ -343,6 +343,18 @@ blockquote {
   @media (max-width: 600px) {
     font-size: 16px;
   }
+
+  &.has-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+
+    svg {
+      width: 20px;
+      height: 20px;
+    }
+  }
 }
 
 .btn-secondary {
