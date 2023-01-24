@@ -40,6 +40,10 @@
       color: var(--color-220);
     }
 
+    a:hover {
+      color: var(--color-primary);
+    }
+
     p {
       margin-bottom: 20px;
     }
@@ -47,7 +51,7 @@
     .panel {
       display: none;
 
-      &.is-active {
+      &.is-open {
         display: block;
       }
 
@@ -83,6 +87,10 @@ html[data-theme=dark] {
     .panels-container {
       h1, h2, h3, h4, h5, h6, p, a {
         color: var(--color-txt);
+      }
+
+      a:hover {
+        color: var(--color-primary);
       }
     }
   }

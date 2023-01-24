@@ -5,6 +5,7 @@ interface TabProps {
   tabID: string;
   label: string;
   iconSrc: string;
+  className?: string;
   children: React.ReactNode;
 }
 
@@ -15,18 +16,19 @@ const OWTabItem: FC<TabProps> = props => {
     tabID,
     label,
     iconSrc,
+    className,
     children
   } = props;
 
   return (
     <section
-      className='panel'
+      className={className}
       data-panel={tabID}
       data-label={label}
       data-icon={iconSrc}
       >
         {children}
-      </section>
+    </section>
   );
 };
 
