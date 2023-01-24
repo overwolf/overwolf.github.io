@@ -1,6 +1,6 @@
 import './ow-tabs.scss';
 import React, {FC, Children} from 'react';
-
+import useThemeState from '../hooks/theme-state';
 interface TabsProps {
   children: React.ReactNode;
 }
@@ -11,6 +11,7 @@ const OWTabs: FC<TabsProps> = props => {
   const {
     children
   } = props;
+  const themeState = useThemeState();
 
   // -----------------------------------------------------------------------------
 
@@ -37,7 +38,10 @@ const OWTabs: FC<TabsProps> = props => {
           data-tab={tabBtn.props.tabID}
           onClick={(event) => handleShowHideTab(tabBtn.props.tabID, event)}
           >
-          <img src={tabBtn.props.iconSrc} alt={tabBtn.props.label} />
+            {tabBtn.props.iconSrc &&
+            <img src={tabBtn.props.iconSrc} alt={tabBtn.props.label} />
+            }
+
           {tabBtn.props.label}
         </button>
       );
