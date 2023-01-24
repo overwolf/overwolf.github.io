@@ -28,7 +28,7 @@ const OWTabItem: FC<TabProps> = props => {
       id={tabID}
       data-label={label}
       data-icon={iconDarkSrc}
-      data-lightIcon={iconLightSrc}
+      data-light-icon={iconLightSrc}
       >
         {children}
     </section>

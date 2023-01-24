@@ -69,7 +69,9 @@ const OWTabs: FC<TabsProps> = props => {
 
   return (
     <section className='tabs-section'>
-      <nav className='tabs-nav'>{tabButtons}</nav>
+      <div className='tabs-header'>
+        <nav className='tabs-nav'>{tabButtons}</nav>
+      </div>
       <div className='panels-container'>{panels}</div>
     </section>
   );
