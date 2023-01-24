@@ -51,7 +51,7 @@ const OWTabs: FC<TabsProps> = props => {
         </button>
       );
     }
-    return null
+    return <p style={{color: 'red'}}>not a tab! use the proper tab component!!</p>
   })
 
   // -----------------------------------------------------------------------------
@@ -62,7 +62,7 @@ const OWTabs: FC<TabsProps> = props => {
         className: `panel ${i == 0 ? 'is-open' : ''}`
       });
     }
-    return null
+    return <p style={{color: 'red'}}>not a tab! use the proper tab component!! or call Benjo for instructions</p>
   })
 
   // -----------------------------------------------------------------------------
