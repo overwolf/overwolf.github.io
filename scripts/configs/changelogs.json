@@ -5,14 +5,14 @@
         "name": "216"
     },
     "dev": {
-        "date": "december 2022",
-        "path": "2022/december",
-        "name": "216"
+        "date": "january 2023",
+        "path": "2023/january",
+        "name": "217"
     },
     "ow-electron": {
-        "date": "december 2022",
-        "path": "v19.1.8",
-        "name": "19.1.8-1"
+        "date": "january 2023",
+        "path": "v22.0.0",
+        "name": "22.0.0"
     },
     "ow-electron-builder": {
         "date": "january 2023",

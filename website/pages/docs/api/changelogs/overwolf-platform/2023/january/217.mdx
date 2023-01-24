@@ -1,0 +1,25 @@
+---
+id: 217
+image: "/img/embed/changelogs.jpg"
+title: "Version 0.217"
+sidebar_label: "0.217"
+sidebar_custom_props:
+  overwolf_platform: true
+  electron_platform: false
+---
+
+### Platform
+- Added the [`logging`][logging] property to [`data`](/api/manifest#webapp-settings-object) in the app's [`manifest`](/api/manifest) file, to allow for the filtering of log messages:
+    - Added the [`allowed_domains`][logging] property to [`logging`][logging]. Any domains within this list will be whitelisted from filtering.
+      - Any prints from domains that weren't whitelisted will not be written to the app's log files.
+      - The [`content.overwolf.com`](https://content.overwolf.com) and [`google-analytics.com`](https://google-analytics.com) domains cannot be whitelisted in any way.
+      - Prints attributed to `webpack` (for example, from a react dev server) cannot be whitelisted from filtering (you can check the attribution through the link at the right side of the print's line in the [dev tools console](/start/getting-started/using-dev-tools#console)).
+      - By default, any domains in the [`externally_connectable`](/api/manifest#externally_connectable) list will be whitelisted.
+    - Added the [`ignore_externally_connectable`][logging] property to [`logging`][logging]. When enabled, domains in the [`externally_connectable`](/api/manifest#externally_connectable) list will not be automatically whitelisted.
+    - Added the [`disable_blocking`][logging] property to [`logging`][logging]. When set to true, log filtering will be completely disabled.
+- Any requests made to the [`googlesyndication`](https://googlesyndication.com) domain from within an app (used for Ads purposes) will now automatically use the `https` protocol, even without using [`protocol_override_domains`](/api/manifest#protocol_override_domains).
+
+### Bug Fixes
+- Fixed an issue on windows 11, where focusing an overlay window in a game could block other windows from being focused.
+
+[logging]: /api/manifest#logging-object

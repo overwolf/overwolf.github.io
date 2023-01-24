@@ -363,6 +363,7 @@ A list of additional settings for the app.
 | <a className="anchor" aria-hidden="true" id="developer-game-settings"></a>developer | [developer setting](#developer-settings-object) object|  Additional setting for developers. |0.127  |
 | <a className="anchor" aria-hidden="true" id="disable_cleanup"></a>disable_cleanup | bool |  If set to true, app localStorage data will not be cleaned up after app uninstallation. | 0.147  |
 | <a className="anchor" aria-hidden="true" id="process_name"></a>process_name | string |  Overrides the default (OverwolfBrowser.exe) process name in task manager (defaults to the app's `name`) <br/> **Please read our [notes](#process_name-notes)** | 0.153  |
+| <a className="anchor" aria-hidden="true" id="logging"></a>logging | [logging](#logging-object) |  Configures the app's log filtering behavior. | 0.217  |
 | <a className="anchor" aria-hidden="true" id="max_rotation_log_files"></a>max_rotation_log_files | number | Increase the app's log file rotation (defaults to 10, max is 40). | 0.154  |
 | <a className="anchor" aria-hidden="true" id="url_protocol"></a>url_protocol | [url_protocol](#url_protocol-object) object | Ability to open an application from a browser using a link. | 0.158  |
 | <a className="anchor" aria-hidden="true" id="uninstall_window"></a>uninstall_window | [uninstall_window](#uninstall_window-object) object|  triggers the client to run a window on app uninstall for a required time set. <br/>Use it for running uninstall background actions like removing DLLs, logs, images, and other files injected by the app to the user's machine. |0.187  |
@@ -378,24 +379,28 @@ Note that The flag only affects external processes running, not ones that intera
 **Defaults to the app's `name` if it is not defined!**
 
 ## GameTargeting object
-An app can declare itself as targeted to one or more games (or to all supported games).
+In order for an app to show in-game windows, it must declare its target games. This can be one of three options:
+- `none` - No games
+- `dedicated` - One or more games
+- `all` - All supported games
 
 | Name     | Type   |  Description   | Since |
 |----------|---------------------------------|  ------------------------------------------------------------------- |------ |
-| type     | string |  "all" – All games (e.g voice communication apps).<br/>"dedicated" – Dedicated to a game or several games.<br/> "none" – No games. | 0.78  |
-| game_ids | [game_ids[]](#game_ids-array) |    The game IDs that your app targeted and permitted to display in-game overlay windows on them. | 0.78  |
+| type     | string | Targeting type | 0.78  |
+| game_ids | int[]  | If you chose `dedicated` - The list of games (by game id) that your app can show in-game overlay windows in. | 0.78  |
 
 Example code:
 
 ```json
 "game_targeting": {
-    "type": "all" / "none" / "dedicated",
-    "game_ids": [5426, 7764]  // only if type === "dedicated", wildcard not supported
+    "type": "dedicated",
+    "game_ids": [5426, 7764]  // only if type === "dedicated", wildcard (*) is not supported
 }
 ```
 
 :::important
-In addition to this flag, don't forget to also set the [game_events](#game_events-array) array, which defines from which games it can consume real-time game events.
+- If your app also requires real time [game events](/api/games/events) for any of those games, don't forget to also set the [game_events](#game_events-array) array.
+- If your app should also launch alongside any of those games, don't forget to also set the appropriate [launch_events](#launch_event_settings-array).
 :::
 
 ## extension_window_data object
@@ -493,28 +498,13 @@ Example code:
 ```
 This will swap the overwolf-app protocol with https for ajax.googleapis.com domain requests and with http for domain.com requests.
 
-## game_ids array
- A list of game ids for which game events are required.
- The full list of games that Overwolf supports real time event listening can be found [here](games/ids).
-
-| Name     | Type  |  Description                          | Since |
-|----------|-------| ------------------------------------- |------ |
-| game_ids | int[] |  The games IDs that your app targets. | 0.92  |
-
-Example code:
-```json
-"game_ids": [7764, 5426, 7314]
-```
-
 ## game_events array
- A list of game ids for which game events are required.
- The full list of games that Overwolf supports real time event listening can be found [here](games/ids).
+A list of game ids for which game events are required.
+The full list of games that Overwolf supports real time event listening can be found [here](/api/games/ids).
 
 | Name        | Type  |  Description                          | Since |
 |-------------|-------| ------------------------------------- |------ |
 | game_events | int[] | The games IDs that your app targets.  | 0.92  |
-
-Note: this array is exactly the same as the [game_ids[]](#game-ids-array), and we use it only for backwards compatibility.
 
 Example code:
 ```json
@@ -522,8 +512,9 @@ Example code:
 ```
 
 :::important
-* Wildcards are not supported- even if your game is targeted to all games, you should specify all the relevant game ids.
-* In addition to this flag, don't forget to set the [GameTargeting](#gametargeting-object) object, which configures the overlay permissions.
+- Wildcards are not supported - even if your app targtes every game with events, you must still specify all of the relevant game ids.
+- If your app should also be able to display an overlay on top of any of those games, don't forget to also set the appropriate [GameTargeting](#gametargeting-object).
+- If your app should also launch alongside any of those games, don't forget to also set the appropriate [launch_events](#launch_event_settings-array).
 :::
 
 ## extra-objects object
@@ -639,6 +630,12 @@ Code Example:
 ]
 ```
 
+:::important
+- If your app also requires real time [game events](/api/games/events) for any games, don't forget to also set the [game_events](#game_events-array) array.
+- If your app should also be able to display an overlay on top of any games, don't forget to also set the appropriate [GameTargeting](#gametargeting-object).
+:::
+
+
 #### Enable app auto-launch with Overwolf
 
 You can launch your app when a certain event occurs, by setting `event` to these values:
@@ -753,6 +750,33 @@ You can defines how the “exclusive mode” should be turned off:
 * **ReleaseOnLostFocus** – If the user clicks outside the window, exclusive mode is turned off.
 
 Read more in our [Exclusive Mode](/topics/best-practices/exclusive-mode) guide.
+
+## logging object
+
+Defines the prints that will be filtered from the logs. Any console prints originating from external domains (webpages/iframes) will be filtered before being logged to the log files,
+and will only be logged if that domain is whitelisted.
+
+:::note Blocked Prints
+Both [`content.overwolf.com`](https://content.overwolf.com) and [`google-analytics.com`](https://google-analytics.com) will **always** be filtered, unless this feature is disabled.  
+Aside from that, prints attributed to `webpack` (for example, from a react dev server) cannot be whitelisted from filtering (you can check the attribution through the link at the right side of the print's line in the [dev tools console](/start/getting-started/using-dev-tools#console)).
+:::
+
+| Name        | Type   |  Description                                                                         | Since |
+|-------------|--------|--------------------------------------------------------------------------------------| ----- |
+| allowed_domains  | string[] | List of ***specific domains*** (without wildcards) whitelisted to print to the app logs | 0.217  |
+| ignore_externally_connectable | bool | Should all prints from [`externally_connectable`](#externally_connectable) domains be ***blacklisted*** | 0.217  |
+| disable_blocking | bool | Disables any app log filtering                                    | 0.217  |
+
+
+#### Example data:
+
+```json
+"logging": {
+    "allowed_domains": ["content.exampleDomain.com"],
+    "ignore_externally_connectable": false,
+	"disable_blocking": false
+}
+```
 
 ## url_protocol object
 
