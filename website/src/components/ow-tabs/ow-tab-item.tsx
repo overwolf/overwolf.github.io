@@ -23,7 +23,7 @@ const OWTabItem: FC<TabProps> = props => {
   return (
     <section
       className={className}
-      data-panel={tabID}
+      id={tabID}
       data-label={label}
       data-icon={iconSrc}
       >

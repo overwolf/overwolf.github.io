@@ -2,7 +2,6 @@ import './ow-tabs.scss';
 import React, {FC, Children} from 'react';
 
 interface TabsProps {
-  show: boolean;
   children: React.ReactNode;
 }
 
@@ -15,6 +14,20 @@ const OWTabs: FC<TabsProps> = props => {
 
   // -----------------------------------------------------------------------------
 
+  const handleShowHideTab = (tabID: string, event: any) => {
+    const tabBtn = event.target;
+    const panel = document.querySelector(`#${tabID}`);
+    const activePanel = panel?.parentElement?.querySelector('.is-open');
+    const activeTabBtn = tabBtn?.parentElement?.querySelector('.is-active');
+
+    activePanel?.classList.remove('is-open');
+    activeTabBtn?.classList.remove('is-active');
+    tabBtn?.classList.add('is-active');
+    panel?.classList.add('is-open');
+  }
+
+  // -----------------------------------------------------------------------------
+
   const tabButtons = Children.map(children, (tabBtn, i) => {
     if(React.isValidElement(tabBtn)) {
       return (
@@ -22,6 +35,7 @@ const OWTabs: FC<TabsProps> = props => {
           key={i}
           className={`tabs-nav-item ${i == 0 ? 'is-active' : ''}`}
           data-tab={tabBtn.props.tabID}
+          onClick={(event) => handleShowHideTab(tabBtn.props.tabID, event)}
           >
           <img src={tabBtn.props.iconSrc} alt={tabBtn.props.label} />
           {tabBtn.props.label}

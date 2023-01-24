@@ -19,7 +19,7 @@
       align-items: center;
       gap: 12px;
 
-      &:hover {
+      &:hover, &:focus {
         background-color: var(--color-grey-1);
         font-weight: 700;
       }
@@ -29,6 +29,10 @@
         color: var(--color-220);
         border-bottom: 2px solid var(--color-primary);
         // pointer-events: none;
+      }
+
+      img {
+        pointer-events: none;
       }
     }
   }
