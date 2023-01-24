@@ -4,7 +4,8 @@ import React, {FC} from 'react';
 interface TabProps {
   tabID: string;
   label: string;
-  iconSrc: string;
+  iconDarkSrc: string;
+  iconLightSrc: string;
   className?: string;
   children: React.ReactNode;
 }
@@ -15,7 +16,8 @@ const OWTabItem: FC<TabProps> = props => {
   const {
     tabID,
     label,
-    iconSrc,
+    iconDarkSrc,
+    iconLightSrc,
     className,
     children
   } = props;
@@ -25,7 +27,8 @@ const OWTabItem: FC<TabProps> = props => {
       className={className}
       id={tabID}
       data-label={label}
-      data-icon={iconSrc}
+      data-icon={iconDarkSrc}
+      data-lightIcon={iconLightSrc}
       >
         {children}
     </section>

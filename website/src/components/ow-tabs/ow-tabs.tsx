@@ -31,6 +31,8 @@ const OWTabs: FC<TabsProps> = props => {
 
   const tabButtons = Children.map(children, (tabBtn, i) => {
     if(React.isValidElement(tabBtn)) {
+      const imgSrc =  themeState == 'light' ? tabBtn.props.iconLightSrc : tabBtn.props.iconDarkSrc;
+
       return (
         <button
           key={i}
@@ -38,8 +40,11 @@ const OWTabs: FC<TabsProps> = props => {
           data-tab={tabBtn.props.tabID}
           onClick={(event) => handleShowHideTab(tabBtn.props.tabID, event)}
           >
-            {tabBtn.props.iconSrc &&
-            <img src={tabBtn.props.iconSrc} alt={tabBtn.props.label} />
+
+            {tabBtn.props.iconDarkSrc &&
+              <img
+                src={imgSrc}
+                alt={tabBtn.props.label} />
             }
 
           {tabBtn.props.label}
