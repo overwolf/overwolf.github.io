@@ -319,4 +319,8 @@ html[data-theme="dark"]{
       color: white !important;
   }
 
+  .alert a {
+    text-decoration-color: var(--color-grey-light-2);
+  }
+
 }

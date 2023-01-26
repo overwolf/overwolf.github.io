@@ -663,3 +663,6 @@ img[alt*="light-theme"], img[alt*="dark-theme"], img[alt*="mobile-light"], img[a
 }
 
 
+.alert a {
+  text-decoration-color: var(--color-bg);
+}
