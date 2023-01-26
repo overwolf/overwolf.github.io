@@ -1,0 +1,17 @@
+.submit-account-buttons {
+  padding: 64px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .btn-primary {
+    width: 269px;
+    font-weight: 500;
+    line-height: 23px;
+    margin-bottom: 24px;
+  }
+
+  p {
+    color: var(--color-999);
+  }
+}
