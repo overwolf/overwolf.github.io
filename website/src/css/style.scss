@@ -298,6 +298,7 @@ samp {
 html {
 	position: relative;
 	overflow-y: scroll;
+  scroll-padding-top: 100px;
 	// min-height: 100vh;
   height: auto !important;
   //scroll-behavior: smooth; not works well in inner pages
