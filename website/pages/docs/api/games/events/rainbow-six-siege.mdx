@@ -76,7 +76,9 @@ Possible values:
 
 Example:
 
-`{"game_info":{"phase":"operator_select"}}`
+```json
+{"info":{"game_info":{"phase":"lobby"}},"feature":"game_info"}
+```
 
 ## `match_info`
 
@@ -84,7 +86,7 @@ Example:
 
 key          | Category    | Values                    | Notes                 | Since GEP Ver. |
 --------------- | -----------| ------------------------------------------------------------------------------------ | ------------------------------------ | ------------- |
-pseudo_match_id | match_info | The current match’s ID code. Example:<br></br> `0c0ea3df-97ea-4d3a-b1f6-f8e34042251f`  |  This is an internal Overwolf-generated code. |   130.0 |
+pseudo_match_id | match_info | The current match’s ID code.  | See [notes](#pseudo_match_id-note)  |   130.0 |
 game_mode_log | match_info   | The current type of game mode. |See [notes](#game_mode_log-note) for possible values|   186.0  |
 match_id | match_info   | The current match's ID. |See [notes](#match_id-note) for possible values|   162.1  |
 map_id | match_info   | The currently played map. |See [notes](#map_id-note) for possible values|   162.1  |
@@ -106,6 +108,16 @@ Event        | Event Data        | Fired When        | Notes              | Sinc
 -------------| ------------------| ----------------- | ------------------ | ---------------|
 match_start  | null              | When a match start.|See [notes](#match_start-note)|   211.0  |
 match_end    | null              | When a match ends. |See [notes](#match_end-note)|   211.0  |
+
+#### *pseudo_match_id* note
+
+This is an internal Overwolf-generated code.
+
+Data Example:
+
+```json
+{"info":{"match_info":{"pseudo_match_id":"9800ba24-7da7-4e3a-8ab1-a74405780444"}},"feature":"match_info"}
+```
 
 #### *game_mode_log* note
 
@@ -309,17 +321,65 @@ Data Example:
 
 key          | Category    | Values                            | Notes                 | Since GEP Ver. |
 ------------ | ------------| --------------------------------- | --------------------- | ------------- |
-number       | round   | Current round number<br></br>Example:<br></br>`{"round":{"number":"3"}}` |                       |   123.0 |
-score       | match   | Match score<br></br>Example:<br></br>`{"match":{"score":"{"blue":"2","orange":"1"}"}}` |                       |   123.0  |
+number       | round   | Current round number | See [notes](#number-note)  |   123.0 |
+score       | match   | Match score |  See [notes](#match_score-note)                     |   123.0  |
 
 ### Events
 
 Event | Event Data                        | Fired When                  | Notes              | Since GEP Ver. |
 ------| ----------------------------------| --------------------------- | ------------------ | --------------|
-roundStart | null                         | Round starts.               |                    |     123.0      |
-roundEnd | null                           | Round ends.                 |                    |     123.0      |
-roundOutcome | victory / defeat<br></br>`{"name":"roundOutcome","data":"victory"}` | Round concluded. |            |     123.0      |
-matchOutcome | victory / defeat<br></br>`{"name":"matchOutcome","data":"defeat"}` | Match concluded. |           |     123.0     |
+roundStart | null                         | Round starts.               | See [notes](#roundStart-note)  |     123.0      |
+roundEnd | null                           | Round ends.                 | See [notes](#roundEnd-note)   |     123.0      |
+roundOutcome | victory / defeat | Round concluded. |  See [notes](#roundOutcome-note)           |     123.0      |
+matchOutcome | victory / defeat | Match concluded. |   See [notes](#matchOutcome-note)         |     123.0     |
+
+#### *number* note
+
+Data Example:
+
+```json
+{"info":{"round":{"number":"1"}},"feature":"match"}
+```
+
+#### *match_score* note
+
+Data Example:
+
+```json
+{"info":{"match":{"score":"{\"blue\":\"1\",\"orange\":\"0\"}"}},"feature":"match"}
+```
+
+#### *roundStart* note
+
+Data Example:
+
+```json
+{"events":[{"name":"roundStart","data":""}]}
+```
+
+#### *roundEnd* note
+
+Data Example:
+
+```json
+{"events":[{"name":"roundEnd","data":""}]}
+```
+
+#### *roundOutcome* note
+
+Data Example:
+
+```json
+{"events":[{"name":"roundOutcome","data":"victory"}]}
+```
+
+#### *matchOutcome* note
+
+Data Example:
+
+```json
+{"events":[{"name":"matchOutcome","data":"defeat"}]}
+```
 
 ## `roster`
 
@@ -328,11 +388,11 @@ matchOutcome | victory / defeat<br></br>`{"name":"matchOutcome","data":"defeat"}
 key          | Category    | Values                    | Notes                 | Since GEP Ver. |
 --------------- | -----------| ------------------------------------------------------------------------------------ | ------------------------------------ | ------------- |
 roster_XX | players | Provides info for the currently active players (10 players). |  See [notes](#roster_xx-notes) |   123.0 |
-team | players | Player’s current team – Orange/Blue/Spectator  |   |   123.0 |
+team | players | Player’s current team – Orange/Blue/Spectator  | See [notes](#team-notes)  |   123.0 |
 health | players | Player’s current health | See [notes](#health-notes)  |   123.0 |
-score | players | Player’s current score or `null`<br></br>`{"player":{"score":"335"}}` | See [notes](#score-notes) |   123.0 |
-kills | players | Total number of kills by the player or `null`<br></br>`{"player":{"kills":"0"}}` |   |   123.0 |
-deaths | players | Total number of player's deaths or `null`<br></br>`{"player":{"deaths":"1"}}` |   |   123.0 |
+score | players | Player’s current score or `null` | See [notes](#score-notes) |   123.0 |
+kills | players | Total number of kills by the player or `null` |  See [notes](#kills-notes) |   123.0 |
+deaths | players | Total number of player's deaths or `null` | See [notes](#deaths-notes)  |   123.0 |
 operator | players | The numeric ID of the chosen operator.<br></br>`{"player":{"operator":"514"}}` |  |   151.0 |
 player_id | players | The player's ID number `{"player":{"player_id":"1b810848-34df-4834-aa26-61c838059a37"}}` |  |   191.0 |
 
@@ -389,6 +449,12 @@ When one of the players leaves the match, the relevant “roster_ XX” object w
 
 If a new player replaces a leaver, a new “roster_XX” object will be assigned to the new player who joined.
 
+#### `team` notes
+
+```json
+{"info":{"player":{"team":"Orange"}},"feature":"roster"}
+```
+
 #### *health* note
 Current health of the player
 Important! - health always include 20 points for the knockout stage, so the event will always add 20 health points more then the game
@@ -399,7 +465,21 @@ Important! - health always include 20 points for the knockout stage, so the even
 
 #### *score* note
 
-Since december 2021 patch - team colors provided by GEP do not correspond to the game's UI team color (the local player is always blue in the game's UI). The local player's score, team score and roster regarding to his color are still consistent.
+```json
+{"info":{"player":{"score":"100"}},"feature":"roster"}
+```
+
+#### *kills* note
+
+```json
+{"info":{"player":{"kills":"2"}},"feature":"roster"}
+```
+
+#### *deaths* note
+
+```json
+{"info":{"player":{"deaths":"1"}},"feature":"roster"}
+```
 
 ## `kill`
 
@@ -407,8 +487,20 @@ Since december 2021 patch - team colors provided by GEP do not correspond to the
 
 Event  | Event Data                                       |               Fired When                  | Notes     | Since GEP Ver. |
 -------| -------------------------------------------------| ----------------------------------------- | --------- | --------------|
-kill | null | Local player killed an enemy |                       |   123.0     |
-headshot | null | Local player killed an enemy with a headshot |   |   123.0     |
+kill | null | Local player killed an enemy |   See [notes](#kill-notes)  |   123.0     |
+headshot | null | Local player killed an enemy with a headshot |  See [notes](#headshot-notes) |   123.0     |
+
+#### *kill* note
+
+```json
+{"events":[{"name":"kill","data":""}]}
+```
+
+#### *headshot* note
+
+```json
+{"events":[{"name":"headshot","data":""}]}
+```
 
 ## `death`
 
