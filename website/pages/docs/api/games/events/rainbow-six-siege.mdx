@@ -343,6 +343,8 @@ Data Example:
 
 #### *match_score* note
 
+Match score info-update is presenting the score as it is in the game's UI, the local player is always in the blue team
+
 Data Example:
 
 ```json
@@ -388,13 +390,11 @@ Data Example:
 key          | Category    | Values                    | Notes                 | Since GEP Ver. |
 --------------- | -----------| ------------------------------------------------------------------------------------ | ------------------------------------ | ------------- |
 roster_XX | players | Provides info for the currently active players (10 players). |  See [notes](#roster_xx-notes) |   123.0 |
-team | players | Player’s current team – Orange/Blue/Spectator  | See [notes](#team-notes)  |   123.0 |
-health | players | Player’s current health | See [notes](#health-notes)  |   123.0 |
-score | players | Player’s current score or `null` | See [notes](#score-notes) |   123.0 |
-kills | players | Total number of kills by the player or `null` |  See [notes](#kills-notes) |   123.0 |
-deaths | players | Total number of player's deaths or `null` | See [notes](#deaths-notes)  |   123.0 |
-operator | players | The numeric ID of the chosen operator.<br></br>`{"player":{"operator":"514"}}` |  |   151.0 |
-player_id | players | The player's ID number `{"player":{"player_id":"1b810848-34df-4834-aa26-61c838059a37"}}` |  |   191.0 |
+team | player | Player’s current team – Orange/Blue/Spectator  | See [notes](#team-notes)  |   123.0 |
+health | player| Player’s current health | See [notes](#health-notes)  |   123.0 |
+score | player | Player’s current score or `null` | See [notes](#score-notes) |   123.0 |
+kills | player | Total number of kills by the player or `null` |  See [notes](#kills-notes) |   123.0 |
+deaths | player | Total number of player's deaths or `null` | See [notes](#deaths-notes)  |   123.0 |
 
 
 #### `roster_XX` notes
