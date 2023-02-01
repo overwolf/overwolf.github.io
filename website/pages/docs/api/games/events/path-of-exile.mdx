@@ -33,6 +33,7 @@ Please read the [overwolf.games.events](../events) documentation page to learn h
 * [death](#death)
 * [me](#me)
 * [match_info](#match_info)
+* [game_info](#game_info)
 
 ## Game event status
 
@@ -128,6 +129,7 @@ opened_page  | match_info  | Whether inventory is open/closed |See [notes](#open
 Event        | Event Data        | Fired When        | Notes              | Since GEP Ver. |
 -------------| ------------------| ----------------- | ------------------ | ---------------|
 match_outcome| victory/defeat  | Boss killed/You died.|See [notes](#match_outcome-note)|   144.0  |
+chat| Chat messages  | A message is sent / received in the chat.|See [notes](#chat-note)|   219.0  |
 
 #### *current_zone* note
 
@@ -162,4 +164,57 @@ Data Example:
 ```json
 {"events":[{"name":"match_outcome","data":"victory"}]}
 {"events":[{"name":"match_outcome","data":"defeat"}]}
+```
+
+#### *chat* note
+
+Special symbols in the chat messages:
+
+* Starting with # - global chat 
+* Starting with @ - whisper - private chat 
+* Starting with $ - trade
+* Starting with & - guild
+* Starting with % - party
+* Without  special symbol - local chat
+
+:::note Items in chat messages
+Items in chat messages start with | (vertical bar) and end with | 
+:::
+
+Data Example:
+
+```json
+{"events":[{"name":"chat","data":"You have entered Lioneye's Watch."}]}
+{"events":[{"name":"chat","data":"#yaoiLNine: some text"}]}
+{"events":[{"name":"chat","data":"#Rodger_The_Sausage: |Agony Shadows, Alleyways Map||Agony Shadows, Alleyways Map||Remote Nexus, Crimson Temple Map| free"}]}
+```
+
+## game_info
+
+### Info Updates
+
+key          | Category    | Values                    | Notes                 | Since GEP Ver. |
+------------ | ------------| ------------------------- | --------------------- | ------------- | 
+language | language  | The game's selected language  |See [notes](#language-note)|   219.0  |
+chat_language  | language  | The chat's selected language |See [notes](#chat_language-note)|   219.0  |
+
+
+#### *language* note
+
+Both 'language' and 'chat_language' info-updates are updated once at the beginning of the game
+
+Data Example:
+
+```json
+{"info":{"language":{"language":"en"}},"feature":"game_info"}
+```
+
+#### *chat_language* note
+
+Both 'language' and 'chat_language' info-updates are updated once at the beginning of the game
+
+Data Example:
+
+```json
+{"info":{"language":{"chat_language":"fr"}},"feature":"game_info"}
 ```
