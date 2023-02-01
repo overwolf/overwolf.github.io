@@ -1,0 +1,47 @@
+---
+id: frequently-asked-questions
+image: "/img/embed/dev-tools.jpg"
+title: Frequently Asked Questions
+hide_title: true
+sidebar_position: 0
+sidebar_custom_props:
+  overwolf_platform: false
+  electron_platform: true
+---
+
+# Overwolf Electron FAQ
+
+## Q: What is Overwolf Electron?
+A: [Overwolf Electron](/tools/ow-electron) is a fork of the [Electron.js](https://www.electronjs.org/) project, complete with built-in
+integration with several of Overwolf’s services.
+
+<SkipMe>You can find an exact list of supported features [here](TODO).</SkipMe>
+
+## Q: Why not use the Overwolf Platform?
+A: The Overwolf Platform and the [Electron.js](https://www.electronjs.org/) framework are inherently and vastly different from each other.
+Using the [Overwolf Electron](/tools/ow-electron) framework, we wish to bridge the gap between Overwolf’s services and apps that already utilize [Electron.js](https://www.electronjs.org).
+
+## Q: Why Electron.js?
+A: [Electron.js](https://www.electronjs.org/) is an incredibly popular and powerful framework, used by many large gaming desktop apps. It has cross-platform support,
+as well as being part of the Node.js ecosystem, giving app creators even more flexibility with their development.
+
+As such, it seemed like the natural choice as the next framework to join the Overwolf family.
+
+## Q: Will this framework support Linux/Mac?
+A: In future versions, we plan to support Mac builds, as well as some of the larger Linux distributions.
+
+## Q: Why a fork? Why not use a module?
+A: Overwolf’s services utilize many moving parts, including much of the underlying [Electron.js](https://www.electronjs.org/) framework,
+as well as the underlying [Chromium](https://www.chromium.org/Home/) APIs, and even some OS-level code. By using a forked version\* of [Electron.js](https://www.electronjs.org/),
+we can ensure that every build’s services will not just be much more stable, but also optimized, reliable, and seamless to integrate.
+
+\**We ensure upstream compatibility for every build, making it possible to use both [ow-electron](https://www.npmjs.com/package/@overwolf/ow-electron) and the corresponding [electron](https://www.npmjs.com/package/electron) build
+side by side in the same project, while using the [electron-is-overwolf](https://www.npmjs.com/package/@overwolf/electron-is-overwolf) package to differentiate between the two.*
+
+<SkipMe>You can learn more about using the two together [here](TODO)</SkipMe>
+
+## Q: Why is it closed source?
+A: [Overwolf Electron](/tools/ow-electron) utilizes several of our in-house, proprietary services. As such, in order to protect our IP,
+it is impossible for us to make those services open source, which means that most [Overwolf Electron](/tools/ow-electron)’s changes themselves simply have to stay closed source.
+
+However, where possible, we do plan to publish related/supplementary services as open source.
