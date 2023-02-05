@@ -300,7 +300,7 @@ Each squad member joining the game will be reported in the following way:
 {"info":{"match_info":{"teammate_0":"{\"name\":\"JacksAtWork\",\"state\":\"knocked_out\"}"}},"feature":"team"}
 ```
 
-As you can see, this object includes:
+'teammate_X' object includes:
 
 * `player` – Player name
 * `state` – alive/death/knocked out
@@ -321,7 +321,7 @@ The current status of the local player’s team ("active" or "eliminated").
 {"info":{"match_info":{"team_info":"{\"team_state\":\"active\"}"}},"feature":"team"}
 ```
 
-As you can see, this object includes:
+'team_info' object includes:
 
 * Selection order
 * Legend name
@@ -343,14 +343,15 @@ Each player joining the game will be reported in the following way:
 {"info":{"match_info":{"roster_1":"{\"name\":\"HelloWork\",\"isTeammate\":true,\"team_id\":3,\"platform_hw\":2,\"platform_sw\":7,\"state\":\"knocked_out\",\"is_local\":\"1\",\"platform_id\":\"7656119934534254\"}"}},"feature":"roster"}
 ```
 
-As you can see, this object includes:
+'roster_XX' object includes:
 
 * `name` - Player name
 * `isTeammate` (Bool) - Player is/isn't a squad member
 * `team_id` - Numerical value for each squad in-game.
-* `platform` - The platform which the player plays on currently.
-* `platform_id` - The player Id in the current used platform.
+* `platform_hw` / `platform_sw` - The platform which the player plays on currently.
+* 'state' - the current state of the player - alive / knocked_out / death.
 * `is_local` - where 1 is the local player else 0.
+* `platform_id` - The player Id in the current used platform.
 
 Possible platform values:
 
