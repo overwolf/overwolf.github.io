@@ -5,5 +5,3 @@ customProps:
   maximum_items:
     count: 20
     remaining_label: 'Older Changelogs'
-  overwolf_platform: false
-  electron_platform: true

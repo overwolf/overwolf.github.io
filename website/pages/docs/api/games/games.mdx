@@ -473,7 +473,8 @@ Contains information about a game.
 
 Parameter            | Type     | Description                                                                                         | 
 ---------------------| ---------| --------------------------------------------------------------------------------------------------- | 
-| isInFocus          | bool     | Returns whether the game is currently in focus                                                      | 
+| isInFocus          | bool     | Returns whether overlay is currently being rendered for the game                                    | 
+| gameIsInFocus      | bool     | Returns whether the game is currently in focus                                                      | 
 | isRunning          | bool     | Returns whether the game is currently running                                                       | 
 | allowsVideoCapture | bool     | Returns whether the game allows video to be captured                                                | 
 | title              | string   | Returns the title of the game                                                                       | 
@@ -498,6 +499,7 @@ Parameter            | Type     | Description                                   
 {
     "success":true,
     "isInFocus":false,
+    "gameIsInFocus": false,
     "isRunning":true,
     "allowsVideoCapture":true,
     "title":"Guild Wars",
@@ -776,6 +778,7 @@ An object containing the game info object in addition to a set of flags indicati
 {
     "gameInfo": {   //RunningGameInfo object
         "isInFocus": true,
+        "gameIsInFocus": true,
         "isRunning": true,
         "allowsVideoCapture": true,
         "title": "Dota 2",

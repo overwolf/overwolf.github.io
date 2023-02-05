@@ -1,0 +1,19 @@
+---
+id: 218
+image: "/img/embed/changelogs.jpg"
+title: "Version 0.218"
+sidebar_label: "0.218"
+sidebar_custom_props:
+  overwolf_platform: true
+  electron_platform: false
+---
+
+### API
+
+- Updated API - [`overwolf.games.RunningGameInfo`](/api/games#runninggameinfo-object) for games where overlay stays even if the game loses focus:
+    - [`overwolf.games.onGameInfoUpdated`](/api/games#onGameInfoUpdated) will now also fire when losing focus in these games.
+    - Added the [`gameIsInFocus`](/api/games#runninggameinfo-object) field to [`overwolf.games.RunningGameInfo`](/api/games#runninggameinfo-object), to indicate if the game itself (or any of its overlay windows) is focused.
+
+### Bug Fixes
+
+- Fixed a bug where [`overwolf.notifications.onToastInteraction`](/api/notifications#ontoastinteraction) would only fire in the same window as the original [`overwolf.notifications.showToastNotification()`](/api/notifications#showtoastnotificationargs-callback) call.

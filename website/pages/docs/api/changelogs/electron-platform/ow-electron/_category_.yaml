@@ -1,2 +1,4 @@
 label: 'ow-electron'
 collapsed: false
+customProps:
+  versioned_items: true

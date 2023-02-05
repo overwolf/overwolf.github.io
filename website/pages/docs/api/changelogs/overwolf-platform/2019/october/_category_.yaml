@@ -1,5 +1,3 @@
 label: 'October'
 customProps:
   skip_layout: true
-  overwolf_platform: true
-  electron_platform: false
