@@ -345,7 +345,7 @@ roster_XX  | match_info  | Provides the entire list of players in a match (~60 p
 Each player joining the game will be reported in the following way:
 
 ```json
-{"info":{"match_info":{"roster_1":"{\"name\":\"HelloWork\",\"isTeammate\":true,\"team_id\":3,\"platform_hw\":2,\"platform_sw\":7,\"state\":\"knocked_out\",\"is_local\":\"1\",\"platform_id\":\"7656119934534254\"}"}},"feature":"roster"}
+{"info":{"match_info":{"roster_1":"{\"name\":\"HelloWork\",\"isTeammate\":true,\"team_id\":3,\"platform_hw\":2,\"platform_sw\":7,\"state\":\"knocked_out\",\"is_local\":\"1\",\"platform_id\":\"7656119934534254\",\"origin_id\":\"2351105644\"}"}},"feature":"roster"}
 ```
 
 'roster_XX' object includes:
@@ -357,6 +357,7 @@ Each player joining the game will be reported in the following way:
 * `state` - the current state of the player - alive / knocked_out / death.
 * `is_local` - where 1 is the local player else 0.
 * `platform_id` - The player Id in the current used platform.
+* `origin_id` - The player origin / EA Id.
 
 Possible platform values:
 
