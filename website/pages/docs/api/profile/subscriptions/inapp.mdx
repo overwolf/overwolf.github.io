@@ -18,7 +18,7 @@ Please read all the info about app subscriptions [here](/start/monetize-with-sub
 
 ## Methods Reference
 
-* [overwolf.profile.subscriptions.inapp.show()](#showplanid-theme-callback)
+* [overwolf.profile.subscriptions.inapp.show()](#showplanid-theme)
 * [overwolf.profile.subscriptions.inapp.hide()](#hidecallback)
 
 ## Events Reference
@@ -32,7 +32,7 @@ Please read all the info about app subscriptions [here](/start/monetize-with-sub
 * [overwolf.profile.subscriptions.inapp.InAppSubModalClosedEvent](#inappsubmodalclosedevent-object) Object
 * [overwolf.profile.subscriptions.inapp.enums.Theme](#theme-enum) Enum
 
-## show(planId, theme, callback)
+## show(planId, theme)
 #### Version added: 0.170
 #### Permissions required: Subscription #####
 
@@ -42,7 +42,7 @@ Parameter | Type                                   | Description                
 ----------| ---------------------------------------| ---------------------------------------------------------------- |
 planId    | number                                 | The plan Id to display                                           |   
 theme     | [Theme](#theme-enum) enum               | Optional. "Dark" or "Light. If not defined, the default is light |   
-callback  | Result => void                         | Returns with the result                                          |   
+
 
 ## hide(callback)
 #### Version added: 0.170
