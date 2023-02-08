@@ -328,11 +328,16 @@ callback    | UploadClientLogsResult  | A callback function which will be called
 > Upload Overwolf client logs to Overwolf servers for the current calling app
 
 
-
 Parameter   | Type     | Description                                 |
 ----------- | ---------| --------------------------------------------|
-UploadClientLogsOptions | [UploadClientLogsOptions](#uploadclientlogsoptions-object) Object | Options object you can pass when calling the function
+UploadClientLogsOptions | [UploadClientLogsOptions](#uploadclientlogsoptions-object) Object | Options object you can pass when calling the function. See [note](uploadclientlogsoptions-note) |
 callback    | UploadClientLogsResult  | A callback function which will be called with the status of the request |
+
+#### UploadClientLogsOptions note
+
+In order for the logs to be accepted by the Overwolf servers, `UploadClientLogsOptions.filePrefix` must:
+- Only contains *32 or less* characters
+- Only contains *alphanumeric characters* - characters in the range `[0-9a-zA-Z]`
 
 
 ## checkForClientUpdates(callback)
@@ -706,7 +711,7 @@ skip_in_game_notification | boolean  | When set to true,  Do not display the pop
 
 Parameter                 | Type     | Description                   |
 ------------------------- | ---------| ----------------------------- |
-filePrefix  | string  | This property allows you to choose the prefix of the uploaded log file.  |
+filePrefix  | string | This property allows you to choose a file name prefix for the uploaded log file |
 
 ## OpenFolderPickerResult Object
 
