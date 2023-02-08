@@ -1,0 +1,2 @@
+customProps:
+  placeholder: true # remove this when this file has properties, it's here to avoid validation errors

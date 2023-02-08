@@ -1,0 +1,29 @@
+Electron comes with a built in [automatic app updater](https://www.electronjs.org/docs/latest/api/auto-updater), which handles all update-related matters on its own.
+However, in order for Electron to be able to automatically update your app, it must be configured with a consistent endpoint it can check against for updates/download updates from.
+
+**For Overwolf Electron apps that choose to use our [App File Hosting](/tools/ow-electron/distribution#app-file-hosting)**, Overwolf handles the maintenance of this endpoint.
+
+#### Setting up the updater endpoint
+
+In order to set up the endpoint, simply add the following to your main .js file:
+
+```js title="Setting up ow-electron auto updates"
+const { autoUpdater } = require("electron")
+...
+
+autoUpdater.setFeedURL({
+  provider: 'generic',
+  url: `https://electron-updates.overwolf.com/electron-updates/electron/${your_app_id}`
+});
+```
+
+#### Using app testing channels
+
+The automatic updater endpoint also supports the usage of [app channels](/tools/developers-console/all-applications/release-management#what-are-release-channels). To set the app to use a specific channel,
+simply change the `autoUpdater.channel` property:
+
+```js title="Changing the app channel"
+autoUpdater.channel = channel_name;
+```
+
+*To go back to the production channel, simply set the channel name to `''`.*
