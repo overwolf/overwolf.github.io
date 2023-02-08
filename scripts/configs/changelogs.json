@@ -1,26 +1,26 @@
 {
     "latest": {
-        "date": "december 2022",
-        "path": "2022/december",
-        "name": "216"
+        "date": "January 2023",
+        "path": "2023/jjanuary",
+        "name": "217"
     },
     "dev": {
-        "date": "february 2023",
+        "date": "February 2023",
         "path": "2023/february",
         "name": "218"
     },
     "ow-electron": {
-        "date": "january 2023",
+        "date": "January 2023",
         "path": "v22.0.1",
         "name": "22.0.1"
     },
     "ow-electron-builder": {
-        "date": "january 2023",
+        "date": "January 2023",
         "path": "v23.6.0",
         "name": "23.6.0"
     },
     "docs": {
-        "date": "january 26th 2023",
+        "date": "January 26th 2023",
         "path": "2023/january#januray-26th-2023---updated-app-proposal-submission",
         "name": "Updated App Proposal Submission"
     }
