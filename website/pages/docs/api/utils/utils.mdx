@@ -336,8 +336,8 @@ callback    | UploadClientLogsResult  | A callback function which will be called
 #### UploadClientLogsOptions note
 
 In order for the logs to be accepted by the Overwolf servers, `UploadClientLogsOptions.filePrefix` must:
-- Only contains *32 or less* characters
-- Only contains *alphanumeric characters* - characters in the range `[0-9a-zA-Z]`
+- Only contains ***64 or less*** characters
+- Only contains ***alphanumeric characters***, as well as `-` and `_` (creating the range `[0-9a-zA-Z_-]`)
 
 
 ## checkForClientUpdates(callback)
