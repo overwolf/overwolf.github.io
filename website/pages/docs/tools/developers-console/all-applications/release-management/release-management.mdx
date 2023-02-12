@@ -167,7 +167,7 @@ Under Public Releases, you can manage the currently [active](#rolloutphasing) [v
 
 Under Release History, you can get an overview of historical [versions](#version-overview).
 
-Historical versions are split into pages, using [The Paging Footer](../#the-footer-toolbar).
+Historical versions are split into pages, using [The Paging Footer](/tools/developers-console#the-footer-toolbar).
 
 <Tabs>
 <TabItem value="opened" label="Opened">
@@ -281,7 +281,7 @@ The preview mode has an `Edit` button, which, when pressed, will switch the rele
 </Tabs>
 </details>
 
-At any point, you can use the `Cancel` and `Save` buttons inside of the release notes editor, which correspond to the `Discard changes` and `Save` buttons of [The Footer Toolbar](../#the-footer-toolbar).
+At any point, you can use the `Cancel` and `Save` buttons inside of the release notes editor, which correspond to the `Discard changes` and `Save` buttons of [The Footer Toolbar](/tools/developers-console#the-footer-toolbar).
 
 Public release notes also contain two extra toggles:
 - `Publish` - Whether the release notes should be `published`.
@@ -305,7 +305,7 @@ Keep in mind that changes made to the public release notes of an app will take a
 
 The developer's console exposes the "compiled html" of pubic release notes of every app, through the following API endpoint:
 ```js
-`https://console-api.overwolf.com/v1/apps/${app-id}/versions/${version}/release-notes/${page}`
+`https://console-api.overwolf.c/tools/developers-consoleapps/${app-id}/versions/${version}/release-notes/${page}`
 ```
 
 Where:
@@ -350,7 +350,7 @@ For this example, we will use use Workflowy. As such:
 The link will then be:
 
 ```js
-`https://console-api.overwolf.com/v1/apps/npijmgiaiiemcnijaljcfddgeihcbifdbhpffihe/versions/6.0.71/release-notes/${page}`
+`https://console-api.overwolf.c/tools/developers-consoleapps/npijmgiaiiemcnijaljcfddgeihcbifdbhpffihe/versions/6.0.71/release-notes/${page}`
 ```
 
 At the time of writing, this will include three versions with release notes.
