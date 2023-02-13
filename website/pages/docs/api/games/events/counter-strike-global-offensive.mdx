@@ -50,6 +50,7 @@ When running this game in trusted mode (without any launch parameters), OW can't
 * [roster](#roster)
 * [player_activity_change](#player_activity_change)
 * [team_set](#team_set)
+* [match_score](#match_score)
 * [replay](#replay)
 * [counters](#counters)
 * [mvp](#mvp)
@@ -344,6 +345,21 @@ Data Example:
 
 ```json
 {"events":[{"name":"team_set","data":"{  "team": "T"}"}]}
+```
+## `match_score`
+
+### Events
+
+Event       | Event Data   | Fired When    | Notes              | Since GEP Ver. |
+------------| -------------| --------------| ------------------ | --------------|
+score    |Currnt score of the match |At the end of a round|See [notes](#match_score-note)|      70.0     |
+
+#### *match_score* note
+
+Data Example:
+
+```json
+{"events":[{"name":"score","data":"{\r\n  \"team_ct\": 6,\r\n  \"team_t\": 2\r\n}"}]}
 ```
 
 ## `match_info`
