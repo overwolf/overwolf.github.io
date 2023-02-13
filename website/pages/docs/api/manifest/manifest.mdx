@@ -284,6 +284,10 @@ There are many features enabled through this file. Some are mandatory (marked ac
 | <a className="anchor" aria-hidden="true" id="meta"></a> meta                                | [meta](#meta-object) Object   | Mandatory. The app metadata  |
 | <a id="permissions">permissions</a>                                                     | [permissions[]](#permissions-array)     | An array of permissions that the app requires  |
 | <a className="anchor" aria-hidden="true" id="data"></a>data                                 | [webapp settings](#webapp-settings-object) Object  | Mandatory. App data. Changes between different apps types. Currently can only be from type webapp settings |
+| <a className="anchor" aria-hidden="true" id="max_rotation_log_files"></a>max_rotation_log_files | number | Configure the app's log file rotation (between 10 and 40, defaults to 10). | 
+
+<SkipMe> TODO: Add link to explanation about app log file rotation </SkipMe>
+<SkipMe> max_rotation_log_files was added in `0.154` </SkipMe>
 
 ## Permissions array
 To use most overwolf.* APIs, your Overwolf app must declare relevant permissions in the relevant manifest.json field. It's an array of permissions that the app requires:
@@ -364,7 +368,6 @@ A list of additional settings for the app.
 | <a className="anchor" aria-hidden="true" id="disable_cleanup"></a>disable_cleanup | bool |  If set to true, app localStorage data will not be cleaned up after app uninstallation. | 0.147  |
 | <a className="anchor" aria-hidden="true" id="process_name"></a>process_name | string |  Overrides the default (OverwolfBrowser.exe) process name in task manager (defaults to the app's `name`) <br/> **Please read our [notes](#process_name-notes)** | 0.153  |
 | <a className="anchor" aria-hidden="true" id="logging"></a>logging | [logging](#logging-object) |  Configures the app's log filtering behavior. | 0.217  |
-| <a className="anchor" aria-hidden="true" id="max_rotation_log_files"></a>max_rotation_log_files | number | Increase the app's log file rotation (defaults to 10, max is 40). | 0.154  |
 | <a className="anchor" aria-hidden="true" id="url_protocol"></a>url_protocol | [url_protocol](#url_protocol-object) object | Ability to open an application from a browser using a link. | 0.158  |
 | <a className="anchor" aria-hidden="true" id="uninstall_window"></a>uninstall_window | [uninstall_window](#uninstall_window-object) object|  triggers the client to run a window on app uninstall for a required time set. <br/>Use it for running uninstall background actions like removing DLLs, logs, images, and other files injected by the app to the user's machine. |0.187  |
 | <a className="anchor" aria-hidden="true" id="auto_relaunch_on_crash"></a>auto_relaunch_on_crash | bool |  Causes apps to automatically relaunch if their process has crashed. if the app crashes 5 times consecutively, it will stop trying to relaunch.  | 0.191  |
