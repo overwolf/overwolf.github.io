@@ -15,6 +15,7 @@ Use this API to get Overwolf information for the current user of the app (e.g us
 
 * [overwolf.profile.getCurrentUser()](#getcurrentusercallback)
 * [overwolf.profile.refreshUserProfile()](#refreshuserprofilecallback)
+* [overwolf.profile.generateUserSessionToken()](#generateusersessiontokencallback)
 * [overwolf.profile.openLoginDialog()](#openlogindialog)
 
 ## Events Reference
@@ -24,6 +25,7 @@ Use this API to get Overwolf information for the current user of the app (e.g us
 ## Types Reference
 
 * [overwolf.profile.GetCurrentUserResult](#getcurrentuserresult-object) Object
+* [overwolf.profile.GenerateUserSessionTokenResult](#generateusersessiontokenresult-object) Object
 * [overwolf.profile.LoginStateChangedEvent](#loginstatechangedevent-object) Object
 * [overwolf.profile.ConnectionState](#connectionstate-enum) Enum
 
@@ -44,6 +46,86 @@ callback  | ([Result: GetCurrentUserResult](#getcurrentuserresult-object)) => vo
 Parameter | Type     | Description                                                                                        |
 ----------| ---------| -------------------------------------------------------------------------------------------------- |
 callback  | ([Result: GetCurrentUserResult](#getcurrentuserresult-object)) => void | A function called with the current user, or an error.|
+
+## generateUserSessionToken(callback)
+#### Version added: 0.219
+
+> Generates a short lived authentication token for **the currently logged-in user**.
+
+:::warning Must be logged in and connected!
+This method will fail if the local user is not logged in to Overwolf!  
+This method will also fail if the Overwolf servers cannot be reached!
+:::
+
+Parameter | Type     | Description                                                                                        |
+----------| ---------| -------------------------------------------------------------------------------------------------- |
+callback  | ([Result: GenerateUserSessionTokenResult](#generateusersessiontokenresult-object)) => void | A function called with the [generated token](#generated-token-note), or an error.|
+
+### Generated Token note
+
+This method generates and returns a [JWT](https://jwt.io/) token, confirming the currently logged-in Overwolf client user.  
+This token can then be tested against the [relevant endpoint](#token-authentication), to confirm the authenticity of this session, for use in external applications.
+
+Parameter   | Description                                              |
+----------- | -------------------------------------------------------- |
+duration    | 15 minutes from the moment of creation. See [note](#token-expiry-note) |
+payload.sub | Username for the account                                 |
+payload.exp | Token expiry date                                        |
+payload.iat | Token issue date                                         |
+
+You can view more details about the contents of a token (as well as information about JWT tokens in general) [here](https://jwt.io/).
+
+```js title="Example token generation"
+overwolf.profile.generateUserSessionToken(console.log);
+
+// Example result:
+{
+  success: true,
+  token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJvZGVkLml0a2luIiwiZXhwIjoxNjc2MzY5NjUyLCJpYXQiOjE2NzYzNjg3NTJ9.YdWqtJkFAC6-89OJ9TzU-kLHc-qWalkornFkbeEz9pg"
+}
+
+// Which then decodes to:
+{
+  "sub": "oded.itkin",
+  "exp": 1676369652,
+  "iat": 1676368752
+}
+```
+
+:::tip Token Expiry
+The generated token expires after 15 minutes from the moment of its creation. **As such, it is heavily recommended to only use this token for an initial authentication, that would then generate your own, long time token for your app's usage.**
+:::
+
+### Token authentication
+
+The token's authenticity can be verified via the following `GET` https request:
+
+<Tabs groupId="https-format">
+<TabItem value="curl" label="cURL">
+
+```js title="Example cURL request"
+curl -XGET -H 'Authorization: Bearer ${temp-token}' 'https://accounts.overwolf.com/tokens/short-lived/verify?extensionId=${extension-id}'
+```
+
+</TabItem>
+<TabItem value="javascript" label="Javascript">
+
+```js title="Example Javascript request"
+// Loosely based on https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch#supplying_request_options
+const response = await fetch(`https://accounts.overwolf.com/tokens/short-lived/verify?extensionId=${extension-id}`, {
+  method: 'GET',
+  headers: {
+    'Authorization': `Bearer ${temp-token}`
+  },
+});
+```
+
+</TabItem>
+</Tabs>
+
+The following status codes may then be returned:
+- `200` - Token is valid
+- `401` - Token is invalid
 
 ## openLoginDialog()
 #### Version added: 0.80
@@ -127,6 +209,15 @@ If the user is not logged-in, the `success` will be `false`, but you’ll still 
    "avatar":""
 }
 ```
+
+## GenerateUserSessionTokenResult Object
+
+Parameter       | Type                                           | Description     |
+----------------| -----------------------------------------------|---------------- |
+*success*          | boolean  | inherited from the "Result" Object          |
+*error*            | string   | inherited from the "Result" Object          |
+token            | string   | short lived authentication token          |
+
 
 ## LoginStateChangedEvent Object
 

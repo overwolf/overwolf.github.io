@@ -1,0 +1,27 @@
+---
+id: 219
+image: "/img/embed/changelogs.jpg"
+title: "Version 0.219"
+sidebar_label: "0.219"
+sidebar_custom_props:
+  overwolf_platform: true
+  electron_platform: false
+---
+
+### Platform
+
+- Enabled the CSS pseudo-class [`:where()`](https://developer.mozilla.org/en-US/docs/Web/CSS/:where) as experimental.
+- Trying to run an unpacked application when logged out will now show an error message.
+- Prints attributed to `webpack-internal:\\` will now always be written to the app's logs, even with log filtering enabled.
+
+### API
+
+- New API - [`overwolf.profile.generateUserSessionToken()`](/api/profile#generateusersessiontokencallback):
+    - Generates a short lived authentication token for the currently logged-in user.
+    - Short lived authentication tokens can be tested against the [relevant endpoint](/api/profile#token-authentication), to prove its legitemacy for an external app.
+- Updated API - [`overwolf.utils.uploadClientLogs()`](/api/utils#uploadclientlogsoptions-note):
+    - `UploadClientLogsOptions.filePrefix` must only contain legal characters `(a-z, A-Z, 0-9, -, _)`, and must contain 64 or less characters in total.
+
+### Bug Fixes
+
+- Fixed a bug where an app could create more than one tray icon.

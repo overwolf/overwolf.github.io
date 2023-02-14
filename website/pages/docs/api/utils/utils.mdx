@@ -330,14 +330,12 @@ callback    | UploadClientLogsResult  | A callback function which will be called
 
 Parameter   | Type     | Description                                 |
 ----------- | ---------| --------------------------------------------|
-UploadClientLogsOptions | [UploadClientLogsOptions](#uploadclientlogsoptions-object) Object | Options object you can pass when calling the function. See [note](#uploadclientlogsoptions-note) |
+UploadClientLogsOptions | [UploadClientLogsOptions](#uploadclientlogsoptions-object) Object | Options object you can pass when calling the function |
 callback    | UploadClientLogsResult  | A callback function which will be called with the status of the request |
 
-#### UploadClientLogsOptions note
-
-In order for the logs to be accepted by the Overwolf servers, `UploadClientLogsOptions.filePrefix` must:
-- Only contains ***64 or less*** characters
-- Only contains ***alphanumeric characters***, as well as `-` and `_` (creating the range `[0-9a-zA-Z_-]`)
+This method will fail to execute if `UploadClientLogsOptions.filePrefix` contains:
+   - ***More than 64*** characters
+   - ***Illegal characters*** (meaning anything but `(a-z, A-Z, 0-9, -, _)`)
 
 
 ## checkForClientUpdates(callback)
