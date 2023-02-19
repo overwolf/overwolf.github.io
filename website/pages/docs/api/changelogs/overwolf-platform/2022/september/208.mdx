@@ -25,12 +25,12 @@ sidebar_custom_props:
     - Allows an app to update certain properties of keybinds during runtime. Specifically:
         - `isPassThrough` - Whether or not this keybind should allow passthrough.
         - `customModifierKeyCode` - This keybind's (optional) arbitrary modifier key.
-- New API - [`changeIcon`](/api/os/tray#changeiconpath-callback), [`restoreIcon`](/api/os/tray#restoreicon-callback):
-    - Allows an app to temporarily change its tray icon (repeatedly). Using [`restoreIcon`](/api/os/tray#restoreicon-callback) will restore it back to its original [`tray_icon`](/api/manifest#meta-tray_icon).
+- New API - [`overwolf.os.tray.changeIcon()`](/api/os/tray#changeiconpath-callback), [`overwolf.os.tray.restoreIcon`](/api/os/tray#restoreicon-callback):
+    - Allows an app to temporarily change its tray icon (repeatedly). Using [`overwolf.os.tray.restoreIcon`](/api/os/tray#restoreicon-callback) will restore it back to its original [`tray_icon`](/api/manifest#meta-tray_icon).
     - **Requires a tray item to already be created ([`overwolf.os.tray.setMenu()`](/api/os/tray#setmenumenu-callback))!**
-- New API - [`watchFile`](/api/io#watchfilefilepath-callback), [`overwolf.io.stopWatchingFile`](/api/io#stopwatchingfilefilepath-callback):
+- New API - [`overwolf.io.watchFile()`](/api/io#watchfilefilepath-callback), [`overwolf.io.stopWatchingFile()`](/api/io#stopwatchingfilefilepath-callback):
     - Allows an app to listen to **changes** occurring on a file, rather than just listening to additions/removals from its end.
-    - The listener will stop if the file is renamed or deleted, or if [`overwolf.io.stopWatchingFile`](/api/io#stopwatchingfilefilepath-callback) is called.
+    - The listener will stop if the file is renamed or deleted, or if [`overwolf.io.stopWatchingFile()`](/api/io#stopwatchingfilefilepath-callback) is called.
 - Updated API - Improved [`overwolf.media.replays`](/api/media/replays) and [`overwolf.streaming`](/api/streaming) error feedback:
     - [`overwolf.media.replays.capture()`](/api/media/replays#capturepastduration-futureduration-capturefinishedcallback-callback) and [`overwolf.streaming.start()`](/api/streaming#startsettings-callback) will now return the new parameters `errorCode` and `errorDescription`.
     - [`overwolf.streaming.StreamResult`](/api/streaming#streamResult-object) now returns the `streamId` of the corresponding OBS stream.
