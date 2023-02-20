@@ -68,8 +68,8 @@ This token can then be tested against the [relevant endpoint](#token-authenticat
 
 Parameter   | Description                                              |
 ----------- | -------------------------------------------------------- |
-duration    | 15 minutes from the moment of creation. See [note](#token-expiry-note) |
-payload.sub | Username for the account                                 |
+duration    | 15 minutes from the moment of creation                   |
+payload.sub | Username for the Overwolf account                        |
 payload.exp | Token expiry date                                        |
 payload.iat | Token issue date                                         |
 
@@ -84,11 +84,11 @@ overwolf.profile.generateUserSessionToken(console.log);
   token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJvZGVkLml0a2luIiwiZXhwIjoxNjc2MzY5NjUyLCJpYXQiOjE2NzYzNjg3NTJ9.YdWqtJkFAC6-89OJ9TzU-kLHc-qWalkornFkbeEz9pg"
 }
 
-// Which then decodes to:
+// Which also decodes to:
 {
-  "sub": "oded.itkin",
-  "exp": 1676369652,
-  "iat": 1676368752
+  "sub": "oded.itkin", // Username for the Overwolf account
+  "exp": 1676369652, // Token expiry date
+  "iat": 1676368752 // Token issue date
 }
 ```
 
