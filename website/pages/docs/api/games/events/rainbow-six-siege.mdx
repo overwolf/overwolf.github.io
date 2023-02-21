@@ -564,11 +564,15 @@ Please use account_id_log instead
 Data Example:
 
 ```json
-{"info":{"me":{"account_id_log":"{"message":{"params":{"clearance_level":"50","nickname":"mrtest123","nickname_enabled":"1","sender":"7e909880-5b34-4757-b826-31614ba76186","two_factor_auth_enabled":"0"},"type":3}}"}},"feature":"me"}
+{"info":{"me":{"account_id_log":"{ "content": { "partyId": "aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee", "groupId": "aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee", "profileId": "aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee", "obj": { "is_caster": false, "party_bans": "[]", "reservations": "[]", "clearance_level": 999, "two_factor_auth_enabled": true, "phone_number_verified": true, "rank": 30, "top_rank_pos": 0, "rank_mmr": 0, "last_hosted_rdv_session_id": "aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee", "online_player_id": "999999999999999999", "in_anti_addiction_state": false, "nickname": "", "nickname_enabled": false, "is_using_invalid_graphic_settings": false, "has_failed_binary_validation": false, "avatar_hidden": false }, "lastModifiedAt": "2023-02-20T20:42:28.955Z" }, "notificationType": "PARTY_MEMBER_UPDATED", "spaceId": "aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee", "sourceApplicationId": "aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee", "datePosted": "2023-02-20T20:42:29.105Z" }"}},"feature":"me"}
 ```
+
+Important note - If the local player is in a party/squad with friends, the account_id_log may sometimes contain information pertaining to the party members instead. It is not possible to differentiate, so suggest listening for the very first event upon game launch (before local player joins a squad), and then ignoring all future events.
+
 Privacy mode:
 * nickname_enabled - 0/1 if nickname is disabled/enabled
-* nickname - if enabled will show the nickname else the username
+* nickname - if enabled will show the nickname, else it will be empty
+* profileId - the actual account UUID of the player 
 
 
 ## `defuser`
