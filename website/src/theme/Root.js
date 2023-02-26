@@ -10,11 +10,8 @@ export default function Root({children}) {
 
   useEffect(() => {
     const script = document.createElement('script');
-    
     script.src = '/js/ui-logic.js';
-
     script.async = true;
-  
     document.body.appendChild(script);
   
     return () => {
