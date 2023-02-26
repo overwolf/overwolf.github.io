@@ -9,6 +9,8 @@ import SkipMe from '@site/src/components/skip-me/skip-me';
 import OWTabs from '@site/src/components/ow-tabs/ow-tabs';
 import OWTabItem from '@site/src/components/ow-tabs/ow-tab-item';
 import ImageHeading from '@site/src/components/image-heading/image-heading';
+import OWTable from '@site/src/components/ow-table/ow-table';
+import OWTableRow from '@site/src/components/ow-table/ow-table-row';
 import Tagger from '../components/tagging/Tagger';
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
@@ -27,6 +29,8 @@ export default {
   OWTabs: OWTabs,
   OWTabItem: OWTabItem,
   ImageHeading: ImageHeading,
+  OWTable: OWTable,
+  OWTableRow: OWTableRow,
   Tagger: Tagger,
   Tabs: Tabs,
   TabItem: TabItem,
