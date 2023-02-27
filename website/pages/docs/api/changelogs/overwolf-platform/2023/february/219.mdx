@@ -18,7 +18,8 @@ sidebar_custom_props:
 
 - New API - [`overwolf.profile.generateUserSessionToken()`](/api/profile#generateusersessiontokencallback):
     - Generates a short lived authentication token for the currently logged-in user.
-    - Short lived authentication tokens can be tested against the [relevant endpoint](/api/profile#token-authentication), to prove its legitemacy for an external app.
+    - Short lived authentication tokens can be tested against the [relevant endpoint](/api/profile#verify-token-integrity), to prove its legitemacy for an external app,
+    as well as be used to [obtain certain details](/api/profile#get-user-profile-via-token) about the linked Overwolf user profile.
 - Updated API - [`overwolf.utils.uploadClientLogs()`](/api/utils#uploadclientlogsoptions-note):
     - `UploadClientLogsOptions.filePrefix` must only contain legal characters `(a-z, A-Z, 0-9, -, _)`, and must contain 64 or less characters in total.
 
