@@ -210,5 +210,10 @@
         "id": 21864,
         "path": "lost-ark",
         "name": "Lost Ark"
+    },
+    {
+        "id": 22638,
+        "path": "sons-of-the-forest",
+        "name": "Sons of the Forest"
     }
 ]
