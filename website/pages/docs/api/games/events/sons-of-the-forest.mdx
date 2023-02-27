@@ -26,6 +26,7 @@ Please read the [overwolf.games.events](../events) documentation page to learn h
 
 * [gep_internal](#gep_internal)
 * [match_info](#match_info)
+* [location](#location)
 
 ## Game event status
 
@@ -65,14 +66,6 @@ match_start | null         | Match started |See [notes](#match_start-note)|     
 match_end   | null         | Match ended   |See [notes](#match_end-note)|     221.0     | 
 
 
-#### *location* note
-
-Data Example:
-
-```json
-{"feature":"match_info","category":"match_info","key":"location","value":"{\"x\":-1149.048340,\"y\":52.075386,\"z\":58.662331}"}
-```
-
 #### *match_start* note
 
 Data Example:
@@ -85,4 +78,20 @@ Data Example:
 
 ```json
 {"events":[{"name":"match_end","data":""}]}
+```
+
+## `location`
+
+### Info Updates
+
+key          | Category    | Values                    | Notes                 | Since GEP Ver. |
+------------ | ------------| ------------------------- | --------------------- | ------------- | 
+location | match_info| Current player location on the map|See [notes](#location-note)|   221.0       |
+
+#### *location* note
+
+Data Example:
+
+```json
+{"feature":"location","category":"match_info","key":"location","value":"{\"x\":-1149.048340,\"y\":52.075386,\"z\":58.662331}"}
 ```
