@@ -1,0 +1,97 @@
+---
+id: sons-of-the-forest
+image: "/img/embed/games/sons-of-the-forest.jpg"
+title: Sons of the Forest Game events
+hide_title: true
+sidebar_label: Sons of the Forest
+sidebar_custom_props:
+  overwolf_platform: true
+  electron_platform: false
+---
+
+<!-- GENERATED USING /scripts/generate.js -->
+
+<head>
+  <meta name="keywords" content="API for Sons of the Forest, Sons of the Forest API, SDK for Sons of the Forest, Sons of the Forest SDK"/>
+</head>
+
+<GameInfo gameID={22638} showCompliance={false} showDocs={false}/>
+
+Please read the [overwolf.games.events](../events) documentation page to learn how to use Overwolf game events.
+
+## Sample Apps
+* [Sons of the Forset game events sample app](https://github.com/overwolf/events-sample-apps)
+
+## Available Features
+
+* [gep_internal](#gep_internal)
+* [match_info](#match_info)
+* [location](#location)
+
+## Game event status
+
+It is highly recommended to communicate errors and warnings to app users. 
+
+Check the current game event status [here](/status/). Alternately, you can easily check that status from your app itself, [using our API](/topics/using-events/how-to-check-events-status-from-app).
+
+## `gep_internal`
+
+### Info Updates
+
+key          | Category    | Values                    | Notes                 | Since GEP Ver. |
+------------ | ------------| ------------------------- | --------------------- | ------------- | 
+gep_internal | gep_internal| Local + Public version number|See [notes](#gep_internal-note)|   143.0       |
+
+#### *gep_internal* note
+
+Data Example:
+
+```json
+{"info":{"gep_internal":{"version_info":"{"local_version":"157.0.1","public_version":"157.0.1","is_updated":true}"}},"feature":"gep_internal"}
+```
+
+## `match_info`
+
+### Info Updates
+
+key          | Category    | Values                    | Notes                 | Since GEP Ver. |
+------------ | ------------| ------------------------- | --------------------- | ------------- | 
+location | match_info| Current player location on the map|See [notes](#location-note)|   221.0       |
+
+### Events
+
+Event       | Event Data   | Fired When    | Notes              | Since GEP Ver. |
+------------| -------------| --------------| ------------------ | --------------|
+match_start | null         | Match started |See [notes](#match_start-note)|     221.0     | 
+match_end   | null         | Match ended   |See [notes](#match_end-note)|     221.0     | 
+
+
+#### *match_start* note
+
+Data Example:
+
+```json
+{"events":[{"name":"match_start","data":""}]}
+```
+
+#### *match_end* note
+
+```json
+{"events":[{"name":"match_end","data":""}]}
+```
+
+## `location`
+
+### Info Updates
+
+key          | Category    | Values                    | Notes                 | Since GEP Ver. |
+------------ | ------------| ------------------------- | --------------------- | ------------- | 
+location | match_info| Current player location on the map|See [notes](#location-note)|   221.0       |
+
+#### *location* note
+
+Data Example:
+
+```json
+{"feature":"location","category":"match_info","key":"location","value":"{\"x\":-1149.048340,\"y\":52.075386,\"z\":58.662331}"}
+```
