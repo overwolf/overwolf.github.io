@@ -51,6 +51,12 @@ Data Example:
 
 ## `match_info`
 
+### Info Updates
+
+key          | Category    | Values                    | Notes                 | Since GEP Ver. |
+------------ | ------------| ------------------------- | --------------------- | ------------- | 
+location | match_info| Current player location on the map|See [notes](#location-note)|   221.0       |
+
 ### Events
 
 Event       | Event Data   | Fired When    | Notes              | Since GEP Ver. |
@@ -58,6 +64,14 @@ Event       | Event Data   | Fired When    | Notes              | Since GEP Ver.
 match_start | null         | Match started |See [notes](#match_start-note)|     221.0     | 
 match_end   | null         | Match ended   |See [notes](#match_end-note)|     221.0     | 
 
+
+#### *location* note
+
+Data Example:
+
+```json
+{"feature":"match_info","category":"match_info","key":"location","value":"{\"x\":-1149.048340,\"y\":52.075386,\"z\":58.662331}"}
+```
 
 #### *match_start* note
 
