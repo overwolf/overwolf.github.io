@@ -18,11 +18,11 @@ const OWTableRow: FC<OWTableRowProps> = props => {
 
   const handleExpandRow = () => {
     if(row.current !== null) {
-      const expandedRow = row.current.nextElementSibling as HTMLElement;;
+      const expandedRow = row.current.nextElementSibling as HTMLElement;
       const expandedRowContent = expandedRow?.firstChild as HTMLElement;
-      const expandedRowHeight = expandedRowContent?.offsetHeight;
-
       expandedRow.style.display = "table-row";
+
+      const expandedRowHeight = expandedRowContent?.offsetHeight;
       expandedRow.style.height = `${expandedRowHeight}px`;
 
     }
