@@ -16,7 +16,7 @@ There will be a general description of where each layout is recommended in the a
 />
 
 <OWTable headerCellNames={['Layout', 'Value ($)', 'Description']}>
-
+  {/* start row + expanded row */}
   <OWTableRow isExpended={true}>
     <div>
       1 Ad Placement
@@ -25,7 +25,6 @@ There will be a general description of where each layout is recommended in the a
     <div>1.0x</div>
     <div>Content</div>
   </OWTableRow>
-
   <OWTableRow>
     <OWTabs>
       <OWTabItem tabID={'option-1'} label={'Ooption 1'}>
@@ -42,9 +41,33 @@ There will be a general description of where each layout is recommended in the a
       </OWTabItem>
     </OWTabs>
   </OWTableRow>
-
-
-
+  {/* end row + expanded row */}
+  {/* start row + expanded row */}
+  <OWTableRow isExpended={true}>
+    <div>
+      1 Ad Placement
+      <img src={'/img/ads-layout/layout-types/ad-type-1.svg'} alt={'1 Ad Placement'} />
+    </div>
+    <div>1.0x</div>
+    <div>Content</div>
+  </OWTableRow>
+  <OWTableRow>
+    <OWTabs>
+      <OWTabItem tabID={'option-1'} label={'Ooption 1'}>
+        <img src={'/img/ads-layout/layout-types/ad-type-1.svg'} alt={'1 Ad Placement'} />
+      </OWTabItem>
+      <OWTabItem tabID={'option-2'} label={'Ooption 2'}>
+        <img src={'/img/ads-layout/layout-types/ad-type-1.svg'} alt={'1 Ad Placement'} />
+      </OWTabItem>
+       <OWTabItem tabID={'option-2'} label={'Ooption 2'}>
+        <img src={'/img/ads-layout/layout-types/ad-type-1.svg'} alt={'1 Ad Placement'} />
+      </OWTabItem>
+       <OWTabItem tabID={'option-2'} label={'Ooption 2'}>
+        <img src={'/img/ads-layout/layout-types/ad-type-1.svg'} alt={'1 Ad Placement'} />
+      </OWTabItem>
+    </OWTabs>
+  </OWTableRow>
+  {/* end row + expanded row */}
 </OWTable>
 
 
