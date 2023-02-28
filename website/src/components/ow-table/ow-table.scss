@@ -1,53 +1,50 @@
 .ow-table {
-  border-collapse: collapse;
   display: table;
-  margin-bottom: 24px;
-  overflow: auto;
   width: 100%;
 
-  tr {
-    border-color: var(--color-100);
+  .ow-table-header {
+    display: table-header-group;
+  }
 
-    th, td {
+  .ow-table-body {
+    display: table-row-group;
+  }
+
+  .ow-table-body-row, .ow-table-header-row {
+    display: table-row;
+
+    div {
+      display: table-cell;
       font-size: 16px;
       padding: 12px 16px;
       letter-spacing: 0.02em;
-      border-color: var(--color-100);
+      border-right: 1px solid var(--color-100);
 
       &:nth-child(1n) {
         width: 20%;
       }
-
       &:nth-child(2n) {
         width: 17%;
       }
-
       &:last-child {
         width: 100%;
       }
     }
   }
 
-  thead {
-    th {
-      background-color: #1A1A1A;
-      color: #999999;
-    }
+  .ow-table-header-row {
+    background-color: #1A1A1A;
+    color: #999999;
   }
 
-  tbody {
-    td {
-      background-color: var(--color-200);
-      color: var(--color-txt);
+  .ow-table-body-row {
+    background-color: var(--color-200);
+    color: var(--color-txt);
+    position: relative;
 
-      img {
-        max-width: 136px;
-        margin-top: 12px;
-      }
-    }
-
-    tr {
-      position: relative;
+    img {
+      max-width: 136px;
+      margin-top: 12px;
     }
   }
 

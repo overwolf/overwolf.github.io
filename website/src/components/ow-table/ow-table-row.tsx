@@ -15,7 +15,7 @@ const OWTableRow: FC<OWTableRowProps> = props => {
   } = props;
 
   return (
-    <tr>
+    <div className='ow-table-body-row'>
       {children}
       {isExpended &&
       <button className='expand-row' title="expand row">
@@ -23,7 +23,7 @@ const OWTableRow: FC<OWTableRowProps> = props => {
         <svg><use href="/img/sprite.svg#arrowDown" /></svg>
       </button>
       }
-    </tr>
+    </div>
   );
 };
 

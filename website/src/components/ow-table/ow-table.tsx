@@ -44,20 +44,20 @@ const OWTable: FC<OWTableProps> = props => {
   // -----------------------------------------------------------------------------
 
   return (
-    <table className='ow-table'>
-      <thead className='ow-table-header'>
-        <tr className='ow-table-row'>
-          {headerCellNames.length != 0 && 
-            headerCellNames.map( (th, i) => <th key={i}> {th} </th> )
+    <section className='ow-table'>
+      <div className='ow-table-header'>
+        <div className='ow-table-header-row'>
+          {headerCellNames.length != 0 &&
+            headerCellNames.map( (th, i) => <div key={i}> {th} </div> )
           }
-        </tr>
-      </thead>
+        </div>
+      </div>
 
-      <tbody>
-        {children}
-      </tbody>
-      
-    </table>
+        <div className='ow-table-body'>
+          {children}
+        </div>
+
+    </section>
   );
 };
 

@@ -13,7 +13,9 @@ const OWTableRowExpended: FC<OWTableRowExpendedProps> = props => {
   } = props;
 
   return (
-    <tr className='expended'>{children}</tr>
+    <tr className='expanded-row'>
+      <td>{children}</td>
+    </tr>
   );
 };
 
