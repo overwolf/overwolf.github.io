@@ -3,7 +3,7 @@
   border-collapse:collapse;
   width: 100%;
   margin: 24px 0 42px;
-  background-color: #1A1A1A;
+  background-color: var(--color-txt);
 
   .ow-table-header {
     display: table-header-group;
@@ -18,7 +18,7 @@
 
     &:has(.tabs-section) {
       display: none;
-      background-color: #1A1A1A;
+      background-color: var(--color-txt);
     }
 
     > div {
@@ -26,47 +26,67 @@
       font-size: 16px;
       padding: 12px 16px;
       letter-spacing: 0.02em;
-      border-right: 1px solid var(--color-100);
+      border-right: 1px solid white;
 
-      &:nth-child(1n) {
+
+    }
+  }
+
+  .ow-table-header-row {
+    background-color: var(--color-txt);
+    color: var(--color-450);
+  }
+
+  .ow-table-body-row {
+    background-color: var(--color-grey-light-2);
+    color: var(--color-220);
+    position: relative;
+    border-bottom: 1px solid white;
+
+    > div {
+
+      &:nth-child(1) {
         width: 20%;
+        font-weight: bold;
+
+        > img {
+          margin-top: 8px;
+        }
       }
-      &:nth-child(2n) {
+      &:nth-child(2) {
         width: 17%;
       }
       &:last-of-type {
         width: 100%;
         padding-right: 50px;
       }
+
     }
-  }
 
-  .ow-table-header-row {
-    background-color: #1A1A1A;
-    color: #999999;
-  }
 
-  .ow-table-body-row {
-    background-color: var(--color-200);
-    color: var(--color-txt);
-    position: relative;
-    border-bottom: 1px solid var(--color-100);
-
-    > img {
-      max-width: 136px;
-      margin-top: 12px;
-    }
 
     .tabs-section {
       position: absolute;
       width: 100%;
       padding: 16px;
+      background-color: var(--color-txt);
 
       .tabs-nav {
 
         .tabs-nav-item {
           flex: initial;
           height: 46px;
+          font-size: 14px;
+          background-color: var(--color-txt);
+          color: var(--color-450);
+
+          &.is-active {
+            color: var(--color-220);
+          }
+
+          &:hover, &:focus {
+            background-color: var(--color-grey-1);
+          }
         }
       }
 
@@ -92,15 +112,16 @@
 
     &:hover {
       span, svg {
-        color: white;
+        color: var(--color-primary);
       }
     }
 
     span {
       font-size: 16px;
+      font-weight: bold;
       position: absolute;
       right: 32px;
-      color: var(--color-txt);
+      color: var(--color-220);
     }
 
     svg {
@@ -110,8 +131,68 @@
       transition: transform 150ms ease;
     }
   }
+}
 
-  .hidden {
-    display: none;
+html[data-theme=dark] {
+
+  .ow-table {
+    background-color: var(--color-120);
+
+    .ow-table-body-row, .ow-table-header-row {
+
+      &:has(.tabs-section) {
+        display: none;
+        background-color: var(--color-120);
+      }
+
+      > div {
+        border-color: var(--color-100);
+      }
+    }
+
+    .ow-table-header-row {
+      background-color: var(--color-120);
+      color: #999999;
+    }
+
+    .ow-table-body-row {
+      background-color: var(--color-200);
+      color: var(--color-txt);
+      border-color: var(--color-100);
+
+      .tabs-section {
+        background-color: var(--color-120);
+
+        .tabs-nav {
+
+          .tabs-nav-item {
+            background-color: var(--color-120);
+            color: var(--color-999);
+  
+            &.is-active {
+              color: var(--color-txt);
+            }
+  
+            &:hover, &:focus {
+              background-color: var(--color-333);
+            }
+          }
+        }
+
+      }
+    }
+
+    .expand-row {
+
+      &:hover {
+        span, svg {
+          color: var(--color-primary)
+        }
+      }
+
+      span {
+        color: var(--color-txt);
+      }
+    }
   }
 }

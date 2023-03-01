@@ -1,4 +1,3 @@
-// import './ow-tabs.scss';
 import React, {FC, Children, useRef, useState} from 'react';
 
 interface OWTableRowProps {
