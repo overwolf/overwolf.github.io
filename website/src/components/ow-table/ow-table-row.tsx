@@ -13,7 +13,7 @@ const OWTableRow: FC<OWTableRowProps> = props => {
     expandButton = false
   } = props;
 
-  const row = useRef<HTMLInputElement>(null);
+  const row = useRef<HTMLDivElement>(null);
   const [isRowExpended, setIsRowExpended] = useState<boolean>(false);
 
   const handleExpandRow = () => {

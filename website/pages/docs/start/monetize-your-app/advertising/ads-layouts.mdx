@@ -21,12 +21,16 @@ There will be a general description of where each layout is recommended in the a
 <OWTable headerCellNames={['Layout', 'Value ($)', 'Description']}>
   {/* start row + expanded row */}
   <OWTableRow expandButton={true}>
-    <div>
+    <OWdataCell thTitle={'Layout'} bold={true} width={'20%'}>
       1 Ad Placement
       <img src={'/img/ads-layout/layout-types/ad-type-1.svg'} alt={'1 Ad Placement'} />
-    </div>
-    <div>1.0x</div>
-    <div>Content</div>
+    </OWdataCell>
+    <OWdataCell thTitle={'Value ($)'} width={'17%'}>
+      1.0x
+    </OWdataCell>
+    <OWdataCell thTitle={'Description'} width={'100%'}>
+      Content
+    </OWdataCell>
   </OWTableRow>
   <OWTableRow>
     <OWTabs>
@@ -38,21 +42,26 @@ There will be a general description of where each layout is recommended in the a
       </OWTabItem>
        <OWTabItem tabID={'option-3'} label={'Ooption 3'}>
         <img src={'/img/ads-layout/layout-types/ad-type-1.svg'} alt={'1 Ad Placement'} />
+        <p>bla bla bla</p>
       </OWTabItem>
        <OWTabItem tabID={'option-4'} label={'Ooption 4'}>
-        salkdaslmkdkmlas
+        la la la
       </OWTabItem>
     </OWTabs>
   </OWTableRow>
   {/* end row + expanded row */}
   {/* start row + expanded row */}
   <OWTableRow expandButton={true}>
-    <div>
-      1 Ad Placement
+    <OWdataCell thTitle={'Layout'} bold={true} width={'20%'}>
+      1 Ad Dinner
       <img src={'/img/ads-layout/layout-types/ad-type-1.svg'} alt={'1 Ad Placement'} />
-    </div>
-    <div>1.0x</div>
-    <div>Content</div>
+    </OWdataCell>
+    <OWdataCell thTitle={'Value ($)'} width={'17%'}>
+      2.0x
+    </OWdataCell>
+    <OWdataCell thTitle={'Description'} width={'100%'}>
+      Content
+    </OWdataCell>
   </OWTableRow>
   <OWTableRow>
     <OWTabs>

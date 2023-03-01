@@ -27,8 +27,6 @@
       padding: 12px 16px;
       letter-spacing: 0.02em;
       border-right: 1px solid white;
-
-
     }
   }
 
@@ -43,27 +41,30 @@
     position: relative;
     border-bottom: 1px solid white;
 
-    > div {
-
-      &:nth-child(1) {
-        width: 20%;
-        font-weight: bold;
-
-        > img {
-          margin-top: 8px;
-        }
-      }
-      &:nth-child(2) {
-        width: 17%;
-      }
-      &:last-of-type {
-        width: 100%;
-        padding-right: 50px;
-      }
-
+    &:has(.expand-row) > div:last-of-type {
+      padding-right: 50px;
     }
 
+    > div {
 
+      > span img {
+        margin-top: 8px;
+      }
+
+      // &:nth-child(1) {
+      //   width: 20%;
+      //   font-weight: bold;
+
+      // }
+      // &:nth-child(2) {
+      //   width: 17%;
+      // }
+      // &:last-of-type {
+      //   width: 100%;
+      //   padding-right: 50px;
+      // }
+
+    }
 
     .tabs-section {
       position: absolute;
@@ -130,6 +131,10 @@
       pointer-events: none;
       transition: transform 150ms ease;
     }
+  }
+
+  .mobile-only {
+    display: none;
   }
 }
 
