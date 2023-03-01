@@ -1,5 +1,5 @@
 import './ow-tabs.scss';
-import React, {FC, Children} from 'react';
+import React, {FC, Children, useRef} from 'react';
 import useThemeState from '../hooks/theme-state';
 interface TabsProps {
   children: React.ReactNode;
@@ -12,19 +12,24 @@ const OWTabs: FC<TabsProps> = props => {
     children
   } = props;
   const themeState = useThemeState();
+  const panelsContainer = useRef<HTMLInputElement>(null);
 
   // -----------------------------------------------------------------------------
 
   const handleShowHideTab = (tabID: string, event: any) => {
-    const tabBtn = event.target;
-    const panel = document.querySelector(`#${tabID}`);
-    const activePanel = panel?.parentElement?.querySelector('.is-open');
-    const activeTabBtn = tabBtn?.parentElement?.querySelector('.is-active');
+    if(panelsContainer.current !== null) {
+      const tabBtn = event.target;
+      const panel = panelsContainer.current.querySelector(`#${tabID}`);
+      const activePanel = panel?.parentElement?.querySelector('.is-open');
+      const activeTabBtn = tabBtn?.parentElement?.querySelector('.is-active');
 
-    activePanel?.classList.remove('is-open');
-    activeTabBtn?.classList.remove('is-active');
-    tabBtn?.classList.add('is-active');
-    panel?.classList.add('is-open');
+      activePanel?.classList.remove('is-open');
+      activeTabBtn?.classList.remove('is-active');
+      tabBtn?.classList.add('is-active');
+      panel?.classList.add('is-open');
+    } else {
+      console.log('ref is null');
+    }
   }
 
   // -----------------------------------------------------------------------------
@@ -72,7 +77,7 @@ const OWTabs: FC<TabsProps> = props => {
       <div className='tabs-header'>
         <nav className='tabs-nav'>{tabButtons}</nav>
       </div>
-      <div className='panels-container'>{panels}</div>
+      <div className='panels-container' ref={panelsContainer}>{panels}</div>
     </section>
   );
 };
