@@ -1,27 +1,29 @@
 import './image-heading.scss';
 import React, {FC, Children} from 'react';
-// import useThemeState from '../hooks/theme-state';
+import useThemeState from '../hooks/theme-state';
 
 interface ImageHeadingProps {
   title: string;
-  imgSrc: string;
+  imgLightSrc: string;
+  imgDarkSrc: string;
+  children: React.ReactNode;
 }
 
 // -----------------------------------------------------------------------------
 
 const ImageHeading: FC<ImageHeadingProps> = props => {
-  const {
-    title,
-    imgSrc
-  } = props;
+  const { title, imgLightSrc, imgDarkSrc, children } = props;
 
-  // -----------------------------------------------------------------------------
-
+  const themeState = useThemeState();
+  const imgSrc = themeState == 'light' ? imgLightSrc : imgDarkSrc;
   return (
-    <h2 className='image-heading'>
-      <img src={imgSrc} alt={title}/>
-      {title}
-    </h2>
+    <div className='image-heading'>
+      <img src={imgSrc} alt={title} />
+      <div className='content'>
+        <h2>{title}</h2>
+        {children}
+      </div>
+    </div>
   );
 };
 

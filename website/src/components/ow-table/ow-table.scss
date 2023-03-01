@@ -2,6 +2,7 @@
   display: table;
   border-collapse:collapse;
   width: 100%;
+  margin: 24px 0 42px;
   background-color: #1A1A1A;
 
   .ow-table-header {
@@ -33,8 +34,9 @@
       &:nth-child(2n) {
         width: 17%;
       }
-      &:last-child {
+      &:last-of-type {
         width: 100%;
+        padding-right: 50px;
       }
     }
   }
@@ -67,7 +69,7 @@
           height: 46px;
         }
       }
-      
+
       .panels-container {
         padding: 24px 0 0;
       }

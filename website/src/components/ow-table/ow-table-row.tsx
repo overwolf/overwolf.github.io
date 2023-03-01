@@ -43,7 +43,6 @@ const OWTableRow: FC<OWTableRowProps> = props => {
       const expandedRowContent = expandedRow?.firstChild as HTMLElement;
       const expandedRowHeight = expandedRowContent?.offsetHeight;
       expandedRow.style.height = `${expandedRowHeight}px`;
-      console.log(expandedRowHeight)
     }
   }
 

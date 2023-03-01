@@ -1,13 +1,38 @@
-.markdown {
-  h2.image-heading {
+.image-heading {
     display: flex;
-    align-items: center;
     gap: 24px;
-    font-family: lato;
-    font-weight: 700;
-    font-size: 22px;
-    line-height: 28px;
-    letter-spacing: 0.02em;
-    color: var(--color-txt);
+    margin-bottom: 24px;
+
+    .content {
+      color: var(--color-450);
+      font-size: 14px;
+      line-height: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      padding-top: 6px;
+
+      h1, h2, h3, h4, h5, h6 {
+        font-family: lato;
+        color: var(--color-220);
+        font-weight: 700;
+        font-size: 22px;
+        line-height: 28px;
+        letter-spacing: 0.02em;
+        margin: 0;
+      }
+    }
+}
+
+html[data-theme=dark] {
+  .image-heading {
+
+    .content {
+      color: var(--color-999);
+
+      h1, h2, h3, h4, h5, h6 {
+        color: var(--color-txt);
+      }
+    }
   }
 }
