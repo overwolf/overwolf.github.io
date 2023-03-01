@@ -21,8 +21,13 @@ const OWTableRow: FC<OWTableRowProps> = props => {
       const expandedRow = row.current.nextElementSibling as HTMLElement;
 
       if(!isRowExpended) {
-        expandedRow.style.display = "table-row";
-        setExpandedRowHeight(true);
+        if (window.innerWidth <= 600) {
+          expandedRow.style.display = "block";
+        } else {
+          expandedRow.style.display = "table-row";
+          setExpandedRowHeight(true);
+        }
+        
         setIsRowExpended(true);
       } else {
         expandedRow.style.display = "none";
@@ -46,7 +51,11 @@ const OWTableRow: FC<OWTableRowProps> = props => {
   }
 
   return (
-    <div className='ow-table-body-row' ref={row} onClick={()=>{setExpandedRowHeight(false)}}>
+    <div className='ow-table-body-row' ref={row} onClick={()=>{
+      if(window.innerWidth > 600) {
+        setExpandedRowHeight(false)
+      }
+    }}>
       {children}
 
       {expandButton &&

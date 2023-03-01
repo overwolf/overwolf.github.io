@@ -7,14 +7,26 @@
 
   .ow-table-header {
     display: table-header-group;
+
+    @media (max-width: 600px) {
+      display: none;
+    }
   }
 
   .ow-table-body {
     display: table-row-group;
+    @media (max-width: 600px) {
+      display: block;
+    }
   }
 
   .ow-table-body-row, .ow-table-header-row {
     display: table-row;
+
+    @media (max-width: 600px) {
+      display: flex;
+      flex-direction: column;
+    }
 
     &:has(.tabs-section) {
       display: none;
@@ -27,6 +39,12 @@
       padding: 12px 16px;
       letter-spacing: 0.02em;
       border-right: 1px solid white;
+
+      @media (max-width: 600px) {
+        display: block;
+        padding-bottom: 0;
+        width: 100% !important;
+      }
     }
   }
 
@@ -43,6 +61,7 @@
 
     &:has(.expand-row) > div:last-of-type {
       padding-right: 50px;
+      padding-bottom: 50px;
     }
 
     > div {
@@ -72,6 +91,16 @@
       padding: 16px;
       background-color: var(--color-txt);
 
+      @media (max-width: 600px) {
+        position: unset;
+      }
+
+      .tabs-header {
+        @media (max-width: 600px) {
+          width: 80vw;
+        }
+      }
+  
       .tabs-nav {
 
         .tabs-nav-item {
@@ -80,6 +109,10 @@
           font-size: 14px;
           background-color: var(--color-txt);
           color: var(--color-450);
+
+          @media (max-width: 600px) {
+            padding: 8px 14px;
+          }
 
           &.is-active {
             color: var(--color-220);
@@ -135,6 +168,13 @@
 
   .mobile-only {
     display: none;
+    color: var(--color-450);
+    font-weight: 400;
+    padding-right: 8px;
+
+    @media (max-width: 600px) {
+     display: inline-block;
+    }
   }
 }
 
@@ -157,7 +197,7 @@ html[data-theme=dark] {
 
     .ow-table-header-row {
       background-color: var(--color-120);
-      color: #999999;
+      color: var(--color-999);
     }
 
     .ow-table-body-row {
@@ -198,6 +238,10 @@ html[data-theme=dark] {
       span {
         color: var(--color-txt);
       }
+    }
+
+    .mobile-only {
+      color: var(--color-999);
     }
   }
 }

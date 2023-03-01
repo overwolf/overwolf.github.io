@@ -15,18 +15,16 @@ const OWdataCell: FC<OWdataCellProps> = props => {
 
   if(cell.current !== null) {
     if (width) {
-      // cell.current.setAttribute('style', `width: ${width}`);
       cell.current.style.width = width;
     }
     if (bold) {
-      // cell.current.setAttribute('style', 'font-weight: bold');
       cell.current.style.fontWeight = 'bold';
     }
   }
 
   return (
     <div className='ow-data-cell' ref={cell}>
-      <span className='mobile-only'>{thTitle}</span>
+      <span className='mobile-only'>{thTitle}:</span>
       <span>{children}</span>
     </div>
   );
