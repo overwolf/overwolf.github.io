@@ -1,6 +1,8 @@
 .ow-table {
   display: table;
+  border-collapse:collapse;
   width: 100%;
+  background-color: #1A1A1A;
 
   .ow-table-header {
     display: table-header-group;
@@ -15,6 +17,7 @@
 
     &:has(.tabs-section) {
       display: none;
+      background-color: #1A1A1A;
     }
 
     > div {
@@ -56,6 +59,18 @@
       position: absolute;
       width: 100%;
       padding: 16px;
+
+      .tabs-nav {
+
+        .tabs-nav-item {
+          flex: initial;
+          height: 46px;
+        }
+      }
+      
+      .panels-container {
+        padding: 24px 0 0;
+      }
     }
   }
 
@@ -67,7 +82,7 @@
     right: 16px;
     bottom: 16px;
 
-    &.is-open {
+    &.is-expanded {
       svg {
         transform: rotate(180deg);
       }
