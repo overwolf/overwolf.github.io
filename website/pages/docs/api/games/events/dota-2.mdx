@@ -759,10 +759,23 @@ draft           | roster      | A string holding a JSON array of draft objects.|
 
 #### *players* note
 
+:::important
+Dota 2 has disabled some functionality used by third-party tools. This includes disabling a large number of console commands during matchmaking games and limiting access to player profiles during the pregame phase
+As a result 'steamId' and 'name' in the roster will return empty values until the game state changes to DOTA_GAMERULES_STATE_STRATEGY_TIME, then we can show the full roster again with all the details
+:::
+
 Data Example:
+
+Full roster:
 
 ```json
 {"steamId":"76561198095792069","name":"mladen90","pickConfirmed":false,"hero":"","team":2,"role":1,"player_index":4}
+```
+
+Pregame phase roster:
+
+```json
+{"steamId":"","name":"","pickConfirmed":false,"hero":"","team":2,"role":1,"player_index":4}
 ```
 
 Player object structure:
