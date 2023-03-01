@@ -3,7 +3,7 @@ import React, {FC, Children, useRef, useState} from 'react';
 
 interface OWTableRowProps {
   children: React.ReactNode;
-  isExpended: boolean;
+  expandButton: boolean;
 }
 
 // -----------------------------------------------------------------------------
@@ -11,7 +11,7 @@ interface OWTableRowProps {
 const OWTableRow: FC<OWTableRowProps> = props => {
   const {
     children,
-    isExpended = false
+    expandButton = false
   } = props;
 
   const row = useRef<HTMLInputElement>(null);
@@ -20,12 +20,10 @@ const OWTableRow: FC<OWTableRowProps> = props => {
   const handleExpandRow = () => {
     if(row.current !== null) {
       const expandedRow = row.current.nextElementSibling as HTMLElement;
-      const expandedRowContent = expandedRow?.firstChild as HTMLElement;
-      
+
       if(!isRowExpended) {
         expandedRow.style.display = "table-row";
-        const expandedRowHeight = expandedRowContent?.offsetHeight;
-        expandedRow.style.height = `${expandedRowHeight}px`;
+        setExpandedRowHeight(true);
         setIsRowExpended(true);
       } else {
         expandedRow.style.display = "none";
@@ -35,11 +33,25 @@ const OWTableRow: FC<OWTableRowProps> = props => {
 
   }
 
+  const setExpandedRowHeight = (nextRowSibling: boolean) => {
+    if(row.current !== null) {
+      const expandedRow = 
+      nextRowSibling ? 
+      row.current.nextElementSibling as HTMLElement :
+      row.current as HTMLElement;
+
+      const expandedRowContent = expandedRow?.firstChild as HTMLElement;
+      const expandedRowHeight = expandedRowContent?.offsetHeight;
+      expandedRow.style.height = `${expandedRowHeight}px`;
+      console.log(expandedRowHeight)
+    }
+  }
+
   return (
-    <div className='ow-table-body-row' ref={row}>
+    <div className='ow-table-body-row' ref={row} onClick={()=>{setExpandedRowHeight(false)}}>
       {children}
 
-      {isExpended &&
+      {expandButton &&
         <button 
           className={`expand-row ${isRowExpended ? 'is-expanded' : ''}`} 
           title={`${!isRowExpended ? 'Expand Row ' : ''}`}
