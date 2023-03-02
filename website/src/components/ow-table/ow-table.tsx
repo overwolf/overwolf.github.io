@@ -1,7 +1,5 @@
 import './ow-table.scss';
-import React, {FC, Children} from 'react';
-import useThemeState from '../hooks/theme-state';
-
+import React, {FC} from 'react';
 interface OWTableProps {
   children: React.ReactNode;
   headerCellNames: Array<string>;
@@ -14,9 +12,6 @@ const OWTable: FC<OWTableProps> = props => {
     children,
     headerCellNames = []
   } = props;
-  const themeState = useThemeState();
-
-  // -----------------------------------------------------------------------------
 
   return (
     <section className='ow-table'>

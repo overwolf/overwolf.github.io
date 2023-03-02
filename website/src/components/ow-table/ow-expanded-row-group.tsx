@@ -1,4 +1,4 @@
-import React, {FC, Children, useRef, useState} from 'react';
+import React, {FC, useRef} from 'react';
 
 interface OWexpandedRowGroupProps {
   children: React.ReactNode;
@@ -8,10 +8,17 @@ interface OWexpandedRowGroupProps {
 // -----------------------------------------------------------------------------
 
 const OWexpandedRowGroup: FC<OWexpandedRowGroupProps> = props => {
-  const {children} = props;
+  const { children } = props;
+  const rowGroup = useRef<HTMLDivElement>(null);
+
+  if(rowGroup.current !== null) {
+
+    // do stuff
+
+  }
 
   return (
-    <div className='ow-table-body-expended-row-group'>
+    <div className='ow-table-body-expended-row-group' ref={rowGroup}>
       {children}
     </div>
   );

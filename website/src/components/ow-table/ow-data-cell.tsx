@@ -21,7 +21,7 @@ const OWdataCell: FC<OWdataCellProps> = props => {
     center,
     desktopOnly,
     useAsMobileTitle} = props;
-  const cell = useRef<HTMLDivElement>(null)
+  const cell = useRef<HTMLDivElement>(null);
 
   if(cell.current !== null) {
 
