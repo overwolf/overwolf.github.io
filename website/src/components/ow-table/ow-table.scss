@@ -20,17 +20,32 @@
     }
   }
 
+  .ow-table-body-expended-row-group {
+    display: contents;
+
+    @media (max-width: 600px) {
+      display: flex;
+      flex-direction: column-reverse;
+    }
+  }
+
   .ow-table-body-row, .ow-table-header-row {
     display: table-row;
 
     @media (max-width: 600px) {
       display: flex;
       flex-direction: column;
+      height: auto !important;
     }
 
     &:has(.tabs-section) {
       display: none;
       background-color: var(--color-txt);
+
+      @media (max-width: 600px) {
+        display: block;
+        height: auto !important;
+      }
     }
 
     > div {
@@ -41,9 +56,15 @@
       border-right: 1px solid white;
 
       @media (max-width: 600px) {
-        display: block;
-        padding-bottom: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
         width: 100% !important;
+        padding-bottom: 0;
+
+        &:last-of-type {
+          padding-bottom: 16px;
+        }
       }
     }
   }
@@ -51,6 +72,10 @@
   .ow-table-header-row {
     background-color: var(--color-txt);
     color: var(--color-450);
+
+    div {
+      white-space: nowrap;
+    }
   }
 
   .ow-table-body-row {
@@ -59,9 +84,11 @@
     position: relative;
     border-bottom: 1px solid white;
 
-    &:has(.expand-row) > div:last-of-type {
-      padding-right: 50px;
-      padding-bottom: 50px;
+    @media (min-width: 600px) {
+      &:has(.expand-row) > div:last-of-type {
+        padding-right: 50px;
+        padding-bottom: 50px;
+      }
     }
 
     > div {
@@ -143,6 +170,10 @@
     height: 40px;
     padding: 8px 16px;
 
+    @media (max-width: 600px) {
+      display: none;
+    }
+
     &.is-expanded {
       svg {
         transform: rotate(180deg);
@@ -162,14 +193,24 @@
     }
   }
 
+  .mobile-label {
+    color: var(--color-450);
+    font-weight: 700;
+    padding-right: 8px;
+  }
+
   .mobile-only {
     display: none;
-    color: var(--color-450);
-    font-weight: 400;
-    padding-right: 8px;
 
     @media (max-width: 600px) {
-     display: inline-block;
+     display: block;
+    }
+  }
+
+  .desktop-only {
+
+    @media (max-width: 600px) {
+     display: none !important;
     }
   }
 }
@@ -182,7 +223,6 @@ html[data-theme=dark] {
     .ow-table-body-row, .ow-table-header-row {
 
       &:has(.tabs-section) {
-        display: none;
         background-color: var(--color-120);
       }
 
@@ -197,7 +237,7 @@ html[data-theme=dark] {
     }
 
     .ow-table-body-row {
-      background-color: var(--color-200);
+      background-color: var(--color-220);
       color: var(--color-txt);
       border-color: var(--color-100);
 

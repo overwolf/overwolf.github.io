@@ -20,65 +20,69 @@ There will be a general description of where each layout is recommended in the a
 
 <OWTable headerCellNames={['Layout', 'Value ($)', 'Description']}>
   {/* start row + expanded row */}
-  <OWTableRow expandButton={true}>
-    <OWdataCell thTitle={'Layout'} bold={true} width={'20%'}>
-      1 Ad Placement
-      <img src={'/img/ads-layout/layout-types/ad-type-1.svg'} alt={'1 Ad Placement'} />
-    </OWdataCell>
-    <OWdataCell thTitle={'Value ($)'} width={'15%'}>
-      1.0x
-    </OWdataCell>
-    <OWdataCell thTitle={'Description'} width={'100%'}>
-      Content
-    </OWdataCell>
-  </OWTableRow>
-  <OWTableRow>
-    <OWTabs>
-      <OWTabItem tabID={'option-1'} label={'Ooption 1'}>
+  <OWexpandedRowGroup>
+    <OWTableRow expandButton={true}>
+      <OWdataCell thTitle={'Layout'} bold={true} width={'20%'} desktopOnly={true} useAsMobileTitle={true}>
+        1 Ad Placement
         <img src={'/img/ads-layout/layout-types/ad-type-1.svg'} alt={'1 Ad Placement'} />
-      </OWTabItem>
-      <OWTabItem tabID={'option-2'} label={'Ooption 2'}>
-        <img src={'/img/ads-layout/layout-types/ad-type-1.svg'} alt={'1 Ad Placement'} />
-      </OWTabItem>
-       <OWTabItem tabID={'option-3'} label={'Ooption 3'}>
-        <img src={'/img/ads-layout/layout-types/ad-type-1.svg'} alt={'1 Ad Placement'} />
-        <p>bla bla bla</p>
-      </OWTabItem>
-       <OWTabItem tabID={'option-4'} label={'Ooption 4'}>
-        la la la
-      </OWTabItem>
-    </OWTabs>
-  </OWTableRow>
+      </OWdataCell>
+      <OWdataCell thTitle={'Value ($)'} width={'15%'}>
+        1.0x
+      </OWdataCell>
+      <OWdataCell thTitle={'Description'} width={'100%'}>
+        Content
+      </OWdataCell>
+    </OWTableRow>
+    <OWTableRow>
+      <OWTabs>
+        <OWTabItem tabID={'option-1'} label={'Ooption 1'}>
+          <img src={'/img/ads-layout/layout-types/ad-type-1.svg'} alt={'1 Ad Placement'} />
+        </OWTabItem>
+        <OWTabItem tabID={'option-2'} label={'Ooption 2'}>
+          <img src={'/img/ads-layout/layout-types/ad-type-1.svg'} alt={'1 Ad Placement'} />
+        </OWTabItem>
+        <OWTabItem tabID={'option-3'} label={'Ooption 3'}>
+          <img src={'/img/ads-layout/layout-types/ad-type-1.svg'} alt={'1 Ad Placement'} />
+          <p>bla bla bla</p>
+        </OWTabItem>
+        <OWTabItem tabID={'option-4'} label={'Ooption 4'}>
+          la la la
+        </OWTabItem>
+      </OWTabs>
+    </OWTableRow>
+  </OWexpandedRowGroup>
   {/* end row + expanded row */}
   {/* start row + expanded row */}
-  <OWTableRow expandButton={true}>
-    <OWdataCell thTitle={'Layout'} bold={true} width={'20%'}>
-      1 Ad Dinner
-      <img src={'/img/ads-layout/layout-types/ad-type-1.svg'} alt={'1 Ad Placement'} />
-    </OWdataCell>
-    <OWdataCell thTitle={'Value ($)'} width={'15%'}>
-      2.0x
-    </OWdataCell>
-    <OWdataCell thTitle={'Description'} width={'100%'}>
-      Content
-    </OWdataCell>
-  </OWTableRow>
-  <OWTableRow>
-    <OWTabs>
-      <OWTabItem tabID={'option-1'} label={'Ooption 1'}>
+  <OWexpandedRowGroup>
+    <OWTableRow expandButton={true}>
+      <OWdataCell thTitle={'Layout'} bold={true} width={'20%'} desktopOnly={true}>
+        1 Ad Dinner
         <img src={'/img/ads-layout/layout-types/ad-type-1.svg'} alt={'1 Ad Placement'} />
-      </OWTabItem>
-      <OWTabItem tabID={'option-2'} label={'Ooption 2'}>
-        <img src={'/img/ads-layout/layout-types/ad-type-1.svg'} alt={'1 Ad Placement'} />
-      </OWTabItem>
-       <OWTabItem tabID={'option-3'} label={'Ooption 4'}>
-        <img src={'/img/ads-layout/layout-types/ad-type-1.svg'} alt={'1 Ad Placement'} />
-      </OWTabItem>
-       <OWTabItem tabID={'option-4'} label={'Ooption 4'}>
-        <img src={'/img/ads-layout/layout-types/ad-type-1.svg'} alt={'1 Ad Placement'} />
-      </OWTabItem>
-    </OWTabs>
-  </OWTableRow>
+      </OWdataCell>
+      <OWdataCell thTitle={'Value ($)'} width={'15%'}>
+        2.0x
+      </OWdataCell>
+      <OWdataCell thTitle={'Description'} width={'100%'}>
+        Content
+      </OWdataCell>
+    </OWTableRow>
+    <OWTableRow>
+      <OWTabs>
+        <OWTabItem tabID={'option-1'} label={'Ooption 1'}>
+          <img src={'/img/ads-layout/layout-types/ad-type-1.svg'} alt={'1 Ad Placement'} />
+        </OWTabItem>
+        <OWTabItem tabID={'option-2'} label={'Ooption 2'}>
+          <img src={'/img/ads-layout/layout-types/ad-type-1.svg'} alt={'1 Ad Placement'} />
+        </OWTabItem>
+        <OWTabItem tabID={'option-3'} label={'Ooption 4'}>
+          <img src={'/img/ads-layout/layout-types/ad-type-1.svg'} alt={'1 Ad Placement'} />
+        </OWTabItem>
+        <OWTabItem tabID={'option-4'} label={'Ooption 4'}>
+          <img src={'/img/ads-layout/layout-types/ad-type-1.svg'} alt={'1 Ad Placement'} />
+        </OWTabItem>
+      </OWTabs>
+    </OWTableRow>
+  </OWexpandedRowGroup>
   {/* end row + expanded row */}
 </OWTable>
 

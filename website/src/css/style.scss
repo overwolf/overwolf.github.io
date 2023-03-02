@@ -404,6 +404,12 @@ blockquote {
 	text-decoration-color: initial;
 }
 
+.desktop-only {
+  @media (max-width: 600px) {
+    display: none;
+  }
+}
+
 @import './navbar';
 @import './search-box';
 @import './overide';

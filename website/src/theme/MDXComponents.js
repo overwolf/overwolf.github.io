@@ -11,6 +11,7 @@ import OWTabItem from '@site/src/components/ow-tabs/ow-tab-item';
 import ImageHeading from '@site/src/components/image-heading/image-heading';
 import OWTable from '@site/src/components/ow-table/ow-table';
 import OWTableRow from '@site/src/components/ow-table/ow-table-row';
+import OWexpandedRowGroup from '@site/src/components/ow-table/ow-expanded-row-group';
 import OWdataCell from '@site/src/components/ow-table/ow-data-cell';
 import Tagger from '../components/tagging/Tagger';
 import Tabs from '@theme/Tabs';
@@ -32,6 +33,7 @@ export default {
   ImageHeading: ImageHeading,
   OWTable: OWTable,
   OWTableRow: OWTableRow,
+  OWexpandedRowGroup: OWexpandedRowGroup,
   OWdataCell: OWdataCell,
   Tagger: Tagger,
   Tabs: Tabs,

@@ -1,4 +1,4 @@
-import React, {FC, Children, useRef, useState} from 'react';
+import React, {FC, useRef, useState} from 'react';
 
 interface OWTableRowProps {
   children: React.ReactNode;
@@ -21,13 +21,8 @@ const OWTableRow: FC<OWTableRowProps> = props => {
       const expandedRow = row.current.nextElementSibling as HTMLElement;
 
       if(!isRowExpended) {
-        if (window.innerWidth <= 600) {
-          expandedRow.style.display = "block";
-        } else {
-          expandedRow.style.display = "table-row";
-          setExpandedRowHeight(true);
-        }
-
+        expandedRow.style.display = "table-row";
+        setExpandedRowHeight(true);
         setIsRowExpended(true);
       } else {
         expandedRow.style.display = "none";
