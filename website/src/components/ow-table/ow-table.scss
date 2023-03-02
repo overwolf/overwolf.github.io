@@ -100,7 +100,7 @@
           width: 80vw;
         }
       }
-  
+
       .tabs-nav {
 
         .tabs-nav-item {
@@ -133,10 +133,15 @@
   .expand-row {
     position: absolute;
     background-color: transparent;
-    width: 24px;
-    height: 24px;
-    right: 16px;
-    bottom: 16px;
+    right: 8px;
+    bottom: 8px;
+    line-height: 22px;
+    font-size: 16px;
+    display: flex;
+    gap: 8px;
+    color: var(--color-220);
+    height: 40px;
+    padding: 8px 16px;
 
     &.is-expanded {
       svg {
@@ -145,17 +150,8 @@
     }
 
     &:hover {
-      span, svg {
-        color: var(--color-primary);
-      }
-    }
-
-    span {
-      font-size: 16px;
-      font-weight: bold;
-      position: absolute;
-      right: 32px;
-      color: var(--color-220);
+      background-color: rgba(255, 255, 255, 0.16);
+      color: var(--color-txt);
     }
 
     svg {
@@ -213,11 +209,11 @@ html[data-theme=dark] {
           .tabs-nav-item {
             background-color: var(--color-120);
             color: var(--color-999);
-  
+
             &.is-active {
               color: var(--color-txt);
             }
-  
+
             &:hover, &:focus {
               background-color: var(--color-333);
             }
@@ -228,14 +224,10 @@ html[data-theme=dark] {
     }
 
     .expand-row {
+      color: var(--color-999);
 
       &:hover {
-        span, svg {
-          color: var(--color-primary)
-        }
-      }
-
-      span {
+        background-color: rgba(255, 255, 255, 0.16);
         color: var(--color-txt);
       }
     }

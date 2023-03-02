@@ -27,7 +27,7 @@ const OWTableRow: FC<OWTableRowProps> = props => {
           expandedRow.style.display = "table-row";
           setExpandedRowHeight(true);
         }
-        
+
         setIsRowExpended(true);
       } else {
         expandedRow.style.display = "none";
@@ -39,8 +39,8 @@ const OWTableRow: FC<OWTableRowProps> = props => {
 
   const setExpandedRowHeight = (nextRowSibling: boolean) => {
     if(row.current !== null) {
-      const expandedRow = 
-      nextRowSibling ? 
+      const expandedRow =
+      nextRowSibling ?
       row.current.nextElementSibling as HTMLElement :
       row.current as HTMLElement;
 
@@ -59,15 +59,11 @@ const OWTableRow: FC<OWTableRowProps> = props => {
       {children}
 
       {expandButton &&
-        <button 
-          className={`expand-row ${isRowExpended ? 'is-expanded' : ''}`} 
-          title={`${!isRowExpended ? 'Expand Row ' : ''}`}
+        <button
+          className={`expand-row ${isRowExpended ? 'is-expanded' : ''}`}
           onClick={handleExpandRow}
         >
-          {isRowExpended && 
-            <span>Hide</span>
-          }
-          
+          {!isRowExpended ? 'See more' : 'Hide'}
           <svg><use href="/img/sprite.svg#arrowDown" /></svg>
 
         </button>
