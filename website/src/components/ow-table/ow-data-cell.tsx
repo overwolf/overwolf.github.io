@@ -5,12 +5,13 @@ interface OWdataCellProps {
   thTitle: string;
   width?: string;
   bold?: boolean;
+  center?: boolean;
 }
 
 // -----------------------------------------------------------------------------
 
 const OWdataCell: FC<OWdataCellProps> = props => {
-  const { children, thTitle, width, bold } = props;
+  const { children, thTitle, width, bold, center } = props;
   const cell = useRef<HTMLDivElement>(null)
 
   if(cell.current !== null) {
@@ -19,6 +20,9 @@ const OWdataCell: FC<OWdataCellProps> = props => {
     }
     if (bold) {
       cell.current.style.fontWeight = 'bold';
+    }
+    if (center) {
+      cell.current.style.textAlign = 'center';
     }
   }
 
