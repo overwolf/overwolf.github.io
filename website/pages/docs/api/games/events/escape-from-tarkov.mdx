@@ -88,6 +88,8 @@ Event       | Event Data   | Fired When    | Notes              | Since GEP Ver.
 ------------| -------------| --------------| ------------------ | --------------|
 match_start | null         | Match is found and about to start. | See [notes](#match_start-note) | 148.0  |
 match_end   | null         | Match has ended.                   | See [notes](#match_end-note)   | 148.0  |
+death       | null         | Player died                        |See [notes](#death-note)        | 221.0  |
+
 
 #### *match_start* note
 
@@ -103,6 +105,14 @@ Data Example:
 
 ```json
 {“event”:”match_end”,“data”:”null”}
+```
+
+#### *death* note
+
+Data Example:
+
+```json
+{“event”:"death",“data”:”null”}
 ```
 
 ## `game_info`
