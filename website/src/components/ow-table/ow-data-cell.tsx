@@ -37,16 +37,16 @@ const OWdataCell: FC<OWdataCellProps> = props => {
     }
 
     //set data attribute for mobile content in title of row
-    if (useAsMobileTitle) {
-      cell.current.setAttribute('data-cell', 'mobile');
-    }
+    // if (useAsMobileTitle) {
+    //   cell.current.setAttribute('data-cell', 'mobile');
+    // }
   }
 
 
 
   return (
     <div
-      className={`ow-data-cell ${desktopOnly ? 'desktop-only' : ''}`}
+      className={`ow-data-cell ${desktopOnly || useAsMobileTitle ? 'desktop-only' : ''}`}
       ref={cell}
     >
       <span className='mobile-label mobile-only'>{thTitle}</span>
