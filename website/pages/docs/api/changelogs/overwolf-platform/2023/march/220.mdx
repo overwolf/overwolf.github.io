@@ -1,0 +1,16 @@
+---
+id: 220
+image: "/img/embed/changelogs.jpg"
+title: "Version 0.220"
+sidebar_label: "0.220"
+sidebar_custom_props:
+  overwolf_platform: true
+  electron_platform: false
+---
+
+### Bug Fixes
+
+- Fixed an issue where the mouse position detected by overlay windows would be offset from the actual mouse position.
+- Fixed an issue where native windows with the [`is_alt_f4_blocked`](/api/manifest#is_alt_f4_blocked) property would ignore the taskbar close button.
+- Fixed an issue where an error would be thrown when trying to call [`overwolf.windows.bringToFront()`](/api/windows#bringtofrontwindowid-callback).
+- Fixed a mis-spelling in the logs produced by the [`overwolf.social.twitter.share()`](/api/social/twitter#sharetwittershareparameters-callback) method.
