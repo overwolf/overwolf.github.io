@@ -58,7 +58,7 @@
       &:nth-child(#{$i}) {
         .ow-table-body-row {
           animation: rowFadeIn 500ms ease forwards;
-          animation-delay: $i * 0.4s;
+          animation-delay: $i * 0.1s;
         }
       }
     }
