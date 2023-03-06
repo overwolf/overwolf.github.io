@@ -2,7 +2,7 @@ import React, {FC, useRef, useState} from 'react';
 
 interface OWTableRowProps {
   children: React.ReactNode;
-  expandButton: boolean;
+  expandButton?: boolean;
 }
 
 // -----------------------------------------------------------------------------

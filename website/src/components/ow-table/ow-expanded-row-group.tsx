@@ -2,7 +2,6 @@ import React, {FC, useRef} from 'react';
 
 interface OWexpandedRowGroupProps {
   children: React.ReactNode;
-  expandButton: boolean;
 }
 
 // -----------------------------------------------------------------------------

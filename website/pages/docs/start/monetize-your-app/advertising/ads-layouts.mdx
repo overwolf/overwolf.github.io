@@ -10,87 +10,66 @@ sidebar_custom_props:
 
 There will be a general description of where each layout is recommended in the app flow to provide maximum value for both creators and users.
 
+import TEST from '/assets/start/monetize-your-app/advertising/ads-layout/layout-types/ad-type-1.svg';
+import AdsLayoutRow from '@site/src/components/start/monetize-your-app/advertising/ads-layout-row';
+
+
 <ImageHeading
   title={'Desktop / 2nd screen windows'}
-  imgLightSrc={'/img/ads-layout/desk-window-light.svg'}
-  imgDarkSrc={'/img/ads-layout/desk-window-dark.svg'}
+  imgLightSrc={'/assets/start/monetize-your-app/advertising/ads-layout/desk-window-light.svg'}
+  imgDarkSrc={'/assets/start/monetize-your-app/advertising/ads-layout/desk-window-dark.svg'}
 >
   Description text
 </ImageHeading>
 
 <OWTable headerCellNames={['Layout', 'Value ($)', 'Description']}>
-  {/* start row + expanded row */}
-  <OWexpandedRowGroup>
-    <OWTableRow expandButton={true}>
-      <OWdataCell thTitle={'Layout'} bold={true} width={'20%'} useAsMobileTitle={true}>
-        1 Ad Placement
-        <img src={'/img/ads-layout/layout-types/ad-type-1.svg'} alt={'1 Ad Placement'} />
-      </OWdataCell>
-      <OWdataCell thTitle={'Value ($)'} width={'15%'}>
-        1.0x
-      </OWdataCell>
-      <OWdataCell thTitle={'Description'} width={'100%'}>
-        Content
-      </OWdataCell>
-    </OWTableRow>
-    <OWTableRow>
-      <OWTabs>
-        <OWTabItem tabID={'option-1'} label={'Ooption 1'}>
-          <img src={'/img/ads-layout/layout-types/ad-type-1.svg'} alt={'1 Ad Placement'} />
-        </OWTabItem>
-        <OWTabItem tabID={'option-2'} label={'Ooption 2'}>
-          <img src={'/img/ads-layout/layout-types/ad-type-1.svg'} alt={'1 Ad Placement'} />
-        </OWTabItem>
-        <OWTabItem tabID={'option-3'} label={'Ooption 3'}>
-          <img src={'/img/ads-layout/layout-types/ad-type-1.svg'} alt={'1 Ad Placement'} />
-          <p>bla bla bla</p>
-        </OWTabItem>
-        <OWTabItem tabID={'option-4'} label={'Ooption 4'}>
-          la la la
-        </OWTabItem>
-      </OWTabs>
-    </OWTableRow>
-  </OWexpandedRowGroup>
-  {/* end row + expanded row */}
-  {/* start row + expanded row */}
-  <OWexpandedRowGroup>
-    <OWTableRow expandButton={true}>
-      <OWdataCell thTitle={'Layout'} bold={true} width={'20%'} useAsMobileTitle={true}>
-        1 Ad Dinner
-        <img src={'/img/ads-layout/layout-types/ad-type-1.svg'} alt={'1 Ad Placement'}/>
-      </OWdataCell>
-      <OWdataCell thTitle={'Value ($)'} width={'15%'}>
-        2.0x
-      </OWdataCell>
-      <OWdataCell thTitle={'Description'} width={'100%'}>
-        Content
-      </OWdataCell>
-    </OWTableRow>
-    <OWTableRow>
-      <OWTabs>
-        <OWTabItem tabID={'option-1'} label={'Ooption 1'}>
-          <img src={'/img/ads-layout/layout-types/ad-type-1.svg'} alt={'1 Ad Placement'} />
-        </OWTabItem>
-        <OWTabItem tabID={'option-2'} label={'Ooption 2'}>
-          <img src={'/img/ads-layout/layout-types/ad-type-1.svg'} alt={'1 Ad Placement'} />
-        </OWTabItem>
-        <OWTabItem tabID={'option-3'} label={'Ooption 4'}>
-          <img src={'/img/ads-layout/layout-types/ad-type-1.svg'} alt={'1 Ad Placement'} />
-        </OWTabItem>
-        <OWTabItem tabID={'option-4'} label={'Ooption 4'}>
-          <img src={'/img/ads-layout/layout-types/ad-type-1.svg'} alt={'1 Ad Placement'} />
-        </OWTabItem>
-      </OWTabs>
-    </OWTableRow>
-  </OWexpandedRowGroup>
-  {/* end row + expanded row */}
+  <AdsLayoutRow 
+    layout={
+      {
+        image: '/assets/start/monetize-your-app/advertising/ads-layout/layout-types/ad-type-1.svg',
+        name: "Test Placement"
+      }
+    }
+    revenueBenchmark='2.0x'
+    description={
+      {
+        description: 'Simple test component',
+        hasVideo: true,
+        dimensions: '400x300, 300x250',
+        userFriction: 'Small',
+        designConstraints: 'Slight',
+        revenue: 'High',
+      }
+    }
+    tabs= {
+      [
+        {
+          name: 'Bottom Right',
+          image: '/assets/start/monetize-your-app/advertising/ads-layout/layout-types/ad-type-1.svg'
+        },
+        {
+          name: 'Bottom Left',
+          image: '/assets/start/monetize-your-app/advertising/ads-layout/layout-types/ad-type-1.svg'
+        },
+        {
+          name: 'Top Right',
+          image: '/assets/start/monetize-your-app/advertising/ads-layout/layout-types/ad-type-1.svg'
+        },
+        {
+          name: 'Top Left',
+          image: '/assets/start/monetize-your-app/advertising/ads-layout/layout-types/ad-type-1.svg'
+        }
+      ]
+    }
+  />
+  
 </OWTable>
 
 
 <ImageHeading
   title={'In-Game Windows'}
-  imgLightSrc={'/img/ads-layout/in-game-overlay-light.svg'}
-  imgDarkSrc={'/img/ads-layout/in-game-overlay-dark.svg'}
+  imgLightSrc={'/assets/start/monetize-your-app/advertising/ads-layout/in-game-overlay-light.svg'}
+  imgDarkSrc={'/assets/start/monetize-your-app/advertising/ads-layout/in-game-overlay-dark.svg'}
 >
   Description text
 </ImageHeading>

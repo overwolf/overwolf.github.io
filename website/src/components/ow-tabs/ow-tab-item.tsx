@@ -4,8 +4,8 @@ import React, {FC} from 'react';
 interface TabProps {
   tabID: string;
   label: string;
-  iconDarkSrc: string;
-  iconLightSrc: string;
+  iconDarkSrc?: string;
+  iconLightSrc?: string;
   className?: string;
   children: React.ReactNode;
 }
