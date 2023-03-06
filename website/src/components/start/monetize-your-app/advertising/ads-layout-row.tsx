@@ -4,6 +4,7 @@ import OWTableRow from '../../../ow-table/ow-table-row';
 import OWdataCell from '../../../ow-table/ow-data-cell';
 import OWTabs from '../../../ow-tabs/ow-tabs';
 import OWTabItem from '../../../ow-tabs/ow-tab-item';
+import ThemedImage from '../../../shorthands/themed-image/ThemedImage';
 
 
 function AdsLayoutRow(props: {
@@ -21,11 +22,10 @@ function AdsLayoutRow(props: {
     }
 }) {
     const { layout, revenueBenchmark, tabs, description } = props;
-    console.log(tabs);
     const tabsItems = tabs?.map(item => {
         return(
-            <OWTabItem tabID={item.name} label={item.name}>
-                <img src={item.image} alt={item.name} />
+            <OWTabItem key={item.name} tabID={item.name.toLocaleLowerCase().replace(' ', '-')} label={item.name}>
+                <ThemedImage imageUrl={item.image} alt={item.name} />
             </OWTabItem>
         )
     })
@@ -35,9 +35,9 @@ function AdsLayoutRow(props: {
     return (
         <OWexpandedRowGroup>
             <OWTableRow expandButton={!!tabs}>
-                <OWdataCell thTitle={'Layout'} bold={true} width={'20%'} useAsMobileTitle={true}>
-                    {layout.name}
-                    <img src={layout.image} />
+                <OWdataCell thTitle={'Layout'} width={'20%'} useAsMobileTitle={true}>
+                    <b>{layout.name}</b>
+                    <ThemedImage imageUrl={layout.image} alt={layout.name} />
                 </OWdataCell>
                 <OWdataCell thTitle={'Value ($)'} width={'15%'}>
                     {revenueBenchmark}

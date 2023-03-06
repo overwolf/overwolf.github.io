@@ -8,97 +8,172 @@ sidebar_custom_props:
   electron_platform: true
 ---
 
-There will be a general description of where each layout is recommended in the app flow to provide maximum value for both creators and users.
-
-import TEST from '/assets/start/monetize-your-app/advertising/ads-layout/layout-types/ad-type-1.svg';
 import AdsLayoutRow from '@site/src/components/start/monetize-your-app/advertising/ads-layout-row';
 
+Planning for Ads is hard.  
+To make it slightly easier, we have devised a list of recommended, optimized Ad Container combinations/layouts,
+while taking into account the many different factors at play. With this, we hope to give you a place to foothold to get started.
+
+:::tip Can't find the right layout for your case?
+Try to pick a few you like, and see why they work. Combine, experiment, and most importantly, get feedback from others. We are [always here](/support/contact-us) for
+any questions you may have!
+:::
 
 <ImageHeading
   title={'Desktop / 2nd screen windows'}
-  imgLightSrc={'/assets/start/monetize-your-app/advertising/ads-layout/desk-window-light.svg'}
-  imgDarkSrc={'/assets/start/monetize-your-app/advertising/ads-layout/desk-window-dark.svg'}
+  imgLightSrc={'/assets/start/monetize-your-app/advertising/ads-layout/desktop/window-light.svg'}
+  imgDarkSrc={'/assets/start/monetize-your-app/advertising/ads-layout/desktop/window.svg'}
 >
-  Description text
+
+Desktop / 2nd screen windows often stay open for long periods of time, with much less competition for screen space.
+
 </ImageHeading>
 
 <OWTable headerCellNames={['Layout', 'Value ($)', 'Description']}>
-  <AdsLayoutRow
+  <AdsLayoutRow 
     layout={
       {
-        image: '/assets/start/monetize-your-app/advertising/ads-layout/layout-types/ad-type-1.svg',
-        name: "Test Placement"
+        image: '/assets/start/monetize-your-app/advertising/ads-layout/desktop/one-ad-small/preview.svg',
+        name: "One Ad (Small)"
       }
     }
-    revenueBenchmark='2.0x'
+    revenueBenchmark='Benchmark (1.0x)'
     description={
       {
-        description: 'Simple test component',
+        description: 'A simple, one Container layout',
         hasVideo: true,
-        dimensions: '400x300, 300x250',
-        userFriction: 'Small',
-        designConstraints: 'Slight',
-        revenue: 'High',
+        dimensions: '400x300',
+        userFriction: 'Minimal',
+        designConstraints: 'Minimal',
+        revenue: 'Benchmark',
       }
     }
     tabs= {
       [
         {
           name: 'Bottom Right',
-          image: '/assets/start/monetize-your-app/advertising/ads-layout/layout-types/ad-type-1.svg'
+          image: '/assets/start/monetize-your-app/advertising/ads-layout/desktop/one-ad-small/full-size/layout.png'
         },
         {
           name: 'Bottom Left',
-          image: '/assets/start/monetize-your-app/advertising/ads-layout/layout-types/ad-type-1.svg'
-        },
-        {
-          name: 'Top Right',
-          image: '/assets/start/monetize-your-app/advertising/ads-layout/layout-types/ad-type-1.svg'
+          image: '/assets/start/monetize-your-app/advertising/ads-layout/desktop/one-ad-small/full-size/layout-bottom-left.png'
         },
         {
           name: 'Top Left',
-          image: '/assets/start/monetize-your-app/advertising/ads-layout/layout-types/ad-type-1.svg'
+          image: '/assets/start/monetize-your-app/advertising/ads-layout/desktop/one-ad-small/full-size/layout-top-left.png'
+        },
+        {
+          name: 'Top Right',
+          image: '/assets/start/monetize-your-app/advertising/ads-layout/desktop/one-ad-small/full-size/layout-top-right.png'
         }
       ]
     }
   />
-    <AdsLayoutRow
+  <AdsLayoutRow 
     layout={
       {
-        image: '/assets/start/monetize-your-app/advertising/ads-layout/layout-types/ad-type-1.svg',
-        name: "Test Placement"
+        image: '/assets/start/monetize-your-app/advertising/ads-layout/desktop/one-ad-large/preview.svg',
+        name: "One Ad (Large)"
       }
     }
-    revenueBenchmark='2.0x'
+    revenueBenchmark='1.3x'
     description={
       {
-        description: 'Simple test component',
+        description: 'A simple, one large Container layout',
         hasVideo: true,
-        dimensions: '400x300, 300x250',
-        userFriction: 'Small',
-        designConstraints: 'Slight',
-        revenue: 'High',
+        dimensions: '400x600',
+        userFriction: 'Minimal+',
+        designConstraints: 'Minimal+',
+        revenue: 'Benchmark+',
       }
     }
     tabs= {
       [
         {
-          name: 'Bottom Right',
-          image: '/assets/start/monetize-your-app/advertising/ads-layout/layout-types/ad-type-1.svg'
+          name: 'Right',
+          image: '/assets/start/monetize-your-app/advertising/ads-layout/desktop/one-ad-large/full-size/layout.png'
         },
         {
-          name: 'Bottom Left',
-          image: '/assets/start/monetize-your-app/advertising/ads-layout/layout-types/ad-type-1.svg'
-        },
-        {
-          name: 'Top Right',
-          image: '/assets/start/monetize-your-app/advertising/ads-layout/layout-types/ad-type-1.svg'
-        },
-        {
-          name: 'Top Left',
-          image: '/assets/start/monetize-your-app/advertising/ads-layout/layout-types/ad-type-1.svg'
+          name: 'Left',
+          image: '/assets/start/monetize-your-app/advertising/ads-layout/desktop/one-ad-large/full-size/layout-left.png'
         }
       ]
+    }
+  />
+  <AdsLayoutRow 
+    layout={
+      {
+        image: '/assets/start/monetize-your-app/advertising/ads-layout/desktop/two-ads-group/preview.svg',
+        name: "Two Ads (Group)"
+      }
+    }
+    revenueBenchmark='1.9x'
+    description={
+      {
+        description: 'A simple, two grouped small Containers layout',
+        hasVideo: true,
+        dimensions: '400x300, 300x250',
+        userFriction: 'Minimal+',
+        designConstraints: 'Minimal+',
+        revenue: 'High',
+      }
+    }
+  />
+  <AdsLayoutRow 
+    layout={
+      {
+        image: '/assets/start/monetize-your-app/advertising/ads-layout/desktop/two-ads-split/preview.svg',
+        name: "Two Ads (Split)"
+      }
+    }
+    revenueBenchmark='2.0x'
+    description={
+      {
+        description: 'A simple, split two Containers layout',
+        hasVideo: true,
+        dimensions: '400x300, 160x600',
+        userFriction: 'Noticable',
+        designConstraints: 'Noticable',
+        revenue: 'High',
+      }
+    }
+  />
+  <AdsLayoutRow 
+    layout={
+      {
+        image: '/assets/start/monetize-your-app/advertising/ads-layout/desktop/two-ads-large/preview.svg',
+        name: "Two Ads (Large)"
+      }
+    }
+    revenueBenchmark='3.4x'
+    description={
+      {
+        description: 'A simple, two large split Containers layout',
+        hasVideo: true,
+        dimensions: '400x600, 160x600',
+        userFriction: 'Noticable+',
+        designConstraints: 'Noticable+',
+        revenue: 'Very High',
+      }
+    }
+  />
+  <AdsLayoutRow 
+    layout={
+      {
+        image: '/assets/start/monetize-your-app/advertising/ads-layout/desktop/triple-ads-split/preview.svg',
+        name: "Triple Ads (split)"
+      }
+    }
+    revenueBenchmark='4.0x'
+    description={
+      {
+        description: 'A simple, split three Containers layout',
+        hasVideo: true,
+        dimensions: '400x300, 300x250, 160x600',
+        userFriction: 'Noticable+',
+        designConstraints: 'Noticable+',
+        revenue: 'Very High',
+      }
     }
   />
 </OWTable>
@@ -106,9 +181,191 @@ import AdsLayoutRow from '@site/src/components/start/monetize-your-app/advertisi
 
 <ImageHeading
   title={'In-Game Windows'}
-  imgLightSrc={'/assets/start/monetize-your-app/advertising/ads-layout/in-game-overlay-light.svg'}
-  imgDarkSrc={'/assets/start/monetize-your-app/advertising/ads-layout/in-game-overlay-dark.svg'}
+  imgLightSrc={'/assets/start/monetize-your-app/advertising/ads-layout/in-game/window-light.svg'}
+  imgDarkSrc={'/assets/start/monetize-your-app/advertising/ads-layout/in-game/window.svg'}
 >
-  Description text
+
+In-Game windows that display Ads often don't stay open for long periods, and must utilize their screen space as efficiently as possible.
+
 </ImageHeading>
 
+
+<OWTable headerCellNames={['Layout', 'Value ($)', 'Description']}>
+  <AdsLayoutRow 
+    layout={
+      {
+        image: '/assets/start/monetize-your-app/advertising/ads-layout/in-game/one-ad-small/preview.svg',
+        name: "One Ad (Small)"
+      }
+    }
+    revenueBenchmark='Benchmark (1.0x)'
+    description={
+      {
+        description: 'A simple, one Container layout',
+        hasVideo: false,
+        dimensions: '300x250',
+        userFriction: 'Minimal',
+        designConstraints: 'Minimal',
+        revenue: 'Benchmark',
+      }
+    }
+    tabs= {
+      [
+        {
+          name: 'Bottom Right',
+          image: '/assets/start/monetize-your-app/advertising/ads-layout/in-game/one-ad-small/full-size/layout.png'
+        },
+        {
+          name: 'Bottom Left',
+          image: '/assets/start/monetize-your-app/advertising/ads-layout/in-game/one-ad-small/full-size/layout-bottom-left.png'
+        },
+        {
+          name: 'Top Left',
+          image: '/assets/start/monetize-your-app/advertising/ads-layout/in-game/one-ad-small/full-size/layout-top-left.png'
+        },
+        {
+          name: 'Top Right',
+          image: '/assets/start/monetize-your-app/advertising/ads-layout/in-game/one-ad-small/full-size/layout-top-right.png'
+        }
+      ]
+    }
+  />
+  <AdsLayoutRow 
+    layout={
+      {
+        image: '/assets/start/monetize-your-app/advertising/ads-layout/in-game/one-ad-long/preview.svg',
+        name: "One Ad (Long)"
+      }
+    }
+    revenueBenchmark='1.1x'
+    description={
+      {
+        description: 'A simple, one long Container layout',
+        hasVideo: false,
+        dimensions: '160x600',
+        userFriction: 'Minimal',
+        designConstraints: 'Minimal',
+        revenue: 'Benchmark+',
+      }
+    }
+    tabs= {
+      [
+        {
+          name: 'Right',
+          image: '/assets/start/monetize-your-app/advertising/ads-layout/in-game/one-ad-long/full-size/layout.png'
+        },
+        {
+          name: 'Left',
+          image: '/assets/start/monetize-your-app/advertising/ads-layout/in-game/one-ad-long/full-size/layout-left.png'
+        }
+      ]
+    }
+  />
+  <AdsLayoutRow 
+    layout={
+      {
+        image: '/assets/start/monetize-your-app/advertising/ads-layout/in-game/one-ad-large/preview.svg',
+        name: "One Ad (Large)"
+      }
+    }
+    revenueBenchmark='1.3x'
+    description={
+      {
+        description: 'A simple, one large Container layout',
+        hasVideo: true,
+        dimensions: '400x600',
+        userFriction: 'Minimal',
+        designConstraints: 'Minimal',
+        revenue: 'Benchmark+',
+      }
+    }
+    tabs= {
+      [
+        {
+          name: 'Right',
+          image: '/assets/start/monetize-your-app/advertising/ads-layout/in-game/one-ad-large/full-size/layout.png'
+        },
+        {
+          name: 'Left',
+          image: '/assets/start/monetize-your-app/advertising/ads-layout/in-game/one-ad-large/full-size/layout-left.png'
+        }
+      ]
+    }
+  />
+  <AdsLayoutRow 
+    layout={
+      {
+        image: '/assets/start/monetize-your-app/advertising/ads-layout/in-game/two-ads-group/preview.svg',
+        name: "Two Ads (Group)"
+      }
+    }
+    revenueBenchmark='2.0x'
+    description={
+      {
+        description: 'A simple, two grouped small Containers layout',
+        hasVideo: false,
+        dimensions: '300x250, 300x250',
+        userFriction: 'Minimal+',
+        designConstraints: 'Minimal+',
+        revenue: 'High',
+      }
+    }
+  />
+  <AdsLayoutRow 
+    layout={
+      {
+        image: '/assets/start/monetize-your-app/advertising/ads-layout/in-game/two-ads-split/preview.svg',
+        name: "Two Ads (Split)"
+      }
+    }
+    revenueBenchmark='2.1x'
+    description={
+      {
+        description: 'A simple, split two Containers layout',
+        hasVideo: false,
+        dimensions: '300x250, 160x600',
+        userFriction: 'Minimal+',
+        designConstraints: 'Minimal+',
+        revenue: 'High',
+      }
+    }
+  />
+  <AdsLayoutRow 
+    layout={
+      {
+        image: '/assets/start/monetize-your-app/advertising/ads-layout/in-game/two-ads-large/preview.svg',
+        name: "Two Ads (Large)"
+      }
+    }
+    revenueBenchmark='3.4x'
+    description={
+      {
+        description: 'A simple, two large Containers layout',
+        hasVideo: true,
+        dimensions: '400x600, 160x600',
+        userFriction: 'Noticable+',
+        designConstraints: 'Noticable+',
+        revenue: 'Very High',
+      }
+    }
+  />
+  <AdsLayoutRow 
+    layout={
+      {
+        image: '/assets/start/monetize-your-app/advertising/ads-layout/in-game/triple-ads-split/preview.svg',
+        name: "Triple Ads (split)"
+      }
+    }
+    revenueBenchmark='4.1x'
+    description={
+      {
+        description: 'A simple, split three Containers layout',
+        hasVideo: false,
+        dimensions: '300x250, 300x250, 160x600',
+        userFriction: 'Noticable+',
+        designConstraints: 'Noticable+',
+        revenue: 'Very High',
+      }
+    }
+  />
+</OWTable>
