@@ -69,11 +69,15 @@ Data Example:
 ### Info Updates
 
 key               | Category    | Values                    | Notes                 | Since GEP Ver. |
------------------ | ------------| ------------------------- | --------------------- | -------------  | 
+----------------- | ------------| ------------------------- | --------------------- | -------------  |
 name              | game_info   | Local Player Name         |  See [notes](#name-note) |  128.0         |
 ultimate_cooldown | me          | Ultimate ability cooldown (range between 0-100)   | See [notes](#ultimate_cooldown-note) |  128.0         |
 
 #### *name* note
+
+:::danger
+"player" info will soon replace "name" info.
+:::
 
 Data Example:
 
@@ -126,9 +130,22 @@ Data Example:
 ### Info Updates
 
 key          | Category    | Values                    | Notes                 | Since GEP Ver. |
---------------- | -----------| --------------------------------------------- - | ------------- | 
+------------ | ------------| ------------------------- | --------------------- | ------------- | 
+player | game_info | Name of the local player in the lobby and in a match  |  See [notes](#player-note)  |  221.1.0 |
 phase | game_info | The current phase during the game  |  List of values See [notes](#phase-note)  |   215.0 |
 
+#### *player* note
+
+If the local player has special characters in their name the game will display these characters as □ everywhere in the UI except for the lobby. 
+
+player_name - local player name as displayed in the lobby  
+
+in_game_player_name - local player name as displayed inside a match, this parameter will update once the player entered a match.
+
+Data Example:
+```json
+{"info":{"game_info":{"player":"{\"player_name\": \"~JacksAtWork~\", \"in_game_player_name\": \"□JacksAtWork□\"}"}},"feature":"game_info"}
+```
 #### *phase* note
 
 Possible values:
