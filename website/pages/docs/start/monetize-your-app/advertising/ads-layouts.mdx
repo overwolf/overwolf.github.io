@@ -23,7 +23,7 @@ import AdsLayoutRow from '@site/src/components/start/monetize-your-app/advertisi
 </ImageHeading>
 
 <OWTable headerCellNames={['Layout', 'Value ($)', 'Description']}>
-  <AdsLayoutRow 
+  <AdsLayoutRow
     layout={
       {
         image: '/assets/start/monetize-your-app/advertising/ads-layout/layout-types/ad-type-1.svg',
@@ -62,7 +62,45 @@ import AdsLayoutRow from '@site/src/components/start/monetize-your-app/advertisi
       ]
     }
   />
-  
+    <AdsLayoutRow
+    layout={
+      {
+        image: '/assets/start/monetize-your-app/advertising/ads-layout/layout-types/ad-type-1.svg',
+        name: "Test Placement"
+      }
+    }
+    revenueBenchmark='2.0x'
+    description={
+      {
+        description: 'Simple test component',
+        hasVideo: true,
+        dimensions: '400x300, 300x250',
+        userFriction: 'Small',
+        designConstraints: 'Slight',
+        revenue: 'High',
+      }
+    }
+    tabs= {
+      [
+        {
+          name: 'Bottom Right',
+          image: '/assets/start/monetize-your-app/advertising/ads-layout/layout-types/ad-type-1.svg'
+        },
+        {
+          name: 'Bottom Left',
+          image: '/assets/start/monetize-your-app/advertising/ads-layout/layout-types/ad-type-1.svg'
+        },
+        {
+          name: 'Top Right',
+          image: '/assets/start/monetize-your-app/advertising/ads-layout/layout-types/ad-type-1.svg'
+        },
+        {
+          name: 'Top Left',
+          image: '/assets/start/monetize-your-app/advertising/ads-layout/layout-types/ad-type-1.svg'
+        }
+      ]
+    }
+  />
 </OWTable>
 
 

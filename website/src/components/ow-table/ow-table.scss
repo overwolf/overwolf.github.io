@@ -62,6 +62,10 @@
         }
       }
     }
+
+    .ow-table-body-row:nth-child(2)  {
+      animation-delay: unset;
+    }
   }
 
   .ow-table-body-row, .ow-table-header-row {
@@ -292,7 +296,7 @@ html[data-theme=dark] {
         div:first-child {
           color: var(--color-999);
         }
-  
+
         div:last-child {
           color: var(--color-txt);
         }
