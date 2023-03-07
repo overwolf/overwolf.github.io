@@ -58,7 +58,7 @@ const OWTableRow: FC<OWTableRowProps> = props => {
           className={`expand-row ${isRowExpended ? 'is-expanded' : ''}`}
           onClick={handleExpandRow}
         >
-          {!isRowExpended ? 'See more' : 'Hide'}
+          {!isRowExpended ? 'View Full' : 'Collapse'}
           <svg><use href="/img/sprite.svg#arrowDown" /></svg>
 
         </button>

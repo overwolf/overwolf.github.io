@@ -5,27 +5,46 @@ import OWdataCell from '../../../ow-table/ow-data-cell';
 import OWTabs from '../../../ow-tabs/ow-tabs';
 import OWTabItem from '../../../ow-tabs/ow-tab-item';
 import ThemedImage from '../../../shorthands/themed-image/ThemedImage';
+import './ads-layout-row.scss';
 
+
+function join(dir: string, path: string): string {
+    return `${dir}/${path}`;
+}
+
+function AdField(props: {title: string, value: string, first?: boolean}){
+    const {title, value, first} = props;
+    return (
+        <div style={{minWidth: first ? '250px' : ''}}>
+            <b style={{color: 'var(--color-999)'}}>{`${title}:`}</b>{` ${value}`}
+        </div>
+    )
+}
 
 function AdsLayoutRow(props: {
-    layout: {
-        image: string,
-        name: string
-    },
-    revenueBenchmark: string; tabs?: [{ image: string, name: string }]; description: {
+    name: string
+    assetsPath: string;
+    revenueBenchmark: string; tabs: string[]; overview: {
         description: string,
-        hasVideo: boolean,
+        showsVideo: boolean,
         dimensions: string,
         userFriction: string,
         designConstraints: string,
         revenue: string
     }
 }) {
-    const { layout, revenueBenchmark, tabs, description } = props;
-    const tabsItems = tabs?.map(item => {
+    const { name, assetsPath, revenueBenchmark, tabs, overview } = props;
+    const fullSizePath = join(assetsPath, 'full-size');
+    let tabsItems = tabs.map((item, i) => {
+        let name = `${item} Variant`;
+        item = item.replace(' Aligned', '');
+        const id = item.toLocaleLowerCase().replace(' ', '-');
+        let filePath = join(fullSizePath, 'layout.png')
+        if(i === 0) name += " (Main)"
+        else filePath = filePath.replace('.png', `-${id}.png`)
         return(
-            <OWTabItem key={item.name} tabID={item.name.toLocaleLowerCase().replace(' ', '-')} label={item.name}>
-                <ThemedImage imageUrl={item.image} alt={item.name} />
+            <OWTabItem key={id} tabID={id} label={name}>
+                <ThemedImage imageUrl={filePath} alt={name} />
             </OWTabItem>
         )
     })
@@ -34,28 +53,28 @@ function AdsLayoutRow(props: {
 
     return (
         <OWexpandedRowGroup>
-            <OWTableRow expandButton={!!tabs}>
-                <OWdataCell thTitle={'Layout'} width={'20%'} useAsMobileTitle={true}>
-                    <b>{layout.name}</b>
-                    <ThemedImage imageUrl={layout.image} alt={layout.name} />
+            <OWTableRow expandButton={true}>
+                <OWdataCell thTitle={'Layout'} width={'23%'} useAsMobileTitle={true}>
+                    <b>{name}</b>
+                    <ThemedImage imageUrl={join(assetsPath, 'preview.svg')} alt={`${name} Preview`} />
                 </OWdataCell>
-                <OWdataCell thTitle={'Value ($)'} width={'15%'}>
+                <OWdataCell thTitle={'Revenue Est. ($)'} width={'13%'}>
                     {revenueBenchmark}
                 </OWdataCell>
-                <OWdataCell thTitle={'Description'} width={'100%'}>
-                    <p>{description.description}</p>
-                    <div><b>Dimensions</b> - {description.dimensions}</div>
-                    <div><b>Revenue</b> - {description.revenue}, <b>Has Video</b> - {description.hasVideo ? "Yes" : "No"}</div>
-                    <div><b>Design Constraints</b> - {description.designConstraints}, <b>User Friction</b> - {description.userFriction}</div>
+                <OWdataCell thTitle={'Overview'} width={'64%'}>
+                    <p style={{marginBottom: '12px'}}>{overview.description}</p>
+                    <div>
+                        <div id='row'><AdField title='Dimensions' value={overview.dimensions}/></div>
+                        <div id='row'><AdField title='Revenue' value={overview.revenue} first={true}/> <AdField title='Show Video Ads' value={overview.showsVideo ? "Yes" : "No"}/></div>
+                        <div id='row'><AdField title='Design Constraints' value={overview.designConstraints} first={true}/> <AdField title='User Friction' value={overview.userFriction}/></div>
+                    </div>
                 </OWdataCell>
             </OWTableRow>
-            {tabs && 
-                <OWTableRow>
-                    <OWTabs>
-                        {tabsItems}
-                    </OWTabs>
-                </OWTableRow>
-            }
+            <OWTableRow>
+                <OWTabs>
+                    {tabsItems}
+                </OWTabs>
+            </OWTableRow>
         </OWexpandedRowGroup>
     );
 

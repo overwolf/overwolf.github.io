@@ -18,7 +18,7 @@ const ImageHeading: FC<ImageHeadingProps> = props => {
   const imgSrc = themeState == 'light' ? imgLightSrc : imgDarkSrc;
   return (
     <div className='image-heading'>
-      <img src={imgSrc} alt={title} />
+      <img src={imgSrc} alt={`${title} Icon`} />
       <div className='content'>
         <h2>{title}</h2>
         {children}

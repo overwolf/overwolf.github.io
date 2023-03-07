@@ -128,7 +128,7 @@
 
     @media (min-width: 600px) {
       &:has(.expand-row) > div:last-of-type {
-        padding-right: 50px;
+        padding-right: 35px;
         padding-bottom: 50px;
       }
     }
@@ -140,15 +140,15 @@
       }
 
       &:nth-child(1) {
-        width: 20%;
+        width: 23%;
       }
 
       &:nth-child(2) {
-        width: 15%;
+        width: 13%;
       }
 
       &:last-of-type {
-        width: 100%;
+        width: 64%;
       }
 
     }
