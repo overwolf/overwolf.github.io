@@ -1,0 +1,352 @@
+.ow-table {
+  display: table;
+  border-collapse:collapse;
+  width: 100%;
+  margin: 24px 0 42px;
+  background-color: var(--color-txt);
+
+  .ow-table-header {
+    display: table-header-group;
+
+    @media (max-width: 600px) {
+      display: none;
+    }
+
+  }
+
+  .ow-table-body {
+    display: table-row-group;
+    @media (max-width: 600px) {
+      display: block;
+    }
+  }
+
+  .ow-table-body-expended-row-group {
+    display: contents;
+
+    @media (max-width: 600px) {
+      display: flex;
+      flex-direction: column-reverse;
+    }
+
+    h1 {
+      background-color: var(--color-grey-light-2);
+      padding: 12px 16px;
+      font-size: 16px;
+      line-height: 24px;
+      font-family: lato;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      margin: 0;
+
+      div:first-child {
+        color: var(--color-450);
+        font-weight: 700;
+      }
+
+      div:last-child {
+        color: var(--color-220);
+      }
+
+      @media (min-width: 600px) {
+        display: none;
+      }
+    }
+
+    @for $i from 1 through 50 {
+      &:nth-child(#{$i}) {
+        .ow-table-body-row {
+          animation: rowFadeIn 500ms ease forwards;
+          animation-delay: $i * 0.1s;
+        }
+      }
+    }
+
+    .ow-table-body-row:nth-child(2)  {
+      animation-delay: unset;
+    }
+  }
+
+  .ow-table-body-row, .ow-table-header-row {
+    display: table-row;
+
+    @media (max-width: 600px) {
+      display: flex;
+      flex-direction: column;
+      height: auto !important;
+    }
+
+    &:has(.tabs-section) {
+      display: none;
+      background-color: var(--color-txt);
+
+      @media (max-width: 600px) {
+        display: block;
+        height: auto !important;
+      }
+    }
+
+    > div {
+      display: table-cell;
+      font-size: 16px;
+      padding: 12px 16px;
+      letter-spacing: 0.02em;
+      border-right: 1px solid white;
+
+      width: auto;
+
+      @media (max-width: 600px) {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+        width: 100% !important;
+        padding-bottom: 0;
+
+        &:last-of-type {
+          padding-bottom: 16px;
+        }
+      }
+    }
+  }
+
+  .ow-table-header-row {
+    background-color: var(--color-txt);
+    color: var(--color-450);
+
+    div {
+      white-space: nowrap;
+    }
+  }
+
+  .ow-table-body-row {
+    background-color: var(--color-grey-light-2);
+    color: var(--color-220);
+    position: relative;
+    border-bottom: 1px solid white;
+    opacity: 0;
+
+    @media (min-width: 600px) {
+      &:has(.expand-row) > div:last-of-type {
+        padding-right: 35px;
+        padding-bottom: 50px;
+      }
+    }
+
+    > div {
+
+      > span img {
+        margin-top: 8px;
+      }
+
+      &:nth-child(1) {
+        width: 23%;
+      }
+
+      &:nth-child(2) {
+        width: 13%;
+      }
+
+      &:last-of-type {
+        width: 64%;
+      }
+
+    }
+
+    .tabs-section {
+      position: absolute;
+      width: 100%;
+      padding: 16px;
+      background-color: var(--color-txt);
+
+      @media (max-width: 600px) {
+        position: unset;
+        padding: 16px 0;
+      }
+
+      .tabs-header {
+        @media (max-width: 600px) {
+          padding-left: 16px;
+          width: calc(100vw - 34px);
+        }
+      }
+
+      .tabs-nav {
+
+        .tabs-nav-item {
+          flex: initial;
+          height: 46px;
+          font-size: 14px;
+          background-color: var(--color-txt);
+          color: var(--color-450);
+
+          // @media (max-width: 600px) {
+          //   padding: 8px 14px;
+          // }
+
+          &.is-active {
+            color: var(--color-220);
+          }
+
+          &:hover, &:focus {
+            background-color: var(--color-grey-1);
+          }
+        }
+      }
+
+      .panels-container {
+        padding: 24px 0 0;
+
+        @media (max-width: 600px) {
+          padding-left: 16px;
+          padding-right: 16px;
+        }
+      }
+    }
+  }
+
+  .expand-row {
+    position: absolute;
+    background-color: transparent;
+    right: 8px;
+    bottom: 8px;
+    line-height: 22px;
+    font-size: 16px;
+    display: flex;
+    gap: 8px;
+    color: var(--color-220);
+    height: 40px;
+    padding: 8px 16px;
+
+    @media (max-width: 600px) {
+      display: none;
+    }
+
+    &.is-expanded {
+      svg {
+        transform: rotate(180deg);
+      }
+    }
+
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.16);
+      color: var(--color-txt);
+    }
+
+    svg {
+      width: 24px;
+      height: 24px;
+      pointer-events: none;
+      transition: transform 150ms ease;
+    }
+  }
+
+  .mobile-label {
+    color: var(--color-450);
+    font-weight: 700;
+    padding-right: 8px;
+  }
+
+  .mobile-only {
+    display: none;
+
+    @media (max-width: 600px) {
+     display: block;
+    }
+  }
+
+  .desktop-only {
+
+    @media (max-width: 600px) {
+     display: none !important;
+    }
+  }
+}
+
+@keyframes rowFadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+html[data-theme=dark] {
+
+  .ow-table {
+    background-color: var(--color-120);
+
+    .ow-table-body-row, .ow-table-header-row {
+
+      &:has(.tabs-section) {
+        background-color: var(--color-120);
+      }
+
+      > div {
+        border-color: var(--color-100);
+      }
+    }
+
+    .ow-table-body-expended-row-group {
+
+      h1 {
+        background-color: var(--color-220);
+
+        div:first-child {
+          color: var(--color-999);
+        }
+
+        div:last-child {
+          color: var(--color-txt);
+        }
+
+      }
+    }
+
+    .ow-table-header-row {
+      background-color: var(--color-120);
+      color: var(--color-999);
+    }
+
+    .ow-table-body-row {
+      background-color: var(--color-220);
+      color: var(--color-txt);
+      border-color: var(--color-100);
+
+      .tabs-section {
+        background-color: var(--color-120);
+
+        .tabs-nav {
+
+          .tabs-nav-item {
+            background-color: var(--color-120);
+            color: var(--color-999);
+
+            &.is-active {
+              color: var(--color-txt);
+            }
+
+            &:hover, &:focus {
+              background-color: var(--color-333);
+            }
+          }
+        }
+
+      }
+    }
+
+    .expand-row {
+      color: var(--color-999);
+
+      &:hover {
+        background-color: rgba(255, 255, 255, 0.16);
+        color: var(--color-txt);
+      }
+    }
+
+    .mobile-only {
+      color: var(--color-999);
+    }
+  }
+}
