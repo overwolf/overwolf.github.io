@@ -52,7 +52,7 @@ function AdsLayoutRow(props: {
     // ---------------------------------------------------------------------------
 
     return (
-        <OWexpandedRowGroup>
+        <OWexpandedRowGroup mobileTitle={'Layout'} mobileDescription={name}>
             <OWTableRow expandButton={true}>
                 <OWdataCell thTitle={'Layout'} width={'23%'} useAsMobileTitle={true}>
                     <b>{name}</b>
