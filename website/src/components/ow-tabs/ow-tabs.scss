@@ -2,6 +2,11 @@
   background-color: var(--color-grey-light-2);
 
   .tabs-header {
+
+    &::-webkit-scrollbar{
+      display: none;
+    }
+
     @media (max-width: 600px) {
       overflow-x: scroll;
     }
@@ -10,6 +15,10 @@
   .tabs-nav {
     display: flex;
     border-bottom: 1px solid var(--color-grey-1);
+
+    @media (max-width: 600px) {
+      border-bottom: none;
+    }
 
     //if there are more than 3 tabs present than fit width of each tab button
     &:has(> button:nth-child(3)) {
@@ -34,6 +43,11 @@
       justify-content: center;
       align-items: center;
       gap: 12px;
+
+      @media (max-width: 600px) {
+        border-bottom: 1px solid var(--color-grey-1);
+      }
+      
 
       &:hover, &:focus {
         background-color: var(--color-grey-1);
@@ -104,7 +118,7 @@ html[data-theme=dark] {
       .tabs-nav-item {
         color: var(--color-999);
         background-color: var(--color-120);
-        
+        border-color: var(--color-333);
 
         &:hover {
           color: var(--color-txt);
