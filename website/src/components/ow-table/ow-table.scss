@@ -16,8 +16,12 @@
 
   .ow-table-body {
     display: table-row-group;
+
     @media (max-width: 600px) {
-      display: block;
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
+      background-color: var(--light-mode-bg);;
     }
   }
 
@@ -144,18 +148,6 @@
         padding-left: 16px;
       }
 
-      // &:nth-child(1) {
-      //   width: 23%;
-      // }
-
-      // &:nth-child(2) {
-      //   width: 13%;
-      // }
-
-      // &:last-of-type {
-      //   width: 64%;
-      // }
-
     }
 
     .tabs-section {
@@ -280,6 +272,12 @@ html[data-theme=dark] {
 
   .ow-table {
     background-color: var(--color-120);
+
+    .ow-table-body {
+      @media (max-width: 600px) {
+        background-color: black;
+      }
+    }
 
     .ow-table-body-row, .ow-table-header-row {
 
