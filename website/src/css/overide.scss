@@ -539,9 +539,9 @@ html[data-theme="dark"]{
     display: none;
   }
   @media screen and (max-width: 996px) {
-    img[src*="desktop"]{
-      display: none;
-    }
+    // img[src*="desktop"]{
+    //   display: none;
+    // }
     img[src*="mobile"]{
       margin: auto;
     }

@@ -16,7 +16,7 @@ function AdField(props: {title: string, value: string, first?: boolean}){
     const {title, value, first} = props;
     return (
         <div style={{minWidth: first ? '250px' : ''}}>
-            <b style={{color: 'var(--color-999)'}}>{`${title}:`}</b>{` ${value}`}
+            <span style={{color: 'var(--color-999)'}}>{`${title}:`}</span>{` ${value}`}
         </div>
     )
 }
@@ -64,9 +64,9 @@ function AdsLayoutRow(props: {
                 <OWdataCell thTitle={'Overview'} width={'64%'}>
                     <p style={{marginBottom: '12px'}}>{overview.description}</p>
                     <div>
-                        <div id='row'><AdField title='Dimensions' value={overview.dimensions}/></div>
-                        <div id='row'><AdField title='Revenue' value={overview.revenue} first={true}/> <AdField title='Show Video Ads' value={overview.showsVideo ? "Yes" : "No"}/></div>
-                        <div id='row'><AdField title='Design Constraints' value={overview.designConstraints} first={true}/> <AdField title='User Friction' value={overview.userFriction}/></div>
+                        <div className='row'><AdField title='Dimensions' value={overview.dimensions}/></div>
+                        <div className='row'><AdField title='Revenue' value={overview.revenue} first={true}/> <AdField title='Show Video Ads' value={overview.showsVideo ? "Yes" : "No"}/></div>
+                        <div className='row'><AdField title='Design Constraints' value={overview.designConstraints} first={true}/> <AdField title='User Friction' value={overview.userFriction}/></div>
                     </div>
                 </OWdataCell>
             </OWTableRow>
