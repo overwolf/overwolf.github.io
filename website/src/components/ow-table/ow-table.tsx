@@ -1,5 +1,6 @@
 import './ow-table.scss';
-import React, {FC} from 'react';
+import React, {FC, useState} from 'react';
+import Preloader from '../preloader/preloader';
 interface OWTableProps {
   children: React.ReactNode;
   headerCellNames: Array<string>;
@@ -13,8 +14,18 @@ const OWTable: FC<OWTableProps> = props => {
     headerCellNames = []
   } = props;
 
+  const [layoutLoad, isLayoutLoad] = useState(false);
+
+  setTimeout(() => {
+    isLayoutLoad(true);
+  }, 1500);
+
   return (
-    <section className='ow-table'>
+    <>
+   { !layoutLoad &&
+     <Preloader />
+   }
+    <section className='ow-table' style={{display: layoutLoad ? '' : 'none'}}>
       <div className='ow-table-header'>
         <div className='ow-table-header-row'>
           {headerCellNames.length != 0 &&
@@ -28,6 +39,7 @@ const OWTable: FC<OWTableProps> = props => {
         </div>
 
     </section>
+    </>
   );
 };
 
