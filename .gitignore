@@ -16,3 +16,5 @@ yarn.lock
 website/pages/docs/api/changelogs/changelogs.mdx
 .yarn/cache
 .yarn/install-state.gz
+website/pages/docs/api/changelogs/changelogs.mdx
+scripts/configs/clear.cfg
