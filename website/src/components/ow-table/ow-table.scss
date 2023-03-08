@@ -185,16 +185,15 @@
           background-color: var(--color-txt);
           color: var(--color-450);
 
-          // @media (max-width: 600px) {
-          //   padding: 8px 14px;
-          // }
-
           &.is-active {
             color: var(--color-220);
           }
 
           &:hover {
-            background-color: var(--color-grey-1);
+            
+            @media (min-width: 600px) {
+              background-color: var(--color-grey-1);
+            }
           }
         }
       }
@@ -333,7 +332,10 @@ html[data-theme=dark] {
             }
 
             &:hover{
-              background-color: var(--color-333);
+              
+              @media (min-width: 600px) {
+                background-color: var(--color-333);
+              }
             }
           }
         }
