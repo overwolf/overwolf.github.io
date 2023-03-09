@@ -1,0 +1,43 @@
+---
+id: user-logs
+image: "/img/embed/dev-tools.jpg"
+title: User Logs
+sidebar_position: 30
+sidebar_custom_props:
+  overwolf_platform: true
+  electron_platform: false
+---
+
+Using this tab, you can view, sort, and download User Logs [uploaded by your app](https://overwolf.github.io/api/utils#uploadclientlogsuploadclientlogsoptions-callback) in the past last 3 months,
+to be able to investigate hard-to-catch issues directly, and even get a deeper understanding of your app's real-time usage.
+
+<ImageBoxModal>
+  <img src={require('/assets/tools/developers-console/all-applications/user-logs/index.jpg').default} alt="The User Logs Tab" />
+</ImageBoxModal>
+
+## Live Graph
+
+Using the Graph, you can get an overview of the amount of User Logs uploaded every hour in the past 7 days.
+Clicking on any one particular hour will filter the [User Logs Overview](#user-logs-overview) to that specific hour.
+
+## User Logs Overview
+
+In the following table, you can view all User Logs uploaded within the past 3 months, split into pages using
+[The Paging Footer](/tools/developers-console#the-footer-toolbar).
+
+For every User Logs file, you can then find the following fields:
+- Name ([`file-prefix`](https://overwolf.github.io/api/utils#uploadclientlogsoptions-object) + `_generated-file-name`) - Name of this logs file.
+- App Version - The version of the app from which this logs file was uploaded.
+- Overwolf Version - The Overwolf Version from which this logs file was uploaded.
+- Created - The date at which this logs file was uploaded.
+- Username - The Overwolf username of the user that uploaded these logs. If the user was not logged in, this will equal to their [Overwolf Machine ID](http://localhost:3000/api/profile#note-userid-is-not-a-unique-identifier).
+- Download button - Allows you to download the relevant logs file.
+
+You can also sort the logs based on any of those fields, in either an Ascending or Descending order.
+
+### Filtering
+
+The displayed User Logs files can be filtered using the following:
+- Start & End date - Define a date range from which to display logs.
+- Today | Yesterday | 7D - Alternative way to define the date range, corresponding to "Current day", "Last day", and "Last 7 Days" respectively.
+- Log name prefix - Filter by searching through the User Logs' [file prefix](https://overwolf.github.io/api/utils#uploadclientlogsoptions-object). This filter is applied upon clicking the Filter button.
