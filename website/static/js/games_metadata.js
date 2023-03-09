@@ -327,6 +327,14 @@ const GamesMetaData = {
         "iconUrl": "/img/games-logos/axie-infinity-origin.png",
         "iconLargeUrl": "/img/games-logos/large/axie-infinity-origin.png"
     },
+    "22638": {
+        "id": 22638,
+        "name": "Sons of the Forest",
+        "path": "/status/sons-of-the-forest",
+        "docs": "/api/games/events/sons-of-the-forest",
+        "iconUrl": "/img/games-logos/sons-of-the-forest.png",
+        "iconLargeUrl": "/img/games-logos/large/sons-of-the-forest.png"
+    },
     "215701": {
         "id": 215701,
         "displayId": 5426,
