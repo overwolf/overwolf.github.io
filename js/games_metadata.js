@@ -53,6 +53,7 @@ const GamesMetaData = {
         "id": 7314,
         "name": "Dota 2",
         "path": "/status/dota-2",
+        "compliance": "/start/game-compliance/dota-2",
         "docs": "/api/games/events/dota-2",
         "iconUrl": "/img/games-logos/dota-2.png",
         "iconLargeUrl": "/img/games-logos/large/dota-2.png"
