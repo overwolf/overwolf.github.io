@@ -4,10 +4,15 @@
         "path": "2023/february",
         "name": "219"
     },
-    "dev": {
-        "date": "February 2023",
+    "deploying": {
+        "date": "March 2023",
         "path": "2023/march",
         "name": "220"
+    },
+    "dev": {
+        "date": "March 2023",
+        "path": "2023/march",
+        "name": "221"
     },
     "ow-electron": {
         "date": "January 2023",
