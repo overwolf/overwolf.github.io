@@ -7,12 +7,13 @@ interface ImageHeadingProps {
   imgLightSrc: string;
   imgDarkSrc: string;
   children: React.ReactNode;
+  id: string;
 }
 
 // -----------------------------------------------------------------------------
 
 const ImageHeading: FC<ImageHeadingProps> = props => {
-  const { title, imgLightSrc, imgDarkSrc, children } = props;
+  const { title, imgLightSrc, imgDarkSrc, children, id } = props;
 
   const themeState = useThemeState();
   const imgSrc = themeState == 'light' ? imgLightSrc : imgDarkSrc;
@@ -20,7 +21,7 @@ const ImageHeading: FC<ImageHeadingProps> = props => {
     <div className='image-heading'>
       <img src={imgSrc} alt={`${title} Icon`} />
       <div className='content'>
-        <h2>{title}</h2>
+        <h2 id={id}>{title}</h2>
         {children}
       </div>
     </div>

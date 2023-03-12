@@ -12,13 +12,18 @@ import AdsLayoutRow from '@site/src/components/start/monetize-your-app/advertisi
 
 Planning for Ads is hard, especially with so many [sizes](working-with-ads#list-of-ad-sizes) to choose from.
 
-To make it slightly easier, we have devised a list of recommended, optimized Ad Container combinations/layouts,
-while taking into account the many different factors at play. You can also find a brief summary of each one's pros and cons,
-as well as the ***(very rough)*** revenue estimates for its performance*, when compared to the benchmark layout of its type.
+To make it slightly easier, we have devised a list of recommended, optimized Ad Container combinations/layouts, for different app windows
+while taking into account the many different factors at play. You can also find a brief summary of each layouts's pros and cons,
+as well as a ***(very rough)*** revenue estimate for its performance*, when compared to the benchmark layout of its type.
 With this, we hope to give you a place to foothold to get started.
 
+*\* Revenue estimates are generated based on aggregated performance data across the entire platform, across many countries and setups. Actual milage may vastly differ.*
 
-*\* Revenue estimates are generated based on aggregated performance data across the entire platform, actual milage may differ.*
+
+Currently, the following window types are accounted for:
+- [Desktop / 2nd screen](#desktop-2nd-screen-windows) - Native, desktop windows, existing outside of a game's context
+- [In-Game](#in-game-windows) - In-game, overlay windows, existing only within a game's overlay
+
 
 :::tip Can't find the right layout for your case?
 Try to pick a few you like, and see why they work. Combine, experiment, and most importantly, get feedback from others. We are [always here](/support/contact-us) for
@@ -34,6 +39,7 @@ Add explanation about ltr reading order, and why Ads should sit in the "dead spa
   title={'Desktop / 2nd screen windows'}
   imgDarkSrc={'/assets/start/monetize-your-app/advertising/recommended-ads-layouts/desktop/window.svg'}
   imgLightSrc={'/assets/start/monetize-your-app/advertising/recommended-ads-layouts/desktop/window-light.svg'}
+  id={'desktop-2nd-screen-windows'}
 >
 
 Desktop / 2nd screen windows often stay open for long periods of time, with much less competition for screen space.
@@ -44,7 +50,7 @@ Desktop / 2nd screen windows often stay open for long periods of time, with much
   <AdsLayoutRow 
     assetsPath='/assets/start/monetize-your-app/advertising/recommended-ads-layouts/desktop/one-ad-medium'
     name='One Ad (Medium)'
-    revenueBenchmark='Benchmark (1.0x)'
+    revenueBenchmark='Baseline (1.0x)'
     overview={
       {
         description: 'A simple, one Container layout',
@@ -52,7 +58,7 @@ Desktop / 2nd screen windows often stay open for long periods of time, with much
         dimensions: '400x300',
         userFriction: 'Minimal',
         designConstraints: 'Minimal',
-        revenue: 'Benchmark',
+        revenue: 'Baseline',
       }
     }
     tabs= {
@@ -72,7 +78,7 @@ Desktop / 2nd screen windows often stay open for long periods of time, with much
         dimensions: '400x600',
         userFriction: 'Minimal+',
         designConstraints: 'Minimal+',
-        revenue: 'Benchmark+',
+        revenue: 'Baseline+',
       }
     }
     tabs= {
@@ -158,6 +164,7 @@ Desktop / 2nd screen windows often stay open for long periods of time, with much
   title={'In-Game Windows'}
   imgDarkSrc={'/assets/start/monetize-your-app/advertising/recommended-ads-layouts/in-game/window.svg'}
   imgLightSrc={'/assets/start/monetize-your-app/advertising/recommended-ads-layouts/in-game/window-light.svg'}
+  id={'in-game-windows'}
 >
 
 In-Game windows that display Ads often don't stay open for long periods, and must utilize their screen space as efficiently as possible.
@@ -169,7 +176,7 @@ In-Game windows that display Ads often don't stay open for long periods, and mus
   <AdsLayoutRow 
     assetsPath='/assets/start/monetize-your-app/advertising/recommended-ads-layouts/in-game/one-ad-small'
     name='One Ad (Small)'
-    revenueBenchmark='Benchmark (1.0x)'
+    revenueBenchmark='Baseline (1.0x)'
     overview={
       {
         description: 'A simple, one Container layout',
@@ -177,7 +184,7 @@ In-Game windows that display Ads often don't stay open for long periods, and mus
         dimensions: '300x250',
         userFriction: 'Minimal',
         designConstraints: 'Minimal',
-        revenue: 'Benchmark',
+        revenue: 'Baseline',
       }
     }
     tabs= {
@@ -195,7 +202,7 @@ In-Game windows that display Ads often don't stay open for long periods, and mus
         dimensions: '160x600',
         userFriction: 'Minimal',
         designConstraints: 'Minimal',
-        revenue: 'Benchmark+',
+        revenue: 'Baseline+',
       }
     }
     tabs= {
@@ -213,7 +220,7 @@ In-Game windows that display Ads often don't stay open for long periods, and mus
         dimensions: '400x600',
         userFriction: 'Minimal',
         designConstraints: 'Minimal',
-        revenue: 'Benchmark+',
+        revenue: 'Baseline+',
       }
     }
     tabs= {
