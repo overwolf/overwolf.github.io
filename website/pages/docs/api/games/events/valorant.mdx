@@ -135,7 +135,7 @@ round_phase  | match_info  | Current state of the round.|See [notes](#round_phas
 team         | match_info  | Attack / Defense.      |See [notes](#team-note)|   149.0       |
 match_outcome| match_info  | Victory / Defeat.      |See [notes](#match_outcome-note)|   149.0       |
 round_report | match_info  | * Total Damage<br></br>* Total number of bullets hit.<br></br>* Number of bullets hit on head.<br></br>* Number of hit headshots that killed. |See [notes](#round_report-note)|   150.0       |
-game_mode    | match_info  |* Mode: Bomb / Quick Bomb<br></br>* Ranked: 0 (Practice), 1 (Competitive), 2 (Spike Rush/Other) |See [notes](#game_mode-note)|   151.0       |
+game_mode    | match_info  |The current played mode and whether or not it is ranked/custom|See [notes](#game_mode-note)|   151.0       |
 roster    | match_info  | * Player Name<br></br>* Player ID<br></br>* Name of picked character<br></br>* Player's Rank<br></br>* Whether it is the local player<br></br>* If player is a teammate or not. |See [notes](#roster-note)|   151.0       |
 scoreboard    | match_info  | Scoreboard changes and updates during the game |See [notes](#scoreboard-note)|   151.0       |
 kill_feed    | match_info  | kill feed updates during the game |See [notes](#kill_feed-note)|   209.0       |
@@ -200,25 +200,29 @@ Data Example:
 
 #### *game_mode* note
 
-Current values:
+List of parameters:
 
-* Bomb = Regular game (Unrated)
+**mode-** 
+
+* Bomb = Regular game (Unrated/Competitve)
 * Quick Bomb = Spike Rush
-* Ranked = 1 = Competitive
 * Deathmatch = Deathmatch
 * Escalation = Escalation
 * Swift = Swiftplay
+* Range = Range 
 
-Both of these values also have "custom" value which is identified as a Boolean, either "True" or "False".<br></br>
-True meaning that the current game is custom made, and false being an online game which is not custom.<br></br>
-We recently added "ranked" value to game_mode which will indicate if the game you are playing is ranked or not. The values you will be getting range betweeb 0 which is received in the practice range, 1 which means it's a ranked game, and 2 which is received during Spike Rush and is just a random value, it does not represent a ranked game.
+**custom -** ture/faslse 
+
+**ranked -** 
+* 1 = Competitve  
+* 2 = Any other mode 
 
 Data Example:
 
 ```json
 {"info":{"match_info":{"game_mode":"{"mode":"bomb","custom":true,"ranked":"0"}"}},"feature":"match_info"}
 {"info":{"match_info":{"game_mode":"{"mode":"bomb","custom":false,"ranked":"1"}"}},"feature":"match_info"}
-{"info":{"match_info":{"game_mode":"{"mode":"deathmatch","custom":false,"ranked":"1"}"}},"feature":"match_info"}
+{"info":{"match_info":{"game_mode":"{"mode":"deathmatch","custom":false,"ranked":"2"}"}},"feature":"match_info"}
 ```
 
 #### *roster* note
