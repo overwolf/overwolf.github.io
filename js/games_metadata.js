@@ -328,6 +328,14 @@ const GamesMetaData = {
         "iconUrl": "/img/games-logos/axie-infinity-origin.png",
         "iconLargeUrl": "/img/games-logos/large/axie-infinity-origin.png"
     },
+    "22312": {
+        "id": 22312,
+        "name": "LEAP",
+        "path": "/status/leap",
+        "docs": "/api/games/events/leap",
+        "iconUrl": "/img/games-logos/leap.png",
+        "iconLargeUrl": "/img/games-logos/large/leap.png"
+    },
     "22638": {
         "id": 22638,
         "name": "Sons of the Forest",
