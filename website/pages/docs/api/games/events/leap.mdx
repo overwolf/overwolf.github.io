@@ -79,6 +79,7 @@ Data Example:
 key             | Category   | Values                     | Notes                           | Since GEP Ver.        |
 --------------- | -----------| ---------------------------|---------------------------------| ------------- |
 match_state | match_info | The current state in the match  |  See [notes](#match_state-note).  |   221.0.0             |
+match_outcome | match_info | The outcome of the match  |  See [notes](#match_outcome-note).  |   222.0.0             |
 
 ### Events
 
@@ -86,6 +87,8 @@ Event  | Event Data        | Fired When (announcement)           | Notes      | 
 -------| ------------------| -------------------------------------| ---------- | --------------|
 match_start | null      | Match started. |See [notes](#match_start-note)|    221.0.0      |
 match_end   | null      | Match ended.   |See [notes](#match_end-note)|    221.0.0      |
+kill | null      | Match started. |See [notes](#kill-note)|    222.0.0      |
+death   | null      | Match ended.   |See [notes](#death-note)|    222.0.0      |
 
 #### *match_state* note
 
@@ -93,6 +96,19 @@ Data Example:
 
 ```json
 {"info":{"match_info":{"match_state":"InProgress"}},"feature":"match_info"}
+```
+#### *match_outcome* note
+
+Possible values: 
+
+* win
+* loss
+
+Data Example:
+
+```json
+{"info":{"match_info":{"match_outcome":"loss"}},"feature":"match_info"}
+{"info":{"match_info":{"match_outcome":"win"}},"feature":"match_info"}
 ```
 
 #### *match_start* note
@@ -109,5 +125,20 @@ Data Example:
 
 ```json
 {"events":[{"name":"match_end","data":""}]}
+```
+#### *kill* note
+
+Data Example:
+
+```json
+{"events":[{"name":"kill","data":""}]}
+```
+
+#### *death* note
+
+Data Example:
+
+```json
+{"events":[{"name":"death","data":""}]}
 ```
 
