@@ -669,11 +669,21 @@ Data Example:
 
 key            | Category    | Values                           | Notes                    | Since GEP Ver. |
 -------------- | ------------| ---------------------------------|--------------------------|---------------|
-me   |   me    | List of available augments   | See [notes](#augments-note) |   197.1       |
+me   |   me    | List of available augments   | See [notes](#me-note) |   197.1       |
+picked_augment   |   me    | The last augment that the player picked   | See [notes](#picked_augment-note) |   222.0       |
 
-#### *augments* note
+#### *me* note
 
 Data Example:
-` {"feature":"augments","category":"me","key":"me","value":"{\"augment_1\":{\"name\":\"TFT8_Augment_DefenderTrait\"}, \"augment_2\":{\"name\":\"TFT7_Augment_PandorasBench\"}, \"augment_3\":{\"name\":\"TFT6_Augment_SecondWind1\"}, }"}`
+```json
+{"feature":"augments","category":"me","key":"me","value":"{\"augment_1\":{\"name\":\"TFT8_Augment_DefenderTrait\"}, \"augment_2\":{\"name\":\"TFT7_Augment_PandorasBench\"}, \"augment_3\":{\"name\":\"TFT6_Augment_SecondWind1\"}, }"}
+```
+
+#### *picked_augment* note
+
+Data Example:
+```json
+{"info":{"me":{"picked_augment":"TFT6_Augment_Distancing2"}},"feature":"augments"}
+```
 
 
