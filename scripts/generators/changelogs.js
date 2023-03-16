@@ -20,6 +20,7 @@ fs.readFile("templates/changelogs.mdx", 'utf8', function (err, temp) {
     .replaceAll("$ow-electron-ver", electron["name"]).replaceAll("$ow-electron-date", electron["date"]).replaceAll("$ow-electron-path", electron["path"])
     .replaceAll("$ow-electron-builder-ver", builder["name"]).replaceAll("$ow-electron-builder-date", builder["date"]).replaceAll("$ow-electron-builder-path", builder["path"])
     .replaceAll("$doc-ver", docs["name"]).replaceAll("$doc-date", docs["date"]).replaceAll("$doc-path", docs["path"])
+    .replaceAll("$console-ver", docs["name"]).replaceAll("$console-date", docs["date"]).replaceAll("$console-path", docs["path"])
     )
     dec.declare(paths[0] + "changelogs.mdx")
 })
