@@ -59,7 +59,7 @@ function AdsLayoutRow(props: {
                     <ThemedImage imageUrl={join(assetsPath, 'preview.svg')} alt={`${name} Preview`} />
                 </OWdataCell>
                 <OWdataCell thTitle={'Revenue Est. ($)'} width={'13%'}>
-                    {'Coming Soon'}
+                    {revenueBenchmark}
                 </OWdataCell>
                 <OWdataCell thTitle={'Overview'} width={'64%'}>
                     <p style={{marginBottom: '12px'}}>{overview.description}</p>

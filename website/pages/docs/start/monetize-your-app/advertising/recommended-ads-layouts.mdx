@@ -14,11 +14,11 @@ Planning for Ads is hard, especially with so many [sizes](working-with-ads#list-
 
 To make it slightly easier, we have devised a list of recommended, optimized Ad Container combinations/layouts, for different app windows
 while taking into account the many different factors at play. You can also find a brief summary of each layouts's pros and cons,
-as well as a ***(very rough)*** revenue estimate for its performance*, when compared to the benchmark layout of its type.
+as well as a ***(very rough)*** revenue estimate for its performance*, when compared to the baseline layout of its window type**.
 With this, we hope to give you a place to foothold to get started.
 
 *\* Revenue estimates are generated based on aggregated performance data across the entire platform, across many countries and setups. Actual milage may vastly differ.*
-
+*\*\* Revenue baselines differ depending on the window type.*
 
 Currently, the following window types are accounted for:
 - [Desktop / 2nd screen](#desktop-2nd-screen-windows) - Native, desktop windows, existing outside of a game's context
@@ -50,7 +50,7 @@ Desktop / 2nd screen windows often stay open for long periods of time, with much
   <AdsLayoutRow 
     assetsPath='/assets/start/monetize-your-app/advertising/recommended-ads-layouts/desktop/one-ad-medium'
     name='One Ad (Medium)'
-    revenueBenchmark='Baseline (1.0x)'
+    revenueBenchmark='Baseline (100%)'
     overview={
       {
         description: 'A simple, one Container layout',
@@ -70,7 +70,7 @@ Desktop / 2nd screen windows often stay open for long periods of time, with much
   <AdsLayoutRow 
     assetsPath='/assets/start/monetize-your-app/advertising/recommended-ads-layouts/desktop/one-ad-large'
     name='One Ad (Large)'
-    revenueBenchmark='1.3x'
+    revenueBenchmark='110~120%'
     overview={
       {
         description: 'A simple, one large Container layout',
@@ -88,7 +88,7 @@ Desktop / 2nd screen windows often stay open for long periods of time, with much
   <AdsLayoutRow 
     assetsPath='/assets/start/monetize-your-app/advertising/recommended-ads-layouts/desktop/two-ads-group'
     name='Two Ads (Group)'
-    revenueBenchmark='1.9x'
+    revenueBenchmark='115~135%'
     overview={
       {
         description: 'A simple, two grouped small Containers layout',
@@ -106,12 +106,12 @@ Desktop / 2nd screen windows often stay open for long periods of time, with much
   <AdsLayoutRow 
     assetsPath='/assets/start/monetize-your-app/advertising/recommended-ads-layouts/desktop/two-ads-split'
     name='Two Ads (Split)'
-    revenueBenchmark='2.0x'
+    revenueBenchmark='115~140%'
     overview={
       {
         description: 'A simple, split two Containers layout',
         showsVideo: true,
-        dimensions: '400x300 | 160x600',
+        dimensions: '400x300 + 160x600',
         userFriction: 'Noticable',
         designConstraints: 'Noticable',
         revenue: 'High',
@@ -124,7 +124,7 @@ Desktop / 2nd screen windows often stay open for long periods of time, with much
   <AdsLayoutRow 
     assetsPath='/assets/start/monetize-your-app/advertising/recommended-ads-layouts/desktop/two-ads-large'
     name='Two Ads (Large)'
-    revenueBenchmark='3.4x'
+    revenueBenchmark='120~145%'
     overview={
       {
         description: 'A simple, two large split Containers layout',
@@ -142,7 +142,7 @@ Desktop / 2nd screen windows often stay open for long periods of time, with much
   <AdsLayoutRow 
     assetsPath='/assets/start/monetize-your-app/advertising/recommended-ads-layouts/desktop/triple-ads-split'
     name='Triple Ads (split)'
-    revenueBenchmark='4.0x'
+    revenueBenchmark='125~155%'
     overview={
       {
         description: 'A simple, split three Containers layout',
@@ -176,7 +176,7 @@ In-Game windows that display Ads often don't stay open for long periods, and mus
   <AdsLayoutRow 
     assetsPath='/assets/start/monetize-your-app/advertising/recommended-ads-layouts/in-game/one-ad-small'
     name='One Ad (Small)'
-    revenueBenchmark='Baseline (1.0x)'
+    revenueBenchmark='Baseline (100%)'
     overview={
       {
         description: 'A simple, one Container layout',
@@ -194,7 +194,7 @@ In-Game windows that display Ads often don't stay open for long periods, and mus
   <AdsLayoutRow 
     assetsPath='/assets/start/monetize-your-app/advertising/recommended-ads-layouts/in-game/one-ad-long'
     name='One Ad (Long)'
-    revenueBenchmark='1.1x'
+    revenueBenchmark='105~150%'
     overview={
       {
         description: 'A simple, one long vertical Container layout',
@@ -212,7 +212,7 @@ In-Game windows that display Ads often don't stay open for long periods, and mus
   <AdsLayoutRow 
     assetsPath='/assets/start/monetize-your-app/advertising/recommended-ads-layouts/in-game/one-ad-large'
     name='One Ad (Large)'
-    revenueBenchmark='1.3x'
+    revenueBenchmark='135~150%'
     overview={
       {
         description: 'A simple, one large Container layout',
@@ -230,7 +230,7 @@ In-Game windows that display Ads often don't stay open for long periods, and mus
   <AdsLayoutRow 
     assetsPath='/assets/start/monetize-your-app/advertising/recommended-ads-layouts/in-game/two-ads-group'
     name='Two Ads (Group)'
-    revenueBenchmark='2.0x'
+    revenueBenchmark='~200%'
     overview={
       {
         description: 'A simple, two grouped small Containers layout',
@@ -248,7 +248,7 @@ In-Game windows that display Ads often don't stay open for long periods, and mus
   <AdsLayoutRow 
     assetsPath='/assets/start/monetize-your-app/advertising/recommended-ads-layouts/in-game/two-ads-split'
     name='Two Ads (Split)'
-    revenueBenchmark='2.1x'
+    revenueBenchmark='200~300%'
     overview={
       {
         description: 'A simple, split two Containers layout',
@@ -266,7 +266,7 @@ In-Game windows that display Ads often don't stay open for long periods, and mus
   <AdsLayoutRow 
     assetsPath='/assets/start/monetize-your-app/advertising/recommended-ads-layouts/in-game/two-ads-large'
     name='Two Ads (Large)'
-    revenueBenchmark='3.4x'
+    revenueBenchmark='300~400%'
     overview={
       {
         description: 'A simple, two large Containers layout',
@@ -284,7 +284,7 @@ In-Game windows that display Ads often don't stay open for long periods, and mus
   <AdsLayoutRow 
     assetsPath='/assets/start/monetize-your-app/advertising/recommended-ads-layouts/in-game/triple-ads-split'
     name='Triple Ads (split)'
-    revenueBenchmark='4.1x'
+    revenueBenchmark='400~450%'
     overview={
       {
         description: 'A simple, split three Containers layout',
