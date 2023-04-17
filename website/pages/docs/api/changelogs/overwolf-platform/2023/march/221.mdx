@@ -8,7 +8,21 @@ sidebar_custom_props:
   electron_platform: false
 ---
 
+This version had two major releases. For clarity, their changelogs were kept separate.
+
 ### Platform
 
 - Improved stability of app [Deep Linking](https://overwolf.github.io/api/extensions#the-origin-string).
 - App [hotkeys](/api/manifest#hotkeys-object) can now be defined on a per-game basis, using the [game_ids](/api/manifest#hotkeys-object) field.
+
+
+## Version 0.221.109.x
+
+### Platform
+- Updated the underlying [CEF](https://bitbucket.org/chromiumembedded/cef/src/master/) version from version 87 to version 109. A detailed breakdown of the underlying changes can be found [here](https://chromestatus.com/features#milestone%3D109).
+- Added support for web images in [`overwolf.notifications.showToastNotification()`](/api/notifications#showtoastnotificationargs-callback). Simply pass the image's URL to the [`heroImage`](/api/notifications#heroimage-notes) parameter in the [`ToastNotificationParams`](/api/notifications#toastnotificationparams-object) object.
+
+### Bug Fixes
+- Fixed an issue where an incorrect window state would be detected after maximizing a minimized in-game windows.
+- Enabling a disabled app that should launch with the currently-running game will now launch the app automatically.
+- Fixed an issue where certain installed games would not be detected by Overwolf, even after using the [`overwolf.games.getGameInfo()`](/api/games#getgameinfogameclassidcallback) or [`overwolf.games.getGameDBInfo()`](/api/games#getgamedbinfogameclassidcallback) methods.
