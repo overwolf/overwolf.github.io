@@ -26,8 +26,8 @@ const Footer = (props) => {
                 <li><a href="/topics/legal/legal-overview">Terms Overview</a></li>
                 <li><a href="/topics/legal/legal-developers-terms">Developer's Terms</a></li>
                 <li><a href="/topics/legal/legal-app-terms">App Terms</a></li>
-                <li><a href="http://www.overwolf.com/legal/" target="_blank">Overwolf Terms</a></li>
-                <li><a href="http://www.overwolf.com/legal/#Privacy-policy" target="_blank">Overwolf Privacy Policy</a></li>
+                <li><a href="//www.overwolf.com/legal/" target="_blank">Overwolf Terms</a></li>
+                <li><a href="//www.overwolf.com/legal/#Privacy-policy" target="_blank">Overwolf Privacy Policy</a></li>
               </ul>
             </li>
             <li>
@@ -35,7 +35,7 @@ const Footer = (props) => {
               <ul>
                 <li>
                   <svg><use href="/img/sprite.svg#discord-icon"></use></svg>
-                  <a href="https://discord.gg/overwolf-developers" target="_blank">Discord</a>
+                  <a href="//discord.gg/overwolf-developers" target="_blank">Discord</a>
                 </li>
                 <li>
                   <svg><use href="/img/sprite.svg#slack-icon"></use></svg>
@@ -43,11 +43,11 @@ const Footer = (props) => {
                 </li>
                 <li>
                   <svg><use href="/img/sprite.svg#facebook-icon"></use></svg>
-                  <a href="https://www.facebook.com/OverwolfDevs" target="_blank">Facebook</a>
+                  <a href="//facebook.com/OverwolfDevs" target="_blank">Facebook</a>
                   </li>
                 <li>
                   <svg><use href="/img/sprite.svg#twitter-icon"></use></svg>
-                  <a href="https://twitter.com/OverwolfDevs" target="_blank">Twitter</a>
+                  <a href="//twitter.com/OverwolfDevs" target="_blank">Twitter</a>
                   </li>
               </ul>
             </li>
@@ -64,11 +64,12 @@ const Footer = (props) => {
             <li>
               <h5>Information</h5>
               <ul>
-                <li><a href="http://www.overwolf.com/careers/" target="_blank">Careers</a></li>
-                <li><a href="https://overwolf.com/fund" target="_blank">Fund</a></li>
-                <li><a href="https://medium.com/overwolf" target="_blank">Developers Blog</a></li>
-                <li><a href="https://www.overwolf.com/appstore" target="_blank">Overwolf Appstore</a></li>
-                <li><a href="https://brands.overwolf.com/" target="_blank">Advertise on Overwolf</a></li>
+                <li><a href="//www.overwolf.com/careers/" target="_blank">Careers</a></li>
+                <li><a href="//overwolf.com/fund" target="_blank">Fund</a></li>
+                <li><a href="//trello.com/b/1V10E4IB/overwolf-developers-roadmap" target="_blank">Roadmap</a></li>
+                <li><a href="//medium.com/overwolf" target="_blank">Developers Blog</a></li>
+                <li><a href="//www.overwolf.com/appstore" target="_blank">Overwolf Appstore</a></li>
+                <li><a href="//www.overwolf.com/brands" target="_blank">Advertise on Overwolf</a></li>
               </ul>
             </li>
           </ul>
