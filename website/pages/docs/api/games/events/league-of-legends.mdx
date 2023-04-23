@@ -53,6 +53,7 @@ Note that you can also use the LOL game launcher events. Read more [here](../lau
 * [heal](#heal)
 * [jungle_camps](#jungle_camps)
 * [team_frames](#team_frames)
+* [chat](#chat)
 
 
 ## Game events status
@@ -1594,4 +1595,20 @@ The value in ult_cd stands for ultimate cooldown in seconds.
 
 ```json
 {"info":{"game_info":{"team_frames_1":"{\"ult_cd\":47}"}},"feature":"team_frames"}
+```
+
+## `chat`
+
+### Events
+
+Event  | Event Data                                       |               Fired When                  | Notes     | Since GEP Ver. |
+-------| -------------------------------------------------| ----------------------------------------- | --------- | --------------|
+chat | All the chat messages sent in a match | Every time there is a new message in the chat |See [notes](#chat-note)|      224.0    |
+
+#### *chat* note
+
+Data Example:
+
+```json
+{"events":[{"name":"chat","data":"[Team] Jacksork (Lux): Hello "}]}
 ```
