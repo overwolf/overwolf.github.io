@@ -1,7 +1,7 @@
 Every Overwolf application (ow-electron or Overwolf platform), has a unique app id. This unique id is automatically generated, and is based on the app's name,
 and the app's author's name.
 
-In ow-electron, these fields correspond to the following fields in the package.json file:
+In `ow-electron`, these fields correspond to the following fields in the package.json file:
 - App name - The `productName` or `name` properties
 - App author - The `name` field under the `author` field.
 
@@ -22,3 +22,16 @@ In ow-electron, these fields correspond to the following fields in the package.j
   ...
 }
 ```
+
+#### Fetching your app ID
+
+Once your app has loaded, you can fetch the app ID through the API as follows:
+```js
+import app from 'electron';
+...
+app.whenReady().then(() => {
+  const appID = process.env.OVERWOLF_APP_UID;
+});
+```
+
+*Note that this environment variable will only exist once the app is ready.*
