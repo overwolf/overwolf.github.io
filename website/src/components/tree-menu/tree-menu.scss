@@ -1,0 +1,42 @@
+.tree-menu-block {
+  padding: 16px 16px 24px;
+  margin: 24px 0;
+  background-color: var(--color-100);
+  display: flex;
+
+
+  .tree-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+
+    li {
+      margin: 0;
+      padding: 0;
+
+      .property {
+        display: flex;
+        align-items: center;
+
+        span {
+          line-height: 20px;
+        }
+
+        button {
+          background-color: transparent;
+        }
+      }
+
+      ul {
+        margin: 0;
+        padding: 0;
+      }
+
+      &::before {
+        display: none;
+      }
+    }
+  }
+
+}

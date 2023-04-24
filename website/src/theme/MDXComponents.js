@@ -13,6 +13,7 @@ import OWTable from '@site/src/components/ow-table/ow-table';
 import OWTableRow from '@site/src/components/ow-table/ow-table-row';
 import OWexpandedRowGroup from '@site/src/components/ow-table/ow-expanded-row-group';
 import OWdataCell from '@site/src/components/ow-table/ow-data-cell';
+import TreeMenu from '@site/src/components/tree-menu/tree-menu';
 import Tagger from '../components/tagging/Tagger';
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
@@ -35,6 +36,7 @@ export default {
   OWTableRow: OWTableRow,
   OWexpandedRowGroup: OWexpandedRowGroup,
   OWdataCell: OWdataCell,
+  TreeMenu: TreeMenu,
   Tagger: Tagger,
   Tabs: Tabs,
   TabItem: TabItem,
