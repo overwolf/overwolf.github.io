@@ -3,13 +3,15 @@ import React, {FC, Children} from 'react';
 
 interface TreeMenuProps {
   children: React.ReactNode;
+  codeBlockData: string;
 }
 
 // -----------------------------------------------------------------------------
 
 const TreeMenu: FC<TreeMenuProps> = props => {
   const {
-    children
+    children,
+    codeBlockData
   } = props;
 
   // -----------------------------------------------------------------------------

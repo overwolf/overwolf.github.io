@@ -1,0 +1,162 @@
+.code-block-section {
+  padding: 16px 16px 24px;
+  margin: 24px 0;
+  background-color: var(--color-100);
+  font-family: 'Consolas';
+
+  .tabs-header {
+    display: flex;
+
+    &::-webkit-scrollbar{
+      display: none;
+    }
+
+    @media (max-width: 600px) {
+      overflow-x: scroll;
+    }
+
+    .type-label {
+      color: #E07000;
+      font-style: italic;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 24px;
+      letter-spacing: 0.02em;
+    }
+  }
+
+  .tabs-nav {
+    display: flex;
+    gap: 8px;
+
+  .tabs-nav-item {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+
+    &.property {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: #0095FF;
+      font-family: 'Consolas';
+      font-style: italic;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 24px;
+      letter-spacing: 0.02em;
+
+      &.is-active {
+        display: none;
+      }
+
+      span {
+        line-height: 20px;
+      }
+
+      button {
+        background-color: transparent;
+        color: var(--color-txt);
+
+        &:hover {
+          color: #E07000;
+        }
+      }
+
+    }
+
+    }
+
+  }
+
+  .panels-container {
+
+    .panel {
+      display: none;
+      color: #999999;
+
+      &.is-open {
+        display: block;
+      }
+
+      .panel-inner {
+        padding-left: 24px;
+
+        .code-block-section {
+          padding: 0;
+          margin: 0;
+
+          .tabs-header, .tabs-nav {
+            display: block;
+          }
+        }
+      }
+
+
+
+      p {
+        margin: 0;
+        font-style: italic;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: 0.02em;
+      }
+
+      .panel-actions {
+
+        &.property {
+          display: flex;
+          align-items: center;
+          gap: 8px;
+          position: relative;
+          left: -8px;
+
+          &.is-active {
+            display: none;
+          }
+
+          svg {
+            width: 24px;
+            height: 24px;
+            color: var(--color-txt);
+            position: relative;
+            bottom: -1px;
+          }
+
+          button {
+            background-color: transparent;
+            color: #0095FF;
+            font-style: italic;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 24px;
+            letter-spacing: 0.02em;
+            display: flex;
+            align-items: center;
+
+          }
+
+        }
+      }
+    }
+
+    .inside-panel {
+
+      .inner-item {
+
+        &.property {
+          display: flex;
+          align-items: center;
+          gap: 8px;
+        }
+      }
+    }
+  }
+
+  .single-property {
+
+  }
+}
