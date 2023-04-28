@@ -4,6 +4,7 @@ import React, {FC, Children, useRef} from 'react';
 interface CodeBlockProps {
   children: React.ReactNode;
   typeLabel?: string;
+  color?: string;
 }
 
 // -----------------------------------------------------------------------------
@@ -11,18 +12,20 @@ interface CodeBlockProps {
 const CodeBlock: FC<CodeBlockProps> = props => {
   const {
     children,
-    typeLabel
+    typeLabel,
+    color,
   } = props;
-  const panelsContainer = useRef<HTMLInputElement>(null);
+  const groupsContainer = useRef<HTMLInputElement>(null);
+  const triggersContainer = useRef<HTMLInputElement>(null);
 
   // -----------------------------------------------------------------------------
 
   const handleExpandCodeBlock = (keyName: string, event: any) => {
-    if(panelsContainer.current !== null) {
-      const tabBtn = event.target;
-      const panel = panelsContainer.current.querySelector(`#${keyName}`);
-      tabBtn?.parentElement?.classList.add('is-active');
-      panel?.parentElement?.classList.add('is-open');
+    if(groupsContainer.current !== null) {
+      const trigger = event.target;
+      const group = groupsContainer.current.querySelector(`#${keyName}`);
+      trigger?.parentElement?.classList.add('is-active');
+      group?.parentElement?.parentElement?.classList.add('is-open');
     } else {
       console.log('ref is null');
     }
@@ -31,11 +34,11 @@ const CodeBlock: FC<CodeBlockProps> = props => {
   // -----------------------------------------------------------------------------
 
   const handleCollapseCodeBlock = (keyName: string, event: any) => {
-    if(panelsContainer.current !== null) {
-      const panel = panelsContainer.current.querySelector(`#${keyName}`);
-      const activeBtn = document.querySelector(`[data-tab="${keyName}"]`);
+    if(groupsContainer.current !== null) {
+      const group = groupsContainer.current.querySelector(`#${keyName}`);
+      const activeBtn = document.querySelector(`[data-group="${keyName}"]`);
       activeBtn?.parentElement?.classList.remove('is-active');
-      panel?.parentElement?.classList.remove('is-open');
+      group?.parentElement?.parentElement?.classList.remove('is-open');
     } else {
       console.log('ref is null');
     }
@@ -43,108 +46,116 @@ const CodeBlock: FC<CodeBlockProps> = props => {
 
   // -----------------------------------------------------------------------------
 
-  const parentsCodeGroup = Children.map(children, (tabBtn, i) => {
-    const allItems: any = children
+  const handleShowExpandedGroup = (event: any) => {
+    if(triggersContainer.current !== null) {
+      const thisBtn = event.target;
+      const mainTriggerName = thisBtn.dataset.trigger;
+      const mainTrigger = triggersContainer.current.querySelector(`[data-group="${mainTriggerName}"]`);
+      thisBtn?.parentElement?.parentElement?.classList.add('is-open');
+      mainTrigger?.parentElement?.classList.add('is-active');
+    } else {
+      console.log('ref is null');
+    }
+  }
 
-    if(React.isValidElement(tabBtn)) {
+  // -----------------------------------------------------------------------------
+
+  const bracketEndCheck = (index: any, length: any) => {
+    if(length == undefined) { // give `)` to single item
+      return (<span className='bracket'>{`)`}</span>)
+    } 
+    else if (index != length -1) { //hide ',' from last item
+      return <span className='bracket'>{`,`}</span>;
+    } 
+    else if (index == length -1) { //give `)` to last item
+      return (<span className='bracket'>{`)`}</span>)
+    }
+  }
+
+  // -----------------------------------------------------------------------------
+
+  const parentsCodeGroup = Children.map(children, (groupedTrigger, i) => {
+    const allItems: any = children;
+    const bracket: any = bracketEndCheck(i, allItems.length);
+
+    if(React.isValidElement(groupedTrigger)) {
 
       return (
-        <div className='tabs-nav-item property' key={i}>
-          <span className='key'>{tabBtn.props.keyName}:</span>
+        <div className='grouped-item' key={i}>
+          <span className='key'>{groupedTrigger.props.groupKeyName}:</span>
           <button
             className='expand-btn'
-            data-tab={tabBtn.props.keyName}
-            onClick={(event) => handleExpandCodeBlock(tabBtn.props.keyName, event)}
+            data-group={groupedTrigger.props.groupKeyName}
+            onClick={(event) => handleExpandCodeBlock(groupedTrigger.props.groupKeyName, event)}
           >
             {`{...}`}
-            { i != allItems.length -1 && <>,</>}
+            {bracket}
           </button>
         </div>
       );
     }
-    return <p style={{color: 'red'}}>not a tab! use the proper tab component!!</p>
+    return <p style={{color: 'red'}}>not a Group! use the proper Group component!!</p>
   })
 
   // -----------------------------------------------------------------------------
 
-  const codeGroups = Children.map(children, (panel, i) => {
+  const codeGroups = Children.map(children, (group, i) => {
     const allItems: any = children;
-    if(React.isValidElement(panel)) {
+    const bracket: any = bracketEndCheck(i, allItems.length);
+    if(React.isValidElement(group)) {
 
       return (
-        <div className={typeLabel ? 'panel' : 'inside-panel'} key={i}>
-          <div className='panel-actions property' key={i}>
-            {/* button for the first groups */}
-            {typeLabel &&
-              <>
+        <div className='group-item' key={i}>
+
+          <div className='grouped-btn'>
+            <span className='key'>{group.props.groupKeyName}:</span>
+            <button
+              className='expand-btn'
+              data-trigger={group.props.groupKeyName}
+              onClick={(event) => handleShowExpandedGroup(event)}
+            >
+              {`{...}`}
+              {bracket}
+            </button>
+          </div>
+
+          <div className='expanded-group'>
+            <div className='expanded-group-btn' key={i}>
               <button
-                className='expand-btn'
-                data-tab={panel.props.keyName}
-                onClick={(event) => handleCollapseCodeBlock(panel.props.keyName, event)}
+                className='collapse-btn'
+                data-group={group.props.groupKeyName}
+                onClick={(event) => handleCollapseCodeBlock(group.props.groupKeyName, event)}
               >
                 <svg><use href="/img/sprite.svg#caret"></use></svg>
-                <span className='key'>{panel.props.keyName}:</span>
+                <span className='key'>{group.props.groupKeyName}:</span>
               </button>
               {`{`}
-              </>
-            }
+            </div>
+            
+            {group}
 
-            {/* button expand to inner group block */}
-            {!typeLabel &&
-              <>
-                <div className='inner-item property' key={i}>
-                  <span className='key'>{panel.props.keyName}:</span>
-                  <button
-                    className='expand-btn'
-                    data-tab={panel.props.keyName}
-                    // onClick={(event) => handleExpandCodeBlock(panel.props.keyName, event)}
-                  >
-                    {`{...}`}
-                    { i != allItems.length -1 && <>,</>}
-                  </button>
-                </div>
-              </>
-            }
-
+           <div className='bracket'>
+            {`}`}
+            {bracket}
+           </div>
           </div>
-          {panel}
-
-          {typeLabel &&
-            <>{`},`}</>
-          }
         </div>
       );
 
     }
-    return <p style={{color: 'red'}}>not a tab! use the proper tab component!! or call Benjo for instructions</p>
+    return <p style={{color: 'red'}}>not a Group! use the proper Group component!! or call Benjo for instructions</p>
   })
 
   // -----------------------------------------------------------------------------
 
   return (
     <section className='code-block-section'>
-      <div className='tabs-header'>
-        {typeLabel &&
-          <span className='type-label'>{typeLabel}{`(`}</span>
-        }
-        {/* {!typeLabel &&
-          <span>{`{`}</span>
-        } */}
-
-        {typeLabel &&
-          <nav className='tabs-nav'>{parentsCodeGroup}</nav>
-        }
-
-        {typeLabel &&
-          <span className='type'>{`)`}</span>
-        }
-        {/* {!typeLabel &&
-          <span>{`}`}</span>
-        } */}
-
+      <div className='first-group'>
+        <span className={`type-label ${color}`}>{typeLabel}<span className='bracket'>{`(`}</span></span>
+        <nav className='groups-nav' ref={triggersContainer}>{parentsCodeGroup}</nav>
 
       </div>
-      <div className='panels-container' ref={panelsContainer}>{codeGroups}</div>
+      <div className='groups-container' ref={groupsContainer}>{codeGroups}</div>
     </section>
   );
 };

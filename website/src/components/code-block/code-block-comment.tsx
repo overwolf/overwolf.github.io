@@ -1,4 +1,3 @@
-import './code-block.scss';
 import React, {FC} from 'react';
 
 interface CodeBlockCommentProps {

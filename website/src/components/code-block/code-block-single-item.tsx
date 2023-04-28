@@ -1,8 +1,7 @@
-import './code-block.scss';
 import React, {FC} from 'react';
 
 interface CodeBlockSingleItemProps {
-  key: string;
+  keyName: string;
   value: string;
 }
 
@@ -10,15 +9,15 @@ interface CodeBlockSingleItemProps {
 
 const CodeBlockSingleItem: FC<CodeBlockSingleItemProps> = props => {
   const {
-    key,
+    keyName,
     value
   } = props;
 
   return (
     <div className='single-property'>
       <div className='single-property-inner'>
-        <span className='key'>{key}</span>
-        <span className='value'>{value}</span>
+        <span className='key'>{keyName}:</span>
+        <span className='value'>{value}<span className='single-bracket'>{`,`}</span></span>
       </div>
     </div>
   );
