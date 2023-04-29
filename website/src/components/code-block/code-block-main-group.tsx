@@ -1,13 +1,13 @@
 import React, {FC} from 'react';
 
-interface CodeBlocGroupProps {
+interface CodeBlocMainGroupProps {
   groupKeyName: string;
   children: React.ReactNode;
 }
 
 // -----------------------------------------------------------------------------
 
-const CodeBlocGroup: FC<CodeBlocGroupProps> = props => {
+const CodeBlocMainGroup: FC<CodeBlocMainGroupProps> = props => {
   const {
     groupKeyName,
     children
@@ -24,4 +24,4 @@ const CodeBlocGroup: FC<CodeBlocGroupProps> = props => {
   );
 };
 
-export default CodeBlocGroup;
+export default CodeBlocMainGroup;

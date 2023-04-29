@@ -10,21 +10,33 @@ import AppsDoList from '@site/src/components/getting-started-page/apps-do-list';
 import AppsLiveList from '@site/src/components/getting-started-page/apps-live-list';
 
 <CodeBlock typeLabel={'Start'} color={'green'}>
-  <CodeBlocGroup groupKeyName={'settings'}>
+  <CodeBlocMainGroup groupKeyName={'settings'}>
     <CodeBlockComment comment={'bla bla bla'} />
     <CodeBlockComment comment={'bla bla bla bla'} />
-  </CodeBlocGroup>
-  <CodeBlocGroup groupKeyName={'bap'}>
+    <CodeBlockSubGroup subKeyName={'bipbip'}>
+      <CodeBlockSingleItem keyName={'cxvxcv'} value={'xcvxcv'} />
+      <CodeBlockSingleItem keyName={'cxvxcv'} value={'xcvxcv'} />
+      <CodeBlockSubGroup subKeyName={'bipbip'}>
+        <CodeBlockSingleItem keyName={'cxvxcv'} value={'xcvxcv'} />
+        <CodeBlockSingleItem keyName={'cxvxcv'} value={'xcvxcv'} />
+          <CodeBlockSubGroup subKeyName={'shmipshmip'}>
+            <CodeBlockSingleItem keyName={'cxvxcv'} value={'xcvxcv'} />
+            <CodeBlockSingleItem keyName={'cxvxcv'} value={'xcvxcv'} />
+          </CodeBlockSubGroup>
+      </CodeBlockSubGroup>
+    </CodeBlockSubGroup>
+  </CodeBlocMainGroup>
+  <CodeBlocMainGroup groupKeyName={'bap'}>
     <CodeBlockComment comment={'bla bla bla bla'} />
     <CodeBlockSingleItem keyName={'cxvxcv'} value={'xcvxcv'} />
     <CodeBlockSingleItem keyName={'cxvxcv'} value={'xcvxcv'} />
     <CodeBlockComment comment={'bla bla bla bla'} />
     <CodeBlockSingleItem keyName={'cxvxcv'} value={'xcvxcv'} />
-  </CodeBlocGroup>
-    <CodeBlocGroup groupKeyName={'bbb'}>
+  </CodeBlocMainGroup>
+    <CodeBlocMainGroup groupKeyName={'bbb'}>
       <CodeBlockSingleItem keyName={'cxvxcv'} value={'xcvxcv'} />
       <CodeBlockSingleItem keyName={'cxvxcv'} value={'xcvxcv'} />
-  </CodeBlocGroup>
+  </CodeBlocMainGroup>
 </CodeBlock>
 
 ## An introduction to Overwolf Apps

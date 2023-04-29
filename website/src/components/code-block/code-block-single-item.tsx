@@ -14,10 +14,10 @@ const CodeBlockSingleItem: FC<CodeBlockSingleItemProps> = props => {
   } = props;
 
   return (
-    <div className='single-property'>
+    <div className='single-property property'>
       <div className='single-property-inner'>
         <span className='key'>{keyName}:</span>
-        <span className='value'>{value}<span className='single-bracket'>{`,`}</span></span>
+        <span className='value'>{value}<span className='comma'>{`,`}</span></span>
       </div>
     </div>
   );

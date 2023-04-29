@@ -28,6 +28,7 @@
 
   .groups-nav {
     display: flex;
+    flex-wrap: wrap;
     gap: 8px;
 
   .grouped-item {
@@ -97,7 +98,7 @@
 
       }
 
-      .grouped-btn {
+      .grouped-btn, .sub-grouped-btn {
         display: flex;
         align-items: center;
         gap: 8px;
@@ -167,10 +168,44 @@
             letter-spacing: 0.02em;
           }
 
-          > div:last-child {
+          > .property:last-child {
 
-            .single-bracket {
+            > .single-property-inner .comma, > .sub-grouped-btn .comma, > .expanded-sub-group > .comma {
               display: none;
+            }
+
+          }
+
+          .sub-group-item {
+
+            &.is-open {
+              > .sub-grouped-btn {
+                display: none;
+              }
+
+              > .expanded-sub-group {
+                display: block;
+              }
+            }
+            
+            .sub-grouped-btn {
+              padding-left: 0;
+            }
+
+            .expanded-sub-group {
+              display: none;
+
+              .sub-group-inner {
+                padding-left: 34px;
+
+                > .property:last-child {
+
+                  > .single-property-inner .comma, > .sub-grouped-btn .comma, > .expanded-sub-group > .comma {
+                    display: none;
+                  }
+      
+                }
+              }
             }
           }
         }
@@ -187,6 +222,7 @@
     }
 
   }
+
 
   .single-property {
     .single-property-inner {

@@ -1,5 +1,6 @@
 import './code-block.scss';
 import React, {FC, Children, useRef} from 'react';
+import bracketEndCheck from './code-block-utils';
 
 interface CodeBlockProps {
   children: React.ReactNode;
@@ -55,20 +56,6 @@ const CodeBlock: FC<CodeBlockProps> = props => {
       mainTrigger?.parentElement?.classList.add('is-active');
     } else {
       console.log('ref is null');
-    }
-  }
-
-  // -----------------------------------------------------------------------------
-
-  const bracketEndCheck = (index: any, length: any) => {
-    if(length == undefined) { // give `)` to single item
-      return (<span className='bracket'>{`)`}</span>)
-    } 
-    else if (index != length -1) { //hide ',' from last item
-      return <span className='bracket'>{`,`}</span>;
-    } 
-    else if (index == length -1) { //give `)` to last item
-      return (<span className='bracket'>{`)`}</span>)
     }
   }
 

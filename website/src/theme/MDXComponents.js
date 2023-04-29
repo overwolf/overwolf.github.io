@@ -14,9 +14,10 @@ import OWTableRow from '@site/src/components/ow-table/ow-table-row';
 import OWexpandedRowGroup from '@site/src/components/ow-table/ow-expanded-row-group';
 import OWdataCell from '@site/src/components/ow-table/ow-data-cell';
 import CodeBlock from '@site/src/components/code-block/code-block';
-import CodeBlocGroup from '@site/src/components/code-block/code-block-group';
-import CodeBlockComment from '@site/src/components/code-block/code-block-comment';
+import CodeBlocMainGroup from '@site/src/components/code-block/code-block-main-group';
+import CodeBlockSubGroup from '@site/src/components/code-block/code-block-sub-group';
 import CodeBlockSingleItem from '@site/src/components/code-block/code-block-single-item';
+import CodeBlockComment from '@site/src/components/code-block/code-block-comment';
 import Tagger from '../components/tagging/Tagger';
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
@@ -40,9 +41,10 @@ export default {
   OWexpandedRowGroup: OWexpandedRowGroup,
   OWdataCell: OWdataCell,
   CodeBlock: CodeBlock,
-  CodeBlocGroup: CodeBlocGroup,
-  CodeBlockComment: CodeBlockComment,
+  CodeBlocMainGroup: CodeBlocMainGroup,
+  CodeBlockSubGroup: CodeBlockSubGroup,
   CodeBlockSingleItem: CodeBlockSingleItem,
+  CodeBlockComment: CodeBlockComment,
   Tagger: Tagger,
   Tabs: Tabs,
   TabItem: TabItem,
