@@ -1,6 +1,7 @@
 import './code-block.scss';
 import React, {FC, Children, useRef} from 'react';
 import bracketEndCheck from './code-block-utils';
+import CodeBlockExpandAllButton from './code-block-expand-all-button';
 
 interface CodeBlockProps {
   children: React.ReactNode;
@@ -16,8 +17,8 @@ const CodeBlock: FC<CodeBlockProps> = props => {
     typeLabel,
     color,
   } = props;
-  const groupsContainer = useRef<HTMLInputElement>(null);
-  const triggersContainer = useRef<HTMLInputElement>(null);
+  const groupsContainer = useRef<HTMLDivElement>(null);
+  const triggersContainer = useRef<HTMLDivElement>(null);
 
   // -----------------------------------------------------------------------------
 
@@ -137,12 +138,31 @@ const CodeBlock: FC<CodeBlockProps> = props => {
 
   return (
     <section className='code-block-section'>
+      <CodeBlockExpandAllButton />
+      
       <div className='first-group'>
-        <span className={`type-label ${color}`}>{typeLabel}<span className='bracket'>{`(`}</span></span>
-        <nav className='groups-nav' ref={triggersContainer}>{parentsCodeGroup}</nav>
+        <span 
+          className={`type-label ${color}`}
+        >
+            {typeLabel}
+            <span className='bracket'>{`(`}</span>
+        </span>
 
+        <nav 
+          className='groups-nav' 
+          ref={triggersContainer}
+        >
+            {parentsCodeGroup}
+        </nav>
       </div>
-      <div className='groups-container' ref={groupsContainer}>{codeGroups}</div>
+
+      <div 
+        className='groups-container' 
+        ref={groupsContainer}
+      >
+          {codeGroups}
+      </div>
+
     </section>
   );
 };

@@ -223,7 +223,6 @@
 
   }
 
-
   .single-property {
     .single-property-inner {
       display: flex;
@@ -231,6 +230,26 @@
 
       .key {
         color: #0095FF;
+      }
+    }
+  }
+
+  .code-block-actions {
+    padding-bottom: 16px;
+
+    .expand-all-btn {
+      font-family: 'Lato';
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 20px;
+      text-align: center;
+      padding: 4px 16px;
+      letter-spacing: 0.04em;
+      background-color: var(--color-333);
+      color: var(--color-txt);
+
+      &:hover {
+        background-color: #4D4D4D;
       }
     }
   }
