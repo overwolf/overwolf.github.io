@@ -1,4 +1,4 @@
-import React, {FC, useRef, useState} from 'react';
+import React, {FC, useRef} from 'react';
 
 interface CodeBlockExpandAllButtonProps {
   // keyName: string;
@@ -9,26 +9,28 @@ interface CodeBlockExpandAllButtonProps {
 
 const CodeBlockExpandAllButton: FC<CodeBlockExpandAllButtonProps> = props => {
   const { } = props;
-  const [isExpanded, setIsExpanded] = useState(false);
   const expandContainer = useRef<HTMLDivElement>(null);
-
+  const allClassNames = '.group-item, .sub-group-item, .grouped-item';
   // -----------------------------------------------------------------------------
 
   const handleExpandAll = () => {
-    const allExpandableItems = expandContainer.current?.parentElement?.querySelectorAll('.group-item, .sub-group-item, .grouped-item');
-    
-    if(isExpanded) {
-      allExpandableItems?.forEach((item) => {
-        item.classList.remove('is-open');
-      })
-      setIsExpanded(false);
-    } else {
-      allExpandableItems?.forEach((item) => {
-        item.classList.add('is-open');
-      })
-      setIsExpanded(true);
-    }
+    const allExpandableItems = expandContainer.current?.parentElement?.querySelectorAll(allClassNames);
 
+    allExpandableItems?.forEach((item) => {
+      item.classList.add('is-open');
+    })
+
+    expandContainer.current?.parentElement?.querySelector('.close-all-btn')?.classList.remove('hidden');
+  }
+
+  const handleCloseAll = () => {
+    const allExpandableItems = expandContainer.current?.parentElement?.querySelectorAll(allClassNames);
+    
+    allExpandableItems?.forEach((item) => {
+      item.classList.remove('is-open');
+    });
+
+    expandContainer.current?.parentElement?.querySelector('.close-all-btn')?.classList.add('hidden');
 
   }
 
@@ -40,7 +42,14 @@ const CodeBlockExpandAllButton: FC<CodeBlockExpandAllButtonProps> = props => {
         className='expand-all-btn'
         onClick={handleExpandAll}
       >
-        {`${isExpanded ? 'Close all' : 'Expand all'}`}
+       Expand all
+      </button>
+
+      <button 
+        className='close-all-btn hidden'
+        onClick={handleCloseAll}
+      >
+        Close all
       </button>
     </div>
   );

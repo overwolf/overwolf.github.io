@@ -274,8 +274,11 @@
 
   .code-block-actions {
     padding-bottom: 16px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
 
-    .expand-all-btn {
+    .expand-all-btn, .close-all-btn {
       font-family: 'Lato';
       font-weight: 600;
       font-size: 14px;
@@ -286,8 +289,12 @@
       background-color: var(--color-grey-1);
       color: var(--color-220);
 
+      &.hidden {
+        display: none;
+      }
+
       &:hover {
-        background-color: hsla(0,0%,100%,.16);
+        background-color: #999999;
       }
     }
   }
@@ -379,7 +386,7 @@ html[data-theme=dark] {
 
     .code-block-actions {
   
-      .expand-all-btn {
+      .expand-all-btn, .close-all-btn {
         background-color: var(--color-333);
         color: var(--color-txt);
   
