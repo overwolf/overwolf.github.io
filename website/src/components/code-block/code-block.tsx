@@ -26,7 +26,7 @@ const CodeBlock: FC<CodeBlockProps> = props => {
     if(groupsContainer.current !== null) {
       const trigger = event.target;
       const group = groupsContainer.current.querySelector(`#${keyName}`);
-      trigger?.parentElement?.classList.add('is-active');
+      trigger?.parentElement?.classList.add('is-open');
       group?.parentElement?.parentElement?.classList.add('is-open');
     } else {
       console.log('ref is null');
@@ -39,7 +39,7 @@ const CodeBlock: FC<CodeBlockProps> = props => {
     if(groupsContainer.current !== null) {
       const group = groupsContainer.current.querySelector(`#${keyName}`);
       const activeBtn = document.querySelector(`[data-group="${keyName}"]`);
-      activeBtn?.parentElement?.classList.remove('is-active');
+      activeBtn?.parentElement?.classList.remove('is-open');
       group?.parentElement?.parentElement?.classList.remove('is-open');
     } else {
       console.log('ref is null');
@@ -54,7 +54,7 @@ const CodeBlock: FC<CodeBlockProps> = props => {
       const mainTriggerName = thisBtn.dataset.trigger;
       const mainTrigger = triggersContainer.current.querySelector(`[data-group="${mainTriggerName}"]`);
       thisBtn?.parentElement?.parentElement?.classList.add('is-open');
-      mainTrigger?.parentElement?.classList.add('is-active');
+      mainTrigger?.parentElement?.classList.add('is-open');
     } else {
       console.log('ref is null');
     }

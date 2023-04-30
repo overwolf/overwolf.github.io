@@ -13,24 +13,23 @@ const CodeBlockSubGroup: FC<CodeBlockSubGroupProps> = props => {
     children
   } = props;
 
-  const [isExpanded, setIsExpanded] = useState(false);
   const groupItem = useRef<HTMLInputElement>(null);
 
   // -----------------------------------------------------------------------------
 
   const handleExpandCollapse = () => {
-    
-    if(groupItem.current?.classList.contains('is-open')) {
-      setIsExpanded(false);
+    const thisSubGroup = groupItem.current;
+    if(thisSubGroup?.classList.contains('is-open')) {
+      thisSubGroup?.classList.remove('is-open');
     } else {
-      setIsExpanded(true);
+      thisSubGroup?.classList.add('is-open');
     }
 
   }
 
   return (
 
-    <div className={`sub-group-item property ${isExpanded ? 'is-open' : ''}`} ref={groupItem}>
+    <div className={'sub-group-item property'} ref={groupItem}>
 
       <div className='sub-grouped-btn'>
         <span className='key'>{subKeyName}:</span>

@@ -15,6 +15,20 @@ const CodeBlockExpandAllButton: FC<CodeBlockExpandAllButtonProps> = props => {
   // -----------------------------------------------------------------------------
 
   const handleExpandAll = () => {
+    const allExpandableItems = expandContainer.current?.parentElement?.querySelectorAll('.group-item, .sub-group-item, .grouped-item');
+    
+    if(isExpanded) {
+      allExpandableItems?.forEach((item) => {
+        item.classList.remove('is-open');
+      })
+      setIsExpanded(false);
+    } else {
+      allExpandableItems?.forEach((item) => {
+        item.classList.add('is-open');
+      })
+      setIsExpanded(true);
+    }
+
 
   }
 
