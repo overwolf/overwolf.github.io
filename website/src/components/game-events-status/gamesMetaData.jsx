@@ -53,6 +53,7 @@ export const GamesMetadata = {
         "id": 7314,
         "name": "Dota 2",
         "path": "/status/dota-2",
+        "compliance": "/start/game-compliance/dota-2",
         "docs": "/api/games/events/dota-2",
         "iconUrl": "/img/games-logos/dota-2.png",
         "iconLargeUrl": "/img/games-logos/large/dota-2.png"
@@ -326,6 +327,14 @@ export const GamesMetadata = {
         "docs": "/api/games/events/axie-infinity-origin",
         "iconUrl": "/img/games-logos/axie-infinity-origin.png",
         "iconLargeUrl": "/img/games-logos/large/axie-infinity-origin.png"
+    },
+    "22312": {
+        "id": 22312,
+        "name": "LEAP",
+        "path": "/status/leap",
+        "docs": "/api/games/events/leap",
+        "iconUrl": "/img/games-logos/leap.png",
+        "iconLargeUrl": "/img/games-logos/large/leap.png"
     },
     "22638": {
         "id": 22638,
