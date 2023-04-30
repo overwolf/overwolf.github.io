@@ -3,6 +3,7 @@
   margin: 24px 0;
   background-color: var(--color-grey-light-2);
   font-family: 'Consolas';
+  font-style: italic;
 
   .first-group {
     display: flex;
@@ -34,14 +35,6 @@
   .grouped-item {
     display: flex;
     align-items: center;
-    gap: 8px;
-    color: #0095FF;
-    font-family: 'Consolas';
-    font-style: italic;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 24px;
-    letter-spacing: 0.02em;
 
       &.is-open {
         display: none;
@@ -58,6 +51,29 @@
       button {
         background-color: transparent;
         color: var(--color-220);
+        display: flex;
+        align-items: center;
+
+        .key {
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 24px;
+          letter-spacing: 0.02em;
+          color: #0095FF;
+          padding-right: 8px;
+          pointer-events: none;
+          position: relative;
+
+          svg {
+            width: 24px;
+            height: 24px;
+            color: var(--color-220);
+            position: absolute;
+            bottom: -3px;
+            left: -24px;
+            transform: rotate(90deg);
+          }
+        }
 
         &:hover {
           color: #E07000;
@@ -101,18 +117,31 @@
       .grouped-btn, .sub-grouped-btn {
         display: flex;
         align-items: center;
-        gap: 8px;
-        color: #0095FF;
-        font-family: 'Consolas';
-        font-style: italic;
-        font-weight: 400;
-        font-size: 16px;
-        line-height: 24px;
-        letter-spacing: 0.02em;
         padding-left: 16px;
   
         span {
           line-height: 20px;
+        }
+
+        .key {
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 24px;
+          letter-spacing: 0.02em;
+          color: #0095FF;
+          padding-right: 8px;
+          pointer-events: none;
+          position: relative;
+
+          svg {
+            width: 24px;
+            height: 24px;
+            color: var(--color-220);
+            position: absolute;
+            bottom: -3px;
+            left: -24px;
+            transform: rotate(90deg);
+          }
         }
   
         button {
@@ -158,6 +187,10 @@
             display: flex;
             align-items: center;
           }
+
+          &:hover svg {
+            color: #E07000;
+          }
         }
 
         .group-inner {
@@ -170,6 +203,7 @@
             font-size: 16px;
             line-height: 24px;
             letter-spacing: 0.02em;
+            color: #4D4D4D;
           }
 
           > .property:last-child {
@@ -278,6 +312,10 @@ html[data-theme=dark] {
 
         button {
           color: var(--color-txt);
+
+          &:hover {
+            color: #E07000;
+          }
         }
   
       }
@@ -293,6 +331,17 @@ html[data-theme=dark] {
 
           button {
             color: var(--color-txt);
+
+            &:hover {
+              color: #E07000;
+            }
+
+            .key {
+
+              svg {
+                color: var(--color-txt);
+              }
+            }
     
             .bracket {
               color: #999999;
@@ -301,11 +350,23 @@ html[data-theme=dark] {
         }
   
         .expanded-group {
+
+          .group-inner {
+
+            p {
+              color: #999999;
+            }
+
+          }
   
           .expanded-group-btn {
 
             svg {
               color: var(--color-txt);
+            }
+
+            &:hover svg {
+              color: #E07000;
             }
   
           }

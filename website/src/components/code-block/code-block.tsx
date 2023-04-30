@@ -70,12 +70,12 @@ const CodeBlock: FC<CodeBlockProps> = props => {
 
       return (
         <div className='grouped-item' key={i}>
-          <span className='key'>{groupedTrigger.props.groupKeyName}:</span>
           <button
             className='expand-btn'
             data-group={groupedTrigger.props.groupKeyName}
             onClick={(event) => handleExpandCodeBlock(groupedTrigger.props.groupKeyName, event)}
           >
+             <span className='key'>{groupedTrigger.props.groupKeyName}:</span>
             {`{...}`}
             {bracket}
           </button>
@@ -96,12 +96,15 @@ const CodeBlock: FC<CodeBlockProps> = props => {
         <div className='group-item' key={i}>
 
           <div className='grouped-btn'>
-            <span className='key'>{group.props.groupKeyName}:</span>
             <button
               className='expand-btn'
               data-trigger={group.props.groupKeyName}
               onClick={(event) => handleShowExpandedGroup(event)}
             >
+              <span className='key'>
+                <svg><use href="/img/sprite.svg#caret"></use></svg>
+                {group.props.groupKeyName}:
+              </span>
               {`{...}`}
               {bracket}
             </button>

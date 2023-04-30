@@ -32,11 +32,14 @@ const CodeBlockSubGroup: FC<CodeBlockSubGroupProps> = props => {
     <div className={'sub-group-item property'} ref={groupItem}>
 
       <div className='sub-grouped-btn'>
-        <span className='key'>{subKeyName}:</span>
         <button
           className='expand-btn'
           onClick={handleExpandCollapse}
         >
+          <span className='key'>
+            <svg><use href="/img/sprite.svg#caret"></use></svg>
+            {subKeyName}:
+          </span>
           {`{...}`}
           <span className='comma'>{`,`}</span>
         </button>
