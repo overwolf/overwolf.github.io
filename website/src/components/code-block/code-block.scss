@@ -1,7 +1,7 @@
 .code-block-section {
   padding: 16px 16px 24px;
   margin: 24px 0;
-  background-color: var(--color-120);
+  background-color: var(--color-grey-light-2);
   font-family: 'Consolas';
 
   .first-group {
@@ -22,7 +22,7 @@
     }
 
     .bracket {
-      color: #999999;
+      color: #4D4D4D;
     }
   }
 
@@ -57,7 +57,7 @@
 
       button {
         background-color: transparent;
-        color: var(--color-txt);
+        color: var(--color-220);
 
         &:hover {
           color: #E07000;
@@ -72,7 +72,7 @@
 
     .group-item {
       display: none;
-      color: #999999;
+      color: #4D4D4D;
 
       &.is-open {
         display: block;
@@ -117,14 +117,14 @@
   
         button {
           background-color: transparent;
-          color: var(--color-txt);
+          color: var(--color-220);
   
           &:hover {
             color: #E07000;
           }
 
           .bracket {
-            color: #999999;
+            color: #4D4D4D;
           }
         }
       }
@@ -142,7 +142,7 @@
           svg {
             width: 24px;
             height: 24px;
-            color: var(--color-txt);
+            color: var(--color-220);
             position: relative;
             bottom: -1px;
           }
@@ -249,12 +249,84 @@
       text-align: center;
       padding: 4px 16px;
       letter-spacing: 0.04em;
-      background-color: var(--color-333);
-      color: var(--color-txt);
+      background-color: var(--color-grey-1);
+      color: var(--color-220);
 
       &:hover {
-        background-color: #4D4D4D;
+        background-color: hsla(0,0%,100%,.16);
       }
     }
   }
+}
+
+
+html[data-theme=dark] {
+
+  .code-block-section {
+    background-color: var(--color-120);
+  
+    .first-group {
+
+      .bracket {
+        color: #999999;
+      }
+    }
+  
+    .groups-nav {
+
+    .grouped-item {
+
+        button {
+          color: var(--color-txt);
+        }
+  
+      }
+  
+    }
+  
+    .groups-container {
+  
+      .group-item {
+        color: #999999;
+
+        .grouped-btn, .sub-grouped-btn {
+
+          button {
+            color: var(--color-txt);
+    
+            .bracket {
+              color: #999999;
+            }
+          }
+        }
+  
+        .expanded-group {
+  
+          .expanded-group-btn {
+
+            svg {
+              color: var(--color-txt);
+            }
+  
+          }
+        }
+  
+      }
+  
+    }
+  
+
+    .code-block-actions {
+  
+      .expand-all-btn {
+        background-color: var(--color-333);
+        color: var(--color-txt);
+  
+        &:hover {
+          background-color: #4D4D4D;
+        }
+      }
+    }
+  }
+
 }
