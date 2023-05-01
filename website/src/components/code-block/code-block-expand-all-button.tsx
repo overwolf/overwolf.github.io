@@ -25,7 +25,7 @@ const CodeBlockExpandAllButton: FC<CodeBlockExpandAllButtonProps> = props => {
 
   const handleCloseAll = () => {
     const allExpandableItems = expandContainer.current?.parentElement?.querySelectorAll(allClassNames);
-    
+
     allExpandableItems?.forEach((item) => {
       item.classList.remove('is-open');
     });
@@ -38,14 +38,14 @@ const CodeBlockExpandAllButton: FC<CodeBlockExpandAllButtonProps> = props => {
 
   return (
     <div className='code-block-actions' ref={expandContainer}>
-      <button 
+      <button
         className='expand-all-btn'
         onClick={handleExpandAll}
       >
        Expand all
       </button>
 
-      <button 
+      <button
         className='close-all-btn hidden'
         onClick={handleCloseAll}
       >

@@ -1,4 +1,4 @@
-import React, {Children, FC, useRef, useState} from 'react';
+import React, {Children, FC, useRef} from 'react';
 
 interface CodeBlockSubGroupProps {
   subKeyName: string;
@@ -56,7 +56,7 @@ const CodeBlockSubGroup: FC<CodeBlockSubGroupProps> = props => {
           </button>
           {`{`}
         </div>
-        
+
         <div className='sub-group-inner'>
           {children}
         </div>

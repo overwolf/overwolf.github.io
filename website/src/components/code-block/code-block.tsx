@@ -1,6 +1,6 @@
 import './code-block.scss';
 import React, {FC, Children, useRef} from 'react';
-import bracketEndCheck from './code-block-utils';
+import { bracketEndCheck, checkIfPropertiesExpanded } from './code-block-utils';
 import CodeBlockExpandAllButton from './code-block-expand-all-button';
 
 interface CodeBlockProps {
@@ -28,6 +28,7 @@ const CodeBlock: FC<CodeBlockProps> = props => {
       const group = groupsContainer.current.querySelector(`#${keyName}`);
       trigger?.parentElement?.classList.add('is-open');
       group?.parentElement?.parentElement?.classList.add('is-open');
+      checkIfPropertiesExpanded(triggersContainer?.current);
     } else {
       console.log('ref is null');
     }
@@ -41,6 +42,7 @@ const CodeBlock: FC<CodeBlockProps> = props => {
       const activeBtn = document.querySelector(`[data-group="${keyName}"]`);
       activeBtn?.parentElement?.classList.remove('is-open');
       group?.parentElement?.parentElement?.classList.remove('is-open');
+      checkIfPropertiesExpanded(triggersContainer?.current);
     } else {
       console.log('ref is null');
     }
@@ -55,6 +57,7 @@ const CodeBlock: FC<CodeBlockProps> = props => {
       const mainTrigger = triggersContainer.current.querySelector(`[data-group="${mainTriggerName}"]`);
       thisBtn?.parentElement?.parentElement?.classList.add('is-open');
       mainTrigger?.parentElement?.classList.add('is-open');
+      checkIfPropertiesExpanded(triggersContainer?.current);
     } else {
       console.log('ref is null');
     }
@@ -122,7 +125,7 @@ const CodeBlock: FC<CodeBlockProps> = props => {
               </button>
               {`{`}
             </div>
-            
+
             {group}
 
            <div className='bracket'>
@@ -142,25 +145,25 @@ const CodeBlock: FC<CodeBlockProps> = props => {
   return (
     <section className='code-block-section'>
       <CodeBlockExpandAllButton />
-      
+
       <div className='first-group'>
-        <span 
+        <span
           className={`type-label ${color}`}
         >
             {typeLabel}
             <span className='bracket'>{`(`}</span>
         </span>
 
-        <nav 
-          className='groups-nav' 
+        <nav
+          className='groups-nav'
           ref={triggersContainer}
         >
             {parentsCodeGroup}
         </nav>
       </div>
 
-      <div 
-        className='groups-container' 
+      <div
+        className='groups-container'
         ref={groupsContainer}
       >
           {codeGroups}
