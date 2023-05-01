@@ -122,14 +122,14 @@
           color: #0095FF;
           padding-right: 8px;
           position: relative;
+          margin-left: -1px;
         }
-
-
 
         button {
           background-color: transparent;
           color: var(--color-220);
           display: flex;
+          font-style: italic;
 
           svg {
             width: 24px;
@@ -189,6 +189,18 @@
         .group-inner {
           padding-left: 34px;
 
+          &::before {
+            content: '';
+            position: absolute;
+            left: 25px;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            background-color: #cdcdcd;
+            width: 1px;
+            height: calc(100% - 42px);
+          }
+
           p {
             margin: 0;
             font-style: italic;
@@ -200,7 +212,7 @@
           }
 
           + .bracket {
-            padding-left: 24px;
+            padding-left: 22px;
           }
 
           > .property:last-child {
@@ -238,8 +250,20 @@
               .sub-group-inner {
                 padding-left: 34px;
 
+                &::before {
+                  content: '';
+                  position: absolute;
+                  left: 25px;
+                  top: 0;
+                  bottom: 0;
+                  margin: auto;
+                  background-color: #cdcdcd;
+                  width: 1px;
+                  height: calc(100% - 42px);
+                }
+
                 + .sub-bracket {
-                  padding-left: 24px;
+                  padding-left: 22px;
                 }
 
                 > .property:last-child {
@@ -268,6 +292,7 @@
 
       .key {
         color: #0095FF;
+        letter-spacing: 0.02em;
       }
     }
   }
@@ -305,6 +330,10 @@ html[data-theme=dark] {
 
   .code-block-section {
     background-color: var(--color-120);
+
+    .groups-container .group-item .expanded-group .group-inner::before, .groups-container .group-item .expanded-group .group-inner .sub-group-item .expanded-sub-group .sub-group-inner::before {
+      background-color: #333;
+    }
 
     .first-group {
 
