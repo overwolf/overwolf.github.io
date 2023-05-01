@@ -36,8 +36,8 @@ const CodeBlockSubGroup: FC<CodeBlockSubGroupProps> = props => {
           className='expand-btn'
           onClick={handleExpandCollapse}
         >
+          <svg><use href="/img/sprite.svg#caret"></use></svg>
           <span className='key'>
-            <svg><use href="/img/sprite.svg#caret"></use></svg>
             {subKeyName}:
           </span>
           {`{...}`}

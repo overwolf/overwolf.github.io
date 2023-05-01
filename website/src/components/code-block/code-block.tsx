@@ -104,12 +104,14 @@ const CodeBlock: FC<CodeBlockProps> = props => {
               data-trigger={group.props.groupKeyName}
               onClick={(event) => handleShowExpandedGroup(event)}
             >
+              <svg><use href="/img/sprite.svg#caret"></use></svg>
               <span className='key'>
-                <svg><use href="/img/sprite.svg#caret"></use></svg>
                 {group.props.groupKeyName}:
               </span>
-              {`{...}`}
-              {bracket}
+              <span>
+                {`{...}`}
+                {bracket}
+              </span>
             </button>
           </div>
 
