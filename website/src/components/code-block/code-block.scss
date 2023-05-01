@@ -103,14 +103,11 @@
 
         }
 
-
-
       }
 
       .grouped-btn, .sub-grouped-btn {
         display: flex;
         align-items: center;
-        // padding-left: 16px;
 
         span {
           line-height: 20px;
@@ -124,7 +121,6 @@
           letter-spacing: 0.02em;
           color: #0095FF;
           padding-right: 8px;
-
           position: relative;
         }
 
@@ -217,7 +213,7 @@
 
           .sub-group-item {
             position: relative;
-            left: -8px;
+            left: -24px;
 
             &.is-open {
               > .sub-grouped-btn {
