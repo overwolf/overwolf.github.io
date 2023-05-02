@@ -1,4 +1,5 @@
 import React, {FC} from 'react';
+import { MainGroupContext } from './code-block-utils';
 
 interface CodeBlocMainGroupProps {
   groupKeyName: string;
@@ -14,13 +15,15 @@ const CodeBlocMainGroup: FC<CodeBlocMainGroupProps> = props => {
   } = props;
 
   return (
-    <div
-      className={'group-inner'}
-      id={groupKeyName}
-      data-label={groupKeyName}
-      >
-        {children}
-    </div>
+    <MainGroupContext.Provider value={groupKeyName}>
+      <div
+        className={'group-inner'}
+        id={groupKeyName}
+        data-label={groupKeyName}
+        >
+          {children}
+      </div>
+    </MainGroupContext.Provider>
   );
 };
 

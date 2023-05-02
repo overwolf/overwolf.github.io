@@ -1,4 +1,8 @@
-import React from "react";
+import React, { createContext } from "react";
+
+export const CodeBlockContext = createContext('');
+export const MainGroupContext = createContext('');
+export const SubGroupContext = createContext('');
 
 export const bracketEndCheck = (index: any, length: any) => {
   if(length == undefined) { // give `)` to single item
@@ -21,6 +25,4 @@ export const checkIfPropertiesExpanded = (triggersSection: any) => {
     closeAllBtn.classList.add('hidden');
   }
 }
-
-export default bracketEndCheck;
 

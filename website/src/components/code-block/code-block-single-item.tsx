@@ -1,4 +1,5 @@
-import React, {FC} from 'react';
+import React, {FC, useContext} from 'react';
+import { CodeBlockContext, MainGroupContext, SubGroupContext } from './code-block-utils';
 
 interface CodeBlockSingleItemProps {
   keyName: string;
@@ -13,8 +14,12 @@ const CodeBlockSingleItem: FC<CodeBlockSingleItemProps> = props => {
     value
   } = props;
 
+  const cbID = useContext(CodeBlockContext);
+  const mbID = useContext(MainGroupContext);
+  const sbID = useContext(SubGroupContext);
+
   return (
-    <div className='single-property property'>
+    <div className='single-property property' id={`${cbID}-${mbID}-${sbID}-sp-${keyName}-${value}`}>
       <div className='single-property-inner'>
         <span className='key'>{keyName}:</span>
         <span className='value'>{value}<span className='comma'>{`,`}</span></span>

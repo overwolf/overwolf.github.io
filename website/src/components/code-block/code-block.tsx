@@ -1,10 +1,11 @@
 import './code-block.scss';
 import React, {FC, Children, useRef} from 'react';
-import { bracketEndCheck, checkIfPropertiesExpanded } from './code-block-utils';
+import { bracketEndCheck, checkIfPropertiesExpanded, CodeBlockContext} from './code-block-utils';
 import CodeBlockExpandAllButton from './code-block-expand-all-button';
 
 interface CodeBlockProps {
   children: React.ReactNode;
+  id: string;
   typeLabel?: string;
   color?: string;
 }
@@ -15,6 +16,7 @@ const CodeBlock: FC<CodeBlockProps> = props => {
   const {
     children,
     typeLabel,
+    id,
     color,
   } = props;
   const groupsContainer = useRef<HTMLDivElement>(null);
@@ -96,8 +98,10 @@ const CodeBlock: FC<CodeBlockProps> = props => {
     if(React.isValidElement(group)) {
 
       return (
-        <div className='group-item' key={i}>
-
+        <div className='group-item'
+          key={i}
+          id={`${id}-mb-${group.props.groupKeyName}`}
+        >
           <div className='grouped-btn'>
             <button
               className='expand-btn'
@@ -145,33 +149,35 @@ const CodeBlock: FC<CodeBlockProps> = props => {
   // -----------------------------------------------------------------------------
 
   return (
-    <section className='code-block-section'>
-      <CodeBlockExpandAllButton />
+    <CodeBlockContext.Provider value={id}>
+      <section className='code-block-section' id={id}>
+        <CodeBlockExpandAllButton />
 
-      <div className='first-group'>
-        <span
-          className={`type-label ${color}`}
+        <div className='first-group'>
+          <span
+            className={`type-label ${color}`}
+          >
+              {typeLabel}
+              <span className='bracket'>{`(`}</span>
+          </span>
+
+          <nav
+            className='groups-nav'
+            ref={triggersContainer}
+          >
+              {parentsCodeGroup}
+          </nav>
+        </div>
+
+        <div
+          className='groups-container'
+          ref={groupsContainer}
         >
-            {typeLabel}
-            <span className='bracket'>{`(`}</span>
-        </span>
+            {codeGroups}
+        </div>
 
-        <nav
-          className='groups-nav'
-          ref={triggersContainer}
-        >
-            {parentsCodeGroup}
-        </nav>
-      </div>
-
-      <div
-        className='groups-container'
-        ref={groupsContainer}
-      >
-          {codeGroups}
-      </div>
-
-    </section>
+      </section>
+    </CodeBlockContext.Provider>
   );
 };
 

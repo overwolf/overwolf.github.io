@@ -1,4 +1,5 @@
-import React, {Children, FC, useRef} from 'react';
+import React, {Children, FC, useContext, useRef} from 'react';
+import { CodeBlockContext, MainGroupContext, SubGroupContext } from './code-block-utils';
 
 interface CodeBlockSubGroupProps {
   subKeyName: string;
@@ -13,6 +14,8 @@ const CodeBlockSubGroup: FC<CodeBlockSubGroupProps> = props => {
     children
   } = props;
 
+  const cbID = useContext(CodeBlockContext);
+  const mbID = useContext(MainGroupContext);
   const groupItem = useRef<HTMLInputElement>(null);
 
   // -----------------------------------------------------------------------------
@@ -28,43 +31,47 @@ const CodeBlockSubGroup: FC<CodeBlockSubGroupProps> = props => {
   }
 
   return (
+    <SubGroupContext.Provider value={subKeyName}>
+      <div className={'sub-group-item property'}
+        ref={groupItem}
+        id={`${cbID}-${mbID}-sg-${subKeyName}`}
+      >
 
-    <div className={'sub-group-item property'} ref={groupItem}>
-
-      <div className='sub-grouped-btn'>
-        <button
-          className='expand-btn'
-          onClick={handleExpandCollapse}
-        >
-          <svg><use href="/img/sprite.svg#caret"></use></svg>
-          <span className='key'>
-            {subKeyName}:
-          </span>
-          {`{...}`}
-          <span className='comma'>{`,`}</span>
-        </button>
-      </div>
-
-      <div className='expanded-sub-group'>
-        <div className='expanded-group-btn'>
+        <div className='sub-grouped-btn'>
           <button
-            className='collapse-btn'
+            className='expand-btn'
             onClick={handleExpandCollapse}
           >
             <svg><use href="/img/sprite.svg#caret"></use></svg>
-            <span className='key'>{subKeyName}:</span>
+            <span className='key'>
+              {subKeyName}:
+            </span>
+            {`{...}`}
+            <span className='comma'>{`,`}</span>
           </button>
-          {`{`}
         </div>
 
-        <div className='sub-group-inner'>
-          {children}
-        </div>
+        <div className='expanded-sub-group'>
+          <div className='expanded-group-btn'>
+            <button
+              className='collapse-btn'
+              onClick={handleExpandCollapse}
+            >
+              <svg><use href="/img/sprite.svg#caret"></use></svg>
+              <span className='key'>{subKeyName}:</span>
+            </button>
+            {`{`}
+          </div>
 
-        <span className='sub-bracket'>{`}`}</span>
-        <span className='comma'>{`,`}</span>
+          <div className='sub-group-inner'>
+            {children}
+          </div>
+
+          <span className='sub-bracket'>{`}`}</span>
+          <span className='comma'>{`,`}</span>
+        </div>
       </div>
-    </div>
+    </SubGroupContext.Provider>
   );
 };
 
