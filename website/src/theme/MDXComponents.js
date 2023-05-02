@@ -17,26 +17,44 @@ import Tagger from '../components/tagging/Tagger';
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import SimpleTab from '../components/simple-tab/simple-tab';
+import DebugWrapper from '../components/debug/debug-wrapper';
+import EventsData from '../components/game-events-status/EventsData';
+import FancyLink from '../components/fancy/fancy-link';
+
+const devMode = process.env.NODE_ENV === "development";
 
 export default {
   // Re-use the default mapping
   ...MDXComponents,
   // Map the "highlight" tag to our <Highlight /> component!
   // `Highlight` will receive all props that were passed to `highlight` in MDX
-  ImageSlider: ImageSlider,
-  ImageBoxModal: ImageBoxModal,
-  VideoBox: VideoBox,
-  GameInfo: GameInfo,
-  SkipMe: SkipMe,
-  OWTabs: OWTabs,
-  OWTabItem: OWTabItem,
-  ImageHeading: ImageHeading,
-  OWTable: OWTable,
-  OWTableRow: OWTableRow,
-  OWexpandedRowGroup: OWexpandedRowGroup,
-  OWdataCell: OWdataCell,
-  Tagger: Tagger,
-  Tabs: Tabs,
-  TabItem: TabItem,
-  SimpleTab: SimpleTab
+  ...WrapAll({
+    ImageSlider: ImageSlider,
+    ImageBoxModal: ImageBoxModal,
+    VideoBox: VideoBox,
+    GameInfo: GameInfo,
+    SkipMe: SkipMe,
+    OWTabs: OWTabs,
+    OWTabItem: OWTabItem,
+    ImageHeading: ImageHeading,
+    OWTable: OWTable,
+    OWTableRow: OWTableRow,
+    OWexpandedRowGroup: OWexpandedRowGroup,
+    OWdataCell: OWdataCell,
+    Tagger: Tagger,
+    Tabs: Tabs,
+    TabItem: TabItem,
+    SimpleTab: SimpleTab,
+    EventsData: EventsData,
+    FancyLink: FancyLink
+  })
 };
+
+function WrapAll(elements) {
+  if(!devMode) return elements;
+  const result = {};
+  Object.keys(elements).forEach((key) => {
+    result[key] = DebugWrapper(elements[key]);
+  });
+  return result;
+}

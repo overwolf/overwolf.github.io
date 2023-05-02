@@ -13,7 +13,8 @@
     "types": [
       "node",
       "@docusaurus/module-type-aliases",
-      "@docusaurus/theme-classic"
+      "@docusaurus/theme-classic",
+      "typings"
     ],
     "baseUrl": ".",
     "paths": {
@@ -24,6 +25,6 @@
     "skipLibCheck": true
   },
   "include": ["src/**/*"],
-  "exclude": ["src/**/*.js", "src/**/*.jsx", "src/**/*.tsx"],
+  "exclude": ["**/*.js", "**/*.jsx", "**/*.tsx"],
   "extends": "@tsconfig/docusaurus/tsconfig.json"
 }

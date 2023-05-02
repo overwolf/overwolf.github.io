@@ -8,7 +8,7 @@ import Preloader from '../preloader/preloader';
     const {
       allGames,
       specificGame,
-      gameID,
+      gameId,
       docsPath,
       urlAsDocsPath = false,
       onlyGames = false,
@@ -55,7 +55,7 @@ import Preloader from '../preloader/preloader';
       if(specificGame) {
 
         async function getStatus() {
-          await fetch(`https://game-events-status.overwolf.com/${gameID}_prod.json`)
+          await fetch(`https://game-events-status.overwolf.com/${gameId}_prod.json`)
           .then(response => response.json())
           .then(data => setGameStatus(data));
         }
@@ -74,7 +74,7 @@ import Preloader from '../preloader/preloader';
         }
 
         { specificGame && gameStatus != null &&
-          <SpecificGameEventsStatus gameStatusData={gameStatus} gameID={gameID} docsPath={docsPath} />
+          <SpecificGameEventsStatus gameStatusData={gameStatus} gameId={gameId} docsPath={docsPath} />
         }
 
       </>

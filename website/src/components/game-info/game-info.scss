@@ -114,51 +114,40 @@
 
     }
 
-    .launcher-info-list {
-      border-top: 1px solid var(--color-800);
-    }
-
-    .game-info-list, .launcher-info-list {
+    .game-info-groups {
       list-style: none;
       padding: 0;
       margin: 0;
-      display: flex;
-      gap: 12px;
-
-      @media (max-width: 650px) {
-        flex-direction: column;
-        gap: 8px;
-      }
-
+      
       li {
-        margin: 0;
-        font-size: 14px;
+        &:not(.main) {
+          border-top: 1px solid var(--color-800);
+        }
+    
+        display: flex;
+        gap: 12px;
+  
+        @media (max-width: 650px) {
+          flex-direction: column;
+          gap: 8px;
+        }
 
-        span {
-          font-weight: 700;
-          padding-right: 5px;
+        * {
+          margin: 0;
+          font-size: 14px;
+  
+          span {
+            font-weight: 700;
+            padding-right: 5px;
+          }
         }
 
         &:before {
           display: none;
         }
+      } 
+      
 
-        a {
-          display: flex;
-
-          &:hover {
-            color: var(--color-primary) !important;
-          }
-
-          svg {
-            width: 14px;
-            height: 14px;
-            margin-right: 3px;
-            position: relative;
-            bottom: -9px;
-          }
-        }
-      }
     }
 
   }
@@ -287,7 +276,7 @@
             }
           }
 
-          a {
+          .fancy-link {
             color: white !important;
             display: flex;
 
