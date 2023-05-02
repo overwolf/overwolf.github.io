@@ -1,6 +1,6 @@
 import './code-block.scss';
-import React, {FC, Children, useRef} from 'react';
-import { bracketEndCheck, checkIfPropertiesExpanded, CodeBlockContext} from './code-block-utils';
+import React, {FC, Children, useRef, useEffect} from 'react';
+import { bracketEndCheck, checkHashUrl, checkIfPropertiesExpanded, CodeBlockContext} from './code-block-utils';
 import CodeBlockExpandAllButton from './code-block-expand-all-button';
 
 interface CodeBlockProps {
@@ -21,6 +21,12 @@ const CodeBlock: FC<CodeBlockProps> = props => {
   } = props;
   const groupsContainer = useRef<HTMLDivElement>(null);
   const triggersContainer = useRef<HTMLDivElement>(null);
+
+  // -----------------------------------------------------------------------------
+
+  useEffect(() => {
+    checkHashUrl(groupsContainer.current?.parentElement);
+  }, []);
 
   // -----------------------------------------------------------------------------
 

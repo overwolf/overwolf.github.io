@@ -26,3 +26,11 @@ export const checkIfPropertiesExpanded = (triggersSection: any) => {
   }
 }
 
+export const checkHashUrl = (codeBlock: any) => {
+  const url = location.hash;
+
+  if(url != '') {
+    console.log(url)
+  }
+
+}
