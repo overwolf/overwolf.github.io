@@ -29,18 +29,31 @@ export const checkIfPropertiesExpanded = (triggersSection: any) => {
 export const checkHashUrl = (codeBlock: any) => {
   const hash = location.hash;
 
-  if(hash === '') return;
+  if(hash === '') return; // stop if no hash exist
 
   let item = codeBlock.querySelector(hash);
 
-  if(item === null) return;
+  if (!item.classList.contains('single-property')) {
+    item.classList.add('is-open');
+  }
+
+  if (item.classList.contains('group-item')) {
+    const btnDataSet = item.querySelector('.expand-btn').dataset.trigger;
+    codeBlock.querySelector(`[data-group="${btnDataSet}"]`).click();
+  }
+
+  if(item === null) return; // stop if no hash item exist inside code block
 
   while(item.parentNode) {
 
-    if (item.parentNode.id === codeBlock.id) break;
+    if (item.parentNode.id === codeBlock.id) break; //stop in the code block container
 
-    if (item.parentNode.id) {
-      console.log(item.parentNode);
+    if (item.parentNode.classList.contains('group')) {
+      item.parentNode.classList.add('is-open');
+    }
+
+    if (item.parentNode.dataset.label) {
+      codeBlock.querySelector(`[data-group="${item.parentNode.dataset.label}"]`).click();
     }
 
     // Go one level up in the DOM tree

@@ -32,7 +32,7 @@ const CodeBlockSubGroup: FC<CodeBlockSubGroupProps> = props => {
 
   return (
     <SubGroupContext.Provider value={subKeyName}>
-      <div className={'sub-group-item property'}
+      <div className={'sub-group-item property group'}
         ref={groupItem}
         id={`${cbID}-${mbID}-sg-${subKeyName}`}
       >

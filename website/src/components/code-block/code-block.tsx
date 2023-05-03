@@ -104,7 +104,7 @@ const CodeBlock: FC<CodeBlockProps> = props => {
     if(React.isValidElement(group)) {
 
       return (
-        <div className='group-item'
+        <div className='group-item group'
           key={i}
           id={`${id}-mb-${group.props.groupKeyName}`}
         >
