@@ -27,10 +27,24 @@ export const checkIfPropertiesExpanded = (triggersSection: any) => {
 }
 
 export const checkHashUrl = (codeBlock: any) => {
-  const url = location.hash;
+  const hash = location.hash;
 
-  if(url != '') {
-    console.log(url)
+  if(hash === '') return;
+
+  let item = codeBlock.querySelector(hash);
+
+  if(item === null) return;
+
+  while(item.parentNode) {
+
+    if (item.parentNode.id === codeBlock.id) break;
+
+    if (item.parentNode.id) {
+      console.log(item.parentNode);
+    }
+
+    // Go one level up in the DOM tree
+    item = item.parentNode;
   }
 
 }
