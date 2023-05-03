@@ -2,7 +2,7 @@
     "latest": {
         "date": "March 2023",
         "path": "2023/march",
-        "name": "221"
+        "name": "221.109"
     },
     "deploying": {
         "date": "March 2023",
@@ -10,9 +10,9 @@
         "name": "221.109"
     },
     "dev": {
-        "date": "March 2023",
-        "path": "2023/march",
-        "name": "221"
+        "date": "May 2023",
+        "path": "2023/may",
+        "name": "223"
     },
     "ow-electron": {
         "date": "January 2023",
