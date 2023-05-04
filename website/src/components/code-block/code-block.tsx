@@ -33,7 +33,7 @@ const CodeBlock: FC<CodeBlockProps> = props => {
   const handleExpandCodeBlock = (keyName: string, event: any) => {
     if(groupsContainer.current !== null) {
       const trigger = event.target;
-      const group = groupsContainer.current.querySelector(`#${keyName}`);
+      const group = groupsContainer.current.querySelector(`[data-label="${keyName}"]`);
       trigger?.parentElement?.classList.add('is-open');
       group?.parentElement?.parentElement?.classList.add('is-open');
       checkIfPropertiesExpanded(triggersContainer?.current);
@@ -46,7 +46,7 @@ const CodeBlock: FC<CodeBlockProps> = props => {
 
   const handleCollapseCodeBlock = (keyName: string, event: any) => {
     if(groupsContainer.current !== null) {
-      const group = groupsContainer.current.querySelector(`#${keyName}`);
+      const group = groupsContainer.current.querySelector(`[data-label="${keyName}"]`);
       const activeBtn = document.querySelector(`[data-group="${keyName}"]`);
       activeBtn?.parentElement?.classList.remove('is-open');
       group?.parentElement?.parentElement?.classList.remove('is-open');

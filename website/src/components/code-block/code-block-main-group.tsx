@@ -18,7 +18,6 @@ const CodeBlocMainGroup: FC<CodeBlocMainGroupProps> = props => {
     <MainGroupContext.Provider value={groupKeyName}>
       <div
         className={'group-inner'}
-        id={groupKeyName}
         data-label={groupKeyName}
         >
           {children}
