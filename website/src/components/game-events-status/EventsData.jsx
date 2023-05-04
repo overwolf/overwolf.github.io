@@ -4,6 +4,7 @@ import SpecificGameEventsStatus from '@site/src/components/game-events-status/sp
 import { GamesMetadata } from './gamesMetaData';
 import Preloader from '../preloader/preloader';
 
+// TODO: Convert to use GameMetaData
   function EventsData(props) {
     const {
       allGames,
