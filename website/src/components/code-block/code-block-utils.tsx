@@ -16,6 +16,7 @@ export const bracketEndCheck = (index: any, length: any) => {
   }
 }
 
+
 export const checkIfPropertiesExpanded = (triggersSection: any) => {
   const collapsedTriggers = triggersSection.querySelectorAll('.is-open');
   const closeAllBtn = triggersSection.parentElement.previousElementSibling.querySelector('.close-all-btn');
@@ -26,8 +27,15 @@ export const checkIfPropertiesExpanded = (triggersSection: any) => {
   }
 }
 
-export const checkHashUrl = (codeBlock: any) => {
-  const hash = location.hash;
+export const checkHashUrl = (codeBlock: any, liveLink: string) => {
+  let hash;
+
+  //check if live link button on the same page or new url link
+  if(liveLink) {
+    hash = liveLink;
+  } else {
+    hash = location.hash;
+  }
 
   if(hash === '') return; // stop if no hash exist
   checkIfHashIsTheCodeBlockItself(hash);
