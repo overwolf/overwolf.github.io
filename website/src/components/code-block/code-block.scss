@@ -1,11 +1,11 @@
+
+
 .code-block-section {
   padding: 16px 16px 24px;
   margin: 24px 0;
   background-color: var(--color-grey-light-2);
   font-family: 'Consolas';
   font-style: italic;
-
-
 
   .first-group {
     display: flex;
@@ -221,8 +221,8 @@
           }
 
           .sub-group-item {
-            position: relative;
-            left: -24px;
+            // position: relative;
+            margin-left: -24px;
 
             &.is-open {
               > .sub-grouped-btn {
@@ -306,7 +306,8 @@
       color: var(--color-220);
 
       &.hidden {
-        display: none;
+        pointer-events: none;
+        opacity: 0.3;
       }
 
       &:hover {

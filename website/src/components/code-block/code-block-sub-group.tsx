@@ -3,6 +3,7 @@ import { CodeBlockContext, MainGroupContext, SubGroupContext } from './code-bloc
 
 interface CodeBlockSubGroupProps {
   subKeyName: string;
+  id: string;
   children: React.ReactNode;
 }
 
@@ -11,6 +12,7 @@ interface CodeBlockSubGroupProps {
 const CodeBlockSubGroup: FC<CodeBlockSubGroupProps> = props => {
   const {
     subKeyName,
+    id,
     children
   } = props;
 
@@ -34,7 +36,7 @@ const CodeBlockSubGroup: FC<CodeBlockSubGroupProps> = props => {
     <SubGroupContext.Provider value={subKeyName}>
       <div className={'sub-group-item property group'}
         ref={groupItem}
-        id={`${cbID}-${mbID}-sg-${subKeyName}`}
+        id={`${id ? id : `${cbID}-${mbID}-sg-${subKeyName}`}`} //check if its prop id, if not build one from context
       >
 
         <div className='sub-grouped-btn'>

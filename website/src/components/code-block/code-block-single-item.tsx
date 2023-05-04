@@ -4,6 +4,7 @@ import { CodeBlockContext, MainGroupContext, SubGroupContext } from './code-bloc
 interface CodeBlockSingleItemProps {
   keyName: string;
   value: string;
+  id?: string;
 }
 
 // -----------------------------------------------------------------------------
@@ -11,7 +12,8 @@ interface CodeBlockSingleItemProps {
 const CodeBlockSingleItem: FC<CodeBlockSingleItemProps> = props => {
   const {
     keyName,
-    value
+    value,
+    id
   } = props;
 
   const cbID = useContext(CodeBlockContext);
@@ -19,7 +21,10 @@ const CodeBlockSingleItem: FC<CodeBlockSingleItemProps> = props => {
   const sbID = useContext(SubGroupContext);
 
   return (
-    <div className='single-property property' id={`${cbID}-${mbID}-${sbID}-sp-${keyName}-${value}`}>
+    <div 
+        className='single-property property' 
+        id={`${id ? id : `${cbID}-${mbID}-${sbID}-sp-${keyName}-${value}`}`} //check if its prop id, if not build one from context
+      >
       <div className='single-property-inner'>
         <span className='key'>{keyName}:</span>
         <span className='value'>{value}<span className='comma'>{`,`}</span></span>

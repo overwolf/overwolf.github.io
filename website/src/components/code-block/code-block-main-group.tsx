@@ -3,6 +3,7 @@ import { MainGroupContext } from './code-block-utils';
 
 interface CodeBlocMainGroupProps {
   groupKeyName: string;
+  id?: string;
   children: React.ReactNode;
 }
 
@@ -11,14 +12,14 @@ interface CodeBlocMainGroupProps {
 const CodeBlocMainGroup: FC<CodeBlocMainGroupProps> = props => {
   const {
     groupKeyName,
+    id,
     children
   } = props;
 
   return (
-    <MainGroupContext.Provider value={groupKeyName}>
+    <MainGroupContext.Provider value={`${id ? id : groupKeyName}`}>
       <div
         className={'group-inner'}
-        id={groupKeyName}
         data-label={groupKeyName}
         >
           {children}
