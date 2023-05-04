@@ -30,9 +30,12 @@ export const checkHashUrl = (codeBlock: any) => {
   const hash = location.hash;
 
   if(hash === '') return; // stop if no hash exist
+  checkIfHashIsTheCodeBlockItself(hash);
 
   let item = codeBlock.querySelector(hash);
-  item.classList.add('target');
+  if(item === null) return; // stop if no hash item exist inside code block
+
+  item.classList.add('target'); // highlight the inner target
 
   if (!item.classList.contains('single-property')) { //if its a group item open it
     item.classList.add('is-open');
@@ -43,8 +46,7 @@ export const checkHashUrl = (codeBlock: any) => {
     codeBlock.querySelector(`[data-group="${btnDataSet}"]`).click();
   }
 
-  if(item === null) return; // stop if no hash item exist inside code block
-
+  //loop parents groups
   while(item.parentNode) {
 
     if (item.parentNode.id === codeBlock.id) { //stop in the code block container and scroll to target
@@ -68,6 +70,17 @@ export const checkHashUrl = (codeBlock: any) => {
     item = item.parentNode;
   }
 
+}
+
+const checkIfHashIsTheCodeBlockItself = (hash: string) => {
+  const cb = document.querySelector(hash);
+  if(cb === null) return; 
+
+  if (cb.classList.contains('code-block-section')) { //if its the code block itself, just scroll to him
+    setTimeout(() => {
+      scrollToTarget(cb);
+    }, 1000);
+  }
 }
 
 const scrollToTarget = (target: any) => {
