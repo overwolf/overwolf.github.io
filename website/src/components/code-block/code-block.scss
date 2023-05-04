@@ -5,6 +5,8 @@
   font-family: 'Consolas';
   font-style: italic;
 
+
+
   .first-group {
     display: flex;
     flex-wrap: wrap;
@@ -274,6 +276,7 @@
   }
 
   .single-property {
+
     .single-property-inner {
       display: flex;
       gap: 8px;
@@ -311,6 +314,10 @@
       }
     }
   }
+
+  .target {
+    background-color: #ff000026;
+  } 
 }
 
 

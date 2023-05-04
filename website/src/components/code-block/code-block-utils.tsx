@@ -32,12 +32,13 @@ export const checkHashUrl = (codeBlock: any) => {
   if(hash === '') return; // stop if no hash exist
 
   let item = codeBlock.querySelector(hash);
+  item.classList.add('target');
 
-  if (!item.classList.contains('single-property')) {
+  if (!item.classList.contains('single-property')) { //if its a group item open it
     item.classList.add('is-open');
   }
 
-  if (item.classList.contains('group-item')) {
+  if (item.classList.contains('group-item')) { //if its a main group item open it and hide it from navigation
     const btnDataSet = item.querySelector('.expand-btn').dataset.trigger;
     codeBlock.querySelector(`[data-group="${btnDataSet}"]`).click();
   }
@@ -46,7 +47,14 @@ export const checkHashUrl = (codeBlock: any) => {
 
   while(item.parentNode) {
 
-    if (item.parentNode.id === codeBlock.id) break; //stop in the code block container
+    if (item.parentNode.id === codeBlock.id) { //stop in the code block container and scroll to target
+      setTimeout(() => {
+        scrollToTarget(item);
+      }, 1000);
+      break;
+    } 
+
+    console.log(item.parentNode.id)
 
     if (item.parentNode.classList.contains('group')) {
       item.parentNode.classList.add('is-open');
@@ -60,4 +68,15 @@ export const checkHashUrl = (codeBlock: any) => {
     item = item.parentNode;
   }
 
+}
+
+const scrollToTarget = (target: any) => {
+  const headerOffset = 100;
+  const elementPosition = target.getBoundingClientRect().top;
+  const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+  window.scrollTo({
+       top: offsetPosition,
+       behavior: "smooth"
+  });
 }
