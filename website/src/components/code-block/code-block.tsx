@@ -106,7 +106,7 @@ const CodeBlock: FC<CodeBlockProps> = props => {
       return (
         <div className='group-item group'
           key={i}
-          id={`${id}-mb-${group.props.groupKeyName}`}
+          id={`${group.props.id ? group.props.id : group.props.groupKeyName}`}
         >
           <div className='grouped-btn'>
             <button
