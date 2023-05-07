@@ -36,8 +36,6 @@ function GameInfo(props: { gameId: any; page: "docs" | "status" | "compliance"; 
   const mainVariant = GamesMetadata[metaData.mainVariant] as GameMetaData;
   const subVariants = metaData.subVariants;
 
-  console.log(metaData);
-
   // ---------------------------------------------------------------------------
   return gameStatus != null ? (
     <section className='game-info-section'>

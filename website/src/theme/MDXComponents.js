@@ -20,6 +20,7 @@ import SimpleTab from '../components/simple-tab/simple-tab';
 import DebugWrapper from '../components/debug/debug-wrapper';
 import EventsData from '../components/game-events-status/EventsData';
 import FancyLink from '../components/fancy/fancy-link';
+import MatchOnly from '../components/content-tags/gep/match-only';
 
 const devMode = process.env.NODE_ENV === "development";
 
@@ -46,7 +47,8 @@ export default {
     TabItem: TabItem,
     SimpleTab: SimpleTab,
     EventsData: EventsData,
-    FancyLink: FancyLink
+    FancyLink: FancyLink,
+    MatchOnly: MatchOnly
   })
 };
 
