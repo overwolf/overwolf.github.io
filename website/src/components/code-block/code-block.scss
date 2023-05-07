@@ -17,13 +17,39 @@
   --cb-line-color-dark: var(--color-333);
 }
 
+@mixin fontStyle {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.02em;
+}
+
+@mixin LineStyle {
+  position: absolute;
+  left: 12px;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  background-color: var(--cb-line-color);
+  width: 1px;
+  height: calc(100% - 52px);
+}
+
+@mixin svgStyle {
+  width: 24px;
+  height: 24px;
+  color: var(--cb-cta-color);
+}
 
 .code-block-section {
   padding: 16px 16px 24px;
   margin: 24px 0;
   background-color: var(--cb-bg-color);
-  font-family: 'Consolas';
-  font-style: italic;
+
+  * {
+    font-family: 'Consolas';
+    font-style: italic;
+  }
 
   .first-group {
     display: flex;
@@ -31,10 +57,7 @@
 
     .type-label {
       color: var(--cb-type);
-      font-weight: 400;
-      font-size: 16px;
-      line-height: 24px;
-      letter-spacing: 0.02em;
+      @include fontStyle;
 
       &.green {
         color: var(--cb-type-green);
@@ -74,10 +97,7 @@
         align-items: center;
 
         .key {
-          font-weight: 400;
-          font-size: 16px;
-          line-height: 24px;
-          letter-spacing: 0.02em;
+          @include fontStyle;
           color: var(--cb-key-color);
           padding-right: 8px;
           pointer-events: none;
@@ -134,10 +154,7 @@
         }
 
         .key {
-          font-weight: 400;
-          font-size: 16px;
-          line-height: 24px;
-          letter-spacing: 0.02em;
+          @include fontStyle;
           color: var(--cb-key-color);
           padding-right: 8px;
           position: relative;
@@ -148,12 +165,9 @@
           background-color: transparent;
           color: var(--cb-cta-color);
           display: flex;
-          font-style: italic;
 
           svg {
-            width: 24px;
-            height: 24px;
-            color: var(--cb-cta-color);
+            @include svgStyle;
             transform: rotate(90deg);
           }
 
@@ -176,9 +190,7 @@
           gap: 8px;
 
           svg {
-            width: 24px;
-            height: 24px;
-            color: var(--cb-cta-color);
+            @include svgStyle;
             position: relative;
             bottom: -1px;
           }
@@ -186,11 +198,7 @@
           button {
             background-color: transparent;
             color: var(--cb-key-color);
-            font-style: italic;
-            font-weight: 400;
-            font-size: 16px;
-            line-height: 24px;
-            letter-spacing: 0.02em;
+            @include fontStyle;
             display: flex;
             align-items: center;
           }
@@ -205,23 +213,12 @@
 
           &::before {
             content: '';
-            position: absolute;
-            left: 12px;
-            top: 0;
-            bottom: 0;
-            margin: auto;
-            background-color: var(--cb-line-color);
-            width: 1px;
-            height: calc(100% - 52px);
+            @include LineStyle;
           }
 
           p {
+            @include fontStyle;
             margin: 0;
-            font-style: italic;
-            font-weight: 400;
-            font-size: 16px;
-            line-height: 24px;
-            letter-spacing: 0.02em;
             color: var(--cb-bracket-color);
           }
 
@@ -259,14 +256,7 @@
 
                 &::before {
                   content: '';
-                  position: absolute;
-                  left: 12px;
-                  top: 0;
-                  bottom: 0;
-                  margin: auto;
-                  background-color: var(--cb-line-color);
-                  width: 1px;
-                  height: calc(100% - 52px);
+                  @include LineStyle;
                 }
 
                 + .sub-bracket {
@@ -300,7 +290,7 @@
 
       .key {
         color: var(--cb-key-color);
-        letter-spacing: 0.02em;
+        @include fontStyle;
       }
     }
   }
