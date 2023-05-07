@@ -91,17 +91,18 @@ const checkIfHashIsTheCodeBlockItself = (hash: string, delay: number) => {
 }
 
 const scrollToTarget = (target: any, delay: number) => {
-  const headerOffset = 0;
+  const headerOffset = 70;
 
   setTimeout(() => {
     const elementPosition = target.getBoundingClientRect().top;
+    const bodyTopReact = document.body.getBoundingClientRect().top;
     // console.log(elementPosition)
     // console.log(window.pageYOffset)
-    const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+    const offsetPosition = elementPosition - bodyTopReact - headerOffset;
 
     window.scrollTo({
-      top: offsetPosition,
-      behavior: "smooth"
+      behavior: "smooth",
+      top: offsetPosition
     });
   }, delay);
 
