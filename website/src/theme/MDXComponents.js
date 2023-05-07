@@ -18,6 +18,7 @@ import CodeBlocMainGroup from '@site/src/components/code-block/code-block-main-g
 import CodeBlockSubGroup from '@site/src/components/code-block/code-block-sub-group';
 import CodeBlockSingleItem from '@site/src/components/code-block/code-block-single-item';
 import CodeBlockComment from '@site/src/components/code-block/code-block-comment';
+import CodeBlockLiveLink from '@site/src/components/code-block/code-block-live-link';
 import Tagger from '../components/tagging/Tagger';
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
@@ -45,6 +46,7 @@ export default {
   CodeBlockSubGroup: CodeBlockSubGroup,
   CodeBlockSingleItem: CodeBlockSingleItem,
   CodeBlockComment: CodeBlockComment,
+  CodeBlockLiveLink: CodeBlockLiveLink,
   Tagger: Tagger,
   Tabs: Tabs,
   TabItem: TabItem,

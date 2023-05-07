@@ -321,6 +321,15 @@
   } 
 }
 
+.code-block-live-link {
+  display: inline-block;
+  background-color: transparent;
+  text-decoration: underline;
+
+  &:hover {
+    color: var(--color-primary)
+  }
+}
 
 html[data-theme=dark] {
 

@@ -3,7 +3,7 @@ import { checkHashUrl } from './code-block-utils';
 
 interface CodeBlockLiveLinkProps {
   text: string;
-  hash: string;
+  targetID: string;
   codeBlockID: string;
 }
 
@@ -12,15 +12,15 @@ interface CodeBlockLiveLinkProps {
 const CodeBlockLiveLink: FC<CodeBlockLiveLinkProps> = props => {
   const {
     text,
-    hash,
+    targetID,
     codeBlockID
   } = props;
 
   const handleLiveLink = () => {
-    const codeBlock = document.querySelector(codeBlockID);
+    const codeBlock = document.getElementById(codeBlockID);
     if(codeBlock === null) return;
-
-    checkHashUrl(codeBlock, hash);
+    codeBlock.querySelector('.target')?.classList.remove('target');
+    checkHashUrl(codeBlock, targetID);
   }
 
   return (

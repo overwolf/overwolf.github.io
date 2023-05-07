@@ -29,18 +29,21 @@ export const checkIfPropertiesExpanded = (triggersSection: any) => {
 
 export const checkHashUrl = (codeBlock: any, liveLink: string) => {
   let hash;
+  let scrollDelay = 0;
 
   //check if live link button on the same page or new url link
   if(liveLink) {
-    hash = liveLink;
+    hash = `#${liveLink}`;
   } else {
     hash = location.hash;
+    scrollDelay = 1000;
   }
 
   if(hash === '') return; // stop if no hash exist
-  checkIfHashIsTheCodeBlockItself(hash);
-
+  checkIfHashIsTheCodeBlockItself(hash, scrollDelay);
+  
   let item = codeBlock.querySelector(hash);
+
   if(item === null) return; // stop if no hash item exist inside code block
 
   item.classList.add('target'); // highlight the inner target
@@ -58,13 +61,11 @@ export const checkHashUrl = (codeBlock: any, liveLink: string) => {
   while(item.parentNode) {
 
     if (item.parentNode.id === codeBlock.id) { //stop in the code block container and scroll to target
-      setTimeout(() => {
-        scrollToTarget(item);
-      }, 1000);
+      scrollToTarget(item, scrollDelay);
       break;
     } 
 
-    console.log(item.parentNode.id)
+    // console.log(item.parentNode.id)
 
     if (item.parentNode.classList.contains('group')) {
       item.parentNode.classList.add('is-open');
@@ -80,24 +81,28 @@ export const checkHashUrl = (codeBlock: any, liveLink: string) => {
 
 }
 
-const checkIfHashIsTheCodeBlockItself = (hash: string) => {
+const checkIfHashIsTheCodeBlockItself = (hash: string, delay: number) => {
   const cb = document.querySelector(hash);
   if(cb === null) return; 
 
   if (cb.classList.contains('code-block-section')) { //if its the code block itself, just scroll to him
-    setTimeout(() => {
-      scrollToTarget(cb);
-    }, 1000);
+    scrollToTarget(cb, delay);
   }
 }
 
-const scrollToTarget = (target: any) => {
-  const headerOffset = 100;
-  const elementPosition = target.getBoundingClientRect().top;
-  const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+const scrollToTarget = (target: any, delay: number) => {
+  const headerOffset = 0;
 
-  window.scrollTo({
-       top: offsetPosition,
-       behavior: "smooth"
-  });
+  setTimeout(() => {
+    const elementPosition = target.getBoundingClientRect().top;
+    // console.log(elementPosition)
+    // console.log(window.pageYOffset)
+    const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+    window.scrollTo({
+      top: offsetPosition,
+      behavior: "smooth"
+    });
+  }, delay);
+
 }
