@@ -1,16 +1,22 @@
-
 :root {
-  --cb-bg-color: var(--color-grey-light-2);
-  --cb-type: var(--orangeE0);
   --cb-type-green: #32A912;
   --cb-key-color: #0095FF;
+  --cb-type: var(--orangeE0);
+  --cb-bg-color: var(--color-grey-light-2);
   --cb-bracket-color: var(--color-450);
   --cb-cta-color: var(--color-220);
   --cb-line-color: #cdcdcd;
   --cb-action-bg-color: var(--color-grey-1);
-  --cb-action-bg-color-hover: var(#999999);
+  --cb-action-bg-color-hover: var(--color-999);
   --target-bg-color: #ff000026;
+
+  //dark
+  --cb-bg-color-dark: var(--color-120);
+  --cb-bracket-color-dark: var(--color-999);
+  --cb-cta-color-dark: var(--color-txt);
+  --cb-line-color-dark: var(--color-333);
 }
+
 
 .code-block-section {
   padding: 16px 16px 24px;
@@ -345,31 +351,24 @@
 html[data-theme=dark] {
 
   .code-block-section {
-    background-color: var(--color-120);
+    background-color: var(--cb-bg-color-dark);
 
     .groups-container .group-item .expanded-group .group-inner::before, .groups-container .group-item .expanded-group .group-inner .sub-group-item .expanded-sub-group .sub-group-inner::before {
-      background-color: #333;
+      background-color: var(--cb-line-color-dark);
     }
 
-    .first-group {
-
-      .bracket {
-        color: #999999;
-      }
+    .first-group .bracket {
+      color: var(--cb-bracket-color-dark);
     }
 
-    .groups-nav {
+    .groups-nav .grouped-item {
 
-    .grouped-item {
+      button {
+        color: var(--cb-cta-color-dark);
 
-        button {
-          color: var(--color-txt);
-
-          &:hover {
-            color: var(--cb-type);
-          }
+        &:hover {
+          color: var(--cb-type);
         }
-
       }
 
     }
@@ -377,23 +376,23 @@ html[data-theme=dark] {
     .groups-container {
 
       .group-item {
-        color: #999999;
+        color: var(--cb-bracket-color-dark);
 
         .grouped-btn, .sub-grouped-btn {
 
           button {
-            color: var(--color-txt);
+            color: var(--cb-cta-color-dark);
 
             &:hover {
               color: var(--cb-type);
             }
 
             svg {
-              color: var(--color-txt);
+              color: var(--cb-cta-color-dark);
             }
 
             .bracket {
-              color: #999999;
+              color: var(--cb-bracket-color-dark);
             }
           }
         }
@@ -403,7 +402,7 @@ html[data-theme=dark] {
           .group-inner {
 
             p {
-              color: #999999;
+              color: var(--cb-bracket-color-dark);
             }
 
           }
@@ -411,7 +410,7 @@ html[data-theme=dark] {
           .expanded-group-btn {
 
             svg {
-              color: var(--color-txt);
+              color: var(--cb-cta-color-dark);
             }
 
             &:hover svg {
@@ -429,8 +428,8 @@ html[data-theme=dark] {
     .code-block-actions {
 
       .expand-all-btn, .close-all-btn {
-        background-color: var(--color-333);
-        color: var(--color-txt);
+        background-color: var(--cb-line-color-dark);
+        color: var(--cb-cta-color-dark);
 
         &:hover {
           background-color: var(--cb-bracket-color);
