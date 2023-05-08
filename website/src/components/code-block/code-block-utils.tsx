@@ -27,7 +27,19 @@ export const checkIfPropertiesExpanded = (triggersSection: any) => {
   }
 }
 
-export const checkHashUrl = (codeBlock: any, liveLink: string) => {
+export const updateUrl = (targetHash: any) => {
+  let url;
+
+  if(location.hash) { //check if url already have #hash name or not
+    url = `${window.location.href.split('#')[0]}#${targetHash}`;
+  } else {
+    url = `${location.href}#${targetHash}`;
+  }
+
+  window.history.replaceState(null, document.title, url);
+}
+
+export const checkHashUrl = (codeBlock: any, liveLink?: string) => {
   let hash;
   let scrollDelay = 0;
 
@@ -41,7 +53,7 @@ export const checkHashUrl = (codeBlock: any, liveLink: string) => {
 
   if(hash === '') return; // stop if no hash exist
   checkIfHashIsTheCodeBlockItself(hash, scrollDelay);
-  
+
   let item = codeBlock.querySelector(hash);
 
   if(item === null) return; // stop if no hash item exist inside code block
@@ -63,7 +75,7 @@ export const checkHashUrl = (codeBlock: any, liveLink: string) => {
     if (item.parentNode.id === codeBlock.id) { //stop in the code block container and scroll to target
       scrollToTarget(item, scrollDelay);
       break;
-    } 
+    }
 
     // console.log(item.parentNode.id)
 
@@ -83,7 +95,7 @@ export const checkHashUrl = (codeBlock: any, liveLink: string) => {
 
 const checkIfHashIsTheCodeBlockItself = (hash: string, delay: number) => {
   const cb = document.querySelector(hash);
-  if(cb === null) return; 
+  if(cb === null) return;
 
   if (cb.classList.contains('code-block-section')) { //if its the code block itself, just scroll to him
     scrollToTarget(cb, delay);

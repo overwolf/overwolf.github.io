@@ -1,5 +1,5 @@
 import React, {FC} from 'react';
-import { checkHashUrl } from './code-block-utils';
+import { checkHashUrl, updateUrl } from './code-block-utils';
 
 interface CodeBlockLiveLinkProps {
   text: string;
@@ -16,20 +16,23 @@ const CodeBlockLiveLink: FC<CodeBlockLiveLinkProps> = props => {
     codeBlockID
   } = props;
 
-  const handleLiveLink = () => {
+  const handleLiveLink = (e) => {
+    e.preventDefault();
     const codeBlock = document.getElementById(codeBlockID);
     if(codeBlock === null) return;
     codeBlock.querySelector('.target')?.classList.remove('target');
     checkHashUrl(codeBlock, targetID);
+    updateUrl(targetID)
   }
 
   return (
-    <button 
+    <a
       className='code-block-live-link'
       onClick={handleLiveLink}
+      href={`#${targetID}`} //fallback link
     >
       {text}
-    </button>
+    </a>
   );
 };
 
