@@ -8,7 +8,7 @@
   --cb-line-color: #cdcdcd;
   --cb-action-bg-color: var(--color-grey-1);
   --cb-action-bg-color-hover: var(--color-999);
-  --target-bg-color: #ff000026;
+  --target-bg-color: rgba(196, 84, 4, 0.16);
 
   //dark
   --cb-bg-color-dark: var(--color-120);
@@ -202,6 +202,7 @@ html[data-theme=dark] {
 
           svg {
             @include svgStyle;
+            color: var(--cb-bracket-color);
             position: relative;
             bottom: -1px;
           }
@@ -215,7 +216,7 @@ html[data-theme=dark] {
           }
 
           &:hover svg {
-            color: var(--cb-type);
+            color: var(--cb-cta-color);
           }
         }
 
@@ -339,13 +340,3 @@ html[data-theme=dark] {
     background-color: var(--target-bg-color);
   }
 }
-
-// .code-block-live-link {
-//   display: inline-block;
-//   background-color: transparent;
-//   text-decoration: underline;
-
-//   &:hover {
-//     color: var(--color-primary)
-//   }
-// }
