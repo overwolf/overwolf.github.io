@@ -15,6 +15,17 @@
   --cb-bracket-color-dark: var(--color-999);
   --cb-cta-color-dark: var(--color-txt);
   --cb-line-color-dark: var(--color-333);
+  --cb-action-bg-color-dark: var(--color-333);
+  --cb-action-bg-color-hover-dark: var(--color-450);
+}
+
+html[data-theme=dark] {
+  --cb-bg-color: var(--cb-bg-color-dark);
+  --cb-line-color: var(--cb-line-color-dark);
+  --cb-bracket-color: var(--cb-bracket-color-dark);
+  --cb-cta-color: var(--cb-cta-color-dark);
+  --cb-action-bg-color: var(--cb-action-bg-color-dark);
+  --cb-action-bg-color-hover: var(--cb-action-bg-color-hover-dark);
 }
 
 @mixin fontStyle {
@@ -326,7 +337,7 @@
 
   .target {
     background-color: var(--target-bg-color);
-  } 
+  }
 }
 
 .code-block-live-link {
@@ -337,96 +348,4 @@
   &:hover {
     color: var(--color-primary)
   }
-}
-
-html[data-theme=dark] {
-
-  .code-block-section {
-    background-color: var(--cb-bg-color-dark);
-
-    .groups-container .group-item .expanded-group .group-inner::before, .groups-container .group-item .expanded-group .group-inner .sub-group-item .expanded-sub-group .sub-group-inner::before {
-      background-color: var(--cb-line-color-dark);
-    }
-
-    .first-group .bracket {
-      color: var(--cb-bracket-color-dark);
-    }
-
-    .groups-nav .grouped-item {
-
-      button {
-        color: var(--cb-cta-color-dark);
-
-        &:hover {
-          color: var(--cb-type);
-        }
-      }
-
-    }
-
-    .groups-container {
-
-      .group-item {
-        color: var(--cb-bracket-color-dark);
-
-        .grouped-btn, .sub-grouped-btn {
-
-          button {
-            color: var(--cb-cta-color-dark);
-
-            &:hover {
-              color: var(--cb-type);
-            }
-
-            svg {
-              color: var(--cb-cta-color-dark);
-            }
-
-            .bracket {
-              color: var(--cb-bracket-color-dark);
-            }
-          }
-        }
-
-        .expanded-group {
-
-          .group-inner {
-
-            p {
-              color: var(--cb-bracket-color-dark);
-            }
-
-          }
-
-          .expanded-group-btn {
-
-            svg {
-              color: var(--cb-cta-color-dark);
-            }
-
-            &:hover svg {
-              color: var(--cb-type);
-            }
-
-          }
-        }
-
-      }
-
-    }
-
-
-    .code-block-actions {
-
-      .expand-all-btn, .close-all-btn {
-        background-color: var(--cb-line-color-dark);
-        color: var(--cb-cta-color-dark);
-
-        &:hover {
-          background-color: var(--cb-bracket-color);
-        }
-      }
-    }
-  }
-
 }
