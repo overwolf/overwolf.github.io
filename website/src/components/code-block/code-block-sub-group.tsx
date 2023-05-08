@@ -1,5 +1,10 @@
-import React, {Children, FC, useContext, useRef} from 'react';
-import { CodeBlockContext, MainGroupContext, SubGroupContext } from './code-block-utils';
+import React, {FC, useContext, useRef} from 'react';
+import {
+  CodeBlockContext,
+  MainGroupContext,
+  SubGroupContext,
+  checkExpandAll
+} from './code-block-utils';
 
 interface CodeBlockSubGroupProps {
   subKeyName: string;
@@ -29,7 +34,7 @@ const CodeBlockSubGroup: FC<CodeBlockSubGroupProps> = props => {
     } else {
       thisSubGroup?.classList.add('is-open');
     }
-
+    checkExpandAll(cbID);
   }
 
   return (

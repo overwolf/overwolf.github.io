@@ -39,6 +39,20 @@ export const updateUrl = (targetHash: any) => {
   window.history.replaceState(null, document.title, url);
 }
 
+export const checkExpandAll = (codeBlockID: string) => {
+  const allClassNames = '.group-item, .sub-group-item, .grouped-item';
+  const codeBlock = document.getElementById(codeBlockID);
+  const expandAllBtn = codeBlock?.querySelector('.expand-all-btn');
+  const allExpandableItemsLength = codeBlock?.querySelectorAll(allClassNames).length;
+  const allOpenItemsLength = codeBlock?.querySelectorAll('.is-open').length;
+
+  if(allExpandableItemsLength === allOpenItemsLength) {
+    expandAllBtn?.classList.add('hidden');
+  } else {
+    expandAllBtn?.classList.remove('hidden');
+  }
+}
+
 export const checkHashUrl = (codeBlock: any, liveLink?: string) => {
   let hash;
   let scrollDelay = 0;

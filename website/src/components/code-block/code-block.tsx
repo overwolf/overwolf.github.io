@@ -1,7 +1,13 @@
 import './code-block.scss';
 import React, {FC, Children, useRef, useEffect} from 'react';
 import { killGlobalTarget } from '../utils/utils';
-import { bracketEndCheck, checkHashUrl, checkIfPropertiesExpanded, CodeBlockContext} from './code-block-utils';
+import {
+  bracketEndCheck,
+  checkExpandAll,
+  checkHashUrl,
+  checkIfPropertiesExpanded,
+  CodeBlockContext
+} from './code-block-utils';
 import CodeBlockExpandAllButton from './code-block-expand-all-button';
 
 interface CodeBlockProps {
@@ -39,6 +45,7 @@ const CodeBlock: FC<CodeBlockProps> = props => {
       trigger?.parentElement?.classList.add('is-open');
       group?.parentElement?.parentElement?.classList.add('is-open');
       checkIfPropertiesExpanded(triggersContainer?.current);
+      checkExpandAll(id);
     } else {
       console.log('ref is null');
     }
@@ -53,6 +60,7 @@ const CodeBlock: FC<CodeBlockProps> = props => {
       activeBtn?.parentElement?.classList.remove('is-open');
       group?.parentElement?.parentElement?.classList.remove('is-open');
       checkIfPropertiesExpanded(triggersContainer?.current);
+      checkExpandAll(id);
     } else {
       console.log('ref is null');
     }
@@ -68,6 +76,7 @@ const CodeBlock: FC<CodeBlockProps> = props => {
       thisBtn?.parentElement?.parentElement?.classList.add('is-open');
       mainTrigger?.parentElement?.classList.add('is-open');
       checkIfPropertiesExpanded(triggersContainer?.current);
+      checkExpandAll(id);
     } else {
       console.log('ref is null');
     }
