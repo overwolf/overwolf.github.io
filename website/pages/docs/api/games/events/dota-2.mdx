@@ -920,7 +920,7 @@ key               | Category    | Values                    | Notes             
 team              | me          |  radiant / dire           | See [notes](#me-note) |  139.0         |
 steam_id          | me          |  ID number                | See [notes](#me-note) |  139.0         |
 hero              | me          | Name of the hero you're playing | See [notes](#me-note) |  139.0         |
-mmr              | me          | MMR and confidence value of the player | See [notes](#mmr-note) |  139.0         |
+mmr              | me          | MMR and confidence value of the player |  See [notes](#me-note) |  225.1.0         |
 
 #### *me* note
 
@@ -930,7 +930,7 @@ Event data example:
 {"info":{"me":{"team":"radiant"}},"feature":"me"}
 {"info":{"me":{"steam_id":"7654654654"}},"feature":"me"}
 {"info":{"me":{"hero":"keeper_of_the_light"}},"feature":"me"}
-{"feature":"me","category":"me","key":"mmr","value":"{\"mmr\": 2180,\"confidence\" : 35}"}
+{"info":{"me":{"mmr":"{\"mmr\": 2865,\"confidence\" : 37}"}},"feature":"me"}
 ```
 
 ## `game`
