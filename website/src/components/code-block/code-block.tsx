@@ -1,5 +1,6 @@
 import './code-block.scss';
 import React, {FC, Children, useRef, useEffect} from 'react';
+import { killGlobalTarget } from '../utils/utils';
 import { bracketEndCheck, checkHashUrl, checkIfPropertiesExpanded, CodeBlockContext} from './code-block-utils';
 import CodeBlockExpandAllButton from './code-block-expand-all-button';
 
@@ -25,6 +26,7 @@ const CodeBlock: FC<CodeBlockProps> = props => {
   // -----------------------------------------------------------------------------
 
   useEffect(() => {
+    killGlobalTarget();
     checkHashUrl(groupsContainer.current?.parentElement);
   }, []);
 

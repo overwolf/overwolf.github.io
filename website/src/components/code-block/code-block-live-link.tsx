@@ -22,7 +22,7 @@ const CodeBlockLiveLink: FC<CodeBlockLiveLinkProps> = props => {
     if(codeBlock === null) return;
     codeBlock.querySelector('.target')?.classList.remove('target');
     checkHashUrl(codeBlock, targetID);
-    updateUrl(targetID)
+    updateUrl(targetID);
   }
 
   return (
