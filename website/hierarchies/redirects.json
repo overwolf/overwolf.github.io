@@ -852,28 +852,28 @@
     "from": "/docs/topics/login-with-twitch"
   },
   {
-    "to": "/topics/understanding-ow-logs/logs-dxdiag",
-    "from": "/docs/topics/logs-dxdiag"
+    "to": "/topics/understanding-overwolf-logs/dxdiag",
+    "from": ["/docs/topics/logs-dxdiag", "/topics/understanding-ow-logs/logs-dxdiag"]
   },
   {
-    "to": "/topics/understanding-ow-logs/logs-html",
-    "from": "/docs/topics/logs-html"
+    "to": "/topics/understanding-overwolf-logs/overlay-game-html",
+    "from": ["/docs/topics/logs-html", "/topics/understanding-ow-logs/logs-html"]
   },
   {
-    "to": "/topics/understanding-ow-logs/logs-intro",
-    "from": "/docs/topics/logs-intro"
+    "to": "/topics/understanding-overwolf-logs",
+    "from": ["/topics/understanding-ow-logs/logs-intro", "/docs/topics/logs-intro"]
   },
   {
-    "to": "/topics/understanding-ow-logs/logs-obs",
-    "from": "/docs/topics/logs-obs"
+    "to": "/topics/understanding-overwolf-logs/obs",
+    "from": ["/docs/topics/logs-obs", "/topics/understanding-ow-logs/logs-obs"]
   },
   {
-    "to": "/topics/understanding-ow-logs/logs-overwolfperf",
-    "from": "/docs/topics/logs-overwolfperf"
+    "to": "/topics/understanding-overwolf-logs/overwolfperf",
+    "from": ["/docs/topics/logs-overwolfperf", "/topics/understanding-ow-logs/logs-overwolfperf"]
   },
   {
-    "to": "/topics/understanding-ow-logs/logs-trace",
-    "from": "/docs/topics/logs-trace"
+    "to": "/topics/understanding-overwolf-logs/trace",
+    "from": ["/docs/topics/logs-trace", "/topics/understanding-ow-logs/logs-trace"]
   },
   {
     "to": "/topics/request-a-service/looking-for-group",

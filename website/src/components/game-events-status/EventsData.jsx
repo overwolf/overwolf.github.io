@@ -4,11 +4,12 @@ import SpecificGameEventsStatus from '@site/src/components/game-events-status/sp
 import { GamesMetadata } from './gamesMetaData';
 import Preloader from '../preloader/preloader';
 
+// TODO: Convert to use GameMetaData
   function EventsData(props) {
     const {
       allGames,
       specificGame,
-      gameID,
+      gameId,
       docsPath,
       urlAsDocsPath = false,
       onlyGames = false,
@@ -55,7 +56,7 @@ import Preloader from '../preloader/preloader';
       if(specificGame) {
 
         async function getStatus() {
-          await fetch(`https://game-events-status.overwolf.com/${gameID}_prod.json`)
+          await fetch(`https://game-events-status.overwolf.com/${gameId}_prod.json`)
           .then(response => response.json())
           .then(data => setGameStatus(data));
         }
@@ -74,7 +75,7 @@ import Preloader from '../preloader/preloader';
         }
 
         { specificGame && gameStatus != null &&
-          <SpecificGameEventsStatus gameStatusData={gameStatus} gameID={gameID} docsPath={docsPath} />
+          <SpecificGameEventsStatus gameStatusData={gameStatus} gameId={gameId} docsPath={docsPath} />
         }
 
       </>

@@ -8,9 +8,9 @@ sidebar_custom_props:
   electron_platform: false
 ---
 
-Every Overwolf app uses Overwolf windows, whether in-game or while on desktop. When you get to work on your own app, the first step is declaring your app’s windows in it's [manifest.json](/api/manifest) file. You will NOT be able to create an Overwolf window without declaring it in the manifest (window.open is not an Overwolf window).  
+Every Overwolf app uses Overwolf windows, whether in-game or while on desktop. When you get to work on your own app, the first step is declaring your app’s windows in its [manifest.json](/api/manifest) file. You will NOT be able to create an Overwolf window without declaring it in the manifest (window.open is not an Overwolf window).  
 
-The idea here is to declare a **window class** with it's properties and later you can create an **instance** of that class.
+The idea here is to declare a **window class** with its properties and later you can create an **instance** of that class.
 It's not currently possible to create multiple instances of a window class - having many windows is discouraged because it might make your app more complicated than required or hurt user experience.
 
 ## Declaring windows in manifest.json

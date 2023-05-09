@@ -1,4 +1,5 @@
 import React from 'react';
+import { stateToCss } from './events-utils';
 import './game-list.scss';
 
 // ---------------------------------------------------------------------------
@@ -20,25 +21,11 @@ function GameListItem(props) {
 function renderGameList(gameListData, urlAsDocsPath) {
 
   const gameListItems = gameListData.map(game => {
-    let className = 'game ';
-    switch (game.state) {
-      case 0:
-        className += 'coming-soon'
-        break;
-      case 1:
-        className += 'good';
-        break;
-      case 2:
-        className += 'medium';
-        break;
-      case 3:
-        className += 'bad';
-        break;
-    }
+    let className = 'game ' + stateToCss(game.state);;
 
     return <GameListItem
       key={game.id}
-      gameID={game.displayId ? game.displayId : game.id}
+      gameID={game.displayId || game.id}
       className={className}
       path={urlAsDocsPath ? game.docs : game.path}
       imgSrc={game.iconUrl}

@@ -2,7 +2,6 @@
   "name": "developers-site",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
   "scripts": {
     "generate": "yarn generate:content && yarn generate:plugins",
     "generate:content": "cd scripts && node generate.js",
@@ -15,18 +14,20 @@
     "deploy": "yarn generate && yarn workspace website docusaurus deploy",
     "clear": "cd scripts && node clear.js && yarn workspace website docusaurus clear",
     "serve": "yarn workspace website docusaurus serve",
-    "write-translations": "docusaurus write-translations",
-    "write-heading-ids": "docusaurus write-heading-ids"
+    "write-translations": "yarn workspace website docusaurus write-translations",
+    "write-heading-ids": "yarn workspace website docusaurus write-heading-ids"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/overwolf/developers-site.git"
   },
   "workspaces": [
-    "website"
+    "website",
+    "typings",
+    "scripts"
   ],
   "private": true,
-  "author": "",
+  "author": "Overwolf Ltd.",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/overwolf/overwolf.github.io/issues"

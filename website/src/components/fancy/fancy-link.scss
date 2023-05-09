@@ -1,0 +1,15 @@
+.fancy-link {
+    display: flex;
+
+    &:hover {
+        color: var(--color-primary) !important;
+    }
+
+    svg {
+        width: 14px;
+        height: 14px;
+        margin-right: 3px;
+        position: relative;
+        bottom: -9px;
+    }
+}

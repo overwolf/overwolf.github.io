@@ -15,7 +15,7 @@ sidebar_custom_props:
   <meta name="keywords" content="API for League of Legends, League of Legends API, SDK for League of Legends, League of Legends SDK"/>
 </head>
 
-<GameInfo gameID={5426} showDocs={false}/>
+<GameInfo gameId={5426} page="docs" />
 
 Please read the [overwolf.games.events](../events) documentation page to learn how to use Overwolf game events.
 
@@ -992,6 +992,11 @@ Data Example:
 {"events":[{"name":"usedAbility","data":"{  "type": "3"}"}]}
 {"events":[{"name":"usedAbility","data":"{  "type": "4"}"}]}
 ```
+:::note
+
+"usedAbility"is disabled for Udyr 
+
+:::
 
 ## `kill`
 
@@ -1598,6 +1603,9 @@ The value in ult_cd stands for ultimate cooldown in seconds.
 ```
 
 ## `chat`
+
+<MatchOnly/>
+
 
 ### Events
 
