@@ -1,0 +1,20 @@
+---
+id: 224
+image: "/img/embed/changelogs.jpg"
+title: "Version 0.224"
+sidebar_label: "0.224"
+sidebar_custom_props:
+  overwolf_platform: true
+  electron_platform: false
+---
+
+### Platform
+
+- Updated the underlying [OBS](/api/general/obs) recording engine version (27.2.3 -> 29.1.0). Notable changes include:
+  - *Deprecated the `NVIDIA_NVENC` encoder*
+  - Improvements to the `AMD_AMF` and `INTEL` (Quick Sync) video encoders
+    - The new `AMD_AMF` implementation should run faster across the board, but may see a slight performance loss on considerably older hardware
+  - Added three new `HEVC` encoders - `NVIDIA_NVENC_HEVC`, `INTEL_HEVC`, `AMD_AMF_HEVC`
+    - These new encoders can only be used for local recordings, not for *live*streaming (not to be confused with the [streaming API](/api/streaming))
+  - Various changes to the lists of supported video encoder presets - the full list can be found [here](/api/general/obs#encoders--presets-29.1.0)
+    - Passing an invalid encoder preset will not throw an error, but instead use the default preset for that encoder. This also includes deprecated encoder presets
