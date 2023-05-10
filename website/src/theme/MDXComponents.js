@@ -27,6 +27,7 @@ import DebugWrapper from '../components/debug/debug-wrapper';
 import EventsData from '../components/game-events-status/EventsData';
 import FancyLink from '../components/fancy/fancy-link';
 import MatchOnly from '../components/content-tags/gep/match-only';
+import DisplayJSON from '../components/shorthands/custom-code-blocks/DisplayJSON';
 
 const devMode = process.env.NODE_ENV === "development";
 
@@ -35,6 +36,13 @@ export default {
   ...MDXComponents,
   // Map the "highlight" tag to our <Highlight /> component!
   // `Highlight` will receive all props that were passed to `highlight` in MDX
+  
+  CodeBlock: CodeBlock,
+  CodeBlocMainGroup: CodeBlocMainGroup,
+  CodeBlockSubGroup: CodeBlockSubGroup,
+  CodeBlockSingleItem: CodeBlockSingleItem,
+  CodeBlockComment: CodeBlockComment,
+  CodeBlockLiveLink: CodeBlockLiveLink,
   ...WrapAll({
     ImageSlider: ImageSlider,
     ImageBoxModal: ImageBoxModal,
@@ -55,12 +63,7 @@ export default {
     EventsData: EventsData,
     FancyLink: FancyLink,
     MatchOnly: MatchOnly,
-    CodeBlock: CodeBlock,
-    CodeBlocMainGroup: CodeBlocMainGroup,
-    CodeBlockSubGroup: CodeBlockSubGroup,
-    CodeBlockSingleItem: CodeBlockSingleItem,
-    CodeBlockComment: CodeBlockComment,
-    CodeBlockLiveLink: CodeBlockLiveLink,
+    DisplayJSON: DisplayJSON
   })
 };
 

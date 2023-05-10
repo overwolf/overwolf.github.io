@@ -15,10 +15,10 @@ As such, this page covers important OBS (also referred to as `Recording Engine`)
 
 A history of OW-OBS versions by Overwolf client versions:
 
-| Overwolf Version          | OBS Version                 |
-| ------------------------- | --------------------------- |
-| 0.224 and newer           | 29.1.0                      |
-| 0.223 and older           | 27.2.3                      |
+| Overwolf Version          | OBS Version                                                    |
+| ------------------------- | -------------------------------------------------------------- |
+| 0.224 and newer           | [29.1.0](https://github.com/obsproject/obs-studio/tree/29.1.0) |
+| 0.223 and older           | [27.2.3](https://github.com/obsproject/obs-studio/tree/27.2.3) |
 
 </TabItem>
 <TabItem value="electron-platform" label="Overwolf Electron">
@@ -28,3 +28,299 @@ OBS Is currently not implemented as part of the [ow-electron](/tools/ow-electron
 </TabItem>
 </Tabs>
 
+
+## List of supported encoders
+
+<Tabs>
+<TabItem value="29.1.0" label="OBS Version 29.1.0" default>
+
+!JSON Values 29.1.0-encoders
+{
+    "INTEL": {
+        "display_name": "Intel® Quick Sync (uses iGPU)",
+        "presets": [
+            "QUALITY",
+            "BALANCED",
+            "SPEED",
+            "VERYSLOW",
+            "SLOWER",
+            "SLOW",
+            "MEDIUM",
+            "FAST",
+            "FASTER",
+            "VERYFAST"
+        ],
+        "rateControls": [
+            "RC_CBR",
+            "RC_CQP",
+            "RC_VBR",
+            "RC_VCM",
+            "AVBR",
+            "ICQ",
+            "LA_ICQ",
+            "LA_VBR",
+            "LA_CBR"
+        ]
+    },
+    "INTEL_HEVC": {
+        "display_name": "Intel® Quick Sync HEVC (uses iGPU)",
+        "presets": [
+            "QUALITY",
+            "BALANCED",
+            "SPEED",
+            "VERYSLOW",
+            "SLOWER",
+            "SLOW",
+            "MEDIUM",
+            "FAST",
+            "FASTER",
+            "VERYFAST"
+        ],
+        "rateControls": [
+            "RC_CBR",
+            "RC_CQP",
+            "RC_VBR",
+            "RC_VCM",
+            "AVBR",
+            "ICQ",
+            "LA_ICQ",
+            "LA_VBR",
+            "LA_CBR"
+        ]
+    },
+    "X264": {
+        "display_name": "X264 (uses CPU)",
+        "presets": [
+            "ULTRAFAST",
+            "SUPERFAST",
+            "VERYFAST",
+            "FASTER",
+            "FAST",
+            "MEDIUM",
+            "SLOW",
+            "SLOWER",
+            "VERYSLOW",
+            "PLACEBO"
+        ],
+        "rateControls": [
+            "RC_CBR",
+            "RC_CQP",
+            "RC_VBR",
+            "RC_VBR_MINQP",
+            "RC_2_PASS_QUALITY"
+        ]
+    },
+    "NVIDIA_NVENC_NEW": {
+        "display_name": "NVIDIA® NVENC New (uses GPU)",
+        "presets": [
+            "AUTOMATIC",
+            "DEFAULT",
+            "HIGH_QUALITY",
+            "HIGH_PERFORMANCE",
+            "LOW_LATENCY",
+            "HIGH_PERFORMANCE_LOW_LATENCY",
+            "HIGH_QUALITY_LOW_LATENCY",
+            "LOSSLESS",
+            "PRESET_MAX_QUALITY"
+        ],
+        "rateControls": [
+            "RC_CBR",
+            "RC_CQP",
+            "RC_VBR",
+            "RC_VBR_MINQP",
+            "RC_2_PASS_QUALITY",
+            "RC_LOSSLESS"
+        ]
+    },
+    "NVIDIA_NVENC_HEVC": {
+        "display_name": "NVIDIA® NVENC HEVC (uses GPU)",
+        "presets": [
+            "AUTOMATIC",
+            "DEFAULT",
+            "HIGH_QUALITY",
+            "HIGH_PERFORMANCE",
+            "LOW_LATENCY",
+            "HIGH_PERFORMANCE_LOW_LATENCY",
+            "HIGH_QUALITY_LOW_LATENCY",
+            "LOSSLESS",
+            "PRESET_MAX_QUALITY"
+        ],
+        "rateControls": [
+            "RC_CBR",
+            "RC_CQP",
+            "RC_VBR",
+            "RC_VBR_MINQP",
+            "RC_2_PASS_QUALITY",
+            "RC_LOSSLESS"
+        ]
+    },
+    "AMD_AMF": {
+        "display_name": "AMD® HW H.264 (uses GPU)",
+        "presets": [
+            "BALANCED",
+            "SPEED",
+            "QUALITY"
+        ],
+        "rateControls": [
+            "RC_CBR",
+            "RC_CQP",
+            "RC_VBR",
+            "RC_VBR_MINQP",
+            "RC_VBR_LAT",
+            "RC_QVBR",
+            "RC_HQVBR",
+            "RC_HQCBR"
+        ]
+    },
+    "AMD_AMF_HEVC": {
+        "display_name": "AMD® HW H.265 (uses GPU)",
+        "presets": [
+            "BALANCED",
+            "SPEED",
+            "QUALITY"
+        ],
+        "rateControls": [
+            "RC_CBR",
+            "RC_CQP",
+            "RC_VBR",
+            "RC_VBR_MINQP",
+            "RC_VBR_LAT",
+            "RC_QVBR",
+            "RC_HQVBR",
+            "RC_HQCBR"
+        ]
+    }
+}
+/JSON
+
+</TabItem>
+<TabItem value="27.2.3" label="OBS Version 27.2.3">
+
+!JSON Values 27.2.3-encoders
+{
+    "encoders": [
+        {
+            "name": "INTEL",
+            "display_name": "Intel® Quick Sync (uses iGPU)",
+            "enabled": false,
+            "presets": [
+                "LOW",
+                "MEDIUM",
+                "HIGH"
+            ],
+            "rateControls": [],
+            "error_description": "Not Supported",
+            "vendor_error": null,
+            "valid": false
+        },
+        {
+            "name": "X264",
+            "display_name": "X264 (uses CPU)",
+            "enabled": true,
+            "presets": [
+                "ULTRAFAST",
+                "SUPERFAST",
+                "VERYFAST",
+                "FASTER",
+                "FAST",
+                "MEDIUM",
+                "SLOW",
+                "SLOWER",
+                "VERYSLOW",
+                "PLACEBO"
+            ],
+            "rateControls": [
+                "RC_CBR",
+                "RC_CQP",
+                "RC_VBR",
+                "RC_VBR_MINQP",
+                "RC_2_PASS_QUALITY"
+            ],
+            "error_description": null,
+            "vendor_error": "",
+            "valid": true
+        },
+        {
+            "name": "NVIDIA_NVENC",
+            "display_name": "NVIDIA® NVENC (uses GPU)",
+            "enabled": false,
+            "presets": [
+                "AUTOMATIC",
+                "DEFAULT",
+                "HIGH_QUALITY",
+                "HIGH_PERFORMANCE",
+                "BLURAY_DISK",
+                "LOW_LATENCY",
+                "HIGH_PERFORMANCE_LOW_LATENCY",
+                "HIGH_QUALITY_LOW_LATENCY",
+                "LOSSLESS",
+                "HIGH_PERFORMANCE_LOSSLESS"
+            ],
+            "rateControls": [
+                "RC_CBR",
+                "RC_CQP",
+                "RC_VBR",
+                "RC_VBR_MINQP",
+                "RC_2_PASS_QUALITY"
+            ],
+            "error_description": "Not Supported",
+            "vendor_error": null,
+            "valid": false
+        },
+        {
+            "name": "NVIDIA_NVENC_NEW",
+            "display_name": "NVIDIA® NVENC New (uses GPU)",
+            "enabled": true,
+            "presets": [
+                "AUTOMATIC",
+                "DEFAULT",
+                "HIGH_QUALITY",
+                "HIGH_PERFORMANCE",
+                "BLURAY_DISK",
+                "LOW_LATENCY",
+                "HIGH_PERFORMANCE_LOW_LATENCY",
+                "HIGH_QUALITY_LOW_LATENCY",
+                "LOSSLESS",
+                "HIGH_PERFORMANCE_LOSSLESS"
+            ],
+            "rateControls": [
+                "RC_CBR",
+                "RC_CQP",
+                "RC_VBR",
+                "RC_VBR_MINQP",
+                "RC_2_PASS_QUALITY"
+            ],
+            "error_description": null,
+            "vendor_error": "",
+            "valid": true
+        },
+        {
+            "name": "AMD_AMF",
+            "display_name": "AMD® AMF (uses GPU)",
+            "enabled": false,
+            "presets": [
+                "AUTOMATIC",
+                "BALANCED",
+                "SPEED",
+                "QUALITY",
+                "ULTRA_LOW_LATENCY",
+                "LOW_LATENCY"
+            ],
+            "rateControls": [
+                "RC_CBR",
+                "RC_CQP",
+                "RC_VBR",
+                "RC_VBR_MINQP"
+            ],
+            "error_description": "Not Supported",
+            "vendor_error": null,
+            "valid": false
+        }
+    ],
+    "status": "success",
+    "success": true
+}
+/JSON
+
+</TabItem>
+</Tabs>
