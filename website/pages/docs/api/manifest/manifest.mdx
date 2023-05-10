@@ -551,6 +551,7 @@ Then, from your app you can use the [overwolf.extensions.current](extensions/cur
 ```javascript
 overwolf.extensions.current.getExtraObject(“simple-io-plugin”, function…)
 ```
+
 ## hotKeys object
 
 HotKeys are shortcut keystrokes that trigger app actions. The most common, basic usage is to show and hide your app in-game, but you can trigger more actions like saving, refreshing or any other custom actions.
@@ -650,23 +651,27 @@ Code Example:
 :::
 
 
-#### Enable app auto-launch with Overwolf
+#### Enable app auto-launch
+
+:::danger The 'LaunchWithOverwolf' Flag
+Even if your app is set to `LaunchWithOverwolf`, it must never open any visible windows before a game is launched, unless:
+* The user has explicitly opted in to this behavior
+* There is a clear and visible way for the user to opt out at any moment
+:::
 
 You can launch your app when a certain event occurs, by setting `event` to these values:
 * When the OW client launches: "LaunchWithOverwolf".
 * When a listed game launches: "GameLaunch".
 * When any game launches: "AllGamesLaunch".
 
-By setting `include_launchers` to true, the app will also launch if it detects a launcher while having AllGamesLaunch as the `event` property. **Launchers can still be detected without this flag, using their direct app id**
+By setting `include_launchers` to true, the app will also launch if it detects a launcher while having `AllGamesLaunch` as the `event` property.
+**Launchers can still be detected without this flag, using their direct game id**.
 
-If the app would have been launched by any of these behaviours, but it is already open, [onAppLaunchTriggered](overwolf-extensions#onapplaunchtriggered] is fired.
+If the app would have been launched by any of these behaviours, but it is already open, [onAppLaunchTriggered](extensions#onapplaunchtriggered) is fired.
 
 Notes:
-
 * You should add the "Tray" permission to your app's [manifest permissions list](#permissions-array).
-* Your app should use auto-launch after you start the client (takes ~15 seconds).
-* In addition, you can set the auto-launch options using the [overwolf.settings.setExtensionSettings()](settings#setextensionsettingsextensionsettings-callback) API.
-* Apps launched this way will have [origin](extensions#the-origin-string) "overwolfstartlaunchevent".
+* Apps launched this way will have [origin](extensions#the-origin-string) `overwolfstartlaunchevent`.
 
 Code example:
 
