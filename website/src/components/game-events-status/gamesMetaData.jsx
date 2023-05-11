@@ -52,7 +52,6 @@ export const GamesMetadata = {
     "7314": {
         "id": 7314,
         "path": "/status/dota-2",
-        "name": "Dota 2",
         "compliance": "/start/game-compliance/dota-2",
         "docs": "/api/games/events/dota-2",
         "iconUrl": "/img/games-logos/dota-2.png",
@@ -329,8 +328,8 @@ export const GamesMetadata = {
     },
     "22312": {
         "id": 22312,
-        "path": "/status/leap",
         "name": "LEAP",
+        "path": "/status/leap",
         "docs": "/api/games/events/leap",
         "iconUrl": "/img/games-logos/leap.png",
         "iconLargeUrl": "/img/games-logos/large/leap.png"
