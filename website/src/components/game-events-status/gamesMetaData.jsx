@@ -329,8 +329,8 @@ export const GamesMetadata = {
     },
     "22312": {
         "id": 22312,
-        "path": "/status/leap",
         "name": "LEAP",
+        "path": "/status/leap",
         "docs": "/api/games/events/leap",
         "iconUrl": "/img/games-logos/leap.png",
         "iconLargeUrl": "/img/games-logos/large/leap.png"
