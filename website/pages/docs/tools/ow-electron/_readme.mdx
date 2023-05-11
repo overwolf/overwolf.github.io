@@ -9,14 +9,9 @@ import StartAndBuild from '../../api/electron/package/_build-and-start.mdx'
 
 import AppAndAuthorName from '../../api/electron/package/_app-and-author-name.mdx'
 
+*Unique app ids are used for ads optimizations, as well as for optional [anonymous analytics](#anonymous-analytics) reports that you may review on our developer's console.*
+
 <AppAndAuthorName/>
-
-Unique app ids are used for ads optimizations, as well as for optional [anonymous analytics](#anonymous-analytics) reports that you may review on our developer's console.
-
-:::note Referring To App ID In Your app
-Once the `app.whenReady` promise resolves, your app's uid will be available, using the `OVERWOLF_APP_UID` environment variable (`process.env.OVERWOLF_APP_UID`).
-However, note that if you try to access it before the app is ready, the variable simply won't exist.
-:::
 
 ## The owadview tag
 

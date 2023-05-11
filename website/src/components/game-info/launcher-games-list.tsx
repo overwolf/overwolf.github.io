@@ -1,57 +1,39 @@
 import React, { useState, useRef } from 'react';
 import { GamesMetadata } from '../game-events-status/gamesMetaData';
-import GameInfoListItem from './game-info-list-item';
+import FancyLink from '../fancy/fancy-link';
+import SpecificGameInfo, { AllLinksOn } from './specific-game-info';
 
 function LauncherGamesList(props) {
-  const {gamesListData} = props;
+  const { gamesListData } = props;
 
   const [glIsOpen, setGlIsOpen] = useState(false);
   const [containerHeight, setContainerHeight] = useState(0);
   const expendContainer = useRef(null);
 
 
-  const gameList = gamesListData.map((gameID) =>
-    <li>
+  const gameList = gamesListData.map((gameID) => {
+    const metaData = GamesMetadata[gameID] as GameMetaData;
+    return (
+      <li>
+        <h3>
+          <img src={metaData.iconLargeUrl} />
+          <span>{metaData.name}</span>
+        </h3>
+        <SpecificGameInfo metaData={metaData} type="Game" disabledLinks={AllLinksOn()} />
+      </li>
+    )
+  });
 
-      <h3>
-        <img src={GamesMetadata[gameID].iconLargeUrl}/>
-        <span>{GamesMetadata[gameID].name}</span>
-      </h3>
-
-      <p><span>Game ID: </span>{gameID}</p>
-
-      { GamesMetadata[gameID].path &&
-        <GameInfoListItem
-          name={`Game events status`}
-          pathUrl={GamesMetadata[gameID].path}
-        />
-      }
-
-      { GamesMetadata[gameID].docs &&
-        <GameInfoListItem
-          name={`Game API docs`}
-          pathUrl={GamesMetadata[gameID].docs}
-        />
-      }
-
-      { GamesMetadata[gameID].compliance &&
-        <GameInfoListItem
-          name={`Game compliance page`}
-          pathUrl={GamesMetadata[gameID].compliance}
-        />
-      }
-
-    </li>
-  );
-
-   // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------
 
   function handleExpandCollapse() {
 
-    if(glIsOpen) {
+    if (glIsOpen) {
       setContainerHeight(0);
       setGlIsOpen(false);
     } else {
+      // @ts-ignore
+      // TODO: Fix this
       setContainerHeight(expendContainer.current.querySelector('ul').clientHeight);
       setGlIsOpen(true);
     }
@@ -71,8 +53,8 @@ function LauncherGamesList(props) {
 
       <div className='launcher-game-list-inner'
         ref={expendContainer}
-        style={{height: containerHeight+'px'}}
-        >
+        style={{ height: containerHeight + 'px' }}
+      >
         <ul className='launcher-game-list'>
           {gameList}
         </ul>

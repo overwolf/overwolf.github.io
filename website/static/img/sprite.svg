@@ -69,4 +69,8 @@
     <path d="M6 5H3V17H15V14M17 3L10 10M17 3V9M17 3H11" stroke="currentColor" stroke-width="2" stroke-linecap="square"/>
   </symbol>
 
+  <symbol id="caret" viewBox="0 0 24 24" fill="none">
+    <path d="M12 9L8 14H16L12 9Z" fill="currentColor"/>
+  </symbol>
+
 </svg>

@@ -15,7 +15,7 @@ sidebar_custom_props:
   <meta name="keywords" content="API for World of Warcraft, World of Warcraft API, SDK for World of Warcraft, World of Warcraft SDK"/>
 </head>
 
-<GameInfo gameID={765} showCompliance={true} showDocs={false}/>
+<GameInfo gameId={765} page="docs" />
 
 Please read the [overwolf.games.events](../events) documentation page to learn how to use Overwolf game events.
 
@@ -61,15 +61,12 @@ Data Example:
 
 ```json
 {
-	"info": {
-		"game_info": {
-			"group_applicants": "{"Shivanpally":{"player_name" : "Shivanpally", "server_name" : "Draenor", "applicant_id" : "1", "application_status" : "1", "level" 			 : "120", "item_level" : "477", "honor_level" : "6", "role" : "8","class" : "2"},
-			"Mêêrès":{"player_name" : "Mêêrès", "server_name" : "TarrenMill", "applicant_id" : "3", "application_status" : "1", "level" : "120", "item_level" 
-			: "478", "honor_level" : "0", "role" : "12","class" : "11"},
-			"Kayleb":{"player_name" : "Kayleb", "server_name" : "Blackhand", "applicant_id" : "2", "application_status" : "1", "level" : "120", "item_level" : "480", 			  "honor_level" : "214", "role" : "4","class" : "7"}}"
-		}
-	},
-	"feature": "game_info"
+  "info": {
+    "game_info": {
+      "group_applicants": "{\"Noupak\":{\"player_name\" : \"overwolf\", \"server_name\" : \"Drak'thul\", \"applicant_id\" : \"1\", \"application_status\" : \"10\", \"level\" : \"70\", \"item_level\" : \"406\", \"honor_level\" : \"0\", \"role\" : \"8\",\"rating\" : \"2037\",\"class\" : \"1\"}}"
+    }
+  },
+  "feature": "game_info"
 }
 ```
 

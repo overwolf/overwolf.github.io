@@ -1,6 +1,6 @@
 import React from 'react';
 import GameInfo from '../game-info/game-info';
-import { stateToCss } from './events-utils/events-utils';
+import { stateToCss } from './events-utils';
 import './gep-game-list.scss';
 
 function SearchBar(props) {
@@ -44,7 +44,7 @@ function filterEvents(e) {
 
 function SpecificGameEventsStatus(props) {
 
-  const { gameStatusData, gameID, docsPath } = props;
+  const { gameStatusData, gameId, docsPath } = props;
   // ---------------------------------------------------------------------------
 
   const getEventsByType = (type) => {
@@ -82,7 +82,7 @@ function SpecificGameEventsStatus(props) {
       <div className="entry-content">
         <div className="gep-game">
 
-          <GameInfo gameID={gameID} showStatus={false} />
+          <GameInfo gameId={gameId} page={"status"} />
 
           <SearchBar></SearchBar>
 
