@@ -38,7 +38,9 @@ Ensure that your manifest.json is consistent with our schema:
 
 #### Minimal Overwolf supported version
 
-Examine your app's [Overwolf minimal version](/api/manifest#meta-minimum) and compare it to the previous version's Overwolf Minimal version. Unless your update requires new properties or APIs, these versions should be identical.
+Examine your app's [Overwolf minimal version](/api/manifest#meta-minimum) and make sure that it is in line with your app's required features.
+- If a recent version added a new API/fixed a bug that you require, make sure that it is set to that version (or later)
+- **Make sure that this minimal required version is fully rolled out to all users before releasing!**
 
 #### Verify correct Advertisement flags
 
@@ -61,6 +63,11 @@ Examine your app's [Overwolf minimal version](/api/manifest#meta-minimum) and co
 #### Verify game_targeting flag existence
 
 #### Verify correct launch_events
+
+1. Make sure that your app only launches with the games it interacts with
+2. If your app is set to `LaunchWithOverwolf`, make sure:
+    1. It does not open any visible windows unless a game was opened
+    2. **OR** The user has to explicitly opt-in for this behavior, and can opt-out at any moment
 
 ## Windows
 
