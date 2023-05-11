@@ -5,7 +5,7 @@ import type { Transformer, Processor, Plugin } from 'unified';
 import type { Literal } from 'mdast';
 
 const NEWLINE = '\n';
-// This translates to \\ in the string, aka a single raw \ in the regex. String translations are fun
+// This translates to \\ in the string, aka a single escaped \ in the regex. String translations are fun
 const DEFAULTESCAPE = "\\\\";
 const DEFAULTTURN = 'admonition'
 
@@ -14,7 +14,7 @@ export interface BaseBlockOptions {
 	openingTag: string;
 	closingTag?: string;
 	escapeString?: string;
-	types?: string[];
+	types?: { [key: string]: any };
 	includeOpening: boolean;
 	includeClosing: boolean;
 	parseContent: boolean;
@@ -31,7 +31,7 @@ export interface TreeNode {
 	children?: TreeNode[]
 }
 
-export function createNode(type: string, properties?: any, children?: TreeNode[]) : TreeNode {
+export function createTreeNode(type: string, properties?: any, children?: TreeNode[]) : TreeNode {
 	return {
 		type,
 		data: {
@@ -109,7 +109,7 @@ export function pluginFactory<T extends BaseBlockOptions>(
 
 	return function plugin(this: Processor, optionsInput: Partial<T> = {}): Transformer {
 		const options = normalizeOptions(optionsInput, defaultOptions);
-		const types = Object.values(options?.types).join('|');
+		const types = Object.keys(options?.types).join('|');
 		const openingTag = openingTagFactory(options, types);
 		const closingTag = closingTagFactory(options);
 
@@ -118,7 +118,7 @@ export function pluginFactory<T extends BaseBlockOptions>(
 		// - If the node does exist, create the relevant node, and re-process its content if necessary
 		function blockTokenizer(this: any, eat: any, value: string, silent: boolean) {
 			// Check the value for the opening tag's matcher
-			const match = openingTag.exec(value);
+			const match = openingTag.exec(value.trim());
 			// Stop if no match is found / running in silent mode
 			// TODO: Verify that silent run should not maybe return ONLY AFTER the closed tag is located
 			if (!match || silent) {
@@ -152,32 +152,29 @@ export function pluginFactory<T extends BaseBlockOptions>(
 				potentialFood.push(line);
 				// Remove the line from newValue
 				newValue = newValue.slice(currentAnchor + 1);
-				// Check if the closing tag occurs in this line
-				if (closingTag.exec(line)) {
+				// Trim all spaces from the current line
+				let contentLine = line.trim();
+				// Check if the closing tag occurs in this trimmed line
+				if (closingTag.exec(contentLine)) {
 					// Mark as success
 					success = true;
-					// If we want to include the closing tag, add the line to the content
-					let finalLine = line;
+					// If we want to include the closing tag, we will add the line to the content
 					if(!options.includeClosing) {
 						// - If we don't want to, remove the closing tag from the line
-						finalLine = finalLine.replace(closingTag, "");
+						contentLine = contentLine.replace(closingTag, "");
 					}
 					// Add the final line if it has any content left
-					if(finalLine) content.push(finalLine);
+					if(contentLine) content.push(contentLine);
 					// Exit the loop
 					break;
 				}
 				// If we DON'T want to include the opening tag, check if the current anchor is the start of the text
 				if(!options.includeOpening && currentAnchor === -1) {
 					// - If it is, remove the opening tag from the text
-					let firstLine = line.replace(openingTag, "");
-					// Add the first line if it has any content left
-					if(firstLine) content.push(firstLine);
+					contentLine = contentLine.replace(openingTag, "");
 				}
-				else {
-					// - Otherwise, just add the line to the content
-					content.push(line);
-				}
+				// Add the content line if it has any content left
+				if(contentLine) content.push(contentLine);
 				// Advance the anchor
 				currentAnchor = newValue.indexOf(NEWLINE);
 			}
@@ -229,7 +226,7 @@ export function pluginFactory<T extends BaseBlockOptions>(
 			[childNodes, properties] = ContentNodesTransform?.(options, content, matchGroups, childNodes) ?? [childNodes, properties];
 
 			// The resulting tree node
-			const element = createNode(nodeType, properties, childNodes);
+			const element = createTreeNode(nodeType, properties, childNodes);
 			return add(element);
 		}
 
@@ -241,8 +238,10 @@ export function pluginFactory<T extends BaseBlockOptions>(
 		Parser.blockTokenizers[nodeType] = blockTokenizer;
 		// Add the current node type to the parser's parsing queue
 		Parser.blockMethods.splice(
+			// If parsePass is a number, add it at that point
 			typeof parsePass === "number" ?
 				parsePass :
+				// Otherwise, find the block type it references, and add it just afterwards
 				Parser.blockMethods.indexOf(parsePass ?? DEFAULTTURN) + 1,
 			0,
 			nodeType

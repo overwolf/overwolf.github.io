@@ -1,24 +1,18 @@
 import React from 'react';
 // Import the original mapper
 import MDXComponents from '@theme-original/MDXComponents';
-import ImageSlider from '@site/src/components/image-slider/image-slider';
-import ImageBoxModal from '@site/src/components/image-box-modal/image-box-modal';
-import VideoBox from '@site/src/components/video-box/video-box';
-import GameInfo from '@site/src/components/game-info/game-info';
-import SkipMe from '@site/src/components/skip-me/skip-me';
-import OWTabs from '@site/src/components/ow-tabs/ow-tabs';
-import OWTabItem from '@site/src/components/ow-tabs/ow-tab-item';
-import ImageHeading from '@site/src/components/image-heading/image-heading';
-import OWTable from '@site/src/components/ow-table/ow-table';
-import OWTableRow from '@site/src/components/ow-table/ow-table-row';
-import OWexpandedRowGroup from '@site/src/components/ow-table/ow-expanded-row-group';
-import OWdataCell from '@site/src/components/ow-table/ow-data-cell';
-import CodeBlock from '@site/src/components/code-block/code-block';
-import CodeBlocMainGroup from '@site/src/components/code-block/code-block-main-group';
-import CodeBlockSubGroup from '@site/src/components/code-block/code-block-sub-group';
-import CodeBlockSingleItem from '@site/src/components/code-block/code-block-single-item';
-import CodeBlockComment from '@site/src/components/code-block/code-block-comment';
-import CodeBlockLiveLink from '@site/src/components/code-block/code-block-live-link';
+import ImageSlider from '../components/image-slider/image-slider';
+import ImageBoxModal from '../components/image-box-modal/image-box-modal';
+import VideoBox from '../components/video-box/video-box';
+import GameInfo from '../components/game-info/game-info';
+import SkipMe from '../components/skip-me/skip-me';
+import OWTabs from '../components/ow-tabs/ow-tabs';
+import OWTabItem from '../components/ow-tabs/ow-tab-item';
+import ImageHeading from '../components/image-heading/image-heading';
+import OWTable from '../components/ow-table/ow-table';
+import OWTableRow from '../components/ow-table/ow-table-row';
+import OWexpandedRowGroup from '../components/ow-table/ow-expanded-row-group';
+import OWdataCell from '../components/ow-table/ow-data-cell';
 import Tagger from '../components/tagging/Tagger';
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
@@ -27,7 +21,7 @@ import DebugWrapper from '../components/debug/debug-wrapper';
 import EventsData from '../components/game-events-status/EventsData';
 import FancyLink from '../components/fancy/fancy-link';
 import MatchOnly from '../components/content-tags/gep/match-only';
-import DisplayJSON from '../components/shorthands/custom-code-blocks/DisplayJSON';
+import DisplayJSON from '../components/display-json/mdx/mdx-to-react';
 
 const devMode = process.env.NODE_ENV === "development";
 
@@ -37,12 +31,6 @@ export default {
   // Map the "highlight" tag to our <Highlight /> component!
   // `Highlight` will receive all props that were passed to `highlight` in MDX
   
-  CodeBlock: CodeBlock,
-  CodeBlocMainGroup: CodeBlocMainGroup,
-  CodeBlockSubGroup: CodeBlockSubGroup,
-  CodeBlockSingleItem: CodeBlockSingleItem,
-  CodeBlockComment: CodeBlockComment,
-  CodeBlockLiveLink: CodeBlockLiveLink,
   ...WrapAll({
     ImageSlider: ImageSlider,
     ImageBoxModal: ImageBoxModal,

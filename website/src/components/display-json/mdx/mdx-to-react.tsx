@@ -10,7 +10,7 @@ function DisplayJSON(props: { content: any, children: any }) {
 
   return (
     <>
-        {JSON.stringify(props, undefined, 4)}
+      <div style={{whiteSpace: 'pre-wrap'}} dangerouslySetInnerHTML={{__html: `${JSON.stringify(props, undefined, 4)}`}} />
     </>);
 
 }

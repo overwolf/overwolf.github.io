@@ -12,7 +12,7 @@ const CodeBlockComment: FC<CodeBlockCommentProps> = props => {
   } = props;
 
   return (
-    <p>// {comment}</p>
+    <p>{comment}</p>
   );
 };
 
