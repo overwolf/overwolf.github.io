@@ -1,0 +1,29 @@
+---
+id: 224
+image: "/img/embed/changelogs.jpg"
+title: "Version 0.224"
+sidebar_label: "0.224"
+sidebar_custom_props:
+  overwolf_platform: true
+  electron_platform: false
+---
+
+*As a part of this update, the recording API documentation is being rennovated. As such, some of these changes may not yet appear within their respective pages.*
+
+### Platform
+
+- Updated the underlying [OBS](/api/general/obs) recording engine version (27.2.3 -> 29.1.0). Notable changes include:
+  - **Deprecated the `NVIDIA_NVENC` encoder**
+  - Improvements to the `AMD_AMF` and `INTEL` (Quick Sync) video encoders
+    - The new `AMD_AMF` implementation should run faster across the board, but may see a slight performance loss on considerably older hardware
+    - The `INTEL` encoder has new encoder presets, which also cover the underlying OBS `target_usage` parameter.
+  - Added three new `HEVC` encoders - `NVIDIA_NVENC_HEVC`, `INTEL_HEVC`, `AMD_AMF_HEVC`
+    - These new encoders can only be used for local recordings, not for *live*streaming (not to be confused with the [streaming API](/api/streaming))
+  - Various changes to the lists of supported video encoder presets - the full list can be found [here](/api/general/obs#encoders--presets-29.1.0)
+    - Passing an invalid encoder preset will not throw an error, but instead use the default preset for that encoder. This also includes deprecated encoder presets
+  - Microphones can now be set to record as [`mono`](/api/streaming#streamdevicevolume-object) rather than stereo.
+  - Added support for the `encoder.config.profile` parameter from the underlying OBS, which accepts a value from the `overwolf.streaming.enums.StreamEncoderProfile` enum.
+  - Added the `encoder_custom_parameters` field to the `extra_options` field, which allows you to pass encoder-related settings directly as is to the OBS engine,
+    overriding any settings set by the Overwolf API. Documentation for finding the exact value names and values is currently in the works.
+  - Removed error for using a wrong `encoder.config.preset` value. Any invalid preset passed in will now instead default to the encoder's default preset.
+    - This also means that both `config.preset` and `config` are no longer required parameters when setting a specific encoder.

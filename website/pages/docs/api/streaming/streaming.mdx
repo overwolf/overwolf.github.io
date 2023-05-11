@@ -618,24 +618,25 @@ Stream settings container.
 
 ```json
 "settings": {
-    "video": { "buffer_length": 20000 },
-    "audio": {
+  "video": { "buffer_length": 20000 },
+  "audio": {
 	  "mic": {
-	    "volume": 100,
-		  "enable": true
-	  },
+      "volume": 100,
+		  "enable": true,
+      "mono": false
+    },
 	  "game": {
 	    "volume": 75,
-		  "enable": true
+  	  "enable": true
 	  }
-    },
-    "peripherals": { 
-    "capture_mouse_cursor": "both" 
-    },
-    "quota": {
-      "max_quota_gb": 2,
-      "excluded_directories": [ "cool_session" ] //set directories that are not part of the quota
-    }
+  },
+  "peripherals": { 
+  "capture_mouse_cursor": "both" 
+  },
+  "quota": {
+    "max_quota_gb": 2,
+    "excluded_directories": [ "cool_session" ] //set directories that are not part of the quota
+  }
 } 
 ```
 
@@ -1014,7 +1015,7 @@ Defines the configuration for an x264 encoder.
 | Name        | Type                                              | Description                                                                    | Since |
 |-------------| --------------------------------------------------|--------------------------------------------------------------------------------| ----- |
 | mic         | [StreamDeviceVolume](#streamdevicevolume-object)  |  Defines the microphone volume as applied to the stream                        | 0.83  |
-| game        | [GameAudioDevice](#gameaudiodevice-object)  | Defines the game volume as applied to the stream                               | 0.83  |
+| game        | [GameAudioDevice](#gameaudiodevice-object)        | Defines the game volume as applied to the stream                               | 0.83  |
 | separate_tracks | bool                                          | Enable multiple audio tracks. See [notes](#separate_tracks-notes)              | 0.156 |
 
 #### separate_tracks notes
@@ -1037,6 +1038,7 @@ Defines a device volume and enablement settings.
 | Name      | Type   | Description                                          | Since |
 |-----------| ------ |------------------------------------------------------| ----- |
 | enable    | bool   |  Defines if the device is enabled                    | 0.78  |
+| mono      | bool   |  Whether or not this device should be recorded as in `mono` or `stereo` mode. Defaults to `false` | 0.224  |
 | volume    | int    |  Defines the device volume in the range of 0 to 100  | 0.78  |
 | device_id | string |  Defines the device ID to use                        | 0.78  |
 
