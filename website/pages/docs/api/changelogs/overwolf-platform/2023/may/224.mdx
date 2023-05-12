@@ -19,7 +19,7 @@ sidebar_custom_props:
     - The `INTEL` encoder has new encoder presets, which also cover the underlying OBS `target_usage` parameter.
   - Added three new `HEVC` encoders - `NVIDIA_NVENC_HEVC`, `INTEL_HEVC`, `AMD_AMF_HEVC`
     - These new encoders can only be used for local recordings, not for *live*streaming (not to be confused with the [streaming API](/api/streaming))
-  - Various changes to the lists of supported video encoder presets - the full list can be found [here](/api/general/obs#encoders--presets-29.1.0)
+  - Various changes to the lists of supported video encoder presets - the full list for comparison will be published in the coming days
     - Passing an invalid encoder preset will not throw an error, but instead use the default preset for that encoder. This also includes deprecated encoder presets
   - Microphones can now be set to record as [`mono`](/api/streaming#streamdevicevolume-object) rather than stereo.
   - Added support for the `encoder.config.profile` parameter from the underlying OBS, which accepts a value from the `overwolf.streaming.enums.StreamEncoderProfile` enum.
