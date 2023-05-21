@@ -230,7 +230,7 @@ key             | Category   | Values                                           
 pseudo_match_id | match_info | Current match’s ID code      |See [notes](#pseudo_match_id-notes)|   133.0       |
 battle_state | match_info | Boolean. Whether a battle is in progress |See [notes](#battle_state-notes)|   133.0       |
 match_state | match_info | Boolean. Whether a match is in progress    |See [notes](#match_state-notes)|   133.0       |
-round_type | match_info | Round is PvE, PvP or Carousel, as well as stage number  |See [notes](#round_type-notes)|   133.0       |
+round_type | match_info | Round is PvE, PvP, Carousel or Augment as well as stage number  |See [notes](#round_type-notes)|   133.0       |
 round_outcome | match_info | Outcome of the previous round      |See [notes](#round_outcome-notes)|   133.0       |
 opponent | match_info | Names of your opponents                        |See [notes](#opponent-notes)|   133.0       |
 game_mode | match_info | Whether the current game mode is TFT or default LoL  |See [notes](#game_mode-notes)|   133.0       |
@@ -267,14 +267,13 @@ Data example:
 
 #### *round_type* notes
 
-Note: There is a known issue currently with carousel rounds that are not being counted (meaning they are skipped, 2-4 to 2-6 etc.), we will fix it in the near future.
-
 Data examples:
 
 ```json
-{"info":{"match_info":{"round_type":"{"stage":"1-1","name":"Carousel","type":null}"}},"feature":"match_info"}
-{"info":{"match_info":{"round_type":"{"stage":"1-2","name":"PVE","type":"Minions_1"}"}},"feature":"match_info"}
-{"info":{"match_info":{"round_type":"{"stage":"2-1","name":"PVP","type":null}"}},"feature":"match_info"}
+{"info":{"match_info":{"round_type":"{\"stage\":\"1-1\",\"name\":\"Carousel\",\"type\":\"Carousel\"}"}},"feature":"match_info"}
+{"info":{"match_info":{"round_type":"{\"stage\":\"1-2\",\"name\":\"PVE\",\"type\":\"Minions_1\"}"}},"feature":"match_info"}
+{"info":{"match_info":{"round_type":"{\"stage\":\"2-1\",\"name\":\"PVP\",\"type\":\"Augment_1\"}"}},"feature":"match_info"}
+{"info":{"match_info":{"round_type":"{\"stage\":\"2-2\",\"name\":\"PVP\",\"type\":\"PVP\"}"}},"feature":"match_info"}
 ```
 
 #### *round_outcome* notes
