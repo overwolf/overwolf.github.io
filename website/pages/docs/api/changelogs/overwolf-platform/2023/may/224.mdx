@@ -16,6 +16,7 @@ sidebar_custom_props:
   - **Deprecated the `NVIDIA_NVENC` encoder**
   - Improvements to the `AMD_AMF` and `INTEL` (Quick Sync) video encoders
     - The new `AMD_AMF` implementation should run faster across the board, but may see a slight performance loss on considerably older hardware
+    - The `INTEL` encoder's underlying implementation has changed. On some older systems where it is not supported, the old encoder will still be used.
     - The `INTEL` encoder has new encoder presets, which also cover the underlying OBS `target_usage` parameter.
   - Added three new `HEVC` encoders - `NVIDIA_NVENC_HEVC`, `INTEL_HEVC`, `AMD_AMF_HEVC`
     - These new encoders can only be used for local recordings, not for *live*streaming (not to be confused with the [streaming API](/api/streaming))
@@ -27,3 +28,9 @@ sidebar_custom_props:
     overriding any settings set by the Overwolf API. Documentation for finding the exact value names and values is currently in the works.
   - Removed error for using a wrong `encoder.config.preset` value. Any invalid preset passed in will now instead default to the encoder's default preset.
     - This also means that both `config.preset` and `config` are no longer required parameters when setting a specific encoder.
+
+
+### Bug Fixes
+
+- Opening two overlapping native windows at once will no longer cause them to flicker.
+- Fixed an issue where calling [`overwolf.windows.bringToFront()`](/api/windows#bringtofrontwindowid-callback) on a native window could unintentionally grab focus from the currently active game.
