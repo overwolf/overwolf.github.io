@@ -1,5 +1,5 @@
 import React, {FC, useContext} from 'react';
-import { CodeBlockContext, MainGroupContext, SubGroupContext } from './code-block-utils';
+import { CodeBlockContext, MainGroupContext, SubGroupContext } from '../code-block-utils';
 
 interface CodeBlockSingleItemProps {
   keyName: string;

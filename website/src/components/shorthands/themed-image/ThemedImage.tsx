@@ -4,7 +4,7 @@ import UnderlyingThemedImage from '@theme/ThemedImage';
 import React from 'react';
 
 
-function SkipMe(props: { imageUrl: string, alt: string }) {
+function ThemedImage(props: { imageUrl: string, alt: string }) {
  const { imageUrl, alt } = props;
 
 // ---------------------------------------------------------------------------
@@ -18,4 +18,4 @@ function SkipMe(props: { imageUrl: string, alt: string }) {
 
 }
 
-export default SkipMe;
+export default ThemedImage;

@@ -10,7 +10,8 @@ function DebugComp(Component: () => JSX.Element, props: any) {
       // If debug.color is toggled, show a random background color
       debug.color ? {backgroundColor: colorPicker()} : {}
     }>
-      <button onClick={() => setDebug({name: debug.name, color: !debug.color})}>Power</button>
+      { debug.name && <button onClick={() => setDebug({name: debug.name, color: !debug.color})}>Color</button> }
+      { debug.name && <button onClick={() => setDebug({name: !debug.name, color: false})}>Power</button> }
       <Component {...props}/>
       {
         // If debug.name is toggled, show the name of the component

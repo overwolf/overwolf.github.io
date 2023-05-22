@@ -7,8 +7,8 @@ import {
   checkHashUrl,
   checkIfPropertiesExpanded,
   CodeBlockContext
-} from './code-block-utils';
-import CodeBlockExpandAllButton from './code-block-expand-all-button';
+} from './display-json-utils';
+import CodeBlockExpandAllButton from './display-json-expand-all-button';
 
 interface CodeBlockProps {
   children: React.ReactNode;
@@ -19,7 +19,7 @@ interface CodeBlockProps {
 
 // -----------------------------------------------------------------------------
 
-const CodeBlock: FC<CodeBlockProps> = props => {
+const DisplayJSON: FC<CodeBlockProps> = props => {
   const {
     children,
     typeLabel,
@@ -32,6 +32,7 @@ const CodeBlock: FC<CodeBlockProps> = props => {
   // -----------------------------------------------------------------------------
 
   useEffect(() => {
+    // TODO: Change this to use a global context rather than a global classname
     killGlobalTarget();
     checkHashUrl(groupsContainer.current?.parentElement);
   }, []);
@@ -198,4 +199,4 @@ const CodeBlock: FC<CodeBlockProps> = props => {
   );
 };
 
-export default CodeBlock;
+export default DisplayJSON;

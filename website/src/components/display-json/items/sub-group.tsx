@@ -4,7 +4,7 @@ import {
   MainGroupContext,
   SubGroupContext,
   checkExpandAll
-} from './code-block-utils';
+} from '../code-block-utils';
 
 interface CodeBlockSubGroupProps {
   subKeyName: string;

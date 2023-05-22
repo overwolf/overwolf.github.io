@@ -186,6 +186,7 @@ async function sidebarsOverrides({ defaultSidebarItemsGenerator, ...args }) {
 }
 
 const codeComponentTagger = require("./src/plugins/tagging/codeComponentTagger.js").default;
+const displayJSON = require("./src/plugins/displayJSON/displayJSON.js").default;
 
 /** @type {import('@docusaurus/types').Config} */
 async function config() {
@@ -245,7 +246,7 @@ async function config() {
         "@docusaurus/preset-classic",
         {
           docs: {
-            remarkPlugins: [codeComponentTagger],
+            remarkPlugins: [codeComponentTagger, displayJSON],
             showLastUpdateAuthor: true,
             showLastUpdateTime: true,
             editUrl: "https://github.com/overwolf/overwolf.github.io/tree/source/website/",
