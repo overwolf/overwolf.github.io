@@ -42,7 +42,7 @@ Please read all the info about streaming usage and options on our [video capture
 * [overwolf.streaming.onStartStreaming](#onstartstreaming)
 * [overwolf.streaming.onStreamingError](#onstreamingerror)
 * [overwolf.streaming.onStreamingWarning](#onstreamingwarning)
-* [overwolf.streaming.onVideoFileSplited](#onvideofilesplited)
+* [overwolf.streaming.onVideoFileSplit](#onvideofilesplit)
 * [overwolf.streaming.onSupportedEncodersUpdated](#onsupportedencodersupdated)
 
 
@@ -330,7 +330,7 @@ This is an experimental function and shouldn’t be used without Overwolf’s pe
 :::
 
 This method is available when recording with the [enable_on_demand_split](#streamvideooptions-object) setting.  
-[onVideoFileSplited](#onvideofilesplited) event will be fired when the video splits.
+[onVideoFileSplit](#onvideofilesplit) event will be fired when the video splits.
 
 Parameter | Type                                            | Description                   |
 --------- | ------------------------------------------------| ----------------------------- |
@@ -532,7 +532,7 @@ overwolf.streaming.onStreamingWarning.addListener(function(result) {
 });
 ```
 
-## onVideoFileSplited
+## onVideoFileSplit
 
 #### Version added: 0.103
 
@@ -751,7 +751,7 @@ Stream video options.
 | notify_dropped_frames_ratio| double | The ratio of dropped to non-dropped frames for which to issue a notification | 0.92  |
 | sub_folder_name| string | Defines Sub folder for video file path destination (See note below this table) | 0.103  |
 | override_overwolf_setting| bool | Do not use Overwolf capture setting.  | 0.103  |
-| max_file_size_bytes| uint | Defines file maximum size. when video reach {max_file_size_bytes}, the recorder will flush the video file and stat a new video file. [onVideoFileSplited](#onvideofilesplited) event will be fired | 0.103  |
+| max_file_size_bytes| uint | Defines file maximum size. when video reach {max_file_size_bytes}, the recorder will flush the video file and stat a new video file. [onVideoFileSplit](#onvideofilesplit) event will be fired | 0.103  |
 | enable_on_demand_split| bool | Enable video file splitting on demand. See [notes](#enable_on_demand_split-notes). | 0.141  |
 | include_full_size_video| bool | in case max_file_size_bytes is onfull video will be recorded to disk parallel to splits videos.  | 0.105  |
 | disable_when_sht_not_supported| bool | Do not start video replay service in case shared texture is not supported.  | 0.105  |
@@ -820,7 +820,7 @@ The app "short name" is defined in the [dock_button_title](manifest#meta-dock) m
 * When calling [split()](#splitstreamid-callback), the recorder will flush the video file to the local disk.
 * When the recorder encoded the key frame with presentation time stamp thats is equal to grater than split() timestamps.
 * When |max_file_size_bytes| is set, this flag is ignored.  
-* [onVideoFileSplited](#onvideofilesplited) event will be fired.
+* [onVideoFileSplit](#onvideofilesplit) event will be fired.
 
 #### max_kbps notes
 
