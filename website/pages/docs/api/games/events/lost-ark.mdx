@@ -28,6 +28,7 @@ Please read the [overwolf.games.events](../events) documentation page to learn h
 * [gep_internal](#gep_internal)
 * [game_info](#game_info)
 * [match_info](#match_info)
+* [location](#location)
 
 
 ## Game events status
@@ -115,4 +116,30 @@ Data Example:
 
 ```json
 {"events":[{"name":"match_end","data":""}]}
+```
+
+## `location`
+
+### Info Updates
+
+key          | Category    | Values                    | Notes                 | Since GEP Ver.|
+------------ | ------------| ------------------------- | --------------------- | ------------- | 
+map          | match_info  | Map name                  |See [notes](#map-note) |   227.0       |
+location     | match_info  | player location           |See [notes](#location-note) |   227.0       |
+
+
+#### *map* note
+
+Data Example:
+
+```json
+{"info":{"match_info":{"map":"LV_ATM_Border_F_PS"}},"feature":"location"}
+```
+
+#### *location* note
+
+Data Example:
+
+```json
+{"info":{"match_info":{"location":"{\"x\":22869.693359,\"y\":20543.306641,\"z\":1633.370850}"}},"feature":"location"}
 ```
