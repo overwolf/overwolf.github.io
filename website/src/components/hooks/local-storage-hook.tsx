@@ -98,9 +98,11 @@ function useLocalStorageHook<T>(key: string, initialValue: T): [T, SetValue<T>] 
 export default useLocalStorageHook
 
 // A wrapper for "JSON.parse()"" to support "undefined" value
-function parseJSON<T>(value: string | null): T | undefined {
+function parseJSON<T>(value: string): T | undefined {
+    // TODO - Figure out better way to do this
+    if(value[0] !== "{") return value as T;
     try {
-        return value === 'undefined' ? undefined : JSON.parse(value ?? '')
+        return value === 'undefined' ? undefined : JSON.parse(value);
     } catch {
         console.log('parsing error on', { value })
         return undefined
