@@ -36,7 +36,7 @@ import Preloader from '../preloader/preloader';
               if (!GamesMetadata[game.game_id]) continue;
 
               //exclude the launchers
-              if(onlyGames && GamesMetadata[game.game_id].launcher) continue;
+              if(onlyGames && GamesMetadata[game.game_id].games) continue;
 
               //exclude the games
               if(onlyLaunchers && !GamesMetadata[game.game_id].launcher) continue;
