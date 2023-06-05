@@ -13,7 +13,8 @@ import Preloader from '../preloader/preloader';
       docsPath,
       urlAsDocsPath = false,
       onlyGames = false,
-      onlyLaunchers = false
+      onlyLaunchers = false,
+      endOfLife = undefined
     } = props;
 
     const [gameListData, setGameListData] = useState(null);
@@ -41,7 +42,7 @@ import Preloader from '../preloader/preloader';
               //exclude the games
               if(onlyLaunchers && !GamesMetadata[game.game_id].launcher) continue;
 
-              GamesMetadata[game.game_id].state = game.state;
+              GamesMetadata[game.game_id].state = GamesMetadata[game.game_id].endOfLife ? 0 : game.state;
 
               games.push(GamesMetadata[game.game_id]);
             }
@@ -75,7 +76,7 @@ import Preloader from '../preloader/preloader';
         }
 
         { specificGame && gameStatus != null &&
-          <SpecificGameEventsStatus gameStatusData={gameStatus} gameId={gameId} docsPath={docsPath} />
+          <SpecificGameEventsStatus gameStatusData={gameStatus} gameId={gameId} docsPath={docsPath} endOfLife={endOfLife} />
         }
 
       </>

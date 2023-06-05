@@ -3,13 +3,13 @@ import { stateToTxt } from '../game-events-status/events-utils';
 
 
 
-function StatusToolTip(props: { gameState: number; }) {
-  const {gameState} = props;
+function StatusToolTip(props: { gameState: number; endOfLife?: string }) {
+  const {gameState, endOfLife} = props;
 
   return (
     <div className='status-tooltip-trigger'>
       <div className='status-tooltip'>
-        <span>{stateToTxt(gameState)}</span>
+        <span>{stateToTxt(endOfLife ? -1 : gameState)}</span>
       </div>
     </div>
   )

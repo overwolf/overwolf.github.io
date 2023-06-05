@@ -44,7 +44,7 @@ function filterEvents(e) {
 
 function SpecificGameEventsStatus(props) {
 
-  const { gameStatusData, gameId, docsPath } = props;
+  const { gameStatusData, gameId, endOfLife } = props;
   // ---------------------------------------------------------------------------
 
   const getEventsByType = (type) => {
@@ -77,6 +77,7 @@ function SpecificGameEventsStatus(props) {
 
   // ---------------------------------------------------------------------------
 
+  console.log(endOfLife);
   return (
     <article>
       <div className="entry-content">
@@ -84,26 +85,27 @@ function SpecificGameEventsStatus(props) {
 
           <GameInfo gameId={gameId} page={"status"} />
 
-          <SearchBar></SearchBar>
+          { !endOfLife && <>
+            <SearchBar></SearchBar>
 
-          <div className="game-events-info">
+            <div className="game-events-info">
 
-            <div className="game-data">
-              <h4>Events</h4>
-              <ul>
-                {events}
-              </ul>
+              <div className="game-data">
+                <h4>Events</h4>
+                <ul>
+                  {events}
+                </ul>
+              </div>
+
+              <div className="game-data">
+                <h4>Info updates</h4>
+                <ul>
+                  {updates}
+                </ul>
+              </div>
             </div>
-
-            <div className="game-data">
-              <h4>Info updates</h4>
-              <ul>
-                {updates}
-              </ul>
-            </div>
-
-          </div>
-
+          </>
+          }
         </div>
       </div>
     </article>
