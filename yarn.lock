@@ -10216,6 +10216,8 @@ __metadata:
 "scripts@workspace:scripts":
   version: 0.0.0-use.local
   resolution: "scripts@workspace:scripts"
+  dependencies:
+    typings: "workspace:typings"
   languageName: unknown
   linkType: soft
 

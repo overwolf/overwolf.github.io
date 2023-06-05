@@ -131,8 +131,8 @@ const metaData = [
     },
     {
         id: 10844,
-        path: "overwatch",
-        name: "Overwatch"
+        path: "overwatch-2",
+        name: "Overwatch 2"
     },
     {
         id: 7212,
@@ -226,6 +226,11 @@ const metaData = [
         id: 22312,
         path: "leap",
         name: "LEAP"
+    },
+    {
+        id: 22700,
+        path: "diablo-4",
+        name: "Diablo 4"
     }
 ]
 

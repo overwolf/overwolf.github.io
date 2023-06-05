@@ -2,7 +2,7 @@ export default interface gameMetaData {
     id: number;
     displayId?: number;
     iconLargeUrl?: string;
-    iconUrl: string;
+    iconUrl?: string;
     name?: string;
     path?: string;
     docs?: string;
