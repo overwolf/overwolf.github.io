@@ -37,27 +37,27 @@ function GameInfo(props: { gameId: any; page: "docs" | "status" | "compliance"; 
   const subVariants = metaData.subVariants;
 
   // ---------------------------------------------------------------------------
-  return gameStatus != null ? (
+  return gameStatus !== null ? (
     <section className='game-info-section'>
       <div className="game-info-item">
 
         <h1
-          className={`game-info-title ${gameStatus ? stateToCss(gameStatus) : ''}`}>
-          <img src={GamesMetadata[gameId].iconLargeUrl}/>
-          <span>{GamesMetadata[gameId].name}</span>
+          className={`game-info-title ${stateToCss(metaData.endOfLife ? 0 : gameStatus)}`}>
+          <img src={metaData.iconLargeUrl}/>
+          <span>{metaData.name}</span>
 
-          {gameStatus &&
-            <StatusToolTip gameState={gameStatus} />
-          }
+          <StatusToolTip gameState={gameStatus} endOfLife={metaData.endOfLife} />
         </h1>
 
         <ul className='game-info-groups'>
-
-          { !mainVariant &&
-            <li className='main'>
-              <SpecificGameInfo metaData={metaData} type="Game" disabledLinks={LinkToggler(page)} />
+          { metaData.endOfLife && 
+            <li style={{paddingTop: "10px"}}>
+              <h1>This game is nearing its end of life, and support will be fully removed at {metaData.endOfLife}</h1>
             </li>
           }
+          <li className='main'>
+            <SpecificGameInfo metaData={metaData} type="Game" disabledLinks={LinkToggler(page)} />
+          </li>
 
           {mainVariant &&
             <>

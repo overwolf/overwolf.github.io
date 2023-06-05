@@ -12,4 +12,5 @@ export default interface gameMetaData {
     mainVariant?: number;
     subVariants?: number[];
     variant?: string;
+    endOfLife?: string;
 }

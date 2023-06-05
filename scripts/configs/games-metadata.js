@@ -39,7 +39,8 @@ const metaData = [
     {
         id: 21586,
         path: "dota-underlords",
-        name: "Dota Underlords"
+        name: "Dota Underlords",
+        endOfLife: "9/7/2023"
     },
     {
         id: 21634,
@@ -89,7 +90,8 @@ const metaData = [
     {
         id: 21328,
         path: "hunt-showdown",
-        name: "Hunt: Showdown"
+        name: "Hunt: Showdown",
+        endOfLife: "9/7/2023"
     },
     {
         id: 5426,

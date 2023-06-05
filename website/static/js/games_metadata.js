@@ -172,6 +172,7 @@ const GamesMetaData = {
         "id": 21328,
         "path": "/status/hunt-showdown",
         "name": "Hunt: Showdown",
+        "endOfLife": "9/7/2023",
         "docs": "/api/games/events/hunt-showdown",
         "iconUrl": "/img/games-logos/hunt-showdown.png",
         "iconLargeUrl": "/img/games-logos/large/hunt-showdown.png"
@@ -209,6 +210,7 @@ const GamesMetaData = {
         "id": 21586,
         "path": "/status/dota-underlords",
         "name": "Dota Underlords",
+        "endOfLife": "9/7/2023",
         "docs": "/api/games/events/dota-underlords",
         "iconUrl": "/img/games-logos/dota-underlords.png",
         "iconLargeUrl": "/img/games-logos/large/dota-underlords.png"
@@ -329,8 +331,8 @@ const GamesMetaData = {
     },
     "22312": {
         "id": 22312,
-        "name": "LEAP",
         "path": "/status/leap",
+        "name": "LEAP",
         "docs": "/api/games/events/leap",
         "iconUrl": "/img/games-logos/leap.png",
         "iconLargeUrl": "/img/games-logos/large/leap.png"
