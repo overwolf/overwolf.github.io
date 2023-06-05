@@ -125,11 +125,11 @@ const GamesMetaData = {
     },
     "10844": {
         "id": 10844,
-        "path": "/status/overwatch",
-        "name": "Overwatch",
-        "docs": "/api/games/events/overwatch",
-        "iconUrl": "/img/games-logos/overwatch.png",
-        "iconLargeUrl": "/img/games-logos/large/overwatch.png"
+        "path": "/status/overwatch-2",
+        "name": "Overwatch 2",
+        "docs": "/api/games/events/overwatch-2",
+        "iconUrl": "/img/games-logos/overwatch-2.png",
+        "iconLargeUrl": "/img/games-logos/large/overwatch-2.png"
     },
     "10902": {
         "id": 10902,
@@ -344,6 +344,14 @@ const GamesMetaData = {
         "docs": "/api/games/events/sons-of-the-forest",
         "iconUrl": "/img/games-logos/sons-of-the-forest.png",
         "iconLargeUrl": "/img/games-logos/large/sons-of-the-forest.png"
+    },
+    "22700": {
+        "id": 22700,
+        "path": "/status/diablo-4",
+        "name": "Diablo 4",
+        "docs": "/api/games/events/diablo-4",
+        "iconUrl": "/img/games-logos/diablo-4.png",
+        "iconLargeUrl": "/img/games-logos/large/diablo-4.png"
     },
     "215701": {
         "id": 215701,
