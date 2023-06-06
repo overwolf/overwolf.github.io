@@ -86,7 +86,7 @@ newHotkey = {
 overwolf.settings.hotkeys.assign(newHotkey, console.log)
 ```
 :::important
-The virtualKey is an integer representation of the key. Please note that using Javascript, you should capture these using the "keydown" event. Using the "keypress" event will provide incorrect numbers. E.g. the B key provides virtualKey: 66 on "keydown" (correct), but virtualKey: 98 on "keypress" (incorrect).
+The virtualKey is an integer representation of the **key**, not the **character**, and as such, it corresponds to the `keyDown` event. You can read more about it [here](https://stackoverflow.com/a/3396805).
 :::
 
 ## unassign(hotkey, callback)
