@@ -87,7 +87,7 @@ Example:
 key          | Category    | Values                    | Notes                 | Since GEP Ver. |
 --------------- | -----------| ------------------------------------------------------------------------------------ | ------------------------------------ | ------------- |
 pseudo_match_id | match_info | The current match’s ID code.  | See [notes](#pseudo_match_id-note)  |   130.0 |
-game_mode | match_info   | The current type of game mode. |See [notes](#game_mode_log-note) for possible values|   228.0.1  |
+game_mode | match_info   | The current type of game mode. |See [notes](#game_mode-note) for possible values|   228.1  |
 match_id | match_info   | The current match's ID. |See [notes](#match_id-note) for possible values|   162.1  |
 map_id | match_info   | The currently played map. |See [notes](#map_id-note) for possible values|   162.1  |
 round_outcome_type | match_info   | The type of win/loss of the last-played round. |See [notes](#round_outcome_type-note) for possible values|   165.0  |
@@ -119,12 +119,12 @@ Data Example:
 {"info":{"match_info":{"pseudo_match_id":"9800ba24-7da7-4e3a-8ab1-a74405780444"}},"feature":"match_info"}
 ```
 
-#### *game_mode_log* note
+#### *game_mode* note
 
 Data Example:
 
 ```json
-{"info":{"match_info":{"game_mode_log":"{"GameModes":7,"MatchType":"MATCHMAKING_PVP"}"}},"feature":"match_info"}
+{"info":{"match_info":{"game_mode":"MATCHMAKING_PVP_CASUAL"}},"feature":"match_info"}
 ```
 
 While the possible values are:
@@ -143,8 +143,6 @@ While the possible values are:
 
 
 *Note that in Custom games, Training Grounds, or in Match Replay, there is no support for Overwolf real time game events*
-
-
 
 
 #### *match_id* note
