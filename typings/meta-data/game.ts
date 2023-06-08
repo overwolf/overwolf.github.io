@@ -6,6 +6,7 @@ export default interface gameMetaData {
     name?: string;
     path?: string;
     docs?: string;
+    electron?: string;
     compliance?: string;
     launcher?: number;
     games?: number[];

@@ -170,7 +170,8 @@ const metaData = [
         launcher: 10902,
         subVariants: [ 215701 ],
         path: "teamfight-tactics",
-        name: "Teamfight Tactics"
+        name: "Teamfight Tactics",
+        electron: "teamfight-tactics"
     },
     {
         id: 215701,

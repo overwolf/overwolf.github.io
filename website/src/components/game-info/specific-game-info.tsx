@@ -18,15 +18,16 @@ export function AllLinksOn(): DisabledLinks {
 function SpecificGameInfo(props: {
     metaData: GameMetaData;
     type?: string;
-    disabledLinks: DisabledLinks
+    hasElectron?: boolean;
+    disabledLinks: DisabledLinks;
 }) {
-    const { metaData, type, disabledLinks } = props;
-    const { id, displayId, path, docs, compliance, variant } = metaData;
+    const { metaData, type, disabledLinks, hasElectron } = props;
+    const { id, displayId, path, docs, compliance, variant, electron } = metaData;
     
     if (!type && !variant) console.error("No variant was defined for this game!", metaData);
 
     const prefix = variant ?? type;
-    const mainName = variant ? `${type} (${prefix})` : type;
+    const mainName = hasElectron ? `${type} (Electron)` : variant ? `${type} (${prefix})` : type;
 
     return (
         <>
@@ -45,7 +46,7 @@ function SpecificGameInfo(props: {
             {!disabledLinks.docs && docs &&
                 <FancyLink
                     name={`${prefix} API docs`}
-                    pathUrl={docs}
+                    pathUrl={electron}
                 />
             }
 

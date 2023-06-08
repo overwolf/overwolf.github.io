@@ -35,6 +35,7 @@ function GameInfo(props: { gameId: any; page: "docs" | "status" | "compliance"; 
   const launcherGames = metaData?.games;
   const mainVariant = GamesMetadata[metaData.mainVariant] as GameMetaData;
   const subVariants = metaData.subVariants;
+  const hasElectron = metaData.electron;
 
   // ---------------------------------------------------------------------------
   return gameStatus !== null ? (
@@ -59,7 +60,13 @@ function GameInfo(props: { gameId: any; page: "docs" | "status" | "compliance"; 
             <SpecificGameInfo metaData={metaData} type="Game" disabledLinks={LinkToggler(page)} />
           </li>
 
-          {mainVariant &&
+          { hasElectron &&
+            <li className='main'>
+              <SpecificGameInfo metaData={metaData} type="Game" hasElectron={true} disabledLinks={LinkToggler(page)} />
+            </li>
+          }
+
+          { mainVariant &&
             <>
               <li className='main'>
                 <SpecificGameInfo metaData={mainVariant} type="Game" disabledLinks={AllLinksOn()} />
