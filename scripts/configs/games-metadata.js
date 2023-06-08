@@ -60,12 +60,14 @@ const metaData = [
     {
         id: 21666,
         path: "football-manager-2021",
-        name: "Football Manager 2021"
+        name: "Football Manager 2021",
+        endOfLife: "9/7/2023"
     },
     {
         id: 21856,
         path: "football-manager-2022",
-        name: "Football Manager 2022"
+        name: "Football Manager 2022",
+        endOfLife: "9/7/2023"
     },
     {
         id: 21216,

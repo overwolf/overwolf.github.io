@@ -77,7 +77,6 @@ function SpecificGameEventsStatus(props) {
 
   // ---------------------------------------------------------------------------
 
-  console.log(endOfLife);
   return (
     <article>
       <div className="entry-content">
