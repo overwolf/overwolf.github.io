@@ -46,7 +46,7 @@ function SpecificGameInfo(props: {
             {!disabledLinks.docs && docs &&
                 <FancyLink
                     name={`${prefix} API docs`}
-                    pathUrl={electron ?? docs}
+                    pathUrl={hasElectron ? electron : docs}
                 />
             }
 
