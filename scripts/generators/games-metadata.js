@@ -29,7 +29,7 @@ metaData.forEach(function (
     val.docs = `/api/games/${isLauncher ? 'launchers/' : ''}events/${val.docs ?? path}`
     val.iconUrl = `/img/games-logos/${fullPath}.png`;
     val.iconLargeUrl = `/img/games-logos/large/${fullPath}.png`;
-    val.electron = `/api/electron/game-events/${fullPath}`;
+    if(val.electron) val.electron = `/api/electron/game-events/${fullPath}`;
 
 
     GamesMetaData[id] = val;
