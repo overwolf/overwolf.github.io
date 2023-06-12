@@ -83,7 +83,7 @@ const Services = (props) => {
               </li>
               <li>
                 <svg><use href="/img/sprite.svg#real-time-game-events" /></svg>
-                Real time game data <span>(Coming soon)</span>
+                Real time game data
               </li>
             </ul>
           </div>
