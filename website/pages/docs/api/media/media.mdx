@@ -15,6 +15,7 @@ Use this API to capture a screenshot of the currently running game.
 
 * [overwolf.media.takeScreenshot()](#takescreenshotcallback)
 * [overwolf.media.takeScreenshot()](#takescreenshottargetfolder-callback)
+* [overwolf.media.takeScreenshotEx()](#takescreenshotextargetpath-options-callback)
 * [overwolf.media.takeWindowsScreenshotByHandle()](#takewindowsscreenshotbyhandlewindowhandle-postmediaevent-callback)
 * [overwolf.media.takeWindowsScreenshotByHandle()](#takewindowsscreenshotbyhandlewindowhandle-postmediaevent-targetfolder-callback)
 * [overwolf.media.takeWindowsScreenshotByName()](#takewindowsscreenshotbynamewindowname-postmediaevent-callback)
@@ -39,9 +40,11 @@ Use this API to capture a screenshot of the currently running game.
 
 ## Types Reference
 
+* [overwolf.media.ScreenshotOptions](#screenshotoptions-object) Object
 * [overwolf.media.MemoryScreenshotParams](#memoryscreenshotparams-object) Object
 * [overwolf.media.RescaleParams](#rescaleparams-object) Object
 * [overwolf.media.CropParams](#cropparams-object) Object
+* [overwolf.media.enums.ImageFormat](#imageformat-enum) enum
 * [overwolf.media.enums.eMediaType](#emediatype-enum) enum
 * [overwolf.media.enums.eSourceType](#esourcetype-enum) enum
 * [overwolf.media.enums.eVideoSourceTransform](#evideosourcetransform-enum) enum
@@ -86,6 +89,18 @@ Parameter            | Type                  | Description                      
 -------------------- | ----------------------| ------------------------------------------------ |
 targetFolder         | string                | Target screen shot folder path                   |
 callback             | [(Result: FileResult)](#fileresult-object) => void  | A callback function which will be called with the status of the request and the screenshot URL. |
+
+
+## takeScreenshotEx(targetPath, options, callback)
+#### Version added: 0.226
+
+> Takes a screenshot and calls the callback with the success status and the screenshot URL. The screenshot is saved to the screenshots folder.
+
+Parameter            | Type                  | Description                                      |
+-------------------- | ----------------------| ------------------------------------------------ |
+targetPath         | string                | Target screen shot file path                   |
+options (Optional)        | [ScreenshotOptions](#screenshotoptions-object)                | Extra settings controlling the screenshot                   |
+callback (Optional)            | [(Result: FileResult)](#fileresult-object) => void  | A callback function which will be called with the status of the request and the screenshot URL. |
 
 ## takeWindowsScreenshotByHandle(windowHandle, postMediaEvent, callback)
 #### Version added: 0.115
@@ -274,6 +289,15 @@ callback          | [(Result: GetWebcamsResult)](#getwebcamsresult-object) => vo
 
 > Fired when a screenshot was taken, with the following structure: [ScreenshotTakenEvent](#ScreenshotTakenEvent-object) Object
 
+## ScreenshotOptions Object
+#### Version added: 0.226
+
+> Container for file screenshot settings.
+
+Parameter         | Type                 | Description                                                                                                                     |
+----------------- | ---------------------| ------------------------------------------------------------------------------------------------------------------------------- |
+imageFormat | [ImageFormat](#imageformat-enum) | The file format to use for the taken image |
+
 ## MemoryScreenshotParams Object
 #### Version added: 0.78
 
@@ -306,6 +330,16 @@ x         | double   | The x offset. Positive value is considered absolute (0 �
 y         | double   | The y offset. Positive value is considered absolute (0 – HEIGHT) and negative is considered relative (-1.0 – 0)  |
 width     | double   | The target width                                                                                                 |
 height    | double   | The target height                                                                                                |
+
+## ImageFormat enum
+#### Version added: 0.226
+
+> Image format to use for a file screenshot.
+
+Option    | Description  |
+--------- | -------------|
+Jpeg     | .jpg             |
+Bmp     | .bmp             |
 
 ## eMediaType enum
 #### Version added: 0.78
