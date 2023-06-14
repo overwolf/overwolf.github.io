@@ -37,6 +37,7 @@ Common use cases:
 * [overwolf.utils.openStoreOneAppPage()](#openstoreoneapppageappid)
 * [overwolf.utils.openStore()](#openstoreparam)
 * [overwolf.utils.isMouseLeftButtonPressed()](#ismouseleftbuttonpressedcallback)
+* [overwolf.utils.createLogsZip()](#createlogszipcallback)
 * [overwolf.utils.uploadClientLogs()](#uploadclientlogscallback)
 * [overwolf.utils.uploadClientLogs()](#uploadclientlogsuploadclientlogsoptions-callback)
 * [overwolf.utils.checkForClientUpdates()](#checkforclientupdatescallback)
@@ -59,8 +60,10 @@ Common use cases:
 * [overwolf.utils.IsTouchDeviceResult](#istouchdeviceresult-object) Object
 * [overwolf.utils.GetPeripheralsResult](#getperipheralsresult-object) Object
 * [overwolf.utils.IsMouseLeftButtonPressedResult](#ismouseleftbuttonpressedresult-object) Object
-* [overwolf.utils.Result:ClientUpdateStatusResult](#clientupdateresult-object) Object
+* [overwolf.utils.ClientUpdateStatusResult](#clientupdateresult-object) Object
 * [overwolf.utils.UploadClientLogsOptions](#uploadclientlogsoptions-object) Object
+* [overwolf.utils.UploadClientLogsResult](#uploadclientlogresult-object) Object
+* [overwolf.utils.CreateLogsZipResult](#createlogszipresult-object) Object
 
 ## placeOnClipboard(data)
 #### Version added: 0.80
@@ -315,11 +318,9 @@ callback  |  ([Result: IsMouseLeftButtonPressedResult](#ismouseleftbuttonpressed
 
 > Upload Overwolf client logs to the [Overwolf servers](/tools/developers-console/all-applications/user-logs) for the current calling app
 
-
-
 Parameter   | Type     | Description                                 |
 ----------- | ---------| --------------------------------------------|
-callback    | UploadClientLogsResult  | A callback function which will be called with the status of the request |
+callback    | (Result: [UploadClientLogsResult](#uploadclientlogsresult-object)) => void  | A callback function which will be called with the status of the request |
 
 
 ## uploadClientLogs(UploadClientLogsOptions, callback)
@@ -331,11 +332,21 @@ callback    | UploadClientLogsResult  | A callback function which will be called
 Parameter   | Type     | Description                                 |
 ----------- | ---------| --------------------------------------------|
 UploadClientLogsOptions | [UploadClientLogsOptions](#uploadclientlogsoptions-object) Object | Options object you can pass when calling the function |
-callback    | UploadClientLogsResult  | A callback function which will be called with the status of the request |
+callback    | (Result: [UploadClientLogsResult](#uploadclientlogsresult-object)) => void  | A callback function which will be called with the status of the request |
 
 This method will fail to execute if `UploadClientLogsOptions.filePrefix` contains:
    - ***More than 64*** characters
    - ***Illegal characters*** (meaning anything but `(a-z, A-Z, 0-9, -, _)`)
+
+
+## createLogsZip(callback)
+#### Version added: 0.226
+
+> Create an Overwolf client logs zip as a local file
+
+Parameter   | Type     | Description                                 |
+----------- | ---------| --------------------------------------------|
+callback    | (Result: [CreateLogsZipResult](createlogszipresult-object)) => void  | A callback function which will be called with the status of the request |
 
 
 ## checkForClientUpdates(callback)
@@ -359,9 +370,6 @@ callback    | ([ClientUpdateStatusResult](#clientupdateresult-object) Object) =>
   ```
   Please note that if Overwolf updates while it is in-game, it will not show in-game until the game has been restarted.
 :::
-
-
-
 
 
 ## eStorePage enum
@@ -710,6 +718,29 @@ skip_in_game_notification | boolean  | When set to true,  Do not display the pop
 Parameter                 | Type     | Description                   |
 ------------------------- | ---------| ----------------------------- |
 filePrefix  | string | This property allows you to choose a file name prefix for the uploaded log file |
+
+## UploadClientLogsResult Object
+#### Version added: 0.111
+
+> Result returned when uploading client logs.
+
+Parameter          | Type     | Description                                 |
+-------------------| ---------| ------------------------------------------- |
+*success*          | boolean  | inherited from the "Result" Object          |
+*error*            | string   | inherited from the "Result" Object          |
+
+
+## CreateLogsZipResult Object
+#### Version added: 0.226
+
+> Result returned when creating a client's logs .zip logs.
+
+Parameter          | Type     | Description                                 |
+-------------------| ---------| ------------------------------------------- |
+*success*          | boolean  | inherited from the "Result" Object          |
+*error*            | string   | inherited from the "Result" Object          |
+zipPath               | string   | The location of the generated logs .zip                         |
+
 
 ## OpenFolderPickerResult Object
 

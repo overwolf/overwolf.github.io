@@ -1,0 +1,36 @@
+---
+id: 226
+image: "/img/embed/changelogs.jpg"
+title: "Version 0.226"
+sidebar_label: "0.226"
+sidebar_custom_props:
+  overwolf_platform: true
+  electron_platform: false
+---
+
+* Note that iterations 225 and 226 were combined into a single version.
+
+### Platform
+
+- **As mentioned in a previous newsletter, this version will be the last supported Overwolf version for Windows 7/8/8.1.**
+    - A warning has been added to the installer as well as the clients of existing affected users.
+    - While support for this version will be removed, it will still continue working, and apps can still choose to release updates for it.
+
+
+### API
+
+- New API - [overwolf.media.takeScreenshotEX()](/api/media#takescreenshotextargetpath-options-callback) - Allows an app to further control the settings of file-based game screenshots.	
+- New API - [overwolf.utils.createLogsZip()](/api/utils#createlogszipcallback) - Allows an app to create a local logs.zip from the local users' logs, as opposed to just creating and uploading it directly to the server.
+- Updated API - Added the [`GetRunningGameInfoResult.elevated`](/api/games#getrunninggameinforesult-object) field, which indicates whether the running game is running with elevated permissions (Aka Running as Administrator).
+- Updated API - Improved the clarity of the exception thrown when selecting an unsupported encoder in [StreamSettings](/api/streaming#streamsettings-object) - now uses the [CaptureErrorCode.UnsupportedEncoder](/api/streaming#captureerrorcode-enum) error code.
+
+
+### Bug Fixes
+
+- Fixed an issue involving app overlay enablement for newly targeted games.
+- Fixed an issue where app windows would occassionally freeze when trying to open a new window.
+- [overwolf.notifications.showToastNotification()](/api/notifications#showtoastnotificationargs-callback) will no longer fail if passed an empty `buttons` array.
+- Downloading an app through an app [test channel](/tools/developers-console/all-applications/release-management/testing) whose name contains a space (` `) character will no longer download the app's public version instead.
+- Drag resizing an in-game window will no longer get stuck when releasing the drag outside of the game's screen.
+- Game-specific hotkeys will no longer ignore settings changes on the next overwolf start.
+- Fixed an issue with the enable overlay notification not showing in some cases.
