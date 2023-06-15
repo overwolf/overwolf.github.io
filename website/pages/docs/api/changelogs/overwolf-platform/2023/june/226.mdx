@@ -19,6 +19,7 @@ sidebar_custom_props:
 
 ### API
 
+- Deprecated API - Deprecated all [Gfycat](/api/deprecated/gfycat) methods, as the site seems to [no longer be running](https://forums.tms.sx/threads/gfycat-is-dead.44691/).
 - New API - [overwolf.media.takeScreenshotEX()](/api/media#takescreenshotextargetpath-options-callback) - Allows an app to further control the settings of file-based game screenshots.	
 - New API - [overwolf.utils.createLogsZip()](/api/utils#createlogszipcallback) - Allows an app to create a local logs.zip from the local users' logs, as opposed to just creating and uploading it directly to the server.
 - Updated API - Added the [`GetRunningGameInfoResult.elevated`](/api/games#getrunninggameinforesult-object) field, which indicates whether the running game is running with elevated permissions (Aka Running as Administrator).
@@ -34,3 +35,4 @@ sidebar_custom_props:
 - Drag resizing an in-game window will no longer get stuck when releasing the drag outside of the game's screen.
 - Game-specific hotkeys will no longer ignore settings changes on the next overwolf start.
 - Fixed an issue with the enable overlay notification not showing in some cases.
+- [`overwolf.overwolf.extensions.io.delete()`](/api/extensions/io#deletespace-path-callback) will no longer throw an error when passing in an empty file path.

@@ -320,8 +320,8 @@
     "from": "/docs/api/overwolf-social-discord"
   },
   {
-    "to": "/api/social/gfycat",
-    "from": "/docs/api/overwolf-social-gfycat"
+    "to": "/api/deprecated/gfycat",
+    "from": ["/docs/api/overwolf-social-gfycat", "/api/social/gfycat"]
   },
   {
     "to": "/api/social/reddit",
