@@ -129,13 +129,9 @@ Important to note there are some values that are still unknown. Most of them are
 
 Possible map values:
 
-* 0091 = "Temple Of Anubis"
 * 0212 = "Kingdom Kings Row"
-* 0357 = "Hanamura"
 * 0388 = "Watchpoint Gibraltar"
 * 0468 = "Numbani"
-* 0475 = "Volskaya Industries"
-* 0687 = "Hollywood"
 * 0707 = "Dorado"
 * 1207 = "Nepal"
 * 1467 = "Route 66"
@@ -235,7 +231,6 @@ Data Example:
 key          | Category    | Values                    | Notes                 | Since GEP Ver. |
 ------------ | ------------| ------------------------- | --------------------- | -------------  |
 eliminations  | kill    | Total amount of eliminations.|See [notes](#eliminations-note)|   151.0 |
-objective_kills| kill   | Total amount of objective kills.|See [notes](#objective_kills-note)|   151.0 |
 
 #### *eliminations* note
 
@@ -245,20 +240,12 @@ Data Example:
 {"info":{"kill":{"eliminations":"6"}},"feature":"kill"}
 ```
 
-#### *objective_kills* note
-
-Data Example:
-
-```json
-{"info":{"kill":{"objective_kills":"2"}},"feature":"kill"}
-```
-
 ### Events
 
 Event  | Event Data        | Fired When (announcement)           | Notes      | Since GEP Ver. |
 -------| ------------------| -------------------------------------| ---------- | --------------|
 elimination | Integer      | Elimination is performed. |See [notes](#elimination-note)|    150.0      |
-objective_kill | Integer   | Objective kill is performed.. |See [notes](#objective_kill-note)|    150.0      |
+
 
 #### *elimination* note
 
@@ -268,16 +255,6 @@ Data Example:
 
 ```json
 {"name":"elimination","data":"8"}
-```
-
-#### *objective_kill* note
-
-The event includes the total amount performed in the match.
-
-Data Example:
-
-```json
-{"name":"objective_kill","data":"3"}
 ```
 
 ## `death`
