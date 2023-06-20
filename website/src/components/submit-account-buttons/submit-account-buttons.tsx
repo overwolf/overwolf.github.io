@@ -36,6 +36,7 @@ const SubmitAccountButtons: FC<TabsProps> = props => {
             Log in
             <svg><use href="../../img/sprite.svg#external-url" /></svg>
           </a>
+          {" "}and submit your proposal now!
         </p>
 
     </section>
