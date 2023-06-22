@@ -2,7 +2,7 @@
 // take the state and return string for use as state class name
 const stateClassNames = {
   [-1]: 'Deprecated',
-  0: 'coming-soon',
+  0: 'unsupported',
   1: 'good',
   2: 'medium',
   3: 'bad'

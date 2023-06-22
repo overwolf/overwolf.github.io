@@ -76,7 +76,7 @@ import Preloader from '../preloader/preloader';
         }
 
         { specificGame && gameStatus != null &&
-          <SpecificGameEventsStatus gameStatusData={gameStatus} gameId={gameId} docsPath={docsPath} endOfLife={endOfLife} />
+          <SpecificGameEventsStatus gameStatusData={gameStatus} gameId={gameId} docsPath={docsPath} endOfLife={endOfLife} electron={GamesMetadata[gameId].electron} />
         }
 
       </>
