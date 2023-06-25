@@ -46,7 +46,7 @@ Check the current game event status [here](/status/). Alternately, you can easil
 
 key          | Category    | Values                    | Notes                 | Since GEP Ver. |
 ------------ | ------------| ------------------------- | --------------------- | ------------- |
-gep_internal | gep_internal| Local + Public version number|See [notes](#gep_internal-note)|   143.0       |
+gep_internal | gep_internal| Local + Public version number|See [notes](#gep_internal-note)|   229.0       |
 
 #### *gep_internal* note
 
@@ -62,18 +62,22 @@ Data Example:
 
 key          | Category    | Values                    | Notes                 | Since GEP Ver. |
 ------------ | ------------| ------------------------- | --------------------- | -------------  |
-game_state   | game_info   | Current state of the game.|See [notes](#game_state-note)|   151.0       |
-game_mode    | game_info   | Currently played game-mode.|See [notes](#game_mode-note)|   151.0       |
+game_state   | game_info   | Current state of the game.|See [notes](#game_state-note)|   229.0       |
+game_mode    | game_info   | Currently played game-mode.|See [notes](#game_mode-note)|   229.0       |
 
 #### *game_state* note:
+
+List of possible values:
+
+* loading_screen_start
+* game_loaded
+* match_in_progress
+* match_ended
 
 Data Example:
 
 ```json
 {"info":{"game_info":{"game_state":"loading_screen_start"}},"feature":"game_info"}
-{"info":{"game_info":{"game_state":"game_loaded"}},"feature":"game_info"}
-{"info":{"game_info":{"game_state":"match_in_progress"}},"feature":"game_info"}
-{"info":{"game_info":{"game_state":"match_ended"}},"feature":"game_info"}
 ```
 
 #### *game_mode* note
@@ -120,8 +124,7 @@ Note that on the response the leading zeros are removed ("0030" => "30")
 
 key               | Category    | Values                                                              | Notes                 | Since Version |
 ----------------- | ------------| ------------------------------------------------------------------- | --------------------- | ------------- |
-pseudo_match_id | match_info | The current match’s ID code.<br></br><br></br>Example:<br></br><br></br> `0c0ea3df-97ea-4d3a-b1f6-f8e34042251f`  |  This is an Overwolf-generated code, unrelated to Blizzard.  |   159.0 |
-map       | match_info   | Name of currently played map.|See [notes](#map-note)   |   151.0       |
+map       | match_info   | Name of currently played map.|See [notes](#map-note)   |   229.0       |
 
 #### *map* note
 
@@ -205,8 +208,8 @@ Note that on the response the leading zeros are removed ("0030" => "30")
 
 Event  | Event Data        | Fired When (announcement)           | Notes      | Since GEP Ver. |
 -------| ------------------| -------------------------------------| ---------- | --------------|
-match_start | null      | Match started. |See [notes](#match_start-note)|    150.0      |
-match_end   | null      | Match ended.   |See [notes](#match_end-note)|    150.0      |
+match_start | null      | Match started. |See [notes](#match_start-note)|    229.0      |
+match_end   | null      | Match ended.   |See [notes](#match_end-note)|    229.0      |
 
 #### *match_start* note
 
@@ -230,7 +233,8 @@ Data Example:
 
 key          | Category    | Values                    | Notes                 | Since GEP Ver. |
 ------------ | ------------| ------------------------- | --------------------- | -------------  |
-eliminations  | kill    | Total amount of eliminations.|See [notes](#eliminations-note)|   151.0 |
+eliminations  | kill    | Total amount of eliminations.|See [notes](#eliminations-note)|   229.0 |
+
 
 #### *eliminations* note
 
@@ -240,12 +244,19 @@ Data Example:
 {"info":{"kill":{"eliminations":"6"}},"feature":"kill"}
 ```
 
+#### *objective_kills* note
+
+Data Example:
+
+```json
+{"info":{"kill":{"objective_kills":"2"}},"feature":"kill"}
+```
+
 ### Events
 
 Event  | Event Data        | Fired When (announcement)           | Notes      | Since GEP Ver. |
 -------| ------------------| -------------------------------------| ---------- | --------------|
-elimination | Integer      | Elimination is performed. |See [notes](#elimination-note)|    150.0      |
-
+elimination | Integer      | Elimination is performed. |See [notes](#elimination-note)|    229.0      |
 
 #### *elimination* note
 
@@ -263,7 +274,7 @@ Data Example:
 
 key          | Category    | Values                    | Notes                 | Since GEP Ver. |
 ------------ | ------------| ------------------------- | --------------------- | -------------  |
-deaths       | death       | Total amount of deaths.   |See [notes](#death-note)|   151.0       |
+deaths       | death       | Total amount of deaths.   |See [notes](#death-note)|   229.0       |
 
 #### *death* note
 
@@ -277,14 +288,46 @@ Data Example:
 
 Event  | Event Data        | Fired When (announcement)           | Notes      | Since GEP Ver. |
 -------| ------------------| -------------------------------------| ---------- | --------------|
-death  | Integer           | Death has occurred.                  |See [notes](#death-note)|    150.0      |
+death  | Integer           | Death has occurred.                  |See [notes](#death-note)|    229.0      |
 
 #### *death* note
 
-The event includes the total amount performed in the match.
+The event includes the total amount of kills performed in the match.
 
 Data Example:
 
 ```json
 {"name":"death","data":"2"}
+```
+
+## `assist`
+
+### Info Updates
+
+key          | Category    | Values                    | Notes                 | Since GEP Ver. |
+------------ | ------------| ------------------------- | --------------------- | -------------  |
+assists       | death       | Total amount of assists.   |See [notes](#assists-note)|   229.0       |
+
+#### *assist* note
+
+Data Example:
+
+```json
+{"info":{"assist":{"assiss":"5"}},"feature":"assist"}
+```
+
+### Events
+
+Event  | Event Data        | Fired When (announcement)           | Notes      | Since GEP Ver. |
+-------| ------------------| -------------------------------------| ---------- | --------------|
+assist  | Integer           | Assist has occurred.                  |See [notes](#assist-note)|    229.0      |
+
+#### *assist* note
+
+The event includes the total amount of assists performed in the match.
+
+Data Example:
+
+```json
+{"name":"assist","data":"2"}
 ```
