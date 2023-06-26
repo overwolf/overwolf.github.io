@@ -29,8 +29,10 @@ Please read the [overwolf.games.events](../events) documentation page to learn h
 ## Available Features
 
 * [gep_internal](#gep_internal)
+* [game_info](#game_info)
 * [match_info](#match_info)
 * [location](#location)
+* [me](#me)
 
 ## Game events status
 
@@ -52,6 +54,32 @@ Data Example:
 
 ```json
 {"info":{"gep_internal":{"version_info":"{"local_version":"157.0.1","public_version":"157.0.1","is_updated":true}"}},"feature":"gep_internal"}
+```
+
+## `game_info`
+
+### Info Updates
+
+key          | Category    | Values                    | Notes                 | Since GEP Ver. |
+------------ | ------------| ------------------------- | --------------------- | ------------- | 
+battlenet_tag | game_info   | Player's battelnet tag  |  See [notes](#battlenet_tag-note) |   229.2 
+gold | gold   | The player's gold across all characters  |  See [notes](#gold-note) |   229.2 
+
+
+#### *battlenet_tag* note
+
+Data Example:
+
+```json
+{"feature":"game_info","category":"game_info","key":"battlenet_tag","value":"OverTheTop#2100"}
+```
+
+#### *gold* note
+
+Data Example:
+
+```json
+{"feature":"game_info","category":"gold","key":"gold","value":"6512"}
 ```
 
 
@@ -88,6 +116,7 @@ Data Example:
 key          | Category    | Values                    | Notes                 | Since GEP Ver. |
 ------------ | ------------| ------------------------- | --------------------- | ------------- | 
 location | match_info   | player location  |  See [notes](#location-note) |   229.1 
+map | match_info   | Map name including area id and territory id|  See [notes](#map-note) |   229.2
 
 #### *location* note
 
@@ -95,4 +124,40 @@ Data Example:
 
 ```json
 {"feature":"location","category":"match_info","key":"location","value":"{\"x\" : -1001.76,\"y\" : 133.699,\"z\" : 77.6396}"}
+```
+
+#### *map* note
+
+Area possible ID and names - See [details]()
+Territory possible ID and names - See [details]()
+
+Data Example:
+
+```json
+{"feature":"location","category":"match_info","key":"map","value":"{\"area\" : 448837,\"territory\" : 445427}"}
+```
+
+## `me`
+
+### Info Updates
+
+key          | Category    | Values                    | Notes                 | Since GEP Ver. |
+------------ | ------------| ------------------------- | --------------------- | ------------- | 
+name | character   | Current character name |  See [notes](#name-note) |   229.2
+class | character   | Current character class |  See [notes](#class-note) |   229.2
+
+#### *name* note
+
+Data Example:
+
+```json
+{"feature":"me","category":"character","key":"name","value":"Bruce"}
+```
+
+#### *class* note
+
+Data Example:
+
+```json
+{"feature":"me","category":"character","key":"class","value":"220940"}
 ```
