@@ -203,6 +203,7 @@ const GamesMetaData = {
         "path": "/status/teamfight-tactics",
         "name": "Teamfight Tactics",
         "electron": "/api/electron/game-events/teamfight-tactics",
+        "compliance": "/start/game-compliance/teamfight-tactics",
         "docs": "/api/games/events/teamfight-tactics",
         "iconUrl": "/img/games-logos/teamfight-tactics.png",
         "iconLargeUrl": "/img/games-logos/large/teamfight-tactics.png"
