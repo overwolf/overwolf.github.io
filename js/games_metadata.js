@@ -374,7 +374,7 @@ const GamesMetaData = {
     },
     "215561": {
         "id": 215561,
-        "displayId": 5426,
+        "displayId": 22848,
         "launcher": 10902,
         "mainVariant": 21556,
         "docs": "/api/games/events/league-of-legends-arena",
