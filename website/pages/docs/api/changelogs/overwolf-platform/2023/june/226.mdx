@@ -35,4 +35,5 @@ sidebar_custom_props:
 - Drag resizing an in-game window will no longer get stuck when releasing the drag outside of the game's screen.
 - Game-specific hotkeys will no longer ignore settings changes on the next overwolf start.
 - Fixed an issue with the enable overlay notification not showing in some cases.
-- [`overwolf.overwolf.extensions.io.delete()`](/api/extensions/io#deletespace-path-callback) will no longer throw an error when passing in an empty file path.
+- [`overwolf.extensions.io.delete()`](/api/extensions/io#deletespace-path-callback) will no longer throw an error when passing in an empty file path.
+- Fixed a bug where `overwolf.social.*.shareEx()` methods would fail when trying to share a `.jpeg` image.
