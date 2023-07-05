@@ -198,7 +198,7 @@ const metaData = [
     },
     {
         id: 215561,
-        displayId: 5426,
+        displayId: 22848,
         launcher: 10902,
         mainVariant: 21556,
         docs: "league-of-legends-arena",
