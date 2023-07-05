@@ -925,7 +925,7 @@ teams       | game_info   |  A JSON object with the teams formation        |   S
 
 #### *teams* note
 
-Arena is a 2*2*2*2 game mode, the JSON response is ordered in the same way. 
+Arena is a 2 Vs 2 VS 2 Vs 2 game mode, the JSON response is ordered in the same way. 
 The first 2 players are on the same team, the next 2 players are on another team, and so on. 
 
 ```json
@@ -957,20 +957,31 @@ level     | level           | Current level of the player's champion            
 
 ## `match`
 
+### Info Updates
+
+key          | Category    | Values                    | Notes                 | Since GEP Ver. |
+------------ | ------------| ------------------------- | --------------------- | ------------- | 
+match_started | game_info  | Match has started |See [notes](#match_started-note)|   230.0       |
+
+
 ### Events
 
 key          | Category    | Values                    | Notes                 | Since GEP Ver. |
 ------------ | ------------| ------------------------- | --------------------- | ------------- | 
-match_start |   | match start event ||   230.0       |
-match_end |   | match end event ||   230.0       |
+match_start |                | match start event | See [notes](#match_start-note)|   230.0       |
+
 
 #### *match_start* note
+
 Data Example:
 ```
 {"events":[{"name":"match_start","data":""}]}
 ```
-#### *match_end* note
+
+#### *match_started* note
+
 Data Example:
 ```
-{"events":[{"name":"match_end","data":""}]}
+{"feature":"match","category":"game_info","key":"match_started","value":true}
 ```
+
