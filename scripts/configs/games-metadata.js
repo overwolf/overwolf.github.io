@@ -106,7 +106,9 @@ const metaData = [
         games: [
             5426,
             21570,
-            215701
+            215701,
+            21556,
+            215561
         ],
         path: "league-of-legends",
         name: "League of Legends Launcher"
@@ -177,12 +179,31 @@ const metaData = [
     },
     {
         id: 215701,
-        displayId: 5426,
+        displayId: 22848,
         launcher: 10902,
         mainVariant: 21570,
         docs: "teamfight-tactics",
         path: "teamfight-tactics-public-beta",
         name: "Teamfight Tactics PBE",
+        electron: "teamfight-tactics",
+        variant: "PBE"
+    },
+    {
+        id: 21556,
+        displayId: 5426,
+        launcher: 10902,
+        subVariants: [ 215561 ],
+        path: "league-of-legends-arena",
+        name: "League of Legends: Arena"
+    },
+    {
+        id: 215561,
+        displayId: 5426,
+        launcher: 10902,
+        mainVariant: 21556,
+        docs: "league-of-legends-arena",
+        path: "league-of-legends-public-beta-arena",
+        name: "League of Legends PBE: Arena",
         variant: "PBE"
     },
     {

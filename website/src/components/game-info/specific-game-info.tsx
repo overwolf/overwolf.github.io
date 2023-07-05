@@ -33,7 +33,7 @@ function SpecificGameInfo(props: {
         <>
             <p>
                 <span>{mainName} ID: </span>
-                {displayId || id}
+                {displayId ?? id}
             </p>
 
             {displayId &&

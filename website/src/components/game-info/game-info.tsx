@@ -68,12 +68,8 @@ function GameInfo(props: { gameId: any; page: "docs" | "status" | "compliance"; 
 
           { mainVariant &&
             <>
-              <li className='main'>
-                <SpecificGameInfo metaData={mainVariant} type="Game" disabledLinks={AllLinksOn()} />
-              </li>
-
               <li>
-                <SpecificGameInfo metaData={metaData} type="Game" disabledLinks={LinkToggler(page, LinkTogglerSub(mainVariant, metaData))} />
+                <SpecificGameInfo metaData={mainVariant} type="Game" disabledLinks={AllLinksOn()} />
               </li>
             </>
           }
