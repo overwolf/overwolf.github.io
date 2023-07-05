@@ -136,7 +136,9 @@ const GamesMetaData = {
         "games": [
             5426,
             21570,
-            215701
+            215701,
+            21556,
+            215561
         ],
         "path": "/status/launchers/league-of-legends",
         "name": "League of Legends Launcher",
@@ -185,6 +187,19 @@ const GamesMetaData = {
         "iconUrl": "/img/games-logos/splitgate-arena-warfare.png",
         "iconLargeUrl": "/img/games-logos/large/splitgate-arena-warfare.png"
     },
+    "21556": {
+        "id": 21556,
+        "displayId": 5426,
+        "launcher": 10902,
+        "subVariants": [
+            215561
+        ],
+        "path": "/status/league-of-legends-arena",
+        "name": "League of Legends: Arena",
+        "docs": "/api/games/events/league-of-legends-arena",
+        "iconUrl": "/img/games-logos/league-of-legends-arena.png",
+        "iconLargeUrl": "/img/games-logos/large/league-of-legends-arena.png"
+    },
     "21566": {
         "id": 21566,
         "path": "/status/apex-legends",
@@ -202,7 +217,7 @@ const GamesMetaData = {
         ],
         "path": "/status/teamfight-tactics",
         "name": "Teamfight Tactics",
-        "electron": "/api/electron/game-events/teamfight-tactics",
+        "electron": "/api/electron/game-events//api/games/events/teamfight-tactics",
         "compliance": "/start/game-compliance/teamfight-tactics",
         "docs": "/api/games/events/teamfight-tactics",
         "iconUrl": "/img/games-logos/teamfight-tactics.png",
@@ -357,14 +372,27 @@ const GamesMetaData = {
         "iconUrl": "/img/games-logos/diablo-4.png",
         "iconLargeUrl": "/img/games-logos/large/diablo-4.png"
     },
+    "215561": {
+        "id": 215561,
+        "displayId": 5426,
+        "launcher": 10902,
+        "mainVariant": 21556,
+        "docs": "/api/games/events/league-of-legends-arena",
+        "path": "/status/league-of-legends-public-beta-arena",
+        "name": "League of Legends PBE: Arena",
+        "variant": "PBE",
+        "iconUrl": "/img/games-logos/league-of-legends-public-beta-arena.png",
+        "iconLargeUrl": "/img/games-logos/large/league-of-legends-public-beta-arena.png"
+    },
     "215701": {
         "id": 215701,
-        "displayId": 5426,
+        "displayId": 22848,
         "launcher": 10902,
         "mainVariant": 21570,
         "docs": "/api/games/events/teamfight-tactics",
         "path": "/status/teamfight-tactics-public-beta",
         "name": "Teamfight Tactics PBE",
+        "electron": "/api/electron/game-events//api/games/events/teamfight-tactics",
         "variant": "PBE",
         "iconUrl": "/img/games-logos/teamfight-tactics-public-beta.png",
         "iconLargeUrl": "/img/games-logos/large/teamfight-tactics-public-beta.png"
