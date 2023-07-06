@@ -329,8 +329,8 @@ const GamesMetaData = {
     },
     "22312": {
         "id": 22312,
-        "name": "LEAP",
         "path": "/status/leap",
+        "name": "LEAP",
         "docs": "/api/games/events/leap",
         "iconUrl": "/img/games-logos/leap.png",
         "iconLargeUrl": "/img/games-logos/large/leap.png"

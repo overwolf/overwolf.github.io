@@ -185,8 +185,8 @@ async function sidebarsOverrides({ defaultSidebarItemsGenerator, ...args }) {
   return applyCustomSidebarProps(items);
 }
 
-const codeComponentTagger = require("./src/plugins/tagging/codeComponentTagger.js").default;
-const displayJSON = require("./src/plugins/displayJSON/displayJSON.js").default;
+const codeComponentTagger = require("./typescript/build/plugins/tagging/codeComponentTagger.js").default;
+const displayJSON = require("./typescript/build/components/display-json/mdx/displayJSON.js").default;
 
 /** @type {import('@docusaurus/types').Config} */
 async function config() {
@@ -316,7 +316,10 @@ async function config() {
         contextualSearch: true,
         algoliaOptions: {}
       }
-    }
+    },
+    clientModules: [
+      // require.resolve('./src/client-modules/test-client-module.ts')
+    ]
   }
 }
 

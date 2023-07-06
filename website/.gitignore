@@ -8,11 +8,10 @@ src/components/game-events-status/gamesMetaData.jsx
 static/js/games_metadata.js
 pages/docs/api/changelogs/changelogs.mdx
 ## Build files
-src/plugins/**/*.js
+typescript/build/**/*.js
 
 # Generated files
 .docusaurus
 .cache-loader
 
 # Build-cycle files
-utils/*.js

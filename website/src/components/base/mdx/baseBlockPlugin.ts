@@ -20,96 +20,98 @@ export interface BaseBlockOptions {
 	parseContent: boolean;
 }
 
-export interface TreeNode {
+export interface TreeNode<Type, Properties = undefined> {
 	type: string;
 	data: {
 		// hName/hProperties come from HAST
 		// See https://github.com/syntax-tree/mdast-util-to-hast#fields-on-nodes
 		hName: string;
-		hProperties?: any;
+		enumType?: Type
+		hProperties: Properties;
 	}
-	children?: TreeNode[]
+	children?: TreeNode<any>[]
 }
 
-export function createTreeNode(type: string, properties?: any, children?: TreeNode[]) : TreeNode {
+export function createTreeNode<Type, Properties = undefined>(type: string, properties: Properties, enumType?: Type, children?: TreeNode<any, any>[]) : TreeNode<Type, Properties> {
 	return {
 		type,
 		data: {
 			hName: type,
+			enumType,
 			hProperties: properties
 		},
 		children
 	}
 }
 
-function normalizeOptions<T extends BaseBlockOptions>(
-	options: Partial<T>,
-	defaults: T
-): T {
+function normalizeOptions<Options extends BaseBlockOptions>(
+	options: Partial<Options>,
+	defaults: Options
+): Options {
 	return { ...defaults, ...options };
 }
 
-export type OpeningTagFactory<T> = {
+export type OpeningTagFactory<Options = BaseBlockOptions> = {
 	(
-		options: T,
+		options: Options,
 		typesMatcher: string
 	): RegExp
 }
 
-export type ClosingTagFactory<T> = {
+export type ClosingTagFactory<Options = BaseBlockOptions> = {
 	(
-		options: T
+		options: Options
 	): RegExp
 }
 
-export type DeEscapeOpening<T> = {
+export type DeEscapeOpening<Options = BaseBlockOptions> = {
 	(
-		options: T,
+		options: Options,
 		escaped: string
 	): string
 }
 
-export type DeEscapeClosing<T> = {
+export type DeEscapeClosing<Options = BaseBlockOptions> = {
 	(
-		options: T,
+		options: Options,
 		escaped: string
 	): string
 }
 
-export type ContentTransform<T> = {
+export type ContentTransform<Options = BaseBlockOptions> = {
 	(
-		options: T,
+		options: Options,
 		content: string[]
 	): string[]
 }
 
-export type ContentNodesTransform<T> = {
+export type CreateContentNode<Options = BaseBlockOptions> = {
 	(
-		options: T,
+		options: Options,
 		content: string[],
 		matchGroups: string[],
-		childNodes?: TreeNode[]
-	): [TreeNode[] | undefined, any | undefined]
+		childNodes?: TreeNode<any>[]
+	): TreeNode<any, any>
 }
 
-export function pluginFactory<T extends BaseBlockOptions>(
+export function pluginFactory<Options extends BaseBlockOptions>(
 	nodeType: string,
-	defaultOptions: T,
-	openingTagFactory: OpeningTagFactory<T>,
-	closingTagFactory: ClosingTagFactory<T>,
-	deEscapeOpening: DeEscapeOpening<T>,
-	deEscapeClosing?: DeEscapeClosing<T>,
-	contentTransform?: ContentTransform<T>,
-	ContentNodesTransform?: ContentNodesTransform<T>,
+	defaultOptions: Options,
+	openingTagFactory: OpeningTagFactory<Options>,
+	closingTagFactory: ClosingTagFactory<Options>,
+	deEscapeOpening: DeEscapeOpening<Options>,
+	deEscapeClosing?: DeEscapeClosing<Options>,
+	contentTransform?: ContentTransform<Options>,
+	CreateContentNode?: CreateContentNode<Options>,
 	parsePass?: string | number,
 ): Plugin {
 	// If no escape string is defined, use the default one
 	defaultOptions.escapeString = defaultOptions.escapeString ?? DEFAULTESCAPE;
 
 
-	return function plugin(this: Processor, optionsInput: Partial<T> = {}): Transformer {
+	return function plugin(this: Processor, optionsInput: Partial<Options> = {}): Transformer {
 		const options = normalizeOptions(optionsInput, defaultOptions);
-		const types = Object.keys(options?.types).join('|');
+		const types = Object.keys(options?.types ?? []).join('|');
 		const openingTag = openingTagFactory(options, types);
 		const closingTag = closingTagFactory(options);
 
@@ -209,7 +211,7 @@ export function pluginFactory<T extends BaseBlockOptions>(
 			const add = eat(potentialFood.join(NEWLINE));
 
 			// All child nodes of this tree
-			let childNodes: TreeNode[] = [];
+			let childNodes: TreeNode<any>[] = [];
 			// All properties of this node
 			let properties: any;
 			// Re-parse the content in block mode
@@ -222,11 +224,8 @@ export function pluginFactory<T extends BaseBlockOptions>(
 				exit();
 			}
 
-			// Allow the plugin to perform its own, final transformation
-			[childNodes, properties] = ContentNodesTransform?.(options, content, matchGroups, childNodes) ?? [childNodes, properties];
-
-			// The resulting tree node
-			const element = createTreeNode(nodeType, properties, childNodes);
+			// The final tree node
+			const element = CreateContentNode?.(options, content, matchGroups, childNodes) ?? createTreeNode(nodeType, properties, undefined, childNodes);
 			return add(element);
 		}
 

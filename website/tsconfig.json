@@ -7,7 +7,8 @@
     "esModuleInterop": true,
     "jsx": "react",
     "lib": [
-      "DOM"
+      "DOM",
+      "ES2021"
     ],
     "noEmit": false,
     "types": [
@@ -22,9 +23,10 @@
         "./*"
       ]
     },
+    "outDir": "typescript/build",
     "skipLibCheck": true
   },
-  "include": ["src/**/*", "utils/**/*"],
+  "include": ["src/components/**/*", "src/plugins/**/*"],
   "exclude": ["**/*.js", "**/*.jsx", "**/*.tsx"],
   "extends": "@tsconfig/docusaurus/tsconfig.json"
 }

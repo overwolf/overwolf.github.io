@@ -1,6 +1,6 @@
 // This code is loosely based on https://github.com/facebook/docusaurus/blob/main/packages/docusaurus-mdx-loader/src/remark/admonitions/index.ts
 
-const visit = require('unist-util-visit');
+import visit from 'unist-util-visit';
 import type {Transformer, Processor, Plugin} from 'unified';
 import type {Literal} from 'mdast';
 
@@ -61,8 +61,8 @@ const codeComponentTagger: Plugin = function plugin(
       string,
       string,
     ];
-    const food = [];
-    const content = [];
+    const food: string[] = [];
+    const content: string[] = [];
 
     let newValue = value;
     // consume lines until a closing tag
@@ -109,7 +109,7 @@ const codeComponentTagger: Plugin = function plugin(
   }
 
   // add tokenizer to parser after fenced code blocks
-  const Parser = this.Parser.prototype;
+  const Parser = this.Parser?.prototype;
   Parser.blockTokenizers.Tagger = blockTokenizer;
   Parser.blockMethods.splice(
     Parser.blockMethods.indexOf('admonition') + 1,

@@ -2,7 +2,6 @@
 id: obs
 image: "/img/embed/api-docs.jpg"
 title: OBS
-draft: true
 sidebar_custom_props:
   overwolf_platform: true
   electron_platform: false
@@ -24,7 +23,7 @@ A history of OW-OBS versions by Overwolf client versions:
 </TabItem>
 <TabItem value="electron-platform" label="Overwolf Electron">
 
-OBS Is currently not implemented as part of the [ow-electron](/tools/ow-electron) package.
+OBS Is **currently** not implemented as part of the [ow-electron](/tools/ow-electron) package.
 
 </TabItem>
 </Tabs>
@@ -33,13 +32,14 @@ OBS Is currently not implemented as part of the [ow-electron](/tools/ow-electron
 ## List of supported encoders
 
 <Tabs>
-<TabItem value="29.1.0" label="OBS Version 29.1.0" default>
+<TabItem value="latest" label="OBS Version 29.1.0" default>
 
-!JSON Values 29.1.0-encoders
-{
-    "INTEL": {
+!JSON Encoders-29.1.0
+const encoders = OBS.Latest.Encoders[
+    INTEL{
+        "name": "INTEL",
         "display_name": "Intel® Quick Sync (uses iGPU)",
-        "presets": [
+        "presets": INTEL_PRESETS[
             "QUALITY",
             "BALANCED",
             "SPEED",
@@ -51,7 +51,7 @@ OBS Is currently not implemented as part of the [ow-electron](/tools/ow-electron
             "FASTER",
             "VERYFAST"
         ],
-        "rateControls": [
+        "rateControls": INTEL_RATES[
             "RC_CBR",
             "RC_CQP",
             "RC_VBR",
@@ -61,11 +61,12 @@ OBS Is currently not implemented as part of the [ow-electron](/tools/ow-electron
             "LA_ICQ",
             "LA_VBR",
             "LA_CBR"
-        ]
+        ],
     },
-    "INTEL_HEVC": {
+    INTEL_HEVC{
+        "name": "INTEL_HEVC",
         "display_name": "Intel® Quick Sync HEVC (uses iGPU)",
-        "presets": [
+        "presets": INTEL_HEVC_PRESETS[
             "QUALITY",
             "BALANCED",
             "SPEED",
@@ -77,7 +78,7 @@ OBS Is currently not implemented as part of the [ow-electron](/tools/ow-electron
             "FASTER",
             "VERYFAST"
         ],
-        "rateControls": [
+        "rateControls": INTEL_HEVC_RATES[
             "RC_CBR",
             "RC_CQP",
             "RC_VBR",
@@ -87,11 +88,12 @@ OBS Is currently not implemented as part of the [ow-electron](/tools/ow-electron
             "LA_ICQ",
             "LA_VBR",
             "LA_CBR"
-        ]
+        ],
     },
-    "X264": {
+    X264{
+        "name": "X264",
         "display_name": "X264 (uses CPU)",
-        "presets": [
+        "presets": X264_PRESETS[
             "ULTRAFAST",
             "SUPERFAST",
             "VERYFAST",
@@ -103,17 +105,18 @@ OBS Is currently not implemented as part of the [ow-electron](/tools/ow-electron
             "VERYSLOW",
             "PLACEBO"
         ],
-        "rateControls": [
+        "rateControls": X264_RATES[
             "RC_CBR",
             "RC_CQP",
             "RC_VBR",
             "RC_VBR_MINQP",
             "RC_2_PASS_QUALITY"
-        ]
+        ],
     },
-    "NVIDIA_NVENC_NEW": {
+    NVIDIA_NVENC_NEW{
+        "name": "NVIDIA_NVENC_NEW",
         "display_name": "NVIDIA® NVENC New (uses GPU)",
-        "presets": [
+        "presets": NVIDIA_NVENC_NEW_PRESETS[
             "AUTOMATIC",
             "DEFAULT",
             "HIGH_QUALITY",
@@ -124,18 +127,19 @@ OBS Is currently not implemented as part of the [ow-electron](/tools/ow-electron
             "LOSSLESS",
             "PRESET_MAX_QUALITY"
         ],
-        "rateControls": [
+        "rateControls": NVIDIA_NVENC_NEW_RATES[
             "RC_CBR",
             "RC_CQP",
             "RC_VBR",
             "RC_VBR_MINQP",
             "RC_2_PASS_QUALITY",
             "RC_LOSSLESS"
-        ]
+        ],
     },
-    "NVIDIA_NVENC_HEVC": {
+    NVIDIA_NVENC_HEVC{
+        "name": "NVIDIA_NVENC_HEVC",
         "display_name": "NVIDIA® NVENC HEVC (uses GPU)",
-        "presets": [
+        "presets": NVIDIA_NVENC_HEVC_PRESETS[
             "AUTOMATIC",
             "DEFAULT",
             "HIGH_QUALITY",
@@ -146,23 +150,24 @@ OBS Is currently not implemented as part of the [ow-electron](/tools/ow-electron
             "LOSSLESS",
             "PRESET_MAX_QUALITY"
         ],
-        "rateControls": [
+        "rateControls": NVIDIA_NVENC_HEVC_RATES[
             "RC_CBR",
             "RC_CQP",
             "RC_VBR",
             "RC_VBR_MINQP",
             "RC_2_PASS_QUALITY",
             "RC_LOSSLESS"
-        ]
+        ],
     },
-    "AMD_AMF": {
+    AMD_AMF{
+        "name": "AMD_AMF",
         "display_name": "AMD® HW H.264 (uses GPU)",
-        "presets": [
+        "presets": AMD_AMF_PRESETS[
             "BALANCED",
             "SPEED",
             "QUALITY"
         ],
-        "rateControls": [
+        "rateControls": AMD_AMF_RATES[
             "RC_CBR",
             "RC_CQP",
             "RC_VBR",
@@ -171,16 +176,17 @@ OBS Is currently not implemented as part of the [ow-electron](/tools/ow-electron
             "RC_QVBR",
             "RC_HQVBR",
             "RC_HQCBR"
-        ]
+        ],
     },
-    "AMD_AMF_HEVC": {
+    AMD_AMF_HEVC{
+        "name": "AMD_AMF_HEVC",
         "display_name": "AMD® HW H.265 (uses GPU)",
-        "presets": [
+        "presets": AMD_AMF_HEVC_PRESETS[
             "BALANCED",
             "SPEED",
             "QUALITY"
         ],
-        "rateControls": [
+        "rateControls": AMD_AMF_HEVC_RATES[
             "RC_CBR",
             "RC_CQP",
             "RC_VBR",
@@ -189,138 +195,115 @@ OBS Is currently not implemented as part of the [ow-electron](/tools/ow-electron
             "RC_QVBR",
             "RC_HQVBR",
             "RC_HQCBR"
-        ]
+        ],
     }
-}
+]
+
 /JSON
 
 </TabItem>
 <TabItem value="27.2.3" label="OBS Version 27.2.3">
 
-!JSON Values 27.2.3-encoders
-{
-    "encoders": [
-        {
-            "name": "INTEL",
-            "display_name": "Intel® Quick Sync (uses iGPU)",
-            "enabled": false,
-            "presets": [
-                "LOW",
-                "MEDIUM",
-                "HIGH"
-            ],
-            "rateControls": [],
-            "error_description": "Not Supported",
-            "vendor_error": null,
-            "valid": false
-        },
-        {
-            "name": "X264",
-            "display_name": "X264 (uses CPU)",
-            "enabled": true,
-            "presets": [
-                "ULTRAFAST",
-                "SUPERFAST",
-                "VERYFAST",
-                "FASTER",
-                "FAST",
-                "MEDIUM",
-                "SLOW",
-                "SLOWER",
-                "VERYSLOW",
-                "PLACEBO"
-            ],
-            "rateControls": [
-                "RC_CBR",
-                "RC_CQP",
-                "RC_VBR",
-                "RC_VBR_MINQP",
-                "RC_2_PASS_QUALITY"
-            ],
-            "error_description": null,
-            "vendor_error": "",
-            "valid": true
-        },
-        {
-            "name": "NVIDIA_NVENC",
-            "display_name": "NVIDIA® NVENC (uses GPU)",
-            "enabled": false,
-            "presets": [
-                "AUTOMATIC",
-                "DEFAULT",
-                "HIGH_QUALITY",
-                "HIGH_PERFORMANCE",
-                "BLURAY_DISK",
-                "LOW_LATENCY",
-                "HIGH_PERFORMANCE_LOW_LATENCY",
-                "HIGH_QUALITY_LOW_LATENCY",
-                "LOSSLESS",
-                "HIGH_PERFORMANCE_LOSSLESS"
-            ],
-            "rateControls": [
-                "RC_CBR",
-                "RC_CQP",
-                "RC_VBR",
-                "RC_VBR_MINQP",
-                "RC_2_PASS_QUALITY"
-            ],
-            "error_description": "Not Supported",
-            "vendor_error": null,
-            "valid": false
-        },
-        {
-            "name": "NVIDIA_NVENC_NEW",
-            "display_name": "NVIDIA® NVENC New (uses GPU)",
-            "enabled": true,
-            "presets": [
-                "AUTOMATIC",
-                "DEFAULT",
-                "HIGH_QUALITY",
-                "HIGH_PERFORMANCE",
-                "BLURAY_DISK",
-                "LOW_LATENCY",
-                "HIGH_PERFORMANCE_LOW_LATENCY",
-                "HIGH_QUALITY_LOW_LATENCY",
-                "LOSSLESS",
-                "HIGH_PERFORMANCE_LOSSLESS"
-            ],
-            "rateControls": [
-                "RC_CBR",
-                "RC_CQP",
-                "RC_VBR",
-                "RC_VBR_MINQP",
-                "RC_2_PASS_QUALITY"
-            ],
-            "error_description": null,
-            "vendor_error": "",
-            "valid": true
-        },
-        {
-            "name": "AMD_AMF",
-            "display_name": "AMD® AMF (uses GPU)",
-            "enabled": false,
-            "presets": [
-                "AUTOMATIC",
-                "BALANCED",
-                "SPEED",
-                "QUALITY",
-                "ULTRA_LOW_LATENCY",
-                "LOW_LATENCY"
-            ],
-            "rateControls": [
-                "RC_CBR",
-                "RC_CQP",
-                "RC_VBR",
-                "RC_VBR_MINQP"
-            ],
-            "error_description": "Not Supported",
-            "vendor_error": null,
-            "valid": false
-        }
-    ],
-    "status": "success",
-    "success": true
-}
+!JSON Encoders-27.2.3
+const encoders = OBS.27.2.3.Encoders[
+    INTEL{
+        "name": "INTEL",
+        "display_name": "Intel® Quick Sync (uses iGPU)",
+        "presets": INTEL_PRESETS[
+            "LOW",
+            "MEDIUM",
+            "HIGH"
+        ],
+        "rateControls": INTEL_RATES[],
+    },
+    X264{
+        "name": "X264",
+        "display_name": "X264 (uses CPU)",
+        "presets": X264_PRESETS[
+            "ULTRAFAST",
+            "SUPERFAST",
+            "VERYFAST",
+            "FASTER",
+            "FAST",
+            "MEDIUM",
+            "SLOW",
+            "SLOWER",
+            "VERYSLOW",
+            "PLACEBO"
+        ],
+        "rateControls": X264_RATES[
+            "RC_CBR",
+            "RC_CQP",
+            "RC_VBR",
+            "RC_VBR_MINQP",
+            "RC_2_PASS_QUALITY"
+        ],
+    },
+    NVIDIA_NVENC{
+        "name": "NVIDIA_NVENC",
+        "display_name": "NVIDIA® NVENC (uses GPU)",
+        "presets": NVIDIA_NVENC_PRESETS[
+            "AUTOMATIC",
+            "DEFAULT",
+            "HIGH_QUALITY",
+            "HIGH_PERFORMANCE",
+            "BLURAY_DISK",
+            "LOW_LATENCY",
+            "HIGH_PERFORMANCE_LOW_LATENCY",
+            "HIGH_QUALITY_LOW_LATENCY",
+            "LOSSLESS",
+            "HIGH_PERFORMANCE_LOSSLESS"
+        ],
+        "rateControls": NVIDIA_NVENC_RATES[
+            "RC_CBR",
+            "RC_CQP",
+            "RC_VBR",
+            "RC_VBR_MINQP",
+            "RC_2_PASS_QUALITY"
+        ],
+    },
+    NVIDIA_NVENC_NEW{
+        "name": "NVIDIA_NVENC_NEW",
+        "display_name": "NVIDIA® NVENC New (uses GPU)",
+        "presets": NVIDIA_NVENC_NEW_PRESETS[
+            "AUTOMATIC",
+            "DEFAULT",
+            "HIGH_QUALITY",
+            "HIGH_PERFORMANCE",
+            "BLURAY_DISK",
+            "LOW_LATENCY",
+            "HIGH_PERFORMANCE_LOW_LATENCY",
+            "HIGH_QUALITY_LOW_LATENCY",
+            "LOSSLESS",
+            "HIGH_PERFORMANCE_LOSSLESS"
+        ],
+        "rateControls": NVIDIA_NVENC_NEW_RATES[
+            "RC_CBR",
+            "RC_CQP",
+            "RC_VBR",
+            "RC_VBR_MINQP",
+            "RC_2_PASS_QUALITY"
+        ],
+    },
+    AMD_AMF{
+        "name": "AMD_AMF",
+        "display_name": "AMD® AMF (uses GPU)",
+        "presets": AMD_AMF_PRESETS[
+            "AUTOMATIC",
+            "BALANCED",
+            "SPEED",
+            "QUALITY",
+            "ULTRA_LOW_LATENCY",
+            "LOW_LATENCY"
+        ],
+        "rateControls": AMD_AMF_RATES[
+            "RC_CBR",
+            "RC_CQP",
+            "RC_VBR",
+            "RC_VBR_MINQP"
+        ],
+    }
+]
 /JSON
 
 </TabItem>
