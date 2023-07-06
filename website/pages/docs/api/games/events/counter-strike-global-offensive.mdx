@@ -4,6 +4,7 @@ image: "/img/embed/games/counter-strike-global-offensive.jpg"
 title: "Counter-Strike: Global Offensive Game events"
 hide_title: true
 sidebar_label: "Counter-Strike: Global Offensive"
+sidebar_position: 0
 sidebar_custom_props:
   overwolf_platform: true
   electron_platform: false
@@ -30,7 +31,6 @@ When running this game in trusted mode (without any launch parameters), OW can't
 ## Available Features
 
 * [gep_internal](#gep_internal)
-* [match_info](#match_info)
 * [kill](#kill)
 * [death](#death)
 * [assist](#assist)
@@ -372,7 +372,7 @@ pseudo_match_id | match_info  |	The current match’s ID code. See [notes](#pseu
 server_info | match_info  |	The current session’s server ID. See [notes](#server_info-note)	| | 135.0  |
 game_mode | match_info  |	The current game mode that is played. See [notes](#game_mode-note)	| | 135.0  |
 phase | match_info  |	The current state of the match. See [notes](#phase-note)	| | 137.0  |
-match_outcome | match_info  |	win/lose/tie or palyer's name in Arms Race game mode See [notes](#match_outcome-note)	| | 140.0  |
+match_outcome | match_info  |	win/lose/tie. See [notes](#match_outcome-note)	| | 140.0  |
 
 #### *pseudo_match_id* note
 
@@ -444,15 +444,11 @@ Data Example:
 
 #### *match_outcome* note
 
-In Arms Race game mode the 'match_outcome' value will be the winner's name 
-In all the other game modes possible values are win, lose or tie
-
 Data Example:
 
 ```json
 {"info":{"match_info":{"match_outcome":"win"}},"feature":"match_info"}
 {"info":{"match_info":{"match_outcome":"lose"}},"feature":"match_info"}
-{"info":{"match_info":{"match_outcome":"Jacks123"}},"feature":"match_info"}
 ```
 
 ## `info`

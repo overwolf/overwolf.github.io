@@ -4,6 +4,7 @@ image: "/img/embed/games/sons-of-the-forest.jpg"
 title: Sons of the Forest Game events
 hide_title: true
 sidebar_label: Sons of the Forest
+sidebar_position: 0
 sidebar_custom_props:
   overwolf_platform: true
   electron_platform: false
@@ -94,11 +95,20 @@ Data Example:
 key          | Category    | Values                    | Notes                 | Since GEP Ver. |
 ------------ | ------------| ------------------------- | --------------------- | ------------- | 
 location | match_info| Current player location on the map|See [notes](#location-note)|   221.0       |
+npc_location | match_info| Kelvin (NPC) location on the map|See [notes](#npc_location-note)|   227.0       |
 
 #### *location* note
 
 Data Example:
 
 ```json
-{"info":{"match_info":{"location":"{\"loc_x\":-438.726135,\"loc_y\":1565.584473,\"loc_z\":17.449226}"}},"feature":"location"}
+{"info":{"match_info":{"location":"{\"loc_x\":-2173.760986,\"loc_y\":1170.244873,\"loc_z\":612.648438,\"rot_x\":0.845221,\"rot_y\":-0.367379,\"rot_z\":-0.388116}"}},"feature":"location"}
+```
+
+#### *npc_location* note
+
+Data Example:
+
+```json
+{"info":{"match_info":{"npc_location":"{\"npc_name\":\"Kelvin\",\"loc_x\":-1148.589966,\"loc_y\":-225.529999,\"loc_z\":138.776138}"}},"feature":"location"}
 ```

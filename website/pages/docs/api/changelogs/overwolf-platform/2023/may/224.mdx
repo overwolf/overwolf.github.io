@@ -19,7 +19,7 @@ sidebar_custom_props:
     - The `INTEL` encoder's underlying implementation has changed. On some older systems where it is not supported, the old encoder will still be used.
     - The `INTEL` encoder has new encoder presets, which also cover the underlying OBS `target_usage` parameter.
   - Added three new `HEVC` encoders - `NVIDIA_NVENC_HEVC`, `INTEL_HEVC`, `AMD_AMF_HEVC`
-    - These new encoders can only be used for local recordings, not for *live*streaming (not to be confused with the [streaming API](/api/streaming))
+    - These new encoders can only be used for recordings, and cannot be played within in-game windows (they will however play within a native window)!
   - Various changes to the lists of supported video encoders and encoder presets - the full up-to-date list can be found [here](/api/general/obs#list-of-supported-encoders)
     - Passing an invalid encoder preset will not throw an error, but instead use the default preset for that encoder. This also includes deprecated encoder presets
   - Microphones can now be set to record as [`mono`](/api/streaming#streamdevicevolume-object) rather than stereo.
@@ -38,3 +38,4 @@ sidebar_custom_props:
 
 - Opening two overlapping native windows at once will no longer cause them to flicker.
 - Fixed an issue where calling [`overwolf.windows.bringToFront()`](/api/windows#bringtofrontwindowid-callback) on a native window could unintentionally grab focus from the currently active game.
+- Fixed an issue where the game's audio volume setting would be ignored when using `filtered_capture`.

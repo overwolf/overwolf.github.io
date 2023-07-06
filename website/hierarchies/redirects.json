@@ -67,7 +67,9 @@
     "to": "/api/games/ids",
     "from": [
       "/docs/api/overwolf-games-events-autochess",
-      "/docs/api/games-ids"
+      "/docs/api/games-ids",
+      "/api/games/events/maker-king",
+      "/docs/api/overwolf-games-events-makerking"
     ]
   },
   {
@@ -127,10 +129,6 @@
     "from": "/docs/api/overwolf-games-events-lor"
   },
   {
-    "to": "/api/games/events/maker-king",
-    "from": "/docs/api/overwolf-games-events-makerking"
-  },
-  {
     "to": "/api/games/events/minecraft",
     "from": "/docs/api/overwolf-games-events-minecraft"
   },
@@ -143,8 +141,8 @@
     "from": "/docs/api/overwolf-games-events-new-world"
   },
   {
-    "to": "/api/games/events/overwatch",
-    "from": "/docs/api/overwolf-games-events-overwatch"
+    "to": "/api/games/events/overwatch-2",
+    "from": ["/docs/api/overwolf-games-events-overwatch", "/api/games/events/overwatch"]
   },
   {
     "to": "/api/games/events/path-of-exile",
@@ -322,8 +320,8 @@
     "from": "/docs/api/overwolf-social-discord"
   },
   {
-    "to": "/api/social/gfycat",
-    "from": "/docs/api/overwolf-social-gfycat"
+    "to": "/api/deprecated/gfycat",
+    "from": ["/docs/api/overwolf-social-gfycat", "/api/social/gfycat"]
   },
   {
     "to": "/api/social/reddit",
@@ -595,8 +593,8 @@
     "from": "/docs/status/new-world"
   },
   {
-    "to": "/status/overwatch",
-    "from": "/docs/status/overwatch"
+    "to": "/status/overwatch-2",
+    "from": ["/docs/status/overwatch", "/status/overwatch"]
   },
   {
     "to": "/status",

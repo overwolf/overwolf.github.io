@@ -17,8 +17,8 @@ These events are not related to real-time game events (kill, death, start/end ma
 ## Methods Reference
 
 * [overwolf.games.getRunningGameInfo()](#getrunninggameinfocallback)
-* [overwolf.games.getGameInfo()](#getgameinfogameclassidcallback)
-* [overwolf.games.getGameDBInfo()](#getgamedbinfogameclassidcallback)
+* [overwolf.games.getGameInfo()](#getgameinfogameclassid-callback)
+* [overwolf.games.getGameDBInfo()](#getgamedbinfogameclassid-callback)
 * [overwolf.games.getRecentlyPlayedGames()](#getrecentlyplayedgamesmaxnumofgames-callback)
 * [overwolf.games.getLastRunningGameInfo()](#getlastrunninggameinfocallback)
 * [overwolf.games.getRunningGameInfo2()](#getrunninggameinfocallback)
@@ -92,7 +92,7 @@ callback  | [(Result: GetRunningGameInfoResult)](#getrunninggameinforesult-objec
 overwolf.games.getRunningGameInfo(function(){console.log(JSON.stringify(arguments))})
 ```
 
-## getGameInfo(gameClassId,callback)
+## getGameInfo(gameClassId, callback)
 
 #### Version added: 0.93 
 
@@ -105,7 +105,7 @@ Parameter   | Type                                           | Description      
 gameClassId | int                                            | Class ID of the game        |
 callback    | [(Result:GetGameInfoResult)](#getgameinforesult-object) => void | Returns info about the game |
 
-## getGameDBInfo(gameClassId,callback)
+## getGameDBInfo(gameClassId, callback)
 
 #### Version added: 0.112 
 
@@ -851,7 +851,7 @@ See also related object property, [isCursorVisible](#iscursorvisible-note).
 
 #### **oopOverlay** Note
 
-OOP stands for "Out of process" Overlay - relevant for Destiny 2, CSGO, and warzone that requires [exclusive mode](/topics/best-practices/exclusive-mode) to interact with the OW app's windows. 
+OOP stands for "Out of process" Overlay - relevant for Destiny 2, CS:GO, Roblox, and warzone that requires [exclusive mode](/topics/best-practices/exclusive-mode) to interact with the OW app's windows. 
 
 #### **isFullScreenOptimizationDisabled** Note
 

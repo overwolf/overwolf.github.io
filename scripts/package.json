@@ -1,4 +1,7 @@
 {
   "name": "scripts",
-  "packageManager": "yarn@3.3.1"
+  "packageManager": "yarn@3.3.1",
+  "devDependencies": {
+    "typings": "workspace:typings"
+  }
 }

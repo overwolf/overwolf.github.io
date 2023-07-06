@@ -39,7 +39,8 @@ const metaData = [
     {
         id: 21586,
         path: "dota-underlords",
-        name: "Dota Underlords"
+        name: "Dota Underlords",
+        endOfLife: "9/7/2023"
     },
     {
         id: 21634,
@@ -59,12 +60,14 @@ const metaData = [
     {
         id: 21666,
         path: "football-manager-2021",
-        name: "Football Manager 2021"
+        name: "Football Manager 2021",
+        endOfLife: "9/7/2023"
     },
     {
         id: 21856,
         path: "football-manager-2022",
-        name: "Football Manager 2022"
+        name: "Football Manager 2022",
+        endOfLife: "9/7/2023"
     },
     {
         id: 21216,
@@ -89,7 +92,8 @@ const metaData = [
     {
         id: 21328,
         path: "hunt-showdown",
-        name: "Hunt: Showdown"
+        name: "Hunt: Showdown",
+        endOfLife: "9/7/2023"
     },
     {
         id: 5426,
@@ -102,7 +106,9 @@ const metaData = [
         games: [
             5426,
             21570,
-            215701
+            215701,
+            21556,
+            215561
         ],
         path: "league-of-legends",
         name: "League of Legends Launcher"
@@ -129,8 +135,8 @@ const metaData = [
     },
     {
         id: 10844,
-        path: "overwatch",
-        name: "Overwatch"
+        path: "overwatch-2",
+        name: "Overwatch 2"
     },
     {
         id: 7212,
@@ -168,16 +174,36 @@ const metaData = [
         launcher: 10902,
         subVariants: [ 215701 ],
         path: "teamfight-tactics",
-        name: "Teamfight Tactics"
+        name: "Teamfight Tactics",
+        electron: "teamfight-tactics"
     },
     {
         id: 215701,
-        displayId: 5426,
+        displayId: 22848,
         launcher: 10902,
         mainVariant: 21570,
         docs: "teamfight-tactics",
         path: "teamfight-tactics-public-beta",
         name: "Teamfight Tactics PBE",
+        electron: "teamfight-tactics",
+        variant: "PBE"
+    },
+    {
+        id: 21556,
+        displayId: 5426,
+        launcher: 10902,
+        subVariants: [ 215561 ],
+        path: "league-of-legends-arena",
+        name: "League of Legends: Arena"
+    },
+    {
+        id: 215561,
+        displayId: 22848,
+        launcher: 10902,
+        mainVariant: 21556,
+        docs: "league-of-legends-arena",
+        path: "league-of-legends-public-beta-arena",
+        name: "League of Legends PBE: Arena",
         variant: "PBE"
     },
     {
@@ -224,6 +250,11 @@ const metaData = [
         id: 22312,
         path: "leap",
         name: "LEAP"
+    },
+    {
+        id: 22700,
+        path: "diablo-4",
+        name: "Diablo 4"
     }
 ]
 
