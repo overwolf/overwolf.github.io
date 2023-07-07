@@ -199,6 +199,17 @@ overwolf.media.getScreenshotUrl(
 );
 ```
 
+### Known Issues
+overwolf.media.getScreenshotUrl in any DX12 game always returns the following result:
+```json
+{
+  success: false,
+  status: 'error',
+  error: 'Capture failed'
+}
+```
+This is a known limitation of the current implementation.  There is a workaround using overwolf.media.takeScreenshot and deleting the screenshot afterward but it's less performant.
+
 ## shareImage(image, description, callback)
 #### Version added: 0.78
 
