@@ -838,7 +838,6 @@ key          | Category    | Values                    | Notes                 |
 ------------ | ------------| ------------------------- | --------------------- | ------------- |
 matchStarted | game_info   | true/false (string)       |See [notes](#matchStarted-note)|   230.0       |
 matchId      | game_info   | Current match id          |See [notes](#matchId-note)     |   230.0       |
-match_outcome | game_info  | The final march outcome  |See [notes](#match_outcome-note)|   230.0       |
 
 
 #### *matchStarted* note
@@ -857,19 +856,6 @@ Data Example:
 {"info":{"game_info":{"matchId":"2603009084"}},"feature":"game_info"}
 ```
 
-#### *match_outcome*  note
-
-Match outcome at the end of the match
-
-Possible values:
-* victory
-* defeat
-
-Data Example:
-```
-{"feature":"match","category":"game_info","key":"match_outcome","value":"victory"}
-```
-
 ### Events
 
 Event      | Event Data  | Fired When          | Notes              | Since GEP Ver. |
@@ -884,7 +870,7 @@ matchStart | null        | Match has started   |  Match has started |   230.0   
 key          | Category    | Values                    | Notes                 | Since GEP Ver. |
 ------------ | ----------- | ------------------------- | --------------------- | -------------- |
 round_number | match_info | The number of the current round      |See [notes](#round_number-notes)|   230.0       |
-
+match_outcome | game_info  | The final march outcome  |See [notes](#match_outcome-note)|   230.0       |
 
 
 #### *round_number* notes
@@ -892,6 +878,19 @@ round_number | match_info | The number of the current round      |See [notes](#r
 Data example:
 ```json
 {"info":{"match_info":{"round_number":"4"}},"feature":"match_info"}
+```
+
+#### *match_outcome*  note
+
+Match outcome at the end of the match
+
+Possible values:
+* victory
+* defeat
+
+Data Example:
+```
+{"feature":"match_info","category":"match_info","key":"match_outcome","value":"victory"}
 ```
 
 ### Events
