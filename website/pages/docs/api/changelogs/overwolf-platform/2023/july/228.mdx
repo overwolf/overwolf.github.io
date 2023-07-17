@@ -1,0 +1,32 @@
+---
+id: 228
+image: "/img/embed/changelogs.jpg"
+title: "Version 0.228"
+sidebar_label: "0.228"
+sidebar_custom_props:
+  overwolf_platform: true
+  electron_platform: false
+---
+
+* Note that iterations 227 and 228 were combined into a single version.
+
+### Platform
+- App developers will now **always** get new app versions as soon as they begin rollout (Game Events, OBS, and even 3rd party apps), regardless of the versions' phrasing %.
+	- This includes anyone signed in with a whitelisted account, as well as anyone using the `Developers` channel in the client.
+- Improved detection of installed games.
+
+### API
+- Changed several default [manifest](/api/manifest) values (All of these values **must** stay in their new default to display Ads):
+	- `data.[WINDOWNAME].block_top_window_navigation` - Will now default to `true`.
+	- `data.[WINDOWNAME].mute` - Will now default to `true`.
+	- `data.[WINDOWNAME].popup_blocker` - Will now default to `true`.
+- [`overwolf.social.youtube.shareEx()`](/api/social/youtube#shareexyoutubeshareparameters-callback-callback) - Will now throw a `NoChannelsFound` error if the user is logged in, but does not have a Youtube channel associated with this Google account.
+
+
+### Bug Fixes:
+- Fixed an issue when attempting to share a picture with a `.jpeg` file format.
+- Fixed an issue when attempting to load a picture through `overwolf://media/screenshots/custom/...` with a `.jpeg` file format.
+- Fixed an issue when attempting to share a video to twitter, where the width and/or height of the video is not divisible by 2.
+- Fixed an issue where the client would sometimes open the settings app when performing other actions within it.
+- Fixed an issue where the [`overwolf.games.inputTracking.onKeyUp`](/api/games/input-tracking#onkeyup) and [`overwolf.games.inputTracking.onKeyDown`](/api/games/input-tracking#onkeydown) events would sometimes fire out of order.
+- Fixed an issue where `in_game_only: true` windows would sometimes resize incorrectly when `min_size` is also set.
