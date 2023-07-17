@@ -314,6 +314,8 @@ List of parameters:
 * ult - name of the ultimate used, reserved for a non lethal ultimate such as Sage's resurrection 
 * headshot - Boolean value if the kill was by headshot
 * weapon - name of the weapon/ability/ultimate used by the killing player or spike/fall damage
+* is_attacker_teammate - true/false if the attacker is a teammate 
+* is_victime_teammate - true/false if the victime is a teammate 
 
 <details open>
 <summary>List of available weapons</summary>
@@ -372,12 +374,12 @@ TX_Hud_Knife_Standard_S = Knife
 Data Example:
 
 ```json
-{"info":{"match_info":{"kill_feed":"{\"attacker\":\"YTDestruct28\",\"victim\":\"Ghostblade\",\"weapon\":\"TX_Hud_Volcano\",\"ult\":\"\",\"assist1\":\"TX_Killfeed_Sage1\",\"assist2\":\"\",\"assist3\":\"\",\"assist4\":\"\",\"headshot\":false}"}},"feature":"match_info"}
+{"info":{"match_info":{"kill_feed":"{\"attacker\":\"YTDestruct28\",\"victim\":\"Ghostblade\",\"is_attacker_teammate\":true,\"is_victim_teammate\":false,\"weapon\":\"TX_Hud_Volcano\",\"ult\":\"\",\"assist1\":\"TX_Killfeed_Sage1\",\"assist2\":\"\",\"assist3\":\"\",\"assist4\":\"\",\"headshot\":false}"}},"feature":"match_info"}
 ```
 None lethal ultimate example: 
 
 ```json
-{"info":{"match_info":{"kill_feed":"{\"attacker\":\"JacksAtWork\",\"victim\":\"jaxxxsosparrow\",\"weapon\":\"\",\"ult\":\"TX_Thorne_Heal\",\"assist1\":\"\",\"assist2\":\"\",\"assist3\":\"\",\"assist4\":\"\",\"headshot\":false}"}},"feature":"match_info"}
+{"info":{"match_info":{"kill_feed":"{\"attacker\":\"JacksAtWork\",\"victim\":\"jaxxxsosparrow\",\"is_attacker_teammate\":true,\"is_victim_teammate\":false,\"weapon\":\"\",\"ult\":\"TX_Thorne_Heal\",\"assist1\":\"\",\"assist2\":\"\",\"assist3\":\"\",\"assist4\":\"\",\"headshot\":false}"}},"feature":"match_info"}
 ```
 
 #### *map* note
