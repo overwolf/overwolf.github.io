@@ -1,18 +1,18 @@
 {
     "latest": {
-        "date": "May 2023",
-        "path": "2023/may",
-        "name": "224"
+        "date": "June 2023",
+        "path": "2023/june",
+        "name": "226"
     },
     "deploying": {
-        "date": "May 2023",
-        "path": "2023/may",
-        "name": "224"
+        "date": "June 2023",
+        "path": "2023/june",
+        "name": "226"
     },
     "dev": {
-        "date": "May 2023",
-        "path": "2023/may",
-        "name": "224"
+        "date": "July 2023",
+        "path": "2023/july",
+        "name": "228"
     },
     "ow-electron": {
         "date": "January 2023",
