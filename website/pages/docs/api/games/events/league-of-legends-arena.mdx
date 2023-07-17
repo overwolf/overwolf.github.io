@@ -882,15 +882,18 @@ Data example:
 
 #### *match_outcome*  note
 
-Match outcome at the end of the match
+Match outcome at the end of the match with your team's place
 
-Possible values:
+Possible `status` values:
+
 * victory
 * defeat
 
+Possible `place` values are 1, 2, 3, 4
+
 Data Example:
 ```
-{"feature":"match_info","category":"match_info","key":"match_outcome","value":"victory"}
+{"info":{"match_info":{"match_outcome":"{\"status\":\"defeat\",\"place\":4}"}},"feature":"match_info"}
 ```
 
 ### Events
