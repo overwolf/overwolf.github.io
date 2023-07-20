@@ -313,7 +313,7 @@ Data Example:
 key          | Category    | Values                                       | Notes   | Since GEP Ver. |
 ------------ | ------------| -------------------------------------------- | ------- | ------------- | 
 teammate_X   | match_info  | This feature provides the list of your squad members.    | See [notes](#teammate_X-note)|  128.0  |
-legendSelect_X| match_info | The name of the legend & order of selection for every member in the team, including noting who the jump-master is. | See [notes](#legendSelect_X-note)|  128.0 |
+legendSelect_X| match_info | The name of the legend & order of selection for every member in the team, including noting who the jump-master and local-player are. | See [notes](#legendSelect_X-note)|  128.0 |
 team_info | match_info | The current status of the local player’s team. | See [notes](#team_info-note)|  128.0 |
 
 #### *teammate_X* notes
@@ -334,7 +334,9 @@ Each squad member joining the game will be reported in the following way:
 Every team member, including the jump-master will be reported in the following way:
 
 ```json
- {"info":{"match_info":{"legendSelect_1":"{\"playerName\":\"□JacksAtWork□\",\"legendName\":\"#character_wraith_NAME\",\"selectionOrder\":\"1\",\"lead\":true,\"is_local\":true}"}},"feature":"team"}
+{"info":{"match_info":{"legendSelect_0":"{\"playerName\":\"MrPlayer\",\"legendName\":\"#character_lifeline_NAME\",\"selectionOrder\":\"0\",\"lead\":false,\"is_local\":false}"}},"feature":"team"}
+{"info":{"match_info":{"legendSelect_1":"{\"playerName\":\"apexfan\",\"legendName\":\"#character_horizon_NAME\",\"selectionOrder\":\"1\",\"lead\":false,\"is_local\":false}"}},"feature":"team"}
+{"info":{"match_info":{"legendSelect_2":"{\"playerName\":\"TheGC\",\"legendName\":\"#character_bloodhound_NAME\",\"selectionOrder\":\"2\",\"lead\":true,\"is_local\":true}"}},"feature":"team"}
 ```
 
 #### *team_info* notes
