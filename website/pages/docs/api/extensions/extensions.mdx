@@ -150,7 +150,7 @@ Parameter | Type                  | Description                                 
 callback  | ([Result: UpdateExtensionResult](#updateextensionresult-object) => void              | Result of the request    |
 
 #### `failsafe` note
-The update has a failsafe mechanism while the game is active, making sure automatic updates won't happen during play only if a user action is detected, like pressing a button, for example.
+The update has a failsafe mechanism while any game is active, which makes sure no updates are downloaded automatically whilst the user is playing. Only if the updateExtension() is called through a user action, like pressing a button for example, does it force the download.
 
 ## checkForExtensionUpdate(callback)
 #### Version added: 0.135
