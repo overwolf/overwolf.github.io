@@ -1,0 +1,21 @@
+---
+id: 230
+image: "/img/embed/changelogs.jpg"
+title: "Version 0.230"
+sidebar_label: "0.230"
+sidebar_custom_props:
+  overwolf_platform: true
+  electron_platform: false
+---
+
+* Note that iterations 229 and 230 were combined into a single version.
+
+### Platform
+- Improved event detection when running certain games as administrator.
+- When using [`data.[windowName].debug_url`](/api/manifest), the overwolf object will now be available on all windows.
+- When using [`data.[windowName].debug_url`](/api/manifest) in an unpacked app, the [`data.[windowName].block_top_window_navigation`](/api/manifest) property will now be turned off by force.
+
+
+### Bug Fixes
+- Fixed an issue where the `overwolf` API object would sometimes not load when using [`data.[windowName].debug_url`](/api/manifest).
+- Fixed an issue where the [`overwolf.streaming.changeVolume()`](/api/streaming#changevolumestreamid-audiooptions-callback) would not affect the volume of the recording.
