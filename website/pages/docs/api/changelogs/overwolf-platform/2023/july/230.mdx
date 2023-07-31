@@ -14,8 +14,10 @@ sidebar_custom_props:
 - Improved event detection when running certain games as administrator.
 - When using [`data.[windowName].debug_url`](/api/manifest), the overwolf object will now be available on all windows.
 - When using [`data.[windowName].debug_url`](/api/manifest) in an unpacked app, the [`data.[windowName].block_top_window_navigation`](/api/manifest) property will now be turned off by force.
+- Updated list of supported GPUs for the `NVEC_NEW` encoder.
 
 
 ### Bug Fixes
 - Fixed an issue where the `overwolf` API object would sometimes not load when using [`data.[windowName].debug_url`](/api/manifest).
 - Fixed an issue where the [`overwolf.streaming.changeVolume()`](/api/streaming#changevolumestreamid-audiooptions-callback) would not affect the volume of the recording.
+- Fixed an issue where recording with the `NVEC_NEW` encoder would fail in setups running an Nvidia GPU alongside an AMD GPU.
