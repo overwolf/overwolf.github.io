@@ -39,9 +39,13 @@ Note that you can also use the LOL game launcher events. Read more [here](../lau
 * [gep_internal](#gep_internal)
 * [live_client_data](#live_client_data)
 * [matchState](#matchstate)
+* [match_info](#match_info)
 * [summoner_info](#summoner_info)
 * [teams](#teams)
 * [match](#match)
+* [augments](#augments)
+* [damage](#damage)
+* [heal](#heal)
 
 
 ## Game events status
@@ -84,7 +88,7 @@ game_data | live_client_data | In-game data received by the client. |See [notes]
 <details>
 <summary>Click to see some data example</summary>
 
-```js
+```json
 {
   "info": {
     "live_client_data": {
@@ -797,7 +801,6 @@ game_data | live_client_data | In-game data received by the client. |See [notes]
 </details>
 
 
-
 #### *events* note
 
 Data Example:
@@ -859,6 +862,70 @@ Event      | Event Data  | Fired When          | Notes              | Since GEP 
 -----------| ------------| ------------------- | ------------------ | --------------|
 matchStart | null        | Match has started   |  Match has started |   230.0       |
 
+
+## `match_info`
+
+### Info Updates
+
+key          | Category    | Values                    | Notes                 | Since GEP Ver. |
+------------ | ----------- | ------------------------- | --------------------- | -------------- |
+round_number | match_info | The number of the current round      |See [notes](#round_number-notes)|   230.0       |
+match_outcome | match_info  | The final march outcome  |See [notes](#match_outcome-note)|   230.0       |
+
+
+#### *round_number* notes
+
+Data example:
+```json
+{"info":{"match_info":{"round_number":"4"}},"feature":"match_info"}
+```
+
+#### *match_outcome*  note
+
+Match outcome at the end of the match with your team's place
+
+Possible `status` values:
+
+* victory
+* defeat
+
+Possible `place` values are 1, 2, 3, 4
+
+Data Example:
+```
+{"info":{"match_info":{"match_outcome":"{\"status\":\"defeat\",\"place\":4}"}},"feature":"match_info"}
+```
+
+### Events
+
+Event | Event Data                        | Fired When                  | Notes              | Since GEP Ver. |
+------| ----------------------------------| --------------------------- | ------------------ | --------------|
+round_start | the current round number | A round start              |See [notes](#round_start-notes)|     230.0     |
+round_end   | null                         | A round is won or lost                |See [notes](#round_end-notes)|     230.0     |
+round_outcome | null                         | At the end of the current round |See [notes](#round_outcome-notes)|     230.0     |
+
+#### *round_start* note
+
+Data Example:
+
+```json
+{"events":[{"name":"round_start","data":"3"}]}
+```
+
+#### *round_end* note
+
+Data Example:
+
+```json
+{"events":[{"name":"round_end","data":""}]}
+```
+
+#### *round_outcome* notes
+
+Data example:
+```json
+{"events":[{"name":"round_outcome","data":"defeat"}]}
+```
 
 ## `summoner_info`
 
@@ -948,11 +1015,7 @@ key       | Category        | Values                                         | N
 level     | level           | Current level of the player's champion                 |   Fired immediately when game starts, updates whenever the champion levels up                     |      0.19     |
 
 ```json
-{ "info": {
-    "level": { "level": "1" }
-  },
-  "feature": "level"
-}
+{ "info": {"level": { "level": "1" }}, "feature": "level"}
 ```
 
 ## `match`
@@ -971,13 +1034,6 @@ key          | Category    | Values                    | Notes                 |
 match_start |                | match start event | See [notes](#match_start-note)|   230.0       |
 
 
-#### *match_start* note
-
-Data Example:
-```
-{"events":[{"name":"match_start","data":""}]}
-```
-
 #### *match_started* note
 
 Data Example:
@@ -985,3 +1041,195 @@ Data Example:
 {"feature":"match","category":"game_info","key":"match_started","value":true}
 ```
 
+#### *match_start* note
+
+Data Example:
+```
+{"events":[{"name":"match_start","data":""}]}
+```
+
+## `augments`
+
+### Info Updates
+
+key            | Category    | Values                           | Notes                    | Since GEP Ver. |
+-------------- | ------------| ---------------------------------|--------------------------|---------------|
+augments   |   me    | List of available augments   | See [notes](#augments-note) |   230.0       |
+picked_augment   |   me    | The last augment that the player picked   | See [notes](#picked_augment-note) |   222.0       |
+
+#### *augments* note
+
+Data Example:
+```json
+{"feature":"augments","category":"me","key":"augments","value":"{\"augment_1\":{\"name\":\"TFT8_Augment_DefenderTrait\"}, \"augment_2\":{\"name\":\"TFT7_Augment_PandorasBench\"}, \"augment_3\":{\"name\":\"TFT6_Augment_SecondWind1\"}, }"}
+```
+
+#### *picked_augment* note
+
+Data Example:
+```json
+{"info":{"me":{"picked_augment":"{\"slot_1\":{\"name\":\"TFT9_Augment_CyberneticBulk3\"}, \"slot_2\":{\"name\":\"TFT9_Augment_SettTheBoss\"}, \"slot_3\":{\"name\":\"\"}}"}},"feature":"augments"}
+```
+
+## `damage`
+
+### Info Updates
+
+key  | Category    | Values                                     | Notes  | Since GEP Ver. |
+-----| ------------| -------------------------------------------| ------ | ------------- |
+total_damage_dealt               | damage | Value of all damage done in the match (Float). |See [notes](#total_damage_dealt-note)|    139.0      |
+total_damage_dealt_to_champions  | damage | Value of all damage done to champions in the match (Float). |See [notes](#total_damage_dealt_to_champions-note)|    139.0      |
+total_damage_taken               | damage | Value of all the damage that was taken in the match (Float). |See [notes](#total_damage_taken-note)|    139.0      | |
+total_damage_self_mitigated      | damage | Value of all mitigated damage in the match (Float). |See [notes](#total_damage_self_mitigated-note)|    139.0      |
+
+#### *total_damage_dealt* note
+
+Data Example:
+
+```json
+{"info":{"damage":{"total_damage_dealt":"65.000000"}},"feature":"damage"}
+```
+
+#### *total_damage_dealt_to_champions* note
+
+Data Example:
+
+```json
+{"info":{"damage":{"total_damage_dealt_to_champions":"65.000000"}},"feature":"damage"}
+```
+
+#### *total_damage_taken* note
+
+Data Example:
+
+```json
+{"info":{"damage":{"total_damage_taken":"8.452381"}},"feature":"damage"}
+```
+
+#### *total_damage_self_mitigated* note
+
+Data Example:
+
+```json
+{"info":{"damage":{"total_damage_self_mitigated":"62.607620"}},"feature":"damage"}
+```
+
+### Events
+
+Event  | Event Data                                       |               Fired When                  | Notes     | Since GEP Ver. |
+-------| -------------------------------------------------| ----------------------------------------- | --------- | --------------|
+physical_damage_dealt_player       | Float | Damaging an opponent with physical damage. |See [notes](#physical_damage_dealt_player-note)|      139.0    |
+magic_damage_dealt_player          | Float | Damaging an opponent with magic damage. |See [notes](#magic_damage_dealt_player-note)|      139.0    |
+true_damage_dealt_player           | Float | Damaging an opponent with true damage. |See [notes](#true_damage_dealt_player-note)|      139.0    |
+physical_damage_dealt_to_champions | Float | Physical damage is inflicted on any opponent. |See [notes](#physical_damage_dealt_to_champions-note)|      139.0    |
+magic_damage_dealt_to_champions    | Float | Magic damage is inflicted on any opponent. |See [notes](#magic_damage_dealt_to_champions-note)|      139.0    |
+true_damage_dealt_to_champions     | Float | True damage is inflicted on any opponent. |See [notes](#true_damage_dealt_to_champions-note)|      139.0    |
+physical_damage_taken              | Float | Receiving physical damage from an opponent.  |See [notes](#physical_damage_taken-note)|      139.0    |
+magic_damage_taken                 | Float | Receiving magic damage from an opponent. |See [notes](#magic_damage_taken-note)|      139.0    |
+true_damage_taken                  | Float | Receiving true damage from an opponent. |See [notes](#true_damage_taken-note)|      139.0    |
+
+#### *physical_damage_dealt_player* note
+
+Data Example:
+
+```json
+{"events":[{"name":"physical_damage_dealt_player","data":"47.65625"}]}
+```
+
+#### *magic_damage_dealt_player* note
+
+Data Example:
+
+```json
+{"events":[{"name":"magic_damage_dealt_player","data":"65.0"}]}
+```
+
+#### *true_damage_dealt_player* note
+
+Data Example:
+
+```json
+{"events":[{"name":"true_damage_dealt_player","data":"14.0"}]}
+```
+
+#### *physical_damage_dealt_to_champions* note
+
+Data Example:
+
+```json
+{"events":[{"name":"physical_damage_dealt_to_champions","data":"47.65625"}]}
+```
+
+#### *magic_damage_dealt_to_champions* note
+
+Data Example:
+
+```json
+{"events":[{"name":"magic_damage_dealt_to_champions","data":"65.0"}]}
+```
+
+#### *true_damage_dealt_to_champions* note
+
+Data Example:
+
+```json
+{"events":[{"name":"true_damage_dealt_to_champions","data":"14.0"}]}
+```
+
+#### *physical_damage_taken* note
+
+Data Example:
+
+```json
+{"events":[{"name":"physical_damage_taken","data":"8.452381"}]}
+```
+
+#### *magic_damage_taken* note
+
+Data Example:
+
+```json
+{"events":[{"name":"magic_damage_taken","data":"11.355035"}]}
+```
+
+#### *true_damage_taken* note
+
+Data Example:
+
+```json
+{"events":[{"name":"true_damage_taken","data":"6.0"}]}
+```
+
+## `heal`
+
+### Info Updates
+
+key  | Category    | Values                                     | Notes  | Since GEP Ver. |
+-----| ------------| -------------------------------------------| ------ | ------------- |
+total_heal              | heal | Value of all healing done in the match (Float). |See [notes](#total_heal-note)|    139.0      |
+total_heal_on_teammates | heal | Value of all healing on teammates in the match (Float). |See [notes](#total_heal_on_teammates-note)|    139.0      |
+total_units_healed      | heal | Value of amount of units healed in the match (Float). |See [notes](#total_units_healed-note)|    139.0      |
+
+#### *total_heal* note
+
+Data Example:
+
+```json
+{"info":{"heal":{"total_heal":"27.0"}},"feature":"heal"}
+```
+
+#### *total_heal_on_teammates* note
+
+Data Example:
+
+```json
+{"info":{"heal":{"total_heal_on_teammates":"27.0"}},"feature":"heal"}
+```
+
+#### *total_units_healed* note
+
+Data Example:
+
+```json
+{"info":{"heal":{"total_units_healed":"1.0"}},"feature":"heal"}
+```

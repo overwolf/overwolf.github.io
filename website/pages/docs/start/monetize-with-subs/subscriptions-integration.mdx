@@ -59,15 +59,23 @@ Once the user successfully finishes the subscription process, a [SubscriptionCha
 To properly reward subscribed users with premium features (in this case, removing ads), you should check whether your current subscription plan is active for the current user. We will do that using the [overwolf.profile.subscriptions.getActivePlans()](/api/profile/subscriptions#getactiveplanscallback) function:
 
 ```js
+var myPlanID = APP_PLAN_ID; // my app's subscription plan id
+var isSubscribed = false; // flag that tells if the current user got an active subscription
 
-var myPlanID = 4564; //my app's subscription plan id
-var isSubscribed = false; //flag that tells if the current user got an active subscription
+function removeAds() {
+  /* Here, you'll need to implement two parts:
+   * 1 - Locate all Ad containers in the app, and call .shutdown() on them (see more in the Ads SDK documentation).
+   * 2 - Prevent any future Ad containers from being created, for as long as the user is still subscribed.
+   */
+  throw new Error("Not Implemented!")
+}
+
 
 overwolf.profile.subscriptions.getActivePlans(function(info) { 
-    if (info.success && info.plans != null && info.plans.includes(myPlanID)) {    
-            isSubscribed = true;
-            removeAds();
-    }
+  if (info.success && info.plans != null && info.plans.includes(myPlanID)) {    
+    isSubscribed = true;
+    removeAds();
+  }
 });
 ```
 

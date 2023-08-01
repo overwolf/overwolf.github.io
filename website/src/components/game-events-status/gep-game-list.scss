@@ -108,7 +108,7 @@
         .title {
           margin: 0;
           height: 56px;
-          padding: 16px 32px;
+          padding: 16px 24px;
           flex: 1;
           color: #999999;
           background-color: #1a1a1a;
@@ -129,12 +129,15 @@
         .text {
           margin: 0;
           height: 56px;
-          padding: 16px 32px;
+          padding: 16px 24px;
           flex: 1;
           font-size: 16px;
           font-family: Lato;
           line-height: 24px;
           letter-spacing: 0.32px;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
           color: #ccc;
           background-color: #202020;
         }

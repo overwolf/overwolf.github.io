@@ -20,7 +20,8 @@ sidebar_custom_props:
 ### API
 
 - Deprecated API - Deprecated all [Gfycat](/api/deprecated/gfycat) methods, as the site seems to [no longer be running](https://forums.tms.sx/threads/gfycat-is-dead.44691/).
-- New API - [overwolf.media.takeScreenshotEX()](/api/media#takescreenshotextargetpath-options-callback) - Allows an app to further control the settings of file-based game screenshots.	
+- New API - [overwolf.media.takeScreenshotEX()](/api/media#takescreenshotextargetpath-options-callback) - Allows an app to further control the settings of file-based game screenshots.
+  - With the release of this API, file screenshots will now always use the `.jpeg` or the `.bmp` file formats. Screenshots taken before this version however, will always use the `.jpg` format.
 - New API - [overwolf.utils.createLogsZip()](/api/utils#createlogszipcallback) - Allows an app to create a local logs.zip from the local users' logs, as opposed to just creating and uploading it directly to the server.
 - Updated API - Added the [`GetRunningGameInfoResult.elevated`](/api/games#getrunninggameinforesult-object) field, which indicates whether the running game is running with elevated permissions (Aka Running as Administrator).
 - Updated API - Improved the clarity of the exception thrown when selecting an unsupported encoder in [StreamSettings](/api/streaming#streamsettings-object) - now uses the [CaptureErrorCode.UnsupportedEncoder](/api/streaming#captureerrorcode-enum) error code.

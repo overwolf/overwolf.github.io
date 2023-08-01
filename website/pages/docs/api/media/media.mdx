@@ -338,8 +338,13 @@ height    | double   | The target height                                        
 
 Option    | Description  |
 --------- | -------------|
-Jpeg     | .jpg             |
+Jpeg     | .jpeg             |
 Bmp     | .bmp             |
+
+:::note Screenshot Formats
+Screenshots taken before version 0.226 were always saved as a `.jpg`. If your app needs to handle those screenshots as well, make sure it
+can handle both `.jpeg` **and** `.jpg` images (as well as `.bmp` if relevant)
+:::
 
 ## eMediaType enum
 #### Version added: 0.78

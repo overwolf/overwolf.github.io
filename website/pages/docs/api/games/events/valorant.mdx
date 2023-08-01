@@ -298,11 +298,14 @@ List of parameters:
 * money - the amount of money during the game for each player
 * is_local - local player or not (Boolean)
 * alive - if the player is alive true / false
+* shield - the current used shield for the local and teammate players. Possible values are 0 - no shield, 1 - light shield (25), 2 - heavy shield (50)
+* weapon - the current primary weapon (loadout) name used by the local and teammate players. Visible for all players in deathmatch like the behavior in the scoreboard during the game. 
+* ult_points / ult_max - the current ultimate point out of the maximum ultimate points
 
 Data Example:
 
 ```json
-{"info":{"match_info":{"scoreboard_0":"{\"player_id\":\"11909ad6-77c8-5f70-06234a1eb22a\",\"name\":\"jaxxx #7934\",\"character\":\"\",\"teammate\":false,\"alive\":true,\"kills\":0,\"deaths\":4,\"assists\":0,\"money\":99999,\"is_local\":true}"}},"feature":"match_info"}
+{"info":{"match_info":{"scoreboard_0":"{\"name\":\"MrTesting123 #1111\",\"character\":\"Phoenix\",\"teammate\":true,\"alive\":true,\"player_id\":\"d746ecb4-3b1d-52e7-82b0-270c20acfdba\",\"shield\":2,\"weapon\":\"Phantom\",\"ult_points\":1,\"ult_max\":6,\"kills\":0,\"deaths\":0,\"assists\":0,\"money\":99999,\"is_local\":true}"}},"feature":"match_info"}
 ```
 
 #### *kill_feed* note
@@ -314,6 +317,8 @@ List of parameters:
 * ult - name of the ultimate used, reserved for a non lethal ultimate such as Sage's resurrection 
 * headshot - Boolean value if the kill was by headshot
 * weapon - name of the weapon/ability/ultimate used by the killing player or spike/fall damage
+* is_attacker_teammate - true/false if the attacker is a teammate 
+* is_victim_teammate - true/false if the victim is a teammate 
 
 <details open>
 <summary>List of available weapons</summary>
@@ -372,12 +377,12 @@ TX_Hud_Knife_Standard_S = Knife
 Data Example:
 
 ```json
-{"info":{"match_info":{"kill_feed":"{\"attacker\":\"YTDestruct28\",\"victim\":\"Ghostblade\",\"weapon\":\"TX_Hud_Volcano\",\"ult\":\"\",\"assist1\":\"TX_Killfeed_Sage1\",\"assist2\":\"\",\"assist3\":\"\",\"assist4\":\"\",\"headshot\":false}"}},"feature":"match_info"}
+{"info":{"match_info":{"kill_feed":"{\"attacker\":\"YTDestruct28\",\"victim\":\"Ghostblade\",\"is_attacker_teammate\":true,\"is_victim_teammate\":false,\"weapon\":\"TX_Hud_Volcano\",\"ult\":\"\",\"assist1\":\"TX_Killfeed_Sage1\",\"assist2\":\"\",\"assist3\":\"\",\"assist4\":\"\",\"headshot\":false}"}},"feature":"match_info"}
 ```
 None lethal ultimate example: 
 
 ```json
-{"info":{"match_info":{"kill_feed":"{\"attacker\":\"JacksAtWork\",\"victim\":\"jaxxxsosparrow\",\"weapon\":\"\",\"ult\":\"TX_Thorne_Heal\",\"assist1\":\"\",\"assist2\":\"\",\"assist3\":\"\",\"assist4\":\"\",\"headshot\":false}"}},"feature":"match_info"}
+{"info":{"match_info":{"kill_feed":"{\"attacker\":\"JacksAtWork\",\"victim\":\"jaxxxsosparrow\",\"is_attacker_teammate\":true,\"is_victim_teammate\":false,\"weapon\":\"\",\"ult\":\"TX_Thorne_Heal\",\"assist1\":\"\",\"assist2\":\"\",\"assist3\":\"\",\"assist4\":\"\",\"headshot\":false}"}},"feature":"match_info"}
 ```
 
 #### *map* note
