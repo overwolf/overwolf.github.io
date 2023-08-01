@@ -1,9 +1,10 @@
 ---
-id: football-manager-2021
-image: "/img/embed/games/football-manager-2021.jpg"
-title: Football Manager 2021 Game events
+id: football-manager-2022
+image: "/img/embed/games/football-manager-2022.jpg"
+title: Football Manager 2022 Game events
 hide_title: true
-sidebar_label: Football Manager 2021
+draft: true
+sidebar_label: Football Manager 2022
 sidebar_position: 0
 sidebar_custom_props:
   overwolf_platform: true
@@ -13,15 +14,15 @@ sidebar_custom_props:
 <!-- GENERATED USING /scripts/generate.js -->
 
 <head>
-  <meta name="keywords" content="API for Football Manager 2021, Football Manager 2021 API, SDK for Football Manager 2021, Football Manager 2021 SDK"/>
+  <meta name="keywords" content="API for Football Manager 2022, Football Manager 2022 API, SDK for Football Manager 2022, Football Manager 2022 SDK"/>
 </head>
 
-<GameInfo gameId={21666} page="docs" />
+<GameInfo gameId={21856} page="docs" />
 
 Please read the [overwolf.games.events](../events) documentation page to learn how to use Overwolf game events.
 
 ## Sample Apps
-* [Football Manager 2021 game events sample app](https://github.com/overwolf/events-sample-apps)
+* [Football Manager 2022 game events sample app](https://github.com/overwolf/events-sample-apps)
 
 ## Available Features
 
@@ -56,8 +57,8 @@ Data Example:
 
 key          | Category    | Values                    | Notes                 | Since GEP Ver. |
 ------------ | ------------| ------------------------- | --------------------- | ------------- | 
-score | match_info | Numeric value for team 1/2 game score. |See [notes](#score-note) |   175.1       |
-notable | match_info | Any notable event (Yellow card / Red card / Goal) happening in-game, including player information & timestamp. |See [notes](#notable-note) |   175.1       |
+score | match_info | Numeric value for team 1/2 game score. |See [notes](#score-note) |   188.0       |
+notable | match_info | Any notable event (Yellow card / Red card / Goal) happening in-game, including player information & timestamp. |See [notes](#notable-note) |   188.0       |
 
 #### *score* note
 
@@ -74,4 +75,5 @@ Data Example:
 ```json
 {"info":{"match_info":{"key":"notable","value":"{"player" : "D. Branković","action" : "YELLOW_CARD","time" : "17'"}"}},"feature":"match_info"}
 {"info":{"match_info":{"key":"notable","value":"{"player" : "D. Branković","action" : "YELLOW_CARD","time" : "17'"},{"player" : "M. Jolović","action" : "YELLOW_CARD","time" : "29'"},{"player" : "N. Glišić","action" : "GOAL","time" : "47'"},{"player" : "N. Glišić","action" : "GOAL","time" : "58'"}},"feature":"match_info"}"}
+{"info":{"match_info":{"key":"notable","value":"{"player" : "D. Branković","action" : "YELLOW_CARD","time" : "17'"},{"player" : "M. Jolović","action" : "YELLOW_CARD","time" : "29'"},{"player" : "N. Glišić","action" : "ASSIST","time" : "47'"},{"player" : "N. Glišić","action" : "ASSIST","time" : "58'"}},"feature":"match_info"}"}
 ```
