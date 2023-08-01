@@ -170,15 +170,6 @@ const GamesMetaData = {
         "iconUrl": "/img/games-logos/magic-the-gathering-arena.png",
         "iconLargeUrl": "/img/games-logos/large/magic-the-gathering-arena.png"
     },
-    "21328": {
-        "id": 21328,
-        "path": "/status/hunt-showdown",
-        "name": "Hunt: Showdown",
-        "endOfLife": "9/7/2023",
-        "docs": "/api/games/events/hunt-showdown",
-        "iconUrl": "/img/games-logos/hunt-showdown.png",
-        "iconLargeUrl": "/img/games-logos/large/hunt-showdown.png"
-    },
     "21404": {
         "id": 21404,
         "path": "/status/splitgate-arena-warfare",
@@ -223,15 +214,6 @@ const GamesMetaData = {
         "iconUrl": "/img/games-logos/teamfight-tactics.png",
         "iconLargeUrl": "/img/games-logos/large/teamfight-tactics.png"
     },
-    "21586": {
-        "id": 21586,
-        "path": "/status/dota-underlords",
-        "name": "Dota Underlords",
-        "endOfLife": "9/7/2023",
-        "docs": "/api/games/events/dota-underlords",
-        "iconUrl": "/img/games-logos/dota-underlords.png",
-        "iconLargeUrl": "/img/games-logos/large/dota-underlords.png"
-    },
     "21620": {
         "id": 21620,
         "path": "/status/legends-of-runeterra",
@@ -264,15 +246,6 @@ const GamesMetaData = {
         "docs": "/api/games/events/valorant",
         "iconUrl": "/img/games-logos/valorant.png",
         "iconLargeUrl": "/img/games-logos/large/valorant.png"
-    },
-    "21666": {
-        "id": 21666,
-        "path": "/status/football-manager-2021",
-        "name": "Football Manager 2021",
-        "endOfLife": "9/7/2023",
-        "docs": "/api/games/events/football-manager-2021",
-        "iconUrl": "/img/games-logos/football-manager-2021.png",
-        "iconLargeUrl": "/img/games-logos/large/football-manager-2021.png"
     },
     "21668": {
         "id": 21668,
@@ -314,15 +287,6 @@ const GamesMetaData = {
         "docs": "/api/games/events/halo-infinite",
         "iconUrl": "/img/games-logos/halo-infinite.png",
         "iconLargeUrl": "/img/games-logos/large/halo-infinite.png"
-    },
-    "21856": {
-        "id": 21856,
-        "path": "/status/football-manager-2022",
-        "name": "Football Manager 2022",
-        "endOfLife": "9/7/2023",
-        "docs": "/api/games/events/football-manager-2022",
-        "iconUrl": "/img/games-logos/football-manager-2022.png",
-        "iconLargeUrl": "/img/games-logos/large/football-manager-2022.png"
     },
     "21864": {
         "id": 21864,
