@@ -37,12 +37,6 @@ const metaData = [
         name: "Dota 2"
     },
     {
-        id: 21586,
-        path: "dota-underlords",
-        name: "Dota Underlords",
-        endOfLife: "9/7/2023"
-    },
-    {
         id: 21634,
         path: "escape-from-tarkov",
         name: "Escape From Tarkov"
@@ -56,18 +50,6 @@ const metaData = [
         id: 6350,
         path: "final-fantasy-xiv",
         name: "Final Fantasy XIV"
-    },
-    {
-        id: 21666,
-        path: "football-manager-2021",
-        name: "Football Manager 2021",
-        endOfLife: "9/7/2023"
-    },
-    {
-        id: 21856,
-        path: "football-manager-2022",
-        name: "Football Manager 2022",
-        endOfLife: "9/7/2023"
     },
     {
         id: 21216,
@@ -88,12 +70,6 @@ const metaData = [
         id: 10624,
         path: "heroes-of-the-storm",
         name: "Heroes of the Storm"
-    },
-    {
-        id: 21328,
-        path: "hunt-showdown",
-        name: "Hunt: Showdown",
-        endOfLife: "9/7/2023"
     },
     {
         id: 5426,

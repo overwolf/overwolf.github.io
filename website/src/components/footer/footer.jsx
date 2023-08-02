@@ -38,10 +38,6 @@ const Footer = (props) => {
                   <a href="//discord.gg/overwolf-developers" target="_blank">Discord</a>
                 </li>
                 <li>
-                  <svg><use href="/img/sprite.svg#slack-icon"></use></svg>
-                  <a href="/support/contact-us#join-our-slack" target="_blank">Slack</a>
-                </li>
-                <li>
                   <svg><use href="/img/sprite.svg#facebook-icon"></use></svg>
                   <a href="//facebook.com/OverwolfDevs" target="_blank">Facebook</a>
                   </li>

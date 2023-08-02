@@ -66,10 +66,23 @@
   {
     "to": "/api/games/ids",
     "from": [
-      "/docs/api/overwolf-games-events-autochess",
-      "/docs/api/games-ids",
+      "/docs/api/games-ids"
+    ]
+  },
+  {
+    "to": "/api/games/events/deprecated",
+    "from": [
+      "/docs/api/overwolf-games-events-underlords",
+      "/api/games/events/dota-underlords",
       "/api/games/events/maker-king",
-      "/docs/api/overwolf-games-events-makerking"
+      "/docs/api/overwolf-games-events-makerking",
+      "/docs/api/overwolf-games-events-autochess",
+      "/api/games/events/football-manager-2021",
+      "/docs/api/overwolf-games-events-fm2021",
+      "/api/games/events/football-manager-2022",
+      "/docs/api/overwolf-games-events-fm2022",
+      "/api/games/events/hunt-showdown",
+      "/docs/api/overwolf-games-events-hunt-showdown"
     ]
   },
   {
@@ -93,14 +106,6 @@
     "from": "/docs/api/overwolf-games-events-ff-xiv"
   },
   {
-    "to": "/api/games/events/football-manager-2021",
-    "from": "/docs/api/overwolf-games-events-fm2021"
-  },
-  {
-    "to": "/api/games/events/football-manager-2022",
-    "from": "/docs/api/overwolf-games-events-fm2022"
-  },
-  {
     "to": "/api/games/events/fortnite",
     "from": "/docs/api/overwolf-games-events-fortnite"
   },
@@ -115,10 +120,6 @@
   {
     "to": "/api/games/events/heroes-of-the-storm",
     "from": "/docs/api/overwolf-games-events-hots"
-  },
-  {
-    "to": "/api/games/events/hunt-showdown",
-    "from": "/docs/api/overwolf-games-events-hunt-showdown"
   },
   {
     "to": "/api/games/events/league-of-legends",
@@ -171,10 +172,6 @@
   {
     "to": "/api/games/events/teamfight-tactics",
     "from": "/docs/api/overwolf-games-events-tft"
-  },
-  {
-    "to": "/api/games/events/dota-underlords",
-    "from": "/docs/api/overwolf-games-events-underlords"
   },
   {
     "to": "/api/games/events/valheim",
@@ -541,14 +538,6 @@
     "from": "/docs/status/ff-xiv"
   },
   {
-    "to": "/status/football-manager-2021",
-    "from": "/docs/status/fm2021"
-  },
-  {
-    "to": "/status/football-manager-2022",
-    "from": "/docs/status/fm2022"
-  },
-  {
     "to": "/status/fortnite",
     "from": "/docs/status/fortnite"
   },
@@ -563,10 +552,6 @@
   {
     "to": "/status/heroes-of-the-storm",
     "from": "/docs/status/heroes-of-the-storm"
-  },
-  {
-    "to": "/status/hunt-showdown",
-    "from": "/docs/status/hunt-showdown"
   },
   {
     "to": "/status/league-of-legends",
@@ -601,7 +586,15 @@
     "from": [
       "/docs/status/auto-chess",
       "/docs/status/all",
-      "/docs/status/past-incidents"
+      "/docs/status/past-incidents",
+      "/docs/status/underlords",
+      "/status/dota-underlords",
+      "/status/football-manager-2021",
+      "/docs/status/fm2021",
+      "/status/football-manager-2022",
+      "/docs/status/fm2022",
+      "/status/hunt-showdown",
+      "/docs/status/hunt-showdown"
     ]
   },
   {
@@ -631,10 +624,6 @@
   {
     "to": "/status/teamfight-tactics",
     "from": "/docs/status/teamfight-tactics"
-  },
-  {
-    "to": "/status/dota-underlords",
-    "from": "/docs/status/underlords"
   },
   {
     "to": "/status/valheim",
