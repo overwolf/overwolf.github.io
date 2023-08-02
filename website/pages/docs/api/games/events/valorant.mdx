@@ -302,10 +302,65 @@ List of parameters:
 * weapon - the current primary weapon (loadout) name used by the local and teammate players. Visible for all players in deathmatch like the behavior in the scoreboard during the game. 
 * ult_points / ult_max - the current ultimate point out of the maximum ultimate points
 
+<details open>
+<summary>List of available weapons</summary>
+
+Pistols:
+
+TX_Hud_Pistol_Classic = Classic
+
+TX_Hud_Pistol_Slim = Shorty
+
+TX_Hud_Pistol_AutoPistol = Frenzy
+
+TX_Hud_Pistol_Luger = Ghost
+
+TX_Hud_Pistol_Sheriff = Sheriff
+
+Shotguns:
+
+TX_Hud_Shotguns_Pump = Bucky
+
+TX_Hud_Shotguns_Persuader = Judge
+
+SMGS:
+
+TX_Hud_SMGs_Vector = Stinger
+
+TX_Hud_SMGs_Ninja = Spectre
+
+Rifles:
+
+TX_Hud_Rifles_Burst = Bulldog
+
+TX_Hud_Rifles_DMR = Guardian
+
+TX_Hud_Rifles_Ghost = Phantom
+
+TX_Hud_Rifles_Volcano = Vandal
+
+Snipers:
+
+TX_Hud_Sniper_Bolt = Marshal
+
+TX_Hud_Sniper_Operater = Operator
+
+Machine Guns:
+
+TX_Hud_LMG = Ares
+
+TX_Hud_HMG = Odin
+
+Knife:
+
+knife = Knife
+
+</details>
+
 Data Example:
 
 ```json
-{"info":{"match_info":{"scoreboard_0":"{\"name\":\"MrTesting123 #1111\",\"character\":\"Phoenix\",\"teammate\":true,\"alive\":true,\"player_id\":\"d746ecb4-3b1d-52e7-82b0-270c20acfdba\",\"shield\":2,\"weapon\":\"Phantom\",\"ult_points\":1,\"ult_max\":6,\"kills\":0,\"deaths\":0,\"assists\":0,\"money\":99999,\"is_local\":true}"}},"feature":"match_info"}
+{"info":{"match_info":{"scoreboard_0":"{\"name\":\"MrTesting123 #1111\",\"character\":\"Phoenix\",\"teammate\":true,\"alive\":true,\"player_id\":\"d746ecb4-3b1d-52e7-82b0-270c20acfdba\",\"shield\":2,\"weapon\":\"TX_Hud_Sniper_Operater\",\"ult_points\":1,\"ult_max\":6,\"kills\":0,\"deaths\":0,\"assists\":0,\"money\":99999,\"is_local\":true}"}},"feature":"match_info"}
 ```
 
 #### *kill_feed* note
