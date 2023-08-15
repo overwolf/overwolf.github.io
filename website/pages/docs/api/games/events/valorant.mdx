@@ -473,6 +473,9 @@ Event       | Event Data   | Fired When    | Notes              | Since GEP Ver.
 ------------| -------------| --------------| ------------------ | --------------|
 match_start | null         | Match started. | See [notes](#match_start-note) | 148.0  |
 match_end   | null         | Match ended.   | See [notes](#match_end-note) | 148.0  |
+spike_planted   | null         | When a spike is planted.   | See [notes](#spike_planted-note) | 233.0  |
+spike_defused   | null         | When a spike is defused.   | See [notes](#spike_defused-note) | 233.0  |
+spike_detonated   | null         | When a spike is detonated.   | See [notes](#spike_detonated-note) | 233.0  |
 
 #### *match_start* note
 
@@ -490,6 +493,30 @@ Data Example:
 
 ```json
 {"events":[{"name": "match_end","data":""}]}
+```
+
+#### *spike_planted* note
+
+Data Example:
+
+```json
+{"events":[{"name": "spike_planted","data":""}]}
+```
+
+#### *spike_defused* note
+
+Data Example:
+
+```json
+{"events":[{"name": "spike_defused","data":""}]}
+```
+
+#### *spike_detonated* note
+
+Data Example:
+
+```json
+{"events":[{"name": "spike_detonated","data":""}]}
 ```
 
 ## `game_info`
