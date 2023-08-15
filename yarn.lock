@@ -2211,6 +2211,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@ewoudenberg/difflib@npm:0.1.0":
+  version: 0.1.0
+  resolution: "@ewoudenberg/difflib@npm:0.1.0"
+  dependencies:
+    heap: ">= 0.2.0"
+  checksum: 9fdffcb90d1a17134954cf0f38a59b24b5557eb833bef7a4637e5c347aaf55bc35898a5183aa614315297a39b526e2bc760c0f5f4334f77d55064321bc7cfff5
+  languageName: node
+  linkType: hard
+
 "@gar/promisify@npm:^1.1.3":
   version: 1.1.3
   resolution: "@gar/promisify@npm:1.1.3"
@@ -4277,6 +4286,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"colors@npm:^1.4.0":
+  version: 1.4.0
+  resolution: "colors@npm:1.4.0"
+  checksum: 98aa2c2418ad87dedf25d781be69dc5fc5908e279d9d30c34d8b702e586a0474605b3a189511482b9d5ed0d20c867515d22749537f7bc546256c6014f3ebdcec
+  languageName: node
+  linkType: hard
+
 "combine-promises@npm:^1.1.0":
   version: 1.1.0
   resolution: "combine-promises@npm:1.1.0"
@@ -5092,6 +5108,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"dreamopt@npm:~0.8.0":
+  version: 0.8.0
+  resolution: "dreamopt@npm:0.8.0"
+  dependencies:
+    wordwrap: ">=0.0.2"
+  checksum: 701134807c4a2cc6d111888e1faa7ea6b5ac73cb2cc0f49d852844f7ade3f8bfd03249845841ff2786ffeb6cff9ba8d8cf39c152c24341fd67ef93a0cf7c9287
+  languageName: node
+  linkType: hard
+
 "duplexer3@npm:^0.1.4":
   version: 0.1.5
   resolution: "duplexer3@npm:0.1.5"
@@ -5721,6 +5746,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"fp-ts@npm:^2.16.1":
+  version: 2.16.1
+  resolution: "fp-ts@npm:2.16.1"
+  checksum: 94e8bb1d037fdc44414ac93bbabecc3f94fb798d6564e77427ae2ecfa0f77681ec35968598d7b0cbf8274566469c7b42e8727390eb889e1121c199341939c2a3
+  languageName: node
+  linkType: hard
+
 "fraction.js@npm:^4.2.0":
   version: 4.2.0
   resolution: "fraction.js@npm:4.2.0"
@@ -6221,6 +6253,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"heap@npm:>= 0.2.0":
+  version: 0.2.7
+  resolution: "heap@npm:0.2.7"
+  checksum: b0f3963a799e02173f994c452921a777f2b895b710119df999736bfed7477235c2860c423d9aea18a9f3b3d065cb1114d605c208cfcb8d0ac550f97ec5d28cb0
+  languageName: node
+  linkType: hard
+
 "history@npm:^4.9.0":
   version: 4.10.1
   resolution: "history@npm:4.10.1"
@@ -6607,6 +6646,15 @@ __metadata:
   dependencies:
     loose-envify: ^1.0.0
   checksum: cc3182d793aad82a8d1f0af697b462939cb46066ec48bbf1707c150ad5fad6406137e91a262022c269702e01621f35ef60269f6c0d7fd178487959809acdfb14
+  languageName: node
+  linkType: hard
+
+"io-ts@npm:^2.2.20":
+  version: 2.2.20
+  resolution: "io-ts@npm:2.2.20"
+  peerDependencies:
+    fp-ts: ^2.5.0
+  checksum: 72517bf72ab1ad61b81960cb37f46e7a9f6dc84235b7d9b62f346ca84120dd89134b652fc3a0b9751129331084fd3e059349561bb96587d91ba7b40985fe7aac
   languageName: node
   linkType: hard
 
@@ -7061,6 +7109,19 @@ __metadata:
   version: 3.0.0
   resolution: "json-buffer@npm:3.0.0"
   checksum: 0cecacb8025370686a916069a2ff81f7d55167421b6aa7270ee74e244012650dd6bce22b0852202ea7ff8624fce50ff0ec1bdf95914ccb4553426e290d5a63fa
+  languageName: node
+  linkType: hard
+
+"json-diff@npm:^1.0.6":
+  version: 1.0.6
+  resolution: "json-diff@npm:1.0.6"
+  dependencies:
+    "@ewoudenberg/difflib": 0.1.0
+    colors: ^1.4.0
+    dreamopt: ~0.8.0
+  bin:
+    json-diff: bin/json-diff.js
+  checksum: 6faba53836190a0090ac6c5d05a13c6cf856d23ed4ec44d6da9400f4a8e19ca149cbb675a45a5abe2880f9342c6ca9339fdb4e902a0ba3bd017ffd8ec544efd9
   languageName: node
   linkType: hard
 
@@ -11852,6 +11913,9 @@ __metadata:
     docusaurus-gtm-plugin: ^0.0.2
     docusaurus-plugin-clarity: ^2.1.0
     docusaurus-plugin-sass: ^0.2.2
+    fp-ts: ^2.16.1
+    io-ts: ^2.2.20
+    json-diff: ^1.0.6
     mdx-embed: ^1.0.0
     prism-react-renderer: ^1.3.1
     react: ^17.0.2
@@ -11944,6 +12008,13 @@ __metadata:
   version: 2.0.0
   resolution: "wildcard@npm:2.0.0"
   checksum: 1f4fe4c03dfc492777c60f795bbba597ac78794f1b650d68f398fbee9adb765367c516ebd4220889b6a81e9626e7228bbe0d66237abb311573c2ee1f4902a5ad
+  languageName: node
+  linkType: hard
+
+"wordwrap@npm:>=0.0.2":
+  version: 1.0.0
+  resolution: "wordwrap@npm:1.0.0"
+  checksum: 2a44b2788165d0a3de71fd517d4880a8e20ea3a82c080ce46e294f0b68b69a2e49cff5f99c600e275c698a90d12c5ea32aff06c311f0db2eb3f1201f3e7b2a04
   languageName: node
   linkType: hard
 

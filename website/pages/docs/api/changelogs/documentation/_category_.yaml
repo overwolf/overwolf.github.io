@@ -1,1 +1,6 @@
 label: 'Documentation Updates'
+customProps:
+  sort:
+    main: 'monthly'
+    reverse: false
+    strict: false

@@ -1,4 +1,7 @@
 label: 'ow-electron-builder'
 collapsed: false
 customProps:
-  versioned_items: true
+  sort:
+    main: numerically
+    reverse: false
+    strict: true
