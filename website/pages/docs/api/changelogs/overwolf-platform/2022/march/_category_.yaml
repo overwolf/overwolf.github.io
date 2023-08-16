@@ -1,4 +1,4 @@
 label: 'March'
 customProps:
-  skip_layout: true
+  placeholder: true
     

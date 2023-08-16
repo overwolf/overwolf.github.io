@@ -1,7 +1,11 @@
 position: -1 # float position is supported
 label: 'Overwolf Platform'
 customProps:
-  versioned_items: true
-  maximum_items:
+  sort:
+    main: 'numerically'
+    reverse: false
+    strict: false
+  trim:
     count: 20
-    remaining_label: 'Older Changelogs'
+    leftovers:
+      label: 'Older Changelogs'

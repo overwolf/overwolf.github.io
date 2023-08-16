@@ -1,4 +1,5 @@
 label: 'Overwolf Platform'
 customProps:
-  skip_layout: true
-    
+  hoist_children:
+    hoist: true
+    recursively: false

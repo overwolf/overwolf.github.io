@@ -1,2 +1,4 @@
 position: -2 # float position is supported
 label: 'Changelogs'
+customProps:
+  placeholder: true

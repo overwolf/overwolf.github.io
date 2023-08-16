@@ -1,3 +1,5 @@
 customProps:
-  skip_layout: true
+  hoist_children:
+    hoist: true
+    recursively: true
     

@@ -14,8 +14,7 @@
     "types": [
       "node",
       "@docusaurus/module-type-aliases",
-      "@docusaurus/theme-classic",
-      "typings"
+      "@docusaurus/theme-classic"
     ],
     "baseUrl": ".",
     "paths": {
@@ -26,7 +25,7 @@
     "outDir": "typescript/build",
     "skipLibCheck": true
   },
-  "include": ["src/components/**/*", "src/plugins/**/*"],
+  "include": ["src/components/**/*", "src/plugins/**/*", "src/navigation/**/*"],
   "exclude": ["**/*.js", "**/*.jsx", "**/*.tsx"],
   "extends": "@tsconfig/docusaurus/tsconfig.json"
 }

@@ -1,1 +1,6 @@
 label: "Developer's Console"
+customProps:
+  sort:
+    main: 'monthly'
+    reverse: false
+    strict: false
