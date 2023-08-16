@@ -1,0 +1,115 @@
+---
+id: ow-events-recorder
+image: "/img/embed/dev-tools.jpg"
+title: Overwolf Events Recorder
+sidebar_custom_props:
+  tags:
+    overwolf_platform: true
+    electron_platform: false
+---
+
+:::tip GitHub Repository
+This tool can be found over in the following [GitHub repository][download-link]
+:::
+
+The Overwolf Events Recorder allows Developers to record important API Events/Calls that happen to them in real time,
+so they can then play them back during testing (using the [ow-events-tester][events-tester]), and ensure that their app properly responds to them.
+
+## Getting Started
+
+To get started with using the Game Events Recorder, simply download it from its [GitHub repository][download-link].
+
+### Quickstart
+
+To quickly get started using the recorder, run the following in your chosen terminal (using your preferred package manager):
+```js
+// Install all dependencies
+npm i
+
+// Build the application
+npm run build
+```
+
+Once the `build` command finishes running, simply load the newly created `dist/` folder as an unpacked Overwolf application, and launch it.
+
+You should now be greeted by the following screen, in which case, you can already start recording your Session:
+
+![Start Recording](/assets/tools/ow-testing-tools/ow-events-recorder/start-recording.png)
+*Simply click the red circle, and any API events/calls from the [supported list](#supported-apis) will be recorded!*
+
+Then, once you are ready to stop recording, simply click the button again, and the recording will stop.
+
+![Finished Recording](/assets/tools/ow-testing-tools/ow-events-recorder/finished-recording.png)
+*You can then view, rename, or even delete the new recording, by hovering over it in the relevant screen*
+
+This recording can then be used within the [Overwolf Events Tester][events-tester], in order to see how your app would act during this specific event sequence.
+
+
+## Supported APIs
+
+The Overwolf Events Recorder can currently include the following **Overwolf APIs***.
+
+*\* Currently, only Overwolf APIs are supported. This means that external, game-based APIs, like the [League of Legends LCU](https://riot-api-libraries.readthedocs.io/en/latest/lcu.html)
+are not supported, and need to be appropriately mocked for these tests.*
+
+### Supported API Events
+
+The following events can be recorded (and then mimicked by the [Events Tester][events-tester])
+
+- [`overwolf.games.onGameLaunched`](/api/games#ongamelaunched)
+- [`overwolf.games.onGameInfoUpdated`](/api/games#ongameinfoupdated)
+- [`overwolf.games.events.onGameInfoUpdated2`](/api/games/events#ongameinfoupdated2)
+- [`overwolf.games.events.onNewEvents`](/api/games/events#onnewevents)
+- [`overwolf.games.events.onError`](/api/games/events#onerror)
+- [`overwolf.games.launchers.onLaunched`](/api/games/launchers#onlaunched)
+- [`overwolf.games.launchers.onUpdated`](/api/games/launchers#onupdated)
+- [`overwolf.games.launchers.onTerminated`](/api/games/launchers#onterminated)
+- [`overwolf.games.launchers.events.onInfoUpdates`](/api/games/launchers/events#oninfoupdates)
+- [`overwolf.games.launchers.events.onNewEvents`](/api/games/launchers/events#onnewevents)
+
+### Supported API Calls
+
+- [`overwolf.games.getRunningGameInfo()`](/api/games#getrunninggameinfocallback)
+- [`overwolf.games.getRunningGameInfo2()`](/api/games#getrunninggameinfo2callback)
+- [`overwolf.games.events.setRequiredFeatures()`](/api/games/events#setrequiredfeaturesfeatures-callback)
+- [`overwolf.games.launchers.getRunningLaunchersInfo()`](/api/games/launchers#getrunninglaunchersinfocallback)
+- [`overwolf.games.launchers.events.setRequiredFeatures()`](/api/games/launchers/events#setrequiredfeatureslauncherclassid-features-callback)
+
+
+## Creating effective recordings
+
+The Overwolf Events Recorder can record all Events and Calls made while a recording Session is running.
+However, it cannot record things outside of that timeframe. As such, it is highly recommended that you carefully plan out your recordings,
+and split them into types. For example:
+
+### Mid-Session recordings
+
+Mid-Session recordings are, recordings made in the middle of a game Session.
+They do not include the entire chain of Events and Calls that has led the app to the current state,
+but they do include specific set of Events and Calls that are relevant at this point.
+
+For example:
+- A recording of a game round where one person took out the entire enemy team.
+- A recording of the character select phase.
+- A recording of the post-match phase.
+
+These recordings can be used to test specific App edge cases, by bringing it into
+a game, putting it at a state where these recordings can reasonably happen, and then playing them.  
+When carefully chained together, these can help you quickly test sequences of complicated edge cases with ease.
+
+### Full-Session recordings
+
+Full-Session recordings are, recordings made of a full game Session.
+They include the entire chain of Events and Calls, from before the game first launched,
+until after it was closed.
+
+For example:
+- A recording of a full game Session, when a quick match was played, and then the game was closed.
+- A recording of a full long game Session, potentially spanning over several hours.
+- A recording of a Session where multiple full game Sessions were played and switched between, at times without even closing the game.
+
+These recordings can be used to test more general App flows, ensuring that it behaves as expected, end-to-end.
+Paired up with the different playback tools included in the [Overwolf Events Tester](/ow-events-tester), these can significantly help automate tests.
+
+[events-tester]: ow-events-tester
+[download-link]: https://github.com/overwolf/ow-events-recorder
