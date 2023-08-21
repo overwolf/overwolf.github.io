@@ -9,15 +9,55 @@ sidebar_custom_props:
 ---
 
 :::tip GitHub Repository
-This tool can be found over in the following [GitHub repository][download-link]
+This tool can be found over in the following [GitHub repository][download-link].
 :::
 
-The Overwolf Events Recorder allows Developers to record important API Events/Calls that happen to them in real time,
-so they can then play them back during testing (using the [ow-events-tester][events-tester]), and ensure that their app properly responds to them.
+:::info Tabbed Application (`Record`)
+This page specifically refers to the `Record` tab of the relevant Application.  
+For the other tabs, see [ow-events-tester][events-tester]
+:::
+
+The Overwolf Events Recorder allows Developers to record important API Events/Calls that happen to them in real time.  
+These recordings can then be used by the [ow-events-tester][events-tester], to mimic the exact* state of the game,
+and ensure that the your App reacts to it properly - Without even needing to run the game, much less replicate those exact scenarios.
+
+*\* See [Supported APIs](supported-apis).*
 
 ## Getting Started
 
-To get started with using the Game Events Recorder, simply download it from its [GitHub repository][download-link].
+To get started with the Game Events Recorder, you must first obtain the latest build.
+
+<Tabs groupId="build-app">
+<TabItem value="download-unpacked" label="Download as Unpacked Application (Quick)" default>
+
+Simply download the latest build from the [release history](https://github.com/overwolf/ow-events-recorder/releases) and unzip it.
+
+</TabItem>
+<TabItem value="build-app" label="Build Locally">
+
+To build the latest version locally, simply clone the github repositry:
+```powershell
+git clone https://github.com/overwolf/ow-events-recorder
+```
+
+Then, once you're within the relevant folder, run the following (using your preferred package manager):
+```powershell
+# Switch to the relevant folder
+cd ow-events-recorder
+
+# Install all dependencies
+npm i
+
+# Build the application
+npm run build
+```
+
+Once the `build` command finishes running, the `dist/` folder will correspond to the latest build.
+
+</TabItem>
+</Tabs>
+
+**When you have the latest build, simply load it as an unpacked extension, and you can start using the app.**
 
 ### Quickstart
 
@@ -37,7 +77,7 @@ You should now be greeted by the following screen, in which case, you can alread
 ![Start Recording](/assets/tools/ow-testing-tools/ow-events-recorder/start-recording.png)
 *Simply click the red circle, and any API events/calls from the [supported list](#supported-apis) will be recorded!*
 
-Then, once you are ready to stop recording, simply click the button again, and the recording will stop.
+Then, once you are [ready to stop recording](#creating-effective-recordings), simply click the button again, and the recording will stop.
 
 ![Finished Recording](/assets/tools/ow-testing-tools/ow-events-recorder/finished-recording.png)
 *You can then view, rename, or even delete the new recording, by hovering over it in the relevant screen*
@@ -79,12 +119,31 @@ The following events can be recorded (and then mimicked by the [Events Tester][e
 ## Creating effective recordings
 
 The Overwolf Events Recorder can record all Events and Calls made while a recording Session is running.
-However, it cannot record things outside of that timeframe. As such, it is highly recommended that you carefully plan out your recordings,
-and split them into types. For example:
+However, **it will not record things outside of that timeframe.** As such, it is highly recommended that you carefully plan out your recordings,
+to ensure that they cover the entire flow you use.
+
+### Full-Session recordings
+
+Full-Session recordings are the main type of recordings used. These are recordings made of a full game Session,
+including the entire chain of Events and Calls, from before a game was first launched, until after the last game was closed.
+
+For example:
+- A recording of a full game Session, when a quick match was played, and then the game was closed.
+- A recording of a full long game Session, potentially spanning over several hours.
+- A recording of a Session where multiple full game Sessions were done in succession, at times without even closing the game.
+
+These recordings can be used to test more general App flows, ensuring that it behaves as expected, end-to-end.
+Paired up with the different playback tools included in the [Overwolf Events Tester](/ow-events-tester), these can significantly help with automating tests.
+
 
 ### Mid-Session recordings
 
-Mid-Session recordings are, recordings made in the middle of a game Session.
+<SkipMe>
+#advanced<AdvancedTopic/>
+</SkipMe>
+
+
+Mid-Session recordings are a more advanced recording type, made in the middle of a game Session.
 They do not include the entire chain of Events and Calls that has led the app to the current state,
 but they do include specific set of Events and Calls that are relevant at this point.
 
@@ -93,23 +152,12 @@ For example:
 - A recording of the character select phase.
 - A recording of the post-match phase.
 
-These recordings can be used to test specific App edge cases, by bringing it into
-a game, putting it at a state where these recordings can reasonably happen, and then playing them.  
-When carefully chained together, these can help you quickly test sequences of complicated edge cases with ease.
+These recordings can be used to test specific App edge cases, rather than entire flows.  
+However, they require you to ensure that the App is brought to a state where these recordings can reasonably happen,
+before starting to play them.
 
-### Full-Session recordings
+When properly chained together, these can be used as small [Unit Tests](https://en.wikipedia.org/wiki/Unit_testing) for your App.
 
-Full-Session recordings are, recordings made of a full game Session.
-They include the entire chain of Events and Calls, from before the game first launched,
-until after it was closed.
-
-For example:
-- A recording of a full game Session, when a quick match was played, and then the game was closed.
-- A recording of a full long game Session, potentially spanning over several hours.
-- A recording of a Session where multiple full game Sessions were played and switched between, at times without even closing the game.
-
-These recordings can be used to test more general App flows, ensuring that it behaves as expected, end-to-end.
-Paired up with the different playback tools included in the [Overwolf Events Tester](/ow-events-tester), these can significantly help automate tests.
 
 [events-tester]: ow-events-tester
 [download-link]: https://github.com/overwolf/ow-events-recorder
