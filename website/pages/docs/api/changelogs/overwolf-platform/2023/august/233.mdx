@@ -1,0 +1,26 @@
+---
+id: 233
+image: "/img/embed/changelogs.jpg"
+title: "Version 0.233"
+sidebar_label: "0.233"
+sidebar_custom_props:
+  tags:
+    overwolf_platform: true
+    electron_platform: false
+---
+
+* Note that iterations 231-233 were combined into a single version.
+
+### Platform
+- Various fixes for crashes that would happen on unexpected client states.
+- Improved game detection for games running on DX12.
+
+### API
+- New API - [`overwolf.streaming.getActiveRecordingApps()`](/api/streaming#getactiverecordingappscallback)
+  - Returns which apps are currently using the [`overwolf.streaming`](/api/streaming) recording engine, if any.
+- Updated result for [`overwolf.streaming.start()`](/api/streaming#start) - [`overwolf.streaming.StreamResult`](/api/streaming#streamresult-object)
+  - Added the [`activeRecordingApps`](/api/streaming#streamresult-object) parameter, which will contain which other app is already using the
+  [`overwolf.streaming`](/api/streaming) recording engine, and if so, which app.
+
+### Bug Fixes
+- Fixed an issue where the [`overwolf.streaming`](/api/streaming) recording engine would stay on if the app that called it crashed.

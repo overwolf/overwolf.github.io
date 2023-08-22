@@ -23,6 +23,7 @@ Please read all the info about streaming usage and options on our [video capture
 
 * [overwolf.streaming.start()](#startsettings-callback)
 * [overwolf.streaming.stop()](#stopstreamid-callback)
+* [overwolf.streaming.getActiveRecordingApps()](#getactiverecordingappscallback)
 * [overwolf.streaming.getCapabilities()](#getcapabilitiescallback)
 * [overwolf.streaming.split()](#splitstreamid-callback)
 * [overwolf.streaming.changeVolume()](#changevolumestreamid-audiooptions-callback)
@@ -86,6 +87,8 @@ Please read all the info about streaming usage and options on our [video capture
 * [overwolf.streaming.enums.indication_type](#indication_type-enum) Enum
 * [overwolf.streaming.StreamQuotaParams](#streamquotaparams-object) Object
 * [overwolf.streaming.StreamResult](#streamresult-object) Object
+* [overwolf.streaming.GetActiveRecordingAppsResult](#getactiverecordingappsresult-object) Object
+* [overwolf.streaming.ActiveRecordingApps](#activerecordingapps-object) Object
 * [overwolf.streaming.StreamEvent](#streamevent-object) Object
 * [overwolf.streaming.StopStreamingEvent](#stopstreamingevent-object) Object
 * [overwolf.streaming.StopStreamingResult](#stopstreamingresult-object) Object
@@ -308,6 +311,16 @@ Parameter | Type        | Description                    |
 --------- | ------------| ------------------------------ |
 streamId  | int         | The id of the stream to stop   |
 callback  |  ([Result: StopStreamingResult](#stopstreamingresult-object)) => void | Returns with the result  |
+
+## getActiveRecordingApps(callback)
+
+#### Version added: 0.233
+
+> Checks which apps are currently using the `overwolf.streaming` recording engine.
+
+Parameter | Type        | Description                    |
+--------- | ------------| ------------------------------ |
+callback  |  ([Result: GetActiveRecordingAppsResult](#getactiverecordingappsresult-object)) => void | Returns with the result  |
 
 
 ## getCapabilities(callback)
@@ -1190,6 +1203,7 @@ Parameter          | Type     | Description                                 |
 -------------------| ---------| ------------------------------------------- |
 *success*          | boolean  | inherited from the "Result" Object          |
 *error*            | string   | inherited from the "Result" Object          |
+activeRecordingApps | [ActiverecordingApps](#activerecordingapps-object)[] | other apps that are already using the streaming api |
 stream_id          | number   | optional                                    |
 errorCode    | [CaptureErrorCode](#captureerrorcode)        |                         | 
 errorDescription     | string        |                         | 
@@ -1200,6 +1214,21 @@ errorDescription     | string        |                         |
 { "status": "success", "stream_id": 3 }
 
 ```
+
+## GetActiveRecordingAppsResult Object
+
+Parameter          | Type     | Description                                 |
+-------------------| ---------| ------------------------------------------- |
+*success*          | boolean  | inherited from the "Result" Object          |
+*error*            | string   | inherited from the "Result" Object          |
+streaming          | [ActiverecordingApps](#activerecordingapps-object)[] | The apps currently using the `overwolf.streaming` recording engine |
+
+## ActiveRecordingApps Object
+
+Parameter          | Type     | Description                                 |
+-------------------| ---------| ------------------------------------------- |
+uid          | string  | the uid of the app           |
+displayName            | string   | the display name of the app |
 
 #### Example data: Failure
 
