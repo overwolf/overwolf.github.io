@@ -26,3 +26,4 @@ sidebar_custom_props:
 ### Bug Fixes
 - Fixed an issue where the [`overwolf.streaming`](/api/streaming) recording engine would stay on if the app that called it crashed.
 - Fixed an issue where the `detectedRenderer` parameter returned by several [`overwolf.games`](/api/games) methods would sometimes be set to `unknown`.
+- Fixed an issue where calling [`overwolf.io.listenOnFile()`](/api/io#listenonfileid-path-option-callback) on files Overwolf did not have access to read would crash the calling app.
