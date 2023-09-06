@@ -14,7 +14,7 @@ function AppsDoList(props) {
         </div>
         <div className='info'>
           <h3>Game Stats</h3>
-          <p>Highlight in-game stats, player intel, complete with live performance analyses, directly in the game, encouraging better tactics and smarter plays.</p>
+          <p>Highlight in-game stats, keep track of useful intel, and even show a live performance analysis, directly within the game - encouraging better tactics and smarter plays.</p>
         </div>
       </li>
       <li className="build-recommendations">
@@ -23,7 +23,7 @@ function AppsDoList(props) {
         </div>
         <div className='info'>
           <h3>Builds & Strategies</h3>
-          <p>Provide recommendations for builds, loadouts, compositions, strategies, decks, and so much more, without ever leaving the game.</p>
+          <p>Provide recommendations for builds, loadouts, compositions, strategies, decks, and so much more, without the player ever leaving the game.</p>
         </div>
       </li>
       <li className="tournaments">
@@ -32,7 +32,7 @@ function AppsDoList(props) {
         </div>
         <div className='info'>
           <h3>Quality of Life</h3>
-          <p>Go above and beyond, identifying and fixing unplanned friction points in the original games. Become the natural compliment to beloved titles.</p>
+          <p>Go above and beyond, identifying and fixing unplanned friction points in the original game. Become the natural complement to the most beloved titles.</p>
         </div>
       </li>
       <li className="highlights">
@@ -41,7 +41,7 @@ function AppsDoList(props) {
         </div>
         <div className='info'>
           <h3>Highlights</h3>
-          <p>Automatically clip highlights based on in game events such as kills or deaths, so gamers can always look back at the moments that truly mattered.</p>
+          <p>Automatically clip highlights based on in game events, such as kills, deaths, and more - so gamers can always look back at the moments that truly mattered.</p>
         </div>
       </li>
       <li className="easy-integration">
