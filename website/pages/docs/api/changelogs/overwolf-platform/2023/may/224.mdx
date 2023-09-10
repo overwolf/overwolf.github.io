@@ -29,7 +29,7 @@ sidebar_custom_props:
     overriding any settings set by the Overwolf API. Documentation for finding the exact value names and values is currently in the works.
   - Removed error for using a wrong `encoder.config.preset` value. Any invalid preset passed in will now instead default to the encoder's default preset.
     - This also means that both `config.preset` and `config` are no longer required parameters when setting a specific encoder.
-- Improved the [`overwolf.social.twitter.share()`](/api/social/twitter#sharetwittershareparameters-callback) and [`overwolf.social.twitter.shareEx()`](/api/social/twitter#shareextwittershareparameters-callback-callback) methods' error handling:
+- Improved the [`overwolf.social.twitter.share()`](/api/deprecated/twitter#sharetwittershareparameters-callback) and [`overwolf.social.twitter.shareEx()`](/api/deprecated/twitter#shareextwittershareparameters-callback-callback) methods' error handling:
   - Trying to share unsupported video formats to twitter will now throw an `UnsupportedVideoEncoding` error. This includes:
     - Any videos recorded with a `*_HEVC` Encoder.
   - Errors resulting from the twitter API will now be passed directly to the app, instead of an `UnknownError`.

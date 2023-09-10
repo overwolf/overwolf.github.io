@@ -325,8 +325,8 @@
     "from": "/docs/api/overwolf-social-reddit"
   },
   {
-    "to": "/api/social/twitter",
-    "from": "/docs/api/overwolf-social-twitter"
+    "to": "/api/deprecated/twitter",
+    "from": ["/docs/api/overwolf-social-twitter", "/api/social/twitter"]
   },
   {
     "to": "/api/social/youtube",
