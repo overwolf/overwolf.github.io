@@ -38,7 +38,7 @@ function CategoryItem(
     },
   } = useThemeConfig();
 
-  const { rowNumber, item, lastItem, path, setActiveCategory } = props;
+  const { rowNumber, item, path, setActiveCategory } = props;
   const {
     label,
     customProps,
@@ -151,24 +151,21 @@ function CategoryItem(
             rowStart: rowNumber,
             columnStart: isMobile ? 3 : 1,
           })}
+          title={`${expanded ? 'Collapse' : 'Expand'} ${label}`}
+          className={clsx(
+            // Common Properties
+            OWClassNames.common.navigateWithKeyboard,
+            OWClassNames.sidebar.container.items.common.selectable,
+            {
+              [OWClassNames.sidebar.container.items.common.current]:
+                isCurrentPage,
+              [OWClassNames.sidebar.container.items.common.hidden]: collapsed,
+            },
+            // Category Properties
+            OWClassNames.sidebar.container.items.category.collapseCell,
+          )}
         >
-          <button
-            title={`${expanded ? 'Collapse' : 'Expand'} ${label}`}
-            // tabIndex={TabIndex(collapsed)}
-            className={clsx(
-              // Common Properties
-              OWClassNames.common.navigateWithKeyboard,
-              OWClassNames.sidebar.container.items.common.selectable,
-              {
-                [OWClassNames.sidebar.container.items.common.current]:
-                  isCurrentPage,
-                [OWClassNames.sidebar.container.items.common.hidden]: collapsed,
-              },
-              // Category Properties
-              OWClassNames.sidebar.container.items.category.collapseCell,
-            )}
-            onClick={onInteraction}
-          >
+          <button onClick={onInteraction}>
             {!expanded ? <Collapse /> : <Expand />}
           </button>
         </li>
