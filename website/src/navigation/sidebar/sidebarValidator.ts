@@ -5,7 +5,6 @@ import { isLeft } from "fp-ts/lib/Either";
 import * as d from 'io-ts/Decoder';
 import { BakedSidebarItem, BakedSidebarItemType } from "./types/bakedSidebar";
 import { identifySidebar } from "./sidebarUtils";
-import { isEqual } from 'lodash'
 
 export default function ValidateBakedSidebarItem(item: BakedSidebarItemType) {
   const decoded = BakedSidebarItem.decode(item);

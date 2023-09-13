@@ -1,7 +1,7 @@
 import React from 'react';
 import useDebugInfoHook from './debug-info-hook';
 
-function DebugComp(Component: () => JSX.Element, props: any) {
+function DebugComp<T>(Component: React.FC<T>, props: any) {
   // debugInfo object and setter - shortened for convenience
   const [debug, setDebug] = useDebugInfoHook();
 
@@ -35,6 +35,6 @@ function colorPicker() {
   return backgroundColors[Math.floor(Math.random()*backgroundColors.length)]
 }
 
-export default function DebugWrapper(Component: () => JSX.Element) {
+export default function DebugWrapper<T>(Component: React.FC<T>) {
   return (props: any) => DebugComp(Component, props);
 }

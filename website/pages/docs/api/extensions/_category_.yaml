@@ -1,2 +1,4 @@
 label: 'extensions'
-
+customProps:
+  category:
+    id: overwolf

@@ -1,3 +1,4 @@
-position: -5
 label: 'Electron'
-
+customProps:
+  category:
+    id: electron

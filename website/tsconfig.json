@@ -1,31 +1,3 @@
 {
-  "$schema": "https://json.schemastore.org/tsconfig",
-  "display": "Docusaurus v2",
-  "docs": "https://v2.docusaurus.io/docs/typescript-support",
-  "compilerOptions": {
-    "allowJs": true,
-    "esModuleInterop": true,
-    "jsx": "react",
-    "lib": [
-      "DOM",
-      "ES2021"
-    ],
-    "noEmit": false,
-    "types": [
-      "node",
-      "@docusaurus/module-type-aliases",
-      "@docusaurus/theme-classic"
-    ],
-    "baseUrl": ".",
-    "paths": {
-      "@site/*": [
-        "./*"
-      ]
-    },
-    "outDir": "typescript/build",
-    "skipLibCheck": true
-  },
-  "include": ["src/components/**/*", "src/plugins/**/*", "src/navigation/**/*"],
-  "exclude": ["**/*.js", "**/*.jsx", "**/*.tsx"],
-  "extends": "@tsconfig/docusaurus/tsconfig.json"
+  "extends": "./tsconfig.base.json"
 }

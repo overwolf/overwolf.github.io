@@ -5,7 +5,7 @@
   "scripts": {
     "generate": "yarn generate:content && yarn generate:plugins",
     "generate:content": "cd scripts && node generate.js",
-    "generate:plugins": "yarn workspace website tsc",
+    "generate:plugins": "yarn workspace website tsc --project tsconfig.build.json",
     "docusaurus": "yarn workspace website docusaurus",
     "validate": "cd scripts && node validators/automatic/empty-temp-redirects.js && node validators/automatic/empty-temp-redirects.js",
     "start": "yarn generate && yarn workspace website docusaurus start",

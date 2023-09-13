@@ -1,2 +1,4 @@
 label: 'streaming'
-
+customProps:
+  category:
+    id: overwolf

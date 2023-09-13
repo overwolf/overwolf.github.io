@@ -21,7 +21,9 @@ const _CategoryItemBase = pipe(
       /** Index item for this Category */
       link: BakedSidebarItemPage,
       /** Should the item start collapsed or not */
-      collapsed: d.boolean
+      collapsed: d.boolean,
+      /** Should the item be uncollapsible */
+      collapsible: d.boolean
     })
   )
 )
@@ -36,13 +38,15 @@ function CreateBakedItemType<Name extends string, CustomProps extends CustomProp
     /** Sidebar Item Type */
     type: d.literal(itemType),
     }),
-    // TODO: MAKE THIS MANDATORY FOR PAGE ITEMS
     d.intersect(
       d.partial({
         /** Sidebar Item Label */
         label: d.string,
+        // TODO: MAKE THIS MANDATORY FOR PAGE ITEMS
         /** Sidebar Item Properties */
-        customProps: customProps
+        customProps: customProps,
+        /** Sidebar Custom Class Name */
+        className: d.string,
       })
     )
   )
@@ -118,7 +122,7 @@ const foo: BakedSidebarItemType = {
             tags: {
               electron_platform: false,
               overwolf_platform: false
-            }
+            },
           }
         }
       ]

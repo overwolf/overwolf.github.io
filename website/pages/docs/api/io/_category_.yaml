@@ -1,2 +1,4 @@
 label: 'io'
-
+customProps:
+  category:
+    id: overwolf

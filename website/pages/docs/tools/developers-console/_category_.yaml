@@ -1,2 +1,4 @@
 label: 'Developers Console'
-
+customProps:
+  category:
+    id: 'utilities'

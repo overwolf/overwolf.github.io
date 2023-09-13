@@ -104,7 +104,7 @@
 	margin: 0;
 	padding: 0;
 	border: none;
-	outline: none;
+	// outline: none;
 	vertical-align: baseline;
 	color: inherit;
 	background-repeat: no-repeat;
@@ -280,8 +280,10 @@ article {
 	border: 0
 }
 
-:focus {
-	outline: 0
+:not(.navigation-with-keyboard){
+	&:focus {
+		outline: 0
+	}
 }
 
 ::placeholder {
@@ -414,3 +416,4 @@ blockquote {
 @import './search-box';
 @import './overide';
 @import './style-dark';
+@import './sidebar';

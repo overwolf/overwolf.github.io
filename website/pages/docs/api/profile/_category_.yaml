@@ -1,2 +1,4 @@
 label: 'profile'
-
+customProps:
+  category:
+    id: overwolf

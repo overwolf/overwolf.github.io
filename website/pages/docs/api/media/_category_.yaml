@@ -1,2 +1,4 @@
 label: 'media'
-
+customProps:
+  category:
+    id: overwolf

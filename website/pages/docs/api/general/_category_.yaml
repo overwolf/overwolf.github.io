@@ -1,2 +1,4 @@
 label: 'General APIs'
-
+customProps:
+  category:
+    id: general

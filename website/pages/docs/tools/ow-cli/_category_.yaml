@@ -1,3 +1,4 @@
 label: 'ow-cli'
-
-
+customProps:
+  category:
+    id: 'utilities'

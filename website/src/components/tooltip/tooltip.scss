@@ -1,0 +1,152 @@
+.tool-tip {
+  position: absolute;
+  z-index: 110;
+  background-color: #171325;
+  color: #FFFFFF;
+  border: 1px solid transparentize(#735D26, 0.4);
+  text-align: center;
+  padding: 12px;
+  font-size: 14px;
+  line-height: 145%;
+  min-height: 48px;
+  line-height: 150%;
+  pointer-events: none;
+  opacity: 0;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  --pointer-offset-x: -8px;
+  --pointer-offset-y: -8px;
+
+  &::before {
+    content: '';
+    position: absolute;
+    margin: auto;
+    background-color: #171325;
+    width: 16px;
+    height: 16px;
+    transform: rotate(45deg);
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    margin: auto;
+    background: #735d26;
+    opacity: 0.5;
+    width: 16px;
+    height: 16px;
+    transform: rotate(45deg);
+    z-index: -1;
+  }
+
+  &.large {
+    width: 282px;
+    font-size: 14px;
+    line-height: 145%;
+    padding: 12px;
+    background-color: red; // TODO - replace?
+    pointer-events: none;
+  }
+
+  span {
+    font-size: 12px;
+    line-height: 145%;
+    color: #CCCCCC;
+    display: block;
+    min-width: 184px;
+  }
+
+  &.top {
+    animation: fadeinSlideFromTop 150ms linear forwards;
+    animation-delay: 300ms;
+
+    &::before {
+      left: 50%; // centered
+      margin-left: var(--pointer-offset-x); // offset of triangle pointer
+      bottom: -6.4px;
+    }
+
+    &::after {
+      left: 50%; // centered
+      margin-left: var(--pointer-offset-x); // offset of triangle pointer
+      bottom: -8px;
+    }
+  }
+
+  &.bottom {
+    animation: fadeinSlideFromBottom 150ms linear forwards;
+    animation-delay: 300ms;
+
+    &::before {
+      left: 50%; // centered
+      margin-left: var(--pointer-offset-x); // offset of triangle pointer
+      top: -5px;
+    }
+  }
+
+  &.right {
+    animation: fadeinSlideFromLeft 150ms linear forwards;
+    animation-delay: 300ms;
+
+    &::before {
+      left: -7px;
+      top: 50%;
+      margin-top: var(--pointer-offset-y); // offset of triangle pointer
+    }
+  }
+
+  &.left {
+    animation: fadeinSlideFromRight 150ms linear forwards;
+    animation-delay: 300ms;
+
+    &::before {
+      right: -6px;
+      top: 50%;
+      margin-top: var(--pointer-offset-y); // offset of triangle pointer
+    }
+  }
+
+  @keyframes fadeinSlideFromLeft {
+    0%   { 
+      transform: translateX(-30px);
+      opacity: 0;
+    }
+    100% { 
+      opacity: 1;
+      transform: translateX(0px);
+    }
+  }
+
+  @keyframes fadeinSlideFromRight {
+    0%   { 
+      transform: translateX(30px);
+      opacity: 0;
+    }
+    100% { 
+      opacity: 1;
+      transform: translateX(0px);
+    }
+  }
+
+  @keyframes fadeinSlideFromTop {
+    0%   { 
+      transform: translateY(10px);
+      opacity: 0;
+    }
+    100% { 
+      opacity: 1;
+      transform: translateY(-24px);
+    }
+  }
+
+  @keyframes fadeinSlideFromBottom {
+    0%   { 
+      transform: translateY(-14px);
+      opacity: 0;
+    }
+    100% { 
+      opacity: 1;
+      transform: translateY(10px);
+    }
+  }
+    
+}

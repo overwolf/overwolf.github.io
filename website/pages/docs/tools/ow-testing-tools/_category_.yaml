@@ -1,2 +1,4 @@
 label: 'Overwolf Testing Tools'
-
+customProps:
+  category:
+    id: sample-apps

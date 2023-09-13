@@ -1,2 +1,4 @@
 label: 'social'
-
+customProps:
+  category:
+    id: overwolf

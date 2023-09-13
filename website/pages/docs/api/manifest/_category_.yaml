@@ -1,2 +1,4 @@
 label: 'manifest.json'
-
+customProps:
+  category:
+    id: overwolf

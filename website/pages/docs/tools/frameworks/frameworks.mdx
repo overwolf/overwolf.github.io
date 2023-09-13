@@ -23,9 +23,10 @@ That being said, there are also many differences between the two:
 The Overwolf Platform is a direct wrapper around the Chromium Embedded Framework project, which itself is a wrapper around the Chromium project.
 Overwolf Apps are then "extensions" run by this platform, with a basic sandboxing around them, and APIs exposed by this platform.
 
-Every app then declares an App manifest.json file, defining general App properties, as well as the windows that run its actual code.
+Every app then declares an App manifest.json file, defining general App properties, as well as the windows* that run its actual code.
 One of these windows must also serve as the app's "root" process, and closing it will close the app itself.
-*Do note that these windows can also be transparent, and even just run in the background.*
+
+*\* Do note that these windows can also be transparent, and even just run in the background.*
 
 The Overwolf Platform specifically supports:
 - Game events for ~40 games

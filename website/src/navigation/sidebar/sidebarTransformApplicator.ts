@@ -1,7 +1,6 @@
 import { pipe } from "fp-ts/lib/function";
 import { DEVMODE } from "./sidebarConstants";
-import SidebarTransform from "./sidebarTransform";
-import { DefaultFakeBakedCategoryItem, invokeTransform, pipeTransform } from "./sidebarUtils";
+import { DefaultFakeBakedCategoryItem, pipeTransform } from "./sidebarUtils";
 import SortMonthly from "./sort/sortMonthly";
 import SortNumerically from "./sort/sortNumerically";
 import SortReverse from "./sort/sortReverse";
@@ -12,6 +11,7 @@ import TrimNumerically from "./transform/trimNumerically";
 import { BakedSidebarItemType } from "./types/bakedSidebar";
 import { CustomPropsCategory } from "./types/customPropsCategory";
 import * as d from 'io-ts/Decoder';
+import SplitCategories from "./transform/splitCategories";
 
 type PropMapper<Type> = {
   [Key in keyof Type]: SumBase<Type[Key]>;
@@ -29,10 +29,6 @@ function checkAllChildren<Type>(combiner: SumBase<Type>, childPredicate: (item: 
   });
   return value;
 }
-
-const sidebarTransforms: SidebarTransform[] = [
-
-]
 
 
 export default function applySidebarTransforms(items: BakedSidebarItemType[]): BakedSidebarItemType[] {
@@ -63,16 +59,18 @@ export default function applySidebarTransforms(items: BakedSidebarItemType[]): B
       mainItem = { ...mainItem, items: applySidebarTransforms(children) };
 
       // Ensure all propagated sidebar properties are summed from all children (ie. content tags)
+      mainItem.customProps.tags = mainItem.customProps.tags ?? {};
       Object.keys(summarizedTags).forEach(
-        (field) => mainItem.customProps[field] = checkAllChildren(
+        (field) => mainItem.customProps.tags[field] = checkAllChildren(
           summarizedTags[field],
-          (item) => item.customProps[field],
+          (item) => item.customProps.tags[field],
           children,
         )
       )
       
       const result = pipe(
         [mainItem],
+        pipeTransform(new SplitCategories()),
         pipeTransform(new HoistChildren()),
         pipeTransform(new SortNumerically()),
         pipeTransform(new SortMonthly()),
