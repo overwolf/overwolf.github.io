@@ -28,7 +28,6 @@ import { CollapseProvider } from '../../contexts/collapse-context';
 
 function CategoryItem(
   props: {
-    lastItem?: boolean;
     rowNumber: number;
     item: CategorySidebarItemProps;
   } & SidebarProps,
@@ -211,7 +210,7 @@ function CategoryItem(
           </CollapseProvider>
         </li>
       )}
-      {!lastItem && isTagCategory && <SpacerItem rowNumber={rowNumber + 2} />}
+      {isTagCategory && <SpacerItem rowNumber={rowNumber + 2} />}
     </>
   );
 }

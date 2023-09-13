@@ -13,7 +13,7 @@ function SpacerItem(props: { rowNumber: number }) {
       tabIndex={-1}
       className={clsx(OWClassNames.sidebar.container.items.category.spacer)}
       style={PlaceOnGrid({
-        columnStart: 2,
+        columnStart: 1,
         columnFlex: true,
         rowStart: rowNumber,
         rowEnd: rowNumber,

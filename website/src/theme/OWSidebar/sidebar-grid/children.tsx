@@ -7,7 +7,6 @@ import { SIDEBAR_MAX_ROWS } from '../config/config';
 
 function SidebarLayout(props: SidebarProps & { collapsed?: boolean }) {
   const { sidebar } = props;
-  const itemCount = sidebar.length;
 
   return (
     <>
@@ -35,7 +34,6 @@ function SidebarLayout(props: SidebarProps & { collapsed?: boolean }) {
                 // This MUST be placed first, so that rowNumber is overriden
                 {...props}
                 key={`${index} Category Item ${item.label}`}
-                lastItem={rawIndex === itemCount - 1}
                 item={item}
                 rowNumber={index}
               />
