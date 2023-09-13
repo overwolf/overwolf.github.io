@@ -197,14 +197,12 @@ function CategoryItem(
           })}
           className={OWClassNames.sidebar.container.wrapper}
         >
-          <CollapseProvider collapsed={!expanded}>
-            <SidebarGrid
-              {...props}
-              collapsed={!expanded}
-              sidebar={items}
-              showCaret={!isTagCategory}
-            />
-          </CollapseProvider>
+          <SidebarGrid
+            {...props}
+            collapsed={!expanded}
+            sidebar={items}
+            showCaret={!isTagCategory}
+          />
         </li>
       )}
       {isTagCategory && <SpacerItem rowNumber={rowNumber + 2} />}
