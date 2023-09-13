@@ -10,8 +10,8 @@ import {
   findFirstCategoryLink,
   // @ts-expect-error theme-common/internal is not properly typed
 } from '@docusaurus/theme-common/internal';
-import Collapse from '../../Assets/collapse.svg';
-import Expand from '../../Assets/expand.svg';
+import Collapse from '../../assets/collapse.svg';
+import Expand from '../../assets/expand.svg';
 import { CategorySidebarItemProps, SidebarProps } from '../../types/types';
 import SidebarGrid from '..';
 import { PlaceOnGrid } from '../utils';
