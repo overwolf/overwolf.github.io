@@ -89,6 +89,7 @@ Event       | Event Data   | Fired When    | Notes                              
 ------------| -------------| --------------| -------------------------------------- | ---------------|
 match_start |   | In the beginning of each match after selecting your character              | See [notes](#match_start-note) |      228.0      |
 match_end |   | At the end of each match and exit to the main menu             | See [notes](#match_end-note) |      228.0      |
+death |   | When the character dies             | See [notes](#death-note) |      235.0      |
 
 
 #### *match_start* note
@@ -105,6 +106,14 @@ Data Example:
 
 ```json
 {"events":[{"name":"match_end","data":""}]}
+```
+
+#### *death* note
+
+Data Example:
+
+```json
+{"events":[{"name":"death","data":""}]}
 ```
 
 ## `location`
@@ -145,6 +154,8 @@ key          | Category    | Values                    | Notes                 |
 name | character   | Current character name |  See [notes](#name-note) |   229.2
 class | character   | Current character class |  See [notes](#class-note) |   229.2
 level | character   | Current character level |  See [notes](#level-note) |   229.3
+xp | character   | Current character xp |  See [notes](#xp-note) |   235.0
+health | character   | Current character health |  See [notes](#health-note) |   235.0
 
 #### *name* note
 
@@ -186,4 +197,20 @@ Data Example:
 
 ```json
 {"feature":"me","category":"character","key":"level","value":2}
+```
+
+#### *xp* note
+
+Data Example:
+
+```json
+{"feature":"me","category":"character","key":"xp","value":1498}
+```
+
+#### *health* note
+
+Data Example:
+
+```json
+{"feature":"me","category":"character","key":"health","value":80}
 ```
