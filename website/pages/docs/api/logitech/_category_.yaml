@@ -1,2 +1,4 @@
 label: 'logitech'
-
+customProps:
+  category:
+    id: overwolf

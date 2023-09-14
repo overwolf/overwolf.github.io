@@ -1,11 +1,15 @@
 import { pipe } from "fp-ts/lib/function";
 import { OptionalCustomPropsBase } from "./customPropsBase";
-import { Category, _Category } from "./customPropsPage";
 import * as d from 'io-ts/Decoder';
+import { Category } from "./customPropsPage";
 
 export const SubCategories = d.struct({
   /** Ordered array of allowed sub-category ids */
-  category_ids: d.array(_Category.id),
+  categories: d.array(d.struct({
+      id: d.string,
+      label: d.string,
+    }),
+  )
 });
 
 export const SortProps = pipe(
@@ -41,10 +45,6 @@ export const CustomPropsCategory = pipe(
     d.partial({
       /** [DO NOT USE] This is required to avoid errors in some cases */
       placeholder: d.boolean,
-      /** The category's always-top items group */
-      top: ItemGroupCustomProps,
-      /** The categories always-bottom items group */
-      bottom: ItemGroupCustomProps,
       /** Defines child element hoisting behavior */
       hoist_children: d.struct({
         /** Should all children be hoisted to sit where this item is */
@@ -61,7 +61,12 @@ export const CustomPropsCategory = pipe(
           /** What label should the leftovers' fake sidebar have */
           label: d.string
         })
-      })
+      }),
+      /** Whether or not this category is a main category */
+      tag_category: d.boolean,
     })
-  )
+  ),
+  d.intersect(Category)
 )
+
+export type CustomPropsCategoryType = d.TypeOf<typeof CustomPropsCategory>;

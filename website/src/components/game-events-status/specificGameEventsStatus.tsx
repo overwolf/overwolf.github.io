@@ -2,8 +2,8 @@ import React from 'react';
 import GameInfo from '../game-info/game-info';
 import { stateToCss } from './events-utils';
 import './gep-game-list.scss';
-import electronIcon from '@site/static/img/components/game-events-status/overwolf-electron.png'
-import overwolfIcon from '@site/static/img/components/game-events-status/overwolf-platform.png'
+import electronIcon from '@site/static/img/components/game-events-status/overwolf-electron.png';
+import overwolfIcon from '@site/static/img/components/game-events-status/overwolf-platform.png';
 import EventStatus from './EventStatus';
 
 function SearchBar(props) {

@@ -1,1 +1,4 @@
 label: 'windows'
+customProps:
+  category:
+    id: overwolf

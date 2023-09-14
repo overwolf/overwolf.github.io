@@ -1,2 +1,4 @@
 label: 'Frameworks'
-
+customProps:
+  category:
+    id: 'frameworks'

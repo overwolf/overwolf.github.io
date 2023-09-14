@@ -1,2 +1,4 @@
 label: 'games'
-
+customProps:
+  category:
+    id: overwolf

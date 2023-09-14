@@ -12,18 +12,25 @@ const devMode = process.env.NODE_ENV === "development";
 //   return result.join(" ");
 // }
 
-const sidebarValidator = require("./typescript/build/navigation/sidebar/sidebarValidator.js").default;
-const applySidebarTransforms = require("./typescript/build/navigation/sidebar/sidebarTransformApplicator.js").default;
+const sidebarRootCategories = require('./hierarchies/rootSidebarCategories');
+const sidebarValidator = require("./typescript/build/website/src/navigation/sidebar/sidebarValidator.js").default;
+const applySidebarTransforms = require("./typescript/build/website/src/navigation/sidebar/sidebarTransformApplicator.js").default;
 
 async function sidebarsOverrides({ defaultSidebarItemsGenerator, ...args }) {
+  // if(args.length === undefined) console.log(
+  //   Object.keys(args),
+  //   args.item,
+  //   // args.docs.find((item) => item.id === `${args.item.dirName}/${args.item.dirName}`),
+  //   args.docs.find((item) => item.id.endsWith('index')));
   let items = await defaultSidebarItemsGenerator(args);
   // console.log(items.map((item) => `${item.label}|${item.id}|${item.type}|${JSON.stringify(item.customProps)}`));
   // console.log(args);
+  if(sidebarRootCategories[args.item.dirName]) items = [{...sidebarRootCategories[args.item.dirName], items: items}]
   return applySidebarTransforms(items.map((item) => sidebarValidator(item)));
 }
 
-const codeComponentTagger = require("./typescript/build/plugins/tagging/codeComponentTagger.js").default;
-const displayJSON = require("./typescript/build/components/display-json/mdx/displayJSON.js").default;
+const codeComponentTagger = require("./typescript/build/website/src/plugins/tagging/codeComponentTagger.js").default;
+const displayJSON = require("./typescript/build/website/src/components/display-json/mdx/displayJSON.js").default;
 
 /** @type {import('@docusaurus/types').Config} */
 async function config() {
@@ -97,9 +104,6 @@ async function config() {
           blog: {},
           theme: {
             customCss: [require.resolve('./src/css/style.scss')],
-          },
-          googleAnalytics: {
-            trackingID: "UA-144253676-1"
           },
         },
       ]

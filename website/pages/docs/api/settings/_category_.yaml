@@ -1,2 +1,4 @@
 label: 'settings'
-
+customProps:
+  category:
+    id: overwolf

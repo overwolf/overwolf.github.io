@@ -1,2 +1,4 @@
 label: 'campaigns'
-
+customProps:
+  category:
+    id: overwolf

@@ -1,2 +1,4 @@
 label: 'web'
-
+customProps:
+  category:
+    id: overwolf

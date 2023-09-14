@@ -124,7 +124,7 @@
         }
 
         &:hover {
-          color: transparent;
+          // color: transparent;
           &:after {
             color: var(--color-220);
             visibility: visible;
@@ -255,7 +255,7 @@ html[data-theme=dark] {
           color: var(--color-txt);
 
           &:hover {
-            color: transparent;
+            // color: transparent;
             &:after {
               color: var(--color-txt);
             }

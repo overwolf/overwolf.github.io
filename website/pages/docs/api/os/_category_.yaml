@@ -1,2 +1,4 @@
 label: 'os'
-
+customProps:
+  category:
+    id: overwolf

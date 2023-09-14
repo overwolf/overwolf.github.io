@@ -1,5 +1,5 @@
 import React, {FC} from 'react';
-import { MainGroupContext } from '../code-block-utils';
+import { MainGroupContext } from '../display-json-utils';
 
 interface CodeBlocMainGroupProps {
   groupKeyName: string;

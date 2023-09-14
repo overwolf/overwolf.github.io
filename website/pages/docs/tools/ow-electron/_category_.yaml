@@ -1,2 +1,4 @@
 label: 'ow-electron'
-
+customProps:
+  category:
+    id: 'frameworks'
