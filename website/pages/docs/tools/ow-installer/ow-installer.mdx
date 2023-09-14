@@ -1,0 +1,109 @@
+---
+id: ow-installer
+image: "/img/embed/dev-tools.jpg"
+title: Overwolf Installer
+sidebar_custom_props:
+  tags:
+    overwolf_platform: true
+    electron_platform: true
+
+---
+
+The **Overwolf Installer** is a generalized, fully featured, cleanly designed App installer, which you can easily use
+with any App hosted on the [Overwolf Developers' Console](/tools/developers-console), in order to deliver a seamless installation experience tailored just for your App.
+
+## When should the Overwolf Installer be used
+
+<Tabs groupId="frameworks">
+<TabItem value="overwolf-platform" label="Overwolf Platform">
+
+All Overwolf Platform Apps **Always\*** use the Overwolf Installer.  
+This is done to ensure that no matter what happens, the Overwolf Client, as well as any other dependencies, are properly installed,
+and the App itself is properly installed on top of them all.
+
+From there, every app can easily further [customize][customize] its installer based on its own individual requirements.
+
+*\* The Overwolf Installer is only displayed if Overwolf was **not already installed** on that computer. Otherwise, the app is
+**[silently](https://www.makeuseof.com/windows-silent-installation-explained/)** installed as soon as the installer is executed.*
+
+</TabItem>
+
+<TabItem value="electron-platform" label="Overwolf Electron">
+
+Overwolf Electron Apps **can choose** whether to use the Overwolf Installer, their own default installer, or any other installer/combination.
+
+*A link to the App's Overwolf Installer is always available from the console, as well as a link to the latest Electron Setup file, letting you freely choose
+which one you use and where\*.*
+
+*\* The Overwolf Installer currently only works on Windows OS.*
+
+</TabItem>
+</Tabs>
+
+## Benefits of the Overwolf Installer
+
+### Pre-flight Checkup
+
+One of the Overwolf Installer's main conveniences is that it takes care of many different things before/during installation for you, so that your app does not need to. Specifically:
+- **(Overwolf Platform Only)** Ensuring the installing computer is compatible with the Overwolf Client. For example:
+  - The current OS version is supported by the App.
+  - The computer has enough space to install the application.
+  - The computer meets the minimum system requirements for the App.
+- Ensuring compliance with privacy regulations. For example:
+  - Showing European users a fully fledged [CMP Flow](/tools/ow-electron/consent-management-platform).
+  - Ensuring that the user acknowledges and accepts Overwolf's [ToS](https://www.overwolf.com/legal/terms) and [Privacy Policy](https://www.overwolf.com/legal/privacy).
+- Allowing configuration of the target installation directory.
+- **(Overwolf Platform Only)** Allowing users to select between one of many supported languages, which then carry over to the actual installation.
+
+### Clean, customizable UI
+
+The Overwolf installer's UI is highly [customizable][customize]. From the images displayed, to
+the options exposed to the users, all the way to the color scheme for different parts.
+
+This ensures that your installer will always fit your App and your brand, without needing
+to create it all from scratch.
+
+### Decoupled from App/Client versions
+
+Ocassionally, updates may need to be performed for any installer, due to:
+- Changes in underlying installer dependencies
+- Various improvements to UX
+- Discovery of security flaws in installer dependencies
+- Issues with Anti-Viruses
+- Changes in minimum System requirements
+- And many more reasons
+
+The Overwolf Installer is completely decoupled from the actual App it is installing. As such,
+if it ever needs to update, Overwolf takes care of it directly, without requiring any changes to Apps running it.
+
+### Minimal file size
+
+The Overwolf Installer does not actually contain the App's files when initially downloaded. Instead, it fetches the latest version
+during installation, ensuring that the initial download file for the user is kept as small and unintimidating as possible.
+
+## Live Installer Demo - (Coming Soon)
+
+## Customizing the Overwolf Installer
+
+:::tip WIP
+The following list is an active Work in Progress. All information written below is accurate,
+but not all of the relevant information is written below.
+:::
+
+There are many parts of the Overwolf Installer that you can customize, depending
+on your exact use-case. The following is a list of currently supported customizations:
+- Customizable Assets:
+  - **App icon** - The installer's .exe file icon
+    - **File extension** - `.ico` - Containing four sizes:
+      - 16x16
+      - 32x32
+      - 48x48
+      - 256x256
+    - **Additional info** - We recommend using [convertico](https://convertico.com/) to create this file.
+  - **App Splash Image** - Used in the installer's welcome screen.
+    - **File extension** - `.png` - Image size:
+      - 144x144
+    - **Additional info** - Using a transparent background is optional.
+
+
+[customize]: #customizing-the-overwolf-installer

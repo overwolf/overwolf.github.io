@@ -1,4 +1,4 @@
-label: 'Overwolf CLI'
+label: 'Overwolf Installer'
 customProps:
   category:
     id: 'utilities'
