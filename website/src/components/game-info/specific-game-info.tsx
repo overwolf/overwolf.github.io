@@ -2,69 +2,63 @@ import React from 'react';
 import FancyLink from '../fancy/fancy-link';
 
 export type DisabledLinks = {
-    docs: boolean,
-    status: boolean,
-    compliance: boolean
-}
+  docs: boolean;
+  status: boolean;
+  compliance: boolean;
+};
 
-export function AllLinksOn(): DisabledLinks { 
-    return {
-        docs: false,
-        status: false,
-        compliance: false
-    }
+export function AllLinksOn(): DisabledLinks {
+  return {
+    docs: false,
+    status: false,
+    compliance: false,
+  };
 }
 
 function SpecificGameInfo(props: {
-    metaData: GameMetaData;
-    type?: string;
-    hasElectron?: boolean;
-    disabledLinks: DisabledLinks;
+  metaData: GameMetaData;
+  type?: string;
+  hasElectron?: boolean;
+  disabledLinks: DisabledLinks;
 }) {
-    const { metaData, type, disabledLinks, hasElectron } = props;
-    const { id, displayId, path, docs, compliance, variant, electron } = metaData;
-    
-    if (!type && !variant) console.error("No variant was defined for this game!", metaData);
+  const { metaData, type, disabledLinks, hasElectron } = props;
+  const { id, displayId, path, docs, compliance, variant, electron } = metaData;
 
-    const prefix = variant ?? type;
-    const mainName = hasElectron ? `${type} (Electron)` : variant ? `${type} (${prefix})` : type;
+  if (!type && !variant)
+    console.error('No variant was defined for this game!', metaData);
 
-    return (
-        <>
-            <p>
-                <span>{mainName} ID: </span>
-                {displayId ?? id}
-            </p>
+  const prefix = variant ?? type;
+  const mainName = hasElectron
+    ? `${type} (Electron)`
+    : (variant ? `${type} (${prefix})` : type);
 
-            {displayId &&
-                <p>
-                    <span>Tracking ID: </span>
-                    {id}
-                </p>
-            }
+  return (
+    <>
+      <p>
+        <span>{mainName} ID: </span>
+        {displayId ?? id}
+      </p>
 
-            {!disabledLinks.docs && docs &&
-                <FancyLink
-                    name={`${prefix} API docs`}
-                    pathUrl={hasElectron ? electron : docs}
-                />
-            }
+      {displayId && (
+        <p>
+          <span>Tracking ID: </span>
+          {id}
+        </p>
+      )}
 
-            {!disabledLinks.status && path &&
-                <FancyLink
-                    name={`${prefix} events status`}
-                    pathUrl={path}
-                />
-            }
+      {!disabledLinks.docs && docs && (
+        <FancyLink name={`${prefix} API docs`} pathUrl={docs} />
+      )}
 
-            {!disabledLinks.compliance && compliance &&
-                <FancyLink
-                    name={`${prefix} compliance page`}
-                    pathUrl={compliance}
-                />
-            }
-        </>
-    )
+      {!disabledLinks.status && path && (
+        <FancyLink name={`${prefix} events status`} pathUrl={path} />
+      )}
+
+      {!disabledLinks.compliance && compliance && (
+        <FancyLink name={`${prefix} compliance page`} pathUrl={compliance} />
+      )}
+    </>
+  );
 }
 
 export default SpecificGameInfo;

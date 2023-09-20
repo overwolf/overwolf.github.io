@@ -1,0 +1,197 @@
+---
+id: diablo-2-resurrected
+image: "/img/embed/games/diablo-2-resurrected.jpg"
+title: Diablo 2 Game events
+hide_title: true
+sidebar_label: Diablo 2
+sidebar_position: 0
+sidebar_custom_props:
+  tags:
+    overwolf_platform: true
+    electron_platform: false
+---
+
+<!-- GENERATED USING /scripts/generate.js -->
+
+<head>
+  <meta name="keywords" content="API for Diablo 2 Resurrected, Diablo 2 Resurrected API, SDK for Diablo 2 Resurrected, Diablo 2 Resurrected SDK"/>
+</head>
+
+<GameInfo gameId={21848} page="docs" />
+
+Please read the [overwolf.games.events](/api/game-data) documentation page to learn how to use Overwolf game events.
+
+## Sample Apps
+* [Diablo 2 game events sample app](https://github.com/overwolf/events-sample-apps)
+
+## Available Features
+
+* [gep_internal](#gep_internal)
+* [game_info](#game_info)
+* [match_info](#match_info)
+
+## Game events status
+
+It is highly recommended to communicate errors and warnings to your app users. 
+
+Check [here](/status/) the game events status. OR -  easily check the game events status from your app, [using our API](/topics/using-events/how-to-check-events-status-from-app).
+
+## `gep_internal`
+
+### Info Updates
+
+key          | Category    | Values                    | Notes                 | Since GEP Ver. |
+------------ | ------------| ------------------------- | --------------------- | ------------- | 
+gep_internal | gep_internal| Local + Public version number|See [notes](#gep_internal-note)|   143.0       |
+
+#### *gep_internal* note
+
+Data Example:
+
+```json
+{"info":{"gep_internal":{"version_info":"{"local_version":"157.0.1","public_version":"157.0.1","is_updated":true}"}},"feature":"gep_internal"}
+```
+
+## `game_info`
+
+### Info Updates
+
+key          | Category    | Values                    | Notes                 | Since GEP Ver. |
+------------| -------------| --------------| ------------------ | --------------|
+player_level |me|   The current level of the player            |See [notes](#player_level-note)|     204.0      |
+player_class |me|   The current class of the player            |See [notes](#player_class-note)|     204.0      |
+player_experience |me|   The current experience of the player            |See [notes](#player_experience-note)|     204.0      |
+
+#### *player_level* note
+This API will be depracated since the data is included in player_stats API - see [here](#player_stats-note)
+
+Data Example:
+
+```json
+{"feature":"game_info","category":"me","key":"player_level","value":2}
+```
+
+#### *player_class* note
+
+Data Example:
+
+```json
+{"feature":"game_info","category":"me","key":"player_class","value":"DRUID"}
+```
+
+#### *player_experience* note
+This API will be depracated since the data is included in player_stats API - see [here](#player_stats-note)
+
+Data Example:
+
+```json
+{"feature":"game_info","category":"me","key":"player_experience","value":1101}
+```
+
+
+## `match_info`
+
+### Info Updates
+
+key               | Category    | Values                    | Notes                 | Since GEP Ver. |
+----------------- | ------------| ------------------------- | --------------------- | ------------- |
+act   | match_info  | The current played act|See [notes](#act-note)|  204.0   |
+item_x   | match_info  | List of owned items |See [notes](#item_x-note)|  204.1   |
+character_name   | match_info  | The name of the character |See [notes](#character_name-note)|  205.0   |
+player_stats   | match_info  | List of statistics about the local player |See [notes](#player_stats-note)|  205.0   |
+
+### Events
+
+Event       | Event Data   | Fired When    | Notes                                  | Since GEP Ver. |
+------------| -------------| --------------| -------------------------------------- | ---------------|
+match_start |   | In the beginning of each match              | See [notes](#match_start-note) |      204.0      |
+match_end |   | At the end of each match              | See [notes](#match_end-note) |      204.0      |
+player_spawn |   | In the beginning of each match and respawn after teadh            | See [notes](#player_spawn-note) |      204.0      |
+player_died |   | Once the player died              | See [notes](#player_died-note) |      204.0      |
+dropped_item |   | List of items dropped on the ground |See [notes](#dropped_item-note) | 210.0 |
+
+#### *act* note
+
+Data Example:
+```json
+{"feature":"match_info","category":"match_info","key":"act","value":1}
+```
+
+#### *item_x* note
+
+The possible values for inv_page parameter are: 
+* INVENTORY - if the item is in your inventory 
+* NULL - if the item is currntly equpied or in the belt 
+* STASH - if the item is in the stash
+
+Data Example:
+
+```json
+{"feature":"match_info","category":"match_info","key":"item_19","value":"{"id":823142142,"name":"Cap","quality":"LOW","is_identified":"1","req_lvl":0,"req_str":0,"req_dex":0,"low_quality":"Cracked","body_loc":"NONE","inv_page":"INVENTORY","parent_id":0,"stats" : [{"idx" : "31","idx_name" : "armorclass","sub_idx" : "0","sub_idx_name" : "","value" : "3"},{"idx" : "73","idx_name" : "maxdurability","sub_idx" : "0","sub_idx_name" : "","value" : "3"}]}"}
+```
+
+#### *character_name* note
+
+Data Example:
+
+```json
+{"info":{"match_info":{"character_name":"Bla"}},"feature":"match_info"}
+```
+
+#### *player_stats* note
+
+Data Example:
+List of items: 
+* max hp
+* current hp
+* max mana
+* current mana
+* strenght 
+* energy 
+* dexterity
+* visibility
+* experience
+* level
+
+```json
+{"info":{"match_info":{"player_stats":"{\"max_hp\":69,\"current_hp\":55,\"max_mana\":46,\"current_mana\":46,\"strength\":36,\"energy\":26,\"dexterity\":26,\"vitality\":27,\"experience\":43565,\"level\":8}"}},"feature":"match_info"}
+```
+
+#### *match_start* note
+
+Data Example:
+
+```json
+{"events":[{"name":"match_start","data":""}]}
+```
+
+#### *match_end* note
+
+Data Example:
+
+```json
+{"events":[{"name":"match_end","data":""}]}
+```
+
+#### *player_spawn* note
+
+Data Example:
+
+```json
+{"events":[{"name":"player_spawn","data":""}]}
+```
+
+#### *player_died* note
+
+Data Example:
+
+```json
+{"events":[{"name":"player_died","data":""}]}
+```
+#### *dropped_item* note
+
+Data Example:
+
+```json
+{"events":[{"name":"dropped_item","data":"{\"id\":119,\"name\":\"Short Staff\",\"quality\":\"NORMAL\",\"is_identified\":\"1\",\"req_lvl\":0,\"req_str\":0,\"req_dex\":0,\"body_loc\":\"NONE\",\"inv_page\":\"ONGROUND\",\"parent_id\":0,\"stats\" : [{\"idx\" : \"23\",\"idx_name\" : \"secondary_mindamage\",\"sub_idx\" : \"0\",\"sub_idx_name\" : \"\",\"value\" : \"1\"},{\"idx\" : \"24\",\"idx_name\" : \"secondary_maxdamage\",\"sub_idx\" : \"0\",\"sub_idx_name\" : \"\",\"value\" : \"5\"},{\"idx\" : \"68\",\"idx_name\" : \"attackrate\",\"sub_idx\" : \"0\",\"sub_idx_name\" : \"\",\"value\" : \"10\"},{\"idx\" : \"72\",\"idx_name\" : \"durability\",\"sub_idx\" : \"0\",\"sub_idx_name\" : \"\",\"value\" : \"16\"},{\"idx\" : \"73\",\"idx_name\" : \"maxdurability\",\"sub_idx\" : \"0\",\"sub_idx_name\" : \"\",\"value\" : \"20\"}]}"}]}
+```

@@ -35,7 +35,7 @@ function GameInfo(props: { gameId: any; page: "docs" | "status" | "compliance"; 
   const launcherGames = metaData?.games;
   const mainVariant = GamesMetadata[metaData.mainVariant] as GameMetaData;
   const subVariants = metaData.subVariants;
-  const hasElectron = metaData.electron;
+  const hasElectron = true;
 
   // ---------------------------------------------------------------------------
   return gameStatus !== null ? (

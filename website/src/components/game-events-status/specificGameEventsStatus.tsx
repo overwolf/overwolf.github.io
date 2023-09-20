@@ -48,7 +48,7 @@ function filterEvents(e) {
 
 function SpecificGameEventsStatus(props) {
 
-  const { gameStatusData, gameId, endOfLife, electron } = props;
+  const { gameStatusData, gameId, endOfLife } = props;
   // ---------------------------------------------------------------------------
 
   const getEventsByType = (type: number) => {
@@ -63,7 +63,7 @@ function SpecificGameEventsStatus(props) {
       for (let key of feature.keys) {
         if (key.type == type) {
           list.push(
-            <EventStatus name={key.name} platformStatus={key.state} electronStatus={electron ? key.state : 0} />
+            <EventStatus name={key.name} platformStatus={key.state} electronStatus={key.state} />
           );
         }
       }

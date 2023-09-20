@@ -1,0 +1,675 @@
+---
+id: league-of-legends
+image: "/img/embed/games/launchers/league-of-legends.jpg"
+title: League of Legends Launcher Events
+hide_title: true
+sidebar_label: LOL Launcher
+sidebar_custom_props:
+  tags:
+    overwolf_platform: true
+    electron_platform: false
+---
+
+<!-- GENERATED USING /scripts/generate.js -->
+
+<head>
+  <meta name="keywords" content="API for League of Legends Launcher, League of Legends Launcher API, SDK for League of Legends Launcher, League of Legends Launcher SDK"/>
+</head>
+
+<GameInfo gameId={10902} page="docs" />
+
+Please read the [overwolf.games.launchers.events](/api/game-data#how-to-register-for-features) documentation page to learn how to use Overwolf game launchers events.
+
+:::tip
+if the  game launcher wasn't closed by the user, it is possible to access game launcher methods while being in-game.
+:::
+
+## Sample Apps
+
+* [LOL game launcher sample app](https://github.com/overwolf/events-sample-apps)
+
+## Available Features
+
+* [game_flow](#game_flow)
+* [summoner_info](#summoner_info)
+* [champ_select](#champ_select)
+* [lobby_info](#lobby_info)
+* [end_game](#end_game)
+* [lcu_info](#lcu_info)
+* [game_info](#game_info)
+* [clash](#clash)
+
+@@InfoUpdate
+## `game_flow`
+
+### Info Updates
+
+key   | Category    | Values                    | Notes                 | Since Version |
+------| ------------| ------------------------- | --------------------- | ------------- |
+phase | game_flow   | Current phase in the game | See [notes](#phase-note)  |   125.0       |
+
+#### *phase* note
+
+Data Example:
+
+```json
+{"feature":"game_flow","category":"game_flow","key":"phase","value":"Lobby"}
+{"feature":"game_flow","category":"game_flow","key":"phase","value":"ReadyCheck"}
+{"feature":"game_flow","category":"game_flow","key":"phase","value":"ChampSelect"}
+{"feature":"game_flow","category":"game_flow","key":"phase","value":"GameStart"}
+{"feature":"game_flow","category":"game_flow","key":"phase","value":"InProgress"}
+{"feature":"game_flow","category":"game_flow","key":"phase","value":"WaitingForStats"}
+{"feature":"game_flow","category":"game_flow","key":"phase","value":"PreEndOfGame"}
+{"feature":"game_flow","category":"game_flow","key":"phase","value":"EndOfGame"}
+```
+@@
+
+@@InfoUpdate
+## `summoner_info`
+
+### Info Updates
+
+key             | Category       | Values                                        | Notes                 | Since Version |
+----------------| ---------------| --------------------------------------------- | --------------------- | ------------- |
+account_id      | summoner_info  | Local player’s account id                 |                       |   125.0       |
+display_name    | summoner_info  | Local player’s display name               |                       |   125.0       |
+internal_name   | summoner_info  | Local player’s internal name              |                       |   125.0       |
+profile_icon_id | summoner_info  | Local player’s icon id	                 |                       |   125.0       |
+summoner_id     | summoner_info  | Local player’s summoner id                |                       |   125.0       |
+summoner_level	 | summoner_info  | Local player’s summoner level              |                       |   125.0       |
+region          | summoner_info  | Local player’s server (EU/NA etc)        |                       |   125.0       |
+locale          | summoner_info  | Local player’s selected LoL client language |                       |   125.0       |
+web_language    | summoner_info  | Local player’s type of language           |                       |   125.0       |
+web_region      | summoner_info  | Local player’s web region                 |                       |   125.0       |
+platform_id     | summoner_info  | Local player’s platform id                |                       |   125.0       |
+is_garena_user  | summoner_info  | Boolean - True / False                    | See [notes](#is_garena_user-note) |   143.0       |
+
+#### *is_garena_user* note
+
+Data Example:
+
+```json
+{"feature":"summoner_info","category":"summoner_info","key":"is_garena_user","value":false}
+{"feature":"summoner_info","category":"summoner_info","key":"is_garena_user","value":true}
+```
+@@
+
+@@InfoUpdate
+## `champ_select`
+
+### Info Updates
+
+key      | Category       | Values                                                                                                 | Notes                 | Since Version |
+---------| ---------------| ------------------------------------------------------------------------------------------------------ | --------------------- | ------------- |
+raw      | info           | All relevant information regarding Champion selection pre-start of the game. See [notes below](#raw-notes)|                       |   125.0       |
+
+#### `raw` notes
+
+There is a great deal of information provided. Few Example:
+
+* Assigned Position
+* Skin ID
+* Champion ID
+* Summoner Name
+
+And much more.
+
+<details>
+<summary>Data example: (Click here to toggle)</summary>
+
+```json
+{
+  "actions": [
+    
+  ],
+  "allowBattleBoost": false,
+  "allowDuplicatePicks": false,
+  "allowLockedEvents": false,
+  "allowRerolling": false,
+  "allowSkinSelection": true,
+  "bans": {
+    "myTeamBans": [
+      
+    ],
+    "numBans": 0,
+    "theirTeamBans": [
+      
+    ]
+  },
+  "benchChampionIds": [
+    
+  ],
+  "benchEnabled": false,
+  "boostableSkinCount": 1,
+  "chatDetails": {
+    "chatRoomName": "",
+    "chatRoomPassword": null
+  },
+  "counter": -1,
+  "entitledFeatureState": {
+    "additionalRerolls": 0,
+    "unlockedSkinIds": [
+      
+    ]
+  },
+  "hasSimultaneousBans": false,
+  "hasSimultaneousPicks": false,
+  "isSpectating": false,
+  "localPlayerCellId": -1,
+  "lockedEventIndex": -1,
+  "myTeam": [
+    
+  ],
+  "rerollsRemaining": 0,
+  "skipChampionSelect": false,
+  "theirTeam": [
+    
+  ],
+  "timer": {
+    "adjustedTimeLeftInPhase": 0,
+    "adjustedTimeLeftInPhaseInSec": 0,
+    "internalNowInEpochMs": 0,
+    "isInfinite": false,
+    "phase": "",
+    "timeLeftInPhase": 0,
+    "timeLeftInPhaseInSec": 0,
+    "totalTimeInPhase": 0
+  },
+  "trades": [
+    
+  ]
+}
+```
+
+</details>
+
+@@
+
+@@InfoUpdate
+## `lobby_info`
+
+### Info Updates
+
+key      | Category       | Values                                                                                                 | Notes                 | Since Version |
+---------| ---------------| ------------------------------------------------------------------------------------------------------ | --------------------- | ------------- |
+queueID  | lobby_info     |The queueID of the currently chosen game mode. See [notes below](#queueid-notes)                        |                       |   126.0       |
+
+#### `queueID` notes
+
+The queueID of the currently chosen game mode. Example:
+
+`{"feature":"lobby_info","category":"lobby_info","key":"queueId","value":1090}`
+
+* You can find here a [list of possible queue ids](https://developer.riotgames.com/game-constants.html). 
+* 1090 is the queueID of TFT regular match.
+* 1100 is the queueID of TFT ranked match.
+
+@@
+
+@@InfoUpdate
+## `end_game`
+
+### Info Updates
+
+key   | Category    | Values                    | Notes                 | Since Version |
+------| ------------| ------------------------- | --------------------- | ------------- |
+tft_end_game_stats | end_game_tft| See [notes](#tft_end_game_stats-note) |                |   134.0       |
+lol_end_game_stats | end_game_lol| See [notes](#lol_end_game_stats-note) |                |   137.0       |
+league_points | end_game_lol| See [notes](#league_points_stats-note) |                |   194.0       |
+
+#### *tft_end_game_stats* note
+
+Data Example:
+
+```json
+{
+   "launcherClassId": 10902,
+   "feature": "end_game",
+   "info": {
+      "end_game_tft": 
+      {
+         "tft_end_game_stats":
+         "{"gameId":4156875865,"gameLength":1983,"isRanked":false,"localPlayer": {"boardPieces":[{"icon":"/lol-game-data/assets/v1/champion-icons/10.png","level":2,"name":"Kayle","price":5} ,{"icon":"/lol-game-data/assets/v1/champion-icons/222.png","level":2,"name":"Jinx","price":4}, {"icon":"/lol-game-data/assets/v1/champion-icons/89.png","level":2,"name":"Leona","price":4}, {"icon":"/lol-game-data/assets/v1/champion-icons/254.png","level":2,"name":"Vi","price":3}, {"icon":"/lol-game-data/assets/v1/champion-icons/236.png","level":2,"name":"Lucian","price":2}, {"icon":"/lol-game-data/assets/v1/champion-icons/114.png","level":2,"name":"Fiora","price":1}, {"icon":"/lol-game-data/assets/v1/champion-icons/86.png","level":2,"name":"Garen","price":1}, {"icon":"/lol-game-data/assets/v1/champion-icons/67.png","level":2,"name":"Vayne","price":1}],"companion":{"colorName":"","icon":"lol-game-data/assets/ASSETS/Loadouts/Companions/Tooltip_MiniGolem_Grey_Tier1.Companions.png","speciesName":"Runespirit"} ,"ffaStanding":0,"health":13,"iconId":3552,"isLocalPlayer":true,"puuid":"4379f318-5717-5891-8c29-29d703729921","rank":2,"summonerId":57427695,"summonerName":"PoSeiDonProX1"}
+      }
+   }
+}
+```
+
+#### *lol_end_game_stats* note
+
+Provides a variety of data regarding the previous game.  
+Data includes information such as:
+
+* Damage Dealt
+* Damage Taken
+* Heals Given
+* Magic Damage
+* True Damage
+* etc. etc..
+
+<details>
+<summary>Data example: (Click here to toggle)</summary>
+
+```json
+{
+  "accountId": 2152743763473376,
+  "basePoints": 0,
+  "battleBoostIpEarned": 0,
+  "boostIpEarned": 0,
+  "boostXpEarned": 0,
+  "causedEarlySurrender": false,
+  "championId": 122,
+  "coOpVsAiMinutesLeftToday": 180,
+  "coOpVsAiMsecsUntilReset": 0,
+  "completionBonusPoints": 0,
+  "currentLevel": 2,
+  "customMinutesLeftToday": 0,
+  "customMsecsUntilReset": 0,
+  "difficulty": "EASY",
+  "earlySurrenderAccomplice": false,
+  "elo": 0,
+  "eloChange": 0,
+  "experienceEarned": 0,
+  "experienceTotal": 6,
+  "firstWinBonus": 0,
+  "gameEndedInEarlySurrender": false,
+  "gameId": 2371440758,
+  "gameLength": 1092,
+  "gameMode": "CLASSIC",
+  "gameMutators": [
+    "Banana",
+    "Moments",
+    "TeambuilderRosterPositions(1)",
+    "BannerSystem(1)",
+    "TrophySystem(1)",
+    "TeamPass_Summer2019",
+    "SRTrophyWinner(8)"
+  ],
+  "gameType": "CUSTOM_GAME",
+  "globalBoostXpEarned": 0,
+  "imbalancedTeamsNoPoints": false,
+  "invalid": false,
+  "ipEarned": 0,
+  "ipTotal": 0,
+  "leveledUp": false,
+  "loyaltyBoostIpEarned": 0,
+  "loyaltyBoostXpEarned": 0,
+  "missionsXpEarned": 0,
+  "myTeamStatus": "",
+  "newSpells": [
+    
+  ],
+  "nextLevelXp": 144,
+  "odinBonusIp": 0,
+  "partyRewardsBonusIpEarned": 0,
+  "pointsPenalties": null,
+  "preLevelUpExperienceTotal": 0,
+  "preLevelUpNextLevelXp": 0,
+  "previousLevel": 2,
+  "previousXpTotal": 6,
+  "queueBonusEarned": 0,
+  "queueType": "NONE",
+  "ranked": false,
+  "reportGameId": 2371440758,
+  "rerollData": {
+    "pointChangeFromChampionsOwned": 0,
+    "pointChangeFromGameplay": 0,
+    "pointsUntilNextReroll": 0,
+    "pointsUsed": 0,
+    "previousPoints": 0,
+    "rerollCount": 0,
+    "totalPoints": 0
+  },
+  "roomName": "endGame2371440758",
+  "roomPassword": "B4esuu1usdpgIDWh",
+  "rpEarned": 0,
+  "sendStatsToTournamentProvider": false,
+  "skinId": 122000,
+  "skinIndex": 0,
+  "summonerId": 78474202,
+  "summonerName": "eransharv",
+  "talentPointsGained": 0,
+  "teamBoost": null,
+  "teamEarlySurrendered": false,
+  "teams": [
+    {
+      "championBans": [
+        
+      ],
+      "fullId": "",
+      "isBottomTeam": true,
+      "isPlayerTeam": true,
+      "isWinningTeam": false,
+      "memberStatusString": "",
+      "name": "",
+      "players": [
+        {
+          "botPlayer": false,
+          "championId": 122,
+          "detectedTeamPosition": "MIDDLE",
+          "elo": 0,
+          "eloChange": 0,
+          "gameId": 2371440758,
+          "isReportingDisabled": false,
+          "items": [
+            2003,
+            1054,
+            1054,
+            1054,
+            1054,
+            1054,
+            3340
+          ],
+          "leaver": false,
+          "leaves": 0,
+          "level": 2,
+          "losses": 0,
+          "profileIconId": 3546,
+          "selectedPosition": "",
+          "skinIndex": 0,
+          "skinName": "Darius",
+          "spell1Id": 6,
+          "spell2Id": 7,
+          "stats": {
+            "ASSISTS": 0,
+            "BARRACKS_KILLED": 0,
+            "CHAMPIONS_KILLED": 0,
+            "COMBAT_PLAYER_SCORE": 0,
+            "GAME_ENDED_IN_EARLY_SURRENDER": 0,
+            "GAME_ENDED_IN_SURRENDER": 1,
+            "GOLD_EARNED": 3811,
+            "LARGEST_CRITICAL_STRIKE": 0,
+            "LARGEST_KILLING_SPREE": 0,
+            "LARGEST_MULTI_KILL": 0,
+            "LEVEL": 9,
+            "LOSE": 1,
+            "MAGIC_DAMAGE_DEALT_PLAYER": 0,
+            "MAGIC_DAMAGE_DEALT_TO_CHAMPIONS": 0,
+            "MAGIC_DAMAGE_TAKEN": 0,
+            "MINIONS_KILLED": 41,
+            "NEUTRAL_MINIONS_KILLED": 0,
+            "NEUTRAL_MINIONS_KILLED_ENEMY_JUNGLE": 0,
+            "NEUTRAL_MINIONS_KILLED_YOUR_JUNGLE": 0,
+            "NUM_DEATHS": 5,
+            "OBJECTIVE_PLAYER_SCORE": 0,
+            "PERK0": 8437,
+            "PERK0_VAR1": 0,
+            "PERK0_VAR2": 0,
+            "PERK0_VAR3": 0,
+            "PERK1": 8446,
+            "PERK1_VAR1": 2059,
+            "PERK1_VAR2": 0,
+            "PERK1_VAR3": 0,
+            "PERK2": 8444,
+            "PERK2_VAR1": 0,
+            "PERK2_VAR2": 0,
+            "PERK2_VAR3": 0,
+            "PERK3": 8451,
+            "PERK3_VAR1": 112,
+            "PERK3_VAR2": 0,
+            "PERK3_VAR3": 0,
+            "PERK4": 8224,
+            "PERK4_VAR1": 0,
+            "PERK4_VAR2": 0,
+            "PERK4_VAR3": 0,
+            "PERK5": 8237,
+            "PERK5_VAR1": 0,
+            "PERK5_VAR2": 0,
+            "PERK5_VAR3": 0,
+            "PERK_PRIMARY_STYLE": 8400,
+            "PERK_SUB_STYLE": 8200,
+            "PHYSICAL_DAMAGE_DEALT_PLAYER": 20384,
+            "PHYSICAL_DAMAGE_DEALT_TO_CHAMPIONS": 0,
+            "PHYSICAL_DAMAGE_TAKEN": 11724,
+            "SIGHT_WARDS_BOUGHT_IN_GAME": 0,
+            "SPELL1_CAST": 0,
+            "SPELL2_CAST": 29,
+            "TEAM_EARLY_SURRENDERED": 0,
+            "TEAM_OBJECTIVE": 0,
+            "TIME_CCING_OTHERS": 0,
+            "TOTAL_DAMAGE_DEALT": 21924,
+            "TOTAL_DAMAGE_DEALT_TO_BUILDINGS": 4117,
+            "TOTAL_DAMAGE_DEALT_TO_CHAMPIONS": 0,
+            "TOTAL_DAMAGE_DEALT_TO_OBJECTIVES": 4117,
+            "TOTAL_DAMAGE_DEALT_TO_TURRETS": 4117,
+            "TOTAL_DAMAGE_SELF_MITIGATED": 6377,
+            "TOTAL_DAMAGE_SHIELDED_ON_TEAMMATES": 0,
+            "TOTAL_DAMAGE_TAKEN": 11724,
+            "TOTAL_HEAL": 120,
+            "TOTAL_HEAL_ON_TEAMMATES": 0,
+            "TOTAL_PLAYER_SCORE": 0,
+            "TOTAL_SCORE_RANK": 0,
+            "TOTAL_TIME_CROWD_CONTROL_DEALT": 52,
+            "TOTAL_TIME_SPENT_DEAD": 133,
+            "TRUE_DAMAGE_DEALT_PLAYER": 1540,
+            "TRUE_DAMAGE_DEALT_TO_CHAMPIONS": 0,
+            "TRUE_DAMAGE_TAKEN": 0,
+            "TURRETS_KILLED": 0,
+            "VISION_SCORE": 0,
+            "VISION_WARDS_BOUGHT_IN_GAME": 0,
+            "WARD_KILLED": 0,
+            "WARD_PLACED": 0
+          },
+          "summonerId": 78474202,
+          "summonerName": "eransharv",
+          "teamId": 100,
+          "userId": 78474202,
+          "wins": 0
+        }
+      ],
+      "stats": {
+        "ASSISTS": 0,
+        "BARRACKS_KILLED": 0,
+        "CHAMPIONS_KILLED": 0,
+        "COMBAT_PLAYER_SCORE": 0,
+        "GAME_ENDED_IN_EARLY_SURRENDER": 0,
+        "GAME_ENDED_IN_SURRENDER": 1,
+        "GOLD_EARNED": 3811,
+        "LARGEST_CRITICAL_STRIKE": 0,
+        "LARGEST_KILLING_SPREE": 0,
+        "LARGEST_MULTI_KILL": 0,
+        "LEVEL": 9,
+        "LOSE": 1,
+        "MAGIC_DAMAGE_DEALT_PLAYER": 0,
+        "MAGIC_DAMAGE_DEALT_TO_CHAMPIONS": 0,
+        "MAGIC_DAMAGE_TAKEN": 0,
+        "MINIONS_KILLED": 41,
+        "NEUTRAL_MINIONS_KILLED": 0,
+        "NEUTRAL_MINIONS_KILLED_ENEMY_JUNGLE": 0,
+        "NEUTRAL_MINIONS_KILLED_YOUR_JUNGLE": 0,
+        "NUM_DEATHS": 5,
+        "OBJECTIVE_PLAYER_SCORE": 0,
+        "PERK0": 8437,
+        "PERK0_VAR1": 0,
+        "PERK0_VAR2": 0,
+        "PERK0_VAR3": 0,
+        "PERK1": 8446,
+        "PERK1_VAR1": 2059,
+        "PERK1_VAR2": 0,
+        "PERK1_VAR3": 0,
+        "PERK2": 8444,
+        "PERK2_VAR1": 0,
+        "PERK2_VAR2": 0,
+        "PERK2_VAR3": 0,
+        "PERK3": 8451,
+        "PERK3_VAR1": 112,
+        "PERK3_VAR2": 0,
+        "PERK3_VAR3": 0,
+        "PERK4": 8224,
+        "PERK4_VAR1": 0,
+        "PERK4_VAR2": 0,
+        "PERK4_VAR3": 0,
+        "PERK5": 8237,
+        "PERK5_VAR1": 0,
+        "PERK5_VAR2": 0,
+        "PERK5_VAR3": 0,
+        "PERK_PRIMARY_STYLE": 8400,
+        "PERK_SUB_STYLE": 8200,
+        "PHYSICAL_DAMAGE_DEALT_PLAYER": 20384,
+        "PHYSICAL_DAMAGE_DEALT_TO_CHAMPIONS": 0,
+        "PHYSICAL_DAMAGE_TAKEN": 11724,
+        "SIGHT_WARDS_BOUGHT_IN_GAME": 0,
+        "SPELL1_CAST": 0,
+        "SPELL2_CAST": 29,
+        "TEAM_EARLY_SURRENDERED": 0,
+        "TEAM_OBJECTIVE": 0,
+        "TIME_CCING_OTHERS": 0,
+        "TOTAL_DAMAGE_DEALT": 21924,
+        "TOTAL_DAMAGE_DEALT_TO_BUILDINGS": 4117,
+        "TOTAL_DAMAGE_DEALT_TO_CHAMPIONS": 0,
+        "TOTAL_DAMAGE_DEALT_TO_OBJECTIVES": 4117,
+        "TOTAL_DAMAGE_DEALT_TO_TURRETS": 4117,
+        "TOTAL_DAMAGE_SELF_MITIGATED": 6377,
+        "TOTAL_DAMAGE_SHIELDED_ON_TEAMMATES": 0,
+        "TOTAL_DAMAGE_TAKEN": 11724,
+        "TOTAL_HEAL": 120,
+        "TOTAL_HEAL_ON_TEAMMATES": 0,
+        "TOTAL_PLAYER_SCORE": 0,
+        "TOTAL_SCORE_RANK": 0,
+        "TOTAL_TIME_CROWD_CONTROL_DEALT": 52,
+        "TOTAL_TIME_SPENT_DEAD": 133,
+        "TRUE_DAMAGE_DEALT_PLAYER": 1540,
+        "TRUE_DAMAGE_DEALT_TO_CHAMPIONS": 0,
+        "TRUE_DAMAGE_TAKEN": 0,
+        "TURRETS_KILLED": 0,
+        "VISION_SCORE": 0,
+        "VISION_WARDS_BOUGHT_IN_GAME": 0,
+        "WARD_KILLED": 0,
+        "WARD_PLACED": 0
+      },
+      "tag": "",
+      "teamId": 100
+    },
+    {
+      "championBans": [
+        
+      ],
+      "fullId": "",
+      "isBottomTeam": false,
+      "isPlayerTeam": false,
+      "isWinningTeam": false,
+      "memberStatusString": "",
+      "name": "",
+      "players": [
+        
+      ],
+      "stats": null,
+      "tag": "",
+      "teamId": 200
+    }
+  ],
+  "timeUntilNextFirstWinBonus": 0,
+  "userId": 2152743763473376
+}
+```
+
+</details>
+
+#### *league_points_stats* note
+
+Total league points earned in the last game
+
+Data Example:
+
+```json
+{"feature":"end_game","category":"end_game_lol","key":"league_points","value":56}
+```
+
+@@
+
+@@InfoUpdate
+## `lcu_info`
+
+### Info Updates
+
+key   | Category    | Values                    | Notes                 | Since Version |
+------| ------------| ------------------------- | --------------------- | ------------- |
+lcu_info |credentials| Credentials that are used to connect to the launcher API |See [notes](#lcu_info-note)|   135.0   |
+
+#### *lcu_info* note:
+
+Data Example:
+
+```json
+{"feature":"lcu_info","category":"credentials","key":"token","value":"cmlvdDoyZ3ltZUNKN3JxNUNNdTliaGlCUlNR"}
+{"feature":"lcu_info","category":"credentials","key":"port","value":"61862"}
+```
+
+@@
+
+@@InfoUpdate
+## `game_info`
+
+### Info Updates
+
+key   | Category    | Values                    | Notes                 | Since Version |
+------| ------------| ------------------------- | --------------------- | ------------- |
+game_version |game_info| Numerical version of the client. |See [notes](#game_version-note)|   137.0       |
+close_client_during_game |game_info| True / False (Bool) |See [notes](#close_client_during_game-note)|   137.0       |
+selected_game |game_info| The selected game by the player |See [notes](#selected_game-note)|   218.0       |
+selected_positions |game_info| The first and second selected position |See [notes](#selected_positions-note)|   219.0       |
+
+#### *game_version* note:
+
+Data Example:
+
+```json
+{"feature":"game_info","category":"game_info","key":"game_version","value":"9.21.2940813"}
+```
+
+#### *close_client_during_game* note
+
+Data Example:
+
+```json
+{"feature":"game_info","category":"game_info","key":"close_client_during_game","value":false}
+```
+```json
+{"feature":"game_info","category":"game_info","key":"close_client_during_game","value":true}
+```
+
+#### *selected_game* note
+
+Possible values:
+
+- `tft` - this is a Teamfight Tactics game
+- `lol` - this is a League of Legends game
+- `arena` - this is a League of Legends Arena game
+
+Data Example:
+
+```json
+{"feature":"game_info","category":"game_info","key":"selected_game","value":"tft"}
+{"feature":"game_info","category":"game_info","key":"selected_game","value":"lol"}
+{"feature":"game_info","category":"game_info","key":"selected_game","value":"arena"}
+```
+
+#### *selected_positions* note
+
+Possible values:
+
+* TOP
+* JUNGLE
+* MIDDLE
+* BOTTOM
+* UTILITY (SUPPORT in the UI)
+* FILL
+
+Data Example:
+
+```json
+{"feature":"game_info","category":"game_info","key":"selected_positions","value":"{\"first_preference\": \"TOP\", \"second_preference\": \"JUNGLE\"}"}
+```
+
+@@
+
+@@InfoUpdate
+## `clash`
+
+### Info Updates
+
+key   | Category    | Values                    | Notes                 | Since Version |
+------| ------------| ------------------------- | --------------------- | ------------- |
+tournament_summary | clash       | Summary of clash match |                       |   153.0       |
+
+@@

@@ -24,7 +24,6 @@ import useIsBrowser from '@docusaurus/useIsBrowser';
 import { ActiveCategoryContext } from '../../contexts/active-context';
 import SidebarLink from './utils/sidebar-link';
 import SidebarLinkHook from './utils/sidebar-link-hook';
-import { CollapseProvider } from '../../contexts/collapse-context';
 
 function CategoryItem(
   props: {
@@ -67,7 +66,7 @@ function CategoryItem(
     SidebarLinkHook(itemWithFallback, initialHref, path);
 
   const [explicitlyCollapsed, setExplicitlyCollapsed] = useState(
-    !isCurrentPage && initiallyCollapsed,
+    !isActiveItem && !isCurrentPage && initiallyCollapsed,
   );
 
   const activeCategory = useContext(ActiveCategoryContext);

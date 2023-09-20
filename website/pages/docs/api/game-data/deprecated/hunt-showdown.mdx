@@ -1,0 +1,75 @@
+---
+id: hunt-showdown
+image: "/img/embed/games/hunt-showdown.jpg"
+title: "Hunt: Showdown Game events"
+hide_title: true
+draft: true
+sidebar_label: "Hunt: Showdown"
+sidebar_position: 0
+sidebar_custom_props:
+  tags:
+    overwolf_platform: true
+    electron_platform: false
+---
+
+<!-- GENERATED USING /scripts/generate.js -->
+
+<head>
+  <meta name="keywords" content="API for Hunt: Showdown, Hunt: Showdown API, SDK for Hunt: Showdown, Hunt: Showdown SDK"/>
+</head>
+
+<GameInfo gameId={21328} page="docs" />
+
+Please read the [overwolf.games.events](/api/game-data) documentation page to learn how to use Overwolf game events.
+
+## Sample Apps
+* [Hunt Showdown game events sample app](https://github.com/overwolf/events-sample-apps)
+
+## Available Features
+
+* [gep_internal](#gep_internal)
+* [game_info](#game_info)
+
+## Game event status
+
+It is highly recommended to communicate errors and warnings to app users. 
+
+Check the current game event status [here](/status/). Alternately, you can easily check that status from your app itself, [using our API](/topics/using-events/how-to-check-events-status-from-app).
+
+## `gep_internal`
+
+### Info Updates
+
+key          | Category    | Values                    | Notes                 | Since GEP Ver. |
+------------ | ------------| ------------------------- | --------------------- | ------------- | 
+gep_internal | gep_internal| Local + Public version number|See [notes](#gep_internal-note)|   143.0       |
+
+#### *gep_internal* note
+
+Data Example:
+
+```json
+{"info":{"gep_internal":{"version_info":"{"local_version":"157.0.1","public_version":"157.0.1","is_updated":true}"}},"feature":"gep_internal"}
+```
+
+## `game_info`
+
+### Info Updates
+
+key          | Category    | Values                    | Notes                 | Since GEP Ver. |
+------------ | ------------| ------------------------- | --------------------- | ------------- | 
+scene | game_info | The name of the current scene. |See [notes](#scene-note) |   190.0       |
+
+#### *scene* note
+
+Data Example:
+
+```json
+{"feature":"game_info","category":"game_info","key":"scene","value":"Lobby"}
+```
+List of possible values:
+* OfflineLobby
+* Lobby
+* Leaving
+* Loading
+* Game

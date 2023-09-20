@@ -1,0 +1,108 @@
+---
+id: legends-of-runeterra
+image: "/img/embed/games/legends-of-runeterra.jpg"
+title: Legends of Runeterra Game events
+hide_title: true
+sidebar_label: Legends of Runeterra
+sidebar_position: 0
+sidebar_custom_props:
+  tags:
+    overwolf_platform: true
+    electron_platform: false
+---
+
+<!-- GENERATED USING /scripts/generate.js -->
+
+<head>
+  <meta name="keywords" content="API for Legends of Runeterra, Legends of Runeterra API, SDK for Legends of Runeterra, Legends of Runeterra SDK"/>
+</head>
+
+<GameInfo gameId={21620} page="docs" />
+
+Please read the [overwolf.games.events](/api/game-data) documentation page to learn how to use Overwolf game events.
+
+## Sample Apps
+* [Legends of Runeterra game events sample app](https://github.com/overwolf/events-sample-apps)
+
+An official Riot API is available at the following link - https://developer.riotgames.com/docs/lor.
+If you have further requests for events that you require please contact us at developers@overwolf.com
+
+## Available Features
+
+* [game_client_data](#game_client_data)
+* [match_info](#match_info)
+
+## `game_client_data`
+
+### Info Updates
+
+key            | Category         | Values                               | Notes                            | Since GEP Ver. |
+-------------- | -----------------| ------------------------------------ | -------------------------------- | -------------  | 
+active_deck    | game_client_data | The current active deck (deck that is being played) | See [notes](#active_deck-note)   | 146.0.7 |
+card_positions | game_client_data | The card positions on the screen.    | See [notes](#card_positions-note)|   146.0.7      |
+game_result    | game_client_data | Victory / Defeat                     | See [notes](#game_result-note)   |   146.0.7      |
+
+#### *active_deck* note
+
+Describe the player's current deck in an active game.
+
+Data Example:
+
+```json
+// player is not in an active game
+{"active_deck":"{\"DeckCode\":null,\"CardsInDeck\":null}"}},"feature":"game_client_data"}
+
+// player is in an active game
+{"active_deck":"{\"DeckCode\":\"CEBAGAIDFYYTOBABAIBAQDZZAICACAYEEQVDMBIBAIFQYJBFHAAQCAICEE\",\"CardsInDeck\":{\"01NX046\":3,\"01NX049\":3,\"01NX055\":3,\"01IO002\":3,\"01IO008\":3,\"01IO015\":3,\"01IO057\":3,\"01NX004\":2,\"01NX036\":2,\"01NX042\":2,\"01NX054\":2,\"01IO011\":2,\"01IO012\":2,\"01IO036\":2,\"01IO037\":2,\"01IO056\":2,\"01IO033\":1}}"}},"feature":"game_client_data"}
+```
+
+#### *card_positions* note
+
+Determine the position of the cards in the collection, deck builder, Expedition drafts, and active games. returns the position of the cards at the time of the request.
+
+Data Example:
+
+```json
+{"PlayerName":null,"OpponentName":null,"GameState":"Menus","Screen":{"ScreenWidth":1920,"ScreenHeight":1080},"Rectangles":[]}"}
+
+//OR 
+
+{"PlayerName":"Sh4rgaas","OpponentName":"decks_mediumelise_name","GameState":"InProgress","Screen":{"ScreenWidth":1920,"ScreenHeight":1080},"Rectangles":[{"CardID":1510579131,"CardCode":"face","TopLeftX":179,"TopLeftY":481,"Width":117,"Height":117,"LocalPlayer":true},{"CardID":1487329530,"CardCode":"face","TopLeftX":179,"TopLeftY":716,"Width":117,"Height":117,"LocalPlayer":false}]}"}
+```
+
+#### *game_result* note
+
+Determine the result of the player's most recently completed game.
+The request returns an int for GameID and a boolean for LocalPlayerWon.
+
+Data Example:
+
+```json
+{"GameID":2,"LocalPlayerWon":false}"}
+```
+
+## `match_info`
+
+### Events
+
+Event      | Event Data  | Fired When          | Notes              | Since GEP Ver. |
+-----------| ------------| ------------------- | ------------------ | --------------|
+match_start |null|When a match started. |See [notes](#match_start-note)         |     218.0      | 
+match_end |null|When a match ended. | See [notes](#match_end-note)        |     218.0      | 
+
+
+#### *match_start* note
+
+Data Example:
+
+```json
+{"events":[{"name":"match_start","data":""}]}
+```
+
+#### *match_end* note
+
+Data Example:
+
+```json
+{"events":[{"name":"match_end","data":""}]}
+```

@@ -1,0 +1,153 @@
+---
+id: call-of-duty-warzone-caldera
+image: "/img/embed/games/call-of-duty-warzone-caldera.jpg"
+title: "Call of Duty: Warzone Caldera Game events"
+hide_title: true
+sidebar_label: "Call of Duty: Warzone Caldera"
+sidebar_position: 0
+sidebar_custom_props:
+  tags:
+    overwolf_platform: true
+    electron_platform: false
+---
+
+<!-- GENERATED USING /scripts/generate.js -->
+
+<head>
+  <meta name="keywords" content="API for Call of Duty: Warzone Caldera, Call of Duty: Warzone Caldera API, SDK for Call of Duty: Warzone Caldera, Call of Duty: Warzone Caldera SDK"/>
+</head>
+
+<GameInfo gameId={21626} page="docs" />
+
+Please read the [overwolf.games.events](/api/game-data) documentation page to learn how to use Overwolf game events.
+
+:::warning
+* Support for these events is for English only and for 16:9 (1920&#42;1080, 2K & 4K) and 16:10 (1920&#42;1200, 2K & 4K) screen resolutions on , the game window must be visible and should run with native screen resolution.
+* This game requires enabling exclusive mode on your OW app's windows. Read more about OW [exclusive mode](/topics/best-practices/exclusive-mode).
+In addition, when developing your app, you must comply with Activision’s Call of Duty:Warzone terms and conditions. Supporting que dodging, interfering with matchmaking or any such behavior is strictly prohibited, and will not be approved. If you have any doubt, please contact us directly before starting development.
+For more information check our [Game compliance principles](/start/getting-started/game-compliance)
+
+:::
+
+## Sample Apps
+* [Warzone game events sample app](https://github.com/overwolf/events-sample-apps)
+
+## Available Features
+
+* [gep_internal](#gep_internal)
+* [match_info](#match_info)
+* [game_info](#game_info)
+* [kill](#kill)
+* [assist](#assist)
+* [death](#death)
+
+## Game event status
+
+It is highly recommended to communicate errors and warnings to app users. 
+
+Check the current game event status [here](/status/). Alternately, you can easily check that status from your app itself, [using our API](/topics/using-events/how-to-check-events-status-from-app).
+
+## gep_internal
+
+### Info Updates
+
+key          | Category    | Values                    | Notes                 | Since GEP Ver. |
+------------ | ------------| ------------------------- | --------------------- | ------------- | 
+gep_internal | gep_internal| Local + Public version number|See [notes](#gep_internal-note)|   143.0       |
+
+#### *gep_internal* note
+
+Data Example:
+
+```json
+{"info":{"gep_internal":{"version_info":"{"local_version":"157.0.1","public_version":"157.0.1","is_updated":true}"}},"feature":"gep_internal"}
+```
+
+## match_info
+
+### Events
+
+Event        | Event Data        | Fired When   | Notes              | Since GEP Ver. |
+-------------| ------------------| ------------ | ------------------ | ---------------|
+match_start  | null              | Match started.| See [notes](#match_start-note)     | 157.0 |
+match_end    | null              | Match ended. | See [notes](#match_end-note)        | 157.0 |
+
+#### *match_start* note
+
+Data Example:
+
+```json
+{"events":[{"name":"match_start","data":null}]}
+```
+
+#### *match_end* note
+
+Data Example:
+
+```json
+{"events":[{"name":"match_end","data":null}]}
+```
+
+## game_info
+
+### Info Updates
+
+key          | Category    | Values                    | Notes                 | Since GEP Ver. |
+------------ | ------------| ------------------------- | --------------------- | ------------- | 
+battlenet_tag| game_info   | Local player's Battlenet tag. |See [notes](#battlenet_tag-note)|   157.0       |
+
+#### *battlenet_tag* note
+
+Data Example:
+
+```json
+{"info":{"game_info":{"battlenet_tag":"Shargaas#2430"}},"feature":"game_info"}
+```
+
+## kill
+
+### Events
+
+Event        | Event Data        | Fired When   | Notes              | Since GEP Ver. |
+-------------| ------------------| ------------ | ------------------ | ---------------|
+kill         | null              | Local player has performed a kill.| See [notes](#kill-note)     | 158.1 |
+
+#### *kill* note
+
+Data Example:
+
+```json
+{"events":[{"name":"kill","data":null}]}
+```
+## assist
+
+### Events
+
+Event        | Event Data        | Fired When   | Notes              | Since GEP Ver. |
+-------------| ------------------| ------------ | ------------------ | ---------------|
+assist    | null              | Local player has performed an assist.| See [notes](#assist-note)     | 205.0 |
+
+#### *assist* note
+
+Assist is only available for 1920:1080 resolniotn (16:9) and 1920:1200 (16:10).
+
+Data Example:
+
+```json
+{"events":[{"name":"assist","data":""}]}
+```
+## death
+
+### Events
+
+Event        | Event Data        | Fired When   | Notes              | Since GEP Ver. |
+-------------| ------------------| ------------ | ------------------ | ---------------|
+death        | null              | Local player has died.| See [notes](#death-note)     | 158.1 |
+
+#### *death* note
+
+Data Example:
+
+```json
+{"events":[{"name":"death","data":null}]}
+```

@@ -6,10 +6,6 @@ const compliancePath = "../website/pages/docs/start/game-compliance/"
 
 // generator code
 
-function getIfExists(val, path) {
-    return val[path]
-}
-
 const GamesMetaData = {}
 
 metaData.forEach(function (
@@ -26,11 +22,9 @@ metaData.forEach(function (
 
     val.path = `/status/${fullPath}`;
     val.compliance = compliant ? `/start/game-compliance/${val.compliance ?? path}` : undefined;
-    val.docs = `/api/games/${isLauncher ? 'launchers/' : ''}events/${val.docs ?? path}`
+    val.docs = `/api/game-data/${isLauncher ? 'supported-launchers' : 'supported-games'}/${val.docs ?? path}`
     val.iconUrl = `/img/games-logos/${fullPath}.png`;
     val.iconLargeUrl = `/img/games-logos/large/${fullPath}.png`;
-    if(val.electron) val.electron = `/api/electron/game-events/${val.docs ?? path}`;
-
 
     GamesMetaData[id] = val;
 })

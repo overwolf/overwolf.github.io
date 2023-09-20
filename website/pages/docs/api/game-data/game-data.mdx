@@ -1,0 +1,299 @@
+---
+id: game-data
+image: "/img/embed/api-docs.jpg"
+title: Game Events Provider
+sidebar_custom_props:
+  tags:
+    overwolf_platform: true
+    electron_platform: true
+---
+
+The **Overwolf Game Events Provider** (**GEP**) is a part of the Overwolf API, capable of notifying
+Apps of real-time changes in the state of supported games and their data (hence, `Game Data`).
+
+This is mainly done using the following two forms of **Game Data** (also sometimes confusingly referred to as **Game Events**):
+
+## Game Events
+
+The simpler of the two, Game Events fire when a fleeting occurance of interest happens within
+the game. When relevant, they may also contain specific data, further describing
+the event.
+
+<details>
+<summary>Example Game Event</summary>
+
+```json title='A player was just killed, with the username "TestUser"'
+{
+  "name": "player_killed",
+  "data": {
+    "username": "TestUser"
+  }
+}
+```
+
+</details>
+
+## Game Info
+
+Game Info describes persistent game data, which updates as the game does. This can
+be anything from `player` data, to details of the current `match`, and more.
+
+Game Info is stored in a dictionary, which can be obtained at any time using the API. On top of that,
+whenever a relevant Game Info item **changes**, an [`infoUpdated`][infoUpdated] event is fired,
+containing the new Game Info data.
+
+### Game Info Resetting
+
+[`infoUpdated`][infoUpdated] events only fire when the Game Info value **changes**.
+This means that, in some cases, they could become unreliable for detecting the right
+game states, since the game's new state may not have **changed** compared to what it was before.
+
+<details>
+<summary>Example Game Info cancellation</summary>
+
+Assume that we have a `score` Game Info. This value is set to `0` at the beginning
+of every match.
+
+```json title='A match just started, score was set to "0"'
+...
+  "score": 0
+...
+```
+
+Now, it could be possible that a match will end with the `score` still being set to `0`.
+As a result, when the next match starts, the `score` will be set to `0`, and will not fire an
+[`infoUpdated`][infoUpdated] event.
+
+</details>
+
+To stop this from happening, Game Info resetting exists.
+
+More specifically - when the data is "invalidated", it will be set to an illegal, consistent, meaningless value. That way,
+the next time that the data changes to a legal value, it will inherently be different
+from the former value, and an [`infoUpdated`][infoUpdated] event will fire.
+
+<details>
+<summary>Example Game Info reset</summary>
+
+To stop the issue from the last example from happening, when the match ends,
+we set `score`, and any other match-specific data, to `null`:
+
+```json title='First match just ended, score is set to "null"'
+...
+  "score": null
+...
+```
+
+Now, when the next match starts, score will change from `null` to `0`, causing an
+[`infoUpdated`][infoUpdated] event to properly fire.
+
+```json title='Second match just started, score is set to "0"'
+...
+  "score": 0
+...
+```
+
+</details>
+
+## Working with Game Data
+
+In order to streamline utilize the aforementioned concepts, we have created a few
+utility APIs, which every Overwolf GEP implementation is built around.
+
+### Game Features
+
+<SkipMe type="TODO">
+Tag as "not relevant for sdk games"
+</SkipMe>
+
+Often, many separate Game Events and Game Info items may exist, even though
+they all relate to the same general functionality (hence `Feature`) in the game.
+
+When interacting with the Overwolf GEP API, Game Features will often be used instead
+of the individual Game Event/Game Info item names (for example, when [setting the required Game Features](#set-required-features))
+
+<details>
+<summary>Example Game Feature</summary>
+
+For example, one game's `match` may have many different game data items:
+- Match settings
+- Match score
+- Match start/end events
+- Etc.
+
+These would often make more sense as several different Game Events & Game Info items,
+to make sure that, for example, the currently selected `map`, does not behave as
+"updated" every single time that the `score` for one of the teams does.
+
+However, the game data itself, does make much more sense when grouped, and is often
+used together. As such, `match` would be defined as a **Game Feature** when communicating
+with the Overwolf GEP, grouping within it the different Game Data it refers to.
+
+</details>
+
+### Set Required Features
+
+By default, the Overwolf GEP does not actually listen for any changes in the game.
+Instead, different [Game Features](#game-features) have to be specifically subscribed to,
+and only then will they actually work/fire.
+
+This has a few perks:
+- Direct feedback for the App as to what it can expect in terms of data (*under some circumstances, some Game Features [may become temporarily unavailable](#event-status)*).
+- Only required Game Features get fired.
+- GEP will not even need to run in games where no App is using it.
+
+However, it does also mean that you **must** set the required Game Features for
+your App before GEP beings to work (ideally, as soon as the game itself launches).
+
+:::warning Run order matters!
+**In some games, the longer it takes between starting the game and when GEP is registered, the
+higher the odds of data issues (missing events, unreliable data, etc) become\*.**  
+*\* This is especially critical if the App was started in the middle of a game session.
+It is recommended that you show a relevant indication to your users in those cases.*
+:::
+
+To set the required features, you must call the relevant API method. More specifically:
+
+<Tabs groupId="frameworks">
+<TabItem value="overwolf-platform" label="Overwolf Platform">
+
+In order to subscribe to Game Data on the Overwolf Platform,
+simply call\* [`overwolf.games.events.setRequiredFeatures()`](/api/games/events#setrequiredfeaturesfeatures-callback).
+
+*\* Do note that - as mentioned in the method's documentation - at least currently,
+this call may fail, even if the game was already started, and it should be retried
+several times until it succeeds (or runs out of attempts).*
+
+</TabItem>
+
+<TabItem value="electron-platform" label="Overwolf Electron">
+
+In order to subscribe to Game Data on [ow-electron](/tools/ow-electron),
+simply call
+```js
+app.overwolf.packages.gep.setRequiredFeatures(features);
+```
+
+<SkipMe type="TODO">
+Wire the above to the electron gep docs once ready.
+</SkipMe>
+
+</TabItem>
+</Tabs>
+
+### Listen for new Game Events
+
+To subscribe to new Game Events, you must add a listener to the relevant API Event. More specifically:
+
+<Tabs groupId="frameworks">
+<TabItem value="overwolf-platform" label="Overwolf Platform">
+
+In order to subscribe to new Game Events on the Overwolf Platform,
+simply add a listener to [`overwolf.games.events.onNewEvents`](/api/games/events#onnewevents).
+
+</TabItem>
+
+<TabItem value="electron-platform" label="Overwolf Electron">
+
+In order to subscribe to new Game Events on [ow-electron](/tools/ow-electron),
+simply call:
+```js
+app.overwolf.packages.gep.on('new-game-event', (e, gameId, ...args) => {
+  // your code here
+});
+```
+
+<SkipMe type="TODO">
+Wire the above to the electron gep docs once ready.
+</SkipMe>
+
+</TabItem>
+</Tabs>
+
+
+### Obtain current Game Info
+
+To obtain the current Game Info, you must call the relevant API method. More specifically:
+
+<Tabs groupId="frameworks">
+<TabItem value="overwolf-platform" label="Overwolf Platform">
+
+In order to obtain the current state of the Game Info on the Overwolf Platform,
+simply add a listener to [`overwolf.games.events.getInfo()`](/api/games/events#getinfocallback).
+
+</TabItem>
+
+<TabItem value="electron-platform" label="Overwolf Electron">
+
+In order to obtain the current state of the Game Info on [ow-electron](/tools/ow-electron),
+simply call:
+```js
+app.overwolf.packages.gep.getInfo(gameId);
+```
+
+<SkipMe type="TODO">
+Wire the above to the electron gep docs once ready.
+</SkipMe>
+
+</TabItem>
+</Tabs>
+
+
+### Listen for new Game Info updates
+
+To subscribe to new Game Info updates, you must add a listener to the relevant API Event. More specifically:
+
+<Tabs groupId="frameworks">
+<TabItem value="overwolf-platform" label="Overwolf Platform">
+
+In order to subscribe to new Game Info updates the Overwolf Platform,
+simply add a listener to [`overwolf.games.events.onInfoUpdates2`](/api/games/events#oninfoupdates2).
+
+</TabItem>
+
+<TabItem value="electron-platform" label="Overwolf Electron">
+
+In order to subscribe to new Game Info updates on [ow-electron](/tools/ow-electron),
+simply call:
+```js
+app.overwolf.packages.gep.on('new-info-update', (e, gameId, ...args) => {
+  // your code here
+});
+```
+
+<SkipMe type="TODO">
+Wire the above to the electron gep docs once ready.
+</SkipMe>
+
+</TabItem>
+</Tabs>
+
+<SkipMe type="TODO">
+### Listen for GEP Errors
+</SkipMe>
+
+## Event Status
+
+Some events may ocassionally become unavailable. This can be caused by several things:
+- Recent game update causing issues
+- A request by the relevant game studio to disable this event
+- Potential discrepencies/issues found with the events' data/reliability
+- Etc
+
+Because the Overwolf GEP integration works across many moving parts like that,
+temporary unavailabilty is not a question of "if?", but rather of "when, and for how long?".
+
+However, we have created several different mitigations for this, one of which is the
+"Event Status Endpoints". These are public API endpoints supplied by Overwolf,
+detailing the current uptime status of individual [Game Features](#game-features)
+per game.
+
+Using these endpoints, it is possible for your app to react in real time to the
+status of different events, be it:
+- Toggle specific app functionality
+- Toggle certain less reliable/desirable fallback logic
+- Provide users an indication of the potential issues
+
+For more details, see [Verifying events for your app](/topics/using-events/how-to-check-events-status-from-app).
+
+[infoUpdated]: #listen-for-new-game-info-updates

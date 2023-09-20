@@ -434,10 +434,10 @@ replay_video_start_time |  number                           |                   
 
 #### Find all the highlights of a specific match
 
-The `match_id` field from this event is equal to the `pseudo_match_id` from [match_info](../games/events/league-of-legends#match_info).
+The `match_id` field from this event is equal to the `pseudo_match_id` from [match_info](/api/game-data/supported-games/league-of-legends#match_info).
 You can cross-reference these two id's in order to find all the highlights of a certain match. (you should NOT use the `match_internal_id` as it's an OW internal ID)
 
-That works for all the supported games, except [LOL](../games/events/league-of-legends): in LOL the `match_id` from [onHighlightsCaptured](#onhighlightscaptured) is not equal to `pseudo_match_id` - it's the real RIOT match ID. So if you wanty to find the highlights of a specific LOL match, you should cross-reference this `match_id` with the `matchId` from the [matchState](../games/events/league-of-legends#matchstate).
+That works for all the supported games, except [LOL](/api/game-data/supported-games/league-of-legends): in LOL the `match_id` from [onHighlightsCaptured](#onhighlightscaptured) is not equal to `pseudo_match_id` - it's the real RIOT match ID. So if you wanty to find the highlights of a specific LOL match, you should cross-reference this `match_id` with the `matchId` from the [matchState](/api/game-data/supported-games/league-of-legends#matchstate).
 
 
 ## raw_events Object

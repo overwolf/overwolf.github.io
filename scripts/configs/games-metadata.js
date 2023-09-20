@@ -151,7 +151,6 @@ const metaData = [
         subVariants: [ 215701 ],
         path: "teamfight-tactics",
         name: "Teamfight Tactics",
-        electron: "teamfight-tactics"
     },
     {
         id: 215701,
@@ -161,7 +160,6 @@ const metaData = [
         docs: "teamfight-tactics",
         path: "teamfight-tactics-public-beta",
         name: "Teamfight Tactics PBE",
-        electron: "teamfight-tactics",
         variant: "PBE"
     },
     {
