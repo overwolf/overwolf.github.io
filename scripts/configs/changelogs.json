@@ -1,13 +1,13 @@
 {
     "latest": {
-        "date": "July 2023",
-        "path": "2023/july",
-        "name": "230"
+        "date": "August 2023",
+        "path": "2023/august",
+        "name": "233"
     },
     "deploying": {
-        "date": "July 2023",
-        "path": "2023/july",
-        "name": "230"
+        "date": "August 2023",
+        "path": "2023/august",
+        "name": "233"
     },
     "dev": {
         "date": "August 2023",
@@ -25,9 +25,9 @@
         "name": "23.6.0"
     },
     "docs": {
-        "date": "September 14th 2023",
-        "path": "2023/september#september-14th-2023---installer-documentation-first-bite",
-        "name": "OBS Docs First Bite"
+        "date": "September 21st 2023",
+        "path": "2023/september#september-21st-2023---live-game-data-documentation",
+        "name": "Live Game Data Documentation"
     },
     "console": {
         "date": "March 9th 2023",
