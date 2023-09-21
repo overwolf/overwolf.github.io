@@ -106,7 +106,21 @@ Listen to the [overwolf.settings.hotkeys.onChanged](/api/settings/hotkeys#onchan
 
 ## Reassign Hotkeys
 
-It is possible to reassign hotkeys directly from apps, or, through the Overwolf client settings page.
+We recommend providing users a method to edit their Hotkeys, directly from within the App.
+
+For that end, you can utilize the following APIs:
+- [`overwolf.settings.hotkeys.get()`](/api/settings/hotkeys#getcallback) - Get the current values of your App's Hotkeys.
+- [`overwolf.settings.hotkeys.assign()`](/api/settings/hotkeys#assignhotkey-callback) - Assign a new value for an App Hotkey.
+- [`overwolf.settings.hotkeys.onChanged`](/api/settings/hotkeys#onchanged) - Fires when an App Hotkey's value changes.
+- [`overwolf.settings.hotkeys.unassign()`](/api/settings/hotkeys#unassignhotkey-callback) - Unassigns the specified App Hotkey.
+
+When wired together correctly, it is possible to create a complete Hotkeys editor within your App's settings screen,
+allowing your users to easily customize your App.
+
+![Hotkey Editing Example](/assets/topics/best-practices/hotkeys-best-practices/edit-hotkeys.png)
+*Example App Hotkeys editor example from the [Outplayed](https://www.overwolf.com/oneapp/Overwolf-Outplayed) settings screen.*
+
+<SkipMe type="find-better-home">
 
 What you can do is place a direct link to the relevant settings page, into the hotkeys of a specific game settings, using:
 
@@ -115,6 +129,8 @@ What you can do is place a direct link to the relevant settings page, into the h
 Or, you can use the [overwolf.settings.hotkeys.assign()](/api/settings/hotkeys#assignhotkey-callback) and [unassign()](/api/settings/hotkeys#unassignhotkey-callback) APIs.
 
 > It's possible to even use left or right arrows for hotkeys. To do so, you should use the code `Left` or `Right` in your manifest.json.
+
+</SkipMe>
 
 ## Pass through 
 
