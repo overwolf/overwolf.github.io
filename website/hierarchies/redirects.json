@@ -63,7 +63,8 @@
     "to": "/api/live-game-data/supported-games/apex-legends",
     "from": [
       "/docs/api/overwolf-games-events-apex-legends",
-      "/api/games/events/apex-legends"
+      "/api/games/events/apex-legends",
+      "/api/game-data/supported-games/apex-legends"
     ]
   },
   {
@@ -86,105 +87,120 @@
       "/docs/api/overwolf-games-events-fm2022",
       "/api/games/events/hunt-showdown",
       "/docs/api/overwolf-games-events-hunt-showdown",
-      "/api/games/events/deprecated"
+      "/api/games/events/deprecated",
+      "/api/game-data/deprecated"
     ]
   },
   {
     "to": "/api/live-game-data/supported-games/counter-strike-global-offensive",
     "from": [
       "/docs/api/overwolf-games-events-csgo",
-      "/api/games/events/counter-strike-global-offensive"
+      "/api/games/events/counter-strike-global-offensive",
+      "/api/game-data/supported-games/counter-strike-global-offensive"
     ]
   },
   {
     "to": "/api/live-game-data/supported-games/dota-2",
     "from": [
       "/docs/api/overwolf-games-events-dota2",
-      "/api/games/events/dota-2"
+      "/api/games/events/dota-2",
+      "/api/game-data/supported-games/dota-2"
     ]
   },
   {
     "to": "/api/live-game-data/supported-games/escape-from-tarkov",
     "from": [
       "/docs/api/overwolf-games-events-escape-from-tarkov",
-      "/api/games/events/escape-from-tarkov"
+      "/api/games/events/escape-from-tarkov",
+      "/api/game-data/supported-games/escape-from-tarkov"
     ]
   },
   {
     "to": "/api/live-game-data/supported-games/eternal-return",
     "from": [
       "/docs/api/overwolf-games-events-eternal-return",
-      "/api/games/events/eternal-return"
+      "/api/games/events/eternal-return",
+      "/api/game-data/supported-games/eternal-return"
     ]
   },
   {
     "to": "/api/live-game-data/supported-games/final-fantasy-xiv",
     "from": [
       "/docs/api/overwolf-games-events-ff-xiv",
-      "/api/games/events/final-fantasy-xiv"
+      "/api/games/events/final-fantasy-xiv",
+      "/api/game-data/supported-games/final-fantasy-xiv"
     ]
   },
   {
     "to": "/api/live-game-data/supported-games/fortnite",
     "from": [
       "/docs/api/overwolf-games-events-fortnite",
-      "/api/games/events/fortnite"
+      "/api/games/events/fortnite",
+      "/api/game-data/supported-games/fortnite"
     ]
   },
   {
     "to": "/api/live-game-data/supported-games/halo-infinite",
     "from": [
       "/docs/api/overwolf-games-events-halo-infinite",
-      "/api/games/events/halo-infinite"
+      "/api/games/events/halo-infinite",
+      "/api/game-data/supported-games/halo-infinite"
     ]
   },
   {
     "to": "/api/live-game-data/supported-games/hearthstone",
     "from": [
       "/docs/api/overwolf-games-events-hearthstone",
-      "/api/games/events/hearthstone"
+      "/api/games/events/hearthstone",
+      "/api/game-data/supported-games/hearthstone"
     ]
   },
   {
     "to": "/api/live-game-data/supported-games/heroes-of-the-storm",
     "from": [
       "/docs/api/overwolf-games-events-hots",
-      "/api/games/events/heroes-of-the-storm"
+      "/api/games/events/heroes-of-the-storm",
+      "/api/game-data/supported-games/heroes-of-the-storm"
     ]
   },
   {
     "to": "/api/live-game-data/supported-games/league-of-legends",
     "from": [
       "/docs/api/overwolf-games-events-lol",
-      "/api/games/events/league-of-legends"
+      "/api/games/events/league-of-legends",
+      "/api/game-data/supported-games/league-of-legends"
     ]
   },
   {
     "to": "/api/live-game-data/supported-games/legends-of-runeterra",
     "from": [
       "/docs/api/overwolf-games-events-lor",
-      "/api/games/events/legends-of-runeterra"
+      "/api/games/events/legends-of-runeterra",
+      "/api/game-data/supported-games/legends-of-runeterra"
     ]
   },
   {
     "to": "/api/live-game-data/supported-games/minecraft",
     "from": [
       "/docs/api/overwolf-games-events-minecraft",
-      "/api/games/events/minecraft"
+      "/api/games/events/minecraft",
+      "/api/game-data/supported-games/minecraft"
     ]
   },
   {
     "to": "/api/live-game-data/supported-games/magic-the-gathering-arena",
     "from": [
       "/docs/api/overwolf-games-events-mtga",
-      "/api/games/events/magic-the-gathering-arena"
+      "/api/games/events/magic-the-gathering-arena",
+      "/api/game-data/supported-games/magic-the-gathering-arena"
     ]
   },
   {
     "to": "/api/live-game-data/supported-games/new-world",
     "from": [
       "/docs/api/overwolf-games-events-new-world",
-      "/api/games/events/new-world"
+      "/api/games/events/new-world",
+      "/api/game-data/supported-games/new-world"
     ]
   },
   {
@@ -192,14 +208,16 @@
     "from": [
       "/docs/api/overwolf-games-events-overwatch",
       "/api/games/events/overwatch",
-      "/api/games/events/overwatch-2"
+      "/api/games/events/overwatch-2",
+      "/api/game-data/supported-games/overwatch-2"
     ]
   },
   {
     "to": "/api/live-game-data/supported-games/path-of-exile",
     "from": [
       "/docs/api/overwolf-games-events-path-of-exile",
-      "/api/games/events/path-of-exile"
+      "/api/games/events/path-of-exile",
+      "/api/game-data/supported-games/path-of-exile"
     ]
   },
   {
@@ -207,35 +225,40 @@
     "from": [
       "/docs/api/overwolf-games-events-pubg",
       "/docs/api/overwolf-games-events-pubg-lite",
-      "/api/games/events/player-unknowns-battlegrounds"
+      "/api/games/events/player-unknowns-battlegrounds",
+      "/api/game-data/supported-games/player-unknowns-battlegrounds"
     ]
   },
   {
     "to": "/api/live-game-data/supported-games/rainbow-six-siege",
     "from": [
       "/docs/api/overwolf-games-events-rainbow-six",
-      "/api/games/events/rainbow-six-siege"
+      "/api/games/events/rainbow-six-siege",
+      "/api/game-data/supported-games/rainbow-six-siege"
     ]
   },
   {
     "to": "/api/live-game-data/supported-games/rocket-league",
     "from": [
       "/docs/api/overwolf-games-events-rocket-league",
-      "/api/games/events/rocket-league"
+      "/api/games/events/rocket-league",
+      "/api/game-data/supported-games/rocket-league"
     ]
   },
   {
     "to": "/api/live-game-data/supported-games/starcraft-2",
     "from": [
       "/docs/api/overwolf-games-events-sc2",
-      "/api/games/events/starcraft-2"
+      "/api/games/events/starcraft-2",
+      "/api/game-data/supported-games/starcraft-2"
     ]
   },
   {
     "to": "/api/live-game-data/supported-games/splitgate-arena-warfare",
     "from": [
       "/docs/api/overwolf-games-events-splitgate",
-      "/api/games/events/splitgate-arena-warfare"
+      "/api/games/events/splitgate-arena-warfare",
+      "/api/game-data/supported-games/splitgate-arena-warfare"
     ]
   },
   {
@@ -243,35 +266,40 @@
     "from": [
       "/docs/api/overwolf-games-events-tft",
       "/api/games/events/teamfight-tactics",
-      "/api/electron/game-events/teamfight-tactics"
+      "/api/electron/game-events/teamfight-tactics",
+      "/api/game-data/supported-games/teamfight-tactics"
     ]
   },
   {
     "to": "/api/live-game-data/supported-games/valheim",
     "from": [
       "/docs/api/overwolf-games-events-valheim",
-      "/api/games/events/valheim"
+      "/api/games/events/valheim",
+      "/api/game-data/supported-games/valheim"
     ]
   },
   {
     "to": "/api/live-game-data/supported-games/valorant",
     "from": [
       "/docs/api/overwolf-games-events-valorant",
-      "/api/games/events/valorant"
+      "/api/games/events/valorant",
+      "/api/game-data/supported-games/valorant"
     ]
   },
   {
     "to": "/api/live-game-data/supported-games/call-of-duty-vanguard",
     "from": [
       "/docs/api/overwolf-games-events-vanguard",
-      "/api/games/events/call-of-duty-vanguard"
+      "/api/games/events/call-of-duty-vanguard",
+      "/api/game-data/supported-games/call-of-duty-vanguard"
     ]
   },
   {
     "to": "/api/live-game-data/supported-games/warframe",
     "from": [
       "/docs/api/overwolf-games-events-warframe",
-      "/api/games/events/warframe"
+      "/api/games/events/warframe",
+      "/api/game-data/supported-games/warframe"
     ]
   },
   {
@@ -279,28 +307,32 @@
     "from": [
       "/docs/api/overwolf-games-events-warzone",
       "/api/games/events/call-of-duty-warzone",
-      "/api/games/events/call-of-duty-warzone-caldera"
+      "/api/games/events/call-of-duty-warzone-caldera",
+      "/api/game-data/supported-games/call-of-duty-warzone-caldera"
     ]
   },
   {
     "to": "/api/live-game-data/supported-games/world-of-tanks",
     "from": [
       "/docs/api/overwolf-games-events-wot",
-      "/api/games/events/world-of-tanks"
+      "/api/games/events/world-of-tanks",
+      "/api/game-data/supported-games/world-of-tanks"
     ]
   },
   {
     "to": "/api/live-game-data/supported-games/world-of-warcraft",
     "from": [
       "/docs/api/overwolf-games-events-wow",
-      "/api/games/events/world-of-warcraft"
+      "/api/games/events/world-of-warcraft",
+      "/api/game-data/supported-games/world-of-warcraft"
     ]
   },
   {
     "to": "/api/live-game-data/supported-games/world-of-warships",
     "from": [
       "/docs/api/overwolf-games-events-wows",
-      "/api/games/events/world-of-warships"
+      "/api/games/events/world-of-warships",
+      "/api/game-data/supported-games/world-of-warships"
     ]
   },
   {
@@ -319,7 +351,8 @@
     "to": "/api/live-game-data/supported-launchers/league-of-legends",
     "from": [
       "/docs/api/overwolf-games-launchers-events-lol",
-      "/api/games/launchers/events/league-of-legends"
+      "/api/games/launchers/events/league-of-legends",
+      "/api/game-data/supported-launchers/league-of-legends"
     ]
   },
   {
