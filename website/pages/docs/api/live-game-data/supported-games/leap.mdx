@@ -1,0 +1,146 @@
+---
+id: leap
+image: "/img/embed/games/leap.jpg"
+title: LEAP Game events
+hide_title: true
+sidebar_label: LEAP
+sidebar_position: 0
+sidebar_custom_props:
+  tags:
+    overwolf_platform: true
+    electron_platform: false
+---
+
+<!-- GENERATED USING /scripts/generate.js -->
+
+<head>
+  <meta name="keywords" content="API for LEAP, LEAP API, SDK for LEAP, LEAP SDK"/>
+</head>
+
+<GameInfo gameId={22312} page="docs" />
+
+Please read the [overwolf.games.events](/api/live-game-data) documentation page to learn how to use Overwolf game events.
+
+## Sample Apps
+* [LEAP game events sample app](https://github.com/overwolf/events-sample-apps)
+
+
+
+## Available Features
+
+* [gep_internal](#gep_internal)
+* [game_info](#game_info)
+* [match_info](#match_info)
+
+## Game event status
+
+It is highly recommended to communicate errors and warnings to app users. 
+
+Check the current game event status [here](/status/). Alternately, you can easily check that status from your app itself, [using our API](/topics/using-events/how-to-check-events-status-from-app).
+
+## `gep_internal`
+
+### Info Updates
+
+key          | Category    | Values                    | Notes                 | Since GEP Ver. |
+------------ | ------------| ------------------------- | --------------------- | ------------- | 
+gep_internal | gep_internal| Local + Public version number|See [notes](#gep_internal-note)|   143.0       |
+
+#### *gep_internal* note
+
+Data Example:
+
+```json
+{"info":{"gep_internal":{"version_info":"{"local_version":"157.0.1","public_version":"157.0.1","is_updated":true}"}},"feature":"gep_internal"}
+```
+
+## `game_info`
+
+### Info Updates
+
+key          | Category    | Values                    | Notes                 | Since GEP Ver. |
+------------ | ------------| ------------------------- | --------------------- | ------------- | 
+server_info | game_info | Information about the played server  |  See [notes](#server_info-note)  |  221.0.0 |
+
+#### *server_info* note
+
+List of parameters:
+* server_name - the name of the server
+* server_region - the region of the server
+* is_mods - if the server is supporting mods the value will be true, if not, the value will be false
+
+Data Example:
+```json
+{"info":{"game_info":{"server_info":"{\"server_name\":\"An ApexHosting Leap Server\",\"server_region\":\"useast\",\"is_mods\":false}"}},"feature":"game_info"}
+```
+
+## `match_info`
+
+### Info Updates
+
+key             | Category   | Values                     | Notes                           | Since GEP Ver.        |
+--------------- | -----------| ---------------------------|---------------------------------| ------------- |
+match_state | match_info | The current state in the match  |  See [notes](#match_state-note).  |   221.0.0             |
+match_outcome | match_info | The outcome of the match  |  See [notes](#match_outcome-note).  |   222.0.0             |
+
+### Events
+
+Event  | Event Data        | Fired When (announcement)           | Notes      | Since GEP Ver. |
+-------| ------------------| -------------------------------------| ---------- | --------------|
+match_start | null      | Match started. |See [notes](#match_start-note)|    221.0.0      |
+match_end   | null      | Match ended.   |See [notes](#match_end-note)|    221.0.0      |
+kill | null      | Match started. |See [notes](#kill-note)|    222.0.0      |
+death   | null      | Match ended.   |See [notes](#death-note)|    222.0.0      |
+
+#### *match_state* note
+
+Data Example:
+
+```json
+{"info":{"match_info":{"match_state":"InProgress"}},"feature":"match_info"}
+```
+#### *match_outcome* note
+
+Possible values: 
+
+* win
+* loss
+
+Data Example:
+
+```json
+{"info":{"match_info":{"match_outcome":"loss"}},"feature":"match_info"}
+{"info":{"match_info":{"match_outcome":"win"}},"feature":"match_info"}
+```
+
+#### *match_start* note
+
+Data Example:
+
+```json
+{"events":[{"name":"match_start","data":""}]}
+```
+
+#### *match_end* note
+
+Data Example:
+
+```json
+{"events":[{"name":"match_end","data":""}]}
+```
+#### *kill* note
+
+Data Example:
+
+```json
+{"events":[{"name":"kill","data":""}]}
+```
+
+#### *death* note
+
+Data Example:
+
+```json
+{"events":[{"name":"death","data":""}]}
+```
+

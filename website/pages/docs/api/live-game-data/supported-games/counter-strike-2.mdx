@@ -1,0 +1,106 @@
+---
+id: counter-strike-2
+image: "/img/embed/games/counter-strike-2.jpg"
+title: Counter Strike 2 Game events
+hide_title: true
+sidebar_label: Counter Strike 2
+sidebar_position: 0
+draft: true
+sidebar_custom_props:
+  tags:
+    overwolf_platform: true
+    electron_platform: false
+---
+
+<!-- GENERATED USING /scripts/generate.js -->
+
+<head>
+  <meta name="keywords" content="API for Counter Strike 2, Counter Strike 2 API, SDK for Counter Strike 2, Counter Strike 2 SDK"/>
+</head>
+
+<GameInfo gameId={22730} page="docs" />
+
+Please read the [overwolf.games.events](/api/live-game-data) documentation page to learn how to use Overwolf game events.
+
+## Sample Apps
+* [Counter Strike 2 game events sample app](https://github.com/overwolf/events-sample-apps)
+
+## Available Features
+
+* [gep_internal](#gep_internal)
+* [match_info](#match_info)
+
+## Game event status
+
+It is highly recommended to communicate errors and warnings to app users. 
+
+Check the current game event status [here](/status/). Alternately, you can easily check that status from your app itself, [using our API](/topics/using-events/how-to-check-events-status-from-app).
+
+## `gep_internal`
+
+### Info Updates
+
+key          | Category    | Values                    | Notes                 | Since GEP Ver. |
+------------ | ------------| ------------------------- | --------------------- | ------------- | 
+gep_internal | gep_internal| Local + Public version number|See [notes](#gep_internal-note)|   143.0       |
+
+#### *gep_internal* note
+
+Data Example:
+
+```json
+{"info":{"gep_internal":{"version_info":"{"local_version":"157.0.1","public_version":"157.0.1","is_updated":true}"}},"feature":"gep_internal"}
+```
+
+## `match_info`
+
+### Events
+
+Event       | Event Data   | Fired When    | Notes                                  | Since GEP Ver. |
+------------| -------------| --------------| -------------------------------------- | ---------------|
+match_start |              | In the beginning of each match| See [notes](#match_start-note) |228.0|
+match_end   |              | At the end of each match| See [notes](#match_end-note) |228.0|
+kill        |              | When the player kill another player| See [notes](#kill-note) |235.0|
+death       |              | When the player dies| See [notes](#death-note) |235.0|
+assist      |              | When the player assist a team member to kill an enemy| See [notes](#assist-note) |235.0|
+
+
+#### *match_start* note
+
+Data Example:
+
+```json
+{"events":[{"name":"match_start","data":""}]}
+```
+
+#### *match_end* note
+
+Data Example:
+
+```json
+{"events":[{"name":"match_end","data":""}]}
+```
+
+#### *kill* note
+
+Data Example:
+
+```json
+{"events":[{"name":"kill","data":""}]}
+```
+
+#### *death* note
+
+Data Example:
+
+```json
+{"events":[{"name":"death","data":""}]}
+```
+
+#### *assist* note
+
+Data Example:
+
+```json
+{"events":[{"name":"assist","data":""}]}
+```

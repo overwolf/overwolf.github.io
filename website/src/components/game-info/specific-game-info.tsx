@@ -22,7 +22,7 @@ function SpecificGameInfo(props: {
   disabledLinks: DisabledLinks;
 }) {
   const { metaData, type, disabledLinks, hasElectron } = props;
-  const { id, displayId, path, docs, compliance, variant, electron } = metaData;
+  const { id, displayId, path, docs, compliance, variant } = metaData;
 
   if (!type && !variant)
     console.error('No variant was defined for this game!', metaData);
@@ -30,7 +30,7 @@ function SpecificGameInfo(props: {
   const prefix = variant ?? type;
   const mainName = hasElectron
     ? `${type} (Electron)`
-    : (variant ? `${type} (${prefix})` : type);
+    : (variant ? `${type} (${prefix})` : `${type} (Platform)`);
 
   return (
     <>

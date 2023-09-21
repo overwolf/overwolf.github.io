@@ -229,7 +229,17 @@ const metaData = [
         id: 22700,
         path: "diablo-4",
         name: "Diablo 4"
-    }
+    },
+    {
+        id: 22730,
+        path: "counter-strike-2",
+        name: "Counter-Strike 2"
+    },
+    {
+        id: 23222,
+        path: "starfield",
+        name: "Starfield"
+    },
 ]
 
 module.exports = { metaData }

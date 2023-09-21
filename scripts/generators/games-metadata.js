@@ -22,7 +22,7 @@ metaData.forEach(function (
 
     val.path = `/status/${fullPath}`;
     val.compliance = compliant ? `/start/game-compliance/${val.compliance ?? path}` : undefined;
-    val.docs = `/api/game-data/${isLauncher ? 'supported-launchers' : 'supported-games'}/${val.docs ?? path}`
+    val.docs = `/api/live-game-data/${isLauncher ? 'supported-launchers' : 'supported-games'}/${val.docs ?? path}`
     val.iconUrl = `/img/games-logos/${fullPath}.png`;
     val.iconLargeUrl = `/img/games-logos/large/${fullPath}.png`;
 
