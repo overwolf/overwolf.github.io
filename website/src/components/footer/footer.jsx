@@ -65,7 +65,7 @@ const Footer = (props) => {
                 <li><a href="/api/changelogs/roadmap">Roadmap</a></li>
                 <li><a href="//medium.com/overwolf" target="_blank">Developers Blog</a></li>
                 <li><a href="//www.overwolf.com/appstore" target="_blank">Overwolf Appstore</a></li>
-                <li><a href="//www.overwolf.com/brands" target="_blank">Advertise on Overwolf</a></li>
+                <li><a href="//www.overwolf.com/ads/" target="_blank">Advertise on Overwolf</a></li>
               </ul>
             </li>
           </ul>
