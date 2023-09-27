@@ -15,9 +15,9 @@
         "name": "233"
     },
     "ow-electron": {
-        "date": "January 2023",
-        "path": "v22.0.1",
-        "name": "22.0.1"
+        "date": "September 2023",
+        "path": "v22.3.13",
+        "name": "22.3.13"
     },
     "ow-electron-builder": {
         "date": "January 2023",
