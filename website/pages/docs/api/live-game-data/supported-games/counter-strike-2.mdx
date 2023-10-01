@@ -53,6 +53,64 @@ Data Example:
 
 ## `match_info`
 
+### Info Updates
+
+key          | Category    | Values                    | Notes                 | Since GEP Ver. |
+------------ | ------------| ------------------------- | --------------------- | ------------- | 
+roster_ | match_info| Data about all the players in the roster|See [notes](#roster-note)|   236.0       |
+game_mode | match_info| The current played game mode and the map name|See [notes](#game_mode-note)|   236.0       |
+
+
+#### *roster* note
+
+List of possible values: 
+
+* nickname - The nickname of the player
+* steamid - The player's steam Id
+* money - current money owned by the player
+* kills - current player's kills
+* assists - current player's assists
+* deaths - current player's deaths
+* mvps - current player's mvps number 
+* score - current player's score
+* is_local - If the player is the local player the value will be true, if not it will be false
+* ping - the ping of the player
+
+Data example:
+
+```json
+{"feature":"match_info","category":"match_info","key":"roster_1","value":"{\"nickname\":\"Naco\",\"steamid\":76561199123132960,\"money\":0,\"kills\":0,\"assists\":0,\"deaths\":0,\"mvps\":0,\"score\":0,\"is_local\":\"true\",\"ping\":0}"}
+```
+
+#### *game_mode* note
+
+Data examples:
+
+Competitive mode on "Dust II" map
+```json
+{"feature":"match_info","category":"match_info","key":"game_mode","value":"Competitive Dust II"}
+```
+
+VS BOTS on "Dust II" map
+```json
+{"feature":"match_info","category":"match_info","key":"game_mode","value":"Offline Deathmatch Dust II"}
+```
+
+Community Server, "Causal" mode and server name
+```json
+{"feature":"match_info","category":"match_info","key":"game_mode","value":"Community Casual surf_ski_2_GO_sw"}
+```
+
+"Casual" mode on "Dust II" map
+```json
+{"feature":"match_info","category":"match_info","key":"game_mode","value":"Casual Dust II"}
+```
+
+Spectating "Casual" mode on "Dust II" map
+```json
+{"feature":"match_info","category":"match_info","key":"game_mode","value":"Dust II"}
+```
+
 ### Events
 
 Event       | Event Data   | Fired When    | Notes                                  | Since GEP Ver. |
@@ -62,6 +120,7 @@ match_end   |              | At the end of each match| See [notes](#match_end-no
 kill        |              | When the player kill another player| See [notes](#kill-note) |235.0|
 death       |              | When the player dies| See [notes](#death-note) |235.0|
 assist      |              | When the player assist a team member to kill an enemy| See [notes](#assist-note) |235.0|
+kill_feed   | Kills & assists information| Anytime a player dies in match. | See [notes](#kill_feed-note)|     236.0      |
 
 
 #### *match_start* note
@@ -102,4 +161,29 @@ Data Example:
 
 ```json
 {"events":[{"name":"assist","data":""}]}
+```
+
+#### *kill_feed* note
+
+List of possible values: 
+
+* attacker - attacker name
+* assister - assister name
+* victim - victim name
+* weapon - used weapon name
+* list of metadata with true / false data
+  * headshot
+  * suicide
+  * wallbang
+  * flashed
+  * throughsmoke
+  * noscope
+  * domination
+  * revenge
+
+
+Data Example:
+
+```json
+{\"attacker\":\"BOT Efe\",\"assister\":\"\",\"weapon\":\"m4a1_silencer\",\"headshot\":false,\"suicide\":false,\"wallbang\":false,\"revenge\":false,\"domination\":false,\"noscope\":false,\"throughsmoke\":false,\"flashed\":false,\"victim\":\"BOT Yanni\"}
 ```
