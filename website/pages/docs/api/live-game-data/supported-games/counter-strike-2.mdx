@@ -59,6 +59,7 @@ key          | Category    | Values                    | Notes                 |
 ------------ | ------------| ------------------------- | --------------------- | ------------- | 
 roster_ | match_info| Data about all the players in the roster|See [notes](#roster-note)|   236.0       |
 game_mode | match_info| The current played game mode and the map name|See [notes](#game_mode-note)|   236.0       |
+match_outcome| match_info  | victory / defeat / tie      |See [notes](#match_outcome-note)|   236.0       |
 
 
 #### *roster* note
@@ -109,6 +110,15 @@ Community Server, "Causal" mode and server name
 Spectating "Casual" mode on "Dust II" map
 ```json
 {"feature":"match_info","category":"match_info","key":"game_mode","value":"Dust II"}
+```
+
+#### *match_outcome* note
+
+Data Example:
+
+```json
+{"info":{"match_info":{"match_outcome":"victory"}},"feature":"match_info"}
+{"info":{"match_info":{"match_outcome":"defeat"}},"feature":"match_info"}
 ```
 
 ### Events
