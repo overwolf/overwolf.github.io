@@ -527,7 +527,7 @@ Info UPDATE: {"info":{"game_info":{"trade_my_inventory":"[{"Index": "0","key" : 
 
 key          | Category    | Values                    | Notes                 | Since GEP Ver. |
 ------------ | ------------| ------------------------- | --------------------- | ------------- |
-training_pack| game_info   | On selecting a training pack     |  See [notes](#training_pack-note)                     |    235.0       |
+training_pack| game_info   | On selecting a training pack     |  See [notes](#training_pack-note)                     |    236.0       |
 
 
 #### *training_pack* note
@@ -548,7 +548,8 @@ Data Examples:
 
 Event       | Event Data   | Fired When    | Notes              | Since GEP Ver. |
 ------------| -------------| --------------| ------------------ | --------------|
-training_round| null |New round starts|See [notes](#training_round-note)|      235.0     |
+training_round| The current round number in the training pack |New round starts|See [notes](#training_round-note)|      236.0     |
+training_round_result| The completed round nuber and the round result |A round ends|See [notes](#training_round_result-note)|      236.0     |
 
 #### *training_round* note
 
@@ -556,4 +557,18 @@ Data Example:
 
 ```json
 {"events":[{"name":"training_round","data":"2"}]}
+```
+
+#### *training_round_result* note
+
+Possible values: 
+
+* result 
+  * complete
+  * fail
+
+Data Example:
+
+```json
+{"events":[{"name":"training_round","data":"{\"round\":2,\"result\":\"complete\"}"}]}
 ```
