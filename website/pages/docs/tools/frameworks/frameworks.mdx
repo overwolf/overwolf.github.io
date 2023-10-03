@@ -13,7 +13,7 @@ Overwolf currently offers two similar, yet vastly different frameworks (Overwolf
 - Access to the Overwolf Ads stack, with full GDPR compliance
 - Anonymous App analytics (can be disabled in [ow-electron][ow-electron])
 - Built-in In-game overlay capabilities
-- Live game events on Windows OS ([ow-electron][ow-electron] *currently* supports only select games, and the roadmap for future supported games is flexible)
+- Live game events on Windows OS ([ow-electron][ow-electron] *currently* supports all games, but these must be enabled on a per-App basis. For more details, [contact us][contact-us])
 - A complete [deployment & distribution framework](/tools/developers-console), complete with a customizable installer
 
 That being said, there are also many differences between the two:
@@ -51,6 +51,7 @@ Overwolf Electron Apps are full, standalone applications, running on their own, 
 As these Apps are fully fledged standalone Electron Apps, they do require more work to get started. However, in turn, they also allow you far greater control over all of your App's functions, with the Overwolf APIs simply added on top.
 
 As such, Overwolf Electron comes with its own set of advantages:
+- Game events for ~40 games (enabled on a per request basis, for more details, [contact us][contact-us])
 - Full support for native node.js modules
 - Support for Windows OS, Mac OS, and several Linux flavors
 - The ability to run in parallel to base Electron in the same codebase (while simply disabling [ow-electron][ow-electron] related features for [“vanilla” builds](https://www.npmjs.com/package/@overwolf/electron-is-overwolf)), giving you even greater control of your project
@@ -59,7 +60,6 @@ As such, Overwolf Electron comes with its own set of advantages:
 - Most general features/bug-fixes are released as package versions when ready, with updating/rollout schedules left entirely up to the App’s discretion
 
 However, this does also mean that:
-- Currently, only select game events are supported, with more event support to come over time
 - Recording capabilities are not yet built-in, but development for it is planned
 - The framework is still in relatively early development stages. While the underlying Electron framework is well-established, the Overwolf features are still undergoing active development, and are subject to small changes.
 - App-specific code certificates are not provided, and are [highly recommended](https://codesigningstore.com/what-certificate-is-used-to-sign-apps) for proper App distribution
@@ -68,3 +68,4 @@ However, this does also mean that:
 
 
 [ow-electron]: /tools/ow-electron
+[contact-us]: /support/contact-us
