@@ -196,10 +196,22 @@ Data Example:
 
 This data is <b>per round</b>.
 
+List of parameters:
+
+* damage - total damage dealt by the player
+* hit - number of total hits
+* headshot - number of headshots that did not kill an enemy
+* bodyshots - number of body shots
+* legshots - number of leg shots
+* final_headshot - number of head shots that did kill an enemy
+* damage_received - total damage the local player received
+* hits_received - total hits the local player received
+* ability_damage - total damage done by the use of an ability
+
 Data Example:
 
 ```json
-{"info":{"match_info":{"round_report":"{"damage":331,"hit":6,"headshot":0,"final_headshot":1}"}},"feature":"match_info"}
+{"match_info": {"round_report": "\"damage\":326.3,\"hit\":9,\"headshot\":1,\"bodyshots\":\"4\",\"legshots\":\"3\",\"final_headshot\":1,\"damage_received\":\"0\",\"hits_received\":\"0\",\"ability_damage\":\"0\"}"}}
 ```
 
 #### *game_mode* note
