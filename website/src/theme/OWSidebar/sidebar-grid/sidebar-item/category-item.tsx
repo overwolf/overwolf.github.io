@@ -81,7 +81,7 @@ function CategoryItem(
         (isCurrentPage ||
           // OR auto-collapse is enabled
           (autoCollapseCategories &&
-            // And part the item is part of:
+            // And part of the item is part of:
             // - The active item's path
             // It is expanded
             (isActiveItem ||
@@ -137,8 +137,8 @@ function CategoryItem(
   const onInteraction = () => setExpand(!expanded);
 
   useEffect(() => {
-    if (isCurrentPage) setExpand(true);
-  }, [isCurrentPage, setExpand]);
+    if (isActiveItem) setExpand(true);
+  }, [isActiveItem, setExpand]);
 
   // ---------------------------------------------------------------------------
 

@@ -14,23 +14,27 @@ export default function SidebarLinkHook(
   initialHref: string,
   path: string,
 ): {
-  isMobile: boolean;
-  collapsed: boolean;
-  // Is this a parent of the current page
-  isActiveItem: boolean;
-  // Is this the current page
-  isCurrentPage: boolean;
-  // Is this a link that leads outside the local website?
+  /** Is this running within a mobile sidebar context */
+  isMobile: boolean
+  /** Is this currently contained within a collapsed context */
+  collapsed: boolean,
+  /** Is this a parent of the current page */
+  isActiveItem: boolean,
+  /** Is this the current page */
+  isCurrentPage: boolean,
+  /** Is this a link that leads outside the local website? */
   isExternalLink: boolean;
 } {
   return {
+    /** Is this running within a mobile sidebar context */
     isMobile: useContext(MobileContext),
+    /** Is this currently contained within a collapsed context */
     collapsed: useContext(CollapseContext),
-    // Is this a parent of the current page
+    /** Is this a parent of the current page */
     isActiveItem: isActiveSidebarItem(item, path),
-    // Is this the current page
+    /** Is this the current page */
     isCurrentPage: isSamePath(initialHref, path),
-    // Is this a link that leads outside the local website?
+    /** Is this a link that leads outside the local website? */
     isExternalLink: !(initialHref ? isInternalUrl(initialHref) : true),
   };
 }
