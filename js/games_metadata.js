@@ -58,14 +58,6 @@ const GamesMetaData = {
         "iconUrl": "/img/games-logos/dota-2.png",
         "iconLargeUrl": "/img/games-logos/large/dota-2.png"
     },
-    "7764": {
-        "id": 7764,
-        "path": "/status/counter-strike-global-offensive",
-        "name": "Counter-Strike: Global Offensive",
-        "docs": "/api/live-game-data/supported-games/counter-strike-global-offensive",
-        "iconUrl": "/img/games-logos/counter-strike-global-offensive.png",
-        "iconLargeUrl": "/img/games-logos/large/counter-strike-global-offensive.png"
-    },
     "8032": {
         "id": 8032,
         "path": "/status/minecraft",
