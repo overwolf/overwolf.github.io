@@ -92,11 +92,12 @@
     ]
   },
   {
-    "to": "/api/live-game-data/supported-games/counter-strike-global-offensive",
+    "to": "/api/live-game-data/supported-games/counter-strike-2",
     "from": [
       "/docs/api/overwolf-games-events-csgo",
       "/api/games/events/counter-strike-global-offensive",
-      "/api/game-data/supported-games/counter-strike-global-offensive"
+      "/api/game-data/supported-games/counter-strike-global-offensive",
+      "/api/live-game-data/supported-games/counter-strike-global-offensive"
     ]
   },
   {
@@ -678,8 +679,8 @@
     "from": "/docs/status/apex"
   },
   {
-    "to": "/status/counter-strike-global-offensive",
-    "from": "/docs/status/csgo"
+    "to": "/status/counter-strike-2",
+    "from": ["/docs/status/csgo", "/status/counter-strike-global-offensive"]
   },
   {
     "to": "/status/dota-2",

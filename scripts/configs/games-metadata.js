@@ -22,11 +22,6 @@ const metaData = [
         name: "Call of Duty: Warzone Caldera"
     },
     {
-        id: 7764,
-        path: "counter-strike-global-offensive",
-        name: "Counter-Strike: Global Offensive"
-    },
-    {
         id: 21848,
         path: "diablo-2-resurrected",
         name: "Diablo 2 Resurrected"
