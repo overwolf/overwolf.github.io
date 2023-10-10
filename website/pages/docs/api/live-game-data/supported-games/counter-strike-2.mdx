@@ -64,6 +64,15 @@ key          | Category    | Values                    | Notes                 |
 roster_ | match_info| Data about all the players in the roster|See [notes](#roster-note)|   236.0       |
 game_mode | match_info| The current played game mode and the map name|See [notes](#game_mode-note)|   236.0       |
 match_outcome| match_info  | victory / defeat / tie      |See [notes](#match_outcome-note)|   236.0       |
+steam_id| live_data  | local player steam Id     |See [notes](#steam_id-note)|   237.0       |
+game_phase| live_data  | list of phases during a game     |See [notes](#game_phase-note)|   237.0       |
+round_phase| live_data  | list of phases during a round     |See [notes](#round_phase-note)|   237.0       |
+score| live_data  | score in the game for team T and team CT     |See [notes](#score-note)|   237.0       |
+mode_name| live_data  | The name of the played mode     |See [notes](#mode_name-note)|   237.0       |
+map_name| live_data  | The name of the played map     |See [notes](#map_name-note)|   237.0       |
+kills| live_data  | The name of the played map     |See [notes](#kills-note)|   237.0       |
+deaths| live_data  | The name of the played map     |See [notes](#deaths-note)|   237.0       |
+assists| live_data  | The name of the played map     |See [notes](#assists-note)|   237.0       |
 
 
 #### *roster* note
@@ -80,11 +89,13 @@ List of possible values:
 * score - current player's score
 * is_local - If the player is the local player the value will be true, if not it will be false
 * ping - the ping of the player
+* hs - headshots in %
+* rank - player's rank
 
 Data example:
 
 ```json
-{"feature":"match_info","category":"match_info","key":"roster_1","value":"{\"nickname\":\"Naco\",\"steamid\":"76561199123132960",\"money\":0,\"kills\":0,\"assists\":0,\"deaths\":0,\"mvps\":0,\"score\":0,\"is_local\":\"true\",\"ping\":0}"}
+{"feature":"match_info","category":"match_info","key":"roster_1","value":"{\"nickname\":\"Naco\",\"steamid\":"76561199123132960",\"money\":0,\"kills\":0,\"assists\":0,\"deaths\":0,\"mvps\":0,\"score\":0,\"is_local\":\"true\",\"ping\":0,\"hs\":50,\"rank\":0}"}
 ```
 
 #### *game_mode* note
@@ -125,6 +136,92 @@ Data Example:
 {"info":{"match_info":{"match_outcome":"defeat"}},"feature":"match_info"}
 ```
 
+#### *steam_id* note
+
+Data Example:
+
+```json
+{"info":{"live_data":{"steam_id":"76561199899040908"}},"feature":"match_info"}
+```
+
+#### *game_phase* note
+
+List of possible values:
+
+* live
+* warmup
+* gameover
+* intermission
+
+Data Example:
+
+```json
+{"info":{"live_data":{"game_phase":"live"}},"feature":"match_info"}
+```
+
+#### *round_phase* note
+
+List of possible values:
+
+* live
+* freezetime
+* over
+
+Data Example:
+
+```json
+{"info":{"live_data":{"round_phase":"live"}},"feature":"match_info"}
+```
+
+#### *score* note
+
+Data Example:
+
+```json
+{"info":{"live_data":{"score":"{\"team_t\":0,\"team_ct\":2}"}},"feature":"match_info"}
+```
+
+#### *mode_name* note
+
+Data Example:
+
+```json
+{"info":{"live_data":{"mode_name":"deathmatch"}},"feature":"match_info"}
+```
+
+#### *map_name* note
+
+Data Example:
+
+```json
+{"info":{"live_data":{"map_name":"de_dust2"}},"feature":"match_info"}
+```
+
+#### *kills* note
+
+Data Example:
+
+```json
+{"info":{"live_data":{"kills":10}},"feature":"match_info"}
+```
+
+#### *deaths* note
+
+Data Example:
+
+```json
+{"info":{"live_data":{"deaths":5}},"feature":"match_info"}
+```
+
+#### *assists* note
+
+Data Example:
+
+```json
+{"info":{"live_data":{"assists":1}},"feature":"match_info"}
+```
+
+
 ### Events
 
 Event       | Event Data   | Fired When    | Notes                                  | Since GEP Ver. |
@@ -135,6 +232,8 @@ kill        |              | When the player kill another player| See [notes](#k
 death       |              | When the player dies| See [notes](#death-note) |235.0|
 assist      |              | When the player assist a team member to kill an enemy| See [notes](#assist-note) |235.0|
 kill_feed   | Kills & assists information| Anytime a player dies in match. | See [notes](#kill_feed-note)|     236.0      |
+round_start |              | In the beginning of each round| See [notes](#round_start-note) |237.0|
+round_end   |              | At the end of each round| See [notes](#round_end-note) |237.0|
 
 
 #### *match_start* note
@@ -200,4 +299,20 @@ Data Example:
 
 ```json
 {\"attacker\":\"BOT Efe\",\"assister\":\"\",\"weapon\":\"m4a1_silencer\",\"headshot\":false,\"suicide\":false,\"wallbang\":false,\"revenge\":false,\"domination\":false,\"noscope\":false,\"throughsmoke\":false,\"flashed\":false,\"victim\":\"BOT Yanni\"}
+```
+
+#### *round_start* note
+
+Data Example:
+
+```json
+{"events":[{"name":"round_start","data":""}]}
+```
+
+#### *round_end* note
+
+Data Example:
+
+```json
+{"events":[{"name":"round_end","data":""}]}
 ```
