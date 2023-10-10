@@ -213,15 +213,6 @@ const GamesMetaData = {
         "iconUrl": "/img/games-logos/legends-of-runeterra.png",
         "iconLargeUrl": "/img/games-logos/large/legends-of-runeterra.png"
     },
-    "21626": {
-        "id": 21626,
-        "path": "/status/call-of-duty-warzone-caldera",
-        "name": "Call of Duty: Warzone Caldera",
-        "compliance": "/start/game-compliance/call-of-duty-warzone-caldera",
-        "docs": "/api/live-game-data/supported-games/call-of-duty-warzone-caldera",
-        "iconUrl": "/img/games-logos/call-of-duty-warzone-caldera.png",
-        "iconLargeUrl": "/img/games-logos/large/call-of-duty-warzone-caldera.png"
-    },
     "21634": {
         "id": 21634,
         "path": "/status/escape-from-tarkov",
