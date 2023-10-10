@@ -292,7 +292,12 @@
     "from": [
       "/docs/api/overwolf-games-events-vanguard",
       "/api/games/events/call-of-duty-vanguard",
-      "/api/game-data/supported-games/call-of-duty-vanguard"
+      "/api/game-data/supported-games/call-of-duty-vanguard",
+      "/api/live-game-data/supported-games/call-of-duty-warzone-caldera",
+      "/docs/api/overwolf-games-events-warzone",
+      "/api/games/events/call-of-duty-warzone",
+      "/api/games/events/call-of-duty-warzone-caldera",
+      "/api/game-data/supported-games/call-of-duty-warzone-caldera"
     ]
   },
   {
@@ -301,15 +306,6 @@
       "/docs/api/overwolf-games-events-warframe",
       "/api/games/events/warframe",
       "/api/game-data/supported-games/warframe"
-    ]
-  },
-  {
-    "to": "/api/live-game-data/supported-games/call-of-duty-warzone-caldera",
-    "from": [
-      "/docs/api/overwolf-games-events-warzone",
-      "/api/games/events/call-of-duty-warzone",
-      "/api/games/events/call-of-duty-warzone-caldera",
-      "/api/game-data/supported-games/call-of-duty-warzone-caldera"
     ]
   },
   {
@@ -806,8 +802,9 @@
     "from": "/docs/status/warframe"
   },
   {
-    "to": "/status/call-of-duty-warzone-caldera",
+    "to": "/status/call-of-duty-vanguard",
     "from": [
+      "/status/call-of-duty-warzone-caldera",
       "/docs/status/warzone",
       "/status/call-of-duty-warzone"
     ]
