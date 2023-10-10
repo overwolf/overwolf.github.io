@@ -802,7 +802,7 @@
     "from": "/docs/status/warframe"
   },
   {
-    "to": "/status/call-of-duty-warzone-vanguard",
+    "to": "/status/call-of-duty-vanguard",
     "from": [
       "/status/call-of-duty-warzone-caldera",
       "/docs/status/warzone",
