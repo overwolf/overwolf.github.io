@@ -187,12 +187,14 @@ List of possible values:
 * is_local - If the player is the local player the value will be true, if not it will be false
 * ping - the ping of the player
 * hs - headshots in %
-* rank - player's rank
+* damage - current player's damage, updates at the end of the round (only available in premier and competitive mode)
+* rank - player's rank In premier mode, the value will be the player's MMR and will be displayed for all players in the match.
+In competitive mode and wingman, the value will be between 1 and 18 with 1 being Silver 1 and 18 being Global Elite, and will only be displayed for the local player and party members.
 
 Data example:
 
 ```json
-{"feature":"match_info","category":"match_info","key":"roster_1","value":"{\"nickname\":\"Naco\",\"steamid\":"76561199123132960",\"money\":0,\"kills\":0,\"assists\":0,\"deaths\":0,\"mvps\":0,\"score\":0,\"is_local\":\"true\",\"ping\":0,\"hs\":50,\"rank\":0}"}
+{"feature":"match_info","category":"match_info","key":"roster_1","value":"{\"nickname\":\"Naco\",\"steamid\":\"76561199123132960\",\"team\":\"T\",\"money\":6650,\"kills\":5,\"assists\":0,\"deaths\":1,\"mvps\":1,\"score\":10,\"damage\":500,\"hs\":100,\"is_local\":\"true\",\"ping\":62,\"rank\":7650}"}
 ```
 
 #### *game_mode* note
