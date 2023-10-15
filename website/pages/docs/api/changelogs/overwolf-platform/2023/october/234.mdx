@@ -9,12 +9,15 @@ sidebar_custom_props:
     electron_platform: false
 ---
 
-### Platform
-- Added support for remote disablement of Overlay for games where an issue may have popped up.
-  - To simulate this behavior, two new Overwolf commandline flags have been added:
+<SkipMe type="TODO">
+- To simulate this behavior, two new Overwolf commandline flags have been added:
     - `--disable-overlay-test` - Disables all overlays for all games, regardless of client version.
     - `--disable-overlay-version="${VERSION_NUMBER}"` - If `VERSION_NUMBER` is higher than the current Overwolf Client version, disables all overlays for all games.  
       Example value: `--disable-overlay-version="0.235.0.0"`.
+</SkipMe>
+
+### Platform
+- Added support for remote disablement of Overlay for games where an issue may have popped up.
 - Improved stability for loading OPK files, to account for interference from misconfigured Anti Viruses tampering with Apps.
 
 ### API
