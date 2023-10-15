@@ -32,6 +32,7 @@ When running this game in trusted mode (without any launch parameters), OW can't
 
 * [gep_internal](#gep_internal)
 * [match_info](#match_info)
+* [live_data](#live_data)
 
 ## Game event status
 
@@ -54,6 +55,102 @@ Data Example:
 ```json
 {"info":{"gep_internal":{"version_info":"{"local_version":"157.0.1","public_version":"157.0.1","is_updated":true}"}},"feature":"gep_internal"}
 ```
+
+## `live_data`
+
+### Info Updates
+
+key          | Category    | Values                    | Notes                 | Since GEP Ver. |
+------------ | ------------| ------------------------- | --------------------- | ------------- | 
+provider | live_data| In-game data received by the client.|See [notes](#provider-note)|   237.0       |
+player | live_data| In-game data received by the client.|See [notes](#player-note)|   237.0       |
+
+#### *provider* note
+
+<details>
+<summary>Click to see some data example</summary>
+
+```json
+{
+  "provider": {
+    "name": "Counter-Strike: Global Offensive",
+    "appid": 730,
+    "version": 13960,
+    "steamid": "7656119923158",
+    "timestamp": 1697027690
+  },
+  "map": {
+    "mode": "casual",
+    "name": "de_dust2",
+    "phase": "warmup",
+    "round": 0,
+    "team_ct": {
+      "score": 0,
+      "consecutive_round_losses": 0,
+      "timeouts_remaining": 1,
+      "matches_won_this_series": 0
+    },
+    "team_t": {
+      "score": 0,
+      "consecutive_round_losses": 0,
+      "timeouts_remaining": 1,
+      "matches_won_this_series": 0
+    },
+    "num_matches_to_win_series": 0
+  },
+  "player": {
+    "steamid": "7656119923158",
+    "name": "Naco",
+    "activity": "playing",
+    "weapons": {}
+  }
+}
+```
+</details>
+
+
+#### *player* note
+
+<details>
+<summary>Click to see some data example</summary>
+
+```json
+{
+  "player": {
+    "state": {
+      "health": 100,
+      "armor": 0,
+      "helmet": false,
+      "flashed": 0,
+      "smoked": 0,
+      "burning": 0,
+      "money": 10000,
+      "round_kills": 0,
+      "round_killhs": 0,
+      "equip_value": 5800
+    },
+    "match_stats": {
+      "kills": 0,
+      "assists": 0,
+      "deaths": 0,
+      "mvps": 0,
+      "score": 0
+    },
+    "steamid": "7656119923158",
+    "name": "Naco",
+    "activity": "playing"
+  },
+  "provider": {
+    "name": "Counter-Strike: Global Offensive",
+    "appid": 730,
+    "version": 13960,
+    "steamid": "7656119923158",
+    "timestamp": 1697027750
+  }
+}
+```
+</details>
+
 
 ## `match_info`
 
@@ -90,12 +187,14 @@ List of possible values:
 * is_local - If the player is the local player the value will be true, if not it will be false
 * ping - the ping of the player
 * hs - headshots in %
-* rank - player's rank
+* damage - current player's damage, updates at the end of the round (only available in premier and competitive mode)
+* rank - player's rank In premier mode, the value will be the player's MMR and will be displayed for all players in the match.
+In competitive mode and wingman, the value will be between 1 and 18 with 1 being Silver 1 and 18 being Global Elite, and will only be displayed for the local player and party members.
 
 Data example:
 
 ```json
-{"feature":"match_info","category":"match_info","key":"roster_1","value":"{\"nickname\":\"Naco\",\"steamid\":"76561199123132960",\"money\":0,\"kills\":0,\"assists\":0,\"deaths\":0,\"mvps\":0,\"score\":0,\"is_local\":\"true\",\"ping\":0,\"hs\":50,\"rank\":0}"}
+{"feature":"match_info","category":"match_info","key":"roster_1","value":"{\"nickname\":\"Naco\",\"steamid\":\"76561199123132960\",\"team\":\"T\",\"money\":6650,\"kills\":5,\"assists\":0,\"deaths\":1,\"mvps\":1,\"score\":10,\"damage\":500,\"hs\":100,\"is_local\":\"true\",\"ping\":62,\"rank\":7650}"}
 ```
 
 #### *game_mode* note

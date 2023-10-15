@@ -336,6 +336,7 @@ key          | Category    | Values                    | Notes                 |
 player0 / player1 … palyerN(N = number of players in the match)| playersInfo| Check notes |See [notes](#player-note)|    14.0   |
 team1 / team2| teamsInfo | Check notes |See [notes](#teamsInfo-note)|    24.0   |
 team1_score / team2_score| teamsScore|team1 / team2 score – integer|See [notes](#pseudo_match_id-note)|    86.0   |
+players_rank| playersInfo|The rank of each player at the end of a match |See [notes](#players_rank-note)|    237.0   |
 
 #### *player* note
 
@@ -375,6 +376,14 @@ Data Example
 
 ```json
 {"info":{"teamsInfo":{"team1":"%5B%22player0%22%5D"}},"feature":"roster"}
+```
+
+#### *players_rank* note
+
+Data Example
+
+```json
+ {"feature": "roster", "category": "playersInfo", "key": "players_rank", "data": "[{\"name\":\"Yo55680\",\"rank\":\"Silver III\"},{\"name\":\"BruTS93330\",\"rank\":\"Silver III\"},{\"name\":\"ruzgaasar07\",\"rank\":\"Silver III\"},{\"name\":\"t2l__ll\",\"rank\":\"Silver III\"}]"}
 ```
 
 ### Events
@@ -436,7 +445,8 @@ name         | me          | Player’s name         |                       |  
 goals        | me          | Player’s goal count  |                       |    14.0       |
 score        | me          | Player’s score        |                       |    14.0       |
 team         | me          | Player’s team number  |                       |    14.0       |
-team_score        | me          | Team score    |                       |    86.0       |
+team_score   | me          | Team score            |                       |    86.0       |
+playlists_rank   | game_info          | Team score|  See [notes](#playlists_rank-note)|    237.0       |
 
 #### *me* note
 
@@ -447,6 +457,15 @@ Data Examples:
 {"info":{"me":{"score":"102"}},"feature":"me"}
 {"info":{"me":{"team_score":"1"}},"feature":"me"}
 ```
+
+#### *playlists_rank* note
+
+Data Examples:
+
+```json
+{"feature": "me","category": "game_info","key": "playlists_rank","data": "[{\"game_mode\":\"Doubles\",\"tier\":\"Silver III\",\"division\":4},{\"game_mode\":\"Duel\",\"tier\":\"Silver III\",\"division\":2}]"}
+```
+
 
 ## `death`
 
