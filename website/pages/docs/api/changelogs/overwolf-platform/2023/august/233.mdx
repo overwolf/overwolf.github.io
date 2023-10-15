@@ -23,6 +23,9 @@ sidebar_custom_props:
 - Updated result for [`overwolf.streaming.start()`](/api/streaming#start) - [`overwolf.streaming.StreamResult`](/api/streaming#streamresult-object)
   - Added the [`activeRecordingApps`](/api/streaming#streamresult-object) parameter, which will contain which other app is already using the
   [`overwolf.streaming`](/api/streaming) recording engine, and if so, which app.
+- New API - Added two new fields to `overlayInfo` ([overwolf.games.OverlayInfo](/api/games#overlayinfo-object)):
+  - `isFullscreen` - Whether or not the game is currently running in Fullscreen (mostly relevant for OOPO games).
+  - `isOOPOFullscreenRenderingDisabled` - Whether or not Overlay rendering is disabled in this current game (mostly relevant for OOPO games).
 
 ### Bug Fixes
 - Fixed an issue where the [`overwolf.streaming`](/api/streaming) recording engine would stay on if the app that called it crashed.

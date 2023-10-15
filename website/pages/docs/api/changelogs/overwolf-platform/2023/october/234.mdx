@@ -1,0 +1,26 @@
+---
+id: 234
+image: "/img/embed/changelogs.jpg"
+title: "Version 0.234"
+sidebar_label: "0.234"
+sidebar_custom_props:
+  tags:
+    overwolf_platform: true
+    electron_platform: false
+---
+
+### Platform
+- Added support for remote disablement of Overlay for games where an issue may have popped up.
+  - To simulate this behavior, two new Overwolf commandline flags have been added:
+    - `--disable-overlay-test` - Disables all overlays for all games, regardless of client version.
+    - `--disable-overlay-version="${VERSION_NUMBER}"` - If `VERSION_NUMBER` is higher than the current Overwolf Client version, disables all overlays for all games.  
+      Example value: `--disable-overlay-version="0.235.0.0"`.
+- Improved stability for loading OPK files, to account for interference from misconfigured Anti Viruses tampering with Apps.
+
+### API
+- New API - Added two new fields to `overlayInfo` ([overwolf.games.OverlayInfo](/api/games#overlayinfo-object)):
+  - `overlayRemotelyDisabled` - Whether or not the Overlay for this game has been remotely disabled.
+  - `minimumEnabledOverwolfVersion` - The minimum (if any) Overwolf version required to enable Overlay for this game.
+
+### Bug Fixes
+- Fixed several issues/App crashes around edge-cases involving the Overlay.
