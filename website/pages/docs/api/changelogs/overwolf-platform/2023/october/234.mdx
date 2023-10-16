@@ -11,7 +11,8 @@ sidebar_custom_props:
 
 ### Platform
 - Added support for remote disablement of Overlay for games where an issue may have popped up.
-  - To simulate this behavior, two new Overwolf commandline flags have been added:
+  - To simulate this behavior, two new Overwolf commandline flags have been added -
+  Make sure you only use these during development, to avoid interfering with any actual important on-going disablements:
     - `--disable-overlay-test` - Disables all overlays for all games, regardless of client version.
     - `--disable-overlay-version="${VERSION_NUMBER}"` - If `VERSION_NUMBER` is higher than the current Overwolf Client version, disables all overlays for all games.  
       Example value: `--disable-overlay-version="0.235.0.0"`.
