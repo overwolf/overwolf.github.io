@@ -102,7 +102,29 @@ player | live_data| In-game data received by the client.|See [notes](#player-not
     "steamid": "7656119923158",
     "name": "Naco",
     "activity": "playing",
-    "weapons": {}
+    "weapons": {
+      "weapon_0": {
+        "name": "weapon_knife_t",
+        "paintkit": "default",
+        "type": "Knife",
+        "state": "holstered"
+      },
+      "weapon_1": {
+        "name": "weapon_glock",
+        "paintkit": "default",
+        "type": "Pistol",
+        "ammo_clip": 20,
+        "ammo_clip_max": 20,
+        "ammo_reserve": 120,
+        "state": "holstered"
+      },
+      "weapon_2": {
+        "name": "weapon_c4",
+        "paintkit": "default",
+        "type": "C4",
+        "state": "active"
+      }
+    }
   }
 }
 ```
@@ -170,6 +192,9 @@ map_name| live_data  | The name of the played map     |See [notes](#map_name-not
 kills| live_data  | The name of the played map     |See [notes](#kills-note)|   237.0       |
 deaths| live_data  | The name of the played map     |See [notes](#deaths-note)|   237.0       |
 assists| live_data  | The name of the played map     |See [notes](#assists-note)|   237.0       |
+elo_points| match_info  | The amount of ELO points the local player will gain or lose in premier mode     |See [notes](#elo_points-note)|   237.0       |
+pseudo_match_id| match_info  | Uniques mtch_id     |See [notes](#pseudo_match_id-note)|   237.0       |
+round_number| live_data  | The current round number     |See [notes](#round_number-note)|   237.0       |
 
 
 #### *roster* note
@@ -187,6 +212,7 @@ List of possible values:
 * is_local - If the player is the local player the value will be true, if not it will be false
 * ping - the ping of the player
 * hs - headshots in %
+* color - the color of the player in the roster
 * damage - current player's damage, updates at the end of the round (only available in premier and competitive mode)
 * rank - player's rank In premier mode, the value will be the player's MMR and will be displayed for all players in the match.
 In competitive mode and wingman, the value will be between 1 and 18 with 1 being Silver 1 and 18 being Global Elite, and will only be displayed for the local player and party members.
@@ -194,7 +220,7 @@ In competitive mode and wingman, the value will be between 1 and 18 with 1 being
 Data example:
 
 ```json
-{"feature":"match_info","category":"match_info","key":"roster_1","value":"{\"nickname\":\"Naco\",\"steamid\":\"76561199123132960\",\"team\":\"T\",\"money\":6650,\"kills\":5,\"assists\":0,\"deaths\":1,\"mvps\":1,\"score\":10,\"damage\":500,\"hs\":100,\"is_local\":\"true\",\"ping\":62,\"rank\":7650}"}
+{"feature":"match_info","category":"match_info","key":"roster_1","value":"{\"nickname\":\"Naco\",\"steamid\":\"76561199123132960\",\"team\":\"T\",\"money\":6650,\"kills\":5,\"assists\":0,\"deaths\":1,\"mvps\":1,\"score\":10,\"damage\":500,\"hs\":100,\"is_local\":\"true\",\"color\":\"blue\",\"ping\":62,\"rank\":7650}"}
 ```
 
 #### *game_mode* note
@@ -318,6 +344,32 @@ Data Example:
 
 ```json
 {"info":{"live_data":{"assists":1}},"feature":"match_info"}
+```
+
+#### *elo_points* note
+
+Data Example:
+
+```json
+{"info":{"match_info":{"elo_points":"{\"lose\":136,\"win\":364}"}},"feature":"match_info"}
+```
+
+#### *pseudo_match_id* note
+
+This is an Overwolf-generated code, unrelated to the game.
+
+Data Example:
+
+```json
+{"info":{"match_info":{"pseudo_match_id":"5a7e3729-993c-414d-8e3f-592faeef81e7"}},"feature":"match_info"}
+```
+
+#### *round_number* note
+
+Data Example:
+
+```json
+{"info":{"live_data":{"round_number":2}},"feature":"match_info"}
 ```
 
 
