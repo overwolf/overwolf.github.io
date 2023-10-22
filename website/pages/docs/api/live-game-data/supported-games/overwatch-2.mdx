@@ -126,6 +126,7 @@ Note that on the response the leading zeros are removed ("0030" => "30")
 key               | Category    | Values                                                              | Notes                 | Since Version |
 ----------------- | ------------| ------------------------------------------------------------------- | --------------------- | ------------- |
 map       | match_info   | Name of currently played map.|See [notes](#map-note)   |   229.0       |
+pseudo_match_id| match_info  | Uniques mtch_id     |See [notes](#pseudo_match_id-note)|   237.0       |
 
 #### *map* note
 
@@ -172,6 +173,17 @@ Data Example:
 ```
 
 Note that on the response the leading zeros are removed ("0030" => "30")
+
+
+#### *pseudo_match_id* note
+
+This is an Overwolf-generated code, unrelated to the game.
+
+Data Example:
+
+```json
+{"info":{"match_info":{"pseudo_match_id":"5a7e3729-993c-414d-8e3f-592faeef81e7"}},"feature":"match_info"}
+```
 
 ### Events
 
