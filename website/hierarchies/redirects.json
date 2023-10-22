@@ -926,10 +926,6 @@
     "from": "/docs/topics/creators-content"
   },
   {
-    "to": "/internal/curseforge-core-terms",
-    "from": "/docs/topics/curseforge-core-terms"
-  },
-  {
     "to": "/topics/best-practices/data-persistence",
     "from": "/docs/topics/data-persistence"
   },
