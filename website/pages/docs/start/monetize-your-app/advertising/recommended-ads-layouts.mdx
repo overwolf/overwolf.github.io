@@ -72,32 +72,16 @@ Desktop / 2nd screen windows often stay open for long periods of time, with much
     assetsPath='/assets/start/monetize-your-app/advertising/recommended-ads-layouts/desktop/one-ad-large'
     name='One Ad (Large)'
     revenueBenchmark='110~120%'
+    undervalued='true'
     overview={
       {
         description: 'A simple, one large Container layout',
         showsVideo: true,
         dimensions: '400x600',
+        multipleAds: true,
         userFriction: 'Minimal+',
         designConstraints: 'Minimal+',
         revenue: 'Baseline+',
-      }
-    }
-    tabs= {
-      [ 'Right Aligned', 'Left Aligned' ]
-    }
-  />
-  <AdsLayoutRow 
-    assetsPath='/assets/start/monetize-your-app/advertising/recommended-ads-layouts/desktop/two-ads-group'
-    name='Two Ads (Group)'
-    revenueBenchmark='115~135%'
-    overview={
-      {
-        description: 'A simple, two grouped small Containers layout',
-        showsVideo: true,
-        dimensions: '400x300 + 300x250',
-        userFriction: 'Minimal+',
-        designConstraints: 'Minimal+',
-        revenue: 'High',
       }
     }
     tabs= {
@@ -126,29 +110,13 @@ Desktop / 2nd screen windows often stay open for long periods of time, with much
     assetsPath='/assets/start/monetize-your-app/advertising/recommended-ads-layouts/desktop/two-ads-large'
     name='Two Ads (Large)'
     revenueBenchmark='120~145%'
+    undervalued='true'
     overview={
       {
         description: 'A simple, two large split Containers layout',
         showsVideo: true,
         dimensions: '400x600 + 160x600',
-        userFriction: 'Noticable+',
-        designConstraints: 'Noticable+',
-        revenue: 'Very High',
-      }
-    }
-    tabs= {
-      [ 'Right Aligned', 'Left Aligned' ]
-    }
-  />
-  <AdsLayoutRow 
-    assetsPath='/assets/start/monetize-your-app/advertising/recommended-ads-layouts/desktop/triple-ads-split'
-    name='Triple Ads (split)'
-    revenueBenchmark='125~155%'
-    overview={
-      {
-        description: 'A simple, split three Containers layout',
-        showsVideo: true,
-        dimensions: '400x300 + 300x250 + 160x600',
+        multipleAds: true,
         userFriction: 'Noticable+',
         designConstraints: 'Noticable+',
         revenue: 'Very High',
@@ -159,6 +127,11 @@ Desktop / 2nd screen windows often stay open for long periods of time, with much
     }
   />
 </OWTable>
+
+*\* The estimated revenue for this layout has recently been optimized, and a more
+accurate estimate is currently being worked on.*  
+*\*\* One or more Containers in this layout may contain multiple Ads at once, based on
+realtime optimization. Standard limitations about Ads per window still apply.*
 
 
 <ImageHeading
@@ -214,11 +187,13 @@ In-Game windows that display Ads often don't stay open for long periods, and mus
     assetsPath='/assets/start/monetize-your-app/advertising/recommended-ads-layouts/in-game/one-ad-large'
     name='One Ad (Large)'
     revenueBenchmark='135~150%'
+    undervalued='true'
     overview={
       {
         description: 'A simple, one large Container layout',
         showsVideo: false,
         dimensions: '400x600',
+        multipleAds: true,
         userFriction: 'Minimal',
         designConstraints: 'Minimal',
         revenue: 'Baseline+',
@@ -268,29 +243,13 @@ In-Game windows that display Ads often don't stay open for long periods, and mus
     assetsPath='/assets/start/monetize-your-app/advertising/recommended-ads-layouts/in-game/two-ads-large'
     name='Two Ads (Large)'
     revenueBenchmark='300~400%'
+    undervalued='true'
     overview={
       {
         description: 'A simple, two large Containers layout',
         showsVideo: false,
         dimensions: '400x600 + 160x600',
-        userFriction: 'Noticable+',
-        designConstraints: 'Noticable+',
-        revenue: 'Very High',
-      }
-    }
-    tabs= {
-      [ 'Right Aligned', 'Left Aligned' ]
-    }
-  />
-  <AdsLayoutRow 
-    assetsPath='/assets/start/monetize-your-app/advertising/recommended-ads-layouts/in-game/triple-ads-split'
-    name='Triple Ads (split)'
-    revenueBenchmark='400~450%'
-    overview={
-      {
-        description: 'A simple, split three Containers layout',
-        showsVideo: false,
-        dimensions: '300x250 + 300x250 + 160x600',
+        multipleAds: true,
         userFriction: 'Noticable+',
         designConstraints: 'Noticable+',
         revenue: 'Very High',
@@ -301,3 +260,8 @@ In-Game windows that display Ads often don't stay open for long periods, and mus
     }
   />
 </OWTable>
+
+*\* The estimated revenue for this layout has recently been optimized, and a more
+accurate estimate is currently being worked on.*  
+*\*\* One or more Containers in this layout may contain multiple Ads at once, based on
+realtime optimization. Standard limitations about Ads per window still apply.*

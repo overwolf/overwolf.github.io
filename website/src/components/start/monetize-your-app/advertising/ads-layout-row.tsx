@@ -24,16 +24,18 @@ function AdField(props: {title: string, value: string, first?: boolean}){
 function AdsLayoutRow(props: {
     name: string
     assetsPath: string;
+    undervalued: boolean;
     revenueBenchmark: string; tabs: string[]; overview: {
         description: string,
         showsVideo: boolean,
         dimensions: string,
+        multipleAds: boolean,
         userFriction: string,
         designConstraints: string,
         revenue: string
     }
 }) {
-    const { name, assetsPath, revenueBenchmark, tabs, overview } = props;
+    const { name, assetsPath, revenueBenchmark, undervalued, tabs, overview } = props;
     const fullSizePath = join(assetsPath, 'full-size');
     let tabsItems = tabs.map((item, i) => {
         let name = `${item} Variant`;
@@ -59,12 +61,13 @@ function AdsLayoutRow(props: {
                     <ThemedImage imageUrl={join(assetsPath, 'preview.svg')} alt={`${name} Preview`} />
                 </OWdataCell>
                 <OWdataCell thTitle={'Revenue Est. ($)'} width={'13%'}>
-                    {revenueBenchmark}
+                    {revenueBenchmark} { undervalued && '*'}
                 </OWdataCell>
                 <OWdataCell thTitle={'Overview'} width={'64%'}>
                     <p style={{marginBottom: '12px'}}>{overview.description}</p>
                     <div>
                         <div className='row'><AdField title='Dimensions' value={overview.dimensions}/></div>
+                        { overview.multipleAds && <div className='row'><AdField title='Multiple Ads in Container**' value={'True'}/></div> }
                         <div className='row'><AdField title='Revenue' value={overview.revenue} first={true}/> <AdField title='Show Video Ads' value={overview.showsVideo ? "Yes" : "No"}/></div>
                         <div className='row'><AdField title='Design Constraints' value={overview.designConstraints} first={true}/> <AdField title='User Friction' value={overview.userFriction}/></div>
                     </div>
