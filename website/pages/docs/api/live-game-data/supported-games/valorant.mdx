@@ -489,6 +489,7 @@ match_end   | null         | Match ended.   | See [notes](#match_end-note) | 148
 spike_planted   | null         | When a spike is planted.   | See [notes](#spike_planted-note) | 233.0  |
 spike_defused   | null         | When a spike is defused.   | See [notes](#spike_defused-note) | 233.0  |
 spike_detonated   | null         | When a spike is detonated.   | See [notes](#spike_detonated-note) | 233.0  |
+kill_feed   | kill feed details         | When a kill feed appears in the UI.   | See [notes](#kill_feed-note) | 237.0  |
 
 #### *match_start* note
 
@@ -530,6 +531,24 @@ Data Example:
 
 ```json
 {"events":[{"name": "spike_detonated","data":""}]}
+```
+
+#### *kill_feed* note
+
+List of parameters: 
+* attacker - name of the killing player
+* victim  - name of the killed player
+* assist 1/2/3/4 - name of the characters who assisted in the kill  
+* ult - name of the ultimate used, reserved for a non lethal ultimate such as Sage's resurrection 
+* headshot - Boolean value if the kill was by headshot
+* weapon - name of the weapon/ability/ultimate used by the killing player or spike/fall damage
+* is_attacker_teammate - true/false if the attacker is a teammate 
+* is_victim_teammate - true/false if the victim is a teammate 
+
+Data Example:
+
+```json
+{"events":[{"name": "kill_feed","data":"{\"attacker\":\"YTDestruct28\",\"victim\":\"Ghostblade\",\"is_attacker_teammate\":true,\"is_victim_teammate\":false,\"weapon\":\"TX_Hud_Volcano\",\"ult\":\"\",\"assist1\":\"TX_Killfeed_Sage1\",\"assist2\":\"\",\"assist3\":\"\",\"assist4\":\"\",\"headshot\":false}}]}
 ```
 
 ## `game_info`
