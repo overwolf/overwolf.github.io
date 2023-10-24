@@ -230,6 +230,11 @@ const metaData = [
         path: "starfield",
         name: "Starfield"
     },
+    {
+        id: 22088,
+        path: "baldurs-gate-3",
+        name: "Baldur's Gate 3"
+    },
 ]
 
 module.exports = { metaData }
