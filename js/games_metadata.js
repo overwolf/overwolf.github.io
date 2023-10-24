@@ -294,6 +294,14 @@ const GamesMetaData = {
         "iconUrl": "/img/games-logos/axie-infinity-origin.png",
         "iconLargeUrl": "/img/games-logos/large/axie-infinity-origin.png"
     },
+    "22088": {
+        "id": 22088,
+        "path": "/status/baldurs-gate-3",
+        "name": "Baldur's Gate 3",
+        "docs": "/api/live-game-data/supported-games/baldurs-gate-3",
+        "iconUrl": "/img/games-logos/baldurs-gate-3.png",
+        "iconLargeUrl": "/img/games-logos/large/baldurs-gate-3.png"
+    },
     "22312": {
         "id": 22312,
         "path": "/status/leap",
