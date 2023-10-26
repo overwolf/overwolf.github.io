@@ -17,7 +17,7 @@ import GameInfo from '../../components/game-info/game-info';
 import SkipMe from '../../components/skip-me/skip-me';
 import OWTabs from '../../components/ow-tabs/ow-tabs';
 import OWTabItem from '../../components/ow-tabs/ow-tab-item';
-import ImageHeading from '../../components/image-heading/image-heading';
+import ImageToggle from '../../components/image-toggle/image-toggle';
 import OWTable from '../../components/ow-table/ow-table';
 import OWTableRow from '../../components/ow-table/ow-table-row';
 import OWexpandedRowGroup from '../../components/ow-table/ow-expanded-row-group';
@@ -65,7 +65,7 @@ const MDXComponents: MDXComponentsObject = {
     SkipMe: SkipMe,
     OWTabs: OWTabs,
     OWTabItem: OWTabItem,
-    ImageHeading: ImageHeading,
+    ImageHeading: ImageToggle,
     OWTable: OWTable,
     OWTableRow: OWTableRow,
     OWexpandedRowGroup: OWexpandedRowGroup,
@@ -76,7 +76,8 @@ const MDXComponents: MDXComponentsObject = {
     SimpleTab: SimpleTab,
     EventsData: EventsData,
     FancyLink: FancyLink,
-    MatchOnly: MatchOnly
+    MatchOnly: MatchOnly,
+    ImageToggle: ImageToggle,
   })
 };
 
