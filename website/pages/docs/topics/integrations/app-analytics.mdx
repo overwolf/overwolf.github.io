@@ -2,96 +2,68 @@
 id: app-analytics
 image: "/img/embed/api-best-practices.jpg"
 title: Using Analytics in your app
-sidebar_label:  Integrating app analytics
+sidebar_label: Integrating app analytics
 sidebar_custom_props:
   tags:
     overwolf_platform: true
-    electron_platform: false
+    electron_platform: true
 ---
 
-One of the most effective ways to improve your app and learn more about your users is implementing solid analytics that provide you with usage statistics. Stats support your product decision making by providing real-world user usage data, including showing how users actually interact with each part of your product. Analytics also underline where users drop off and lose interest, what product abilities are completely ignored and much more.
+The most important part of any product, any App, or even any particular feature, is to understand what it aims to achieve,
+and ensure it does so effectively.  
+App analytics provide you with the usage data required to ensure this effectivenes,
+by letting you measure exact interactions your users have with your App.
 
-We recommend using a web analytics service to collect app data, measure user engagement and improve monetization. Our preference is the industry standard [Google Analytics](https://marketingplatform.google.com/about/analytics/features/).
+There are many different ways to implement App analytics, and many different types of data to collect.
+For example:
+- Engagement data about different parts of the App can help you understand which App features
+your users most often interact with, and which features may be under-utilized/less relevant.
+- App crash/error measurements can help you identify issues as they happen in your production environment,
+allowing you, at times, to fix them before any user can even notice.
+- Etc.
 
-Please take the time you need to implement any chosen analytics service thoroughly and test it to make sure it's working as intended.
+As such, we heavily recommend that you utilize those where [possible and reasonable](#reasonble-analytics),
+and will be using this page to help with outlining our recommended best practices for analytics.
 
-## Google Analytics: Basic Implementation
+*Some analytics are automatically collected by Overwolf, and can be viewed in different
+Overwolf-provided [dashboards](/tools/developers-console/all-applications/dashboard).*
 
-:::tip note
-The below information is regarding the implementation of Google Analytics' **"analytics.js"**. The newer, more up-to-date implementation of **"gtag.js"** _does not work_ in Overwolf apps at the moment. Keep this in mind when searching for implementation documentation elsewhere.
+## Reasonable Analytics
+
+Analytics, like many different things in the world, are a neuanced topic.
+- On the one hand, ideally, as designers, would want to know every single thing about every single user.
+That way, we could carefully tune things to fit them, and would never lack knowledge of anything.
+- On the other hand, even if it was somehow technically feasible to collect all of that data without impacting the final product,
+there are **many**, incredibly valid concerns that this would raise (legally, morally, and the potential for abuse of this data).
+
+As such, there are many regulations and guidelines in place, in order to ensure a safe balance
+of utility and user concerns. These requirements themselves can get rather intricate,
+and way outside the scope of this page (or even this website). However, to make your journey easier,
+we have collected a few articles and [product comparisons*](#platform-support) that we believe can help you get started with analytics, attached here:
+- [Contentsquare: Enterprise web analytics...](https://contentsquare.com/blog/enterprise-web-analytics/)
+- [Hotjar: Top 12+ web analytics tools...](https://www.hotjar.com/web-analytics/tools/)
+- [rockcontent: 24 Valuable Web Analytics Tools...](https://rockcontent.com/blog/web-analytics-tools/)
+
+*\* These pages lead to external websites that aren't associated with Overwolf, and may prioritize different things than
+what Desktop Apps require. They are meant to help you get started, but should not serve as a replacement to proper research.*
+
+### Platform Support
+
+Do take note that some Analytics tools (for example - [Google Analytics 4/GTag](https://issuetracker.google.com/issues/174954288)),
+cannot be used within desktop applications, due to any combination of their:
+- Terms of Service
+- Technical limitations
+- Unresolved bugs
+
+These issues usually revolve around the local page protocol for desktop App pages being
+> `overwolf-extension://` / `file://`  
+Rather than  
+> `http://` / `https://`
+
+**Always make sure your tool of choice supports your target framework/page in a
+production-like environment before comitting to it!**
+
+:::tip We're here to help!
+As usual, if you are unsure of how to proceed, have any questions, need help picking the right tool,
+or just want to further discuss these topics, feel free to [contact us](/support/contact-us)!
 :::
-
-### Update your manifest.json
-
-Open up the external connections necessary for communicating with the Google service:
-
-```json
-{
-"data":{  
-   "externally_connectable":{  
-      "matches":[  
-         "https://*.google-analytics.com",
-         "http://www.google-analytics.com"
-      ]
-   }
-}
-```
-
-### Create a Google Analytics account and generate a new property
-
-Select "Website" as your tracked object, enter your website name, website URL and select your preferred reporting time zone.
-
-<ImageBoxModal>
-  <img src={require('/assets/app-analytics/ga1.jpg').default} alt="Create a new property" />
-</ImageBoxModal>
-
-### Update your pages
-
-Let's assume that you want to track events in your index page. In your /index.html, add a reference to the tracking script in a separate file:
-
-```html
-<!DOCTYPE html>
-<html>
-<head>
-  ...
-  <script src="js/index.js"></script>
-  ...
-</head>
-<body>
-  ...
-</body>
-</html>
-```
-
-### Update your tracking code
-
-Add the tracking JavaScript, for example at js/index.js, with the Universal Analytics code. Note the “https” at the start of the script address.
-
-```js
-// Standard Google Universal Analytics code
-(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function()
-   {
-      (i[r].q=i[r].q||[]).push(arguments)
-   },
-   i[r].l=1*new Date();a=s.createElement(o),
-   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-   // Note: https protocol here
-})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-ga('create', 'UA-XXXXX-YY', 'auto');
-
-// Removes failing protocol check. @see: http://stackoverflow.com/a/22152353/1958200
-ga('set', 'checkProtocolTask', function(){}); 
-ga('require', 'displayfeatures');
-ga('send', 'pageview', '/index.html');
-```
-
-If that all went well, you should see page tracking appear in Google Analytics, like so:
-
-<ImageBoxModal>
-   <img src={require('/assets/app-analytics/ga-sample.jpg').default} alt="process" width="900"/>
-</ImageBoxModal>
-
-## More info
-
-Find more information on best practices and more guides for implementing google analytics [here.](https://analytics.google.com/analytics/academy/)
