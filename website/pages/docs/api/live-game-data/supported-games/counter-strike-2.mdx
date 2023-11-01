@@ -379,9 +379,9 @@ Event       | Event Data   | Fired When    | Notes                              
 ------------| -------------| --------------| -------------------------------------- | ---------------|
 match_start |              | In the beginning of each match| See [notes](#match_start-note) |228.0|
 match_end   |              | At the end of each match| See [notes](#match_end-note) |228.0|
-kill        |              | When the player kill another player| See [notes](#kill-note) |235.0|
-death       |              | When the player dies| See [notes](#death-note) |235.0|
-assist      |              | When the player assist a team member to kill an enemy| See [notes](#assist-note) |235.0|
+kill        | total kills  | When the player kill another player| See [notes](#kill-note) |235.0|
+death       | total deaths | When the player dies| See [notes](#death-note) |235.0|
+assist      | total assists| When the player assist a team member to kill an enemy| See [notes](#assist-note) |235.0|
 kill_feed   | Kills & assists information| Anytime a player dies in match. | See [notes](#kill_feed-note)|     236.0      |
 round_start |              | In the beginning of each round| See [notes](#round_start-note) |237.0|
 round_end   |              | At the end of each round| See [notes](#round_end-note) |237.0|
@@ -408,7 +408,7 @@ Data Example:
 Data Example:
 
 ```json
-{"events":[{"name":"kill","data":""}]}
+{"events":[{"name":"kill","data":2}]}
 ```
 
 #### *death* note
@@ -416,7 +416,7 @@ Data Example:
 Data Example:
 
 ```json
-{"events":[{"name":"death","data":""}]}
+{"events":[{"name":"death","data":6}]}
 ```
 
 #### *assist* note
@@ -424,7 +424,7 @@ Data Example:
 Data Example:
 
 ```json
-{"events":[{"name":"assist","data":""}]}
+{"events":[{"name":"assist","data":2}]}
 ```
 
 #### *kill_feed* note
