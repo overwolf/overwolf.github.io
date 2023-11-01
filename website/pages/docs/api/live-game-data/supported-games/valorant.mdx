@@ -65,6 +65,7 @@ player_name  | me          | Name of local player.     |See [notes](#player_name
 player_id    | me          | ID of the local player.   |See [notes](#player_id-note)|   148.0       |
 region       | me          | Region of the local player.|See [notes](#region-note)|   148.0       |
 agent        | me          | Character Internal ID.       |See [notes](#agent-note)|   149.0       |
+health        | me          | Character current health.       |See [notes](#health-note)|   238.0       |
 
 #### *player_name* note
 
@@ -95,12 +96,6 @@ Data Example:
 Not all agents have their game-name match their ID data, since this is an internal name, so take that into account.
 Furthermore, if a character has an ability that gives him different points of view (f.ex Sova with his drone), the ID will change accordingly to the drone.
 
-Data Example:
-
-```json
-{"info":{"me":{"agent":"Phoenix_PC_C"}},"feature":"me"}
-```
-
 Possible agent values:
 
 * "Clay_PC_C" = Raze
@@ -125,6 +120,21 @@ Possible agent values:
 * "Mage_PC_C" = Harbor
 * "AggroBot_PC_C" = Gekko
 * "Cable_PC_C" = Deadlock
+
+Data Example:
+
+```json
+{"info":{"me":{"agent":"Phoenix_PC_C"}},"feature":"me"}
+```
+
+#### *health* note
+
+Data Example:
+
+```json
+{"feature": "me", "category": "me", "key": "health", "data": "100"}
+```
+
 
 ## `match_info`
 
