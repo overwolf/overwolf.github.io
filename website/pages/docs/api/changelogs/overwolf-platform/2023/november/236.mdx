@@ -1,0 +1,29 @@
+---
+id: 236
+image: "/img/embed/changelogs.jpg"
+title: "Version 0.236"
+sidebar_label: "0.236"
+sidebar_custom_props:
+  tags:
+    overwolf_platform: true
+    electron_platform: false
+---
+
+### Platform
+- OSR (in-game) windows can now opt in to enabling hardware acceleration, using the [`disable_hardware_acceleration`](/api/manifest#extension_window_data-object) flag.
+  - *This is still turned off by default, and should only be used if absolutely necessary, as it can have a relatively large performance impact.*
+- Apps can now set more than one url scheme, using the new [`schemes`](/api/manifest#url_protocol-object) flag.
+  - *The [`scheme`](/api/manifest#url_protocol-object) flag is still supported to maintain backwards compatibility, but is no longer recommended for usage.*
+
+### API
+- New API - [`overwolf.settings.hotkeys.getAllApps()`](/api/settings/hotkeys#getallappscallback):
+  - Returns all active hotkeys, for all games, across all active Apps + all Overwolf Platform hotkeys.
+- Updated API - Added the `disable_auto_shutdown_on_game_exit` field to the [`StreamVideoOptions`](/api/streaming#streamvideooptions-object) object.
+  - Allows an App to opt out of having the streaming API's recording engine automatically shut down once a game session
+    it was targeting ends, leaving the responsibility for closing it to the App itself.
+  - *It is still heavily recommended to shut down the recording engine as soon as you are done with the game it was started for, rather than keeping it around.*
+- New API - [`overwolf.extensions.current.getPhasedPercent()`](/api/extensions/current#getphasedpercentcallback-version):
+  - Returns the Apps' `Phasing Percentage` for a given version (defaults to the last fully rolled out version).
+
+### Bug Fixes
+- Fixed an issue where, in some edge cases, the Overwolf Client would not shut down properly when closed.

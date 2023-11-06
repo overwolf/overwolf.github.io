@@ -18,6 +18,7 @@ Please read all the info about hotkeys and how to use them in our [hotkeys best 
 
 * [overwolf.settings.hotkeys.update()](#updatehotkey-callback)
 * [overwolf.settings.hotkeys.get()](#getcallback)
+* [overwolf.settings.hotkeys.getAllApps()](#getallappscallback)
 * [overwolf.settings.hotkeys.assign()](#assignhotkey-callback)
 * [overwolf.settings.hotkeys.unassign()](#unassignhotkey-callback)
 
@@ -30,6 +31,7 @@ Please read all the info about hotkeys and how to use them in our [hotkeys best 
 ## Types Reference
 
 * [overwolf.settings.hotkeys.GetAssignedHotkeyResult](#getassignedhotkeyresult-object) Object
+* [overwolf.settings.hotkeys.GetAllAssignedHotkeysResult](#getallassignedhotkeysresult-object) Object
 * [overwolf.settings.hotkeys.IHotkey](#ihotkey-object) Object
 * [overwolf.settings.hotkeys.OnHoldEvent](#onholdevent-object) Object
 * [overwolf.settings.hotkeys.OnPressedEvent](#onpressedevent-object) Object
@@ -115,12 +117,23 @@ overwolf.settings.hotkeys.unassign(hotkey, console.log)
 #### Version added: 0.142
 #### Permissions required: Hotkeys
 
-> Returns the hotkey assigned **for the current extension** in all the games.
+> Returns the hotkeys assigned for **the current App** in all the games.
 
 Parameter | Type                  | Description                                                             |
 --------- | ----------------------| ----------------------------------------------------------------------- |
-callback  | function              | A callback function which will be called with the status of the request |
-callback  | [(Result:GetAssignedHotkeyResult )](#getassignedhotkeyresult-object) => void | Returns info about the currently running game |
+callback  | (Result: [GetAssignedHotkeyResult](#getassignedhotkeyresult-object)) => void | A callback receiving the result of the operation |
+
+
+## getAllApps(callback)
+#### Version added: 0.236
+#### Permissions required: Hotkeys
+
+> Returns the hotkeys assigned for **all Apps + the Overwolf Platform** in all the games.
+
+Parameter | Type                  | Description                                                             |
+--------- | ----------------------| ----------------------------------------------------------------------- |
+callback  | (Result: [GetAllAssignedHotkeysResult](#getassignedhotkeyresult-object)) => void | A callback receiving the result of the operation |
+
 
 ## onHold
 
@@ -304,6 +317,18 @@ On the following example, you can see that the current extension set `Shift + F5
     }
 }
 ```
+
+## GetAllAssignedHotkeysResult Object
+#### Version added: 0.236
+
+> Container for the assigned hotkeys.
+
+Parameter         | Type          | Description             |
+------------------| --------------| ----------------------- |
+| success         | boolean       | Inherited from the "Result" Object |  
+| error           | string        | Inherited from the "Result" Object. null if success is true |
+| apps        | { [appID: string]: [GetAssignedHotkeyResult](#getassignedhotkeyresult-object) }       |                         | 
+| platform        | [IHotkey](#ihotkey-object)[]       |                         | 
 
 ## OnHoldEvent Object
 

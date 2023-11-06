@@ -14,6 +14,7 @@ A set of functions providing more information and utilities for the current exte
 
 * [overwolf.extensions.current.getExtraObject()](#getextraobjectname-callback)
 * [overwolf.extensions.current.getManifest()](#getmanifestcallback)
+* [overwolf.extensions.current.getPhasedPercent()](#getphasedpercentcallback-version)
 
 ## Types Reference
 
@@ -38,6 +39,16 @@ callback  | ([Result: GetExtraObjectResult](#getextraobjectresult-object)) => vo
 Parameter | Type       | Description                                       |
 --------- | -----------| ------------------------------------------------- |
 callback  | ([Result: GetManifestResult](#getmanifestresult-object)) => void              | Result of the request    |
+
+## getPhasedPercent(callback, version)
+#### Version added: 0.236
+
+> Returns the current extension’s phasing percentage.
+
+Parameter | Type       | Description                                       |
+--------- | -----------| ------------------------------------------------- |
+callback  | ([Result: GetManifestResult](#getmanifestresult-object)) => void              | Result of the request  |
+version   | string? | The version to calculate the phasing percentage for (defaults to the current 'base' version) |
 
 #### Usage Example
 
