@@ -235,6 +235,23 @@ const metaData = [
         path: "baldurs-gate-3",
         name: "Baldur's Gate 3"
     },
+    {
+        id: 223281,
+        displayId: 22328,
+        path: "call-of-duty-modern-warfare-2",
+        name: "Call of Duty: Modern Warfare 2"
+    },
+    {
+        id: 23424,
+        path: "call-of-duty-modern-warfare-3",
+        name: "Call of Duty: Modern Warfare 3"
+    },
+    {
+        id: 223282,
+        displayId: 22328,
+        path: "call-of-duty-warzone-2-0",
+        name: "Call of Duty: Warzone 2.0"
+    },
 ]
 
 module.exports = { metaData }
