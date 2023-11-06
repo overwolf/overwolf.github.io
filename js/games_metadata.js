@@ -342,6 +342,14 @@ const GamesMetaData = {
         "iconUrl": "/img/games-logos/starfield.png",
         "iconLargeUrl": "/img/games-logos/large/starfield.png"
     },
+    "23424": {
+        "id": 23424,
+        "path": "/status/call-of-duty-modern-warfare-3",
+        "name": "Call of Duty: Modern Warfare 3",
+        "docs": "/api/live-game-data/supported-games/call-of-duty-modern-warfare-3",
+        "iconUrl": "/img/games-logos/call-of-duty-modern-warfare-3.png",
+        "iconLargeUrl": "/img/games-logos/large/call-of-duty-modern-warfare-3.png"
+    },
     "215561": {
         "id": 215561,
         "displayId": 22848,
@@ -365,6 +373,24 @@ const GamesMetaData = {
         "variant": "PBE",
         "iconUrl": "/img/games-logos/teamfight-tactics-public-beta.png",
         "iconLargeUrl": "/img/games-logos/large/teamfight-tactics-public-beta.png"
+    },
+    "223281": {
+        "id": 223281,
+        "displayId": 22328,
+        "path": "/status/call-of-duty-modern-warfare-2",
+        "name": "Call of Duty: Modern Warfare 2",
+        "docs": "/api/live-game-data/supported-games/call-of-duty-modern-warfare-2",
+        "iconUrl": "/img/games-logos/call-of-duty-modern-warfare-2.png",
+        "iconLargeUrl": "/img/games-logos/large/call-of-duty-modern-warfare-2.png"
+    },
+    "223282": {
+        "id": 223282,
+        "displayId": 22328,
+        "path": "/status/call-of-duty-warzone-2-0",
+        "name": "Call of Duty: Warzone 2.0",
+        "docs": "/api/live-game-data/supported-games/call-of-duty-warzone-2-0",
+        "iconUrl": "/img/games-logos/call-of-duty-warzone-2-0.png",
+        "iconLargeUrl": "/img/games-logos/large/call-of-duty-warzone-2-0.png"
     }
 }
 
