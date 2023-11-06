@@ -84,6 +84,7 @@ Data Example:
 key          | Category    | Values                    | Notes                 | Since GEP Ver. |
 ------------ | ------------| ------------------------- | --------------------- | ------------- | 
 location | match_info   | player location  |  See [notes](#location-note) |   235.0
+planet_name | match_info   | current planet name  |  See [notes](#planet_name-note) |   239.0
 
 #### *location* note
 
@@ -91,4 +92,13 @@ Data Example:
 
 ```json
 {"feature":"location","category":"match_info","key":"location","value":"{\"x\" : -6.3775,\"y\" : 9.1187,\"z\" : 0.9910}"}
+```
+
+
+#### *planet_name* note
+
+Data Example:
+
+```json
+{"feature": "location", "category": "match_info", "key": "planet_name", "data": "Vesta"}
 ```
