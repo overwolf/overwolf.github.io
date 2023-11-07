@@ -8,6 +8,7 @@ import {
   CollapseContext,
   CollapseProvider,
 } from '../contexts/collapse-context';
+import useThemeState from '@site/src/components/hooks/theme-state';
 
 function SidebarGrid(
   props: {
@@ -19,6 +20,7 @@ function SidebarGrid(
 
   const parentCollapsed = useContext(CollapseContext);
   const [animatedCollapse, setAnimatedCollapse] = useState(parentCollapsed);
+  const isLight = useThemeState();
   // ---------------------------------------------------------------------------
 
   return (
@@ -27,6 +29,7 @@ function SidebarGrid(
         [OWClassNames.sidebar.container.items.category.showCaret]: showCaret,
         [OWClassNames.sidebar.container.collapsed]:
           parentCollapsed || (collapsed && animatedCollapse),
+        [OWClassNames.common.lightTheme]: isLight === 'light'
       })}
       as="ul"
       lazy={true}

@@ -4,6 +4,7 @@ const OWClassNames = {
     desktopOnly: 'desktop-only',
     mobileOnly: 'mobile-only',
     navigateWithKeyboard: 'navigation-with-keyboard',
+    lightTheme: 'light',
   },
   sidebar: {
     index: 'ow-theme-sidebar',
