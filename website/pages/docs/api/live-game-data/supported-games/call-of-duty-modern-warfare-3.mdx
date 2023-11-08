@@ -84,7 +84,9 @@ Data Example:
 ```
 
 #### *match_end* note
-Match end event include the match outcome<br/>
+
+Match end event include the match outcome
+
 Possible values:
 * victory
 * defeat
@@ -95,7 +97,6 @@ Data Example:
 {"events":[{"name":"match_end","data":victory}]}
 ```
 
-
 ## game_info
 
 ### Info Updates
@@ -103,15 +104,25 @@ Data Example:
 key          | Category    | Values                    | Notes                 | Since GEP Ver. |
 ------------ | ------------| ------------------------- | --------------------- | ------------- | 
 scene| game_info   | current player's scene. |See [notes](#scene-note)|   198.0       |
+game_mode| game_info   | current game mode selected by the player. |See [notes](#game_mode-note)|   239.0       |
 
 #### *scene* note
+
 Possible values:
-* lobby
-* inGame
+* lobby_mw3
+* in_game
 
 Data Example:
 
 ```json
-{"feature":"game_info","category":"game_info","key":"scene","value":"lobby"}
+{"feature":"game_info","category":"game_info","key":"scene","value":"in_game"}
+```
+
+#### *game_mode* note
+
+Data Example:
+
+```json
+{"feature":"game_info","category":"game_info","key":"mode","value":"mw3"}
 ```
 
