@@ -1,6 +1,9 @@
 :root {
   --evc-table-header-bg: var(--color-black);
   --evc-border-border: var(--border-table);
+  --evc-group-title: var(--color-999);
+  --evc-group-title-bg: var(--secondary-bg);
+  --evc-row-title: var(--txt-secondary);
 }
 
 .electron-vs-client-table-section {
@@ -13,10 +16,10 @@
   .evc-table {
     max-width: 1396px;
     margin: auto;
+    padding: 72px 0 56px;
   }
 
   .table-header {
-    padding: 72px 0 56px;
     display: flex;
     background-color: var(--evc-table-header-bg);
 
@@ -35,5 +38,59 @@
         justify-content: center;
       }
     }
+  }
+
+  .group-title {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px; 
+    letter-spacing: 3.2px;
+    color: var(--evc-group-title);
+    padding: 10px 20px;
+    margin: 0;
+    border: 1px solid var(--evc-border-border);
+    background-color: var(--evc-group-title-bg);
+    min-height: 56px;
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    text-transform: uppercase;
+  }
+
+  .evc-row-group {
+    display: flex;
+
+    h4, p {
+      padding: 10px 20px;
+      border: 1px solid var(--evc-border-border);
+      font-family: 'Lato', sans-serif;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 24px;
+      color: var(--evc-row-title);
+      margin: 0;
+      min-height: 56px;
+      display: flex;
+      gap: 8px;
+      align-items: center;
+      flex: 1;
+    }
+
+    p {
+      justify-content: center;
+    }
+
+    &.green p, &.native-green .native, &.electron-green .electron  {
+      color: var(--color-ui-success-dark);
+    }
+
+  }
+
+  &.native-is-shown {
+    
+  }
+
+  &.electron-is-shown {
+
   }
 }
