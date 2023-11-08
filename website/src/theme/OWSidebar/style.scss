@@ -74,7 +74,10 @@
   .sidebar-container {
     // Variables
     --sidebar-item-height: 24px;
-    --sidebar-item-current-color: #000;
+    // The default value of this is never used
+    // --sidebar-item-current-color: #000;
+    --sidebar-item-collapse-color: #999;
+    --sidebar-item-collapse-color-active: #d6d6d6;
     --sidebar-item-caret-color: #4D4D4D;
     --sidebar-item-caret-width: 1px;
     --sidebar-item-highlight-color: 211, 64, 55;
@@ -85,6 +88,16 @@
     --sidebar-item-hover-color: 256, 256, 256;
     --sidebar-item-hover-opacity: 0.16;
     --sidebar-item-hover-transparent: rgba(var(--sidebar-item-hover-color), var(--sidebar-item-hover-opacity));
+
+    &.light {
+      --sidebar-item-collapse-color: #5C5C5C;
+      --sidebar-item-collapse-color-active: #1F1F1F;
+      --sidebar-item-caret-color: #C2C2C2;
+      --sidebar-item-text-color: #1F1F1F;
+      --sidebar-item-text-color-active: #1F1F1F;
+      --sidebar-item-hover-color: 0, 0, 0;
+      --sidebar-item-hover-opacity: 0.08;
+    }
 
     // Define sidebar grid
     &:not(.collapsed) {
@@ -218,6 +231,7 @@
 
       // Defines a collapse cell
       &.collapse-cell {
+        --sidebar-item-collapse-icon-color: var(--sidebar-item-collapse-color);
         z-index: 100;
         height: var(--sidebar-item-height);
         width: var(--sidebar-item-height);
@@ -227,7 +241,12 @@
         }
   
         &.current:hover {
+          --sidebar-item-collapse-icon-color: var(--sidebar-item-collapse-color-active);
           background-color: var(--sidebar-item-highlight-transparent);
+        }
+
+        svg {
+          fill: var(--sidebar-item-collapse-icon-color);
         }
       }
     }
