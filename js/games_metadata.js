@@ -310,6 +310,14 @@ const GamesMetaData = {
         "iconUrl": "/img/games-logos/leap.png",
         "iconLargeUrl": "/img/games-logos/large/leap.png"
     },
+    "22328": {
+        "id": 22328,
+        "path": "/status/call-of-duty-modern-warfare-2",
+        "name": "Call of Duty: Modern Warfare 2",
+        "docs": "/api/live-game-data/supported-games/call-of-duty-modern-warfare-2",
+        "iconUrl": "/img/games-logos/call-of-duty-modern-warfare-2.png",
+        "iconLargeUrl": "/img/games-logos/large/call-of-duty-modern-warfare-2.png"
+    },
     "22638": {
         "id": 22638,
         "path": "/status/sons-of-the-forest",
@@ -376,15 +384,6 @@ const GamesMetaData = {
     },
     "223281": {
         "id": 223281,
-        "displayId": 22328,
-        "path": "/status/call-of-duty-modern-warfare-2",
-        "name": "Call of Duty: Modern Warfare 2",
-        "docs": "/api/live-game-data/supported-games/call-of-duty-modern-warfare-2",
-        "iconUrl": "/img/games-logos/call-of-duty-modern-warfare-2.png",
-        "iconLargeUrl": "/img/games-logos/large/call-of-duty-modern-warfare-2.png"
-    },
-    "223282": {
-        "id": 223282,
         "displayId": 22328,
         "path": "/status/call-of-duty-warzone-2-0",
         "name": "Call of Duty: Warzone 2.0",
