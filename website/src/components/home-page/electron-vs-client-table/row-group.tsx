@@ -1,7 +1,7 @@
 import React, { FC, useState } from 'react';
 import './electron-vs-client-table.scss';
 
-interface EVCrowGroup {
+interface EVCrowGroupProps {
   title: string;
   nativeText: string;
   electronText: string;
@@ -10,7 +10,7 @@ interface EVCrowGroup {
   electronGreen?: boolean;
 }
 
-const EVCrowGroup: FC<EVCrowGroup> = props => {
+const EVCrowGroup: FC<EVCrowGroupProps> = props => {
   const {
     title,
     nativeText,

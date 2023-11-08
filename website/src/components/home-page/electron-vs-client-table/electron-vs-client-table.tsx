@@ -1,5 +1,6 @@
 import React, { FC, useState } from 'react';
 import EVCrowGroup from './row-group';
+import PlatformLogo from './platform-logo';
 import './electron-vs-client-table.scss';
 
 interface ElectronVsClientTableProps {
@@ -9,8 +10,9 @@ interface ElectronVsClientTableProps {
 const ElectronVsClientTable: FC<ElectronVsClientTableProps> = props => {
   const {} = props;
 
-  // const [appBtn, seAppBtn] = useState(false);
-
+  //view type true = native false = electron
+  const [viewType, setNative] = useState(true); 
+  
   // ---------------------------------------------------------------------------
 
   // const handleToggleApp = () => {
@@ -19,7 +21,10 @@ const ElectronVsClientTable: FC<ElectronVsClientTableProps> = props => {
 
 
   return (
-    <section className="electron-vs-client-table-section">
+    <section className={`
+      electron-vs-client-table-section 
+      ${viewType ? 'native-is-shown' : 'electron-is-shown'}
+    `}>
 
       <div className='evc-inner'>
 
@@ -28,22 +33,10 @@ const ElectronVsClientTable: FC<ElectronVsClientTableProps> = props => {
           <div className='table-header'>
             <h2>Feature Comparison</h2>
             <h2 className='logo'>
-              <img
-                src="/img/home-2023/native-vs-electron/native-logo-desktop.svg"
-                alt="Overwolf Native"
-                className="native-logo desktop"
-                width={193}
-                height={40}
-              />
+              <PlatformLogo native={true} />
             </h2>
             <h2 className='logo'>
-              <img
-                src="/img/home-2023/native-vs-electron/electron-logo-desktop.svg"
-                alt="Overwolf Electron"
-                className="electron-logo desktop"
-                width={215}
-                height={40}
-              />
+              <PlatformLogo electron={true} />
             </h2>
           </div>
 
