@@ -4,6 +4,7 @@
   --evc-group-title: var(--color-999);
   --evc-group-title-bg: var(--secondary-bg);
   --evc-row-title: var(--txt-secondary);
+  --evc-tab-active: var(--color-primary);
 }
 
 .electron-vs-client-table-section {
@@ -17,11 +18,19 @@
     max-width: 1396px;
     margin: auto;
     padding: 72px 0 56px;
+
+    @media (max-width: 600px) {
+      padding: 0 0 32px;
+    }
   }
 
   .table-header {
     display: flex;
     background-color: var(--evc-table-header-bg);
+
+    @media (max-width: 600px) {
+      flex-wrap: wrap;
+    }
 
     h2 {
       padding: 10px 20px;
@@ -33,9 +42,37 @@
       align-items: center;
       flex: 1;
       border: 1px solid var(--evc-border-border);
-      &.logo {
+      position: relative;
 
+      @media (max-width: 600px) {
+        border: none;
+      }
+
+      &:not(.logo) {
+        @media (max-width: 600px) {
+          flex-basis: 100%;
+          justify-content: center;
+        }
+      }
+
+      &.logo {
         justify-content: center;
+
+        @media (max-width: 600px) {
+          min-height: 64px;
+          border-bottom: 1px solid var(--evc-border-border);
+          padding-bottom: 16px;
+          padding-top: 8px;
+        }
+
+        &:after {
+          content: '';
+          height: 4px;
+          width: 100%;
+          position: absolute;
+          bottom: 0;
+          left: 0;
+        }
       }
     }
   }
@@ -86,11 +123,50 @@
 
   }
 
-  &.native-is-shown {
-    
+  @media (max-width: 600px) {
+
+    &.native-is-shown {
+
+      .native-logo {
+        pointer-events: none;
+
+        &:after {
+          background-color: var(--evc-tab-active);
+        }
+
+      }
+
+      .electron-logo {
+        opacity: 0.56;
+      }
+
+      .evc-row-group .electron {
+        display: none;
+      }
+
+    }
+
+    &.electron-is-shown {
+
+      .electron-logo {
+        pointer-events: none;
+
+        &:after {
+          background-color: var(--evc-tab-active);
+        }
+
+      }
+
+      .native-logo {
+        opacity: 0.56;
+      }
+
+      .evc-row-group .native {
+        display: none;
+      }
+
+    }
+
   }
 
-  &.electron-is-shown {
-
-  }
 }

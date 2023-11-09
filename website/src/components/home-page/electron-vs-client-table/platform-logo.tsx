@@ -16,23 +16,17 @@ const PlatformLogo: FC<PlatformLogoProps> = props => {
   return (
     <>
       { native &&
-        <img
-          src="/img/home-2023/native-vs-electron/native-logo-desktop.svg"
-          alt="Overwolf Native"
-          className="native-logo desktop"
-          width={193}
-          height={40}
-        />
+        <picture>
+          <source media="(min-width: 600px)" srcSet="/img/home-2023/native-vs-electron/native-logo-desktop.svg" />
+          <img src="/img/home-2023/native-vs-electron/native-logo-small.svg" alt="Overwolf Native" />
+        </picture>
       }
 
       { electron &&
-        <img
-          src="/img/home-2023/native-vs-electron/electron-logo-desktop.svg"
-          alt="Overwolf Electron"
-          className="electron-logo desktop"
-          width={215}
-          height={40}
-        />
+        <picture>
+          <source media="(min-width: 600px)" srcSet="/img/home-2023/native-vs-electron/electron-logo-desktop.svg" />
+          <img src="/img/home-2023/native-vs-electron/electron-logo-small.svg" alt="Overwolf Electron" />
+        </picture>
       }
     </>
   );

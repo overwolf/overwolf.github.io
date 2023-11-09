@@ -32,10 +32,10 @@ const ElectronVsClientTable: FC<ElectronVsClientTableProps> = props => {
 
           <div className='table-header'>
             <h2>Feature Comparison</h2>
-            <h2 className='logo'>
+            <h2 className='logo native-logo'>
               <PlatformLogo native={true} />
             </h2>
-            <h2 className='logo'>
+            <h2 className='logo electron-logo'>
               <PlatformLogo electron={true} />
             </h2>
           </div>
