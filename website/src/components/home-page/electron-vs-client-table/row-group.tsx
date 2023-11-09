@@ -1,5 +1,6 @@
-import React, { FC, useState } from 'react';
+import React, { FC } from 'react';
 import './electron-vs-client-table.scss';
+import OWToolTipIcon from '../../tooltip/ow-tooltip-icon';
 
 interface EVCrowGroupProps {
   title: string;
@@ -8,6 +9,9 @@ interface EVCrowGroupProps {
   green?: boolean;
   nativeGreen?: boolean;
   electronGreen?: boolean;
+  titleToolTip?: string;
+  nativeToolTip?: string;
+  electronToolTip?: string;
 }
 
 const EVCrowGroup: FC<EVCrowGroupProps> = props => {
@@ -17,9 +21,11 @@ const EVCrowGroup: FC<EVCrowGroupProps> = props => {
     electronText,
     green = false,
     nativeGreen = false,
-    electronGreen = false
+    electronGreen = false,
+    titleToolTip = '',
+    nativeToolTip = '',
+    electronToolTip = ''
   } = props;
-
 
   return (
     <div
@@ -30,9 +36,23 @@ const EVCrowGroup: FC<EVCrowGroupProps> = props => {
         ${electronGreen ? 'electron-green' : ''}
         `}
       >
-      <h4>{title}</h4>
-      <p className='native' title={`Native ${title}`}>{nativeText}</p>
-      <p className='electron' title={`Electron ${title}`}>{electronText}</p>
+      <h4>{title}
+        { titleToolTip &&
+          <OWToolTipIcon text={titleToolTip} />
+        }
+      </h4>
+      <p className='native' title={`Native ${title}`}>
+        {nativeText}
+        { nativeToolTip &&
+          <OWToolTipIcon text={nativeToolTip} />
+        }
+      </p>
+      <p className='electron' title={`Electron ${title}`}>
+        {electronText}
+        { electronToolTip &&
+          <OWToolTipIcon text={electronToolTip} />
+        }
+      </p>
     </div>
   );
 };

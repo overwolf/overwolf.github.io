@@ -93,9 +93,22 @@ const ElectronVsClientTable: FC<ElectronVsClientTableProps> = props => {
             <EVCrowGroup title='Analytics' nativeText='Yes' electronText='Yes' green={true} />
             <EVCrowGroup title='Marketing Support' nativeText='Yes' electronText='Yes' green={true} />
             <EVCrowGroup title='Funding Support' nativeText='Yes' electronText='Yes' green={true} />
-            <EVCrowGroup title='Product Design and Development' nativeText='Yes' electronText='Yes' green={true} />
+            <EVCrowGroup
+              title='Product Design and Development'
+              nativeText='Yes'
+              electronText='Yes'
+              green={true}
+              titleToolTip={'Branding, UI/UX, Development, Commercial design.'}
+            />
             <EVCrowGroup title='Developer Support' nativeText='Yes' electronText='Yes' green={true} />
             <EVCrowGroup title='Appstore Presence + Discoverability' nativeText='Yes' electronText='Yes' green={true} />
+            <EVCrowGroup
+              title='Own Branding'
+              nativeText='Yes'
+              electronText='Yes'
+              green={true}
+              nativeToolTip={'OW-Native offers mixed branding (Overwolf + app) during installation, while OW-Electron offers 100% app branding.'}
+            />
 
             <h3 className='group-title'>Tech</h3>
             <EVCrowGroup title='Overlay SDK (1500+ Games)' nativeText='Yes' electronText='Yes' green={true} />
@@ -103,7 +116,13 @@ const ElectronVsClientTable: FC<ElectronVsClientTableProps> = props => {
             <EVCrowGroup title='Ad Fraud Protection' nativeText='Yes' electronText='Yes' green={true} />
             <EVCrowGroup title='Dev Console' nativeText='Yes' electronText='Yes' green={true} />
             <EVCrowGroup title='Installer' nativeText='Yes' electronText='Optional' nativeGreen={true} />
-            <EVCrowGroup title='Coupled with Overwolf Client' nativeText='Yes' electronText='No' nativeGreen={true} />
+            <EVCrowGroup
+              title='Coupled with Overwolf Client'
+              nativeText='Yes'
+              electronText='No'
+              nativeGreen={true}
+              titleToolTip={"OW-Native requires Overwolf client installation to run the app, while OW-Electron doesn't require the client at all - the flow is entirely up to the app."}
+            />
 
             <h3 className='group-title'>Terms and Conditions</h3>
             <EVCrowGroup title='Ads Revshare' nativeText='70/30' electronText='70/30' />
