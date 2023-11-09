@@ -2,9 +2,10 @@ import React, { FC, useEffect, useState } from 'react';
 import EVCrowGroup from './row-group';
 import PlatformLogo from './platform-logo';
 import './electron-vs-client-table.scss';
+import OWToolTipIcon from '../../tooltip/ow-tooltip-icon';
 
 interface ElectronVsClientTableProps {
-  iconDarkSrc?: string;
+  test?: string;
 }
 
 const ElectronVsClientTable: FC<ElectronVsClientTableProps> = props => {
@@ -79,7 +80,10 @@ const ElectronVsClientTable: FC<ElectronVsClientTableProps> = props => {
               </h2>
             </div>
 
-            <h3 className='group-title'>Performance</h3>
+            <h3 className='group-title'>
+              Performance
+              <OWToolTipIcon text="All performance benchmarks are measured on an ‘AMD Ryzen 5 5600X 6-Core Processor’, and include the total overhead for running and displaying a simple window." />
+            </h3>
             <EVCrowGroup title='CPU Impact (Idle)' nativeText='0.2%' electronText='0.1%' />
             <EVCrowGroup title='CPU Impact (Avg Window Interaction)' nativeText='3%' electronText='0.5%' />
             <EVCrowGroup title='RAM Consumption (Peak)' nativeText='420 MB' electronText='380 MB' />
