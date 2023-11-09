@@ -1,19 +1,47 @@
 :root {
   --evc-table-header-bg: var(--color-black);
-  --evc-border-border: var(--border-table);
+  --evc-border-header: var(--border-table);
+  --evc-border: var(--border-table);
+  --evc-header-title: var(--color-white);
   --evc-group-title: var(--color-999);
   --evc-group-title-bg: var(--secondary-bg);
   --evc-row-title: var(--txt-secondary);
   --evc-tab-active: var(--color-primary);
+  --evc-action: var(--txt-secondary);
+}
+
+html[data-theme="light"] {
+  --evc-border: var(--light-border-color);
+  --evc-group-title-bg: var(--light-border-color);
+  --evc-group-title: var(--border-table);
+  --evc-row-title: var(--secondary-bg);
+
+  .table-action-container .show-hide-table-btn {
+    border: 1px solid var(--evc-action);
+    color: var(--evc-action);
+  }
+}
+
+.show-hide-table-btn {
+  margin: auto;
+  display: block;
+
+  &.close-btn {
+    margin-bottom: 40px;
+  }
+}
+
+.table-action-container {
+  padding: 40px 0 56px;
+  background-color: var(--evc-table-header-bg);
+
+  &:empty {
+    padding-bottom: 0;
+  }
 }
 
 .electron-vs-client-table-section {
   
-  .show-hide-table-btn {
-    margin: auto;
-    display: block;
-  }
-
   .evc-inner {
     overflow: hidden;
     max-height: 0;
@@ -43,6 +71,7 @@
     }
 
     h2 {
+      color: var(--evc-header-title);
       padding: 10px 20px;
       font-size: 24px;
       line-height: 32px;
@@ -51,7 +80,7 @@
       display: flex;
       align-items: center;
       flex: 1;
-      border: 1px solid var(--evc-border-border);
+      border: 1px solid var(--evc-border-header);
       position: relative;
 
       @media (max-width: 600px) {
@@ -70,7 +99,7 @@
 
         @media (max-width: 600px) {
           min-height: 64px;
-          border-bottom: 1px solid var(--evc-border-border);
+          border-bottom: 1px solid var(--evc-border);
           padding-bottom: 16px;
           padding-top: 8px;
         }
@@ -95,7 +124,7 @@
     color: var(--evc-group-title);
     padding: 10px 20px;
     margin: 0;
-    border: 1px solid var(--evc-border-border);
+    border: 1px solid var(--evc-border);
     background-color: var(--evc-group-title-bg);
     min-height: 56px;
     display: flex;
@@ -109,7 +138,7 @@
 
     h4, p {
       padding: 10px 20px;
-      border: 1px solid var(--evc-border-border);
+      border: 1px solid var(--evc-border);
       font-family: 'Lato', sans-serif;
       font-size: 16px;
       font-weight: 400;
