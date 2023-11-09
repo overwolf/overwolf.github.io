@@ -1,4 +1,4 @@
-import React, { FC, useState } from 'react';
+import React, { FC, useEffect, useState } from 'react';
 import EVCrowGroup from './row-group';
 import PlatformLogo from './platform-logo';
 import './electron-vs-client-table.scss';
@@ -11,13 +11,27 @@ const ElectronVsClientTable: FC<ElectronVsClientTableProps> = props => {
   const {} = props;
 
   //view type true = native false = electron
-  const [viewType, setNative] = useState(true); 
+  const [viewType, setViewType] = useState(true); 
+  const [elmRole, setElmRole] = useState(''); 
   
   // ---------------------------------------------------------------------------
 
-  // const handleToggleApp = () => {
-  //   seAppBtn((current) => !current);
-  // };
+useEffect(() => {
+  if(window.innerWidth < 600) {
+    setElmRole('button');
+  } else {
+    setElmRole('heading');
+  }
+}, [])
+
+  const handleToggleViewType = () => {
+    if(window.innerWidth <= 600) {
+      setViewType((current) => !current);
+     }
+  };
+
+   // ---------------------------------------------------------------------------
+
 
 
   return (
@@ -32,10 +46,20 @@ const ElectronVsClientTable: FC<ElectronVsClientTableProps> = props => {
 
           <div className='table-header'>
             <h2>Feature Comparison</h2>
-            <h2 className='logo native-logo'>
+            <h2 
+              className='logo native-logo' 
+              onClick={handleToggleViewType}
+              role={elmRole}
+              aria-label='show/hide ow native parameters'
+              >
               <PlatformLogo native={true} />
             </h2>
-            <h2 className='logo electron-logo'>
+            <h2 
+              className='logo electron-logo' 
+              onClick={handleToggleViewType}
+              role={elmRole}
+              aria-label='show/hide ow electron parameters'
+              >
               <PlatformLogo electron={true} />
             </h2>
           </div>
@@ -65,7 +89,7 @@ const ElectronVsClientTable: FC<ElectronVsClientTableProps> = props => {
           <h3 className='group-title'>Terms and Conditions</h3>
           <EVCrowGroup title='Ads Revshare' nativeText='70/30' electronText='70/30' />
           <EVCrowGroup title='Subscriptions Revshare' nativeText='85/15' electronText='85/15' />
-           
+
         </div>
 
       </div>
