@@ -48,6 +48,10 @@ html[data-theme="light"] {
   --pointer-offset-x: -8px;
   --pointer-offset-y: -8px;
 
+  @media (max-width: 600px) {
+    max-width: 280px;
+  }
+
   &::before {
     content: '';
     position: absolute;
