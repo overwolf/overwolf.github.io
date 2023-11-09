@@ -5,7 +5,12 @@
   --tool-tip-icon-hover: var(--icons-primary);
 }
 
-.tool-tip-info-icon {
+html[data-theme="light"] {
+  --tool-tip-icon-color: var(--color-600);
+  --tool-tip-icon-hover: var(--color-200);
+}
+
+.tool-tip-info-icon { 
   padding: 0;
   background-color: transparent;
   display: inline-block;
