@@ -13,16 +13,17 @@ const ElectronVsClientTable: FC<ElectronVsClientTableProps> = props => {
   //view type true = native false = electron
   const [viewType, setViewType] = useState(true); 
   const [elmRole, setElmRole] = useState(''); 
-  
+  const [showHideTable, setShowHideTable] = useState(false); 
+
   // ---------------------------------------------------------------------------
 
-useEffect(() => {
-  if(window.innerWidth < 600) {
-    setElmRole('button');
-  } else {
-    setElmRole('heading');
-  }
-}, [])
+  useEffect(() => {
+    if(window.innerWidth < 600) {
+      setElmRole('button');
+    } else {
+      setElmRole('heading');
+    }
+  }, [])
 
   const handleToggleViewType = () => {
     if(window.innerWidth <= 600) {
@@ -30,9 +31,11 @@ useEffect(() => {
      }
   };
 
-   // ---------------------------------------------------------------------------
+  const handleToggleTable = () => {
+    setShowHideTable((current) => !current);
+  };
 
-
+  // ---------------------------------------------------------------------------
 
   return (
     <section className={`
@@ -40,7 +43,7 @@ useEffect(() => {
       ${viewType ? 'native-is-shown' : 'electron-is-shown'}
     `}>
 
-      <div className='evc-inner'>
+      <div className={`evc-inner ${showHideTable ? 'is-open' : ''}`}>
 
         <div className='evc-table'>
 
@@ -94,7 +97,17 @@ useEffect(() => {
 
       </div>
 
-      <button className="btn-secondary show-hide-table-btn">Open features comparison</button>
+      <button 
+        className="btn-secondary show-hide-table-btn"
+        onClick={handleToggleTable}
+        >
+          {!showHideTable &&
+            <>Open features comparison</>
+          }
+          {showHideTable &&
+            <>Close features comparison</>
+          }
+        </button>
     </section>
   );
 };

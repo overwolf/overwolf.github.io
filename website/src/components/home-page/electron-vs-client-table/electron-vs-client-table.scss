@@ -14,6 +14,16 @@
     display: block;
   }
 
+  .evc-inner {
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 300ms ease;
+
+    &.is-open {
+      max-height: 1500px;
+    }
+  }
+
   .evc-table {
     max-width: 1396px;
     margin: auto;
