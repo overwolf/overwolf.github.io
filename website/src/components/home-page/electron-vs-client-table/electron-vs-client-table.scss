@@ -155,13 +155,27 @@ html[data-theme="light"] {
       margin: 0;
       min-height: 56px;
       display: flex;
-      gap: 8px;
       align-items: center;
       flex: 1;
     }
 
+    h4 {
+      gap: 8px;
+    }
+
     p {
       justify-content: center;
+
+
+      .tt-container {
+        position: relative;
+
+        .tool-tip-info-icon {
+          position: absolute;
+          top: -11px;
+          left: 8px;
+        }
+      }
     }
 
     &.green p, &.native-green .native, &.electron-green .electron  {

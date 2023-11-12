@@ -44,13 +44,13 @@ const EVCrowGroup: FC<EVCrowGroupProps> = props => {
       <p className='native' title={`Native ${title}`}>
         {nativeText}
         { nativeToolTip &&
-          <OWToolTipIcon text={nativeToolTip} />
+          <div className='tt-container'><OWToolTipIcon text={nativeToolTip} /></div>
         }
       </p>
       <p className='electron' title={`Electron ${title}`}>
         {electronText}
         { electronToolTip &&
-          <OWToolTipIcon text={electronToolTip} />
+          <div className='tt-container'><OWToolTipIcon text={electronToolTip} /></div>
         }
       </p>
     </div>
