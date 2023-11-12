@@ -61,6 +61,10 @@ html[data-theme="light"] {
     @media (max-width: 600px) {
       padding: 0 0 32px;
     }
+
+    &.no-padding-top {
+      padding-top: 0;
+    }
   }
 
   .table-header {

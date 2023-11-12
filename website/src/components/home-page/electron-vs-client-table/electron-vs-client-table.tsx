@@ -5,11 +5,11 @@ import './electron-vs-client-table.scss';
 import OWToolTipIcon from '../../tooltip/ow-tooltip-icon';
 
 interface ElectronVsClientTableProps {
-  test?: string;
+  noPaddingTop?: boolean;
 }
 
 const ElectronVsClientTable: FC<ElectronVsClientTableProps> = props => {
-  const {} = props;
+  const { noPaddingTop = false } = props;
 
   //view type true = native false = electron
   const [viewType, setViewType] = useState(true); 
@@ -36,6 +36,10 @@ const ElectronVsClientTable: FC<ElectronVsClientTableProps> = props => {
   const handleToggleTable = () => {
     setShowHideTable((current) => !current);
     let ScrollOffset = -100;
+
+    if(noPaddingTop) {
+      ScrollOffset = -180;
+    }
 
     if(window.innerWidth <= 600) {
      ScrollOffset = -160;
@@ -71,7 +75,7 @@ const ElectronVsClientTable: FC<ElectronVsClientTableProps> = props => {
 
         <div className={`evc-inner ${showHideTable ? 'is-open' : ''}`} ref={tableContainer}>
 
-          <div className='evc-table'>
+          <div className={`evc-table ${noPaddingTop ? 'no-padding-top' : ''}`}>
 
             <div className='table-header'>
               <h2>Feature Comparison</h2>
