@@ -195,6 +195,7 @@ assists| live_data  | The name of the played map     |See [notes](#assists-note)
 elo_points| match_info  | The amount of ELO points the local player will gain or lose in premier mode     |See [notes](#elo_points-note)|   237.0       |
 pseudo_match_id| match_info  | Uniques mtch_id     |See [notes](#pseudo_match_id-note)|   237.0       |
 round_number| live_data  | The current round number     |See [notes](#round_number-note)|   237.0       |
+is_ranked| match_info  | Flag if the game is ranked or not     |See [notes](#is_ranked-note)|   239.0       |
 
 
 #### *roster* note
@@ -370,6 +371,16 @@ Data Example:
 
 ```json
 {"info":{"live_data":{"round_number":2}},"feature":"match_info"}
+```
+
+#### *is_ranked* note
+
+In game modes "premier", "competitive" and "wingman" the value will be true. 
+
+Data Example:
+
+```json
+{"info":{"match_info":{"is_ranked":true}},"feature":"match_info"}
 ```
 
 
