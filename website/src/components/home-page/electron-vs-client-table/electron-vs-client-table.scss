@@ -48,7 +48,8 @@ html[data-theme="light"] {
     transition: max-height 300ms ease;
 
     &.is-open {
-      max-height: 1500px;
+      max-height: 2000px;
+      overflow: visible;
     }
   }
 
@@ -65,9 +66,12 @@ html[data-theme="light"] {
   .table-header {
     display: flex;
     background-color: var(--evc-table-header-bg);
+    position: sticky;
+    top: 74px;
 
     @media (max-width: 600px) {
       flex-wrap: wrap;
+      top: 48px;
     }
 
     h2 {

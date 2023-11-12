@@ -1,4 +1,4 @@
-import React, { FC, useEffect, useState } from 'react';
+import React, { FC, useEffect, useRef, useState } from 'react';
 import EVCrowGroup from './row-group';
 import PlatformLogo from './platform-logo';
 import './electron-vs-client-table.scss';
@@ -15,6 +15,7 @@ const ElectronVsClientTable: FC<ElectronVsClientTableProps> = props => {
   const [viewType, setViewType] = useState(true); 
   const [elmRole, setElmRole] = useState(''); 
   const [showHideTable, setShowHideTable] = useState(false); 
+  const tableContainer = useRef<HTMLDivElement>(null);
 
   // ---------------------------------------------------------------------------
 
@@ -34,6 +35,18 @@ const ElectronVsClientTable: FC<ElectronVsClientTableProps> = props => {
 
   const handleToggleTable = () => {
     setShowHideTable((current) => !current);
+    let ScrollOffset = -100;
+
+    if(window.innerWidth <= 600) {
+     ScrollOffset = -160;
+    }
+
+    if (tableContainer) {
+      // 👇 Will scroll smoothly to the table
+      const y = tableContainer.current.getBoundingClientRect().top + window.scrollY + ScrollOffset;
+      window.scrollTo({ top: y, behavior: 'smooth' });
+    }
+
   };
 
   // ---------------------------------------------------------------------------
@@ -56,7 +69,7 @@ const ElectronVsClientTable: FC<ElectronVsClientTableProps> = props => {
         ${viewType ? 'native-is-shown' : 'electron-is-shown'}
       `}>
 
-        <div className={`evc-inner ${showHideTable ? 'is-open' : ''}`}>
+        <div className={`evc-inner ${showHideTable ? 'is-open' : ''}`} ref={tableContainer}>
 
           <div className='evc-table'>
 
