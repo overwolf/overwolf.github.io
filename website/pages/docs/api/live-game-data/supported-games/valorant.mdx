@@ -66,6 +66,8 @@ player_id    | me          | ID of the local player.   |See [notes](#player_id-n
 region       | me          | Region of the local player.|See [notes](#region-note)|   148.0       |
 agent        | me          | Character Internal ID.       |See [notes](#agent-note)|   149.0       |
 health        | me          | Character current health.       |See [notes](#health-note)|   238.0       |
+abilities    | me  | Current available abilities |See [notes](#abilities-note)|   239.0       |
+
 
 #### *player_name* note
 
@@ -134,6 +136,14 @@ Data Example:
 
 ```json
 {"feature": "me", "category": "me", "key": "health", "data": "100"}
+```
+
+#### *abilities* note
+
+Data Example:
+
+```json
+{"feature": "me", "category": "me", "key": "abilities", "data": "{\"C\":true,\"Q\":true,\"E\":true,\"X\":false}"}
 ```
 
 
