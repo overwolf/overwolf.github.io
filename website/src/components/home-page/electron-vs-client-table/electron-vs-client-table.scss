@@ -72,6 +72,7 @@ html[data-theme="light"] {
     background-color: var(--evc-table-header-bg);
     position: sticky;
     top: 74px;
+    z-index: 1;
 
     @media (max-width: 600px) {
       flex-wrap: wrap;
