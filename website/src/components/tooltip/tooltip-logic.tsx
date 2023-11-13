@@ -2,7 +2,7 @@
 //show tooltip for navigation item refer code from: https://github.com/zoltantothcom/vanilla-js-tooltip/blob/master/scripts/vanilla-js-tooltip.js
 
 
-export const handleMegaToolTipOnOver = (e) => {
+export const handleMegaToolTip = (e) => {
   let elmTarget = e.target as HTMLTextAreaElement;
   if (!elmTarget.hasAttribute('data-tooltip')) return; // don't show tooltips for elements a tooltip isn't defined for
   if (elmTarget.parentElement?.classList.contains('is-open')) return; // don't show tooltip for open elements (dropdown or menus)
@@ -89,21 +89,16 @@ export const handleMegaToolTipOnOver = (e) => {
   tooltip.style.setProperty("--pointer-offset-x", (tooltipPointerOffsetX - triangleSize / 2) + "px") // if the tooltip is offset to one side, this changes the position of the triangle
   tooltip.style.setProperty("--pointer-offset-y", (tooltipPointerOffsetY - triangleSize / 2) + "px") // if the tooltip is offset to one side, this changes the position of the triangle
 
-
 }
 
 // remove tooltip from dom
-export const handleMegaToolTipMouseOut = (e) => {
-  let elmTarget = e.target as HTMLTextAreaElement;
-  if (elmTarget.hasAttribute('data-tooltip')) {
-    setTimeout(function () {
-      if (document.querySelector(".tool-tip")) {
-        let allStrayTooltips = document.querySelectorAll('.tool-tip');
+export const killAllTooltips = () => {
+  if (document.querySelector(".tool-tip")) {
+    let allStrayTooltips = document.querySelectorAll('.tool-tip');
 
-        allStrayTooltips.forEach(toolTip => {
-          toolTip.remove();
-        });
-      }
-    }, 0);
+    allStrayTooltips.forEach(toolTip => {
+      toolTip.remove();
+    });
   }
 }
+
