@@ -73,8 +73,4 @@
     <path d="M12 9L8 14H16L12 9Z" fill="currentColor"/>
   </symbol>
 
-  <symbol id="info" viewBox="0 0 24 24" fill="none">
-    <path fill-rule="evenodd" clip-rule="evenodd" d="M22 11.999C22 17.5219 17.5228 21.999 12 21.999C6.47715 21.999 2 17.5219 2 11.999C2 6.47618 6.47715 1.99902 12 1.99902C17.5228 1.99902 22 6.47618 22 11.999ZM11 5.99902V7.99902H13V5.99902H11ZM11 17.999V9.99902H13V17.999H11Z" fill="currentColor"/>
-  </symbol>
-
 </svg>

@@ -1,46 +1,14 @@
-:root {
-  --tool-tip-bg: var(--color-600);
-  --tool-tip-txt: var(--color-white);
-  --tool-tip-icon-color: var(--icon-secondary);
-  --tool-tip-icon-hover: var(--icons-primary);
-}
-
-html[data-theme="light"] {
-  --tool-tip-icon-color: var(--color-600);
-  --tool-tip-icon-hover: var(--color-200);
-}
-
-.tool-tip-info-icon { 
-  padding: 0;
-  background-color: transparent;
-  display: inline-block;
-
-  &:hover, &:focus {
-    svg {
-      color: var(--tool-tip-icon-hover);
-    }
-  }
-
-  svg {
-    color: var(--tool-tip-icon-color);
-    width: 24px;
-    height: 24px;
-    pointer-events: none;
-  }
-}
-
 .tool-tip {
   position: absolute;
   z-index: 110;
-  background-color: var(--tool-tip-bg);
-  color: var(--tool-tip-txt);
-  padding: 16px;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 24px;
+  background-color: #171325;
+  color: #FFFFFF;
+  border: 1px solid transparentize(#735D26, 0.4);
+  text-align: center;
+  padding: 12px;
+  font-size: 14px;
+  line-height: 145%;
   min-height: 48px;
-  max-width: 320px;
   line-height: 150%;
   pointer-events: none;
   opacity: 0;
@@ -48,15 +16,22 @@ html[data-theme="light"] {
   --pointer-offset-x: -8px;
   --pointer-offset-y: -8px;
 
-  @media (max-width: 600px) {
-    max-width: 280px;
-  }
-
   &::before {
     content: '';
     position: absolute;
     margin: auto;
-    background-color: var(--tool-tip-bg);
+    background-color: #171325;
+    width: 16px;
+    height: 16px;
+    transform: rotate(45deg);
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    margin: auto;
+    background: #735d26;
+    opacity: 0.5;
     width: 16px;
     height: 16px;
     transform: rotate(45deg);
@@ -68,7 +43,7 @@ html[data-theme="light"] {
     font-size: 14px;
     line-height: 145%;
     padding: 12px;
-    background-color: #ccc;
+    background-color: red; // TODO - replace?
     pointer-events: none;
   }
 
@@ -87,7 +62,13 @@ html[data-theme="light"] {
     &::before {
       left: 50%; // centered
       margin-left: var(--pointer-offset-x); // offset of triangle pointer
-      bottom: -6px;
+      bottom: -6.4px;
+    }
+
+    &::after {
+      left: 50%; // centered
+      margin-left: var(--pointer-offset-x); // offset of triangle pointer
+      bottom: -8px;
     }
   }
 
@@ -153,7 +134,7 @@ html[data-theme="light"] {
     }
     100% { 
       opacity: 1;
-      transform: translateY(-18px);
+      transform: translateY(-24px);
     }
   }
 

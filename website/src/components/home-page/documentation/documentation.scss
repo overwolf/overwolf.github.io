@@ -1,11 +1,11 @@
 .documentation-section {
-  padding: 32px 16px;
+  padding: 80px 16px;
   display: flex;
   flex-direction: column;
   justify-content: center;
 
   @media (max-width: 600px) {
-    // padding: 40px 16px;
+    padding: 40px 16px;
   }
 
   h3 {

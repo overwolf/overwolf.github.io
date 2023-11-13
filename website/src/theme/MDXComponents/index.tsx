@@ -31,7 +31,7 @@ import EventsData from '../../components/game-events-status/EventsData';
 import FancyLink from '../../components/fancy/fancy-link';
 import MatchOnly from '../../components/content-tags/gep/match-only';
 import DisplayJSON from '../../components/display-json/index';
-import ElectronVsClientTable from '../../components/home-page/electron-vs-client-table/electron-vs-client-table';
+
 
 import type {MDXComponentsObject} from '@theme/MDXComponents';
 
@@ -70,7 +70,6 @@ const MDXComponents: MDXComponentsObject = {
     OWTableRow: OWTableRow,
     OWexpandedRowGroup: OWexpandedRowGroup,
     OWdataCell: OWdataCell,
-    ElectronVsClientTable: ElectronVsClientTable,
     Tagger: Tagger,
     Tabs: Tabs,
     TabItem: TabItem,
