@@ -1,5 +1,5 @@
 import './image-heading.scss';
-import React, {FC, Children} from 'react';
+import React, { FC } from 'react';
 import useThemeState from '../hooks/theme-state';
 
 interface ImageHeadingProps {
@@ -12,15 +12,15 @@ interface ImageHeadingProps {
 
 // -----------------------------------------------------------------------------
 
-const ImageHeading: FC<ImageHeadingProps> = props => {
+const ImageHeading: FC<ImageHeadingProps> = (props) => {
   const { title, imgLightSrc, imgDarkSrc, children, id } = props;
 
   const themeState = useThemeState();
-  const imgSrc = themeState == 'light' ? imgLightSrc : imgDarkSrc;
+  const imgSrc = themeState === 'light' ? imgLightSrc : imgDarkSrc;
   return (
-    <div className='image-heading'>
+    <div className="image-heading">
       <img src={imgSrc} alt={`${title} Icon`} />
-      <div className='content'>
+      <div className="content">
         <h2 id={id}>{title}</h2>
         {children}
       </div>
