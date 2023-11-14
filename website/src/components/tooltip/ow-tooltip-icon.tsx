@@ -1,6 +1,7 @@
 import React, { FC, useEffect } from 'react';
 import './tooltip.scss';
 import { killAllTooltips, handleMegaToolTip } from './tooltip-logic';
+import useIsMobile from '../hooks/is-mobile-hook';
 
 interface OWToolTipIconProps {
   text: string;
@@ -8,47 +9,48 @@ interface OWToolTipIconProps {
   size?: string;
 }
 
-const OWToolTipIcon: FC<OWToolTipIconProps> = props => {
-  const {
-    text,
-    position = 'top',
-    size = ''
-  } = props;
+const OWToolTipIcon: FC<OWToolTipIconProps> = (props) => {
+  const { text, position = 'top', size = '' } = props;
 
   const className = 'tool-tip-info-icon';
+  const isMobile = useIsMobile();
 
   const onScroll = () => {
-    killAllTooltips()
-  }
+    killAllTooltips();
+  };
 
-  const handleClickOutside = e => {
+  const handleClickOutside = (e) => {
     // console.log(e.composedPath())
-    if (e.target.className != className) {
-      killAllTooltips()
+    if (e.target.className !== className) {
+      killAllTooltips();
     }
   };
 
   useEffect(() => {
-    window.addEventListener('scroll', onScroll);
+    if (window) window.addEventListener('scroll', onScroll);
     document.addEventListener('mousedown', handleClickOutside);
-  }, [])
-  
+  }, []);
+
   // ---------------------------------------------------------------------------
 
   return (
     <>
-      {window.innerWidth < 600 &&
-        <button className='tool-tip-info-icon'
+      {isMobile && (
+        <button
+          className="tool-tip-info-icon"
           data-tooltip={text}
           tooltip-position={position}
           tooltip-size={size}
           onClick={handleMegaToolTip}
-          >
-          <svg className='tool-tip-icon'><use href="/img/sprite.svg#info"></use></svg>
+        >
+          <svg className="tool-tip-icon">
+            <use href="/img/sprite.svg#info"></use>
+          </svg>
         </button>
-      }
-      {window.innerWidth > 600 &&
-        <button className={className}
+      )}
+      {!isMobile && (
+        <button
+          className={className}
           data-tooltip={text}
           tooltip-position={position}
           tooltip-size={size}
@@ -56,13 +58,14 @@ const OWToolTipIcon: FC<OWToolTipIconProps> = props => {
           onMouseOut={killAllTooltips}
           onFocus={handleMegaToolTip}
           onBlur={killAllTooltips}
-          >
-          <svg className='tool-tip-icon'><use href="/img/sprite.svg#info"></use></svg>
+        >
+          <svg className="tool-tip-icon">
+            <use href="/img/sprite.svg#info"></use>
+          </svg>
         </button>
-      }
+      )}
     </>
   );
-
-}
+};
 
 export default OWToolTipIcon;

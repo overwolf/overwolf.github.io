@@ -31,11 +31,13 @@ import EventsData from '../../components/game-events-status/EventsData';
 import FancyLink from '../../components/fancy/fancy-link';
 import MatchOnly from '../../components/content-tags/gep/match-only';
 import DisplayJSON from '../../components/display-json/index';
-import ElectronVsClientTable from '../../components/home-page/electron-vs-client-table/electron-vs-client-table';
+import ComparisonTable from '../../components/comparison-table';
 
-import type {MDXComponentsObject} from '@theme/MDXComponents';
+import type { MDXComponentsObject } from '@theme/MDXComponents';
+import FrameworkComparisonTable from '@site/src/presets/comparison-table/framework-comparison-table';
+import ImageHeading from '@site/src/components/image-heading/image-heading';
 
-const devMode = process.env.NODE_ENV === "development";
+const devMode = process.env.NODE_ENV === 'development';
 
 const MDXComponents: MDXComponentsObject = {
   head: MDXHead,
@@ -56,40 +58,40 @@ const MDXComponents: MDXComponentsObject = {
 
   // Custom Components
   ...DisplayJSON,
-  
+
   ...WrapAll({
-    ImageSlider: ImageSlider,
-    ImageBoxModal: ImageBoxModal,
-    VideoBox: VideoBox,
-    GameInfo: GameInfo,
-    SkipMe: SkipMe,
-    OWTabs: OWTabs,
-    OWTabItem: OWTabItem,
-    ImageHeading: ImageToggle,
-    OWTable: OWTable,
-    OWTableRow: OWTableRow,
-    OWexpandedRowGroup: OWexpandedRowGroup,
-    OWdataCell: OWdataCell,
-    ElectronVsClientTable: ElectronVsClientTable,
-    Tagger: Tagger,
-    Tabs: Tabs,
-    TabItem: TabItem,
-    SimpleTab: SimpleTab,
-    EventsData: EventsData,
-    FancyLink: FancyLink,
-    MatchOnly: MatchOnly,
-    ImageToggle: ImageToggle,
-  })
+    ImageSlider,
+    ImageBoxModal,
+    VideoBox,
+    GameInfo,
+    SkipMe,
+    OWTabs,
+    OWTabItem,
+    ImageToggle,
+    OWTable,
+    OWTableRow,
+    OWexpandedRowGroup,
+    OWdataCell,
+    ComparisonTable,
+    FrameworkComparisonTable,
+    Tagger,
+    Tabs,
+    TabItem,
+    SimpleTab,
+    EventsData,
+    FancyLink,
+    MatchOnly,
+    ImageHeading,
+  }),
 };
 
-function WrapAll(elements: {[key: string]: React.FC<any>}) {
-  if(!devMode) return elements;
+function WrapAll(elements: { [key: string]: React.FC<any> }) {
+  if (!devMode) return elements;
   const result = {};
   Object.keys(elements).forEach((key) => {
     result[key] = DebugWrapper(elements[key]);
   });
   return result;
 }
-
 
 export default MDXComponents;

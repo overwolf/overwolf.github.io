@@ -5,9 +5,9 @@ import {
   // @ts-expect-error theme-common/internal is not properly typed
 } from '@docusaurus/theme-common/internal';
 import isInternalUrl from '@docusaurus/isInternalUrl';
-import { MobileContext } from '../../../contexts/mobile-context';
 import { CollapseContext } from '../../../contexts/collapse-context';
 import { LinkableSidebarItemProps } from '../../../types/types';
+import { useIsMobileContext } from '@site/src/components/contexts/is-mobile-context';
 
 export default function SidebarLinkHook(
   item: LinkableSidebarItemProps,
@@ -15,19 +15,19 @@ export default function SidebarLinkHook(
   path: string,
 ): {
   /** Is this running within a mobile sidebar context */
-  isMobile: boolean
+  isMobile: boolean;
   /** Is this currently contained within a collapsed context */
-  collapsed: boolean,
+  collapsed: boolean;
   /** Is this a parent of the current page */
-  isActiveItem: boolean,
+  isActiveItem: boolean;
   /** Is this the current page */
-  isCurrentPage: boolean,
+  isCurrentPage: boolean;
   /** Is this a link that leads outside the local website? */
   isExternalLink: boolean;
 } {
   return {
     /** Is this running within a mobile sidebar context */
-    isMobile: useContext(MobileContext),
+    isMobile: useIsMobileContext(),
     /** Is this currently contained within a collapsed context */
     collapsed: useContext(CollapseContext),
     /** Is this a parent of the current page */
