@@ -7,6 +7,7 @@ const OWClassNames = {
     lightTheme: 'light',
     active: 'active',
     inactive: 'inactive',
+    buttonSecondary: 'btn-secondary',
   },
   sidebar: {
     index: 'ow-theme-sidebar',
@@ -42,6 +43,12 @@ const OWClassNames = {
   },
   comparisonTable: {
     index: 'comparison-table',
+    button: {
+      index: 'comparison-table-button-container',
+      button: 'comparison-table-button',
+      open: 'open-button',
+      close: 'close-button',
+    },
     section: 'comparison-table-section',
     transition: 'comparison-table-transition',
     content: 'comparison-table-content',

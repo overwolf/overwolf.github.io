@@ -200,7 +200,7 @@ const FrameworkComparisonTable = (props: FrameworkComparisonTableProps) => {
         },
         values: {
           'ow-platform': { text: 'Yes', colorOverride: 'green' },
-          'ow-electron': { text: 'No', colorOverride: 'red' },
+          'ow-electron': { text: 'No' },
         },
       },
 

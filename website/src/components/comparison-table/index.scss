@@ -16,7 +16,7 @@ html[data-theme="light"] {
   --evc-group-title: var(--border-table);
   --evc-row-title: var(--secondary-bg);
 
-  .table-action-container .show-hide-table-btn {
+  .comparison-table-button-container .comparison-table-button {
     border: 1px solid var(--evc-action);
     color: var(--evc-action);
   }
@@ -25,21 +25,25 @@ html[data-theme="light"] {
 // TODO convert all active vs inactives here to use ISMOBILE
 
 .comparison-table {
-  .show-hide-table-btn {
-    margin: auto;
-    display: block;
-
-    &.close-btn {
-      margin-bottom: 40px;
-    }
-  }
-
-  .table-action-container {
+  .comparison-table-button-container {
     padding: 40px 0 56px;
     background-color: var(--evc-table-header-bg);
 
+    &.inactive {
+      display: none;
+    }
+
     &:empty {
       padding-bottom: 0;
+    }
+
+    .comparison-table-button {
+      margin: auto;
+      display: block;
+  
+      &.close {
+        margin-bottom: 40px;
+      }
     }
   }
 

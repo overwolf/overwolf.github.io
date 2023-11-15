@@ -61,15 +61,21 @@ const ComparisonTable: FC<ComparisonTableProps> = (props) => {
     <div className={clsx(OWClassNames.comparisonTable.index)}>
       <DisplayTitleProvider names={tableScheme.displayNames}>
         <ActiveViewProvider active={activeView}>
-          <div>
-            {!isOpen && (
-              <button
-                className="btn-secondary show-hide-table-btn"
-                onClick={handleToggleTable}
-              >
-                Open features comparison
-              </button>
-            )}
+          <div
+            className={clsx(OWClassNames.comparisonTable.button.index, {
+              [OWClassNames.common.inactive]: isOpen,
+            })}
+          >
+            <button
+              className={clsx(
+                OWClassNames.comparisonTable.button.button,
+                OWClassNames.comparisonTable.button.open,
+                OWClassNames.common.buttonSecondary,
+              )}
+              onClick={handleToggleTable}
+            >
+              Open features comparison
+            </button>
           </div>
 
           <section className={clsx(OWClassNames.comparisonTable.section)}>
@@ -115,14 +121,22 @@ const ComparisonTable: FC<ComparisonTableProps> = (props) => {
               </div>
             </div>
 
-            {isOpen && (
+            <div
+              className={clsx(OWClassNames.comparisonTable.button.index, {
+                [OWClassNames.common.inactive]: !isOpen,
+              })}
+            >
               <button
-                className="btn-secondary show-hide-table-btn close-btn"
+                className={clsx(
+                  OWClassNames.comparisonTable.button.button,
+                  OWClassNames.comparisonTable.button.close,
+                  OWClassNames.common.buttonSecondary,
+                )}
                 onClick={handleToggleTable}
               >
                 Close features comparison
               </button>
-            )}
+            </div>
           </section>
         </ActiveViewProvider>
       </DisplayTitleProvider>
