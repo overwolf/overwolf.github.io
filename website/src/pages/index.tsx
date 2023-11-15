@@ -18,7 +18,7 @@ const Index = (props) => {
       <main id="content" className="main-content">
         <Hero />
         <Services />
-        <FrameworkComparisonTable />
+        <FrameworkComparisonTable large />
         <Documentation />
         <Community />
       </main>

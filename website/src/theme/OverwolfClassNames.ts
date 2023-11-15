@@ -47,12 +47,12 @@ const OWClassNames = {
       index: 'comparison-table-button-container',
       button: 'comparison-table-button',
       open: 'open-button',
+      large: 'large',
       close: 'close-button',
     },
     section: 'comparison-table-section',
     transition: 'comparison-table-transition',
     content: 'comparison-table-content',
-    noPaddingTop: 'no-padding-top',
     headers: {
       index: 'comparison-table-headers',
       item: 'header-item',

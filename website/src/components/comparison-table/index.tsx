@@ -11,17 +11,17 @@ import useIsMobile from '../hooks/is-mobile-hook';
 
 export type ComparisonTableProps = {
   comparisonText: string;
-  noPaddingTop?: boolean;
   openByDefault?: boolean;
   tableScheme: ComparisonTableScheme<any>;
+  large?: boolean;
 };
 
 const ComparisonTable: FC<ComparisonTableProps> = (props) => {
   const {
     comparisonText,
     tableScheme,
-    noPaddingTop = false,
     openByDefault = false,
+    large = false,
   } = props;
 
   const [activeView, setActiveView] = useState<
@@ -35,11 +35,7 @@ const ComparisonTable: FC<ComparisonTableProps> = (props) => {
 
   const handleToggleTable = () => {
     setIsOpen((current) => !current);
-    let ScrollOffset = -100;
-
-    if (noPaddingTop) {
-      ScrollOffset = -180;
-    }
+    let ScrollOffset = -180;
 
     if (isMobile) {
       ScrollOffset = -160;
@@ -62,14 +58,18 @@ const ComparisonTable: FC<ComparisonTableProps> = (props) => {
       <DisplayTitleProvider names={tableScheme.displayNames}>
         <ActiveViewProvider active={activeView}>
           <div
-            className={clsx(OWClassNames.comparisonTable.button.index, {
-              [OWClassNames.common.inactive]: isOpen,
-            })}
+            className={clsx(
+              OWClassNames.comparisonTable.button.index,
+              OWClassNames.comparisonTable.button.open,
+              {
+                [OWClassNames.common.inactive]: isOpen,
+                [OWClassNames.comparisonTable.button.large]: large,
+              },
+            )}
           >
             <button
               className={clsx(
                 OWClassNames.comparisonTable.button.button,
-                OWClassNames.comparisonTable.button.open,
                 OWClassNames.common.buttonSecondary,
               )}
               onClick={handleToggleTable}
@@ -86,11 +86,7 @@ const ComparisonTable: FC<ComparisonTableProps> = (props) => {
               })}
               ref={tableContainer}
             >
-              <div
-                className={clsx(OWClassNames.comparisonTable.content, {
-                  [OWClassNames.comparisonTable.noPaddingTop]: noPaddingTop,
-                })}
-              >
+              <div className={clsx(OWClassNames.comparisonTable.content)}>
                 <div
                   className={clsx(OWClassNames.comparisonTable.headers.index)}
                 >
@@ -122,14 +118,17 @@ const ComparisonTable: FC<ComparisonTableProps> = (props) => {
             </div>
 
             <div
-              className={clsx(OWClassNames.comparisonTable.button.index, {
-                [OWClassNames.common.inactive]: !isOpen,
-              })}
+              className={clsx(
+                OWClassNames.comparisonTable.button.index,
+                OWClassNames.comparisonTable.button.close,
+                {
+                  [OWClassNames.common.inactive]: !isOpen,
+                },
+              )}
             >
               <button
                 className={clsx(
                   OWClassNames.comparisonTable.button.button,
-                  OWClassNames.comparisonTable.button.close,
                   OWClassNames.common.buttonSecondary,
                 )}
                 onClick={handleToggleTable}

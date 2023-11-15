@@ -15,10 +15,15 @@ html[data-theme="light"] {
   --evc-group-title-bg: var(--light-border-color);
   --evc-group-title: var(--border-table);
   --evc-row-title: var(--secondary-bg);
+  --evc-action: #DFDFDF;
 
-  .comparison-table-button-container .comparison-table-button {
+  .comparison-table-button-container.open-button.large .comparison-table-button {
     border: 1px solid var(--evc-action);
     color: var(--evc-action);
+    &:hover {
+      background-color: var(--evc-action);
+      color: var(--evc-table-header-bg);
+    }
   }
 }
 
@@ -26,8 +31,7 @@ html[data-theme="light"] {
 
 .comparison-table {
   .comparison-table-button-container {
-    padding: 40px 0 56px;
-    background-color: var(--evc-table-header-bg);
+    padding: 0;
 
     &.inactive {
       display: none;
@@ -37,13 +41,14 @@ html[data-theme="light"] {
       padding-bottom: 0;
     }
 
+    &.open-button.large {
+      padding: 0 0 56px;
+      background-color: var(--evc-table-header-bg);
+    }
+
     .comparison-table-button {
       margin: auto;
       display: block;
-  
-      &.close {
-        margin-bottom: 40px;
-      }
     }
   }
 
@@ -61,16 +66,12 @@ html[data-theme="light"] {
       }
 
       .comparison-table-content {
-        max-width: 1396px;
+        max-width: 1112px;
         margin: auto;
-        padding: 72px 0 56px;
+        padding: 56px 0;
 
         @media (max-width: 966px) {
           padding: 0 0 32px;
-        }
-
-        &.no-padding-top {
-          padding-top: 0;
         }
 
         .comparison-table-headers {
