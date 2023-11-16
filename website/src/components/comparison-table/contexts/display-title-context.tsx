@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import { ComparisonTableDisplayTitle } from '../scheme';
 
 export const DisplayTitleContext = React.createContext({});
@@ -14,5 +14,3 @@ export function DisplayTitleProvider(
     </DisplayTitleContext.Provider>
   );
 }
-
-export const useIsMobileContext = () => useContext(DisplayTitleContext);

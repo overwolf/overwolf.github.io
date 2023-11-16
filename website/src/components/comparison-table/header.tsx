@@ -1,20 +1,20 @@
 import React, { FC, useContext, useState } from 'react';
-import useIsMobile from '../hooks/is-mobile-hook';
 import clsx from 'clsx';
 import OWClassNames from '@site/src/theme/OverwolfClassNames';
 import ImageToggle from '../image-toggle/image-toggle';
 import { ComparisonTableItem } from './scheme';
 import { ActiveViewContext } from './contexts/active-view-context';
+import { IsMobileContext } from '../contexts/is-mobile-context';
 
 type ComparisonTableHeaderProps = {
   setActive: ReturnType<typeof useState>[1];
 } & ComparisonTableItem<any>;
 
-const ComparisonTableHeading: FC<ComparisonTableHeaderProps> = (props) => {
+const ComparisonTableHeader: FC<ComparisonTableHeaderProps> = (props) => {
   const { setActive, itemName, imgSrc } = props;
   const active = useContext(ActiveViewContext);
 
-  const isMobile = useIsMobile();
+  const isMobile = useContext(IsMobileContext);
   // ---------------------------------------------------------------------------
 
   return (
@@ -23,8 +23,8 @@ const ComparisonTableHeading: FC<ComparisonTableHeaderProps> = (props) => {
         OWClassNames.comparisonTable.headers.item,
         OWClassNames.comparisonTable.headers.header.index,
         {
-          [OWClassNames.common.active]: isMobile && active === itemName,
-          [OWClassNames.common.inactive]: isMobile && active !== itemName,
+          [OWClassNames.common.active]: active === itemName,
+          [OWClassNames.common.inactive]: active !== itemName,
         },
       )}
       onClick={() => setActive(itemName)}
@@ -36,4 +36,4 @@ const ComparisonTableHeading: FC<ComparisonTableHeaderProps> = (props) => {
   );
 };
 
-export default ComparisonTableHeading;
+export default ComparisonTableHeader;

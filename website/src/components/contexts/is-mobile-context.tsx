@@ -1,17 +1,15 @@
-import React, { useContext } from 'react';
-import useIsMobile from '../hooks/is-mobile-hook';
+import React from 'react';
+import { useWindowSize } from '@docusaurus/theme-common';
 
 export const IsMobileContext = React.createContext(false);
 
 export function IsMobileProvider(props: React.PropsWithChildren) {
   const { children } = props;
-  const isMobile = useIsMobile();
+  const isMobile = useWindowSize();
 
   return (
-    <IsMobileContext.Provider value={isMobile}>
+    <IsMobileContext.Provider value={isMobile === 'mobile'}>
       {children}
     </IsMobileContext.Provider>
   );
 }
-
-export const useIsMobileContext = () => useContext(IsMobileContext);

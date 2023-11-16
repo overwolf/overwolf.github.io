@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React from 'react';
 
 export const ActiveViewContext = React.createContext({});
 
@@ -13,5 +13,3 @@ export function ActiveViewProvider(
     </ActiveViewContext.Provider>
   );
 }
-
-export const useIsMobileContext = () => useContext(ActiveViewContext);

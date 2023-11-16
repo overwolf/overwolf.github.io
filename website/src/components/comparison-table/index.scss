@@ -20,6 +20,7 @@ html[data-theme="light"] {
   .comparison-table-button-container.open-button.large .comparison-table-button {
     border: 1px solid var(--evc-action);
     color: var(--evc-action);
+
     &:hover {
       background-color: var(--evc-action);
       color: var(--evc-table-header-bg);
@@ -129,16 +130,18 @@ html[data-theme="light"] {
                 left: 0;
               }
 
-              &.active {
-                pointer-events: none;
+              @media (max-width: 966px) {
+                &.active {
+                  pointer-events: none;
 
-                &:after {
-                  background-color: var(--evc-tab-active);
+                  &:after {
+                    background-color: var(--evc-tab-active);
+                  }
                 }
-              }
 
-              &.inactive {
-                opacity: 0.56;
+                &.inactive {
+                  opacity: 0.56;
+                }
               }
             }
           }
@@ -186,8 +189,11 @@ html[data-theme="light"] {
             }
 
             .comparison-text {
-              &.inactive { 
-                display: none;
+              @media (max-width: 966px) {
+
+                &.inactive {
+                  display: none;
+                }
               }
 
               justify-content: center;

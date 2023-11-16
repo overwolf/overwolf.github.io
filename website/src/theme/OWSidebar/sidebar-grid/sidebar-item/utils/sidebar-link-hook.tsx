@@ -7,7 +7,7 @@ import {
 import isInternalUrl from '@docusaurus/isInternalUrl';
 import { CollapseContext } from '../../../contexts/collapse-context';
 import { LinkableSidebarItemProps } from '../../../types/types';
-import { useIsMobileContext } from '@site/src/components/contexts/is-mobile-context';
+import { IsMobileContext } from '@site/src/components/contexts/is-mobile-context';
 
 export default function SidebarLinkHook(
   item: LinkableSidebarItemProps,
@@ -27,7 +27,7 @@ export default function SidebarLinkHook(
 } {
   return {
     /** Is this running within a mobile sidebar context */
-    isMobile: useIsMobileContext(),
+    isMobile: useContext(IsMobileContext),
     /** Is this currently contained within a collapsed context */
     collapsed: useContext(CollapseContext),
     /** Is this a parent of the current page */

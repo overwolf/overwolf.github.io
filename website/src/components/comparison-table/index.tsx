@@ -1,13 +1,13 @@
-import React, { FC, useRef, useState } from 'react';
+import React, { FC, useContext, useRef, useState } from 'react';
 import './index.scss';
 import { ComparisonTableScheme } from './scheme';
-import ComparisonTableHeading from './header';
+import ComparisonTableHeader from './header';
 import ComparisonTableRow from './row';
 import { DisplayTitleProvider } from './contexts/display-title-context';
 import { ActiveViewProvider } from './contexts/active-view-context';
 import OWClassNames from '@site/src/theme/OverwolfClassNames';
 import clsx from 'clsx';
-import useIsMobile from '../hooks/is-mobile-hook';
+import { IsMobileContext } from '../contexts/is-mobile-context';
 
 export type ComparisonTableProps = {
   comparisonText: string;
@@ -29,7 +29,7 @@ const ComparisonTable: FC<ComparisonTableProps> = (props) => {
   >(tableScheme.defaultItem);
   const [isOpen, setIsOpen] = useState(openByDefault);
   const tableContainer = useRef<HTMLDivElement>(null);
-  const isMobile = useIsMobile();
+  const isMobile = useContext(IsMobileContext);
 
   // ---------------------------------------------------------------------------
 
@@ -102,7 +102,7 @@ const ComparisonTable: FC<ComparisonTableProps> = (props) => {
                   {Object.keys(tableScheme.items).map((key) => {
                     const item = tableScheme.items[key];
                     return (
-                      <ComparisonTableHeading
+                      <ComparisonTableHeader
                         {...item}
                         key={item.itemName}
                         setActive={setActiveView}

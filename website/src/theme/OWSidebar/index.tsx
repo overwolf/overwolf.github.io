@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useContext, useEffect, useRef, useState } from 'react';
 import './style.scss';
 import SidebarGrid from './sidebar-grid';
 import OWClassNames from '../OverwolfClassNames';
@@ -10,24 +10,17 @@ import { NavbarSecondaryMenuFiller } from '@docusaurus/theme-common';
 
 // @ts-expect-error theme-common/internal is not properly exported
 import { useNavbarMobileSidebar } from '@docusaurus/theme-common/internal';
-import {
-  IsMobileProvider,
-  useIsMobileContext,
-} from '@site/src/components/contexts/is-mobile-context';
+import { IsMobileContext } from '@site/src/components/contexts/is-mobile-context';
 
 type RootSidebarProps = Omit<SidebarProps, 'setActiveCategory'>;
 type ComponentSidebarProps = RootSidebarProps;
 
 export default function OWSidebar(props: RootSidebarProps): JSX.Element {
-  return (
-    <IsMobileProvider>
-      <OWSidebarRoot {...props} />
-    </IsMobileProvider>
-  );
+  return <OWSidebarRoot {...props} />;
 }
 
 function OWSidebarRoot(props: RootSidebarProps): JSX.Element {
-  const isMobile = useIsMobileContext();
+  const isMobile = useContext(IsMobileContext);
 
   return isMobile ? (
     <NavbarSecondaryMenuFiller component={DocSidebar} props={{ ...props }} />
@@ -40,7 +33,7 @@ function DocSidebar(props: ComponentSidebarProps) {
   const { path } = props;
   const [activeCagetory, setActiveCategory] = useState('/');
 
-  const isMobile = useIsMobileContext();
+  const isMobile = useContext(IsMobileContext);
   const mobileSidebar = useNavbarMobileSidebar();
 
   const wasOpen = useRef(mobileSidebar.shown);

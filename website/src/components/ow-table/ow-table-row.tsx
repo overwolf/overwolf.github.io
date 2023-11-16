@@ -1,5 +1,5 @@
-import React, { FC, useRef, useState } from 'react';
-import useIsMobile from '../hooks/is-mobile-hook';
+import React, { FC, useContext, useRef, useState } from 'react';
+import { IsMobileContext } from '../contexts/is-mobile-context';
 
 interface OWTableRowProps {
   children: React.ReactNode;
@@ -13,7 +13,7 @@ const OWTableRow: FC<OWTableRowProps> = (props) => {
 
   const row = useRef<HTMLDivElement>(null);
   const [isRowExpended, setIsRowExpended] = useState<boolean>(false);
-  const isMobile = useIsMobile();
+  const isMobile = useContext(IsMobileContext);
 
   const handleExpandRow = () => {
     if (row.current !== null) {

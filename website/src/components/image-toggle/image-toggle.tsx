@@ -1,7 +1,7 @@
 /* eslint-disable no-template-curly-in-string */
-import React, { FC } from 'react';
+import React, { FC, useContext } from 'react';
 import ThemedImage from '@theme/ThemedImage';
-import useIsMobile from '../hooks/is-mobile-hook';
+import { IsMobileContext } from '../contexts/is-mobile-context';
 
 interface ImageToggleProps {
   imgSrc: string;
@@ -15,7 +15,7 @@ interface ImageToggleProps {
 const ImageToggle: FC<ImageToggleProps> = (props) => {
   const { imgSrc, alt } = props;
 
-  const isMobile = useIsMobile();
+  const isMobile = useContext(IsMobileContext);
 
   const platformPath = imgSrc.replace(
     '${platform}',

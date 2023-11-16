@@ -4,7 +4,6 @@ import OWClassNames from '@site/src/theme/OverwolfClassNames';
 import { ComparisonTableValuesRowProps } from './scheme';
 import OWToolTipIcon from '../tooltip/ow-tooltip-icon';
 import { DisplayTitleContext } from './contexts/display-title-context';
-import useIsMobile from '../hooks/is-mobile-hook';
 import { ActiveViewContext } from './contexts/active-view-context';
 
 const ComparisonTableValuesRow: FC<ComparisonTableValuesRowProps<any>> = (
@@ -13,7 +12,7 @@ const ComparisonTableValuesRow: FC<ComparisonTableValuesRowProps<any>> = (
   const { title, tooltipData, values } = props;
   const displayTitles = useContext(DisplayTitleContext);
 
-  const isMobile = useIsMobile(); // also make isactive a context
+  // also make isactive a context
   const activeView = useContext(ActiveViewContext);
 
   // ---------------------------------------------------------------------------
@@ -30,7 +29,7 @@ const ComparisonTableValuesRow: FC<ComparisonTableValuesRowProps<any>> = (
         return (
           <div
             className={clsx(OWClassNames.comparisonTable.row.values.text, {
-              [OWClassNames.common.inactive]: isMobile && activeView !== key,
+              [OWClassNames.common.inactive]: activeView !== key,
               [OWClassNames.comparisonTable.row.values.green]:
                 value.colorOverride === 'green',
               [OWClassNames.comparisonTable.row.values.red]:

@@ -1,7 +1,7 @@
-import React, { FC, useEffect } from 'react';
+import React, { FC, useContext, useEffect } from 'react';
 import './tooltip.scss';
 import { killAllTooltips, handleMegaToolTip } from './tooltip-logic';
-import useIsMobile from '../hooks/is-mobile-hook';
+import { IsMobileContext } from '../contexts/is-mobile-context';
 
 interface OWToolTipIconProps {
   text: string;
@@ -13,7 +13,7 @@ const OWToolTipIcon: FC<OWToolTipIconProps> = (props) => {
   const { text, position = 'top', size = '' } = props;
 
   const className = 'tool-tip-info-icon';
-  const isMobile = useIsMobile();
+  const isMobile = useContext(IsMobileContext);
 
   const onScroll = () => {
     killAllTooltips();
