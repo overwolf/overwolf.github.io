@@ -4,7 +4,6 @@
 	--color-100: #101010;
 	--color-120: #1a1a1a;
 	--color-150: #171717;
-	--color-200: #202020;
 	--color-220: #262626;
 	--color-250: #1C1C1C;
 	--color-300: #303030;
@@ -12,18 +11,16 @@
 	--color-400: #404040;
 	--color-450: #4D4D4D;
 	--color-500: #505050;
-	--color-600: #606060;
 	--color-700: #707070;
 	--color-800: #808080;
 	--color-900: #909090;
-	--color-999: #999999;
 	--color-1000: #AAAAAA;
 
 	--color-navbar: #121212;
 	--card-black: #151515;
   --card-hover: #DADADA;
 	--color-grey: #B5B5B5;
-  --color-grey-1: #B2B2B2;
+ 	--color-grey-1: #B2B2B2;
 	--color-grey-light: #E9E9E9;
 	--color-grey-light-2:#E5E5E5;
 	--color-grey-light-3: #F0F0F0;
@@ -33,22 +30,15 @@
 	--color-grey-5: #D5D5D5;
   --color-grey-9: #D9D9D9;
 	--color-txt: #CCCCCC;
-
 	--color-headline: #E2E2E2;
 	--color-dark-text: #636363;
 	--color-title-light: #f2f2f2;
-	--color-white: #fff;
 	--color-website-red: #C93D34;
-
 	--color-bg: #060606;
 	--color-light-bg: #0F0F0F;
-	--color-black: #000000;
   --light-mode-bg: #F4F4F4;
 
 	--color-error: #F12717;
-	--color-primary: #D34037; /* primary */
-	--color-primary-hover: #F3513E; /* primary hover */
-
 	--redE5: #E50000;
 	--redFF: #FF3434;
 	--blue: #0085E5;
@@ -59,6 +49,24 @@
 	--admonition-warning: #ECB1A9;
 	--admonition-caution: #FE6E3A;
 	--admonition-important: #009944;
+
+	// unite brand 2023
+	--color-999: #999999;
+	--color-600: #606060;
+	--color-200: #202020;
+	--color-primary: #D34037; /* primary */
+	--color-primary-hover: #F3513E; /* primary hover */
+	--txt-secondary: #D6D6D6;
+	--color-white: #FFFFFF;
+	--color-black: #000000;
+	--secondary-bg: #0D0D0D;
+	--border-table: #1F1F1F;
+	--color-ui-success-dark: #32A912;
+	--icons-primary: #DFDFDF;
+	--icon-secondary: #9F9F9F;
+
+	//light mode
+	--light-border-color: #EBEBEB;
 
 }
 

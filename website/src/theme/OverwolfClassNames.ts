@@ -5,6 +5,9 @@ const OWClassNames = {
     mobileOnly: 'mobile-only',
     navigateWithKeyboard: 'navigation-with-keyboard',
     lightTheme: 'light',
+    active: 'active',
+    inactive: 'inactive',
+    buttonSecondary: 'btn-secondary',
   },
   sidebar: {
     index: 'ow-theme-sidebar',
@@ -36,6 +39,44 @@ const OWClassNames = {
           index: 'html-item',
         },
       },
+    },
+  },
+  comparisonTable: {
+    index: 'comparison-table',
+    button: {
+      index: 'comparison-table-button-container',
+      button: 'comparison-table-button',
+      open: 'open-button',
+      large: 'large',
+      close: 'close-button',
+    },
+    section: 'comparison-table-section',
+    transition: 'comparison-table-transition',
+    content: 'comparison-table-content',
+    headers: {
+      index: 'comparison-table-headers',
+      item: 'header-item',
+      title: 'title',
+      header: {
+        index: 'comparison-header',
+      },
+    },
+    row: {
+      index: 'comparison-row',
+      title: {
+        index: 'comparison-group-title',
+      },
+      values: {
+        index: 'comparison-values',
+        title: 'comparison-title',
+        text: 'comparison-text',
+        green: 'green',
+        red: 'red',
+        toolTipContainer: 'tt-container',
+      },
+    },
+    cell: {
+      index: 'comparison-cell',
     },
   },
 } as const;

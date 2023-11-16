@@ -1,0 +1,218 @@
+:root {
+  --evc-table-header-bg: var(--color-black);
+  --evc-border-header: var(--border-table);
+  --evc-border: var(--border-table);
+  --evc-header-title: var(--color-white);
+  --evc-group-title: var(--color-999);
+  --evc-group-title-bg: var(--secondary-bg);
+  --evc-row-title: var(--txt-secondary);
+  --evc-tab-active: var(--color-primary);
+  --evc-action: var(--txt-secondary);
+}
+
+html[data-theme="light"] {
+  --evc-border: var(--light-border-color);
+  --evc-group-title-bg: var(--light-border-color);
+  --evc-group-title: var(--border-table);
+  --evc-row-title: var(--secondary-bg);
+  --evc-action: #DFDFDF;
+
+  .comparison-table-button-container.open-button.large .comparison-table-button {
+    border: 1px solid var(--evc-action);
+    color: var(--evc-action);
+    &:hover {
+      background-color: var(--evc-action);
+      color: var(--evc-table-header-bg);
+    }
+  }
+}
+
+// TODO convert all active vs inactives here to use ISMOBILE
+
+.comparison-table {
+  .comparison-table-button-container {
+    padding: 0;
+
+    &.inactive {
+      display: none;
+    }
+
+    &:empty {
+      padding-bottom: 0;
+    }
+
+    &.open-button.large {
+      padding: 0 0 56px;
+      background-color: var(--evc-table-header-bg);
+    }
+
+    .comparison-table-button {
+      margin: auto;
+      display: block;
+    }
+  }
+
+  .comparison-table-section {
+    .comparison-table-transition {
+      &.inactive {
+        overflow: hidden;
+        max-height: 0;
+        transition: max-height 300ms ease;
+      }
+
+      &.active {
+        max-height: 2000px;
+        overflow: visible;
+      }
+
+      .comparison-table-content {
+        max-width: 1112px;
+        margin: auto;
+        padding: 56px 0;
+
+        @media (max-width: 966px) {
+          padding: 0 0 32px;
+        }
+
+        .comparison-table-headers {
+          display: flex;
+          background-color: var(--evc-table-header-bg);
+          position: sticky;
+          top: 74px;
+          z-index: 1;
+
+          @media (max-width: 966px) {
+            flex-wrap: wrap;
+            top: 48px;
+          }
+
+          .header-item {
+            color: var(--evc-header-title);
+            padding: 10px 20px;
+            font-size: 24px;
+            line-height: 32px;
+            min-height: 88px;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            flex: 1;
+            border: 1px solid var(--evc-border-header);
+            position: relative;
+
+            @media (max-width: 966px) {
+              border: none;
+            }
+
+            &.title {
+              @media (max-width: 966px) {
+                flex-basis: 100%;
+                justify-content: center;
+              }
+            }
+
+            &.comparison-header {
+              justify-content: center;
+
+              @media (max-width: 966px) {
+                min-height: 64px;
+                border-bottom: 1px solid var(--evc-border);
+                padding-bottom: 16px;
+                padding-top: 8px;
+              }
+
+              &:after {
+                content: '';
+                height: 4px;
+                width: 100%;
+                position: absolute;
+                bottom: 0;
+                left: 0;
+              }
+
+              &.active {
+                pointer-events: none;
+
+                &:after {
+                  background-color: var(--evc-tab-active);
+                }
+              }
+
+              &.inactive {
+                opacity: 0.56;
+              }
+            }
+          }
+        }
+
+        .comparison-row {
+          .comparison-group-title {
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 24px;
+            letter-spacing: 3.2px;
+            color: var(--evc-group-title);
+            padding: 10px 20px;
+            margin: 0;
+            border: 1px solid var(--evc-border);
+            background-color: var(--evc-group-title-bg);
+            min-height: 56px;
+            display: flex;
+            gap: 8px;
+            align-items: center;
+            text-transform: uppercase;
+          }
+
+          .comparison-values {
+            display: flex;
+
+            .comparison-title,
+            .comparison-text {
+              padding: 10px 20px;
+              border: 1px solid var(--evc-border);
+              font-family: 'Lato', sans-serif;
+              font-size: 16px;
+              font-weight: 400;
+              line-height: 24px;
+              color: var(--evc-row-title);
+              margin: 0;
+              min-height: 56px;
+              display: flex;
+              align-items: center;
+              flex: 1;
+            }
+
+            .comparison-title {
+              gap: 8px;
+            }
+
+            .comparison-text {
+              &.inactive { 
+                display: none;
+              }
+
+              justify-content: center;
+
+              &.green {
+                color: var(--color-ui-success-dark);
+              }
+
+              &.red {
+                color: var(--color-primary);
+              }
+
+              .tt-container {
+                position: relative;
+
+                .tool-tip-info-icon {
+                  position: absolute;
+                  top: -11px;
+                  left: 8px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

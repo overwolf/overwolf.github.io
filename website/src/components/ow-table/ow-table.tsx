@@ -1,5 +1,5 @@
 import './ow-table.scss';
-import React, {FC, useState} from 'react';
+import React, { FC, useState } from 'react';
 import Preloader from '../preloader/preloader';
 interface OWTableProps {
   children: React.ReactNode;
@@ -8,11 +8,8 @@ interface OWTableProps {
 
 // -----------------------------------------------------------------------------
 
-const OWTable: FC<OWTableProps> = props => {
-  const {
-    children,
-    headerCellNames = []
-  } = props;
+const OWTable: FC<OWTableProps> = (props) => {
+  const { children, headerCellNames = [] } = props;
 
   const [layoutLoad, isLayoutLoad] = useState(false);
 
@@ -22,23 +19,20 @@ const OWTable: FC<OWTableProps> = props => {
 
   return (
     <>
-   { !layoutLoad &&
-     <Preloader />
-   }
-    <section className='ow-table' style={{display: layoutLoad ? '' : 'none'}}>
-      <div className='ow-table-header'>
-        <div className='ow-table-header-row'>
-          {headerCellNames.length != 0 &&
-            headerCellNames.map( (th, i) => <div key={i}> {th} </div> )
-          }
-        </div>
-      </div>
-
-        <div className='ow-table-body'>
-          {children}
+      {!layoutLoad && <Preloader />}
+      <section
+        className="ow-table"
+        style={{ display: layoutLoad ? '' : 'none' }}
+      >
+        <div className="ow-table-header">
+          <div className="ow-table-header-row">
+            {headerCellNames.length != 0 &&
+              headerCellNames.map((th, i) => <div key={i}> {th} </div>)}
+          </div>
         </div>
 
-    </section>
+        <div className="ow-table-body">{children}</div>
+      </section>
     </>
   );
 };

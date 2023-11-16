@@ -97,7 +97,7 @@ Note that not all flags are mandatory - we included all available flags for docu
                 "optimize_accelerate_rendering": false, //Use directly shared texture rendering in game (only DX11)
                 "disable_auto_dpi_sizing": false, //disable the DPI Aware behavior of native windows
                 "restrict_to_game_bounds": false, //Restrict window to game client (window) area.
-                "disable_hardware_acceleration": false, // disable GPU hardware acceleration. Relevant only to native windows
+                "disable_hardware_acceleration": false, // Disable GPU hardware acceleration, per window. <br/>*Notes: Use this flag mainly for native windows that run as a second-screen with fps intensive games. It improves the performance of the game by reducing usage of the GPU while you are playing.*
                 "open_dev_tools": true //Used for debugging, automatically opens the dev tools when the app window opens
             },
         },

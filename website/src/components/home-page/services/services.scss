@@ -1,14 +1,15 @@
 .services-section {
-  background: linear-gradient(180deg, #000000 0%, #131313 100%);
-  padding: 0 0 80px;
+  // background: linear-gradient(180deg, #000000 0%, #131313 100%);
+  background-color: #000000;
+  // padding: 0 0 40px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 
-  @media (max-width: 600px) {
-    padding-bottom: 40px;
-  }
+  // @media (max-width: 600px) {
+  //   padding-bottom: 24px;
+  // }
 
   ul {
     list-style: none;
@@ -161,4 +162,6 @@
       }
     }
   }
+
+  padding-bottom: 40px;
 }
