@@ -111,6 +111,7 @@ There is a great deal of information provided. Few Example:
 * Skin ID
 * Champion ID
 * Summoner Name
+* Tagline
 
 And much more.
 
@@ -119,65 +120,314 @@ And much more.
 
 ```json
 {
-  "actions": [
-    
-  ],
+  "actions": [],
   "allowBattleBoost": false,
   "allowDuplicatePicks": false,
   "allowLockedEvents": false,
   "allowRerolling": false,
-  "allowSkinSelection": true,
+  "allowSkinSelection": false,
   "bans": {
-    "myTeamBans": [
-      
-    ],
+    "myTeamBans": [],
     "numBans": 0,
-    "theirTeamBans": [
-      
-    ]
+    "theirTeamBans": []
   },
-  "benchChampionIds": [
-    
-  ],
+  "benchChampions": [],
   "benchEnabled": false,
-  "boostableSkinCount": 1,
+  "boostableSkinCount": 0,
   "chatDetails": {
-    "chatRoomName": "",
-    "chatRoomPassword": null
+    "mucJwtDto": {
+      "channelClaim": "5ccd35b1-bfdf-419d-9564-debed4df9cc6",
+      "domain": "lol-champ-select",
+      "jwt": "eyJraW...",
+      "targetRegion": "pb1"
+    },
+    "multiUserChatId": "5ccd35b1-bfd...c6",
+    "multiUserChatPassword": "eyJr..."
   },
-  "counter": -1,
-  "entitledFeatureState": {
-    "additionalRerolls": 0,
-    "unlockedSkinIds": [
-      
-    ]
-  },
-  "hasSimultaneousBans": false,
-  "hasSimultaneousPicks": false,
+  "counter": 2,
+  "gameId": 4463463259,
+  "hasSimultaneousBans": true,
+  "hasSimultaneousPicks": true,
+  "isCustomGame": false,
   "isSpectating": false,
-  "localPlayerCellId": -1,
+  "localPlayerCellId": 4,
   "lockedEventIndex": -1,
   "myTeam": [
-    
+    {
+      "assignedPosition": "bottom",
+      "cellId": 0,
+      "championId": 75,
+      "championPickIntent": 0,
+      "nameVisibilityType": "VISIBLE",
+      "puuid": "080be58d-45ea-1234-93e3-24f76f832003",
+      "selectedSkinId": 75000,
+      "spell1Id": 4,
+      "spell2Id": 14,
+      "summonerId": 3364459919580192,
+      "team": 1,
+      "wardSkinId": -1,
+      "summonerInfo": {
+        "accountId": 3364459919580192,
+        "displayName": "",
+        "gameName": "Broccoli",
+        "internalName": "",
+        "nameChangeFlag": false,
+        "percentCompleteForNextLevel": 0,
+        "privacy": "PUBLIC",
+        "profileIconId": 18,
+        "puuid": "080be58d-45ea-51c3-1234-24f76f832003",
+        "rerollPoints": {
+          "currentPoints": 0,
+          "maxRolls": 2,
+          "numberOfRolls": 0,
+          "pointsCostToRoll": 250,
+          "pointsToReroll": 250
+        },
+        "summonerId": 3364457889580192,
+        "summonerLevel": 30,
+        "tagLine": "broco",
+        "unnamed": true,
+        "xpSinceLastLevel": 0,
+        "xpUntilNextLevel": 2688
+      }
+    },
+    {
+      "assignedPosition": "top",
+      "cellId": 1,
+      "championId": 10,
+      "championPickIntent": 0,
+      "nameVisibilityType": "VISIBLE",
+      "puuid": "9cabb493-aa2d-1234-9757-e0ef5a6a4b1d",
+      "selectedSkinId": 10001,
+      "spell1Id": 4,
+      "spell2Id": 14,
+      "summonerId": 2989177576607872,
+      "team": 1,
+      "wardSkinId": -1,
+      "summonerInfo": {
+        "accountId": 2989163776607872,
+        "displayName": "shuibucuo",
+        "gameName": "shuibucuo",
+        "internalName": "shuibucuo",
+        "nameChangeFlag": false,
+        "percentCompleteForNextLevel": 70,
+        "privacy": "PUBLIC",
+        "profileIconId": 5370,
+        "puuid": "9cabb493-aa2d-5b83-9757-e0ef5a6a4b1d",
+        "rerollPoints": {
+          "currentPoints": 0,
+          "maxRolls": 2,
+          "numberOfRolls": 0,
+          "pointsCostToRoll": 250,
+          "pointsToReroll": 250
+        },
+        "summonerId": 2989177576607872,
+        "summonerLevel": 35,
+        "tagLine": "PBE",
+        "unnamed": false,
+        "xpSinceLastLevel": 1954,
+        "xpUntilNextLevel": 2784
+      }
+    },
+    {
+      "assignedPosition": "jungle",
+      "cellId": 2,
+      "championId": 11,
+      "championPickIntent": 0,
+      "nameVisibilityType": "VISIBLE",
+      "puuid": "073d7750-1234-5952-b5ca-54a7987d1768",
+      "selectedSkinId": 11000,
+      "spell1Id": 4,
+      "spell2Id": 11,
+      "summonerId": 3133355842813504,
+      "team": 1,
+      "wardSkinId": -1,
+      "summonerInfo": {
+        "accountId": 3133344842813504,
+        "displayName": "K0N9f6N2X8B7C",
+        "gameName": "K0N9f6N2X8B7C",
+        "internalName": "K0N9f6N2X8B7C",
+        "nameChangeFlag": false,
+        "percentCompleteForNextLevel": 6,
+        "privacy": "PUBLIC",
+        "profileIconId": 23,
+        "puuid": "073d7750-f3cb-1235-b5ca-54a7987d1768",
+        "rerollPoints": {
+          "currentPoints": 0,
+          "maxRolls": 2,
+          "numberOfRolls": 0,
+          "pointsCostToRoll": 250,
+          "pointsToReroll": 250
+        },
+        "summonerId": 3133472842813504,
+        "summonerLevel": 30,
+        "tagLine": "8875",
+        "unnamed": false,
+        "xpSinceLastLevel": 186,
+        "xpUntilNextLevel": 2688
+      }
+    },
+    {
+      "assignedPosition": "utility",
+      "cellId": 3,
+      "championId": 81,
+      "championPickIntent": 0,
+      "nameVisibilityType": "VISIBLE",
+      "puuid": "9a9f58f8-1326-5251-a954-5455938e71ae",
+      "selectedSkinId": 81000,
+      "spell1Id": 4,
+      "spell2Id": 14,
+      "summonerId": 3364449838063808,
+      "team": 1,
+      "wardSkinId": -1,
+      "summonerInfo": {
+        "accountId": 3367759838063808,
+        "displayName": "",
+        "gameName": "Kinnya",
+        "internalName": "",
+        "nameChangeFlag": false,
+        "percentCompleteForNextLevel": 0,
+        "privacy": "PUBLIC",
+        "profileIconId": 7,
+        "puuid": "1234566-21be-5251-a954-5455938e71ae",
+        "rerollPoints": {
+          "currentPoints": 0,
+          "maxRolls": 2,
+          "numberOfRolls": 0,
+          "pointsCostToRoll": 250,
+          "pointsToReroll": 250
+        },
+        "summonerId": 3364759838063808,
+        "summonerLevel": 30,
+        "tagLine": "26031",
+        "unnamed": true,
+        "xpSinceLastLevel": 0,
+        "xpUntilNextLevel": 2688
+      }
+    },
+    {
+      "assignedPosition": "middle",
+      "cellId": 4,
+      "championId": 22,
+      "championPickIntent": 0,
+      "nameVisibilityType": "VISIBLE",
+      "puuid": "06c5c9b8-3096-50fa-bd09-d012356a121e",
+      "selectedSkinId": 22000,
+      "spell1Id": 6,
+      "spell2Id": 7,
+      "summonerId": 3106784487710176,
+      "team": 1,
+      "wardSkinId": 1,
+      "summonerInfo": {
+        "accountId": 3106007887710176,
+        "displayName": "Tacono888",
+        "gameName": "Tacono888",
+        "internalName": "Tacono888",
+        "nameChangeFlag": false,
+        "percentCompleteForNextLevel": 91,
+        "privacy": "PUBLIC",
+        "profileIconId": 29,
+        "puuid": "06c5c9b8-3096-1236-bd09-d07cc66a121e",
+        "rerollPoints": {
+          "currentPoints": 500,
+          "maxRolls": 2,
+          "numberOfRolls": 2,
+          "pointsCostToRoll": 250,
+          "pointsToReroll": 0
+        },
+        "summonerId": 3106784487710176,
+        "summonerLevel": 30,
+        "tagLine": "topR",
+        "unnamed": false,
+        "xpSinceLastLevel": 2454,
+        "xpUntilNextLevel": 2688
+      }
+    }
   ],
+  "pickOrderSwaps": [],
+  "recoveryCounter": 0,
   "rerollsRemaining": 0,
-  "skipChampionSelect": false,
+  "skipChampionSelect": true,
   "theirTeam": [
-    
+    {
+      "assignedPosition": "",
+      "cellId": 5,
+      "championId": 0,
+      "championPickIntent": 0,
+      "nameVisibilityType": "HIDDEN",
+      "puuid": "",
+      "selectedSkinId": 0,
+      "spell1Id": 0,
+      "spell2Id": 0,
+      "summonerId": 0,
+      "team": 2,
+      "wardSkinId": -1
+    },
+    {
+      "assignedPosition": "",
+      "cellId": 6,
+      "championId": 0,
+      "championPickIntent": 0,
+      "nameVisibilityType": "HIDDEN",
+      "puuid": "",
+      "selectedSkinId": 0,
+      "spell1Id": 0,
+      "spell2Id": 0,
+      "summonerId": 0,
+      "team": 2,
+      "wardSkinId": -1
+    },
+    {
+      "assignedPosition": "",
+      "cellId": 7,
+      "championId": 0,
+      "championPickIntent": 0,
+      "nameVisibilityType": "HIDDEN",
+      "puuid": "",
+      "selectedSkinId": 0,
+      "spell1Id": 0,
+      "spell2Id": 0,
+      "summonerId": 0,
+      "team": 2,
+      "wardSkinId": -1
+    },
+    {
+      "assignedPosition": "",
+      "cellId": 8,
+      "championId": 0,
+      "championPickIntent": 0,
+      "nameVisibilityType": "HIDDEN",
+      "puuid": "",
+      "selectedSkinId": 0,
+      "spell1Id": 0,
+      "spell2Id": 0,
+      "summonerId": 0,
+      "team": 2,
+      "wardSkinId": -1
+    },
+    {
+      "assignedPosition": "",
+      "cellId": 9,
+      "championId": 0,
+      "championPickIntent": 0,
+      "nameVisibilityType": "HIDDEN",
+      "puuid": "",
+      "selectedSkinId": 0,
+      "spell1Id": 0,
+      "spell2Id": 0,
+      "summonerId": 0,
+      "team": 2,
+      "wardSkinId": -1
+    }
   ],
   "timer": {
     "adjustedTimeLeftInPhase": 0,
-    "adjustedTimeLeftInPhaseInSec": 0,
-    "internalNowInEpochMs": 0,
+    "internalNowInEpochMs": 1700124716034,
     "isInfinite": false,
-    "phase": "",
-    "timeLeftInPhase": 0,
-    "timeLeftInPhaseInSec": 0,
+    "phase": "GAME_STARTING",
     "totalTimeInPhase": 0
   },
-  "trades": [
-    
-  ]
+  "trades": []
 }
 ```
 
