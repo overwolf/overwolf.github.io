@@ -54,21 +54,6 @@ html[data-theme="dark"]{
     border-right: 1px solid var(--color-300);
   }
 
-  code {
-    color: var(--color-300) !important;
-    background-color: #dadada;
-  }
-
-  pre {
-    code {
-      background-color: black;
-
-      span.token-line {
-        color: white !important;
-      }
-    }
-  }
-
   article {
 
     a {
@@ -172,9 +157,9 @@ html[data-theme="dark"]{
     }
   }
 
-  .prism-code span.token.punctuation {
-    color: var(--color-txt)!important;
-  }
+  // .prism-code span.token.punctuation {
+  //   color: var(--color-txt)!important;
+  // }
 
   .DocSearch.DocSearch-Container {
     .DocSearch-Modal {

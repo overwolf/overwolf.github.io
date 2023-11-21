@@ -8,13 +8,21 @@ The Tebex Checkout API requires an appropriate "Store" to be defined. To create 
 and make sure you have a registered account.
 * Create an [Overwolf App](https://creator.tebex.io/creator-segment/5) type store.
 
+### Setting up webhook
+
+To make sure that the store is synchronized with the Overwolf Subscriptions API, you MUST create a webhook linking the two:
+* Head to the [Webhooks Endpoints](https://creator.tebex.io/webhooks/endpoints) page (make sure you're viewing the right store).
+* First of all - at the bottom of the page, you'll find the `Secret Key`, used for linking your store with the Overwolf Subscriptions API.
+* Now, Create a new Endpoint, and mark **ALL** Webhook Types for it.
+* For the Endpoint's URL, use `https://subscriptions-api.overwolf.com/tebex-webhooks/${YOUR_PUBLIC_TOKEN}`.
+
 ### Setting up subscription plans
 
 The store is now set up, but it still needs to define packages that can be sold. To do that:
 * Head to the [Packages](https://creator.tebex.io/packages) page (make sure you're viewing the right store).
 * Create a package for every plan you wish to support, supplying it with all the details you want. **If you're using the Overwolf Subscriptions API - make sure to mind the following:**
-  * **Pricing** - The package must be set to `Recurring Payment = Charge a recurring subscription`, to ensure that it is an actual subscription.
-  * **Limits** - Packages must be limited to `User Limit = 1`, to ensure a user can only have one copy of a package active at any moment.
+  * **Pricing** - The package MUST be set to `Recurring Payment = Charge a recurring subscription`, to ensure that it is an actual subscription.
+  * **Limits** - Packages MUST be limited to `User Limit = 1`, to ensure a user can only have one copy of a package active at any moment.
 
 ### Store ID and Private Key (Overwolf Subscriptions API)
 
@@ -23,21 +31,13 @@ These can be found in the [API Keys](https://creator.tebex.io/developers/api-key
 - Private Key - A private key, used by the Overwolf Subscriptions API.
 - Public Token - Also called Store ID - A public key, used as your store's identifier with the Overwolf Subscriptions API.
 
-### Setting up webhook (Overwolf Subscriptions API)
-
-To make sure that the store is synchronized with the Overwolf Subscriptions API, you need to create a webhook:
-* Head to the [Webhooks Endpoints](https://creator.tebex.io/webhooks/endpoints) page (make sure you're viewing the right store).
-* First of all - at the bottom of the page, you'll find the `Secret Key`, used for linking your store with the Overwolf Subscriptions API.
-* Now, Create a new Endpoint, and mark **ALL** Webhook Types for it.
-* For the Endpoint's URL, use `https://subscriptions-api.overwolf.com/tebex-webhooks/${YOUR_PUBLIC_TOKEN}`.
-
 ### Link store (Overwolf Subscriptions API)
 
 To finish linking your Tebex Store with the Overwolf Subscriptions API, [contact us][contact-us]. **You will then be asked to provide the following:**
 * [Private Key + Public Token](#store-id-and-private-key-overwolf-subscriptions-api).
 * [Webhook Token](#setting-up-webhook-overwolf-subscriptions-api)
 * App ID - The Overwolf App ID of the App this store is made for.
-* App deeplink scheme - The [custom scheme](/api/manifest#url_protocol-object) used for redirecting back into your App from the subscription checkout flow.
+* Desired [deeplink scheme](/api/manifest#url_protocol-object) - The custom scheme to be used when redirecting back into your App from the subscription checkout flow.
 
 
 <SkipMe type="TODO">

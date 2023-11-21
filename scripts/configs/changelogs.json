@@ -1,8 +1,8 @@
 {
     "latest": {
-        "date": "October 2023",
-        "path": "2023/october",
-        "name": "234"
+        "date": "November 2023",
+        "path": "2023/november",
+        "name": "236"
     },
     "deploying": {
         "date": "November 2023",
@@ -25,9 +25,9 @@
         "name": "23.6.0"
     },
     "docs": {
-        "date": "October 31st 2023",
-        "path": "2023/october#october-31st-2023---update-to-analytics-guidelines",
-        "name": "Live Game Data Documentation"
+        "date": "November 20th 2023",
+        "path": "2023/november#november-20th-2023---tebex-overwolf-subscriptions-api",
+        "name": "Tebex-Overwolf Subscriptions API"
     },
     "console": {
         "date": "March 9th 2023",

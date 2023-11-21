@@ -392,52 +392,6 @@ nav.pagination-nav {
   }
 }
 
-code {
-  background-color: var(--card-hover);
-  color: var(--color-bg) !important;
-}
-
-pre {
-  code {
-    background: var(--card-hover);
-    border-radius: unset;
-
-    span.token-line {
-      color: black !important;
-      line-height: 26px;
-    }
-
-  }
-}
-
-.prism-code {
-  span.token.string {
-    color: #2a9292 !important;
-  }
-
-  span.token.punctuation {
-    color: black !important;
-  }
-
-  span.token.boolean, span.token.number, span.token.console.class-name, span.token.template-string.interpolation.known-class-name.class-name {
-    color: #aa573c !important;
-  }
-
-  span.token.tag, span.token.doctype.doctype-tag, span.token.doctype.name {
-    color: #be4678 !important;
-  }
-
-  span.token.method.function.property-access, span.token.operator, span.token.function, span.token.constant, span.token.function.maybe-class-name {
-    color: rgb(19 95 255) !important;
-  }
-
-  span.token.dom.variable {
-    color: rgb(222 0 255) !important;
-  }
-
-
-}
-
 div[class^="codeBlock"] {
   background-color: transparent;
   border-radius: unset;

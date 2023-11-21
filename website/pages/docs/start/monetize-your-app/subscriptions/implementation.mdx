@@ -1,0 +1,56 @@
+---
+id: implementation
+image: "/img/embed/getting-started.jpg"
+title: Implementation
+sidebar_position: 50
+sidebar_custom_props:
+  tags:
+    overwolf_platform: true
+    electron_platform: true
+---
+
+
+:::tip About Subscriptions
+This page discusses the Tebex-based Overwolf Subscriptions API and its specific implementation details.
+
+<SkipMe type="TODO">
+
+If you haven't already, do also check out [**Subscriptions Guidelines**][guidelines], for an overview
+of what working with Subscriptions entails on the App design level.
+
+</SkipMe>
+
+:::
+
+The Overwolf Subscriptions API is a set of endpoints, allowing App developers to easily integrate
+subscriptions into their Apps, using [Tebex Checkout](https://www.tebex.io/).
+Apps using this API can then access a simple subscriptions management system, without needing to worry
+about processing payments and keeping track of subscription statuses, and without the need for any server-side logic.
+
+## Getting Started
+
+import Setup from "@site/pages/docs/api/general/subscriptions-api/_setup.mdx"
+
+<Setup/>
+
+## Implementation
+
+*Full API documentation is available [here](/api/general/subscriptions-api).*
+
+In order to actually implement subscriptions in your App, you need to implement the following three general flows:
+- Check the current status of all [active subscriptions](/api/general/subscriptions-api#subscriptions), and affect the App properly.
+- Fetching a list of available [subscription plans](/api/general/subscriptions-api#packages).
+- Generate a Tebex [Checkout link](/api/general/subscriptions-api#checkout) to let a user pay for a plan they want.
+
+The exact implementation may vary drastically between Apps, in the same way that the plans themselves may differ. However,
+usually, it'll act in the following way:
+- On App launch, check for the current subscription status, and initialize the different features accordingly.
+- In a specific section of the App, show users a listing of all available subscription plans.
+- If they choose to purchase a specific plan, open the relevant checkout link for them in their browser, where they can purchase it.
+- Periodically, and especially after a successful subscription purchase, re-check the current subscription status, and change the App's behavior accordingly.
+
+### Sample App
+
+For an example implementation of the Overwolf Subscriptions API, see the [relevant sample app](https://github.com/overwolf/tebex-subs-sample).
+
+[working-with-ads]: working-with-ads

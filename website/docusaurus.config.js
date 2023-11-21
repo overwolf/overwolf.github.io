@@ -148,7 +148,7 @@ async function config() {
       //   }
       // },
       prism: {
-        additionalLanguages: ['powershell'],
+        additionalLanguages: ['powershell', 'yaml'],
       },
       algolia: {
         apiKey: 'cc7909d516aa0fbd71371ad4b3769c7e',

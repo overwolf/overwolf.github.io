@@ -624,20 +624,23 @@
     ]
   },
   {
-    "to": "/start/monetize-with-subs/subscriptions-flow",
-    "from": "/docs/start/subscriptions-flow"
+    "to": "/start/monetize-your-app/subscriptions",
+    "from": [
+      "/docs/start/subscriptions-flow",
+      "/start/monetize-with-subs/subscriptions-flow",
+      "/docs/start/subscriptions-overview",
+      "/start/monetize-with-subs/subscriptions-overview",
+      "/docs/start/subscriptions-request-form",
+      "/start/monetize-with-subs/subscriptions-request-form"
+    ]
   },
   {
-    "to": "/start/monetize-with-subs/subscriptions-integration",
-    "from": "/docs/start/subscriptions-integration"
-  },
-  {
-    "to": "/start/monetize-with-subs/subscriptions-overview",
-    "from": "/docs/start/subscriptions-overview"
-  },
-  {
-    "to": "/start/monetize-with-subs/subscriptions-request-form",
-    "from": "/docs/start/subscriptions-request-form"
+    "to": "/start/monetize-your-app/subscriptions/implementation",
+    "from": [
+      "/docs/start/subscriptions-integration",
+      "/start/monetize-with-subs/subscriptions-integration",
+      "/start/monetize-your-app/subscriptions/subscriptions-api"
+    ]
   },
   {
     "to": "/start/maintain-your-app/support-experience",
@@ -676,7 +679,10 @@
   },
   {
     "to": "/status/counter-strike-2",
-    "from": ["/docs/status/csgo", "/status/counter-strike-global-offensive"]
+    "from": [
+      "/docs/status/csgo",
+      "/status/counter-strike-global-offensive"
+    ]
   },
   {
     "to": "/status/dota-2",
