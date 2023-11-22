@@ -443,6 +443,7 @@ And much more.
 key      | Category       | Values                                                                                                 | Notes                 | Since Version |
 ---------| ---------------| ------------------------------------------------------------------------------------------------------ | --------------------- | ------------- |
 queueID  | lobby_info     |The queueID of the currently chosen game mode. See [notes below](#queueid-notes)                        |                       |   126.0       |
+player_info  | lobby_info     |Information about the local player See [notes below](#player_info-notes)                        |                       |   240.0       |
 
 #### `queueID` notes
 
@@ -453,6 +454,22 @@ The queueID of the currently chosen game mode. Example:
 * You can find here a [list of possible queue ids](https://developer.riotgames.com/game-constants.html). 
 * 1090 is the queueID of TFT regular match.
 * 1100 is the queueID of TFT ranked match.
+
+#### *player_info* note
+
+List of parameters:
+
+* displayName - the player's disaply name
+* gameName - the player's game name
+* puuid - the player unique Id
+* summonerId - the summoner Id
+* tagLine - the player's tag line
+
+Data Example:
+
+```json
+{"feature":"lobby_info","category":"lobby_info","key":"player_info","value":"{\"displayName\":\"TacoNano888\",\"gameName\":\"TacoNano888\",\"puuid\":\"06c5c9b8-3096-50fa-bd09-d07cc66a121e\",\"summonerId\":3106004487710176,\"tagLine\":\"12345\"}"}
+```
 
 @@
 
@@ -858,6 +875,7 @@ game_version |game_info| Numerical version of the client. |See [notes](#game_ver
 close_client_during_game |game_info| True / False (Bool) |See [notes](#close_client_during_game-note)|   137.0       |
 selected_game |game_info| The selected game by the player |See [notes](#selected_game-note)|   218.0       |
 selected_positions |game_info| The first and second selected position |See [notes](#selected_positions-note)|   219.0       |
+quickplay_info |game_info| Information about the selected champin and positions |See [notes](#quickplay_info-note)|   240.0       |
 
 #### *game_version* note:
 
@@ -909,6 +927,14 @@ Data Example:
 
 ```json
 {"feature":"game_info","category":"game_info","key":"selected_positions","value":"{\"first_preference\": \"TOP\", \"second_preference\": \"JUNGLE\"}"}
+```
+
+#### *quickplay_info* note
+
+Data Example:
+
+```json
+[{\"championId\":12,\"positionPreference\":\"BOTTOM\",\"skinId\":12000,\"spell1\":11,\"spell2\":7},{\"championId\":84,\"positionPreference\":\"UTILITY\",\"skinId\":84000,\"spell1\":11,\"spell2\":7}]
 ```
 
 @@
