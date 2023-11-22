@@ -11,7 +11,7 @@ pre.display-json {
         padding: var(--ifm-pre-padding);
         min-width: 100%;
         float: left;
-        background-color: white;
+        background-color: var(--background-color);
     }
 }
 
@@ -31,6 +31,7 @@ pre.display-json {
 .string { color: var(--string-def)}
 
 html[data-theme=dark] {
+    --background-color: inherit;
     --function-def: #DCDCAA;
     --top-record-def: #B46695;
     --inner-def: #9CDCFE;
@@ -47,6 +48,7 @@ html[data-theme=dark] {
 }
 
 html[data-theme=light] {
+    --background-color: white;
     --function-def: #3BA055;
     --top-record-def: #32A4E1;
     --inner-def: black; // C9AB39
