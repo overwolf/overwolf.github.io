@@ -13,7 +13,7 @@ const ComparisonTableRow: FC<ComparisonTableGenericRow<any>> = (props) => {
   const { type } = props;
 
   return (
-    <div className={clsx(OWClassNames.comparisonTable.row.index)}>
+    <div className={clsx(OWClassNames.comparisonTable.rows.row.index)}>
       {type === 'value' ? (
         <ComparisonTableValuesRow
           {...(props as ComparisonTableValuesRowProps<any>)}

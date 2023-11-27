@@ -36,6 +36,7 @@ import ComparisonTable from '../../components/comparison-table';
 import type { MDXComponentsObject } from '@theme/MDXComponents';
 import FrameworkComparisonTable from '@site/src/presets/comparison-table/framework-comparison-table';
 import ImageHeading from '@site/src/components/image-heading/image-heading';
+import SubscriptionsComparisonTable from '@site/src/presets/comparison-table/subscriptions-comparison-table';
 
 const devMode = process.env.NODE_ENV === 'development';
 
@@ -73,7 +74,10 @@ const MDXComponents: MDXComponentsObject = {
     OWexpandedRowGroup,
     OWdataCell,
     ComparisonTable,
-    FrameworkComparisonTable,
+    ...{
+      FrameworkComparisonTable,
+      SubscriptionsComparisonTable,
+    },
     Tagger,
     Tabs,
     TabItem,

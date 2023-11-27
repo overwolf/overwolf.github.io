@@ -46,8 +46,6 @@
   max-height: calc(100vh - 100px);
   overflow-x: hidden;
 
-  scrollbar-width: thin;
-
   &::-webkit-scrollbar {
     height: var(--ifm-scrollbar-size);
     width: var(--ifm-scrollbar-size);

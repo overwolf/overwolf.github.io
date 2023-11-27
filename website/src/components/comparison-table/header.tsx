@@ -21,7 +21,7 @@ const ComparisonTableHeader: FC<ComparisonTableHeaderProps> = (props) => {
     <h2
       className={clsx(
         OWClassNames.comparisonTable.headers.item,
-        OWClassNames.comparisonTable.headers.header.index,
+        OWClassNames.comparisonTable.headers.categories.category,
         {
           [OWClassNames.common.active]: active === itemName,
           [OWClassNames.common.inactive]: active !== itemName,

@@ -43,36 +43,30 @@ const OWClassNames = {
   },
   comparisonTable: {
     index: 'comparison-table',
-    button: {
-      index: 'comparison-table-button-container',
-      button: 'comparison-table-button',
-      open: 'open-button',
-      large: 'large',
-      close: 'close-button',
-    },
-    section: 'comparison-table-section',
-    transition: 'comparison-table-transition',
-    content: 'comparison-table-content',
     headers: {
       index: 'comparison-table-headers',
-      item: 'header-item',
-      title: 'title',
-      header: {
-        index: 'comparison-header',
+      comparisonTitle: 'comparison-title',
+      item: 'comparison-header-item',
+      categories: {
+        index: 'comparison-categories',
+        category: 'comparison-category',
       },
     },
-    row: {
-      index: 'comparison-row',
-      title: {
-        index: 'comparison-group-title',
-      },
-      values: {
-        index: 'comparison-values',
-        title: 'comparison-title',
-        text: 'comparison-text',
-        green: 'green',
-        red: 'red',
-        toolTipContainer: 'tt-container',
+    rows: {
+      index: 'comparison-rows',
+      row: {
+        index: 'comparison-row',
+        title: {
+          index: 'comparison-group-title',
+        },
+        values: {
+          index: 'comparison-values',
+          title: 'comparison-title',
+          text: 'comparison-text',
+          green: 'green',
+          red: 'red',
+          toolTipContainer: 'tt-container',
+        },
       },
     },
     cell: {
