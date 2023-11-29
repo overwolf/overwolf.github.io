@@ -16,6 +16,8 @@ sidebar_custom_props:
   - *The [`scheme`](/api/manifest#url_protocol-object) flag is still supported to maintain backwards compatibility, but is no longer recommended for usage.*
 
 ### API
+- New API - [`overwolf.profile.performOverwolfSessionLogin()`](/api/profile#performoverwolfsessionlogintoken-callback):
+  - Uses a temporary session token to connect the users' client to an Overwolf Account.
 - New API - [`overwolf.settings.hotkeys.getAllApps()`](/api/settings/hotkeys#getallappscallback):
   - Returns all active hotkeys, for all games, across all active Apps + all Overwolf Platform hotkeys.
 - Updated API - Added the `disable_auto_shutdown_on_game_exit` field to the [`StreamVideoOptions`](/api/streaming#streamvideooptions-object) object.
