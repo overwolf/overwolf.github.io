@@ -20,6 +20,7 @@ A set of functions providing more information and utilities for the current exte
 
 * [overwolf.extensions.current.GetExtraObjectResult](#getextraobjectresult-object) Object
 * [overwolf.extensions.current.GetManifestResult](#getmanifestresult-object) Object
+* [overwolf.extensions.current.GetPhasedPercentResult](#getphasedpercentresult-object) Object
 
 ## getExtraObject(name, callback)
 #### Version added: 0.80
@@ -40,16 +41,6 @@ Parameter | Type       | Description                                       |
 --------- | -----------| ------------------------------------------------- |
 callback  | ([Result: GetManifestResult](#getmanifestresult-object)) => void              | Result of the request    |
 
-## getPhasedPercent(callback, version)
-#### Version added: 0.236
-
-> Returns the current extension’s phasing percentage.
-
-Parameter | Type       | Description                                       |
---------- | -----------| ------------------------------------------------- |
-callback  | ([Result: GetManifestResult](#getmanifestresult-object)) => void              | Result of the request  |
-version   | string? | The version to calculate the phasing percentage for (defaults to the current 'base' version) |
-
 #### Usage Example
 
 Get app version from the manifest and print it to the console.
@@ -57,6 +48,16 @@ Get app version from the manifest and print it to the console.
 ```javascript
 overwolf.extensions.current.getManifest(function(app){console.log(app.meta.version)})
 ```
+
+## getPhasedPercent(callback, version)
+#### Version added: 0.236
+
+> Returns the current extension’s phasing percentage.
+
+Parameter | Type       | Description                                       |
+--------- | -----------| ------------------------------------------------- |
+callback  | ([Result: GetPhasedPercentResult](#getphasedpercentresult-object)) => void              | Result of the request  |
+version   | string? | The version to calculate the phasing percentage for (defaults to the current 'base' version) |
 
 ## GetExtraObjectResult Object
 
@@ -165,3 +166,10 @@ A callback function which will be called with the status of the request
 }
 ```
 
+## GetPhasedPercentResult Object
+
+Parameter          | Type                            | Description                                       |
+-------------------| --------------------------------| ------------------------------------------------- |
+*success*          | boolean                         | inherited from the "Result" Object                |
+*error*            | string                          | inherited from the "Result" Object                |
+phasedPercent             | number                          | The phased percentage                                 |   
