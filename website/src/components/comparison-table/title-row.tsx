@@ -10,7 +10,7 @@ const ComparisonTableTitleRow: FC<ComparisonTableTitleRowProps> = (props) => {
   // ---------------------------------------------------------------------------
 
   return (
-    <h3 className={clsx(OWClassNames.comparisonTable.row.title.index)}>
+    <h3 className={clsx(OWClassNames.comparisonTable.rows.row.title.index)}>
       {title}
       {tooltipData && <OWToolTipIcon {...tooltipData} />}
     </h3>

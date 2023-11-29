@@ -18,8 +18,8 @@ const ComparisonTableValuesRow: FC<ComparisonTableValuesRowProps<any>> = (
   // ---------------------------------------------------------------------------
 
   return (
-    <div className={clsx(OWClassNames.comparisonTable.row.values.index)}>
-      <h4 className={clsx(OWClassNames.comparisonTable.row.values.title)}>
+    <div className={clsx(OWClassNames.comparisonTable.rows.row.values.index)}>
+      <h4 className={clsx(OWClassNames.comparisonTable.rows.row.values.title)}>
         {title}
         {tooltipData && <OWToolTipIcon {...tooltipData} />}
       </h4>
@@ -28,11 +28,11 @@ const ComparisonTableValuesRow: FC<ComparisonTableValuesRowProps<any>> = (
         const value = values[key];
         return (
           <div
-            className={clsx(OWClassNames.comparisonTable.row.values.text, {
+            className={clsx(OWClassNames.comparisonTable.rows.row.values.text, {
               [OWClassNames.common.inactive]: activeView !== key,
-              [OWClassNames.comparisonTable.row.values.green]:
+              [OWClassNames.comparisonTable.rows.row.values.green]:
                 value.colorOverride === 'green',
-              [OWClassNames.comparisonTable.row.values.red]:
+              [OWClassNames.comparisonTable.rows.row.values.red]:
                 value.colorOverride === 'red',
             })}
             key={key}
@@ -42,7 +42,7 @@ const ComparisonTableValuesRow: FC<ComparisonTableValuesRowProps<any>> = (
             {value.tooltipData && (
               <div
                 className={clsx(
-                  OWClassNames.comparisonTable.row.values.toolTipContainer,
+                  OWClassNames.comparisonTable.rows.row.values.toolTipContainer,
                 )}
               >
                 <OWToolTipIcon {...value.tooltipData} />

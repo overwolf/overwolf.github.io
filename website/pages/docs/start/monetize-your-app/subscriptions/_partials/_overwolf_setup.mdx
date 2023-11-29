@@ -1,0 +1,90 @@
+The Overwolf Subscriptions API works by exposing a few simple endpoints, which the App can then interact with,
+in order to perform most common interactions with the [Tebex Checkout API](https://docs.tebex.io/developers/checkout-api/overview).
+
+### Sample App
+
+For an example implementation of the Overwolf Subscriptions API, see the [relevant sample app](https://github.com/overwolf/tebex-subs-sample).
+
+### Creating an `Overwolf App` Tebex Store
+
+The Tebex Checkout API requires an appropriate "Store" to be defined. To create a store:
+* Head to the [Tebex Control Panel](https://accounts.tebex.io/profile),
+and make sure you have a registered account.
+* Use the following [link](https://creator.tebex.io/creator-segment/5) to create an Overwolf App type store.
+
+### Setting up webhook 
+
+To make sure that the store is synchronized with the Overwolf Subscriptions API, you MUST create a webhook linking the two:
+* Head to the [Webhooks Endpoints](https://creator.tebex.io/webhooks/endpoints) page (make sure you're viewing the right store).
+* First of all - at the bottom of the page, you'll find the `Secret Key`, used for linking your store with the Overwolf Subscriptions API.
+* Now, Create a new Endpoint, and mark **ALL** Webhook Types for it.
+* For the Endpoint's URL, use `https://subscriptions-api.overwolf.com/tebex-webhooks/${YOUR_PUBLIC_TOKEN}`.
+
+### Setting up subscription plans
+
+:::tip Package Deliverables
+You MUST first [configure a webhook](#setting-up-webhook) before you can create a package.
+:::
+
+The store is now set up, but it still needs to define packages that can be sold. To do that:
+* Head to the [Packages](https://creator.tebex.io/packages) page (make sure you're viewing the right store).
+* Create a package for every plan you wish to support, supplying it with all the details you want. Keep in mind that:
+  * **Pricing** - The package MUST be set to `Recurring Payment = Charge a recurring subscription`, to ensure that it is an actual subscription.
+  * **Limits** - Packages MUST be limited to `User Limit = 1`, to ensure a user can only have one copy of a package active at any moment.
+  * **Do note include packages that have been removed...** - MUST be set to on, to ensure that users who cancelled a subscription in the past can still purchase a new one in the future.
+
+### Store ID and Private Key
+
+In order to [link](#link-store) your store to the Overwolf API, you will need to know your store's public and private keys.
+These can be found in the [API Keys](https://creator.tebex.io/developers/api-keys) page.
+- Private Key - A private key, used by the Overwolf Subscriptions API.
+- Public Token - Also called Store ID - A public key, used as your store's identifier with the Overwolf Subscriptions API.
+
+### Link store
+
+To finish linking your Tebex Store with the Overwolf Subscriptions API, [contact us][contact-us]. **You will then be asked to provide the following:**
+
+```js
+{
+  // Can be gotten [here](#store-id-and-private-key)
+  public_token: '',
+  // Can be gotten [here](#store-id-and-private-key)
+  private_key: '',
+  // Can be gotten [here](#setting-up-webhook)
+  webhook_token: '',
+  /**
+   * Your App's UID.
+   * - Overwolf Platform: Can be seen in the Overwolf Packages view window under your App's entry, under the `UID` field
+   * - Overwolf Electron: Can be gotten [as follows](https://overwolf.github.io/tools/ow-electron#fetching-your-app-id)
+   */
+  app_id: '',
+  /**
+   * Your desired deeplink scheme. This scheme will be used to notify you of the Checkout flow's progress.
+   * - Overwolf Platform: Can be set using [url_protocol](https://overwolf.github.io/api/manifest#url_protocol-object)
+   * - Overwolf Electron: See [Electron Deeplinks](https://www.electronjs.org/docs/latest/tutorial/launch-app-from-url-in-another-app)
+   */
+  deeplink_scheme: '',
+}
+```
+
+<SkipMe type="TODO">
+
+### Implement in your App
+
+<Tabs groupId="frameworks">
+<TabItem value="overwolf-platform" label="Overwolf Platform">
+
+Configure your manifest json to allow external connections to tebex
+
+</TabItem>
+
+<TabItem value="electron-platform" label="Overwolf Electron">
+
+</TabItem>
+</Tabs>
+
+Implement Deeplinks
+
+</SkipMe>
+
+[contact-us]: /support/contact-us
