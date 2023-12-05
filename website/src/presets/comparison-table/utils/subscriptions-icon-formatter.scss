@@ -1,0 +1,25 @@
+.subscription-icon {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+
+  .texts {
+    display: flex;
+    flex-direction: column;
+
+    .company-text {
+      height: 14.27px;
+      width: min-content;
+    }
+
+    .api-text {
+      font-family: Madera;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 160%;
+      /* 32px */
+      text-transform: lowercase;
+    }
+  }
+}

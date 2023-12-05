@@ -4,6 +4,7 @@ import ComparisonTable, {
   ComparisonTableProps,
 } from '@site/src/components/comparison-table';
 import { ComparisonTableScheme } from '@site/src/components/comparison-table/scheme';
+import SubscriptionsIconFormatter from './utils/subscriptions-icon-formatter';
 
 type SubscriptionsComparisonTableProps = Omit<
   ComparisonTableProps,
@@ -13,6 +14,35 @@ type SubscriptionsComparisonTableProps = Omit<
 const SubscriptionsComparisonTAble = (
   props: SubscriptionsComparisonTableProps,
 ) => {
+  const generateItemIcon = (itemId: 'checkout' | 'headless' | 'overwolf') => {
+    switch (itemId) {
+      case 'checkout':
+        return (
+          <SubscriptionsIconFormatter
+            companyName="tebex"
+            apiName="checkout"
+            color="#41C4C3"
+          />
+        );
+      case 'headless':
+        return (
+          <SubscriptionsIconFormatter
+            companyName="tebex"
+            apiName="headless"
+            color="#41C4C3"
+          />
+        );
+      case 'overwolf':
+        return (
+          <SubscriptionsIconFormatter
+            companyName="overwolf"
+            apiName="subscriptions"
+            color="#D34037"
+          />
+        );
+    }
+  };
+
   const scheme: ComparisonTableScheme<'checkout' | 'headless' | 'overwolf'> = {
     defaultItem: 'overwolf',
     displayNames: {
@@ -156,7 +186,8 @@ const SubscriptionsComparisonTAble = (
 
   return (
     <ComparisonTable
-      comparisonText="Implementation Comparison"
+      createIcon={generateItemIcon}
+      comparisonText="Subscription API"
       {...props}
       tableScheme={scheme}
     />

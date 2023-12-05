@@ -42,14 +42,13 @@ html[data-theme="light"] {
     .comparison-categories {
       display: flex;
       flex-direction: row;
-      width: 100%;
 
       @media (max-width: 966px) {
         overflow-x: scroll;
+        gap: 16px;
 
-        .comparison-header-item {
-          min-width: 135px;
-        }
+        flex-basis: 100% !important;
+        width: fit-content;
 
         &::-webkit-scrollbar {
           height: 10px;
@@ -66,29 +65,27 @@ html[data-theme="light"] {
       margin: 0;
       display: flex;
       align-items: center;
-      flex: 1;
       border: 1px solid var(--evc-border-header);
       position: relative;
 
       @media (max-width: 966px) {
         border: none;
+        flex-basis: 100% !important;
       }
 
       &.comparison-title {
         @media (max-width: 966px) {
-          flex-basis: 100%;
           justify-content: center;
         }
       }
 
       &.comparison-category {
+        position: relative;
         justify-content: center;
 
         @media (max-width: 966px) {
-          min-height: 64px;
           border-bottom: 1px solid var(--evc-border);
-          padding-bottom: 16px;
-          padding-top: 8px;
+          padding: 16px 16px 8px;
         }
 
         &:after {
@@ -97,7 +94,7 @@ html[data-theme="light"] {
           width: 100%;
           position: absolute;
           bottom: 0;
-          left: 0;
+          left: 16px;
         }
 
         @media (max-width: 966px) {

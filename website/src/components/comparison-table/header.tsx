@@ -8,10 +8,12 @@ import { IsMobileContext } from '../contexts/is-mobile-context';
 
 type ComparisonTableHeaderProps = {
   setActive: ReturnType<typeof useState>[1];
+  baseWidth: number;
+  createIcon?: (itemKey: string) => React.ReactNode;
 } & ComparisonTableItem<any>;
 
 const ComparisonTableHeader: FC<ComparisonTableHeaderProps> = (props) => {
-  const { setActive, itemName, imgSrc } = props;
+  const { setActive, itemName, imgSrc, baseWidth, createIcon } = props;
   const active = useContext(ActiveViewContext);
 
   const isMobile = useContext(IsMobileContext);
@@ -30,8 +32,13 @@ const ComparisonTableHeader: FC<ComparisonTableHeaderProps> = (props) => {
       onClick={() => setActive(itemName)}
       role={isMobile ? 'button' : 'heading'}
       aria-label={`show/hide ${itemName} parameters`}
+      style={{
+        flexBasis: `${baseWidth}%`,
+      }}
     >
-      <ImageToggle imgSrc={imgSrc} alt={`${itemName} logo`} />
+      {createIcon?.(itemName) ?? (
+        <ImageToggle imgSrc={imgSrc} alt={`${itemName} logo`} />
+      )}
     </h2>
   );
 };

@@ -6,6 +6,7 @@ import { IsMobileContext } from '../contexts/is-mobile-context';
 interface ImageToggleProps {
   imgSrc: string;
   alt: string;
+  className?: string;
 }
 
 // -----------------------------------------------------------------------------
@@ -13,7 +14,7 @@ interface ImageToggleProps {
 // This is ugly, but it works for now
 // TODO: generalize asset loading
 const ImageToggle: FC<ImageToggleProps> = (props) => {
-  const { imgSrc, alt } = props;
+  const { imgSrc, alt, className } = props;
 
   const isMobile = useContext(IsMobileContext);
 
@@ -24,6 +25,7 @@ const ImageToggle: FC<ImageToggleProps> = (props) => {
 
   return (
     <ThemedImage
+      className={className}
       alt={alt}
       sources={{
         dark: platformPath?.replace('${theme}', 'dark'),
