@@ -26,6 +26,7 @@ Please read the [overwolf.games.events](/api/live-game-data) documentation page 
 
 ## Available Features
 
+
 * [gep_internal](#gep_internal)
 * [me](#me)
 * [game_info](#game_info)
@@ -511,6 +512,7 @@ spike_planted   | null         | When a spike is planted.   | See [notes](#spike
 spike_defused   | null         | When a spike is defused.   | See [notes](#spike_defused-note) | 233.0  |
 spike_detonated   | null         | When a spike is detonated.   | See [notes](#spike_detonated-note) | 233.0  |
 kill_feed   | kill feed details         | When a kill feed appears in the UI.   | See [notes](#kill_feed-note) | 237.0  |
+shop    | open/close  | When the shop window is open or close |See [notes](#shop-note)|   241.0       |
 
 #### *match_start* note
 
@@ -570,6 +572,16 @@ Data Example:
 
 ```json
 {"events":[{"name": "kill_feed","data":"{\"attacker\":\"YTDestruct28\",\"victim\":\"Ghostblade\",\"is_attacker_teammate\":true,\"is_victim_teammate\":false,\"weapon\":\"TX_Hud_Volcano\",\"ult\":\"\",\"assist1\":\"TX_Killfeed_Sage1\",\"assist2\":\"\",\"assist3\":\"\",\"assist4\":\"\",\"headshot\":false}}]}
+```
+
+#### *shop* note
+
+* This feature is not yet suported in TTM game mode
+
+Data Example:
+
+```json
+{"events":[{"name": "shop","data":"open"}]}
 ```
 
 ## `game_info`
@@ -720,4 +732,3 @@ Data Example:
 ```json
 {"events":[{"name":"death","data":14}]}
 ```
-
