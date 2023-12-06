@@ -11,6 +11,17 @@
   //   padding-bottom: 24px;
   // }
 
+  .btn-secondary {
+    margin-top: 40px;
+    color: #DFDFDF;
+    border-color: #DFDFDF;
+
+    &:hover {
+      background-color: #DFDFDF;
+      color: var(--color-220) !important;
+    }
+  }
+
   ul {
     list-style: none;
     padding: 0;

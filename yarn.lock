@@ -3101,6 +3101,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/react-scroll@npm:^1.8.10":
+  version: 1.8.10
+  resolution: "@types/react-scroll@npm:1.8.10"
+  dependencies:
+    "@types/react": "*"
+  checksum: 056625e1a4b0572bf0570bf82fc0bf2db756370e8711167ff41e144c684c177673007a1ae7ba56d202f695489e8f5f5212df38a54e73a8d626adf82699cd436d
+  languageName: node
+  linkType: hard
+
 "@types/react@npm:*":
   version: 18.0.26
   resolution: "@types/react@npm:18.0.26"
@@ -8607,6 +8616,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"lodash.throttle@npm:^4.1.1":
+  version: 4.1.1
+  resolution: "lodash.throttle@npm:4.1.1"
+  checksum: 129c0a28cee48b348aef146f638ef8a8b197944d4e9ec26c1890c19d9bf5a5690fe11b655c77a4551268819b32d27f4206343e30c78961f60b561b8608c8c805
+  languageName: node
+  linkType: hard
+
 "lodash.uniq@npm:4.5.0, lodash.uniq@npm:^4.5.0":
   version: 4.5.0
   resolution: "lodash.uniq@npm:4.5.0"
@@ -11107,6 +11123,19 @@ __metadata:
   peerDependencies:
     react: ">=15"
   checksum: 892d4e274a23bf4f39abc2efca54472fb646d3aed4b584020cf49654d2f50d09a2bacebe7c92b4ec7cb8925077376dfcd0664bad6442a73604397cefec9f01f9
+  languageName: node
+  linkType: hard
+
+"react-scroll@npm:^1.9.0":
+  version: 1.9.0
+  resolution: "react-scroll@npm:1.9.0"
+  dependencies:
+    lodash.throttle: ^4.1.1
+    prop-types: ^15.7.2
+  peerDependencies:
+    react: ^15.5.4 || ^16.0.0 || ^17.0.0 || ^18.0.0
+    react-dom: ^15.5.4 || ^16.0.0 || ^17.0.0 || ^18.0.0
+  checksum: b84427d090600d9107adb57b93c8c059f9e36dcb4919660cd7d0547a6ce816b179bc54bc2941ff7d2497b2295f1a3e92dd0974c0dcedfde2fa5c93966441271e
   languageName: node
   linkType: hard
 
@@ -13620,6 +13649,7 @@ __metadata:
     "@mdx-js/mdx": ^2.1.1
     "@mdx-js/react": ^1.6.22
     "@tsconfig/docusaurus": ^1.0.6
+    "@types/react-scroll": ^1.8.10
     "@typescript-eslint/eslint-plugin": ^5.44.0
     "@typescript-eslint/parser": ^5.44.0
     async: ^3.2.4
@@ -13649,6 +13679,7 @@ __metadata:
     prism-react-renderer: ^1.3.1
     react: ^17.0.2
     react-dom: ^17.0.2
+    react-scroll: ^1.9.0
     sass: ^1.52.1
     typescript: ^4.9.4
     typings: "workspace:typings"

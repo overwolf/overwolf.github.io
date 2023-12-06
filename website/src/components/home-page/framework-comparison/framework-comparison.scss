@@ -1,0 +1,31 @@
+.framework-comparison-section {
+  padding: 32px 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  @media (max-width: 600px) {
+    // padding: 40px 16px;
+  }
+
+  h3 {
+    font-size: 40px;
+    line-height: 48px;
+    text-align: center;
+    margin-bottom: 8px;
+
+    @media (max-width: 600px) {
+      font-size: 32px;
+      line-height: 48px;
+    }
+
+    +p {
+      font-size: 18px;
+      line-height: 28px;
+      text-align: center;
+      letter-spacing: 0.02em;
+      margin-bottom: 0;
+    }
+  }
+}

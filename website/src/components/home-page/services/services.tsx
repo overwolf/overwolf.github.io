@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 
 import './services.scss';
+import OWInternalLink from '@site/src/theme/ow-internal-link';
 
 const Services = (props) => {
   const {} = props;
@@ -19,7 +20,7 @@ const Services = (props) => {
   };
 
   return (
-    <section className="services-section">
+    <section className="services-section" id="services-section">
       <ul className="services-inner">
         <li className={`service-item ${appBtn ? 'btn-hover' : ''}`}>
           <div className="assets">
@@ -132,6 +133,15 @@ const Services = (props) => {
           </div>
         </li>
       </ul>
+
+      <OWInternalLink
+        smooth={true}
+        to="framework-comparison-section"
+        offset={-60}
+        className="btn-secondary"
+      >
+        See full feature comparison
+      </OWInternalLink>
     </section>
   );
 };
