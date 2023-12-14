@@ -186,6 +186,8 @@ game_mode      | match_info | The currently selected game mode. | See [notes](#g
 tabs            | match_info | The current amount of squads, players, cash, and kills of the match (in relation to local player).| See [notes](#tabs-note) |   158.0 |
 map_id            | match_info | The current played map Id.| See [notes](#map_id-note) |   215.0 |
 arena_score         | match_info | The current match score.| See [notes](#arena_score-note) |   215.0 |
+mode_name         | match_info | The current mode name.| See [notes](#mode_name-note) |   241.0 |
+map_name         | match_info | The current map name.| See [notes](#map_name-note) |   241.0 |
 
 #### *game_mode* note
 
@@ -250,6 +252,22 @@ Data Example:
 
 ```json
 {"info":{"match_info":{"arena_score":"{\"my_team\":3,\"enemy_team\":4}"}},"feature":"match_info"}
+```
+
+#### *mode_name* note
+
+Data Example:
+
+```json
+{"feature":"match_info","category":"match_info","key":"mode_name","value":"Duo"}
+```
+
+#### *map_name* note
+
+Data Example:
+
+```json
+{"feature":"match_info","category":"match_info","key":"map_name","value":"Olympus"}
 ```
 
 ## `match_state`
