@@ -29,6 +29,7 @@ Please read the [overwolf.games.events](/api/live-game-data) documentation page 
 * [gep_internal](#gep_internal)
 * [game_info](#game_info)
 * [match_info](#match_info)
+* [location](#location)
 
 
 ## Game event status
@@ -100,4 +101,50 @@ Data Example:
 
 ```json
 {"events":[{"name":"match_end","data":""}]}
+```
+
+## `location`
+
+### Info Updates
+
+key          | Category    | Values                    | Notes                 | Since GEP Ver. |
+------------ | ------------| ------------------------- | --------------------- | ------------- | 
+location_camera | location | The current POV location of the camera  | See [notes](#location_camera-note)  |   241.0 |
+location_players | location | The current location of the players  | See [notes](#location_players-note)  |   241.0 |
+main_map | location | The current main map name  | See [notes](#main_map-note)  |   241.0 |
+sub_map | location | The current sub map name  | See [notes](#sub_map-note)  |   241.0 |
+
+
+#### *location_camera* note
+
+Data Example:
+
+```json
+{"feature": "location", "category": "location", "key": "location_camera", "data": "[{\"x\":60.765,\"y\":-430.126,\"z\":24.668}]"}
+```
+
+#### *location_players* note
+
+Data Example:
+
+* This info-update includes the location of all the 4 possible players and will update only the characters that are moving 
+
+```json
+{"feature": "location", "category": "location", "key": "location_players", "data": "[{\"player_0\":{\"x\":-1086.69,\"y\":-224.49,\"z\":-0.595}},{\"player_1\":{\"x\":-1089.05,\"y\":-218.029,\"z\":-0.414}},{\"player_2\":{\"x\":-1077.75,\"y\":-229.75,\"z\":-0.507}},{\"player_3\":{\"x\":-1082.75,\"y\":-206.75,\"z\":0.168}}]"}
+```
+
+#### *main_map* note
+
+Data Example:
+
+```json
+{"feature": "location", "category": "location", "key": "main_map", "data": "Wilderness"}
+```
+
+#### *sub_map* note
+
+Data Example:
+
+```json
+{"feature": "location", "category": "location", "key": "sub_map", "data": "CAMPSITE"}
 ```
