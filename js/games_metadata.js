@@ -229,6 +229,14 @@ const GamesMetaData = {
         "iconUrl": "/img/games-logos/valorant.png",
         "iconLargeUrl": "/img/games-logos/large/valorant.png"
     },
+    "21656": {
+        "id": 21656,
+        "path": "/status/genshin-impact",
+        "name": "Genshin Impact",
+        "docs": "/api/live-game-data/supported-games/genshin-impact",
+        "iconUrl": "/img/games-logos/genshin-impact.png",
+        "iconLargeUrl": "/img/games-logos/large/genshin-impact.png"
+    },
     "21668": {
         "id": 21668,
         "path": "/status/valheim",
