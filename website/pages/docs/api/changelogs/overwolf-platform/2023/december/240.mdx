@@ -1,0 +1,29 @@
+---
+id: 240
+image: "/img/embed/changelogs.jpg"
+title: "Version 0.240"
+sidebar_label: "0.240"
+sidebar_custom_props:
+  tags:
+    overwolf_platform: true
+    electron_platform: false
+---
+
+<SkipMe type="TEMPLATE">
+
+### Platform
+
+</SkipMe>
+
+### API
+- New Method - [`overwolf.extensions.current.generateUserEmailHashes()`](/api/extensions/current#generateuseremailhashesemail-callback):
+  - Generates and configures a user's Email hashes persistently directly from the raw email.
+- New Method - [`overwolf.extensions.current.setUserEmailHashes()`](/api/extensions/current#generateuseremailhasheshashes-callback):
+  - Configures a user's Email hashes persistently from pre-configured email hashes.
+
+### Bug Fixes
+- Fixed an issue where calling [`overwolf.profile.performOverwolfSessionLogin()`](/api/profile#performoverwolfsessionlogintoken-callback)
+with an invalid token would log the user out entirely.
+- The [`overwolf.media.takeScreenshot()`](/api/media#takescreenshotcallback) method will no longer show the recording indicator
+whenever it fails to execute.
+- Fixed an issue when attempting to load a new App version while another App version is already installed.

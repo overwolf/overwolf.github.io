@@ -15,12 +15,15 @@ A set of functions providing more information and utilities for the current exte
 * [overwolf.extensions.current.getExtraObject()](#getextraobjectname-callback)
 * [overwolf.extensions.current.getManifest()](#getmanifestcallback)
 * [overwolf.extensions.current.getPhasedPercent()](#getphasedpercentcallback-version)
+- [overwolf.extensions.current.generateUserEmailHashes()](#generateuseremailhashesemail-callback):
+- [overwolf.extensions.current.setUserEmailHashes()](#generateuseremailhasheshashes-callback):
 
 ## Types Reference
 
 * [overwolf.extensions.current.GetExtraObjectResult](#getextraobjectresult-object) Object
 * [overwolf.extensions.current.GetManifestResult](#getmanifestresult-object) Object
 * [overwolf.extensions.current.GetPhasedPercentResult](#getphasedpercentresult-object) Object
+- [overwolf.extensions.current.UserEmailHashes](#useremailhashes-object) Object
 
 ## getExtraObject(name, callback)
 #### Version added: 0.80
@@ -58,6 +61,29 @@ Parameter | Type       | Description                                       |
 --------- | -----------| ------------------------------------------------- |
 callback  | ([Result: GetPhasedPercentResult](#getphasedpercentresult-object)) => void              | Result of the request  |
 version   | string? | The version to calculate the phasing percentage for (defaults to the current 'base' version) |
+
+
+## generateUserEmailHashes(email, callback)
+#### Version added: 0.240
+
+> Generates and configures a user's [email hashes][liveramp-hash-identifier] persistently directly from the raw email.
+
+Parameter | Type       | Description                                       |
+--------- | -----------| ------------------------------------------------- |
+
+email   | string | The user's email address |
+callback  | (Result: Result) => void              | Result of the operation  |
+
+
+## setUserEmailHashes(hashes, callback)
+#### Version added: 0.240
+
+> Configures a user's [email hashes][liveramp-hash-identifier] persistently from pre-configured email hashes.
+
+Parameter | Type       | Description                                       |
+--------- | -----------| ------------------------------------------------- |
+hashes   | [UserEmailHashes](#useremailhashes-object) | The different hashes of the user's email address |
+callback  | (Result: Result) => void              | Result of the operation  |
 
 ## GetExtraObjectResult Object
 
@@ -173,3 +199,18 @@ Parameter          | Type                            | Description              
 *success*          | boolean                         | inherited from the "Result" Object                |
 *error*            | string                          | inherited from the "Result" Object                |
 phasedPercent             | number                          | The phased percentage                                 |   
+
+
+## UserEmailHashes Object
+### Version added: 0.240
+
+> An object containing different hash patterns of a relevant user's [email address][liveramp-hash-identifier].
+
+Parameter          | Type                            | Description                                       |
+-------------------| --------------------------------| ------------------------------------------------- |
+SHA1   | string | An `SHA1` hash of the email address                |
+SHA256 | string | An `SHA256` hash of the email address                |
+MD5    | string | An `MD5` hash of the email address                |
+
+
+[liveramp-hash-identifier]: https://docs.liveramp.com/connect/en/hashing-identifiers.html
