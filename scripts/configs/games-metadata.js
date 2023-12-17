@@ -251,6 +251,11 @@ const metaData = [
         path: "call-of-duty-warzone-2-0",
         name: "Call of Duty: Warzone 2.0"
     },
+    {
+        id: 21656,
+        path: 'genshin-impact',
+        name: 'Genshin Impact'
+    },
 ]
 
 module.exports = { metaData }
