@@ -4,7 +4,6 @@ image: "/img/embed/games/genshin-impact.jpg"
 title: Genshin Impact Game events
 hide_title: true
 sidebar_label: Genshin Impact
-draft: true
 sidebar_position: 0
 sidebar_custom_props:
   tags:
@@ -29,8 +28,7 @@ Please read the [overwolf.games.events](/api/live-game-data) documentation page 
 ## Available Features
 
 * [gep_internal](#gep_internal)
-* [match_info](#match_info)
-* [live_data](#live_data)
+* [game_info](#game_info)
 
 ## Game event status
 
@@ -60,8 +58,8 @@ Data Example:
 
 key          | Category    | Values                    | Notes                 | Since GEP Ver. |
 ------------ | ------------| ------------------------- | --------------------- | ------------- | 
-character_name | game_info | Current character local name |See [notes](#character_name-note)|   237.0       |
-player_id | game_info | Current player ID |See [notes](#player_id-note)|   237.0       |
+character_name | game_info | Local player's current character name |See [notes](#character_name-note)|   242.0       |
+player_id | game_info | Current player ID |See [notes](#player_id-note)|   242.0       |
 
 #### *character_name* note
 
@@ -74,16 +72,16 @@ Data Example:
 
 Data Example:
 ```json
-{"info":{"game_info":{"player_id":"766078275"}},"feature":"game_info"}
+{"info":{"game_info":{"player_id":766078275}},"feature":"game_info"}
 ```
 
 ### Events
 
 Event       | Event Data   | Fired When    | Notes                                  | Since GEP Ver. |
 ------------| -------------| --------------| -------------------------------------- | ---------------|
-match_start |              | In the beginning of each match| See [notes](#match_start-note) |228.0|
-match_end   |              | At the end of each match| See [notes](#match_end-note) |228.0|
-character_switch        |   | When the player switch the character| See [notes](#character_switch-note) |235.0|
+match_start |              | In the beginning of each match| See [notes](#match_start-note) |242.0|
+match_end   |              | At the end of each match| See [notes](#match_end-note) |242.0|
+character_switch|          | When the player switch the character| See [notes](#character_switch-note) |242.0|
 
 
 
