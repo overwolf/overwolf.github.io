@@ -60,42 +60,31 @@ const MDXComponents: MDXComponentsObject = {
   // Custom Components
   ...DisplayJSON,
 
-  ...WrapAll({
-    ImageSlider,
-    ImageBoxModal,
-    VideoBox,
-    GameInfo,
-    SkipMe,
-    OWTabs,
-    OWTabItem,
-    ImageToggle,
-    OWTable,
-    OWTableRow,
-    OWexpandedRowGroup,
-    OWdataCell,
-    ComparisonTable,
-    ...{
-      FrameworkComparisonTable,
-      SubscriptionsComparisonTable,
-    },
-    Tagger,
-    Tabs,
-    TabItem,
-    SimpleTab,
-    EventsData,
-    FancyLink,
-    MatchOnly,
-    ImageHeading,
-  }),
+  ImageSlider,
+  ImageBoxModal,
+  VideoBox,
+  GameInfo,
+  SkipMe,
+  OWTabs,
+  OWTabItem,
+  ImageToggle,
+  OWTable,
+  OWTableRow,
+  OWexpandedRowGroup,
+  OWdataCell,
+  ComparisonTable,
+  ...{
+    FrameworkComparisonTable,
+    SubscriptionsComparisonTable,
+  },
+  Tagger,
+  Tabs,
+  TabItem,
+  SimpleTab,
+  EventsData,
+  FancyLink,
+  MatchOnly,
+  ImageHeading,
 };
-
-function WrapAll(elements: { [key: string]: React.FC<any> }) {
-  if (!devMode) return elements;
-  const result = {};
-  Object.keys(elements).forEach((key) => {
-    result[key] = DebugWrapper(elements[key]);
-  });
-  return result;
-}
 
 export default MDXComponents;
