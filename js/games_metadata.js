@@ -390,9 +390,9 @@ const GamesMetaData = {
         "iconUrl": "/img/games-logos/teamfight-tactics-public-beta.png",
         "iconLargeUrl": "/img/games-logos/large/teamfight-tactics-public-beta.png"
     },
-    "223281": {
-        "id": 223281,
-        "displayId": 22328,
+    "234241": {
+        "id": 234241,
+        "displayId": 23424,
         "path": "/status/call-of-duty-warzone-2-0",
         "name": "Call of Duty: Warzone 2.0",
         "docs": "/api/live-game-data/supported-games/call-of-duty-warzone-2-0",
