@@ -26,7 +26,6 @@ import Tagger from '../../components/tagging/Tagger';
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import SimpleTab from '../../components/simple-tab/simple-tab';
-import DebugWrapper from '../../components/debug/debug-wrapper';
 import EventsData from '../../components/game-events-status/EventsData';
 import FancyLink from '../../components/fancy/fancy-link';
 import MatchOnly from '../../components/content-tags/gep/match-only';
@@ -37,8 +36,7 @@ import type { MDXComponentsObject } from '@theme/MDXComponents';
 import FrameworkComparisonTable from '@site/src/presets/comparison-table/framework-comparison-table';
 import ImageHeading from '@site/src/components/image-heading/image-heading';
 import SubscriptionsComparisonTable from '@site/src/presets/comparison-table/subscriptions-comparison-table';
-
-const devMode = process.env.NODE_ENV === 'development';
+import OWLottie from '@site/src/components/ow-lottie';
 
 const MDXComponents: MDXComponentsObject = {
   head: MDXHead,
@@ -85,6 +83,7 @@ const MDXComponents: MDXComponentsObject = {
   FancyLink,
   MatchOnly,
   ImageHeading,
+  OWLottie,
 };
 
 export default MDXComponents;

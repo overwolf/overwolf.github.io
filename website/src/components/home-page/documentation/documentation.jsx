@@ -1,22 +1,21 @@
-import React from 'react';
-import { useEffect } from 'react';
+import React, { useEffect } from 'react';
+
 import './documentation.scss';
 
 const Documentation = (props) => {
- const {} = props;
+  const {} = props;
 
-// lottie animated icons
+  // lottie animated icons
   const startLottieAnimatedIcons = () => {
-
-    let scriptTag = document.createElement('script');
-    scriptTag.src = "https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.9.6/lottie.min.js";
+    const scriptTag = document.createElement('script');
+    scriptTag.src =
+      'https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.9.6/lottie.min.js';
 
     const firstScriptTag = document.getElementsByTagName('script')[0];
     firstScriptTag.parentNode.insertBefore(scriptTag, firstScriptTag);
 
     setTimeout(() => {
-
-      let lottieParamsObj = (animName) => {
+      const lottieParamsObj = (animName) => {
         return {
           container: document.getElementById(animName), // Required
           path: `/img/home-2023/json/${animName}.json`, // Required
@@ -24,20 +23,19 @@ const Documentation = (props) => {
           loop: false, // Optional
           autoplay: false, // Optional
           name: animName, // Name for future reference. Optional.
-        }
-      }
+        };
+      };
 
       const prepareAnim = bodymovin.loadAnimation(lottieParamsObj('prepare'));
       const buildAnim = bodymovin.loadAnimation(lottieParamsObj('build'));
       const releaseAnim = bodymovin.loadAnimation(lottieParamsObj('release'));
       const growthAnim = bodymovin.loadAnimation(lottieParamsObj('growth'));
 
-      document.querySelectorAll(".documentation-list li a").forEach((cItem) => {
-
+      document.querySelectorAll('.documentation-list li a').forEach((cItem) => {
         cItem.addEventListener('mouseenter', (e) => {
-          let IconID = cItem.querySelector('div').id;
+          const IconID = cItem.querySelector('div').id;
           // console.log('mouseenter')
-          switch(IconID) {
+          switch (IconID) {
             case 'prepare':
               prepareAnim.setDirection(1);
               prepareAnim.play();
@@ -55,12 +53,12 @@ const Documentation = (props) => {
               growthAnim.play();
               break;
           }
-        })
+        });
 
         cItem.addEventListener('mouseleave', (e) => {
           // console.log('mouseleave')
-          let IconID = cItem.querySelector('div').id;
-          switch(IconID) {
+          const IconID = cItem.querySelector('div').id;
+          switch (IconID) {
             case 'prepare':
               prepareAnim.setDirection(-1);
               prepareAnim.stop();
@@ -78,19 +76,16 @@ const Documentation = (props) => {
               growthAnim.stop();
               break;
           }
-        })
-
+        });
       });
-
-    }, 500)
-
-  }
+    }, 500);
+  };
 
   useEffect(() => {
     startLottieAnimatedIcons();
-    }, []);
+  }, []);
 
-// ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------
 
   return (
     <section className="documentation-section">
@@ -100,25 +95,32 @@ const Documentation = (props) => {
         <li>
           <a href="/start/getting-started">
             <h4>Prepare</h4>
-            <p>App creation is a journey. And every journey starts with a plan.</p>
+            <p>
+              App creation is a journey. And every journey starts with a plan.
+            </p>
             <div className="anim-icon" id="prepare"></div>
-            <img src="/img/home-2023/server.svg" loading="lazy" alt="Prepare"/>
+            <img src="/img/home-2023/server.svg" loading="lazy" alt="Prepare" />
           </a>
         </li>
         <li>
           <a href="/start/getting-started/app-creation-process#build">
             <h4>Build</h4>
-            <p>With a plan in hand, you are now ready to start building your app.</p>
+            <p>
+              With a plan in hand, you are now ready to start building your app.
+            </p>
             <div className="anim-icon" id="build"></div>
-            <img src="/img/home-2023/anvil.svg" loading="lazy" alt="Build"/>
+            <img src="/img/home-2023/anvil.svg" loading="lazy" alt="Build" />
           </a>
         </li>
         <li>
           <a href="/start/getting-started/app-creation-process#release">
             <h4>Release</h4>
-            <p>Your app is ready, and so are you. Now, it is time to share it with the world!</p>
+            <p>
+              Your app is ready, and so are you. Now, it is time to share it
+              with the world!
+            </p>
             <div className="anim-icon" id="release"></div>
-            <img src="/img/home-2023/flag.svg" loading="lazy" alt="Release"/>
+            <img src="/img/home-2023/flag.svg" loading="lazy" alt="Release" />
           </a>
         </li>
         <li>
@@ -126,13 +128,12 @@ const Documentation = (props) => {
             <h4>Grow</h4>
             <p>Your app is released, but the journey has only just begun!</p>
             <div className="anim-icon" id="growth"></div>
-            <img src="/img/home-2023/trophy.svg" loading="lazy" alt="Growth"/>
+            <img src="/img/home-2023/trophy.svg" loading="lazy" alt="Growth" />
           </a>
         </li>
       </ul>
     </section>
   );
-
-}
+};
 
 export default Documentation;
