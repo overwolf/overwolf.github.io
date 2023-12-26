@@ -155,13 +155,8 @@ const SubscriptionsComparisonTAble = (
         },
         values: {
           checkout: { text: 'Any' },
-          headless: {
-            text: 'SSO',
-            tooltipData: {
-              text: 'Currently, only specific SSO providers are supported. To add your own, custom provider, please reach out',
-            },
-          },
-          overwolf: { text: 'Overwolf SSO' },
+          headless: { text: 'Any' },
+          overwolf: { text: 'Any' },
         },
       },
       {
