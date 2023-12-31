@@ -854,9 +854,9 @@ Data Example:
 
 key          | Category    | Values                    | Notes                 | Since GEP Ver. |
 ------------ | ------------| ------------------------- | --------------------- | ------------- |
-matchStarted | game_info   | true/false (string)       |See [notes](#matchStarted-note)|   140.0       |
-matchId      | game_info   | Current match id          |See [notes](#matchId-note)     |   120.0       |
-queueId      | game_info   | Current match [queue id](https://developer.riotgames.com/game-constants.html)|  **This event is not available anymore**        |   120.0       |
+matchStarted | game_info   | true/false (string)       |See [notes](#matchstarted-note)|   140.0       |
+matchId      | game_info   | Current match id          |See [notes](#matchid-note)     |   120.0       |
+queueID    | game_info   | Current match [queue id](https://developer.riotgames.com/game-constants.html)| See [notes](#queueid-note) |   120.0       |
 
 :::tip
 As there is no matchOutcome event for LoL, you can detect it by using the [announcer](#announcer) or [live_client_data](#live_client_data) events.
@@ -870,7 +870,7 @@ Data Example:
 {"info":{"game_info":{"matchStarted":"true"}},"feature":"matchState"}
 ```
 
-#### *matchID* note
+#### *matchId* note
 
 Data Example:
 
@@ -880,9 +880,9 @@ Data Example:
 
 #### *queueID* note
 
-:::warning OBSOLETE
-This event is currently NOT supported.
-:::
+```json
+{"feature": "matchState", "category": "game_info", "key": "queueId", "data": "420"}
+```
 
 ### Events
 
@@ -902,7 +902,7 @@ matchEnd is deprecated, you can use the [announcer](#announcer) DEFEAT/VICTORY i
 key          | Category    | Values                    | Notes                 | Since GEP Ver. |
 ------------ | ----------- | ------------------------- | --------------------- | -------------- |
 pseudo_match_id | match_info | Current match’s ID code. Example:<br></br> `a4e8fc75-b35e-466f-976c-09f4ee633d95`  |  This is an Overwolf-generated code unrelated to Riot Games.  |   0.130 |
-game_mode | match_info | Whether the current game mode is TFT or default LoL. See [notes](#game_mode-notes) |                 |   133.0       |
+game_mode | match_info | Whether the current game mode is TFT, Arena or default LoL. See [notes](#game_mode-notes) |                 |   133.0       |
 match_paused | match_info | Whether a match is paused or not (Bool - True/False). See [notes](#match_paused-notes) |                 |   153.1       |
 players_tagline | match_info | Information about the players in the game. See [notes](#players_tagline-notes) |                 |   240.0       |
 
@@ -910,8 +910,9 @@ players_tagline | match_info | Information about the players in the game. See [n
 
 Data example:
 ```json
-{"info":{"match_info":{"game_mode":"tft"}},"feature":"match_info"}
-{"info":{"match_info":{"game_mode":"lol"}},"feature":"match_info"}
+{"feature": "match_info", "category": "match_info", "key": "game_mode", "data": "lol"}
+{"feature": "match_info", "category": "match_info", "key": "game_mode", "data": "tft"}
+{"feature": "match_info", "category": "match_info", "key": "game_mode", "data": "arena"}
 ```
 
 #### *match_paused* note
