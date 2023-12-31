@@ -1216,6 +1216,12 @@ errorDescription     | string        |                         |
 
 ```
 
+#### Example data: Failure
+
+```json
+{ "status": "error", "error": "something went wrong...", "SubErrorMessage": "already running" }
+```
+
 ## GetActiveRecordingAppsResult Object
 
 Parameter          | Type     | Description                                 |
@@ -1231,11 +1237,6 @@ Parameter          | Type     | Description                                 |
 uid          | string  | the uid of the app           |
 displayName            | string   | the display name of the app |
 
-#### Example data: Failure
-
-```json
-{ "status": "error", "error": "something went wrong...", "SubErrorMessage": "already running" }
-```
 
 ## StreamEvent Object
 
