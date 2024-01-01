@@ -1,0 +1,89 @@
+---
+id: consent-management-platform
+image: "/img/embed/electron.jpg"
+title: Consent Management Platform
+sidebar_custom_props:
+  tags:
+    overwolf_platform: false
+    electron_platform: true
+---
+
+import CMPIntro from "./_introduction.mdx"
+
+<CMPIntro/>
+
+## Installer CMP Mockup
+
+Below is a live installer mockup, with the CMP built into it:
+
+<iframe style={{border: "1px solid rgba(0, 0, 0, 0.1)"}} width="100%" height="550" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FsLm1ATRmpdGKjyHlVl7iur%2FInstaller-Demo%3Fpage-id%3D1%253A79%26node-id%3D1%253A174%26viewport%3D821%252C419%252C0.32%26scaling%3Dmin-zoom%26starting-point-node-id%3D1%253A174" allowfullscreen></iframe>
+
+## Relevant API
+
+import API from "@site/../pages/api/electron/consent-management-platform/_api.mdx"
+
+<API/>
+
+## Introducing the CMP to users
+
+<Tabs>
+<TabItem value="installer-cmp" label="CMP During Installation" default>
+
+:::note Overwolf Windows Installer
+Our [Windows installer](/tools/ow-electron/distribution#custom-installer) automatically handles the introduction of the CMP to users during installation, among other things. If you wish to use it,
+[ask us for more details](/support/contact-us).
+:::
+
+In order to introduce the CMP during installation, you must show users a notice informing them about the CMP before starting the installation.
+We'll use a mockup of CurseForge's installer notice as an example:
+
+</TabItem>
+<TabItem value="ftue-cmp" label="CMP During FTUE">
+
+:::note FTUE And Migration To ow-electron
+For the purposes discussed here, a user updating from a non ow-electron version of the app, to an ow-electron version of the app,
+is treated as a First Time User, and should be shown the CMP as if they were a new user.
+:::
+
+In order to introduce the CMP inside the app itself, you must show First Time Users a notice informing them about the CMP.
+We'll use a mockup of CurseForge's installer notice as a reference:
+
+</TabItem>
+</Tabs>
+
+![Initial Notice (CurseForge)](/assets/tools/ow-electron/consent-management-platform/notice.jpg)
+
+<details>
+<summary>CMP Notice Template</summary>
+
+```
+{App Name} may display in-app ads to help provide you with a free high-quality app.
+In order to deliver ads that are relevant for you, {App Name} and trusted {ad vendors}(**must link to `vendors` tab**)
+store and/or access information on your computer, and process personal data such as IP address and cookies.
+Click on the “Manage” button to control your consents,
+or to object to the processing of your data when done on the basis of legitimate interest.
+You can change your preferences at any time via the settings screen.
+
+Purposes we use: Store and/or access information on a device,
+personalised ads and content, ad and content measurement,
+audience insights and product development.
+```
+
+</details>
+
+Users can then click `Manage`, in order to open the CMP window directly, and configure it however they wish.
+
+Once done, they **must** click to continue:
+- `Accept & Install` - If done during installation. Proceeds to install the app
+- `Accept & Continue` - If done during FTUE. Proceeds to continue to the app
+
+
+## Allowing users to access the CMP
+
+Once the user has been introduced to the CMP, they must be able to find it if they ever wish to alter its settings.
+
+This is usually achieved by having a **clearly visible** section in the app's settings, called `Privacy`, that shows the following when clicked:
+
+![Privacy Settings](/assets/tools/ow-electron/consent-management-platform/privacy-settings.jpg)
+
+Clicking on `Manage` then opens the CMP window, in the same way that it was opened at the start.

@@ -1,8 +1,0 @@
-{
-  "compilerOptions": {
-    "noEmit": false,
-    "outDir": "typescript/build",
-  },
-  "exclude": ["**/*.js", "**/*.jsx", "**/*.tsx", "src/client-modules/**/*"],
-  "extends": "./tsconfig.base.json"
-}

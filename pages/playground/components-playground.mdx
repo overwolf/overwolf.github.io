@@ -1,0 +1,165 @@
+---
+id: components-playground
+title: Components Playground
+draft: true
+sidebar_custom_props:
+  tags:
+    overwolf_platform: true
+    electron_platform: true
+---
+
+# Heading 1
+
+## Heading 2
+
+### Heading 3
+
+#### Heading 4
+
+**bold text**
+
+*italicized text*
+
+apparently we can't do <ins>underlines</ins> normally, but we can with raw html
+
+~~strikethrough text~~
+
+- bullet level 1
+    - bullet level 2
+        - bullet level 3
+            - bullet level 4
+
+1. numbered bullet level 1
+2. numbered bullet level 1
+    1. numbered bullet level 2
+        1. numbered bullet level 3
+            1. numbered bullet level 4
+
+`inline code block`
+
+```
+big code block
+```
+
+```js
+// also supports syntax highlighting
+console.log("hello world");
+```
+
+```js title="code blocks can also have titles woooow"
+// still supports syntax highlighting
+console.log("hello world");
+```
+
+> Quote
+
+Column 1   | Column 2              | Column 3                                                                |
+---------- | ----------------------| ----------------------------------------------------------------------- |
+r1c1       | r1c2                  | r1c3                                                                    |
+r2c1       | r2c2                  | r2c3                                                                    |
+
+
+:::note
+
+Some **content** with _Markdown_ `syntax`. Check [this `api`](#).
+
+:::
+
+:::tip
+
+Some **content** with _Markdown_ `syntax`. Check [this `api`](#).
+
+:::
+
+:::info
+
+Some **content** with _Markdown_ `syntax`. Check [this `api`](#).
+
+:::
+
+:::caution
+
+Some **content** with _Markdown_ `syntax`. Check [this `api`](#).
+
+:::
+
+:::danger
+
+Some **content** with _Markdown_ `syntax`. Check [this `api`](#).
+
+:::
+
+:::note I can also replace the title here
+
+Same as the above ones, but we have a custom title this time.
+
+Some **content** with _Markdown_ `syntax`. Check [this `api`](#).
+
+:::
+
+VideoBox:
+
+<VideoBox videoID={'1yMAR0JK1XA'} fullWidth={false} />
+
+ImageBoxModal:
+
+<ImageBoxModal>
+  <img src={require('/assets/subs-user-flow/one-app.jpg').default} alt="One App page - Unsubscribed" />
+</ImageBoxModal>
+
+Tabs:
+
+<Tabs>
+<TabItem value="opened" label="Opened" default>
+
+![Public Releases Opened](/assets/tools/developers-console/all-applications/release-management/public-releases-open.jpg)
+
+</TabItem>
+<TabItem value="closed" label="Closed">
+
+![Public Releases Closed](/assets/tools/developers-console/all-applications/release-management/public-releases-closed.jpg)
+
+</TabItem>
+</Tabs>
+
+GameInfo:
+
+<GameInfo gameId={21566} type="compliance"/>
+
+ImageSlider:
+
+<ImageSlider>
+
+![Legendary Builds](/assets/lb-400x300.png)
+
+![DotaPlus](/assets/dota-2-400x300.png)
+
+</ImageSlider>
+
+[link](#streaming-api-settings-sg-bcvcbc)
+
+
+\\!JSON Testerio
+
+
+!JSON bonjour
+// Test comment
+/* Hello world*/
+function test(
+  a: string,
+  // hello
+  b: Hello{
+    test: boolean
+  }
+) => void
+
+const test = Hello{
+  test: boolean
+}
+/JSON
+
+import test from '~games-data/game-data.json'
+
+<div>{JSON.stringify(test, undefined, 4)}</div>
+
+test

@@ -1,0 +1,139 @@
+---
+id: owad
+image: "/img/embed/api-docs.jpg"
+title: OwAd
+sidebar_custom_props:
+  tags:
+    overwolf_platform: true
+    electron_platform: false
+---
+
+:::note
+`OwAd` is an instance of an Overwolf Managed Ads Container.
+These can be created using the [Overwolf Ads SDK](/start/monetize-your-app/advertising/ads-sdk).
+:::
+
+
+## Methods Reference
+
+* [new OwAd()](#new-owadcontainer-settings)
+* [OwAd.shutdown()](#shutdown)
+* [OwAd.addEventListener()](#addeventlistenerevent-callback)
+
+## Events Reference
+
+:::info Subscribing To Events
+Unlike with "native" Overwolf APIs, subscribing to events in the Ads SDK is done using the
+[OwAd.addEventListener()](#addeventlistenerevent-callback) method on the specific `OwAd` instance.
+:::
+
+* [OWAd.player_loaded](#player_loaded) (Video Only)
+* [OWAd.display_ad_loaded](#display_ad_loaded)
+* [OWAd.play](#play)
+* [OWAd.impression](#impression) (Video Only)
+* [OWAd.complete](#complete) (Video Only)
+* [OWAd.error](#error) (Video Only)
+
+
+## Types Reference
+
+* [OwAd.ContainerSettings](#containersettings-object) Object
+* [OwAd.ContainerSize](#containersize-object) Object
+
+
+## new OwAd(container, settings)
+
+> Creates a new instance of OwAd.
+
+Parameter | Type   | Description                                  | Required |
+--------- | -------| -------------------------------------------- | -------- |
+container | DOM Element | The Ad's container element | Yes |
+settings  | [ContainerSettings](#containersettings-object) | The container's desired size configuration(s) | No (defaults to a 400x300 Ad container if left empty) |
+
+### Code Example
+
+```js title="Creates a new OwAd, with the element ad-div as its container, with a container size of 400x300"
+let owAd = new OwAd(document.getElementById("ad-div"), {size: {width: 400, height: 300}});
+```
+
+## shutdown()
+
+> Shuts down the Ads container completely.
+
+For specific use cases, please refer to [Guidelines for ad integration](/start/monetize-your-app/advertising/ads-sdk#guidelines-for-ads-integration).
+
+### Code Example
+
+```js title="Shut Down an existing OwAd instance"
+let owAd = new OwAd(...);
+...
+
+owAd.shutdown();
+```
+
+
+## addEventListener(event, callback)
+
+> Adds a listener to a certain Ad event.
+
+Parameter | Type   | Description                                  | Required |
+--------- | ------ | -------------------------------------------- | -------- |
+event     | string | The name of the event to listen to           | Yes |
+callback  | (Result) => void | The callback that will be called when this event occurs | Yes |
+
+### Code Example
+
+```js title="Add an event listener to an OwAd"
+let owAd = new OwAd(...);
+...
+
+owAd.addEventListener("player_loaded", (name, ...) => {...});
+```
+
+## player_loaded (Video Only) {#player_loaded}
+
+> Fires when a Video Ad's player is successfully loaded into the page.
+
+## display_ad_loaded {#display_ad_loaded}
+
+> Fires when a Display Ad was served to the container.
+
+## play {#play}
+
+> Fires when an Ad started "playing" (Video Ad started playing, or display Ad was presented).
+
+## impression (Video Only) {#impression}
+
+> Fires when a Video Ad triggered an Impression. This happens at different intervals depending on the advertiser.
+
+## complete (Video Only) {#complete}
+
+> Fires when a Video Ad completely finished playing.
+
+## error (Video Only) {#error}
+
+> Fires if an error occured while loading a Video Ad.
+
+
+## ContainerSettings Object
+
+List of settings that can be used when setting up an OwAd instance.
+
+Parameter          | Type                            | Description                                       |
+-------------------| --------------------------------| ------------------------------------------------- |
+size               | [ContainerSize](#containersize-object) \| [ContainerSize](#containersize-object)[] | The size(s) of Ad containers that this Ad container can become. See [Available Ad Sizes](#available-ad-sizes) |
+
+## ContainerSize Object
+
+Width/height settings of an Ads container.
+
+Parameter          | Type                            | Description                                       |
+-------------------| --------------------------------| ------------------------------------------------- |
+width              | number                          | Width of the target Ad container size             |
+height             | number                          | Height of the target Ad container size            |
+
+### Available Ad sizes:
+
+import AdSizes from "@site/../pages/api/general/ads-sdk/_ad-sizes.mdx"
+
+<AdSizes/>

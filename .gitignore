@@ -1,5 +1,8 @@
+# Ignored folders
 /node_modules
+/lib
 
+# Yarn-related folders/files
 .pnp.*
 .yarn/*
 .yarn/cache
@@ -10,14 +13,59 @@
 !.yarn/sdks
 !.yarn/versions
 
-# Misc
-.DS_Store
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
-
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-website/build
+
+
+
+### Auto-generated (DO NOT PUT ANYTHING BELOW THIS) ###
+
+pages/status/world-of-warcraft.mdx
+pages/status/league-of-legends.mdx
+pages/status/starcraft-2.mdx
+pages/status/final-fantasy-xiv.mdx
+pages/status/world-of-tanks.mdx
+pages/status/path-of-exile.mdx
+pages/status/dota-2.mdx
+pages/status/minecraft.mdx
+pages/status/warframe.mdx
+pages/status/hearthstone.mdx
+pages/status/heroes-of-the-storm.mdx
+pages/status/world-of-warships.mdx
+pages/status/rocket-league.mdx
+pages/status/rainbow-six-siege.mdx
+pages/status/overwatch-2.mdx
+pages/status/launchers/league-of-legends.mdx
+pages/status/player-unknowns-battlegrounds.mdx
+pages/status/fortnite.mdx
+pages/status/magic-the-gathering-arena.mdx
+pages/status/splitgate-arena-warfare.mdx
+pages/status/league-of-legends-arena.mdx
+pages/status/apex-legends.mdx
+pages/status/teamfight-tactics.mdx
+pages/status/legends-of-runeterra.mdx
+pages/status/escape-from-tarkov.mdx
+pages/status/valorant.mdx
+pages/status/genshin-impact.mdx
+pages/status/valheim.mdx
+pages/status/eternal-return.mdx
+pages/status/new-world.mdx
+pages/status/diablo-2-resurrected.mdx
+pages/status/halo-infinite.mdx
+pages/status/lost-ark.mdx
+pages/status/call-of-duty-vanguard.mdx
+pages/status/axie-infinity-origin.mdx
+pages/status/baldurs-gate-3.mdx
+pages/status/leap.mdx
+pages/status/call-of-duty-modern-warfare-2.mdx
+pages/status/sons-of-the-forest.mdx
+pages/status/diablo-4.mdx
+pages/status/counter-strike-2.mdx
+pages/status/starfield.mdx
+pages/status/call-of-duty-modern-warfare-3.mdx
+pages/status/league-of-legends-public-beta-arena.mdx
+pages/status/teamfight-tactics-public-beta.mdx
+pages/status/call-of-duty-warzone-2-0.mdx
+pages/status/status.mdx
+pages/api/changelogs/changelogs.mdx

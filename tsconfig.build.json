@@ -1,0 +1,9 @@
+{
+  "compilerOptions": {
+    "skipLibCheck": true,
+    "outDir": "lib",
+    "noEmit": false,
+  },
+  "exclude": ["**/*.js", "**/*.jsx", "**/*.tsx", "src/client-modules/**/*", "engine/**/*"],
+  "extends": "./tsconfig.base.json"
+}

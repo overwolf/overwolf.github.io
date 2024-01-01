@@ -1,0 +1,3 @@
+{
+  "extends": "./engine/workspace-tools/.eslintrc.json"
+}

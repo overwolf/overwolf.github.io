@@ -1,31 +1,29 @@
 {
-  "name": "developers-site",
+  "name": "overwolf-github-io",
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "generate": "yarn generate:content && yarn generate:plugins",
-    "generate:content": "cd scripts && node generate.js",
-    "generate:plugins": "yarn workspace website tsc --project tsconfig.build.json",
-    "docusaurus": "yarn workspace website docusaurus",
-    "validate": "cd scripts && node validators/automatic/empty-temp-redirects.js && node validators/automatic/empty-temp-redirects.js",
-    "start": "yarn generate && yarn workspace website docusaurus start",
-    "build": "yarn generate && yarn workspace website docusaurus build",
-    "swizzle": "yarn workspace website docusaurus swizzle",
-    "deploy": "yarn generate && yarn workspace website docusaurus deploy",
-    "clear": "cd scripts && node clear.js && yarn workspace website docusaurus clear",
-    "serve": "yarn workspace website docusaurus serve",
-    "write-translations": "yarn workspace website docusaurus write-translations",
-    "write-heading-ids": "yarn workspace website docusaurus write-heading-ids"
+    "compile": "yarn tsc --project tsconfig.build.json",
+    "compile:dev": "yarn tsc --project tsconfig.build.json --watch",
+    "bootstrap": "yarn compile && node lib/bootstrap/bootstrap.js",
+    "bootstrap:dev": "node lib/bootstrap/bootstrap.js",
+    "start": "yarn bootstrap && yarn workspace engine docusaurus start",
+    "deploy": "yarn bootstrap && yarn docusaurus deploy",
+    "build": "yarn bootstrap && yarn workspace engine docusaurus build",
+    "serve": "yarn docusaurus serve",
+    "clear": "yarn bootstrap && node lib/bootstrap/clear.js && yarn docusaurus clear",
+    "swizzle": "yarn docusaurus swizzle",
+    "docusaurus": "yarn workspace engine docusaurus",
+    "write-translations": "yarn docusaurus write-translations",
+    "write-heading-ids": "yarn docusaurus write-heading-ids"
   },
+  "workspaces": [
+    "engine"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/overwolf/developers-site.git"
   },
-  "workspaces": [
-    "website",
-    "typings",
-    "scripts"
-  ],
   "private": true,
   "author": "Overwolf Ltd.",
   "license": "ISC",
@@ -33,11 +31,11 @@
     "url": "https://github.com/overwolf/overwolf.github.io/issues"
   },
   "homepage": "https://github.com/overwolf/overwolf.github.io#readme",
-  "dependencies": {
-    "remarkable-admonitions": "^0.2.1"
+  "devDependencies": {
+    "typescript": "^4.9.4"
   },
   "type": "commonjs",
   "resolutions": {
-    "@docusaurus/plugin-content-docs@2.2.0": "patch:@docusaurus/plugin-content-docs@npm%3A2.2.0#./.yarn/patches/@docusaurus-plugin-content-docs-npm-2.2.0-34ac512661.patch"
+    "@docusaurus/plugin-content-docs@2.2.0": "patch:@docusaurus/plugin-content-docs@npm%3A2.2.0#./engine/patches/@docusaurus-plugin-content-docs-npm-2.2.0-34ac512661.patch"
   }
 }

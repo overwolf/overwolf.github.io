@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@site/*": [
+        "./engine/*"
+      ],
+      "@theme/*": [
+        "./engine/src/theme/*",
+        "./src/theme/*",
+      ],
+    },
+  },
+  "include": ["src/**/*", "engine/**/*"],
+  "extends": "./engine/workspace-tools/tsconfig.base.json"
+}
