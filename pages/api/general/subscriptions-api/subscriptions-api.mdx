@@ -14,6 +14,8 @@ The [Overwolf Subscriptions API](/start/monetize-your-app/subscriptions) relies 
 
 The following is a list of endpoints exposed by the Overwolf Subscriptions API, to handle the most common operations.
 
+**For live examples of the different endpoints, please check out the [Tebex Subs Sample App](https://github.com/overwolf/tebex-subs-sample).**
+
 ### Checkout
 
 > Generates a checkout page for a specific subscription plan (package).
@@ -49,7 +51,7 @@ The following is a list of deeplinks used by the Overwolf Subscriptions API, to 
 > Invoked when a user successfuly finishes the checkout flow.
 
 ```js
-`${YOUR_DEEPLINK_SCHEME}://?${TEMP_SESSION_TOKEN}&result=success`
+`${YOUR_DEEPLINK_SCHEME}://?result=success`
 ```
 
 ### Cancelled

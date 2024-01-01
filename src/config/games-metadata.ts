@@ -243,8 +243,8 @@ const metaData: GameMetaData[] = [
     name: 'Call of Duty: Modern Warfare 3',
   },
   {
-    id: 223281,
-    displayId: 22328,
+    id: 234241,
+    displayId: 23424,
     path: 'call-of-duty-warzone-2-0',
     name: 'Call of Duty: Warzone 2.0',
   },

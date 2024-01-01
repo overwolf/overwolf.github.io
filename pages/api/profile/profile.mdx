@@ -16,7 +16,6 @@ Use this API to get Overwolf information for the current user of the app (e.g us
 
 * [overwolf.profile.getCurrentUser()](#getcurrentusercallback)
 * [overwolf.profile.refreshUserProfile()](#refreshuserprofilecallback)
-* [overwolf.profile.performOverwolfSessionLogin()](#performoverwolfsessionlogintoken-callback)
 * [overwolf.profile.generateUserSessionToken()](#generateusersessiontokencallback)
 * [overwolf.profile.openLoginDialog()](#openlogindialog)
 
@@ -48,17 +47,6 @@ callback  | ([Result: GetCurrentUserResult](#getcurrentuserresult-object)) => vo
 Parameter | Type     | Description                                                                                        |
 ----------| ---------| -------------------------------------------------------------------------------------------------- |
 callback  | ([Result: GetCurrentUserResult](#getcurrentuserresult-object)) => void | A function called with the current user, or an error.|
-
-
-## performOverwolfSessionLogin(token, callback)
-#### Version added: 0.236
-
-> Uses a temporary token to log-in the Overwolf Client to the relevant user.
-
-Parameter | Type     | Description                                                                                        |
-----------| ---------| -------------------------------------------------------------------------------------------------- |
-token     | string | The temporary token to be used for logging in |
-callback  | (Result: Result) => void | A function called with the result of the operation |
 
 ## generateUserSessionToken(callback)
 #### Version added: 0.219
@@ -203,6 +191,7 @@ installParams      | JSON     | see [Creating Download Link](/topics/best-practi
 avatar             | string   |                                             |   
 installerExtension | string   |                                             |   
 displayName        | string   |                                             |   
+uuid               | string   | anonymous unique user id. null for not logged-in users |   
 
 
 #### Note: *userId* is not a unique identifier

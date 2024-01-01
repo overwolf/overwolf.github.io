@@ -1,0 +1,72 @@
+---
+id: cpa-ads
+image: "/img/embed/getting-started.jpg"
+title: '[Experimental] CPA Ads'
+sidebar_custom_props:
+  tags:
+    overwolf_platform: true
+    electron_platform: true
+---
+
+Cost Per Acquisition (CPA) Ads present a different approach to advertising and compensation than
+"standard" [Overwolf Ads](/start/monetize-your-app/advertising). CPA Ads focus on interaction and engagement,
+paying larger sums, but only for successful conversions, rather than just for passive engagement.
+
+Below is a demonstration:
+
+<OWLottie width='50%' height='50%' data={require('/assets/start/monetize-your-app/experimental/cpa-ads/cpa-ads.json')} />
+
+## Product differences
+
+From a product perspective, these Ads should rarely "just" be presented
+in a container somewhere within the App, as that would rarely bring engagement.
+
+Instead, they demand a more active approach. The exact details are left up to every App developer's discretion,
+and should be carefully weighed against user experience, as these Ads are designed to **not be ignored**, and can arguably
+get in the users' way.
+
+
+## Technical differences
+
+Unlike with the Overwolf [Ads SDK](/start/monetize-your-app/advertising/ads-sdk), CPA campaigns are currently entirely opt-in,
+per campaign.
+
+To participate in ongoing campaigns with your App, simply [contact us](/support/contact-us) (for now), and we will let you know
+which campaigns are currently running, what are their rates, and what assets/links you should use for them.
+
+
+### Implementation details
+
+Every CPA campaign involves two main parts:
+- A set of static image assets, to be used when advertising the product.
+- A target url, to which the Ads should lead.
+
+- Apps wishing to participate will then display these assets, directing to the "target" URL on click.
+  - The "target" URL MUST only be opened in the users' default browser.
+  - The "target" URL MUST NOT open in a way that overtakes focus from an active game.
+  - The "target" URL MUST only be opened if the user explicitly clicked on it.
+
+The assets will remain available until the campaign has ended, and will simply become unavailable afterwards.
+
+#### Displaying the assets
+
+We recommend that you follow certain guidelines, to ensure the CPA Ads do not become annoying/detrimental to the user experience:
+
+Try to avoid showing high-engagement versions of the Ads when the user is not available to interact with it.
+- Do not show a pop-up within a game.
+- Do not open a desktop notification while the user is in the middle of a fight.
+- Etc.
+
+If you do show the Ads as a pop-up:
+- Try to use dead moments in the App's lifetime.
+  - Waiting in a lobby.
+  - The post-game screen (especially after a positive experience, like winning a game).
+  - Waiting for a video to process.
+  - etc.
+- Do not show the pop-up too frequently, and do not show it too many times in total.
+Your goal is to show the Ad as many times as needed to convince a user who **can** reasonably be convinced, and not any more than that.
+- Make the pop-up easy for users to close.
+  - User clicked outside the pop-up's area within the App - close it.
+  - A game just started - close it.
+  - User interacted with any other part of the App - close it.
+  - Enough time reasonably passed - close it.
