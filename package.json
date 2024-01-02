@@ -10,19 +10,17 @@
     "start": "yarn bootstrap && yarn workspace engine start",
     "deploy": "yarn bootstrap && yarn workspace engine deploy",
     "build": "yarn bootstrap && yarn workspace engine build",
-    "serve": "yarn docusaurus serve",
-    "clear": "yarn bootstrap && node lib/bootstrap/clear.js && yarn docusaurus clear",
-    "swizzle": "yarn docusaurus swizzle",
-    "docusaurus": "yarn workspace engine docusaurus",
-    "write-translations": "yarn docusaurus write-translations",
-    "write-heading-ids": "yarn docusaurus write-heading-ids"
+    "serve": "yarn workspace engine serve",
+    "clear": "yarn bootstrap && node lib/bootstrap/clear.js && yarn workspace engine clear",
+    "write-translations": "yarn workspace engine write-translations",
+    "write-heading-ids": "yarn workspace engine write-heading-ids"
   },
   "workspaces": [
     "engine"
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/overwolf/developers-site.git"
+    "url": "git+https://github.com/overwolf/overwolf.github.io.git"
   },
   "private": true,
   "author": "Overwolf Ltd.",

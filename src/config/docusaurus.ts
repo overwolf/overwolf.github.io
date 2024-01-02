@@ -80,7 +80,7 @@ const config = async (): Promise<Partial<ConfigType>> => ({
       {
         docs: {
           editUrl:
-            'https://github.com/overwolf/overwolf.github.io/tree/source/website/',
+            'https://github.com/overwolf/overwolf.github.io/tree/source/pages/',
           sidebarPath: require.resolve('./sidebars.js'),
           sidebarItemsGenerator: sidebarsOverrides,
         },
