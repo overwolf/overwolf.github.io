@@ -29,6 +29,7 @@ Please read the [overwolf.games.events](/api/live-game-data) documentation page 
 
 * [gep_internal](#gep_internal)
 * [game_info](#game_info)
+* [match_info](#match_info)
 
 ## Game event status
 
@@ -74,6 +75,19 @@ Data Example:
 ```json
 {"info":{"game_info":{"player_id":766078275}},"feature":"game_info"}
 ```
+Event       | Event Data   | Fired When    | Notes                                  | Since GEP Ver. |
+------------| -------------| --------------| -------------------------------------- | ---------------|
+character_switch|          | When the player switch the character| See [notes](#character_switch-note) |242.0|
+
+#### *character_switch* note
+
+Data Example:
+
+```json
+{"events":[{"name":"character_switch","data":"null"}]}
+```
+
+## `match_info`
 
 ### Events
 
@@ -81,9 +95,6 @@ Event       | Event Data   | Fired When    | Notes                              
 ------------| -------------| --------------| -------------------------------------- | ---------------|
 match_start |              | In the beginning of each match| See [notes](#match_start-note) |242.0|
 match_end   |              | At the end of each match| See [notes](#match_end-note) |242.0|
-character_switch|          | When the player switch the character| See [notes](#character_switch-note) |242.0|
-
-
 
 #### *match_start* note
 
@@ -99,12 +110,4 @@ Data Example:
 
 ```json
 {"events":[{"name":"match_end","data":null}]}
-```
-
-#### *character_switch* note
-
-Data Example:
-
-```json
-{"events":[{"name":"character_switch","data":"null"}]}
 ```
