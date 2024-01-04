@@ -447,6 +447,16 @@ const GamesMetaData = {
     "iconUrl": "/img/game-logos/call-of-duty-modern-warfare-3.png",
     "iconLargeUrl": "/img/game-logos/large/call-of-duty-modern-warfare-3.png"
   },
+  "23522": {
+    "id": 23522,
+    "path": "/status/lethal-company",
+    "name": "Lethal Company",
+    "rawPath": "lethal-company",
+    "standardPath": "lethal-company",
+    "docs": "/api/live-game-data/supported-games/lethal-company",
+    "iconUrl": "/img/game-logos/lethal-company.png",
+    "iconLargeUrl": "/img/game-logos/large/lethal-company.png"
+  },
   "215561": {
     "id": 215561,
     "displayId": 22848,
