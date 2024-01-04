@@ -253,6 +253,11 @@ const metaData: GameMetaData[] = [
     path: 'genshin-impact',
     name: 'Genshin Impact',
   },
+  {
+    id: 23522,
+    path: 'lethal-company',
+    name: 'Lethal Company',
+  },
 ];
 
 const compliancePath = path.join('/start', 'game-compliance');
