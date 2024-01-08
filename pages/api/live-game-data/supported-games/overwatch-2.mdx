@@ -63,6 +63,7 @@ key          | Category    | Values                    | Notes                 |
 ------------ | ------------| ------------------------- | --------------------- | -------------  |
 game_state   | game_info   | Current state of the game.|See [notes](#game_state-note)|   229.0       |
 game_mode    | game_info   | Currently played game-mode.|See [notes](#game_mode-note)|   229.0       |
+battle_tag | game_info   | Player's battelnet tag  |  See [notes](#battle_tag-note) |   229.2 
 
 #### *game_state* note:
 
@@ -118,6 +119,16 @@ Data Example:
 ```
 
 Note that on the response the leading zeros are removed ("0030" => "30")
+
+
+#### *battle_tag* note
+
+Data Example:
+
+```json
+{"feature":"game_info","category":"game_info","key":"battle_tag","value":"OverTheTop#2100"}
+```
+
 
 ## `match_info`
 
