@@ -2,7 +2,7 @@ Every Overwolf application (ow-electron or Overwolf platform), has a unique app 
 and the app's author's name.
 
 In `ow-electron`, these fields correspond to the following fields in the package.json file:
-- App name - The `productName` or `name` properties
+- App name - The `productName` (defaults to `name` if missing) properties
 - App author - The `name` field under the `author` field.
 
 ```js title="Partial package.json with the relevant fields"
@@ -13,10 +13,11 @@ In `ow-electron`, these fields correspond to the following fields in the package
   "author": {
     "name": "Overwolf"
   },
+  "productName": "real-ow-electron-sample-app",
   ...
   "build": {
     ...
-    "productName": "ow-electron-sample-app",
+    "productName": "unrelated-name-passed-to-builder",
     ...
   },
   ...
