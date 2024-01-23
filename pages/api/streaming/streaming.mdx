@@ -490,7 +490,7 @@ callback                   | (Result) => void      | Reports success or failure 
 
 #### Version added: 0.78
 
-> Fired when the stream has stopped, with the following structure: [StopStreamingEvent](#stopstreamingevent-object) Object.
+> Fired when the stream was stopped (and a recording was created), with the following structure: [StopStreamingEvent](#stopstreamingevent-object) Object.
 
 ## onStartStreaming
 
@@ -502,7 +502,7 @@ callback                   | (Result) => void      | Reports success or failure 
 
 #### Version added: 0.78
 
-> Fired upon an error with the stream, with the following structure: [StreamEvent](#streamevent-object) Object.
+> Fired when the stream has crashed, with the following structure: [StreamEvent](#streamevent-object) Object.
 
 #### Possible Error Codes
 
@@ -1259,6 +1259,7 @@ extra              | object   |                                             |
 total_frames       | number   |                                             |
 osVersion          | string   |                                             |
 osBuild            | string   |                                             |
+error              | string   | *(Optional)* error given if the recording engine errored (but still created a recording) |
 
 #### Event data example
 

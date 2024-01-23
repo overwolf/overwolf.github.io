@@ -80,6 +80,10 @@ callback  | (Result: Result) => void              | Result of the operation  |
 
 > Configures a user's [email hashes][liveramp-hash-identifier] persistently from pre-configured email hashes.
 
+:::note Deleting email hashes
+To delete the configured Email hashes, simply pass in an empty `hashes` object.
+:::
+
 Parameter | Type       | Description                                       |
 --------- | -----------| ------------------------------------------------- |
 hashes   | [UserEmailHashes](#useremailhashes-object) | The different hashes of the user's email address |
