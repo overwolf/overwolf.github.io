@@ -447,6 +447,16 @@ const GamesMetaData = {
     "iconUrl": "/img/game-logos/call-of-duty-modern-warfare-3.png",
     "iconLargeUrl": "/img/game-logos/large/call-of-duty-modern-warfare-3.png"
   },
+  "23478": {
+    "id": 23478,
+    "path": "/status/the-finals",
+    "name": "The Finals",
+    "rawPath": "the-finals",
+    "standardPath": "the-finals",
+    "docs": "/api/live-game-data/supported-games/the-finals",
+    "iconUrl": "/img/game-logos/the-finals.png",
+    "iconLargeUrl": "/img/game-logos/large/the-finals.png"
+  },
   "23522": {
     "id": 23522,
     "path": "/status/lethal-company",
@@ -456,6 +466,16 @@ const GamesMetaData = {
     "docs": "/api/live-game-data/supported-games/lethal-company",
     "iconUrl": "/img/game-logos/lethal-company.png",
     "iconLargeUrl": "/img/game-logos/large/lethal-company.png"
+  },
+  "23944": {
+    "id": 23944,
+    "path": "/status/palworld",
+    "name": "Palworld",
+    "rawPath": "palworld",
+    "standardPath": "palworld",
+    "docs": "/api/live-game-data/supported-games/palworld",
+    "iconUrl": "/img/game-logos/palworld.png",
+    "iconLargeUrl": "/img/game-logos/large/palworld.png"
   },
   "215561": {
     "id": 215561,
