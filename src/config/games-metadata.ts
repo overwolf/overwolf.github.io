@@ -258,6 +258,16 @@ const metaData: GameMetaData[] = [
     path: 'lethal-company',
     name: 'Lethal Company',
   },
+  {
+    id: 23944,
+    path: 'palworld',
+    name: 'Palworld',
+  },
+  {
+    id: 23478,
+    path: 'the-finals',
+    name: 'The Finals',
+  },
 ];
 
 const compliancePath = path.join('/start', 'game-compliance');
