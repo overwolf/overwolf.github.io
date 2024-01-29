@@ -48,7 +48,7 @@ It's highly recommended to communicate errors and warnings to your app users. Ch
 
 key          | Category    | Values                    | Notes                 | Since GEP Ver. |
 ------------ | ------------| ------------------------- | --------------------- | ------------- |
-gep_internal | gep_internal| Local + Public version number|See [notes](#gep_internal-note)|   143.0       |
+gep_internal | gep_internal| Local + Public version number|See [notes](#gep_internal-note)|   245.1.0      |
 
 #### *gep_internal* note
 
@@ -64,11 +64,12 @@ Data Example:
 
 Event | Event Data                        | Fired When                  | Notes              | Since GEP Ver. |
 ------| ----------------------------------| --------------------------- | ------------------ | --------------|
-match_start | null | The player’s champion died  | See [notes](#match_start-note) |     Coming soon      |
-match_end | null | The player’s champion died  | See [notes](#match_end-note) |     Coming soon     |
-knockout | null | The player is knockout  | See [notes](#knockout-note) |     Coming soon      |
-death | null | The player is dead  | See [notes](#death-note) |      Coming soon       |
-respawn | null | The player respawned  | See [notes](#respawn-note) |     Coming soon       |
+match_start | null | The player’s champion died  | See [notes](#match_start-note) |     245.1.0     |
+match_end | null | The player’s champion died  | See [notes](#match_end-note) |     245.1.0     |
+knockout | null | The player is knockout  | See [notes](#knockout-note) |     245.1.0      |
+death | null | The player is dead  | See [notes](#death-note) |      245.1.0       |
+respawn | null | The player respawned  | See [notes](#respawn-note) |     245.1.0       |
+revive | null | The player revived  | See [notes](#revive-note) |     245.1.0       |
 
 #### *match_start* note
 
@@ -110,13 +111,21 @@ Data Example:
 {"events":[{"name":"respawn","data":null}]}
 ```
 
+#### *revive* note
+
+Data Example:
+
+```json
+{"events":[{"name":"revive","data":null}]}
+```
+
 ## `game_info`
 
 ### Info Updates
 
 key          | Category    | Values                    | Notes                 | Since GEP Ver. |
 ------------ | ------------| ------------------------- | --------------------- | ------------- | 
-scene        | game_info   | The name of the current scene. |See [notes](#scene-note)|      Coming soon      |
+scene        | game_info   | The name of the current scene. |See [notes](#scene-note)|      245.1.0      |
 
 #### *scene* note
 

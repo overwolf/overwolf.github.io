@@ -71,62 +71,85 @@ player | live_data| In-game data received by the client.|See [notes](#player-not
 <summary>Click to see some data example</summary>
 
 ```json
-{
-  "provider": {
-    "name": "Counter-Strike: Global Offensive",
-    "appid": 730,
-    "version": 13960,
-    "steamid": "7656119923158",
-    "timestamp": 1697027690
-  },
-  "map": {
-    "mode": "casual",
-    "name": "de_dust2",
-    "phase": "warmup",
-    "round": 0,
-    "team_ct": {
-      "score": 0,
-      "consecutive_round_losses": 0,
-      "timeouts_remaining": 1,
-      "matches_won_this_series": 0
+ {
+    "provider": {
+      "name": "Counter-Strike: Global Offensive",
+      "appid": 730,
+      "version": 13985,
+      "steamid": "76561199232414254",
+      "timestamp": 1706188414
     },
-    "team_t": {
-      "score": 0,
-      "consecutive_round_losses": 0,
-      "timeouts_remaining": 1,
-      "matches_won_this_series": 0
+    "map": {
+      "mode": "casual",
+      "name": "de_dust2",
+      "phase": "live",
+      "round": 1,
+      "team_ct": {
+        "score": 0,
+        "consecutive_round_losses": 1,
+        "timeouts_remaining": 1,
+        "matches_won_this_series": 0
+      },
+      "team_t": {
+        "score": 1,
+        "consecutive_round_losses": 0,
+        "timeouts_remaining": 1,
+        "matches_won_this_series": 0
+      },
+      "num_matches_to_win_series": 0
     },
-    "num_matches_to_win_series": 0
-  },
-  "player": {
-    "steamid": "7656119923158",
-    "name": "Naco",
-    "activity": "playing",
-    "weapons": {
-      "weapon_0": {
-        "name": "weapon_knife_t",
-        "paintkit": "default",
-        "type": "Knife",
-        "state": "holstered"
+    "round": {
+      "phase": "over",
+      "win_team": "T"
+    },
+    "player": {
+      "steamid": "76561199232414254",
+      "name": "JacksAtWork",
+      "observer_slot": 7,
+      "team": "CT",
+      "activity": "playing",
+      "weapons": {}
+    },
+    "previously": {
+      "map": {
+        "round": 0,
+        "team_ct": {
+          "consecutive_round_losses": 0
+        },
+        "team_t": {
+          "score": 0
+        }
       },
-      "weapon_1": {
-        "name": "weapon_glock",
-        "paintkit": "default",
-        "type": "Pistol",
-        "ammo_clip": 20,
-        "ammo_clip_max": 20,
-        "ammo_reserve": 120,
-        "state": "holstered"
+      "round": {
+        "phase": "live",
+        "bomb": "planted"
       },
-      "weapon_2": {
-        "name": "weapon_c4",
-        "paintkit": "default",
-        "type": "C4",
-        "state": "active"
+      "player": {
+        "weapons": {
+          "weapon_0": {
+            "name": "weapon_knife",
+            "paintkit": "default",
+            "type": "Knife",
+            "state": "holstered"
+          },
+          "weapon_1": {
+            "name": "weapon_fiveseven",
+            "paintkit": "default",
+            "type": "Pistol",
+            "ammo_clip": 20,
+            "ammo_clip_max": 20,
+            "ammo_reserve": 100,
+            "state": "active"
+          }
+        }
+      }
+    },
+    "added": {
+      "round": {
+        "win_team": true
       }
     }
   }
-}
 ```
 </details>
 
