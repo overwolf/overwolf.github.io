@@ -386,6 +386,7 @@ Data Example:
 key          | Category    | Values                    | Notes                 | Since GEP Ver. |
 --------------- | -----------| ------------------------------------------------------------------------------------ | ------------------------------------ | ------------- |
 roster_XX | players | Provides info for the currently active players (10 players). |  See [notes](#roster_xx-notes) |   123.0 |
+players_list_log| players | Provides a list of the active players and teams. |  See [notes](#players_list_log-notes) |   245.0 |
 team | player | Player’s current team – Orange/Blue/Spectator  | See [notes](#team-notes)  |   123.0 |
 health | player| Player’s current health | See [notes](#health-notes)  |   123.0 |
 score | player | Player’s current score or `null` | See [notes](#score-notes) |   123.0 |
@@ -421,7 +422,7 @@ Backslashes omitted for legibility.
   "feature": "roster"}
 ```
 
-As you can see, this object includes:
+This object includes:
 
 * name - player's name <br></br>
 Important note - "name" is the player's username or nickname if enabled
@@ -444,6 +445,12 @@ When one of the players leaves the match, the relevant “roster_ XX” object w
 `{"players":{"roster_3":null}}`
 
 If a new player replaces a leaver, a new “roster_XX” object will be assigned to the new player who joined.
+
+#### `players_list_log` notes
+
+```json
+{"feature":"roster","category":"players","key":"players_list_log","value":"[{"profile_id":"e558fedb-ed64-4d8f-9758-c1bffca8abd8","team_id":0},{"profile_id":"525bb9ad-fb47-4aa3-89b4-86e2ae6429c3","team_id":1},{"profile_id":"f408a2a8-b435-47dd-a4e2-502ef7935476","team_id":0},{"profile_id":"90e878a5-0425-403c-9539-aab93abf281b","team_id":0},{"profile_id":"5267e074-7b05-445f-9c8d-41f795782277","team_id":0},{"profile_id":"dd956873-42d0-4156-b2a5-127b09772636","team_id":0},{"profile_id":"9593a6fd-ea4f-4f7b-8d72-2adf6029e493","team_id":1},{"profile_id":"d8883aa8-18b8-43de-9841-2f65c48a4008","team_id":1},{"profile_id":"77e58667-18f8-488a-a9e5-53710c4c0065","team_id":1},{"profile_id":"6805161b-436b-40bd-84b0-f44a0661d135","team_id":1}]"}
+```
 
 #### `team` notes
 
