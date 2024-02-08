@@ -10,11 +10,6 @@ const metaData: GameMetaData[] = [
     name: 'Apex Legends',
   },
   {
-    id: 21960,
-    path: 'axie-infinity-origin',
-    name: 'Axie Infinity Origin',
-  },
-  {
     id: 21876,
     path: 'call-of-duty-vanguard',
     name: 'Call of Duty: Vanguard',
@@ -206,11 +201,6 @@ const metaData: GameMetaData[] = [
     id: 22638,
     path: 'sons-of-the-forest',
     name: 'Sons of the Forest',
-  },
-  {
-    id: 22312,
-    path: 'leap',
-    name: 'LEAP',
   },
   {
     id: 22700,
