@@ -357,16 +357,6 @@ const GamesMetaData = {
     "iconUrl": "/img/game-logos/call-of-duty-vanguard.png",
     "iconLargeUrl": "/img/game-logos/large/call-of-duty-vanguard.png"
   },
-  "21960": {
-    "id": 21960,
-    "path": "/status/axie-infinity-origin",
-    "name": "Axie Infinity Origin",
-    "rawPath": "axie-infinity-origin",
-    "standardPath": "axie-infinity-origin",
-    "docs": "/api/live-game-data/supported-games/axie-infinity-origin",
-    "iconUrl": "/img/game-logos/axie-infinity-origin.png",
-    "iconLargeUrl": "/img/game-logos/large/axie-infinity-origin.png"
-  },
   "22088": {
     "id": 22088,
     "path": "/status/baldurs-gate-3",
@@ -376,16 +366,6 @@ const GamesMetaData = {
     "docs": "/api/live-game-data/supported-games/baldurs-gate-3",
     "iconUrl": "/img/game-logos/baldurs-gate-3.png",
     "iconLargeUrl": "/img/game-logos/large/baldurs-gate-3.png"
-  },
-  "22312": {
-    "id": 22312,
-    "path": "/status/leap",
-    "name": "LEAP",
-    "rawPath": "leap",
-    "standardPath": "leap",
-    "docs": "/api/live-game-data/supported-games/leap",
-    "iconUrl": "/img/game-logos/leap.png",
-    "iconLargeUrl": "/img/game-logos/large/leap.png"
   },
   "22328": {
     "id": 22328,
