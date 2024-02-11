@@ -1,0 +1,30 @@
+---
+id: instream-ads
+image: "/img/embed/getting-started.jpg"
+title: '[Experimental] Instream Ads'
+draft: true
+sidebar_custom_props:
+  tags:
+    overwolf_platform: true
+    electron_platform: true
+---
+
+```ts Example Implementation
+
+const containerElement = document.getElementById('instream-container');
+
+
+const instream = new OwAd(containerElement, {
+  instream: true,
+  streamDurationMs: 10000 as number,
+  width: 600 as number,
+  height: 400 as number,
+  streamVideoCount: 1 as number,
+  volume: 1 as number,
+})
+
+instream.addEventListener('video_ad_skipped', /* onAdSkipped */);
+instream.addEventListener('complete', /* onAdCompleted */);
+
+```
+
