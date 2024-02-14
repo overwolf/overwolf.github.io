@@ -29,6 +29,7 @@ Please read the [overwolf.games.events](/api/live-game-data) documentation page 
 
 * [gep_internal](#gep_internal)
 * [game_info](#game_info)
+* [match_info](#match_info)
 
 
 ## Game events status
@@ -58,6 +59,7 @@ Data Example:
 key          | Category    | Values                    | Notes                 | Since GEP Ver. |
 ------------ | ------------| ------------------------- | --------------------- | ------------- |
 steam_id | game_info | The local player steam ID. |See [notes](#steam_id-note)|   244.3    |
+scene | game_info | The current scene |See [notes](#scene-note)|   TBD   |
 
 #### *steam_id* note
 
@@ -65,4 +67,59 @@ Data Example:
 
 ```json
 {"feature":"game_info","category":"game_info","key":"steam_id","value":76561198088746530}
+```
+
+#### *scene* note
+
+Possible values:
+* lobby
+* ingame
+
+Data Example:
+
+```json
+{"feature":"game_info","category":"game_info","key":"scene","value":"lobby"}
+```
+
+## `match_info`
+
+### Events
+
+Event | Event Data                        | Fired When                  | Notes              | Since GEP Ver. |
+------| ----------------------------------| --------------------------- | ------------------ | --------------|
+match_start | null                         | Round starts               | See [notes](#match_start-note)  |     TBD      |
+match_end | null                           | Round ends                | See [notes](#match_end-note)   |     TBD      |
+elimination | number of eliminations |    An opponent is eliminated by a team member         |  See [notes](#elimination-note)   TBD      |
+respawn | null |  The local player is respwan         |  See [notes](#respawn-note)   TBD     |
+
+#### *match_start* note
+
+Data Example:
+
+```json
+{"events":[{"name":"match_start","data":""}]}
+```
+
+#### *match_end* note
+
+Data Example:
+
+```json
+{"events":[{"name":"match_end","data":""}]}
+```
+
+#### *elimination* note
+
+Data Example:
+
+```json
+{"events":[{"name":"elimination","data":1}]}
+```
+
+#### *respawn* note
+
+Data Example:
+
+```json
+{"events":[{"name":"respawn","data":""}]}
 ```
