@@ -2,29 +2,82 @@
 id: instream-ads
 image: "/img/embed/getting-started.jpg"
 title: '[Experimental] Instream Ads'
-draft: true
 sidebar_custom_props:
   tags:
     overwolf_platform: true
     electron_platform: true
 ---
 
-```ts Example Implementation
+Instream Advertising is the practice of playing content *within* actual conten,
+rather than only outside of/next to it (also known as Outstream Advertising).
 
-const containerElement = document.getElementById('instream-container');
+In the context of Overwolf, we have recently began testing of a new, Instream advertising format,
+targeting places in your App where a video of content will be played, by allowing the App
+to show an Ad before starting the video content, as a "preroll" Ad of sorts.
 
+## Technical Specification
 
-const instream = new OwAd(containerElement, {
-  instream: true,
-  streamDurationMs: 10000 as number,
-  width: 600 as number,
-  height: 400 as number,
-  streamVideoCount: 1 as number,
-  volume: 1 as number,
-})
+The Overwolf [Ads SDK](/start/monetize-your-app/advertising/ads-sdk) allows you to easily create
+instream Ads, by utilizing a container element. This container, MUST fit the following criteria:
+- The container MUST be transparent, and pass input through (except when an Ad is showing)
+- The container MUST ALWAYS be of the same size/location as the video it is "related" to (even if the player is resized/moved)
 
-instream.addEventListener('video_ad_skipped', /* onAdSkipped */);
-instream.addEventListener('complete', /* onAdCompleted */);
+Apart from that, the video itself also MUST:
+- Be longer than 5 seconds
+- Be played in a video player bigger than 640x480 pixels (width/height respectively)
 
+### Example Implementation
+
+Assuming the following element structure:
+```bash title="Component Structure"
+video-content # Controlling the size of all children, who are overlaid on top of eachother
+├── video-player # The actual video player
+├── instream-container # A transparent, passthrough div to contain the instream Ad
 ```
 
+The following code should work:
+
+```ts title="Example Implementation"
+/** The properties used for Instream Ads */
+type InstreamAdProperties = {
+  /** Is this an instream Ad. Set to true for this set of properties */
+  instream: true;
+  /** The duration of the video this instream Ad will be played in */
+  streamDurationMs: number;
+  /**
+   * The number of the video this instream Ad will be played in in the current session
+   * 
+   * For example:
+   * - The first video in a session will be `1`.
+   * - The second video in a session will be `2`.
+   * - The `n`th video in a session will be `n`.
+   */
+  streamVideoCount: number;
+  /** The volume that should be used for the instream Ad (between 0 and 1, defaults to 1) */
+  volume?: number;
+}
+
+// Get the container for the Instream Ad Container
+const containerElement = document.getElementById(/* 'instream-container' */);
+
+// Create the instream Ad
+const instream = new OwAd(containerElement, {
+  instream: true,
+  streamDurationMs: 10000,
+  streamVideoCount: 1,
+  volume: 1,
+} as InstreamAdProperties)
+
+// Add relevant event listeners.
+instream.addEventListener('video_ad_skipped', () => {
+  // onAdSkipped();
+  shutdown();
+});
+instream.addEventListener('complete', () => {
+  // onAdCompleted();
+  shutdown();
+});
+
+// The command to shut down the instream Ad once it's been played.
+const shutdown = () => instream.shutdown();
+```
