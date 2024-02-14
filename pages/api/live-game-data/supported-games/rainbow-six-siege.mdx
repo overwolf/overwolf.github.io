@@ -400,45 +400,20 @@ Each player joining the game will be reported in the following way:
 
 Backslashes omitted for legibility.
 ```json
-{
-  "info": {
-    "players":{
-      "roster_0": "{
-        "name": "WolfOnTop.top",
-        "player_id": "1b810848-34df-4834-aa26-61c838059a37",
-        "is_local": true,
-        "team": 1,
-        "operator": 0,
-        "kills": 0,
-        "headshots": 0,
-        "deaths": 0,
-        "score": 0,
-        "defuser": 0,
-        "health": 0,
-        "suffix": 123
-      }"
-    }
-  },
-  "feature": "roster"}
+{"feature":"roster","category":"players","key":"roster_0","value":"{\"player\":\"Overwol\",\"is_anonymous\":false,\"team\":\"Blue\",\"kills\":0,\"deaths\":1,\"score\":-415,\"assists\":0,\"ping\":1}"}
 ```
 
 This object includes:
 
-* name - player's name <br></br>
+* player - player's name + suffix
 Important note - "name" is the player's username or nickname if enabled
-
-* team - Blue/Orange/Spectator <br></br>
-As of version 159, you may detect the local player as a spectator when creating a custom match (Example: `{"info":{"player":{"team":"Spectator"}},"feature":"roster"}`).
-* is_local - local player or not (Boolean)
-* [operator](https://github.com/overwolf/community-gists/blob/master/siege_operator_ids.json) - The ID of the selected operator (available for team members only)
-* kills - Total amount of kills made by the player (<b>Important</b>: Kill score is being reset between rounds).
-* deaths - Total amount of deaths (<b>Important</b>: Death score is being reset between rounds).
-* score - Player score in the current round (<b>Important</b>: Score is being reset between rounds).
-* health - Current health of the player (available for team members only). 
-  Important! - health always include 20 points for the knockout stage, so the event will always add 20 health points more then the game
-* player_id - each player in the roster will have his unique player_id <br></br>
-As of version 191 the Ubisoft user ID is provided. This may not be used to circumvent Nicknames set through Privacy Mode.
-* suffix - If the user uses a nickname (from the privacy menu), this field will include a number between 2-5 digits. According to Ubisoft privacy rules, in case there is a value in this field it must be linked to the name field wherever it appears during the match. The suffix will be reset at the end of each match and regenerate a new one at the beginning of the next match.
+* is_anonymous - Boolean if the player's privacy it set to true or false
+* team - Blue/Orange
+* kills - Total amount of kills made by the player
+* deaths - Total amount of deaths
+* assists - Total amount of assists
+* score - Player score in the current round
+* ping - the ping of the player
 
 When one of the players leaves the match, the relevant “roster_ XX” object will be updated to:
 
