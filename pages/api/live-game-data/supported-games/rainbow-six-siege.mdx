@@ -488,7 +488,7 @@ Event  | Event Data                                       |               Fired 
 -------| -------------------------------------------------| ----------------------------------------- | --------- | --------------|
 knockedout | null | Local player is knockedout | See [notes](#knockedout-notes) |   123.0     |
 death | null |  Local player dies |  See [notes](#death-notes) |   123.0     |
-killer | Killer name|  The local player was killed by an enemy | See [notes](#killer-notes)                 |   123.0     |
+killer | Killer id|  The local player was killed by an enemy | See [notes](#killer-notes)                 |   123.0     |
 
 #### *knockedout* note
 
@@ -509,7 +509,7 @@ Data Example:
 Data Example:
 
 ```json
-{"name":"killer","data":"Pickyuser18857"}
+{"name":"killer","data":"eb96475f-cc15-4b5e-a0d5-b5c927bf1d4d"}
 ```
 
 ## `me`
