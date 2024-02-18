@@ -1,0 +1,726 @@
+---
+id: stormgate
+image: "/img/embed/games/stormgate.jpg"
+title: Stormgate Game events
+hide_title: true
+sidebar_label: Stormgate
+draft: true
+sidebar_position: 0
+sidebar_custom_props:
+  tags:
+    overwolf_platform: true
+    electron_platform: true
+---
+
+<!-- GENERATED USING /scripts/generate.js -->
+
+<head>
+  <meta name="keywords" content="API for Stormgate, Stormgate API, SDK for Stormgate, Stormgate SDK"/>
+</head>
+
+<GameInfo gameId={23818} page="docs" />
+
+Please read the [overwolf.games.events](/api/live-game-data) documentation page to learn how to use Overwolf game events.
+
+## Sample Apps
+* [APEX game events sample app](https://github.com/overwolf/events-sample-app)
+
+## Available Features
+
+* [gep_internal](#gep_internal)
+* [me](#me)
+* [localization](#localization)
+* [team](#team)
+* [kill](#kill)
+* [damage](#damage)
+* [death](#death)
+* [revive](#revive)
+* [match_state](#match_state)
+* [game_info](#game_info)
+* [match_info](#match_info)
+* [inventory](#inventory)
+* [location](#location)
+* [match_summary](#match_summary)
+* [roster](#roster)
+* [rank](#rank)
+* [kill_feed](#kill_feed)
+
+## Game event status
+
+It is highly recommended to communicate errors and warnings to app users. 
+
+Check the current game event status [here](/status/). Alternately, you can easily check that status from your app itself, [using our API](/topics/using-events/how-to-check-events-status-from-app).
+
+## `gep_internal`
+
+### Info Updates
+
+key          | Category    | Values                    | Notes                 | Since GEP Ver. |
+------------ | ------------| ------------------------- | --------------------- | ------------- | 
+gep_internal | gep_internal| Local + Public version number|See [notes](#gep_internal-note)|   143.0       |
+
+#### *gep_internal* note
+
+Data Example:
+
+```json
+{"info":{"gep_internal":{"version_info":"{"local_version":"157.0.1","public_version":"157.0.1","is_updated":true}"}},"feature":"gep_internal"}
+```
+
+## `me`
+
+### Info Updates
+
+key               | Category    | Values                    | Notes                 | Since GEP Ver. |
+----------------- | ------------| ------------------------- | --------------------- | -------------  |
+name              | game_info   | Local Player Name         |  See [notes](#name-note) |  128.0         |
+ultimate_cooldown | me          | Ultimate ability cooldown (range between 0-100)   | See [notes](#ultimate_cooldown-note) |  128.0         |
+
+#### *name* note
+
+:::danger
+"player" info will soon replace "name" info.
+:::
+
+Data Example:
+
+```json
+{"info":{"me":{"name":"Shargaas"}},"feature":"me"}
+```
+
+#### *ultimate_cooldown* note
+
+Data Example:
+
+```json
+{"info":{"me":{"ultimate_cooldown":"{\"ultimate_cooldown\":\"15\"}"}},"feature":"me"}
+```
+
+## `localization`
+
+### Info Updates
+
+key               | Category    | Values                    | Notes                 | Since GEP Ver. |
+----------------- | ------------| ------------------------- | --------------------- | -------------  | 
+language              | game_info   | Curent played language         |  See [notes](#language-note) |  114.0         |
+
+#### *language* note
+
+Possible values:
+
+* english - English
+* french - French
+* german - German
+* italian - Italian
+* japanese - Japanese
+* korean - Korean
+* polish - ploish
+* portuguese - Portuguese
+* russian - Russian
+* schinese - Simplified Chinese
+* spanish - Spanish
+* mspanish - Latin American Spanish
+* tchinese - Traditional Chinese
+
+Data Example:
+
+```json
+{"info":{"game_info":{"language":"english"}},"feature":"localization"}
+```
+
+## `game_info`
+
+### Info Updates
+
+key          | Category    | Values                    | Notes                 | Since GEP Ver. |
+------------ | ------------| ------------------------- | --------------------- | ------------- | 
+player | game_info | Name of the local player in the lobby and in a match  |  See [notes](#player-note)  |  221.1.0 |
+phase | game_info | The current phase during the game  |  List of values See [notes](#phase-note)  |   215.0 |
+
+#### *player* note
+
+If the local player has special characters in their name the game will display these characters as □ everywhere in the UI except for the lobby. 
+
+player_name - local player name as displayed in the lobby  
+
+in_game_player_name - local player name as displayed inside a match, this parameter will update once the player entered a match.
+
+Data Example:
+```json
+{"info":{"game_info":{"player":"{\"player_name\": \"~JacksAtWork~\", \"in_game_player_name\": \"□JacksAtWork□\"}"}},"feature":"game_info"}
+```
+#### *phase* note
+
+Possible values:
+
+Battle Royale - 
+- "lobby"
+- "loading_screen"
+- "legend_selection"
+- "aircraft"
+- "freefly"
+- "landed"
+- "match_summary"
+
+Arena - 
+- "lobby"
+- "loading_screen"
+- "legend_selection"
+- "shopping"
+- "combat"
+
+Data Example:
+
+```json
+{"info":{"game_info":{"phase":"combat"}},"feature":"game_info"}
+```
+
+
+## `match_info`
+
+### Info Updates
+
+key          | Category    | Values                    | Notes                 | Since GEP Ver. |
+--------------- | -----------| ------------------------------------------------------------------------------------ | ------------------------------------ | ------------- | 
+pseudo_match_id | match_info | The current match’s ID code.<br></br><br></br>Example:<br></br><br></br> `0c0ea3df-97ea-4d3a-b1f6-f8e34042251f`  |  This is an Overwolf-generated code, unrelated to Respawn.  |   130.0 |
+game_mode      | match_info | The currently selected game mode. | See [notes](#game_mode-note) |   158.0 |
+tabs            | match_info | The current amount of squads, players, cash, and kills of the match (in relation to local player).| See [notes](#tabs-note) |   158.0 |
+map_id            | match_info | The current played map Id.| See [notes](#map_id-note) |   215.0 |
+arena_score         | match_info | The current match score.| See [notes](#arena_score-note) |   215.0 |
+mode_name         | match_info | The current mode name.| See [notes](#mode_name-note) |   241.0 |
+map_name         | match_info | The current map name.| See [notes](#map_name-note) |   241.0 |
+
+#### *game_mode* note
+
+Data Example:
+
+```json
+{"info":{"match_info":{"game_mode":"#PL_TRIO"}},"feature":"match_info"}
+```
+Possible values:
+- "PL_FIRINGRANGE": "Firing Range",
+- "PL_TRAINING": "Training",
+- "PL_DUO": "Duo",
+- "PL_TRIO": "Trio",
+- "PL_Ranked_Leagues": "Ranked",
+- "TDM_NAME": "Team Deathmatch",
+- "CONTROL_NAME": "Control",
+- "GAME_MODE_GUNGAME": "Gun Run",
+- "GAMEMODE_ARENAS": "Arenas",
+- "GAMEMODE_ARENAS_RANKED": "Ranked Arenas",
+- "SHADOWROYALE_MODE": "Shadow Royale"
+- "SURVIVAL_HARDCORE": "Hardcore Royale"
+- "SURVIVAL_HEATWAVE": "Heatwave"
+
+
+Note that we get these values from the game, so they might be changed from season to season.
+
+#### *tabs* note
+
+Data Example:
+
+```json
+{"info":{"match_info":{"tabs":"{\"kills\":2,\"assists\":1,\"teams\":4,\"players\":10,\"damage\":440,\"cash\":10}"}},"feature":"match_info"}
+```
+
+#### *map_id* note
+
+Possible values:
+
+- "mp_rr_canyonlands_staging_mu1" - King canyon (Training)
+- "mp_rr_canyonlands_hu" - King canyon
+- "mp_rr_tropic_island_mu2" - Storm point
+- "mp_rr_desertlands_mu3" - World's edge
+- "mp_rr_olympus_mu2" - Olympus
+- "mp_rr_divided_moon" - Broken Moon
+- "mp_rr_freedm_skulltown" - Skull Town 
+- "mp_rr_arena_habitat" - Habitat 4
+- "mp_rr_aqueduct" - Overflow 
+- "mp_rr_party_crasher" - Party crasher
+- "mp_rr_arena_phase_runner" - Phase runner
+- "mp_rr_arena_composite" - Drop off
+- "mp_rr_arena_skygarden " - Encore
+
+Data Example:
+
+```json
+{"info":{"match_info":{"map_id":"mp_rr_canyonlands_staging"}},"feature":"match_info"}
+```
+
+#### *arena_score* note
+
+Data Example:
+
+```json
+{"info":{"match_info":{"arena_score":"{\"my_team\":3,\"enemy_team\":4}"}},"feature":"match_info"}
+```
+
+#### *mode_name* note
+
+Possible values:
+
+- Firing Range
+- Training
+- Duo
+- Trio
+- Ranked
+- Arenas
+- Ranked Arenas
+- Shadow Royale
+- Hardcore Royale
+- Team Deathmatch
+- Gun Run
+- Control
+- Heatwave
+- Tournament
+- Deadeye
+- Armed and Dangerous
+- Living Shell Trio
+- Tricks N' Treats Trios
+- Three Strikes
+- Revenant Uprisin
+
+Data Example:
+
+```json
+{"feature":"match_info","category":"match_info","key":"mode_name","value":"Duo"}
+```
+
+#### *map_name* note
+
+Possible values:
+
+- King Canyon
+- Kings Canyon
+- Storm Point
+- World's Edge
+- Olympus
+- Broken Moon
+- Habitat 4
+- Overflow
+- Party Crasher
+- Phase Runner
+- Drop off
+- Encore
+- Lobby
+
+Data Example:
+
+```json
+{"feature":"match_info","category":"match_info","key":"map_name","value":"Olympus"}
+```
+
+## `match_state`
+
+### Info Updates
+
+key          | Category    | Values                    | Notes                 | Since GEP Ver. |
+------------ | ------------| ------------------------- | --------------------- | ------------- | 
+match_state  | game_info   | active/inactive           | See [notes](#match_state-note) |  128.0       |
+
+### Events
+
+Event       | Event Data   | Fired When    | Notes              | Since GEP Ver. |
+------------| -------------| --------------| ------------------ | --------------|
+match_start | null         | Match started |See [notes](#match_start-note)|     128.0     | 
+match_end   | null         | Match ended   |See [notes](#match_end-note)|     128.0     | 
+round_start | null         | Round started |See [notes](#round_start-note)|     215.0     | 
+round_end | null         | Round ended |See [notes](#round_end-note)|     215.0     | 
+
+#### *match_state* note
+
+Data Example:
+
+```json
+{"info":{"game_info":{"match_state":"active"}},"feature":"match_state"}
+{"info":{"game_info":{"match_state":"inactive"}},"feature":"match_state"}
+```
+
+#### *match_start* note
+
+Data Example:
+
+```json
+{"events":[{"name":"match_start","data":""}]}
+```
+
+#### *match_end* note
+
+Currently we have a special case where if someone in your team got a yellow knockdown shield (the one that allows you to self-revive), and your entire team was knocked out, the match end will still fire despite no one reaching a death-state.
+This is a very rare case that does not commonly happen in the game, however we're still working on fixing it.
+
+#### *round_start* note
+
+Data Example:
+
+```json
+{"events":[{"name":"round_start","data":""}]}
+```
+
+#### *round_end* note
+
+Data Example:
+
+```json
+{"events":[{"name":"round_end","data":""}]}
+```
+
+## `team`
+
+### Info Updates
+
+key          | Category    | Values                                       | Notes   | Since GEP Ver. |
+------------ | ------------| -------------------------------------------- | ------- | ------------- | 
+teammate_X   | match_info  | This feature provides the list of your squad members.    | See [notes](#teammate_X-note)|  128.0  |
+legendSelect_X| match_info | The name of the legend & order of selection for every member in the team, including noting who the jump-master and local-player are. | See [notes](#legendSelect_X-note)|  128.0 |
+team_info | match_info | The current status of the local player’s team. | See [notes](#team_info-note)|  128.0 |
+
+#### *teammate_X* notes
+
+Each squad member joining the game will be reported in the following way: 
+
+```json
+{"info":{"match_info":{"teammate_0":"{\"name\":\"JacksAtWork\",\"state\":\"knocked_out\"}"}},"feature":"team"}
+```
+
+'teammate_X' object includes:
+
+* `player` – Player name
+* `state` – alive/death/knocked out
+
+#### *legendSelect_X* notes
+
+Every team member, including the jump-master will be reported in the following way:
+
+```json
+{"info":{"match_info":{"legendSelect_0":"{\"playerName\":\"MrPlayer\",\"legendName\":\"#character_lifeline_NAME\",\"selectionOrder\":\"0\",\"lead\":false,\"is_local\":false}"}},"feature":"team"}
+{"info":{"match_info":{"legendSelect_1":"{\"playerName\":\"apexfan\",\"legendName\":\"#character_horizon_NAME\",\"selectionOrder\":\"1\",\"lead\":false,\"is_local\":false}"}},"feature":"team"}
+{"info":{"match_info":{"legendSelect_2":"{\"playerName\":\"TheGC\",\"legendName\":\"#character_bloodhound_NAME\",\"selectionOrder\":\"2\",\"lead\":true,\"is_local\":true}"}},"feature":"team"}
+```
+
+#### *team_info* notes
+
+The current status of the local player’s team ("active" or "eliminated").
+
+```json
+{"info":{"match_info":{"team_info":"{\"team_state\":\"active\"}"}},"feature":"team"}
+```
+
+'team_info' object includes:
+
+* Selection order
+* Legend name
+* Jumpmaster - Bool True/False
+
+## `roster`
+
+### Info Updates
+
+key          | Category  | Values                                                         | Notes       | Since GEP Ver. |
+------------ | ----------| -------------------------------------------------------------- | ----------- | ------------- | 
+roster_XX  | match_info  | Provides the entire list of players in a match (~60 players).|             |  128.0       |
+
+#### *roster_XX* notes
+
+Each player joining the game will be reported in the following way:
+
+```json
+{"info":{"match_info":{"roster_1":"{\"name\":\"HelloWork\",\"isTeammate\":true,\"team_id\":3,\"platform_hw\":2,\"platform_sw\":7,\"state\":\"knocked_out\",\"is_local\":\"1\",\"platform_id\":\"7656119934534254\",\"origin_id\":\"2351105644\"}"}},"feature":"roster"}
+```
+
+'roster_XX' object includes:
+
+* `name` - Player name
+* `isTeammate` (Bool) - Player is/isn't a squad member
+* `team_id` - Numerical value for each squad in-game.
+* `platform_hw` / `platform_sw` - The platform which the player plays on currently.
+* `state` - the current state of the player - alive / knocked_out / death.
+* `is_local` - where 1 is the local player else 0.
+* `platform_id` - The player Id in the current used platform.
+* `origin_id` - The player origin / EA Id.
+
+Possible platform values:
+
+* "platform_hw":2,"platform_sw":2 = PC/Origin/EA App
+* "platform_hw":2,"platform_sw":7 = PC/Steam
+* "platform_hw":1,"platform_sw":1 = PS4 / PS5
+* "platform_hw":9,"platform_sw":9 = OG Switch
+* "platform_hw":0,"platform_sw":0 = Xbox one X
+
+## `location`
+
+### Info Updates
+
+key       | Category   | Values             | Notes       | Since GEP Ver. |
+----------| -----------| ------------------ | ----------- | ------------- | 
+location  | match_info | The coordinates of the location for the local player   |  See [notes](#location-note)           |  130.0        |
+
+#### *location* notes
+
+* Map Center is (0,0,z)
+* King's Canyon appears to be 1x1km
+* Location is polled up to two times in 1 second
+* Location is accurate to a 1 meter resolution, do not use fractions of meters
+
+#### Event data example
+
+```json
+{"info":{"match_info":{"location":"{"x":"93","y":"305","z":"49"}"}},"feature":"location"}
+```
+
+## `rank`
+
+### Info Updates
+
+key          | Category    | Values                    | Notes                 | Since GEP Ver. |
+------------ | ------------| ------------------------- | --------------------- | ------------- | 
+victory  | match_info   | true/false   |  Triggers at the end of each round. Value “true” for winning and “false” for losing.  |  128.0   |
+
+#### *victory* note
+
+Data Example:
+
+```json
+{"info":{"match_info":{"victory":"false"}},"feature":"rank"}
+{"info":{"match_info":{"victory":"true"}},"feature":"rank"}
+```
+
+## `match_summary`
+
+### Info Updates
+
+key         | Category    | Values  | Notes     | Since GEP Ver. |
+----------- | ------------| --------| --------- | ------------- | 
+match_summary| match_info |         |           |   130.0      |
+
+#### *match_summary* notes
+
+After a match, this will return:
+* The final position the squad has reached (ranked 1-20)
+* Total number of teams in the match
+* Total number of kills made by the squad
+
+#### Event data example
+
+```json
+{"info":{"match_info":{"match_summary":"{"rank":"12","teams":"20","squadKills":"5"}"}},"feature":"match_summary"}
+```
+
+## `damage`
+
+### Info Updates
+
+key              | Category   | Values                                                                     | Notes   | Since GEP Ver. |
+---------------- | -----------| -------------------------------------------------------------------------- | ------- | ------------- | 
+totalDamageDealt | me         | The total amount of damage inflicted in a match of Apex. See example below.|         |  130.0        |
+
+#### *totalDamageDealt* notes
+
+Note that the game does not count damage that is inflicted on Armor, only Health damage after the armor was broken. However, our damage report includes damage done to armor, so it will always be higher than the in-game damage.
+
+#### Event data example
+
+```json
+{"info":{"me":{"totalDamageDealt":"115"}},"feature":"damage"}
+```
+
+### Events
+
+Event  | Event Data        | Fired When (announcement)                                          | Notes      | Since GEP Ver. |
+-------| ------------------| -------------------------------------------------------------------| ---------- | --------------|
+damage | See example below | When the local player deals damage to another player. |            |    130.0      |
+
+#### *damage* notes
+
+The following properties are provided:
+
+* targetName
+* damageAmount
+* armor
+* headshot
+* grenade
+
+#### Event data example
+
+```json
+{"events":[{"name":"damage","data":"{\r\n  \"targetName\": \"TMW_JayJay\",\r\n  \"damageAmount\": \"15.000000\",\r\n  \"armor\": \"true\",\r\n  \"headshot\": \"false\"\r\n}"}]}
+```
+
+## `inventory`
+
+### Info Updates
+
+key                | Category    | Values                                         | Notes  | Since GEP Ver. |
+-------------------| ------------| -----------------------------------------------| ------ | ------------- | 
+inventory_XX        | me   | Lists the items picked up into the local player's inventory (Tab).<br></br>Example:<br></br>`{"name":"unknown_42","amount":"40"}`   |        |    130.0      |
+weapons | me   | Weapons currently used by the local player - there are two slots available marked 0 and 1.<br></br>Example:<br></br>`{"weapon0":"Wingman","weapon1":"Alternator SMG"}` |        |    0.130      |
+inUse | me   | Items <b>currently used</b> by the local player.<br></br>Example:<br></br>`{"inUse":"Kunai Melee"}` |        |    0.130      |
+
+#### *weapons* note
+
+Data Example:
+
+```json
+{"info":{"me":{"weapons":"{\"weapon0\":\"R-99\",\"weapon1\":\"Melee\"}"}},"feature":"inventory"}
+```
+
+#### *inUse* note
+
+Data Example:
+
+```json
+{"info":{"me":{"inUse":"{\"inUse\":\"R-99\"}"}},"feature":"inventory"}
+```
+
+## `kill`
+
+### Events
+
+Event        | Event Data                        | Fired When   | Notes              | Since GEP Ver. |
+-------------| ----------------------------------| ----------------------------- | ------------------ | --------------|
+kill | victimName   | Local player killed another player. |                    |     130.0      | 
+knockdown | victimName  | Local player knocked out another player.|                    |    130.0      | 
+assist | victimName  | Local player participated in a team member’s kill. |                    |    130.0      | 
+
+#### *kill* note
+
+The data includes the victim name as parameter 
+
+Data Example:
+
+```json
+{"events":[{"name":"kill","data":"{  "victimName": "`1[LuL] Sladdi #limbo"}"}]}
+```
+
+#### *knockdown* note
+
+The data includes the victim name as parameter 
+
+Data Example:
+
+```json
+{"events":[{"name":"knockdown","data":"{  "victimName": "`1 Kixfoxn"}"}]}
+```
+
+#### *assist* note
+
+The data include values: 
+1. The vcictime name as victimName
+2. Assist type as type elimination
+
+Data Example:
+
+```json
+{"events":[{"name":"assist","data":"{  "victimName": "kazikov.qwerty",  "type": "elimination"}"}]}
+```
+
+## `revive`
+
+### Events
+
+Event        | Event Data                        | Fired When   | Notes              | Since GEP Ver. |
+-------------| ----------------------------------| ----------------------------- | ------------------ | --------------|
+healed_from_ko | null                              | Local player was revived from knocked out state. | See [notes](#healed_from_ko-note) |     128.0     | 
+respawn | null                              | Local player was returned to the game at a beacon. |See [notes](#respawn-note)|     128.0      | 
+
+#### *healed_from_ko* note
+
+Data Example:
+
+```json
+{"events":[{"name":"healed_from_ko","data":null}]}
+```
+
+#### *respawn* note
+
+Data Example:
+
+```json
+{"events":[{"name":"respawn","data":null}]}
+```
+
+## `death`
+
+### Events
+
+Event        | Event Data                        | Fired When   | Notes              | Since GEP Ver. |
+-------------| ----------------------------------| ----------------------------- | ------------------ | --------------|
+knocked_out | null                              | Local player’s health drops to zero.	 | See [notes](#knocked_out-note)|     128.0      | 
+death | null | Local player died during knocked out state. | There is another health bar during knocked out<br></br>state, it’s orange, above the player name. See [notes](#death-note) |     128.0      | 
+
+#### *knocked_out* note
+
+Data Example:
+
+```json
+{"events":[{"name":"knocked_out","data":null}]}
+```
+
+#### *death* note
+
+Data Example:
+
+```json
+{"events":[{"name":"death","data":null}]}
+```
+
+## `kill_feed`
+
+### Events
+
+Event     | Event Data        | Fired When                                                         | Notes              | Since GEP Ver. |
+----------| ------------------| ------------------------------------------------------------------ | ------------------ | --------------|
+kill_feed | See example below | When information is presented on the game’s UI (top right corner). |                    |     130.0     | 
+
+#### *kill_feed* notes
+
+The following properties are provided:
+
+* local_player_name
+* attackerName
+* victimName
+* weaponName
+* action
+
+Action possible values:
+
+* kill
+* headshot_kill
+* knockdown
+* Bleed_out
+* Finisher
+* Melee
+* Smoke Launcher
+* Creeping Barrage
+* Caustic Gas
+* Kunai Melee
+* Perimeter Security
+* Defensive Bombardment
+* Knuckle Cluster
+* Piercing Spikes
+* Hope's Dusk Melee
+* Butterfly Knife Melee
+
+#### Event data example
+
+```json
+{"events":[{"name":"kill_feed","data":"{"local_player_name":"Shargaas","attackerName":"shayan3200", "victimName":"i999n","weaponName":"alternator","action":"knockdown"}"}]}
+```
+#### "Bleed Out" note
+
+The **weaponName** can return with a "Bleed Out" value. For example:
+
+```
+"events": [{
+    "name": "kill_feed",
+	"data": {
+	    "attackerName": "Red_Wizard19TTV",
+		"victimName": "SoSochek_1337",
+		"weaponName": "Bleed Out",
+		"action": "Bleed Out"
+    }
+}]
+```
+
+"Bleed Out" is when something "external" kills you, which is not an enemy player.  
+For example, if you are knocked out already, and you are outside of the safe zone, your HP automatically depletes, and when it reaches zero, and you die, you will **Bleed Out**, and the **weaponName** and **action** will return with the "Bleed Out" value.  The same rules apply for the "Caustic" legend gas barrels; if they kill you, you also receive a "Bleed Out."

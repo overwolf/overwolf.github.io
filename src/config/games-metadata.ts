@@ -258,6 +258,16 @@ const metaData: GameMetaData[] = [
     path: 'the-finals',
     name: 'The Finals',
   },
+  {
+    id: 23818,
+    path: 'stormgate',
+    name: 'Stormgate',
+  },
+  // {
+  //   id: 23812,
+  //   path: 'escape-from-tarkov-arena',
+  //   name: 'Escape From Tarkov: Arena',
+  // },
 ];
 
 const compliancePath = path.join('/start', 'game-compliance');
