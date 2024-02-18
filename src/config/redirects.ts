@@ -862,7 +862,11 @@ export default [
   },
   {
     to: '/topics/request-a-service/app-marketing-promotions',
-    from: '/docs/topics/app-marketing-promotions',
+    from: [
+      '/docs/topics/promoting-your-app',
+      '/topics/request-a-service/promoting-your-app',
+      '/docs/topics/app-marketing-promotions',
+    ],
   },
   {
     to: '/topics/request-a-service/app-recommendations',
@@ -1042,10 +1046,6 @@ export default [
   {
     to: '/topics/using-plugins/process-manager-plugin',
     from: '/docs/topics/process-manager-plugin',
-  },
-  {
-    to: '/topics/request-a-service/promoting-your-app',
-    from: '/docs/topics/promoting-your-app',
   },
   {
     to: '/tools/developers-console/all-applications/user-feedback/reviews',
