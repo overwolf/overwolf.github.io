@@ -10,9 +10,9 @@ export default {
     name: '241',
   },
   dev: {
-    date: 'January 2024',
-    path: '2024/january',
-    name: '241',
+    date: 'February 2024',
+    path: '2024/february',
+    name: '242',
   },
   'ow-electron': {
     date: 'September 2023',
