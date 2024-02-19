@@ -447,6 +447,16 @@ const GamesMetaData = {
     "iconUrl": "/img/game-logos/lethal-company.png",
     "iconLargeUrl": "/img/game-logos/large/lethal-company.png"
   },
+  "23818": {
+    "id": 23818,
+    "path": "/status/stormgate",
+    "name": "Stormgate",
+    "rawPath": "stormgate",
+    "standardPath": "stormgate",
+    "docs": "/api/live-game-data/supported-games/stormgate",
+    "iconUrl": "/img/game-logos/stormgate.png",
+    "iconLargeUrl": "/img/game-logos/large/stormgate.png"
+  },
   "23944": {
     "id": 23944,
     "path": "/status/palworld",
