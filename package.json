@@ -7,6 +7,7 @@
     "compile:dev": "yarn tsc --project tsconfig.build.json --watch",
     "bootstrap": "yarn compile && node lib/bootstrap/bootstrap.js",
     "bootstrap:dev": "node lib/bootstrap/bootstrap.js",
+    "update": "yarn && yarn workspace engine compile",
     "start": "yarn bootstrap && yarn workspace engine start",
     "deploy": "yarn bootstrap && yarn workspace engine deploy",
     "build": "yarn bootstrap && yarn workspace engine build",

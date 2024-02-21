@@ -36,11 +36,11 @@ OBS Is **currently** not implemented as part of the [ow-electron](/tools/ow-elec
 <TabItem value="latest" label="OBS Version 29.1.0" default>
 
 !JSON Encoders-29.1.0
-const encoders = OBS.Latest.Encoders[
-    INTEL{
+const OBS.Latest.Encoders = [
+    {
         "name": "INTEL",
         "display_name": "Intel® Quick Sync (uses iGPU)",
-        "presets": INTEL_PRESETS[
+        "presets": [
             "QUALITY",
             "BALANCED",
             "SPEED",
@@ -52,7 +52,7 @@ const encoders = OBS.Latest.Encoders[
             "FASTER",
             "VERYFAST"
         ],
-        "rateControls": INTEL_RATES[
+        "rateControls": [
             "RC_CBR",
             "RC_CQP",
             "RC_VBR",
@@ -64,10 +64,10 @@ const encoders = OBS.Latest.Encoders[
             "LA_CBR"
         ],
     },
-    INTEL_HEVC{
+    {
         "name": "INTEL_HEVC",
         "display_name": "Intel® Quick Sync HEVC (uses iGPU)",
-        "presets": INTEL_HEVC_PRESETS[
+        "presets": [
             "QUALITY",
             "BALANCED",
             "SPEED",
@@ -79,7 +79,7 @@ const encoders = OBS.Latest.Encoders[
             "FASTER",
             "VERYFAST"
         ],
-        "rateControls": INTEL_HEVC_RATES[
+        "rateControls": [
             "RC_CBR",
             "RC_CQP",
             "RC_VBR",
@@ -91,10 +91,10 @@ const encoders = OBS.Latest.Encoders[
             "LA_CBR"
         ],
     },
-    X264{
+    {
         "name": "X264",
         "display_name": "X264 (uses CPU)",
-        "presets": X264_PRESETS[
+        "presets": [
             "ULTRAFAST",
             "SUPERFAST",
             "VERYFAST",
@@ -106,7 +106,7 @@ const encoders = OBS.Latest.Encoders[
             "VERYSLOW",
             "PLACEBO"
         ],
-        "rateControls": X264_RATES[
+        "rateControls": [
             "RC_CBR",
             "RC_CQP",
             "RC_VBR",
@@ -114,10 +114,10 @@ const encoders = OBS.Latest.Encoders[
             "RC_2_PASS_QUALITY"
         ],
     },
-    NVIDIA_NVENC_NEW{
+    {
         "name": "NVIDIA_NVENC_NEW",
         "display_name": "NVIDIA® NVENC New (uses GPU)",
-        "presets": NVIDIA_NVENC_NEW_PRESETS[
+        "presets": [
             "AUTOMATIC",
             "DEFAULT",
             "HIGH_QUALITY",
@@ -128,7 +128,7 @@ const encoders = OBS.Latest.Encoders[
             "LOSSLESS",
             "PRESET_MAX_QUALITY"
         ],
-        "rateControls": NVIDIA_NVENC_NEW_RATES[
+        "rateControls": [
             "RC_CBR",
             "RC_CQP",
             "RC_VBR",
@@ -137,10 +137,10 @@ const encoders = OBS.Latest.Encoders[
             "RC_LOSSLESS"
         ],
     },
-    NVIDIA_NVENC_HEVC{
+    {
         "name": "NVIDIA_NVENC_HEVC",
         "display_name": "NVIDIA® NVENC HEVC (uses GPU)",
-        "presets": NVIDIA_NVENC_HEVC_PRESETS[
+        "presets": [
             "AUTOMATIC",
             "DEFAULT",
             "HIGH_QUALITY",
@@ -151,7 +151,7 @@ const encoders = OBS.Latest.Encoders[
             "LOSSLESS",
             "PRESET_MAX_QUALITY"
         ],
-        "rateControls": NVIDIA_NVENC_HEVC_RATES[
+        "rateControls": [
             "RC_CBR",
             "RC_CQP",
             "RC_VBR",
@@ -160,15 +160,15 @@ const encoders = OBS.Latest.Encoders[
             "RC_LOSSLESS"
         ],
     },
-    AMD_AMF{
+    {
         "name": "AMD_AMF",
         "display_name": "AMD® HW H.264 (uses GPU)",
-        "presets": AMD_AMF_PRESETS[
+        "presets": [
             "BALANCED",
             "SPEED",
             "QUALITY"
         ],
-        "rateControls": AMD_AMF_RATES[
+        "rateControls": [
             "RC_CBR",
             "RC_CQP",
             "RC_VBR",
@@ -179,15 +179,15 @@ const encoders = OBS.Latest.Encoders[
             "RC_HQCBR"
         ],
     },
-    AMD_AMF_HEVC{
+    {
         "name": "AMD_AMF_HEVC",
         "display_name": "AMD® HW H.265 (uses GPU)",
-        "presets": AMD_AMF_HEVC_PRESETS[
+        "presets": [
             "BALANCED",
             "SPEED",
             "QUALITY"
         ],
-        "rateControls": AMD_AMF_HEVC_RATES[
+        "rateControls": [
             "RC_CBR",
             "RC_CQP",
             "RC_VBR",
@@ -206,21 +206,21 @@ const encoders = OBS.Latest.Encoders[
 <TabItem value="27.2.3" label="OBS Version 27.2.3">
 
 !JSON Encoders-27.2.3
-const encoders = OBS.27.2.3.Encoders[
-    INTEL{
+const OBS.27.2.3.Encoders = [
+    {
         "name": "INTEL",
         "display_name": "Intel® Quick Sync (uses iGPU)",
-        "presets": INTEL_PRESETS[
+        "presets": [
             "LOW",
             "MEDIUM",
             "HIGH"
         ],
-        "rateControls": INTEL_RATES[],
+        "rateControls": [],
     },
-    X264{
+    {
         "name": "X264",
         "display_name": "X264 (uses CPU)",
-        "presets": X264_PRESETS[
+        "presets": [
             "ULTRAFAST",
             "SUPERFAST",
             "VERYFAST",
@@ -232,7 +232,7 @@ const encoders = OBS.27.2.3.Encoders[
             "VERYSLOW",
             "PLACEBO"
         ],
-        "rateControls": X264_RATES[
+        "rateControls": [
             "RC_CBR",
             "RC_CQP",
             "RC_VBR",
@@ -240,10 +240,10 @@ const encoders = OBS.27.2.3.Encoders[
             "RC_2_PASS_QUALITY"
         ],
     },
-    NVIDIA_NVENC{
+    {
         "name": "NVIDIA_NVENC",
         "display_name": "NVIDIA® NVENC (uses GPU)",
-        "presets": NVIDIA_NVENC_PRESETS[
+        "presets": [
             "AUTOMATIC",
             "DEFAULT",
             "HIGH_QUALITY",
@@ -255,7 +255,7 @@ const encoders = OBS.27.2.3.Encoders[
             "LOSSLESS",
             "HIGH_PERFORMANCE_LOSSLESS"
         ],
-        "rateControls": NVIDIA_NVENC_RATES[
+        "rateControls": [
             "RC_CBR",
             "RC_CQP",
             "RC_VBR",
@@ -263,10 +263,10 @@ const encoders = OBS.27.2.3.Encoders[
             "RC_2_PASS_QUALITY"
         ],
     },
-    NVIDIA_NVENC_NEW{
+    {
         "name": "NVIDIA_NVENC_NEW",
         "display_name": "NVIDIA® NVENC New (uses GPU)",
-        "presets": NVIDIA_NVENC_NEW_PRESETS[
+        "presets": [
             "AUTOMATIC",
             "DEFAULT",
             "HIGH_QUALITY",
@@ -278,7 +278,7 @@ const encoders = OBS.27.2.3.Encoders[
             "LOSSLESS",
             "HIGH_PERFORMANCE_LOSSLESS"
         ],
-        "rateControls": NVIDIA_NVENC_NEW_RATES[
+        "rateControls": [
             "RC_CBR",
             "RC_CQP",
             "RC_VBR",
@@ -286,10 +286,10 @@ const encoders = OBS.27.2.3.Encoders[
             "RC_2_PASS_QUALITY"
         ],
     },
-    AMD_AMF{
+    {
         "name": "AMD_AMF",
         "display_name": "AMD® AMF (uses GPU)",
-        "presets": AMD_AMF_PRESETS[
+        "presets": [
             "AUTOMATIC",
             "BALANCED",
             "SPEED",
@@ -297,7 +297,7 @@ const encoders = OBS.27.2.3.Encoders[
             "ULTRA_LOW_LATENCY",
             "LOW_LATENCY"
         ],
-        "rateControls": AMD_AMF_RATES[
+        "rateControls": [
             "RC_CBR",
             "RC_CQP",
             "RC_VBR",

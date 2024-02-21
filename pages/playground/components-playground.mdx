@@ -142,7 +142,7 @@ ImageSlider:
 \\!JSON Testerio
 
 
-!JSON bonjour
+\!JSON bonjour
 // Test comment
 /* Hello world*/
 function test(
@@ -153,13 +153,36 @@ function test(
   }
 ) => void
 
-const test = Hello{
-  test: boolean
+!JSON test
+// hello there
+const foo =  {
+  // The current amount of squads, players, cash, and kills of the match (in relation to local player)
+  // @asString
+  tabs: {
+    // The amount of kills
+    kills: number,
+    assists: number,
+  }
 }
+
+/* gep_info test => */
+
+// gep_info -> {}
+
+
+gep_info test => {
+  "gep_internal": {
+    // @asString
+    "version_info": {
+      "local_version": string,
+      // this can be 1.1.1.1
+      "public_version": string,
+      // this can be true
+      "is_updated": boolean,
+      "value": "lobby" // | "loading_screen" | "legend_selection" | "aircraft" | "freefly" | "landed" | "match_summary"
+    }
+  }
+}
+
 /JSON
 
-import test from '~games-data/game-data.json'
-
-<div>{JSON.stringify(test, undefined, 4)}</div>
-
-test
