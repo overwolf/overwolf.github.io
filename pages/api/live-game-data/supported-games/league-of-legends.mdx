@@ -1585,7 +1585,7 @@ Data Example:
 
 key  | Category    | Values                                     | Notes  | Since GEP Ver. |
 -----| ------------| -------------------------------------------| ------ | ------------- |
-jungle_camp_xx | jungle_camps | Numerical, representing each jungle camp. |See [notes](#jungle_camp-note)|    186.0      |
+jungle_camp_xx | jungle_camps | Name of each camp. |See [notes](#jungle_camp-note)|    186.0      |
 
 #### *jungle_camp* note:
 
@@ -1602,30 +1602,38 @@ Icon values:
 
 Possible Values:
 
-* Camp 1 = Blue West
-* Camp 7 = Blue East
-* Camp 2 = Wolves West
-* Camp 8 = Wolves East
-* Camp 3 = Raptors West
-* Camp 9 = Raptors East
-* Camp 4 = Red West 
-* Camp 10 = Red East
-* Camp 5 = Krug West
-* Camp 11 = Krug East
-* Camp 6 = Dragon
-* Camp 12 = Baron (icon_status always remains zero).
-* Camp 13 = Gromp West
-* Camp 14 = Gromp East
-* Camp 15 = Scuttle Crab River Bot side
-* Camp 16 = Scuttle Crab River Top side
-* Camp 17 = Rift Herald (icon_status always remains zero).
+* Blue West
+* Blue East
+* Wolves West
+* Wolves East
+* Raptors West
+* Raptors East
+* Red West 
+* Red East
+* Krug West
+* Krug East
+* Dragon
+* Baron (icon_status always remains zero).
+* Gromp West
+* Gromp East
+* Scuttle Crab River Bot side
+* Scuttle Crab River Top side
+* Rift Herald (icon_status always remains zero).
+* VoidGrubs 
+
+:::tip
+
+Note that the jungle camps Id's are no longer static and can change from time to time. The field name is holding the actual camp name.
+
+:::
+
 
 Data Example:
 
 ```json
-{"info":{"jungle_camps":{"jungle_camp_4":"{"name":"monsterCamp_4","alive":true,"vision":true,"icon_status":"0"}"}},"feature":"jungle_camps"}
-{"info":{"jungle_camps":{"jungle_camp_4":"{"name":"monsterCamp_4","alive":false,"vision":true,"icon_status":"1"}"}},"feature":"jungle_camps"}
-{"info":{"jungle_camps":{"jungle_camp_4":"{"name":"monsterCamp_4","alive":false,"vision":true,"icon_status":"2"}"}},"feature":"jungle_camps"}
+{"feature": "jungle_camps", "category": "jungle_camps", "key": "jungle_camp_0", "data": "{\"name\":\"Blue West\",\"alive\":false,\"vision\":false,\"icon_status\":\"1\"}"}
+{"feature": "jungle_camps", "category": "jungle_camps", "key": "jungle_camp_3", "data": "{\"name\":\"Red East\",\"alive\":false,\"vision\":false,\"icon_status\":\"2\"}"}
+{"feature": "jungle_camps", "category": "jungle_camps", "key": "jungle_camp_7", "data": "{\"name\":\"Wolves East\",\"alive\":true,\"vision\":true,\"icon_status\":\"0\"}"}
 ```
 
 ## `team_frames`

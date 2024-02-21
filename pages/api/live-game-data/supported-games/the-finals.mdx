@@ -1,0 +1,125 @@
+---
+id: the-finals
+image: "/img/embed/games/the-finals.jpg"
+title: The Finals Game events
+hide_title: true
+sidebar_label: The Finals
+sidebar_position: 0
+sidebar_custom_props:
+  tags:
+    overwolf_platform: true
+    electron_platform: true
+---
+
+<!-- GENERATED USING /scripts/generate.js -->
+
+<head>
+  <meta name="keywords" content="API for The Finals, The Finals API, SDK for The Finals, The Finals SDK"/>
+</head>
+
+<GameInfo gameId={23478} page="docs" />
+
+Please read the [overwolf.games.events](/api/live-game-data) documentation page to learn how to use Overwolf game events.
+
+## Sample Apps
+
+* [The finals game events sample app](https://github.com/overwolf/events-sample-app)
+
+## Available Features
+
+* [gep_internal](#gep_internal)
+* [game_info](#game_info)
+* [match_info](#match_info)
+
+
+## Game events status
+
+It's highly recommended to communicate errors and warnings to your app users. Check current game event status [here](/status/) or  easily check game event status from your app [using our API](/topics/using-events/how-to-check-events-status-from-app).
+
+## `gep_internal`
+
+### Info Updates
+
+key          | Category    | Values                    | Notes                 | Since GEP Ver. |
+------------ | ------------| ------------------------- | --------------------- | ------------- |
+gep_internal | gep_internal| Local + Public version number|See [notes](#gep_internal-note)|   143.0       |
+
+#### *gep_internal* note
+
+Data Example:
+
+```json
+{"info":{"gep_internal":{"version_info":"{"local_version":"157.0.1","public_version":"157.0.1","is_updated":true}"}},"feature":"gep_internal"}
+```
+
+## `game_info`
+
+### Info Updates
+
+key          | Category    | Values                    | Notes                 | Since GEP Ver. |
+------------ | ------------| ------------------------- | --------------------- | ------------- |
+steam_id | game_info | The local player steam ID. |See [notes](#steam_id-note)|   244.3    |
+scene | game_info | The current scene |See [notes](#scene-note)|   TBD   |
+
+#### *steam_id* note
+
+Data Example:
+
+```json
+{"feature":"game_info","category":"game_info","key":"steam_id","value":76561198088746530}
+```
+
+#### *scene* note
+
+Possible values:
+* lobby
+* ingame
+
+Data Example:
+
+```json
+{"feature":"game_info","category":"game_info","key":"scene","value":"lobby"}
+```
+
+## `match_info`
+
+### Events
+
+Event | Event Data                        | Fired When                  | Notes              | Since GEP Ver. |
+------| ----------------------------------| --------------------------- | ------------------ | --------------|
+match_start | null                         | Round starts               | See [notes](#match_start-note)  |     TBD      |
+match_end | null                           | Round ends                | See [notes](#match_end-note)   |     TBD      |
+elimination | number of eliminations |    An opponent is eliminated by a team member         |  See [notes](#elimination-note)   TBD      |
+respawn | null |  The local player is respwan         |  See [notes](#respawn-note)   TBD     |
+
+#### *match_start* note
+
+Data Example:
+
+```json
+{"events":[{"name":"match_start","data":""}]}
+```
+
+#### *match_end* note
+
+Data Example:
+
+```json
+{"events":[{"name":"match_end","data":""}]}
+```
+
+#### *elimination* note
+
+Data Example:
+
+```json
+{"events":[{"name":"elimination","data":1}]}
+```
+
+#### *respawn* note
+
+Data Example:
+
+```json
+{"events":[{"name":"respawn","data":""}]}
+```

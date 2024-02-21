@@ -1,0 +1,157 @@
+---
+id: palworld
+image: "/img/embed/games/palworld.jpg"
+title: Palworld Game events
+hide_title: true
+sidebar_label: Palworld
+sidebar_position: 0
+sidebar_custom_props:
+  tags:
+    overwolf_platform: true
+    electron_platform: true
+---
+
+<!-- GENERATED USING /scripts/generate.js -->
+
+<head>
+  <meta name="keywords" content="API for Palworld, Palworld API, SDK for Palworld, Palworld SDK"/>
+</head>
+
+<GameInfo gameId={23944} page="docs" />
+
+Please read the [overwolf.games.events](/api/live-game-data) documentation page to learn how to use Overwolf game events.
+
+:::note Note: Palworld Game Events - Currently in Progress
+The game events for Palworld are currently a work in progress and some of them are not yet available in the public version of Overwolf.
+This document describes the events currently in development, along with examples.
+:::
+
+## Sample Apps
+
+* [Palworld game events sample app](https://github.com/overwolf/events-sample-app)
+
+## Available Features
+
+* [gep_internal](#gep_internal)
+* [match_info](#match_info)
+* [game_info](#game_info)
+* [location](#location)
+
+
+## Game events status
+
+It's highly recommended to communicate errors and warnings to your app users. Check current game event status [here](/status/) or  easily check game event status from your app [using our API](/topics/using-events/how-to-check-events-status-from-app).
+
+## `gep_internal`
+
+### Info Updates
+
+key          | Category    | Values                    | Notes                 | Since GEP Ver. |
+------------ | ------------| ------------------------- | --------------------- | ------------- |
+gep_internal | gep_internal| Local + Public version number|See [notes](#gep_internal-note)|   245.1.0      |
+
+#### *gep_internal* note
+
+Data Example:
+
+```json
+{"info":{"gep_internal":{"version_info":"{"local_version":"157.0.1","public_version":"157.0.1","is_updated":true}"}},"feature":"gep_internal"}
+```
+
+## `match_info`
+
+### Events
+
+Event | Event Data                        | Fired When                  | Notes              | Since GEP Ver. |
+------| ----------------------------------| --------------------------- | ------------------ | --------------|
+match_start | null | The player’s champion died  | See [notes](#match_start-note) |     245.1.0     |
+match_end | null | The player’s champion died  | See [notes](#match_end-note) |     245.1.0     |
+knockout | null | The player is knockout  | See [notes](#knockout-note) |     245.1.0      |
+death | null | The player is dead  | See [notes](#death-note) |      245.1.0       |
+respawn | null | The player respawned  | See [notes](#respawn-note) |     245.1.0       |
+revive | null | The player revived  | See [notes](#revive-note) |     245.1.0       |
+
+#### *match_start* note
+
+Data Example:
+
+```json
+{"events":[{"name":"match_start","data":null}]}
+```
+
+#### *match_end* note
+
+Data Example:
+
+```json
+{"events":[{"name":"match_end","data":null}]}
+```
+
+#### *knockout* note
+
+Data Example:
+
+```json
+{"events":[{"name":"knockout","data":null}]}
+```
+
+#### *death* note
+
+Data Example:
+
+```json
+{"events":[{"name":"death","data":null}]}
+```
+
+#### *respawn* note
+
+Data Example:
+
+```json
+{"events":[{"name":"respawn","data":null}]}
+```
+
+#### *revive* note
+
+Data Example:
+
+```json
+{"events":[{"name":"revive","data":null}]}
+```
+
+## `game_info`
+
+### Info Updates
+
+key          | Category    | Values                    | Notes                 | Since GEP Ver. |
+------------ | ------------| ------------------------- | --------------------- | ------------- | 
+scene        | game_info   | The name of the current scene. |See [notes](#scene-note)|      245.1.0      |
+
+#### *scene* note
+
+List of possible values:
+* lobby
+* ingame
+
+Data Example:
+
+```json
+{"info":{"game_info":{"scene":"lobby"}},"feature":"game_info"}
+```
+
+## `location`
+
+### Info Updates
+
+key          | Category    | Values                    | Notes                 | Since GEP Ver. |
+------------ | ------------| ------------------------- | --------------------- | ------------- | 
+location | match_info   | local player location  |  See [notes](#location-note) |    245.2.0 |
+
+#### *location* note
+
+Data Example:
+
+```json
+{"feature":"location","category":"match_info","key":"location","value":"{\"x\" : 231317,\"y\" : -337646,\"z\" : -1794}"}
+```
+

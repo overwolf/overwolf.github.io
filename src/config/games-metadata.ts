@@ -10,11 +10,6 @@ const metaData: GameMetaData[] = [
     name: 'Apex Legends',
   },
   {
-    id: 21960,
-    path: 'axie-infinity-origin',
-    name: 'Axie Infinity Origin',
-  },
-  {
     id: 21876,
     path: 'call-of-duty-vanguard',
     name: 'Call of Duty: Vanguard',
@@ -208,11 +203,6 @@ const metaData: GameMetaData[] = [
     name: 'Sons of the Forest',
   },
   {
-    id: 22312,
-    path: 'leap',
-    name: 'LEAP',
-  },
-  {
     id: 22700,
     path: 'diablo-4',
     name: 'Diablo 4',
@@ -258,6 +248,26 @@ const metaData: GameMetaData[] = [
     path: 'lethal-company',
     name: 'Lethal Company',
   },
+  {
+    id: 23944,
+    path: 'palworld',
+    name: 'Palworld',
+  },
+  {
+    id: 23478,
+    path: 'the-finals',
+    name: 'The Finals',
+  },
+  {
+    id: 23818,
+    path: 'stormgate',
+    name: 'Stormgate',
+  },
+  // {
+  //   id: 23812,
+  //   path: 'escape-from-tarkov-arena',
+  //   name: 'Escape From Tarkov: Arena',
+  // },
 ];
 
 const compliancePath = path.join('/start', 'game-compliance');

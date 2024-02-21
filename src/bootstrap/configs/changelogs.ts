@@ -1,18 +1,18 @@
 export default {
   latest: {
-    date: 'November 2023',
-    path: '2023/november',
-    name: '236',
+    date: 'January 2024',
+    path: '2024/january',
+    name: '241',
   },
   deploying: {
-    date: 'December 2023',
-    path: '2023/december',
-    name: '240',
+    date: 'January 2024',
+    path: '2024/january',
+    name: '241',
   },
   dev: {
-    date: 'December 2023',
-    path: '2023/december',
-    name: '240',
+    date: 'February 2024',
+    path: '2024/february',
+    name: '242',
   },
   'ow-electron': {
     date: 'September 2023',
