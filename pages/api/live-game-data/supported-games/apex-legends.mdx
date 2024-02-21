@@ -577,40 +577,36 @@ Data Example:
 
 Event        | Event Data                        | Fired When   | Notes              | Since GEP Ver. |
 -------------| ----------------------------------| ----------------------------- | ------------------ | --------------|
-kill | victimName   | Local player killed another player. |                    |     130.0      | 
-knockdown | victimName  | Local player knocked out another player.|                    |    130.0      | 
-assist | victimName  | Local player participated in a team member’s kill. |                    |    130.0      | 
+kill | total kills   | Local player killed another player. |                    |     130.0      | 
+knockdown | null  | Local player knocked out another player.|                    |    130.0      | 
+assist | total assists  | Local player participated in a team member’s kill. |                    |    130.0      | 
 
 #### *kill* note
 
-The data includes the victim name as parameter 
+The data includes the local player's total amount of kills
 
 Data Example:
 
 ```json
-{"events":[{"name":"kill","data":"{  "victimName": "`1[LuL] Sladdi #limbo"}"}]}
+{"events":[{"name":"kill","data":2}]}
 ```
 
 #### *knockdown* note
 
-The data includes the victim name as parameter 
-
 Data Example:
 
 ```json
-{"events":[{"name":"knockdown","data":"{  "victimName": "`1 Kixfoxn"}"}]}
+{"events":[{"name":"knockdown","data":null}]}
 ```
 
 #### *assist* note
 
-The data include values: 
-1. The vcictime name as victimName
-2. Assist type as type elimination
+The data includes the local player's total amount of assists
 
 Data Example:
 
 ```json
-{"events":[{"name":"assist","data":"{  "victimName": "kazikov.qwerty",  "type": "elimination"}"}]}
+{"events":[{"name":"assist","data":5}]}
 ```
 
 ## `revive`
@@ -657,10 +653,12 @@ Data Example:
 
 #### *death* note
 
+The data includes the local player's total amount of deaths
+
 Data Example:
 
 ```json
-{"events":[{"name":"death","data":null}]}
+{"events":[{"name":"death","data":2}]}
 ```
 
 ## `kill_feed`
