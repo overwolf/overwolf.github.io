@@ -5786,7 +5786,7 @@ __metadata:
     eslint-plugin-react: ^7.31.11
     eslint-plugin-react-hooks: ^4.6.0
     eslint-plugin-standard: ^5.0.0
-    fp-ts: /Users/Oded/AppData/Local/Temp/xfs-c406079c/user
+    fp-ts: ^2.16.1
     fs-extra: ^11.2.0
     io-ts: ^2.2.20
     json-diff: ^1.0.6
@@ -6919,10 +6919,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"fp-ts@file:/Users/Oded/AppData/Local/Temp/xfs-c406079c/user::locator=engine%40workspace%3Aengine":
-  version: 2.16.1
-  resolution: "fp-ts@file:/Users/Oded/AppData/Local/Temp/xfs-c406079c/user#/Users/Oded/AppData/Local/Temp/xfs-c406079c/user::hash=5a9a7e&locator=engine%40workspace%3Aengine"
-  checksum: 7e3a8f93e5cc10c91c878c5f8ec537d6f7f02808b23ac1b9db1c4f209dd31640d7b0156edd70681d012e663b90a961b36f44cc8a248be5804d3c05229f361eff
+"fp-ts@npm:^2.16.1":
+  version: 2.16.2
+  resolution: "fp-ts@npm:2.16.2"
+  checksum: 5c2e3f096ba4be5646bda38a43e3e8ca3bd7693fefb26e6c4d4c451efbc9a227f7f7cad562b087cb134d4e41f4ae615602f0b17890e9e40a9e83f2f8822da666
   languageName: node
   linkType: hard
 
