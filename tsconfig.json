@@ -1,4 +1,7 @@
 {
+  "compilerOptions": {
+    "strict": true
+  },
   "extends": "./tsconfig.base.json",
   "exclude": ["engine/**/*"],
 }
