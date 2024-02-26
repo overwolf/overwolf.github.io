@@ -59,7 +59,7 @@ Data Example:
 key          | Category    | Values                    | Notes                 | Since GEP Ver. |
 ------------ | ------------| ------------------------- | --------------------- | ------------- |
 steam_id | game_info | The local player steam ID. |See [notes](#steam_id-note)|   244.3    |
-scene | game_info | The current scene |See [notes](#scene-note)|   TBD   |
+scene | game_info | The current scene |See [notes](#scene-note)|   247.1   |
 
 #### *steam_id* note
 
@@ -87,10 +87,9 @@ Data Example:
 
 Event | Event Data                        | Fired When                  | Notes              | Since GEP Ver. |
 ------| ----------------------------------| --------------------------- | ------------------ | --------------|
-match_start | null                         | Round starts               | See [notes](#match_start-note)  |     TBD      |
-match_end | null                           | Round ends                | See [notes](#match_end-note)   |     TBD      |
-elimination | number of eliminations |    An opponent is eliminated by a team member         |  See [notes](#elimination-note)   TBD      |
-respawn | null |  The local player is respwan         |  See [notes](#respawn-note)   TBD     |
+match_start | null                         | Round starts               | See [notes](#match_start-note)  |     247.1      |
+match_end | null                           | Round ends                | See [notes](#match_end-note)   |     247.1      |
+elimination | number of eliminations |    An opponent is eliminated by a team member         |  See [notes](#elimination-note)  |   247.1      |
 
 #### *match_start* note
 
@@ -114,12 +113,4 @@ Data Example:
 
 ```json
 {"events":[{"name":"elimination","data":1}]}
-```
-
-#### *respawn* note
-
-Data Example:
-
-```json
-{"events":[{"name":"respawn","data":""}]}
 ```
