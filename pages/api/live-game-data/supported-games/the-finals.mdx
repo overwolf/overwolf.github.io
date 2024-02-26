@@ -90,7 +90,7 @@ Event | Event Data                        | Fired When                  | Notes 
 match_start | null                         | Round starts               | See [notes](#match_start-note)  |     247.1      |
 match_end | null                           | Round ends                | See [notes](#match_end-note)   |     247.1      |
 elimination | number of eliminations |    An opponent is eliminated by a team member         |  See [notes](#elimination-note)  |   247.1      |
-
+death | null |    The local player died	         |  See [notes](#death-note)  |   247.1      
 #### *match_start* note
 
 Data Example:
@@ -114,3 +114,10 @@ Data Example:
 ```json
 {"events":[{"name":"elimination","data":1}]}
 ```
+
+#### *death* note
+
+Data Example:
+
+```json
+{"events":[{"name":"death","data":""}]}
