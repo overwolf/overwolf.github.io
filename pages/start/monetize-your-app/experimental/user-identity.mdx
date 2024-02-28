@@ -16,7 +16,99 @@ In the context of Overwolf, and due to [ongoing shifts in the industry](#third-p
 **"Hashed Emails"** are used, letting advertisers identify and target users based on interests,
 without ever being exposed to the users' actual identities.
 
-## Technical Specification (WIP)
+## Technical Specification
+
+The process of working with **Hashed Emails** requires several steps:
+1. Obtaining a user's Email Address consentually
+2. [Normalizing](https://unifiedid.com/docs/getting-started/gs-normalization-encoding#email-address-normalization) the user's Email Address
+3. Hashing the user's Normalized Email Address
+4. Exposing the hashed Email Address to select User Identity Providers, for use in Ads targeting.
+
+There are two main ways to go about this:
+
+<Tabs groupId="hashed-emails">
+<TabItem value="email-full" label="Full Email" default>
+
+It is possible to pass the user's full Email Address to the Overwolf API.
+The API will then apply all of the relevant processing to the Email (2-4), and only save
+the finalized email hashes, for use in Ad targeting.
+
+<Tabs groupId="frameworks">
+<TabItem value="overwolf-platform" label="Overwolf Platform">
+
+```ts title="Example Usage"
+overwolf.extensions.current.generateUserEmailHashes("test.email@overwolf.com", console.log);
+```
+
+</TabItem>
+<TabItem value="electron-platform" label="Overwolf Electron">
+
+```ts title="Example Usage"
+app.overwolf.generateUserEmailHashes("test.email@overwolf.com");
+```
+
+</TabItem>
+</Tabs>
+
+</TabItem>
+<TabItem value="email-hash" label="Email Hash">
+
+In cases where:
+- The App might not have access to the user's full Email Address, but it does have access to the hash.
+- Where it is desirable to minimize the spread of the "raw" Email Address as much as possible.
+
+It is still possible to use this API, by passing the Email hashes directly (while performing steps 1-3 beforehand).
+
+<Tabs groupId="frameworks">
+<TabItem value="overwolf-platform" label="Overwolf Platform">
+
+```ts title="Example Usage"
+// Using the example email `test.email@overwolf.com`
+overwolf.extensions.current.setUserEmailHashes({
+  SHA1: '2c44f8a418bbfa88e80e3ce17d56cb30944f7675',
+  SHA256: 'ac43b559f15c2eb262ea8d5d4921f639aaf1cde84bc280bad2e1879d0ded68c2',
+  MD5: '170d78feecf2b8e7b804ba6b45af7ac2'
+}, console.log);
+```
+
+</TabItem>
+<TabItem value="electron-platform" label="Overwolf Electron">
+
+```ts title="Example Usage"
+// Using the example email `test.email@overwolf.com`
+app.overwolf.setUserEmailHashes({
+  SHA1: '2c44f8a418bbfa88e80e3ce17d56cb30944f7675',
+  SHA256: 'ac43b559f15c2eb262ea8d5d4921f639aaf1cde84bc280bad2e1879d0ded68c2',
+  MD5: '170d78feecf2b8e7b804ba6b45af7ac2'
+});
+```
+
+</TabItem>
+</Tabs>
+
+</TabItem>
+</Tabs>
+
+### Clearing Email Hashes
+
+It is also possible to clear out the Email hashes, in cases where it is needed. To do so, simply set an empty Email Hashes object like so:
+
+<Tabs groupId="frameworks">
+<TabItem value="overwolf-platform" label="Overwolf Platform">
+
+```ts title="Example Usage"
+overwolf.extensions.current.setUserEmailHashes({}, console.log);
+```
+
+</TabItem>
+<TabItem value="electron-platform" label="Overwolf Electron">
+
+```ts title="Example Usage"
+app.overwolf.setUserEmailHashes({});
+```
+
+</TabItem>
+</Tabs>
 
 ### Example Implementation (WIP)
 
@@ -35,10 +127,9 @@ resulting in a larger, industry-wide shift towards alternative solutions.
 Here at Overwolf, we have elected to collaborate with several industry-leading
 User Identity providers\*, to facilitate the usage of **Hashed Emails**.
 
-*\* Including but not limited to [Liveramp](https://liveramp.com/), [ID5](https://id5.io/), [TheTradeDesk](https://www.thetradedesk.com/us), [Yahoo](https://developer.yahooinc.com/identity/guide/enhanced-matching/)*
+*\* Including but not limited to [Liveramp](https://liveramp.com/), [ID5](https://id5.io/), [TheTradeDesk](https://www.thetradedesk.com/us/about-us/industry-initiatives/unified-id-solution-2-0), [Yahoo](https://www.advertising.yahooinc.com/our-dsp/identity)*
 
-
-Below you can find a *WIP* FAQ, which should help answer some of the burning questions
+Below you can find a *WIP* FAQ, which should help answer some of the questions
 you may still have about the topic:
 
 <details>
