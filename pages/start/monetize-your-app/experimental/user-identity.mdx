@@ -1,0 +1,197 @@
+---
+id: user-identity
+image: "/img/embed/getting-started.jpg"
+title: '[Experimental] User Identity'
+sidebar_custom_props:
+  tags:
+    overwolf_platform: true
+    electron_platform: true
+---
+
+When advertising their products, advertisers often wish to target and track specific audiences,
+for whom the Ads are most likely to be effective. To tailor those Ads to specific users,
+as well as track their later performance, **"User Identity"** solutions are required.
+
+In the context of Overwolf, and due to [ongoing shifts in the industry](#third-party-cookie-deprecation),
+**"Hashed Emails"** are used, letting advertisers identify and target users based on interests,
+without ever being exposed to the users' actual identities.
+
+## Technical Specification
+
+The process of working with **Hashed Emails** requires several steps:
+1. Obtaining a user's Email Address consentually
+2. [Normalizing](https://unifiedid.com/docs/getting-started/gs-normalization-encoding#email-address-normalization) the user's Email Address
+3. Hashing the user's Normalized Email Address
+4. Exposing the hashed Email Address to select User Identity Providers, for use in Ads targeting.
+
+There are two main ways to go about this:
+
+<Tabs groupId="hashed-emails">
+<TabItem value="email-full" label="Full Email" default>
+
+It is possible to pass the user's full Email Address to the Overwolf API.
+The API will then apply all of the relevant processing to the Email (2-4), and only save
+the finalized email hashes, for use in Ad targeting.
+
+<Tabs groupId="frameworks">
+<TabItem value="overwolf-platform" label="Overwolf Platform">
+
+```ts title="Example Usage"
+overwolf.extensions.current.generateUserEmailHashes("test.email@overwolf.com", console.log);
+```
+
+</TabItem>
+<TabItem value="electron-platform" label="Overwolf Electron">
+
+```ts title="Example Usage"
+app.overwolf.generateUserEmailHashes("test.email@overwolf.com");
+```
+
+</TabItem>
+</Tabs>
+
+</TabItem>
+<TabItem value="email-hash" label="Email Hash">
+
+In cases where:
+- The App might not have access to the user's full Email Address, but it does have access to the hash.
+- Where it is desirable to minimize the spread of the "raw" Email Address as much as possible.
+
+It is still possible to use this API, by passing the Email hashes directly (while performing steps 1-3 beforehand).
+
+<Tabs groupId="frameworks">
+<TabItem value="overwolf-platform" label="Overwolf Platform">
+
+```ts title="Example Usage"
+// Using the example email `test.email@overwolf.com`
+overwolf.extensions.current.setUserEmailHashes({
+  SHA1: '2c44f8a418bbfa88e80e3ce17d56cb30944f7675',
+  SHA256: 'ac43b559f15c2eb262ea8d5d4921f639aaf1cde84bc280bad2e1879d0ded68c2',
+  MD5: '170d78feecf2b8e7b804ba6b45af7ac2'
+}, console.log);
+```
+
+</TabItem>
+<TabItem value="electron-platform" label="Overwolf Electron">
+
+```ts title="Example Usage"
+// Using the example email `test.email@overwolf.com`
+app.overwolf.setUserEmailHashes({
+  SHA1: '2c44f8a418bbfa88e80e3ce17d56cb30944f7675',
+  SHA256: 'ac43b559f15c2eb262ea8d5d4921f639aaf1cde84bc280bad2e1879d0ded68c2',
+  MD5: '170d78feecf2b8e7b804ba6b45af7ac2'
+});
+```
+
+</TabItem>
+</Tabs>
+
+</TabItem>
+</Tabs>
+
+### Clearing Email Hashes
+
+It is also possible to clear out the Email hashes, in cases where it is needed. To do so, simply set an empty Email Hashes object like so:
+
+<Tabs groupId="frameworks">
+<TabItem value="overwolf-platform" label="Overwolf Platform">
+
+```ts title="Example Usage"
+overwolf.extensions.current.setUserEmailHashes({}, console.log);
+```
+
+</TabItem>
+<TabItem value="electron-platform" label="Overwolf Electron">
+
+```ts title="Example Usage"
+app.overwolf.setUserEmailHashes({});
+```
+
+</TabItem>
+</Tabs>
+
+### Example Implementation (WIP)
+
+
+## Further Reading (WIP)
+
+### Third Party Cookie Deprecation
+
+Before **Hashed Emails**, the standard method of tracking user identities for advertising
+revolved around [**"Third Party Cookies"**](https://en.wikipedia.org/wiki/Third-party_cookies).
+
+Google's decision to [deprecate support for **Third Party Cookies**](https://blog.google/products/chrome/privacy-sandbox-tracking-protection/)
+in Chrome, has significantly impacted this method's ability to be used in a scalable manner,
+resulting in a larger, industry-wide shift towards alternative solutions.
+
+Here at Overwolf, we have elected to collaborate with several industry-leading
+User Identity providers\*, to facilitate the usage of **Hashed Emails**.
+
+*\* Including but not limited to [Liveramp](https://liveramp.com/), [ID5](https://id5.io/), [TheTradeDesk](https://www.thetradedesk.com/us/about-us/industry-initiatives/unified-id-solution-2-0), [Yahoo](https://www.advertising.yahooinc.com/our-dsp/identity)*
+
+Below you can find a *WIP* FAQ, which should help answer some of the questions
+you may still have about the topic:
+
+<details>
+<summary>What is first-party data?</summary>
+
+First-party data enables publishers to deliver more personalized and targeted advertising experiences to their visitors. By having a (hashed) identifier, publishers can serve relevant content and ads, thereby enhancing user engagement and increasing ad revenue.
+
+</details>
+<details>
+<summary>What solution does Overwolf offer and how does it work?</summary>
+
+Overwolf offers a solution for handling user identity challenges through its hashed email API. This API simplifies the process of email hashing, transforming email addresses into unrecognizable strings of characters, thereby providing a privacy-compliant method for data collection in the absence of third-party cookies. This enables publishers to access critical user data sets securely, ensuring continuity in data-driven advertising strategies amidst evolving privacy regulations.
+
+</details>
+<details>
+<summary>What data is collected and passed?</summary>
+
+The hashed email API transforms email addresses provided by users into encrypted strings of characters, ensuring privacy and security
+
+</details>
+<details>
+<summary>Who is responsible for hashing the email address?</summary>
+
+<SkipMe type="TODO"> Add support for tab-group manipulation in links </SkipMe>
+
+You have the option to handle encryption independently by following the provided instructions [Link](#technical-specification), or alternatively, you can delegate the task to Overwolf, allowing us to hash the email on your behalf [Link](#technical-specification).
+
+</details>
+<details>
+<summary>Who is eligible to use this solution?</summary>
+
+This solution is accessible to any application that is part of the Overwolf platform.
+
+</details>
+<details>
+<summary>What’s in it for me? / How this is going to benefit my app?/ Why you should use it?</summary>
+
+Overwolf facilitates the integration of your app with various identity vendors. By establishing connections with these identity providers, we enable you to tap into additional advertising budgets from advertisers who rely on platforms like LiveRamp, ID5, or The Trade Desk for precise targeting and identification. This expanded budget allocation can translate to higher CPMs and fill rates for your app.
+
+</details>
+<details>
+<summary>Is it necessary to update my Privacy Policy or notify my users?</summary>
+
+Yes, it's essential to update your privacy policy to reflect this practice. In the near future, we will be releasing clearer guidelines to help with this process.
+Until then, for more details, please [contact us](/support/contact-us).
+
+</details>
+<details>
+<summary>How can I confirm that it's functioning properly?</summary>
+
+After implementing our solution, our team will monitor its performance to ensure it operates as intended.
+
+</details>
+<details>
+<summary>What’s the expected uplift in revenue?</summary>
+
+Predicting the potential uplift is challenging as it depends on how quickly advertisers embrace these solutions. It's crucial to recognize that the adoption cycle is gradual, with these solutions aimed at long-term benefits. While there's no assurance of immediate performance gains, they play a role in fostering sustained revenue growth.
+
+</details>
+<details>
+<summary>What if I don’t currently have a sign-in feature?</summary>
+
+If you currently don’t have a sign-in feature, you may want to consider implementing mechanisms to offer that. Email addresses can be valuable for various purposes, including communication with users, personalized marketing, and user authentication. However, it's crucial to ensure that your privacy and security practices comply with privacy regulations and that you are transparent with users about how their email addresses will be used.
+
+</details>

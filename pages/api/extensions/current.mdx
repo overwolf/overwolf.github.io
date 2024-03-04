@@ -66,11 +66,10 @@ version   | string? | The version to calculate the phasing percentage for (defau
 ## generateUserEmailHashes(email, callback)
 #### Version added: 0.240
 
-> Generates and configures a user's [email hashes][liveramp-hash-identifier] persistently directly from the raw email.
+> Generates and configures a user's [email hashes][hashed-email] persistently directly from the raw email.
 
 Parameter | Type       | Description                                       |
 --------- | -----------| ------------------------------------------------- |
-
 email   | string | The user's email address |
 callback  | (Result: Result) => void              | Result of the operation  |
 
@@ -78,7 +77,7 @@ callback  | (Result: Result) => void              | Result of the operation  |
 ## setUserEmailHashes(hashes, callback)
 #### Version added: 0.240
 
-> Configures a user's [email hashes][liveramp-hash-identifier] persistently from pre-configured email hashes.
+> Configures a user's [email hashes][hashed-email] persistently from pre-configured email hashes.
 
 :::note Deleting email hashes
 To delete the configured Email hashes, simply pass in an empty `hashes` object.
@@ -208,7 +207,7 @@ phasedPercent             | number                          | The phased percent
 ## UserEmailHashes Object
 ### Version added: 0.240
 
-> An object containing different hash patterns of a relevant user's [email address][liveramp-hash-identifier].
+> An object containing different hash patterns of a relevant user's [hashed email][hashed-email].
 
 Parameter          | Type                            | Description                                       |
 -------------------| --------------------------------| ------------------------------------------------- |
@@ -217,4 +216,4 @@ SHA256 | string | An `SHA256` hash of the email address                |
 MD5    | string | An `MD5` hash of the email address                |
 
 
-[liveramp-hash-identifier]: https://docs.liveramp.com/connect/en/hashing-identifiers.html
+[hashed-email]: /start/monetize-your-app/experimental/user-identity.mdx

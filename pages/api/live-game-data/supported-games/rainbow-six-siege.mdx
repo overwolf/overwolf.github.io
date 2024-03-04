@@ -400,7 +400,7 @@ Each player joining the game will be reported in the following way:
 
 Backslashes omitted for legibility.
 ```json
-{"feature":"roster","category":"players","key":"roster_0","value":"{\"player\":\"Overwol\",\"is_anonymous\":false,\"team\":\"Blue\",\"kills\":0,\"deaths\":1,\"score\":-415,\"assists\":0,\"ping\":1}"}
+{"feature":"roster","category":"players","key":"roster_0","value":"{\"player\":\"Overwol\",\"is_anonymous\":false,\"team\":\"Blue\",\"kills\":0,\"deaths\":1,\"score\":-415,\"assists\":0,\"ping\":1, \"operator\":\"SLEDGE\"}"}
 ```
 
 This object includes:
@@ -414,6 +414,7 @@ Important note - "name" is the player's username or nickname if enabled
 * assists - Total amount of assists
 * score - Player score in the current round
 * ping - the ping of the player
+* operator - the name of the current operator
 
 When one of the players leaves the match, the relevant “roster_ XX” object will be updated to:
 
