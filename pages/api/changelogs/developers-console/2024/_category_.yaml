@@ -1,0 +1,4 @@
+customProps:
+  hoist_children:
+    hoist: true
+    recursively: true
