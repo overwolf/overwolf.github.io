@@ -30,9 +30,9 @@ export default {
     name: 'Discord Rich Presence',
   },
   console: {
-    date: 'March 9th 2023',
-    path: '2023/march#march-9th-2023---user-logs-tab',
-    name: 'User logs tab',
+    date: 'February 28th 2024',
+    path: '2024/february#february-28th-2024---users-and-permissions-bite-1',
+    name: 'Users and Permissions Bite 1',
   },
 } as {
   latest: Changelog;
