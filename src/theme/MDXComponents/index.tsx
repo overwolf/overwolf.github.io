@@ -36,6 +36,7 @@ import FrameworkComparisonTable from '@site/../src/presets/comparison-table/fram
 import ImageHeading from '@site/../src/components/image-heading/image-heading';
 import SubscriptionsComparisonTable from '@site/../src/presets/comparison-table/subscriptions-comparison-table';
 import OWLottie from '@site/../src/components/ow-lottie';
+import OIDCSpec from '../../presets/open-api/oidc-spec';
 
 const devMode = process.env.NODE_ENV === 'development';
 
@@ -72,6 +73,9 @@ const MDXComponents: MDXComponentsObject = {
   ...{
     FrameworkComparisonTable,
     SubscriptionsComparisonTable,
+  },
+  ...{
+    OIDCSpec,
   },
   Tabs,
   TabItem,
