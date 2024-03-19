@@ -1,0 +1,40 @@
+ol {
+  list-style-type: none;
+
+  li {
+    list-style: none;
+    position: relative;
+
+    &::before {
+      position: absolute;
+      left: -8px;
+      top: 2.5px;
+      transform: translateX(-100%);
+      font-weight: bold;
+    }
+  }
+
+  >li {
+    counter-increment: level1;
+
+    &::before {
+      content: counter(level1) ".";
+    }
+
+    >ol>li {
+      counter-increment: level2;
+
+      &::before {
+        content: counter(level1) "." counter(level2) " ";
+      }
+
+      >ol>li {
+        counter-increment: level3;
+
+        &::before {
+          content: counter(level1) "." counter(level2) "." counter(level3, lower-roman) " ";
+        }
+      }
+    }
+  }
+}

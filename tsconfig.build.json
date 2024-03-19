@@ -4,6 +4,6 @@
     "outDir": "lib",
     "noEmit": false,
   },
-  "exclude": ["**/*.js", "**/*.jsx", "**/*.tsx", "src/client-modules/**/*", "engine/**/*"],
+  "exclude": ["**/*.js", "**/*.jsx", "**/*.tsx", "src/client-modules/**/*", "engine/**/*", "pages/**/*"],
   "extends": "./tsconfig.base.json"
 }

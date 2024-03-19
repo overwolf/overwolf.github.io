@@ -973,16 +973,16 @@ export default [
     from: '/docs/topics/launch-time-performance',
   },
   {
-    to: '/topics/legal/legal-app-terms',
-    from: '/docs/topics/legal-app-terms',
-  },
-  {
-    to: '/topics/legal/legal-developers-terms',
-    from: '/docs/topics/legal-developers-terms',
-  },
-  {
-    to: '/topics/legal/legal-overview',
-    from: '/docs/topics/legal-overview',
+    to: '/legal/developer-terms',
+    from: [
+      '/docs/topics/legal-developers-terms',
+      '/topics/legal/legal-developers-terms',
+      '/topics/legal/legal-app-terms',
+      '/docs/topics/legal-app-terms',
+
+      '/docs/topics/legal-overview',
+      '/topics/legal/legal-overview',
+    ],
   },
   {
     to: '/topics/integrations/login-with-overwolf',

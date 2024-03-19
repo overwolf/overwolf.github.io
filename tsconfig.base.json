@@ -11,6 +11,6 @@
       ],
     },
   },
-  "include": ["src/**/*", "engine/**/*"],
+  "include": ["src/**/*", "engine/**/*", "pages/**/*"],
   "extends": "./engine/workspace-tools/tsconfig.base.json"
 }
