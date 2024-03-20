@@ -30,7 +30,11 @@ export function PlaceOnGrid(gridPosition: GridPlacer): React.CSSProperties {
   };
 }
 
-function Apply1DSettings(start: number, end: number, flex: boolean) {
+function Apply1DSettings(
+  start: number,
+  end: number | undefined,
+  flex: boolean,
+) {
   return {
     start,
     end: flex ? -1 : (end ?? start) + 1,

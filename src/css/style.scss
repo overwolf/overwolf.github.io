@@ -193,7 +193,7 @@ a {
 
 td {
 	background: var(--color-headline);
-	padding: 5px 20px
+	padding: 5px 20px;
 }
 
 th {
@@ -425,3 +425,4 @@ blockquote {
 @import './overide';
 @import './style-dark';
 @import './sidebar';
+@import './components.scss';
