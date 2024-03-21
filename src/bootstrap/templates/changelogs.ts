@@ -21,6 +21,6 @@ Here you can find a summary of all past version releases:
 * Public Overwolf platform version: [\`$latest-ver-display\`](changelogs/overwolf-platform/$latest-path/$latest-ver) (Released on: $latest-date)$deploying?{
 * Currently deploying Overwolf platform version: [\`$deploying-ver-display\`](changelogs/overwolf-platform/$deploying-path/$deploying-ver) (Released on: $deploying-date)}
 * Developers' Overwolf platform version: [\`$dev-ver-display\`](changelogs/overwolf-platform/$dev-path/$dev-ver) (Released on: $dev-date)
-* Latest developers' Console update: [$console-ver](changelogs/documentation/$console-path) (Released on: $console-date)
+* Latest developers' Console update: [$console-ver](changelogs/developers-console/$console-path) (Released on: $console-date)
 * GEP Changelogs can be found in [their own respective page](changelogs/gep-changelogs)
 * For specific versions, check the sidebar to the left of this page`;
