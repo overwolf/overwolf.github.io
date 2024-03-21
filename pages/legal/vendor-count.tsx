@@ -8,6 +8,11 @@ function VendorCount() {
         .then((response) => response.json())
         .then((data) =>
           setVendorCount(Object.values(data.vendors as any).length.toString()),
+        )
+        .catch(() =>
+          setVendorCount(
+            'Could not load vendors list. Please refresh the page.',
+          ),
         );
     }
 
