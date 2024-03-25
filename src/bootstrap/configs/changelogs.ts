@@ -5,14 +5,14 @@ export default {
     name: '242',
   },
   deploying: {
-    date: 'February 2024',
-    path: '2024/february',
-    name: '242',
+    date: 'March 2024',
+    path: '2024/march',
+    name: '248',
   },
   dev: {
     date: 'March 2024',
     path: '2024/march',
-    name: '248',
+    name: '248.120',
   },
   'ow-electron': {
     date: 'March 2024',
