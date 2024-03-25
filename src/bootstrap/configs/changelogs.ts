@@ -12,7 +12,8 @@ export default {
   dev: {
     date: 'March 2024',
     path: '2024/march',
-    name: '248.120',
+    name: '248',
+    suffix: '.120',
   },
   'ow-electron': {
     date: 'March 2024',
