@@ -30,8 +30,8 @@ export default {
     name: 'Discord Rich Presence',
   },
   console: {
-    date: 'March 12th 2024',
-    path: '2024/march#march-12th-2024---users-and-permissions-bite-2',
+    date: 'March 26th 2024',
+    path: '2024/march#march-26th-2024---users-and-permissions-bite-2',
     name: 'Users and Permissions Bite 2',
   },
 } as {
