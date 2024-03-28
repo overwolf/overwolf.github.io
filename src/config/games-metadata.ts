@@ -263,6 +263,11 @@ const metaData: GameMetaData[] = [
     path: 'stormgate',
     name: 'Stormgate',
   },
+  {
+    id: 24000,
+    path: 'helldivers-2',
+    name: 'Helldivers 2',
+  },
   // {
   //   id: 23812,
   //   path: 'escape-from-tarkov-arena',
