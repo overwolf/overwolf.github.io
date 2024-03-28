@@ -467,6 +467,16 @@ const GamesMetaData = {
     "iconUrl": "/img/game-logos/palworld.png",
     "iconLargeUrl": "/img/game-logos/large/palworld.png"
   },
+  "24000": {
+    "id": 24000,
+    "path": "/status/helldivers-2",
+    "name": "Helldivers 2",
+    "rawPath": "helldivers-2",
+    "standardPath": "helldivers-2",
+    "docs": "/api/live-game-data/supported-games/helldivers-2",
+    "iconUrl": "/img/game-logos/helldivers-2.png",
+    "iconLargeUrl": "/img/game-logos/large/helldivers-2.png"
+  },
   "215561": {
     "id": 215561,
     "displayId": 22848,
