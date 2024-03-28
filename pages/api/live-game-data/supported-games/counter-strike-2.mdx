@@ -205,7 +205,7 @@ key          | Category    | Values                    | Notes                 |
 ------------ | ------------| ------------------------- | --------------------- | ------------- | 
 roster_ | match_info| Data about all the players in the roster|See [notes](#roster-note)|   236.0       |
 game_mode | match_info| The current played game mode and the map name|See [notes](#game_mode-note)|   236.0       |
-match_outcome| match_info  | victory / defeat / tie      |See [notes](#match_outcome-note)|   236.0       |
+match_outcome| match_info  | win / lose / tie      |See [notes](#match_outcome-note)|   236.0       |
 steam_id| live_data  | local player steam Id     |See [notes](#steam_id-note)|   237.0       |
 game_phase| live_data  | list of phases during a game     |See [notes](#game_phase-note)|   237.0       |
 round_phase| live_data  | list of phases during a round     |See [notes](#round_phase-note)|   237.0       |
@@ -281,8 +281,8 @@ Spectating "Casual" mode on "Dust II" map
 Data Example:
 
 ```json
-{"info":{"match_info":{"match_outcome":"victory"}},"feature":"match_info"}
-{"info":{"match_info":{"match_outcome":"defeat"}},"feature":"match_info"}
+{"info":{"match_info":{"match_outcome":"win"}},"feature":"match_info"}
+{"info":{"match_info":{"match_outcome":"lose"}},"feature":"match_info"}
 ```
 
 #### *steam_id* note

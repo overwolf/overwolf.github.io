@@ -4,10 +4,6 @@ export default [
     from: '/docs/api/auto-highlights',
   },
   {
-    to: '/api/changelogs',
-    from: '/docs/api/changelog',
-  },
-  {
     to: '/api/games/external-apis',
     from: '/docs/api/games-external-apis',
   },
@@ -1145,6 +1141,8 @@ export default [
     from: [
       '/api/changelogs/ow-electron/electron',
       '/api/changelogs/documentation/2022/november',
+      '/api/changelogs/developers-console/2023/march',
+      '/docs/api/changelog',
     ],
   },
   {

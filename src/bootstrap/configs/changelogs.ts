@@ -1,18 +1,19 @@
 export default {
   latest: {
-    date: 'January 2024',
-    path: '2024/january',
-    name: '241',
-  },
-  deploying: {
-    date: 'January 2024',
-    path: '2024/january',
-    name: '241',
-  },
-  dev: {
     date: 'February 2024',
     path: '2024/february',
     name: '242',
+  },
+  deploying: {
+    date: 'March 2024',
+    path: '2024/march',
+    name: '248',
+  },
+  dev: {
+    date: 'March 2024',
+    path: '2024/march',
+    name: '248',
+    suffix: '.120',
   },
   'ow-electron': {
     date: 'March 2024',
@@ -30,9 +31,9 @@ export default {
     name: 'Discord Rich Presence',
   },
   console: {
-    date: 'February 28th 2024',
-    path: '2024/february#february-28th-2024---users-and-permissions-bite-1',
-    name: 'Users and Permissions Bite 1',
+    date: 'March 26th 2024',
+    path: '2024/march#march-27th-2024---users-and-permissions-bite-2',
+    name: 'Users and Permissions Bite 2',
   },
 } as {
   latest: Changelog;

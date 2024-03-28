@@ -6,21 +6,24 @@ import changelogsTemplate from '../templates/changelogs';
 
 const changelogsPath = paths.join('api', 'changelogs', 'changelogs');
 
-const dev = changelogs.dev;
-const cur = changelogs.latest;
-const electron = changelogs['ow-electron'];
-const builder = changelogs['ow-electron-builder'];
-const docs = changelogs.docs;
-const deploying = changelogs.deploying;
+const {
+  dev,
+  'ow-electron': electron,
+  'ow-electron-builder': builder,
+  console,
+  deploying,
+  docs,
+  latest,
+} = changelogs;
 
 const changelogsFiles: FileEntry[] = [
   {
     path: changelogsPath,
     content: replacer(changelogsTemplate, [
-      ['$latest-ver-display', cur.name + (cur.suffix ?? '')],
-      ['$latest-ver', cur.name],
-      ['$latest-date', cur.date],
-      ['$latest-path', cur.path],
+      ['$latest-ver-display', latest.name + (latest.suffix ?? '')],
+      ['$latest-ver', latest.name],
+      ['$latest-date', latest.date],
+      ['$latest-path', latest.path],
       ['$deploying-ver-display', deploying.name + (deploying.suffix ?? '')],
       ['$deploying-ver', deploying.name],
       ['$deploying-date', deploying.date],
@@ -38,12 +41,12 @@ const changelogsFiles: FileEntry[] = [
       ['$doc-ver', docs.name],
       ['$doc-date', docs.date],
       ['$doc-path', docs.path],
-      ['$console-ver', docs.name],
-      ['$console-date', docs.date],
-      ['$console-path', docs.path],
+      ['$console-ver', console.name],
+      ['$console-date', console.date],
+      ['$console-path', console.path],
       [
         /\$deploying\?\{(.*?)\}/gms,
-        deploying.name !== cur.name || deploying.suffix !== cur.suffix
+        deploying.name !== latest.name || deploying.suffix !== latest.suffix
           ? '$1'
           : '',
       ],
