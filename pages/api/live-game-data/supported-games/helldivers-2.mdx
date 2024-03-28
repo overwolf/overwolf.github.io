@@ -3,7 +3,6 @@ id: helldivers-2
 image: "/img/embed/games/helldivers-2.jpg"
 title: "Helldivers 2 Game events"
 hide_title: true
-draft: true
 sidebar_label: "Helldivers 2"
 sidebar_position: 0
 sidebar_custom_props:
@@ -30,21 +29,18 @@ Please read the [overwolf.games.events](/api/live-game-data) documentation page 
 * [gep_internal](#gep_internal)
 * [game_info](#game_info)
 * [match_info](#match_info)
-* [location](#location)
 
 
-## Game event status
+## Game events status
 
-It is highly recommended to communicate errors and warnings to app users. 
-
-Check the current game event status [here](/status/). Alternately, you can easily check that status from your app itself, [using our API](/topics/using-events/how-to-check-events-status-from-app).
+It's highly recommended to communicate errors and warnings to your app users. Check current game event status [here](/status/) or  easily check game event status from your app [using our API](/topics/using-events/how-to-check-events-status-from-app).
 
 ## `gep_internal`
 
 ### Info Updates
 
 key          | Category    | Values                    | Notes                 | Since GEP Ver. |
------------- | ------------| ------------------------- | --------------------- | ------------- | 
+------------ | ------------| ------------------------- | --------------------- | ------------- |
 gep_internal | gep_internal| Local + Public version number|See [notes](#gep_internal-note)|   143.0       |
 
 #### *gep_internal* note
@@ -60,33 +56,32 @@ Data Example:
 ### Info Updates
 
 key          | Category    | Values                    | Notes                 | Since GEP Ver. |
------------- | ------------| ------------------------- | --------------------- | ------------- | 
-scene | game_info | The current scene during the game  |  List of values See [notes](#scene-note)  |   238.0 |
-
+------------ | ------------| ------------------------- | --------------------- | ------------- |
+scene | game_info | The current scene |See [notes](#scene-note)|   249.0   |
 
 #### *scene* note
 
 Possible values:
-
-* Menu - Main lobby menu
-* Running - While in game
-* Save - After save during a match
+* lobby
+* ingame
+* death
 
 Data Example:
 
 ```json
-{"info":{"game_info":{"scene":"Menu"}},"feature":"game_info"}
+{"feature":"game_info","category":"game_info","key":"scene","value":"lobby"}
 ```
-
 
 ## `match_info`
 
 ### Events
 
-Event       | Event Data   | Fired When    | Notes                                  | Since GEP Ver. |
-------------| -------------| --------------| -------------------------------------- | ---------------|
-match_start |              | In the beginning of each match| See [notes](#match_start-note) |238.0|
-match_end   |              | At the end of each match| See [notes](#match_end-note) |238.0|
+Event | Event Data                        | Fired When                  | Notes              | Since GEP Ver. |
+------| ----------------------------------| --------------------------- | ------------------ | --------------|
+match_start | null                         | Match starts               | See [notes](#match_start-note)  |    249.0      |
+match_end | null                           | Match ends                | See [notes](#match_end-note)   |     249.0      |
+death | number of deaths |    The local player died	         |  See [notes](#death-note)  |   249.0     
+
 
 #### *match_start* note
 
@@ -104,48 +99,9 @@ Data Example:
 {"events":[{"name":"match_end","data":""}]}
 ```
 
-## `location`
-
-### Info Updates
-
-key          | Category    | Values                    | Notes                 | Since GEP Ver. |
------------- | ------------| ------------------------- | --------------------- | ------------- | 
-location_camera | location | The current POV location of the camera  | See [notes](#location_camera-note)  |   241.0 |
-location_players | location | The current location of the players  | See [notes](#location_players-note)  |   241.0 |
-main_map | location | The current main map name  | See [notes](#main_map-note)  |   241.0 |
-sub_map | location | The current sub map name  | See [notes](#sub_map-note)  |   241.0 |
-
-
-#### *location_camera* note
+#### *death* note
 
 Data Example:
 
 ```json
-{"feature": "location", "category": "location", "key": "location_camera", "data": "[{\"x\":60.765,\"y\":-430.126,\"z\":24.668}]"}
-```
-
-#### *location_players* note
-
-Data Example:
-
-* This info-update includes the location of all the 4 possible players and will update only the characters that are moving 
-
-```json
-{"feature": "location", "category": "location", "key": "location_players", "data": "[{\"player_0\":{\"x\":-1086.69,\"y\":-224.49,\"z\":-0.595}},{\"player_1\":{\"x\":-1089.05,\"y\":-218.029,\"z\":-0.414}},{\"player_2\":{\"x\":-1077.75,\"y\":-229.75,\"z\":-0.507}},{\"player_3\":{\"x\":-1082.75,\"y\":-206.75,\"z\":0.168}}]"}
-```
-
-#### *main_map* note
-
-Data Example:
-
-```json
-{"feature": "location", "category": "location", "key": "main_map", "data": "Wilderness"}
-```
-
-#### *sub_map* note
-
-Data Example:
-
-```json
-{"feature": "location", "category": "location", "key": "sub_map", "data": "CAMPSITE"}
-```
+{"events":[{"name":"death","data":2}]}
