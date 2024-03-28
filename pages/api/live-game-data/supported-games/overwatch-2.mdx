@@ -32,6 +32,7 @@ Please read the [overwolf.games.events](/api/live-game-data) documentation page 
 * [kill](#kill)
 * [assist](#assist)
 * [death](#death)
+* [roster](#roster)
 
 ## Game event status
 
@@ -322,4 +323,35 @@ Data Example:
 
 ```json
 {"name":"assist","data":"2"}
+```
+
+## `roster`
+
+### Info Updates
+
+key          | Category    | Values                    | Notes                 | Since GEP Ver. |
+------------ | ------------| ------------------------- | --------------------- | -------------  |
+roster_XX      | roster       | Data about the roter   |See [notes](#roster_XX -note)|   249.0       |
+
+#### *roster_XX * note
+
+List of value:
+
+* player_name - the player full name
+* battlenet_tag - the battle net tag
+* is_local - is the player the local player true/false
+* is_teammate - is the player one of your teammate true/false
+* hero_name - the name of the selected hero
+* hero_role - the role of the selected hero
+* team - the player's team 0/1
+* kills / deaths / assists - the total number of kills / deaths / assists
+* damage - the total damage
+* healed - the total healed
+* mitigated - the total mitigated
+
+
+Data Example:
+
+```json
+{"feature":"roster","category":"roster","key":"roster_0","value":"{\"player_name\":\"EDGED217\",\"battlenet_tag\":\"EDGED217#2842\",\"is_local\":false,\"is_teammate\":true,\"hero_name\":\"MOIRA\",\"hero_role\":\"SUPPORT\",\"team\":0,\"kills\":4,\"deaths\":0,\"damage\":462.16,\"assists\":0,\"healed\":274.866,\"mitigated\":0}"}
 ```
