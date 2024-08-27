@@ -81,7 +81,7 @@ function EventsData(props) {
         <SpecificGameEventsStatus
           gameStatusData={gameStatus}
           gameId={gameId}
-          docsPath={docsPath}
+          docsPath={gameData[gameId].rawPath}
           endOfLife={endOfLife}
         />
       )}

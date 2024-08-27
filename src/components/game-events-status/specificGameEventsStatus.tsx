@@ -48,10 +48,18 @@ function filterEvents(e) {
 
 function SpecificGameEventsStatus(props) {
 
-  const { gameStatusData, gameId, endOfLife } = props;
+  const { gameStatusData, gameId, docsPath, endOfLife } = props;
   // ---------------------------------------------------------------------------
 
   const getEventsByType = (type: number) => {
+
+    console.log(docsPath)
+
+    if(docsPath) {
+      window.location.href = `https://dev.overwolf.com/ow-native/reference/live-game-data-gep/supported-games/${docsPath}?game-tab=events-status`;
+    } else {
+      window.location.href = `https://dev.overwolf.com/ow-native/guides/general-tech/game-events-status-health`;
+    }
 
     if (!gameStatusData.features || gameStatusData.features.length === 0) {
       return (<EventStatus name='Coming soon' />)
