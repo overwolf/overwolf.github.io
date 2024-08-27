@@ -13,6 +13,8 @@ sidebar_custom_props:
     electron_platform: false
 ---
 
+<meta http-equiv="refresh" content="0; url=https://dev.overwolf.com/ow-native/guides/general-tech/game-events-status-health/" />
+
 Pick any game to see its full events list.
 
 It is highly recommended to communicate errors and warnings to your app users.

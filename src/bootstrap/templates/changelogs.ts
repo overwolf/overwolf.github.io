@@ -11,6 +11,8 @@ sidebar_custom_props:
     electron_platform: true
 ---
 
+<meta http-equiv="refresh" content="0; url=https://dev.overwolf.com/ow-native/getting-started/changelog/ow-changelog" />
+
 Follow this page for ongoing updates and changes to the project or tools.
 Here you can find our [Developers Roadmap](/api/changelogs/roadmap).
 
