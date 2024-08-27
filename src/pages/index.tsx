@@ -1,5 +1,5 @@
 /* eslint-disable @docusaurus/no-untranslated-text */
-import React from 'react';
+import React, {useEffect} from 'react';
 import Layout from '@theme/Layout';
 import Hero from '../components/home-page/hero/hero';
 import Services from '../components/home-page/services/services';
@@ -10,6 +10,12 @@ import FrameworkComparison from '../components/home-page/framework-comparison/fr
 
 const Index = (props: any) => {
   // const {} = props;
+
+  useEffect(() => {
+    setTimeout(() => {
+      window.location.href = 'https://dev.overwolf.com/';
+    }, 0);
+  }, []);
 
   return (
     <Layout
