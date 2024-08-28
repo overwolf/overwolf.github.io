@@ -579,6 +579,16 @@ const GamesMetaData = {
     "iconUrl": "/img/game-logos/the-first-descendant.png",
     "iconLargeUrl": "/img/game-logos/large/the-first-descendant.png"
   },
+  "24504": {
+    "id": 24504,
+    "path": "/status/wukong",
+    "name": "Black Myth: Wukong",
+    "rawPath": "wukong",
+    "standardPath": "wukong",
+    "docs": "/api/live-game-data/supported-games/wukong",
+    "iconUrl": "/img/game-logos/wukong.png",
+    "iconLargeUrl": "/img/game-logos/large/wukong.png"
+  },
   "215561": {
     "id": 215561,
     "displayId": 22848,
