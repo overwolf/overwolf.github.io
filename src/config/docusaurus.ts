@@ -25,6 +25,7 @@ const pathtoPlugins = (name: string) =>
 const config = async (): Promise<Partial<ConfigType>> => ({
   title: 'Overwolf',
   tagline: 'Easily create apps for PC games on the Overwolf framework',
+  noIndex: true,
   url: 'https://overwolf.github.io',
   organizationName: 'overwolf',
   projectName: 'overwolf.github.io',
