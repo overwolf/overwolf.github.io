@@ -239,6 +239,7 @@ opponent | match_info | Names of your opponents                        |See [not
 game_mode | match_info | Whether the current game mode is TFT or default LoL  |See [notes](#game_mode-notes)|   133.0       |
 local_player_damage | match_info | Amount of damage caused by your champions |See [notes](#local_player_damage-notes)|   0.136       |
 item_select | match_info | List of available items |See [notes](#item_select-notes)|   259.0      |
+picked_item | match_info | The last item that the player picked |See [notes](#picked_item-notes)|   259.0      |
 
 #### *pseudo_match_id* notes
 
@@ -324,6 +325,14 @@ Data example:
 
 ```json
 {"feature":"match_info","category":"match_info","key":"item_select","value":"{\"item_1\":{\"name\":\"TFT_Item_NeedlesslyLargeRod\"}, \"item_2\":{\"name\":\"TFT_Item_RecurveBow\"}, \"item_3\":{\"name\":\"TFT_Item_NegatronCloak\"}, \"item_4\":{\"name\":\"TFT_Item_BFSword\"}}"}
+```
+
+#### *picked_item* notes
+
+Data example:
+
+```json
+{"feature":"match_info","category":"match_info","key":"picked_item","value":"TFT_Item_NeedlesslyLargeRod"}
 ```
 
 ### Events
